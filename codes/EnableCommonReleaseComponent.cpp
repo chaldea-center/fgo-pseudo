@@ -16,10 +16,10 @@ void __fastcall EnableCommonReleaseComponent__Awake(EnableCommonReleaseComponent
   System_Int32_array *v9; // x6
   System_Int32_array *v10; // x7
 
-  if ( (byte_4218B81 & 1) == 0 )
+  if ( (byte_42B463D & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
-    byte_4218B81 = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B463D = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -31,7 +31,7 @@ void __fastcall EnableCommonReleaseComponent__Awake(EnableCommonReleaseComponent
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     this->fields.target = gameObject;
-    sub_B0D840(
+    sub_B52920(
       (BattleServantConfConponent_o *)&this->fields.target,
       (System_Int32_array **)gameObject,
       v5,
@@ -46,24 +46,24 @@ void __fastcall EnableCommonReleaseComponent__Awake(EnableCommonReleaseComponent
 
 bool __fastcall EnableCommonReleaseComponent__IsOpen(EnableCommonReleaseComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   DataManager_o *Instance; // x0
+  __int64 v4; // x1
 
-  if ( (byte_4218B82 & 1) == 0 )
+  if ( (byte_42B463E & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4218B82 = 1;
+    sub_B52984(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_42B463E = 1;
   }
   if ( *(int *)&this->fields.visibleCommonReleaseIsOpen < 1 )
     return 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
+                                      (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
   {
-    sub_B0D97C(Instance);
+    sub_B52A5C(Instance, v4);
   }
   return CommonReleaseMaster__IsOpen(
            (CommonReleaseMaster_o *)Instance,
@@ -87,13 +87,14 @@ void __fastcall EnableCommonReleaseComponent__Refresh(EnableCommonReleaseCompone
   int v4; // w21
   bool v5; // w19
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v7; // x1
 
   IsOpen = EnableCommonReleaseComponent__IsOpen(this, method);
   v4 = *((unsigned __int8 *)&this->fields.refreshingWhenOnEnable + 2);
   v5 = IsOpen;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v7);
   UnityEngine_GameObject__SetActive(gameObject, (v5 ^ (v4 == 0)) & 1, 0LL);
 }
 

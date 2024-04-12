@@ -1,18 +1,17 @@
-// local variable allocation has failed, the output may be wrong!
 void __fastcall NpcBackStepBattleLogicTask___ctor(
         NpcBackStepBattleLogicTask_o *this,
         int32_t targetId,
         bool isForcedSpeedOne,
         const MethodInfo *method)
 {
-  if ( (byte_4211FD9 & 1) == 0 )
+  if ( (byte_42ADADF & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_9388/*"NPC_BACKSTEP"*/, *(_QWORD *)&targetId);
-    byte_4211FD9 = 1;
+    sub_B52984(&StringLiteral_9422/*"NPC_BACKSTEP"*/);
+    byte_42ADADF = 1;
   }
   PlayFieldMotionNpcBattleLogicTask___ctor(
     (PlayFieldMotionNpcBattleLogicTask_o *)this,
-    (System_String_o *)StringLiteral_9388/*"NPC_BACKSTEP"*/,
+    (System_String_o *)StringLiteral_9422/*"NPC_BACKSTEP"*/,
     targetId,
     isForcedSpeedOne,
     0LL);
@@ -29,10 +28,10 @@ bool __fastcall NpcBackStepBattleLogicTask__IsMakeAble(
   BattleActorControl_o *AiNpcActor; // x19
 
   v4 = (PlayFieldMotionNpcBattleLogicTask_o *)this;
-  if ( (byte_4211FDA & 1) == 0 )
+  if ( (byte_42ADAE0 & 1) == 0 )
   {
-    this = (NpcBackStepBattleLogicTask_o *)sub_B0D8A4(&UnityEngine_Object_TypeInfo, logic);
-    byte_4211FDA = 1;
+    this = (NpcBackStepBattleLogicTask_o *)sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42ADAE0 = 1;
   }
   if ( !logic )
     goto LABEL_12;
@@ -52,7 +51,7 @@ bool __fastcall NpcBackStepBattleLogicTask__IsMakeAble(
     if ( AiNpcActor )
       return AiNpcActor->fields._IsStepInBattle_k__BackingField;
 LABEL_12:
-    sub_B0D97C(this);
+    sub_B52A5C(this, logic);
   }
   return 0;
 }

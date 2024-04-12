@@ -10,21 +10,19 @@ void __fastcall PhotoCampaignListViewItemDraw__SetInput(
         bool isInput,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
   UnityEngine_Component_o *maskLb; // x0
   UnityEngine_Object_o *baseButton; // x22
   UnityEngine_Object_o *lockSprite; // x21
   UnityEngine_Object_o *choiceSprite; // x21
   UnityEngine_Object_o *pushSprite; // x21
   UnityEngine_Object_o *maskSprite; // x21
-  UnityEngine_Object_o *removeObject; // x21
-  const MethodInfo *v15; // x2
+  const MethodInfo *v13; // x2
 
-  if ( (byte_42139FF & 1) == 0 )
+  if ( (byte_42AF78D & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_Collider___, item);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v7);
-    byte_42139FF = 1;
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AF78D = 1;
   }
   if ( item )
   {
@@ -45,16 +43,16 @@ void __fastcall PhotoCampaignListViewItemDraw__SetInput(
         {
           maskLb = (UnityEngine_Component_o *)this->fields.baseButton;
           if ( !maskLb )
-            goto LABEL_50;
+            goto LABEL_44;
           maskLb = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                 maskLb,
-                                                (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_Collider___);
           if ( !maskLb )
-            goto LABEL_50;
+            goto LABEL_44;
           UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)maskLb, isInput, 0LL);
           maskLb = (UnityEngine_Component_o *)this->fields.baseButton;
           if ( !maskLb )
-            goto LABEL_50;
+            goto LABEL_44;
           ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))maskLb->klass[1]._1.implementedInterfaces)(
             maskLb,
             0LL,
@@ -71,10 +69,10 @@ void __fastcall PhotoCampaignListViewItemDraw__SetInput(
         {
           maskLb = (UnityEngine_Component_o *)this->fields.lockSprite;
           if ( !maskLb )
-            goto LABEL_50;
+            goto LABEL_44;
           maskLb = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskLb, 0LL);
           if ( !maskLb )
-            goto LABEL_50;
+            goto LABEL_44;
           UnityEngine_GameObject__SetActive(
             (UnityEngine_GameObject_o *)maskLb,
             item->fields.isSwapLock != item->fields.isLock,
@@ -90,10 +88,10 @@ void __fastcall PhotoCampaignListViewItemDraw__SetInput(
         {
           maskLb = (UnityEngine_Component_o *)this->fields.choiceSprite;
           if ( !maskLb )
-            goto LABEL_50;
+            goto LABEL_44;
           maskLb = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskLb, 0LL);
           if ( !maskLb )
-            goto LABEL_50;
+            goto LABEL_44;
           UnityEngine_GameObject__SetActive(
             (UnityEngine_GameObject_o *)maskLb,
             item->fields.isSwapChoice != item->fields.isChoice,
@@ -109,10 +107,10 @@ void __fastcall PhotoCampaignListViewItemDraw__SetInput(
         {
           maskLb = (UnityEngine_Component_o *)this->fields.pushSprite;
           if ( !maskLb )
-            goto LABEL_50;
+            goto LABEL_44;
           maskLb = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskLb, 0LL);
           if ( !maskLb )
-            goto LABEL_50;
+            goto LABEL_44;
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskLb, item->fields.isPush, 0LL);
         }
         maskSprite = (UnityEngine_Object_o *)this->fields.maskSprite;
@@ -121,36 +119,24 @@ void __fastcall PhotoCampaignListViewItemDraw__SetInput(
         {
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         }
-        if ( UnityEngine_Object__op_Inequality(maskSprite, 0LL, 0LL) )
-        {
-          maskLb = (UnityEngine_Component_o *)this->fields.maskSprite;
-          if ( !maskLb )
-            goto LABEL_50;
-          maskLb = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskLb, 0LL);
-          if ( !maskLb )
-            goto LABEL_50;
-          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskLb, 0, 0LL);
-        }
-        removeObject = (UnityEngine_Object_o *)this->fields.removeObject;
-        if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        }
-        if ( !UnityEngine_Object__op_Inequality(removeObject, 0LL, 0LL) )
-          goto LABEL_48;
-        maskLb = (UnityEngine_Component_o *)this->fields.removeObject;
+        if ( !UnityEngine_Object__op_Inequality(maskSprite, 0LL, 0LL) )
+          goto LABEL_42;
+        maskLb = (UnityEngine_Component_o *)this->fields.maskSprite;
         if ( maskLb )
         {
-          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskLb, item->fields.selectNum >= 0, 0LL);
-LABEL_48:
-          PhotoCampaignListViewItemDraw__SetMaskInfo(this, item, v15);
-          return;
+          maskLb = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskLb, 0LL);
+          if ( maskLb )
+          {
+            UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskLb, 0, 0LL);
+LABEL_42:
+            PhotoCampaignListViewItemDraw__SetMaskInfo(this, item, v13);
+            return;
+          }
         }
       }
     }
-LABEL_50:
-    sub_B0D97C(maskLb);
+LABEL_44:
+    sub_B52A5C(maskLb, item);
   }
 }
 
@@ -167,20 +153,19 @@ void __fastcall PhotoCampaignListViewItemDraw__SetItem(
   UnityEngine_Object_o *choiceSprite; // x21
   UnityEngine_Object_o *pushSprite; // x21
   UnityEngine_Object_o *maskSprite; // x21
-  UnityEngine_Object_o *removeObject; // x21
-  const MethodInfo *v14; // x2
+  const MethodInfo *v13; // x2
 
-  if ( (byte_42139FE & 1) == 0 )
+  if ( (byte_42AF78C & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, item);
-    byte_42139FE = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AF78C = 1;
   }
   if ( item && mode )
   {
     servantFaceIcon = this->fields.servantFaceIcon;
     if ( servantFaceIcon )
     {
-      ServantFaceIconComponent__Set_29552540(
+      ServantFaceIconComponent__Set_30396076(
         servantFaceIcon,
         item->fields.userSvtEntity,
         item->fields.iconLabelInfo1,
@@ -214,8 +199,8 @@ void __fastcall PhotoCampaignListViewItemDraw__SetItem(
               {
                 servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.partyIcon;
                 if ( !servantFaceIcon )
-                  goto LABEL_52;
-                FlashingIconComponent__Set_21845332(
+                  goto LABEL_46;
+                FlashingIconComponent__Set_22571356(
                   (FlashingIconComponent_o *)servantFaceIcon,
                   item->fields.partyIndex >= 0,
                   0LL);
@@ -230,12 +215,12 @@ void __fastcall PhotoCampaignListViewItemDraw__SetItem(
               {
                 servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.lockSprite;
                 if ( !servantFaceIcon )
-                  goto LABEL_52;
+                  goto LABEL_46;
                 servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
                                                                   (UnityEngine_Component_o *)servantFaceIcon,
                                                                   0LL);
                 if ( !servantFaceIcon )
-                  goto LABEL_52;
+                  goto LABEL_46;
                 UnityEngine_GameObject__SetActive(
                   (UnityEngine_GameObject_o *)servantFaceIcon,
                   item->fields.isSwapLock != item->fields.isLock,
@@ -251,12 +236,12 @@ void __fastcall PhotoCampaignListViewItemDraw__SetItem(
               {
                 servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.choiceSprite;
                 if ( !servantFaceIcon )
-                  goto LABEL_52;
+                  goto LABEL_46;
                 servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
                                                                   (UnityEngine_Component_o *)servantFaceIcon,
                                                                   0LL);
                 if ( !servantFaceIcon )
-                  goto LABEL_52;
+                  goto LABEL_46;
                 UnityEngine_GameObject__SetActive(
                   (UnityEngine_GameObject_o *)servantFaceIcon,
                   item->fields.isSwapChoice != item->fields.isChoice,
@@ -272,12 +257,12 @@ void __fastcall PhotoCampaignListViewItemDraw__SetItem(
               {
                 servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.pushSprite;
                 if ( !servantFaceIcon )
-                  goto LABEL_52;
+                  goto LABEL_46;
                 servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
                                                                   (UnityEngine_Component_o *)servantFaceIcon,
                                                                   0LL);
                 if ( !servantFaceIcon )
-                  goto LABEL_52;
+                  goto LABEL_46;
                 UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, item->fields.isPush, 0LL);
               }
               maskSprite = (UnityEngine_Object_o *)this->fields.maskSprite;
@@ -286,44 +271,29 @@ void __fastcall PhotoCampaignListViewItemDraw__SetItem(
               {
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
               }
-              if ( UnityEngine_Object__op_Inequality(maskSprite, 0LL, 0LL) )
+              if ( !UnityEngine_Object__op_Inequality(maskSprite, 0LL, 0LL) )
+                goto LABEL_44;
+              servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.maskSprite;
+              if ( servantFaceIcon )
               {
-                servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.maskSprite;
-                if ( !servantFaceIcon )
-                  goto LABEL_52;
                 servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
                                                                   (UnityEngine_Component_o *)servantFaceIcon,
                                                                   0LL);
-                if ( !servantFaceIcon )
-                  goto LABEL_52;
-                UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, 0, 0LL);
-              }
-              removeObject = (UnityEngine_Object_o *)this->fields.removeObject;
-              if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-                && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-              {
-                j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-              }
-              if ( !UnityEngine_Object__op_Inequality(removeObject, 0LL, 0LL) )
-                goto LABEL_50;
-              servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.removeObject;
-              if ( servantFaceIcon )
-              {
-                UnityEngine_GameObject__SetActive(
-                  (UnityEngine_GameObject_o *)servantFaceIcon,
-                  item->fields.selectNum >= 0,
-                  0LL);
-LABEL_50:
-                PhotoCampaignListViewItemDraw__SetMaskInfo(this, item, v14);
-                return;
+                if ( servantFaceIcon )
+                {
+                  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, 0, 0LL);
+LABEL_44:
+                  PhotoCampaignListViewItemDraw__SetMaskInfo(this, item, v13);
+                  return;
+                }
               }
             }
           }
         }
       }
     }
-LABEL_52:
-    sub_B0D97C(servantFaceIcon);
+LABEL_46:
+    sub_B52A5C(servantFaceIcon, item);
   }
 }
 
@@ -334,47 +304,44 @@ void __fastcall PhotoCampaignListViewItemDraw__SetMaskInfo(
         const MethodInfo *method)
 {
   PhotoCampaignListViewItemDraw_o *v4; // x19
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   UserServantEntity_o *userSvtEntity; // x0
   UILabel_o *maskLb; // x19
-  __int64 *v10; // x8
+  __int64 *v7; // x8
 
   v4 = this;
-  if ( (byte_4213A00 & 1) == 0 )
+  if ( (byte_42AF78E & 1) == 0 )
   {
-    sub_B0D8A4(&LocalizationManager_TypeInfo, item);
-    sub_B0D8A4(&StringLiteral_11647/*"SELECT_CANNOT"*/, v5);
-    sub_B0D8A4(&StringLiteral_11670/*"SELECT_SERVANT_EVENT_JOIN"*/, v6);
-    this = (PhotoCampaignListViewItemDraw_o *)sub_B0D8A4(&StringLiteral_10462/*"PHOTO_SERVANT_SELECTED_SERVANT"*/, v7);
-    byte_4213A00 = 1;
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&StringLiteral_11707/*"SELECT_CANNOT"*/);
+    this = (PhotoCampaignListViewItemDraw_o *)sub_B52984(&StringLiteral_11730/*"SELECT_SERVANT_EVENT_JOIN"*/);
+    byte_42AF78E = 1;
   }
   if ( !item )
-    goto LABEL_40;
-  if ( !item->fields.isPushMode )
+    goto LABEL_27;
+  if ( item->fields.isPushMode )
   {
-    if ( !PhotoCampaignListViewItem__get_IsHerioneReave(item, (const MethodInfo *)item) )
+    userSvtEntity = item->fields.userSvtEntity;
+    if ( userSvtEntity )
     {
-      if ( (item->fields.selectNum & 0x80000000) == 0 )
+      if ( UserServantEntity__IsEventJoin(userSvtEntity, 0LL) )
       {
         this = (PhotoCampaignListViewItemDraw_o *)v4->fields.maskSprite;
         if ( !this )
-          goto LABEL_40;
+          goto LABEL_27;
         this = (PhotoCampaignListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
                                                     (UnityEngine_Component_o *)this,
                                                     0LL);
         if ( !this )
-          goto LABEL_40;
+          goto LABEL_27;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
         this = (PhotoCampaignListViewItemDraw_o *)v4->fields.maskLb;
         if ( !this )
-          goto LABEL_40;
+          goto LABEL_27;
         this = (PhotoCampaignListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
                                                     (UnityEngine_Component_o *)this,
                                                     0LL);
         if ( !this )
-          goto LABEL_40;
+          goto LABEL_27;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
         maskLb = v4->fields.maskLb;
         if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -382,60 +349,38 @@ void __fastcall PhotoCampaignListViewItemDraw__SetMaskInfo(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v10 = &StringLiteral_10462/*"PHOTO_SERVANT_SELECTED_SERVANT"*/;
-        goto LABEL_35;
+        v7 = &StringLiteral_11730/*"SELECT_SERVANT_EVENT_JOIN"*/;
+LABEL_24:
+        this = (PhotoCampaignListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)*v7, 0LL);
+        if ( maskLb )
+        {
+          UILabel__set_text(maskLb, (System_String_o *)this, 0LL);
+          return;
+        }
+LABEL_27:
+        sub_B52A5C(this, item);
       }
-      if ( !item->fields.isSelectedSvtId && !item->fields.isSelectedMax )
-        return;
     }
-LABEL_18:
-    this = (PhotoCampaignListViewItemDraw_o *)v4->fields.maskSprite;
-    if ( !this )
-      goto LABEL_40;
-    this = (PhotoCampaignListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
-                                                (UnityEngine_Component_o *)this,
-                                                0LL);
-    if ( !this )
-      goto LABEL_40;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-    this = (PhotoCampaignListViewItemDraw_o *)v4->fields.maskLb;
-    if ( !this )
-      goto LABEL_40;
-    this = (PhotoCampaignListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
-                                                (UnityEngine_Component_o *)this,
-                                                0LL);
-    if ( !this )
-      goto LABEL_40;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-    maskLb = v4->fields.maskLb;
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    v10 = &StringLiteral_11647/*"SELECT_CANNOT"*/;
-    goto LABEL_35;
   }
-  userSvtEntity = item->fields.userSvtEntity;
-  if ( userSvtEntity && UserServantEntity__IsEventJoin(userSvtEntity, 0LL) )
+  if ( PhotoCampaignListViewItem__get_IsHerioneReave(item, (const MethodInfo *)item) )
   {
     this = (PhotoCampaignListViewItemDraw_o *)v4->fields.maskSprite;
     if ( !this )
-      goto LABEL_40;
+      goto LABEL_27;
     this = (PhotoCampaignListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
                                                 (UnityEngine_Component_o *)this,
                                                 0LL);
     if ( !this )
-      goto LABEL_40;
+      goto LABEL_27;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
     this = (PhotoCampaignListViewItemDraw_o *)v4->fields.maskLb;
     if ( !this )
-      goto LABEL_40;
+      goto LABEL_27;
     this = (PhotoCampaignListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
                                                 (UnityEngine_Component_o *)this,
                                                 0LL);
     if ( !this )
-      goto LABEL_40;
+      goto LABEL_27;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
     maskLb = v4->fields.maskLb;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -443,17 +388,7 @@ LABEL_18:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v10 = &StringLiteral_11670/*"SELECT_SERVANT_EVENT_JOIN"*/;
-LABEL_35:
-    this = (PhotoCampaignListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)*v10, 0LL);
-    if ( maskLb )
-    {
-      UILabel__set_text(maskLb, (System_String_o *)this, 0LL);
-      return;
-    }
-LABEL_40:
-    sub_B0D97C(this);
+    v7 = &StringLiteral_11707/*"SELECT_CANNOT"*/;
+    goto LABEL_24;
   }
-  if ( PhotoCampaignListViewItem__get_IsHerioneReave(item, (const MethodInfo *)item) )
-    goto LABEL_18;
 }

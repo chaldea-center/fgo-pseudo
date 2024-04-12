@@ -1,11 +1,9 @@
 void __fastcall CylinderPoint___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-
-  if ( (byte_4216041 & 1) == 0 )
+  if ( (byte_42B19F3 & 1) == 0 )
   {
-    sub_B0D8A4(&CylinderPoint_TypeInfo, v1);
-    byte_4216041 = 1;
+    sub_B52984(&CylinderPoint_TypeInfo);
+    byte_42B19F3 = 1;
   }
   CylinderPoint_TypeInfo->static_fields->FORWARD_VEC = UnityEngine_Vector3__get_back(0LL);
 }
@@ -13,10 +11,10 @@ void __fastcall CylinderPoint___cctor(const MethodInfo *method)
 
 void __fastcall CylinderPoint___ctor(CylinderPoint_o *this, const MethodInfo *method)
 {
-  if ( (byte_4216040 & 1) == 0 )
+  if ( (byte_42B19F2 & 1) == 0 )
   {
-    sub_B0D8A4(&BaseEarthPoint_TypeInfo, method);
-    byte_4216040 = 1;
+    sub_B52984(&BaseEarthPoint_TypeInfo);
+    byte_42B19F2 = 1;
   }
   if ( (BYTE3(BaseEarthPoint_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BaseEarthPoint_TypeInfo->_2.cctor_finished )
@@ -29,20 +27,20 @@ void __fastcall CylinderPoint___ctor(CylinderPoint_o *this, const MethodInfo *me
 
 System_String_o *__fastcall CylinderPoint__GetEffectName(CylinderPoint_o *this, const MethodInfo *method)
 {
-  if ( (byte_421603F & 1) == 0 )
+  if ( (byte_42B19F1 & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_18236/*"ef_difference21"*/, method);
-    byte_421603F = 1;
+    sub_B52984(&StringLiteral_18314/*"ef_difference21"*/);
+    byte_42B19F1 = 1;
   }
-  return (System_String_o *)StringLiteral_18236/*"ef_difference21"*/;
+  return (System_String_o *)StringLiteral_18314/*"ef_difference21"*/;
 }
 
 
 void __fastcall CylinderPoint__LateUpdate(CylinderPoint_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Object_o *mWidget; // x20
   UnityEngine_ParticleSystem_o *transform; // x0
+  __int64 v5; // x1
   float DotXZ; // s0
   struct UIWidget_o *v7; // x8
   float g; // s9
@@ -58,11 +56,11 @@ void __fastcall CylinderPoint__LateUpdate(CylinderPoint_o *this, const MethodInf
   UnityEngine_Color_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_421603E & 1) == 0 )
+  if ( (byte_42B19F0 & 1) == 0 )
   {
-    sub_B0D8A4(&CylinderPoint_TypeInfo, method);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
-    byte_421603E = 1;
+    sub_B52984(&CylinderPoint_TypeInfo);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B19F0 = 1;
   }
   zero.fields.z = 0.0;
   *(_QWORD *)&zero.fields.x = 0LL;
@@ -105,7 +103,7 @@ void __fastcall CylinderPoint__LateUpdate(CylinderPoint_o *this, const MethodInf
     transform = (UnityEngine_ParticleSystem_o *)this->fields.mWidget;
     if ( !transform )
 LABEL_32:
-      sub_B0D97C(transform);
+      sub_B52A5C(transform, v5);
     v19.fields.r = r;
     v19.fields.g = g;
     v19.fields.b = b;

@@ -1,28 +1,27 @@
 void __fastcall UserQuestInfoEntity___ctor(UserQuestInfoEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4212BFF & 1) == 0 )
+  if ( (byte_42AE144 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4212BFF = 1;
+    sub_B52984(&Method_DataEntityBase_string___ctor__);
+    byte_42AE144 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall UserQuestInfoEntity__CreatePK(int64_t userId, int32_t questId, const MethodInfo *method)
 {
-  if ( (byte_4212BFE & 1) == 0 )
+  if ( (byte_42AE143 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&questId);
-    byte_4212BFE = 1;
+    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_42AE143 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            questId,
-           (const MethodInfo_171354C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_1A4E080 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

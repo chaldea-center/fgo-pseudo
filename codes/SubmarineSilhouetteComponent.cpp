@@ -8,21 +8,20 @@ SimpleAnimation_o *__fastcall SubmarineSilhouetteComponent__get_AnimationCompone
         SubmarineSilhouetteComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Object_o *mAnimation; // x21
   struct SimpleAnimation_o *Component_WebViewObject; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
 
-  if ( (byte_4215F60 & 1) == 0 )
+  if ( (byte_42B1912 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, method);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
-    byte_4215F60 = 1;
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B1912 = 1;
   }
   mAnimation = (UnityEngine_Object_o *)this->fields.mAnimation;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -34,17 +33,17 @@ SimpleAnimation_o *__fastcall SubmarineSilhouetteComponent__get_AnimationCompone
   {
     Component_WebViewObject = (struct SimpleAnimation_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                             (UnityEngine_Component_o *)this,
-                                                            (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+                                                            (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
     this->fields.mAnimation = Component_WebViewObject;
-    sub_B0D840(
+    sub_B52920(
       (BattleServantConfConponent_o *)&this->fields.mAnimation,
       (System_Int32_array **)Component_WebViewObject,
+      v5,
       v6,
       v7,
       v8,
       v9,
-      v10,
-      v11);
+      v10);
   }
   return this->fields.mAnimation;
 }

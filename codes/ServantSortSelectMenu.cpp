@@ -1,21 +1,21 @@
 void __fastcall ServantSortSelectMenu___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x2
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  ListViewSort_o *v7; // x19
+  ListViewSort_o *v1; // x19
   BattleServantConfConponent_o *static_fields; // x0
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  __int64 v15; // x1
-  __int64 v16; // x2
+  System_String_array **v3; // x2
+  System_String_array **v4; // x3
+  System_Boolean_array **v5; // x4
+  System_Int32_array **v6; // x5
+  System_Int32_array *v7; // x6
+  System_Int32_array *v8; // x7
+  ListViewSort_o *v9; // x19
+  struct ServantSortSelectMenu_StaticFields *v10; // x0
+  System_String_array **v11; // x2
+  System_String_array **v12; // x3
+  System_Boolean_array **v13; // x4
+  System_Int32_array **v14; // x5
+  System_Int32_array *v15; // x6
+  System_Int32_array *v16; // x7
   ListViewSort_o *v17; // x19
   struct ServantSortSelectMenu_StaticFields *v18; // x0
   System_String_array **v19; // x2
@@ -24,37 +24,40 @@ void __fastcall ServantSortSelectMenu___cctor(const MethodInfo *method)
   System_Int32_array **v22; // x5
   System_Int32_array *v23; // x6
   System_Int32_array *v24; // x7
-  __int64 v25; // x1
-  __int64 v26; // x2
-  ListViewSort_o *v27; // x19
-  struct ServantSortSelectMenu_StaticFields *v28; // x0
-  System_String_array **v29; // x2
-  System_String_array **v30; // x3
-  System_Boolean_array **v31; // x4
-  System_Int32_array **v32; // x5
-  System_Int32_array *v33; // x6
-  System_Int32_array *v34; // x7
 
-  if ( (byte_4212D83 & 1) == 0 )
+  if ( (byte_42AE36F & 1) == 0 )
   {
-    sub_B0D8A4(&ListViewSort_TypeInfo, v1);
-    sub_B0D8A4(&ServantSortSelectMenu_TypeInfo, v3);
-    sub_B0D8A4(&StringLiteral_12766/*"ServantSortSelect1"*/, v4);
-    sub_B0D8A4(&StringLiteral_12767/*"ServantSortSelect2"*/, v5);
-    sub_B0D8A4(&StringLiteral_12768/*"ServantSortSelect4"*/, v6);
-    byte_4212D83 = 1;
+    sub_B52984(&ListViewSort_TypeInfo);
+    sub_B52984(&ServantSortSelectMenu_TypeInfo);
+    sub_B52984(&StringLiteral_12819/*"ServantSortSelect1"*/);
+    sub_B52984(&StringLiteral_12820/*"ServantSortSelect2"*/);
+    sub_B52984(&StringLiteral_12821/*"ServantSortSelect4"*/);
+    byte_42AE36F = 1;
   }
-  v7 = (ListViewSort_o *)sub_B0D974(ListViewSort_TypeInfo, v1, v2);
-  ListViewSort___ctor_32823364(v7, (System_String_o *)StringLiteral_12766/*"ServantSortSelect1"*/, 3, 0, 0LL);
+  v1 = (ListViewSort_o *)sub_B52A54(ListViewSort_TypeInfo);
+  ListViewSort___ctor_33999208(v1, (System_String_o *)StringLiteral_12819/*"ServantSortSelect1"*/, 3, 0, 0LL);
   static_fields = (BattleServantConfConponent_o *)ServantSortSelectMenu_TypeInfo->static_fields;
-  static_fields->klass = (BattleServantConfConponent_c *)v7;
-  sub_B0D840(static_fields, (System_Int32_array **)v7, v9, v10, v11, v12, v13, v14);
-  v17 = (ListViewSort_o *)sub_B0D974(ListViewSort_TypeInfo, v15, v16);
-  ListViewSort___ctor_32823364(v17, (System_String_o *)StringLiteral_12767/*"ServantSortSelect2"*/, 3, 0, 0LL);
+  static_fields->klass = (BattleServantConfConponent_c *)v1;
+  sub_B52920(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  v9 = (ListViewSort_o *)sub_B52A54(ListViewSort_TypeInfo);
+  ListViewSort___ctor_33999208(v9, (System_String_o *)StringLiteral_12820/*"ServantSortSelect2"*/, 3, 0, 0LL);
+  v10 = ServantSortSelectMenu_TypeInfo->static_fields;
+  v10->commonServantEquipSortInfo = v9;
+  sub_B52920(
+    (BattleServantConfConponent_o *)&v10->commonServantEquipSortInfo,
+    (System_Int32_array **)v9,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16);
+  v17 = (ListViewSort_o *)sub_B52A54(ListViewSort_TypeInfo);
+  ListViewSort___ctor_33999208(v17, (System_String_o *)StringLiteral_12821/*"ServantSortSelect4"*/, 3, 0, 0LL);
   v18 = ServantSortSelectMenu_TypeInfo->static_fields;
-  v18->commonServantEquipSortInfo = v17;
-  sub_B0D840(
-    (BattleServantConfConponent_o *)&v18->commonServantEquipSortInfo,
+  v18->commandCodeSortInfo = v17;
+  sub_B52920(
+    (BattleServantConfConponent_o *)&v18->commandCodeSortInfo,
     (System_Int32_array **)v17,
     v19,
     v20,
@@ -62,47 +65,34 @@ void __fastcall ServantSortSelectMenu___cctor(const MethodInfo *method)
     v22,
     v23,
     v24);
-  v27 = (ListViewSort_o *)sub_B0D974(ListViewSort_TypeInfo, v25, v26);
-  ListViewSort___ctor_32823364(v27, (System_String_o *)StringLiteral_12768/*"ServantSortSelect4"*/, 3, 0, 0LL);
-  v28 = ServantSortSelectMenu_TypeInfo->static_fields;
-  v28->commandCodeSortInfo = v27;
-  sub_B0D840(
-    (BattleServantConfConponent_o *)&v28->commandCodeSortInfo,
-    (System_Int32_array **)v27,
-    v29,
-    v30,
-    v31,
-    v32,
-    v33,
-    v34);
 }
 
 
 void __fastcall ServantSortSelectMenu___ctor(ServantSortSelectMenu_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
+  System_Collections_Generic_List_VoiceCondType_Type__o *v3; // x20
+  __int64 v4; // x0
   __int64 v5; // x1
-  __int64 v6; // x1
-  System_Collections_Generic_List_VoiceCondType_Type__o *v7; // x20
-  __int64 v8; // x0
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  __int64 v15; // x1
-  __int64 v16; // x2
-  System_Collections_Generic_List_VoiceCondType_Type__o *v17; // x20
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
-  __int64 v24; // x1
-  __int64 v25; // x2
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
+  System_Collections_Generic_List_VoiceCondType_Type__o *v12; // x20
+  System_String_array **v13; // x2
+  System_String_array **v14; // x3
+  System_Boolean_array **v15; // x4
+  System_Int32_array **v16; // x5
+  System_Int32_array *v17; // x6
+  System_Int32_array *v18; // x7
+  System_Collections_Generic_List_VoiceCondType_Type__o *v19; // x20
+  System_String_array **v20; // x2
+  System_String_array **v21; // x3
+  System_Boolean_array **v22; // x4
+  System_Int32_array **v23; // x5
+  System_Int32_array *v24; // x6
+  System_Int32_array *v25; // x7
   System_Collections_Generic_List_VoiceCondType_Type__o *v26; // x20
   System_String_array **v27; // x2
   System_String_array **v28; // x3
@@ -110,254 +100,286 @@ void __fastcall ServantSortSelectMenu___ctor(ServantSortSelectMenu_o *this, cons
   System_Int32_array **v30; // x5
   System_Int32_array *v31; // x6
   System_Int32_array *v32; // x7
-  __int64 v33; // x1
-  __int64 v34; // x2
-  System_Collections_Generic_List_VoiceCondType_Type__o *v35; // x20
-  System_String_array **v36; // x2
-  System_String_array **v37; // x3
-  System_Boolean_array **v38; // x4
-  System_Int32_array **v39; // x5
-  System_Int32_array *v40; // x6
-  System_Int32_array *v41; // x7
-  __int64 v42; // x1
-  __int64 v43; // x2
-  System_Collections_Generic_List_VoiceCondType_Type__o *v44; // x20
-  System_String_array **v45; // x2
-  System_String_array **v46; // x3
-  System_Boolean_array **v47; // x4
-  System_Int32_array **v48; // x5
-  System_Int32_array *v49; // x6
-  System_Int32_array *v50; // x7
-  __int64 v51; // x1
-  __int64 v52; // x2
-  System_Collections_Generic_List_VoiceCondType_Type__o *v53; // x20
-  System_String_array **v54; // x2
-  System_String_array **v55; // x3
-  System_Boolean_array **v56; // x4
-  System_Int32_array **v57; // x5
-  System_Int32_array *v58; // x6
-  System_Int32_array *v59; // x7
-  __int64 v60; // x1
-  __int64 v61; // x2
-  System_Collections_Generic_List_VoiceCondType_Type__o *v62; // x20
-  System_String_array **v63; // x2
-  System_String_array **v64; // x3
-  System_Boolean_array **v65; // x4
-  System_Int32_array **v66; // x5
-  System_Int32_array *v67; // x6
-  System_Int32_array *v68; // x7
+  System_Collections_Generic_List_VoiceCondType_Type__o *v33; // x20
+  System_String_array **v34; // x2
+  System_String_array **v35; // x3
+  System_Boolean_array **v36; // x4
+  System_Int32_array **v37; // x5
+  System_Int32_array *v38; // x6
+  System_Int32_array *v39; // x7
+  System_Collections_Generic_List_VoiceCondType_Type__o *v40; // x20
+  System_String_array **v41; // x2
+  System_String_array **v42; // x3
+  System_Boolean_array **v43; // x4
+  System_Int32_array **v44; // x5
+  System_Int32_array *v45; // x6
+  System_Int32_array *v46; // x7
+  System_Collections_Generic_List_VoiceCondType_Type__o *v47; // x20
+  System_String_array **v48; // x2
+  System_String_array **v49; // x3
+  System_Boolean_array **v50; // x4
+  System_Int32_array **v51; // x5
+  System_Int32_array *v52; // x6
+  System_Int32_array *v53; // x7
 
-  if ( (byte_4212D82 & 1) == 0 )
+  if ( (byte_42AE36E & 1) == 0 )
   {
-    sub_B0D8A4(&BaseDialog_TypeInfo, method);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__, v4);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__, v5);
-    sub_B0D8A4(&System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo, v6);
-    byte_4212D82 = 1;
+    sub_B52984(&BaseDialog_TypeInfo);
+    sub_B52984(&Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    sub_B52984(&Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__);
+    sub_B52984(&System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo);
+    byte_42AE36E = 1;
   }
   this->fields.ShortDispSortButtonSpace = (struct UnityEngine_Vector2_o)0x40A0000041200000LL;
-  v7 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B0D974(
-                                                                  System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo,
-                                                                  method,
-                                                                  v2);
+  v3 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B52A54(System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
-    v7,
-    (const MethodInfo_2FB217C *)Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__);
-  if ( !v7 )
+    v3,
+    (const MethodInfo_305922C *)Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__);
+  if ( !v3 )
     goto LABEL_14;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v7,
+    v3,
     3,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v7,
+    v3,
     10,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v7,
+    v3,
     4,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v7,
+    v3,
     7,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v7,
+    v3,
     5,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v7,
+    v3,
     6,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v7,
+    v3,
     15,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v7,
+    v3,
     16,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v7,
+    v3,
     2,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v7,
+    v3,
     14,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v7,
+    v3,
     1,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v7,
+    v3,
     8,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  this->fields.servantBaseSelectList = (struct System_Collections_Generic_List_ListViewSort_SortKind__o *)v7;
-  sub_B0D840(
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  this->fields.servantBaseSelectList = (struct System_Collections_Generic_List_ListViewSort_SortKind__o *)v3;
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.servantBaseSelectList,
-    (System_Int32_array **)v7,
+    (System_Int32_array **)v3,
+    v6,
+    v7,
+    v8,
     v9,
     v10,
-    v11,
-    v12,
-    v13,
-    v14);
-  v17 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B0D974(
-                                                                   System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo,
-                                                                   v15,
-                                                                   v16);
+    v11);
+  v12 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B52A54(System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
-    v17,
-    (const MethodInfo_2FB217C *)Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__);
-  if ( !v17 )
+    v12,
+    (const MethodInfo_305922C *)Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__);
+  if ( !v12 )
     goto LABEL_14;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v17,
+    v12,
     3,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v17,
+    v12,
     10,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v17,
+    v12,
     4,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v17,
+    v12,
     7,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v17,
+    v12,
     5,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v17,
+    v12,
     6,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v17,
+    v12,
     15,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v17,
+    v12,
     16,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v17,
+    v12,
     2,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v17,
+    v12,
     14,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v17,
+    v12,
     1,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v17,
+    v12,
     8,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v17,
+    v12,
     25,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  this->fields.fatigureSelectList = (struct System_Collections_Generic_List_ListViewSort_SortKind__o *)v17;
-  sub_B0D840(
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  this->fields.fatigureSelectList = (struct System_Collections_Generic_List_ListViewSort_SortKind__o *)v12;
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.fatigureSelectList,
-    (System_Int32_array **)v17,
-    v18,
+    (System_Int32_array **)v12,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18);
+  v19 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B52A54(System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo);
+  System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v19,
+    (const MethodInfo_305922C *)Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__);
+  if ( !v19 )
+    goto LABEL_14;
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v19,
+    3,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v19,
+    10,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v19,
+    4,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v19,
+    7,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v19,
+    5,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v19,
+    6,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v19,
+    15,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v19,
+    16,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v19,
+    2,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v19,
+    14,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v19,
+    1,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v19,
+    8,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v19,
+    28,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  this->fields.buddySelectList = (struct System_Collections_Generic_List_ListViewSort_SortKind__o *)v19;
+  sub_B52920(
+    (BattleServantConfConponent_o *)&this->fields.buddySelectList,
+    (System_Int32_array **)v19,
     v20,
     v21,
     v22,
-    v23);
-  v26 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B0D974(
-                                                                   System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo,
-                                                                   v24,
-                                                                   v25);
+    v23,
+    v24,
+    v25);
+  v26 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B52A54(System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v26,
-    (const MethodInfo_2FB217C *)Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__);
+    (const MethodInfo_305922C *)Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__);
   if ( !v26 )
     goto LABEL_14;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v26,
     3,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v26,
     10,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v26,
     4,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v26,
     7,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v26,
-    5,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v26,
-    6,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v26,
-    15,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v26,
-    16,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v26,
     2,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v26,
+    5,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v26,
+    6,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v26,
     14,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v26,
     1,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v26,
     8,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v26,
-    28,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  this->fields.buddySelectList = (struct System_Collections_Generic_List_ListViewSort_SortKind__o *)v26;
-  sub_B0D840(
-    (BattleServantConfConponent_o *)&this->fields.buddySelectList,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  this->fields.servantSelectList = (struct System_Collections_Generic_List_ListViewSort_SortKind__o *)v26;
+  sub_B52920(
+    (BattleServantConfConponent_o *)&this->fields.servantSelectList,
     (System_Int32_array **)v26,
     v27,
     v28,
@@ -365,199 +387,131 @@ void __fastcall ServantSortSelectMenu___ctor(ServantSortSelectMenu_o *this, cons
     v30,
     v31,
     v32);
-  v35 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B0D974(
-                                                                   System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo,
-                                                                   v33,
-                                                                   v34);
+  v33 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B52A54(System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
-    v35,
-    (const MethodInfo_2FB217C *)Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__);
-  if ( !v35 )
+    v33,
+    (const MethodInfo_305922C *)Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__);
+  if ( !v33 )
     goto LABEL_14;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v35,
+    v33,
     3,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v35,
-    10,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v35,
-    4,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v35,
-    7,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v35,
-    2,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v35,
+    v33,
     5,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v35,
+    v33,
     6,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v35,
+    v33,
+    7,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v33,
+    2,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v33,
     14,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v35,
+    v33,
     1,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v33,
+    24,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  this->fields.servantEquipSelectList = (struct System_Collections_Generic_List_ListViewSort_SortKind__o *)v33;
+  sub_B52920(
+    (BattleServantConfConponent_o *)&this->fields.servantEquipSelectList,
+    (System_Int32_array **)v33,
+    v34,
     v35,
-    8,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  this->fields.servantSelectList = (struct System_Collections_Generic_List_ListViewSort_SortKind__o *)v35;
-  sub_B0D840(
-    (BattleServantConfConponent_o *)&this->fields.servantSelectList,
-    (System_Int32_array **)v35,
     v36,
     v37,
     v38,
-    v39,
-    v40,
-    v41);
-  v44 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B0D974(
-                                                                   System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo,
-                                                                   v42,
-                                                                   v43);
+    v39);
+  v40 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B52A54(System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
-    v44,
-    (const MethodInfo_2FB217C *)Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__);
-  if ( !v44 )
+    v40,
+    (const MethodInfo_305922C *)Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__);
+  if ( !v40 )
     goto LABEL_14;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v44,
+    v40,
+    8,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v40,
     3,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v44,
-    5,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    v40,
+    19,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v44,
-    6,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    v40,
+    20,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v44,
-    7,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+    v40,
+    21,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v44,
+    v40,
+    22,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v40,
+    23,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v40,
     2,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  this->fields.servantCostumeSelectList = (struct System_Collections_Generic_List_ListViewSort_SortKind__o *)v40;
+  sub_B52920(
+    (BattleServantConfConponent_o *)&this->fields.servantCostumeSelectList,
+    (System_Int32_array **)v40,
+    v41,
+    v42,
+    v43,
     v44,
-    14,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v44,
-    1,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v44,
-    24,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  this->fields.servantEquipSelectList = (struct System_Collections_Generic_List_ListViewSort_SortKind__o *)v44;
-  sub_B0D840(
-    (BattleServantConfConponent_o *)&this->fields.servantEquipSelectList,
-    (System_Int32_array **)v44,
     v45,
-    v46,
+    v46);
+  v47 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B52A54(System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo);
+  System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v47,
+    (const MethodInfo_305922C *)Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__);
+  if ( !v47 )
+LABEL_14:
+    sub_B52A5C(v4, v5);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v47,
+    2,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v47,
+    14,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  System_Collections_Generic_List_VoiceCondType_Type___Add(
+    v47,
+    1,
+    (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
+  this->fields.commandCodeSelectList = (struct System_Collections_Generic_List_ListViewSort_SortKind__o *)v47;
+  sub_B52920(
+    (BattleServantConfConponent_o *)&this->fields.commandCodeSelectList,
+    (System_Int32_array **)v47,
     v48,
     v49,
-    v50);
-  v53 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B0D974(
-                                                                   System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo,
-                                                                   v51,
-                                                                   v52);
-  System_Collections_Generic_List_VoiceCondType_Type____ctor(
-    v53,
-    (const MethodInfo_2FB217C *)Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__);
-  if ( !v53 )
-    goto LABEL_14;
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v53,
-    8,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v53,
-    3,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v53,
-    19,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v53,
-    20,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v53,
-    21,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v53,
-    22,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v53,
-    23,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v53,
-    2,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  this->fields.servantCostumeSelectList = (struct System_Collections_Generic_List_ListViewSort_SortKind__o *)v53;
-  sub_B0D840(
-    (BattleServantConfConponent_o *)&this->fields.servantCostumeSelectList,
-    (System_Int32_array **)v53,
-    v54,
-    v55,
-    v56,
-    v57,
-    v58,
-    v59);
-  v62 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B0D974(
-                                                                   System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo,
-                                                                   v60,
-                                                                   v61);
-  System_Collections_Generic_List_VoiceCondType_Type____ctor(
-    v62,
-    (const MethodInfo_2FB217C *)Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__);
-  if ( !v62 )
-LABEL_14:
-    sub_B0D97C(v8);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v62,
-    2,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v62,
-    14,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  System_Collections_Generic_List_VoiceCondType_Type___Add(
-    v62,
-    1,
-    (const MethodInfo_2FB2ED8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__);
-  this->fields.commandCodeSelectList = (struct System_Collections_Generic_List_ListViewSort_SortKind__o *)v62;
-  sub_B0D840(
-    (BattleServantConfConponent_o *)&this->fields.commandCodeSelectList,
-    (System_Int32_array **)v62,
-    v63,
-    v64,
-    v65,
-    v66,
-    v67,
-    v68);
+    v50,
+    v51,
+    v52,
+    v53);
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
@@ -579,7 +533,7 @@ void __fastcall ServantSortSelectMenu__Callback(ServantSortSelectMenu_o *this, b
   {
     p_callbackFunc = (BattleServantConfConponent_o *)&this->fields.callbackFunc;
     p_callbackFunc->klass = 0LL;
-    sub_B0D840(p_callbackFunc, 0LL, (System_String_array **)method, v3, v4, v5, v6, v7);
+    sub_B52920(p_callbackFunc, 0LL, (System_String_array **)method, v3, v4, v5, v6, v7);
     ServantSortSelectMenu_CallbackFunc__Invoke(callbackFunc, result, 0LL);
   }
 }
@@ -620,47 +574,44 @@ void __fastcall ServantSortSelectMenu__Close(ServantSortSelectMenu_o *this, cons
 {
   const MethodInfo *v2; // x2
 
-  ServantSortSelectMenu__Close_21318284(this, 0LL, v2);
+  ServantSortSelectMenu__Close_21840476(this, 0LL, v2);
 }
 
 
-void __fastcall ServantSortSelectMenu__Close_21318284(
+void __fastcall ServantSortSelectMenu__Close_21840476(
         ServantSortSelectMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  __int64 v12; // x1
-  __int64 v13; // x2
-  System_Action_o *v14; // x20
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
+  System_Action_o *v11; // x20
 
-  if ( (byte_4212D56 & 1) == 0 )
+  if ( (byte_42AE342 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, callback);
-    sub_B0D8A4(&Method_ServantSortSelectMenu_EndClose__, v5);
-    byte_4212D56 = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&Method_ServantSortSelectMenu_EndClose__);
+    byte_42AE342 = 1;
   }
   ServantSortSelectMenu__SetEnableButtons(this, 0, method);
   this->fields.closeCallbackFunc = callback;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc,
     (System_Int32_array **)callback,
+    v5,
     v6,
     v7,
     v8,
     v9,
-    v10,
-    v11);
+    v10);
   this->fields.state = 4;
-  v14 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v12, v13);
-  System_Action___ctor(v14, (Il2CppObject *)this, Method_ServantSortSelectMenu_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v14, 0LL);
+  v11 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+  System_Action___ctor(v11, (Il2CppObject *)this, Method_ServantSortSelectMenu_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
 
 
@@ -680,7 +631,7 @@ void __fastcall ServantSortSelectMenu__EndClose(ServantSortSelectMenu_o *this, c
   if ( closeCallbackFunc )
   {
     this->fields.closeCallbackFunc = 0LL;
-    sub_B0D840((BattleServantConfConponent_o *)&this->fields.closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_B52920((BattleServantConfConponent_o *)&this->fields.closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
     System_Action__Invoke(closeCallbackFunc, 0LL);
   }
 }
@@ -698,10 +649,10 @@ ListViewSort_o *__fastcall ServantSortSelectMenu__GetServantEquipSortInfo(const 
   ServantSortSelectMenu_c *v2; // x0
   ListViewSort_o *commonServantEquipSortInfo; // x0
 
-  if ( (byte_4212D54 & 1) == 0 )
+  if ( (byte_42AE340 & 1) == 0 )
   {
-    sub_B0D8A4(&ServantSortSelectMenu_TypeInfo, v1);
-    byte_4212D54 = 1;
+    sub_B52984(&ServantSortSelectMenu_TypeInfo);
+    byte_42AE340 = 1;
   }
   v2 = ServantSortSelectMenu_TypeInfo;
   if ( (BYTE3(ServantSortSelectMenu_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -712,7 +663,7 @@ ListViewSort_o *__fastcall ServantSortSelectMenu__GetServantEquipSortInfo(const 
   }
   commonServantEquipSortInfo = v2->static_fields->commonServantEquipSortInfo;
   if ( !commonServantEquipSortInfo )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v1);
   ListViewSort__Load(commonServantEquipSortInfo, 0LL);
   return ServantSortSelectMenu_TypeInfo->static_fields->commonServantEquipSortInfo;
 }
@@ -724,10 +675,10 @@ ListViewSort_o *__fastcall ServantSortSelectMenu__GetServantSortInfo(const Metho
   ServantSortSelectMenu_c *v2; // x0
   ListViewSort_o *commonServantSortInfo; // x0
 
-  if ( (byte_4212D53 & 1) == 0 )
+  if ( (byte_42AE33F & 1) == 0 )
   {
-    sub_B0D8A4(&ServantSortSelectMenu_TypeInfo, v1);
-    byte_4212D53 = 1;
+    sub_B52984(&ServantSortSelectMenu_TypeInfo);
+    byte_42AE33F = 1;
   }
   v2 = ServantSortSelectMenu_TypeInfo;
   if ( (BYTE3(ServantSortSelectMenu_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -738,7 +689,7 @@ ListViewSort_o *__fastcall ServantSortSelectMenu__GetServantSortInfo(const Metho
   }
   commonServantSortInfo = v2->static_fields->commonServantSortInfo;
   if ( !commonServantSortInfo )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v1);
   ListViewSort__Load(commonServantSortInfo, 0LL);
   return ServantSortSelectMenu_TypeInfo->static_fields->commonServantSortInfo;
 }
@@ -761,10 +712,10 @@ void __fastcall ServantSortSelectMenu__InitAllDisp(ServantSortSelectMenu_o *this
   UILabel_o *v8; // x20
   __int64 v9; // x0
 
-  if ( (byte_4212D58 & 1) == 0 )
+  if ( (byte_42AE344 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    byte_4212D58 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__);
+    byte_42AE344 = 1;
   }
   allDispObject = this->fields.allDispObject;
   if ( !allDispObject
@@ -772,7 +723,7 @@ void __fastcall ServantSortSelectMenu__InitAllDisp(ServantSortSelectMenu_o *this
         (allDispSortBtnsLabel = this->fields.allDispSortBtnsLabel) == 0LL) )
   {
 LABEL_14:
-    sub_B0D97C(allDispObject);
+    sub_B52A5C(allDispObject, method);
   }
   v5 = 0LL;
   while ( 1 )
@@ -782,15 +733,15 @@ LABEL_14:
       break;
     if ( (unsigned int)v5 >= max_length )
     {
-      v9 = sub_B0D9A8(allDispObject);
-      sub_B0D948(v9, 0LL);
+      v9 = sub_B52A88(allDispObject);
+      sub_B52A28(v9, 0LL);
     }
     servantBaseSelectList = this->fields.servantBaseSelectList;
     if ( servantBaseSelectList )
     {
       v8 = allDispSortBtnsLabel->m_Items[v5];
       if ( servantBaseSelectList->fields._size <= (unsigned int)v5 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
       if ( this->fields.operationSortInfo )
       {
         allDispObject = (UnityEngine_GameObject_o *)ListViewSort__GetSortKindText(
@@ -822,10 +773,10 @@ void __fastcall ServantSortSelectMenu__InitBuddyDisp(ServantSortSelectMenu_o *th
   UILabel_o *v8; // x20
   __int64 v9; // x0
 
-  if ( (byte_4212D5A & 1) == 0 )
+  if ( (byte_42AE346 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    byte_4212D5A = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__);
+    byte_42AE346 = 1;
   }
   buddyDispObject = this->fields.buddyDispObject;
   if ( !buddyDispObject
@@ -833,7 +784,7 @@ void __fastcall ServantSortSelectMenu__InitBuddyDisp(ServantSortSelectMenu_o *th
         (buddyDispSortBtnsLabel = this->fields.buddyDispSortBtnsLabel) == 0LL) )
   {
 LABEL_14:
-    sub_B0D97C(buddyDispObject);
+    sub_B52A5C(buddyDispObject, method);
   }
   v5 = 0LL;
   while ( 1 )
@@ -843,15 +794,15 @@ LABEL_14:
       break;
     if ( (unsigned int)v5 >= max_length )
     {
-      v9 = sub_B0D9A8(buddyDispObject);
-      sub_B0D948(v9, 0LL);
+      v9 = sub_B52A88(buddyDispObject);
+      sub_B52A28(v9, 0LL);
     }
     buddySelectList = this->fields.buddySelectList;
     if ( buddySelectList )
     {
       v8 = buddyDispSortBtnsLabel->m_Items[v5];
       if ( buddySelectList->fields._size <= (unsigned int)v5 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
       if ( this->fields.operationSortInfo )
       {
         buddyDispObject = (UnityEngine_GameObject_o *)ListViewSort__GetSortKindText(
@@ -883,10 +834,10 @@ void __fastcall ServantSortSelectMenu__InitCommandCodeDisp(ServantSortSelectMenu
   UILabel_o *v8; // x20
   __int64 v9; // x0
 
-  if ( (byte_4212D5E & 1) == 0 )
+  if ( (byte_42AE34A & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    byte_4212D5E = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__);
+    byte_42AE34A = 1;
   }
   commandCodeDispObject = this->fields.commandCodeDispObject;
   if ( !commandCodeDispObject
@@ -894,7 +845,7 @@ void __fastcall ServantSortSelectMenu__InitCommandCodeDisp(ServantSortSelectMenu
         (commandCodeDispSortBtnsLabel = this->fields.commandCodeDispSortBtnsLabel) == 0LL) )
   {
 LABEL_14:
-    sub_B0D97C(commandCodeDispObject);
+    sub_B52A5C(commandCodeDispObject, method);
   }
   v5 = 0LL;
   while ( 1 )
@@ -904,15 +855,15 @@ LABEL_14:
       break;
     if ( (unsigned int)v5 >= max_length )
     {
-      v9 = sub_B0D9A8(commandCodeDispObject);
-      sub_B0D948(v9, 0LL);
+      v9 = sub_B52A88(commandCodeDispObject);
+      sub_B52A28(v9, 0LL);
     }
     commandCodeSelectList = this->fields.commandCodeSelectList;
     if ( commandCodeSelectList )
     {
       v8 = commandCodeDispSortBtnsLabel->m_Items[v5];
       if ( commandCodeSelectList->fields._size <= (unsigned int)v5 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
       if ( this->fields.operationSortInfo )
       {
         commandCodeDispObject = (UnityEngine_GameObject_o *)ListViewSort__GetSortKindText(
@@ -944,10 +895,10 @@ void __fastcall ServantSortSelectMenu__InitCostumeDisp(ServantSortSelectMenu_o *
   UILabel_o *v8; // x20
   __int64 v9; // x0
 
-  if ( (byte_4212D5D & 1) == 0 )
+  if ( (byte_42AE349 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    byte_4212D5D = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__);
+    byte_42AE349 = 1;
   }
   costumeDispObject = this->fields.costumeDispObject;
   if ( !costumeDispObject
@@ -955,7 +906,7 @@ void __fastcall ServantSortSelectMenu__InitCostumeDisp(ServantSortSelectMenu_o *
         (costumeDispSortBtnsLabel = this->fields.costumeDispSortBtnsLabel) == 0LL) )
   {
 LABEL_14:
-    sub_B0D97C(costumeDispObject);
+    sub_B52A5C(costumeDispObject, method);
   }
   v5 = 0LL;
   while ( 1 )
@@ -965,15 +916,15 @@ LABEL_14:
       break;
     if ( (unsigned int)v5 >= max_length )
     {
-      v9 = sub_B0D9A8(costumeDispObject);
-      sub_B0D948(v9, 0LL);
+      v9 = sub_B52A88(costumeDispObject);
+      sub_B52A28(v9, 0LL);
     }
     servantCostumeSelectList = this->fields.servantCostumeSelectList;
     if ( servantCostumeSelectList )
     {
       v8 = costumeDispSortBtnsLabel->m_Items[v5];
       if ( servantCostumeSelectList->fields._size <= (unsigned int)v5 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
       if ( this->fields.operationSortInfo )
       {
         costumeDispObject = (UnityEngine_GameObject_o *)ListViewSort__GetSortKindText(
@@ -1005,10 +956,10 @@ void __fastcall ServantSortSelectMenu__InitFatigueDisp(ServantSortSelectMenu_o *
   UILabel_o *v8; // x20
   __int64 v9; // x0
 
-  if ( (byte_4212D59 & 1) == 0 )
+  if ( (byte_42AE345 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    byte_4212D59 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__);
+    byte_42AE345 = 1;
   }
   fatigueDispObject = this->fields.fatigueDispObject;
   if ( !fatigueDispObject
@@ -1016,7 +967,7 @@ void __fastcall ServantSortSelectMenu__InitFatigueDisp(ServantSortSelectMenu_o *
         (fatigueDispSortBtnsLabel = this->fields.fatigueDispSortBtnsLabel) == 0LL) )
   {
 LABEL_14:
-    sub_B0D97C(fatigueDispObject);
+    sub_B52A5C(fatigueDispObject, method);
   }
   v5 = 0LL;
   while ( 1 )
@@ -1026,15 +977,15 @@ LABEL_14:
       break;
     if ( (unsigned int)v5 >= max_length )
     {
-      v9 = sub_B0D9A8(fatigueDispObject);
-      sub_B0D948(v9, 0LL);
+      v9 = sub_B52A88(fatigueDispObject);
+      sub_B52A28(v9, 0LL);
     }
     fatigureSelectList = this->fields.fatigureSelectList;
     if ( fatigureSelectList )
     {
       v8 = fatigueDispSortBtnsLabel->m_Items[v5];
       if ( fatigureSelectList->fields._size <= (unsigned int)v5 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
       if ( this->fields.operationSortInfo )
       {
         fatigueDispObject = (UnityEngine_GameObject_o *)ListViewSort__GetSortKindText(
@@ -1062,10 +1013,10 @@ void __fastcall ServantSortSelectMenu__InitLoad(const MethodInfo *method)
   ServantSortSelectMenu_c *v2; // x0
   ListViewSort_o *commonServantSortInfo; // x0
 
-  if ( (byte_4212D52 & 1) == 0 )
+  if ( (byte_42AE33E & 1) == 0 )
   {
-    sub_B0D8A4(&ServantSortSelectMenu_TypeInfo, v1);
-    byte_4212D52 = 1;
+    sub_B52984(&ServantSortSelectMenu_TypeInfo);
+    byte_42AE33E = 1;
   }
   v2 = ServantSortSelectMenu_TypeInfo;
   if ( (BYTE3(ServantSortSelectMenu_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1076,7 +1027,7 @@ void __fastcall ServantSortSelectMenu__InitLoad(const MethodInfo *method)
   }
   commonServantSortInfo = v2->static_fields->commonServantSortInfo;
   if ( !commonServantSortInfo )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v1);
   ListViewSort__InitLoad(commonServantSortInfo, 0LL);
 }
 
@@ -1091,10 +1042,10 @@ void __fastcall ServantSortSelectMenu__InitNormalDisp(ServantSortSelectMenu_o *t
   UILabel_o *v8; // x20
   __int64 v9; // x0
 
-  if ( (byte_4212D57 & 1) == 0 )
+  if ( (byte_42AE343 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    byte_4212D57 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__);
+    byte_42AE343 = 1;
   }
   normalDispObject = this->fields.normalDispObject;
   if ( !normalDispObject
@@ -1102,7 +1053,7 @@ void __fastcall ServantSortSelectMenu__InitNormalDisp(ServantSortSelectMenu_o *t
         (normalSortBtnsLabel = this->fields.normalSortBtnsLabel) == 0LL) )
   {
 LABEL_14:
-    sub_B0D97C(normalDispObject);
+    sub_B52A5C(normalDispObject, method);
   }
   v5 = 0LL;
   while ( 1 )
@@ -1112,15 +1063,15 @@ LABEL_14:
       break;
     if ( (unsigned int)v5 >= max_length )
     {
-      v9 = sub_B0D9A8(normalDispObject);
-      sub_B0D948(v9, 0LL);
+      v9 = sub_B52A88(normalDispObject);
+      sub_B52A28(v9, 0LL);
     }
     servantSelectList = this->fields.servantSelectList;
     if ( servantSelectList )
     {
       v8 = normalSortBtnsLabel->m_Items[v5];
       if ( servantSelectList->fields._size <= (unsigned int)v5 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
       if ( this->fields.operationSortInfo )
       {
         normalDispObject = (UnityEngine_GameObject_o *)ListViewSort__GetSortKindText(
@@ -1153,10 +1104,10 @@ void __fastcall ServantSortSelectMenu__InitShortDisp(ServantSortSelectMenu_o *th
   UILabel_o *v9; // x20
   __int64 v10; // x0
 
-  if ( (byte_4212D5B & 1) == 0 )
+  if ( (byte_42AE347 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    byte_4212D5B = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__);
+    byte_42AE347 = 1;
   }
   shortDispObject = this->fields.shortDispObject;
   if ( !shortDispObject
@@ -1165,7 +1116,7 @@ void __fastcall ServantSortSelectMenu__InitShortDisp(ServantSortSelectMenu_o *th
         (shortDispSortBtnsLabel = this->fields.shortDispSortBtnsLabel) == 0LL) )
   {
 LABEL_14:
-    sub_B0D97C(shortDispObject);
+    sub_B52A5C(shortDispObject, method);
   }
   v6 = 0LL;
   while ( 1 )
@@ -1175,15 +1126,15 @@ LABEL_14:
       break;
     if ( (unsigned int)v6 >= max_length )
     {
-      v10 = sub_B0D9A8(shortDispObject);
-      sub_B0D948(v10, 0LL);
+      v10 = sub_B52A88(shortDispObject);
+      sub_B52A28(v10, 0LL);
     }
     servantEquipSelectList = this->fields.servantEquipSelectList;
     if ( servantEquipSelectList )
     {
       v9 = shortDispSortBtnsLabel->m_Items[v6];
       if ( servantEquipSelectList->fields._size <= (unsigned int)v6 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
       if ( this->fields.operationSortInfo )
       {
         shortDispObject = (UnityEngine_GameObject_o *)ListViewSort__GetSortKindText(
@@ -1207,131 +1158,121 @@ LABEL_14:
 
 void __fastcall ServantSortSelectMenu__InitShortDispButtons(ServantSortSelectMenu_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   System_Collections_Generic_List_ServantStatusListViewItemDraw_Kind__o *servantEquipSelectList; // x0
-  int32_t v9; // w0
-  __int64 v10; // x1
-  __int64 v11; // x2
-  unsigned int v12; // w20
-  char v13; // w21
+  int32_t v4; // w0
+  unsigned int v5; // w20
+  char v6; // w21
   struct UICommonButton_array **p_shortDispSortButtons; // x22
   struct UICommonButton_array *shortDispSortButtons; // x8
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v16; // x20
-  struct UICommonButton_array *v17; // x22
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v9; // x20
+  struct UICommonButton_array *v10; // x22
   int max_length; // w8
-  unsigned int v19; // w23
-  Il2CppClass **v20; // x8
-  EventMissionProgressRequest_Argument_ProgressData_o *v21; // x21
+  unsigned int v12; // w23
+  Il2CppClass **v13; // x8
+  EventMissionProgressRequest_Argument_ProgressData_o *v14; // x21
   struct UISprite_array *shortDispSortSprites; // x8
-  UISprite_o *v23; // x9
+  UISprite_o *v16; // x9
   int size; // w8
-  int v25; // w10
-  int v26; // w21
-  unsigned int v27; // w22
-  int v28; // w23
-  int v29; // w25
+  int v18; // w10
+  int v19; // w21
+  unsigned int v20; // w22
+  int v21; // w23
+  int v22; // w25
   float mWidth; // s9
   float mHeight; // s10
   float y; // s12
-  int v33; // w26
-  float v34; // s0
-  float v35; // s8
+  int v26; // w26
+  float v27; // s0
+  float v28; // s8
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_GameObject_o *v37; // x0
-  __int64 v39; // x0
+  UnityEngine_GameObject_o *v30; // x0
+  __int64 v32; // x0
 
-  if ( (byte_4212D5C & 1) == 0 )
+  if ( (byte_42AE348 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_UICommonButton__Add__, method);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ListViewSort_SortKind__IndexOf__, v3);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_UICommonButton___ctor__, v4);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_UICommonButton__get_Count__, v5);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_UICommonButton__get_Item__, v6);
-    sub_B0D8A4(&System_Collections_Generic_List_UICommonButton__TypeInfo, v7);
-    byte_4212D5C = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_UICommonButton__Add__);
+    sub_B52984(&Method_System_Collections_Generic_List_ListViewSort_SortKind__IndexOf__);
+    sub_B52984(&Method_System_Collections_Generic_List_UICommonButton___ctor__);
+    sub_B52984(&Method_System_Collections_Generic_List_UICommonButton__get_Count__);
+    sub_B52984(&Method_System_Collections_Generic_List_UICommonButton__get_Item__);
+    sub_B52984(&System_Collections_Generic_List_UICommonButton__TypeInfo);
+    byte_42AE348 = 1;
   }
   servantEquipSelectList = (System_Collections_Generic_List_ServantStatusListViewItemDraw_Kind__o *)this->fields.servantEquipSelectList;
   if ( !servantEquipSelectList )
     goto LABEL_45;
-  v9 = System_Collections_Generic_List_ServantStatusListViewItemDraw_Kind___IndexOf(
+  v4 = System_Collections_Generic_List_ServantStatusListViewItemDraw_Kind___IndexOf(
          servantEquipSelectList,
          24,
-         (const MethodInfo_2FB3F50 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__IndexOf__);
-  if ( v9 == -1 )
+         (const MethodInfo_305B000 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__IndexOf__);
+  if ( v4 == -1 )
   {
     p_shortDispSortButtons = &this->fields.shortDispSortButtons;
   }
   else
   {
-    v12 = v9;
+    v5 = v4;
     servantEquipSelectList = (System_Collections_Generic_List_ServantStatusListViewItemDraw_Kind__o *)this->fields.baseSortInfo;
     if ( servantEquipSelectList )
     {
       servantEquipSelectList = (System_Collections_Generic_List_ServantStatusListViewItemDraw_Kind__o *)ListViewSort__get_IsWareHouseEquipList((ListViewSort_o *)servantEquipSelectList, 0LL);
-      v13 = (char)servantEquipSelectList;
+      v6 = (char)servantEquipSelectList;
     }
     else
     {
-      v13 = 0;
+      v6 = 0;
     }
     p_shortDispSortButtons = &this->fields.shortDispSortButtons;
     shortDispSortButtons = this->fields.shortDispSortButtons;
     if ( !shortDispSortButtons )
       goto LABEL_45;
-    if ( v12 >= shortDispSortButtons->max_length )
+    if ( v5 >= shortDispSortButtons->max_length )
       goto LABEL_46;
-    servantEquipSelectList = (System_Collections_Generic_List_ServantStatusListViewItemDraw_Kind__o *)shortDispSortButtons->m_Items[v12];
+    servantEquipSelectList = (System_Collections_Generic_List_ServantStatusListViewItemDraw_Kind__o *)shortDispSortButtons->m_Items[v5];
     if ( !servantEquipSelectList )
       goto LABEL_45;
     servantEquipSelectList = (System_Collections_Generic_List_ServantStatusListViewItemDraw_Kind__o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servantEquipSelectList, 0LL);
     if ( !servantEquipSelectList )
       goto LABEL_45;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantEquipSelectList, v13 & 1, 0LL);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantEquipSelectList, v6 & 1, 0LL);
   }
-  v16 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
-                                                                                                  System_Collections_Generic_List_UICommonButton__TypeInfo,
-                                                                                                  v10,
-                                                                                                  v11);
+  v9 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_UICommonButton__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v16,
-    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_UICommonButton___ctor__);
-  v17 = *p_shortDispSortButtons;
-  if ( !v17 )
+    v9,
+    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_UICommonButton___ctor__);
+  v10 = *p_shortDispSortButtons;
+  if ( !v10 )
     goto LABEL_45;
-  max_length = v17->max_length;
+  max_length = v10->max_length;
   if ( max_length >= 1 )
   {
-    v19 = 0;
-    while ( v19 < max_length )
+    v12 = 0;
+    while ( v12 < max_length )
     {
-      v20 = &v17->obj.klass + (int)v19;
-      v21 = (EventMissionProgressRequest_Argument_ProgressData_o *)v20[4];
-      if ( !v21 )
+      v13 = &v10->obj.klass + (int)v12;
+      v14 = (EventMissionProgressRequest_Argument_ProgressData_o *)v13[4];
+      if ( !v14 )
         goto LABEL_45;
-      servantEquipSelectList = (System_Collections_Generic_List_ServantStatusListViewItemDraw_Kind__o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v20[4], 0LL);
+      servantEquipSelectList = (System_Collections_Generic_List_ServantStatusListViewItemDraw_Kind__o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v13[4], 0LL);
       if ( !servantEquipSelectList )
         goto LABEL_45;
       servantEquipSelectList = (System_Collections_Generic_List_ServantStatusListViewItemDraw_Kind__o *)UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)servantEquipSelectList, 0LL);
       if ( ((unsigned __int8)servantEquipSelectList & 1) != 0 )
       {
-        if ( !v16 )
+        if ( !v9 )
           goto LABEL_45;
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          v16,
-          v21,
-          (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_UICommonButton__Add__);
+          v9,
+          v14,
+          (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_UICommonButton__Add__);
       }
-      max_length = v17->max_length;
-      if ( (int)++v19 >= max_length )
+      max_length = v10->max_length;
+      if ( (int)++v12 >= max_length )
         goto LABEL_24;
     }
 LABEL_46:
-    v39 = sub_B0D9A8(servantEquipSelectList);
-    sub_B0D948(v39, 0LL);
+    v32 = sub_B52A88(servantEquipSelectList);
+    sub_B52A28(v32, 0LL);
   }
 LABEL_24:
   shortDispSortSprites = this->fields.shortDispSortSprites;
@@ -1339,49 +1280,49 @@ LABEL_24:
     goto LABEL_45;
   if ( !shortDispSortSprites->max_length )
     goto LABEL_46;
-  v23 = shortDispSortSprites->m_Items[0];
-  if ( !v23 || !v16 )
+  v16 = shortDispSortSprites->m_Items[0];
+  if ( !v16 || !v9 )
 LABEL_45:
-    sub_B0D97C(servantEquipSelectList);
-  size = v16->fields._size;
-  v25 = size + 3;
+    sub_B52A5C(servantEquipSelectList, method);
+  size = v9->fields._size;
+  v18 = size + 3;
   if ( size >= 0 )
-    v25 = v16->fields._size;
+    v18 = v9->fields._size;
   if ( size >= 1 )
   {
-    v26 = 0;
-    v27 = 0;
-    v28 = v25 >> 2;
-    v29 = (v16->fields._size & 3) - 1;
-    mWidth = (float)v23->fields.mWidth;
-    mHeight = (float)v23->fields.mHeight;
+    v19 = 0;
+    v20 = 0;
+    v21 = v18 >> 2;
+    v22 = (v9->fields._size & 3) - 1;
+    mWidth = (float)v16->fields.mWidth;
+    mHeight = (float)v16->fields.mHeight;
     while ( 1 )
     {
       y = this->fields.ShortDispSortButtonSpace.fields.y;
-      if ( v26 >= v28 )
-        v33 = v29;
+      if ( v19 >= v21 )
+        v26 = v22;
       else
-        v33 = 3;
-      if ( size <= v27 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-      servantEquipSelectList = (System_Collections_Generic_List_ServantStatusListViewItemDraw_Kind__o *)v16->fields._items->m_Items[v27];
+        v26 = 3;
+      if ( size <= v20 )
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+      servantEquipSelectList = (System_Collections_Generic_List_ServantStatusListViewItemDraw_Kind__o *)v9->fields._items->m_Items[v20];
       if ( !servantEquipSelectList )
         break;
-      v34 = (float)(int)(v27 - 4 * v26) + (float)((float)v33 * -0.5);
-      v35 = (float)(v34 * mWidth) + (float)(v34 * this->fields.ShortDispSortButtonSpace.fields.x);
+      v27 = (float)(int)(v20 - 4 * v19) + (float)((float)v26 * -0.5);
+      v28 = (float)(v27 * mWidth) + (float)(v27 * this->fields.ShortDispSortButtonSpace.fields.x);
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servantEquipSelectList, 0LL);
-      GameObjectExtensions__SetLocalPositionX(gameObject, v35, 0LL);
-      if ( v16->fields._size <= v27 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-      servantEquipSelectList = (System_Collections_Generic_List_ServantStatusListViewItemDraw_Kind__o *)v16->fields._items->m_Items[v27];
+      GameObjectExtensions__SetLocalPositionX(gameObject, v28, 0LL);
+      if ( v9->fields._size <= v20 )
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+      servantEquipSelectList = (System_Collections_Generic_List_ServantStatusListViewItemDraw_Kind__o *)v9->fields._items->m_Items[v20];
       if ( !servantEquipSelectList )
         break;
-      v37 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servantEquipSelectList, 0LL);
-      GameObjectExtensions__SetLocalPositionY(v37, -(float)((float)(y + mHeight) * (float)v26), 0LL);
-      size = v16->fields._size;
-      if ( (~v27++ & 3) == 0 )
-        ++v26;
-      if ( (int)v27 >= size )
+      v30 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servantEquipSelectList, 0LL);
+      GameObjectExtensions__SetLocalPositionY(v30, -(float)((float)(y + mHeight) * (float)v19), 0LL);
+      size = v9->fields._size;
+      if ( (~v20++ & 3) == 0 )
+        ++v19;
+      if ( (int)v20 >= size )
         return;
     }
     goto LABEL_45;
@@ -1393,10 +1334,10 @@ void __fastcall ServantSortSelectMenu__OnClickCancel(ServantSortSelectMenu_o *th
 {
   const MethodInfo *v3; // x2
 
-  if ( (byte_4212D69 & 1) == 0 )
+  if ( (byte_42AE355 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D69 = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE355 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1418,10 +1359,10 @@ void __fastcall ServantSortSelectMenu__OnClickChoiceSort(ServantSortSelectMenu_o
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D80 & 1) == 0 )
+  if ( (byte_42AE36C & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D80 = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE36C = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1433,7 +1374,7 @@ void __fastcall ServantSortSelectMenu__OnClickChoiceSort(ServantSortSelectMenu_o
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.isChoiceSort ^= 1u;
     ServantSortSelectMenu__SetChoiceSortButtonSelect(this, v4);
   }
@@ -1442,16 +1383,17 @@ void __fastcall ServantSortSelectMenu__OnClickChoiceSort(ServantSortSelectMenu_o
 
 void __fastcall ServantSortSelectMenu__OnClickDecide(ServantSortSelectMenu_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   ListViewSort_o *baseSortInfo; // x0
-  const MethodInfo *v4; // x2
+  const MethodInfo *v5; // x2
   struct ListViewSort_o *operationSortInfo; // x8
-  bool v6; // w1
-  ServantSortSelectMenu_o *v7; // x0
+  bool v7; // w1
+  ServantSortSelectMenu_o *v8; // x0
 
-  if ( (byte_4212D68 & 1) == 0 )
+  if ( (byte_42AE354 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D68 = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE354 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1467,21 +1409,21 @@ void __fastcall ServantSortSelectMenu__OnClickDecide(ServantSortSelectMenu_o *th
       || (ListViewSort__Set(baseSortInfo, this->fields.operationSortInfo, 0LL),
           (operationSortInfo = this->fields.operationSortInfo) == 0LL) )
     {
-      sub_B0D97C(baseSortInfo);
+      sub_B52A5C(baseSortInfo, v3);
     }
     if ( this->fields.openedKind == operationSortInfo->fields.sortKind
       && !this->fields.openedSmartSort != operationSortInfo->fields.isSmartSort
       && this->fields.openedChoiceSort == operationSortInfo->fields.isChoiceSort )
     {
-      v7 = this;
-      v6 = 0;
+      v8 = this;
+      v7 = 0;
     }
     else
     {
-      v6 = 1;
-      v7 = this;
+      v7 = 1;
+      v8 = this;
     }
-    ServantSortSelectMenu__Callback(v7, v6, v4);
+    ServantSortSelectMenu__Callback(v8, v7, v5);
   }
 }
 
@@ -1492,10 +1434,10 @@ void __fastcall ServantSortSelectMenu__OnClickEventOrder(ServantSortSelectMenu_o
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D6D & 1) == 0 )
+  if ( (byte_42AE359 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D6D = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE359 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1507,7 +1449,7 @@ void __fastcall ServantSortSelectMenu__OnClickEventOrder(ServantSortSelectMenu_o
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 24;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -1517,20 +1459,17 @@ void __fastcall ServantSortSelectMenu__OnClickEventOrder(ServantSortSelectMenu_o
 void __fastcall ServantSortSelectMenu__OnClickHelp(ServantSortSelectMenu_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
-  __int64 v4; // x1
   UnityEngine_Component_o *helpButton; // x0
-  __int64 v6; // x1
-  __int64 v7; // x2
   unsigned int kind; // w8
-  System_Action_o *v9; // x20
-  int32_t v10; // w1
+  System_Action_o *v6; // x20
+  int32_t v7; // w1
 
-  if ( (byte_4212D6A & 1) == 0 )
+  if ( (byte_42AE356 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, method);
-    sub_B0D8A4(&Method_ServantSortSelectMenu_OnClickHelpClose__, v3);
-    sub_B0D8A4(&SoundManager_TypeInfo, v4);
-    byte_4212D6A = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&Method_ServantSortSelectMenu_OnClickHelpClose__);
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE356 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1544,7 +1483,7 @@ void __fastcall ServantSortSelectMenu__OnClickHelp(ServantSortSelectMenu_o *this
     if ( !helpButton
       || (helpButton = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(helpButton, 0LL)) == 0LL )
     {
-      sub_B0D97C(helpButton);
+      sub_B52A5C(helpButton, v3);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)helpButton, 0, 0LL);
     kind = this->fields.kind;
@@ -1552,24 +1491,24 @@ void __fastcall ServantSortSelectMenu__OnClickHelp(ServantSortSelectMenu_o *this
     {
       if ( ((1 << kind) & 0x158) != 0 )
       {
-        v9 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v6, v7);
-        System_Action___ctor(v9, (Il2CppObject *)this, Method_ServantSortSelectMenu_OnClickHelpClose__, 0LL);
-        v10 = 41;
+        v6 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+        System_Action___ctor(v6, (Il2CppObject *)this, Method_ServantSortSelectMenu_OnClickHelpClose__, 0LL);
+        v7 = 41;
 LABEL_12:
-        EventTutorialMaster__ShowTutorialWithoutCheck(0, v10, v9, 0LL);
+        EventTutorialMaster__ShowTutorialWithoutCheck(0, v7, v6, 0LL);
         return;
       }
       if ( kind == 5 )
       {
-        v9 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v6, v7);
-        System_Action___ctor(v9, (Il2CppObject *)this, Method_ServantSortSelectMenu_OnClickHelpClose__, 0LL);
-        v10 = 32;
+        v6 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+        System_Action___ctor(v6, (Il2CppObject *)this, Method_ServantSortSelectMenu_OnClickHelpClose__, 0LL);
+        v7 = 32;
         goto LABEL_12;
       }
     }
-    v9 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v6, v7);
-    System_Action___ctor(v9, (Il2CppObject *)this, Method_ServantSortSelectMenu_OnClickHelpClose__, 0LL);
-    v10 = 42;
+    v6 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+    System_Action___ctor(v6, (Il2CppObject *)this, Method_ServantSortSelectMenu_OnClickHelpClose__, 0LL);
+    v7 = 42;
     goto LABEL_12;
   }
 }
@@ -1583,7 +1522,7 @@ void __fastcall ServantSortSelectMenu__OnClickHelpClose(ServantSortSelectMenu_o 
   if ( !helpButton
     || (helpButton = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(helpButton, 0LL)) == 0LL )
   {
-    sub_B0D97C(helpButton);
+    sub_B52A5C(helpButton, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)helpButton, 1, 0LL);
 }
@@ -1595,10 +1534,10 @@ void __fastcall ServantSortSelectMenu__OnClickSmartSort(ServantSortSelectMenu_o 
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D7F & 1) == 0 )
+  if ( (byte_42AE36B & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D7F = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE36B = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1610,7 +1549,7 @@ void __fastcall ServantSortSelectMenu__OnClickSmartSort(ServantSortSelectMenu_o 
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.isSmartSort ^= 1u;
     ServantSortSelectMenu__SetSmartSortButtonSelect(this, v4);
   }
@@ -1623,10 +1562,10 @@ void __fastcall ServantSortSelectMenu__OnClickSortAdjustAtk(ServantSortSelectMen
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D77 & 1) == 0 )
+  if ( (byte_42AE363 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D77 = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE363 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1638,7 +1577,7 @@ void __fastcall ServantSortSelectMenu__OnClickSortAdjustAtk(ServantSortSelectMen
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 16;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -1651,10 +1590,10 @@ void __fastcall ServantSortSelectMenu__OnClickSortAdjustHp(ServantSortSelectMenu
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D76 & 1) == 0 )
+  if ( (byte_42AE362 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D76 = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE362 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1666,7 +1605,7 @@ void __fastcall ServantSortSelectMenu__OnClickSortAdjustHp(ServantSortSelectMenu
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 15;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -1679,10 +1618,10 @@ void __fastcall ServantSortSelectMenu__OnClickSortAmount(ServantSortSelectMenu_o
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D74 & 1) == 0 )
+  if ( (byte_42AE360 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D74 = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE360 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1694,7 +1633,7 @@ void __fastcall ServantSortSelectMenu__OnClickSortAmount(ServantSortSelectMenu_o
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 14;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -1707,10 +1646,10 @@ void __fastcall ServantSortSelectMenu__OnClickSortAttack(ServantSortSelectMenu_o
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D72 & 1) == 0 )
+  if ( (byte_42AE35E & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D72 = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE35E = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1722,7 +1661,7 @@ void __fastcall ServantSortSelectMenu__OnClickSortAttack(ServantSortSelectMenu_o
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 6;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -1735,10 +1674,10 @@ void __fastcall ServantSortSelectMenu__OnClickSortBuddy(ServantSortSelectMenu_o 
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D7E & 1) == 0 )
+  if ( (byte_42AE36A & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D7E = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE36A = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1750,7 +1689,7 @@ void __fastcall ServantSortSelectMenu__OnClickSortBuddy(ServantSortSelectMenu_o 
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 28;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -1763,10 +1702,10 @@ void __fastcall ServantSortSelectMenu__OnClickSortClass(ServantSortSelectMenu_o 
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D6B & 1) == 0 )
+  if ( (byte_42AE357 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D6B = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE357 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1778,7 +1717,7 @@ void __fastcall ServantSortSelectMenu__OnClickSortClass(ServantSortSelectMenu_o 
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 8;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -1791,10 +1730,10 @@ void __fastcall ServantSortSelectMenu__OnClickSortCost(ServantSortSelectMenu_o *
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D73 & 1) == 0 )
+  if ( (byte_42AE35F & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D73 = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE35F = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1806,7 +1745,7 @@ void __fastcall ServantSortSelectMenu__OnClickSortCost(ServantSortSelectMenu_o *
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 7;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -1819,10 +1758,10 @@ void __fastcall ServantSortSelectMenu__OnClickSortCostume(ServantSortSelectMenu_
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D78 & 1) == 0 )
+  if ( (byte_42AE364 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D78 = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE364 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1834,7 +1773,7 @@ void __fastcall ServantSortSelectMenu__OnClickSortCostume(ServantSortSelectMenu_
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 19;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -1847,10 +1786,10 @@ void __fastcall ServantSortSelectMenu__OnClickSortCreate(ServantSortSelectMenu_o
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D6C & 1) == 0 )
+  if ( (byte_42AE358 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D6C = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE358 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1862,7 +1801,7 @@ void __fastcall ServantSortSelectMenu__OnClickSortCreate(ServantSortSelectMenu_o
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 1;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -1875,10 +1814,10 @@ void __fastcall ServantSortSelectMenu__OnClickSortFriendShip(ServantSortSelectMe
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D75 & 1) == 0 )
+  if ( (byte_42AE361 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D75 = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE361 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1890,7 +1829,7 @@ void __fastcall ServantSortSelectMenu__OnClickSortFriendShip(ServantSortSelectMe
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 10;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -1905,10 +1844,10 @@ void __fastcall ServantSortSelectMenu__OnClickSortHavingCostume(
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D79 & 1) == 0 )
+  if ( (byte_42AE365 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D79 = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE365 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1920,7 +1859,7 @@ void __fastcall ServantSortSelectMenu__OnClickSortHavingCostume(
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 20;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -1933,10 +1872,10 @@ void __fastcall ServantSortSelectMenu__OnClickSortHp(ServantSortSelectMenu_o *th
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D71 & 1) == 0 )
+  if ( (byte_42AE35D & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D71 = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE35D = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1948,7 +1887,7 @@ void __fastcall ServantSortSelectMenu__OnClickSortHp(ServantSortSelectMenu_o *th
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 5;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -1961,10 +1900,10 @@ void __fastcall ServantSortSelectMenu__OnClickSortLevel(ServantSortSelectMenu_o 
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D6F & 1) == 0 )
+  if ( (byte_42AE35B & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D6F = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE35B = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1976,7 +1915,7 @@ void __fastcall ServantSortSelectMenu__OnClickSortLevel(ServantSortSelectMenu_o 
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 3;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -1989,10 +1928,10 @@ void __fastcall ServantSortSelectMenu__OnClickSortLimitCount(ServantSortSelectMe
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D7C & 1) == 0 )
+  if ( (byte_42AE368 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D7C = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE368 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -2004,7 +1943,7 @@ void __fastcall ServantSortSelectMenu__OnClickSortLimitCount(ServantSortSelectMe
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 23;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -2019,10 +1958,10 @@ void __fastcall ServantSortSelectMenu__OnClickSortNotHavingCostume(
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D7A & 1) == 0 )
+  if ( (byte_42AE366 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D7A = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE366 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -2034,7 +1973,7 @@ void __fastcall ServantSortSelectMenu__OnClickSortNotHavingCostume(
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 21;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -2049,10 +1988,10 @@ void __fastcall ServantSortSelectMenu__OnClickSortNotHavingItem(
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D7B & 1) == 0 )
+  if ( (byte_42AE367 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D7B = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE367 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -2064,7 +2003,7 @@ void __fastcall ServantSortSelectMenu__OnClickSortNotHavingItem(
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 22;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -2077,10 +2016,10 @@ void __fastcall ServantSortSelectMenu__OnClickSortNpLevel(ServantSortSelectMenu_
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D70 & 1) == 0 )
+  if ( (byte_42AE35C & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D70 = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE35C = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -2092,7 +2031,7 @@ void __fastcall ServantSortSelectMenu__OnClickSortNpLevel(ServantSortSelectMenu_
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 4;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -2105,10 +2044,10 @@ void __fastcall ServantSortSelectMenu__OnClickSortRarity(ServantSortSelectMenu_o
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D6E & 1) == 0 )
+  if ( (byte_42AE35A & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D6E = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE35A = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -2120,7 +2059,7 @@ void __fastcall ServantSortSelectMenu__OnClickSortRarity(ServantSortSelectMenu_o
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 2;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -2135,10 +2074,10 @@ void __fastcall ServantSortSelectMenu__OnClickSortRecoveryFatigue(
   const MethodInfo *v4; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_4212D7D & 1) == 0 )
+  if ( (byte_42AE369 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4212D7D = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE369 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -2150,7 +2089,7 @@ void __fastcall ServantSortSelectMenu__OnClickSortRecoveryFatigue(
     SoundManager__playSystemSe(0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     operationSortInfo->fields.sortKind = 25;
     ServantSortSelectMenu__ChangeButtonSelect(this, v4);
   }
@@ -2168,36 +2107,22 @@ void __fastcall ServantSortSelectMenu__Open(
 {
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
-  __int64 v23; // x1
-  __int64 v24; // x1
-  __int64 v25; // x1
-  System_String_array **v26; // x2
-  System_String_array **v27; // x3
-  System_Boolean_array **v28; // x4
-  System_Int32_array **v29; // x5
-  System_Int32_array *v30; // x6
-  System_Int32_array *v31; // x7
+  System_String_array **v13; // x2
+  System_String_array **v14; // x3
+  System_Boolean_array **v15; // x4
+  System_Int32_array **v16; // x5
+  System_Int32_array *v17; // x6
+  System_Int32_array *v18; // x7
   bool isChoiceSort; // w8
   ListViewSort_o *baseSortInfo; // x21
-  __int64 v34; // x1
-  __int64 v35; // x2
-  ListViewSort_o *v36; // x22
-  System_String_array **v37; // x2
-  System_String_array **v38; // x3
-  System_Boolean_array **v39; // x4
-  System_Int32_array **v40; // x5
-  System_Int32_array *v41; // x6
-  System_Int32_array *v42; // x7
+  ListViewSort_o *v21; // x22
+  System_String_array **v22; // x2
+  System_String_array **v23; // x3
+  System_Boolean_array **v24; // x4
+  System_Int32_array **v25; // x5
+  System_Int32_array *v26; // x6
+  System_Int32_array *v27; // x7
+  __int64 v28; // x1
   UnityEngine_GameObject_o *allDispObject; // x0
   UILabel_o *titleLabel; // x21
   UILabel_o *explanationLabel; // x21
@@ -2211,59 +2136,59 @@ void __fastcall ServantSortSelectMenu__Open(
   UILabel_o *choiceSortLabel; // x21
   UILabel_o *choiceSort2Label; // x21
   UILabel_o *smartChoiceDetail; // x21
-  __int64 *v56; // x22
+  __int64 *v42; // x22
   UILabel_o *choiceSortDetail; // x20
   UILabel_o *choiceSort2Detail; // x20
-  const MethodInfo *v59; // x2
+  const MethodInfo *v45; // x2
+  const MethodInfo *v46; // x1
+  const MethodInfo *v47; // x1
+  const MethodInfo *v48; // x1
+  int32_t v49; // w8
+  const MethodInfo *v50; // x1
+  const MethodInfo *v51; // x1
+  int32_t v52; // w8
+  const MethodInfo *v53; // x1
+  const MethodInfo *v54; // x1
+  const MethodInfo *v55; // x1
+  const MethodInfo *v56; // x1
+  const MethodInfo *v57; // x1
+  int32_t v58; // w1
+  const MethodInfo *v59; // x1
   const MethodInfo *v60; // x1
-  __int64 v61; // x2
+  const MethodInfo *v61; // x1
   const MethodInfo *v62; // x1
   const MethodInfo *v63; // x1
-  int32_t v64; // w8
-  const MethodInfo *v65; // x1
-  const MethodInfo *v66; // x1
-  int32_t v67; // w8
-  const MethodInfo *v68; // x1
-  const MethodInfo *v69; // x1
-  const MethodInfo *v70; // x1
-  const MethodInfo *v71; // x1
-  const MethodInfo *v72; // x1
-  int32_t v73; // w1
-  const MethodInfo *v74; // x1
-  const MethodInfo *v75; // x1
-  const MethodInfo *v76; // x1
-  const MethodInfo *v77; // x1
-  const MethodInfo *v78; // x1
-  const MethodInfo *v79; // x1
-  System_Action_o *v80; // x20
-  ServantSortSelectMenu_c *v81; // x0
+  const MethodInfo *v64; // x1
+  System_Action_o *v65; // x20
+  ServantSortSelectMenu_c *v66; // x0
   struct ListViewSort_o **p_commonServantEquipSortInfo; // x8
-  struct ListViewSort_o *v83; // x1
-  __int64 v84; // x0
+  struct ListViewSort_o *v68; // x1
+  __int64 v69; // x0
+  __int64 v70; // x1
 
-  if ( (byte_4212D55 & 1) == 0 )
+  if ( (byte_42AE341 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, *(_QWORD *)&kind);
-    sub_B0D8A4(&ListViewSort_TypeInfo, v13);
-    sub_B0D8A4(&LocalizationManager_TypeInfo, v14);
-    sub_B0D8A4(&Method_ServantSortSelectMenu_EndOpen__, v15);
-    sub_B0D8A4(&ServantSortSelectMenu_TypeInfo, v16);
-    sub_B0D8A4(&StringLiteral_12312/*"SORT_WINDOW_TITLE"*/, v17);
-    sub_B0D8A4(&StringLiteral_12304/*"SMART_SORT_DETAIL"*/, v18);
-    sub_B0D8A4(&StringLiteral_12305/*"SMART_SORT_NAME"*/, v19);
-    sub_B0D8A4(&StringLiteral_11828/*"SERVANT_SORT_CANCEL"*/, v20);
-    sub_B0D8A4(&StringLiteral_2996/*"CHOICE_SORT_NAME"*/, v21);
-    sub_B0D8A4(&StringLiteral_11832/*"SERVANT_SORT_DECIDE"*/, v22);
-    sub_B0D8A4(&StringLiteral_2995/*"CHOICE_SORT_DETAIL_REVERSE"*/, v23);
-    sub_B0D8A4(&StringLiteral_12311/*"SORT_WINDOW_DETAIL"*/, v24);
-    sub_B0D8A4(&StringLiteral_2994/*"CHOICE_SORT_DETAIL"*/, v25);
-    byte_4212D55 = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&ListViewSort_TypeInfo);
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&Method_ServantSortSelectMenu_EndOpen__);
+    sub_B52984(&ServantSortSelectMenu_TypeInfo);
+    sub_B52984(&StringLiteral_12363/*"SORT_WINDOW_TITLE"*/);
+    sub_B52984(&StringLiteral_12355/*"SMART_SORT_DETAIL"*/);
+    sub_B52984(&StringLiteral_12356/*"SMART_SORT_NAME"*/);
+    sub_B52984(&StringLiteral_11883/*"SERVANT_SORT_CANCEL"*/);
+    sub_B52984(&StringLiteral_3016/*"CHOICE_SORT_NAME"*/);
+    sub_B52984(&StringLiteral_11887/*"SERVANT_SORT_DECIDE"*/);
+    sub_B52984(&StringLiteral_3015/*"CHOICE_SORT_DETAIL_REVERSE"*/);
+    sub_B52984(&StringLiteral_12362/*"SORT_WINDOW_DETAIL"*/);
+    sub_B52984(&StringLiteral_3014/*"CHOICE_SORT_DETAIL"*/);
+    byte_42AE341 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.kind = kind;
     this->fields.callbackFunc = callback;
-    sub_B0D840(
+    sub_B52920(
       (BattleServantConfConponent_o *)&this->fields.callbackFunc,
       (System_Int32_array **)callback,
       (System_String_array **)sort,
@@ -2275,32 +2200,32 @@ void __fastcall ServantSortSelectMenu__Open(
     if ( sort )
     {
       this->fields.baseSortInfo = sort;
-      sub_B0D840(
+      sub_B52920(
         (BattleServantConfConponent_o *)&this->fields.baseSortInfo,
         (System_Int32_array **)sort,
-        v26,
-        v27,
-        v28,
-        v29,
-        v30,
-        v31);
+        v13,
+        v14,
+        v15,
+        v16,
+        v17,
+        v18);
       this->fields.openedKind = sort->fields.sortKind;
       this->fields.openedSmartSort = sort->fields.isSmartSort;
       isChoiceSort = sort->fields.isChoiceSort;
       baseSortInfo = this->fields.baseSortInfo;
       this->fields.openedChoiceSort = isChoiceSort;
-      v36 = (ListViewSort_o *)sub_B0D974(ListViewSort_TypeInfo, v34, v35);
-      ListViewSort___ctor_32823928(v36, baseSortInfo, 0LL);
-      this->fields.operationSortInfo = v36;
-      sub_B0D840(
+      v21 = (ListViewSort_o *)sub_B52A54(ListViewSort_TypeInfo);
+      ListViewSort___ctor_33999772(v21, baseSortInfo, 0LL);
+      this->fields.operationSortInfo = v21;
+      sub_B52920(
         (BattleServantConfConponent_o *)&this->fields.operationSortInfo,
-        (System_Int32_array **)v36,
-        v37,
-        v38,
-        v39,
-        v40,
-        v41,
-        v42);
+        (System_Int32_array **)v21,
+        v22,
+        v23,
+        v24,
+        v25,
+        v26,
+        v27);
       allDispObject = this->fields.allDispObject;
       if ( allDispObject )
       {
@@ -2363,49 +2288,49 @@ void __fastcall ServantSortSelectMenu__Open(
                                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                 }
                                 allDispObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                              (System_String_o *)StringLiteral_12312/*"SORT_WINDOW_TITLE"*/,
+                                                                              (System_String_o *)StringLiteral_12363/*"SORT_WINDOW_TITLE"*/,
                                                                               0LL);
                                 if ( titleLabel )
                                 {
                                   UILabel__set_text(titleLabel, (System_String_o *)allDispObject, 0LL);
                                   explanationLabel = this->fields.explanationLabel;
                                   allDispObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                (System_String_o *)StringLiteral_12311/*"SORT_WINDOW_DETAIL"*/,
+                                                                                (System_String_o *)StringLiteral_12362/*"SORT_WINDOW_DETAIL"*/,
                                                                                 0LL);
                                   if ( explanationLabel )
                                   {
                                     UILabel__set_text(explanationLabel, (System_String_o *)allDispObject, 0LL);
                                     decideLabel = this->fields.decideLabel;
                                     allDispObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                  (System_String_o *)StringLiteral_11832/*"SERVANT_SORT_DECIDE"*/,
+                                                                                  (System_String_o *)StringLiteral_11887/*"SERVANT_SORT_DECIDE"*/,
                                                                                   0LL);
                                     if ( decideLabel )
                                     {
                                       UILabel__set_text(decideLabel, (System_String_o *)allDispObject, 0LL);
                                       cancelLabel = this->fields.cancelLabel;
                                       allDispObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                    (System_String_o *)StringLiteral_11828/*"SERVANT_SORT_CANCEL"*/,
+                                                                                    (System_String_o *)StringLiteral_11883/*"SERVANT_SORT_CANCEL"*/,
                                                                                     0LL);
                                       if ( cancelLabel )
                                       {
                                         UILabel__set_text(cancelLabel, (System_String_o *)allDispObject, 0LL);
                                         smartSortLabel = this->fields.smartSortLabel;
                                         allDispObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                      (System_String_o *)StringLiteral_12305/*"SMART_SORT_NAME"*/,
+                                                                                      (System_String_o *)StringLiteral_12356/*"SMART_SORT_NAME"*/,
                                                                                       0LL);
                                         if ( smartSortLabel )
                                         {
                                           UILabel__set_text(smartSortLabel, (System_String_o *)allDispObject, 0LL);
                                           smartSortDetail = this->fields.smartSortDetail;
                                           allDispObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                        (System_String_o *)StringLiteral_12304/*"SMART_SORT_DETAIL"*/,
+                                                                                        (System_String_o *)StringLiteral_12355/*"SMART_SORT_DETAIL"*/,
                                                                                         0LL);
                                           if ( smartSortDetail )
                                           {
                                             UILabel__set_text(smartSortDetail, (System_String_o *)allDispObject, 0LL);
                                             costumeSmartSortLabel = this->fields.costumeSmartSortLabel;
                                             allDispObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                          (System_String_o *)StringLiteral_12305/*"SMART_SORT_NAME"*/,
+                                                                                          (System_String_o *)StringLiteral_12356/*"SMART_SORT_NAME"*/,
                                                                                           0LL);
                                             if ( costumeSmartSortLabel )
                                             {
@@ -2415,7 +2340,7 @@ void __fastcall ServantSortSelectMenu__Open(
                                                 0LL);
                                               costumeSmartSortDetail = this->fields.costumeSmartSortDetail;
                                               allDispObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                            (System_String_o *)StringLiteral_12304/*"SMART_SORT_DETAIL"*/,
+                                                                                            (System_String_o *)StringLiteral_12355/*"SMART_SORT_DETAIL"*/,
                                                                                             0LL);
                                               if ( costumeSmartSortDetail )
                                               {
@@ -2425,7 +2350,7 @@ void __fastcall ServantSortSelectMenu__Open(
                                                   0LL);
                                                 smartChoiceLabel = this->fields.smartChoiceLabel;
                                                 allDispObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                              (System_String_o *)StringLiteral_2996/*"CHOICE_SORT_NAME"*/,
+                                                                                              (System_String_o *)StringLiteral_3016/*"CHOICE_SORT_NAME"*/,
                                                                                               0LL);
                                                 if ( smartChoiceLabel )
                                                 {
@@ -2435,7 +2360,7 @@ void __fastcall ServantSortSelectMenu__Open(
                                                     0LL);
                                                   choiceSortLabel = this->fields.choiceSortLabel;
                                                   allDispObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                                (System_String_o *)StringLiteral_2996/*"CHOICE_SORT_NAME"*/,
+                                                                                                (System_String_o *)StringLiteral_3016/*"CHOICE_SORT_NAME"*/,
                                                                                                 0LL);
                                                   if ( choiceSortLabel )
                                                   {
@@ -2445,7 +2370,7 @@ void __fastcall ServantSortSelectMenu__Open(
                                                       0LL);
                                                     choiceSort2Label = this->fields.choiceSort2Label;
                                                     allDispObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                                  (System_String_o *)StringLiteral_2996/*"CHOICE_SORT_NAME"*/,
+                                                                                                  (System_String_o *)StringLiteral_3016/*"CHOICE_SORT_NAME"*/,
                                                                                                   0LL);
                                                     if ( choiceSort2Label )
                                                     {
@@ -2461,7 +2386,7 @@ void __fastcall ServantSortSelectMenu__Open(
                                                         {
                                                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                                         }
-                                                        v56 = &StringLiteral_2995/*"CHOICE_SORT_DETAIL_REVERSE"*/;
+                                                        v42 = &StringLiteral_3015/*"CHOICE_SORT_DETAIL_REVERSE"*/;
                                                       }
                                                       else
                                                       {
@@ -2470,10 +2395,10 @@ void __fastcall ServantSortSelectMenu__Open(
                                                         {
                                                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                                         }
-                                                        v56 = &StringLiteral_2994/*"CHOICE_SORT_DETAIL"*/;
+                                                        v42 = &StringLiteral_3014/*"CHOICE_SORT_DETAIL"*/;
                                                       }
                                                       allDispObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                                    (System_String_o *)*v56,
+                                                                                                    (System_String_o *)*v42,
                                                                                                     0LL);
                                                       if ( smartChoiceDetail )
                                                       {
@@ -2482,7 +2407,7 @@ void __fastcall ServantSortSelectMenu__Open(
                                                           (System_String_o *)allDispObject,
                                                           0LL);
                                                         choiceSortDetail = this->fields.choiceSortDetail;
-                                                        allDispObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v56, 0LL);
+                                                        allDispObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v42, 0LL);
                                                         if ( choiceSortDetail )
                                                         {
                                                           UILabel__set_text(
@@ -2490,27 +2415,27 @@ void __fastcall ServantSortSelectMenu__Open(
                                                             (System_String_o *)allDispObject,
                                                             0LL);
                                                           choiceSort2Detail = this->fields.choiceSort2Detail;
-                                                          allDispObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v56, 0LL);
+                                                          allDispObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v42, 0LL);
                                                           if ( choiceSort2Detail )
                                                           {
                                                             UILabel__set_text(
                                                               choiceSort2Detail,
                                                               (System_String_o *)allDispObject,
                                                               0LL);
-                                                            ServantSortSelectMenu__SetEnableButtons(this, 1, v59);
+                                                            ServantSortSelectMenu__SetEnableButtons(this, 1, v45);
                                                             switch ( this->fields.kind )
                                                             {
                                                               case 0:
-                                                                ServantSortSelectMenu__InitAllDisp(this, v60);
-                                                                ServantSortSelectMenu__SetAllButtonSelect(this, v69);
+                                                                ServantSortSelectMenu__InitAllDisp(this, v46);
+                                                                ServantSortSelectMenu__SetAllButtonSelect(this, v54);
                                                                 goto LABEL_58;
                                                               case 1:
                                                               case 3:
-                                                                ServantSortSelectMenu__InitAllDisp(this, v60);
-                                                                ServantSortSelectMenu__SetAllButtonSelect(this, v62);
+                                                                ServantSortSelectMenu__InitAllDisp(this, v46);
+                                                                ServantSortSelectMenu__SetAllButtonSelect(this, v47);
                                                                 ServantSortSelectMenu__SetChoiceSortButtonSelect(
                                                                   this,
-                                                                  v63);
+                                                                  v48);
                                                                 allDispObject = (UnityEngine_GameObject_o *)this->fields.helpButton;
                                                                 if ( !allDispObject )
                                                                   break;
@@ -2520,19 +2445,19 @@ void __fastcall ServantSortSelectMenu__Open(
                                                                 if ( !allDispObject )
                                                                   break;
                                                                 UnityEngine_GameObject__SetActive(allDispObject, 1, 0LL);
-                                                                v64 = this->fields.kind;
-                                                                if ( v64 == 3 )
+                                                                v49 = this->fields.kind;
+                                                                if ( v49 == 3 )
                                                                   goto LABEL_74;
-                                                                if ( v64 != 1 )
+                                                                if ( v49 != 1 )
                                                                   goto LABEL_79;
                                                                 goto LABEL_54;
                                                               case 2:
                                                               case 4:
-                                                                ServantSortSelectMenu__InitShortDisp(this, v60);
-                                                                ServantSortSelectMenu__SetShortButtonSelect(this, v65);
+                                                                ServantSortSelectMenu__InitShortDisp(this, v46);
+                                                                ServantSortSelectMenu__SetShortButtonSelect(this, v50);
                                                                 ServantSortSelectMenu__SetChoiceSortButtonSelect(
                                                                   this,
-                                                                  v66);
+                                                                  v51);
                                                                 allDispObject = (UnityEngine_GameObject_o *)this->fields.helpButton;
                                                                 if ( !allDispObject )
                                                                   break;
@@ -2542,8 +2467,8 @@ void __fastcall ServantSortSelectMenu__Open(
                                                                 if ( !allDispObject )
                                                                   break;
                                                                 UnityEngine_GameObject__SetActive(allDispObject, 1, 0LL);
-                                                                v67 = this->fields.kind;
-                                                                if ( v67 == 4 )
+                                                                v52 = this->fields.kind;
+                                                                if ( v52 == 4 )
                                                                 {
                                                                   allDispObject = this->fields.choiceSortObject;
                                                                   if ( allDispObject )
@@ -2553,11 +2478,11 @@ LABEL_77:
                                                                       allDispObject,
                                                                       1,
                                                                       0LL);
-                                                                    v73 = 41;
+                                                                    v58 = 41;
 LABEL_78:
                                                                     EventTutorialMaster__CheckTutorial(
                                                                       0,
-                                                                      v73,
+                                                                      v58,
                                                                       0LL,
                                                                       0,
                                                                       0,
@@ -2569,20 +2494,17 @@ LABEL_78:
                                                                 }
                                                                 else
                                                                 {
-                                                                  if ( v67 != 2 )
+                                                                  if ( v52 != 2 )
                                                                   {
 LABEL_79:
                                                                     this->fields.state = 1;
-                                                                    v80 = (System_Action_o *)sub_B0D974(
-                                                                                               System_Action_TypeInfo,
-                                                                                               v60,
-                                                                                               v61);
+                                                                    v65 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
                                                                     System_Action___ctor(
-                                                                      v80,
+                                                                      v65,
                                                                       (Il2CppObject *)this,
                                                                       Method_ServantSortSelectMenu_EndOpen__,
                                                                       0LL);
-                                                                    BaseDialog__Open((BaseDialog_o *)this, v80, 0, 0LL);
+                                                                    BaseDialog__Open((BaseDialog_o *)this, v65, 0, 0LL);
                                                                     return;
                                                                   }
 LABEL_54:
@@ -2595,19 +2517,19 @@ LABEL_54:
                                                                       0LL);
                                                                     ServantSortSelectMenu__SetSmartSortButtonSelect(
                                                                       this,
-                                                                      v68);
+                                                                      v53);
 LABEL_62:
-                                                                    v73 = 42;
+                                                                    v58 = 42;
                                                                     goto LABEL_78;
                                                                   }
                                                                 }
                                                                 break;
                                                               case 5:
-                                                                ServantSortSelectMenu__InitCostumeDisp(this, v60);
-                                                                ServantSortSelectMenu__SetCostumeButtonSelect(this, v74);
+                                                                ServantSortSelectMenu__InitCostumeDisp(this, v46);
+                                                                ServantSortSelectMenu__SetCostumeButtonSelect(this, v59);
                                                                 ServantSortSelectMenu__SetSmartSortButtonSelect(
                                                                   this,
-                                                                  v75);
+                                                                  v60);
                                                                 allDispObject = (UnityEngine_GameObject_o *)this->fields.helpButton;
                                                                 if ( !allDispObject )
                                                                   break;
@@ -2621,16 +2543,16 @@ LABEL_62:
                                                                 if ( !allDispObject )
                                                                   break;
                                                                 UnityEngine_GameObject__SetActive(allDispObject, 1, 0LL);
-                                                                v73 = 32;
+                                                                v58 = 32;
                                                                 goto LABEL_78;
                                                               case 6:
-                                                                ServantSortSelectMenu__InitCommandCodeDisp(this, v60);
+                                                                ServantSortSelectMenu__InitCommandCodeDisp(this, v46);
                                                                 ServantSortSelectMenu__SetCommandCodeButtonSelect(
                                                                   this,
-                                                                  v76);
+                                                                  v61);
                                                                 ServantSortSelectMenu__SetChoiceSortButtonSelect(
                                                                   this,
-                                                                  v77);
+                                                                  v62);
                                                                 allDispObject = this->fields.choiceSortObject;
                                                                 if ( !allDispObject )
                                                                   break;
@@ -2645,8 +2567,8 @@ LABEL_62:
                                                                   break;
                                                                 goto LABEL_77;
                                                               case 7:
-                                                                ServantSortSelectMenu__InitFatigueDisp(this, v60);
-                                                                ServantSortSelectMenu__SetFatigueButtonSelect(this, v70);
+                                                                ServantSortSelectMenu__InitFatigueDisp(this, v46);
+                                                                ServantSortSelectMenu__SetFatigueButtonSelect(this, v55);
 LABEL_58:
                                                                 allDispObject = (UnityEngine_GameObject_o *)this->fields.helpButton;
                                                                 if ( !allDispObject )
@@ -2663,17 +2585,17 @@ LABEL_58:
                                                                 UnityEngine_GameObject__SetActive(allDispObject, 1, 0LL);
                                                                 ServantSortSelectMenu__SetSmartSortButtonSelect(
                                                                   this,
-                                                                  v71);
+                                                                  v56);
                                                                 ServantSortSelectMenu__SetChoiceSortButtonSelect(
                                                                   this,
-                                                                  v72);
+                                                                  v57);
                                                                 goto LABEL_62;
                                                               case 8:
-                                                                ServantSortSelectMenu__InitBuddyDisp(this, v60);
-                                                                ServantSortSelectMenu__SetBuddyButtonSelect(this, v78);
+                                                                ServantSortSelectMenu__InitBuddyDisp(this, v46);
+                                                                ServantSortSelectMenu__SetBuddyButtonSelect(this, v63);
                                                                 ServantSortSelectMenu__SetChoiceSortButtonSelect(
                                                                   this,
-                                                                  v79);
+                                                                  v64);
                                                                 allDispObject = (UnityEngine_GameObject_o *)this->fields.helpButton;
                                                                 if ( !allDispObject )
                                                                   break;
@@ -2721,16 +2643,16 @@ LABEL_74:
     }
     else
     {
-      v81 = ServantSortSelectMenu_TypeInfo;
+      v66 = ServantSortSelectMenu_TypeInfo;
       if ( this->fields.kind == 2 )
       {
         if ( (WORD1(ServantSortSelectMenu_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
           && !ServantSortSelectMenu_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(ServantSortSelectMenu_TypeInfo);
-          v81 = ServantSortSelectMenu_TypeInfo;
+          v66 = ServantSortSelectMenu_TypeInfo;
         }
-        p_commonServantEquipSortInfo = &v81->static_fields->commonServantEquipSortInfo;
+        p_commonServantEquipSortInfo = &v66->static_fields->commonServantEquipSortInfo;
       }
       else
       {
@@ -2738,33 +2660,34 @@ LABEL_74:
           && !ServantSortSelectMenu_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(ServantSortSelectMenu_TypeInfo);
-          v81 = ServantSortSelectMenu_TypeInfo;
+          v66 = ServantSortSelectMenu_TypeInfo;
         }
-        p_commonServantEquipSortInfo = &v81->static_fields->commonServantSortInfo;
+        p_commonServantEquipSortInfo = &v66->static_fields->commonServantSortInfo;
       }
-      v83 = *p_commonServantEquipSortInfo;
+      v68 = *p_commonServantEquipSortInfo;
       this->fields.baseSortInfo = *p_commonServantEquipSortInfo;
-      sub_B0D840(
+      sub_B52920(
         (BattleServantConfConponent_o *)&this->fields.baseSortInfo,
-        (System_Int32_array **)v83,
-        v26,
-        v27,
-        v28,
-        v29,
-        v30,
-        v31);
+        (System_Int32_array **)v68,
+        v13,
+        v14,
+        v15,
+        v16,
+        v17,
+        v18);
       allDispObject = (UnityEngine_GameObject_o *)this->fields.baseSortInfo;
       if ( allDispObject )
       {
         ListViewSort__Load((ListViewSort_o *)allDispObject, 0LL);
-        sub_B0D97C(v84);
+        sub_B52A5C(v69, v70);
       }
     }
-    sub_B0D97C(allDispObject);
+    sub_B52A5C(allDispObject, v28);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantSortSelectMenu__SetAllButtonEnable(
         ServantSortSelectMenu_o *this,
         bool isEnable,
@@ -2780,7 +2703,7 @@ void __fastcall ServantSortSelectMenu__SetAllButtonEnable(
   allDispSortButtons = this->fields.allDispSortButtons;
   if ( !allDispSortButtons )
 LABEL_7:
-    sub_B0D97C(this);
+    sub_B52A5C(this, isEnable);
   v4 = this;
   v5 = 0LL;
   v6 = isEnable;
@@ -2791,8 +2714,8 @@ LABEL_7:
       break;
     if ( (unsigned int)v5 >= max_length )
     {
-      v8 = sub_B0D9A8(this);
-      sub_B0D948(v8, 0LL);
+      v8 = sub_B52A88(this);
+      sub_B52A28(v8, 0LL);
     }
     this = (ServantSortSelectMenu_o *)allDispSortButtons->m_Items[v5];
     if ( this )
@@ -2811,40 +2734,38 @@ LABEL_7:
 void __fastcall ServantSortSelectMenu__SetAllButtonSelect(ServantSortSelectMenu_o *this, const MethodInfo *method)
 {
   ServantSortSelectMenu_o *v2; // x19
-  __int64 v3; // x1
-  __int64 v4; // x1
   struct UISprite_array *allDispSortSprites; // x8
-  __int64 v6; // x21
+  __int64 v4; // x21
   int max_length; // w9
   struct ListViewSort_o *operationSortInfo; // x9
   struct System_Collections_Generic_List_ListViewSort_SortKind__o *servantBaseSelectList; // x24
-  Il2CppClass **v10; // x8
-  UISprite_o *v11; // x0
-  System_String_o **v12; // x8
-  __int64 v13; // x0
+  Il2CppClass **v8; // x8
+  UISprite_o *v9; // x0
+  System_String_o **v10; // x8
+  __int64 v11; // x0
 
   v2 = this;
-  if ( (byte_4212D60 & 1) == 0 )
+  if ( (byte_42AE34C & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    sub_B0D8A4(&StringLiteral_17008/*"btn_bg_04"*/, v3);
-    this = (ServantSortSelectMenu_o *)sub_B0D8A4(&StringLiteral_17007/*"btn_bg_03"*/, v4);
-    byte_4212D60 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__);
+    sub_B52984(&StringLiteral_17075/*"btn_bg_04"*/);
+    this = (ServantSortSelectMenu_o *)sub_B52984(&StringLiteral_17074/*"btn_bg_03"*/);
+    byte_42AE34C = 1;
   }
   allDispSortSprites = v2->fields.allDispSortSprites;
   if ( !allDispSortSprites )
 LABEL_16:
-    sub_B0D97C(this);
-  v6 = 0LL;
+    sub_B52A5C(this, method);
+  v4 = 0LL;
   while ( 1 )
   {
     max_length = allDispSortSprites->max_length;
-    if ( (int)v6 >= max_length )
+    if ( (int)v4 >= max_length )
       break;
-    if ( (unsigned int)v6 >= max_length )
+    if ( (unsigned int)v4 >= max_length )
     {
-      v13 = sub_B0D9A8(this);
-      sub_B0D948(v13, 0LL);
+      v11 = sub_B52A88(this);
+      sub_B52A28(v11, 0LL);
     }
     operationSortInfo = v2->fields.operationSortInfo;
     if ( operationSortInfo )
@@ -2852,18 +2773,18 @@ LABEL_16:
       servantBaseSelectList = v2->fields.servantBaseSelectList;
       if ( servantBaseSelectList )
       {
-        v10 = &allDispSortSprites->obj.klass + v6;
-        if ( servantBaseSelectList->fields._size <= (unsigned int)v6 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-        if ( v10[4] )
+        v8 = &allDispSortSprites->obj.klass + v4;
+        if ( servantBaseSelectList->fields._size <= (unsigned int)v4 )
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+        if ( v8[4] )
         {
-          v11 = (UISprite_o *)v10[4];
-          v12 = (System_String_o **)(operationSortInfo->fields.sortKind == servantBaseSelectList->fields._items->m_Items[v6 + 1]
-                                   ? &StringLiteral_17007/*"btn_bg_03"*/
-                                   : &StringLiteral_17008/*"btn_bg_04"*/);
-          UISprite__set_spriteName(v11, *v12, 0LL);
+          v9 = (UISprite_o *)v8[4];
+          v10 = (System_String_o **)(operationSortInfo->fields.sortKind == servantBaseSelectList->fields._items->m_Items[v4 + 1]
+                                   ? &StringLiteral_17074/*"btn_bg_03"*/
+                                   : &StringLiteral_17075/*"btn_bg_04"*/);
+          UISprite__set_spriteName(v9, *v10, 0LL);
           allDispSortSprites = v2->fields.allDispSortSprites;
-          ++v6;
+          ++v4;
           if ( allDispSortSprites )
             continue;
         }
@@ -2874,6 +2795,7 @@ LABEL_16:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantSortSelectMenu__SetBuddyButtonEnable(
         ServantSortSelectMenu_o *this,
         bool isEnable,
@@ -2889,7 +2811,7 @@ void __fastcall ServantSortSelectMenu__SetBuddyButtonEnable(
   buddyDispSortButtons = this->fields.buddyDispSortButtons;
   if ( !buddyDispSortButtons )
 LABEL_7:
-    sub_B0D97C(this);
+    sub_B52A5C(this, isEnable);
   v4 = this;
   v5 = 0LL;
   v6 = isEnable;
@@ -2900,8 +2822,8 @@ LABEL_7:
       break;
     if ( (unsigned int)v5 >= max_length )
     {
-      v8 = sub_B0D9A8(this);
-      sub_B0D948(v8, 0LL);
+      v8 = sub_B52A88(this);
+      sub_B52A28(v8, 0LL);
     }
     this = (ServantSortSelectMenu_o *)buddyDispSortButtons->m_Items[v5];
     if ( this )
@@ -2920,40 +2842,38 @@ LABEL_7:
 void __fastcall ServantSortSelectMenu__SetBuddyButtonSelect(ServantSortSelectMenu_o *this, const MethodInfo *method)
 {
   ServantSortSelectMenu_o *v2; // x19
-  __int64 v3; // x1
-  __int64 v4; // x1
   struct UISprite_array *buddyDispSortSprites; // x8
-  __int64 v6; // x21
+  __int64 v4; // x21
   int max_length; // w9
   struct ListViewSort_o *operationSortInfo; // x9
   struct System_Collections_Generic_List_ListViewSort_SortKind__o *buddySelectList; // x24
-  Il2CppClass **v10; // x8
-  UISprite_o *v11; // x0
-  System_String_o **v12; // x8
-  __int64 v13; // x0
+  Il2CppClass **v8; // x8
+  UISprite_o *v9; // x0
+  System_String_o **v10; // x8
+  __int64 v11; // x0
 
   v2 = this;
-  if ( (byte_4212D62 & 1) == 0 )
+  if ( (byte_42AE34E & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    sub_B0D8A4(&StringLiteral_17008/*"btn_bg_04"*/, v3);
-    this = (ServantSortSelectMenu_o *)sub_B0D8A4(&StringLiteral_17007/*"btn_bg_03"*/, v4);
-    byte_4212D62 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__);
+    sub_B52984(&StringLiteral_17075/*"btn_bg_04"*/);
+    this = (ServantSortSelectMenu_o *)sub_B52984(&StringLiteral_17074/*"btn_bg_03"*/);
+    byte_42AE34E = 1;
   }
   buddyDispSortSprites = v2->fields.buddyDispSortSprites;
   if ( !buddyDispSortSprites )
 LABEL_16:
-    sub_B0D97C(this);
-  v6 = 0LL;
+    sub_B52A5C(this, method);
+  v4 = 0LL;
   while ( 1 )
   {
     max_length = buddyDispSortSprites->max_length;
-    if ( (int)v6 >= max_length )
+    if ( (int)v4 >= max_length )
       break;
-    if ( (unsigned int)v6 >= max_length )
+    if ( (unsigned int)v4 >= max_length )
     {
-      v13 = sub_B0D9A8(this);
-      sub_B0D948(v13, 0LL);
+      v11 = sub_B52A88(this);
+      sub_B52A28(v11, 0LL);
     }
     operationSortInfo = v2->fields.operationSortInfo;
     if ( operationSortInfo )
@@ -2961,18 +2881,18 @@ LABEL_16:
       buddySelectList = v2->fields.buddySelectList;
       if ( buddySelectList )
       {
-        v10 = &buddyDispSortSprites->obj.klass + v6;
-        if ( buddySelectList->fields._size <= (unsigned int)v6 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-        if ( v10[4] )
+        v8 = &buddyDispSortSprites->obj.klass + v4;
+        if ( buddySelectList->fields._size <= (unsigned int)v4 )
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+        if ( v8[4] )
         {
-          v11 = (UISprite_o *)v10[4];
-          v12 = (System_String_o **)(operationSortInfo->fields.sortKind == buddySelectList->fields._items->m_Items[v6 + 1]
-                                   ? &StringLiteral_17007/*"btn_bg_03"*/
-                                   : &StringLiteral_17008/*"btn_bg_04"*/);
-          UISprite__set_spriteName(v11, *v12, 0LL);
+          v9 = (UISprite_o *)v8[4];
+          v10 = (System_String_o **)(operationSortInfo->fields.sortKind == buddySelectList->fields._items->m_Items[v4 + 1]
+                                   ? &StringLiteral_17074/*"btn_bg_03"*/
+                                   : &StringLiteral_17075/*"btn_bg_04"*/);
+          UISprite__set_spriteName(v9, *v10, 0LL);
           buddyDispSortSprites = v2->fields.buddyDispSortSprites;
-          ++v6;
+          ++v4;
           if ( buddyDispSortSprites )
             continue;
         }
@@ -2988,16 +2908,15 @@ void __fastcall ServantSortSelectMenu__SetChoiceSortButtonSelect(
         const MethodInfo *method)
 {
   ServantSortSelectMenu_o *v2; // x19
-  __int64 v3; // x1
   struct ListViewSort_o *operationSortInfo; // x8
-  __int64 *v5; // x8
+  __int64 *v4; // x8
 
   v2 = this;
-  if ( (byte_4212D67 & 1) == 0 )
+  if ( (byte_42AE353 & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_17057/*"btn_on"*/, method);
-    this = (ServantSortSelectMenu_o *)sub_B0D8A4(&StringLiteral_17056/*"btn_off"*/, v3);
-    byte_4212D67 = 1;
+    sub_B52984(&StringLiteral_17124/*"btn_on"*/);
+    this = (ServantSortSelectMenu_o *)sub_B52984(&StringLiteral_17123/*"btn_off"*/);
+    byte_42AE353 = 1;
   }
   switch ( v2->fields.kind )
   {
@@ -3023,18 +2942,19 @@ void __fastcall ServantSortSelectMenu__SetChoiceSortButtonSelect(
       operationSortInfo = v2->fields.operationSortInfo;
       if ( !operationSortInfo || (this = (ServantSortSelectMenu_o *)v2->fields.smartChoiceBtnSprite) == 0LL )
 LABEL_16:
-        sub_B0D97C(this);
+        sub_B52A5C(this, method);
 LABEL_12:
       if ( operationSortInfo->fields.isChoiceSort )
-        v5 = &StringLiteral_17057/*"btn_on"*/;
+        v4 = &StringLiteral_17124/*"btn_on"*/;
       else
-        v5 = &StringLiteral_17056/*"btn_off"*/;
-      UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v5, 0LL);
+        v4 = &StringLiteral_17123/*"btn_off"*/;
+      UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v4, 0LL);
       return;
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantSortSelectMenu__SetCommandCodeButtonEnable(
         ServantSortSelectMenu_o *this,
         bool isEnable,
@@ -3050,7 +2970,7 @@ void __fastcall ServantSortSelectMenu__SetCommandCodeButtonEnable(
   commandCodeDispSortButtons = this->fields.commandCodeDispSortButtons;
   if ( !commandCodeDispSortButtons )
 LABEL_7:
-    sub_B0D97C(this);
+    sub_B52A5C(this, isEnable);
   v4 = this;
   v5 = 0LL;
   v6 = isEnable;
@@ -3061,8 +2981,8 @@ LABEL_7:
       break;
     if ( (unsigned int)v5 >= max_length )
     {
-      v8 = sub_B0D9A8(this);
-      sub_B0D948(v8, 0LL);
+      v8 = sub_B52A88(this);
+      sub_B52A28(v8, 0LL);
     }
     this = (ServantSortSelectMenu_o *)commandCodeDispSortButtons->m_Items[v5];
     if ( this )
@@ -3083,40 +3003,38 @@ void __fastcall ServantSortSelectMenu__SetCommandCodeButtonSelect(
         const MethodInfo *method)
 {
   ServantSortSelectMenu_o *v2; // x19
-  __int64 v3; // x1
-  __int64 v4; // x1
   struct UISprite_array *commandCodeDispSprites; // x8
-  __int64 v6; // x21
+  __int64 v4; // x21
   int max_length; // w9
   struct ListViewSort_o *operationSortInfo; // x9
   struct System_Collections_Generic_List_ListViewSort_SortKind__o *commandCodeSelectList; // x24
-  Il2CppClass **v10; // x8
-  UISprite_o *v11; // x0
-  System_String_o **v12; // x8
-  __int64 v13; // x0
+  Il2CppClass **v8; // x8
+  UISprite_o *v9; // x0
+  System_String_o **v10; // x8
+  __int64 v11; // x0
 
   v2 = this;
-  if ( (byte_4212D65 & 1) == 0 )
+  if ( (byte_42AE351 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    sub_B0D8A4(&StringLiteral_17008/*"btn_bg_04"*/, v3);
-    this = (ServantSortSelectMenu_o *)sub_B0D8A4(&StringLiteral_17007/*"btn_bg_03"*/, v4);
-    byte_4212D65 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__);
+    sub_B52984(&StringLiteral_17075/*"btn_bg_04"*/);
+    this = (ServantSortSelectMenu_o *)sub_B52984(&StringLiteral_17074/*"btn_bg_03"*/);
+    byte_42AE351 = 1;
   }
   commandCodeDispSprites = v2->fields.commandCodeDispSprites;
   if ( !commandCodeDispSprites )
 LABEL_16:
-    sub_B0D97C(this);
-  v6 = 0LL;
+    sub_B52A5C(this, method);
+  v4 = 0LL;
   while ( 1 )
   {
     max_length = commandCodeDispSprites->max_length;
-    if ( (int)v6 >= max_length )
+    if ( (int)v4 >= max_length )
       break;
-    if ( (unsigned int)v6 >= max_length )
+    if ( (unsigned int)v4 >= max_length )
     {
-      v13 = sub_B0D9A8(this);
-      sub_B0D948(v13, 0LL);
+      v11 = sub_B52A88(this);
+      sub_B52A28(v11, 0LL);
     }
     operationSortInfo = v2->fields.operationSortInfo;
     if ( operationSortInfo )
@@ -3124,18 +3042,18 @@ LABEL_16:
       commandCodeSelectList = v2->fields.commandCodeSelectList;
       if ( commandCodeSelectList )
       {
-        v10 = &commandCodeDispSprites->obj.klass + v6;
-        if ( commandCodeSelectList->fields._size <= (unsigned int)v6 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-        if ( v10[4] )
+        v8 = &commandCodeDispSprites->obj.klass + v4;
+        if ( commandCodeSelectList->fields._size <= (unsigned int)v4 )
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+        if ( v8[4] )
         {
-          v11 = (UISprite_o *)v10[4];
-          v12 = (System_String_o **)(operationSortInfo->fields.sortKind == commandCodeSelectList->fields._items->m_Items[v6 + 1]
-                                   ? &StringLiteral_17007/*"btn_bg_03"*/
-                                   : &StringLiteral_17008/*"btn_bg_04"*/);
-          UISprite__set_spriteName(v11, *v12, 0LL);
+          v9 = (UISprite_o *)v8[4];
+          v10 = (System_String_o **)(operationSortInfo->fields.sortKind == commandCodeSelectList->fields._items->m_Items[v4 + 1]
+                                   ? &StringLiteral_17074/*"btn_bg_03"*/
+                                   : &StringLiteral_17075/*"btn_bg_04"*/);
+          UISprite__set_spriteName(v9, *v10, 0LL);
           commandCodeDispSprites = v2->fields.commandCodeDispSprites;
-          ++v6;
+          ++v4;
           if ( commandCodeDispSprites )
             continue;
         }
@@ -3146,6 +3064,7 @@ LABEL_16:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantSortSelectMenu__SetCostumeButtonEnable(
         ServantSortSelectMenu_o *this,
         bool isEnable,
@@ -3161,7 +3080,7 @@ void __fastcall ServantSortSelectMenu__SetCostumeButtonEnable(
   costumeDispSortButtons = this->fields.costumeDispSortButtons;
   if ( !costumeDispSortButtons )
 LABEL_7:
-    sub_B0D97C(this);
+    sub_B52A5C(this, isEnable);
   v4 = this;
   v5 = 0LL;
   v6 = isEnable;
@@ -3172,8 +3091,8 @@ LABEL_7:
       break;
     if ( (unsigned int)v5 >= max_length )
     {
-      v8 = sub_B0D9A8(this);
-      sub_B0D948(v8, 0LL);
+      v8 = sub_B52A88(this);
+      sub_B52A28(v8, 0LL);
     }
     this = (ServantSortSelectMenu_o *)costumeDispSortButtons->m_Items[v5];
     if ( this )
@@ -3192,40 +3111,38 @@ LABEL_7:
 void __fastcall ServantSortSelectMenu__SetCostumeButtonSelect(ServantSortSelectMenu_o *this, const MethodInfo *method)
 {
   ServantSortSelectMenu_o *v2; // x19
-  __int64 v3; // x1
-  __int64 v4; // x1
   struct UISprite_array *costumeDispSprites; // x8
-  __int64 v6; // x21
+  __int64 v4; // x21
   int max_length; // w9
   struct ListViewSort_o *operationSortInfo; // x9
   struct System_Collections_Generic_List_ListViewSort_SortKind__o *servantCostumeSelectList; // x24
-  Il2CppClass **v10; // x8
-  UISprite_o *v11; // x0
-  System_String_o **v12; // x8
-  __int64 v13; // x0
+  Il2CppClass **v8; // x8
+  UISprite_o *v9; // x0
+  System_String_o **v10; // x8
+  __int64 v11; // x0
 
   v2 = this;
-  if ( (byte_4212D64 & 1) == 0 )
+  if ( (byte_42AE350 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    sub_B0D8A4(&StringLiteral_17008/*"btn_bg_04"*/, v3);
-    this = (ServantSortSelectMenu_o *)sub_B0D8A4(&StringLiteral_17007/*"btn_bg_03"*/, v4);
-    byte_4212D64 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__);
+    sub_B52984(&StringLiteral_17075/*"btn_bg_04"*/);
+    this = (ServantSortSelectMenu_o *)sub_B52984(&StringLiteral_17074/*"btn_bg_03"*/);
+    byte_42AE350 = 1;
   }
   costumeDispSprites = v2->fields.costumeDispSprites;
   if ( !costumeDispSprites )
 LABEL_16:
-    sub_B0D97C(this);
-  v6 = 0LL;
+    sub_B52A5C(this, method);
+  v4 = 0LL;
   while ( 1 )
   {
     max_length = costumeDispSprites->max_length;
-    if ( (int)v6 >= max_length )
+    if ( (int)v4 >= max_length )
       break;
-    if ( (unsigned int)v6 >= max_length )
+    if ( (unsigned int)v4 >= max_length )
     {
-      v13 = sub_B0D9A8(this);
-      sub_B0D948(v13, 0LL);
+      v11 = sub_B52A88(this);
+      sub_B52A28(v11, 0LL);
     }
     operationSortInfo = v2->fields.operationSortInfo;
     if ( operationSortInfo )
@@ -3233,18 +3150,18 @@ LABEL_16:
       servantCostumeSelectList = v2->fields.servantCostumeSelectList;
       if ( servantCostumeSelectList )
       {
-        v10 = &costumeDispSprites->obj.klass + v6;
-        if ( servantCostumeSelectList->fields._size <= (unsigned int)v6 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-        if ( v10[4] )
+        v8 = &costumeDispSprites->obj.klass + v4;
+        if ( servantCostumeSelectList->fields._size <= (unsigned int)v4 )
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+        if ( v8[4] )
         {
-          v11 = (UISprite_o *)v10[4];
-          v12 = (System_String_o **)(operationSortInfo->fields.sortKind == servantCostumeSelectList->fields._items->m_Items[v6 + 1]
-                                   ? &StringLiteral_17007/*"btn_bg_03"*/
-                                   : &StringLiteral_17008/*"btn_bg_04"*/);
-          UISprite__set_spriteName(v11, *v12, 0LL);
+          v9 = (UISprite_o *)v8[4];
+          v10 = (System_String_o **)(operationSortInfo->fields.sortKind == servantCostumeSelectList->fields._items->m_Items[v4 + 1]
+                                   ? &StringLiteral_17074/*"btn_bg_03"*/
+                                   : &StringLiteral_17075/*"btn_bg_04"*/);
+          UISprite__set_spriteName(v9, *v10, 0LL);
           costumeDispSprites = v2->fields.costumeDispSprites;
-          ++v6;
+          ++v4;
           if ( costumeDispSprites )
             continue;
         }
@@ -3255,6 +3172,7 @@ LABEL_16:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantSortSelectMenu__SetEnableButtons(
         ServantSortSelectMenu_o *this,
         bool isEnable,
@@ -3270,7 +3188,7 @@ void __fastcall ServantSortSelectMenu__SetEnableButtons(
         UICommonButton__SetButtonEnableWithCollider(decideButton, isEnable, 0LL),
         (decideButton = this->fields.cancelButton) == 0LL) )
   {
-    sub_B0D97C(decideButton);
+    sub_B52A5C(decideButton, isEnable);
   }
   UICommonButton__SetButtonEnableWithCollider(decideButton, v5, 0LL);
   switch ( this->fields.kind )
@@ -3302,6 +3220,7 @@ void __fastcall ServantSortSelectMenu__SetEnableButtons(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantSortSelectMenu__SetFatigueButtonEnable(
         ServantSortSelectMenu_o *this,
         bool isEnable,
@@ -3317,7 +3236,7 @@ void __fastcall ServantSortSelectMenu__SetFatigueButtonEnable(
   fatigueDispSortButtons = this->fields.fatigueDispSortButtons;
   if ( !fatigueDispSortButtons )
 LABEL_7:
-    sub_B0D97C(this);
+    sub_B52A5C(this, isEnable);
   v4 = this;
   v5 = 0LL;
   v6 = isEnable;
@@ -3328,8 +3247,8 @@ LABEL_7:
       break;
     if ( (unsigned int)v5 >= max_length )
     {
-      v8 = sub_B0D9A8(this);
-      sub_B0D948(v8, 0LL);
+      v8 = sub_B52A88(this);
+      sub_B52A28(v8, 0LL);
     }
     this = (ServantSortSelectMenu_o *)fatigueDispSortButtons->m_Items[v5];
     if ( this )
@@ -3348,40 +3267,38 @@ LABEL_7:
 void __fastcall ServantSortSelectMenu__SetFatigueButtonSelect(ServantSortSelectMenu_o *this, const MethodInfo *method)
 {
   ServantSortSelectMenu_o *v2; // x19
-  __int64 v3; // x1
-  __int64 v4; // x1
   struct UISprite_array *fatigueDispSortSprites; // x8
-  __int64 v6; // x21
+  __int64 v4; // x21
   int max_length; // w9
   struct ListViewSort_o *operationSortInfo; // x9
   struct System_Collections_Generic_List_ListViewSort_SortKind__o *fatigureSelectList; // x24
-  Il2CppClass **v10; // x8
-  UISprite_o *v11; // x0
-  System_String_o **v12; // x8
-  __int64 v13; // x0
+  Il2CppClass **v8; // x8
+  UISprite_o *v9; // x0
+  System_String_o **v10; // x8
+  __int64 v11; // x0
 
   v2 = this;
-  if ( (byte_4212D61 & 1) == 0 )
+  if ( (byte_42AE34D & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    sub_B0D8A4(&StringLiteral_17008/*"btn_bg_04"*/, v3);
-    this = (ServantSortSelectMenu_o *)sub_B0D8A4(&StringLiteral_17007/*"btn_bg_03"*/, v4);
-    byte_4212D61 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__);
+    sub_B52984(&StringLiteral_17075/*"btn_bg_04"*/);
+    this = (ServantSortSelectMenu_o *)sub_B52984(&StringLiteral_17074/*"btn_bg_03"*/);
+    byte_42AE34D = 1;
   }
   fatigueDispSortSprites = v2->fields.fatigueDispSortSprites;
   if ( !fatigueDispSortSprites )
 LABEL_16:
-    sub_B0D97C(this);
-  v6 = 0LL;
+    sub_B52A5C(this, method);
+  v4 = 0LL;
   while ( 1 )
   {
     max_length = fatigueDispSortSprites->max_length;
-    if ( (int)v6 >= max_length )
+    if ( (int)v4 >= max_length )
       break;
-    if ( (unsigned int)v6 >= max_length )
+    if ( (unsigned int)v4 >= max_length )
     {
-      v13 = sub_B0D9A8(this);
-      sub_B0D948(v13, 0LL);
+      v11 = sub_B52A88(this);
+      sub_B52A28(v11, 0LL);
     }
     operationSortInfo = v2->fields.operationSortInfo;
     if ( operationSortInfo )
@@ -3389,18 +3306,18 @@ LABEL_16:
       fatigureSelectList = v2->fields.fatigureSelectList;
       if ( fatigureSelectList )
       {
-        v10 = &fatigueDispSortSprites->obj.klass + v6;
-        if ( fatigureSelectList->fields._size <= (unsigned int)v6 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-        if ( v10[4] )
+        v8 = &fatigueDispSortSprites->obj.klass + v4;
+        if ( fatigureSelectList->fields._size <= (unsigned int)v4 )
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+        if ( v8[4] )
         {
-          v11 = (UISprite_o *)v10[4];
-          v12 = (System_String_o **)(operationSortInfo->fields.sortKind == fatigureSelectList->fields._items->m_Items[v6 + 1]
-                                   ? &StringLiteral_17007/*"btn_bg_03"*/
-                                   : &StringLiteral_17008/*"btn_bg_04"*/);
-          UISprite__set_spriteName(v11, *v12, 0LL);
+          v9 = (UISprite_o *)v8[4];
+          v10 = (System_String_o **)(operationSortInfo->fields.sortKind == fatigureSelectList->fields._items->m_Items[v4 + 1]
+                                   ? &StringLiteral_17074/*"btn_bg_03"*/
+                                   : &StringLiteral_17075/*"btn_bg_04"*/);
+          UISprite__set_spriteName(v9, *v10, 0LL);
           fatigueDispSortSprites = v2->fields.fatigueDispSortSprites;
-          ++v6;
+          ++v4;
           if ( fatigueDispSortSprites )
             continue;
         }
@@ -3411,6 +3328,7 @@ LABEL_16:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantSortSelectMenu__SetNormalButtonEnable(
         ServantSortSelectMenu_o *this,
         bool isEnable,
@@ -3426,7 +3344,7 @@ void __fastcall ServantSortSelectMenu__SetNormalButtonEnable(
   normalSortButtons = this->fields.normalSortButtons;
   if ( !normalSortButtons )
 LABEL_7:
-    sub_B0D97C(this);
+    sub_B52A5C(this, isEnable);
   v4 = this;
   v5 = 0LL;
   v6 = isEnable;
@@ -3437,8 +3355,8 @@ LABEL_7:
       break;
     if ( (unsigned int)v5 >= max_length )
     {
-      v8 = sub_B0D9A8(this);
-      sub_B0D948(v8, 0LL);
+      v8 = sub_B52A88(this);
+      sub_B52A28(v8, 0LL);
     }
     this = (ServantSortSelectMenu_o *)normalSortButtons->m_Items[v5];
     if ( this )
@@ -3457,40 +3375,38 @@ LABEL_7:
 void __fastcall ServantSortSelectMenu__SetNormalButtonSelect(ServantSortSelectMenu_o *this, const MethodInfo *method)
 {
   ServantSortSelectMenu_o *v2; // x19
-  __int64 v3; // x1
-  __int64 v4; // x1
   struct UICommonButton_array *normalSortButtons; // x8
-  __int64 v6; // x21
+  __int64 v4; // x21
   struct UISprite_array *normalSortSprites; // x8
   struct ListViewSort_o *operationSortInfo; // x9
   struct System_Collections_Generic_List_ListViewSort_SortKind__o *servantSelectList; // x24
-  Il2CppClass **v10; // x8
-  UISprite_o *v11; // x0
-  System_String_o **v12; // x8
-  __int64 v13; // x0
+  Il2CppClass **v8; // x8
+  UISprite_o *v9; // x0
+  System_String_o **v10; // x8
+  __int64 v11; // x0
 
   v2 = this;
-  if ( (byte_4212D5F & 1) == 0 )
+  if ( (byte_42AE34B & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    sub_B0D8A4(&StringLiteral_17008/*"btn_bg_04"*/, v3);
-    this = (ServantSortSelectMenu_o *)sub_B0D8A4(&StringLiteral_17007/*"btn_bg_03"*/, v4);
-    byte_4212D5F = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__);
+    sub_B52984(&StringLiteral_17075/*"btn_bg_04"*/);
+    this = (ServantSortSelectMenu_o *)sub_B52984(&StringLiteral_17074/*"btn_bg_03"*/);
+    byte_42AE34B = 1;
   }
   normalSortButtons = v2->fields.normalSortButtons;
   if ( !normalSortButtons )
 LABEL_17:
-    sub_B0D97C(this);
-  v6 = 0LL;
-  while ( (int)v6 < (signed int)normalSortButtons->max_length )
+    sub_B52A5C(this, method);
+  v4 = 0LL;
+  while ( (int)v4 < (signed int)normalSortButtons->max_length )
   {
     normalSortSprites = v2->fields.normalSortSprites;
     if ( normalSortSprites )
     {
-      if ( (unsigned int)v6 >= normalSortSprites->max_length )
+      if ( (unsigned int)v4 >= normalSortSprites->max_length )
       {
-        v13 = sub_B0D9A8(this);
-        sub_B0D948(v13, 0LL);
+        v11 = sub_B52A88(this);
+        sub_B52A28(v11, 0LL);
       }
       operationSortInfo = v2->fields.operationSortInfo;
       if ( operationSortInfo )
@@ -3498,18 +3414,18 @@ LABEL_17:
         servantSelectList = v2->fields.servantSelectList;
         if ( servantSelectList )
         {
-          v10 = &normalSortSprites->obj.klass + v6;
-          if ( servantSelectList->fields._size <= (unsigned int)v6 )
-            System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-          if ( v10[4] )
+          v8 = &normalSortSprites->obj.klass + v4;
+          if ( servantSelectList->fields._size <= (unsigned int)v4 )
+            System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+          if ( v8[4] )
           {
-            v11 = (UISprite_o *)v10[4];
-            v12 = (System_String_o **)(operationSortInfo->fields.sortKind == servantSelectList->fields._items->m_Items[v6 + 1]
-                                     ? &StringLiteral_17007/*"btn_bg_03"*/
-                                     : &StringLiteral_17008/*"btn_bg_04"*/);
-            UISprite__set_spriteName(v11, *v12, 0LL);
+            v9 = (UISprite_o *)v8[4];
+            v10 = (System_String_o **)(operationSortInfo->fields.sortKind == servantSelectList->fields._items->m_Items[v4 + 1]
+                                     ? &StringLiteral_17074/*"btn_bg_03"*/
+                                     : &StringLiteral_17075/*"btn_bg_04"*/);
+            UISprite__set_spriteName(v9, *v10, 0LL);
             normalSortButtons = v2->fields.normalSortButtons;
-            ++v6;
+            ++v4;
             if ( normalSortButtons )
               continue;
           }
@@ -3521,6 +3437,7 @@ LABEL_17:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantSortSelectMenu__SetShortButtonEnable(
         ServantSortSelectMenu_o *this,
         bool isEnable,
@@ -3536,7 +3453,7 @@ void __fastcall ServantSortSelectMenu__SetShortButtonEnable(
   shortDispSortButtons = this->fields.shortDispSortButtons;
   if ( !shortDispSortButtons )
 LABEL_7:
-    sub_B0D97C(this);
+    sub_B52A5C(this, isEnable);
   v4 = this;
   v5 = 0LL;
   v6 = isEnable;
@@ -3547,8 +3464,8 @@ LABEL_7:
       break;
     if ( (unsigned int)v5 >= max_length )
     {
-      v8 = sub_B0D9A8(this);
-      sub_B0D948(v8, 0LL);
+      v8 = sub_B52A88(this);
+      sub_B52A28(v8, 0LL);
     }
     this = (ServantSortSelectMenu_o *)shortDispSortButtons->m_Items[v5];
     if ( this )
@@ -3567,40 +3484,38 @@ LABEL_7:
 void __fastcall ServantSortSelectMenu__SetShortButtonSelect(ServantSortSelectMenu_o *this, const MethodInfo *method)
 {
   ServantSortSelectMenu_o *v2; // x19
-  __int64 v3; // x1
-  __int64 v4; // x1
   struct UISprite_array *shortDispSortSprites; // x8
-  __int64 v6; // x21
+  __int64 v4; // x21
   int max_length; // w9
   struct ListViewSort_o *operationSortInfo; // x9
   struct System_Collections_Generic_List_ListViewSort_SortKind__o *servantEquipSelectList; // x24
-  Il2CppClass **v10; // x8
-  UISprite_o *v11; // x0
-  System_String_o **v12; // x8
-  __int64 v13; // x0
+  Il2CppClass **v8; // x8
+  UISprite_o *v9; // x0
+  System_String_o **v10; // x8
+  __int64 v11; // x0
 
   v2 = this;
-  if ( (byte_4212D63 & 1) == 0 )
+  if ( (byte_42AE34F & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    sub_B0D8A4(&StringLiteral_17008/*"btn_bg_04"*/, v3);
-    this = (ServantSortSelectMenu_o *)sub_B0D8A4(&StringLiteral_17007/*"btn_bg_03"*/, v4);
-    byte_4212D63 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__);
+    sub_B52984(&StringLiteral_17075/*"btn_bg_04"*/);
+    this = (ServantSortSelectMenu_o *)sub_B52984(&StringLiteral_17074/*"btn_bg_03"*/);
+    byte_42AE34F = 1;
   }
   shortDispSortSprites = v2->fields.shortDispSortSprites;
   if ( !shortDispSortSprites )
 LABEL_16:
-    sub_B0D97C(this);
-  v6 = 0LL;
+    sub_B52A5C(this, method);
+  v4 = 0LL;
   while ( 1 )
   {
     max_length = shortDispSortSprites->max_length;
-    if ( (int)v6 >= max_length )
+    if ( (int)v4 >= max_length )
       break;
-    if ( (unsigned int)v6 >= max_length )
+    if ( (unsigned int)v4 >= max_length )
     {
-      v13 = sub_B0D9A8(this);
-      sub_B0D948(v13, 0LL);
+      v11 = sub_B52A88(this);
+      sub_B52A28(v11, 0LL);
     }
     operationSortInfo = v2->fields.operationSortInfo;
     if ( operationSortInfo )
@@ -3608,18 +3523,18 @@ LABEL_16:
       servantEquipSelectList = v2->fields.servantEquipSelectList;
       if ( servantEquipSelectList )
       {
-        v10 = &shortDispSortSprites->obj.klass + v6;
-        if ( servantEquipSelectList->fields._size <= (unsigned int)v6 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-        if ( v10[4] )
+        v8 = &shortDispSortSprites->obj.klass + v4;
+        if ( servantEquipSelectList->fields._size <= (unsigned int)v4 )
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+        if ( v8[4] )
         {
-          v11 = (UISprite_o *)v10[4];
-          v12 = (System_String_o **)(operationSortInfo->fields.sortKind == servantEquipSelectList->fields._items->m_Items[v6 + 1]
-                                   ? &StringLiteral_17007/*"btn_bg_03"*/
-                                   : &StringLiteral_17008/*"btn_bg_04"*/);
-          UISprite__set_spriteName(v11, *v12, 0LL);
+          v9 = (UISprite_o *)v8[4];
+          v10 = (System_String_o **)(operationSortInfo->fields.sortKind == servantEquipSelectList->fields._items->m_Items[v4 + 1]
+                                   ? &StringLiteral_17074/*"btn_bg_03"*/
+                                   : &StringLiteral_17075/*"btn_bg_04"*/);
+          UISprite__set_spriteName(v9, *v10, 0LL);
           shortDispSortSprites = v2->fields.shortDispSortSprites;
-          ++v6;
+          ++v4;
           if ( shortDispSortSprites )
             continue;
         }
@@ -3635,16 +3550,15 @@ void __fastcall ServantSortSelectMenu__SetSmartSortButtonSelect(
         const MethodInfo *method)
 {
   ServantSortSelectMenu_o *v2; // x19
-  __int64 v3; // x1
   struct ListViewSort_o *operationSortInfo; // x8
-  __int64 *v5; // x8
+  __int64 *v4; // x8
 
   v2 = this;
-  if ( (byte_4212D66 & 1) == 0 )
+  if ( (byte_42AE352 & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_17057/*"btn_on"*/, method);
-    this = (ServantSortSelectMenu_o *)sub_B0D8A4(&StringLiteral_17056/*"btn_off"*/, v3);
-    byte_4212D66 = 1;
+    sub_B52984(&StringLiteral_17124/*"btn_on"*/);
+    this = (ServantSortSelectMenu_o *)sub_B52984(&StringLiteral_17123/*"btn_off"*/);
+    byte_42AE352 = 1;
   }
   if ( v2->fields.kind == 5 )
   {
@@ -3660,13 +3574,13 @@ void __fastcall ServantSortSelectMenu__SetSmartSortButtonSelect(
     operationSortInfo = v2->fields.operationSortInfo;
     if ( !operationSortInfo || (this = (ServantSortSelectMenu_o *)v2->fields.smartSortBtnSprite) == 0LL )
 LABEL_13:
-      sub_B0D97C(this);
+      sub_B52A5C(this, method);
   }
   if ( operationSortInfo->fields.isSmartSort )
-    v5 = &StringLiteral_17057/*"btn_on"*/;
+    v4 = &StringLiteral_17124/*"btn_on"*/;
   else
-    v5 = &StringLiteral_17056/*"btn_off"*/;
-  UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v5, 0LL);
+    v4 = &StringLiteral_17123/*"btn_off"*/;
+  UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v4, 0LL);
 }
 
 
@@ -3684,10 +3598,10 @@ void __fastcall ServantSortSelectMenu__add_callbackFunc(
   ServantSortSelectMenu_CallbackFunc_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4212D50 & 1) == 0 )
+  if ( (byte_42AE33C & 1) == 0 )
   {
-    sub_B0D8A4(&ServantSortSelectMenu_CallbackFunc_TypeInfo, value);
-    byte_4212D50 = 1;
+    sub_B52984(&ServantSortSelectMenu_CallbackFunc_TypeInfo);
+    byte_42AE33C = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -3699,13 +3613,13 @@ void __fastcall ServantSortSelectMenu__add_callbackFunc(
       if ( (ServantSortSelectMenu_CallbackFunc_c *)v7->klass != ServantSortSelectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_B022BC(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_B4739C(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (ServantSortSelectMenu_o *)sub_B0DC70(v7);
+  v10 = (ServantSortSelectMenu_o *)sub_B52D50(v7);
   ServantSortSelectMenu__remove_callbackFunc(v10, v11, v12);
 }
 
@@ -3714,12 +3628,12 @@ System_String_o *__fastcall ServantSortSelectMenu__get_closeBtnPath(
         ServantSortSelectMenu_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4212D81 & 1) == 0 )
+  if ( (byte_42AE36D & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_15524/*"Window/CancelButton"*/, method);
-    byte_4212D81 = 1;
+    sub_B52984(&StringLiteral_15582/*"Window/CancelButton"*/);
+    byte_42AE36D = 1;
   }
-  return (System_String_o *)StringLiteral_15524/*"Window/CancelButton"*/;
+  return (System_String_o *)StringLiteral_15582/*"Window/CancelButton"*/;
 }
 
 
@@ -3735,10 +3649,10 @@ void __fastcall ServantSortSelectMenu__remove_callbackFunc(
   bool v9; // zf
   const MethodInfo *v10; // x0
 
-  if ( (byte_4212D51 & 1) == 0 )
+  if ( (byte_42AE33D & 1) == 0 )
   {
-    sub_B0D8A4(&ServantSortSelectMenu_CallbackFunc_TypeInfo, value);
-    byte_4212D51 = 1;
+    sub_B52984(&ServantSortSelectMenu_CallbackFunc_TypeInfo);
+    byte_42AE33D = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -3750,13 +3664,13 @@ void __fastcall ServantSortSelectMenu__remove_callbackFunc(
       if ( (ServantSortSelectMenu_CallbackFunc_c *)v7->klass != ServantSortSelectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_B022BC(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_B4739C(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (const MethodInfo *)sub_B0DC70(v7);
+  v10 = (const MethodInfo *)sub_B52D50(v7);
   ServantSortSelectMenu__InitLoad(v10);
 }
 
@@ -3776,11 +3690,10 @@ void __fastcall ServantSortSelectMenu_CallbackFunc___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B0D840(p_method, object);
+  sub_B52920(p_method);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_IAsyncResult_o *__fastcall ServantSortSelectMenu_CallbackFunc__BeginInvoke(
         ServantSortSelectMenu_CallbackFunc_o *this,
         bool result,
@@ -3792,14 +3705,14 @@ System_IAsyncResult_o *__fastcall ServantSortSelectMenu_CallbackFunc__BeginInvok
   char v10[4]; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10[0] = result;
-  if ( (byte_421225F & 1) == 0 )
+  if ( (byte_42AD379 & 1) == 0 )
   {
-    sub_B0D8A4(&bool_TypeInfo, result);
-    byte_421225F = 1;
+    sub_B52984(&bool_TypeInfo);
+    byte_42AD379 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_B0D848(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_B52928(this, v9, callback, object);
 }
 
 
@@ -3808,7 +3721,7 @@ void __fastcall ServantSortSelectMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B0D84C(result, 0LL, method);
+  sub_B5292C(result, 0LL, method);
 }
 
 
@@ -3825,31 +3738,33 @@ void __fastcall ServantSortSelectMenu_CallbackFunc__Invoke(
   __int64 v9; // x26
   unsigned int v10; // w23
   __int64 class_0; // x0
-  __int64 v12; // x8
-  unsigned __int64 v13; // x10
-  _DWORD *v14; // x11
-  __int64 v15; // x0
+  __int64 v12; // x3
+  __int64 v13; // x8
+  unsigned __int64 v14; // x10
+  _DWORD *v15; // x11
   __int64 v16; // x0
   __int64 v17; // x0
-  void (__fastcall **v18)(__int64 *, bool, _QWORD); // x0
-  ServantSortSelectMenu_CallbackFunc_o *v19; // x8
-  __int64 *v20; // x21
-  __int64 v21; // x22
-  void (__fastcall *v22)(bool, __int64); // x23
-  char v23; // w23
-  char v24; // w0
-  __int64 v25; // x8
-  __int64 v26; // x1
-  __int64 v27; // x2
-  unsigned __int64 v28; // x10
-  _DWORD *v29; // x11
-  ServantSortSelectMenu_CallbackFunc_o *v30; // [xsp+8h] [xbp-48h] BYREF
+  __int64 v18; // x0
+  void (__fastcall **v19)(__int64 *, bool, _QWORD); // x0
+  ServantSortSelectMenu_CallbackFunc_o *v20; // x8
+  __int64 *v21; // x21
+  __int64 v22; // x22
+  void (__fastcall *v23)(bool, __int64); // x23
+  char v24; // w23
+  char v25; // w0
+  __int64 v26; // x3
+  __int64 v27; // x8
+  __int64 v28; // x1
+  __int64 v29; // x2
+  unsigned __int64 v30; // x10
+  _DWORD *v31; // x11
+  ServantSortSelectMenu_CallbackFunc_o *v32; // [xsp+8h] [xbp-48h] BYREF
 
-  v30 = this;
+  v32 = this;
   v4 = *(_QWORD *)&this[1].fields.method_ptr;
   if ( !v4 )
   {
-    v8 = &v30;
+    v8 = &v32;
     v7 = 1LL;
     goto LABEL_5;
   }
@@ -3861,98 +3776,98 @@ LABEL_5:
     v9 = 0LL;
     while ( 1 )
     {
-      v19 = v8[v9];
-      v20 = *(__int64 **)&v19->fields.method;
-      v21 = *(_QWORD *)&v19->fields.extra_arg;
-      v22 = *(void (__fastcall **)(bool, __int64))&v19->fields.method_ptr;
-      if ( *(__int16 *)(v21 + 72) == -1 )
-        sub_B0D960(*(_QWORD *)&v19->fields.extra_arg, result, method, v3);
-      if ( (sub_B0D8D4(v21) & 1) == 0 )
+      v20 = v8[v9];
+      v21 = *(__int64 **)&v20->fields.method;
+      v22 = *(_QWORD *)&v20->fields.extra_arg;
+      v23 = *(void (__fastcall **)(bool, __int64))&v20->fields.method_ptr;
+      if ( *(__int16 *)(v22 + 72) == -1 )
+        sub_B52A40(*(_QWORD *)&v20->fields.extra_arg, result, method, v3);
+      if ( (sub_B529B4(v22) & 1) == 0 )
         break;
-      if ( *(_BYTE *)(v21 + 74) != 1 )
+      if ( *(_BYTE *)(v22 + 74) != 1 )
         goto LABEL_36;
-      v22(result, v21);
+      v23(result, v22);
 LABEL_37:
       if ( ++v9 == v7 )
         return;
     }
-    if ( v20 && *(__int16 *)(v21 + 72) != -1 && (*(_BYTE *)(*v20 + 277) & 1) == 0 && this->fields.m_target )
+    if ( v21 && *(__int16 *)(v22 + 72) != -1 && (*(_BYTE *)(*v21 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v23 = sub_B0D8CC(v21);
-      v24 = sub_B0DCD0(v21);
-      if ( (v23 & 1) != 0 )
+      v24 = sub_B529AC(v22);
+      v25 = sub_B52DB0(v22);
+      if ( (v24 & 1) != 0 )
       {
-        if ( (v24 & 1) != 0 )
+        if ( (v25 & 1) != 0 )
         {
-          v25 = *v20;
-          v26 = *(_QWORD *)(v21 + 24);
-          v27 = *(unsigned __int16 *)(v21 + 72);
-          if ( *(_WORD *)(*v20 + 298) )
+          v27 = *v21;
+          v28 = *(_QWORD *)(v22 + 24);
+          v29 = *(unsigned __int16 *)(v22 + 72);
+          if ( *(_WORD *)(*v21 + 298) )
           {
-            v28 = 0LL;
-            v29 = (_DWORD *)(*(_QWORD *)(v25 + 176) + 8LL);
-            while ( *((_QWORD *)v29 - 1) != v26 )
+            v30 = 0LL;
+            v31 = (_DWORD *)(*(_QWORD *)(v27 + 176) + 8LL);
+            while ( *((_QWORD *)v31 - 1) != v28 )
             {
-              ++v28;
-              v29 += 4;
-              if ( v28 >= *(unsigned __int16 *)(*v20 + 298) )
+              ++v30;
+              v31 += 4;
+              if ( v30 >= *(unsigned __int16 *)(*v21 + 298) )
                 goto LABEL_35;
             }
-            v17 = v25 + 16LL * (*v29 + (int)v27) + 312;
+            v18 = v27 + 16LL * (*v31 + (int)v29) + 312;
           }
           else
           {
 LABEL_35:
-            v17 = sub_AA67A0(v20, v26, v27);
+            v18 = sub_AEB880(v21, v28, v29, v26);
           }
-          v16 = *(_QWORD *)(v17 + 8);
+          v17 = *(_QWORD *)(v18 + 8);
         }
         else
         {
-          v16 = *(_QWORD *)(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 320);
+          v17 = *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320);
         }
-        v18 = (void (__fastcall **)(__int64 *, bool, _QWORD))sub_B0D954(v16, v21);
-        (*v18)(v20, result, v18);
+        v19 = (void (__fastcall **)(__int64 *, bool, _QWORD))sub_B52A34(v17, v22);
+        (*v19)(v21, result, v19);
       }
       else
       {
-        v10 = *(unsigned __int16 *)(v21 + 72);
-        if ( (v24 & 1) != 0 )
+        v10 = *(unsigned __int16 *)(v22 + 72);
+        if ( (v25 & 1) != 0 )
         {
-          class_0 = j_il2cpp_method_get_class_0(v21);
-          v12 = *v20;
-          if ( *(_WORD *)(*v20 + 298) )
+          class_0 = j_il2cpp_method_get_class_0(v22);
+          v13 = *v21;
+          if ( *(_WORD *)(*v21 + 298) )
           {
-            v13 = 0LL;
-            v14 = (_DWORD *)(*(_QWORD *)(v12 + 176) + 8LL);
-            while ( *((_QWORD *)v14 - 1) != class_0 )
+            v14 = 0LL;
+            v15 = (_DWORD *)(*(_QWORD *)(v13 + 176) + 8LL);
+            while ( *((_QWORD *)v15 - 1) != class_0 )
             {
-              ++v13;
-              v14 += 4;
-              if ( v13 >= *(unsigned __int16 *)(*v20 + 298) )
+              ++v14;
+              v15 += 4;
+              if ( v14 >= *(unsigned __int16 *)(*v21 + 298) )
                 goto LABEL_11;
             }
-            v15 = v12 + 16LL * (int)(*v14 + v10) + 312;
+            v16 = v13 + 16LL * (int)(*v15 + v10) + 312;
           }
           else
           {
 LABEL_11:
-            v15 = sub_AA67A0(v20, class_0, v10);
+            v16 = sub_AEB880(v21, class_0, v10, v12);
           }
-          (*(void (__fastcall **)(__int64 *, bool, _QWORD))v15)(v20, result, *(_QWORD *)(v15 + 8));
+          (*(void (__fastcall **)(__int64 *, bool, _QWORD))v16)(v21, result, *(_QWORD *)(v16 + 8));
         }
         else
         {
-          (*(void (__fastcall **)(__int64 *, bool, _QWORD))(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 312))(
-            v20,
+          (*(void (__fastcall **)(__int64 *, bool, _QWORD))(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 312))(
+            v21,
             result,
-            *(_QWORD *)(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 320));
+            *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320));
         }
       }
       goto LABEL_37;
     }
 LABEL_36:
-    ((void (__fastcall *)(__int64 *, bool, __int64))v22)(v20, result, v21);
+    ((void (__fastcall *)(__int64 *, bool, __int64))v23)(v21, result, v22);
     goto LABEL_37;
   }
 }

@@ -8,21 +8,20 @@ UnityEngine_Renderer_o *__fastcall CachableMonoBehaviour__get_renderer(
         CachableMonoBehaviour_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Object_o *mRenderer; // x21
   struct UnityEngine_Renderer_o *Component_WebViewObject; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
 
-  if ( (byte_4215D50 & 1) == 0 )
+  if ( (byte_42B1645 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
-    byte_4215D50 = 1;
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B1645 = 1;
   }
   mRenderer = (UnityEngine_Object_o *)this->fields.mRenderer;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -34,17 +33,17 @@ UnityEngine_Renderer_o *__fastcall CachableMonoBehaviour__get_renderer(
   {
     Component_WebViewObject = (struct UnityEngine_Renderer_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                                  (UnityEngine_Component_o *)this,
-                                                                 (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                                                 (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_Renderer___);
     this->fields.mRenderer = Component_WebViewObject;
-    sub_B0D840(
+    sub_B52920(
       (BattleServantConfConponent_o *)&this->fields.mRenderer,
       (System_Int32_array **)Component_WebViewObject,
+      v5,
       v6,
       v7,
       v8,
       v9,
-      v10,
-      v11);
+      v10);
   }
   return this->fields.mRenderer;
 }
@@ -54,21 +53,20 @@ UnityEngine_Rigidbody_o *__fastcall CachableMonoBehaviour__get_rigidbody(
         CachableMonoBehaviour_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Object_o *mRigidbody; // x21
   struct UnityEngine_Rigidbody_o *Component_WebViewObject; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
 
-  if ( (byte_4215D51 & 1) == 0 )
+  if ( (byte_42B1646 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_Rigidbody___, method);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
-    byte_4215D51 = 1;
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B1646 = 1;
   }
   mRigidbody = (UnityEngine_Object_o *)this->fields.mRigidbody;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -80,17 +78,17 @@ UnityEngine_Rigidbody_o *__fastcall CachableMonoBehaviour__get_rigidbody(
   {
     Component_WebViewObject = (struct UnityEngine_Rigidbody_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                                   (UnityEngine_Component_o *)this,
-                                                                  (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                                                                  (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
     this->fields.mRigidbody = Component_WebViewObject;
-    sub_B0D840(
+    sub_B52920(
       (BattleServantConfConponent_o *)&this->fields.mRigidbody,
       (System_Int32_array **)Component_WebViewObject,
+      v5,
       v6,
       v7,
       v8,
       v9,
-      v10,
-      v11);
+      v10);
   }
   return this->fields.mRigidbody;
 }
@@ -100,21 +98,20 @@ UnityEngine_Transform_o *__fastcall CachableMonoBehaviour__get_transform(
         CachableMonoBehaviour_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Object_o *mTransform; // x21
   struct UnityEngine_Transform_o *Component_WebViewObject; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
 
-  if ( (byte_4215D52 & 1) == 0 )
+  if ( (byte_42B1647 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_Transform___, method);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
-    byte_4215D52 = 1;
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_Transform___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B1647 = 1;
   }
   mTransform = (UnityEngine_Object_o *)this->fields.mTransform;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -126,17 +123,17 @@ UnityEngine_Transform_o *__fastcall CachableMonoBehaviour__get_transform(
   {
     Component_WebViewObject = (struct UnityEngine_Transform_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                                   (UnityEngine_Component_o *)this,
-                                                                  (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_Transform___);
+                                                                  (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_Transform___);
     this->fields.mTransform = Component_WebViewObject;
-    sub_B0D840(
+    sub_B52920(
       (BattleServantConfConponent_o *)&this->fields.mTransform,
       (System_Int32_array **)Component_WebViewObject,
+      v5,
       v6,
       v7,
       v8,
       v9,
-      v10,
-      v11);
+      v10);
   }
   return this->fields.mTransform;
 }

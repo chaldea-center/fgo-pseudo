@@ -1,38 +1,34 @@
 System_String_o *__fastcall StoneShopEffectExtension__GetDisplayName(int32_t this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 *v3; // x8
+  System_String_o *v4; // x19
+  __int64 v6; // x0
   __int64 v7; // x1
-  __int64 *v8; // x8
-  System_String_o *v9; // x19
-  __int64 v11; // x0
-  __int64 v12; // x20
-  int32_t v13; // [xsp+Ch] [xbp-14h] BYREF
+  __int64 v8; // x20
+  int32_t v9; // [xsp+Ch] [xbp-14h] BYREF
 
-  v13 = this;
-  if ( (byte_42135B1 & 1) == 0 )
+  v9 = this;
+  if ( (byte_42AEDCD & 1) == 0 )
   {
-    sub_B0D8A4(&StoneShopEffect_Kind_TypeInfo, method);
-    sub_B0D8A4(&StringLiteral_6316/*"ExtendFriendMax"*/, v3);
-    sub_B0D8A4(&StringLiteral_2785/*"BattleContinue"*/, v4);
-    sub_B0D8A4(&StringLiteral_6317/*"ExtendServantEquipMax"*/, v5);
-    sub_B0D8A4(&StringLiteral_1993/*"ApRecover"*/, v6);
-    sub_B0D8A4(&StringLiteral_6318/*"ExtendServantMax"*/, v7);
-    byte_42135B1 = 1;
+    sub_B52984(&StoneShopEffect_Kind_TypeInfo);
+    sub_B52984(&StringLiteral_6342/*"ExtendFriendMax"*/);
+    sub_B52984(&StringLiteral_2805/*"BattleContinue"*/);
+    sub_B52984(&StringLiteral_6343/*"ExtendServantEquipMax"*/);
+    sub_B52984(&StringLiteral_2007/*"ApRecover"*/);
+    sub_B52984(&StringLiteral_6344/*"ExtendServantMax"*/);
+    byte_42AEDCD = 1;
   }
   if ( this <= 10 )
   {
     if ( this == 1 )
     {
-      v8 = &StringLiteral_2785/*"BattleContinue"*/;
-      return (System_String_o *)*v8;
+      v3 = &StringLiteral_2805/*"BattleContinue"*/;
+      return (System_String_o *)*v3;
     }
     if ( this == 2 )
     {
-      v8 = &StringLiteral_1993/*"ApRecover"*/;
-      return (System_String_o *)*v8;
+      v3 = &StringLiteral_2007/*"ApRecover"*/;
+      return (System_String_o *)*v3;
     }
   }
   else
@@ -40,23 +36,23 @@ System_String_o *__fastcall StoneShopEffectExtension__GetDisplayName(int32_t thi
     switch ( this )
     {
       case 11:
-        v8 = &StringLiteral_6316/*"ExtendFriendMax"*/;
-        return (System_String_o *)*v8;
+        v3 = &StringLiteral_6342/*"ExtendFriendMax"*/;
+        return (System_String_o *)*v3;
       case 12:
-        v8 = &StringLiteral_6318/*"ExtendServantMax"*/;
-        return (System_String_o *)*v8;
+        v3 = &StringLiteral_6344/*"ExtendServantMax"*/;
+        return (System_String_o *)*v3;
       case 13:
-        v8 = &StringLiteral_6317/*"ExtendServantEquipMax"*/;
-        return (System_String_o *)*v8;
+        v3 = &StringLiteral_6343/*"ExtendServantEquipMax"*/;
+        return (System_String_o *)*v3;
     }
   }
-  v11 = j_il2cpp_value_box_0(StoneShopEffect_Kind_TypeInfo, &v13);
-  if ( !v11 )
-    sub_B0D97C(0LL);
-  v12 = v11;
-  v9 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v11 + 360LL))(
-                            v11,
-                            *(_QWORD *)(*(_QWORD *)v11 + 368LL));
-  v13 = *(_DWORD *)j_il2cpp_object_unbox_0(v12);
-  return v9;
+  v6 = j_il2cpp_value_box_0(StoneShopEffect_Kind_TypeInfo, &v9);
+  if ( !v6 )
+    sub_B52A5C(0LL, v7);
+  v8 = v6;
+  v4 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v6 + 360LL))(
+                            v6,
+                            *(_QWORD *)(*(_QWORD *)v6 + 368LL));
+  v9 = *(_DWORD *)j_il2cpp_object_unbox_0(v8);
+  return v4;
 }

@@ -6,65 +6,58 @@ void __fastcall AssetDataListInfo___ctor(AssetDataListInfo_o *this, const Method
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
-  __int64 v9; // x1
-  __int64 v10; // x1
-  System_Int32_array **v11; // x1
-  System_Int32_array **v12; // x1
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
-  System_Int32_array **v19; // x1
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
-  __int64 v26; // x1
-  __int64 v27; // x2
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v28; // x20
-  System_String_array **v29; // x2
-  System_String_array **v30; // x3
-  System_Boolean_array **v31; // x4
-  System_Int32_array **v32; // x5
-  System_Int32_array *v33; // x6
-  System_Int32_array *v34; // x7
+  System_Int32_array **v9; // x1
+  System_Int32_array **v10; // x1
+  System_String_array **v11; // x2
+  System_String_array **v12; // x3
+  System_Boolean_array **v13; // x4
+  System_Int32_array **v14; // x5
+  System_Int32_array *v15; // x6
+  System_Int32_array *v16; // x7
+  System_Int32_array **v17; // x1
+  System_String_array **v18; // x2
+  System_String_array **v19; // x3
+  System_Boolean_array **v20; // x4
+  System_Int32_array **v21; // x5
+  System_Int32_array *v22; // x6
+  System_Int32_array *v23; // x7
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v24; // x20
+  System_String_array **v25; // x2
+  System_String_array **v26; // x3
+  System_Boolean_array **v27; // x4
+  System_Int32_array **v28; // x5
+  System_Int32_array *v29; // x6
+  System_Int32_array *v30; // x7
 
-  if ( (byte_42173F4 & 1) == 0 )
+  if ( (byte_42B2DA8 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_AssetData___ctor__, method);
-    sub_B0D8A4(&System_Collections_Generic_List_AssetData__TypeInfo, v9);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v10);
-    byte_42173F4 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_AssetData___ctor__);
+    sub_B52984(&System_Collections_Generic_List_AssetData__TypeInfo);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B2DA8 = 1;
   }
-  v11 = (System_Int32_array **)StringLiteral_1/*""*/;
+  v9 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.masterVersion = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B0D840((BattleServantConfConponent_o *)&this->fields, v11, v2, v3, v4, v5, v6, v7);
-  v12 = (System_Int32_array **)StringLiteral_1/*""*/;
+  sub_B52920((BattleServantConfConponent_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
+  v10 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.dateVersion = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B0D840((BattleServantConfConponent_o *)&this->fields.dateVersion, v12, v13, v14, v15, v16, v17, v18);
-  v19 = (System_Int32_array **)StringLiteral_1/*""*/;
+  sub_B52920((BattleServantConfConponent_o *)&this->fields.dateVersion, v10, v11, v12, v13, v14, v15, v16);
+  v17 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.buildVersion = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B0D840((BattleServantConfConponent_o *)&this->fields.buildVersion, v19, v20, v21, v22, v23, v24, v25);
-  v28 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
-                                                                                                  System_Collections_Generic_List_AssetData__TypeInfo,
-                                                                                                  v26,
-                                                                                                  v27);
+  sub_B52920((BattleServantConfConponent_o *)&this->fields.buildVersion, v17, v18, v19, v20, v21, v22, v23);
+  v24 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_AssetData__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v28,
-    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_AssetData___ctor__);
-  this->fields.dataList = (struct System_Collections_Generic_List_AssetData__o *)v28;
-  sub_B0D840(
+    v24,
+    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_AssetData___ctor__);
+  this->fields.dataList = (struct System_Collections_Generic_List_AssetData__o *)v24;
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.dataList,
-    (System_Int32_array **)v28,
+    (System_Int32_array **)v24,
+    v25,
+    v26,
+    v27,
+    v28,
     v29,
-    v30,
-    v31,
-    v32,
-    v33,
-    v34);
+    v30);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }

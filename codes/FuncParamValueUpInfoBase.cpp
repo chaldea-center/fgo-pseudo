@@ -1,23 +1,21 @@
 void __fastcall FuncParamValueUpInfoBase___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
-  BattleDataDefine_c *v3; // x0
+  BattleDataDefine_c *v1; // x0
 
-  if ( (byte_4217209 & 1) == 0 )
+  if ( (byte_42B2BCA & 1) == 0 )
   {
-    sub_B0D8A4(&BattleDataDefine_TypeInfo, v1);
-    sub_B0D8A4(&FuncParamValueUpInfoBase_TypeInfo, v2);
-    byte_4217209 = 1;
+    sub_B52984(&BattleDataDefine_TypeInfo);
+    sub_B52984(&FuncParamValueUpInfoBase_TypeInfo);
+    byte_42B2BCA = 1;
   }
-  v3 = BattleDataDefine_TypeInfo;
+  v1 = BattleDataDefine_TypeInfo;
   if ( (BYTE3(BattleDataDefine_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BattleDataDefine_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
-    v3 = BattleDataDefine_TypeInfo;
+    v1 = BattleDataDefine_TypeInfo;
   }
-  FuncParamValueUpInfoBase_TypeInfo->static_fields->ValueEnhanceDenominator = v3->static_fields->PERMILLAGE_DENOMINATOR_INT;
+  FuncParamValueUpInfoBase_TypeInfo->static_fields->ValueEnhanceDenominator = v1->static_fields->PERMILLAGE_DENOMINATOR_INT;
 }
 
 
@@ -35,41 +33,40 @@ int32_t __fastcall FuncParamValueUpInfoBase__Enhance(
         const MethodInfo *method)
 {
   __int64 v4; // x19
-  __int64 v7; // x1
-  System_Collections_Generic_IEnumerable_TSource__o *v8; // x0
-  FuncParamValueUpInfoBase_c *v9; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v7; // x0
+  FuncParamValueUpInfoBase_c *v8; // x0
 
   LODWORD(v4) = value;
-  if ( (byte_4217208 & 1) == 0 )
+  if ( (byte_42B2BC9 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Linq_Enumerable_Contains_DataVals_TYPE___, *(_QWORD *)&type);
-    sub_B0D8A4(&FuncParamValueUpInfoBase_TypeInfo, v7);
-    byte_4217208 = 1;
+    sub_B52984(&Method_System_Linq_Enumerable_Contains_DataVals_TYPE___);
+    sub_B52984(&FuncParamValueUpInfoBase_TypeInfo);
+    byte_42B2BC9 = 1;
   }
   if ( this->fields._ValueEnhanceRate_k__BackingField )
   {
-    v8 = (System_Collections_Generic_IEnumerable_TSource__o *)((__int64 (__fastcall *)(FuncParamValueUpInfoBase_o *, Il2CppMethodPointer, _QWORD, const MethodInfo *))this->klass->vtable._4_unknown.method)(
+    v7 = (System_Collections_Generic_IEnumerable_TSource__o *)((__int64 (__fastcall *)(FuncParamValueUpInfoBase_o *, Il2CppMethodPointer, _QWORD, const MethodInfo *))this->klass->vtable._4_unknown.method)(
                                                                 this,
                                                                 this->klass->vtable._5_Enhance.methodPtr,
                                                                 *(_QWORD *)&value,
                                                                 method);
-    if ( v8 )
+    if ( v7 )
     {
       if ( System_Linq_Enumerable__Contains_ListViewSort_FilterKind_(
-             v8,
+             v7,
              type,
-             (const MethodInfo_1B452E4 *)Method_System_Linq_Enumerable_Contains_DataVals_TYPE___) )
+             (const MethodInfo_1B5C0B0 *)Method_System_Linq_Enumerable_Contains_DataVals_TYPE___) )
       {
-        v9 = FuncParamValueUpInfoBase_TypeInfo;
+        v8 = FuncParamValueUpInfoBase_TypeInfo;
         if ( (BYTE3(FuncParamValueUpInfoBase_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !FuncParamValueUpInfoBase_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(FuncParamValueUpInfoBase_TypeInfo);
-          v9 = FuncParamValueUpInfoBase_TypeInfo;
+          v8 = FuncParamValueUpInfoBase_TypeInfo;
         }
-        return (this->fields._ValueEnhanceRate_k__BackingField + v9->static_fields->ValueEnhanceDenominator)
+        return (this->fields._ValueEnhanceRate_k__BackingField + v8->static_fields->ValueEnhanceDenominator)
              * (__int64)(int)v4
-             / v9->static_fields->ValueEnhanceDenominator;
+             / v8->static_fields->ValueEnhanceDenominator;
       }
     }
   }

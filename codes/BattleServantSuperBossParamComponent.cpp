@@ -2,10 +2,10 @@ void __fastcall BattleServantSuperBossParamComponent___ctor(
         BattleServantSuperBossParamComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_42172B5 & 1) == 0 )
+  if ( (byte_42B2A92 & 1) == 0 )
   {
-    sub_B0D8A4(&BattleServantParamComponent_TypeInfo, method);
-    byte_42172B5 = 1;
+    sub_B52984(&BattleServantParamComponent_TypeInfo);
+    byte_42B2A92 = 1;
   }
   if ( (BYTE3(BattleServantParamComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BattleServantParamComponent_TypeInfo->_2.cctor_finished )
@@ -35,10 +35,10 @@ void __fastcall BattleServantSuperBossParamComponent__UpdateTotalHp(
   int64_t v15; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = this;
-  if ( (byte_42172B1 & 1) == 0 )
+  if ( (byte_42B2A8E & 1) == 0 )
   {
-    this = (BattleServantSuperBossParamComponent_o *)sub_B0D8A4(&long_TypeInfo, svtData);
-    byte_42172B1 = 1;
+    this = (BattleServantSuperBossParamComponent_o *)sub_B52984(&long_TypeInfo);
+    byte_42B2A8E = 1;
   }
   if ( !svtData )
     goto LABEL_16;
@@ -76,7 +76,7 @@ void __fastcall BattleServantSuperBossParamComponent__UpdateTotalHp(
   v14 = v4->fields.previnfo;
   if ( !v14 )
 LABEL_16:
-    sub_B0D97C(this);
+    sub_B52A5C(this, svtData);
   BattleServantSuperBossParamComponent__updateSuperBossHpbar(v4, NowHp, v14->fields.maxHp, v13);
 }
 
@@ -97,22 +97,21 @@ System_String_o *__fastcall BattleServantSuperBossParamComponent__get_SuperBossH
         BattleServantSuperBossParamComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   System_String_o *result; // x0
   BattleServantConfConponent_o *p_hpformat; // x19
-  System_Int32_array **v6; // x0
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
+  System_Int32_array **v5; // x0
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
 
-  if ( (byte_42172AF & 1) == 0 )
+  if ( (byte_42B2A8C & 1) == 0 )
   {
-    sub_B0D8A4(&LocalizationManager_TypeInfo, method);
-    sub_B0D8A4(&StringLiteral_2541/*"BATTLE_SUPERBOSS_TOTALHP"*/, v3);
-    byte_42172AF = 1;
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&StringLiteral_2562/*"BATTLE_SUPERBOSS_TOTALHP"*/);
+    byte_42B2A8C = 1;
   }
   result = this->fields.hpformat;
   if ( !result )
@@ -123,9 +122,9 @@ System_String_o *__fastcall BattleServantSuperBossParamComponent__get_SuperBossH
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_2541/*"BATTLE_SUPERBOSS_TOTALHP"*/, 0LL);
-    p_hpformat->klass = (BattleServantConfConponent_c *)v6;
-    sub_B0D840(p_hpformat, v6, v7, v8, v9, v10, v11, v12);
+    v5 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_2562/*"BATTLE_SUPERBOSS_TOTALHP"*/, 0LL);
+    p_hpformat->klass = (BattleServantConfConponent_c *)v5;
+    sub_B52920(p_hpformat, v5, v6, v7, v8, v9, v10, v11);
     return (System_String_o *)p_hpformat->klass;
   }
   return result;
@@ -138,19 +137,15 @@ void __fastcall BattleServantSuperBossParamComponent__setData(
         BattleServantData_o *data,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
   DataMasterBase_TMaster__TEntity__PKType__o *Master_WarQuestSelectionMaster; // x0
+  __int64 v6; // x1
   Il2CppObject *SingleEntity; // x21
   EventBossStatusUiEntity_o *EntityFromEventIdAndIndex; // x0
-  int v13; // s3
-  float v14; // s4
-  float v15; // s5
-  float v16; // s6
-  EventBossStatusUiEntity_o *v17; // x23
+  int v9; // s3
+  float v10; // s4
+  float v11; // s5
+  float v12; // s6
+  EventBossStatusUiEntity_o *v13; // x23
   int32_t GaugeId; // w0
   UILabel_o *superBosshplabel; // x22
   int32_t hpBarType; // w21
@@ -159,44 +154,44 @@ void __fastcall BattleServantSuperBossParamComponent__setData(
   int methodPointer_high; // s1
   int invoker_method; // s2
   int invoker_method_high; // s3
-  int v26; // s0
-  int v27; // s1
-  int v28; // s2
+  int v22; // s0
+  int v23; // s1
+  int v24; // s2
   struct BattleServantChangeBarComponent_o *hpChange; // x8
-  const MethodInfo *v30; // x1
+  const MethodInfo *v26; // x1
   int32_t MaxShiftIconCount; // w21
-  UnityEngine_Object_o *v32; // x22
-  struct BattleServantChangeBarComponent_o *v33; // x8
-  bool v34; // w21
+  UnityEngine_Object_o *v28; // x22
+  struct BattleServantChangeBarComponent_o *v29; // x8
+  bool v30; // w21
   MethodInfo var40; // [xsp+0h] [xbp-40h] BYREF
-  UnityEngine_Color_o v36; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v32; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_42172B0 & 1) == 0 )
+  if ( (byte_42B2A8D & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMasterData_EventBossStatusUiMaster___, data);
-    sub_B0D8A4(&Method_DataManager_GetMaster_BattleMaster___, v5);
-    sub_B0D8A4(&DataManager_TypeInfo, v6);
-    sub_B0D8A4(&Method_DataMasterBase_BattleMaster__BattleEntity__long__GetSingleEntity__, v7);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v8);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_42172B0 = 1;
+    sub_B52984(&Method_DataManager_GetMasterData_EventBossStatusUiMaster___);
+    sub_B52984(&Method_DataManager_GetMaster_BattleMaster___);
+    sub_B52984(&DataManager_TypeInfo);
+    sub_B52984(&Method_DataMasterBase_BattleMaster__BattleEntity__long__GetSingleEntity__);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_42B2A8D = 1;
   }
   if ( data )
   {
     if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_WarQuestSelectionMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_BattleMaster___);
+    Master_WarQuestSelectionMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_BattleMaster___);
     if ( Master_WarQuestSelectionMaster )
     {
       SingleEntity = DataMasterBase_object__object__long___GetSingleEntity(
                        Master_WarQuestSelectionMaster,
-                       (const MethodInfo_2669EC0 *)Method_DataMasterBase_BattleMaster__BattleEntity__long__GetSingleEntity__);
-      Master_WarQuestSelectionMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                       (const MethodInfo_23E25C4 *)Method_DataMasterBase_BattleMaster__BattleEntity__long__GetSingleEntity__);
+      Master_WarQuestSelectionMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( Master_WarQuestSelectionMaster )
       {
         Master_WarQuestSelectionMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                                          (DataManager_o *)Master_WarQuestSelectionMaster,
-                                                                                         (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventBossStatusUiMaster___);
+                                                                                         (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_EventBossStatusUiMaster___);
         if ( SingleEntity )
         {
           if ( Master_WarQuestSelectionMaster )
@@ -208,29 +203,29 @@ void __fastcall BattleServantSuperBossParamComponent__setData(
                                           0LL);
             if ( EntityFromEventIdAndIndex )
             {
-              v17 = EntityFromEventIdAndIndex;
+              v13 = EntityFromEventIdAndIndex;
               GaugeId = EventBossStatusUiEntity__GetGaugeId(EntityFromEventIdAndIndex, 0LL);
               superBosshplabel = this->fields.superBosshplabel;
               hpBarType = GaugeId;
-              v36.fields.r = 0.0;
-              v36.fields.g = 0.0;
-              v36.fields.b = 0.0;
-              v36.fields.a = 0.0;
+              v32.fields.r = 0.0;
+              v32.fields.g = 0.0;
+              v32.fields.b = 0.0;
+              v32.fields.a = 0.0;
               p_superBosshplabel = &this->fields.superBosshplabel;
-              *(UnityEngine_Color_o *)&methodPointer = EventBossStatusUiEntity__GetTextEffectColor(v17, v36, 0LL);
+              *(UnityEngine_Color_o *)&methodPointer = EventBossStatusUiEntity__GetTextEffectColor(v13, v32, 0LL);
               if ( !superBosshplabel )
                 goto LABEL_37;
             }
             else
             {
               superBosshplabel = this->fields.superBosshplabel;
-              v26 = 0;
-              v27 = 0;
-              v28 = 0;
+              v22 = 0;
+              v23 = 0;
+              v24 = 0;
               p_superBosshplabel = &this->fields.superBosshplabel;
               var40.methodPointer = 0LL;
               var40.invoker_method = 0LL;
-              UnityEngine_Color___ctor_40757524(*(UnityEngine_Color_o *)(&v13 - 3), v14, v15, v16, &var40);
+              UnityEngine_Color___ctor_41463668(*(UnityEngine_Color_o *)(&v9 - 3), v10, v11, v12, &var40);
               methodPointer_high = HIDWORD(var40.methodPointer);
               methodPointer = (int)var40.methodPointer;
               invoker_method_high = HIDWORD(var40.invoker_method);
@@ -257,22 +252,22 @@ void __fastcall BattleServantSuperBossParamComponent__setData(
                 MaxShiftIconCount = BattleServantData__GetMaxShiftIconCount(data, 0LL);
                 if ( MaxShiftIconCount >= 1 )
                 {
-                  v32 = (UnityEngine_Object_o *)this->fields.hpChange;
+                  v28 = (UnityEngine_Object_o *)this->fields.hpChange;
                   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                   {
                     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                   }
                   Master_WarQuestSelectionMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)UnityEngine_Object__op_Inequality(
-                                                                                                   v32,
+                                                                                                   v28,
                                                                                                    0LL,
                                                                                                    0LL);
                   if ( ((unsigned __int8)Master_WarQuestSelectionMaster & 1) != 0 )
                   {
-                    v33 = this->fields.hpChange;
-                    if ( !v33 )
+                    v29 = this->fields.hpChange;
+                    if ( !v29 )
                       goto LABEL_37;
-                    v33->fields.isSuperBossShift = 1;
+                    v29->fields.isSuperBossShift = 1;
                   }
                   Master_WarQuestSelectionMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.nextTdGauge;
                   if ( !Master_WarQuestSelectionMaster )
@@ -299,7 +294,7 @@ void __fastcall BattleServantSuperBossParamComponent__setData(
                     this->fields.shiftBuffPos,
                     0LL);
                 }
-                BattleServantSuperBossParamComponent__updateStateString(this, v30);
+                BattleServantSuperBossParamComponent__updateStateString(this, v26);
                 Master_WarQuestSelectionMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.superbosshpGauge;
                 if ( Master_WarQuestSelectionMaster )
                 {
@@ -308,10 +303,10 @@ void __fastcall BattleServantSuperBossParamComponent__setData(
                                                                                                    0LL);
                   if ( Master_WarQuestSelectionMaster )
                   {
-                    v34 = MaxShiftIconCount < 1;
+                    v30 = MaxShiftIconCount < 1;
                     UnityEngine_GameObject__SetActive(
                       (UnityEngine_GameObject_o *)Master_WarQuestSelectionMaster,
-                      v34,
+                      v30,
                       0LL);
                     Master_WarQuestSelectionMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)*p_superBosshplabel;
                     if ( *p_superBosshplabel )
@@ -321,7 +316,7 @@ void __fastcall BattleServantSuperBossParamComponent__setData(
                       {
                         UnityEngine_GameObject__SetActive(
                           (UnityEngine_GameObject_o *)Master_WarQuestSelectionMaster,
-                          v34,
+                          v30,
                           0LL);
                         goto LABEL_36;
                       }
@@ -335,7 +330,7 @@ void __fastcall BattleServantSuperBossParamComponent__setData(
       }
     }
 LABEL_37:
-    sub_B0D97C(Master_WarQuestSelectionMaster);
+    sub_B52A5C(Master_WarQuestSelectionMaster, v6);
   }
 LABEL_36:
   BattleServantParamComponent__setData((BattleServantParamComponent_o *)this, data, method);
@@ -348,15 +343,15 @@ void __fastcall BattleServantSuperBossParamComponent__setDownMessage(
 {
   UILabel_o *superBosshplabel; // x0
 
-  if ( (byte_42172B3 & 1) == 0 )
+  if ( (byte_42B2A90 & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_960/*"0"*/, method);
-    byte_42172B3 = 1;
+    sub_B52984(&StringLiteral_969/*"0"*/);
+    byte_42B2A90 = 1;
   }
   superBosshplabel = this->fields.superBosshplabel;
   if ( !superBosshplabel )
-    sub_B0D97C(0LL);
-  UILabel__set_text(superBosshplabel, (System_String_o *)StringLiteral_960/*"0"*/, 0LL);
+    sub_B52A5C(0LL, method);
+  UILabel__set_text(superBosshplabel, (System_String_o *)StringLiteral_969/*"0"*/, 0LL);
 }
 
 
@@ -370,7 +365,7 @@ void __fastcall BattleServantSuperBossParamComponent__setSplitHp(
 
   changeGauge = this->fields.changeGauge;
   if ( !changeGauge )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, split);
   BattleServantChangeBarComponent__setSplitHp(changeGauge, split, maxhp, 0LL);
 }
 
@@ -379,21 +374,20 @@ void __fastcall BattleServantSuperBossParamComponent__updateStateString(
         BattleServantSuperBossParamComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   struct BattleServantData_o *data; // x8
   void *stateLabel; // x0
   System_String_o *statestring; // x20
   struct UILabel_o *shortNameLabel; // x8
   struct System_String_o *mText; // x9
-  System_String_o *v9; // x1
-  __int64 v10; // x0
-  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
+  System_String_o *v8; // x1
+  __int64 v9; // x0
+  UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_42172B4 & 1) == 0 )
+  if ( (byte_42B2A91 & 1) == 0 )
   {
-    sub_B0D8A4(&char___TypeInfo, method);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v3);
-    byte_42172B4 = 1;
+    sub_B52984(&char___TypeInfo);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B2A91 = 1;
   }
   data = this->fields.data;
   if ( data )
@@ -411,19 +405,19 @@ void __fastcall BattleServantSuperBossParamComponent__updateStateString(
         {
           if ( stateLabel )
           {
-            v11.fields.z = 0.0;
-            v11.fields.x = (float)(mText->fields.m_stringLength * shortNameLabel->fields.mFontSize) + 10.0;
-            v11.fields.y = 0.0;
-            UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)stateLabel, v11, 0LL);
+            v10.fields.z = 0.0;
+            v10.fields.x = (float)(mText->fields.m_stringLength * shortNameLabel->fields.mFontSize) + 10.0;
+            v10.fields.y = 0.0;
+            UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)stateLabel, v10, 0LL);
             if ( !statestring )
               goto LABEL_13;
-            stateLabel = (void *)sub_B0D8BC(char___TypeInfo, 1LL);
+            stateLabel = (void *)sub_B5299C(char___TypeInfo, 1LL);
             if ( stateLabel )
             {
               if ( !*((_DWORD *)stateLabel + 6) )
               {
-                v10 = sub_B0D9A8(stateLabel);
-                sub_B0D948(v10, 0LL);
+                v9 = sub_B52A88(stateLabel);
+                sub_B52A28(v9, 0LL);
               }
               *((_WORD *)stateLabel + 16) = 58;
               stateLabel = System_String__Split(statestring, (System_Char_array *)stateLabel, 0LL);
@@ -433,7 +427,7 @@ void __fastcall BattleServantSuperBossParamComponent__updateStateString(
                   goto LABEL_13;
                 if ( this->fields.stateLabel )
                 {
-                  v9 = (System_String_o *)*((_QWORD *)stateLabel + 5);
+                  v8 = (System_String_o *)*((_QWORD *)stateLabel + 5);
                   stateLabel = this->fields.stateLabel;
                   goto LABEL_15;
                 }
@@ -444,15 +438,15 @@ void __fastcall BattleServantSuperBossParamComponent__updateStateString(
       }
     }
 LABEL_18:
-    sub_B0D97C(stateLabel);
+    sub_B52A5C(stateLabel, method);
   }
 LABEL_13:
   stateLabel = this->fields.stateLabel;
   if ( !stateLabel )
     goto LABEL_18;
-  v9 = (System_String_o *)StringLiteral_1/*""*/;
+  v8 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_15:
-  UILabel__set_text((UILabel_o *)stateLabel, v9, 0LL);
+  UILabel__set_text((UILabel_o *)stateLabel, v8, 0LL);
 }
 
 
@@ -473,7 +467,7 @@ void __fastcall BattleServantSuperBossParamComponent__updateSuperBossHp(
 
   newinfo = this->fields.newinfo;
   this->fields.previnfo = newinfo;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.previnfo,
     (System_Int32_array **)newinfo,
     v2,
@@ -496,12 +490,13 @@ void __fastcall BattleServantSuperBossParamComponent__updateSuperBossHpbar(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *superbosshpGauge; // x22
-  struct BattleHpGaugeBarComponent_o *v7; // x0
+  __int64 v7; // x1
+  struct BattleHpGaugeBarComponent_o *v8; // x0
 
-  if ( (byte_42172B2 & 1) == 0 )
+  if ( (byte_42B2A8F & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, now);
-    byte_42172B2 = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B2A8F = 1;
   }
   superbosshpGauge = (UnityEngine_Object_o *)this->fields.superbosshpGauge;
   if ( (now & 0x8000000000000000LL) != 0 )
@@ -513,12 +508,12 @@ void __fastcall BattleServantSuperBossParamComponent__updateSuperBossHpbar(
     }
     if ( UnityEngine_Object__op_Inequality(superbosshpGauge, 0LL, 0LL) )
     {
-      v7 = this->fields.superbosshpGauge;
-      if ( v7 )
-BattleHpGaugeBarComponent$$setValue_18874428:
-        JUMPOUT(0x120003CLL);
+      v8 = this->fields.superbosshpGauge;
+      if ( v8 )
+BattleHpGaugeBarComponent$$setValue_19541184:
+        JUMPOUT(0x12A2CC0LL);
 LABEL_17:
-      sub_B0D97C(v7);
+      sub_B52A5C(v8, v7);
     }
   }
   else
@@ -530,9 +525,9 @@ LABEL_17:
     }
     if ( UnityEngine_Object__op_Inequality(superbosshpGauge, 0LL, 0LL) )
     {
-      v7 = this->fields.superbosshpGauge;
-      if ( v7 )
-        goto BattleHpGaugeBarComponent$$setValue_18874428;
+      v8 = this->fields.superbosshpGauge;
+      if ( v8 )
+        goto BattleHpGaugeBarComponent$$setValue_19541184;
       goto LABEL_17;
     }
   }
@@ -557,7 +552,7 @@ void __fastcall BattleServantSuperBossParamComponent__updateSuperBossInfo(
   if ( fixUpdate )
   {
     this->fields.newinfo = info;
-    sub_B0D840(
+    sub_B52920(
       (BattleServantConfConponent_o *)p_newinfo,
       (System_Int32_array **)info,
       (System_String_array **)fixUpdate,
@@ -573,12 +568,12 @@ void __fastcall BattleServantSuperBossParamComponent__updateSuperBossInfo(
     if ( !*p_newinfo )
       goto LABEL_6;
     if ( !info )
-      sub_B0D97C(p_newinfo);
+      sub_B52A5C(p_newinfo, 0LL);
     if ( info->fields.totalDamage != (*p_newinfo)->fields.totalDamage )
     {
 LABEL_6:
       this->fields.newinfo = info;
-      sub_B0D840(
+      sub_B52920(
         (BattleServantConfConponent_o *)p_newinfo,
         (System_Int32_array **)info,
         (System_String_array **)fixUpdate,

@@ -1,4 +1,3 @@
-// local variable allocation has failed, the output may be wrong!
 void __fastcall CharaGraphEquipListViewItem___ctor(
         CharaGraphEquipListViewItem_o *this,
         int32_t index,
@@ -7,8 +6,8 @@ void __fastcall CharaGraphEquipListViewItem___ctor(
         System_Int64_array *partyUserEquipList,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
-  int64_t v12; // x0
+  int64_t v11; // x0
+  __int64 v12; // x1
   struct UserServantEntity_o *UserServantEntity_k__BackingField; // x8
   __int128 v14; // q1
   int64_t v15; // x21
@@ -22,11 +21,11 @@ void __fastcall CharaGraphEquipListViewItem___ctor(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v23; // [xsp+0h] [xbp-70h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v24; // [xsp+20h] [xbp-50h]
 
-  if ( (byte_4215E56 & 1) == 0 )
+  if ( (byte_42B174F & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Linq_Enumerable_Contains_long___, *(_QWORD *)&index);
-    sub_B0D8A4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v11);
-    byte_4215E56 = 1;
+    sub_B52984(&Method_System_Linq_Enumerable_Contains_long___);
+    sub_B52984(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_42B174F = 1;
   }
   CharaGraphServantListViewItem___ctor(
     (CharaGraphServantListViewItem_o *)this,
@@ -46,17 +45,17 @@ void __fastcall CharaGraphEquipListViewItem___ctor(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   }
   v23 = v24;
-  v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44165732(&v23, 0LL);
+  v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44789576(&v23, 0LL);
   if ( !this->fields._UserServantEntity_k__BackingField )
 LABEL_11:
-    sub_B0D97C(v12);
-  v15 = v12;
+    sub_B52A5C(v11, v12);
+  v15 = v11;
   EquipCategoryIdList = UserServantEntity__GetEquipCategoryIdList(
                           this->fields._UserServantEntity_k__BackingField,
                           1,
                           0LL);
   this->fields._EquipCategoryIdArray_k__BackingField = EquipCategoryIdList;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields._EquipCategoryIdArray_k__BackingField,
     (System_Int32_array **)EquipCategoryIdList,
     v17,
@@ -68,7 +67,7 @@ LABEL_11:
   if ( System_Linq_Enumerable__Contains_long_(
          (System_Collections_Generic_IEnumerable_TSource__o *)partyUserEquipList,
          v15,
-         (const MethodInfo_1B453E0 *)Method_System_Linq_Enumerable_Contains_long___) )
+         (const MethodInfo_1B5C1AC *)Method_System_Linq_Enumerable_Contains_long___) )
   {
     this->fields._IsUse_k__BackingField = 1;
   }
@@ -95,7 +94,7 @@ void __fastcall CharaGraphEquipListViewItem__set_EquipCategoryIdArray(
   System_Int32_array *v7; // x7
 
   this->fields._EquipCategoryIdArray_k__BackingField = value;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields._EquipCategoryIdArray_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

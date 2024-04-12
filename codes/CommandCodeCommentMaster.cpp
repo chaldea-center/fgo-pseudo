@@ -1,12 +1,12 @@
 void __fastcall CommandCodeCommentMaster___ctor(CommandCodeCommentMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4214839 & 1) == 0 )
+  if ( (byte_42B0101 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataMasterBase_CommandCodeCommentMaster__CommandCodeCommentEntity__int___ctor__, method);
-    byte_4214839 = 1;
+    sub_B52984(&Method_DataMasterBase_CommandCodeCommentMaster__CommandCodeCommentEntity__int___ctor__);
+    byte_42B0101 = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
-    255,
-    (const MethodInfo_2669B38 *)Method_DataMasterBase_CommandCodeCommentMaster__CommandCodeCommentEntity__int___ctor__);
+    256,
+    (const MethodInfo_23E223C *)Method_DataMasterBase_CommandCodeCommentMaster__CommandCodeCommentEntity__int___ctor__);
 }

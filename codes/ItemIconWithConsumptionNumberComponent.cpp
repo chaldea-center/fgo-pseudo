@@ -2,43 +2,40 @@ void __fastcall ItemIconWithConsumptionNumberComponent___ctor(
         ItemIconWithConsumptionNumberComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4215D42 & 1) == 0 )
+  if ( (byte_42AF176 & 1) == 0 )
   {
-    sub_B0D8A4(&ItemIconComponent_TypeInfo, method);
-    byte_4215D42 = 1;
+    sub_B52984(&ItemIconComponent_TypeInfo);
+    byte_42AF176 = 1;
   }
   if ( (BYTE3(ItemIconComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ItemIconComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ItemIconComponent_TypeInfo);
   }
-  this->fields.PossessionLabelWidth = 84.0;
-  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
+  ItemIconComponent___ctor((ItemIconComponent_o *)this, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall ItemIconWithConsumptionNumberComponent__SetConsumptionNumber(
         ItemIconWithConsumptionNumberComponent_o *this,
         int32_t consumptionNumber,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  __int64 v5; // x1
   UnityEngine_Object_o *consumptionNumberLabel; // x20
-  UILabel_o *v7; // x20
-  System_String_o *v8; // x21
-  Il2CppObject *v9; // x0
-  System_String_o *v10; // x0
-  int32_t v11; // [xsp+Ch] [xbp-14h] BYREF
+  UILabel_o *v5; // x20
+  System_String_o *v6; // x21
+  Il2CppObject *v7; // x0
+  System_String_o *v8; // x0
+  __int64 v9; // x1
+  int32_t v10; // [xsp+Ch] [xbp-14h] BYREF
 
-  v11 = consumptionNumber;
-  if ( (byte_4215D41 & 1) == 0 )
+  v10 = consumptionNumber;
+  if ( (byte_42AF175 & 1) == 0 )
   {
-    sub_B0D8A4(&LocalizationManager_TypeInfo, *(_QWORD *)&consumptionNumber);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v4);
-    sub_B0D8A4(&StringLiteral_10958/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/, v5);
-    byte_4215D41 = 1;
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&StringLiteral_11016/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/);
+    byte_42AF175 = 1;
   }
   consumptionNumberLabel = (UnityEngine_Object_o *)this->fields.consumptionNumberLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -48,17 +45,17 @@ void __fastcall ItemIconWithConsumptionNumberComponent__SetConsumptionNumber(
   }
   if ( UnityEngine_Object__op_Inequality(consumptionNumberLabel, 0LL, 0LL) )
   {
-    v7 = this->fields.consumptionNumberLabel;
+    v5 = this->fields.consumptionNumberLabel;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_10958/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/, 0LL);
-    v9 = (Il2CppObject *)System_Int32__ToString((int32_t)&v11, 0LL);
-    v10 = System_String__Format(v8, v9, 0LL);
-    if ( !v7 || (UILabel__set_text(v7, v10, 0LL), (v10 = (System_String_o *)this->fields.consumptionNumberLabel) == 0LL) )
-      sub_B0D97C(v10);
-    UILabel__set_fontSize((UILabel_o *)v10, 23, 0LL);
+    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_11016/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/, 0LL);
+    v7 = (Il2CppObject *)System_Int32__ToString((int32_t)&v10, 0LL);
+    v8 = System_String__Format(v6, v7, 0LL);
+    if ( !v5 || (UILabel__set_text(v5, v8, 0LL), (v8 = (System_String_o *)this->fields.consumptionNumberLabel) == 0LL) )
+      sub_B52A5C(v8, v9);
+    UILabel__set_fontSize((UILabel_o *)v8, 23, 0LL);
   }
 }

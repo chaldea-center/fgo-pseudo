@@ -10,22 +10,20 @@ void __fastcall TerminalTransitionInfo___ctor(TerminalTransitionInfo_o *this, co
 void __fastcall TerminalTransitionInfo__Init(TerminalTransitionInfo_o *this, const MethodInfo *method)
 {
   struct System_String_array **p_afterActionVals; // x19
-  void *v4; // x1
 
-  if ( (byte_4210C18 & 1) == 0 )
+  if ( (byte_42AC683 & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_1/*""*/, method);
-    byte_4210C18 = 1;
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42AC683 = 1;
   }
   this->fields.missionId = 0;
   this->fields.beforeActionVals = 0LL;
-  sub_B0D840(&this->fields.beforeActionVals, 0LL);
+  sub_B52920(&this->fields.beforeActionVals);
   this->fields.afterActionVals = 0LL;
   p_afterActionVals = &this->fields.afterActionVals;
-  sub_B0D840(p_afterActionVals, 0LL);
-  v4 = StringLiteral_1/*""*/;
+  sub_B52920(p_afterActionVals);
   p_afterActionVals[1] = (struct System_String_array *)StringLiteral_1/*""*/;
-  sub_B0D840(p_afterActionVals + 1, v4);
+  sub_B52920(p_afterActionVals + 1);
   *((_DWORD *)p_afterActionVals + 4) = 0;
 }
 
@@ -35,12 +33,9 @@ void __fastcall TerminalTransitionInfo__SetParameters(
         TerminalTransitionInfo_o *info,
         const MethodInfo *method)
 {
-  struct System_String_o *voiceAssetName; // x1
-
   if ( !info )
-    sub_B0D97C(this);
+    sub_B52A5C(this, 0LL);
   this->fields.missionId = info->fields.missionId;
-  voiceAssetName = info->fields.voiceAssetName;
-  this->fields.voiceAssetName = voiceAssetName;
-  sub_B0D840(&this->fields.voiceAssetName, voiceAssetName);
+  this->fields.voiceAssetName = info->fields.voiceAssetName;
+  sub_B52920(&this->fields.voiceAssetName);
 }

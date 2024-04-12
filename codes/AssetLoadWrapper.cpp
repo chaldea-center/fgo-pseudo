@@ -13,12 +13,13 @@ bool __fastcall AssetLoadWrapper__LoadAssetStorage(
         int32_t maxParallelLoad,
         const MethodInfo *method)
 {
+  __int64 v9; // x1
   AssetPathLoadCounter_o *pathCounter; // x0
 
-  if ( (byte_42173F5 & 1) == 0 )
+  if ( (byte_42B2DA9 & 1) == 0 )
   {
-    sub_B0D8A4(&AssetManager_TypeInfo, path);
-    byte_42173F5 = 1;
+    sub_B52984(&AssetManager_TypeInfo);
+    byte_42B2DA9 = 1;
   }
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -26,7 +27,7 @@ bool __fastcall AssetLoadWrapper__LoadAssetStorage(
     return 0;
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v9);
   AssetPathLoadCounter__AddCount(pathCounter, path, 0LL);
   return 1;
 }
@@ -34,10 +35,10 @@ bool __fastcall AssetLoadWrapper__LoadAssetStorage(
 
 void __fastcall AssetLoadWrapper__Release(AssetLoadWrapper_o *this, System_String_o *path, const MethodInfo *method)
 {
-  if ( (byte_42173F6 & 1) == 0 )
+  if ( (byte_42B2DAA & 1) == 0 )
   {
-    sub_B0D8A4(&AssetManager_TypeInfo, path);
-    byte_42173F6 = 1;
+    sub_B52984(&AssetManager_TypeInfo);
+    byte_42B2DAA = 1;
   }
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -50,6 +51,7 @@ void __fastcall AssetLoadWrapper__ReleaseAssetStorage(
         System_String_o *path,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   AssetPathLoadCounter_o *pathCounter; // x0
 
   ((void (__fastcall *)(AssetLoadWrapper_o *, System_String_o *, void *))this->klass->vtable._4_Release.method)(
@@ -58,6 +60,6 @@ void __fastcall AssetLoadWrapper__ReleaseAssetStorage(
     this->klass[1]._1.image);
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v5);
   AssetPathLoadCounter__SubCount(pathCounter, path, 0LL);
 }

@@ -1,11 +1,9 @@
 void __fastcall SupportSelectItemDrawDrop___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-
-  if ( (byte_42170A0 & 1) == 0 )
+  if ( (byte_42B2996 & 1) == 0 )
   {
-    sub_B0D8A4(&SupportSelectItemDrawDrop_TypeInfo, v1);
-    byte_42170A0 = 1;
+    sub_B52984(&SupportSelectItemDrawDrop_TypeInfo);
+    byte_42B2996 = 1;
   }
   LODWORD(SupportSelectItemDrawDrop_TypeInfo->static_fields->ACTION_TIME) = (struct SupportSelectItemDrawDrop_StaticFields)1045220557;
 }
@@ -20,8 +18,8 @@ void __fastcall SupportSelectItemDrawDrop___ctor(SupportSelectItemDrawDrop_o *th
 // local variable allocation has failed, the output may be wrong!
 void __fastcall SupportSelectItemDrawDrop__DoReturnMove(SupportSelectItemDrawDrop_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Component_o *ListViewObj; // x0
+  __int64 v4; // x1
   UnityEngine_Component_o *v5; // x21
   UnityEngine_Transform_o *v6; // x20
   int v7; // s0
@@ -48,11 +46,11 @@ void __fastcall SupportSelectItemDrawDrop__DoReturnMove(SupportSelectItemDrawDro
   UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v31; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_421709F & 1) == 0 )
+  if ( (byte_42B2995 & 1) == 0 )
   {
-    sub_B0D8A4(&SupportSelectItemDrawDrop_TypeInfo, method);
-    sub_B0D8A4(&StringLiteral_10030/*"OnFinishedReturnMove"*/, v3);
-    byte_421709F = 1;
+    sub_B52984(&SupportSelectItemDrawDrop_TypeInfo);
+    sub_B52984(&StringLiteral_10070/*"OnFinishedReturnMove"*/);
+    byte_42B2995 = 1;
   }
   ListViewObj = (UnityEngine_Component_o *)SupportSelectItemDrawDrop__GetListViewObj(this, method);
   if ( !this->fields.dragObject )
@@ -91,15 +89,15 @@ void __fastcall SupportSelectItemDrawDrop__DoReturnMove(SupportSelectItemDrawDro
   ListViewObj = (UnityEngine_Component_o *)TweenPosition__Begin(dragObject, v13->static_fields->ACTION_TIME, v31, 0LL);
   if ( !ListViewObj )
 LABEL_13:
-    sub_B0D97C(ListViewObj);
+    sub_B52A5C(ListViewObj, v4);
   v15 = ListViewObj;
   LODWORD(ListViewObj[1].klass) = 3;
   gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v15[3].klass = (UnityEngine_Component_c *)gameObject;
-  sub_B0D840((BattleServantConfConponent_o *)&v15[3], gameObject, v17, v18, v19, v20, v21, v22);
-  v23 = (System_Int32_array **)StringLiteral_10030/*"OnFinishedReturnMove"*/;
-  v15[3].monitor = (void *)StringLiteral_10030/*"OnFinishedReturnMove"*/;
-  sub_B0D840((BattleServantConfConponent_o *)&v15[3].monitor, v23, v24, v25, v26, v27, v28, v29);
+  sub_B52920((BattleServantConfConponent_o *)&v15[3], gameObject, v17, v18, v19, v20, v21, v22);
+  v23 = (System_Int32_array **)StringLiteral_10070/*"OnFinishedReturnMove"*/;
+  v15[3].monitor = (void *)StringLiteral_10070/*"OnFinishedReturnMove"*/;
+  sub_B52920((BattleServantConfConponent_o *)&v15[3].monitor, v23, v24, v25, v26, v27, v28, v29);
 }
 
 
@@ -109,54 +107,51 @@ void __fastcall SupportSelectItemDrawDrop__DoSwapMove(
         SupportSelectListViewDropObject_o *target,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
+  const MethodInfo *v5; // x1
   UnityEngine_GameObject_o *dragObject; // x0
-  UnityEngine_Transform_o *v8; // x21
-  int v9; // s0
-  UnityEngine_GameObject_o *v12; // x21
+  UnityEngine_Transform_o *v7; // x21
+  int v8; // s0
+  UnityEngine_GameObject_o *v11; // x21
   float x; // s8
   float y; // s9
-  SupportSelectItemDrawDrop_c *v15; // x0
+  SupportSelectItemDrawDrop_c *v14; // x0
   float z; // s10
-  UnityEngine_GameObject_o *v17; // x21
+  UnityEngine_GameObject_o *v16; // x21
   System_Int32_array **gameObject; // x0
-  System_String_array **v19; // x2
-  System_String_array **v20; // x3
-  System_Boolean_array **v21; // x4
-  System_Int32_array **v22; // x5
-  System_Int32_array *v23; // x6
-  System_Int32_array *v24; // x7
-  System_Int32_array **v25; // x1
-  System_String_array **v26; // x2
-  System_String_array **v27; // x3
-  System_Boolean_array **v28; // x4
-  System_Int32_array **v29; // x5
-  System_Int32_array *v30; // x6
-  System_Int32_array *v31; // x7
-  const MethodInfo *v32; // x1
+  System_String_array **v18; // x2
+  System_String_array **v19; // x3
+  System_Boolean_array **v20; // x4
+  System_Int32_array **v21; // x5
+  System_Int32_array *v22; // x6
+  System_Int32_array *v23; // x7
+  System_Int32_array **v24; // x1
+  System_String_array **v25; // x2
+  System_String_array **v26; // x3
+  System_Boolean_array **v27; // x4
+  System_Int32_array **v28; // x5
+  System_Int32_array *v29; // x6
+  System_Int32_array *v30; // x7
+  const MethodInfo *v31; // x1
   SupportSelectListViewDropObject_o *ListViewObj; // x0
   struct SupportSelectListViewDropObject_o **p_dropObject; // x19
-  UnityEngine_Component_o *v35; // x21
-  System_String_array **v36; // x2
-  System_String_array **v37; // x3
-  System_Boolean_array **v38; // x4
-  System_Int32_array **v39; // x5
-  System_Int32_array *v40; // x6
-  System_Int32_array *v41; // x7
-  const MethodInfo *v42; // x1
-  SupportSelectListViewDropObject_o *v43; // x19
-  const MethodInfo *v44; // x1
-  int v45; // s0
-  UnityEngine_Vector3_o v48; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v49; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Component_o *v34; // x21
+  System_String_array **v35; // x2
+  System_String_array **v36; // x3
+  System_Boolean_array **v37; // x4
+  System_Int32_array **v38; // x5
+  System_Int32_array *v39; // x6
+  System_Int32_array *v40; // x7
+  SupportSelectListViewDropObject_o *v41; // x19
+  int v42; // s0
+  UnityEngine_Vector3_o v45; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v46; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_421709D & 1) == 0 )
+  if ( (byte_42B2993 & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, target);
-    sub_B0D8A4(&SupportSelectItemDrawDrop_TypeInfo, v5);
-    sub_B0D8A4(&StringLiteral_10031/*"OnFinishedSwapMove"*/, v6);
-    byte_421709D = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&SupportSelectItemDrawDrop_TypeInfo);
+    sub_B52984(&StringLiteral_10071/*"OnFinishedSwapMove"*/);
+    byte_42B2993 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -176,72 +171,72 @@ void __fastcall SupportSelectItemDrawDrop__DoSwapMove(
                                                0LL);
     if ( !target )
       goto LABEL_23;
-    v8 = (UnityEngine_Transform_o *)dragObject;
+    v7 = (UnityEngine_Transform_o *)dragObject;
     dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                (UnityEngine_Component_o *)target,
                                                0LL);
     if ( !dragObject )
       goto LABEL_23;
-    *(UnityEngine_Vector3_o *)&v9 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0LL);
-    if ( !v8 )
+    *(UnityEngine_Vector3_o *)&v8 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0LL);
+    if ( !v7 )
       goto LABEL_23;
-    v48 = UnityEngine_Transform__InverseTransformPoint(v8, *(UnityEngine_Vector3_o *)&v9, 0LL);
-    v12 = this->fields.dragObject;
-    x = v48.fields.x;
-    y = v48.fields.y;
-    v15 = SupportSelectItemDrawDrop_TypeInfo;
-    z = v48.fields.z;
+    v45 = UnityEngine_Transform__InverseTransformPoint(v7, *(UnityEngine_Vector3_o *)&v8, 0LL);
+    v11 = this->fields.dragObject;
+    x = v45.fields.x;
+    y = v45.fields.y;
+    v14 = SupportSelectItemDrawDrop_TypeInfo;
+    z = v45.fields.z;
     if ( (BYTE3(SupportSelectItemDrawDrop_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !SupportSelectItemDrawDrop_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(SupportSelectItemDrawDrop_TypeInfo);
-      v15 = SupportSelectItemDrawDrop_TypeInfo;
+      v14 = SupportSelectItemDrawDrop_TypeInfo;
     }
-    v49.fields.x = x;
-    v49.fields.y = y;
-    v49.fields.z = z;
-    dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v12, v15->static_fields->ACTION_TIME, v49, 0LL);
+    v46.fields.x = x;
+    v46.fields.y = y;
+    v46.fields.z = z;
+    dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v11, v14->static_fields->ACTION_TIME, v46, 0LL);
     if ( !dragObject )
       goto LABEL_23;
-    v17 = dragObject;
+    v16 = dragObject;
     LODWORD(dragObject[1].klass) = 3;
     gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-    v17[3].klass = (UnityEngine_GameObject_c *)gameObject;
-    sub_B0D840((BattleServantConfConponent_o *)&v17[3], gameObject, v19, v20, v21, v22, v23, v24);
-    v25 = (System_Int32_array **)StringLiteral_10031/*"OnFinishedSwapMove"*/;
-    v17[3].monitor = (void *)StringLiteral_10031/*"OnFinishedSwapMove"*/;
-    sub_B0D840((BattleServantConfConponent_o *)&v17[3].monitor, v25, v26, v27, v28, v29, v30, v31);
-    ListViewObj = SupportSelectItemDrawDrop__GetListViewObj(this, v32);
+    v16[3].klass = (UnityEngine_GameObject_c *)gameObject;
+    sub_B52920((BattleServantConfConponent_o *)&v16[3], gameObject, v18, v19, v20, v21, v22, v23);
+    v24 = (System_Int32_array **)StringLiteral_10071/*"OnFinishedSwapMove"*/;
+    v16[3].monitor = (void *)StringLiteral_10071/*"OnFinishedSwapMove"*/;
+    sub_B52920((BattleServantConfConponent_o *)&v16[3].monitor, v24, v25, v26, v27, v28, v29, v30);
+    ListViewObj = SupportSelectItemDrawDrop__GetListViewObj(this, v31);
     this->fields.dropObject = target;
     p_dropObject = &this->fields.dropObject;
-    v35 = (UnityEngine_Component_o *)ListViewObj;
-    sub_B0D840(
+    v34 = (UnityEngine_Component_o *)ListViewObj;
+    sub_B52920(
       (BattleServantConfConponent_o *)p_dropObject,
       (System_Int32_array **)target,
+      v35,
       v36,
       v37,
       v38,
       v39,
-      v40,
-      v41);
+      v40);
     if ( !*p_dropObject
       || (dragObject = (UnityEngine_GameObject_o *)(*p_dropObject)->fields.memberObject) == 0LL
-      || (SupportSelectObject__HideEquip((SupportSelectObject_o *)dragObject, v42), !v35)
-      || (v43 = *p_dropObject,
-          (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(v35, 0LL)) == 0LL)
-      || (*(UnityEngine_Vector3_o *)&v45 = UnityEngine_Transform__get_position(
+      || (SupportSelectObject__HideEquip((SupportSelectObject_o *)dragObject, v5), !v34)
+      || (v41 = *p_dropObject,
+          (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(v34, 0LL)) == 0LL)
+      || (*(UnityEngine_Vector3_o *)&v42 = UnityEngine_Transform__get_position(
                                              (UnityEngine_Transform_o *)dragObject,
                                              0LL),
-          !v43) )
+          !v41) )
     {
 LABEL_23:
-      sub_B0D97C(dragObject);
+      sub_B52A5C(dragObject, v5);
     }
     SupportSelectListViewDropObject__DoSwap(
-      v43,
-      *(UnityEngine_Vector3_o *)&v45,
+      v41,
+      *(UnityEngine_Vector3_o *)&v42,
       SupportSelectItemDrawDrop_TypeInfo->static_fields->ACTION_TIME,
-      v44);
+      v5);
   }
 }
 
@@ -251,24 +246,25 @@ SupportSelectListViewManager_o *__fastcall SupportSelectItemDrawDrop__GetListVie
         const MethodInfo *method)
 {
   SupportSelectListViewDropObject_o *ListViewObj; // x0
+  __int64 v4; // x1
   struct ListViewManager_o *manager; // x8
-  __int64 v5; // x11
+  __int64 v6; // x11
 
-  if ( (byte_4217098 & 1) == 0 )
+  if ( (byte_42B298E & 1) == 0 )
   {
-    sub_B0D8A4(&SupportSelectListViewManager_TypeInfo, method);
-    byte_4217098 = 1;
+    sub_B52984(&SupportSelectListViewManager_TypeInfo);
+    byte_42B298E = 1;
   }
   ListViewObj = SupportSelectItemDrawDrop__GetListViewObj(this, method);
   if ( !ListViewObj )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v4);
   manager = ListViewObj->fields.manager;
   if ( !manager )
     return 0LL;
-  v5 = *(&SupportSelectListViewManager_TypeInfo->_2.bitflags2 + 1);
-  if ( *(&manager->klass->_2.bitflags2 + 1) < (unsigned int)v5 )
+  v6 = *(&SupportSelectListViewManager_TypeInfo->_2.bitflags2 + 1);
+  if ( *(&manager->klass->_2.bitflags2 + 1) < (unsigned int)v6 )
     return 0LL;
-  if ( (SupportSelectListViewManager_c *)manager->klass->_2.typeHierarchy[v5 - 1] == SupportSelectListViewManager_TypeInfo )
+  if ( (SupportSelectListViewManager_c *)manager->klass->_2.typeHierarchy[v6 - 1] == SupportSelectListViewManager_TypeInfo )
     return (SupportSelectListViewManager_o *)ListViewObj->fields.manager;
   return 0LL;
 }
@@ -281,10 +277,10 @@ SupportSelectListViewDropObject_o *__fastcall SupportSelectItemDrawDrop__GetList
   struct ListViewObject_o *mListViewObject; // x8
   __int64 v4; // x11
 
-  if ( (byte_4217097 & 1) == 0 )
+  if ( (byte_42B298D & 1) == 0 )
   {
-    sub_B0D8A4(&SupportSelectListViewDropObject_TypeInfo, method);
-    byte_4217097 = 1;
+    sub_B52984(&SupportSelectListViewDropObject_TypeInfo);
+    byte_42B298D = 1;
   }
   mListViewObject = this->fields.mListViewObject;
   if ( !mListViewObject )
@@ -305,13 +301,14 @@ bool __fastcall SupportSelectItemDrawDrop__IsSameObject(
 {
   const MethodInfo *v5; // x1
   SupportSelectListViewDropObject_o *ListViewObj; // x0
+  __int64 v7; // x1
   struct SupportSelectObject_o *memberObject; // x20
-  struct SupportSelectObject_o *v8; // x19
+  struct SupportSelectObject_o *v9; // x19
 
-  if ( (byte_421709C & 1) == 0 )
+  if ( (byte_42B2992 & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, obj);
-    byte_421709C = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B2992 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -324,7 +321,7 @@ bool __fastcall SupportSelectItemDrawDrop__IsSameObject(
     if ( !ListViewObj || !obj )
       goto LABEL_21;
     memberObject = ListViewObj->fields.memberObject;
-    v8 = obj->fields.memberObject;
+    v9 = obj->fields.memberObject;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
@@ -338,15 +335,15 @@ bool __fastcall SupportSelectItemDrawDrop__IsSameObject(
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
       ListViewObj = (SupportSelectListViewDropObject_o *)UnityEngine_Object__op_Inequality(
-                                                           (UnityEngine_Object_o *)v8,
+                                                           (UnityEngine_Object_o *)v9,
                                                            0LL,
                                                            0LL);
       if ( ((unsigned __int8)ListViewObj & 1) != 0 )
       {
-        if ( memberObject && v8 )
-          return memberObject->fields.classPos == v8->fields.classPos;
+        if ( memberObject && v9 )
+          return memberObject->fields.classPos == v9->fields.classPos;
 LABEL_21:
-        sub_B0D97C(ListViewObj);
+        sub_B52A5C(ListViewObj, v7);
       }
     }
   }
@@ -364,23 +361,22 @@ void __fastcall SupportSelectItemDrawDrop__OnDragDropRelease(
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
-  __int64 v10; // x1
-  _BOOL8 v11; // x0
-  const MethodInfo *v12; // x1
+  _BOOL8 v10; // x0
+  const MethodInfo *v11; // x1
   UnityEngine_Object_o *Component_srcLineSprite; // x20
   UnityEngine_Object_o *klass; // x20
+  const MethodInfo *v14; // x2
   const MethodInfo *v15; // x2
-  const MethodInfo *v16; // x2
 
-  if ( (byte_421709B & 1) == 0 )
+  if ( (byte_42B2991 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_SupportSelectUIDragDropListViewSurface___, surface);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v10);
-    byte_421709B = 1;
+    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_SupportSelectUIDragDropListViewSurface___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B2991 = 1;
   }
   this->fields.surface = 0LL;
   this->fields.isDrag = 0;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.surface,
     0LL,
     (System_String_array **)method,
@@ -394,25 +390,25 @@ void __fastcall SupportSelectItemDrawDrop__OnDragDropRelease(
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  v11 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)surface, 0LL, 0LL);
-  if ( !v11 )
+  v10 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)surface, 0LL, 0LL);
+  if ( !v10 )
     goto LABEL_18;
   if ( !surface )
     goto LABEL_20;
   Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                       surface,
-                                                      (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_SupportSelectUIDragDropListViewSurface___);
+                                                      (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_SupportSelectUIDragDropListViewSurface___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  v11 = UnityEngine_Object__op_Inequality(Component_srcLineSprite, 0LL, 0LL);
-  if ( !v11 )
+  v10 = UnityEngine_Object__op_Inequality(Component_srcLineSprite, 0LL, 0LL);
+  if ( !v10 )
     goto LABEL_18;
   if ( !Component_srcLineSprite )
 LABEL_20:
-    sub_B0D97C(v11);
+    sub_B52A5C(v10, v11);
   klass = (UnityEngine_Object_o *)Component_srcLineSprite[1].klass;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -420,13 +416,13 @@ LABEL_20:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
   if ( !UnityEngine_Object__op_Inequality(klass, 0LL, 0LL)
-    || SupportSelectItemDrawDrop__IsSameObject(this, (SupportSelectListViewDropObject_o *)klass, v15) )
+    || SupportSelectItemDrawDrop__IsSameObject(this, (SupportSelectListViewDropObject_o *)klass, v14) )
   {
 LABEL_18:
-    SupportSelectItemDrawDrop__DoReturnMove(this, v12);
+    SupportSelectItemDrawDrop__DoReturnMove(this, v11);
     return;
   }
-  SupportSelectItemDrawDrop__DoSwapMove(this, (SupportSelectListViewDropObject_o *)klass, v16);
+  SupportSelectItemDrawDrop__DoSwapMove(this, (SupportSelectListViewDropObject_o *)klass, v15);
 }
 
 
@@ -442,17 +438,17 @@ void __fastcall SupportSelectItemDrawDrop__OnDragDropStart(SupportSelectItemDraw
   UICamera_c *v10; // x0
   struct UICamera_MouseOrTouch_o *currentTouch; // x8
   SupportSelectListViewManager_o *ListViewManager; // x0
+  const MethodInfo *v13; // x1
   struct UnityEngine_GameObject_o *dragged; // x1
   SupportSelectListViewDropObject_o *ListViewObj; // x20
-  const MethodInfo *v15; // x1
-  const MethodInfo *v16; // x2
-  SupportSelectListViewManager_o *v17; // x19
-  const MethodInfo *v18; // x1
+  const MethodInfo *v16; // x1
+  const MethodInfo *v17; // x2
+  SupportSelectListViewManager_o *v18; // x19
 
-  if ( (byte_421709A & 1) == 0 )
+  if ( (byte_42B2990 & 1) == 0 )
   {
-    sub_B0D8A4(&UICamera_TypeInfo, method);
-    byte_421709A = 1;
+    sub_B52984(&UICamera_TypeInfo);
+    byte_42B2990 = 1;
   }
   UIDragDropListViewItem__OnDragDropStart((UIDragDropListViewItem_o *)this, 0LL);
   this->fields.isDrag = 1;
@@ -471,11 +467,11 @@ void __fastcall SupportSelectItemDrawDrop__OnDragDropStart(SupportSelectItemDraw
       currentTouch = UICamera_TypeInfo->static_fields->currentTouch;
       if ( !currentTouch )
 LABEL_15:
-        sub_B0D97C(ListViewManager);
+        sub_B52A5C(ListViewManager, v13);
     }
     dragged = currentTouch->fields.dragged;
     this->fields.surface = dragged;
-    sub_B0D840(
+    sub_B52920(
       (BattleServantConfConponent_o *)&this->fields.surface,
       (System_Int32_array **)dragged,
       v4,
@@ -486,20 +482,20 @@ LABEL_15:
       v9);
   }
   ListViewObj = SupportSelectItemDrawDrop__GetListViewObj(this, v3);
-  ListViewManager = SupportSelectItemDrawDrop__GetListViewManager(this, v15);
+  ListViewManager = SupportSelectItemDrawDrop__GetListViewManager(this, v16);
   if ( !ListViewManager )
     goto LABEL_15;
-  v17 = ListViewManager;
-  SupportSelectListViewManager__SetActiveDragSwapGuide(ListViewManager, 0, v16);
+  v18 = ListViewManager;
+  SupportSelectListViewManager__SetActiveDragSwapGuide(ListViewManager, 0, v17);
   if ( !ListViewObj )
     goto LABEL_15;
   ListViewManager = (SupportSelectListViewManager_o *)ListViewObj->fields.memberObject;
   if ( !ListViewManager )
     goto LABEL_15;
-  SupportSelectObject__HideEquip((SupportSelectObject_o *)ListViewManager, v18);
-  ((void (__fastcall *)(SupportSelectListViewManager_o *, Il2CppMethodPointer))v17->klass->vtable._7_ItemDragStart.method)(
-    v17,
-    v17->klass->vtable._8_ItemDragEnd.methodPtr);
+  SupportSelectObject__HideEquip((SupportSelectObject_o *)ListViewManager, v13);
+  ((void (__fastcall *)(SupportSelectListViewManager_o *, Il2CppMethodPointer))v18->klass->vtable._7_ItemDragStart.method)(
+    v18,
+    v18->klass->vtable._8_ItemDragEnd.methodPtr);
 }
 
 
@@ -508,17 +504,18 @@ void __fastcall SupportSelectItemDrawDrop__OnFinishDragAndDrop(
         const MethodInfo *method)
 {
   SupportSelectListViewManager_o *ListViewManager; // x0
-  const MethodInfo *v3; // x2
-  SupportSelectListViewManager_o *v4; // x19
+  __int64 v3; // x1
+  const MethodInfo *v4; // x2
+  SupportSelectListViewManager_o *v5; // x19
 
   ListViewManager = SupportSelectItemDrawDrop__GetListViewManager(this, method);
   if ( !ListViewManager )
-    sub_B0D97C(0LL);
-  v4 = ListViewManager;
-  SupportSelectListViewManager__SetActiveDragSwapGuide(ListViewManager, 1, v3);
-  ((void (__fastcall *)(SupportSelectListViewManager_o *, Il2CppMethodPointer))v4->klass->vtable._8_ItemDragEnd.method)(
-    v4,
-    v4->klass->vtable._9_SetSortKind.methodPtr);
+    sub_B52A5C(0LL, v3);
+  v5 = ListViewManager;
+  SupportSelectListViewManager__SetActiveDragSwapGuide(ListViewManager, 1, v4);
+  ((void (__fastcall *)(SupportSelectListViewManager_o *, Il2CppMethodPointer))v5->klass->vtable._8_ItemDragEnd.method)(
+    v5,
+    v5->klass->vtable._9_SetSortKind.methodPtr);
 }
 
 
@@ -536,7 +533,7 @@ void __fastcall SupportSelectItemDrawDrop__OnFinishedReturnMove(
   if ( !ListViewObj
     || (v5 = ListViewObj, (ListViewObj = (SupportSelectListViewDropObject_o *)ListViewObj->fields.memberObject) == 0LL) )
   {
-    sub_B0D97C(ListViewObj);
+    sub_B52A5C(ListViewObj, v4);
   }
   SupportSelectObject__ShowEquip((SupportSelectObject_o *)ListViewObj, v4);
   SupportSelectListViewDropObject__DestroyDragObj(v5, v6);
@@ -549,265 +546,232 @@ void __fastcall SupportSelectItemDrawDrop__OnFinishedSwapMove(
         SupportSelectItemDrawDrop_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x19
+  __int64 v3; // x19
   SupportSelectObject_o *LeaderInfo; // x0
+  const MethodInfo *v5; // x1
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
+  const MethodInfo *v12; // x1
+  System_Int32_array **ListViewObj; // x0
+  __int64 v14; // x27
+  System_String_array **v15; // x2
+  System_String_array **v16; // x3
+  System_Boolean_array **v17; // x4
+  System_Int32_array **v18; // x5
+  System_Int32_array *v19; // x6
+  System_Int32_array *v20; // x7
+  System_Int32_array **dropObject; // x1
+  UnityEngine_Object_o **v22; // x26
   System_String_array **v23; // x2
   System_String_array **v24; // x3
   System_Boolean_array **v25; // x4
   System_Int32_array **v26; // x5
   System_Int32_array *v27; // x6
   System_Int32_array *v28; // x7
-  const MethodInfo *v29; // x1
-  System_Int32_array **ListViewObj; // x0
-  __int64 v31; // x27
-  System_String_array **v32; // x2
-  System_String_array **v33; // x3
-  System_Boolean_array **v34; // x4
-  System_Int32_array **v35; // x5
-  System_Int32_array *v36; // x6
-  System_Int32_array *v37; // x7
-  System_Int32_array **dropObject; // x1
-  UnityEngine_Object_o **v39; // x26
-  System_String_array **v40; // x2
-  System_String_array **v41; // x3
-  System_Boolean_array **v42; // x4
-  System_Int32_array **v43; // x5
-  System_Int32_array *v44; // x6
-  System_Int32_array *v45; // x7
-  UnityEngine_Object_o *v46; // x20
-  UnityEngine_Object_o *v47; // x20
-  const MethodInfo *v48; // x1
+  UnityEngine_Object_o *v29; // x20
+  UnityEngine_Object_o *v30; // x20
+  const MethodInfo *v31; // x1
   System_Int32_array **ListViewManager; // x0
-  System_String_array **v50; // x2
-  System_String_array **v51; // x3
-  System_Boolean_array **v52; // x4
-  System_Int32_array **v53; // x5
-  System_Int32_array *v54; // x6
-  System_Int32_array *v55; // x7
-  System_String_array **v56; // x2
-  System_String_array **v57; // x3
-  System_Boolean_array **v58; // x4
-  System_Int32_array **v59; // x5
-  System_Int32_array *v60; // x6
-  System_Int32_array *v61; // x7
-  __int64 v62; // x8
-  System_Int32_array **v63; // x1
-  System_String_array **v64; // x2
-  System_String_array **v65; // x3
-  System_Boolean_array **v66; // x4
-  System_Int32_array **v67; // x5
-  System_Int32_array *v68; // x6
-  System_Int32_array *v69; // x7
-  __int64 v70; // x8
-  System_Int32_array **v71; // x1
-  SupportSelectObject_o **v72; // x20
-  const MethodInfo *v73; // x1
-  const MethodInfo *v74; // x1
-  UnityEngine_Object_o *v75; // x23
-  const MethodInfo *v76; // x1
-  __int64 v77; // x2
-  UnityEngine_Object_o *v78; // x25
+  System_String_array **v33; // x2
+  System_String_array **v34; // x3
+  System_Boolean_array **v35; // x4
+  System_Int32_array **v36; // x5
+  System_Int32_array *v37; // x6
+  System_Int32_array *v38; // x7
+  System_String_array **v39; // x2
+  System_String_array **v40; // x3
+  System_Boolean_array **v41; // x4
+  System_Int32_array **v42; // x5
+  System_Int32_array *v43; // x6
+  System_Int32_array *v44; // x7
+  __int64 v45; // x8
+  System_Int32_array **v46; // x1
+  System_String_array **v47; // x2
+  System_String_array **v48; // x3
+  System_Boolean_array **v49; // x4
+  System_Int32_array **v50; // x5
+  System_Int32_array *v51; // x6
+  System_Int32_array *v52; // x7
+  __int64 v53; // x8
+  System_Int32_array **v54; // x1
+  SupportSelectObject_o **v55; // x20
+  UnityEngine_Object_o *v56; // x23
+  UnityEngine_Object_o *v57; // x25
   struct SupportSelectItemDraw_o *itemDraw; // x8
   struct ServantClassIconComponent_o *servantClassIcon; // x21
   struct UILabel_o *levelLabel; // x28
-  __int64 v82; // x8
-  __int64 v83; // x21
-  __int64 v84; // x28
-  int32_t v85; // w21
+  __int64 v61; // x8
+  __int64 v62; // x21
+  __int64 v63; // x28
+  int32_t v64; // w21
   char *monitor; // x8
-  int32_t v87; // w28
-  int32_t v88; // w5
-  _QWORD *v89; // x8
-  __int64 v90; // x21
-  __int64 v91; // x28
-  __int64 v92; // x8
-  __int64 v93; // x21
-  __int64 v94; // x28
-  int32_t v95; // w21
-  char *v96; // x8
-  int32_t v97; // w28
-  int32_t v98; // w5
+  int32_t v66; // w28
+  int32_t v67; // w5
+  _QWORD *v68; // x8
+  __int64 v69; // x21
+  __int64 v70; // x28
+  __int64 v71; // x8
+  __int64 v72; // x21
+  __int64 v73; // x28
+  int32_t v74; // w21
+  char *v75; // x8
+  int32_t v76; // w28
+  int32_t v77; // w5
   _BOOL4 IsRarityRestriction; // w28
-  int v100; // w24
-  System_Text_StringBuilder_o *v101; // x22
-  __int64 v102; // x1
-  __int64 v103; // x2
-  System_Text_StringBuilder_o *v104; // x26
-  __int64 v105; // x1
-  __int64 v106; // x2
-  System_Text_StringBuilder_o *v107; // x21
+  int v79; // w24
+  System_Text_StringBuilder_o *v80; // x22
+  System_Text_StringBuilder_o *v81; // x26
+  System_Text_StringBuilder_o *v82; // x21
   ServantEntity_o *Entity; // x24
-  __int64 v109; // x8
-  PartyOrganizationUtility_o *v110; // x27
-  __int64 v111; // x21
-  __int64 v112; // x26
-  System_String_o *v113; // x24
-  int32_t v114; // w26
-  ServantEntity_o *v115; // x24
-  __int64 v116; // x8
-  PartyOrganizationUtility_o *v117; // x27
-  __int64 v118; // x21
-  __int64 v119; // x26
-  System_String_o *v120; // x24
-  EquipTargetInfo_o *v121; // x8
-  int32_t v122; // w23
-  int32_t v123; // w23
-  int32_t v124; // w24
-  int32_t v125; // w23
-  System_Text_StringBuilder_o *v126; // x0
-  Il2CppObject *v127; // x1
-  const MethodInfo *v128; // x1
-  const MethodInfo *v129; // x1
-  const MethodInfo *v130; // x1
-  const MethodInfo *v131; // x1
-  __int64 v132; // x23
+  __int64 v84; // x8
+  PartyOrganizationUtility_o *v85; // x27
+  __int64 v86; // x21
+  __int64 v87; // x26
+  System_String_o *v88; // x24
+  int32_t v89; // w26
+  ServantEntity_o *v90; // x24
+  __int64 v91; // x8
+  PartyOrganizationUtility_o *v92; // x27
+  __int64 v93; // x21
+  __int64 v94; // x26
+  System_String_o *v95; // x24
+  EquipTargetInfo_o *v96; // x8
+  int32_t v97; // w23
+  int32_t v98; // w23
+  int32_t v99; // w24
+  int32_t v100; // w23
+  System_Text_StringBuilder_o *v101; // x0
+  Il2CppObject *v102; // x1
+  __int64 v103; // x23
   int32_t classPos; // w19
-  const MethodInfo *v134; // x1
-  SupportSelectObject_o *v135; // x8
-  int32_t v136; // w21
-  UserServantLeaderEntity_o *v137; // x20
-  const MethodInfo *v138; // x1
-  UserServantLeaderEntity_o *v139; // x5
-  SupportSelectMenu_DragSwapCallbackFunc_o *v140; // x0
-  float v141; // s8
+  SupportSelectObject_o *v105; // x8
+  int32_t v106; // w21
+  UserServantLeaderEntity_o *v107; // x20
+  UserServantLeaderEntity_o *v108; // x5
+  SupportSelectMenu_DragSwapCallbackFunc_o *v109; // x0
+  float v110; // s8
   int32_t windowHeight; // w25
-  float v143; // s9
-  System_String_o *v144; // x0
+  float v112; // s9
+  System_String_o *v113; // x0
   CommonUI_o *Instance; // x20
-  System_String_o *v146; // x21
-  System_String_o *v147; // x22
-  System_String_o *v148; // x23
-  __int64 v149; // x1
-  __int64 v150; // x2
-  CommonConfirmDialog_ClickDelegate_o *v151; // x24
-  System_Text_StringBuilder_o *v152; // [xsp+40h] [xbp-B0h]
-  PartyOrganizationUtility_o *v153; // [xsp+48h] [xbp-A8h]
-  System_Text_StringBuilder_o *v154; // [xsp+48h] [xbp-A8h]
-  PartyOrganizationUtility_o *v155; // [xsp+50h] [xbp-A0h]
-  unsigned int v156; // [xsp+50h] [xbp-A0h]
-  int v157; // [xsp+50h] [xbp-A0h]
-  __int64 v158; // [xsp+58h] [xbp-98h]
+  System_String_o *v115; // x21
+  System_String_o *v116; // x22
+  System_String_o *v117; // x23
+  CommonConfirmDialog_ClickDelegate_o *v118; // x24
+  System_Text_StringBuilder_o *v119; // [xsp+40h] [xbp-B0h]
+  PartyOrganizationUtility_o *v120; // [xsp+48h] [xbp-A8h]
+  System_Text_StringBuilder_o *v121; // [xsp+48h] [xbp-A8h]
+  PartyOrganizationUtility_o *v122; // [xsp+50h] [xbp-A0h]
+  unsigned int v123; // [xsp+50h] [xbp-A0h]
+  int v124; // [xsp+50h] [xbp-A0h]
+  __int64 v125; // [xsp+58h] [xbp-98h]
   int32_t maxLength[2]; // [xsp+60h] [xbp-90h] BYREF
   int32_t minFontSize; // [xsp+68h] [xbp-88h] BYREF
   int32_t maxFontSize; // [xsp+6Ch] [xbp-84h] BYREF
   int32_t actMaxRarity[2]; // [xsp+70h] [xbp-80h] BYREF
-  System_String_o *v163; // [xsp+78h] [xbp-78h] BYREF
+  System_String_o *v130; // [xsp+78h] [xbp-78h] BYREF
   System_String_o *skillName; // [xsp+80h] [xbp-70h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v165; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v166; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v167; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v168; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v169; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v170; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v132; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v133; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v134; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v135; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v136; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v137; // 0:x0.16
 
-  if ( (byte_421709E & 1) == 0 )
+  if ( (byte_42B2994 & 1) == 0 )
   {
-    sub_B0D8A4(&CommonConfirmDialog_ClickDelegate_TypeInfo, method);
-    sub_B0D8A4(&Method_DataManager_GetMasterData_ServantMaster___, v4);
-    sub_B0D8A4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v5);
-    sub_B0D8A4(&LocalizationManager_TypeInfo, v6);
-    sub_B0D8A4(&System_Math_TypeInfo, v7);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v8);
-    sub_B0D8A4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v11);
-    sub_B0D8A4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v12);
-    sub_B0D8A4(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v13);
-    sub_B0D8A4(&System_Text_StringBuilder_TypeInfo, v14);
-    sub_B0D8A4(&Method_SupportSelectItemDrawDrop___c__DisplayClass13_0__OnFinishedSwapMove_b__0__, v15);
-    sub_B0D8A4(&SupportSelectItemDrawDrop___c__DisplayClass13_0_TypeInfo, v16);
-    sub_B0D8A4(&StringLiteral_10232/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_CONFIRM"*/, v17);
-    sub_B0D8A4(&StringLiteral_3277/*"COMMON_CONFIRM_NO"*/, v18);
-    sub_B0D8A4(&StringLiteral_3280/*"COMMON_CONFIRM_YES"*/, v19);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v20);
-    byte_421709E = 1;
+    sub_B52984(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_B52984(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_B52984(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&System_Math_TypeInfo);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B52984(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B52984(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_B52984(&SingletonTemplate_PartyOrganizationUtility__TypeInfo);
+    sub_B52984(&System_Text_StringBuilder_TypeInfo);
+    sub_B52984(&Method_SupportSelectItemDrawDrop___c__DisplayClass13_0__OnFinishedSwapMove_b__0__);
+    sub_B52984(&SupportSelectItemDrawDrop___c__DisplayClass13_0_TypeInfo);
+    sub_B52984(&StringLiteral_10272/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_CONFIRM"*/);
+    sub_B52984(&StringLiteral_3297/*"COMMON_CONFIRM_NO"*/);
+    sub_B52984(&StringLiteral_3300/*"COMMON_CONFIRM_YES"*/);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B2994 = 1;
   }
   skillName = 0LL;
   *(_QWORD *)actMaxRarity = 0LL;
-  v163 = 0LL;
+  v130 = 0LL;
   maxFontSize = 0;
   minFontSize = 0;
   *(_QWORD *)maxLength = 0LL;
-  v21 = sub_B0D974(SupportSelectItemDrawDrop___c__DisplayClass13_0_TypeInfo, method, v2);
-  SupportSelectItemDrawDrop___c__DisplayClass13_0___ctor((SupportSelectItemDrawDrop___c__DisplayClass13_0_o *)v21, 0LL);
-  if ( !v21 )
+  v3 = sub_B52A54(SupportSelectItemDrawDrop___c__DisplayClass13_0_TypeInfo);
+  SupportSelectItemDrawDrop___c__DisplayClass13_0___ctor((SupportSelectItemDrawDrop___c__DisplayClass13_0_o *)v3, 0LL);
+  if ( !v3 )
     goto LABEL_132;
-  *(_QWORD *)(v21 + 32) = this;
-  sub_B0D840((BattleServantConfConponent_o *)(v21 + 32), (System_Int32_array **)this, v23, v24, v25, v26, v27, v28);
-  ListViewObj = (System_Int32_array **)SupportSelectItemDrawDrop__GetListViewObj(this, v29);
-  v31 = v21 + 16;
-  *(_QWORD *)(v21 + 16) = ListViewObj;
-  sub_B0D840((BattleServantConfConponent_o *)(v21 + 16), ListViewObj, v32, v33, v34, v35, v36, v37);
+  *(_QWORD *)(v3 + 32) = this;
+  sub_B52920((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  ListViewObj = (System_Int32_array **)SupportSelectItemDrawDrop__GetListViewObj(this, v12);
+  v14 = v3 + 16;
+  *(_QWORD *)(v3 + 16) = ListViewObj;
+  sub_B52920((BattleServantConfConponent_o *)(v3 + 16), ListViewObj, v15, v16, v17, v18, v19, v20);
   dropObject = (System_Int32_array **)this->fields.dropObject;
-  v39 = (UnityEngine_Object_o **)(v21 + 24);
-  *(_QWORD *)(v21 + 24) = dropObject;
-  sub_B0D840((BattleServantConfConponent_o *)(v21 + 24), dropObject, v40, v41, v42, v43, v44, v45);
-  v46 = *(UnityEngine_Object_o **)(v21 + 16);
+  v22 = (UnityEngine_Object_o **)(v3 + 24);
+  *(_QWORD *)(v3 + 24) = dropObject;
+  sub_B52920((BattleServantConfConponent_o *)(v3 + 24), dropObject, v23, v24, v25, v26, v27, v28);
+  v29 = *(UnityEngine_Object_o **)(v3 + 16);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( !UnityEngine_Object__op_Inequality(v46, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Inequality(v29, 0LL, 0LL) )
     return;
-  v47 = *v39;
+  v30 = *v22;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( !UnityEngine_Object__op_Inequality(v47, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Inequality(v30, 0LL, 0LL) )
     return;
-  ListViewManager = (System_Int32_array **)SupportSelectItemDrawDrop__GetListViewManager(this, v48);
-  *(_QWORD *)(v21 + 40) = ListViewManager;
-  sub_B0D840((BattleServantConfConponent_o *)(v21 + 40), ListViewManager, v50, v51, v52, v53, v54, v55);
-  v62 = *(_QWORD *)(v21 + 16);
-  if ( !v62 )
+  ListViewManager = (System_Int32_array **)SupportSelectItemDrawDrop__GetListViewManager(this, v31);
+  *(_QWORD *)(v3 + 40) = ListViewManager;
+  sub_B52920((BattleServantConfConponent_o *)(v3 + 40), ListViewManager, v33, v34, v35, v36, v37, v38);
+  v45 = *(_QWORD *)(v3 + 16);
+  if ( !v45 )
     goto LABEL_132;
-  v63 = *(System_Int32_array ***)(v62 + 112);
-  *(_QWORD *)(v21 + 48) = v63;
-  sub_B0D840((BattleServantConfConponent_o *)(v21 + 48), v63, v56, v57, v58, v59, v60, v61);
-  v70 = *(_QWORD *)(v21 + 24);
-  v158 = v21 + 48;
-  if ( !v70 )
+  v46 = *(System_Int32_array ***)(v45 + 112);
+  *(_QWORD *)(v3 + 48) = v46;
+  sub_B52920((BattleServantConfConponent_o *)(v3 + 48), v46, v39, v40, v41, v42, v43, v44);
+  v53 = *(_QWORD *)(v3 + 24);
+  v125 = v3 + 48;
+  if ( !v53 )
     goto LABEL_132;
-  v71 = *(System_Int32_array ***)(v70 + 112);
-  *(_QWORD *)(v21 + 56) = v71;
-  v72 = (SupportSelectObject_o **)(v21 + 56);
-  sub_B0D840((BattleServantConfConponent_o *)(v21 + 56), v71, v64, v65, v66, v67, v68, v69);
-  LeaderInfo = *(SupportSelectObject_o **)(v21 + 48);
+  v54 = *(System_Int32_array ***)(v53 + 112);
+  *(_QWORD *)(v3 + 56) = v54;
+  v55 = (SupportSelectObject_o **)(v3 + 56);
+  sub_B52920((BattleServantConfConponent_o *)(v3 + 56), v54, v47, v48, v49, v50, v51, v52);
+  LeaderInfo = *(SupportSelectObject_o **)(v3 + 48);
   if ( !LeaderInfo )
     goto LABEL_132;
-  LeaderInfo = (SupportSelectObject_o *)SupportSelectObject__GetLeaderInfo(LeaderInfo, v73);
-  if ( !*v72 )
+  LeaderInfo = (SupportSelectObject_o *)SupportSelectObject__GetLeaderInfo(LeaderInfo, v5);
+  if ( !*v55 )
     goto LABEL_132;
-  v75 = (UnityEngine_Object_o *)LeaderInfo;
-  LeaderInfo = (SupportSelectObject_o *)SupportSelectObject__GetLeaderInfo(*v72, v74);
+  v56 = (UnityEngine_Object_o *)LeaderInfo;
+  LeaderInfo = (SupportSelectObject_o *)SupportSelectObject__GetLeaderInfo(*v55, v5);
   *(_QWORD *)actMaxRarity = 0LL;
-  v163 = (System_String_o *)StringLiteral_1/*""*/;
+  v130 = (System_String_o *)StringLiteral_1/*""*/;
   skillName = (System_String_o *)StringLiteral_1/*""*/;
-  if ( !v75 )
+  if ( !v56 )
     goto LABEL_132;
-  v78 = (UnityEngine_Object_o *)LeaderInfo;
-  if ( *(_QWORD *)&v75->fields.m_CachedPtr && v75[2].fields.m_CachedPtr >= 1 )
+  v57 = (UnityEngine_Object_o *)LeaderInfo;
+  if ( *(_QWORD *)&v56->fields.m_CachedPtr && v56[2].fields.m_CachedPtr >= 1 )
   {
     if ( !LeaderInfo )
       goto LABEL_132;
@@ -821,55 +785,55 @@ void __fastcall SupportSelectItemDrawDrop__OnFinishedSwapMove(
       {
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       }
-      *(_QWORD *)&v165.fields.currentCryptoKey = servantClassIcon;
-      *(_QWORD *)&v165.fields.fakeValue = levelLabel;
-      if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44162576(v165, 0LL) >= 1 )
+      *(_QWORD *)&v132.fields.currentCryptoKey = servantClassIcon;
+      *(_QWORD *)&v132.fields.fakeValue = levelLabel;
+      if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44786420(v132, 0LL) >= 1 )
       {
         if ( (BYTE3(SingletonTemplate_PartyOrganizationUtility__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !SingletonTemplate_PartyOrganizationUtility__TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(SingletonTemplate_PartyOrganizationUtility__TypeInfo);
         }
-        LeaderInfo = (SupportSelectObject_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2A713E8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-        v82 = *(_QWORD *)&v75->fields.m_CachedPtr;
-        v155 = (PartyOrganizationUtility_o *)LeaderInfo;
-        if ( !v82 )
+        LeaderInfo = (SupportSelectObject_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2B76134 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+        v61 = *(_QWORD *)&v56->fields.m_CachedPtr;
+        v122 = (PartyOrganizationUtility_o *)LeaderInfo;
+        if ( !v61 )
           goto LABEL_132;
-        v83 = *(_QWORD *)(v82 + 80);
-        v84 = *(_QWORD *)(v82 + 88);
+        v62 = *(_QWORD *)(v61 + 80);
+        v63 = *(_QWORD *)(v61 + 88);
         if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         }
-        *(_QWORD *)&v166.fields.currentCryptoKey = v83;
-        *(_QWORD *)&v166.fields.fakeValue = v84;
-        LeaderInfo = (SupportSelectObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44162576(
-                                                v166,
+        *(_QWORD *)&v133.fields.currentCryptoKey = v62;
+        *(_QWORD *)&v133.fields.fakeValue = v63;
+        LeaderInfo = (SupportSelectObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44786420(
+                                                v133,
                                                 0LL);
-        if ( !*(_QWORD *)&v75->fields.m_CachedPtr )
+        if ( !*(_QWORD *)&v56->fields.m_CachedPtr )
           goto LABEL_132;
-        v85 = (int)LeaderInfo;
+        v64 = (int)LeaderInfo;
         LeaderInfo = (SupportSelectObject_o *)UserServantEntity__getRarity(
-                                                *(UserServantEntity_o **)&v75->fields.m_CachedPtr,
+                                                *(UserServantEntity_o **)&v56->fields.m_CachedPtr,
                                                 0LL);
-        monitor = (char *)v78[1].monitor;
+        monitor = (char *)v57[1].monitor;
         if ( !monitor )
           goto LABEL_132;
-        v87 = (int)LeaderInfo;
-        v88 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44162576(
+        v66 = (int)LeaderInfo;
+        v67 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44786420(
                 *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)(monitor + 56),
                 0LL);
-        LeaderInfo = (SupportSelectObject_o *)v155;
-        if ( !v155 )
+        LeaderInfo = (SupportSelectObject_o *)v122;
+        if ( !v122 )
           goto LABEL_132;
         LeaderInfo = (SupportSelectObject_o *)PartyOrganizationUtility__IsRarityRestriction(
-                                                v155,
+                                                v122,
                                                 &skillName,
                                                 &actMaxRarity[1],
-                                                v85,
-                                                v87,
-                                                v88,
+                                                v64,
+                                                v66,
+                                                v67,
                                                 -1,
                                                 0LL);
         goto LABEL_38;
@@ -882,19 +846,19 @@ void __fastcall SupportSelectItemDrawDrop__OnFinishedSwapMove(
   }
   LeaderInfo = 0LL;
 LABEL_38:
-  if ( *(_QWORD *)&v78->fields.m_CachedPtr && v78[2].fields.m_CachedPtr >= 1 && (v89 = v75[1].monitor) != 0LL )
+  if ( *(_QWORD *)&v57->fields.m_CachedPtr && v57[2].fields.m_CachedPtr >= 1 && (v68 = v56[1].monitor) != 0LL )
   {
-    v156 = (unsigned int)LeaderInfo;
-    v90 = v89[7];
-    v91 = v89[8];
+    v123 = (unsigned int)LeaderInfo;
+    v69 = v68[7];
+    v70 = v68[8];
     if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     }
-    *(_QWORD *)&v167.fields.currentCryptoKey = v90;
-    *(_QWORD *)&v167.fields.fakeValue = v91;
-    if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44162576(v167, 0LL) < 1 )
+    *(_QWORD *)&v134.fields.currentCryptoKey = v69;
+    *(_QWORD *)&v134.fields.fakeValue = v70;
+    if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44786420(v134, 0LL) < 1 )
     {
       IsRarityRestriction = 0;
     }
@@ -905,50 +869,50 @@ LABEL_38:
       {
         j_il2cpp_runtime_class_init_0(SingletonTemplate_PartyOrganizationUtility__TypeInfo);
       }
-      LeaderInfo = (SupportSelectObject_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2A713E8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-      v92 = *(_QWORD *)&v78->fields.m_CachedPtr;
-      v153 = (PartyOrganizationUtility_o *)LeaderInfo;
-      if ( !v92 )
+      LeaderInfo = (SupportSelectObject_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2B76134 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      v71 = *(_QWORD *)&v57->fields.m_CachedPtr;
+      v120 = (PartyOrganizationUtility_o *)LeaderInfo;
+      if ( !v71 )
         goto LABEL_132;
-      v93 = *(_QWORD *)(v92 + 80);
-      v94 = *(_QWORD *)(v92 + 88);
+      v72 = *(_QWORD *)(v71 + 80);
+      v73 = *(_QWORD *)(v71 + 88);
       if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       }
-      *(_QWORD *)&v168.fields.currentCryptoKey = v93;
-      *(_QWORD *)&v168.fields.fakeValue = v94;
-      LeaderInfo = (SupportSelectObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44162576(
-                                              v168,
+      *(_QWORD *)&v135.fields.currentCryptoKey = v72;
+      *(_QWORD *)&v135.fields.fakeValue = v73;
+      LeaderInfo = (SupportSelectObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44786420(
+                                              v135,
                                               0LL);
-      if ( !*(_QWORD *)&v78->fields.m_CachedPtr )
+      if ( !*(_QWORD *)&v57->fields.m_CachedPtr )
         goto LABEL_132;
-      v95 = (int)LeaderInfo;
+      v74 = (int)LeaderInfo;
       LeaderInfo = (SupportSelectObject_o *)UserServantEntity__getRarity(
-                                              *(UserServantEntity_o **)&v78->fields.m_CachedPtr,
+                                              *(UserServantEntity_o **)&v57->fields.m_CachedPtr,
                                               0LL);
-      v96 = (char *)v75[1].monitor;
-      if ( !v96 )
+      v75 = (char *)v56[1].monitor;
+      if ( !v75 )
         goto LABEL_132;
-      v97 = (int)LeaderInfo;
-      v98 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44162576(
-              *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)(v96 + 56),
+      v76 = (int)LeaderInfo;
+      v77 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44786420(
+              *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)(v75 + 56),
               0LL);
-      LeaderInfo = (SupportSelectObject_o *)v153;
-      if ( !v153 )
+      LeaderInfo = (SupportSelectObject_o *)v120;
+      if ( !v120 )
         goto LABEL_132;
       IsRarityRestriction = PartyOrganizationUtility__IsRarityRestriction(
-                              v153,
-                              &v163,
+                              v120,
+                              &v130,
                               actMaxRarity,
-                              v95,
-                              v97,
-                              v98,
+                              v74,
+                              v76,
+                              v77,
                               -1,
                               0LL);
     }
-    LeaderInfo = (SupportSelectObject_o *)v156;
+    LeaderInfo = (SupportSelectObject_o *)v123;
   }
   else
   {
@@ -956,227 +920,224 @@ LABEL_38:
   }
   if ( (((unsigned int)LeaderInfo | IsRarityRestriction) & 1) != 0 )
   {
-    v100 = (int)LeaderInfo;
-    v101 = (System_Text_StringBuilder_o *)sub_B0D974(System_Text_StringBuilder_TypeInfo, v76, v77);
-    System_Text_StringBuilder___ctor(v101, 0LL);
-    v104 = (System_Text_StringBuilder_o *)sub_B0D974(System_Text_StringBuilder_TypeInfo, v102, v103);
-    System_Text_StringBuilder___ctor(v104, 0LL);
-    v107 = (System_Text_StringBuilder_o *)sub_B0D974(System_Text_StringBuilder_TypeInfo, v105, v106);
-    System_Text_StringBuilder___ctor(v107, 0LL);
+    v79 = (int)LeaderInfo;
+    v80 = (System_Text_StringBuilder_o *)sub_B52A54(System_Text_StringBuilder_TypeInfo);
+    System_Text_StringBuilder___ctor(v80, 0LL);
+    v81 = (System_Text_StringBuilder_o *)sub_B52A54(System_Text_StringBuilder_TypeInfo);
+    System_Text_StringBuilder___ctor(v81, 0LL);
+    v82 = (System_Text_StringBuilder_o *)sub_B52A54(System_Text_StringBuilder_TypeInfo);
+    System_Text_StringBuilder___ctor(v82, 0LL);
     *(_QWORD *)maxLength = 0LL;
-    v157 = v100;
-    v152 = v107;
-    v154 = v104;
-    if ( (v100 & 1) != 0 )
+    v124 = v79;
+    v119 = v82;
+    v121 = v81;
+    if ( (v79 & 1) != 0 )
     {
-      LeaderInfo = (SupportSelectObject_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      LeaderInfo = (SupportSelectObject_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !LeaderInfo )
         goto LABEL_132;
       LeaderInfo = (SupportSelectObject_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                               (DataManager_o *)LeaderInfo,
-                                              (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                              (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_ServantMaster___);
       if ( !LeaderInfo )
         goto LABEL_132;
       Entity = (ServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                     (DataMasterBase_WarMaster__WarEntity__int__o *)LeaderInfo,
-                                    v75[2].fields.m_CachedPtr,
-                                    (const MethodInfo_2669BD4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                    v56[2].fields.m_CachedPtr,
+                                    (const MethodInfo_23E22D8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
       if ( (BYTE3(SingletonTemplate_PartyOrganizationUtility__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !SingletonTemplate_PartyOrganizationUtility__TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(SingletonTemplate_PartyOrganizationUtility__TypeInfo);
       }
-      LeaderInfo = (SupportSelectObject_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2A713E8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-      v109 = *(_QWORD *)&v75->fields.m_CachedPtr;
-      if ( !v109 )
+      LeaderInfo = (SupportSelectObject_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2B76134 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      v84 = *(_QWORD *)&v56->fields.m_CachedPtr;
+      if ( !v84 )
         goto LABEL_132;
-      v110 = (PartyOrganizationUtility_o *)LeaderInfo;
-      v111 = *(_QWORD *)(v109 + 96);
-      v112 = *(_QWORD *)(v109 + 104);
+      v85 = (PartyOrganizationUtility_o *)LeaderInfo;
+      v86 = *(_QWORD *)(v84 + 96);
+      v87 = *(_QWORD *)(v84 + 104);
       if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       }
-      *(_QWORD *)&v169.fields.currentCryptoKey = v111;
-      *(_QWORD *)&v169.fields.fakeValue = v112;
-      LeaderInfo = (SupportSelectObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44162576(
-                                              v169,
+      *(_QWORD *)&v136.fields.currentCryptoKey = v86;
+      *(_QWORD *)&v136.fields.fakeValue = v87;
+      LeaderInfo = (SupportSelectObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44786420(
+                                              v136,
                                               0LL);
       if ( !Entity )
         goto LABEL_132;
       LeaderInfo = (SupportSelectObject_o *)ServantEntity__getName(Entity, (int32_t)LeaderInfo, -1, 0LL);
-      if ( !*(_QWORD *)&v75->fields.m_CachedPtr )
+      if ( !*(_QWORD *)&v56->fields.m_CachedPtr )
         goto LABEL_132;
-      v113 = (System_String_o *)LeaderInfo;
+      v88 = (System_String_o *)LeaderInfo;
       LeaderInfo = (SupportSelectObject_o *)UserServantEntity__getRarity(
-                                              *(UserServantEntity_o **)&v75->fields.m_CachedPtr,
+                                              *(UserServantEntity_o **)&v56->fields.m_CachedPtr,
                                               0LL);
-      if ( !v78[1].monitor )
+      if ( !v57[1].monitor )
         goto LABEL_132;
-      v114 = (int)LeaderInfo;
-      LeaderInfo = (SupportSelectObject_o *)EquipTargetInfo__GetSvtName((EquipTargetInfo_o *)v78[1].monitor, 0LL);
-      if ( !v110 )
+      v89 = (int)LeaderInfo;
+      LeaderInfo = (SupportSelectObject_o *)EquipTargetInfo__GetSvtName((EquipTargetInfo_o *)v57[1].monitor, 0LL);
+      if ( !v85 )
         goto LABEL_132;
       LeaderInfo = (SupportSelectObject_o *)PartyOrganizationUtility__GetRarityInvalidMessage(
-                                              v110,
+                                              v85,
                                               &maxLength[1],
-                                              v113,
-                                              v114,
+                                              v88,
+                                              v89,
                                               (System_String_o *)LeaderInfo,
                                               skillName,
                                               actMaxRarity[1],
                                               0LL);
-      v104 = v154;
-      if ( !v154 )
+      v81 = v121;
+      if ( !v121 )
         goto LABEL_132;
-      System_Text_StringBuilder__Append_42155400(v154, (System_String_o *)LeaderInfo, 0LL);
-      v107 = v152;
+      System_Text_StringBuilder__Append_42994048(v121, (System_String_o *)LeaderInfo, 0LL);
+      v82 = v119;
     }
     if ( IsRarityRestriction )
     {
-      LeaderInfo = (SupportSelectObject_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      LeaderInfo = (SupportSelectObject_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !LeaderInfo )
         goto LABEL_132;
       LeaderInfo = (SupportSelectObject_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                               (DataManager_o *)LeaderInfo,
-                                              (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                              (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_ServantMaster___);
       if ( !LeaderInfo )
         goto LABEL_132;
-      v115 = (ServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                                  (DataMasterBase_WarMaster__WarEntity__int__o *)LeaderInfo,
-                                  v78[2].fields.m_CachedPtr,
-                                  (const MethodInfo_2669BD4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+      v90 = (ServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
+                                 (DataMasterBase_WarMaster__WarEntity__int__o *)LeaderInfo,
+                                 v57[2].fields.m_CachedPtr,
+                                 (const MethodInfo_23E22D8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
       if ( (BYTE3(SingletonTemplate_PartyOrganizationUtility__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !SingletonTemplate_PartyOrganizationUtility__TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(SingletonTemplate_PartyOrganizationUtility__TypeInfo);
       }
-      LeaderInfo = (SupportSelectObject_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2A713E8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-      v116 = *(_QWORD *)&v78->fields.m_CachedPtr;
-      if ( !v116 )
+      LeaderInfo = (SupportSelectObject_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2B76134 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      v91 = *(_QWORD *)&v57->fields.m_CachedPtr;
+      if ( !v91 )
         goto LABEL_132;
-      v117 = (PartyOrganizationUtility_o *)LeaderInfo;
-      v118 = *(_QWORD *)(v116 + 96);
-      v119 = *(_QWORD *)(v116 + 104);
+      v92 = (PartyOrganizationUtility_o *)LeaderInfo;
+      v93 = *(_QWORD *)(v91 + 96);
+      v94 = *(_QWORD *)(v91 + 104);
       if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       }
-      *(_QWORD *)&v170.fields.currentCryptoKey = v118;
-      *(_QWORD *)&v170.fields.fakeValue = v119;
-      LeaderInfo = (SupportSelectObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44162576(
-                                              v170,
+      *(_QWORD *)&v137.fields.currentCryptoKey = v93;
+      *(_QWORD *)&v137.fields.fakeValue = v94;
+      LeaderInfo = (SupportSelectObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44786420(
+                                              v137,
                                               0LL);
-      if ( !v115 )
+      if ( !v90 )
         goto LABEL_132;
-      LeaderInfo = (SupportSelectObject_o *)ServantEntity__getName(v115, (int32_t)LeaderInfo, -1, 0LL);
-      if ( !*(_QWORD *)&v78->fields.m_CachedPtr )
+      LeaderInfo = (SupportSelectObject_o *)ServantEntity__getName(v90, (int32_t)LeaderInfo, -1, 0LL);
+      if ( !*(_QWORD *)&v57->fields.m_CachedPtr )
         goto LABEL_132;
-      v120 = (System_String_o *)LeaderInfo;
+      v95 = (System_String_o *)LeaderInfo;
       LeaderInfo = (SupportSelectObject_o *)UserServantEntity__getRarity(
-                                              *(UserServantEntity_o **)&v78->fields.m_CachedPtr,
+                                              *(UserServantEntity_o **)&v57->fields.m_CachedPtr,
                                               0LL);
-      v121 = (EquipTargetInfo_o *)v75[1].monitor;
-      if ( !v121 )
+      v96 = (EquipTargetInfo_o *)v56[1].monitor;
+      if ( !v96 )
         goto LABEL_132;
-      v122 = (int)LeaderInfo;
-      LeaderInfo = (SupportSelectObject_o *)EquipTargetInfo__GetSvtName(v121, 0LL);
-      if ( !v117 )
+      v97 = (int)LeaderInfo;
+      LeaderInfo = (SupportSelectObject_o *)EquipTargetInfo__GetSvtName(v96, 0LL);
+      if ( !v92 )
         goto LABEL_132;
       LeaderInfo = (SupportSelectObject_o *)PartyOrganizationUtility__GetRarityInvalidMessage(
-                                              v117,
+                                              v92,
                                               maxLength,
-                                              v120,
-                                              v122,
+                                              v95,
+                                              v97,
                                               (System_String_o *)LeaderInfo,
-                                              v163,
+                                              v130,
                                               actMaxRarity[0],
                                               0LL);
-      v107 = v152;
-      if ( !v152 )
+      v82 = v119;
+      if ( !v119 )
         goto LABEL_132;
-      System_Text_StringBuilder__Append_42155400(v152, (System_String_o *)LeaderInfo, 0LL);
-      v104 = v154;
+      System_Text_StringBuilder__Append_42994048(v119, (System_String_o *)LeaderInfo, 0LL);
+      v81 = v121;
     }
-    v124 = maxLength[0];
-    v123 = maxLength[1];
+    v99 = maxLength[0];
+    v98 = maxLength[1];
     if ( (BYTE3(System_Math_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v125 = System_Math__Max_44559528(v123, v124, 0LL);
+    v100 = System_Math__Max_45036604(v98, v99, 0LL);
     if ( (BYTE3(SingletonTemplate_PartyOrganizationUtility__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !SingletonTemplate_PartyOrganizationUtility__TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(SingletonTemplate_PartyOrganizationUtility__TypeInfo);
     }
-    LeaderInfo = (SupportSelectObject_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2A713E8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    LeaderInfo = (SupportSelectObject_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2B76134 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
     if ( LeaderInfo )
     {
       PartyOrganizationUtility__DecisionFontSize(
         (PartyOrganizationUtility_o *)LeaderInfo,
         &maxFontSize,
         &minFontSize,
-        v125,
+        v100,
         0LL);
-      if ( *(_QWORD *)v158 )
+      if ( *(_QWORD *)v125 )
       {
-        if ( *v72 && v101 )
+        if ( *v55 && v80 )
         {
-          if ( *(_DWORD *)(*(_QWORD *)v158 + 52LL) >= (*v72)->fields.classPos )
+          if ( *(_DWORD *)(*(_QWORD *)v125 + 52LL) >= (*v55)->fields.classPos )
           {
-            System_Text_StringBuilder__Append_42159160(v101, (Il2CppObject *)v107, 0LL);
-            v126 = v101;
-            v127 = (Il2CppObject *)v104;
+            System_Text_StringBuilder__Append_42997808(v80, (Il2CppObject *)v82, 0LL);
+            v101 = v80;
+            v102 = (Il2CppObject *)v81;
           }
           else
           {
-            System_Text_StringBuilder__Append_42159160(v101, (Il2CppObject *)v104, 0LL);
-            v126 = v101;
-            v127 = (Il2CppObject *)v107;
+            System_Text_StringBuilder__Append_42997808(v80, (Il2CppObject *)v81, 0LL);
+            v101 = v80;
+            v102 = (Il2CppObject *)v82;
           }
-          System_Text_StringBuilder__Append_42159160(v126, v127, 0LL);
-          v141 = (v157 & IsRarityRestriction & 1) != 0 ? -182.5 : -162.5;
-          windowHeight = (v157 & IsRarityRestriction & 1) != 0 ? 520 : 480;
-          v143 = (v157 & IsRarityRestriction & 1) != 0 ? 40.0 : 30.0;
+          System_Text_StringBuilder__Append_42997808(v101, v102, 0LL);
+          v110 = (v124 & IsRarityRestriction & 1) != 0 ? -182.5 : -162.5;
+          windowHeight = (v124 & IsRarityRestriction & 1) != 0 ? 520 : 480;
+          v112 = (v124 & IsRarityRestriction & 1) != 0 ? 40.0 : 30.0;
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !LocalizationManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v144 = LocalizationManager__Get((System_String_o *)StringLiteral_10232/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_CONFIRM"*/, 0LL);
-          System_Text_StringBuilder__Append_42155400(v101, v144, 0LL);
-          Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-          v146 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v101->klass->vtable._3_ToString.method)(
-                                      v101,
-                                      v101->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
-          v147 = LocalizationManager__Get((System_String_o *)StringLiteral_3280/*"COMMON_CONFIRM_YES"*/, 0LL);
-          v148 = LocalizationManager__Get((System_String_o *)StringLiteral_3277/*"COMMON_CONFIRM_NO"*/, 0LL);
-          v151 = (CommonConfirmDialog_ClickDelegate_o *)sub_B0D974(
-                                                          CommonConfirmDialog_ClickDelegate_TypeInfo,
-                                                          v149,
-                                                          v150);
+          v113 = LocalizationManager__Get((System_String_o *)StringLiteral_10272/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_CONFIRM"*/, 0LL);
+          System_Text_StringBuilder__Append_42994048(v80, v113, 0LL);
+          Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          v115 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v80->klass->vtable._3_ToString.method)(
+                                      v80,
+                                      v80->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
+          v116 = LocalizationManager__Get((System_String_o *)StringLiteral_3300/*"COMMON_CONFIRM_YES"*/, 0LL);
+          v117 = LocalizationManager__Get((System_String_o *)StringLiteral_3297/*"COMMON_CONFIRM_NO"*/, 0LL);
+          v118 = (CommonConfirmDialog_ClickDelegate_o *)sub_B52A54(CommonConfirmDialog_ClickDelegate_TypeInfo);
           CommonConfirmDialog_ClickDelegate___ctor(
-            v151,
-            (Il2CppObject *)v21,
+            v118,
+            (Il2CppObject *)v3,
             Method_SupportSelectItemDrawDrop___c__DisplayClass13_0__OnFinishedSwapMove_b__0__,
             0LL);
           if ( Instance )
           {
-            CommonUI__OpenConfirmDialog_17016836(
+            CommonUI__OpenConfirmDialog_18158088(
               Instance,
               (System_String_o *)StringLiteral_1/*""*/,
-              v146,
-              v147,
-              v148,
-              v151,
+              v115,
+              v116,
+              v117,
+              v118,
               maxFontSize,
               minFontSize,
-              v143,
+              v112,
               728,
               2,
               windowHeight,
-              v141,
+              v110,
               0,
               0,
               240,
@@ -1188,48 +1149,48 @@ LABEL_38:
       }
     }
 LABEL_132:
-    sub_B0D97C(LeaderInfo);
+    sub_B52A5C(LeaderInfo, v5);
   }
-  if ( !*(_QWORD *)v31 )
+  if ( !*(_QWORD *)v14 )
     goto LABEL_132;
-  LeaderInfo = *(SupportSelectObject_o **)(*(_QWORD *)v31 + 112LL);
+  LeaderInfo = *(SupportSelectObject_o **)(*(_QWORD *)v14 + 112LL);
   if ( !LeaderInfo )
     goto LABEL_132;
-  SupportSelectObject__ShowEquip(LeaderInfo, v76);
-  if ( !*v39 )
+  SupportSelectObject__ShowEquip(LeaderInfo, v5);
+  if ( !*v22 )
     goto LABEL_132;
-  LeaderInfo = *(SupportSelectObject_o **)&(*v39)[4].fields.m_CachedPtr;
+  LeaderInfo = *(SupportSelectObject_o **)&(*v22)[4].fields.m_CachedPtr;
   if ( !LeaderInfo )
     goto LABEL_132;
-  SupportSelectObject__ShowEquip(LeaderInfo, v128);
-  LeaderInfo = *(SupportSelectObject_o **)v31;
-  if ( !*(_QWORD *)v31 )
+  SupportSelectObject__ShowEquip(LeaderInfo, v5);
+  LeaderInfo = *(SupportSelectObject_o **)v14;
+  if ( !*(_QWORD *)v14 )
     goto LABEL_132;
-  SupportSelectListViewDropObject__DestroyDragObj((SupportSelectListViewDropObject_o *)LeaderInfo, v129);
-  LeaderInfo = (SupportSelectObject_o *)*v39;
-  if ( !*v39 )
+  SupportSelectListViewDropObject__DestroyDragObj((SupportSelectListViewDropObject_o *)LeaderInfo, v5);
+  LeaderInfo = (SupportSelectObject_o *)*v22;
+  if ( !*v22 )
     goto LABEL_132;
-  SupportSelectListViewDropObject__DestroyDragObj((SupportSelectListViewDropObject_o *)LeaderInfo, v130);
+  SupportSelectListViewDropObject__DestroyDragObj((SupportSelectListViewDropObject_o *)LeaderInfo, v5);
   UIDragDropListViewItem__OnDragDropRelease((UIDragDropListViewItem_o *)this, 0LL, 0LL);
-  LeaderInfo = *(SupportSelectObject_o **)v158;
-  if ( !*(_QWORD *)v158 )
+  LeaderInfo = *(SupportSelectObject_o **)v125;
+  if ( !*(_QWORD *)v125 )
     goto LABEL_132;
-  v132 = *(_QWORD *)(v21 + 40);
+  v103 = *(_QWORD *)(v3 + 40);
   classPos = LeaderInfo->fields.classPos;
-  LeaderInfo = (SupportSelectObject_o *)SupportSelectObject__GetLeaderInfo(LeaderInfo, v131);
-  v135 = *v72;
-  if ( !*v72 )
+  LeaderInfo = (SupportSelectObject_o *)SupportSelectObject__GetLeaderInfo(LeaderInfo, v5);
+  v105 = *v55;
+  if ( !*v55 )
     goto LABEL_132;
-  v136 = v135->fields.classPos;
-  v137 = (UserServantLeaderEntity_o *)LeaderInfo;
-  LeaderInfo = (SupportSelectObject_o *)SupportSelectObject__GetLeaderInfo(v135, v134);
-  if ( !v132 )
+  v106 = v105->fields.classPos;
+  v107 = (UserServantLeaderEntity_o *)LeaderInfo;
+  LeaderInfo = (SupportSelectObject_o *)SupportSelectObject__GetLeaderInfo(v105, v5);
+  if ( !v103 )
     goto LABEL_132;
-  v139 = (UserServantLeaderEntity_o *)LeaderInfo;
-  v140 = *(SupportSelectMenu_DragSwapCallbackFunc_o **)(v132 + 352);
-  if ( v140 )
-    SupportSelectMenu_DragSwapCallbackFunc__Invoke(v140, 1, classPos, v137, v136, v139, 0LL);
-  SupportSelectItemDrawDrop__OnFinishDragAndDrop(this, v138);
+  v108 = (UserServantLeaderEntity_o *)LeaderInfo;
+  v109 = *(SupportSelectMenu_DragSwapCallbackFunc_o **)(v103 + 352);
+  if ( v109 )
+    SupportSelectMenu_DragSwapCallbackFunc__Invoke(v109, 1, classPos, v107, v106, v108, 0LL);
+  SupportSelectItemDrawDrop__OnFinishDragAndDrop(this, v5);
 }
 
 
@@ -1237,47 +1198,45 @@ void __fastcall SupportSelectItemDrawDrop__SetBaseTransform(
         SupportSelectItemDrawDrop_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
   UnityEngine_Object_o *listViewObject; // x20
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
+  System_String_array **v4; // x2
+  System_String_array **v5; // x3
+  System_Boolean_array **v6; // x4
+  System_Int32_array **v7; // x5
+  System_Int32_array *v8; // x6
+  System_Int32_array *v9; // x7
   struct ListViewObject_o *Component_WebViewObject; // x1
+  __int64 v11; // x1
   UnityEngine_Component_o *mListViewObject; // x0
-  WebViewObject_o *v15; // x0
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
+  WebViewObject_o *v13; // x0
+  System_String_array **v14; // x2
+  System_String_array **v15; // x3
+  System_Boolean_array **v16; // x4
+  System_Int32_array **v17; // x5
+  System_Int32_array *v18; // x6
+  System_Int32_array *v19; // x7
   struct UnityEngine_Transform_o *transform; // x0
-  System_String_array **v23; // x2
-  System_String_array **v24; // x3
-  System_Boolean_array **v25; // x4
-  System_Int32_array **v26; // x5
-  System_Int32_array *v27; // x6
-  System_Int32_array *v28; // x7
-  struct UnityEngine_Collider_o *v29; // x1
-  System_String_array **v30; // x2
-  System_String_array **v31; // x3
-  System_Boolean_array **v32; // x4
-  System_Int32_array **v33; // x5
-  System_Int32_array *v34; // x6
-  System_Int32_array *v35; // x7
+  System_String_array **v21; // x2
+  System_String_array **v22; // x3
+  System_Boolean_array **v23; // x4
+  System_Int32_array **v24; // x5
+  System_Int32_array *v25; // x6
+  System_Int32_array *v26; // x7
+  struct UnityEngine_Collider_o *v27; // x1
+  System_String_array **v28; // x2
+  System_String_array **v29; // x3
+  System_Boolean_array **v30; // x4
+  System_Int32_array **v31; // x5
+  System_Int32_array *v32; // x6
+  System_Int32_array *v33; // x7
 
-  if ( (byte_4217096 & 1) == 0 )
+  if ( (byte_42B298C & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_Collider___, method);
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_ListViewObject___, v3);
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_UIDragScrollView___, v4);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v5);
-    byte_4217096 = 1;
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_ListViewObject___);
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_UIDragScrollView___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B298C = 1;
   }
   listViewObject = (UnityEngine_Object_o *)this->fields.listViewObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1290,60 +1249,60 @@ void __fastcall SupportSelectItemDrawDrop__SetBaseTransform(
   else
     Component_WebViewObject = (struct ListViewObject_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                            (UnityEngine_Component_o *)this,
-                                                           (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_ListViewObject___);
+                                                           (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_ListViewObject___);
   this->fields.mListViewObject = Component_WebViewObject;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.mListViewObject,
     (System_Int32_array **)Component_WebViewObject,
+    v4,
+    v5,
+    v6,
     v7,
     v8,
-    v9,
-    v10,
-    v11,
-    v12);
+    v9);
   mListViewObject = (UnityEngine_Component_o *)this->fields.mListViewObject;
   if ( !mListViewObject
-    || (v15 = UnityEngine_Component__GetComponent_WebViewObject_(
+    || (v13 = UnityEngine_Component__GetComponent_WebViewObject_(
                 mListViewObject,
-                (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_UIDragScrollView___),
-        this->fields.mDragScrollView = (struct UIDragScrollView_o *)v15,
-        sub_B0D840(
+                (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_UIDragScrollView___),
+        this->fields.mDragScrollView = (struct UIDragScrollView_o *)v13,
+        sub_B52920(
           (BattleServantConfConponent_o *)&this->fields.mDragScrollView,
-          (System_Int32_array **)v15,
+          (System_Int32_array **)v13,
+          v14,
+          v15,
           v16,
           v17,
           v18,
-          v19,
-          v20,
-          v21),
+          v19),
         (mListViewObject = (UnityEngine_Component_o *)this->fields.mListViewObject) == 0LL) )
   {
-    sub_B0D97C(mListViewObject);
+    sub_B52A5C(mListViewObject, v11);
   }
   transform = UnityEngine_Component__get_transform(mListViewObject, 0LL);
   this->fields.mTrans = transform;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.mTrans,
     (System_Int32_array **)transform,
+    v21,
+    v22,
     v23,
     v24,
     v25,
-    v26,
-    v27,
-    v28);
-  v29 = (struct UnityEngine_Collider_o *)UnityEngine_Component__GetComponent_WebViewObject_(
+    v26);
+  v27 = (struct UnityEngine_Collider_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                            (UnityEngine_Component_o *)this,
-                                           (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_Collider___);
-  this->fields.mCollider = v29;
-  sub_B0D840(
+                                           (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_Collider___);
+  this->fields.mCollider = v27;
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.mCollider,
-    (System_Int32_array **)v29,
+    (System_Int32_array **)v27,
+    v28,
+    v29,
     v30,
     v31,
     v32,
-    v33,
-    v34,
-    v35);
+    v33);
 }
 
 
@@ -1351,10 +1310,10 @@ void __fastcall SupportSelectItemDrawDrop__Update(SupportSelectItemDrawDrop_o *t
 {
   UnityEngine_GameObject_o *surface; // x20
 
-  if ( (byte_4217099 & 1) == 0 )
+  if ( (byte_42B298F & 1) == 0 )
   {
-    sub_B0D8A4(&UICamera_TypeInfo, method);
-    byte_4217099 = 1;
+    sub_B52984(&UICamera_TypeInfo);
+    byte_42B298F = 1;
   }
   if ( this->fields.isDrag )
   {
@@ -1400,10 +1359,10 @@ void __fastcall SupportSelectItemDrawDrop___c__DisplayClass13_0___OnFinishedSwap
   int32_t classPos; // w23
   UserServantLeaderEntity_o *v10; // x22
 
-  if ( (byte_4211765 & 1) == 0 )
+  if ( (byte_42ADDAC & 1) == 0 )
   {
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
-    byte_4211765 = 1;
+    sub_B52984(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_42ADDAC = 1;
   }
   from = this->fields.from;
   if ( !from )
@@ -1454,14 +1413,14 @@ void __fastcall SupportSelectItemDrawDrop___c__DisplayClass13_0___OnFinishedSwap
       }
     }
 LABEL_16:
-    sub_B0D97C(from);
+    sub_B52A5C(from, isDecide);
   }
 LABEL_13:
   from = this->fields.__4__this;
   if ( !from )
     goto LABEL_16;
   SupportSelectItemDrawDrop__OnFinishDragAndDrop((SupportSelectItemDrawDrop_o *)from, 0LL);
-  from = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  from = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !from )
     goto LABEL_16;
   CommonUI__CloseConfirmDialog((CommonUI_o *)from, 0LL);

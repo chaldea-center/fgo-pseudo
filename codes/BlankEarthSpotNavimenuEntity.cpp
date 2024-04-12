@@ -1,13 +1,13 @@
 void __fastcall BlankEarthSpotNavimenuEntity___ctor(BlankEarthSpotNavimenuEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4214BA4 & 1) == 0 )
+  if ( (byte_42AFE9B & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_int___ctor__, method);
-    byte_4214BA4 = 1;
+    sub_B52984(&Method_DataEntityBase_int___ctor__);
+    byte_42AFE9B = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_2669A80 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_23E2184 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -25,10 +25,10 @@ bool __fastcall BlankEarthSpotNavimenuEntity__IsEnable(BlankEarthSpotNavimenuEnt
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4214BA3 & 1) == 0 )
+  if ( (byte_42AFE9A & 1) == 0 )
   {
-    sub_B0D8A4(&CondType_TypeInfo, method);
-    byte_4214BA3 = 1;
+    sub_B52984(&CondType_TypeInfo);
+    byte_42AFE9A = 1;
   }
   condType = this->fields.condType;
   condId = this->fields.condId;

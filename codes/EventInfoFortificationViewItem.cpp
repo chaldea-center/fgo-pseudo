@@ -38,7 +38,7 @@ void __fastcall EventInfoFortificationViewItem__Setup(
   if ( v10 != eventFortificationEntity )
   {
     this->fields.eventFortificationEntity = eventFortificationEntity;
-    sub_B0D840(
+    sub_B52920(
       (BattleServantConfConponent_o *)p_eventFortificationEntity,
       (System_Int32_array **)eventFortificationEntity,
       (System_String_array **)method,
@@ -58,27 +58,26 @@ void __fastcall EventInfoFortificationViewItem__SetupGiftIcon(
         EventFortificationEntity_o *eventFortificationEntity,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
   DataManager_o *Instance; // x0
-  DataManager_o *v8; // x20
+  __int64 v6; // x1
+  DataManager_o *v7; // x20
   UnityEngine_Object_o *itemIcon; // x21
   int32_t *lookup; // x8
-  __int64 v11; // x0
+  __int64 v10; // x0
 
-  if ( (byte_42155B9 & 1) == 0 )
+  if ( (byte_42B0DE4 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMasterData_GiftMaster___, eventFortificationEntity);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v5);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_42155B9 = 1;
+    sub_B52984(&Method_DataManager_GetMasterData_GiftMaster___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_42B0DE4 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_18;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_GiftMaster___);
+                                (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_GiftMaster___);
   if ( !eventFortificationEntity )
     goto LABEL_18;
   if ( !Instance )
@@ -89,12 +88,12 @@ void __fastcall EventInfoFortificationViewItem__SetupGiftIcon(
                                 0LL);
   if ( !Instance )
     goto LABEL_18;
-  v8 = Instance;
+  v7 = Instance;
   if ( !LODWORD(Instance->fields.datalist) )
   {
 LABEL_19:
-    v11 = sub_B0D9A8(Instance);
-    sub_B0D948(v11, 0LL);
+    v10 = sub_B52A88(Instance);
+    sub_B52A28(v10, 0LL);
   }
   if ( Instance->fields.lookup )
   {
@@ -107,9 +106,9 @@ LABEL_19:
     Instance = (DataManager_o *)UnityEngine_Object__op_Inequality(itemIcon, 0LL, 0LL);
     if ( ((unsigned __int8)Instance & 1) != 0 )
     {
-      if ( LODWORD(v8->fields.datalist) )
+      if ( LODWORD(v7->fields.datalist) )
       {
-        lookup = (int32_t *)v8->fields.lookup;
+        lookup = (int32_t *)v7->fields.lookup;
         if ( lookup )
         {
           Instance = (DataManager_o *)this->fields.itemIcon;
@@ -120,7 +119,7 @@ LABEL_19:
           }
         }
 LABEL_18:
-        sub_B0D97C(Instance);
+        sub_B52A5C(Instance, v6);
       }
       goto LABEL_19;
     }
@@ -134,45 +133,43 @@ void __fastcall EventInfoFortificationViewItem__SetupWorkBgColor(
         const MethodInfo *method)
 {
   EventInfoFortificationViewItem_o *v4; // x19
-  __int64 v5; // x1
-  __int64 v6; // x1
-  Il2CppObject *v7; // x21
-  Il2CppObject *v8; // x0
-  System_String_o *v9; // x20
-  System_String_o *v10; // x0
+  Il2CppObject *v5; // x21
+  Il2CppObject *v6; // x0
+  System_String_o *v7; // x20
+  System_String_o *v8; // x0
   int32_t workType; // [xsp+8h] [xbp-38h] BYREF
   int32_t eventId; // [xsp+Ch] [xbp-34h] BYREF
   UnityEngine_Color_o color; // [xsp+10h] [xbp-30h] BYREF
 
   v4 = this;
-  if ( (byte_42155BA & 1) == 0 )
+  if ( (byte_42B0DE5 & 1) == 0 )
   {
-    sub_B0D8A4(&int_TypeInfo, eventFortificationEntity);
-    sub_B0D8A4(&LocalizationManager_TypeInfo, v5);
-    this = (EventInfoFortificationViewItem_o *)sub_B0D8A4(&StringLiteral_6445/*"FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/, v6);
-    byte_42155BA = 1;
+    sub_B52984(&int_TypeInfo);
+    sub_B52984(&LocalizationManager_TypeInfo);
+    this = (EventInfoFortificationViewItem_o *)sub_B52984(&StringLiteral_6471/*"FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/);
+    byte_42B0DE5 = 1;
   }
   *(_QWORD *)&color.fields.r = 0LL;
   *(_QWORD *)&color.fields.b = 0LL;
   if ( !eventFortificationEntity )
     goto LABEL_9;
   eventId = eventFortificationEntity->fields.eventId;
-  v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &eventId);
+  v5 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &eventId);
   workType = eventFortificationEntity->fields.workType;
-  v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &workType);
-  v9 = System_String__Format_43845440((System_String_o *)StringLiteral_6445/*"FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/, v7, v8, 0LL);
+  v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &workType);
+  v7 = System_String__Format_44563852((System_String_o *)StringLiteral_6471/*"FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/, v5, v6, 0LL);
   color = UnityEngine_Color__get_white(0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v10 = LocalizationManager__Get(v9, 0LL);
-  UnityEngine_ColorUtility__TryParseHtmlString(v10, &color, 0LL);
+  v8 = LocalizationManager__Get(v7, 0LL);
+  UnityEngine_ColorUtility__TryParseHtmlString(v8, &color, 0LL);
   this = (EventInfoFortificationViewItem_o *)v4->fields.workBgSprite;
   if ( !this )
 LABEL_9:
-    sub_B0D97C(this);
+    sub_B52A5C(this, eventFortificationEntity);
   UIWidget__set_color((UIWidget_o *)this, color, 0LL);
 }
 
@@ -186,7 +183,7 @@ void __fastcall EventInfoFortificationViewItem__UpdateProgressBar(
 
   gaugeSprite = (UIBasicSprite_o *)this->fields.gaugeSprite;
   if ( !gaugeSprite )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, method);
   UIBasicSprite__set_fillAmount(gaugeSprite, value, 0LL);
 }
 

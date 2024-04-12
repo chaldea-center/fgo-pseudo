@@ -1,56 +1,46 @@
 void __fastcall FieldAliveServantData___ctor(FieldAliveServantData_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v5; // x20
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  __int64 v12; // x1
-  __int64 v13; // x2
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v14; // x20
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x20
+  System_String_array **v4; // x2
+  System_String_array **v5; // x3
+  System_Boolean_array **v6; // x4
+  System_Int32_array **v7; // x5
+  System_Int32_array *v8; // x6
+  System_Int32_array *v9; // x7
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v10; // x20
+  System_String_array **v11; // x2
+  System_String_array **v12; // x3
+  System_Boolean_array **v13; // x4
+  System_Int32_array **v14; // x5
+  System_Int32_array *v15; // x6
+  System_Int32_array *v16; // x7
 
-  if ( (byte_4213217 & 1) == 0 )
+  if ( (byte_42AE993 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_BattleServantData___ctor__, method);
-    sub_B0D8A4(&System_Collections_Generic_List_BattleServantData__TypeInfo, v4);
-    byte_4213217 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    sub_B52984(&System_Collections_Generic_List_BattleServantData__TypeInfo);
+    byte_42AE993 = 1;
   }
-  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
-                                                                                                 System_Collections_Generic_List_BattleServantData__TypeInfo,
-                                                                                                 method,
-                                                                                                 v2);
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v5,
-    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
-  this->fields.playerIdList = (struct System_Collections_Generic_List_BattleServantData__o *)v5;
-  sub_B0D840((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v5, v6, v7, v8, v9, v10, v11);
-  v14 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
-                                                                                                  System_Collections_Generic_List_BattleServantData__TypeInfo,
-                                                                                                  v12,
-                                                                                                  v13);
+    v3,
+    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+  this->fields.playerIdList = (struct System_Collections_Generic_List_BattleServantData__o *)v3;
+  sub_B52920((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v14,
-    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
-  this->fields.enemyIdList = (struct System_Collections_Generic_List_BattleServantData__o *)v14;
-  sub_B0D840(
+    v10,
+    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+  this->fields.enemyIdList = (struct System_Collections_Generic_List_BattleServantData__o *)v10;
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.enemyIdList,
-    (System_Int32_array **)v14,
+    (System_Int32_array **)v10,
+    v11,
+    v12,
+    v13,
+    v14,
     v15,
-    v16,
-    v17,
-    v18,
-    v19,
-    v20);
+    v16);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -65,10 +55,10 @@ void __fastcall FieldAliveServantData__addSvtData(
   __int64 v7; // x8
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v8; // x0
 
-  if ( (byte_4213216 & 1) == 0 )
+  if ( (byte_42AE992 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_BattleServantData__Add__, isEnemySide);
-    byte_4213216 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_BattleServantData__Add__);
+    byte_42AE992 = 1;
   }
   v7 = 16LL;
   if ( isEnemySide )
@@ -76,11 +66,11 @@ void __fastcall FieldAliveServantData__addSvtData(
   v8 = *(System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o **)((char *)&this->klass
                                                                                                 + v7);
   if ( !v8 )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, isEnemySide);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     v8,
     (EventMissionProgressRequest_Argument_ProgressData_o *)svtData,
-    (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_BattleServantData__Add__);
+    (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_BattleServantData__Add__);
 }
 
 

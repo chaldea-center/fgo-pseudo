@@ -18,110 +18,105 @@ SubmarineQuestSaveInfo_o *__fastcall SubmarineQuestSaveInfo__CreateBySaveValue(
         System_String_o *value,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   _BOOL8 IsNullOrEmpty; // x0
-  System_Char_array *v7; // x0
-  System_String_array *v8; // x0
-  System_String_array *v9; // x20
-  __int64 v10; // x0
-  int v11; // w19
-  __int64 v12; // x0
-  int v13; // w21
-  System_String_o *v14; // x22
-  _BOOL8 v15; // x0
-  bool v16; // w22
-  bool v17; // w20
-  __int64 v18; // x1
-  __int64 v19; // x2
-  __int64 v20; // x23
+  System_Char_array *v5; // x0
+  System_String_array *v6; // x0
+  __int64 v7; // x1
+  System_String_array *v8; // x20
+  __int64 v9; // x0
+  int v10; // w19
+  __int64 v11; // x0
+  int v12; // w21
+  System_String_o *v13; // x22
+  _BOOL8 v14; // x0
+  bool v15; // w22
+  bool v16; // w20
+  __int64 v17; // x23
+  __int64 v18; // x0
+  __int64 v19; // x0
+  __int64 v20; // x0
   __int64 v21; // x0
   __int64 v22; // x0
-  __int64 v23; // x0
-  __int64 v24; // x0
-  __int64 v25; // x0
 
-  if ( (byte_421365C & 1) == 0 )
+  if ( (byte_42AEE78 & 1) == 0 )
   {
-    sub_B0D8A4(&bool_TypeInfo, method);
-    sub_B0D8A4(&char___TypeInfo, v3);
-    sub_B0D8A4(&SubmarineQuestSaveInfo_TypeInfo, v4);
-    byte_421365C = 1;
+    sub_B52984(&bool_TypeInfo);
+    sub_B52984(&char___TypeInfo);
+    sub_B52984(&SubmarineQuestSaveInfo_TypeInfo);
+    byte_42AEE78 = 1;
   }
   IsNullOrEmpty = System_String__IsNullOrEmpty(value, 0LL);
   if ( IsNullOrEmpty )
     return SubmarineQuestSaveInfo__CreateDefault((const MethodInfo *)IsNullOrEmpty);
-  v7 = (System_Char_array *)sub_B0D8BC(char___TypeInfo, 1LL);
-  if ( !v7 )
-    sub_B0D97C(0LL);
-  if ( !v7->max_length )
+  v5 = (System_Char_array *)sub_B5299C(char___TypeInfo, 1LL);
+  if ( !v5 )
+    sub_B52A5C(0LL, 0LL);
+  if ( !v5->max_length )
   {
-    v21 = sub_B0D9A8(v7);
-    sub_B0D948(v21, 0LL);
+    v18 = sub_B52A88(v5);
+    sub_B52A28(v18, 0LL);
   }
-  v7->m_Items[2] = 44;
+  v5->m_Items[2] = 44;
   if ( !value )
-    sub_B0D97C(v7);
-  v8 = System_String__Split(value, v7, 0LL);
-  v9 = v8;
-  if ( !v8 )
-    sub_B0D97C(0LL);
-  if ( !v8->max_length )
+    sub_B52A5C(v5, v5);
+  v6 = System_String__Split(value, v5, 0LL);
+  v8 = v6;
+  if ( !v6 )
+    sub_B52A5C(0LL, v7);
+  if ( !v6->max_length )
   {
-    v22 = sub_B0D9A8(v8);
-    sub_B0D948(v22, 0LL);
+    v19 = sub_B52A88(v6);
+    sub_B52A28(v19, 0LL);
   }
-  v10 = System_Int32__Parse(v8->m_Items[0], 0LL);
-  if ( v9->max_length <= 1 )
+  v9 = System_Int32__Parse(v6->m_Items[0], 0LL);
+  if ( v8->max_length <= 1 )
   {
-    v23 = sub_B0D9A8(v10);
-    sub_B0D948(v23, 0LL);
+    v20 = sub_B52A88(v9);
+    sub_B52A28(v20, 0LL);
   }
-  v11 = v10;
-  v12 = System_Int32__Parse(v9->m_Items[1], 0LL);
-  if ( v9->max_length <= 2 )
+  v10 = v9;
+  v11 = System_Int32__Parse(v8->m_Items[1], 0LL);
+  if ( v8->max_length <= 2 )
   {
-    v24 = sub_B0D9A8(v12);
-    sub_B0D948(v24, 0LL);
+    v21 = sub_B52A88(v11);
+    sub_B52A28(v21, 0LL);
   }
-  v13 = v12;
-  v14 = v9->m_Items[2];
+  v12 = v11;
+  v13 = v8->m_Items[2];
   if ( (BYTE3(bool_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !bool_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(bool_TypeInfo);
-  v15 = System_Boolean__Parse(v14, 0LL);
-  if ( v9->max_length <= 3 )
+  v14 = System_Boolean__Parse(v13, 0LL);
+  if ( v8->max_length <= 3 )
   {
-    v25 = sub_B0D9A8(v15);
-    sub_B0D948(v25, 0LL);
+    v22 = sub_B52A88(v14);
+    sub_B52A28(v22, 0LL);
   }
-  v16 = v15;
-  v17 = System_Boolean__Parse(v9->m_Items[3], 0LL);
-  v20 = sub_B0D974(SubmarineQuestSaveInfo_TypeInfo, v18, v19);
-  System_Object___ctor((Il2CppObject *)v20, 0LL);
-  *(_DWORD *)(v20 + 16) = v11;
-  *(_DWORD *)(v20 + 20) = v13;
-  *(_BYTE *)(v20 + 24) = v16;
-  *(_BYTE *)(v20 + 25) = v17;
-  return (SubmarineQuestSaveInfo_o *)v20;
+  v15 = v14;
+  v16 = System_Boolean__Parse(v8->m_Items[3], 0LL);
+  v17 = sub_B52A54(SubmarineQuestSaveInfo_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v17, 0LL);
+  *(_DWORD *)(v17 + 16) = v10;
+  *(_DWORD *)(v17 + 20) = v12;
+  *(_BYTE *)(v17 + 24) = v15;
+  *(_BYTE *)(v17 + 25) = v16;
+  return (SubmarineQuestSaveInfo_o *)v17;
 }
 
 
 SubmarineQuestSaveInfo_o *__fastcall SubmarineQuestSaveInfo__CreateDefault(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x2
-  __int64 v3; // x19
+  __int64 v1; // x19
 
-  if ( (byte_421365B & 1) == 0 )
+  if ( (byte_42AEE77 & 1) == 0 )
   {
-    sub_B0D8A4(&SubmarineQuestSaveInfo_TypeInfo, v1);
-    byte_421365B = 1;
+    sub_B52984(&SubmarineQuestSaveInfo_TypeInfo);
+    byte_42AEE77 = 1;
   }
-  v3 = sub_B0D974(SubmarineQuestSaveInfo_TypeInfo, v1, v2);
-  System_Object___ctor((Il2CppObject *)v3, 0LL);
-  *(_QWORD *)(v3 + 16) = -1LL;
-  *(_WORD *)(v3 + 24) = 0;
-  return (SubmarineQuestSaveInfo_o *)v3;
+  v1 = sub_B52A54(SubmarineQuestSaveInfo_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v1, 0LL);
+  *(_QWORD *)(v1 + 16) = -1LL;
+  *(_WORD *)(v1 + 24) = 0;
+  return (SubmarineQuestSaveInfo_o *)v1;
 }
 
 
@@ -129,9 +124,9 @@ System_String_o *__fastcall SubmarineQuestSaveInfo__GetSaveValue(
         SubmarineQuestSaveInfo_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_String_array *v4; // x19
-  System_String_o *v5; // x0
+  System_String_array *v3; // x19
+  System_String_o *v4; // x0
+  __int64 v5; // x1
   System_String_array **v6; // x2
   System_String_array **v7; // x3
   System_Boolean_array **v8; // x4
@@ -193,142 +188,142 @@ System_String_o *__fastcall SubmarineQuestSaveInfo__GetSaveValue(
   char v65[4]; // [xsp+8h] [xbp-28h] BYREF
   int32_t QuestId_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_421365A & 1) == 0 )
+  if ( (byte_42AEE76 & 1) == 0 )
   {
-    sub_B0D8A4(&string___TypeInfo, method);
-    sub_B0D8A4(&StringLiteral_705/*","*/, v3);
-    byte_421365A = 1;
+    sub_B52984(&string___TypeInfo);
+    sub_B52984(&StringLiteral_709/*","*/);
+    byte_42AEE76 = 1;
   }
   v65[0] = 0;
-  v4 = (System_String_array *)sub_B0D8BC(string___TypeInfo, 8LL);
+  v3 = (System_String_array *)sub_B5299C(string___TypeInfo, 8LL);
   QuestId_k__BackingField = this->fields._QuestId_k__BackingField;
-  v5 = System_Int32__ToString((int32_t)&QuestId_k__BackingField, 0LL);
-  if ( !v4 )
-    sub_B0D97C(v5);
-  v12 = (System_Int32_array **)v5;
-  if ( v5 )
+  v4 = System_Int32__ToString((int32_t)&QuestId_k__BackingField, 0LL);
+  if ( !v3 )
+    sub_B52A5C(v4, v5);
+  v12 = (System_Int32_array **)v4;
+  if ( v4 )
   {
-    v5 = (System_String_o *)sub_B0D964(v5, v4->obj.klass->_1.element_class);
-    if ( !v5 )
+    v4 = (System_String_o *)sub_B52A44(v4, v3->obj.klass->_1.element_class);
+    if ( !v4 )
       goto LABEL_38;
   }
-  if ( !v4->max_length )
+  if ( !v3->max_length )
     goto LABEL_37;
-  v4->m_Items[0] = (System_String_o *)v12;
-  sub_B0D840((BattleServantConfConponent_o *)v4->m_Items, v12, v6, v7, v8, v9, v10, v11);
-  v5 = (System_String_o *)StringLiteral_705/*","*/;
-  if ( StringLiteral_705/*","*/ )
+  v3->m_Items[0] = (System_String_o *)v12;
+  sub_B52920((BattleServantConfConponent_o *)v3->m_Items, v12, v6, v7, v8, v9, v10, v11);
+  v4 = (System_String_o *)StringLiteral_709/*","*/;
+  if ( StringLiteral_709/*","*/ )
   {
-    v5 = (System_String_o *)sub_B0D964(StringLiteral_705/*","*/, v4->obj.klass->_1.element_class);
-    if ( !v5 )
+    v4 = (System_String_o *)sub_B52A44(StringLiteral_709/*","*/, v3->obj.klass->_1.element_class);
+    if ( !v4 )
       goto LABEL_38;
-    v19 = (System_Int32_array **)StringLiteral_705/*","*/;
+    v19 = (System_Int32_array **)StringLiteral_709/*","*/;
   }
   else
   {
     v19 = 0LL;
   }
-  if ( v4->max_length <= 1 )
+  if ( v3->max_length <= 1 )
     goto LABEL_37;
-  v4->m_Items[1] = (System_String_o *)v19;
-  sub_B0D840((BattleServantConfConponent_o *)&v4->m_Items[1], v19, v13, v14, v15, v16, v17, v18);
+  v3->m_Items[1] = (System_String_o *)v19;
+  sub_B52920((BattleServantConfConponent_o *)&v3->m_Items[1], v19, v13, v14, v15, v16, v17, v18);
   QuestId_k__BackingField = this->fields._PhaseCnt_k__BackingField;
-  v5 = System_Int32__ToString((int32_t)&QuestId_k__BackingField, 0LL);
-  v26 = (System_Int32_array **)v5;
-  if ( v5 )
+  v4 = System_Int32__ToString((int32_t)&QuestId_k__BackingField, 0LL);
+  v26 = (System_Int32_array **)v4;
+  if ( v4 )
   {
-    v5 = (System_String_o *)sub_B0D964(v5, v4->obj.klass->_1.element_class);
-    if ( !v5 )
+    v4 = (System_String_o *)sub_B52A44(v4, v3->obj.klass->_1.element_class);
+    if ( !v4 )
       goto LABEL_38;
   }
-  if ( v4->max_length <= 2 )
+  if ( v3->max_length <= 2 )
     goto LABEL_37;
-  v4->m_Items[2] = (System_String_o *)v26;
-  sub_B0D840((BattleServantConfConponent_o *)&v4->m_Items[2], v26, v20, v21, v22, v23, v24, v25);
-  v5 = (System_String_o *)StringLiteral_705/*","*/;
-  if ( StringLiteral_705/*","*/ )
+  v3->m_Items[2] = (System_String_o *)v26;
+  sub_B52920((BattleServantConfConponent_o *)&v3->m_Items[2], v26, v20, v21, v22, v23, v24, v25);
+  v4 = (System_String_o *)StringLiteral_709/*","*/;
+  if ( StringLiteral_709/*","*/ )
   {
-    v5 = (System_String_o *)sub_B0D964(StringLiteral_705/*","*/, v4->obj.klass->_1.element_class);
-    if ( !v5 )
+    v4 = (System_String_o *)sub_B52A44(StringLiteral_709/*","*/, v3->obj.klass->_1.element_class);
+    if ( !v4 )
       goto LABEL_38;
-    v33 = (System_Int32_array **)StringLiteral_705/*","*/;
+    v33 = (System_Int32_array **)StringLiteral_709/*","*/;
   }
   else
   {
     v33 = 0LL;
   }
-  if ( v4->max_length <= 3 )
+  if ( v3->max_length <= 3 )
     goto LABEL_37;
-  v4->m_Items[3] = (System_String_o *)v33;
-  sub_B0D840((BattleServantConfConponent_o *)&v4->m_Items[3], v33, v27, v28, v29, v30, v31, v32);
+  v3->m_Items[3] = (System_String_o *)v33;
+  sub_B52920((BattleServantConfConponent_o *)&v3->m_Items[3], v33, v27, v28, v29, v30, v31, v32);
   v65[0] = this->fields._IsQuestClear_k__BackingField;
-  v5 = System_Boolean__ToString((bool)v65, 0LL);
-  v40 = (System_Int32_array **)v5;
-  if ( v5 )
+  v4 = System_Boolean__ToString((bool)v65, 0LL);
+  v40 = (System_Int32_array **)v4;
+  if ( v4 )
   {
-    v5 = (System_String_o *)sub_B0D964(v5, v4->obj.klass->_1.element_class);
-    if ( !v5 )
+    v4 = (System_String_o *)sub_B52A44(v4, v3->obj.klass->_1.element_class);
+    if ( !v4 )
       goto LABEL_38;
   }
-  if ( v4->max_length <= 4 )
+  if ( v3->max_length <= 4 )
     goto LABEL_37;
-  v4->m_Items[4] = (System_String_o *)v40;
-  sub_B0D840((BattleServantConfConponent_o *)&v4->m_Items[4], v40, v34, v35, v36, v37, v38, v39);
-  v5 = (System_String_o *)StringLiteral_705/*","*/;
-  if ( StringLiteral_705/*","*/ )
+  v3->m_Items[4] = (System_String_o *)v40;
+  sub_B52920((BattleServantConfConponent_o *)&v3->m_Items[4], v40, v34, v35, v36, v37, v38, v39);
+  v4 = (System_String_o *)StringLiteral_709/*","*/;
+  if ( StringLiteral_709/*","*/ )
   {
-    v5 = (System_String_o *)sub_B0D964(StringLiteral_705/*","*/, v4->obj.klass->_1.element_class);
-    if ( !v5 )
+    v4 = (System_String_o *)sub_B52A44(StringLiteral_709/*","*/, v3->obj.klass->_1.element_class);
+    if ( !v4 )
       goto LABEL_38;
-    v47 = (System_Int32_array **)StringLiteral_705/*","*/;
+    v47 = (System_Int32_array **)StringLiteral_709/*","*/;
   }
   else
   {
     v47 = 0LL;
   }
-  if ( v4->max_length <= 5 )
+  if ( v3->max_length <= 5 )
     goto LABEL_37;
-  v4->m_Items[5] = (System_String_o *)v47;
-  sub_B0D840((BattleServantConfConponent_o *)&v4->m_Items[5], v47, v41, v42, v43, v44, v45, v46);
+  v3->m_Items[5] = (System_String_o *)v47;
+  sub_B52920((BattleServantConfConponent_o *)&v3->m_Items[5], v47, v41, v42, v43, v44, v45, v46);
   v65[0] = this->fields._IsQuestPhaseClear_k__BackingField;
-  v5 = System_Boolean__ToString((bool)v65, 0LL);
-  v54 = (System_Int32_array **)v5;
-  if ( v5 )
+  v4 = System_Boolean__ToString((bool)v65, 0LL);
+  v54 = (System_Int32_array **)v4;
+  if ( v4 )
   {
-    v5 = (System_String_o *)sub_B0D964(v5, v4->obj.klass->_1.element_class);
-    if ( !v5 )
+    v4 = (System_String_o *)sub_B52A44(v4, v3->obj.klass->_1.element_class);
+    if ( !v4 )
     {
 LABEL_38:
-      v64 = sub_B0D99C();
-      sub_B0D948(v64, 0LL);
+      v64 = sub_B52A7C();
+      sub_B52A28(v64, 0LL);
     }
   }
-  if ( v4->max_length <= 6 )
+  if ( v3->max_length <= 6 )
     goto LABEL_37;
-  v4->m_Items[6] = (System_String_o *)v54;
-  sub_B0D840((BattleServantConfConponent_o *)&v4->m_Items[6], v54, v48, v49, v50, v51, v52, v53);
-  v5 = (System_String_o *)StringLiteral_705/*","*/;
-  if ( StringLiteral_705/*","*/ )
+  v3->m_Items[6] = (System_String_o *)v54;
+  sub_B52920((BattleServantConfConponent_o *)&v3->m_Items[6], v54, v48, v49, v50, v51, v52, v53);
+  v4 = (System_String_o *)StringLiteral_709/*","*/;
+  if ( StringLiteral_709/*","*/ )
   {
-    v5 = (System_String_o *)sub_B0D964(StringLiteral_705/*","*/, v4->obj.klass->_1.element_class);
-    if ( v5 )
+    v4 = (System_String_o *)sub_B52A44(StringLiteral_709/*","*/, v3->obj.klass->_1.element_class);
+    if ( v4 )
     {
-      v61 = (System_Int32_array **)StringLiteral_705/*","*/;
+      v61 = (System_Int32_array **)StringLiteral_709/*","*/;
       goto LABEL_35;
     }
     goto LABEL_38;
   }
   v61 = 0LL;
 LABEL_35:
-  if ( v4->max_length <= 7 )
+  if ( v3->max_length <= 7 )
   {
 LABEL_37:
-    v63 = sub_B0D9A8(v5);
-    sub_B0D948(v63, 0LL);
+    v63 = sub_B52A88(v4);
+    sub_B52A28(v63, 0LL);
   }
-  v4->m_Items[7] = (System_String_o *)v61;
-  sub_B0D840((BattleServantConfConponent_o *)&v4->m_Items[7], v61, v55, v56, v57, v58, v59, v60);
-  return System_String__Concat_43930028(v4, 0LL);
+  v3->m_Items[7] = (System_String_o *)v61;
+  sub_B52920((BattleServantConfConponent_o *)&v3->m_Items[7], v61, v55, v56, v57, v58, v59, v60);
+  return System_String__Concat_44648440(v3, 0LL);
 }
 
 

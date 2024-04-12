@@ -19,17 +19,17 @@ IFriendshipGauge_o *__fastcall FriendshipGaugeSelector__GetGauge(
   __int64 p_method; // x0
 
   v6 = this;
-  if ( (byte_42171E1 & 1) == 0 )
+  if ( (byte_42B2BA2 & 1) == 0 )
   {
-    this = (FriendshipGaugeSelector_o *)sub_B0D8A4(&IFriendshipGauge_TypeInfo, *(_QWORD *)&maxFriendShipRank);
-    byte_42171E1 = 1;
+    this = (FriendshipGaugeSelector_o *)sub_B52984(&IFriendshipGauge_TypeInfo);
+    byte_42B2BA2 = 1;
   }
   if ( friendshipExceedCount && friendshipExceedCount + maxFriendShipRank >= 11 )
   {
     friendshipGaugeEx = (IFriendshipGauge_o *)v6->fields.friendshipGaugeEx;
     if ( !friendshipGaugeEx )
 LABEL_15:
-      sub_B0D97C(this);
+      sub_B52A5C(this, *(_QWORD *)&maxFriendShipRank);
   }
   else
   {
@@ -54,7 +54,7 @@ LABEL_15:
   else
   {
 LABEL_12:
-    p_method = sub_AA67A0(friendshipGaugeEx, IFriendshipGauge_TypeInfo, 6LL);
+    p_method = sub_AEB880(friendshipGaugeEx, IFriendshipGauge_TypeInfo, 6LL, method);
   }
   (*(void (__fastcall **)(IFriendshipGauge_o *, _QWORD))p_method)(friendshipGaugeEx, *(_QWORD *)(p_method + 8));
   return friendshipGaugeEx;

@@ -1,7 +1,7 @@
 void __fastcall MapShakerComponent___ctor(MapShakerComponent_o *this, const MethodInfo *method)
 {
   LODWORD(this->fields.toShake) = 1;
-  *(_OWORD *)&this->fields.MagnitudeXMin = xmmword_3201CA0;
+  *(_OWORD *)&this->fields.MagnitudeXMin = xmmword_328D890;
   LODWORD(this[1].klass) = 1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -13,10 +13,10 @@ void __fastcall MapShakerComponent__OnDisable(MapShakerComponent_o *this, const 
   UnityEngine_GameObject_o *v4; // x19
   UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4212A18 & 1) == 0 )
+  if ( (byte_42B3077 & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
-    byte_4212A18 = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B3077 = 1;
   }
   v3 = *(UnityEngine_Object_o **)&this->fields.flag;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -68,10 +68,10 @@ void __fastcall MapShakerComponent__Update(MapShakerComponent_o *this, const Met
   UnityEngine_GameObject_o *v26; // x20
   float v27; // s0
 
-  if ( (byte_4212A17 & 1) == 0 )
+  if ( (byte_42B3076 & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
-    byte_4212A17 = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B3076 = 1;
   }
   v3 = *(UnityEngine_Object_o **)&this->fields.flag;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -111,7 +111,7 @@ void __fastcall MapShakerComponent__Update(MapShakerComponent_o *this, const Met
       LODWORD(this[1].klass) = -LODWORD(this[1].klass);
       break;
     case 0:
-      v6 = UnityEngine_Random__Range_34969060(0, 2, 0LL);
+      v6 = UnityEngine_Random__Range_35650740(0, 2, 0LL);
       MagnitudeXMin = this->fields.MagnitudeXMin;
       MagnitudeYMax = this->fields.MagnitudeYMax;
       v9 = *(UnityEngine_GameObject_o **)&this->fields.flag;
@@ -122,7 +122,7 @@ void __fastcall MapShakerComponent__Update(MapShakerComponent_o *this, const Met
       LODWORD(this[1].klass) = v10;
       v11 = UnityEngine_Random__Range(MagnitudeYMax, MagnitudeXMin, 0LL);
       GameObjectExtensions__SetLocalPositionX(v9, v11 * (float)SLODWORD(this[1].klass), 0LL);
-      v12 = UnityEngine_Random__Range_34969060(0, 2, 0LL);
+      v12 = UnityEngine_Random__Range_35650740(0, 2, 0LL);
       MagnitudeYMin = this->fields.MagnitudeYMin;
       v13 = *(float *)&this->fields.shakeType;
       v15 = *(UnityEngine_GameObject_o **)&this->fields.flag;
@@ -151,20 +151,20 @@ void __fastcall MapShakerComponent__getMap(MapShakerComponent_o *this, const Met
   struct ScrTerminalMap_o *mTerminalMap; // x8
   System_Int32_array **mapButtonGrid; // x1
 
-  if ( (byte_4212A19 & 1) == 0 )
+  if ( (byte_42B3078 & 1) == 0 )
   {
-    sub_B0D8A4(&TerminalSceneComponent_TypeInfo, method);
-    byte_4212A19 = 1;
+    sub_B52984(&TerminalSceneComponent_TypeInfo);
+    byte_42B3078 = 1;
   }
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
   }
-  if ( !byte_421083D )
+  if ( !byte_42AC2A0 )
   {
-    sub_B0D8A4(&TerminalSceneComponent_TypeInfo, method);
-    byte_421083D = 1;
+    sub_B52984(&TerminalSceneComponent_TypeInfo);
+    byte_42AC2A0 = 1;
   }
   v9 = TerminalSceneComponent_TypeInfo;
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -175,8 +175,8 @@ void __fastcall MapShakerComponent__getMap(MapShakerComponent_o *this, const Met
   }
   mInstance = v9->static_fields->mInstance;
   if ( !mInstance || (mTerminalMap = mInstance->fields.mTerminalMap) == 0LL )
-    sub_B0D97C(v9);
+    sub_B52A5C(v9, method);
   mapButtonGrid = (System_Int32_array **)mTerminalMap->fields.mapButtonGrid;
   *(_QWORD *)&this->fields.flag = mapButtonGrid;
-  sub_B0D840((BattleServantConfConponent_o *)&this->fields.flag, mapButtonGrid, v2, v3, v4, v5, v6, v7);
+  sub_B52920((BattleServantConfConponent_o *)&this->fields.flag, mapButtonGrid, v2, v3, v4, v5, v6, v7);
 }

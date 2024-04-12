@@ -4,8 +4,7 @@ void __fastcall OverwriteBattleBgmData___ctor(OverwriteBattleBgmData_o *this, co
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall OverwriteBattleBgmData___ctor_19866068(
+void __fastcall OverwriteBattleBgmData___ctor_20814344(
         OverwriteBattleBgmData_o *this,
         int32_t waveCount,
         int32_t bgmId,
@@ -13,16 +12,15 @@ void __fastcall OverwriteBattleBgmData___ctor_19866068(
         System_String_o *bgmName,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
-  __int64 v12; // x1
   BgmMaster_o *Master_WarQuestSelectionMaster; // x0
+  __int64 v12; // x1
 
-  if ( (byte_42120EC & 1) == 0 )
+  if ( (byte_42ADBF2 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMaster_BgmMaster___, *(_QWORD *)&waveCount);
-    sub_B0D8A4(&DataManager_TypeInfo, v11);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v12);
-    byte_42120EC = 1;
+    sub_B52984(&Method_DataManager_GetMaster_BgmMaster___);
+    sub_B52984(&DataManager_TypeInfo);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42ADBF2 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._WaveCount_k__BackingField = waveCount;
@@ -34,7 +32,7 @@ void __fastcall OverwriteBattleBgmData___ctor_19866068(
   {
     if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_WarQuestSelectionMaster = (BgmMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_BgmMaster___);
+    Master_WarQuestSelectionMaster = (BgmMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_BgmMaster___);
     if ( Master_WarQuestSelectionMaster )
     {
       bgmName = BgmMaster__GetBgmFileName(
@@ -45,11 +43,11 @@ void __fastcall OverwriteBattleBgmData___ctor_19866068(
       goto LABEL_10;
     }
 LABEL_11:
-    sub_B0D97C(Master_WarQuestSelectionMaster);
+    sub_B52A5C(Master_WarQuestSelectionMaster, v12);
   }
 LABEL_10:
   this->fields._BgmName_k__BackingField = bgmName;
-  sub_B0D840(&this->fields._BgmName_k__BackingField, bgmName);
+  sub_B52920(&this->fields._BgmName_k__BackingField);
 }
 
 
@@ -57,19 +55,18 @@ OverwriteBattleBgmData_SaveData_o *__fastcall OverwriteBattleBgmData__ConvertToS
         OverwriteBattleBgmData_o *bgmData,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  OverwriteBattleBgmData_SaveData_o *v4; // x20
+  OverwriteBattleBgmData_SaveData_o *v3; // x20
 
-  if ( (byte_42120EE & 1) == 0 )
+  if ( (byte_42ADBF4 & 1) == 0 )
   {
-    sub_B0D8A4(&OverwriteBattleBgmData_SaveData_TypeInfo, method);
-    byte_42120EE = 1;
+    sub_B52984(&OverwriteBattleBgmData_SaveData_TypeInfo);
+    byte_42ADBF4 = 1;
   }
   if ( !bgmData )
     return 0LL;
-  v4 = (OverwriteBattleBgmData_SaveData_o *)sub_B0D974(OverwriteBattleBgmData_SaveData_TypeInfo, method, v2);
-  OverwriteBattleBgmData_SaveData___ctor_19923432(v4, bgmData, 0LL);
-  return v4;
+  v3 = (OverwriteBattleBgmData_SaveData_o *)sub_B52A54(OverwriteBattleBgmData_SaveData_TypeInfo);
+  OverwriteBattleBgmData_SaveData___ctor_19826692(v3, bgmData, 0LL);
+  return v3;
 }
 
 
@@ -77,76 +74,67 @@ OverwriteBattleBgmData_o *__fastcall OverwriteBattleBgmData__CreateInstanceFromS
         OverwriteBattleBgmData_SaveData_o *sv,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x19
+  __int64 v3; // x19
   WarQuestSelectionMaster_o *Master_WarQuestSelectionMaster; // x0
-  WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_o *v11; // x0
-  System_String_o *BgmFileName; // x0
+  __int64 v5; // x1
 
-  if ( (byte_42120ED & 1) == 0 )
+  if ( (byte_42ADBF3 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_BasicHelper_IndexValue_int____67955848, method);
-    sub_B0D8A4(&Method_BasicHelper_IndexValue_string___, v4);
-    sub_B0D8A4(&Method_DataManager_GetMaster_BgmMaster___, v5);
-    sub_B0D8A4(&DataManager_TypeInfo, v6);
-    sub_B0D8A4(&OverwriteBattleBgmData_TypeInfo, v7);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v8);
-    byte_42120ED = 1;
+    sub_B52984(&Method_BasicHelper_IndexValue_int____68584400);
+    sub_B52984(&Method_BasicHelper_IndexValue_string___);
+    sub_B52984(&Method_DataManager_GetMaster_BgmMaster___);
+    sub_B52984(&DataManager_TypeInfo);
+    sub_B52984(&OverwriteBattleBgmData_TypeInfo);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42ADBF3 = 1;
   }
   if ( !sv )
     return 0LL;
-  v9 = sub_B0D974(OverwriteBattleBgmData_TypeInfo, method, v2);
-  System_Object___ctor((Il2CppObject *)v9, 0LL);
+  v3 = sub_B52A54(OverwriteBattleBgmData_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0LL);
   Master_WarQuestSelectionMaster = (WarQuestSelectionMaster_o *)BasicHelper__IndexValue_int_(
                                                                   sv->fields.intParamArray,
                                                                   0,
                                                                   0,
-                                                                  (const MethodInfo_17093A8 *)Method_BasicHelper_IndexValue_int____67955848);
-  if ( !v9 )
+                                                                  (const MethodInfo_1A43EDC *)Method_BasicHelper_IndexValue_int____68584400);
+  if ( !v3 )
     goto LABEL_14;
-  *(_DWORD *)(v9 + 16) = (_DWORD)Master_WarQuestSelectionMaster;
-  *(_DWORD *)(v9 + 20) = BasicHelper__IndexValue_int_(
+  *(_DWORD *)(v3 + 16) = (_DWORD)Master_WarQuestSelectionMaster;
+  *(_DWORD *)(v3 + 20) = BasicHelper__IndexValue_int_(
                            sv->fields.intParamArray,
                            1,
                            0,
-                           (const MethodInfo_17093A8 *)Method_BasicHelper_IndexValue_int____67955848);
-  *(_DWORD *)(v9 + 32) = BasicHelper__IndexValue_int_(
+                           (const MethodInfo_1A43EDC *)Method_BasicHelper_IndexValue_int____68584400);
+  *(_DWORD *)(v3 + 32) = BasicHelper__IndexValue_int_(
                            sv->fields.intParamArray,
                            2,
                            0,
-                           (const MethodInfo_17093A8 *)Method_BasicHelper_IndexValue_int____67955848);
-  v11 = BasicHelper__IndexValue_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_(
-          (WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_array *)sv->fields.strParamArray,
-          0,
-          (WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_o *)StringLiteral_1/*""*/,
-          (const MethodInfo_1709498 *)Method_BasicHelper_IndexValue_string___);
-  *(_QWORD *)(v9 + 24) = v11;
-  sub_B0D840(v9 + 24, v11);
-  if ( *(int *)(v9 + 20) >= 1 && System_String__IsNullOrEmpty(*(System_String_o **)(v9 + 24), 0LL) )
+                           (const MethodInfo_1A43EDC *)Method_BasicHelper_IndexValue_int____68584400);
+  *(_QWORD *)(v3 + 24) = BasicHelper__IndexValue_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_(
+                           (WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_array *)sv->fields.strParamArray,
+                           0,
+                           (WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_o *)StringLiteral_1/*""*/,
+                           (const MethodInfo_1A43FCC *)Method_BasicHelper_IndexValue_string___);
+  sub_B52920(v3 + 24);
+  if ( *(int *)(v3 + 20) >= 1 && System_String__IsNullOrEmpty(*(System_String_o **)(v3 + 24), 0LL) )
   {
     if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_BgmMaster___);
+    Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_BgmMaster___);
     if ( Master_WarQuestSelectionMaster )
     {
-      BgmFileName = BgmMaster__GetBgmFileName(
-                      (BgmMaster_o *)Master_WarQuestSelectionMaster,
-                      *(_DWORD *)(v9 + 20),
-                      (System_String_o *)StringLiteral_1/*""*/,
-                      0LL);
-      *(_QWORD *)(v9 + 24) = BgmFileName;
-      sub_B0D840(v9 + 24, BgmFileName);
-      return (OverwriteBattleBgmData_o *)v9;
+      *(_QWORD *)(v3 + 24) = BgmMaster__GetBgmFileName(
+                               (BgmMaster_o *)Master_WarQuestSelectionMaster,
+                               *(_DWORD *)(v3 + 20),
+                               (System_String_o *)StringLiteral_1/*""*/,
+                               0LL);
+      sub_B52920(v3 + 24);
+      return (OverwriteBattleBgmData_o *)v3;
     }
 LABEL_14:
-    sub_B0D97C(Master_WarQuestSelectionMaster);
+    sub_B52A5C(Master_WarQuestSelectionMaster, v5);
   }
-  return (OverwriteBattleBgmData_o *)v9;
+  return (OverwriteBattleBgmData_o *)v3;
 }
 
 
@@ -193,7 +181,7 @@ void __fastcall OverwriteBattleBgmData__set_BgmName(
         const MethodInfo *method)
 {
   this->fields._BgmName_k__BackingField = value;
-  sub_B0D840(&this->fields._BgmName_k__BackingField, value);
+  sub_B52920(&this->fields._BgmName_k__BackingField);
 }
 
 
@@ -214,87 +202,87 @@ void __fastcall OverwriteBattleBgmData_SaveData___ctor(
 }
 
 
-void __fastcall OverwriteBattleBgmData_SaveData___ctor_19923432(
+void __fastcall OverwriteBattleBgmData_SaveData___ctor_19826692(
         OverwriteBattleBgmData_SaveData_o *this,
         OverwriteBattleBgmData_o *bgmData,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  struct System_Int32_array *v6; // x0
+  struct System_Int32_array *v5; // x0
+  struct System_Int32_array *v6; // x1
   unsigned int max_length; // w8
   struct System_String_o *BgmName_k__BackingField; // x20
   struct System_String_array *v9; // x21
   __int64 v10; // x0
   __int64 v11; // x0
 
-  if ( (byte_4212169 & 1) == 0 )
+  if ( (byte_42AD3FD & 1) == 0 )
   {
-    sub_B0D8A4(&int___TypeInfo, bgmData);
-    sub_B0D8A4(&string___TypeInfo, v5);
-    byte_4212169 = 1;
+    sub_B52984(&int___TypeInfo);
+    sub_B52984(&string___TypeInfo);
+    byte_42AD3FD = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v6 = (struct System_Int32_array *)sub_B0D8BC(int___TypeInfo, 3LL);
-  if ( !bgmData || !v6 )
+  v5 = (struct System_Int32_array *)sub_B5299C(int___TypeInfo, 3LL);
+  if ( !bgmData )
     goto LABEL_14;
-  max_length = v6->max_length;
+  v6 = v5;
+  if ( !v5 )
+    goto LABEL_14;
+  max_length = v5->max_length;
   if ( !max_length )
     goto LABEL_13;
-  v6->m_Items[1] = bgmData->fields._WaveCount_k__BackingField;
+  v5->m_Items[1] = bgmData->fields._WaveCount_k__BackingField;
   if ( max_length == 1 )
     goto LABEL_13;
-  v6->m_Items[2] = bgmData->fields._BgmId_k__BackingField;
+  v5->m_Items[2] = bgmData->fields._BgmId_k__BackingField;
   if ( max_length <= 2 )
     goto LABEL_13;
-  v6->m_Items[3] = bgmData->fields.allowSubBgmPlayingRawValue;
-  this->fields.intParamArray = v6;
-  sub_B0D840(&this->fields, v6);
-  v6 = (struct System_Int32_array *)sub_B0D8BC(string___TypeInfo, 1LL);
-  if ( !v6 )
+  v5->m_Items[3] = bgmData->fields.allowSubBgmPlayingRawValue;
+  this->fields.intParamArray = v5;
+  sub_B52920(&this->fields);
+  v5 = (struct System_Int32_array *)sub_B5299C(string___TypeInfo, 1LL);
+  if ( !v5 )
 LABEL_14:
-    sub_B0D97C(v6);
+    sub_B52A5C(v5, v6);
   BgmName_k__BackingField = bgmData->fields._BgmName_k__BackingField;
-  v9 = (struct System_String_array *)v6;
+  v9 = (struct System_String_array *)v5;
   if ( BgmName_k__BackingField )
   {
-    v6 = (struct System_Int32_array *)sub_B0D964(BgmName_k__BackingField, v6->obj.klass->_1.element_class);
-    if ( !v6 )
+    v5 = (struct System_Int32_array *)sub_B52A44(BgmName_k__BackingField, v5->obj.klass->_1.element_class);
+    if ( !v5 )
     {
-      v11 = sub_B0D99C();
-      sub_B0D948(v11, 0LL);
+      v11 = sub_B52A7C();
+      sub_B52A28(v11, 0LL);
     }
   }
   if ( !v9->max_length )
   {
 LABEL_13:
-    v10 = sub_B0D9A8(v6);
-    sub_B0D948(v10, 0LL);
+    v10 = sub_B52A88(v5);
+    sub_B52A28(v10, 0LL);
   }
   v9->m_Items[0] = BgmName_k__BackingField;
-  sub_B0D840(v9->m_Items, BgmName_k__BackingField);
+  sub_B52920(v9->m_Items);
   this->fields.strParamArray = v9;
-  sub_B0D840(&this->fields.strParamArray, v9);
+  sub_B52920(&this->fields.strParamArray);
 }
 
 
-void __fastcall OverwriteBattleBgmData_SaveData___ctor_19923740(
+void __fastcall OverwriteBattleBgmData_SaveData___ctor_19827000(
         OverwriteBattleBgmData_SaveData_o *this,
         BattleData_SaveData_o *sv,
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  struct System_Int32_array *overrideBgmData; // x1
+  __int64 v6; // x1
   OverwriteBattleBgmData_SaveData_Fields *p_fields; // x19
-  struct System_String_array *overrideStrBgmData; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !sv )
-    sub_B0D97C(v5);
-  overrideBgmData = sv->fields.overrideBgmData;
-  this->fields.intParamArray = overrideBgmData;
+    sub_B52A5C(v5, v6);
+  this->fields.intParamArray = sv->fields.overrideBgmData;
   p_fields = &this->fields;
-  sub_B0D840(p_fields, overrideBgmData);
-  overrideStrBgmData = sv->fields.overrideStrBgmData;
-  p_fields->strParamArray = overrideStrBgmData;
-  sub_B0D840(&p_fields->strParamArray, overrideStrBgmData);
+  sub_B52920(p_fields);
+  p_fields->strParamArray = sv->fields.overrideStrBgmData;
+  sub_B52920(&p_fields->strParamArray);
 }

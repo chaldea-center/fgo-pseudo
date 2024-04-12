@@ -1,49 +1,47 @@
 void __fastcall BoxGachaUtility___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
   struct BoxGachaUtility_StaticFields *static_fields; // x9
-  BoxGachaUtility_c *v3; // x8
-  struct BoxGachaUtility_StaticFields *v4; // x9
-  int32x2_t *v5; // x8
+  BoxGachaUtility_c *v2; // x8
+  struct BoxGachaUtility_StaticFields *v3; // x9
+  int32x2_t *v4; // x8
 
-  if ( (byte_4216383 & 1) == 0 )
+  if ( (byte_42B17EB & 1) == 0 )
   {
-    sub_B0D8A4(&BoxGachaUtility_TypeInfo, v1);
-    byte_4216383 = 1;
+    sub_B52984(&BoxGachaUtility_TypeInfo);
+    byte_42B17EB = 1;
   }
   static_fields = BoxGachaUtility_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->NORMAL_ITEM_SIZE.fields.x = 0x3F3AE1483F400000LL;
   static_fields->NORMAL_ITEM_SIZE.fields.z = 0.68;
-  v3 = BoxGachaUtility_TypeInfo;
-  v4 = BoxGachaUtility_TypeInfo->static_fields;
-  *(int32x2_t *)&v4->CHANGE_MAX_ITEM_SIZE.fields.x = vdup_n_s32(0x3EC28F5Cu);
-  v4->CHANGE_MAX_ITEM_SIZE.fields.z = 0.38;
-  v5 = (int32x2_t *)v3->static_fields;
-  v5[3].n64_u64[0] = vdup_n_s32(0x3F018937u).n64_u64[0];
-  v5[4].n64_u32[0] = 1057065271;
+  v2 = BoxGachaUtility_TypeInfo;
+  v3 = BoxGachaUtility_TypeInfo->static_fields;
+  *(int32x2_t *)&v3->CHANGE_MAX_ITEM_SIZE.fields.x = vdup_n_s32(0x3EC28F5Cu);
+  v3->CHANGE_MAX_ITEM_SIZE.fields.z = 0.38;
+  v4 = (int32x2_t *)v2->static_fields;
+  v4[3].n64_u64[0] = vdup_n_s32(0x3F018937u).n64_u64[0];
+  v4[4].n64_u32[0] = 1057065271;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall BoxGachaUtility__SetBoxGachaNumSprite(UISprite_o *sprite, int32_t num, const MethodInfo *method)
 {
-  __int64 v5; // x1
-  Il2CppObject *v6; // x0
-  System_String_o *v7; // x0
+  Il2CppObject *v5; // x0
+  System_String_o *v6; // x0
+  __int64 v7; // x1
   int32_t v8; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4216382 & 1) == 0 )
+  if ( (byte_42B17EA & 1) == 0 )
   {
-    sub_B0D8A4(&int_TypeInfo, *(_QWORD *)&num);
-    sub_B0D8A4(&StringLiteral_19559/*"img_gachatxt_{0:D2}"*/, v5);
-    byte_4216382 = 1;
+    sub_B52984(&int_TypeInfo);
+    sub_B52984(&StringLiteral_19644/*"img_gachatxt_{0:D2}"*/);
+    byte_42B17EA = 1;
   }
   v8 = num;
-  v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v8);
-  v7 = System_String__Format((System_String_o *)StringLiteral_19559/*"img_gachatxt_{0:D2}"*/, v6, 0LL);
+  v5 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v8);
+  v6 = System_String__Format((System_String_o *)StringLiteral_19644/*"img_gachatxt_{0:D2}"*/, v5, 0LL);
   if ( !sprite )
-    sub_B0D97C(v7);
-  UISprite__set_spriteName(sprite, v7, 0LL);
+    sub_B52A5C(v6, v7);
+  UISprite__set_spriteName(sprite, v6, 0LL);
   ((void (__fastcall *)(UISprite_o *, Il2CppMethodPointer))sprite->klass->vtable._33_MakePixelPerfect.method)(
     sprite,
     sprite->klass->vtable._34_get_minWidth.methodPtr);
@@ -72,10 +70,10 @@ void __fastcall BoxGachaUtility__SetMultiGachaButtonDigitNum(
   const MethodInfo *v19; // x2
 
   v8 = gachaTime;
-  if ( (byte_4216381 & 1) == 0 )
+  if ( (byte_42B17E9 & 1) == 0 )
   {
-    *(_QWORD *)&gachaTime = sub_B0D8A4(&BoxGachaUtility_TypeInfo, oneDigit);
-    byte_4216381 = 1;
+    *(_QWORD *)&gachaTime = sub_B52984(&BoxGachaUtility_TypeInfo);
+    byte_42B17E9 = 1;
   }
   if ( v8 < 10 )
     goto LABEL_42;
@@ -122,7 +120,7 @@ void __fastcall BoxGachaUtility__SetMultiGachaButtonDigitNum(
         }
       }
 LABEL_39:
-      sub_B0D97C(*(_QWORD *)&gachaTime);
+      sub_B52A5C(*(_QWORD *)&gachaTime, oneDigit);
     case 1:
       if ( twoDigit )
       {

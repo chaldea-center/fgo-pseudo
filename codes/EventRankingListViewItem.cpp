@@ -7,38 +7,35 @@ void __fastcall EventRankingListViewItem___ctor(
         int32_t nowTerm,
         const MethodInfo *method)
 {
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
+  System_String_array **v13; // x2
+  System_String_array **v14; // x3
+  System_Boolean_array **v15; // x4
+  System_Int32_array **v16; // x5
+  System_Int32_array *v17; // x6
+  System_Int32_array *v18; // x7
   DataManager_o *Instance; // x0
-  bool v24; // zf
-  BalanceConfig_c *v25; // x0
+  __int64 v20; // x1
+  bool v21; // zf
+  BalanceConfig_c *v22; // x0
   int32_t eventId; // w23
   int32_t groupId; // w22
   struct GiftEntity_array *GiftListById; // x0
-  System_String_array **v29; // x2
-  System_String_array **v30; // x3
-  System_Boolean_array **v31; // x4
-  System_Int32_array **v32; // x5
-  System_Int32_array *v33; // x6
-  System_Int32_array *v34; // x7
+  System_String_array **v26; // x2
+  System_String_array **v27; // x3
+  System_Boolean_array **v28; // x4
+  System_Int32_array **v29; // x5
+  System_Int32_array *v30; // x6
+  System_Int32_array *v31; // x7
   int32_t imageId; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4214A1D & 1) == 0 )
+  if ( (byte_42B0481 & 1) == 0 )
   {
-    sub_B0D8A4(&BalanceConfig_TypeInfo, info);
-    sub_B0D8A4(&CondType_TypeInfo, v13);
-    sub_B0D8A4(&Method_DataManager_GetMasterData_EventPointGroupAddMaster___, v14);
-    sub_B0D8A4(&Method_DataManager_GetMasterData_GiftMaster___, v15);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    byte_4214A1D = 1;
+    sub_B52984(&BalanceConfig_TypeInfo);
+    sub_B52984(&CondType_TypeInfo);
+    sub_B52984(&Method_DataManager_GetMasterData_EventPointGroupAddMaster___);
+    sub_B52984(&Method_DataManager_GetMasterData_GiftMaster___);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_42B0481 = 1;
   }
   imageId = 0;
   ListViewItem___ctor((ListViewItem_o *)this, 0LL);
@@ -47,42 +44,42 @@ void __fastcall EventRankingListViewItem___ctor(
   this->fields.groupImageId = 0;
   this->fields.isJoinTerm = 0;
   *(_QWORD *)&this->fields.isGoal = 0LL;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.itemInfo,
     (System_Int32_array **)info,
+    v13,
+    v14,
+    v15,
+    v16,
     v17,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22);
+    v18);
   this->fields.ranking = ranking;
   if ( !info )
     goto LABEL_21;
   this->fields.isGoal = info->fields.goalPoint <= info->fields.nowPoint;
-  v24 = info->fields.mostSupportGroupId == info->fields.groupId;
-  this->fields.isMostSupport = v24;
-  if ( v24 )
+  v21 = info->fields.mostSupportGroupId == info->fields.groupId;
+  this->fields.isMostSupport = v21;
+  if ( v21 )
   {
-    v25 = BalanceConfig_TypeInfo;
+    v22 = BalanceConfig_TypeInfo;
     if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v25 = BalanceConfig_TypeInfo;
+      v22 = BalanceConfig_TypeInfo;
     }
-    if ( v25->static_fields->raceRewardRankMax <= ranking )
+    if ( v22->static_fields->raceRewardRankMax <= ranking )
       this->fields.isDispGetStamp = 1;
   }
   this->fields.isJoinTerm = isJoinTerm;
   this->fields.isGetReward = isGetReward;
   this->fields.groupImageId = info->fields.groupIconImageId;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_21;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventPointGroupAddMaster___);
+                                (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_EventPointGroupAddMaster___);
   if ( !Instance )
     goto LABEL_21;
   if ( EventPointGroupAddMaster__IsClearCondChangeImage(
@@ -100,26 +97,26 @@ void __fastcall EventRankingListViewItem___ctor(
   if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
   this->fields.isPlayedGoal = CondType__IsEventRaceGoalScriptPlayed(eventId, nowTerm, groupId, 0LL);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL )
+                                      (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL )
   {
 LABEL_21:
-    sub_B0D97C(Instance);
+    sub_B52A5C(Instance, v20);
   }
   GiftListById = GiftMaster__GetGiftListById((GiftMaster_o *)Instance, info->fields.rewardItemId, 0LL);
   this->fields.giftEntityList = GiftListById;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.giftEntityList,
     (System_Int32_array **)GiftListById,
+    v26,
+    v27,
+    v28,
     v29,
     v30,
-    v31,
-    v32,
-    v33,
-    v34);
+    v31);
 }
 
 
@@ -145,7 +142,7 @@ int32_t __fastcall EventRankingListViewItem__get_EventId(EventRankingListViewIte
 
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo )
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   return itemInfo->fields.eventId;
 }
 
@@ -164,7 +161,7 @@ int32_t __fastcall EventRankingListViewItem__get_GroupId(EventRankingListViewIte
 
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo )
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   return itemInfo->fields.groupId;
 }
 
@@ -185,7 +182,7 @@ System_String_o *__fastcall EventRankingListViewItem__get_GroupName(
 
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo )
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   return itemInfo->fields.teamName;
 }
 
@@ -244,7 +241,7 @@ int32_t __fastcall EventRankingListViewItem__get_RewardItemId(
 
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo )
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   return itemInfo->fields.rewardItemId;
 }
 
@@ -257,6 +254,6 @@ int64_t __fastcall EventRankingListViewItem__get_SupportPoint(
 
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo )
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   return itemInfo->fields.supportPoint;
 }

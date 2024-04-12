@@ -1,7 +1,7 @@
 void __fastcall BitValue_object____ctor(
         BitValue_T__o *this,
         System_Func_T__int__o *func,
-        const MethodInfo_2AA9688 *method)
+        const MethodInfo_2B8BE04 *method)
 {
   System_String_array **v5; // x2
   System_String_array **v6; // x3
@@ -11,10 +11,10 @@ void __fastcall BitValue_object____ctor(
   System_Int32_array *v10; // x7
 
   if ( !this )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, func);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.convertFunc = func;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.convertFunc,
     (System_Int32_array **)func,
     v5,
@@ -26,7 +26,7 @@ void __fastcall BitValue_object____ctor(
 }
 
 
-bool __fastcall BitValue_object___Check(BitValue_T__o *this, Il2CppObject *val, const MethodInfo_2AA9754 *method)
+bool __fastcall BitValue_object___Check(BitValue_T__o *this, Il2CppObject *val, const MethodInfo_2B8BED0 *method)
 {
   struct System_Func_T__int__o *convertFunc; // x0
   int32_t value; // w19
@@ -35,7 +35,7 @@ bool __fastcall BitValue_object___Check(BitValue_T__o *this, Il2CppObject *val, 
 
   convertFunc = this->fields.convertFunc;
   if ( !convertFunc )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, val);
   value = this->fields.value;
   v6 = ((__int64 (__fastcall *)(struct System_Func_T__int__o *, Il2CppObject *))method->klass->rgctx_data->_0_System_Func_T__int__Invoke->methodPointer)(
          convertFunc,
@@ -44,14 +44,14 @@ bool __fastcall BitValue_object___Check(BitValue_T__o *this, Il2CppObject *val, 
 }
 
 
-bool __fastcall BitValue_object___CheckAndOff(BitValue_T__o *this, Il2CppObject *val, const MethodInfo_2AA979C *method)
+bool __fastcall BitValue_object___CheckAndOff(BitValue_T__o *this, Il2CppObject *val, const MethodInfo_2B8BF18 *method)
 {
-  const MethodInfo_2AA979C *v3; // x21
+  const MethodInfo_2B8BF18 *v3; // x21
   char v6; // w0
   BitValue_T__c *klass; // x8
 
   if ( !this )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, val);
   v3 = method;
   v6 = ((__int64 (*)(void))method->klass->rgctx_data->_1_BitValue_T__Check->methodPointer)();
   klass = v3->klass;
@@ -63,14 +63,14 @@ bool __fastcall BitValue_object___CheckAndOff(BitValue_T__o *this, Il2CppObject 
 }
 
 
-void __fastcall BitValue_object___Off(BitValue_T__o *this, Il2CppObject *val, const MethodInfo_2AA970C *method)
+void __fastcall BitValue_object___Off(BitValue_T__o *this, Il2CppObject *val, const MethodInfo_2B8BE88 *method)
 {
   struct System_Func_T__int__o *convertFunc; // x0
   int32_t value; // w20
 
   convertFunc = this->fields.convertFunc;
   if ( !convertFunc )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, val);
   value = this->fields.value;
   this->fields.value = value & ~((__int64 (__fastcall *)(struct System_Func_T__int__o *, Il2CppObject *))method->klass->rgctx_data->_0_System_Func_T__int__Invoke->methodPointer)(
                                   convertFunc,
@@ -78,14 +78,14 @@ void __fastcall BitValue_object___Off(BitValue_T__o *this, Il2CppObject *val, co
 }
 
 
-void __fastcall BitValue_object___On(BitValue_T__o *this, Il2CppObject *val, const MethodInfo_2AA96C4 *method)
+void __fastcall BitValue_object___On(BitValue_T__o *this, Il2CppObject *val, const MethodInfo_2B8BE40 *method)
 {
   struct System_Func_T__int__o *convertFunc; // x0
   int32_t value; // w20
 
   convertFunc = this->fields.convertFunc;
   if ( !convertFunc )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, val);
   value = this->fields.value;
   this->fields.value = ((__int64 (__fastcall *)(struct System_Func_T__int__o *, Il2CppObject *))method->klass->rgctx_data->_0_System_Func_T__int__Invoke->methodPointer)(
                          convertFunc,
@@ -93,7 +93,7 @@ void __fastcall BitValue_object___On(BitValue_T__o *this, Il2CppObject *val, con
 }
 
 
-void __fastcall BitValue_object___Reset(BitValue_T__o *this, const MethodInfo_2AA9808 *method)
+void __fastcall BitValue_object___Reset(BitValue_T__o *this, const MethodInfo_2B8BF84 *method)
 {
   this->fields.value = 0;
 }

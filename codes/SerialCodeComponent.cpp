@@ -8,15 +8,15 @@ bool __fastcall SerialCodeComponent__closeMenu(SerialCodeComponent_o *this, cons
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_421583A & 1) == 0 )
+  if ( (byte_42B0F80 & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_3115/*"CLOSE_MENU"*/, method);
-    byte_421583A = 1;
+    sub_B52984(&StringLiteral_3135/*"CLOSE_MENU"*/);
+    byte_42B0F80 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_B0D97C(0LL);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3115/*"CLOSE_MENU"*/, 0LL);
+    sub_B52A5C(0LL, method);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3135/*"CLOSE_MENU"*/, 0LL);
   return 1;
 }
 
@@ -24,10 +24,11 @@ bool __fastcall SerialCodeComponent__closeMenu(SerialCodeComponent_o *this, cons
 void __fastcall SerialCodeComponent__hideMenu(SerialCodeComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v3; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
 }
 
@@ -36,59 +37,53 @@ void __fastcall SerialCodeComponent__onCloseWebView(SerialCodeComponent_o *this,
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4215839 & 1) == 0 )
+  if ( (byte_42B0F7F & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_3119/*"CLOSE_SERIAL_CODE"*/, method);
-    byte_4215839 = 1;
+    sub_B52984(&StringLiteral_3139/*"CLOSE_SERIAL_CODE"*/);
+    byte_42B0F7F = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_B0D97C(0LL);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3119/*"CLOSE_SERIAL_CODE"*/, 0LL);
+    sub_B52A5C(0LL, method);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3139/*"CLOSE_SERIAL_CODE"*/, 0LL);
 }
 
 
 bool __fastcall SerialCodeComponent__openMenu(SerialCodeComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  System_String_o *v9; // x20
-  __int64 v10; // x1
-  __int64 v11; // x2
-  System_Action_o *v12; // x21
+  __int64 v4; // x1
+  System_String_o *v5; // x20
+  System_Action_o *v6; // x21
 
-  if ( (byte_4215838 & 1) == 0 )
+  if ( (byte_42B0F7E & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, method);
-    sub_B0D8A4(&LocalizationManager_TypeInfo, v3);
-    sub_B0D8A4(&Method_SerialCodeComponent_onCloseWebView__, v4);
-    sub_B0D8A4(&WebViewManager_TypeInfo, v5);
-    sub_B0D8A4(&StringLiteral_15414/*"WEB_VIEW_TITLE_SERIAL_CODE"*/, v6);
-    sub_B0D8A4(&StringLiteral_12734/*"SerialCodeTop"*/, v7);
-    byte_4215838 = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&Method_SerialCodeComponent_onCloseWebView__);
+    sub_B52984(&WebViewManager_TypeInfo);
+    sub_B52984(&StringLiteral_15472/*"WEB_VIEW_TITLE_SERIAL_CODE"*/);
+    sub_B52984(&StringLiteral_12787/*"SerialCodeTop"*/);
+    byte_42B0F7E = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_15414/*"WEB_VIEW_TITLE_SERIAL_CODE"*/, 0LL);
-  v12 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v10, v11);
-  System_Action___ctor(v12, (Il2CppObject *)this, Method_SerialCodeComponent_onCloseWebView__, 0LL);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15472/*"WEB_VIEW_TITLE_SERIAL_CODE"*/, 0LL);
+  v6 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+  System_Action___ctor(v6, (Il2CppObject *)this, Method_SerialCodeComponent_onCloseWebView__, 0LL);
   if ( (BYTE3(WebViewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !WebViewManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo);
   }
-  WebViewManager__OpenViewDynamic(v9, (System_String_o *)StringLiteral_12734/*"SerialCodeTop"*/, v12, 0LL);
+  WebViewManager__OpenViewDynamic(v5, (System_String_o *)StringLiteral_12787/*"SerialCodeTop"*/, v6, 0LL);
   return 1;
 }
 
@@ -96,9 +91,10 @@ bool __fastcall SerialCodeComponent__openMenu(SerialCodeComponent_o *this, const
 void __fastcall SerialCodeComponent__showMenu(SerialCodeComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v3; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v3);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
 }

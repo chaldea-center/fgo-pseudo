@@ -2,20 +2,18 @@
 void __fastcall DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long____ctor(
         DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long__o *this,
         int32_t kind,
-        const MethodInfo_2669D60 *method)
+        const MethodInfo_23E2464 *method)
 {
   DataMasterBase_o *v5; // x20
 
   v5 = (DataMasterBase_o *)this;
-  if ( (byte_421E96D & 1) == 0 )
+  if ( (byte_42B8056 & 1) == 0 )
   {
-    this = (DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long__o *)sub_B0D8A4(
-                                                                               &DataMasterBase_TypeInfo,
-                                                                               *(_QWORD *)&kind);
-    byte_421E96D = 1;
+    this = (DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long__o *)sub_B52984(&DataMasterBase_TypeInfo);
+    byte_42B8056 = 1;
   }
   if ( !v5 )
-    sub_B0D97C(this);
+    sub_B52A5C(this, *(_QWORD *)&kind);
   if ( (BYTE3(DataMasterBase_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !DataMasterBase_TypeInfo->_2.cctor_finished )
   {
@@ -30,7 +28,7 @@ void __fastcall DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long____c
 
 void __fastcall DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long___ForForceDerived(
         DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long__o *this,
-        const MethodInfo_2669F84 *method)
+        const MethodInfo_23E2688 *method)
 {
   ;
 }
@@ -39,12 +37,12 @@ void __fastcall DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long___Fo
 DataEntityBase_array *__fastcall DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long___getList(
         DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long__o *this,
         Il2CppObject *obj,
-        const MethodInfo_2669F08 *method)
+        const MethodInfo_23E260C *method)
 {
-  if ( (byte_421E96E & 1) == 0 )
+  if ( (byte_42B8057 & 1) == 0 )
   {
-    sub_B0D8A4(&JsonManager_TypeInfo, obj);
-    byte_421E96E = 1;
+    sub_B52984(&JsonManager_TypeInfo);
+    byte_42B8057 = 1;
   }
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);

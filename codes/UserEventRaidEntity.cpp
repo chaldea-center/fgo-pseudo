@@ -1,33 +1,32 @@
 void __fastcall UserEventRaidEntity___ctor(UserEventRaidEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42136AA & 1) == 0 )
+  if ( (byte_42AEEC6 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
-    byte_42136AA = 1;
+    sub_B52984(&Method_DataEntityBase_string___ctor__);
+    byte_42AEEC6 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall UserEventRaidEntity__CreatePK(
         int64_t userId,
         int32_t eventId,
         int32_t day,
         const MethodInfo *method)
 {
-  if ( (byte_42136A9 & 1) == 0 )
+  if ( (byte_42AEEC5 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_long__int__int___, *(_QWORD *)&eventId);
-    byte_42136A9 = 1;
+    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_42AEEC5 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            eventId,
            day,
-           (const MethodInfo_1713A3C *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_1A4E618 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 

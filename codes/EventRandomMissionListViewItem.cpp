@@ -18,33 +18,34 @@ void __fastcall EventRandomMissionListViewItem___ctor(
   System_Int32_array *v19; // x6
   System_Int32_array *v20; // x7
   EventMissionEntity_o *eventMissionEnt; // x0
-  System_String_array **v22; // x2
-  System_String_array **v23; // x3
-  System_Boolean_array **v24; // x4
-  System_Int32_array **v25; // x5
-  System_Int32_array *v26; // x6
-  System_Int32_array *v27; // x7
+  __int64 v22; // x1
+  System_String_array **v23; // x2
+  System_String_array **v24; // x3
+  System_Boolean_array **v25; // x4
+  System_Int32_array **v26; // x5
+  System_Int32_array *v27; // x6
+  System_Int32_array *v28; // x7
   int32_t id; // w8
-  System_Int32_array **v29; // x1
   System_Int32_array **v30; // x1
-  System_String_array **v31; // x2
-  System_String_array **v32; // x3
-  System_Boolean_array **v33; // x4
-  System_Int32_array **v34; // x5
-  System_Int32_array *v35; // x6
-  System_Int32_array *v36; // x7
+  System_Int32_array **v31; // x1
+  System_String_array **v32; // x2
+  System_String_array **v33; // x3
+  System_Boolean_array **v34; // x4
+  System_Int32_array **v35; // x5
+  System_Int32_array *v36; // x6
+  System_Int32_array *v37; // x7
   bool isNowMission; // w0
   EventRandomMissionListViewItem_c *klass; // x8
-  struct EventMissionEntity_o *v39; // x8
+  struct EventMissionEntity_o *v40; // x8
 
-  if ( (byte_42149F8 & 1) == 0 )
+  if ( (byte_42B045C & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_1/*""*/, randomMissionEnt);
-    byte_42149F8 = 1;
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B045C = 1;
   }
   MissionListViewItem___ctor((MissionListViewItem_o *)this, 0LL);
   this->fields.eventRandomMissionEnt = randomMissionEnt;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.eventRandomMissionEnt,
     (System_Int32_array **)randomMissionEnt,
     v9,
@@ -54,7 +55,7 @@ void __fastcall EventRandomMissionListViewItem___ctor(
     v13,
     v14);
   this->fields.eventMissionEnt = missionData;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.eventMissionEnt,
     (System_Int32_array **)missionData,
     v15,
@@ -70,15 +71,15 @@ void __fastcall EventRandomMissionListViewItem___ctor(
   this->fields.isNew = 0;
   this->fields.currentMissionId = id;
   this->fields.dispNo = missionData->fields.dispNo;
-  v29 = (System_Int32_array **)StringLiteral_1/*""*/;
+  v30 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.condMsg = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B0D840((BattleServantConfConponent_o *)&this->fields.condMsg, v29, v22, v23, v24, v25, v26, v27);
+  sub_B52920((BattleServantConfConponent_o *)&this->fields.condMsg, v30, v23, v24, v25, v26, v27, v28);
   this->fields.progVal = 0.0;
   this->fields.targetNum = 0LL;
   this->fields.progNum = 0LL;
-  v30 = (System_Int32_array **)StringLiteral_1/*""*/;
+  v31 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.progTxt = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B0D840((BattleServantConfConponent_o *)&this->fields.progTxt, v30, v31, v32, v33, v34, v35, v36);
+  sub_B52920((BattleServantConfConponent_o *)&this->fields.progTxt, v31, v32, v33, v34, v35, v36, v37);
   eventMissionEnt = this->fields.eventMissionEnt;
   *(_QWORD *)&this->fields.progStatus = 0x400000000LL;
   this->fields.bannerGroupId = missionData->fields.bannerGroup;
@@ -91,12 +92,12 @@ void __fastcall EventRandomMissionListViewItem___ctor(
           this,
           klass->vtable._7_SetGiftData.methodPtr),
         MissionListViewItem__SetRewardInfo((MissionListViewItem_o *)this, 0LL),
-        (v39 = this->fields.eventMissionEnt) == 0LL) )
+        (v40 = this->fields.eventMissionEnt) == 0LL) )
   {
 LABEL_9:
-    sub_B0D97C(eventMissionEnt);
+    sub_B52A5C(eventMissionEnt, v22);
   }
-  this->fields.sortValue2 = -v39->fields.id;
+  this->fields.sortValue2 = -v40->fields.id;
   MissionListViewItem__CheckEventMissionAdd((MissionListViewItem_o *)this, 0LL);
   if ( isDmy )
   {
@@ -111,24 +112,24 @@ bool __fastcall EventRandomMissionListViewItem__ExistClearConditionEntity(
         EventRandomMissionListViewItem_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   void *Instance; // x0
+  __int64 v4; // x1
   int v5; // w8
   unsigned int v6; // w9
   __int64 v7; // x10
   __int64 v9; // x0
 
-  if ( (byte_42149FB & 1) == 0 )
+  if ( (byte_42B045F & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMasterData_EventMissionConditionMaster___, method);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_42149FB = 1;
+    sub_B52984(&Method_DataManager_GetMasterData_EventMissionConditionMaster___);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_42B045F = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventMissionConditionMaster___)) == 0LL
+                     (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_EventMissionConditionMaster___)) == 0LL
     || (Instance = EventMissionConditionMaster__getMissionCondList(
                      (EventMissionConditionMaster_o *)Instance,
                      this->fields.currentEventId,
@@ -136,7 +137,7 @@ bool __fastcall EventRandomMissionListViewItem__ExistClearConditionEntity(
                      0LL)) == 0LL )
   {
 LABEL_14:
-    sub_B0D97C(Instance);
+    sub_B52A5C(Instance, v4);
   }
   v5 = *((_DWORD *)Instance + 6);
   if ( v5 < 1 )
@@ -146,8 +147,8 @@ LABEL_14:
   {
     if ( v6 >= v5 )
     {
-      v9 = sub_B0D9A8(Instance);
-      sub_B0D948(v9, 0LL);
+      v9 = sub_B52A88(Instance);
+      sub_B52A28(v9, 0LL);
     }
     v7 = *((_QWORD *)Instance + (int)v6 + 4);
     if ( !v7 )
@@ -164,19 +165,19 @@ System_String_o *__fastcall EventRandomMissionListViewItem__GetGiftName(
         EventRandomMissionListViewItem_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   void *ItemEntity; // x0
+  __int64 v4; // x1
   int32_t Type; // w0
   CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *v7; // x19
   int32_t v8; // w0
   int32_t v9; // w0
   struct ServantCostumeEntity_o *servantCostumeEnt; // x8
 
-  if ( (byte_42149FA & 1) == 0 )
+  if ( (byte_42B045E & 1) == 0 )
   {
-    sub_B0D8A4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, method);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v3);
-    byte_42149FA = 1;
+    sub_B52984(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B045E = 1;
   }
   if ( MissionListViewItem__get_Type((MissionListViewItem_o *)this, 0LL) == 2
     && MissionListViewItem__get_ItemEntity((MissionListViewItem_o *)this, 0LL) )
@@ -185,7 +186,7 @@ System_String_o *__fastcall EventRandomMissionListViewItem__GetGiftName(
     if ( ItemEntity )
       return (System_String_o *)*((_QWORD *)ItemEntity + 3);
 LABEL_17:
-    sub_B0D97C(ItemEntity);
+    sub_B52A5C(ItemEntity, v4);
   }
   Type = MissionListViewItem__get_Type((MissionListViewItem_o *)this, 0LL);
   if ( Gift__IsServant(Type, 0LL) && MissionListViewItem__get_SvtEntity((MissionListViewItem_o *)this, 0LL) )
@@ -215,7 +216,7 @@ LABEL_17:
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
   }
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_44201040(v7, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_44824884(v7, 0LL);
 }
 
 
@@ -234,12 +235,13 @@ void __fastcall EventRandomMissionListViewItem__SetGiftData(
   GiftEntity_array *giftEnts; // x20
   GiftEntity_o *IconGiftEntity; // x20
   __int64 v5; // x0
+  __int64 v6; // x1
   int32_t num; // w8
 
-  if ( (byte_42149F9 & 1) == 0 )
+  if ( (byte_42B045D & 1) == 0 )
   {
-    sub_B0D8A4(&MissionInfoMaker_TypeInfo, method);
-    byte_42149F9 = 1;
+    sub_B52984(&MissionInfoMaker_TypeInfo);
+    byte_42B045D = 1;
   }
   giftEnts = this->fields.giftEnts;
   if ( giftEnts )
@@ -258,7 +260,7 @@ void __fastcall EventRandomMissionListViewItem__SetGiftData(
       &this->fields.servantCostumeEnt,
       0LL);
     if ( !IconGiftEntity )
-      sub_B0D97C(v5);
+      sub_B52A5C(v5, v6);
     this->fields.rewardObjectId = IconGiftEntity->fields.objectId;
     num = IconGiftEntity->fields.num;
     if ( num <= 1 )
@@ -296,7 +298,7 @@ bool __fastcall EventRandomMissionListViewItem__SetSortValue(
       goto LABEL_8;
     }
 LABEL_9:
-    sub_B0D97C(eventRandomMissionEnt);
+    sub_B52A5C(eventRandomMissionEnt, sort);
   }
   startedAt = 0x7FFFFFFFFFFFFFFFLL;
 LABEL_8:
@@ -340,7 +342,7 @@ bool __fastcall EventRandomMissionListViewItem__get_IsHideReward(
 
   eventMissionEnt = this->fields.eventMissionEnt;
   if ( !eventMissionEnt )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, method);
   v4 = this->fields.progStatus < 2u;
   return v4 & EventMissionEntity__IsHideReward(eventMissionEnt, 0LL);
 }

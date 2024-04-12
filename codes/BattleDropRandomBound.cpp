@@ -1,96 +1,88 @@
 void __fastcall BattleDropRandomBound___ctor(BattleDropRandomBound_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  BattleDropRandomBound_RangeFloat_o *v5; // x20
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  __int64 v12; // x1
-  __int64 v13; // x2
-  BattleDropRandomBound_RangeFloat_o *v14; // x20
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
-  __int64 v21; // x1
-  __int64 v22; // x2
-  BattleDropRandomBound_RangeFloat_o *v23; // x20
-  System_String_array **v24; // x2
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
-  __int64 v30; // x1
-  __int64 v31; // x2
-  BattleDropRandomBound_RangeInt_o *v32; // x20
-  System_String_array **v33; // x2
-  System_String_array **v34; // x3
-  System_Boolean_array **v35; // x4
-  System_Int32_array **v36; // x5
-  System_Int32_array *v37; // x6
-  System_Int32_array *v38; // x7
+  BattleDropRandomBound_RangeFloat_o *v3; // x20
+  System_String_array **v4; // x2
+  System_String_array **v5; // x3
+  System_Boolean_array **v6; // x4
+  System_Int32_array **v7; // x5
+  System_Int32_array *v8; // x6
+  System_Int32_array *v9; // x7
+  BattleDropRandomBound_RangeFloat_o *v10; // x20
+  System_String_array **v11; // x2
+  System_String_array **v12; // x3
+  System_Boolean_array **v13; // x4
+  System_Int32_array **v14; // x5
+  System_Int32_array *v15; // x6
+  System_Int32_array *v16; // x7
+  BattleDropRandomBound_RangeFloat_o *v17; // x20
+  System_String_array **v18; // x2
+  System_String_array **v19; // x3
+  System_Boolean_array **v20; // x4
+  System_Int32_array **v21; // x5
+  System_Int32_array *v22; // x6
+  System_Int32_array *v23; // x7
+  BattleDropRandomBound_RangeInt_o *v24; // x20
+  System_String_array **v25; // x2
+  System_String_array **v26; // x3
+  System_Boolean_array **v27; // x4
+  System_Int32_array **v28; // x5
+  System_Int32_array *v29; // x6
+  System_Int32_array *v30; // x7
 
-  if ( (byte_42134D9 & 1) == 0 )
+  if ( (byte_42AECF5 & 1) == 0 )
   {
-    sub_B0D8A4(&BattleDropRandomBound_RangeFloat_TypeInfo, method);
-    sub_B0D8A4(&BattleDropRandomBound_RangeInt_TypeInfo, v4);
-    byte_42134D9 = 1;
+    sub_B52984(&BattleDropRandomBound_RangeFloat_TypeInfo);
+    sub_B52984(&BattleDropRandomBound_RangeInt_TypeInfo);
+    byte_42AECF5 = 1;
   }
-  v5 = (BattleDropRandomBound_RangeFloat_o *)sub_B0D974(BattleDropRandomBound_RangeFloat_TypeInfo, method, v2);
-  BattleDropRandomBound_RangeFloat___ctor(v5, 0LL);
-  this->fields.moveSpeedXRange = v5;
-  sub_B0D840(
+  v3 = (BattleDropRandomBound_RangeFloat_o *)sub_B52A54(BattleDropRandomBound_RangeFloat_TypeInfo);
+  BattleDropRandomBound_RangeFloat___ctor(v3, 0LL);
+  this->fields.moveSpeedXRange = v3;
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.moveSpeedXRange,
-    (System_Int32_array **)v5,
+    (System_Int32_array **)v3,
+    v4,
+    v5,
     v6,
     v7,
     v8,
-    v9,
-    v10,
-    v11);
-  v14 = (BattleDropRandomBound_RangeFloat_o *)sub_B0D974(BattleDropRandomBound_RangeFloat_TypeInfo, v12, v13);
-  BattleDropRandomBound_RangeFloat___ctor(v14, 0LL);
-  this->fields.moveSpeedYRange = v14;
-  sub_B0D840(
+    v9);
+  v10 = (BattleDropRandomBound_RangeFloat_o *)sub_B52A54(BattleDropRandomBound_RangeFloat_TypeInfo);
+  BattleDropRandomBound_RangeFloat___ctor(v10, 0LL);
+  this->fields.moveSpeedYRange = v10;
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.moveSpeedYRange,
-    (System_Int32_array **)v14,
+    (System_Int32_array **)v10,
+    v11,
+    v12,
+    v13,
+    v14,
     v15,
-    v16,
-    v17,
+    v16);
+  v17 = (BattleDropRandomBound_RangeFloat_o *)sub_B52A54(BattleDropRandomBound_RangeFloat_TypeInfo);
+  BattleDropRandomBound_RangeFloat___ctor(v17, 0LL);
+  this->fields.delayStartTimeRange = v17;
+  sub_B52920(
+    (BattleServantConfConponent_o *)&this->fields.delayStartTimeRange,
+    (System_Int32_array **)v17,
     v18,
     v19,
-    v20);
-  v23 = (BattleDropRandomBound_RangeFloat_o *)sub_B0D974(BattleDropRandomBound_RangeFloat_TypeInfo, v21, v22);
-  BattleDropRandomBound_RangeFloat___ctor(v23, 0LL);
-  this->fields.delayStartTimeRange = v23;
-  sub_B0D840(
-    (BattleServantConfConponent_o *)&this->fields.delayStartTimeRange,
-    (System_Int32_array **)v23,
-    v24,
+    v20,
+    v21,
+    v22,
+    v23);
+  v24 = (BattleDropRandomBound_RangeInt_o *)sub_B52A54(BattleDropRandomBound_RangeInt_TypeInfo);
+  BattleDropRandomBound_RangeInt___ctor(v24, 0LL);
+  this->fields.boundCountRange = v24;
+  sub_B52920(
+    (BattleServantConfConponent_o *)&this->fields.boundCountRange,
+    (System_Int32_array **)v24,
     v25,
     v26,
     v27,
     v28,
-    v29);
-  v32 = (BattleDropRandomBound_RangeInt_o *)sub_B0D974(BattleDropRandomBound_RangeInt_TypeInfo, v30, v31);
-  BattleDropRandomBound_RangeInt___ctor(v32, 0LL);
-  this->fields.boundCountRange = v32;
-  sub_B0D840(
-    (BattleServantConfConponent_o *)&this->fields.boundCountRange,
-    (System_Int32_array **)v32,
-    v33,
-    v34,
-    v35,
-    v36,
-    v37,
-    v38);
+    v29,
+    v30);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -162,7 +154,7 @@ float __fastcall BattleDropRandomBound__GetRandomFloat(
   float max; // s1
 
   if ( !rangeFloat )
-    sub_B0D97C(this);
+    sub_B52A5C(this, 0LL);
   result = rangeFloat->fields.min;
   max = rangeFloat->fields.max;
   if ( result != max )
@@ -180,11 +172,11 @@ int32_t __fastcall BattleDropRandomBound__GetRandomInt(
   int32_t max; // w8
 
   if ( !rangeInt )
-    sub_B0D97C(this);
+    sub_B52A5C(this, 0LL);
   result = rangeInt->fields.min;
   max = rangeInt->fields.max;
   if ( result != max )
-    return UnityEngine_Random__Range_34969060(result, max + 1, 0LL);
+    return UnityEngine_Random__Range_35650740(result, max + 1, 0LL);
   return result;
 }
 
@@ -275,29 +267,30 @@ float __fastcall BattleDropRandomBound__GetRelativePosYFromAnimationStarted(
 void __fastcall BattleDropRandomBound__Initialize(BattleDropRandomBound_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *boundObject; // x20
+  __int64 v4; // x1
   UnityEngine_GameObject_o *transform; // x0
   BattleDropRandomBound_RangeFloat_o *moveSpeedXRange; // x1
-  BattleDropRandomBound_o *v6; // x0
-  const MethodInfo *v7; // x2
+  BattleDropRandomBound_o *v7; // x0
+  const MethodInfo *v8; // x2
   float RandomFloat; // s0
   BattleDropRandomBound_RangeFloat_o *moveSpeedYRange; // x1
-  BattleDropRandomBound_o *v10; // x0
-  const MethodInfo *v11; // x2
-  float v12; // s0
+  BattleDropRandomBound_o *v11; // x0
+  const MethodInfo *v12; // x2
+  float v13; // s0
   float gravity; // s1
   BattleDropRandomBound_RangeFloat_o *delayStartTimeRange; // x1
-  BattleDropRandomBound_o *v15; // x0
-  const MethodInfo *v16; // x2
-  float v17; // s0
+  BattleDropRandomBound_o *v16; // x0
+  const MethodInfo *v17; // x2
+  float v18; // s0
   BattleDropRandomBound_RangeInt_o *boundCountRange; // x1
-  BattleDropRandomBound_o *v19; // x0
-  const MethodInfo *v20; // x2
+  BattleDropRandomBound_o *v20; // x0
+  const MethodInfo *v21; // x2
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_42134D7 & 1) == 0 )
+  if ( (byte_42AECF3 & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
-    byte_42134D7 = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AECF3 = 1;
   }
   boundObject = (UnityEngine_Object_o *)this->fields.boundObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -315,22 +308,22 @@ void __fastcall BattleDropRandomBound__Initialize(BattleDropRandomBound_o *this,
   transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
 LABEL_11:
-    sub_B0D97C(transform);
+    sub_B52A5C(transform, v4);
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0LL);
   moveSpeedXRange = this->fields.moveSpeedXRange;
   this->fields._startPosition = localPosition;
-  RandomFloat = BattleDropRandomBound__GetRandomFloat(v6, moveSpeedXRange, v7);
+  RandomFloat = BattleDropRandomBound__GetRandomFloat(v7, moveSpeedXRange, v8);
   moveSpeedYRange = this->fields.moveSpeedYRange;
   this->fields.moveSpeedXPerSecond = RandomFloat * 30.0;
-  v12 = BattleDropRandomBound__GetRandomFloat(v10, moveSpeedYRange, v11);
+  v13 = BattleDropRandomBound__GetRandomFloat(v11, moveSpeedYRange, v12);
   gravity = this->fields.gravity;
   delayStartTimeRange = this->fields.delayStartTimeRange;
-  this->fields.startSpeedYPerSecond = v12 * 30.0;
+  this->fields.startSpeedYPerSecond = v13 * 30.0;
   this->fields.gravityPerSecond = (float)(gravity * 30.0) * 30.0;
-  v17 = BattleDropRandomBound__GetRandomFloat(v15, delayStartTimeRange, v16);
+  v18 = BattleDropRandomBound__GetRandomFloat(v16, delayStartTimeRange, v17);
   boundCountRange = this->fields.boundCountRange;
-  this->fields.delayStartTime = v17;
-  this->fields.maxBoundCount = BattleDropRandomBound__GetRandomInt(v19, boundCountRange, v20);
+  this->fields.delayStartTime = v18;
+  this->fields.maxBoundCount = BattleDropRandomBound__GetRandomInt(v20, boundCountRange, v21);
   *(_QWORD *)&this->fields.boundCount = 0LL;
 }
 
@@ -338,11 +331,12 @@ LABEL_11:
 void __fastcall BattleDropRandomBound__StopBound(BattleDropRandomBound_o *this, const MethodInfo *method)
 {
   UnityEngine_Transform_o *transform; // x0
+  __int64 v4; // x1
   float bottomPositionY; // s10
   float x; // s8
   float z; // s9
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v8; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( this->fields.maxBoundCount >= this->fields.boundCount )
   {
@@ -354,12 +348,12 @@ void __fastcall BattleDropRandomBound__StopBound(BattleDropRandomBound_o *this, 
           z = localPosition.fields.z,
           (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
     {
-      sub_B0D97C(transform);
+      sub_B52A5C(transform, v4);
     }
-    v8.fields.x = x;
-    v8.fields.y = bottomPositionY;
-    v8.fields.z = z;
-    UnityEngine_Transform__set_localPosition(transform, v8, 0LL);
+    v9.fields.x = x;
+    v9.fields.y = bottomPositionY;
+    v9.fields.z = z;
+    UnityEngine_Transform__set_localPosition(transform, v9, 0LL);
     this->fields.boundCount = this->fields.maxBoundCount + 1;
   }
 }
@@ -368,23 +362,24 @@ void __fastcall BattleDropRandomBound__StopBound(BattleDropRandomBound_o *this, 
 void __fastcall BattleDropRandomBound__Update(BattleDropRandomBound_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *boundObject; // x20
+  __int64 v4; // x1
   float elapsedTime; // s8
   UnityEngine_GameObject_o *transform; // x0
   float deltaTime; // s0
-  const MethodInfo *v7; // x1
+  const MethodInfo *v8; // x1
   float x; // s11
   float y; // s12
   float z; // s8
-  const MethodInfo *v11; // x1
+  const MethodInfo *v12; // x1
   float RelativePosXFromAnimationStarted; // s9
-  const MethodInfo *v13; // x1
+  const MethodInfo *v14; // x1
   float RelativePosYFromAnimationStarted; // s10
-  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_42134D8 & 1) == 0 )
+  if ( (byte_42AECF4 & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
-    byte_42134D8 = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AECF4 = 1;
   }
   boundObject = (UnityEngine_Object_o *)this->fields.boundObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -413,24 +408,24 @@ void __fastcall BattleDropRandomBound__Update(BattleDropRandomBound_o *this, con
       {
         return;
       }
-      BattleDropRandomBound__CalcBoundCount(this, v7);
+      BattleDropRandomBound__CalcBoundCount(this, v8);
       x = this->fields._startPosition.fields.x;
       y = this->fields._startPosition.fields.y;
       z = this->fields._startPosition.fields.z;
-      RelativePosXFromAnimationStarted = BattleDropRandomBound__GetRelativePosXFromAnimationStarted(this, v11);
-      RelativePosYFromAnimationStarted = BattleDropRandomBound__GetRelativePosYFromAnimationStarted(this, v13);
+      RelativePosXFromAnimationStarted = BattleDropRandomBound__GetRelativePosXFromAnimationStarted(this, v12);
+      RelativePosYFromAnimationStarted = BattleDropRandomBound__GetRelativePosYFromAnimationStarted(this, v14);
       transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
       if ( transform )
       {
-        v15.fields.y = y + RelativePosYFromAnimationStarted;
-        v15.fields.x = x + RelativePosXFromAnimationStarted;
-        v15.fields.z = z;
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v15, 0LL);
+        v16.fields.y = y + RelativePosYFromAnimationStarted;
+        v16.fields.x = x + RelativePosXFromAnimationStarted;
+        v16.fields.z = z;
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v16, 0LL);
         return;
       }
     }
 LABEL_16:
-    sub_B0D97C(transform);
+    sub_B52A5C(transform, v4);
   }
 }
 
@@ -445,55 +440,55 @@ void __fastcall BattleDropRandomBound_RangeFloat___ctor(
         BattleDropRandomBound_RangeFloat_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_42138F8 & 1) == 0 )
+  if ( (byte_42AF134 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_BattleDropRandomBound_Range_float___ctor__, method);
-    byte_42138F8 = 1;
+    sub_B52984(&Method_BattleDropRandomBound_Range_float___ctor__);
+    byte_42AF134 = 1;
   }
   BattleDropRandomBound_Range_float____ctor(
     (BattleDropRandomBound_Range_float__o *)this,
-    (const MethodInfo_2DD37E0 *)Method_BattleDropRandomBound_Range_float___ctor__);
+    (const MethodInfo_2D7D4B0 *)Method_BattleDropRandomBound_Range_float___ctor__);
 }
 
 
 void __fastcall BattleDropRandomBound_RangeInt___ctor(BattleDropRandomBound_RangeInt_o *this, const MethodInfo *method)
 {
-  if ( (byte_42138F9 & 1) == 0 )
+  if ( (byte_42AF135 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_BattleDropRandomBound_Range_int___ctor__, method);
-    byte_42138F9 = 1;
+    sub_B52984(&Method_BattleDropRandomBound_Range_int___ctor__);
+    byte_42AF135 = 1;
   }
   BattleDropRandomBound_Range_int____ctor(
     (BattleDropRandomBound_Range_int__o *)this,
-    (const MethodInfo_2DD37B0 *)Method_BattleDropRandomBound_Range_int___ctor__);
+    (const MethodInfo_2D7D480 *)Method_BattleDropRandomBound_Range_int___ctor__);
 }
 
 
 void __fastcall BattleDropRandomBound_Range_float____ctor(
         BattleDropRandomBound_Range_float__o *this,
-        const MethodInfo_2DD37E0 *method)
+        const MethodInfo_2D7D4B0 *method)
 {
   if ( !this )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, method);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
 void __fastcall BattleDropRandomBound_Range_int____ctor(
         BattleDropRandomBound_Range_int__o *this,
-        const MethodInfo_2DD37B0 *method)
+        const MethodInfo_2D7D480 *method)
 {
   if ( !this )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, method);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
 void __fastcall BattleDropRandomBound_Range_object____ctor(
         BattleDropRandomBound_Range_T__o *this,
-        const MethodInfo_2DD37C8 *method)
+        const MethodInfo_2D7D498 *method)
 {
   if ( !this )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, method);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }

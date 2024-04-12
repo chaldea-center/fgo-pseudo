@@ -1,28 +1,27 @@
 void __fastcall EquipAddEntity___ctor(EquipAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4218BD5 & 1) == 0 )
+  if ( (byte_42B4691 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4218BD5 = 1;
+    sub_B52984(&Method_DataEntityBase_string___ctor__);
+    byte_42B4691 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EquipAddEntity__CreatePK(int32_t id, int32_t equipId, const MethodInfo *method)
 {
-  if ( (byte_4218BD3 & 1) == 0 )
+  if ( (byte_42B468F & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&equipId);
-    byte_4218BD3 = 1;
+    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_42B468F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            equipId,
-           (const MethodInfo_171341C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1A4DF50 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -46,19 +45,19 @@ int32_t __fastcall EquipAddEntity__GetImageId(EquipAddEntity_o *this, int32_t ge
 
 bool __fastcall EquipAddEntity__IsOpen(EquipAddEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   CommonReleaseMaster_o *Master_WarQuestSelectionMaster; // x0
+  __int64 v4; // x1
 
-  if ( (byte_4218BD4 & 1) == 0 )
+  if ( (byte_42B4690 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMaster_CommonReleaseMaster___, method);
-    sub_B0D8A4(&DataManager_TypeInfo, v3);
-    byte_4218BD4 = 1;
+    sub_B52984(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_B52984(&DataManager_TypeInfo);
+    byte_42B4690 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (CommonReleaseMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Master_WarQuestSelectionMaster = (CommonReleaseMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   if ( !Master_WarQuestSelectionMaster )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v4);
   return CommonReleaseMaster__IsOpen(Master_WarQuestSelectionMaster, this->fields.commonReleaseId, 0LL, 0, 0LL);
 }

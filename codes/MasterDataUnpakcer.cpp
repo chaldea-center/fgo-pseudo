@@ -1,62 +1,59 @@
 void __fastcall MasterDataUnpakcer___ctor(MasterDataUnpakcer_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  struct System_Byte_array *v4; // x0
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
-  struct System_Byte_array *v11; // x0
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
-  __int64 v18; // x1
-  __int64 v19; // x2
-  System_IO_MemoryStream_o *v20; // x20
-  System_String_array **v21; // x2
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
+  struct System_Byte_array *v3; // x0
+  System_String_array **v4; // x2
+  System_String_array **v5; // x3
+  System_Boolean_array **v6; // x4
+  System_Int32_array **v7; // x5
+  System_Int32_array *v8; // x6
+  System_Int32_array *v9; // x7
+  struct System_Byte_array *v10; // x0
+  System_String_array **v11; // x2
+  System_String_array **v12; // x3
+  System_Boolean_array **v13; // x4
+  System_Int32_array **v14; // x5
+  System_Int32_array *v15; // x6
+  System_Int32_array *v16; // x7
+  System_IO_MemoryStream_o *v17; // x20
+  System_String_array **v18; // x2
+  System_String_array **v19; // x3
+  System_Boolean_array **v20; // x4
+  System_Int32_array **v21; // x5
+  System_Int32_array *v22; // x6
+  System_Int32_array *v23; // x7
 
-  if ( (byte_4212A36 & 1) == 0 )
+  if ( (byte_42B3095 & 1) == 0 )
   {
-    sub_B0D8A4(&byte___TypeInfo, method);
-    sub_B0D8A4(&System_IO_MemoryStream_TypeInfo, v3);
-    byte_4212A36 = 1;
+    sub_B52984(&byte___TypeInfo);
+    sub_B52984(&System_IO_MemoryStream_TypeInfo);
+    byte_42B3095 = 1;
   }
-  v4 = (struct System_Byte_array *)sub_B0D8BC(byte___TypeInfo, 8LL);
-  this->fields.tmp0 = v4;
-  sub_B0D840((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v4, v5, v6, v7, v8, v9, v10);
-  v11 = (struct System_Byte_array *)sub_B0D8BC(byte___TypeInfo, 8LL);
-  this->fields.tmp1 = v11;
-  sub_B0D840(
+  v3 = (struct System_Byte_array *)sub_B5299C(byte___TypeInfo, 8LL);
+  this->fields.tmp0 = v3;
+  sub_B52920((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (struct System_Byte_array *)sub_B5299C(byte___TypeInfo, 8LL);
+  this->fields.tmp1 = v10;
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.tmp1,
-    (System_Int32_array **)v11,
+    (System_Int32_array **)v10,
+    v11,
     v12,
     v13,
     v14,
     v15,
-    v16,
-    v17);
-  v20 = (System_IO_MemoryStream_o *)sub_B0D974(System_IO_MemoryStream_TypeInfo, v18, v19);
-  System_IO_MemoryStream___ctor_44568936(v20, 2000000, 0LL);
-  this->fields.writeStream = v20;
-  sub_B0D840(
+    v16);
+  v17 = (System_IO_MemoryStream_o *)sub_B52A54(System_IO_MemoryStream_TypeInfo);
+  System_IO_MemoryStream___ctor_45046012(v17, 2000000, 0LL);
+  this->fields.writeStream = v17;
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.writeStream,
-    (System_Int32_array **)v20,
+    (System_Int32_array **)v17,
+    v18,
+    v19,
+    v20,
     v21,
     v22,
-    v23,
-    v24,
-    v25,
-    v26);
+    v23);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -69,13 +66,11 @@ void __fastcall MasterDataUnpakcer__Seek(
 {
   __int64 v6; // x21
   __int64 v7; // x0
-  __int64 v8; // x1
-  __int64 v9; // x2
-  System_FormatException_o *v10; // x19
-  __int64 v11; // x0
+  System_FormatException_o *v8; // x19
+  __int64 v9; // x0
 
   if ( !s )
-    sub_B0D97C(this);
+    sub_B52A5C(this, 0LL);
   v6 = ((__int64 (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer, int64_t, const MethodInfo *))s->klass->vtable._11_unknown.method)(
          s,
          s->klass->vtable._12_unknown.methodPtr,
@@ -87,11 +82,11 @@ void __fastcall MasterDataUnpakcer__Seek(
               1LL,
               s->klass->vtable._29_unknown.methodPtr) )
   {
-    v7 = sub_B0D8A8(&System_FormatException_TypeInfo);
-    v10 = (System_FormatException_o *)sub_B0D974(v7, v8, v9);
-    System_FormatException___ctor(v10, 0LL);
-    v11 = sub_B0D8A8(&Method_MasterDataUnpakcer_Seek__);
-    sub_B0D948(v10, v11);
+    v7 = sub_B52988(&System_FormatException_TypeInfo);
+    v8 = (System_FormatException_o *)sub_B52A54(v7);
+    System_FormatException___ctor(v8, 0LL);
+    v9 = sub_B52988(&Method_MasterDataUnpakcer_Seek__);
+    sub_B52A28(v8, v9);
   }
 }
 
@@ -113,13 +108,11 @@ void __fastcall MasterDataUnpakcer__Skip(MasterDataUnpakcer_o *this, System_IO_S
   int v17; // w21
   int32_t v18; // w0
   __int64 v19; // x0
-  __int64 v20; // x1
-  __int64 v21; // x2
-  System_FormatException_o *v22; // x19
-  __int64 v23; // x0
+  System_FormatException_o *v20; // x19
+  __int64 v21; // x0
 
   if ( !s )
-    sub_B0D97C(this);
+    sub_B52A5C(this, 0LL);
   v5 = ((__int64 (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer, const MethodInfo *))s->klass->vtable._31_ReadByte.method)(
          s,
          s->klass->vtable._32_unknown.methodPtr,
@@ -127,11 +120,11 @@ void __fastcall MasterDataUnpakcer__Skip(MasterDataUnpakcer_o *this, System_IO_S
   if ( (v5 & 0x80000000) != 0 )
   {
 LABEL_35:
-    v19 = sub_B0D8A8(&System_FormatException_TypeInfo);
-    v22 = (System_FormatException_o *)sub_B0D974(v19, v20, v21);
-    System_FormatException___ctor(v22, 0LL);
-    v23 = sub_B0D8A8(&Method_MasterDataUnpakcer_Skip__);
-    sub_B0D948(v22, v23);
+    v19 = sub_B52988(&System_FormatException_TypeInfo);
+    v20 = (System_FormatException_o *)sub_B52A54(v19);
+    System_FormatException___ctor(v20, 0LL);
+    v21 = sub_B52988(&Method_MasterDataUnpakcer_Skip__);
+    sub_B52A28(v20, v21);
   }
   if ( (int)v5 >= 128 )
   {
@@ -296,7 +289,6 @@ void __fastcall MasterDataUnpakcer__SkipMap(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 Il2CppObject *__fastcall MasterDataUnpakcer__Unpack(
         MasterDataUnpakcer_o *this,
         System_Byte_array *buf,
@@ -304,28 +296,28 @@ Il2CppObject *__fastcall MasterDataUnpakcer__Unpack(
         int32_t size,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  System_IO_MemoryStream_o *v10; // x19
-  const MethodInfo *v11; // x2
+  System_IO_MemoryStream_o *v9; // x19
+  const MethodInfo *v10; // x2
+  __int64 v11; // x3
   Il2CppObject *v12; // x20
   System_IO_MemoryStream_c *klass; // x8
   unsigned __int64 v14; // x10
   int32_t *p_offset; // x11
   __int64 v16; // x0
 
-  if ( (byte_4212A2F & 1) == 0 )
+  if ( (byte_42B308E & 1) == 0 )
   {
-    sub_B0D8A4(&System_IDisposable_TypeInfo, buf);
-    sub_B0D8A4(&System_IO_MemoryStream_TypeInfo, v9);
-    byte_4212A2F = 1;
+    sub_B52984(&System_IDisposable_TypeInfo);
+    sub_B52984(&System_IO_MemoryStream_TypeInfo);
+    byte_42B308E = 1;
   }
-  v10 = (System_IO_MemoryStream_o *)sub_B0D974(System_IO_MemoryStream_TypeInfo, buf, *(_QWORD *)&offset);
-  System_IO_MemoryStream___ctor_44569492(v10, buf, offset, size, 0LL);
-  v12 = MasterDataUnpakcer__Unpack_20978816(this, (System_IO_Stream_o *)v10, v11);
-  if ( v10 )
+  v9 = (System_IO_MemoryStream_o *)sub_B52A54(System_IO_MemoryStream_TypeInfo);
+  System_IO_MemoryStream___ctor_45046568(v9, buf, offset, size, 0LL);
+  v12 = MasterDataUnpakcer__Unpack_30627956(this, (System_IO_Stream_o *)v9, v10);
+  if ( v9 )
   {
-    klass = v10->klass;
-    if ( *(_WORD *)&v10->klass->_2.bitflags1 )
+    klass = v9->klass;
+    if ( *(_WORD *)&v9->klass->_2.bitflags1 )
     {
       v14 = 0LL;
       p_offset = &klass->_1.interfaceOffsets->offset;
@@ -333,7 +325,7 @@ Il2CppObject *__fastcall MasterDataUnpakcer__Unpack(
       {
         ++v14;
         p_offset += 4;
-        if ( v14 >= *(unsigned __int16 *)&v10->klass->_2.bitflags1 )
+        if ( v14 >= *(unsigned __int16 *)&v9->klass->_2.bitflags1 )
           goto LABEL_8;
       }
       v16 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
@@ -341,9 +333,9 @@ Il2CppObject *__fastcall MasterDataUnpakcer__Unpack(
     else
     {
 LABEL_8:
-      v16 = sub_AA67A0(v10, System_IDisposable_TypeInfo, 0LL);
+      v16 = sub_AEB880(v9, System_IDisposable_TypeInfo, 0LL, v11);
     }
-    (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v16)(v10, *(_QWORD *)(v16 + 8));
+    (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v16)(v9, *(_QWORD *)(v16 + 8));
   }
   return v12;
 }
@@ -355,48 +347,45 @@ System_Collections_Generic_List_object__o *__fastcall MasterDataUnpakcer__Unpack
         int64_t len,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  System_Collections_Generic_List_RegexCharClass_SingleRange__o *v9; // x22
-  const MethodInfo *v10; // x2
-  int64_t v11; // x23
-  Il2CppObject *v12; // x0
+  System_Collections_Generic_List_RegexCharClass_SingleRange__o *v7; // x22
+  const MethodInfo *v8; // x2
+  int64_t v9; // x23
+  Il2CppObject *v10; // x0
+  __int64 v11; // x1
 
-  if ( (byte_4212A34 & 1) == 0 )
+  if ( (byte_42B3093 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_object__Add__, s);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_object___ctor___67887608, v7);
-    sub_B0D8A4(&System_Collections_Generic_List_object__TypeInfo, v8);
-    byte_4212A34 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_object__Add__);
+    sub_B52984(&Method_System_Collections_Generic_List_object___ctor___68515512);
+    sub_B52984(&System_Collections_Generic_List_object__TypeInfo);
+    byte_42B3093 = 1;
   }
-  v9 = (System_Collections_Generic_List_RegexCharClass_SingleRange__o *)sub_B0D974(
-                                                                          System_Collections_Generic_List_object__TypeInfo,
-                                                                          s,
-                                                                          len);
+  v7 = (System_Collections_Generic_List_RegexCharClass_SingleRange__o *)sub_B52A54(System_Collections_Generic_List_object__TypeInfo);
   System_Collections_Generic_List_RegexCharClass_SingleRange____ctor(
-    v9,
+    v7,
     len,
-    (const MethodInfo_2FC4AF4 *)Method_System_Collections_Generic_List_object___ctor___67887608);
+    (const MethodInfo_2FF0A10 *)Method_System_Collections_Generic_List_object___ctor___68515512);
   if ( len >= 1 )
   {
-    v11 = 0LL;
+    v9 = 0LL;
     do
     {
-      v12 = MasterDataUnpakcer__Unpack_20978816(this, s, v10);
-      if ( !v9 )
-        sub_B0D97C(v12);
+      v10 = MasterDataUnpakcer__Unpack_30627956(this, s, v8);
+      if ( !v7 )
+        sub_B52A5C(v10, v11);
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v9,
-        (EventMissionProgressRequest_Argument_ProgressData_o *)v12,
-        (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_object__Add__);
-      ++v11;
+        (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v7,
+        (EventMissionProgressRequest_Argument_ProgressData_o *)v10,
+        (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_object__Add__);
+      ++v9;
     }
-    while ( v11 < len );
+    while ( v9 < len );
   }
-  return (System_Collections_Generic_List_object__o *)v9;
+  return (System_Collections_Generic_List_object__o *)v7;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall MasterDataUnpakcer__UnpackArrayByte(
         MasterDataUnpakcer_o *this,
         int32_t b,
@@ -405,16 +394,14 @@ void __fastcall MasterDataUnpakcer__UnpackArrayByte(
         const MethodInfo *method)
 {
   MasterDataUnpakcer_o *v7; // x21
-  struct System_Byte_array *tmp0; // x1
-  __int64 v9; // x22
-  struct System_Byte_array *v10; // x1
-  int v11; // w23
-  __int64 v13; // x0
+  __int64 v8; // x22
+  int v9; // w23
+  __int64 v11; // x0
 
   v7 = this;
   if ( b <= 159 )
   {
-    v9 = b & 0xF;
+    v8 = b & 0xF;
   }
   else
   {
@@ -430,28 +417,28 @@ void __fastcall MasterDataUnpakcer__UnpackArrayByte(
                                        0LL,
                                        2LL,
                                        s->klass->vtable._31_ReadByte.methodPtr);
-      tmp0 = v7->fields.tmp0;
-      if ( !tmp0 )
+      *(_QWORD *)&b = v7->fields.tmp0;
+      if ( !*(_QWORD *)&b )
         goto LABEL_21;
-      if ( tmp0->max_length >= 2 )
+      if ( *(_DWORD *)(*(_QWORD *)&b + 24LL) >= 2u )
       {
         if ( ws )
         {
-          v9 = tmp0->m_Items[5] | ((unsigned __int64)tmp0->m_Items[4] << 8);
-          ((void (__fastcall *)(System_IO_Stream_o *, struct System_Byte_array *, _QWORD, __int64, Il2CppMethodPointer))ws->klass->vtable._32_unknown.method)(
+          v8 = *(unsigned __int8 *)(*(_QWORD *)&b + 33LL) | ((unsigned __int64)*(unsigned __int8 *)(*(_QWORD *)&b + 32LL) << 8);
+          ((void (__fastcall *)(System_IO_Stream_o *, _QWORD, _QWORD, __int64, Il2CppMethodPointer))ws->klass->vtable._32_unknown.method)(
             ws,
-            tmp0,
+            *(_QWORD *)&b,
             0LL,
             2LL,
             ws->klass->vtable._33_WriteByte.methodPtr);
           goto LABEL_15;
         }
 LABEL_21:
-        sub_B0D97C(this);
+        sub_B52A5C(this, *(_QWORD *)&b);
       }
 LABEL_20:
-      v13 = sub_B0D9A8(this);
-      sub_B0D948(v13, 0LL);
+      v11 = sub_B52A88(this);
+      sub_B52A28(v11, 0LL);
     }
     if ( !s )
       goto LABEL_21;
@@ -461,28 +448,28 @@ LABEL_20:
                                      0LL,
                                      4LL,
                                      s->klass->vtable._31_ReadByte.methodPtr);
-    v10 = v7->fields.tmp0;
-    if ( !v10 )
+    *(_QWORD *)&b = v7->fields.tmp0;
+    if ( !*(_QWORD *)&b )
       goto LABEL_21;
-    if ( v10->max_length < 4 )
+    if ( *(_DWORD *)(*(_QWORD *)&b + 24LL) < 4u )
       goto LABEL_20;
     if ( !ws )
       goto LABEL_21;
-    v9 = ((unsigned __int64)v10->m_Items[4] << 24) | ((unsigned __int64)v10->m_Items[5] << 16) | ((unsigned __int64)v10->m_Items[6] << 8) | v10->m_Items[7];
-    ((void (__fastcall *)(System_IO_Stream_o *, struct System_Byte_array *, _QWORD, __int64, Il2CppMethodPointer))ws->klass->vtable._32_unknown.method)(
+    v8 = ((unsigned __int64)*(unsigned __int8 *)(*(_QWORD *)&b + 32LL) << 24) | ((unsigned __int64)*(unsigned __int8 *)(*(_QWORD *)&b + 33LL) << 16) | ((unsigned __int64)*(unsigned __int8 *)(*(_QWORD *)&b + 34LL) << 8) | *(unsigned __int8 *)(*(_QWORD *)&b + 35LL);
+    ((void (__fastcall *)(System_IO_Stream_o *, _QWORD, _QWORD, __int64, Il2CppMethodPointer))ws->klass->vtable._32_unknown.method)(
       ws,
-      v10,
+      *(_QWORD *)&b,
       0LL,
       4LL,
       ws->klass->vtable._33_WriteByte.methodPtr);
   }
 LABEL_15:
-  if ( v9 >= 1 )
+  if ( v8 >= 1 )
   {
-    v11 = 1;
+    v9 = 1;
     do
       MasterDataUnpakcer__UnpackByte(v7, s, ws, (const MethodInfo *)ws);
-    while ( v9 > v11++ );
+    while ( v8 > v9++ );
   }
 }
 
@@ -495,6 +482,7 @@ void __fastcall MasterDataUnpakcer__UnpackBinary(
         System_IO_Stream_o *ws,
         const MethodInfo *method)
 {
+  int32_t v7; // w23
   MasterDataUnpakcer_o *v8; // x22
   BattleServantConfConponent_o *p_tmpBuffer; // x21
   System_Int32_array **v10; // x0
@@ -506,75 +494,73 @@ void __fastcall MasterDataUnpakcer__UnpackBinary(
   System_Int32_array *v16; // x7
   char v17; // w8
   struct System_Byte_array *v18; // x8
-  BattleServantConfConponent_c *v19; // x1
-  unsigned int v20; // w23
-  System_Int32_array **v21; // x0
-  System_String_array **v22; // x2
-  System_String_array **v23; // x3
-  System_Boolean_array **v24; // x4
-  System_Int32_array **v25; // x5
-  System_Int32_array *v26; // x6
-  System_Int32_array *v27; // x7
-  System_IO_Stream_c *v28; // x8
-  struct System_Byte_array *v29; // x1
-  __int64 v30; // x3
-  unsigned int v31; // w22
-  System_Int32_array **v32; // x0
-  System_String_array **v33; // x2
-  System_String_array **v34; // x3
-  System_Boolean_array **v35; // x4
-  System_Int32_array **v36; // x5
-  System_Int32_array *v37; // x6
-  System_Int32_array *v38; // x7
+  unsigned int v19; // w23
+  System_Int32_array **v20; // x0
+  System_String_array **v21; // x2
+  System_String_array **v22; // x3
+  System_Boolean_array **v23; // x4
+  System_Int32_array **v24; // x5
+  System_Int32_array *v25; // x6
+  System_Int32_array *v26; // x7
+  System_IO_Stream_c *v27; // x8
+  struct System_Byte_array *v28; // x1
+  __int64 v29; // x3
+  unsigned int v30; // w22
+  System_Int32_array **v31; // x0
+  System_String_array **v32; // x2
+  System_String_array **v33; // x3
+  System_Boolean_array **v34; // x4
+  System_Int32_array **v35; // x5
+  System_Int32_array *v36; // x6
+  System_Int32_array *v37; // x7
   struct System_Byte_array *tmp0; // x8
-  BattleServantConfConponent_c *v40; // x1
-  System_Int32_array **v41; // x0
-  System_String_array **v42; // x2
-  System_String_array **v43; // x3
-  System_Boolean_array **v44; // x4
-  System_Int32_array **v45; // x5
-  System_Int32_array *v46; // x6
-  System_Int32_array *v47; // x7
+  System_Int32_array **v39; // x0
+  System_String_array **v40; // x2
+  System_String_array **v41; // x3
+  System_Boolean_array **v42; // x4
+  System_Int32_array **v43; // x5
+  System_Int32_array *v44; // x6
+  System_Int32_array *v45; // x7
   void *klass; // x1
-  System_IO_Stream_o *v49; // x0
-  const MethodInfo *v50; // x5
+  System_IO_Stream_o *v47; // x0
+  const MethodInfo *v48; // x5
   Il2CppMethodPointer methodPtr; // x4
-  __int64 v52; // x3
-  BattleServantConfConponent_c *v53; // x1
-  System_Int32_array **v54; // x0
-  System_String_array **v55; // x2
-  System_String_array **v56; // x3
-  System_Boolean_array **v57; // x4
-  System_Int32_array **v58; // x5
-  System_Int32_array *v59; // x6
-  System_Int32_array *v60; // x7
-  __int64 v61; // x0
+  __int64 v50; // x3
+  System_Int32_array **v51; // x0
+  System_String_array **v52; // x2
+  System_String_array **v53; // x3
+  System_Boolean_array **v54; // x4
+  System_Int32_array **v55; // x5
+  System_Int32_array *v56; // x6
+  System_Int32_array *v57; // x7
+  __int64 v58; // x0
 
+  v7 = b;
   v8 = this;
-  if ( (byte_4212A30 & 1) == 0 )
+  if ( (byte_42B308F & 1) == 0 )
   {
-    this = (MasterDataUnpakcer_o *)sub_B0D8A4(&byte___TypeInfo, *(_QWORD *)&b);
-    byte_4212A30 = 1;
+    this = (MasterDataUnpakcer_o *)sub_B52984(&byte___TypeInfo);
+    byte_42B308F = 1;
   }
   p_tmpBuffer = (BattleServantConfConponent_o *)&v8->fields.tmpBuffer;
   if ( !v8->fields.tmpBuffer )
   {
-    v10 = (System_Int32_array **)sub_B0D8BC(byte___TypeInfo, 0x100000LL);
+    v10 = (System_Int32_array **)sub_B5299C(byte___TypeInfo, 0x100000LL);
     p_tmpBuffer->klass = (BattleServantConfConponent_c *)v10;
-    sub_B0D840((BattleServantConfConponent_o *)&v8->fields.tmpBuffer, v10, v11, v12, v13, v14, v15, v16);
+    sub_B52920((BattleServantConfConponent_o *)&v8->fields.tmpBuffer, v10, v11, v12, v13, v14, v15, v16);
   }
-  if ( b <= 191 )
+  if ( v7 <= 191 )
   {
-    v31 = b & 0x1F;
-    if ( (b & 0x1F) == 0 )
+    v30 = v7 & 0x1F;
+    if ( (v7 & 0x1F) == 0 )
       return;
     if ( !p_tmpBuffer->klass )
       goto LABEL_43;
-    if ( (signed int)v31 > SLODWORD(p_tmpBuffer->klass->_1.namespaze) )
+    if ( (signed int)v30 > SLODWORD(p_tmpBuffer->klass->_1.namespaze) )
     {
-      v32 = (System_Int32_array **)sub_B0D8BC(byte___TypeInfo, b & 0x1F);
-      p_tmpBuffer->klass = (BattleServantConfConponent_c *)v32;
-      sub_B0D840(p_tmpBuffer, v32, v33, v34, v35, v36, v37, v38);
+      v31 = (System_Int32_array **)sub_B5299C(byte___TypeInfo, v7 & 0x1F);
+      p_tmpBuffer->klass = (BattleServantConfConponent_c *)v31;
+      sub_B52920(p_tmpBuffer, v31, v32, v33, v34, v35, v36, v37);
     }
     if ( !s )
       goto LABEL_43;
@@ -582,20 +568,20 @@ void __fastcall MasterDataUnpakcer__UnpackBinary(
                                      s,
                                      p_tmpBuffer->klass,
                                      0LL,
-                                     b & 0x1F,
+                                     v7 & 0x1F,
                                      s->klass->vtable._31_ReadByte.methodPtr);
     if ( !ws )
       goto LABEL_43;
 LABEL_41:
     klass = p_tmpBuffer->klass;
-    v49 = ws;
-    v50 = ws->klass->vtable._32_unknown.method;
+    v47 = ws;
+    v48 = ws->klass->vtable._32_unknown.method;
     methodPtr = ws->klass->vtable._33_WriteByte.methodPtr;
-    v52 = v31;
+    v50 = v30;
     goto LABEL_42;
   }
-  v17 = b + 60;
-  if ( (unsigned int)(b - 196) > 0x17 )
+  v17 = v7 + 60;
+  if ( (unsigned int)(v7 - 196) > 0x17 )
     return;
   if ( ((1 << v17) & 0x200001) != 0 )
   {
@@ -607,28 +593,28 @@ LABEL_41:
                                      s,
                                      ws,
                                      method);
-    v53 = p_tmpBuffer->klass;
+    *(_QWORD *)&b = p_tmpBuffer->klass;
     if ( !p_tmpBuffer->klass )
       goto LABEL_43;
-    v31 = (unsigned int)this;
-    if ( (int)this > SLODWORD(v53->_1.namespaze) )
+    v30 = (unsigned int)this;
+    if ( (int)this > *(_DWORD *)(*(_QWORD *)&b + 24LL) )
     {
-      v54 = (System_Int32_array **)sub_B0D8BC(byte___TypeInfo, (unsigned int)this);
-      p_tmpBuffer->klass = (BattleServantConfConponent_c *)v54;
-      sub_B0D840(p_tmpBuffer, v54, v55, v56, v57, v58, v59, v60);
-      v53 = p_tmpBuffer->klass;
+      v51 = (System_Int32_array **)sub_B5299C(byte___TypeInfo, (unsigned int)this);
+      p_tmpBuffer->klass = (BattleServantConfConponent_c *)v51;
+      sub_B52920(p_tmpBuffer, v51, v52, v53, v54, v55, v56, v57);
+      *(_QWORD *)&b = p_tmpBuffer->klass;
     }
-    this = (MasterDataUnpakcer_o *)((__int64 (__fastcall *)(System_IO_Stream_o *, BattleServantConfConponent_c *, _QWORD, _QWORD, Il2CppMethodPointer))s->klass->vtable._30_unknown.method)(
+    this = (MasterDataUnpakcer_o *)((__int64 (__fastcall *)(System_IO_Stream_o *, _QWORD, _QWORD, _QWORD, Il2CppMethodPointer))s->klass->vtable._30_unknown.method)(
                                      s,
-                                     v53,
+                                     *(_QWORD *)&b,
                                      0LL,
-                                     v31,
+                                     v30,
                                      s->klass->vtable._31_ReadByte.methodPtr);
     if ( !ws )
       goto LABEL_43;
     ((void (__fastcall *)(System_IO_Stream_o *, _QWORD, void *))ws->klass->vtable._33_WriteByte.method)(
       ws,
-      v31,
+      v30,
       ws->klass[1]._1.image);
     goto LABEL_41;
   }
@@ -647,37 +633,37 @@ LABEL_41:
       goto LABEL_43;
     if ( tmp0->max_length >= 2 )
     {
-      v40 = p_tmpBuffer->klass;
+      *(_QWORD *)&b = p_tmpBuffer->klass;
       if ( p_tmpBuffer->klass )
       {
-        v20 = tmp0->m_Items[5] | (tmp0->m_Items[4] << 8);
-        if ( (signed int)v20 > SLODWORD(v40->_1.namespaze) )
+        v19 = tmp0->m_Items[5] | (tmp0->m_Items[4] << 8);
+        if ( (signed int)v19 > *(_DWORD *)(*(_QWORD *)&b + 24LL) )
         {
-          v41 = (System_Int32_array **)sub_B0D8BC(byte___TypeInfo, v20);
-          p_tmpBuffer->klass = (BattleServantConfConponent_c *)v41;
-          sub_B0D840((BattleServantConfConponent_o *)&v8->fields.tmpBuffer, v41, v42, v43, v44, v45, v46, v47);
-          v40 = p_tmpBuffer->klass;
+          v39 = (System_Int32_array **)sub_B5299C(byte___TypeInfo, v19);
+          p_tmpBuffer->klass = (BattleServantConfConponent_c *)v39;
+          sub_B52920((BattleServantConfConponent_o *)&v8->fields.tmpBuffer, v39, v40, v41, v42, v43, v44, v45);
+          *(_QWORD *)&b = p_tmpBuffer->klass;
         }
-        this = (MasterDataUnpakcer_o *)((__int64 (__fastcall *)(System_IO_Stream_o *, BattleServantConfConponent_c *, _QWORD, _QWORD, Il2CppMethodPointer))s->klass->vtable._30_unknown.method)(
+        this = (MasterDataUnpakcer_o *)((__int64 (__fastcall *)(System_IO_Stream_o *, _QWORD, _QWORD, _QWORD, Il2CppMethodPointer))s->klass->vtable._30_unknown.method)(
                                          s,
-                                         v40,
+                                         *(_QWORD *)&b,
                                          0LL,
-                                         v20,
+                                         v19,
                                          s->klass->vtable._31_ReadByte.methodPtr);
         if ( ws )
         {
-          v28 = ws->klass;
-          v29 = v8->fields.tmp0;
-          v30 = 2LL;
+          v27 = ws->klass;
+          v28 = v8->fields.tmp0;
+          v29 = 2LL;
           goto LABEL_34;
         }
       }
 LABEL_43:
-      sub_B0D97C(this);
+      sub_B52A5C(this, *(_QWORD *)&b);
     }
 LABEL_44:
-    v61 = sub_B0D9A8(this);
-    sub_B0D948(v61, 0LL);
+    v58 = sub_B52A88(this);
+    sub_B52A28(v58, 0LL);
   }
   if ( ((1 << v17) & 0x800004) != 0 )
   {
@@ -694,46 +680,46 @@ LABEL_44:
       goto LABEL_43;
     if ( v18->max_length >= 4 )
     {
-      v19 = p_tmpBuffer->klass;
+      *(_QWORD *)&b = p_tmpBuffer->klass;
       if ( p_tmpBuffer->klass )
       {
-        v20 = _byteswap_ulong(*(_DWORD *)&v18->m_Items[4]);
-        if ( (signed int)v20 > SLODWORD(v19->_1.namespaze) )
+        v19 = _byteswap_ulong(*(_DWORD *)&v18->m_Items[4]);
+        if ( (signed int)v19 > *(_DWORD *)(*(_QWORD *)&b + 24LL) )
         {
-          v21 = (System_Int32_array **)sub_B0D8BC(byte___TypeInfo, v20);
-          p_tmpBuffer->klass = (BattleServantConfConponent_c *)v21;
-          sub_B0D840((BattleServantConfConponent_o *)&v8->fields.tmpBuffer, v21, v22, v23, v24, v25, v26, v27);
-          v19 = p_tmpBuffer->klass;
+          v20 = (System_Int32_array **)sub_B5299C(byte___TypeInfo, v19);
+          p_tmpBuffer->klass = (BattleServantConfConponent_c *)v20;
+          sub_B52920((BattleServantConfConponent_o *)&v8->fields.tmpBuffer, v20, v21, v22, v23, v24, v25, v26);
+          *(_QWORD *)&b = p_tmpBuffer->klass;
         }
-        this = (MasterDataUnpakcer_o *)((__int64 (__fastcall *)(System_IO_Stream_o *, BattleServantConfConponent_c *, _QWORD, _QWORD, Il2CppMethodPointer))s->klass->vtable._30_unknown.method)(
+        this = (MasterDataUnpakcer_o *)((__int64 (__fastcall *)(System_IO_Stream_o *, _QWORD, _QWORD, _QWORD, Il2CppMethodPointer))s->klass->vtable._30_unknown.method)(
                                          s,
-                                         v19,
+                                         *(_QWORD *)&b,
                                          0LL,
-                                         v20,
+                                         v19,
                                          s->klass->vtable._31_ReadByte.methodPtr);
         if ( ws )
         {
-          v28 = ws->klass;
-          v29 = v8->fields.tmp0;
-          v30 = 4LL;
+          v27 = ws->klass;
+          v28 = v8->fields.tmp0;
+          v29 = 4LL;
 LABEL_34:
-          ((void (__fastcall *)(System_IO_Stream_o *, struct System_Byte_array *, _QWORD, __int64, Il2CppMethodPointer))v28->vtable._32_unknown.method)(
+          ((void (__fastcall *)(System_IO_Stream_o *, struct System_Byte_array *, _QWORD, __int64, Il2CppMethodPointer))v27->vtable._32_unknown.method)(
             ws,
-            v29,
+            v28,
             0LL,
-            v30,
-            v28->vtable._33_WriteByte.methodPtr);
+            v29,
+            v27->vtable._33_WriteByte.methodPtr);
           klass = v8->fields.tmpBuffer;
-          v49 = ws;
-          v50 = ws->klass->vtable._32_unknown.method;
+          v47 = ws;
+          v48 = ws->klass->vtable._32_unknown.method;
           methodPtr = ws->klass->vtable._33_WriteByte.methodPtr;
-          v52 = v20;
+          v50 = v19;
 LABEL_42:
-          ((void (__fastcall *)(System_IO_Stream_o *, void *, _QWORD, __int64, Il2CppMethodPointer))v50)(
-            v49,
+          ((void (__fastcall *)(System_IO_Stream_o *, void *, _QWORD, __int64, Il2CppMethodPointer))v48)(
+            v47,
             klass,
             0LL,
-            v52,
+            v50,
             methodPtr);
           return;
         }
@@ -745,31 +731,31 @@ LABEL_42:
 }
 
 
-System_Byte_array *__fastcall MasterDataUnpakcer__UnpackBinary_20985220(
+System_Byte_array *__fastcall MasterDataUnpakcer__UnpackBinary_30634360(
         MasterDataUnpakcer_o *this,
         System_IO_Stream_o *s,
         int64_t len,
         const MethodInfo *method)
 {
   unsigned int v4; // w19
-  __int64 v6; // x1
-  __int64 v7; // x0
+  __int64 v6; // x0
+  __int64 v7; // x1
   System_Byte_array *v8; // x21
 
   v4 = len;
-  if ( (byte_4212A33 & 1) == 0 )
+  if ( (byte_42B3092 & 1) == 0 )
   {
-    sub_B0D8A4(&byte___TypeInfo, s);
-    sub_B0D8A4(&Method_MasterDataUnpakcer_UnpackBinary__, v6);
-    byte_4212A33 = 1;
+    sub_B52984(&byte___TypeInfo);
+    sub_B52984(&Method_MasterDataUnpakcer_UnpackBinary__);
+    byte_42B3092 = 1;
   }
-  v7 = sub_B0D8BC(byte___TypeInfo, v4);
+  v6 = sub_B5299C(byte___TypeInfo, v4);
   if ( !s )
-    sub_B0D97C(v7);
-  v8 = (System_Byte_array *)v7;
+    sub_B52A5C(v6, v7);
+  v8 = (System_Byte_array *)v6;
   ((void (__fastcall *)(System_IO_Stream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))s->klass->vtable._30_unknown.method)(
     s,
-    v7,
+    v6,
     0LL,
     v4,
     s->klass->vtable._31_ReadByte.methodPtr);
@@ -791,10 +777,8 @@ void __fastcall MasterDataUnpakcer__UnpackByte(
   struct System_Byte_array *tmp0; // x1
   __int64 v12; // x3
   __int64 v13; // x0
-  __int64 v14; // x1
-  __int64 v15; // x2
-  System_FormatException_o *v16; // x19
-  __int64 v17; // x0
+  System_FormatException_o *v14; // x19
+  __int64 v15; // x0
 
   if ( !s
     || (v5 = this,
@@ -805,7 +789,7 @@ void __fastcall MasterDataUnpakcer__UnpackByte(
                                          method),
         !ws) )
   {
-    sub_B0D97C(this);
+    sub_B52A5C(this, s);
   }
   v7 = (int)this;
   ((void (__fastcall *)(System_IO_Stream_o *, _QWORD, void *))ws->klass->vtable._33_WriteByte.method)(
@@ -815,11 +799,11 @@ void __fastcall MasterDataUnpakcer__UnpackByte(
   if ( (v7 & 0x80000000) != 0 )
   {
 LABEL_28:
-    v13 = sub_B0D8A8(&System_FormatException_TypeInfo);
-    v16 = (System_FormatException_o *)sub_B0D974(v13, v14, v15);
-    System_FormatException___ctor(v16, 0LL);
-    v17 = sub_B0D8A8(&Method_MasterDataUnpakcer_UnpackByte__);
-    sub_B0D948(v16, v17);
+    v13 = sub_B52988(&System_FormatException_TypeInfo);
+    v14 = (System_FormatException_o *)sub_B52A54(v13);
+    System_FormatException___ctor(v14, 0LL);
+    v15 = sub_B52988(&Method_MasterDataUnpakcer_UnpackByte__);
+    sub_B52A28(v14, v15);
   }
   if ( v7 >= 128 )
   {
@@ -947,72 +931,66 @@ System_Collections_Generic_Dictionary_string__long____o *__fastcall MasterDataUn
         int64_t len,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  System_Collections_Generic_Dictionary_Type__MonoCustomAttrs_AttributeInfo__o *v11; // x22
+  System_Collections_Generic_Dictionary_Type__MonoCustomAttrs_AttributeInfo__o *v7; // x22
   struct System_IO_MemoryStream_o *writeStream; // x0
-  char v13; // w0
-  const MethodInfo *v14; // x2
-  char v15; // w23
+  __int64 v9; // x1
+  char v10; // w0
+  const MethodInfo *v11; // x2
+  char v12; // w23
   int64_t i; // x27
-  Il2CppObject *v17; // x0
-  System_Xml_XmlQualifiedName_o *v18; // x24
-  const MethodInfo *v19; // x2
-  __int64 v20; // x25
-  const MethodInfo *v21; // x3
-  __int64 v22; // x26
+  Il2CppObject *v14; // x0
+  System_Xml_XmlQualifiedName_o *v15; // x24
+  const MethodInfo *v16; // x2
+  __int64 v17; // x25
+  const MethodInfo *v18; // x3
+  __int64 v19; // x26
   int activeReadWriteTask; // w8
-  __int64 v25; // x0
+  __int64 v22; // x0
 
-  if ( (byte_4212A35 & 1) == 0 )
+  if ( (byte_42B3094 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_Dictionary_string__long____Add__, s);
-    sub_B0D8A4(&Method_System_Collections_Generic_Dictionary_string__long_____ctor__, v7);
-    sub_B0D8A4(&System_Collections_Generic_Dictionary_string__long____TypeInfo, v8);
-    sub_B0D8A4(&long___TypeInfo, v9);
-    sub_B0D8A4(&string_TypeInfo, v10);
-    byte_4212A35 = 1;
+    sub_B52984(&Method_System_Collections_Generic_Dictionary_string__long____Add__);
+    sub_B52984(&Method_System_Collections_Generic_Dictionary_string__long_____ctor__);
+    sub_B52984(&System_Collections_Generic_Dictionary_string__long____TypeInfo);
+    sub_B52984(&long___TypeInfo);
+    sub_B52984(&string_TypeInfo);
+    byte_42B3094 = 1;
   }
-  v11 = (System_Collections_Generic_Dictionary_Type__MonoCustomAttrs_AttributeInfo__o *)sub_B0D974(
-                                                                                          System_Collections_Generic_Dictionary_string__long____TypeInfo,
-                                                                                          s,
-                                                                                          len);
+  v7 = (System_Collections_Generic_Dictionary_Type__MonoCustomAttrs_AttributeInfo__o *)sub_B52A54(System_Collections_Generic_Dictionary_string__long____TypeInfo);
   System_Collections_Generic_Dictionary_Type__MonoCustomAttrs_AttributeInfo____ctor(
-    v11,
+    v7,
     len,
-    (const MethodInfo_2E4A0E4 *)Method_System_Collections_Generic_Dictionary_string__long_____ctor__);
+    (const MethodInfo_2F1AC7C *)Method_System_Collections_Generic_Dictionary_string__long_____ctor__);
   if ( !s )
 LABEL_24:
-    sub_B0D97C(writeStream);
-  v13 = ((__int64 (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer))s->klass->vtable._8_unknown.method)(
+    sub_B52A5C(writeStream, v9);
+  v10 = ((__int64 (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer))s->klass->vtable._8_unknown.method)(
           s,
           s->klass->vtable._9_get_CanTimeout.methodPtr);
   if ( len >= 1 )
   {
-    v15 = v13;
+    v12 = v10;
     for ( i = 0LL; i < len; ++i )
     {
-      v17 = MasterDataUnpakcer__Unpack_20978816(this, s, v14);
-      if ( v17 )
+      v14 = MasterDataUnpakcer__Unpack_30627956(this, s, v11);
+      if ( v14 )
       {
-        if ( (System_String_c *)v17->klass == string_TypeInfo )
-          v18 = (System_Xml_XmlQualifiedName_o *)v17;
+        if ( (System_String_c *)v14->klass == string_TypeInfo )
+          v15 = (System_Xml_XmlQualifiedName_o *)v14;
         else
-          v18 = 0LL;
+          v15 = 0LL;
       }
       else
       {
-        v18 = 0LL;
+        v15 = 0LL;
       }
-      v20 = ((__int64 (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer))s->klass->vtable._12_unknown.method)(
+      v17 = ((__int64 (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer))s->klass->vtable._12_unknown.method)(
               s,
               s->klass->vtable._13_unknown.methodPtr);
-      if ( (v15 & 1) != 0 )
+      if ( (v12 & 1) != 0 )
       {
-        MasterDataUnpakcer__Skip(this, s, v19);
-        if ( !v18 )
+        MasterDataUnpakcer__Skip(this, s, v16);
+        if ( !v15 )
           continue;
       }
       else
@@ -1031,38 +1009,39 @@ LABEL_24:
           writeStream,
           0LL,
           writeStream->klass->vtable._30_Read.methodPtr);
-        MasterDataUnpakcer__UnpackByte(this, s, (System_IO_Stream_o *)this->fields.writeStream, v21);
-        if ( !v18 )
+        MasterDataUnpakcer__UnpackByte(this, s, (System_IO_Stream_o *)this->fields.writeStream, v18);
+        if ( !v15 )
           continue;
       }
-      v22 = ((__int64 (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer))s->klass->vtable._12_unknown.method)(
+      v19 = ((__int64 (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer))s->klass->vtable._12_unknown.method)(
               s,
               s->klass->vtable._13_unknown.methodPtr);
-      writeStream = (struct System_IO_MemoryStream_o *)sub_B0D8BC(long___TypeInfo, 2LL);
+      writeStream = (struct System_IO_MemoryStream_o *)sub_B5299C(long___TypeInfo, 2LL);
       if ( !writeStream )
         goto LABEL_24;
       activeReadWriteTask = (int)writeStream->fields._activeReadWriteTask;
       if ( !activeReadWriteTask
-        || (writeStream->fields._asyncActiveSemaphore = (struct System_Threading_SemaphoreSlim_o *)v20,
+        || (writeStream->fields._asyncActiveSemaphore = (struct System_Threading_SemaphoreSlim_o *)v17,
             activeReadWriteTask == 1) )
       {
-        v25 = sub_B0D9A8(writeStream);
-        sub_B0D948(v25, 0LL);
+        v22 = sub_B52A88(writeStream);
+        sub_B52A28(v22, 0LL);
       }
-      writeStream->fields._buffer = (struct System_Byte_array *)(v22 - v20);
-      if ( !v11 )
+      writeStream->fields._buffer = (struct System_Byte_array *)(v19 - v17);
+      if ( !v7 )
         goto LABEL_24;
       System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
-        (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v11,
-        v18,
+        (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v7,
+        v15,
         (System_Xml_Schema_XmlSchemaObject_o *)writeStream,
-        (const MethodInfo_2E4AC68 *)Method_System_Collections_Generic_Dictionary_string__long____Add__);
+        (const MethodInfo_2F1B800 *)Method_System_Collections_Generic_Dictionary_string__long____Add__);
     }
   }
-  return (System_Collections_Generic_Dictionary_string__long____o *)v11;
+  return (System_Collections_Generic_Dictionary_string__long____o *)v7;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall MasterDataUnpakcer__UnpackMapByte(
         MasterDataUnpakcer_o *this,
         int32_t b,
@@ -1071,17 +1050,15 @@ void __fastcall MasterDataUnpakcer__UnpackMapByte(
         const MethodInfo *method)
 {
   MasterDataUnpakcer_o *v7; // x21
-  struct System_Byte_array *tmp0; // x1
-  __int64 v9; // x22
-  struct System_Byte_array *v10; // x1
-  int v11; // w23
-  const MethodInfo *v12; // x3
-  __int64 v14; // x0
+  __int64 v8; // x22
+  int v9; // w23
+  const MethodInfo *v10; // x3
+  __int64 v12; // x0
 
   v7 = this;
   if ( b <= 143 )
   {
-    v9 = b & 0xF;
+    v8 = b & 0xF;
   }
   else
   {
@@ -1097,28 +1074,28 @@ void __fastcall MasterDataUnpakcer__UnpackMapByte(
                                        0LL,
                                        2LL,
                                        s->klass->vtable._31_ReadByte.methodPtr);
-      tmp0 = v7->fields.tmp0;
-      if ( !tmp0 )
+      *(_QWORD *)&b = v7->fields.tmp0;
+      if ( !*(_QWORD *)&b )
         goto LABEL_21;
-      if ( tmp0->max_length >= 2 )
+      if ( *(_DWORD *)(*(_QWORD *)&b + 24LL) >= 2u )
       {
         if ( ws )
         {
-          v9 = tmp0->m_Items[5] | ((unsigned __int64)tmp0->m_Items[4] << 8);
-          ((void (__fastcall *)(System_IO_Stream_o *, struct System_Byte_array *, _QWORD, __int64, Il2CppMethodPointer))ws->klass->vtable._32_unknown.method)(
+          v8 = *(unsigned __int8 *)(*(_QWORD *)&b + 33LL) | ((unsigned __int64)*(unsigned __int8 *)(*(_QWORD *)&b + 32LL) << 8);
+          ((void (__fastcall *)(System_IO_Stream_o *, _QWORD, _QWORD, __int64, Il2CppMethodPointer))ws->klass->vtable._32_unknown.method)(
             ws,
-            tmp0,
+            *(_QWORD *)&b,
             0LL,
             2LL,
             ws->klass->vtable._33_WriteByte.methodPtr);
           goto LABEL_15;
         }
 LABEL_21:
-        sub_B0D97C(this);
+        sub_B52A5C(this, *(_QWORD *)&b);
       }
 LABEL_20:
-      v14 = sub_B0D9A8(this);
-      sub_B0D948(v14, 0LL);
+      v12 = sub_B52A88(this);
+      sub_B52A28(v12, 0LL);
     }
     if ( !s )
       goto LABEL_21;
@@ -1128,31 +1105,31 @@ LABEL_20:
                                      0LL,
                                      4LL,
                                      s->klass->vtable._31_ReadByte.methodPtr);
-    v10 = v7->fields.tmp0;
-    if ( !v10 )
+    *(_QWORD *)&b = v7->fields.tmp0;
+    if ( !*(_QWORD *)&b )
       goto LABEL_21;
-    if ( v10->max_length < 4 )
+    if ( *(_DWORD *)(*(_QWORD *)&b + 24LL) < 4u )
       goto LABEL_20;
     if ( !ws )
       goto LABEL_21;
-    v9 = ((unsigned __int64)v10->m_Items[4] << 24) | ((unsigned __int64)v10->m_Items[5] << 16) | ((unsigned __int64)v10->m_Items[6] << 8) | v10->m_Items[7];
-    ((void (__fastcall *)(System_IO_Stream_o *, struct System_Byte_array *, _QWORD, __int64, Il2CppMethodPointer))ws->klass->vtable._32_unknown.method)(
+    v8 = ((unsigned __int64)*(unsigned __int8 *)(*(_QWORD *)&b + 32LL) << 24) | ((unsigned __int64)*(unsigned __int8 *)(*(_QWORD *)&b + 33LL) << 16) | ((unsigned __int64)*(unsigned __int8 *)(*(_QWORD *)&b + 34LL) << 8) | *(unsigned __int8 *)(*(_QWORD *)&b + 35LL);
+    ((void (__fastcall *)(System_IO_Stream_o *, _QWORD, _QWORD, __int64, Il2CppMethodPointer))ws->klass->vtable._32_unknown.method)(
       ws,
-      v10,
+      *(_QWORD *)&b,
       0LL,
       4LL,
       ws->klass->vtable._33_WriteByte.methodPtr);
   }
 LABEL_15:
-  if ( v9 >= 1 )
+  if ( v8 >= 1 )
   {
-    v11 = 1;
+    v9 = 1;
     do
     {
       MasterDataUnpakcer__UnpackByte(v7, s, ws, (const MethodInfo *)ws);
-      MasterDataUnpakcer__UnpackByte(v7, s, ws, v12);
+      MasterDataUnpakcer__UnpackByte(v7, s, ws, v10);
     }
-    while ( v9 > v11++ );
+    while ( v8 > v9++ );
   }
 }
 
@@ -1163,8 +1140,8 @@ System_String_o *__fastcall MasterDataUnpakcer__UnpackString(
         int64_t len,
         const MethodInfo *method)
 {
-  __int64 v6; // x1
   System_Text_StringBuilder_o *sb; // x0
+  __int64 v7; // x1
   System_Text_StringBuilder_o *v8; // x0
   System_Text_StringBuilder_o *v9; // x21
   BattleServantConfConponent_o *static_fields; // x0
@@ -1183,11 +1160,11 @@ System_String_o *__fastcall MasterDataUnpakcer__UnpackString(
   unsigned int v23; // w21
   uint16_t v24; // w1
 
-  if ( (byte_4212A32 & 1) == 0 )
+  if ( (byte_42B3091 & 1) == 0 )
   {
-    sub_B0D8A4(&MasterDataUnpakcer_TypeInfo, s);
-    sub_B0D8A4(&System_Text_StringBuilder_TypeInfo, v6);
-    byte_4212A32 = 1;
+    sub_B52984(&MasterDataUnpakcer_TypeInfo);
+    sub_B52984(&System_Text_StringBuilder_TypeInfo);
+    byte_42B3091 = 1;
   }
   sb = MasterDataUnpakcer_TypeInfo->static_fields->sb;
   if ( sb )
@@ -1200,11 +1177,11 @@ System_String_o *__fastcall MasterDataUnpakcer__UnpackString(
   }
   else
   {
-    v9 = (System_Text_StringBuilder_o *)sub_B0D974(System_Text_StringBuilder_TypeInfo, s, len);
-    System_Text_StringBuilder___ctor_42149428(v9, len, 0LL);
+    v9 = (System_Text_StringBuilder_o *)sub_B52A54(System_Text_StringBuilder_TypeInfo);
+    System_Text_StringBuilder___ctor_42988076(v9, len, 0LL);
     static_fields = (BattleServantConfConponent_o *)MasterDataUnpakcer_TypeInfo->static_fields;
     static_fields->klass = (BattleServantConfConponent_c *)v9;
-    sub_B0D840(static_fields, (System_Int32_array **)v9, v11, v12, v13, v14, v15, v16);
+    sub_B52920(static_fields, (System_Int32_array **)v9, v11, v12, v13, v14, v15, v16);
   }
   if ( len >= 1 )
   {
@@ -1232,7 +1209,7 @@ System_String_o *__fastcall MasterDataUnpakcer__UnpackString(
               v8 = MasterDataUnpakcer_TypeInfo->static_fields->sb;
               if ( !v8 )
                 break;
-              System_Text_StringBuilder__Append_42158644(v8, v23, 0LL);
+              System_Text_StringBuilder__Append_42997292(v8, v23, 0LL);
 LABEL_36:
               v18 = 0;
 LABEL_37:
@@ -1245,7 +1222,7 @@ LABEL_37:
             if ( !v8 )
               break;
             v17 = v23 - 0x10000;
-            System_Text_StringBuilder__Append_42158644(v8, ((v23 - 0x10000) >> 10) - 10240, 0LL);
+            System_Text_StringBuilder__Append_42997292(v8, ((v23 - 0x10000) >> 10) - 10240, 0LL);
             v8 = MasterDataUnpakcer_TypeInfo->static_fields->sb;
             if ( !v8 )
               break;
@@ -1262,7 +1239,7 @@ LABEL_37:
               break;
             v24 = v22;
 LABEL_27:
-            System_Text_StringBuilder__Append_42158644(v8, v24, 0LL);
+            System_Text_StringBuilder__Append_42997292(v8, v24, 0LL);
             v18 = 0;
             goto LABEL_43;
           }
@@ -1307,7 +1284,7 @@ LABEL_43:
       }
     }
 LABEL_46:
-    sub_B0D97C(v8);
+    sub_B52A5C(v8, v7);
   }
 LABEL_44:
   v8 = MasterDataUnpakcer_TypeInfo->static_fields->sb;
@@ -1328,10 +1305,8 @@ int64_t __fastcall MasterDataUnpakcer__UnpackUint16(
   struct System_Byte_array *tmp0; // x8
   __int64 v6; // x0
   __int64 v7; // x0
-  __int64 v8; // x1
-  __int64 v9; // x2
-  System_FormatException_o *v10; // x19
-  __int64 v11; // x0
+  System_FormatException_o *v8; // x19
+  __int64 v9; // x0
 
   if ( !s )
     goto LABEL_6;
@@ -1344,20 +1319,20 @@ int64_t __fastcall MasterDataUnpakcer__UnpackUint16(
                                    s->klass->vtable._31_ReadByte.methodPtr);
   if ( (_DWORD)this != 2 )
   {
-    v7 = sub_B0D8A8(&System_FormatException_TypeInfo);
-    v10 = (System_FormatException_o *)sub_B0D974(v7, v8, v9);
-    System_FormatException___ctor(v10, 0LL);
-    v11 = sub_B0D8A8(&Method_MasterDataUnpakcer_UnpackUint16__);
-    sub_B0D948(v10, v11);
+    v7 = sub_B52988(&System_FormatException_TypeInfo);
+    v8 = (System_FormatException_o *)sub_B52A54(v7);
+    System_FormatException___ctor(v8, 0LL);
+    v9 = sub_B52988(&Method_MasterDataUnpakcer_UnpackUint16__);
+    sub_B52A28(v8, v9);
   }
   tmp0 = v3->fields.tmp0;
   if ( !tmp0 )
 LABEL_6:
-    sub_B0D97C(this);
+    sub_B52A5C(this, s);
   if ( tmp0->max_length < 2 )
   {
-    v6 = sub_B0D9A8(this);
-    sub_B0D948(v6, 0LL);
+    v6 = sub_B52A88(this);
+    sub_B52A28(v6, 0LL);
   }
   return tmp0->m_Items[5] | ((unsigned __int64)tmp0->m_Items[4] << 8);
 }
@@ -1372,10 +1347,8 @@ int64_t __fastcall MasterDataUnpakcer__UnpackUint32(
   struct System_Byte_array *tmp0; // x8
   __int64 v6; // x0
   __int64 v7; // x0
-  __int64 v8; // x1
-  __int64 v9; // x2
-  System_FormatException_o *v10; // x19
-  __int64 v11; // x0
+  System_FormatException_o *v8; // x19
+  __int64 v9; // x0
 
   if ( !s )
     goto LABEL_7;
@@ -1388,178 +1361,173 @@ int64_t __fastcall MasterDataUnpakcer__UnpackUint32(
                                    s->klass->vtable._31_ReadByte.methodPtr);
   if ( (_DWORD)this != 4 )
   {
-    v7 = sub_B0D8A8(&System_FormatException_TypeInfo);
-    v10 = (System_FormatException_o *)sub_B0D974(v7, v8, v9);
-    System_FormatException___ctor(v10, 0LL);
-    v11 = sub_B0D8A8(&Method_MasterDataUnpakcer_UnpackUint32__);
-    sub_B0D948(v10, v11);
+    v7 = sub_B52988(&System_FormatException_TypeInfo);
+    v8 = (System_FormatException_o *)sub_B52A54(v7);
+    System_FormatException___ctor(v8, 0LL);
+    v9 = sub_B52988(&Method_MasterDataUnpakcer_UnpackUint32__);
+    sub_B52A28(v8, v9);
   }
   tmp0 = v3->fields.tmp0;
   if ( !tmp0 )
 LABEL_7:
-    sub_B0D97C(this);
+    sub_B52A5C(this, s);
   if ( tmp0->max_length < 4 )
   {
-    v6 = sub_B0D9A8(this);
-    sub_B0D948(v6, 0LL);
+    v6 = sub_B52A88(this);
+    sub_B52A28(v6, 0LL);
   }
   return ((unsigned __int64)tmp0->m_Items[4] << 24) | ((unsigned __int64)tmp0->m_Items[5] << 16) | ((unsigned __int64)tmp0->m_Items[6] << 8) | tmp0->m_Items[7];
 }
 
 
-Il2CppObject *__fastcall MasterDataUnpakcer__Unpack_20978816(
+Il2CppObject *__fastcall MasterDataUnpakcer__Unpack_30627956(
         MasterDataUnpakcer_o *this,
         System_IO_Stream_o *s,
         const MethodInfo *method)
 {
   MasterDataUnpakcer_o *v4; // x19
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  int64_t v8; // x0
-  const MethodInfo *v9; // x2
-  const MethodInfo *v10; // x3
-  int v11; // w8
+  int64_t v5; // x0
+  const MethodInfo *v6; // x2
+  const MethodInfo *v7; // x3
+  int v8; // w8
   Il2CppObject *result; // x0
-  struct System_Byte_array *v13; // x8
-  uint8_t v14; // w11
-  uint8_t v15; // w12
-  unsigned __int64 v16; // x9
-  uint8_t v17; // w13
-  uint8_t v18; // w14
-  uint8_t v19; // w15
-  __int64 v20; // x8
-  void *v21; // x0
-  unsigned __int64 v22; // x9
-  System_Int64_c *v23; // x8
-  __int64 v24; // x9
-  int64_t v25; // x2
-  int64_t v26; // x2
-  int64_t v27; // x2
-  System_IO_Stream_o *v28; // x1
+  struct System_Byte_array *v10; // x8
+  uint8_t v11; // w11
+  uint8_t v12; // w12
+  unsigned __int64 v13; // x9
+  uint8_t v14; // w13
+  uint8_t v15; // w14
+  uint8_t v16; // w15
+  __int64 v17; // x8
+  void *v18; // x0
+  unsigned __int64 v19; // x9
+  System_Int64_c *v20; // x8
+  __int64 v21; // x9
+  int64_t v22; // x2
+  int64_t v23; // x2
+  int64_t v24; // x2
+  System_IO_Stream_o *v25; // x1
+  int64_t v26; // x0
+  struct System_Byte_array *v27; // x8
+  unsigned __int64 v28; // x8
   int64_t v29; // x0
-  struct System_Byte_array *v30; // x8
-  unsigned __int64 v31; // x8
-  int64_t v32; // x0
-  MasterDataUnpakcer_o *v33; // x0
-  const MethodInfo *v34; // x3
-  int64_t v35; // x2
-  System_IO_Stream_o *v36; // x1
-  struct System_Byte_array *v37; // x8
+  MasterDataUnpakcer_o *v30; // x0
+  const MethodInfo *v31; // x3
+  int64_t v32; // x2
+  System_IO_Stream_o *v33; // x1
+  struct System_Byte_array *v34; // x8
   struct System_Byte_array *tmp1; // x9
-  struct System_Byte_array *v39; // x8
-  struct System_Byte_array *v40; // x9
-  struct System_Byte_array *v41; // x8
-  struct System_Byte_array *v42; // x9
+  struct System_Byte_array *v36; // x8
+  struct System_Byte_array *v37; // x9
+  struct System_Byte_array *v38; // x8
+  struct System_Byte_array *v39; // x9
+  struct System_Byte_array *v40; // x8
+  struct System_Byte_array *v41; // x9
+  System_Byte_array *tmp0; // x19
   struct System_Byte_array *v43; // x8
   struct System_Byte_array *v44; // x9
-  System_Byte_array *tmp0; // x19
-  struct System_Byte_array *v46; // x8
-  struct System_Byte_array *v47; // x9
-  struct System_Byte_array *v48; // x8
-  struct System_Byte_array *v49; // x9
-  struct System_Byte_array *v50; // x8
-  struct System_Byte_array *v51; // x9
-  struct System_Byte_array *v52; // x8
-  struct System_Byte_array *v53; // x9
-  struct System_Byte_array *v54; // x8
-  struct System_Byte_array *v55; // x9
-  struct System_Byte_array *v56; // x8
-  struct System_Byte_array *v57; // x9
-  struct System_Byte_array *v58; // x8
-  struct System_Byte_array *v59; // x9
+  struct System_Byte_array *v45; // x8
+  struct System_Byte_array *v46; // x9
+  struct System_Byte_array *v47; // x8
+  struct System_Byte_array *v48; // x9
+  struct System_Byte_array *v49; // x8
+  struct System_Byte_array *v50; // x9
+  struct System_Byte_array *v51; // x8
+  struct System_Byte_array *v52; // x9
+  struct System_Byte_array *v53; // x8
+  struct System_Byte_array *v54; // x9
+  struct System_Byte_array *v55; // x8
+  struct System_Byte_array *v56; // x9
+  struct System_Byte_array *v57; // x8
+  struct System_Byte_array *v58; // x9
+  System_Byte_array *v59; // x19
   struct System_Byte_array *v60; // x8
-  struct System_Byte_array *v61; // x9
-  System_Byte_array *v62; // x19
-  struct System_Byte_array *v63; // x8
-  __int64 v64; // x9
-  uint8_t v65; // w10
-  uint8_t v66; // w11
-  int64_t v67; // x0
-  double v68; // d0
+  __int64 v61; // x9
+  uint8_t v62; // w10
+  uint8_t v63; // w11
+  int64_t v64; // x0
+  double v65; // d0
+  __int64 v66; // x0
+  System_FormatException_o *v67; // x19
+  __int64 v68; // x0
   __int64 v69; // x0
-  __int64 v70; // x1
-  __int64 v71; // x2
-  System_FormatException_o *v72; // x19
-  __int64 v73; // x0
-  __int64 v74; // x0
-  double v75; // [xsp+8h] [xbp-18h] BYREF
+  double v70; // [xsp+8h] [xbp-18h] BYREF
 
   v4 = this;
-  if ( (byte_4212A31 & 1) == 0 )
+  if ( (byte_42B3090 & 1) == 0 )
   {
-    sub_B0D8A4(&System_BitConverter_TypeInfo, s);
-    sub_B0D8A4(&bool_TypeInfo, v5);
-    sub_B0D8A4(&double_TypeInfo, v6);
-    this = (MasterDataUnpakcer_o *)sub_B0D8A4(&long_TypeInfo, v7);
-    byte_4212A31 = 1;
+    sub_B52984(&System_BitConverter_TypeInfo);
+    sub_B52984(&bool_TypeInfo);
+    sub_B52984(&double_TypeInfo);
+    this = (MasterDataUnpakcer_o *)sub_B52984(&long_TypeInfo);
+    byte_42B3090 = 1;
   }
   if ( !s )
     goto LABEL_129;
-  v8 = ((__int64 (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer, const MethodInfo *))s->klass->vtable._31_ReadByte.method)(
+  v5 = ((__int64 (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer, const MethodInfo *))s->klass->vtable._31_ReadByte.method)(
          s,
          s->klass->vtable._32_unknown.methodPtr,
          method);
-  if ( (v8 & 0x80000000) != 0 )
+  if ( (v5 & 0x80000000) != 0 )
   {
 LABEL_130:
-    v69 = sub_B0D8A8(&System_FormatException_TypeInfo);
-    v72 = (System_FormatException_o *)sub_B0D974(v69, v70, v71);
-    System_FormatException___ctor(v72, 0LL);
-    v73 = sub_B0D8A8(&Method_MasterDataUnpakcer_Unpack__);
-    sub_B0D948(v72, v73);
+    v66 = sub_B52988(&System_FormatException_TypeInfo);
+    v67 = (System_FormatException_o *)sub_B52A54(v66);
+    System_FormatException___ctor(v67, 0LL);
+    v68 = sub_B52988(&Method_MasterDataUnpakcer_Unpack__);
+    sub_B52A28(v67, v68);
   }
-  if ( (int)v8 <= 127 )
+  if ( (int)v5 <= 127 )
   {
 LABEL_15:
-    v23 = long_TypeInfo;
-    v24 = (int)v8;
+    v20 = long_TypeInfo;
+    v21 = (int)v5;
     goto LABEL_16;
   }
-  if ( (int)v8 <= 143 )
+  if ( (int)v5 <= 143 )
   {
-    v25 = v8 & 0xF;
-    return (Il2CppObject *)MasterDataUnpakcer__UnpackMap(v4, s, v25, v10);
+    v22 = v5 & 0xF;
+    return (Il2CppObject *)MasterDataUnpakcer__UnpackMap(v4, s, v22, v7);
   }
-  else if ( (int)v8 <= 159 )
+  else if ( (int)v5 <= 159 )
   {
-    v26 = v8 & 0xF;
-    return (Il2CppObject *)MasterDataUnpakcer__UnpackArray(v4, s, v26, v10);
+    v23 = v5 & 0xF;
+    return (Il2CppObject *)MasterDataUnpakcer__UnpackArray(v4, s, v23, v7);
   }
   else
   {
-    if ( (int)v8 > 191 )
+    if ( (int)v5 > 191 )
     {
-      if ( (int)v8 < 224 )
+      if ( (int)v5 < 224 )
       {
-        v11 = v8 - 194;
+        v8 = v5 - 194;
         result = 0LL;
-        switch ( v11 )
+        switch ( v8 )
         {
           case 0:
-            LOBYTE(v75) = 0;
-            v21 = bool_TypeInfo;
-            return (Il2CppObject *)j_il2cpp_value_box_0(v21, &v75);
+            LOBYTE(v70) = 0;
+            v18 = bool_TypeInfo;
+            return (Il2CppObject *)j_il2cpp_value_box_0(v18, &v70);
           case 1:
-            v21 = bool_TypeInfo;
-            LOBYTE(v75) = 1;
-            return (Il2CppObject *)j_il2cpp_value_box_0(v21, &v75);
+            v18 = bool_TypeInfo;
+            LOBYTE(v70) = 1;
+            return (Il2CppObject *)j_il2cpp_value_box_0(v18, &v70);
           case 2:
-            v33 = (MasterDataUnpakcer_o *)((__int64 (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer))s->klass->vtable._31_ReadByte.method)(
+            v30 = (MasterDataUnpakcer_o *)((__int64 (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer))s->klass->vtable._31_ReadByte.method)(
                                             s,
                                             s->klass->vtable._32_unknown.methodPtr);
-            v35 = (int)v33;
-            v36 = s;
-            return (Il2CppObject *)MasterDataUnpakcer__UnpackBinary_20985220(v33, v36, v35, v34);
+            v32 = (int)v30;
+            v33 = s;
+            return (Il2CppObject *)MasterDataUnpakcer__UnpackBinary_30634360(v30, v33, v32, v31);
           case 3:
-            v33 = (MasterDataUnpakcer_o *)MasterDataUnpakcer__UnpackUint16(v4, s, v9);
+            v30 = (MasterDataUnpakcer_o *)MasterDataUnpakcer__UnpackUint16(v4, s, v6);
             goto LABEL_108;
           case 4:
-            v33 = (MasterDataUnpakcer_o *)MasterDataUnpakcer__UnpackUint32(v4, s, v9);
+            v30 = (MasterDataUnpakcer_o *)MasterDataUnpakcer__UnpackUint32(v4, s, v6);
 LABEL_108:
-            v36 = s;
-            v35 = (int64_t)v33;
-            return (Il2CppObject *)MasterDataUnpakcer__UnpackBinary_20985220(v33, v36, v35, v34);
+            v33 = s;
+            v32 = (int64_t)v30;
+            return (Il2CppObject *)MasterDataUnpakcer__UnpackBinary_30634360(v30, v33, v32, v31);
           case 8:
             ((void (__fastcall *)(System_IO_Stream_o *, struct System_Byte_array *, _QWORD, __int64, Il2CppMethodPointer))s->klass->vtable._30_unknown.method)(
               s,
@@ -1580,61 +1548,61 @@ LABEL_108:
               if ( (BYTE3(this[6].fields.tmp0) & 4) == 0 )
               {
 LABEL_122:
-                v68 = System_BitConverter__ToSingle(tmp0, 0, 0LL);
+                v65 = System_BitConverter__ToSingle(tmp0, 0, 0LL);
 LABEL_127:
-                v21 = double_TypeInfo;
-                v75 = v68;
-                return (Il2CppObject *)j_il2cpp_value_box_0(v21, &v75);
+                v18 = double_TypeInfo;
+                v70 = v65;
+                return (Il2CppObject *)j_il2cpp_value_box_0(v18, &v70);
               }
 LABEL_120:
               if ( !LODWORD(this[4].fields.writeStream) )
                 j_il2cpp_runtime_class_init_0(this);
               goto LABEL_122;
             }
-            v37 = v4->fields.tmp0;
-            if ( !v37 )
+            v34 = v4->fields.tmp0;
+            if ( !v34 )
               break;
-            if ( v37->max_length <= 3 )
+            if ( v34->max_length <= 3 )
               goto LABEL_131;
             tmp1 = v4->fields.tmp1;
             if ( !tmp1 )
               break;
             if ( !tmp1->max_length )
               goto LABEL_131;
-            tmp1->m_Items[4] = v37->m_Items[7];
-            v39 = v4->fields.tmp0;
+            tmp1->m_Items[4] = v34->m_Items[7];
+            v36 = v4->fields.tmp0;
+            if ( !v36 )
+              break;
+            if ( v36->max_length <= 2 )
+              goto LABEL_131;
+            v37 = v4->fields.tmp1;
+            if ( !v37 )
+              break;
+            if ( v37->max_length <= 1 )
+              goto LABEL_131;
+            v37->m_Items[5] = v36->m_Items[6];
+            v38 = v4->fields.tmp0;
+            if ( !v38 )
+              break;
+            if ( v38->max_length <= 1 )
+              goto LABEL_131;
+            v39 = v4->fields.tmp1;
             if ( !v39 )
               break;
             if ( v39->max_length <= 2 )
               goto LABEL_131;
-            v40 = v4->fields.tmp1;
+            v39->m_Items[6] = v38->m_Items[5];
+            v40 = v4->fields.tmp0;
             if ( !v40 )
               break;
-            if ( v40->max_length <= 1 )
+            if ( !v40->max_length )
               goto LABEL_131;
-            v40->m_Items[5] = v39->m_Items[6];
-            v41 = v4->fields.tmp0;
+            v41 = v4->fields.tmp1;
             if ( !v41 )
               break;
-            if ( v41->max_length <= 1 )
-              goto LABEL_131;
-            v42 = v4->fields.tmp1;
-            if ( !v42 )
-              break;
-            if ( v42->max_length <= 2 )
-              goto LABEL_131;
-            v42->m_Items[6] = v41->m_Items[5];
-            v43 = v4->fields.tmp0;
-            if ( !v43 )
-              break;
-            if ( !v43->max_length )
-              goto LABEL_131;
-            v44 = v4->fields.tmp1;
-            if ( !v44 )
-              break;
-            if ( v44->max_length > 3 )
+            if ( v41->max_length > 3 )
             {
-              v44->m_Items[7] = v43->m_Items[4];
+              v41->m_Items[7] = v40->m_Items[4];
               this = (MasterDataUnpakcer_o *)System_BitConverter_TypeInfo;
               tmp0 = v4->fields.tmp1;
               if ( (BYTE3(System_BitConverter_TypeInfo->vtable._0_Equals.methodPtr) & 4) == 0 )
@@ -1658,11 +1626,11 @@ LABEL_120:
             }
             if ( !this[3].fields.tmpBuffer->obj.klass )
             {
-              v62 = v4->fields.tmp0;
+              v59 = v4->fields.tmp0;
               if ( (BYTE3(this[6].fields.tmp0) & 4) == 0 )
               {
 LABEL_126:
-                v68 = System_BitConverter__ToDouble(v62, 0, 0LL);
+                v65 = System_BitConverter__ToDouble(v59, 0, 0LL);
                 goto LABEL_127;
               }
 LABEL_124:
@@ -1670,118 +1638,118 @@ LABEL_124:
                 j_il2cpp_runtime_class_init_0(this);
               goto LABEL_126;
             }
-            v46 = v4->fields.tmp0;
+            v43 = v4->fields.tmp0;
+            if ( !v43 )
+              break;
+            if ( v43->max_length <= 7 )
+              goto LABEL_131;
+            v44 = v4->fields.tmp1;
+            if ( !v44 )
+              break;
+            if ( !v44->max_length )
+              goto LABEL_131;
+            v44->m_Items[4] = v43->m_Items[11];
+            v45 = v4->fields.tmp0;
+            if ( !v45 )
+              break;
+            if ( v45->max_length <= 6 )
+              goto LABEL_131;
+            v46 = v4->fields.tmp1;
             if ( !v46 )
               break;
-            if ( v46->max_length <= 7 )
+            if ( v46->max_length <= 1 )
               goto LABEL_131;
-            v47 = v4->fields.tmp1;
+            v46->m_Items[5] = v45->m_Items[10];
+            v47 = v4->fields.tmp0;
             if ( !v47 )
               break;
-            if ( !v47->max_length )
+            if ( v47->max_length <= 5 )
               goto LABEL_131;
-            v47->m_Items[4] = v46->m_Items[11];
-            v48 = v4->fields.tmp0;
+            v48 = v4->fields.tmp1;
             if ( !v48 )
               break;
-            if ( v48->max_length <= 6 )
+            if ( v48->max_length <= 2 )
               goto LABEL_131;
-            v49 = v4->fields.tmp1;
+            v48->m_Items[6] = v47->m_Items[9];
+            v49 = v4->fields.tmp0;
             if ( !v49 )
               break;
-            if ( v49->max_length <= 1 )
+            if ( v49->max_length <= 4 )
               goto LABEL_131;
-            v49->m_Items[5] = v48->m_Items[10];
-            v50 = v4->fields.tmp0;
+            v50 = v4->fields.tmp1;
             if ( !v50 )
               break;
-            if ( v50->max_length <= 5 )
+            if ( v50->max_length <= 3 )
               goto LABEL_131;
-            v51 = v4->fields.tmp1;
+            v50->m_Items[7] = v49->m_Items[8];
+            v51 = v4->fields.tmp0;
             if ( !v51 )
               break;
-            if ( v51->max_length <= 2 )
+            if ( v51->max_length <= 3 )
               goto LABEL_131;
-            v51->m_Items[6] = v50->m_Items[9];
-            v52 = v4->fields.tmp0;
+            v52 = v4->fields.tmp1;
             if ( !v52 )
               break;
             if ( v52->max_length <= 4 )
               goto LABEL_131;
-            v53 = v4->fields.tmp1;
+            v52->m_Items[8] = v51->m_Items[7];
+            v53 = v4->fields.tmp0;
             if ( !v53 )
               break;
-            if ( v53->max_length <= 3 )
+            if ( v53->max_length <= 2 )
               goto LABEL_131;
-            v53->m_Items[7] = v52->m_Items[8];
-            v54 = v4->fields.tmp0;
+            v54 = v4->fields.tmp1;
             if ( !v54 )
               break;
-            if ( v54->max_length <= 3 )
+            if ( v54->max_length <= 5 )
               goto LABEL_131;
-            v55 = v4->fields.tmp1;
+            v54->m_Items[9] = v53->m_Items[6];
+            v55 = v4->fields.tmp0;
             if ( !v55 )
               break;
-            if ( v55->max_length <= 4 )
+            if ( v55->max_length <= 1 )
               goto LABEL_131;
-            v55->m_Items[8] = v54->m_Items[7];
-            v56 = v4->fields.tmp0;
+            v56 = v4->fields.tmp1;
             if ( !v56 )
               break;
-            if ( v56->max_length <= 2 )
+            if ( v56->max_length <= 6 )
               goto LABEL_131;
-            v57 = v4->fields.tmp1;
+            v56->m_Items[10] = v55->m_Items[5];
+            v57 = v4->fields.tmp0;
             if ( !v57 )
               break;
-            if ( v57->max_length <= 5 )
+            if ( !v57->max_length )
               goto LABEL_131;
-            v57->m_Items[9] = v56->m_Items[6];
-            v58 = v4->fields.tmp0;
-            if ( !v58 )
-              break;
-            if ( v58->max_length <= 1 )
-              goto LABEL_131;
-            v59 = v4->fields.tmp1;
-            if ( !v59 )
-              break;
-            if ( v59->max_length <= 6 )
-              goto LABEL_131;
-            v59->m_Items[10] = v58->m_Items[5];
-            v60 = v4->fields.tmp0;
-            if ( !v60 )
-              break;
-            if ( !v60->max_length )
-              goto LABEL_131;
-            v61 = v4->fields.tmp1;
-            if ( v61 )
+            v58 = v4->fields.tmp1;
+            if ( v58 )
             {
-              if ( v61->max_length > 7 )
+              if ( v58->max_length > 7 )
               {
-                v61->m_Items[11] = v60->m_Items[4];
+                v58->m_Items[11] = v57->m_Items[4];
                 this = (MasterDataUnpakcer_o *)System_BitConverter_TypeInfo;
-                v62 = v4->fields.tmp1;
+                v59 = v4->fields.tmp1;
                 if ( (BYTE3(System_BitConverter_TypeInfo->vtable._0_Equals.methodPtr) & 4) == 0 )
                   goto LABEL_126;
                 goto LABEL_124;
               }
 LABEL_131:
-              v74 = sub_B0D9A8(this);
-              sub_B0D948(v74, 0LL);
+              v69 = sub_B52A88(this);
+              sub_B52A28(v69, 0LL);
             }
             return result;
           case 10:
-            LODWORD(v8) = ((__int64 (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer))s->klass->vtable._31_ReadByte.method)(
+            LODWORD(v5) = ((__int64 (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer))s->klass->vtable._31_ReadByte.method)(
                             s,
                             s->klass->vtable._32_unknown.methodPtr);
             goto LABEL_15;
           case 11:
-            v67 = MasterDataUnpakcer__UnpackUint16(v4, s, v9);
+            v64 = MasterDataUnpakcer__UnpackUint16(v4, s, v6);
             goto LABEL_112;
           case 12:
-            v67 = MasterDataUnpakcer__UnpackUint32(v4, s, v9);
+            v64 = MasterDataUnpakcer__UnpackUint32(v4, s, v6);
 LABEL_112:
-            v75 = *(double *)&v67;
-            v23 = long_TypeInfo;
+            v70 = *(double *)&v64;
+            v20 = long_TypeInfo;
             goto LABEL_17;
           case 13:
           case 17:
@@ -1793,23 +1761,23 @@ LABEL_112:
                                              s->klass->vtable._31_ReadByte.methodPtr);
             if ( (_DWORD)this != 8 )
               goto LABEL_130;
-            v13 = v4->fields.tmp0;
-            if ( !v13 )
+            v10 = v4->fields.tmp0;
+            if ( !v10 )
               break;
-            if ( v13->max_length < 8 )
+            if ( v10->max_length < 8 )
               goto LABEL_131;
-            v14 = v13->m_Items[6];
-            v15 = v13->m_Items[7];
-            v16 = ((unsigned __int64)v13->m_Items[4] << 56) | ((unsigned __int64)v13->m_Items[5] << 48);
-            v17 = v13->m_Items[8];
-            v18 = v13->m_Items[9];
-            v19 = v13->m_Items[10];
-            v20 = v13->m_Items[11];
-            v21 = long_TypeInfo;
-            v22 = v16 & 0xFFFF0000000000FFLL | ((unsigned __int64)v14 << 40) | ((unsigned __int64)v15 << 32) | ((unsigned __int64)v17 << 24) | ((unsigned __int64)v18 << 16) | ((unsigned __int64)v19 << 8);
+            v11 = v10->m_Items[6];
+            v12 = v10->m_Items[7];
+            v13 = ((unsigned __int64)v10->m_Items[4] << 56) | ((unsigned __int64)v10->m_Items[5] << 48);
+            v14 = v10->m_Items[8];
+            v15 = v10->m_Items[9];
+            v16 = v10->m_Items[10];
+            v17 = v10->m_Items[11];
+            v18 = long_TypeInfo;
+            v19 = v13 & 0xFFFF0000000000FFLL | ((unsigned __int64)v11 << 40) | ((unsigned __int64)v12 << 32) | ((unsigned __int64)v14 << 24) | ((unsigned __int64)v15 << 16) | ((unsigned __int64)v16 << 8);
             goto LABEL_102;
           case 14:
-            LOBYTE(v8) = ((__int64 (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer))s->klass->vtable._31_ReadByte.method)(
+            LOBYTE(v5) = ((__int64 (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer))s->klass->vtable._31_ReadByte.method)(
                            s,
                            s->klass->vtable._32_unknown.methodPtr);
             goto LABEL_26;
@@ -1822,13 +1790,13 @@ LABEL_112:
                                              s->klass->vtable._31_ReadByte.methodPtr);
             if ( (_DWORD)this != 2 )
               goto LABEL_130;
-            v30 = v4->fields.tmp0;
-            if ( !v30 )
+            v27 = v4->fields.tmp0;
+            if ( !v27 )
               break;
-            if ( v30->max_length < 2 )
+            if ( v27->max_length < 2 )
               goto LABEL_131;
-            v31 = v30->m_Items[5] | (unsigned __int64)((__int64)(char)v30->m_Items[4] << 8);
-            v21 = long_TypeInfo;
+            v28 = v27->m_Items[5] | (unsigned __int64)((__int64)(char)v27->m_Items[4] << 8);
+            v18 = long_TypeInfo;
             goto LABEL_103;
           case 16:
             this = (MasterDataUnpakcer_o *)((__int64 (__fastcall *)(System_IO_Stream_o *, struct System_Byte_array *, _QWORD, __int64, Il2CppMethodPointer))s->klass->vtable._30_unknown.method)(
@@ -1839,77 +1807,77 @@ LABEL_112:
                                              s->klass->vtable._31_ReadByte.methodPtr);
             if ( (_DWORD)this != 4 )
               goto LABEL_130;
-            v63 = v4->fields.tmp0;
-            if ( !v63 )
+            v60 = v4->fields.tmp0;
+            if ( !v60 )
               break;
-            if ( v63->max_length < 4 )
+            if ( v60->max_length < 4 )
               goto LABEL_131;
-            v64 = (char)v63->m_Items[4];
-            v65 = v63->m_Items[5];
-            v66 = v63->m_Items[6];
-            v20 = v63->m_Items[7];
-            v22 = (v64 << 24) | ((unsigned __int64)v65 << 16) | ((unsigned __int64)v66 << 8);
-            v21 = long_TypeInfo;
+            v61 = (char)v60->m_Items[4];
+            v62 = v60->m_Items[5];
+            v63 = v60->m_Items[6];
+            v17 = v60->m_Items[7];
+            v19 = (v61 << 24) | ((unsigned __int64)v62 << 16) | ((unsigned __int64)v63 << 8);
+            v18 = long_TypeInfo;
 LABEL_102:
-            v31 = v22 | v20;
+            v28 = v19 | v17;
 LABEL_103:
-            v75 = *(double *)&v31;
-            return (Il2CppObject *)j_il2cpp_value_box_0(v21, &v75);
+            v70 = *(double *)&v28;
+            return (Il2CppObject *)j_il2cpp_value_box_0(v18, &v70);
           case 23:
-            v8 = ((__int64 (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer))s->klass->vtable._31_ReadByte.method)(
+            v5 = ((__int64 (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer))s->klass->vtable._31_ReadByte.method)(
                    s,
                    s->klass->vtable._32_unknown.methodPtr);
-            v27 = (int)v8;
+            v24 = (int)v5;
             goto LABEL_24;
           case 24:
-            v8 = MasterDataUnpakcer__UnpackUint16(v4, s, v9);
+            v5 = MasterDataUnpakcer__UnpackUint16(v4, s, v6);
             goto LABEL_116;
           case 25:
-            v8 = MasterDataUnpakcer__UnpackUint32(v4, s, v9);
+            v5 = MasterDataUnpakcer__UnpackUint32(v4, s, v6);
 LABEL_116:
-            v28 = s;
-            v27 = v8;
-            return (Il2CppObject *)MasterDataUnpakcer__UnpackString((MasterDataUnpakcer_o *)v8, v28, v27, v10);
+            v25 = s;
+            v24 = v5;
+            return (Il2CppObject *)MasterDataUnpakcer__UnpackString((MasterDataUnpakcer_o *)v5, v25, v24, v7);
           case 26:
-            v29 = MasterDataUnpakcer__UnpackUint16(v4, s, v9);
+            v26 = MasterDataUnpakcer__UnpackUint16(v4, s, v6);
             goto LABEL_105;
           case 27:
-            v29 = MasterDataUnpakcer__UnpackUint32(v4, s, v9);
+            v26 = MasterDataUnpakcer__UnpackUint32(v4, s, v6);
 LABEL_105:
-            v26 = v29;
-            return (Il2CppObject *)MasterDataUnpakcer__UnpackArray(v4, s, v26, v10);
+            v23 = v26;
+            return (Il2CppObject *)MasterDataUnpakcer__UnpackArray(v4, s, v23, v7);
           case 28:
-            v32 = MasterDataUnpakcer__UnpackUint16(v4, s, v9);
+            v29 = MasterDataUnpakcer__UnpackUint16(v4, s, v6);
             goto LABEL_118;
           case 29:
-            v32 = MasterDataUnpakcer__UnpackUint32(v4, s, v9);
+            v29 = MasterDataUnpakcer__UnpackUint32(v4, s, v6);
 LABEL_118:
-            v25 = v32;
-            return (Il2CppObject *)MasterDataUnpakcer__UnpackMap(v4, s, v25, v10);
+            v22 = v29;
+            return (Il2CppObject *)MasterDataUnpakcer__UnpackMap(v4, s, v22, v7);
           default:
             return result;
         }
 LABEL_129:
-        sub_B0D97C(this);
+        sub_B52A5C(this, s);
       }
 LABEL_26:
-      v23 = long_TypeInfo;
-      v24 = (char)v8;
+      v20 = long_TypeInfo;
+      v21 = (char)v5;
 LABEL_16:
-      v75 = *(double *)&v24;
+      v70 = *(double *)&v21;
 LABEL_17:
-      v21 = v23;
-      return (Il2CppObject *)j_il2cpp_value_box_0(v21, &v75);
+      v18 = v20;
+      return (Il2CppObject *)j_il2cpp_value_box_0(v18, &v70);
     }
-    v27 = v8 & 0x1F;
+    v24 = v5 & 0x1F;
 LABEL_24:
-    v28 = s;
-    return (Il2CppObject *)MasterDataUnpakcer__UnpackString((MasterDataUnpakcer_o *)v8, v28, v27, v10);
+    v25 = s;
+    return (Il2CppObject *)MasterDataUnpakcer__UnpackString((MasterDataUnpakcer_o *)v5, v25, v24, v7);
   }
 }
 
 
-Il2CppObject *__fastcall MasterDataUnpakcer__Unpack_20980868(
+Il2CppObject *__fastcall MasterDataUnpakcer__Unpack_30630008(
         MasterDataUnpakcer_o *this,
         System_Byte_array *buf,
         const MethodInfo *method)
@@ -1917,6 +1885,6 @@ Il2CppObject *__fastcall MasterDataUnpakcer__Unpack_20980868(
   const MethodInfo *v3; // x4
 
   if ( !buf )
-    sub_B0D97C(this);
+    sub_B52A5C(this, 0LL);
   return MasterDataUnpakcer__Unpack(this, buf, 0, buf->max_length, v3);
 }

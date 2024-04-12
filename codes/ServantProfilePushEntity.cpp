@@ -1,28 +1,27 @@
 void __fastcall ServantProfilePushEntity___ctor(ServantProfilePushEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4216A26 & 1) == 0 )
+  if ( (byte_42B20E7 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4216A26 = 1;
+    sub_B52984(&Method_DataEntityBase_string___ctor__);
+    byte_42B20E7 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ServantProfilePushEntity__CreatePK(int32_t svtId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4216A25 & 1) == 0 )
+  if ( (byte_42B20E6 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
-    byte_4216A25 = 1;
+    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_42B20E6 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            idx,
-           (const MethodInfo_171341C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1A4DF50 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -40,10 +39,10 @@ bool __fastcall ServantProfilePushEntity__TimeCheck(ServantProfilePushEntity_o *
 {
   int64_t Time; // x0
 
-  if ( (byte_4216A23 & 1) == 0 )
+  if ( (byte_42B20E4 & 1) == 0 )
   {
-    sub_B0D8A4(&NetworkManager_TypeInfo, method);
-    byte_4216A23 = 1;
+    sub_B52984(&NetworkManager_TypeInfo);
+    byte_42B20E4 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -57,10 +56,10 @@ bool __fastcall ServantProfilePushEntity__TimeCheck(ServantProfilePushEntity_o *
 
 bool __fastcall ServantProfilePushEntity__TimeEnd(ServantProfilePushEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4216A24 & 1) == 0 )
+  if ( (byte_42B20E5 & 1) == 0 )
   {
-    sub_B0D8A4(&NetworkManager_TypeInfo, method);
-    byte_4216A24 = 1;
+    sub_B52984(&NetworkManager_TypeInfo);
+    byte_42B20E5 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )

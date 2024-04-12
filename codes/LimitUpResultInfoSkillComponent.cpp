@@ -24,21 +24,20 @@ void __fastcall LimitUpResultInfoSkillComponent__Setup(
         System_String_o *detail,
         const MethodInfo *method)
 {
-  __int64 v13; // x1
   SkillIconComponent_o *iconLimitUp; // x0
-  const MethodInfo *v15; // x3
+  const MethodInfo *v14; // x3
   System_String_o *PATH; // x23
   UnityEngine_Transform_o *transform; // x0
   srcLineSprite_o *Component_srcLineSprite; // x0
   UILabel_o *nameLimitUpLabel; // x23
-  ServantSkillStrengthStatus_o *v20; // x24
-  UnityEngine_Vector2Int_o v21; // 0:x6.8
+  ServantSkillStrengthStatus_o *v19; // x24
+  UnityEngine_Vector2Int_o v20; // 0:x6.8
 
-  if ( (byte_4213EEA & 1) == 0 )
+  if ( (byte_42AF1E8 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___, *(_QWORD *)&skillId);
-    sub_B0D8A4(&ServantSkillStrengthStatus_TypeInfo, v13);
-    byte_4213EEA = 1;
+    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
+    sub_B52984(&ServantSkillStrengthStatus_TypeInfo);
+    byte_42AF1E8 = 1;
   }
   iconLimitUp = this->fields.iconLimitUp;
   if ( !iconLimitUp )
@@ -64,7 +63,7 @@ void __fastcall LimitUpResultInfoSkillComponent__Setup(
     {
       PATH = ServantSkillStrengthStatus_TypeInfo->static_fields->PATH;
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)iconLimitUp, 0LL);
-      iconLimitUp = (SkillIconComponent_o *)BaseMonoBehaviour__createObject_18711800(
+      iconLimitUp = (SkillIconComponent_o *)BaseMonoBehaviour__createObject_19346208(
                                               (BaseMonoBehaviour_o *)this,
                                               PATH,
                                               transform,
@@ -74,29 +73,29 @@ void __fastcall LimitUpResultInfoSkillComponent__Setup(
       {
         Component_srcLineSprite = UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                     (UnityEngine_GameObject_o *)iconLimitUp,
-                                    (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
+                                    (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
         nameLimitUpLabel = this->fields.nameLimitUpLabel;
-        v20 = (ServantSkillStrengthStatus_o *)Component_srcLineSprite;
+        v19 = (ServantSkillStrengthStatus_o *)Component_srcLineSprite;
         iconLimitUp = (SkillIconComponent_o *)ServantSkillEntity__GetStrengthStatus(svtSkillEntity, 0LL);
-        if ( v20 )
+        if ( v19 )
         {
-          v21 = (UnityEngine_Vector2Int_o)0x1200000014LL;
+          v20 = (UnityEngine_Vector2Int_o)0x1200000014LL;
           ServantSkillStrengthStatus__Set(
-            v20,
+            v19,
             nameLimitUpLabel,
             (int32_t)iconLimitUp,
             svtSkillEntity->fields.skillNum,
             20,
             -9,
-            v21,
+            v20,
             0LL);
           goto LABEL_14;
         }
       }
     }
 LABEL_15:
-    sub_B0D97C(iconLimitUp);
+    sub_B52A5C(iconLimitUp, *(_QWORD *)&skillId);
   }
 LABEL_14:
-  LimitUpResultInfoComponent__Setup((LimitUpResultInfoComponent_o *)this, title, detail, v15);
+  LimitUpResultInfoComponent__Setup((LimitUpResultInfoComponent_o *)this, title, detail, v14);
 }

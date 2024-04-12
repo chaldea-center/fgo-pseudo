@@ -6,28 +6,27 @@ void __fastcall FsmEventData___ctor(FsmEventData_o *this, const MethodInfo *meth
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
-  __int64 v9; // x1
+  System_Int32_array **v9; // x1
   System_Int32_array **v10; // x1
-  System_Int32_array **v11; // x1
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
+  System_String_array **v11; // x2
+  System_String_array **v12; // x3
+  System_Boolean_array **v13; // x4
+  System_Int32_array **v14; // x5
+  System_Int32_array *v15; // x6
+  System_Int32_array *v16; // x7
 
-  if ( (byte_42171F5 & 1) == 0 )
+  if ( (byte_42B2BB6 & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_21188/*"none"*/, method);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v9);
-    byte_42171F5 = 1;
+    sub_B52984(&StringLiteral_21291/*"none"*/);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B2BB6 = 1;
   }
-  v10 = (System_Int32_array **)StringLiteral_21188/*"none"*/;
-  this->fields.eventData = (struct System_String_o *)StringLiteral_21188/*"none"*/;
-  sub_B0D840((BattleServantConfConponent_o *)&this->fields, v10, v2, v3, v4, v5, v6, v7);
-  v11 = (System_Int32_array **)StringLiteral_1/*""*/;
+  v9 = (System_Int32_array **)StringLiteral_21291/*"none"*/;
+  this->fields.eventData = (struct System_String_o *)StringLiteral_21291/*"none"*/;
+  sub_B52920((BattleServantConfConponent_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
+  v10 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.title = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B0D840((BattleServantConfConponent_o *)&this->fields.title, v11, v12, v13, v14, v15, v16, v17);
+  sub_B52920((BattleServantConfConponent_o *)&this->fields.title, v10, v11, v12, v13, v14, v15, v16);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -59,7 +58,7 @@ void __fastcall FsmEventData__set_EventData(FsmEventData_o *this, System_String_
   System_Int32_array *v7; // x7
 
   this->fields.eventData = value;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -80,7 +79,7 @@ void __fastcall FsmEventData__set_Title(FsmEventData_o *this, System_String_o *v
   System_Int32_array *v7; // x7
 
   this->fields.title = value;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.title,
     (System_Int32_array **)value,
     (System_String_array **)method,

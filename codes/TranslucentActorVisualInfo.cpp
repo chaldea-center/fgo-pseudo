@@ -19,50 +19,46 @@ void __fastcall TranslucentActorVisualInfo__UpdateByBuffs(
         BattleBuffData_BuffData_array *buffDataArray,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_o *v10; // x0
-  WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_o *v11; // x20
+  WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_o *v5; // x0
+  WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_o *v6; // x20
   DataManager_o *Instance; // x0
+  __int64 v8; // x1
   BuffEntity_o *Entity; // x0
-  BuffEntity_o *v14; // x20
-  float v15; // s0
+  BuffEntity_o *v10; // x20
+  float v11; // s0
   char IsDrawShadowDespiteBattleCharaInvisible; // w8
 
-  if ( (byte_42167E7 & 1) == 0 )
+  if ( (byte_42B2319 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_BasicHelper_IndexValue_BattleBuffData_BuffData___, buffDataArray);
-    sub_B0D8A4(&Method_DataManager_GetMasterData_BuffMaster___, v5);
-    sub_B0D8A4(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v6);
-    sub_B0D8A4(&Method_System_Nullable_float__GetValueOrDefault__, v7);
-    sub_B0D8A4(&Method_System_Nullable_float__get_HasValue__, v8);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_42167E7 = 1;
+    sub_B52984(&Method_BasicHelper_IndexValue_BattleBuffData_BuffData___);
+    sub_B52984(&Method_DataManager_GetMasterData_BuffMaster___);
+    sub_B52984(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+    sub_B52984(&Method_System_Nullable_float__GetValueOrDefault__);
+    sub_B52984(&Method_System_Nullable_float__get_HasValue__);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_42B2319 = 1;
   }
-  v10 = BasicHelper__IndexValue_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_(
-          (WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_array *)buffDataArray,
-          0,
-          0LL,
-          (const MethodInfo_1709498 *)Method_BasicHelper_IndexValue_BattleBuffData_BuffData___);
-  if ( !v10 )
+  v5 = BasicHelper__IndexValue_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_(
+         (WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_array *)buffDataArray,
+         0,
+         0LL,
+         (const MethodInfo_1A43FCC *)Method_BasicHelper_IndexValue_BattleBuffData_BuffData___);
+  if ( !v5 )
     goto LABEL_11;
-  v11 = v10;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v6 = v5;
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_BuffMaster___)) == 0LL )
+                                      (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_BuffMaster___)) == 0LL )
   {
 LABEL_13:
-    sub_B0D97C(Instance);
+    sub_B52A5C(Instance, v8);
   }
   Entity = (BuffEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                              (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
-                             v11->fields.weight,
-                             (const MethodInfo_2669BD4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                             v6->fields.weight,
+                             (const MethodInfo_23E22D8 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
   if ( !Entity )
   {
 LABEL_11:
@@ -71,16 +67,16 @@ LABEL_11:
     IsDrawShadowDespiteBattleCharaInvisible = 1;
     goto LABEL_12;
   }
-  v14 = Entity;
+  v10 = Entity;
   this->fields._IsActive_k__BackingField = 1;
   Instance = (DataManager_o *)BuffEntity__GetBattleCharaAlpha(Entity, 0LL);
   if ( !this )
     goto LABEL_13;
-  v15 = 0.2;
+  v11 = 0.2;
   if ( ((unsigned __int64)Instance & 0xFF00000000LL) != 0 )
-    v15 = *(float *)&Instance;
-  this->fields._Alpha_k__BackingField = v15;
-  IsDrawShadowDespiteBattleCharaInvisible = BuffEntity__IsDrawShadowDespiteBattleCharaInvisible(v14, 0LL);
+    v11 = *(float *)&Instance;
+  this->fields._Alpha_k__BackingField = v11;
+  IsDrawShadowDespiteBattleCharaInvisible = BuffEntity__IsDrawShadowDespiteBattleCharaInvisible(v10, 0LL);
 LABEL_12:
   this->fields._IsDrawShadow_k__BackingField = IsDrawShadowDespiteBattleCharaInvisible;
 }

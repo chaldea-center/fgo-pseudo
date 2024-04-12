@@ -8,11 +8,11 @@ void __fastcall StandFigureRenderWaitStatus___ctor(
 {
   const MethodInfo *v6; // [xsp+0h] [xbp-10h]
 
-  StandFigureRenderWaitStatus___ctor_25975548(this, 0LL, id, faceType, 0, 0, textureList, callback, v6);
+  StandFigureRenderWaitStatus___ctor_26223892(this, 0LL, id, faceType, 0, 0, textureList, callback, v6);
 }
 
 
-void __fastcall StandFigureRenderWaitStatus___ctor_25974828(
+void __fastcall StandFigureRenderWaitStatus___ctor_26223172(
         StandFigureRenderWaitStatus_o *this,
         UnityEngine_RenderTexture_o *renderTex,
         int32_t id,
@@ -23,11 +23,11 @@ void __fastcall StandFigureRenderWaitStatus___ctor_25974828(
 {
   const MethodInfo *v7; // [xsp+0h] [xbp-10h]
 
-  StandFigureRenderWaitStatus___ctor_25975548(this, renderTex, id, faceType, 0, 0, textureList, callback, v7);
+  StandFigureRenderWaitStatus___ctor_26223892(this, renderTex, id, faceType, 0, 0, textureList, callback, v7);
 }
 
 
-void __fastcall StandFigureRenderWaitStatus___ctor_25975304(
+void __fastcall StandFigureRenderWaitStatus___ctor_26223648(
         StandFigureRenderWaitStatus_o *this,
         UnityEngine_RenderTexture_o *renderTex,
         int32_t id,
@@ -39,11 +39,11 @@ void __fastcall StandFigureRenderWaitStatus___ctor_25975304(
 {
   const MethodInfo *v8; // [xsp+0h] [xbp-10h]
 
-  StandFigureRenderWaitStatus___ctor_25975548(this, renderTex, id, faceType, formId, 0, textureList, callback, v8);
+  StandFigureRenderWaitStatus___ctor_26223892(this, renderTex, id, faceType, formId, 0, textureList, callback, v8);
 }
 
 
-void __fastcall StandFigureRenderWaitStatus___ctor_25975548(
+void __fastcall StandFigureRenderWaitStatus___ctor_26223892(
         StandFigureRenderWaitStatus_o *this,
         UnityEngine_RenderTexture_o *renderTex,
         int32_t id,
@@ -78,7 +78,7 @@ void __fastcall StandFigureRenderWaitStatus___ctor_25975548(
   this->fields.faceType = faceType;
   this->fields.formId = formId;
   this->fields.textureList = textureList;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.textureList,
     (System_Int32_array **)textureList,
     v17,
@@ -88,7 +88,7 @@ void __fastcall StandFigureRenderWaitStatus___ctor_25975548(
     v21,
     v22);
   this->fields.renderTex = renderTex;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.renderTex,
     (System_Int32_array **)renderTex,
     v23,
@@ -101,7 +101,7 @@ void __fastcall StandFigureRenderWaitStatus___ctor_25975548(
   if ( callback )
   {
     this->fields.callbackFunc = callback;
-    sub_B0D840(
+    sub_B52920(
       (BattleServantConfConponent_o *)&this->fields.callbackFunc,
       (System_Int32_array **)callback,
       v29,
@@ -129,7 +129,7 @@ void __fastcall StandFigureRenderWaitStatus__Callback(
   else
   {
     if ( !renderTex )
-      sub_B0D97C(0LL);
+      sub_B52A5C(0LL, 0LL);
     UnityEngine_RenderTexture__Release(renderTex, 0LL);
   }
 }
@@ -160,7 +160,7 @@ void __fastcall StandFigureRenderWaitStatus__SetCharacter(
   UnityEngine_Texture2D_array *textureList; // x4
 
   if ( !standFigureRender )
-    sub_B0D97C(this);
+    sub_B52A5C(this, 0LL);
   imageId = this->fields.imageId;
   faceType = this->fields.faceType;
   formId = this->fields.formId;
@@ -187,10 +187,10 @@ void __fastcall StandFigureRenderWaitStatus__add_callbackFunc(
   StandFigureRenderWaitStatus_EndHandler_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_42153B8 & 1) == 0 )
+  if ( (byte_42B0B2D & 1) == 0 )
   {
-    sub_B0D8A4(&StandFigureRenderWaitStatus_EndHandler_TypeInfo, value);
-    byte_42153B8 = 1;
+    sub_B52984(&StandFigureRenderWaitStatus_EndHandler_TypeInfo);
+    byte_42B0B2D = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -203,13 +203,13 @@ void __fastcall StandFigureRenderWaitStatus__add_callbackFunc(
       if ( (StandFigureRenderWaitStatus_EndHandler_c *)v8->klass != StandFigureRenderWaitStatus_EndHandler_TypeInfo )
         break;
     }
-    v9 = sub_B022BC(p_callbackFunc, v8, v6);
+    v9 = sub_B4739C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (StandFigureRenderWaitStatus_o *)sub_B0DC70(v8);
+  v11 = (StandFigureRenderWaitStatus_o *)sub_B52D50(v8);
   StandFigureRenderWaitStatus__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -228,10 +228,10 @@ void __fastcall StandFigureRenderWaitStatus__remove_callbackFunc(
   StandFigureRenderWaitStatus_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_42153B9 & 1) == 0 )
+  if ( (byte_42B0B2E & 1) == 0 )
   {
-    sub_B0D8A4(&StandFigureRenderWaitStatus_EndHandler_TypeInfo, value);
-    byte_42153B9 = 1;
+    sub_B52984(&StandFigureRenderWaitStatus_EndHandler_TypeInfo);
+    byte_42B0B2E = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -244,13 +244,13 @@ void __fastcall StandFigureRenderWaitStatus__remove_callbackFunc(
       if ( (StandFigureRenderWaitStatus_EndHandler_c *)v8->klass != StandFigureRenderWaitStatus_EndHandler_TypeInfo )
         break;
     }
-    v9 = sub_B022BC(p_callbackFunc, v8, v6);
+    v9 = sub_B4739C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (StandFigureRenderWaitStatus_o *)sub_B0DC70(v8);
+  v11 = (StandFigureRenderWaitStatus_o *)sub_B52D50(v8);
   StandFigureRenderWaitStatus__GetRenderTexture(v11, v12);
 }
 
@@ -270,7 +270,7 @@ void __fastcall StandFigureRenderWaitStatus_EndHandler___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B0D840(p_method, object);
+  sub_B52920(p_method);
 }
 
 
@@ -285,7 +285,7 @@ System_IAsyncResult_o *__fastcall StandFigureRenderWaitStatus_EndHandler__BeginI
 
   v6[0] = (__int64)texture;
   v6[1] = 0LL;
-  return (System_IAsyncResult_o *)sub_B0D848(this, v6, callback, object);
+  return (System_IAsyncResult_o *)sub_B52928(this, v6, callback, object);
 }
 
 
@@ -294,7 +294,7 @@ void __fastcall StandFigureRenderWaitStatus_EndHandler__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B0D84C(result, 0LL, method);
+  sub_B5292C(result, 0LL, method);
 }
 
 
@@ -310,49 +310,53 @@ void __fastcall StandFigureRenderWaitStatus_EndHandler__Invoke(
   __int64 i; // x26
   unsigned int v10; // w22
   __int64 class_0; // x0
-  UnityEngine_RenderTexture_c *v12; // x8
-  unsigned __int64 v13; // x10
-  int32_t *v14; // x11
-  __int64 v15; // x0
+  __int64 v12; // x3
+  UnityEngine_RenderTexture_c *v13; // x8
+  unsigned __int64 v14; // x10
+  int32_t *v15; // x11
   __int64 v16; // x0
-  unsigned int v17; // w23
-  __int64 v18; // x0
-  __int64 v19; // x8
-  unsigned __int64 v20; // x10
-  _DWORD *v21; // x11
-  __int64 v22; // x0
-  __int64 v23; // x0
+  __int64 v17; // x0
+  unsigned int v18; // w23
+  __int64 v19; // x0
+  __int64 v20; // x3
+  __int64 v21; // x8
+  unsigned __int64 v22; // x10
+  _DWORD *v23; // x11
   __int64 v24; // x0
-  void (__fastcall **v25)(UnityEngine_RenderTexture_o *, _QWORD); // x0
+  __int64 v25; // x0
   __int64 v26; // x0
-  void (__fastcall **v27)(__int64 *, UnityEngine_RenderTexture_o *, _QWORD); // x0
-  StandFigureRenderWaitStatus_EndHandler_o *v28; // x8
-  __int64 v29; // x21
-  __int64 *v30; // x22
-  void (__fastcall *v31)(UnityEngine_RenderTexture_o *, __int64); // x23
-  char v32; // w0
-  int v33; // w8
-  char v34; // w23
-  char v35; // w0
-  __int64 v36; // x8
-  __int64 v37; // x1
-  __int64 v38; // x2
-  unsigned __int64 v39; // x10
-  _DWORD *v40; // x11
-  char v41; // w22
-  char v42; // w0
+  void (__fastcall **v27)(UnityEngine_RenderTexture_o *, _QWORD); // x0
+  __int64 v28; // x0
+  void (__fastcall **v29)(__int64 *, UnityEngine_RenderTexture_o *, _QWORD); // x0
+  StandFigureRenderWaitStatus_EndHandler_o *v30; // x8
+  __int64 v31; // x21
+  __int64 *v32; // x22
+  void (__fastcall *v33)(UnityEngine_RenderTexture_o *, __int64); // x23
+  char v34; // w0
+  int v35; // w8
+  char v36; // w23
+  char v37; // w0
+  __int64 v38; // x3
+  __int64 v39; // x8
+  __int64 v40; // x1
+  __int64 v41; // x2
+  unsigned __int64 v42; // x10
+  _DWORD *v43; // x11
+  char v44; // w22
+  char v45; // w0
+  __int64 v46; // x3
   UnityEngine_RenderTexture_c *klass; // x8
-  __int64 v44; // x1
-  __int64 v45; // x2
-  unsigned __int64 v46; // x10
+  __int64 v48; // x1
+  __int64 v49; // x2
+  unsigned __int64 v50; // x10
   int32_t *p_offset; // x11
-  StandFigureRenderWaitStatus_EndHandler_o *v48; // [xsp+8h] [xbp-48h] BYREF
+  StandFigureRenderWaitStatus_EndHandler_o *v52; // [xsp+8h] [xbp-48h] BYREF
 
-  v48 = this;
+  v52 = this;
   v4 = *(_QWORD *)&this[1].fields.method_ptr;
   if ( !v4 )
   {
-    v8 = &v48;
+    v8 = &v52;
     v7 = 1LL;
     goto LABEL_5;
   }
@@ -363,187 +367,187 @@ void __fastcall StandFigureRenderWaitStatus_EndHandler__Invoke(
 LABEL_5:
     for ( i = 0LL; i != v7; ++i )
     {
-      v28 = v8[i];
-      v30 = *(__int64 **)&v28->fields.method;
-      v29 = *(_QWORD *)&v28->fields.extra_arg;
-      v31 = *(void (__fastcall **)(UnityEngine_RenderTexture_o *, __int64))&v28->fields.method_ptr;
-      if ( *(__int16 *)(v29 + 72) == -1 )
-        sub_B0D960(*(_QWORD *)&v28->fields.extra_arg, texture, method, v3);
-      v32 = sub_B0D8D4(v29);
-      v33 = *(unsigned __int8 *)(v29 + 74);
-      if ( (v32 & 1) != 0 )
+      v30 = v8[i];
+      v32 = *(__int64 **)&v30->fields.method;
+      v31 = *(_QWORD *)&v30->fields.extra_arg;
+      v33 = *(void (__fastcall **)(UnityEngine_RenderTexture_o *, __int64))&v30->fields.method_ptr;
+      if ( *(__int16 *)(v31 + 72) == -1 )
+        sub_B52A40(*(_QWORD *)&v30->fields.extra_arg, texture, method, v3);
+      v34 = sub_B529B4(v31);
+      v35 = *(unsigned __int8 *)(v31 + 74);
+      if ( (v34 & 1) != 0 )
       {
-        if ( v33 == 1 )
+        if ( v35 == 1 )
           goto LABEL_58;
       }
       else
       {
-        if ( v33 != 1 )
+        if ( v35 != 1 )
         {
-          if ( *(__int16 *)(v29 + 72) != -1 && this->fields.m_target )
+          if ( *(__int16 *)(v31 + 72) != -1 && this->fields.m_target )
           {
-            v41 = sub_B0D8CC(v29);
-            v42 = sub_B0DCD0(v29);
-            if ( (v41 & 1) != 0 )
+            v44 = sub_B529AC(v31);
+            v45 = sub_B52DB0(v31);
+            if ( (v44 & 1) != 0 )
             {
-              if ( (v42 & 1) != 0 )
+              if ( (v45 & 1) != 0 )
               {
                 klass = texture->klass;
-                v44 = *(_QWORD *)(v29 + 24);
-                v45 = *(unsigned __int16 *)(v29 + 72);
+                v48 = *(_QWORD *)(v31 + 24);
+                v49 = *(unsigned __int16 *)(v31 + 72);
                 if ( *(_WORD *)&texture->klass->_2.bitflags1 )
                 {
-                  v46 = 0LL;
+                  v50 = 0LL;
                   p_offset = &klass->_1.interfaceOffsets->offset;
-                  while ( *((_QWORD *)p_offset - 1) != v44 )
+                  while ( *((_QWORD *)p_offset - 1) != v48 )
                   {
-                    ++v46;
+                    ++v50;
                     p_offset += 4;
-                    if ( v46 >= *(unsigned __int16 *)&texture->klass->_2.bitflags1 )
+                    if ( v50 >= *(unsigned __int16 *)&texture->klass->_2.bitflags1 )
                       goto LABEL_57;
                   }
-                  v24 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset + 2 * (int)v45);
+                  v26 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset + 2 * (int)v49);
                 }
                 else
                 {
 LABEL_57:
-                  v24 = sub_AA67A0(texture, v44, v45);
+                  v26 = sub_AEB880(texture, v48, v49, v46);
                 }
-                v16 = *(_QWORD *)(v24 + 8);
+                v17 = *(_QWORD *)(v26 + 8);
               }
               else
               {
-                v16 = *((_QWORD *)&texture->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v29 + 72));
+                v17 = *((_QWORD *)&texture->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v31 + 72));
               }
-              v25 = (void (__fastcall **)(UnityEngine_RenderTexture_o *, _QWORD))sub_B0D954(v16, v29);
-              (*v25)(texture, v25);
+              v27 = (void (__fastcall **)(UnityEngine_RenderTexture_o *, _QWORD))sub_B52A34(v17, v31);
+              (*v27)(texture, v27);
             }
             else
             {
-              v10 = *(unsigned __int16 *)(v29 + 72);
-              if ( (v42 & 1) != 0 )
+              v10 = *(unsigned __int16 *)(v31 + 72);
+              if ( (v45 & 1) != 0 )
               {
-                class_0 = j_il2cpp_method_get_class_0(v29);
-                v12 = texture->klass;
+                class_0 = j_il2cpp_method_get_class_0(v31);
+                v13 = texture->klass;
                 if ( *(_WORD *)&texture->klass->_2.bitflags1 )
                 {
-                  v13 = 0LL;
-                  v14 = &v12->_1.interfaceOffsets->offset;
-                  while ( *((_QWORD *)v14 - 1) != class_0 )
+                  v14 = 0LL;
+                  v15 = &v13->_1.interfaceOffsets->offset;
+                  while ( *((_QWORD *)v15 - 1) != class_0 )
                   {
-                    ++v13;
-                    v14 += 4;
-                    if ( v13 >= *(unsigned __int16 *)&texture->klass->_2.bitflags1 )
+                    ++v14;
+                    v15 += 4;
+                    if ( v14 >= *(unsigned __int16 *)&texture->klass->_2.bitflags1 )
                       goto LABEL_11;
                   }
-                  v15 = (__int64)(&v12->vtable._0_Equals.method + 2 * (int)(*v14 + v10));
+                  v16 = (__int64)(&v13->vtable._0_Equals.method + 2 * (int)(*v15 + v10));
                 }
                 else
                 {
 LABEL_11:
-                  v15 = sub_AA67A0(texture, class_0, v10);
+                  v16 = sub_AEB880(texture, class_0, v10, v12);
                 }
-                (*(void (__fastcall **)(UnityEngine_RenderTexture_o *, _QWORD))v15)(texture, *(_QWORD *)(v15 + 8));
+                (*(void (__fastcall **)(UnityEngine_RenderTexture_o *, _QWORD))v16)(texture, *(_QWORD *)(v16 + 8));
               }
               else
               {
                 (*((void (__fastcall **)(UnityEngine_RenderTexture_o *, _QWORD))&texture->klass->vtable._0_Equals.method
-                 + 2 * *(unsigned __int16 *)(v29 + 72)))(
+                 + 2 * *(unsigned __int16 *)(v31 + 72)))(
                   texture,
-                  *((_QWORD *)&texture->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v29 + 72)));
+                  *((_QWORD *)&texture->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v31 + 72)));
               }
             }
             continue;
           }
 LABEL_58:
-          v31(texture, v29);
+          v33(texture, v31);
           continue;
         }
-        if ( !v30 )
+        if ( !v32 )
           goto LABEL_58;
-        if ( *(__int16 *)(v29 + 72) != -1 && (*(_BYTE *)(*v30 + 277) & 1) == 0 && this->fields.m_target )
+        if ( *(__int16 *)(v31 + 72) != -1 && (*(_BYTE *)(*v32 + 277) & 1) == 0 && this->fields.m_target )
         {
-          v34 = sub_B0D8CC(v29);
-          v35 = sub_B0DCD0(v29);
-          if ( (v34 & 1) != 0 )
+          v36 = sub_B529AC(v31);
+          v37 = sub_B52DB0(v31);
+          if ( (v36 & 1) != 0 )
           {
-            if ( (v35 & 1) != 0 )
+            if ( (v37 & 1) != 0 )
             {
-              v36 = *v30;
-              v37 = *(_QWORD *)(v29 + 24);
-              v38 = *(unsigned __int16 *)(v29 + 72);
-              if ( *(_WORD *)(*v30 + 298) )
+              v39 = *v32;
+              v40 = *(_QWORD *)(v31 + 24);
+              v41 = *(unsigned __int16 *)(v31 + 72);
+              if ( *(_WORD *)(*v32 + 298) )
               {
-                v39 = 0LL;
-                v40 = (_DWORD *)(*(_QWORD *)(v36 + 176) + 8LL);
-                while ( *((_QWORD *)v40 - 1) != v37 )
+                v42 = 0LL;
+                v43 = (_DWORD *)(*(_QWORD *)(v39 + 176) + 8LL);
+                while ( *((_QWORD *)v43 - 1) != v40 )
                 {
-                  ++v39;
-                  v40 += 4;
-                  if ( v39 >= *(unsigned __int16 *)(*v30 + 298) )
+                  ++v42;
+                  v43 += 4;
+                  if ( v42 >= *(unsigned __int16 *)(*v32 + 298) )
                     goto LABEL_48;
                 }
-                v26 = v36 + 16LL * (*v40 + (int)v38) + 312;
+                v28 = v39 + 16LL * (*v43 + (int)v41) + 312;
               }
               else
               {
 LABEL_48:
-                v26 = sub_AA67A0(v30, v37, v38);
+                v28 = sub_AEB880(v32, v40, v41, v38);
               }
-              v23 = *(_QWORD *)(v26 + 8);
+              v25 = *(_QWORD *)(v28 + 8);
             }
             else
             {
-              v23 = *(_QWORD *)(*v30 + 16LL * *(unsigned __int16 *)(v29 + 72) + 320);
+              v25 = *(_QWORD *)(*v32 + 16LL * *(unsigned __int16 *)(v31 + 72) + 320);
             }
-            v27 = (void (__fastcall **)(__int64 *, UnityEngine_RenderTexture_o *, _QWORD))sub_B0D954(v23, v29);
-            (*v27)(v30, texture, v27);
+            v29 = (void (__fastcall **)(__int64 *, UnityEngine_RenderTexture_o *, _QWORD))sub_B52A34(v25, v31);
+            (*v29)(v32, texture, v29);
           }
           else
           {
-            v17 = *(unsigned __int16 *)(v29 + 72);
-            if ( (v35 & 1) != 0 )
+            v18 = *(unsigned __int16 *)(v31 + 72);
+            if ( (v37 & 1) != 0 )
             {
-              v18 = j_il2cpp_method_get_class_0(v29);
-              v19 = *v30;
-              if ( *(_WORD *)(*v30 + 298) )
+              v19 = j_il2cpp_method_get_class_0(v31);
+              v21 = *v32;
+              if ( *(_WORD *)(*v32 + 298) )
               {
-                v20 = 0LL;
-                v21 = (_DWORD *)(*(_QWORD *)(v19 + 176) + 8LL);
-                while ( *((_QWORD *)v21 - 1) != v18 )
+                v22 = 0LL;
+                v23 = (_DWORD *)(*(_QWORD *)(v21 + 176) + 8LL);
+                while ( *((_QWORD *)v23 - 1) != v19 )
                 {
-                  ++v20;
-                  v21 += 4;
-                  if ( v20 >= *(unsigned __int16 *)(*v30 + 298) )
+                  ++v22;
+                  v23 += 4;
+                  if ( v22 >= *(unsigned __int16 *)(*v32 + 298) )
                     goto LABEL_19;
                 }
-                v22 = v19 + 16LL * (int)(*v21 + v17) + 312;
+                v24 = v21 + 16LL * (int)(*v23 + v18) + 312;
               }
               else
               {
 LABEL_19:
-                v22 = sub_AA67A0(v30, v18, v17);
+                v24 = sub_AEB880(v32, v19, v18, v20);
               }
-              (*(void (__fastcall **)(__int64 *, UnityEngine_RenderTexture_o *, _QWORD))v22)(
-                v30,
+              (*(void (__fastcall **)(__int64 *, UnityEngine_RenderTexture_o *, _QWORD))v24)(
+                v32,
                 texture,
-                *(_QWORD *)(v22 + 8));
+                *(_QWORD *)(v24 + 8));
             }
             else
             {
-              (*(void (__fastcall **)(__int64 *, UnityEngine_RenderTexture_o *, _QWORD))(*v30
+              (*(void (__fastcall **)(__int64 *, UnityEngine_RenderTexture_o *, _QWORD))(*v32
                                                                                        + 16LL
-                                                                                       * *(unsigned __int16 *)(v29 + 72)
+                                                                                       * *(unsigned __int16 *)(v31 + 72)
                                                                                        + 312))(
-                v30,
+                v32,
                 texture,
-                *(_QWORD *)(*v30 + 16LL * *(unsigned __int16 *)(v29 + 72) + 320));
+                *(_QWORD *)(*v32 + 16LL * *(unsigned __int16 *)(v31 + 72) + 320));
             }
           }
           continue;
         }
       }
-      ((void (__fastcall *)(__int64 *, UnityEngine_RenderTexture_o *, __int64))v31)(v30, texture, v29);
+      ((void (__fastcall *)(__int64 *, UnityEngine_RenderTexture_o *, __int64))v33)(v32, texture, v31);
     }
   }
 }

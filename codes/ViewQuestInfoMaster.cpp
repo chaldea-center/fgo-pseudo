@@ -1,12 +1,12 @@
 void __fastcall ViewQuestInfoMaster___ctor(ViewQuestInfoMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_421A29A & 1) == 0 )
+  if ( (byte_42B5E88 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataMasterBase_ViewQuestInfoMaster__ViewQuestInfoEntity__int___ctor__, method);
-    byte_421A29A = 1;
+    sub_B52984(&Method_DataMasterBase_ViewQuestInfoMaster__ViewQuestInfoEntity__int___ctor__);
+    byte_42B5E88 = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
-    75,
-    (const MethodInfo_2669B38 *)Method_DataMasterBase_ViewQuestInfoMaster__ViewQuestInfoEntity__int___ctor__);
+    76,
+    (const MethodInfo_23E223C *)Method_DataMasterBase_ViewQuestInfoMaster__ViewQuestInfoEntity__int___ctor__);
 }

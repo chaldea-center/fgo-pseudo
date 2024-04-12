@@ -2,10 +2,10 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu___ctor(
         ServantEquipFramePurchaseConfirmMenu_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4217506 & 1) == 0 )
+  if ( (byte_42B2EBA & 1) == 0 )
   {
-    sub_B0D8A4(&BaseDialog_TypeInfo, method);
-    byte_4217506 = 1;
+    sub_B52984(&BaseDialog_TypeInfo);
+    byte_42B2EBA = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -33,7 +33,7 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_B0D840(p_callbackFunc, 0LL, (System_String_array **)method, v3, v4, v5, v6, v7);
+    sub_B52920(p_callbackFunc, 0LL, (System_String_array **)method, v3, v4, v5, v6, v7);
     ServantEquipFramePurchaseConfirmMenu_CallbackFunc__Invoke(v9, result, 0LL);
   }
 }
@@ -45,11 +45,11 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Close(
 {
   const MethodInfo *v2; // x2
 
-  ServantEquipFramePurchaseConfirmMenu__Close_29606628(this, 0LL, v2);
+  ServantEquipFramePurchaseConfirmMenu__Close_30450164(this, 0LL, v2);
 }
 
 
-void __fastcall ServantEquipFramePurchaseConfirmMenu__Close_29606628(
+void __fastcall ServantEquipFramePurchaseConfirmMenu__Close_30450164(
         ServantEquipFramePurchaseConfirmMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -59,19 +59,16 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Close_29606628(
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x2
-  System_Action_o *v13; // x20
+  System_Action_o *v10; // x20
 
-  if ( (byte_4217501 & 1) == 0 )
+  if ( (byte_42B2EB5 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, callback);
-    sub_B0D8A4(&Method_ServantEquipFramePurchaseConfirmMenu_EndClose__, v10);
-    byte_4217501 = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&Method_ServantEquipFramePurchaseConfirmMenu_EndClose__);
+    byte_42B2EB5 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc,
     (System_Int32_array **)callback,
     (System_String_array **)method,
@@ -81,9 +78,9 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Close_29606628(
     v6,
     v7);
   this->fields.state = 4;
-  v13 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v11, v12);
-  System_Action___ctor(v13, (Il2CppObject *)this, Method_ServantEquipFramePurchaseConfirmMenu_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v13, 0LL);
+  v10 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+  System_Action___ctor(v10, (Il2CppObject *)this, Method_ServantEquipFramePurchaseConfirmMenu_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
 }
 
 
@@ -108,7 +105,7 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__EndClose(
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_B0D840(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_B52920(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
     System_Action__Invoke(v10, 0LL);
   }
 }
@@ -128,10 +125,10 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Init(
 {
   UILabel_o *messageLabel; // x0
 
-  if ( (byte_42174FF & 1) == 0 )
+  if ( (byte_42B2EB3 & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_1/*""*/, method);
-    byte_42174FF = 1;
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B2EB3 = 1;
   }
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
@@ -171,7 +168,7 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Init(
         (messageLabel = this->fields.closeLabel) == 0LL) )
   {
 LABEL_15:
-    sub_B0D97C(messageLabel);
+    sub_B52A5C(messageLabel, method);
   }
   UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
@@ -185,10 +182,10 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__OnClickCancel(
 {
   const MethodInfo *v3; // x2
 
-  if ( (byte_4217503 & 1) == 0 )
+  if ( (byte_42B2EB7 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4217503 = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42B2EB7 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -210,10 +207,10 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__OnClickClose(
 {
   const MethodInfo *v3; // x2
 
-  if ( (byte_4217504 & 1) == 0 )
+  if ( (byte_42B2EB8 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4217504 = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42B2EB8 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -236,10 +233,10 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__OnClickDecide(
   int32_t v3; // w0
   const MethodInfo *v4; // x2
 
-  if ( (byte_4217502 & 1) == 0 )
+  if ( (byte_42B2EB6 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4217502 = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42B2EB6 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -272,17 +269,15 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__OnEnable(
         ServantEquipFramePurchaseConfirmMenu_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   UnityEngine_Transform_o *transform; // x20
-  UnityEngine_Transform_o *v6; // x0
+  UnityEngine_Transform_o *v4; // x0
 
-  if ( (byte_4217505 & 1) == 0 )
+  if ( (byte_42B2EB9 & 1) == 0 )
   {
-    sub_B0D8A4(&AndroidBackKeyManager_TypeInfo, method);
-    sub_B0D8A4(&StringLiteral_4236/*"ConfirmWindow/CloseButton"*/, v3);
-    sub_B0D8A4(&StringLiteral_4235/*"ConfirmWindow/CancelButton"*/, v4);
-    byte_4217505 = 1;
+    sub_B52984(&AndroidBackKeyManager_TypeInfo);
+    sub_B52984(&StringLiteral_4259/*"ConfirmWindow/CloseButton"*/);
+    sub_B52984(&StringLiteral_4258/*"ConfirmWindow/CancelButton"*/);
+    byte_42B2EB9 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( (BYTE3(AndroidBackKeyManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -290,13 +285,12 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__OnEnable(
   {
     j_il2cpp_runtime_class_init_0(AndroidBackKeyManager_TypeInfo);
   }
-  AndroidBackKeyManager__AddBackBtn_20833784(transform, (System_String_o *)StringLiteral_4235/*"ConfirmWindow/CancelButton"*/, 0LL);
-  v6 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_20833784(v6, (System_String_o *)StringLiteral_4236/*"ConfirmWindow/CloseButton"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_21195324(transform, (System_String_o *)StringLiteral_4258/*"ConfirmWindow/CancelButton"*/, 0LL);
+  v4 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  AndroidBackKeyManager__AddBackBtn_21195324(v4, (System_String_o *)StringLiteral_4259/*"ConfirmWindow/CloseButton"*/, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
         ServantEquipFramePurchaseConfirmMenu_o *this,
         int32_t kind,
@@ -307,112 +301,92 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
-  __int64 v23; // x1
-  __int64 v24; // x1
-  __int64 v25; // x1
-  __int64 v26; // x1
-  __int64 v27; // x1
-  __int64 v28; // x1
-  __int64 v29; // x1
-  __int64 v30; // x1
-  System_String_array **v31; // x2
-  System_String_array **v32; // x3
-  System_Boolean_array **v33; // x4
-  System_Int32_array **v34; // x5
-  System_Int32_array *v35; // x6
-  System_Int32_array *v36; // x7
+  System_String_array **v12; // x2
+  System_String_array **v13; // x3
+  System_Boolean_array **v14; // x4
+  System_Int32_array **v15; // x5
+  System_Int32_array *v16; // x6
+  System_Int32_array *v17; // x7
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v19; // x1
   struct UserGameEntity_o *SelfUserGame; // x0
-  System_String_array **v39; // x2
-  System_String_array **v40; // x3
-  System_Boolean_array **v41; // x4
-  System_Int32_array **v42; // x5
-  System_Int32_array *v43; // x6
-  System_Int32_array *v44; // x7
+  System_String_array **v21; // x2
+  System_String_array **v22; // x3
+  System_Boolean_array **v23; // x4
+  System_Int32_array **v24; // x5
+  System_Int32_array *v25; // x6
+  System_Int32_array *v26; // x7
   UILabel_o *titleLabel; // x21
   struct UserGameEntity_o *userGameEntity; // x8
   UILabel_o *stoneDataLabel; // x21
-  __int64 v48; // x1
-  __int64 v49; // x2
   UILabel_o *infoLabel3; // x21
   UILabel_o *numberLabel3; // x21
-  struct UserGameEntity_o *v52; // x8
-  System_String_o *v53; // x22
-  Il2CppObject *v54; // x0
+  struct UserGameEntity_o *v32; // x8
+  System_String_o *v33; // x22
+  Il2CppObject *v34; // x0
   UILabel_o *closeLabel; // x21
-  bool v56; // w1
+  bool v36; // w1
   UILabel_o *messageLabel; // x21
-  System_String_o *v58; // x22
-  BalanceConfig_c *v59; // x8
-  Il2CppObject *v60; // x0
+  System_String_o *v38; // x22
+  BalanceConfig_c *v39; // x8
+  Il2CppObject *v40; // x0
   UILabel_o *infoLabel1; // x21
   UILabel_o *infoLabel2; // x21
   UILabel_o *numberLabel1; // x21
-  struct UserGameEntity_o *v64; // x8
-  System_String_o *v65; // x22
-  Il2CppObject *v66; // x0
+  struct UserGameEntity_o *v44; // x8
+  System_String_o *v45; // x22
+  Il2CppObject *v46; // x0
   UILabel_o *numberLabel2; // x21
-  struct UserGameEntity_o *v68; // x8
-  System_String_o *v69; // x22
-  Il2CppObject *v70; // x0
+  struct UserGameEntity_o *v48; // x8
+  System_String_o *v49; // x22
+  Il2CppObject *v50; // x0
   UILabel_o *decideLabel; // x20
   UILabel_o *cancelLabel; // x20
   UILabel_o *warningLabel; // x20
-  UILabel_o *v74; // x20
-  UILabel_o *v75; // x20
-  __int64 *v76; // x8
-  System_String_o *v77; // x21
-  BalanceConfig_c *v78; // x8
-  Il2CppObject *v79; // x0
-  UILabel_o *v80; // x20
-  System_String_o *v81; // x21
-  BalanceConfig_c *v82; // x8
-  Il2CppObject *v83; // x0
-  System_Action_o *v84; // x20
-  int v85; // [xsp+Ch] [xbp-44h] BYREF
+  UILabel_o *v54; // x20
+  UILabel_o *v55; // x20
+  __int64 *v56; // x8
+  System_String_o *v57; // x21
+  BalanceConfig_c *v58; // x8
+  Il2CppObject *v59; // x0
+  UILabel_o *v60; // x20
+  System_String_o *v61; // x21
+  BalanceConfig_c *v62; // x8
+  Il2CppObject *v63; // x0
+  System_Action_o *v64; // x20
+  int v65; // [xsp+Ch] [xbp-44h] BYREF
   int32_t svtEquipKeep; // [xsp+18h] [xbp-38h] BYREF
   int32_t ServantEquipFrameMax; // [xsp+1Ch] [xbp-34h] BYREF
 
-  if ( (byte_4217500 & 1) == 0 )
+  if ( (byte_42B2EB4 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, *(_QWORD *)&kind);
-    sub_B0D8A4(&BalanceConfig_TypeInfo, v12);
-    sub_B0D8A4(&int_TypeInfo, v13);
-    sub_B0D8A4(&LocalizationManager_TypeInfo, v14);
-    sub_B0D8A4(&Method_ServantEquipFramePurchaseConfirmMenu_EndOpen__, v15);
-    sub_B0D8A4(&StringLiteral_11723/*"SERVANT_EQUIP_FRAME_PURCHASE_INFO1"*/, v16);
-    sub_B0D8A4(&StringLiteral_11721/*"SERVANT_EQUIP_FRAME_PURCHASE_CLOSE"*/, v17);
-    sub_B0D8A4(&StringLiteral_11726/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_INFO_NONE"*/, v18);
-    sub_B0D8A4(&StringLiteral_11728/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_START"*/, v19);
-    sub_B0D8A4(&StringLiteral_11731/*"SERVANT_EQUIP_FRAME_PURCHASE_REQUEST_STONE_MESSAGE"*/, v20);
-    sub_B0D8A4(&StringLiteral_11725/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_END"*/, v21);
-    sub_B0D8A4(&StringLiteral_11729/*"SERVANT_EQUIP_FRAME_PURCHASE_NUMBERO1"*/, v22);
-    sub_B0D8A4(&StringLiteral_11722/*"SERVANT_EQUIP_FRAME_PURCHASE_DECIDE"*/, v23);
-    sub_B0D8A4(&StringLiteral_11732/*"SERVANT_EQUIP_FRAME_PURCHASE_STONE"*/, v24);
-    sub_B0D8A4(&StringLiteral_11724/*"SERVANT_EQUIP_FRAME_PURCHASE_INFO2"*/, v25);
-    sub_B0D8A4(&StringLiteral_11720/*"SERVANT_EQUIP_FRAME_PURCHASE_CANCEL"*/, v26);
-    sub_B0D8A4(&StringLiteral_11727/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_MAX_FRAME"*/, v27);
-    sub_B0D8A4(&StringLiteral_11730/*"SERVANT_EQUIP_FRAME_PURCHASE_NUMBERO2"*/, v28);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v29);
-    sub_B0D8A4(&StringLiteral_11733/*"SERVANT_EQUIP_FRAME_PURCHASE_TITLE"*/, v30);
-    byte_4217500 = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&BalanceConfig_TypeInfo);
+    sub_B52984(&int_TypeInfo);
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&Method_ServantEquipFramePurchaseConfirmMenu_EndOpen__);
+    sub_B52984(&StringLiteral_11780/*"SERVANT_EQUIP_FRAME_PURCHASE_INFO1"*/);
+    sub_B52984(&StringLiteral_11778/*"SERVANT_EQUIP_FRAME_PURCHASE_CLOSE"*/);
+    sub_B52984(&StringLiteral_11783/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_INFO_NONE"*/);
+    sub_B52984(&StringLiteral_11785/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_START"*/);
+    sub_B52984(&StringLiteral_11788/*"SERVANT_EQUIP_FRAME_PURCHASE_REQUEST_STONE_MESSAGE"*/);
+    sub_B52984(&StringLiteral_11782/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_END"*/);
+    sub_B52984(&StringLiteral_11786/*"SERVANT_EQUIP_FRAME_PURCHASE_NUMBERO1"*/);
+    sub_B52984(&StringLiteral_11779/*"SERVANT_EQUIP_FRAME_PURCHASE_DECIDE"*/);
+    sub_B52984(&StringLiteral_11789/*"SERVANT_EQUIP_FRAME_PURCHASE_STONE"*/);
+    sub_B52984(&StringLiteral_11781/*"SERVANT_EQUIP_FRAME_PURCHASE_INFO2"*/);
+    sub_B52984(&StringLiteral_11777/*"SERVANT_EQUIP_FRAME_PURCHASE_CANCEL"*/);
+    sub_B52984(&StringLiteral_11784/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_MAX_FRAME"*/);
+    sub_B52984(&StringLiteral_11787/*"SERVANT_EQUIP_FRAME_PURCHASE_NUMBERO2"*/);
+    sub_B52984(&StringLiteral_1/*""*/);
+    sub_B52984(&StringLiteral_11790/*"SERVANT_EQUIP_FRAME_PURCHASE_TITLE"*/);
+    byte_42B2EB4 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.kind = kind;
     this->fields.stoneShopEntity = stoneShopEntity;
-    sub_B0D840(
+    sub_B52920(
       (BattleServantConfConponent_o *)&this->fields.stoneShopEntity,
       (System_Int32_array **)stoneShopEntity,
       (System_String_array **)stoneShopEntity,
@@ -422,37 +396,37 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
       v6,
       v7);
     this->fields.callbackFunc = callback;
-    sub_B0D840(
+    sub_B52920(
       (BattleServantConfConponent_o *)&this->fields.callbackFunc,
       (System_Int32_array **)callback,
-      v31,
-      v32,
-      v33,
-      v34,
-      v35,
-      v36);
+      v12,
+      v13,
+      v14,
+      v15,
+      v16,
+      v17);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( gameObject )
     {
       UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
       SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
       this->fields.userGameEntity = SelfUserGame;
-      sub_B0D840(
+      sub_B52920(
         (BattleServantConfConponent_o *)&this->fields.userGameEntity,
         (System_Int32_array **)SelfUserGame,
-        v39,
-        v40,
-        v41,
-        v42,
-        v43,
-        v44);
+        v21,
+        v22,
+        v23,
+        v24,
+        v25,
+        v26);
       titleLabel = this->fields.titleLabel;
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11733/*"SERVANT_EQUIP_FRAME_PURCHASE_TITLE"*/, 0LL);
+      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11790/*"SERVANT_EQUIP_FRAME_PURCHASE_TITLE"*/, 0LL);
       if ( titleLabel )
       {
         UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL);
@@ -474,17 +448,17 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v58 = LocalizationManager__Get((System_String_o *)StringLiteral_11728/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_START"*/, 0LL);
-              v59 = BalanceConfig_TypeInfo;
+              v38 = LocalizationManager__Get((System_String_o *)StringLiteral_11785/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_START"*/, 0LL);
+              v39 = BalanceConfig_TypeInfo;
               if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                 && !BalanceConfig_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-                v59 = BalanceConfig_TypeInfo;
+                v39 = BalanceConfig_TypeInfo;
               }
-              ServantEquipFrameMax = v59->static_fields->ServantEquipFrameMax;
-              v60 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &ServantEquipFrameMax);
-              gameObject = (UnityEngine_GameObject_o *)System_String__Format(v58, v60, 0LL);
+              ServantEquipFrameMax = v39->static_fields->ServantEquipFrameMax;
+              v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &ServantEquipFrameMax);
+              gameObject = (UnityEngine_GameObject_o *)System_String__Format(v38, v40, 0LL);
               if ( messageLabel )
               {
                 UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0LL);
@@ -511,14 +485,14 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
                             UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
                             infoLabel1 = this->fields.infoLabel1;
                             gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                       (System_String_o *)StringLiteral_11723/*"SERVANT_EQUIP_FRAME_PURCHASE_INFO1"*/,
+                                                                       (System_String_o *)StringLiteral_11780/*"SERVANT_EQUIP_FRAME_PURCHASE_INFO1"*/,
                                                                        0LL);
                             if ( infoLabel1 )
                             {
                               UILabel__set_text(infoLabel1, (System_String_o *)gameObject, 0LL);
                               infoLabel2 = this->fields.infoLabel2;
                               gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                         (System_String_o *)StringLiteral_11724/*"SERVANT_EQUIP_FRAME_PURCHASE_INFO2"*/,
+                                                                         (System_String_o *)StringLiteral_11781/*"SERVANT_EQUIP_FRAME_PURCHASE_INFO2"*/,
                                                                          0LL);
                               if ( infoLabel2 )
                               {
@@ -552,35 +526,35 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
                                             UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
                                             numberLabel1 = this->fields.numberLabel1;
                                             gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                       (System_String_o *)StringLiteral_11729/*"SERVANT_EQUIP_FRAME_PURCHASE_NUMBERO1"*/,
+                                                                                       (System_String_o *)StringLiteral_11786/*"SERVANT_EQUIP_FRAME_PURCHASE_NUMBERO1"*/,
                                                                                        0LL);
-                                            v64 = this->fields.userGameEntity;
-                                            if ( v64 )
+                                            v44 = this->fields.userGameEntity;
+                                            if ( v44 )
                                             {
-                                              v65 = (System_String_o *)gameObject;
-                                              svtEquipKeep = v64->fields.svtEquipKeep;
-                                              v66 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &svtEquipKeep);
+                                              v45 = (System_String_o *)gameObject;
+                                              svtEquipKeep = v44->fields.svtEquipKeep;
+                                              v46 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &svtEquipKeep);
                                               gameObject = (UnityEngine_GameObject_o *)System_String__Format(
-                                                                                         v65,
-                                                                                         v66,
+                                                                                         v45,
+                                                                                         v46,
                                                                                          0LL);
                                               if ( numberLabel1 )
                                               {
                                                 UILabel__set_text(numberLabel1, (System_String_o *)gameObject, 0LL);
                                                 numberLabel2 = this->fields.numberLabel2;
                                                 gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                           (System_String_o *)StringLiteral_11730/*"SERVANT_EQUIP_FRAME_PURCHASE_NUMBERO2"*/,
+                                                                                           (System_String_o *)StringLiteral_11787/*"SERVANT_EQUIP_FRAME_PURCHASE_NUMBERO2"*/,
                                                                                            0LL);
-                                                v68 = this->fields.userGameEntity;
-                                                if ( v68 )
+                                                v48 = this->fields.userGameEntity;
+                                                if ( v48 )
                                                 {
-                                                  v69 = (System_String_o *)gameObject;
-                                                  v85 = BalanceConfig_TypeInfo->static_fields->ServantEquipFrameUseStone
-                                                      + v68->fields.svtEquipKeep;
-                                                  v70 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v85);
+                                                  v49 = (System_String_o *)gameObject;
+                                                  v65 = BalanceConfig_TypeInfo->static_fields->ServantEquipFrameUseStone
+                                                      + v48->fields.svtEquipKeep;
+                                                  v50 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v65);
                                                   gameObject = (UnityEngine_GameObject_o *)System_String__Format(
-                                                                                             v69,
-                                                                                             v70,
+                                                                                             v49,
+                                                                                             v50,
                                                                                              0LL);
                                                   if ( numberLabel2 )
                                                   {
@@ -641,7 +615,7 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
                                                                         gameObject = (UnityEngine_GameObject_o *)this->fields.closeButton;
                                                                         if ( gameObject )
                                                                         {
-                                                                          v56 = 0;
+                                                                          v36 = 0;
                                                                           goto LABEL_82;
                                                                         }
                                                                       }
@@ -706,7 +680,7 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                           }
                           gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                     (System_String_o *)StringLiteral_11723/*"SERVANT_EQUIP_FRAME_PURCHASE_INFO1"*/,
+                                                                     (System_String_o *)StringLiteral_11780/*"SERVANT_EQUIP_FRAME_PURCHASE_INFO1"*/,
                                                                      0LL);
                           if ( infoLabel3 )
                           {
@@ -740,17 +714,17 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
                                         UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
                                         numberLabel3 = this->fields.numberLabel3;
                                         gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                   (System_String_o *)StringLiteral_11730/*"SERVANT_EQUIP_FRAME_PURCHASE_NUMBERO2"*/,
+                                                                                   (System_String_o *)StringLiteral_11787/*"SERVANT_EQUIP_FRAME_PURCHASE_NUMBERO2"*/,
                                                                                    0LL);
-                                        v52 = this->fields.userGameEntity;
-                                        if ( v52 )
+                                        v32 = this->fields.userGameEntity;
+                                        if ( v32 )
                                         {
-                                          v53 = (System_String_o *)gameObject;
-                                          ServantEquipFrameMax = v52->fields.svtEquipKeep;
-                                          v54 = (Il2CppObject *)j_il2cpp_value_box_0(
+                                          v33 = (System_String_o *)gameObject;
+                                          ServantEquipFrameMax = v32->fields.svtEquipKeep;
+                                          v34 = (Il2CppObject *)j_il2cpp_value_box_0(
                                                                   int_TypeInfo,
                                                                   &ServantEquipFrameMax);
-                                          gameObject = (UnityEngine_GameObject_o *)System_String__Format(v53, v54, 0LL);
+                                          gameObject = (UnityEngine_GameObject_o *)System_String__Format(v33, v34, 0LL);
                                           if ( numberLabel3 )
                                           {
                                             UILabel__set_text(numberLabel3, (System_String_o *)gameObject, 0LL);
@@ -765,7 +739,7 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
                                                 UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
                                                 closeLabel = this->fields.closeLabel;
                                                 gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                           (System_String_o *)StringLiteral_11721/*"SERVANT_EQUIP_FRAME_PURCHASE_CLOSE"*/,
+                                                                                           (System_String_o *)StringLiteral_11778/*"SERVANT_EQUIP_FRAME_PURCHASE_CLOSE"*/,
                                                                                            0LL);
                                                 if ( closeLabel )
                                                 {
@@ -821,11 +795,11 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
                                                                     gameObject = (UnityEngine_GameObject_o *)this->fields.closeButton;
                                                                     if ( gameObject )
                                                                     {
-                                                                      v56 = 1;
+                                                                      v36 = 1;
 LABEL_82:
                                                                       UnityEngine_Behaviour__set_enabled(
                                                                         (UnityEngine_Behaviour_o *)gameObject,
-                                                                        v56,
+                                                                        v36,
                                                                         0LL);
 LABEL_83:
                                                                       switch ( kind )
@@ -844,7 +818,7 @@ LABEL_83:
                                                                           {
                                                                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                                                           }
-                                                                          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11722/*"SERVANT_EQUIP_FRAME_PURCHASE_DECIDE"*/, 0LL);
+                                                                          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11779/*"SERVANT_EQUIP_FRAME_PURCHASE_DECIDE"*/, 0LL);
                                                                           if ( !decideLabel )
                                                                             goto LABEL_138;
                                                                           UILabel__set_text(
@@ -852,7 +826,7 @@ LABEL_83:
                                                                             (System_String_o *)gameObject,
                                                                             0LL);
                                                                           cancelLabel = this->fields.cancelLabel;
-                                                                          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11720/*"SERVANT_EQUIP_FRAME_PURCHASE_CANCEL"*/, 0LL);
+                                                                          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11777/*"SERVANT_EQUIP_FRAME_PURCHASE_CANCEL"*/, 0LL);
                                                                           if ( !cancelLabel )
                                                                             goto LABEL_138;
                                                                           goto LABEL_123;
@@ -863,27 +837,27 @@ LABEL_83:
                                                                           {
                                                                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                                                           }
-                                                                          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11731/*"SERVANT_EQUIP_FRAME_PURCHASE_REQUEST_STONE_MESSAGE"*/, 0LL);
+                                                                          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11788/*"SERVANT_EQUIP_FRAME_PURCHASE_REQUEST_STONE_MESSAGE"*/, 0LL);
                                                                           if ( !warningLabel )
                                                                             goto LABEL_138;
                                                                           UILabel__set_text(
                                                                             warningLabel,
                                                                             (System_String_o *)gameObject,
                                                                             0LL);
-                                                                          v74 = this->fields.decideLabel;
-                                                                          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11732/*"SERVANT_EQUIP_FRAME_PURCHASE_STONE"*/, 0LL);
-                                                                          if ( !v74 )
+                                                                          v54 = this->fields.decideLabel;
+                                                                          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11789/*"SERVANT_EQUIP_FRAME_PURCHASE_STONE"*/, 0LL);
+                                                                          if ( !v54 )
                                                                             goto LABEL_138;
                                                                           UILabel__set_text(
-                                                                            v74,
+                                                                            v54,
                                                                             (System_String_o *)gameObject,
                                                                             0LL);
-                                                                          v75 = this->fields.cancelLabel;
-                                                                          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11720/*"SERVANT_EQUIP_FRAME_PURCHASE_CANCEL"*/, 0LL);
-                                                                          if ( !v75 )
+                                                                          v55 = this->fields.cancelLabel;
+                                                                          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11777/*"SERVANT_EQUIP_FRAME_PURCHASE_CANCEL"*/, 0LL);
+                                                                          if ( !v55 )
                                                                             goto LABEL_138;
                                                                           UILabel__set_text(
-                                                                            v75,
+                                                                            v55,
                                                                             (System_String_o *)gameObject,
                                                                             0LL);
                                                                           gameObject = (UnityEngine_GameObject_o *)this->fields.infoLabel1;
@@ -969,7 +943,7 @@ LABEL_83:
                                                                           {
                                                                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                                                           }
-                                                                          v76 = &StringLiteral_11725/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_END"*/;
+                                                                          v56 = &StringLiteral_11782/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_END"*/;
                                                                           goto LABEL_119;
                                                                         case 3:
                                                                           cancelLabel = this->fields.messageLabel;
@@ -978,23 +952,23 @@ LABEL_83:
                                                                           {
                                                                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                                                           }
-                                                                          v76 = &StringLiteral_11727/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_MAX_FRAME"*/;
+                                                                          v56 = &StringLiteral_11784/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_MAX_FRAME"*/;
 LABEL_119:
-                                                                          v77 = LocalizationManager__Get(
-                                                                                  (System_String_o *)*v76,
+                                                                          v57 = LocalizationManager__Get(
+                                                                                  (System_String_o *)*v56,
                                                                                   0LL);
-                                                                          v78 = BalanceConfig_TypeInfo;
+                                                                          v58 = BalanceConfig_TypeInfo;
                                                                           if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                                                                             && !BalanceConfig_TypeInfo->_2.cctor_finished )
                                                                           {
                                                                             j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-                                                                            v78 = BalanceConfig_TypeInfo;
+                                                                            v58 = BalanceConfig_TypeInfo;
                                                                           }
-                                                                          ServantEquipFrameMax = v78->static_fields->ServantEquipFrameMax;
-                                                                          v79 = (Il2CppObject *)j_il2cpp_value_box_0(
+                                                                          ServantEquipFrameMax = v58->static_fields->ServantEquipFrameMax;
+                                                                          v59 = (Il2CppObject *)j_il2cpp_value_box_0(
                                                                                                   int_TypeInfo,
                                                                                                   &ServantEquipFrameMax);
-                                                                          gameObject = (UnityEngine_GameObject_o *)System_String__Format(v77, v79, 0LL);
+                                                                          gameObject = (UnityEngine_GameObject_o *)System_String__Format(v57, v59, 0LL);
                                                                           if ( !cancelLabel )
                                                                             goto LABEL_138;
 LABEL_123:
@@ -1004,31 +978,31 @@ LABEL_123:
                                                                             0LL);
                                                                           goto LABEL_136;
                                                                         case 4:
-                                                                          v80 = this->fields.messageLabel;
+                                                                          v60 = this->fields.messageLabel;
                                                                           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                                                                             && !LocalizationManager_TypeInfo->_2.cctor_finished )
                                                                           {
                                                                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                                                           }
-                                                                          v81 = LocalizationManager__Get(
-                                                                                  (System_String_o *)StringLiteral_11726/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_INFO_NONE"*/,
+                                                                          v61 = LocalizationManager__Get(
+                                                                                  (System_String_o *)StringLiteral_11783/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_INFO_NONE"*/,
                                                                                   0LL);
-                                                                          v82 = BalanceConfig_TypeInfo;
+                                                                          v62 = BalanceConfig_TypeInfo;
                                                                           if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                                                                             && !BalanceConfig_TypeInfo->_2.cctor_finished )
                                                                           {
                                                                             j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-                                                                            v82 = BalanceConfig_TypeInfo;
+                                                                            v62 = BalanceConfig_TypeInfo;
                                                                           }
-                                                                          ServantEquipFrameMax = v82->static_fields->ServantEquipFrameMax;
-                                                                          v83 = (Il2CppObject *)j_il2cpp_value_box_0(
+                                                                          ServantEquipFrameMax = v62->static_fields->ServantEquipFrameMax;
+                                                                          v63 = (Il2CppObject *)j_il2cpp_value_box_0(
                                                                                                   int_TypeInfo,
                                                                                                   &ServantEquipFrameMax);
-                                                                          gameObject = (UnityEngine_GameObject_o *)System_String__Format(v81, v83, 0LL);
-                                                                          if ( !v80 )
+                                                                          gameObject = (UnityEngine_GameObject_o *)System_String__Format(v61, v63, 0LL);
+                                                                          if ( !v60 )
                                                                             goto LABEL_138;
                                                                           UILabel__set_text(
-                                                                            v80,
+                                                                            v60,
                                                                             (System_String_o *)gameObject,
                                                                             0LL);
                                                                           gameObject = (UnityEngine_GameObject_o *)this->fields.infoLabel3;
@@ -1058,18 +1032,15 @@ LABEL_134:
                                                                             0LL);
 LABEL_136:
                                                                           this->fields.state = 1;
-                                                                          v84 = (System_Action_o *)sub_B0D974(
-                                                                                                     System_Action_TypeInfo,
-                                                                                                     v48,
-                                                                                                     v49);
+                                                                          v64 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
                                                                           System_Action___ctor(
-                                                                            v84,
+                                                                            v64,
                                                                             (Il2CppObject *)this,
                                                                             Method_ServantEquipFramePurchaseConfirmMenu_EndOpen__,
                                                                             0LL);
                                                                           BaseDialog__Open(
                                                                             (BaseDialog_o *)this,
-                                                                            v84,
+                                                                            v64,
                                                                             0,
                                                                             0LL);
                                                                           break;
@@ -1111,7 +1082,7 @@ LABEL_136:
       }
     }
 LABEL_138:
-    sub_B0D97C(gameObject);
+    sub_B52A5C(gameObject, v19);
   }
 }
 
@@ -1131,10 +1102,10 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__add_callbackFunc(
   ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_42174FD & 1) == 0 )
+  if ( (byte_42B2EB1 & 1) == 0 )
   {
-    sub_B0D8A4(&ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo, value);
-    byte_42174FD = 1;
+    sub_B52984(&ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo);
+    byte_42B2EB1 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1147,13 +1118,13 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__add_callbackFunc(
       if ( (ServantEquipFramePurchaseConfirmMenu_CallbackFunc_c *)v8->klass != ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B022BC(p_callbackFunc, v8, v6);
+    v9 = sub_B4739C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B0DC70(v8);
+  sub_B52D50(v8);
   ServantEquipFramePurchaseConfirmMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -1172,10 +1143,10 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__remove_callbackFunc(
   ServantEquipFramePurchaseConfirmMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_42174FE & 1) == 0 )
+  if ( (byte_42B2EB2 & 1) == 0 )
   {
-    sub_B0D8A4(&ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo, value);
-    byte_42174FE = 1;
+    sub_B52984(&ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo);
+    byte_42B2EB2 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1188,13 +1159,13 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__remove_callbackFunc(
       if ( (ServantEquipFramePurchaseConfirmMenu_CallbackFunc_c *)v8->klass != ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B022BC(p_callbackFunc, v8, v6);
+    v9 = sub_B4739C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B0DC70(v8);
+  sub_B52D50(v8);
   ServantEquipFramePurchaseConfirmMenu__Init(v11, v12);
 }
 
@@ -1214,11 +1185,10 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu_CallbackFunc___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B0D840(p_method, object);
+  sub_B52920(p_method);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_IAsyncResult_o *__fastcall ServantEquipFramePurchaseConfirmMenu_CallbackFunc__BeginInvoke(
         ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *this,
         bool result,
@@ -1230,14 +1200,14 @@ System_IAsyncResult_o *__fastcall ServantEquipFramePurchaseConfirmMenu_CallbackF
   char v10[4]; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10[0] = result;
-  if ( (byte_421222A & 1) == 0 )
+  if ( (byte_42AD33B & 1) == 0 )
   {
-    sub_B0D8A4(&bool_TypeInfo, result);
-    byte_421222A = 1;
+    sub_B52984(&bool_TypeInfo);
+    byte_42AD33B = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_B0D848(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_B52928(this, v9, callback, object);
 }
 
 
@@ -1246,7 +1216,7 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B0D84C(result, 0LL, method);
+  sub_B5292C(result, 0LL, method);
 }
 
 
@@ -1263,31 +1233,33 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu_CallbackFunc__Invoke(
   __int64 v9; // x26
   unsigned int v10; // w23
   __int64 class_0; // x0
-  __int64 v12; // x8
-  unsigned __int64 v13; // x10
-  _DWORD *v14; // x11
-  __int64 v15; // x0
+  __int64 v12; // x3
+  __int64 v13; // x8
+  unsigned __int64 v14; // x10
+  _DWORD *v15; // x11
   __int64 v16; // x0
   __int64 v17; // x0
-  void (__fastcall **v18)(__int64 *, bool, _QWORD); // x0
-  ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *v19; // x8
-  __int64 *v20; // x21
-  __int64 v21; // x22
-  void (__fastcall *v22)(bool, __int64); // x23
-  char v23; // w23
-  char v24; // w0
-  __int64 v25; // x8
-  __int64 v26; // x1
-  __int64 v27; // x2
-  unsigned __int64 v28; // x10
-  _DWORD *v29; // x11
-  ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *v30; // [xsp+8h] [xbp-48h] BYREF
+  __int64 v18; // x0
+  void (__fastcall **v19)(__int64 *, bool, _QWORD); // x0
+  ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *v20; // x8
+  __int64 *v21; // x21
+  __int64 v22; // x22
+  void (__fastcall *v23)(bool, __int64); // x23
+  char v24; // w23
+  char v25; // w0
+  __int64 v26; // x3
+  __int64 v27; // x8
+  __int64 v28; // x1
+  __int64 v29; // x2
+  unsigned __int64 v30; // x10
+  _DWORD *v31; // x11
+  ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *v32; // [xsp+8h] [xbp-48h] BYREF
 
-  v30 = this;
+  v32 = this;
   v4 = *(_QWORD *)&this[1].fields.method_ptr;
   if ( !v4 )
   {
-    v8 = &v30;
+    v8 = &v32;
     v7 = 1LL;
     goto LABEL_5;
   }
@@ -1299,98 +1271,98 @@ LABEL_5:
     v9 = 0LL;
     while ( 1 )
     {
-      v19 = v8[v9];
-      v20 = *(__int64 **)&v19->fields.method;
-      v21 = *(_QWORD *)&v19->fields.extra_arg;
-      v22 = *(void (__fastcall **)(bool, __int64))&v19->fields.method_ptr;
-      if ( *(__int16 *)(v21 + 72) == -1 )
-        sub_B0D960(*(_QWORD *)&v19->fields.extra_arg, result, method, v3);
-      if ( (sub_B0D8D4(v21) & 1) == 0 )
+      v20 = v8[v9];
+      v21 = *(__int64 **)&v20->fields.method;
+      v22 = *(_QWORD *)&v20->fields.extra_arg;
+      v23 = *(void (__fastcall **)(bool, __int64))&v20->fields.method_ptr;
+      if ( *(__int16 *)(v22 + 72) == -1 )
+        sub_B52A40(*(_QWORD *)&v20->fields.extra_arg, result, method, v3);
+      if ( (sub_B529B4(v22) & 1) == 0 )
         break;
-      if ( *(_BYTE *)(v21 + 74) != 1 )
+      if ( *(_BYTE *)(v22 + 74) != 1 )
         goto LABEL_36;
-      v22(result, v21);
+      v23(result, v22);
 LABEL_37:
       if ( ++v9 == v7 )
         return;
     }
-    if ( v20 && *(__int16 *)(v21 + 72) != -1 && (*(_BYTE *)(*v20 + 277) & 1) == 0 && this->fields.m_target )
+    if ( v21 && *(__int16 *)(v22 + 72) != -1 && (*(_BYTE *)(*v21 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v23 = sub_B0D8CC(v21);
-      v24 = sub_B0DCD0(v21);
-      if ( (v23 & 1) != 0 )
+      v24 = sub_B529AC(v22);
+      v25 = sub_B52DB0(v22);
+      if ( (v24 & 1) != 0 )
       {
-        if ( (v24 & 1) != 0 )
+        if ( (v25 & 1) != 0 )
         {
-          v25 = *v20;
-          v26 = *(_QWORD *)(v21 + 24);
-          v27 = *(unsigned __int16 *)(v21 + 72);
-          if ( *(_WORD *)(*v20 + 298) )
+          v27 = *v21;
+          v28 = *(_QWORD *)(v22 + 24);
+          v29 = *(unsigned __int16 *)(v22 + 72);
+          if ( *(_WORD *)(*v21 + 298) )
           {
-            v28 = 0LL;
-            v29 = (_DWORD *)(*(_QWORD *)(v25 + 176) + 8LL);
-            while ( *((_QWORD *)v29 - 1) != v26 )
+            v30 = 0LL;
+            v31 = (_DWORD *)(*(_QWORD *)(v27 + 176) + 8LL);
+            while ( *((_QWORD *)v31 - 1) != v28 )
             {
-              ++v28;
-              v29 += 4;
-              if ( v28 >= *(unsigned __int16 *)(*v20 + 298) )
+              ++v30;
+              v31 += 4;
+              if ( v30 >= *(unsigned __int16 *)(*v21 + 298) )
                 goto LABEL_35;
             }
-            v17 = v25 + 16LL * (*v29 + (int)v27) + 312;
+            v18 = v27 + 16LL * (*v31 + (int)v29) + 312;
           }
           else
           {
 LABEL_35:
-            v17 = sub_AA67A0(v20, v26, v27);
+            v18 = sub_AEB880(v21, v28, v29, v26);
           }
-          v16 = *(_QWORD *)(v17 + 8);
+          v17 = *(_QWORD *)(v18 + 8);
         }
         else
         {
-          v16 = *(_QWORD *)(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 320);
+          v17 = *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320);
         }
-        v18 = (void (__fastcall **)(__int64 *, bool, _QWORD))sub_B0D954(v16, v21);
-        (*v18)(v20, result, v18);
+        v19 = (void (__fastcall **)(__int64 *, bool, _QWORD))sub_B52A34(v17, v22);
+        (*v19)(v21, result, v19);
       }
       else
       {
-        v10 = *(unsigned __int16 *)(v21 + 72);
-        if ( (v24 & 1) != 0 )
+        v10 = *(unsigned __int16 *)(v22 + 72);
+        if ( (v25 & 1) != 0 )
         {
-          class_0 = j_il2cpp_method_get_class_0(v21);
-          v12 = *v20;
-          if ( *(_WORD *)(*v20 + 298) )
+          class_0 = j_il2cpp_method_get_class_0(v22);
+          v13 = *v21;
+          if ( *(_WORD *)(*v21 + 298) )
           {
-            v13 = 0LL;
-            v14 = (_DWORD *)(*(_QWORD *)(v12 + 176) + 8LL);
-            while ( *((_QWORD *)v14 - 1) != class_0 )
+            v14 = 0LL;
+            v15 = (_DWORD *)(*(_QWORD *)(v13 + 176) + 8LL);
+            while ( *((_QWORD *)v15 - 1) != class_0 )
             {
-              ++v13;
-              v14 += 4;
-              if ( v13 >= *(unsigned __int16 *)(*v20 + 298) )
+              ++v14;
+              v15 += 4;
+              if ( v14 >= *(unsigned __int16 *)(*v21 + 298) )
                 goto LABEL_11;
             }
-            v15 = v12 + 16LL * (int)(*v14 + v10) + 312;
+            v16 = v13 + 16LL * (int)(*v15 + v10) + 312;
           }
           else
           {
 LABEL_11:
-            v15 = sub_AA67A0(v20, class_0, v10);
+            v16 = sub_AEB880(v21, class_0, v10, v12);
           }
-          (*(void (__fastcall **)(__int64 *, bool, _QWORD))v15)(v20, result, *(_QWORD *)(v15 + 8));
+          (*(void (__fastcall **)(__int64 *, bool, _QWORD))v16)(v21, result, *(_QWORD *)(v16 + 8));
         }
         else
         {
-          (*(void (__fastcall **)(__int64 *, bool, _QWORD))(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 312))(
-            v20,
+          (*(void (__fastcall **)(__int64 *, bool, _QWORD))(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 312))(
+            v21,
             result,
-            *(_QWORD *)(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 320));
+            *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320));
         }
       }
       goto LABEL_37;
     }
 LABEL_36:
-    ((void (__fastcall *)(__int64 *, bool, __int64))v22)(v20, result, v21);
+    ((void (__fastcall *)(__int64 *, bool, __int64))v23)(v21, result, v22);
     goto LABEL_37;
   }
 }

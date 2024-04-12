@@ -14,17 +14,16 @@ void __fastcall EquipGraphViewModeState___ctor(EquipGraphViewModeState_o *this, 
 
 void __fastcall EquipGraphViewModeState__AutoPlayView(EquipGraphViewModeState_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   int32_t AutoPlayMode; // w8
-  UnityEngine_Object_o *v5; // x20
+  UnityEngine_Object_o *v4; // x20
   UIEquipGraphV_o *uiEquipGraphV; // x0
-  int32_t v7; // w1
+  int32_t v6; // w1
 
-  if ( (byte_4216E00 & 1) == 0 )
+  if ( (byte_42B2628 & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
-    sub_B0D8A4(&StringLiteral_2221/*"AutoPlayView"*/, v3);
-    byte_4216E00 = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&StringLiteral_2235/*"AutoPlayView"*/);
+    byte_42B2628 = 1;
   }
   AutoPlayMode = this->fields.AutoPlayMode;
   if ( AutoPlayMode == 2 )
@@ -33,11 +32,11 @@ void __fastcall EquipGraphViewModeState__AutoPlayView(EquipGraphViewModeState_o 
     this->fields.AutoPlayMode = 3;
     if ( uiEquipGraphV )
     {
-      v7 = 1;
+      v6 = 1;
       goto LABEL_17;
     }
 LABEL_22:
-    sub_B0D97C(uiEquipGraphV);
+    sub_B52A5C(uiEquipGraphV, method);
   }
   if ( AutoPlayMode == 1 )
   {
@@ -50,7 +49,7 @@ LABEL_22:
 LABEL_18:
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_2221/*"AutoPlayView"*/,
+        (System_String_o *)StringLiteral_2235/*"AutoPlayView"*/,
         this->fields.AutoPlayInterval,
         0LL);
       return;
@@ -68,13 +67,13 @@ LABEL_18:
   {
     this->fields.AutoPlayMode = 1;
     this->fields._rotbtn_k__BackingField = 1;
-    v5 = (UnityEngine_Object_o *)this->fields.uiEquipGraphV;
+    v4 = (UnityEngine_Object_o *)this->fields.uiEquipGraphV;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    if ( UnityEngine_Object__op_Inequality(v5, 0LL, 0LL) )
+    if ( UnityEngine_Object__op_Inequality(v4, 0LL, 0LL) )
     {
       uiEquipGraphV = this->fields.uiEquipGraphV;
       if ( uiEquipGraphV )
@@ -83,9 +82,9 @@ LABEL_18:
         uiEquipGraphV = this->fields.uiEquipGraphV;
         if ( uiEquipGraphV )
         {
-          v7 = 2;
+          v6 = 2;
 LABEL_17:
-          UIEquipGraphV__SetAllButton(uiEquipGraphV, v7, 0LL);
+          UIEquipGraphV__SetAllButton(uiEquipGraphV, v6, 0LL);
           goto LABEL_18;
         }
       }
@@ -107,11 +106,12 @@ void __fastcall EquipGraphViewModeState__FowardView(EquipGraphViewModeState_o *t
 
   scriptManager = this->fields.scriptManager;
   if ( !scriptManager )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, method);
   ScriptManager__OnClickFowardView(scriptManager, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall EquipGraphViewModeState__OnClickAutoPlayButton(
         EquipGraphViewModeState_o *this,
         bool isSetting,
@@ -139,7 +139,7 @@ void __fastcall EquipGraphViewModeState__OnClickAutoPlayButton(
       return;
     }
 LABEL_9:
-    sub_B0D97C(autoPlaySprite);
+    sub_B52A5C(autoPlaySprite, isSetting);
   }
   UnityEngine_Behaviour__set_enabled(autoPlaySprite, 0, 0LL);
   if ( !this->fields._quickAutobtn_k__BackingField )
@@ -155,10 +155,10 @@ void __fastcall EquipGraphViewModeState__OnClickQuickAutoPlayButton(
 {
   UnityEngine_Behaviour_o *quickAutoPlaySprite; // x0
 
-  if ( (byte_4216DFF & 1) == 0 )
+  if ( (byte_42B2627 & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_6802/*"FowardView"*/, isSetting);
-    byte_4216DFF = 1;
+    sub_B52984(&StringLiteral_6829/*"FowardView"*/);
+    byte_42B2627 = 1;
   }
   if ( !isSetting )
     this->fields._quickAutobtn_k__BackingField ^= 1u;
@@ -176,13 +176,13 @@ void __fastcall EquipGraphViewModeState__OnClickQuickAutoPlayButton(
       UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0LL);
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_6802/*"FowardView"*/,
+        (System_String_o *)StringLiteral_6829/*"FowardView"*/,
         this->fields.AutoPlayInterval,
         0LL);
       return;
     }
 LABEL_11:
-    sub_B0D97C(quickAutoPlaySprite);
+    sub_B52A5C(quickAutoPlaySprite, isSetting);
   }
   UnityEngine_Behaviour__set_enabled(quickAutoPlaySprite, 0, 0LL);
   if ( !this->fields._autobtn_k__BackingField )

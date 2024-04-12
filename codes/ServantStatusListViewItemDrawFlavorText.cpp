@@ -22,8 +22,8 @@ void __fastcall ServantStatusListViewItemDrawFlavorText__SetItem(
         int32_t mode,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
   UIWidget_o *IsConst; // x0
+  __int64 v8; // x1
   struct ServantCommentEntity_array *svtCommentEntityList; // x22
   int max_length; // w8
   System_String_o *Comment; // x20
@@ -54,11 +54,11 @@ void __fastcall ServantStatusListViewItemDrawFlavorText__SetItem(
   UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_42186B2 & 1) == 0 )
+  if ( (byte_42B4259 & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, item);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v7);
-    byte_42186B2 = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B4259 = 1;
   }
   ServantStatusListViewItemDraw__SetItem((ServantStatusListViewItemDraw_o *)this, item, mode, 0LL);
   if ( item && mode && LOBYTE(this[1].klass) )
@@ -76,8 +76,8 @@ void __fastcall ServantStatusListViewItemDrawFlavorText__SetItem(
         {
           if ( v12 >= max_length )
           {
-            v36 = sub_B0D9A8(IsConst);
-            sub_B0D948(v36, 0LL);
+            v36 = sub_B52A88(IsConst);
+            sub_B52A28(v36, 0LL);
           }
           v13 = &svtCommentEntityList->obj.klass + (int)v12;
           v14 = (ServantCommentEntity_o *)v13[4];
@@ -242,6 +242,6 @@ LABEL_16:
       }
     }
 LABEL_55:
-    sub_B0D97C(IsConst);
+    sub_B52A5C(IsConst, v8);
   }
 }

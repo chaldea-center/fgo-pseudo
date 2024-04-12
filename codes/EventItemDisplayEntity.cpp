@@ -1,28 +1,27 @@
 void __fastcall EventItemDisplayEntity___ctor(EventItemDisplayEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42159E6 & 1) == 0 )
+  if ( (byte_42B1129 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
-    byte_42159E6 = 1;
+    sub_B52984(&Method_DataEntityBase_string___ctor__);
+    byte_42B1129 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventItemDisplayEntity__CreatePK(int32_t id, int32_t eventId, const MethodInfo *method)
 {
-  if ( (byte_42159E4 & 1) == 0 )
+  if ( (byte_42B1127 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&eventId);
-    byte_42159E4 = 1;
+    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_42B1127 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            eventId,
-           (const MethodInfo_171341C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1A4DF50 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -59,28 +58,23 @@ bool __fastcall EventItemDisplayEntity__HasScreenFlag(
 
 bool __fastcall EventItemDisplayEntity__IsEnable(EventItemDisplayEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
   int64_t Time; // x0
   DataManager_o *Instance; // x0
+  const MethodInfo *v5; // x1
   struct System_Int32_array *conditionDetailIds; // x20
-  __int64 v9; // x8
-  DataMasterBase_WarMaster__WarEntity__int__o *v10; // x19
-  unsigned __int64 v11; // x21
-  const MethodInfo *v12; // x1
-  __int64 v14; // x0
+  __int64 v7; // x8
+  DataMasterBase_WarMaster__WarEntity__int__o *v8; // x19
+  unsigned __int64 v9; // x21
+  __int64 v11; // x0
   WarEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_42159E5 & 1) == 0 )
+  if ( (byte_42B1128 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___, method);
-    sub_B0D8A4(
-      &Method_DataMasterBase_EventItemDisplayReleaseMaster__EventItemDisplayReleaseEntity__int__TryGetEntity__,
-      v3);
-    sub_B0D8A4(&NetworkManager_TypeInfo, v4);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_42159E5 = 1;
+    sub_B52984(&Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___);
+    sub_B52984(&Method_DataMasterBase_EventItemDisplayReleaseMaster__EventItemDisplayReleaseEntity__int__TryGetEntity__);
+    sub_B52984(&NetworkManager_TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_42B1128 = 1;
   }
   entity = 0LL;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -91,34 +85,34 @@ bool __fastcall EventItemDisplayEntity__IsEnable(EventItemDisplayEntity_o *this,
   Time = NetworkManager__getTime(0LL);
   if ( Time < this->fields.openedAt || Time >= this->fields.closedAt )
     return 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_20;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___);
+                                (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___);
   conditionDetailIds = this->fields.conditionDetailIds;
   if ( !conditionDetailIds )
     goto LABEL_20;
-  v9 = *(_QWORD *)&conditionDetailIds->max_length;
-  if ( (int)v9 >= 1 )
+  v7 = *(_QWORD *)&conditionDetailIds->max_length;
+  if ( (int)v7 >= 1 )
   {
-    v10 = (DataMasterBase_WarMaster__WarEntity__int__o *)Instance;
-    v11 = 0LL;
+    v8 = (DataMasterBase_WarMaster__WarEntity__int__o *)Instance;
+    v9 = 0LL;
     while ( 1 )
     {
-      if ( v11 >= (unsigned int)v9 )
+      if ( v9 >= (unsigned int)v7 )
       {
-        v14 = sub_B0D9A8(Instance);
-        sub_B0D948(v14, 0LL);
+        v11 = sub_B52A88(Instance);
+        sub_B52A28(v11, 0LL);
       }
-      if ( !v10 )
+      if ( !v8 )
         break;
       Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-                                    v10,
+                                    v8,
                                     &entity,
-                                    conditionDetailIds->m_Items[v11 + 1],
-                                    (const MethodInfo_2669C30 *)Method_DataMasterBase_EventItemDisplayReleaseMaster__EventItemDisplayReleaseEntity__int__TryGetEntity__);
+                                    conditionDetailIds->m_Items[v9 + 1],
+                                    (const MethodInfo_23E2334 *)Method_DataMasterBase_EventItemDisplayReleaseMaster__EventItemDisplayReleaseEntity__int__TryGetEntity__);
       if ( ((unsigned __int8)Instance & 1) != 0 )
       {
         Instance = (DataManager_o *)entity;
@@ -126,16 +120,16 @@ bool __fastcall EventItemDisplayEntity__IsEnable(EventItemDisplayEntity_o *this,
           break;
         Instance = (DataManager_o *)EventItemDisplayReleaseEntity__IsCondEnable(
                                       (EventItemDisplayReleaseEntity_o *)entity,
-                                      v12);
+                                      v5);
         if ( ((unsigned __int8)Instance & 1) == 0 )
           return 0;
       }
-      LODWORD(v9) = conditionDetailIds->max_length;
-      if ( (__int64)++v11 >= (int)v9 )
+      LODWORD(v7) = conditionDetailIds->max_length;
+      if ( (__int64)++v9 >= (int)v7 )
         return 1;
     }
 LABEL_20:
-    sub_B0D97C(Instance);
+    sub_B52A5C(Instance, v5);
   }
   return 1;
 }

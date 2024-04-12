@@ -4,23 +4,24 @@ void __fastcall SubmarineSilhouetteData___ctor(
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  __int64 v6; // x1
+  System_String_array **v7; // x2
+  System_String_array **v8; // x3
+  System_Boolean_array **v9; // x4
+  System_Int32_array **v10; // x5
+  System_Int32_array *v11; // x6
+  System_Int32_array *v12; // x7
   struct SpotEntity_o *SpotEntity_k__BackingField; // x8
   struct EventPanelSpotEntity_o *EventPanelSpotEntity_k__BackingField; // x8
-  struct EventPanelSpotEntity_o *v14; // x8
+  struct EventPanelSpotEntity_o *v15; // x8
   struct System_Int32_array *objectQuestIds; // x1
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  struct EventPanelSpotEntity_o *v22; // x8
+  System_String_array **v17; // x2
+  System_String_array **v18; // x3
+  System_Boolean_array **v19; // x4
+  System_Int32_array **v20; // x5
+  System_Int32_array *v21; // x6
+  System_Int32_array *v22; // x7
+  struct EventPanelSpotEntity_o *v23; // x8
   struct System_Int32_array_array *enemySizeIdxListJson; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
@@ -34,38 +35,37 @@ void __fastcall SubmarineSilhouetteData___ctor(
   EventPanelSpotEntity_k__BackingField = spotInfo->fields._EventPanelSpotEntity_k__BackingField;
   if ( !EventPanelSpotEntity_k__BackingField
     || (this->fields._ObjectId_k__BackingField = EventPanelSpotEntity_k__BackingField->fields.objectId,
-        (v14 = spotInfo->fields._EventPanelSpotEntity_k__BackingField) == 0LL)
-    || (objectQuestIds = v14->fields.objectQuestIds,
+        (v15 = spotInfo->fields._EventPanelSpotEntity_k__BackingField) == 0LL)
+    || (objectQuestIds = v15->fields.objectQuestIds,
         this->fields._ObjectQuestIds_k__BackingField = objectQuestIds,
-        sub_B0D840(
+        sub_B52920(
           (BattleServantConfConponent_o *)&this->fields._ObjectQuestIds_k__BackingField,
           (System_Int32_array **)objectQuestIds,
-          v6,
           v7,
           v8,
           v9,
           v10,
-          v11),
-        (v22 = spotInfo->fields._EventPanelSpotEntity_k__BackingField) == 0LL) )
+          v11,
+          v12),
+        (v23 = spotInfo->fields._EventPanelSpotEntity_k__BackingField) == 0LL) )
   {
 LABEL_7:
-    sub_B0D97C(v5);
+    sub_B52A5C(v5, v6);
   }
-  enemySizeIdxListJson = v22->fields.enemySizeIdxListJson;
+  enemySizeIdxListJson = v23->fields.enemySizeIdxListJson;
   this->fields._EnemySizeIdx_k__BackingField = enemySizeIdxListJson;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields._EnemySizeIdx_k__BackingField,
     (System_Int32_array **)enemySizeIdxListJson,
-    v16,
     v17,
     v18,
     v19,
     v20,
-    v21);
+    v21,
+    v22);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall SubmarineSilhouetteData__HasClearCondQuestId(
         SubmarineSilhouetteData_o *this,
         int32_t questId,
@@ -73,10 +73,10 @@ bool __fastcall SubmarineSilhouetteData__HasClearCondQuestId(
 {
   struct System_Int32_array *ObjectQuestIds_k__BackingField; // x0
 
-  if ( (byte_4215F61 & 1) == 0 )
+  if ( (byte_42B1913 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Array_IndexOf_int___, *(_QWORD *)&questId);
-    byte_4215F61 = 1;
+    sub_B52984(&Method_System_Array_IndexOf_int___);
+    byte_42B1913 = 1;
   }
   ObjectQuestIds_k__BackingField = this->fields._ObjectQuestIds_k__BackingField;
   if ( ObjectQuestIds_k__BackingField )
@@ -85,7 +85,7 @@ bool __fastcall SubmarineSilhouetteData__HasClearCondQuestId(
       LOBYTE(ObjectQuestIds_k__BackingField) = System_Array__IndexOf_int_(
                                                  ObjectQuestIds_k__BackingField,
                                                  questId,
-                                                 (const MethodInfo_1F69B20 *)Method_System_Array_IndexOf_int___) >= 0;
+                                                 (const MethodInfo_201BBC8 *)Method_System_Array_IndexOf_int___) >= 0;
     else
       LOBYTE(ObjectQuestIds_k__BackingField) = 0;
   }
@@ -180,7 +180,7 @@ void __fastcall SubmarineSilhouetteData__set_EnemySizeIdx(
   System_Int32_array *v7; // x7
 
   this->fields._EnemySizeIdx_k__BackingField = value;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields._EnemySizeIdx_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -213,7 +213,7 @@ void __fastcall SubmarineSilhouetteData__set_ObjectQuestIds(
   System_Int32_array *v7; // x7
 
   this->fields._ObjectQuestIds_k__BackingField = value;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields._ObjectQuestIds_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

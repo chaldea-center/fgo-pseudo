@@ -11,49 +11,44 @@ void __fastcall CardLockSyncRequest__beginRequest(
         bool isStorage,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  System_String_o *v12; // x0
-  System_String_o *v13; // x0
+  System_String_o *v9; // x0
+  System_String_o *v10; // x0
 
-  if ( (byte_4215DA9 & 1) == 0 )
+  if ( (byte_42B16A2 & 1) == 0 )
   {
-    sub_B0D8A4(&JsonManager_TypeInfo, lockUserSvtIds);
-    sub_B0D8A4(&StringLiteral_20020/*"isStorage"*/, v9);
-    sub_B0D8A4(&StringLiteral_20365/*"lockUserSvtIds"*/, v10);
-    sub_B0D8A4(&StringLiteral_22999/*"unlockUserSvtIds"*/, v11);
-    byte_4215DA9 = 1;
+    sub_B52984(&JsonManager_TypeInfo);
+    sub_B52984(&StringLiteral_20108/*"isStorage"*/);
+    sub_B52984(&StringLiteral_20456/*"lockUserSvtIds"*/);
+    sub_B52984(&StringLiteral_23113/*"unlockUserSvtIds"*/);
+    byte_42B16A2 = 1;
   }
   if ( lockUserSvtIds && *(_QWORD *)&lockUserSvtIds->max_length )
   {
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v12 = JsonManager__toJson(&lockUserSvtIds->obj, 0, 0, 0LL);
-    RequestBase__addField_30435648((RequestBase_o *)this, (System_String_o *)StringLiteral_20365/*"lockUserSvtIds"*/, v12, 0LL);
+    v9 = JsonManager__toJson(&lockUserSvtIds->obj, 0, 0, 0LL);
+    RequestBase__addField_32020920((RequestBase_o *)this, (System_String_o *)StringLiteral_20456/*"lockUserSvtIds"*/, v9, 0LL);
   }
   if ( unlockUserSvtIds && *(_QWORD *)&unlockUserSvtIds->max_length )
   {
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v13 = JsonManager__toJson(&unlockUserSvtIds->obj, 0, 0, 0LL);
-    RequestBase__addField_30435648((RequestBase_o *)this, (System_String_o *)StringLiteral_22999/*"unlockUserSvtIds"*/, v13, 0LL);
+    v10 = JsonManager__toJson(&unlockUserSvtIds->obj, 0, 0, 0LL);
+    RequestBase__addField_32020920((RequestBase_o *)this, (System_String_o *)StringLiteral_23113/*"unlockUserSvtIds"*/, v10, 0LL);
   }
   if ( isStorage )
-    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20020/*"isStorage"*/, 1, 0LL);
+    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20108/*"isStorage"*/, 1, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
 
 System_String_o *__fastcall CardLockSyncRequest__getMockData(CardLockSyncRequest_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
-
-  if ( (byte_4215DA8 & 1) == 0 )
+  if ( (byte_42B16A1 & 1) == 0 )
   {
-    sub_B0D8A4(&NetworkManager_TypeInfo, method);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v2);
-    byte_4215DA8 = 1;
+    sub_B52984(&NetworkManager_TypeInfo);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B16A1 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -66,14 +61,13 @@ System_String_o *__fastcall CardLockSyncRequest__getMockData(CardLockSyncRequest
 
 System_String_o *__fastcall CardLockSyncRequest__getURL(CardLockSyncRequest_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4215DA7 & 1) == 0 )
+  if ( (byte_42B16A0 & 1) == 0 )
   {
-    sub_B0D8A4(&NetworkManager_TypeInfo, method);
-    sub_B0D8A4(&StringLiteral_17276/*"card/lockSync"*/, v2);
-    byte_4215DA7 = 1;
+    sub_B52984(&NetworkManager_TypeInfo);
+    sub_B52984(&StringLiteral_17344/*"card/lockSync"*/);
+    byte_42B16A0 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -81,7 +75,7 @@ System_String_o *__fastcall CardLockSyncRequest__getURL(CardLockSyncRequest_o *t
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43849904(BaseUrl, (System_String_o *)StringLiteral_17276/*"card/lockSync"*/, 0LL);
+  return System_String__Concat_44568316(BaseUrl, (System_String_o *)StringLiteral_17344/*"card/lockSync"*/, 0LL);
 }
 
 
@@ -90,27 +84,25 @@ void __fastcall CardLockSyncRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  ResponseData_o *v7; // x0
-  __int64 *v8; // x8
+  ResponseData_o *v5; // x0
+  __int64 *v6; // x8
 
-  if ( (byte_4215DAA & 1) == 0 )
+  if ( (byte_42B16A3 & 1) == 0 )
   {
-    sub_B0D8A4(&ResponseCommandKind_TypeInfo, responseList);
-    sub_B0D8A4(&StringLiteral_21287/*"ok"*/, v5);
-    sub_B0D8A4(&StringLiteral_21137/*"ng"*/, v6);
-    byte_4215DAA = 1;
+    sub_B52984(&ResponseCommandKind_TypeInfo);
+    sub_B52984(&StringLiteral_21388/*"ok"*/);
+    sub_B52984(&StringLiteral_21239/*"ng"*/);
+    byte_42B16A3 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   }
-  v7 = ResponseCommandKind__SearchData(55, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_30403444(v7, 0LL) )
-    v8 = &StringLiteral_21287/*"ok"*/;
+  v5 = ResponseCommandKind__SearchData(56, responseList, 0LL);
+  if ( v5 && ResponseData__checkError_29724768(v5, 0LL) )
+    v6 = &StringLiteral_21388/*"ok"*/;
   else
-    v8 = &StringLiteral_21137/*"ng"*/;
-  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v8, 0LL);
+    v6 = &StringLiteral_21239/*"ng"*/;
+  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v6, 0LL);
 }

@@ -23,85 +23,70 @@ void __fastcall CardFavoriteRequest__beginRequest(
         bool isPush,
         const MethodInfo *method)
 {
-  __int64 v24; // x1
+  _BOOL8 _29217932; // x0
   __int64 v25; // x1
-  __int64 v26; // x1
-  __int64 v27; // x1
-  __int64 v28; // x1
-  __int64 v29; // x1
-  __int64 v30; // x1
-  __int64 v31; // x1
-  __int64 v32; // x1
-  __int64 v33; // x1
-  __int64 v34; // x1
-  __int64 v35; // x1
-  __int64 v36; // x1
-  __int64 v37; // x1
-  __int64 v38; // x1
-  _BOOL8 _28088484; // x0
 
-  if ( (byte_4215DA5 & 1) == 0 )
+  if ( (byte_42B169A & 1) == 0 )
   {
-    sub_B0D8A4(&TutorialFlag_TypeInfo, targetUsrSVtId);
-    sub_B0D8A4(&StringLiteral_20286/*"limitCountSupport"*/, v24);
-    sub_B0D8A4(&StringLiteral_19335/*"iconLimitCount"*/, v25);
-    sub_B0D8A4(&StringLiteral_22539/*"svtCommonFlag"*/, v26);
-    sub_B0D8A4(&StringLiteral_20012/*"isPush"*/, v27);
-    sub_B0D8A4(&StringLiteral_19477/*"imageLimitCount"*/, v28);
-    sub_B0D8A4(&StringLiteral_23143/*"userSvtId"*/, v29);
-    sub_B0D8A4(&StringLiteral_21764/*"randomLimitCount"*/, v30);
-    sub_B0D8A4(&StringLiteral_21577/*"portraitLimitCount"*/, v31);
-    sub_B0D8A4(&StringLiteral_18085/*"dispLimitCount"*/, v32);
-    sub_B0D8A4(&StringLiteral_16707/*"battleVoice"*/, v33);
-    sub_B0D8A4(&StringLiteral_20002/*"isLock"*/, v34);
-    sub_B0D8A4(&StringLiteral_19987/*"isChoice"*/, v35);
-    sub_B0D8A4(&StringLiteral_21765/*"randomLimitCountSupport"*/, v36);
-    sub_B0D8A4(&StringLiteral_17648/*"commandCardLimitCount"*/, v37);
-    sub_B0D8A4(&StringLiteral_19996/*"isFavorite"*/, v38);
-    byte_4215DA5 = 1;
+    sub_B52984(&TutorialFlag_TypeInfo);
+    sub_B52984(&StringLiteral_20376/*"limitCountSupport"*/);
+    sub_B52984(&StringLiteral_19420/*"iconLimitCount"*/);
+    sub_B52984(&StringLiteral_22652/*"svtCommonFlag"*/);
+    sub_B52984(&StringLiteral_20099/*"isPush"*/);
+    sub_B52984(&StringLiteral_19562/*"imageLimitCount"*/);
+    sub_B52984(&StringLiteral_23257/*"userSvtId"*/);
+    sub_B52984(&StringLiteral_21874/*"randomLimitCount"*/);
+    sub_B52984(&StringLiteral_21683/*"portraitLimitCount"*/);
+    sub_B52984(&StringLiteral_18162/*"dispLimitCount"*/);
+    sub_B52984(&StringLiteral_16773/*"battleVoice"*/);
+    sub_B52984(&StringLiteral_20089/*"isLock"*/);
+    sub_B52984(&StringLiteral_20074/*"isChoice"*/);
+    sub_B52984(&StringLiteral_21875/*"randomLimitCountSupport"*/);
+    sub_B52984(&StringLiteral_17717/*"commandCardLimitCount"*/);
+    sub_B52984(&StringLiteral_20083/*"isFavorite"*/);
+    byte_42B169A = 1;
   }
-  RequestBase__addField_30435180((RequestBase_o *)this, (System_String_o *)StringLiteral_23143/*"userSvtId"*/, targetUsrSVtId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19477/*"imageLimitCount"*/, imageLimitCount, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18085/*"dispLimitCount"*/, dispLimitCount, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17648/*"commandCardLimitCount"*/, commandCardLimitCount, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19335/*"iconLimitCount"*/, iconLimitCount, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21577/*"portraitLimitCount"*/, portraitLimitCount, 0LL);
+  RequestBase__addField_32020452((RequestBase_o *)this, (System_String_o *)StringLiteral_23257/*"userSvtId"*/, targetUsrSVtId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19562/*"imageLimitCount"*/, imageLimitCount, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18162/*"dispLimitCount"*/, dispLimitCount, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17717/*"commandCardLimitCount"*/, commandCardLimitCount, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19420/*"iconLimitCount"*/, iconLimitCount, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21683/*"portraitLimitCount"*/, portraitLimitCount, 0LL);
   if ( (BYTE3(TutorialFlag_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  _28088484 = TutorialFlag__Get_28088484(106, 0LL);
-  if ( !_28088484 )
+  _29217932 = TutorialFlag__Get_29217932(106, 0LL);
+  v25 = StringLiteral_20083/*"isFavorite"*/;
+  if ( !_29217932 )
   {
-    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19996/*"isFavorite"*/, -1, 0LL);
+    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20083/*"isFavorite"*/, -1, 0LL);
     if ( this )
       goto LABEL_10;
 LABEL_11:
-    sub_B0D97C(_28088484);
+    sub_B52A5C(_29217932, v25);
   }
   if ( !this )
     goto LABEL_11;
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19996/*"isFavorite"*/, isFavorite, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20083/*"isFavorite"*/, isFavorite, 0LL);
 LABEL_10:
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20002/*"isLock"*/, isLock, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19987/*"isChoice"*/, isChoice, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22539/*"svtCommonFlag"*/, commonFlag, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16707/*"battleVoice"*/, battleVoice, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21764/*"randomLimitCount"*/, randomSettingOwn, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21765/*"randomLimitCountSupport"*/, randomSettingSupport, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20286/*"limitCountSupport"*/, limitCountSupport, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20012/*"isPush"*/, isPush, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20089/*"isLock"*/, isLock, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20074/*"isChoice"*/, isChoice, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22652/*"svtCommonFlag"*/, commonFlag, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16773/*"battleVoice"*/, battleVoice, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21874/*"randomLimitCount"*/, randomSettingOwn, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21875/*"randomLimitCountSupport"*/, randomSettingSupport, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20376/*"limitCountSupport"*/, limitCountSupport, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20099/*"isPush"*/, isPush, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
 
 System_String_o *__fastcall CardFavoriteRequest__getMockData(CardFavoriteRequest_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
-
-  if ( (byte_4215DA4 & 1) == 0 )
+  if ( (byte_42B1699 & 1) == 0 )
   {
-    sub_B0D8A4(&NetworkManager_TypeInfo, method);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v2);
-    byte_4215DA4 = 1;
+    sub_B52984(&NetworkManager_TypeInfo);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B1699 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -114,14 +99,13 @@ System_String_o *__fastcall CardFavoriteRequest__getMockData(CardFavoriteRequest
 
 System_String_o *__fastcall CardFavoriteRequest__getURL(CardFavoriteRequest_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4215DA3 & 1) == 0 )
+  if ( (byte_42B1698 & 1) == 0 )
   {
-    sub_B0D8A4(&NetworkManager_TypeInfo, method);
-    sub_B0D8A4(&StringLiteral_17274/*"card/favorite"*/, v2);
-    byte_4215DA3 = 1;
+    sub_B52984(&NetworkManager_TypeInfo);
+    sub_B52984(&StringLiteral_17341/*"card/favorite"*/);
+    byte_42B1698 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -129,7 +113,7 @@ System_String_o *__fastcall CardFavoriteRequest__getURL(CardFavoriteRequest_o *t
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43849904(BaseUrl, (System_String_o *)StringLiteral_17274/*"card/favorite"*/, 0LL);
+  return System_String__Concat_44568316(BaseUrl, (System_String_o *)StringLiteral_17341/*"card/favorite"*/, 0LL);
 }
 
 
@@ -138,27 +122,25 @@ void __fastcall CardFavoriteRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  ResponseData_o *v7; // x0
-  __int64 *v8; // x8
+  ResponseData_o *v5; // x0
+  __int64 *v6; // x8
 
-  if ( (byte_4215DA6 & 1) == 0 )
+  if ( (byte_42B169B & 1) == 0 )
   {
-    sub_B0D8A4(&ResponseCommandKind_TypeInfo, responseList);
-    sub_B0D8A4(&StringLiteral_21287/*"ok"*/, v5);
-    sub_B0D8A4(&StringLiteral_21137/*"ng"*/, v6);
-    byte_4215DA6 = 1;
+    sub_B52984(&ResponseCommandKind_TypeInfo);
+    sub_B52984(&StringLiteral_21388/*"ok"*/);
+    sub_B52984(&StringLiteral_21239/*"ng"*/);
+    byte_42B169B = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   }
-  v7 = ResponseCommandKind__SearchData(34, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_30403444(v7, 0LL) )
-    v8 = &StringLiteral_21287/*"ok"*/;
+  v5 = ResponseCommandKind__SearchData(34, responseList, 0LL);
+  if ( v5 && ResponseData__checkError_29724768(v5, 0LL) )
+    v6 = &StringLiteral_21388/*"ok"*/;
   else
-    v8 = &StringLiteral_21137/*"ng"*/;
-  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v8, 0LL);
+    v6 = &StringLiteral_21239/*"ng"*/;
+  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v6, 0LL);
 }

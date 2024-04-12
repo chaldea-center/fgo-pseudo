@@ -1,39 +1,40 @@
 void __fastcall BattleWarBoardEventLimitTurn___ctor(BattleWarBoardEventLimitTurn_o *this, const MethodInfo *method)
 {
   struct System_Int32_array *v3; // x0
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
-  __int64 v10; // x0
+  __int64 v4; // x1
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
+  __int64 v11; // x0
 
-  if ( (byte_421402F & 1) == 0 )
+  if ( (byte_42AFC89 & 1) == 0 )
   {
-    sub_B0D8A4(&int___TypeInfo, method);
-    byte_421402F = 1;
+    sub_B52984(&int___TypeInfo);
+    byte_42AFC89 = 1;
   }
   *(_QWORD *)&this->fields.defLimitAct = 0x200000001LL;
-  v3 = (struct System_Int32_array *)sub_B0D8BC(int___TypeInfo, 1LL);
+  v3 = (struct System_Int32_array *)sub_B5299C(int___TypeInfo, 1LL);
   if ( !v3 )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v4);
   if ( !v3->max_length )
   {
-    v10 = sub_B0D9A8(v3);
-    sub_B0D948(v10, 0LL);
+    v11 = sub_B52A88(v3);
+    sub_B52A28(v11, 0LL);
   }
   v3->m_Items[1] = 3;
   this->fields.defTurnEffect = v3;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.defTurnEffect,
     (System_Int32_array **)v3,
-    v4,
     v5,
     v6,
     v7,
     v8,
-    v9);
+    v9,
+    v10);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -44,6 +45,7 @@ void __fastcall BattleWarBoardEventLimitTurn__InitLimitInfo(
         StageEntity_o *stage,
         const MethodInfo *method)
 {
+  WarBoardBattleEvent_o *v4; // x21
   BattleWarBoardEventLimitTurn_o *v5; // x20
   struct BattleData_o *Data_k__BackingField; // x22
   int limitAct; // w8
@@ -66,14 +68,16 @@ void __fastcall BattleWarBoardEventLimitTurn__InitLimitInfo(
 
   if ( !battleEvent )
     goto LABEL_13;
+  v4 = battleEvent;
   v5 = this;
   this = (BattleWarBoardEventLimitTurn_o *)WarBoardBattleEvent__get_LimitBattleTurn(battleEvent, 0LL);
   if ( (int)this < 1 )
     return;
-  Data_k__BackingField = battleEvent->fields._Data_k__BackingField;
+  Data_k__BackingField = v4->fields._Data_k__BackingField;
   if ( !Data_k__BackingField )
     goto LABEL_13;
   limitAct = Data_k__BackingField->fields.limitAct;
+  battleEvent = (WarBoardBattleEvent_o *)(unsigned int)this;
   Data_k__BackingField->fields.limitTurnCount = (int)this;
   if ( limitAct <= 0 )
     limitAct = v5->fields.defLimitAct;
@@ -85,7 +89,7 @@ void __fastcall BattleWarBoardEventLimitTurn__InitLimitInfo(
   if ( !stage
     || (TurnEffect = (System_Int32_array **)StageEntity__getTurnEffect(stage, (int32_t)this, 0LL),
         Data_k__BackingField->fields.turnEffect = (struct System_Int32_array *)TurnEffect,
-        sub_B0D840(
+        sub_B52920(
           (BattleServantConfConponent_o *)&Data_k__BackingField->fields.turnEffect,
           TurnEffect,
           v11,
@@ -97,7 +101,7 @@ void __fastcall BattleWarBoardEventLimitTurn__InitLimitInfo(
         (v17 = Data_k__BackingField->fields.turnEffect) == 0LL) )
   {
 LABEL_13:
-    sub_B0D97C(this);
+    sub_B52A5C(this, battleEvent);
   }
   if ( !*(_QWORD *)&v17->max_length )
   {
@@ -107,7 +111,7 @@ LABEL_13:
                                    v5->fields.defTurnEffect,
                                    0LL);
     Data_k__BackingField->fields.turnEffect = (struct System_Int32_array *)v18;
-    sub_B0D840(
+    sub_B52920(
       (BattleServantConfConponent_o *)&Data_k__BackingField->fields.turnEffect,
       v18,
       v19,

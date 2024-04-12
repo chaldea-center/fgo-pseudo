@@ -12,20 +12,20 @@ void __fastcall EquipGraphServantItemDraw__SetInput(
 {
   UnityEngine_Component_o *decideButton; // x0
 
-  if ( (byte_4216DF7 & 1) == 0 )
+  if ( (byte_42B261F & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_Collider___, isInput);
-    byte_4216DF7 = 1;
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_Collider___);
+    byte_42B261F = 1;
   }
   decideButton = (UnityEngine_Component_o *)this->fields.decideButton;
   if ( !decideButton
     || (decideButton = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                     decideButton,
-                                                    (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
+                                                    (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
     || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)decideButton, isInput, 0LL),
         (decideButton = (UnityEngine_Component_o *)this->fields.decideButton) == 0LL) )
   {
-    sub_B0D97C(decideButton);
+    sub_B52A5C(decideButton, isInput);
   }
   ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))decideButton->klass[1]._1.implementedInterfaces)(
     decideButton,
@@ -40,74 +40,72 @@ void __fastcall EquipGraphServantItemDraw__SetItem(
         EquipGraphServantItem_o *item,
         const MethodInfo *method)
 {
+  EquipGraphServantItem_o *v3; // x19
   EquipGraphServantItemDraw_o **v4; // x20
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   struct PartyOrganizationListViewItem_o *baseItem; // x8
-  UnityEngine_Object_o *v9; // x21
+  UnityEngine_Object_o *v6; // x21
   struct ServantEntity_o *servantEntity; // x8
   int32_t cost; // w2
   struct ServantEntity_o *equipServantEntity; // x8
-  int32_t v13; // w4
+  int32_t v10; // w4
   UserServantEntity_o *equipUserSvtEntity; // x0
-  SkillInfo_o *v15; // x8
-  UILabel_o *v16; // x21
+  SkillInfo_o *v12; // x8
+  UILabel_o *v13; // x21
   System_String_o *MargeExplanation; // x0
-  struct UserServantEntity_o *v18; // x8
-  UISprite_o *v19; // x21
-  __int64 v20; // x22
-  __int64 v21; // x23
-  int32_t v22; // w22
-  UnityEngine_Object_o *v23; // x21
-  struct ServantEntity_o *v24; // x8
+  struct UserServantEntity_o *v15; // x8
+  UISprite_o *v16; // x21
+  __int64 v17; // x22
+  __int64 v18; // x23
+  int32_t v19; // w22
+  UnityEngine_Object_o *v20; // x21
+  struct ServantEntity_o *v21; // x8
   int limitMax; // w22
+  UnityEngine_Object_o *v23; // x21
+  const MethodInfo *v24; // x1
+  EquipGraphServantItemDraw_o *v25; // x21
   UnityEngine_Object_o *v26; // x21
-  bool v27; // w1
-  const MethodInfo *v28; // x1
-  EquipGraphServantItemDraw_o *v29; // x21
-  UnityEngine_Object_o *v30; // x21
-  struct ServantEntity_o *v31; // x8
-  struct ServantEntity_o *v32; // x9
-  UnityEngine_Object_o *v33; // x21
-  struct ServantEntity_o *v34; // x8
-  int32_t v35; // w2
-  UnityEngine_Object_o *v36; // x21
+  struct ServantEntity_o *v27; // x8
+  struct ServantEntity_o *v28; // x9
+  UnityEngine_Object_o *v29; // x21
+  struct ServantEntity_o *v30; // x8
+  int32_t v31; // w2
+  UnityEngine_Object_o *v32; // x21
   struct UserServantEntity_o *userServantEntity; // x8
   int32_t hp; // w2
   int32_t adjustHp; // w3
-  struct UserServantEntity_o *v40; // x8
-  int32_t v41; // w4
-  UnityEngine_Object_o *v42; // x21
-  struct UserServantEntity_o *v43; // x8
-  int32_t v44; // w2
-  UnityEngine_Object_o *v45; // x21
-  struct UserServantEntity_o *v46; // x8
+  struct UserServantEntity_o *v36; // x8
+  int32_t v37; // w4
+  UnityEngine_Object_o *v38; // x21
+  struct UserServantEntity_o *v39; // x8
+  int32_t v40; // w2
+  UnityEngine_Object_o *v41; // x21
+  struct UserServantEntity_o *v42; // x8
   int32_t atk; // w2
   int32_t adjustAtk; // w3
-  struct UserServantEntity_o *v49; // x8
-  int32_t v50; // w4
-  UnityEngine_Object_o *v51; // x21
-  struct UserServantEntity_o *v52; // x8
-  int32_t v53; // w2
-  UnityEngine_Object_o *v54; // x21
-  __int64 v55; // x0
+  struct UserServantEntity_o *v45; // x8
+  int32_t v46; // w4
+  UnityEngine_Object_o *v47; // x21
+  struct UserServantEntity_o *v48; // x8
+  int32_t v49; // w2
+  UnityEngine_Object_o *v50; // x21
+  __int64 v51; // x0
   SkillInfo_array *skillInfoList; // [xsp+18h] [xbp-38h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v57; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v53; // 0:x0.16
 
+  v3 = item;
   v4 = (EquipGraphServantItemDraw_o **)this;
-  if ( (byte_4216DF6 & 1) == 0 )
+  if ( (byte_42B261E & 1) == 0 )
   {
-    sub_B0D8A4(&AtlasManager_TypeInfo, item);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v5);
-    sub_B0D8A4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6);
-    this = (EquipGraphServantItemDraw_o *)sub_B0D8A4(&StringLiteral_1/*""*/, v7);
-    byte_4216DF6 = 1;
+    sub_B52984(&AtlasManager_TypeInfo);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    this = (EquipGraphServantItemDraw_o *)sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B261E = 1;
   }
   skillInfoList = 0LL;
-  if ( !item )
+  if ( !v3 )
     goto LABEL_129;
-  baseItem = item->fields.baseItem;
+  baseItem = v3->fields.baseItem;
   if ( !baseItem )
     goto LABEL_129;
   this = v4[3];
@@ -115,42 +113,42 @@ void __fastcall EquipGraphServantItemDraw__SetItem(
     goto LABEL_129;
   ServantFaceIconComponent__Set(
     (ServantFaceIconComponent_o *)this,
-    item->fields.userServantEntity,
+    v3->fields.userServantEntity,
     0LL,
     baseItem->fields.questRestrictionInfo,
-    item->fields.iconLabelInfo,
+    v3->fields.iconLabelInfo,
     0LL,
     0LL);
-  v9 = (UnityEngine_Object_o *)v4[4];
+  v6 = (UnityEngine_Object_o *)v4[4];
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(v9, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v6, 0LL, 0LL) )
   {
-    servantEntity = item->fields.servantEntity;
+    servantEntity = v3->fields.servantEntity;
     this = v4[4];
     if ( servantEntity )
       cost = servantEntity->fields.cost;
     else
       cost = 0;
-    equipServantEntity = item->fields.equipServantEntity;
+    equipServantEntity = v3->fields.equipServantEntity;
     if ( equipServantEntity )
     {
-      v13 = equipServantEntity->fields.cost;
+      v10 = equipServantEntity->fields.cost;
       if ( !this )
         goto LABEL_129;
     }
     else
     {
-      v13 = 0;
+      v10 = 0;
       if ( !this )
         goto LABEL_129;
     }
-    UIIconLabel__Set_41076120((UIIconLabel_o *)this, 7, cost, 0, v13, 0LL, 0, 0, 0, 0LL);
+    UIIconLabel__Set_41786400((UIIconLabel_o *)this, 7, cost, 0, v10, 0LL, 0, 0, 0, 0LL);
   }
-  equipUserSvtEntity = item->fields.equipUserSvtEntity;
+  equipUserSvtEntity = v3->fields.equipUserSvtEntity;
   if ( equipUserSvtEntity )
   {
     UserServantEntity__getEquipSkillInfo(equipUserSvtEntity, &skillInfoList, 1, 0LL);
@@ -158,19 +156,19 @@ void __fastcall EquipGraphServantItemDraw__SetItem(
       goto LABEL_129;
     if ( !skillInfoList->max_length )
     {
-      v55 = sub_B0D9A8(this);
-      sub_B0D948(v55, 0LL);
+      v51 = sub_B52A88(this);
+      sub_B52A28(v51, 0LL);
     }
-    v15 = skillInfoList->m_Items[0];
-    if ( !v15 )
+    v12 = skillInfoList->m_Items[0];
+    if ( !v12 )
       goto LABEL_129;
     this = v4[8];
     if ( !this )
       goto LABEL_129;
-    UILabel__set_text((UILabel_o *)this, v15->fields.title, 0LL);
-    v16 = (UILabel_o *)v4[9];
+    UILabel__set_text((UILabel_o *)this, v12->fields.title, 0LL);
+    v13 = (UILabel_o *)v4[9];
     MargeExplanation = SkillInfo__GetMargeExplanation(skillInfoList, 1, 0LL);
-    WrapControlText__textAdjust(v16, MargeExplanation, 22, 0, 0, 0LL);
+    WrapControlText__textAdjust(v13, MargeExplanation, 22, 0, 0, 0LL);
     this = v4[5];
     if ( !this )
       goto LABEL_129;
@@ -185,58 +183,58 @@ void __fastcall EquipGraphServantItemDraw__SetItem(
     if ( !this )
       goto LABEL_129;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-    v18 = item->fields.equipUserSvtEntity;
-    if ( !v18 )
+    v15 = v3->fields.equipUserSvtEntity;
+    if ( !v15 )
       goto LABEL_129;
-    v19 = (UISprite_o *)v4[6];
-    v21 = *(_QWORD *)&v18->fields.svtId.fields.currentCryptoKey;
-    v20 = *(_QWORD *)&v18->fields.svtId.fields.fakeValue;
+    v16 = (UISprite_o *)v4[6];
+    v18 = *(_QWORD *)&v15->fields.svtId.fields.currentCryptoKey;
+    v17 = *(_QWORD *)&v15->fields.svtId.fields.fakeValue;
     if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     }
-    *(_QWORD *)&v57.fields.currentCryptoKey = v21;
-    *(_QWORD *)&v57.fields.fakeValue = v20;
-    v22 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44162576(v57, 0LL);
+    *(_QWORD *)&v53.fields.currentCryptoKey = v18;
+    *(_QWORD *)&v53.fields.fakeValue = v17;
+    v19 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44786420(v53, 0LL);
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !AtlasManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEquipFace(v19, v22, 0LL);
-    v23 = (UnityEngine_Object_o *)v4[7];
+    AtlasManager__SetEquipFace(v16, v19, 0LL);
+    v20 = (UnityEngine_Object_o *)v4[7];
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    if ( UnityEngine_Object__op_Inequality(v23, 0LL, 0LL) )
+    if ( UnityEngine_Object__op_Inequality(v20, 0LL, 0LL) )
     {
-      v24 = item->fields.equipServantEntity;
-      if ( v24 )
-        limitMax = v24->fields.limitMax;
+      v21 = v3->fields.equipServantEntity;
+      if ( v21 )
+        limitMax = v21->fields.limitMax;
       else
         limitMax = 0;
       this = v4[7];
       if ( !this )
         goto LABEL_129;
       this = (EquipGraphServantItemDraw_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-      v29 = this;
+      v25 = this;
       if ( limitMax < 1 )
       {
-        v27 = 0;
+        item = 0LL;
         if ( !this )
           goto LABEL_129;
       }
       else
       {
-        this = (EquipGraphServantItemDraw_o *)EquipGraphServantItem__get_EquipLimitCount(item, v28);
-        v27 = (int)this >= limitMax;
-        if ( !v29 )
+        this = (EquipGraphServantItemDraw_o *)EquipGraphServantItem__get_EquipLimitCount(v3, v24);
+        item = (EquipGraphServantItem_o *)((int)this >= limitMax);
+        if ( !v25 )
           goto LABEL_129;
       }
-      this = v29;
+      this = v25;
       goto LABEL_60;
     }
   }
@@ -264,13 +262,13 @@ void __fastcall EquipGraphServantItemDraw__SetItem(
     if ( !this )
       goto LABEL_129;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
-    v26 = (UnityEngine_Object_o *)v4[7];
+    v23 = (UnityEngine_Object_o *)v4[7];
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    if ( UnityEngine_Object__op_Inequality(v26, 0LL, 0LL) )
+    if ( UnityEngine_Object__op_Inequality(v23, 0LL, 0LL) )
     {
       this = v4[7];
       if ( !this )
@@ -278,68 +276,68 @@ void __fastcall EquipGraphServantItemDraw__SetItem(
       this = (EquipGraphServantItemDraw_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
       if ( !this )
         goto LABEL_129;
-      v27 = 0;
+      LOBYTE(item) = 0;
 LABEL_60:
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v27, 0LL);
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, (bool)item, 0LL);
     }
   }
-  v30 = (UnityEngine_Object_o *)v4[10];
+  v26 = (UnityEngine_Object_o *)v4[10];
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(v30, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v26, 0LL, 0LL) )
   {
-    v31 = item->fields.servantEntity;
+    v27 = v3->fields.servantEntity;
     this = v4[10];
-    if ( v31 )
-      LODWORD(v31) = v31->fields.cost;
-    v32 = item->fields.equipServantEntity;
-    if ( v32 )
-      LODWORD(v32) = v32->fields.cost;
+    if ( v27 )
+      LODWORD(v27) = v27->fields.cost;
+    v28 = v3->fields.equipServantEntity;
+    if ( v28 )
+      LODWORD(v28) = v28->fields.cost;
     if ( this )
     {
-      UIIconLabel__Set_41076120((UIIconLabel_o *)this, 7, (_DWORD)v32 + (_DWORD)v31, 0, 0, 0LL, 0, 0, 0, 0LL);
+      UIIconLabel__Set_41786400((UIIconLabel_o *)this, 7, (_DWORD)v28 + (_DWORD)v27, 0, 0, 0LL, 0, 0, 0, 0LL);
       goto LABEL_71;
     }
 LABEL_129:
-    sub_B0D97C(this);
+    sub_B52A5C(this, item);
   }
 LABEL_71:
-  v33 = (UnityEngine_Object_o *)v4[11];
+  v29 = (UnityEngine_Object_o *)v4[11];
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(v33, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v29, 0LL, 0LL) )
   {
-    v34 = item->fields.equipServantEntity;
+    v30 = v3->fields.equipServantEntity;
     this = v4[11];
-    if ( v34 )
+    if ( v30 )
     {
-      v35 = v34->fields.cost;
+      v31 = v30->fields.cost;
       if ( !this )
         goto LABEL_129;
     }
     else
     {
-      v35 = 0;
+      v31 = 0;
       if ( !this )
         goto LABEL_129;
     }
-    UIIconLabel__Set_41076120((UIIconLabel_o *)this, 43, v35, 0, 0, 0LL, 0, 0, 0, 0LL);
+    UIIconLabel__Set_41786400((UIIconLabel_o *)this, 43, v31, 0, 0, 0LL, 0, 0, 0, 0LL);
   }
-  v36 = (UnityEngine_Object_o *)v4[12];
+  v32 = (UnityEngine_Object_o *)v4[12];
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(v36, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v32, 0LL, 0LL) )
   {
-    userServantEntity = item->fields.userServantEntity;
+    userServantEntity = v3->fields.userServantEntity;
     this = v4[12];
     if ( userServantEntity )
     {
@@ -351,115 +349,115 @@ LABEL_71:
       hp = 0;
       adjustHp = 0;
     }
-    v40 = item->fields.equipUserSvtEntity;
-    if ( v40 )
+    v36 = v3->fields.equipUserSvtEntity;
+    if ( v36 )
     {
-      v41 = v40->fields.hp;
+      v37 = v36->fields.hp;
       if ( !this )
         goto LABEL_129;
     }
     else
     {
-      v41 = 0;
+      v37 = 0;
       if ( !this )
         goto LABEL_129;
     }
-    UIIconLabel__Set_41076120((UIIconLabel_o *)this, 3, hp, adjustHp, v41, 0LL, 0, 0, 0, 0LL);
+    UIIconLabel__Set_41786400((UIIconLabel_o *)this, 3, hp, adjustHp, v37, 0LL, 0, 0, 0, 0LL);
   }
-  v42 = (UnityEngine_Object_o *)v4[13];
+  v38 = (UnityEngine_Object_o *)v4[13];
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(v42, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v38, 0LL, 0LL) )
   {
-    v43 = item->fields.equipUserSvtEntity;
+    v39 = v3->fields.equipUserSvtEntity;
     this = v4[13];
-    if ( v43 )
+    if ( v39 )
     {
-      v44 = v43->fields.hp;
+      v40 = v39->fields.hp;
       if ( !this )
         goto LABEL_129;
     }
     else
     {
-      v44 = 0;
+      v40 = 0;
       if ( !this )
         goto LABEL_129;
     }
-    UIIconLabel__Set_41076120((UIIconLabel_o *)this, 41, v44, 0, 0, 0LL, 0, 0, 0, 0LL);
+    UIIconLabel__Set_41786400((UIIconLabel_o *)this, 41, v40, 0, 0, 0LL, 0, 0, 0, 0LL);
   }
-  v45 = (UnityEngine_Object_o *)v4[14];
+  v41 = (UnityEngine_Object_o *)v4[14];
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(v45, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v41, 0LL, 0LL) )
   {
-    v46 = item->fields.userServantEntity;
+    v42 = v3->fields.userServantEntity;
     this = v4[14];
-    if ( v46 )
+    if ( v42 )
     {
-      atk = v46->fields.atk;
-      adjustAtk = v46->fields.adjustAtk;
+      atk = v42->fields.atk;
+      adjustAtk = v42->fields.adjustAtk;
     }
     else
     {
       atk = 0;
       adjustAtk = 0;
     }
-    v49 = item->fields.equipUserSvtEntity;
-    if ( v49 )
+    v45 = v3->fields.equipUserSvtEntity;
+    if ( v45 )
     {
-      v50 = v49->fields.atk;
+      v46 = v45->fields.atk;
       if ( !this )
         goto LABEL_129;
     }
     else
     {
-      v50 = 0;
+      v46 = 0;
       if ( !this )
         goto LABEL_129;
     }
-    UIIconLabel__Set_41076120((UIIconLabel_o *)this, 5, atk, adjustAtk, v50, 0LL, 0, 0, 0, 0LL);
+    UIIconLabel__Set_41786400((UIIconLabel_o *)this, 5, atk, adjustAtk, v46, 0LL, 0, 0, 0, 0LL);
   }
-  v51 = (UnityEngine_Object_o *)v4[15];
+  v47 = (UnityEngine_Object_o *)v4[15];
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(v51, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v47, 0LL, 0LL) )
   {
-    v52 = item->fields.equipUserSvtEntity;
+    v48 = v3->fields.equipUserSvtEntity;
     this = v4[15];
-    if ( v52 )
+    if ( v48 )
     {
-      v53 = v52->fields.atk;
+      v49 = v48->fields.atk;
       if ( !this )
         goto LABEL_129;
     }
     else
     {
-      v53 = 0;
+      v49 = 0;
       if ( !this )
         goto LABEL_129;
     }
-    UIIconLabel__Set_41076120((UIIconLabel_o *)this, 42, v53, 0, 0, 0LL, 0, 0, 0, 0LL);
+    UIIconLabel__Set_41786400((UIIconLabel_o *)this, 42, v49, 0, 0, 0LL, 0, 0, 0, 0LL);
   }
-  v54 = (UnityEngine_Object_o *)v4[16];
+  v50 = (UnityEngine_Object_o *)v4[16];
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(v54, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v50, 0LL, 0LL) )
   {
     this = v4[16];
     if ( !this )
       goto LABEL_129;
-    UICommonButton__SetColliderEnable((UICommonButton_o *)this, item->fields.equipUserSvtEntity != 0LL, 1, 0LL);
+    UICommonButton__SetColliderEnable((UICommonButton_o *)this, v3->fields.equipUserSvtEntity != 0LL, 1, 0LL);
   }
 }

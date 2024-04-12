@@ -35,10 +35,10 @@ int32_t __fastcall Ai__getChangeThinking(System_Int32_array *avals, const Method
 
 int32_t __fastcall Ai__getCond(int32_t intype, const MethodInfo *method)
 {
-  if ( (byte_4212942 & 1) == 0 )
+  if ( (byte_42ADFA3 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Math_TypeInfo, method);
-    byte_4212942 = 1;
+    sub_B52984(&System_Math_TypeInfo);
+    byte_42ADFA3 = 1;
   }
   if ( (BYTE3(System_Math_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);

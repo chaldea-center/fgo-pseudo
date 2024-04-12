@@ -8,24 +8,23 @@ UserPresentBoxEntity_array *__fastcall PresentBoxInfoComponent__GetPresentList(
         PresentBoxInfoComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x1
-  __int64 v3; // x1
   DataManager_o *Instance; // x0
+  __int64 v3; // x1
   UserPresentBoxMaster_o *MasterData_WarQuestSelectionMaster; // x19
 
-  if ( (byte_4213AA0 & 1) == 0 )
+  if ( (byte_42AF83A & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMasterData_UserPresentBoxMaster___, method);
-    sub_B0D8A4(&NetworkManager_TypeInfo, v2);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4213AA0 = 1;
+    sub_B52984(&Method_DataManager_GetMasterData_UserPresentBoxMaster___);
+    sub_B52984(&NetworkManager_TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_42AF83A = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   MasterData_WarQuestSelectionMaster = (UserPresentBoxMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                    Instance,
-                                                                   (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_UserPresentBoxMaster___);
+                                                                   (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_UserPresentBoxMaster___);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -34,7 +33,7 @@ UserPresentBoxEntity_array *__fastcall PresentBoxInfoComponent__GetPresentList(
   Instance = (DataManager_o *)NetworkManager__get_UserId(0LL);
   if ( !MasterData_WarQuestSelectionMaster )
 LABEL_9:
-    sub_B0D97C(Instance);
+    sub_B52A5C(Instance, v3);
   return UserPresentBoxMaster__getVaildList(MasterData_WarQuestSelectionMaster, (int64_t)Instance, 0LL);
 }
 
@@ -42,33 +41,32 @@ LABEL_9:
 void __fastcall PresentBoxInfoComponent__SetPresentBoxInfo(PresentBoxInfoComponent_o *this, const MethodInfo *method)
 {
   PresentBoxInfoComponent_o *v2; // x19
-  __int64 v3; // x1
-  __int64 v4; // x1
   SimpleAnimation_o *PresentList; // x0
+  __int64 v4; // x1
   int32_t m_Version; // w20
-  __int64 v7; // x8
-  int v8; // w9
-  int v9; // w10
+  __int64 v6; // x8
+  int v7; // w9
+  int v8; // w10
   struct System_String_array *animFiles; // x8
-  int32_t v11; // w24
+  int32_t v10; // w24
   int32_t max_length; // w10
-  System_String_o *v13; // x21
-  System_String_o *v14; // x22
+  System_String_o *v12; // x21
+  System_String_o *v13; // x22
   struct System_String_array *sprFiles; // x8
-  int32_t v16; // w9
+  int32_t v15; // w9
   UnityEngine_Object_o *presentBoxSimpleAnimation; // x23
   UnityEngine_Object_o *presentBoxAnimation; // x23
   UnityEngine_Object_o *presentBoxSprite; // x22
-  int32_t v20; // w1
-  __int64 v21; // x0
+  int32_t v19; // w1
+  __int64 v20; // x0
 
   v2 = this;
-  if ( (byte_4213A9F & 1) == 0 )
+  if ( (byte_42AF839 & 1) == 0 )
   {
-    sub_B0D8A4(&BalanceConfig_TypeInfo, method);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
-    this = (PresentBoxInfoComponent_o *)sub_B0D8A4(&StringLiteral_1/*""*/, v4);
-    byte_4213A9F = 1;
+    sub_B52984(&BalanceConfig_TypeInfo);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    this = (PresentBoxInfoComponent_o *)sub_B52984(&StringLiteral_1/*""*/);
+    byte_42AF839 = 1;
   }
   PresentList = (SimpleAnimation_o *)PresentBoxInfoComponent__GetPresentList(this, method);
   if ( !PresentList )
@@ -81,36 +79,36 @@ void __fastcall PresentBoxInfoComponent__SetPresentBoxInfo(PresentBoxInfoCompone
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     PresentList = (SimpleAnimation_o *)BalanceConfig_TypeInfo;
   }
-  v7 = *(_QWORD *)&PresentList[1].fields.m_WrapMode;
-  v8 = *(_DWORD *)(v7 + 112);
-  v9 = *(_DWORD *)(v7 + 124);
+  v6 = *(_QWORD *)&PresentList[1].fields.m_WrapMode;
+  v7 = *(_DWORD *)(v6 + 112);
+  v8 = *(_DWORD *)(v6 + 124);
   animFiles = v2->fields.animFiles;
-  v11 = v8 - v9 <= m_Version ? 2 : m_Version > 0;
+  v10 = v7 - v8 <= m_Version ? 2 : m_Version > 0;
   if ( !animFiles )
     goto LABEL_53;
   max_length = animFiles->max_length;
+  v12 = (System_String_o *)StringLiteral_1/*""*/;
   v13 = (System_String_o *)StringLiteral_1/*""*/;
-  v14 = (System_String_o *)StringLiteral_1/*""*/;
-  if ( v11 <= max_length )
+  if ( v10 <= max_length )
   {
-    if ( v11 >= (unsigned int)max_length )
+    if ( v10 >= (unsigned int)max_length )
       goto LABEL_54;
-    v14 = animFiles->m_Items[v11];
+    v13 = animFiles->m_Items[v10];
   }
   sprFiles = v2->fields.sprFiles;
   if ( !sprFiles )
     goto LABEL_53;
-  v16 = sprFiles->max_length;
-  if ( v11 <= v16 )
+  v15 = sprFiles->max_length;
+  if ( v10 <= v15 )
   {
-    if ( v11 < (unsigned int)v16 )
+    if ( v10 < (unsigned int)v15 )
     {
-      v13 = sprFiles->m_Items[v11];
+      v12 = sprFiles->m_Items[v10];
       goto LABEL_18;
     }
 LABEL_54:
-    v21 = sub_B0D9A8(PresentList);
-    sub_B0D948(v21, 0LL);
+    v20 = sub_B52A88(PresentList);
+    sub_B52A28(v20, 0LL);
   }
 LABEL_18:
   presentBoxSimpleAnimation = (UnityEngine_Object_o *)v2->fields.presentBoxSimpleAnimation;
@@ -128,12 +126,12 @@ LABEL_18:
     PresentList = v2->fields.presentBoxSimpleAnimation;
     if ( !PresentList )
       goto LABEL_53;
-    if ( SimpleAnimation__GetClipCount(PresentList, 0LL) >= v11 && !System_String__IsNullOrEmpty(v14, 0LL) )
+    if ( SimpleAnimation__GetClipCount(PresentList, 0LL) >= v10 && !System_String__IsNullOrEmpty(v13, 0LL) )
     {
       PresentList = v2->fields.presentBoxSimpleAnimation;
       if ( !PresentList )
         goto LABEL_53;
-      SimpleAnimation__Play_50482404(PresentList, v14, 0LL);
+      SimpleAnimation__Play_16625408(PresentList, v13, 0LL);
     }
   }
   else
@@ -153,13 +151,13 @@ LABEL_18:
       PresentList = (SimpleAnimation_o *)v2->fields.presentBoxAnimation;
       if ( !PresentList )
         goto LABEL_53;
-      if ( UnityEngine_Animation__GetClipCount((UnityEngine_Animation_o *)PresentList, 0LL) >= v11
-        && !System_String__IsNullOrEmpty(v14, 0LL) )
+      if ( UnityEngine_Animation__GetClipCount((UnityEngine_Animation_o *)PresentList, 0LL) >= v10
+        && !System_String__IsNullOrEmpty(v13, 0LL) )
       {
         PresentList = (SimpleAnimation_o *)v2->fields.presentBoxAnimation;
         if ( !PresentList )
           goto LABEL_53;
-        UnityEngine_Animation__Play_50564840((UnityEngine_Animation_o *)PresentList, v14, 0LL);
+        UnityEngine_Animation__Play_51067744((UnityEngine_Animation_o *)PresentList, v13, 0LL);
       }
     }
   }
@@ -169,12 +167,12 @@ LABEL_18:
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(presentBoxSprite, 0LL, 0LL) && !System_String__IsNullOrEmpty(v13, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(presentBoxSprite, 0LL, 0LL) && !System_String__IsNullOrEmpty(v12, 0LL) )
   {
     PresentList = (SimpleAnimation_o *)v2->fields.presentBoxSprite;
     if ( !PresentList )
       goto LABEL_53;
-    UISprite__set_spriteName((UISprite_o *)PresentList, v13, 0LL);
+    UISprite__set_spriteName((UISprite_o *)PresentList, v12, 0LL);
   }
   PresentList = (SimpleAnimation_o *)v2->fields.presentBoxNoticeNumber;
   if ( !PresentList
@@ -183,15 +181,15 @@ LABEL_18:
                                              0LL)) == 0LL )
   {
 LABEL_53:
-    sub_B0D97C(PresentList);
+    sub_B52A5C(PresentList, v4);
   }
-  if ( !v11 )
+  if ( !v10 )
   {
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)PresentList, 0, 0LL);
     PresentList = (SimpleAnimation_o *)v2->fields.presentBoxNoticeNumber;
     if ( PresentList )
     {
-      v20 = 0;
+      v19 = 0;
       goto LABEL_52;
     }
     goto LABEL_53;
@@ -200,7 +198,7 @@ LABEL_53:
   PresentList = (SimpleAnimation_o *)v2->fields.presentBoxNoticeNumber;
   if ( !PresentList )
     goto LABEL_53;
-  v20 = m_Version;
+  v19 = m_Version;
 LABEL_52:
-  NoticeNumberComponent__SetNumber((NoticeNumberComponent_o *)PresentList, v20, 0LL);
+  NoticeNumberComponent__SetNumber((NoticeNumberComponent_o *)PresentList, v19, 0LL);
 }

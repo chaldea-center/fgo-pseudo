@@ -1,11 +1,9 @@
 void __fastcall RetryConfirmItem___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-
-  if ( (byte_4218746 & 1) == 0 )
+  if ( (byte_42B28F6 & 1) == 0 )
   {
-    sub_B0D8A4(&RetryConfirmItem_TypeInfo, v1);
-    byte_4218746 = 1;
+    sub_B52984(&RetryConfirmItem_TypeInfo);
+    byte_42B28F6 = 1;
   }
   RetryConfirmItem_TypeInfo->static_fields->PROSSESSION_AMOUNT_MAX_WIDTH = 130;
 }
@@ -79,7 +77,7 @@ void __fastcall RetryConfirmItem__CenteringAmountLabel(RetryConfirmItem_o *this,
         }
       }
 LABEL_15:
-      sub_B0D97C(useAmount);
+      sub_B52A5C(useAmount, method);
     }
   }
 }
@@ -128,7 +126,7 @@ void __fastcall RetryConfirmItem__CenteringWholeLabelHorizontal(RetryConfirmItem
         (this = (RetryConfirmItem_o *)v4->fields.possessionAmount) == 0LL) )
   {
 LABEL_15:
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   }
   v12 = LocalPositionX;
   if ( v7 + mWidth >= v9 + v8 )
@@ -148,9 +146,9 @@ System_Collections_IEnumerator_o *__fastcall RetryConfirmItem__SetCondensedScale
         RetryConfirmItem_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x20
-  __int64 v5; // x0
+  __int64 v3; // x20
+  __int64 v4; // x0
+  __int64 v5; // x1
   System_String_array **v6; // x2
   System_String_array **v7; // x3
   System_Boolean_array **v8; // x4
@@ -158,21 +156,21 @@ System_Collections_IEnumerator_o *__fastcall RetryConfirmItem__SetCondensedScale
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_4218745 & 1) == 0 )
+  if ( (byte_42B28F5 & 1) == 0 )
   {
-    sub_B0D8A4(&RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_TypeInfo, method);
-    byte_4218745 = 1;
+    sub_B52984(&RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_TypeInfo);
+    byte_42B28F5 = 1;
   }
-  v4 = sub_B0D974(RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_TypeInfo, method, v2);
+  v3 = sub_B52A54(RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_TypeInfo);
   RetryConfirmItem__SetCondensedScalePossessionAmount_d__7___ctor(
-    (RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_o *)v4,
+    (RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_o *)v3,
     0,
     0LL);
-  if ( !v4 )
-    sub_B0D97C(v5);
-  *(_QWORD *)(v4 + 32) = this;
-  sub_B0D840((BattleServantConfConponent_o *)(v4 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
-  return (System_Collections_IEnumerator_o *)v4;
+  if ( !v3 )
+    sub_B52A5C(v4, v5);
+  *(_QWORD *)(v3 + 32) = this;
+  sub_B52920((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  return (System_Collections_IEnumerator_o *)v3;
 }
 
 
@@ -193,17 +191,23 @@ bool __fastcall RetryConfirmItem__SetCondensedScalePossessionAmount_d__7__MoveNe
   RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_o *v2; // x19
   int32_t _1__state; // w8
   struct RetryConfirmItem_o *_4__this; // x20
-  Il2CppObject **p__2__current; // x19
+  BattleServantConfConponent_o *p__2__current; // x19
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
   bool result; // w0
   struct UILabel_o *possessionAmount; // x8
   int32_t mWidth; // w19
-  UILabel_o *v9; // x19
+  UILabel_o *v15; // x19
 
   v2 = this;
-  if ( (byte_4212539 & 1) == 0 )
+  if ( (byte_42AF2B9 & 1) == 0 )
   {
-    this = (RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_o *)sub_B0D8A4(&RetryConfirmItem_TypeInfo, method);
-    byte_4212539 = 1;
+    this = (RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_o *)sub_B52984(&RetryConfirmItem_TypeInfo);
+    byte_42AF2B9 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -225,12 +229,12 @@ bool __fastcall RetryConfirmItem__SetCondensedScalePossessionAmount_d__7__MoveNe
     }
     if ( mWidth > (__int64)this[4].fields.__2__current->klass )
     {
-      v9 = _4__this->fields.possessionAmount;
+      v15 = _4__this->fields.possessionAmount;
       if ( (BYTE3(this[7].fields.__2__current) & 4) != 0 && !LODWORD(this[5].fields.__2__current) )
         j_il2cpp_runtime_class_init_0(this);
-      if ( !v9 )
+      if ( !v15 )
         goto LABEL_20;
-      UILabel__SetCondensedScale(v9, RetryConfirmItem_TypeInfo->static_fields->PROSSESSION_AMOUNT_MAX_WIDTH, 0LL);
+      UILabel__SetCondensedScale(v15, RetryConfirmItem_TypeInfo->static_fields->PROSSESSION_AMOUNT_MAX_WIDTH, 0LL);
     }
   }
   else if ( !_1__state )
@@ -243,15 +247,15 @@ bool __fastcall RetryConfirmItem__SetCondensedScalePossessionAmount_d__7__MoveNe
       {
         UILabel__set_overflowMethod((UILabel_o *)this, 2, 0LL);
         v2->fields.__2__current = 0LL;
-        p__2__current = &v2->fields.__2__current;
-        sub_B0D840(p__2__current, 0LL);
+        p__2__current = (BattleServantConfConponent_o *)&v2->fields.__2__current;
+        sub_B52920(p__2__current, 0LL, v6, v7, v8, v9, v10, v11);
         result = 1;
-        *((_DWORD *)p__2__current - 2) = 1;
+        *(_DWORD *)&p__2__current[-1].fields.isOpenAfter = 1;
         return result;
       }
     }
 LABEL_20:
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   }
   return 0;
 }
@@ -270,16 +274,14 @@ void __fastcall __noreturn RetryConfirmItem__SetCondensedScalePossessionAmount_d
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  __int64 v3; // x1
-  __int64 v4; // x2
-  System_NotSupportedException_o *v5; // x19
-  __int64 v6; // x0
+  System_NotSupportedException_o *v3; // x19
+  __int64 v4; // x0
 
-  v2 = sub_B0D8A8(&System_NotSupportedException_TypeInfo);
-  v5 = (System_NotSupportedException_o *)sub_B0D974(v2, v3, v4);
-  System_NotSupportedException___ctor(v5, 0LL);
-  v6 = sub_B0D8A8(&Method_RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_System_Collections_IEnumerator_Reset__);
-  sub_B0D948(v5, v6);
+  v2 = sub_B52988(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B52A54(v2);
+  System_NotSupportedException___ctor(v3, 0LL);
+  v4 = sub_B52988(&Method_RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_System_Collections_IEnumerator_Reset__);
+  sub_B52A28(v3, v4);
 }
 
 

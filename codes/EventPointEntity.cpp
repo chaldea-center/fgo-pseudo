@@ -1,28 +1,27 @@
 void __fastcall EventPointEntity___ctor(EventPointEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4214D4E & 1) == 0 )
+  if ( (byte_42B0593 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4214D4E = 1;
+    sub_B52984(&Method_DataEntityBase_string___ctor__);
+    byte_42B0593 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventPointEntity__CreatePK(int32_t id, int32_t eventId, const MethodInfo *method)
 {
-  if ( (byte_4214D4C & 1) == 0 )
+  if ( (byte_42B0591 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&eventId);
-    byte_4214D4C = 1;
+    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_42B0591 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            eventId,
-           (const MethodInfo_171341C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1A4DF50 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -78,7 +77,7 @@ bool __fastcall EventPointEntity__IsGroupOnGroup1(EventPointEntity_o *this, int3
 
   group1 = this->fields.group1;
   if ( !group1 )
-    sub_B0D97C(this);
+    sub_B52A5C(this, groupId);
   max_length = group1->max_length;
   if ( max_length < 1 )
     return 0;
@@ -87,8 +86,8 @@ bool __fastcall EventPointEntity__IsGroupOnGroup1(EventPointEntity_o *this, int3
   {
     if ( v5 >= max_length )
     {
-      v7 = sub_B0D9A8(this);
-      sub_B0D948(v7, 0LL);
+      v7 = sub_B52A88(this);
+      sub_B52A28(v7, 0LL);
     }
     if ( group1->m_Items[v5 + 1] == groupId )
       break;
@@ -104,75 +103,73 @@ System_String_o *__fastcall EventPointEntity__getNameStr(
         System_Int32_array *group,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   DataManager_o *Instance; // x0
-  const MethodInfo *v9; // x3
-  __int64 v10; // x8
-  System_String_o *v11; // x22
-  EventPointGroupMaster_o *v12; // x21
-  unsigned __int64 v13; // x24
-  DataManager_o *v14; // x23
-  __int64 v16; // x0
+  __int64 v6; // x1
+  const MethodInfo *v7; // x3
+  __int64 v8; // x8
+  System_String_o *v9; // x22
+  EventPointGroupMaster_o *v10; // x21
+  unsigned __int64 v11; // x24
+  DataManager_o *v12; // x23
+  __int64 v14; // x0
 
-  if ( (byte_4214D4D & 1) == 0 )
+  if ( (byte_42B0592 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMasterData_EventPointGroupMaster___, group);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B0D8A4(&StringLiteral_705/*","*/, v6);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v7);
-    byte_4214D4D = 1;
+    sub_B52984(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B52984(&StringLiteral_709/*","*/);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B0592 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
+                                (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
   if ( !group )
     goto LABEL_15;
-  v10 = *(_QWORD *)&group->max_length;
-  v11 = (System_String_o *)StringLiteral_1/*""*/;
-  if ( (int)v10 >= 1 )
+  v8 = *(_QWORD *)&group->max_length;
+  v9 = (System_String_o *)StringLiteral_1/*""*/;
+  if ( (int)v8 >= 1 )
   {
-    v12 = (EventPointGroupMaster_o *)Instance;
-    v13 = 0LL;
+    v10 = (EventPointGroupMaster_o *)Instance;
+    v11 = 0LL;
     while ( 1 )
     {
-      if ( v13 >= (unsigned int)v10 )
+      if ( v11 >= (unsigned int)v8 )
       {
-        v16 = sub_B0D9A8(Instance);
-        sub_B0D948(v16, 0LL);
+        v14 = sub_B52A88(Instance);
+        sub_B52A28(v14, 0LL);
+      }
+      if ( !v10 )
+        break;
+      Instance = (DataManager_o *)EventPointGroupMaster__GetEntity(
+                                    v10,
+                                    this->fields.eventId,
+                                    group->m_Items[v11 + 1],
+                                    v7);
+      if ( !v9 )
+        break;
+      v12 = Instance;
+      if ( v9->fields.m_stringLength >= 2 )
+      {
+        Instance = (DataManager_o *)System_String__Concat_44568316(v9, (System_String_o *)StringLiteral_709/*","*/, 0LL);
+        v9 = (System_String_o *)Instance;
       }
       if ( !v12 )
         break;
-      Instance = (DataManager_o *)EventPointGroupMaster__GetEntity(
-                                    v12,
-                                    this->fields.eventId,
-                                    group->m_Items[v13 + 1],
-                                    v9);
-      if ( !v11 )
-        break;
-      v14 = Instance;
-      if ( v11->fields.m_stringLength >= 2 )
-      {
-        Instance = (DataManager_o *)System_String__Concat_43849904(v11, (System_String_o *)StringLiteral_705/*","*/, 0LL);
-        v11 = (System_String_o *)Instance;
-      }
-      if ( !v14 )
-        break;
-      Instance = (DataManager_o *)System_String__Concat_43849904(v11, (System_String_o *)v14->fields.datalist, 0LL);
-      LODWORD(v10) = group->max_length;
-      ++v13;
-      v11 = (System_String_o *)Instance;
-      if ( (__int64)v13 >= (int)v10 )
-        return v11;
+      Instance = (DataManager_o *)System_String__Concat_44568316(v9, (System_String_o *)v12->fields.datalist, 0LL);
+      LODWORD(v8) = group->max_length;
+      ++v11;
+      v9 = (System_String_o *)Instance;
+      if ( (__int64)v11 >= (int)v8 )
+        return v9;
     }
 LABEL_15:
-    sub_B0D97C(Instance);
+    sub_B52A5C(Instance, v6);
   }
-  return v11;
+  return v9;
 }
 
 

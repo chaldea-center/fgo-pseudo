@@ -26,7 +26,7 @@ void __fastcall WarBoardConditionalJumpTask___ctor(
 
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, 0LL);
   this->fields.conditionCheck = conditionCheck;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.conditionCheck,
     (System_Int32_array **)conditionCheck,
     v9,
@@ -36,7 +36,7 @@ void __fastcall WarBoardConditionalJumpTask___ctor(
     v13,
     v14);
   this->fields.trueCase = trueCase;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.trueCase,
     (System_Int32_array **)trueCase,
     v15,
@@ -46,7 +46,7 @@ void __fastcall WarBoardConditionalJumpTask___ctor(
     v19,
     v20);
   this->fields.falseCase = falseCase;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.falseCase,
     (System_Int32_array **)falseCase,
     v21,
@@ -62,9 +62,9 @@ System_Collections_IEnumerator_o *__fastcall WarBoardConditionalJumpTask__Execut
         WarBoardConditionalJumpTask_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x20
-  __int64 v5; // x0
+  __int64 v3; // x20
+  __int64 v4; // x0
+  __int64 v5; // x1
   System_String_array **v6; // x2
   System_String_array **v7; // x3
   System_Boolean_array **v8; // x4
@@ -72,18 +72,18 @@ System_Collections_IEnumerator_o *__fastcall WarBoardConditionalJumpTask__Execut
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_42133C3 & 1) == 0 )
+  if ( (byte_42AEB3F & 1) == 0 )
   {
-    sub_B0D8A4(&WarBoardConditionalJumpTask__Execute_d__6_TypeInfo, method);
-    byte_42133C3 = 1;
+    sub_B52984(&WarBoardConditionalJumpTask__Execute_d__6_TypeInfo);
+    byte_42AEB3F = 1;
   }
-  v4 = sub_B0D974(WarBoardConditionalJumpTask__Execute_d__6_TypeInfo, method, v2);
-  WarBoardConditionalJumpTask__Execute_d__6___ctor((WarBoardConditionalJumpTask__Execute_d__6_o *)v4, 0, 0LL);
-  if ( !v4 )
-    sub_B0D97C(v5);
-  *(_QWORD *)(v4 + 32) = this;
-  sub_B0D840((BattleServantConfConponent_o *)(v4 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
-  return (System_Collections_IEnumerator_o *)v4;
+  v3 = sub_B52A54(WarBoardConditionalJumpTask__Execute_d__6_TypeInfo);
+  WarBoardConditionalJumpTask__Execute_d__6___ctor((WarBoardConditionalJumpTask__Execute_d__6_o *)v3, 0, 0LL);
+  if ( !v3 )
+    sub_B52A5C(v4, v5);
+  *(_QWORD *)(v3 + 32) = this;
+  sub_B52920((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  return (System_Collections_IEnumerator_o *)v3;
 }
 
 
@@ -102,42 +102,43 @@ void __fastcall WarBoardConditionalJumpTask__OnEnd(WarBoardConditionalJumpTask_o
 
 void __fastcall WarBoardConditionalJumpTask__OnStart(WarBoardConditionalJumpTask_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   System_Func_bool__o *conditionCheck; // x0
-  bool v4; // w0
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
-  __int64 v11; // x8
-  struct WarBoardTaskBase_o *v12; // x1
+  bool v5; // w0
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
+  __int64 v12; // x8
+  struct WarBoardTaskBase_o *v13; // x1
   struct WarBoardTaskBase_o *runningTask; // x0
 
-  if ( (byte_42133C2 & 1) == 0 )
+  if ( (byte_42AEB3E & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Func_bool__Invoke__, method);
-    byte_42133C2 = 1;
+    sub_B52984(&Method_System_Func_bool__Invoke__);
+    byte_42AEB3E = 1;
   }
   WarBoardTaskBase__OnStart((WarBoardTaskBase_o *)this, 0LL);
   conditionCheck = this->fields.conditionCheck;
   if ( !conditionCheck )
-    sub_B0D97C(0LL);
-  v4 = System_Func_bool___Invoke(conditionCheck, (const MethodInfo_26056C0 *)Method_System_Func_bool__Invoke__);
-  v11 = 72LL;
-  if ( v4 )
-    v11 = 64LL;
-  v12 = *(struct WarBoardTaskBase_o **)((char *)&this->klass + v11);
-  this->fields.runningTask = v12;
-  sub_B0D840(
+    sub_B52A5C(0LL, v3);
+  v5 = System_Func_bool___Invoke(conditionCheck, (const MethodInfo_2774304 *)Method_System_Func_bool__Invoke__);
+  v12 = 72LL;
+  if ( v5 )
+    v12 = 64LL;
+  v13 = *(struct WarBoardTaskBase_o **)((char *)&this->klass + v12);
+  this->fields.runningTask = v13;
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.runningTask,
-    (System_Int32_array **)v12,
-    v5,
+    (System_Int32_array **)v13,
     v6,
     v7,
     v8,
     v9,
-    v10);
+    v10,
+    v11);
   runningTask = this->fields.runningTask;
   if ( runningTask )
     ((void (__fastcall *)(struct WarBoardTaskBase_o *, Il2CppMethodPointer))runningTask->klass->vtable._5_OnStart.method)(
@@ -165,6 +166,12 @@ bool __fastcall WarBoardConditionalJumpTask__Execute_d__6__MoveNext(
   struct WarBoardTaskBase_o *runningTask; // x0
   Il2CppObject *v6; // x0
   Il2CppObject **p__2__current; // x19
+  System_String_array **v8; // x2
+  System_String_array **v9; // x3
+  System_Boolean_array **v10; // x4
+  System_Int32_array **v11; // x5
+  System_Int32_array *v12; // x6
+  System_Int32_array *v13; // x7
 
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -181,7 +188,7 @@ bool __fastcall WarBoardConditionalJumpTask__Execute_d__6__MoveNext(
     _4__this = this->fields.__4__this;
     this->fields.__1__state = -1;
     if ( !_4__this )
-      sub_B0D97C(this);
+      sub_B52A5C(this, method);
     runningTask = _4__this->fields.runningTask;
     if ( runningTask )
     {
@@ -190,7 +197,7 @@ bool __fastcall WarBoardConditionalJumpTask__Execute_d__6__MoveNext(
                              runningTask->klass->vtable._5_OnStart.methodPtr);
       this->fields.__2__current = v6;
       p__2__current = &this->fields.__2__current;
-      sub_B0D840(p__2__current, v6);
+      sub_B52920((BattleServantConfConponent_o *)p__2__current, (System_Int32_array **)v6, v8, v9, v10, v11, v12, v13);
       LOBYTE(runningTask) = 1;
       *((_DWORD *)p__2__current - 2) = 1;
     }
@@ -212,16 +219,14 @@ void __fastcall __noreturn WarBoardConditionalJumpTask__Execute_d__6__System_Col
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  __int64 v3; // x1
-  __int64 v4; // x2
-  System_NotSupportedException_o *v5; // x19
-  __int64 v6; // x0
+  System_NotSupportedException_o *v3; // x19
+  __int64 v4; // x0
 
-  v2 = sub_B0D8A8(&System_NotSupportedException_TypeInfo);
-  v5 = (System_NotSupportedException_o *)sub_B0D974(v2, v3, v4);
-  System_NotSupportedException___ctor(v5, 0LL);
-  v6 = sub_B0D8A8(&Method_WarBoardConditionalJumpTask__Execute_d__6_System_Collections_IEnumerator_Reset__);
-  sub_B0D948(v5, v6);
+  v2 = sub_B52988(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B52A54(v2);
+  System_NotSupportedException___ctor(v3, 0LL);
+  v4 = sub_B52988(&Method_WarBoardConditionalJumpTask__Execute_d__6_System_Collections_IEnumerator_Reset__);
+  sub_B52A28(v3, v4);
 }
 
 

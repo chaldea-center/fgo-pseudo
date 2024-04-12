@@ -1,13 +1,13 @@
 void __fastcall CommonRestrictionEntity___ctor(CommonRestrictionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4210946 & 1) == 0 )
+  if ( (byte_42AC4E9 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_int___ctor__, method);
-    byte_4210946 = 1;
+    sub_B52984(&Method_DataEntityBase_int___ctor__);
+    byte_42AC4E9 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_2669A80 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_23E2184 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -17,21 +17,20 @@ int32_t __fastcall CommonRestrictionEntity__CreatePrimaryKey(CommonRestrictionEn
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall CommonRestrictionEntity__IsIncludedSvt(
         CommonRestrictionEntity_o *this,
         int32_t baseSvtId,
         const MethodInfo *method)
 {
-  if ( (byte_4210945 & 1) == 0 )
+  if ( (byte_42AC4E8 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Array_IndexOf_int___, *(_QWORD *)&baseSvtId);
-    byte_4210945 = 1;
+    sub_B52984(&Method_System_Array_IndexOf_int___);
+    byte_42AC4E8 = 1;
   }
   return System_Array__IndexOf_int_(
            this->fields.targetSvtIds,
            baseSvtId,
-           (const MethodInfo_1F69B20 *)Method_System_Array_IndexOf_int___) >= 0;
+           (const MethodInfo_201BBC8 *)Method_System_Array_IndexOf_int___) >= 0;
 }
 
 

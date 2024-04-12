@@ -1,33 +1,32 @@
 void __fastcall WarBoardPartySkillEntity___ctor(WarBoardPartySkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4213337 & 1) == 0 )
+  if ( (byte_42AEAB3 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4213337 = 1;
+    sub_B52984(&Method_DataEntityBase_string___ctor__);
+    byte_42AEAB3 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall WarBoardPartySkillEntity__CreatePK(
         int32_t id,
         int32_t target,
         int32_t num,
         const MethodInfo *method)
 {
-  if ( (byte_4213335 & 1) == 0 )
+  if ( (byte_42AEAB1 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&target);
-    byte_4213335 = 1;
+    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_42AEAB1 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            target,
            num,
-           (const MethodInfo_1713844 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1A4E378 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -45,26 +44,25 @@ SkillEntity_o *__fastcall WarBoardPartySkillEntity__GetSkillEntity(
         WarBoardPartySkillEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   DataMasterBase_WarMaster__WarEntity__int__o *Master_WarQuestSelectionMaster; // x0
+  __int64 v4; // x1
 
-  if ( (byte_4213336 & 1) == 0 )
+  if ( (byte_42AEAB2 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMaster_SkillMaster___, method);
-    sub_B0D8A4(&DataManager_TypeInfo, v3);
-    sub_B0D8A4(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v4);
-    byte_4213336 = 1;
+    sub_B52984(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_B52984(&DataManager_TypeInfo);
+    sub_B52984(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    byte_42AEAB2 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_SkillMaster___);
+  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_SkillMaster___);
   if ( !Master_WarQuestSelectionMaster )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v4);
   return (SkillEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                             Master_WarQuestSelectionMaster,
                             this->fields.skillId,
-                            (const MethodInfo_2669BD4 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                            (const MethodInfo_23E22D8 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
 }
 
 

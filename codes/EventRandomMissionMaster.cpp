@@ -1,14 +1,14 @@
 void __fastcall EventRandomMissionMaster___ctor(EventRandomMissionMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4214A1A & 1) == 0 )
+  if ( (byte_42B047E & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string___ctor__, method);
-    byte_4214A1A = 1;
+    sub_B52984(&Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string___ctor__);
+    byte_42B047E = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-    394,
-    (const MethodInfo_2669F88 *)Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string___ctor__);
+    395,
+    (const MethodInfo_23E268C *)Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string___ctor__);
 }
 
 
@@ -20,18 +20,16 @@ EventRandomMissionEntity_o *__fastcall EventRandomMissionMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4214A1B & 1) == 0 )
+  if ( (byte_42B047F & 1) == 0 )
   {
-    sub_B0D8A4(
-      &Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string__GetEntity__,
-      *(_QWORD *)&missionId);
-    byte_4214A1B = 1;
+    sub_B52984(&Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string__GetEntity__);
+    byte_42B047F = 1;
   }
   PK = EventRandomMissionEntity__CreatePK(missionId, *(const MethodInfo **)&missionId);
-  return (EventRandomMissionEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
-                                         (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
+  return (EventRandomMissionEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
+                                         (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                          PK,
-                                         (const MethodInfo_266A024 *)Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string__GetEntity__);
+                                         (const MethodInfo_23E2728 *)Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string__GetEntity__);
 }
 
 
@@ -43,17 +41,15 @@ bool __fastcall EventRandomMissionMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4214A1C & 1) == 0 )
+  if ( (byte_42B0480 & 1) == 0 )
   {
-    sub_B0D8A4(
-      &Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string__TryGetEntity__,
-      entity);
-    byte_4214A1C = 1;
+    sub_B52984(&Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string__TryGetEntity__);
+    byte_42B0480 = 1;
   }
   PK = EventRandomMissionEntity__CreatePK(missionId, (const MethodInfo *)entity);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266A07C *)Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string__TryGetEntity__);
+           (const MethodInfo_23E2780 *)Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string__TryGetEntity__);
 }

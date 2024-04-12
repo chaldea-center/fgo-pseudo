@@ -13,7 +13,7 @@ void __fastcall ServantStatusCharaGraphViewer__DeactivateScrollViewObjects(
   viewerListViewManager = this->fields.viewerListViewManager;
   this->fields._IsAbleToSwitchDispMode_k__BackingField = 0;
   if ( !viewerListViewManager )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, method);
   viewerListViewManager->fields.currentPhase = 0;
   ListViewManager__DestroyList((ListViewManager_o *)viewerListViewManager, 0LL);
 }
@@ -28,7 +28,7 @@ void __fastcall ServantStatusCharaGraphViewer__FadeoutFrameScrollViewObjects(
 
   viewerListViewManager = this->fields.viewerListViewManager;
   if ( !viewerListViewManager )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, method);
   ServantStatusCharaGraphViewerListViewManager__PlayFadeOutObjectFrame(viewerListViewManager, delay, method);
 }
 
@@ -43,14 +43,14 @@ ServantStatusCharaGraphListViewItem_o *__fastcall ServantStatusCharaGraphViewer_
   __int64 v5; // x11
 
   v2 = this;
-  if ( (byte_4212DF2 & 1) == 0 )
+  if ( (byte_42AE3DE & 1) == 0 )
   {
-    this = (ServantStatusCharaGraphViewer_o *)sub_B0D8A4(&ServantStatusCharaGraphListViewItem_TypeInfo, method);
-    byte_4212DF2 = 1;
+    this = (ServantStatusCharaGraphViewer_o *)sub_B52984(&ServantStatusCharaGraphListViewItem_TypeInfo);
+    byte_42AE3DE = 1;
   }
   viewerListViewManager = v2->fields.viewerListViewManager;
   if ( !viewerListViewManager )
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   centerItem = (ServantStatusCharaGraphListViewItem_o *)viewerListViewManager->fields.centerItem;
   if ( !centerItem )
     return 0LL;
@@ -92,7 +92,7 @@ bool __fastcall ServantStatusCharaGraphViewer__IsAbleToPinch(
   viewerListViewManager = this->fields.viewerListViewManager;
   if ( !viewerListViewManager )
 LABEL_11:
-    sub_B0D97C(viewerListViewManager);
+    sub_B52A5C(viewerListViewManager, method);
   if ( centerItem->fields.basePosition.fields.y <= CenterPosition.fields.y )
     v6 = CenterPosition.fields.y - CenterPosition.fields.x;
   else
@@ -102,6 +102,7 @@ LABEL_11:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantStatusCharaGraphViewer__SetDispType(
         ServantStatusCharaGraphViewer_o *this,
         int32_t dispType,
@@ -137,7 +138,7 @@ void __fastcall ServantStatusCharaGraphViewer__SetDispType(
         }
       }
 LABEL_17:
-      sub_B0D97C(viewerListViewManager);
+      sub_B52A5C(viewerListViewManager, *(_QWORD *)&dispType);
     case 1:
       viewerListViewManager = (ServantStatusCharaGraphViewerListViewManager_o *)this->fields.dragObjRootPanel;
       if ( viewerListViewManager )
@@ -196,7 +197,7 @@ void __fastcall ServantStatusCharaGraphViewer__SetItemDataType(
 
   viewerListViewManager = this->fields.viewerListViewManager;
   if ( !viewerListViewManager )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, dispType);
   ServantStatusCharaGraphViewerListViewManager__SetItemDataType(viewerListViewManager, dispType, method);
 }
 
@@ -207,13 +208,14 @@ void __fastcall ServantStatusCharaGraphViewer__SetModifyScrollViewCenter(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *viewerListViewManager; // x21
-  const MethodInfo *v6; // x2
-  ServantStatusCharaGraphViewerListViewManager_o *v7; // x0
+  __int64 v6; // x1
+  const MethodInfo *v7; // x2
+  ServantStatusCharaGraphViewerListViewManager_o *v8; // x0
 
-  if ( (byte_4212DF3 & 1) == 0 )
+  if ( (byte_42AE3DF & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, onModifyScrollViewCenter);
-    byte_4212DF3 = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AE3DF = 1;
   }
   viewerListViewManager = (UnityEngine_Object_o *)this->fields.viewerListViewManager;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -223,10 +225,10 @@ void __fastcall ServantStatusCharaGraphViewer__SetModifyScrollViewCenter(
   }
   if ( UnityEngine_Object__op_Inequality(viewerListViewManager, 0LL, 0LL) )
   {
-    v7 = this->fields.viewerListViewManager;
-    if ( !v7 )
-      sub_B0D97C(0LL);
-    ServantStatusCharaGraphViewerListViewManager__SetModifyScrollViewCenter(v7, onModifyScrollViewCenter, v6);
+    v8 = this->fields.viewerListViewManager;
+    if ( !v8 )
+      sub_B52A5C(0LL, v6);
+    ServantStatusCharaGraphViewerListViewManager__SetModifyScrollViewCenter(v8, onModifyScrollViewCenter, v7);
   }
 }
 
@@ -247,7 +249,7 @@ void __fastcall ServantStatusCharaGraphViewer__Setup(
     viewerListViewManager = this->fields.viewerListViewManager;
     this->fields._IsAbleToSwitchDispMode_k__BackingField = 1;
     if ( !viewerListViewManager )
-      sub_B0D97C(0LL);
+      sub_B52A5C(0LL, v7);
     ServantStatusCharaGraphViewerListViewManager__CreateList(viewerListViewManager, currentIndex, items, v8);
   }
   else

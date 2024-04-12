@@ -10,17 +10,16 @@ CharaGraphFilterLogicBase_o *__fastcall CharaGraphSortManageUnitCommandCode__Cre
         CharaGraphSortManageUnitCommandCode_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  CommandCodeCharaGraphFilterLogic_o *v3; // x19
+  CommandCodeCharaGraphFilterLogic_o *v2; // x19
 
-  if ( (byte_4214245 & 1) == 0 )
+  if ( (byte_42AFDEE & 1) == 0 )
   {
-    sub_B0D8A4(&CommandCodeCharaGraphFilterLogic_TypeInfo, method);
-    byte_4214245 = 1;
+    sub_B52984(&CommandCodeCharaGraphFilterLogic_TypeInfo);
+    byte_42AFDEE = 1;
   }
-  v3 = (CommandCodeCharaGraphFilterLogic_o *)sub_B0D974(CommandCodeCharaGraphFilterLogic_TypeInfo, method, v2);
-  CommandCodeCharaGraphFilterLogic___ctor(v3, 0LL);
-  return (CharaGraphFilterLogicBase_o *)v3;
+  v2 = (CommandCodeCharaGraphFilterLogic_o *)sub_B52A54(CommandCodeCharaGraphFilterLogic_TypeInfo);
+  CommandCodeCharaGraphFilterLogic___ctor(v2, 0LL);
+  return (CharaGraphFilterLogicBase_o *)v2;
 }
 
 
@@ -28,17 +27,16 @@ CharaGraphSortLogicBase_o *__fastcall CharaGraphSortManageUnitCommandCode__Creat
         CharaGraphSortManageUnitCommandCode_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  CommandCodeCharaGraphSortLogic_o *v3; // x19
+  CommandCodeCharaGraphSortLogic_o *v2; // x19
 
-  if ( (byte_4214244 & 1) == 0 )
+  if ( (byte_42AFDED & 1) == 0 )
   {
-    sub_B0D8A4(&CommandCodeCharaGraphSortLogic_TypeInfo, method);
-    byte_4214244 = 1;
+    sub_B52984(&CommandCodeCharaGraphSortLogic_TypeInfo);
+    byte_42AFDED = 1;
   }
-  v3 = (CommandCodeCharaGraphSortLogic_o *)sub_B0D974(CommandCodeCharaGraphSortLogic_TypeInfo, method, v2);
-  CommandCodeCharaGraphSortLogic___ctor(v3, 0LL);
-  return (CharaGraphSortLogicBase_o *)v3;
+  v2 = (CommandCodeCharaGraphSortLogic_o *)sub_B52A54(CommandCodeCharaGraphSortLogic_TypeInfo);
+  CommandCodeCharaGraphSortLogic___ctor(v2, 0LL);
+  return (CharaGraphSortLogicBase_o *)v2;
 }
 
 
@@ -78,10 +76,10 @@ System_String_o *__fastcall CharaGraphSortManageUnitCommandCode__get_SortSaveKey
         CharaGraphSortManageUnitCommandCode_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4214243 & 1) == 0 )
+  if ( (byte_42AFDEC & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_1179/*"4"*/, method);
-    byte_4214243 = 1;
+    sub_B52984(&StringLiteral_1187/*"4"*/);
+    byte_42AFDEC = 1;
   }
-  return (System_String_o *)StringLiteral_1179/*"4"*/;
+  return (System_String_o *)StringLiteral_1187/*"4"*/;
 }

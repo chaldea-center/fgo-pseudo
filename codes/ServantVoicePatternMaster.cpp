@@ -1,18 +1,17 @@
 void __fastcall ServantVoicePatternMaster___ctor(ServantVoicePatternMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_42177BB & 1) == 0 )
+  if ( (byte_42B3359 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataMasterBase_ServantVoicePatternMaster__ServantVoicePatternEntity__string___ctor__, method);
-    byte_42177BB = 1;
+    sub_B52984(&Method_DataMasterBase_ServantVoicePatternMaster__ServantVoicePatternEntity__string___ctor__);
+    byte_42B3359 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-    477,
-    (const MethodInfo_2669F88 *)Method_DataMasterBase_ServantVoicePatternMaster__ServantVoicePatternEntity__string___ctor__);
+    478,
+    (const MethodInfo_23E268C *)Method_DataMasterBase_ServantVoicePatternMaster__ServantVoicePatternEntity__string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 ServantVoicePatternEntity_o *__fastcall ServantVoicePatternMaster__GetEntity(
         ServantVoicePatternMaster_o *this,
         int32_t id,
@@ -22,92 +21,84 @@ ServantVoicePatternEntity_o *__fastcall ServantVoicePatternMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_42177B8 & 1) == 0 )
+  if ( (byte_42B3356 & 1) == 0 )
   {
-    sub_B0D8A4(
-      &Method_DataMasterBase_ServantVoicePatternMaster__ServantVoicePatternEntity__string__GetEntity__,
-      *(_QWORD *)&id);
-    byte_42177B8 = 1;
+    sub_B52984(&Method_DataMasterBase_ServantVoicePatternMaster__ServantVoicePatternEntity__string__GetEntity__);
+    byte_42B3356 = 1;
   }
   PK = ServantVoicePatternEntity__CreatePK(id, svtId, voiceId, (const MethodInfo *)voiceId);
-  return (ServantVoicePatternEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
-                                          (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
+  return (ServantVoicePatternEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
+                                          (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                           PK,
-                                          (const MethodInfo_266A024 *)Method_DataMasterBase_ServantVoicePatternMaster__ServantVoicePatternEntity__string__GetEntity__);
+                                          (const MethodInfo_23E2728 *)Method_DataMasterBase_ServantVoicePatternMaster__ServantVoicePatternEntity__string__GetEntity__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_Collections_Generic_List_ServantVoicePatternEntity__o *__fastcall ServantVoicePatternMaster__GetEntityList(
         ServantVoicePatternMaster_o *this,
         int32_t id,
         int32_t svtId,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v7; // x19
   __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v14; // x19
   System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
+  __int64 v10; // x1
+  __int64 v11; // x3
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x20
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  unsigned __int64 v18; // x10
+  unsigned __int64 v14; // x10
   int32_t *p_offset; // x11
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v21; // x8
-  unsigned __int64 v22; // x10
-  int32_t *v23; // x11
-  __int64 v24; // x0
-  EventMissionProgressRequest_Argument_ProgressData_o *v25; // x0
-  __int64 v26; // x10
-  System_Collections_Generic_IEnumerator_T__c *v27; // x8
-  unsigned __int64 v28; // x10
-  int32_t *v29; // x11
-  __int64 v30; // x0
+  __int64 v17; // x3
+  System_Collections_Generic_IEnumerator_T__c *v18; // x8
+  unsigned __int64 v19; // x10
+  int32_t *v20; // x11
+  __int64 v21; // x0
+  EventMissionProgressRequest_Argument_ProgressData_o *v22; // x0
+  __int64 v23; // x1
+  __int64 v24; // x10
+  System_Collections_Generic_IEnumerator_T__c *v25; // x8
+  unsigned __int64 v26; // x10
+  int32_t *v27; // x11
+  __int64 v28; // x0
 
-  if ( (byte_42177BA & 1) == 0 )
+  if ( (byte_42B3358 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&id);
-    sub_B0D8A4(&System_IDisposable_TypeInfo, v7);
-    sub_B0D8A4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v8);
-    sub_B0D8A4(&System_Collections_IEnumerator_TypeInfo, v9);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ServantVoicePatternEntity__Add__, v10);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ServantVoicePatternEntity___ctor__, v11);
-    sub_B0D8A4(&System_Collections_Generic_List_ServantVoicePatternEntity__TypeInfo, v12);
-    sub_B0D8A4(&ServantVoicePatternEntity_TypeInfo, v13);
-    byte_42177BA = 1;
+    sub_B52984(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+    sub_B52984(&System_IDisposable_TypeInfo);
+    sub_B52984(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
+    sub_B52984(&System_Collections_IEnumerator_TypeInfo);
+    sub_B52984(&Method_System_Collections_Generic_List_ServantVoicePatternEntity__Add__);
+    sub_B52984(&Method_System_Collections_Generic_List_ServantVoicePatternEntity___ctor__);
+    sub_B52984(&System_Collections_Generic_List_ServantVoicePatternEntity__TypeInfo);
+    sub_B52984(&ServantVoicePatternEntity_TypeInfo);
+    byte_42B3358 = 1;
   }
-  v14 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
-                                                                                                  System_Collections_Generic_List_ServantVoicePatternEntity__TypeInfo,
-                                                                                                  *(_QWORD *)&id,
-                                                                                                  *(_QWORD *)&svtId);
+  v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_ServantVoicePatternEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v14,
-    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_ServantVoicePatternEntity___ctor__);
+    v7,
+    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_ServantVoicePatternEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v8);
   Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
                  list,
-                 (const MethodInfo_2AB5D9C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_2B98BDC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v10);
   while ( 1 )
   {
     klass = Enumerator->klass;
     if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
     {
-      v18 = 0LL;
+      v14 = 0LL;
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        ++v18;
+        ++v14;
         p_offset += 4;
-        if ( v18 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+        if ( v14 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
           goto LABEL_9;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -115,75 +106,75 @@ System_Collections_Generic_List_ServantVoicePatternEntity__o *__fastcall Servant
     else
     {
 LABEL_9:
-      p_method = sub_AA67A0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_AEB880(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL, v11);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v21 = Enumerator->klass;
+    v18 = Enumerator->klass;
     if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
     {
-      v22 = 0LL;
-      v23 = &v21->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v23 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v19 = 0LL;
+      v20 = &v18->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v20 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        ++v22;
-        v23 += 4;
-        if ( v22 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+        ++v19;
+        v20 += 4;
+        if ( v19 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
           goto LABEL_16;
       }
-      v24 = (__int64)&v21->vtable[*v23].method;
+      v21 = (__int64)&v18->vtable[*v20].method;
     }
     else
     {
 LABEL_16:
-      v24 = sub_AA67A0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v21 = sub_AEB880(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL, v17);
     }
-    v25 = (EventMissionProgressRequest_Argument_ProgressData_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v24)(
+    v22 = (EventMissionProgressRequest_Argument_ProgressData_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v21)(
                                                                    Enumerator,
-                                                                   *(_QWORD *)(v24 + 8));
-    if ( !v25 )
+                                                                   *(_QWORD *)(v21 + 8));
+    if ( !v22 )
       goto LABEL_33;
-    v26 = *(&ServantVoicePatternEntity_TypeInfo->_2.bitflags2 + 1);
-    if ( *(&v25->klass->_2.bitflags2 + 1) < (unsigned int)v26
-      || (ServantVoicePatternEntity_c *)v25->klass->_2.typeHierarchy[v26 - 1] != ServantVoicePatternEntity_TypeInfo )
+    v24 = *(&ServantVoicePatternEntity_TypeInfo->_2.bitflags2 + 1);
+    if ( *(&v22->klass->_2.bitflags2 + 1) < (unsigned int)v24
+      || (ServantVoicePatternEntity_c *)v22->klass->_2.typeHierarchy[v24 - 1] != ServantVoicePatternEntity_TypeInfo )
     {
-      sub_B0DC70(v25);
+      sub_B52D50(v22);
 LABEL_33:
-      sub_B0D97C(v25);
+      sub_B52A5C(v22, v23);
     }
-    if ( v25->fields.missionTargetId == id && v25->fields.missionConditionDetailId == svtId )
+    if ( v22->fields.missionTargetId == id && v22->fields.missionConditionDetailId == svtId )
     {
-      if ( !v14 )
-        sub_B0D97C(v25);
+      if ( !v7 )
+        sub_B52A5C(v22, ServantVoicePatternEntity_TypeInfo);
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        v14,
-        v25,
-        (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_ServantVoicePatternEntity__Add__);
+        v7,
+        v22,
+        (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_ServantVoicePatternEntity__Add__);
     }
   }
-  v27 = Enumerator->klass;
+  v25 = Enumerator->klass;
   if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
   {
-    v28 = 0LL;
-    v29 = &v27->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v29 - 1) != System_IDisposable_TypeInfo )
+    v26 = 0LL;
+    v27 = &v25->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v27 - 1) != System_IDisposable_TypeInfo )
     {
-      ++v28;
-      v29 += 4;
-      if ( v28 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+      ++v26;
+      v27 += 4;
+      if ( v26 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
         goto LABEL_29;
     }
-    v30 = (__int64)&v27->vtable[*v29].method;
+    v28 = (__int64)&v25->vtable[*v27].method;
   }
   else
   {
 LABEL_29:
-    v30 = sub_AA67A0(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v28 = sub_AEB880(Enumerator, System_IDisposable_TypeInfo, 0LL, v17);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v30)(Enumerator, *(_QWORD *)(v30 + 8));
-  return (System_Collections_Generic_List_ServantVoicePatternEntity__o *)v14;
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v28)(Enumerator, *(_QWORD *)(v28 + 8));
+  return (System_Collections_Generic_List_ServantVoicePatternEntity__o *)v7;
 }
 
 
@@ -197,7 +188,8 @@ bool __fastcall ServantVoicePatternMaster__IsSatisfyPlayCondition(
         int32_t targetValue,
         const MethodInfo *method)
 {
-  const MethodInfo *v9; // x3
+  __int64 v9; // x1
+  const MethodInfo *v10; // x3
   int32_t type; // w8
   ServantVoicePatternEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
@@ -205,11 +197,11 @@ bool __fastcall ServantVoicePatternMaster__IsSatisfyPlayCondition(
   if ( !ServantVoicePatternMaster__TryGetEntity(this, &entity, id, svtId, voiceId, *(const MethodInfo **)&targetValue) )
     return 1;
   if ( !entity )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v9);
   type = entity->fields.type;
   if ( !type )
     return 0;
-  return type != 1 || ServantVoicePatternEntity__CheckAddCond(entity, limitCount, targetValue, v9);
+  return type != 1 || ServantVoicePatternEntity__CheckAddCond(entity, limitCount, targetValue, v10);
 }
 
 
@@ -224,17 +216,15 @@ bool __fastcall ServantVoicePatternMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_42177B9 & 1) == 0 )
+  if ( (byte_42B3357 & 1) == 0 )
   {
-    sub_B0D8A4(
-      &Method_DataMasterBase_ServantVoicePatternMaster__ServantVoicePatternEntity__string__TryGetEntity__,
-      entity);
-    byte_42177B9 = 1;
+    sub_B52984(&Method_DataMasterBase_ServantVoicePatternMaster__ServantVoicePatternEntity__string__TryGetEntity__);
+    byte_42B3357 = 1;
   }
   PK = ServantVoicePatternEntity__CreatePK(id, svtId, voiceId, *(const MethodInfo **)&svtId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266A07C *)Method_DataMasterBase_ServantVoicePatternMaster__ServantVoicePatternEntity__string__TryGetEntity__);
+           (const MethodInfo_23E2780 *)Method_DataMasterBase_ServantVoicePatternMaster__ServantVoicePatternEntity__string__TryGetEntity__);
 }

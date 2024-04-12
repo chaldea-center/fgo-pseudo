@@ -1,14 +1,14 @@
 void __fastcall WarBoardQuestMaster___ctor(WarBoardQuestMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4216526 & 1) == 0 )
+  if ( (byte_42B21BE & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataMasterBase_WarBoardQuestMaster__WarBoardQuestEntity__string___ctor__, method);
-    byte_4216526 = 1;
+    sub_B52984(&Method_DataMasterBase_WarBoardQuestMaster__WarBoardQuestEntity__string___ctor__);
+    byte_42B21BE = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-    332,
-    (const MethodInfo_2669F88 *)Method_DataMasterBase_WarBoardQuestMaster__WarBoardQuestEntity__string___ctor__);
+    333,
+    (const MethodInfo_23E268C *)Method_DataMasterBase_WarBoardQuestMaster__WarBoardQuestEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,16 @@ WarBoardQuestEntity_o *__fastcall WarBoardQuestMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4216524 & 1) == 0 )
+  if ( (byte_42B21BC & 1) == 0 )
   {
-    sub_B0D8A4(
-      &Method_DataMasterBase_WarBoardQuestMaster__WarBoardQuestEntity__string__GetEntity__,
-      *(_QWORD *)&questId);
-    byte_4216524 = 1;
+    sub_B52984(&Method_DataMasterBase_WarBoardQuestMaster__WarBoardQuestEntity__string__GetEntity__);
+    byte_42B21BC = 1;
   }
   PK = WarBoardQuestEntity__CreatePK(questId, questPhase, *(const MethodInfo **)&questPhase);
-  return (WarBoardQuestEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
-                                    (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
+  return (WarBoardQuestEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
+                                    (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                     PK,
-                                    (const MethodInfo_266A024 *)Method_DataMasterBase_WarBoardQuestMaster__WarBoardQuestEntity__string__GetEntity__);
+                                    (const MethodInfo_23E2728 *)Method_DataMasterBase_WarBoardQuestMaster__WarBoardQuestEntity__string__GetEntity__);
 }
 
 
@@ -46,15 +44,15 @@ bool __fastcall WarBoardQuestMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4216525 & 1) == 0 )
+  if ( (byte_42B21BD & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataMasterBase_WarBoardQuestMaster__WarBoardQuestEntity__string__TryGetEntity__, entity);
-    byte_4216525 = 1;
+    sub_B52984(&Method_DataMasterBase_WarBoardQuestMaster__WarBoardQuestEntity__string__TryGetEntity__);
+    byte_42B21BD = 1;
   }
   PK = WarBoardQuestEntity__CreatePK(questId, questPhase, *(const MethodInfo **)&questId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266A07C *)Method_DataMasterBase_WarBoardQuestMaster__WarBoardQuestEntity__string__TryGetEntity__);
+           (const MethodInfo_23E2780 *)Method_DataMasterBase_WarBoardQuestMaster__WarBoardQuestEntity__string__TryGetEntity__);
 }

@@ -1,33 +1,32 @@
 void __fastcall NpcFollowerReleaseEntity___ctor(NpcFollowerReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4211FF5 & 1) == 0 )
+  if ( (byte_42ADAFB & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4211FF5 = 1;
+    sub_B52984(&Method_DataEntityBase_string___ctor__);
+    byte_42ADAFB = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall NpcFollowerReleaseEntity__CreatePK(
         int64_t id,
         int32_t questId,
         int32_t questPhase,
         const MethodInfo *method)
 {
-  if ( (byte_4211FF3 & 1) == 0 )
+  if ( (byte_42ADAF9 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_long__int__int___, *(_QWORD *)&questId);
-    byte_4211FF3 = 1;
+    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_42ADAF9 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            id,
            questId,
            questPhase,
-           (const MethodInfo_1713A3C *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_1A4E618 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
@@ -53,10 +52,10 @@ bool __fastcall NpcFollowerReleaseEntity__IsEnable(NpcFollowerReleaseEntity_o *t
   int32_t condType; // w21
   int64_t condValue; // x19
 
-  if ( (byte_4211FF4 & 1) == 0 )
+  if ( (byte_42ADAFA & 1) == 0 )
   {
-    sub_B0D8A4(&CondType_TypeInfo, method);
-    byte_4211FF4 = 1;
+    sub_B52984(&CondType_TypeInfo);
+    byte_42ADAFA = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

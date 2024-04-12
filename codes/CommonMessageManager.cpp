@@ -1,9 +1,9 @@
 void __fastcall CommonMessageManager___ctor(CommonMessageManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4210923 & 1) == 0 )
+  if ( (byte_42AC4C7 & 1) == 0 )
   {
-    sub_B0D8A4(&ScriptMessageManager_TypeInfo, method);
-    byte_4210923 = 1;
+    sub_B52984(&ScriptMessageManager_TypeInfo);
+    byte_42AC4C7 = 1;
   }
   this->fields.playSpeed = 2;
   if ( (BYTE3(ScriptMessageManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -20,108 +20,94 @@ System_String_array *__fastcall CommonMessageManager__AnalysParam(
         System_String_o *data,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
   int32_t m_stringLength; // w23
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v16; // x20
-  System_String_o *v17; // x22
-  int32_t v18; // w26
-  int32_t v19; // w1
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v5; // x20
+  System_String_o *v6; // x22
+  int32_t v7; // w26
+  int32_t v8; // w1
   uint16_t Chars; // w0
-  System_String_o *v21; // x0
-  int v22; // w21
-  System_String_o *v23; // x0
-  System_String_o *v24; // x1
+  System_String_o *v10; // x0
+  int v11; // w21
+  System_String_o *v12; // x0
+  System_String_o *v13; // x1
   int32_t size; // w8
-  bool v26; // vf
-  int v27; // w8
-  int32_t v28; // w21
-  System_String_o *v29; // x0
-  WarBoardManager_TaskList_o *v30; // x2
-  System_String_o *v31; // x0
-  EventMissionProgressRequest_Argument_ProgressData_o *v32; // x1
-  int32_t v33; // w8
-  int v34; // w8
-  int32_t v35; // w8
-  System_String_o *v36; // x0
-  EventMissionProgressRequest_Argument_ProgressData_o *v37; // x1
-  System_String_o *v38; // x1
-  __int16 v40[2]; // [xsp+Ch] [xbp-54h] BYREF
+  bool v15; // vf
+  int v16; // w8
+  int32_t v17; // w21
+  System_String_o *v18; // x0
+  WarBoardManager_TaskList_o *v19; // x2
+  System_String_o *v20; // x0
+  EventMissionProgressRequest_Argument_ProgressData_o *v21; // x1
+  int32_t v22; // w8
+  int v23; // w8
+  int32_t v24; // w8
+  System_String_o *v25; // x0
+  EventMissionProgressRequest_Argument_ProgressData_o *v26; // x1
+  System_String_o *v27; // x1
+  __int16 v29[2]; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4210921 & 1) == 0 )
+  if ( (byte_42AC4C5 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_string__Add__, data);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_string__ToArray__, v4);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_string___ctor__, v5);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_string__get_Count__, v6);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_string__get_Item__, v7);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_string__set_Item__, v8);
-    sub_B0D8A4(&System_Collections_Generic_List_string__TypeInfo, v9);
-    sub_B0D8A4(&StringLiteral_1513/*"="*/, v10);
-    sub_B0D8A4(&StringLiteral_80/*" "*/, v11);
-    sub_B0D8A4(&StringLiteral_705/*","*/, v12);
-    sub_B0D8A4(&StringLiteral_293/*"\""*/, v13);
-    this = (CommonMessageManager_o *)sub_B0D8A4(&StringLiteral_1/*""*/, v14);
-    byte_4210921 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_string__Add__);
+    sub_B52984(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_B52984(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_B52984(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_B52984(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_B52984(&Method_System_Collections_Generic_List_string__set_Item__);
+    sub_B52984(&System_Collections_Generic_List_string__TypeInfo);
+    sub_B52984(&StringLiteral_1521/*"="*/);
+    sub_B52984(&StringLiteral_81/*" "*/);
+    sub_B52984(&StringLiteral_709/*","*/);
+    sub_B52984(&StringLiteral_295/*"\""*/);
+    this = (CommonMessageManager_o *)sub_B52984(&StringLiteral_1/*""*/);
+    byte_42AC4C5 = 1;
   }
-  v40[0] = 0;
+  v29[0] = 0;
   if ( !data )
     goto LABEL_49;
   m_stringLength = data->fields.m_stringLength;
-  v16 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
-                                                                                                  System_Collections_Generic_List_string__TypeInfo,
-                                                                                                  data,
-                                                                                                  method);
+  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v16,
-    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_string___ctor__);
-  v17 = (System_String_o *)StringLiteral_1/*""*/;
+    v5,
+    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_string___ctor__);
+  v6 = (System_String_o *)StringLiteral_1/*""*/;
   if ( m_stringLength >= 1 )
   {
-    v18 = 0;
+    v7 = 0;
     while ( 1 )
     {
-      v19 = v18++;
-      Chars = System_String__get_Chars(data, v19, 0LL);
-      v40[0] = Chars;
+      v8 = v7++;
+      Chars = System_String__get_Chars(data, v8, 0LL);
+      v29[0] = Chars;
       if ( Chars > 0x2Bu )
       {
         if ( Chars == 44 || Chars == 61 )
         {
-          this = (CommonMessageManager_o *)System_String__op_Inequality(v17, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-          if ( !v16 )
+          this = (CommonMessageManager_o *)System_String__op_Inequality(v6, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+          if ( !v5 )
             goto LABEL_49;
           if ( ((unsigned __int8)this & 1) == 0 )
           {
-            size = v16->fields._size;
-            v26 = __OFSUB__(size, 1);
-            v27 = size - 1;
-            if ( v27 < 0 == v26
+            size = v5->fields._size;
+            v15 = __OFSUB__(size, 1);
+            v16 = size - 1;
+            if ( v16 < 0 == v15
               && System_String__op_Equality(
-                   (System_String_o *)v16->fields._items->m_Items[v27],
-                   (System_String_o *)StringLiteral_80/*" "*/,
+                   (System_String_o *)v5->fields._items->m_Items[v16],
+                   (System_String_o *)StringLiteral_81/*" "*/,
                    0LL) )
             {
-              v28 = v16->fields._size;
-              v29 = System_Char__ToString((uint16_t)v40, 0LL);
-              if ( v29 )
-                v30 = (WarBoardManager_TaskList_o *)v29;
+              v17 = v5->fields._size;
+              v18 = System_Char__ToString((uint16_t)v29, 0LL);
+              if ( v18 )
+                v19 = (WarBoardManager_TaskList_o *)v18;
               else
-                v30 = (WarBoardManager_TaskList_o *)StringLiteral_1/*""*/;
+                v19 = (WarBoardManager_TaskList_o *)StringLiteral_1/*""*/;
               System_Collections_Generic_List_WarBoardManager_TaskList___set_Item(
-                (System_Collections_Generic_List_WarBoardManager_TaskList__o *)v16,
-                v28 - 1,
-                v30,
-                (const MethodInfo_2FC5440 *)Method_System_Collections_Generic_List_string__set_Item__);
+                (System_Collections_Generic_List_WarBoardManager_TaskList__o *)v5,
+                v17 - 1,
+                v19,
+                (const MethodInfo_2FF135C *)Method_System_Collections_Generic_List_string__set_Item__);
               goto LABEL_41;
             }
             goto LABEL_37;
@@ -133,118 +119,118 @@ System_String_array *__fastcall CommonMessageManager__AnalysParam(
       {
         if ( Chars == 32 )
         {
-          this = (CommonMessageManager_o *)System_String__op_Inequality(v17, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-          if ( !v16 )
+          this = (CommonMessageManager_o *)System_String__op_Inequality(v6, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+          if ( !v5 )
             goto LABEL_49;
           if ( ((unsigned __int8)this & 1) == 0 )
           {
-            v33 = v16->fields._size;
-            v26 = __OFSUB__(v33, 1);
-            v34 = v33 - 1;
-            if ( v34 < 0 == v26 )
+            v22 = v5->fields._size;
+            v15 = __OFSUB__(v22, 1);
+            v23 = v22 - 1;
+            if ( v23 < 0 == v15 )
             {
               if ( System_String__op_Equality(
-                     (System_String_o *)v16->fields._items->m_Items[v34],
-                     (System_String_o *)StringLiteral_1513/*"="*/,
+                     (System_String_o *)v5->fields._items->m_Items[v23],
+                     (System_String_o *)StringLiteral_1521/*"="*/,
                      0LL) )
               {
                 goto LABEL_41;
               }
-              v35 = v16->fields._size;
-              if ( !v35 )
-                System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
+              v24 = v5->fields._size;
+              if ( !v24 )
+                System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
               if ( System_String__op_Equality(
-                     (System_String_o *)v16->fields._items->m_Items[v35 - 1],
-                     (System_String_o *)StringLiteral_705/*","*/,
+                     (System_String_o *)v5->fields._items->m_Items[v24 - 1],
+                     (System_String_o *)StringLiteral_709/*","*/,
                      0LL) )
               {
                 goto LABEL_41;
               }
             }
 LABEL_37:
-            v36 = System_Char__ToString((uint16_t)v40, 0LL);
-            if ( v36 )
-              v37 = (EventMissionProgressRequest_Argument_ProgressData_o *)v36;
+            v25 = System_Char__ToString((uint16_t)v29, 0LL);
+            if ( v25 )
+              v26 = (EventMissionProgressRequest_Argument_ProgressData_o *)v25;
             else
-              v37 = (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_1/*""*/;
+              v26 = (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_1/*""*/;
             System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-              v16,
-              v37,
-              (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_string__Add__);
+              v5,
+              v26,
+              (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
             goto LABEL_41;
           }
 LABEL_28:
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            v16,
-            (EventMissionProgressRequest_Argument_ProgressData_o *)v17,
-            (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_string__Add__);
-          v31 = System_Char__ToString((uint16_t)v40, 0LL);
-          if ( v31 )
-            v32 = (EventMissionProgressRequest_Argument_ProgressData_o *)v31;
+            v5,
+            (EventMissionProgressRequest_Argument_ProgressData_o *)v6,
+            (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
+          v20 = System_Char__ToString((uint16_t)v29, 0LL);
+          if ( v20 )
+            v21 = (EventMissionProgressRequest_Argument_ProgressData_o *)v20;
           else
-            v32 = (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_1/*""*/;
+            v21 = (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_1/*""*/;
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            v16,
-            v32,
-            (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_string__Add__);
-          v17 = (System_String_o *)StringLiteral_1/*""*/;
+            v5,
+            v21,
+            (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
+          v6 = (System_String_o *)StringLiteral_1/*""*/;
           goto LABEL_41;
         }
         if ( Chars == 34 )
         {
-          v21 = System_Char__ToString((uint16_t)v40, 0LL);
-          v17 = System_String__Concat_43849904(v17, v21, 0LL);
-          if ( v18 < m_stringLength )
+          v10 = System_Char__ToString((uint16_t)v29, 0LL);
+          v6 = System_String__Concat_44568316(v6, v10, 0LL);
+          if ( v7 < m_stringLength )
           {
             do
             {
-              v22 = v18 + 1;
-              v40[0] = System_String__get_Chars(data, v18, 0LL);
-              if ( v40[0] == 34 )
+              v11 = v7 + 1;
+              v29[0] = System_String__get_Chars(data, v7, 0LL);
+              if ( v29[0] == 34 )
                 break;
-              v23 = System_Char__ToString((uint16_t)v40, 0LL);
-              v17 = System_String__Concat_43849904(v17, v23, 0LL);
-              ++v18;
+              v12 = System_Char__ToString((uint16_t)v29, 0LL);
+              v6 = System_String__Concat_44568316(v6, v12, 0LL);
+              ++v7;
             }
-            while ( v22 < m_stringLength );
-            v18 = v22;
+            while ( v11 < m_stringLength );
+            v7 = v11;
           }
-          v24 = (System_String_o *)StringLiteral_293/*"\""*/;
+          v13 = (System_String_o *)StringLiteral_295/*"\""*/;
           goto LABEL_25;
         }
       }
-      v24 = System_Char__ToString((uint16_t)v40, 0LL);
+      v13 = System_Char__ToString((uint16_t)v29, 0LL);
 LABEL_25:
-      v17 = System_String__Concat_43849904(v17, v24, 0LL);
+      v6 = System_String__Concat_44568316(v6, v13, 0LL);
 LABEL_41:
-      if ( v18 >= m_stringLength )
+      if ( v7 >= m_stringLength )
       {
-        v38 = (System_String_o *)StringLiteral_1/*""*/;
+        v27 = (System_String_o *)StringLiteral_1/*""*/;
         goto LABEL_44;
       }
     }
   }
-  v38 = (System_String_o *)StringLiteral_1/*""*/;
+  v27 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_44:
-  this = (CommonMessageManager_o *)System_String__op_Inequality(v17, v38, 0LL);
+  this = (CommonMessageManager_o *)System_String__op_Inequality(v6, v27, 0LL);
   if ( ((unsigned __int8)this & 1) == 0 )
   {
-    if ( v16 )
+    if ( v5 )
       return (System_String_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                      (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v16,
-                                      (const MethodInfo_2FC7834 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                      (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v5,
+                                      (const MethodInfo_2FF3750 *)Method_System_Collections_Generic_List_string__ToArray__);
 LABEL_49:
-    sub_B0D97C(this);
+    sub_B52A5C(this, data);
   }
-  if ( !v16 )
+  if ( !v5 )
     goto LABEL_49;
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-    v16,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)v17,
-    (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_string__Add__);
+    v5,
+    (EventMissionProgressRequest_Argument_ProgressData_o *)v6,
+    (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
   return (System_String_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                  (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v16,
-                                  (const MethodInfo_2FC7834 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v5,
+                                  (const MethodInfo_2FF3750 *)Method_System_Collections_Generic_List_string__ToArray__);
 }
 
 
@@ -253,171 +239,132 @@ void __fastcall CommonMessageManager__AnalysScript(
         System_String_o *scriptData,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
+  System_Array_o *v5; // x21
+  _BOOL8 v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
-  __int64 v23; // x1
-  __int64 v24; // x1
-  __int64 v25; // x1
-  __int64 v26; // x1
-  __int64 v27; // x1
-  System_Array_o *v28; // x21
-  __int64 v29; // x0
-  System_String_array *v30; // x23
-  __int64 v31; // x1
-  __int64 v32; // x2
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v33; // x27
-  __int64 v34; // x1
-  __int64 v35; // x2
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v36; // x21
-  __int64 v37; // x1
-  __int64 v38; // x2
-  System_Collections_Generic_List_int__o *v39; // x20
+  System_String_array *v8; // x23
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v9; // x27
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v10; // x21
+  System_Collections_Generic_List_int__o *v11; // x20
   int max_length; // w8
-  int32_t v41; // w22
-  System_String_o *v42; // x28
-  int32_t v43; // w24
-  System_String_o *v44; // x26
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v45; // x25
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v46; // x21
-  System_String_o *v47; // x27
-  System_String_o **v48; // x5
-  System_String_o *v49; // x0
-  bool v50; // w0
-  System_String_o *v51; // x8
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v52; // x8
-  int32_t v53; // w23
-  struct System_String_array *v54; // x0
-  struct System_String_array *v55; // x0
-  struct System_Int32_array *v56; // x0
+  int32_t v13; // w22
+  System_String_o *v14; // x28
+  int32_t v15; // w24
+  System_String_o *v16; // x26
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v17; // x25
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v18; // x21
+  System_String_o *v19; // x27
+  System_String_o **v20; // x5
+  System_String_o *v21; // x0
+  bool v22; // w0
+  System_String_o *v23; // x8
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v24; // x8
+  int32_t v25; // w23
   struct System_String_array *executeDataList; // x8
-  __int64 v58; // x0
-  const MethodInfo *v59; // [xsp+0h] [xbp-80h]
+  __int64 v27; // x0
+  const MethodInfo *v28; // [xsp+0h] [xbp-80h]
   System_String_o *a; // [xsp+8h] [xbp-78h]
   int32_t lastMessageIndex; // [xsp+14h] [xbp-6Ch] BYREF
   System_Collections_Generic_List_int__o *lineDataList; // [xsp+18h] [xbp-68h] BYREF
   System_Collections_Generic_List_string__o *scriptDataList; // [xsp+20h] [xbp-60h] BYREF
   System_Collections_Generic_List_string__o *tagDataList; // [xsp+28h] [xbp-58h] BYREF
-  System_RuntimeFieldHandle_o v65; // 0:w1.4
+  System_RuntimeFieldHandle_o v34; // 0:w1.4
 
-  if ( (byte_421091F & 1) == 0 )
+  if ( (byte_42AC4C3 & 1) == 0 )
   {
-    sub_B0D8A4(&char___TypeInfo, scriptData);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_string__Add__, v5);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__Add__, v6);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_string__ToArray__, v7);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__ToArray__, v8);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_string___ctor__, v9);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int___ctor__, v10);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_string__get_Count__, v11);
-    sub_B0D8A4(&System_Collections_Generic_List_int__TypeInfo, v12);
-    sub_B0D8A4(&System_Collections_Generic_List_string__TypeInfo, v13);
-    sub_B0D8A4(
-      &Field__PrivateImplementationDetails__01A2D4D2A3644EB58B9321AF665A1E3DD259AB36BB36C6953CE858B64416EF54,
-      v14);
-    sub_B0D8A4(&StringLiteral_318/*"#"*/, v15);
-    sub_B0D8A4(&StringLiteral_882/*"//"*/, v16);
-    sub_B0D8A4(&StringLiteral_19315/*"i"*/, v17);
-    sub_B0D8A4(&StringLiteral_20147/*"k"*/, v18);
-    sub_B0D8A4(&StringLiteral_21666/*"q"*/, v19);
-    sub_B0D8A4(&StringLiteral_426/*"%"*/, v20);
-    sub_B0D8A4(&StringLiteral_446/*"&"*/, v21);
-    sub_B0D8A4(&StringLiteral_20291/*"line"*/, v22);
-    sub_B0D8A4(&StringLiteral_22675/*"talkStart"*/, v23);
-    sub_B0D8A4(&StringLiteral_19474/*"image"*/, v24);
-    sub_B0D8A4(&StringLiteral_15858/*"[r]"*/, v25);
-    sub_B0D8A4(&StringLiteral_22671/*"talkName"*/, v26);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v27);
-    byte_421091F = 1;
+    sub_B52984(&char___TypeInfo);
+    sub_B52984(&Method_System_Collections_Generic_List_string__Add__);
+    sub_B52984(&Method_System_Collections_Generic_List_int__Add__);
+    sub_B52984(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_B52984(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_B52984(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_B52984(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_B52984(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_B52984(&System_Collections_Generic_List_int__TypeInfo);
+    sub_B52984(&System_Collections_Generic_List_string__TypeInfo);
+    sub_B52984(&Field__PrivateImplementationDetails__01A2D4D2A3644EB58B9321AF665A1E3DD259AB36BB36C6953CE858B64416EF54);
+    sub_B52984(&StringLiteral_320/*"#"*/);
+    sub_B52984(&StringLiteral_889/*"//"*/);
+    sub_B52984(&StringLiteral_19400/*"i"*/);
+    sub_B52984(&StringLiteral_20235/*"k"*/);
+    sub_B52984(&StringLiteral_21773/*"q"*/);
+    sub_B52984(&StringLiteral_428/*"%"*/);
+    sub_B52984(&StringLiteral_448/*"&"*/);
+    sub_B52984(&StringLiteral_20381/*"line"*/);
+    sub_B52984(&StringLiteral_22789/*"talkStart"*/);
+    sub_B52984(&StringLiteral_19559/*"image"*/);
+    sub_B52984(&StringLiteral_15917/*"[r]"*/);
+    sub_B52984(&StringLiteral_22785/*"talkName"*/);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42AC4C3 = 1;
   }
   tagDataList = 0LL;
   lineDataList = 0LL;
   scriptDataList = 0LL;
   lastMessageIndex = 0;
-  v28 = (System_Array_o *)sub_B0D8BC(char___TypeInfo, 5LL);
-  v65.fields.value = Field__PrivateImplementationDetails__01A2D4D2A3644EB58B9321AF665A1E3DD259AB36BB36C6953CE858B64416EF54;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_42880004(v28, v65, 0LL);
+  v5 = (System_Array_o *)sub_B5299C(char___TypeInfo, 5LL);
+  v34.fields.value = Field__PrivateImplementationDetails__01A2D4D2A3644EB58B9321AF665A1E3DD259AB36BB36C6953CE858B64416EF54;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43814272(v5, v34, 0LL);
   if ( !scriptData )
     goto LABEL_73;
-  v30 = System_String__Split_43910688(scriptData, (System_Char_array *)v28, 1, 0LL);
-  v33 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
-                                                                                                  System_Collections_Generic_List_string__TypeInfo,
-                                                                                                  v31,
-                                                                                                  v32);
+  v8 = System_String__Split_44629100(scriptData, (System_Char_array *)v5, 1, 0LL);
+  v9 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v33,
-    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_string___ctor__);
-  tagDataList = (System_Collections_Generic_List_string__o *)v33;
-  v36 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
-                                                                                                  System_Collections_Generic_List_string__TypeInfo,
-                                                                                                  v34,
-                                                                                                  v35);
+    v9,
+    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_string___ctor__);
+  tagDataList = (System_Collections_Generic_List_string__o *)v9;
+  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v36,
-    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_string___ctor__);
-  scriptDataList = (System_Collections_Generic_List_string__o *)v36;
-  v39 = (System_Collections_Generic_List_int__o *)sub_B0D974(System_Collections_Generic_List_int__TypeInfo, v37, v38);
+    v10,
+    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_string___ctor__);
+  scriptDataList = (System_Collections_Generic_List_string__o *)v10;
+  v11 = (System_Collections_Generic_List_int__o *)sub_B52A54(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v39,
-    (const MethodInfo_2FAF1A4 *)Method_System_Collections_Generic_List_int___ctor__);
-  lineDataList = v39;
+    v11,
+    (const MethodInfo_3056254 *)Method_System_Collections_Generic_List_int___ctor__);
+  lineDataList = v11;
   lastMessageIndex = -1;
-  if ( !v30 )
+  if ( !v8 )
     goto LABEL_73;
-  max_length = v30->max_length;
+  max_length = v8->max_length;
   if ( max_length >= 1 )
   {
-    v41 = 0;
+    v13 = 0;
     a = (System_String_o *)StringLiteral_1/*""*/;
     while ( 1 )
     {
       while ( 1 )
       {
-        if ( v41 >= (unsigned int)max_length )
+        if ( v13 >= (unsigned int)max_length )
         {
-          v58 = sub_B0D9A8(v29);
-          sub_B0D948(v58, 0LL);
+          v27 = sub_B52A88(v6);
+          sub_B52A28(v27, 0LL);
         }
-        v42 = v30->m_Items[v41];
-        v43 = v41;
-        if ( !v42 )
+        v14 = v8->m_Items[v13];
+        v15 = v13;
+        if ( !v14 )
           goto LABEL_73;
-        ++v41;
-        if ( v42->fields.m_stringLength >= 1 )
+        ++v13;
+        if ( v14->fields.m_stringLength >= 1 )
         {
-          v44 = (System_String_o *)StringLiteral_1/*""*/;
-          v29 = System_String__StartsWith(v42, (System_String_o *)StringLiteral_882/*"//"*/, 0LL);
-          if ( (v29 & 1) == 0 )
+          v16 = (System_String_o *)StringLiteral_1/*""*/;
+          v6 = System_String__StartsWith(v14, (System_String_o *)StringLiteral_889/*"//"*/, 0LL);
+          if ( !v6 )
           {
-            v29 = System_String__StartsWith(v42, this->fields.codeCommentString, 0LL);
-            if ( (v29 & 1) == 0 )
+            v6 = System_String__StartsWith(v14, this->fields.codeCommentString, 0LL);
+            if ( !v6 )
               break;
           }
         }
 LABEL_29:
-        max_length = v30->max_length;
-        if ( v41 >= max_length )
+        max_length = v8->max_length;
+        if ( v13 >= max_length )
           goto LABEL_61;
       }
-      if ( !System_String__StartsWith(v42, this->fields.codeTalkString, 0LL) )
+      if ( !System_String__StartsWith(v14, this->fields.codeTalkString, 0LL) )
       {
-        v29 = System_String__StartsWith(v42, this->fields.codeVoiceString, 0LL);
-        if ( (v29 & 1) != 0 )
+        v6 = System_String__StartsWith(v14, this->fields.codeVoiceString, 0LL);
+        if ( v6 )
           goto LABEL_29;
         CommonMessageManager__AnalysText(
           this,
@@ -425,240 +372,236 @@ LABEL_29:
           &scriptDataList,
           &lineDataList,
           &lastMessageIndex,
-          v48,
-          v42,
-          v41,
-          v59);
+          v20,
+          v14,
+          v13,
+          v28);
         goto LABEL_17;
       }
-      v45 = v36;
-      v46 = v33;
-      v47 = (System_String_o *)StringLiteral_22671/*"talkName"*/;
-      v44 = System_String__Substring(v42, 1, 0LL);
-      if ( !v47 )
+      v17 = v10;
+      v18 = v9;
+      v19 = (System_String_o *)StringLiteral_22785/*"talkName"*/;
+      v16 = System_String__Substring(v14, 1, 0LL);
+      if ( !v19 )
       {
-        v33 = v46;
-        v36 = v45;
+        v9 = v18;
+        v10 = v17;
 LABEL_17:
-        v29 = System_String__op_Inequality(v44, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-        if ( (v29 & 1) != 0 )
+        v6 = System_String__op_Inequality(v16, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+        if ( v6 )
         {
-          v29 = System_String__op_Inequality(a, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-          if ( (lastMessageIndex & 0x80000000) != 0 && (v29 & 1) != 0 )
+          v6 = System_String__op_Inequality(a, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+          if ( (lastMessageIndex & 0x80000000) != 0 && v6 )
           {
-            if ( !v33 )
+            if ( !v9 )
               goto LABEL_73;
             System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-              v33,
-              (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_22675/*"talkStart"*/,
-              (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_string__Add__);
-            if ( !v36 )
+              v9,
+              (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_22789/*"talkStart"*/,
+              (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
+            if ( !v10 )
               goto LABEL_73;
             System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-              v36,
+              v10,
               (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_1/*""*/,
-              (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_string__Add__);
-            if ( !v39 )
+              (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
+            if ( !v11 )
               goto LABEL_73;
             System_Collections_Generic_List_int___Add(
-              v39,
-              v41,
-              (const MethodInfo_2FAFF00 *)Method_System_Collections_Generic_List_int__Add__);
+              v11,
+              v13,
+              (const MethodInfo_3056FB0 *)Method_System_Collections_Generic_List_int__Add__);
             System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-              v33,
+              v9,
               0LL,
-              (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_string__Add__);
+              (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
           }
           else
           {
-            if ( !v33 )
+            if ( !v9 )
               goto LABEL_73;
             System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-              v33,
+              v9,
               0LL,
-              (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_string__Add__);
-            if ( !v36 )
+              (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
+            if ( !v10 )
               goto LABEL_73;
           }
-          lastMessageIndex = v36->fields._size;
-          if ( !v44 )
+          lastMessageIndex = v10->fields._size;
+          if ( !v16 )
             goto LABEL_73;
-          v49 = System_String__Replace_43857140(
-                  v44,
+          v21 = System_String__Replace_44575552(
+                  v16,
                   this->fields.codeReturnString,
-                  (System_String_o *)StringLiteral_15858/*"[r]"*/,
+                  (System_String_o *)StringLiteral_15917/*"[r]"*/,
                   0LL);
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            v36,
-            (EventMissionProgressRequest_Argument_ProgressData_o *)v49,
-            (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_string__Add__);
-          if ( !v39 )
+            v10,
+            (EventMissionProgressRequest_Argument_ProgressData_o *)v21,
+            (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
+          if ( !v11 )
             goto LABEL_73;
           System_Collections_Generic_List_int___Add(
-            v39,
-            v41,
-            (const MethodInfo_2FAFF00 *)Method_System_Collections_Generic_List_int__Add__);
+            v11,
+            v13,
+            (const MethodInfo_3056FB0 *)Method_System_Collections_Generic_List_int__Add__);
         }
         goto LABEL_29;
       }
-      v29 = System_String__op_Equality(v47, (System_String_o *)StringLiteral_20147/*"k"*/, 0LL);
-      v41 = v43 + 1;
-      if ( (v29 & 1) != 0
-        || (v29 = System_String__op_Equality(v47, (System_String_o *)StringLiteral_21666/*"q"*/, 0LL), (v29 & 1) != 0) )
+      v6 = System_String__op_Equality(v19, (System_String_o *)StringLiteral_20235/*"k"*/, 0LL);
+      v13 = v15 + 1;
+      if ( v6 || (v6 = System_String__op_Equality(v19, (System_String_o *)StringLiteral_21773/*"q"*/, 0LL)) )
       {
         if ( (lastMessageIndex & 0x80000000) == 0 )
         {
-          if ( !v46 )
+          if ( !v18 )
             goto LABEL_73;
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            v46,
+            v18,
             0LL,
-            (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_string__Add__);
-          if ( !v45 )
+            (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
+          if ( !v17 )
             goto LABEL_73;
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            v45,
-            (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_15858/*"[r]"*/,
-            (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_string__Add__);
-          if ( !v39 )
+            v17,
+            (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_15917/*"[r]"*/,
+            (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
+          if ( !v11 )
             goto LABEL_73;
           System_Collections_Generic_List_int___Add(
-            v39,
-            v41,
-            (const MethodInfo_2FAFF00 *)Method_System_Collections_Generic_List_int__Add__);
+            v11,
+            v13,
+            (const MethodInfo_3056FB0 *)Method_System_Collections_Generic_List_int__Add__);
           lastMessageIndex = -1;
-          v29 = (__int64)v46;
+          v6 = (_BOOL8)v18;
           goto LABEL_58;
         }
       }
-      else if ( System_String__op_Equality(v47, (System_String_o *)StringLiteral_22671/*"talkName"*/, 0LL) )
+      else if ( System_String__op_Equality(v19, (System_String_o *)StringLiteral_22785/*"talkName"*/, 0LL) )
       {
-        v50 = System_String__op_Equality(v47, (System_String_o *)StringLiteral_22671/*"talkName"*/, 0LL);
-        v51 = (System_String_o *)StringLiteral_1/*""*/;
-        if ( v50 )
-          v51 = v44;
-        a = v51;
+        v22 = System_String__op_Equality(v19, (System_String_o *)StringLiteral_22785/*"talkName"*/, 0LL);
+        v23 = (System_String_o *)StringLiteral_1/*""*/;
+        if ( v22 )
+          v23 = v16;
+        a = v23;
       }
-      else if ( System_String__op_Equality(v47, (System_String_o *)StringLiteral_19315/*"i"*/, 0LL)
-             || System_String__op_Equality(v47, (System_String_o *)StringLiteral_19474/*"image"*/, 0LL)
-             || System_String__op_Equality(v47, (System_String_o *)StringLiteral_20291/*"line"*/, 0LL)
-             || System_String__StartsWith(v47, (System_String_o *)StringLiteral_426/*"%"*/, 0LL)
-             || System_String__StartsWith(v47, (System_String_o *)StringLiteral_446/*"&"*/, 0LL)
-             || System_String__StartsWith(v47, (System_String_o *)StringLiteral_318/*"#"*/, 0LL) )
+      else if ( System_String__op_Equality(v19, (System_String_o *)StringLiteral_19400/*"i"*/, 0LL)
+             || System_String__op_Equality(v19, (System_String_o *)StringLiteral_19559/*"image"*/, 0LL)
+             || System_String__op_Equality(v19, (System_String_o *)StringLiteral_20381/*"line"*/, 0LL)
+             || System_String__StartsWith(v19, (System_String_o *)StringLiteral_428/*"%"*/, 0LL)
+             || System_String__StartsWith(v19, (System_String_o *)StringLiteral_448/*"&"*/, 0LL)
+             || System_String__StartsWith(v19, (System_String_o *)StringLiteral_320/*"#"*/, 0LL) )
       {
-        v29 = System_String__op_Inequality(a, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-        if ( (lastMessageIndex & 0x80000000) != 0 && (v29 & 1) != 0 )
+        v6 = System_String__op_Inequality(a, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+        if ( (lastMessageIndex & 0x80000000) != 0 && v6 )
         {
-          if ( !v46 )
+          if ( !v18 )
             goto LABEL_73;
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            v46,
-            (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_22675/*"talkStart"*/,
-            (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_string__Add__);
-          if ( !v45 )
+            v18,
+            (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_22789/*"talkStart"*/,
+            (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
+          if ( !v17 )
             goto LABEL_73;
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            v45,
+            v17,
             (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_1/*""*/,
-            (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_string__Add__);
-          if ( !v39 )
+            (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
+          if ( !v11 )
             goto LABEL_73;
           System_Collections_Generic_List_int___Add(
-            v39,
-            v41,
-            (const MethodInfo_2FAFF00 *)Method_System_Collections_Generic_List_int__Add__);
-          v52 = v45;
+            v11,
+            v13,
+            (const MethodInfo_3056FB0 *)Method_System_Collections_Generic_List_int__Add__);
+          v24 = v17;
         }
         else
         {
-          v52 = v45;
-          if ( !v45 )
+          v24 = v17;
+          if ( !v17 )
             goto LABEL_73;
         }
-        lastMessageIndex = v52->fields._size;
+        lastMessageIndex = v24->fields._size;
       }
-      v29 = (__int64)v46;
-      if ( !v46 )
+      v6 = (_BOOL8)v18;
+      if ( !v18 )
         goto LABEL_73;
 LABEL_58:
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v29,
-        (EventMissionProgressRequest_Argument_ProgressData_o *)v47,
-        (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_string__Add__);
-      if ( !v45 )
+        (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v6,
+        (EventMissionProgressRequest_Argument_ProgressData_o *)v19,
+        (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
+      if ( !v17 )
         goto LABEL_73;
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        v45,
-        (EventMissionProgressRequest_Argument_ProgressData_o *)v44,
-        (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_string__Add__);
-      if ( !v39 )
+        v17,
+        (EventMissionProgressRequest_Argument_ProgressData_o *)v16,
+        (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
+      if ( !v11 )
         goto LABEL_73;
       System_Collections_Generic_List_int___Add(
-        v39,
-        v41,
-        (const MethodInfo_2FAFF00 *)Method_System_Collections_Generic_List_int__Add__);
-      max_length = v30->max_length;
-      v33 = v46;
-      v36 = v45;
-      if ( v41 >= max_length )
+        v11,
+        v13,
+        (const MethodInfo_3056FB0 *)Method_System_Collections_Generic_List_int__Add__);
+      max_length = v8->max_length;
+      v9 = v18;
+      v10 = v17;
+      if ( v13 >= max_length )
       {
 LABEL_61:
-        v53 = v43 + 1;
+        v25 = v15 + 1;
         goto LABEL_63;
       }
     }
   }
-  v53 = 0;
+  v25 = 0;
 LABEL_63:
   if ( (lastMessageIndex & 0x80000000) == 0 )
   {
-    if ( v33 )
+    if ( v9 )
     {
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        v33,
+        v9,
         0LL,
-        (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_string__Add__);
-      if ( v36 )
+        (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
+      if ( v10 )
       {
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          v36,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_15858/*"[r]"*/,
-          (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_string__Add__);
-        if ( v39 )
+          v10,
+          (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_15917/*"[r]"*/,
+          (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
+        if ( v11 )
         {
           System_Collections_Generic_List_int___Add(
-            v39,
-            v53,
-            (const MethodInfo_2FAFF00 *)Method_System_Collections_Generic_List_int__Add__);
+            v11,
+            v25,
+            (const MethodInfo_3056FB0 *)Method_System_Collections_Generic_List_int__Add__);
           goto LABEL_69;
         }
       }
     }
 LABEL_73:
-    sub_B0D97C(v29);
+    sub_B52A5C(v6, v7);
   }
-  if ( !v33 )
+  if ( !v9 )
     goto LABEL_73;
 LABEL_69:
-  v54 = (struct System_String_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                        (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v33,
-                                        (const MethodInfo_2FC7834 *)Method_System_Collections_Generic_List_string__ToArray__);
-  this->fields.executeTagList = v54;
-  v29 = sub_B0D840(&this->fields.executeTagList, v54);
-  if ( !v36 )
+  this->fields.executeTagList = (struct System_String_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
+                                                                (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v9,
+                                                                (const MethodInfo_2FF3750 *)Method_System_Collections_Generic_List_string__ToArray__);
+  sub_B52920(&this->fields.executeTagList);
+  if ( !v10 )
     goto LABEL_73;
-  v55 = (struct System_String_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                        (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v36,
-                                        (const MethodInfo_2FC7834 *)Method_System_Collections_Generic_List_string__ToArray__);
-  this->fields.executeDataList = v55;
-  v29 = sub_B0D840(&this->fields.executeDataList, v55);
-  if ( !v39 )
+  this->fields.executeDataList = (struct System_String_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
+                                                                 (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v10,
+                                                                 (const MethodInfo_2FF3750 *)Method_System_Collections_Generic_List_string__ToArray__);
+  sub_B52920(&this->fields.executeDataList);
+  if ( !v11 )
     goto LABEL_73;
-  v56 = System_Collections_Generic_List_int___ToArray(
-          v39,
-          (const MethodInfo_2FB200C *)Method_System_Collections_Generic_List_int__ToArray__);
-  this->fields.executeLineList = v56;
-  v29 = sub_B0D840(&this->fields.executeLineList, v56);
+  this->fields.executeLineList = System_Collections_Generic_List_int___ToArray(
+                                   v11,
+                                   (const MethodInfo_30590BC *)Method_System_Collections_Generic_List_int__ToArray__);
+  sub_B52920(&this->fields.executeLineList);
   executeDataList = this->fields.executeDataList;
   if ( !executeDataList )
     goto LABEL_73;
@@ -677,266 +620,232 @@ void __fastcall CommonMessageManager__AnalysText(
         int32_t line,
         const MethodInfo *method)
 {
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
-  __int64 v23; // x1
-  __int64 v24; // x1
-  __int64 v25; // x1
-  __int64 v26; // x1
-  __int64 v27; // x1
-  __int64 v28; // x1
-  __int64 v29; // x1
-  __int64 v30; // x1
-  __int64 v31; // x1
-  __int64 v32; // x1
-  __int64 v33; // x1
-  __int64 v34; // x1
-  __int64 v35; // x1
-  __int64 v36; // x1
-  __int64 v37; // x1
-  __int64 v38; // x1
-  __int64 v39; // x1
-  __int64 v40; // x1
-  __int64 v41; // x1
-  __int64 v42; // x1
-  __int64 v43; // x1
-  __int64 v44; // x1
   int32_t m_stringLength; // w23
-  System_String_o *v46; // x27
-  const MethodInfo_2FC56E8 **v47; // x24
-  int32_t v48; // w19
-  int32_t v49; // w1
-  const MethodInfo_2FC56E8 **v50; // x22
+  System_String_o *v13; // x27
+  const MethodInfo_2FF1604 **v14; // x24
+  int32_t v15; // w19
+  int32_t v16; // w1
+  const MethodInfo_2FF1604 **v17; // x22
   uint16_t Chars; // w0
-  int v52; // w24
-  System_Collections_Generic_List_string__o *v53; // x28
-  System_String_o *v54; // x27
-  System_String_o *v55; // x28
-  int v56; // w24
-  int32_t v57; // w1
-  System_String_o *v59; // x0
-  int v60; // w26
-  System_String_o *v61; // x0
-  System_String_o *v62; // x0
-  int v63; // w24
-  System_String_o *v64; // x0
-  __int64 *v65; // x8
-  int32_t v66; // w8
-  CommonMessageManager_o *v67; // x28
-  System_String_o *v68; // x22
-  System_String_o *v69; // x1
-  __int64 *v70; // x8
-  int32_t v71; // w8
-  EventMissionProgressRequest_Argument_ProgressData_o *v72; // x1
-  int32_t v73; // w1
-  EventMissionProgressRequest_Argument_ProgressData_o *v74; // x27
-  const MethodInfo_2FC56E8 *v75; // x2
-  __int64 *v76; // x8
-  System_String_o *v77; // x1
-  System_Collections_Generic_List_string__o *v78; // x21
-  CommonMessageManager_o *v79; // [xsp+8h] [xbp-78h]
-  __int16 v83[2]; // [xsp+2Ch] [xbp-54h] BYREF
+  int v19; // w24
+  System_Collections_Generic_List_string__o *v20; // x28
+  System_String_o *v21; // x27
+  System_String_o *v22; // x28
+  int v23; // w24
+  System_String_o *v25; // x0
+  int v26; // w26
+  System_String_o *v27; // x0
+  System_String_o *v28; // x0
+  int v29; // w24
+  System_String_o *v30; // x0
+  __int64 *v31; // x8
+  int32_t v32; // w8
+  CommonMessageManager_o *v33; // x28
+  System_String_o *v34; // x22
+  System_String_o *v35; // x1
+  __int64 *v36; // x8
+  int32_t v37; // w8
+  System_Collections_Generic_List_string__o **v38; // x27
+  const MethodInfo_2FF1604 *v39; // x2
+  __int64 *v40; // x8
+  System_String_o *v41; // x1
+  System_Collections_Generic_List_string__o *v42; // x21
+  CommonMessageManager_o *v43; // [xsp+8h] [xbp-78h]
+  CommonMessageManager_o **v44; // [xsp+18h] [xbp-68h]
+  __int16 v47[2]; // [xsp+2Ch] [xbp-54h] BYREF
 
-  v79 = this;
-  if ( (byte_4210920 & 1) == 0 )
+  v44 = (CommonMessageManager_o **)tagDataList;
+  v43 = this;
+  if ( (byte_42AC4C4 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_string__Add__, tagDataList);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__Add__, v12);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_string__get_Count__, v13);
-    sub_B0D8A4(&StringLiteral_17514/*"clear"*/, v14);
-    sub_B0D8A4(&StringLiteral_18857/*"font"*/, v15);
-    sub_B0D8A4(&StringLiteral_18703/*"f"*/, v16);
-    sub_B0D8A4(&StringLiteral_22289/*"speed"*/, v17);
-    sub_B0D8A4(&StringLiteral_20147/*"k"*/, v18);
-    sub_B0D8A4(&StringLiteral_21666/*"q"*/, v19);
-    sub_B0D8A4(&StringLiteral_23260/*"voiceStop"*/, v20);
-    sub_B0D8A4(&StringLiteral_16754/*"bgm"*/, v21);
-    sub_B0D8A4(&StringLiteral_16756/*"bgmStop"*/, v22);
-    sub_B0D8A4(&StringLiteral_23392/*"wt"*/, v23);
-    sub_B0D8A4(&StringLiteral_22009/*"seStop"*/, v24);
-    sub_B0D8A4(&StringLiteral_21475/*"page"*/, v25);
-    sub_B0D8A4(&StringLiteral_23268/*"wait"*/, v26);
-    sub_B0D8A4(&StringLiteral_18399/*"end"*/, v27);
-    sub_B0D8A4(&StringLiteral_20131/*"jingle"*/, v28);
-    sub_B0D8A4(&StringLiteral_22003/*"se"*/, v29);
-    sub_B0D8A4(&StringLiteral_20229/*"l"*/, v30);
-    sub_B0D8A4(&StringLiteral_23254/*"voice"*/, v31);
-    sub_B0D8A4(&StringLiteral_22754/*"time "*/, v32);
-    sub_B0D8A4(&StringLiteral_18858/*"fontSize"*/, v33);
-    sub_B0D8A4(&StringLiteral_22007/*"seLoop"*/, v34);
-    sub_B0D8A4(&StringLiteral_293/*"\""*/, v35);
-    sub_B0D8A4(&StringLiteral_15858/*"[r]"*/, v36);
-    sub_B0D8A4(&StringLiteral_15681/*"["*/, v37);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v38);
-    sub_B0D8A4(&StringLiteral_21948/*"s"*/, v39);
-    sub_B0D8A4(&StringLiteral_15917/*"]"*/, v40);
-    sub_B0D8A4(&StringLiteral_16742/*"betweenHeight"*/, v41);
-    sub_B0D8A4(&StringLiteral_20132/*"jingleStop"*/, v42);
-    sub_B0D8A4(&StringLiteral_22264/*"soundStopAll"*/, v43);
-    this = (CommonMessageManager_o *)sub_B0D8A4(&StringLiteral_960/*"0"*/, v44);
-    byte_4210920 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_string__Add__);
+    sub_B52984(&Method_System_Collections_Generic_List_int__Add__);
+    sub_B52984(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_B52984(&StringLiteral_17583/*"clear"*/);
+    sub_B52984(&StringLiteral_18940/*"font"*/);
+    sub_B52984(&StringLiteral_18783/*"f"*/);
+    sub_B52984(&StringLiteral_22401/*"speed"*/);
+    sub_B52984(&StringLiteral_20235/*"k"*/);
+    sub_B52984(&StringLiteral_21773/*"q"*/);
+    sub_B52984(&StringLiteral_23374/*"voiceStop"*/);
+    sub_B52984(&StringLiteral_16820/*"bgm"*/);
+    sub_B52984(&StringLiteral_16822/*"bgmStop"*/);
+    sub_B52984(&StringLiteral_23507/*"wt"*/);
+    sub_B52984(&StringLiteral_22121/*"seStop"*/);
+    sub_B52984(&StringLiteral_21577/*"page"*/);
+    sub_B52984(&StringLiteral_23382/*"wait"*/);
+    sub_B52984(&StringLiteral_18476/*"end"*/);
+    sub_B52984(&StringLiteral_20219/*"jingle"*/);
+    sub_B52984(&StringLiteral_22115/*"se"*/);
+    sub_B52984(&StringLiteral_20318/*"l"*/);
+    sub_B52984(&StringLiteral_23368/*"voice"*/);
+    sub_B52984(&StringLiteral_22868/*"time "*/);
+    sub_B52984(&StringLiteral_18941/*"fontSize"*/);
+    sub_B52984(&StringLiteral_22119/*"seLoop"*/);
+    sub_B52984(&StringLiteral_295/*"\""*/);
+    sub_B52984(&StringLiteral_15917/*"[r]"*/);
+    sub_B52984(&StringLiteral_15739/*"["*/);
+    sub_B52984(&StringLiteral_1/*""*/);
+    sub_B52984(&StringLiteral_22059/*"s"*/);
+    sub_B52984(&StringLiteral_15976/*"]"*/);
+    sub_B52984(&StringLiteral_16808/*"betweenHeight"*/);
+    sub_B52984(&StringLiteral_20220/*"jingleStop"*/);
+    sub_B52984(&StringLiteral_22376/*"soundStopAll"*/);
+    this = (CommonMessageManager_o *)sub_B52984(&StringLiteral_969/*"0"*/);
+    byte_42AC4C4 = 1;
   }
-  v83[0] = 0;
+  v47[0] = 0;
   if ( !analysData )
     goto LABEL_156;
   m_stringLength = analysData->fields.m_stringLength;
-  v46 = (System_String_o *)StringLiteral_1/*""*/;
+  v13 = (System_String_o *)StringLiteral_1/*""*/;
   if ( m_stringLength >= 1 )
   {
-    v47 = (const MethodInfo_2FC56E8 **)&Method_System_Collections_Generic_List_string__Add__;
-    v48 = 0;
+    v14 = (const MethodInfo_2FF1604 **)&Method_System_Collections_Generic_List_string__Add__;
+    v15 = 0;
     while ( 1 )
     {
       while ( 1 )
       {
-        v49 = v48;
-        v50 = v47;
-        ++v48;
-        Chars = System_String__get_Chars(analysData, v49, 0LL);
-        v52 = Chars;
-        v83[0] = Chars;
+        v16 = v15;
+        v17 = v14;
+        ++v15;
+        Chars = System_String__get_Chars(analysData, v16, 0LL);
+        v19 = Chars;
+        v47[0] = Chars;
         if ( Chars == 91 )
           break;
-        v62 = System_Char__ToString((uint16_t)v83, 0LL);
-        v46 = System_String__Concat_43849904(v46, v62, 0LL);
-        if ( v52 == 34 )
+        v28 = System_Char__ToString((uint16_t)v47, 0LL);
+        v13 = System_String__Concat_44568316(v13, v28, 0LL);
+        if ( v19 == 34 )
         {
-          if ( v48 < m_stringLength )
+          if ( v15 < m_stringLength )
           {
             do
             {
-              v63 = v48 + 1;
-              v83[0] = System_String__get_Chars(analysData, v48, 0LL);
-              if ( v83[0] == 34 )
+              v29 = v15 + 1;
+              v47[0] = System_String__get_Chars(analysData, v15, 0LL);
+              if ( v47[0] == 34 )
                 break;
-              v64 = System_Char__ToString((uint16_t)v83, 0LL);
-              v46 = System_String__Concat_43849904(v46, v64, 0LL);
-              ++v48;
+              v30 = System_Char__ToString((uint16_t)v47, 0LL);
+              v13 = System_String__Concat_44568316(v13, v30, 0LL);
+              ++v15;
             }
-            while ( v63 < m_stringLength );
-            v48 = v63;
+            while ( v29 < m_stringLength );
+            v15 = v29;
           }
-          v47 = v50;
-          v46 = System_String__Concat_43849904(v46, (System_String_o *)StringLiteral_293/*"\""*/, 0LL);
+          v14 = v17;
+          v13 = System_String__Concat_44568316(v13, (System_String_o *)StringLiteral_295/*"\""*/, 0LL);
         }
         else
         {
-          v47 = v50;
+          v14 = v17;
         }
-        if ( v48 >= m_stringLength )
+        if ( v15 >= m_stringLength )
         {
-          v77 = (System_String_o *)StringLiteral_1/*""*/;
+          v41 = (System_String_o *)StringLiteral_1/*""*/;
           goto LABEL_148;
         }
       }
-      this = (CommonMessageManager_o *)System_String__op_Inequality(v46, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+      this = (CommonMessageManager_o *)System_String__op_Inequality(v13, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       if ( ((unsigned __int8)this & 1) != 0 )
       {
         if ( !*scriptDataList )
           goto LABEL_156;
         *lastMessageIndex = (*scriptDataList)->fields._size;
-        this = (CommonMessageManager_o *)*tagDataList;
-        if ( !*tagDataList )
+        this = *v44;
+        if ( !*v44 )
           goto LABEL_156;
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
           0LL,
-          *v50);
-        if ( !v46 )
+          *v17);
+        if ( !v13 )
           goto LABEL_156;
-        v53 = *scriptDataList;
-        this = (CommonMessageManager_o *)System_String__Replace_43857140(
-                                           v46,
-                                           v79->fields.codeReturnString,
-                                           (System_String_o *)StringLiteral_15858/*"[r]"*/,
+        v20 = *scriptDataList;
+        this = (CommonMessageManager_o *)System_String__Replace_44575552(
+                                           v13,
+                                           v43->fields.codeReturnString,
+                                           (System_String_o *)StringLiteral_15917/*"[r]"*/,
                                            0LL);
-        if ( !v53 )
+        if ( !v20 )
           goto LABEL_156;
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v53,
+          (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v20,
           (EventMissionProgressRequest_Argument_ProgressData_o *)this,
-          *v50);
+          *v17);
         this = (CommonMessageManager_o *)*lineDataList;
         if ( !*lineDataList )
           goto LABEL_156;
         System_Collections_Generic_List_int___Add(
           (System_Collections_Generic_List_int__o *)this,
           line,
-          (const MethodInfo_2FAFF00 *)Method_System_Collections_Generic_List_int__Add__);
+          (const MethodInfo_3056FB0 *)Method_System_Collections_Generic_List_int__Add__);
       }
-      v54 = (System_String_o *)StringLiteral_1/*""*/;
-      if ( v48 >= m_stringLength )
+      v21 = (System_String_o *)StringLiteral_1/*""*/;
+      if ( v15 >= m_stringLength )
       {
-        v55 = 0LL;
+        v22 = 0LL;
       }
       else
       {
-        v55 = 0LL;
-        v56 = 0;
-        v57 = v48;
+        v22 = 0LL;
+        v23 = 0;
+        LODWORD(tagDataList) = v15;
         do
         {
-          v48 = v57 + 1;
-          this = (CommonMessageManager_o *)System_String__get_Chars(analysData, v57, 0LL);
-          v83[0] = (__int16)this;
+          v15 = (_DWORD)tagDataList + 1;
+          this = (CommonMessageManager_o *)System_String__get_Chars(analysData, (int32_t)tagDataList, 0LL);
+          v47[0] = (__int16)this;
           if ( (unsigned __int16)this == 91 )
           {
-            ++v56;
+            ++v23;
           }
           else if ( (unsigned __int16)this == 93 )
           {
-            if ( --v56 < 0 )
+            if ( --v23 < 0 )
               break;
           }
-          else if ( (unsigned __int16)this == 32 && v55 == 0LL )
+          else if ( (unsigned __int16)this == 32 && v22 == 0LL )
           {
-            v55 = v54;
+            v22 = v21;
           }
-          v59 = System_Char__ToString((uint16_t)v83, 0LL);
-          this = (CommonMessageManager_o *)System_String__Concat_43849904(v54, v59, 0LL);
-          v54 = (System_String_o *)this;
-          if ( v83[0] == 34 )
+          v25 = System_Char__ToString((uint16_t)v47, 0LL);
+          this = (CommonMessageManager_o *)System_String__Concat_44568316(v21, v25, 0LL);
+          v21 = (System_String_o *)this;
+          if ( v47[0] == 34 )
           {
-            if ( v48 < m_stringLength )
+            if ( v15 < m_stringLength )
             {
               do
               {
-                v60 = v48 + 1;
-                v83[0] = System_String__get_Chars(analysData, v48, 0LL);
-                if ( v83[0] == 34 )
+                v26 = v15 + 1;
+                v47[0] = System_String__get_Chars(analysData, v15, 0LL);
+                if ( v47[0] == 34 )
                   break;
-                v61 = System_Char__ToString((uint16_t)v83, 0LL);
-                v54 = System_String__Concat_43849904(v54, v61, 0LL);
-                ++v48;
+                v27 = System_Char__ToString((uint16_t)v47, 0LL);
+                v21 = System_String__Concat_44568316(v21, v27, 0LL);
+                ++v15;
               }
-              while ( v60 < m_stringLength );
-              v48 = v60;
+              while ( v26 < m_stringLength );
+              v15 = v26;
             }
-            this = (CommonMessageManager_o *)System_String__Concat_43849904(
-                                               v54,
-                                               (System_String_o *)StringLiteral_293/*"\""*/,
+            this = (CommonMessageManager_o *)System_String__Concat_44568316(
+                                               v21,
+                                               (System_String_o *)StringLiteral_295/*"\""*/,
                                                0LL);
-            v54 = (System_String_o *)this;
+            v21 = (System_String_o *)this;
           }
-          v57 = v48;
+          tagDataList = (System_Collections_Generic_List_string__o **)(unsigned int)v15;
         }
-        while ( v48 < m_stringLength );
+        while ( v15 < m_stringLength );
       }
-      if ( !v55 )
-        v55 = v54;
-      v47 = v50;
-      if ( !v55 )
+      if ( !v22 )
+        v22 = v21;
+      v14 = v17;
+      if ( !v22 )
         goto LABEL_133;
-      this = (CommonMessageManager_o *)PrivateImplementationDetails___ComputeStringHash_20827812(v55, 0LL);
+      this = (CommonMessageManager_o *)PrivateImplementationDetails___ComputeStringHash_21189352(v22, 0LL);
       if ( (unsigned int)this <= 0x7B80C780 )
         break;
       if ( (unsigned int)this > 0xA8F18501 )
@@ -949,10 +858,10 @@ void __fastcall CommonMessageManager__AnalysText(
             {
               if ( (_DWORD)this != -166967934 )
                 goto LABEL_133;
-              v65 = (__int64 *)&StringLiteral_21948/*"s"*/;
+              v31 = (__int64 *)&StringLiteral_22059/*"s"*/;
               goto LABEL_114;
             }
-            v76 = &StringLiteral_21666/*"q"*/;
+            v40 = &StringLiteral_21773/*"q"*/;
           }
           else
           {
@@ -960,87 +869,87 @@ void __fastcall CommonMessageManager__AnalysText(
             {
               if ( (_DWORD)this != -281374168 )
                 goto LABEL_133;
-              v65 = &StringLiteral_20131/*"jingle"*/;
+              v31 = &StringLiteral_20219/*"jingle"*/;
               goto LABEL_114;
             }
-            v76 = &StringLiteral_20147/*"k"*/;
+            v40 = &StringLiteral_20235/*"k"*/;
           }
-          this = (CommonMessageManager_o *)System_String__op_Equality(v55, (System_String_o *)*v76, 0LL);
+          this = (CommonMessageManager_o *)System_String__op_Equality(v22, (System_String_o *)*v40, 0LL);
           if ( ((unsigned __int8)this & 1) == 0 )
             goto LABEL_133;
           if ( (*lastMessageIndex & 0x80000000) == 0 )
             *lastMessageIndex = -1;
-          this = (CommonMessageManager_o *)*tagDataList;
-          if ( !*tagDataList )
+          this = *v44;
+          if ( !*v44 )
             goto LABEL_156;
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
             (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
             0LL,
-            *v50);
+            *v17);
           this = (CommonMessageManager_o *)*scriptDataList;
           if ( !*scriptDataList )
             goto LABEL_156;
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
             (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
-            (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_15858/*"[r]"*/,
-            *v50);
+            (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_15917/*"[r]"*/,
+            *v17);
           this = (CommonMessageManager_o *)*lineDataList;
           if ( !*lineDataList )
             goto LABEL_156;
           System_Collections_Generic_List_int___Add(
             (System_Collections_Generic_List_int__o *)this,
             line,
-            (const MethodInfo_2FAFF00 *)Method_System_Collections_Generic_List_int__Add__);
-          this = (CommonMessageManager_o *)*tagDataList;
-          if ( !*tagDataList )
+            (const MethodInfo_3056FB0 *)Method_System_Collections_Generic_List_int__Add__);
+          this = *v44;
+          if ( !*v44 )
             goto LABEL_156;
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
             (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
-            (EventMissionProgressRequest_Argument_ProgressData_o *)v55,
-            *v50);
+            (EventMissionProgressRequest_Argument_ProgressData_o *)v22,
+            *v17);
           this = (CommonMessageManager_o *)*scriptDataList;
           if ( !*scriptDataList )
             goto LABEL_156;
-          v75 = *v50;
-          v72 = (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_1/*""*/;
+          v39 = *v17;
+          tagDataList = (System_Collections_Generic_List_string__o **)StringLiteral_1/*""*/;
           goto LABEL_138;
         }
         switch ( (_DWORD)this )
         {
           case 0xC73F3BA9:
-            v65 = &StringLiteral_23260/*"voiceStop"*/;
+            v31 = &StringLiteral_23374/*"voiceStop"*/;
             break;
           case 0xE30C2799:
-            v65 = &StringLiteral_18703/*"f"*/;
+            v31 = &StringLiteral_18783/*"f"*/;
             break;
           case 0xE90C310B:
-            v65 = &StringLiteral_20229/*"l"*/;
+            v31 = &StringLiteral_20318/*"l"*/;
             break;
           default:
             goto LABEL_133;
         }
 LABEL_114:
-        this = (CommonMessageManager_o *)System_String__op_Equality(v55, (System_String_o *)*v65, 0LL);
+        this = (CommonMessageManager_o *)System_String__op_Equality(v22, (System_String_o *)*v31, 0LL);
         if ( ((unsigned __int8)this & 1) == 0 )
           goto LABEL_133;
-        if ( !v54 )
+        if ( !v21 )
           goto LABEL_156;
-        v73 = v55->fields.m_stringLength + 1;
-        v74 = (EventMissionProgressRequest_Argument_ProgressData_o *)(v54->fields.m_stringLength <= v73
-                                                                    ? StringLiteral_1/*""*/
-                                                                    : System_String__Substring(v54, v73, 0LL));
-        this = (CommonMessageManager_o *)*tagDataList;
-        if ( !*tagDataList )
+        tagDataList = (System_Collections_Generic_List_string__o **)(unsigned int)(v22->fields.m_stringLength + 1);
+        v38 = (System_Collections_Generic_List_string__o **)(v21->fields.m_stringLength <= (int)tagDataList
+                                                           ? StringLiteral_1/*""*/
+                                                           : System_String__Substring(v21, (int32_t)tagDataList, 0LL));
+        this = *v44;
+        if ( !*v44 )
           goto LABEL_156;
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)v55,
-          *v50);
+          (EventMissionProgressRequest_Argument_ProgressData_o *)v22,
+          *v17);
         this = (CommonMessageManager_o *)*scriptDataList;
         if ( !*scriptDataList )
           goto LABEL_156;
-        v75 = *v50;
-        v72 = v74;
+        v39 = *v17;
+        tagDataList = v38;
         goto LABEL_138;
       }
       if ( (unsigned int)this > 0x815DFA76 )
@@ -1048,13 +957,13 @@ LABEL_114:
         switch ( (_DWORD)this )
         {
           case 0x892E4CA0:
-            v65 = &StringLiteral_23268/*"wait"*/;
+            v31 = &StringLiteral_23382/*"wait"*/;
             break;
           case 0x9859D490:
-            v65 = &StringLiteral_16742/*"betweenHeight"*/;
+            v31 = &StringLiteral_16808/*"betweenHeight"*/;
             break;
           case 0xA8F18501:
-            v65 = &StringLiteral_18858/*"fontSize"*/;
+            v31 = &StringLiteral_18941/*"fontSize"*/;
             break;
           default:
             goto LABEL_133;
@@ -1067,84 +976,84 @@ LABEL_114:
         {
           if ( (_DWORD)this == 2140916217 )
           {
-            v65 = &StringLiteral_23254/*"voice"*/;
+            v31 = &StringLiteral_23368/*"voice"*/;
             goto LABEL_114;
           }
 LABEL_133:
           if ( !*scriptDataList )
             goto LABEL_156;
           *lastMessageIndex = (*scriptDataList)->fields._size;
-          this = (CommonMessageManager_o *)*tagDataList;
-          if ( !*tagDataList )
+          this = *v44;
+          if ( !*v44 )
             goto LABEL_156;
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
             (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
             0LL,
-            *v50);
-          v67 = (CommonMessageManager_o *)*scriptDataList;
-          this = (CommonMessageManager_o *)System_String__Concat_43852188(
-                                             (System_String_o *)StringLiteral_15681/*"["*/,
-                                             v54,
-                                             (System_String_o *)StringLiteral_15917/*"]"*/,
+            *v17);
+          v33 = (CommonMessageManager_o *)*scriptDataList;
+          this = (CommonMessageManager_o *)System_String__Concat_44570600(
+                                             (System_String_o *)StringLiteral_15739/*"["*/,
+                                             v21,
+                                             (System_String_o *)StringLiteral_15976/*"]"*/,
                                              0LL);
-          if ( !v67 )
+          if ( !v33 )
             goto LABEL_156;
 LABEL_136:
-          v72 = (EventMissionProgressRequest_Argument_ProgressData_o *)this;
+          tagDataList = (System_Collections_Generic_List_string__o **)this;
 LABEL_137:
-          v75 = *v47;
-          this = v67;
+          v39 = *v14;
+          this = v33;
 LABEL_138:
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
             (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
-            v72,
-            v75);
+            (EventMissionProgressRequest_Argument_ProgressData_o *)tagDataList,
+            v39);
           this = (CommonMessageManager_o *)*lineDataList;
           if ( !*lineDataList )
             goto LABEL_156;
           System_Collections_Generic_List_int___Add(
             (System_Collections_Generic_List_int__o *)this,
             line,
-            (const MethodInfo_2FAFF00 *)Method_System_Collections_Generic_List_int__Add__);
+            (const MethodInfo_3056FB0 *)Method_System_Collections_Generic_List_int__Add__);
           goto LABEL_140;
         }
-        v70 = &StringLiteral_21475/*"page"*/;
+        v36 = &StringLiteral_21577/*"page"*/;
 LABEL_99:
-        this = (CommonMessageManager_o *)System_String__op_Equality(v55, (System_String_o *)*v70, 0LL);
+        this = (CommonMessageManager_o *)System_String__op_Equality(v22, (System_String_o *)*v36, 0LL);
         if ( ((unsigned __int8)this & 1) == 0 )
           goto LABEL_133;
-        this = (CommonMessageManager_o *)*tagDataList;
-        if ( !*tagDataList )
+        this = *v44;
+        if ( !*v44 )
           goto LABEL_156;
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)v55,
-          *v50);
-        if ( !v54 )
+          (EventMissionProgressRequest_Argument_ProgressData_o *)v22,
+          *v17);
+        if ( !v21 )
           goto LABEL_156;
-        v71 = v55->fields.m_stringLength;
-        v67 = (CommonMessageManager_o *)*scriptDataList;
-        if ( v54->fields.m_stringLength <= v71 + 1 )
+        v37 = v22->fields.m_stringLength;
+        v33 = (CommonMessageManager_o *)*scriptDataList;
+        if ( v21->fields.m_stringLength <= v37 + 1 )
         {
-          v72 = (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_1/*""*/;
-          if ( !v67 )
+          tagDataList = (System_Collections_Generic_List_string__o **)StringLiteral_1/*""*/;
+          if ( !v33 )
             goto LABEL_156;
         }
         else
         {
-          this = (CommonMessageManager_o *)System_String__Substring(v54, v71 + 1, 0LL);
-          v72 = (EventMissionProgressRequest_Argument_ProgressData_o *)this;
-          if ( !v67 )
+          this = (CommonMessageManager_o *)System_String__Substring(v21, v37 + 1, 0LL);
+          tagDataList = (System_Collections_Generic_List_string__o **)this;
+          if ( !v33 )
             goto LABEL_156;
         }
         goto LABEL_137;
       }
-      if ( v55->fields.m_stringLength )
+      if ( v22->fields.m_stringLength )
         goto LABEL_133;
 LABEL_140:
-      v46 = (System_String_o *)StringLiteral_1/*""*/;
-      v77 = (System_String_o *)StringLiteral_1/*""*/;
-      if ( v48 >= m_stringLength )
+      v13 = (System_String_o *)StringLiteral_1/*""*/;
+      v41 = (System_String_o *)StringLiteral_1/*""*/;
+      if ( v15 >= m_stringLength )
         goto LABEL_148;
     }
     if ( (unsigned int)this > 0x4B4794E6 )
@@ -1154,13 +1063,13 @@ LABEL_140:
         switch ( (_DWORD)this )
         {
           case 0x6A8E75AA:
-            v65 = &StringLiteral_18399/*"end"*/;
+            v31 = &StringLiteral_18476/*"end"*/;
             break;
           case 0x6EE5B7E7:
-            v65 = &StringLiteral_22264/*"soundStopAll"*/;
+            v31 = &StringLiteral_22376/*"soundStopAll"*/;
             break;
           case 0x7B80C780:
-            v65 = &StringLiteral_22289/*"speed"*/;
+            v31 = &StringLiteral_22401/*"speed"*/;
             break;
           default:
             goto LABEL_133;
@@ -1171,13 +1080,13 @@ LABEL_140:
         switch ( (_DWORD)this )
         {
           case 0x5C6E1222:
-            v70 = &StringLiteral_17514/*"clear"*/;
+            v36 = &StringLiteral_17583/*"clear"*/;
             goto LABEL_99;
           case 0x5DB2D891:
-            v65 = &StringLiteral_16754/*"bgm"*/;
+            v31 = &StringLiteral_16820/*"bgm"*/;
             break;
           case 0x667B7330:
-            v65 = &StringLiteral_20132/*"jingleStop"*/;
+            v31 = &StringLiteral_20220/*"jingleStop"*/;
             break;
           default:
             goto LABEL_133;
@@ -1189,32 +1098,32 @@ LABEL_140:
       switch ( (_DWORD)this )
       {
         case 0x3C520AA5:
-          v65 = &StringLiteral_22003/*"se"*/;
+          v31 = &StringLiteral_22115/*"se"*/;
           break;
         case 0x47410F2B:
-          v65 = &StringLiteral_22007/*"seLoop"*/;
+          v31 = &StringLiteral_22119/*"seLoop"*/;
           break;
         case 0x4B4794E6:
-          this = (CommonMessageManager_o *)System_String__op_Equality(v55, (System_String_o *)StringLiteral_23392/*"wt"*/, 0LL);
+          this = (CommonMessageManager_o *)System_String__op_Equality(v22, (System_String_o *)StringLiteral_23507/*"wt"*/, 0LL);
           if ( ((unsigned __int8)this & 1) == 0 )
             goto LABEL_133;
-          this = (CommonMessageManager_o *)*tagDataList;
-          if ( !*tagDataList )
+          this = *v44;
+          if ( !*v44 )
             goto LABEL_156;
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
             (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
-            (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_23268/*"wait"*/,
-            *v50);
-          if ( !v54 )
+            (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_23382/*"wait"*/,
+            *v17);
+          if ( !v21 )
             goto LABEL_156;
-          v66 = v55->fields.m_stringLength;
-          v67 = (CommonMessageManager_o *)*scriptDataList;
-          v68 = (System_String_o *)StringLiteral_22754/*"time "*/;
-          v69 = v54->fields.m_stringLength <= v66 + 1
-              ? (System_String_o *)StringLiteral_960/*"0"*/
-              : System_String__Substring(v54, v66 + 1, 0LL);
-          this = (CommonMessageManager_o *)System_String__Concat_43849904(v68, v69, 0LL);
-          if ( !v67 )
+          v32 = v22->fields.m_stringLength;
+          v33 = (CommonMessageManager_o *)*scriptDataList;
+          v34 = (System_String_o *)StringLiteral_22868/*"time "*/;
+          v35 = v21->fields.m_stringLength <= v32 + 1
+              ? (System_String_o *)StringLiteral_969/*"0"*/
+              : System_String__Substring(v21, v32 + 1, 0LL);
+          this = (CommonMessageManager_o *)System_String__Concat_44568316(v34, v35, 0LL);
+          if ( !v33 )
             goto LABEL_156;
           goto LABEL_136;
         default:
@@ -1226,13 +1135,13 @@ LABEL_140:
       switch ( (_DWORD)this )
       {
         case 0x274E1290:
-          v65 = &StringLiteral_18857/*"font"*/;
+          v31 = &StringLiteral_18940/*"font"*/;
           break;
         case 0x34A684A5:
-          v65 = &StringLiteral_22009/*"seStop"*/;
+          v31 = &StringLiteral_22121/*"seStop"*/;
           break;
         case 0x3B958991:
-          v65 = &StringLiteral_16756/*"bgmStop"*/;
+          v31 = &StringLiteral_16822/*"bgmStop"*/;
           goto LABEL_114;
         default:
           goto LABEL_133;
@@ -1240,42 +1149,42 @@ LABEL_140:
     }
     goto LABEL_114;
   }
-  v77 = (System_String_o *)StringLiteral_1/*""*/;
+  v41 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_148:
-  this = (CommonMessageManager_o *)System_String__op_Inequality(v46, v77, 0LL);
+  this = (CommonMessageManager_o *)System_String__op_Inequality(v13, v41, 0LL);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
     if ( *scriptDataList )
     {
       *lastMessageIndex = (*scriptDataList)->fields._size;
-      this = (CommonMessageManager_o *)*tagDataList;
-      if ( *tagDataList )
+      this = *v44;
+      if ( *v44 )
       {
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
           0LL,
-          (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_string__Add__);
-        if ( v46 )
+          (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
+        if ( v13 )
         {
-          v78 = *scriptDataList;
-          this = (CommonMessageManager_o *)System_String__Replace_43857140(
-                                             v46,
-                                             v79->fields.codeReturnString,
-                                             (System_String_o *)StringLiteral_15858/*"[r]"*/,
+          v42 = *scriptDataList;
+          this = (CommonMessageManager_o *)System_String__Replace_44575552(
+                                             v13,
+                                             v43->fields.codeReturnString,
+                                             (System_String_o *)StringLiteral_15917/*"[r]"*/,
                                              0LL);
-          if ( v78 )
+          if ( v42 )
           {
             System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-              (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v78,
+              (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v42,
               (EventMissionProgressRequest_Argument_ProgressData_o *)this,
-              (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_string__Add__);
+              (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
             this = (CommonMessageManager_o *)*lineDataList;
             if ( *lineDataList )
             {
               System_Collections_Generic_List_int___Add(
                 (System_Collections_Generic_List_int__o *)this,
                 line,
-                (const MethodInfo_2FAFF00 *)Method_System_Collections_Generic_List_int__Add__);
+                (const MethodInfo_3056FB0 *)Method_System_Collections_Generic_List_int__Add__);
               return;
             }
           }
@@ -1283,7 +1192,7 @@ LABEL_148:
       }
     }
 LABEL_156:
-    sub_B0D97C(this);
+    sub_B52A5C(this, tagDataList);
   }
 }
 
@@ -1299,7 +1208,7 @@ void __fastcall CommonMessageManager__EndExecuteScript(CommonMessageManager_o *t
   {
     p_callbackFunc = &this->fields.callbackFunc;
     *p_callbackFunc = 0LL;
-    sub_B0D840(p_callbackFunc, 0LL);
+    sub_B52920(p_callbackFunc);
     System_Action__Invoke(callbackFunc, 0LL);
   }
 }
@@ -1307,42 +1216,30 @@ void __fastcall CommonMessageManager__EndExecuteScript(CommonMessageManager_o *t
 
 void __fastcall CommonMessageManager__Init(CommonMessageManager_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  struct System_String_o *v7; // x0
-  struct System_String_o *v8; // x0
-  struct System_String_o *v9; // x0
-  struct System_String_o *v10; // x0
-
-  if ( (byte_421091D & 1) == 0 )
+  if ( (byte_42AC4C1 & 1) == 0 )
   {
-    sub_B0D8A4(&LocalizationManager_TypeInfo, method);
-    sub_B0D8A4(&StringLiteral_11616/*"SCRIPT_ACTION_CODE_COMMENT"*/, v3);
-    sub_B0D8A4(&StringLiteral_11625/*"SCRIPT_ACTION_CODE_VOICE"*/, v4);
-    sub_B0D8A4(&StringLiteral_11619/*"SCRIPT_ACTION_CODE_RETURN"*/, v5);
-    sub_B0D8A4(&StringLiteral_11624/*"SCRIPT_ACTION_CODE_TALK"*/, v6);
-    byte_421091D = 1;
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&StringLiteral_11676/*"SCRIPT_ACTION_CODE_COMMENT"*/);
+    sub_B52984(&StringLiteral_11685/*"SCRIPT_ACTION_CODE_VOICE"*/);
+    sub_B52984(&StringLiteral_11679/*"SCRIPT_ACTION_CODE_RETURN"*/);
+    sub_B52984(&StringLiteral_11684/*"SCRIPT_ACTION_CODE_TALK"*/);
+    byte_42AC4C1 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_11616/*"SCRIPT_ACTION_CODE_COMMENT"*/, 0LL);
-  this->fields.codeCommentString = v7;
-  sub_B0D840(&this->fields.codeCommentString, v7);
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_11624/*"SCRIPT_ACTION_CODE_TALK"*/, 0LL);
-  this->fields.codeTalkString = v8;
-  sub_B0D840(&this->fields.codeTalkString, v8);
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11625/*"SCRIPT_ACTION_CODE_VOICE"*/, 0LL);
-  this->fields.codeVoiceString = v9;
-  sub_B0D840(&this->fields.codeVoiceString, v9);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_11619/*"SCRIPT_ACTION_CODE_RETURN"*/, 0LL);
-  this->fields.codeReturnString = v10;
-  sub_B0D840(&this->fields.codeReturnString, v10);
+  this->fields.codeCommentString = LocalizationManager__Get((System_String_o *)StringLiteral_11676/*"SCRIPT_ACTION_CODE_COMMENT"*/, 0LL);
+  sub_B52920(&this->fields.codeCommentString);
+  this->fields.codeTalkString = LocalizationManager__Get((System_String_o *)StringLiteral_11684/*"SCRIPT_ACTION_CODE_TALK"*/, 0LL);
+  sub_B52920(&this->fields.codeTalkString);
+  this->fields.codeVoiceString = LocalizationManager__Get((System_String_o *)StringLiteral_11685/*"SCRIPT_ACTION_CODE_VOICE"*/, 0LL);
+  sub_B52920(&this->fields.codeVoiceString);
+  this->fields.codeReturnString = LocalizationManager__Get((System_String_o *)StringLiteral_11679/*"SCRIPT_ACTION_CODE_RETURN"*/, 0LL);
+  sub_B52920(&this->fields.codeReturnString);
   ScriptMessageCommonManager__ResetLongPress((ScriptMessageCommonManager_o *)this, 0LL);
+  ScriptMessageCommonManager__ResetMessageWindow((ScriptMessageCommonManager_o *)this, 0LL);
   ScriptMessageCommonManager__QuitScreen((ScriptMessageCommonManager_o *)this, 0LL);
   ScriptMessageCommonManager__Shake((ScriptMessageCommonManager_o *)this, 0.0, 0.0, 0.0, 0.0, 0LL);
   ScriptMessageCommonManager__OffScreen((ScriptMessageCommonManager_o *)this, 0LL);
@@ -1363,7 +1260,7 @@ void __fastcall CommonMessageManager__OnClickWindow(CommonMessageManager_o *this
   if ( touchCallbackFunc )
   {
     this->fields.touchCallbackFunc = 0LL;
-    sub_B0D840(&this->fields.touchCallbackFunc, 0LL);
+    sub_B52920(&this->fields.touchCallbackFunc);
     System_Action__Invoke(touchCallbackFunc, 0LL);
   }
 }
@@ -1378,7 +1275,7 @@ void __fastcall CommonMessageManager__OnPressWindow(CommonMessageManager_o *this
   if ( touchCallbackFunc )
   {
     this->fields.touchCallbackFunc = 0LL;
-    sub_B0D840(&this->fields.touchCallbackFunc, 0LL);
+    sub_B52920(&this->fields.touchCallbackFunc);
     System_Action__Invoke(touchCallbackFunc, 0LL);
   }
 }
@@ -1391,33 +1288,6 @@ bool __fastcall CommonMessageManager__ProcessScript(
 {
   const MethodInfo *v3; // x2
   CommonMessageManager_o *v5; // x19
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
-  __int64 v23; // x1
-  __int64 v24; // x1
-  __int64 v25; // x1
-  __int64 v26; // x1
-  __int64 v27; // x1
-  __int64 v28; // x1
-  __int64 v29; // x1
-  __int64 v30; // x1
-  __int64 v31; // x1
-  __int64 v32; // x1
   int state; // w8
   System_String_o **p_waitType; // x20
   System_String_o **p_waitMessage; // x21
@@ -1425,75 +1295,70 @@ bool __fastcall CommonMessageManager__ProcessScript(
   struct System_String_array *executeTagList; // x9
   struct System_String_array *executeDataList; // x10
   struct System_Int32_array *executeLineList; // x11
-  System_String_o *v40; // x25
-  System_String_o *v41; // x24
-  System_String_array *v42; // x0
-  System_String_array *v43; // x23
-  __int64 *v44; // x8
-  __int64 v45; // x1
-  struct System_String_o **v46; // x0
-  System_String_o *v47; // x1
-  System_String_o *v48; // x23
-  uint32_t v49; // w0
-  __int64 v50; // x1
-  __int64 *v51; // x8
-  __int64 v52; // x1
-  System_String_o **v53; // x8
-  __int64 *v54; // x8
-  System_String_o *v55; // x1
+  System_String_o *v13; // x25
+  System_String_o *v14; // x24
+  System_String_array *v15; // x0
+  System_String_array *v16; // x23
+  __int64 *v17; // x8
+  struct System_String_o **v18; // x0
+  System_String_o *v19; // x23
+  uint32_t v20; // w0
+  __int64 *v21; // x8
+  System_String_o **v22; // x8
+  __int64 *v23; // x8
+  System_String_o *v24; // x1
   int32_t playSpeed; // w8
-  const MethodInfo *v57; // x2
-  __int64 *v58; // x8
-  __int64 *v59; // x8
-  __int64 v60; // x9
-  float v61; // s0
-  ScriptMessageCommonManager_o *v62; // x0
-  System_String_o *v63; // x1
-  __int64 v64; // x9
-  float v65; // s0
-  ScriptMessageCommonManager_o *v66; // x0
-  __int64 v67; // x9
-  System_String_o *v68; // x1
-  ScriptMessageCommonManager_o *v69; // x0
-  System_String_o *v70; // x2
+  const MethodInfo *v26; // x2
+  __int64 *v27; // x8
+  __int64 *v28; // x8
+  __int64 v29; // x9
+  float v30; // s0
+  ScriptMessageCommonManager_o *v31; // x0
+  System_String_o *v32; // x1
+  __int64 v33; // x9
+  float v34; // s0
+  ScriptMessageCommonManager_o *v35; // x0
+  __int64 v36; // x9
+  System_String_o *v37; // x1
+  ScriptMessageCommonManager_o *v38; // x0
+  System_String_o *v39; // x2
   _BOOL4 isBusy; // w20
-  __int64 *v73; // x8
-  __int64 v74; // x1
-  __int64 v75; // x0
+  __int64 *v42; // x8
+  __int64 v43; // x0
   System_String_o **p_waitTalkName; // [xsp+8h] [xbp-68h]
 
   v5 = this;
-  if ( (byte_4210922 & 1) == 0 )
+  if ( (byte_42AC4C6 & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_20545/*"messageOn"*/, method);
-    sub_B0D8A4(&StringLiteral_17514/*"clear"*/, v6);
-    sub_B0D8A4(&StringLiteral_18857/*"font"*/, v7);
-    sub_B0D8A4(&StringLiteral_21479/*"page3"*/, v8);
-    sub_B0D8A4(&StringLiteral_20543/*"messageOff"*/, v9);
-    sub_B0D8A4(&StringLiteral_21478/*"page2"*/, v10);
-    sub_B0D8A4(&StringLiteral_18703/*"f"*/, v11);
-    sub_B0D8A4(&StringLiteral_22289/*"speed"*/, v12);
-    sub_B0D8A4(&StringLiteral_20147/*"k"*/, v13);
-    sub_B0D8A4(&StringLiteral_753/*"-"*/, v14);
-    sub_B0D8A4(&StringLiteral_21666/*"q"*/, v15);
-    sub_B0D8A4(&StringLiteral_21485/*"parameter error"*/, v16);
-    sub_B0D8A4(&StringLiteral_22814/*"touch2"*/, v17);
-    sub_B0D8A4(&StringLiteral_21475/*"page"*/, v18);
-    sub_B0D8A4(&StringLiteral_23268/*"wait"*/, v19);
-    sub_B0D8A4(&StringLiteral_21484/*"parameter be unnecessary"*/, v20);
-    sub_B0D8A4(&StringLiteral_18399/*"end"*/, v21);
-    sub_B0D8A4(&StringLiteral_20539/*"message2"*/, v22);
-    sub_B0D8A4(&StringLiteral_20229/*"l"*/, v23);
-    sub_B0D8A4(&StringLiteral_18858/*"fontSize"*/, v24);
-    sub_B0D8A4(&StringLiteral_20536/*"message"*/, v25);
-    sub_B0D8A4(&StringLiteral_22671/*"talkName"*/, v26);
-    sub_B0D8A4(&StringLiteral_22813/*"touch"*/, v27);
-    sub_B0D8A4(&StringLiteral_20540/*"message3"*/, v28);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v29);
-    sub_B0D8A4(&StringLiteral_21948/*"s"*/, v30);
-    sub_B0D8A4(&StringLiteral_16742/*"betweenHeight"*/, v31);
-    this = (CommonMessageManager_o *)sub_B0D8A4(&StringLiteral_17516/*"clear2"*/, v32);
-    byte_4210922 = 1;
+    sub_B52984(&StringLiteral_20639/*"messageOn"*/);
+    sub_B52984(&StringLiteral_17583/*"clear"*/);
+    sub_B52984(&StringLiteral_18940/*"font"*/);
+    sub_B52984(&StringLiteral_21581/*"page3"*/);
+    sub_B52984(&StringLiteral_20637/*"messageOff"*/);
+    sub_B52984(&StringLiteral_21580/*"page2"*/);
+    sub_B52984(&StringLiteral_18783/*"f"*/);
+    sub_B52984(&StringLiteral_22401/*"speed"*/);
+    sub_B52984(&StringLiteral_20235/*"k"*/);
+    sub_B52984(&StringLiteral_757/*"-"*/);
+    sub_B52984(&StringLiteral_21773/*"q"*/);
+    sub_B52984(&StringLiteral_21587/*"parameter error"*/);
+    sub_B52984(&StringLiteral_22928/*"touch2"*/);
+    sub_B52984(&StringLiteral_21577/*"page"*/);
+    sub_B52984(&StringLiteral_23382/*"wait"*/);
+    sub_B52984(&StringLiteral_21586/*"parameter be unnecessary"*/);
+    sub_B52984(&StringLiteral_18476/*"end"*/);
+    sub_B52984(&StringLiteral_20631/*"message2"*/);
+    sub_B52984(&StringLiteral_20318/*"l"*/);
+    sub_B52984(&StringLiteral_18941/*"fontSize"*/);
+    sub_B52984(&StringLiteral_20628/*"message"*/);
+    sub_B52984(&StringLiteral_22785/*"talkName"*/);
+    sub_B52984(&StringLiteral_22927/*"touch"*/);
+    sub_B52984(&StringLiteral_20632/*"message3"*/);
+    sub_B52984(&StringLiteral_1/*""*/);
+    sub_B52984(&StringLiteral_22059/*"s"*/);
+    sub_B52984(&StringLiteral_16808/*"betweenHeight"*/);
+    this = (CommonMessageManager_o *)sub_B52984(&StringLiteral_17585/*"clear2"*/);
+    byte_42AC4C6 = 1;
   }
   state = v5->fields.state;
   if ( !state )
@@ -1508,245 +1373,240 @@ bool __fastcall CommonMessageManager__ProcessScript(
       if ( state != 4 )
       {
         if ( state != 3 )
-          goto LABEL_176;
+          goto LABEL_175;
         executeIndex = v5->fields.executeIndex;
         if ( (int)executeIndex >= v5->fields.executeIndexMax )
         {
           CommonMessageManager__EndExecuteScript(v5, method);
-          goto LABEL_176;
+          goto LABEL_175;
         }
         if ( v5->fields.playSpeed == 1 )
-          goto LABEL_176;
+          goto LABEL_175;
         executeTagList = v5->fields.executeTagList;
         if ( !executeTagList )
-          goto LABEL_192;
-        if ( (unsigned int)executeIndex >= executeTagList->max_length )
           goto LABEL_191;
+        if ( (unsigned int)executeIndex >= executeTagList->max_length )
+          goto LABEL_190;
         executeDataList = v5->fields.executeDataList;
         if ( !executeDataList )
-          goto LABEL_192;
-        if ( (unsigned int)executeIndex >= executeDataList->max_length )
           goto LABEL_191;
+        if ( (unsigned int)executeIndex >= executeDataList->max_length )
+          goto LABEL_190;
         executeLineList = v5->fields.executeLineList;
         if ( !executeLineList )
-LABEL_192:
-          sub_B0D97C(this);
+LABEL_191:
+          sub_B52A5C(this, method);
         if ( (unsigned int)executeIndex >= executeLineList->max_length )
-          goto LABEL_191;
-        v40 = executeDataList->m_Items[executeIndex];
-        v41 = executeTagList->m_Items[executeIndex];
-        v42 = CommonMessageManager__AnalysParam(this, v40, v3);
-        if ( !v41 )
+          goto LABEL_190;
+        v13 = executeDataList->m_Items[executeIndex];
+        v14 = executeTagList->m_Items[executeIndex];
+        v15 = CommonMessageManager__AnalysParam(this, v13, v3);
+        if ( !v14 )
         {
           if ( v5->fields.isBusy )
-            goto LABEL_184;
+            goto LABEL_183;
           v5->fields.state = 4;
-          v50 = StringLiteral_20536/*"message"*/;
-          v5->fields.waitType = (struct System_String_o *)StringLiteral_20536/*"message"*/;
-          sub_B0D840(&v5->fields.waitType, v50);
-          v5->fields.waitMessage = v40;
-          v46 = &v5->fields.waitMessage;
+          v5->fields.waitType = (struct System_String_o *)StringLiteral_20628/*"message"*/;
+          sub_B52920(&v5->fields.waitType);
+          v5->fields.waitMessage = v13;
+          v18 = &v5->fields.waitMessage;
           goto LABEL_41;
         }
-        v43 = v42;
-        this = (CommonMessageManager_o *)PrivateImplementationDetails___ComputeStringHash_20827812(v41, 0LL);
+        v16 = v15;
+        this = (CommonMessageManager_o *)PrivateImplementationDetails___ComputeStringHash_21189352(v14, 0LL);
         if ( (unsigned int)this <= 0x84F7AC69 )
         {
           if ( (unsigned int)this <= 0x5C6E1222 )
           {
             if ( (unsigned int)this <= 0x20BD548D )
             {
-              if ( (_DWORD)this != 452920428 )
+              if ( (_DWORD)this == 452920428 )
               {
-                if ( (_DWORD)this != 549278861 )
-                  goto LABEL_43;
                 this = (CommonMessageManager_o *)System_String__op_Equality(
-                                                   v41,
-                                                   (System_String_o *)StringLiteral_20545/*"messageOn"*/,
+                                                   v14,
+                                                   (System_String_o *)StringLiteral_22785/*"talkName"*/,
                                                    0LL);
                 if ( ((unsigned __int8)this & 1) == 0 )
-                  goto LABEL_43;
-                if ( !v43 )
-                  goto LABEL_192;
-                v44 = &StringLiteral_21485/*"parameter error"*/;
-                if ( !*(_QWORD *)&v43->max_length )
-                {
-                  ScriptMessageCommonManager__OffScreen((ScriptMessageCommonManager_o *)v5, 0LL);
-                  ScriptMessageCommonManager__ClearText((ScriptMessageCommonManager_o *)v5, 0LL);
-                  v5->fields.state = 4;
-                  v45 = StringLiteral_20536/*"message"*/;
-                  v5->fields.waitType = (struct System_String_o *)StringLiteral_20536/*"message"*/;
-                  sub_B0D840(&v5->fields.waitType, v45);
-                  v46 = &v5->fields.waitMessage;
-                  v47 = 0LL;
-                  v5->fields.waitMessage = 0LL;
-LABEL_42:
-                  this = (CommonMessageManager_o *)sub_B0D840(v46, v47);
-                  goto LABEL_43;
-                }
-LABEL_173:
-                if ( *v44 )
-                {
-                  v5->fields.state = 11;
-                  goto LABEL_176;
-                }
-                goto LABEL_43;
+                  goto LABEL_42;
+                v18 = &v5->fields.waitTalkName;
+                *p_waitTalkName = v13;
+                goto LABEL_41;
               }
+              if ( (_DWORD)this != 549278861 )
+                goto LABEL_42;
               this = (CommonMessageManager_o *)System_String__op_Equality(
-                                                 v41,
-                                                 (System_String_o *)StringLiteral_22671/*"talkName"*/,
+                                                 v14,
+                                                 (System_String_o *)StringLiteral_20639/*"messageOn"*/,
                                                  0LL);
               if ( ((unsigned __int8)this & 1) == 0 )
-                goto LABEL_43;
-              v46 = &v5->fields.waitTalkName;
-              *p_waitTalkName = v40;
+                goto LABEL_42;
+              if ( !v16 )
+                goto LABEL_191;
+              v17 = &StringLiteral_21587/*"parameter error"*/;
+              if ( !*(_QWORD *)&v16->max_length )
+              {
+                ScriptMessageCommonManager__OffScreen((ScriptMessageCommonManager_o *)v5, 0LL);
+                ScriptMessageCommonManager__ClearText((ScriptMessageCommonManager_o *)v5, 0LL);
+                v5->fields.state = 4;
+                v5->fields.waitType = (struct System_String_o *)StringLiteral_20628/*"message"*/;
+                sub_B52920(&v5->fields.waitType);
+                v18 = &v5->fields.waitMessage;
+                v5->fields.waitMessage = 0LL;
 LABEL_41:
-              v47 = v40;
+                sub_B52920(v18);
+                goto LABEL_42;
+              }
+LABEL_172:
+              if ( *v17 )
+              {
+                v5->fields.state = 11;
+                goto LABEL_175;
+              }
               goto LABEL_42;
             }
             if ( (_DWORD)this != 659427984 )
             {
               if ( (_DWORD)this != 1550717474 )
-                goto LABEL_43;
+                goto LABEL_42;
               this = (CommonMessageManager_o *)System_String__op_Equality(
-                                                 v41,
-                                                 (System_String_o *)StringLiteral_17514/*"clear"*/,
+                                                 v14,
+                                                 (System_String_o *)StringLiteral_17583/*"clear"*/,
                                                  0LL);
               if ( ((unsigned __int8)this & 1) == 0 )
-                goto LABEL_43;
-              if ( !v43 )
-                goto LABEL_192;
-              v44 = &StringLiteral_21484/*"parameter be unnecessary"*/;
-              if ( *(_QWORD *)&v43->max_length )
-                goto LABEL_173;
+                goto LABEL_42;
+              if ( !v16 )
+                goto LABEL_191;
+              v17 = &StringLiteral_21586/*"parameter be unnecessary"*/;
+              if ( *(_QWORD *)&v16->max_length )
+                goto LABEL_172;
               v5->fields.state = 4;
-              v54 = &StringLiteral_17514/*"clear"*/;
-              goto LABEL_158;
+              v23 = &StringLiteral_17583/*"clear"*/;
+              goto LABEL_157;
             }
-            v59 = &StringLiteral_18857/*"font"*/;
-LABEL_149:
-            this = (CommonMessageManager_o *)System_String__op_Equality(v41, (System_String_o *)*v59, 0LL);
+            v28 = &StringLiteral_18940/*"font"*/;
+LABEL_148:
+            this = (CommonMessageManager_o *)System_String__op_Equality(v14, (System_String_o *)*v28, 0LL);
             if ( ((unsigned __int8)this & 1) == 0 )
-              goto LABEL_43;
-            if ( !v43 )
-              goto LABEL_192;
-            v67 = *(_QWORD *)&v43->max_length;
-            if ( (_DWORD)v67 == 1 )
+              goto LABEL_42;
+            if ( !v16 )
+              goto LABEL_191;
+            v36 = *(_QWORD *)&v16->max_length;
+            if ( (_DWORD)v36 == 1 )
             {
-              v68 = v43->m_Items[0];
-              v69 = (ScriptMessageCommonManager_o *)v5;
+              v37 = v16->m_Items[0];
+              v38 = (ScriptMessageCommonManager_o *)v5;
             }
             else
             {
-              if ( (int)v67 >= 3 )
+              if ( (int)v36 >= 3 )
               {
-                v68 = v43->m_Items[0];
-                v70 = v43->m_Items[2];
-                v69 = (ScriptMessageCommonManager_o *)v5;
-                goto LABEL_171;
+                v37 = v16->m_Items[0];
+                v39 = v16->m_Items[2];
+                v38 = (ScriptMessageCommonManager_o *)v5;
+                goto LABEL_170;
               }
-              v44 = &StringLiteral_21485/*"parameter error"*/;
-              if ( v67 )
-                goto LABEL_173;
-              v69 = (ScriptMessageCommonManager_o *)v5;
-              v68 = 0LL;
+              v17 = &StringLiteral_21587/*"parameter error"*/;
+              if ( v36 )
+                goto LABEL_172;
+              v38 = (ScriptMessageCommonManager_o *)v5;
+              v37 = 0LL;
             }
-            v70 = 0LL;
-LABEL_171:
-            ScriptMessageCommonManager__SetFontSize(v69, v68, v70, 0LL);
-            goto LABEL_43;
+            v39 = 0LL;
+LABEL_170:
+            ScriptMessageCommonManager__SetFontSize(v38, v37, v39, 0LL);
+            goto LABEL_42;
           }
           if ( (unsigned int)this > 0x7B80C780 )
           {
             if ( (_DWORD)this != -2124547466 )
             {
               if ( (_DWORD)this != -2064143255 )
-                goto LABEL_43;
+                goto LABEL_42;
               this = (CommonMessageManager_o *)System_String__op_Equality(
-                                                 v41,
-                                                 (System_String_o *)StringLiteral_20543/*"messageOff"*/,
+                                                 v14,
+                                                 (System_String_o *)StringLiteral_20637/*"messageOff"*/,
                                                  0LL);
               if ( ((unsigned __int8)this & 1) == 0 )
-                goto LABEL_43;
-              if ( !v43 )
-                goto LABEL_192;
-              v44 = &StringLiteral_21485/*"parameter error"*/;
-              if ( !*(_QWORD *)&v43->max_length )
+                goto LABEL_42;
+              if ( !v16 )
+                goto LABEL_191;
+              v17 = &StringLiteral_21587/*"parameter error"*/;
+              if ( !*(_QWORD *)&v16->max_length )
               {
                 ScriptMessageCommonManager__OffScreen((ScriptMessageCommonManager_o *)v5, 0LL);
                 ScriptMessageCommonManager__ClearText((ScriptMessageCommonManager_o *)v5, 0LL);
-                goto LABEL_43;
+                goto LABEL_42;
               }
-              goto LABEL_173;
+              goto LABEL_172;
             }
             this = (CommonMessageManager_o *)System_String__op_Equality(
-                                               v41,
-                                               (System_String_o *)StringLiteral_21475/*"page"*/,
+                                               v14,
+                                               (System_String_o *)StringLiteral_21577/*"page"*/,
                                                0LL);
             if ( ((unsigned __int8)this & 1) == 0 )
-              goto LABEL_43;
-            if ( !v43 )
-              goto LABEL_192;
-            v44 = &StringLiteral_21484/*"parameter be unnecessary"*/;
-            if ( *(_QWORD *)&v43->max_length )
-              goto LABEL_173;
+              goto LABEL_42;
+            if ( !v16 )
+              goto LABEL_191;
+            v17 = &StringLiteral_21586/*"parameter be unnecessary"*/;
+            if ( *(_QWORD *)&v16->max_length )
+              goto LABEL_172;
             v5->fields.state = 4;
-            v54 = &StringLiteral_21475/*"page"*/;
-            goto LABEL_158;
+            v23 = &StringLiteral_21577/*"page"*/;
+            goto LABEL_157;
           }
           if ( (_DWORD)this == 1787721130 )
           {
             this = (CommonMessageManager_o *)System_String__op_Equality(
-                                               v41,
-                                               (System_String_o *)StringLiteral_18399/*"end"*/,
+                                               v14,
+                                               (System_String_o *)StringLiteral_18476/*"end"*/,
                                                0LL);
             if ( ((unsigned __int8)this & 1) == 0 )
-              goto LABEL_43;
-            if ( !v43 )
-              goto LABEL_192;
-            v44 = &StringLiteral_21484/*"parameter be unnecessary"*/;
-            if ( !*(_QWORD *)&v43->max_length )
+              goto LABEL_42;
+            if ( !v16 )
+              goto LABEL_191;
+            v17 = &StringLiteral_21586/*"parameter be unnecessary"*/;
+            if ( !*(_QWORD *)&v16->max_length )
             {
               CommonMessageManager__EndExecuteScript(v5, method);
-              goto LABEL_43;
+              goto LABEL_42;
             }
-            goto LABEL_173;
+            goto LABEL_172;
           }
           if ( (_DWORD)this != 2072037248 )
-            goto LABEL_43;
-          v53 = (System_String_o **)&StringLiteral_22289/*"speed"*/;
-LABEL_107:
-          this = (CommonMessageManager_o *)System_String__op_Equality(v41, *v53, 0LL);
+            goto LABEL_42;
+          v22 = (System_String_o **)&StringLiteral_22401/*"speed"*/;
+LABEL_106:
+          this = (CommonMessageManager_o *)System_String__op_Equality(v14, *v22, 0LL);
           if ( ((unsigned __int8)this & 1) == 0 )
-            goto LABEL_43;
-          if ( !v43 )
-            goto LABEL_192;
-          v60 = *(_QWORD *)&v43->max_length;
-          if ( (_DWORD)v60 == 1 )
+            goto LABEL_42;
+          if ( !v16 )
+            goto LABEL_191;
+          v29 = *(_QWORD *)&v16->max_length;
+          if ( (_DWORD)v29 == 1 )
           {
             this = (CommonMessageManager_o *)System_String__op_Equality(
-                                               v43->m_Items[0],
-                                               (System_String_o *)StringLiteral_753/*"-"*/,
+                                               v16->m_Items[0],
+                                               (System_String_o *)StringLiteral_757/*"-"*/,
                                                0LL);
-            v61 = -1.0;
+            v30 = -1.0;
             if ( ((unsigned __int8)this & 1) == 0 )
             {
-              if ( !v43->max_length )
-                goto LABEL_191;
-              v61 = System_Single__Parse(v43->m_Items[0], 0LL);
+              if ( !v16->max_length )
+                goto LABEL_190;
+              v30 = System_Single__Parse(v16->m_Items[0], 0LL);
             }
-            v62 = (ScriptMessageCommonManager_o *)v5;
+            v31 = (ScriptMessageCommonManager_o *)v5;
           }
           else
           {
-            v44 = &StringLiteral_21485/*"parameter error"*/;
-            if ( v60 )
-              goto LABEL_173;
-            v62 = (ScriptMessageCommonManager_o *)v5;
-            v61 = -1.0;
+            v17 = &StringLiteral_21587/*"parameter error"*/;
+            if ( v29 )
+              goto LABEL_172;
+            v31 = (ScriptMessageCommonManager_o *)v5;
+            v30 = -1.0;
           }
-          ScriptMessageCommonManager__SetSpeed(v62, v61, 0LL);
-          goto LABEL_43;
+          ScriptMessageCommonManager__SetSpeed(v31, v30, 0LL);
+          goto LABEL_42;
         }
         if ( (unsigned int)this > 0xE30C2799 )
         {
@@ -1755,43 +1615,42 @@ LABEL_107:
             if ( (_DWORD)this == -200523172 )
             {
               this = (CommonMessageManager_o *)System_String__op_Equality(
-                                                 v41,
-                                                 (System_String_o *)StringLiteral_21666/*"q"*/,
+                                                 v14,
+                                                 (System_String_o *)StringLiteral_21773/*"q"*/,
                                                  0LL);
-              goto LABEL_43;
+              goto LABEL_42;
             }
             if ( (_DWORD)this != -166967934 )
             {
-LABEL_43:
+LABEL_42:
               ++v5->fields.executeIndex;
-              goto LABEL_128;
+              goto LABEL_127;
             }
-            v53 = (System_String_o **)&StringLiteral_21948/*"s"*/;
-            goto LABEL_107;
+            v22 = (System_String_o **)&StringLiteral_22059/*"s"*/;
+            goto LABEL_106;
           }
           if ( (_DWORD)this != -385076981 )
           {
             if ( (_DWORD)this != -301188886 )
-              goto LABEL_43;
+              goto LABEL_42;
             this = (CommonMessageManager_o *)System_String__op_Equality(
-                                               v41,
-                                               (System_String_o *)StringLiteral_20147/*"k"*/,
+                                               v14,
+                                               (System_String_o *)StringLiteral_20235/*"k"*/,
                                                0LL);
             if ( ((unsigned __int8)this & 1) == 0 )
-              goto LABEL_43;
-            if ( !v43 )
-              goto LABEL_192;
-            v44 = &StringLiteral_21484/*"parameter be unnecessary"*/;
-            if ( *(_QWORD *)&v43->max_length )
-              goto LABEL_173;
+              goto LABEL_42;
+            if ( !v16 )
+              goto LABEL_191;
+            v17 = &StringLiteral_21586/*"parameter be unnecessary"*/;
+            if ( *(_QWORD *)&v16->max_length )
+              goto LABEL_172;
             v5->fields.state = 4;
-            v54 = &StringLiteral_22813/*"touch"*/;
-LABEL_158:
-            v47 = (System_String_o *)*v54;
-            v5->fields.waitType = (struct System_String_o *)*v54;
-            goto LABEL_159;
+            v23 = &StringLiteral_22927/*"touch"*/;
+LABEL_157:
+            v5->fields.waitType = (struct System_String_o *)*v23;
+            goto LABEL_158;
           }
-          v51 = &StringLiteral_20229/*"l"*/;
+          v21 = &StringLiteral_20318/*"l"*/;
         }
         else
         {
@@ -1799,123 +1658,122 @@ LABEL_158:
           {
             if ( (_DWORD)this == -1460566783 )
             {
-              v59 = &StringLiteral_18858/*"fontSize"*/;
+              v28 = &StringLiteral_18941/*"fontSize"*/;
             }
             else
             {
               if ( (_DWORD)this != -485742695 )
-                goto LABEL_43;
-              v59 = &StringLiteral_18703/*"f"*/;
+                goto LABEL_42;
+              v28 = &StringLiteral_18783/*"f"*/;
             }
-            goto LABEL_149;
+            goto LABEL_148;
           }
           if ( (_DWORD)this == -1993454432 )
           {
             this = (CommonMessageManager_o *)System_String__op_Equality(
-                                               v41,
-                                               (System_String_o *)StringLiteral_23268/*"wait"*/,
+                                               v14,
+                                               (System_String_o *)StringLiteral_23382/*"wait"*/,
                                                0LL);
             if ( ((unsigned __int8)this & 1) == 0 )
-              goto LABEL_43;
+              goto LABEL_42;
             v5->fields.state = 4;
-            if ( !v43 )
-              goto LABEL_192;
-            if ( (int)v43->max_length < 1 )
+            if ( !v16 )
+              goto LABEL_191;
+            if ( (int)v16->max_length < 1 )
             {
-              v44 = &StringLiteral_21485/*"parameter error"*/;
-              goto LABEL_173;
+              v17 = &StringLiteral_21587/*"parameter error"*/;
+              goto LABEL_172;
             }
-            v47 = v43->m_Items[0];
-            *p_waitType = v47;
-LABEL_159:
-            v46 = &v5->fields.waitType;
-            goto LABEL_42;
+            *p_waitType = v16->m_Items[0];
+LABEL_158:
+            v18 = &v5->fields.waitType;
+            goto LABEL_41;
           }
           if ( (_DWORD)this != -1738943344 )
-            goto LABEL_43;
-          v51 = &StringLiteral_16742/*"betweenHeight"*/;
+            goto LABEL_42;
+          v21 = &StringLiteral_16808/*"betweenHeight"*/;
         }
-        this = (CommonMessageManager_o *)System_String__op_Equality(v41, (System_String_o *)*v51, 0LL);
+        this = (CommonMessageManager_o *)System_String__op_Equality(v14, (System_String_o *)*v21, 0LL);
         if ( ((unsigned __int8)this & 1) == 0 )
-          goto LABEL_43;
-        if ( !v43 )
-          goto LABEL_192;
-        v64 = *(_QWORD *)&v43->max_length;
-        if ( (_DWORD)v64 == 1 )
+          goto LABEL_42;
+        if ( !v16 )
+          goto LABEL_191;
+        v33 = *(_QWORD *)&v16->max_length;
+        if ( (_DWORD)v33 == 1 )
         {
           this = (CommonMessageManager_o *)System_String__op_Equality(
-                                             v43->m_Items[0],
-                                             (System_String_o *)StringLiteral_753/*"-"*/,
+                                             v16->m_Items[0],
+                                             (System_String_o *)StringLiteral_757/*"-"*/,
                                              0LL);
-          v65 = -1.0;
+          v34 = -1.0;
           if ( ((unsigned __int8)this & 1) == 0 )
           {
-            if ( !v43->max_length )
+            if ( !v16->max_length )
             {
-LABEL_191:
-              v75 = sub_B0D9A8(this);
-              sub_B0D948(v75, 0LL);
+LABEL_190:
+              v43 = sub_B52A88(this);
+              sub_B52A28(v43, 0LL);
             }
-            v65 = System_Single__Parse(v43->m_Items[0], 0LL);
+            v34 = System_Single__Parse(v16->m_Items[0], 0LL);
           }
-          v66 = (ScriptMessageCommonManager_o *)v5;
+          v35 = (ScriptMessageCommonManager_o *)v5;
         }
         else
         {
-          v44 = &StringLiteral_21485/*"parameter error"*/;
-          if ( v64 )
-            goto LABEL_173;
-          v66 = (ScriptMessageCommonManager_o *)v5;
-          v65 = -1.0;
+          v17 = &StringLiteral_21587/*"parameter error"*/;
+          if ( v33 )
+            goto LABEL_172;
+          v35 = (ScriptMessageCommonManager_o *)v5;
+          v34 = -1.0;
         }
-        ScriptMessageCommonManager__SetBetweenLineHeight(v66, v65, 0LL);
-        goto LABEL_43;
+        ScriptMessageCommonManager__SetBetweenLineHeight(v35, v34, 0LL);
+        goto LABEL_42;
       }
-      v48 = *p_waitType;
+      v19 = *p_waitType;
       if ( !*p_waitType )
-        goto LABEL_176;
-      v49 = PrivateImplementationDetails___ComputeStringHash_20827812(*p_waitType, 0LL);
-      if ( v49 > 0x698989D8 )
+        goto LABEL_175;
+      v20 = PrivateImplementationDetails___ComputeStringHash_21189352(*p_waitType, 0LL);
+      if ( v20 > 0x698989D8 )
         break;
-      if ( v49 > 0xD841B5E )
+      if ( v20 > 0xD841B5E )
       {
-        if ( v49 == 619841764 )
+        if ( v20 == 619841764 )
         {
-          if ( !System_String__op_Equality(v48, (System_String_o *)StringLiteral_20536/*"message"*/, 0LL) )
-            goto LABEL_176;
+          if ( !System_String__op_Equality(v19, (System_String_o *)StringLiteral_20628/*"message"*/, 0LL) )
+            goto LABEL_175;
           if ( !ScriptMessageCommonManager__IsReturnScroll((ScriptMessageCommonManager_o *)v5, 0LL) )
           {
             if ( *p_waitTalkName )
-              CommonMessageManager__SetTalkName(v5, *p_waitTalkName, v57);
-            v63 = *p_waitMessage;
+              CommonMessageManager__SetTalkName(v5, *p_waitTalkName, v26);
+            v32 = *p_waitMessage;
             if ( !*p_waitMessage )
-              v63 = (System_String_o *)StringLiteral_1/*""*/;
-            ScriptMessageCommonManager__AddText((ScriptMessageCommonManager_o *)v5, v63, 0, 0, 0LL);
+              v32 = (System_String_o *)StringLiteral_1/*""*/;
+            ScriptMessageCommonManager__AddText((ScriptMessageCommonManager_o *)v5, v32, 0, 0, 0LL);
             playSpeed = v5->fields.playSpeed;
             v5->fields.isCancelInput = 0;
-LABEL_119:
+LABEL_118:
             if ( playSpeed == 3 )
               this = (CommonMessageManager_o *)ScriptMessageCommonManager__MessageUpdate(
                                                  (ScriptMessageCommonManager_o *)v5,
                                                  0,
                                                  0LL);
-            goto LABEL_121;
+            goto LABEL_120;
           }
           if ( v5->fields.isBusy )
-            goto LABEL_184;
+            goto LABEL_183;
           if ( v5->fields.isCancelInput )
             v5->fields.isCancelInput = 0;
-          v58 = &StringLiteral_20539/*"message2"*/;
+          v27 = &StringLiteral_20631/*"message2"*/;
         }
         else
         {
-          if ( v49 != 1550717474 )
+          if ( v20 != 1550717474 )
           {
-            if ( v49 == 1770621400 && System_String__op_Equality(v48, (System_String_o *)StringLiteral_22813/*"touch"*/, 0LL) )
+            if ( v20 == 1770621400 && System_String__op_Equality(v19, (System_String_o *)StringLiteral_22927/*"touch"*/, 0LL) )
             {
               if ( v5->fields.isBusy )
               {
-LABEL_184:
+LABEL_183:
                 ScriptMessageCommonManager__MessageUpdate((ScriptMessageCommonManager_o *)v5, delta > 0.0, 0LL);
                 return !v5->fields.isBusy && v5->fields.state == 3;
               }
@@ -1923,107 +1781,104 @@ LABEL_184:
                 (ScriptMessageCommonManager_o *)v5,
                 v5->fields.isDispLastTouchMark,
                 0LL);
-              v73 = &StringLiteral_22814/*"touch2"*/;
-              goto LABEL_190;
+              v42 = &StringLiteral_22928/*"touch2"*/;
+              goto LABEL_189;
             }
-            goto LABEL_176;
+            goto LABEL_175;
           }
-          if ( !System_String__op_Equality(v48, (System_String_o *)StringLiteral_17514/*"clear"*/, 0LL) )
-            goto LABEL_176;
+          if ( !System_String__op_Equality(v19, (System_String_o *)StringLiteral_17583/*"clear"*/, 0LL) )
+            goto LABEL_175;
           if ( v5->fields.isBusy )
-            goto LABEL_184;
+            goto LABEL_183;
           if ( v5->fields.isCancelInput )
             v5->fields.isCancelInput = 0;
           else
             ScriptMessageCommonManager__WaitNextTouch((ScriptMessageCommonManager_o *)v5, 1, 0LL);
-          v58 = &StringLiteral_17516/*"clear2"*/;
+          v27 = &StringLiteral_17585/*"clear2"*/;
         }
-        goto LABEL_126;
+        goto LABEL_125;
       }
-      if ( v49 == 256629 )
+      if ( v20 == 256629 )
       {
-        if ( !System_String__op_Equality(v48, (System_String_o *)StringLiteral_20540/*"message3"*/, 0LL) || v5->fields.isScroll )
-          goto LABEL_176;
-        v55 = *p_waitMessage;
+        if ( !System_String__op_Equality(v19, (System_String_o *)StringLiteral_20632/*"message3"*/, 0LL) || v5->fields.isScroll )
+          goto LABEL_175;
+        v24 = *p_waitMessage;
         if ( !*p_waitMessage )
-          v55 = (System_String_o *)StringLiteral_1/*""*/;
-        ScriptMessageCommonManager__AddText((ScriptMessageCommonManager_o *)v5, v55, 0, 0, 0LL);
+          v24 = (System_String_o *)StringLiteral_1/*""*/;
+        ScriptMessageCommonManager__AddText((ScriptMessageCommonManager_o *)v5, v24, 0, 0, 0LL);
         playSpeed = v5->fields.playSpeed;
-        goto LABEL_119;
+        goto LABEL_118;
       }
-      if ( v49 != 226761566
-        || !System_String__op_Equality(v48, (System_String_o *)StringLiteral_22814/*"touch2"*/, 0LL)
+      if ( v20 != 226761566
+        || !System_String__op_Equality(v19, (System_String_o *)StringLiteral_22928/*"touch2"*/, 0LL)
         || v5->fields.isWaitNextTouchRequest )
       {
-        goto LABEL_176;
+        goto LABEL_175;
       }
       ScriptMessageCommonManager__ClearCount((ScriptMessageCommonManager_o *)v5, 0LL);
       v5->fields.isCancelInput = 1;
-LABEL_121:
+LABEL_120:
       state = 3;
       v5->fields.state = 3;
     }
-    if ( v49 > 0x91466F30 )
+    if ( v20 > 0x91466F30 )
       break;
-    if ( v49 != -2124547466 )
+    if ( v20 != -2124547466 )
     {
-      if ( v49 != -1857654992
-        || !System_String__op_Equality(v48, (System_String_o *)StringLiteral_17516/*"clear2"*/, 0LL)
+      if ( v20 != -1857654992
+        || !System_String__op_Equality(v19, (System_String_o *)StringLiteral_17585/*"clear2"*/, 0LL)
         || v5->fields.isWaitNextTouchRequest )
       {
-        goto LABEL_176;
+        goto LABEL_175;
       }
-LABEL_88:
+LABEL_87:
       ScriptMessageCommonManager__ClearText((ScriptMessageCommonManager_o *)v5, 0LL);
-      goto LABEL_121;
+      goto LABEL_120;
     }
-    if ( !System_String__op_Equality(v48, (System_String_o *)StringLiteral_21475/*"page"*/, 0LL) )
-      goto LABEL_176;
+    if ( !System_String__op_Equality(v19, (System_String_o *)StringLiteral_21577/*"page"*/, 0LL) )
+      goto LABEL_175;
     if ( v5->fields.isBusy )
-      goto LABEL_184;
+      goto LABEL_183;
     if ( v5->fields.isCancelInput )
       v5->fields.isCancelInput = 0;
     else
       ScriptMessageCommonManager__WaitNextTouch((ScriptMessageCommonManager_o *)v5, 1, 0LL);
-    v58 = &StringLiteral_21478/*"page2"*/;
+    v27 = &StringLiteral_21580/*"page2"*/;
+LABEL_125:
+    *p_waitType = (System_String_o *)*v27;
 LABEL_126:
-    v52 = *v58;
-    *p_waitType = (System_String_o *)*v58;
+    sub_B52920(&v5->fields.waitType);
 LABEL_127:
-    this = (CommonMessageManager_o *)sub_B0D840(&v5->fields.waitType, v52);
-LABEL_128:
     state = v5->fields.state;
   }
-  if ( v49 == -336528737 )
+  if ( v20 == -336528737 )
   {
-    if ( !System_String__op_Equality(v48, (System_String_o *)StringLiteral_21479/*"page3"*/, 0LL) || v5->fields.isScroll )
-      goto LABEL_176;
-    goto LABEL_88;
+    if ( !System_String__op_Equality(v19, (System_String_o *)StringLiteral_21581/*"page3"*/, 0LL) || v5->fields.isScroll )
+      goto LABEL_175;
+    goto LABEL_87;
   }
-  if ( v49 == -16520990 )
+  if ( v20 == -16520990 )
   {
-    if ( !System_String__op_Equality(v48, (System_String_o *)StringLiteral_20539/*"message2"*/, 0LL)
+    if ( !System_String__op_Equality(v19, (System_String_o *)StringLiteral_20631/*"message2"*/, 0LL)
       || v5->fields.isWaitNextTouchRequest )
     {
-      goto LABEL_176;
+      goto LABEL_175;
     }
     ScriptMessageCommonManager__ReturnScroll((ScriptMessageCommonManager_o *)v5, v5->fields.playSpeed == 3, 0, 0LL);
-    v52 = StringLiteral_20540/*"message3"*/;
-    v5->fields.waitType = (struct System_String_o *)StringLiteral_20540/*"message3"*/;
-    goto LABEL_127;
+    v5->fields.waitType = (struct System_String_o *)StringLiteral_20632/*"message3"*/;
+    goto LABEL_126;
   }
-  if ( v49 == -353306356
-    && System_String__op_Equality(v48, (System_String_o *)StringLiteral_21478/*"page2"*/, 0LL)
+  if ( v20 == -353306356
+    && System_String__op_Equality(v19, (System_String_o *)StringLiteral_21580/*"page2"*/, 0LL)
     && !v5->fields.isWaitNextTouchRequest )
   {
     ScriptMessageCommonManager__PageScroll((ScriptMessageCommonManager_o *)v5, v5->fields.playSpeed == 3, 0LL);
-    v73 = &StringLiteral_21479/*"page3"*/;
-LABEL_190:
-    v74 = *v73;
-    v5->fields.waitType = (struct System_String_o *)*v73;
-    sub_B0D840(&v5->fields.waitType, v74);
+    v42 = &StringLiteral_21581/*"page3"*/;
+LABEL_189:
+    v5->fields.waitType = (struct System_String_o *)*v42;
+    sub_B52920(&v5->fields.waitType);
   }
-LABEL_176:
+LABEL_175:
   isBusy = v5->fields.isBusy;
   ScriptMessageCommonManager__MessageUpdate((ScriptMessageCommonManager_o *)v5, delta > 0.0, 0LL);
   if ( !isBusy )
@@ -2035,6 +1890,7 @@ LABEL_176:
 void __fastcall CommonMessageManager__Quit(CommonMessageManager_o *this, const MethodInfo *method)
 {
   CommonMessageManager__EndExecuteScript(this, method);
+  ScriptMessageCommonManager__ResetMessageWindow((ScriptMessageCommonManager_o *)this, 0LL);
   ScriptMessageCommonManager__QuitScreen((ScriptMessageCommonManager_o *)this, 0LL);
   ScriptMessageCommonManager__ResetLongPress((ScriptMessageCommonManager_o *)this, 0LL);
   ScriptMessageCommonManager__QuitScreen((ScriptMessageCommonManager_o *)this, 0LL);
@@ -2055,7 +1911,7 @@ void __fastcall CommonMessageManager__SetMessageBlock(
 
   ScriptMessageCommonManager__ResetScroll((ScriptMessageCommonManager_o *)this, 0LL);
   this->fields.callbackFunc = callbackFunc;
-  sub_B0D840(&this->fields.callbackFunc, callbackFunc);
+  sub_B52920(&this->fields.callbackFunc);
   CommonMessageManager__AnalysScript(this, messageBlock, v9);
   this->fields.executeIndex = 0;
   this->fields.isCancelInput = 0;
@@ -2083,10 +1939,10 @@ void __fastcall CommonMessageManager__SetTalkName(
   System_String_o *className; // [xsp+18h] [xbp-28h] BYREF
   System_String_o *imageName; // [xsp+28h] [xbp-18h] BYREF
 
-  if ( (byte_421091E & 1) == 0 )
+  if ( (byte_42AC4C2 & 1) == 0 )
   {
-    sub_B0D8A4(&ScriptMessageLabel_TypeInfo, name);
-    byte_421091E = 1;
+    sub_B52984(&ScriptMessageLabel_TypeInfo);
+    byte_42AC4C2 = 1;
   }
   imageName = 0LL;
   charaName = 0LL;
@@ -2114,7 +1970,7 @@ void __fastcall CommonMessageManager__SetTouchCallback(
         const MethodInfo *method)
 {
   this->fields.touchCallbackFunc = callback;
-  sub_B0D840(&this->fields.touchCallbackFunc, callback);
+  sub_B52920(&this->fields.touchCallbackFunc);
 }
 
 

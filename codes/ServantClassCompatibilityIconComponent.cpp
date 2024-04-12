@@ -1,87 +1,76 @@
 void __fastcall ServantClassCompatibilityIconComponent___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  System_Array_o *v6; // x19
+  System_Array_o *v1; // x19
   BattleServantConfConponent_o *static_fields; // x0
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
-  System_Array_o *v14; // x19
-  struct ServantClassCompatibilityIconComponent_StaticFields *v15; // x0
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  System_Array_o *v22; // x19
-  struct ServantClassCompatibilityIconComponent_StaticFields *v23; // x0
-  System_String_array **v24; // x2
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
-  System_RuntimeFieldHandle_o v30; // 0:w1.4
-  System_RuntimeFieldHandle_o v31; // 0:w1.4
-  System_RuntimeFieldHandle_o v32; // 0:w1.4
+  System_String_array **v3; // x2
+  System_String_array **v4; // x3
+  System_Boolean_array **v5; // x4
+  System_Int32_array **v6; // x5
+  System_Int32_array *v7; // x6
+  System_Int32_array *v8; // x7
+  System_Array_o *v9; // x19
+  struct ServantClassCompatibilityIconComponent_StaticFields *v10; // x0
+  System_String_array **v11; // x2
+  System_String_array **v12; // x3
+  System_Boolean_array **v13; // x4
+  System_Int32_array **v14; // x5
+  System_Int32_array *v15; // x6
+  System_Int32_array *v16; // x7
+  System_Array_o *v17; // x19
+  struct ServantClassCompatibilityIconComponent_StaticFields *v18; // x0
+  System_String_array **v19; // x2
+  System_String_array **v20; // x3
+  System_Boolean_array **v21; // x4
+  System_Int32_array **v22; // x5
+  System_Int32_array *v23; // x6
+  System_Int32_array *v24; // x7
+  System_RuntimeFieldHandle_o v25; // 0:w1.4
+  System_RuntimeFieldHandle_o v26; // 0:w1.4
+  System_RuntimeFieldHandle_o v27; // 0:w1.4
 
-  if ( (byte_4215E9A & 1) == 0 )
+  if ( (byte_42B11FE & 1) == 0 )
   {
-    sub_B0D8A4(&ServantClassCompatibilityIconComponent_TypeInfo, v1);
-    sub_B0D8A4(&float___TypeInfo, v2);
-    sub_B0D8A4(
-      &Field__PrivateImplementationDetails__657AC32C0816EB8C917333556CB7B41311E802F8A338DA957586A1EFBD925003,
-      v3);
-    sub_B0D8A4(
-      &Field__PrivateImplementationDetails__8FD8636127BEF610717EDA6C87275DE8FABC7EAFB50E06E32438371EA366A436,
-      v4);
-    sub_B0D8A4(
-      &Field__PrivateImplementationDetails__C08A644CA14B47C51D4206B9CD5FD8F3A046D90EF77DC2C18058397DC1F57528,
-      v5);
-    byte_4215E9A = 1;
+    sub_B52984(&ServantClassCompatibilityIconComponent_TypeInfo);
+    sub_B52984(&float___TypeInfo);
+    sub_B52984(&Field__PrivateImplementationDetails__657AC32C0816EB8C917333556CB7B41311E802F8A338DA957586A1EFBD925003);
+    sub_B52984(&Field__PrivateImplementationDetails__8FD8636127BEF610717EDA6C87275DE8FABC7EAFB50E06E32438371EA366A436);
+    sub_B52984(&Field__PrivateImplementationDetails__C08A644CA14B47C51D4206B9CD5FD8F3A046D90EF77DC2C18058397DC1F57528);
+    byte_42B11FE = 1;
   }
-  v6 = (System_Array_o *)sub_B0D8BC(float___TypeInfo, 5LL);
-  v30.fields.value = Field__PrivateImplementationDetails__657AC32C0816EB8C917333556CB7B41311E802F8A338DA957586A1EFBD925003;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_42880004(v6, v30, 0LL);
+  v1 = (System_Array_o *)sub_B5299C(float___TypeInfo, 5LL);
+  v25.fields.value = Field__PrivateImplementationDetails__657AC32C0816EB8C917333556CB7B41311E802F8A338DA957586A1EFBD925003;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43814272(v1, v25, 0LL);
   static_fields = (BattleServantConfConponent_o *)ServantClassCompatibilityIconComponent_TypeInfo->static_fields;
-  static_fields->klass = (BattleServantConfConponent_c *)v6;
-  sub_B0D840(static_fields, (System_Int32_array **)v6, v8, v9, v10, v11, v12, v13);
-  v14 = (System_Array_o *)sub_B0D8BC(float___TypeInfo, 5LL);
-  v31.fields.value = Field__PrivateImplementationDetails__8FD8636127BEF610717EDA6C87275DE8FABC7EAFB50E06E32438371EA366A436;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_42880004(v14, v31, 0LL);
-  v15 = ServantClassCompatibilityIconComponent_TypeInfo->static_fields;
-  v15->POSITION_X_DOWN = (struct System_Single_array *)v14;
-  sub_B0D840(
-    (BattleServantConfConponent_o *)&v15->POSITION_X_DOWN,
-    (System_Int32_array **)v14,
-    v16,
-    v17,
-    v18,
+  static_fields->klass = (BattleServantConfConponent_c *)v1;
+  sub_B52920(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  v9 = (System_Array_o *)sub_B5299C(float___TypeInfo, 5LL);
+  v26.fields.value = Field__PrivateImplementationDetails__8FD8636127BEF610717EDA6C87275DE8FABC7EAFB50E06E32438371EA366A436;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43814272(v9, v26, 0LL);
+  v10 = ServantClassCompatibilityIconComponent_TypeInfo->static_fields;
+  v10->POSITION_X_DOWN = (struct System_Single_array *)v9;
+  sub_B52920(
+    (BattleServantConfConponent_o *)&v10->POSITION_X_DOWN,
+    (System_Int32_array **)v9,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16);
+  v17 = (System_Array_o *)sub_B5299C(float___TypeInfo, 5LL);
+  v27.fields.value = Field__PrivateImplementationDetails__C08A644CA14B47C51D4206B9CD5FD8F3A046D90EF77DC2C18058397DC1F57528;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43814272(v17, v27, 0LL);
+  v18 = ServantClassCompatibilityIconComponent_TypeInfo->static_fields;
+  v18->POSITION_X_CENTER = (struct System_Single_array *)v17;
+  sub_B52920(
+    (BattleServantConfConponent_o *)&v18->POSITION_X_CENTER,
+    (System_Int32_array **)v17,
     v19,
     v20,
-    v21);
-  v22 = (System_Array_o *)sub_B0D8BC(float___TypeInfo, 5LL);
-  v32.fields.value = Field__PrivateImplementationDetails__C08A644CA14B47C51D4206B9CD5FD8F3A046D90EF77DC2C18058397DC1F57528;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_42880004(v22, v32, 0LL);
-  v23 = ServantClassCompatibilityIconComponent_TypeInfo->static_fields;
-  v23->POSITION_X_CENTER = (struct System_Single_array *)v22;
-  sub_B0D840(
-    (BattleServantConfConponent_o *)&v23->POSITION_X_CENTER,
-    (System_Int32_array **)v22,
-    v24,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29);
+    v21,
+    v22,
+    v23,
+    v24);
 }
 
 
@@ -98,13 +87,14 @@ void __fastcall ServantClassCompatibilityIconComponent__Clear(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *upIconSprite; // x20
+  __int64 v4; // x1
   UISprite_o *gameObject; // x0
   UnityEngine_Object_o *downIconSprite; // x20
 
-  if ( (byte_4215E96 & 1) == 0 )
+  if ( (byte_42B11FA & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
-    byte_4215E96 = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B11FA = 1;
   }
   upIconSprite = (UnityEngine_Object_o *)this->fields.upIconSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -150,7 +140,7 @@ void __fastcall ServantClassCompatibilityIconComponent__Clear(
       }
     }
 LABEL_20:
-    sub_B0D97C(gameObject);
+    sub_B52A5C(gameObject, v4);
   }
 }
 
@@ -163,50 +153,47 @@ void __fastcall ServantClassCompatibilityIconComponent__SetIcon(
         int32_t dispMode,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
   UnityEngine_Object_o *upIconSprite; // x23
   UnityEngine_Object_o *downIconSprite; // x23
-  bool v14; // w0
+  bool v11; // w0
   DataManager_o *Instance; // x0
-  __int64 v16; // x8
-  ClassRelationMaster_o *v17; // x25
-  unsigned __int64 v18; // x27
+  UISprite_o *v13; // x1
+  __int64 v14; // x8
+  ClassRelationMaster_o *v15; // x25
+  unsigned __int64 v16; // x27
   int32_t advIconId; // w24
-  int32_t v20; // w23
-  int32_t v21; // w26
+  int32_t v18; // w23
+  int32_t v19; // w26
+  const MethodInfo *v20; // x5
+  bool v21; // zf
   const MethodInfo *v22; // x5
-  bool v23; // zf
-  const MethodInfo *v24; // x5
-  UISprite_o *v25; // x1
-  const MethodInfo *v26; // x2
-  UISprite_o *v27; // x21
+  const MethodInfo *v23; // x2
+  UISprite_o *v24; // x21
   System_Collections_Generic_List_string__c *klass; // x8
-  const MethodInfo *v29; // x2
+  const MethodInfo *v26; // x2
   struct System_Single_array *POSITION_X_DOWN; // x8
-  UISprite_o *v31; // x1
-  float v32; // s0
-  ServantClassCompatibilityIconComponent_o *v33; // x0
-  const MethodInfo *v34; // x5
-  struct UISprite_o *v35; // x21
+  UISprite_o *v28; // x1
+  float v29; // s0
+  ServantClassCompatibilityIconComponent_o *v30; // x0
+  const MethodInfo *v31; // x5
+  struct UISprite_o *v32; // x21
   struct System_String_array *items; // x8
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_GameObject_o *v38; // x0
-  __int64 v39; // x0
-  ClassRelationEntity_o *v40; // [xsp+8h] [xbp-68h] BYREF
+  UnityEngine_GameObject_o *v35; // x0
+  __int64 v36; // x0
+  ClassRelationEntity_o *v37; // [xsp+8h] [xbp-68h] BYREF
   ClassRelationEntity_o *entity; // [xsp+18h] [xbp-58h] BYREF
 
-  if ( (byte_4215E97 & 1) == 0 )
+  if ( (byte_42B11FB & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMasterData_ClassRelationMaster___, *(_QWORD *)&classId);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v9);
-    sub_B0D8A4(&ServantClassCompatibilityIconComponent_TypeInfo, v10);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    byte_4215E97 = 1;
+    sub_B52984(&Method_DataManager_GetMasterData_ClassRelationMaster___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&ServantClassCompatibilityIconComponent_TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_42B11FB = 1;
   }
   entity = 0LL;
-  v40 = 0LL;
+  v37 = 0LL;
   if ( dispMode == 5 )
     goto LABEL_8;
   upIconSprite = (UnityEngine_Object_o *)this->fields.upIconSprite;
@@ -223,36 +210,36 @@ void __fastcall ServantClassCompatibilityIconComponent__SetIcon(
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  v14 = UnityEngine_Object__op_Equality(downIconSprite, 0LL, 0LL);
-  if ( !targetClassIds || v14 || !*(_QWORD *)&targetClassIds->max_length )
+  v11 = UnityEngine_Object__op_Equality(downIconSprite, 0LL, 0LL);
+  if ( !targetClassIds || v11 || !*(_QWORD *)&targetClassIds->max_length )
   {
 LABEL_8:
     ServantClassCompatibilityIconComponent__Clear(this, *(const MethodInfo **)&classId);
     return;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_66;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_ClassRelationMaster___);
-  v16 = *(_QWORD *)&targetClassIds->max_length;
-  if ( (int)v16 >= 1 )
+                                (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_ClassRelationMaster___);
+  v14 = *(_QWORD *)&targetClassIds->max_length;
+  if ( (int)v14 >= 1 )
   {
-    v17 = (ClassRelationMaster_o *)Instance;
-    v18 = 0LL;
+    v15 = (ClassRelationMaster_o *)Instance;
+    v16 = 0LL;
     advIconId = 0;
-    v20 = 0;
+    v18 = 0;
     while ( 1 )
     {
-      if ( v18 >= (unsigned int)v16 )
+      if ( v16 >= (unsigned int)v14 )
         goto LABEL_67;
-      if ( !v17 )
+      if ( !v15 )
         goto LABEL_66;
-      v21 = targetClassIds->m_Items[v18 + 1];
-      ClassRelationMaster__TryGetEntity(v17, &entity, classId, v21, 0LL);
-      Instance = (DataManager_o *)ClassRelationMaster__TryGetEntity(v17, &v40, v21, classId, 0LL);
-      if ( !entity || !v40 )
+      v19 = targetClassIds->m_Items[v16 + 1];
+      ClassRelationMaster__TryGetEntity(v15, &entity, classId, v19, 0LL);
+      Instance = (DataManager_o *)ClassRelationMaster__TryGetEntity(v15, &v37, v19, classId, 0LL);
+      if ( !entity || !v37 )
         break;
       if ( entity->fields.advIconId )
       {
@@ -261,19 +248,19 @@ LABEL_8:
         else
           advIconId = entity->fields.advIconId;
       }
-      else if ( !v40->fields.advIconId )
+      else if ( !v37->fields.advIconId )
       {
         break;
       }
-      if ( v40->fields.advIconId )
-        v23 = v20 == 1;
+      if ( v37->fields.advIconId )
+        v21 = v18 == 1;
       else
-        v23 = 1;
-      if ( !v23 )
-        v20 = v40->fields.advIconId;
+        v21 = 1;
+      if ( !v21 )
+        v18 = v37->fields.advIconId;
 LABEL_38:
-      LODWORD(v16) = targetClassIds->max_length;
-      if ( (__int64)++v18 >= (int)v16 )
+      LODWORD(v14) = targetClassIds->max_length;
+      if ( (__int64)++v16 >= (int)v14 )
       {
         if ( advIconId )
         {
@@ -283,18 +270,18 @@ LABEL_38:
             advIconId,
             dispMode,
             1,
-            v22);
-          v25 = this->fields.downIconSprite;
-          if ( v20 )
+            v20);
+          v13 = this->fields.downIconSprite;
+          if ( v18 )
           {
             ServantClassCompatibilityIconComponent__SetIconImage(
               (ServantClassCompatibilityIconComponent_o *)Instance,
-              v25,
-              v20,
+              v13,
+              v18,
               dispMode,
               0,
-              v24);
-            v27 = this->fields.upIconSprite;
+              v22);
+            v24 = this->fields.upIconSprite;
             Instance = (DataManager_o *)ServantClassCompatibilityIconComponent_TypeInfo;
             if ( (BYTE3(ServantClassCompatibilityIconComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !ServantClassCompatibilityIconComponent_TypeInfo->_2.cctor_finished )
@@ -309,27 +296,27 @@ LABEL_38:
                 goto LABEL_67;
               ServantClassCompatibilityIconComponent__SetIconPosition(
                 (ServantClassCompatibilityIconComponent_o *)Instance,
-                v27,
+                v24,
                 *((float *)&klass->_1.byval_arg.data + dispMode),
-                v26);
+                v23);
               POSITION_X_DOWN = ServantClassCompatibilityIconComponent_TypeInfo->static_fields->POSITION_X_DOWN;
               if ( POSITION_X_DOWN )
               {
                 if ( POSITION_X_DOWN->max_length > dispMode )
                 {
-                  v31 = this->fields.downIconSprite;
-                  v32 = POSITION_X_DOWN->m_Items[dispMode + 1];
+                  v28 = this->fields.downIconSprite;
+                  v29 = POSITION_X_DOWN->m_Items[dispMode + 1];
                   goto LABEL_62;
                 }
 LABEL_67:
-                v39 = sub_B0D9A8(Instance);
-                sub_B0D948(v39, 0LL);
+                v36 = sub_B52A88(Instance);
+                sub_B52A28(v36, 0LL);
               }
             }
 LABEL_66:
-            sub_B0D97C(Instance);
+            sub_B52A5C(Instance, v13);
           }
-          if ( !v25 )
+          if ( !v13 )
             goto LABEL_66;
           Instance = (DataManager_o *)UnityEngine_Component__get_gameObject(
                                         (UnityEngine_Component_o *)this->fields.downIconSprite,
@@ -337,7 +324,7 @@ LABEL_66:
           if ( !Instance )
             goto LABEL_66;
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0LL);
-          v35 = this->fields.upIconSprite;
+          v32 = this->fields.upIconSprite;
 LABEL_56:
           Instance = (DataManager_o *)ServantClassCompatibilityIconComponent_TypeInfo;
           if ( (BYTE3(ServantClassCompatibilityIconComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -351,29 +338,29 @@ LABEL_56:
             goto LABEL_66;
           if ( items->max_length <= dispMode )
             goto LABEL_67;
-          v32 = *((float *)items->m_Items + dispMode);
-          v31 = v35;
+          v29 = *((float *)items->m_Items + dispMode);
+          v28 = v32;
 LABEL_62:
           ServantClassCompatibilityIconComponent__SetIconPosition(
             (ServantClassCompatibilityIconComponent_o *)Instance,
-            v31,
-            v32,
-            v29);
+            v28,
+            v29,
+            v26);
           if ( (dispMode & 0xFFFFFFFE) == 2 )
           {
             Instance = (DataManager_o *)this->fields.upIconSprite;
             if ( !Instance )
               goto LABEL_66;
             gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
-            GameObjectExtensions__SetLocalScale_31180844(gameObject, 0.8, 0LL);
+            GameObjectExtensions__SetLocalScale_32087216(gameObject, 0.8, 0LL);
             Instance = (DataManager_o *)this->fields.downIconSprite;
             if ( !Instance )
               goto LABEL_66;
-            v38 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
-            GameObjectExtensions__SetLocalScale_31180844(v38, 0.8, 0LL);
+            v35 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
+            GameObjectExtensions__SetLocalScale_32087216(v35, 0.8, 0LL);
           }
         }
-        else if ( v20 )
+        else if ( v18 )
         {
           Instance = (DataManager_o *)this->fields.upIconSprite;
           if ( !Instance )
@@ -382,8 +369,8 @@ LABEL_62:
           if ( !Instance )
             goto LABEL_66;
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0LL);
-          ServantClassCompatibilityIconComponent__SetIconImage(v33, this->fields.downIconSprite, v20, dispMode, 0, v34);
-          v35 = this->fields.downIconSprite;
+          ServantClassCompatibilityIconComponent__SetIconImage(v30, this->fields.downIconSprite, v18, dispMode, 0, v31);
+          v32 = this->fields.downIconSprite;
           goto LABEL_56;
         }
         return;
@@ -416,20 +403,17 @@ void __fastcall ServantClassCompatibilityIconComponent__SetIconImage(
         bool advantage,
         const MethodInfo *method)
 {
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  System_String_o **v13; // x8
-  System_String_o **v14; // x9
+  System_String_o **v10; // x8
+  System_String_o **v11; // x9
   int32_t downIconSprite_high; // w1
 
-  if ( (byte_4215E98 & 1) == 0 )
+  if ( (byte_42B11FC & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_19485/*"img_arrow_2"*/, icon);
-    sub_B0D8A4(&StringLiteral_19487/*"img_arrow_4"*/, v10);
-    sub_B0D8A4(&StringLiteral_19486/*"img_arrow_3"*/, v11);
-    this = (ServantClassCompatibilityIconComponent_o *)sub_B0D8A4(&StringLiteral_19484/*"img_arrow_1"*/, v12);
-    byte_4215E98 = 1;
+    sub_B52984(&StringLiteral_19570/*"img_arrow_2"*/);
+    sub_B52984(&StringLiteral_19572/*"img_arrow_4"*/);
+    sub_B52984(&StringLiteral_19571/*"img_arrow_3"*/);
+    this = (ServantClassCompatibilityIconComponent_o *)sub_B52984(&StringLiteral_19569/*"img_arrow_1"*/);
+    byte_42B11FC = 1;
   }
   if ( !icon )
     goto LABEL_18;
@@ -441,17 +425,17 @@ void __fastcall ServantClassCompatibilityIconComponent__SetIconImage(
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
   if ( iconId == 1 )
   {
-    v13 = (System_String_o **)&StringLiteral_19484/*"img_arrow_1"*/;
-    v14 = (System_String_o **)&StringLiteral_19486/*"img_arrow_3"*/;
+    v10 = (System_String_o **)&StringLiteral_19569/*"img_arrow_1"*/;
+    v11 = (System_String_o **)&StringLiteral_19571/*"img_arrow_3"*/;
   }
   else
   {
-    v13 = (System_String_o **)&StringLiteral_19485/*"img_arrow_2"*/;
-    v14 = (System_String_o **)&StringLiteral_19487/*"img_arrow_4"*/;
+    v10 = (System_String_o **)&StringLiteral_19570/*"img_arrow_2"*/;
+    v11 = (System_String_o **)&StringLiteral_19572/*"img_arrow_4"*/;
   }
   if ( !advantage )
-    v13 = v14;
-  UISprite__set_spriteName(icon, *v13, 0LL);
+    v10 = v11;
+  UISprite__set_spriteName(icon, *v10, 0LL);
   if ( dispMode != 4 )
   {
     this = (ServantClassCompatibilityIconComponent_o *)UISprite__GetAtlasSprite(icon, 0LL);
@@ -466,7 +450,7 @@ void __fastcall ServantClassCompatibilityIconComponent__SetIconImage(
       }
     }
 LABEL_18:
-    sub_B0D97C(this);
+    sub_B52A5C(this, icon);
   }
   UIWidget__set_width((UIWidget_o *)icon, 22, 0LL);
   if ( iconId == 1 )
@@ -484,15 +468,14 @@ void __fastcall ServantClassCompatibilityIconComponent__SetIconPosition(
         float x,
         const MethodInfo *method)
 {
-  __int64 v6; // x1
   srcLineSprite_o *Component_srcLineSprite; // x20
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4215E99 & 1) == 0 )
+  if ( (byte_42B11FD & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, icon);
-    this = (ServantClassCompatibilityIconComponent_o *)sub_B0D8A4(&UnityEngine_Object_TypeInfo, v6);
-    byte_4215E99 = 1;
+    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+    this = (ServantClassCompatibilityIconComponent_o *)sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B11FD = 1;
   }
   if ( !icon )
     goto LABEL_12;
@@ -503,7 +486,7 @@ void __fastcall ServantClassCompatibilityIconComponent__SetIconPosition(
     goto LABEL_12;
   Component_srcLineSprite = UnityEngine_GameObject__GetComponent_srcLineSprite_(
                               (UnityEngine_GameObject_o *)this,
-                              (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                              (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -522,7 +505,7 @@ void __fastcall ServantClassCompatibilityIconComponent__SetIconPosition(
       return;
     }
 LABEL_12:
-    sub_B0D97C(this);
+    sub_B52A5C(this, icon);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)icon, 0LL);
   GameObjectExtensions__SetLocalPositionX(gameObject, x, 0LL);

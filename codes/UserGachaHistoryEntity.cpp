@@ -1,28 +1,27 @@
 void __fastcall UserGachaHistoryEntity___ctor(UserGachaHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_421370A & 1) == 0 )
+  if ( (byte_42AEF26 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
-    byte_421370A = 1;
+    sub_B52984(&Method_DataEntityBase_string___ctor__);
+    byte_42AEF26 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall UserGachaHistoryEntity__CreatePK(int64_t userId, int32_t gachaId, const MethodInfo *method)
 {
-  if ( (byte_4213709 & 1) == 0 )
+  if ( (byte_42AEF25 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&gachaId);
-    byte_4213709 = 1;
+    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_42AEF25 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            gachaId,
-           (const MethodInfo_171354C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_1A4E080 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -39,6 +38,7 @@ System_String_o *__fastcall UserGachaHistoryEntity__CreatePrimaryKey(
 System_String_o *__fastcall UserGachaHistoryEntity__ToString(UserGachaHistoryEntity_o *this, const MethodInfo *method)
 {
   GiftName_GiftNameBase_o *v2; // x0
+  __int64 v3; // x1
 
   v2 = GiftName_GiftNameFactoryBySummonHistory__Create(
          this->fields.giftType,
@@ -46,7 +46,7 @@ System_String_o *__fastcall UserGachaHistoryEntity__ToString(UserGachaHistoryEnt
          this->fields.num,
          0LL);
   if ( !v2 )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v3);
   return v2->fields.name;
 }
 
@@ -65,10 +65,10 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_CreatedAtToString(
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_4213707 & 1) == 0 )
+  if ( (byte_42AEF23 & 1) == 0 )
   {
-    sub_B0D8A4(&LocalizationManager_TypeInfo, method);
-    byte_4213707 = 1;
+    sub_B52984(&LocalizationManager_TypeInfo);
+    byte_42AEF23 = 1;
   }
   p_createdAtString = (BattleServantConfConponent_o *)&this->fields.createdAtString;
   if ( System_String__IsNullOrEmpty(this->fields.createdAtString, 0LL) )
@@ -81,7 +81,7 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_CreatedAtToString(
     }
     DateTime = (System_Int32_array **)LocalizationManager__GetDateTime(createdAt, 0LL);
     p_createdAtString->klass = (BattleServantConfConponent_c *)DateTime;
-    sub_B0D840(p_createdAtString, DateTime, v6, v7, v8, v9, v10, v11);
+    sub_B52920(p_createdAtString, DateTime, v6, v7, v8, v9, v10, v11);
   }
   return (System_String_o *)p_createdAtString->klass;
 }
@@ -91,24 +91,22 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_TitleToString(
         UserGachaHistoryEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   System_String_o **p_titleString; // x19
-  __int64 *v6; // x8
-  System_Int32_array **v7; // x0
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  __int64 *v4; // x8
+  System_Int32_array **v5; // x0
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
 
-  if ( (byte_4213708 & 1) == 0 )
+  if ( (byte_42AEF24 & 1) == 0 )
   {
-    sub_B0D8A4(&LocalizationManager_TypeInfo, method);
-    sub_B0D8A4(&StringLiteral_12469/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/, v3);
-    sub_B0D8A4(&StringLiteral_12479/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/, v4);
-    byte_4213708 = 1;
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&StringLiteral_12520/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/);
+    sub_B52984(&StringLiteral_12530/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/);
+    byte_42AEF24 = 1;
   }
   p_titleString = &this->fields.titleString;
   if ( System_String__IsNullOrEmpty(this->fields.titleString, 0LL) )
@@ -120,7 +118,7 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_TitleToString(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v6 = &StringLiteral_12479/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/;
+      v4 = &StringLiteral_12530/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/;
     }
     else
     {
@@ -129,11 +127,11 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_TitleToString(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v6 = &StringLiteral_12469/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/;
+      v4 = &StringLiteral_12520/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/;
     }
-    v7 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)*v6, 0LL);
-    *p_titleString = (System_String_o *)v7;
-    sub_B0D840((BattleServantConfConponent_o *)&this->fields.titleString, v7, v8, v9, v10, v11, v12, v13);
+    v5 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)*v4, 0LL);
+    *p_titleString = (System_String_o *)v5;
+    sub_B52920((BattleServantConfConponent_o *)&this->fields.titleString, v5, v6, v7, v8, v9, v10, v11);
   }
   return *p_titleString;
 }

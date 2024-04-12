@@ -8,94 +8,80 @@ void __fastcall EventInfoAreaImprovementControl___ctor(
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  System_Int32_array **v12; // x1
-  System_Int32_array **v13; // x1
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
-  __int64 v20; // x1
-  __int64 v21; // x2
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v22; // x20
-  System_String_array **v23; // x2
-  System_String_array **v24; // x3
-  System_Boolean_array **v25; // x4
-  System_Int32_array **v26; // x5
-  System_Int32_array *v27; // x6
-  System_Int32_array *v28; // x7
+  System_Int32_array **v9; // x1
+  System_Int32_array **v10; // x1
+  System_String_array **v11; // x2
+  System_String_array **v12; // x3
+  System_Boolean_array **v13; // x4
+  System_Int32_array **v14; // x5
+  System_Int32_array *v15; // x6
+  System_Int32_array *v16; // x7
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v17; // x20
+  System_String_array **v18; // x2
+  System_String_array **v19; // x3
+  System_Boolean_array **v20; // x4
+  System_Int32_array **v21; // x5
+  System_Int32_array *v22; // x6
+  System_Int32_array *v23; // x7
 
-  if ( (byte_4216204 & 1) == 0 )
+  if ( (byte_42B1E21 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData___ctor__, method);
-    sub_B0D8A4(&System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__TypeInfo, v9);
-    sub_B0D8A4(&StringLiteral_13039/*"SpotCooltime_ParkData_"*/, v10);
-    sub_B0D8A4(&StringLiteral_13040/*"SpotCooltime_SpotData_"*/, v11);
-    byte_4216204 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData___ctor__);
+    sub_B52984(&System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__TypeInfo);
+    sub_B52984(&StringLiteral_13092/*"SpotCooltime_ParkData_"*/);
+    sub_B52984(&StringLiteral_13093/*"SpotCooltime_SpotData_"*/);
+    byte_42B1E21 = 1;
   }
-  v12 = (System_Int32_array **)StringLiteral_13040/*"SpotCooltime_SpotData_"*/;
-  this->fields.KEY_PREFIX_SPOT_DATA = (struct System_String_o *)StringLiteral_13040/*"SpotCooltime_SpotData_"*/;
-  sub_B0D840((BattleServantConfConponent_o *)&this->fields.KEY_PREFIX_SPOT_DATA, v12, v2, v3, v4, v5, v6, v7);
-  v13 = (System_Int32_array **)StringLiteral_13039/*"SpotCooltime_ParkData_"*/;
-  this->fields.KEY_PREFIX_PARK_DATA = (struct System_String_o *)StringLiteral_13039/*"SpotCooltime_ParkData_"*/;
-  sub_B0D840((BattleServantConfConponent_o *)&this->fields.KEY_PREFIX_PARK_DATA, v13, v14, v15, v16, v17, v18, v19);
+  v9 = (System_Int32_array **)StringLiteral_13093/*"SpotCooltime_SpotData_"*/;
+  this->fields.KEY_PREFIX_SPOT_DATA = (struct System_String_o *)StringLiteral_13093/*"SpotCooltime_SpotData_"*/;
+  sub_B52920((BattleServantConfConponent_o *)&this->fields.KEY_PREFIX_SPOT_DATA, v9, v2, v3, v4, v5, v6, v7);
+  v10 = (System_Int32_array **)StringLiteral_13092/*"SpotCooltime_ParkData_"*/;
+  this->fields.KEY_PREFIX_PARK_DATA = (struct System_String_o *)StringLiteral_13092/*"SpotCooltime_ParkData_"*/;
+  sub_B52920((BattleServantConfConponent_o *)&this->fields.KEY_PREFIX_PARK_DATA, v10, v11, v12, v13, v14, v15, v16);
   this->fields.customerAttractionRateMaxWidth = 126;
   this->fields.customerNumMaxWidth = 98;
-  v22 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
-                                                                                                  System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__TypeInfo,
-                                                                                                  v20,
-                                                                                                  v21);
+  v17 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v22,
-    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData___ctor__);
-  this->fields.spotDataList = (struct System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__o *)v22;
-  sub_B0D840(
+    v17,
+    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData___ctor__);
+  this->fields.spotDataList = (struct System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__o *)v17;
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.spotDataList,
-    (System_Int32_array **)v22,
-    v23,
-    v24,
-    v25,
-    v26,
-    v27,
-    v28);
+    (System_Int32_array **)v17,
+    v18,
+    v19,
+    v20,
+    v21,
+    v22,
+    v23);
   EventInfoUIBase___ctor((EventInfoUIBase_o *)this, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall EventInfoAreaImprovementControl__AddSpotData(
         EventInfoAreaImprovementControl_o *this,
         int32_t spotId,
         int32_t level,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  EventInfoAreaImprovementControl_SpotData_o *v8; // x22
+  EventInfoAreaImprovementControl_SpotData_o *v7; // x22
   struct System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__o *spotDataList; // x0
+  __int64 v9; // x1
 
-  if ( (byte_42161FE & 1) == 0 )
+  if ( (byte_42B1E1B & 1) == 0 )
   {
-    sub_B0D8A4(
-      &Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__Add__,
-      *(_QWORD *)&spotId);
-    sub_B0D8A4(&EventInfoAreaImprovementControl_SpotData_TypeInfo, v7);
-    byte_42161FE = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__Add__);
+    sub_B52984(&EventInfoAreaImprovementControl_SpotData_TypeInfo);
+    byte_42B1E1B = 1;
   }
-  v8 = (EventInfoAreaImprovementControl_SpotData_o *)sub_B0D974(
-                                                       EventInfoAreaImprovementControl_SpotData_TypeInfo,
-                                                       *(_QWORD *)&spotId,
-                                                       *(_QWORD *)&level);
-  EventInfoAreaImprovementControl_SpotData___ctor(v8, 0LL);
-  if ( !v8 || (v8->fields.SpotId = spotId, v8->fields.Level = level, (spotDataList = this->fields.spotDataList) == 0LL) )
-    sub_B0D97C(spotDataList);
+  v7 = (EventInfoAreaImprovementControl_SpotData_o *)sub_B52A54(EventInfoAreaImprovementControl_SpotData_TypeInfo);
+  EventInfoAreaImprovementControl_SpotData___ctor(v7, 0LL);
+  if ( !v7 || (v7->fields.SpotId = spotId, v7->fields.Level = level, (spotDataList = this->fields.spotDataList) == 0LL) )
+    sub_B52A5C(spotDataList, v9);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)spotDataList,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)v8,
-    (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__Add__);
+    (EventMissionProgressRequest_Argument_ProgressData_o *)v7,
+    (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__Add__);
 }
 
 
@@ -103,60 +89,57 @@ void __fastcall EventInfoAreaImprovementControl__Awake(
         EventInfoAreaImprovementControl_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
   struct EventCooltimeRewardMaster_o *Master_WarQuestSelectionMaster; // x0
   struct EventCooltimeRewardMaster_o **p_eventCooltimeRewardMaster; // x19
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
-  System_Int32_array **v14; // x0
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
-  System_Int32_array **v21; // x1
-  System_String_array **v22; // x2
-  System_String_array **v23; // x3
-  System_Boolean_array **v24; // x4
-  System_Int32_array **v25; // x5
-  System_Int32_array *v26; // x6
-  System_Int32_array *v27; // x7
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
+  System_Int32_array **v11; // x0
+  System_String_array **v12; // x2
+  System_String_array **v13; // x3
+  System_Boolean_array **v14; // x4
+  System_Int32_array **v15; // x5
+  System_Int32_array *v16; // x6
+  System_Int32_array *v17; // x7
+  System_Int32_array **v18; // x1
+  System_String_array **v19; // x2
+  System_String_array **v20; // x3
+  System_Boolean_array **v21; // x4
+  System_Int32_array **v22; // x5
+  System_Int32_array *v23; // x6
+  System_Int32_array *v24; // x7
 
-  if ( (byte_42161F3 & 1) == 0 )
+  if ( (byte_42B1E10 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMaster_EventCooltimeRewardMaster___, method);
-    sub_B0D8A4(&Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___, v3);
-    sub_B0D8A4(&Method_DataManager_GetMaster_UserEventPointMaster___, v4);
-    sub_B0D8A4(&DataManager_TypeInfo, v5);
-    byte_42161F3 = 1;
+    sub_B52984(&Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
+    sub_B52984(&Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___);
+    sub_B52984(&Method_DataManager_GetMaster_UserEventPointMaster___);
+    sub_B52984(&DataManager_TypeInfo);
+    byte_42B1E10 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (struct EventCooltimeRewardMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
+  Master_WarQuestSelectionMaster = (struct EventCooltimeRewardMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
   this->fields.eventCooltimeRewardMaster = Master_WarQuestSelectionMaster;
   p_eventCooltimeRewardMaster = &this->fields.eventCooltimeRewardMaster;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)p_eventCooltimeRewardMaster,
     (System_Int32_array **)Master_WarQuestSelectionMaster,
+    v5,
+    v6,
+    v7,
     v8,
     v9,
-    v10,
-    v11,
-    v12,
-    v13);
-  v14 = (System_Int32_array **)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___);
-  p_eventCooltimeRewardMaster[1] = (struct EventCooltimeRewardMaster_o *)v14;
-  sub_B0D840((BattleServantConfConponent_o *)(p_eventCooltimeRewardMaster + 1), v14, v15, v16, v17, v18, v19, v20);
-  v21 = (System_Int32_array **)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_UserEventPointMaster___);
-  p_eventCooltimeRewardMaster[2] = (struct EventCooltimeRewardMaster_o *)v21;
-  sub_B0D840((BattleServantConfConponent_o *)(p_eventCooltimeRewardMaster + 2), v21, v22, v23, v24, v25, v26, v27);
+    v10);
+  v11 = (System_Int32_array **)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___);
+  p_eventCooltimeRewardMaster[1] = (struct EventCooltimeRewardMaster_o *)v11;
+  sub_B52920((BattleServantConfConponent_o *)(p_eventCooltimeRewardMaster + 1), v11, v12, v13, v14, v15, v16, v17);
+  v18 = (System_Int32_array **)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_UserEventPointMaster___);
+  p_eventCooltimeRewardMaster[2] = (struct EventCooltimeRewardMaster_o *)v18;
+  sub_B52920((BattleServantConfConponent_o *)(p_eventCooltimeRewardMaster + 2), v18, v19, v20, v21, v22, v23, v24);
 }
 
 
@@ -164,46 +147,42 @@ System_Collections_Generic_List_int__o *__fastcall EventInfoAreaImprovementContr
         EventInfoAreaImprovementControl_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  System_Collections_Generic_List_int__o *v8; // x20
+  System_Collections_Generic_List_int__o *v3; // x20
   UserEventCooltimeRewardMaster_o *SpotData; // x0
-  const MethodInfo *v10; // x2
+  __int64 v5; // x1
+  const MethodInfo *v6; // x2
   struct System_Collections_Generic_List_int__o *baseSpotIdList; // x22
   signed __int64 size; // x23
-  unsigned __int64 v13; // x21
-  int32_t v14; // w22
+  unsigned __int64 v9; // x21
+  int32_t v10; // w22
   struct EventUiEntity_o *eventUiEntity; // x8
 
-  if ( (byte_4216200 & 1) == 0 )
+  if ( (byte_42B1E1D & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__Add__, method);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int___ctor__, v4);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__get_Count__, v5);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__get_Item__, v6);
-    sub_B0D8A4(&System_Collections_Generic_List_int__TypeInfo, v7);
-    byte_4216200 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_int__Add__);
+    sub_B52984(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_B52984(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_B52984(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_B52984(&System_Collections_Generic_List_int__TypeInfo);
+    byte_42B1E1D = 1;
   }
-  v8 = (System_Collections_Generic_List_int__o *)sub_B0D974(System_Collections_Generic_List_int__TypeInfo, method, v2);
+  v3 = (System_Collections_Generic_List_int__o *)sub_B52A54(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v8,
-    (const MethodInfo_2FAF1A4 *)Method_System_Collections_Generic_List_int___ctor__);
+    v3,
+    (const MethodInfo_3056254 *)Method_System_Collections_Generic_List_int___ctor__);
   baseSpotIdList = this->fields.baseSpotIdList;
   if ( !baseSpotIdList )
     goto LABEL_19;
   size = baseSpotIdList->fields._size;
   if ( (int)size >= 1 )
   {
-    v13 = 0LL;
+    v9 = 0LL;
     do
     {
-      if ( v13 >= (unsigned int)baseSpotIdList->fields._size )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-      v14 = baseSpotIdList->fields._items->m_Items[v13 + 1];
-      SpotData = (UserEventCooltimeRewardMaster_o *)EventInfoAreaImprovementControl__GetSpotData(this, v14, v10);
+      if ( v9 >= (unsigned int)baseSpotIdList->fields._size )
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+      v10 = baseSpotIdList->fields._items->m_Items[v9 + 1];
+      SpotData = (UserEventCooltimeRewardMaster_o *)EventInfoAreaImprovementControl__GetSpotData(this, v10, v6);
       if ( !SpotData )
       {
         eventUiEntity = this->fields.eventUiEntity;
@@ -215,56 +194,54 @@ System_Collections_Generic_List_int__o *__fastcall EventInfoAreaImprovementContr
         SpotData = (UserEventCooltimeRewardMaster_o *)UserEventCooltimeRewardMaster__GetMaxLevelEntity(
                                                         SpotData,
                                                         eventUiEntity->fields.eventId,
-                                                        v14,
+                                                        v10,
                                                         0LL);
         if ( SpotData && SLODWORD(SpotData->fields.list) >= 1 )
         {
-          if ( !v8 )
+          if ( !v3 )
             break;
           System_Collections_Generic_List_int___Add(
-            v8,
-            v13,
-            (const MethodInfo_2FAFF00 *)Method_System_Collections_Generic_List_int__Add__);
+            v3,
+            v9,
+            (const MethodInfo_3056FB0 *)Method_System_Collections_Generic_List_int__Add__);
         }
       }
-      if ( (__int64)++v13 >= size )
-        return v8;
+      if ( (__int64)++v9 >= size )
+        return v3;
       baseSpotIdList = this->fields.baseSpotIdList;
     }
     while ( baseSpotIdList );
 LABEL_19:
-    sub_B0D97C(SpotData);
+    sub_B52A5C(SpotData, v5);
   }
-  return v8;
+  return v3;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 EventInfoAreaImprovementControl_SpotData_o *__fastcall EventInfoAreaImprovementControl__GetSpotData(
         EventInfoAreaImprovementControl_o *this,
         int32_t spotId,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
+  _BOOL8 v5; // x0
   __int64 v6; // x1
-  _BOOL8 v7; // x0
   struct System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__o *spotDataList; // x23
   int size; // w22
-  unsigned int v10; // w21
-  EventInfoAreaImprovementControl_SpotData_o *v11; // x8
-  struct System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__o *v13; // x19
+  unsigned int v9; // w21
+  EventInfoAreaImprovementControl_SpotData_o *v10; // x8
+  struct System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__o *v12; // x19
 
-  if ( (byte_42161FD & 1) == 0 )
+  if ( (byte_42B1E1A & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Linq_Enumerable_Any_EventInfoAreaImprovementControl_SpotData___, *(_QWORD *)&spotId);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__get_Count__, v5);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__get_Item__, v6);
-    byte_42161FD = 1;
+    sub_B52984(&Method_System_Linq_Enumerable_Any_EventInfoAreaImprovementControl_SpotData___);
+    sub_B52984(&Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__get_Count__);
+    sub_B52984(&Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__get_Item__);
+    byte_42B1E1A = 1;
   }
-  v7 = System_Linq_Enumerable__Any_WarBoardMovieHistoryManager_HistoryInfo_(
+  v5 = System_Linq_Enumerable__Any_WarBoardMovieHistoryManager_HistoryInfo_(
          (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.spotDataList,
-         (const MethodInfo_17194B0 *)Method_System_Linq_Enumerable_Any_EventInfoAreaImprovementControl_SpotData___);
-  if ( !v7 )
+         (const MethodInfo_1B5080C *)Method_System_Linq_Enumerable_Any_EventInfoAreaImprovementControl_SpotData___);
+  if ( !v5 )
     return 0LL;
   spotDataList = this->fields.spotDataList;
   if ( !spotDataList )
@@ -272,29 +249,29 @@ EventInfoAreaImprovementControl_SpotData_o *__fastcall EventInfoAreaImprovementC
   size = spotDataList->fields._size;
   if ( size < 1 )
     return 0LL;
-  v10 = 0;
+  v9 = 0;
   while ( 1 )
   {
-    if ( spotDataList->fields._size <= v10 )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-    v11 = spotDataList->fields._items->m_Items[v10];
-    if ( !v11 )
+    if ( spotDataList->fields._size <= v9 )
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+    v10 = spotDataList->fields._items->m_Items[v9];
+    if ( !v10 )
       goto LABEL_19;
-    if ( v11->fields.SpotId == spotId )
+    if ( v10->fields.SpotId == spotId )
       break;
-    if ( (int)++v10 >= size )
+    if ( (int)++v9 >= size )
       return 0LL;
     spotDataList = this->fields.spotDataList;
     if ( !spotDataList )
       goto LABEL_19;
   }
-  v13 = this->fields.spotDataList;
-  if ( !v13 )
+  v12 = this->fields.spotDataList;
+  if ( !v12 )
 LABEL_19:
-    sub_B0D97C(v7);
-  if ( v13->fields._size <= v10 )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-  return v13->fields._items->m_Items[v10];
+    sub_B52A5C(v5, v6);
+  if ( v12->fields._size <= v9 )
+    System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+  return v12->fields._items->m_Items[v9];
 }
 
 
@@ -304,45 +281,45 @@ int64_t __fastcall EventInfoAreaImprovementControl__GetTotalCustomerAttractionRa
         int32_t eventId,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   System_Collections_Generic_List_int__o *baseSpotIdList; // x0
-  int64_t v9; // x19
+  int64_t v6; // x19
   UserEventCooltimeRewardMaster_o *userEventCooltimeRewardMaster; // x0
   int32_t current; // w22
   UserEventCooltimeRewardEntity_o *MaxLevelEntity; // x0
-  _BOOL8 v13; // x0
+  __int64 v10; // x1
+  _BOOL8 v11; // x0
+  __int64 v12; // x1
+  __int64 v13; // x1
   System_Collections_Generic_List_Enumerator_int__o v15; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_int__o v16; // [xsp+20h] [xbp-50h] BYREF
   EventCooltimeRewardEntity_o *entity; // [xsp+48h] [xbp-28h] BYREF
 
-  if ( (byte_4216203 & 1) == 0 )
+  if ( (byte_42B1E20 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, *(_QWORD *)&eventId);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v5);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v6);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__GetEnumerator__, v7);
-    byte_4216203 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
+    sub_B52984(&Method_System_Collections_Generic_List_int__GetEnumerator__);
+    byte_42B1E20 = 1;
   }
   memset(&v16, 0, sizeof(v16));
   entity = 0LL;
   baseSpotIdList = this->fields.baseSpotIdList;
   if ( !baseSpotIdList )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, *(_QWORD *)&eventId);
   System_Collections_Generic_List_int___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v15,
     baseSpotIdList,
-    (const MethodInfo_2FB0D44 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-  v9 = 0LL;
+    (const MethodInfo_3057DF4 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+  v6 = 0LL;
   v16 = v15;
   while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
             &v16,
-            (const MethodInfo_210FFE4 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+            (const MethodInfo_200F3F0 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
   {
     userEventCooltimeRewardMaster = this->fields.userEventCooltimeRewardMaster;
     if ( !userEventCooltimeRewardMaster )
-      sub_B0D97C(0LL);
+      sub_B52A5C(0LL, v13);
     current = v16.fields.current;
     MaxLevelEntity = UserEventCooltimeRewardMaster__GetMaxLevelEntity(
                        userEventCooltimeRewardMaster,
@@ -352,30 +329,29 @@ int64_t __fastcall EventInfoAreaImprovementControl__GetTotalCustomerAttractionRa
     if ( MaxLevelEntity )
     {
       if ( !this->fields.eventCooltimeRewardMaster )
-        sub_B0D97C(MaxLevelEntity);
-      v13 = EventCooltimeRewardMaster__TryGetEntity(
+        sub_B52A5C(MaxLevelEntity, v10);
+      v11 = EventCooltimeRewardMaster__TryGetEntity(
               this->fields.eventCooltimeRewardMaster,
               &entity,
               eventId,
               current,
               MaxLevelEntity->fields.lv,
               0LL);
-      if ( v13 )
+      if ( v11 )
       {
         if ( !entity )
-          sub_B0D97C(v13);
-        v9 += entity->fields.addEventPointRate;
+          sub_B52A5C(v11, v12);
+        v6 += entity->fields.addEventPointRate;
       }
     }
   }
   System_Collections_Generic_List_Enumerator_int___Dispose(
     &v16,
-    (const MethodInfo_210FFE0 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-  return v9;
+    (const MethodInfo_200F3EC *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+  return v6;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int64_t __fastcall EventInfoAreaImprovementControl__GetUserEventPoint(
         EventInfoAreaImprovementControl_o *this,
         int32_t eventId,
@@ -385,10 +361,10 @@ int64_t __fastcall EventInfoAreaImprovementControl__GetUserEventPoint(
   UserEventPointMaster_o *userEventPointMaster; // x21
   int64_t UserId; // x0
 
-  if ( (byte_42161FA & 1) == 0 )
+  if ( (byte_42B1E17 & 1) == 0 )
   {
-    sub_B0D8A4(&NetworkManager_TypeInfo, *(_QWORD *)&eventId);
-    byte_42161FA = 1;
+    sub_B52984(&NetworkManager_TypeInfo);
+    byte_42B1E17 = 1;
   }
   userEventPointMaster = this->fields.userEventPointMaster;
   if ( !userEventPointMaster )
@@ -431,8 +407,8 @@ int64_t __fastcall EventInfoAreaImprovementControl__GetUserEventTotalPoint(
   {
     if ( v7 >= (unsigned int)v4 )
     {
-      v13 = sub_B0D9A8(this);
-      sub_B0D948(v13, 0LL);
+      v13 = sub_B52A88(this);
+      sub_B52A28(v13, 0LL);
     }
     v9 = eventUiValueEntityList->m_Items[v7];
     if ( v9 && v9->fields.type == 2 )
@@ -463,31 +439,28 @@ void __fastcall EventInfoAreaImprovementControl__Initialization(
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
-  __int64 v10; // x1
-  __int64 v11; // x1
   EventCooltimeRewardMaster_o *eventCooltimeRewardMaster; // x0
+  __int64 v11; // x1
   struct EventUiEntity_o *eventUiEntity; // x8
   struct System_Collections_Generic_List_int__o *SpotIdListByEventId; // x0
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
-  EventUiEntity_o *v21; // x20
-  __int64 v22; // x1
-  __int64 v23; // x2
-  System_Action_o *v24; // x21
+  System_String_array **v14; // x2
+  System_String_array **v15; // x3
+  System_Boolean_array **v16; // x4
+  System_Int32_array **v17; // x5
+  System_Int32_array *v18; // x6
+  System_Int32_array *v19; // x7
+  EventUiEntity_o *v20; // x20
+  System_Action_o *v21; // x21
 
-  if ( (byte_42161F4 & 1) == 0 )
+  if ( (byte_42B1E11 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, entity);
-    sub_B0D8A4(&Method_EventInfoAreaImprovementControl__Initialization_b__25_0__, v10);
-    sub_B0D8A4(&StringLiteral_18541/*"event_bg_80384"*/, v11);
-    byte_42161F4 = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&Method_EventInfoAreaImprovementControl__Initialization_b__25_0__);
+    sub_B52984(&StringLiteral_18618/*"event_bg_80384"*/);
+    byte_42B1E11 = 1;
   }
   this->fields.eventUiEntity = entity;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.eventUiEntity,
     (System_Int32_array **)entity,
     (System_String_array **)method,
@@ -507,23 +480,23 @@ void __fastcall EventInfoAreaImprovementControl__Initialization(
                           eventUiEntity->fields.eventId,
                           0LL);
   this->fields.baseSpotIdList = SpotIdListByEventId;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.baseSpotIdList,
     (System_Int32_array **)SpotIdListByEventId,
+    v14,
     v15,
     v16,
     v17,
     v18,
-    v19,
-    v20);
-  v21 = this->fields.eventUiEntity;
-  v24 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v22, v23);
-  System_Action___ctor(v24, (Il2CppObject *)this, Method_EventInfoAreaImprovementControl__Initialization_b__25_0__, 0LL);
-  EventInfoUIBase__LoadEventUIAssetData((EventInfoUIBase_o *)this, v21, v24, 0LL);
+    v19);
+  v20 = this->fields.eventUiEntity;
+  v21 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+  System_Action___ctor(v21, (Il2CppObject *)this, Method_EventInfoAreaImprovementControl__Initialization_b__25_0__, 0LL);
+  EventInfoUIBase__LoadEventUIAssetData((EventInfoUIBase_o *)this, v20, v21, 0LL);
   EventInfoUIBase__SetSpriteByLocalAtlas(
     (EventInfoUIBase_o *)this,
     this->fields.titleBgSprite,
-    (System_String_o *)StringLiteral_18541/*"event_bg_80384"*/,
+    (System_String_o *)StringLiteral_18618/*"event_bg_80384"*/,
     0LL);
   eventCooltimeRewardMaster = (EventCooltimeRewardMaster_o *)this->fields.titleBgSprite;
   if ( !eventCooltimeRewardMaster
@@ -547,7 +520,7 @@ void __fastcall EventInfoAreaImprovementControl__Initialization(
         (eventCooltimeRewardMaster = (EventCooltimeRewardMaster_o *)this->fields.customerNumBgSprite) == 0LL) )
   {
 LABEL_9:
-    sub_B0D97C(eventCooltimeRewardMaster);
+    sub_B52A5C(eventCooltimeRewardMaster, v11);
   }
   ((void (__fastcall *)(EventCooltimeRewardMaster_o *, Il2CppMethodPointer))eventCooltimeRewardMaster->klass[1].vtable._5_ForForceDerived.method)(
     eventCooltimeRewardMaster,
@@ -555,67 +528,67 @@ LABEL_9:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall EventInfoAreaImprovementControl__LoadParkData(
         EventInfoAreaImprovementControl_o *this,
         int32_t eventId,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
   System_String_o *KEY_PREFIX_PARK_DATA; // x20
+  System_String_o *v5; // x0
   System_String_o *v6; // x0
-  System_String_o *v7; // x0
   System_String_o *String; // x20
-  const MethodInfo *v9; // x2
+  const MethodInfo *v8; // x2
   int64_t UserEventTotalPoint; // x0
+  const MethodInfo *v10; // x2
   const MethodInfo *v11; // x2
-  const MethodInfo *v12; // x2
   int64_t TotalCustomerAttractionRate; // x0
-  const MethodInfo *v14; // x2
-  __int64 v15; // x0
+  const MethodInfo *v13; // x2
+  __int64 v14; // x0
+  __int64 v15; // x1
   __int64 v16; // x20
   __int64 v17; // x0
   int32_t eventIda; // [xsp+Ch] [xbp-14h] BYREF
 
   eventIda = eventId;
-  if ( (byte_4216201 & 1) == 0 )
+  if ( (byte_42B1E1E & 1) == 0 )
   {
-    sub_B0D8A4(&char___TypeInfo, *(_QWORD *)&eventId);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v4);
-    byte_4216201 = 1;
+    sub_B52984(&char___TypeInfo);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B1E1E = 1;
   }
   KEY_PREFIX_PARK_DATA = this->fields.KEY_PREFIX_PARK_DATA;
-  v6 = System_Int32__ToString((int32_t)&eventIda, 0LL);
-  v7 = System_String__Concat_43849904(KEY_PREFIX_PARK_DATA, v6, 0LL);
-  String = UnityEngine_PlayerPrefs__GetString(v7, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  v5 = System_Int32__ToString((int32_t)&eventIda, 0LL);
+  v6 = System_String__Concat_44568316(KEY_PREFIX_PARK_DATA, v5, 0LL);
+  String = UnityEngine_PlayerPrefs__GetString(v6, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( System_String__IsNullOrEmpty(String, 0LL) )
   {
-    UserEventTotalPoint = EventInfoAreaImprovementControl__GetUserEventTotalPoint(this, eventIda, v9);
+    UserEventTotalPoint = EventInfoAreaImprovementControl__GetUserEventTotalPoint(this, eventIda, v8);
     this->fields.customerNum = UserEventTotalPoint;
-    EventInfoAreaImprovementControl__SetCustomerNumLabel(this, UserEventTotalPoint, v11);
-    TotalCustomerAttractionRate = EventInfoAreaImprovementControl__GetTotalCustomerAttractionRate(this, eventIda, v12);
+    EventInfoAreaImprovementControl__SetCustomerNumLabel(this, UserEventTotalPoint, v10);
+    TotalCustomerAttractionRate = EventInfoAreaImprovementControl__GetTotalCustomerAttractionRate(this, eventIda, v11);
     this->fields.customerAttractionRate = TotalCustomerAttractionRate;
-    EventInfoAreaImprovementControl__SetCustomerAttractionRateLabel(this, TotalCustomerAttractionRate, v14);
+    EventInfoAreaImprovementControl__SetCustomerAttractionRateLabel(this, TotalCustomerAttractionRate, v13);
     return;
   }
-  v15 = sub_B0D8BC(char___TypeInfo, 1LL);
-  if ( !v15 )
+  v14 = sub_B5299C(char___TypeInfo, 1LL);
+  if ( !v14 )
     goto LABEL_13;
-  if ( !*(_DWORD *)(v15 + 24) )
+  v15 = v14;
+  if ( !*(_DWORD *)(v14 + 24) )
     goto LABEL_14;
-  *(_WORD *)(v15 + 32) = 44;
-  if ( !String || (v15 = (__int64)System_String__Split(String, (System_Char_array *)v15, 0LL)) == 0 )
+  *(_WORD *)(v14 + 32) = 44;
+  if ( !String || (v14 = (__int64)System_String__Split(String, (System_Char_array *)v14, 0LL)) == 0 )
 LABEL_13:
-    sub_B0D97C(v15);
-  v16 = v15;
-  if ( !*(_DWORD *)(v15 + 24)
-    || (v15 = System_Int64__Parse(*(System_String_o **)(v15 + 32), 0LL),
-        this->fields.customerNum = v15,
+    sub_B52A5C(v14, v15);
+  v16 = v14;
+  if ( !*(_DWORD *)(v14 + 24)
+    || (v14 = System_Int64__Parse(*(System_String_o **)(v14 + 32), 0LL),
+        this->fields.customerNum = v14,
         *(_DWORD *)(v16 + 24) <= 1u) )
   {
 LABEL_14:
-    v17 = sub_B0D9A8(v15);
-    sub_B0D948(v17, 0LL);
+    v17 = sub_B52A88(v14);
+    sub_B52A28(v17, 0LL);
   }
   this->fields.customerAttractionRate = System_Int64__Parse(*(System_String_o **)(v16 + 40), 0LL);
 }
@@ -627,69 +600,64 @@ void __fastcall EventInfoAreaImprovementControl__LoadSpotData(
         int32_t eventId,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   __int64 spotDataList; // x0
   System_String_o *KEY_PREFIX_SPOT_DATA; // x20
-  System_String_o *v13; // x0
-  System_String_o *v14; // x0
+  System_String_o *v6; // x0
+  System_String_o *v7; // x0
   System_String_o *String; // x20
   System_Collections_Generic_List_UserEventCooltimeRewardEntity__o *EntityListByEventId; // x0
+  __int64 v10; // x1
   UserEventCooltimeRewardMaster_o *userEventCooltimeRewardMaster; // x0
   UserEventCooltimeRewardEntity_o *MaxLevelEntity; // x0
-  const MethodInfo *v19; // x3
-  __int64 v20; // x24
-  __int64 v21; // x20
-  unsigned int v22; // w25
-  System_String_o *v23; // x21
-  __int64 v24; // x21
-  int32_t v25; // w22
-  int32_t v26; // w0
-  const MethodInfo *v27; // x3
-  __int64 v28; // x0
-  System_Collections_Generic_List_Enumerator_int__o v29; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v30; // [xsp+20h] [xbp-60h] BYREF
+  const MethodInfo *v13; // x3
+  __int64 v14; // x24
+  __int64 v15; // x20
+  unsigned int v16; // w25
+  System_String_o *v17; // x21
+  __int64 v18; // x21
+  int32_t v19; // w22
+  int32_t v20; // w0
+  const MethodInfo *v21; // x3
+  __int64 v22; // x0
+  System_Collections_Generic_List_Enumerator_int__o v23; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v24; // [xsp+20h] [xbp-60h] BYREF
   int32_t eventIda; // [xsp+3Ch] [xbp-44h] BYREF
 
   eventIda = eventId;
-  if ( (byte_42161FC & 1) == 0 )
+  if ( (byte_42B1E19 & 1) == 0 )
   {
-    sub_B0D8A4(&char___TypeInfo, *(_QWORD *)&eventId);
-    sub_B0D8A4(&Method_System_Linq_Enumerable_Any_UserEventCooltimeRewardEntity___, v4);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v5);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v6);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v7);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__Clear__, v8);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__GetEnumerator__, v9);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v10);
-    byte_42161FC = 1;
+    sub_B52984(&char___TypeInfo);
+    sub_B52984(&Method_System_Linq_Enumerable_Any_UserEventCooltimeRewardEntity___);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
+    sub_B52984(&Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__Clear__);
+    sub_B52984(&Method_System_Collections_Generic_List_int__GetEnumerator__);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B1E19 = 1;
   }
-  memset(&v30, 0, sizeof(v30));
+  memset(&v24, 0, sizeof(v24));
   spotDataList = (__int64)this->fields.spotDataList;
   if ( !spotDataList )
     goto LABEL_31;
   System_Collections_Generic_List_XWeaponTrail_Element___Clear(
     (System_Collections_Generic_List_XWeaponTrail_Element__o *)spotDataList,
-    (const MethodInfo_2FC5AF0 *)Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__Clear__);
+    (const MethodInfo_2FF1A0C *)Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__Clear__);
   KEY_PREFIX_SPOT_DATA = this->fields.KEY_PREFIX_SPOT_DATA;
-  v13 = System_Int32__ToString((int32_t)&eventIda, 0LL);
-  v14 = System_String__Concat_43849904(KEY_PREFIX_SPOT_DATA, v13, 0LL);
-  String = UnityEngine_PlayerPrefs__GetString(v14, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  v6 = System_Int32__ToString((int32_t)&eventIda, 0LL);
+  v7 = System_String__Concat_44568316(KEY_PREFIX_SPOT_DATA, v6, 0LL);
+  String = UnityEngine_PlayerPrefs__GetString(v7, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( !System_String__IsNullOrEmpty(String, 0LL) )
   {
-    spotDataList = sub_B0D8BC(char___TypeInfo, 1LL);
+    spotDataList = sub_B5299C(char___TypeInfo, 1LL);
     if ( spotDataList )
     {
+      *(_QWORD *)&eventId = spotDataList;
       if ( !*(_DWORD *)(spotDataList + 24) )
       {
 LABEL_29:
-        v28 = sub_B0D9A8(spotDataList);
-        sub_B0D948(v28, 0LL);
+        v22 = sub_B52A88(spotDataList);
+        sub_B52A28(v22, 0LL);
       }
       *(_WORD *)(spotDataList + 32) = 44;
       if ( String )
@@ -697,37 +665,38 @@ LABEL_29:
         spotDataList = (__int64)System_String__Split(String, (System_Char_array *)spotDataList, 0LL);
         if ( spotDataList )
         {
-          v20 = *(_QWORD *)(spotDataList + 24);
-          v21 = spotDataList;
-          if ( (int)v20 < 1 )
+          v14 = *(_QWORD *)(spotDataList + 24);
+          v15 = spotDataList;
+          if ( (int)v14 < 1 )
             return;
-          v22 = 0;
+          v16 = 0;
           while ( 1 )
           {
-            v23 = *(System_String_o **)(v21 + 8LL * (int)v22 + 32);
-            spotDataList = sub_B0D8BC(char___TypeInfo, 1LL);
+            v17 = *(System_String_o **)(v15 + 8LL * (int)v16 + 32);
+            spotDataList = sub_B5299C(char___TypeInfo, 1LL);
             if ( !spotDataList )
               break;
+            *(_QWORD *)&eventId = spotDataList;
             if ( !*(_DWORD *)(spotDataList + 24) )
               goto LABEL_29;
             *(_WORD *)(spotDataList + 32) = 58;
-            if ( !v23 )
+            if ( !v17 )
               break;
-            spotDataList = (__int64)System_String__Split(v23, (System_Char_array *)spotDataList, 0LL);
+            spotDataList = (__int64)System_String__Split(v17, (System_Char_array *)spotDataList, 0LL);
             if ( !spotDataList )
               break;
-            v24 = spotDataList;
+            v18 = spotDataList;
             if ( *(_DWORD *)(spotDataList + 24) )
             {
               spotDataList = System_Int32__Parse(*(System_String_o **)(spotDataList + 32), 0LL);
-              if ( *(_DWORD *)(v24 + 24) > 1u )
+              if ( *(_DWORD *)(v18 + 24) > 1u )
               {
-                v25 = spotDataList;
-                v26 = System_Int32__Parse(*(System_String_o **)(v24 + 40), 0LL);
-                EventInfoAreaImprovementControl__AddSpotData(this, v25, v26, v27);
-                if ( (int)++v22 >= (int)v20 )
+                v19 = spotDataList;
+                v20 = System_Int32__Parse(*(System_String_o **)(v18 + 40), 0LL);
+                EventInfoAreaImprovementControl__AddSpotData(this, v19, v20, v21);
+                if ( (int)++v16 >= (int)v14 )
                   return;
-                if ( v22 < *(_DWORD *)(v21 + 24) )
+                if ( v16 < *(_DWORD *)(v15 + 24) )
                   continue;
               }
             }
@@ -737,7 +706,7 @@ LABEL_29:
       }
     }
 LABEL_31:
-    sub_B0D97C(spotDataList);
+    sub_B52A5C(spotDataList, *(_QWORD *)&eventId);
   }
   spotDataList = (__int64)this->fields.userEventCooltimeRewardMaster;
   if ( !spotDataList )
@@ -748,34 +717,34 @@ LABEL_31:
                           0LL);
   if ( !System_Linq_Enumerable__Any_WarBoardMovieHistoryManager_HistoryInfo_(
           (System_Collections_Generic_IEnumerable_TSource__o *)EntityListByEventId,
-          (const MethodInfo_17194B0 *)Method_System_Linq_Enumerable_Any_UserEventCooltimeRewardEntity___) )
+          (const MethodInfo_1B5080C *)Method_System_Linq_Enumerable_Any_UserEventCooltimeRewardEntity___) )
     return;
   spotDataList = (__int64)this->fields.baseSpotIdList;
   if ( !spotDataList )
     goto LABEL_31;
   System_Collections_Generic_List_int___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v29,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v23,
     (System_Collections_Generic_List_int__o *)spotDataList,
-    (const MethodInfo_2FB0D44 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-  v30 = v29;
+    (const MethodInfo_3057DF4 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+  v24 = v23;
   while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
-            &v30,
-            (const MethodInfo_210FFE4 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+            &v24,
+            (const MethodInfo_200F3F0 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
   {
     userEventCooltimeRewardMaster = this->fields.userEventCooltimeRewardMaster;
     if ( !userEventCooltimeRewardMaster )
-      sub_B0D97C(0LL);
+      sub_B52A5C(0LL, v10);
     MaxLevelEntity = UserEventCooltimeRewardMaster__GetMaxLevelEntity(
                        userEventCooltimeRewardMaster,
                        eventIda,
-                       v30.fields.current,
+                       v24.fields.current,
                        0LL);
     if ( MaxLevelEntity )
-      EventInfoAreaImprovementControl__AddSpotData(this, MaxLevelEntity->fields.spotId, MaxLevelEntity->fields.lv, v19);
+      EventInfoAreaImprovementControl__AddSpotData(this, MaxLevelEntity->fields.spotId, MaxLevelEntity->fields.lv, v13);
   }
   System_Collections_Generic_List_Enumerator_int___Dispose(
-    &v30,
-    (const MethodInfo_210FFE0 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    &v24,
+    (const MethodInfo_200F3EC *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
 }
 
 
@@ -787,7 +756,7 @@ void __fastcall EventInfoAreaImprovementControl__OnDestroy(
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   EventInfoUIBase__ReleaseEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity->fields.eventId, 0LL);
   EventInfoUIBase__ReleaseLocalAtlas((EventInfoUIBase_o *)this, 0LL);
 }
@@ -811,137 +780,128 @@ void __fastcall EventInfoAreaImprovementControl__PlayAreaAddAnim(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x20
-  _BOOL8 v13; // x0
+  __int64 v5; // x20
+  _BOOL8 v6; // x0
+  const MethodInfo *v7; // x1
+  System_String_array **v8; // x2
+  System_String_array **v9; // x3
+  System_Boolean_array **v10; // x4
+  System_Int32_array **v11; // x5
+  System_Int32_array *v12; // x6
+  System_Int32_array *v13; // x7
   System_String_array **v14; // x2
   System_String_array **v15; // x3
   System_Boolean_array **v16; // x4
   System_Int32_array **v17; // x5
   System_Int32_array *v18; // x6
   System_Int32_array *v19; // x7
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
-  const MethodInfo *v26; // x1
   struct EventUiEntity_o *eventUiEntity; // x8
   int32_t eventId; // w22
-  const MethodInfo *v29; // x1
+  const MethodInfo *v22; // x1
   System_Collections_Generic_List_int__o *AddedEffectTargetIndexList; // x21
-  const MethodInfo *v31; // x2
-  _BOOL8 v32; // x0
-  const MethodInfo *v33; // x3
+  const MethodInfo *v24; // x2
+  _BOOL8 v25; // x0
+  __int64 v26; // x1
+  const MethodInfo *v27; // x3
   struct EventInfoAreaImprovementDrawComponent_array *drawComponentList; // x8
-  EventInfoAreaImprovementDrawComponent_o *v35; // x8
-  const MethodInfo *v36; // x2
-  const MethodInfo *v37; // x2
-  const MethodInfo *v38; // x2
-  __int64 v39; // x1
-  __int64 v40; // x2
-  System_Action_o *v41; // x22
-  const MethodInfo *v42; // x4
-  __int64 v43; // x0
-  System_Collections_Generic_List_Enumerator_int__o v44; // [xsp+8h] [xbp-68h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v45; // [xsp+20h] [xbp-50h] BYREF
+  EventInfoAreaImprovementDrawComponent_o *v29; // x8
+  const MethodInfo *v30; // x2
+  const MethodInfo *v31; // x2
+  const MethodInfo *v32; // x2
+  System_Action_o *v33; // x22
+  const MethodInfo *v34; // x4
+  __int64 v35; // x0
+  System_Collections_Generic_List_Enumerator_int__o v36; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v37; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_42161F7 & 1) == 0 )
+  if ( (byte_42B1E14 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, callback);
-    sub_B0D8A4(&Method_System_Linq_Enumerable_Any_int___, v5);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v6);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v7);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v8);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__GetEnumerator__, v9);
-    sub_B0D8A4(&Method_EventInfoAreaImprovementControl___c__DisplayClass31_0__PlayAreaAddAnim_b__0__, v10);
-    sub_B0D8A4(&EventInfoAreaImprovementControl___c__DisplayClass31_0_TypeInfo, v11);
-    byte_42161F7 = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&Method_System_Linq_Enumerable_Any_int___);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
+    sub_B52984(&Method_System_Collections_Generic_List_int__GetEnumerator__);
+    sub_B52984(&Method_EventInfoAreaImprovementControl___c__DisplayClass31_0__PlayAreaAddAnim_b__0__);
+    sub_B52984(&EventInfoAreaImprovementControl___c__DisplayClass31_0_TypeInfo);
+    byte_42B1E14 = 1;
   }
-  memset(&v45, 0, sizeof(v45));
-  v12 = sub_B0D974(EventInfoAreaImprovementControl___c__DisplayClass31_0_TypeInfo, callback, method);
+  memset(&v37, 0, sizeof(v37));
+  v5 = sub_B52A54(EventInfoAreaImprovementControl___c__DisplayClass31_0_TypeInfo);
   EventInfoAreaImprovementControl___c__DisplayClass31_0___ctor(
-    (EventInfoAreaImprovementControl___c__DisplayClass31_0_o *)v12,
+    (EventInfoAreaImprovementControl___c__DisplayClass31_0_o *)v5,
     0LL);
-  if ( !v12 )
+  if ( !v5 )
     goto LABEL_18;
-  *(_QWORD *)(v12 + 16) = this;
-  sub_B0D840((BattleServantConfConponent_o *)(v12 + 16), (System_Int32_array **)this, v14, v15, v16, v17, v18, v19);
-  *(_QWORD *)(v12 + 24) = callback;
-  sub_B0D840((BattleServantConfConponent_o *)(v12 + 24), (System_Int32_array **)callback, v20, v21, v22, v23, v24, v25);
+  *(_QWORD *)(v5 + 16) = this;
+  sub_B52920((BattleServantConfConponent_o *)(v5 + 16), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
+  *(_QWORD *)(v5 + 24) = callback;
+  sub_B52920((BattleServantConfConponent_o *)(v5 + 24), (System_Int32_array **)callback, v14, v15, v16, v17, v18, v19);
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
     goto LABEL_18;
   eventId = eventUiEntity->fields.eventId;
-  EventInfoAreaImprovementControl__UpdateDrawComponentList(this, v26);
-  AddedEffectTargetIndexList = EventInfoAreaImprovementControl__GetAddedEffectTargetIndexList(this, v29);
-  v13 = System_Linq_Enumerable__Any_int_(
-          (System_Collections_Generic_IEnumerable_TSource__o *)AddedEffectTargetIndexList,
-          (const MethodInfo_171921C *)Method_System_Linq_Enumerable_Any_int___);
-  if ( !v13 )
+  EventInfoAreaImprovementControl__UpdateDrawComponentList(this, v7);
+  AddedEffectTargetIndexList = EventInfoAreaImprovementControl__GetAddedEffectTargetIndexList(this, v22);
+  v6 = System_Linq_Enumerable__Any_int_(
+         (System_Collections_Generic_IEnumerable_TSource__o *)AddedEffectTargetIndexList,
+         (const MethodInfo_1B50578 *)Method_System_Linq_Enumerable_Any_int___);
+  if ( !v6 )
     goto LABEL_14;
   if ( !AddedEffectTargetIndexList )
 LABEL_18:
-    sub_B0D97C(v13);
+    sub_B52A5C(v6, v7);
   System_Collections_Generic_List_int___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v44,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v36,
     AddedEffectTargetIndexList,
-    (const MethodInfo_2FB0D44 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-  v45 = v44;
+    (const MethodInfo_3057DF4 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+  v37 = v36;
   while ( 1 )
   {
-    v32 = System_Collections_Generic_List_Enumerator_int___MoveNext(
-            &v45,
-            (const MethodInfo_210FFE4 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    if ( !v32 )
+    v25 = System_Collections_Generic_List_Enumerator_int___MoveNext(
+            &v37,
+            (const MethodInfo_200F3F0 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    if ( !v25 )
       break;
     drawComponentList = this->fields.drawComponentList;
     if ( !drawComponentList )
-      sub_B0D97C(v32);
-    if ( v45.fields.current >= drawComponentList->max_length )
+      sub_B52A5C(v25, v26);
+    if ( v37.fields.current >= drawComponentList->max_length )
     {
-      v43 = sub_B0D9A8(v32);
-      sub_B0D948(v43, 0LL);
+      v35 = sub_B52A88(v25);
+      sub_B52A28(v35, 0LL);
     }
-    v35 = drawComponentList->m_Items[v45.fields.current];
-    if ( !v35 )
-      sub_B0D97C(v32);
+    v29 = drawComponentList->m_Items[v37.fields.current];
+    if ( !v29 )
+      sub_B52A5C(v25, v26);
     EventInfoAreaImprovementControl__AddSpotData(
       this,
-      v35->fields._SpotId_k__BackingField,
-      v35->fields._Level_k__BackingField,
-      v33);
+      v29->fields._SpotId_k__BackingField,
+      v29->fields._Level_k__BackingField,
+      v27);
   }
   System_Collections_Generic_List_Enumerator_int___Dispose(
-    &v45,
-    (const MethodInfo_210FFE0 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    &v37,
+    (const MethodInfo_200F3EC *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
 LABEL_14:
-  EventInfoAreaImprovementControl__SaveSpotData(this, eventId, v31);
-  this->fields.customerNum = EventInfoAreaImprovementControl__GetUserEventTotalPoint(this, eventId, v36);
+  EventInfoAreaImprovementControl__SaveSpotData(this, eventId, v24);
+  this->fields.customerNum = EventInfoAreaImprovementControl__GetUserEventTotalPoint(this, eventId, v30);
   this->fields.customerAttractionRate = EventInfoAreaImprovementControl__GetTotalCustomerAttractionRate(
                                           this,
                                           eventId,
-                                          v37);
-  EventInfoAreaImprovementControl__SaveParkData(this, eventId, v38);
+                                          v31);
+  EventInfoAreaImprovementControl__SaveParkData(this, eventId, v32);
   UnityEngine_PlayerPrefs__Save(0LL);
-  v41 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v39, v40);
+  v33 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
   System_Action___ctor(
-    v41,
-    (Il2CppObject *)v12,
+    v33,
+    (Il2CppObject *)v5,
     Method_EventInfoAreaImprovementControl___c__DisplayClass31_0__PlayAreaAddAnim_b__0__,
     0LL);
-  EventInfoAreaImprovementControl__PlayAreaAddAnimSub(this, 0, AddedEffectTargetIndexList, v41, v42);
+  EventInfoAreaImprovementControl__PlayAreaAddAnimSub(this, 0, AddedEffectTargetIndexList, v33, v34);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall EventInfoAreaImprovementControl__PlayAreaAddAnimSub(
         EventInfoAreaImprovementControl_o *this,
         int32_t index,
@@ -949,124 +909,119 @@ void __fastcall EventInfoAreaImprovementControl__PlayAreaAddAnimSub(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x1
+  __int64 v9; // x20
+  __int64 v10; // x0
   __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x20
-  __int64 v14; // x0
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
-  System_String_array **v21; // x2
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
-  System_String_array **v27; // x2
-  System_String_array **v28; // x3
-  System_Boolean_array **v29; // x4
-  System_Int32_array **v30; // x5
-  System_Int32_array *v31; // x6
-  System_Int32_array *v32; // x7
-  System_String_array **v33; // x2
-  System_String_array **v34; // x3
-  System_Boolean_array **v35; // x4
-  System_Int32_array **v36; // x5
-  System_Int32_array *v37; // x6
-  System_Int32_array *v38; // x7
-  __int64 v39; // x21
-  int v40; // w8
-  __int64 v41; // x23
+  System_String_array **v12; // x2
+  System_String_array **v13; // x3
+  System_Boolean_array **v14; // x4
+  System_Int32_array **v15; // x5
+  System_Int32_array *v16; // x6
+  System_Int32_array *v17; // x7
+  System_String_array **v18; // x2
+  System_String_array **v19; // x3
+  System_Boolean_array **v20; // x4
+  System_Int32_array **v21; // x5
+  System_Int32_array *v22; // x6
+  System_Int32_array *v23; // x7
+  System_String_array **v24; // x2
+  System_String_array **v25; // x3
+  System_Boolean_array **v26; // x4
+  System_Int32_array **v27; // x5
+  System_Int32_array *v28; // x6
+  System_Int32_array *v29; // x7
+  System_String_array **v30; // x2
+  System_String_array **v31; // x3
+  System_Boolean_array **v32; // x4
+  System_Int32_array **v33; // x5
+  System_Int32_array *v34; // x6
+  System_Int32_array *v35; // x7
+  __int64 v36; // x21
+  int v37; // w8
+  __int64 v38; // x23
   struct EventInfoAreaImprovementSlideComponent_array *slideComponentList; // x8
-  __int64 v43; // x21
-  System_Int32_array **v44; // x1
-  __int64 v45; // x1
-  __int64 v46; // x2
-  struct EventInfoAreaImprovementSlideComponent_array *v47; // x8
-  EventInfoAreaImprovementSlideComponent_o *v48; // x19
-  System_Action_o *v49; // x21
-  const MethodInfo *v50; // x2
-  __int64 v51; // x0
+  __int64 v40; // x21
+  System_Int32_array **v41; // x1
+  struct EventInfoAreaImprovementSlideComponent_array *v42; // x8
+  EventInfoAreaImprovementSlideComponent_o *v43; // x19
+  System_Action_o *v44; // x21
+  const MethodInfo *v45; // x2
+  __int64 v46; // x0
 
-  if ( (byte_42161F8 & 1) == 0 )
+  if ( (byte_42B1E15 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, *(_QWORD *)&index);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__get_Count__, v9);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__get_Item__, v10);
-    sub_B0D8A4(&Method_EventInfoAreaImprovementControl___c__DisplayClass32_0__PlayAreaAddAnimSub_b__0__, v11);
-    sub_B0D8A4(&EventInfoAreaImprovementControl___c__DisplayClass32_0_TypeInfo, v12);
-    byte_42161F8 = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_B52984(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_B52984(&Method_EventInfoAreaImprovementControl___c__DisplayClass32_0__PlayAreaAddAnimSub_b__0__);
+    sub_B52984(&EventInfoAreaImprovementControl___c__DisplayClass32_0_TypeInfo);
+    byte_42B1E15 = 1;
   }
-  v13 = sub_B0D974(EventInfoAreaImprovementControl___c__DisplayClass32_0_TypeInfo, *(_QWORD *)&index, targetIndexList);
+  v9 = sub_B52A54(EventInfoAreaImprovementControl___c__DisplayClass32_0_TypeInfo);
   EventInfoAreaImprovementControl___c__DisplayClass32_0___ctor(
-    (EventInfoAreaImprovementControl___c__DisplayClass32_0_o *)v13,
+    (EventInfoAreaImprovementControl___c__DisplayClass32_0_o *)v9,
     0LL);
-  if ( !v13 )
+  if ( !v9 )
     goto LABEL_15;
-  *(_DWORD *)(v13 + 24) = index;
-  *(_QWORD *)(v13 + 32) = this;
-  sub_B0D840((BattleServantConfConponent_o *)(v13 + 32), (System_Int32_array **)this, v15, v16, v17, v18, v19, v20);
-  *(_QWORD *)(v13 + 40) = targetIndexList;
-  sub_B0D840(
-    (BattleServantConfConponent_o *)(v13 + 40),
+  *(_DWORD *)(v9 + 24) = index;
+  *(_QWORD *)(v9 + 32) = this;
+  sub_B52920((BattleServantConfConponent_o *)(v9 + 32), (System_Int32_array **)this, v12, v13, v14, v15, v16, v17);
+  *(_QWORD *)(v9 + 40) = targetIndexList;
+  sub_B52920(
+    (BattleServantConfConponent_o *)(v9 + 40),
     (System_Int32_array **)targetIndexList,
+    v18,
+    v19,
+    v20,
     v21,
     v22,
-    v23,
-    v24,
-    v25,
-    v26);
-  *(_QWORD *)(v13 + 48) = callback;
-  sub_B0D840((BattleServantConfConponent_o *)(v13 + 48), (System_Int32_array **)callback, v27, v28, v29, v30, v31, v32);
-  v39 = *(_QWORD *)(v13 + 40);
-  if ( !v39 )
+    v23);
+  *(_QWORD *)(v9 + 48) = callback;
+  sub_B52920((BattleServantConfConponent_o *)(v9 + 48), (System_Int32_array **)callback, v24, v25, v26, v27, v28, v29);
+  v36 = *(_QWORD *)(v9 + 40);
+  if ( !v36 )
     goto LABEL_15;
-  v40 = *(_DWORD *)(v39 + 24);
-  v41 = *(int *)(v13 + 24);
-  if ( v40 > (int)v41 )
+  v37 = *(_DWORD *)(v36 + 24);
+  v38 = *(int *)(v9 + 24);
+  if ( v37 > (int)v38 )
   {
-    if ( v40 <= (unsigned int)v41 )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
+    if ( v37 <= (unsigned int)v38 )
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
     slideComponentList = this->fields.slideComponentList;
     if ( slideComponentList )
     {
-      v43 = *(int *)(*(_QWORD *)(v39 + 16) + 4 * v41 + 32);
-      if ( (unsigned int)v43 >= slideComponentList->max_length )
+      v40 = *(int *)(*(_QWORD *)(v36 + 16) + 4 * v38 + 32);
+      if ( (unsigned int)v40 >= slideComponentList->max_length )
         goto LABEL_16;
-      v44 = (System_Int32_array **)slideComponentList->m_Items[v43];
-      *(_QWORD *)(v13 + 16) = v44;
-      sub_B0D840((BattleServantConfConponent_o *)(v13 + 16), v44, v33, v34, v35, v36, v37, v38);
-      v47 = this->fields.slideComponentList;
-      if ( !v47 )
+      v41 = (System_Int32_array **)slideComponentList->m_Items[v40];
+      *(_QWORD *)(v9 + 16) = v41;
+      sub_B52920((BattleServantConfConponent_o *)(v9 + 16), v41, v30, v31, v32, v33, v34, v35);
+      v42 = this->fields.slideComponentList;
+      if ( !v42 )
         goto LABEL_15;
-      if ( (unsigned int)(v43 + 1) >= v47->max_length )
+      if ( (unsigned int)(v40 + 1) >= v42->max_length )
       {
 LABEL_16:
-        v51 = sub_B0D9A8(v14);
-        sub_B0D948(v51, 0LL);
+        v46 = sub_B52A88(v10);
+        sub_B52A28(v46, 0LL);
       }
-      v48 = v47->m_Items[(int)v43 + 1];
-      v49 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v45, v46);
+      v43 = v42->m_Items[(int)v40 + 1];
+      v44 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
       System_Action___ctor(
-        v49,
-        (Il2CppObject *)v13,
+        v44,
+        (Il2CppObject *)v9,
         Method_EventInfoAreaImprovementControl___c__DisplayClass32_0__PlayAreaAddAnimSub_b__0__,
         0LL);
-      if ( v48 )
+      if ( v43 )
       {
-        EventInfoAreaImprovementSlideComponent__SlideDown(v48, v49, v50);
+        EventInfoAreaImprovementSlideComponent__SlideDown(v43, v44, v45);
         return;
       }
     }
 LABEL_15:
-    sub_B0D97C(v14);
+    sub_B52A5C(v10, v11);
   }
-  ActionExtensions__Call(*(System_Action_o **)(v13 + 48), 0LL);
+  ActionExtensions__Call(*(System_Action_o **)(v9 + 48), 0LL);
 }
 
 
@@ -1089,7 +1044,7 @@ void __fastcall EventInfoAreaImprovementControl__Redisplay(
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   eventId = eventUiEntity->fields.eventId;
   EventInfoAreaImprovementControl__LoadSpotData(this, eventId, v2);
   EventInfoAreaImprovementControl__LoadParkData(this, eventId, v6);
@@ -1104,7 +1059,6 @@ void __fastcall EventInfoAreaImprovementControl__Redisplay(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall EventInfoAreaImprovementControl__SaveParkData(
         EventInfoAreaImprovementControl_o *this,
         int32_t eventId,
@@ -1120,18 +1074,18 @@ void __fastcall EventInfoAreaImprovementControl__SaveParkData(
   int32_t v11; // [xsp+Ch] [xbp-14h] BYREF
 
   v11 = eventId;
-  if ( (byte_4216202 & 1) == 0 )
+  if ( (byte_42B1E1F & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_705/*","*/, *(_QWORD *)&eventId);
-    byte_4216202 = 1;
+    sub_B52984(&StringLiteral_709/*","*/);
+    byte_42B1E1F = 1;
   }
   v4 = System_Int64__ToString((int64_t)&this->fields.customerNum, 0LL);
   v5 = System_Int64__ToString((int64_t)&this->fields.customerAttractionRate, 0LL);
-  v6 = System_String__Concat_43852188(v4, (System_String_o *)StringLiteral_705/*","*/, v5, 0LL);
+  v6 = System_String__Concat_44570600(v4, (System_String_o *)StringLiteral_709/*","*/, v5, 0LL);
   KEY_PREFIX_PARK_DATA = this->fields.KEY_PREFIX_PARK_DATA;
   v8 = v6;
   v9 = System_Int32__ToString((int32_t)&v11, 0LL);
-  v10 = System_String__Concat_43849904(KEY_PREFIX_PARK_DATA, v9, 0LL);
+  v10 = System_String__Concat_44568316(KEY_PREFIX_PARK_DATA, v9, 0LL);
   UnityEngine_PlayerPrefs__SetString(v10, v8, 0LL);
 }
 
@@ -1143,171 +1097,159 @@ void __fastcall EventInfoAreaImprovementControl__SaveSpotData(
         const MethodInfo *method)
 {
   EventInfoAreaImprovementControl_o *v3; // x19
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
   System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__o *spotDataList; // x20
   int size; // w23
-  EventInfoAreaImprovementControl___c_c *v15; // x0
+  EventInfoAreaImprovementControl___c_c *v6; // x0
   struct EventInfoAreaImprovementControl___c_StaticFields *static_fields; // x8
   System_Comparison_TitleInfoControl_EventEndTimeInfo__o *_9__40_0; // x21
-  Il2CppObject *v18; // x22
-  struct EventInfoAreaImprovementControl___c_StaticFields *v19; // x0
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
-  System_Text_StringBuilder_o *v26; // x20
-  __int64 v27; // x21
-  struct System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__o *v28; // x26
-  __int64 v29; // x8
-  struct System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__o *v30; // x26
-  __int64 v31; // x8
-  System_String_o *v32; // x0
+  Il2CppObject *v9; // x22
+  struct EventInfoAreaImprovementControl___c_StaticFields *v10; // x0
+  System_String_array **v11; // x2
+  System_String_array **v12; // x3
+  System_Boolean_array **v13; // x4
+  System_Int32_array **v14; // x5
+  System_Int32_array *v15; // x6
+  System_Int32_array *v16; // x7
+  System_Text_StringBuilder_o *v17; // x20
+  __int64 v18; // x21
+  struct System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__o *v19; // x26
+  __int64 v20; // x8
+  struct System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__o *v21; // x26
+  __int64 v22; // x8
+  System_String_o *v23; // x0
   System_String_o *KEY_PREFIX_SPOT_DATA; // x19
-  System_String_o *v34; // x0
-  System_String_o *v35; // x19
-  System_String_o *v36; // x0
-  int v37; // [xsp+4h] [xbp-4Ch] BYREF
-  int v38; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v39; // [xsp+Ch] [xbp-44h] BYREF
+  System_String_o *v25; // x0
+  System_String_o *v26; // x19
+  System_String_o *v27; // x0
+  int v28; // [xsp+4h] [xbp-4Ch] BYREF
+  int v29; // [xsp+8h] [xbp-48h] BYREF
+  int32_t v30; // [xsp+Ch] [xbp-44h] BYREF
 
   v3 = this;
-  v39 = eventId;
-  if ( (byte_42161FF & 1) == 0 )
+  v30 = eventId;
+  if ( (byte_42B1E1C & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Comparison_EventInfoAreaImprovementControl_SpotData___ctor__, *(_QWORD *)&eventId);
-    sub_B0D8A4(&System_Comparison_EventInfoAreaImprovementControl_SpotData__TypeInfo, v4);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__Sort__, v5);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__get_Count__, v6);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__get_Item__, v7);
-    sub_B0D8A4(&System_Text_StringBuilder_TypeInfo, v8);
-    sub_B0D8A4(&Method_EventInfoAreaImprovementControl___c__SaveSpotData_b__40_0__, v9);
-    sub_B0D8A4(&EventInfoAreaImprovementControl___c_TypeInfo, v10);
-    sub_B0D8A4(&StringLiteral_1232/*":"*/, v11);
-    this = (EventInfoAreaImprovementControl_o *)sub_B0D8A4(&StringLiteral_705/*","*/, v12);
-    byte_42161FF = 1;
+    sub_B52984(&Method_System_Comparison_EventInfoAreaImprovementControl_SpotData___ctor__);
+    sub_B52984(&System_Comparison_EventInfoAreaImprovementControl_SpotData__TypeInfo);
+    sub_B52984(&Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__Sort__);
+    sub_B52984(&Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__get_Count__);
+    sub_B52984(&Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__get_Item__);
+    sub_B52984(&System_Text_StringBuilder_TypeInfo);
+    sub_B52984(&Method_EventInfoAreaImprovementControl___c__SaveSpotData_b__40_0__);
+    sub_B52984(&EventInfoAreaImprovementControl___c_TypeInfo);
+    sub_B52984(&StringLiteral_1240/*":"*/);
+    this = (EventInfoAreaImprovementControl_o *)sub_B52984(&StringLiteral_709/*","*/);
+    byte_42B1E1C = 1;
   }
-  v37 = 0;
-  v38 = 0;
+  v28 = 0;
+  v29 = 0;
   spotDataList = (System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__o *)v3->fields.spotDataList;
   if ( !spotDataList )
     goto LABEL_31;
   size = spotDataList->fields._size;
   if ( size > 1 )
   {
-    v15 = EventInfoAreaImprovementControl___c_TypeInfo;
+    v6 = EventInfoAreaImprovementControl___c_TypeInfo;
     if ( (BYTE3(EventInfoAreaImprovementControl___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !EventInfoAreaImprovementControl___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EventInfoAreaImprovementControl___c_TypeInfo);
-      v15 = EventInfoAreaImprovementControl___c_TypeInfo;
+      v6 = EventInfoAreaImprovementControl___c_TypeInfo;
     }
-    static_fields = v15->static_fields;
+    static_fields = v6->static_fields;
     _9__40_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)static_fields->__9__40_0;
     if ( !_9__40_0 )
     {
-      if ( (BYTE3(v15->vtable._0_Equals.methodPtr) & 4) != 0 && !v15->_2.cctor_finished )
+      if ( (BYTE3(v6->vtable._0_Equals.methodPtr) & 4) != 0 && !v6->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v15);
+        j_il2cpp_runtime_class_init_0(v6);
         static_fields = EventInfoAreaImprovementControl___c_TypeInfo->static_fields;
       }
-      v18 = (Il2CppObject *)static_fields->__9;
-      _9__40_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B0D974(
-                                                                             System_Comparison_EventInfoAreaImprovementControl_SpotData__TypeInfo,
-                                                                             *(_QWORD *)&eventId,
-                                                                             method);
+      v9 = (Il2CppObject *)static_fields->__9;
+      _9__40_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B52A54(System_Comparison_EventInfoAreaImprovementControl_SpotData__TypeInfo);
       System_Comparison_TitleInfoControl_EventEndTimeInfo____ctor(
         _9__40_0,
-        v18,
+        v9,
         Method_EventInfoAreaImprovementControl___c__SaveSpotData_b__40_0__,
-        (const MethodInfo_2412E90 *)Method_System_Comparison_EventInfoAreaImprovementControl_SpotData___ctor__);
-      v19 = EventInfoAreaImprovementControl___c_TypeInfo->static_fields;
-      v19->__9__40_0 = (struct System_Comparison_EventInfoAreaImprovementControl_SpotData__o *)_9__40_0;
-      sub_B0D840(
-        (BattleServantConfConponent_o *)&v19->__9__40_0,
+        (const MethodInfo_2483370 *)Method_System_Comparison_EventInfoAreaImprovementControl_SpotData___ctor__);
+      v10 = EventInfoAreaImprovementControl___c_TypeInfo->static_fields;
+      v10->__9__40_0 = (struct System_Comparison_EventInfoAreaImprovementControl_SpotData__o *)_9__40_0;
+      sub_B52920(
+        (BattleServantConfConponent_o *)&v10->__9__40_0,
         (System_Int32_array **)_9__40_0,
-        v20,
-        v21,
-        v22,
-        v23,
-        v24,
-        v25);
+        v11,
+        v12,
+        v13,
+        v14,
+        v15,
+        v16);
     }
     System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo___Sort(
       spotDataList,
       (System_Comparison_T__o *)_9__40_0,
-      (const MethodInfo_2FC77C4 *)Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__Sort__);
+      (const MethodInfo_2FF36E0 *)Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__Sort__);
   }
-  v26 = (System_Text_StringBuilder_o *)sub_B0D974(System_Text_StringBuilder_TypeInfo, *(_QWORD *)&eventId, method);
-  System_Text_StringBuilder___ctor(v26, 0LL);
+  v17 = (System_Text_StringBuilder_o *)sub_B52A54(System_Text_StringBuilder_TypeInfo);
+  System_Text_StringBuilder___ctor(v17, 0LL);
   if ( size >= 1 )
   {
-    v27 = 4LL;
+    v18 = 4LL;
     while ( 1 )
     {
-      if ( (_DWORD)v27 != 4 )
+      if ( (_DWORD)v18 != 4 )
       {
-        if ( !v26 )
+        if ( !v17 )
           break;
-        this = (EventInfoAreaImprovementControl_o *)System_Text_StringBuilder__Append_42155400(
-                                                      v26,
-                                                      (System_String_o *)StringLiteral_705/*","*/,
+        this = (EventInfoAreaImprovementControl_o *)System_Text_StringBuilder__Append_42994048(
+                                                      v17,
+                                                      (System_String_o *)StringLiteral_709/*","*/,
                                                       0LL);
       }
-      v28 = v3->fields.spotDataList;
-      if ( !v28 )
+      v19 = v3->fields.spotDataList;
+      if ( !v19 )
         break;
-      if ( v28->fields._size <= (unsigned int)(v27 - 4) )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-      v29 = *((_QWORD *)&v28->fields._items->obj.klass + v27);
-      if ( !v29 )
+      if ( v19->fields._size <= (unsigned int)(v18 - 4) )
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+      v20 = *((_QWORD *)&v19->fields._items->obj.klass + v18);
+      if ( !v20 )
         break;
-      v38 = *(_DWORD *)(v29 + 16);
-      this = (EventInfoAreaImprovementControl_o *)System_Int32__ToString((int32_t)&v38, 0LL);
-      if ( !v26 )
+      v29 = *(_DWORD *)(v20 + 16);
+      this = (EventInfoAreaImprovementControl_o *)System_Int32__ToString((int32_t)&v29, 0LL);
+      if ( !v17 )
         break;
-      System_Text_StringBuilder__Append_42155400(v26, (System_String_o *)this, 0LL);
-      this = (EventInfoAreaImprovementControl_o *)System_Text_StringBuilder__Append_42155400(
-                                                    v26,
-                                                    (System_String_o *)StringLiteral_1232/*":"*/,
+      System_Text_StringBuilder__Append_42994048(v17, (System_String_o *)this, 0LL);
+      this = (EventInfoAreaImprovementControl_o *)System_Text_StringBuilder__Append_42994048(
+                                                    v17,
+                                                    (System_String_o *)StringLiteral_1240/*":"*/,
                                                     0LL);
-      v30 = v3->fields.spotDataList;
-      if ( !v30 )
+      v21 = v3->fields.spotDataList;
+      if ( !v21 )
         break;
-      if ( v30->fields._size <= (unsigned int)(v27 - 4) )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-      v31 = *((_QWORD *)&v30->fields._items->obj.klass + v27);
-      if ( !v31 )
+      if ( v21->fields._size <= (unsigned int)(v18 - 4) )
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+      v22 = *((_QWORD *)&v21->fields._items->obj.klass + v18);
+      if ( !v22 )
         break;
-      v37 = *(_DWORD *)(v31 + 20);
-      v32 = System_Int32__ToString((int32_t)&v37, 0LL);
-      this = (EventInfoAreaImprovementControl_o *)System_Text_StringBuilder__Append_42155400(v26, v32, 0LL);
-      if ( (int)++v27 - 4 >= size )
+      v28 = *(_DWORD *)(v22 + 20);
+      v23 = System_Int32__ToString((int32_t)&v28, 0LL);
+      this = (EventInfoAreaImprovementControl_o *)System_Text_StringBuilder__Append_42994048(v17, v23, 0LL);
+      if ( (int)++v18 - 4 >= size )
         goto LABEL_29;
     }
 LABEL_31:
-    sub_B0D97C(this);
+    sub_B52A5C(this, *(_QWORD *)&eventId);
   }
 LABEL_29:
   KEY_PREFIX_SPOT_DATA = v3->fields.KEY_PREFIX_SPOT_DATA;
-  v34 = System_Int32__ToString((int32_t)&v39, 0LL);
-  this = (EventInfoAreaImprovementControl_o *)System_String__Concat_43849904(KEY_PREFIX_SPOT_DATA, v34, 0LL);
-  if ( !v26 )
+  v25 = System_Int32__ToString((int32_t)&v30, 0LL);
+  this = (EventInfoAreaImprovementControl_o *)System_String__Concat_44568316(KEY_PREFIX_SPOT_DATA, v25, 0LL);
+  if ( !v17 )
     goto LABEL_31;
-  v35 = (System_String_o *)this;
-  v36 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v26->klass->vtable._3_ToString.method)(
-                             v26,
-                             v26->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
-  UnityEngine_PlayerPrefs__SetString(v35, v36, 0LL);
+  v26 = (System_String_o *)this;
+  v27 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v17->klass->vtable._3_ToString.method)(
+                             v17,
+                             v17->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
+  UnityEngine_PlayerPrefs__SetString(v26, v27, 0LL);
 }
 
 
@@ -1316,28 +1258,26 @@ void __fastcall EventInfoAreaImprovementControl__SetCustomerAttractionRateLabel(
         int64_t totalRate,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   UnityEngine_Object_o *customerAttractionRateLabel; // x21
-  int64_t v9; // x8
-  int64_t v10; // x23
-  UILabel_o *v11; // x20
-  __int64 v12; // x22
-  System_String_o *v13; // x21
-  Il2CppObject *v14; // x22
-  Il2CppObject *v15; // x0
-  System_String_o *v16; // x0
-  int64_t v17; // [xsp+0h] [xbp-40h] BYREF
-  __int64 v18; // [xsp+8h] [xbp-38h] BYREF
+  int64_t v6; // x8
+  int64_t v7; // x23
+  UILabel_o *v8; // x20
+  __int64 v9; // x22
+  System_String_o *v10; // x21
+  Il2CppObject *v11; // x22
+  Il2CppObject *v12; // x0
+  System_String_o *v13; // x0
+  __int64 v14; // x1
+  int64_t v15; // [xsp+0h] [xbp-40h] BYREF
+  __int64 v16; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_42161F9 & 1) == 0 )
+  if ( (byte_42B1E16 & 1) == 0 )
   {
-    sub_B0D8A4(&long_TypeInfo, totalRate);
-    sub_B0D8A4(&LocalizationManager_TypeInfo, v5);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v6);
-    sub_B0D8A4(&StringLiteral_5734/*"EVENT_SPOT_COOLTIME_CUSTOMER_RATE_FORMAT"*/, v7);
-    byte_42161F9 = 1;
+    sub_B52984(&long_TypeInfo);
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&StringLiteral_5760/*"EVENT_SPOT_COOLTIME_CUSTOMER_RATE_FORMAT"*/);
+    byte_42B1E16 = 1;
   }
   customerAttractionRateLabel = (UnityEngine_Object_o *)this->fields.customerAttractionRateLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1347,27 +1287,27 @@ void __fastcall EventInfoAreaImprovementControl__SetCustomerAttractionRateLabel(
   }
   if ( !UnityEngine_Object__op_Equality(customerAttractionRateLabel, 0LL, 0LL) )
   {
-    v9 = totalRate + 1000;
-    v10 = (totalRate + 1000) / 100 % 10;
-    v11 = this->fields.customerAttractionRateLabel;
-    v12 = v9 / 1000;
+    v6 = totalRate + 1000;
+    v7 = (totalRate + 1000) / 100 % 10;
+    v8 = this->fields.customerAttractionRateLabel;
+    v9 = v6 / 1000;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5734/*"EVENT_SPOT_COOLTIME_CUSTOMER_RATE_FORMAT"*/, 0LL);
-    v18 = v12;
-    v14 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v18);
-    v17 = v10;
-    v15 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v17);
-    v16 = System_String__Format_43845440(v13, v14, v15, 0LL);
-    if ( !v11
-      || (UILabel__set_text(v11, v16, 0LL), (v16 = (System_String_o *)this->fields.customerAttractionRateLabel) == 0LL) )
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_5760/*"EVENT_SPOT_COOLTIME_CUSTOMER_RATE_FORMAT"*/, 0LL);
+    v16 = v9;
+    v11 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v16);
+    v15 = v7;
+    v12 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v15);
+    v13 = System_String__Format_44563852(v10, v11, v12, 0LL);
+    if ( !v8
+      || (UILabel__set_text(v8, v13, 0LL), (v13 = (System_String_o *)this->fields.customerAttractionRateLabel) == 0LL) )
     {
-      sub_B0D97C(v16);
+      sub_B52A5C(v13, v14);
     }
-    UILabel__SetCondensedScale((UILabel_o *)v16, this->fields.customerAttractionRateMaxWidth, 0LL);
+    UILabel__SetCondensedScale((UILabel_o *)v13, this->fields.customerAttractionRateMaxWidth, 0LL);
   }
 }
 
@@ -1377,29 +1317,25 @@ void __fastcall EventInfoAreaImprovementControl__SetCustomerNumLabel(
         int64_t point,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
   UnityEngine_Object_o *customerNumLabel; // x21
-  UILabel_o *v11; // x21
-  System_String_o *v12; // x22
-  BalanceConfig_c *v13; // x8
+  UILabel_o *v6; // x21
+  System_String_o *v7; // x22
+  BalanceConfig_c *v8; // x8
   int64_t UserPointEventMax; // x23
-  Il2CppObject *v15; // x0
-  System_String_o *v16; // x0
-  int64_t v17; // [xsp+8h] [xbp-28h] BYREF
+  Il2CppObject *v10; // x0
+  System_String_o *v11; // x0
+  __int64 v12; // x1
+  int64_t v13; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_42161FB & 1) == 0 )
+  if ( (byte_42B1E18 & 1) == 0 )
   {
-    sub_B0D8A4(&BalanceConfig_TypeInfo, point);
-    sub_B0D8A4(&long_TypeInfo, v5);
-    sub_B0D8A4(&LocalizationManager_TypeInfo, v6);
-    sub_B0D8A4(&System_Math_TypeInfo, v7);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v8);
-    sub_B0D8A4(&StringLiteral_5667/*"EVENT_POINT_COMMON_FORMAT"*/, v9);
-    byte_42161FB = 1;
+    sub_B52984(&BalanceConfig_TypeInfo);
+    sub_B52984(&long_TypeInfo);
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&System_Math_TypeInfo);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&StringLiteral_5693/*"EVENT_POINT_COMMON_FORMAT"*/);
+    byte_42B1E18 = 1;
   }
   customerNumLabel = (UnityEngine_Object_o *)this->fields.customerNumLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1409,29 +1345,29 @@ void __fastcall EventInfoAreaImprovementControl__SetCustomerNumLabel(
   }
   if ( !UnityEngine_Object__op_Equality(customerNumLabel, 0LL, 0LL) )
   {
-    v11 = this->fields.customerNumLabel;
+    v6 = this->fields.customerNumLabel;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5667/*"EVENT_POINT_COMMON_FORMAT"*/, 0LL);
-    v13 = BalanceConfig_TypeInfo;
+    v7 = LocalizationManager__Get((System_String_o *)StringLiteral_5693/*"EVENT_POINT_COMMON_FORMAT"*/, 0LL);
+    v8 = BalanceConfig_TypeInfo;
     if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v13 = BalanceConfig_TypeInfo;
+      v8 = BalanceConfig_TypeInfo;
     }
-    UserPointEventMax = v13->static_fields->UserPointEventMax;
+    UserPointEventMax = v8->static_fields->UserPointEventMax;
     if ( (BYTE3(System_Math_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v17 = System_Math__Min_44560000(point, UserPointEventMax, 0LL);
-    v15 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v17);
-    v16 = System_String__Format(v12, v15, 0LL);
-    if ( !v11 || (UILabel__set_text(v11, v16, 0LL), (v16 = (System_String_o *)this->fields.customerNumLabel) == 0LL) )
-      sub_B0D97C(v16);
-    UILabel__SetCondensedScale((UILabel_o *)v16, this->fields.customerNumMaxWidth, 0LL);
+    v13 = System_Math__Min_45037076(point, UserPointEventMax, 0LL);
+    v10 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v13);
+    v11 = System_String__Format(v7, v10, 0LL);
+    if ( !v6 || (UILabel__set_text(v6, v11, 0LL), (v11 = (System_String_o *)this->fields.customerNumLabel) == 0LL) )
+      sub_B52A5C(v11, v12);
+    UILabel__SetCondensedScale((UILabel_o *)v11, this->fields.customerNumMaxWidth, 0LL);
   }
 }
 
@@ -1446,8 +1382,8 @@ void __fastcall EventInfoAreaImprovementControl__Setup(
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
-  __int64 v10; // x1
-  _BOOL8 v11; // x0
+  _BOOL8 v10; // x0
+  __int64 v11; // x1
   const MethodInfo *v12; // x2
   struct EventUiEntity_o *eventUiEntity; // x8
   const MethodInfo *v14; // x2
@@ -1472,16 +1408,16 @@ void __fastcall EventInfoAreaImprovementControl__Setup(
   const MethodInfo *v33; // x2
   __int64 v34; // x0
 
-  if ( (byte_42161F5 & 1) == 0 )
+  if ( (byte_42B1E12 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__get_Count__, entitys);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__get_Item__, v10);
-    byte_42161F5 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_B52984(&Method_System_Collections_Generic_List_int__get_Item__);
+    byte_42B1E12 = 1;
   }
   if ( entitys )
   {
     this->fields.eventUiValueEntityList = entitys;
-    sub_B0D840(
+    sub_B52920(
       (BattleServantConfConponent_o *)&this->fields.eventUiValueEntityList,
       (System_Int32_array **)entitys,
       (System_String_array **)method,
@@ -1511,14 +1447,14 @@ void __fastcall EventInfoAreaImprovementControl__Setup(
         v21 = v20 - 1;
         if ( v20 - 1 >= drawComponentList->max_length )
         {
-          v34 = sub_B0D9A8(v11);
-          sub_B0D948(v34, 0LL);
+          v34 = sub_B52A88(v10);
+          sub_B52A28(v34, 0LL);
         }
         v22 = v21;
         v23 = drawComponentList->m_Items[v21];
         if ( !v23 )
           break;
-        v11 = EventInfoUIBase__SetSpriteByLocalAtlas(
+        v10 = EventInfoUIBase__SetSpriteByLocalAtlas(
                 (EventInfoUIBase_o *)this,
                 v23->fields.bgSprite,
                 v23->fields.bgSpriteName,
@@ -1538,7 +1474,7 @@ void __fastcall EventInfoAreaImprovementControl__Setup(
         else
         {
           if ( size <= (unsigned int)v22 )
-            System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
+            System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
           v28 = baseSpotIdList->fields._items->m_Items[v22 + 1];
         }
         v23->fields._SpotId_k__BackingField = v28;
@@ -1557,7 +1493,7 @@ void __fastcall EventInfoAreaImprovementControl__Setup(
       }
       while ( drawComponentList );
 LABEL_23:
-      sub_B0D97C(v11);
+      sub_B52A5C(v10, v11);
     }
 LABEL_24:
     EventInfoAreaImprovementControl__SetCustomerNumLabel(this, this->fields.customerNum, v17);
@@ -1572,26 +1508,25 @@ void __fastcall EventInfoAreaImprovementControl__SetupSlideComponentList(
 {
   const MethodInfo *v2; // x2
   EventInfoAreaImprovementControl_o *v3; // x19
-  __int64 v4; // x1
   struct EventInfoAreaImprovementSlideComponent_array *slideComponentList; // x8
   int max_length; // w21
-  il2cpp_array_size_t v7; // w9
-  char v8; // w23
+  il2cpp_array_size_t v6; // w9
+  char v7; // w23
   struct System_Collections_Generic_List_int__o *baseSpotIdList; // x24
-  __int64 v10; // x22
+  __int64 v9; // x22
   int size; // w9
-  EventInfoAreaImprovementSlideComponent_o *v12; // x20
-  int32_t v13; // w8
+  EventInfoAreaImprovementSlideComponent_o *v11; // x20
+  int32_t v12; // w8
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v15; // x1
-  __int64 v16; // x0
+  const MethodInfo *v14; // x1
+  __int64 v15; // x0
 
   v3 = this;
-  if ( (byte_42161F6 & 1) == 0 )
+  if ( (byte_42B1E13 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__get_Count__, method);
-    this = (EventInfoAreaImprovementControl_o *)sub_B0D8A4(&Method_System_Collections_Generic_List_int__get_Item__, v4);
-    byte_42161F6 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_int__get_Count__);
+    this = (EventInfoAreaImprovementControl_o *)sub_B52984(&Method_System_Collections_Generic_List_int__get_Item__);
+    byte_42B1E13 = 1;
   }
   slideComponentList = v3->fields.slideComponentList;
   if ( !slideComponentList )
@@ -1599,66 +1534,66 @@ void __fastcall EventInfoAreaImprovementControl__SetupSlideComponentList(
   max_length = slideComponentList->max_length;
   if ( max_length >= 1 )
   {
+    v6 = 0;
     v7 = 0;
-    v8 = 0;
     do
     {
-      if ( v7 >= slideComponentList->max_length )
+      if ( v6 >= slideComponentList->max_length )
       {
-        v16 = sub_B0D9A8(this);
-        sub_B0D948(v16, 0LL);
+        v15 = sub_B52A88(this);
+        sub_B52A28(v15, 0LL);
       }
       baseSpotIdList = v3->fields.baseSpotIdList;
       if ( !baseSpotIdList )
         break;
-      v10 = (int)v7;
+      v9 = (int)v6;
       size = baseSpotIdList->fields._size;
-      v12 = slideComponentList->m_Items[v10];
-      if ( (int)v10 >= size )
+      v11 = slideComponentList->m_Items[v9];
+      if ( (int)v9 >= size )
       {
-        v13 = 0;
-        if ( !v12 )
+        v12 = 0;
+        if ( !v11 )
           break;
       }
       else
       {
-        if ( size <= (unsigned int)v10 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-        v13 = baseSpotIdList->fields._items->m_Items[v10 + 1];
-        if ( !v12 )
+        if ( size <= (unsigned int)v9 )
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+        v12 = baseSpotIdList->fields._items->m_Items[v9 + 1];
+        if ( !v11 )
           break;
       }
-      v12->fields._SpotId_k__BackingField = v13;
-      if ( (_DWORD)v10 )
+      v11->fields._SpotId_k__BackingField = v12;
+      if ( (_DWORD)v9 )
       {
-        if ( (v8 & 1) != 0 )
+        if ( (v7 & 1) != 0 )
         {
-          EventInfoAreaImprovementSlideComponent__SetupSlideDownPosition(v12, method);
+          EventInfoAreaImprovementSlideComponent__SetupSlideDownPosition(v11, method);
         }
         else
         {
-          gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v12, 0LL);
+          gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v11, 0LL);
           GameObjectExtensions__ResetLocalPosition(gameObject, 0LL);
         }
       }
-      if ( EventInfoAreaImprovementControl__GetSpotData(v3, v12->fields._SpotId_k__BackingField, v2) )
+      if ( EventInfoAreaImprovementControl__GetSpotData(v3, v11->fields._SpotId_k__BackingField, v2) )
       {
-        EventInfoAreaImprovementSlideComponent__SetupDisp(v12, v15);
-        v8 = 1;
+        EventInfoAreaImprovementSlideComponent__SetupDisp(v11, v14);
+        v7 = 1;
       }
       else
       {
-        EventInfoAreaImprovementSlideComponent__SetupHidden(v12, v15);
-        v8 = 0;
+        EventInfoAreaImprovementSlideComponent__SetupHidden(v11, v14);
+        v7 = 0;
       }
-      v7 = v10 + 1;
-      if ( (int)v10 + 1 >= max_length )
+      v6 = v9 + 1;
+      if ( (int)v9 + 1 >= max_length )
         return;
       slideComponentList = v3->fields.slideComponentList;
     }
     while ( slideComponentList );
 LABEL_23:
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   }
 }
 
@@ -1673,11 +1608,10 @@ void __fastcall EventInfoAreaImprovementControl__UpdateDrawComponentList(
   il2cpp_array_size_t v5; // w22
   EventInfoAreaImprovementDrawComponent_o *v6; // x20
   int32_t Level_k__BackingField; // w24
-  const MethodInfo *v8; // x1
   int32_t playType; // w23
-  const MethodInfo *v10; // x1
-  const MethodInfo *v11; // x2
-  __int64 v12; // x0
+  const MethodInfo *v9; // x1
+  const MethodInfo *v10; // x2
+  __int64 v11; // x0
 
   drawComponentList = this->fields.drawComponentList;
   if ( !drawComponentList )
@@ -1691,8 +1625,8 @@ void __fastcall EventInfoAreaImprovementControl__UpdateDrawComponentList(
     {
       if ( v5 >= drawComponentList->max_length )
       {
-        v12 = sub_B0D9A8(this);
-        sub_B0D948(v12, 0LL);
+        v11 = sub_B52A88(this);
+        sub_B52A28(v11, 0LL);
       }
       v6 = drawComponentList->m_Items[v5];
       if ( !v6 )
@@ -1713,12 +1647,12 @@ void __fastcall EventInfoAreaImprovementControl__UpdateDrawComponentList(
       if ( Level_k__BackingField != playType )
       {
         v6->fields._Level_k__BackingField = playType;
-        EventInfoAreaImprovementDrawComponent__UpdateLevelLabel(v6, v8);
-        EventInfoAreaImprovementDrawComponent__UpdateAreaName(v6, v10);
+        EventInfoAreaImprovementDrawComponent__UpdateLevelLabel(v6, method);
+        EventInfoAreaImprovementDrawComponent__UpdateAreaName(v6, v9);
         this = (EventInfoAreaImprovementControl_o *)EventInfoAreaImprovementControl__GetSpotData(
                                                       v4,
                                                       v6->fields._SpotId_k__BackingField,
-                                                      v11);
+                                                      v10);
         if ( this )
           *((_DWORD *)&this->fields.UnityEngine_MonoBehaviour_Fields + 1) = playType;
       }
@@ -1728,7 +1662,7 @@ void __fastcall EventInfoAreaImprovementControl__UpdateDrawComponentList(
     }
     while ( drawComponentList );
 LABEL_15:
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   }
 }
 
@@ -1741,7 +1675,7 @@ void __fastcall EventInfoAreaImprovementControl___Initialization_b__25_0(
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   EventInfoUIBase__LoadLocalAtlas((EventInfoUIBase_o *)this, eventUiEntity->fields.eventId, 0LL);
 }
 
@@ -1756,21 +1690,19 @@ void __fastcall EventInfoAreaImprovementControl_SpotData___ctor(
 
 void __fastcall EventInfoAreaImprovementControl___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x2
-  Il2CppObject *v3; // x19
+  Il2CppObject *v1; // x19
   struct EventInfoAreaImprovementControl___c_StaticFields *static_fields; // x0
 
-  if ( (byte_4211B49 & 1) == 0 )
+  if ( (byte_42AD8DF & 1) == 0 )
   {
-    sub_B0D8A4(&EventInfoAreaImprovementControl___c_TypeInfo, v1);
-    byte_4211B49 = 1;
+    sub_B52984(&EventInfoAreaImprovementControl___c_TypeInfo);
+    byte_42AD8DF = 1;
   }
-  v3 = (Il2CppObject *)sub_B0D974(EventInfoAreaImprovementControl___c_TypeInfo, v1, v2);
-  System_Object___ctor(v3, 0LL);
+  v1 = (Il2CppObject *)sub_B52A54(EventInfoAreaImprovementControl___c_TypeInfo);
+  System_Object___ctor(v1, 0LL);
   static_fields = EventInfoAreaImprovementControl___c_TypeInfo->static_fields;
-  static_fields->__9 = (struct EventInfoAreaImprovementControl___c_o *)v3;
-  sub_B0D840(static_fields, v3);
+  static_fields->__9 = (struct EventInfoAreaImprovementControl___c_o *)v1;
+  sub_B52920(static_fields);
 }
 
 
@@ -1789,7 +1721,7 @@ int32_t __fastcall EventInfoAreaImprovementControl___c___SaveSpotData_b__40_0(
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_B0D97C(this);
+    sub_B52A5C(this, a);
   return a->fields.SpotId - b->fields.SpotId;
 }
 
@@ -1813,7 +1745,7 @@ void __fastcall EventInfoAreaImprovementControl___c__DisplayClass31_0___PlayArea
     || (EventInfoAreaImprovementControl__SetCustomerNumLabel(_4__this, _4__this->fields.customerNum, 0LL),
         (_4__this = this->fields.__4__this) == 0LL) )
   {
-    sub_B0D97C(_4__this);
+    sub_B52A5C(_4__this, method);
   }
   EventInfoAreaImprovementControl__SetCustomerAttractionRateLabel(
     _4__this,
@@ -1835,36 +1767,32 @@ void __fastcall EventInfoAreaImprovementControl___c__DisplayClass32_0___PlayArea
         EventInfoAreaImprovementControl___c__DisplayClass32_0_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  Il2CppObject *v3; // x19
-  __int64 v4; // x1
+  Il2CppObject *v2; // x19
   System_Action_o *monitor; // x22
   EventInfoAreaImprovementSlideComponent_o *klass; // x20
 
-  v3 = (Il2CppObject *)this;
-  if ( (byte_4211B4A & 1) == 0 )
+  v2 = (Il2CppObject *)this;
+  if ( (byte_42AD8E0 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, method);
-    this = (EventInfoAreaImprovementControl___c__DisplayClass32_0_o *)sub_B0D8A4(
-                                                                        &Method_EventInfoAreaImprovementControl___c__DisplayClass32_0__PlayAreaAddAnimSub_b__1__,
-                                                                        v4);
-    byte_4211B4A = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    this = (EventInfoAreaImprovementControl___c__DisplayClass32_0_o *)sub_B52984(&Method_EventInfoAreaImprovementControl___c__DisplayClass32_0__PlayAreaAddAnimSub_b__1__);
+    byte_42AD8E0 = 1;
   }
-  monitor = (System_Action_o *)v3[3].monitor;
-  klass = (EventInfoAreaImprovementSlideComponent_o *)v3[1].klass;
+  monitor = (System_Action_o *)v2[3].monitor;
+  klass = (EventInfoAreaImprovementSlideComponent_o *)v2[1].klass;
   if ( !monitor )
   {
-    monitor = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, method, v2);
+    monitor = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
     System_Action___ctor(
       monitor,
-      v3,
+      v2,
       Method_EventInfoAreaImprovementControl___c__DisplayClass32_0__PlayAreaAddAnimSub_b__1__,
       0LL);
-    v3[3].monitor = monitor;
-    sub_B0D840(&v3[3].monitor, monitor);
+    v2[3].monitor = monitor;
+    sub_B52920(&v2[3].monitor);
   }
   if ( !klass )
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   EventInfoAreaImprovementSlideComponent__SlideIn(klass, monitor, 0LL);
 }
 
@@ -1874,13 +1802,13 @@ void __fastcall EventInfoAreaImprovementControl___c__DisplayClass32_0___PlayArea
         const MethodInfo *method)
 {
   EventInfoAreaImprovementControl_o *_4__this; // x8
-  int32_t v3; // w1
+  __int64 v3; // x1
 
   _4__this = this->fields.__4__this;
-  v3 = this->fields.index + 1;
+  v3 = (unsigned int)(this->fields.index + 1);
   this->fields.index = v3;
   if ( !_4__this )
-    sub_B0D97C(this);
+    sub_B52A5C(this, v3);
   EventInfoAreaImprovementControl__PlayAreaAddAnimSub(
     _4__this,
     v3,

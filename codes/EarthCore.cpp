@@ -1,142 +1,120 @@
 void __fastcall EarthCore___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
   struct EarthCore_StaticFields *static_fields; // x9
-  struct EarthCore_StaticFields *v3; // x8
+  struct EarthCore_StaticFields *v2; // x8
 
-  if ( (byte_4216305 & 1) == 0 )
+  if ( (byte_42B208F & 1) == 0 )
   {
-    sub_B0D8A4(&EarthCore_TypeInfo, v1);
-    byte_4216305 = 1;
+    sub_B52984(&EarthCore_TypeInfo);
+    byte_42B208F = 1;
   }
   static_fields = EarthCore_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->FOCUS_IN_POS.fields.x = 0xC32A0000C3848000LL;
   static_fields->FOCUS_IN_POS.fields.z = 0.0;
-  v3 = EarthCore_TypeInfo->static_fields;
-  *(_QWORD *)&v3->FOCUS_OUT_POS.fields.x = 0xC3480000C3848000LL;
-  v3->FOCUS_OUT_POS.fields.z = 0.0;
+  v2 = EarthCore_TypeInfo->static_fields;
+  *(_QWORD *)&v2->FOCUS_OUT_POS.fields.x = 0xC3480000C3848000LL;
+  v2->FOCUS_OUT_POS.fields.z = 0.0;
 }
 
 
 void __fastcall EarthCore___ctor(EarthCore_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  EarthCore_StateMain_o *v4; // x20
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  EarthCore_StateMain_o *v3; // x20
+  System_String_array **v4; // x2
+  System_String_array **v5; // x3
+  System_Boolean_array **v6; // x4
+  System_Int32_array **v7; // x5
+  System_Int32_array *v8; // x6
+  System_Int32_array *v9; // x7
 
-  if ( (byte_4216304 & 1) == 0 )
+  if ( (byte_42B208E & 1) == 0 )
   {
-    sub_B0D8A4(&EarthCore_StateMain_TypeInfo, method);
-    byte_4216304 = 1;
+    sub_B52984(&EarthCore_StateMain_TypeInfo);
+    byte_42B208E = 1;
   }
-  v4 = (EarthCore_StateMain_o *)sub_B0D974(EarthCore_StateMain_TypeInfo, method, v2);
-  EarthCore_StateMain___ctor(v4, 0LL);
-  this->fields.mStateMain = v4;
-  sub_B0D840(
+  v3 = (EarthCore_StateMain_o *)sub_B52A54(EarthCore_StateMain_TypeInfo);
+  EarthCore_StateMain___ctor(v3, 0LL);
+  this->fields.mStateMain = v3;
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.mStateMain,
-    (System_Int32_array **)v4,
+    (System_Int32_array **)v3,
+    v4,
     v5,
     v6,
     v7,
     v8,
-    v9,
-    v10);
+    v9);
   BaseCore___ctor((BaseCore_o *)this, 0LL);
 }
 
 
 void __fastcall EarthCore__Awake(EarthCore_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
   struct CStateManager_EarthCore__o *mFSM; // x8
   struct CStateManager_EarthCore__o **p_mFSM; // x20
-  CStateManager_QAASpotStateController_IMapSpot__o *v12; // x21
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
-  struct CStateManager_EarthCore__o *v19; // x21
-  __int64 v20; // x1
-  __int64 v21; // x2
-  EarthCore_StateNone_o *v22; // x22
+  CStateManager_QAASpotStateController_IMapSpot__o *v5; // x21
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
+  struct CStateManager_EarthCore__o *v12; // x21
+  EarthCore_StateNone_o *v13; // x22
   CStateManager_QAASpotStateController_IMapSpot__o *transform; // x0
-  struct CStateManager_EarthCore__o *v24; // x21
-  __int64 v25; // x1
-  __int64 v26; // x2
-  EarthCore_StateZoomIn_o *v27; // x22
-  CStateManager_QAASpotStateController_IMapSpot__o *v28; // x20
-  __int64 v29; // x1
-  __int64 v30; // x2
-  EarthCore_StateZoomOut_o *v31; // x21
-  const MethodInfo *v32; // x2
+  __int64 v15; // x1
+  struct CStateManager_EarthCore__o *v16; // x21
+  EarthCore_StateZoomIn_o *v17; // x22
+  CStateManager_QAASpotStateController_IMapSpot__o *v18; // x20
+  EarthCore_StateZoomOut_o *v19; // x21
+  const MethodInfo *v20; // x2
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_GameObject_o *mEarthRoot; // x20
   struct UnityEngine_MeshRenderer_o *Component_srcLineSprite; // x0
-  System_String_array **v36; // x2
-  System_String_array **v37; // x3
-  System_Boolean_array **v38; // x4
-  System_Int32_array **v39; // x5
-  System_Int32_array *v40; // x6
-  System_Int32_array *v41; // x7
+  System_String_array **v24; // x2
+  System_String_array **v25; // x3
+  System_Boolean_array **v26; // x4
+  System_Int32_array **v27; // x5
+  System_Int32_array *v28; // x6
+  System_Int32_array *v29; // x7
   EarthCore_c *klass; // x8
   UnityEngine_Vector3_o one; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_42162FF & 1) == 0 )
+  if ( (byte_42B2089 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_CStateManager_EarthCore___ctor__, method);
-    sub_B0D8A4(&Method_CStateManager_EarthCore__add__, v4);
-    sub_B0D8A4(&CStateManager_EarthCore__TypeInfo, v5);
-    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_MeshRenderer___, v6);
-    sub_B0D8A4(&EarthCore_StateNone_TypeInfo, v7);
-    sub_B0D8A4(&EarthCore_StateZoomIn_TypeInfo, v8);
-    sub_B0D8A4(&EarthCore_StateZoomOut_TypeInfo, v9);
-    byte_42162FF = 1;
+    sub_B52984(&Method_CStateManager_EarthCore___ctor__);
+    sub_B52984(&Method_CStateManager_EarthCore__add__);
+    sub_B52984(&CStateManager_EarthCore__TypeInfo);
+    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
+    sub_B52984(&EarthCore_StateNone_TypeInfo);
+    sub_B52984(&EarthCore_StateZoomIn_TypeInfo);
+    sub_B52984(&EarthCore_StateZoomOut_TypeInfo);
+    byte_42B2089 = 1;
   }
   p_mFSM = &this->fields.mFSM;
   mFSM = this->fields.mFSM;
   this->fields.mCoreType = 0;
   if ( !mFSM )
   {
-    v12 = (CStateManager_QAASpotStateController_IMapSpot__o *)sub_B0D974(CStateManager_EarthCore__TypeInfo, method, v2);
+    v5 = (CStateManager_QAASpotStateController_IMapSpot__o *)sub_B52A54(CStateManager_EarthCore__TypeInfo);
     CStateManager_QAASpotStateController_IMapSpot____ctor(
-      v12,
+      v5,
       (QAASpotStateController_IMapSpot_o *)this,
       4,
-      (const MethodInfo_2AAF784 *)Method_CStateManager_EarthCore___ctor__);
-    this->fields.mFSM = (struct CStateManager_EarthCore__o *)v12;
-    sub_B0D840(
-      (BattleServantConfConponent_o *)&this->fields.mFSM,
-      (System_Int32_array **)v12,
-      v13,
-      v14,
-      v15,
-      v16,
-      v17,
-      v18);
-    v19 = this->fields.mFSM;
-    v22 = (EarthCore_StateNone_o *)sub_B0D974(EarthCore_StateNone_TypeInfo, v20, v21);
-    EarthCore_StateNone___ctor(v22, 0LL);
-    if ( !v19 )
+      (const MethodInfo_2B925C4 *)Method_CStateManager_EarthCore___ctor__);
+    this->fields.mFSM = (struct CStateManager_EarthCore__o *)v5;
+    sub_B52920((BattleServantConfConponent_o *)&this->fields.mFSM, (System_Int32_array **)v5, v6, v7, v8, v9, v10, v11);
+    v12 = this->fields.mFSM;
+    v13 = (EarthCore_StateNone_o *)sub_B52A54(EarthCore_StateNone_TypeInfo);
+    EarthCore_StateNone___ctor(v13, 0LL);
+    if ( !v12 )
       goto LABEL_13;
     CStateManager_QAASpotStateController_IMapSpot___add(
-      (CStateManager_QAASpotStateController_IMapSpot__o *)v19,
+      (CStateManager_QAASpotStateController_IMapSpot__o *)v12,
       0,
-      (IState_T__o *)v22,
-      (const MethodInfo_2AAF850 *)Method_CStateManager_EarthCore__add__);
+      (IState_T__o *)v13,
+      (const MethodInfo_2B92690 *)Method_CStateManager_EarthCore__add__);
     transform = (CStateManager_QAASpotStateController_IMapSpot__o *)*p_mFSM;
     if ( !*p_mFSM )
       goto LABEL_13;
@@ -144,33 +122,33 @@ void __fastcall EarthCore__Awake(EarthCore_o *this, const MethodInfo *method)
       transform,
       1,
       (IState_T__o *)this->fields.mStateMain,
-      (const MethodInfo_2AAF850 *)Method_CStateManager_EarthCore__add__);
-    v24 = this->fields.mFSM;
-    v27 = (EarthCore_StateZoomIn_o *)sub_B0D974(EarthCore_StateZoomIn_TypeInfo, v25, v26);
-    EarthCore_StateZoomIn___ctor(v27, 0LL);
-    if ( !v24
+      (const MethodInfo_2B92690 *)Method_CStateManager_EarthCore__add__);
+    v16 = this->fields.mFSM;
+    v17 = (EarthCore_StateZoomIn_o *)sub_B52A54(EarthCore_StateZoomIn_TypeInfo);
+    EarthCore_StateZoomIn___ctor(v17, 0LL);
+    if ( !v16
       || (CStateManager_QAASpotStateController_IMapSpot___add(
-            (CStateManager_QAASpotStateController_IMapSpot__o *)v24,
+            (CStateManager_QAASpotStateController_IMapSpot__o *)v16,
             2,
-            (IState_T__o *)v27,
-            (const MethodInfo_2AAF850 *)Method_CStateManager_EarthCore__add__),
-          v28 = (CStateManager_QAASpotStateController_IMapSpot__o *)*p_mFSM,
-          v31 = (EarthCore_StateZoomOut_o *)sub_B0D974(EarthCore_StateZoomOut_TypeInfo, v29, v30),
-          EarthCore_StateZoomOut___ctor(v31, 0LL),
-          !v28) )
+            (IState_T__o *)v17,
+            (const MethodInfo_2B92690 *)Method_CStateManager_EarthCore__add__),
+          v18 = (CStateManager_QAASpotStateController_IMapSpot__o *)*p_mFSM,
+          v19 = (EarthCore_StateZoomOut_o *)sub_B52A54(EarthCore_StateZoomOut_TypeInfo),
+          EarthCore_StateZoomOut___ctor(v19, 0LL),
+          !v18) )
     {
 LABEL_13:
-      sub_B0D97C(transform);
+      sub_B52A5C(transform, v15);
     }
     CStateManager_QAASpotStateController_IMapSpot___add(
-      v28,
+      v18,
       3,
-      (IState_T__o *)v31,
-      (const MethodInfo_2AAF850 *)Method_CStateManager_EarthCore__add__);
-    EarthCore__SetState(this, 0, v32);
+      (IState_T__o *)v19,
+      (const MethodInfo_2B92690 *)Method_CStateManager_EarthCore__add__);
+    EarthCore__SetState(this, 0, v20);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  GameObjectExtensions__SetLocalScale_31180844(gameObject, 350.0, 0LL);
+  GameObjectExtensions__SetLocalScale_32087216(gameObject, 350.0, 0LL);
   mEarthRoot = this->fields.mEarthRoot;
   one = UnityEngine_Vector3__get_one(0LL);
   GameObjectExtensions__SetLocalScale(mEarthRoot, one, 0LL);
@@ -181,17 +159,17 @@ LABEL_13:
     goto LABEL_13;
   Component_srcLineSprite = (struct UnityEngine_MeshRenderer_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                    (UnityEngine_GameObject_o *)transform,
-                                                                   (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
+                                                                   (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
   this->fields.mMeshRenderer = Component_srcLineSprite;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.mMeshRenderer,
     (System_Int32_array **)Component_srcLineSprite,
-    v36,
-    v37,
-    v38,
-    v39,
-    v40,
-    v41);
+    v24,
+    v25,
+    v26,
+    v27,
+    v28,
+    v29);
   transform = (CStateManager_QAASpotStateController_IMapSpot__o *)this->fields.mEarthRoot;
   if ( !transform )
     goto LABEL_13;
@@ -210,85 +188,76 @@ LABEL_13:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall EarthCore__FocusInOut(EarthCore_o *this, bool isFocusIn, bool isForce, const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  EarthCore_c *v11; // x0
+  EarthCore_c *v7; // x0
   float *p_x; // x8
   float *p_y; // x9
   float *p_z; // x10
   struct EarthCore_StaticFields *static_fields; // x10
-  float v16; // s0
-  float v17; // w9
-  float v18; // w8
-  float v19; // w10
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
-  System_String_array **v26; // x2
-  System_String_array **v27; // x3
-  System_Boolean_array **v28; // x4
-  System_Int32_array **v29; // x5
-  System_Int32_array *v30; // x6
-  System_Int32_array *v31; // x7
+  float v12; // s0
+  float v13; // w9
+  float v14; // w8
+  float v15; // w10
+  System_String_array **v16; // x2
+  System_String_array **v17; // x3
+  System_Boolean_array **v18; // x4
+  System_Int32_array **v19; // x5
+  System_Int32_array *v20; // x6
+  System_Int32_array *v21; // x7
+  System_String_array **v22; // x2
+  System_String_array **v23; // x3
+  System_Boolean_array **v24; // x4
+  System_Int32_array **v25; // x5
+  System_Int32_array *v26; // x6
+  System_Int32_array *v27; // x7
   struct TransitionCalculator_float__o **p_focusInOutScaleCalculator; // x0
-  System_Int32_array **v33; // x1
-  float v34; // s8
-  System_Func_Vector3__Vector3__float__Vector3__o *v35; // x20
-  System_Func_float__float__float__float__o *v36; // x21
+  System_Int32_array **v29; // x1
+  float v30; // s8
+  System_Func_Vector3__Vector3__float__Vector3__o *v31; // x20
+  System_Func_float__float__float__float__o *v32; // x21
   float x; // s11
   float y; // s12
   float z; // s13
-  float v40; // s9
-  float v41; // s10
-  float v42; // s14
-  __int64 v43; // x1
-  __int64 v44; // x2
-  TransitionCalculator_Vector3__o *v45; // x0
-  struct TransitionCalculator_Vector3__o *v46; // x22
-  System_String_array **v47; // x2
-  System_String_array **v48; // x3
-  System_Boolean_array **v49; // x4
-  System_Int32_array **v50; // x5
-  System_Int32_array *v51; // x6
-  System_Int32_array *v52; // x7
+  float v36; // s9
+  float v37; // s10
+  float v38; // s14
+  TransitionCalculator_Vector3__o *v39; // x0
+  struct TransitionCalculator_Vector3__o *v40; // x22
+  System_String_array **v41; // x2
+  System_String_array **v42; // x3
+  System_Boolean_array **v43; // x4
+  System_Int32_array **v44; // x5
+  System_Int32_array *v45; // x6
+  System_Int32_array *v46; // x7
   unsigned int LocalScale; // s0
   float mFocusTgtScl; // s9
-  float v55; // s10
-  __int64 v56; // x1
-  __int64 v57; // x2
-  TransitionCalculator_float__o *v58; // x20
-  UnityEngine_Vector3_o v59; // 0:s0.4,4:s1.4,8:s2.4
+  float v49; // s10
+  TransitionCalculator_float__o *v50; // x20
+  UnityEngine_Vector3_o v51; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v61; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v62; // 0:s3.4,4:s4.4,8:s5.4
+  UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v54; // 0:s3.4,4:s4.4,8:s5.4
 
-  if ( (byte_42162FE & 1) == 0 )
+  if ( (byte_42B2088 & 1) == 0 )
   {
-    sub_B0D8A4(&EarthCore_TypeInfo, isFocusIn);
-    sub_B0D8A4(&Method_TransitionCalculator_Vector3___ctor__, v7);
-    sub_B0D8A4(&Method_TransitionCalculator_float___ctor__, v8);
-    sub_B0D8A4(&TransitionCalculator_Vector3__TypeInfo, v9);
-    sub_B0D8A4(&TransitionCalculator_float__TypeInfo, v10);
-    byte_42162FE = 1;
+    sub_B52984(&EarthCore_TypeInfo);
+    sub_B52984(&Method_TransitionCalculator_Vector3___ctor__);
+    sub_B52984(&Method_TransitionCalculator_float___ctor__);
+    sub_B52984(&TransitionCalculator_Vector3__TypeInfo);
+    sub_B52984(&TransitionCalculator_float__TypeInfo);
+    byte_42B2088 = 1;
   }
   this->fields.mIsFocusIn = isFocusIn;
-  v11 = EarthCore_TypeInfo;
+  v7 = EarthCore_TypeInfo;
   if ( isFocusIn )
   {
     if ( (WORD1(EarthCore_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0 && !EarthCore_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EarthCore_TypeInfo);
-      v11 = EarthCore_TypeInfo;
+      v7 = EarthCore_TypeInfo;
     }
-    p_x = &v11->static_fields->FOCUS_IN_POS.fields.x;
+    p_x = &v7->static_fields->FOCUS_IN_POS.fields.x;
     p_y = p_x + 1;
     p_z = p_x + 2;
   }
@@ -297,97 +266,97 @@ void __fastcall EarthCore__FocusInOut(EarthCore_o *this, bool isFocusIn, bool is
     if ( (WORD1(EarthCore_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0 && !EarthCore_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EarthCore_TypeInfo);
-      v11 = EarthCore_TypeInfo;
+      v7 = EarthCore_TypeInfo;
     }
-    static_fields = v11->static_fields;
+    static_fields = v7->static_fields;
     p_x = &static_fields->FOCUS_OUT_POS.fields.x;
     p_y = &static_fields->FOCUS_OUT_POS.fields.y;
     p_z = &static_fields->FOCUS_OUT_POS.fields.z;
   }
-  v16 = 0.95;
-  v17 = *p_y;
-  v18 = *p_x;
-  v19 = *p_z;
+  v12 = 0.95;
+  v13 = *p_y;
+  v14 = *p_x;
+  v15 = *p_z;
   if ( this->fields.mIsFocusIn )
-    v16 = 1.0;
-  this->fields.mFocusTgtPos.fields.x = v18;
-  this->fields.mFocusTgtPos.fields.y = v17;
-  this->fields.mFocusTgtPos.fields.z = v19;
-  this->fields.mFocusTgtScl = v16;
+    v12 = 1.0;
+  this->fields.mFocusTgtPos.fields.x = v14;
+  this->fields.mFocusTgtPos.fields.y = v13;
+  this->fields.mFocusTgtPos.fields.z = v15;
+  this->fields.mFocusTgtScl = v12;
   if ( isForce )
   {
-    v59.fields.z = v19;
-    v59.fields.y = v17;
-    v59.fields.x = v18;
-    GameObjectExtensions__SetLocalPosition(this->fields.mEarthRoot, v59, 0LL);
-    GameObjectExtensions__SetLocalScale_31180844(this->fields.mEarthRoot, this->fields.mFocusTgtScl, 0LL);
+    v51.fields.z = v15;
+    v51.fields.y = v13;
+    v51.fields.x = v14;
+    GameObjectExtensions__SetLocalPosition(this->fields.mEarthRoot, v51, 0LL);
+    GameObjectExtensions__SetLocalScale_32087216(this->fields.mEarthRoot, this->fields.mFocusTgtScl, 0LL);
     this->fields.focusInOutPositionCalculator = 0LL;
-    sub_B0D840(
+    sub_B52920(
       (BattleServantConfConponent_o *)&this->fields.focusInOutPositionCalculator,
       0LL,
+      v16,
+      v17,
+      v18,
+      v19,
       v20,
-      v21,
-      v22,
-      v23,
-      v24,
-      v25);
+      v21);
     this->fields.focusInOutScaleCalculator = 0LL;
     p_focusInOutScaleCalculator = &this->fields.focusInOutScaleCalculator;
-    v33 = 0LL;
+    v29 = 0LL;
   }
   else
   {
-    v34 = ChangedFPSUtil__CovertFrameNumToSecond(10, 0LL);
-    v35 = ExtraEasing__AsymptoticSeriesVector3(0.35, 10.0, 0LL);
-    v36 = ExtraEasing__AsymptoticSeriesFloat(0.35, 10.0, 0LL);
+    v30 = ChangedFPSUtil__CovertFrameNumToSecond(10, 0LL);
+    v31 = ExtraEasing__AsymptoticSeriesVector3(0.35, 10.0, 0LL);
+    v32 = ExtraEasing__AsymptoticSeriesFloat(0.35, 10.0, 0LL);
     LocalPosition = GameObjectExtensions__GetLocalPosition(this->fields.mEarthRoot, 0LL);
     x = this->fields.mFocusTgtPos.fields.x;
     y = this->fields.mFocusTgtPos.fields.y;
     z = this->fields.mFocusTgtPos.fields.z;
-    v40 = LocalPosition.fields.x;
-    v41 = LocalPosition.fields.y;
-    v42 = LocalPosition.fields.z;
-    v45 = (TransitionCalculator_Vector3__o *)sub_B0D974(TransitionCalculator_Vector3__TypeInfo, v43, v44);
-    v61.fields.x = v40;
-    v61.fields.y = v41;
-    v61.fields.z = v42;
-    v62.fields.x = x;
-    v62.fields.y = y;
-    v62.fields.z = z;
-    v46 = v45;
+    v36 = LocalPosition.fields.x;
+    v37 = LocalPosition.fields.y;
+    v38 = LocalPosition.fields.z;
+    v39 = (TransitionCalculator_Vector3__o *)sub_B52A54(TransitionCalculator_Vector3__TypeInfo);
+    v53.fields.x = v36;
+    v53.fields.y = v37;
+    v53.fields.z = v38;
+    v54.fields.x = x;
+    v54.fields.y = y;
+    v54.fields.z = z;
+    v40 = v39;
     TransitionCalculator_Vector3____ctor(
-      v45,
-      v61,
-      v62,
-      v34,
-      (System_Func_T__T__float__T__o *)v35,
-      (const MethodInfo_2686B48 *)Method_TransitionCalculator_Vector3___ctor__);
-    this->fields.focusInOutPositionCalculator = v46;
-    sub_B0D840(
+      v39,
+      v53,
+      v54,
+      v30,
+      (System_Func_T__T__float__T__o *)v31,
+      (const MethodInfo_25D4198 *)Method_TransitionCalculator_Vector3___ctor__);
+    this->fields.focusInOutPositionCalculator = v40;
+    sub_B52920(
       (BattleServantConfConponent_o *)&this->fields.focusInOutPositionCalculator,
-      (System_Int32_array **)v46,
-      v47,
-      v48,
-      v49,
-      v50,
-      v51,
-      v52);
+      (System_Int32_array **)v40,
+      v41,
+      v42,
+      v43,
+      v44,
+      v45,
+      v46);
     LocalScale = (unsigned int)GameObjectExtensions__GetLocalScale(this->fields.mEarthRoot, 0LL);
     mFocusTgtScl = this->fields.mFocusTgtScl;
-    v55 = *(float *)&LocalScale;
-    v58 = (TransitionCalculator_float__o *)sub_B0D974(TransitionCalculator_float__TypeInfo, v56, v57);
+    v49 = *(float *)&LocalScale;
+    v50 = (TransitionCalculator_float__o *)sub_B52A54(TransitionCalculator_float__TypeInfo);
     TransitionCalculator_float____ctor(
-      v58,
-      v55,
+      v50,
+      v49,
       mFocusTgtScl,
-      v34,
-      (System_Func_T__T__float__T__o *)v36,
-      (const MethodInfo_2686884 *)Method_TransitionCalculator_float___ctor__);
+      v30,
+      (System_Func_T__T__float__T__o *)v32,
+      (const MethodInfo_25D3ED4 *)Method_TransitionCalculator_float___ctor__);
     p_focusInOutScaleCalculator = &this->fields.focusInOutScaleCalculator;
-    this->fields.focusInOutScaleCalculator = v58;
-    v33 = (System_Int32_array **)v58;
+    this->fields.focusInOutScaleCalculator = v50;
+    v29 = (System_Int32_array **)v50;
   }
-  sub_B0D840((BattleServantConfConponent_o *)p_focusInOutScaleCalculator, v33, v26, v27, v28, v29, v30, v31);
+  sub_B52920((BattleServantConfConponent_o *)p_focusInOutScaleCalculator, v29, v22, v23, v24, v25, v26, v27);
 }
 
 
@@ -397,14 +366,14 @@ int32_t __fastcall EarthCore__GetState(EarthCore_o *this, const MethodInfo *meth
   struct CStateManager_EarthCore__o *mFSM; // x8
 
   v2 = this;
-  if ( (byte_4216302 & 1) == 0 )
+  if ( (byte_42B208C & 1) == 0 )
   {
-    this = (EarthCore_o *)sub_B0D8A4(&Method_CStateManager_EarthCore__getState__, method);
-    byte_4216302 = 1;
+    this = (EarthCore_o *)sub_B52984(&Method_CStateManager_EarthCore__getState__);
+    byte_42B208C = 1;
   }
   mFSM = v2->fields.mFSM;
   if ( !mFSM )
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   return mFSM->fields.m_state;
 }
 
@@ -421,7 +390,7 @@ float __fastcall EarthCore__GetStateMainInertialSpdOld(EarthCore_o *this, const 
 
   mStateMain = this->fields.mStateMain;
   if ( !mStateMain )
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   return mStateMain->fields._InertialSpdOld_k__BackingField;
 }
 
@@ -433,11 +402,12 @@ void __fastcall EarthCore__OnPress(EarthCore_o *this, const MethodInfo *method)
   mStateMain = this->fields.mStateMain;
   this->fields.mIsTouch = 1;
   if ( !mStateMain )
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   mStateMain->fields._InertialSpdOld_k__BackingField = mStateMain->fields.mInertialSpd;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall EarthCore__SetDisp(EarthCore_o *this, bool is_disp, const MethodInfo *method)
 {
   UnityEngine_Renderer_o *mMeshRenderer; // x0
@@ -449,7 +419,7 @@ void __fastcall EarthCore__SetDisp(EarthCore_o *this, bool is_disp, const Method
         UnityEngine_Renderer__set_enabled(mMeshRenderer, is_disp, 0LL),
         (mMeshRenderer = (UnityEngine_Renderer_o *)this->fields.mEarthPointRoot) == 0LL) )
   {
-    sub_B0D97C(mMeshRenderer);
+    sub_B52A5C(mMeshRenderer, is_disp);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)mMeshRenderer, v5, 0LL);
 }
@@ -460,18 +430,18 @@ void __fastcall EarthCore__SetState(EarthCore_o *this, int32_t state, const Meth
 {
   struct CStateManager_EarthCore__o *mFSM; // x0
 
-  if ( (byte_4216303 & 1) == 0 )
+  if ( (byte_42B208D & 1) == 0 )
   {
-    sub_B0D8A4(&Method_CStateManager_EarthCore__setState__, *(_QWORD *)&state);
-    byte_4216303 = 1;
+    sub_B52984(&Method_CStateManager_EarthCore__setState__);
+    byte_42B208D = 1;
   }
   mFSM = this->fields.mFSM;
   if ( !mFSM )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, *(_QWORD *)&state);
   CStateManager_QAASpotStateController_IMapSpot___setState(
     (CStateManager_QAASpotStateController_IMapSpot__o *)mFSM,
     state,
-    (const MethodInfo_2AAF8F4 *)Method_CStateManager_EarthCore__setState__);
+    (const MethodInfo_2B92734 *)Method_CStateManager_EarthCore__setState__);
 }
 
 
@@ -482,54 +452,53 @@ void __fastcall EarthCore__Setup(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
   UnityEngine_GameObject_o *mEarthRoot; // x0
   UnityEngine_GameObject_o *gameObject; // x22
-  int32_t v15; // w20
-  _BOOL8 v16; // x0
+  int32_t v10; // w20
+  _BOOL8 v11; // x0
+  __int64 v12; // x1
   MapControl_WarInfo_o *current; // x22
   WarEntity_o *Mine; // x0
-  WarEntity_o *v19; // x23
+  WarEntity_o *v15; // x23
   int32_t warId; // w21
   _BOOL4 IsEvent; // w0
   __int64 mCoreType; // x27
   System_Single_array_array *PrioredCoordinates; // x0
   int max_length; // w8
-  System_Single_array *v25; // x8
-  float v26; // s8
-  float v27; // s9
+  System_Single_array *v21; // x8
+  float v22; // s8
+  float v23; // s9
   bool IsWarOpen; // w22
   UnityEngine_Object_o *EarthPoint; // x23
-  _BOOL8 v30; // x0
-  float v31; // s8
-  float v32; // s9
-  float v33; // s14
-  float v34; // s10
-  float v35; // s8
-  float v36; // s0
+  _BOOL8 v26; // x0
+  __int64 v27; // x1
+  float v28; // s8
+  float v29; // s9
+  float v30; // s14
+  float v31; // s10
+  float v32; // s8
+  float v33; // s0
   Il2CppObject *EarthPoint_object; // x0
-  UnityEngine_GameObject_o *v38; // x0
-  __int64 v39; // x0
-  System_Collections_Generic_List_Enumerator_T__o v40; // [xsp+8h] [xbp-B8h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v41; // [xsp+20h] [xbp-A0h] BYREF
+  __int64 v35; // x1
+  UnityEngine_GameObject_o *v36; // x0
+  __int64 v37; // x1
+  __int64 v38; // x0
+  System_Collections_Generic_List_Enumerator_T__o v39; // [xsp+8h] [xbp-B8h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v40; // [xsp+20h] [xbp-A0h] BYREF
   UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4216301 & 1) == 0 )
+  if ( (byte_42B208B & 1) == 0 )
   {
-    sub_B0D8A4(&Method_BaseCore_CreateEarthPoint_EarthPoint___, warInfoList);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__, v7);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__, v8);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__get_Current__, v9);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__, v10);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v11);
-    sub_B0D8A4(&StringLiteral_8390/*"LAST_WAR_ID"*/, v12);
-    byte_4216301 = 1;
+    sub_B52984(&Method_BaseCore_CreateEarthPoint_EarthPoint___);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__get_Current__);
+    sub_B52984(&Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&StringLiteral_8416/*"LAST_WAR_ID"*/);
+    byte_42B208B = 1;
   }
-  memset(&v41, 0, sizeof(v41));
+  memset(&v40, 0, sizeof(v40));
   BaseCore__SetTerminalData((BaseCore_o *)this, 0LL);
   mEarthRoot = this->fields.mEarthRoot;
   if ( !mEarthRoot
@@ -543,39 +512,39 @@ void __fastcall EarthCore__Setup(
           isFocusIn,
           1LL,
           this->klass->vtable._5_Awake.methodPtr),
-        mEarthRoot = (UnityEngine_GameObject_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_8390/*"LAST_WAR_ID"*/, 0LL),
+        mEarthRoot = (UnityEngine_GameObject_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_8416/*"LAST_WAR_ID"*/, 0LL),
         !warInfoList) )
   {
-    sub_B0D97C(mEarthRoot);
+    sub_B52A5C(mEarthRoot, v7);
   }
-  v15 = (int)mEarthRoot;
+  v10 = (int)mEarthRoot;
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v40,
+    &v39,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)warInfoList,
-    (const MethodInfo_2FC6564 *)Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
-  v41 = v40;
+    (const MethodInfo_2FF2480 *)Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
+  v40 = v39;
   while ( 1 )
   {
-    v16 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-            &v41,
-            (const MethodInfo_2112550 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
-    if ( !v16 )
+    v11 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
+            &v40,
+            (const MethodInfo_201195C *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
+    if ( !v11 )
       break;
-    current = (MapControl_WarInfo_o *)v41.fields.current;
-    if ( !v41.fields.current )
-      sub_B0D97C(v16);
-    Mine = MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)v41.fields.current, 0LL);
-    v19 = Mine;
+    current = (MapControl_WarInfo_o *)v40.fields.current;
+    if ( !v40.fields.current )
+      sub_B52A5C(v11, v12);
+    Mine = MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)v40.fields.current, 0LL);
+    v15 = Mine;
     if ( Mine )
     {
       warId = current->fields.warId;
-      if ( WarEntity__IsFolder(Mine, 0LL) && !WarEntity__IsDisplayEarthPointWithoutMap(v19, 0LL) )
+      if ( WarEntity__IsFolder(Mine, 0LL) && !WarEntity__IsDisplayEarthPointWithoutMap(v15, 0LL) )
         goto LABEL_19;
-      IsEvent = WarEntity__IsEvent(v19, 0LL);
-      if ( warId <= v15 || IsEvent )
+      IsEvent = WarEntity__IsEvent(v15, 0LL);
+      if ( warId <= v10 || IsEvent )
       {
         mCoreType = this->fields.mCoreType;
-        PrioredCoordinates = WarEntity__GetPrioredCoordinates(v19, 0LL);
+        PrioredCoordinates = WarEntity__GetPrioredCoordinates(v15, 0LL);
         if ( !PrioredCoordinates )
           goto LABEL_19;
         max_length = PrioredCoordinates->max_length;
@@ -583,14 +552,14 @@ void __fastcall EarthCore__Setup(
           goto LABEL_19;
         if ( (unsigned int)mCoreType >= max_length )
         {
-          v39 = sub_B0D9A8(PrioredCoordinates);
-          sub_B0D948(v39, 0LL);
+          v38 = sub_B52A88(PrioredCoordinates);
+          sub_B52A28(v38, 0LL);
         }
-        v25 = PrioredCoordinates->m_Items[mCoreType];
-        if ( v25 && (int)v25->max_length >= 2 )
+        v21 = PrioredCoordinates->m_Items[mCoreType];
+        if ( v21 && (int)v21->max_length >= 2 )
         {
-          v26 = v25->m_Items[1];
-          v27 = v25->m_Items[2];
+          v22 = v21->m_Items[1];
+          v23 = v21->m_Items[2];
           IsWarOpen = BaseCore__IsWarOpen((BaseCore_o *)this, current, 0LL);
           EarthPoint = (UnityEngine_Object_o *)BaseCore__GetEarthPoint((BaseCore_o *)this, warId, 0LL);
           if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -598,34 +567,34 @@ void __fastcall EarthCore__Setup(
           {
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           }
-          v30 = UnityEngine_Object__op_Equality(EarthPoint, 0LL, 0LL);
-          if ( v30 )
+          v26 = UnityEngine_Object__op_Equality(EarthPoint, 0LL, 0LL);
+          if ( v26 )
           {
-            v31 = v26 * 0.017453;
-            v32 = (float)(v27 + 9.5) * 0.017453;
-            v33 = cosf(v31) * 0.5;
-            v34 = cosf(v32);
-            v35 = sinf(v31);
-            v36 = sinf(v32);
+            v28 = v22 * 0.017453;
+            v29 = (float)(v23 + 9.5) * 0.017453;
+            v30 = cosf(v28) * 0.5;
+            v31 = cosf(v29);
+            v32 = sinf(v28);
+            v33 = sinf(v29);
             EarthPoint_object = BaseCore__CreateEarthPoint_object_(
                                   (BaseCore_o *)this,
                                   warId,
-                                  v34 * v33,
-                                  v35 * 0.5,
-                                  v33 * v36,
-                                  (const MethodInfo_1705FF0 *)Method_BaseCore_CreateEarthPoint_EarthPoint___);
+                                  v31 * v30,
+                                  v32 * 0.5,
+                                  v30 * v33,
+                                  (const MethodInfo_1A40B24 *)Method_BaseCore_CreateEarthPoint_EarthPoint___);
             if ( !EarthPoint_object )
-              sub_B0D97C(0LL);
+              sub_B52A5C(0LL, v35);
             BaseEarthPoint__Setup((BaseEarthPoint_o *)EarthPoint_object, IsWarOpen, this->fields.mEarthEffCamera, 0LL);
           }
           else
           {
             if ( !EarthPoint )
-              sub_B0D97C(v30);
-            v38 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)EarthPoint, 0LL);
-            if ( !v38 )
-              sub_B0D97C(0LL);
-            UnityEngine_GameObject__SetActive(v38, IsWarOpen, 0LL);
+              sub_B52A5C(v26, v27);
+            v36 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)EarthPoint, 0LL);
+            if ( !v36 )
+              sub_B52A5C(0LL, v37);
+            UnityEngine_GameObject__SetActive(v36, IsWarOpen, 0LL);
           }
         }
         else
@@ -637,8 +606,8 @@ LABEL_19:
     }
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v41,
-    (const MethodInfo_211254C *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
+    &v40,
+    (const MethodInfo_2011958 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
 }
 
 
@@ -647,16 +616,16 @@ void __fastcall EarthCore__Update(EarthCore_o *this, const MethodInfo *method)
   struct CStateManager_EarthCore__o *mFSM; // x0
   const MethodInfo *v4; // x2
 
-  if ( (byte_4216300 & 1) == 0 )
+  if ( (byte_42B208A & 1) == 0 )
   {
-    sub_B0D8A4(&Method_CStateManager_EarthCore__update__, method);
-    byte_4216300 = 1;
+    sub_B52984(&Method_CStateManager_EarthCore__update__);
+    byte_42B208A = 1;
   }
   mFSM = this->fields.mFSM;
   if ( mFSM )
     CStateManager_QAASpotStateController_IMapSpot___update(
       (CStateManager_QAASpotStateController_IMapSpot__o *)mFSM,
-      (const MethodInfo_2AAF8CC *)Method_CStateManager_EarthCore__update__);
+      (const MethodInfo_2B9270C *)Method_CStateManager_EarthCore__update__);
   if ( this->fields.mIsReqZoomIn && EarthCore__GetState(this, method) == 1 )
   {
     BaseCore__EndSlideServant((BaseCore_o *)this, 0LL);
@@ -730,38 +699,33 @@ void __fastcall EarthCore_StateMain__set_InertialSpdOld(
 void __fastcall EarthCore_StateMain__update(EarthCore_StateMain_o *this, EarthCore_o *that, const MethodInfo *method)
 {
   EarthCore_StateMain_o *v4; // x20
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
   float AutoRotationSpeed; // s8
   float *p_fields; // x20
   float mInertialSpd; // t1
-  float v12; // s9
-  float v13; // s0
-  __int64 v14; // x1
-  CTouch_c *v15; // x0
+  float v8; // s9
+  float v9; // s0
+  CTouch_c *v10; // x0
   float x; // s9
-  float v17; // s0
-  float v18; // s9
+  float v12; // s0
+  float v13; // s9
   TransitionCalculator_Vector3__o *focusInOutPositionCalculator; // x0
   TransitionCalculator_float__o *focusInOutScaleCalculator; // x0
-  bool v21; // w8
+  bool v16; // w8
   UnityEngine_GameObject_o *mEarthRoot; // x20
-  UnityEngine_GameObject_o *v23; // x20
-  float v24; // s0
-  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_GameObject_o *v18; // x20
+  float v19; // s0
+  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4211AFB & 1) == 0 )
+  if ( (byte_42AD891 & 1) == 0 )
   {
-    sub_B0D8A4(&CTouch_TypeInfo, that);
-    sub_B0D8A4(&Method_TransitionCalculator_float__IsFinished__, v5);
-    sub_B0D8A4(&Method_TransitionCalculator_Vector3__IsFinished__, v6);
-    sub_B0D8A4(&Method_TransitionCalculator_float__Update__, v7);
-    this = (EarthCore_StateMain_o *)sub_B0D8A4(&Method_TransitionCalculator_Vector3__Update__, v8);
-    byte_4211AFB = 1;
+    sub_B52984(&CTouch_TypeInfo);
+    sub_B52984(&Method_TransitionCalculator_float__IsFinished__);
+    sub_B52984(&Method_TransitionCalculator_Vector3__IsFinished__);
+    sub_B52984(&Method_TransitionCalculator_float__Update__);
+    this = (EarthCore_StateMain_o *)sub_B52984(&Method_TransitionCalculator_Vector3__Update__);
+    byte_42AD891 = 1;
   }
   if ( !that )
     goto LABEL_40;
@@ -777,33 +741,33 @@ void __fastcall EarthCore_StateMain__update(EarthCore_StateMain_o *this, EarthCo
     {
       if ( (BYTE3(CTouch_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CTouch_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
-      if ( !byte_4211BDC )
+      if ( !byte_42AD963 )
       {
-        sub_B0D8A4(&CTouch_TypeInfo, v14);
-        byte_4211BDC = 1;
+        sub_B52984(&CTouch_TypeInfo);
+        byte_42AD963 = 1;
       }
-      v15 = CTouch_TypeInfo;
+      v10 = CTouch_TypeInfo;
       if ( (BYTE3(CTouch_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CTouch_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
-        v15 = CTouch_TypeInfo;
+        v10 = CTouch_TypeInfo;
       }
-      x = v15->static_fields->mScrPosDelta.fields.x;
-      if ( !byte_4211BDD )
+      x = v10->static_fields->mScrPosDelta.fields.x;
+      if ( !byte_42AD964 )
       {
-        sub_B0D8A4(&CTouch_TypeInfo, v14);
-        v15 = CTouch_TypeInfo;
-        byte_4211BDD = 1;
+        sub_B52984(&CTouch_TypeInfo);
+        v10 = CTouch_TypeInfo;
+        byte_42AD964 = 1;
       }
-      if ( (BYTE3(v15->vtable._0_Equals.methodPtr) & 4) != 0 && !v15->_2.cctor_finished )
+      if ( (BYTE3(v10->vtable._0_Equals.methodPtr) & 4) != 0 && !v10->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v15);
-        v15 = CTouch_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v10);
+        v10 = CTouch_TypeInfo;
       }
-      v17 = v15->static_fields->mScrPosDeltaOld.fields.x;
-      if ( fabsf(x) >= fabsf(v17) )
-        v17 = x;
-      *p_fields = v17 * -0.2;
+      v12 = v10->static_fields->mScrPosDeltaOld.fields.x;
+      if ( fabsf(x) >= fabsf(v12) )
+        v12 = x;
+      *p_fields = v12 * -0.2;
     }
   }
   else
@@ -812,66 +776,66 @@ void __fastcall EarthCore_StateMain__update(EarthCore_StateMain_o *this, EarthCo
     p_fields = (float *)&v4->fields;
     if ( !UnityEngine_Mathf__Approximately(mInertialSpd, 0.0, 0LL) )
     {
-      v12 = *p_fields;
-      v13 = v12 * ChangedFPSUtil__CalcAccelForCurrentFPS(0.88, 0LL);
-      *p_fields = v13;
-      if ( fabsf(v13) < 0.004 )
+      v8 = *p_fields;
+      v9 = v8 * ChangedFPSUtil__CalcAccelForCurrentFPS(0.88, 0LL);
+      *p_fields = v9;
+      if ( fabsf(v9) < 0.004 )
         *p_fields = 0.0;
     }
   }
-  v18 = *p_fields;
+  v13 = *p_fields;
   this = (EarthCore_StateMain_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)that, 0LL);
   if ( !this )
     goto LABEL_40;
-  v25.fields.y = AutoRotationSpeed + v18;
-  v25.fields.x = 0.0;
-  v25.fields.z = 0.0;
-  UnityEngine_Transform__Rotate_35057284((UnityEngine_Transform_o *)this, v25, 0LL);
+  v20.fields.y = AutoRotationSpeed + v13;
+  v20.fields.x = 0.0;
+  v20.fields.z = 0.0;
+  UnityEngine_Transform__Rotate_35739068((UnityEngine_Transform_o *)this, v20, 0LL);
   focusInOutPositionCalculator = that->fields.focusInOutPositionCalculator;
   if ( focusInOutPositionCalculator )
   {
     if ( !TransitionCalculator_Vector3___IsFinished(
             focusInOutPositionCalculator,
-            (const MethodInfo_2686CBC *)Method_TransitionCalculator_Vector3__IsFinished__) )
+            (const MethodInfo_25D430C *)Method_TransitionCalculator_Vector3__IsFinished__) )
     {
       focusInOutScaleCalculator = that->fields.focusInOutScaleCalculator;
       if ( focusInOutScaleCalculator )
       {
         if ( !TransitionCalculator_float___IsFinished(
                 focusInOutScaleCalculator,
-                (const MethodInfo_26869C4 *)Method_TransitionCalculator_float__IsFinished__) )
+                (const MethodInfo_25D4014 *)Method_TransitionCalculator_float__IsFinished__) )
         {
           this = (EarthCore_StateMain_o *)that->fields.focusInOutPositionCalculator;
           if ( this )
           {
             mEarthRoot = that->fields.mEarthRoot;
-            v26 = TransitionCalculator_Vector3___Update(
+            v21 = TransitionCalculator_Vector3___Update(
                     (TransitionCalculator_Vector3__o *)this,
-                    (const MethodInfo_2686C04 *)Method_TransitionCalculator_Vector3__Update__);
-            GameObjectExtensions__SetLocalPosition(mEarthRoot, v26, 0LL);
+                    (const MethodInfo_25D4254 *)Method_TransitionCalculator_Vector3__Update__);
+            GameObjectExtensions__SetLocalPosition(mEarthRoot, v21, 0LL);
             this = (EarthCore_StateMain_o *)that->fields.focusInOutScaleCalculator;
             if ( this )
             {
-              v23 = that->fields.mEarthRoot;
-              v24 = TransitionCalculator_float___Update(
+              v18 = that->fields.mEarthRoot;
+              v19 = TransitionCalculator_float___Update(
                       (TransitionCalculator_float__o *)this,
-                      (const MethodInfo_2686910 *)Method_TransitionCalculator_float__Update__);
-              GameObjectExtensions__SetLocalScale_31180844(v23, v24, 0LL);
-              v21 = 1;
+                      (const MethodInfo_25D3F60 *)Method_TransitionCalculator_float__Update__);
+              GameObjectExtensions__SetLocalScale_32087216(v18, v19, 0LL);
+              v16 = 1;
               goto LABEL_36;
             }
           }
 LABEL_40:
-          sub_B0D97C(this);
+          sub_B52A5C(this, that);
         }
       }
     }
   }
   GameObjectExtensions__SetLocalPosition(that->fields.mEarthRoot, that->fields.mFocusTgtPos, 0LL);
-  GameObjectExtensions__SetLocalScale_31180844(that->fields.mEarthRoot, that->fields.mFocusTgtScl, 0LL);
-  v21 = 0;
+  GameObjectExtensions__SetLocalScale_32087216(that->fields.mEarthRoot, that->fields.mFocusTgtScl, 0LL);
+  v16 = 0;
 LABEL_36:
-  that->fields.mIsFocusMoving = v21;
+  that->fields.mIsFocusMoving = v16;
 }
 
 
@@ -907,30 +871,29 @@ void __fastcall EarthCore_StateZoomIn___ctor(EarthCore_StateZoomIn_o *this, cons
 
 void __fastcall EarthCore_StateZoomIn__GoNext(EarthCore_StateZoomIn_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   EarthCore_o *mThat; // x0
-  struct EarthCore_o *v5; // x8
+  struct EarthCore_o *v4; // x8
 
-  if ( (byte_4211AFE & 1) == 0 )
+  if ( (byte_42AD894 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___, method);
-    sub_B0D8A4(&StringLiteral_6912/*"GO_NEXT"*/, v3);
-    byte_4211AFE = 1;
+    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___);
+    sub_B52984(&StringLiteral_6939/*"GO_NEXT"*/);
+    byte_42AD894 = 1;
   }
   mThat = this->fields.mThat;
   if ( !mThat
-    || (EarthCore__SetState(mThat, 0, 0LL), (v5 = this->fields.mThat) == 0LL)
-    || (mThat = (EarthCore_o *)v5->fields.mTerminalMap) == 0LL
+    || (EarthCore__SetState(mThat, 0, 0LL), (v4 = this->fields.mThat) == 0LL)
+    || (mThat = (EarthCore_o *)v4->fields.mTerminalMap) == 0LL
     || (mThat = (EarthCore_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                  (UnityEngine_GameObject_o *)mThat,
-                                 (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___)) == 0LL
+                                 (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___)) == 0LL
     || (mThat = (EarthCore_o *)PlayMakerFSM__get_Fsm((PlayMakerFSM_o *)mThat, 0LL)) == 0LL )
   {
-    sub_B0D97C(mThat);
+    sub_B52A5C(mThat, method);
   }
-  HutongGames_PlayMaker_Fsm__Event_14644288(
+  HutongGames_PlayMaker_Fsm__Event_14866392(
     (HutongGames_PlayMaker_Fsm_o *)mThat,
-    (System_String_o *)StringLiteral_6912/*"GO_NEXT"*/,
+    (System_String_o *)StringLiteral_6939/*"GO_NEXT"*/,
     0LL);
 }
 
@@ -941,86 +904,67 @@ void __fastcall EarthCore_StateZoomIn__begin(
         EarthCore_o *that,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x20
+  __int64 v5; // x20
   UnityEngine_Component_o *transform; // x0
-  UnityEngine_Component_o **v16; // x21
-  struct EarthCore_o *v17; // x1
+  const MethodInfo *v7; // x1
+  UnityEngine_Component_o **v8; // x21
   UnityEngine_Object_o *klass; // x22
-  const MethodInfo *v19; // x1
-  TerminalPramsManager_c *v20; // x0
+  TerminalPramsManager_c *v10; // x0
   UnityEngine_GameObject_o *gameObject; // x0
-  UIWidget_o *Component_UIWidget; // x0
-  int v23; // s0
-  int v24; // s1
-  int v25; // s2
-  int v26; // s3
-  __int64 v27; // x8
-  __int64 v28; // x9
-  __int64 v29; // x8
-  __int64 v30; // x8
-  __int64 v31; // x8
-  UnityEngine_GameObject_o *v32; // x0
-  EasingObject_o *v33; // x21
+  int v12; // s0
+  int v13; // s1
+  int v14; // s2
+  int v15; // s3
+  __int64 v16; // x8
+  __int64 v17; // x9
+  __int64 v18; // x8
+  __int64 v19; // x8
+  __int64 v20; // x8
+  UnityEngine_GameObject_o *v21; // x0
+  EasingObject_o *v22; // x21
   float mSpdTime; // s8
-  __int64 v40; // x1
-  __int64 v41; // x2
-  System_Action_o *v42; // x22
-  __int64 v43; // x1
-  __int64 v44; // x2
-  System_Action_o *v45; // x23
-  __int64 v46; // x1
-  TerminalPramsManager_c *v47; // x0
+  System_Action_o *v29; // x22
+  System_Action_o *v30; // x23
+  TerminalPramsManager_c *v31; // x0
   CommonUI_o *Instance; // x20
-  __int64 v49; // x1
-  __int64 v50; // x2
-  System_Action_o *v51; // x21
+  System_Action_o *v33; // x21
   UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o identity; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4211AFC & 1) == 0 )
+  if ( (byte_42AD892 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, that);
-    sub_B0D8A4(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v5);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v6);
-    sub_B0D8A4(&SeManager_TypeInfo, v7);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    sub_B0D8A4(&Method_EarthCore_StateZoomIn_GoNext__, v9);
-    sub_B0D8A4(&TerminalPramsManager_TypeInfo, v10);
-    sub_B0D8A4(&Method_EarthCore_StateZoomIn___c__DisplayClass3_0__begin_b__0__, v11);
-    sub_B0D8A4(&Method_EarthCore_StateZoomIn___c__DisplayClass3_0__begin_b__1__, v12);
-    sub_B0D8A4(&EarthCore_StateZoomIn___c__DisplayClass3_0_TypeInfo, v13);
-    byte_4211AFC = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&SeManager_TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B52984(&Method_EarthCore_StateZoomIn_GoNext__);
+    sub_B52984(&TerminalPramsManager_TypeInfo);
+    sub_B52984(&Method_EarthCore_StateZoomIn___c__DisplayClass3_0__begin_b__0__);
+    sub_B52984(&Method_EarthCore_StateZoomIn___c__DisplayClass3_0__begin_b__1__);
+    sub_B52984(&EarthCore_StateZoomIn___c__DisplayClass3_0_TypeInfo);
+    byte_42AD892 = 1;
   }
-  v14 = sub_B0D974(EarthCore_StateZoomIn___c__DisplayClass3_0_TypeInfo, that, method);
-  EarthCore_StateZoomIn___c__DisplayClass3_0___ctor((EarthCore_StateZoomIn___c__DisplayClass3_0_o *)v14, 0LL);
-  if ( !v14 )
+  v5 = sub_B52A54(EarthCore_StateZoomIn___c__DisplayClass3_0_TypeInfo);
+  EarthCore_StateZoomIn___c__DisplayClass3_0___ctor((EarthCore_StateZoomIn___c__DisplayClass3_0_o *)v5, 0LL);
+  if ( !v5 )
     goto LABEL_54;
-  *(_QWORD *)(v14 + 24) = that;
-  v16 = (UnityEngine_Component_o **)(v14 + 24);
-  sub_B0D840(v14 + 24, that);
-  *(_QWORD *)(v14 + 144) = this;
-  sub_B0D840(v14 + 144, this);
-  v17 = *(struct EarthCore_o **)(v14 + 24);
-  this->fields.mThat = v17;
-  sub_B0D840(&this->fields, v17);
+  *(_QWORD *)(v5 + 24) = that;
+  v8 = (UnityEngine_Component_o **)(v5 + 24);
+  sub_B52920(v5 + 24);
+  *(_QWORD *)(v5 + 144) = this;
+  sub_B52920(v5 + 144);
+  this->fields.mThat = *(struct EarthCore_o **)(v5 + 24);
+  sub_B52920(&this->fields);
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   }
   this->fields.mSpdTime = TerminalPramsManager__GetIntpTime_AutoResume(1.0, 0LL);
-  if ( !*v16 )
+  if ( !*v8 )
     goto LABEL_54;
-  klass = (UnityEngine_Object_o *)(*v16)[3].klass;
+  klass = (UnityEngine_Object_o *)(*v8)[3].klass;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -1033,47 +977,46 @@ void __fastcall EarthCore_StateZoomIn__begin(
     {
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     }
-    if ( !byte_4210867 )
+    if ( !byte_42AC2CA )
     {
-      sub_B0D8A4(&TerminalPramsManager_TypeInfo, v19);
-      byte_4210867 = 1;
+      sub_B52984(&TerminalPramsManager_TypeInfo);
+      byte_42AC2CA = 1;
     }
-    v20 = TerminalPramsManager_TypeInfo;
+    v10 = TerminalPramsManager_TypeInfo;
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      v20 = TerminalPramsManager_TypeInfo;
+      v10 = TerminalPramsManager_TypeInfo;
     }
-    if ( v20->static_fields->_IsAutoResume_k__BackingField )
+    if ( v10->static_fields->_IsAutoResume_k__BackingField )
     {
-      EarthCore_StateZoomIn__GoNext(this, v19);
+      EarthCore_StateZoomIn__GoNext(this, v7);
       return;
     }
     if ( (BYTE3(SeManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SeManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
     SeManager__PlayCommonSe(22, 0LL);
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v51 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v49, v50);
-    System_Action___ctor(v51, (Il2CppObject *)this, Method_EarthCore_StateZoomIn_GoNext__, 0LL);
+    Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v33 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+    System_Action___ctor(v33, (Il2CppObject *)this, Method_EarthCore_StateZoomIn_GoNext__, 0LL);
     if ( Instance )
     {
-      CommonUI__maskFadeout(Instance, 2, 0.4, v51, 0LL);
+      CommonUI__maskFadeout(Instance, 2, 0.4, v33, 0LL);
       return;
     }
 LABEL_54:
-    sub_B0D97C(transform);
+    sub_B52A5C(transform, v7);
   }
-  transform = *v16;
-  if ( !*v16 )
+  transform = *v8;
+  if ( !*v8 )
     goto LABEL_54;
   gameObject = UnityEngine_Component__get_gameObject(transform, 0LL);
-  Component_UIWidget = GameObjectExtensions__SafeGetComponent_UIWidget_(
-                         gameObject,
-                         (const MethodInfo_1B6392C *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-  *(_QWORD *)(v14 + 16) = Component_UIWidget;
-  sub_B0D840(v14 + 16, Component_UIWidget);
-  transform = *(UnityEngine_Component_o **)(v14 + 24);
+  *(_QWORD *)(v5 + 16) = GameObjectExtensions__SafeGetComponent_UIWidget_(
+                           gameObject,
+                           (const MethodInfo_1B7BF3C *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+  sub_B52920(v5 + 16);
+  transform = *(UnityEngine_Component_o **)(v5 + 24);
   if ( !transform )
     goto LABEL_54;
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(transform, 0LL);
@@ -1084,26 +1027,26 @@ LABEL_54:
                                            0LL);
   if ( !transform )
     goto LABEL_54;
-  *(UnityEngine_Quaternion_o *)&v23 = UnityEngine_Transform__get_rotation((UnityEngine_Transform_o *)transform, 0LL);
-  v27 = *(_QWORD *)(v14 + 24);
-  *(_DWORD *)(v14 + 32) = v23;
-  *(_DWORD *)(v14 + 36) = v24;
-  *(_DWORD *)(v14 + 40) = v25;
-  *(_DWORD *)(v14 + 44) = v26;
-  if ( !v27 )
+  *(UnityEngine_Quaternion_o *)&v12 = UnityEngine_Transform__get_rotation((UnityEngine_Transform_o *)transform, 0LL);
+  v16 = *(_QWORD *)(v5 + 24);
+  *(_DWORD *)(v5 + 32) = v12;
+  *(_DWORD *)(v5 + 36) = v13;
+  *(_DWORD *)(v5 + 40) = v14;
+  *(_DWORD *)(v5 + 44) = v15;
+  if ( !v16 )
     goto LABEL_54;
-  v28 = *(_QWORD *)(v27 + 72);
-  if ( !v28 )
+  v17 = *(_QWORD *)(v16 + 72);
+  if ( !v17 )
     goto LABEL_54;
-  *(_OWORD *)(v14 + 48) = *(_OWORD *)(v28 + 88);
-  *(_DWORD *)(v27 + 104) = v23;
-  *(_DWORD *)(v27 + 108) = v24;
-  *(_DWORD *)(v27 + 112) = v25;
-  *(_DWORD *)(v27 + 116) = v26;
-  v29 = *(_QWORD *)(v14 + 24);
-  if ( !v29 )
+  *(_OWORD *)(v5 + 48) = *(_OWORD *)(v17 + 88);
+  *(_DWORD *)(v16 + 104) = v12;
+  *(_DWORD *)(v16 + 108) = v13;
+  *(_DWORD *)(v16 + 112) = v14;
+  *(_DWORD *)(v16 + 116) = v15;
+  v18 = *(_QWORD *)(v5 + 24);
+  if ( !v18 )
     goto LABEL_54;
-  transform = *(UnityEngine_Component_o **)(v29 + 24);
+  transform = *(UnityEngine_Component_o **)(v18 + 24);
   if ( !transform )
     goto LABEL_54;
   transform = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
@@ -1111,57 +1054,57 @@ LABEL_54:
                                            0LL);
   if ( !transform )
     goto LABEL_54;
-  *(UnityEngine_Quaternion_o *)(v14 + 64) = UnityEngine_Transform__get_rotation(
-                                              (UnityEngine_Transform_o *)transform,
-                                              0LL);
+  *(UnityEngine_Quaternion_o *)(v5 + 64) = UnityEngine_Transform__get_rotation(
+                                             (UnityEngine_Transform_o *)transform,
+                                             0LL);
   identity = UnityEngine_Quaternion__get_identity(0LL);
-  v30 = *(_QWORD *)(v14 + 24);
-  *(UnityEngine_Quaternion_o *)(v14 + 80) = identity;
-  if ( !v30 )
+  v19 = *(_QWORD *)(v5 + 24);
+  *(UnityEngine_Quaternion_o *)(v5 + 80) = identity;
+  if ( !v19 )
     goto LABEL_54;
-  *(UnityEngine_Vector3_o *)(v14 + 96) = GameObjectExtensions__GetLocalPosition(
-                                           (UnityEngine_GameObject_o *)*(_QWORD *)(v30 + 24),
-                                           0LL);
+  *(UnityEngine_Vector3_o *)(v5 + 96) = GameObjectExtensions__GetLocalPosition(
+                                          (UnityEngine_GameObject_o *)*(_QWORD *)(v19 + 24),
+                                          0LL);
   zero = UnityEngine_Vector3__get_zero(0LL);
-  v31 = *(_QWORD *)(v14 + 24);
-  *(UnityEngine_Vector3_o *)(v14 + 108) = zero;
-  if ( !v31 )
+  v20 = *(_QWORD *)(v5 + 24);
+  *(UnityEngine_Vector3_o *)(v5 + 108) = zero;
+  if ( !v20 )
     goto LABEL_54;
-  transform = *(UnityEngine_Component_o **)(v31 + 24);
+  transform = *(UnityEngine_Component_o **)(v20 + 24);
   if ( !transform )
     goto LABEL_54;
-  v32 = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)transform, 0LL);
-  *(UnityEngine_Vector3_o *)(v14 + 120) = GameObjectExtensions__GetLocalScale(v32, 0LL);
-  v33 = *(EasingObject_o **)(v14 + 16);
+  v21 = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)transform, 0LL);
+  *(UnityEngine_Vector3_o *)(v5 + 120) = GameObjectExtensions__GetLocalScale(v21, 0LL);
+  v22 = *(EasingObject_o **)(v5 + 16);
   __asm { FMOV            V0.2S, #6.0 }
-  *(_QWORD *)(v14 + 132) = _D0;
-  *(_DWORD *)(v14 + 140) = 1086324736;
+  *(_QWORD *)(v5 + 132) = _D0;
+  *(_DWORD *)(v5 + 140) = 1086324736;
   mSpdTime = this->fields.mSpdTime;
-  v42 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v40, v41);
-  System_Action___ctor(v42, (Il2CppObject *)v14, Method_EarthCore_StateZoomIn___c__DisplayClass3_0__begin_b__0__, 0LL);
-  v45 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v43, v44);
-  System_Action___ctor(v45, (Il2CppObject *)v14, Method_EarthCore_StateZoomIn___c__DisplayClass3_0__begin_b__1__, 0LL);
-  if ( !v33 )
+  v29 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+  System_Action___ctor(v29, (Il2CppObject *)v5, Method_EarthCore_StateZoomIn___c__DisplayClass3_0__begin_b__0__, 0LL);
+  v30 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+  System_Action___ctor(v30, (Il2CppObject *)v5, Method_EarthCore_StateZoomIn___c__DisplayClass3_0__begin_b__1__, 0LL);
+  if ( !v22 )
     goto LABEL_54;
-  EasingObject__Play(v33, mSpdTime, v42, v45, 0.0, 1, 0LL);
+  EasingObject__Play(v22, mSpdTime, v29, v30, 0.0, 1, 0LL);
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   }
-  if ( !byte_4210867 )
+  if ( !byte_42AC2CA )
   {
-    sub_B0D8A4(&TerminalPramsManager_TypeInfo, v46);
-    byte_4210867 = 1;
+    sub_B52984(&TerminalPramsManager_TypeInfo);
+    byte_42AC2CA = 1;
   }
-  v47 = TerminalPramsManager_TypeInfo;
+  v31 = TerminalPramsManager_TypeInfo;
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    v47 = TerminalPramsManager_TypeInfo;
+    v31 = TerminalPramsManager_TypeInfo;
   }
-  if ( !v47->static_fields->_IsAutoResume_k__BackingField )
+  if ( !v31->static_fields->_IsAutoResume_k__BackingField )
   {
     if ( (BYTE3(SeManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SeManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
@@ -1182,33 +1125,30 @@ void __fastcall EarthCore_StateZoomIn__update(
         EarthCore_o *that,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  __int64 v5; // x1
-  float v6; // s8
+  float v4; // s8
   CommonUI_o *Instance; // x20
+  System_Action_o *v6; // x21
+  __int64 v7; // x0
   __int64 v8; // x1
-  __int64 v9; // x2
-  System_Action_o *v10; // x21
-  __int64 v11; // x0
 
-  if ( (byte_4211AFD & 1) == 0 )
+  if ( (byte_42AD893 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, that);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    sub_B0D8A4(&Method_EarthCore_StateZoomIn_GoNext__, v5);
-    byte_4211AFD = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B52984(&Method_EarthCore_StateZoomIn_GoNext__);
+    byte_42AD893 = 1;
   }
   if ( this->fields.mStartTime > 0.0 )
   {
-    v6 = this->fields.mSpdTime - (float)(UnityEngine_Time__get_realtimeSinceStartup(0LL) - this->fields.mStartTime);
-    if ( v6 <= 0.4 )
+    v4 = this->fields.mSpdTime - (float)(UnityEngine_Time__get_realtimeSinceStartup(0LL) - this->fields.mStartTime);
+    if ( v4 <= 0.4 )
     {
-      Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v10 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v8, v9);
-      System_Action___ctor(v10, (Il2CppObject *)this, Method_EarthCore_StateZoomIn_GoNext__, 0LL);
+      Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v6 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+      System_Action___ctor(v6, (Il2CppObject *)this, Method_EarthCore_StateZoomIn_GoNext__, 0LL);
       if ( !Instance )
-        sub_B0D97C(v11);
-      CommonUI__maskFadeout(Instance, 2, v6, v10, 0LL);
+        sub_B52A5C(v7, v8);
+      CommonUI__maskFadeout(Instance, 2, v4, v6, 0LL);
       this->fields.mStartTime = 0.0;
     }
   }
@@ -1337,7 +1277,7 @@ void __fastcall EarthCore_StateZoomIn___c__DisplayClass3_0___begin_b__0(
   v39 = UnityEngine_Mathf__Clamp01(v38, 0LL);
   if ( !v37 )
 LABEL_15:
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   v40 = (float)(v36 - v34) * v39;
   v41 = vadd_f32(v33, vmul_n_f32(vsub_f32(v35, v33), v39)).n64_u64[0];
   v42 = v34 + v40;
@@ -1354,13 +1294,12 @@ void __fastcall EarthCore_StateZoomIn___c__DisplayClass3_0___begin_b__1(
   struct EarthCore_o *v4; // x8
   struct EarthCore_o *v5; // x8
   struct EarthCore_o *v6; // x8
-  __int64 v7; // x1
-  TerminalPramsManager_c *v8; // x0
+  TerminalPramsManager_c *v7; // x0
 
-  if ( (byte_4211F6D & 1) == 0 )
+  if ( (byte_42AD7B3 & 1) == 0 )
   {
-    sub_B0D8A4(&TerminalPramsManager_TypeInfo, method);
-    byte_4211F6D = 1;
+    sub_B52984(&TerminalPramsManager_TypeInfo);
+    byte_42AD7B3 = 1;
   }
   that = (UnityEngine_Component_o *)this->fields.that;
   if ( !that )
@@ -1407,19 +1346,19 @@ void __fastcall EarthCore_StateZoomIn___c__DisplayClass3_0___begin_b__1(
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   }
-  if ( !byte_4210867 )
+  if ( !byte_42AC2CA )
   {
-    sub_B0D8A4(&TerminalPramsManager_TypeInfo, v7);
-    byte_4210867 = 1;
+    sub_B52984(&TerminalPramsManager_TypeInfo);
+    byte_42AC2CA = 1;
   }
-  v8 = TerminalPramsManager_TypeInfo;
+  v7 = TerminalPramsManager_TypeInfo;
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    v8 = TerminalPramsManager_TypeInfo;
+    v7 = TerminalPramsManager_TypeInfo;
   }
-  if ( v8->static_fields->_IsAutoResume_k__BackingField )
+  if ( v7->static_fields->_IsAutoResume_k__BackingField )
   {
     that = (UnityEngine_Component_o *)this->fields.__4__this;
     if ( that )
@@ -1428,7 +1367,7 @@ void __fastcall EarthCore_StateZoomIn___c__DisplayClass3_0___begin_b__1(
       return;
     }
 LABEL_27:
-    sub_B0D97C(that);
+    sub_B52A5C(that, method);
   }
 }
 
@@ -1441,30 +1380,29 @@ void __fastcall EarthCore_StateZoomOut___ctor(EarthCore_StateZoomOut_o *this, co
 
 void __fastcall EarthCore_StateZoomOut__GoNext(EarthCore_StateZoomOut_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   EarthCore_o *mThat; // x0
-  struct EarthCore_o *v5; // x8
+  struct EarthCore_o *v4; // x8
 
-  if ( (byte_4211B00 & 1) == 0 )
+  if ( (byte_42AD896 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___, method);
-    sub_B0D8A4(&StringLiteral_6912/*"GO_NEXT"*/, v3);
-    byte_4211B00 = 1;
+    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___);
+    sub_B52984(&StringLiteral_6939/*"GO_NEXT"*/);
+    byte_42AD896 = 1;
   }
   mThat = this->fields.mThat;
   if ( !mThat
-    || (EarthCore__SetState(mThat, 0, 0LL), (v5 = this->fields.mThat) == 0LL)
-    || (mThat = (EarthCore_o *)v5->fields.mTerminalMap) == 0LL
+    || (EarthCore__SetState(mThat, 0, 0LL), (v4 = this->fields.mThat) == 0LL)
+    || (mThat = (EarthCore_o *)v4->fields.mTerminalMap) == 0LL
     || (mThat = (EarthCore_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                  (UnityEngine_GameObject_o *)mThat,
-                                 (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___)) == 0LL
+                                 (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___)) == 0LL
     || (mThat = (EarthCore_o *)PlayMakerFSM__get_Fsm((PlayMakerFSM_o *)mThat, 0LL)) == 0LL )
   {
-    sub_B0D97C(mThat);
+    sub_B52A5C(mThat, method);
   }
-  HutongGames_PlayMaker_Fsm__Event_14644288(
+  HutongGames_PlayMaker_Fsm__Event_14866392(
     (HutongGames_PlayMaker_Fsm_o *)mThat,
-    (System_String_o *)StringLiteral_6912/*"GO_NEXT"*/,
+    (System_String_o *)StringLiteral_6939/*"GO_NEXT"*/,
     0LL);
 }
 
@@ -1474,108 +1412,90 @@ void __fastcall EarthCore_StateZoomOut__begin(
         EarthCore_o *that,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x19
+  __int64 v5; // x19
   void *transform; // x0
-  __int64 v16; // x21
-  struct EarthCore_o *v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x2
+  const MethodInfo *v7; // x1
+  __int64 v8; // x21
   float IntpTime_AutoResume; // s0
-  __int64 v21; // x8
-  __int64 v22; // x8
-  TerminalSceneComponent_o *v23; // x22
-  float v24; // s8
+  __int64 v10; // x8
+  __int64 v11; // x8
+  TerminalSceneComponent_o *v12; // x22
+  float v13; // s8
   struct EarthCore_StateZoomOut___c_StaticFields *static_fields; // x8
   System_Action_o *_9__1_0; // x23
-  Il2CppObject *v27; // x24
-  struct EarthCore_StateZoomOut___c_StaticFields *v28; // x0
-  UnityEngine_Object_o *v29; // x22
-  const MethodInfo *v30; // x1
+  Il2CppObject *v16; // x24
+  struct EarthCore_StateZoomOut___c_StaticFields *v17; // x0
+  UnityEngine_Object_o *v18; // x22
   UnityEngine_GameObject_o *gameObject; // x0
-  UIWidget_o *Component_UIWidget; // x0
-  __int64 v33; // x8
-  __int64 v34; // x8
-  __int64 v35; // x8
-  int *v36; // x8
-  int *v37; // x9
-  int *v38; // x10
-  int *v39; // x10
-  int v40; // w9
-  int v41; // w11
-  int v42; // w10
-  __int64 v43; // x8
-  UnityEngine_GameObject_o *v44; // x0
-  __int64 v45; // x1
-  __int64 v46; // x2
-  __int64 v47; // x8
-  float v48; // s0
-  EasingObject_o *v49; // x20
-  System_Action_o *v50; // x21
-  __int64 v51; // x1
-  __int64 v52; // x2
-  System_Action_o *v53; // x22
+  __int64 v20; // x8
+  __int64 v21; // x8
+  __int64 v22; // x8
+  int *v23; // x8
+  int *v24; // x9
+  int *v25; // x10
+  int *v26; // x10
+  int v27; // w9
+  int v28; // w11
+  int v29; // w10
+  __int64 v30; // x8
+  UnityEngine_GameObject_o *v31; // x0
+  __int64 v32; // x8
+  float v33; // s0
+  EasingObject_o *v34; // x20
+  System_Action_o *v35; // x21
+  System_Action_o *v36; // x22
   UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o LocalScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Quaternion_o v57; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v40; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4211AFF & 1) == 0 )
+  if ( (byte_42AD895 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, that);
-    sub_B0D8A4(&EarthCore_TypeInfo, v5);
-    sub_B0D8A4(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v6);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v7);
-    sub_B0D8A4(&TerminalPramsManager_TypeInfo, v8);
-    sub_B0D8A4(&Method_EarthCore_StateZoomOut___c__begin_b__1_0__, v9);
-    sub_B0D8A4(&Method_EarthCore_StateZoomOut___c__DisplayClass1_0__begin_b__1__, v10);
-    sub_B0D8A4(&Method_EarthCore_StateZoomOut___c__DisplayClass1_0__begin_b__2__, v11);
-    sub_B0D8A4(&EarthCore_StateZoomOut___c__DisplayClass1_0_TypeInfo, v12);
-    sub_B0D8A4(&EarthCore_StateZoomOut___c_TypeInfo, v13);
-    byte_4211AFF = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&EarthCore_TypeInfo);
+    sub_B52984(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&TerminalPramsManager_TypeInfo);
+    sub_B52984(&Method_EarthCore_StateZoomOut___c__begin_b__1_0__);
+    sub_B52984(&Method_EarthCore_StateZoomOut___c__DisplayClass1_0__begin_b__1__);
+    sub_B52984(&Method_EarthCore_StateZoomOut___c__DisplayClass1_0__begin_b__2__);
+    sub_B52984(&EarthCore_StateZoomOut___c__DisplayClass1_0_TypeInfo);
+    sub_B52984(&EarthCore_StateZoomOut___c_TypeInfo);
+    byte_42AD895 = 1;
   }
-  v14 = sub_B0D974(EarthCore_StateZoomOut___c__DisplayClass1_0_TypeInfo, that, method);
-  EarthCore_StateZoomOut___c__DisplayClass1_0___ctor((EarthCore_StateZoomOut___c__DisplayClass1_0_o *)v14, 0LL);
-  if ( !v14 )
+  v5 = sub_B52A54(EarthCore_StateZoomOut___c__DisplayClass1_0_TypeInfo);
+  EarthCore_StateZoomOut___c__DisplayClass1_0___ctor((EarthCore_StateZoomOut___c__DisplayClass1_0_o *)v5, 0LL);
+  if ( !v5 )
     goto LABEL_52;
-  *(_QWORD *)(v14 + 24) = that;
-  v16 = v14 + 24;
-  sub_B0D840(v14 + 24, that);
-  *(_QWORD *)(v14 + 144) = this;
-  sub_B0D840(v14 + 144, this);
-  v17 = *(struct EarthCore_o **)(v14 + 24);
-  this->fields.mThat = v17;
-  sub_B0D840(&this->fields, v17);
+  *(_QWORD *)(v5 + 24) = that;
+  v8 = v5 + 24;
+  sub_B52920(v5 + 24);
+  *(_QWORD *)(v5 + 144) = this;
+  sub_B52920(v5 + 144);
+  this->fields.mThat = *(struct EarthCore_o **)(v5 + 24);
+  sub_B52920(&this->fields);
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   }
   IntpTime_AutoResume = TerminalPramsManager__GetIntpTime_AutoResume(1.0, 0LL);
-  if ( !*(_QWORD *)v16 )
+  if ( !*(_QWORD *)v8 )
     goto LABEL_52;
-  v21 = *(_QWORD *)(*(_QWORD *)v16 + 48LL);
-  if ( !v21 )
+  v10 = *(_QWORD *)(*(_QWORD *)v8 + 48LL);
+  if ( !v10 )
     goto LABEL_52;
-  *(_BYTE *)(v21 + 392) = 0;
-  if ( !*(_QWORD *)v16 )
+  *(_BYTE *)(v10 + 392) = 0;
+  if ( !*(_QWORD *)v8 )
     goto LABEL_52;
-  v22 = *(_QWORD *)(*(_QWORD *)v16 + 48LL);
-  if ( !v22 )
+  v11 = *(_QWORD *)(*(_QWORD *)v8 + 48LL);
+  if ( !v11 )
     goto LABEL_52;
-  *(_BYTE *)(v22 + 394) = 1;
-  if ( !*(_QWORD *)v16 )
+  *(_BYTE *)(v11 + 394) = 1;
+  if ( !*(_QWORD *)v8 )
     goto LABEL_52;
-  v23 = *(TerminalSceneComponent_o **)(*(_QWORD *)v16 + 48LL);
-  v24 = IntpTime_AutoResume;
+  v12 = *(TerminalSceneComponent_o **)(*(_QWORD *)v8 + 48LL);
+  v13 = IntpTime_AutoResume;
   transform = EarthCore_StateZoomOut___c_TypeInfo;
   if ( (BYTE3(EarthCore_StateZoomOut___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EarthCore_StateZoomOut___c_TypeInfo->_2.cctor_finished )
@@ -1592,39 +1512,38 @@ void __fastcall EarthCore_StateZoomOut__begin(
       j_il2cpp_runtime_class_init_0(transform);
       static_fields = EarthCore_StateZoomOut___c_TypeInfo->static_fields;
     }
-    v27 = (Il2CppObject *)static_fields->__9;
-    _9__1_0 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v18, v19);
-    System_Action___ctor(_9__1_0, v27, Method_EarthCore_StateZoomOut___c__begin_b__1_0__, 0LL);
-    v28 = EarthCore_StateZoomOut___c_TypeInfo->static_fields;
-    v28->__9__1_0 = _9__1_0;
-    sub_B0D840(&v28->__9__1_0, _9__1_0);
+    v16 = (Il2CppObject *)static_fields->__9;
+    _9__1_0 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+    System_Action___ctor(_9__1_0, v16, Method_EarthCore_StateZoomOut___c__begin_b__1_0__, 0LL);
+    v17 = EarthCore_StateZoomOut___c_TypeInfo->static_fields;
+    v17->__9__1_0 = _9__1_0;
+    sub_B52920(&v17->__9__1_0);
   }
-  if ( !v23 )
+  if ( !v12 )
     goto LABEL_52;
-  TerminalSceneComponent__Fadein_WorldDisp_17434276(v23, 0.4, _9__1_0, 0LL);
-  if ( !*(_QWORD *)v16 )
+  TerminalSceneComponent__Fadein_WorldDisp_18263780(v12, 0.4, _9__1_0, 0LL);
+  if ( !*(_QWORD *)v8 )
     goto LABEL_52;
-  v29 = *(UnityEngine_Object_o **)(*(_QWORD *)v16 + 72LL);
+  v18 = *(UnityEngine_Object_o **)(*(_QWORD *)v8 + 72LL);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Equality(v29, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality(v18, 0LL, 0LL) )
   {
-    EarthCore_StateZoomOut__GoNext(this, v30);
+    EarthCore_StateZoomOut__GoNext(this, v7);
     return;
   }
-  transform = *(void **)v16;
-  if ( !*(_QWORD *)v16 )
+  transform = *(void **)v8;
+  if ( !*(_QWORD *)v8 )
     goto LABEL_52;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0LL);
-  Component_UIWidget = GameObjectExtensions__SafeGetComponent_UIWidget_(
-                         gameObject,
-                         (const MethodInfo_1B6392C *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-  *(_QWORD *)(v14 + 16) = Component_UIWidget;
-  sub_B0D840(v14 + 16, Component_UIWidget);
-  transform = *(void **)(v14 + 24);
+  *(_QWORD *)(v5 + 16) = GameObjectExtensions__SafeGetComponent_UIWidget_(
+                           gameObject,
+                           (const MethodInfo_1B7BF3C *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+  sub_B52920(v5 + 16);
+  transform = *(void **)(v5 + 24);
   if ( !transform )
     goto LABEL_52;
   transform = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0LL);
@@ -1634,39 +1553,39 @@ void __fastcall EarthCore_StateZoomOut__begin(
   if ( !transform )
     goto LABEL_52;
   rotation = UnityEngine_Transform__get_rotation((UnityEngine_Transform_o *)transform, 0LL);
-  v33 = *(_QWORD *)(v14 + 24);
-  *(UnityEngine_Quaternion_o *)(v14 + 48) = rotation;
-  if ( !v33 )
+  v20 = *(_QWORD *)(v5 + 24);
+  *(UnityEngine_Quaternion_o *)(v5 + 48) = rotation;
+  if ( !v20 )
     goto LABEL_52;
-  *(_OWORD *)(v14 + 32) = *(_OWORD *)(v33 + 104);
-  transform = *(void **)(v33 + 24);
+  *(_OWORD *)(v5 + 32) = *(_OWORD *)(v20 + 104);
+  transform = *(void **)(v20 + 24);
   if ( !transform )
     goto LABEL_52;
   transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0LL);
   if ( !transform )
     goto LABEL_52;
-  v57 = UnityEngine_Transform__get_rotation((UnityEngine_Transform_o *)transform, 0LL);
-  v34 = *(_QWORD *)(v14 + 24);
-  *(UnityEngine_Quaternion_o *)(v14 + 80) = v57;
-  if ( !v34 )
+  v40 = UnityEngine_Transform__get_rotation((UnityEngine_Transform_o *)transform, 0LL);
+  v21 = *(_QWORD *)(v5 + 24);
+  *(UnityEngine_Quaternion_o *)(v5 + 80) = v40;
+  if ( !v21 )
     goto LABEL_52;
-  *(_OWORD *)(v14 + 64) = *(_OWORD *)(v34 + 88);
-  LocalPosition = GameObjectExtensions__GetLocalPosition((UnityEngine_GameObject_o *)*(_QWORD *)(v34 + 24), 0LL);
-  v35 = *(_QWORD *)(v14 + 24);
-  *(UnityEngine_Vector3_o *)(v14 + 108) = LocalPosition;
-  if ( !v35 )
+  *(_OWORD *)(v5 + 64) = *(_OWORD *)(v21 + 88);
+  LocalPosition = GameObjectExtensions__GetLocalPosition((UnityEngine_GameObject_o *)*(_QWORD *)(v21 + 24), 0LL);
+  v22 = *(_QWORD *)(v5 + 24);
+  *(UnityEngine_Vector3_o *)(v5 + 108) = LocalPosition;
+  if ( !v22 )
     goto LABEL_52;
   transform = EarthCore_TypeInfo;
-  if ( *(_BYTE *)(v35 + 136) )
+  if ( *(_BYTE *)(v22 + 136) )
   {
     if ( (WORD1(EarthCore_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0 && !EarthCore_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EarthCore_TypeInfo);
       transform = EarthCore_TypeInfo;
     }
-    v36 = (int *)*((_QWORD *)transform + 23);
-    v37 = v36 + 1;
-    v38 = v36 + 2;
+    v23 = (int *)*((_QWORD *)transform + 23);
+    v24 = v23 + 1;
+    v25 = v23 + 2;
   }
   else
   {
@@ -1675,44 +1594,44 @@ void __fastcall EarthCore_StateZoomOut__begin(
       j_il2cpp_runtime_class_init_0(EarthCore_TypeInfo);
       transform = EarthCore_TypeInfo;
     }
-    v39 = (int *)*((_QWORD *)transform + 23);
-    v36 = v39 + 3;
-    v37 = v39 + 4;
-    v38 = v39 + 5;
+    v26 = (int *)*((_QWORD *)transform + 23);
+    v23 = v26 + 3;
+    v24 = v26 + 4;
+    v25 = v26 + 5;
   }
-  v40 = *v37;
-  v41 = *v36;
-  v42 = *v38;
-  v43 = *(_QWORD *)(v14 + 24);
-  *(_DWORD *)(v14 + 96) = v41;
-  *(_DWORD *)(v14 + 100) = v40;
-  *(_DWORD *)(v14 + 104) = v42;
-  if ( !v43 )
+  v27 = *v24;
+  v28 = *v23;
+  v29 = *v25;
+  v30 = *(_QWORD *)(v5 + 24);
+  *(_DWORD *)(v5 + 96) = v28;
+  *(_DWORD *)(v5 + 100) = v27;
+  *(_DWORD *)(v5 + 104) = v29;
+  if ( !v30 )
     goto LABEL_52;
-  transform = *(void **)(v43 + 24);
+  transform = *(void **)(v30 + 24);
   if ( !transform )
     goto LABEL_52;
-  v44 = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)transform, 0LL);
-  LocalScale = GameObjectExtensions__GetLocalScale(v44, 0LL);
-  v47 = *(_QWORD *)(v14 + 24);
-  *(UnityEngine_Vector3_o *)(v14 + 132) = LocalScale;
-  if ( !v47 )
+  v31 = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)transform, 0LL);
+  LocalScale = GameObjectExtensions__GetLocalScale(v31, 0LL);
+  v32 = *(_QWORD *)(v5 + 24);
+  *(UnityEngine_Vector3_o *)(v5 + 132) = LocalScale;
+  if ( !v32 )
     goto LABEL_52;
-  v48 = 0.95;
-  v49 = *(EasingObject_o **)(v14 + 16);
-  if ( *(_BYTE *)(v47 + 136) )
-    v48 = 1.0;
-  *(float *)(v14 + 120) = v48;
-  *(float *)(v14 + 124) = v48;
-  *(float *)(v14 + 128) = v48;
-  v50 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v45, v46);
-  System_Action___ctor(v50, (Il2CppObject *)v14, Method_EarthCore_StateZoomOut___c__DisplayClass1_0__begin_b__1__, 0LL);
-  v53 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v51, v52);
-  System_Action___ctor(v53, (Il2CppObject *)v14, Method_EarthCore_StateZoomOut___c__DisplayClass1_0__begin_b__2__, 0LL);
-  if ( !v49 )
+  v33 = 0.95;
+  v34 = *(EasingObject_o **)(v5 + 16);
+  if ( *(_BYTE *)(v32 + 136) )
+    v33 = 1.0;
+  *(float *)(v5 + 120) = v33;
+  *(float *)(v5 + 124) = v33;
+  *(float *)(v5 + 128) = v33;
+  v35 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+  System_Action___ctor(v35, (Il2CppObject *)v5, Method_EarthCore_StateZoomOut___c__DisplayClass1_0__begin_b__1__, 0LL);
+  v36 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+  System_Action___ctor(v36, (Il2CppObject *)v5, Method_EarthCore_StateZoomOut___c__DisplayClass1_0__begin_b__2__, 0LL);
+  if ( !v34 )
 LABEL_52:
-    sub_B0D97C(transform);
-  EasingObject__Play_32669972(v49, 1.0, 0.0, v24, v50, v53, 0.0, 3, 0LL);
+    sub_B52A5C(transform, v7);
+  EasingObject__Play_33849908(v34, 1.0, 0.0, v13, v35, v36, 0.0, 3, 0LL);
 }
 
 
@@ -1736,21 +1655,19 @@ void __fastcall EarthCore_StateZoomOut__update(
 
 void __fastcall EarthCore_StateZoomOut___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x2
-  Il2CppObject *v3; // x19
+  Il2CppObject *v1; // x19
   struct EarthCore_StateZoomOut___c_StaticFields *static_fields; // x0
 
-  if ( (byte_4211F6E & 1) == 0 )
+  if ( (byte_42AD7B4 & 1) == 0 )
   {
-    sub_B0D8A4(&EarthCore_StateZoomOut___c_TypeInfo, v1);
-    byte_4211F6E = 1;
+    sub_B52984(&EarthCore_StateZoomOut___c_TypeInfo);
+    byte_42AD7B4 = 1;
   }
-  v3 = (Il2CppObject *)sub_B0D974(EarthCore_StateZoomOut___c_TypeInfo, v1, v2);
-  System_Object___ctor(v3, 0LL);
+  v1 = (Il2CppObject *)sub_B52A54(EarthCore_StateZoomOut___c_TypeInfo);
+  System_Object___ctor(v1, 0LL);
   static_fields = EarthCore_StateZoomOut___c_TypeInfo->static_fields;
-  static_fields->__9 = (struct EarthCore_StateZoomOut___c_o *)v3;
-  sub_B0D840(static_fields, v3);
+  static_fields->__9 = (struct EarthCore_StateZoomOut___c_o *)v1;
+  sub_B52920(static_fields);
 }
 
 
@@ -1888,7 +1805,7 @@ void __fastcall EarthCore_StateZoomOut___c__DisplayClass1_0___begin_b__1(
   v39 = UnityEngine_Mathf__Clamp01(v38, 0LL);
   if ( !v37 )
 LABEL_15:
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   v40 = (float)(v36 - v34) * v39;
   v41 = vadd_f32(v33, vmul_n_f32(vsub_f32(v35, v33), v39)).n64_u64[0];
   v42 = v34 + v40;
@@ -1940,7 +1857,7 @@ void __fastcall EarthCore_StateZoomOut___c__DisplayClass1_0___begin_b__2(
         (that = (UnityEngine_Component_o *)this->fields.__4__this) == 0LL) )
   {
 LABEL_15:
-    sub_B0D97C(that);
+    sub_B52A5C(that, method);
   }
   EarthCore_StateZoomOut__GoNext((EarthCore_StateZoomOut_o *)that, 0LL);
 }

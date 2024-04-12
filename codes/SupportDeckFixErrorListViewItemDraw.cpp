@@ -15,6 +15,6 @@ void __fastcall SupportDeckFixErrorListViewItemDraw__SetMessage(
 
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, message);
   UILabel__set_text(messageLabel, message, 0LL);
 }

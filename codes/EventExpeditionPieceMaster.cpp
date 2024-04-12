@@ -1,14 +1,14 @@
 void __fastcall EventExpeditionPieceMaster___ctor(EventExpeditionPieceMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4216FA4 & 1) == 0 )
+  if ( (byte_42B2851 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataMasterBase_EventExpeditionPieceMaster__EventExpeditionPieceEntity__string___ctor__, method);
-    byte_4216FA4 = 1;
+    sub_B52984(&Method_DataMasterBase_EventExpeditionPieceMaster__EventExpeditionPieceEntity__string___ctor__);
+    byte_42B2851 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-    379,
-    (const MethodInfo_2669F88 *)Method_DataMasterBase_EventExpeditionPieceMaster__EventExpeditionPieceEntity__string___ctor__);
+    380,
+    (const MethodInfo_23E268C *)Method_DataMasterBase_EventExpeditionPieceMaster__EventExpeditionPieceEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,16 @@ EventExpeditionPieceEntity_o *__fastcall EventExpeditionPieceMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4216FA5 & 1) == 0 )
+  if ( (byte_42B2852 & 1) == 0 )
   {
-    sub_B0D8A4(
-      &Method_DataMasterBase_EventExpeditionPieceMaster__EventExpeditionPieceEntity__string__GetEntity__,
-      *(_QWORD *)&eventId);
-    byte_4216FA5 = 1;
+    sub_B52984(&Method_DataMasterBase_EventExpeditionPieceMaster__EventExpeditionPieceEntity__string__GetEntity__);
+    byte_42B2852 = 1;
   }
   PK = EventExpeditionPieceEntity__CreatePK(eventId, idx, *(const MethodInfo **)&idx);
-  return (EventExpeditionPieceEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
-                                           (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
+  return (EventExpeditionPieceEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
+                                           (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                            PK,
-                                           (const MethodInfo_266A024 *)Method_DataMasterBase_EventExpeditionPieceMaster__EventExpeditionPieceEntity__string__GetEntity__);
+                                           (const MethodInfo_23E2728 *)Method_DataMasterBase_EventExpeditionPieceMaster__EventExpeditionPieceEntity__string__GetEntity__);
 }
 
 
@@ -42,45 +40,37 @@ System_Collections_Generic_List_EventExpeditionPieceEntity__o *__fastcall EventE
         int32_t eventId,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
+  int32_t v3; // w19
   System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
   int32_t Count; // w21
-  __int64 v12; // x1
-  __int64 v13; // x2
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v14; // x22
-  int32_t v15; // w23
-  __int64 v16; // x10
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v7; // x22
+  int32_t v8; // w23
+  __int64 v9; // x10
 
-  if ( (byte_4216FA8 & 1) == 0 )
+  v3 = eventId;
+  if ( (byte_42B2855 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_B0D8A4(&EventExpeditionPieceEntity_TypeInfo, v6);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity__Add__, v7);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity___ctor__, v8);
-    sub_B0D8A4(&System_Collections_Generic_List_EventExpeditionPieceEntity__TypeInfo, v9);
-    byte_4216FA8 = 1;
+    sub_B52984(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B52984(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B52984(&EventExpeditionPieceEntity_TypeInfo);
+    sub_B52984(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity__Add__);
+    sub_B52984(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity___ctor__);
+    sub_B52984(&System_Collections_Generic_List_EventExpeditionPieceEntity__TypeInfo);
+    byte_42B2855 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
     goto LABEL_15;
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             list,
-            (const MethodInfo_2AB5718 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-  v14 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
-                                                                                                  System_Collections_Generic_List_EventExpeditionPieceEntity__TypeInfo,
-                                                                                                  v12,
-                                                                                                  v13);
+            (const MethodInfo_2B98558 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+  v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_EventExpeditionPieceEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v14,
-    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_EventExpeditionPieceEntity___ctor__);
+    v7,
+    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_EventExpeditionPieceEntity___ctor__);
   if ( Count >= 1 )
   {
-    v15 = 0;
+    v8 = 0;
     while ( 1 )
     {
       list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
@@ -88,30 +78,31 @@ System_Collections_Generic_List_EventExpeditionPieceEntity__o *__fastcall EventE
         break;
       list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                                                                                            list,
-                                                                                           v15,
-                                                                                           (const MethodInfo_2AB57BC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                                                                           v8,
+                                                                                           (const MethodInfo_2B985FC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( list )
       {
-        v16 = *(&EventExpeditionPieceEntity_TypeInfo->_2.bitflags2 + 1);
-        if ( *(&list->klass->_2.bitflags2 + 1) >= (unsigned int)v16
-          && (EventExpeditionPieceEntity_c *)list->klass->_2.typeHierarchy[v16 - 1] == EventExpeditionPieceEntity_TypeInfo
-          && LODWORD(list->fields.items) == eventId )
+        *(_QWORD *)&eventId = list;
+        v9 = *(&EventExpeditionPieceEntity_TypeInfo->_2.bitflags2 + 1);
+        if ( *(&list->klass->_2.bitflags2 + 1) >= (unsigned int)v9
+          && (EventExpeditionPieceEntity_c *)list->klass->_2.typeHierarchy[v9 - 1] == EventExpeditionPieceEntity_TypeInfo
+          && LODWORD(list->fields.items) == v3 )
         {
-          if ( !v14 )
+          if ( !v7 )
             break;
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            v14,
+            v7,
             (EventMissionProgressRequest_Argument_ProgressData_o *)list,
-            (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_EventExpeditionPieceEntity__Add__);
+            (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_EventExpeditionPieceEntity__Add__);
         }
       }
-      if ( ++v15 >= Count )
-        return (System_Collections_Generic_List_EventExpeditionPieceEntity__o *)v14;
+      if ( ++v8 >= Count )
+        return (System_Collections_Generic_List_EventExpeditionPieceEntity__o *)v7;
     }
 LABEL_15:
-    sub_B0D97C(list);
+    sub_B52A5C(list, *(_QWORD *)&eventId);
   }
-  return (System_Collections_Generic_List_EventExpeditionPieceEntity__o *)v14;
+  return (System_Collections_Generic_List_EventExpeditionPieceEntity__o *)v7;
 }
 
 
@@ -121,50 +112,38 @@ System_Collections_Generic_List_EventExpeditionPieceEntity__o *__fastcall EventE
         int32_t eventId,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
   System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
   int32_t Count; // w21
-  __int64 v14; // x1
-  __int64 v15; // x2
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v16; // x22
-  int32_t v17; // w23
-  EventMissionProgressRequest_Argument_ProgressData_o *v18; // x24
-  __int64 v19; // x10
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v7; // x22
+  int32_t v8; // w23
+  EventMissionProgressRequest_Argument_ProgressData_o *v9; // x24
+  __int64 v10; // x10
 
-  if ( (byte_4216FA7 & 1) == 0 )
+  if ( (byte_42B2854 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_B0D8A4(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v6);
-    sub_B0D8A4(&EventExpeditionPieceEntity_TypeInfo, v7);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity__Add__, v8);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity___ctor__, v9);
-    sub_B0D8A4(&System_Collections_Generic_List_EventExpeditionPieceEntity__TypeInfo, v10);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    byte_4216FA7 = 1;
+    sub_B52984(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B52984(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B52984(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
+    sub_B52984(&EventExpeditionPieceEntity_TypeInfo);
+    sub_B52984(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity__Add__);
+    sub_B52984(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity___ctor__);
+    sub_B52984(&System_Collections_Generic_List_EventExpeditionPieceEntity__TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_42B2854 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
     goto LABEL_19;
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             list,
-            (const MethodInfo_2AB5718 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-  v16 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
-                                                                                                  System_Collections_Generic_List_EventExpeditionPieceEntity__TypeInfo,
-                                                                                                  v14,
-                                                                                                  v15);
+            (const MethodInfo_2B98558 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+  v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_EventExpeditionPieceEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v16,
-    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_EventExpeditionPieceEntity___ctor__);
+    v7,
+    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_EventExpeditionPieceEntity___ctor__);
   if ( Count >= 1 )
   {
-    v17 = 0;
+    v8 = 0;
     while ( 1 )
     {
       list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
@@ -172,51 +151,51 @@ System_Collections_Generic_List_EventExpeditionPieceEntity__o *__fastcall EventE
         break;
       list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                                                                                            list,
-                                                                                           v17,
-                                                                                           (const MethodInfo_2AB57BC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                                                                           v8,
+                                                                                           (const MethodInfo_2B985FC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( list )
       {
-        v18 = (EventMissionProgressRequest_Argument_ProgressData_o *)list;
-        v19 = *(&EventExpeditionPieceEntity_TypeInfo->_2.bitflags2 + 1);
-        if ( *(&list->klass->_2.bitflags2 + 1) >= (unsigned int)v19
-          && (EventExpeditionPieceEntity_c *)list->klass->_2.typeHierarchy[v19 - 1] == EventExpeditionPieceEntity_TypeInfo
+        v9 = (EventMissionProgressRequest_Argument_ProgressData_o *)list;
+        v10 = *(&EventExpeditionPieceEntity_TypeInfo->_2.bitflags2 + 1);
+        if ( *(&list->klass->_2.bitflags2 + 1) >= (unsigned int)v10
+          && (EventExpeditionPieceEntity_c *)list->klass->_2.typeHierarchy[v10 - 1] == EventExpeditionPieceEntity_TypeInfo
           && LODWORD(list->fields.items) == eventId )
         {
           if ( !LODWORD(list[1].monitor) )
             goto LABEL_15;
-          list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !list )
             break;
           list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                                                (DataManager_o *)list,
-                                                                                               (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
+                                                                                               (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
           if ( !list )
             break;
           list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)CommonReleaseMaster__IsOpen(
                                                                                                (CommonReleaseMaster_o *)list,
-                                                                                               (int32_t)v18[1].klass,
+                                                                                               (int32_t)v9[1].klass,
                                                                                                0LL,
                                                                                                0,
                                                                                                0LL);
           if ( ((unsigned __int8)list & 1) != 0 )
           {
 LABEL_15:
-            if ( !v16 )
+            if ( !v7 )
               break;
             System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-              v16,
-              v18,
-              (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_EventExpeditionPieceEntity__Add__);
+              v7,
+              v9,
+              (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_EventExpeditionPieceEntity__Add__);
           }
         }
       }
-      if ( ++v17 >= Count )
-        return (System_Collections_Generic_List_EventExpeditionPieceEntity__o *)v16;
+      if ( ++v8 >= Count )
+        return (System_Collections_Generic_List_EventExpeditionPieceEntity__o *)v7;
     }
 LABEL_19:
-    sub_B0D97C(list);
+    sub_B52A5C(list, *(_QWORD *)&eventId);
   }
-  return (System_Collections_Generic_List_EventExpeditionPieceEntity__o *)v16;
+  return (System_Collections_Generic_List_EventExpeditionPieceEntity__o *)v7;
 }
 
 
@@ -230,17 +209,15 @@ bool __fastcall EventExpeditionPieceMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4216FA6 & 1) == 0 )
+  if ( (byte_42B2853 & 1) == 0 )
   {
-    sub_B0D8A4(
-      &Method_DataMasterBase_EventExpeditionPieceMaster__EventExpeditionPieceEntity__string__TryGetEntity__,
-      entity);
-    byte_4216FA6 = 1;
+    sub_B52984(&Method_DataMasterBase_EventExpeditionPieceMaster__EventExpeditionPieceEntity__string__TryGetEntity__);
+    byte_42B2853 = 1;
   }
   PK = EventExpeditionPieceEntity__CreatePK(eventId, idx, *(const MethodInfo **)&eventId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266A07C *)Method_DataMasterBase_EventExpeditionPieceMaster__EventExpeditionPieceEntity__string__TryGetEntity__);
+           (const MethodInfo_23E2780 *)Method_DataMasterBase_EventExpeditionPieceMaster__EventExpeditionPieceEntity__string__TryGetEntity__);
 }

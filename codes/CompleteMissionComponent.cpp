@@ -1,11 +1,9 @@
 void __fastcall CompleteMissionComponent___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-
-  if ( (byte_4214E5A & 1) == 0 )
+  if ( (byte_42B083A & 1) == 0 )
   {
-    sub_B0D8A4(&CompleteMissionComponent_TypeInfo, v1);
-    byte_4214E5A = 1;
+    sub_B52984(&CompleteMissionComponent_TypeInfo);
+    byte_42B083A = 1;
   }
   LODWORD(CompleteMissionComponent_TypeInfo->static_fields->SLIDE_IN_TIME) = (struct CompleteMissionComponent_StaticFields)1036831949;
 }
@@ -13,70 +11,62 @@ void __fastcall CompleteMissionComponent___cctor(const MethodInfo *method)
 
 void __fastcall CompleteMissionComponent___ctor(CompleteMissionComponent_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v5; // x20
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x20
+  System_String_array **v4; // x2
+  System_String_array **v5; // x3
+  System_Boolean_array **v6; // x4
+  System_Int32_array **v7; // x5
+  System_Int32_array *v8; // x6
+  System_Int32_array *v9; // x7
 
-  if ( (byte_4214E59 & 1) == 0 )
+  if ( (byte_42B0839 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventMissionEntity___ctor__, method);
-    sub_B0D8A4(&System_Collections_Generic_List_EventMissionEntity__TypeInfo, v4);
-    byte_4214E59 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_EventMissionEntity___ctor__);
+    sub_B52984(&System_Collections_Generic_List_EventMissionEntity__TypeInfo);
+    byte_42B0839 = 1;
   }
-  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
-                                                                                                 System_Collections_Generic_List_EventMissionEntity__TypeInfo,
-                                                                                                 method,
-                                                                                                 v2);
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_EventMissionEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v5,
-    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_EventMissionEntity___ctor__);
-  this->fields.completeMissionList = (struct System_Collections_Generic_List_EventMissionEntity__o *)v5;
-  sub_B0D840(
+    v3,
+    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_EventMissionEntity___ctor__);
+  this->fields.completeMissionList = (struct System_Collections_Generic_List_EventMissionEntity__o *)v3;
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.completeMissionList,
-    (System_Int32_array **)v5,
+    (System_Int32_array **)v3,
+    v4,
+    v5,
     v6,
     v7,
     v8,
-    v9,
-    v10,
-    v11);
+    v9);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
 
 void __fastcall CompleteMissionComponent__AcceptReward(CompleteMissionComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   TitleInfoControl_o *titleInfo; // x0
   CompleteMissionListViewManager_o *missionListViewManager; // x20
-  __int64 v6; // x1
-  __int64 v7; // x2
-  System_Action_o *v8; // x21
-  const MethodInfo *v9; // x2
+  System_Action_o *v5; // x21
+  const MethodInfo *v6; // x2
 
-  if ( (byte_4214E55 & 1) == 0 )
+  if ( (byte_42B0835 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, method);
-    sub_B0D8A4(&Method_CompleteMissionComponent__AcceptReward_b__33_0__, v3);
-    byte_4214E55 = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&Method_CompleteMissionComponent__AcceptReward_b__33_0__);
+    byte_42B0835 = 1;
   }
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo
     || (TitleInfoControl__setBackBtnColliderEnable(titleInfo, 0, 0LL),
         missionListViewManager = this->fields.missionListViewManager,
-        v8 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v6, v7),
-        System_Action___ctor(v8, (Il2CppObject *)this, Method_CompleteMissionComponent__AcceptReward_b__33_0__, 0LL),
+        v5 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo),
+        System_Action___ctor(v5, (Il2CppObject *)this, Method_CompleteMissionComponent__AcceptReward_b__33_0__, 0LL),
         !missionListViewManager) )
   {
-    sub_B0D97C(titleInfo);
+    sub_B52A5C(titleInfo, method);
   }
-  CompleteMissionListViewManager__AcceptReward(missionListViewManager, v8, v9);
+  CompleteMissionListViewManager__AcceptReward(missionListViewManager, v5, v6);
 }
 
 
@@ -88,20 +78,20 @@ void __fastcall CompleteMissionComponent__CheckRewardAcceptable(
 
   missionListViewManager = this->fields.missionListViewManager;
   if ( !missionListViewManager )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, method);
   CompleteMissionListViewManager__checkAcceptable(missionListViewManager, method);
 }
 
 
 void __fastcall CompleteMissionComponent__Close(CompleteMissionComponent_o *this, const MethodInfo *method)
 {
+  const MethodInfo *v3; // x1
   ListViewManager_o *missionListViewManager; // x0
-  const MethodInfo *v4; // x1
 
-  if ( (byte_4214E57 & 1) == 0 )
+  if ( (byte_42B0837 & 1) == 0 )
   {
-    sub_B0D8A4(&AtlasManager_TypeInfo, method);
-    byte_4214E57 = 1;
+    sub_B52984(&AtlasManager_TypeInfo);
+    byte_42B0837 = 1;
   }
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -111,12 +101,12 @@ void __fastcall CompleteMissionComponent__Close(CompleteMissionComponent_o *this
     || (ListViewManager__DestroyList(missionListViewManager, 0LL),
         EventRewardSaveData__SaveAllMissionData(0LL),
         (missionListViewManager = (ListViewManager_o *)this->fields.completeMissionSprite) == 0LL)
-    || (CompleteMissionSprite__ReleaseEventUI((CompleteMissionSprite_o *)missionListViewManager, v4),
+    || (CompleteMissionSprite__ReleaseEventUI((CompleteMissionSprite_o *)missionListViewManager, v3),
         (missionListViewManager = (ListViewManager_o *)UnityEngine_Component__get_gameObject(
                                                          (UnityEngine_Component_o *)this,
                                                          0LL)) == 0LL) )
   {
-    sub_B0D97C(missionListViewManager);
+    sub_B52A5C(missionListViewManager, v3);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)missionListViewManager, 0, 0LL);
 }
@@ -139,10 +129,10 @@ void __fastcall CompleteMissionComponent__OnClickBack(CompleteMissionComponent_o
 {
   CompleteMissionComponent_ClickDelegate_o *callbackFunc; // x0
 
-  if ( (byte_4214E56 & 1) == 0 )
+  if ( (byte_42B0836 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_4214E56 = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42B0836 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -158,18 +148,19 @@ void __fastcall CompleteMissionComponent__OnDestroy(CompleteMissionComponent_o *
   UnityEngine_Component_o **p_titleInfo; // x19
   UnityEngine_Object_o *v4; // x20
   struct TitleInfoControl_o *titleInfo; // t1
+  __int64 v6; // x1
   UnityEngine_Object_o *gameObject; // x20
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
+  System_String_array **v8; // x2
+  System_String_array **v9; // x3
+  System_Boolean_array **v10; // x4
+  System_Int32_array **v11; // x5
+  System_Int32_array *v12; // x6
+  System_Int32_array *v13; // x7
 
-  if ( (byte_4214E4D & 1) == 0 )
+  if ( (byte_42B082D & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
-    byte_4214E4D = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B082D = 1;
   }
   titleInfo = this->fields.titleInfo;
   p_titleInfo = (UnityEngine_Component_o **)&this->fields.titleInfo;
@@ -182,16 +173,16 @@ void __fastcall CompleteMissionComponent__OnDestroy(CompleteMissionComponent_o *
   if ( UnityEngine_Object__op_Inequality(v4, 0LL, 0LL) )
   {
     if ( !*p_titleInfo )
-      sub_B0D97C(0LL);
+      sub_B52A5C(0LL, v6);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(*p_titleInfo, 0LL);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_34935276(gameObject, 0LL);
+    UnityEngine_Object__Destroy_35616956(gameObject, 0LL);
     *p_titleInfo = 0LL;
-    sub_B0D840((BattleServantConfConponent_o *)p_titleInfo, 0LL, v7, v8, v9, v10, v11, v12);
+    sub_B52920((BattleServantConfConponent_o *)p_titleInfo, 0LL, v8, v9, v10, v11, v12, v13);
   }
 }
 
@@ -203,155 +194,130 @@ void __fastcall CompleteMissionComponent__Open(
         int32_t typeIndex,
         const MethodInfo *method)
 {
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
-  __int64 v23; // x1
-  __int64 v24; // x1
-  __int64 v25; // x1
-  __int64 v26; // x1
-  __int64 v27; // x1
   CommonUI_o *Instance; // x0
-  System_String_array **v29; // x2
-  System_String_array **v30; // x3
-  System_Boolean_array **v31; // x4
-  System_Int32_array **v32; // x5
-  System_Int32_array *v33; // x6
-  System_Int32_array *v34; // x7
-  System_String_array **v35; // x2
-  System_String_array **v36; // x3
-  System_Boolean_array **v37; // x4
-  System_Int32_array **v38; // x5
-  System_Int32_array *v39; // x6
-  System_Int32_array *v40; // x7
-  __int64 v41; // x1
-  __int64 v42; // x2
-  System_Collections_Generic_List_int__o *v43; // x20
-  System_String_array **v44; // x2
-  System_String_array **v45; // x3
-  System_Boolean_array **v46; // x4
-  System_Int32_array **v47; // x5
-  System_Int32_array *v48; // x6
-  System_Int32_array *v49; // x7
+  __int64 v9; // x1
+  System_String_array **v10; // x2
+  System_String_array **v11; // x3
+  System_Boolean_array **v12; // x4
+  System_Int32_array **v13; // x5
+  System_Int32_array *v14; // x6
+  System_Int32_array *v15; // x7
+  System_String_array **v16; // x2
+  System_String_array **v17; // x3
+  System_Boolean_array **v18; // x4
+  System_Int32_array **v19; // x5
+  System_Int32_array *v20; // x6
+  System_Int32_array *v21; // x7
+  System_Collections_Generic_List_int__o *v22; // x20
+  System_String_array **v23; // x2
+  System_String_array **v24; // x3
+  System_Boolean_array **v25; // x4
+  System_Int32_array **v26; // x5
+  System_Int32_array *v27; // x6
+  System_Int32_array *v28; // x7
   struct TitleInfoControl_o **p_titleInfo; // x20
   UnityEngine_Object_o *titleInfo; // x21
   struct UnityEngine_GameObject_o *titlePrefab; // x21
   struct TitleInfoControl_o *Component_srcLineSprite; // x0
-  System_String_array **v54; // x2
-  System_String_array **v55; // x3
-  System_Boolean_array **v56; // x4
-  System_Int32_array **v57; // x5
-  System_Int32_array *v58; // x6
-  System_Int32_array *v59; // x7
-  TitleInfoControl_o *v60; // x21
-  TitleInfoControl_o *v61; // x20
-  __int64 v62; // x1
-  __int64 v63; // x2
-  System_Action_o *v64; // x21
+  System_String_array **v33; // x2
+  System_String_array **v34; // x3
+  System_Boolean_array **v35; // x4
+  System_Int32_array **v36; // x5
+  System_Int32_array *v37; // x6
+  System_Int32_array *v38; // x7
+  TitleInfoControl_o *v39; // x21
+  TitleInfoControl_o *v40; // x20
+  System_Action_o *v41; // x21
   struct MstMissionEntity_array *Entitys_WarMaster__WarEntity; // x0
-  System_String_array **v66; // x2
-  System_String_array **v67; // x3
-  System_Boolean_array **v68; // x4
-  System_Int32_array **v69; // x5
-  System_Int32_array *v70; // x6
-  System_Int32_array *v71; // x7
-  const MethodInfo *v72; // x1
+  System_String_array **v43; // x2
+  System_String_array **v44; // x3
+  System_Boolean_array **v45; // x4
+  System_Int32_array **v46; // x5
+  System_Int32_array *v47; // x6
+  System_Int32_array *v48; // x7
+  const MethodInfo *v49; // x1
   struct System_Collections_Generic_List_EventMissionEntity__o *VaildCompleteMissionData; // x0
   struct System_Collections_Generic_List_EventMissionEntity__o **p_completeMissionList; // x20
-  System_String_array **v75; // x2
-  System_String_array **v76; // x3
-  System_Boolean_array **v77; // x4
-  System_Int32_array **v78; // x5
-  System_Int32_array *v79; // x6
-  System_Int32_array *v80; // x7
+  System_String_array **v52; // x2
+  System_String_array **v53; // x3
+  System_Boolean_array **v54; // x4
+  System_Int32_array **v55; // x5
+  System_Int32_array *v56; // x6
+  System_Int32_array *v57; // x7
   struct System_Collections_Generic_List_EventMissionEntity__o *completeMissionList; // x0
-  struct System_Collections_Generic_List_EventMissionEntity__o *v82; // x22
-  EventMissionEntity_o *v83; // x8
+  struct System_Collections_Generic_List_EventMissionEntity__o *v59; // x22
+  EventMissionEntity_o *v60; // x8
   int32_t name; // w2
   System_String_o *age; // x20
-  __int64 v86; // x1
-  __int64 v87; // x2
-  System_Action_o *v88; // x20
-  WarEntity_o *v89; // [xsp+0h] [xbp-30h] BYREF
+  System_Action_o *v63; // x20
+  WarEntity_o *v64; // [xsp+0h] [xbp-30h] BYREF
   WarEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4214E4E & 1) == 0 )
+  if ( (byte_42B082E & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, callback);
-    sub_B0D8A4(&AtlasManager_TypeInfo, v8);
-    sub_B0D8A4(&Method_CompleteMissionComponent_LoadNotificationEnd__, v9);
-    sub_B0D8A4(&Method_CompleteMissionComponent_OnClickBack__, v10);
-    sub_B0D8A4(&Method_DataManager_GetMaster_BgmMaster___, v11);
-    sub_B0D8A4(&Method_DataManager_GetMaster_CompleteMissionMaster___, v12);
-    sub_B0D8A4(&Method_DataManager_getEntitys_MstMissionMaster__MstMissionEntity___, v13);
-    sub_B0D8A4(&DataManager_TypeInfo, v14);
-    sub_B0D8A4(&Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int__TryGetEntity__, v15);
-    sub_B0D8A4(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__, v16);
-    sub_B0D8A4(&Method_System_Linq_Enumerable_Any_EventMissionEntity___, v17);
-    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_TitleInfoControl___, v18);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int___ctor__, v19);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventMissionEntity__get_Item__, v20);
-    sub_B0D8A4(&System_Collections_Generic_List_int__TypeInfo, v21);
-    sub_B0D8A4(&MyRoomControl_TypeInfo, v22);
-    sub_B0D8A4(&Method_UnityEngine_Object_Instantiate_GameObject___, v23);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v24);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v25);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v26);
-    sub_B0D8A4(&SoundManager_TypeInfo, v27);
-    byte_4214E4E = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&AtlasManager_TypeInfo);
+    sub_B52984(&Method_CompleteMissionComponent_LoadNotificationEnd__);
+    sub_B52984(&Method_CompleteMissionComponent_OnClickBack__);
+    sub_B52984(&Method_DataManager_GetMaster_BgmMaster___);
+    sub_B52984(&Method_DataManager_GetMaster_CompleteMissionMaster___);
+    sub_B52984(&Method_DataManager_getEntitys_MstMissionMaster__MstMissionEntity___);
+    sub_B52984(&DataManager_TypeInfo);
+    sub_B52984(&Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int__TryGetEntity__);
+    sub_B52984(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+    sub_B52984(&Method_System_Linq_Enumerable_Any_EventMissionEntity___);
+    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_TitleInfoControl___);
+    sub_B52984(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_B52984(&Method_System_Collections_Generic_List_EventMissionEntity__get_Item__);
+    sub_B52984(&System_Collections_Generic_List_int__TypeInfo);
+    sub_B52984(&MyRoomControl_TypeInfo);
+    sub_B52984(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B52984(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42B082E = 1;
   }
-  v89 = 0LL;
+  v64 = 0LL;
   entity = 0LL;
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_52;
   CommonUI__SetLoadMode(Instance, 1, 0LL);
   this->fields.callbackFunc = callback;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.callbackFunc,
     (System_Int32_array **)callback,
-    v29,
-    v30,
-    v31,
-    v32,
-    v33,
-    v34);
+    v10,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15);
   this->fields.reDispAction = redisp_act;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.reDispAction,
     (System_Int32_array **)redisp_act,
-    v35,
-    v36,
-    v37,
-    v38,
-    v39,
-    v40);
-  v43 = (System_Collections_Generic_List_int__o *)sub_B0D974(System_Collections_Generic_List_int__TypeInfo, v41, v42);
+    v16,
+    v17,
+    v18,
+    v19,
+    v20,
+    v21);
+  v22 = (System_Collections_Generic_List_int__o *)sub_B52A54(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v43,
-    (const MethodInfo_2FAF1A4 *)Method_System_Collections_Generic_List_int___ctor__);
-  this->fields.currentEventIdList = v43;
-  sub_B0D840(
+    v22,
+    (const MethodInfo_3056254 *)Method_System_Collections_Generic_List_int___ctor__);
+  this->fields.currentEventIdList = v22;
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.currentEventIdList,
-    (System_Int32_array **)v43,
-    v44,
-    v45,
-    v46,
-    v47,
-    v48,
-    v49);
+    (System_Int32_array **)v22,
+    v23,
+    v24,
+    v25,
+    v26,
+    v27,
+    v28);
   EventRewardSaveData__LoadMstMissionIndex(0LL);
   p_titleInfo = &this->fields.titleInfo;
   titleInfo = (UnityEngine_Object_o *)this->fields.titleInfo;
@@ -370,27 +336,27 @@ void __fastcall CompleteMissionComponent__Open(
     }
     Instance = (CommonUI_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                (UnityEngine_UI_Dropdown_DropdownItem_o *)titlePrefab,
-                               (const MethodInfo_204A984 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                               (const MethodInfo_1F711B8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !Instance )
       goto LABEL_52;
     Component_srcLineSprite = (struct TitleInfoControl_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                              (UnityEngine_GameObject_o *)Instance,
-                                                             (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoControl___);
+                                                             (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoControl___);
     this->fields.titleInfo = Component_srcLineSprite;
-    sub_B0D840(
+    sub_B52920(
       (BattleServantConfConponent_o *)&this->fields.titleInfo,
       (System_Int32_array **)Component_srcLineSprite,
-      v54,
-      v55,
-      v56,
-      v57,
-      v58,
-      v59);
-    v60 = this->fields.titleInfo;
+      v33,
+      v34,
+      v35,
+      v36,
+      v37,
+      v38);
+    v39 = this->fields.titleInfo;
     Instance = (CommonUI_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-    if ( !v60 )
+    if ( !v39 )
       goto LABEL_52;
-    TitleInfoControl__SetParent(v60, (UnityEngine_Transform_o *)Instance, 0LL);
+    TitleInfoControl__SetParent(v39, (UnityEngine_Transform_o *)Instance, 0LL);
     Instance = (CommonUI_o *)*p_titleInfo;
     if ( !*p_titleInfo )
       goto LABEL_52;
@@ -406,75 +372,75 @@ void __fastcall CompleteMissionComponent__Open(
     Instance = (CommonUI_o *)*p_titleInfo;
     if ( !*p_titleInfo )
       goto LABEL_52;
-    TitleInfoControl__changeTitleInfo_17425792((TitleInfoControl_o *)Instance, 1, 82, 0, 0LL);
+    TitleInfoControl__changeTitleInfo_18255196((TitleInfoControl_o *)Instance, 1, 82, 0, 0LL);
     Instance = (CommonUI_o *)*p_titleInfo;
     if ( !*p_titleInfo )
       goto LABEL_52;
     TitleInfoControl__setBackBtnColliderEnable((TitleInfoControl_o *)Instance, 0, 0LL);
-    v61 = this->fields.titleInfo;
-    v64 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v62, v63);
-    System_Action___ctor(v64, (Il2CppObject *)this, Method_CompleteMissionComponent_OnClickBack__, 0LL);
-    if ( !v61 )
+    v40 = this->fields.titleInfo;
+    v41 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+    System_Action___ctor(v41, (Il2CppObject *)this, Method_CompleteMissionComponent_OnClickBack__, 0LL);
+    if ( !v40 )
       goto LABEL_52;
-    TitleInfoControl__SetBackBtnAct(v61, v64, 0LL);
+    TitleInfoControl__SetBackBtnAct(v40, v41, 0LL);
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_52;
   Entitys_WarMaster__WarEntity = (struct MstMissionEntity_array *)DataManager__getEntitys_WarMaster__WarEntity_(
                                                                     (DataManager_o *)Instance,
-                                                                    (const MethodInfo_171483C *)Method_DataManager_getEntitys_MstMissionMaster__MstMissionEntity___);
+                                                                    (const MethodInfo_1A4F418 *)Method_DataManager_getEntitys_MstMissionMaster__MstMissionEntity___);
   this->fields.mstMissionList = Entitys_WarMaster__WarEntity;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.mstMissionList,
     (System_Int32_array **)Entitys_WarMaster__WarEntity,
-    v66,
-    v67,
-    v68,
-    v69,
-    v70,
-    v71);
-  VaildCompleteMissionData = CompleteMissionComponent__getVaildCompleteMissionData(this, v72);
+    v43,
+    v44,
+    v45,
+    v46,
+    v47,
+    v48);
+  VaildCompleteMissionData = CompleteMissionComponent__getVaildCompleteMissionData(this, v49);
   p_completeMissionList = &this->fields.completeMissionList;
   this->fields.completeMissionList = VaildCompleteMissionData;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.completeMissionList,
     (System_Int32_array **)VaildCompleteMissionData,
-    v75,
-    v76,
-    v77,
-    v78,
-    v79,
-    v80);
+    v52,
+    v53,
+    v54,
+    v55,
+    v56,
+    v57);
   completeMissionList = this->fields.completeMissionList;
   if ( completeMissionList
     && System_Linq_Enumerable__Any_WarBoardMovieHistoryManager_HistoryInfo_(
          (System_Collections_Generic_IEnumerable_TSource__o *)completeMissionList,
-         (const MethodInfo_17194B0 *)Method_System_Linq_Enumerable_Any_EventMissionEntity___) )
+         (const MethodInfo_1B5080C *)Method_System_Linq_Enumerable_Any_EventMissionEntity___) )
   {
     if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Instance = (CommonUI_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_CompleteMissionMaster___);
-    v82 = *p_completeMissionList;
+    Instance = (CommonUI_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_CompleteMissionMaster___);
+    v59 = *p_completeMissionList;
     if ( !*p_completeMissionList )
       goto LABEL_52;
-    if ( !v82->fields._size )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-    v83 = v82->fields._items->m_Items[0];
-    if ( !v83 || !Instance )
+    if ( !v59->fields._size )
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+    v60 = v59->fields._items->m_Items[0];
+    if ( !v60 || !Instance )
       goto LABEL_52;
     if ( DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
            (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
            &entity,
-           v83->fields.missionTargetId,
-           (const MethodInfo_2669C30 *)Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int__TryGetEntity__) )
+           v60->fields.missionTargetId,
+           (const MethodInfo_23E2334 *)Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int__TryGetEntity__) )
     {
       if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !DataManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
       }
-      Instance = (CommonUI_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_BgmMaster___);
+      Instance = (CommonUI_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_BgmMaster___);
       if ( !entity )
         goto LABEL_52;
       name = (int32_t)entity->fields.name;
@@ -484,20 +450,20 @@ void __fastcall CompleteMissionComponent__Open(
           goto LABEL_52;
         Instance = (CommonUI_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
                                    (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
-                                   &v89,
+                                   &v64,
                                    name,
-                                   (const MethodInfo_2669C30 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+                                   (const MethodInfo_23E2334 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)Instance & 1) != 0 )
         {
-          if ( v89 )
+          if ( v64 )
           {
-            age = v89->fields.age;
+            age = v64->fields.age;
             if ( age )
               goto LABEL_45;
             goto LABEL_41;
           }
 LABEL_52:
-          sub_B0D97C(Instance);
+          sub_B52A5C(Instance, v9);
         }
       }
     }
@@ -513,11 +479,11 @@ LABEL_45:
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playBgm(age, 0LL);
-  v88 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v86, v87);
-  System_Action___ctor(v88, (Il2CppObject *)this, Method_CompleteMissionComponent_LoadNotificationEnd__, 0LL);
+  v63 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+  System_Action___ctor(v63, (Il2CppObject *)this, Method_CompleteMissionComponent_LoadNotificationEnd__, 0LL);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadNotification(v88, 0LL);
+  AtlasManager__LoadNotification(v63, 0LL);
 }
 
 
@@ -525,26 +491,23 @@ void __fastcall CompleteMissionComponent__RequestMissionReward(
         CompleteMissionComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  NetworkManager_ResultCallbackFunc_o *v7; // x20
+  NetworkManager_ResultCallbackFunc_o *v3; // x20
   EventMissionClearRewardRequest_o *Request_WarBoardWallAttackRequest; // x0
+  __int64 v5; // x1
   struct CompleteMissionListViewManager_o *missionListViewManager; // x8
   struct EventMissionEntity_o *missionToRecieve; // x8
 
-  if ( (byte_4214E53 & 1) == 0 )
+  if ( (byte_42B0833 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_CompleteMissionComponent_missionRewardCallback__, method);
-    sub_B0D8A4(&Method_NetworkManager_getRequest_EventMissionClearRewardRequest___, v4);
-    sub_B0D8A4(&NetworkManager_TypeInfo, v5);
-    sub_B0D8A4(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
-    byte_4214E53 = 1;
+    sub_B52984(&Method_CompleteMissionComponent_missionRewardCallback__);
+    sub_B52984(&Method_NetworkManager_getRequest_EventMissionClearRewardRequest___);
+    sub_B52984(&NetworkManager_TypeInfo);
+    sub_B52984(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_42B0833 = 1;
   }
-  v7 = (NetworkManager_ResultCallbackFunc_o *)sub_B0D974(NetworkManager_ResultCallbackFunc_TypeInfo, method, v2);
+  v3 = (NetworkManager_ResultCallbackFunc_o *)sub_B52A54(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
-    v7,
+    v3,
     (Il2CppObject *)this,
     Method_CompleteMissionComponent_missionRewardCallback__,
     0LL);
@@ -554,14 +517,14 @@ void __fastcall CompleteMissionComponent__RequestMissionReward(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   Request_WarBoardWallAttackRequest = (EventMissionClearRewardRequest_o *)NetworkManager__getRequest_WarBoardWallAttackRequest_(
-                                                                            v7,
-                                                                            (const MethodInfo_2049D98 *)Method_NetworkManager_getRequest_EventMissionClearRewardRequest___);
+                                                                            v3,
+                                                                            (const MethodInfo_1F705CC *)Method_NetworkManager_getRequest_EventMissionClearRewardRequest___);
   missionListViewManager = this->fields.missionListViewManager;
   if ( !missionListViewManager
     || (missionToRecieve = missionListViewManager->fields.missionToRecieve) == 0LL
     || !Request_WarBoardWallAttackRequest )
   {
-    sub_B0D97C(Request_WarBoardWallAttackRequest);
+    sub_B52A5C(Request_WarBoardWallAttackRequest, v5);
   }
   EventMissionClearRewardRequest__beginRequest(Request_WarBoardWallAttackRequest, missionToRecieve->fields.id, 0LL);
 }
@@ -573,7 +536,7 @@ void __fastcall CompleteMissionComponent__SetAfterAction(CompleteMissionComponen
 
   missionListViewManager = this->fields.missionListViewManager;
   if ( !missionListViewManager )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, method);
   CompleteMissionListViewManager__setAfterAction(missionListViewManager, method);
 }
 
@@ -587,7 +550,7 @@ void __fastcall CompleteMissionComponent__SetBtnEnable(
 
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, isEnable);
   TitleInfoControl__setBackBtnColliderEnable(titleInfo, isEnable, 0LL);
 }
 
@@ -604,7 +567,7 @@ void __fastcall CompleteMissionComponent__SetMissionDisp(CompleteMissionComponen
                                                               missionListViewManager,
                                                               0LL)) == 0LL )
   {
-    sub_B0D97C(missionListViewManager);
+    sub_B52A5C(missionListViewManager, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)missionListViewManager, 1, 0LL);
   CompleteMissionComponent__SetUpMissionListView(this, v4);
@@ -616,19 +579,18 @@ void __fastcall CompleteMissionComponent__SetUpMissionListView(
         CompleteMissionComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   System_Collections_Generic_List_int__o *currentEventIdList; // x0
   CompleteMissionListViewManager_o *missionListViewManager; // x20
   System_Collections_Generic_List_EventMissionEntity__o *completeMissionList; // x21
-  System_Int32_array *v7; // x2
-  const MethodInfo *v8; // x5
-  MissionListViewManager_o *v9; // x19
+  System_Int32_array *v6; // x2
+  const MethodInfo *v7; // x5
+  MissionListViewManager_o *v8; // x19
 
-  if ( (byte_4214E52 & 1) == 0 )
+  if ( (byte_42B0832 & 1) == 0 )
   {
-    sub_B0D8A4(&CompleteMissionComponent_TypeInfo, method);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__ToArray__, v3);
-    byte_4214E52 = 1;
+    sub_B52984(&CompleteMissionComponent_TypeInfo);
+    sub_B52984(&Method_System_Collections_Generic_List_int__ToArray__);
+    byte_42B0832 = 1;
   }
   currentEventIdList = this->fields.currentEventIdList;
   if ( !currentEventIdList )
@@ -637,28 +599,28 @@ void __fastcall CompleteMissionComponent__SetUpMissionListView(
   completeMissionList = this->fields.completeMissionList;
   currentEventIdList = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_int___ToArray(
                                                                    currentEventIdList,
-                                                                   (const MethodInfo_2FB200C *)Method_System_Collections_Generic_List_int__ToArray__);
+                                                                   (const MethodInfo_30590BC *)Method_System_Collections_Generic_List_int__ToArray__);
   if ( !missionListViewManager )
     goto LABEL_10;
   CompleteMissionListViewManager__CreateList(
     missionListViewManager,
     completeMissionList,
-    v7,
+    v6,
     0,
     this->fields.reDispAction,
-    v8);
-  v9 = (MissionListViewManager_o *)this->fields.missionListViewManager;
+    v7);
+  v8 = (MissionListViewManager_o *)this->fields.missionListViewManager;
   currentEventIdList = (System_Collections_Generic_List_int__o *)CompleteMissionComponent_TypeInfo;
   if ( (BYTE3(CompleteMissionComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CompleteMissionComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CompleteMissionComponent_TypeInfo);
   }
-  if ( !v9 )
+  if ( !v8 )
 LABEL_10:
-    sub_B0D97C(currentEventIdList);
-  MissionListViewManager__SetMode_24483840(
-    v9,
+    sub_B52A5C(currentEventIdList, method);
+  MissionListViewManager__SetMode_24544620(
+    v8,
     1,
     CompleteMissionComponent_TypeInfo->static_fields->SLIDE_IN_TIME,
     0LL,
@@ -674,7 +636,7 @@ void __fastcall CompleteMissionComponent__UnAcceptableRewardDlg(
 
   missionListViewManager = this->fields.missionListViewManager;
   if ( !missionListViewManager )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, method);
   CompleteMissionListViewManager__unAcceptableDlg(missionListViewManager, method);
 }
 
@@ -687,7 +649,7 @@ void __fastcall CompleteMissionComponent___AcceptReward_b__33_0(
 
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, method);
   TitleInfoControl__setBackBtnColliderEnable(titleInfo, 1, 0LL);
 }
 
@@ -696,94 +658,82 @@ void __fastcall CompleteMissionComponent___setRecieveModifyItem_b__37_0(
         CompleteMissionComponent_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4214E5B & 1) == 0 )
+  if ( (byte_42B083B & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_5497/*"END_DISP"*/, method);
-    byte_4214E5B = 1;
+    sub_B52984(&StringLiteral_5523/*"END_DISP"*/);
+    byte_42B083B = 1;
   }
   CompleteMissionComponent__setMissionCompleteNum(this, method);
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_B0D97C(0LL);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5497/*"END_DISP"*/, 0LL);
+    sub_B52A5C(0LL, v3);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5523/*"END_DISP"*/, 0LL);
 }
 
 
 void __fastcall CompleteMissionComponent__createPanel(CompleteMissionComponent_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x19
+  __int64 v3; // x19
   DataManager_o *Instance; // x0
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
   System_Collections_Generic_List_EventMissionEntity__o *completeMissionList; // x1
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
   System_Int32_array **AchivePanelNum; // x0
-  System_String_array **v24; // x2
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
-  struct System_Collections_Generic_List_EventMissionEntity__o *v30; // x21
-  EventMissionEntity_o *v31; // x8
+  System_String_array **v13; // x2
+  System_String_array **v14; // x3
+  System_Boolean_array **v15; // x4
+  System_Int32_array **v16; // x5
+  System_Int32_array *v17; // x6
+  System_Int32_array *v18; // x7
+  struct System_Collections_Generic_List_EventMissionEntity__o *v19; // x21
+  EventMissionEntity_o *v20; // x8
   System_Int32_array **Entity; // x0
-  System_String_array **v33; // x2
-  System_String_array **v34; // x3
-  System_Boolean_array **v35; // x4
-  System_Int32_array **v36; // x5
-  System_Int32_array *v37; // x6
-  System_Int32_array *v38; // x7
-  __int64 v39; // x8
-  Il2CppObject *v40; // x0
-  System_String_o *v41; // x20
-  __int64 v42; // x1
-  __int64 v43; // x2
-  AssetLoader_LoadEndDataHandler_o *v44; // x21
-  int v45; // [xsp+Ch] [xbp-14h] BYREF
+  System_String_array **v22; // x2
+  System_String_array **v23; // x3
+  System_Boolean_array **v24; // x4
+  System_Int32_array **v25; // x5
+  System_Int32_array *v26; // x6
+  System_Int32_array *v27; // x7
+  __int64 v28; // x8
+  Il2CppObject *v29; // x0
+  System_String_o *v30; // x20
+  AssetLoader_LoadEndDataHandler_o *v31; // x21
+  int v32; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4214E4F & 1) == 0 )
+  if ( (byte_42B082F & 1) == 0 )
   {
-    sub_B0D8A4(&AssetManager_TypeInfo, method);
-    sub_B0D8A4(&Method_DataManager_GetMasterData_CompleteMissionMaster___, v4);
-    sub_B0D8A4(&Method_DataManager_GetMasterData_EventMissionMaster___, v5);
-    sub_B0D8A4(&Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int__GetEntity__, v6);
-    sub_B0D8A4(&int_TypeInfo, v7);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventMissionEntity__get_Item__, v8);
-    sub_B0D8A4(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_B0D8A4(&Method_CompleteMissionComponent___c__DisplayClass23_0__createPanel_b__0__, v11);
-    sub_B0D8A4(&CompleteMissionComponent___c__DisplayClass23_0_TypeInfo, v12);
-    sub_B0D8A4(&StringLiteral_4218/*"CompleteMission/{0}/asset"*/, v13);
-    byte_4214E4F = 1;
+    sub_B52984(&AssetManager_TypeInfo);
+    sub_B52984(&Method_DataManager_GetMasterData_CompleteMissionMaster___);
+    sub_B52984(&Method_DataManager_GetMasterData_EventMissionMaster___);
+    sub_B52984(&Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int__GetEntity__);
+    sub_B52984(&int_TypeInfo);
+    sub_B52984(&Method_System_Collections_Generic_List_EventMissionEntity__get_Item__);
+    sub_B52984(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B52984(&Method_CompleteMissionComponent___c__DisplayClass23_0__createPanel_b__0__);
+    sub_B52984(&CompleteMissionComponent___c__DisplayClass23_0_TypeInfo);
+    sub_B52984(&StringLiteral_4241/*"CompleteMission/{0}/asset"*/);
+    byte_42B082F = 1;
   }
-  v14 = sub_B0D974(CompleteMissionComponent___c__DisplayClass23_0_TypeInfo, method, v2);
-  CompleteMissionComponent___c__DisplayClass23_0___ctor((CompleteMissionComponent___c__DisplayClass23_0_o *)v14, 0LL);
-  if ( !v14 )
+  v3 = sub_B52A54(CompleteMissionComponent___c__DisplayClass23_0_TypeInfo);
+  CompleteMissionComponent___c__DisplayClass23_0___ctor((CompleteMissionComponent___c__DisplayClass23_0_o *)v3, 0LL);
+  if ( !v3 )
     goto LABEL_19;
-  *(_QWORD *)(v14 + 16) = this;
-  sub_B0D840((BattleServantConfConponent_o *)(v14 + 16), (System_Int32_array **)this, v16, v17, v18, v19, v20, v21);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  *(_QWORD *)(v3 + 16) = this;
+  sub_B52920((BattleServantConfConponent_o *)(v3 + 16), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_19;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventMissionMaster___);
+                                (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_EventMissionMaster___);
   completeMissionList = this->fields.completeMissionList;
   if ( !completeMissionList )
     return;
@@ -793,47 +743,47 @@ void __fastcall CompleteMissionComponent__createPanel(CompleteMissionComponent_o
                                             (EventMissionMaster_o *)Instance,
                                             completeMissionList,
                                             0LL);
-  *(_QWORD *)(v14 + 24) = AchivePanelNum;
-  sub_B0D840((BattleServantConfConponent_o *)(v14 + 24), AchivePanelNum, v24, v25, v26, v27, v28, v29);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  *(_QWORD *)(v3 + 24) = AchivePanelNum;
+  sub_B52920((BattleServantConfConponent_o *)(v3 + 24), AchivePanelNum, v13, v14, v15, v16, v17, v18);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_19;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_CompleteMissionMaster___);
-  v30 = this->fields.completeMissionList;
-  if ( !v30 )
+                                (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_CompleteMissionMaster___);
+  v19 = this->fields.completeMissionList;
+  if ( !v19 )
     goto LABEL_19;
-  if ( !v30->fields._size )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-  v31 = v30->fields._items->m_Items[0];
-  if ( !v31
+  if ( !v19->fields._size )
+    System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+  v20 = v19->fields._items->m_Items[0];
+  if ( !v20
     || !Instance
     || (Entity = (System_Int32_array **)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                           (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
-                                          v31->fields.missionTargetId,
-                                          (const MethodInfo_2669BD4 *)Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int__GetEntity__),
-        *(_QWORD *)(v14 + 32) = Entity,
-        sub_B0D840((BattleServantConfConponent_o *)(v14 + 32), Entity, v33, v34, v35, v36, v37, v38),
-        v39 = *(_QWORD *)(v14 + 32),
-        *(_DWORD *)(v14 + 40) = 0,
-        !v39) )
+                                          v20->fields.missionTargetId,
+                                          (const MethodInfo_23E22D8 *)Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int__GetEntity__),
+        *(_QWORD *)(v3 + 32) = Entity,
+        sub_B52920((BattleServantConfConponent_o *)(v3 + 32), Entity, v22, v23, v24, v25, v26, v27),
+        v28 = *(_QWORD *)(v3 + 32),
+        *(_DWORD *)(v3 + 40) = 0,
+        !v28) )
   {
 LABEL_19:
-    sub_B0D97C(Instance);
+    sub_B52A5C(Instance, completeMissionList);
   }
-  v45 = *(_DWORD *)(v39 + 20);
-  v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v45);
-  v41 = System_String__Format((System_String_o *)StringLiteral_4218/*"CompleteMission/{0}/asset"*/, v40, 0LL);
-  v44 = (AssetLoader_LoadEndDataHandler_o *)sub_B0D974(AssetLoader_LoadEndDataHandler_TypeInfo, v42, v43);
+  v32 = *(_DWORD *)(v28 + 20);
+  v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v32);
+  v30 = System_String__Format((System_String_o *)StringLiteral_4241/*"CompleteMission/{0}/asset"*/, v29, 0LL);
+  v31 = (AssetLoader_LoadEndDataHandler_o *)sub_B52A54(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
-    v44,
-    (Il2CppObject *)v14,
+    v31,
+    (Il2CppObject *)v3,
     Method_CompleteMissionComponent___c__DisplayClass23_0__createPanel_b__0__,
     0LL);
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(v41, v44, 1, 0LL);
+  AssetManager__loadAssetStorage(v30, v31, 1, 0LL);
 }
 
 
@@ -841,46 +791,36 @@ System_Collections_Generic_List_EventMissionEntity__o *__fastcall CompleteMissio
         CompleteMissionComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   System_Collections_Generic_List_int__o *currentEventIdList; // x0
   EventMissionMaster_o *MasterData_WarQuestSelectionMaster; // x21
-  __int64 v13; // x1
-  __int64 v14; // x2
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v15; // x20
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v5; // x20
   struct MstMissionEntity_array *mstMissionList; // x23
   int max_length; // w8
-  unsigned int v18; // w24
-  Il2CppClass **v19; // x8
-  Il2CppClass *v20; // x22
+  unsigned int v8; // w24
+  Il2CppClass **v9; // x8
+  Il2CppClass *v10; // x22
   int32_t size; // w8
   struct EventMissionProgressRequest_Argument_ProgressData_array *items; // x8
-  EventMissionProgressRequest_Argument_ProgressData_o *v23; // x10
-  int v24; // w9
+  EventMissionProgressRequest_Argument_ProgressData_o *v13; // x10
+  int v14; // w9
   int32_t missionTargetId; // w22
-  __int64 v26; // x21
-  __int64 v27; // x9
-  __int64 v28; // x9
-  __int64 v30; // x0
+  __int64 v16; // x21
+  __int64 v17; // x9
+  __int64 v18; // x9
+  __int64 v20; // x0
 
-  if ( (byte_4214E50 & 1) == 0 )
+  if ( (byte_42B0830 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMasterData_EventMissionMaster___, method);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventMissionEntity__AddRange__, v3);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__Add__, v4);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__Clear__, v5);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventMissionEntity___ctor__, v6);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventMissionEntity__get_Count__, v7);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventMissionEntity__get_Item__, v8);
-    sub_B0D8A4(&System_Collections_Generic_List_EventMissionEntity__TypeInfo, v9);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    byte_4214E50 = 1;
+    sub_B52984(&Method_DataManager_GetMasterData_EventMissionMaster___);
+    sub_B52984(&Method_System_Collections_Generic_List_EventMissionEntity__AddRange__);
+    sub_B52984(&Method_System_Collections_Generic_List_int__Add__);
+    sub_B52984(&Method_System_Collections_Generic_List_int__Clear__);
+    sub_B52984(&Method_System_Collections_Generic_List_EventMissionEntity___ctor__);
+    sub_B52984(&Method_System_Collections_Generic_List_EventMissionEntity__get_Count__);
+    sub_B52984(&Method_System_Collections_Generic_List_EventMissionEntity__get_Item__);
+    sub_B52984(&System_Collections_Generic_List_EventMissionEntity__TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_42B0830 = 1;
   }
   currentEventIdList = this->fields.currentEventIdList;
   this->fields.totalMissionNum = 0;
@@ -888,40 +828,37 @@ System_Collections_Generic_List_EventMissionEntity__o *__fastcall CompleteMissio
     goto LABEL_37;
   System_Collections_Generic_List_int___Clear(
     currentEventIdList,
-    (const MethodInfo_2FB030C *)Method_System_Collections_Generic_List_int__Clear__);
-  currentEventIdList = (System_Collections_Generic_List_int__o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_30573BC *)Method_System_Collections_Generic_List_int__Clear__);
+  currentEventIdList = (System_Collections_Generic_List_int__o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !currentEventIdList )
     goto LABEL_37;
   MasterData_WarQuestSelectionMaster = (EventMissionMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                  (DataManager_o *)currentEventIdList,
-                                                                 (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventMissionMaster___);
-  v15 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
-                                                                                                  System_Collections_Generic_List_EventMissionEntity__TypeInfo,
-                                                                                                  v13,
-                                                                                                  v14);
+                                                                 (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_EventMissionMaster___);
+  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_EventMissionEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v15,
-    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_EventMissionEntity___ctor__);
+    v5,
+    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_EventMissionEntity___ctor__);
   mstMissionList = this->fields.mstMissionList;
   if ( !mstMissionList )
     goto LABEL_37;
   max_length = mstMissionList->max_length;
   if ( max_length >= 1 )
   {
-    v18 = 0;
+    v8 = 0;
     while ( 1 )
     {
-      if ( v18 >= max_length )
+      if ( v8 >= max_length )
       {
-        v30 = sub_B0D9A8(currentEventIdList);
-        sub_B0D948(v30, 0LL);
+        v20 = sub_B52A88(currentEventIdList);
+        sub_B52A28(v20, 0LL);
       }
-      v19 = &mstMissionList->obj.klass + (int)v18;
-      v20 = v19[4];
-      if ( !v20 )
+      v9 = &mstMissionList->obj.klass + (int)v8;
+      v10 = v9[4];
+      if ( !v10 )
         break;
       currentEventIdList = (System_Collections_Generic_List_int__o *)MstMissionEntity__isActiveNow(
-                                                                       (MstMissionEntity_o *)v19[4],
+                                                                       (MstMissionEntity_o *)v9[4],
                                                                        0LL);
       if ( ((unsigned __int8)currentEventIdList & 1) != 0 )
       {
@@ -929,38 +866,39 @@ System_Collections_Generic_List_EventMissionEntity__o *__fastcall CompleteMissio
           break;
         currentEventIdList = (System_Collections_Generic_List_int__o *)EventMissionMaster__getCompleteMissionList(
                                                                          MasterData_WarQuestSelectionMaster,
-                                                                         HIDWORD(v20->_1.name),
+                                                                         HIDWORD(v10->_1.name),
                                                                          0LL);
         if ( !currentEventIdList )
           break;
+        method = (const MethodInfo *)currentEventIdList;
         if ( *(_QWORD *)&currentEventIdList->fields._size )
         {
-          if ( !v15 )
+          if ( !v5 )
             break;
           System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule___AddRange(
-            (System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule__o *)v15,
+            (System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule__o *)v5,
             (System_Collections_Generic_IEnumerable_T__o *)currentEventIdList,
-            (const MethodInfo_2FC5938 *)Method_System_Collections_Generic_List_EventMissionEntity__AddRange__);
+            (const MethodInfo_2FF1854 *)Method_System_Collections_Generic_List_EventMissionEntity__AddRange__);
           currentEventIdList = this->fields.currentEventIdList;
           if ( !currentEventIdList )
             break;
           System_Collections_Generic_List_int___Add(
             currentEventIdList,
-            HIDWORD(v20->_1.name),
-            (const MethodInfo_2FAFF00 *)Method_System_Collections_Generic_List_int__Add__);
+            HIDWORD(v10->_1.name),
+            (const MethodInfo_3056FB0 *)Method_System_Collections_Generic_List_int__Add__);
         }
       }
       max_length = mstMissionList->max_length;
-      if ( (int)++v18 >= max_length )
+      if ( (int)++v8 >= max_length )
         goto LABEL_18;
     }
 LABEL_37:
-    sub_B0D97C(currentEventIdList);
+    sub_B52A5C(currentEventIdList, method);
   }
 LABEL_18:
-  if ( v15 )
+  if ( v5 )
   {
-    size = v15->fields._size;
+    size = v5->fields._size;
     if ( size < 1 )
     {
       return 0LL;
@@ -968,41 +906,41 @@ LABEL_18:
     else
     {
       this->fields.totalMissionNum = size;
-      if ( !v15->fields._size )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-      items = v15->fields._items;
-      v23 = items->m_Items[0];
-      if ( !v23 )
+      if ( !v5->fields._size )
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+      items = v5->fields._items;
+      v13 = items->m_Items[0];
+      if ( !v13 )
         goto LABEL_37;
-      v24 = v15->fields._size;
-      missionTargetId = v23->fields.missionTargetId;
-      if ( v24 >= 1 )
+      v14 = v5->fields._size;
+      missionTargetId = v13->fields.missionTargetId;
+      if ( v14 >= 1 )
       {
-        v26 = 4LL;
+        v16 = 4LL;
         do
         {
-          if ( v24 <= (unsigned int)(v26 - 4) )
-            System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-          v27 = *((_QWORD *)&items->obj.klass + v26);
-          if ( !v27 )
+          if ( v14 <= (unsigned int)(v16 - 4) )
+            System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+          v17 = *((_QWORD *)&items->obj.klass + v16);
+          if ( !v17 )
             goto LABEL_37;
-          if ( missionTargetId > *(_DWORD *)(v27 + 16) )
+          if ( missionTargetId > *(_DWORD *)(v17 + 16) )
           {
-            if ( v15->fields._size <= (unsigned int)(v26 - 4) )
-              System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-            v28 = *((_QWORD *)&items->obj.klass + v26);
-            if ( !v28 )
+            if ( v5->fields._size <= (unsigned int)(v16 - 4) )
+              System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+            v18 = *((_QWORD *)&items->obj.klass + v16);
+            if ( !v18 )
               goto LABEL_37;
-            missionTargetId = *(_DWORD *)(v28 + 16);
+            missionTargetId = *(_DWORD *)(v18 + 16);
           }
-          v24 = v15->fields._size;
+          v14 = v5->fields._size;
         }
-        while ( (int)++v26 - 4 < v24 );
+        while ( (int)++v16 - 4 < v14 );
       }
       this->fields.currentMissionId = missionTargetId;
     }
   }
-  return (System_Collections_Generic_List_EventMissionEntity__o *)v15;
+  return (System_Collections_Generic_List_EventMissionEntity__o *)v5;
 }
 
 
@@ -1020,50 +958,44 @@ void __fastcall CompleteMissionComponent__missionRewardCallback(
         const MethodInfo *method)
 {
   CompleteMissionComponent_o *v4; // x19
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 *v11; // x8
-  Il2CppObject *v12; // x20
-  const MethodInfo *v13; // x3
+  __int64 *v5; // x8
+  Il2CppObject *v6; // x20
+  const MethodInfo *v7; // x3
   struct PlayMakerFSM_o *myFsm; // x8
-  __int64 v15; // x0
+  __int64 v9; // x0
 
   v4 = this;
-  if ( (byte_4214E54 & 1) == 0 )
+  if ( (byte_42B0834 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_JsonManager_DeserializeArray_CompleteMissionComponent_resData___, result);
-    sub_B0D8A4(&JsonManager_TypeInfo, v5);
-    sub_B0D8A4(&StringLiteral_11106/*"REQUEST_OK"*/, v6);
-    sub_B0D8A4(&StringLiteral_11104/*"REQUEST_NG"*/, v7);
-    sub_B0D8A4(&StringLiteral_21137/*"ng"*/, v8);
-    sub_B0D8A4(&StringLiteral_15681/*"["*/, v9);
-    this = (CompleteMissionComponent_o *)sub_B0D8A4(&StringLiteral_15917/*"]"*/, v10);
-    byte_4214E54 = 1;
+    sub_B52984(&Method_JsonManager_DeserializeArray_CompleteMissionComponent_resData___);
+    sub_B52984(&JsonManager_TypeInfo);
+    sub_B52984(&StringLiteral_11166/*"REQUEST_OK"*/);
+    sub_B52984(&StringLiteral_11164/*"REQUEST_NG"*/);
+    sub_B52984(&StringLiteral_21239/*"ng"*/);
+    sub_B52984(&StringLiteral_15739/*"["*/);
+    this = (CompleteMissionComponent_o *)sub_B52984(&StringLiteral_15976/*"]"*/);
+    byte_42B0834 = 1;
   }
   if ( !result )
     goto LABEL_17;
-  if ( !System_String__Equals_43837244(result, (System_String_o *)StringLiteral_21137/*"ng"*/, 0LL) )
+  if ( !System_String__Equals_44555656(result, (System_String_o *)StringLiteral_21239/*"ng"*/, 0LL) )
   {
-    v12 = (Il2CppObject *)System_String__Concat_43852188(
-                            (System_String_o *)StringLiteral_15681/*"["*/,
-                            result,
-                            (System_String_o *)StringLiteral_15917/*"]"*/,
-                            0LL);
+    v6 = (Il2CppObject *)System_String__Concat_44570600(
+                           (System_String_o *)StringLiteral_15739/*"["*/,
+                           result,
+                           (System_String_o *)StringLiteral_15976/*"]"*/,
+                           0LL);
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     this = (CompleteMissionComponent_o *)JsonManager__DeserializeArray_UserPresentBoxWindow_resData_(
-                                           v12,
-                                           (const MethodInfo_1B682B0 *)Method_JsonManager_DeserializeArray_CompleteMissionComponent_resData___);
+                                           v6,
+                                           (const MethodInfo_1F690B0 *)Method_JsonManager_DeserializeArray_CompleteMissionComponent_resData___);
     if ( this )
     {
       if ( !LODWORD(this->fields.completeMissionPanel) )
       {
-        v15 = sub_B0D9A8(this);
-        sub_B0D948(v15, 0LL);
+        v9 = sub_B52A88(this);
+        sub_B52A28(v9, 0LL);
       }
       myFsm = this->fields.myFsm;
       if ( myFsm )
@@ -1075,25 +1007,25 @@ void __fastcall CompleteMissionComponent__missionRewardCallback(
             (CompleteMissionListViewManager_o *)this,
             *(GetSvts_array **)&myFsm->fields.m_CachedPtr,
             (GetCommandCodes_array *)myFsm->fields.fsm,
-            v13);
+            v7);
           this = (CompleteMissionComponent_o *)v4->fields.myFsm;
           if ( this )
           {
-            v11 = &StringLiteral_11106/*"REQUEST_OK"*/;
+            v5 = &StringLiteral_11166/*"REQUEST_OK"*/;
             goto LABEL_16;
           }
         }
       }
     }
 LABEL_17:
-    sub_B0D97C(this);
+    sub_B52A5C(this, result);
   }
   this = (CompleteMissionComponent_o *)v4->fields.myFsm;
   if ( !this )
     goto LABEL_17;
-  v11 = &StringLiteral_11104/*"REQUEST_NG"*/;
+  v5 = &StringLiteral_11164/*"REQUEST_NG"*/;
 LABEL_16:
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)*v11, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)*v5, 0LL);
 }
 
 
@@ -1101,40 +1033,36 @@ void __fastcall CompleteMissionComponent__setMissionCompleteNum(
         CompleteMissionComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   DataManager_o *Instance; // x0
+  __int64 v4; // x1
   struct System_Collections_Generic_List_int__o *currentEventIdList; // x24
   signed __int64 size; // x22
   int compMissionNum; // w21
-  UserEventMissionMaster_o *v12; // x20
-  unsigned __int64 v13; // x23
+  UserEventMissionMaster_o *v8; // x20
+  unsigned __int64 v9; // x23
   UILabel_o *eventMissionTxt; // x20
-  Il2CppObject *v15; // x21
-  Il2CppObject *v16; // x0
+  Il2CppObject *v11; // x21
+  Il2CppObject *v12; // x0
   int32_t totalMissionNum; // [xsp+8h] [xbp-38h] BYREF
-  int v18; // [xsp+Ch] [xbp-34h] BYREF
+  int v14; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4214E51 & 1) == 0 )
+  if ( (byte_42B0831 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMasterData_UserEventMissionMaster___, method);
-    sub_B0D8A4(&int_TypeInfo, v3);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__get_Count__, v4);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__get_Item__, v5);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_B0D8A4(&StringLiteral_23688/*"{0}/{1}"*/, v7);
-    byte_4214E51 = 1;
+    sub_B52984(&Method_DataManager_GetMasterData_UserEventMissionMaster___);
+    sub_B52984(&int_TypeInfo);
+    sub_B52984(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_B52984(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B52984(&StringLiteral_23804/*"{0}/{1}"*/);
+    byte_42B0831 = 1;
   }
   this->fields.compMissionNum = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_UserEventMissionMaster___);
+                                (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_UserEventMissionMaster___);
   currentEventIdList = this->fields.currentEventIdList;
   if ( !currentEventIdList )
     goto LABEL_16;
@@ -1142,36 +1070,36 @@ void __fastcall CompleteMissionComponent__setMissionCompleteNum(
   if ( (int)size > 0 )
   {
     compMissionNum = this->fields.compMissionNum;
-    v12 = (UserEventMissionMaster_o *)Instance;
-    v13 = 0LL;
+    v8 = (UserEventMissionMaster_o *)Instance;
+    v9 = 0LL;
     do
     {
-      if ( v13 >= (unsigned int)currentEventIdList->fields._size )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-      if ( !v12 )
+      if ( v9 >= (unsigned int)currentEventIdList->fields._size )
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+      if ( !v8 )
         break;
       Instance = (DataManager_o *)UserEventMissionMaster__getAchiveMissionNum(
-                                    v12,
-                                    currentEventIdList->fields._items->m_Items[++v13],
+                                    v8,
+                                    currentEventIdList->fields._items->m_Items[++v9],
                                     0LL);
       compMissionNum += (int)Instance;
       this->fields.compMissionNum = compMissionNum;
-      if ( (__int64)v13 >= size )
+      if ( (__int64)v9 >= size )
         goto LABEL_14;
       currentEventIdList = this->fields.currentEventIdList;
     }
     while ( currentEventIdList );
 LABEL_16:
-    sub_B0D97C(Instance);
+    sub_B52A5C(Instance, v4);
   }
   compMissionNum = this->fields.compMissionNum;
 LABEL_14:
   eventMissionTxt = this->fields.eventMissionTxt;
-  v18 = compMissionNum;
-  v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v18);
+  v14 = compMissionNum;
+  v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14);
   totalMissionNum = this->fields.totalMissionNum;
-  v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &totalMissionNum);
-  Instance = (DataManager_o *)System_String__Format_43845440((System_String_o *)StringLiteral_23688/*"{0}/{1}"*/, v15, v16, 0LL);
+  v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &totalMissionNum);
+  Instance = (DataManager_o *)System_String__Format_44563852((System_String_o *)StringLiteral_23804/*"{0}/{1}"*/, v11, v12, 0LL);
   if ( !eventMissionTxt )
     goto LABEL_16;
   UILabel__set_text(eventMissionTxt, (System_String_o *)Instance, 0LL);
@@ -1182,34 +1110,31 @@ void __fastcall CompleteMissionComponent__setRecieveModifyItem(
         CompleteMissionComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   CompleteMissionListViewManager_o *missionListViewManager; // x0
-  MissionListViewManager_o *v5; // x20
-  __int64 v6; // x1
-  __int64 v7; // x2
-  System_Action_o *v8; // x21
+  MissionListViewManager_o *v4; // x20
+  System_Action_o *v5; // x21
 
-  if ( (byte_4214E58 & 1) == 0 )
+  if ( (byte_42B0838 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, method);
-    sub_B0D8A4(&Method_CompleteMissionComponent__setRecieveModifyItem_b__37_0__, v3);
-    byte_4214E58 = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&Method_CompleteMissionComponent__setRecieveModifyItem_b__37_0__);
+    byte_42B0838 = 1;
   }
   missionListViewManager = this->fields.missionListViewManager;
   if ( !missionListViewManager
     || (CompleteMissionListViewManager__ModifyItem(missionListViewManager, method),
-        v5 = (MissionListViewManager_o *)this->fields.missionListViewManager,
-        v8 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v6, v7),
+        v4 = (MissionListViewManager_o *)this->fields.missionListViewManager,
+        v5 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo),
         System_Action___ctor(
-          v8,
+          v5,
           (Il2CppObject *)this,
           Method_CompleteMissionComponent__setRecieveModifyItem_b__37_0__,
           0LL),
-        !v5) )
+        !v4) )
   {
-    sub_B0D97C(missionListViewManager);
+    sub_B52A5C(missionListViewManager, method);
   }
-  MissionListViewManager__SetMode(v5, 3, v8, 0LL);
+  MissionListViewManager__SetMode(v4, 3, v5, 0LL);
 }
 
 
@@ -1232,7 +1157,7 @@ void __fastcall CompleteMissionComponent_ClickDelegate___ctor(
   p_method = (BattleServantConfConponent_o *)&this->fields.method;
   p_method->monitor = *(void **)&method;
   p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B0D840(
+  sub_B52920(
     p_method,
     (System_Int32_array **)object,
     *(System_String_array ***)&method,
@@ -1244,7 +1169,6 @@ void __fastcall CompleteMissionComponent_ClickDelegate___ctor(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_IAsyncResult_o *__fastcall CompleteMissionComponent_ClickDelegate__BeginInvoke(
         CompleteMissionComponent_ClickDelegate_o *this,
         bool isDecide,
@@ -1256,14 +1180,14 @@ System_IAsyncResult_o *__fastcall CompleteMissionComponent_ClickDelegate__BeginI
   char v10[4]; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_4213167 & 1) == 0 )
+  if ( (byte_42AE2AA & 1) == 0 )
   {
-    sub_B0D8A4(&bool_TypeInfo, isDecide);
-    byte_4213167 = 1;
+    sub_B52984(&bool_TypeInfo);
+    byte_42AE2AA = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_B0D848(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_B52928(this, v9, callback, object);
 }
 
 
@@ -1272,7 +1196,7 @@ void __fastcall CompleteMissionComponent_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B0D84C(result, 0LL, method);
+  sub_B5292C(result, 0LL, method);
 }
 
 
@@ -1289,31 +1213,33 @@ void __fastcall CompleteMissionComponent_ClickDelegate__Invoke(
   __int64 v9; // x26
   unsigned int v10; // w23
   __int64 class_0; // x0
-  __int64 v12; // x8
-  unsigned __int64 v13; // x10
-  _DWORD *v14; // x11
-  __int64 v15; // x0
+  __int64 v12; // x3
+  __int64 v13; // x8
+  unsigned __int64 v14; // x10
+  _DWORD *v15; // x11
   __int64 v16; // x0
   __int64 v17; // x0
-  void (__fastcall **v18)(__int64 *, bool, _QWORD); // x0
-  CompleteMissionComponent_ClickDelegate_o *v19; // x8
-  __int64 *v20; // x21
-  __int64 v21; // x22
-  void (__fastcall *v22)(bool, __int64); // x23
-  char v23; // w23
-  char v24; // w0
-  __int64 v25; // x8
-  __int64 v26; // x1
-  __int64 v27; // x2
-  unsigned __int64 v28; // x10
-  _DWORD *v29; // x11
-  CompleteMissionComponent_ClickDelegate_o *v30; // [xsp+8h] [xbp-48h] BYREF
+  __int64 v18; // x0
+  void (__fastcall **v19)(__int64 *, bool, _QWORD); // x0
+  CompleteMissionComponent_ClickDelegate_o *v20; // x8
+  __int64 *v21; // x21
+  __int64 v22; // x22
+  void (__fastcall *v23)(bool, __int64); // x23
+  char v24; // w23
+  char v25; // w0
+  __int64 v26; // x3
+  __int64 v27; // x8
+  __int64 v28; // x1
+  __int64 v29; // x2
+  unsigned __int64 v30; // x10
+  _DWORD *v31; // x11
+  CompleteMissionComponent_ClickDelegate_o *v32; // [xsp+8h] [xbp-48h] BYREF
 
-  v30 = this;
+  v32 = this;
   v4 = *(_QWORD *)&this[1].fields.method_ptr;
   if ( !v4 )
   {
-    v8 = &v30;
+    v8 = &v32;
     v7 = 1LL;
     goto LABEL_5;
   }
@@ -1325,98 +1251,98 @@ LABEL_5:
     v9 = 0LL;
     while ( 1 )
     {
-      v19 = v8[v9];
-      v20 = *(__int64 **)&v19->fields.method;
-      v21 = *(_QWORD *)&v19->fields.extra_arg;
-      v22 = *(void (__fastcall **)(bool, __int64))&v19->fields.method_ptr;
-      if ( *(__int16 *)(v21 + 72) == -1 )
-        sub_B0D960(*(_QWORD *)&v19->fields.extra_arg, isDecide, method, v3);
-      if ( (sub_B0D8D4(v21) & 1) == 0 )
+      v20 = v8[v9];
+      v21 = *(__int64 **)&v20->fields.method;
+      v22 = *(_QWORD *)&v20->fields.extra_arg;
+      v23 = *(void (__fastcall **)(bool, __int64))&v20->fields.method_ptr;
+      if ( *(__int16 *)(v22 + 72) == -1 )
+        sub_B52A40(*(_QWORD *)&v20->fields.extra_arg, isDecide, method, v3);
+      if ( (sub_B529B4(v22) & 1) == 0 )
         break;
-      if ( *(_BYTE *)(v21 + 74) != 1 )
+      if ( *(_BYTE *)(v22 + 74) != 1 )
         goto LABEL_36;
-      v22(isDecide, v21);
+      v23(isDecide, v22);
 LABEL_37:
       if ( ++v9 == v7 )
         return;
     }
-    if ( v20 && *(__int16 *)(v21 + 72) != -1 && (*(_BYTE *)(*v20 + 277) & 1) == 0 && this->fields.m_target )
+    if ( v21 && *(__int16 *)(v22 + 72) != -1 && (*(_BYTE *)(*v21 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v23 = sub_B0D8CC(v21);
-      v24 = sub_B0DCD0(v21);
-      if ( (v23 & 1) != 0 )
+      v24 = sub_B529AC(v22);
+      v25 = sub_B52DB0(v22);
+      if ( (v24 & 1) != 0 )
       {
-        if ( (v24 & 1) != 0 )
+        if ( (v25 & 1) != 0 )
         {
-          v25 = *v20;
-          v26 = *(_QWORD *)(v21 + 24);
-          v27 = *(unsigned __int16 *)(v21 + 72);
-          if ( *(_WORD *)(*v20 + 298) )
+          v27 = *v21;
+          v28 = *(_QWORD *)(v22 + 24);
+          v29 = *(unsigned __int16 *)(v22 + 72);
+          if ( *(_WORD *)(*v21 + 298) )
           {
-            v28 = 0LL;
-            v29 = (_DWORD *)(*(_QWORD *)(v25 + 176) + 8LL);
-            while ( *((_QWORD *)v29 - 1) != v26 )
+            v30 = 0LL;
+            v31 = (_DWORD *)(*(_QWORD *)(v27 + 176) + 8LL);
+            while ( *((_QWORD *)v31 - 1) != v28 )
             {
-              ++v28;
-              v29 += 4;
-              if ( v28 >= *(unsigned __int16 *)(*v20 + 298) )
+              ++v30;
+              v31 += 4;
+              if ( v30 >= *(unsigned __int16 *)(*v21 + 298) )
                 goto LABEL_35;
             }
-            v17 = v25 + 16LL * (*v29 + (int)v27) + 312;
+            v18 = v27 + 16LL * (*v31 + (int)v29) + 312;
           }
           else
           {
 LABEL_35:
-            v17 = sub_AA67A0(v20, v26, v27);
+            v18 = sub_AEB880(v21, v28, v29, v26);
           }
-          v16 = *(_QWORD *)(v17 + 8);
+          v17 = *(_QWORD *)(v18 + 8);
         }
         else
         {
-          v16 = *(_QWORD *)(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 320);
+          v17 = *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320);
         }
-        v18 = (void (__fastcall **)(__int64 *, bool, _QWORD))sub_B0D954(v16, v21);
-        (*v18)(v20, isDecide, v18);
+        v19 = (void (__fastcall **)(__int64 *, bool, _QWORD))sub_B52A34(v17, v22);
+        (*v19)(v21, isDecide, v19);
       }
       else
       {
-        v10 = *(unsigned __int16 *)(v21 + 72);
-        if ( (v24 & 1) != 0 )
+        v10 = *(unsigned __int16 *)(v22 + 72);
+        if ( (v25 & 1) != 0 )
         {
-          class_0 = j_il2cpp_method_get_class_0(v21);
-          v12 = *v20;
-          if ( *(_WORD *)(*v20 + 298) )
+          class_0 = j_il2cpp_method_get_class_0(v22);
+          v13 = *v21;
+          if ( *(_WORD *)(*v21 + 298) )
           {
-            v13 = 0LL;
-            v14 = (_DWORD *)(*(_QWORD *)(v12 + 176) + 8LL);
-            while ( *((_QWORD *)v14 - 1) != class_0 )
+            v14 = 0LL;
+            v15 = (_DWORD *)(*(_QWORD *)(v13 + 176) + 8LL);
+            while ( *((_QWORD *)v15 - 1) != class_0 )
             {
-              ++v13;
-              v14 += 4;
-              if ( v13 >= *(unsigned __int16 *)(*v20 + 298) )
+              ++v14;
+              v15 += 4;
+              if ( v14 >= *(unsigned __int16 *)(*v21 + 298) )
                 goto LABEL_11;
             }
-            v15 = v12 + 16LL * (int)(*v14 + v10) + 312;
+            v16 = v13 + 16LL * (int)(*v15 + v10) + 312;
           }
           else
           {
 LABEL_11:
-            v15 = sub_AA67A0(v20, class_0, v10);
+            v16 = sub_AEB880(v21, class_0, v10, v12);
           }
-          (*(void (__fastcall **)(__int64 *, bool, _QWORD))v15)(v20, isDecide, *(_QWORD *)(v15 + 8));
+          (*(void (__fastcall **)(__int64 *, bool, _QWORD))v16)(v21, isDecide, *(_QWORD *)(v16 + 8));
         }
         else
         {
-          (*(void (__fastcall **)(__int64 *, bool, _QWORD))(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 312))(
-            v20,
+          (*(void (__fastcall **)(__int64 *, bool, _QWORD))(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 312))(
+            v21,
             isDecide,
-            *(_QWORD *)(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 320));
+            *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320));
         }
       }
       goto LABEL_37;
     }
 LABEL_36:
-    ((void (__fastcall *)(__int64 *, bool, __int64))v22)(v20, isDecide, v21);
+    ((void (__fastcall *)(__int64 *, bool, __int64))v23)(v21, isDecide, v22);
     goto LABEL_37;
   }
 }
@@ -1436,110 +1362,98 @@ void __fastcall CompleteMissionComponent___c__DisplayClass23_0___createPanel_b__
         const MethodInfo *method)
 {
   CompleteMissionComponent___c__DisplayClass23_0_o *v4; // x19
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
   UILabel_o *Object_WarBoardWaitTimeSetting; // x20
   UnityEngine_Transform_o *transform; // x21
   struct CompleteMissionComponent_o *_4__this; // x20
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
-  __int64 v31; // x1
-  __int64 v32; // x2
+  System_String_array **v8; // x2
+  System_String_array **v9; // x3
+  System_Boolean_array **v10; // x4
+  System_Int32_array **v11; // x5
+  System_Int32_array *v12; // x6
+  System_Int32_array *v13; // x7
   int32_t current; // w21
-  __int64 v34; // x20
-  __int64 v35; // x0
-  System_String_array **v36; // x2
-  System_String_array **v37; // x3
-  System_Boolean_array **v38; // x4
-  System_Int32_array **v39; // x5
-  System_Int32_array *v40; // x6
-  System_Int32_array *v41; // x7
-  __int64 v42; // x0
-  struct CompleteMissionComponent_o *v43; // x8
+  __int64 v15; // x20
+  __int64 v16; // x0
+  __int64 v17; // x1
+  System_String_array **v18; // x2
+  System_String_array **v19; // x3
+  System_Boolean_array **v20; // x4
+  System_Int32_array **v21; // x5
+  System_Int32_array *v22; // x6
+  System_Int32_array *v23; // x7
+  __int64 v24; // x0
+  __int64 v25; // x1
+  struct CompleteMissionComponent_o *v26; // x8
   UnityEngine_Transform_o *completeMissionPanel; // x0
   UnityEngine_Transform_o *Child; // x0
-  UnityEngine_Component_o *v46; // x0
+  __int64 v29; // x1
+  UnityEngine_Component_o *v30; // x0
+  __int64 v31; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v48; // x0
-  struct CompleteMissionComponent_o *v49; // x8
-  UnityEngine_Transform_o *v50; // x0
-  UnityEngine_Transform_o *v51; // x0
-  UnityEngine_Component_o *v52; // x0
+  __int64 v33; // x1
+  __int64 v34; // x0
+  __int64 v35; // x1
+  struct CompleteMissionComponent_o *v36; // x8
+  UnityEngine_Transform_o *v37; // x0
+  UnityEngine_Transform_o *v38; // x0
+  __int64 v39; // x1
+  UnityEngine_Component_o *v40; // x0
+  __int64 v41; // x1
   System_Int32_array **Component_WebViewObject; // x0
-  System_String_array **v54; // x2
-  System_String_array **v55; // x3
-  System_Boolean_array **v56; // x4
-  System_Int32_array **v57; // x5
-  System_Int32_array *v58; // x6
-  System_Int32_array *v59; // x7
-  __int64 v60; // x0
+  System_String_array **v43; // x2
+  System_String_array **v44; // x3
+  System_Boolean_array **v45; // x4
+  System_Int32_array **v46; // x5
+  System_Int32_array *v47; // x6
+  System_Int32_array *v48; // x7
+  __int64 v49; // x0
+  __int64 v50; // x1
   struct CompleteMissionEntity_o *completeMissionEnt; // x8
-  Il2CppObject *v62; // x21
-  Il2CppObject *v63; // x2
-  System_String_o *v64; // x21
-  __int64 v65; // x1
-  __int64 v66; // x2
-  AssetLoader_LoadEndDataHandler_o *v67; // x22
-  struct CompleteMissionComponent_o *v68; // x8
-  struct CompleteMissionComponent_o *v69; // x8
+  Il2CppObject *v52; // x21
+  Il2CppObject *v53; // x2
+  System_String_o *v54; // x21
+  AssetLoader_LoadEndDataHandler_o *v55; // x22
+  struct CompleteMissionComponent_o *v56; // x8
+  struct CompleteMissionComponent_o *v57; // x8
   struct System_Collections_Generic_List_EventMissionEntity__o *completeMissionList; // x21
   CompleteMissionSprite_o *completeMissionSprite; // x20
-  EventMissionEntity_o *v72; // x8
-  struct CompleteMissionComponent_o *v73; // x9
-  int v74; // [xsp+4h] [xbp-8Ch] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v75; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v76; // [xsp+20h] [xbp-70h] BYREF
+  EventMissionEntity_o *v60; // x8
+  struct CompleteMissionComponent_o *v61; // x9
+  int v62; // [xsp+4h] [xbp-8Ch] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v63; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v64; // [xsp+20h] [xbp-70h] BYREF
 
   v4 = this;
-  if ( (byte_4213165 & 1) == 0 )
+  if ( (byte_42AE2A8 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_AssetData_GetObject_GameObject____67951440, frontPanel);
-    sub_B0D8A4(&AssetManager_TypeInfo, v5);
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_UITexture___, v6);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v7);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v8);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v9);
-    sub_B0D8A4(&int_TypeInfo, v10);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__GetEnumerator__, v11);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__get_Count__, v12);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventMissionEntity__get_Item__, v13);
-    sub_B0D8A4(&AssetLoader_LoadEndDataHandler_TypeInfo, v14);
-    sub_B0D8A4(&Method_UnityEngine_Object_Instantiate_GameObject____68025336, v15);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v16);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v17);
-    sub_B0D8A4(&Method_CompleteMissionComponent___c__DisplayClass23_1__createPanel_b__1__, v18);
-    sub_B0D8A4(&CompleteMissionComponent___c__DisplayClass23_1_TypeInfo, v19);
-    sub_B0D8A4(&StringLiteral_4220/*"CompleteMissionPanel"*/, v20);
-    this = (CompleteMissionComponent___c__DisplayClass23_0_o *)sub_B0D8A4(&StringLiteral_4219/*"CompleteMission/{0}/{1}"*/, v21);
-    byte_4213165 = 1;
+    sub_B52984(&Method_AssetData_GetObject_GameObject____68579952);
+    sub_B52984(&AssetManager_TypeInfo);
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_UITexture___);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
+    sub_B52984(&int_TypeInfo);
+    sub_B52984(&Method_System_Collections_Generic_List_int__GetEnumerator__);
+    sub_B52984(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_B52984(&Method_System_Collections_Generic_List_EventMissionEntity__get_Item__);
+    sub_B52984(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_B52984(&Method_UnityEngine_Object_Instantiate_GameObject____68654656);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B52984(&Method_CompleteMissionComponent___c__DisplayClass23_1__createPanel_b__1__);
+    sub_B52984(&CompleteMissionComponent___c__DisplayClass23_1_TypeInfo);
+    sub_B52984(&StringLiteral_4243/*"CompleteMissionPanel"*/);
+    this = (CompleteMissionComponent___c__DisplayClass23_0_o *)sub_B52984(&StringLiteral_4242/*"CompleteMission/{0}/{1}"*/);
+    byte_42AE2A8 = 1;
   }
-  memset(&v76, 0, sizeof(v76));
+  memset(&v64, 0, sizeof(v64));
   if ( !frontPanel )
     goto LABEL_54;
   Object_WarBoardWaitTimeSetting = (UILabel_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                   frontPanel,
-                                                  (System_String_o *)StringLiteral_4220/*"CompleteMissionPanel"*/,
-                                                  (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_GameObject____67951440);
-  this = (CompleteMissionComponent___c__DisplayClass23_0_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+                                                  (System_String_o *)StringLiteral_4243/*"CompleteMissionPanel"*/,
+                                                  (const MethodInfo_1A3B904 *)Method_AssetData_GetObject_GameObject____68579952);
+  this = (CompleteMissionComponent___c__DisplayClass23_0_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !this )
     goto LABEL_54;
   this = *(CompleteMissionComponent___c__DisplayClass23_0_o **)&this[25].fields.loadAssetCount;
@@ -1559,7 +1473,7 @@ void __fastcall CompleteMissionComponent___c__DisplayClass23_0___createPanel_b__
   this = (CompleteMissionComponent___c__DisplayClass23_0_o *)UnityEngine_Object__Instantiate_UILabel_(
                                                                Object_WarBoardWaitTimeSetting,
                                                                transform,
-                                                               (const MethodInfo_204AAC0 *)Method_UnityEngine_Object_Instantiate_GameObject____68025336);
+                                                               (const MethodInfo_1F712F4 *)Method_UnityEngine_Object_Instantiate_GameObject____68654656);
   if ( !this )
     goto LABEL_54;
   _4__this = v4->fields.__4__this;
@@ -1569,48 +1483,48 @@ void __fastcall CompleteMissionComponent___c__DisplayClass23_0___createPanel_b__
   if ( !_4__this )
     goto LABEL_54;
   _4__this->fields.completeMissionPanel = (struct UnityEngine_Transform_o *)this;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&_4__this->fields.completeMissionPanel,
     (System_Int32_array **)this,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29,
-    v30);
+    v8,
+    v9,
+    v10,
+    v11,
+    v12,
+    v13);
   this = (CompleteMissionComponent___c__DisplayClass23_0_o *)v4->fields.achiveList;
   if ( !this )
     goto LABEL_54;
   if ( !LODWORD(this->fields.achiveList) )
   {
-    v68 = v4->fields.__4__this;
-    if ( v68 )
+    v56 = v4->fields.__4__this;
+    if ( v56 )
     {
-      this = (CompleteMissionComponent___c__DisplayClass23_0_o *)v68->fields.titleInfo;
+      this = (CompleteMissionComponent___c__DisplayClass23_0_o *)v56->fields.titleInfo;
       if ( this )
       {
         TitleInfoControl__setBackBtnColliderEnable((TitleInfoControl_o *)this, 1, 0LL);
-        v69 = v4->fields.__4__this;
-        if ( v69 )
+        v57 = v4->fields.__4__this;
+        if ( v57 )
         {
-          completeMissionList = v69->fields.completeMissionList;
+          completeMissionList = v57->fields.completeMissionList;
           if ( !completeMissionList )
             return;
-          completeMissionSprite = v69->fields.completeMissionSprite;
+          completeMissionSprite = v57->fields.completeMissionSprite;
           if ( !completeMissionList->fields._size )
-            System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-          v72 = completeMissionList->fields._items->m_Items[0];
-          if ( v72 )
+            System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+          v60 = completeMissionList->fields._items->m_Items[0];
+          if ( v60 )
           {
-            v73 = v4->fields.__4__this;
-            if ( v73 )
+            v61 = v4->fields.__4__this;
+            if ( v61 )
             {
               if ( completeMissionSprite )
               {
                 CompleteMissionSprite__InitPanel(
                   completeMissionSprite,
-                  v72->fields.missionTargetId,
-                  v73->fields.completeMissionListBgSprite,
+                  v60->fields.missionTargetId,
+                  v61->fields.completeMissionListBgSprite,
                   16,
                   0LL);
                 return;
@@ -1621,70 +1535,71 @@ void __fastcall CompleteMissionComponent___c__DisplayClass23_0___createPanel_b__
       }
     }
 LABEL_54:
-    sub_B0D97C(this);
+    sub_B52A5C(this, frontPanel);
   }
   System_Collections_Generic_List_int___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v75,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v63,
     (System_Collections_Generic_List_int__o *)this,
-    (const MethodInfo_2FB0D44 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-  v76 = v75;
+    (const MethodInfo_3057DF4 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+  v64 = v63;
   while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
-            &v76,
-            (const MethodInfo_210FFE4 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+            &v64,
+            (const MethodInfo_200F3F0 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
   {
-    current = v76.fields.current;
-    v34 = sub_B0D974(CompleteMissionComponent___c__DisplayClass23_1_TypeInfo, v31, v32);
-    System_Object___ctor((Il2CppObject *)v34, 0LL);
-    if ( !v34 )
-      sub_B0D97C(v35);
-    *(_QWORD *)(v34 + 32) = v4;
-    sub_B0D840((BattleServantConfConponent_o *)(v34 + 32), (System_Int32_array **)v4, v36, v37, v38, v39, v40, v41);
-    *(_DWORD *)(v34 + 24) = current - 2;
-    v43 = v4->fields.__4__this;
-    if ( !v43 )
-      sub_B0D97C(v42);
-    completeMissionPanel = v43->fields.completeMissionPanel;
+    current = v64.fields.current;
+    v15 = sub_B52A54(CompleteMissionComponent___c__DisplayClass23_1_TypeInfo);
+    System_Object___ctor((Il2CppObject *)v15, 0LL);
+    if ( !v15 )
+      sub_B52A5C(v16, v17);
+    *(_QWORD *)(v15 + 32) = v4;
+    sub_B52920((BattleServantConfConponent_o *)(v15 + 32), (System_Int32_array **)v4, v18, v19, v20, v21, v22, v23);
+    v25 = (unsigned int)(current - 2);
+    *(_DWORD *)(v15 + 24) = v25;
+    v26 = v4->fields.__4__this;
+    if ( !v26 )
+      sub_B52A5C(v24, v25);
+    completeMissionPanel = v26->fields.completeMissionPanel;
     if ( !completeMissionPanel )
-      sub_B0D97C(0LL);
-    Child = UnityEngine_Transform__GetChild(completeMissionPanel, current - 2, 0LL);
+      sub_B52A5C(0LL, v25);
+    Child = UnityEngine_Transform__GetChild(completeMissionPanel, v25, 0LL);
     if ( !Child )
-      sub_B0D97C(0LL);
-    v46 = (UnityEngine_Component_o *)UnityEngine_Transform__GetChild(Child, 0, 0LL);
-    if ( !v46 )
-      sub_B0D97C(0LL);
-    gameObject = UnityEngine_Component__get_gameObject(v46, 0LL);
+      sub_B52A5C(0LL, v29);
+    v30 = (UnityEngine_Component_o *)UnityEngine_Transform__GetChild(Child, 0, 0LL);
+    if ( !v30 )
+      sub_B52A5C(0LL, v31);
+    gameObject = UnityEngine_Component__get_gameObject(v30, 0LL);
     if ( !gameObject )
-      sub_B0D97C(0LL);
+      sub_B52A5C(0LL, v33);
     UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
-    v49 = v4->fields.__4__this;
-    if ( !v49 )
-      sub_B0D97C(v48);
-    v50 = v49->fields.completeMissionPanel;
-    if ( !v50 )
-      sub_B0D97C(0LL);
-    v51 = UnityEngine_Transform__GetChild(v50, *(_DWORD *)(v34 + 24), 0LL);
-    if ( !v51 )
-      sub_B0D97C(0LL);
-    v52 = (UnityEngine_Component_o *)UnityEngine_Transform__GetChild(v51, 1, 0LL);
-    if ( !v52 )
-      sub_B0D97C(0LL);
+    v36 = v4->fields.__4__this;
+    if ( !v36 )
+      sub_B52A5C(v34, v35);
+    v37 = v36->fields.completeMissionPanel;
+    if ( !v37 )
+      sub_B52A5C(0LL, v35);
+    v38 = UnityEngine_Transform__GetChild(v37, *(_DWORD *)(v15 + 24), 0LL);
+    if ( !v38 )
+      sub_B52A5C(0LL, v39);
+    v40 = (UnityEngine_Component_o *)UnityEngine_Transform__GetChild(v38, 1, 0LL);
+    if ( !v40 )
+      sub_B52A5C(0LL, v41);
     Component_WebViewObject = (System_Int32_array **)UnityEngine_Component__GetComponent_WebViewObject_(
-                                                       v52,
-                                                       (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_UITexture___);
-    *(_QWORD *)(v34 + 16) = Component_WebViewObject;
-    sub_B0D840((BattleServantConfConponent_o *)(v34 + 16), Component_WebViewObject, v54, v55, v56, v57, v58, v59);
+                                                       v40,
+                                                       (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_UITexture___);
+    *(_QWORD *)(v15 + 16) = Component_WebViewObject;
+    sub_B52920((BattleServantConfConponent_o *)(v15 + 16), Component_WebViewObject, v43, v44, v45, v46, v47, v48);
     completeMissionEnt = v4->fields.completeMissionEnt;
     if ( !completeMissionEnt )
-      sub_B0D97C(v60);
-    LODWORD(v75.fields.list) = completeMissionEnt->fields.objectId;
-    v62 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v75);
-    v74 = *(_DWORD *)(v34 + 24);
-    v63 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v74);
-    v64 = System_String__Format_43845440((System_String_o *)StringLiteral_4219/*"CompleteMission/{0}/{1}"*/, v62, v63, 0LL);
-    v67 = (AssetLoader_LoadEndDataHandler_o *)sub_B0D974(AssetLoader_LoadEndDataHandler_TypeInfo, v65, v66);
+      sub_B52A5C(v49, v50);
+    LODWORD(v63.fields.list) = completeMissionEnt->fields.objectId;
+    v52 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v63);
+    v62 = *(_DWORD *)(v15 + 24);
+    v53 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v62);
+    v54 = System_String__Format_44563852((System_String_o *)StringLiteral_4242/*"CompleteMission/{0}/{1}"*/, v52, v53, 0LL);
+    v55 = (AssetLoader_LoadEndDataHandler_o *)sub_B52A54(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
-      v67,
-      (Il2CppObject *)v34,
+      v55,
+      (Il2CppObject *)v15,
       Method_CompleteMissionComponent___c__DisplayClass23_1__createPanel_b__1__,
       0LL);
     if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1692,11 +1607,11 @@ LABEL_54:
     {
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     }
-    AssetManager__loadAssetStorage(v64, v67, 1, 0LL);
+    AssetManager__loadAssetStorage(v54, v55, 1, 0LL);
   }
   System_Collections_Generic_List_Enumerator_int___Dispose(
-    &v76,
-    (const MethodInfo_210FFE0 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    &v64,
+    (const MethodInfo_200F3EC *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
 }
 
 
@@ -1713,45 +1628,42 @@ void __fastcall CompleteMissionComponent___c__DisplayClass23_1___createPanel_b__
         AssetData_o *backPanel,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
   struct UITexture_o *tex; // x21
-  Il2CppObject *v10; // x0
+  Il2CppObject *v6; // x0
   System_String_o *Object_WarBoardWaitTimeSetting; // x0
+  __int64 v8; // x1
   struct CompleteMissionComponent___c__DisplayClass23_0_o *CS___8__locals1; // x8
-  struct CompleteMissionComponent___c__DisplayClass23_0_o *v13; // x8
+  struct CompleteMissionComponent___c__DisplayClass23_0_o *v10; // x8
   struct System_Collections_Generic_List_int__o *achiveList; // x9
   struct CompleteMissionComponent_o *_4__this; // x8
-  struct CompleteMissionComponent___c__DisplayClass23_0_o *v16; // x8
-  struct CompleteMissionComponent_o *v17; // x8
+  struct CompleteMissionComponent___c__DisplayClass23_0_o *v13; // x8
+  struct CompleteMissionComponent_o *v14; // x8
   struct System_Collections_Generic_List_EventMissionEntity__o *completeMissionList; // x21
   CompleteMissionSprite_o *completeMissionSprite; // x20
-  EventMissionEntity_o *v20; // x8
-  struct CompleteMissionComponent___c__DisplayClass23_0_o *v21; // x9
-  struct CompleteMissionComponent_o *v22; // x9
+  EventMissionEntity_o *v17; // x8
+  struct CompleteMissionComponent___c__DisplayClass23_0_o *v18; // x9
+  struct CompleteMissionComponent_o *v19; // x9
   int32_t completeMissionPanelChildIdx; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4213166 & 1) == 0 )
+  if ( (byte_42AE2A9 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_AssetData_GetObject_Texture2D____67951464, backPanel);
-    sub_B0D8A4(&int_TypeInfo, v5);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__get_Count__, v6);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventMissionEntity__get_Item__, v7);
-    sub_B0D8A4(&StringLiteral_23617/*"{0}"*/, v8);
-    byte_4213166 = 1;
+    sub_B52984(&Method_AssetData_GetObject_Texture2D____68579976);
+    sub_B52984(&int_TypeInfo);
+    sub_B52984(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_B52984(&Method_System_Collections_Generic_List_EventMissionEntity__get_Item__);
+    sub_B52984(&StringLiteral_23732/*"{0}"*/);
+    byte_42AE2A9 = 1;
   }
   tex = this->fields.tex;
   completeMissionPanelChildIdx = this->fields.completeMissionPanelChildIdx;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &completeMissionPanelChildIdx);
-  Object_WarBoardWaitTimeSetting = System_String__Format((System_String_o *)StringLiteral_23617/*"{0}"*/, v10, 0LL);
+  v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &completeMissionPanelChildIdx);
+  Object_WarBoardWaitTimeSetting = System_String__Format((System_String_o *)StringLiteral_23732/*"{0}"*/, v6, 0LL);
   if ( !backPanel )
     goto LABEL_22;
   Object_WarBoardWaitTimeSetting = (System_String_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                         backPanel,
                                                         Object_WarBoardWaitTimeSetting,
-                                                        (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_Texture2D____67951464);
+                                                        (const MethodInfo_1A3B904 *)Method_AssetData_GetObject_Texture2D____68579976);
   if ( !tex )
     goto LABEL_22;
   Object_WarBoardWaitTimeSetting = (System_String_o *)((__int64 (__fastcall *)(struct UITexture_o *, System_String_o *, Il2CppMethodPointer))tex->klass->vtable._27_set_mainTexture.method)(
@@ -1762,46 +1674,46 @@ void __fastcall CompleteMissionComponent___c__DisplayClass23_1___createPanel_b__
   if ( !CS___8__locals1 )
     goto LABEL_22;
   ++CS___8__locals1->fields.loadAssetCount;
-  v13 = this->fields.CS___8__locals1;
-  if ( !v13 )
+  v10 = this->fields.CS___8__locals1;
+  if ( !v10 )
     goto LABEL_22;
-  achiveList = v13->fields.achiveList;
+  achiveList = v10->fields.achiveList;
   if ( !achiveList )
     goto LABEL_22;
-  if ( v13->fields.loadAssetCount != achiveList->fields._size )
+  if ( v10->fields.loadAssetCount != achiveList->fields._size )
     return;
-  _4__this = v13->fields.__4__this;
+  _4__this = v10->fields.__4__this;
   if ( !_4__this )
     goto LABEL_22;
   Object_WarBoardWaitTimeSetting = (System_String_o *)_4__this->fields.titleInfo;
   if ( !Object_WarBoardWaitTimeSetting )
     goto LABEL_22;
   TitleInfoControl__setBackBtnColliderEnable((TitleInfoControl_o *)Object_WarBoardWaitTimeSetting, 1, 0LL);
-  v16 = this->fields.CS___8__locals1;
-  if ( !v16 )
+  v13 = this->fields.CS___8__locals1;
+  if ( !v13 )
     goto LABEL_22;
-  v17 = v16->fields.__4__this;
-  if ( !v17 )
+  v14 = v13->fields.__4__this;
+  if ( !v14 )
     goto LABEL_22;
-  completeMissionList = v17->fields.completeMissionList;
+  completeMissionList = v14->fields.completeMissionList;
   if ( !completeMissionList )
     return;
-  completeMissionSprite = v17->fields.completeMissionSprite;
+  completeMissionSprite = v14->fields.completeMissionSprite;
   if ( !completeMissionList->fields._size )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-  v20 = completeMissionList->fields._items->m_Items[0];
-  if ( !v20
-    || (v21 = this->fields.CS___8__locals1) == 0LL
-    || (v22 = v21->fields.__4__this) == 0LL
+    System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+  v17 = completeMissionList->fields._items->m_Items[0];
+  if ( !v17
+    || (v18 = this->fields.CS___8__locals1) == 0LL
+    || (v19 = v18->fields.__4__this) == 0LL
     || !completeMissionSprite )
   {
 LABEL_22:
-    sub_B0D97C(Object_WarBoardWaitTimeSetting);
+    sub_B52A5C(Object_WarBoardWaitTimeSetting, v8);
   }
   CompleteMissionSprite__InitPanel(
     completeMissionSprite,
-    v20->fields.missionTargetId,
-    v22->fields.completeMissionListBgSprite,
+    v17->fields.missionTargetId,
+    v19->fields.completeMissionListBgSprite,
     16,
     0LL);
 }

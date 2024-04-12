@@ -1,14 +1,14 @@
 void __fastcall EventFactoryMaster___ctor(EventFactoryMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4216FAD & 1) == 0 )
+  if ( (byte_42B285A & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataMasterBase_EventFactoryMaster__EventFactoryEntity__int___ctor__, method);
-    byte_4216FAD = 1;
+    sub_B52984(&Method_DataMasterBase_EventFactoryMaster__EventFactoryEntity__int___ctor__);
+    byte_42B285A = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
-    236,
-    (const MethodInfo_2669B38 *)Method_DataMasterBase_EventFactoryMaster__EventFactoryEntity__int___ctor__);
+    237,
+    (const MethodInfo_23E223C *)Method_DataMasterBase_EventFactoryMaster__EventFactoryEntity__int___ctor__);
 }
 
 
@@ -18,10 +18,11 @@ int32_t __fastcall EventFactoryMaster__GetCalcValuesTotal(
         const MethodInfo *method)
 {
   EventFactoryEntity_array *Datas; // x0
+  __int64 v4; // x1
 
   Datas = EventFactoryMaster__GetDatas(this, eventId, method);
   if ( !Datas )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v4);
   if ( (int)Datas->max_length >= 1 )
     return 0;
   else
@@ -29,52 +30,43 @@ int32_t __fastcall EventFactoryMaster__GetCalcValuesTotal(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 EventFactoryEntity_array *__fastcall EventFactoryMaster__GetDatas(
         EventFactoryMaster_o *this,
         int32_t eventId,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v11; // x21
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v5; // x21
+  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *v6; // x1
   System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
-  int32_t v13; // w22
-  int32_t v14; // w23
-  __int64 v15; // x10
+  int32_t v8; // w22
+  int32_t v9; // w23
+  __int64 v10; // x10
 
-  if ( (byte_4216FAE & 1) == 0 )
+  if ( (byte_42B285B & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_B0D8A4(&EventFactoryEntity_TypeInfo, v6);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventFactoryEntity__Add__, v7);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventFactoryEntity__ToArray__, v8);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventFactoryEntity___ctor__, v9);
-    sub_B0D8A4(&System_Collections_Generic_List_EventFactoryEntity__TypeInfo, v10);
-    byte_4216FAE = 1;
+    sub_B52984(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B52984(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B52984(&EventFactoryEntity_TypeInfo);
+    sub_B52984(&Method_System_Collections_Generic_List_EventFactoryEntity__Add__);
+    sub_B52984(&Method_System_Collections_Generic_List_EventFactoryEntity__ToArray__);
+    sub_B52984(&Method_System_Collections_Generic_List_EventFactoryEntity___ctor__);
+    sub_B52984(&System_Collections_Generic_List_EventFactoryEntity__TypeInfo);
+    byte_42B285B = 1;
   }
-  v11 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
-                                                                                                  System_Collections_Generic_List_EventFactoryEntity__TypeInfo,
-                                                                                                  *(_QWORD *)&eventId,
-                                                                                                  method);
+  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_EventFactoryEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v11,
-    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_EventFactoryEntity___ctor__);
+    v5,
+    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_EventFactoryEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
     goto LABEL_16;
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
                                                                                        list,
-                                                                                       (const MethodInfo_2AB5718 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+                                                                                       (const MethodInfo_2B98558 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( (int)list >= 1 )
   {
-    v13 = (int)list;
-    v14 = 0;
+    v8 = (int)list;
+    v9 = 0;
     while ( 1 )
     {
       list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
@@ -82,33 +74,34 @@ EventFactoryEntity_array *__fastcall EventFactoryMaster__GetDatas(
         break;
       list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                                                                                            list,
-                                                                                           v14,
-                                                                                           (const MethodInfo_2AB57BC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                                                                           v9,
+                                                                                           (const MethodInfo_2B985FC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( list )
       {
-        v15 = *(&EventFactoryEntity_TypeInfo->_2.bitflags2 + 1);
-        if ( *(&list->klass->_2.bitflags2 + 1) >= (unsigned int)v15
-          && (EventFactoryEntity_c *)list->klass->_2.typeHierarchy[v15 - 1] == EventFactoryEntity_TypeInfo
+        v6 = list;
+        v10 = *(&EventFactoryEntity_TypeInfo->_2.bitflags2 + 1);
+        if ( *(&list->klass->_2.bitflags2 + 1) >= (unsigned int)v10
+          && (EventFactoryEntity_c *)list->klass->_2.typeHierarchy[v10 - 1] == EventFactoryEntity_TypeInfo
           && HIDWORD(list->fields.items) == eventId )
         {
-          if ( !v11 )
+          if ( !v5 )
             break;
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            v11,
+            v5,
             (EventMissionProgressRequest_Argument_ProgressData_o *)list,
-            (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_EventFactoryEntity__Add__);
+            (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_EventFactoryEntity__Add__);
         }
       }
-      if ( ++v14 >= v13 )
+      if ( ++v9 >= v8 )
         goto LABEL_14;
     }
 LABEL_16:
-    sub_B0D97C(list);
+    sub_B52A5C(list, v6);
   }
 LABEL_14:
-  if ( !v11 )
+  if ( !v5 )
     goto LABEL_16;
   return (EventFactoryEntity_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                       (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v11,
-                                       (const MethodInfo_2FC7834 *)Method_System_Collections_Generic_List_EventFactoryEntity__ToArray__);
+                                       (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v5,
+                                       (const MethodInfo_2FF3750 *)Method_System_Collections_Generic_List_EventFactoryEntity__ToArray__);
 }

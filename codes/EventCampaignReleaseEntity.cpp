@@ -1,33 +1,32 @@
 void __fastcall EventCampaignReleaseEntity___ctor(EventCampaignReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4216ED0 & 1) == 0 )
+  if ( (byte_42B277D & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4216ED0 = 1;
+    sub_B52984(&Method_DataEntityBase_string___ctor__);
+    byte_42B277D = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventCampaignReleaseEntity__CreatePK(
         int32_t eventId,
         int32_t target,
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4216ECF & 1) == 0 )
+  if ( (byte_42B277C & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&target);
-    byte_4216ECF = 1;
+    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_42B277C = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            target,
            idx,
-           (const MethodInfo_1713844 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1A4E378 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -41,16 +40,15 @@ System_String_o *__fastcall EventCampaignReleaseEntity__CreatePrimaryKey(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventCampaignReleaseEntity__getCreatePrimarykey(
         int32_t eventId,
         int32_t target,
         int32_t idx,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  System_String_array *v5; // x19
-  System_String_o *v6; // x0
+  System_String_array *v4; // x19
+  System_String_o *v5; // x0
+  __int64 v6; // x1
   System_String_array **v7; // x2
   System_String_array **v8; // x3
   System_Boolean_array **v9; // x4
@@ -95,90 +93,90 @@ System_String_o *__fastcall EventCampaignReleaseEntity__getCreatePrimarykey(
   v47 = eventId;
   v46 = target;
   v45 = idx;
-  if ( (byte_4216ECE & 1) == 0 )
+  if ( (byte_42B277B & 1) == 0 )
   {
-    sub_B0D8A4(&string___TypeInfo, *(_QWORD *)&target);
-    sub_B0D8A4(&StringLiteral_1232/*":"*/, v4);
-    byte_4216ECE = 1;
+    sub_B52984(&string___TypeInfo);
+    sub_B52984(&StringLiteral_1240/*":"*/);
+    byte_42B277B = 1;
   }
-  v5 = (System_String_array *)sub_B0D8BC(string___TypeInfo, 5LL);
-  v6 = System_Int32__ToString((int32_t)&v47, 0LL);
-  if ( !v5 )
-    sub_B0D97C(v6);
-  v13 = (System_Int32_array **)v6;
-  if ( v6 )
+  v4 = (System_String_array *)sub_B5299C(string___TypeInfo, 5LL);
+  v5 = System_Int32__ToString((int32_t)&v47, 0LL);
+  if ( !v4 )
+    sub_B52A5C(v5, v6);
+  v13 = (System_Int32_array **)v5;
+  if ( v5 )
   {
-    v6 = (System_String_o *)sub_B0D964(v6, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v5 = (System_String_o *)sub_B52A44(v5, v4->obj.klass->_1.element_class);
+    if ( !v5 )
       goto LABEL_25;
   }
-  if ( !v5->max_length )
+  if ( !v4->max_length )
     goto LABEL_24;
-  v5->m_Items[0] = (System_String_o *)v13;
-  sub_B0D840((BattleServantConfConponent_o *)v5->m_Items, v13, v7, v8, v9, v10, v11, v12);
-  v6 = (System_String_o *)StringLiteral_1232/*":"*/;
-  if ( StringLiteral_1232/*":"*/ )
+  v4->m_Items[0] = (System_String_o *)v13;
+  sub_B52920((BattleServantConfConponent_o *)v4->m_Items, v13, v7, v8, v9, v10, v11, v12);
+  v5 = (System_String_o *)StringLiteral_1240/*":"*/;
+  if ( StringLiteral_1240/*":"*/ )
   {
-    v6 = (System_String_o *)sub_B0D964(StringLiteral_1232/*":"*/, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v5 = (System_String_o *)sub_B52A44(StringLiteral_1240/*":"*/, v4->obj.klass->_1.element_class);
+    if ( !v5 )
       goto LABEL_25;
-    v20 = (System_Int32_array **)StringLiteral_1232/*":"*/;
+    v20 = (System_Int32_array **)StringLiteral_1240/*":"*/;
   }
   else
   {
     v20 = 0LL;
   }
-  if ( v5->max_length <= 1 )
+  if ( v4->max_length <= 1 )
     goto LABEL_24;
-  v5->m_Items[1] = (System_String_o *)v20;
-  sub_B0D840((BattleServantConfConponent_o *)&v5->m_Items[1], v20, v14, v15, v16, v17, v18, v19);
-  v6 = System_Int32__ToString((int32_t)&v46, 0LL);
-  v27 = (System_Int32_array **)v6;
-  if ( v6 )
+  v4->m_Items[1] = (System_String_o *)v20;
+  sub_B52920((BattleServantConfConponent_o *)&v4->m_Items[1], v20, v14, v15, v16, v17, v18, v19);
+  v5 = System_Int32__ToString((int32_t)&v46, 0LL);
+  v27 = (System_Int32_array **)v5;
+  if ( v5 )
   {
-    v6 = (System_String_o *)sub_B0D964(v6, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v5 = (System_String_o *)sub_B52A44(v5, v4->obj.klass->_1.element_class);
+    if ( !v5 )
       goto LABEL_25;
   }
-  if ( v5->max_length <= 2 )
+  if ( v4->max_length <= 2 )
     goto LABEL_24;
-  v5->m_Items[2] = (System_String_o *)v27;
-  sub_B0D840((BattleServantConfConponent_o *)&v5->m_Items[2], v27, v21, v22, v23, v24, v25, v26);
-  v6 = (System_String_o *)StringLiteral_1232/*":"*/;
-  if ( StringLiteral_1232/*":"*/ )
+  v4->m_Items[2] = (System_String_o *)v27;
+  sub_B52920((BattleServantConfConponent_o *)&v4->m_Items[2], v27, v21, v22, v23, v24, v25, v26);
+  v5 = (System_String_o *)StringLiteral_1240/*":"*/;
+  if ( StringLiteral_1240/*":"*/ )
   {
-    v6 = (System_String_o *)sub_B0D964(StringLiteral_1232/*":"*/, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v5 = (System_String_o *)sub_B52A44(StringLiteral_1240/*":"*/, v4->obj.klass->_1.element_class);
+    if ( !v5 )
       goto LABEL_25;
-    v34 = (System_Int32_array **)StringLiteral_1232/*":"*/;
+    v34 = (System_Int32_array **)StringLiteral_1240/*":"*/;
   }
   else
   {
     v34 = 0LL;
   }
-  if ( v5->max_length <= 3 )
+  if ( v4->max_length <= 3 )
     goto LABEL_24;
-  v5->m_Items[3] = (System_String_o *)v34;
-  sub_B0D840((BattleServantConfConponent_o *)&v5->m_Items[3], v34, v28, v29, v30, v31, v32, v33);
-  v6 = System_Int32__ToString((int32_t)&v45, 0LL);
-  v41 = (System_Int32_array **)v6;
-  if ( v6 )
+  v4->m_Items[3] = (System_String_o *)v34;
+  sub_B52920((BattleServantConfConponent_o *)&v4->m_Items[3], v34, v28, v29, v30, v31, v32, v33);
+  v5 = System_Int32__ToString((int32_t)&v45, 0LL);
+  v41 = (System_Int32_array **)v5;
+  if ( v5 )
   {
-    v6 = (System_String_o *)sub_B0D964(v6, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v5 = (System_String_o *)sub_B52A44(v5, v4->obj.klass->_1.element_class);
+    if ( !v5 )
     {
 LABEL_25:
-      v44 = sub_B0D99C(v6);
-      sub_B0D948(v44, 0LL);
+      v44 = sub_B52A7C(v5);
+      sub_B52A28(v44, 0LL);
     }
   }
-  if ( v5->max_length <= 4 )
+  if ( v4->max_length <= 4 )
   {
 LABEL_24:
-    v43 = sub_B0D9A8(v6);
-    sub_B0D948(v43, 0LL);
+    v43 = sub_B52A88(v5);
+    sub_B52A28(v43, 0LL);
   }
-  v5->m_Items[4] = (System_String_o *)v41;
-  sub_B0D840((BattleServantConfConponent_o *)&v5->m_Items[4], v41, v35, v36, v37, v38, v39, v40);
-  return System_String__Concat_43930028(v5, 0LL);
+  v4->m_Items[4] = (System_String_o *)v41;
+  sub_B52920((BattleServantConfConponent_o *)&v4->m_Items[4], v41, v35, v36, v37, v38, v39, v40);
+  return System_String__Concat_44648440(v4, 0LL);
 }

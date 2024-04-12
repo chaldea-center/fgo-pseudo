@@ -1,31 +1,30 @@
 void __fastcall UserEventRandomMissionEntity___ctor(UserEventRandomMissionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42136B2 & 1) == 0 )
+  if ( (byte_42AEECE & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
-    byte_42136B2 = 1;
+    sub_B52984(&Method_DataEntityBase_string___ctor__);
+    byte_42AEECE = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall UserEventRandomMissionEntity__CreatePK(
         int64_t userId,
         int32_t missionId,
         const MethodInfo *method)
 {
-  if ( (byte_42136B1 & 1) == 0 )
+  if ( (byte_42AEECD & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&missionId);
-    byte_42136B1 = 1;
+    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_42AEECD = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            missionId,
-           (const MethodInfo_171354C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_1A4E080 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

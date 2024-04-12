@@ -1,31 +1,30 @@
 void __fastcall ServantVoiceRelationEntity___ctor(ServantVoiceRelationEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42177BE & 1) == 0 )
+  if ( (byte_42B335C & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
-    byte_42177BE = 1;
+    sub_B52984(&Method_DataEntityBase_string___ctor__);
+    byte_42B335C = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ServantVoiceRelationEntity__CreatePK(
         int32_t svtId,
         int32_t relationSvtId,
         const MethodInfo *method)
 {
-  if ( (byte_42177BD & 1) == 0 )
+  if ( (byte_42B335B & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&relationSvtId);
-    byte_42177BD = 1;
+    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_42B335B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            relationSvtId,
-           (const MethodInfo_171341C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1A4DF50 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -43,10 +42,10 @@ System_String_o *__fastcall ServantVoiceRelationEntity__CreatePrimaryKey(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v11; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v12; // 0:x0.16
 
-  if ( (byte_42177BC & 1) == 0 )
+  if ( (byte_42B335A & 1) == 0 )
   {
-    sub_B0D8A4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    byte_42177BC = 1;
+    sub_B52984(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_42B335A = 1;
   }
   v4 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
   v3 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
@@ -57,11 +56,11 @@ System_String_o *__fastcall ServantVoiceRelationEntity__CreatePrimaryKey(
   }
   *(_QWORD *)&v11.fields.currentCryptoKey = v4;
   *(_QWORD *)&v11.fields.fakeValue = v3;
-  v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44162576(v11, 0LL);
+  v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44786420(v11, 0LL);
   v6 = *(_QWORD *)&this->fields.relationSvtId.fields.currentCryptoKey;
   *(_QWORD *)&v12.fields.fakeValue = *(_QWORD *)&this->fields.relationSvtId.fields.fakeValue;
   v7 = v5;
   *(_QWORD *)&v12.fields.currentCryptoKey = v6;
-  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44162576(v12, 0LL);
+  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44786420(v12, 0LL);
   return ServantVoiceRelationEntity__CreatePK(v7, v8, v9);
 }

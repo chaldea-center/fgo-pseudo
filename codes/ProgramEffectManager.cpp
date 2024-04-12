@@ -1,13 +1,13 @@
 void __fastcall ProgramEffectManager___ctor(ProgramEffectManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_42144C5 & 1) == 0 )
+  if ( (byte_42AFBA8 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_ProgramEffectManager___ctor__, method);
-    byte_42144C5 = 1;
+    sub_B52984(&Method_SingletonMonoBehaviour_ProgramEffectManager___ctor__);
+    byte_42AFBA8 = 1;
   }
   SingletonMonoBehaviour_WebViewManager____ctor(
     (SingletonMonoBehaviour_WebViewManager__o *)this,
-    (const MethodInfo_2A713D0 *)Method_SingletonMonoBehaviour_ProgramEffectManager___ctor__);
+    (const MethodInfo_2B7611C *)Method_SingletonMonoBehaviour_ProgramEffectManager___ctor__);
 }
 
 
@@ -30,23 +30,22 @@ UnityEngine_GameObject_o *__fastcall ProgramEffectManager__Create(
   float z; // s8
   float y; // s9
   float x; // s10
-  __int64 v21; // x1
+  UnityEngine_GameObject_o *v21; // x0
   __int64 v22; // x1
-  UnityEngine_GameObject_o *v23; // x0
-  UnityEngine_GameObject_o *v24; // x21
+  UnityEngine_GameObject_o *v23; // x21
   ProgramEffectComponent_o *Component_srcLineSprite; // x22
   UnityEngine_Transform_o *transform; // x24
-  float v27; // s0
-  float v28; // s1
-  float v29; // s2
-  float v30; // s8
-  float v31; // s9
-  float v32; // s10
-  const MethodInfo *v33; // x3
-  UnityEngine_Vector3_o v35; // [xsp+4h] [xbp-7Ch]
-  UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
+  float v26; // s0
+  float v27; // s1
+  float v28; // s2
+  float v29; // s8
+  float v30; // s9
+  float v31; // s10
+  const MethodInfo *v32; // x3
+  UnityEngine_Vector3_o v34; // [xsp+4h] [xbp-7Ch]
+  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o identity; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v38; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
+  UnityEngine_Color_o v37; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
   a = color.fields.a;
   b = color.fields.b;
@@ -55,60 +54,60 @@ UnityEngine_GameObject_o *__fastcall ProgramEffectManager__Create(
   z = pos.fields.z;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_42144BE & 1) == 0 )
+  if ( (byte_42AFBA1 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_ProgramEffectComponent___, prefab);
-    sub_B0D8A4(&Method_UnityEngine_Object_Instantiate_GameObject___, v21);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v22);
-    byte_42144BE = 1;
+    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_ProgramEffectComponent___);
+    sub_B52984(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AFBA1 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  v23 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
+  v21 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                       (UnityEngine_UI_Dropdown_DropdownItem_o *)prefab,
-                                      (const MethodInfo_204A984 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-  if ( !v23 )
+                                      (const MethodInfo_1F711B8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  if ( !v21 )
     goto LABEL_12;
-  v35.fields.x = x;
-  v35.fields.y = y;
-  v35.fields.z = z;
-  v24 = v23;
+  v34.fields.x = x;
+  v34.fields.y = y;
+  v34.fields.z = z;
+  v23 = v21;
   Component_srcLineSprite = (ProgramEffectComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                          v23,
-                                                          (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_ProgramEffectComponent___);
-  transform = UnityEngine_GameObject__get_transform(v24, 0LL);
-  v23 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v24, 0LL);
-  if ( !v23 )
+                                                          v21,
+                                                          (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_ProgramEffectComponent___);
+  transform = UnityEngine_GameObject__get_transform(v23, 0LL);
+  v21 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v23, 0LL);
+  if ( !v21 )
     goto LABEL_12;
-  *(UnityEngine_Vector3_o *)&v27 = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)v23, 0LL);
+  *(UnityEngine_Vector3_o *)&v26 = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)v21, 0LL);
   if ( !parent )
     goto LABEL_12;
+  v29 = v26;
   v30 = v27;
   v31 = v28;
-  v32 = v29;
-  v23 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(parent, 0LL);
+  v21 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(parent, 0LL);
   if ( !transform )
     goto LABEL_12;
-  UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)v23, 0LL);
-  UnityEngine_Transform__set_localPosition(transform, v35, 0LL);
+  UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)v21, 0LL);
+  UnityEngine_Transform__set_localPosition(transform, v34, 0LL);
   identity = UnityEngine_Quaternion__get_identity(0LL);
   UnityEngine_Transform__set_localRotation(transform, identity, 0LL);
-  v36.fields.x = v30;
-  v36.fields.y = v31;
-  v36.fields.z = v32;
-  UnityEngine_Transform__set_localScale(transform, v36, 0LL);
+  v35.fields.x = v29;
+  v35.fields.y = v30;
+  v35.fields.z = v31;
+  UnityEngine_Transform__set_localScale(transform, v35, 0LL);
   if ( !Component_srcLineSprite )
 LABEL_12:
-    sub_B0D97C(v23);
-  v38.fields.r = r;
-  v38.fields.g = g;
-  v38.fields.b = b;
-  v38.fields.a = a;
-  ProgramEffectComponent__Init(Component_srcLineSprite, time, v38, range, isSkip, isPause, v33);
-  return v24;
+    sub_B52A5C(v21, v22);
+  v37.fields.r = r;
+  v37.fields.g = g;
+  v37.fields.b = b;
+  v37.fields.a = a;
+  ProgramEffectComponent__Init(Component_srcLineSprite, time, v37, range, isSkip, isPause, v32);
+  return v23;
 }
 
 
@@ -143,10 +142,10 @@ UnityEngine_GameObject_o *__fastcall ProgramEffectManager__CreateCharaEffect(
   y = pos.fields.y;
   x = pos.fields.x;
   a = color.fields.a;
-  if ( (byte_42144BD & 1) == 0 )
+  if ( (byte_42AFBA0 & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, effectName);
-    byte_42144BD = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AFBA0 = 1;
   }
   CharaEffectPrefab = (UnityEngine_Object_o *)ProgramEffectManager__GetCharaEffectPrefab(
                                                 effectName,
@@ -209,10 +208,10 @@ UnityEngine_GameObject_o *__fastcall ProgramEffectManager__CreateMainEffect(
   y = pos.fields.y;
   x = pos.fields.x;
   a = color.fields.a;
-  if ( (byte_42144BC & 1) == 0 )
+  if ( (byte_42AFB9F & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, effectName);
-    byte_42144BC = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AFB9F = 1;
   }
   MainEffectPrefab = (UnityEngine_Object_o *)ProgramEffectManager__GetMainEffectPrefab(
                                                effectName,
@@ -246,65 +245,54 @@ UnityEngine_GameObject_o *__fastcall ProgramEffectManager__CreateMainEffect(
 
 void __fastcall ProgramEffectManager__Destory(UnityEngine_GameObject_o *parent, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v12; // x20
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x20
   UnityEngine_Transform_o *transform; // x0
-  int32_t v14; // w21
-  UnityEngine_Component_o *v15; // x22
+  __int64 v5; // x1
+  int32_t v6; // w21
+  UnityEngine_Component_o *v7; // x22
   UnityEngine_Object_o *Component_WebViewObject; // x23
   Il2CppObject *current; // x19
-  System_Collections_Generic_List_Enumerator_T__o v18; // [xsp+8h] [xbp-58h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v10; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_42144C3 & 1) == 0 )
+  if ( (byte_42AFBA6 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___, method);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v4);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v5);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v6);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_GameObject__Add__, v7);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v8);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_GameObject___ctor__, v9);
-    sub_B0D8A4(&System_Collections_Generic_List_GameObject__TypeInfo, v10);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v11);
-    byte_42144C3 = 1;
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_B52984(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_B52984(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_B52984(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_B52984(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AFBA6 = 1;
   }
-  memset(&v18, 0, sizeof(v18));
-  v12 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
-                                                                                                  System_Collections_Generic_List_GameObject__TypeInfo,
-                                                                                                  method,
-                                                                                                  v2);
+  memset(&v10, 0, sizeof(v10));
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v12,
-    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    v3,
+    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   if ( !parent )
     goto LABEL_16;
   transform = UnityEngine_GameObject__get_transform(parent, 0LL);
   if ( !transform )
     goto LABEL_16;
-  v14 = 0;
+  v6 = 0;
   while ( 1 )
   {
     transform = (UnityEngine_Transform_o *)UnityEngine_Transform__get_childCount(transform, 0LL);
-    if ( v14 >= (int)transform )
+    if ( v6 >= (int)transform )
       break;
     transform = UnityEngine_GameObject__get_transform(parent, 0LL);
     if ( transform )
     {
-      transform = UnityEngine_Transform__GetChild(transform, v14, 0LL);
+      transform = UnityEngine_Transform__GetChild(transform, v6, 0LL);
       if ( transform )
       {
-        v15 = (UnityEngine_Component_o *)transform;
+        v7 = (UnityEngine_Component_o *)transform;
         Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                             (UnityEngine_Component_o *)transform,
-                                                            (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+                                                            (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
         if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         {
@@ -312,15 +300,15 @@ void __fastcall ProgramEffectManager__Destory(UnityEngine_GameObject_o *parent, 
         }
         if ( UnityEngine_Object__op_Inequality(Component_WebViewObject, 0LL, 0LL) )
         {
-          transform = (UnityEngine_Transform_o *)UnityEngine_Component__get_gameObject(v15, 0LL);
-          if ( !v12 )
+          transform = (UnityEngine_Transform_o *)UnityEngine_Component__get_gameObject(v7, 0LL);
+          if ( !v3 )
             goto LABEL_16;
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            v12,
+            v3,
             (EventMissionProgressRequest_Argument_ProgressData_o *)transform,
-            (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_GameObject__Add__);
+            (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_GameObject__Add__);
         }
-        ++v14;
+        ++v6;
         transform = UnityEngine_GameObject__get_transform(parent, 0LL);
         if ( transform )
           continue;
@@ -328,96 +316,86 @@ void __fastcall ProgramEffectManager__Destory(UnityEngine_GameObject_o *parent, 
     }
     goto LABEL_16;
   }
-  if ( !v12 )
+  if ( !v3 )
 LABEL_16:
-    sub_B0D97C(transform);
+    sub_B52A5C(transform, v5);
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v18,
-    (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v12,
-    (const MethodInfo_2FC6564 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    &v10,
+    (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v3,
+    (const MethodInfo_2FF2480 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-            &v18,
-            (const MethodInfo_2112550 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v10,
+            (const MethodInfo_201195C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v18.fields.current;
+    current = v10.fields.current;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_34935276((UnityEngine_Object_o *)current, 0LL);
+    UnityEngine_Object__Destroy_35616956((UnityEngine_Object_o *)current, 0LL);
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v18,
-    (const MethodInfo_211254C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    &v10,
+    (const MethodInfo_2011958 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
 }
 
 
-void __fastcall ProgramEffectManager__Destory_24372644(
+void __fastcall ProgramEffectManager__Destory_24692232(
         UnityEngine_GameObject_o *parent,
         System_String_o *effectName,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v13; // x21
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v5; // x21
   UnityEngine_Transform_o *transform; // x0
-  int32_t v15; // w22
-  UnityEngine_Component_o *v16; // x23
+  __int64 v7; // x1
+  int32_t v8; // w22
+  UnityEngine_Component_o *v9; // x23
   WebViewObject_o *Component_WebViewObject; // x24
   Il2CppObject *current; // x19
-  System_Collections_Generic_List_Enumerator_T__o v19; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v12; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_42144C4 & 1) == 0 )
+  if ( (byte_42AFBA7 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___, effectName);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v5);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v6);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v7);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_GameObject__Add__, v8);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v9);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_GameObject___ctor__, v10);
-    sub_B0D8A4(&System_Collections_Generic_List_GameObject__TypeInfo, v11);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v12);
-    byte_42144C4 = 1;
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_B52984(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_B52984(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_B52984(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_B52984(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AFBA7 = 1;
   }
-  memset(&v19, 0, sizeof(v19));
+  memset(&v12, 0, sizeof(v12));
   if ( effectName )
   {
-    v13 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
-                                                                                                    System_Collections_Generic_List_GameObject__TypeInfo,
-                                                                                                    effectName,
-                                                                                                    method);
+    v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_GameObject__TypeInfo);
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-      v13,
-      (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+      v5,
+      (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_GameObject___ctor__);
     if ( !parent )
       goto LABEL_19;
     transform = UnityEngine_GameObject__get_transform(parent, 0LL);
     if ( !transform )
       goto LABEL_19;
-    v15 = 0;
+    v8 = 0;
     while ( 1 )
     {
       transform = (UnityEngine_Transform_o *)UnityEngine_Transform__get_childCount(transform, 0LL);
-      if ( v15 >= (int)transform )
+      if ( v8 >= (int)transform )
         break;
       transform = UnityEngine_GameObject__get_transform(parent, 0LL);
       if ( transform )
       {
-        transform = UnityEngine_Transform__GetChild(transform, v15, 0LL);
+        transform = UnityEngine_Transform__GetChild(transform, v8, 0LL);
         if ( transform )
         {
-          v16 = (UnityEngine_Component_o *)transform;
+          v9 = (UnityEngine_Component_o *)transform;
           Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                                       (UnityEngine_Component_o *)transform,
-                                      (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+                                      (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
           if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           {
@@ -431,21 +409,21 @@ void __fastcall ProgramEffectManager__Destory_24372644(
           {
             if ( !Component_WebViewObject )
               goto LABEL_19;
-            if ( System_String__Equals_43837244(
+            if ( System_String__Equals_44555656(
                    effectName,
                    (System_String_o *)Component_WebViewObject[3].fields.onLoaded,
                    0LL) )
             {
-              transform = (UnityEngine_Transform_o *)UnityEngine_Component__get_gameObject(v16, 0LL);
-              if ( !v13 )
+              transform = (UnityEngine_Transform_o *)UnityEngine_Component__get_gameObject(v9, 0LL);
+              if ( !v5 )
                 goto LABEL_19;
               System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-                v13,
+                v5,
                 (EventMissionProgressRequest_Argument_ProgressData_o *)transform,
-                (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_GameObject__Add__);
+                (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_GameObject__Add__);
             }
           }
-          ++v15;
+          ++v8;
           transform = UnityEngine_GameObject__get_transform(parent, 0LL);
           if ( transform )
             continue;
@@ -453,28 +431,28 @@ void __fastcall ProgramEffectManager__Destory_24372644(
       }
       goto LABEL_19;
     }
-    if ( !v13 )
+    if ( !v5 )
 LABEL_19:
-      sub_B0D97C(transform);
+      sub_B52A5C(transform, v7);
     System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-      &v19,
-      (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v13,
-      (const MethodInfo_2FC6564 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+      &v12,
+      (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v5,
+      (const MethodInfo_2FF2480 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-              &v19,
-              (const MethodInfo_2112550 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+              &v12,
+              (const MethodInfo_201195C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
     {
-      current = v19.fields.current;
+      current = v12.fields.current;
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      UnityEngine_Object__Destroy_34935276((UnityEngine_Object_o *)current, 0LL);
+      UnityEngine_Object__Destroy_35616956((UnityEngine_Object_o *)current, 0LL);
     }
     System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-      &v19,
-      (const MethodInfo_211254C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+      &v12,
+      (const MethodInfo_2011958 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   }
   else
   {
@@ -483,7 +461,7 @@ LABEL_19:
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_34935276((UnityEngine_Object_o *)parent, 0LL);
+    UnityEngine_Object__Destroy_35616956((UnityEngine_Object_o *)parent, 0LL);
   }
 }
 
@@ -492,34 +470,26 @@ ProgramEffectComponent_array *__fastcall ProgramEffectManager__Get(
         UnityEngine_GameObject_o *parent,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v9; // x20
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x20
   UnityEngine_Transform_o *transform; // x0
-  int32_t v11; // w21
+  __int64 v5; // x1
+  int32_t v6; // w21
   UnityEngine_Object_o *Component_WebViewObject; // x22
 
-  if ( (byte_42144B5 & 1) == 0 )
+  if ( (byte_42AFB98 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___, method);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ProgramEffectComponent__Add__, v4);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ProgramEffectComponent__ToArray__, v5);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ProgramEffectComponent___ctor__, v6);
-    sub_B0D8A4(&System_Collections_Generic_List_ProgramEffectComponent__TypeInfo, v7);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v8);
-    byte_42144B5 = 1;
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+    sub_B52984(&Method_System_Collections_Generic_List_ProgramEffectComponent__Add__);
+    sub_B52984(&Method_System_Collections_Generic_List_ProgramEffectComponent__ToArray__);
+    sub_B52984(&Method_System_Collections_Generic_List_ProgramEffectComponent___ctor__);
+    sub_B52984(&System_Collections_Generic_List_ProgramEffectComponent__TypeInfo);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AFB98 = 1;
   }
-  v9 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
-                                                                                                 System_Collections_Generic_List_ProgramEffectComponent__TypeInfo,
-                                                                                                 method,
-                                                                                                 v2);
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_ProgramEffectComponent__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v9,
-    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_ProgramEffectComponent___ctor__);
+    v3,
+    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_ProgramEffectComponent___ctor__);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -530,22 +500,22 @@ ProgramEffectComponent_array *__fastcall ProgramEffectManager__Get(
   {
     if ( !parent || (transform = UnityEngine_GameObject__get_transform(parent, 0LL)) == 0LL )
 LABEL_23:
-      sub_B0D97C(transform);
-    v11 = 0;
+      sub_B52A5C(transform, v5);
+    v6 = 0;
     while ( 1 )
     {
       transform = (UnityEngine_Transform_o *)UnityEngine_Transform__get_childCount(transform, 0LL);
-      if ( v11 >= (int)transform )
+      if ( v6 >= (int)transform )
         break;
       transform = UnityEngine_GameObject__get_transform(parent, 0LL);
       if ( transform )
       {
-        transform = UnityEngine_Transform__GetChild(transform, v11, 0LL);
+        transform = UnityEngine_Transform__GetChild(transform, v6, 0LL);
         if ( transform )
         {
           Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                               (UnityEngine_Component_o *)transform,
-                                                              (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+                                                              (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
           if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           {
@@ -554,14 +524,14 @@ LABEL_23:
           transform = (UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality(Component_WebViewObject, 0LL, 0LL);
           if ( ((unsigned __int8)transform & 1) != 0 )
           {
-            if ( !v9 )
+            if ( !v3 )
               goto LABEL_23;
             System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-              v9,
+              v3,
               (EventMissionProgressRequest_Argument_ProgressData_o *)Component_WebViewObject,
-              (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_ProgramEffectComponent__Add__);
+              (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_ProgramEffectComponent__Add__);
           }
-          ++v11;
+          ++v6;
           transform = UnityEngine_GameObject__get_transform(parent, 0LL);
           if ( transform )
             continue;
@@ -570,11 +540,11 @@ LABEL_23:
       goto LABEL_23;
     }
   }
-  if ( !v9 )
+  if ( !v3 )
     goto LABEL_23;
   return (ProgramEffectComponent_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                           (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v9,
-                                           (const MethodInfo_2FC7834 *)Method_System_Collections_Generic_List_ProgramEffectComponent__ToArray__);
+                                           (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v3,
+                                           (const MethodInfo_2FF3750 *)Method_System_Collections_Generic_List_ProgramEffectComponent__ToArray__);
 }
 
 
@@ -582,77 +552,76 @@ UnityEngine_GameObject_o *__fastcall ProgramEffectManager__GetCharaEffectPrefab(
         System_String_o *effectName,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   UnityEngine_Object_o *Instance; // x20
-  bool v6; // w0
-  UnityEngine_GameObject_o *v7; // x20
+  bool v4; // w0
+  UnityEngine_GameObject_o *v5; // x20
   void *Component_srcLineSprite; // x0
-  __int64 v9; // x21
-  int v10; // w8
-  unsigned int v11; // w22
-  __int64 v12; // x8
-  __int64 v14; // x0
+  __int64 v7; // x1
+  __int64 v8; // x21
+  int v9; // w8
+  unsigned int v10; // w22
+  __int64 v11; // x8
+  __int64 v13; // x0
 
-  if ( (byte_42144BB & 1) == 0 )
+  if ( (byte_42AFB9E & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_ProgramEffectComponent___, method);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_ProgramEffectManager__get_Instance__, v4);
-    byte_42144BB = 1;
+    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_ProgramEffectComponent___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_ProgramEffectManager__get_Instance__);
+    byte_42AFB9E = 1;
   }
-  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_ProgramEffectManager__get_Instance__);
+  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_ProgramEffectManager__get_Instance__);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  v6 = UnityEngine_Object__op_Equality(Instance, 0LL, 0LL);
-  v7 = 0LL;
-  if ( !v6 )
+  v4 = UnityEngine_Object__op_Equality(Instance, 0LL, 0LL);
+  v5 = 0LL;
+  if ( !v4 )
   {
-    Component_srcLineSprite = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_ProgramEffectManager__get_Instance__);
+    Component_srcLineSprite = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_ProgramEffectManager__get_Instance__);
     if ( !Component_srcLineSprite )
       goto LABEL_19;
-    v9 = *((_QWORD *)Component_srcLineSprite + 4);
-    if ( !v9 )
+    v8 = *((_QWORD *)Component_srcLineSprite + 4);
+    if ( !v8 )
       goto LABEL_19;
-    v10 = *(_DWORD *)(v9 + 24);
-    if ( v10 >= 1 )
+    v9 = *(_DWORD *)(v8 + 24);
+    if ( v9 >= 1 )
     {
-      v11 = 0;
+      v10 = 0;
       while ( 1 )
       {
-        if ( v11 >= v10 )
+        if ( v10 >= v9 )
         {
-          v14 = sub_B0D9A8(Component_srcLineSprite);
-          sub_B0D948(v14, 0LL);
+          v13 = sub_B52A88(Component_srcLineSprite);
+          sub_B52A28(v13, 0LL);
         }
-        v12 = v9 + 8LL * (int)v11;
-        v7 = *(UnityEngine_GameObject_o **)(v12 + 32);
-        if ( !v7 )
+        v11 = v8 + 8LL * (int)v10;
+        v5 = *(UnityEngine_GameObject_o **)(v11 + 32);
+        if ( !v5 )
           break;
         Component_srcLineSprite = UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                    *(UnityEngine_GameObject_o **)(v12 + 32),
-                                    (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_ProgramEffectComponent___);
+                                    *(UnityEngine_GameObject_o **)(v11 + 32),
+                                    (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_ProgramEffectComponent___);
         if ( !Component_srcLineSprite || !effectName )
           break;
-        Component_srcLineSprite = (void *)System_String__Equals_43837244(
+        Component_srcLineSprite = (void *)System_String__Equals_44555656(
                                             effectName,
                                             *((System_String_o **)Component_srcLineSprite + 49),
                                             0LL);
         if ( ((unsigned __int8)Component_srcLineSprite & 1) != 0 )
-          return v7;
-        v10 = *(_DWORD *)(v9 + 24);
-        if ( (int)++v11 >= v10 )
+          return v5;
+        v9 = *(_DWORD *)(v8 + 24);
+        if ( (int)++v10 >= v9 )
           return 0LL;
       }
 LABEL_19:
-      sub_B0D97C(Component_srcLineSprite);
+      sub_B52A5C(Component_srcLineSprite, v7);
     }
     return 0LL;
   }
-  return v7;
+  return v5;
 }
 
 
@@ -660,92 +629,91 @@ UnityEngine_GameObject_o *__fastcall ProgramEffectManager__GetMainEffectPrefab(
         System_String_o *effectName,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   UnityEngine_Object_o *Instance; // x20
-  bool v6; // w0
-  UnityEngine_GameObject_o *v7; // x20
+  bool v4; // w0
+  UnityEngine_GameObject_o *v5; // x20
   void *Component_srcLineSprite; // x0
-  __int64 v9; // x21
-  int v10; // w8
-  unsigned int v11; // w22
-  __int64 v12; // x8
-  __int64 v14; // x0
+  __int64 v7; // x1
+  __int64 v8; // x21
+  int v9; // w8
+  unsigned int v10; // w22
+  __int64 v11; // x8
+  __int64 v13; // x0
 
-  if ( (byte_42144BA & 1) == 0 )
+  if ( (byte_42AFB9D & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_ProgramEffectComponent___, method);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_ProgramEffectManager__get_Instance__, v4);
-    byte_42144BA = 1;
+    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_ProgramEffectComponent___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_ProgramEffectManager__get_Instance__);
+    byte_42AFB9D = 1;
   }
-  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_ProgramEffectManager__get_Instance__);
+  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_ProgramEffectManager__get_Instance__);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  v6 = UnityEngine_Object__op_Equality(Instance, 0LL, 0LL);
-  v7 = 0LL;
-  if ( !v6 )
+  v4 = UnityEngine_Object__op_Equality(Instance, 0LL, 0LL);
+  v5 = 0LL;
+  if ( !v4 )
   {
-    Component_srcLineSprite = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_ProgramEffectManager__get_Instance__);
+    Component_srcLineSprite = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_ProgramEffectManager__get_Instance__);
     if ( !Component_srcLineSprite )
       goto LABEL_19;
-    v9 = *((_QWORD *)Component_srcLineSprite + 3);
-    if ( !v9 )
+    v8 = *((_QWORD *)Component_srcLineSprite + 3);
+    if ( !v8 )
       goto LABEL_19;
-    v10 = *(_DWORD *)(v9 + 24);
-    if ( v10 >= 1 )
+    v9 = *(_DWORD *)(v8 + 24);
+    if ( v9 >= 1 )
     {
-      v11 = 0;
+      v10 = 0;
       while ( 1 )
       {
-        if ( v11 >= v10 )
+        if ( v10 >= v9 )
         {
-          v14 = sub_B0D9A8(Component_srcLineSprite);
-          sub_B0D948(v14, 0LL);
+          v13 = sub_B52A88(Component_srcLineSprite);
+          sub_B52A28(v13, 0LL);
         }
-        v12 = v9 + 8LL * (int)v11;
-        v7 = *(UnityEngine_GameObject_o **)(v12 + 32);
-        if ( !v7 )
+        v11 = v8 + 8LL * (int)v10;
+        v5 = *(UnityEngine_GameObject_o **)(v11 + 32);
+        if ( !v5 )
           break;
         Component_srcLineSprite = UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                    *(UnityEngine_GameObject_o **)(v12 + 32),
-                                    (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_ProgramEffectComponent___);
+                                    *(UnityEngine_GameObject_o **)(v11 + 32),
+                                    (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_ProgramEffectComponent___);
         if ( !Component_srcLineSprite || !effectName )
           break;
-        Component_srcLineSprite = (void *)System_String__Equals_43837244(
+        Component_srcLineSprite = (void *)System_String__Equals_44555656(
                                             effectName,
                                             *((System_String_o **)Component_srcLineSprite + 49),
                                             0LL);
         if ( ((unsigned __int8)Component_srcLineSprite & 1) != 0 )
-          return v7;
-        v10 = *(_DWORD *)(v9 + 24);
-        if ( (int)++v11 >= v10 )
+          return v5;
+        v9 = *(_DWORD *)(v8 + 24);
+        if ( (int)++v10 >= v9 )
           return 0LL;
       }
 LABEL_19:
-      sub_B0D97C(Component_srcLineSprite);
+      sub_B52A5C(Component_srcLineSprite, v7);
     }
     return 0LL;
   }
-  return v7;
+  return v5;
 }
 
 
 bool __fastcall ProgramEffectManager__IsBusy(UnityEngine_GameObject_o *parent, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Transform_o *transform; // x0
+  __int64 v4; // x1
   int32_t v5; // w20
   UnityEngine_Object_o *Component_WebViewObject; // x21
 
-  if ( (byte_42144B6 & 1) == 0 )
+  if ( (byte_42AFB99 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___, method);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
-    byte_42144B6 = 1;
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AFB99 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -757,7 +725,7 @@ bool __fastcall ProgramEffectManager__IsBusy(UnityEngine_GameObject_o *parent, c
   {
     if ( !parent || (transform = UnityEngine_GameObject__get_transform(parent, 0LL)) == 0LL )
 LABEL_18:
-      sub_B0D97C(transform);
+      sub_B52A5C(transform, v4);
     v5 = 0;
     while ( v5 < UnityEngine_Transform__get_childCount(transform, 0LL) )
     {
@@ -769,7 +737,7 @@ LABEL_18:
         goto LABEL_18;
       Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                           (UnityEngine_Component_o *)transform,
-                                                          (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+                                                          (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
@@ -787,22 +755,21 @@ LABEL_18:
 }
 
 
-bool __fastcall ProgramEffectManager__IsBusy_24367728(
+bool __fastcall ProgramEffectManager__IsBusy_24687316(
         UnityEngine_GameObject_o *parent,
         System_String_o *effectName,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   UnityEngine_Transform_o *transform; // x0
-  const MethodInfo *v7; // x1
-  int32_t v8; // w21
+  const MethodInfo *v6; // x1
+  int32_t v7; // w21
   WebViewObject_o *Component_WebViewObject; // x22
 
-  if ( (byte_42144B7 & 1) == 0 )
+  if ( (byte_42AFB9A & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___, effectName);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v5);
-    byte_42144B7 = 1;
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AFB9A = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -816,19 +783,19 @@ bool __fastcall ProgramEffectManager__IsBusy_24367728(
   {
     if ( !parent || (transform = UnityEngine_GameObject__get_transform(parent, 0LL)) == 0LL )
 LABEL_21:
-      sub_B0D97C(transform);
-    v8 = 0;
-    while ( v8 < UnityEngine_Transform__get_childCount(transform, 0LL) )
+      sub_B52A5C(transform, v6);
+    v7 = 0;
+    while ( v7 < UnityEngine_Transform__get_childCount(transform, 0LL) )
     {
       transform = UnityEngine_GameObject__get_transform(parent, 0LL);
       if ( !transform )
         goto LABEL_21;
-      transform = UnityEngine_Transform__GetChild(transform, v8, 0LL);
+      transform = UnityEngine_Transform__GetChild(transform, v7, 0LL);
       if ( !transform )
         goto LABEL_21;
       Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                                   (UnityEngine_Component_o *)transform,
-                                  (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+                                  (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
@@ -842,7 +809,7 @@ LABEL_21:
       {
         if ( !Component_WebViewObject )
           goto LABEL_21;
-        if ( System_String__Equals_43837244(
+        if ( System_String__Equals_44555656(
                effectName,
                (System_String_o *)Component_WebViewObject[3].fields.onLoaded,
                0LL) )
@@ -850,29 +817,29 @@ LABEL_21:
           return 1;
         }
       }
-      ++v8;
+      ++v7;
       transform = UnityEngine_GameObject__get_transform(parent, 0LL);
       if ( !transform )
         goto LABEL_21;
     }
     return 0;
   }
-  return ProgramEffectManager__IsBusy(parent, v7);
+  return ProgramEffectManager__IsBusy(parent, v6);
 }
 
 
 bool __fastcall ProgramEffectManager__IsStart(UnityEngine_GameObject_o *parent, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Transform_o *transform; // x0
+  __int64 v4; // x1
   int32_t v5; // w20
   WebViewObject_o *Component_WebViewObject; // x21
 
-  if ( (byte_42144B8 & 1) == 0 )
+  if ( (byte_42AFB9B & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___, method);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
-    byte_42144B8 = 1;
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AFB9B = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -884,7 +851,7 @@ bool __fastcall ProgramEffectManager__IsStart(UnityEngine_GameObject_o *parent, 
   {
     if ( !parent || (transform = UnityEngine_GameObject__get_transform(parent, 0LL)) == 0LL )
 LABEL_20:
-      sub_B0D97C(transform);
+      sub_B52A5C(transform, v4);
     v5 = 0;
     while ( v5 < UnityEngine_Transform__get_childCount(transform, 0LL) )
     {
@@ -896,7 +863,7 @@ LABEL_20:
         goto LABEL_20;
       Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                                   (UnityEngine_Component_o *)transform,
-                                  (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+                                  (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
@@ -923,22 +890,21 @@ LABEL_20:
 }
 
 
-bool __fastcall ProgramEffectManager__IsStart_24368428(
+bool __fastcall ProgramEffectManager__IsStart_24688016(
         UnityEngine_GameObject_o *parent,
         System_String_o *effectName,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   UnityEngine_Transform_o *transform; // x0
-  const MethodInfo *v7; // x1
-  int32_t v8; // w21
+  const MethodInfo *v6; // x1
+  int32_t v7; // w21
   WebViewObject_o *Component_WebViewObject; // x22
 
-  if ( (byte_42144B9 & 1) == 0 )
+  if ( (byte_42AFB9C & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___, effectName);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v5);
-    byte_42144B9 = 1;
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AFB9C = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -952,19 +918,19 @@ bool __fastcall ProgramEffectManager__IsStart_24368428(
   {
     if ( !parent || (transform = UnityEngine_GameObject__get_transform(parent, 0LL)) == 0LL )
 LABEL_22:
-      sub_B0D97C(transform);
-    v8 = 0;
-    while ( v8 < UnityEngine_Transform__get_childCount(transform, 0LL) )
+      sub_B52A5C(transform, v6);
+    v7 = 0;
+    while ( v7 < UnityEngine_Transform__get_childCount(transform, 0LL) )
     {
       transform = UnityEngine_GameObject__get_transform(parent, 0LL);
       if ( !transform )
         goto LABEL_22;
-      transform = UnityEngine_Transform__GetChild(transform, v8, 0LL);
+      transform = UnityEngine_Transform__GetChild(transform, v7, 0LL);
       if ( !transform )
         goto LABEL_22;
       Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                                   (UnityEngine_Component_o *)transform,
-                                  (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+                                  (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
@@ -978,7 +944,7 @@ LABEL_22:
       {
         if ( !Component_WebViewObject )
           goto LABEL_22;
-        if ( System_String__Equals_43837244(
+        if ( System_String__Equals_44555656(
                effectName,
                (System_String_o *)Component_WebViewObject[3].fields.onLoaded,
                0LL)
@@ -987,31 +953,30 @@ LABEL_22:
           return 0;
         }
       }
-      ++v8;
+      ++v7;
       transform = UnityEngine_GameObject__get_transform(parent, 0LL);
       if ( !transform )
         goto LABEL_22;
     }
     return 1;
   }
-  return ProgramEffectManager__IsBusy(parent, v7);
+  return ProgramEffectManager__IsBusy(parent, v6);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall ProgramEffectManager__Resume(UnityEngine_GameObject_o *parent, bool isSkip, const MethodInfo *method)
 {
-  __int64 v5; // x1
   UnityEngine_Transform_o *transform; // x0
+  __int64 v6; // x1
   int32_t v7; // w20
   _BOOL4 v8; // w21
   UnityEngine_Object_o *Component_WebViewObject; // x22
 
-  if ( (byte_42144BF & 1) == 0 )
+  if ( (byte_42AFBA2 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___, isSkip);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v5);
-    byte_42144BF = 1;
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AFBA2 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1023,7 +988,7 @@ void __fastcall ProgramEffectManager__Resume(UnityEngine_GameObject_o *parent, b
   {
     if ( !parent || (transform = UnityEngine_GameObject__get_transform(parent, 0LL)) == 0LL )
 LABEL_20:
-      sub_B0D97C(transform);
+      sub_B52A5C(transform, v6);
     v7 = 0;
     v8 = isSkip;
     while ( v7 < UnityEngine_Transform__get_childCount(transform, 0LL) )
@@ -1036,7 +1001,7 @@ LABEL_20:
         {
           Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                               (UnityEngine_Component_o *)transform,
-                                                              (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+                                                              (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
           if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           {
@@ -1064,23 +1029,23 @@ LABEL_20:
 }
 
 
-void __fastcall ProgramEffectManager__Resume_24370904(
+void __fastcall ProgramEffectManager__Resume_24690492(
         UnityEngine_GameObject_o *parent,
         System_String_o *effectName,
         bool isSkip,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
   UnityEngine_Transform_o *transform; // x0
+  __int64 v8; // x1
   const MethodInfo *v9; // x2
   int32_t v10; // w22
   WebViewObject_o *Component_WebViewObject; // x23
 
-  if ( (byte_42144C0 & 1) == 0 )
+  if ( (byte_42AFBA3 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___, effectName);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v7);
-    byte_42144C0 = 1;
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AFBA3 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1094,7 +1059,7 @@ void __fastcall ProgramEffectManager__Resume_24370904(
     {
       if ( !parent || (transform = UnityEngine_GameObject__get_transform(parent, 0LL)) == 0LL )
 LABEL_22:
-        sub_B0D97C(transform);
+        sub_B52A5C(transform, v8);
       v10 = 0;
       while ( v10 < UnityEngine_Transform__get_childCount(transform, 0LL) )
       {
@@ -1106,7 +1071,7 @@ LABEL_22:
           {
             Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                                         (UnityEngine_Component_o *)transform,
-                                        (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+                                        (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
             if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             {
@@ -1120,7 +1085,7 @@ LABEL_22:
             {
               if ( !Component_WebViewObject )
                 goto LABEL_22;
-              if ( System_String__Equals_43837244(
+              if ( System_String__Equals_44555656(
                      effectName,
                      (System_String_o *)Component_WebViewObject[3].fields.onLoaded,
                      0LL) )
@@ -1150,16 +1115,16 @@ LABEL_22:
 
 void __fastcall ProgramEffectManager__Stop(UnityEngine_GameObject_o *parent, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Transform_o *transform; // x0
+  __int64 v4; // x1
   int32_t v5; // w20
   UnityEngine_Object_o *Component_WebViewObject; // x21
 
-  if ( (byte_42144C1 & 1) == 0 )
+  if ( (byte_42AFBA4 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___, method);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
-    byte_42144C1 = 1;
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AFBA4 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1171,7 +1136,7 @@ void __fastcall ProgramEffectManager__Stop(UnityEngine_GameObject_o *parent, con
   {
     if ( !parent || (transform = UnityEngine_GameObject__get_transform(parent, 0LL)) == 0LL )
 LABEL_20:
-      sub_B0D97C(transform);
+      sub_B52A5C(transform, v4);
     v5 = 0;
     while ( v5 < UnityEngine_Transform__get_childCount(transform, 0LL) )
     {
@@ -1183,7 +1148,7 @@ LABEL_20:
         {
           Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                               (UnityEngine_Component_o *)transform,
-                                                              (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+                                                              (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
           if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           {
@@ -1210,22 +1175,21 @@ LABEL_20:
 }
 
 
-void __fastcall ProgramEffectManager__Stop_24371636(
+void __fastcall ProgramEffectManager__Stop_24691224(
         UnityEngine_GameObject_o *parent,
         System_String_o *effectName,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   UnityEngine_Transform_o *transform; // x0
-  const MethodInfo *v7; // x1
-  int32_t v8; // w21
+  const MethodInfo *v6; // x1
+  int32_t v7; // w21
   WebViewObject_o *Component_WebViewObject; // x22
 
-  if ( (byte_42144C2 & 1) == 0 )
+  if ( (byte_42AFBA5 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___, effectName);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v5);
-    byte_42144C2 = 1;
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AFBA5 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1239,19 +1203,19 @@ void __fastcall ProgramEffectManager__Stop_24371636(
     {
       if ( !parent || (transform = UnityEngine_GameObject__get_transform(parent, 0LL)) == 0LL )
 LABEL_22:
-        sub_B0D97C(transform);
-      v8 = 0;
-      while ( v8 < UnityEngine_Transform__get_childCount(transform, 0LL) )
+        sub_B52A5C(transform, v6);
+      v7 = 0;
+      while ( v7 < UnityEngine_Transform__get_childCount(transform, 0LL) )
       {
         transform = UnityEngine_GameObject__get_transform(parent, 0LL);
         if ( transform )
         {
-          transform = UnityEngine_Transform__GetChild(transform, v8, 0LL);
+          transform = UnityEngine_Transform__GetChild(transform, v7, 0LL);
           if ( transform )
           {
             Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                                         (UnityEngine_Component_o *)transform,
-                                        (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
+                                        (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_ProgramEffectComponent___);
             if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             {
@@ -1265,7 +1229,7 @@ LABEL_22:
             {
               if ( !Component_WebViewObject )
                 goto LABEL_22;
-              if ( System_String__Equals_43837244(
+              if ( System_String__Equals_44555656(
                      effectName,
                      (System_String_o *)Component_WebViewObject[3].fields.onLoaded,
                      0LL) )
@@ -1275,7 +1239,7 @@ LABEL_22:
                   *(_QWORD *)&Component_WebViewObject->klass[2]._2.static_fields_size);
               }
             }
-            ++v8;
+            ++v7;
             transform = UnityEngine_GameObject__get_transform(parent, 0LL);
             if ( transform )
               continue;
@@ -1286,7 +1250,7 @@ LABEL_22:
     }
     else
     {
-      ProgramEffectManager__Stop(parent, v7);
+      ProgramEffectManager__Stop(parent, v6);
     }
   }
 }

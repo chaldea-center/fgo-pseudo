@@ -1,13 +1,13 @@
 void __fastcall UserProfileEntity___ctor(UserProfileEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4212BF4 & 1) == 0 )
+  if ( (byte_42AE139 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_long___ctor__, method);
-    byte_4212BF4 = 1;
+    sub_B52984(&Method_DataEntityBase_long___ctor__);
+    byte_42AE139 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_2669AD8 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_23E21DC *)Method_DataEntityBase_long___ctor__);
 }
 
 

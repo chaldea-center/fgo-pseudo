@@ -1,9 +1,9 @@
 void __fastcall PhotoCampaignListViewObject___ctor(PhotoCampaignListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4213A28 & 1) == 0 )
+  if ( (byte_42AF7B6 & 1) == 0 )
   {
-    sub_B0D8A4(&ListViewObject_TypeInfo, method);
-    byte_4213A28 = 1;
+    sub_B52984(&ListViewObject_TypeInfo);
+    byte_42AF7B6 = 1;
   }
   if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ListViewObject_TypeInfo->_2.cctor_finished )
@@ -16,37 +16,38 @@ void __fastcall PhotoCampaignListViewObject___ctor(PhotoCampaignListViewObject_o
 
 void __fastcall PhotoCampaignListViewObject__Awake(PhotoCampaignListViewObject_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   struct PhotoCampaignListViewItemDraw_o *Component_srcLineSprite; // x0
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
 
-  if ( (byte_4213A1F & 1) == 0 )
+  if ( (byte_42AF7AD & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_PhotoCampaignListViewItemDraw___, method);
-    byte_4213A1F = 1;
+    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_PhotoCampaignListViewItemDraw___);
+    byte_42AF7AD = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v3);
   Component_srcLineSprite = (struct PhotoCampaignListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                         dispObject,
-                                                                        (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_PhotoCampaignListViewItemDraw___);
+                                                                        (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_PhotoCampaignListViewItemDraw___);
   this->fields.itemDraw = Component_srcLineSprite;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.itemDraw,
     (System_Int32_array **)Component_srcLineSprite,
-    v5,
     v6,
     v7,
     v8,
     v9,
-    v10);
+    v10,
+    v11);
 }
 
 
@@ -56,29 +57,30 @@ UnityEngine_GameObject_o *__fastcall PhotoCampaignListViewObject__CreateDragObje
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *DragObject; // x0
-  UnityEngine_GameObject_o *v4; // x19
-  PhotoCampaignListViewObject_o *v5; // x20
-  const MethodInfo *v6; // x3
+  __int64 v4; // x1
+  UnityEngine_GameObject_o *v5; // x19
+  PhotoCampaignListViewObject_o *v6; // x20
+  const MethodInfo *v7; // x3
   UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_4213A23 & 1) == 0 )
+  if ( (byte_42AF7B1 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_PhotoCampaignListViewObject___, method);
-    byte_4213A23 = 1;
+    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_PhotoCampaignListViewObject___);
+    byte_42AF7B1 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject
-    || (v4 = DragObject,
+    || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                     DragObject,
-                                                    (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_PhotoCampaignListViewObject___)) == 0LL) )
+                                                    (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_PhotoCampaignListViewObject___)) == 0LL) )
   {
-    sub_B0D97C(DragObject);
+    sub_B52A5C(DragObject, v4);
   }
-  v5 = (PhotoCampaignListViewObject_o *)DragObject;
+  v6 = (PhotoCampaignListViewObject_o *)DragObject;
   zero = UnityEngine_Vector3__get_zero(0LL);
-  PhotoCampaignListViewObject__Init(v5, 2, 0LL, zero.fields.x, *(UnityEngine_Vector3_o *)&zero.fields.y, v6);
-  return v4;
+  PhotoCampaignListViewObject__Init(v6, 2, 0LL, zero.fields.x, *(UnityEngine_Vector3_o *)&zero.fields.y, v7);
+  return v5;
 }
 
 
@@ -89,10 +91,10 @@ PhotoCampaignListViewItem_o *__fastcall PhotoCampaignListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 v4; // x11
 
-  if ( (byte_4213A21 & 1) == 0 )
+  if ( (byte_42AF7AF & 1) == 0 )
   {
-    sub_B0D8A4(&PhotoCampaignListViewItem_TypeInfo, method);
-    byte_4213A21 = 1;
+    sub_B52984(&PhotoCampaignListViewItem_TypeInfo);
+    byte_42AF7AF = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -106,7 +108,6 @@ PhotoCampaignListViewItem_o *__fastcall PhotoCampaignListViewObject__GetItem(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall PhotoCampaignListViewObject__Init(
         PhotoCampaignListViewObject_o *this,
         int32_t initMode,
@@ -121,28 +122,29 @@ void __fastcall PhotoCampaignListViewObject__Init(
   __int64 v12; // x10
   int32_t v13; // w24
   UnityEngine_Transform_o *transform; // x0
+  __int64 v15; // x1
   BattleServantConfConponent_o *p_callbackFunc; // x21
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  const MethodInfo *v22; // x1
-  System_String_array **v23; // x2
-  System_String_array **v24; // x3
-  System_Boolean_array **v25; // x4
-  System_Int32_array **v26; // x5
-  System_Int32_array *v27; // x6
-  System_Int32_array *v28; // x7
-  int32_t v29; // w9
-  int32_t v30; // w8
+  System_String_array **v17; // x2
+  System_String_array **v18; // x3
+  System_Boolean_array **v19; // x4
+  System_Int32_array **v20; // x5
+  System_Int32_array *v21; // x6
+  System_Int32_array *v22; // x7
+  const MethodInfo *v23; // x1
+  System_String_array **v24; // x2
+  System_String_array **v25; // x3
+  System_Boolean_array **v26; // x4
+  System_Int32_array **v27; // x5
+  System_Int32_array *v28; // x6
+  System_Int32_array *v29; // x7
+  int32_t v30; // w9
+  int32_t v31; // w8
   System_Action_o *klass; // x19
 
-  if ( (byte_4213A24 & 1) == 0 )
+  if ( (byte_42AF7B2 & 1) == 0 )
   {
-    sub_B0D8A4(&PhotoCampaignListViewItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_4213A24 = 1;
+    sub_B52984(&PhotoCampaignListViewItem_TypeInfo);
+    byte_42AF7B2 = 1;
   }
   linkItem = this->fields.linkItem;
   dispMode = this->fields.dispMode;
@@ -170,37 +172,37 @@ void __fastcall PhotoCampaignListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B0D97C(transform);
+    sub_B52A5C(transform, v15);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (BattleServantConfConponent_o *)&this->fields.callbackFunc;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.callbackFunc,
     (System_Int32_array **)callbackFunc,
-    v16,
     v17,
     v18,
     v19,
     v20,
-    v21);
-  v29 = 1;
-  v30 = v13;
+    v21,
+    v22);
+  v30 = 1;
+  v31 = v13;
   switch ( v13 )
   {
     case 0:
     case 2:
       goto LABEL_16;
     case 1:
-      v30 = v13;
+      v31 = v13;
       goto LABEL_15;
     case 3:
-      v30 = 2;
+      v31 = 2;
 LABEL_15:
-      v29 = v13;
+      v30 = v13;
 LABEL_16:
-      this->fields.dispMode = v30;
-      this->fields.state = v29;
+      this->fields.dispMode = v31;
+      this->fields.state = v30;
       goto LABEL_17;
     case 4:
       this->fields.dispMode = 2;
@@ -210,12 +212,12 @@ LABEL_16:
 LABEL_17:
       if ( !state || dispMode != this->fields.dispMode )
 LABEL_19:
-        PhotoCampaignListViewObject__SetupDisp(this, v22);
+        PhotoCampaignListViewObject__SetupDisp(this, v23);
       klass = (System_Action_o *)p_callbackFunc->klass;
       if ( p_callbackFunc->klass )
       {
         p_callbackFunc->klass = 0LL;
-        sub_B0D840(p_callbackFunc, 0LL, v23, v24, v25, v26, v27, v28);
+        sub_B52920(p_callbackFunc, 0LL, v24, v25, v26, v27, v28, v29);
         System_Action__Invoke(klass, 0LL);
       }
       return;
@@ -230,7 +232,7 @@ void __fastcall PhotoCampaignListViewObject__InitItem(PhotoCampaignListViewObjec
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall PhotoCampaignListViewObject__Init_22951576(
+void __fastcall PhotoCampaignListViewObject__Init_24217460(
         PhotoCampaignListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -244,7 +246,7 @@ void __fastcall PhotoCampaignListViewObject__Init_22951576(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall PhotoCampaignListViewObject__Init_22952104(
+void __fastcall PhotoCampaignListViewObject__Init_24217988(
         PhotoCampaignListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -265,7 +267,7 @@ void __fastcall PhotoCampaignListViewObject__Init_22952104(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall PhotoCampaignListViewObject__Init_22956788(
+void __fastcall PhotoCampaignListViewObject__Init_24222672(
         PhotoCampaignListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -292,109 +294,106 @@ void __fastcall PhotoCampaignListViewObject__OnClickSelect(
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4213A26 & 1) == 0 )
+  if ( (byte_42AF7B4 & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_9994/*"OnClickSelectListView"*/, method);
-    byte_4213A26 = 1;
+    sub_B52984(&StringLiteral_10034/*"OnClickSelectListView"*/);
+    byte_42AF7B4 = 1;
   }
   if ( this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_B0D97C(0LL);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9994/*"OnClickSelectListView"*/, (Il2CppObject *)this, 0LL);
+      sub_B52A5C(0LL, method);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_10034/*"OnClickSelectListView"*/, (Il2CppObject *)this, 0LL);
   }
 }
 
 
 void __fastcall PhotoCampaignListViewObject__OnDestroy(PhotoCampaignListViewObject_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   BattleServantConfConponent_o *p_dragObject; // x19
-  UnityEngine_Object_o *v5; // x20
+  UnityEngine_Object_o *v4; // x20
   struct UnityEngine_GameObject_o *dragObject; // t1
   UnityEngine_Object_o *klass; // x20
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  System_String_array **v7; // x2
+  System_String_array **v8; // x3
+  System_Boolean_array **v9; // x4
+  System_Int32_array **v10; // x5
+  System_Int32_array *v11; // x6
+  System_Int32_array *v12; // x7
 
-  if ( (byte_4213A20 & 1) == 0 )
+  if ( (byte_42AF7AE & 1) == 0 )
   {
-    sub_B0D8A4(&NGUITools_TypeInfo, method);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
-    byte_4213A20 = 1;
+    sub_B52984(&NGUITools_TypeInfo);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42AF7AE = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (BattleServantConfConponent_o *)&this->fields.dragObject;
-  v5 = (UnityEngine_Object_o *)dragObject;
+  v4 = (UnityEngine_Object_o *)dragObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(v5, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v4, 0LL, 0LL) )
   {
     klass = (UnityEngine_Object_o *)p_dragObject->klass;
     if ( (BYTE3(NGUITools_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_B0D840(p_dragObject, 0LL, v8, v9, v10, v11, v12, v13);
+    sub_B52920(p_dragObject, 0LL, v7, v8, v9, v10, v11, v12);
   }
 }
 
 
 void __fastcall PhotoCampaignListViewObject__OnLongPush(PhotoCampaignListViewObject_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v4; // x1
 
-  if ( (byte_4213A27 & 1) == 0 )
+  if ( (byte_42AF7B5 & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_10047/*"OnLongPushListView"*/, method);
-    sub_B0D8A4(&StringLiteral_10065/*"OnPressCancel"*/, v3);
-    byte_4213A27 = 1;
+    sub_B52984(&StringLiteral_10087/*"OnLongPushListView"*/);
+    sub_B52984(&StringLiteral_10105/*"OnPressCancel"*/);
+    byte_42AF7B5 = 1;
   }
   if ( this->fields.linkItem )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject
-      || (UnityEngine_GameObject__SendMessage_40784904(gameObject, (System_String_o *)StringLiteral_10065/*"OnPressCancel"*/, 0LL),
+      || (UnityEngine_GameObject__SendMessage_41491048(gameObject, (System_String_o *)StringLiteral_10105/*"OnPressCancel"*/, 0LL),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.manager) == 0LL) )
     {
-      sub_B0D97C(gameObject);
+      sub_B52A5C(gameObject, v4);
     }
     UnityEngine_Component__SendMessage(
       (UnityEngine_Component_o *)gameObject,
-      (System_String_o *)StringLiteral_10047/*"OnLongPushListView"*/,
+      (System_String_o *)StringLiteral_10087/*"OnLongPushListView"*/,
       (Il2CppObject *)this,
       0LL);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall PhotoCampaignListViewObject__SetInput(
         PhotoCampaignListViewObject_o *this,
         bool isInput,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   UnityEngine_Object_o *itemDraw; // x21
-  const MethodInfo *v7; // x3
+  const MethodInfo *v6; // x3
   struct ListViewItem_o *linkItem; // x8
-  __int64 v9; // x11
-  struct ListViewItem_o *v10; // x1
-  PhotoCampaignListViewItemDraw_o *v11; // x0
+  __int64 v8; // x11
+  struct ListViewItem_o *v9; // x1
+  PhotoCampaignListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4213A22 & 1) == 0 )
+  if ( (byte_42AF7B0 & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, isInput);
-    sub_B0D8A4(&PhotoCampaignListViewItem_TypeInfo, v5);
-    byte_4213A22 = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&PhotoCampaignListViewItem_TypeInfo);
+    byte_42AF7B0 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -407,22 +406,22 @@ void __fastcall PhotoCampaignListViewObject__SetInput(
   {
     linkItem = this->fields.linkItem;
     if ( linkItem
-      && (v9 = *(&PhotoCampaignListViewItem_TypeInfo->_2.bitflags2 + 1),
-          *(&linkItem->klass->_2.bitflags2 + 1) >= (unsigned int)v9) )
+      && (v8 = *(&PhotoCampaignListViewItem_TypeInfo->_2.bitflags2 + 1),
+          *(&linkItem->klass->_2.bitflags2 + 1) >= (unsigned int)v8) )
     {
-      if ( (PhotoCampaignListViewItem_c *)linkItem->klass->_2.typeHierarchy[v9 - 1] == PhotoCampaignListViewItem_TypeInfo )
-        v10 = this->fields.linkItem;
+      if ( (PhotoCampaignListViewItem_c *)linkItem->klass->_2.typeHierarchy[v8 - 1] == PhotoCampaignListViewItem_TypeInfo )
+        v9 = this->fields.linkItem;
       else
-        v10 = 0LL;
+        v9 = 0LL;
     }
     else
     {
-      v10 = 0LL;
+      v9 = 0LL;
     }
-    v11 = this->fields.itemDraw;
-    if ( !v11 )
-      sub_B0D97C(0LL);
-    PhotoCampaignListViewItemDraw__SetInput(v11, (PhotoCampaignListViewItem_o *)v10, isInput, v7);
+    v10 = this->fields.itemDraw;
+    if ( !v10 )
+      sub_B52A5C(0LL, v9);
+    PhotoCampaignListViewItemDraw__SetInput(v10, (PhotoCampaignListViewItem_o *)v9, isInput, v6);
   }
 }
 
@@ -433,12 +432,12 @@ void __fastcall PhotoCampaignListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_32816272((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_33992116((ListViewObject_o *)this, item, seed, 0LL);
   this->fields.state = 0;
 }
 
 
-void __fastcall PhotoCampaignListViewObject__SetItem_22955636(
+void __fastcall PhotoCampaignListViewObject__SetItem_24221520(
         PhotoCampaignListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -450,35 +449,35 @@ void __fastcall PhotoCampaignListViewObject__SetItem_22955636(
 
 void __fastcall PhotoCampaignListViewObject__SetupDisp(PhotoCampaignListViewObject_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   struct ListViewItem_o *linkItem; // x20
-  __int64 v5; // x10
-  bool v6; // w1
+  __int64 v4; // x10
+  bool v5; // w1
   UnityEngine_Object_o *itemDraw; // x21
+  __int64 v7; // x1
   const MethodInfo *v8; // x3
   PhotoCampaignListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4213A25 & 1) == 0 )
+  if ( (byte_42AF7B3 & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
-    sub_B0D8A4(&PhotoCampaignListViewItem_TypeInfo, v3);
-    byte_4213A25 = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&PhotoCampaignListViewItem_TypeInfo);
+    byte_42AF7B3 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
   {
-    v5 = *(&PhotoCampaignListViewItem_TypeInfo->_2.bitflags2 + 1);
-    if ( *(&linkItem->klass->_2.bitflags2 + 1) >= (unsigned int)v5
-      && (PhotoCampaignListViewItem_c *)linkItem->klass->_2.typeHierarchy[v5 - 1] == PhotoCampaignListViewItem_TypeInfo )
+    v4 = *(&PhotoCampaignListViewItem_TypeInfo->_2.bitflags2 + 1);
+    if ( *(&linkItem->klass->_2.bitflags2 + 1) >= (unsigned int)v4
+      && (PhotoCampaignListViewItem_c *)linkItem->klass->_2.typeHierarchy[v4 - 1] == PhotoCampaignListViewItem_TypeInfo )
     {
-      v6 = this->fields.dispMode != 0;
+      v5 = this->fields.dispMode != 0;
       goto LABEL_8;
     }
     linkItem = 0LL;
   }
-  v6 = 0;
+  v5 = 0;
 LABEL_8:
-  ListViewObject__SetVisible((ListViewObject_o *)this, v6, 0LL);
+  ListViewObject__SetVisible((ListViewObject_o *)this, v5, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -489,7 +488,7 @@ LABEL_8:
   {
     v9 = this->fields.itemDraw;
     if ( !v9 )
-      sub_B0D97C(0LL);
+      sub_B52A5C(0LL, v7);
     PhotoCampaignListViewItemDraw__SetItem(v9, (PhotoCampaignListViewItem_o *)linkItem, this->fields.dispMode, v8);
   }
 }
@@ -510,10 +509,10 @@ void __fastcall PhotoCampaignListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4213A1D & 1) == 0 )
+  if ( (byte_42AF7AB & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, value);
-    byte_4213A1D = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    byte_42AF7AB = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -526,13 +525,13 @@ void __fastcall PhotoCampaignListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B022BC(p_callbackFunc, v8, v6);
+    v9 = sub_B4739C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (PhotoCampaignListViewObject_o *)sub_B0DC70(v8);
+  v11 = (PhotoCampaignListViewObject_o *)sub_B52D50(v8);
   PhotoCampaignListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -551,10 +550,10 @@ void __fastcall PhotoCampaignListViewObject__remove_callbackFunc(
   PhotoCampaignListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4213A1E & 1) == 0 )
+  if ( (byte_42AF7AC & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, value);
-    byte_4213A1E = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    byte_42AF7AC = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -567,12 +566,12 @@ void __fastcall PhotoCampaignListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B022BC(p_callbackFunc, v8, v6);
+    v9 = sub_B4739C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (PhotoCampaignListViewObject_o *)sub_B0DC70(v8);
+  v11 = (PhotoCampaignListViewObject_o *)sub_B52D50(v8);
   PhotoCampaignListViewObject__Awake(v11, v12);
 }

@@ -1,13 +1,13 @@
 void __fastcall BankShopEntity___ctor(BankShopEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_421161F & 1) == 0 )
+  if ( (byte_42ACEE9 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_int___ctor__, method);
-    byte_421161F = 1;
+    sub_B52984(&Method_DataEntityBase_int___ctor__);
+    byte_42ACEE9 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_2669A80 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_23E2184 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -21,10 +21,10 @@ System_String_o *__fastcall BankShopEntity__GetCountText(BankShopEntity_o *this,
 {
   int32_t stoneNum; // w19
 
-  if ( (byte_421161E & 1) == 0 )
+  if ( (byte_42ACEE8 & 1) == 0 )
   {
-    sub_B0D8A4(&LocalizationManager_TypeInfo, method);
-    byte_421161E = 1;
+    sub_B52984(&LocalizationManager_TypeInfo);
+    byte_42ACEE8 = 1;
   }
   stoneNum = this->fields.stoneNum;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -62,408 +62,397 @@ System_String_o *__fastcall BankShopEntity__GetProductId(BankShopEntity_o *this,
 
 System_String_o *__fastcall BankShopEntity__ToString(BankShopEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v3; // x0
   __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
+  System_String_array *v5; // x20
+  System_String_o *v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x0
-  System_String_array *v16; // x20
-  System_String_o *v17; // x0
-  __int64 v18; // x1
   il2cpp_array_size_t *p_max_length; // x22
-  System_String_o *v20; // x21
-  __int64 v21; // x1
+  System_String_o *v9; // x21
+  __int64 v10; // x1
   struct System_String_o *name; // x21
-  __int64 v23; // x1
+  __int64 v12; // x1
   struct System_String_o *appleShopId; // x21
-  __int64 v25; // x1
+  __int64 v14; // x1
   struct System_String_o *googleShopId; // x21
-  __int64 v27; // x1
+  __int64 v16; // x1
   struct System_String_o *auShopId; // x21
-  __int64 v29; // x1
-  System_String_o *v30; // x21
-  __int64 v31; // x1
-  System_String_o *v32; // x21
-  __int64 v33; // x1
-  System_String_o *v34; // x21
-  __int64 v35; // x1
+  __int64 v18; // x1
+  System_String_o *v19; // x21
+  __int64 v20; // x1
+  System_String_o *v21; // x21
+  __int64 v22; // x1
+  System_String_o *v23; // x21
+  __int64 v24; // x1
   struct System_String_o *numDetail; // x21
-  __int64 v37; // x1
+  __int64 v26; // x1
   struct System_String_o *priceDetail; // x21
-  __int64 v39; // x1
-  System_String_o *v40; // x21
-  __int64 v41; // x1
-  System_String_o *v42; // x19
-  __int64 v44; // x0
-  __int64 v45; // x0
+  __int64 v28; // x1
+  System_String_o *v29; // x21
+  __int64 v30; // x1
+  System_String_o *v31; // x19
+  __int64 v33; // x0
+  __int64 v34; // x0
 
-  if ( (byte_421161D & 1) == 0 )
+  if ( (byte_42ACEE7 & 1) == 0 )
   {
-    sub_B0D8A4(&string___TypeInfo, method);
-    sub_B0D8A4(&StringLiteral_735/*", name:"*/, v3);
-    sub_B0D8A4(&StringLiteral_732/*", googleShopId:"*/, v4);
-    sub_B0D8A4(&StringLiteral_736/*", numDetail:"*/, v5);
-    sub_B0D8A4(&StringLiteral_730/*", closeAt:"*/, v6);
-    sub_B0D8A4(&StringLiteral_19446/*"id:"*/, v7);
-    sub_B0D8A4(&StringLiteral_727/*", appleShopId:"*/, v8);
-    sub_B0D8A4(&StringLiteral_740/*", stoneNum:"*/, v9);
-    sub_B0D8A4(&StringLiteral_731/*", googlePrice:"*/, v10);
-    sub_B0D8A4(&StringLiteral_737/*", openAt:"*/, v11);
-    sub_B0D8A4(&StringLiteral_738/*", priceDetail:"*/, v12);
-    sub_B0D8A4(&StringLiteral_726/*", applePrice:"*/, v13);
-    sub_B0D8A4(&StringLiteral_728/*", auShopId:"*/, v14);
-    byte_421161D = 1;
+    sub_B52984(&string___TypeInfo);
+    sub_B52984(&StringLiteral_739/*", name:"*/);
+    sub_B52984(&StringLiteral_736/*", googleShopId:"*/);
+    sub_B52984(&StringLiteral_740/*", numDetail:"*/);
+    sub_B52984(&StringLiteral_734/*", closeAt:"*/);
+    sub_B52984(&StringLiteral_19531/*"id:"*/);
+    sub_B52984(&StringLiteral_731/*", appleShopId:"*/);
+    sub_B52984(&StringLiteral_744/*", stoneNum:"*/);
+    sub_B52984(&StringLiteral_735/*", googlePrice:"*/);
+    sub_B52984(&StringLiteral_741/*", openAt:"*/);
+    sub_B52984(&StringLiteral_742/*", priceDetail:"*/);
+    sub_B52984(&StringLiteral_730/*", applePrice:"*/);
+    sub_B52984(&StringLiteral_732/*", auShopId:"*/);
+    byte_42ACEE7 = 1;
   }
-  v15 = sub_B0D8BC(string___TypeInfo, 24LL);
-  if ( !v15 )
-    sub_B0D97C(0LL);
-  v16 = (System_String_array *)v15;
-  v17 = (System_String_o *)StringLiteral_19446/*"id:"*/;
-  if ( StringLiteral_19446/*"id:"*/ )
+  v3 = sub_B5299C(string___TypeInfo, 24LL);
+  if ( !v3 )
+    sub_B52A5C(0LL, v4);
+  v5 = (System_String_array *)v3;
+  v6 = (System_String_o *)StringLiteral_19531/*"id:"*/;
+  if ( StringLiteral_19531/*"id:"*/ )
   {
-    v17 = (System_String_o *)sub_B0D964(StringLiteral_19446/*"id:"*/, v16->obj.klass->_1.element_class);
-    if ( !v17 )
+    v6 = (System_String_o *)sub_B52A44(StringLiteral_19531/*"id:"*/, v5->obj.klass->_1.element_class);
+    if ( !v6 )
       goto LABEL_102;
-    v18 = StringLiteral_19446/*"id:"*/;
+    v7 = StringLiteral_19531/*"id:"*/;
+  }
+  else
+  {
+    v7 = 0LL;
+  }
+  p_max_length = &v5->max_length;
+  if ( !v5->max_length )
+    goto LABEL_101;
+  v5->m_Items[0] = (System_String_o *)v7;
+  sub_B52920(v5->m_Items);
+  v6 = System_Int32__ToString((int)this + 16, 0LL);
+  v9 = v6;
+  if ( v6 )
+  {
+    v6 = (System_String_o *)sub_B52A44(v6, v5->obj.klass->_1.element_class);
+    if ( !v6 )
+      goto LABEL_102;
+  }
+  if ( *p_max_length <= 1 )
+    goto LABEL_101;
+  v5->m_Items[1] = v9;
+  sub_B52920(&v5->m_Items[1]);
+  v6 = (System_String_o *)StringLiteral_739/*", name:"*/;
+  if ( StringLiteral_739/*", name:"*/ )
+  {
+    v6 = (System_String_o *)sub_B52A44(StringLiteral_739/*", name:"*/, v5->obj.klass->_1.element_class);
+    if ( !v6 )
+      goto LABEL_102;
+    v10 = StringLiteral_739/*", name:"*/;
+  }
+  else
+  {
+    v10 = 0LL;
+  }
+  if ( *p_max_length <= 2 )
+    goto LABEL_101;
+  v5->m_Items[2] = (System_String_o *)v10;
+  sub_B52920(&v5->m_Items[2]);
+  name = this->fields.name;
+  if ( name )
+  {
+    v6 = (System_String_o *)sub_B52A44(this->fields.name, v5->obj.klass->_1.element_class);
+    if ( !v6 )
+      goto LABEL_102;
+  }
+  if ( *p_max_length <= 3 )
+    goto LABEL_101;
+  v5->m_Items[3] = name;
+  sub_B52920(&v5->m_Items[3]);
+  v6 = (System_String_o *)StringLiteral_731/*", appleShopId:"*/;
+  if ( StringLiteral_731/*", appleShopId:"*/ )
+  {
+    v6 = (System_String_o *)sub_B52A44(StringLiteral_731/*", appleShopId:"*/, v5->obj.klass->_1.element_class);
+    if ( !v6 )
+      goto LABEL_102;
+    v12 = StringLiteral_731/*", appleShopId:"*/;
+  }
+  else
+  {
+    v12 = 0LL;
+  }
+  if ( *p_max_length <= 4 )
+    goto LABEL_101;
+  v5->m_Items[4] = (System_String_o *)v12;
+  sub_B52920(&v5->m_Items[4]);
+  appleShopId = this->fields.appleShopId;
+  if ( appleShopId )
+  {
+    v6 = (System_String_o *)sub_B52A44(this->fields.appleShopId, v5->obj.klass->_1.element_class);
+    if ( !v6 )
+      goto LABEL_102;
+  }
+  if ( *p_max_length <= 5 )
+    goto LABEL_101;
+  v5->m_Items[5] = appleShopId;
+  sub_B52920(&v5->m_Items[5]);
+  v6 = (System_String_o *)StringLiteral_736/*", googleShopId:"*/;
+  if ( StringLiteral_736/*", googleShopId:"*/ )
+  {
+    v6 = (System_String_o *)sub_B52A44(StringLiteral_736/*", googleShopId:"*/, v5->obj.klass->_1.element_class);
+    if ( !v6 )
+      goto LABEL_102;
+    v14 = StringLiteral_736/*", googleShopId:"*/;
+  }
+  else
+  {
+    v14 = 0LL;
+  }
+  if ( *p_max_length <= 6 )
+    goto LABEL_101;
+  v5->m_Items[6] = (System_String_o *)v14;
+  sub_B52920(&v5->m_Items[6]);
+  googleShopId = this->fields.googleShopId;
+  if ( googleShopId )
+  {
+    v6 = (System_String_o *)sub_B52A44(this->fields.googleShopId, v5->obj.klass->_1.element_class);
+    if ( !v6 )
+      goto LABEL_102;
+  }
+  if ( *p_max_length <= 7 )
+    goto LABEL_101;
+  v5->m_Items[7] = googleShopId;
+  sub_B52920(&v5->m_Items[7]);
+  v6 = (System_String_o *)StringLiteral_732/*", auShopId:"*/;
+  if ( StringLiteral_732/*", auShopId:"*/ )
+  {
+    v6 = (System_String_o *)sub_B52A44(StringLiteral_732/*", auShopId:"*/, v5->obj.klass->_1.element_class);
+    if ( !v6 )
+      goto LABEL_102;
+    v16 = StringLiteral_732/*", auShopId:"*/;
+  }
+  else
+  {
+    v16 = 0LL;
+  }
+  if ( *p_max_length <= 8 )
+    goto LABEL_101;
+  v5->m_Items[8] = (System_String_o *)v16;
+  sub_B52920(&v5->m_Items[8]);
+  auShopId = this->fields.auShopId;
+  if ( auShopId )
+  {
+    v6 = (System_String_o *)sub_B52A44(this->fields.auShopId, v5->obj.klass->_1.element_class);
+    if ( !v6 )
+      goto LABEL_102;
+  }
+  if ( *p_max_length <= 9 )
+    goto LABEL_101;
+  v5->m_Items[9] = auShopId;
+  sub_B52920(&v5->m_Items[9]);
+  v6 = (System_String_o *)StringLiteral_730/*", applePrice:"*/;
+  if ( StringLiteral_730/*", applePrice:"*/ )
+  {
+    v6 = (System_String_o *)sub_B52A44(StringLiteral_730/*", applePrice:"*/, v5->obj.klass->_1.element_class);
+    if ( !v6 )
+      goto LABEL_102;
+    v18 = StringLiteral_730/*", applePrice:"*/;
   }
   else
   {
     v18 = 0LL;
   }
-  p_max_length = &v16->max_length;
-  if ( !v16->max_length )
-    goto LABEL_101;
-  v16->m_Items[0] = (System_String_o *)v18;
-  sub_B0D840(v16->m_Items, v18);
-  v17 = System_Int32__ToString((int)this + 16, 0LL);
-  v20 = v17;
-  if ( v17 )
-  {
-    v17 = (System_String_o *)sub_B0D964(v17, v16->obj.klass->_1.element_class);
-    if ( !v17 )
-      goto LABEL_102;
-  }
-  if ( *p_max_length <= 1 )
-    goto LABEL_101;
-  v16->m_Items[1] = v20;
-  sub_B0D840(&v16->m_Items[1], v20);
-  v17 = (System_String_o *)StringLiteral_735/*", name:"*/;
-  if ( StringLiteral_735/*", name:"*/ )
-  {
-    v17 = (System_String_o *)sub_B0D964(StringLiteral_735/*", name:"*/, v16->obj.klass->_1.element_class);
-    if ( !v17 )
-      goto LABEL_102;
-    v21 = StringLiteral_735/*", name:"*/;
-  }
-  else
-  {
-    v21 = 0LL;
-  }
-  if ( *p_max_length <= 2 )
-    goto LABEL_101;
-  v16->m_Items[2] = (System_String_o *)v21;
-  sub_B0D840(&v16->m_Items[2], v21);
-  name = this->fields.name;
-  if ( name )
-  {
-    v17 = (System_String_o *)sub_B0D964(this->fields.name, v16->obj.klass->_1.element_class);
-    if ( !v17 )
-      goto LABEL_102;
-  }
-  if ( *p_max_length <= 3 )
-    goto LABEL_101;
-  v16->m_Items[3] = name;
-  sub_B0D840(&v16->m_Items[3], name);
-  v17 = (System_String_o *)StringLiteral_727/*", appleShopId:"*/;
-  if ( StringLiteral_727/*", appleShopId:"*/ )
-  {
-    v17 = (System_String_o *)sub_B0D964(StringLiteral_727/*", appleShopId:"*/, v16->obj.klass->_1.element_class);
-    if ( !v17 )
-      goto LABEL_102;
-    v23 = StringLiteral_727/*", appleShopId:"*/;
-  }
-  else
-  {
-    v23 = 0LL;
-  }
-  if ( *p_max_length <= 4 )
-    goto LABEL_101;
-  v16->m_Items[4] = (System_String_o *)v23;
-  sub_B0D840(&v16->m_Items[4], v23);
-  appleShopId = this->fields.appleShopId;
-  if ( appleShopId )
-  {
-    v17 = (System_String_o *)sub_B0D964(this->fields.appleShopId, v16->obj.klass->_1.element_class);
-    if ( !v17 )
-      goto LABEL_102;
-  }
-  if ( *p_max_length <= 5 )
-    goto LABEL_101;
-  v16->m_Items[5] = appleShopId;
-  sub_B0D840(&v16->m_Items[5], appleShopId);
-  v17 = (System_String_o *)StringLiteral_732/*", googleShopId:"*/;
-  if ( StringLiteral_732/*", googleShopId:"*/ )
-  {
-    v17 = (System_String_o *)sub_B0D964(StringLiteral_732/*", googleShopId:"*/, v16->obj.klass->_1.element_class);
-    if ( !v17 )
-      goto LABEL_102;
-    v25 = StringLiteral_732/*", googleShopId:"*/;
-  }
-  else
-  {
-    v25 = 0LL;
-  }
-  if ( *p_max_length <= 6 )
-    goto LABEL_101;
-  v16->m_Items[6] = (System_String_o *)v25;
-  sub_B0D840(&v16->m_Items[6], v25);
-  googleShopId = this->fields.googleShopId;
-  if ( googleShopId )
-  {
-    v17 = (System_String_o *)sub_B0D964(this->fields.googleShopId, v16->obj.klass->_1.element_class);
-    if ( !v17 )
-      goto LABEL_102;
-  }
-  if ( *p_max_length <= 7 )
-    goto LABEL_101;
-  v16->m_Items[7] = googleShopId;
-  sub_B0D840(&v16->m_Items[7], googleShopId);
-  v17 = (System_String_o *)StringLiteral_728/*", auShopId:"*/;
-  if ( StringLiteral_728/*", auShopId:"*/ )
-  {
-    v17 = (System_String_o *)sub_B0D964(StringLiteral_728/*", auShopId:"*/, v16->obj.klass->_1.element_class);
-    if ( !v17 )
-      goto LABEL_102;
-    v27 = StringLiteral_728/*", auShopId:"*/;
-  }
-  else
-  {
-    v27 = 0LL;
-  }
-  if ( *p_max_length <= 8 )
-    goto LABEL_101;
-  v16->m_Items[8] = (System_String_o *)v27;
-  sub_B0D840(&v16->m_Items[8], v27);
-  auShopId = this->fields.auShopId;
-  if ( auShopId )
-  {
-    v17 = (System_String_o *)sub_B0D964(this->fields.auShopId, v16->obj.klass->_1.element_class);
-    if ( !v17 )
-      goto LABEL_102;
-  }
-  if ( *p_max_length <= 9 )
-    goto LABEL_101;
-  v16->m_Items[9] = auShopId;
-  sub_B0D840(&v16->m_Items[9], auShopId);
-  v17 = (System_String_o *)StringLiteral_726/*", applePrice:"*/;
-  if ( StringLiteral_726/*", applePrice:"*/ )
-  {
-    v17 = (System_String_o *)sub_B0D964(StringLiteral_726/*", applePrice:"*/, v16->obj.klass->_1.element_class);
-    if ( !v17 )
-      goto LABEL_102;
-    v29 = StringLiteral_726/*", applePrice:"*/;
-  }
-  else
-  {
-    v29 = 0LL;
-  }
   if ( *p_max_length <= 0xA )
     goto LABEL_101;
-  v16->m_Items[10] = (System_String_o *)v29;
-  sub_B0D840(&v16->m_Items[10], v29);
-  v17 = System_Int32__ToString((int)this + 48, 0LL);
-  v30 = v17;
-  if ( v17 )
+  v5->m_Items[10] = (System_String_o *)v18;
+  sub_B52920(&v5->m_Items[10]);
+  v6 = System_Int32__ToString((int)this + 48, 0LL);
+  v19 = v6;
+  if ( v6 )
   {
-    v17 = (System_String_o *)sub_B0D964(v17, v16->obj.klass->_1.element_class);
-    if ( !v17 )
+    v6 = (System_String_o *)sub_B52A44(v6, v5->obj.klass->_1.element_class);
+    if ( !v6 )
       goto LABEL_102;
   }
   if ( *p_max_length <= 0xB )
     goto LABEL_101;
-  v16->m_Items[11] = v30;
-  sub_B0D840(&v16->m_Items[11], v30);
-  v17 = (System_String_o *)StringLiteral_731/*", googlePrice:"*/;
-  if ( StringLiteral_731/*", googlePrice:"*/ )
+  v5->m_Items[11] = v19;
+  sub_B52920(&v5->m_Items[11]);
+  v6 = (System_String_o *)StringLiteral_735/*", googlePrice:"*/;
+  if ( StringLiteral_735/*", googlePrice:"*/ )
   {
-    v17 = (System_String_o *)sub_B0D964(StringLiteral_731/*", googlePrice:"*/, v16->obj.klass->_1.element_class);
-    if ( !v17 )
+    v6 = (System_String_o *)sub_B52A44(StringLiteral_735/*", googlePrice:"*/, v5->obj.klass->_1.element_class);
+    if ( !v6 )
       goto LABEL_102;
-    v31 = StringLiteral_731/*", googlePrice:"*/;
+    v20 = StringLiteral_735/*", googlePrice:"*/;
   }
   else
   {
-    v31 = 0LL;
+    v20 = 0LL;
   }
   if ( *p_max_length <= 0xC )
     goto LABEL_101;
-  v16->m_Items[12] = (System_String_o *)v31;
-  sub_B0D840(&v16->m_Items[12], v31);
-  v17 = System_Int32__ToString((int)this + 52, 0LL);
-  v32 = v17;
-  if ( v17 )
+  v5->m_Items[12] = (System_String_o *)v20;
+  sub_B52920(&v5->m_Items[12]);
+  v6 = System_Int32__ToString((int)this + 52, 0LL);
+  v21 = v6;
+  if ( v6 )
   {
-    v17 = (System_String_o *)sub_B0D964(v17, v16->obj.klass->_1.element_class);
-    if ( !v17 )
+    v6 = (System_String_o *)sub_B52A44(v6, v5->obj.klass->_1.element_class);
+    if ( !v6 )
       goto LABEL_102;
   }
   if ( *p_max_length <= 0xD )
     goto LABEL_101;
-  v16->m_Items[13] = v32;
-  sub_B0D840(&v16->m_Items[13], v32);
-  v17 = (System_String_o *)StringLiteral_740/*", stoneNum:"*/;
-  if ( StringLiteral_740/*", stoneNum:"*/ )
+  v5->m_Items[13] = v21;
+  sub_B52920(&v5->m_Items[13]);
+  v6 = (System_String_o *)StringLiteral_744/*", stoneNum:"*/;
+  if ( StringLiteral_744/*", stoneNum:"*/ )
   {
-    v17 = (System_String_o *)sub_B0D964(StringLiteral_740/*", stoneNum:"*/, v16->obj.klass->_1.element_class);
-    if ( !v17 )
+    v6 = (System_String_o *)sub_B52A44(StringLiteral_744/*", stoneNum:"*/, v5->obj.klass->_1.element_class);
+    if ( !v6 )
       goto LABEL_102;
-    v33 = StringLiteral_740/*", stoneNum:"*/;
+    v22 = StringLiteral_744/*", stoneNum:"*/;
   }
   else
   {
-    v33 = 0LL;
+    v22 = 0LL;
   }
   if ( *p_max_length <= 0xE )
     goto LABEL_101;
-  v16->m_Items[14] = (System_String_o *)v33;
-  sub_B0D840(&v16->m_Items[14], v33);
-  v17 = System_Int32__ToString((int)this + 72, 0LL);
-  v34 = v17;
-  if ( v17 )
+  v5->m_Items[14] = (System_String_o *)v22;
+  sub_B52920(&v5->m_Items[14]);
+  v6 = System_Int32__ToString((int)this + 72, 0LL);
+  v23 = v6;
+  if ( v6 )
   {
-    v17 = (System_String_o *)sub_B0D964(v17, v16->obj.klass->_1.element_class);
-    if ( !v17 )
+    v6 = (System_String_o *)sub_B52A44(v6, v5->obj.klass->_1.element_class);
+    if ( !v6 )
       goto LABEL_102;
   }
   if ( *p_max_length <= 0xF )
     goto LABEL_101;
-  v16->m_Items[15] = v34;
-  sub_B0D840(&v16->m_Items[15], v34);
-  v17 = (System_String_o *)StringLiteral_736/*", numDetail:"*/;
-  if ( StringLiteral_736/*", numDetail:"*/ )
+  v5->m_Items[15] = v23;
+  sub_B52920(&v5->m_Items[15]);
+  v6 = (System_String_o *)StringLiteral_740/*", numDetail:"*/;
+  if ( StringLiteral_740/*", numDetail:"*/ )
   {
-    v17 = (System_String_o *)sub_B0D964(StringLiteral_736/*", numDetail:"*/, v16->obj.klass->_1.element_class);
-    if ( !v17 )
+    v6 = (System_String_o *)sub_B52A44(StringLiteral_740/*", numDetail:"*/, v5->obj.klass->_1.element_class);
+    if ( !v6 )
       goto LABEL_102;
-    v35 = StringLiteral_736/*", numDetail:"*/;
+    v24 = StringLiteral_740/*", numDetail:"*/;
   }
   else
   {
-    v35 = 0LL;
+    v24 = 0LL;
   }
   if ( *p_max_length <= 0x10 )
     goto LABEL_101;
-  v16->m_Items[16] = (System_String_o *)v35;
-  sub_B0D840(&v16->m_Items[16], v35);
+  v5->m_Items[16] = (System_String_o *)v24;
+  sub_B52920(&v5->m_Items[16]);
   numDetail = this->fields.numDetail;
   if ( numDetail )
   {
-    v17 = (System_String_o *)sub_B0D964(this->fields.numDetail, v16->obj.klass->_1.element_class);
-    if ( !v17 )
+    v6 = (System_String_o *)sub_B52A44(this->fields.numDetail, v5->obj.klass->_1.element_class);
+    if ( !v6 )
       goto LABEL_102;
   }
   if ( *p_max_length <= 0x11 )
     goto LABEL_101;
-  v16->m_Items[17] = numDetail;
-  sub_B0D840(&v16->m_Items[17], numDetail);
-  v17 = (System_String_o *)StringLiteral_738/*", priceDetail:"*/;
-  if ( StringLiteral_738/*", priceDetail:"*/ )
+  v5->m_Items[17] = numDetail;
+  sub_B52920(&v5->m_Items[17]);
+  v6 = (System_String_o *)StringLiteral_742/*", priceDetail:"*/;
+  if ( StringLiteral_742/*", priceDetail:"*/ )
   {
-    v17 = (System_String_o *)sub_B0D964(StringLiteral_738/*", priceDetail:"*/, v16->obj.klass->_1.element_class);
-    if ( !v17 )
+    v6 = (System_String_o *)sub_B52A44(StringLiteral_742/*", priceDetail:"*/, v5->obj.klass->_1.element_class);
+    if ( !v6 )
       goto LABEL_102;
-    v37 = StringLiteral_738/*", priceDetail:"*/;
+    v26 = StringLiteral_742/*", priceDetail:"*/;
   }
   else
   {
-    v37 = 0LL;
+    v26 = 0LL;
   }
   if ( *p_max_length <= 0x12 )
     goto LABEL_101;
-  v16->m_Items[18] = (System_String_o *)v37;
-  sub_B0D840(&v16->m_Items[18], v37);
+  v5->m_Items[18] = (System_String_o *)v26;
+  sub_B52920(&v5->m_Items[18]);
   priceDetail = this->fields.priceDetail;
   if ( priceDetail )
   {
-    v17 = (System_String_o *)sub_B0D964(this->fields.priceDetail, v16->obj.klass->_1.element_class);
-    if ( !v17 )
+    v6 = (System_String_o *)sub_B52A44(this->fields.priceDetail, v5->obj.klass->_1.element_class);
+    if ( !v6 )
       goto LABEL_102;
   }
   if ( *p_max_length <= 0x13 )
     goto LABEL_101;
-  v16->m_Items[19] = priceDetail;
-  sub_B0D840(&v16->m_Items[19], priceDetail);
-  v17 = (System_String_o *)StringLiteral_737/*", openAt:"*/;
-  if ( StringLiteral_737/*", openAt:"*/ )
+  v5->m_Items[19] = priceDetail;
+  sub_B52920(&v5->m_Items[19]);
+  v6 = (System_String_o *)StringLiteral_741/*", openAt:"*/;
+  if ( StringLiteral_741/*", openAt:"*/ )
   {
-    v17 = (System_String_o *)sub_B0D964(StringLiteral_737/*", openAt:"*/, v16->obj.klass->_1.element_class);
-    if ( !v17 )
+    v6 = (System_String_o *)sub_B52A44(StringLiteral_741/*", openAt:"*/, v5->obj.klass->_1.element_class);
+    if ( !v6 )
       goto LABEL_102;
-    v39 = StringLiteral_737/*", openAt:"*/;
+    v28 = StringLiteral_741/*", openAt:"*/;
   }
   else
   {
-    v39 = 0LL;
+    v28 = 0LL;
   }
   if ( *p_max_length <= 0x14 )
     goto LABEL_101;
-  v16->m_Items[20] = (System_String_o *)v39;
-  sub_B0D840(&v16->m_Items[20], v39);
-  v17 = System_Int64__ToString((int64_t)&this->fields.openedAt, 0LL);
-  v40 = v17;
-  if ( v17 )
+  v5->m_Items[20] = (System_String_o *)v28;
+  sub_B52920(&v5->m_Items[20]);
+  v6 = System_Int64__ToString((int64_t)&this->fields.openedAt, 0LL);
+  v29 = v6;
+  if ( v6 )
   {
-    v17 = (System_String_o *)sub_B0D964(v17, v16->obj.klass->_1.element_class);
-    if ( !v17 )
+    v6 = (System_String_o *)sub_B52A44(v6, v5->obj.klass->_1.element_class);
+    if ( !v6 )
       goto LABEL_102;
   }
   if ( *p_max_length <= 0x15 )
     goto LABEL_101;
-  v16->m_Items[21] = v40;
-  sub_B0D840(&v16->m_Items[21], v40);
-  v17 = (System_String_o *)StringLiteral_730/*", closeAt:"*/;
-  if ( StringLiteral_730/*", closeAt:"*/ )
+  v5->m_Items[21] = v29;
+  sub_B52920(&v5->m_Items[21]);
+  v6 = (System_String_o *)StringLiteral_734/*", closeAt:"*/;
+  if ( StringLiteral_734/*", closeAt:"*/ )
   {
-    v17 = (System_String_o *)sub_B0D964(StringLiteral_730/*", closeAt:"*/, v16->obj.klass->_1.element_class);
-    if ( !v17 )
+    v6 = (System_String_o *)sub_B52A44(StringLiteral_734/*", closeAt:"*/, v5->obj.klass->_1.element_class);
+    if ( !v6 )
       goto LABEL_102;
-    v41 = StringLiteral_730/*", closeAt:"*/;
+    v30 = StringLiteral_734/*", closeAt:"*/;
   }
   else
   {
-    v41 = 0LL;
+    v30 = 0LL;
   }
   if ( *p_max_length <= 0x16 )
     goto LABEL_101;
-  v16->m_Items[22] = (System_String_o *)v41;
-  sub_B0D840(&v16->m_Items[22], v41);
-  v17 = System_Int64__ToString((int64_t)&this->fields.closedAt, 0LL);
-  v42 = v17;
-  if ( v17 )
+  v5->m_Items[22] = (System_String_o *)v30;
+  sub_B52920(&v5->m_Items[22]);
+  v6 = System_Int64__ToString((int64_t)&this->fields.closedAt, 0LL);
+  v31 = v6;
+  if ( v6 )
   {
-    v17 = (System_String_o *)sub_B0D964(v17, v16->obj.klass->_1.element_class);
-    if ( !v17 )
+    v6 = (System_String_o *)sub_B52A44(v6, v5->obj.klass->_1.element_class);
+    if ( !v6 )
     {
 LABEL_102:
-      v45 = sub_B0D99C();
-      sub_B0D948(v45, 0LL);
+      v34 = sub_B52A7C();
+      sub_B52A28(v34, 0LL);
     }
   }
   if ( *p_max_length <= 0x17 )
   {
 LABEL_101:
-    v44 = sub_B0D9A8(v17);
-    sub_B0D948(v44, 0LL);
+    v33 = sub_B52A88(v6);
+    sub_B52A28(v33, 0LL);
   }
-  v16->m_Items[23] = v42;
-  sub_B0D840(&v16->m_Items[23], v42);
-  return System_String__Concat_43930028(v16, 0LL);
+  v5->m_Items[23] = v31;
+  sub_B52920(&v5->m_Items[23]);
+  return System_String__Concat_44648440(v5, 0LL);
 }

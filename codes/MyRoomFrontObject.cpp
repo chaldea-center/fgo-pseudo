@@ -1,25 +1,23 @@
 void __fastcall MyRoomFrontObject___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
-  ManagerConfig_c *v3; // x0
+  ManagerConfig_c *v1; // x0
   struct MyRoomFrontObject_StaticFields *static_fields; // x10
 
-  if ( (byte_4213DCE & 1) == 0 )
+  if ( (byte_42AFA92 & 1) == 0 )
   {
-    sub_B0D8A4(&ManagerConfig_TypeInfo, v1);
-    sub_B0D8A4(&MyRoomFrontObject_TypeInfo, v2);
-    byte_4213DCE = 1;
+    sub_B52984(&ManagerConfig_TypeInfo);
+    sub_B52984(&MyRoomFrontObject_TypeInfo);
+    byte_42AFA92 = 1;
   }
-  v3 = ManagerConfig_TypeInfo;
+  v1 = ManagerConfig_TypeInfo;
   if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v3 = ManagerConfig_TypeInfo;
+    v1 = ManagerConfig_TypeInfo;
   }
   static_fields = MyRoomFrontObject_TypeInfo->static_fields;
-  static_fields->DefaultFrameOutMoveValue.fields.x = (float)-v3->static_fields->WIDTH_21_9;
+  static_fields->DefaultFrameOutMoveValue.fields.x = (float)-v1->static_fields->WIDTH_21_9;
   static_fields->DefaultFrameOutMoveValue.fields.y = 0.0;
   static_fields->DefaultFrameOutMoveValue.fields.z = 0.0;
   MyRoomFrontObject_TypeInfo->static_fields->DefaultFrameInOutDuration = 0.3;
@@ -32,10 +30,10 @@ void __fastcall MyRoomFrontObject___ctor(MyRoomFrontObject_o *this, const Method
   struct MyRoomFrontObject_StaticFields *static_fields; // x8
   __int64 v5; // x9
 
-  if ( (byte_4213DCD & 1) == 0 )
+  if ( (byte_42AFA91 & 1) == 0 )
   {
-    sub_B0D8A4(&MyRoomFrontObject_TypeInfo, method);
-    byte_4213DCD = 1;
+    sub_B52984(&MyRoomFrontObject_TypeInfo);
+    byte_42AFA91 = 1;
   }
   v3 = MyRoomFrontObject_TypeInfo;
   if ( (BYTE3(MyRoomFrontObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -66,10 +64,10 @@ void __fastcall MyRoomFrontObject__Awake(MyRoomFrontObject_o *this, const Method
   UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o zero; // 0:s3.4,4:s4.4,8:s5.4
 
-  if ( (byte_4213DCC & 1) == 0 )
+  if ( (byte_42AFA90 & 1) == 0 )
   {
-    sub_B0D8A4(&MyRoomFrontObject_TypeInfo, method);
-    byte_4213DCC = 1;
+    sub_B52984(&MyRoomFrontObject_TypeInfo);
+    byte_42AFA90 = 1;
   }
   y = this->fields.frameOutMoveValue.fields.y;
   z = this->fields.frameOutMoveValue.fields.z;
@@ -118,7 +116,8 @@ void __fastcall MyRoomFrontObject__Setup(
   float y; // s9
   float x; // s10
   UnityEngine_Transform_o *transform; // x0
-  UnityEngine_Vector3_o v8; // 0:s0.4,4:s1.4,8:s2.4
+  __int64 v8; // x1
+  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
 
   LODWORD(this[1].klass) = id;
   z = position.fields.z;
@@ -126,11 +125,11 @@ void __fastcall MyRoomFrontObject__Setup(
   x = position.fields.x;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_B0D97C(0LL);
-  v8.fields.y = y;
-  v8.fields.z = z;
-  v8.fields.x = x;
-  UnityEngine_Transform__set_localPosition(transform, v8, 0LL);
+    sub_B52A5C(0LL, v8);
+  v9.fields.y = y;
+  v9.fields.z = z;
+  v9.fields.x = x;
+  UnityEngine_Transform__set_localPosition(transform, v9, 0LL);
 }
 
 

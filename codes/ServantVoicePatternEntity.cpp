@@ -1,46 +1,42 @@
 void __fastcall ServantVoicePatternEntity___ctor(ServantVoicePatternEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42177B7 & 1) == 0 )
+  if ( (byte_42B3355 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
-    byte_42177B7 = 1;
+    sub_B52984(&Method_DataEntityBase_string___ctor__);
+    byte_42B3355 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall ServantVoicePatternEntity__CheckAddCond(
         ServantVoicePatternEntity_o *this,
         int32_t limitCount,
         int32_t targetValue,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   int32_t value2; // w19
-  int32_t v12; // w20
+  int32_t v8; // w20
   int32_t value1; // w8
   DataManager_o *Instance; // x0
+  __int64 v12; // x1
   UserServantCollectionMaster_o *MasterData_WarQuestSelectionMaster; // x20
   int64_t UserId; // x21
-  const MethodInfo *v18; // x1
+  const MethodInfo *v15; // x1
   int32_t FriendShipRank; // w0
-  ServantLimitImageMaster_o *v20; // x21
-  const MethodInfo *v21; // x1
+  ServantLimitImageMaster_o *v17; // x21
+  const MethodInfo *v18; // x1
 
-  if ( (byte_42177B5 & 1) == 0 )
+  if ( (byte_42B3353 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, *(_QWORD *)&limitCount);
-    sub_B0D8A4(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, v7);
-    sub_B0D8A4(&NetworkManager_TypeInfo, v8);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_B0D8A4(&VoiceCondType_TypeInfo, v10);
-    byte_42177B5 = 1;
+    sub_B52984(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    sub_B52984(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    sub_B52984(&NetworkManager_TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B52984(&VoiceCondType_TypeInfo);
+    byte_42B3353 = 1;
   }
   if ( targetValue == -1 )
   {
@@ -65,19 +61,19 @@ bool __fastcall ServantVoicePatternEntity__CheckAddCond(
       if ( ((1 << value1) & 0x500000) != 0 )
       {
 LABEL_16:
-        Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( Instance )
         {
           MasterData_WarQuestSelectionMaster = (UserServantCollectionMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                                   Instance,
-                                                                                  (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                                                                                  (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
           if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !NetworkManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
           }
           UserId = NetworkManager__get_UserId(0LL);
-          Instance = (DataManager_o *)ServantVoicePatternEntity__GetFixSvtId(this, v18);
+          Instance = (DataManager_o *)ServantVoicePatternEntity__GetFixSvtId(this, v15);
           if ( MasterData_WarQuestSelectionMaster )
           {
             Instance = (DataManager_o *)UserServantCollectionMaster__GetEntityDefinitely(
@@ -100,17 +96,17 @@ LABEL_23:
       }
       if ( value1 == 23 )
       {
-        Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( Instance )
         {
-          v20 = (ServantLimitImageMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+          v17 = (ServantLimitImageMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                Instance,
-                                               (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-          Instance = (DataManager_o *)ServantVoicePatternEntity__GetFixSvtId(this, v21);
-          if ( v20 )
+                                               (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+          Instance = (DataManager_o *)ServantVoicePatternEntity__GetFixSvtId(this, v18);
+          if ( v17 )
           {
             FriendShipRank = ServantLimitImageMaster__GetServantImageLimitSealAfter(
-                               v20,
+                               v17,
                                (int32_t)Instance,
                                limitCount,
                                0LL);
@@ -118,40 +114,39 @@ LABEL_23:
           }
         }
 LABEL_29:
-        sub_B0D97C(Instance);
+        sub_B52A5C(Instance, v12);
       }
     }
     targetValue = -1;
   }
 LABEL_4:
-  v12 = this->fields.value1;
+  v8 = this->fields.value1;
   value2 = this->fields.value2;
   if ( (BYTE3(VoiceCondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !VoiceCondType_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(VoiceCondType_TypeInfo);
   }
-  return VoiceCondType__IsSatisfyCondition(v12, value2, targetValue, 0LL);
+  return VoiceCondType__IsSatisfyCondition(v8, value2, targetValue, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ServantVoicePatternEntity__CreatePK(
         int32_t id,
         int32_t svtId,
         System_String_o *voiceId,
         const MethodInfo *method)
 {
-  if ( (byte_42177B4 & 1) == 0 )
+  if ( (byte_42B3352 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_int__int__string___, *(_QWORD *)&svtId);
-    byte_42177B4 = 1;
+    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_int__int__string___);
+    byte_42B3352 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__string_(
            id,
            svtId,
            voiceId,
-           (const MethodInfo_1713994 *)Method_DataEntityBase_CreateMultiplePK_int__int__string___);
+           (const MethodInfo_1A4E4C8 *)Method_DataEntityBase_CreateMultiplePK_int__int__string___);
 }
 
 
@@ -185,10 +180,10 @@ int32_t __fastcall ServantVoicePatternEntity__GetFixSvtId(ServantVoicePatternEnt
   BalanceConfig_c *v6; // x0
   struct BalanceConfig_StaticFields *static_fields; // x8
 
-  if ( (byte_42177B6 & 1) == 0 )
+  if ( (byte_42B3354 & 1) == 0 )
   {
-    sub_B0D8A4(&BalanceConfig_TypeInfo, method);
-    byte_42177B6 = 1;
+    sub_B52984(&BalanceConfig_TypeInfo);
+    byte_42B3354 = 1;
   }
   svtId = this->fields.svtId;
   p_svtId = &this->fields.svtId;

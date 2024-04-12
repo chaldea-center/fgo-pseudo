@@ -1,56 +1,57 @@
 void __fastcall SpotEntity___ctor(SpotEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42152FB & 1) == 0 )
+  if ( (byte_42B0A6F & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_int___ctor__, method);
-    byte_42152FB = 1;
+    sub_B52984(&Method_DataEntityBase_int___ctor__);
+    byte_42B0A6F = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_2669A80 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_23E2184 *)Method_DataEntityBase_int___ctor__);
 }
 
 
-void __fastcall SpotEntity___ctor_25928556(SpotEntity_o *this, SpotEntity_o *cSrc, const MethodInfo *method)
+void __fastcall SpotEntity___ctor_26176796(SpotEntity_o *this, SpotEntity_o *cSrc, const MethodInfo *method)
 {
   __int64 v5; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  __int64 v6; // x1
+  System_String_array **v7; // x2
+  System_String_array **v8; // x3
+  System_Boolean_array **v9; // x4
+  System_Int32_array **v10; // x5
+  System_Int32_array *v11; // x6
+  System_Int32_array *v12; // x7
   struct System_String_o *name; // x1
   struct System_String_o *closedMessage; // x1
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
+  System_String_array **v15; // x2
+  System_String_array **v16; // x3
+  System_Boolean_array **v17; // x4
+  System_Int32_array **v18; // x5
+  System_Int32_array *v19; // x6
+  System_Int32_array *v20; // x7
   struct System_Int32_array *joinSpotIds; // x1
-  System_String_array **v21; // x2
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
+  System_String_array **v22; // x2
+  System_String_array **v23; // x3
+  System_Boolean_array **v24; // x4
+  System_Int32_array **v25; // x5
+  System_Int32_array *v26; // x6
+  System_Int32_array *v27; // x7
 
-  if ( (byte_42152FC & 1) == 0 )
+  if ( (byte_42B0A70 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_int___ctor__, cSrc);
-    byte_42152FC = 1;
+    sub_B52984(&Method_DataEntityBase_int___ctor__);
+    byte_42B0A70 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_2669A80 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_23E2184 *)Method_DataEntityBase_int___ctor__);
   if ( !cSrc )
-    sub_B0D97C(v5);
+    sub_B52A5C(v5, v6);
   this->fields.id = cSrc->fields.id;
   this->fields.mapId = cSrc->fields.mapId;
   name = cSrc->fields.name;
   this->fields.name = name;
-  sub_B0D840((BattleServantConfConponent_o *)&this->fields.name, (System_Int32_array **)name, v6, v7, v8, v9, v10, v11);
+  sub_B52920((BattleServantConfConponent_o *)&this->fields.name, (System_Int32_array **)name, v7, v8, v9, v10, v11, v12);
   this->fields.imageId = cSrc->fields.imageId;
   this->fields.x = cSrc->fields.x;
   this->fields.y = cSrc->fields.y;
@@ -67,26 +68,26 @@ void __fastcall SpotEntity___ctor_25928556(SpotEntity_o *this, SpotEntity_o *cSr
   this->fields.activeTargetValue = cSrc->fields.activeTargetValue;
   closedMessage = cSrc->fields.closedMessage;
   this->fields.closedMessage = closedMessage;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.closedMessage,
     (System_Int32_array **)closedMessage,
-    v14,
     v15,
     v16,
     v17,
     v18,
-    v19);
+    v19,
+    v20);
   joinSpotIds = cSrc->fields.joinSpotIds;
   this->fields.joinSpotIds = joinSpotIds;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.joinSpotIds,
     (System_Int32_array **)joinSpotIds,
-    v21,
     v22,
     v23,
     v24,
     v25,
-    v26);
+    v26,
+    v27);
   this->fields.flag = cSrc->fields.flag;
 }
 
@@ -138,80 +139,77 @@ System_String_o *__fastcall SpotEntity__GetName(SpotEntity_o *this, const Method
 
 int32_t __fastcall SpotEntity__GetPrioredImgId(SpotEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
   void *Instance; // x0
-  const MethodInfo *v7; // x2
-  int v8; // w8
-  void *v9; // x20
-  unsigned int v10; // w21
-  int32_t *v11; // x24
+  __int64 v4; // x1
+  const MethodInfo *v5; // x2
+  int v6; // w8
+  void *v7; // x20
+  unsigned int v8; // w21
+  int32_t *v9; // x24
   int32_t *p_imageId; // x8
-  __int64 v14; // x0
+  __int64 v12; // x0
 
-  if ( (byte_42152FE & 1) == 0 )
+  if ( (byte_42B0A72 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMasterData_SpotImageMaster___, method);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    sub_B0D8A4(&Method_SingletonTemplate_QuestTree__get_Instance__, v4);
-    sub_B0D8A4(&SingletonTemplate_QuestTree__TypeInfo, v5);
-    byte_42152FE = 1;
+    sub_B52984(&Method_DataManager_GetMasterData_SpotImageMaster___);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B52984(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    sub_B52984(&SingletonTemplate_QuestTree__TypeInfo);
+    byte_42B0A72 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_SpotImageMaster___)) == 0LL
-    || (Instance = SpotImageMaster__GetImageList((SpotImageMaster_o *)Instance, this->fields.id, v7)) == 0LL )
+                     (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_SpotImageMaster___)) == 0LL
+    || (Instance = SpotImageMaster__GetImageList((SpotImageMaster_o *)Instance, this->fields.id, v5)) == 0LL )
   {
 LABEL_19:
-    sub_B0D97C(Instance);
+    sub_B52A5C(Instance, v4);
   }
-  v8 = *((_DWORD *)Instance + 6);
-  v9 = Instance;
-  if ( v8 < 1 )
+  v6 = *((_DWORD *)Instance + 6);
+  v7 = Instance;
+  if ( v6 < 1 )
   {
 LABEL_16:
     p_imageId = &this->fields.imageId;
   }
   else
   {
-    v10 = 0;
+    v8 = 0;
     while ( 1 )
     {
-      if ( v10 >= v8 )
+      if ( v8 >= v6 )
       {
-        v14 = sub_B0D9A8(Instance);
-        sub_B0D948(v14, 0LL);
+        v12 = sub_B52A88(Instance);
+        sub_B52A28(v12, 0LL);
       }
-      v11 = (int32_t *)*((_QWORD *)v9 + (int)v10 + 4);
+      v9 = (int32_t *)*((_QWORD *)v7 + (int)v8 + 4);
       if ( (BYTE3(SingletonTemplate_QuestTree__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !SingletonTemplate_QuestTree__TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(SingletonTemplate_QuestTree__TypeInfo);
       }
-      Instance = SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2A713E8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
-      if ( !v11 || !Instance )
+      Instance = SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2B76134 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+      if ( !v9 || !Instance )
         goto LABEL_19;
-      Instance = (void *)QuestTree__CheckSpotCond((QuestTree_o *)Instance, v11[4], v11[7], v11[8], v11[9], 0LL);
+      Instance = (void *)QuestTree__CheckSpotCond((QuestTree_o *)Instance, v9[4], v9[7], v9[8], v9[9], 0LL);
       if ( ((unsigned __int8)Instance & 1) != 0 )
         break;
-      v8 = *((_DWORD *)v9 + 6);
-      if ( (int)++v10 >= v8 )
+      v6 = *((_DWORD *)v7 + 6);
+      if ( (int)++v8 >= v6 )
         goto LABEL_16;
     }
-    p_imageId = v11 + 6;
+    p_imageId = v9 + 6;
   }
   return *p_imageId;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall SpotEntity__HasFlag(SpotEntity_o *this, int32_t flag, const MethodInfo *method)
 {
-  __int64 v5; // x1
   DataManager_o *Instance; // x0
+  __int64 v6; // x1
   const MethodInfo *v7; // x4
   int32_t id; // w2
   int32_t v9; // w21
@@ -219,19 +217,19 @@ bool __fastcall SpotEntity__HasFlag(SpotEntity_o *this, int32_t flag, const Meth
   int32_t v11; // w8
   int32_t data; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_42152FD & 1) == 0 )
+  if ( (byte_42B0A71 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMasterData_SpotAddMaster___, *(_QWORD *)&flag);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_42152FD = 1;
+    sub_B52984(&Method_DataManager_GetMasterData_SpotAddMaster___);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_42B0A71 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_SpotAddMaster___)) == 0LL )
+                                      (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_SpotAddMaster___)) == 0LL )
   {
-    sub_B0D97C(Instance);
+    sub_B52A5C(Instance, v6);
   }
   id = this->fields.id;
   v9 = this->fields.flag;
@@ -254,21 +252,21 @@ bool __fastcall SpotEntity__IsHiddenInFolder(SpotEntity_o *this, const MethodInf
 
 bool __fastcall SpotEntity__IsOverRideName(SpotEntity_o *this, System_String_o **spotName, const MethodInfo *method)
 {
-  __int64 v5; // x1
   SpotAddMaster_o *Master_WarQuestSelectionMaster; // x0
+  __int64 v6; // x1
   const MethodInfo *v7; // x3
 
-  if ( (byte_42152FA & 1) == 0 )
+  if ( (byte_42B0A6E & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMaster_SpotAddMaster___, spotName);
-    sub_B0D8A4(&DataManager_TypeInfo, v5);
-    byte_42152FA = 1;
+    sub_B52984(&Method_DataManager_GetMaster_SpotAddMaster___);
+    sub_B52984(&DataManager_TypeInfo);
+    byte_42B0A6E = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (SpotAddMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_SpotAddMaster___);
+  Master_WarQuestSelectionMaster = (SpotAddMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_SpotAddMaster___);
   if ( !Master_WarQuestSelectionMaster )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v6);
   return SpotAddMaster__TryGetOverwriteName(Master_WarQuestSelectionMaster, spotName, this->fields.id, v7);
 }
 
@@ -341,35 +339,34 @@ int32_t __fastcall SpotEntity__getSpotId(SpotEntity_o *this, const MethodInfo *m
 
 int32_t __fastcall SpotEntity__get_z(SpotEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   WarQuestSelectionMaster_o *Master_WarQuestSelectionMaster; // x0
+  __int64 v4; // x1
   WarEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_42152F9 & 1) == 0 )
+  if ( (byte_42B0A6D & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMaster_SpotLayerMaster___, method);
-    sub_B0D8A4(&DataManager_TypeInfo, v3);
-    sub_B0D8A4(&Method_DataMasterBase_SpotLayerMaster__SpotLayerEntity__int__TryGetEntity__, v4);
-    byte_42152F9 = 1;
+    sub_B52984(&Method_DataManager_GetMaster_SpotLayerMaster___);
+    sub_B52984(&DataManager_TypeInfo);
+    sub_B52984(&Method_DataMasterBase_SpotLayerMaster__SpotLayerEntity__int__TryGetEntity__);
+    byte_42B0A6D = 1;
   }
   entity = 0LL;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_SpotLayerMaster___);
+  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_SpotLayerMaster___);
   if ( !Master_WarQuestSelectionMaster )
     goto LABEL_12;
   Master_WarQuestSelectionMaster = (WarQuestSelectionMaster_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
                                                                   (DataMasterBase_WarMaster__WarEntity__int__o *)Master_WarQuestSelectionMaster,
                                                                   &entity,
                                                                   this->fields.id,
-                                                                  (const MethodInfo_2669C30 *)Method_DataMasterBase_SpotLayerMaster__SpotLayerEntity__int__TryGetEntity__);
+                                                                  (const MethodInfo_23E2334 *)Method_DataMasterBase_SpotLayerMaster__SpotLayerEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_WarQuestSelectionMaster & 1) != 0 )
   {
     if ( entity )
       return *(&entity->fields.id + 1);
 LABEL_12:
-    sub_B0D97C(Master_WarQuestSelectionMaster);
+    sub_B52A5C(Master_WarQuestSelectionMaster, v4);
   }
   return 0;
 }
@@ -386,7 +383,7 @@ bool __fastcall SpotEntity__isInJoinSpot(SpotEntity_o *this, int32_t spotId, con
   {
     joinSpotIds = this->fields.joinSpotIds;
     if ( !joinSpotIds )
-      sub_B0D97C(this);
+      sub_B52A5C(this, spotId);
     max_length = joinSpotIds->max_length;
     if ( max_length < 1 )
       return 0;
@@ -395,8 +392,8 @@ bool __fastcall SpotEntity__isInJoinSpot(SpotEntity_o *this, int32_t spotId, con
     {
       if ( v5 >= max_length )
       {
-        v7 = sub_B0D9A8(this);
-        sub_B0D948(v7, 0LL);
+        v7 = sub_B52A88(this);
+        sub_B52A28(v7, 0LL);
       }
       if ( joinSpotIds->m_Items[v5 + 1] == spotId )
         break;

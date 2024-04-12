@@ -18,53 +18,50 @@ void __fastcall QuestBoardListViewMultiSecondBattleInformation__Init(
         const MethodInfo *method)
 {
   QuestBoardListViewMultiSecondBattleInformation_o *v4; // x19
-  __int64 v5; // x1
-  System_Int32_array **v6; // x0
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
+  System_Int32_array **v5; // x0
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
   struct UISprite_array *spList; // x20
   int max_length; // w8
-  unsigned int v15; // w21
-  const MethodInfo *v16; // x1
+  unsigned int v14; // w21
+  const MethodInfo *v15; // x1
   float unscaledTime; // s8
-  QuestBoardListViewMultiSecondBattleInformation_c *v18; // x0
-  __int64 v19; // x0
+  QuestBoardListViewMultiSecondBattleInformation_c *v17; // x0
+  __int64 v18; // x0
 
   v4 = this;
-  if ( (byte_4213C61 & 1) == 0 )
+  if ( (byte_42B018A & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_UISprite__ToArray__, objList);
-    this = (QuestBoardListViewMultiSecondBattleInformation_o *)sub_B0D8A4(
-                                                                 &QuestBoardListViewMultiSecondBattleInformation_TypeInfo,
-                                                                 v5);
-    byte_4213C61 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_UISprite__ToArray__);
+    this = (QuestBoardListViewMultiSecondBattleInformation_o *)sub_B52984(&QuestBoardListViewMultiSecondBattleInformation_TypeInfo);
+    byte_42B018A = 1;
   }
   if ( !objList )
     goto LABEL_15;
-  v6 = (System_Int32_array **)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
+  v5 = (System_Int32_array **)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
                                 (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)objList,
-                                (const MethodInfo_2FC7834 *)Method_System_Collections_Generic_List_UISprite__ToArray__);
-  v4->fields.spList = (struct UISprite_array *)v6;
-  sub_B0D840((BattleServantConfConponent_o *)&v4->fields.spList, v6, v7, v8, v9, v10, v11, v12);
+                                (const MethodInfo_2FF3750 *)Method_System_Collections_Generic_List_UISprite__ToArray__);
+  v4->fields.spList = (struct UISprite_array *)v5;
+  sub_B52920((BattleServantConfConponent_o *)&v4->fields.spList, v5, v6, v7, v8, v9, v10, v11);
   spList = v4->fields.spList;
   if ( !spList )
     goto LABEL_15;
   max_length = spList->max_length;
   if ( max_length >= 1 )
   {
-    v15 = 0;
+    v14 = 0;
     while ( 1 )
     {
-      if ( v15 >= max_length )
+      if ( v14 >= max_length )
       {
-        v19 = sub_B0D9A8(this);
-        sub_B0D948(v19, 0LL);
+        v18 = sub_B52A88(this);
+        sub_B52A28(v18, 0LL);
       }
-      this = (QuestBoardListViewMultiSecondBattleInformation_o *)spList->m_Items[v15];
+      this = (QuestBoardListViewMultiSecondBattleInformation_o *)spList->m_Items[v14];
       if ( !this )
         break;
       this = (QuestBoardListViewMultiSecondBattleInformation_o *)UnityEngine_Component__get_gameObject(
@@ -74,24 +71,24 @@ void __fastcall QuestBoardListViewMultiSecondBattleInformation__Init(
         break;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
       max_length = spList->max_length;
-      if ( (int)++v15 >= max_length )
+      if ( (int)++v14 >= max_length )
         goto LABEL_11;
     }
 LABEL_15:
-    sub_B0D97C(this);
+    sub_B52A5C(this, objList);
   }
 LABEL_11:
   *(_WORD *)&v4->fields.forward = 0;
   unscaledTime = UnityEngine_Time__get_unscaledTime(0LL);
-  v18 = QuestBoardListViewMultiSecondBattleInformation_TypeInfo;
+  v17 = QuestBoardListViewMultiSecondBattleInformation_TypeInfo;
   if ( (BYTE3(QuestBoardListViewMultiSecondBattleInformation_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !QuestBoardListViewMultiSecondBattleInformation_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(QuestBoardListViewMultiSecondBattleInformation_TypeInfo);
-    v18 = QuestBoardListViewMultiSecondBattleInformation_TypeInfo;
+    v17 = QuestBoardListViewMultiSecondBattleInformation_TypeInfo;
   }
-  v18->static_fields->initTime = unscaledTime;
-  QuestBoardListViewMultiSecondBattleInformation__SetNext(v4, v16);
+  v17->static_fields->initTime = unscaledTime;
+  QuestBoardListViewMultiSecondBattleInformation__SetNext(v4, v15);
 }
 
 
@@ -115,10 +112,10 @@ void __fastcall QuestBoardListViewMultiSecondBattleInformation__Reset(
 
   v8 = this;
   this->fields.spList = 0LL;
-  sub_B0D840((BattleServantConfConponent_o *)&this->fields.spList, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B52920((BattleServantConfConponent_o *)&this->fields.spList, 0LL, v2, v3, v4, v5, v6, v7);
   v8->fields.oldSp = 0LL;
   v8 = (QuestBoardListViewMultiSecondBattleInformation_o *)((char *)v8 + 168);
-  sub_B0D840((BattleServantConfConponent_o *)v8, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_B52920((BattleServantConfConponent_o *)v8, 0LL, v9, v10, v11, v12, v13, v14);
   LODWORD(v8->monitor) = 0;
   WORD2(v8->monitor) = 0;
 }
@@ -128,10 +125,10 @@ void __fastcall QuestBoardListViewMultiSecondBattleInformation__SetNext(
         QuestBoardListViewMultiSecondBattleInformation_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   struct UISprite_o **p_oldSp; // x20
   UnityEngine_Object_o *oldSp; // x21
   UnityEngine_Component_o *gameObject; // x0
+  __int64 v6; // x1
   struct UISprite_array *spList; // x8
   __int64 currentIndex; // x9
   System_String_array **v9; // x2
@@ -147,11 +144,11 @@ void __fastcall QuestBoardListViewMultiSecondBattleInformation__SetNext(
   int v19; // w20
   __int64 v20; // x0
 
-  if ( (byte_4213C62 & 1) == 0 )
+  if ( (byte_42B018B & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Linq_Enumerable_Count_UISprite___, method);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
-    byte_4213C62 = 1;
+    sub_B52984(&Method_System_Linq_Enumerable_Count_UISprite___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B018B = 1;
   }
   p_oldSp = &this->fields.oldSp;
   oldSp = (UnityEngine_Object_o *)this->fields.oldSp;
@@ -184,18 +181,18 @@ void __fastcall QuestBoardListViewMultiSecondBattleInformation__SetNext(
         (v15 = this->fields.spList) == 0LL) )
   {
 LABEL_19:
-    sub_B0D97C(gameObject);
+    sub_B52A5C(gameObject, v6);
   }
   v16 = this->fields.currentIndex;
   if ( (unsigned int)v16 >= v15->max_length )
   {
 LABEL_20:
-    v20 = sub_B0D9A8(gameObject);
-    sub_B0D948(v20, 0LL);
+    v20 = sub_B52A88(gameObject);
+    sub_B52A28(v20, 0LL);
   }
   v17 = v15->m_Items[v16];
   this->fields.oldSp = v17;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.oldSp,
     (System_Int32_array **)v17,
     v9,
@@ -209,7 +206,7 @@ LABEL_20:
   this->fields.currentIndex = v19;
   if ( v19 >= System_Linq_Enumerable__Count_WarBoardSquareIndexData_SaveData_(
                 v18,
-                (const MethodInfo_1B4785C *)Method_System_Linq_Enumerable_Count_UISprite___) )
+                (const MethodInfo_1B5EDCC *)Method_System_Linq_Enumerable_Count_UISprite___) )
     this->fields.currentIndex = 0;
 }
 
@@ -228,10 +225,10 @@ void __fastcall QuestBoardListViewMultiSecondBattleInformation__Update(
   const MethodInfo *v10; // x1
   _BOOL4 oldForward; // w8
 
-  if ( (byte_4213C60 & 1) == 0 )
+  if ( (byte_42B0189 & 1) == 0 )
   {
-    sub_B0D8A4(&QuestBoardListViewMultiSecondBattleInformation_TypeInfo, method);
-    byte_4213C60 = 1;
+    sub_B52984(&QuestBoardListViewMultiSecondBattleInformation_TypeInfo);
+    byte_42B0189 = 1;
   }
   unscaledTime = UnityEngine_Time__get_unscaledTime(0LL);
   v4 = QuestBoardListViewMultiSecondBattleInformation_TypeInfo;

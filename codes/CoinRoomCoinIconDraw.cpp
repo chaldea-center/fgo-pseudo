@@ -10,19 +10,19 @@ void __fastcall CoinRoomCoinIconDraw__ResetItem(
         bool isInput,
         const MethodInfo *method)
 {
-  __int64 v6; // x1
   UnityEngine_Object_o *baseButton; // x21
+  __int64 v7; // x1
   UnityEngine_GameObject_o *infoObject; // x0
   const MethodInfo *v9; // x3
   _BOOL4 isHeroine_k__BackingField; // w8
   char v11; // w1
   bool v12; // w2
 
-  if ( (byte_4214742 & 1) == 0 )
+  if ( (byte_42B07EB & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, iconItem);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v6);
-    byte_4214742 = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B07EB = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -84,7 +84,7 @@ void __fastcall CoinRoomCoinIconDraw__ResetItem(
     || (UnityEngine_GameObject__SetActive(infoObject, 1, 0LL), (infoObject = this->fields.canStrengthObject) == 0LL) )
   {
 LABEL_26:
-    sub_B0D97C(infoObject);
+    sub_B52A5C(infoObject, v7);
   }
   UnityEngine_GameObject__SetActive(infoObject, 0, 0LL);
   isHeroine_k__BackingField = iconItem->fields._isHeroine_k__BackingField;
@@ -111,18 +111,16 @@ void __fastcall CoinRoomCoinIconDraw__SetEnabledMask(
         bool isHeroine,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
   UnityEngine_Component_o *maskSprite; // x0
   UILabel_o *infoLabel; // x20
-  __int64 *v11; // x8
+  __int64 *v9; // x8
 
-  if ( (byte_4214743 & 1) == 0 )
+  if ( (byte_42B07EC & 1) == 0 )
   {
-    sub_B0D8A4(&LocalizationManager_TypeInfo, enabled);
-    sub_B0D8A4(&StringLiteral_3138/*"COIN_ROOM_CAN_NOT_SELECTED"*/, v7);
-    sub_B0D8A4(&StringLiteral_3141/*"COIN_ROOM_COIN_ICON_NOT_SELECT"*/, v8);
-    byte_4214743 = 1;
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&StringLiteral_3158/*"COIN_ROOM_CAN_NOT_SELECTED"*/);
+    sub_B52984(&StringLiteral_3161/*"COIN_ROOM_COIN_ICON_NOT_SELECT"*/);
+    byte_42B07EC = 1;
   }
   maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
   if ( !maskSprite )
@@ -163,7 +161,7 @@ void __fastcall CoinRoomCoinIconDraw__SetEnabledMask(
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v11 = &StringLiteral_3138/*"COIN_ROOM_CAN_NOT_SELECTED"*/;
+                  v9 = &StringLiteral_3158/*"COIN_ROOM_CAN_NOT_SELECTED"*/;
                 }
                 else
                 {
@@ -172,9 +170,9 @@ void __fastcall CoinRoomCoinIconDraw__SetEnabledMask(
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v11 = &StringLiteral_3141/*"COIN_ROOM_COIN_ICON_NOT_SELECT"*/;
+                  v9 = &StringLiteral_3161/*"COIN_ROOM_COIN_ICON_NOT_SELECT"*/;
                 }
-                maskSprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)*v11, 0LL);
+                maskSprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)*v9, 0LL);
                 if ( infoLabel )
                 {
                   UILabel__set_text(infoLabel, (System_String_o *)maskSprite, 0LL);
@@ -187,7 +185,7 @@ void __fastcall CoinRoomCoinIconDraw__SetEnabledMask(
       }
     }
 LABEL_24:
-    sub_B0D97C(maskSprite);
+    sub_B52A5C(maskSprite, enabled);
   }
 }
 
@@ -199,26 +197,22 @@ void __fastcall CoinRoomCoinIconDraw__SetItem(
         bool isSelectDialog,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
   ItemIconComponent_o *itemIcon; // x0
   UILabel_o *possessionNum; // x22
-  Il2CppObject *v15; // x0
-  const MethodInfo *v16; // x4
+  Il2CppObject *v11; // x0
+  const MethodInfo *v12; // x4
   UILabel_o *infoLabel; // x21
-  const MethodInfo *v18; // x3
+  const MethodInfo *v14; // x3
   int32_t num_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4214740 & 1) == 0 )
+  if ( (byte_42B07E9 & 1) == 0 )
   {
-    sub_B0D8A4(&int_TypeInfo, iconItem);
-    sub_B0D8A4(&LocalizationManager_TypeInfo, v9);
-    sub_B0D8A4(&StringLiteral_23567/*"{0:#,0}"*/, v10);
-    sub_B0D8A4(&StringLiteral_3138/*"COIN_ROOM_CAN_NOT_SELECTED"*/, v11);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v12);
-    byte_4214740 = 1;
+    sub_B52984(&int_TypeInfo);
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&StringLiteral_23682/*"{0:#,0}"*/);
+    sub_B52984(&StringLiteral_3158/*"COIN_ROOM_CAN_NOT_SELECTED"*/);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B07E9 = 1;
   }
   if ( iconItem && mode )
   {
@@ -232,8 +226,8 @@ void __fastcall CoinRoomCoinIconDraw__SetItem(
         UIIconLabel__Set((UIIconLabel_o *)itemIcon, iconItem->fields.iconLabelInfo, 0LL);
         possessionNum = this->fields.possessionNum;
         num_k__BackingField = iconItem->fields._num_k__BackingField;
-        v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &num_k__BackingField);
-        itemIcon = (ItemIconComponent_o *)System_String__Format((System_String_o *)StringLiteral_23567/*"{0:#,0}"*/, v15, 0LL);
+        v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &num_k__BackingField);
+        itemIcon = (ItemIconComponent_o *)System_String__Format((System_String_o *)StringLiteral_23682/*"{0:#,0}"*/, v11, 0LL);
         if ( possessionNum )
         {
           UILabel__set_text(possessionNum, (System_String_o *)itemIcon, 0LL);
@@ -287,12 +281,12 @@ LABEL_28:
                       iconItem,
                       iconItem->fields._selectedNum_k__BackingField,
                       0,
-                      v16);
+                      v12);
                     CoinRoomCoinIconDraw__SetEnabledMask(
                       this,
                       !iconItem->fields._isTouchEnabled_k__BackingField,
                       iconItem->fields._isHeroine_k__BackingField,
-                      v18);
+                      v14);
                     return;
                   }
                   itemIcon = (ItemIconComponent_o *)this->fields.infoObject;
@@ -307,7 +301,7 @@ LABEL_28:
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                     }
                     itemIcon = (ItemIconComponent_o *)LocalizationManager__Get(
-                                                        (System_String_o *)StringLiteral_3138/*"COIN_ROOM_CAN_NOT_SELECTED"*/,
+                                                        (System_String_o *)StringLiteral_3158/*"COIN_ROOM_CAN_NOT_SELECTED"*/,
                                                         0LL);
                     if ( infoLabel )
                     {
@@ -323,7 +317,7 @@ LABEL_28:
       }
     }
 LABEL_30:
-    sub_B0D97C(itemIcon);
+    sub_B52A5C(itemIcon, iconItem);
   }
 }
 
@@ -335,25 +329,22 @@ void __fastcall CoinRoomCoinIconDraw__UpdateItem(
         bool isInput,
         const MethodInfo *method)
 {
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
   UnityEngine_Object_o *baseButton; // x22
   UnityEngine_GameObject_o *infoObject; // x0
-  System_String_o *v14; // x21
+  __int64 v10; // x1
+  System_String_o *v11; // x21
   UILabel_o *selectedNumLabel; // x22
-  Il2CppObject *v16; // x0
+  Il2CppObject *v13; // x0
   int32_t selectedNum_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4214741 & 1) == 0 )
+  if ( (byte_42B07EA & 1) == 0 )
   {
-    sub_B0D8A4(&int_TypeInfo, iconItem);
-    sub_B0D8A4(&LocalizationManager_TypeInfo, v8);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v9);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v10);
-    sub_B0D8A4(&StringLiteral_3140/*"COIN_ROOM_COIN_ICON_CONFIRM_NUM"*/, v11);
-    byte_4214741 = 1;
+    sub_B52984(&int_TypeInfo);
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&StringLiteral_1/*""*/);
+    sub_B52984(&StringLiteral_3160/*"COIN_ROOM_COIN_ICON_CONFIRM_NUM"*/);
+    byte_42B07EA = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -384,7 +375,7 @@ void __fastcall CoinRoomCoinIconDraw__UpdateItem(
     return;
   if ( !iconItem )
 LABEL_26:
-    sub_B0D97C(infoObject);
+    sub_B52A5C(infoObject, v10);
   if ( iconItem->fields._selectedNum_k__BackingField >= 1 )
   {
     infoObject = this->fields.infoObject;
@@ -400,10 +391,10 @@ LABEL_26:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        infoObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3140/*"COIN_ROOM_COIN_ICON_CONFIRM_NUM"*/, 0LL);
+        infoObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3160/*"COIN_ROOM_COIN_ICON_CONFIRM_NUM"*/, 0LL);
         if ( this->fields.selectedNumLabel )
         {
-          v14 = (System_String_o *)infoObject;
+          v11 = (System_String_o *)infoObject;
           infoObject = UnityEngine_Component__get_gameObject(
                          (UnityEngine_Component_o *)this->fields.selectedNumLabel,
                          0LL);
@@ -412,8 +403,8 @@ LABEL_26:
             UnityEngine_GameObject__SetActive(infoObject, 1, 0LL);
             selectedNumLabel = this->fields.selectedNumLabel;
             selectedNum_k__BackingField = iconItem->fields._selectedNum_k__BackingField;
-            v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &selectedNum_k__BackingField);
-            infoObject = (UnityEngine_GameObject_o *)System_String__Format(v14, v16, 0LL);
+            v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &selectedNum_k__BackingField);
+            infoObject = (UnityEngine_GameObject_o *)System_String__Format(v11, v13, 0LL);
             if ( selectedNumLabel )
             {
               UILabel__set_text(selectedNumLabel, (System_String_o *)infoObject, 0LL);

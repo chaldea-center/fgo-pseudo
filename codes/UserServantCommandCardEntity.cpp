@@ -1,13 +1,13 @@
 void __fastcall UserServantCommandCardEntity___ctor(UserServantCommandCardEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4212CB2 & 1) == 0 )
+  if ( (byte_42AE1F8 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4212CB2 = 1;
+    sub_B52984(&Method_DataEntityBase_string___ctor__);
+    byte_42AE1F8 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -16,15 +16,15 @@ System_String_o *__fastcall UserServantCommandCardEntity__CreatePK(
         int64_t svtId,
         const MethodInfo *method)
 {
-  if ( (byte_4212CB1 & 1) == 0 )
+  if ( (byte_42AE1F7 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_long__long___, svtId);
-    byte_4212CB1 = 1;
+    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_long__long___);
+    byte_42AE1F7 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long_(
            userId,
            svtId,
-           (const MethodInfo_17135E4 *)Method_DataEntityBase_CreateMultiplePK_long__long___);
+           (const MethodInfo_1A4E118 *)Method_DataEntityBase_CreateMultiplePK_long__long___);
 }
 
 
@@ -42,10 +42,10 @@ System_String_o *__fastcall UserServantCommandCardEntity__CreatePrimaryKey(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v11; // [xsp+20h] [xbp-50h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v12; // [xsp+40h] [xbp-30h]
 
-  if ( (byte_4212CB0 & 1) == 0 )
+  if ( (byte_42AE1F6 & 1) == 0 )
   {
-    sub_B0D8A4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
-    byte_4212CB0 = 1;
+    sub_B52984(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_42AE1F6 = 1;
   }
   v3 = *(_OWORD *)&this->fields.userId.fields.fakeValue;
   *(_OWORD *)&v12.fields.currentCryptoKey = *(_OWORD *)&this->fields.userId.fields.currentCryptoKey;
@@ -56,11 +56,11 @@ System_String_o *__fastcall UserServantCommandCardEntity__CreatePrimaryKey(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   }
   v11 = v12;
-  v4 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44165732(&v11, 0LL);
+  v4 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44789576(&v11, 0LL);
   v5 = *(_OWORD *)&this->fields.svtId.fields.fakeValue;
   v6 = v4;
   *(_OWORD *)&v10.fields.currentCryptoKey = *(_OWORD *)&this->fields.svtId.fields.currentCryptoKey;
   *(_OWORD *)&v10.fields.fakeValue = v5;
-  v7 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44165732(&v10, 0LL);
+  v7 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44789576(&v10, 0LL);
   return UserServantCommandCardEntity__CreatePK(v6, v7, v8);
 }

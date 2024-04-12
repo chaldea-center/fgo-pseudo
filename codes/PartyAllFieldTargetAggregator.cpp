@@ -10,6 +10,7 @@ System_Int32_array *__fastcall PartyAllFieldTargetAggregator__GetCandidate(
 {
   BattleData_o *battleData; // x20
   BattleData_o *actorId; // x0
+  __int64 v5; // x1
   bool isEnemyID; // w20
 
   battleData = TargetAggregator__get_battleData((TargetAggregator_o *)this, 0LL);
@@ -18,7 +19,7 @@ System_Int32_array *__fastcall PartyAllFieldTargetAggregator__GetCandidate(
     || (isEnemyID = BattleData__isEnemyID(battleData, (int32_t)actorId, 0LL),
         (actorId = TargetAggregator__get_battleData((TargetAggregator_o *)this, 0LL)) == 0LL) )
   {
-    sub_B0D97C(actorId);
+    sub_B52A5C(actorId, v5);
   }
   if ( isEnemyID )
     return BattleData__getFieldEnemyServantIDList(actorId, 0, 0LL);

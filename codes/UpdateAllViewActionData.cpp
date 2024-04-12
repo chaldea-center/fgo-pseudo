@@ -11,6 +11,6 @@ void __fastcall UpdateAllViewActionData__ExecAction(
         const MethodInfo *method)
 {
   if ( !perf || (this = (UpdateAllViewActionData_o *)BattlePerformance__get_FieldEnvData(perf, 0LL)) == 0LL )
-    sub_B0D97C(this);
+    sub_B52A5C(this, perf);
   BattleFieldEnvironmentData__UpdateAllView((BattleFieldEnvironmentData_o *)this, 0LL);
 }

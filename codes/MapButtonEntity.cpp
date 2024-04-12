@@ -1,33 +1,34 @@
 void __fastcall MapButtonEntity___ctor(MapButtonEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4213007 & 1) == 0 )
+  if ( (byte_42AE6B2 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4213007 = 1;
+    sub_B52984(&Method_DataEntityBase_string___ctor__);
+    byte_42AE6B2 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void __fastcall MapButtonEntity___ctor_21616916(
+void __fastcall MapButtonEntity___ctor_22252732(
         MapButtonEntity_o *this,
         MapButtonEntity_o *cSrc,
         const MethodInfo *method)
 {
   __int64 v5; // x0
+  __int64 v6; // x1
 
-  if ( (byte_4213008 & 1) == 0 )
+  if ( (byte_42AE6B3 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, cSrc);
-    byte_4213008 = 1;
+    sub_B52984(&Method_DataEntityBase_string___ctor__);
+    byte_42AE6B3 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
   if ( !cSrc )
-    sub_B0D97C(v5);
+    sub_B52A5C(v5, v6);
   this->fields.id = cSrc->fields.id;
   this->fields.priority = cSrc->fields.priority;
   this->fields.targetMapId = cSrc->fields.targetMapId;
@@ -35,23 +36,22 @@ void __fastcall MapButtonEntity___ctor_21616916(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall MapButtonEntity__CreatePK(
         int32_t id,
         int32_t priority,
         int32_t targetMapId,
         const MethodInfo *method)
 {
-  if ( (byte_4213009 & 1) == 0 )
+  if ( (byte_42AE6B4 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&priority);
-    byte_4213009 = 1;
+    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_42AE6B4 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            priority,
            targetMapId,
-           (const MethodInfo_1713844 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1A4E378 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

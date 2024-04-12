@@ -1,12 +1,12 @@
 void __fastcall EventLocationCampaignMaster___ctor(EventLocationCampaignMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4215A0E & 1) == 0 )
+  if ( (byte_42B1151 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataMasterBase_EventLocationCampaignMaster__EventLocationCampaignEntity__int___ctor__, method);
-    byte_4215A0E = 1;
+    sub_B52984(&Method_DataMasterBase_EventLocationCampaignMaster__EventLocationCampaignEntity__int___ctor__);
+    byte_42B1151 = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
-    224,
-    (const MethodInfo_2669B38 *)Method_DataMasterBase_EventLocationCampaignMaster__EventLocationCampaignEntity__int___ctor__);
+    225,
+    (const MethodInfo_23E223C *)Method_DataMasterBase_EventLocationCampaignMaster__EventLocationCampaignEntity__int___ctor__);
 }

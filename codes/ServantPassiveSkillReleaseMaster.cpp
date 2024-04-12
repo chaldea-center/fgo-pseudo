@@ -2,17 +2,15 @@ void __fastcall ServantPassiveSkillReleaseMaster___ctor(
         ServantPassiveSkillReleaseMaster_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4216A01 & 1) == 0 )
+  if ( (byte_42B20BD & 1) == 0 )
   {
-    sub_B0D8A4(
-      &Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string___ctor__,
-      method);
-    byte_4216A01 = 1;
+    sub_B52984(&Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string___ctor__);
+    byte_42B20BD = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-    245,
-    (const MethodInfo_2669F88 *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string___ctor__);
+    246,
+    (const MethodInfo_23E268C *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string___ctor__);
 }
 
 
@@ -27,18 +25,16 @@ ServantPassiveSkillReleaseEntity_o *__fastcall ServantPassiveSkillReleaseMaster_
 {
   System_String_o *PK; // x1
 
-  if ( (byte_42169FF & 1) == 0 )
+  if ( (byte_42B20BB & 1) == 0 )
   {
-    sub_B0D8A4(
-      &Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__GetEntity__,
-      *(_QWORD *)&svtId);
-    byte_42169FF = 1;
+    sub_B52984(&Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__GetEntity__);
+    byte_42B20BB = 1;
   }
   PK = ServantPassiveSkillReleaseEntity__CreatePK(svtId, num, priority, idx, *(const MethodInfo **)&idx);
-  return (ServantPassiveSkillReleaseEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
-                                                 (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
+  return (ServantPassiveSkillReleaseEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
+                                                 (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                                  PK,
-                                                 (const MethodInfo_266A024 *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__GetEntity__);
+                                                 (const MethodInfo_23E2728 *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__GetEntity__);
 }
 
 
@@ -54,19 +50,17 @@ bool __fastcall ServantPassiveSkillReleaseMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4216A00 & 1) == 0 )
+  if ( (byte_42B20BC & 1) == 0 )
   {
-    sub_B0D8A4(
-      &Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__TryGetEntity__,
-      entity);
-    byte_4216A00 = 1;
+    sub_B52984(&Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__TryGetEntity__);
+    byte_42B20BC = 1;
   }
   PK = ServantPassiveSkillReleaseEntity__CreatePK(svtId, num, priority, idx, *(const MethodInfo **)&priority);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266A07C *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_23E2780 *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__TryGetEntity__);
 }
 
 
@@ -81,93 +75,98 @@ bool __fastcall ServantPassiveSkillReleaseMaster__isUse(
         bool isBaseResult,
         const MethodInfo *method)
 {
-  __int64 v13; // x1
   int32_t condGroup; // w28
-  int32_t v15; // w25
+  int32_t v14; // w25
   __int64 *lookup; // x0
-  __int64 v17; // x9
-  bool v18; // w20
+  __int64 v16; // x9
+  bool v17; // w20
   System_String_o *Primarykey; // x26
-  __int64 v20; // x8
-  void *v21; // x27
-  unsigned __int64 v22; // x10
-  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **v23; // x11
-  __int64 v24; // x0
-  const MethodInfo *v25; // x3
-  ServantPassiveSkillReleaseEntity_o *v29; // [xsp+8h] [xbp-58h] BYREF
+  __int64 v19; // x1
+  __int64 v20; // x3
+  __int64 v21; // x8
+  void *v22; // x27
+  unsigned __int64 v23; // x10
+  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **v24; // x11
+  __int64 v25; // x0
+  const MethodInfo *v26; // x3
+  ServantPassiveSkillReleaseEntity_o *v30; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4216A02 & 1) == 0 )
+  if ( (byte_42B20BE & 1) == 0 )
   {
-    sub_B0D8A4(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, *(_QWORD *)&svtId);
-    sub_B0D8A4(&ServantPassiveSkillReleaseEntity_TypeInfo, v13);
-    byte_4216A02 = 1;
+    sub_B52984(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo);
+    sub_B52984(&ServantPassiveSkillReleaseEntity_TypeInfo);
+    byte_42B20BE = 1;
   }
-  v29 = 0LL;
+  v30 = 0LL;
   condGroup = 0;
-  v15 = 1;
+  v14 = 1;
   while ( 1 )
   {
-    v18 = isBaseResult;
+    v17 = isBaseResult;
     Primarykey = ServantPassiveSkillReleaseEntity__getCreatePrimarykey(
                    svtId,
                    num,
                    priority,
-                   v15,
+                   v14,
                    *(const MethodInfo **)&dispLimitCount);
     lookup = (__int64 *)DataMasterBase__get_lookup((DataMasterBase_o *)this, 0LL);
     if ( !lookup )
       goto LABEL_22;
-    v20 = *lookup;
-    v21 = lookup;
+    v21 = *lookup;
+    v22 = lookup;
     if ( *(_WORD *)(*lookup + 298) )
     {
-      v22 = 0LL;
-      v23 = (System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **)(*(_QWORD *)(v20 + 176) + 8LL);
-      while ( *(v23 - 1) != System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo )
+      v23 = 0LL;
+      v24 = (System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **)(*(_QWORD *)(v21 + 176) + 8LL);
+      while ( *(v24 - 1) != System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo )
       {
-        ++v22;
-        v23 += 2;
-        if ( v22 >= *(unsigned __int16 *)(*lookup + 298) )
+        ++v23;
+        v24 += 2;
+        if ( v23 >= *(unsigned __int16 *)(*lookup + 298) )
           goto LABEL_17;
       }
-      v24 = v20 + 16LL * (*(_DWORD *)v23 + 1) + 312;
+      v25 = v21 + 16LL * (*(_DWORD *)v24 + 1) + 312;
     }
     else
     {
 LABEL_17:
-      v24 = sub_AA67A0(lookup, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 1LL);
+      v25 = sub_AEB880(
+              lookup,
+              System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo,
+              1LL,
+              v20);
     }
-    if ( ((*(__int64 (__fastcall **)(void *, System_String_o *, ServantPassiveSkillReleaseEntity_o **, _QWORD))v24)(
-            v21,
+    if ( ((*(__int64 (__fastcall **)(void *, System_String_o *, ServantPassiveSkillReleaseEntity_o **, _QWORD))v25)(
+            v22,
             Primarykey,
-            &v29,
-            *(_QWORD *)(v24 + 8)) & 1) == 0 )
-      return v18;
-    lookup = (__int64 *)v29;
-    if ( !v29 )
+            &v30,
+            *(_QWORD *)(v25 + 8)) & 1) == 0 )
+      return v17;
+    lookup = (__int64 *)v30;
+    if ( !v30 )
       goto LABEL_22;
-    v17 = *(&ServantPassiveSkillReleaseEntity_TypeInfo->_2.bitflags2 + 1);
-    if ( *(&v29->klass->_2.bitflags2 + 1) < (unsigned int)v17
-      || (ServantPassiveSkillReleaseEntity_c *)v29->klass->_2.typeHierarchy[v17 - 1] != ServantPassiveSkillReleaseEntity_TypeInfo )
+    v16 = *(&ServantPassiveSkillReleaseEntity_TypeInfo->_2.bitflags2 + 1);
+    if ( *(&v30->klass->_2.bitflags2 + 1) < (unsigned int)v16
+      || (ServantPassiveSkillReleaseEntity_c *)v30->klass->_2.typeHierarchy[v16 - 1] != ServantPassiveSkillReleaseEntity_TypeInfo )
     {
-      sub_B0DC70(v29);
+      sub_B52D50(v30);
 LABEL_22:
-      sub_B0D97C(lookup);
+      sub_B52A5C(lookup, v19);
     }
-    ++v15;
-    if ( condGroup == v29->fields.condGroup )
+    ++v14;
+    if ( condGroup == v30->fields.condGroup )
     {
       isBaseResult = 0;
-      if ( v18 )
+      if ( v17 )
         goto LABEL_11;
     }
     else
     {
-      condGroup = v29->fields.condGroup;
-      if ( v18 )
-        return v18;
+      condGroup = v30->fields.condGroup;
+      if ( v17 )
+        return v17;
 LABEL_11:
-      isBaseResult = ServantPassiveSkillReleaseEntity__isUse(v29, dispLimitCount, beforeClearQuestId, v25);
+      isBaseResult = ServantPassiveSkillReleaseEntity__isUse(v30, dispLimitCount, beforeClearQuestId, v26);
     }
   }
 }

@@ -18,19 +18,19 @@ void __fastcall ServantStatusBattleListViewIndicator__OnClickBottom(
         ServantStatusBattleListViewIndicator_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Object_o *manager; // x20
+  __int64 v4; // x1
   ListViewManager_o *v5; // x0
   int32_t pageIndex; // w8
   bool v7; // w3
   int32_t v8; // w1
   struct ListViewManager_o *v9; // x8
 
-  if ( (byte_4212D8B & 1) == 0 )
+  if ( (byte_42AE377 & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
-    sub_B0D8A4(&SoundManager_TypeInfo, v3);
-    byte_4212D8B = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE377 = 1;
   }
   manager = (UnityEngine_Object_o *)this->fields.manager;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -83,7 +83,7 @@ LABEL_23:
         goto LABEL_23;
       }
 LABEL_25:
-      sub_B0D97C(v5);
+      sub_B52A5C(v5, v4);
     }
   }
 }
@@ -93,18 +93,18 @@ void __fastcall ServantStatusBattleListViewIndicator__OnClickTop(
         ServantStatusBattleListViewIndicator_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Object_o *manager; // x20
+  __int64 v4; // x1
   ListViewManager_o *v5; // x0
   int32_t pageIndex; // w8
   bool v7; // w3
   struct ListViewManager_o *v8; // x8
 
-  if ( (byte_4212D8A & 1) == 0 )
+  if ( (byte_42AE376 & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
-    sub_B0D8A4(&SoundManager_TypeInfo, v3);
-    byte_4212D8A = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42AE376 = 1;
   }
   manager = (UnityEngine_Object_o *)this->fields.manager;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -156,7 +156,7 @@ LABEL_22:
         goto LABEL_22;
       }
 LABEL_24:
-      sub_B0D97C(v5);
+      sub_B52A5C(v5, v4);
     }
   }
 }
@@ -174,12 +174,13 @@ void __fastcall ServantStatusBattleListViewIndicator__OnModifyCenterItem(
         const MethodInfo *method)
 {
   struct ListViewManager_o **p_manager; // x23
+  __int64 v13; // x1
   UnityEngine_GameObject_o *bottomObject; // x0
   int32_t index; // w8
 
   this->fields.manager = manager;
   p_manager = &this->fields.manager;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.manager,
     (System_Int32_array **)manager,
     (System_String_array **)item,
@@ -192,7 +193,7 @@ void __fastcall ServantStatusBattleListViewIndicator__OnModifyCenterItem(
   if ( !bottomObject
     || (UnityEngine_GameObject__SetActive(bottomObject, isTop, 0LL), (bottomObject = this->fields.bottomObject) == 0LL) )
   {
-    sub_B0D97C(bottomObject);
+    sub_B52A5C(bottomObject, v13);
   }
   UnityEngine_GameObject__SetActive(bottomObject, isBottom, 0LL);
   if ( item )
@@ -226,12 +227,13 @@ void __fastcall ServantStatusBattleListViewIndicator__OnModifyPosition(
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, isTop, 0LL),
         (this = (ServantStatusBattleListViewIndicator_o *)v4->fields.bottomObject) == 0LL) )
   {
-    sub_B0D97C(this);
+    sub_B52A5C(this, manager);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, isBottom, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantStatusBattleListViewIndicator__SetIndexMax(
         ServantStatusBattleListViewIndicator_o *this,
         int32_t max,
@@ -245,7 +247,7 @@ void __fastcall ServantStatusBattleListViewIndicator__SetIndexMax(
   if ( !topObject
     || (UnityEngine_GameObject__SetActive(topObject, 0, 0LL), (topObject = this->fields.bottomObject) == 0LL) )
   {
-    sub_B0D97C(topObject);
+    sub_B52A5C(topObject, *(_QWORD *)&max);
   }
   UnityEngine_GameObject__SetActive(topObject, 0, 0LL);
 }

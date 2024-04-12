@@ -1,9 +1,9 @@
 void __fastcall PresentBoxOverDialog___ctor(PresentBoxOverDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_421448F & 1) == 0 )
+  if ( (byte_42AFB72 & 1) == 0 )
   {
-    sub_B0D8A4(&BaseDialog_TypeInfo, method);
-    byte_421448F = 1;
+    sub_B52984(&BaseDialog_TypeInfo);
+    byte_42AFB72 = 1;
   }
   this->fields.MESSAGE_FONT_SIZE = 30;
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -16,11 +16,11 @@ void __fastcall PresentBoxOverDialog__Close(PresentBoxOverDialog_o *this, const 
 {
   const MethodInfo *v2; // x2
 
-  PresentBoxOverDialog__Close_24354568(this, 0LL, v2);
+  PresentBoxOverDialog__Close_24674156(this, 0LL, v2);
 }
 
 
-void __fastcall PresentBoxOverDialog__Close_24354568(
+void __fastcall PresentBoxOverDialog__Close_24674156(
         PresentBoxOverDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -30,19 +30,16 @@ void __fastcall PresentBoxOverDialog__Close_24354568(
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x2
-  System_Action_o *v13; // x20
+  System_Action_o *v10; // x20
 
-  if ( (byte_421448B & 1) == 0 )
+  if ( (byte_42AFB6E & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, callback);
-    sub_B0D8A4(&Method_PresentBoxOverDialog_EndClose__, v10);
-    byte_421448B = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&Method_PresentBoxOverDialog_EndClose__);
+    byte_42AFB6E = 1;
   }
   this->fields.closeEndFunc = callback;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.closeEndFunc,
     (System_Int32_array **)callback,
     (System_String_array **)method,
@@ -52,9 +49,9 @@ void __fastcall PresentBoxOverDialog__Close_24354568(
     v6,
     v7);
   this->fields.state = 4;
-  v13 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v11, v12);
-  System_Action___ctor(v13, (Il2CppObject *)this, Method_PresentBoxOverDialog_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v13, 0LL);
+  v10 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+  System_Action___ctor(v10, (Il2CppObject *)this, Method_PresentBoxOverDialog_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
 }
 
 
@@ -77,7 +74,7 @@ void __fastcall PresentBoxOverDialog__EndClose(PresentBoxOverDialog_o *this, con
   if ( closeEndFunc )
   {
     p_closeEndFunc->klass = 0LL;
-    sub_B0D840(p_closeEndFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_B52920(p_closeEndFunc, 0LL, v3, v4, v5, v6, v7, v8);
     System_Action__Invoke(v10, 0LL);
   }
 }
@@ -91,18 +88,17 @@ void __fastcall PresentBoxOverDialog__EndOpen(PresentBoxOverDialog_o *this, cons
 
 void __fastcall PresentBoxOverDialog__Init(PresentBoxOverDialog_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UILabel_o *titleLabel; // x0
-  UnityEngine_Object_o *v5; // x20
+  UnityEngine_Object_o *v4; // x20
   UnityEngine_Object_o *messageLabel; // x20
   UnityEngine_Object_o *closeBtnLabel; // x20
   UnityEngine_Object_o *presentBoxBtnLabel; // x20
 
-  if ( (byte_4214489 & 1) == 0 )
+  if ( (byte_42AFB6C & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v3);
-    byte_4214489 = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42AFB6C = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -112,13 +108,13 @@ void __fastcall PresentBoxOverDialog__Init(PresentBoxOverDialog_o *this, const M
   if ( !titleLabel )
     goto LABEL_31;
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-  v5 = (UnityEngine_Object_o *)this->fields.titleLabel;
+  v4 = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(v5, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v4, 0LL, 0LL) )
   {
     titleLabel = this->fields.titleLabel;
     if ( !titleLabel )
@@ -167,7 +163,7 @@ void __fastcall PresentBoxOverDialog__Init(PresentBoxOverDialog_o *this, const M
   titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !titleLabel )
 LABEL_31:
-    sub_B0D97C(titleLabel);
+    sub_B52A5C(titleLabel, method);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -188,17 +184,17 @@ void __fastcall PresentBoxOverDialog__OnClickClose(PresentBoxOverDialog_o *this,
   PresentBoxOverDialog_ClickDelegate_o *v12; // x20
   struct PresentBoxOverDialog_ClickDelegate_o *clickFunc; // t1
 
-  if ( (byte_421448C & 1) == 0 )
+  if ( (byte_42AFB6F & 1) == 0 )
   {
-    sub_B0D8A4(&Method_PresentBoxOverDialog_OnClickClose__, method);
-    byte_421448C = 1;
+    sub_B52984(&Method_PresentBoxOverDialog_OnClickClose__);
+    byte_42AFB6F = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_PresentBoxOverDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_PresentBoxOverDialog_OnClickClose__ + 75) & 2) != 0 )
-      v3 = (_QWORD *)sub_B0D8AC(Method_PresentBoxOverDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_B0D888(v3, v3[3]);
+      v3 = (_QWORD *)sub_B5298C(Method_PresentBoxOverDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_B52968(v3, v3[3]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     clickFunc = this->fields.clickFunc;
     p_clickFunc = (BattleServantConfConponent_o *)&this->fields.clickFunc;
@@ -206,7 +202,7 @@ void __fastcall PresentBoxOverDialog__OnClickClose(PresentBoxOverDialog_o *this,
     if ( clickFunc )
     {
       p_clickFunc->klass = 0LL;
-      sub_B0D840(p_clickFunc, 0LL, v5, v6, v7, v8, v9, v10);
+      sub_B52920(p_clickFunc, 0LL, v5, v6, v7, v8, v9, v10);
       PresentBoxOverDialog_ClickDelegate__Invoke(v12, 0, 0LL);
     }
   }
@@ -227,17 +223,17 @@ void __fastcall PresentBoxOverDialog__OnClickPresentBox(PresentBoxOverDialog_o *
   PresentBoxOverDialog_ClickDelegate_o *v12; // x20
   struct PresentBoxOverDialog_ClickDelegate_o *clickFunc; // t1
 
-  if ( (byte_421448D & 1) == 0 )
+  if ( (byte_42AFB70 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_PresentBoxOverDialog_OnClickPresentBox__, method);
-    byte_421448D = 1;
+    sub_B52984(&Method_PresentBoxOverDialog_OnClickPresentBox__);
+    byte_42AFB70 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_PresentBoxOverDialog_OnClickPresentBox__;
     if ( (*((_BYTE *)Method_PresentBoxOverDialog_OnClickPresentBox__ + 75) & 2) != 0 )
-      v3 = (_QWORD *)sub_B0D8AC(Method_PresentBoxOverDialog_OnClickPresentBox__);
-    v4 = (System_Reflection_MethodBase_o *)sub_B0D888(v3, v3[3]);
+      v3 = (_QWORD *)sub_B5298C(Method_PresentBoxOverDialog_OnClickPresentBox__);
+    v4 = (System_Reflection_MethodBase_o *)sub_B52968(v3, v3[3]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     clickFunc = this->fields.clickFunc;
     p_clickFunc = (BattleServantConfConponent_o *)&this->fields.clickFunc;
@@ -245,7 +241,7 @@ void __fastcall PresentBoxOverDialog__OnClickPresentBox(PresentBoxOverDialog_o *
     if ( clickFunc )
     {
       p_clickFunc->klass = 0LL;
-      sub_B0D840(p_clickFunc, 0LL, v5, v6, v7, v8, v9, v10);
+      sub_B52920(p_clickFunc, 0LL, v5, v6, v7, v8, v9, v10);
       PresentBoxOverDialog_ClickDelegate__Invoke(v12, 1, 0LL);
     }
   }
@@ -264,37 +260,31 @@ void __fastcall PresentBoxOverDialog__Open(
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
   int32_t MESSAGE_FONT_SIZE; // w21
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
   UnityEngine_Object_o *titleLabel; // x23
-  UILabel_o *v19; // x0
+  __int64 v14; // x1
+  UILabel_o *v15; // x0
   UnityEngine_Object_o *messageLabel; // x22
   UnityEngine_Object_o *closeBtnLabel; // x20
-  UILabel_o *v22; // x20
+  UILabel_o *v18; // x20
   UnityEngine_Object_o *presentBoxBtnLabel; // x20
-  __int64 v24; // x1
-  __int64 v25; // x2
-  UILabel_o *v26; // x20
-  System_Action_o *v27; // x20
+  UILabel_o *v20; // x20
+  System_Action_o *v21; // x20
 
   MESSAGE_FONT_SIZE = fontSize;
-  if ( (byte_421448A & 1) == 0 )
+  if ( (byte_42AFB6D & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, title);
-    sub_B0D8A4(&LocalizationManager_TypeInfo, v13);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v14);
-    sub_B0D8A4(&Method_PresentBoxOverDialog_EndOpen__, v15);
-    sub_B0D8A4(&StringLiteral_9794/*"OPEN_PRESENT_BOX"*/, v16);
-    sub_B0D8A4(&StringLiteral_3274/*"COMMON_CONFIRM_CLOSE"*/, v17);
-    byte_421448A = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&Method_PresentBoxOverDialog_EndOpen__);
+    sub_B52984(&StringLiteral_9828/*"OPEN_PRESENT_BOX"*/);
+    sub_B52984(&StringLiteral_3294/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_42AFB6D = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.clickFunc = func;
-    sub_B0D840(
+    sub_B52920(
       (BattleServantConfConponent_o *)&this->fields.clickFunc,
       (System_Int32_array **)func,
       (System_String_array **)message,
@@ -311,10 +301,10 @@ void __fastcall PresentBoxOverDialog__Open(
     }
     if ( UnityEngine_Object__op_Inequality(titleLabel, 0LL, 0LL) )
     {
-      v19 = this->fields.titleLabel;
-      if ( !v19 )
+      v15 = this->fields.titleLabel;
+      if ( !v15 )
         goto LABEL_39;
-      UILabel__set_text(v19, title, 0LL);
+      UILabel__set_text(v15, title, 0LL);
     }
     messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -326,18 +316,18 @@ void __fastcall PresentBoxOverDialog__Open(
     {
       if ( !MESSAGE_FONT_SIZE )
         MESSAGE_FONT_SIZE = this->fields.MESSAGE_FONT_SIZE;
-      v19 = this->fields.messageLabel;
-      if ( !v19 )
+      v15 = this->fields.messageLabel;
+      if ( !v15 )
         goto LABEL_39;
-      UILabel__set_fontSize(v19, MESSAGE_FONT_SIZE, 0LL);
-      v19 = this->fields.messageLabel;
-      if ( !v19 )
+      UILabel__set_fontSize(v15, MESSAGE_FONT_SIZE, 0LL);
+      v15 = this->fields.messageLabel;
+      if ( !v15 )
         goto LABEL_39;
-      WrapControlText__textAdjust(v19, message, v19->fields.mFontSize, 0, 0, 0LL);
-      v19 = this->fields.messageLabel;
-      if ( !v19 )
+      WrapControlText__textAdjust(v15, message, v15->fields.mFontSize, 0, 0, 0LL);
+      v15 = this->fields.messageLabel;
+      if ( !v15 )
         goto LABEL_39;
-      UILabel__set_text(v19, message, 0LL);
+      UILabel__set_text(v15, message, 0LL);
     }
     closeBtnLabel = (UnityEngine_Object_o *)this->fields.closeBtnLabel;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -347,16 +337,16 @@ void __fastcall PresentBoxOverDialog__Open(
     }
     if ( UnityEngine_Object__op_Inequality(closeBtnLabel, 0LL, 0LL) )
     {
-      v22 = this->fields.closeBtnLabel;
+      v18 = this->fields.closeBtnLabel;
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v19 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3274/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
-      if ( !v22 )
+      v15 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3294/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+      if ( !v18 )
         goto LABEL_39;
-      UILabel__set_text(v22, (System_String_o *)v19, 0LL);
+      UILabel__set_text(v18, (System_String_o *)v15, 0LL);
     }
     presentBoxBtnLabel = (UnityEngine_Object_o *)this->fields.presentBoxBtnLabel;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -366,25 +356,25 @@ void __fastcall PresentBoxOverDialog__Open(
     }
     if ( !UnityEngine_Object__op_Inequality(presentBoxBtnLabel, 0LL, 0LL) )
       goto LABEL_38;
-    v26 = this->fields.presentBoxBtnLabel;
+    v20 = this->fields.presentBoxBtnLabel;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v19 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9794/*"OPEN_PRESENT_BOX"*/, 0LL);
-    if ( v26 )
+    v15 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9828/*"OPEN_PRESENT_BOX"*/, 0LL);
+    if ( v20 )
     {
-      UILabel__set_text(v26, (System_String_o *)v19, 0LL);
+      UILabel__set_text(v20, (System_String_o *)v15, 0LL);
 LABEL_38:
       this->fields.state = 1;
-      v27 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v24, v25);
-      System_Action___ctor(v27, (Il2CppObject *)this, Method_PresentBoxOverDialog_EndOpen__, 0LL);
-      BaseDialog__Open((BaseDialog_o *)this, v27, 0, 0LL);
+      v21 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+      System_Action___ctor(v21, (Il2CppObject *)this, Method_PresentBoxOverDialog_EndOpen__, 0LL);
+      BaseDialog__Open((BaseDialog_o *)this, v21, 0, 0LL);
       return;
     }
 LABEL_39:
-    sub_B0D97C(v19);
+    sub_B52A5C(v15, v14);
   }
 }
 
@@ -393,12 +383,12 @@ System_String_o *__fastcall PresentBoxOverDialog__get_closeBtnPath(
         PresentBoxOverDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_421448E & 1) == 0 )
+  if ( (byte_42AFB71 & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_15526/*"Window/CloseButton"*/, method);
-    byte_421448E = 1;
+    sub_B52984(&StringLiteral_15584/*"Window/CloseButton"*/);
+    byte_42AFB71 = 1;
   }
-  return (System_String_o *)StringLiteral_15526/*"Window/CloseButton"*/;
+  return (System_String_o *)StringLiteral_15584/*"Window/CloseButton"*/;
 }
 
 
@@ -417,11 +407,10 @@ void __fastcall PresentBoxOverDialog_ClickDelegate___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B0D840(p_method, object);
+  sub_B52920(p_method);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_IAsyncResult_o *__fastcall PresentBoxOverDialog_ClickDelegate__BeginInvoke(
         PresentBoxOverDialog_ClickDelegate_o *this,
         bool isPresentBoxOpen,
@@ -433,14 +422,14 @@ System_IAsyncResult_o *__fastcall PresentBoxOverDialog_ClickDelegate__BeginInvok
   char v10[4]; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10[0] = isPresentBoxOpen;
-  if ( (byte_42121AA & 1) == 0 )
+  if ( (byte_42AD441 & 1) == 0 )
   {
-    sub_B0D8A4(&bool_TypeInfo, isPresentBoxOpen);
-    byte_42121AA = 1;
+    sub_B52984(&bool_TypeInfo);
+    byte_42AD441 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_B0D848(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_B52928(this, v9, callback, object);
 }
 
 
@@ -449,7 +438,7 @@ void __fastcall PresentBoxOverDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B0D84C(result, 0LL, method);
+  sub_B5292C(result, 0LL, method);
 }
 
 
@@ -466,31 +455,33 @@ void __fastcall PresentBoxOverDialog_ClickDelegate__Invoke(
   __int64 v9; // x26
   unsigned int v10; // w23
   __int64 class_0; // x0
-  __int64 v12; // x8
-  unsigned __int64 v13; // x10
-  _DWORD *v14; // x11
-  __int64 v15; // x0
+  __int64 v12; // x3
+  __int64 v13; // x8
+  unsigned __int64 v14; // x10
+  _DWORD *v15; // x11
   __int64 v16; // x0
   __int64 v17; // x0
-  void (__fastcall **v18)(__int64 *, bool, _QWORD); // x0
-  PresentBoxOverDialog_ClickDelegate_o *v19; // x8
-  __int64 *v20; // x21
-  __int64 v21; // x22
-  void (__fastcall *v22)(bool, __int64); // x23
-  char v23; // w23
-  char v24; // w0
-  __int64 v25; // x8
-  __int64 v26; // x1
-  __int64 v27; // x2
-  unsigned __int64 v28; // x10
-  _DWORD *v29; // x11
-  PresentBoxOverDialog_ClickDelegate_o *v30; // [xsp+8h] [xbp-48h] BYREF
+  __int64 v18; // x0
+  void (__fastcall **v19)(__int64 *, bool, _QWORD); // x0
+  PresentBoxOverDialog_ClickDelegate_o *v20; // x8
+  __int64 *v21; // x21
+  __int64 v22; // x22
+  void (__fastcall *v23)(bool, __int64); // x23
+  char v24; // w23
+  char v25; // w0
+  __int64 v26; // x3
+  __int64 v27; // x8
+  __int64 v28; // x1
+  __int64 v29; // x2
+  unsigned __int64 v30; // x10
+  _DWORD *v31; // x11
+  PresentBoxOverDialog_ClickDelegate_o *v32; // [xsp+8h] [xbp-48h] BYREF
 
-  v30 = this;
+  v32 = this;
   v4 = *(_QWORD *)&this[1].fields.method_ptr;
   if ( !v4 )
   {
-    v8 = &v30;
+    v8 = &v32;
     v7 = 1LL;
     goto LABEL_5;
   }
@@ -502,98 +493,98 @@ LABEL_5:
     v9 = 0LL;
     while ( 1 )
     {
-      v19 = v8[v9];
-      v20 = *(__int64 **)&v19->fields.method;
-      v21 = *(_QWORD *)&v19->fields.extra_arg;
-      v22 = *(void (__fastcall **)(bool, __int64))&v19->fields.method_ptr;
-      if ( *(__int16 *)(v21 + 72) == -1 )
-        sub_B0D960(*(_QWORD *)&v19->fields.extra_arg, isPresentBoxOpen, method, v3);
-      if ( (sub_B0D8D4(v21) & 1) == 0 )
+      v20 = v8[v9];
+      v21 = *(__int64 **)&v20->fields.method;
+      v22 = *(_QWORD *)&v20->fields.extra_arg;
+      v23 = *(void (__fastcall **)(bool, __int64))&v20->fields.method_ptr;
+      if ( *(__int16 *)(v22 + 72) == -1 )
+        sub_B52A40(*(_QWORD *)&v20->fields.extra_arg, isPresentBoxOpen, method, v3);
+      if ( (sub_B529B4(v22) & 1) == 0 )
         break;
-      if ( *(_BYTE *)(v21 + 74) != 1 )
+      if ( *(_BYTE *)(v22 + 74) != 1 )
         goto LABEL_36;
-      v22(isPresentBoxOpen, v21);
+      v23(isPresentBoxOpen, v22);
 LABEL_37:
       if ( ++v9 == v7 )
         return;
     }
-    if ( v20 && *(__int16 *)(v21 + 72) != -1 && (*(_BYTE *)(*v20 + 277) & 1) == 0 && this->fields.m_target )
+    if ( v21 && *(__int16 *)(v22 + 72) != -1 && (*(_BYTE *)(*v21 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v23 = sub_B0D8CC(v21);
-      v24 = sub_B0DCD0(v21);
-      if ( (v23 & 1) != 0 )
+      v24 = sub_B529AC(v22);
+      v25 = sub_B52DB0(v22);
+      if ( (v24 & 1) != 0 )
       {
-        if ( (v24 & 1) != 0 )
+        if ( (v25 & 1) != 0 )
         {
-          v25 = *v20;
-          v26 = *(_QWORD *)(v21 + 24);
-          v27 = *(unsigned __int16 *)(v21 + 72);
-          if ( *(_WORD *)(*v20 + 298) )
+          v27 = *v21;
+          v28 = *(_QWORD *)(v22 + 24);
+          v29 = *(unsigned __int16 *)(v22 + 72);
+          if ( *(_WORD *)(*v21 + 298) )
           {
-            v28 = 0LL;
-            v29 = (_DWORD *)(*(_QWORD *)(v25 + 176) + 8LL);
-            while ( *((_QWORD *)v29 - 1) != v26 )
+            v30 = 0LL;
+            v31 = (_DWORD *)(*(_QWORD *)(v27 + 176) + 8LL);
+            while ( *((_QWORD *)v31 - 1) != v28 )
             {
-              ++v28;
-              v29 += 4;
-              if ( v28 >= *(unsigned __int16 *)(*v20 + 298) )
+              ++v30;
+              v31 += 4;
+              if ( v30 >= *(unsigned __int16 *)(*v21 + 298) )
                 goto LABEL_35;
             }
-            v17 = v25 + 16LL * (*v29 + (int)v27) + 312;
+            v18 = v27 + 16LL * (*v31 + (int)v29) + 312;
           }
           else
           {
 LABEL_35:
-            v17 = sub_AA67A0(v20, v26, v27);
+            v18 = sub_AEB880(v21, v28, v29, v26);
           }
-          v16 = *(_QWORD *)(v17 + 8);
+          v17 = *(_QWORD *)(v18 + 8);
         }
         else
         {
-          v16 = *(_QWORD *)(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 320);
+          v17 = *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320);
         }
-        v18 = (void (__fastcall **)(__int64 *, bool, _QWORD))sub_B0D954(v16, v21);
-        (*v18)(v20, isPresentBoxOpen, v18);
+        v19 = (void (__fastcall **)(__int64 *, bool, _QWORD))sub_B52A34(v17, v22);
+        (*v19)(v21, isPresentBoxOpen, v19);
       }
       else
       {
-        v10 = *(unsigned __int16 *)(v21 + 72);
-        if ( (v24 & 1) != 0 )
+        v10 = *(unsigned __int16 *)(v22 + 72);
+        if ( (v25 & 1) != 0 )
         {
-          class_0 = j_il2cpp_method_get_class_0(v21);
-          v12 = *v20;
-          if ( *(_WORD *)(*v20 + 298) )
+          class_0 = j_il2cpp_method_get_class_0(v22);
+          v13 = *v21;
+          if ( *(_WORD *)(*v21 + 298) )
           {
-            v13 = 0LL;
-            v14 = (_DWORD *)(*(_QWORD *)(v12 + 176) + 8LL);
-            while ( *((_QWORD *)v14 - 1) != class_0 )
+            v14 = 0LL;
+            v15 = (_DWORD *)(*(_QWORD *)(v13 + 176) + 8LL);
+            while ( *((_QWORD *)v15 - 1) != class_0 )
             {
-              ++v13;
-              v14 += 4;
-              if ( v13 >= *(unsigned __int16 *)(*v20 + 298) )
+              ++v14;
+              v15 += 4;
+              if ( v14 >= *(unsigned __int16 *)(*v21 + 298) )
                 goto LABEL_11;
             }
-            v15 = v12 + 16LL * (int)(*v14 + v10) + 312;
+            v16 = v13 + 16LL * (int)(*v15 + v10) + 312;
           }
           else
           {
 LABEL_11:
-            v15 = sub_AA67A0(v20, class_0, v10);
+            v16 = sub_AEB880(v21, class_0, v10, v12);
           }
-          (*(void (__fastcall **)(__int64 *, bool, _QWORD))v15)(v20, isPresentBoxOpen, *(_QWORD *)(v15 + 8));
+          (*(void (__fastcall **)(__int64 *, bool, _QWORD))v16)(v21, isPresentBoxOpen, *(_QWORD *)(v16 + 8));
         }
         else
         {
-          (*(void (__fastcall **)(__int64 *, bool, _QWORD))(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 312))(
-            v20,
+          (*(void (__fastcall **)(__int64 *, bool, _QWORD))(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 312))(
+            v21,
             isPresentBoxOpen,
-            *(_QWORD *)(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 320));
+            *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320));
         }
       }
       goto LABEL_37;
     }
 LABEL_36:
-    ((void (__fastcall *)(__int64 *, bool, __int64))v22)(v20, isPresentBoxOpen, v21);
+    ((void (__fastcall *)(__int64 *, bool, __int64))v23)(v21, isPresentBoxOpen, v22);
     goto LABEL_37;
   }
 }

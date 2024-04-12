@@ -10,97 +10,85 @@ System_Collections_Generic_IEnumerable_CharaGraphListViewItemBase__o *__fastcall
         CharaGraphListViewPatternServantEquip_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x19
+  __int64 v3; // x19
   UserServantMaster_o *Master_UserServantMaster; // x0
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
+  __int64 v5; // x1
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
   System_Int32_array **ServantEquipList; // x0
-  __int64 *v20; // x20
-  System_String_array **v21; // x2
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
-  UserDeckMaster_o *v27; // x21
-  __int64 v28; // x1
-  __int64 v29; // x2
-  __int64 v30; // x21
-  System_Func_int__BattleActionData_SideEffectData__o *v31; // x20
+  __int64 *v13; // x20
+  System_String_array **v14; // x2
+  System_String_array **v15; // x3
+  System_Boolean_array **v16; // x4
+  System_Int32_array **v17; // x5
+  System_Int32_array *v18; // x6
+  System_Int32_array *v19; // x7
+  UserDeckMaster_o *v20; // x21
+  __int64 v21; // x21
+  System_Func_int__BattleActionData_SideEffectData__o *v22; // x20
   System_Int64_array *svtIdList; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4214207 & 1) == 0 )
+  if ( (byte_42AFDB0 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_BasicHelper_ToIterator_CharaGraphEquipListViewItem___, method);
-    sub_B0D8A4(&Method_CharaGraphListViewPatternBase_GetMaster_UserDeckMaster___, v4);
-    sub_B0D8A4(&Method_CharaGraphListViewPatternBase_GetMaster_UserServantMaster___, v5);
-    sub_B0D8A4(&Method_System_Func_int__CharaGraphEquipListViewItem___ctor__, v6);
-    sub_B0D8A4(&System_Func_int__CharaGraphEquipListViewItem__TypeInfo, v7);
-    sub_B0D8A4(&NetworkManager_TypeInfo, v8);
-    sub_B0D8A4(&Method_CharaGraphListViewPatternServantEquip___c__DisplayClass2_0__GenerateListViewItem_b__0__, v9);
-    sub_B0D8A4(&CharaGraphListViewPatternServantEquip___c__DisplayClass2_0_TypeInfo, v10);
-    byte_4214207 = 1;
+    sub_B52984(&Method_BasicHelper_ToIterator_CharaGraphEquipListViewItem___);
+    sub_B52984(&Method_CharaGraphListViewPatternBase_GetMaster_UserDeckMaster___);
+    sub_B52984(&Method_CharaGraphListViewPatternBase_GetMaster_UserServantMaster___);
+    sub_B52984(&Method_System_Func_int__CharaGraphEquipListViewItem___ctor__);
+    sub_B52984(&System_Func_int__CharaGraphEquipListViewItem__TypeInfo);
+    sub_B52984(&NetworkManager_TypeInfo);
+    sub_B52984(&Method_CharaGraphListViewPatternServantEquip___c__DisplayClass2_0__GenerateListViewItem_b__0__);
+    sub_B52984(&CharaGraphListViewPatternServantEquip___c__DisplayClass2_0_TypeInfo);
+    byte_42AFDB0 = 1;
   }
   svtIdList = 0LL;
-  v11 = sub_B0D974(CharaGraphListViewPatternServantEquip___c__DisplayClass2_0_TypeInfo, method, v2);
+  v3 = sub_B52A54(CharaGraphListViewPatternServantEquip___c__DisplayClass2_0_TypeInfo);
   CharaGraphListViewPatternServantEquip___c__DisplayClass2_0___ctor(
-    (CharaGraphListViewPatternServantEquip___c__DisplayClass2_0_o *)v11,
+    (CharaGraphListViewPatternServantEquip___c__DisplayClass2_0_o *)v3,
     0LL);
-  if ( !v11 )
+  if ( !v3 )
     goto LABEL_11;
-  *(_QWORD *)(v11 + 16) = this;
-  sub_B0D840((BattleServantConfConponent_o *)(v11 + 16), (System_Int32_array **)this, v13, v14, v15, v16, v17, v18);
-  Master_UserServantMaster = CharaGraphListViewPatternBase__GetMaster_UserServantMaster_((const MethodInfo_170D154 *)Method_CharaGraphListViewPatternBase_GetMaster_UserServantMaster___);
+  *(_QWORD *)(v3 + 16) = this;
+  sub_B52920((BattleServantConfConponent_o *)(v3 + 16), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  Master_UserServantMaster = CharaGraphListViewPatternBase__GetMaster_UserServantMaster_((const MethodInfo_1A47C88 *)Method_CharaGraphListViewPatternBase_GetMaster_UserServantMaster___);
   if ( !Master_UserServantMaster )
     goto LABEL_11;
   ServantEquipList = (System_Int32_array **)UserServantMaster__getServantEquipList(Master_UserServantMaster, 0LL);
-  *(_QWORD *)(v11 + 24) = ServantEquipList;
-  v20 = (__int64 *)(v11 + 24);
-  sub_B0D840((BattleServantConfConponent_o *)(v11 + 24), ServantEquipList, v21, v22, v23, v24, v25, v26);
-  v27 = (UserDeckMaster_o *)CharaGraphListViewPatternBase__GetMaster_UserServantMaster_((const MethodInfo_170D154 *)Method_CharaGraphListViewPatternBase_GetMaster_UserDeckMaster___);
+  *(_QWORD *)(v3 + 24) = ServantEquipList;
+  v13 = (__int64 *)(v3 + 24);
+  sub_B52920((BattleServantConfConponent_o *)(v3 + 24), ServantEquipList, v14, v15, v16, v17, v18, v19);
+  v20 = (UserDeckMaster_o *)CharaGraphListViewPatternBase__GetMaster_UserServantMaster_((const MethodInfo_1A47C88 *)Method_CharaGraphListViewPatternBase_GetMaster_UserDeckMaster___);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   Master_UserServantMaster = (UserServantMaster_o *)NetworkManager__get_UserId(0LL);
-  if ( !v27
+  if ( !v20
     || (UserDeckMaster__getPartyList(
-          v27,
+          v20,
           &svtIdList,
-          (System_Int64_array **)(v11 + 32),
+          (System_Int64_array **)(v3 + 32),
           (int64_t)Master_UserServantMaster,
           0LL),
-        (v30 = *v20) == 0) )
+        (v21 = *v13) == 0) )
   {
 LABEL_11:
-    sub_B0D97C(Master_UserServantMaster);
+    sub_B52A5C(Master_UserServantMaster, v5);
   }
-  v31 = (System_Func_int__BattleActionData_SideEffectData__o *)sub_B0D974(
-                                                                 System_Func_int__CharaGraphEquipListViewItem__TypeInfo,
-                                                                 v28,
-                                                                 v29);
+  v22 = (System_Func_int__BattleActionData_SideEffectData__o *)sub_B52A54(System_Func_int__CharaGraphEquipListViewItem__TypeInfo);
   System_Func_int__BattleActionData_SideEffectData____ctor(
-    v31,
-    (Il2CppObject *)v11,
+    v22,
+    (Il2CppObject *)v3,
     Method_CharaGraphListViewPatternServantEquip___c__DisplayClass2_0__GenerateListViewItem_b__0__,
-    (const MethodInfo_26145DC *)Method_System_Func_int__CharaGraphEquipListViewItem___ctor__);
+    (const MethodInfo_2BC49BC *)Method_System_Func_int__CharaGraphEquipListViewItem___ctor__);
   return (System_Collections_Generic_IEnumerable_CharaGraphListViewItemBase__o *)BasicHelper__ToIterator_RestockServantLogic_(
-                                                                                   *(_DWORD *)(v30 + 24),
-                                                                                   (System_Func_int__T__o *)v31,
-                                                                                   (const MethodInfo_170A018 *)Method_BasicHelper_ToIterator_CharaGraphEquipListViewItem___);
+                                                                                   *(_DWORD *)(v21 + 24),
+                                                                                   (System_Func_int__T__o *)v22,
+                                                                                   (const MethodInfo_1A44B4C *)Method_BasicHelper_ToIterator_CharaGraphEquipListViewItem___);
 }
 
 
@@ -122,12 +110,12 @@ System_String_o *__fastcall CharaGraphListViewPatternServantEquip__get_EmptyMess
         CharaGraphListViewPatternServantEquip_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4214206 & 1) == 0 )
+  if ( (byte_42AFDAF & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_11718/*"SERVANT_EQUIP_EMPTY"*/, method);
-    byte_4214206 = 1;
+    sub_B52984(&StringLiteral_11775/*"SERVANT_EQUIP_EMPTY"*/);
+    byte_42AFDAF = 1;
   }
-  return (System_String_o *)StringLiteral_11718/*"SERVANT_EQUIP_EMPTY"*/;
+  return (System_String_o *)StringLiteral_11775/*"SERVANT_EQUIP_EMPTY"*/;
 }
 
 
@@ -154,25 +142,23 @@ CharaGraphEquipListViewItem_o *__fastcall CharaGraphListViewPatternServantEquip_
   __int64 v11; // x0
 
   v4 = this;
-  if ( (byte_4211E01 & 1) == 0 )
+  if ( (byte_42AD6A3 & 1) == 0 )
   {
-    this = (CharaGraphListViewPatternServantEquip___c__DisplayClass2_0_o *)sub_B0D8A4(
-                                                                             &CharaGraphEquipListViewItem_TypeInfo,
-                                                                             *(_QWORD *)&i);
-    byte_4211E01 = 1;
+    this = (CharaGraphListViewPatternServantEquip___c__DisplayClass2_0_o *)sub_B52984(&CharaGraphEquipListViewItem_TypeInfo);
+    byte_42AD6A3 = 1;
   }
   svtArray = v4->fields.svtArray;
   if ( !svtArray )
-    sub_B0D97C(this);
+    sub_B52A5C(this, *(_QWORD *)&i);
   if ( svtArray->max_length <= i )
   {
-    v11 = sub_B0D9A8(this);
-    sub_B0D948(v11, 0LL);
+    v11 = sub_B52A88(this);
+    sub_B52A28(v11, 0LL);
   }
   _4__this = (CharaGraphListViewPatternBase_o *)v4->fields.__4__this;
   partyUserEquipList = v4->fields.partyUserEquipList;
   v8 = svtArray->m_Items[i];
-  v9 = (CharaGraphEquipListViewItem_o *)sub_B0D974(CharaGraphEquipListViewItem_TypeInfo, *(_QWORD *)&i, method);
+  v9 = (CharaGraphEquipListViewItem_o *)sub_B52A54(CharaGraphEquipListViewItem_TypeInfo);
   CharaGraphEquipListViewItem___ctor(v9, i, _4__this, v8, partyUserEquipList, 0LL);
   return v9;
 }

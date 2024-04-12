@@ -12,115 +12,104 @@ void __fastcall SetSmoothnessControl__Awake(SetSmoothnessControl_o *this, const 
 
 void __fastcall SetSmoothnessControl__Init(SetSmoothnessControl_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  UISprite_o *v13; // x20
+  UISprite_o *v3; // x20
   UILabel_o *titleSptite; // x20
   System_String_o *attentionLabel; // x0
-  System_String_array *v16; // x20
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
-  System_Int32_array **v23; // x21
-  System_String_array **v24; // x2
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
-  System_Int32_array **v30; // x21
-  struct UILabel_o *v31; // x20
-  struct UILabel_o *v32; // x20
-  __int64 v33; // x1
-  __int64 v34; // x2
-  System_Action_int__o *v35; // x21
-  System_String_array **v36; // x2
-  System_String_array **v37; // x3
-  System_Boolean_array **v38; // x4
-  System_Int32_array **v39; // x5
-  System_Int32_array *v40; // x6
-  System_Int32_array *v41; // x7
-  __int64 v42; // x0
-  __int64 v43; // x0
+  __int64 v6; // x1
+  System_String_array *v7; // x20
+  System_String_array **v8; // x2
+  System_String_array **v9; // x3
+  System_Boolean_array **v10; // x4
+  System_Int32_array **v11; // x5
+  System_Int32_array *v12; // x6
+  System_Int32_array *v13; // x7
+  System_Int32_array **v14; // x21
+  System_String_array **v15; // x2
+  System_String_array **v16; // x3
+  System_Boolean_array **v17; // x4
+  System_Int32_array **v18; // x5
+  System_Int32_array *v19; // x6
+  System_Int32_array *v20; // x7
+  System_Int32_array **v21; // x21
+  struct UILabel_o *v22; // x20
+  struct UILabel_o *v23; // x20
+  System_Action_int__o *v24; // x21
+  System_String_array **v25; // x2
+  System_String_array **v26; // x3
+  System_Boolean_array **v27; // x4
+  System_Int32_array **v28; // x5
+  System_Int32_array *v29; // x6
+  System_Int32_array *v30; // x7
+  __int64 v31; // x0
+  __int64 v32; // x0
 
-  if ( (byte_4218A5A & 1) == 0 )
+  if ( (byte_42B4561 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Action_int___ctor__, method);
-    sub_B0D8A4(&System_Action_int__TypeInfo, v3);
-    sub_B0D8A4(&AtlasManager_TypeInfo, v4);
-    sub_B0D8A4(&LocalizationManager_TypeInfo, v5);
-    sub_B0D8A4(&OptionManager_TypeInfo, v6);
-    sub_B0D8A4(&Method_SetSmoothnessControl__Init_b__5_0__, v7);
-    sub_B0D8A4(&string___TypeInfo, v8);
-    sub_B0D8A4(&StringLiteral_9836/*"OPTION_SMOOTHNESS_BUTTON_2"*/, v9);
-    sub_B0D8A4(&StringLiteral_9835/*"OPTION_SMOOTHNESS_BUTTON_1"*/, v10);
-    sub_B0D8A4(&StringLiteral_9834/*"OPTION_SMOOTHNESS_ATTENTION"*/, v11);
-    sub_B0D8A4(&StringLiteral_19762/*"img_txt_framerate"*/, v12);
-    byte_4218A5A = 1;
+    sub_B52984(&Method_System_Action_int___ctor__);
+    sub_B52984(&System_Action_int__TypeInfo);
+    sub_B52984(&AtlasManager_TypeInfo);
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&OptionManager_TypeInfo);
+    sub_B52984(&Method_SetSmoothnessControl__Init_b__5_0__);
+    sub_B52984(&string___TypeInfo);
+    sub_B52984(&StringLiteral_9876/*"OPTION_SMOOTHNESS_BUTTON_2"*/);
+    sub_B52984(&StringLiteral_9875/*"OPTION_SMOOTHNESS_BUTTON_1"*/);
+    sub_B52984(&StringLiteral_9874/*"OPTION_SMOOTHNESS_ATTENTION"*/);
+    sub_B52984(&StringLiteral_19847/*"img_txt_framerate"*/);
+    byte_42B4561 = 1;
   }
   LOWORD(this[1].klass) = 0;
-  v13 = *(UISprite_o **)&this->fields.isHighQuality.fields.value;
+  v3 = *(UISprite_o **)&this->fields.isHighQuality.fields.value;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetMyRoomImage(v13, (System_String_o *)StringLiteral_19762/*"img_txt_framerate"*/, 0LL);
+  AtlasManager__SetMyRoomImage(v3, (System_String_o *)StringLiteral_19847/*"img_txt_framerate"*/, 0LL);
   titleSptite = (UILabel_o *)this->fields.titleSptite;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  attentionLabel = LocalizationManager__Get((System_String_o *)StringLiteral_9834/*"OPTION_SMOOTHNESS_ATTENTION"*/, 0LL);
+  attentionLabel = LocalizationManager__Get((System_String_o *)StringLiteral_9874/*"OPTION_SMOOTHNESS_ATTENTION"*/, 0LL);
   if ( !titleSptite
     || (UILabel__set_text(titleSptite, attentionLabel, 0LL),
-        v16 = (System_String_array *)sub_B0D8BC(string___TypeInfo, 2LL),
-        attentionLabel = LocalizationManager__Get((System_String_o *)StringLiteral_9835/*"OPTION_SMOOTHNESS_BUTTON_1"*/, 0LL),
-        !v16) )
+        v7 = (System_String_array *)sub_B5299C(string___TypeInfo, 2LL),
+        attentionLabel = LocalizationManager__Get((System_String_o *)StringLiteral_9875/*"OPTION_SMOOTHNESS_BUTTON_1"*/, 0LL),
+        !v7) )
   {
 LABEL_25:
-    sub_B0D97C(attentionLabel);
+    sub_B52A5C(attentionLabel, v6);
   }
-  v23 = (System_Int32_array **)attentionLabel;
+  v14 = (System_Int32_array **)attentionLabel;
   if ( attentionLabel )
   {
-    attentionLabel = (System_String_o *)sub_B0D964(attentionLabel, v16->obj.klass->_1.element_class);
+    attentionLabel = (System_String_o *)sub_B52A44(attentionLabel, v7->obj.klass->_1.element_class);
     if ( !attentionLabel )
       goto LABEL_27;
   }
-  if ( !v16->max_length )
+  if ( !v7->max_length )
     goto LABEL_26;
-  v16->m_Items[0] = (System_String_o *)v23;
-  sub_B0D840((BattleServantConfConponent_o *)v16->m_Items, v23, v17, v18, v19, v20, v21, v22);
-  attentionLabel = LocalizationManager__Get((System_String_o *)StringLiteral_9836/*"OPTION_SMOOTHNESS_BUTTON_2"*/, 0LL);
-  v30 = (System_Int32_array **)attentionLabel;
+  v7->m_Items[0] = (System_String_o *)v14;
+  sub_B52920((BattleServantConfConponent_o *)v7->m_Items, v14, v8, v9, v10, v11, v12, v13);
+  attentionLabel = LocalizationManager__Get((System_String_o *)StringLiteral_9876/*"OPTION_SMOOTHNESS_BUTTON_2"*/, 0LL);
+  v21 = (System_Int32_array **)attentionLabel;
   if ( attentionLabel )
   {
-    attentionLabel = (System_String_o *)sub_B0D964(attentionLabel, v16->obj.klass->_1.element_class);
+    attentionLabel = (System_String_o *)sub_B52A44(attentionLabel, v7->obj.klass->_1.element_class);
     if ( !attentionLabel )
     {
 LABEL_27:
-      v43 = sub_B0D99C(attentionLabel);
-      sub_B0D948(v43, 0LL);
+      v32 = sub_B52A7C(attentionLabel);
+      sub_B52A28(v32, 0LL);
     }
   }
-  if ( v16->max_length <= 1 )
+  if ( v7->max_length <= 1 )
   {
 LABEL_26:
-    v42 = sub_B0D9A8(attentionLabel);
-    sub_B0D948(v42, 0LL);
+    v31 = sub_B52A88(attentionLabel);
+    sub_B52A28(v31, 0LL);
   }
-  v16->m_Items[1] = (System_String_o *)v30;
-  sub_B0D840((BattleServantConfConponent_o *)&v16->m_Items[1], v30, v24, v25, v26, v27, v28, v29);
+  v7->m_Items[1] = (System_String_o *)v21;
+  sub_B52920((BattleServantConfConponent_o *)&v7->m_Items[1], v21, v15, v16, v17, v18, v19, v20);
   attentionLabel = (System_String_o *)this->fields.attentionLabel;
   if ( !attentionLabel )
     goto LABEL_25;
@@ -128,61 +117,59 @@ LABEL_26:
   attentionLabel = (System_String_o *)this->fields.attentionLabel;
   if ( !attentionLabel )
     goto LABEL_25;
-  GameOptionRadioButtonGroup__SetLabels((GameOptionRadioButtonGroup_o *)attentionLabel, v16, 0LL);
-  v31 = this->fields.attentionLabel;
+  GameOptionRadioButtonGroup__SetLabels((GameOptionRadioButtonGroup_o *)attentionLabel, v7, 0LL);
+  v22 = this->fields.attentionLabel;
   if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
   }
   attentionLabel = (System_String_o *)OptionManager__IsBattleFpsHigh(0LL);
-  if ( !v31 )
+  if ( !v22 )
     goto LABEL_25;
   GameOptionRadioButtonGroup__SelectButtonByIndex(
-    (GameOptionRadioButtonGroup_o *)v31,
+    (GameOptionRadioButtonGroup_o *)v22,
     (unsigned __int8)attentionLabel & 1,
     1,
     0LL);
-  v32 = this->fields.attentionLabel;
-  v35 = (System_Action_int__o *)sub_B0D974(System_Action_int__TypeInfo, v33, v34);
+  v23 = this->fields.attentionLabel;
+  v24 = (System_Action_int__o *)sub_B52A54(System_Action_int__TypeInfo);
   System_Action_int____ctor(
-    v35,
+    v24,
     (Il2CppObject *)this,
     Method_SetSmoothnessControl__Init_b__5_0__,
-    (const MethodInfo_246D4AC *)Method_System_Action_int___ctor__);
-  if ( !v32 )
+    (const MethodInfo_26261F0 *)Method_System_Action_int___ctor__);
+  if ( !v23 )
     goto LABEL_25;
-  v32->fields.rightAnchor = (struct UIRect_AnchorPoint_o *)v35;
-  sub_B0D840(
-    (BattleServantConfConponent_o *)&v32->fields.rightAnchor,
-    (System_Int32_array **)v35,
-    v36,
-    v37,
-    v38,
-    v39,
-    v40,
-    v41);
+  v23->fields.rightAnchor = (struct UIRect_AnchorPoint_o *)v24;
+  sub_B52920(
+    (BattleServantConfConponent_o *)&v23->fields.rightAnchor,
+    (System_Int32_array **)v24,
+    v25,
+    v26,
+    v27,
+    v28,
+    v29,
+    v30);
 }
 
 
 void __fastcall SetSmoothnessControl__Reflection(SetSmoothnessControl_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   bool Value; // w19
-  System_Nullable_bool__o v6; // 0:w0.2
+  System_Nullable_bool__o v4; // 0:w0.2
 
-  if ( (byte_4218A5B & 1) == 0 )
+  if ( (byte_42B4562 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Nullable_bool__get_HasValue__, method);
-    sub_B0D8A4(&Method_System_Nullable_bool__get_Value__, v3);
-    sub_B0D8A4(&OptionManager_TypeInfo, v4);
-    byte_4218A5B = 1;
+    sub_B52984(&Method_System_Nullable_bool__get_HasValue__);
+    sub_B52984(&Method_System_Nullable_bool__get_Value__);
+    sub_B52984(&OptionManager_TypeInfo);
+    byte_42B4562 = 1;
   }
   if ( BYTE1(this[1].klass) )
   {
-    v6 = (System_Nullable_bool__o)((_WORD)this + 56);
-    Value = System_Nullable_bool___get_Value(v6, (const MethodInfo_297C574 *)Method_System_Nullable_bool__get_Value__);
+    v4 = (System_Nullable_bool__o)((_WORD)this + 56);
+    Value = System_Nullable_bool___get_Value(v4, (const MethodInfo_216E4F0 *)Method_System_Nullable_bool__get_Value__);
     if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !OptionManager_TypeInfo->_2.cctor_finished )
     {
@@ -193,29 +180,27 @@ void __fastcall SetSmoothnessControl__Reflection(SetSmoothnessControl_o *this, c
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall SetSmoothnessControl___Init_b__5_0(
         SetSmoothnessControl_o *this,
         int32_t selectedIndex,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int16 *v6; // x0
-  __int16 v7; // [xsp+Ch] [xbp-14h] BYREF
+  __int16 *v5; // x0
+  __int16 v6; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4218A5C & 1) == 0 )
+  if ( (byte_42B4563 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Nullable_bool___ctor__, *(_QWORD *)&selectedIndex);
-    sub_B0D8A4(&SoundManager_TypeInfo, v5);
-    byte_4218A5C = 1;
+    sub_B52984(&Method_System_Nullable_bool___ctor__);
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42B4563 = 1;
   }
-  v6 = &v7;
-  v7 = 0;
+  v5 = &v6;
+  v6 = 0;
   System_Nullable_bool____ctor(
-    (System_Nullable_bool__o)v6,
+    (System_Nullable_bool__o)v5,
     selectedIndex > 0,
-    (const MethodInfo_297C558 *)Method_System_Nullable_bool___ctor__);
-  LOWORD(this[1].klass) = v7;
+    (const MethodInfo_216E4D4 *)Method_System_Nullable_bool___ctor__);
+  LOWORD(this[1].klass) = v6;
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playSystemSe(0, 0LL);

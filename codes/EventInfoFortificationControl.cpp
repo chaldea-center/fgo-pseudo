@@ -1,66 +1,56 @@
 void __fastcall EventInfoFortificationControl___ctor(EventInfoFortificationControl_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  System_Array_o *v6; // x20
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
-  __int64 v13; // x1
-  __int64 v14; // x2
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v15; // x20
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  System_RuntimeFieldHandle_o v22; // 0:w1.4
+  System_Array_o *v3; // x20
+  System_String_array **v4; // x2
+  System_String_array **v5; // x3
+  System_Boolean_array **v6; // x4
+  System_Int32_array **v7; // x5
+  System_Int32_array *v8; // x6
+  System_Int32_array *v9; // x7
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v10; // x20
+  System_String_array **v11; // x2
+  System_String_array **v12; // x3
+  System_Boolean_array **v13; // x4
+  System_Int32_array **v14; // x5
+  System_Int32_array *v15; // x6
+  System_Int32_array *v16; // x7
+  System_RuntimeFieldHandle_o v17; // 0:w1.4
 
-  if ( (byte_42155B6 & 1) == 0 )
+  if ( (byte_42B0DE1 & 1) == 0 )
   {
-    sub_B0D8A4(&int___TypeInfo, method);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventInfoFortificationViewItem___ctor__, v3);
-    sub_B0D8A4(&System_Collections_Generic_List_EventInfoFortificationViewItem__TypeInfo, v4);
-    sub_B0D8A4(
-      &Field__PrivateImplementationDetails__88A785E43F0814338C5CB47BDE7DE708C7172EABAD671E4511199C78A3B4DAA1,
-      v5);
-    byte_42155B6 = 1;
+    sub_B52984(&int___TypeInfo);
+    sub_B52984(&Method_System_Collections_Generic_List_EventInfoFortificationViewItem___ctor__);
+    sub_B52984(&System_Collections_Generic_List_EventInfoFortificationViewItem__TypeInfo);
+    sub_B52984(&Field__PrivateImplementationDetails__88A785E43F0814338C5CB47BDE7DE708C7172EABAD671E4511199C78A3B4DAA1);
+    byte_42B0DE1 = 1;
   }
-  v6 = (System_Array_o *)sub_B0D8BC(int___TypeInfo, 3LL);
-  v22.fields.value = Field__PrivateImplementationDetails__88A785E43F0814338C5CB47BDE7DE708C7172EABAD671E4511199C78A3B4DAA1;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_42880004(v6, v22, 0LL);
-  this->fields.workTypeOrder = (struct System_Int32_array *)v6;
-  sub_B0D840(
+  v3 = (System_Array_o *)sub_B5299C(int___TypeInfo, 3LL);
+  v17.fields.value = Field__PrivateImplementationDetails__88A785E43F0814338C5CB47BDE7DE708C7172EABAD671E4511199C78A3B4DAA1;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43814272(v3, v17, 0LL);
+  this->fields.workTypeOrder = (struct System_Int32_array *)v3;
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.workTypeOrder,
-    (System_Int32_array **)v6,
+    (System_Int32_array **)v3,
+    v4,
+    v5,
+    v6,
     v7,
     v8,
-    v9,
-    v10,
-    v11,
-    v12);
-  v15 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
-                                                                                                  System_Collections_Generic_List_EventInfoFortificationViewItem__TypeInfo,
-                                                                                                  v13,
-                                                                                                  v14);
+    v9);
+  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_EventInfoFortificationViewItem__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v15,
-    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_EventInfoFortificationViewItem___ctor__);
-  this->fields.fortificationViewItemList = (struct System_Collections_Generic_List_EventInfoFortificationViewItem__o *)v15;
-  sub_B0D840(
+    v10,
+    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_EventInfoFortificationViewItem___ctor__);
+  this->fields.fortificationViewItemList = (struct System_Collections_Generic_List_EventInfoFortificationViewItem__o *)v10;
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.fortificationViewItemList,
-    (System_Int32_array **)v15,
-    v16,
-    v17,
-    v18,
-    v19,
-    v20,
-    v21);
+    (System_Int32_array **)v10,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16);
   EventInfoUIBase___ctor((EventInfoUIBase_o *)this, 0LL);
 }
 
@@ -73,36 +63,31 @@ void __fastcall EventInfoFortificationControl__CheckAssertion(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall EventInfoFortificationControl__CreateFortificationViewItem(
         EventInfoFortificationControl_o *this,
         int32_t count,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  int32_t v10; // w23
+  int32_t v5; // w23
   UnityEngine_Transform_o *fortificationViewItemParent; // x21
   struct EventInfoFortificationViewItem_o *fortificationViewItemPrefab; // x22
-  UILabel_o *v13; // x21
+  UILabel_o *v8; // x21
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *fortificationViewItemList; // x0
+  __int64 v10; // x1
 
-  if ( (byte_42155B4 & 1) == 0 )
+  if ( (byte_42B0DDF & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventInfoFortificationViewItem__Add__, *(_QWORD *)&count);
-    sub_B0D8A4(&Method_UnityEngine_Object_Instantiate_EventInfoFortificationViewItem___, v5);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v6);
-    sub_B0D8A4(&StringLiteral_22299/*"spot_info_gauge_base_color"*/, v7);
-    sub_B0D8A4(&StringLiteral_22301/*"spot_info_gauge_s"*/, v8);
-    sub_B0D8A4(&StringLiteral_22298/*"spot_info_gauge_base"*/, v9);
-    byte_42155B4 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_EventInfoFortificationViewItem__Add__);
+    sub_B52984(&Method_UnityEngine_Object_Instantiate_EventInfoFortificationViewItem___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&StringLiteral_22411/*"spot_info_gauge_base_color"*/);
+    sub_B52984(&StringLiteral_22413/*"spot_info_gauge_s"*/);
+    sub_B52984(&StringLiteral_22410/*"spot_info_gauge_base"*/);
+    byte_42B0DDF = 1;
   }
   if ( count >= 1 )
   {
-    v10 = 0;
+    v5 = 0;
     do
     {
       fortificationViewItemParent = this->fields.fortificationViewItemParent;
@@ -112,45 +97,45 @@ void __fastcall EventInfoFortificationControl__CreateFortificationViewItem(
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      v13 = UnityEngine_Object__Instantiate_UILabel_(
-              (UILabel_o *)fortificationViewItemPrefab,
-              fortificationViewItemParent,
-              (const MethodInfo_204AAC0 *)Method_UnityEngine_Object_Instantiate_EventInfoFortificationViewItem___);
-      fortificationViewItemList = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v13, 0LL, 0LL);
+      v8 = UnityEngine_Object__Instantiate_UILabel_(
+             (UILabel_o *)fortificationViewItemPrefab,
+             fortificationViewItemParent,
+             (const MethodInfo_1F712F4 *)Method_UnityEngine_Object_Instantiate_EventInfoFortificationViewItem___);
+      fortificationViewItemList = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v8, 0LL, 0LL);
       if ( ((unsigned __int8)fortificationViewItemList & 1) != 0 )
       {
-        if ( !v13 )
+        if ( !v8 )
           goto LABEL_16;
         EventInfoUIBase__SetSpriteByLocalAtlas(
           (EventInfoUIBase_o *)this,
-          (UISprite_o *)v13->fields.leftAnchor,
-          (System_String_o *)StringLiteral_22298/*"spot_info_gauge_base"*/,
+          (UISprite_o *)v8->fields.leftAnchor,
+          (System_String_o *)StringLiteral_22410/*"spot_info_gauge_base"*/,
           0LL);
         EventInfoUIBase__SetSpriteByLocalAtlas(
           (EventInfoUIBase_o *)this,
-          (UISprite_o *)v13->fields.rightAnchor,
-          (System_String_o *)StringLiteral_22301/*"spot_info_gauge_s"*/,
+          (UISprite_o *)v8->fields.rightAnchor,
+          (System_String_o *)StringLiteral_22413/*"spot_info_gauge_s"*/,
           0LL);
         EventInfoUIBase__SetSpriteByLocalAtlas(
           (EventInfoUIBase_o *)this,
-          (UISprite_o *)v13->fields.bottomAnchor,
-          (System_String_o *)StringLiteral_22299/*"spot_info_gauge_base_color"*/,
+          (UISprite_o *)v8->fields.bottomAnchor,
+          (System_String_o *)StringLiteral_22411/*"spot_info_gauge_base_color"*/,
           0LL);
         fortificationViewItemList = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this->fields.fortificationViewItemList;
         if ( !fortificationViewItemList )
           goto LABEL_16;
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           fortificationViewItemList,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)v13,
-          (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_EventInfoFortificationViewItem__Add__);
+          (EventMissionProgressRequest_Argument_ProgressData_o *)v8,
+          (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_EventInfoFortificationViewItem__Add__);
       }
-      ++v10;
+      ++v5;
     }
-    while ( v10 < count );
+    while ( v5 < count );
     fortificationViewItemList = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this->fields.itemGrid;
     if ( !fortificationViewItemList )
 LABEL_16:
-      sub_B0D97C(fortificationViewItemList);
+      sub_B52A5C(fortificationViewItemList, v10);
     ((void (__fastcall *)(System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *, Il2CppMethodPointer))fortificationViewItemList->klass->vtable._8_unknown.method)(
       fortificationViewItemList,
       fortificationViewItemList->klass->vtable._9_unknown.methodPtr);
@@ -163,66 +148,62 @@ void __fastcall EventInfoFortificationControl__Initialization(
         EventUiEntity_o *entity,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
   struct System_Collections_Generic_List_EventInfoFortificationViewItem__o *fortificationViewItemList; // x0
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
   EventUiEntity_o *eventUiEntity; // x20
-  __int64 v15; // x1
-  __int64 v16; // x2
-  System_Action_o *v17; // x21
+  System_Action_o *v13; // x21
 
-  if ( (byte_42155B1 & 1) == 0 )
+  if ( (byte_42B0DDC & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, entity);
-    sub_B0D8A4(&Method_EventInfoFortificationControl__Initialization_b__13_0__, v5);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventInfoFortificationViewItem__Clear__, v6);
-    byte_42155B1 = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&Method_EventInfoFortificationControl__Initialization_b__13_0__);
+    sub_B52984(&Method_System_Collections_Generic_List_EventInfoFortificationViewItem__Clear__);
+    byte_42B0DDC = 1;
   }
   fortificationViewItemList = this->fields.fortificationViewItemList;
   if ( !fortificationViewItemList )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, entity);
   System_Collections_Generic_List_XWeaponTrail_Element___Clear(
     (System_Collections_Generic_List_XWeaponTrail_Element__o *)fortificationViewItemList,
-    (const MethodInfo_2FC5AF0 *)Method_System_Collections_Generic_List_EventInfoFortificationViewItem__Clear__);
+    (const MethodInfo_2FF1A0C *)Method_System_Collections_Generic_List_EventInfoFortificationViewItem__Clear__);
   this->fields.eventUiEntity = entity;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.eventUiEntity,
     (System_Int32_array **)entity,
+    v6,
+    v7,
     v8,
     v9,
     v10,
-    v11,
-    v12,
-    v13);
+    v11);
   eventUiEntity = this->fields.eventUiEntity;
-  v17 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v15, v16);
-  System_Action___ctor(v17, (Il2CppObject *)this, Method_EventInfoFortificationControl__Initialization_b__13_0__, 0LL);
-  EventInfoUIBase__LoadEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity, v17, 0LL);
+  v13 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+  System_Action___ctor(v13, (Il2CppObject *)this, Method_EventInfoFortificationControl__Initialization_b__13_0__, 0LL);
+  EventInfoUIBase__LoadEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity, v13, 0LL);
 }
 
 
 bool __fastcall EventInfoFortificationControl__IsFortificationEvent(int32_t eventId, const MethodInfo *method)
 {
-  __int64 v3; // x1
   EventFortificationMaster_o *Master_WarQuestSelectionMaster; // x0
+  __int64 v4; // x1
 
-  if ( (byte_42155B5 & 1) == 0 )
+  if ( (byte_42B0DE0 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMaster_EventFortificationMaster___, method);
-    sub_B0D8A4(&DataManager_TypeInfo, v3);
-    byte_42155B5 = 1;
+    sub_B52984(&Method_DataManager_GetMaster_EventFortificationMaster___);
+    sub_B52984(&DataManager_TypeInfo);
+    byte_42B0DE0 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (EventFortificationMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_EventFortificationMaster___);
+  Master_WarQuestSelectionMaster = (EventFortificationMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_EventFortificationMaster___);
   if ( !Master_WarQuestSelectionMaster )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v4);
   return EventFortificationMaster__IsFortificationEvent(Master_WarQuestSelectionMaster, eventId, 0LL);
 }
 
@@ -235,7 +216,7 @@ void __fastcall EventInfoFortificationControl__OnDestroy(
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   EventInfoUIBase__ReleaseEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity->fields.eventId, 0LL);
   EventInfoUIBase__ReleaseLocalAtlas((EventInfoUIBase_o *)this, 0LL);
 }
@@ -268,89 +249,69 @@ void __fastcall EventInfoFortificationControl__SetupFortificationItem(
         EventInfoFortificationControl_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
   int64_t Instance; // x0
+  __int64 v4; // x1
   struct EventUiEntity_o *eventUiEntity; // x8
-  const MethodInfo *v22; // x2
+  const MethodInfo *v6; // x2
   struct System_Collections_Generic_List_EventInfoFortificationViewItem__o *fortificationViewItemList; // x9
-  System_Collections_Generic_List_EventFortificationEntity__o *v24; // x20
-  __int64 v25; // x1
-  __int64 v26; // x2
-  System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *v27; // x21
-  __int64 v28; // x1
-  __int64 v29; // x2
-  System_Linq_IOrderedEnumerable_TSource__o *v30; // x20
-  EventInfoFortificationControl___c_c *v31; // x8
+  System_Collections_Generic_List_EventFortificationEntity__o *v8; // x20
+  System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *v9; // x21
+  System_Linq_IOrderedEnumerable_TSource__o *v10; // x20
+  EventInfoFortificationControl___c_c *v11; // x8
   struct EventInfoFortificationControl___c_StaticFields *static_fields; // x9
   System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *_9__17_1; // x21
-  Il2CppObject *v34; // x22
-  struct EventInfoFortificationControl___c_StaticFields *v35; // x0
-  System_String_array **v36; // x2
-  System_String_array **v37; // x3
-  System_Boolean_array **v38; // x4
-  System_Int32_array **v39; // x5
-  System_Int32_array *v40; // x6
-  System_Int32_array *v41; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v42; // x0
-  struct System_Collections_Generic_List_EventInfoFortificationViewItem__o *v43; // x21
-  int64_t v44; // x20
-  __int64 v45; // x24
-  unsigned __int64 v46; // x22
-  UnityEngine_Object_o *v47; // x21
-  EventFortificationEntity_o *v48; // x22
-  const MethodInfo *v49; // x2
+  Il2CppObject *v14; // x22
+  struct EventInfoFortificationControl___c_StaticFields *v15; // x0
+  System_String_array **v16; // x2
+  System_String_array **v17; // x3
+  System_Boolean_array **v18; // x4
+  System_Int32_array **v19; // x5
+  System_Int32_array *v20; // x6
+  System_Int32_array *v21; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v22; // x0
+  struct System_Collections_Generic_List_EventInfoFortificationViewItem__o *v23; // x21
+  int64_t v24; // x20
+  __int64 v25; // x24
+  unsigned __int64 v26; // x22
+  UnityEngine_Object_o *v27; // x21
+  EventFortificationEntity_o *v28; // x22
+  const MethodInfo *v29; // x2
   UserEventFortificationMaster_o *Master_WarQuestSelectionMaster; // x23
-  float v51; // s0
-  struct System_Collections_Generic_List_EventInfoFortificationViewItem__o *v52; // x21
-  UserEventFortificationEntity_o *v53; // [xsp+0h] [xbp-60h] BYREF
+  float v31; // s0
+  struct System_Collections_Generic_List_EventInfoFortificationViewItem__o *v32; // x21
+  UserEventFortificationEntity_o *v33; // [xsp+0h] [xbp-60h] BYREF
   System_Collections_Generic_List_EventFortificationEntity__o *entities; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_42155B2 & 1) == 0 )
+  if ( (byte_42B0DDD & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMasterData_EventFortificationMaster___, method);
-    sub_B0D8A4(&Method_DataManager_GetMaster_UserEventFortificationMaster___, v3);
-    sub_B0D8A4(&DataManager_TypeInfo, v4);
-    sub_B0D8A4(&Method_System_Linq_Enumerable_OrderBy_EventFortificationEntity__int___, v5);
-    sub_B0D8A4(&Method_System_Linq_Enumerable_ThenBy_EventFortificationEntity__int___, v6);
-    sub_B0D8A4(&Method_System_Linq_Enumerable_ToList_EventFortificationEntity___, v7);
-    sub_B0D8A4(&Method_EventInfoFortificationControl__SetupFortificationItem_b__17_0__, v8);
-    sub_B0D8A4(&Method_System_Func_EventFortificationEntity__int___ctor__, v9);
-    sub_B0D8A4(&System_Func_EventFortificationEntity__int__TypeInfo, v10);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventFortificationEntity__get_Count__, v11);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventInfoFortificationViewItem__get_Count__, v12);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventInfoFortificationViewItem__get_Item__, v13);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_EventFortificationEntity__get_Item__, v14);
-    sub_B0D8A4(&NetworkManager_TypeInfo, v15);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v16);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_B0D8A4(&Method_EventInfoFortificationControl___c__SetupFortificationItem_b__17_1__, v18);
-    sub_B0D8A4(&EventInfoFortificationControl___c_TypeInfo, v19);
-    byte_42155B2 = 1;
+    sub_B52984(&Method_DataManager_GetMasterData_EventFortificationMaster___);
+    sub_B52984(&Method_DataManager_GetMaster_UserEventFortificationMaster___);
+    sub_B52984(&DataManager_TypeInfo);
+    sub_B52984(&Method_System_Linq_Enumerable_OrderBy_EventFortificationEntity__int___);
+    sub_B52984(&Method_System_Linq_Enumerable_ThenBy_EventFortificationEntity__int___);
+    sub_B52984(&Method_System_Linq_Enumerable_ToList_EventFortificationEntity___);
+    sub_B52984(&Method_EventInfoFortificationControl__SetupFortificationItem_b__17_0__);
+    sub_B52984(&Method_System_Func_EventFortificationEntity__int___ctor__);
+    sub_B52984(&System_Func_EventFortificationEntity__int__TypeInfo);
+    sub_B52984(&Method_System_Collections_Generic_List_EventFortificationEntity__get_Count__);
+    sub_B52984(&Method_System_Collections_Generic_List_EventInfoFortificationViewItem__get_Count__);
+    sub_B52984(&Method_System_Collections_Generic_List_EventInfoFortificationViewItem__get_Item__);
+    sub_B52984(&Method_System_Collections_Generic_List_EventFortificationEntity__get_Item__);
+    sub_B52984(&NetworkManager_TypeInfo);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B52984(&Method_EventInfoFortificationControl___c__SetupFortificationItem_b__17_1__);
+    sub_B52984(&EventInfoFortificationControl___c_TypeInfo);
+    byte_42B0DDD = 1;
   }
-  v53 = 0LL;
+  v33 = 0LL;
   entities = 0LL;
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_65;
   Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventFortificationMaster___);
+                        (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_EventFortificationMaster___);
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity || !Instance )
     goto LABEL_65;
@@ -369,97 +330,91 @@ void __fastcall EventInfoFortificationControl__SetupFortificationItem(
         EventInfoFortificationControl__CreateFortificationViewItem(
           this,
           entities->fields._size - fortificationViewItemList->fields._size,
-          v22);
-        v24 = entities;
-        v27 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B0D974(
-                                                                                System_Func_EventFortificationEntity__int__TypeInfo,
-                                                                                v25,
-                                                                                v26);
+          v6);
+        v8 = entities;
+        v9 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B52A54(System_Func_EventFortificationEntity__int__TypeInfo);
         System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int____ctor(
-          v27,
+          v9,
           (Il2CppObject *)this,
           Method_EventInfoFortificationControl__SetupFortificationItem_b__17_0__,
-          (const MethodInfo_2619564 *)Method_System_Func_EventFortificationEntity__int___ctor__);
-        v30 = System_Linq_Enumerable__OrderBy_QuestPhaseDetailEntity_BoardInfo__int_(
-                (System_Collections_Generic_IEnumerable_TSource__o *)v24,
-                (System_Func_TSource__TKey__o *)v27,
-                (const MethodInfo_1B4E924 *)Method_System_Linq_Enumerable_OrderBy_EventFortificationEntity__int___);
-        v31 = EventInfoFortificationControl___c_TypeInfo;
+          (const MethodInfo_2BC9C68 *)Method_System_Func_EventFortificationEntity__int___ctor__);
+        v10 = System_Linq_Enumerable__OrderBy_QuestPhaseDetailEntity_BoardInfo__int_(
+                (System_Collections_Generic_IEnumerable_TSource__o *)v8,
+                (System_Func_TSource__TKey__o *)v9,
+                (const MethodInfo_1B66330 *)Method_System_Linq_Enumerable_OrderBy_EventFortificationEntity__int___);
+        v11 = EventInfoFortificationControl___c_TypeInfo;
         if ( (BYTE3(EventInfoFortificationControl___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !EventInfoFortificationControl___c_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(EventInfoFortificationControl___c_TypeInfo);
-          v31 = EventInfoFortificationControl___c_TypeInfo;
+          v11 = EventInfoFortificationControl___c_TypeInfo;
         }
-        static_fields = v31->static_fields;
+        static_fields = v11->static_fields;
         _9__17_1 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)static_fields->__9__17_1;
         if ( !_9__17_1 )
         {
-          if ( (BYTE3(v31->vtable._0_Equals.methodPtr) & 4) != 0 && !v31->_2.cctor_finished )
+          if ( (BYTE3(v11->vtable._0_Equals.methodPtr) & 4) != 0 && !v11->_2.cctor_finished )
           {
-            j_il2cpp_runtime_class_init_0(v31);
+            j_il2cpp_runtime_class_init_0(v11);
             static_fields = EventInfoFortificationControl___c_TypeInfo->static_fields;
           }
-          v34 = (Il2CppObject *)static_fields->__9;
-          _9__17_1 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B0D974(
-                                                                                       System_Func_EventFortificationEntity__int__TypeInfo,
-                                                                                       v28,
-                                                                                       v29);
+          v14 = (Il2CppObject *)static_fields->__9;
+          _9__17_1 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B52A54(System_Func_EventFortificationEntity__int__TypeInfo);
           System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int____ctor(
             _9__17_1,
-            v34,
+            v14,
             Method_EventInfoFortificationControl___c__SetupFortificationItem_b__17_1__,
-            (const MethodInfo_2619564 *)Method_System_Func_EventFortificationEntity__int___ctor__);
-          v35 = EventInfoFortificationControl___c_TypeInfo->static_fields;
-          v35->__9__17_1 = (struct System_Func_EventFortificationEntity__int__o *)_9__17_1;
-          sub_B0D840(
-            (BattleServantConfConponent_o *)&v35->__9__17_1,
+            (const MethodInfo_2BC9C68 *)Method_System_Func_EventFortificationEntity__int___ctor__);
+          v15 = EventInfoFortificationControl___c_TypeInfo->static_fields;
+          v15->__9__17_1 = (struct System_Func_EventFortificationEntity__int__o *)_9__17_1;
+          sub_B52920(
+            (BattleServantConfConponent_o *)&v15->__9__17_1,
             (System_Int32_array **)_9__17_1,
-            v36,
-            v37,
-            v38,
-            v39,
-            v40,
-            v41);
+            v16,
+            v17,
+            v18,
+            v19,
+            v20,
+            v21);
         }
-        v42 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ThenBy_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int_(
-                                                                     v30,
+        v22 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ThenBy_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int_(
+                                                                     v10,
                                                                      (System_Func_TSource__TKey__o *)_9__17_1,
-                                                                     (const MethodInfo_1B55AEC *)Method_System_Linq_Enumerable_ThenBy_EventFortificationEntity__int___);
+                                                                     (const MethodInfo_1B6DDDC *)Method_System_Linq_Enumerable_ThenBy_EventFortificationEntity__int___);
         Instance = (int64_t)System_Linq_Enumerable__ToList_WarBoardManager_WarBoardOnboardSkillTarget_(
-                              v42,
-                              (const MethodInfo_1B59168 *)Method_System_Linq_Enumerable_ToList_EventFortificationEntity___);
-        v43 = this->fields.fortificationViewItemList;
-        if ( v43 )
+                              v22,
+                              (const MethodInfo_1B714E4 *)Method_System_Linq_Enumerable_ToList_EventFortificationEntity___);
+        v23 = this->fields.fortificationViewItemList;
+        if ( v23 )
         {
-          v44 = Instance;
-          v45 = 4LL;
+          v24 = Instance;
+          v25 = 4LL;
           do
           {
-            v46 = v45 - 4;
-            if ( v45 - 4 >= v43->fields._size )
+            v26 = v25 - 4;
+            if ( v25 - 4 >= v23->fields._size )
               return;
-            if ( !v44 )
+            if ( !v24 )
               break;
-            if ( v46 >= (unsigned int)v43->fields._size )
-              System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-            v47 = (UnityEngine_Object_o *)*((_QWORD *)&v43->fields._items->obj.klass + v45);
-            if ( (__int64)v46 >= *(int *)(v44 + 24) )
+            if ( v26 >= (unsigned int)v23->fields._size )
+              System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+            v27 = (UnityEngine_Object_o *)*((_QWORD *)&v23->fields._items->obj.klass + v25);
+            if ( (__int64)v26 >= *(int *)(v24 + 24) )
             {
               if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                 && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
               }
-              Instance = UnityEngine_Object__op_Inequality(v47, 0LL, 0LL);
+              Instance = UnityEngine_Object__op_Inequality(v27, 0LL, 0LL);
               if ( (Instance & 1) != 0 )
               {
-                v52 = this->fields.fortificationViewItemList;
-                if ( !v52 )
+                v32 = this->fields.fortificationViewItemList;
+                if ( !v32 )
                   break;
-                if ( v46 >= (unsigned int)v52->fields._size )
-                  System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-                Instance = *((_QWORD *)&v52->fields._items->obj.klass + v45);
+                if ( v26 >= (unsigned int)v32->fields._size )
+                  System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+                Instance = *((_QWORD *)&v32->fields._items->obj.klass + v25);
                 if ( !Instance )
                   break;
                 goto LABEL_59;
@@ -467,28 +422,28 @@ void __fastcall EventInfoFortificationControl__SetupFortificationItem(
             }
             else
             {
-              if ( v46 >= *(unsigned int *)(v44 + 24) )
-                System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
-              v48 = *(EventFortificationEntity_o **)(*(_QWORD *)(v44 + 16) + 8 * v45);
+              if ( v26 >= *(unsigned int *)(v24 + 24) )
+                System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
+              v28 = *(EventFortificationEntity_o **)(*(_QWORD *)(v24 + 16) + 8 * v25);
               if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                 && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
               }
-              Instance = UnityEngine_Object__op_Equality(v47, 0LL, 0LL);
-              if ( !v48 || (Instance & 1) != 0 )
+              Instance = UnityEngine_Object__op_Equality(v27, 0LL, 0LL);
+              if ( !v28 || (Instance & 1) != 0 )
               {
                 if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                   && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                 {
                   j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                 }
-                Instance = UnityEngine_Object__op_Inequality(v47, 0LL, 0LL);
+                Instance = UnityEngine_Object__op_Inequality(v27, 0LL, 0LL);
                 if ( (Instance & 1) != 0 )
                 {
-                  if ( !v47 )
+                  if ( !v27 )
                     break;
-                  Instance = (int64_t)v47;
+                  Instance = (int64_t)v27;
 LABEL_59:
                   Instance = (int64_t)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
                   if ( !Instance )
@@ -498,19 +453,19 @@ LABEL_59:
               }
               else
               {
-                if ( !v47 )
+                if ( !v27 )
                   break;
-                Instance = (int64_t)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v47, 0LL);
+                Instance = (int64_t)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v27, 0LL);
                 if ( !Instance )
                   break;
                 UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
-                EventInfoFortificationViewItem__Setup((EventInfoFortificationViewItem_o *)v47, v48, v49);
+                EventInfoFortificationViewItem__Setup((EventInfoFortificationViewItem_o *)v27, v28, v29);
                 if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                   && !DataManager_TypeInfo->_2.cctor_finished )
                 {
                   j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
                 }
-                Master_WarQuestSelectionMaster = (UserEventFortificationMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_UserEventFortificationMaster___);
+                Master_WarQuestSelectionMaster = (UserEventFortificationMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_UserEventFortificationMaster___);
                 if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                   && !NetworkManager_TypeInfo->_2.cctor_finished )
                 {
@@ -521,39 +476,39 @@ LABEL_59:
                   break;
                 Instance = UserEventFortificationMaster__TryGetEntity(
                              Master_WarQuestSelectionMaster,
-                             &v53,
+                             &v33,
                              Instance,
-                             v48->fields.eventId,
-                             v48->fields.idx,
+                             v28->fields.eventId,
+                             v28->fields.idx,
                              0LL);
                 if ( (Instance & 1) != 0 )
                 {
-                  if ( !v53 )
+                  if ( !v33 )
                     break;
-                  Instance = (int64_t)v47[1].monitor;
+                  Instance = (int64_t)v27[1].monitor;
                   if ( !Instance )
                     break;
-                  v51 = (float)v53->fields.totalFortificationPoint / (float)v48->fields.maxFortificationPoint;
+                  v31 = (float)v33->fields.totalFortificationPoint / (float)v28->fields.maxFortificationPoint;
                 }
                 else
                 {
-                  Instance = (int64_t)v47[1].monitor;
+                  Instance = (int64_t)v27[1].monitor;
                   if ( !Instance )
                     break;
-                  v51 = 0.0;
+                  v31 = 0.0;
                 }
-                UIBasicSprite__set_fillAmount((UIBasicSprite_o *)Instance, v51, 0LL);
+                UIBasicSprite__set_fillAmount((UIBasicSprite_o *)Instance, v31, 0LL);
               }
             }
-            v43 = this->fields.fortificationViewItemList;
-            ++v45;
+            v23 = this->fields.fortificationViewItemList;
+            ++v25;
           }
-          while ( v43 );
+          while ( v23 );
         }
       }
     }
 LABEL_65:
-    sub_B0D97C(Instance);
+    sub_B52A5C(Instance, v4);
   }
 }
 
@@ -573,31 +528,28 @@ void __fastcall EventInfoFortificationControl__UpdateTotalRewardNum(
         EventInfoFortificationControl_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
   UserEventFortificationMaster_o *Master_WarQuestSelectionMaster; // x0
   struct EventUiEntity_o *eventUiEntity; // x8
   int32_t TotalFortificationRewardNum; // w20
   UILabel_o *totalRewardNumLabel; // x19
-  System_String_o *v11; // x21
-  Il2CppObject *v12; // x0
-  System_String_o *v13; // x0
-  int32_t v14; // [xsp+Ch] [xbp-14h] BYREF
+  System_String_o *v7; // x21
+  Il2CppObject *v8; // x0
+  System_String_o *v9; // x0
+  __int64 v10; // x1
+  int32_t v11; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_42155B3 & 1) == 0 )
+  if ( (byte_42B0DDE & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMaster_UserEventFortificationMaster___, method);
-    sub_B0D8A4(&DataManager_TypeInfo, v3);
-    sub_B0D8A4(&int_TypeInfo, v4);
-    sub_B0D8A4(&LocalizationManager_TypeInfo, v5);
-    sub_B0D8A4(&StringLiteral_5667/*"EVENT_POINT_COMMON_FORMAT"*/, v6);
-    byte_42155B3 = 1;
+    sub_B52984(&Method_DataManager_GetMaster_UserEventFortificationMaster___);
+    sub_B52984(&DataManager_TypeInfo);
+    sub_B52984(&int_TypeInfo);
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&StringLiteral_5693/*"EVENT_POINT_COMMON_FORMAT"*/);
+    byte_42B0DDE = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (UserEventFortificationMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_UserEventFortificationMaster___);
+  Master_WarQuestSelectionMaster = (UserEventFortificationMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_UserEventFortificationMaster___);
   if ( Master_WarQuestSelectionMaster && (eventUiEntity = this->fields.eventUiEntity) != 0LL )
     TotalFortificationRewardNum = UserEventFortificationMaster__GetTotalFortificationRewardNum(
                                     Master_WarQuestSelectionMaster,
@@ -611,13 +563,13 @@ void __fastcall EventInfoFortificationControl__UpdateTotalRewardNum(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5667/*"EVENT_POINT_COMMON_FORMAT"*/, 0LL);
-  v14 = TotalFortificationRewardNum;
-  v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14);
-  v13 = System_String__Format(v11, v12, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_5693/*"EVENT_POINT_COMMON_FORMAT"*/, 0LL);
+  v11 = TotalFortificationRewardNum;
+  v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v11);
+  v9 = System_String__Format(v7, v8, 0LL);
   if ( !totalRewardNumLabel )
-    sub_B0D97C(v13);
-  UILabel__set_text(totalRewardNumLabel, v13, 0LL);
+    sub_B52A5C(v9, v10);
+  UILabel__set_text(totalRewardNumLabel, v9, 0LL);
 }
 
 
@@ -629,10 +581,10 @@ void __fastcall EventInfoFortificationControl___Initialization_b__13_0(
   struct EventUiEntity_o *eventUiEntity; // x8
 
   v2 = this;
-  if ( (byte_42155B7 & 1) == 0 )
+  if ( (byte_42B0DE2 & 1) == 0 )
   {
-    this = (EventInfoFortificationControl_o *)sub_B0D8A4(&StringLiteral_18598/*"event_progress_bg"*/, method);
-    byte_42155B7 = 1;
+    this = (EventInfoFortificationControl_o *)sub_B52984(&StringLiteral_18676/*"event_progress_bg"*/);
+    byte_42B0DE2 = 1;
   }
   eventUiEntity = v2->fields.eventUiEntity;
   if ( !eventUiEntity
@@ -640,11 +592,11 @@ void __fastcall EventInfoFortificationControl___Initialization_b__13_0(
         EventInfoUIBase__SetSpriteByLocalAtlas(
           (EventInfoUIBase_o *)v2,
           v2->fields.bgSprite,
-          (System_String_o *)StringLiteral_18598/*"event_progress_bg"*/,
+          (System_String_o *)StringLiteral_18676/*"event_progress_bg"*/,
           0LL),
         (this = (EventInfoFortificationControl_o *)v2->fields.bgSprite) == 0LL) )
   {
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   }
   (*(void (__fastcall **)(EventInfoFortificationControl_o *, Il2CppMethodPointer))&this->klass[1]._2.naturalAligment)(
     this,
@@ -660,37 +612,35 @@ int32_t __fastcall EventInfoFortificationControl___SetupFortificationItem_b__17_
   EventInfoFortificationControl_o *v4; // x20
 
   v4 = this;
-  if ( (byte_42155B8 & 1) == 0 )
+  if ( (byte_42B0DE3 & 1) == 0 )
   {
-    this = (EventInfoFortificationControl_o *)sub_B0D8A4(&Method_System_Array_IndexOf_int___, entity);
-    byte_42155B8 = 1;
+    this = (EventInfoFortificationControl_o *)sub_B52984(&Method_System_Array_IndexOf_int___);
+    byte_42B0DE3 = 1;
   }
   if ( !entity )
-    sub_B0D97C(this);
+    sub_B52A5C(this, entity);
   return System_Array__IndexOf_int_(
            v4->fields.workTypeOrder,
            entity->fields.workType,
-           (const MethodInfo_1F69B20 *)Method_System_Array_IndexOf_int___);
+           (const MethodInfo_201BBC8 *)Method_System_Array_IndexOf_int___);
 }
 
 
 void __fastcall EventInfoFortificationControl___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x2
-  Il2CppObject *v3; // x19
+  Il2CppObject *v1; // x19
   struct EventInfoFortificationControl___c_StaticFields *static_fields; // x0
 
-  if ( (byte_4211B62 & 1) == 0 )
+  if ( (byte_42AD8F8 & 1) == 0 )
   {
-    sub_B0D8A4(&EventInfoFortificationControl___c_TypeInfo, v1);
-    byte_4211B62 = 1;
+    sub_B52984(&EventInfoFortificationControl___c_TypeInfo);
+    byte_42AD8F8 = 1;
   }
-  v3 = (Il2CppObject *)sub_B0D974(EventInfoFortificationControl___c_TypeInfo, v1, v2);
-  System_Object___ctor(v3, 0LL);
+  v1 = (Il2CppObject *)sub_B52A54(EventInfoFortificationControl___c_TypeInfo);
+  System_Object___ctor(v1, 0LL);
   static_fields = EventInfoFortificationControl___c_TypeInfo->static_fields;
-  static_fields->__9 = (struct EventInfoFortificationControl___c_o *)v3;
-  sub_B0D840(static_fields, v3);
+  static_fields->__9 = (struct EventInfoFortificationControl___c_o *)v1;
+  sub_B52920(static_fields);
 }
 
 
@@ -708,6 +658,6 @@ int32_t __fastcall EventInfoFortificationControl___c___SetupFortificationItem_b_
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_B0D97C(this);
+    sub_B52A5C(this, 0LL);
   return entity->fields.idx;
 }

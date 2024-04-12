@@ -1,31 +1,30 @@
 void __fastcall WarBoardQuestEntity___ctor(WarBoardQuestEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4216523 & 1) == 0 )
+  if ( (byte_42B21BB & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4216523 = 1;
+    sub_B52984(&Method_DataEntityBase_string___ctor__);
+    byte_42B21BB = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall WarBoardQuestEntity__CreatePK(
         int32_t questId,
         int32_t questPhase,
         const MethodInfo *method)
 {
-  if ( (byte_4216521 & 1) == 0 )
+  if ( (byte_42B21B9 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&questPhase);
-    byte_4216521 = 1;
+    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_42B21B9 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            questId,
            questPhase,
-           (const MethodInfo_171341C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1A4DF50 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -41,10 +40,10 @@ System_String_o *__fastcall WarBoardQuestEntity__CreatePrimaryKey(
 
 bool __fastcall WarBoardQuestEntity__IsUseEventUI(WarBoardQuestEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4216522 & 1) == 0 )
+  if ( (byte_42B21BA & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_20023/*"isUseEventUI"*/, method);
-    byte_4216522 = 1;
+    sub_B52984(&StringLiteral_20111/*"isUseEventUI"*/);
+    byte_42B21BA = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20023/*"isUseEventUI"*/, 0, 0LL) > 0;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20111/*"isUseEventUI"*/, 0, 0LL) > 0;
 }

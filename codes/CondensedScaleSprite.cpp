@@ -31,7 +31,7 @@ float __fastcall CondensedScaleSprite__GetAfterAdjustWidth(CondensedScaleSprite_
         maxLabelWidth = this->fields.maxLabelWidth,
         (UISprite = CondensedScaleSprite__get_UISprite(this, v4)) == 0LL) )
   {
-    sub_B0D97C(UISprite);
+    sub_B52A5C(UISprite, v4);
   }
   if ( mWidth <= maxLabelWidth )
     v8 = mWidth;
@@ -59,7 +59,7 @@ float __fastcall CondensedScaleSprite__GetCondensedRatio(CondensedScaleSprite_o 
   {
     uiLabel = this->fields.uiLabel;
     if ( !uiLabel || (mText = uiLabel->fields.mText) == 0LL )
-      sub_B0D97C(v3);
+      sub_B52A5C(v3, v4);
     if ( mText->fields.m_stringLength >= 1 && maxLabelWidth < uiLabel->fields.mWidth )
     {
       SpriteAndLabelWidth = CondensedScaleSprite__GetSpriteAndLabelWidth(this, v4);
@@ -75,12 +75,13 @@ float __fastcall CondensedScaleSprite__GetSpriteAndLabelWidth(CondensedScaleSpri
 {
   const MethodInfo *v3; // x1
   UISprite_o *UISprite; // x0
+  __int64 v5; // x1
   struct UILabel_o *uiLabel; // x8
 
   CondensedScaleSprite__Init(this, method);
   UISprite = CondensedScaleSprite__get_UISprite(this, v3);
   if ( !UISprite || (uiLabel = this->fields.uiLabel) == 0LL )
-    sub_B0D97C(UISprite);
+    sub_B52A5C(UISprite, v5);
   return this->fields.displayAreaAdjustValue + (float)(uiLabel->fields.mWidth + UISprite->fields.mWidth);
 }
 
@@ -109,7 +110,7 @@ LABEL_6:
         goto LABEL_6;
       }
     }
-    sub_B0D97C(uiLabel);
+    sub_B52A5C(uiLabel, method);
   }
 }
 
@@ -135,7 +136,7 @@ void __fastcall CondensedScaleSprite__SetCondensedScale(CondensedScaleSprite_o *
     || (mText = uiLabel->fields.mText,
         v10 = this,
         this->fields.previousText = mText,
-        sub_B0D840(
+        sub_B52920(
           (BattleServantConfConponent_o *)&this->fields.previousText,
           (System_Int32_array **)mText,
           v2,
@@ -148,7 +149,7 @@ void __fastcall CondensedScaleSprite__SetCondensedScale(CondensedScaleSprite_o *
         (this = (CondensedScaleSprite_o *)CondensedScaleSprite__get_UISprite(v10, v13)) == 0LL)
     || (this = (CondensedScaleSprite_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL )
   {
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   }
   v14.fields.y = 1.0;
   v14.fields.x = CondensedRatio;
@@ -166,7 +167,7 @@ void __fastcall CondensedScaleSprite__Update(CondensedScaleSprite_o *this, const
   {
     uiLabel = this->fields.uiLabel;
     if ( !uiLabel )
-      sub_B0D97C(this);
+      sub_B52A5C(this, method);
     if ( System_String__op_Inequality(this->fields.previousText, uiLabel->fields.mText, 0LL) )
       CondensedScaleSprite__SetCondensedScale(this, v4);
   }
@@ -175,21 +176,20 @@ void __fastcall CondensedScaleSprite__Update(CondensedScaleSprite_o *this, const
 
 UISprite_o *__fastcall CondensedScaleSprite__get_UISprite(CondensedScaleSprite_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Object_o *uiSprite; // x21
   WebViewObject_o *Component_WebViewObject; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
 
-  if ( (byte_421642C & 1) == 0 )
+  if ( (byte_42B1E6A & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_UISprite___, method);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
-    byte_421642C = 1;
+    sub_B52984(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B1E6A = 1;
   }
   uiSprite = (UnityEngine_Object_o *)this->fields.uiSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -201,17 +201,17 @@ UISprite_o *__fastcall CondensedScaleSprite__get_UISprite(CondensedScaleSprite_o
   {
     Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                                 (UnityEngine_Component_o *)this,
-                                (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                                (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_UISprite___);
     this->fields.uiSprite = (struct UISprite_o *)Component_WebViewObject;
-    sub_B0D840(
+    sub_B52920(
       (BattleServantConfConponent_o *)&this->fields.uiSprite,
       (System_Int32_array **)Component_WebViewObject,
+      v5,
       v6,
       v7,
       v8,
       v9,
-      v10,
-      v11);
+      v10);
   }
   return this->fields.uiSprite;
 }

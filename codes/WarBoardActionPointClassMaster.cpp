@@ -1,16 +1,14 @@
 void __fastcall WarBoardActionPointClassMaster___ctor(WarBoardActionPointClassMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4212B47 & 1) == 0 )
+  if ( (byte_42AE08B & 1) == 0 )
   {
-    sub_B0D8A4(
-      &Method_DataMasterBase_WarBoardActionPointClassMaster__WarBoardActionPointClassEntity__string___ctor__,
-      method);
-    byte_4212B47 = 1;
+    sub_B52984(&Method_DataMasterBase_WarBoardActionPointClassMaster__WarBoardActionPointClassEntity__string___ctor__);
+    byte_42AE08B = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-    336,
-    (const MethodInfo_2669F88 *)Method_DataMasterBase_WarBoardActionPointClassMaster__WarBoardActionPointClassEntity__string___ctor__);
+    337,
+    (const MethodInfo_23E268C *)Method_DataMasterBase_WarBoardActionPointClassMaster__WarBoardActionPointClassEntity__string___ctor__);
 }
 
 
@@ -23,18 +21,16 @@ WarBoardActionPointClassEntity_o *__fastcall WarBoardActionPointClassMaster__Get
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4212B48 & 1) == 0 )
+  if ( (byte_42AE08C & 1) == 0 )
   {
-    sub_B0D8A4(
-      &Method_DataMasterBase_WarBoardActionPointClassMaster__WarBoardActionPointClassEntity__string__GetEntity__,
-      *(_QWORD *)&id);
-    byte_4212B48 = 1;
+    sub_B52984(&Method_DataMasterBase_WarBoardActionPointClassMaster__WarBoardActionPointClassEntity__string__GetEntity__);
+    byte_42AE08C = 1;
   }
   PK = WarBoardActionPointClassEntity__CreatePK(id, classId, *(const MethodInfo **)&classId);
-  return (WarBoardActionPointClassEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
-                                               (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
+  return (WarBoardActionPointClassEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
+                                               (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                                PK,
-                                               (const MethodInfo_266A024 *)Method_DataMasterBase_WarBoardActionPointClassMaster__WarBoardActionPointClassEntity__string__GetEntity__);
+                                               (const MethodInfo_23E2728 *)Method_DataMasterBase_WarBoardActionPointClassMaster__WarBoardActionPointClassEntity__string__GetEntity__);
 }
 
 
@@ -53,28 +49,27 @@ WarBoardActionPointClassEntity_o *__fastcall WarBoardActionPointClassMaster__Get
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 WarBoardActionPointClassEntity_o *__fastcall WarBoardActionPointClassMaster__GetEntitySafe(
         WarBoardActionPointClassMaster_o *this,
         int32_t id,
         int32_t classId,
         const MethodInfo *method)
 {
-  __int64 v6; // x1
   WarBoardActionPointClassMaster_o *Master_WarQuestSelectionMaster; // x0
+  __int64 v7; // x1
   const MethodInfo *v8; // x3
   WarBoardActionPointClassEntity_o *result; // x0
   const MethodInfo *v10; // x3
 
-  if ( (byte_4212B49 & 1) == 0 )
+  if ( (byte_42AE08D & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMaster_WarBoardActionPointClassMaster___, *(_QWORD *)&id);
-    sub_B0D8A4(&DataManager_TypeInfo, v6);
-    byte_4212B49 = 1;
+    sub_B52984(&Method_DataManager_GetMaster_WarBoardActionPointClassMaster___);
+    sub_B52984(&DataManager_TypeInfo);
+    byte_42AE08D = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (WarBoardActionPointClassMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_WarBoardActionPointClassMaster___);
+  Master_WarQuestSelectionMaster = (WarBoardActionPointClassMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_WarBoardActionPointClassMaster___);
   if ( !Master_WarQuestSelectionMaster )
     goto LABEL_13;
   result = WarBoardActionPointClassMaster__GetEntity(Master_WarQuestSelectionMaster, id, classId, v8);
@@ -82,10 +77,10 @@ WarBoardActionPointClassEntity_o *__fastcall WarBoardActionPointClassMaster__Get
     return result;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (WarBoardActionPointClassMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_WarBoardActionPointClassMaster___);
+  Master_WarQuestSelectionMaster = (WarBoardActionPointClassMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_WarBoardActionPointClassMaster___);
   if ( !Master_WarQuestSelectionMaster )
 LABEL_13:
-    sub_B0D97C(Master_WarQuestSelectionMaster);
+    sub_B52A5C(Master_WarQuestSelectionMaster, v7);
   return WarBoardActionPointClassMaster__GetEntity(Master_WarQuestSelectionMaster, id, -1, v10);
 }
 

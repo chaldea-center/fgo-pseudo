@@ -15,7 +15,7 @@ void __fastcall UserOwnFriendPoint___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields._ItemEntity_k__BackingField,
     (System_Int32_array **)itemEntity,
     v7,
@@ -25,6 +25,6 @@ void __fastcall UserOwnFriendPoint___ctor(
     v11,
     v12);
   if ( !userGameEntity )
-    sub_B0D97C(v13);
+    sub_B52A5C(v13, v14);
   this->fields._Num_k__BackingField = UserGameEntity__GetFriendPoint(userGameEntity, v14);
 }

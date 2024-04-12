@@ -1,14 +1,14 @@
 void __fastcall CombineCostumeMaster___ctor(CombineCostumeMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_421442A & 1) == 0 )
+  if ( (byte_42B0F05 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__, method);
-    byte_421442A = 1;
+    sub_B52984(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__);
+    byte_42B0F05 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-    203,
-    (const MethodInfo_2669F88 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__);
+    204,
+    (const MethodInfo_23E268C *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__);
 }
 
 
@@ -31,25 +31,26 @@ void __fastcall CombineCostumeMaster__CheckNeedCombineInfo(
   System_Int32_array *v19; // x7
   const MethodInfo *v20; // x4
   _BOOL8 v21; // x0
-  System_String_array **v22; // x2
-  System_String_array **v23; // x3
-  System_Boolean_array **v24; // x4
-  System_Int32_array **v25; // x5
-  System_Int32_array *v26; // x6
-  System_Int32_array *v27; // x7
-  System_Int32_array *v28; // x1
-  System_String_array **v29; // x2
-  System_String_array **v30; // x3
-  System_Boolean_array **v31; // x4
-  System_Int32_array **v32; // x5
-  System_Int32_array *v33; // x6
-  System_Int32_array *v34; // x7
-  System_Int32_array *v35; // x1
+  __int64 v22; // x1
+  System_String_array **v23; // x2
+  System_String_array **v24; // x3
+  System_Boolean_array **v25; // x4
+  System_Int32_array **v26; // x5
+  System_Int32_array *v27; // x6
+  System_Int32_array *v28; // x7
+  System_Int32_array *v29; // x1
+  System_String_array **v30; // x2
+  System_String_array **v31; // x3
+  System_Boolean_array **v32; // x4
+  System_Int32_array **v33; // x5
+  System_Int32_array *v34; // x6
+  System_Int32_array *v35; // x7
+  System_Int32_array *v36; // x1
   CombineCostumeEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
   entity = 0LL;
   *itemIds = 0LL;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)itemIds,
     0LL,
     *(System_String_array ***)&costumeId,
@@ -59,22 +60,22 @@ void __fastcall CombineCostumeMaster__CheckNeedCombineInfo(
     (System_Int32_array *)method,
     v7);
   *itemNums = 0LL;
-  sub_B0D840((BattleServantConfConponent_o *)itemNums, 0LL, v14, v15, v16, v17, v18, v19);
+  sub_B52920((BattleServantConfConponent_o *)itemNums, 0LL, v14, v15, v16, v17, v18, v19);
   *qp = 0;
   v21 = CombineCostumeMaster__TryGetEntity(this, &entity, svtId, costumeId, v20);
   if ( v21 )
   {
     if ( !entity
-      || (v28 = entity->fields.itemIds,
-          *itemIds = v28,
-          sub_B0D840((BattleServantConfConponent_o *)itemIds, (System_Int32_array **)v28, v22, v23, v24, v25, v26, v27),
+      || (v29 = entity->fields.itemIds,
+          *itemIds = v29,
+          sub_B52920((BattleServantConfConponent_o *)itemIds, (System_Int32_array **)v29, v23, v24, v25, v26, v27, v28),
           !entity)
-      || (v35 = entity->fields.itemNums,
-          *itemNums = v35,
-          sub_B0D840((BattleServantConfConponent_o *)itemNums, (System_Int32_array **)v35, v29, v30, v31, v32, v33, v34),
+      || (v36 = entity->fields.itemNums,
+          *itemNums = v36,
+          sub_B52920((BattleServantConfConponent_o *)itemNums, (System_Int32_array **)v36, v30, v31, v32, v33, v34, v35),
           !entity) )
     {
-      sub_B0D97C(v21);
+      sub_B52A5C(v21, v22);
     }
     *qp = entity->fields.qp;
   }
@@ -90,32 +91,29 @@ CombineCostumeEntity_o *__fastcall CombineCostumeMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4214428 & 1) == 0 )
+  if ( (byte_42B0F03 & 1) == 0 )
   {
-    sub_B0D8A4(
-      &Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__GetEntity__,
-      *(_QWORD *)&svtId);
-    byte_4214428 = 1;
+    sub_B52984(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__GetEntity__);
+    byte_42B0F03 = 1;
   }
   PK = CombineCostumeEntity__CreatePK(svtId, costumeId, *(const MethodInfo **)&costumeId);
-  return (CombineCostumeEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
-                                     (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
+  return (CombineCostumeEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
+                                     (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                      PK,
-                                     (const MethodInfo_266A024 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__GetEntity__);
+                                     (const MethodInfo_23E2728 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__GetEntity__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall CombineCostumeMaster__IsClearCombineCondition(
         CombineCostumeMaster_o *this,
         int32_t svtId,
         int32_t costumeId,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
   UserGameEntity_o *SelfUserGame; // x19
-  const MethodInfo *v9; // x4
+  const MethodInfo *v8; // x4
   DataManager_o *Instance; // x0
+  __int64 v10; // x1
   CombineCostumeEntity_o *v11; // x8
   struct System_Int32_array *itemIds; // x9
   __int64 v13; // x20
@@ -126,16 +124,16 @@ bool __fastcall CombineCostumeMaster__IsClearCombineCondition(
   UserItemEntity_o *v19; // [xsp+0h] [xbp-40h] BYREF
   CombineCostumeEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_421442B & 1) == 0 )
+  if ( (byte_42B0F06 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMasterData_UserItemMaster___, *(_QWORD *)&svtId);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    byte_421442B = 1;
+    sub_B52984(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_42B0F06 = 1;
   }
   v19 = 0LL;
   entity = 0LL;
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
-  Instance = (DataManager_o *)CombineCostumeMaster__TryGetEntity(this, &entity, svtId, costumeId, v9);
+  Instance = (DataManager_o *)CombineCostumeMaster__TryGetEntity(this, &entity, svtId, costumeId, v8);
   if ( ((unsigned __int8)Instance & 1) == 0 )
     return 1;
   v11 = entity;
@@ -152,12 +150,12 @@ bool __fastcall CombineCostumeMaster__IsClearCombineCondition(
         v14 = 8LL;
         while ( 1 )
         {
-          Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !Instance )
             break;
           Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                         Instance,
-                                        (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                        (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_UserItemMaster___);
           if ( !SelfUserGame )
             break;
           if ( !entity )
@@ -188,8 +186,8 @@ bool __fastcall CombineCostumeMaster__IsClearCombineCondition(
           if ( (unsigned int)(v14 - 8) >= itemNums->max_length )
           {
 LABEL_29:
-            v18 = sub_B0D9A8(Instance);
-            sub_B0D948(v18, 0LL);
+            v18 = sub_B52A88(Instance);
+            sub_B52A28(v18, 0LL);
           }
           if ( v19->fields.num < *((_DWORD *)&itemNums->obj.klass + v14) )
             return 0;
@@ -197,7 +195,7 @@ LABEL_29:
             return SelfUserGame->fields.qp >= v11->fields.qp;
         }
 LABEL_28:
-        sub_B0D97C(Instance);
+        sub_B52A5C(Instance, v10);
       }
     }
   }
@@ -217,15 +215,15 @@ bool __fastcall CombineCostumeMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4214429 & 1) == 0 )
+  if ( (byte_42B0F04 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__, entity);
-    byte_4214429 = 1;
+    sub_B52984(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__);
+    byte_42B0F04 = 1;
   }
   PK = CombineCostumeEntity__CreatePK(svtId, costumeId, *(const MethodInfo **)&svtId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266A07C *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__);
+           (const MethodInfo_23E2780 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__);
 }

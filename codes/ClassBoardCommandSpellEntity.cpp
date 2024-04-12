@@ -1,33 +1,32 @@
 void __fastcall ClassBoardCommandSpellEntity___ctor(ClassBoardCommandSpellEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4217AC7 & 1) == 0 )
+  if ( (byte_42B3812 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4217AC7 = 1;
+    sub_B52984(&Method_DataEntityBase_string___ctor__);
+    byte_42B3812 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ClassBoardCommandSpellEntity__CreatePK(
         int32_t id,
         int32_t commandSpellId,
         int32_t lv,
         const MethodInfo *method)
 {
-  if ( (byte_4217AC6 & 1) == 0 )
+  if ( (byte_42B3811 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&commandSpellId);
-    byte_4217AC6 = 1;
+    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_42B3811 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            commandSpellId,
            lv,
-           (const MethodInfo_1713844 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1A4E378 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -53,78 +52,72 @@ System_Int32_array *__fastcall ClassBoardCommandSpellEntity__GetDispValFromClass
         ClassBoardCommandSpellEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   struct System_Int32_array *funcIds; // x22
   DataVals_array *SetTypeDataValArray; // x19
-  __int64 v10; // x1
-  __int64 v11; // x2
-  System_Collections_Generic_List_int__o *v12; // x20
+  System_Collections_Generic_List_int__o *v5; // x20
   WarQuestSelectionMaster_o *Master_WarQuestSelectionMaster; // x0
-  FunctionMaster_o *v14; // x21
-  unsigned __int64 v15; // x23
-  __int64 v17; // x0
+  __int64 v7; // x1
+  FunctionMaster_o *v8; // x21
+  unsigned __int64 v9; // x23
+  __int64 v11; // x0
 
-  if ( (byte_4217AC3 & 1) == 0 )
+  if ( (byte_42B380E & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMaster_FunctionMaster___, method);
-    sub_B0D8A4(&DataManager_TypeInfo, v3);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__Add__, v4);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int__ToArray__, v5);
-    sub_B0D8A4(&Method_System_Collections_Generic_List_int___ctor__, v6);
-    sub_B0D8A4(&System_Collections_Generic_List_int__TypeInfo, v7);
-    byte_4217AC3 = 1;
+    sub_B52984(&Method_DataManager_GetMaster_FunctionMaster___);
+    sub_B52984(&DataManager_TypeInfo);
+    sub_B52984(&Method_System_Collections_Generic_List_int__Add__);
+    sub_B52984(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_B52984(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_B52984(&System_Collections_Generic_List_int__TypeInfo);
+    byte_42B380E = 1;
   }
   funcIds = this->fields.funcIds;
   SetTypeDataValArray = ClassBoardCommandSpellEntity__GetSetTypeDataValArray(this, method);
-  v12 = (System_Collections_Generic_List_int__o *)sub_B0D974(System_Collections_Generic_List_int__TypeInfo, v10, v11);
+  v5 = (System_Collections_Generic_List_int__o *)sub_B52A54(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v12,
-    (const MethodInfo_2FAF1A4 *)Method_System_Collections_Generic_List_int___ctor__);
+    v5,
+    (const MethodInfo_3056254 *)Method_System_Collections_Generic_List_int___ctor__);
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_FunctionMaster___);
+  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_FunctionMaster___);
   if ( !funcIds )
     goto LABEL_16;
   if ( (int)funcIds->max_length >= 1 )
   {
-    v14 = (FunctionMaster_o *)Master_WarQuestSelectionMaster;
-    v15 = 0LL;
+    v8 = (FunctionMaster_o *)Master_WarQuestSelectionMaster;
+    v9 = 0LL;
     while ( SetTypeDataValArray )
     {
-      if ( v15 >= SetTypeDataValArray->max_length )
+      if ( v9 >= SetTypeDataValArray->max_length )
       {
-        v17 = sub_B0D9A8(Master_WarQuestSelectionMaster);
-        sub_B0D948(v17, 0LL);
+        v11 = sub_B52A88(Master_WarQuestSelectionMaster);
+        sub_B52A28(v11, 0LL);
       }
-      if ( !v14 )
+      if ( !v8 )
         break;
       Master_WarQuestSelectionMaster = (WarQuestSelectionMaster_o *)FunctionMaster__GetDispValFromFunc(
-                                                                      v14,
-                                                                      SetTypeDataValArray->m_Items[v15],
+                                                                      v8,
+                                                                      SetTypeDataValArray->m_Items[v9],
                                                                       3,
                                                                       0LL);
-      if ( !v12 )
+      if ( !v5 )
         break;
       System_Collections_Generic_List_int___Add(
-        v12,
+        v5,
         (int32_t)Master_WarQuestSelectionMaster,
-        (const MethodInfo_2FAFF00 *)Method_System_Collections_Generic_List_int__Add__);
-      if ( (__int64)++v15 >= (int)funcIds->max_length )
+        (const MethodInfo_3056FB0 *)Method_System_Collections_Generic_List_int__Add__);
+      if ( (__int64)++v9 >= (int)funcIds->max_length )
         goto LABEL_14;
     }
 LABEL_16:
-    sub_B0D97C(Master_WarQuestSelectionMaster);
+    sub_B52A5C(Master_WarQuestSelectionMaster, v7);
   }
 LABEL_14:
-  if ( !v12 )
+  if ( !v5 )
     goto LABEL_16;
   return System_Collections_Generic_List_int___ToArray(
-           v12,
-           (const MethodInfo_2FB200C *)Method_System_Collections_Generic_List_int__ToArray__);
+           v5,
+           (const MethodInfo_30590BC *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -132,61 +125,52 @@ System_Int32_array *__fastcall ClassBoardCommandSpellEntity__GetEffectIdArray(
         ClassBoardCommandSpellEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  System_Collections_Generic_HashSet_int__o *v10; // x19
-  const MethodInfo *v11; // x1
+  System_Collections_Generic_HashSet_int__o *v3; // x19
+  const MethodInfo *v4; // x1
   DataVals_array *SetTypeDataValArray; // x20
   WarQuestSelectionMaster_o *Master_WarQuestSelectionMaster; // x0
+  __int64 v7; // x1
   int max_length; // w8
-  DataMasterBase_WarMaster__WarEntity__int__o *v15; // x21
-  unsigned int v16; // w22
-  __int64 v18; // x0
+  DataMasterBase_WarMaster__WarEntity__int__o *v9; // x21
+  unsigned int v10; // w22
+  __int64 v12; // x0
   WarEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4217AC5 & 1) == 0 )
+  if ( (byte_42B3810 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMaster_AuraEffectMaster___, method);
-    sub_B0D8A4(&DataManager_TypeInfo, v4);
-    sub_B0D8A4(&Method_DataMasterBase_AuraEffectMaster__AuraEffectEntity__int__TryGetEntity__, v5);
-    sub_B0D8A4(&Method_System_Linq_Enumerable_ToArray_int___, v6);
-    sub_B0D8A4(&Method_System_Collections_Generic_HashSet_int__Add__, v7);
-    sub_B0D8A4(&Method_System_Collections_Generic_HashSet_int___ctor___67861296, v8);
-    sub_B0D8A4(&System_Collections_Generic_HashSet_int__TypeInfo, v9);
-    byte_4217AC5 = 1;
+    sub_B52984(&Method_DataManager_GetMaster_AuraEffectMaster___);
+    sub_B52984(&DataManager_TypeInfo);
+    sub_B52984(&Method_DataMasterBase_AuraEffectMaster__AuraEffectEntity__int__TryGetEntity__);
+    sub_B52984(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_B52984(&Method_System_Collections_Generic_HashSet_int__Add__);
+    sub_B52984(&Method_System_Collections_Generic_HashSet_int___ctor___68488952);
+    sub_B52984(&System_Collections_Generic_HashSet_int__TypeInfo);
+    byte_42B3810 = 1;
   }
   entity = 0LL;
-  v10 = (System_Collections_Generic_HashSet_int__o *)sub_B0D974(
-                                                       System_Collections_Generic_HashSet_int__TypeInfo,
-                                                       method,
-                                                       v2);
+  v3 = (System_Collections_Generic_HashSet_int__o *)sub_B52A54(System_Collections_Generic_HashSet_int__TypeInfo);
   System_Collections_Generic_HashSet_int____ctor(
-    v10,
-    (const MethodInfo_2C74FFC *)Method_System_Collections_Generic_HashSet_int___ctor___67861296);
-  SetTypeDataValArray = ClassBoardCommandSpellEntity__GetSetTypeDataValArray(this, v11);
+    v3,
+    (const MethodInfo_24D9648 *)Method_System_Collections_Generic_HashSet_int___ctor___68488952);
+  SetTypeDataValArray = ClassBoardCommandSpellEntity__GetSetTypeDataValArray(this, v4);
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_AuraEffectMaster___);
+  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_AuraEffectMaster___);
   if ( !SetTypeDataValArray )
     goto LABEL_19;
   max_length = SetTypeDataValArray->max_length;
   if ( max_length >= 1 )
   {
-    v15 = (DataMasterBase_WarMaster__WarEntity__int__o *)Master_WarQuestSelectionMaster;
-    v16 = 0;
+    v9 = (DataMasterBase_WarMaster__WarEntity__int__o *)Master_WarQuestSelectionMaster;
+    v10 = 0;
     while ( 1 )
     {
-      if ( v16 >= max_length )
+      if ( v10 >= max_length )
       {
-        v18 = sub_B0D9A8(Master_WarQuestSelectionMaster);
-        sub_B0D948(v18, 0LL);
+        v12 = sub_B52A88(Master_WarQuestSelectionMaster);
+        sub_B52A28(v12, 0LL);
       }
-      Master_WarQuestSelectionMaster = (WarQuestSelectionMaster_o *)SetTypeDataValArray->m_Items[v16];
+      Master_WarQuestSelectionMaster = (WarQuestSelectionMaster_o *)SetTypeDataValArray->m_Items[v10];
       if ( !Master_WarQuestSelectionMaster )
         break;
       Master_WarQuestSelectionMaster = (WarQuestSelectionMaster_o *)DataVals__GetClassIconAuraEffectId(
@@ -194,35 +178,35 @@ System_Int32_array *__fastcall ClassBoardCommandSpellEntity__GetEffectIdArray(
                                                                       0LL);
       if ( (_DWORD)Master_WarQuestSelectionMaster )
       {
-        if ( !v15 )
+        if ( !v9 )
           break;
         Master_WarQuestSelectionMaster = (WarQuestSelectionMaster_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-                                                                        v15,
+                                                                        v9,
                                                                         &entity,
                                                                         (int32_t)Master_WarQuestSelectionMaster,
-                                                                        (const MethodInfo_2669C30 *)Method_DataMasterBase_AuraEffectMaster__AuraEffectEntity__int__TryGetEntity__);
+                                                                        (const MethodInfo_23E2334 *)Method_DataMasterBase_AuraEffectMaster__AuraEffectEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)Master_WarQuestSelectionMaster & 1) != 0 )
         {
-          if ( !entity || !v10 )
+          if ( !entity || !v3 )
             break;
           Master_WarQuestSelectionMaster = (WarQuestSelectionMaster_o *)System_Collections_Generic_HashSet_int___Add(
-                                                                          v10,
+                                                                          v3,
                                                                           *(&entity->fields.id + 1),
-                                                                          (const MethodInfo_2C761D8 *)Method_System_Collections_Generic_HashSet_int__Add__);
+                                                                          (const MethodInfo_24DA824 *)Method_System_Collections_Generic_HashSet_int__Add__);
         }
       }
       max_length = SetTypeDataValArray->max_length;
-      if ( (int)++v16 >= max_length )
+      if ( (int)++v10 >= max_length )
         return System_Linq_Enumerable__ToArray_int_(
-                 (System_Collections_Generic_IEnumerable_TSource__o *)v10,
-                 (const MethodInfo_1B560F0 *)Method_System_Linq_Enumerable_ToArray_int___);
+                 (System_Collections_Generic_IEnumerable_TSource__o *)v3,
+                 (const MethodInfo_1B6E46C *)Method_System_Linq_Enumerable_ToArray_int___);
     }
 LABEL_19:
-    sub_B0D97C(Master_WarQuestSelectionMaster);
+    sub_B52A5C(Master_WarQuestSelectionMaster, v7);
   }
   return System_Linq_Enumerable__ToArray_int_(
-           (System_Collections_Generic_IEnumerable_TSource__o *)v10,
-           (const MethodInfo_1B560F0 *)Method_System_Linq_Enumerable_ToArray_int___);
+           (System_Collections_Generic_IEnumerable_TSource__o *)v3,
+           (const MethodInfo_1B6E46C *)Method_System_Linq_Enumerable_ToArray_int___);
 }
 
 
@@ -238,28 +222,28 @@ DataVals_array *__fastcall ClassBoardCommandSpellEntity__GetSetTypeDataValArray(
         ClassBoardCommandSpellEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   WarQuestSelectionMaster_o *Master_WarQuestSelectionMaster; // x0
   System_Int32_array *funcIds; // x20
-  FunctionMaster_o *v6; // x21
-  const MethodInfo *v7; // x1
+  FunctionMaster_o *v5; // x21
+  const MethodInfo *v6; // x1
   DataVals_array *DataValsList; // x0
+  __int64 v8; // x1
 
-  if ( (byte_4217AC4 & 1) == 0 )
+  if ( (byte_42B380F & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMaster_FunctionMaster___, method);
-    sub_B0D8A4(&DataManager_TypeInfo, v3);
-    byte_4217AC4 = 1;
+    sub_B52984(&Method_DataManager_GetMaster_FunctionMaster___);
+    sub_B52984(&DataManager_TypeInfo);
+    byte_42B380F = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_FunctionMaster___);
+  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_FunctionMaster___);
   funcIds = this->fields.funcIds;
-  v6 = (FunctionMaster_o *)Master_WarQuestSelectionMaster;
-  DataValsList = ClassBoardCommandSpellEntity__getDataValsList(this, v7);
-  if ( !v6 )
-    sub_B0D97C(DataValsList);
-  return FunctionMaster__GetSetTypeDataValArray(v6, funcIds, DataValsList, 0LL);
+  v5 = (FunctionMaster_o *)Master_WarQuestSelectionMaster;
+  DataValsList = ClassBoardCommandSpellEntity__getDataValsList(this, v6);
+  if ( !v5 )
+    sub_B52A5C(DataValsList, v8);
+  return FunctionMaster__GetSetTypeDataValArray(v5, funcIds, DataValsList, 0LL);
 }
 
 
@@ -267,118 +251,113 @@ DataVals_array *__fastcall ClassBoardCommandSpellEntity__getDataValsList(
         ClassBoardCommandSpellEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   struct System_String_array *svals; // x8
-  __int64 v6; // x0
-  __int64 v7; // x1
-  __int64 v8; // x2
-  struct System_String_array *v9; // x8
-  DataVals_array *v10; // x19
-  __int64 v11; // x23
-  __int64 v12; // x24
+  __int64 v4; // x0
+  __int64 v5; // x1
+  struct System_String_array *v6; // x8
+  DataVals_array *v7; // x19
+  __int64 v8; // x23
+  __int64 v9; // x24
   unsigned __int64 max_length; // x9
-  unsigned __int64 v14; // x26
-  System_String_o *v15; // x22
-  DataVals_o *v16; // x21
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
-  __int64 v23; // x1
-  __int64 v24; // x2
-  DataVals_o *v25; // x20
-  System_String_array **v26; // x2
-  System_String_array **v27; // x3
-  System_Boolean_array **v28; // x4
-  System_Int32_array **v29; // x5
-  System_Int32_array *v30; // x6
-  System_Int32_array *v31; // x7
-  __int64 v33; // x0
-  __int64 v34; // x0
+  unsigned __int64 v11; // x26
+  System_String_o *v12; // x22
+  DataVals_o *v13; // x21
+  System_String_array **v14; // x2
+  System_String_array **v15; // x3
+  System_Boolean_array **v16; // x4
+  System_Int32_array **v17; // x5
+  System_Int32_array *v18; // x6
+  System_Int32_array *v19; // x7
+  DataVals_o *v20; // x20
+  System_String_array **v21; // x2
+  System_String_array **v22; // x3
+  System_Boolean_array **v23; // x4
+  System_Int32_array **v24; // x5
+  System_Int32_array *v25; // x6
+  System_Int32_array *v26; // x7
+  __int64 v28; // x0
+  __int64 v29; // x0
 
-  if ( (byte_4217AC2 & 1) == 0 )
+  if ( (byte_42B380D & 1) == 0 )
   {
-    sub_B0D8A4(&DataVals___TypeInfo, method);
-    sub_B0D8A4(&DataVals_TypeInfo, v3);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v4);
-    byte_4217AC2 = 1;
+    sub_B52984(&DataVals___TypeInfo);
+    sub_B52984(&DataVals_TypeInfo);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B380D = 1;
   }
   svals = this->fields.svals;
   if ( !svals )
   {
-    v10 = (DataVals_array *)sub_B0D8BC(DataVals___TypeInfo, 1LL);
-    v25 = (DataVals_o *)sub_B0D974(DataVals_TypeInfo, v23, v24);
-    DataVals___ctor(v25, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-    if ( v10 )
+    v7 = (DataVals_array *)sub_B5299C(DataVals___TypeInfo, 1LL);
+    v20 = (DataVals_o *)sub_B52A54(DataVals_TypeInfo);
+    DataVals___ctor(v20, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+    if ( v7 )
     {
-      if ( v25 )
+      if ( v20 )
       {
-        v6 = sub_B0D964(v25, v10->obj.klass->_1.element_class);
-        if ( !v6 )
+        v4 = sub_B52A44(v20, v7->obj.klass->_1.element_class);
+        if ( !v4 )
         {
 LABEL_21:
-          v34 = sub_B0D99C(v6);
-          sub_B0D948(v34, 0LL);
+          v29 = sub_B52A7C(v4);
+          sub_B52A28(v29, 0LL);
         }
       }
-      if ( !v10->max_length )
+      if ( !v7->max_length )
       {
 LABEL_20:
-        v33 = sub_B0D9A8(v6);
-        sub_B0D948(v33, 0LL);
+        v28 = sub_B52A88(v4);
+        sub_B52A28(v28, 0LL);
       }
-      v10->m_Items[0] = v25;
-      sub_B0D840((BattleServantConfConponent_o *)v10->m_Items, (System_Int32_array **)v25, v26, v27, v28, v29, v30, v31);
-      return v10;
+      v7->m_Items[0] = v20;
+      sub_B52920((BattleServantConfConponent_o *)v7->m_Items, (System_Int32_array **)v20, v21, v22, v23, v24, v25, v26);
+      return v7;
     }
 LABEL_13:
-    sub_B0D97C(v6);
+    sub_B52A5C(v4, v5);
   }
-  v6 = sub_B0D8BC(DataVals___TypeInfo, svals->max_length);
-  v9 = this->fields.svals;
-  if ( !v9 )
+  v4 = sub_B5299C(DataVals___TypeInfo, svals->max_length);
+  v6 = this->fields.svals;
+  if ( !v6 )
     goto LABEL_13;
-  v10 = (DataVals_array *)v6;
-  v11 = 4LL;
-  v12 = 32LL;
+  v7 = (DataVals_array *)v4;
+  v8 = 4LL;
+  v9 = 32LL;
   while ( 1 )
   {
-    max_length = v9->max_length;
-    v14 = v11 - 4;
-    if ( v11 - 4 >= (int)max_length )
-      return v10;
-    if ( v14 >= max_length )
+    max_length = v6->max_length;
+    v11 = v8 - 4;
+    if ( v8 - 4 >= (int)max_length )
+      return v7;
+    if ( v11 >= max_length )
       goto LABEL_20;
-    v15 = (System_String_o *)*((_QWORD *)&v9->obj.klass + v11);
-    v16 = (DataVals_o *)sub_B0D974(DataVals_TypeInfo, v7, v8);
-    DataVals___ctor(v16, v15, 0LL);
-    if ( v10 )
+    v12 = (System_String_o *)*((_QWORD *)&v6->obj.klass + v8);
+    v13 = (DataVals_o *)sub_B52A54(DataVals_TypeInfo);
+    DataVals___ctor(v13, v12, 0LL);
+    if ( v7 )
     {
-      if ( v16 )
+      if ( v13 )
       {
-        v6 = sub_B0D964(v16, v10->obj.klass->_1.element_class);
-        if ( !v6 )
+        v4 = sub_B52A44(v13, v7->obj.klass->_1.element_class);
+        if ( !v4 )
           goto LABEL_21;
       }
-      if ( v14 >= v10->max_length )
+      if ( v11 >= v7->max_length )
         goto LABEL_20;
-      *((_QWORD *)&v10->obj.klass + v11) = v16;
-      sub_B0D840(
-        (BattleServantConfConponent_o *)((char *)v10 + v12),
-        (System_Int32_array **)v16,
+      *((_QWORD *)&v7->obj.klass + v8) = v13;
+      sub_B52920(
+        (BattleServantConfConponent_o *)((char *)v7 + v9),
+        (System_Int32_array **)v13,
+        v14,
+        v15,
+        v16,
         v17,
         v18,
-        v19,
-        v20,
-        v21,
-        v22);
-      v9 = this->fields.svals;
-      ++v11;
-      v12 += 8LL;
-      if ( v9 )
+        v19);
+      v6 = this->fields.svals;
+      ++v8;
+      v9 += 8LL;
+      if ( v6 )
         continue;
     }
     goto LABEL_13;

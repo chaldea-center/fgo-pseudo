@@ -7,45 +7,43 @@ void __fastcall SetPreBattleFormationControl___ctor(SetPreBattleFormationControl
 
 void __fastcall SetPreBattleFormationControl__Init(SetPreBattleFormationControl_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
+  UILabel_o *v3; // x20
+  System_String_o *v4; // x0
   __int64 v5; // x1
-  UILabel_o *v6; // x20
-  System_String_o *v7; // x0
   UILabel_o *infoLabel; // x20
-  const MethodInfo *v9; // x1
+  const MethodInfo *v7; // x1
 
-  if ( (byte_42178AF & 1) == 0 )
+  if ( (byte_42B2FD5 & 1) == 0 )
   {
-    sub_B0D8A4(&LocalizationManager_TypeInfo, method);
-    sub_B0D8A4(&OptionManager_TypeInfo, v3);
-    sub_B0D8A4(&StringLiteral_9817/*"OPTION_PREBATTLEFORMATION_DISP"*/, v4);
-    sub_B0D8A4(&StringLiteral_9818/*"OPTION_PREBATTLEFORMATION_INFO"*/, v5);
-    byte_42178AF = 1;
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&OptionManager_TypeInfo);
+    sub_B52984(&StringLiteral_9851/*"OPTION_PREBATTLEFORMATION_DISP"*/);
+    sub_B52984(&StringLiteral_9852/*"OPTION_PREBATTLEFORMATION_INFO"*/);
+    byte_42B2FD5 = 1;
   }
-  v6 = *(UILabel_o **)&this->fields.isPreBattleFormationSetting;
+  v3 = *(UILabel_o **)&this->fields.isPreBattleFormationSetting;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9818/*"OPTION_PREBATTLEFORMATION_INFO"*/, 0LL);
-  if ( !v6
-    || (UILabel__set_text(v6, v7, 0LL),
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9852/*"OPTION_PREBATTLEFORMATION_INFO"*/, 0LL);
+  if ( !v3
+    || (UILabel__set_text(v3, v4, 0LL),
         infoLabel = this->fields.infoLabel,
-        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9817/*"OPTION_PREBATTLEFORMATION_DISP"*/, 0LL),
+        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9851/*"OPTION_PREBATTLEFORMATION_DISP"*/, 0LL),
         !infoLabel) )
   {
-    sub_B0D97C(v7);
+    sub_B52A5C(v4, v5);
   }
-  UILabel__set_text(infoLabel, v7, 0LL);
+  UILabel__set_text(infoLabel, v4, 0LL);
   if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
   }
   LOBYTE(this[1].klass) = OptionManager__GetPreBattleFormationSetting(0LL);
-  SetPreBattleFormationControl__SetPreBattleFormationDispValue(this, v9);
+  SetPreBattleFormationControl__SetPreBattleFormationDispValue(this, v7);
 }
 
 
@@ -55,10 +53,10 @@ void __fastcall SetPreBattleFormationControl__OnClickPreBattleFormation(
 {
   const MethodInfo *v3; // x1
 
-  if ( (byte_42178B2 & 1) == 0 )
+  if ( (byte_42B2FD8 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_42178B2 = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42B2FD8 = 1;
   }
   if ( LOBYTE(this[1].klass) )
   {
@@ -90,10 +88,10 @@ void __fastcall SetPreBattleFormationControl__Reflection(
 {
   int klass_low; // w19
 
-  if ( (byte_42178B1 & 1) == 0 )
+  if ( (byte_42B2FD7 & 1) == 0 )
   {
-    sub_B0D8A4(&OptionManager_TypeInfo, method);
-    byte_42178B1 = 1;
+    sub_B52984(&OptionManager_TypeInfo);
+    byte_42B2FD7 = 1;
   }
   klass_low = LOBYTE(this[1].klass);
   if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -109,22 +107,21 @@ void __fastcall SetPreBattleFormationControl__SetPreBattleFormationDispValue(
         SetPreBattleFormationControl_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   struct UILabel_o *btnTitle; // x0
-  __int64 *v5; // x8
+  __int64 *v4; // x8
 
-  if ( (byte_42178B0 & 1) == 0 )
+  if ( (byte_42B2FD6 & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_17057/*"btn_on"*/, method);
-    sub_B0D8A4(&StringLiteral_17056/*"btn_off"*/, v3);
-    byte_42178B0 = 1;
+    sub_B52984(&StringLiteral_17124/*"btn_on"*/);
+    sub_B52984(&StringLiteral_17123/*"btn_off"*/);
+    byte_42B2FD6 = 1;
   }
   btnTitle = this->fields.btnTitle;
   if ( !btnTitle )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, method);
   if ( LOBYTE(this[1].klass) )
-    v5 = &StringLiteral_17057/*"btn_on"*/;
+    v4 = &StringLiteral_17124/*"btn_on"*/;
   else
-    v5 = &StringLiteral_17056/*"btn_off"*/;
-  UIButton__set_normalSprite((UIButton_o *)btnTitle, (System_String_o *)*v5, 0LL);
+    v4 = &StringLiteral_17123/*"btn_off"*/;
+  UIButton__set_normalSprite((UIButton_o *)btnTitle, (System_String_o *)*v4, 0LL);
 }

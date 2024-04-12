@@ -10,17 +10,16 @@ CharaGraphFilterLogicBase_o *__fastcall CharaGraphSortManageUnitServantEquip__Cr
         CharaGraphSortManageUnitServantEquip_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  ServantCharaGraphEquipFilterLogic_o *v3; // x19
+  ServantCharaGraphEquipFilterLogic_o *v2; // x19
 
-  if ( (byte_421424B & 1) == 0 )
+  if ( (byte_42AFDF4 & 1) == 0 )
   {
-    sub_B0D8A4(&ServantCharaGraphEquipFilterLogic_TypeInfo, method);
-    byte_421424B = 1;
+    sub_B52984(&ServantCharaGraphEquipFilterLogic_TypeInfo);
+    byte_42AFDF4 = 1;
   }
-  v3 = (ServantCharaGraphEquipFilterLogic_o *)sub_B0D974(ServantCharaGraphEquipFilterLogic_TypeInfo, method, v2);
-  ServantCharaGraphEquipFilterLogic___ctor(v3, 0LL);
-  return (CharaGraphFilterLogicBase_o *)v3;
+  v2 = (ServantCharaGraphEquipFilterLogic_o *)sub_B52A54(ServantCharaGraphEquipFilterLogic_TypeInfo);
+  ServantCharaGraphEquipFilterLogic___ctor(v2, 0LL);
+  return (CharaGraphFilterLogicBase_o *)v2;
 }
 
 
@@ -28,17 +27,16 @@ CharaGraphSortLogicBase_o *__fastcall CharaGraphSortManageUnitServantEquip__Crea
         CharaGraphSortManageUnitServantEquip_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  ServantEquipCharaGraphSortLogic_o *v3; // x19
+  ServantEquipCharaGraphSortLogic_o *v2; // x19
 
-  if ( (byte_421424A & 1) == 0 )
+  if ( (byte_42AFDF3 & 1) == 0 )
   {
-    sub_B0D8A4(&ServantEquipCharaGraphSortLogic_TypeInfo, method);
-    byte_421424A = 1;
+    sub_B52984(&ServantEquipCharaGraphSortLogic_TypeInfo);
+    byte_42AFDF3 = 1;
   }
-  v3 = (ServantEquipCharaGraphSortLogic_o *)sub_B0D974(ServantEquipCharaGraphSortLogic_TypeInfo, method, v2);
-  ServantEquipCharaGraphSortLogic___ctor(v3, 0LL);
-  return (CharaGraphSortLogicBase_o *)v3;
+  v2 = (ServantEquipCharaGraphSortLogic_o *)sub_B52A54(ServantEquipCharaGraphSortLogic_TypeInfo);
+  ServantEquipCharaGraphSortLogic___ctor(v2, 0LL);
+  return (CharaGraphSortLogicBase_o *)v2;
 }
 
 
@@ -78,10 +76,10 @@ System_String_o *__fastcall CharaGraphSortManageUnitServantEquip__get_SortSaveKe
         CharaGraphSortManageUnitServantEquip_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4214249 & 1) == 0 )
+  if ( (byte_42AFDF2 & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_1111/*"2"*/, method);
-    byte_4214249 = 1;
+    sub_B52984(&StringLiteral_1120/*"2"*/);
+    byte_42AFDF2 = 1;
   }
-  return (System_String_o *)StringLiteral_1111/*"2"*/;
+  return (System_String_o *)StringLiteral_1120/*"2"*/;
 }

@@ -1,22 +1,22 @@
 void __fastcall SingletonTemplate_clsQuestCheck____ctor(
         SingletonTemplate_clsQuestCheck__o *this,
-        const MethodInfo_2A716D0 *method)
+        const MethodInfo_2B7641C *method)
 {
   if ( !this )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, method);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
 void __fastcall SingletonTemplate_clsQuestCheck___Destroy(
         SingletonTemplate_clsQuestCheck__o *this,
-        const MethodInfo_2A716E8 *method)
+        const MethodInfo_2B76434 *method)
 {
   ;
 }
 
 
-clsQuestCheck_o *__fastcall SingletonTemplate_clsQuestCheck___get_Instance(const MethodInfo_2A713E8 *method)
+clsQuestCheck_o *__fastcall SingletonTemplate_clsQuestCheck___get_Instance(const MethodInfo_2B76134 *method)
 {
   SingletonTemplate_CLASS__c *klass; // x20
   Il2CppClass *_0_SingletonTemplate_CLASS; // x20
@@ -61,39 +61,39 @@ clsQuestCheck_o *__fastcall SingletonTemplate_clsQuestCheck___get_Instance(const
 
   klass = method->klass;
   if ( (BYTE2(klass->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_AA65A4(method->klass);
+    sub_AEB684(method->klass);
   _0_SingletonTemplate_CLASS = klass->rgctx_data->_0_SingletonTemplate_CLASS_;
   v4 = WORD1(_0_SingletonTemplate_CLASS->vtable[0].methodPtr);
   if ( (v4 & 1) == 0 )
   {
-    sub_AA65A4(_0_SingletonTemplate_CLASS);
+    sub_AEB684(_0_SingletonTemplate_CLASS);
     v4 = WORD1(_0_SingletonTemplate_CLASS->vtable[0].methodPtr);
   }
   if ( (v4 & 0x400) != 0 )
   {
     v5 = method->klass;
     if ( (BYTE2(v5->vtable._0_Equals.methodPtr) & 1) == 0 )
-      sub_AA65A4(method->klass);
+      sub_AEB684(method->klass);
     v6 = v5->rgctx_data->_0_SingletonTemplate_CLASS_;
     if ( (BYTE2(v6->vtable[0].methodPtr) & 1) == 0 )
-      sub_AA65A4(v6);
+      sub_AEB684(v6);
     if ( !v6->_2.cctor_finished )
     {
       v7 = method->klass;
       if ( (BYTE2(v7->vtable._0_Equals.methodPtr) & 1) == 0 )
-        sub_AA65A4(method->klass);
+        sub_AEB684(method->klass);
       v8 = v7->rgctx_data->_0_SingletonTemplate_CLASS_;
       if ( (BYTE2(v8->vtable[0].methodPtr) & 1) == 0 )
-        sub_AA65A4(v8);
+        sub_AEB684(v8);
       j_il2cpp_runtime_class_init_0(v8);
     }
   }
   v9 = method->klass;
   if ( (BYTE2(v9->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_AA65A4(method->klass);
+    sub_AEB684(method->klass);
   v10 = v9->rgctx_data->_0_SingletonTemplate_CLASS_;
   if ( (BYTE2(v10->vtable[0].methodPtr) & 1) == 0 )
-    sub_AA65A4(v10);
+    sub_AEB684(v10);
   if ( !*(_QWORD *)v10->static_fields )
   {
     v11 = method->klass;
@@ -101,88 +101,88 @@ clsQuestCheck_o *__fastcall SingletonTemplate_clsQuestCheck___get_Instance(const
     v13 = v11;
     if ( (v12 & 1) == 0 )
     {
-      sub_AA65A4(method->klass);
+      sub_AEB684(method->klass);
       v13 = method->klass;
       v12 = WORD1(v13->vtable._0_Equals.methodPtr);
     }
     methodPointer = (__int64 (__fastcall *)(MethodInfo *))v11->rgctx_data->_2_System_Activator_CreateInstance_CLASS_->methodPointer;
     if ( (v12 & 1) == 0 )
-      sub_AA65A4(v13);
+      sub_AEB684(v13);
     v15 = methodPointer(v13->rgctx_data->_2_System_Activator_CreateInstance_CLASS_);
     v22 = method->klass;
     v23 = (System_Int32_array **)v15;
     if ( (BYTE2(v22->vtable._0_Equals.methodPtr) & 1) == 0 )
-      sub_AA65A4(method->klass);
+      sub_AEB684(method->klass);
     v24 = v22->rgctx_data->_0_SingletonTemplate_CLASS_;
     v25 = WORD1(v24->vtable[0].methodPtr);
     if ( (v25 & 1) == 0 )
     {
-      sub_AA65A4(v24);
+      sub_AEB684(v24);
       v25 = WORD1(v24->vtable[0].methodPtr);
     }
     if ( (v25 & 0x400) != 0 )
     {
       v26 = method->klass;
       if ( (BYTE2(v26->vtable._0_Equals.methodPtr) & 1) == 0 )
-        sub_AA65A4(method->klass);
+        sub_AEB684(method->klass);
       v27 = v26->rgctx_data->_0_SingletonTemplate_CLASS_;
       if ( (BYTE2(v27->vtable[0].methodPtr) & 1) == 0 )
-        sub_AA65A4(v27);
+        sub_AEB684(v27);
       if ( !v27->_2.cctor_finished )
       {
         v28 = method->klass;
         if ( (BYTE2(v28->vtable._0_Equals.methodPtr) & 1) == 0 )
-          sub_AA65A4(method->klass);
+          sub_AEB684(method->klass);
         v29 = v28->rgctx_data->_0_SingletonTemplate_CLASS_;
         if ( (BYTE2(v29->vtable[0].methodPtr) & 1) == 0 )
-          sub_AA65A4(v29);
+          sub_AEB684(v29);
         j_il2cpp_runtime_class_init_0(v29);
       }
     }
     v30 = method->klass;
     if ( (BYTE2(v30->vtable._0_Equals.methodPtr) & 1) == 0 )
-      sub_AA65A4(method->klass);
+      sub_AEB684(method->klass);
     v31 = v30->rgctx_data->_0_SingletonTemplate_CLASS_;
     if ( (BYTE2(v31->vtable[0].methodPtr) & 1) == 0 )
-      sub_AA65A4(v31);
+      sub_AEB684(v31);
     static_fields = (BattleServantConfConponent_o *)v31->static_fields;
     static_fields->klass = (BattleServantConfConponent_c *)v23;
-    sub_B0D840(static_fields, v23, v16, v17, v18, v19, v20, v21);
+    sub_B52920(static_fields, v23, v16, v17, v18, v19, v20, v21);
   }
   v33 = method->klass;
   if ( (BYTE2(v33->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_AA65A4(method->klass);
+    sub_AEB684(method->klass);
   v34 = v33->rgctx_data->_0_SingletonTemplate_CLASS_;
   v35 = WORD1(v34->vtable[0].methodPtr);
   if ( (v35 & 1) == 0 )
   {
-    sub_AA65A4(v34);
+    sub_AEB684(v34);
     v35 = WORD1(v34->vtable[0].methodPtr);
   }
   if ( (v35 & 0x400) != 0 )
   {
     v36 = method->klass;
     if ( (BYTE2(v36->vtable._0_Equals.methodPtr) & 1) == 0 )
-      sub_AA65A4(method->klass);
+      sub_AEB684(method->klass);
     v37 = v36->rgctx_data->_0_SingletonTemplate_CLASS_;
     if ( (BYTE2(v37->vtable[0].methodPtr) & 1) == 0 )
-      sub_AA65A4(v37);
+      sub_AEB684(v37);
     if ( !v37->_2.cctor_finished )
     {
       v38 = method->klass;
       if ( (BYTE2(v38->vtable._0_Equals.methodPtr) & 1) == 0 )
-        sub_AA65A4(method->klass);
+        sub_AEB684(method->klass);
       v39 = v38->rgctx_data->_0_SingletonTemplate_CLASS_;
       if ( (BYTE2(v39->vtable[0].methodPtr) & 1) == 0 )
-        sub_AA65A4(v39);
+        sub_AEB684(v39);
       j_il2cpp_runtime_class_init_0(v39);
     }
   }
   v40 = method->klass;
   if ( (BYTE2(v40->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_AA65A4(v40);
+    sub_AEB684(v40);
   v41 = v40->rgctx_data->_0_SingletonTemplate_CLASS_;
   if ( (BYTE2(v41->vtable[0].methodPtr) & 1) == 0 )
-    sub_AA65A4(v41);
+    sub_AEB684(v41);
   return *(clsQuestCheck_o **)v41->static_fields;
 }

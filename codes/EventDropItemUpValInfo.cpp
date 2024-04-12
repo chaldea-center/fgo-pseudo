@@ -1,4 +1,3 @@
-// local variable allocation has failed, the output may be wrong!
 void __fastcall EventDropItemUpValInfo___ctor(
         EventDropItemUpValInfo_o *this,
         int32_t member,
@@ -6,8 +5,8 @@ void __fastcall EventDropItemUpValInfo___ctor(
         bool isEquip,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
   DataManager_o *Instance; // x0
+  struct FunctionGroupEntity_o *funcGroupEntity; // x1
   System_String_array **v11; // x2
   System_String_array **v12; // x3
   System_Boolean_array **v13; // x4
@@ -26,14 +25,13 @@ void __fastcall EventDropItemUpValInfo___ctor(
   System_Int32_array **v26; // x5
   System_Int32_array *v27; // x6
   System_Int32_array *v28; // x7
-  struct FunctionGroupEntity_o *funcGroupEntity; // x1
   System_String_array **baseFuncId; // x2
 
-  if ( (byte_4216F4F & 1) == 0 )
+  if ( (byte_42B27FC & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMasterData_FunctionGroupMaster___, *(_QWORD *)&member);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_4216F4F = 1;
+    sub_B52984(&Method_DataManager_GetMasterData_FunctionGroupMaster___);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_42B27FC = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !dropInfo )
@@ -42,7 +40,7 @@ void __fastcall EventDropItemUpValInfo___ctor(
   this->fields.member = member;
   funcEntity = dropInfo->fields.funcEntity;
   this->fields.funcEntity = funcEntity;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.funcEntity,
     (System_Int32_array **)funcEntity,
     v11,
@@ -64,12 +62,12 @@ void __fastcall EventDropItemUpValInfo___ctor(
     targetType = v18->fields.targetType;
   }
   this->fields.targetType = targetType;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_24;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
+                                (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
   v21 = this->fields.funcEntity;
   if ( !v21 )
     goto LABEL_24;
@@ -110,7 +108,7 @@ LABEL_22:
       else
       {
         this->fields.baseFuncGroupEntity = funcGroupEntity;
-        sub_B0D840(
+        sub_B52920(
           (BattleServantConfConponent_o *)&this->fields.baseFuncGroupEntity,
           (System_Int32_array **)funcGroupEntity,
           baseFuncId,
@@ -125,7 +123,7 @@ LABEL_22:
       }
     }
 LABEL_24:
-    sub_B0D97C(Instance);
+    sub_B52A5C(Instance, funcGroupEntity);
   }
 LABEL_23:
   this->fields.isEquipUp = dropInfo->fields.isEquipUp;
@@ -135,16 +133,15 @@ LABEL_23:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall EventDropItemUpValInfo___ctor_28902220(
+void __fastcall EventDropItemUpValInfo___ctor_29662632(
         EventDropItemUpValInfo_o *this,
         int32_t member,
         EventDropUpValInfo_o *dropInfo,
         ItemEntity_o *itemEntity,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
   DataManager_o *Instance; // x0
+  struct FunctionGroupEntity_o *funcGroupEntity; // x1
   System_String_array **v11; // x2
   System_String_array **v12; // x3
   System_Boolean_array **v13; // x4
@@ -177,14 +174,13 @@ void __fastcall EventDropItemUpValInfo___ctor_28902220(
   System_Int32_array **v40; // x5
   System_Int32_array *v41; // x6
   System_Int32_array *v42; // x7
-  struct FunctionGroupEntity_o *funcGroupEntity; // x1
   System_String_array **baseFuncId; // x2
 
-  if ( (byte_4216F50 & 1) == 0 )
+  if ( (byte_42B27FD & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMasterData_FunctionGroupMaster___, *(_QWORD *)&member);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_4216F50 = 1;
+    sub_B52984(&Method_DataManager_GetMasterData_FunctionGroupMaster___);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_42B27FD = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !dropInfo )
@@ -194,7 +190,7 @@ void __fastcall EventDropItemUpValInfo___ctor_28902220(
   funcEntity = dropInfo->fields.funcEntity;
   p_funcEntity = &this->fields.funcEntity;
   this->fields.funcEntity = funcEntity;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.funcEntity,
     (System_Int32_array **)funcEntity,
     v11,
@@ -210,7 +206,7 @@ void __fastcall EventDropItemUpValInfo___ctor_28902220(
   funcType = v25->fields.funcType;
   this->fields.itemEntity = itemEntity;
   *(_QWORD *)&this->fields.baseFuncType = funcType;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.itemEntity,
     (System_Int32_array **)itemEntity,
     v19,
@@ -219,12 +215,12 @@ void __fastcall EventDropItemUpValInfo___ctor_28902220(
     v22,
     v23,
     v24);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_18;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
+                                (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
   v27 = *p_funcEntity;
   if ( !*p_funcEntity )
     goto LABEL_18;
@@ -234,7 +230,7 @@ void __fastcall EventDropItemUpValInfo___ctor_28902220(
   Entity = FunctionGroupMaster__GetEntity((FunctionGroupMaster_o *)Instance, v27->fields.id, this->fields.eventId, 0LL);
   p_funcGroupEntity = &this->fields.funcGroupEntity;
   this->fields.funcGroupEntity = Entity;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.funcGroupEntity,
     (System_Int32_array **)Entity,
     v31,
@@ -279,7 +275,7 @@ LABEL_16:
       else
       {
         this->fields.baseFuncGroupEntity = funcGroupEntity;
-        sub_B0D840(
+        sub_B52920(
           (BattleServantConfConponent_o *)&this->fields.baseFuncGroupEntity,
           (System_Int32_array **)funcGroupEntity,
           baseFuncId,
@@ -294,7 +290,7 @@ LABEL_16:
       }
     }
 LABEL_18:
-    sub_B0D97C(Instance);
+    sub_B52A5C(Instance, funcGroupEntity);
   }
 LABEL_17:
   this->fields.isEquipUp = dropInfo->fields.isEquipUp;

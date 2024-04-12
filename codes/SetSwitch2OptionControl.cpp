@@ -7,21 +7,19 @@ void __fastcall SetSwitch2OptionControl___ctor(SetSwitch2OptionControl_o *this, 
 
 void __fastcall SetSwitch2OptionControl__Init(SetSwitch2OptionControl_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
   UILabel_o *friendCostumeDispBtn; // x20
-  System_String_o *v7; // x0
-  UILabel_o *v8; // x20
-  const MethodInfo *v9; // x1
+  System_String_o *v4; // x0
+  __int64 v5; // x1
+  UILabel_o *v6; // x20
+  const MethodInfo *v7; // x1
 
-  if ( (byte_4218A65 & 1) == 0 )
+  if ( (byte_42B456C & 1) == 0 )
   {
-    sub_B0D8A4(&LocalizationManager_TypeInfo, method);
-    sub_B0D8A4(&OptionManager_TypeInfo, v3);
-    sub_B0D8A4(&StringLiteral_9807/*"OPTION_FRIEND_COSTUME_DISP_EXPLANATION"*/, v4);
-    sub_B0D8A4(&StringLiteral_9806/*"OPTION_FRIEND_COSTUME_DISP"*/, v5);
-    byte_4218A65 = 1;
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&OptionManager_TypeInfo);
+    sub_B52984(&StringLiteral_9841/*"OPTION_FRIEND_COSTUME_DISP_EXPLANATION"*/);
+    sub_B52984(&StringLiteral_9840/*"OPTION_FRIEND_COSTUME_DISP"*/);
+    byte_42B456C = 1;
   }
   friendCostumeDispBtn = (UILabel_o *)this->fields.friendCostumeDispBtn;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -29,23 +27,23 @@ void __fastcall SetSwitch2OptionControl__Init(SetSwitch2OptionControl_o *this, c
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9806/*"OPTION_FRIEND_COSTUME_DISP"*/, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9840/*"OPTION_FRIEND_COSTUME_DISP"*/, 0LL);
   if ( !friendCostumeDispBtn
-    || (UILabel__set_text(friendCostumeDispBtn, v7, 0LL),
-        v8 = *(UILabel_o **)&this->fields.isFriendCostumeDisp,
-        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9807/*"OPTION_FRIEND_COSTUME_DISP_EXPLANATION"*/, 0LL),
-        !v8) )
+    || (UILabel__set_text(friendCostumeDispBtn, v4, 0LL),
+        v6 = *(UILabel_o **)&this->fields.isFriendCostumeDisp,
+        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9841/*"OPTION_FRIEND_COSTUME_DISP_EXPLANATION"*/, 0LL),
+        !v6) )
   {
-    sub_B0D97C(v7);
+    sub_B52A5C(v4, v5);
   }
-  UILabel__set_text(v8, v7, 0LL);
+  UILabel__set_text(v6, v4, 0LL);
   if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
   }
   LOBYTE(this[1].klass) = OptionManager__GetFriendCostume(0LL);
-  SetSwitch2OptionControl__setFriendDispValue(this, v9);
+  SetSwitch2OptionControl__setFriendDispValue(this, v7);
 }
 
 
@@ -54,16 +52,15 @@ void __fastcall SetSwitch2OptionControl__OnFriendDispChangeBtn(
         const MethodInfo *method)
 {
   __int64 v3; // x1
-  __int64 v4; // x1
   struct UILabel_o *friendCostumeDispInfoLb; // x0
-  char v6; // w8
+  char v5; // w8
 
-  if ( (byte_4218A68 & 1) == 0 )
+  if ( (byte_42B456F & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    sub_B0D8A4(&StringLiteral_17057/*"btn_on"*/, v3);
-    sub_B0D8A4(&StringLiteral_17056/*"btn_off"*/, v4);
-    byte_4218A68 = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    sub_B52984(&StringLiteral_17124/*"btn_on"*/);
+    sub_B52984(&StringLiteral_17123/*"btn_off"*/);
+    byte_42B456F = 1;
   }
   if ( !LOBYTE(this[1].klass) )
   {
@@ -76,12 +73,12 @@ void __fastcall SetSwitch2OptionControl__OnFriendDispChangeBtn(
     friendCostumeDispInfoLb = this->fields.friendCostumeDispInfoLb;
     if ( friendCostumeDispInfoLb )
     {
-      UIButton__set_normalSprite((UIButton_o *)friendCostumeDispInfoLb, (System_String_o *)StringLiteral_17057/*"btn_on"*/, 0LL);
-      v6 = 1;
+      UIButton__set_normalSprite((UIButton_o *)friendCostumeDispInfoLb, (System_String_o *)StringLiteral_17124/*"btn_on"*/, 0LL);
+      v5 = 1;
       goto LABEL_14;
     }
 LABEL_15:
-    sub_B0D97C(friendCostumeDispInfoLb);
+    sub_B52A5C(friendCostumeDispInfoLb, v3);
   }
   if ( (WORD1(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
     && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -92,10 +89,10 @@ LABEL_15:
   friendCostumeDispInfoLb = this->fields.friendCostumeDispInfoLb;
   if ( !friendCostumeDispInfoLb )
     goto LABEL_15;
-  UIButton__set_normalSprite((UIButton_o *)friendCostumeDispInfoLb, (System_String_o *)StringLiteral_17056/*"btn_off"*/, 0LL);
-  v6 = 0;
+  UIButton__set_normalSprite((UIButton_o *)friendCostumeDispInfoLb, (System_String_o *)StringLiteral_17123/*"btn_off"*/, 0LL);
+  v5 = 0;
 LABEL_14:
-  LOBYTE(this[1].klass) = v6;
+  LOBYTE(this[1].klass) = v5;
 }
 
 
@@ -103,10 +100,10 @@ void __fastcall SetSwitch2OptionControl__Reflection(SetSwitch2OptionControl_o *t
 {
   int klass_low; // w19
 
-  if ( (byte_4218A66 & 1) == 0 )
+  if ( (byte_42B456D & 1) == 0 )
   {
-    sub_B0D8A4(&OptionManager_TypeInfo, method);
-    byte_4218A66 = 1;
+    sub_B52984(&OptionManager_TypeInfo);
+    byte_42B456D = 1;
   }
   klass_low = LOBYTE(this[1].klass);
   if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -120,22 +117,21 @@ void __fastcall SetSwitch2OptionControl__Reflection(SetSwitch2OptionControl_o *t
 
 void __fastcall SetSwitch2OptionControl__setFriendDispValue(SetSwitch2OptionControl_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   struct UILabel_o *friendCostumeDispInfoLb; // x0
-  __int64 *v5; // x8
+  __int64 *v4; // x8
 
-  if ( (byte_4218A67 & 1) == 0 )
+  if ( (byte_42B456E & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_17057/*"btn_on"*/, method);
-    sub_B0D8A4(&StringLiteral_17056/*"btn_off"*/, v3);
-    byte_4218A67 = 1;
+    sub_B52984(&StringLiteral_17124/*"btn_on"*/);
+    sub_B52984(&StringLiteral_17123/*"btn_off"*/);
+    byte_42B456E = 1;
   }
   friendCostumeDispInfoLb = this->fields.friendCostumeDispInfoLb;
   if ( !friendCostumeDispInfoLb )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, method);
   if ( LOBYTE(this[1].klass) )
-    v5 = &StringLiteral_17057/*"btn_on"*/;
+    v4 = &StringLiteral_17124/*"btn_on"*/;
   else
-    v5 = &StringLiteral_17056/*"btn_off"*/;
-  UIButton__set_normalSprite((UIButton_o *)friendCostumeDispInfoLb, (System_String_o *)*v5, 0LL);
+    v4 = &StringLiteral_17123/*"btn_off"*/;
+  UIButton__set_normalSprite((UIButton_o *)friendCostumeDispInfoLb, (System_String_o *)*v4, 0LL);
 }

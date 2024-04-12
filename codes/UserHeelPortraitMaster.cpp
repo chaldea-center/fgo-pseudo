@@ -1,14 +1,14 @@
 void __fastcall UserHeelPortraitMaster___ctor(UserHeelPortraitMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_421374A & 1) == 0 )
+  if ( (byte_42AEF66 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string___ctor__, method);
-    byte_421374A = 1;
+    sub_B52984(&Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string___ctor__);
+    byte_42AEF66 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-    454,
-    (const MethodInfo_2669F88 *)Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string___ctor__);
+    455,
+    (const MethodInfo_23E268C *)Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string___ctor__);
 }
 
 
@@ -20,18 +20,16 @@ UserHeelPortraitEntity_o *__fastcall UserHeelPortraitMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_421374B & 1) == 0 )
+  if ( (byte_42AEF67 & 1) == 0 )
   {
-    sub_B0D8A4(
-      &Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string__GetEntity__,
-      *(_QWORD *)&eventId);
-    byte_421374B = 1;
+    sub_B52984(&Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string__GetEntity__);
+    byte_42AEF67 = 1;
   }
   PK = UserHeelPortraitEntity__CreatePK(eventId, *(const MethodInfo **)&eventId);
-  return (UserHeelPortraitEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
-                                       (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
+  return (UserHeelPortraitEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
+                                       (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                        PK,
-                                       (const MethodInfo_266A024 *)Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string__GetEntity__);
+                                       (const MethodInfo_23E2728 *)Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string__GetEntity__);
 }
 
 
@@ -43,15 +41,15 @@ bool __fastcall UserHeelPortraitMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_421374C & 1) == 0 )
+  if ( (byte_42AEF68 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string__TryGetEntity__, entity);
-    byte_421374C = 1;
+    sub_B52984(&Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string__TryGetEntity__);
+    byte_42AEF68 = 1;
   }
   PK = UserHeelPortraitEntity__CreatePK(eventId, (const MethodInfo *)entity);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266A07C *)Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string__TryGetEntity__);
+           (const MethodInfo_23E2780 *)Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string__TryGetEntity__);
 }

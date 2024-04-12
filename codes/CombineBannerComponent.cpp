@@ -7,23 +7,21 @@ void __fastcall CombineBannerComponent___ctor(CombineBannerComponent_o *this, co
 void __fastcall CombineBannerComponent__onOpenWebView(CombineBannerComponent_o *this, const MethodInfo *method)
 {
   CombineBannerComponent_o *v2; // x19
-  __int64 v3; // x1
-  __int64 v4; // x1
   struct EventEntity_o *eventEntity; // x8
   System_String_o *linkBody; // x19
   System_String_o *WebViewAddress; // x19
 
   v2 = this;
-  if ( (byte_42143EB & 1) == 0 )
+  if ( (byte_42B0EC6 & 1) == 0 )
   {
-    sub_B0D8A4(&NetworkManager_TypeInfo, method);
-    sub_B0D8A4(&WebViewManager_TypeInfo, v3);
-    this = (CombineBannerComponent_o *)sub_B0D8A4(&StringLiteral_1/*""*/, v4);
-    byte_42143EB = 1;
+    sub_B52984(&NetworkManager_TypeInfo);
+    sub_B52984(&WebViewManager_TypeInfo);
+    this = (CombineBannerComponent_o *)sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B0EC6 = 1;
   }
   eventEntity = v2->fields.eventEntity;
   if ( !eventEntity )
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   linkBody = eventEntity->fields.linkBody;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -53,17 +51,17 @@ void __fastcall CombineBannerComponent__setBannerInfo(
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_42143EA & 1) == 0 )
+  if ( (byte_42B0EC5 & 1) == 0 )
   {
-    sub_B0D8A4(&AtlasManager_TypeInfo, eventData);
-    byte_42143EA = 1;
+    sub_B52984(&AtlasManager_TypeInfo);
+    byte_42B0EC5 = 1;
   }
   bannerSprite = this->fields.bannerSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetBanner_27919828(bannerSprite, eventData, 0LL);
+  AtlasManager__SetBanner_28375196(bannerSprite, eventData, 0LL);
   this->fields.eventEntity = eventData;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.eventEntity,
     (System_Int32_array **)eventData,
     v6,

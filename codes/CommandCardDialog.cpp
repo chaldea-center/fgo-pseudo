@@ -1,30 +1,29 @@
 void __fastcall CommandCardDialog___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
   struct CommandCardDialog_StaticFields *static_fields; // x9
-  int32x2_t *v3; // x8
+  int32x2_t *v2; // x8
 
-  if ( (byte_42147D2 & 1) == 0 )
+  if ( (byte_42B009A & 1) == 0 )
   {
-    sub_B0D8A4(&CommandCardDialog_TypeInfo, v1);
-    byte_42147D2 = 1;
+    sub_B52984(&CommandCardDialog_TypeInfo);
+    byte_42B009A = 1;
   }
   CommandCardDialog_TypeInfo->static_fields->DETACH_NEED_ITEM_NUM = 1;
   static_fields = CommandCardDialog_TypeInfo->static_fields;
   *(int32x2_t *)&static_fields->UNLOCK_ITEM_SCALE.fields.x = vdup_n_s32(0x3F19999Au);
   static_fields->UNLOCK_ITEM_SCALE.fields.z = 0.6;
-  v3 = (int32x2_t *)CommandCardDialog_TypeInfo->static_fields;
-  v3[2].n64_u64[0] = vdup_n_s32(0x3F333333u).n64_u64[0];
-  v3[3].n64_u32[0] = 1060320051;
+  v2 = (int32x2_t *)CommandCardDialog_TypeInfo->static_fields;
+  v2[2].n64_u64[0] = vdup_n_s32(0x3F333333u).n64_u64[0];
+  v2[3].n64_u32[0] = 1060320051;
 }
 
 
 void __fastcall CommandCardDialog___ctor(CommandCardDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_42147D1 & 1) == 0 )
+  if ( (byte_42B0099 & 1) == 0 )
   {
-    sub_B0D8A4(&BaseDialog_TypeInfo, method);
-    byte_42147D1 = 1;
+    sub_B52984(&BaseDialog_TypeInfo);
+    byte_42B0099 = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -36,11 +35,11 @@ void __fastcall CommandCardDialog__Close(CommandCardDialog_o *this, const Method
 {
   const MethodInfo *v2; // x2
 
-  CommandCardDialog__Close_24690036(this, 0LL, v2);
+  CommandCardDialog__Close_25178048(this, 0LL, v2);
 }
 
 
-void __fastcall CommandCardDialog__Close_24690036(
+void __fastcall CommandCardDialog__Close_25178048(
         CommandCardDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -50,25 +49,22 @@ void __fastcall CommandCardDialog__Close_24690036(
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
-  __int64 v10; // x1
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
-  __int64 v17; // x1
-  __int64 v18; // x2
-  System_Action_o *v19; // x20
+  System_String_array **v10; // x2
+  System_String_array **v11; // x3
+  System_Boolean_array **v12; // x4
+  System_Int32_array **v13; // x5
+  System_Int32_array *v14; // x6
+  System_Int32_array *v15; // x7
+  System_Action_o *v16; // x20
 
-  if ( (byte_42147CD & 1) == 0 )
+  if ( (byte_42B0095 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, callback);
-    sub_B0D8A4(&Method_CommandCardDialog_EndClose__, v10);
-    byte_42147CD = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&Method_CommandCardDialog_EndClose__);
+    byte_42B0095 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc,
     (System_Int32_array **)callback,
     (System_String_array **)method,
@@ -79,10 +75,10 @@ void __fastcall CommandCardDialog__Close_24690036(
     v7);
   this->fields.state = 3;
   this->fields.closeFunc = 0LL;
-  sub_B0D840((BattleServantConfConponent_o *)&this->fields.closeFunc, 0LL, v11, v12, v13, v14, v15, v16);
-  v19 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v17, v18);
-  System_Action___ctor(v19, (Il2CppObject *)this, Method_CommandCardDialog_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v19, 0LL);
+  sub_B52920((BattleServantConfConponent_o *)&this->fields.closeFunc, 0LL, v10, v11, v12, v13, v14, v15);
+  v16 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+  System_Action___ctor(v16, (Il2CppObject *)this, Method_CommandCardDialog_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v16, 0LL);
 }
 
 
@@ -101,7 +97,7 @@ void __fastcall CommandCardDialog__EndClose(CommandCardDialog_o *this, const Met
   if ( closeCallbackFunc )
   {
     this->fields.closeCallbackFunc = 0LL;
-    sub_B0D840((BattleServantConfConponent_o *)&this->fields.closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_B52920((BattleServantConfConponent_o *)&this->fields.closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
     System_Action__Invoke(closeCallbackFunc, 0LL);
   }
 }
@@ -130,36 +126,37 @@ void __fastcall CommandCardDialog__GetSkillInfo(
   System_Int32_array *v16; // x6
   System_Int32_array *v17; // x7
   __int64 v18; // x0
-  System_String_array **v19; // x2
-  System_String_array **v20; // x3
-  System_Boolean_array **v21; // x4
-  System_Int32_array **v22; // x5
-  System_Int32_array *v23; // x6
-  System_Int32_array *v24; // x7
-  System_String_o *v25; // x1
-  System_String_o *MargeExplanation_26133592; // x0
-  System_String_array **v27; // x2
-  System_String_array **v28; // x3
-  System_Boolean_array **v29; // x4
-  System_Int32_array **v30; // x5
-  System_Int32_array *v31; // x6
-  System_Int32_array *v32; // x7
-  __int64 v33; // x0
+  __int64 v19; // x1
+  System_String_array **v20; // x2
+  System_String_array **v21; // x3
+  System_Boolean_array **v22; // x4
+  System_Int32_array **v23; // x5
+  System_Int32_array *v24; // x6
+  System_Int32_array *v25; // x7
+  System_String_o *v26; // x1
+  System_String_o *MargeExplanation_26541972; // x0
+  System_String_array **v28; // x2
+  System_String_array **v29; // x3
+  System_Boolean_array **v30; // x4
+  System_Int32_array **v31; // x5
+  System_Int32_array *v32; // x6
+  System_Int32_array *v33; // x7
+  __int64 v34; // x0
   System_String_array *explanationList; // [xsp+0h] [xbp-40h] BYREF
   System_String_array *titleList; // [xsp+8h] [xbp-38h] BYREF
   System_Int32_array *idList; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_42147CC & 1) == 0 )
+  if ( (byte_42B0094 & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_1/*""*/, userCommandCode);
-    byte_42147CC = 1;
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B0094 = 1;
   }
   idList = 0LL;
   explanationList = 0LL;
   titleList = 0LL;
   *skillId = 0;
   *skillName = (System_String_o *)StringLiteral_1/*""*/;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)skillName,
     (System_Int32_array **)StringLiteral_1/*""*/,
     (System_String_array **)skillId,
@@ -169,7 +166,7 @@ void __fastcall CommandCardDialog__GetSkillInfo(
     v6,
     v7);
   *skillDetail = (System_String_o *)StringLiteral_1/*""*/;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)skillDetail,
     (System_Int32_array **)StringLiteral_1/*""*/,
     v12,
@@ -188,46 +185,45 @@ void __fastcall CommandCardDialog__GetSkillInfo(
   *skillId = idList->m_Items[1];
   if ( !titleList )
 LABEL_9:
-    sub_B0D97C(v18);
+    sub_B52A5C(v18, v19);
   if ( !titleList->max_length )
   {
 LABEL_10:
-    v33 = sub_B0D9A8(v18);
-    sub_B0D948(v33, 0LL);
+    v34 = sub_B52A88(v18);
+    sub_B52A28(v34, 0LL);
   }
-  v25 = titleList->m_Items[0];
-  *skillName = v25;
-  sub_B0D840((BattleServantConfConponent_o *)skillName, (System_Int32_array **)v25, v19, v20, v21, v22, v23, v24);
-  MargeExplanation_26133592 = SkillInfo__GetMargeExplanation_26133592(explanationList, 0LL);
-  *skillDetail = MargeExplanation_26133592;
-  sub_B0D840(
+  v26 = titleList->m_Items[0];
+  *skillName = v26;
+  sub_B52920((BattleServantConfConponent_o *)skillName, (System_Int32_array **)v26, v20, v21, v22, v23, v24, v25);
+  MargeExplanation_26541972 = SkillInfo__GetMargeExplanation_26541972(explanationList, 0LL);
+  *skillDetail = MargeExplanation_26541972;
+  sub_B52920(
     (BattleServantConfConponent_o *)skillDetail,
-    (System_Int32_array **)MargeExplanation_26133592,
-    v27,
+    (System_Int32_array **)MargeExplanation_26541972,
     v28,
     v29,
     v30,
     v31,
-    v32);
+    v32,
+    v33);
 }
 
 
 void __fastcall CommandCardDialog__Init(CommandCardDialog_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UILabel_o *titleLabel; // x0
-  int32_t v5; // w20
+  int32_t v4; // w20
   UnityEngine_Object_o *gameObject; // x21
-  int32_t v7; // w20
-  UnityEngine_Object_o *v8; // x21
-  int32_t v9; // w20
-  UnityEngine_Object_o *v10; // x21
+  int32_t v6; // w20
+  UnityEngine_Object_o *v7; // x21
+  int32_t v8; // w20
+  UnityEngine_Object_o *v9; // x21
 
-  if ( (byte_42147C7 & 1) == 0 )
+  if ( (byte_42B008F & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v3);
-    byte_42147C7 = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B008F = 1;
   }
   titleLabel = this->fields.titleLabel;
   this->fields.state = 0;
@@ -344,15 +340,15 @@ void __fastcall CommandCardDialog__Init(CommandCardDialog_o *this, const MethodI
   titleLabel = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)titleLabel, 0LL);
   if ( !titleLabel )
     goto LABEL_69;
-  v5 = UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)titleLabel, 0LL) - 1;
-  if ( v5 >= 0 )
+  v4 = UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)titleLabel, 0LL) - 1;
+  if ( v4 >= 0 )
   {
     while ( 1 )
     {
       titleLabel = (UILabel_o *)this->fields.unlockItemGrid;
       if ( !titleLabel )
         break;
-      titleLabel = (UILabel_o *)UIGrid__GetChild((UIGrid_o *)titleLabel, v5, 0LL);
+      titleLabel = (UILabel_o *)UIGrid__GetChild((UIGrid_o *)titleLabel, v4, 0LL);
       if ( !titleLabel )
         break;
       titleLabel = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)titleLabel, 0LL);
@@ -366,12 +362,12 @@ void __fastcall CommandCardDialog__Init(CommandCardDialog_o *this, const MethodI
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      UnityEngine_Object__DestroyImmediate_34935488(gameObject, 0LL);
-      if ( --v5 < 0 )
+      UnityEngine_Object__DestroyImmediate_35617168(gameObject, 0LL);
+      if ( --v4 < 0 )
         goto LABEL_40;
     }
 LABEL_69:
-    sub_B0D97C(titleLabel);
+    sub_B52A5C(titleLabel, method);
   }
 LABEL_40:
   titleLabel = (UILabel_o *)this->fields.removeItemGrid;
@@ -380,29 +376,29 @@ LABEL_40:
   titleLabel = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)titleLabel, 0LL);
   if ( !titleLabel )
     goto LABEL_69;
-  v7 = UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)titleLabel, 0LL) - 1;
-  if ( v7 >= 0 )
+  v6 = UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)titleLabel, 0LL) - 1;
+  if ( v6 >= 0 )
   {
     do
     {
       titleLabel = (UILabel_o *)this->fields.removeItemGrid;
       if ( !titleLabel )
         goto LABEL_69;
-      titleLabel = (UILabel_o *)UIGrid__GetChild((UIGrid_o *)titleLabel, v7, 0LL);
+      titleLabel = (UILabel_o *)UIGrid__GetChild((UIGrid_o *)titleLabel, v6, 0LL);
       if ( !titleLabel )
         goto LABEL_69;
       titleLabel = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)titleLabel, 0LL);
       if ( !titleLabel )
         goto LABEL_69;
-      v8 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)titleLabel, 0LL);
+      v7 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)titleLabel, 0LL);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      UnityEngine_Object__DestroyImmediate_34935488(v8, 0LL);
+      UnityEngine_Object__DestroyImmediate_35617168(v7, 0LL);
     }
-    while ( --v7 >= 0 );
+    while ( --v6 >= 0 );
   }
   titleLabel = (UILabel_o *)this->fields.returnItemGrid;
   if ( !titleLabel )
@@ -410,29 +406,29 @@ LABEL_40:
   titleLabel = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)titleLabel, 0LL);
   if ( !titleLabel )
     goto LABEL_69;
-  v9 = UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)titleLabel, 0LL) - 1;
-  if ( v9 >= 0 )
+  v8 = UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)titleLabel, 0LL) - 1;
+  if ( v8 >= 0 )
   {
     do
     {
       titleLabel = (UILabel_o *)this->fields.returnItemGrid;
       if ( !titleLabel )
         goto LABEL_69;
-      titleLabel = (UILabel_o *)UIGrid__GetChild((UIGrid_o *)titleLabel, v9, 0LL);
+      titleLabel = (UILabel_o *)UIGrid__GetChild((UIGrid_o *)titleLabel, v8, 0LL);
       if ( !titleLabel )
         goto LABEL_69;
       titleLabel = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)titleLabel, 0LL);
       if ( !titleLabel )
         goto LABEL_69;
-      v10 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)titleLabel, 0LL);
+      v9 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)titleLabel, 0LL);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      UnityEngine_Object__DestroyImmediate_34935488(v10, 0LL);
+      UnityEngine_Object__DestroyImmediate_35617168(v9, 0LL);
     }
-    while ( --v9 >= 0 );
+    while ( --v8 >= 0 );
   }
   titleLabel = (UILabel_o *)this->fields.equipmentCommandCardObj;
   if ( !titleLabel )
@@ -472,12 +468,13 @@ LABEL_40:
 
 void __fastcall CommandCardDialog__OnClickCancel(CommandCardDialog_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Component_o *removeItemGrid; // x0
 
-  if ( (byte_42147CF & 1) == 0 )
+  if ( (byte_42B0097 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_42147CF = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42B0097 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -496,7 +493,7 @@ void __fastcall CommandCardDialog__OnClickCancel(CommandCardDialog_o *this, cons
       || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)removeItemGrid, 0, 0LL),
           (removeItemGrid = (UnityEngine_Component_o *)this->fields.closeFunc) == 0LL) )
     {
-      sub_B0D97C(removeItemGrid);
+      sub_B52A5C(removeItemGrid, v3);
     }
     CommandCardDialog_ClickDelegate__Invoke((CommandCardDialog_ClickDelegate_o *)removeItemGrid, 0, 0LL);
   }
@@ -505,12 +502,13 @@ void __fastcall CommandCardDialog__OnClickCancel(CommandCardDialog_o *this, cons
 
 void __fastcall CommandCardDialog__OnClickDecide(CommandCardDialog_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Component_o *removeItemGrid; // x0
 
-  if ( (byte_42147CE & 1) == 0 )
+  if ( (byte_42B0096 & 1) == 0 )
   {
-    sub_B0D8A4(&SoundManager_TypeInfo, method);
-    byte_42147CE = 1;
+    sub_B52984(&SoundManager_TypeInfo);
+    byte_42B0096 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -529,7 +527,7 @@ void __fastcall CommandCardDialog__OnClickDecide(CommandCardDialog_o *this, cons
       || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)removeItemGrid, 0, 0LL),
           (removeItemGrid = (UnityEngine_Component_o *)this->fields.closeFunc) == 0LL) )
     {
-      sub_B0D97C(removeItemGrid);
+      sub_B52A5C(removeItemGrid, v3);
     }
     CommandCardDialog_ClickDelegate__Invoke((CommandCardDialog_ClickDelegate_o *)removeItemGrid, 1, 0LL);
   }
@@ -544,114 +542,95 @@ void __fastcall CommandCardDialog__OpenLockCommandCardResult(
         CommandCardDialog_ClickDelegate_o *closeCallback,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
-  __int64 v23; // x1
-  __int64 v24; // x1
-  __int64 v25; // x1
-  __int64 v26; // x1
   int64_t Instance; // x0
-  ServantCommandCodeUnlockMaster_o *v28; // x23
-  __int64 v29; // x22
-  __int64 v30; // x24
-  __int64 v31; // x23
+  __int64 v10; // x1
+  ServantCommandCodeUnlockMaster_o *v11; // x23
+  __int64 v12; // x22
+  __int64 v13; // x24
+  __int64 v14; // x23
   struct UnityEngine_GameObject_o *releaseItemObj; // x21
-  UnityEngine_GameObject_o *v33; // x21
-  UnityEngine_Transform_o *v34; // x22
+  UnityEngine_GameObject_o *v16; // x21
+  UnityEngine_Transform_o *v17; // x22
   UnityEngine_Transform_o *transform; // x22
-  int v36; // s0
-  UnityEngine_Transform_o *v39; // x22
-  int v40; // s0
-  UnityEngine_Transform_o *v44; // x22
-  CommandCardDialog_c *v45; // x8
+  int v19; // s0
+  UnityEngine_Transform_o *v22; // x22
+  int v23; // s0
+  UnityEngine_Transform_o *v27; // x22
+  CommandCardDialog_c *v28; // x8
   UserItemMaster_o *MasterData_WarQuestSelectionMaster; // x21
   int32_t num; // w24
   Il2CppObject *age; // x21
   UILabel_o *lockResultLabel; // x22
-  System_String_o *v50; // x0
+  System_String_o *v33; // x0
   UILabel_o *itemNumLabel; // x21
-  System_String_o *v52; // x22
-  Il2CppObject *v53; // x23
-  Il2CppObject *v54; // x0
+  System_String_o *v35; // x22
+  Il2CppObject *v36; // x23
+  Il2CppObject *v37; // x0
   UILabel_o *closeButtonLabel; // x21
-  System_String_array **v56; // x2
-  System_String_array **v57; // x3
-  System_Boolean_array **v58; // x4
-  System_Int32_array **v59; // x5
-  System_Int32_array *v60; // x6
-  System_Int32_array *v61; // x7
-  __int64 v62; // x1
-  __int64 v63; // x2
-  System_Action_o *v64; // x20
-  __int64 v65; // x0
-  int32_t v66; // [xsp+0h] [xbp-50h] BYREF
-  int v67; // [xsp+4h] [xbp-4Ch] BYREF
-  WarEntity_o *v68; // [xsp+8h] [xbp-48h] BYREF
+  System_String_array **v39; // x2
+  System_String_array **v40; // x3
+  System_Boolean_array **v41; // x4
+  System_Int32_array **v42; // x5
+  System_Int32_array *v43; // x6
+  System_Int32_array *v44; // x7
+  System_Action_o *v45; // x20
+  __int64 v46; // x0
+  int32_t v47; // [xsp+0h] [xbp-50h] BYREF
+  int v48; // [xsp+4h] [xbp-4Ch] BYREF
+  WarEntity_o *v49; // [xsp+8h] [xbp-48h] BYREF
   UserItemEntity_o *entity; // [xsp+18h] [xbp-38h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v70; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v51; // 0:x0.16
 
-  if ( (byte_42147C9 & 1) == 0 )
+  if ( (byte_42B0091 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, baseUserServantEntity);
-    sub_B0D8A4(&Method_CommandCardDialog_EndOpen__, v9);
-    sub_B0D8A4(&CommandCardDialog_TypeInfo, v10);
-    sub_B0D8A4(&Method_DataManager_GetMasterData_ItemMaster___, v11);
-    sub_B0D8A4(&Method_DataManager_GetMasterData_ServantCommandCodeUnlockMaster___, v12);
-    sub_B0D8A4(&Method_DataManager_GetMasterData_UserItemMaster___, v13);
-    sub_B0D8A4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v14);
-    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___, v15);
-    sub_B0D8A4(&int_TypeInfo, v16);
-    sub_B0D8A4(&LocalizationManager_TypeInfo, v17);
-    sub_B0D8A4(&NetworkManager_TypeInfo, v18);
-    sub_B0D8A4(&Method_UnityEngine_Object_Instantiate_GameObject___, v19);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v20);
-    sub_B0D8A4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v21);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
-    sub_B0D8A4(&StringLiteral_3245/*"COMMAND_CODE_LOCK_RETURN_DETAIL_MSG"*/, v23);
-    sub_B0D8A4(&StringLiteral_3246/*"COMMAND_CODE_LOCK_RETURN_MSG"*/, v24);
-    sub_B0D8A4(&StringLiteral_3274/*"COMMON_CONFIRM_CLOSE"*/, v25);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v26);
-    byte_42147C9 = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&Method_CommandCardDialog_EndOpen__);
+    sub_B52984(&CommandCardDialog_TypeInfo);
+    sub_B52984(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_B52984(&Method_DataManager_GetMasterData_ServantCommandCodeUnlockMaster___);
+    sub_B52984(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_B52984(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
+    sub_B52984(&int_TypeInfo);
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&NetworkManager_TypeInfo);
+    sub_B52984(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B52984(&StringLiteral_3265/*"COMMAND_CODE_LOCK_RETURN_DETAIL_MSG"*/);
+    sub_B52984(&StringLiteral_3266/*"COMMAND_CODE_LOCK_RETURN_MSG"*/);
+    sub_B52984(&StringLiteral_3294/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B0091 = 1;
   }
   entity = 0LL;
-  v68 = 0LL;
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v49 = 0LL;
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_65;
   Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_ServantCommandCodeUnlockMaster___);
+                        (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_ServantCommandCodeUnlockMaster___);
   if ( !baseUserServantEntity )
     goto LABEL_65;
-  v28 = (ServantCommandCodeUnlockMaster_o *)Instance;
-  v30 = *(_QWORD *)&baseUserServantEntity->fields.svtId.fields.currentCryptoKey;
-  v29 = *(_QWORD *)&baseUserServantEntity->fields.svtId.fields.fakeValue;
+  v11 = (ServantCommandCodeUnlockMaster_o *)Instance;
+  v13 = *(_QWORD *)&baseUserServantEntity->fields.svtId.fields.currentCryptoKey;
+  v12 = *(_QWORD *)&baseUserServantEntity->fields.svtId.fields.fakeValue;
   if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   }
-  *(_QWORD *)&v70.fields.currentCryptoKey = v30;
-  *(_QWORD *)&v70.fields.fakeValue = v29;
-  Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44162576(v70, 0LL);
-  if ( !v28 )
+  *(_QWORD *)&v51.fields.currentCryptoKey = v13;
+  *(_QWORD *)&v51.fields.fakeValue = v12;
+  Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44786420(v51, 0LL);
+  if ( !v11 )
     goto LABEL_65;
-  Instance = (int64_t)ServantCommandCodeUnlockMaster__GetEntity(v28, Instance, cardIdx, 0LL);
+  Instance = (int64_t)ServantCommandCodeUnlockMaster__GetEntity(v11, Instance, cardIdx, 0LL);
   if ( !Instance )
     goto LABEL_65;
-  v31 = *(_QWORD *)(Instance + 40);
+  v14 = *(_QWORD *)(Instance + 40);
   releaseItemObj = this->fields.releaseItemObj;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -660,63 +639,63 @@ void __fastcall CommandCardDialog__OpenLockCommandCardResult(
   }
   Instance = (int64_t)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                         (UnityEngine_UI_Dropdown_DropdownItem_o *)releaseItemObj,
-                        (const MethodInfo_204A984 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                        (const MethodInfo_1F711B8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !Instance )
     goto LABEL_65;
-  v33 = (UnityEngine_GameObject_o *)Instance;
+  v16 = (UnityEngine_GameObject_o *)Instance;
   Instance = (int64_t)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Instance, 0LL);
   if ( !this->fields.returnItemGrid )
     goto LABEL_65;
-  v34 = (UnityEngine_Transform_o *)Instance;
+  v17 = (UnityEngine_Transform_o *)Instance;
   Instance = (int64_t)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this->fields.returnItemGrid, 0LL);
-  if ( !v34 )
+  if ( !v17 )
     goto LABEL_65;
-  UnityEngine_Transform__set_parent(v34, (UnityEngine_Transform_o *)Instance, 0LL);
-  transform = UnityEngine_GameObject__get_transform(v33, 0LL);
-  *(UnityEngine_Vector3_o *)&v36 = UnityEngine_Vector3__get_zero(0LL);
+  UnityEngine_Transform__set_parent(v17, (UnityEngine_Transform_o *)Instance, 0LL);
+  transform = UnityEngine_GameObject__get_transform(v16, 0LL);
+  *(UnityEngine_Vector3_o *)&v19 = UnityEngine_Vector3__get_zero(0LL);
   if ( !transform )
     goto LABEL_65;
-  UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&v36, 0LL);
-  v39 = UnityEngine_GameObject__get_transform(v33, 0LL);
-  *(UnityEngine_Quaternion_o *)&v40 = UnityEngine_Quaternion__get_identity(0LL);
-  if ( !v39 )
+  UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&v19, 0LL);
+  v22 = UnityEngine_GameObject__get_transform(v16, 0LL);
+  *(UnityEngine_Quaternion_o *)&v23 = UnityEngine_Quaternion__get_identity(0LL);
+  if ( !v22 )
     goto LABEL_65;
-  UnityEngine_Transform__set_localRotation(v39, *(UnityEngine_Quaternion_o *)&v40, 0LL);
-  Instance = (int64_t)UnityEngine_GameObject__get_transform(v33, 0LL);
-  v44 = (UnityEngine_Transform_o *)Instance;
-  v45 = CommandCardDialog_TypeInfo;
+  UnityEngine_Transform__set_localRotation(v22, *(UnityEngine_Quaternion_o *)&v23, 0LL);
+  Instance = (int64_t)UnityEngine_GameObject__get_transform(v16, 0LL);
+  v27 = (UnityEngine_Transform_o *)Instance;
+  v28 = CommandCardDialog_TypeInfo;
   if ( (BYTE3(CommandCardDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CommandCardDialog_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CommandCardDialog_TypeInfo);
-    v45 = CommandCardDialog_TypeInfo;
+    v28 = CommandCardDialog_TypeInfo;
   }
-  if ( !v44 )
+  if ( !v27 )
     goto LABEL_65;
-  UnityEngine_Transform__set_localScale(v44, v45->static_fields->REMOVE_ITEM_SCALE, 0LL);
+  UnityEngine_Transform__set_localScale(v27, v28->static_fields->REMOVE_ITEM_SCALE, 0LL);
   Instance = (int64_t)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                        v33,
-                        (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
-  if ( !v31 )
+                        v16,
+                        (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
+  if ( !v14 )
     goto LABEL_65;
-  if ( !*(_DWORD *)(v31 + 24) )
+  if ( !*(_DWORD *)(v14 + 24) )
     goto LABEL_66;
   if ( !Instance )
     goto LABEL_65;
-  LimitCntUpItemComponent__SetItemIcon((LimitCntUpItemComponent_o *)Instance, *(_DWORD *)(v31 + 32), 0LL);
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  LimitCntUpItemComponent__SetItemIcon((LimitCntUpItemComponent_o *)Instance, *(_DWORD *)(v14 + 32), 0LL);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_65;
   MasterData_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                              (DataManager_o *)Instance,
-                                                             (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                                             (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   Instance = NetworkManager__get_UserId(0LL);
-  if ( !*(_DWORD *)(v31 + 24) )
+  if ( !*(_DWORD *)(v14 + 24) )
     goto LABEL_66;
   if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_65;
@@ -724,7 +703,7 @@ void __fastcall CommandCardDialog__OpenLockCommandCardResult(
                MasterData_WarQuestSelectionMaster,
                &entity,
                Instance,
-               *(_DWORD *)(v31 + 32),
+               *(_DWORD *)(v14 + 32),
                0LL);
   if ( (Instance & 1) != 0 )
   {
@@ -737,30 +716,30 @@ void __fastcall CommandCardDialog__OpenLockCommandCardResult(
     num = 0;
   }
   age = (Il2CppObject *)StringLiteral_1/*""*/;
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_65;
   Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_ItemMaster___);
-  if ( !*(_DWORD *)(v31 + 24) )
+                        (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_ItemMaster___);
+  if ( !*(_DWORD *)(v14 + 24) )
   {
 LABEL_66:
-    v65 = sub_B0D9A8(Instance);
-    sub_B0D948(v65, 0LL);
+    v46 = sub_B52A88(Instance);
+    sub_B52A28(v46, 0LL);
   }
   if ( !Instance )
     goto LABEL_65;
   Instance = DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
                (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
-               &v68,
-               *(_DWORD *)(v31 + 32),
-               (const MethodInfo_2669C30 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+               &v49,
+               *(_DWORD *)(v14 + 32),
+               (const MethodInfo_23E2334 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
   if ( (Instance & 1) != 0 )
   {
-    if ( !v68 )
+    if ( !v49 )
       goto LABEL_65;
-    age = (Il2CppObject *)v68->fields.age;
+    age = (Il2CppObject *)v49->fields.age;
   }
   Instance = (int64_t)this->fields.titleLabel;
   if ( !Instance )
@@ -772,23 +751,23 @@ LABEL_66:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v50 = LocalizationManager__Get((System_String_o *)StringLiteral_3246/*"COMMAND_CODE_LOCK_RETURN_MSG"*/, 0LL);
-  Instance = (int64_t)System_String__Format(v50, age, 0LL);
+  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3266/*"COMMAND_CODE_LOCK_RETURN_MSG"*/, 0LL);
+  Instance = (int64_t)System_String__Format(v33, age, 0LL);
   if ( !lockResultLabel )
     goto LABEL_65;
   UILabel__set_text(lockResultLabel, (System_String_o *)Instance, 0LL);
   itemNumLabel = this->fields.itemNumLabel;
-  v52 = LocalizationManager__Get((System_String_o *)StringLiteral_3245/*"COMMAND_CODE_LOCK_RETURN_DETAIL_MSG"*/, 0LL);
-  v67 = num - 1;
-  v53 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v67);
-  v66 = num;
-  v54 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v66);
-  Instance = (int64_t)System_String__Format_43845440(v52, v53, v54, 0LL);
+  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_3265/*"COMMAND_CODE_LOCK_RETURN_DETAIL_MSG"*/, 0LL);
+  v48 = num - 1;
+  v36 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v48);
+  v47 = num;
+  v37 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v47);
+  Instance = (int64_t)System_String__Format_44563852(v35, v36, v37, 0LL);
   if ( !itemNumLabel )
     goto LABEL_65;
   UILabel__set_text(itemNumLabel, (System_String_o *)Instance, 0LL);
   closeButtonLabel = this->fields.closeButtonLabel;
-  Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3274/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3294/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeButtonLabel )
     goto LABEL_65;
   UILabel__set_text(closeButtonLabel, (System_String_o *)Instance, 0LL);
@@ -845,22 +824,22 @@ LABEL_66:
         (Instance = (int64_t)this->fields.canNotExecuteButtonObj) == 0) )
   {
 LABEL_65:
-    sub_B0D97C(Instance);
+    sub_B52A5C(Instance, v10);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
   this->fields.closeFunc = closeCallback;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.closeFunc,
     (System_Int32_array **)closeCallback,
-    v56,
-    v57,
-    v58,
-    v59,
-    v60,
-    v61);
-  v64 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v62, v63);
-  System_Action___ctor(v64, (Il2CppObject *)this, Method_CommandCardDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v64, 0, 0LL);
+    v39,
+    v40,
+    v41,
+    v42,
+    v43,
+    v44);
+  v45 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+  System_Action___ctor(v45, (Il2CppObject *)this, Method_CommandCardDialog_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v45, 0, 0LL);
 }
 
 
@@ -871,104 +850,79 @@ void __fastcall CommandCardDialog__OpenLockEquipSlot(
         CommandCardDialog_ClickDelegate_o *closeCallback,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
-  __int64 v23; // x1
-  __int64 v24; // x1
-  __int64 v25; // x1
-  __int64 v26; // x1
-  __int64 v27; // x1
-  __int64 v28; // x1
-  __int64 v29; // x1
   UILabel_o *titleLabel; // x22
   int64_t transform; // x0
+  System_String_o *v9; // x1
   UILabel_o *messageLabel; // x22
   UILabel_o *removeWarningLabel; // x22
-  System_String_o *v34; // x1
-  struct UILabel_o *v35; // x22
+  struct UILabel_o *v12; // x22
   System_String_o *mText; // x23
-  System_String_o *v37; // x0
-  System_String_o *v38; // x0
+  System_String_o *v14; // x0
+  System_String_o *v15; // x0
   UILabel_o *spendItemTxtLabel; // x21
   UILabel_o *haveItemTxtLabel; // x21
   int32_t Value; // w0
   struct UnityEngine_GameObject_o *releaseItemObj; // x22
-  int32_t v43; // w21
-  UnityEngine_GameObject_o *v44; // x22
-  UnityEngine_Transform_o *v45; // x23
-  UnityEngine_Transform_o *v46; // x23
-  int v47; // s0
-  UnityEngine_Transform_o *v50; // x23
-  int v51; // s0
-  UnityEngine_Transform_o *v55; // x23
-  CommandCardDialog_c *v56; // x8
+  int32_t v20; // w21
+  UnityEngine_GameObject_o *v21; // x22
+  UnityEngine_Transform_o *v22; // x23
+  UnityEngine_Transform_o *v23; // x23
+  int v24; // s0
+  UnityEngine_Transform_o *v27; // x23
+  int v28; // s0
+  UnityEngine_Transform_o *v32; // x23
+  CommandCardDialog_c *v33; // x8
   UserItemMaster_o *MasterData_WarQuestSelectionMaster; // x22
   int32_t num; // w22
   UILabel_o *haveItemNumLabel; // x21
-  Il2CppObject *v60; // x0
-  CommandCardDialog_c *v61; // x0
+  Il2CppObject *v37; // x0
+  CommandCardDialog_c *v38; // x0
   UILabel_o *spendItemNumLabel; // x21
-  Il2CppObject *v63; // x0
-  int32_t v64; // w21
-  UILabel_o *v65; // x21
+  Il2CppObject *v40; // x0
+  int32_t v41; // w21
+  UILabel_o *v42; // x21
   UILabel_o *closeButtonLabel; // x21
-  bool v67; // w1
+  bool v44; // w1
   UILabel_o *decideButtonLabel; // x21
   UILabel_o *cancelButtonLabel; // x21
-  System_String_array **v70; // x2
-  System_String_array **v71; // x3
-  System_Boolean_array **v72; // x4
-  System_Int32_array **v73; // x5
-  System_Int32_array *v74; // x6
-  System_Int32_array *v75; // x7
-  __int64 v76; // x1
-  __int64 v77; // x2
-  System_Action_o *v78; // x20
+  System_String_array **v47; // x2
+  System_String_array **v48; // x3
+  System_Boolean_array **v49; // x4
+  System_Int32_array **v50; // x5
+  System_Int32_array *v51; // x6
+  System_Int32_array *v52; // x7
+  System_Action_o *v53; // x20
   int32_t DETACH_NEED_ITEM_NUM; // [xsp+0h] [xbp-50h] BYREF
-  int32_t v80; // [xsp+4h] [xbp-4Ch] BYREF
+  int32_t v55; // [xsp+4h] [xbp-4Ch] BYREF
   UserItemEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_42147CA & 1) == 0 )
+  if ( (byte_42B0092 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, equipped);
-    sub_B0D8A4(&Method_CommandCardDialog_EndOpen__, v7);
-    sub_B0D8A4(&CommandCardDialog_TypeInfo, v8);
-    sub_B0D8A4(&Method_DataManager_GetMasterData_UserItemMaster___, v9);
-    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___, v10);
-    sub_B0D8A4(&int_TypeInfo, v11);
-    sub_B0D8A4(&LocalizationManager_TypeInfo, v12);
-    sub_B0D8A4(&NetworkManager_TypeInfo, v13);
-    sub_B0D8A4(&Method_UnityEngine_Object_Instantiate_GameObject___, v14);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v15);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    sub_B0D8A4(&StringLiteral_3242/*"COMMAND_CODE_LOCK_EQUIP_WARNING_MSG"*/, v17);
-    sub_B0D8A4(&StringLiteral_3247/*"COMMAND_CODE_LOCK_SPEND_ITEM"*/, v18);
-    sub_B0D8A4(&StringLiteral_3243/*"COMMAND_CODE_LOCK_HAVE_ITEM"*/, v19);
-    sub_B0D8A4(&StringLiteral_3241/*"COMMAND_CODE_LOCK_DEFAULT_WARNING_MSG"*/, v20);
-    sub_B0D8A4(&StringLiteral_3249/*"COMMAND_CODE_NOT_CLEAR_ITEM_MSG"*/, v21);
-    sub_B0D8A4(&StringLiteral_3275/*"COMMON_CONFIRM_DECIDE"*/, v22);
-    sub_B0D8A4(&StringLiteral_3273/*"COMMON_CONFIRM_CANCEL"*/, v23);
-    sub_B0D8A4(&StringLiteral_3274/*"COMMON_CONFIRM_CLOSE"*/, v24);
-    sub_B0D8A4(&StringLiteral_23567/*"{0:#,0}"*/, v25);
-    sub_B0D8A4(&StringLiteral_3248/*"COMMAND_CODE_LOCK_TITLE"*/, v26);
-    sub_B0D8A4(&StringLiteral_3244/*"COMMAND_CODE_LOCK_MSG"*/, v27);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v28);
-    sub_B0D8A4(&StringLiteral_3237/*"COMMAND_CODE_DETACHING_ITEM_ID"*/, v29);
-    byte_42147CA = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&Method_CommandCardDialog_EndOpen__);
+    sub_B52984(&CommandCardDialog_TypeInfo);
+    sub_B52984(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
+    sub_B52984(&int_TypeInfo);
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&NetworkManager_TypeInfo);
+    sub_B52984(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B52984(&StringLiteral_3262/*"COMMAND_CODE_LOCK_EQUIP_WARNING_MSG"*/);
+    sub_B52984(&StringLiteral_3267/*"COMMAND_CODE_LOCK_SPEND_ITEM"*/);
+    sub_B52984(&StringLiteral_3263/*"COMMAND_CODE_LOCK_HAVE_ITEM"*/);
+    sub_B52984(&StringLiteral_3261/*"COMMAND_CODE_LOCK_DEFAULT_WARNING_MSG"*/);
+    sub_B52984(&StringLiteral_3269/*"COMMAND_CODE_NOT_CLEAR_ITEM_MSG"*/);
+    sub_B52984(&StringLiteral_3295/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_B52984(&StringLiteral_3293/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_B52984(&StringLiteral_3294/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_B52984(&StringLiteral_23682/*"{0:#,0}"*/);
+    sub_B52984(&StringLiteral_3268/*"COMMAND_CODE_LOCK_TITLE"*/);
+    sub_B52984(&StringLiteral_3264/*"COMMAND_CODE_LOCK_MSG"*/);
+    sub_B52984(&StringLiteral_1/*""*/);
+    sub_B52984(&StringLiteral_3257/*"COMMAND_CODE_DETACHING_ITEM_ID"*/);
+    byte_42B0092 = 1;
   }
   entity = 0LL;
   titleLabel = this->fields.titleLabel;
@@ -977,12 +931,12 @@ void __fastcall CommandCardDialog__OpenLockEquipSlot(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  transform = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3248/*"COMMAND_CODE_LOCK_TITLE"*/, 0LL);
+  transform = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3268/*"COMMAND_CODE_LOCK_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_88;
   UILabel__set_text(titleLabel, (System_String_o *)transform, 0LL);
   messageLabel = this->fields.messageLabel;
-  transform = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3244/*"COMMAND_CODE_LOCK_MSG"*/, 0LL);
+  transform = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3264/*"COMMAND_CODE_LOCK_MSG"*/, 0LL);
   if ( !messageLabel )
     goto LABEL_88;
   UILabel__set_text(messageLabel, (System_String_o *)transform, 0LL);
@@ -994,30 +948,30 @@ void __fastcall CommandCardDialog__OpenLockEquipSlot(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    transform = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3242/*"COMMAND_CODE_LOCK_EQUIP_WARNING_MSG"*/, 0LL);
-    v34 = (System_String_o *)transform;
+    transform = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3262/*"COMMAND_CODE_LOCK_EQUIP_WARNING_MSG"*/, 0LL);
+    v9 = (System_String_o *)transform;
     if ( !removeWarningLabel )
       goto LABEL_88;
   }
   else
   {
-    v34 = (System_String_o *)StringLiteral_1/*""*/;
+    v9 = (System_String_o *)StringLiteral_1/*""*/;
     if ( !removeWarningLabel )
       goto LABEL_88;
   }
-  UILabel__set_text(removeWarningLabel, v34, 0LL);
-  v35 = this->fields.removeWarningLabel;
-  if ( !v35 )
+  UILabel__set_text(removeWarningLabel, v9, 0LL);
+  v12 = this->fields.removeWarningLabel;
+  if ( !v12 )
     goto LABEL_88;
-  mText = v35->fields.mText;
+  mText = v12->fields.mText;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_3241/*"COMMAND_CODE_LOCK_DEFAULT_WARNING_MSG"*/, 0LL);
-  v38 = System_String__Concat_43849904(mText, v37, 0LL);
-  UILabel__set_text(v35, v38, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3261/*"COMMAND_CODE_LOCK_DEFAULT_WARNING_MSG"*/, 0LL);
+  v15 = System_String__Concat_44568316(mText, v14, 0LL);
+  UILabel__set_text(v12, v15, 0LL);
   if ( equipped )
   {
     transform = (int64_t)this->fields.removeWarningLabel;
@@ -1031,18 +985,18 @@ void __fastcall CommandCardDialog__OpenLockEquipSlot(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  transform = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3247/*"COMMAND_CODE_LOCK_SPEND_ITEM"*/, 0LL);
+  transform = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3267/*"COMMAND_CODE_LOCK_SPEND_ITEM"*/, 0LL);
   if ( !spendItemTxtLabel )
     goto LABEL_88;
   UILabel__set_text(spendItemTxtLabel, (System_String_o *)transform, 0LL);
   haveItemTxtLabel = this->fields.haveItemTxtLabel;
-  transform = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3243/*"COMMAND_CODE_LOCK_HAVE_ITEM"*/, 0LL);
+  transform = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3263/*"COMMAND_CODE_LOCK_HAVE_ITEM"*/, 0LL);
   if ( !haveItemTxtLabel )
     goto LABEL_88;
   UILabel__set_text(haveItemTxtLabel, (System_String_o *)transform, 0LL);
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_3237/*"COMMAND_CODE_DETACHING_ITEM_ID"*/, 0LL);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_3257/*"COMMAND_CODE_DETACHING_ITEM_ID"*/, 0LL);
   releaseItemObj = this->fields.releaseItemObj;
-  v43 = Value;
+  v20 = Value;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -1050,52 +1004,52 @@ void __fastcall CommandCardDialog__OpenLockEquipSlot(
   }
   transform = (int64_t)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                          (UnityEngine_UI_Dropdown_DropdownItem_o *)releaseItemObj,
-                         (const MethodInfo_204A984 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                         (const MethodInfo_1F711B8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !transform )
     goto LABEL_88;
-  v44 = (UnityEngine_GameObject_o *)transform;
+  v21 = (UnityEngine_GameObject_o *)transform;
   transform = (int64_t)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0LL);
   if ( !this->fields.removeItemGrid )
     goto LABEL_88;
-  v45 = (UnityEngine_Transform_o *)transform;
+  v22 = (UnityEngine_Transform_o *)transform;
   transform = (int64_t)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this->fields.removeItemGrid, 0LL);
-  if ( !v45 )
+  if ( !v22 )
     goto LABEL_88;
-  UnityEngine_Transform__set_parent(v45, (UnityEngine_Transform_o *)transform, 0LL);
-  v46 = UnityEngine_GameObject__get_transform(v44, 0LL);
-  *(UnityEngine_Vector3_o *)&v47 = UnityEngine_Vector3__get_zero(0LL);
-  if ( !v46 )
+  UnityEngine_Transform__set_parent(v22, (UnityEngine_Transform_o *)transform, 0LL);
+  v23 = UnityEngine_GameObject__get_transform(v21, 0LL);
+  *(UnityEngine_Vector3_o *)&v24 = UnityEngine_Vector3__get_zero(0LL);
+  if ( !v23 )
     goto LABEL_88;
-  UnityEngine_Transform__set_localPosition(v46, *(UnityEngine_Vector3_o *)&v47, 0LL);
-  v50 = UnityEngine_GameObject__get_transform(v44, 0LL);
-  *(UnityEngine_Quaternion_o *)&v51 = UnityEngine_Quaternion__get_identity(0LL);
-  if ( !v50 )
+  UnityEngine_Transform__set_localPosition(v23, *(UnityEngine_Vector3_o *)&v24, 0LL);
+  v27 = UnityEngine_GameObject__get_transform(v21, 0LL);
+  *(UnityEngine_Quaternion_o *)&v28 = UnityEngine_Quaternion__get_identity(0LL);
+  if ( !v27 )
     goto LABEL_88;
-  UnityEngine_Transform__set_localRotation(v50, *(UnityEngine_Quaternion_o *)&v51, 0LL);
-  transform = (int64_t)UnityEngine_GameObject__get_transform(v44, 0LL);
-  v55 = (UnityEngine_Transform_o *)transform;
-  v56 = CommandCardDialog_TypeInfo;
+  UnityEngine_Transform__set_localRotation(v27, *(UnityEngine_Quaternion_o *)&v28, 0LL);
+  transform = (int64_t)UnityEngine_GameObject__get_transform(v21, 0LL);
+  v32 = (UnityEngine_Transform_o *)transform;
+  v33 = CommandCardDialog_TypeInfo;
   if ( (BYTE3(CommandCardDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CommandCardDialog_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CommandCardDialog_TypeInfo);
-    v56 = CommandCardDialog_TypeInfo;
+    v33 = CommandCardDialog_TypeInfo;
   }
-  if ( !v55 )
+  if ( !v32 )
     goto LABEL_88;
-  UnityEngine_Transform__set_localScale(v55, v56->static_fields->REMOVE_ITEM_SCALE, 0LL);
+  UnityEngine_Transform__set_localScale(v32, v33->static_fields->REMOVE_ITEM_SCALE, 0LL);
   transform = (int64_t)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                         v44,
-                         (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
+                         v21,
+                         (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
   if ( !transform )
     goto LABEL_88;
-  LimitCntUpItemComponent__SetItemIcon((LimitCntUpItemComponent_o *)transform, v43, 0LL);
-  transform = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  LimitCntUpItemComponent__SetItemIcon((LimitCntUpItemComponent_o *)transform, v20, 0LL);
+  transform = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !transform )
     goto LABEL_88;
   MasterData_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                              (DataManager_o *)transform,
-                                                             (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                                             (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -1104,7 +1058,7 @@ void __fastcall CommandCardDialog__OpenLockEquipSlot(
   transform = NetworkManager__get_UserId(0LL);
   if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_88;
-  transform = UserItemMaster__TryGetEntity(MasterData_WarQuestSelectionMaster, &entity, transform, v43, 0LL);
+  transform = UserItemMaster__TryGetEntity(MasterData_WarQuestSelectionMaster, &entity, transform, v20, 0LL);
   if ( (transform & 1) != 0 )
   {
     if ( !entity )
@@ -1116,30 +1070,30 @@ void __fastcall CommandCardDialog__OpenLockEquipSlot(
     num = 0;
   }
   haveItemNumLabel = this->fields.haveItemNumLabel;
-  v80 = num;
-  v60 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v80);
-  transform = (int64_t)System_String__Format((System_String_o *)StringLiteral_23567/*"{0:#,0}"*/, v60, 0LL);
+  v55 = num;
+  v37 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v55);
+  transform = (int64_t)System_String__Format((System_String_o *)StringLiteral_23682/*"{0:#,0}"*/, v37, 0LL);
   if ( !haveItemNumLabel )
     goto LABEL_88;
   UILabel__set_text(haveItemNumLabel, (System_String_o *)transform, 0LL);
-  v61 = CommandCardDialog_TypeInfo;
+  v38 = CommandCardDialog_TypeInfo;
   spendItemNumLabel = this->fields.spendItemNumLabel;
   if ( (BYTE3(CommandCardDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CommandCardDialog_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CommandCardDialog_TypeInfo);
-    v61 = CommandCardDialog_TypeInfo;
+    v38 = CommandCardDialog_TypeInfo;
   }
-  DETACH_NEED_ITEM_NUM = v61->static_fields->DETACH_NEED_ITEM_NUM;
-  v63 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &DETACH_NEED_ITEM_NUM);
-  transform = (int64_t)System_String__Format((System_String_o *)StringLiteral_23567/*"{0:#,0}"*/, v63, 0LL);
+  DETACH_NEED_ITEM_NUM = v38->static_fields->DETACH_NEED_ITEM_NUM;
+  v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &DETACH_NEED_ITEM_NUM);
+  transform = (int64_t)System_String__Format((System_String_o *)StringLiteral_23682/*"{0:#,0}"*/, v40, 0LL);
   if ( !spendItemNumLabel )
     goto LABEL_88;
   UILabel__set_text(spendItemNumLabel, (System_String_o *)transform, 0LL);
   transform = (int64_t)this->fields.messageLabel;
   if ( !transform )
     goto LABEL_88;
-  v64 = CommandCardDialog_TypeInfo->static_fields->DETACH_NEED_ITEM_NUM;
+  v41 = CommandCardDialog_TypeInfo->static_fields->DETACH_NEED_ITEM_NUM;
   transform = (int64_t)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0LL);
   if ( !transform )
     goto LABEL_88;
@@ -1177,10 +1131,10 @@ void __fastcall CommandCardDialog__OpenLockEquipSlot(
         (transform = (int64_t)this->fields.removeItemGrid) == 0) )
   {
 LABEL_88:
-    sub_B0D97C(transform);
+    sub_B52A5C(transform, v9);
   }
   UIGrid__set_repositionNow((UIGrid_o *)transform, 1, 0LL);
-  if ( num >= v64 )
+  if ( num >= v41 )
   {
     decideButtonLabel = this->fields.decideButtonLabel;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1188,12 +1142,12 @@ LABEL_88:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    transform = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3275/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
+    transform = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3295/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
     if ( !decideButtonLabel )
       goto LABEL_88;
     UILabel__set_text(decideButtonLabel, (System_String_o *)transform, 0LL);
     cancelButtonLabel = this->fields.cancelButtonLabel;
-    transform = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3273/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+    transform = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3293/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
     if ( !cancelButtonLabel )
       goto LABEL_88;
     UILabel__set_text(cancelButtonLabel, (System_String_o *)transform, 0LL);
@@ -1211,22 +1165,22 @@ LABEL_88:
     transform = (int64_t)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0LL);
     if ( !transform )
       goto LABEL_88;
-    v67 = 1;
+    v44 = 1;
   }
   else
   {
-    v65 = this->fields.messageLabel;
+    v42 = this->fields.messageLabel;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    transform = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3249/*"COMMAND_CODE_NOT_CLEAR_ITEM_MSG"*/, 0LL);
-    if ( !v65 )
+    transform = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3269/*"COMMAND_CODE_NOT_CLEAR_ITEM_MSG"*/, 0LL);
+    if ( !v42 )
       goto LABEL_88;
-    UILabel__set_text(v65, (System_String_o *)transform, 0LL);
+    UILabel__set_text(v42, (System_String_o *)transform, 0LL);
     closeButtonLabel = this->fields.closeButtonLabel;
-    transform = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3274/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+    transform = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3294/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
     if ( !closeButtonLabel )
       goto LABEL_88;
     UILabel__set_text(closeButtonLabel, (System_String_o *)transform, 0LL);
@@ -1244,22 +1198,22 @@ LABEL_88:
     transform = (int64_t)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0LL);
     if ( !transform )
       goto LABEL_88;
-    v67 = 0;
+    v44 = 0;
   }
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transform, v67, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transform, v44, 0LL);
   this->fields.closeFunc = closeCallback;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.closeFunc,
     (System_Int32_array **)closeCallback,
-    v70,
-    v71,
-    v72,
-    v73,
-    v74,
-    v75);
-  v78 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v76, v77);
-  System_Action___ctor(v78, (Il2CppObject *)this, Method_CommandCardDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v78, 0, 0LL);
+    v47,
+    v48,
+    v49,
+    v50,
+    v51,
+    v52);
+  v53 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+  System_Action___ctor(v53, (Il2CppObject *)this, Method_CommandCardDialog_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v53, 0, 0LL);
 }
 
 
@@ -1269,40 +1223,32 @@ void __fastcall CommandCardDialog__OpenRemoveEquip(
         CommandCardDialog_ClickDelegate_o *closeCallback,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
   UILabel_o *titleLabel; // x22
   System_String_o *removeCommandCodeConfirmObj; // x0
+  __int64 v9; // x1
   UILabel_o *messageLabel; // x22
   UILabel_o *removeDetailLabel; // x22
   UILabel_o *decideButtonLabel; // x22
   UILabel_o *cancelButtonLabel; // x22
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
-  __int64 v26; // x1
-  __int64 v27; // x2
-  System_Action_o *v28; // x20
+  System_String_array **v14; // x2
+  System_String_array **v15; // x3
+  System_Boolean_array **v16; // x4
+  System_Int32_array **v17; // x5
+  System_Int32_array *v18; // x6
+  System_Int32_array *v19; // x7
+  System_Action_o *v20; // x20
 
-  if ( (byte_42147CB & 1) == 0 )
+  if ( (byte_42B0093 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, userCommandCode);
-    sub_B0D8A4(&Method_CommandCardDialog_EndOpen__, v7);
-    sub_B0D8A4(&LocalizationManager_TypeInfo, v8);
-    sub_B0D8A4(&StringLiteral_3257/*"COMMAND_CODE_REMOVE_TITLE"*/, v9);
-    sub_B0D8A4(&StringLiteral_3253/*"COMMAND_CODE_REMOVE_DETAIL_MSG"*/, v10);
-    sub_B0D8A4(&StringLiteral_3275/*"COMMON_CONFIRM_DECIDE"*/, v11);
-    sub_B0D8A4(&StringLiteral_3273/*"COMMON_CONFIRM_CANCEL"*/, v12);
-    sub_B0D8A4(&StringLiteral_3254/*"COMMAND_CODE_REMOVE_MSG"*/, v13);
-    byte_42147CB = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&Method_CommandCardDialog_EndOpen__);
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&StringLiteral_3277/*"COMMAND_CODE_REMOVE_TITLE"*/);
+    sub_B52984(&StringLiteral_3273/*"COMMAND_CODE_REMOVE_DETAIL_MSG"*/);
+    sub_B52984(&StringLiteral_3295/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_B52984(&StringLiteral_3293/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_B52984(&StringLiteral_3274/*"COMMAND_CODE_REMOVE_MSG"*/);
+    byte_42B0093 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1310,27 +1256,27 @@ void __fastcall CommandCardDialog__OpenRemoveEquip(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  removeCommandCodeConfirmObj = LocalizationManager__Get((System_String_o *)StringLiteral_3257/*"COMMAND_CODE_REMOVE_TITLE"*/, 0LL);
+  removeCommandCodeConfirmObj = LocalizationManager__Get((System_String_o *)StringLiteral_3277/*"COMMAND_CODE_REMOVE_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_24;
   UILabel__set_text(titleLabel, removeCommandCodeConfirmObj, 0LL);
   messageLabel = this->fields.messageLabel;
-  removeCommandCodeConfirmObj = LocalizationManager__Get((System_String_o *)StringLiteral_3254/*"COMMAND_CODE_REMOVE_MSG"*/, 0LL);
+  removeCommandCodeConfirmObj = LocalizationManager__Get((System_String_o *)StringLiteral_3274/*"COMMAND_CODE_REMOVE_MSG"*/, 0LL);
   if ( !messageLabel )
     goto LABEL_24;
   UILabel__set_text(messageLabel, removeCommandCodeConfirmObj, 0LL);
   removeDetailLabel = this->fields.removeDetailLabel;
-  removeCommandCodeConfirmObj = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMAND_CODE_REMOVE_DETAIL_MSG"*/, 0LL);
+  removeCommandCodeConfirmObj = LocalizationManager__Get((System_String_o *)StringLiteral_3273/*"COMMAND_CODE_REMOVE_DETAIL_MSG"*/, 0LL);
   if ( !removeDetailLabel )
     goto LABEL_24;
   UILabel__set_text(removeDetailLabel, removeCommandCodeConfirmObj, 0LL);
   decideButtonLabel = this->fields.decideButtonLabel;
-  removeCommandCodeConfirmObj = LocalizationManager__Get((System_String_o *)StringLiteral_3275/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
+  removeCommandCodeConfirmObj = LocalizationManager__Get((System_String_o *)StringLiteral_3295/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideButtonLabel )
     goto LABEL_24;
   UILabel__set_text(decideButtonLabel, removeCommandCodeConfirmObj, 0LL);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  removeCommandCodeConfirmObj = LocalizationManager__Get((System_String_o *)StringLiteral_3273/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+  removeCommandCodeConfirmObj = LocalizationManager__Get((System_String_o *)StringLiteral_3293/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelButtonLabel )
     goto LABEL_24;
   UILabel__set_text(cancelButtonLabel, removeCommandCodeConfirmObj, 0LL);
@@ -1380,22 +1326,22 @@ void __fastcall CommandCardDialog__OpenRemoveEquip(
         (removeCommandCodeConfirmObj = (System_String_o *)this->fields.canNotExecuteButtonObj) == 0LL) )
   {
 LABEL_24:
-    sub_B0D97C(removeCommandCodeConfirmObj);
+    sub_B52A5C(removeCommandCodeConfirmObj, v9);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)removeCommandCodeConfirmObj, 0, 0LL);
   this->fields.closeFunc = closeCallback;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.closeFunc,
     (System_Int32_array **)closeCallback,
-    v20,
-    v21,
-    v22,
-    v23,
-    v24,
-    v25);
-  v28 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v26, v27);
-  System_Action___ctor(v28, (Il2CppObject *)this, Method_CommandCardDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v28, 0, 0LL);
+    v14,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19);
+  v20 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+  System_Action___ctor(v20, (Il2CppObject *)this, Method_CommandCardDialog_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v20, 0, 0LL);
 }
 
 
@@ -1407,85 +1353,67 @@ void __fastcall CommandCardDialog__OpenUnlockCommandCardEquipment(
         CommandCardDialog_ClickDelegate_o *closeCallback,
         const MethodInfo *method)
 {
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
-  __int64 v23; // x1
-  __int64 v24; // x1
   UILabel_o *titleLabel; // x21
   System_String_o *SelfUserGame; // x0
+  __int64 v10; // x1
   UILabel_o *itemInfoLabel; // x21
   UILabel_o *spendQpTxtLabel; // x21
   UILabel_o *haveQpTxtLabel; // x21
   UILabel_o *haveQpLabel; // x24
-  System_String_o *v31; // x21
+  System_String_o *v15; // x21
   UILabel_o *decideButtonLabel; // x24
   UILabel_o *cancelButtonLabel; // x24
-  ServantCommandCodeUnlockMaster_o *v34; // x24
-  __int64 v35; // x23
-  __int64 v36; // x25
+  ServantCommandCodeUnlockMaster_o *v18; // x24
+  __int64 v19; // x23
+  __int64 v20; // x25
   UILabel_o *spendQpLabel; // x23
-  System_String_o *v38; // x22
+  System_String_o *v22; // x22
   System_String_Fields fields; // x24
-  __int64 v40; // x8
+  __int64 v24; // x8
   _DWORD *monitor; // x27
-  unsigned __int64 v42; // x25
-  signed __int64 v43; // x28
+  unsigned __int64 v26; // x25
+  signed __int64 v27; // x28
   struct UnityEngine_GameObject_o *releaseItemObj; // x22
-  UnityEngine_GameObject_o *v45; // x22
-  UnityEngine_Transform_o *v46; // x23
+  UnityEngine_GameObject_o *v29; // x22
+  UnityEngine_Transform_o *v30; // x23
   UnityEngine_Transform_o *transform; // x23
-  int v48; // s0
-  UnityEngine_Transform_o *v51; // x23
-  int v52; // s0
-  UnityEngine_Transform_o *v56; // x23
-  CommandCardDialog_c *v57; // x8
+  int v32; // s0
+  UnityEngine_Transform_o *v35; // x23
+  int v36; // s0
+  UnityEngine_Transform_o *v40; // x23
+  CommandCardDialog_c *v41; // x8
   UILabel_o *answerBackLabel; // x21
-  System_String_array **v59; // x2
-  System_String_array **v60; // x3
-  System_Boolean_array **v61; // x4
-  System_Int32_array **v62; // x5
-  System_Int32_array *v63; // x6
-  System_Int32_array *v64; // x7
-  __int64 v65; // x1
-  __int64 v66; // x2
-  System_Action_o *v67; // x20
-  __int64 v68; // x0
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v70; // 0:x0.16
+  System_String_array **v43; // x2
+  System_String_array **v44; // x3
+  System_Boolean_array **v45; // x4
+  System_Int32_array **v46; // x5
+  System_Int32_array *v47; // x6
+  System_Int32_array *v48; // x7
+  System_Action_o *v49; // x20
+  __int64 v50; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v52; // 0:x0.16
 
-  if ( (byte_42147C8 & 1) == 0 )
+  if ( (byte_42B0090 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, baseUserServantEntity);
-    sub_B0D8A4(&Method_CommandCardDialog_EndOpen__, v8);
-    sub_B0D8A4(&CommandCardDialog_TypeInfo, v9);
-    sub_B0D8A4(&Method_DataManager_GetMasterData_ServantCommandCodeUnlockMaster___, v10);
-    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___, v11);
-    sub_B0D8A4(&LocalizationManager_TypeInfo, v12);
-    sub_B0D8A4(&Method_UnityEngine_Object_Instantiate_GameObject___, v13);
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v14);
-    sub_B0D8A4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v15);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    sub_B0D8A4(&StringLiteral_3260/*"COMMAND_CODE_UNLOCK_CONFIRM_MSG"*/, v17);
-    sub_B0D8A4(&StringLiteral_3181/*"COMBINE_HAVE_QP"*/, v18);
-    sub_B0D8A4(&StringLiteral_3261/*"COMMAND_CODE_UNLOCK_SPEND_QP"*/, v19);
-    sub_B0D8A4(&StringLiteral_3275/*"COMMON_CONFIRM_DECIDE"*/, v20);
-    sub_B0D8A4(&StringLiteral_3273/*"COMMON_CONFIRM_CANCEL"*/, v21);
-    sub_B0D8A4(&StringLiteral_9289/*"N0"*/, v22);
-    sub_B0D8A4(&StringLiteral_3262/*"COMMAND_CODE_UNLOCK_TITLE"*/, v23);
-    sub_B0D8A4(&StringLiteral_3240/*"COMMAND_CODE_ITEM_ITEM_INFO"*/, v24);
-    byte_42147C8 = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&Method_CommandCardDialog_EndOpen__);
+    sub_B52984(&CommandCardDialog_TypeInfo);
+    sub_B52984(&Method_DataManager_GetMasterData_ServantCommandCodeUnlockMaster___);
+    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B52984(&StringLiteral_3280/*"COMMAND_CODE_UNLOCK_CONFIRM_MSG"*/);
+    sub_B52984(&StringLiteral_3201/*"COMBINE_HAVE_QP"*/);
+    sub_B52984(&StringLiteral_3281/*"COMMAND_CODE_UNLOCK_SPEND_QP"*/);
+    sub_B52984(&StringLiteral_3295/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_B52984(&StringLiteral_3293/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_B52984(&StringLiteral_9323/*"N0"*/);
+    sub_B52984(&StringLiteral_3282/*"COMMAND_CODE_UNLOCK_TITLE"*/);
+    sub_B52984(&StringLiteral_3260/*"COMMAND_CODE_ITEM_ITEM_INFO"*/);
+    byte_42B0090 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1493,22 +1421,22 @@ void __fastcall CommandCardDialog__OpenUnlockCommandCardEquipment(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  SelfUserGame = LocalizationManager__Get((System_String_o *)StringLiteral_3262/*"COMMAND_CODE_UNLOCK_TITLE"*/, 0LL);
+  SelfUserGame = LocalizationManager__Get((System_String_o *)StringLiteral_3282/*"COMMAND_CODE_UNLOCK_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_61;
   UILabel__set_text(titleLabel, SelfUserGame, 0LL);
   itemInfoLabel = this->fields.itemInfoLabel;
-  SelfUserGame = LocalizationManager__Get((System_String_o *)StringLiteral_3240/*"COMMAND_CODE_ITEM_ITEM_INFO"*/, 0LL);
+  SelfUserGame = LocalizationManager__Get((System_String_o *)StringLiteral_3260/*"COMMAND_CODE_ITEM_ITEM_INFO"*/, 0LL);
   if ( !itemInfoLabel )
     goto LABEL_61;
   UILabel__set_text(itemInfoLabel, SelfUserGame, 0LL);
   spendQpTxtLabel = this->fields.spendQpTxtLabel;
-  SelfUserGame = LocalizationManager__Get((System_String_o *)StringLiteral_3261/*"COMMAND_CODE_UNLOCK_SPEND_QP"*/, 0LL);
+  SelfUserGame = LocalizationManager__Get((System_String_o *)StringLiteral_3281/*"COMMAND_CODE_UNLOCK_SPEND_QP"*/, 0LL);
   if ( !spendQpTxtLabel )
     goto LABEL_61;
   UILabel__set_text(spendQpTxtLabel, SelfUserGame, 0LL);
   haveQpTxtLabel = this->fields.haveQpTxtLabel;
-  SelfUserGame = LocalizationManager__Get((System_String_o *)StringLiteral_3181/*"COMBINE_HAVE_QP"*/, 0LL);
+  SelfUserGame = LocalizationManager__Get((System_String_o *)StringLiteral_3201/*"COMBINE_HAVE_QP"*/, 0LL);
   if ( !haveQpTxtLabel )
     goto LABEL_61;
   UILabel__set_text(haveQpTxtLabel, SelfUserGame, 0LL);
@@ -1516,60 +1444,60 @@ void __fastcall CommandCardDialog__OpenUnlockCommandCardEquipment(
   if ( !SelfUserGame )
     goto LABEL_61;
   haveQpLabel = this->fields.haveQpLabel;
-  v31 = SelfUserGame;
-  SelfUserGame = System_Int32__ToString_38473032((int)SelfUserGame + 96, (System_String_o *)StringLiteral_9289/*"N0"*/, 0LL);
+  v15 = SelfUserGame;
+  SelfUserGame = System_Int32__ToString_39387012((int)SelfUserGame + 96, (System_String_o *)StringLiteral_9323/*"N0"*/, 0LL);
   if ( !haveQpLabel )
     goto LABEL_61;
   UILabel__set_text(haveQpLabel, SelfUserGame, 0LL);
   decideButtonLabel = this->fields.decideButtonLabel;
-  SelfUserGame = LocalizationManager__Get((System_String_o *)StringLiteral_3275/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
+  SelfUserGame = LocalizationManager__Get((System_String_o *)StringLiteral_3295/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideButtonLabel )
     goto LABEL_61;
   UILabel__set_text(decideButtonLabel, SelfUserGame, 0LL);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  SelfUserGame = LocalizationManager__Get((System_String_o *)StringLiteral_3273/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+  SelfUserGame = LocalizationManager__Get((System_String_o *)StringLiteral_3293/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelButtonLabel )
     goto LABEL_61;
   UILabel__set_text(cancelButtonLabel, SelfUserGame, 0LL);
-  SelfUserGame = (System_String_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  SelfUserGame = (System_String_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !SelfUserGame )
     goto LABEL_61;
   SelfUserGame = (System_String_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       (DataManager_o *)SelfUserGame,
-                                      (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_ServantCommandCodeUnlockMaster___);
+                                      (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_ServantCommandCodeUnlockMaster___);
   if ( !baseUserServantEntity )
     goto LABEL_61;
-  v34 = (ServantCommandCodeUnlockMaster_o *)SelfUserGame;
-  v36 = *(_QWORD *)&baseUserServantEntity->fields.svtId.fields.currentCryptoKey;
-  v35 = *(_QWORD *)&baseUserServantEntity->fields.svtId.fields.fakeValue;
+  v18 = (ServantCommandCodeUnlockMaster_o *)SelfUserGame;
+  v20 = *(_QWORD *)&baseUserServantEntity->fields.svtId.fields.currentCryptoKey;
+  v19 = *(_QWORD *)&baseUserServantEntity->fields.svtId.fields.fakeValue;
   if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   }
-  *(_QWORD *)&v70.fields.currentCryptoKey = v36;
-  *(_QWORD *)&v70.fields.fakeValue = v35;
-  SelfUserGame = (System_String_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44162576(v70, 0LL);
-  if ( !v34 )
+  *(_QWORD *)&v52.fields.currentCryptoKey = v20;
+  *(_QWORD *)&v52.fields.fakeValue = v19;
+  SelfUserGame = (System_String_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44786420(v52, 0LL);
+  if ( !v18 )
     goto LABEL_61;
-  SelfUserGame = (System_String_o *)ServantCommandCodeUnlockMaster__GetEntity(v34, (int32_t)SelfUserGame, cardIdx, 0LL);
+  SelfUserGame = (System_String_o *)ServantCommandCodeUnlockMaster__GetEntity(v18, (int32_t)SelfUserGame, cardIdx, 0LL);
   if ( !SelfUserGame )
     goto LABEL_61;
   spendQpLabel = this->fields.spendQpLabel;
-  v38 = SelfUserGame;
-  SelfUserGame = System_Int32__ToString_38473032((int)SelfUserGame + 24, (System_String_o *)StringLiteral_9289/*"N0"*/, 0LL);
+  v22 = SelfUserGame;
+  SelfUserGame = System_Int32__ToString_39387012((int)SelfUserGame + 24, (System_String_o *)StringLiteral_9323/*"N0"*/, 0LL);
   if ( !spendQpLabel )
     goto LABEL_61;
   UILabel__set_text(spendQpLabel, SelfUserGame, 0LL);
-  fields = v38[1].fields;
+  fields = v22[1].fields;
   if ( !*(_QWORD *)&fields )
     goto LABEL_61;
-  v40 = *(_QWORD *)(*(_QWORD *)&fields + 24LL);
-  if ( (int)v40 >= 1 )
+  v24 = *(_QWORD *)(*(_QWORD *)&fields + 24LL);
+  if ( (int)v24 >= 1 )
   {
-    monitor = v38[1].monitor;
-    v42 = 0LL;
-    v43 = (int)v40;
+    monitor = v22[1].monitor;
+    v26 = 0LL;
+    v27 = (int)v24;
     while ( 1 )
     {
       releaseItemObj = this->fields.releaseItemObj;
@@ -1580,70 +1508,70 @@ void __fastcall CommandCardDialog__OpenUnlockCommandCardEquipment(
       }
       SelfUserGame = (System_String_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                           (UnityEngine_UI_Dropdown_DropdownItem_o *)releaseItemObj,
-                                          (const MethodInfo_204A984 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                          (const MethodInfo_1F711B8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( !SelfUserGame )
         break;
-      v45 = (UnityEngine_GameObject_o *)SelfUserGame;
+      v29 = (UnityEngine_GameObject_o *)SelfUserGame;
       SelfUserGame = (System_String_o *)UnityEngine_GameObject__get_transform(
                                           (UnityEngine_GameObject_o *)SelfUserGame,
                                           0LL);
       if ( !this->fields.unlockItemGrid )
         break;
-      v46 = (UnityEngine_Transform_o *)SelfUserGame;
+      v30 = (UnityEngine_Transform_o *)SelfUserGame;
       SelfUserGame = (System_String_o *)UnityEngine_Component__get_transform(
                                           (UnityEngine_Component_o *)this->fields.unlockItemGrid,
                                           0LL);
-      if ( !v46 )
+      if ( !v30 )
         break;
-      UnityEngine_Transform__set_parent(v46, (UnityEngine_Transform_o *)SelfUserGame, 0LL);
-      transform = UnityEngine_GameObject__get_transform(v45, 0LL);
-      *(UnityEngine_Vector3_o *)&v48 = UnityEngine_Vector3__get_zero(0LL);
+      UnityEngine_Transform__set_parent(v30, (UnityEngine_Transform_o *)SelfUserGame, 0LL);
+      transform = UnityEngine_GameObject__get_transform(v29, 0LL);
+      *(UnityEngine_Vector3_o *)&v32 = UnityEngine_Vector3__get_zero(0LL);
       if ( !transform )
         break;
-      UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&v48, 0LL);
-      v51 = UnityEngine_GameObject__get_transform(v45, 0LL);
-      *(UnityEngine_Quaternion_o *)&v52 = UnityEngine_Quaternion__get_identity(0LL);
-      if ( !v51 )
+      UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&v32, 0LL);
+      v35 = UnityEngine_GameObject__get_transform(v29, 0LL);
+      *(UnityEngine_Quaternion_o *)&v36 = UnityEngine_Quaternion__get_identity(0LL);
+      if ( !v35 )
         break;
-      UnityEngine_Transform__set_localRotation(v51, *(UnityEngine_Quaternion_o *)&v52, 0LL);
-      SelfUserGame = (System_String_o *)UnityEngine_GameObject__get_transform(v45, 0LL);
-      v56 = (UnityEngine_Transform_o *)SelfUserGame;
-      v57 = CommandCardDialog_TypeInfo;
+      UnityEngine_Transform__set_localRotation(v35, *(UnityEngine_Quaternion_o *)&v36, 0LL);
+      SelfUserGame = (System_String_o *)UnityEngine_GameObject__get_transform(v29, 0LL);
+      v40 = (UnityEngine_Transform_o *)SelfUserGame;
+      v41 = CommandCardDialog_TypeInfo;
       if ( (BYTE3(CommandCardDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !CommandCardDialog_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(CommandCardDialog_TypeInfo);
-        v57 = CommandCardDialog_TypeInfo;
+        v41 = CommandCardDialog_TypeInfo;
       }
-      if ( !v56 )
+      if ( !v40 )
         break;
-      UnityEngine_Transform__set_localScale(v56, v57->static_fields->UNLOCK_ITEM_SCALE, 0LL);
+      UnityEngine_Transform__set_localScale(v40, v41->static_fields->UNLOCK_ITEM_SCALE, 0LL);
       SelfUserGame = (System_String_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                          v45,
-                                          (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
-      if ( v42 >= *(unsigned int *)(*(_QWORD *)&fields + 24LL) )
+                                          v29,
+                                          (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
+      if ( v26 >= *(unsigned int *)(*(_QWORD *)&fields + 24LL) )
         goto LABEL_62;
       if ( !monitor )
         break;
-      if ( v42 >= (unsigned int)monitor[6] )
+      if ( v26 >= (unsigned int)monitor[6] )
       {
 LABEL_62:
-        v68 = sub_B0D9A8(SelfUserGame);
-        sub_B0D948(v68, 0LL);
+        v50 = sub_B52A88(SelfUserGame);
+        sub_B52A28(v50, 0LL);
       }
       if ( !SelfUserGame )
         break;
       LimitCntUpItemComponent__setLimitUpItemInfo(
         (LimitCntUpItemComponent_o *)SelfUserGame,
-        *(_QWORD *)&v31->fields,
-        *(_DWORD *)(*(_QWORD *)&fields + 32LL + 4 * v42),
-        monitor[v42 + 8],
+        *(_QWORD *)&v15->fields,
+        *(_DWORD *)(*(_QWORD *)&fields + 32LL + 4 * v26),
+        monitor[v26 + 8],
         0LL);
-      if ( (__int64)++v42 >= v43 )
+      if ( (__int64)++v26 >= v27 )
         goto LABEL_42;
     }
 LABEL_61:
-    sub_B0D97C(SelfUserGame);
+    sub_B52A5C(SelfUserGame, v10);
   }
 LABEL_42:
   answerBackLabel = this->fields.answerBackLabel;
@@ -1652,7 +1580,7 @@ LABEL_42:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  SelfUserGame = LocalizationManager__Get((System_String_o *)StringLiteral_3260/*"COMMAND_CODE_UNLOCK_CONFIRM_MSG"*/, 0LL);
+  SelfUserGame = LocalizationManager__Get((System_String_o *)StringLiteral_3280/*"COMMAND_CODE_UNLOCK_CONFIRM_MSG"*/, 0LL);
   if ( !answerBackLabel )
     goto LABEL_61;
   UILabel__set_text(answerBackLabel, SelfUserGame, 0LL);
@@ -1711,18 +1639,18 @@ LABEL_42:
     goto LABEL_61;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)SelfUserGame, 0, 0LL);
   this->fields.closeFunc = closeCallback;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.closeFunc,
     (System_Int32_array **)closeCallback,
-    v59,
-    v60,
-    v61,
-    v62,
-    v63,
-    v64);
-  v67 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v65, v66);
-  System_Action___ctor(v67, (Il2CppObject *)this, Method_CommandCardDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v67, 0, 0LL);
+    v43,
+    v44,
+    v45,
+    v46,
+    v47,
+    v48);
+  v49 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+  System_Action___ctor(v49, (Il2CppObject *)this, Method_CommandCardDialog_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v49, 0, 0LL);
 }
 
 
@@ -1730,17 +1658,16 @@ UnityEngine_GameObject_o *__fastcall CommandCardDialog__get_closeBtnObject(
         CommandCardDialog_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_GameObject_o *canExecuteButtonsObj; // x0
   UnityEngine_GameObject_o *gameObject; // x20
   UnityEngine_Object_o *canNotExecuteButtonObj; // x20
-  bool v7; // w0
+  bool v6; // w0
 
-  if ( (byte_42147D0 & 1) == 0 )
+  if ( (byte_42B0098 & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
-    sub_B0D8A4(&StringLiteral_3572/*"CancelButton"*/, v3);
-    byte_42147D0 = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    sub_B52984(&StringLiteral_3592/*"CancelButton"*/);
+    byte_42B0098 = 1;
   }
   canExecuteButtonsObj = this->fields.canExecuteButtonsObj;
   if ( !canExecuteButtonsObj )
@@ -1750,7 +1677,7 @@ UnityEngine_GameObject_o *__fastcall CommandCardDialog__get_closeBtnObject(
     goto LABEL_20;
   canExecuteButtonsObj = (UnityEngine_GameObject_o *)UnityEngine_Transform__Find(
                                                        (UnityEngine_Transform_o *)canExecuteButtonsObj,
-                                                       (System_String_o *)StringLiteral_3572/*"CancelButton"*/,
+                                                       (System_String_o *)StringLiteral_3592/*"CancelButton"*/,
                                                        0LL);
   if ( !canExecuteButtonsObj )
     goto LABEL_20;
@@ -1774,9 +1701,9 @@ UnityEngine_GameObject_o *__fastcall CommandCardDialog__get_closeBtnObject(
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  v7 = UnityEngine_Object__op_Inequality(canNotExecuteButtonObj, 0LL, 0LL);
+  v6 = UnityEngine_Object__op_Inequality(canNotExecuteButtonObj, 0LL, 0LL);
   gameObject = 0LL;
-  if ( v7 )
+  if ( v6 )
   {
     canExecuteButtonsObj = this->fields.canNotExecuteButtonObj;
     if ( canExecuteButtonsObj )
@@ -1787,7 +1714,7 @@ UnityEngine_GameObject_o *__fastcall CommandCardDialog__get_closeBtnObject(
       return gameObject;
     }
 LABEL_20:
-    sub_B0D97C(canExecuteButtonsObj);
+    sub_B52A5C(canExecuteButtonsObj, method);
   }
   return gameObject;
 }
@@ -1814,11 +1741,10 @@ void __fastcall CommandCardDialog_ClickDelegate___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B0D840(p_method, object);
+  sub_B52920(p_method);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_IAsyncResult_o *__fastcall CommandCardDialog_ClickDelegate__BeginInvoke(
         CommandCardDialog_ClickDelegate_o *this,
         bool isDecide,
@@ -1830,14 +1756,14 @@ System_IAsyncResult_o *__fastcall CommandCardDialog_ClickDelegate__BeginInvoke(
   char v10[4]; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_4211E7A & 1) == 0 )
+  if ( (byte_42AD71C & 1) == 0 )
   {
-    sub_B0D8A4(&bool_TypeInfo, isDecide);
-    byte_4211E7A = 1;
+    sub_B52984(&bool_TypeInfo);
+    byte_42AD71C = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_B0D848(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_B52928(this, v9, callback, object);
 }
 
 
@@ -1846,7 +1772,7 @@ void __fastcall CommandCardDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B0D84C(result, 0LL, method);
+  sub_B5292C(result, 0LL, method);
 }
 
 
@@ -1863,31 +1789,33 @@ void __fastcall CommandCardDialog_ClickDelegate__Invoke(
   __int64 v9; // x26
   unsigned int v10; // w23
   __int64 class_0; // x0
-  __int64 v12; // x8
-  unsigned __int64 v13; // x10
-  _DWORD *v14; // x11
-  __int64 v15; // x0
+  __int64 v12; // x3
+  __int64 v13; // x8
+  unsigned __int64 v14; // x10
+  _DWORD *v15; // x11
   __int64 v16; // x0
   __int64 v17; // x0
-  void (__fastcall **v18)(__int64 *, bool, _QWORD); // x0
-  CommandCardDialog_ClickDelegate_o *v19; // x8
-  __int64 *v20; // x21
-  __int64 v21; // x22
-  void (__fastcall *v22)(bool, __int64); // x23
-  char v23; // w23
-  char v24; // w0
-  __int64 v25; // x8
-  __int64 v26; // x1
-  __int64 v27; // x2
-  unsigned __int64 v28; // x10
-  _DWORD *v29; // x11
-  CommandCardDialog_ClickDelegate_o *v30; // [xsp+8h] [xbp-48h] BYREF
+  __int64 v18; // x0
+  void (__fastcall **v19)(__int64 *, bool, _QWORD); // x0
+  CommandCardDialog_ClickDelegate_o *v20; // x8
+  __int64 *v21; // x21
+  __int64 v22; // x22
+  void (__fastcall *v23)(bool, __int64); // x23
+  char v24; // w23
+  char v25; // w0
+  __int64 v26; // x3
+  __int64 v27; // x8
+  __int64 v28; // x1
+  __int64 v29; // x2
+  unsigned __int64 v30; // x10
+  _DWORD *v31; // x11
+  CommandCardDialog_ClickDelegate_o *v32; // [xsp+8h] [xbp-48h] BYREF
 
-  v30 = this;
+  v32 = this;
   v4 = *(_QWORD *)&this[1].fields.method_ptr;
   if ( !v4 )
   {
-    v8 = &v30;
+    v8 = &v32;
     v7 = 1LL;
     goto LABEL_5;
   }
@@ -1899,98 +1827,98 @@ LABEL_5:
     v9 = 0LL;
     while ( 1 )
     {
-      v19 = v8[v9];
-      v20 = *(__int64 **)&v19->fields.method;
-      v21 = *(_QWORD *)&v19->fields.extra_arg;
-      v22 = *(void (__fastcall **)(bool, __int64))&v19->fields.method_ptr;
-      if ( *(__int16 *)(v21 + 72) == -1 )
-        sub_B0D960(*(_QWORD *)&v19->fields.extra_arg, isDecide, method, v3);
-      if ( (sub_B0D8D4(v21) & 1) == 0 )
+      v20 = v8[v9];
+      v21 = *(__int64 **)&v20->fields.method;
+      v22 = *(_QWORD *)&v20->fields.extra_arg;
+      v23 = *(void (__fastcall **)(bool, __int64))&v20->fields.method_ptr;
+      if ( *(__int16 *)(v22 + 72) == -1 )
+        sub_B52A40(*(_QWORD *)&v20->fields.extra_arg, isDecide, method, v3);
+      if ( (sub_B529B4(v22) & 1) == 0 )
         break;
-      if ( *(_BYTE *)(v21 + 74) != 1 )
+      if ( *(_BYTE *)(v22 + 74) != 1 )
         goto LABEL_36;
-      v22(isDecide, v21);
+      v23(isDecide, v22);
 LABEL_37:
       if ( ++v9 == v7 )
         return;
     }
-    if ( v20 && *(__int16 *)(v21 + 72) != -1 && (*(_BYTE *)(*v20 + 277) & 1) == 0 && this->fields.m_target )
+    if ( v21 && *(__int16 *)(v22 + 72) != -1 && (*(_BYTE *)(*v21 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v23 = sub_B0D8CC(v21);
-      v24 = sub_B0DCD0(v21);
-      if ( (v23 & 1) != 0 )
+      v24 = sub_B529AC(v22);
+      v25 = sub_B52DB0(v22);
+      if ( (v24 & 1) != 0 )
       {
-        if ( (v24 & 1) != 0 )
+        if ( (v25 & 1) != 0 )
         {
-          v25 = *v20;
-          v26 = *(_QWORD *)(v21 + 24);
-          v27 = *(unsigned __int16 *)(v21 + 72);
-          if ( *(_WORD *)(*v20 + 298) )
+          v27 = *v21;
+          v28 = *(_QWORD *)(v22 + 24);
+          v29 = *(unsigned __int16 *)(v22 + 72);
+          if ( *(_WORD *)(*v21 + 298) )
           {
-            v28 = 0LL;
-            v29 = (_DWORD *)(*(_QWORD *)(v25 + 176) + 8LL);
-            while ( *((_QWORD *)v29 - 1) != v26 )
+            v30 = 0LL;
+            v31 = (_DWORD *)(*(_QWORD *)(v27 + 176) + 8LL);
+            while ( *((_QWORD *)v31 - 1) != v28 )
             {
-              ++v28;
-              v29 += 4;
-              if ( v28 >= *(unsigned __int16 *)(*v20 + 298) )
+              ++v30;
+              v31 += 4;
+              if ( v30 >= *(unsigned __int16 *)(*v21 + 298) )
                 goto LABEL_35;
             }
-            v17 = v25 + 16LL * (*v29 + (int)v27) + 312;
+            v18 = v27 + 16LL * (*v31 + (int)v29) + 312;
           }
           else
           {
 LABEL_35:
-            v17 = sub_AA67A0(v20, v26, v27);
+            v18 = sub_AEB880(v21, v28, v29, v26);
           }
-          v16 = *(_QWORD *)(v17 + 8);
+          v17 = *(_QWORD *)(v18 + 8);
         }
         else
         {
-          v16 = *(_QWORD *)(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 320);
+          v17 = *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320);
         }
-        v18 = (void (__fastcall **)(__int64 *, bool, _QWORD))sub_B0D954(v16, v21);
-        (*v18)(v20, isDecide, v18);
+        v19 = (void (__fastcall **)(__int64 *, bool, _QWORD))sub_B52A34(v17, v22);
+        (*v19)(v21, isDecide, v19);
       }
       else
       {
-        v10 = *(unsigned __int16 *)(v21 + 72);
-        if ( (v24 & 1) != 0 )
+        v10 = *(unsigned __int16 *)(v22 + 72);
+        if ( (v25 & 1) != 0 )
         {
-          class_0 = j_il2cpp_method_get_class_0(v21);
-          v12 = *v20;
-          if ( *(_WORD *)(*v20 + 298) )
+          class_0 = j_il2cpp_method_get_class_0(v22);
+          v13 = *v21;
+          if ( *(_WORD *)(*v21 + 298) )
           {
-            v13 = 0LL;
-            v14 = (_DWORD *)(*(_QWORD *)(v12 + 176) + 8LL);
-            while ( *((_QWORD *)v14 - 1) != class_0 )
+            v14 = 0LL;
+            v15 = (_DWORD *)(*(_QWORD *)(v13 + 176) + 8LL);
+            while ( *((_QWORD *)v15 - 1) != class_0 )
             {
-              ++v13;
-              v14 += 4;
-              if ( v13 >= *(unsigned __int16 *)(*v20 + 298) )
+              ++v14;
+              v15 += 4;
+              if ( v14 >= *(unsigned __int16 *)(*v21 + 298) )
                 goto LABEL_11;
             }
-            v15 = v12 + 16LL * (int)(*v14 + v10) + 312;
+            v16 = v13 + 16LL * (int)(*v15 + v10) + 312;
           }
           else
           {
 LABEL_11:
-            v15 = sub_AA67A0(v20, class_0, v10);
+            v16 = sub_AEB880(v21, class_0, v10, v12);
           }
-          (*(void (__fastcall **)(__int64 *, bool, _QWORD))v15)(v20, isDecide, *(_QWORD *)(v15 + 8));
+          (*(void (__fastcall **)(__int64 *, bool, _QWORD))v16)(v21, isDecide, *(_QWORD *)(v16 + 8));
         }
         else
         {
-          (*(void (__fastcall **)(__int64 *, bool, _QWORD))(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 312))(
-            v20,
+          (*(void (__fastcall **)(__int64 *, bool, _QWORD))(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 312))(
+            v21,
             isDecide,
-            *(_QWORD *)(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 320));
+            *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320));
         }
       }
       goto LABEL_37;
     }
 LABEL_36:
-    ((void (__fastcall *)(__int64 *, bool, __int64))v22)(v20, isDecide, v21);
+    ((void (__fastcall *)(__int64 *, bool, __int64))v23)(v21, isDecide, v22);
     goto LABEL_37;
   }
 }

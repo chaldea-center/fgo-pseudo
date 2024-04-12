@@ -2,17 +2,15 @@ void __fastcall TreasureDeviceSequenceWeightMaster___ctor(
         TreasureDeviceSequenceWeightMaster_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_421681F & 1) == 0 )
+  if ( (byte_42B2351 & 1) == 0 )
   {
-    sub_B0D8A4(
-      &Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string___ctor__,
-      method);
-    byte_421681F = 1;
+    sub_B52984(&Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string___ctor__);
+    byte_42B2351 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-    452,
-    (const MethodInfo_2669F88 *)Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string___ctor__);
+    453,
+    (const MethodInfo_23E268C *)Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string___ctor__);
 }
 
 
@@ -26,22 +24,20 @@ TreasureDeviceSequenceWeightEntity_o *__fastcall TreasureDeviceSequenceWeightMas
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4216820 & 1) == 0 )
+  if ( (byte_42B2352 & 1) == 0 )
   {
-    sub_B0D8A4(
-      &Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__GetEntity__,
-      *(_QWORD *)&treasureDeviceId);
-    byte_4216820 = 1;
+    sub_B52984(&Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__GetEntity__);
+    byte_42B2352 = 1;
   }
   PK = TreasureDeviceSequenceWeightEntity__CreatePK(
          treasureDeviceId,
          limitCount,
          npChargeStage,
          *(const MethodInfo **)&npChargeStage);
-  return (TreasureDeviceSequenceWeightEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
-                                                   (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
+  return (TreasureDeviceSequenceWeightEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
+                                                   (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                                    PK,
-                                                   (const MethodInfo_266A024 *)Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__GetEntity__);
+                                                   (const MethodInfo_23E2728 *)Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__GetEntity__);
 }
 
 
@@ -88,12 +84,10 @@ bool __fastcall TreasureDeviceSequenceWeightMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4216821 & 1) == 0 )
+  if ( (byte_42B2353 & 1) == 0 )
   {
-    sub_B0D8A4(
-      &Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__TryGetEntity__,
-      entity);
-    byte_4216821 = 1;
+    sub_B52984(&Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__TryGetEntity__);
+    byte_42B2353 = 1;
   }
   PK = TreasureDeviceSequenceWeightEntity__CreatePK(
          treasureDeviceId,
@@ -104,5 +98,5 @@ bool __fastcall TreasureDeviceSequenceWeightMaster__TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266A07C *)Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__TryGetEntity__);
+           (const MethodInfo_23E2780 *)Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__TryGetEntity__);
 }

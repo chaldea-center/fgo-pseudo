@@ -8,14 +8,14 @@ void __fastcall SendEventToFsm___ctor(SendEventToFsm_o *this, const MethodInfo *
   System_Int32_array *v7; // x7
   System_Int32_array **v9; // x1
 
-  if ( (byte_421582C & 1) == 0 )
+  if ( (byte_42B0F72 & 1) == 0 )
   {
-    sub_B0D8A4(&StringLiteral_21188/*"none"*/, method);
-    byte_421582C = 1;
+    sub_B52984(&StringLiteral_21291/*"none"*/);
+    byte_42B0F72 = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_21188/*"none"*/;
-  this->fields.sendEvent = (struct System_String_o *)StringLiteral_21188/*"none"*/;
-  sub_B0D840((BattleServantConfConponent_o *)&this->fields.sendEvent, v9, v2, v3, v4, v5, v6, v7);
+  v9 = (System_Int32_array **)StringLiteral_21291/*"none"*/;
+  this->fields.sendEvent = (struct System_String_o *)StringLiteral_21291/*"none"*/;
+  sub_B52920((BattleServantConfConponent_o *)&this->fields.sendEvent, v9, v2, v3, v4, v5, v6, v7);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
@@ -44,10 +44,10 @@ void __fastcall SendEventToFsm__OnEnable(SendEventToFsm_o *this, const MethodInf
   bool IsHighlighted; // w1
   const MethodInfo *v5; // x2
 
-  if ( (byte_4215829 & 1) == 0 )
+  if ( (byte_42B0F6F & 1) == 0 )
   {
-    sub_B0D8A4(&UICamera_TypeInfo, method);
-    byte_4215829 = 1;
+    sub_B52984(&UICamera_TypeInfo);
+    byte_42B0F6F = 1;
   }
   if ( this->fields.mStarted )
   {
@@ -104,16 +104,15 @@ LABEL_6:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall SendEventToFsm__OnSelect(SendEventToFsm_o *this, bool isSelected, const MethodInfo *method)
 {
   const MethodInfo *v5; // x2
   UICamera_c *v6; // x0
 
-  if ( (byte_421582A & 1) == 0 )
+  if ( (byte_42B0F70 & 1) == 0 )
   {
-    sub_B0D8A4(&UICamera_TypeInfo, isSelected);
-    byte_421582A = 1;
+    sub_B52984(&UICamera_TypeInfo);
+    byte_42B0F70 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0LL) )
   {
@@ -135,12 +134,13 @@ LABEL_9:
 void __fastcall SendEventToFsm__Send(SendEventToFsm_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *targetFSM; // x20
-  PlayMakerFSM_o *v4; // x0
+  __int64 v4; // x1
+  PlayMakerFSM_o *v5; // x0
 
-  if ( (byte_421582B & 1) == 0 )
+  if ( (byte_42B0F71 & 1) == 0 )
   {
-    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
-    byte_421582B = 1;
+    sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B0F71 = 1;
   }
   targetFSM = (UnityEngine_Object_o *)this->fields.targetFSM;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -150,10 +150,10 @@ void __fastcall SendEventToFsm__Send(SendEventToFsm_o *this, const MethodInfo *m
   }
   if ( UnityEngine_Object__op_Inequality(targetFSM, 0LL, 0LL) )
   {
-    v4 = this->fields.targetFSM;
-    if ( !v4 )
-      sub_B0D97C(0LL);
-    PlayMakerFSM__SendEvent(v4, this->fields.sendEvent, 0LL);
+    v5 = this->fields.targetFSM;
+    if ( !v5 )
+      sub_B52A5C(0LL, v4);
+    PlayMakerFSM__SendEvent(v5, this->fields.sendEvent, 0LL);
   }
 }
 

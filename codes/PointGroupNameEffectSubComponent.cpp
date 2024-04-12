@@ -11,56 +11,53 @@ void __fastcall PointGroupNameEffectSubComponent__RecvParam(
         Il2CppObject *param,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x10
+  __int64 v5; // x10
   DataManager_o *Instance; // x0
   System_String_o *name; // x1
   void *monitor; // x8
-  __int64 v12; // x9
-  int32_t v13; // w20
-  int32_t v14; // w21
+  __int64 v9; // x9
+  int32_t v10; // w20
+  int32_t v11; // w21
   EventPointGroupEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4213A83 & 1) == 0 )
+  if ( (byte_42AF81D & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMasterData_EventPointGroupMaster___, param);
-    sub_B0D8A4(&RaceResultEffectParam_TypeInfo, v5);
-    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v7);
-    byte_4213A83 = 1;
+    sub_B52984(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
+    sub_B52984(&RaceResultEffectParam_TypeInfo);
+    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42AF81D = 1;
   }
   entity = 0LL;
   if ( param )
   {
-    v8 = *(&RaceResultEffectParam_TypeInfo->_2.bitflags2 + 1);
-    if ( *(&param->klass->_2.bitflags2 + 1) >= (unsigned int)v8
-      && (RaceResultEffectParam_c *)param->klass->_2.typeHierarchy[v8 - 1] == RaceResultEffectParam_TypeInfo )
+    v5 = *(&RaceResultEffectParam_TypeInfo->_2.bitflags2 + 1);
+    if ( *(&param->klass->_2.bitflags2 + 1) >= (unsigned int)v5
+      && (RaceResultEffectParam_c *)param->klass->_2.typeHierarchy[v5 - 1] == RaceResultEffectParam_TypeInfo )
     {
       monitor = param[1].monitor;
       if ( monitor )
       {
-        v12 = *((_QWORD *)monitor + 3);
-        if ( v12 )
+        v9 = *((_QWORD *)monitor + 3);
+        if ( v9 )
         {
-          if ( (int)v12 >= 3 )
+          if ( (int)v9 >= 3 )
           {
-            v13 = *((_DWORD *)monitor + 8);
-            v14 = *((_DWORD *)monitor + 12);
-            Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            v10 = *((_DWORD *)monitor + 8);
+            v11 = *((_DWORD *)monitor + 12);
+            Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                           Instance,
-                                          (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
+                                          (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)EventPointGroupMaster__TryGetEntity(
                                           (EventPointGroupMaster_o *)Instance,
                                           &entity,
-                                          v13,
-                                          v14,
+                                          v10,
+                                          v11,
                                           0LL);
             if ( ((unsigned __int8)Instance & 1) != 0 )
             {
@@ -74,7 +71,7 @@ void __fastcall PointGroupNameEffectSubComponent__RecvParam(
                 }
               }
 LABEL_18:
-              sub_B0D97C(Instance);
+              sub_B52A5C(Instance, param);
             }
           }
         }

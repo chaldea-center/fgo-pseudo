@@ -6,44 +6,42 @@ void __fastcall SummonHistoryDialog___ctor(SummonHistoryDialog_o *this, const Me
 
 void __fastcall SummonHistoryDialog__Init(SummonHistoryDialog_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   ListViewManager_o *summonHistoryListViewManager; // x0
 
   TextLabelScrollDialog__Init((TextLabelScrollDialog_o *)this, 0LL);
   summonHistoryListViewManager = (ListViewManager_o *)this->fields.summonHistoryListViewManager;
   if ( !summonHistoryListViewManager )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v3);
   ListViewManager__DestroyList(summonHistoryListViewManager, 0LL);
 }
 
 
 void __fastcall SummonHistoryDialog__OnClickClose(SummonHistoryDialog_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x1
-  _QWORD *v6; // x0
-  System_Reflection_MethodBase_o *v7; // x0
-  System_Action_o *v8; // x20
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  System_Action_o *v5; // x20
 
-  if ( (byte_421848C & 1) == 0 )
+  if ( (byte_42B3E96 & 1) == 0 )
   {
-    sub_B0D8A4(&System_Action_TypeInfo, method);
-    sub_B0D8A4(&Method_SummonHistoryDialog_OnClickClose__, v4);
-    sub_B0D8A4(&Method_SummonHistoryDialog__OnClickClose_b__5_0__, v5);
-    byte_421848C = 1;
+    sub_B52984(&System_Action_TypeInfo);
+    sub_B52984(&Method_SummonHistoryDialog_OnClickClose__);
+    sub_B52984(&Method_SummonHistoryDialog__OnClickClose_b__5_0__);
+    byte_42B3E96 = 1;
   }
   if ( !this->fields.state )
   {
-    v6 = Method_SummonHistoryDialog_OnClickClose__;
+    v3 = Method_SummonHistoryDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_SummonHistoryDialog_OnClickClose__ + 75) & 2) != 0 )
-      v6 = (_QWORD *)sub_B0D8AC(Method_SummonHistoryDialog_OnClickClose__);
-    v7 = (System_Reflection_MethodBase_o *)sub_B0D888(v6, v6[3]);
-    OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0LL);
+      v3 = (_QWORD *)sub_B5298C(Method_SummonHistoryDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_B52968(v3, v3[3]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
   }
   this->fields.state = 2;
-  v8 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, method, v2);
-  System_Action___ctor(v8, (Il2CppObject *)this, Method_SummonHistoryDialog__OnClickClose_b__5_0__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v8, 0LL);
+  v5 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+  System_Action___ctor(v5, (Il2CppObject *)this, Method_SummonHistoryDialog__OnClickClose_b__5_0__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v5, 0LL);
 }
 
 
@@ -52,45 +50,38 @@ void __fastcall SummonHistoryDialog__Open(
         VaildGachaInfo_o *gachaInfo,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  System_String_o *v12; // x0
+  System_String_o *v5; // x0
   System_String_o *name; // x0
+  const MethodInfo *v7; // x1
   UILabel_o *summonNameLabel; // x20
   UILabel_o *UpperMessageLabel; // x20
-  const MethodInfo *v16; // x1
   UILabel_o *messageLabel; // x20
   struct UIScrollView_o *scrollView; // x8
   UILabel_o *closeLabel; // x20
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
-  System_String_array **v26; // x2
-  System_String_array **v27; // x3
-  System_Boolean_array **v28; // x4
-  System_Int32_array **v29; // x5
-  System_Int32_array *v30; // x6
-  System_Int32_array *v31; // x7
+  System_String_array **v13; // x2
+  System_String_array **v14; // x3
+  System_Boolean_array **v15; // x4
+  System_Int32_array **v16; // x5
+  System_Int32_array *v17; // x6
+  System_Int32_array *v18; // x7
+  System_String_array **v19; // x2
+  System_String_array **v20; // x3
+  System_Boolean_array **v21; // x4
+  System_Int32_array **v22; // x5
+  System_Int32_array *v23; // x6
+  System_Int32_array *v24; // x7
 
-  if ( (byte_421848B & 1) == 0 )
+  if ( (byte_42B3E95 & 1) == 0 )
   {
-    sub_B0D8A4(&LocalizationManager_TypeInfo, gachaInfo);
-    sub_B0D8A4(&string_TypeInfo, v5);
-    sub_B0D8A4(&StringLiteral_26/*"\n"*/, v6);
-    sub_B0D8A4(&StringLiteral_6857/*"GACHA_HISTORY_UPPER_MESSAGE"*/, v7);
-    sub_B0D8A4(&StringLiteral_6851/*"GACHA_HISTORY_EMPTY"*/, v8);
-    sub_B0D8A4(&StringLiteral_6856/*"GACHA_HISTORY_TITLE"*/, v9);
-    sub_B0D8A4(&StringLiteral_3274/*"COMMON_CONFIRM_CLOSE"*/, v10);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v11);
-    byte_421848B = 1;
+    sub_B52984(&LocalizationManager_TypeInfo);
+    sub_B52984(&string_TypeInfo);
+    sub_B52984(&StringLiteral_26/*"\n"*/);
+    sub_B52984(&StringLiteral_6884/*"GACHA_HISTORY_UPPER_MESSAGE"*/);
+    sub_B52984(&StringLiteral_6878/*"GACHA_HISTORY_EMPTY"*/);
+    sub_B52984(&StringLiteral_6883/*"GACHA_HISTORY_TITLE"*/);
+    sub_B52984(&StringLiteral_3294/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B3E95 = 1;
   }
   ((void (__fastcall *)(SummonHistoryDialog_o *, void *, const MethodInfo *))this->klass->vtable._7_Init.method)(
     this,
@@ -101,21 +92,15 @@ void __fastcall SummonHistoryDialog__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_6856/*"GACHA_HISTORY_TITLE"*/, 0LL);
-  TextLabelScrollDialog__Open(
-    (TextLabelScrollDialog_o *)this,
-    v12,
-    string_TypeInfo->static_fields->Empty,
-    0LL,
-    0LL,
-    0LL);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_6883/*"GACHA_HISTORY_TITLE"*/, 0LL);
+  TextLabelScrollDialog__Open((TextLabelScrollDialog_o *)this, v5, string_TypeInfo->static_fields->Empty, 0LL, 0LL, 0LL);
   if ( !gachaInfo )
     goto LABEL_27;
   name = gachaInfo->fields.name;
   if ( !name )
     goto LABEL_27;
   summonNameLabel = this->fields.summonNameLabel;
-  name = System_String__Replace_43857140(
+  name = System_String__Replace_44575552(
            name,
            (System_String_o *)StringLiteral_26/*"\n"*/,
            (System_String_o *)StringLiteral_1/*""*/,
@@ -124,14 +109,14 @@ void __fastcall SummonHistoryDialog__Open(
     goto LABEL_27;
   UILabel__set_text(summonNameLabel, name, 0LL);
   UpperMessageLabel = this->fields.UpperMessageLabel;
-  name = LocalizationManager__Get((System_String_o *)StringLiteral_6857/*"GACHA_HISTORY_UPPER_MESSAGE"*/, 0LL);
+  name = LocalizationManager__Get((System_String_o *)StringLiteral_6884/*"GACHA_HISTORY_UPPER_MESSAGE"*/, 0LL);
   if ( !UpperMessageLabel )
     goto LABEL_27;
   UILabel__set_text(UpperMessageLabel, name, 0LL);
   name = (System_String_o *)this->fields.summonHistoryListViewManager;
   if ( !name )
     goto LABEL_27;
-  SummonHistoryListViewManager__CreateList((SummonHistoryListViewManager_o *)name, v16);
+  SummonHistoryListViewManager__CreateList((SummonHistoryListViewManager_o *)name, v7);
   name = (System_String_o *)this->fields.summonHistoryListViewManager;
   if ( !name )
     goto LABEL_27;
@@ -151,10 +136,10 @@ void __fastcall SummonHistoryDialog__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  name = LocalizationManager__Get((System_String_o *)StringLiteral_6851/*"GACHA_HISTORY_EMPTY"*/, 0LL);
+  name = LocalizationManager__Get((System_String_o *)StringLiteral_6878/*"GACHA_HISTORY_EMPTY"*/, 0LL);
   if ( !messageLabel )
 LABEL_27:
-    sub_B0D97C(name);
+    sub_B52A5C(name, v7);
   UILabel__set_text(messageLabel, name, 0LL);
 LABEL_20:
   scrollView = this->fields.scrollView;
@@ -171,14 +156,14 @@ LABEL_20:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  name = LocalizationManager__Get((System_String_o *)StringLiteral_3274/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  name = LocalizationManager__Get((System_String_o *)StringLiteral_3294/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
     goto LABEL_27;
   UILabel__set_text(closeLabel, name, 0LL);
   this->fields.closeAction = 0LL;
-  sub_B0D840((BattleServantConfConponent_o *)&this->fields.closeAction, 0LL, v20, v21, v22, v23, v24, v25);
+  sub_B52920((BattleServantConfConponent_o *)&this->fields.closeAction, 0LL, v13, v14, v15, v16, v17, v18);
   this->fields.decideAction = 0LL;
-  sub_B0D840((BattleServantConfConponent_o *)&this->fields.decideAction, 0LL, v26, v27, v28, v29, v30, v31);
+  sub_B52920((BattleServantConfConponent_o *)&this->fields.decideAction, 0LL, v19, v20, v21, v22, v23, v24);
 }
 
 

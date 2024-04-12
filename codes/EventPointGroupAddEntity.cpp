@@ -1,17 +1,16 @@
 void __fastcall EventPointGroupAddEntity___ctor(EventPointGroupAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4214D53 & 1) == 0 )
+  if ( (byte_42B0598 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4214D53 = 1;
+    sub_B52984(&Method_DataEntityBase_string___ctor__);
+    byte_42B0598 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventPointGroupAddEntity__CreatePK(
         int32_t eventId,
         int32_t termId,
@@ -19,17 +18,17 @@ System_String_o *__fastcall EventPointGroupAddEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4214D51 & 1) == 0 )
+  if ( (byte_42B0596 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&termId);
-    byte_4214D51 = 1;
+    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_42B0596 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            eventId,
            termId,
            groupId,
            priority,
-           (const MethodInfo_1713C34 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_1A4E810 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -54,10 +53,10 @@ bool __fastcall EventPointGroupAddEntity__IsAvailable(EventPointGroupAddEntity_o
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4214D52 & 1) == 0 )
+  if ( (byte_42B0597 & 1) == 0 )
   {
-    sub_B0D8A4(&CondType_TypeInfo, method);
-    byte_4214D52 = 1;
+    sub_B52984(&CondType_TypeInfo);
+    byte_42B0597 = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

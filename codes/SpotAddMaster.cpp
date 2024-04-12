@@ -1,14 +1,14 @@
 void __fastcall SpotAddMaster___ctor(SpotAddMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_42152E0 & 1) == 0 )
+  if ( (byte_42B0A54 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string___ctor__, method);
-    byte_42152E0 = 1;
+    sub_B52984(&Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string___ctor__);
+    byte_42B0A54 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-    216,
-    (const MethodInfo_2669F88 *)Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string___ctor__);
+    217,
+    (const MethodInfo_23E268C *)Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,16 @@ SpotAddEntity_o *__fastcall SpotAddMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_42152DE & 1) == 0 )
+  if ( (byte_42B0A52 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string__GetEntity__, *(_QWORD *)&spotId);
-    byte_42152DE = 1;
+    sub_B52984(&Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string__GetEntity__);
+    byte_42B0A52 = 1;
   }
   PK = SpotAddEntity__CreatePK(spotId, priority, overrideType, *(const MethodInfo **)&overrideType);
-  return (SpotAddEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
-                              (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
+  return (SpotAddEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
+                              (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                               PK,
-                              (const MethodInfo_266A024 *)Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string__GetEntity__);
+                              (const MethodInfo_23E2728 *)Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string__GetEntity__);
 }
 
 
@@ -60,34 +60,31 @@ bool __fastcall SpotAddMaster__HasPrioredData(
         int32_t *data,
         const MethodInfo *method)
 {
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   void *list; // x0
   int32_t Count; // w0
-  int32_t v13; // w23
-  void *v14; // x25
-  int32_t v15; // w24
+  int32_t v10; // w23
+  void *v11; // x25
+  int32_t v12; // w24
   int klass_high; // w19
   System_Net_NetworkInformation_UnicastIPAddressInformation_o *Item; // x0
-  System_Net_NetworkInformation_UnicastIPAddressInformation_o *v18; // x26
-  __int64 v19; // x10
+  System_Net_NetworkInformation_UnicastIPAddressInformation_o *v15; // x26
+  __int64 v16; // x10
   int32_t monitor; // w19
   int32_t monitor_high; // w27
   int64_t klass_low; // x28
   bool IsOpen; // w0
-  __int64 v24; // x10
-  int v26; // [xsp+8h] [xbp-68h]
-  int32_t v27; // [xsp+Ch] [xbp-64h]
-  int32_t *v28; // [xsp+10h] [xbp-60h]
+  __int64 v21; // x10
+  int v23; // [xsp+8h] [xbp-68h]
+  int32_t v24; // [xsp+Ch] [xbp-64h]
+  int32_t *v25; // [xsp+10h] [xbp-60h]
 
-  if ( (byte_42152E1 & 1) == 0 )
+  if ( (byte_42B0A55 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&type);
-    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v8);
-    sub_B0D8A4(&CondType_TypeInfo, v9);
-    sub_B0D8A4(&SpotAddEntity_TypeInfo, v10);
-    byte_42152E1 = 1;
+    sub_B52984(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B52984(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B52984(&CondType_TypeInfo);
+    sub_B52984(&SpotAddEntity_TypeInfo);
+    byte_42B0A55 = 1;
   }
   *data = -1;
   list = this->fields.list;
@@ -95,12 +92,12 @@ bool __fastcall SpotAddMaster__HasPrioredData(
     goto LABEL_26;
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
-            (const MethodInfo_2AB5718 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2B98558 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
-    v13 = Count;
-    v14 = 0LL;
-    v15 = 0;
+    v10 = Count;
+    v11 = 0LL;
+    v12 = 0;
     klass_high = -1;
     while ( 1 )
     {
@@ -109,61 +106,61 @@ bool __fastcall SpotAddMaster__HasPrioredData(
         break;
       Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
-               v15,
-               (const MethodInfo_2AB57BC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               v12,
+               (const MethodInfo_2B985FC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( Item )
       {
-        v18 = Item;
-        v19 = *(&SpotAddEntity_TypeInfo->_2.bitflags2 + 1);
-        if ( *(&Item->klass->_2.bitflags2 + 1) >= (unsigned int)v19
-          && (SpotAddEntity_c *)Item->klass->_2.typeHierarchy[v19 - 1] == SpotAddEntity_TypeInfo
+        v15 = Item;
+        v16 = *(&SpotAddEntity_TypeInfo->_2.bitflags2 + 1);
+        if ( *(&Item->klass->_2.bitflags2 + 1) >= (unsigned int)v16
+          && (SpotAddEntity_c *)Item->klass->_2.typeHierarchy[v16 - 1] == SpotAddEntity_TypeInfo
           && LODWORD(Item[1].klass) == spotId
           && LODWORD(Item[1].monitor) == type
           && SHIDWORD(Item[1].klass) >= klass_high )
         {
-          v26 = klass_high;
-          v27 = spotId;
-          v28 = data;
+          v23 = klass_high;
+          v24 = spotId;
+          v25 = data;
           monitor = (int32_t)Item[2].monitor;
           monitor_high = HIDWORD(Item[2].monitor);
           klass_low = SLODWORD(Item[3].klass);
           if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
           IsOpen = CondType__IsOpen(monitor, monitor_high, klass_low, 0, 0LL);
-          data = v28;
-          klass_high = v26;
-          spotId = v27;
+          data = v25;
+          klass_high = v23;
+          spotId = v24;
           if ( IsOpen )
           {
             list = this->fields.list;
             if ( !list )
               break;
-            klass_high = HIDWORD(v18[1].klass);
+            klass_high = HIDWORD(v15[1].klass);
             list = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                      (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
-                     v15,
-                     (const MethodInfo_2AB57BC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                     v12,
+                     (const MethodInfo_2B985FC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
             if ( !list )
               break;
-            v14 = list;
-            v24 = *(&SpotAddEntity_TypeInfo->_2.bitflags2 + 1);
-            if ( *(unsigned __int8 *)(*(_QWORD *)list + 300LL) < (unsigned int)v24
-              || *(SpotAddEntity_c **)(*(_QWORD *)(*(_QWORD *)list + 200LL) + 8 * v24 - 8) != SpotAddEntity_TypeInfo )
+            v11 = list;
+            v21 = *(&SpotAddEntity_TypeInfo->_2.bitflags2 + 1);
+            if ( *(unsigned __int8 *)(*(_QWORD *)list + 300LL) < (unsigned int)v21
+              || *(SpotAddEntity_c **)(*(_QWORD *)(*(_QWORD *)list + 200LL) + 8 * v21 - 8) != SpotAddEntity_TypeInfo )
             {
               break;
             }
-            *v28 = *((_DWORD *)list + 7);
+            *v25 = *((_DWORD *)list + 7);
           }
         }
       }
-      if ( ++v15 >= v13 )
-        return v14 != 0LL;
+      if ( ++v12 >= v10 )
+        return v11 != 0LL;
     }
 LABEL_26:
-    sub_B0D97C(list);
+    sub_B52A5C(list, *(_QWORD *)&type);
   }
-  v14 = 0LL;
-  return v14 != 0LL;
+  v11 = 0LL;
+  return v11 != 0LL;
 }
 
 
@@ -175,49 +172,46 @@ void __fastcall SpotAddMaster__OverwriteNamePanelOffset(
         int32_t *ofsY,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
   System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
   int32_t Count; // w0
-  int32_t v14; // w23
-  int32_t v15; // w24
-  int v16; // w28
+  int32_t v11; // w23
+  int32_t v12; // w24
+  int v13; // w28
   System_Net_NetworkInformation_UnicastIPAddressInformation_o *Item; // x0
-  System_Net_NetworkInformation_UnicastIPAddressInformation_o *v18; // x25
-  __int64 v19; // x10
+  System_Net_NetworkInformation_UnicastIPAddressInformation_o *v15; // x25
+  __int64 v16; // x10
   int monitor; // w8
-  int32_t v21; // w26
-  int32_t v22; // w28
-  int64_t v23; // x27
+  int32_t v18; // w26
+  int32_t v19; // w28
+  int64_t v20; // x27
   int32_t monitor_high; // w26
-  int32_t v25; // w28
+  int32_t v22; // w28
   int64_t klass_low; // x27
-  int v27; // [xsp+4h] [xbp-6Ch]
-  int32_t *v28; // [xsp+8h] [xbp-68h]
-  int32_t *v29; // [xsp+10h] [xbp-60h]
+  int v24; // [xsp+4h] [xbp-6Ch]
+  int32_t *v25; // [xsp+8h] [xbp-68h]
+  int32_t *v26; // [xsp+10h] [xbp-60h]
   int klass_high; // [xsp+1Ch] [xbp-54h]
 
-  if ( (byte_42152E2 & 1) == 0 )
+  if ( (byte_42B0A56 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&spotId);
-    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v9);
-    sub_B0D8A4(&CondType_TypeInfo, v10);
-    sub_B0D8A4(&SpotAddEntity_TypeInfo, v11);
-    byte_42152E2 = 1;
+    sub_B52984(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B52984(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B52984(&CondType_TypeInfo);
+    sub_B52984(&SpotAddEntity_TypeInfo);
+    byte_42B0A56 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
 LABEL_29:
-    sub_B0D97C(list);
+    sub_B52A5C(list, *(_QWORD *)&spotId);
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             list,
-            (const MethodInfo_2AB5718 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2B98558 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
-    v14 = Count;
-    v15 = 0;
-    v16 = -1;
+    v11 = Count;
+    v12 = 0;
+    v13 = -1;
     klass_high = -1;
     do
     {
@@ -226,14 +220,14 @@ LABEL_29:
         goto LABEL_29;
       Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                list,
-               v15,
-               (const MethodInfo_2AB57BC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               v12,
+               (const MethodInfo_2B985FC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( Item )
       {
-        v18 = Item;
-        v19 = *(&SpotAddEntity_TypeInfo->_2.bitflags2 + 1);
-        if ( *(&Item->klass->_2.bitflags2 + 1) >= (unsigned int)v19
-          && (SpotAddEntity_c *)Item->klass->_2.typeHierarchy[v19 - 1] == SpotAddEntity_TypeInfo
+        v15 = Item;
+        v16 = *(&SpotAddEntity_TypeInfo->_2.bitflags2 + 1);
+        if ( *(&Item->klass->_2.bitflags2 + 1) >= (unsigned int)v16
+          && (SpotAddEntity_c *)Item->klass->_2.typeHierarchy[v16 - 1] == SpotAddEntity_TypeInfo
           && LODWORD(Item[1].klass) == spotId )
         {
           monitor = (int)Item[1].monitor;
@@ -241,10 +235,10 @@ LABEL_29:
           {
             if ( SHIDWORD(Item[1].klass) >= klass_high )
             {
-              v27 = v16;
-              v28 = ofsX;
-              v29 = ofsY;
-              v25 = (int32_t)Item[2].monitor;
+              v24 = v13;
+              v25 = ofsX;
+              v26 = ofsY;
+              v22 = (int32_t)Item[2].monitor;
               monitor_high = HIDWORD(Item[2].monitor);
               klass_low = SLODWORD(Item[3].klass);
               if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -252,49 +246,49 @@ LABEL_29:
               {
                 j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
               }
-              if ( CondType__IsOpen(v25, monitor_high, klass_low, 0, 0LL) )
+              if ( CondType__IsOpen(v22, monitor_high, klass_low, 0, 0LL) )
               {
-                ofsY = v29;
-                klass_high = HIDWORD(v18[1].klass);
-                *v29 = HIDWORD(v18[1].monitor);
+                ofsY = v26;
+                klass_high = HIDWORD(v15[1].klass);
+                *v26 = HIDWORD(v15[1].monitor);
               }
               else
               {
 LABEL_25:
-                ofsY = v29;
+                ofsY = v26;
               }
-              ofsX = v28;
-              v16 = v27;
+              ofsX = v25;
+              v13 = v24;
             }
           }
           else
           {
-            if ( monitor != 4 || SHIDWORD(Item[1].klass) < v16 )
+            if ( monitor != 4 || SHIDWORD(Item[1].klass) < v13 )
               goto LABEL_27;
-            v27 = v16;
-            v28 = ofsX;
-            v29 = ofsY;
-            v22 = (int32_t)Item[2].monitor;
-            v21 = HIDWORD(Item[2].monitor);
-            v23 = SLODWORD(Item[3].klass);
+            v24 = v13;
+            v25 = ofsX;
+            v26 = ofsY;
+            v19 = (int32_t)Item[2].monitor;
+            v18 = HIDWORD(Item[2].monitor);
+            v20 = SLODWORD(Item[3].klass);
             if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !CondType_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
             }
-            if ( !CondType__IsOpen(v22, v21, v23, 0, 0LL) )
+            if ( !CondType__IsOpen(v19, v18, v20, 0, 0LL) )
               goto LABEL_25;
-            ofsX = v28;
-            ofsY = v29;
-            v16 = HIDWORD(v18[1].klass);
-            *v28 = HIDWORD(v18[1].monitor);
+            ofsX = v25;
+            ofsY = v26;
+            v13 = HIDWORD(v15[1].klass);
+            *v25 = HIDWORD(v15[1].monitor);
           }
         }
       }
 LABEL_27:
-      ++v15;
+      ++v12;
     }
-    while ( v15 < v14 );
+    while ( v12 < v11 );
   }
 }
 
@@ -310,17 +304,17 @@ bool __fastcall SpotAddMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_42152DF & 1) == 0 )
+  if ( (byte_42B0A53 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string__TryGetEntity__, entity);
-    byte_42152DF = 1;
+    sub_B52984(&Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string__TryGetEntity__);
+    byte_42B0A53 = 1;
   }
   PK = SpotAddEntity__CreatePK(spotId, priority, overrideType, *(const MethodInfo **)&priority);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266A07C *)Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string__TryGetEntity__);
+           (const MethodInfo_23E2780 *)Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string__TryGetEntity__);
 }
 
 
@@ -331,54 +325,50 @@ bool __fastcall SpotAddMaster__TryGetOverwriteName(
         const MethodInfo *method)
 {
   BattleServantConfConponent_o *v5; // x28
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
   int32_t Count; // w0
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
+  System_String_array **v9; // x2
+  System_String_array **v10; // x3
+  System_Boolean_array **v11; // x4
+  System_Int32_array **v12; // x5
+  System_Int32_array *v13; // x6
+  System_Int32_array *v14; // x7
   System_Int32_array **klass; // x22
-  int32_t v20; // w23
-  int32_t v21; // w24
+  int32_t v16; // w23
+  int32_t v17; // w24
   int klass_high; // w19
   System_Net_NetworkInformation_UnicastIPAddressInformation_o *Item; // x0
-  System_Net_NetworkInformation_UnicastIPAddressInformation_o *v24; // x25
-  __int64 v25; // x10
+  System_Net_NetworkInformation_UnicastIPAddressInformation_o *v20; // x25
+  __int64 v21; // x10
   int32_t monitor_high; // w1
   int32_t monitor; // w28
   int64_t klass_low; // x2
   bool IsOpen; // w0
   int64_t condValue; // [xsp+8h] [xbp-68h]
   int32_t targetId; // [xsp+14h] [xbp-5Ch]
-  BattleServantConfConponent_o *v33; // [xsp+18h] [xbp-58h]
+  BattleServantConfConponent_o *v29; // [xsp+18h] [xbp-58h]
 
   v5 = (BattleServantConfConponent_o *)spotName;
-  if ( (byte_42152E3 & 1) == 0 )
+  if ( (byte_42B0A57 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, spotName);
-    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
-    sub_B0D8A4(&CondType_TypeInfo, v8);
-    sub_B0D8A4(&SpotAddEntity_TypeInfo, v9);
-    sub_B0D8A4(&StringLiteral_1/*""*/, v10);
-    byte_42152E3 = 1;
+    sub_B52984(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B52984(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B52984(&CondType_TypeInfo);
+    sub_B52984(&SpotAddEntity_TypeInfo);
+    sub_B52984(&StringLiteral_1/*""*/);
+    byte_42B0A57 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
     goto LABEL_22;
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             list,
-            (const MethodInfo_2AB5718 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2B98558 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   klass = (System_Int32_array **)StringLiteral_1/*""*/;
   if ( Count >= 1 )
   {
-    v20 = Count;
-    v21 = 0;
+    v16 = Count;
+    v17 = 0;
     klass_high = -1;
     while ( 1 )
     {
@@ -387,19 +377,19 @@ bool __fastcall SpotAddMaster__TryGetOverwriteName(
         break;
       Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                list,
-               v21,
-               (const MethodInfo_2AB57BC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               v17,
+               (const MethodInfo_2B985FC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( Item )
       {
-        v24 = Item;
-        v25 = *(&SpotAddEntity_TypeInfo->_2.bitflags2 + 1);
-        if ( *(&Item->klass->_2.bitflags2 + 1) >= (unsigned int)v25
-          && (SpotAddEntity_c *)Item->klass->_2.typeHierarchy[v25 - 1] == SpotAddEntity_TypeInfo
+        v20 = Item;
+        v21 = *(&SpotAddEntity_TypeInfo->_2.bitflags2 + 1);
+        if ( *(&Item->klass->_2.bitflags2 + 1) >= (unsigned int)v21
+          && (SpotAddEntity_c *)Item->klass->_2.typeHierarchy[v21 - 1] == SpotAddEntity_TypeInfo
           && LODWORD(Item[1].klass) == spotId
           && LODWORD(Item[1].monitor) == 6
           && SHIDWORD(Item[1].klass) >= klass_high )
         {
-          v33 = v5;
+          v29 = v5;
           monitor = (int32_t)Item[2].monitor;
           monitor_high = HIDWORD(Item[2].monitor);
           klass_low = SLODWORD(Item[3].klass);
@@ -412,23 +402,23 @@ bool __fastcall SpotAddMaster__TryGetOverwriteName(
             monitor_high = targetId;
           }
           IsOpen = CondType__IsOpen(monitor, monitor_high, klass_low, 0, 0LL);
-          v5 = v33;
+          v5 = v29;
           if ( IsOpen )
           {
-            klass_high = HIDWORD(v24[1].klass);
-            klass = (System_Int32_array **)v24[2].klass;
+            klass_high = HIDWORD(v20[1].klass);
+            klass = (System_Int32_array **)v20[2].klass;
           }
         }
       }
-      if ( ++v21 >= v20 )
+      if ( ++v17 >= v16 )
         goto LABEL_21;
     }
 LABEL_22:
-    sub_B0D97C(list);
+    sub_B52A5C(list, spotName);
   }
   klass_high = -1;
 LABEL_21:
   v5->klass = (BattleServantConfConponent_c *)klass;
-  sub_B0D840(v5, klass, v13, v14, v15, v16, v17, v18);
+  sub_B52920(v5, klass, v9, v10, v11, v12, v13, v14);
   return klass_high >= 0;
 }

@@ -26,6 +26,7 @@ void __fastcall BaseAiActBattleLogicTask__InterruptAction(
 {
   BattleActionData_array **p_interruptActions; // x19
   _BOOL8 IsNullOrEmpty; // x0
+  __int64 v7; // x1
 
   if ( addAction )
   {
@@ -36,10 +37,10 @@ void __fastcall BaseAiActBattleLogicTask__InterruptAction(
     if ( !IsNullOrEmpty )
     {
       if ( !perf )
-        sub_B0D97C(IsNullOrEmpty);
+        sub_B52A5C(IsNullOrEmpty, v7);
       BattlePerformance__addActionData(perf, *p_interruptActions, 0LL);
       *p_interruptActions = 0LL;
-      sub_B0D840(p_interruptActions, 0LL);
+      sub_B52920(p_interruptActions);
     }
   }
 }
@@ -51,5 +52,5 @@ void __fastcall BaseAiActBattleLogicTask__SetInterruptAction(
         const MethodInfo *method)
 {
   this->fields.interruptActions = actions;
-  sub_B0D840(&this->fields.interruptActions, actions);
+  sub_B52920(&this->fields.interruptActions);
 }

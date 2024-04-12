@@ -1,6 +1,6 @@
 void __fastcall ComponentPool_SubmarineEffectScannablePanelComponent___Finish(
         ComponentPool_SubmarineEffectScannablePanelComponent__o *this,
-        const MethodInfo_241E700 *method)
+        const MethodInfo_248EBE0 *method)
 {
   System_String_array **v3; // x2
   System_String_array **v4; // x3
@@ -10,10 +10,10 @@ void __fastcall ComponentPool_SubmarineEffectScannablePanelComponent___Finish(
   System_Int32_array *v8; // x7
 
   if ( !this )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, method);
   method->klass->rgctx_data->_20_ComponentPool_T__Clear->methodPointer();
   this->fields.prefab = 0LL;
-  sub_B0D840((BattleServantConfConponent_o *)&this->fields.prefab, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_B52920((BattleServantConfConponent_o *)&this->fields.prefab, 0LL, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -21,33 +21,32 @@ void __fastcall ComponentPool_SubmarineEffectScannablePanelComponent___Finish(
 void __fastcall ComponentPool_SubmarineEffectScannablePanelComponent___Preload(
         ComponentPool_SubmarineEffectScannablePanelComponent__o *this,
         int32_t count,
-        const MethodInfo_241DD28 *method)
+        const MethodInfo_248E208 *method)
 {
   ComponentPool_SubmarineEffectScannablePanelComponent__o *v5; // x20
-  __int64 v6; // x1
-  int v7; // w0
-  int32_t v8; // w0
-  int32_t v9; // w21
-  int v10; // w23
+  int v6; // w0
+  int32_t v7; // w0
+  int32_t v8; // w21
+  int v9; // w23
   UnityEngine_UI_Dropdown_DropdownItem_o *prefab; // x22
-  UnityEngine_UI_Dropdown_DropdownItem_o *v12; // x0
-  ComponentPool_SubmarineEffectScannablePanelComponent__o *v13; // x22
+  UnityEngine_UI_Dropdown_DropdownItem_o *v11; // x0
+  ComponentPool_SubmarineEffectScannablePanelComponent__o *v12; // x22
 
   v5 = this;
-  if ( (byte_421D0FF & 1) == 0 )
+  if ( (byte_42B8463 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_UnityEngine_Object_Instantiate_GameObject___, *(_QWORD *)&count);
-    this = (ComponentPool_SubmarineEffectScannablePanelComponent__o *)sub_B0D8A4(&UnityEngine_Object_TypeInfo, v6);
-    byte_421D0FF = 1;
+    sub_B52984(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    this = (ComponentPool_SubmarineEffectScannablePanelComponent__o *)sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B8463 = 1;
   }
   if ( !v5 )
     goto LABEL_14;
-  v7 = ((__int64 (__fastcall *)(ComponentPool_SubmarineEffectScannablePanelComponent__o *))method->klass->rgctx_data->_3_ComponentPool_T__get_currentPoolSize->methodPointer)(v5);
-  v8 = UnityEngine_Mathf__Min_40819044(count - v7, 0, 0LL);
-  if ( v8 >= 1 )
+  v6 = ((__int64 (__fastcall *)(ComponentPool_SubmarineEffectScannablePanelComponent__o *))method->klass->rgctx_data->_3_ComponentPool_T__get_currentPoolSize->methodPointer)(v5);
+  v7 = UnityEngine_Mathf__Min_41525188(count - v6, 0, 0LL);
+  if ( v7 >= 1 )
   {
-    v9 = v8;
-    v10 = 0;
+    v8 = v7;
+    v9 = 0;
     while ( 1 )
     {
       prefab = (UnityEngine_UI_Dropdown_DropdownItem_o *)v5->fields.prefab;
@@ -56,13 +55,13 @@ void __fastcall ComponentPool_SubmarineEffectScannablePanelComponent___Preload(
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      v12 = UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
+      v11 = UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
               prefab,
-              (const MethodInfo_204A984 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-      this = (ComponentPool_SubmarineEffectScannablePanelComponent__o *)((__int64 (__fastcall *)(UnityEngine_UI_Dropdown_DropdownItem_o *))method->klass->rgctx_data->_4_GameObjectExtensions_SafeGetComponent_T_->methodPointer)(v12);
+              (const MethodInfo_1F711B8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+      this = (ComponentPool_SubmarineEffectScannablePanelComponent__o *)((__int64 (__fastcall *)(UnityEngine_UI_Dropdown_DropdownItem_o *))method->klass->rgctx_data->_4_GameObjectExtensions_SafeGetComponent_T_->methodPointer)(v11);
       if ( !this )
         break;
-      v13 = this;
+      v12 = this;
       this = (ComponentPool_SubmarineEffectScannablePanelComponent__o *)UnityEngine_Component__get_gameObject(
                                                                           (UnityEngine_Component_o *)this,
                                                                           0LL);
@@ -74,11 +73,11 @@ void __fastcall ComponentPool_SubmarineEffectScannablePanelComponent___Preload(
         break;
       ((void (__fastcall *)(ComponentPool_SubmarineEffectScannablePanelComponent__o *, ComponentPool_SubmarineEffectScannablePanelComponent__o *))method->klass->rgctx_data->_6_System_Collections_Generic_List_T__Add->methodPointer)(
         this,
-        v13);
-      if ( ++v10 >= v9 )
+        v12);
+      if ( ++v9 >= v8 )
         return;
     }
 LABEL_14:
-    sub_B0D97C(this);
+    sub_B52A5C(this, *(_QWORD *)&count);
   }
 }

@@ -1,96 +1,82 @@
 void __fastcall ShopActionManager___ctor(ShopActionManager_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v5; // x20
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x20
+  System_String_array **v4; // x2
+  System_String_array **v5; // x3
+  System_Boolean_array **v6; // x4
+  System_Int32_array **v7; // x5
+  System_Int32_array *v8; // x6
+  System_Int32_array *v9; // x7
 
-  if ( (byte_4218AB0 & 1) == 0 )
+  if ( (byte_42B45B6 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ShopActionEntity___ctor__, method);
-    sub_B0D8A4(&System_Collections_Generic_List_ShopActionEntity__TypeInfo, v4);
-    byte_4218AB0 = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_ShopActionEntity___ctor__);
+    sub_B52984(&System_Collections_Generic_List_ShopActionEntity__TypeInfo);
+    byte_42B45B6 = 1;
   }
-  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
-                                                                                                 System_Collections_Generic_List_ShopActionEntity__TypeInfo,
-                                                                                                 method,
-                                                                                                 v2);
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_ShopActionEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v5,
-    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_ShopActionEntity___ctor__);
-  this->fields.shopActionList = (struct System_Collections_Generic_List_ShopActionEntity__o *)v5;
-  sub_B0D840(
+    v3,
+    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_ShopActionEntity___ctor__);
+  this->fields.shopActionList = (struct System_Collections_Generic_List_ShopActionEntity__o *)v3;
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.shopActionList,
-    (System_Int32_array **)v5,
+    (System_Int32_array **)v3,
+    v4,
+    v5,
     v6,
     v7,
     v8,
-    v9,
-    v10,
-    v11);
+    v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
 
 void __fastcall ShopActionManager__ExecutionShopAction(ShopActionManager_o *this, const MethodInfo *method)
 {
-  const MethodInfo_2A71064 **v2; // x20
+  const MethodInfo_2B75DB0 **v2; // x20
   System_Action_c **v3; // x26
   ShopActionEntity_o *v5; // x28
   System_Collections_Generic_List_XWeaponTrail_Element__o *shopActionList; // x0
   int32_t actionType; // w8
   struct System_Collections_Generic_List_ShopActionEntity__o *v8; // x8
   ShopActionEntity_o *v9; // x8
-  const MethodInfo_2A71064 **v10; // x23
-  __int64 v11; // x1
-  __int64 v12; // x2
-  EventRewardRootComponent_o *v13; // x20
-  System_Action_c **v14; // x24
-  System_Action_o *v15; // x26
-  __int64 v16; // x9
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
-  __int64 v23; // x1
+  const MethodInfo_2B75DB0 **v10; // x23
+  EventRewardRootComponent_o *v11; // x20
+  System_Action_c **v12; // x24
+  System_Action_o *v13; // x26
+  __int64 v14; // x9
   UnityEngine_Object_o *gameObject; // x19
-  ShopActionManager_o *v25; // x0
-  const MethodInfo *v26; // x1
+  ShopActionManager_o *v16; // x0
+  const MethodInfo *v17; // x1
 
-  v2 = (const MethodInfo_2A71064 **)&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__;
+  v2 = (const MethodInfo_2B75DB0 **)&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__;
   v3 = &System_Action_TypeInfo;
   while ( 1 )
   {
-    if ( (byte_4218AAE & 1) == 0 )
+    if ( (byte_42B45B4 & 1) == 0 )
     {
-      sub_B0D8A4(v3, method);
-      sub_B0D8A4(&EventRewardRootComponent_TypeInfo, v17);
-      sub_B0D8A4(&Method_System_Collections_Generic_List_ShopActionEntity__RemoveAt__, v18);
-      sub_B0D8A4(&Method_System_Collections_Generic_List_ShopActionEntity__get_Count__, v19);
-      sub_B0D8A4(&Method_System_Collections_Generic_List_ShopActionEntity__get_Item__, v20);
-      sub_B0D8A4(&UnityEngine_Object_TypeInfo, v21);
-      sub_B0D8A4(&Method_ShopActionManager_VoiceEnd__, v22);
-      sub_B0D8A4(v2, v23);
-      byte_4218AAE = 1;
+      sub_B52984(v3);
+      sub_B52984(&EventRewardRootComponent_TypeInfo);
+      sub_B52984(&Method_System_Collections_Generic_List_ShopActionEntity__RemoveAt__);
+      sub_B52984(&Method_System_Collections_Generic_List_ShopActionEntity__get_Count__);
+      sub_B52984(&Method_System_Collections_Generic_List_ShopActionEntity__get_Item__);
+      sub_B52984(&UnityEngine_Object_TypeInfo);
+      sub_B52984(&Method_ShopActionManager_VoiceEnd__);
+      sub_B52984(v2);
+      byte_42B45B4 = 1;
     }
     shopActionList = (System_Collections_Generic_List_XWeaponTrail_Element__o *)this->fields.shopActionList;
     if ( !shopActionList )
 LABEL_25:
-      sub_B0D97C(shopActionList);
+      sub_B52A5C(shopActionList, method);
     if ( shopActionList->fields._size <= 0 )
       break;
     v5 = (ShopActionEntity_o *)shopActionList->fields._items->m_Items[0];
     System_Collections_Generic_List_XWeaponTrail_Element___RemoveAt(
       shopActionList,
       0,
-      (const MethodInfo_2FC73D8 *)Method_System_Collections_Generic_List_ShopActionEntity__RemoveAt__);
+      (const MethodInfo_2FF32F4 *)Method_System_Collections_Generic_List_ShopActionEntity__RemoveAt__);
     if ( !v5 )
       goto LABEL_25;
     actionType = v5->fields.actionType;
@@ -115,23 +101,23 @@ LABEL_25:
       shopActionList = (System_Collections_Generic_List_XWeaponTrail_Element__o *)SingletonMonoBehaviour_WebViewManager___get_Instance(*v2);
       if ( !shopActionList )
         goto LABEL_25;
-      v13 = *(EventRewardRootComponent_o **)&shopActionList->fields._size;
-      v14 = v3;
-      v15 = (System_Action_o *)sub_B0D974(*v3, v11, v12);
-      System_Action___ctor(v15, (Il2CppObject *)this, Method_ShopActionManager_VoiceEnd__, 0LL);
-      if ( !v13 )
+      v11 = *(EventRewardRootComponent_o **)&shopActionList->fields._size;
+      v12 = v3;
+      v13 = (System_Action_o *)sub_B52A54(*v3);
+      System_Action___ctor(v13, (Il2CppObject *)this, Method_ShopActionManager_VoiceEnd__, 0LL);
+      if ( !v11 )
         goto LABEL_25;
-      v16 = *(&EventRewardRootComponent_TypeInfo->_2.bitflags2 + 1);
-      if ( *(&v13->klass->_2.bitflags2 + 1) < (unsigned int)v16
-        || (EventRewardRootComponent_c *)v13->klass->_2.typeHierarchy[v16 - 1] != EventRewardRootComponent_TypeInfo )
+      v14 = *(&EventRewardRootComponent_TypeInfo->_2.bitflags2 + 1);
+      if ( *(&v11->klass->_2.bitflags2 + 1) < (unsigned int)v14
+        || (EventRewardRootComponent_c *)v11->klass->_2.typeHierarchy[v14 - 1] != EventRewardRootComponent_TypeInfo )
       {
-        sub_B0DC70(v13);
-        ShopActionManager__VoiceEnd(v25, v26);
+        sub_B52D50(v11);
+        ShopActionManager__VoiceEnd(v16, v17);
         return;
       }
-      EventRewardRootComponent__PlayIndividualShopPurchaseVoice(v13, v5, v15, 0LL);
+      EventRewardRootComponent__PlayIndividualShopPurchaseVoice(v11, v5, v13, 0LL);
       v2 = v10;
-      v3 = v14;
+      v3 = v12;
     }
   }
   if ( !this->fields.isVoicePlaying )
@@ -142,7 +128,7 @@ LABEL_25:
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_34935276(gameObject, 0LL);
+    UnityEngine_Object__Destroy_35616956(gameObject, 0LL);
   }
 }
 
@@ -172,7 +158,7 @@ void __fastcall ShopActionManager__SetShopAction(
   const MethodInfo *v16; // x1
 
   this->fields.shopActionList = shopActionEntityList;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.shopActionList,
     (System_Int32_array **)shopActionEntityList,
     (System_String_array **)callback,
@@ -182,7 +168,7 @@ void __fastcall ShopActionManager__SetShopAction(
     v6,
     v7);
   this->fields.afterCallback = callback;
-  sub_B0D840(
+  sub_B52920(
     (BattleServantConfConponent_o *)&this->fields.afterCallback,
     (System_Int32_array **)callback,
     v10,
@@ -198,21 +184,20 @@ void __fastcall ShopActionManager__SetShopAction(
 void __fastcall ShopActionManager__VoiceEnd(ShopActionManager_o *this, const MethodInfo *method)
 {
   ShopActionManager_o *v2; // x19
-  __int64 v3; // x1
   struct System_Collections_Generic_List_ShopActionEntity__o *shopActionList; // x8
   System_Action_o *afterCallback; // x0
   UnityEngine_Object_o *gameObject; // x20
 
   v2 = this;
-  if ( (byte_4218AAF & 1) == 0 )
+  if ( (byte_42B45B5 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Collections_Generic_List_ShopActionEntity__get_Count__, method);
-    this = (ShopActionManager_o *)sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
-    byte_4218AAF = 1;
+    sub_B52984(&Method_System_Collections_Generic_List_ShopActionEntity__get_Count__);
+    this = (ShopActionManager_o *)sub_B52984(&UnityEngine_Object_TypeInfo);
+    byte_42B45B5 = 1;
   }
   shopActionList = v2->fields.shopActionList;
   if ( !shopActionList )
-    sub_B0D97C(this);
+    sub_B52A5C(this, method);
   if ( shopActionList->fields._size <= 0 )
   {
     afterCallback = v2->fields.afterCallback;
@@ -224,7 +209,7 @@ void __fastcall ShopActionManager__VoiceEnd(ShopActionManager_o *this, const Met
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_34935276(gameObject, 0LL);
+    UnityEngine_Object__Destroy_35616956(gameObject, 0LL);
   }
   *(_WORD *)&v2->fields.isVoicePlaying = 0;
 }

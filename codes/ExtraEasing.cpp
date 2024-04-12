@@ -3,50 +3,41 @@ System_Func_float__float__float__float__o *__fastcall ExtraEasing__AsymptoticSer
         float powerRate,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x2
+  ExtraEasing___c__DisplayClass1_0_o *v5; // x19
+  __int64 v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  ExtraEasing___c__DisplayClass1_0_o *v10; // x19
-  __int64 v11; // x0
-  __int64 v12; // x1
-  __int64 v13; // x2
-  float v14; // s0
-  System_Func_float__float__float__float__o *v15; // x20
+  float v8; // s0
+  System_Func_float__float__float__float__o *v9; // x20
 
-  if ( (byte_4214128 & 1) == 0 )
+  if ( (byte_42AF059 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Func_float__float__float__float___ctor__, v3);
-    sub_B0D8A4(&System_Func_float__float__float__float__TypeInfo, v7);
-    sub_B0D8A4(&Method_ExtraEasing___c__DisplayClass1_0__AsymptoticSeriesFloat_b__0__, v8);
-    sub_B0D8A4(&ExtraEasing___c__DisplayClass1_0_TypeInfo, v9);
-    byte_4214128 = 1;
+    sub_B52984(&Method_System_Func_float__float__float__float___ctor__);
+    sub_B52984(&System_Func_float__float__float__float__TypeInfo);
+    sub_B52984(&Method_ExtraEasing___c__DisplayClass1_0__AsymptoticSeriesFloat_b__0__);
+    sub_B52984(&ExtraEasing___c__DisplayClass1_0_TypeInfo);
+    byte_42AF059 = 1;
   }
-  v10 = (ExtraEasing___c__DisplayClass1_0_o *)sub_B0D974(ExtraEasing___c__DisplayClass1_0_TypeInfo, v3, v4);
-  ExtraEasing___c__DisplayClass1_0___ctor(v10, 0LL);
-  if ( !v10 )
-    sub_B0D97C(v11);
-  v10->fields.asymptoticSpeed = asymptoticSpeed;
-  v10->fields.powerRate = powerRate;
+  v5 = (ExtraEasing___c__DisplayClass1_0_o *)sub_B52A54(ExtraEasing___c__DisplayClass1_0_TypeInfo);
+  ExtraEasing___c__DisplayClass1_0___ctor(v5, 0LL);
+  if ( !v5 )
+    sub_B52A5C(v6, v7);
+  v5->fields.asymptoticSpeed = asymptoticSpeed;
+  v5->fields.powerRate = powerRate;
   if ( asymptoticSpeed < 0.0 || asymptoticSpeed > 1.0 )
   {
-    v14 = UnityEngine_Mathf__Clamp01(asymptoticSpeed, 0LL);
-    powerRate = v10->fields.powerRate;
-    v10->fields.asymptoticSpeed = v14;
+    v8 = UnityEngine_Mathf__Clamp01(asymptoticSpeed, 0LL);
+    powerRate = v5->fields.powerRate;
+    v5->fields.asymptoticSpeed = v8;
   }
   if ( powerRate < 0.0 )
-    v10->fields.powerRate = 0.0;
-  v15 = (System_Func_float__float__float__float__o *)sub_B0D974(
-                                                       System_Func_float__float__float__float__TypeInfo,
-                                                       v12,
-                                                       v13);
+    v5->fields.powerRate = 0.0;
+  v9 = (System_Func_float__float__float__float__o *)sub_B52A54(System_Func_float__float__float__float__TypeInfo);
   System_Func_float__float__float__float____ctor(
-    v15,
-    (Il2CppObject *)v10,
+    v9,
+    (Il2CppObject *)v5,
     Method_ExtraEasing___c__DisplayClass1_0__AsymptoticSeriesFloat_b__0__,
-    (const MethodInfo_2C65CA4 *)Method_System_Func_float__float__float__float___ctor__);
-  return v15;
+    (const MethodInfo_2BD6770 *)Method_System_Func_float__float__float__float___ctor__);
+  return v9;
 }
 
 
@@ -55,50 +46,41 @@ System_Func_Vector3__Vector3__float__Vector3__o *__fastcall ExtraEasing__Asympto
         float powerRate,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x2
+  ExtraEasing___c__DisplayClass0_0_o *v5; // x19
+  __int64 v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  ExtraEasing___c__DisplayClass0_0_o *v10; // x19
-  __int64 v11; // x0
-  __int64 v12; // x1
-  __int64 v13; // x2
-  float v14; // s0
-  System_Func_Vector3__Vector3__float__Vector3__o *v15; // x20
+  float v8; // s0
+  System_Func_Vector3__Vector3__float__Vector3__o *v9; // x20
 
-  if ( (byte_4214127 & 1) == 0 )
+  if ( (byte_42AF058 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_System_Func_Vector3__Vector3__float__Vector3___ctor__, v3);
-    sub_B0D8A4(&System_Func_Vector3__Vector3__float__Vector3__TypeInfo, v7);
-    sub_B0D8A4(&Method_ExtraEasing___c__DisplayClass0_0__AsymptoticSeriesVector3_b__0__, v8);
-    sub_B0D8A4(&ExtraEasing___c__DisplayClass0_0_TypeInfo, v9);
-    byte_4214127 = 1;
+    sub_B52984(&Method_System_Func_Vector3__Vector3__float__Vector3___ctor__);
+    sub_B52984(&System_Func_Vector3__Vector3__float__Vector3__TypeInfo);
+    sub_B52984(&Method_ExtraEasing___c__DisplayClass0_0__AsymptoticSeriesVector3_b__0__);
+    sub_B52984(&ExtraEasing___c__DisplayClass0_0_TypeInfo);
+    byte_42AF058 = 1;
   }
-  v10 = (ExtraEasing___c__DisplayClass0_0_o *)sub_B0D974(ExtraEasing___c__DisplayClass0_0_TypeInfo, v3, v4);
-  ExtraEasing___c__DisplayClass0_0___ctor(v10, 0LL);
-  if ( !v10 )
-    sub_B0D97C(v11);
-  v10->fields.asymptoticSpeed = asymptoticSpeed;
-  v10->fields.powerRate = powerRate;
+  v5 = (ExtraEasing___c__DisplayClass0_0_o *)sub_B52A54(ExtraEasing___c__DisplayClass0_0_TypeInfo);
+  ExtraEasing___c__DisplayClass0_0___ctor(v5, 0LL);
+  if ( !v5 )
+    sub_B52A5C(v6, v7);
+  v5->fields.asymptoticSpeed = asymptoticSpeed;
+  v5->fields.powerRate = powerRate;
   if ( asymptoticSpeed < 0.0 || asymptoticSpeed > 1.0 )
   {
-    v14 = UnityEngine_Mathf__Clamp01(asymptoticSpeed, 0LL);
-    powerRate = v10->fields.powerRate;
-    v10->fields.asymptoticSpeed = v14;
+    v8 = UnityEngine_Mathf__Clamp01(asymptoticSpeed, 0LL);
+    powerRate = v5->fields.powerRate;
+    v5->fields.asymptoticSpeed = v8;
   }
   if ( powerRate < 0.0 )
-    v10->fields.powerRate = 0.0;
-  v15 = (System_Func_Vector3__Vector3__float__Vector3__o *)sub_B0D974(
-                                                             System_Func_Vector3__Vector3__float__Vector3__TypeInfo,
-                                                             v12,
-                                                             v13);
+    v5->fields.powerRate = 0.0;
+  v9 = (System_Func_Vector3__Vector3__float__Vector3__o *)sub_B52A54(System_Func_Vector3__Vector3__float__Vector3__TypeInfo);
   System_Func_Vector3__Vector3__float__Vector3____ctor(
-    v15,
-    (Il2CppObject *)v10,
+    v9,
+    (Il2CppObject *)v5,
     Method_ExtraEasing___c__DisplayClass0_0__AsymptoticSeriesVector3_b__0__,
-    (const MethodInfo_2C66004 *)Method_System_Func_Vector3__Vector3__float__Vector3___ctor__);
-  return v15;
+    (const MethodInfo_2BD6AD0 *)Method_System_Func_Vector3__Vector3__float__Vector3___ctor__);
+  return v9;
 }
 
 

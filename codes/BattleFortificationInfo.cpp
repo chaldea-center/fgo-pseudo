@@ -8,21 +8,21 @@ int32_t __fastcall BattleFortificationInfo__GetFortificationWorkType(
         BattleFortificationInfo_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   EventFortificationMaster_o *Master_WarQuestSelectionMaster; // x0
+  __int64 v4; // x1
   EventFortificationEntity_o *Entity; // x0
 
-  if ( (byte_42117E6 & 1) == 0 )
+  if ( (byte_42AD1CB & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMaster_EventFortificationMaster___, method);
-    sub_B0D8A4(&DataManager_TypeInfo, v3);
-    byte_42117E6 = 1;
+    sub_B52984(&Method_DataManager_GetMaster_EventFortificationMaster___);
+    sub_B52984(&DataManager_TypeInfo);
+    byte_42AD1CB = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (EventFortificationMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_EventFortificationMaster___);
+  Master_WarQuestSelectionMaster = (EventFortificationMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_EventFortificationMaster___);
   if ( !Master_WarQuestSelectionMaster )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v4);
   Entity = EventFortificationMaster__GetEntity(
              Master_WarQuestSelectionMaster,
              this->fields.eventId,
@@ -38,22 +38,21 @@ GiftEntity_o *__fastcall BattleFortificationInfo__GetGiftEntity(
         BattleFortificationInfo_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   EventFortificationMaster_o *Master_WarQuestSelectionMaster; // x0
+  __int64 v4; // x1
   GiftEntity_o *result; // x0
-  GiftEntity_o *v7; // x19
+  GiftEntity_o *v6; // x19
 
-  if ( (byte_42117E4 & 1) == 0 )
+  if ( (byte_42AD1C9 & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMaster_EventFortificationMaster___, method);
-    sub_B0D8A4(&Method_DataManager_GetMaster_GiftMaster___, v3);
-    sub_B0D8A4(&DataManager_TypeInfo, v4);
-    byte_42117E4 = 1;
+    sub_B52984(&Method_DataManager_GetMaster_EventFortificationMaster___);
+    sub_B52984(&Method_DataManager_GetMaster_GiftMaster___);
+    sub_B52984(&DataManager_TypeInfo);
+    byte_42AD1C9 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (EventFortificationMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_EventFortificationMaster___);
+  Master_WarQuestSelectionMaster = (EventFortificationMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_EventFortificationMaster___);
   if ( !Master_WarQuestSelectionMaster )
     goto LABEL_14;
   result = (GiftEntity_o *)EventFortificationMaster__GetEntity(
@@ -63,14 +62,14 @@ GiftEntity_o *__fastcall BattleFortificationInfo__GetGiftEntity(
                              0LL);
   if ( result )
   {
-    v7 = result;
+    v6 = result;
     if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_WarQuestSelectionMaster = (EventFortificationMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_GiftMaster___);
+    Master_WarQuestSelectionMaster = (EventFortificationMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_GiftMaster___);
     if ( Master_WarQuestSelectionMaster )
-      return GiftMaster__getDataById((GiftMaster_o *)Master_WarQuestSelectionMaster, (int32_t)v7[1].klass, 0LL);
+      return GiftMaster__getDataById((GiftMaster_o *)Master_WarQuestSelectionMaster, (int32_t)v6[1].klass, 0LL);
 LABEL_14:
-    sub_B0D97C(Master_WarQuestSelectionMaster);
+    sub_B52A5C(Master_WarQuestSelectionMaster, v4);
   }
   return result;
 }
@@ -80,21 +79,21 @@ int32_t __fastcall BattleFortificationInfo__GetMaxFortificationPoint(
         BattleFortificationInfo_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   EventFortificationMaster_o *Master_WarQuestSelectionMaster; // x0
+  __int64 v4; // x1
   EventFortificationEntity_o *Entity; // x0
 
-  if ( (byte_42117E5 & 1) == 0 )
+  if ( (byte_42AD1CA & 1) == 0 )
   {
-    sub_B0D8A4(&Method_DataManager_GetMaster_EventFortificationMaster___, method);
-    sub_B0D8A4(&DataManager_TypeInfo, v3);
-    byte_42117E5 = 1;
+    sub_B52984(&Method_DataManager_GetMaster_EventFortificationMaster___);
+    sub_B52984(&DataManager_TypeInfo);
+    byte_42AD1CA = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (EventFortificationMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_EventFortificationMaster___);
+  Master_WarQuestSelectionMaster = (EventFortificationMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_EventFortificationMaster___);
   if ( !Master_WarQuestSelectionMaster )
-    sub_B0D97C(0LL);
+    sub_B52A5C(0LL, v4);
   Entity = EventFortificationMaster__GetEntity(
              Master_WarQuestSelectionMaster,
              this->fields.eventId,
