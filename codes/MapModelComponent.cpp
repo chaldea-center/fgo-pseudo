@@ -1,7 +1,7 @@
 void __fastcall MapModelComponent___ctor(MapModelComponent_o *this, const MethodInfo *method)
 {
   this->fields.isMapCamera2DReset = 1;
-  *(_OWORD *)&this->fields.mapCamera2DResetPosition.fields.x = xmmword_328D880;
+  *(_OWORD *)&this->fields.mapCamera2DResetPosition.fields.x = xmmword_32B49C0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -39,7 +39,7 @@ UnityEngine_Vector3_o __fastcall MapModelComponent__GetCameraLocationPosition(
   v19 = layer;
   locationPrefix = this->fields.locationPrefix;
   v5 = System_Int32__ToString((int32_t)&v19, 0LL);
-  v6 = System_String__Concat_44568316(locationPrefix, v5, 0LL);
+  v6 = System_String__Concat_44577788(locationPrefix, v5, 0LL);
   cameraLocationObjectList = this->fields.cameraLocationObjectList;
   if ( !cameraLocationObjectList )
     goto LABEL_8;
@@ -71,12 +71,12 @@ UnityEngine_Vector3_o __fastcall MapModelComponent__GetCameraLocationPosition(
   v17 = this->fields.cameraLocationObjectList;
   if ( !v17 )
 LABEL_8:
-    sub_B52A5C(v6, v7);
+    sub_B5D69C(v6, v7);
   if ( v12 >= v17->max_length )
   {
 LABEL_14:
-    v18 = sub_B52A88(v6);
-    sub_B52A28(v18, 0LL);
+    v18 = sub_B5D6C8(v6);
+    sub_B5D668(v18, 0LL);
   }
   *(UnityEngine_Vector3_o *)&v14 = GameObjectExtensions__GetLocalPosition(
                                      (UnityEngine_GameObject_o *)*((_QWORD *)&v17->obj.klass + v10),
@@ -104,7 +104,7 @@ void __fastcall MapModelComponent__PlayAnimation(
   effectAction = (char *)this->fields.effectAction;
   if ( !effectAction
     || (*((_QWORD *)effectAction + 4) = endAction,
-        sub_B52920(
+        sub_B5D560(
           (BattleServantConfConponent_o *)(effectAction + 32),
           (System_Int32_array **)endAction,
           (System_String_array **)endAction,
@@ -115,9 +115,9 @@ void __fastcall MapModelComponent__PlayAnimation(
           v7),
         (effectAction = (char *)this->fields.animationComponent) == 0LL) )
   {
-    sub_B52A5C(effectAction, animationName);
+    sub_B5D69C(effectAction, animationName);
   }
-  SimpleAnimation__Play_16625408((SimpleAnimation_o *)effectAction, animationName, 0LL);
+  SimpleAnimation__Play_16676044((SimpleAnimation_o *)effectAction, animationName, 0LL);
 }
 
 

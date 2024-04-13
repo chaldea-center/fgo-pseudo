@@ -1,9 +1,13 @@
 void __fastcall ServantStatusFlavorTextListViewItemDrawParam___cctor(const MethodInfo *method)
 {
-  if ( (byte_42B5839 & 1) == 0 )
+  int v1; // w1
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42ED2F5 & 1) == 0 )
   {
-    sub_B52984(&ServantStatusFlavorTextListViewItemDrawParam_TypeInfo);
-    byte_42B5839 = 1;
+    sub_B5D5C4(&ServantStatusFlavorTextListViewItemDrawParam_TypeInfo, v1, v2, v3);
+    byte_42ED2F5 = 1;
   }
   ServantStatusFlavorTextListViewItemDrawParam_TypeInfo->static_fields->TITLE_NAME_CONDENSED_WIDTH = 154;
   ServantStatusFlavorTextListViewItemDrawParam_TypeInfo->static_fields->TITLE_NAME_LEFT_POS = -113;
@@ -31,31 +35,44 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__SetCondTitle(
         System_String_o *title,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  int v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
   UnityEngine_GameObject_o *titleName; // x0
   UISprite_o *Component_srcLineSprite; // x21
-  float v7; // s8
+  float v20; // s8
   ServantStatusFlavorTextListViewItemDrawParam_c *klass; // x20
   UnityEngine_GameObject_o *gameObject; // x0
   float TITLE_NAME_LEFT_POS; // s0
-  float v11; // s8
-  float v12; // s8
-  ServantStatusFlavorTextListViewItemDrawParam_c *v13; // x19
+  float v24; // s8
+  float v25; // s8
+  ServantStatusFlavorTextListViewItemDrawParam_c *v26; // x19
 
-  if ( (byte_42B5838 & 1) == 0 )
+  if ( (byte_42ED2F4 & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    sub_B52984(&ServantStatusFlavorTextListViewItemDrawParam_TypeInfo);
-    sub_B52984(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo);
-    sub_B52984(&StringLiteral_1/*""*/);
-    byte_42B5838 = 1;
+    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_UISprite___, (_DWORD)title, (_DWORD)method, v3);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v6, v7, v8);
+    sub_B5D5C4(&ServantStatusFlavorTextListViewItemDrawParam_TypeInfo, v9, v10, v11);
+    sub_B5D5C4(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo, v12, v13, v14);
+    sub_B5D5C4(&StringLiteral_1/*""*/, v15, v16, v17);
+    byte_42ED2F4 = 1;
   }
   titleName = (UnityEngine_GameObject_o *)this->fields.titleName;
   if ( !titleName )
     goto LABEL_53;
   Component_srcLineSprite = (UISprite_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                             titleName,
-                                            (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                            (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( System_String__IsNullOrEmpty(title, 0LL) )
   {
     titleName = (UnityEngine_GameObject_o *)this[1].klass;
@@ -84,7 +101,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__SetCondTitle(
         return;
       }
 LABEL_53:
-      sub_B52A5C(titleName, title);
+      sub_B5D69C(titleName, title);
     }
   }
   else
@@ -130,10 +147,10 @@ LABEL_53:
     titleName = (UnityEngine_GameObject_o *)this[1].klass;
     if ( !titleName )
       goto LABEL_53;
-    LODWORD(v7) = COERCE_UNSIGNED_INT128(
-                    ((long double (__fastcall *)(UnityEngine_GameObject_o *, Il2CppMethodPointer))*(_QWORD *)&titleName->klass[1]._2.naturalAligment)(
-                      titleName,
-                      titleName->klass[1].vtable._0_Equals.methodPtr));
+    LODWORD(v20) = COERCE_UNSIGNED_INT128(
+                     ((long double (__fastcall *)(UnityEngine_GameObject_o *, Il2CppMethodPointer))*(_QWORD *)&titleName->klass[1]._2.naturalAligment)(
+                       titleName,
+                       titleName->klass[1].vtable._0_Equals.methodPtr));
     if ( (BYTE3(ServantStatusFlavorTextListViewItemDrawParam_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !ServantStatusFlavorTextListViewItemDrawParam_TypeInfo->_2.cctor_finished )
     {
@@ -142,14 +159,14 @@ LABEL_53:
     titleName = (UnityEngine_GameObject_o *)this[1].klass;
     if ( !titleName )
       goto LABEL_53;
-    if ( v7 >= (float)ServantStatusFlavorTextListViewItemDrawParam_TypeInfo->static_fields->TITLE_NAME_CONDENSED_WIDTH )
+    if ( v20 >= (float)ServantStatusFlavorTextListViewItemDrawParam_TypeInfo->static_fields->TITLE_NAME_CONDENSED_WIDTH )
     {
       titleName = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                 (UnityEngine_Component_o *)titleName,
                                                 0LL);
       if ( !titleName )
         goto LABEL_53;
-      LODWORD(v11) = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)titleName, 0LL);
+      LODWORD(v24) = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)titleName, 0LL);
       if ( (BYTE3(ServantStatusFlavorTextListViewItemDrawParam_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !ServantStatusFlavorTextListViewItemDrawParam_TypeInfo->_2.cctor_finished )
       {
@@ -158,10 +175,10 @@ LABEL_53:
       titleName = (UnityEngine_GameObject_o *)this[1].klass;
       if ( !titleName )
         goto LABEL_53;
-      v12 = (float)(1.0 - v11)
+      v25 = (float)(1.0 - v24)
           * (float)ServantStatusFlavorTextListViewItemDrawParam_TypeInfo->static_fields->TITLE_NAME_LEFT_POS;
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)titleName, 0LL);
-      TITLE_NAME_LEFT_POS = v12
+      TITLE_NAME_LEFT_POS = v25
                           + (float)ServantStatusFlavorTextListViewItemDrawParam_TypeInfo->static_fields->TITLE_NAME_LEFT_POS;
     }
     else
@@ -192,16 +209,16 @@ LABEL_53:
     }
     GameObjectExtensions__SetLocalPositionX(gameObject, TITLE_NAME_LEFT_POS, 0LL);
     titleName = (UnityEngine_GameObject_o *)ServantStatusFlavorTextListViewItemDrawParam_TypeInfo;
-    v13 = this[1].klass;
+    v26 = this[1].klass;
     if ( (BYTE3(ServantStatusFlavorTextListViewItemDrawParam_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !ServantStatusFlavorTextListViewItemDrawParam_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(ServantStatusFlavorTextListViewItemDrawParam_TypeInfo);
     }
-    if ( !v13 )
+    if ( !v26 )
       goto LABEL_53;
     UILabel__SetCondensedScale(
-      (UILabel_o *)v13,
+      (UILabel_o *)v26,
       ServantStatusFlavorTextListViewItemDrawParam_TypeInfo->static_fields->TITLE_NAME_CONDENSED_WIDTH,
       0LL);
   }
@@ -262,7 +279,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__SetItem(
       || (this = v10[10]) == 0LL )
     {
 LABEL_17:
-      sub_B52A5C(this, item);
+      sub_B5D69C(this, item);
     }
     ServantStatusParameterGauge__Set((ServantStatusParameterGauge_o *)this, 5, v15->fields.treasureDevice, 0LL);
   }
@@ -298,7 +315,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__SetParameterGauge(
         (defenseGauge = (ServantStatusParameterGauge_o *)this->fields.titleServantBase) == 0LL) )
   {
 LABEL_8:
-    sub_B52A5C(defenseGauge, *(_QWORD *)&power);
+    sub_B5D69C(defenseGauge, *(_QWORD *)&power);
   }
   ServantStatusParameterGauge__Set(defenseGauge, 5, np, 0LL);
 }

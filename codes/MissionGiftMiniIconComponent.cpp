@@ -20,7 +20,7 @@ void __fastcall MissionGiftMiniIconComponent__SetMiniIcon(
       return;
     }
 LABEL_6:
-    sub_B52A5C(miniIcon, entity);
+    sub_B5D69C(miniIcon, entity);
   }
   if ( !miniIcon )
     goto LABEL_6;

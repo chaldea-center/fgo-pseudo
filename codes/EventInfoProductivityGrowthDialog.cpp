@@ -2,10 +2,13 @@ void __fastcall EventInfoProductivityGrowthDialog___ctor(
         EventInfoProductivityGrowthDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_42B0E31 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E9522 & 1) == 0 )
   {
-    sub_B52984(&BaseDialog_TypeInfo);
-    byte_42B0E31 = 1;
+    sub_B5D5C4(&BaseDialog_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E9522 = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -17,26 +20,34 @@ void __fastcall EventInfoProductivityGrowthDialog__Init(
         EventInfoProductivityGrowthDialog_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  __int64 v11; // x1
   UILabel_o *titleLabel; // x0
   UILabel_o *closeLabel; // x20
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  System_String_array **v14; // x2
+  System_String_array **v15; // x3
+  System_Boolean_array **v16; // x4
+  System_Int32_array **v17; // x5
+  System_Int32_array *v18; // x6
+  System_Int32_array *v19; // x7
   struct UnityEngine_GameObject_array *dispObjList; // x20
   int max_length; // w8
-  unsigned int v14; // w21
-  __int64 v15; // x0
+  unsigned int v22; // w21
+  __int64 v23; // x0
 
-  if ( (byte_42B0E2E & 1) == 0 )
+  if ( (byte_42E951F & 1) == 0 )
   {
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&StringLiteral_3294/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_B52984(&StringLiteral_1/*""*/);
-    byte_42B0E2E = 1;
+    sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&StringLiteral_3327/*"COMMON_CONFIRM_CLOSE"*/, v5, v6, v7);
+    sub_B5D5C4(&StringLiteral_1/*""*/, v8, v9, v10);
+    byte_42E951F = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   titleLabel = this->fields.titleLabel;
@@ -49,7 +60,7 @@ void __fastcall EventInfoProductivityGrowthDialog__Init(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3294/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3327/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
     goto LABEL_15;
   UILabel__set_text(closeLabel, (System_String_o *)titleLabel, 0LL);
@@ -59,28 +70,28 @@ void __fastcall EventInfoProductivityGrowthDialog__Init(
   max_length = dispObjList->max_length;
   if ( max_length >= 1 )
   {
-    v14 = 0;
+    v22 = 0;
     while ( 1 )
     {
-      if ( v14 >= max_length )
+      if ( v22 >= max_length )
       {
-        v15 = sub_B52A88(titleLabel);
-        sub_B52A28(v15, 0LL);
+        v23 = sub_B5D6C8(titleLabel);
+        sub_B5D668(v23, 0LL);
       }
-      titleLabel = (UILabel_o *)dispObjList->m_Items[v14];
+      titleLabel = (UILabel_o *)dispObjList->m_Items[v22];
       if ( !titleLabel )
         break;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
       max_length = dispObjList->max_length;
-      if ( (int)++v14 >= max_length )
+      if ( (int)++v22 >= max_length )
         goto LABEL_14;
     }
 LABEL_15:
-    sub_B52A5C(titleLabel, v3);
+    sub_B5D69C(titleLabel, v11);
   }
 LABEL_14:
   this->fields.closeAction = 0LL;
-  sub_B52920((BattleServantConfConponent_o *)&this->fields.closeAction, 0LL, v6, v7, v8, v9, v10, v11);
+  sub_B5D560((BattleServantConfConponent_o *)&this->fields.closeAction, 0LL, v14, v15, v16, v17, v18, v19);
 }
 
 
@@ -88,25 +99,33 @@ void __fastcall EventInfoProductivityGrowthDialog__OnClickCloseButton(
         EventInfoProductivityGrowthDialog_o *this,
         const MethodInfo *method)
 {
-  System_Action_o *v3; // x20
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  System_Action_o *v11; // x20
 
-  if ( (byte_42B0E30 & 1) == 0 )
+  if ( (byte_42E9521 & 1) == 0 )
   {
-    sub_B52984(&System_Action_TypeInfo);
-    sub_B52984(&Method_EventInfoProductivityGrowthDialog__OnClickCloseButton_b__17_0__);
-    sub_B52984(&SoundManager_TypeInfo);
-    byte_42B0E30 = 1;
+    sub_B5D5C4(&System_Action_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_EventInfoProductivityGrowthDialog__OnClickCloseButton_b__17_0__, v5, v6, v7);
+    sub_B5D5C4(&SoundManager_TypeInfo, v8, v9, v10);
+    byte_42E9521 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playSystemSe(1, 0LL);
-  v3 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+  v11 = (System_Action_o *)sub_B5D694(System_Action_TypeInfo);
   System_Action___ctor(
-    v3,
+    v11,
     (Il2CppObject *)this,
     Method_EventInfoProductivityGrowthDialog__OnClickCloseButton_b__17_0__,
     0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v3, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
 
 
@@ -115,175 +134,227 @@ void __fastcall EventInfoProductivityGrowthDialog__Open(
         System_Action_o *closeAction,
         const MethodInfo *method)
 {
-  TerminalPramsManager_c *v5; // x0
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  int v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
+  int v18; // w1
+  int v19; // w2
+  __int64 v20; // x3
+  int v21; // w1
+  int v22; // w2
+  __int64 v23; // x3
+  int v24; // w1
+  int v25; // w2
+  __int64 v26; // x3
+  int v27; // w1
+  int v28; // w2
+  __int64 v29; // x3
+  int v30; // w1
+  int v31; // w2
+  __int64 v32; // x3
+  int v33; // w1
+  int v34; // w2
+  __int64 v35; // x3
+  int v36; // w1
+  int v37; // w2
+  __int64 v38; // x3
+  int v39; // w1
+  int v40; // w2
+  __int64 v41; // x3
+  int v42; // w1
+  int v43; // w2
+  __int64 v44; // x3
+  int v45; // w1
+  int v46; // w2
+  __int64 v47; // x3
+  int v48; // w1
+  int v49; // w2
+  __int64 v50; // x3
+  int v51; // w1
+  int v52; // w2
+  __int64 v53; // x3
+  int v54; // w1
+  int v55; // w2
+  __int64 v56; // x3
+  TerminalPramsManager_c *v57; // x0
   struct EventConquestInfo_array *eventConquestInfos; // x25
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v7; // x21
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v8; // x22
-  Il2CppObject *v9; // x0
-  __int64 v10; // x1
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v59; // x21
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v60; // x22
+  Il2CppObject *v61; // x0
+  __int64 v62; // x1
+  System_String_array **v63; // x2
+  System_String_array **v64; // x3
+  System_Boolean_array **v65; // x4
+  System_Int32_array **v66; // x5
+  System_Int32_array *v67; // x6
+  System_Int32_array *v68; // x7
   int max_length; // w8
-  __int64 v18; // x26
-  EventConquestInfo_o *v19; // x19
-  GiftEntity_o *v20; // x23
-  System_Text_StringBuilder_o *v21; // x23
-  System_String_o *v22; // x24
-  System_String_o *v23; // x24
-  Il2CppObject *v24; // x0
+  __int64 v70; // x26
+  EventConquestInfo_o *v71; // x19
+  GiftEntity_o *v72; // x23
+  System_Text_StringBuilder_o *v73; // x23
+  System_String_o *v74; // x24
+  System_String_o *v75; // x24
+  Il2CppObject *v76; // x0
   int size; // w27
-  int v26; // w8
-  EventInfoProductivityGrowthDialog_o *v27; // x14
+  int v78; // w8
+  EventInfoProductivityGrowthDialog_o *v79; // x14
   struct ItemIconComponent_array **p_countIconList01; // x9
   struct UILabel_array **p_countLabelList01; // x10
   struct UnityEngine_GameObject_array *dispObjList; // x11
   struct UILabel_array *messageList; // x12
-  struct ItemIconComponent_array *v32; // x19
-  System_Int32_array **v33; // x1
-  UnityEngine_GameObject_o *v34; // x8
-  struct UILabel_array *v35; // x20
-  __int64 v36; // x28
-  System_Text_StringBuilder_o *v37; // x0
-  unsigned int v38; // w23
-  int32_t *v39; // x8
-  UILabel_o *v40; // x25
-  int32_t v41; // w3
-  const MethodInfo *v42; // x1
+  struct ItemIconComponent_array *v84; // x19
+  System_Int32_array **v85; // x1
+  UnityEngine_GameObject_o *v86; // x8
+  struct UILabel_array *v87; // x20
+  __int64 v88; // x28
+  System_Text_StringBuilder_o *v89; // x0
+  unsigned int v90; // w23
+  int32_t *v91; // x8
+  UILabel_o *v92; // x25
+  int32_t v93; // w3
+  const MethodInfo *v94; // x1
   UILabel_o *titleLabel; // x21
-  UILabel_o *v44; // x21
-  System_String_array **v45; // x2
-  System_String_array **v46; // x3
-  System_Boolean_array **v47; // x4
-  System_Int32_array **v48; // x5
-  System_Int32_array *v49; // x6
-  System_Int32_array *v50; // x7
-  __int64 v51; // x0
-  UnityEngine_GameObject_o *v52; // [xsp+8h] [xbp-78h]
+  UILabel_o *v96; // x21
+  System_String_array **v97; // x2
+  System_String_array **v98; // x3
+  System_Boolean_array **v99; // x4
+  System_Int32_array **v100; // x5
+  System_Int32_array *v101; // x6
+  System_Int32_array *v102; // x7
+  __int64 v103; // x0
+  UnityEngine_GameObject_o *v104; // [xsp+8h] [xbp-78h]
   UILabel_o **p_messageLabel; // [xsp+10h] [xbp-70h]
-  EventInfoProductivityGrowthDialog_o *v54; // [xsp+18h] [xbp-68h]
+  EventInfoProductivityGrowthDialog_o *v106; // [xsp+18h] [xbp-68h]
   System_Action_o *action; // [xsp+20h] [xbp-60h]
   int32_t productAdd; // [xsp+28h] [xbp-58h] BYREF
   int32_t productNum; // [xsp+2Ch] [xbp-54h] BYREF
 
-  if ( (byte_42B0E2F & 1) == 0 )
+  if ( (byte_42E9520 & 1) == 0 )
   {
-    sub_B52984(&GiftEntity_TypeInfo);
-    sub_B52984(&int_TypeInfo);
-    sub_B52984(&Method_System_Collections_Generic_List_GiftEntity__Add__);
-    sub_B52984(&Method_System_Collections_Generic_List_string__Add__);
-    sub_B52984(&Method_System_Collections_Generic_List_GiftEntity___ctor__);
-    sub_B52984(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_B52984(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
-    sub_B52984(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_B52984(&Method_System_Collections_Generic_List_GiftEntity__get_Item__);
-    sub_B52984(&System_Collections_Generic_List_string__TypeInfo);
-    sub_B52984(&System_Collections_Generic_List_GiftEntity__TypeInfo);
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&System_Text_StringBuilder_TypeInfo);
-    sub_B52984(&TerminalPramsManager_TypeInfo);
-    sub_B52984(&StringLiteral_5647/*"EVENT_CONQUEST_UP_MESSAGE"*/);
-    sub_B52984(&StringLiteral_5646/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/);
-    sub_B52984(&StringLiteral_5645/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/);
-    sub_B52984(&StringLiteral_5648/*"EVENT_CONQUEST_UP_TITLE"*/);
-    byte_42B0E2F = 1;
+    sub_B5D5C4(&GiftEntity_TypeInfo, (_DWORD)closeAction, (_DWORD)method, v3);
+    sub_B5D5C4(&int_TypeInfo, v6, v7, v8);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_GiftEntity__Add__, v9, v10, v11);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_string__Add__, v12, v13, v14);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_GiftEntity___ctor__, v15, v16, v17);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_string___ctor__, v18, v19, v20);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_GiftEntity__get_Count__, v21, v22, v23);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_string__get_Item__, v24, v25, v26);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_GiftEntity__get_Item__, v27, v28, v29);
+    sub_B5D5C4(&System_Collections_Generic_List_string__TypeInfo, v30, v31, v32);
+    sub_B5D5C4(&System_Collections_Generic_List_GiftEntity__TypeInfo, v33, v34, v35);
+    sub_B5D5C4(&LocalizationManager_TypeInfo, v36, v37, v38);
+    sub_B5D5C4(&System_Text_StringBuilder_TypeInfo, v39, v40, v41);
+    sub_B5D5C4(&TerminalPramsManager_TypeInfo, v42, v43, v44);
+    sub_B5D5C4(&StringLiteral_5682/*"EVENT_CONQUEST_UP_MESSAGE"*/, v45, v46, v47);
+    sub_B5D5C4(&StringLiteral_5681/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/, v48, v49, v50);
+    sub_B5D5C4(&StringLiteral_5680/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/, v51, v52, v53);
+    sub_B5D5C4(&StringLiteral_5683/*"EVENT_CONQUEST_UP_TITLE"*/, v54, v55, v56);
+    byte_42E9520 = 1;
   }
-  v5 = TerminalPramsManager_TypeInfo;
+  v57 = TerminalPramsManager_TypeInfo;
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    v5 = TerminalPramsManager_TypeInfo;
+    v57 = TerminalPramsManager_TypeInfo;
   }
-  eventConquestInfos = v5->static_fields->eventConquestInfos;
+  eventConquestInfos = v57->static_fields->eventConquestInfos;
   if ( eventConquestInfos )
   {
-    v54 = this;
+    v106 = this;
     action = closeAction;
-    v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_GiftEntity__TypeInfo);
+    v59 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B5D694(System_Collections_Generic_List_GiftEntity__TypeInfo);
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-      v7,
-      (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
-    v8 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_string__TypeInfo);
+      v59,
+      (const MethodInfo_30562FC *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
+    v60 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B5D694(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-      v8,
-      (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_string___ctor__);
+      v60,
+      (const MethodInfo_30562FC *)Method_System_Collections_Generic_List_string___ctor__);
     max_length = eventConquestInfos->max_length;
     if ( max_length >= 1 )
     {
-      v18 = 0LL;
+      v70 = 0LL;
       while ( 1 )
       {
-        if ( (unsigned int)v18 >= max_length )
+        if ( (unsigned int)v70 >= max_length )
         {
 LABEL_64:
-          v51 = sub_B52A88(v9);
-          sub_B52A28(v51, 0LL);
+          v103 = sub_B5D6C8(v61);
+          sub_B5D668(v103, 0LL);
         }
-        v19 = eventConquestInfos->m_Items[v18];
-        v20 = (GiftEntity_o *)sub_B52A54(GiftEntity_TypeInfo);
-        GiftEntity___ctor(v20, 0LL);
-        if ( !v19 )
+        v71 = eventConquestInfos->m_Items[v70];
+        v72 = (GiftEntity_o *)sub_B5D694(GiftEntity_TypeInfo);
+        GiftEntity___ctor(v72, 0LL);
+        if ( !v71 )
           break;
-        if ( !v20 )
+        if ( !v72 )
           break;
-        v20->fields.type = v19->fields.type;
-        v20->fields.objectId = v19->fields.objectId;
-        v20->fields.num = v19->fields.productAdd;
-        if ( !v7 )
+        v72->fields.type = v71->fields.type;
+        v72->fields.objectId = v71->fields.objectId;
+        v72->fields.num = v71->fields.productAdd;
+        if ( !v59 )
           break;
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          v7,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)v20,
-          (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_GiftEntity__Add__);
-        v21 = (System_Text_StringBuilder_o *)sub_B52A54(System_Text_StringBuilder_TypeInfo);
-        System_Text_StringBuilder___ctor(v21, 0LL);
+          v59,
+          (EventMissionProgressRequest_Argument_ProgressData_o *)v72,
+          (const MethodInfo_3056FC0 *)Method_System_Collections_Generic_List_GiftEntity__Add__);
+        v73 = (System_Text_StringBuilder_o *)sub_B5D694(System_Text_StringBuilder_TypeInfo);
+        System_Text_StringBuilder___ctor(v73, 0LL);
         if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !LocalizationManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v22 = LocalizationManager__Get((System_String_o *)StringLiteral_5646/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/, 0LL);
-        productNum = v19->fields.productNum;
-        v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &productNum);
-        if ( !v21 )
+        v74 = LocalizationManager__Get((System_String_o *)StringLiteral_5681/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/, 0LL);
+        productNum = v71->fields.productNum;
+        v61 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &productNum);
+        if ( !v73 )
           break;
-        System_Text_StringBuilder__AppendFormat(v21, v22, v9, 0LL);
-        if ( v19->fields.productAdd >= 1 )
+        System_Text_StringBuilder__AppendFormat(v73, v74, v61, 0LL);
+        if ( v71->fields.productAdd >= 1 )
         {
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !LocalizationManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v23 = LocalizationManager__Get((System_String_o *)StringLiteral_5645/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/, 0LL);
-          productAdd = v19->fields.productAdd;
-          v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &productAdd);
-          System_Text_StringBuilder__AppendFormat(v21, v23, v24, 0LL);
+          v75 = LocalizationManager__Get((System_String_o *)StringLiteral_5680/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/, 0LL);
+          productAdd = v71->fields.productAdd;
+          v76 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &productAdd);
+          System_Text_StringBuilder__AppendFormat(v73, v75, v76, 0LL);
         }
-        v9 = (Il2CppObject *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v21->klass->vtable._3_ToString.method)(
-                               v21,
-                               v21->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
-        if ( !v8 )
+        v61 = (Il2CppObject *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v73->klass->vtable._3_ToString.method)(
+                                v73,
+                                v73->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
+        if ( !v60 )
           break;
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          v8,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)v9,
-          (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_string__Add__);
+          v60,
+          (EventMissionProgressRequest_Argument_ProgressData_o *)v61,
+          (const MethodInfo_3056FC0 *)Method_System_Collections_Generic_List_string__Add__);
         max_length = eventConquestInfos->max_length;
-        if ( (int)++v18 >= max_length )
+        if ( (int)++v70 >= max_length )
           goto LABEL_27;
       }
 LABEL_63:
-      sub_B52A5C(v9, v10);
+      sub_B5D69C(v61, v62);
     }
-    if ( !v7 )
+    if ( !v59 )
       goto LABEL_63;
 LABEL_27:
-    size = v7->fields._size;
+    size = v59->fields._size;
     if ( size <= 0 )
     {
 LABEL_30:
@@ -291,113 +362,113 @@ LABEL_30:
     }
     else
     {
-      v26 = size - 1;
+      v78 = size - 1;
       switch ( size )
       {
         case 1:
-          v27 = v54;
-          p_countIconList01 = &v54->fields.countIconList01;
-          p_countLabelList01 = &v54->fields.countLabelList01;
+          v79 = v106;
+          p_countIconList01 = &v106->fields.countIconList01;
+          p_countLabelList01 = &v106->fields.countLabelList01;
           goto LABEL_34;
         case 2:
-          v27 = v54;
-          p_countIconList01 = &v54->fields.countIconList02;
-          p_countLabelList01 = &v54->fields.countLabelList02;
+          v79 = v106;
+          p_countIconList01 = &v106->fields.countIconList02;
+          p_countLabelList01 = &v106->fields.countLabelList02;
           goto LABEL_34;
         case 3:
-          v27 = v54;
-          p_countIconList01 = &v54->fields.countIconList03;
-          p_countLabelList01 = &v54->fields.countLabelList03;
+          v79 = v106;
+          p_countIconList01 = &v106->fields.countIconList03;
+          p_countLabelList01 = &v106->fields.countLabelList03;
           goto LABEL_34;
         case 4:
-          v27 = v54;
-          p_countIconList01 = &v54->fields.countIconList04;
-          p_countLabelList01 = &v54->fields.countLabelList04;
+          v79 = v106;
+          p_countIconList01 = &v106->fields.countIconList04;
+          p_countLabelList01 = &v106->fields.countLabelList04;
 LABEL_34:
-          dispObjList = v27->fields.dispObjList;
+          dispObjList = v79->fields.dispObjList;
           if ( !dispObjList )
             goto LABEL_63;
-          if ( v26 >= dispObjList->max_length )
+          if ( v78 >= dispObjList->max_length )
             goto LABEL_64;
-          messageList = v27->fields.messageList;
+          messageList = v79->fields.messageList;
           if ( !messageList )
             goto LABEL_63;
-          if ( v26 >= messageList->max_length )
+          if ( v78 >= messageList->max_length )
             goto LABEL_64;
-          v32 = *p_countIconList01;
-          v33 = (System_Int32_array **)messageList->m_Items[v26];
-          v34 = dispObjList->m_Items[v26];
-          v35 = *p_countLabelList01;
-          v27->fields.messageLabel = (struct UILabel_o *)v33;
-          v52 = v34;
-          p_messageLabel = &v27->fields.messageLabel;
-          sub_B52920((BattleServantConfConponent_o *)&v27->fields.messageLabel, v33, v11, v12, v13, v14, v15, v16);
-          v36 = 4LL;
+          v84 = *p_countIconList01;
+          v85 = (System_Int32_array **)messageList->m_Items[v78];
+          v86 = dispObjList->m_Items[v78];
+          v87 = *p_countLabelList01;
+          v79->fields.messageLabel = (struct UILabel_o *)v85;
+          v104 = v86;
+          p_messageLabel = &v79->fields.messageLabel;
+          sub_B5D560((BattleServantConfConponent_o *)&v79->fields.messageLabel, v85, v63, v64, v65, v66, v67, v68);
+          v88 = 4LL;
           break;
         default:
           goto LABEL_30;
       }
       do
       {
-        v37 = (System_Text_StringBuilder_o *)sub_B52A54(System_Text_StringBuilder_TypeInfo);
-        System_Text_StringBuilder___ctor(v37, 0LL);
-        if ( !v32 )
+        v89 = (System_Text_StringBuilder_o *)sub_B5D694(System_Text_StringBuilder_TypeInfo);
+        System_Text_StringBuilder___ctor(v89, 0LL);
+        if ( !v84 )
           goto LABEL_63;
-        v38 = v36 - 4;
-        if ( (unsigned int)(v36 - 4) >= v32->max_length )
+        v90 = v88 - 4;
+        if ( (unsigned int)(v88 - 4) >= v84->max_length )
           goto LABEL_64;
-        if ( v7->fields._size <= v38 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
-        if ( !v35 )
+        if ( v59->fields._size <= v90 )
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42302284(0LL);
+        if ( !v87 )
           goto LABEL_63;
-        if ( v38 >= v35->max_length )
+        if ( v90 >= v87->max_length )
           goto LABEL_64;
-        v39 = (int32_t *)*((_QWORD *)&v7->fields._items->obj.klass + v36);
-        if ( !v39 || !*((_QWORD *)&v32->obj.klass + v36) )
+        v91 = (int32_t *)*((_QWORD *)&v59->fields._items->obj.klass + v88);
+        if ( !v91 || !*((_QWORD *)&v84->obj.klass + v88) )
           goto LABEL_63;
-        v40 = (UILabel_o *)*((_QWORD *)&v35->obj.klass + v36);
-        v41 = v39[7] <= 1 ? -1 : v39[7];
-        ItemIconComponent__SetGift(*((ItemIconComponent_o **)&v32->obj.klass + v36), v39[5], v39[6], v41, 0, 0LL);
-        if ( !v8 )
+        v92 = (UILabel_o *)*((_QWORD *)&v87->obj.klass + v88);
+        v93 = v91[7] <= 1 ? -1 : v91[7];
+        ItemIconComponent__SetGift(*((ItemIconComponent_o **)&v84->obj.klass + v88), v91[5], v91[6], v93, 0, 0LL);
+        if ( !v60 )
           goto LABEL_63;
-        if ( v8->fields._size <= v38 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
-        if ( !v40 )
+        if ( v60->fields._size <= v90 )
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42302284(0LL);
+        if ( !v92 )
           goto LABEL_63;
-        UILabel__set_text(v40, *((System_String_o **)&v8->fields._items->obj.klass + v36++), 0LL);
+        UILabel__set_text(v92, *((System_String_o **)&v60->fields._items->obj.klass + v88++), 0LL);
       }
-      while ( (int)v36 - 4 < size );
-      EventInfoProductivityGrowthDialog__Init(v54, v42);
-      v9 = (Il2CppObject *)v52;
-      if ( !v52 )
+      while ( (int)v88 - 4 < size );
+      EventInfoProductivityGrowthDialog__Init(v106, v94);
+      v61 = (Il2CppObject *)v104;
+      if ( !v104 )
         goto LABEL_63;
-      UnityEngine_GameObject__SetActive(v52, 1, 0LL);
-      BaseDialog__Open((BaseDialog_o *)v54, 0LL, 0, 0LL);
-      titleLabel = v54->fields.titleLabel;
+      UnityEngine_GameObject__SetActive(v104, 1, 0LL);
+      BaseDialog__Open((BaseDialog_o *)v106, 0LL, 0, 0LL);
+      titleLabel = v106->fields.titleLabel;
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v9 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5648/*"EVENT_CONQUEST_UP_TITLE"*/, 0LL);
+      v61 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5683/*"EVENT_CONQUEST_UP_TITLE"*/, 0LL);
       if ( !titleLabel )
         goto LABEL_63;
-      UILabel__set_text(titleLabel, (System_String_o *)v9, 0LL);
-      v44 = *p_messageLabel;
-      v9 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5647/*"EVENT_CONQUEST_UP_MESSAGE"*/, 0LL);
-      if ( !v44 )
+      UILabel__set_text(titleLabel, (System_String_o *)v61, 0LL);
+      v96 = *p_messageLabel;
+      v61 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5682/*"EVENT_CONQUEST_UP_MESSAGE"*/, 0LL);
+      if ( !v96 )
         goto LABEL_63;
-      UILabel__set_text(v44, (System_String_o *)v9, 0LL);
-      v54->fields.closeAction = action;
-      sub_B52920(
-        (BattleServantConfConponent_o *)&v54->fields.closeAction,
+      UILabel__set_text(v96, (System_String_o *)v61, 0LL);
+      v106->fields.closeAction = action;
+      sub_B5D560(
+        (BattleServantConfConponent_o *)&v106->fields.closeAction,
         (System_Int32_array **)action,
-        v45,
-        v46,
-        v47,
-        v48,
-        v49,
-        v50);
+        v97,
+        v98,
+        v99,
+        v100,
+        v101,
+        v102);
     }
   }
   else

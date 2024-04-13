@@ -1,13 +1,16 @@
 void __fastcall GachaBonusSelectLineupEntity___ctor(GachaBonusSelectLineupEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B3B01 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42EC5F1 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_string___ctor__);
-    byte_42B3B01 = 1;
+    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
+    byte_42EC5F1 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +20,16 @@ System_String_o *__fastcall GachaBonusSelectLineupEntity__CreatePK(
         int32_t giftId,
         const MethodInfo *method)
 {
-  if ( (byte_42B3AFF & 1) == 0 )
+  if ( (byte_42EC5EF & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_42B3AFF = 1;
+    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, type, giftId, method);
+    byte_42EC5EF = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            type,
            giftId,
-           (const MethodInfo_1A4E378 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1AE3440 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -45,10 +48,12 @@ int32_t __fastcall GachaBonusSelectLineupEntity__GetSummonCategoryId(
         int32_t defId,
         const MethodInfo *method)
 {
-  if ( (byte_42B3B00 & 1) == 0 )
+  __int64 v3; // x3
+
+  if ( (byte_42EC5F0 & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_22622/*"summonCategoryId"*/);
-    byte_42B3B00 = 1;
+    sub_B5D5C4(&StringLiteral_22737/*"summonCategoryId"*/, defId, (_DWORD)method, v3);
+    byte_42EC5F0 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22622/*"summonCategoryId"*/, defId, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22737/*"summonCategoryId"*/, defId, 0LL);
 }

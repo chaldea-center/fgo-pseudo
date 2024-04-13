@@ -17,7 +17,7 @@ void __fastcall PanelComponentBase__ClickPanel(PanelComponentBase_o *this, const
 void __fastcall PanelComponentBase__Initialize(PanelComponentBase_o *this, const MethodInfo *method)
 {
   this->fields._OnClickPanel_k__BackingField = 0LL;
-  sub_B52920(&this->fields._OnClickPanel_k__BackingField);
+  sub_B5D560(&this->fields._OnClickPanel_k__BackingField);
 }
 
 
@@ -26,14 +26,15 @@ void __fastcall PanelComponentBase__SetClosedPanelVisible(
         bool value,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
   UnityEngine_Object_o *closedPanel; // x21
-  __int64 v6; // x1
-  UnityEngine_GameObject_o *v7; // x0
+  __int64 v7; // x1
+  UnityEngine_GameObject_o *v8; // x0
 
-  if ( (byte_42ADBF5 & 1) == 0 )
+  if ( (byte_42E638C & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42ADBF5 = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, value, (_DWORD)method, v3);
+    byte_42E638C = 1;
   }
   closedPanel = (UnityEngine_Object_o *)this->fields.closedPanel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -43,10 +44,10 @@ void __fastcall PanelComponentBase__SetClosedPanelVisible(
   }
   if ( UnityEngine_Object__op_Inequality(closedPanel, 0LL, 0LL) )
   {
-    v7 = this->fields.closedPanel;
-    if ( !v7 )
-      sub_B52A5C(0LL, v6);
-    UnityEngine_GameObject__SetActive(v7, value, 0LL);
+    v8 = this->fields.closedPanel;
+    if ( !v8 )
+      sub_B5D69C(0LL, v7);
+    UnityEngine_GameObject__SetActive(v8, value, 0LL);
   }
 }
 
@@ -57,7 +58,7 @@ void __fastcall PanelComponentBase__SetTheCallBackWhenClickPanel(
         const MethodInfo *method)
 {
   this->fields._OnClickPanel_k__BackingField = callback;
-  sub_B52920(&this->fields._OnClickPanel_k__BackingField);
+  sub_B5D560(&this->fields._OnClickPanel_k__BackingField);
 }
 
 
@@ -73,5 +74,5 @@ void __fastcall PanelComponentBase__set_OnClickPanel(
         const MethodInfo *method)
 {
   this->fields._OnClickPanel_k__BackingField = value;
-  sub_B52920(&this->fields._OnClickPanel_k__BackingField);
+  sub_B5D560(&this->fields._OnClickPanel_k__BackingField);
 }

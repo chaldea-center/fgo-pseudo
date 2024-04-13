@@ -1,7 +1,7 @@
 UserServantEntity_o *__fastcall DataMasterBase_UserServantStorageMaster__UserServantEntity__long___GetEntity(
         DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *this,
         int64_t key,
-        const MethodInfo_23E2500 *method)
+        const MethodInfo_23FB038 *method)
 {
   System_String_o *v5; // x0
   __int64 v6; // x1
@@ -10,7 +10,7 @@ UserServantEntity_o *__fastcall DataMasterBase_UserServantStorageMaster__UserSer
   v8 = key;
   v5 = System_Int64__ToString((int64_t)&v8, 0LL);
   if ( !this )
-    sub_B52A5C(v5, v6);
+    sub_B5D69C(v5, v6);
   return (UserServantEntity_o *)((__int64 (__fastcall *)(DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *, System_String_o *))method->klass->rgctx_data->_2_DataMasterBase_getEntityFromKey_TEntity_->methodPointer)(
                                   this,
                                   v5);
@@ -21,7 +21,7 @@ bool __fastcall DataMasterBase_UserServantStorageMaster__UserServantEntity__long
         DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *this,
         UserServantEntity_o **entity,
         int64_t key,
-        const MethodInfo_23E255C *method)
+        const MethodInfo_23FB094 *method)
 {
   System_String_o *v7; // x0
   __int64 v8; // x1
@@ -30,7 +30,7 @@ bool __fastcall DataMasterBase_UserServantStorageMaster__UserServantEntity__long
   v10 = key;
   v7 = System_Int64__ToString((int64_t)&v10, 0LL);
   if ( !this )
-    sub_B52A5C(v7, v8);
+    sub_B5D69C(v7, v8);
   return ((__int64 (__fastcall *)(DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *, UserServantEntity_o **, System_String_o *))method->klass->rgctx_data->_3_DataMasterBase_TryGetEntityFromId_TEntity_->methodPointer)(
            this,
            entity,

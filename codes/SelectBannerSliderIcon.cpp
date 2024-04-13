@@ -14,7 +14,7 @@ void __fastcall SelectBannerSliderIcon__setEnableOffImg(
 
   offImg = (UnityEngine_Component_o *)this->fields.offImg;
   if ( !offImg || (offImg = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(offImg, 0LL)) == 0LL )
-    sub_B52A5C(offImg, isOff);
+    sub_B5D69C(offImg, isOff);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)offImg, isOff, 0LL);
 }
 
@@ -29,6 +29,6 @@ void __fastcall SelectBannerSliderIcon__setEnableOnImg(
 
   onImg = (UnityEngine_Component_o *)this->fields.onImg;
   if ( !onImg || (onImg = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(onImg, 0LL)) == 0LL )
-    sub_B52A5C(onImg, isOn);
+    sub_B5D69C(onImg, isOn);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)onImg, isOn, 0LL);
 }

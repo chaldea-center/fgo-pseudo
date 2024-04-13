@@ -11,33 +11,39 @@ void __fastcall ClassBoardCondData___ctor(
 }
 
 
-void __fastcall ClassBoardCondData___ctor_31633240(ClassBoardCondData_o this, int32_t lockId, const MethodInfo *method)
+void __fastcall ClassBoardCondData___ctor_27230432(ClassBoardCondData_o this, int32_t lockId, const MethodInfo *method)
 {
   int32_t Num; // w20
   _DWORD *v4; // x19
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
   DataMasterBase_WarMaster__WarEntity__int__o *Master_WarQuestSelectionMaster; // x0
-  __int64 v6; // x1
+  __int64 v12; // x1
   int seriazlier_high; // w8
 
   Num = this.fields.Num;
   v4 = *(_DWORD **)&this.fields.Type;
-  if ( (byte_42B3819 & 1) == 0 )
+  if ( (byte_42E9BFB & 1) == 0 )
   {
-    sub_B52984(&Method_DataManager_GetMaster_ClassBoardLockMaster___);
-    sub_B52984(&DataManager_TypeInfo);
-    sub_B52984(&Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__);
-    byte_42B3819 = 1;
+    sub_B5D5C4(&Method_DataManager_GetMaster_ClassBoardLockMaster___, this.fields.Num, lockId, method);
+    sub_B5D5C4(&DataManager_TypeInfo, v5, v6, v7);
+    sub_B5D5C4(&Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__, v8, v9, v10);
+    byte_42E9BFB = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_ClassBoardLockMaster___);
+  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1AE41EC *)Method_DataManager_GetMaster_ClassBoardLockMaster___);
   if ( !Master_WarQuestSelectionMaster
     || (Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                                                                           Master_WarQuestSelectionMaster,
                                                                                           Num,
-                                                                                          (const MethodInfo_23E22D8 *)Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__)) == 0LL )
+                                                                                          (const MethodInfo_23FAE10 *)Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__)) == 0LL )
   {
-    sub_B52A5C(Master_WarQuestSelectionMaster, v6);
+    sub_B5D69C(Master_WarQuestSelectionMaster, v12);
   }
   seriazlier_high = HIDWORD(Master_WarQuestSelectionMaster->fields.seriazlier);
   if ( seriazlier_high )
@@ -56,23 +62,24 @@ void __fastcall ClassBoardCondData___ctor_31633240(ClassBoardCondData_o this, in
 
 bool __fastcall ClassBoardCondData__IsOpen(ClassBoardCondData_o this, const MethodInfo *method)
 {
-  int32_t *v2; // x19
-  int32_t v3; // w20
-  int32_t v4; // w21
-  int64_t v5; // x19
+  __int64 v2; // x3
+  int32_t *v3; // x19
+  int32_t v4; // w20
+  int32_t v5; // w21
+  int64_t v6; // x19
 
-  v2 = *(int32_t **)&this.fields.Type;
-  if ( (byte_42B381A & 1) == 0 )
+  v3 = *(int32_t **)&this.fields.Type;
+  if ( (byte_42E9BFC & 1) == 0 )
   {
-    sub_B52984(&CondType_TypeInfo);
-    byte_42B381A = 1;
+    sub_B5D5C4(&CondType_TypeInfo, this.fields.Num, (_DWORD)method, v2);
+    byte_42E9BFC = 1;
   }
-  v4 = *v2;
-  v3 = v2[1];
-  v5 = v2[2];
+  v5 = *v3;
+  v4 = v3[1];
+  v6 = v3[2];
   if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  return CondType__IsOpen(v4, v3, v5, 0, 0LL);
+  return CondType__IsOpen(v5, v4, v6, 0, 0LL);
 }
 
 

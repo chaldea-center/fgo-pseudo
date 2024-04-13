@@ -12,21 +12,26 @@ void __fastcall SubBgmPlayArgs___ctor(
 
 BgmPlayArgs_o *__fastcall SubBgmPlayArgs__Clone(SubBgmPlayArgs_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
   System_String_o *BgmName_k__BackingField; // x20
   float Volume_k__BackingField; // s0
   float FadeTime_k__BackingField; // s8
   int64_t StartTime_k__BackingField; // x19
-  BgmPlayArgs_o *v7; // x0
-  BgmPlayArgs_o *v8; // x21
+  BgmPlayArgs_o *v12; // x0
+  BgmPlayArgs_o *v13; // x21
   System_Nullable_float__o volume; // [xsp+8h] [xbp-28h] BYREF
   System_Nullable_float__o p_volume; // 0:x0.8
-  System_Nullable_float__o v12; // 0:x2.8
+  System_Nullable_float__o v17; // 0:x2.8
 
-  if ( (byte_42AEDED & 1) == 0 )
+  if ( (byte_42E7B14 & 1) == 0 )
   {
-    sub_B52984(&Method_System_Nullable_float___ctor__);
-    sub_B52984(&SubBgmPlayArgs_TypeInfo);
-    byte_42AEDED = 1;
+    sub_B5D5C4(&Method_System_Nullable_float___ctor__, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&SubBgmPlayArgs_TypeInfo, v5, v6, v7);
+    byte_42E7B14 = 1;
   }
   BgmName_k__BackingField = this->fields._BgmName_k__BackingField;
   Volume_k__BackingField = this->fields._Volume_k__BackingField;
@@ -35,14 +40,14 @@ BgmPlayArgs_o *__fastcall SubBgmPlayArgs__Clone(SubBgmPlayArgs_o *this, const Me
   System_Nullable_float____ctor(
     p_volume,
     Volume_k__BackingField,
-    (const MethodInfo_21733B4 *)Method_System_Nullable_float___ctor__);
+    (const MethodInfo_234CDB0 *)Method_System_Nullable_float___ctor__);
   FadeTime_k__BackingField = this->fields._FadeTime_k__BackingField;
   StartTime_k__BackingField = this->fields._StartTime_k__BackingField;
-  v7 = (BgmPlayArgs_o *)sub_B52A54(SubBgmPlayArgs_TypeInfo);
-  v12 = volume;
-  v8 = v7;
-  BgmPlayArgs___ctor(v7, BgmName_k__BackingField, v12, FadeTime_k__BackingField, StartTime_k__BackingField, 0LL);
-  return v8;
+  v12 = (BgmPlayArgs_o *)sub_B5D694(SubBgmPlayArgs_TypeInfo);
+  v17 = volume;
+  v13 = v12;
+  BgmPlayArgs___ctor(v12, BgmName_k__BackingField, v17, FadeTime_k__BackingField, StartTime_k__BackingField, 0LL);
+  return v13;
 }
 
 
@@ -50,85 +55,114 @@ SubBgmPlayArgs_array *__fastcall SubBgmPlayArgs__ConvertFromEntityScript(
         System_Collections_Generic_List_object__o *rawValue,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x19
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  int v17; // w1
+  int v18; // w2
+  __int64 v19; // x3
+  int v20; // w1
+  int v21; // w2
+  __int64 v22; // x3
+  int v23; // w1
+  int v24; // w2
+  __int64 v25; // x3
+  int v26; // w1
+  int v27; // w2
+  __int64 v28; // x3
+  int v29; // w1
+  int v30; // w2
+  __int64 v31; // x3
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v32; // x19
   void *Master_WarQuestSelectionMaster; // x0
-  __int64 v5; // x1
-  int v6; // w8
-  void *v7; // x20
-  unsigned int v8; // w23
-  __int64 v9; // x22
-  __int64 v10; // x8
-  int32_t v11; // w21
-  float v12; // s0
+  __int64 v34; // x1
+  int v35; // w8
+  void *v36; // x20
+  unsigned int v37; // w23
+  __int64 v38; // x22
+  __int64 v39; // x8
+  int32_t v40; // w21
+  float v41; // s0
   System_String_o *age; // x22
-  BgmPlayArgs_o *v14; // x0
-  EventMissionProgressRequest_Argument_ProgressData_o *v15; // x21
-  __int64 v17; // x0
+  BgmPlayArgs_o *v43; // x0
+  EventMissionProgressRequest_Argument_ProgressData_o *v44; // x21
+  __int64 v46; // x0
   System_Nullable_float__o volume; // [xsp+8h] [xbp-68h] BYREF
   WarEntity_o *entity; // [xsp+18h] [xbp-58h] BYREF
   System_Nullable_float__o p_volume; // 0:x0.8
-  System_Nullable_float__o v21; // 0:x2.8
+  System_Nullable_float__o v50; // 0:x2.8
 
-  if ( (byte_42AEDEE & 1) == 0 )
+  if ( (byte_42E7B15 & 1) == 0 )
   {
-    sub_B52984(&BgmManager_TypeInfo);
-    sub_B52984(&Method_DataManager_GetMaster_BgmMaster___);
-    sub_B52984(&DataManager_TypeInfo);
-    sub_B52984(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
-    sub_B52984(&Method_System_Collections_Generic_List_SubBgmPlayArgs__Add__);
-    sub_B52984(&Method_System_Collections_Generic_List_SubBgmPlayArgs__ToArray__);
-    sub_B52984(&Method_System_Collections_Generic_List_SubBgmPlayArgs___ctor__);
-    sub_B52984(&System_Collections_Generic_List_SubBgmPlayArgs__TypeInfo);
-    sub_B52984(&Method_System_Nullable_float___ctor__);
-    sub_B52984(&SubBgmPlayArgs_TypeInfo);
-    byte_42AEDEE = 1;
+    sub_B5D5C4(&BgmManager_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_DataManager_GetMaster_BgmMaster___, v5, v6, v7);
+    sub_B5D5C4(&DataManager_TypeInfo, v8, v9, v10);
+    sub_B5D5C4(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__, v11, v12, v13);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_SubBgmPlayArgs__Add__, v14, v15, v16);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_SubBgmPlayArgs__ToArray__, v17, v18, v19);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_SubBgmPlayArgs___ctor__, v20, v21, v22);
+    sub_B5D5C4(&System_Collections_Generic_List_SubBgmPlayArgs__TypeInfo, v23, v24, v25);
+    sub_B5D5C4(&Method_System_Nullable_float___ctor__, v26, v27, v28);
+    sub_B5D5C4(&SubBgmPlayArgs_TypeInfo, v29, v30, v31);
+    byte_42E7B15 = 1;
   }
   entity = 0LL;
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_SubBgmPlayArgs__TypeInfo);
+  v32 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B5D694(System_Collections_Generic_List_SubBgmPlayArgs__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v3,
-    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_SubBgmPlayArgs___ctor__);
+    v32,
+    (const MethodInfo_30562FC *)Method_System_Collections_Generic_List_SubBgmPlayArgs___ctor__);
   Master_WarQuestSelectionMaster = EntityScriptValueConvertLogic__ObjectListTo2DimensionalIntArray(rawValue, 0x2Cu, 0LL);
   if ( !Master_WarQuestSelectionMaster )
     goto LABEL_27;
-  v6 = *((_DWORD *)Master_WarQuestSelectionMaster + 6);
-  v7 = Master_WarQuestSelectionMaster;
-  if ( v6 >= 1 )
+  v35 = *((_DWORD *)Master_WarQuestSelectionMaster + 6);
+  v36 = Master_WarQuestSelectionMaster;
+  if ( v35 >= 1 )
   {
-    v8 = 0;
+    v37 = 0;
     do
     {
-      if ( v8 >= v6 )
+      if ( v37 >= v35 )
       {
 LABEL_28:
-        v17 = sub_B52A88(Master_WarQuestSelectionMaster);
-        sub_B52A28(v17, 0LL);
+        v46 = sub_B5D6C8(Master_WarQuestSelectionMaster);
+        sub_B5D668(v46, 0LL);
       }
-      v9 = *((_QWORD *)v7 + (int)v8 + 4);
-      if ( !v9 )
+      v38 = *((_QWORD *)v36 + (int)v37 + 4);
+      if ( !v38 )
         goto LABEL_27;
-      v10 = *(_QWORD *)(v9 + 24);
-      if ( v10 )
+      v39 = *(_QWORD *)(v38 + 24);
+      if ( v39 )
       {
-        if ( !(_DWORD)v10 )
+        if ( !(_DWORD)v39 )
           goto LABEL_28;
-        v11 = *(_DWORD *)(v9 + 32);
+        v40 = *(_DWORD *)(v38 + 32);
         if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !DataManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
         }
-        Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_BgmMaster___);
+        Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1AE41EC *)Method_DataManager_GetMaster_BgmMaster___);
         if ( !Master_WarQuestSelectionMaster )
           goto LABEL_27;
         Master_WarQuestSelectionMaster = (void *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
                                                    (DataMasterBase_WarMaster__WarEntity__int__o *)Master_WarQuestSelectionMaster,
                                                    &entity,
-                                                   v11,
-                                                   (const MethodInfo_23E2334 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+                                                   v40,
+                                                   (const MethodInfo_23FAE6C *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)Master_WarQuestSelectionMaster & 1) != 0 )
         {
-          if ( *(int *)(v9 + 24) <= 1 )
+          if ( *(int *)(v38 + 24) <= 1 )
           {
             Master_WarQuestSelectionMaster = BgmManager_TypeInfo;
             if ( (BYTE3(BgmManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -137,11 +171,11 @@ LABEL_28:
               j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
               Master_WarQuestSelectionMaster = BgmManager_TypeInfo;
             }
-            v12 = **((float **)Master_WarQuestSelectionMaster + 23);
+            v41 = **((float **)Master_WarQuestSelectionMaster + 23);
           }
           else
           {
-            v12 = (float)*(int *)(v9 + 36) / 1000.0;
+            v41 = (float)*(int *)(v38 + 36) / 1000.0;
           }
           if ( !entity )
             goto LABEL_27;
@@ -150,28 +184,28 @@ LABEL_28:
           volume = 0LL;
           System_Nullable_float____ctor(
             p_volume,
-            v12,
-            (const MethodInfo_21733B4 *)Method_System_Nullable_float___ctor__);
-          v14 = (BgmPlayArgs_o *)sub_B52A54(SubBgmPlayArgs_TypeInfo);
-          v21 = volume;
-          v15 = (EventMissionProgressRequest_Argument_ProgressData_o *)v14;
-          BgmPlayArgs___ctor(v14, age, v21, 0.0, 0LL, 0LL);
-          if ( !v3 )
+            v41,
+            (const MethodInfo_234CDB0 *)Method_System_Nullable_float___ctor__);
+          v43 = (BgmPlayArgs_o *)sub_B5D694(SubBgmPlayArgs_TypeInfo);
+          v50 = volume;
+          v44 = (EventMissionProgressRequest_Argument_ProgressData_o *)v43;
+          BgmPlayArgs___ctor(v43, age, v50, 0.0, 0LL, 0LL);
+          if ( !v32 )
             goto LABEL_27;
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            v3,
-            v15,
-            (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_SubBgmPlayArgs__Add__);
+            v32,
+            v44,
+            (const MethodInfo_3056FC0 *)Method_System_Collections_Generic_List_SubBgmPlayArgs__Add__);
         }
       }
-      v6 = *((_DWORD *)v7 + 6);
+      v35 = *((_DWORD *)v36 + 6);
     }
-    while ( (int)++v8 < v6 );
+    while ( (int)++v37 < v35 );
   }
-  if ( !v3 )
+  if ( !v32 )
 LABEL_27:
-    sub_B52A5C(Master_WarQuestSelectionMaster, v5);
+    sub_B5D69C(Master_WarQuestSelectionMaster, v34);
   return (SubBgmPlayArgs_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                   (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v3,
-                                   (const MethodInfo_2FF3750 *)Method_System_Collections_Generic_List_SubBgmPlayArgs__ToArray__);
+                                   (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v32,
+                                   (const MethodInfo_305910C *)Method_System_Collections_Generic_List_SubBgmPlayArgs__ToArray__);
 }

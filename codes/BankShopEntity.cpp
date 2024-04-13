@@ -1,13 +1,16 @@
 void __fastcall BankShopEntity___ctor(BankShopEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42ACEE9 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E660E & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_int___ctor__);
-    byte_42ACEE9 = 1;
+    sub_B5D5C4(&Method_DataEntityBase_int___ctor__, (_DWORD)method, v2, v3);
+    byte_42E660E = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_23E2184 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_23FACBC *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,12 +22,14 @@ int32_t __fastcall BankShopEntity__CreatePrimaryKey(BankShopEntity_o *this, cons
 
 System_String_o *__fastcall BankShopEntity__GetCountText(BankShopEntity_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   int32_t stoneNum; // w19
 
-  if ( (byte_42ACEE8 & 1) == 0 )
+  if ( (byte_42E660D & 1) == 0 )
   {
-    sub_B52984(&LocalizationManager_TypeInfo);
-    byte_42ACEE8 = 1;
+    sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E660D = 1;
   }
   stoneNum = this->fields.stoneNum;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -62,397 +67,435 @@ System_String_o *__fastcall BankShopEntity__GetProductId(BankShopEntity_o *this,
 
 System_String_o *__fastcall BankShopEntity__ToString(BankShopEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x0
-  __int64 v4; // x1
-  System_String_array *v5; // x20
-  System_String_o *v6; // x0
-  __int64 v7; // x1
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  int v17; // w1
+  int v18; // w2
+  __int64 v19; // x3
+  int v20; // w1
+  int v21; // w2
+  __int64 v22; // x3
+  int v23; // w1
+  int v24; // w2
+  __int64 v25; // x3
+  int v26; // w1
+  int v27; // w2
+  __int64 v28; // x3
+  int v29; // w1
+  int v30; // w2
+  __int64 v31; // x3
+  int v32; // w1
+  int v33; // w2
+  __int64 v34; // x3
+  int v35; // w1
+  int v36; // w2
+  __int64 v37; // x3
+  int v38; // w1
+  int v39; // w2
+  __int64 v40; // x3
+  __int64 v41; // x0
+  __int64 v42; // x1
+  System_String_array *v43; // x20
+  System_String_o *v44; // x0
+  __int64 v45; // x1
   il2cpp_array_size_t *p_max_length; // x22
-  System_String_o *v9; // x21
-  __int64 v10; // x1
+  System_String_o *v47; // x21
+  __int64 v48; // x1
   struct System_String_o *name; // x21
-  __int64 v12; // x1
+  __int64 v50; // x1
   struct System_String_o *appleShopId; // x21
-  __int64 v14; // x1
+  __int64 v52; // x1
   struct System_String_o *googleShopId; // x21
-  __int64 v16; // x1
+  __int64 v54; // x1
   struct System_String_o *auShopId; // x21
-  __int64 v18; // x1
-  System_String_o *v19; // x21
-  __int64 v20; // x1
-  System_String_o *v21; // x21
-  __int64 v22; // x1
-  System_String_o *v23; // x21
-  __int64 v24; // x1
+  __int64 v56; // x1
+  System_String_o *v57; // x21
+  __int64 v58; // x1
+  System_String_o *v59; // x21
+  __int64 v60; // x1
+  System_String_o *v61; // x21
+  __int64 v62; // x1
   struct System_String_o *numDetail; // x21
-  __int64 v26; // x1
+  __int64 v64; // x1
   struct System_String_o *priceDetail; // x21
-  __int64 v28; // x1
-  System_String_o *v29; // x21
-  __int64 v30; // x1
-  System_String_o *v31; // x19
-  __int64 v33; // x0
-  __int64 v34; // x0
+  __int64 v66; // x1
+  System_String_o *v67; // x21
+  __int64 v68; // x1
+  System_String_o *v69; // x19
+  __int64 v71; // x0
+  __int64 v72; // x0
 
-  if ( (byte_42ACEE7 & 1) == 0 )
+  if ( (byte_42E660C & 1) == 0 )
   {
-    sub_B52984(&string___TypeInfo);
-    sub_B52984(&StringLiteral_739/*", name:"*/);
-    sub_B52984(&StringLiteral_736/*", googleShopId:"*/);
-    sub_B52984(&StringLiteral_740/*", numDetail:"*/);
-    sub_B52984(&StringLiteral_734/*", closeAt:"*/);
-    sub_B52984(&StringLiteral_19531/*"id:"*/);
-    sub_B52984(&StringLiteral_731/*", appleShopId:"*/);
-    sub_B52984(&StringLiteral_744/*", stoneNum:"*/);
-    sub_B52984(&StringLiteral_735/*", googlePrice:"*/);
-    sub_B52984(&StringLiteral_741/*", openAt:"*/);
-    sub_B52984(&StringLiteral_742/*", priceDetail:"*/);
-    sub_B52984(&StringLiteral_730/*", applePrice:"*/);
-    sub_B52984(&StringLiteral_732/*", auShopId:"*/);
-    byte_42ACEE7 = 1;
+    sub_B5D5C4(&string___TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&StringLiteral_737/*", name:"*/, v5, v6, v7);
+    sub_B5D5C4(&StringLiteral_734/*", googleShopId:"*/, v8, v9, v10);
+    sub_B5D5C4(&StringLiteral_738/*", numDetail:"*/, v11, v12, v13);
+    sub_B5D5C4(&StringLiteral_732/*", closeAt:"*/, v14, v15, v16);
+    sub_B5D5C4(&StringLiteral_19629/*"id:"*/, v17, v18, v19);
+    sub_B5D5C4(&StringLiteral_729/*", appleShopId:"*/, v20, v21, v22);
+    sub_B5D5C4(&StringLiteral_742/*", stoneNum:"*/, v23, v24, v25);
+    sub_B5D5C4(&StringLiteral_733/*", googlePrice:"*/, v26, v27, v28);
+    sub_B5D5C4(&StringLiteral_739/*", openAt:"*/, v29, v30, v31);
+    sub_B5D5C4(&StringLiteral_740/*", priceDetail:"*/, v32, v33, v34);
+    sub_B5D5C4(&StringLiteral_728/*", applePrice:"*/, v35, v36, v37);
+    sub_B5D5C4(&StringLiteral_730/*", auShopId:"*/, v38, v39, v40);
+    byte_42E660C = 1;
   }
-  v3 = sub_B5299C(string___TypeInfo, 24LL);
-  if ( !v3 )
-    sub_B52A5C(0LL, v4);
-  v5 = (System_String_array *)v3;
-  v6 = (System_String_o *)StringLiteral_19531/*"id:"*/;
-  if ( StringLiteral_19531/*"id:"*/ )
+  v41 = sub_B5D5DC(string___TypeInfo, 24LL);
+  if ( !v41 )
+    sub_B5D69C(0LL, v42);
+  v43 = (System_String_array *)v41;
+  v44 = (System_String_o *)StringLiteral_19629/*"id:"*/;
+  if ( StringLiteral_19629/*"id:"*/ )
   {
-    v6 = (System_String_o *)sub_B52A44(StringLiteral_19531/*"id:"*/, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(StringLiteral_19629/*"id:"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
-    v7 = StringLiteral_19531/*"id:"*/;
+    v45 = StringLiteral_19629/*"id:"*/;
   }
   else
   {
-    v7 = 0LL;
+    v45 = 0LL;
   }
-  p_max_length = &v5->max_length;
-  if ( !v5->max_length )
+  p_max_length = &v43->max_length;
+  if ( !v43->max_length )
     goto LABEL_101;
-  v5->m_Items[0] = (System_String_o *)v7;
-  sub_B52920(v5->m_Items);
-  v6 = System_Int32__ToString((int)this + 16, 0LL);
-  v9 = v6;
-  if ( v6 )
+  v43->m_Items[0] = (System_String_o *)v45;
+  sub_B5D560(v43->m_Items);
+  v44 = System_Int32__ToString((int)this + 16, 0LL);
+  v47 = v44;
+  if ( v44 )
   {
-    v6 = (System_String_o *)sub_B52A44(v6, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(v44, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
   }
   if ( *p_max_length <= 1 )
     goto LABEL_101;
-  v5->m_Items[1] = v9;
-  sub_B52920(&v5->m_Items[1]);
-  v6 = (System_String_o *)StringLiteral_739/*", name:"*/;
-  if ( StringLiteral_739/*", name:"*/ )
+  v43->m_Items[1] = v47;
+  sub_B5D560(&v43->m_Items[1]);
+  v44 = (System_String_o *)StringLiteral_737/*", name:"*/;
+  if ( StringLiteral_737/*", name:"*/ )
   {
-    v6 = (System_String_o *)sub_B52A44(StringLiteral_739/*", name:"*/, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(StringLiteral_737/*", name:"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
-    v10 = StringLiteral_739/*", name:"*/;
+    v48 = StringLiteral_737/*", name:"*/;
   }
   else
   {
-    v10 = 0LL;
+    v48 = 0LL;
   }
   if ( *p_max_length <= 2 )
     goto LABEL_101;
-  v5->m_Items[2] = (System_String_o *)v10;
-  sub_B52920(&v5->m_Items[2]);
+  v43->m_Items[2] = (System_String_o *)v48;
+  sub_B5D560(&v43->m_Items[2]);
   name = this->fields.name;
   if ( name )
   {
-    v6 = (System_String_o *)sub_B52A44(this->fields.name, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(this->fields.name, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
   }
   if ( *p_max_length <= 3 )
     goto LABEL_101;
-  v5->m_Items[3] = name;
-  sub_B52920(&v5->m_Items[3]);
-  v6 = (System_String_o *)StringLiteral_731/*", appleShopId:"*/;
-  if ( StringLiteral_731/*", appleShopId:"*/ )
+  v43->m_Items[3] = name;
+  sub_B5D560(&v43->m_Items[3]);
+  v44 = (System_String_o *)StringLiteral_729/*", appleShopId:"*/;
+  if ( StringLiteral_729/*", appleShopId:"*/ )
   {
-    v6 = (System_String_o *)sub_B52A44(StringLiteral_731/*", appleShopId:"*/, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(StringLiteral_729/*", appleShopId:"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
-    v12 = StringLiteral_731/*", appleShopId:"*/;
+    v50 = StringLiteral_729/*", appleShopId:"*/;
   }
   else
   {
-    v12 = 0LL;
+    v50 = 0LL;
   }
   if ( *p_max_length <= 4 )
     goto LABEL_101;
-  v5->m_Items[4] = (System_String_o *)v12;
-  sub_B52920(&v5->m_Items[4]);
+  v43->m_Items[4] = (System_String_o *)v50;
+  sub_B5D560(&v43->m_Items[4]);
   appleShopId = this->fields.appleShopId;
   if ( appleShopId )
   {
-    v6 = (System_String_o *)sub_B52A44(this->fields.appleShopId, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(this->fields.appleShopId, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
   }
   if ( *p_max_length <= 5 )
     goto LABEL_101;
-  v5->m_Items[5] = appleShopId;
-  sub_B52920(&v5->m_Items[5]);
-  v6 = (System_String_o *)StringLiteral_736/*", googleShopId:"*/;
-  if ( StringLiteral_736/*", googleShopId:"*/ )
+  v43->m_Items[5] = appleShopId;
+  sub_B5D560(&v43->m_Items[5]);
+  v44 = (System_String_o *)StringLiteral_734/*", googleShopId:"*/;
+  if ( StringLiteral_734/*", googleShopId:"*/ )
   {
-    v6 = (System_String_o *)sub_B52A44(StringLiteral_736/*", googleShopId:"*/, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(StringLiteral_734/*", googleShopId:"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
-    v14 = StringLiteral_736/*", googleShopId:"*/;
+    v52 = StringLiteral_734/*", googleShopId:"*/;
   }
   else
   {
-    v14 = 0LL;
+    v52 = 0LL;
   }
   if ( *p_max_length <= 6 )
     goto LABEL_101;
-  v5->m_Items[6] = (System_String_o *)v14;
-  sub_B52920(&v5->m_Items[6]);
+  v43->m_Items[6] = (System_String_o *)v52;
+  sub_B5D560(&v43->m_Items[6]);
   googleShopId = this->fields.googleShopId;
   if ( googleShopId )
   {
-    v6 = (System_String_o *)sub_B52A44(this->fields.googleShopId, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(this->fields.googleShopId, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
   }
   if ( *p_max_length <= 7 )
     goto LABEL_101;
-  v5->m_Items[7] = googleShopId;
-  sub_B52920(&v5->m_Items[7]);
-  v6 = (System_String_o *)StringLiteral_732/*", auShopId:"*/;
-  if ( StringLiteral_732/*", auShopId:"*/ )
+  v43->m_Items[7] = googleShopId;
+  sub_B5D560(&v43->m_Items[7]);
+  v44 = (System_String_o *)StringLiteral_730/*", auShopId:"*/;
+  if ( StringLiteral_730/*", auShopId:"*/ )
   {
-    v6 = (System_String_o *)sub_B52A44(StringLiteral_732/*", auShopId:"*/, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(StringLiteral_730/*", auShopId:"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
-    v16 = StringLiteral_732/*", auShopId:"*/;
+    v54 = StringLiteral_730/*", auShopId:"*/;
   }
   else
   {
-    v16 = 0LL;
+    v54 = 0LL;
   }
   if ( *p_max_length <= 8 )
     goto LABEL_101;
-  v5->m_Items[8] = (System_String_o *)v16;
-  sub_B52920(&v5->m_Items[8]);
+  v43->m_Items[8] = (System_String_o *)v54;
+  sub_B5D560(&v43->m_Items[8]);
   auShopId = this->fields.auShopId;
   if ( auShopId )
   {
-    v6 = (System_String_o *)sub_B52A44(this->fields.auShopId, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(this->fields.auShopId, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
   }
   if ( *p_max_length <= 9 )
     goto LABEL_101;
-  v5->m_Items[9] = auShopId;
-  sub_B52920(&v5->m_Items[9]);
-  v6 = (System_String_o *)StringLiteral_730/*", applePrice:"*/;
-  if ( StringLiteral_730/*", applePrice:"*/ )
+  v43->m_Items[9] = auShopId;
+  sub_B5D560(&v43->m_Items[9]);
+  v44 = (System_String_o *)StringLiteral_728/*", applePrice:"*/;
+  if ( StringLiteral_728/*", applePrice:"*/ )
   {
-    v6 = (System_String_o *)sub_B52A44(StringLiteral_730/*", applePrice:"*/, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(StringLiteral_728/*", applePrice:"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
-    v18 = StringLiteral_730/*", applePrice:"*/;
+    v56 = StringLiteral_728/*", applePrice:"*/;
   }
   else
   {
-    v18 = 0LL;
+    v56 = 0LL;
   }
   if ( *p_max_length <= 0xA )
     goto LABEL_101;
-  v5->m_Items[10] = (System_String_o *)v18;
-  sub_B52920(&v5->m_Items[10]);
-  v6 = System_Int32__ToString((int)this + 48, 0LL);
-  v19 = v6;
-  if ( v6 )
+  v43->m_Items[10] = (System_String_o *)v56;
+  sub_B5D560(&v43->m_Items[10]);
+  v44 = System_Int32__ToString((int)this + 48, 0LL);
+  v57 = v44;
+  if ( v44 )
   {
-    v6 = (System_String_o *)sub_B52A44(v6, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(v44, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
   }
   if ( *p_max_length <= 0xB )
     goto LABEL_101;
-  v5->m_Items[11] = v19;
-  sub_B52920(&v5->m_Items[11]);
-  v6 = (System_String_o *)StringLiteral_735/*", googlePrice:"*/;
-  if ( StringLiteral_735/*", googlePrice:"*/ )
+  v43->m_Items[11] = v57;
+  sub_B5D560(&v43->m_Items[11]);
+  v44 = (System_String_o *)StringLiteral_733/*", googlePrice:"*/;
+  if ( StringLiteral_733/*", googlePrice:"*/ )
   {
-    v6 = (System_String_o *)sub_B52A44(StringLiteral_735/*", googlePrice:"*/, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(StringLiteral_733/*", googlePrice:"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
-    v20 = StringLiteral_735/*", googlePrice:"*/;
+    v58 = StringLiteral_733/*", googlePrice:"*/;
   }
   else
   {
-    v20 = 0LL;
+    v58 = 0LL;
   }
   if ( *p_max_length <= 0xC )
     goto LABEL_101;
-  v5->m_Items[12] = (System_String_o *)v20;
-  sub_B52920(&v5->m_Items[12]);
-  v6 = System_Int32__ToString((int)this + 52, 0LL);
-  v21 = v6;
-  if ( v6 )
+  v43->m_Items[12] = (System_String_o *)v58;
+  sub_B5D560(&v43->m_Items[12]);
+  v44 = System_Int32__ToString((int)this + 52, 0LL);
+  v59 = v44;
+  if ( v44 )
   {
-    v6 = (System_String_o *)sub_B52A44(v6, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(v44, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
   }
   if ( *p_max_length <= 0xD )
     goto LABEL_101;
-  v5->m_Items[13] = v21;
-  sub_B52920(&v5->m_Items[13]);
-  v6 = (System_String_o *)StringLiteral_744/*", stoneNum:"*/;
-  if ( StringLiteral_744/*", stoneNum:"*/ )
+  v43->m_Items[13] = v59;
+  sub_B5D560(&v43->m_Items[13]);
+  v44 = (System_String_o *)StringLiteral_742/*", stoneNum:"*/;
+  if ( StringLiteral_742/*", stoneNum:"*/ )
   {
-    v6 = (System_String_o *)sub_B52A44(StringLiteral_744/*", stoneNum:"*/, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(StringLiteral_742/*", stoneNum:"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
-    v22 = StringLiteral_744/*", stoneNum:"*/;
+    v60 = StringLiteral_742/*", stoneNum:"*/;
   }
   else
   {
-    v22 = 0LL;
+    v60 = 0LL;
   }
   if ( *p_max_length <= 0xE )
     goto LABEL_101;
-  v5->m_Items[14] = (System_String_o *)v22;
-  sub_B52920(&v5->m_Items[14]);
-  v6 = System_Int32__ToString((int)this + 72, 0LL);
-  v23 = v6;
-  if ( v6 )
+  v43->m_Items[14] = (System_String_o *)v60;
+  sub_B5D560(&v43->m_Items[14]);
+  v44 = System_Int32__ToString((int)this + 72, 0LL);
+  v61 = v44;
+  if ( v44 )
   {
-    v6 = (System_String_o *)sub_B52A44(v6, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(v44, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
   }
   if ( *p_max_length <= 0xF )
     goto LABEL_101;
-  v5->m_Items[15] = v23;
-  sub_B52920(&v5->m_Items[15]);
-  v6 = (System_String_o *)StringLiteral_740/*", numDetail:"*/;
-  if ( StringLiteral_740/*", numDetail:"*/ )
+  v43->m_Items[15] = v61;
+  sub_B5D560(&v43->m_Items[15]);
+  v44 = (System_String_o *)StringLiteral_738/*", numDetail:"*/;
+  if ( StringLiteral_738/*", numDetail:"*/ )
   {
-    v6 = (System_String_o *)sub_B52A44(StringLiteral_740/*", numDetail:"*/, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(StringLiteral_738/*", numDetail:"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
-    v24 = StringLiteral_740/*", numDetail:"*/;
+    v62 = StringLiteral_738/*", numDetail:"*/;
   }
   else
   {
-    v24 = 0LL;
+    v62 = 0LL;
   }
   if ( *p_max_length <= 0x10 )
     goto LABEL_101;
-  v5->m_Items[16] = (System_String_o *)v24;
-  sub_B52920(&v5->m_Items[16]);
+  v43->m_Items[16] = (System_String_o *)v62;
+  sub_B5D560(&v43->m_Items[16]);
   numDetail = this->fields.numDetail;
   if ( numDetail )
   {
-    v6 = (System_String_o *)sub_B52A44(this->fields.numDetail, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(this->fields.numDetail, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
   }
   if ( *p_max_length <= 0x11 )
     goto LABEL_101;
-  v5->m_Items[17] = numDetail;
-  sub_B52920(&v5->m_Items[17]);
-  v6 = (System_String_o *)StringLiteral_742/*", priceDetail:"*/;
-  if ( StringLiteral_742/*", priceDetail:"*/ )
+  v43->m_Items[17] = numDetail;
+  sub_B5D560(&v43->m_Items[17]);
+  v44 = (System_String_o *)StringLiteral_740/*", priceDetail:"*/;
+  if ( StringLiteral_740/*", priceDetail:"*/ )
   {
-    v6 = (System_String_o *)sub_B52A44(StringLiteral_742/*", priceDetail:"*/, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(StringLiteral_740/*", priceDetail:"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
-    v26 = StringLiteral_742/*", priceDetail:"*/;
+    v64 = StringLiteral_740/*", priceDetail:"*/;
   }
   else
   {
-    v26 = 0LL;
+    v64 = 0LL;
   }
   if ( *p_max_length <= 0x12 )
     goto LABEL_101;
-  v5->m_Items[18] = (System_String_o *)v26;
-  sub_B52920(&v5->m_Items[18]);
+  v43->m_Items[18] = (System_String_o *)v64;
+  sub_B5D560(&v43->m_Items[18]);
   priceDetail = this->fields.priceDetail;
   if ( priceDetail )
   {
-    v6 = (System_String_o *)sub_B52A44(this->fields.priceDetail, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(this->fields.priceDetail, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
   }
   if ( *p_max_length <= 0x13 )
     goto LABEL_101;
-  v5->m_Items[19] = priceDetail;
-  sub_B52920(&v5->m_Items[19]);
-  v6 = (System_String_o *)StringLiteral_741/*", openAt:"*/;
-  if ( StringLiteral_741/*", openAt:"*/ )
+  v43->m_Items[19] = priceDetail;
+  sub_B5D560(&v43->m_Items[19]);
+  v44 = (System_String_o *)StringLiteral_739/*", openAt:"*/;
+  if ( StringLiteral_739/*", openAt:"*/ )
   {
-    v6 = (System_String_o *)sub_B52A44(StringLiteral_741/*", openAt:"*/, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(StringLiteral_739/*", openAt:"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
-    v28 = StringLiteral_741/*", openAt:"*/;
+    v66 = StringLiteral_739/*", openAt:"*/;
   }
   else
   {
-    v28 = 0LL;
+    v66 = 0LL;
   }
   if ( *p_max_length <= 0x14 )
     goto LABEL_101;
-  v5->m_Items[20] = (System_String_o *)v28;
-  sub_B52920(&v5->m_Items[20]);
-  v6 = System_Int64__ToString((int64_t)&this->fields.openedAt, 0LL);
-  v29 = v6;
-  if ( v6 )
+  v43->m_Items[20] = (System_String_o *)v66;
+  sub_B5D560(&v43->m_Items[20]);
+  v44 = System_Int64__ToString((int64_t)&this->fields.openedAt, 0LL);
+  v67 = v44;
+  if ( v44 )
   {
-    v6 = (System_String_o *)sub_B52A44(v6, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(v44, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
   }
   if ( *p_max_length <= 0x15 )
     goto LABEL_101;
-  v5->m_Items[21] = v29;
-  sub_B52920(&v5->m_Items[21]);
-  v6 = (System_String_o *)StringLiteral_734/*", closeAt:"*/;
-  if ( StringLiteral_734/*", closeAt:"*/ )
+  v43->m_Items[21] = v67;
+  sub_B5D560(&v43->m_Items[21]);
+  v44 = (System_String_o *)StringLiteral_732/*", closeAt:"*/;
+  if ( StringLiteral_732/*", closeAt:"*/ )
   {
-    v6 = (System_String_o *)sub_B52A44(StringLiteral_734/*", closeAt:"*/, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(StringLiteral_732/*", closeAt:"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_102;
-    v30 = StringLiteral_734/*", closeAt:"*/;
+    v68 = StringLiteral_732/*", closeAt:"*/;
   }
   else
   {
-    v30 = 0LL;
+    v68 = 0LL;
   }
   if ( *p_max_length <= 0x16 )
     goto LABEL_101;
-  v5->m_Items[22] = (System_String_o *)v30;
-  sub_B52920(&v5->m_Items[22]);
-  v6 = System_Int64__ToString((int64_t)&this->fields.closedAt, 0LL);
-  v31 = v6;
-  if ( v6 )
+  v43->m_Items[22] = (System_String_o *)v68;
+  sub_B5D560(&v43->m_Items[22]);
+  v44 = System_Int64__ToString((int64_t)&this->fields.closedAt, 0LL);
+  v69 = v44;
+  if ( v44 )
   {
-    v6 = (System_String_o *)sub_B52A44(v6, v5->obj.klass->_1.element_class);
-    if ( !v6 )
+    v44 = (System_String_o *)sub_B5D684(v44, v43->obj.klass->_1.element_class);
+    if ( !v44 )
     {
 LABEL_102:
-      v34 = sub_B52A7C();
-      sub_B52A28(v34, 0LL);
+      v72 = sub_B5D6BC();
+      sub_B5D668(v72, 0LL);
     }
   }
   if ( *p_max_length <= 0x17 )
   {
 LABEL_101:
-    v33 = sub_B52A88(v6);
-    sub_B52A28(v33, 0LL);
+    v71 = sub_B5D6C8(v44);
+    sub_B5D668(v71, 0LL);
   }
-  v5->m_Items[23] = v31;
-  sub_B52920(&v5->m_Items[23]);
-  return System_String__Concat_44648440(v5, 0LL);
+  v43->m_Items[23] = v69;
+  sub_B5D560(&v43->m_Items[23]);
+  return System_String__Concat_44657912(v43, 0LL);
 }

@@ -1,73 +1,83 @@
 void __fastcall TitleInfoEventRaidBossComponent___cctor(const MethodInfo *method)
 {
-  System_String_array **v1; // x2
-  System_String_array **v2; // x3
-  System_Boolean_array **v3; // x4
-  System_Int32_array **v4; // x5
-  System_Int32_array *v5; // x6
-  System_Int32_array *v6; // x7
+  int v1; // w1
+  System_String_array **v2; // x2
+  System_String_array **v3; // x3
+  System_Boolean_array **v4; // x4
+  System_Int32_array **v5; // x5
+  System_Int32_array *v6; // x6
+  System_Int32_array *v7; // x7
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
   BattleServantConfConponent_o *static_fields; // x0
-  System_Int32_array **v8; // x1
-  struct TitleInfoEventRaidBossComponent_StaticFields *v9; // x0
-  System_Int32_array **v10; // x1
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
-  struct TitleInfoEventRaidBossComponent_StaticFields *v17; // x0
   System_Int32_array **v18; // x1
-  System_String_array **v19; // x2
-  System_String_array **v20; // x3
-  System_Boolean_array **v21; // x4
-  System_Int32_array **v22; // x5
-  System_Int32_array *v23; // x6
-  System_Int32_array *v24; // x7
-  TitleInfoEventRaidBossComponent_c *v25; // x8
-  struct TitleInfoEventRaidBossComponent_StaticFields *v26; // x9
+  struct TitleInfoEventRaidBossComponent_StaticFields *v19; // x0
+  System_Int32_array **v20; // x1
+  System_String_array **v21; // x2
+  System_String_array **v22; // x3
+  System_Boolean_array **v23; // x4
+  System_Int32_array **v24; // x5
+  System_Int32_array *v25; // x6
+  System_Int32_array *v26; // x7
+  struct TitleInfoEventRaidBossComponent_StaticFields *v27; // x0
+  System_Int32_array **v28; // x1
+  System_String_array **v29; // x2
+  System_String_array **v30; // x3
+  System_Boolean_array **v31; // x4
+  System_Int32_array **v32; // x5
+  System_Int32_array *v33; // x6
+  System_Int32_array *v34; // x7
+  TitleInfoEventRaidBossComponent_c *v35; // x8
+  struct TitleInfoEventRaidBossComponent_StaticFields *v36; // x9
 
-  if ( (byte_42B4454 & 1) == 0 )
+  if ( (byte_42ECC22 & 1) == 0 )
   {
-    sub_B52984(&TitleInfoEventRaidBossComponent_TypeInfo);
-    sub_B52984(&StringLiteral_21858/*"raid_boss_icon_"*/);
-    sub_B52984(&StringLiteral_14557/*"TitleInfoEventRaidBossEffect_Dead"*/);
-    sub_B52984(&StringLiteral_21859/*"raid_boss_icon_last_"*/);
-    byte_42B4454 = 1;
+    sub_B5D5C4(&TitleInfoEventRaidBossComponent_TypeInfo, v1, (_DWORD)v2, v3);
+    sub_B5D5C4(&StringLiteral_21971/*"raid_boss_icon_"*/, v8, v9, v10);
+    sub_B5D5C4(&StringLiteral_14616/*"TitleInfoEventRaidBossEffect_Dead"*/, v11, v12, v13);
+    sub_B5D5C4(&StringLiteral_21972/*"raid_boss_icon_last_"*/, v14, v15, v16);
+    byte_42ECC22 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)TitleInfoEventRaidBossComponent_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_21858/*"raid_boss_icon_"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_21858/*"raid_boss_icon_"*/;
-  sub_B52920(static_fields, v8, v1, v2, v3, v4, v5, v6);
-  v9 = TitleInfoEventRaidBossComponent_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_21859/*"raid_boss_icon_last_"*/;
-  v9->RAIDBOSS_ICON_LASTBATTLE_SPNAME_PREFIX = (struct System_String_o *)StringLiteral_21859/*"raid_boss_icon_last_"*/;
-  sub_B52920(
-    (BattleServantConfConponent_o *)&v9->RAIDBOSS_ICON_LASTBATTLE_SPNAME_PREFIX,
-    v10,
-    v11,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16);
-  v17 = TitleInfoEventRaidBossComponent_TypeInfo->static_fields;
-  v18 = (System_Int32_array **)StringLiteral_14557/*"TitleInfoEventRaidBossEffect_Dead"*/;
-  v17->RAIDBOSS_CLEAR_EFFECT_PREFAB = (struct System_String_o *)StringLiteral_14557/*"TitleInfoEventRaidBossEffect_Dead"*/;
-  sub_B52920((BattleServantConfConponent_o *)&v17->RAIDBOSS_CLEAR_EFFECT_PREFAB, v18, v19, v20, v21, v22, v23, v24);
-  v25 = TitleInfoEventRaidBossComponent_TypeInfo;
-  v26 = TitleInfoEventRaidBossComponent_TypeInfo->static_fields;
-  *(_QWORD *)&v26->RAIDBOSS_ANIM_ROOT_POS.fields.x = 0x429C000000000000LL;
-  v26->RAIDBOSS_ANIM_ROOT_POS.fields.z = 0.0;
-  v25->static_fields->REST_TIME_UPDATE_INTERVAL_SEC = 1.0;
-  v25->static_fields->RAIDBOSS_DEFEAT_COUNT_POS_X = 226;
-  v25->static_fields->ANIM_DURATION_FRAME_IN_BOSS = 0.3;
-  v25->static_fields->ANIM_DURATION_HP_CUT = 0.0;
-  v25->static_fields->ANIM_DURATION_SPLIT_ALPHA = 0.5;
-  v25->static_fields->CLEAR_CALLBACK_DELAY = 1.8;
-  v25->static_fields->CLEAR_END_CALLBACK_DELAY = 0.5;
-  v25->static_fields->CLEAR_END_CALLBACK_DELAY_JUMBLE_RAID = 1.5;
-  v25->static_fields->CLEAR_END_CALLBACK_DELAY_NORMAL = 1.0;
+  v18 = (System_Int32_array **)StringLiteral_21971/*"raid_boss_icon_"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_21971/*"raid_boss_icon_"*/;
+  sub_B5D560(static_fields, v18, v2, v3, v4, v5, v6, v7);
+  v19 = TitleInfoEventRaidBossComponent_TypeInfo->static_fields;
+  v20 = (System_Int32_array **)StringLiteral_21972/*"raid_boss_icon_last_"*/;
+  v19->RAIDBOSS_ICON_LASTBATTLE_SPNAME_PREFIX = (struct System_String_o *)StringLiteral_21972/*"raid_boss_icon_last_"*/;
+  sub_B5D560(
+    (BattleServantConfConponent_o *)&v19->RAIDBOSS_ICON_LASTBATTLE_SPNAME_PREFIX,
+    v20,
+    v21,
+    v22,
+    v23,
+    v24,
+    v25,
+    v26);
+  v27 = TitleInfoEventRaidBossComponent_TypeInfo->static_fields;
+  v28 = (System_Int32_array **)StringLiteral_14616/*"TitleInfoEventRaidBossEffect_Dead"*/;
+  v27->RAIDBOSS_CLEAR_EFFECT_PREFAB = (struct System_String_o *)StringLiteral_14616/*"TitleInfoEventRaidBossEffect_Dead"*/;
+  sub_B5D560((BattleServantConfConponent_o *)&v27->RAIDBOSS_CLEAR_EFFECT_PREFAB, v28, v29, v30, v31, v32, v33, v34);
+  v35 = TitleInfoEventRaidBossComponent_TypeInfo;
+  v36 = TitleInfoEventRaidBossComponent_TypeInfo->static_fields;
+  *(_QWORD *)&v36->RAIDBOSS_ANIM_ROOT_POS.fields.x = 0x429C000000000000LL;
+  v36->RAIDBOSS_ANIM_ROOT_POS.fields.z = 0.0;
+  v35->static_fields->REST_TIME_UPDATE_INTERVAL_SEC = 1.0;
+  v35->static_fields->RAIDBOSS_DEFEAT_COUNT_POS_X = 226;
+  v35->static_fields->ANIM_DURATION_FRAME_IN_BOSS = 0.3;
+  v35->static_fields->ANIM_DURATION_HP_CUT = 0.0;
+  v35->static_fields->ANIM_DURATION_SPLIT_ALPHA = 0.5;
+  v35->static_fields->CLEAR_CALLBACK_DELAY = 1.8;
+  v35->static_fields->CLEAR_END_CALLBACK_DELAY = 0.5;
+  v35->static_fields->CLEAR_END_CALLBACK_DELAY_JUMBLE_RAID = 1.5;
+  v35->static_fields->CLEAR_END_CALLBACK_DELAY_NORMAL = 1.0;
 }
 
 
@@ -109,39 +119,47 @@ void __fastcall TitleInfoEventRaidBossComponent__DoClearCallback(
         TitleInfoEventRaidBossComponent_o *this,
         const MethodInfo *method)
 {
-  TitleInfoEventRaidBossComponent_c *v3; // x0
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  TitleInfoEventRaidBossComponent_c *v11; // x0
   float HPto; // w21
   float CLEAR_END_CALLBACK_DELAY_NORMAL; // s8
-  BalanceConfig_c *v6; // x0
-  TitleInfoEventRaidBossComponent_c *v7; // x0
+  BalanceConfig_c *v14; // x0
+  TitleInfoEventRaidBossComponent_c *v15; // x0
 
-  if ( (byte_42B444E & 1) == 0 )
+  if ( (byte_42ECC1C & 1) == 0 )
   {
-    sub_B52984(&BalanceConfig_TypeInfo);
-    sub_B52984(&TitleInfoEventRaidBossComponent_TypeInfo);
-    sub_B52984(&StringLiteral_10060/*"OnEndAnimation"*/);
-    byte_42B444E = 1;
+    sub_B5D5C4(&BalanceConfig_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&TitleInfoEventRaidBossComponent_TypeInfo, v5, v6, v7);
+    sub_B5D5C4(&StringLiteral_10102/*"OnEndAnimation"*/, v8, v9, v10);
+    byte_42ECC1C = 1;
   }
   TitleInfoEventRaidBossComponent__OnStartFadeOutAnimation(this, method);
-  v3 = TitleInfoEventRaidBossComponent_TypeInfo;
+  v11 = TitleInfoEventRaidBossComponent_TypeInfo;
   if ( (BYTE3(TitleInfoEventRaidBossComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TitleInfoEventRaidBossComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TitleInfoEventRaidBossComponent_TypeInfo);
-    v3 = TitleInfoEventRaidBossComponent_TypeInfo;
+    v11 = TitleInfoEventRaidBossComponent_TypeInfo;
   }
   HPto = this->fields.HPto;
-  CLEAR_END_CALLBACK_DELAY_NORMAL = v3->static_fields->CLEAR_END_CALLBACK_DELAY_NORMAL;
-  v6 = BalanceConfig_TypeInfo;
+  CLEAR_END_CALLBACK_DELAY_NORMAL = v11->static_fields->CLEAR_END_CALLBACK_DELAY_NORMAL;
+  v14 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v6 = BalanceConfig_TypeInfo;
+    v14 = BalanceConfig_TypeInfo;
   }
-  if ( LODWORD(HPto) == v6->static_fields->FesWarId )
+  if ( LODWORD(HPto) == v14->static_fields->FesWarId )
   {
-    v7 = TitleInfoEventRaidBossComponent_TypeInfo;
+    v15 = TitleInfoEventRaidBossComponent_TypeInfo;
     if ( *(&this->fields.isLastBattleRelease + 5) )
     {
       if ( (WORD1(TitleInfoEventRaidBossComponent_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) == 0 )
@@ -152,31 +170,31 @@ void __fastcall TitleInfoEventRaidBossComponent__DoClearCallback(
       && !TitleInfoEventRaidBossComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TitleInfoEventRaidBossComponent_TypeInfo);
-      v7 = TitleInfoEventRaidBossComponent_TypeInfo;
+      v15 = TitleInfoEventRaidBossComponent_TypeInfo;
     }
-    CLEAR_END_CALLBACK_DELAY_NORMAL = v7->static_fields->CLEAR_END_CALLBACK_DELAY;
+    CLEAR_END_CALLBACK_DELAY_NORMAL = v15->static_fields->CLEAR_END_CALLBACK_DELAY;
   }
   else if ( *(&this->fields.isLastBattleRelease + 5) )
   {
-    v7 = TitleInfoEventRaidBossComponent_TypeInfo;
+    v15 = TitleInfoEventRaidBossComponent_TypeInfo;
     if ( (BYTE3(TitleInfoEventRaidBossComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) == 0 )
     {
 LABEL_17:
-      CLEAR_END_CALLBACK_DELAY_NORMAL = v7->static_fields->CLEAR_END_CALLBACK_DELAY_JUMBLE_RAID;
+      CLEAR_END_CALLBACK_DELAY_NORMAL = v15->static_fields->CLEAR_END_CALLBACK_DELAY_JUMBLE_RAID;
       goto LABEL_22;
     }
 LABEL_15:
-    if ( !v7->_2.cctor_finished )
+    if ( !v15->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v7);
-      v7 = TitleInfoEventRaidBossComponent_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v15);
+      v15 = TitleInfoEventRaidBossComponent_TypeInfo;
     }
     goto LABEL_17;
   }
 LABEL_22:
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_10060/*"OnEndAnimation"*/,
+    (System_String_o *)StringLiteral_10102/*"OnEndAnimation"*/,
     CLEAR_END_CALLBACK_DELAY_NORMAL,
     0LL);
 }
@@ -187,66 +205,82 @@ System_String_o *__fastcall TitleInfoEventRaidBossComponent__GetAiModeName(
         int64_t totalDamage,
         const MethodInfo *method)
 {
-  TitleInfoEventRaidBossComponent___c__DisplayClass95_0_o *v5; // x21
-  __int64 v6; // x0
-  __int64 v7; // x1
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  int v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
+  int v18; // w1
+  int v19; // w2
+  __int64 v20; // x3
+  TitleInfoEventRaidBossComponent___c__DisplayClass95_0_o *v21; // x21
+  __int64 v22; // x0
+  __int64 v23; // x1
   struct UserEventRaidEntity_o *userEventRaidEntity; // x8
-  __int64 v9; // x9
+  __int64 v25; // x9
   System_Collections_Generic_IEnumerable_TSource__o *damage; // x20
-  System_Func_long__bool__o *v11; // x22
-  struct UserEventRaidEntity_o *v12; // x8
-  __int64 v13; // x8
-  System_String_o **v14; // x8
-  __int64 v16; // x0
+  System_Func_long__bool__o *v27; // x22
+  struct UserEventRaidEntity_o *v28; // x8
+  __int64 v29; // x8
+  System_String_o **v30; // x8
+  __int64 v32; // x0
 
-  if ( (byte_42B4450 & 1) == 0 )
+  if ( (byte_42ECC1E & 1) == 0 )
   {
-    sub_B52984(&Method_System_Linq_Enumerable_Count_long___);
-    sub_B52984(&Method_System_Func_long__bool___ctor__);
-    sub_B52984(&System_Func_long__bool__TypeInfo);
-    sub_B52984(&Method_TitleInfoEventRaidBossComponent___c__DisplayClass95_0__GetAiModeName_b__0__);
-    sub_B52984(&TitleInfoEventRaidBossComponent___c__DisplayClass95_0_TypeInfo);
-    sub_B52984(&StringLiteral_1/*""*/);
-    byte_42B4450 = 1;
+    sub_B5D5C4(&Method_System_Linq_Enumerable_Count_long___, totalDamage, (_DWORD)method, v3);
+    sub_B5D5C4(&Method_System_Func_long__bool___ctor__, v6, v7, v8);
+    sub_B5D5C4(&System_Func_long__bool__TypeInfo, v9, v10, v11);
+    sub_B5D5C4(&Method_TitleInfoEventRaidBossComponent___c__DisplayClass95_0__GetAiModeName_b__0__, v12, v13, v14);
+    sub_B5D5C4(&TitleInfoEventRaidBossComponent___c__DisplayClass95_0_TypeInfo, v15, v16, v17);
+    sub_B5D5C4(&StringLiteral_1/*""*/, v18, v19, v20);
+    byte_42ECC1E = 1;
   }
-  v5 = (TitleInfoEventRaidBossComponent___c__DisplayClass95_0_o *)sub_B52A54(TitleInfoEventRaidBossComponent___c__DisplayClass95_0_TypeInfo);
-  TitleInfoEventRaidBossComponent___c__DisplayClass95_0___ctor(v5, 0LL);
-  if ( !v5 )
+  v21 = (TitleInfoEventRaidBossComponent___c__DisplayClass95_0_o *)sub_B5D694(TitleInfoEventRaidBossComponent___c__DisplayClass95_0_TypeInfo);
+  TitleInfoEventRaidBossComponent___c__DisplayClass95_0___ctor(v21, 0LL);
+  if ( !v21 )
     goto LABEL_13;
-  v5->fields.totalDamage = totalDamage;
+  v21->fields.totalDamage = totalDamage;
   userEventRaidEntity = this->fields.userEventRaidEntity;
   if ( !userEventRaidEntity )
     goto LABEL_13;
-  v9 = *(_QWORD *)&userEventRaidEntity[2].fields.eventId;
-  if ( !v9 )
+  v25 = *(_QWORD *)&userEventRaidEntity[2].fields.eventId;
+  if ( !v25 )
     goto LABEL_13;
-  if ( !*(_QWORD *)(v9 + 24) )
+  if ( !*(_QWORD *)(v25 + 24) )
   {
-    v14 = (System_String_o **)&StringLiteral_1/*""*/;
-    return *v14;
+    v30 = (System_String_o **)&StringLiteral_1/*""*/;
+    return *v30;
   }
   damage = (System_Collections_Generic_IEnumerable_TSource__o *)userEventRaidEntity[2].fields.damage;
-  v11 = (System_Func_long__bool__o *)sub_B52A54(System_Func_long__bool__TypeInfo);
+  v27 = (System_Func_long__bool__o *)sub_B5D694(System_Func_long__bool__TypeInfo);
   System_Func_long__bool____ctor(
-    v11,
-    (Il2CppObject *)v5,
+    v27,
+    (Il2CppObject *)v21,
     Method_TitleInfoEventRaidBossComponent___c__DisplayClass95_0__GetAiModeName_b__0__,
-    (const MethodInfo_2BC682C *)Method_System_Func_long__bool___ctor__);
-  v6 = System_Linq_Enumerable__Count_long_(
-         damage,
-         (System_Func_TSource__bool__o *)v11,
-         (const MethodInfo_1B5F834 *)Method_System_Linq_Enumerable_Count_long___);
-  v12 = this->fields.userEventRaidEntity;
-  if ( !v12 || (v13 = *(_QWORD *)&v12[2].fields.eventId) == 0 )
+    (const MethodInfo_2C2C440 *)Method_System_Func_long__bool___ctor__);
+  v22 = System_Linq_Enumerable__Count_long_(
+          damage,
+          (System_Func_TSource__bool__o *)v27,
+          (const MethodInfo_1CA870C *)Method_System_Linq_Enumerable_Count_long___);
+  v28 = this->fields.userEventRaidEntity;
+  if ( !v28 || (v29 = *(_QWORD *)&v28[2].fields.eventId) == 0 )
 LABEL_13:
-    sub_B52A5C(v6, v7);
-  if ( (unsigned int)v6 >= *(_DWORD *)(v13 + 24) )
+    sub_B5D69C(v22, v23);
+  if ( (unsigned int)v22 >= *(_DWORD *)(v29 + 24) )
   {
-    v16 = sub_B52A88(v6);
-    sub_B52A28(v16, 0LL);
+    v32 = sub_B5D6C8(v22);
+    sub_B5D668(v32, 0LL);
   }
-  v14 = (System_String_o **)(v13 + 8LL * (int)v6 + 32);
-  return *v14;
+  v30 = (System_String_o **)(v29 + 8LL * (int)v22 + 32);
+  return *v30;
 }
 
 
@@ -255,54 +289,67 @@ UnityEngine_AnimationClip_o *__fastcall TitleInfoEventRaidBossComponent__GetClea
         UnityEngine_Animation_o *animation,
         const MethodInfo *method)
 {
-  Il2CppObject *v5; // x0
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  int v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
+  Il2CppObject *v18; // x0
   struct UserEventRaidEntity_o *userEventRaidEntity; // x8
-  Il2CppObject *v7; // x21
-  struct UserEventRaidEntity_o *v8; // x8
-  Il2CppObject *v9; // x22
-  Il2CppObject *v10; // x0
+  Il2CppObject *v20; // x21
+  struct UserEventRaidEntity_o *v21; // x8
+  Il2CppObject *v22; // x22
+  Il2CppObject *v23; // x0
   UnityEngine_Object_o *Clip; // x21
-  struct UserEventRaidEntity_o *v12; // x8
+  struct UserEventRaidEntity_o *v25; // x8
   Il2CppObject *RAIDBOSS_CLEAR_EFFECT_PREFAB; // x20
-  Il2CppObject *v14; // x0
-  System_String_o *v15; // x0
-  TitleInfoEventRaidBossComponent_c *v16; // x0
-  int v18; // [xsp+4h] [xbp-3Ch] BYREF
+  Il2CppObject *v27; // x0
+  System_String_o *v28; // x0
+  TitleInfoEventRaidBossComponent_c *v29; // x0
+  int v31; // [xsp+4h] [xbp-3Ch] BYREF
   int monitor; // [xsp+8h] [xbp-38h] BYREF
   int userId; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_42B4453 & 1) == 0 )
+  if ( (byte_42ECC21 & 1) == 0 )
   {
-    sub_B52984(&int_TypeInfo);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    sub_B52984(&TitleInfoEventRaidBossComponent_TypeInfo);
-    sub_B52984(&StringLiteral_23837/*"{0}_{1}"*/);
-    sub_B52984(&StringLiteral_23839/*"{0}_{1}_{2}"*/);
-    byte_42B4453 = 1;
+    sub_B5D5C4(&int_TypeInfo, (_DWORD)animation, (_DWORD)method, v3);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v6, v7, v8);
+    sub_B5D5C4(&TitleInfoEventRaidBossComponent_TypeInfo, v9, v10, v11);
+    sub_B5D5C4(&StringLiteral_23955/*"{0}_{1}"*/, v12, v13, v14);
+    sub_B5D5C4(&StringLiteral_23957/*"{0}_{1}_{2}"*/, v15, v16, v17);
+    byte_42ECC21 = 1;
   }
-  v5 = (Il2CppObject *)TitleInfoEventRaidBossComponent_TypeInfo;
+  v18 = (Il2CppObject *)TitleInfoEventRaidBossComponent_TypeInfo;
   if ( (BYTE3(TitleInfoEventRaidBossComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TitleInfoEventRaidBossComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TitleInfoEventRaidBossComponent_TypeInfo);
-    v5 = (Il2CppObject *)TitleInfoEventRaidBossComponent_TypeInfo;
+    v18 = (Il2CppObject *)TitleInfoEventRaidBossComponent_TypeInfo;
   }
   userEventRaidEntity = this->fields.userEventRaidEntity;
   if ( !userEventRaidEntity )
     goto LABEL_26;
-  v7 = (Il2CppObject *)*((_QWORD *)v5[11].monitor + 2);
+  v20 = (Il2CppObject *)*((_QWORD *)v18[11].monitor + 2);
   userId = userEventRaidEntity->fields.userId;
-  v5 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &userId);
-  v8 = this->fields.userEventRaidEntity;
-  if ( !v8 )
+  v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &userId);
+  v21 = this->fields.userEventRaidEntity;
+  if ( !v21 )
     goto LABEL_26;
-  v9 = v5;
-  monitor = (int)v8[1].monitor;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &monitor);
-  v5 = (Il2CppObject *)System_String__Format_44569380((System_String_o *)StringLiteral_23839/*"{0}_{1}_{2}"*/, v7, v9, v10, 0LL);
+  v22 = v18;
+  monitor = (int)v21[1].monitor;
+  v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &monitor);
+  v18 = (Il2CppObject *)System_String__Format_44578852((System_String_o *)StringLiteral_23957/*"{0}_{1}_{2}"*/, v20, v22, v23, 0LL);
   if ( !animation )
     goto LABEL_26;
-  Clip = (UnityEngine_Object_o *)UnityEngine_Animation__GetClip(animation, (System_String_o *)v5, 0LL);
+  Clip = (UnityEngine_Object_o *)UnityEngine_Animation__GetClip(animation, (System_String_o *)v18, 0LL);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -310,24 +357,24 @@ UnityEngine_AnimationClip_o *__fastcall TitleInfoEventRaidBossComponent__GetClea
   }
   if ( UnityEngine_Object__op_Equality(Clip, 0LL, 0LL) )
   {
-    v5 = (Il2CppObject *)TitleInfoEventRaidBossComponent_TypeInfo;
+    v18 = (Il2CppObject *)TitleInfoEventRaidBossComponent_TypeInfo;
     if ( (BYTE3(TitleInfoEventRaidBossComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !TitleInfoEventRaidBossComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TitleInfoEventRaidBossComponent_TypeInfo);
     }
-    v12 = this->fields.userEventRaidEntity;
-    if ( v12 )
+    v25 = this->fields.userEventRaidEntity;
+    if ( v25 )
     {
       RAIDBOSS_CLEAR_EFFECT_PREFAB = (Il2CppObject *)TitleInfoEventRaidBossComponent_TypeInfo->static_fields->RAIDBOSS_CLEAR_EFFECT_PREFAB;
-      v18 = v12->fields.userId;
-      v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v18);
-      v15 = System_String__Format_44563852(
-              (System_String_o *)StringLiteral_23837/*"{0}_{1}"*/,
+      v31 = v25->fields.userId;
+      v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v31);
+      v28 = System_String__Format_44573324(
+              (System_String_o *)StringLiteral_23955/*"{0}_{1}"*/,
               RAIDBOSS_CLEAR_EFFECT_PREFAB,
-              v14,
+              v27,
               0LL);
-      Clip = (UnityEngine_Object_o *)UnityEngine_Animation__GetClip(animation, v15, 0LL);
+      Clip = (UnityEngine_Object_o *)UnityEngine_Animation__GetClip(animation, v28, 0LL);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
@@ -335,19 +382,19 @@ UnityEngine_AnimationClip_o *__fastcall TitleInfoEventRaidBossComponent__GetClea
       }
       if ( UnityEngine_Object__op_Equality(Clip, 0LL, 0LL) )
       {
-        v16 = TitleInfoEventRaidBossComponent_TypeInfo;
+        v29 = TitleInfoEventRaidBossComponent_TypeInfo;
         if ( (BYTE3(TitleInfoEventRaidBossComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !TitleInfoEventRaidBossComponent_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(TitleInfoEventRaidBossComponent_TypeInfo);
-          v16 = TitleInfoEventRaidBossComponent_TypeInfo;
+          v29 = TitleInfoEventRaidBossComponent_TypeInfo;
         }
-        return UnityEngine_Animation__GetClip(animation, v16->static_fields->RAIDBOSS_CLEAR_EFFECT_PREFAB, 0LL);
+        return UnityEngine_Animation__GetClip(animation, v29->static_fields->RAIDBOSS_CLEAR_EFFECT_PREFAB, 0LL);
       }
       return (UnityEngine_AnimationClip_o *)Clip;
     }
 LABEL_26:
-    sub_B52A5C(v5, animation);
+    sub_B5D69C(v18, animation);
   }
   return (UnityEngine_AnimationClip_o *)Clip;
 }
@@ -358,58 +405,74 @@ UnityEngine_GameObject_o *__fastcall TitleInfoEventRaidBossComponent__GetClearBo
         AssetData_o *mapAssetData,
         const MethodInfo *method)
 {
-  Il2CppObject *v5; // x0
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  int v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
+  int v18; // w1
+  int v19; // w2
+  __int64 v20; // x3
+  Il2CppObject *v21; // x0
   struct UserEventRaidEntity_o *userEventRaidEntity; // x8
-  Il2CppObject *v7; // x21
-  struct UserEventRaidEntity_o *v8; // x8
-  Il2CppObject *v9; // x22
-  Il2CppObject *v10; // x0
+  Il2CppObject *v23; // x21
+  struct UserEventRaidEntity_o *v24; // x8
+  Il2CppObject *v25; // x22
+  Il2CppObject *v26; // x0
   UnityEngine_Object_o *Object_WarBoardWaitTimeSetting; // x21
-  struct UserEventRaidEntity_o *v12; // x8
+  struct UserEventRaidEntity_o *v28; // x8
   Il2CppObject *RAIDBOSS_CLEAR_EFFECT_PREFAB; // x20
-  Il2CppObject *v14; // x0
-  System_String_o *v15; // x0
-  TitleInfoEventRaidBossComponent_c *v16; // x0
-  int v18; // [xsp+Ch] [xbp-44h] BYREF
+  Il2CppObject *v30; // x0
+  System_String_o *v31; // x0
+  TitleInfoEventRaidBossComponent_c *v32; // x0
+  int v34; // [xsp+Ch] [xbp-44h] BYREF
   int monitor; // [xsp+18h] [xbp-38h] BYREF
   int userId; // [xsp+1Ch] [xbp-34h] BYREF
 
-  if ( (byte_42B4452 & 1) == 0 )
+  if ( (byte_42ECC20 & 1) == 0 )
   {
-    sub_B52984(&Method_AssetData_GetObject_GameObject____68579952);
-    sub_B52984(&int_TypeInfo);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    sub_B52984(&TitleInfoEventRaidBossComponent_TypeInfo);
-    sub_B52984(&StringLiteral_23837/*"{0}_{1}"*/);
-    sub_B52984(&StringLiteral_23839/*"{0}_{1}_{2}"*/);
-    byte_42B4452 = 1;
+    sub_B5D5C4(&Method_AssetData_GetObject_GameObject____68807504, (_DWORD)mapAssetData, (_DWORD)method, v3);
+    sub_B5D5C4(&int_TypeInfo, v6, v7, v8);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v9, v10, v11);
+    sub_B5D5C4(&TitleInfoEventRaidBossComponent_TypeInfo, v12, v13, v14);
+    sub_B5D5C4(&StringLiteral_23955/*"{0}_{1}"*/, v15, v16, v17);
+    sub_B5D5C4(&StringLiteral_23957/*"{0}_{1}_{2}"*/, v18, v19, v20);
+    byte_42ECC20 = 1;
   }
-  v5 = (Il2CppObject *)TitleInfoEventRaidBossComponent_TypeInfo;
+  v21 = (Il2CppObject *)TitleInfoEventRaidBossComponent_TypeInfo;
   if ( (BYTE3(TitleInfoEventRaidBossComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TitleInfoEventRaidBossComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TitleInfoEventRaidBossComponent_TypeInfo);
-    v5 = (Il2CppObject *)TitleInfoEventRaidBossComponent_TypeInfo;
+    v21 = (Il2CppObject *)TitleInfoEventRaidBossComponent_TypeInfo;
   }
   userEventRaidEntity = this->fields.userEventRaidEntity;
   if ( !userEventRaidEntity )
     goto LABEL_26;
-  v7 = (Il2CppObject *)*((_QWORD *)v5[11].monitor + 2);
+  v23 = (Il2CppObject *)*((_QWORD *)v21[11].monitor + 2);
   userId = userEventRaidEntity->fields.userId;
-  v5 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &userId);
-  v8 = this->fields.userEventRaidEntity;
-  if ( !v8 )
+  v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &userId);
+  v24 = this->fields.userEventRaidEntity;
+  if ( !v24 )
     goto LABEL_26;
-  v9 = v5;
-  monitor = (int)v8[1].monitor;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &monitor);
-  v5 = (Il2CppObject *)System_String__Format_44569380((System_String_o *)StringLiteral_23839/*"{0}_{1}_{2}"*/, v7, v9, v10, 0LL);
+  v25 = v21;
+  monitor = (int)v24[1].monitor;
+  v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &monitor);
+  v21 = (Il2CppObject *)System_String__Format_44578852((System_String_o *)StringLiteral_23957/*"{0}_{1}_{2}"*/, v23, v25, v26, 0LL);
   if ( !mapAssetData )
     goto LABEL_26;
   Object_WarBoardWaitTimeSetting = (UnityEngine_Object_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                              mapAssetData,
-                                                             (System_String_o *)v5,
-                                                             (const MethodInfo_1A3B904 *)Method_AssetData_GetObject_GameObject____68579952);
+                                                             (System_String_o *)v21,
+                                                             (const MethodInfo_1AD09CC *)Method_AssetData_GetObject_GameObject____68807504);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -417,27 +480,27 @@ UnityEngine_GameObject_o *__fastcall TitleInfoEventRaidBossComponent__GetClearBo
   }
   if ( UnityEngine_Object__op_Equality(Object_WarBoardWaitTimeSetting, 0LL, 0LL) )
   {
-    v5 = (Il2CppObject *)TitleInfoEventRaidBossComponent_TypeInfo;
+    v21 = (Il2CppObject *)TitleInfoEventRaidBossComponent_TypeInfo;
     if ( (BYTE3(TitleInfoEventRaidBossComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !TitleInfoEventRaidBossComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TitleInfoEventRaidBossComponent_TypeInfo);
     }
-    v12 = this->fields.userEventRaidEntity;
-    if ( v12 )
+    v28 = this->fields.userEventRaidEntity;
+    if ( v28 )
     {
       RAIDBOSS_CLEAR_EFFECT_PREFAB = (Il2CppObject *)TitleInfoEventRaidBossComponent_TypeInfo->static_fields->RAIDBOSS_CLEAR_EFFECT_PREFAB;
-      v18 = v12->fields.userId;
-      v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v18);
-      v15 = System_String__Format_44563852(
-              (System_String_o *)StringLiteral_23837/*"{0}_{1}"*/,
+      v34 = v28->fields.userId;
+      v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v34);
+      v31 = System_String__Format_44573324(
+              (System_String_o *)StringLiteral_23955/*"{0}_{1}"*/,
               RAIDBOSS_CLEAR_EFFECT_PREFAB,
-              v14,
+              v30,
               0LL);
       Object_WarBoardWaitTimeSetting = (UnityEngine_Object_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                  mapAssetData,
-                                                                 v15,
-                                                                 (const MethodInfo_1A3B904 *)Method_AssetData_GetObject_GameObject____68579952);
+                                                                 v31,
+                                                                 (const MethodInfo_1AD09CC *)Method_AssetData_GetObject_GameObject____68807504);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
@@ -445,22 +508,22 @@ UnityEngine_GameObject_o *__fastcall TitleInfoEventRaidBossComponent__GetClearBo
       }
       if ( UnityEngine_Object__op_Equality(Object_WarBoardWaitTimeSetting, 0LL, 0LL) )
       {
-        v16 = TitleInfoEventRaidBossComponent_TypeInfo;
+        v32 = TitleInfoEventRaidBossComponent_TypeInfo;
         if ( (BYTE3(TitleInfoEventRaidBossComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !TitleInfoEventRaidBossComponent_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(TitleInfoEventRaidBossComponent_TypeInfo);
-          v16 = TitleInfoEventRaidBossComponent_TypeInfo;
+          v32 = TitleInfoEventRaidBossComponent_TypeInfo;
         }
         return (UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                              mapAssetData,
-                                             v16->static_fields->RAIDBOSS_CLEAR_EFFECT_PREFAB,
-                                             (const MethodInfo_1A3B904 *)Method_AssetData_GetObject_GameObject____68579952);
+                                             v32->static_fields->RAIDBOSS_CLEAR_EFFECT_PREFAB,
+                                             (const MethodInfo_1AD09CC *)Method_AssetData_GetObject_GameObject____68807504);
       }
       return (UnityEngine_GameObject_o *)Object_WarBoardWaitTimeSetting;
     }
 LABEL_26:
-    sub_B52A5C(v5, mapAssetData);
+    sub_B5D69C(v21, mapAssetData);
   }
   return (UnityEngine_GameObject_o *)Object_WarBoardWaitTimeSetting;
 }
@@ -497,41 +560,46 @@ int64_t __fastcall TitleInfoEventRaidBossComponent__GetRaidBossTotalDamage(
         TitleInfoEventRaidBossComponent_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
   int64_t result; // x0
-  __int64 v4; // x1
+  __int64 v9; // x1
   struct UserEventRaidEntity_o *userEventRaidEntity; // x8
-  bool v6; // w8
-  struct UserEventRaidEntity_o *v7; // x8
+  bool v11; // w8
+  struct UserEventRaidEntity_o *v12; // x8
   int64_t klass; // x8
   TotalEventRaidEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_42B4444 & 1) == 0 )
+  if ( (byte_42ECC12 & 1) == 0 )
   {
-    sub_B52984(&Method_DataManager_GetMaster_TotalEventRaidMaster___);
-    sub_B52984(&DataManager_TypeInfo);
-    byte_42B4444 = 1;
+    sub_B5D5C4(&Method_DataManager_GetMaster_TotalEventRaidMaster___, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&DataManager_TypeInfo, v5, v6, v7);
+    byte_42ECC12 = 1;
   }
   entity = 0LL;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  result = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_TotalEventRaidMaster___);
+  result = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1AE41EC *)Method_DataManager_GetMaster_TotalEventRaidMaster___);
   userEventRaidEntity = this->fields.userEventRaidEntity;
   if ( !userEventRaidEntity || !result )
     goto LABEL_15;
-  v6 = TotalEventRaidMaster__TryGetEntity(
-         (TotalEventRaidMaster_o *)result,
-         &entity,
-         (int32_t)this->fields.eventRaidEntity,
-         HIDWORD(userEventRaidEntity->fields.userId),
-         0LL);
+  v11 = TotalEventRaidMaster__TryGetEntity(
+          (TotalEventRaidMaster_o *)result,
+          &entity,
+          (int32_t)this->fields.eventRaidEntity,
+          HIDWORD(userEventRaidEntity->fields.userId),
+          0LL);
   result = 0LL;
-  if ( !v6 )
+  if ( !v11 )
     return result;
-  v7 = this->fields.userEventRaidEntity;
-  if ( !v7 || !entity )
+  v12 = this->fields.userEventRaidEntity;
+  if ( !v12 || !entity )
 LABEL_15:
-    sub_B52A5C(result, v4);
-  klass = (int64_t)v7[1].klass;
+    sub_B5D69C(result, v9);
+  klass = (int64_t)v12[1].klass;
   if ( klass <= entity->fields.totalDamage )
     return klass;
   else
@@ -545,52 +613,73 @@ System_String_o *__fastcall TitleInfoEventRaidBossComponent__GetRestCountText(
         int64_t totalDamage,
         const MethodInfo *method)
 {
-  EventBossStatusUiEntity_o *v7; // x0
+  int v7; // w1
+  int v8; // w2
+  __int64 v9; // x3
+  int v10; // w1
+  int v11; // w2
+  __int64 v12; // x3
+  int v13; // w1
+  int v14; // w2
+  __int64 v15; // x3
+  int v16; // w1
+  int v17; // w2
+  __int64 v18; // x3
+  int v19; // w1
+  int v20; // w2
+  __int64 v21; // x3
+  int v22; // w1
+  int v23; // w2
+  __int64 v24; // x3
+  int v25; // w1
+  int v26; // w2
+  __int64 v27; // x3
+  EventBossStatusUiEntity_o *v28; // x0
   System_String_o *CountFormat; // x22
-  System_String_o *v9; // x21
-  System_Text_StringBuilder_o *v10; // x20
-  __int64 v11; // x0
-  __int64 v12; // x1
-  System_String_o *v13; // x21
-  Il2CppObject *v14; // x0
-  System_String_o *v15; // x0
-  System_String_o *v17; // x19
-  Il2CppObject *NumberFormat_34073440; // x1
-  System_String_o *v19; // x0
-  System_String_o *v20; // x19
-  System_String_o *v21; // x19
-  System_String_o *v22; // x19
-  int64_t v23; // [xsp+0h] [xbp-30h] BYREF
-  int64_t v24; // [xsp+8h] [xbp-28h] BYREF
+  System_String_o *v30; // x21
+  System_Text_StringBuilder_o *v31; // x20
+  __int64 v32; // x0
+  __int64 v33; // x1
+  System_String_o *v34; // x21
+  Il2CppObject *v35; // x0
+  System_String_o *v36; // x0
+  System_String_o *v38; // x19
+  Il2CppObject *NumberFormat_34103284; // x1
+  System_String_o *v40; // x0
+  System_String_o *v41; // x19
+  System_String_o *v42; // x19
+  System_String_o *v43; // x19
+  int64_t v44; // [xsp+0h] [xbp-30h] BYREF
+  int64_t v45; // [xsp+8h] [xbp-28h] BYREF
 
-  v24 = totalHp;
-  if ( (byte_42B4451 & 1) == 0 )
+  v45 = totalHp;
+  if ( (byte_42ECC1F & 1) == 0 )
   {
-    sub_B52984(&long_TypeInfo);
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&System_Text_StringBuilder_TypeInfo);
-    sub_B52984(&StringLiteral_5729/*"EVENT_RAID_REST_COUNT_AFTER"*/);
-    sub_B52984(&StringLiteral_5730/*"EVENT_RAID_REST_COUNT_BEFORE"*/);
-    sub_B52984(&StringLiteral_81/*" "*/);
-    sub_B52984(&StringLiteral_5666/*"EVENT_DEFEAT_COUNT_TXT"*/);
-    sub_B52984(&StringLiteral_13520/*"TITLE_INFO_RAID_TOTALHP"*/);
-    byte_42B4451 = 1;
+    sub_B5D5C4(&long_TypeInfo, totalHp, totalDamage, method);
+    sub_B5D5C4(&LocalizationManager_TypeInfo, v7, v8, v9);
+    sub_B5D5C4(&System_Text_StringBuilder_TypeInfo, v10, v11, v12);
+    sub_B5D5C4(&StringLiteral_5764/*"EVENT_RAID_REST_COUNT_AFTER"*/, v13, v14, v15);
+    sub_B5D5C4(&StringLiteral_5765/*"EVENT_RAID_REST_COUNT_BEFORE"*/, v16, v17, v18);
+    sub_B5D5C4(&StringLiteral_81/*" "*/, v19, v20, v21);
+    sub_B5D5C4(&StringLiteral_5701/*"EVENT_DEFEAT_COUNT_TXT"*/, v22, v23, v24);
+    sub_B5D5C4(&StringLiteral_13579/*"TITLE_INFO_RAID_TOTALHP"*/, v25, v26, v27);
+    byte_42ECC1F = 1;
   }
-  v7 = *(EventBossStatusUiEntity_o **)&this->fields.restTimeUpdateSec;
-  if ( v7 )
+  v28 = *(EventBossStatusUiEntity_o **)&this->fields.restTimeUpdateSec;
+  if ( v28 )
   {
-    CountFormat = EventBossStatusUiEntity__GetCountFormat(v7, 0LL);
+    CountFormat = EventBossStatusUiEntity__GetCountFormat(v28, 0LL);
     if ( !System_String__IsNullOrEmpty(CountFormat, 0LL) )
     {
-      v17 = System_Int64__ToString((int64_t)&v24, 0LL);
+      v38 = System_Int64__ToString((int64_t)&v45, 0LL);
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      NumberFormat_34073440 = (Il2CppObject *)LocalizationManager__GetNumberFormat_34073440(v17, 0LL);
-      v19 = CountFormat;
-      return System_String__Format(v19, NumberFormat_34073440, 0LL);
+      NumberFormat_34103284 = (Il2CppObject *)LocalizationManager__GetNumberFormat_34103284(v38, 0LL);
+      v40 = CountFormat;
+      return System_String__Format(v40, NumberFormat_34103284, 0LL);
     }
   }
   if ( !*(&this->fields.isLastBattleRelease + 5) && !LOBYTE(this->fields.hpBarSplitters) )
@@ -602,44 +691,44 @@ System_String_o *__fastcall TitleInfoEventRaidBossComponent__GetRestCountText(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v22 = LocalizationManager__Get((System_String_o *)StringLiteral_5666/*"EVENT_DEFEAT_COUNT_TXT"*/, 0LL);
-      v23 = totalDamage;
-      NumberFormat_34073440 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v23);
-      v19 = v22;
+      v43 = LocalizationManager__Get((System_String_o *)StringLiteral_5701/*"EVENT_DEFEAT_COUNT_TXT"*/, 0LL);
+      v44 = totalDamage;
+      NumberFormat_34103284 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v44);
+      v40 = v43;
     }
     else
     {
-      v20 = System_Int64__ToString((int64_t)&v24, 0LL);
+      v41 = System_Int64__ToString((int64_t)&v45, 0LL);
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v21 = LocalizationManager__GetNumberFormat_34073440(v20, 0LL);
-      v19 = LocalizationManager__Get((System_String_o *)StringLiteral_13520/*"TITLE_INFO_RAID_TOTALHP"*/, 0LL);
-      NumberFormat_34073440 = (Il2CppObject *)v21;
+      v42 = LocalizationManager__GetNumberFormat_34103284(v41, 0LL);
+      v40 = LocalizationManager__Get((System_String_o *)StringLiteral_13579/*"TITLE_INFO_RAID_TOTALHP"*/, 0LL);
+      NumberFormat_34103284 = (Il2CppObject *)v42;
     }
-    return System_String__Format(v19, NumberFormat_34073440, 0LL);
+    return System_String__Format(v40, NumberFormat_34103284, 0LL);
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5730/*"EVENT_RAID_REST_COUNT_BEFORE"*/, 0LL);
-  v10 = (System_Text_StringBuilder_o *)sub_B52A54(System_Text_StringBuilder_TypeInfo);
-  System_Text_StringBuilder___ctor_42988220(v10, v9, 0LL);
-  if ( !v10 )
-    sub_B52A5C(v11, v12);
-  System_Text_StringBuilder__Append_42994048(v10, (System_String_o *)StringLiteral_81/*" "*/, 0LL);
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5729/*"EVENT_RAID_REST_COUNT_AFTER"*/, 0LL);
-  v23 = totalHp;
-  v14 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v23);
-  v15 = System_String__Format(v13, v14, 0LL);
-  System_Text_StringBuilder__Append_42994048(v10, v15, 0LL);
-  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v10->klass->vtable._3_ToString.method)(
-                              v10,
-                              v10->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_5765/*"EVENT_RAID_REST_COUNT_BEFORE"*/, 0LL);
+  v31 = (System_Text_StringBuilder_o *)sub_B5D694(System_Text_StringBuilder_TypeInfo);
+  System_Text_StringBuilder___ctor_42947916(v31, v30, 0LL);
+  if ( !v31 )
+    sub_B5D69C(v32, v33);
+  System_Text_StringBuilder__Append_42953744(v31, (System_String_o *)StringLiteral_81/*" "*/, 0LL);
+  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_5764/*"EVENT_RAID_REST_COUNT_AFTER"*/, 0LL);
+  v44 = totalHp;
+  v35 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v44);
+  v36 = System_String__Format(v34, v35, 0LL);
+  System_Text_StringBuilder__Append_42953744(v31, v36, 0LL);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v31->klass->vtable._3_ToString.method)(
+                              v31,
+                              v31->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
 }
 
 
@@ -696,7 +785,7 @@ bool __fastcall TitleInfoEventRaidBossComponent__IsJumbleSingleRaidLastBattle(
 
   userEventRaidEntity = (EventRaidEntity_o *)this->fields.userEventRaidEntity;
   if ( !userEventRaidEntity )
-    sub_B52A5C(0LL, method);
+    sub_B5D69C(0LL, method);
   return EventRaidEntity__IsJumbleSingleRaid(userEventRaidEntity, 0LL) && BYTE2(this->fields.hpBarSplitters) != 0;
 }
 
@@ -708,17 +797,23 @@ bool __fastcall TitleInfoEventRaidBossComponent__IsPlayClearAnimation(
         bool isJumbleSingleRaid,
         const MethodInfo *method)
 {
+  int v7; // w1
+  char v8; // w2
+  __int64 v9; // x3
+  int v10; // w1
+  char v11; // w2
+  __int64 v12; // x3
   clsQuestCheck_o *userEventRaidEntity; // x0
-  struct UserEventRaidEntity_o *v8; // x8
+  struct UserEventRaidEntity_o *v14; // x8
   int32_t eventRaidEntity; // w19
   int32_t userId_high; // w20
 
-  if ( (byte_42B444C & 1) == 0 )
+  if ( (byte_42ECC1A & 1) == 0 )
   {
-    sub_B52984(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
-    sub_B52984(&SingletonTemplate_clsQuestCheck__TypeInfo);
-    sub_B52984(&TerminalPramsManager_TypeInfo);
-    byte_42B444C = 1;
+    sub_B5D5C4(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, raidDeadQuestId, isJumbleSingleRaid, method);
+    sub_B5D5C4(&SingletonTemplate_clsQuestCheck__TypeInfo, v7, v8, v9);
+    sub_B5D5C4(&TerminalPramsManager_TypeInfo, v10, v11, v12);
+    byte_42ECC1A = 1;
   }
   userEventRaidEntity = (clsQuestCheck_o *)this->fields.userEventRaidEntity;
   if ( !userEventRaidEntity )
@@ -734,12 +829,12 @@ bool __fastcall TitleInfoEventRaidBossComponent__IsPlayClearAnimation(
     {
       j_il2cpp_runtime_class_init_0(SingletonTemplate_clsQuestCheck__TypeInfo);
     }
-    userEventRaidEntity = SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2B76134 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    userEventRaidEntity = SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2A301E4 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
     if ( userEventRaidEntity )
       return clsQuestCheck__IsQuestClear(userEventRaidEntity, raidDeadQuestId, 0, 0LL)
           || *(&this->fields.isLastBattleRelease + 5);
 LABEL_24:
-    sub_B52A5C(userEventRaidEntity, *(_QWORD *)&raidDeadQuestId);
+    sub_B5D69C(userEventRaidEntity, *(_QWORD *)&raidDeadQuestId);
   }
   userEventRaidEntity = (clsQuestCheck_o *)this->fields.userEventRaidEntity;
   if ( !userEventRaidEntity )
@@ -749,11 +844,11 @@ LABEL_24:
                                              0LL);
   if ( ((unsigned __int8)userEventRaidEntity & 1) == 0 )
     return 0;
-  v8 = this->fields.userEventRaidEntity;
-  if ( !v8 )
+  v14 = this->fields.userEventRaidEntity;
+  if ( !v14 )
     goto LABEL_24;
   eventRaidEntity = (int32_t)this->fields.eventRaidEntity;
-  userId_high = HIDWORD(v8->fields.userId);
+  userId_high = HIDWORD(v14->fields.userId);
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
@@ -773,7 +868,7 @@ bool __fastcall TitleInfoEventRaidBossComponent__IsTargetRaid(
 
   userEventRaidEntity = this->fields.userEventRaidEntity;
   if ( !userEventRaidEntity )
-    sub_B52A5C(this, eventId);
+    sub_B5D69C(this, eventId);
   return LODWORD(userEventRaidEntity->fields.userId) == eventId && HIDWORD(userEventRaidEntity->fields.userId) == day;
 }
 
@@ -801,7 +896,7 @@ void __fastcall TitleInfoEventRaidBossComponent__OnEndAnimation(
 
   onClearCall = this->fields.onClearCall;
   this->fields.onClearCall = 0LL;
-  sub_B52920((BattleServantConfConponent_o *)&this->fields.onClearCall, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B5D560((BattleServantConfConponent_o *)&this->fields.onClearCall, 0LL, v2, v3, v4, v5, v6, v7);
   ActionExtensions__Call(onClearCall, 0LL);
   TitleInfoEventRaidBossComponent__SetDisp(this, v10);
 }
@@ -817,35 +912,43 @@ void __fastcall TitleInfoEventRaidBossComponent__OnStartFadeOutAnimation(
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
   System_Action_o *splitHpEffect; // x20
-  __int64 v10; // x1
+  __int64 v16; // x1
+  int v17; // w2
+  __int64 v18; // x3
   _BYTE *hpFrame; // x0
   struct UserEventRaidEntity_o *userEventRaidEntity; // x8
   int32_t eventRaidEntity; // w20
   int32_t userId_high; // w21
   UnityEngine_GameObject_o *gameObject; // x19
-  TitleInfoEventRaidBossComponent_c *v16; // x8
+  TitleInfoEventRaidBossComponent_c *v24; // x8
 
-  if ( (byte_42B444F & 1) == 0 )
+  if ( (byte_42ECC1D & 1) == 0 )
   {
-    sub_B52984(&TerminalPramsManager_TypeInfo);
-    sub_B52984(&TitleInfoEventRaidBossComponent_TypeInfo);
-    sub_B52984(&Method_UITweener_Begin_TweenAlpha___);
-    byte_42B444F = 1;
+    sub_B5D5C4(&TerminalPramsManager_TypeInfo, (_DWORD)method, (_DWORD)v2, v3);
+    sub_B5D5C4(&TitleInfoEventRaidBossComponent_TypeInfo, v9, v10, v11);
+    sub_B5D5C4(&Method_UITweener_Begin_TweenAlpha___, v12, v13, v14);
+    byte_42ECC1D = 1;
   }
   splitHpEffect = (System_Action_o *)this->fields.splitHpEffect;
   this->fields.splitHpEffect = 0LL;
-  sub_B52920((BattleServantConfConponent_o *)&this->fields.splitHpEffect, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B5D560((BattleServantConfConponent_o *)&this->fields.splitHpEffect, 0LL, v2, v3, v4, v5, v6, v7);
   ActionExtensions__Call(splitHpEffect, 0LL);
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   }
-  if ( !byte_42AD1B5 )
+  if ( !byte_42E5CEC )
   {
-    sub_B52984(&TerminalPramsManager_TypeInfo);
-    byte_42AD1B5 = 1;
+    sub_B5D5C4(&TerminalPramsManager_TypeInfo, v16, v17, v18);
+    byte_42E5CEC = 1;
   }
   hpFrame = TerminalPramsManager_TypeInfo;
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -877,20 +980,20 @@ void __fastcall TitleInfoEventRaidBossComponent__OnStartFadeOutAnimation(
   if ( !hpFrame )
     goto LABEL_26;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hpFrame, 0LL);
-  v16 = TitleInfoEventRaidBossComponent_TypeInfo;
+  v24 = TitleInfoEventRaidBossComponent_TypeInfo;
   if ( (BYTE3(TitleInfoEventRaidBossComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TitleInfoEventRaidBossComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TitleInfoEventRaidBossComponent_TypeInfo);
-    v16 = TitleInfoEventRaidBossComponent_TypeInfo;
+    v24 = TitleInfoEventRaidBossComponent_TypeInfo;
   }
   hpFrame = UITweener__Begin_TweenWidth_(
               gameObject,
-              v16->static_fields->ANIM_DURATION_SPLIT_ALPHA,
-              (const MethodInfo_1F7CFF8 *)Method_UITweener_Begin_TweenAlpha___);
+              v24->static_fields->ANIM_DURATION_SPLIT_ALPHA,
+              (const MethodInfo_1E72118 *)Method_UITweener_Begin_TweenAlpha___);
   if ( !hpFrame )
 LABEL_26:
-    sub_B52A5C(hpFrame, v10);
+    sub_B5D69C(hpFrame, v16);
   *((_DWORD *)hpFrame + 6) = 1;
   *((_QWORD *)hpFrame + 15) = 1065353216LL;
 }
@@ -900,36 +1003,44 @@ void __fastcall TitleInfoEventRaidBossComponent__PlayFrameInBoss(
         TitleInfoEventRaidBossComponent_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
   UnityEngine_GameObject_o *gameObject; // x0
   char *Child; // x0
-  __int64 v5; // x1
-  UnityEngine_GameObject_o *v6; // x20
-  TitleInfoEventRaidBossComponent_c *v7; // x8
-  char *v8; // x20
+  __int64 v13; // x1
+  UnityEngine_GameObject_o *v14; // x20
+  TitleInfoEventRaidBossComponent_c *v15; // x8
+  char *v16; // x20
   float32x2_t *static_fields; // x8
-  float v10; // s1
+  float v18; // s1
   int animEndCall; // w9
-  System_Int32_array **v12; // x0
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
-  System_Int32_array **v19; // x1
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
+  System_Int32_array **v20; // x0
+  System_String_array **v21; // x2
+  System_String_array **v22; // x3
+  System_Boolean_array **v23; // x4
+  System_Int32_array **v24; // x5
+  System_Int32_array *v25; // x6
+  System_Int32_array *v26; // x7
+  System_Int32_array **v27; // x1
+  System_String_array **v28; // x2
+  System_String_array **v29; // x3
+  System_Boolean_array **v30; // x4
+  System_Int32_array **v31; // x5
+  System_Int32_array *v32; // x6
+  System_Int32_array *v33; // x7
 
-  if ( (byte_42B4449 & 1) == 0 )
+  if ( (byte_42ECC17 & 1) == 0 )
   {
-    sub_B52984(&TitleInfoEventRaidBossComponent_TypeInfo);
-    sub_B52984(&Method_UITweener_Begin_TweenPosition___);
-    sub_B52984(&StringLiteral_10759/*"PlayHpNameAlpha"*/);
-    byte_42B4449 = 1;
+    sub_B5D5C4(&TitleInfoEventRaidBossComponent_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_UITweener_Begin_TweenPosition___, v5, v6, v7);
+    sub_B5D5C4(&StringLiteral_10805/*"PlayHpNameAlpha"*/, v8, v9, v10);
+    byte_42ECC17 = 1;
   }
   if ( *(&this->fields.isLastBattleRelease + 5) || LOBYTE(this->fields.hpBarSplitters) )
   {
@@ -942,36 +1053,36 @@ void __fastcall TitleInfoEventRaidBossComponent__PlayFrameInBoss(
       goto LABEL_13;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Child, 1, 0LL);
   }
-  v6 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  v7 = TitleInfoEventRaidBossComponent_TypeInfo;
+  v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  v15 = TitleInfoEventRaidBossComponent_TypeInfo;
   if ( (BYTE3(TitleInfoEventRaidBossComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TitleInfoEventRaidBossComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TitleInfoEventRaidBossComponent_TypeInfo);
-    v7 = TitleInfoEventRaidBossComponent_TypeInfo;
+    v15 = TitleInfoEventRaidBossComponent_TypeInfo;
   }
   Child = (char *)UITweener__Begin_TweenWidth_(
-                    v6,
-                    v7->static_fields->ANIM_DURATION_FRAME_IN_BOSS,
-                    (const MethodInfo_1F7CFF8 *)Method_UITweener_Begin_TweenPosition___);
+                    v14,
+                    v15->static_fields->ANIM_DURATION_FRAME_IN_BOSS,
+                    (const MethodInfo_1E72118 *)Method_UITweener_Begin_TweenPosition___);
   if ( !Child )
 LABEL_13:
-    sub_B52A5C(Child, v5);
-  v8 = Child;
+    sub_B5D69C(Child, v13);
+  v16 = Child;
   static_fields = (float32x2_t *)TitleInfoEventRaidBossComponent_TypeInfo->static_fields;
-  v10 = *(float *)&this->fields.animEndCall + static_fields[4].n64_f32[0];
+  v18 = *(float *)&this->fields.animEndCall + static_fields[4].n64_f32[0];
   *((float32x2_t *)Child + 15) = vadd_f32(*(float32x2_t *)&this->fields.originPos.fields.z, static_fields[3]);
-  *((float *)Child + 32) = v10;
+  *((float *)Child + 32) = v18;
   animEndCall = (int)this->fields.animEndCall;
   *(_QWORD *)(Child + 132) = *(_QWORD *)&this->fields.originPos.fields.z;
   *((_DWORD *)Child + 35) = animEndCall;
   *((_DWORD *)Child + 6) = 2;
-  v12 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  *((_QWORD *)v8 + 9) = v12;
-  sub_B52920((BattleServantConfConponent_o *)(v8 + 72), v12, v13, v14, v15, v16, v17, v18);
-  v19 = (System_Int32_array **)StringLiteral_10759/*"PlayHpNameAlpha"*/;
-  *((_QWORD *)v8 + 10) = StringLiteral_10759/*"PlayHpNameAlpha"*/;
-  sub_B52920((BattleServantConfConponent_o *)(v8 + 80), v19, v20, v21, v22, v23, v24, v25);
+  v20 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  *((_QWORD *)v16 + 9) = v20;
+  sub_B5D560((BattleServantConfConponent_o *)(v16 + 72), v20, v21, v22, v23, v24, v25, v26);
+  v27 = (System_Int32_array **)StringLiteral_10805/*"PlayHpNameAlpha"*/;
+  *((_QWORD *)v16 + 10) = StringLiteral_10805/*"PlayHpNameAlpha"*/;
+  sub_B5D560((BattleServantConfConponent_o *)(v16 + 80), v27, v28, v29, v30, v31, v32, v33);
 }
 
 
@@ -979,83 +1090,100 @@ void __fastcall TitleInfoEventRaidBossComponent__PlayHpCut(
         TitleInfoEventRaidBossComponent_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  int v17; // w1
+  int v18; // w2
+  __int64 v19; // x3
   UnityEngine_GameObject_o *gameObject; // x0
   UIWidget_o *Component_UIWidget; // x20
-  TitleInfoEventRaidBossComponent_c *v5; // x8
-  TitleInfoEventRaidBossComponent___c_c *v6; // x0
+  TitleInfoEventRaidBossComponent_c *v22; // x8
+  TitleInfoEventRaidBossComponent___c_c *v23; // x0
   float ANIM_DURATION_HP_CUT; // s8
   struct TitleInfoEventRaidBossComponent___c_StaticFields *static_fields; // x8
   System_Action_o *_9__87_0; // x21
-  Il2CppObject *v10; // x22
-  struct TitleInfoEventRaidBossComponent___c_StaticFields *v11; // x0
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
-  System_Action_o *v18; // x22
-  __int64 v19; // x0
-  __int64 v20; // x1
+  Il2CppObject *v27; // x22
+  struct TitleInfoEventRaidBossComponent___c_StaticFields *v28; // x0
+  System_String_array **v29; // x2
+  System_String_array **v30; // x3
+  System_Boolean_array **v31; // x4
+  System_Int32_array **v32; // x5
+  System_Int32_array *v33; // x6
+  System_Int32_array *v34; // x7
+  System_Action_o *v35; // x22
+  __int64 v36; // x0
+  __int64 v37; // x1
 
-  if ( (byte_42B444A & 1) == 0 )
+  if ( (byte_42ECC18 & 1) == 0 )
   {
-    sub_B52984(&System_Action_TypeInfo);
-    sub_B52984(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-    sub_B52984(&Method_TitleInfoEventRaidBossComponent_PlayHpDeletion__);
-    sub_B52984(&TitleInfoEventRaidBossComponent_TypeInfo);
-    sub_B52984(&Method_TitleInfoEventRaidBossComponent___c__PlayHpCut_b__87_0__);
-    sub_B52984(&TitleInfoEventRaidBossComponent___c_TypeInfo);
-    byte_42B444A = 1;
+    sub_B5D5C4(&System_Action_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v5, v6, v7);
+    sub_B5D5C4(&Method_TitleInfoEventRaidBossComponent_PlayHpDeletion__, v8, v9, v10);
+    sub_B5D5C4(&TitleInfoEventRaidBossComponent_TypeInfo, v11, v12, v13);
+    sub_B5D5C4(&Method_TitleInfoEventRaidBossComponent___c__PlayHpCut_b__87_0__, v14, v15, v16);
+    sub_B5D5C4(&TitleInfoEventRaidBossComponent___c_TypeInfo, v17, v18, v19);
+    byte_42ECC18 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   Component_UIWidget = GameObjectExtensions__SafeGetComponent_UIWidget_(
                          gameObject,
-                         (const MethodInfo_1B7BF3C *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-  v5 = TitleInfoEventRaidBossComponent_TypeInfo;
+                         (const MethodInfo_1E5984C *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+  v22 = TitleInfoEventRaidBossComponent_TypeInfo;
   if ( (BYTE3(TitleInfoEventRaidBossComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TitleInfoEventRaidBossComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TitleInfoEventRaidBossComponent_TypeInfo);
-    v5 = TitleInfoEventRaidBossComponent_TypeInfo;
+    v22 = TitleInfoEventRaidBossComponent_TypeInfo;
   }
-  v6 = TitleInfoEventRaidBossComponent___c_TypeInfo;
-  ANIM_DURATION_HP_CUT = v5->static_fields->ANIM_DURATION_HP_CUT;
+  v23 = TitleInfoEventRaidBossComponent___c_TypeInfo;
+  ANIM_DURATION_HP_CUT = v22->static_fields->ANIM_DURATION_HP_CUT;
   if ( (BYTE3(TitleInfoEventRaidBossComponent___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TitleInfoEventRaidBossComponent___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TitleInfoEventRaidBossComponent___c_TypeInfo);
-    v6 = TitleInfoEventRaidBossComponent___c_TypeInfo;
+    v23 = TitleInfoEventRaidBossComponent___c_TypeInfo;
   }
-  static_fields = v6->static_fields;
+  static_fields = v23->static_fields;
   _9__87_0 = static_fields->__9__87_0;
   if ( !_9__87_0 )
   {
-    if ( (BYTE3(v6->vtable._0_Equals.methodPtr) & 4) != 0 && !v6->_2.cctor_finished )
+    if ( (BYTE3(v23->vtable._0_Equals.methodPtr) & 4) != 0 && !v23->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v6);
+      j_il2cpp_runtime_class_init_0(v23);
       static_fields = TitleInfoEventRaidBossComponent___c_TypeInfo->static_fields;
     }
-    v10 = (Il2CppObject *)static_fields->__9;
-    _9__87_0 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
-    System_Action___ctor(_9__87_0, v10, Method_TitleInfoEventRaidBossComponent___c__PlayHpCut_b__87_0__, 0LL);
-    v11 = TitleInfoEventRaidBossComponent___c_TypeInfo->static_fields;
-    v11->__9__87_0 = _9__87_0;
-    sub_B52920(
-      (BattleServantConfConponent_o *)&v11->__9__87_0,
+    v27 = (Il2CppObject *)static_fields->__9;
+    _9__87_0 = (System_Action_o *)sub_B5D694(System_Action_TypeInfo);
+    System_Action___ctor(_9__87_0, v27, Method_TitleInfoEventRaidBossComponent___c__PlayHpCut_b__87_0__, 0LL);
+    v28 = TitleInfoEventRaidBossComponent___c_TypeInfo->static_fields;
+    v28->__9__87_0 = _9__87_0;
+    sub_B5D560(
+      (BattleServantConfConponent_o *)&v28->__9__87_0,
       (System_Int32_array **)_9__87_0,
-      v12,
-      v13,
-      v14,
-      v15,
-      v16,
-      v17);
+      v29,
+      v30,
+      v31,
+      v32,
+      v33,
+      v34);
   }
-  v18 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
-  System_Action___ctor(v18, (Il2CppObject *)this, Method_TitleInfoEventRaidBossComponent_PlayHpDeletion__, 0LL);
+  v35 = (System_Action_o *)sub_B5D694(System_Action_TypeInfo);
+  System_Action___ctor(v35, (Il2CppObject *)this, Method_TitleInfoEventRaidBossComponent_PlayHpDeletion__, 0LL);
   if ( !Component_UIWidget )
-    sub_B52A5C(v19, v20);
-  EasingObject__Play((EasingObject_o *)Component_UIWidget, ANIM_DURATION_HP_CUT, _9__87_0, v18, 0.0, 0, 0LL);
+    sub_B5D69C(v36, v37);
+  EasingObject__Play((EasingObject_o *)Component_UIWidget, ANIM_DURATION_HP_CUT, _9__87_0, v35, 0.0, 0, 0LL);
 }
 
 
@@ -1063,56 +1191,79 @@ void __fastcall TitleInfoEventRaidBossComponent__PlayHpDeletion(
         TitleInfoEventRaidBossComponent_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  int v17; // w1
+  int v18; // w2
+  __int64 v19; // x3
+  int v20; // w1
+  int v21; // w2
+  __int64 v22; // x3
+  int v23; // w1
+  int v24; // w2
+  __int64 v25; // x3
   DataManager_o *Instance; // x0
   __int64 eventRaidEntity_low; // x1
-  EventRaidMaster_o *v5; // x20
+  EventRaidMaster_o *v28; // x20
   struct UserEventRaidEntity_o *userEventRaidEntity; // x8
   int32_t RaidGroupDeadQuestId; // w0
   struct EventBossStatusUiEntity_o *eventBossStatusUiEntity; // x8
-  int32_t v9; // w20
-  __int64 v10; // x22
-  const MethodInfo *v11; // x3
+  int32_t v32; // w20
+  __int64 v33; // x22
+  const MethodInfo *v34; // x3
   int64_t datalist; // x2
-  struct UserEventRaidEntity_o *v13; // x8
-  UILabel_o *v14; // x21
+  struct UserEventRaidEntity_o *v36; // x8
+  UILabel_o *v37; // x21
   bool IsJumbleSingleRaid; // w0
-  const MethodInfo *v16; // x3
-  const MethodInfo *v17; // x1
+  const MethodInfo *v39; // x3
+  const MethodInfo *v40; // x1
   UnityEngine_Object_o *klass; // x20
-  UnityEngine_GameObject_o *v19; // x21
-  UnityEngine_UI_Dropdown_DropdownItem_o *v20; // x20
+  UnityEngine_GameObject_o *v42; // x21
+  UnityEngine_UI_Dropdown_DropdownItem_o *v43; // x20
   srcLineSprite_o *Component_srcLineSprite; // x20
-  const MethodInfo *v22; // x1
-  System_Action_o *v23; // x21
-  System_Action_o *v24; // x21
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
+  const MethodInfo *v45; // x1
+  System_Action_o *v46; // x21
+  System_Action_o *v47; // x21
+  System_String_array **v48; // x2
+  System_String_array **v49; // x3
+  System_Boolean_array **v50; // x4
+  System_Int32_array **v51; // x5
+  System_Int32_array *v52; // x6
+  System_Int32_array *v53; // x7
 
-  if ( (byte_42B444B & 1) == 0 )
+  if ( (byte_42ECC19 & 1) == 0 )
   {
-    sub_B52984(&System_Action_TypeInfo);
-    sub_B52984(&Method_DataManager_GetMasterData_EventRaidMaster___);
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
-    sub_B52984(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B52984(&Method_TitleInfoEventRaidBossComponent_OnEndAnimation__);
-    sub_B52984(&Method_TitleInfoEventRaidBossComponent_OnStartFadeOutAnimation__);
-    byte_42B444B = 1;
+    sub_B5D5C4(&System_Action_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_DataManager_GetMasterData_EventRaidMaster___, v5, v6, v7);
+    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v8, v9, v10);
+    sub_B5D5C4(&Method_UnityEngine_Object_Instantiate_GameObject___, v11, v12, v13);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v14, v15, v16);
+    sub_B5D5C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17, v18, v19);
+    sub_B5D5C4(&Method_TitleInfoEventRaidBossComponent_OnEndAnimation__, v20, v21, v22);
+    sub_B5D5C4(&Method_TitleInfoEventRaidBossComponent_OnStartFadeOutAnimation__, v23, v24, v25);
+    byte_42ECC19 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_44;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_EventRaidMaster___);
+                                (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_EventRaidMaster___);
   if ( !this->fields.userEventRaidEntity )
     goto LABEL_44;
-  v5 = (EventRaidMaster_o *)Instance;
+  v28 = (EventRaidMaster_o *)Instance;
   Instance = (DataManager_o *)EventRaidEntity__IsJumbleSingleRaid(
                                 (EventRaidEntity_o *)this->fields.userEventRaidEntity,
                                 0LL);
@@ -1122,50 +1273,50 @@ void __fastcall TitleInfoEventRaidBossComponent__PlayHpDeletion(
   eventRaidEntity_low = LODWORD(this->fields.eventRaidEntity);
   if ( ((unsigned __int8)Instance & 1) != 0 )
   {
-    if ( !v5 )
+    if ( !v28 )
       goto LABEL_44;
     RaidGroupDeadQuestId = EventRaidMaster__GetRaidGroupDeadQuestId(
-                             v5,
+                             v28,
                              eventRaidEntity_low,
                              userEventRaidEntity->fields.eventId,
                              0LL);
   }
   else
   {
-    if ( !v5 )
+    if ( !v28 )
       goto LABEL_44;
     RaidGroupDeadQuestId = EventRaidMaster__GetRaidDeadQuestId(
-                             v5,
+                             v28,
                              eventRaidEntity_low,
                              HIDWORD(userEventRaidEntity->fields.userId),
                              0LL);
   }
   eventBossStatusUiEntity = this->fields.eventBossStatusUiEntity;
-  v9 = RaidGroupDeadQuestId;
-  v10 = eventBossStatusUiEntity ? -(__int64)eventBossStatusUiEntity[1].klass : 0LL;
+  v32 = RaidGroupDeadQuestId;
+  v33 = eventBossStatusUiEntity ? -(__int64)eventBossStatusUiEntity[1].klass : 0LL;
   Instance = (DataManager_o *)this->fields.userEventRaidEntity;
   if ( !Instance
     || ((Instance = (DataManager_o *)EventRaidEntity__getTotalEventRaidEntity((EventRaidEntity_o *)Instance, 0LL)) == 0LL
       ? (datalist = 0LL)
       : (datalist = (int64_t)Instance->fields.datalist),
-        (v13 = this->fields.userEventRaidEntity) == 0LL
-     || (v14 = *(UILabel_o **)&this->fields.eventId,
+        (v36 = this->fields.userEventRaidEntity) == 0LL
+     || (v37 = *(UILabel_o **)&this->fields.eventId,
          Instance = (DataManager_o *)TitleInfoEventRaidBossComponent__GetRestCountText(
                                        this,
-                                       ((__int64)v13[1].klass + v10 - datalist) & ~(((__int64)v13[1].klass
-                                                                                   + v10
+                                       ((__int64)v36[1].klass + v33 - datalist) & ~(((__int64)v36[1].klass
+                                                                                   + v33
                                                                                    - datalist) >> 63),
                                        datalist,
-                                       v11),
-         !v14)
-     || (UILabel__set_text(v14, (System_String_o *)Instance, 0LL),
+                                       v34),
+         !v37)
+     || (UILabel__set_text(v37, (System_String_o *)Instance, 0LL),
          (Instance = (DataManager_o *)this->fields.userEventRaidEntity) == 0LL)) )
   {
 LABEL_44:
-    sub_B52A5C(Instance, eventRaidEntity_low);
+    sub_B5D69C(Instance, eventRaidEntity_low);
   }
   IsJumbleSingleRaid = EventRaidEntity__IsJumbleSingleRaid((EventRaidEntity_o *)Instance, 0LL);
-  if ( TitleInfoEventRaidBossComponent__IsPlayClearAnimation(this, v9, IsJumbleSingleRaid, v16) )
+  if ( TitleInfoEventRaidBossComponent__IsPlayClearAnimation(this, v32, IsJumbleSingleRaid, v39) )
   {
     klass = (UnityEngine_Object_o *)this[1].klass;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1173,20 +1324,20 @@ LABEL_44:
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    v19 = 0LL;
+    v42 = 0LL;
     if ( UnityEngine_Object__op_Inequality(klass, 0LL, 0LL) )
     {
-      v20 = (UnityEngine_UI_Dropdown_DropdownItem_o *)this[1].klass;
+      v43 = (UnityEngine_UI_Dropdown_DropdownItem_o *)this[1].klass;
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      v19 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
-                                          v20,
-                                          (const MethodInfo_1F711B8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-      GameObjectExtensions__SafeSetParent(v19, (UnityEngine_Component_o *)this, 0LL);
-      GameObjectExtensions__ResetLocalPosition(v19, 0LL);
+      v42 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
+                                          v43,
+                                          (const MethodInfo_1E662D8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+      GameObjectExtensions__SafeSetParent(v42, (UnityEngine_Component_o *)this, 0LL);
+      GameObjectExtensions__ResetLocalPosition(v42, 0LL);
     }
     *(&this->fields.isLastBattleRelease + 2) = 0;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1194,15 +1345,15 @@ LABEL_44:
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    Instance = (DataManager_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v19, 0LL, 0LL);
+    Instance = (DataManager_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v42, 0LL, 0LL);
     Component_srcLineSprite = 0LL;
     if ( ((unsigned __int8)Instance & 1) != 0 )
     {
-      if ( !v19 )
+      if ( !v42 )
         goto LABEL_44;
       Component_srcLineSprite = UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                  v19,
-                                  (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+                                  v42,
+                                  (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
     }
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1211,9 +1362,9 @@ LABEL_44:
     }
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_srcLineSprite, 0LL, 0LL) )
     {
-      v23 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
+      v46 = (System_Action_o *)sub_B5D694(System_Action_TypeInfo);
       System_Action___ctor(
-        v23,
+        v46,
         (Il2CppObject *)this,
         Method_TitleInfoEventRaidBossComponent_OnStartFadeOutAnimation__,
         0LL);
@@ -1222,29 +1373,29 @@ LABEL_44:
         CommonEffectActionComponent__SetEventAction(
           (CommonEffectActionComponent_o *)Component_srcLineSprite,
           0,
-          v23,
+          v46,
           0LL);
-        v24 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
-        System_Action___ctor(v24, (Il2CppObject *)this, Method_TitleInfoEventRaidBossComponent_OnEndAnimation__, 0LL);
-        *(_QWORD *)&Component_srcLineSprite->fields.mtIsUpdate = v24;
-        sub_B52920(
+        v47 = (System_Action_o *)sub_B5D694(System_Action_TypeInfo);
+        System_Action___ctor(v47, (Il2CppObject *)this, Method_TitleInfoEventRaidBossComponent_OnEndAnimation__, 0LL);
+        *(_QWORD *)&Component_srcLineSprite->fields.mtIsUpdate = v47;
+        sub_B5D560(
           (BattleServantConfConponent_o *)&Component_srcLineSprite->fields.mtIsUpdate,
-          (System_Int32_array **)v24,
-          v25,
-          v26,
-          v27,
-          v28,
-          v29,
-          v30);
+          (System_Int32_array **)v47,
+          v48,
+          v49,
+          v50,
+          v51,
+          v52,
+          v53);
         return;
       }
       goto LABEL_44;
     }
-    TitleInfoEventRaidBossComponent__SetClearAlpha(this, v22);
+    TitleInfoEventRaidBossComponent__SetClearAlpha(this, v45);
   }
   else
   {
-    TitleInfoEventRaidBossComponent__OnEndAnimation(this, v17);
+    TitleInfoEventRaidBossComponent__OnEndAnimation(this, v40);
   }
 }
 
@@ -1264,26 +1415,29 @@ void __fastcall TitleInfoEventRaidBossComponent__SetBossIcon(
         bool isLastBattle,
         const MethodInfo *method)
 {
+  int v7; // w1
+  char v8; // w2
+  __int64 v9; // x3
   UISprite_o *hpFrame; // x21
-  void *v8; // x0
+  void *v11; // x0
   System_String_o *RAIDBOSS_ICON_LASTBATTLE_SPNAME_PREFIX; // x22
-  System_String_o *v10; // x0
-  System_String_o *v11; // x22
-  UISprite_o *v12; // x21
+  System_String_o *v13; // x0
+  System_String_o *v14; // x22
+  UISprite_o *v15; // x21
   System_String_o *RAIDBOSS_ICON_SPNAME_PREFIX; // x22
-  System_String_o *v14; // x0
-  System_String_o *v15; // x20
+  System_String_o *v17; // x0
+  System_String_o *v18; // x20
 
-  if ( (byte_42B4440 & 1) == 0 )
+  if ( (byte_42ECC0E & 1) == 0 )
   {
-    sub_B52984(&AtlasManager_TypeInfo);
-    sub_B52984(&TitleInfoEventRaidBossComponent_TypeInfo);
-    byte_42B4440 = 1;
+    sub_B5D5C4(&AtlasManager_TypeInfo, (_DWORD)eventRaidEnt, isLastBattle, method);
+    sub_B5D5C4(&TitleInfoEventRaidBossComponent_TypeInfo, v7, v8, v9);
+    byte_42ECC0E = 1;
   }
   if ( isLastBattle )
   {
     hpFrame = this->fields.hpFrame;
-    v8 = TitleInfoEventRaidBossComponent_TypeInfo;
+    v11 = TitleInfoEventRaidBossComponent_TypeInfo;
     if ( (BYTE3(TitleInfoEventRaidBossComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !TitleInfoEventRaidBossComponent_TypeInfo->_2.cctor_finished )
     {
@@ -1292,18 +1446,18 @@ void __fastcall TitleInfoEventRaidBossComponent__SetBossIcon(
     if ( !eventRaidEnt )
       goto LABEL_23;
     RAIDBOSS_ICON_LASTBATTLE_SPNAME_PREFIX = TitleInfoEventRaidBossComponent_TypeInfo->static_fields->RAIDBOSS_ICON_LASTBATTLE_SPNAME_PREFIX;
-    v10 = System_Int32__ToString((int)eventRaidEnt + 48, 0LL);
-    v11 = System_String__Concat_44568316(RAIDBOSS_ICON_LASTBATTLE_SPNAME_PREFIX, v10, 0LL);
+    v13 = System_Int32__ToString((int)eventRaidEnt + 48, 0LL);
+    v14 = System_String__Concat_44577788(RAIDBOSS_ICON_LASTBATTLE_SPNAME_PREFIX, v13, 0LL);
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !AtlasManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    if ( AtlasManager__SetEventUI(hpFrame, v11, 0LL) )
+    if ( AtlasManager__SetEventUI(hpFrame, v14, 0LL) )
       goto LABEL_20;
   }
-  v12 = this->fields.hpFrame;
-  v8 = TitleInfoEventRaidBossComponent_TypeInfo;
+  v15 = this->fields.hpFrame;
+  v11 = TitleInfoEventRaidBossComponent_TypeInfo;
   if ( (BYTE3(TitleInfoEventRaidBossComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TitleInfoEventRaidBossComponent_TypeInfo->_2.cctor_finished )
   {
@@ -1312,21 +1466,21 @@ void __fastcall TitleInfoEventRaidBossComponent__SetBossIcon(
   if ( !eventRaidEnt )
     goto LABEL_23;
   RAIDBOSS_ICON_SPNAME_PREFIX = TitleInfoEventRaidBossComponent_TypeInfo->static_fields->RAIDBOSS_ICON_SPNAME_PREFIX;
-  v14 = System_Int32__ToString((int)eventRaidEnt + 48, 0LL);
-  v15 = System_String__Concat_44568316(RAIDBOSS_ICON_SPNAME_PREFIX, v14, 0LL);
+  v17 = System_Int32__ToString((int)eventRaidEnt + 48, 0LL);
+  v18 = System_String__Concat_44577788(RAIDBOSS_ICON_SPNAME_PREFIX, v17, 0LL);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  if ( AtlasManager__SetEventUI(v12, v15, 0LL) )
+  if ( AtlasManager__SetEventUI(v15, v18, 0LL) )
   {
 LABEL_20:
-    v8 = this->fields.hpFrame;
-    if ( v8 )
+    v11 = this->fields.hpFrame;
+    if ( v11 )
     {
-      (*(void (__fastcall **)(void *, _QWORD))(*(_QWORD *)v8 + 840LL))(v8, *(_QWORD *)(*(_QWORD *)v8 + 848LL));
+      (*(void (__fastcall **)(void *, _QWORD))(*(_QWORD *)v11 + 840LL))(v11, *(_QWORD *)(*(_QWORD *)v11 + 848LL));
       return;
     }
 LABEL_23:
-    sub_B52A5C(v8, eventRaidEnt);
+    sub_B5D69C(v11, eventRaidEnt);
   }
 }
 
@@ -1335,45 +1489,59 @@ void __fastcall TitleInfoEventRaidBossComponent__SetClearAlpha(
         TitleInfoEventRaidBossComponent_o *this,
         const MethodInfo *method)
 {
-  TitleInfoEventRaidBossComponent_c *v3; // x0
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  TitleInfoEventRaidBossComponent_c *v17; // x0
   float HPto; // w20
   float CLEAR_CALLBACK_DELAY; // s8
-  BalanceConfig_c *v6; // x0
+  BalanceConfig_c *v20; // x0
   UnityEngine_Object_o *klass; // x20
-  __int64 v8; // x1
+  __int64 v22; // x1
   UnityEngine_Animation_o *Component_srcLineSprite; // x21
-  TitleInfoEventRaidBossComponent_c *v10; // x0
-  const MethodInfo *v11; // x2
+  TitleInfoEventRaidBossComponent_c *v24; // x0
+  const MethodInfo *v25; // x2
   UnityEngine_Object_o *ClearBossAnimClip; // x20
   float length; // s8
-  TitleInfoEventRaidBossComponent_c *v14; // x0
+  TitleInfoEventRaidBossComponent_c *v28; // x0
 
-  if ( (byte_42B444D & 1) == 0 )
+  if ( (byte_42ECC1B & 1) == 0 )
   {
-    sub_B52984(&BalanceConfig_TypeInfo);
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    sub_B52984(&TitleInfoEventRaidBossComponent_TypeInfo);
-    sub_B52984(&StringLiteral_5384/*"DoClearCallback"*/);
-    byte_42B444D = 1;
+    sub_B5D5C4(&BalanceConfig_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_Animation___, v5, v6, v7);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v8, v9, v10);
+    sub_B5D5C4(&TitleInfoEventRaidBossComponent_TypeInfo, v11, v12, v13);
+    sub_B5D5C4(&StringLiteral_5419/*"DoClearCallback"*/, v14, v15, v16);
+    byte_42ECC1B = 1;
   }
-  v3 = TitleInfoEventRaidBossComponent_TypeInfo;
+  v17 = TitleInfoEventRaidBossComponent_TypeInfo;
   if ( (BYTE3(TitleInfoEventRaidBossComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TitleInfoEventRaidBossComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TitleInfoEventRaidBossComponent_TypeInfo);
-    v3 = TitleInfoEventRaidBossComponent_TypeInfo;
+    v17 = TitleInfoEventRaidBossComponent_TypeInfo;
   }
   HPto = this->fields.HPto;
-  CLEAR_CALLBACK_DELAY = v3->static_fields->CLEAR_CALLBACK_DELAY;
-  v6 = BalanceConfig_TypeInfo;
+  CLEAR_CALLBACK_DELAY = v17->static_fields->CLEAR_CALLBACK_DELAY;
+  v20 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v6 = BalanceConfig_TypeInfo;
+    v20 = BalanceConfig_TypeInfo;
   }
-  if ( LODWORD(HPto) != v6->static_fields->FesWarId && !*(&this->fields.isLastBattleRelease + 5) )
+  if ( LODWORD(HPto) != v20->static_fields->FesWarId && !*(&this->fields.isLastBattleRelease + 5) )
   {
     klass = (UnityEngine_Object_o *)this[1].klass;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1384,12 +1552,12 @@ void __fastcall TitleInfoEventRaidBossComponent__SetClearAlpha(
     Component_srcLineSprite = 0LL;
     if ( UnityEngine_Object__op_Inequality(klass, 0LL, 0LL) )
     {
-      v10 = this[1].klass;
-      if ( !v10 )
+      v24 = this[1].klass;
+      if ( !v24 )
         goto LABEL_33;
       Component_srcLineSprite = (UnityEngine_Animation_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                             (UnityEngine_GameObject_o *)v10,
-                                                             (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+                                                             (UnityEngine_GameObject_o *)v24,
+                                                             (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_Animation___);
     }
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1401,40 +1569,40 @@ void __fastcall TitleInfoEventRaidBossComponent__SetClearAlpha(
       ClearBossAnimClip = (UnityEngine_Object_o *)TitleInfoEventRaidBossComponent__GetClearBossAnimClip(
                                                     this,
                                                     Component_srcLineSprite,
-                                                    v11);
+                                                    v25);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    v10 = (TitleInfoEventRaidBossComponent_c *)UnityEngine_Object__op_Inequality(ClearBossAnimClip, 0LL, 0LL);
+    v24 = (TitleInfoEventRaidBossComponent_c *)UnityEngine_Object__op_Inequality(ClearBossAnimClip, 0LL, 0LL);
     length = 0.0;
-    if ( ((unsigned __int8)v10 & 1) == 0 )
+    if ( ((unsigned __int8)v24 & 1) == 0 )
       goto LABEL_28;
     if ( ClearBossAnimClip )
     {
       length = UnityEngine_AnimationClip__get_length((UnityEngine_AnimationClip_o *)ClearBossAnimClip, 0LL);
 LABEL_28:
-      v14 = TitleInfoEventRaidBossComponent_TypeInfo;
+      v28 = TitleInfoEventRaidBossComponent_TypeInfo;
       if ( (BYTE3(TitleInfoEventRaidBossComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !TitleInfoEventRaidBossComponent_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(TitleInfoEventRaidBossComponent_TypeInfo);
-        v14 = TitleInfoEventRaidBossComponent_TypeInfo;
+        v28 = TitleInfoEventRaidBossComponent_TypeInfo;
       }
       CLEAR_CALLBACK_DELAY = UnityEngine_Mathf__Max(
                                0.0,
-                               length - v14->static_fields->CLEAR_END_CALLBACK_DELAY_NORMAL,
+                               length - v28->static_fields->CLEAR_END_CALLBACK_DELAY_NORMAL,
                                0LL);
       goto LABEL_32;
     }
 LABEL_33:
-    sub_B52A5C(v10, v8);
+    sub_B5D69C(v24, v22);
   }
 LABEL_32:
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_5384/*"DoClearCallback"*/,
+    (System_String_o *)StringLiteral_5419/*"DoClearCallback"*/,
     CLEAR_CALLBACK_DELAY,
     0LL);
 }
@@ -1445,49 +1613,53 @@ void __fastcall TitleInfoEventRaidBossComponent__SetDamageAnimation(
         System_Action_o *onClearCallback,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
   DataManager_o *Instance; // x0
-  __int64 v6; // x1
+  __int64 v10; // x1
   struct UserEventRaidEntity_o *userEventRaidEntity; // x8
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  System_String_array **v12; // x2
+  System_String_array **v13; // x3
+  System_Boolean_array **v14; // x4
+  System_Int32_array **v15; // x5
+  System_Int32_array *v16; // x6
+  System_Int32_array *v17; // x7
   struct EventBossStatusUiEntity_o *eventBossStatusUiEntity; // x8
-  __int64 v15; // x20
+  __int64 v19; // x20
   int64_t totalDamage; // x21
-  struct UserEventRaidEntity_o *v17; // x8
-  float v18; // s0
-  float v19; // s0
-  struct UserEventRaidEntity_o *v20; // x8
-  float v21; // s0
+  struct UserEventRaidEntity_o *v21; // x8
   float v22; // s0
-  struct UserEventRaidEntity_o *v23; // x8
+  float v23; // s0
+  struct UserEventRaidEntity_o *v24; // x8
+  float v25; // s0
+  float v26; // s0
+  struct UserEventRaidEntity_o *v27; // x8
   int64_t damage; // x11
-  int v25; // w10
-  __int64 v26; // x9
-  int64_t v27; // x11
-  __int64 v28; // x12
+  int v29; // w10
+  __int64 v30; // x9
+  int64_t v31; // x11
+  __int64 v32; // x12
   __int64 klass; // d0
-  int v30; // w8
+  int v34; // w8
   UnityEngine_GameObject_o *gameObject; // x0
   TotalEventRaidEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_42B4447 & 1) == 0 )
+  if ( (byte_42ECC15 & 1) == 0 )
   {
-    sub_B52984(&Method_DataManager_GetMasterData_TotalEventRaidMaster___);
-    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_42B4447 = 1;
+    sub_B5D5C4(&Method_DataManager_GetMasterData_TotalEventRaidMaster___, (_DWORD)onClearCallback, (_DWORD)method, v3);
+    sub_B5D5C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6, v7, v8);
+    byte_42ECC15 = 1;
   }
   entity = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_36;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_TotalEventRaidMaster___);
+                                (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_TotalEventRaidMaster___);
   userEventRaidEntity = this->fields.userEventRaidEntity;
   if ( !userEventRaidEntity || !Instance )
     goto LABEL_36;
@@ -1498,61 +1670,61 @@ void __fastcall TitleInfoEventRaidBossComponent__SetDamageAnimation(
     HIDWORD(userEventRaidEntity->fields.userId),
     0LL);
   this->fields.splitHpEffect = (struct UnityEngine_GameObject_o *)onClearCallback;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.splitHpEffect,
     (System_Int32_array **)onClearCallback,
-    v8,
-    v9,
-    v10,
-    v11,
     v12,
-    v13);
+    v13,
+    v14,
+    v15,
+    v16,
+    v17);
   eventBossStatusUiEntity = this->fields.eventBossStatusUiEntity;
-  v15 = eventBossStatusUiEntity ? (__int64)eventBossStatusUiEntity[1].klass : 0LL;
+  v19 = eventBossStatusUiEntity ? (__int64)eventBossStatusUiEntity[1].klass : 0LL;
   if ( entity )
   {
     totalDamage = entity->fields.totalDamage;
-    v15 += totalDamage;
+    v19 += totalDamage;
   }
   else
   {
     totalDamage = 0LL;
   }
-  v17 = this->fields.userEventRaidEntity;
-  if ( !v17 )
+  v21 = this->fields.userEventRaidEntity;
+  if ( !v21 )
     goto LABEL_36;
-  v18 = 1.0 - (double)totalDamage / (double)(__int64)v17[1].klass;
-  v19 = UnityEngine_Mathf__Clamp01(v18, 0LL);
-  v20 = this->fields.userEventRaidEntity;
-  this->fields.HPsplitPoint = v19;
-  if ( !v20 )
+  v22 = 1.0 - (double)totalDamage / (double)(__int64)v21[1].klass;
+  v23 = UnityEngine_Mathf__Clamp01(v22, 0LL);
+  v24 = this->fields.userEventRaidEntity;
+  this->fields.HPsplitPoint = v23;
+  if ( !v24 )
     goto LABEL_36;
-  v21 = 1.0 - (double)v15 / (double)(__int64)v20[1].klass;
-  v22 = UnityEngine_Mathf__Clamp01(v21, 0LL);
-  v23 = this->fields.userEventRaidEntity;
-  *(float *)&this->fields.HPsplitNo = v22;
+  v25 = 1.0 - (double)v19 / (double)(__int64)v24[1].klass;
+  v26 = UnityEngine_Mathf__Clamp01(v25, 0LL);
+  v27 = this->fields.userEventRaidEntity;
+  *(float *)&this->fields.HPsplitNo = v26;
   *(_QWORD *)&this->fields.originPos.fields.x = -1082130432LL;
-  if ( !v23 )
+  if ( !v27 )
     goto LABEL_36;
-  damage = v23[2].fields.damage;
+  damage = v27[2].fields.damage;
   if ( !damage )
     goto LABEL_36;
-  v25 = *(_DWORD *)(damage + 24);
-  if ( v25 >= 1 )
+  v29 = *(_DWORD *)(damage + 24);
+  if ( v29 >= 1 )
   {
-    v26 = 0LL;
-    v27 = damage + 32;
+    v30 = 0LL;
+    v31 = damage + 32;
     while ( 1 )
     {
-      v28 = *(_QWORD *)(v27 + 8 * v26);
-      if ( v28 > totalDamage && v28 <= v15 )
+      v32 = *(_QWORD *)(v31 + 8 * v30);
+      if ( v32 > totalDamage && v32 <= v19 )
         break;
-      if ( (int)++v26 >= v25 )
+      if ( (int)++v30 >= v29 )
         goto LABEL_23;
     }
-    klass = (__int64)v23[1].klass;
-    LODWORD(this->fields.originPos.fields.y) = v26;
-    *(float *)&klass = 1.0 - (double)v28 / (double)klass;
+    klass = (__int64)v27[1].klass;
+    LODWORD(this->fields.originPos.fields.y) = v30;
+    *(float *)&klass = 1.0 - (double)v32 / (double)klass;
     LODWORD(this->fields.originPos.fields.x) = klass;
   }
 LABEL_23:
@@ -1582,9 +1754,9 @@ LABEL_23:
   if ( !Instance )
     goto LABEL_36;
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)Instance, 0LL);
-  v30 = *((unsigned __int8 *)&this->fields.isLastBattleRelease + 5);
+  v34 = *((unsigned __int8 *)&this->fields.isLastBattleRelease + 5);
   *(UnityEngine_Vector3_o *)&this->fields.originPos.fields.z = localPosition;
-  if ( v30 || LOBYTE(this->fields.hpBarSplitters) )
+  if ( v34 || LOBYTE(this->fields.hpBarSplitters) )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     Instance = (DataManager_o *)GameObjectExtensions__GetChild(gameObject, 0, 0LL);
@@ -1598,7 +1770,7 @@ LABEL_23:
       }
     }
 LABEL_36:
-    sub_B52A5C(Instance, v6);
+    sub_B5D69C(Instance, v10);
   }
 }
 
@@ -1608,106 +1780,123 @@ void __fastcall TitleInfoEventRaidBossComponent__SetDisp(
         TitleInfoEventRaidBossComponent_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  int v17; // w1
+  int v18; // w2
+  __int64 v19; // x3
   DataManager_o *Instance; // x0
-  const MethodInfo *v4; // x1
+  const MethodInfo *v21; // x1
   struct UserEventRaidEntity_o *userEventRaidEntity; // x8
-  const MethodInfo *v6; // x3
-  const MethodInfo *v7; // x2
-  struct UserEventRaidEntity_o *v8; // x8
+  const MethodInfo *v23; // x3
+  const MethodInfo *v24; // x2
+  struct UserEventRaidEntity_o *v25; // x8
   int64_t damage; // x8
-  int v10; // w20
-  _BOOL4 v11; // w8
-  _BOOL4 v12; // w9
-  int v13; // w21
-  int v14; // s3
-  float v15; // s4
-  float v16; // s5
-  float v17; // s6
-  char v18; // w25
-  System_Int32_array **v19; // x0
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
-  UnityEngine_Component_o *v26; // x22
-  __int64 v27; // x26
-  unsigned int v28; // w28
-  __int64 v29; // x23
+  int v27; // w20
+  _BOOL4 v28; // w8
+  _BOOL4 v29; // w9
+  int v30; // w21
+  int v31; // s3
+  float v32; // s4
+  float v33; // s5
+  float v34; // s6
+  char v35; // w25
+  System_Int32_array **v36; // x0
+  System_String_array **v37; // x2
+  System_String_array **v38; // x3
+  System_Boolean_array **v39; // x4
+  System_Int32_array **v40; // x5
+  System_Int32_array *v41; // x6
+  System_Int32_array *v42; // x7
+  UnityEngine_Component_o *v43; // x22
+  __int64 v44; // x26
+  unsigned int v45; // w28
+  __int64 v46; // x23
   UnityEngine_UI_Dropdown_DropdownItem_o *defeatCntBarSplitterSp; // x24
-  System_String_array **v31; // x2
-  System_String_array **v32; // x3
-  System_Boolean_array **v33; // x4
-  System_Int32_array **v34; // x5
-  System_Int32_array *v35; // x6
-  System_Int32_array *v36; // x7
-  System_Int32_array **v37; // x24
-  System_String_array **v38; // x2
-  System_String_array **v39; // x3
-  System_Boolean_array **v40; // x4
-  System_Int32_array **v41; // x5
-  System_Int32_array *v42; // x6
-  System_Int32_array *v43; // x7
-  System_Int32_array **v44; // x24
-  __int64 v45; // x0
-  __int64 v46; // x8
+  System_String_array **v48; // x2
+  System_String_array **v49; // x3
+  System_Boolean_array **v50; // x4
+  System_Int32_array **v51; // x5
+  System_Int32_array *v52; // x6
+  System_Int32_array *v53; // x7
+  System_Int32_array **v54; // x24
+  System_String_array **v55; // x2
+  System_String_array **v56; // x3
+  System_Boolean_array **v57; // x4
+  System_Int32_array **v58; // x5
+  System_Int32_array *v59; // x6
+  System_Int32_array *v60; // x7
+  System_Int32_array **v61; // x24
+  __int64 v62; // x0
+  __int64 v63; // x8
   UnityEngine_GameObject_o *gameObject; // x0
-  struct UserEventRaidEntity_o *v48; // x8
-  int64_t v49; // x9
-  __int64 v50; // x10
-  __int64 v51; // d9
+  struct UserEventRaidEntity_o *v65; // x8
+  int64_t v66; // x9
+  __int64 v67; // x10
+  __int64 v68; // d9
   __int64 klass; // d10
-  float v53; // s8
-  float v54; // s0
-  int v55; // s1
-  int v56; // s0
-  int v57; // s2
+  float v70; // s8
+  float v71; // s0
+  int v72; // s1
+  int v73; // s0
+  int v74; // s2
   float r; // s8
   float g; // s9
   float b; // s10
   float a; // s11
-  struct UserEventRaidEntity_o *v62; // x8
-  __int64 v63; // x22
-  const MethodInfo *v64; // x2
+  struct UserEventRaidEntity_o *v79; // x8
+  __int64 v80; // x22
+  const MethodInfo *v81; // x2
   __int64 RaidBossTotalDamage; // x20
   UILabel_o *lastBattleSpr; // x21
-  const MethodInfo *v67; // x2
-  const MethodInfo *v68; // x3
-  UILabel_o *v69; // x21
-  const MethodInfo *v70; // x2
-  UnityEngine_Object_o *v71; // x21
-  const MethodInfo *v72; // x2
-  struct UserEventRaidEntity_o *v73; // x8
-  float v74; // s0
-  struct UserEventRaidEntity_o *v75; // x8
-  const MethodInfo *v76; // x2
-  UnityEngine_Object_o *v77; // x20
-  const MethodInfo *v78; // x2
-  const MethodInfo *v79; // x2
-  __int64 v80; // x0
-  __int64 v81; // x0
+  const MethodInfo *v84; // x2
+  const MethodInfo *v85; // x3
+  UILabel_o *v86; // x21
+  const MethodInfo *v87; // x2
+  UnityEngine_Object_o *v88; // x21
+  const MethodInfo *v89; // x2
+  struct UserEventRaidEntity_o *v90; // x8
+  float v91; // s0
+  struct UserEventRaidEntity_o *v92; // x8
+  const MethodInfo *v93; // x2
+  UnityEngine_Object_o *v94; // x20
+  const MethodInfo *v95; // x2
+  const MethodInfo *v96; // x2
+  __int64 v97; // x0
+  __int64 v98; // x0
   bool *p_isRaidClear; // [xsp+0h] [xbp-90h]
   MethodInfo methoda; // [xsp+8h] [xbp-88h] BYREF
-  UnityEngine_Vector3_o v84; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Color_o v85; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o v101; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Color_o v102; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o TextEffectColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v87; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v88; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v89; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v90; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v91; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v92; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v104; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v105; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v106; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v107; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v108; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v109; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_42B4443 & 1) == 0 )
+  if ( (byte_42ECC11 & 1) == 0 )
   {
-    sub_B52984(&Method_DataManager_GetMasterData_TotalEventRaidMaster___);
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_B52984(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B52984(&UISprite___TypeInfo);
-    byte_42B4443 = 1;
+    sub_B5D5C4(&Method_DataManager_GetMasterData_TotalEventRaidMaster___, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v5, v6, v7);
+    sub_B5D5C4(&Method_UnityEngine_Object_Instantiate_GameObject___, v8, v9, v10);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v11, v12, v13);
+    sub_B5D5C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14, v15, v16);
+    sub_B5D5C4(&UISprite___TypeInfo, v17, v18, v19);
+    byte_42ECC11 = 1;
   }
   memset(&methoda, 0, 24);
   if ( *(&this->fields.isLastBattleRelease + 2) )
@@ -1721,12 +1910,12 @@ void __fastcall TitleInfoEventRaidBossComponent__SetDisp(
   }
   BYTE1(this->fields.HPfrom) = 1;
 LABEL_8:
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_89;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_TotalEventRaidMaster___);
+                                (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_TotalEventRaidMaster___);
   userEventRaidEntity = this->fields.userEventRaidEntity;
   if ( !userEventRaidEntity )
     goto LABEL_89;
@@ -1742,64 +1931,64 @@ LABEL_8:
     this,
     (EventRaidEntity_o *)this->fields.userEventRaidEntity,
     BYTE2(this->fields.hpBarSplitters),
-    v6);
-  v8 = this->fields.userEventRaidEntity;
-  if ( !v8 )
+    v23);
+  v25 = this->fields.userEventRaidEntity;
+  if ( !v25 )
     goto LABEL_89;
-  damage = v8[2].fields.damage;
+  damage = v25[2].fields.damage;
   if ( !damage )
     goto LABEL_89;
-  v10 = *(_DWORD *)(damage + 24);
-  v11 = *(&this->fields.isLastBattleRelease + 4);
-  v12 = v10 > 0;
-  v13 = v12 && v11;
-  TitleInfoEventRaidBossComponent__SetHpBarSplitters(this, v12 && v11, v7);
-  if ( v13 )
+  v27 = *(_DWORD *)(damage + 24);
+  v28 = *(&this->fields.isLastBattleRelease + 4);
+  v29 = v27 > 0;
+  v30 = v29 && v28;
+  TitleInfoEventRaidBossComponent__SetHpBarSplitters(this, v29 && v28, v24);
+  if ( v30 )
   {
     p_isRaidClear = &this->fields.isRaidClear;
     if ( *(_QWORD *)&this->fields.isRaidClear )
     {
-      v18 = 1;
+      v35 = 1;
     }
     else
     {
-      v19 = (System_Int32_array **)sub_B5299C(UISprite___TypeInfo, (unsigned int)v10);
-      *(_QWORD *)&this->fields.isRaidClear = v19;
-      sub_B52920((BattleServantConfConponent_o *)&this->fields.isRaidClear, v19, v20, v21, v22, v23, v24, v25);
-      v18 = 0;
+      v36 = (System_Int32_array **)sub_B5D5DC(UISprite___TypeInfo, (unsigned int)v27);
+      *(_QWORD *)&this->fields.isRaidClear = v36;
+      sub_B5D560((BattleServantConfConponent_o *)&this->fields.isRaidClear, v36, v37, v38, v39, v40, v41, v42);
+      v35 = 0;
     }
     Instance = (DataManager_o *)GameObjectExtensions__GetParent(
                                   (UnityEngine_GameObject_o *)this->fields.defeatCntBarSplitterSp,
                                   0LL);
-    v26 = (UnityEngine_Component_o *)Instance;
-    v27 = 4LL;
+    v43 = (UnityEngine_Component_o *)Instance;
+    v44 = 4LL;
     do
     {
-      v28 = v27 - 4;
-      if ( (v18 & 1) == 0 )
+      v45 = v44 - 4;
+      if ( (v35 & 1) == 0 )
       {
-        v29 = *(_QWORD *)&this->fields.isRaidClear;
+        v46 = *(_QWORD *)&this->fields.isRaidClear;
         defeatCntBarSplitterSp = (UnityEngine_UI_Dropdown_DropdownItem_o *)this->fields.defeatCntBarSplitterSp;
-        if ( (_DWORD)v27 == 4 )
+        if ( (_DWORD)v44 == 4 )
         {
           if ( !defeatCntBarSplitterSp )
             goto LABEL_89;
           Instance = (DataManager_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                         (UnityEngine_GameObject_o *)this->fields.defeatCntBarSplitterSp,
-                                        (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
-          if ( !v29 )
+                                        (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+          if ( !v46 )
             goto LABEL_89;
-          v37 = (System_Int32_array **)Instance;
+          v54 = (System_Int32_array **)Instance;
           if ( Instance )
           {
-            Instance = (DataManager_o *)sub_B52A44(Instance, *(_QWORD *)(*(_QWORD *)v29 + 64LL));
+            Instance = (DataManager_o *)sub_B5D684(Instance, *(_QWORD *)(*(_QWORD *)v46 + 64LL));
             if ( !Instance )
               goto LABEL_91;
           }
-          if ( !*(_DWORD *)(v29 + 24) )
+          if ( !*(_DWORD *)(v46 + 24) )
             goto LABEL_90;
-          *(_QWORD *)(v29 + 32) = v37;
-          sub_B52920((BattleServantConfConponent_o *)(v29 + 32), v37, v31, v32, v33, v34, v35, v36);
+          *(_QWORD *)(v46 + 32) = v54;
+          sub_B5D560((BattleServantConfConponent_o *)(v46 + 32), v54, v48, v49, v50, v51, v52, v53);
         }
         else
         {
@@ -1810,80 +1999,80 @@ LABEL_8:
           }
           Instance = (DataManager_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                         defeatCntBarSplitterSp,
-                                        (const MethodInfo_1F711B8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                        (const MethodInfo_1E662D8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
           if ( !Instance )
             goto LABEL_89;
           Instance = (DataManager_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                         (UnityEngine_GameObject_o *)Instance,
-                                        (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
-          if ( !v29 )
+                                        (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+          if ( !v46 )
             goto LABEL_89;
-          v44 = (System_Int32_array **)Instance;
+          v61 = (System_Int32_array **)Instance;
           if ( Instance )
           {
-            Instance = (DataManager_o *)sub_B52A44(Instance, *(_QWORD *)(*(_QWORD *)v29 + 64LL));
+            Instance = (DataManager_o *)sub_B5D684(Instance, *(_QWORD *)(*(_QWORD *)v46 + 64LL));
             if ( !Instance )
             {
 LABEL_91:
-              v81 = sub_B52A7C(Instance);
-              sub_B52A28(v81, 0LL);
+              v98 = sub_B5D6BC(Instance);
+              sub_B5D668(v98, 0LL);
             }
           }
-          if ( v28 >= *(_DWORD *)(v29 + 24) )
+          if ( v45 >= *(_DWORD *)(v46 + 24) )
             goto LABEL_90;
-          v45 = v29 + 8LL * (int)v28;
-          *(_QWORD *)(v45 + 32) = v44;
-          sub_B52920((BattleServantConfConponent_o *)(v45 + 32), v44, v38, v39, v40, v41, v42, v43);
-          v46 = *(_QWORD *)p_isRaidClear;
+          v62 = v46 + 8LL * (int)v45;
+          *(_QWORD *)(v62 + 32) = v61;
+          sub_B5D560((BattleServantConfConponent_o *)(v62 + 32), v61, v55, v56, v57, v58, v59, v60);
+          v63 = *(_QWORD *)p_isRaidClear;
           if ( !*(_QWORD *)p_isRaidClear )
             goto LABEL_89;
-          if ( v28 >= *(_DWORD *)(v46 + 24) )
+          if ( v45 >= *(_DWORD *)(v63 + 24) )
             goto LABEL_90;
-          Instance = *(DataManager_o **)(v46 + 8LL * (int)v28 + 32);
+          Instance = *(DataManager_o **)(v63 + 8LL * (int)v45 + 32);
           if ( !Instance )
             goto LABEL_89;
           gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
-          GameObjectExtensions__SafeSetParent(gameObject, v26, 0LL);
+          GameObjectExtensions__SafeSetParent(gameObject, v43, 0LL);
         }
       }
-      v48 = this->fields.userEventRaidEntity;
-      if ( !v48 )
+      v65 = this->fields.userEventRaidEntity;
+      if ( !v65 )
         goto LABEL_89;
-      v49 = v48[2].fields.damage;
-      if ( !v49 )
+      v66 = v65[2].fields.damage;
+      if ( !v66 )
         goto LABEL_89;
-      if ( v28 >= *(_DWORD *)(v49 + 24) )
+      if ( v45 >= *(_DWORD *)(v66 + 24) )
         goto LABEL_90;
-      v50 = *(_QWORD *)&this->fields.isRaidClear;
-      if ( !v50 )
+      v67 = *(_QWORD *)&this->fields.isRaidClear;
+      if ( !v67 )
         goto LABEL_89;
-      if ( v28 >= *(_DWORD *)(v50 + 24) )
+      if ( v45 >= *(_DWORD *)(v67 + 24) )
       {
 LABEL_90:
-        v80 = sub_B52A88(Instance);
-        sub_B52A28(v80, 0LL);
+        v97 = sub_B5D6C8(Instance);
+        sub_B5D668(v97, 0LL);
       }
-      Instance = *(DataManager_o **)(v50 + 8 * v27);
+      Instance = *(DataManager_o **)(v67 + 8 * v44);
       if ( !Instance )
         goto LABEL_89;
-      v51 = *(_QWORD *)(v49 + 8 * v27);
-      klass = (__int64)v48[1].klass;
-      v53 = *((float *)&this->fields.useBarSlider + 1);
+      v68 = *(_QWORD *)(v66 + 8 * v44);
+      klass = (__int64)v65[1].klass;
+      v70 = *((float *)&this->fields.useBarSlider + 1);
       Instance = (DataManager_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)Instance, 0LL);
       if ( !Instance )
         goto LABEL_89;
-      v54 = (double)v51 / (double)klass;
-      v84.fields.x = -(float)(v53 * v54);
-      v84.fields.y = 0.0;
-      v84.fields.z = 0.0;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Instance, v84, 0LL);
+      v71 = (double)v68 / (double)klass;
+      v101.fields.x = -(float)(v70 * v71);
+      v101.fields.y = 0.0;
+      v101.fields.z = 0.0;
+      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Instance, v101, 0LL);
     }
-    while ( (int)++v27 - 4 < v10 );
+    while ( (int)++v44 - 4 < v27 );
   }
-  v55 = 1024495761;
-  v56 = 1052819649;
-  v57 = 1024495761;
-  UnityEngine_Color___ctor_41463668(*(UnityEngine_Color_o *)(&v14 - 3), v15, v16, v17, &methoda);
+  v72 = 1024495761;
+  v73 = 1052819649;
+  v74 = 1024495761;
+  UnityEngine_Color___ctor_41567816(*(UnityEngine_Color_o *)(&v31 - 3), v32, v33, v34, &methoda);
   Instance = *(DataManager_o **)&this->fields.restTimeUpdateSec;
   g = *((float *)&methoda.methodPointer + 1);
   r = *(float *)&methoda.methodPointer;
@@ -1891,31 +2080,31 @@ LABEL_90:
   b = *(float *)&methoda.invoker_method;
   if ( Instance )
   {
-    *(_QWORD *)&v85.fields.r = methoda.methodPointer;
-    *(_QWORD *)&v85.fields.b = methoda.invoker_method;
-    TextEffectColor = EventBossStatusUiEntity__GetTextEffectColor((EventBossStatusUiEntity_o *)Instance, v85, 0LL);
+    *(_QWORD *)&v102.fields.r = methoda.methodPointer;
+    *(_QWORD *)&v102.fields.b = methoda.invoker_method;
+    TextEffectColor = EventBossStatusUiEntity__GetTextEffectColor((EventBossStatusUiEntity_o *)Instance, v102, 0LL);
     r = TextEffectColor.fields.r;
     g = TextEffectColor.fields.g;
     b = TextEffectColor.fields.b;
     a = TextEffectColor.fields.a;
   }
-  v62 = this->fields.userEventRaidEntity;
-  if ( !v62 )
+  v79 = this->fields.userEventRaidEntity;
+  if ( !v79 )
     goto LABEL_89;
-  v63 = (__int64)v62[1].klass;
-  RaidBossTotalDamage = TitleInfoEventRaidBossComponent__GetRaidBossTotalDamage(this, v4);
+  v80 = (__int64)v79[1].klass;
+  RaidBossTotalDamage = TitleInfoEventRaidBossComponent__GetRaidBossTotalDamage(this, v21);
   if ( *(&this->fields.isLastBattleRelease + 4) )
   {
     lastBattleSpr = (UILabel_o *)this->fields.lastBattleSpr;
-    Instance = (DataManager_o *)TitleInfoEventRaidBossComponent__GetAiModeName(this, RaidBossTotalDamage, v64);
+    Instance = (DataManager_o *)TitleInfoEventRaidBossComponent__GetAiModeName(this, RaidBossTotalDamage, v81);
     if ( !lastBattleSpr )
       goto LABEL_89;
     UILabel__set_text(lastBattleSpr, (System_String_o *)Instance, 0LL);
-    v87.fields.r = r;
-    v87.fields.g = g;
-    v87.fields.b = b;
-    v87.fields.a = a;
-    TitleInfoEventRaidBossComponent__SetOutlineBattleColor(this, (UILabel_o *)this->fields.lastBattleSpr, v87, v67);
+    v104.fields.r = r;
+    v104.fields.g = g;
+    v104.fields.b = b;
+    v104.fields.a = a;
+    TitleInfoEventRaidBossComponent__SetOutlineBattleColor(this, (UILabel_o *)this->fields.lastBattleSpr, v104, v84);
   }
   Instance = *(DataManager_o **)&this->fields.eventId;
   if ( !Instance )
@@ -1925,28 +2114,28 @@ LABEL_90:
     goto LABEL_89;
   if ( UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)Instance, 0LL) )
   {
-    v69 = *(UILabel_o **)&this->fields.eventId;
+    v86 = *(UILabel_o **)&this->fields.eventId;
     Instance = (DataManager_o *)TitleInfoEventRaidBossComponent__GetRestCountText(
                                   this,
-                                  v63 - RaidBossTotalDamage,
+                                  v80 - RaidBossTotalDamage,
                                   RaidBossTotalDamage,
-                                  v68);
-    if ( !v69 )
+                                  v85);
+    if ( !v86 )
       goto LABEL_89;
-    UILabel__set_text(v69, (System_String_o *)Instance, 0LL);
-    v88.fields.r = r;
-    v88.fields.g = g;
-    v88.fields.b = b;
-    v88.fields.a = a;
-    TitleInfoEventRaidBossComponent__SetOutlineBattleColor(this, *(UILabel_o **)&this->fields.eventId, v88, v70);
+    UILabel__set_text(v86, (System_String_o *)Instance, 0LL);
+    v105.fields.r = r;
+    v105.fields.g = g;
+    v105.fields.b = b;
+    v105.fields.a = a;
+    TitleInfoEventRaidBossComponent__SetOutlineBattleColor(this, *(UILabel_o **)&this->fields.eventId, v105, v87);
   }
-  v71 = *(UnityEngine_Object_o **)&this->fields.overwritePosX;
+  v88 = *(UnityEngine_Object_o **)&this->fields.overwritePosX;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(v71, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v88, 0LL, 0LL) )
   {
     Instance = *(DataManager_o **)&this->fields.overwritePosX;
     if ( !Instance )
@@ -1960,25 +2149,25 @@ LABEL_90:
       0LL);
     if ( *(&this->fields.isLastBattleRelease + 5) )
     {
-      v73 = this->fields.userEventRaidEntity;
-      if ( !v73 )
+      v90 = this->fields.userEventRaidEntity;
+      if ( !v90 )
         goto LABEL_89;
       Instance = *(DataManager_o **)&this->fields.overwritePosX;
       if ( !Instance )
         goto LABEL_89;
-      UILabel__set_text((UILabel_o *)Instance, (System_String_o *)v73->fields.damage, 0LL);
+      UILabel__set_text((UILabel_o *)Instance, (System_String_o *)v90->fields.damage, 0LL);
     }
-    v89.fields.r = r;
-    v89.fields.g = g;
-    v89.fields.b = b;
-    v89.fields.a = a;
-    TitleInfoEventRaidBossComponent__SetOutlineBattleColor(this, *(UILabel_o **)&this->fields.overwritePosX, v89, v72);
+    v106.fields.r = r;
+    v106.fields.g = g;
+    v106.fields.b = b;
+    v106.fields.a = a;
+    TitleInfoEventRaidBossComponent__SetOutlineBattleColor(this, *(UILabel_o **)&this->fields.overwritePosX, v106, v89);
   }
   Instance = (DataManager_o *)this->fields.useTotalLabel;
   if ( !Instance )
     goto LABEL_89;
-  v74 = 1.0 - (double)RaidBossTotalDamage / (double)v63;
-  UIProgressBar__set_value((UIProgressBar_o *)Instance, v74, 0LL);
+  v91 = 1.0 - (double)RaidBossTotalDamage / (double)v80;
+  UIProgressBar__set_value((UIProgressBar_o *)Instance, v91, 0LL);
   if ( *(&this->fields.isLastBattleRelease + 5) )
   {
     Instance = (DataManager_o *)this->fields.userEventRaidEntity;
@@ -1992,10 +2181,10 @@ LABEL_90:
     goto LABEL_76;
   if ( !BYTE2(this->fields.hpBarSplitters) )
   {
-    v75 = this->fields.userEventRaidEntity;
-    if ( !v75 )
+    v92 = this->fields.userEventRaidEntity;
+    if ( !v92 )
       goto LABEL_89;
-    if ( (__int64)v75[1].klass > RaidBossTotalDamage )
+    if ( (__int64)v92[1].klass > RaidBossTotalDamage )
     {
 LABEL_76:
       Instance = (DataManager_o *)this->fields.bossName;
@@ -2009,7 +2198,7 @@ LABEL_76:
         }
       }
 LABEL_89:
-      sub_B52A5C(Instance, v4);
+      sub_B5D69C(Instance, v21);
     }
   }
   Instance = (DataManager_o *)this->fields.bossName;
@@ -2019,35 +2208,35 @@ LABEL_89:
   if ( !Instance )
     goto LABEL_89;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
-  v90.fields.r = r;
-  v90.fields.g = g;
-  v90.fields.b = b;
-  v90.fields.a = a;
-  TitleInfoEventRaidBossComponent__SetOutlineLastColor(this, *(UILabel_o **)&this->fields.eventId, v90, v76);
-  v77 = *(UnityEngine_Object_o **)&this->fields.overwritePosX;
+  v107.fields.r = r;
+  v107.fields.g = g;
+  v107.fields.b = b;
+  v107.fields.a = a;
+  TitleInfoEventRaidBossComponent__SetOutlineLastColor(this, *(UILabel_o **)&this->fields.eventId, v107, v93);
+  v94 = *(UnityEngine_Object_o **)&this->fields.overwritePosX;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(v77, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v94, 0LL, 0LL) )
   {
-    v91.fields.r = r;
-    v91.fields.g = g;
-    v91.fields.b = b;
-    v91.fields.a = a;
-    TitleInfoEventRaidBossComponent__SetOutlineLastColor(this, *(UILabel_o **)&this->fields.overwritePosX, v91, v78);
+    v108.fields.r = r;
+    v108.fields.g = g;
+    v108.fields.b = b;
+    v108.fields.a = a;
+    TitleInfoEventRaidBossComponent__SetOutlineLastColor(this, *(UILabel_o **)&this->fields.overwritePosX, v108, v95);
   }
 LABEL_86:
   Instance = (DataManager_o *)this->fields.defeatCntFrame;
   if ( !Instance )
     goto LABEL_89;
-  v92.fields.r = r;
-  v92.fields.g = g;
-  v92.fields.b = b;
-  v92.fields.a = a;
-  UILabel__set_effectColor((UILabel_o *)Instance, v92, 0LL);
-  TitleInfoEventRaidBossComponent__UpdateRestTime(this, 1, v79);
+  v109.fields.r = r;
+  v109.fields.g = g;
+  v109.fields.b = b;
+  v109.fields.a = a;
+  UILabel__set_effectColor((UILabel_o *)Instance, v109, 0LL);
+  TitleInfoEventRaidBossComponent__UpdateRestTime(this, 1, v96);
 }
 
 
@@ -2057,62 +2246,64 @@ void __fastcall TitleInfoEventRaidBossComponent__SetHpBarSplitters(
         bool isFlag,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
   UnityEngine_GameObject_o *defeatCntBarSplitterSp; // x0
-  __int64 v6; // x21
-  __int64 v7; // x8
+  __int64 v7; // x21
+  __int64 v8; // x8
   unsigned __int64 i; // x22
-  UnityEngine_Object_o *v9; // x20
-  __int64 v10; // x0
+  UnityEngine_Object_o *v10; // x20
+  __int64 v11; // x0
 
-  if ( (byte_42B4445 & 1) == 0 )
+  if ( (byte_42ECC13 & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42B4445 = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, isFlag, (_DWORD)method, v3);
+    byte_42ECC13 = 1;
   }
   defeatCntBarSplitterSp = (UnityEngine_GameObject_o *)this->fields.defeatCntBarSplitterSp;
   if ( !defeatCntBarSplitterSp
     || (defeatCntBarSplitterSp = UnityEngine_GameObject__get_gameObject(defeatCntBarSplitterSp, 0LL)) == 0LL )
   {
 LABEL_18:
-    sub_B52A5C(defeatCntBarSplitterSp, isFlag);
+    sub_B5D69C(defeatCntBarSplitterSp, isFlag);
   }
   UnityEngine_GameObject__SetActive(defeatCntBarSplitterSp, isFlag, 0LL);
-  v6 = *(_QWORD *)&this->fields.isRaidClear;
-  if ( v6 )
+  v7 = *(_QWORD *)&this->fields.isRaidClear;
+  if ( v7 )
   {
-    v7 = *(_QWORD *)(v6 + 24);
-    if ( (int)v7 >= 1 )
+    v8 = *(_QWORD *)(v7 + 24);
+    if ( (int)v8 >= 1 )
     {
-      for ( i = 0LL; (__int64)i < (int)v7; ++i )
+      for ( i = 0LL; (__int64)i < (int)v8; ++i )
       {
-        if ( i >= (unsigned int)v7 )
+        if ( i >= (unsigned int)v8 )
         {
-          v10 = sub_B52A88(defeatCntBarSplitterSp);
-          sub_B52A28(v10, 0LL);
+          v11 = sub_B5D6C8(defeatCntBarSplitterSp);
+          sub_B5D668(v11, 0LL);
         }
-        v9 = *(UnityEngine_Object_o **)(v6 + 32 + 8 * i);
+        v10 = *(UnityEngine_Object_o **)(v7 + 32 + 8 * i);
         if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         }
-        defeatCntBarSplitterSp = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(v9, 0LL, 0LL);
+        defeatCntBarSplitterSp = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(v10, 0LL, 0LL);
         if ( ((unsigned __int8)defeatCntBarSplitterSp & 1) != 0 )
         {
-          if ( !v9 )
+          if ( !v10 )
             goto LABEL_18;
-          defeatCntBarSplitterSp = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v9, 0LL);
+          defeatCntBarSplitterSp = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v10, 0LL);
           if ( !defeatCntBarSplitterSp )
             goto LABEL_18;
           UnityEngine_GameObject__SetActive(defeatCntBarSplitterSp, isFlag, 0LL);
         }
-        LODWORD(v7) = *(_DWORD *)(v6 + 24);
+        LODWORD(v8) = *(_DWORD *)(v7 + 24);
       }
     }
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall TitleInfoEventRaidBossComponent__SetLastBattleIcon(
         TitleInfoEventRaidBossComponent_o *this,
         UISprite_o *sprite,
@@ -2121,46 +2312,55 @@ void __fastcall TitleInfoEventRaidBossComponent__SetLastBattleIcon(
         int32_t iconId,
         const MethodInfo *method)
 {
-  Il2CppObject *v10; // x23
-  Il2CppObject *v11; // x0
-  System_String_o *v12; // x22
-  Il2CppObject *v13; // x0
-  System_String_o *v14; // x21
-  int32_t v15; // [xsp+4h] [xbp-3Ch] BYREF
-  int32_t v16; // [xsp+8h] [xbp-38h] BYREF
-  int32_t v17; // [xsp+Ch] [xbp-34h] BYREF
+  int v10; // w1
+  int v11; // w2
+  __int64 v12; // x3
+  int v13; // w1
+  int v14; // w2
+  __int64 v15; // x3
+  int v16; // w1
+  int v17; // w2
+  __int64 v18; // x3
+  Il2CppObject *v19; // x23
+  Il2CppObject *v20; // x0
+  System_String_o *v21; // x22
+  Il2CppObject *v22; // x0
+  System_String_o *v23; // x21
+  int32_t v24; // [xsp+4h] [xbp-3Ch] BYREF
+  int32_t v25; // [xsp+8h] [xbp-38h] BYREF
+  int32_t v26; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_42B4442 & 1) == 0 )
+  if ( (byte_42ECC10 & 1) == 0 )
   {
-    sub_B52984(&AtlasManager_TypeInfo);
-    sub_B52984(&int_TypeInfo);
-    sub_B52984(&StringLiteral_23837/*"{0}_{1}"*/);
-    sub_B52984(&StringLiteral_23839/*"{0}_{1}_{2}"*/);
-    byte_42B4442 = 1;
+    sub_B5D5C4(&AtlasManager_TypeInfo, (_DWORD)sprite, (_DWORD)prefix, *(_QWORD *)&eventId);
+    sub_B5D5C4(&int_TypeInfo, v10, v11, v12);
+    sub_B5D5C4(&StringLiteral_23955/*"{0}_{1}"*/, v13, v14, v15);
+    sub_B5D5C4(&StringLiteral_23957/*"{0}_{1}_{2}"*/, v16, v17, v18);
+    byte_42ECC10 = 1;
   }
   if ( (iconId & 0x80000000) != 0 )
     goto LABEL_12;
-  v17 = eventId;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17);
-  v16 = iconId;
-  v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16);
-  v12 = System_String__Format_44569380((System_String_o *)StringLiteral_23839/*"{0}_{1}_{2}"*/, (Il2CppObject *)prefix, v10, v11, 0LL);
+  v26 = eventId;
+  v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26);
+  v25 = iconId;
+  v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25);
+  v21 = System_String__Format_44578852((System_String_o *)StringLiteral_23957/*"{0}_{1}_{2}"*/, (Il2CppObject *)prefix, v19, v20, 0LL);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  if ( !AtlasManager__SetEventUI(sprite, v12, 0LL) )
+  if ( !AtlasManager__SetEventUI(sprite, v21, 0LL) )
   {
 LABEL_12:
     if ( (eventId & 0x80000000) != 0 )
       goto LABEL_13;
-    v15 = eventId;
-    v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15);
-    v14 = System_String__Format_44563852((System_String_o *)StringLiteral_23837/*"{0}_{1}"*/, (Il2CppObject *)prefix, v13, 0LL);
+    v24 = eventId;
+    v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24);
+    v23 = System_String__Format_44573324((System_String_o *)StringLiteral_23955/*"{0}_{1}"*/, (Il2CppObject *)prefix, v22, 0LL);
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !AtlasManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    if ( !AtlasManager__SetEventUI(sprite, v14, 0LL) )
+    if ( !AtlasManager__SetEventUI(sprite, v23, 0LL) )
     {
 LABEL_13:
       if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2187,7 +2387,7 @@ void __fastcall TitleInfoEventRaidBossComponent__SetOutlineBattleColor(
   if ( v4 )
     defaultColor = EventBossStatusUiEntity__GetStatusBattleColor(v4, defaultColor, 0LL);
   if ( !label )
-    sub_B52A5C(v4, label);
+    sub_B5D69C(v4, label);
   UILabel__set_effectColor(label, defaultColor, 0LL);
 }
 
@@ -2205,11 +2405,12 @@ void __fastcall TitleInfoEventRaidBossComponent__SetOutlineLastColor(
   if ( v4 )
     defaultColor = EventBossStatusUiEntity__GetStatusLastColor(v4, defaultColor, 0LL);
   if ( !label )
-    sub_B52A5C(v4, label);
+    sub_B5D69C(v4, label);
   UILabel__set_effectColor(label, defaultColor, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall TitleInfoEventRaidBossComponent__SetSpriteFromEventUI(
         TitleInfoEventRaidBossComponent_o *this,
         UISprite_o *sprite,
@@ -2217,24 +2418,27 @@ void __fastcall TitleInfoEventRaidBossComponent__SetSpriteFromEventUI(
         int32_t gaugeId,
         const MethodInfo *method)
 {
-  System_String_o *v8; // x0
-  System_String_o *v9; // x21
-  int32_t v10; // [xsp+Ch] [xbp-24h] BYREF
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  System_String_o *v11; // x0
+  System_String_o *v12; // x21
+  int32_t v13; // [xsp+Ch] [xbp-24h] BYREF
 
-  v10 = gaugeId;
-  if ( (byte_42B4441 & 1) == 0 )
+  v13 = gaugeId;
+  if ( (byte_42ECC0F & 1) == 0 )
   {
-    sub_B52984(&AtlasManager_TypeInfo);
-    sub_B52984(&StringLiteral_16011/*"_"*/);
-    byte_42B4441 = 1;
+    sub_B5D5C4(&AtlasManager_TypeInfo, (_DWORD)sprite, (_DWORD)prefix, *(_QWORD *)&gaugeId);
+    sub_B5D5C4(&StringLiteral_16096/*"_"*/, v8, v9, v10);
+    byte_42ECC0F = 1;
   }
   if ( (gaugeId & 0x80000000) != 0 )
     goto LABEL_8;
-  v8 = System_Int32__ToString((int32_t)&v10, 0LL);
-  v9 = System_String__Concat_44570600(prefix, (System_String_o *)StringLiteral_16011/*"_"*/, v8, 0LL);
+  v11 = System_Int32__ToString((int32_t)&v13, 0LL);
+  v12 = System_String__Concat_44580072(prefix, (System_String_o *)StringLiteral_16096/*"_"*/, v11, 0LL);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  if ( !AtlasManager__SetEventUI(sprite, v9, 0LL) )
+  if ( !AtlasManager__SetEventUI(sprite, v12, 0LL) )
   {
 LABEL_8:
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2247,6 +2451,7 @@ LABEL_8:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall TitleInfoEventRaidBossComponent__Setup(
         TitleInfoEventRaidBossComponent_o *this,
         UIAtlas_o *terminalAtlas,
@@ -2257,109 +2462,166 @@ void __fastcall TitleInfoEventRaidBossComponent__Setup(
         bool isSingleRaid,
         const MethodInfo *method)
 {
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  int v17; // w1
+  int v18; // w2
+  __int64 v19; // x3
+  int v20; // w1
+  int v21; // w2
+  __int64 v22; // x3
+  int v23; // w1
+  int v24; // w2
+  __int64 v25; // x3
+  int v26; // w1
+  int v27; // w2
+  __int64 v28; // x3
+  int v29; // w1
+  int v30; // w2
+  __int64 v31; // x3
+  int v32; // w1
+  int v33; // w2
+  __int64 v34; // x3
+  int v35; // w1
+  int v36; // w2
+  __int64 v37; // x3
+  int v38; // w1
+  int v39; // w2
+  __int64 v40; // x3
+  int v41; // w1
+  int v42; // w2
+  __int64 v43; // x3
+  int v44; // w1
+  int v45; // w2
+  __int64 v46; // x3
+  int v47; // w1
+  int v48; // w2
+  __int64 v49; // x3
+  int v50; // w1
+  int v51; // w2
+  __int64 v52; // x3
+  int v53; // w1
+  int v54; // w2
+  __int64 v55; // x3
+  int v56; // w1
+  int v57; // w2
+  __int64 v58; // x3
+  int v59; // w1
+  int v60; // w2
+  __int64 v61; // x3
+  int v62; // w1
+  int v63; // w2
+  __int64 v64; // x3
+  int v65; // w1
+  int v66; // w2
+  __int64 v67; // x3
+  int v68; // w1
+  int v69; // w2
+  __int64 v70; // x3
   int64_t Instance; // x0
   __int64 eventRaidEntity_low; // x1
-  DataManager_o *v16; // x23
-  EventRaidMaster_o *v17; // x21
+  DataManager_o *v73; // x23
+  EventRaidMaster_o *v74; // x21
   EventRaidEntity_o *Entity; // x0
   struct UserEventRaidEntity_o **p_userEventRaidEntity; // x22
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
+  System_String_array **v77; // x2
+  System_String_array **v78; // x3
+  System_Boolean_array **v79; // x4
+  System_Int32_array **v80; // x5
+  System_Int32_array *v81; // x6
+  System_Int32_array *v82; // x7
   struct UserEventRaidEntity_o *userEventRaidEntity; // x8
   struct EventBossStatusUiEntity_o *EntityFromEventIdAndDay; // x0
-  System_String_array **v28; // x2
-  System_String_array **v29; // x3
-  System_Boolean_array **v30; // x4
-  System_Int32_array **v31; // x5
-  System_Int32_array *v32; // x6
-  System_Int32_array *v33; // x7
+  System_String_array **v85; // x2
+  System_String_array **v86; // x3
+  System_Boolean_array **v87; // x4
+  System_Int32_array **v88; // x5
+  System_Int32_array *v89; // x6
+  System_Int32_array *v90; // x7
   bool isRaidDefeatCount; // w0
   System_Int32_array **EntityFromEventIdAndIndex; // x0
-  System_String_array **v36; // x2
-  System_String_array **v37; // x3
-  System_Boolean_array **v38; // x4
-  System_Int32_array **v39; // x5
-  System_Int32_array *v40; // x6
-  System_Int32_array *v41; // x7
-  const MethodInfo *v42; // x5
-  int32_t v43; // w23
-  TitleInfoEventRaidBossComponent_o *v44; // x0
-  const MethodInfo *v45; // x4
-  TitleInfoEventRaidBossComponent_o *v46; // x0
-  const MethodInfo *v47; // x4
-  TitleInfoEventRaidBossComponent_o *v48; // x0
-  const MethodInfo *v49; // x4
-  float v50; // s0
+  System_String_array **v93; // x2
+  System_String_array **v94; // x3
+  System_Boolean_array **v95; // x4
+  System_Int32_array **v96; // x5
+  System_Int32_array *v97; // x6
+  System_Int32_array *v98; // x7
+  const MethodInfo *v99; // x5
+  int32_t v100; // w23
+  TitleInfoEventRaidBossComponent_o *v101; // x0
+  const MethodInfo *v102; // x4
+  TitleInfoEventRaidBossComponent_o *v103; // x0
+  const MethodInfo *v104; // x4
+  TitleInfoEventRaidBossComponent_o *v105; // x0
+  const MethodInfo *v106; // x4
+  float v107; // s0
   struct UILabel_o *totalHpLabel; // x1
-  System_String_array **v52; // x2
-  System_String_array **v53; // x3
-  System_Boolean_array **v54; // x4
-  System_Int32_array **v55; // x5
-  System_Int32_array *v56; // x6
-  System_Int32_array *v57; // x7
+  System_String_array **v109; // x2
+  System_String_array **v110; // x3
+  System_Boolean_array **v111; // x4
+  System_Int32_array **v112; // x5
+  System_Int32_array *v113; // x6
+  System_Int32_array *v114; // x7
   System_Int32_array **restTimeLabel; // x1
-  System_String_array **v59; // x2
-  System_String_array **v60; // x3
-  System_Boolean_array **v61; // x4
-  System_Int32_array **v62; // x5
-  System_Int32_array *v63; // x6
-  System_Int32_array *v64; // x7
+  System_String_array **v116; // x2
+  System_String_array **v117; // x3
+  System_Boolean_array **v118; // x4
+  System_Int32_array **v119; // x5
+  System_Int32_array *v120; // x6
+  System_Int32_array *v121; // x7
   UISprite_o *defeatCntBg; // x23
-  float v66; // s0
+  float v123; // s0
   struct UILabel_o *totalDefeatCntLabel; // x1
-  System_String_array **v68; // x2
-  System_String_array **v69; // x3
-  System_Boolean_array **v70; // x4
-  System_Int32_array **v71; // x5
-  System_Int32_array *v72; // x6
-  System_Int32_array *v73; // x7
+  System_String_array **v125; // x2
+  System_String_array **v126; // x3
+  System_Boolean_array **v127; // x4
+  System_Int32_array **v128; // x5
+  System_Int32_array *v129; // x6
+  System_Int32_array *v130; // x7
   System_Int32_array **defeatCntBarSliderWhite; // x1
   int32_t *p_eventId; // x23
-  System_String_array **v76; // x2
-  System_String_array **v77; // x3
-  System_Boolean_array **v78; // x4
-  System_Int32_array **v79; // x5
-  System_Int32_array *v80; // x6
-  System_Int32_array *v81; // x7
+  System_String_array **v133; // x2
+  System_String_array **v134; // x3
+  System_Boolean_array **v135; // x4
+  System_Int32_array **v136; // x5
+  System_Int32_array *v137; // x6
+  System_Int32_array *v138; // x7
   void *monitor; // x24
-  UnityEngine_Component_o *v83; // x8
-  int64_t v84; // x23
+  UnityEngine_Component_o *v140; // x8
+  int64_t v141; // x23
   UnityEngine_GameObject_o *gameObject; // x0
   float RAIDBOSS_DEFEAT_COUNT_POS_X; // s0
-  UnityEngine_GameObject_o *v87; // x23
-  TitleInfoEventRaidBossComponent_c *v88; // x0
-  EventRaidEntity_o *v89; // x8
+  UnityEngine_GameObject_o *v144; // x23
+  TitleInfoEventRaidBossComponent_c *v145; // x0
+  EventRaidEntity_o *v146; // x8
   int32_t RaidGroupDeadQuestId; // w0
-  const MethodInfo *v91; // x1
-  int32_t v92; // w20
+  const MethodInfo *v148; // x1
+  int32_t v149; // w20
 
-  if ( (byte_42B443F & 1) == 0 )
+  if ( (byte_42ECC0D & 1) == 0 )
   {
-    sub_B52984(&AtlasManager_TypeInfo);
-    sub_B52984(&Method_DataManager_GetMasterData_EventBossStatusUiMaster___);
-    sub_B52984(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_B52984(&Method_DataManager_GetMasterData_EventRaidMaster___);
-    sub_B52984(&Method_DataManager_GetMasterData_UserEventRaidMaster___);
-    sub_B52984(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
-    sub_B52984(&NetworkManager_TypeInfo);
-    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B52984(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
-    sub_B52984(&SingletonTemplate_clsQuestCheck__TypeInfo);
-    sub_B52984(&TitleInfoEventRaidBossComponent_TypeInfo);
-    sub_B52984(&StringLiteral_18684/*"event_raid_defeat_count_frame"*/);
-    sub_B52984(&StringLiteral_18733/*"event_superboss_hp_white"*/);
-    sub_B52984(&StringLiteral_18689/*"event_raid_lastbattle"*/);
-    sub_B52984(&StringLiteral_18686/*"event_raid_hp_back"*/);
-    sub_B52984(&StringLiteral_18685/*"event_raid_defeat_count_front"*/);
-    sub_B52984(&StringLiteral_18687/*"event_raid_hp_frame"*/);
-    sub_B52984(&StringLiteral_18693/*"event_raid_split_line"*/);
-    sub_B52984(&StringLiteral_18683/*"event_raid_defeat_count_back"*/);
-    sub_B52984(&StringLiteral_18688/*"event_raid_hp_front"*/);
-    byte_42B443F = 1;
+    sub_B5D5C4(&AtlasManager_TypeInfo, (_DWORD)terminalAtlas, eventId, *(_QWORD *)&warId);
+    sub_B5D5C4(&Method_DataManager_GetMasterData_EventBossStatusUiMaster___, v14, v15, v16);
+    sub_B5D5C4(&Method_DataManager_GetMasterData_EventDetailMaster___, v17, v18, v19);
+    sub_B5D5C4(&Method_DataManager_GetMasterData_EventRaidMaster___, v20, v21, v22);
+    sub_B5D5C4(&Method_DataManager_GetMasterData_UserEventRaidMaster___, v23, v24, v25);
+    sub_B5D5C4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__, v26, v27, v28);
+    sub_B5D5C4(&NetworkManager_TypeInfo, v29, v30, v31);
+    sub_B5D5C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v32, v33, v34);
+    sub_B5D5C4(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v35, v36, v37);
+    sub_B5D5C4(&SingletonTemplate_clsQuestCheck__TypeInfo, v38, v39, v40);
+    sub_B5D5C4(&TitleInfoEventRaidBossComponent_TypeInfo, v41, v42, v43);
+    sub_B5D5C4(&StringLiteral_18779/*"event_raid_defeat_count_frame"*/, v44, v45, v46);
+    sub_B5D5C4(&StringLiteral_18828/*"event_superboss_hp_white"*/, v47, v48, v49);
+    sub_B5D5C4(&StringLiteral_18784/*"event_raid_lastbattle"*/, v50, v51, v52);
+    sub_B5D5C4(&StringLiteral_18781/*"event_raid_hp_back"*/, v53, v54, v55);
+    sub_B5D5C4(&StringLiteral_18780/*"event_raid_defeat_count_front"*/, v56, v57, v58);
+    sub_B5D5C4(&StringLiteral_18782/*"event_raid_hp_frame"*/, v59, v60, v61);
+    sub_B5D5C4(&StringLiteral_18788/*"event_raid_split_line"*/, v62, v63, v64);
+    sub_B5D5C4(&StringLiteral_18778/*"event_raid_defeat_count_back"*/, v65, v66, v67);
+    sub_B5D5C4(&StringLiteral_18783/*"event_raid_hp_front"*/, v68, v69, v70);
+    byte_42ECC0D = 1;
   }
   LODWORD(this->fields.eventRaidEntity) = eventId;
   BYTE1(this->fields.HPfrom) = 0;
@@ -2367,14 +2629,14 @@ void __fastcall TitleInfoEventRaidBossComponent__Setup(
   *((_WORD *)&this->fields.isLastBattleRelease + 1) = 256;
   *(&this->fields.isLastBattleRelease + 5) = isJumbleRaid;
   LOBYTE(this->fields.hpBarSplitters) = isSingleRaid;
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_68;
-  v16 = (DataManager_o *)Instance;
+  v73 = (DataManager_o *)Instance;
   Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_EventRaidMaster___);
-  v17 = (EventRaidMaster_o *)Instance;
+                        (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_EventRaidMaster___);
+  v74 = (EventRaidMaster_o *)Instance;
   if ( (day & 0x80000000) != 0 )
   {
     if ( !Instance )
@@ -2385,25 +2647,25 @@ void __fastcall TitleInfoEventRaidBossComponent__Setup(
   {
     goto LABEL_68;
   }
-  Entity = EventRaidMaster__GetEntity(v17, (int32_t)this->fields.eventRaidEntity, day, 0LL);
+  Entity = EventRaidMaster__GetEntity(v74, (int32_t)this->fields.eventRaidEntity, day, 0LL);
   p_userEventRaidEntity = &this->fields.userEventRaidEntity;
   this->fields.userEventRaidEntity = (struct UserEventRaidEntity_o *)Entity;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.userEventRaidEntity,
     (System_Int32_array **)Entity,
-    v20,
-    v21,
-    v22,
-    v23,
-    v24,
-    v25);
+    v77,
+    v78,
+    v79,
+    v80,
+    v81,
+    v82);
   userEventRaidEntity = this->fields.userEventRaidEntity;
   if ( userEventRaidEntity )
   {
     BYTE1(this->fields.hpBarSplitters) = userEventRaidEntity[2].fields.userId > 0;
     Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                          v16,
-                          (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_UserEventRaidMaster___);
+                          v73,
+                          (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_UserEventRaidMaster___);
     if ( Instance )
     {
       EntityFromEventIdAndDay = (struct EventBossStatusUiEntity_o *)UserEventRaidMaster__getEntityFromEventIdAndDay(
@@ -2412,32 +2674,32 @@ void __fastcall TitleInfoEventRaidBossComponent__Setup(
                                                                       day,
                                                                       0LL);
       this->fields.eventBossStatusUiEntity = EntityFromEventIdAndDay;
-      sub_B52920(
+      sub_B5D560(
         (BattleServantConfConponent_o *)&this->fields.eventBossStatusUiEntity,
         (System_Int32_array **)EntityFromEventIdAndDay,
-        v28,
-        v29,
-        v30,
-        v31,
-        v32,
-        v33);
+        v85,
+        v86,
+        v87,
+        v88,
+        v89,
+        v90);
       Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                            v16,
-                            (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                            v73,
+                            (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_EventDetailMaster___);
       if ( Instance )
       {
         Instance = (int64_t)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                               (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                               (int32_t)this->fields.eventRaidEntity,
-                              (const MethodInfo_23E22D8 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+                              (const MethodInfo_23FAE10 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
         if ( Instance )
         {
           isRaidDefeatCount = EventDetailEntity__isRaidDefeatCount((EventDetailEntity_o *)Instance, 0LL);
           *(&this->fields.isLastBattleRelease + 4) = isRaidDefeatCount;
           LOBYTE(this->fields.hpBarParent) = isRaidDefeatCount;
           Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                v16,
-                                (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_EventBossStatusUiMaster___);
+                                v73,
+                                (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_EventBossStatusUiMaster___);
           if ( Instance )
           {
             EntityFromEventIdAndIndex = (System_Int32_array **)EventBossStatusUiMaster__GetEntityFromEventIdAndIndex(
@@ -2446,20 +2708,20 @@ void __fastcall TitleInfoEventRaidBossComponent__Setup(
                                                                  day,
                                                                  0LL);
             *(_QWORD *)&this->fields.restTimeUpdateSec = EntityFromEventIdAndIndex;
-            sub_B52920(
+            sub_B5D560(
               (BattleServantConfConponent_o *)&this->fields.restTimeUpdateSec,
               EntityFromEventIdAndIndex,
-              v36,
-              v37,
-              v38,
-              v39,
-              v40,
-              v41);
+              v93,
+              v94,
+              v95,
+              v96,
+              v97,
+              v98);
             Instance = *(_QWORD *)&this->fields.restTimeUpdateSec;
             if ( Instance )
             {
               Instance = EventBossStatusUiEntity__GetGaugeId((EventBossStatusUiEntity_o *)Instance, 0LL);
-              v43 = Instance;
+              v100 = Instance;
               if ( *(_QWORD *)&this->fields.restTimeUpdateSec )
                 Instance = EventBossStatusUiEntity__GetLastBattleIconId(
                              *(EventBossStatusUiEntity_o **)&this->fields.restTimeUpdateSec,
@@ -2467,17 +2729,17 @@ void __fastcall TitleInfoEventRaidBossComponent__Setup(
             }
             else
             {
-              v43 = -1;
+              v100 = -1;
             }
             if ( *p_userEventRaidEntity )
             {
               TitleInfoEventRaidBossComponent__SetLastBattleIcon(
                 (TitleInfoEventRaidBossComponent_o *)Instance,
                 (UISprite_o *)this->fields.bossName,
-                (System_String_o *)StringLiteral_18689/*"event_raid_lastbattle"*/,
+                (System_String_o *)StringLiteral_18784/*"event_raid_lastbattle"*/,
                 (*p_userEventRaidEntity)->fields.userId,
                 (int32_t)(*p_userEventRaidEntity)[1].monitor,
-                v42);
+                v99);
               if ( *(&this->fields.isLastBattleRelease + 4) && !BYTE1(this->fields.hpBarSplitters) )
               {
                 defeatCntBg = this->fields.defeatCntBg;
@@ -2486,50 +2748,50 @@ void __fastcall TitleInfoEventRaidBossComponent__Setup(
                 {
                   j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
                 }
-                AtlasManager__SetEventUI(defeatCntBg, (System_String_o *)StringLiteral_18684/*"event_raid_defeat_count_frame"*/, 0LL);
-                AtlasManager__SetEventUI(this->fields.defeatCntBar, (System_String_o *)StringLiteral_18683/*"event_raid_defeat_count_back"*/, 0LL);
+                AtlasManager__SetEventUI(defeatCntBg, (System_String_o *)StringLiteral_18779/*"event_raid_defeat_count_frame"*/, 0LL);
+                AtlasManager__SetEventUI(this->fields.defeatCntBar, (System_String_o *)StringLiteral_18778/*"event_raid_defeat_count_back"*/, 0LL);
                 AtlasManager__SetEventUI(
                   (UISprite_o *)this->fields.defeatCntBarSlider,
-                  (System_String_o *)StringLiteral_18685/*"event_raid_defeat_count_front"*/,
+                  (System_String_o *)StringLiteral_18780/*"event_raid_defeat_count_front"*/,
                   0LL);
                 AtlasManager__SetEventUI(
                   (UISprite_o *)this->fields.defeatCntBarSplitter,
-                  (System_String_o *)StringLiteral_18733/*"event_superboss_hp_white"*/,
+                  (System_String_o *)StringLiteral_18828/*"event_superboss_hp_white"*/,
                   0LL);
                 AtlasManager__SetEventUI(
                   (UISprite_o *)this->fields.modeName,
-                  (System_String_o *)StringLiteral_18693/*"event_raid_split_line"*/,
+                  (System_String_o *)StringLiteral_18788/*"event_raid_split_line"*/,
                   0LL);
                 Instance = (int64_t)this->fields.defeatCntBarSlider;
                 if ( !Instance )
                   goto LABEL_68;
-                v66 = (*(float (__fastcall **)(int64_t, _QWORD))(*(_QWORD *)Instance + 664LL))(
-                        Instance,
-                        *(_QWORD *)(*(_QWORD *)Instance + 672LL));
+                v123 = (*(float (__fastcall **)(int64_t, _QWORD))(*(_QWORD *)Instance + 664LL))(
+                         Instance,
+                         *(_QWORD *)(*(_QWORD *)Instance + 672LL));
                 totalDefeatCntLabel = this->fields.totalDefeatCntLabel;
-                *((float *)&this->fields.useBarSlider + 1) = v66;
+                *((float *)&this->fields.useBarSlider + 1) = v123;
                 this->fields.useTotalLabel = totalDefeatCntLabel;
-                sub_B52920(
+                sub_B5D560(
                   (BattleServantConfConponent_o *)&this->fields.useTotalLabel,
                   (System_Int32_array **)totalDefeatCntLabel,
-                  v68,
-                  v69,
-                  v70,
-                  v71,
-                  v72,
-                  v73);
+                  v125,
+                  v126,
+                  v127,
+                  v128,
+                  v129,
+                  v130);
                 defeatCntBarSliderWhite = (System_Int32_array **)this->fields.defeatCntBarSliderWhite;
                 p_eventId = &this->fields.eventId;
                 *(_QWORD *)&this->fields.eventId = defeatCntBarSliderWhite;
-                sub_B52920(
+                sub_B5D560(
                   (BattleServantConfConponent_o *)&this->fields.eventId,
                   defeatCntBarSliderWhite,
-                  v76,
-                  v77,
-                  v78,
-                  v79,
-                  v80,
-                  v81);
+                  v133,
+                  v134,
+                  v135,
+                  v136,
+                  v137,
+                  v138);
                 Instance = (int64_t)this->fields.lastBattleSpr;
                 if ( !Instance )
                   goto LABEL_68;
@@ -2554,12 +2816,12 @@ void __fastcall TitleInfoEventRaidBossComponent__Setup(
                   j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
                 }
                 Instance = NetworkManager__getTime(0LL);
-                v83 = *(UnityEngine_Component_o **)p_eventId;
+                v140 = *(UnityEngine_Component_o **)p_eventId;
                 if ( !*(_QWORD *)p_eventId )
                   goto LABEL_68;
-                v84 = Instance;
-                Instance = (int64_t)UnityEngine_Component__get_gameObject(v83, 0LL);
-                if ( (__int64)monitor > v84 || *(&this->fields.isLastBattleRelease + 5) )
+                v141 = Instance;
+                Instance = (int64_t)UnityEngine_Component__get_gameObject(v140, 0LL);
+                if ( (__int64)monitor > v141 || *(&this->fields.isLastBattleRelease + 5) )
                 {
                   eventRaidEntity_low = 1LL;
                   if ( !Instance )
@@ -2575,52 +2837,52 @@ void __fastcall TitleInfoEventRaidBossComponent__Setup(
               else
               {
                 TitleInfoEventRaidBossComponent__SetSpriteFromEventUI(
-                  v44,
+                  v101,
                   this->fields.hpBg,
-                  (System_String_o *)StringLiteral_18687/*"event_raid_hp_frame"*/,
-                  v43,
-                  v45);
+                  (System_String_o *)StringLiteral_18782/*"event_raid_hp_frame"*/,
+                  v100,
+                  v102);
                 TitleInfoEventRaidBossComponent__SetSpriteFromEventUI(
-                  v46,
+                  v103,
                   this->fields.hpBar,
-                  (System_String_o *)StringLiteral_18686/*"event_raid_hp_back"*/,
-                  v43,
-                  v47);
+                  (System_String_o *)StringLiteral_18781/*"event_raid_hp_back"*/,
+                  v100,
+                  v104);
                 TitleInfoEventRaidBossComponent__SetSpriteFromEventUI(
-                  v48,
+                  v105,
                   (UISprite_o *)this->fields.hpBarSlider,
-                  (System_String_o *)StringLiteral_18688/*"event_raid_hp_front"*/,
-                  v43,
-                  v49);
+                  (System_String_o *)StringLiteral_18783/*"event_raid_hp_front"*/,
+                  v100,
+                  v106);
                 Instance = (int64_t)this->fields.hpBarSlider;
                 if ( !Instance )
                   goto LABEL_68;
-                v50 = (*(float (__fastcall **)(int64_t, _QWORD))(*(_QWORD *)Instance + 664LL))(
-                        Instance,
-                        *(_QWORD *)(*(_QWORD *)Instance + 672LL));
+                v107 = (*(float (__fastcall **)(int64_t, _QWORD))(*(_QWORD *)Instance + 664LL))(
+                         Instance,
+                         *(_QWORD *)(*(_QWORD *)Instance + 672LL));
                 totalHpLabel = this->fields.totalHpLabel;
-                *((float *)&this->fields.useBarSlider + 1) = v50;
+                *((float *)&this->fields.useBarSlider + 1) = v107;
                 this->fields.useTotalLabel = totalHpLabel;
-                sub_B52920(
+                sub_B5D560(
                   (BattleServantConfConponent_o *)&this->fields.useTotalLabel,
                   (System_Int32_array **)totalHpLabel,
-                  v52,
-                  v53,
-                  v54,
-                  v55,
-                  v56,
-                  v57);
+                  v109,
+                  v110,
+                  v111,
+                  v112,
+                  v113,
+                  v114);
                 restTimeLabel = (System_Int32_array **)this->fields.restTimeLabel;
                 *(_QWORD *)&this->fields.eventId = restTimeLabel;
-                sub_B52920(
+                sub_B5D560(
                   (BattleServantConfConponent_o *)&this->fields.eventId,
                   restTimeLabel,
-                  v59,
-                  v60,
-                  v61,
-                  v62,
-                  v63,
-                  v64);
+                  v116,
+                  v117,
+                  v118,
+                  v119,
+                  v120,
+                  v121);
                 Instance = (int64_t)this->fields.lastBattleSpr;
                 if ( !Instance )
                   goto LABEL_68;
@@ -2640,19 +2902,19 @@ void __fastcall TitleInfoEventRaidBossComponent__Setup(
               UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, eventRaidEntity_low, 0LL);
               gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
               RAIDBOSS_DEFEAT_COUNT_POS_X = *(float *)&this->fields.useBarSlider;
-              v87 = gameObject;
+              v144 = gameObject;
               if ( RAIDBOSS_DEFEAT_COUNT_POS_X == 0.0 )
               {
-                v88 = TitleInfoEventRaidBossComponent_TypeInfo;
+                v145 = TitleInfoEventRaidBossComponent_TypeInfo;
                 if ( (BYTE3(TitleInfoEventRaidBossComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                   && !TitleInfoEventRaidBossComponent_TypeInfo->_2.cctor_finished )
                 {
                   j_il2cpp_runtime_class_init_0(TitleInfoEventRaidBossComponent_TypeInfo);
-                  v88 = TitleInfoEventRaidBossComponent_TypeInfo;
+                  v145 = TitleInfoEventRaidBossComponent_TypeInfo;
                 }
-                RAIDBOSS_DEFEAT_COUNT_POS_X = (float)v88->static_fields->RAIDBOSS_DEFEAT_COUNT_POS_X;
+                RAIDBOSS_DEFEAT_COUNT_POS_X = (float)v145->static_fields->RAIDBOSS_DEFEAT_COUNT_POS_X;
               }
-              GameObjectExtensions__SetLocalPositionX(v87, RAIDBOSS_DEFEAT_COUNT_POS_X, 0LL);
+              GameObjectExtensions__SetLocalPositionX(v144, RAIDBOSS_DEFEAT_COUNT_POS_X, 0LL);
               Instance = (int64_t)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
               if ( Instance )
               {
@@ -2667,7 +2929,7 @@ void __fastcall TitleInfoEventRaidBossComponent__Setup(
                   {
                     j_il2cpp_runtime_class_init_0(SingletonTemplate_clsQuestCheck__TypeInfo);
                   }
-                  Instance = (int64_t)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2B76134 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+                  Instance = (int64_t)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2A301E4 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
                   if ( Instance )
                   {
                     Instance = clsQuestCheck__IsEncountRaidBoss(
@@ -2675,27 +2937,27 @@ void __fastcall TitleInfoEventRaidBossComponent__Setup(
                                  (int32_t)this->fields.eventRaidEntity,
                                  day,
                                  0LL);
-                    v89 = (EventRaidEntity_o *)this->fields.userEventRaidEntity;
+                    v146 = (EventRaidEntity_o *)this->fields.userEventRaidEntity;
                     *(&this->fields.isLastBattleRelease + 2) = Instance & 1;
-                    if ( v89 )
+                    if ( v146 )
                     {
-                      Instance = EventRaidEntity__IsJumbleSingleRaid(v89, 0LL);
+                      Instance = EventRaidEntity__IsJumbleSingleRaid(v146, 0LL);
                       eventRaidEntity_low = LODWORD(this->fields.eventRaidEntity);
                       if ( (Instance & 1) != 0 )
                       {
                         if ( !*p_userEventRaidEntity )
                           goto LABEL_68;
                         RaidGroupDeadQuestId = EventRaidMaster__GetRaidGroupDeadQuestId(
-                                                 v17,
+                                                 v74,
                                                  eventRaidEntity_low,
                                                  (*p_userEventRaidEntity)->fields.eventId,
                                                  0LL);
                       }
                       else
                       {
-                        RaidGroupDeadQuestId = EventRaidMaster__GetRaidDeadQuestId(v17, eventRaidEntity_low, day, 0LL);
+                        RaidGroupDeadQuestId = EventRaidMaster__GetRaidDeadQuestId(v74, eventRaidEntity_low, day, 0LL);
                       }
-                      v92 = RaidGroupDeadQuestId;
+                      v149 = RaidGroupDeadQuestId;
                       if ( RaidGroupDeadQuestId < 1 )
                         goto LABEL_66;
                       if ( (BYTE3(SingletonTemplate_clsQuestCheck__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2703,17 +2965,17 @@ void __fastcall TitleInfoEventRaidBossComponent__Setup(
                       {
                         j_il2cpp_runtime_class_init_0(SingletonTemplate_clsQuestCheck__TypeInfo);
                       }
-                      Instance = (int64_t)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2B76134 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+                      Instance = (int64_t)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2A301E4 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
                       if ( Instance )
                       {
                         BYTE2(this->fields.hpBarSplitters) = clsQuestCheck__IsQuestRelease(
                                                                (clsQuestCheck_o *)Instance,
-                                                               v92,
+                                                               v149,
                                                                -1,
                                                                0,
                                                                0LL);
 LABEL_66:
-                        TitleInfoEventRaidBossComponent__SetDisp(this, v91);
+                        TitleInfoEventRaidBossComponent__SetDisp(this, v148);
                         return;
                       }
                     }
@@ -2726,7 +2988,7 @@ LABEL_66:
       }
     }
 LABEL_68:
-    sub_B52A5C(Instance, eventRaidEntity_low);
+    sub_B5D69C(Instance, eventRaidEntity_low);
   }
 }
 
@@ -2752,7 +3014,7 @@ void __fastcall TitleInfoEventRaidBossComponent__StartDamageAnimation(
   const MethodInfo *v18; // x1
 
   this->fields.onClearCall = callBack;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.onClearCall,
     (System_Int32_array **)callBack,
     (System_String_array **)callBack,
@@ -2763,7 +3025,7 @@ void __fastcall TitleInfoEventRaidBossComponent__StartDamageAnimation(
     v7);
   ClearBossEffect = TitleInfoEventRaidBossComponent__GetClearBossEffect(this, mapAssetData, v10);
   this[1].klass = (TitleInfoEventRaidBossComponent_c *)ClearBossEffect;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this[1],
     (System_Int32_array **)ClearBossEffect,
     v12,
@@ -2799,35 +3061,48 @@ void __fastcall TitleInfoEventRaidBossComponent__UpdateRestTime(
         bool isForce,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
+  char v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  char v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  char v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  char v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
   bool *p_isSingleRaid; // x20
   float realtimeSinceStartup; // s0
-  float v7; // s9
-  float v8; // s8
-  TitleInfoEventRaidBossComponent_c *v9; // x0
+  float v20; // s9
+  float v21; // s8
+  TitleInfoEventRaidBossComponent_c *v22; // x0
   System_String_o *Time; // x0
-  __int64 v11; // x1
+  __int64 v24; // x1
   struct UserEventRaidEntity_o *userEventRaidEntity; // x8
-  unsigned __int64 v13; // x8
-  unsigned __int64 v14; // x23
-  unsigned __int64 v15; // x22
-  unsigned __int64 v16; // x21
+  unsigned __int64 v26; // x8
+  unsigned __int64 v27; // x23
+  unsigned __int64 v28; // x22
+  unsigned __int64 v29; // x21
   UILabel_o *defeatCntFrame; // x19
-  System_String_o *v18; // x20
-  Il2CppObject *v19; // x21
-  Il2CppObject *v20; // x22
-  Il2CppObject *v21; // x0
-  unsigned __int64 v22; // [xsp+8h] [xbp-58h] BYREF
-  unsigned __int64 v23; // [xsp+10h] [xbp-50h] BYREF
-  unsigned __int64 v24; // [xsp+18h] [xbp-48h] BYREF
+  System_String_o *v31; // x20
+  Il2CppObject *v32; // x21
+  Il2CppObject *v33; // x22
+  Il2CppObject *v34; // x0
+  unsigned __int64 v35; // [xsp+8h] [xbp-58h] BYREF
+  unsigned __int64 v36; // [xsp+10h] [xbp-50h] BYREF
+  unsigned __int64 v37; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_42B4446 & 1) == 0 )
+  if ( (byte_42ECC14 & 1) == 0 )
   {
-    sub_B52984(&long_TypeInfo);
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&NetworkManager_TypeInfo);
-    sub_B52984(&TitleInfoEventRaidBossComponent_TypeInfo);
-    sub_B52984(&StringLiteral_13506/*"TIME_REST_RAID"*/);
-    byte_42B4446 = 1;
+    sub_B5D5C4(&long_TypeInfo, isForce, (_DWORD)method, v3);
+    sub_B5D5C4(&LocalizationManager_TypeInfo, v6, v7, v8);
+    sub_B5D5C4(&NetworkManager_TypeInfo, v9, v10, v11);
+    sub_B5D5C4(&TitleInfoEventRaidBossComponent_TypeInfo, v12, v13, v14);
+    sub_B5D5C4(&StringLiteral_13565/*"TIME_REST_RAID"*/, v15, v16, v17);
+    byte_42ECC14 = 1;
   }
   if ( *(&this->fields.isLastBattleRelease + 2) && !*(&this->fields.isLastBattleRelease + 4) )
   {
@@ -2845,18 +3120,18 @@ LABEL_11:
       userEventRaidEntity = this->fields.userEventRaidEntity;
       if ( !userEventRaidEntity )
         goto LABEL_24;
-      v13 = userEventRaidEntity[2].monitor - (void *)Time;
-      if ( (__int64)v13 < 1 )
+      v26 = userEventRaidEntity[2].monitor - (void *)Time;
+      if ( (__int64)v26 < 1 )
       {
-        v16 = 0LL;
-        v15 = 0LL;
-        v14 = 0LL;
+        v29 = 0LL;
+        v28 = 0LL;
+        v27 = 0LL;
       }
       else
       {
-        v14 = v13 % 0x3C;
-        v15 = v13 / 0x3C % 0x3C;
-        v16 = v13 / 0xE10;
+        v27 = v26 % 0x3C;
+        v28 = v26 / 0x3C % 0x3C;
+        v29 = v26 / 0xE10;
       }
       defeatCntFrame = (UILabel_o *)this->fields.defeatCntFrame;
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2864,32 +3139,32 @@ LABEL_11:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v18 = LocalizationManager__Get((System_String_o *)StringLiteral_13506/*"TIME_REST_RAID"*/, 0LL);
-      v24 = v16;
-      v19 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v24);
-      v23 = v15;
-      v20 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v23);
-      v22 = v14;
-      v21 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v22);
-      Time = System_String__Format_44569380(v18, v19, v20, v21, 0LL);
+      v31 = LocalizationManager__Get((System_String_o *)StringLiteral_13565/*"TIME_REST_RAID"*/, 0LL);
+      v37 = v29;
+      v32 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v37);
+      v36 = v28;
+      v33 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v36);
+      v35 = v27;
+      v34 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v35);
+      Time = System_String__Format_44578852(v31, v32, v33, v34, 0LL);
       if ( !defeatCntFrame )
 LABEL_24:
-        sub_B52A5C(Time, v11);
+        sub_B5D69C(Time, v24);
       UILabel__set_text(defeatCntFrame, Time, 0LL);
       return;
     }
     realtimeSinceStartup = UnityEngine_Time__get_realtimeSinceStartup(0LL);
-    v7 = *(float *)&this->fields.isSingleRaid;
-    v8 = realtimeSinceStartup;
+    v20 = *(float *)&this->fields.isSingleRaid;
+    v21 = realtimeSinceStartup;
     p_isSingleRaid = &this->fields.isSingleRaid;
-    v9 = TitleInfoEventRaidBossComponent_TypeInfo;
+    v22 = TitleInfoEventRaidBossComponent_TypeInfo;
     if ( (BYTE3(TitleInfoEventRaidBossComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !TitleInfoEventRaidBossComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TitleInfoEventRaidBossComponent_TypeInfo);
-      v9 = TitleInfoEventRaidBossComponent_TypeInfo;
+      v22 = TitleInfoEventRaidBossComponent_TypeInfo;
     }
-    if ( (float)(v8 - v7) > v9->static_fields->REST_TIME_UPDATE_INTERVAL_SEC )
+    if ( (float)(v21 - v20) > v22->static_fields->REST_TIME_UPDATE_INTERVAL_SEC )
       goto LABEL_11;
   }
 }
@@ -2899,63 +3174,68 @@ void __fastcall TitleInfoEventRaidBossComponent__setBeforeMovePos(
         TitleInfoEventRaidBossComponent_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v4; // x1
-  UnityEngine_Transform_o *v5; // x19
+  __int64 v6; // x1
+  UnityEngine_Transform_o *v7; // x19
   float x; // s8
   float y; // s9
   float z; // s10
-  TitleInfoEventRaidBossComponent_c *v9; // x0
+  TitleInfoEventRaidBossComponent_c *v11; // x0
   float *static_fields; // x8
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_42B4448 & 1) == 0 )
+  if ( (byte_42ECC16 & 1) == 0 )
   {
-    sub_B52984(&TitleInfoEventRaidBossComponent_TypeInfo);
-    byte_42B4448 = 1;
+    sub_B5D5C4(&TitleInfoEventRaidBossComponent_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42ECC16 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0LL)) == 0LL )
   {
-    sub_B52A5C(gameObject, v4);
+    sub_B5D69C(gameObject, v6);
   }
-  v5 = (UnityEngine_Transform_o *)gameObject;
+  v7 = (UnityEngine_Transform_o *)gameObject;
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0LL);
   x = localPosition.fields.x;
   y = localPosition.fields.y;
   z = localPosition.fields.z;
-  v9 = TitleInfoEventRaidBossComponent_TypeInfo;
+  v11 = TitleInfoEventRaidBossComponent_TypeInfo;
   if ( (BYTE3(TitleInfoEventRaidBossComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TitleInfoEventRaidBossComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TitleInfoEventRaidBossComponent_TypeInfo);
-    v9 = TitleInfoEventRaidBossComponent_TypeInfo;
+    v11 = TitleInfoEventRaidBossComponent_TypeInfo;
   }
-  static_fields = (float *)v9->static_fields;
-  v12.fields.x = x + static_fields[6];
-  v12.fields.y = y + static_fields[7];
-  v12.fields.z = z + static_fields[8];
-  UnityEngine_Transform__set_localPosition(v5, v12, 0LL);
+  static_fields = (float *)v11->static_fields;
+  v14.fields.x = x + static_fields[6];
+  v14.fields.y = y + static_fields[7];
+  v14.fields.z = z + static_fields[8];
+  UnityEngine_Transform__set_localPosition(v7, v14, 0LL);
 }
 
 
 void __fastcall TitleInfoEventRaidBossComponent___c___cctor(const MethodInfo *method)
 {
-  Il2CppObject *v1; // x19
+  int v1; // w1
+  int v2; // w2
+  __int64 v3; // x3
+  Il2CppObject *v4; // x19
   struct TitleInfoEventRaidBossComponent___c_StaticFields *static_fields; // x0
 
-  if ( (byte_42AD9DF & 1) == 0 )
+  if ( (byte_42E6241 & 1) == 0 )
   {
-    sub_B52984(&TitleInfoEventRaidBossComponent___c_TypeInfo);
-    byte_42AD9DF = 1;
+    sub_B5D5C4(&TitleInfoEventRaidBossComponent___c_TypeInfo, v1, v2, v3);
+    byte_42E6241 = 1;
   }
-  v1 = (Il2CppObject *)sub_B52A54(TitleInfoEventRaidBossComponent___c_TypeInfo);
-  System_Object___ctor(v1, 0LL);
+  v4 = (Il2CppObject *)sub_B5D694(TitleInfoEventRaidBossComponent___c_TypeInfo);
+  System_Object___ctor(v4, 0LL);
   static_fields = TitleInfoEventRaidBossComponent___c_TypeInfo->static_fields;
-  static_fields->__9 = (struct TitleInfoEventRaidBossComponent___c_o *)v1;
-  sub_B52920(static_fields);
+  static_fields->__9 = (struct TitleInfoEventRaidBossComponent___c_o *)v4;
+  sub_B5D560(static_fields);
 }
 
 

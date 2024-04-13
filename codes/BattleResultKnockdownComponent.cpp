@@ -1,104 +1,106 @@
 // local variable allocation has failed, the output may be wrong!
 void __fastcall BattleResultKnockdownComponent___ctor(BattleResultKnockdownComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x20
-  __int64 v4; // x0
-  __int64 v5; // x1
-  int v6; // s0
-  int v7; // s1
-  int v8; // s2
-  int v9; // s3
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
-  int v16; // s0
-  int v17; // s1
-  int v18; // s2
-  int v19; // s3
-  __int64 v20; // x20
-  int v21; // s0
-  int v22; // s1
-  int v23; // s2
-  int v24; // s3
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
-  int v31; // s0
-  int v32; // s1
-  int v33; // s2
-  int v34; // s3
-  __int64 v35; // x0
+  int v2; // w2
+  __int64 v3; // x3
+  __int64 v5; // x20
+  __int64 v6; // x0
+  __int64 v7; // x1
+  int v8; // s0
+  int v9; // s1
+  int v10; // s2
+  int v11; // s3
+  System_String_array **v12; // x2
+  System_String_array **v13; // x3
+  System_Boolean_array **v14; // x4
+  System_Int32_array **v15; // x5
+  System_Int32_array *v16; // x6
+  System_Int32_array *v17; // x7
+  int v18; // s0
+  int v19; // s1
+  int v20; // s2
+  int v21; // s3
+  __int64 v22; // x20
+  int v23; // s0
+  int v24; // s1
+  int v25; // s2
+  int v26; // s3
+  System_String_array **v27; // x2
+  System_String_array **v28; // x3
+  System_Boolean_array **v29; // x4
+  System_Int32_array **v30; // x5
+  System_Int32_array *v31; // x6
+  System_Int32_array *v32; // x7
+  int v33; // s0
+  int v34; // s1
+  int v35; // s2
+  int v36; // s3
+  __int64 v37; // x0
 
-  if ( (byte_42B02F4 & 1) == 0 )
+  if ( (byte_42E895D & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Color___TypeInfo);
-    byte_42B02F4 = 1;
+    sub_B5D5C4(&UnityEngine_Color___TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E895D = 1;
   }
-  v3 = sub_B5299C(UnityEngine_Color___TypeInfo, 2LL);
-  *(UnityEngine_Color_o *)&v6 = UnityEngine_Color__get_white(0LL);
-  if ( !v3 )
+  v5 = sub_B5D5DC(UnityEngine_Color___TypeInfo, 2LL);
+  *(UnityEngine_Color_o *)&v8 = UnityEngine_Color__get_white(0LL);
+  if ( !v5 )
     goto LABEL_11;
-  if ( !*(_DWORD *)(v3 + 24)
-    || (*(_DWORD *)(v3 + 32) = v6,
-        *(_DWORD *)(v3 + 36) = v7,
-        *(_DWORD *)(v3 + 40) = v8,
-        *(_DWORD *)(v3 + 44) = v9,
-        *(UnityEngine_Color_o *)&v16 = UnityEngine_Color__get_white(0LL),
-        *(_DWORD *)(v3 + 24) <= 1u) )
+  if ( !*(_DWORD *)(v5 + 24)
+    || (*(_DWORD *)(v5 + 32) = v8,
+        *(_DWORD *)(v5 + 36) = v9,
+        *(_DWORD *)(v5 + 40) = v10,
+        *(_DWORD *)(v5 + 44) = v11,
+        *(UnityEngine_Color_o *)&v18 = UnityEngine_Color__get_white(0LL),
+        *(_DWORD *)(v5 + 24) <= 1u) )
   {
 LABEL_10:
-    v35 = sub_B52A88(v4);
-    sub_B52A28(v35, 0LL);
+    v37 = sub_B5D6C8(v6);
+    sub_B5D668(v37, 0LL);
   }
-  *(_DWORD *)(v3 + 48) = v16;
-  *(_DWORD *)(v3 + 52) = v17;
-  *(_DWORD *)(v3 + 56) = v18;
-  *(_DWORD *)(v3 + 60) = v19;
-  this->fields.battleColor = (struct UnityEngine_Color_array *)v3;
-  sub_B52920(
+  *(_DWORD *)(v5 + 48) = v18;
+  *(_DWORD *)(v5 + 52) = v19;
+  *(_DWORD *)(v5 + 56) = v20;
+  *(_DWORD *)(v5 + 60) = v21;
+  this->fields.battleColor = (struct UnityEngine_Color_array *)v5;
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.battleColor,
-    (System_Int32_array **)v3,
-    v10,
-    v11,
+    (System_Int32_array **)v5,
     v12,
     v13,
     v14,
-    v15);
-  v20 = sub_B5299C(UnityEngine_Color___TypeInfo, 2LL);
-  *(UnityEngine_Color_o *)&v21 = UnityEngine_Color__get_white(0LL);
-  if ( !v20 )
+    v15,
+    v16,
+    v17);
+  v22 = sub_B5D5DC(UnityEngine_Color___TypeInfo, 2LL);
+  *(UnityEngine_Color_o *)&v23 = UnityEngine_Color__get_white(0LL);
+  if ( !v22 )
 LABEL_11:
-    sub_B52A5C(v4, v5);
-  if ( !*(_DWORD *)(v20 + 24) )
+    sub_B5D69C(v6, v7);
+  if ( !*(_DWORD *)(v22 + 24) )
     goto LABEL_10;
-  *(_DWORD *)(v20 + 32) = v21;
-  *(_DWORD *)(v20 + 36) = v22;
-  *(_DWORD *)(v20 + 40) = v23;
-  *(_DWORD *)(v20 + 44) = v24;
-  *(UnityEngine_Color_o *)&v31 = UnityEngine_Color__get_yellow(0LL);
-  if ( *(_DWORD *)(v20 + 24) <= 1u )
+  *(_DWORD *)(v22 + 32) = v23;
+  *(_DWORD *)(v22 + 36) = v24;
+  *(_DWORD *)(v22 + 40) = v25;
+  *(_DWORD *)(v22 + 44) = v26;
+  *(UnityEngine_Color_o *)&v33 = UnityEngine_Color__get_yellow(0LL);
+  if ( *(_DWORD *)(v22 + 24) <= 1u )
     goto LABEL_10;
-  *(_DWORD *)(v20 + 48) = v31;
-  *(_DWORD *)(v20 + 52) = v32;
-  *(_DWORD *)(v20 + 56) = v33;
-  *(_DWORD *)(v20 + 60) = v34;
-  this->fields.recordColor = (struct UnityEngine_Color_array *)v20;
-  sub_B52920(
+  *(_DWORD *)(v22 + 48) = v33;
+  *(_DWORD *)(v22 + 52) = v34;
+  *(_DWORD *)(v22 + 56) = v35;
+  *(_DWORD *)(v22 + 60) = v36;
+  this->fields.recordColor = (struct UnityEngine_Color_array *)v22;
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.recordColor,
-    (System_Int32_array **)v20,
-    v25,
-    v26,
+    (System_Int32_array **)v22,
     v27,
     v28,
     v29,
-    v30);
-  BattleWindowComponent___ctor((BattleWindowComponent_o *)this, 0LL);
+    v30,
+    v31,
+    v32);
+  BattleResultPopupWindowComponent___ctor((BattleResultPopupWindowComponent_o *)this, 0LL);
 }
 
 
@@ -136,8 +138,8 @@ void __fastcall BattleResultKnockdownComponent__setData(
   if ( (unsigned int)isNewRecord >= recordColor->max_length )
   {
 LABEL_10:
-    v10 = sub_B52A88(this);
-    sub_B52A28(v10, 0LL);
+    v10 = sub_B5D6C8(this);
+    sub_B5D668(v10, 0LL);
   }
   BattleResultKnockdownComponent__setKnockdownInfoLabel(
     this,
@@ -152,7 +154,7 @@ LABEL_10:
                                                      0LL)) == 0LL )
   {
 LABEL_9:
-    sub_B52A5C(this, result);
+    sub_B5D69C(this, result);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, result->fields.isNewRecord, 0LL);
   v5->fields.isOpenPossible = result->fields.isTrialOpen;
@@ -172,27 +174,33 @@ void __fastcall BattleResultKnockdownComponent__setKnockdownInfoLabel(
   float g; // s10
   float r; // s11
   UILabel_array *v10; // x19
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
   QuestKnockdownInfo_Fields *p_fields; // x0
-  System_String_o *v12; // x0
+  System_String_o *v18; // x0
   int max_length; // w8
-  UILabel_o *v14; // x21
+  UILabel_o *v20; // x21
   int64_t *p_totalDamage; // x20
   int64_t totalDamage; // t1
-  __int64 v17; // x20
-  __int64 v18; // x0
-  UnityEngine_Color_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  __int64 v23; // x20
+  __int64 v24; // x0
+  UnityEngine_Color_o v25; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   a = color.fields.a;
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
   v10 = labelArray;
-  if ( (byte_42B02F3 & 1) == 0 )
+  if ( (byte_42E895C & 1) == 0 )
   {
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&StringLiteral_2482/*"BATTLE_KNOCKDOWN_COUNT_NAME"*/);
-    this = (BattleResultKnockdownComponent_o *)sub_B52984(&StringLiteral_346/*"#,#"*/);
-    byte_42B02F3 = 1;
+    sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)labelArray, (_DWORD)info, method);
+    sub_B5D5C4(&StringLiteral_2503/*"BATTLE_KNOCKDOWN_COUNT_NAME"*/, v11, v12, v13);
+    this = (BattleResultKnockdownComponent_o *)sub_B5D5C4(&StringLiteral_345/*"#,#"*/, v14, v15, v16);
+    byte_42E895C = 1;
   }
   if ( !v10 )
     goto LABEL_29;
@@ -202,10 +210,10 @@ void __fastcall BattleResultKnockdownComponent__setKnockdownInfoLabel(
     goto LABEL_29;
   p_fields = &info->fields;
   if ( info->fields.knockdownNum <= 0 )
-    v12 = System_Int64__ToString((int64_t)p_fields, 0LL);
+    v18 = System_Int64__ToString((int64_t)p_fields, 0LL);
   else
-    v12 = System_Int64__ToString_39389796((int64_t)p_fields, (System_String_o *)StringLiteral_346/*"#,#"*/, 0LL);
-  labelArray = (UILabel_array *)v12;
+    v18 = System_Int64__ToString_39744560((int64_t)p_fields, (System_String_o *)StringLiteral_345/*"#,#"*/, 0LL);
+  labelArray = (UILabel_array *)v18;
   if ( !v10->max_length )
     goto LABEL_30;
   this = (BattleResultKnockdownComponent_o *)v10->m_Items[0];
@@ -215,54 +223,54 @@ void __fastcall BattleResultKnockdownComponent__setKnockdownInfoLabel(
   max_length = v10->max_length;
   if ( max_length <= 1 )
     goto LABEL_23;
-  v14 = v10->m_Items[1];
+  v20 = v10->m_Items[1];
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  this = (BattleResultKnockdownComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2482/*"BATTLE_KNOCKDOWN_COUNT_NAME"*/, 0LL);
-  if ( !v14 )
+  this = (BattleResultKnockdownComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2503/*"BATTLE_KNOCKDOWN_COUNT_NAME"*/, 0LL);
+  if ( !v20 )
     goto LABEL_29;
-  UILabel__set_text(v14, (System_String_o *)this, 0LL);
+  UILabel__set_text(v20, (System_String_o *)this, 0LL);
   max_length = v10->max_length;
   if ( max_length < 3 )
     goto LABEL_23;
   totalDamage = info->fields.totalDamage;
   p_totalDamage = &info->fields.totalDamage;
   if ( totalDamage <= 0 )
-    v12 = System_Int64__ToString((int64_t)p_totalDamage, 0LL);
+    v18 = System_Int64__ToString((int64_t)p_totalDamage, 0LL);
   else
-    v12 = System_Int64__ToString_39389796((int64_t)p_totalDamage, (System_String_o *)StringLiteral_346/*"#,#"*/, 0LL);
-  labelArray = (UILabel_array *)v12;
+    v18 = System_Int64__ToString_39744560((int64_t)p_totalDamage, (System_String_o *)StringLiteral_345/*"#,#"*/, 0LL);
+  labelArray = (UILabel_array *)v18;
   if ( v10->max_length <= 2 )
     goto LABEL_30;
   this = (BattleResultKnockdownComponent_o *)v10->m_Items[2];
   if ( !this )
 LABEL_29:
-    sub_B52A5C(this, labelArray);
+    sub_B5D69C(this, labelArray);
   UILabel__set_text((UILabel_o *)this, (System_String_o *)labelArray, 0LL);
   max_length = v10->max_length;
 LABEL_23:
   if ( max_length >= 1 )
   {
-    v17 = 0LL;
-    while ( (unsigned int)v17 < max_length )
+    v23 = 0LL;
+    while ( (unsigned int)v23 < max_length )
     {
-      this = (BattleResultKnockdownComponent_o *)v10->m_Items[v17];
+      this = (BattleResultKnockdownComponent_o *)v10->m_Items[v23];
       if ( !this )
         goto LABEL_29;
-      v19.fields.r = r;
-      v19.fields.g = g;
-      v19.fields.b = b;
-      v19.fields.a = a;
-      UIWidget__set_color((UIWidget_o *)this, v19, 0LL);
+      v25.fields.r = r;
+      v25.fields.g = g;
+      v25.fields.b = b;
+      v25.fields.a = a;
+      UIWidget__set_color((UIWidget_o *)this, v25, 0LL);
       max_length = v10->max_length;
-      if ( (int)++v17 >= max_length )
+      if ( (int)++v23 >= max_length )
         return;
     }
 LABEL_30:
-    v18 = sub_B52A88(v12);
-    sub_B52A28(v18, 0LL);
+    v24 = sub_B5D6C8(v18);
+    sub_B5D668(v24, 0LL);
   }
 }

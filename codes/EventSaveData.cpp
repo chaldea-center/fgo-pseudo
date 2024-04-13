@@ -9,29 +9,30 @@ System_String_array *__fastcall EventSaveData__GetValueByArray(
         uint16_t separator,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
   System_String_o *value; // x20
-  System_Char_array *v6; // x0
-  __int64 v7; // x1
-  __int64 v9; // x0
+  System_Char_array *v7; // x0
+  __int64 v8; // x1
+  __int64 v10; // x0
 
-  if ( (byte_42B3452 & 1) == 0 )
+  if ( (byte_42EC010 & 1) == 0 )
   {
-    sub_B52984(&char___TypeInfo);
-    byte_42B3452 = 1;
+    sub_B5D5C4(&char___TypeInfo, separator, (_DWORD)method, v3);
+    byte_42EC010 = 1;
   }
   value = this->fields.value;
   if ( !value )
     return 0LL;
-  v6 = (System_Char_array *)sub_B5299C(char___TypeInfo, 1LL);
-  if ( !v6 )
-    sub_B52A5C(0LL, v7);
-  if ( !v6->max_length )
+  v7 = (System_Char_array *)sub_B5D5DC(char___TypeInfo, 1LL);
+  if ( !v7 )
+    sub_B5D69C(0LL, v8);
+  if ( !v7->max_length )
   {
-    v9 = sub_B52A88(v6);
-    sub_B52A28(v9, 0LL);
+    v10 = sub_B5D6C8(v7);
+    sub_B5D668(v10, 0LL);
   }
-  v6->m_Items[2] = separator;
-  return System_String__Split(value, v6, 0LL);
+  v7->m_Items[2] = separator;
+  return System_String__Split(value, v7, 0LL);
 }
 
 
@@ -57,7 +58,7 @@ void __fastcall EventSaveData__SetValueByArray(
     v6 = System_Char__ToString((uint16_t)&v14, 0LL);
     v7 = System_String__Join(v6, valueArray, 0LL);
     this->fields.value = v7;
-    sub_B52920(
+    sub_B5D560(
       (BattleServantConfConponent_o *)&this->fields.value,
       (System_Int32_array **)v7,
       v8,

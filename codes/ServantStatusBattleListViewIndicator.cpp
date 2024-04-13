@@ -18,19 +18,24 @@ void __fastcall ServantStatusBattleListViewIndicator__OnClickBottom(
         ServantStatusBattleListViewIndicator_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
   UnityEngine_Object_o *manager; // x20
-  __int64 v4; // x1
-  ListViewManager_o *v5; // x0
+  __int64 v9; // x1
+  ListViewManager_o *v10; // x0
   int32_t pageIndex; // w8
-  bool v7; // w3
-  int32_t v8; // w1
-  struct ListViewManager_o *v9; // x8
+  bool v12; // w3
+  int32_t v13; // w1
+  struct ListViewManager_o *v14; // x8
 
-  if ( (byte_42AE377 & 1) == 0 )
+  if ( (byte_42E6DE8 & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    sub_B52984(&SoundManager_TypeInfo);
-    byte_42AE377 = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&SoundManager_TypeInfo, v5, v6, v7);
+    byte_42E6DE8 = 1;
   }
   manager = (UnityEngine_Object_o *)this->fields.manager;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -40,10 +45,10 @@ void __fastcall ServantStatusBattleListViewIndicator__OnClickBottom(
   }
   if ( !UnityEngine_Object__op_Equality(manager, 0LL, 0LL) && (this->fields.pageIndex & 0x80000000) == 0 )
   {
-    v5 = this->fields.manager;
-    if ( !v5 )
+    v10 = this->fields.manager;
+    if ( !v10 )
       goto LABEL_25;
-    ListViewManager__FowardLoopItem(v5, 0LL);
+    ListViewManager__FowardLoopItem(v10, 0LL);
     pageIndex = this->fields.pageIndex;
     if ( (pageIndex & 0x80000000) == 0 && pageIndex < this->fields.pageMax - 1 )
     {
@@ -53,21 +58,21 @@ void __fastcall ServantStatusBattleListViewIndicator__OnClickBottom(
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
       }
       SoundManager__playSystemSe(7, 0LL);
-      v5 = this->fields.manager;
-      if ( v5 )
+      v10 = this->fields.manager;
+      if ( v10 )
       {
-        v7 = 1;
-        v8 = this->fields.pageIndex + 1;
+        v12 = 1;
+        v13 = this->fields.pageIndex + 1;
 LABEL_23:
-        ListViewManager__MoveCenterItem(v5, v8, 1, v7, 0.0, 0LL);
+        ListViewManager__MoveCenterItem(v10, v13, 1, v12, 0.0, 0LL);
         return;
       }
       goto LABEL_25;
     }
-    v9 = this->fields.manager;
-    if ( !v9 )
+    v14 = this->fields.manager;
+    if ( !v14 )
       goto LABEL_25;
-    if ( v9->fields.isLoop )
+    if ( v14->fields.isLoop )
     {
       if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -75,15 +80,15 @@ LABEL_23:
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
       }
       SoundManager__playSystemSe(7, 0LL);
-      v5 = this->fields.manager;
-      if ( v5 )
+      v10 = this->fields.manager;
+      if ( v10 )
       {
-        v8 = 0;
-        v7 = 0;
+        v13 = 0;
+        v12 = 0;
         goto LABEL_23;
       }
 LABEL_25:
-      sub_B52A5C(v5, v4);
+      sub_B5D69C(v10, v9);
     }
   }
 }
@@ -93,18 +98,23 @@ void __fastcall ServantStatusBattleListViewIndicator__OnClickTop(
         ServantStatusBattleListViewIndicator_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
   UnityEngine_Object_o *manager; // x20
-  __int64 v4; // x1
-  ListViewManager_o *v5; // x0
+  __int64 v9; // x1
+  ListViewManager_o *v10; // x0
   int32_t pageIndex; // w8
-  bool v7; // w3
-  struct ListViewManager_o *v8; // x8
+  bool v12; // w3
+  struct ListViewManager_o *v13; // x8
 
-  if ( (byte_42AE376 & 1) == 0 )
+  if ( (byte_42E6DE7 & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    sub_B52984(&SoundManager_TypeInfo);
-    byte_42AE376 = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&SoundManager_TypeInfo, v5, v6, v7);
+    byte_42E6DE7 = 1;
   }
   manager = (UnityEngine_Object_o *)this->fields.manager;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -114,10 +124,10 @@ void __fastcall ServantStatusBattleListViewIndicator__OnClickTop(
   }
   if ( !UnityEngine_Object__op_Equality(manager, 0LL, 0LL) && (this->fields.pageIndex & 0x80000000) == 0 )
   {
-    v5 = this->fields.manager;
-    if ( !v5 )
+    v10 = this->fields.manager;
+    if ( !v10 )
       goto LABEL_24;
-    ListViewManager__BackLoopItem(v5, 0LL);
+    ListViewManager__BackLoopItem(v10, 0LL);
     if ( this->fields.pageIndex >= 1 )
     {
       if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -126,21 +136,21 @@ void __fastcall ServantStatusBattleListViewIndicator__OnClickTop(
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
       }
       SoundManager__playSystemSe(7, 0LL);
-      v5 = this->fields.manager;
-      if ( v5 )
+      v10 = this->fields.manager;
+      if ( v10 )
       {
         pageIndex = this->fields.pageIndex;
-        v7 = 1;
+        v12 = 1;
 LABEL_22:
-        ListViewManager__MoveCenterItem(v5, pageIndex - 1, 1, v7, 0.0, 0LL);
+        ListViewManager__MoveCenterItem(v10, pageIndex - 1, 1, v12, 0.0, 0LL);
         return;
       }
       goto LABEL_24;
     }
-    v8 = this->fields.manager;
-    if ( !v8 )
+    v13 = this->fields.manager;
+    if ( !v13 )
       goto LABEL_24;
-    if ( v8->fields.isLoop )
+    if ( v13->fields.isLoop )
     {
       if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -148,15 +158,15 @@ LABEL_22:
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
       }
       SoundManager__playSystemSe(7, 0LL);
-      v5 = this->fields.manager;
-      if ( v5 )
+      v10 = this->fields.manager;
+      if ( v10 )
       {
         pageIndex = this->fields.pageMax;
-        v7 = 0;
+        v12 = 0;
         goto LABEL_22;
       }
 LABEL_24:
-      sub_B52A5C(v5, v4);
+      sub_B5D69C(v10, v9);
     }
   }
 }
@@ -180,7 +190,7 @@ void __fastcall ServantStatusBattleListViewIndicator__OnModifyCenterItem(
 
   this->fields.manager = manager;
   p_manager = &this->fields.manager;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.manager,
     (System_Int32_array **)manager,
     (System_String_array **)item,
@@ -193,7 +203,7 @@ void __fastcall ServantStatusBattleListViewIndicator__OnModifyCenterItem(
   if ( !bottomObject
     || (UnityEngine_GameObject__SetActive(bottomObject, isTop, 0LL), (bottomObject = this->fields.bottomObject) == 0LL) )
   {
-    sub_B52A5C(bottomObject, v13);
+    sub_B5D69C(bottomObject, v13);
   }
   UnityEngine_GameObject__SetActive(bottomObject, isBottom, 0LL);
   if ( item )
@@ -227,7 +237,7 @@ void __fastcall ServantStatusBattleListViewIndicator__OnModifyPosition(
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, isTop, 0LL),
         (this = (ServantStatusBattleListViewIndicator_o *)v4->fields.bottomObject) == 0LL) )
   {
-    sub_B52A5C(this, manager);
+    sub_B5D69C(this, manager);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, isBottom, 0LL);
 }
@@ -247,7 +257,7 @@ void __fastcall ServantStatusBattleListViewIndicator__SetIndexMax(
   if ( !topObject
     || (UnityEngine_GameObject__SetActive(topObject, 0, 0LL), (topObject = this->fields.bottomObject) == 0LL) )
   {
-    sub_B52A5C(topObject, *(_QWORD *)&max);
+    sub_B5D69C(topObject, *(_QWORD *)&max);
   }
   UnityEngine_GameObject__SetActive(topObject, 0, 0LL);
 }

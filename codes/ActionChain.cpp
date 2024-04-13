@@ -3,19 +3,21 @@ void __fastcall ActionChain___ctor(
         ChainableActionBase_array *chainableActions,
         const MethodInfo *method)
 {
-  if ( (byte_42ADF24 & 1) == 0 )
+  __int64 v3; // x3
+
+  if ( (byte_42E67B0 & 1) == 0 )
   {
-    sub_B52984(&Method_ActionChainBase_ChainableActionBase___ctor__);
-    byte_42ADF24 = 1;
+    sub_B5D5C4(&Method_ActionChainBase_ChainableActionBase___ctor__, (_DWORD)chainableActions, (_DWORD)method, v3);
+    byte_42E67B0 = 1;
   }
   ActionChainBase_object____ctor(
     (ActionChainBase_T__o *)this,
     (System_Object_array *)chainableActions,
-    (const MethodInfo_2620100 *)Method_ActionChainBase_ChainableActionBase___ctor__);
+    (const MethodInfo_2583CA0 *)Method_ActionChainBase_ChainableActionBase___ctor__);
 }
 
 
-void __fastcall ActionChain___ctor_21209932(
+void __fastcall ActionChain___ctor_21252180(
         ActionChain_o *this,
         System_Action_Action__array *actions,
         const MethodInfo *method)
@@ -33,18 +35,19 @@ ActionChain_o *__fastcall ActionChain__AddRange(
         System_Action_Action__array *actions,
         const MethodInfo *method)
 {
-  System_Object_array *v5; // x0
+  __int64 v3; // x3
+  System_Object_array *v6; // x0
 
-  if ( (byte_42ADF25 & 1) == 0 )
+  if ( (byte_42E67B1 & 1) == 0 )
   {
-    sub_B52984(&Method_ActionChainBase_ChainableActionBase__AddRange__);
-    byte_42ADF25 = 1;
+    sub_B5D5C4(&Method_ActionChainBase_ChainableActionBase__AddRange__, (_DWORD)actions, (_DWORD)method, v3);
+    byte_42E67B1 = 1;
   }
-  v5 = (System_Object_array *)SimpleChainableAction__ConvertToChainableActionArray(actions, 0LL);
+  v6 = (System_Object_array *)SimpleChainableAction__ConvertToChainableActionArray(actions, 0LL);
   ActionChainBase_object___AddRange(
     (ActionChainBase_T__o *)this,
-    v5,
-    (const MethodInfo_26201E4 *)Method_ActionChainBase_ChainableActionBase__AddRange__);
+    v6,
+    (const MethodInfo_2583D84 *)Method_ActionChainBase_ChainableActionBase__AddRange__);
   return this;
 }
 
@@ -55,6 +58,6 @@ void __fastcall ActionChain__ExecuteCurrentAction(
         const MethodInfo *method)
 {
   if ( !action )
-    sub_B52A5C(this, 0LL);
+    sub_B5D69C(this, 0LL);
   ChainableActionBase__Execute(action, 0LL);
 }

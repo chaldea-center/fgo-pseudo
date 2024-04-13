@@ -1,14 +1,21 @@
 void __fastcall VoiceClosedMessageMaster___ctor(VoiceClosedMessageMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B5E9B & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42EE704 & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_VoiceClosedMessageMaster__VoiceClosedMessageEntity__int___ctor__);
-    byte_42B5E9B = 1;
+    sub_B5D5C4(
+      &Method_DataMasterBase_VoiceClosedMessageMaster__VoiceClosedMessageEntity__int___ctor__,
+      (_DWORD)method,
+      v2,
+      v3);
+    byte_42EE704 = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     302,
-    (const MethodInfo_23E223C *)Method_DataMasterBase_VoiceClosedMessageMaster__VoiceClosedMessageEntity__int___ctor__);
+    (const MethodInfo_23FAD74 *)Method_DataMasterBase_VoiceClosedMessageMaster__VoiceClosedMessageEntity__int___ctor__);
 }
 
 
@@ -17,19 +24,24 @@ System_String_o *__fastcall VoiceClosedMessageMaster__GetClosedMessage(
         int32_t id,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
   WarEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_42B5E9C & 1) == 0 )
+  if ( (byte_42EE705 & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_VoiceClosedMessageMaster__VoiceClosedMessageEntity__int__TryGetEntity__);
-    byte_42B5E9C = 1;
+    sub_B5D5C4(
+      &Method_DataMasterBase_VoiceClosedMessageMaster__VoiceClosedMessageEntity__int__TryGetEntity__,
+      id,
+      (_DWORD)method,
+      v3);
+    byte_42EE705 = 1;
   }
   entity = 0LL;
   DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     &entity,
     id,
-    (const MethodInfo_23E2334 *)Method_DataMasterBase_VoiceClosedMessageMaster__VoiceClosedMessageEntity__int__TryGetEntity__);
+    (const MethodInfo_23FAE6C *)Method_DataMasterBase_VoiceClosedMessageMaster__VoiceClosedMessageEntity__int__TryGetEntity__);
   if ( entity )
     return entity->fields.age;
   else

@@ -6,44 +6,46 @@ void __fastcall SummonInfoLayout___ctor(SummonInfoLayout_o *this, const MethodIn
 
 void __fastcall SummonInfoLayout__Awake(SummonInfoLayout_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   UnityEngine_Transform_o *transform; // x0
-  __int64 v4; // x1
+  __int64 v6; // x1
   WebViewObject_o *Component_WebViewObject; // x1
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  System_String_array **v8; // x2
+  System_String_array **v9; // x3
+  System_Boolean_array **v10; // x4
+  System_Int32_array **v11; // x5
+  System_Int32_array *v12; // x6
+  System_Int32_array *v13; // x7
 
-  if ( (byte_42B3EC5 & 1) == 0 )
+  if ( (byte_42EC924 & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_Component_GetComponent_FSOffset___);
-    byte_42B3EC5 = 1;
+    sub_B5D5C4(&Method_UnityEngine_Component_GetComponent_FSOffset___, (_DWORD)method, v2, v3);
+    byte_42EC924 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform
     || (*(UnityEngine_Vector3_o *)&this->fields.infoControlLayoutDefault.fields.Position.fields.y = UnityEngine_Transform__get_localPosition(transform, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B52A5C(transform, v4);
+    sub_B5D69C(transform, v6);
   }
   *(UnityEngine_Vector3_o *)&this->fields.infoControlLayoutDefault.fields.Scale.fields.y = UnityEngine_Transform__get_localScale(
                                                                                              transform,
                                                                                              0LL);
   Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                               (UnityEngine_Component_o *)this,
-                              (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_FSOffset___);
+                              (const MethodInfo_1ADE2A0 *)Method_UnityEngine_Component_GetComponent_FSOffset___);
   this->fields.fsOffset = (struct FSOffset_o *)Component_WebViewObject;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.fsOffset,
     (System_Int32_array **)Component_WebViewObject,
-    v6,
-    v7,
     v8,
     v9,
     v10,
-    v11);
+    v11,
+    v12,
+    v13);
 }
 
 
@@ -61,7 +63,7 @@ void __fastcall SummonInfoLayout__UpdateDefault(SummonInfoLayout_o *this, const 
           0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B52A5C(transform, v4);
+    sub_B5D69C(transform, v4);
   }
   UnityEngine_Transform__set_localScale(
     transform,
@@ -73,14 +75,16 @@ void __fastcall SummonInfoLayout__UpdateDefault(SummonInfoLayout_o *this, const 
 
 void __fastcall SummonInfoLayout__UpdateOffset(SummonInfoLayout_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   UnityEngine_Object_o *fsOffset; // x20
-  __int64 v4; // x1
-  FSOffset_o *v5; // x0
+  __int64 v6; // x1
+  FSOffset_o *v7; // x0
 
-  if ( (byte_42B3EC6 & 1) == 0 )
+  if ( (byte_42EC925 & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42B3EC6 = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42EC925 = 1;
   }
   fsOffset = (UnityEngine_Object_o *)this->fields.fsOffset;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -90,10 +94,10 @@ void __fastcall SummonInfoLayout__UpdateOffset(SummonInfoLayout_o *this, const M
   }
   if ( !UnityEngine_Object__op_Equality(fsOffset, 0LL, 0LL) )
   {
-    v5 = this->fields.fsOffset;
-    if ( !v5 )
-      sub_B52A5C(0LL, v4);
-    FSOffset__UpdateOffset(v5, 0LL);
+    v7 = this->fields.fsOffset;
+    if ( !v7 )
+      sub_B5D69C(0LL, v6);
+    FSOffset__UpdateOffset(v7, 0LL);
   }
 }
 
@@ -112,7 +116,7 @@ void __fastcall SummonInfoLayout__UpdatePc(SummonInfoLayout_o *this, const Metho
           0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B52A5C(transform, v4);
+    sub_B5D69C(transform, v4);
   }
   UnityEngine_Transform__set_localScale(
     transform,

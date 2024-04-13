@@ -1,13 +1,16 @@
 void __fastcall StatusEffectPosOverwriteEntity___ctor(StatusEffectPosOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B0B3F & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E931E & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_string___ctor__);
-    byte_42B0B3F = 1;
+    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
+    byte_42E931E = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +20,16 @@ System_String_o *__fastcall StatusEffectPosOverwriteEntity__CreatePK(
         int32_t svtLimitCount,
         const MethodInfo *method)
 {
-  if ( (byte_42B0B3E & 1) == 0 )
+  if ( (byte_42E931D & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_42B0B3E = 1;
+    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, svtId, svtLimitCount, method);
+    byte_42E931D = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            statusEffectId,
            svtId,
            svtLimitCount,
-           (const MethodInfo_1A4E378 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1AE3440 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

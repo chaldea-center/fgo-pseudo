@@ -14,10 +14,10 @@ void __fastcall CombineHelpListViewItem___ctor(
   System_Int32_array *v13; // x7
 
   v7 = this;
-  ListViewItem___ctor_23532700((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_23901828((ListViewItem_o *)this, index, 0LL);
   v7->fields.info = info;
   v7 = (CombineHelpListViewItem_o *)((char *)v7 + 112);
-  sub_B52920((BattleServantConfConponent_o *)v7, (System_Int32_array **)info, v8, v9, v10, v11, v12, v13);
+  sub_B5D560((BattleServantConfConponent_o *)v7, (System_Int32_array **)info, v8, v9, v10, v11, v12, v13);
   LOBYTE(v7->monitor) = isUse;
 }
 
@@ -30,7 +30,7 @@ System_String_o *__fastcall CombineHelpListViewItem__get_ImageName(
 
   info = this->fields.info;
   if ( !info )
-    sub_B52A5C(this, method);
+    sub_B5D69C(this, method);
   return info->fields.imageName;
 }
 
@@ -47,19 +47,21 @@ System_String_o *__fastcall CombineHelpListViewItem__get_InfoText(
         CombineHelpListViewItem_o *this,
         const MethodInfo *method)
 {
-  CombineHelpListViewItem_o *v2; // x19
+  int v2; // w2
+  __int64 v3; // x3
+  CombineHelpListViewItem_o *v4; // x19
   struct CombineHelpInfo_o *info; // x8
   System_String_o *textCode; // x19
 
-  v2 = this;
-  if ( (byte_42B0F27 & 1) == 0 )
+  v4 = this;
+  if ( (byte_42E9989 & 1) == 0 )
   {
-    this = (CombineHelpListViewItem_o *)sub_B52984(&LocalizationManager_TypeInfo);
-    byte_42B0F27 = 1;
+    this = (CombineHelpListViewItem_o *)sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E9989 = 1;
   }
-  info = v2->fields.info;
+  info = v4->fields.info;
   if ( !info )
-    sub_B52A5C(this, method);
+    sub_B5D69C(this, method);
   textCode = info->fields.textCode;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -82,7 +84,7 @@ int32_t __fastcall CombineHelpListViewItem__get_Kind(CombineHelpListViewItem_o *
 
   info = this->fields.info;
   if ( !info )
-    sub_B52A5C(this, method);
+    sub_B5D69C(this, method);
   return info->fields.kind;
 }
 
@@ -93,6 +95,6 @@ int32_t __fastcall CombineHelpListViewItem__get_LineCnt(CombineHelpListViewItem_
 
   info = this->fields.info;
   if ( !info )
-    sub_B52A5C(this, method);
+    sub_B5D69C(this, method);
   return info->fields.line;
 }

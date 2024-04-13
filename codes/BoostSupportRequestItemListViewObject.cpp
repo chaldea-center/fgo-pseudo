@@ -2,10 +2,13 @@ void __fastcall BoostSupportRequestItemListViewObject___ctor(
         BoostSupportRequestItemListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_42AFF62 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42EA541 & 1) == 0 )
   {
-    sub_B52984(&ListViewObject_TypeInfo);
-    byte_42AFF62 = 1;
+    sub_B5D5C4(&ListViewObject_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42EA541 = 1;
   }
   if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ListViewObject_TypeInfo->_2.cctor_finished )
@@ -20,38 +23,44 @@ void __fastcall BoostSupportRequestItemListViewObject__Awake(
         BoostSupportRequestItemListViewObject_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  int v2; // w2
+  __int64 v3; // x3
+  __int64 v5; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   struct BoostSupportRequestItemListViewItemDraw_o *Component_srcLineSprite; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  System_String_array **v8; // x2
+  System_String_array **v9; // x3
+  System_Boolean_array **v10; // x4
+  System_Int32_array **v11; // x5
+  System_Int32_array *v12; // x6
+  System_Int32_array *v13; // x7
 
-  if ( (byte_42AFF5D & 1) == 0 )
+  if ( (byte_42EA53C & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewItemDraw___);
-    byte_42AFF5D = 1;
+    sub_B5D5C4(
+      &Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewItemDraw___,
+      (_DWORD)method,
+      v2,
+      v3);
+    byte_42EA53C = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_B52A5C(0LL, v3);
+    sub_B5D69C(0LL, v5);
   Component_srcLineSprite = (struct BoostSupportRequestItemListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                                   dispObject,
-                                                                                  (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewItemDraw___);
+                                                                                  (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewItemDraw___);
   this->fields.itemDraw = Component_srcLineSprite;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.itemDraw,
     (System_Int32_array **)Component_srcLineSprite,
-    v6,
-    v7,
     v8,
     v9,
     v10,
-    v11);
+    v11,
+    v12,
+    v13);
 }
 
 
@@ -59,23 +68,29 @@ UnityEngine_GameObject_o *__fastcall BoostSupportRequestItemListViewObject__Crea
         BoostSupportRequestItemListViewObject_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   UnityEngine_GameObject_o *DragObject; // x0
-  __int64 v4; // x1
-  UnityEngine_GameObject_o *v5; // x19
+  __int64 v6; // x1
+  UnityEngine_GameObject_o *v7; // x19
 
-  if ( (byte_42AFF5E & 1) == 0 )
+  if ( (byte_42EA53D & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewObject___);
-    byte_42AFF5E = 1;
+    sub_B5D5C4(
+      &Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewObject___,
+      (_DWORD)method,
+      v2,
+      v3);
+    byte_42EA53D = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject )
-    sub_B52A5C(0LL, v4);
-  v5 = DragObject;
+    sub_B5D69C(0LL, v6);
+  v7 = DragObject;
   UnityEngine_GameObject__GetComponent_srcLineSprite_(
     DragObject,
-    (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewObject___);
-  return v5;
+    (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewObject___);
+  return v7;
 }
 
 
@@ -110,7 +125,7 @@ void __fastcall BoostSupportRequestItemListViewObject__EventMoveEnd(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_B52920(p_callbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_B5D560(p_callbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
     System_Action__Invoke(v9, 0LL);
   }
 }
@@ -124,7 +139,7 @@ void __fastcall BoostSupportRequestItemListViewObject__Init(
 {
   struct ListViewItem_o *linkItem; // x8
   __int64 v8; // x11
-  BoostSupportRequsetItemListViewItem_o *v9; // x22
+  struct ListViewItem_o *v9; // x22
   UnityEngine_Transform_o *transform; // x0
   __int64 v11; // x1
   const MethodInfo *v12; // x1
@@ -135,25 +150,24 @@ void __fastcall BoostSupportRequestItemListViewObject__Init(
   System_Int32_array *v17; // x6
   System_Int32_array *v18; // x7
   BattleServantConfConponent_o *p_callbackFunc; // x21
-  CommonConsumeEntity_array *ConsumeList; // x20
-  BoostSupportRequestItemListViewObject_o *UserItemEntityList; // x0
-  const MethodInfo *v22; // x3
+  BoostSupportRequestItemListViewObject_o *v20; // x0
+  const MethodInfo *v21; // x3
   BoostSupportRequestItemListViewObject_c *klass; // x8
-  int32_t v24; // w9
-  BoostSupportRequestItemListViewObject_c *v25; // x8
-  const MethodInfo *v26; // x1
-  System_String_array **v27; // x2
-  System_String_array **v28; // x3
-  System_Boolean_array **v29; // x4
-  System_Int32_array **v30; // x5
-  System_Int32_array *v31; // x6
-  System_Int32_array *v32; // x7
-  System_Action_o *v33; // x19
+  int32_t v23; // w9
+  BoostSupportRequestItemListViewObject_c *v24; // x8
+  const MethodInfo *v25; // x1
+  System_String_array **v26; // x2
+  System_String_array **v27; // x3
+  System_Boolean_array **v28; // x4
+  System_Int32_array **v29; // x5
+  System_Int32_array *v30; // x6
+  System_Int32_array *v31; // x7
+  System_Action_o *v32; // x19
 
-  if ( (byte_42AFF5F & 1) == 0 )
+  if ( (byte_42EA53E & 1) == 0 )
   {
-    sub_B52984(&BoostSupportRequsetItemListViewItem_TypeInfo);
-    byte_42AFF5F = 1;
+    sub_B5D5C4(&BoostSupportRequsetItemListViewItem_TypeInfo, (_DWORD)callbackFunc, displayOnly, method);
+    byte_42EA53E = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -161,7 +175,7 @@ void __fastcall BoostSupportRequestItemListViewObject__Init(
         *(&linkItem->klass->_2.bitflags2 + 1) >= (unsigned int)v8) )
   {
     if ( (BoostSupportRequsetItemListViewItem_c *)linkItem->klass->_2.typeHierarchy[v8 - 1] == BoostSupportRequsetItemListViewItem_TypeInfo )
-      v9 = (BoostSupportRequsetItemListViewItem_o *)this->fields.linkItem;
+      v9 = this->fields.linkItem;
     else
       v9 = 0LL;
   }
@@ -174,7 +188,7 @@ void __fastcall BoostSupportRequestItemListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B52A5C(transform, v11);
+    sub_B5D69C(transform, v11);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   if ( displayOnly )
@@ -186,7 +200,7 @@ void __fastcall BoostSupportRequestItemListViewObject__Init(
   {
     this->fields.callbackFunc = callbackFunc;
     p_callbackFunc = (BattleServantConfConponent_o *)&this->fields.callbackFunc;
-    sub_B52920(
+    sub_B5D560(
       (BattleServantConfConponent_o *)&this->fields.callbackFunc,
       (System_Int32_array **)callbackFunc,
       v13,
@@ -197,33 +211,29 @@ void __fastcall BoostSupportRequestItemListViewObject__Init(
       v18);
     if ( v9 )
     {
-      if ( v9->fields.isRelease )
+      if ( LOBYTE(v9[1].fields.sortIndex) )
       {
-        ConsumeList = BoostSupportRequsetItemListViewItem__get_ConsumeList(v9, 0LL);
-        UserItemEntityList = (BoostSupportRequestItemListViewObject_o *)BoostSupportRequsetItemListViewItem__get_UserItemEntityList(
-                                                                          v9,
-                                                                          0LL);
         if ( BoostSupportRequestItemListViewObject__IsAllUserItemEnough(
-               UserItemEntityList,
-               ConsumeList,
-               (UserItemEntity_array *)UserItemEntityList,
-               v22) )
+               v20,
+               *(CommonConsumeEntity_array **)&v9[1].fields.selectNum,
+               (UserItemEntity_array *)v9[1].monitor,
+               v21) )
         {
           klass = this->klass;
-          v24 = 2;
+          v23 = 2;
         }
         else
         {
           klass = this->klass;
-          v24 = 3;
+          v23 = 3;
         }
       }
       else
       {
         klass = this->klass;
-        v24 = 1;
+        v23 = 1;
       }
-      this->fields.dispMode = v24;
+      this->fields.dispMode = v23;
       ((void (__fastcall *)(BoostSupportRequestItemListViewObject_o *, __int64, Il2CppMethodPointer))klass->vtable._9_SetInput.method)(
         this,
         1LL,
@@ -231,26 +241,26 @@ void __fastcall BoostSupportRequestItemListViewObject__Init(
     }
     else
     {
-      v25 = this->klass;
+      v24 = this->klass;
       this->fields.dispMode = 0;
-      ((void (__fastcall *)(BoostSupportRequestItemListViewObject_o *, _QWORD, Il2CppMethodPointer))v25->vtable._9_SetInput.method)(
+      ((void (__fastcall *)(BoostSupportRequestItemListViewObject_o *, _QWORD, Il2CppMethodPointer))v24->vtable._9_SetInput.method)(
         this,
         0LL,
-        v25->vtable._10_Invalidation.methodPtr);
+        v24->vtable._10_Invalidation.methodPtr);
     }
-    BoostSupportRequestItemListViewObject__SetupDisp(this, v26);
-    v33 = this->fields.callbackFunc;
-    if ( v33 )
+    BoostSupportRequestItemListViewObject__SetupDisp(this, v25);
+    v32 = this->fields.callbackFunc;
+    if ( v32 )
     {
       p_callbackFunc->klass = 0LL;
-      sub_B52920(p_callbackFunc, 0LL, v27, v28, v29, v30, v31, v32);
-      System_Action__Invoke(v33, 0LL);
+      sub_B5D560(p_callbackFunc, 0LL, v26, v27, v28, v29, v30, v31);
+      System_Action__Invoke(v32, 0LL);
     }
   }
 }
 
 
-void __fastcall BoostSupportRequestItemListViewObject__Init_25051200(
+void __fastcall BoostSupportRequestItemListViewObject__Init_28511464(
         BoostSupportRequestItemListViewObject_o *this,
         System_Action_o *callbackFunc,
         const MethodInfo *method)
@@ -261,7 +271,7 @@ void __fastcall BoostSupportRequestItemListViewObject__Init_25051200(
 }
 
 
-void __fastcall BoostSupportRequestItemListViewObject__Init_25053224(
+void __fastcall BoostSupportRequestItemListViewObject__Init_28511484(
         BoostSupportRequestItemListViewObject_o *this,
         const MethodInfo *method)
 {
@@ -277,50 +287,60 @@ bool __fastcall BoostSupportRequestItemListViewObject__IsAllUserItemEnough(
         UserItemEntity_array *userItemEntityList,
         const MethodInfo *method)
 {
-  __int64 v6; // x8
-  unsigned __int64 v7; // x22
-  CommonConsumeEntity_o *v8; // x21
-  const MethodInfo *v9; // x3
-  __int64 v11; // x0
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  __int64 v9; // x8
+  unsigned __int64 v10; // x22
+  CommonConsumeEntity_o *v11; // x21
+  __int64 v13; // x0
 
-  if ( (byte_42AFF60 & 1) == 0 )
+  if ( (byte_42EA53F & 1) == 0 )
   {
-    sub_B52984(&Method_SingletonTemplate_BoostFunctionUtility__get_Instance__);
-    this = (BoostSupportRequestItemListViewObject_o *)sub_B52984(&SingletonTemplate_BoostFunctionUtility__TypeInfo);
-    byte_42AFF60 = 1;
+    sub_B5D5C4(
+      &Method_SingletonTemplate_BoostFunctionUtility__get_Instance__,
+      (_DWORD)consumeList,
+      (_DWORD)userItemEntityList,
+      method);
+    this = (BoostSupportRequestItemListViewObject_o *)sub_B5D5C4(
+                                                        &SingletonTemplate_BoostFunctionUtility__TypeInfo,
+                                                        v6,
+                                                        v7,
+                                                        v8);
+    byte_42EA53F = 1;
   }
   if ( !consumeList )
 LABEL_16:
-    sub_B52A5C(this, consumeList);
-  v6 = *(_QWORD *)&consumeList->max_length;
-  if ( (int)v6 < 1 )
+    sub_B5D69C(this, consumeList);
+  v9 = *(_QWORD *)&consumeList->max_length;
+  if ( (int)v9 < 1 )
     return 1;
-  v7 = 0LL;
+  v10 = 0LL;
   while ( 1 )
   {
-    if ( v7 >= (unsigned int)v6 )
+    if ( v10 >= (unsigned int)v9 )
     {
-      v11 = sub_B52A88(this);
-      sub_B52A28(v11, 0LL);
+      v13 = sub_B5D6C8(this);
+      sub_B5D668(v13, 0LL);
     }
-    v8 = consumeList->m_Items[v7];
+    v11 = consumeList->m_Items[v10];
     if ( (BYTE3(SingletonTemplate_BoostFunctionUtility__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !SingletonTemplate_BoostFunctionUtility__TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(SingletonTemplate_BoostFunctionUtility__TypeInfo);
     }
-    this = (BoostSupportRequestItemListViewObject_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2B76134 *)Method_SingletonTemplate_BoostFunctionUtility__get_Instance__);
+    this = (BoostSupportRequestItemListViewObject_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2A301E4 *)Method_SingletonTemplate_BoostFunctionUtility__get_Instance__);
     if ( !this )
       goto LABEL_16;
     this = (BoostSupportRequestItemListViewObject_o *)BoostFunctionUtility__IsEnoughUserItem(
                                                         (BoostFunctionUtility_o *)this,
-                                                        v8,
+                                                        v11,
                                                         userItemEntityList,
-                                                        v9);
+                                                        0LL);
     if ( ((unsigned __int8)this & 1) == 0 )
       return 0;
-    LODWORD(v6) = consumeList->max_length;
-    if ( (__int64)++v7 >= (int)v6 )
+    LODWORD(v9) = consumeList->max_length;
+    if ( (__int64)++v10 >= (int)v9 )
       return 1;
   }
 }
@@ -338,7 +358,7 @@ void __fastcall BoostSupportRequestItemListViewObject__SetDirectItem(
   System_Int32_array *v7; // x7
 
   this->fields.linkItem = (struct ListViewItem_o *)item;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.linkItem,
     (System_Int32_array **)item,
     (System_String_array **)method,
@@ -356,7 +376,7 @@ void __fastcall BoostSupportRequestItemListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_33992116((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_34021840((ListViewObject_o *)this, item, seed, 0LL);
 }
 
 
@@ -364,33 +384,37 @@ void __fastcall BoostSupportRequestItemListViewObject__SetupDisp(
         BoostSupportRequestItemListViewObject_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
   struct ListViewItem_o *linkItem; // x8
-  __int64 v4; // x11
-  struct ListViewItem_o *v5; // x20
+  __int64 v9; // x11
+  struct ListViewItem_o *v10; // x20
   UnityEngine_Object_o *itemDraw; // x21
-  __int64 v7; // x1
-  const MethodInfo *v8; // x3
-  BoostSupportRequestItemListViewItemDraw_o *v9; // x0
+  __int64 v12; // x1
+  BoostSupportRequestItemListViewItemDraw_o *v13; // x0
 
-  if ( (byte_42AFF61 & 1) == 0 )
+  if ( (byte_42EA540 & 1) == 0 )
   {
-    sub_B52984(&BoostSupportRequsetItemListViewItem_TypeInfo);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42AFF61 = 1;
+    sub_B5D5C4(&BoostSupportRequsetItemListViewItem_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v5, v6, v7);
+    byte_42EA540 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
-    && (v4 = *(&BoostSupportRequsetItemListViewItem_TypeInfo->_2.bitflags2 + 1),
-        *(&linkItem->klass->_2.bitflags2 + 1) >= (unsigned int)v4) )
+    && (v9 = *(&BoostSupportRequsetItemListViewItem_TypeInfo->_2.bitflags2 + 1),
+        *(&linkItem->klass->_2.bitflags2 + 1) >= (unsigned int)v9) )
   {
-    if ( (BoostSupportRequsetItemListViewItem_c *)linkItem->klass->_2.typeHierarchy[v4 - 1] == BoostSupportRequsetItemListViewItem_TypeInfo )
-      v5 = this->fields.linkItem;
+    if ( (BoostSupportRequsetItemListViewItem_c *)linkItem->klass->_2.typeHierarchy[v9 - 1] == BoostSupportRequsetItemListViewItem_TypeInfo )
+      v10 = this->fields.linkItem;
     else
-      v5 = 0LL;
+      v10 = 0LL;
   }
   else
   {
-    v5 = 0LL;
+    v10 = 0LL;
   }
   ListViewObject__SetVisible((ListViewObject_o *)this, 1, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -401,14 +425,14 @@ void __fastcall BoostSupportRequestItemListViewObject__SetupDisp(
   }
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v9 = this->fields.itemDraw;
-    if ( !v9 )
-      sub_B52A5C(0LL, v7);
+    v13 = this->fields.itemDraw;
+    if ( !v13 )
+      sub_B5D69C(0LL, v12);
     BoostSupportRequestItemListViewItemDraw__SetItem(
-      v9,
-      (BoostSupportRequsetItemListViewItem_o *)v5,
+      v13,
+      (BoostSupportRequsetItemListViewItem_o *)v10,
       this->fields.dispMode,
-      v8);
+      0LL);
   }
 }
 
@@ -418,40 +442,41 @@ void __fastcall BoostSupportRequestItemListViewObject__add_callbackFunc(
         System_Action_o *value,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
   struct System_Action_o **p_callbackFunc; // x20
-  System_Delegate_o *v6; // x21
+  System_Delegate_o *v7; // x21
   struct System_Action_o *callbackFunc; // t1
-  System_Delegate_o *v8; // x0
-  __int64 v9; // x0
-  bool v10; // zf
-  BoostSupportRequestItemListViewObject_o *v11; // x0
-  System_Action_o *v12; // x1
-  const MethodInfo *v13; // x2
+  System_Delegate_o *v9; // x0
+  __int64 v10; // x0
+  bool v11; // zf
+  BoostSupportRequestItemListViewObject_o *v12; // x0
+  System_Action_o *v13; // x1
+  const MethodInfo *v14; // x2
 
-  if ( (byte_42AFF5B & 1) == 0 )
+  if ( (byte_42EA53A & 1) == 0 )
   {
-    sub_B52984(&System_Action_TypeInfo);
-    byte_42AFF5B = 1;
+    sub_B5D5C4(&System_Action_TypeInfo, (_DWORD)value, (_DWORD)method, v3);
+    byte_42EA53A = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
-  v6 = (System_Delegate_o *)callbackFunc;
+  v7 = (System_Delegate_o *)callbackFunc;
   while ( 1 )
   {
-    v8 = System_Delegate__Combine(v6, (System_Delegate_o *)value, 0LL);
-    if ( v8 )
+    v9 = System_Delegate__Combine(v7, (System_Delegate_o *)value, 0LL);
+    if ( v9 )
     {
-      if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
+      if ( (System_Action_c *)v9->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B4739C(p_callbackFunc, v8, v6);
-    v10 = v6 == (System_Delegate_o *)v9;
-    v6 = (System_Delegate_o *)v9;
-    if ( v10 )
+    v10 = sub_B51FDC(p_callbackFunc, v9, v7);
+    v11 = v7 == (System_Delegate_o *)v10;
+    v7 = (System_Delegate_o *)v10;
+    if ( v11 )
       return;
   }
-  v11 = (BoostSupportRequestItemListViewObject_o *)sub_B52D50(v8);
-  BoostSupportRequestItemListViewObject__remove_callbackFunc(v11, v12, v13);
+  v12 = (BoostSupportRequestItemListViewObject_o *)sub_B5D990(v9);
+  BoostSupportRequestItemListViewObject__remove_callbackFunc(v12, v13, v14);
 }
 
 
@@ -460,37 +485,38 @@ void __fastcall BoostSupportRequestItemListViewObject__remove_callbackFunc(
         System_Action_o *value,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
   struct System_Action_o **p_callbackFunc; // x20
-  System_Delegate_o *v6; // x21
+  System_Delegate_o *v7; // x21
   struct System_Action_o *callbackFunc; // t1
-  System_Delegate_o *v8; // x0
-  __int64 v9; // x0
-  bool v10; // zf
-  BoostSupportRequestItemListViewObject_o *v11; // x0
-  const MethodInfo *v12; // x1
+  System_Delegate_o *v9; // x0
+  __int64 v10; // x0
+  bool v11; // zf
+  BoostSupportRequestItemListViewObject_o *v12; // x0
+  const MethodInfo *v13; // x1
 
-  if ( (byte_42AFF5C & 1) == 0 )
+  if ( (byte_42EA53B & 1) == 0 )
   {
-    sub_B52984(&System_Action_TypeInfo);
-    byte_42AFF5C = 1;
+    sub_B5D5C4(&System_Action_TypeInfo, (_DWORD)value, (_DWORD)method, v3);
+    byte_42EA53B = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
-  v6 = (System_Delegate_o *)callbackFunc;
+  v7 = (System_Delegate_o *)callbackFunc;
   while ( 1 )
   {
-    v8 = System_Delegate__Remove(v6, (System_Delegate_o *)value, 0LL);
-    if ( v8 )
+    v9 = System_Delegate__Remove(v7, (System_Delegate_o *)value, 0LL);
+    if ( v9 )
     {
-      if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
+      if ( (System_Action_c *)v9->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B4739C(p_callbackFunc, v8, v6);
-    v10 = v6 == (System_Delegate_o *)v9;
-    v6 = (System_Delegate_o *)v9;
-    if ( v10 )
+    v10 = sub_B51FDC(p_callbackFunc, v9, v7);
+    v11 = v7 == (System_Delegate_o *)v10;
+    v7 = (System_Delegate_o *)v10;
+    if ( v11 )
       return;
   }
-  v11 = (BoostSupportRequestItemListViewObject_o *)sub_B52D50(v8);
-  BoostSupportRequestItemListViewObject__Awake(v11, v12);
+  v12 = (BoostSupportRequestItemListViewObject_o *)sub_B5D990(v9);
+  BoostSupportRequestItemListViewObject__Awake(v12, v13);
 }

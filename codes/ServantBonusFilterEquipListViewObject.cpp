@@ -2,10 +2,13 @@ void __fastcall ServantBonusFilterEquipListViewObject___ctor(
         ServantBonusFilterEquipListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_42B1043 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E9929 & 1) == 0 )
   {
-    sub_B52984(&ListViewObject_TypeInfo);
-    byte_42B1043 = 1;
+    sub_B5D5C4(&ListViewObject_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E9929 = 1;
   }
   if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ListViewObject_TypeInfo->_2.cctor_finished )
@@ -20,20 +23,26 @@ bool __fastcall ServantBonusFilterEquipListViewObject__IsSetFilter(
         ServantBonusFilterEquipListViewObject_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   void *dispObject; // x0
 
-  if ( (byte_42B1040 & 1) == 0 )
+  if ( (byte_42E9926 & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___);
-    byte_42B1040 = 1;
+    sub_B5D5C4(
+      &Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___,
+      (_DWORD)method,
+      v2,
+      v3);
+    byte_42E9926 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (dispObject = UnityEngine_GameObject__GetComponent_srcLineSprite_(
                        (UnityEngine_GameObject_o *)dispObject,
-                       (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL )
+                       (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL )
   {
-    sub_B52A5C(dispObject, method);
+    sub_B5D69C(dispObject, method);
   }
   return *((_BYTE *)dispObject + 80);
 }
@@ -43,20 +52,26 @@ void __fastcall ServantBonusFilterEquipListViewObject__ResetDisplayButton(
         ServantBonusFilterEquipListViewObject_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   UnityEngine_GameObject_o *dispObject; // x0
 
-  if ( (byte_42B103F & 1) == 0 )
+  if ( (byte_42E9925 & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___);
-    byte_42B103F = 1;
+    sub_B5D5C4(
+      &Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___,
+      (_DWORD)method,
+      v2,
+      v3);
+    byte_42E9925 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (dispObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                    dispObject,
-                                                   (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL )
+                                                   (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL )
   {
-    sub_B52A5C(dispObject, method);
+    sub_B5D69C(dispObject, method);
   }
   LOBYTE(dispObject[3].monitor) = 0;
   ServantBonusFilterEquipListViewItemDraw__SetButton((ServantBonusFilterEquipListViewItemDraw_o *)dispObject, method);
@@ -69,21 +84,26 @@ void __fastcall ServantBonusFilterEquipListViewObject__SetButtonEnable(
         bool isEnable,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
   UnityEngine_GameObject_o *dispObject; // x0
 
-  if ( (byte_42B103E & 1) == 0 )
+  if ( (byte_42E9924 & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___);
-    byte_42B103E = 1;
+    sub_B5D5C4(
+      &Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___,
+      isEnable,
+      (_DWORD)method,
+      v3);
+    byte_42E9924 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (dispObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                    dispObject,
-                                                   (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL
+                                                   (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL
     || (dispObject = *(UnityEngine_GameObject_o **)&dispObject[2].fields.m_CachedPtr) == 0LL )
   {
-    sub_B52A5C(dispObject, isEnable);
+    sub_B5D69C(dispObject, isEnable);
   }
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)dispObject, isEnable, 0LL);
 }
@@ -95,20 +115,25 @@ void __fastcall ServantBonusFilterEquipListViewObject__SetButtonOnOffLabel(
         bool isOnOff,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
   UnityEngine_GameObject_o *dispObject; // x0
 
-  if ( (byte_42B1042 & 1) == 0 )
+  if ( (byte_42E9928 & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___);
-    byte_42B1042 = 1;
+    sub_B5D5C4(
+      &Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___,
+      isOnOff,
+      (_DWORD)method,
+      v3);
+    byte_42E9928 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (dispObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                    dispObject,
-                                                   (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL )
+                                                   (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL )
   {
-    sub_B52A5C(dispObject, isOnOff);
+    sub_B5D69C(dispObject, isOnOff);
   }
   LOBYTE(dispObject[4].klass) = isOnOff;
 }
@@ -118,20 +143,26 @@ void __fastcall ServantBonusFilterEquipListViewObject__SetInitButtonSelect(
         ServantBonusFilterEquipListViewObject_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   UnityEngine_GameObject_o *dispObject; // x0
 
-  if ( (byte_42B103D & 1) == 0 )
+  if ( (byte_42E9923 & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___);
-    byte_42B103D = 1;
+    sub_B5D5C4(
+      &Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___,
+      (_DWORD)method,
+      v2,
+      v3);
+    byte_42E9923 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (dispObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                    dispObject,
-                                                   (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL )
+                                                   (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL )
   {
-    sub_B52A5C(dispObject, method);
+    sub_B5D69C(dispObject, method);
   }
   ServantBonusFilterEquipListViewItemDraw__SetInitButtonSelect(
     (ServantBonusFilterEquipListViewItemDraw_o *)dispObject,
@@ -151,18 +182,22 @@ void __fastcall ServantBonusFilterEquipListViewObject__SetItem(
   UnityEngine_GameObject_o *dispObject; // x0
   const MethodInfo *v12; // x5
 
-  if ( (byte_42B1039 & 1) == 0 )
+  if ( (byte_42E991F & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___);
-    byte_42B1039 = 1;
+    sub_B5D5C4(
+      &Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___,
+      idx,
+      (_DWORD)equipEntity,
+      eventUpValInfos);
+    byte_42E991F = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (dispObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                    dispObject,
-                                                   (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL )
+                                                   (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL )
   {
-    sub_B52A5C(dispObject, *(_QWORD *)&idx);
+    sub_B5D69C(dispObject, *(_QWORD *)&idx);
   }
   ServantBonusFilterEquipListViewItemDraw__SetItem(
     (ServantBonusFilterEquipListViewItemDraw_o *)dispObject,
@@ -175,7 +210,7 @@ void __fastcall ServantBonusFilterEquipListViewObject__SetItem(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantBonusFilterEquipListViewObject__SetItem_26827608(
+void __fastcall ServantBonusFilterEquipListViewObject__SetItem_26924992(
         ServantBonusFilterEquipListViewObject_o *this,
         int32_t idx,
         System_Int32_array *eventIdList,
@@ -185,20 +220,24 @@ void __fastcall ServantBonusFilterEquipListViewObject__SetItem_26827608(
   UnityEngine_GameObject_o *dispObject; // x0
   const MethodInfo *v10; // x4
 
-  if ( (byte_42B103A & 1) == 0 )
+  if ( (byte_42E9920 & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___);
-    byte_42B103A = 1;
+    sub_B5D5C4(
+      &Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___,
+      idx,
+      (_DWORD)eventIdList,
+      *(_QWORD *)&filterGroupId);
+    byte_42E9920 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (dispObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                    dispObject,
-                                                   (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL )
+                                                   (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL )
   {
-    sub_B52A5C(dispObject, *(_QWORD *)&idx);
+    sub_B5D69C(dispObject, *(_QWORD *)&idx);
   }
-  ServantBonusFilterEquipListViewItemDraw__SetItem_26831992(
+  ServantBonusFilterEquipListViewItemDraw__SetItem_26929376(
     (ServantBonusFilterEquipListViewItemDraw_o *)dispObject,
     idx,
     eventIdList,
@@ -207,7 +246,7 @@ void __fastcall ServantBonusFilterEquipListViewObject__SetItem_26827608(
 }
 
 
-void __fastcall ServantBonusFilterEquipListViewObject__SetItem_26834808(
+void __fastcall ServantBonusFilterEquipListViewObject__SetItem_26932192(
         ServantBonusFilterEquipListViewObject_o *this,
         ServantEntity_o *equipEntity,
         EventUpValInfo_array *eventUpValInfos,
@@ -218,20 +257,24 @@ void __fastcall ServantBonusFilterEquipListViewObject__SetItem_26834808(
   UnityEngine_GameObject_o *dispObject; // x0
   const MethodInfo *v12; // x5
 
-  if ( (byte_42B103B & 1) == 0 )
+  if ( (byte_42E9921 & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___);
-    byte_42B103B = 1;
+    sub_B5D5C4(
+      &Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___,
+      (_DWORD)equipEntity,
+      (_DWORD)eventUpValInfos,
+      skillInfos);
+    byte_42E9921 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (dispObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                    dispObject,
-                                                   (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL )
+                                                   (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL )
   {
-    sub_B52A5C(dispObject, equipEntity);
+    sub_B5D69C(dispObject, equipEntity);
   }
-  ServantBonusFilterEquipListViewItemDraw__SetItem_26830320(
+  ServantBonusFilterEquipListViewItemDraw__SetItem_26927704(
     (ServantBonusFilterEquipListViewItemDraw_o *)dispObject,
     equipEntity,
     eventUpValInfos,
@@ -241,7 +284,7 @@ void __fastcall ServantBonusFilterEquipListViewObject__SetItem_26834808(
 }
 
 
-void __fastcall ServantBonusFilterEquipListViewObject__SetItem_26834948(
+void __fastcall ServantBonusFilterEquipListViewObject__SetItem_26932332(
         ServantBonusFilterEquipListViewObject_o *this,
         System_Int32_array *eventIdList,
         int32_t filterGroupId,
@@ -251,20 +294,24 @@ void __fastcall ServantBonusFilterEquipListViewObject__SetItem_26834948(
   UnityEngine_GameObject_o *dispObject; // x0
   const MethodInfo *v10; // x4
 
-  if ( (byte_42B103C & 1) == 0 )
+  if ( (byte_42E9922 & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___);
-    byte_42B103C = 1;
+    sub_B5D5C4(
+      &Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___,
+      (_DWORD)eventIdList,
+      filterGroupId,
+      saveKey);
+    byte_42E9922 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (dispObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                    dispObject,
-                                                   (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL )
+                                                   (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL )
   {
-    sub_B52A5C(dispObject, eventIdList);
+    sub_B5D69C(dispObject, eventIdList);
   }
-  ServantBonusFilterEquipListViewItemDraw__SetItem_26832140(
+  ServantBonusFilterEquipListViewItemDraw__SetItem_26929524(
     (ServantBonusFilterEquipListViewItemDraw_o *)dispObject,
     eventIdList,
     filterGroupId,
@@ -277,20 +324,26 @@ void __fastcall ServantBonusFilterEquipListViewObject__UpdateFilterSave(
         ServantBonusFilterEquipListViewObject_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   UnityEngine_GameObject_o *dispObject; // x0
 
-  if ( (byte_42B1041 & 1) == 0 )
+  if ( (byte_42E9927 & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___);
-    byte_42B1041 = 1;
+    sub_B5D5C4(
+      &Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___,
+      (_DWORD)method,
+      v2,
+      v3);
+    byte_42E9927 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (dispObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                    dispObject,
-                                                   (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL )
+                                                   (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewItemDraw___)) == 0LL )
   {
-    sub_B52A5C(dispObject, method);
+    sub_B5D69C(dispObject, method);
   }
   ServantBonusFilterEquipListViewItemDraw__UpdateFilterSave(
     (ServantBonusFilterEquipListViewItemDraw_o *)dispObject,

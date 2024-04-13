@@ -6,42 +6,48 @@ void __fastcall peRenderTexture___ctor(peRenderTexture_o *this, const MethodInfo
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
-  System_Int32_array **v9; // x1
-  System_Int32_array **v10; // x1
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
-  System_Int32_array **v17; // x1
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  System_Int32_array **v15; // x1
+  System_Int32_array **v16; // x1
+  System_String_array **v17; // x2
+  System_String_array **v18; // x3
+  System_Boolean_array **v19; // x4
+  System_Int32_array **v20; // x5
+  System_Int32_array *v21; // x6
+  System_Int32_array *v22; // x7
+  System_Int32_array **v23; // x1
+  System_String_array **v24; // x2
+  System_String_array **v25; // x3
+  System_Boolean_array **v26; // x4
+  System_Int32_array **v27; // x5
+  System_Int32_array *v28; // x6
+  System_Int32_array *v29; // x7
 
-  if ( (byte_42BD132 & 1) == 0 )
+  if ( (byte_42F5AB3 & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_16119/*"_MainCamVPMatrix"*/);
-    sub_B52984(&StringLiteral_16141/*"_ParallelViewMatrix"*/);
-    sub_B52984(&StringLiteral_16140/*"_ParallelProjectionMatrix"*/);
-    byte_42BD132 = 1;
+    sub_B5D5C4(&StringLiteral_16204/*"_MainCamVPMatrix"*/, (_DWORD)method, (_DWORD)v2, v3);
+    sub_B5D5C4(&StringLiteral_16226/*"_ParallelViewMatrix"*/, v9, v10, v11);
+    sub_B5D5C4(&StringLiteral_16225/*"_ParallelProjectionMatrix"*/, v12, v13, v14);
+    byte_42F5AB3 = 1;
   }
   this->fields.changeCullingMask = -1;
   this->fields.boundsUpdateCount = -1;
-  *(_OWORD *)&this->fields.textureWidth = xmmword_32BAF60;
+  *(_OWORD *)&this->fields.textureWidth = xmmword_32E1E30;
   *(_QWORD *)&this->fields.textureFilterMode = 0xFFFFFFFF00000001LL;
-  v9 = (System_Int32_array **)StringLiteral_16119/*"_MainCamVPMatrix"*/;
-  this->fields.MainCamVPMat = (struct System_String_o *)StringLiteral_16119/*"_MainCamVPMatrix"*/;
-  sub_B52920((BattleServantConfConponent_o *)&this->fields.MainCamVPMat, v9, v2, v3, v4, v5, v6, v7);
-  v10 = (System_Int32_array **)StringLiteral_16141/*"_ParallelViewMatrix"*/;
-  this->fields.ParallelViewMat = (struct System_String_o *)StringLiteral_16141/*"_ParallelViewMatrix"*/;
-  sub_B52920((BattleServantConfConponent_o *)&this->fields.ParallelViewMat, v10, v11, v12, v13, v14, v15, v16);
-  v17 = (System_Int32_array **)StringLiteral_16140/*"_ParallelProjectionMatrix"*/;
-  this->fields.ParallelProjectionMat = (struct System_String_o *)StringLiteral_16140/*"_ParallelProjectionMatrix"*/;
-  sub_B52920((BattleServantConfConponent_o *)&this->fields.ParallelProjectionMat, v17, v18, v19, v20, v21, v22, v23);
+  v15 = (System_Int32_array **)StringLiteral_16204/*"_MainCamVPMatrix"*/;
+  this->fields.MainCamVPMat = (struct System_String_o *)StringLiteral_16204/*"_MainCamVPMatrix"*/;
+  sub_B5D560((BattleServantConfConponent_o *)&this->fields.MainCamVPMat, v15, v2, v3, v4, v5, v6, v7);
+  v16 = (System_Int32_array **)StringLiteral_16226/*"_ParallelViewMatrix"*/;
+  this->fields.ParallelViewMat = (struct System_String_o *)StringLiteral_16226/*"_ParallelViewMatrix"*/;
+  sub_B5D560((BattleServantConfConponent_o *)&this->fields.ParallelViewMat, v16, v17, v18, v19, v20, v21, v22);
+  v23 = (System_Int32_array **)StringLiteral_16225/*"_ParallelProjectionMatrix"*/;
+  this->fields.ParallelProjectionMat = (struct System_String_o *)StringLiteral_16225/*"_ParallelProjectionMatrix"*/;
+  sub_B5D560((BattleServantConfConponent_o *)&this->fields.ParallelProjectionMat, v23, v24, v25, v26, v27, v28, v29);
   *(_QWORD *)&this->fields._RBindex = 0x6E0000000ALL;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -60,7 +66,7 @@ UnityEngine_Bounds_o *__fastcall peRenderTexture__CalcRendererBounds(
 
   *(_QWORD *)&bounds.fields.m_Center.fields.x = 0LL;
   *(_QWORD *)&bounds.fields.m_Center.fields.z = 0LL;
-  peRenderTexture__CalcRendererBounds_47036060(this, obj, &bounds, v4);
+  peRenderTexture__CalcRendererBounds_47085952(this, obj, &bounds, v4);
   v7 = *(_OWORD *)&bounds.fields.m_Center.fields.x;
   *(_QWORD *)&retstr->fields.m_Extents.fields.y = *(_QWORD *)&bounds.fields.m_Extents.fields.y;
   *(_OWORD *)&retstr->fields.m_Center.fields.x = v7;
@@ -68,66 +74,78 @@ UnityEngine_Bounds_o *__fastcall peRenderTexture__CalcRendererBounds(
 }
 
 
-void __fastcall peRenderTexture__CalcRendererBounds_47036060(
+void __fastcall peRenderTexture__CalcRendererBounds_47085952(
         peRenderTexture_o *this,
         UnityEngine_GameObject_o *obj,
         UnityEngine_Bounds_o *bounds,
         const MethodInfo *method)
 {
   peRenderTexture_o *v6; // x20
+  int v7; // w1
+  int v8; // w2
+  __int64 v9; // x3
+  int v10; // w1
+  int v11; // w2
+  __int64 v12; // x3
+  int v13; // w1
+  int v14; // w2
+  __int64 v15; // x3
+  int v16; // w1
+  int v17; // w2
+  __int64 v18; // x3
   UnityEngine_Object_o *Component_srcLineSprite; // x22
   float x; // s8
   float y; // s9
   float z; // s10
-  __int128 v11; // q0
-  __int64 v12; // x1
-  __int64 v13; // x3
+  __int128 v23; // q0
+  __int64 v24; // x1
+  __int64 v25; // x3
   System_Collections_IEnumerator_o *Enumerator; // x21
   System_Collections_IEnumerator_c *klass; // x8
-  unsigned __int64 v16; // x10
+  unsigned __int64 v28; // x10
   int32_t *p_offset; // x11
   __int64 p_method; // x0
-  __int64 v19; // x3
-  System_Collections_IEnumerator_c *v20; // x8
-  unsigned __int64 v21; // x10
-  System_Collections_IEnumerator_c **v22; // x11
-  __int64 v23; // x0
-  UnityEngine_Component_o *v24; // x0
-  __int64 v25; // x1
-  __int64 v26; // x9
-  UnityEngine_GameObject_o *gameObject; // x1
-  const MethodInfo *v28; // x3
-  __int64 v29; // x0
-  __int64 v30; // x3
-  __int64 v31; // x8
-  __int64 v32; // x20
+  __int64 v31; // x3
+  System_Collections_IEnumerator_c *v32; // x8
   unsigned __int64 v33; // x10
-  int *v34; // x11
+  System_Collections_IEnumerator_c **v34; // x11
   __int64 v35; // x0
-  UnityEngine_Bounds_o v36; // [xsp+0h] [xbp-90h] BYREF
-  UnityEngine_Bounds_o v37; // [xsp+18h] [xbp-78h] BYREF
-  UnityEngine_Bounds_o v38; // [xsp+30h] [xbp-60h] BYREF
-  __int64 v39; // [xsp+48h] [xbp-48h]
+  UnityEngine_Component_o *v36; // x0
+  __int64 v37; // x1
+  __int64 v38; // x9
+  UnityEngine_GameObject_o *gameObject; // x1
+  const MethodInfo *v40; // x3
+  __int64 v41; // x0
+  __int64 v42; // x3
+  __int64 v43; // x8
+  __int64 v44; // x20
+  unsigned __int64 v45; // x10
+  int *v46; // x11
+  __int64 v47; // x0
+  UnityEngine_Bounds_o v48; // [xsp+0h] [xbp-90h] BYREF
+  UnityEngine_Bounds_o v49; // [xsp+18h] [xbp-78h] BYREF
+  UnityEngine_Bounds_o v50; // [xsp+30h] [xbp-60h] BYREF
+  __int64 v51; // [xsp+48h] [xbp-48h]
   UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o zero; // 0:s3.4,4:s4.4,8:s5.4
 
   v6 = this;
-  if ( (byte_42BD130 & 1) == 0 )
+  if ( (byte_42F5AB1 & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_Renderer___);
-    sub_B52984(&System_IDisposable_TypeInfo);
-    sub_B52984(&System_Collections_IEnumerator_TypeInfo);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    this = (peRenderTexture_o *)sub_B52984(&UnityEngine_Transform_TypeInfo);
-    byte_42BD130 = 1;
+    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_Renderer___, (_DWORD)obj, (_DWORD)bounds, method);
+    sub_B5D5C4(&System_IDisposable_TypeInfo, v7, v8, v9);
+    sub_B5D5C4(&System_Collections_IEnumerator_TypeInfo, v10, v11, v12);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v13, v14, v15);
+    this = (peRenderTexture_o *)sub_B5D5C4(&UnityEngine_Transform_TypeInfo, v16, v17, v18);
+    byte_42F5AB1 = 1;
   }
-  HIDWORD(v39) = 0;
+  HIDWORD(v51) = 0;
   if ( !obj )
     goto LABEL_45;
   Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                       obj,
-                                                      (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                                                      (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -145,44 +163,44 @@ void __fastcall peRenderTexture__CalcRendererBounds_47036060(
       y = size.fields.y;
       z = size.fields.z;
       zero = UnityEngine_Vector3__get_zero(0LL);
-      v41.fields.x = x;
-      v41.fields.y = y;
-      v41.fields.z = z;
-      if ( UnityEngine_Vector3__op_Equality(v41, zero, 0LL) )
+      v53.fields.x = x;
+      v53.fields.y = y;
+      v53.fields.z = z;
+      if ( UnityEngine_Vector3__op_Equality(v53, zero, 0LL) )
       {
-        UnityEngine_Renderer__get_bounds(&v37, (UnityEngine_Renderer_o *)Component_srcLineSprite, 0LL);
-        v38 = v37;
-        v11 = *(_OWORD *)&v37.fields.m_Center.fields.x;
-        *(_QWORD *)&bounds->fields.m_Extents.fields.y = *(_QWORD *)&v37.fields.m_Extents.fields.y;
-        *(_OWORD *)&bounds->fields.m_Center.fields.x = v11;
+        UnityEngine_Renderer__get_bounds(&v49, (UnityEngine_Renderer_o *)Component_srcLineSprite, 0LL);
+        v50 = v49;
+        v23 = *(_OWORD *)&v49.fields.m_Center.fields.x;
+        *(_QWORD *)&bounds->fields.m_Extents.fields.y = *(_QWORD *)&v49.fields.m_Extents.fields.y;
+        *(_OWORD *)&bounds->fields.m_Center.fields.x = v23;
       }
       else
       {
-        UnityEngine_Renderer__get_bounds(&v38, (UnityEngine_Renderer_o *)Component_srcLineSprite, 0LL);
-        v36 = v38;
-        UnityEngine_Bounds__Encapsulate_41455164(bounds, &v36, 0LL);
+        UnityEngine_Renderer__get_bounds(&v50, (UnityEngine_Renderer_o *)Component_srcLineSprite, 0LL);
+        v48 = v50;
+        UnityEngine_Bounds__Encapsulate_41559312(bounds, &v48, 0LL);
       }
     }
   }
   this = (peRenderTexture_o *)UnityEngine_GameObject__get_transform(obj, 0LL);
   if ( !this )
 LABEL_45:
-    sub_B52A5C(this, obj);
+    sub_B5D69C(this, obj);
   Enumerator = UnityEngine_Transform__GetEnumerator((UnityEngine_Transform_o *)this, 0LL);
   if ( !Enumerator )
-    sub_B52A5C(0LL, v12);
+    sub_B5D69C(0LL, v24);
   while ( 1 )
   {
     klass = Enumerator->klass;
     if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
     {
-      v16 = 0LL;
+      v28 = 0LL;
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        ++v16;
+        ++v28;
         p_offset += 4;
-        if ( v16 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+        if ( v28 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
           goto LABEL_19;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -190,75 +208,75 @@ LABEL_45:
     else
     {
 LABEL_19:
-      p_method = sub_AEB880(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL, v13);
+      p_method = sub_AF54C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL, v25);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v20 = Enumerator->klass;
+    v32 = Enumerator->klass;
     if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
     {
-      v21 = 0LL;
-      v22 = (System_Collections_IEnumerator_c **)&v20->_1.interfaceOffsets->offset;
-      while ( *(v22 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v33 = 0LL;
+      v34 = (System_Collections_IEnumerator_c **)&v32->_1.interfaceOffsets->offset;
+      while ( *(v34 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        ++v21;
-        v22 += 2;
-        if ( v21 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+        ++v33;
+        v34 += 2;
+        if ( v33 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
           goto LABEL_26;
       }
-      v23 = (__int64)&v20->vtable[*(_DWORD *)v22 + 1].method;
+      v35 = (__int64)&v32->vtable[*(_DWORD *)v34 + 1].method;
     }
     else
     {
 LABEL_26:
-      v23 = sub_AEB880(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL, v19);
+      v35 = sub_AF54C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL, v31);
     }
-    v24 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v23)(
+    v36 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v35)(
                                        Enumerator,
-                                       *(_QWORD *)(v23 + 8));
-    if ( !v24 )
+                                       *(_QWORD *)(v35 + 8));
+    if ( !v36 )
       goto LABEL_44;
-    v26 = *(&UnityEngine_Transform_TypeInfo->_2.bitflags2 + 1);
-    if ( *(&v24->klass->_2.bitflags2 + 1) < (unsigned int)v26
-      || (UnityEngine_Transform_c *)v24->klass->_2.typeHierarchy[v26 - 1] != UnityEngine_Transform_TypeInfo )
+    v38 = *(&UnityEngine_Transform_TypeInfo->_2.bitflags2 + 1);
+    if ( *(&v36->klass->_2.bitflags2 + 1) < (unsigned int)v38
+      || (UnityEngine_Transform_c *)v36->klass->_2.typeHierarchy[v38 - 1] != UnityEngine_Transform_TypeInfo )
     {
-      sub_B52D50(v24);
+      sub_B5D990(v36);
 LABEL_44:
-      sub_B52A5C(v24, v25);
+      sub_B5D69C(v36, v37);
     }
-    gameObject = UnityEngine_Component__get_gameObject(v24, 0LL);
-    peRenderTexture__CalcRendererBounds_47036060(v6, gameObject, bounds, v28);
+    gameObject = UnityEngine_Component__get_gameObject(v36, 0LL);
+    peRenderTexture__CalcRendererBounds_47085952(v6, gameObject, bounds, v40);
   }
-  v39 = 0x100000086LL;
-  v29 = sub_B52A44(Enumerator, System_IDisposable_TypeInfo);
-  if ( v29 )
+  v51 = 0x100000086LL;
+  v41 = sub_B5D684(Enumerator, System_IDisposable_TypeInfo);
+  if ( v41 )
   {
-    v31 = *(_QWORD *)v29;
-    v32 = v29;
-    if ( *(_WORD *)(*(_QWORD *)v29 + 298LL) )
+    v43 = *(_QWORD *)v41;
+    v44 = v41;
+    if ( *(_WORD *)(*(_QWORD *)v41 + 298LL) )
     {
-      v33 = 0LL;
-      v34 = (int *)(*(_QWORD *)(v31 + 176) + 8LL);
-      while ( *((System_IDisposable_c **)v34 - 1) != System_IDisposable_TypeInfo )
+      v45 = 0LL;
+      v46 = (int *)(*(_QWORD *)(v43 + 176) + 8LL);
+      while ( *((System_IDisposable_c **)v46 - 1) != System_IDisposable_TypeInfo )
       {
-        ++v33;
-        v34 += 4;
-        if ( v33 >= *(unsigned __int16 *)(*(_QWORD *)v29 + 298LL) )
+        ++v45;
+        v46 += 4;
+        if ( v45 >= *(unsigned __int16 *)(*(_QWORD *)v41 + 298LL) )
           goto LABEL_37;
       }
-      v35 = v31 + 16LL * *v34 + 312;
+      v47 = v43 + 16LL * *v46 + 312;
     }
     else
     {
 LABEL_37:
-      v35 = sub_AEB880(v29, System_IDisposable_TypeInfo, 0LL, v30);
+      v47 = sub_AF54C0(v41, System_IDisposable_TypeInfo, 0LL, v42);
     }
-    (*(void (__fastcall **)(__int64, _QWORD))v35)(v32, *(_QWORD *)(v35 + 8));
+    (*(void (__fastcall **)(__int64, _QWORD))v47)(v44, *(_QWORD *)(v47 + 8));
   }
-  if ( (_DWORD)v39 == 134 )
-    v39 = 134LL;
+  if ( (_DWORD)v51 == 134 )
+    v51 = 134LL;
 }
 
 
@@ -270,85 +288,87 @@ void __fastcall peRenderTexture__CreatePVMatrix(
         UnityEngine_Vector3_o in_RightBottom,
         const MethodInfo *method)
 {
+  int v5; // w2
+  __int64 v6; // x3
   float z; // s10
   float y; // s11
   float x; // s12
-  float v8; // s8
-  float v9; // s9
+  float v10; // s8
+  float v11; // s9
   UnityEngine_Object_o *targetCamera; // x20
-  __int64 v12; // x1
-  UnityEngine_Camera_o *v13; // x0
-  __int128 v14; // q1 OVERLAPPED
-  __int128 v15; // q2
-  __int128 v16; // q3
-  float v17; // s0
-  float v18; // s4
-  float v19; // s5
-  float v20; // s6
-  float v21; // s7
-  float v22; // s4
-  float v23; // s5
-  float v24; // s6
-  float v25; // s7
-  __int128 v26; // q4
-  __int128 v27; // q5
-  __int128 v28; // q7
-  __int128 v29; // q3 OVERLAPPED
+  __int64 v14; // x1
+  UnityEngine_Camera_o *v15; // x0
+  __int128 v16; // q1 OVERLAPPED
+  __int128 v17; // q2
+  __int128 v18; // q3
+  float v19; // s0
+  float v20; // s4
+  float v21; // s5
+  float v22; // s6
+  float v23; // s7
+  float v24; // s4
+  float v25; // s5
+  float v26; // s6
+  float v27; // s7
+  __int128 v28; // q4
+  __int128 v29; // q5
+  __int128 v30; // q7
+  __int128 v31; // q3 OVERLAPPED
   int invoker_method; // s2
-  __int128 v31; // q4
-  __int128 v32; // q6
-  float v33; // s4
-  float v34; // s5
-  float v35; // s6
-  float v36; // s7
-  float v37; // s5
-  float v38; // s6
-  float v39; // s7
-  __int128 v40; // q1
-  __int128 v41; // q2
-  __int128 v42; // q3 OVERLAPPED
-  const char *name; // kr00_8
+  __int128 v33; // q4
+  __int128 v34; // q6
+  float v35; // s4
+  float v36; // s5
+  float v37; // s6
+  float v38; // s7
+  float v39; // s5
+  float v40; // s6
+  float v41; // s7
+  __int128 v42; // q1
+  __int128 v43; // q2
   __int128 v44; // q3 OVERLAPPED
-  int v45; // s2
-  __int128 v46; // q4
-  __int128 v47; // q6
-  peRenderTexture_o *v48; // x0
-  const MethodInfo *v49; // x1
-  __int128 v50; // q0
-  __int128 v51; // q1
-  __int128 v52; // q3
-  UnityEngine_Matrix4x4_o v53; // [xsp+10h] [xbp-390h] BYREF
-  UnityEngine_Matrix4x4_o v54; // [xsp+50h] [xbp-350h] BYREF
-  UnityEngine_Matrix4x4_o v55; // [xsp+90h] [xbp-310h]
-  UnityEngine_Matrix4x4_o v56; // [xsp+D0h] [xbp-2D0h] BYREF
-  UnityEngine_Matrix4x4_o v57[2]; // [xsp+110h] [xbp-290h] BYREF
-  UnityEngine_Matrix4x4_o v58; // [xsp+190h] [xbp-210h] BYREF
-  UnityEngine_Matrix4x4_o v59; // [xsp+1D0h] [xbp-1D0h] BYREF
-  UnityEngine_Matrix4x4_o v60; // [xsp+210h] [xbp-190h] BYREF
-  UnityEngine_Matrix4x4_o v61; // [xsp+250h] [xbp-150h] BYREF
-  UnityEngine_Matrix4x4_o v62; // [xsp+290h] [xbp-110h] BYREF
-  UnityEngine_Matrix4x4_o v63; // [xsp+2D0h] [xbp-D0h] BYREF
+  const char *name; // kr00_8
+  __int128 v46; // q3 OVERLAPPED
+  int v47; // s2
+  __int128 v48; // q4
+  __int128 v49; // q6
+  peRenderTexture_o *v50; // x0
+  const MethodInfo *v51; // x1
+  __int128 v52; // q0
+  __int128 v53; // q1
+  __int128 v54; // q3
+  UnityEngine_Matrix4x4_o v55; // [xsp+10h] [xbp-390h] BYREF
+  UnityEngine_Matrix4x4_o v56; // [xsp+50h] [xbp-350h] BYREF
+  UnityEngine_Matrix4x4_o v57; // [xsp+90h] [xbp-310h]
+  UnityEngine_Matrix4x4_o v58; // [xsp+D0h] [xbp-2D0h] BYREF
+  UnityEngine_Matrix4x4_o v59[2]; // [xsp+110h] [xbp-290h] BYREF
+  UnityEngine_Matrix4x4_o v60; // [xsp+190h] [xbp-210h] BYREF
+  UnityEngine_Matrix4x4_o v61; // [xsp+1D0h] [xbp-1D0h] BYREF
+  UnityEngine_Matrix4x4_o v62; // [xsp+210h] [xbp-190h] BYREF
+  UnityEngine_Matrix4x4_o v63; // [xsp+250h] [xbp-150h] BYREF
+  UnityEngine_Matrix4x4_o v64; // [xsp+290h] [xbp-110h] BYREF
+  UnityEngine_Matrix4x4_o v65; // [xsp+2D0h] [xbp-D0h] BYREF
   MethodInfo methoda; // [xsp+310h] [xbp-90h] BYREF
   Il2CppMethodPointer methodPointer; // 0:s0.4,4:s1.4
-  Il2CppMethodPointer v66; // 0:s0.4,4:s1.4
-  UnityEngine_Vector3_o v67; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector4_o v68; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o v69; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  Il2CppMethodPointer v68; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o v69; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector4_o v70; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Vector4_o v71; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v72; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v73; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   z = in_LeftTop.fields.z;
   y = in_LeftTop.fields.y;
   x = in_LeftTop.fields.x;
-  v8 = in_center.fields.y;
-  v9 = in_center.fields.x;
-  if ( (byte_42BD131 & 1) == 0 )
+  v10 = in_center.fields.y;
+  v11 = in_center.fields.x;
+  if ( (byte_42F5AB2 & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42BD131 = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v5, v6);
+    byte_42F5AB2 = 1;
   }
   memset(&methoda, 0, 32);
-  memset(&v63, 0, sizeof(v63));
+  memset(&v65, 0, sizeof(v65));
   targetCamera = (UnityEngine_Object_o *)this->fields.targetCamera;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -357,132 +377,132 @@ void __fastcall peRenderTexture__CreatePVMatrix(
   }
   if ( UnityEngine_Object__op_Inequality(targetCamera, 0LL, 0LL) )
   {
-    v13 = this->fields.targetCamera;
-    if ( !v13
-      || (UnityEngine_Camera__get_projectionMatrix(&v62, v13, 0LL),
-          v60 = v62,
-          UnityEngine_GL__GetGPUProjectionMatrix(&v61, &v60, 1, 0LL),
-          v62 = v61,
-          (v13 = this->fields.targetCamera) == 0LL) )
+    v15 = this->fields.targetCamera;
+    if ( !v15
+      || (UnityEngine_Camera__get_projectionMatrix(&v64, v15, 0LL),
+          v62 = v64,
+          UnityEngine_GL__GetGPUProjectionMatrix(&v63, &v62, 1, 0LL),
+          v64 = v63,
+          (v15 = this->fields.targetCamera) == 0LL) )
     {
-      sub_B52A5C(v13, v12);
+      sub_B5D69C(v15, v14);
     }
-    UnityEngine_Camera__get_worldToCameraMatrix(&v61, v13, 0LL);
-    v58 = v61;
-    v59 = v62;
-    UnityEngine_Matrix4x4__op_Multiply(&v61, &v59, &v58, 0LL);
-    v57[1] = v61;
-    v14 = *(_OWORD *)&v61.fields.m02;
-    v16 = *(_OWORD *)&v61.fields.m00;
-    v15 = *(_OWORD *)&v61.fields.m01;
-    *(_OWORD *)&this->fields.MainCamVP.fields.m03 = *(_OWORD *)&v61.fields.m03;
-    *(_OWORD *)&this->fields.MainCamVP.fields.m02 = v14;
-    *(_OWORD *)&this->fields.MainCamVP.fields.m01 = v15;
-    *(_OWORD *)&this->fields.MainCamVP.fields.m00 = v16;
-    v17 = x;
-    *(float *)&v14 = y;
-    *(float *)&v15 = z;
-    LODWORD(v16) = 1.0;
+    UnityEngine_Camera__get_worldToCameraMatrix(&v63, v15, 0LL);
+    v60 = v63;
+    v61 = v64;
+    UnityEngine_Matrix4x4__op_Multiply(&v63, &v61, &v60, 0LL);
+    v59[1] = v63;
+    v16 = *(_OWORD *)&v63.fields.m02;
+    v18 = *(_OWORD *)&v63.fields.m00;
+    v17 = *(_OWORD *)&v63.fields.m01;
+    *(_OWORD *)&this->fields.MainCamVP.fields.m03 = *(_OWORD *)&v63.fields.m03;
+    *(_OWORD *)&this->fields.MainCamVP.fields.m02 = v16;
+    *(_OWORD *)&this->fields.MainCamVP.fields.m01 = v17;
+    *(_OWORD *)&this->fields.MainCamVP.fields.m00 = v18;
+    v19 = x;
+    *(float *)&v16 = y;
+    *(float *)&v17 = z;
+    LODWORD(v18) = 1.0;
     UnityEngine_Vector4___ctor(
-      *(UnityEngine_Vector4_o *)((char *)&v14 - 4),
-      v18,
-      v19,
+      *(UnityEngine_Vector4_o *)((char *)&v16 - 4),
       v20,
       v21,
+      v22,
+      v23,
       (const MethodInfo *)&methoda.name);
-    v68.fields.x = in_RightBottom.fields.x;
-    v68.fields.y = in_RightBottom.fields.y;
-    v68.fields.z = in_RightBottom.fields.z;
-    v68.fields.w = 1.0;
-    UnityEngine_Vector4___ctor(v68, v22, v23, v24, v25, &methoda);
-    v26 = *(_OWORD *)&this->fields.MainCamVP.fields.m00;
-    v27 = *(_OWORD *)&this->fields.MainCamVP.fields.m01;
-    v28 = *(_OWORD *)&this->fields.MainCamVP.fields.m03;
-    *(_OWORD *)&v57[0].fields.m02 = *(_OWORD *)&this->fields.MainCamVP.fields.m02;
-    *(_OWORD *)&v57[0].fields.m03 = v28;
-    *(_OWORD *)&v57[0].fields.m00 = v26;
-    *(_OWORD *)&v57[0].fields.m01 = v27;
-    *(UnityEngine_Vector4_o *)&methoda.name = UnityEngine_Matrix4x4__op_Multiply_41531080(
-                                                v57,
+    v70.fields.x = in_RightBottom.fields.x;
+    v70.fields.y = in_RightBottom.fields.y;
+    v70.fields.z = in_RightBottom.fields.z;
+    v70.fields.w = 1.0;
+    UnityEngine_Vector4___ctor(v70, v24, v25, v26, v27, &methoda);
+    v28 = *(_OWORD *)&this->fields.MainCamVP.fields.m00;
+    v29 = *(_OWORD *)&this->fields.MainCamVP.fields.m01;
+    v30 = *(_OWORD *)&this->fields.MainCamVP.fields.m03;
+    *(_OWORD *)&v59[0].fields.m02 = *(_OWORD *)&this->fields.MainCamVP.fields.m02;
+    *(_OWORD *)&v59[0].fields.m03 = v30;
+    *(_OWORD *)&v59[0].fields.m00 = v28;
+    *(_OWORD *)&v59[0].fields.m01 = v29;
+    *(UnityEngine_Vector4_o *)&methoda.name = UnityEngine_Matrix4x4__op_Multiply_41635228(
+                                                v59,
                                                 *(UnityEngine_Vector4_o *)&methoda.name,
                                                 0LL);
-    v29 = *(_OWORD *)&this->fields.MainCamVP.fields.m03;
+    v31 = *(_OWORD *)&this->fields.MainCamVP.fields.m03;
     methodPointer = methoda.methodPointer;
     invoker_method = (int)methoda.invoker_method;
-    v31 = *(_OWORD *)&this->fields.MainCamVP.fields.m00;
-    v32 = *(_OWORD *)&this->fields.MainCamVP.fields.m01;
-    *(_OWORD *)&v56.fields.m02 = *(_OWORD *)&this->fields.MainCamVP.fields.m02;
-    *(_OWORD *)&v56.fields.m03 = v29;
-    LODWORD(v29) = HIDWORD(methoda.invoker_method);
-    *(_OWORD *)&v56.fields.m00 = v31;
-    *(_OWORD *)&v56.fields.m01 = v32;
-    v69 = UnityEngine_Matrix4x4__op_Multiply_41531080(&v56, *(UnityEngine_Vector4_o *)((char *)&v29 - 12), 0LL);
-    methoda.methodPointer = *(Il2CppMethodPointer *)&v69.fields.x;
-    methoda.invoker_method = *(void **)&v69.fields.z;
-    *(_QWORD *)&v61.fields.m20 = 0LL;
-    v69.fields.x = *(float *)&methoda.name / *((float *)&methoda.klass + 1);
-    v69.fields.y = *((float *)&methoda.name + 1) / *((float *)&methoda.klass + 1);
-    v69.fields.z = *(float *)&methoda.klass / *((float *)&methoda.klass + 1);
-    v69.fields.w = *((float *)&methoda.klass + 1) / *((float *)&methoda.klass + 1);
-    *(_QWORD *)&v61.fields.m00 = 0LL;
-    UnityEngine_Vector4___ctor(v69, v33, v34, v35, v36, (const MethodInfo *)&v61);
-    *(_OWORD *)&methoda.name = *(_OWORD *)&v61.fields.m00;
-    v70.fields.x = *(float *)&methoda.methodPointer / *((float *)&methoda.invoker_method + 1);
-    v70.fields.y = *((float *)&methoda.methodPointer + 1) / *((float *)&methoda.invoker_method + 1);
-    v70.fields.z = *(float *)&methoda.invoker_method / *((float *)&methoda.invoker_method + 1);
-    v70.fields.w = *((float *)&methoda.invoker_method + 1) / *((float *)&methoda.invoker_method + 1);
-    *(_QWORD *)&v61.fields.m20 = 0LL;
-    *(_QWORD *)&v61.fields.m00 = 0LL;
-    UnityEngine_Vector4___ctor(v70, *((float *)&methoda.invoker_method + 1), v37, v38, v39, (const MethodInfo *)&v61);
-    v67.fields.y = v8;
-    v67.fields.z = 0.0;
-    *(_OWORD *)&methoda.methodPointer = *(_OWORD *)&v61.fields.m00;
-    v67.fields.x = v9;
-    UnityEngine_Matrix4x4__Translate(&v61, v67, 0LL);
-    v55 = v61;
-    v40 = *(_OWORD *)&v61.fields.m02;
-    v42 = *(_OWORD *)&v61.fields.m00;
-    v41 = *(_OWORD *)&v61.fields.m01;
-    *(_OWORD *)&this->fields.orthoViewMat.fields.m03 = *(_OWORD *)&v61.fields.m03;
-    *(_OWORD *)&this->fields.orthoViewMat.fields.m02 = v40;
-    *(_OWORD *)&this->fields.orthoViewMat.fields.m01 = v41;
-    *(_OWORD *)&this->fields.orthoViewMat.fields.m00 = v42;
-    name = methoda.name;
-    LODWORD(v41) = methoda.klass;
-    v54 = v55;
-    LODWORD(v42) = HIDWORD(methoda.klass);
-    *(UnityEngine_Vector4_o *)&methoda.name = UnityEngine_Matrix4x4__op_Multiply_41531080(
-                                                &v54,
-                                                *(UnityEngine_Vector4_o *)((char *)&v42 - 12),
-                                                0LL);
-    v44 = *(_OWORD *)&this->fields.orthoViewMat.fields.m03;
-    v66 = methoda.methodPointer;
-    v45 = (int)methoda.invoker_method;
-    v46 = *(_OWORD *)&this->fields.orthoViewMat.fields.m00;
-    v47 = *(_OWORD *)&this->fields.orthoViewMat.fields.m01;
-    *(_OWORD *)&v53.fields.m02 = *(_OWORD *)&this->fields.orthoViewMat.fields.m02;
-    *(_OWORD *)&v53.fields.m03 = v44;
-    LODWORD(v44) = HIDWORD(methoda.invoker_method);
-    *(_OWORD *)&v53.fields.m00 = v46;
-    *(_OWORD *)&v53.fields.m01 = v47;
-    v71 = UnityEngine_Matrix4x4__op_Multiply_41531080(&v53, *(UnityEngine_Vector4_o *)((char *)&v44 - 12), 0LL);
+    v33 = *(_OWORD *)&this->fields.MainCamVP.fields.m00;
+    v34 = *(_OWORD *)&this->fields.MainCamVP.fields.m01;
+    *(_OWORD *)&v58.fields.m02 = *(_OWORD *)&this->fields.MainCamVP.fields.m02;
+    *(_OWORD *)&v58.fields.m03 = v31;
+    LODWORD(v31) = HIDWORD(methoda.invoker_method);
+    *(_OWORD *)&v58.fields.m00 = v33;
+    *(_OWORD *)&v58.fields.m01 = v34;
+    v71 = UnityEngine_Matrix4x4__op_Multiply_41635228(&v58, *(UnityEngine_Vector4_o *)((char *)&v31 - 12), 0LL);
     methoda.methodPointer = *(Il2CppMethodPointer *)&v71.fields.x;
     methoda.invoker_method = *(void **)&v71.fields.z;
+    *(_QWORD *)&v63.fields.m20 = 0LL;
+    v71.fields.x = *(float *)&methoda.name / *((float *)&methoda.klass + 1);
+    v71.fields.y = *((float *)&methoda.name + 1) / *((float *)&methoda.klass + 1);
+    v71.fields.z = *(float *)&methoda.klass / *((float *)&methoda.klass + 1);
+    v71.fields.w = *((float *)&methoda.klass + 1) / *((float *)&methoda.klass + 1);
+    *(_QWORD *)&v63.fields.m00 = 0LL;
+    UnityEngine_Vector4___ctor(v71, v35, v36, v37, v38, (const MethodInfo *)&v63);
+    *(_OWORD *)&methoda.name = *(_OWORD *)&v63.fields.m00;
+    v72.fields.x = *(float *)&methoda.methodPointer / *((float *)&methoda.invoker_method + 1);
+    v72.fields.y = *((float *)&methoda.methodPointer + 1) / *((float *)&methoda.invoker_method + 1);
+    v72.fields.z = *(float *)&methoda.invoker_method / *((float *)&methoda.invoker_method + 1);
+    v72.fields.w = *((float *)&methoda.invoker_method + 1) / *((float *)&methoda.invoker_method + 1);
+    *(_QWORD *)&v63.fields.m20 = 0LL;
+    *(_QWORD *)&v63.fields.m00 = 0LL;
+    UnityEngine_Vector4___ctor(v72, *((float *)&methoda.invoker_method + 1), v39, v40, v41, (const MethodInfo *)&v63);
+    v69.fields.y = v10;
+    v69.fields.z = 0.0;
+    *(_OWORD *)&methoda.methodPointer = *(_OWORD *)&v63.fields.m00;
+    v69.fields.x = v11;
+    UnityEngine_Matrix4x4__Translate(&v63, v69, 0LL);
+    v57 = v63;
+    v42 = *(_OWORD *)&v63.fields.m02;
+    v44 = *(_OWORD *)&v63.fields.m00;
+    v43 = *(_OWORD *)&v63.fields.m01;
+    *(_OWORD *)&this->fields.orthoViewMat.fields.m03 = *(_OWORD *)&v63.fields.m03;
+    *(_OWORD *)&this->fields.orthoViewMat.fields.m02 = v42;
+    *(_OWORD *)&this->fields.orthoViewMat.fields.m01 = v43;
+    *(_OWORD *)&this->fields.orthoViewMat.fields.m00 = v44;
+    name = methoda.name;
+    LODWORD(v43) = methoda.klass;
+    v56 = v57;
+    LODWORD(v44) = HIDWORD(methoda.klass);
+    *(UnityEngine_Vector4_o *)&methoda.name = UnityEngine_Matrix4x4__op_Multiply_41635228(
+                                                &v56,
+                                                *(UnityEngine_Vector4_o *)((char *)&v44 - 12),
+                                                0LL);
+    v46 = *(_OWORD *)&this->fields.orthoViewMat.fields.m03;
+    v68 = methoda.methodPointer;
+    v47 = (int)methoda.invoker_method;
+    v48 = *(_OWORD *)&this->fields.orthoViewMat.fields.m00;
+    v49 = *(_OWORD *)&this->fields.orthoViewMat.fields.m01;
+    *(_OWORD *)&v55.fields.m02 = *(_OWORD *)&this->fields.orthoViewMat.fields.m02;
+    *(_OWORD *)&v55.fields.m03 = v46;
+    LODWORD(v46) = HIDWORD(methoda.invoker_method);
+    *(_OWORD *)&v55.fields.m00 = v48;
+    *(_OWORD *)&v55.fields.m01 = v49;
+    v73 = UnityEngine_Matrix4x4__op_Multiply_41635228(&v55, *(UnityEngine_Vector4_o *)((char *)&v46 - 12), 0LL);
+    methoda.methodPointer = *(Il2CppMethodPointer *)&v73.fields.x;
+    methoda.invoker_method = *(void **)&v73.fields.z;
     peRenderTexture__orthogonalMatrix(
-      &v63,
-      v48,
+      &v65,
+      v50,
       *(float *)&methoda.name,
-      v71.fields.x,
-      v71.fields.y,
+      v73.fields.x,
+      v73.fields.y,
       *((float *)&methoda.name + 1),
-      v49);
-    v50 = *(_OWORD *)&v63.fields.m00;
-    v51 = *(_OWORD *)&v63.fields.m01;
-    v52 = *(_OWORD *)&v63.fields.m02;
-    *(_OWORD *)&this->fields.orthoProjectionMat.fields.m03 = *(_OWORD *)&v63.fields.m03;
-    *(_OWORD *)&this->fields.orthoProjectionMat.fields.m02 = v52;
-    *(_OWORD *)&this->fields.orthoProjectionMat.fields.m01 = v51;
-    *(_OWORD *)&this->fields.orthoProjectionMat.fields.m00 = v50;
+      v51);
+    v52 = *(_OWORD *)&v65.fields.m00;
+    v53 = *(_OWORD *)&v65.fields.m01;
+    v54 = *(_OWORD *)&v65.fields.m02;
+    *(_OWORD *)&this->fields.orthoProjectionMat.fields.m03 = *(_OWORD *)&v65.fields.m03;
+    *(_OWORD *)&this->fields.orthoProjectionMat.fields.m02 = v54;
+    *(_OWORD *)&this->fields.orthoProjectionMat.fields.m01 = v53;
+    *(_OWORD *)&this->fields.orthoProjectionMat.fields.m00 = v52;
   }
 }
 
@@ -490,72 +510,80 @@ void __fastcall peRenderTexture__CreatePVMatrix(
 // local variable allocation has failed, the output may be wrong!
 void __fastcall peRenderTexture__LateUpdate(peRenderTexture_o *this, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x1
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  const MethodInfo *v11; // x1
   int32_t boundsUpdateCount; // w8
-  bool v5; // vf
-  int32_t v6; // w8
+  bool v13; // vf
+  int32_t v14; // w8
   UnityEngine_Object_o *rasterCamera; // x20
   UnityEngine_Object_o *boardrenderer; // x20
-  float v9; // s4
-  float v10; // s5
-  float v11; // s6
-  float v12; // s7
-  UnityEngine_Camera_o *v13; // x20
+  float v17; // s4
+  float v18; // s5
+  float v19; // s6
+  float v20; // s7
+  UnityEngine_Camera_o *v21; // x20
   UnityEngine_Component_o *transform; // x0
-  __int64 v15; // x1
+  __int64 v23; // x1
   float fieldOfView; // s0
-  float v17; // s8
+  float v25; // s8
   float aspect; // s0
-  float v19; // s9
-  float v20; // s0
-  float v21; // s10
-  float farClipPlane; // s0
-  float v23; // s0
-  float v24; // s1
-  float v25; // s2
-  float v26; // s8
   float v27; // s9
-  float v28; // s10
+  float v28; // s0
+  float v29; // s10
+  float farClipPlane; // s0
+  float v31; // s0
+  float v32; // s1
+  float v33; // s2
+  float v34; // s8
+  float v35; // s9
+  float v36; // s10
   UnityEngine_Material_o *sharedMaterial; // x20
-  UnityEngine_Matrix4x4_o v30; // [xsp+0h] [xbp-310h] BYREF
-  UnityEngine_Matrix4x4_o v31; // [xsp+40h] [xbp-2D0h] BYREF
-  UnityEngine_Matrix4x4_o v32; // [xsp+80h] [xbp-290h] BYREF
-  UnityEngine_Matrix4x4_o v33; // [xsp+C0h] [xbp-250h] BYREF
-  UnityEngine_Matrix4x4_o v34; // [xsp+100h] [xbp-210h] BYREF
-  UnityEngine_Matrix4x4_o v35; // [xsp+140h] [xbp-1D0h] BYREF
-  UnityEngine_Matrix4x4_o v36; // [xsp+180h] [xbp-190h] BYREF
-  UnityEngine_Matrix4x4_o v37; // [xsp+1C0h] [xbp-150h] BYREF
-  UnityEngine_Matrix4x4_o v38; // [xsp+200h] [xbp-110h]
+  UnityEngine_Matrix4x4_o v38; // [xsp+0h] [xbp-310h] BYREF
+  UnityEngine_Matrix4x4_o v39; // [xsp+40h] [xbp-2D0h] BYREF
+  UnityEngine_Matrix4x4_o v40; // [xsp+80h] [xbp-290h] BYREF
+  UnityEngine_Matrix4x4_o v41; // [xsp+C0h] [xbp-250h] BYREF
+  UnityEngine_Matrix4x4_o v42; // [xsp+100h] [xbp-210h] BYREF
+  UnityEngine_Matrix4x4_o v43; // [xsp+140h] [xbp-1D0h] BYREF
+  UnityEngine_Matrix4x4_o v44; // [xsp+180h] [xbp-190h] BYREF
+  UnityEngine_Matrix4x4_o v45; // [xsp+1C0h] [xbp-150h] BYREF
+  UnityEngine_Matrix4x4_o v46; // [xsp+200h] [xbp-110h]
   MethodInfo methoda; // [xsp+240h] [xbp-D0h] BYREF
-  UnityEngine_Matrix4x4_o v40; // [xsp+290h] [xbp-80h] BYREF
-  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Matrix4x4_o v48; // [xsp+290h] [xbp-80h] BYREF
+  UnityEngine_Vector3_o v49; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Rect_o v43; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v44; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o v45; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v51; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v52; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v53; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_42BD129 & 1) == 0 )
+  if ( (byte_42F5AAA & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    sub_B52984(&StringLiteral_16147/*"_ProjectorMatrixVP"*/);
-    sub_B52984(&StringLiteral_16148/*"_ProjectorPos"*/);
-    byte_42BD129 = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&StringLiteral_16232/*"_ProjectorMatrixVP"*/, v5, v6, v7);
+    sub_B5D5C4(&StringLiteral_16233/*"_ProjectorPos"*/, v8, v9, v10);
+    byte_42F5AAA = 1;
   }
-  memset(&v40, 0, sizeof(v40));
+  memset(&v48, 0, sizeof(v48));
   memset(&methoda.name, 0, 64);
   if ( this->fields.isInitialized )
   {
     peRenderTexture__updateLayer(this, method);
     if ( this->fields._boundsUpdateCount )
     {
-      peRenderTexture__updateBounds(this, v3);
+      peRenderTexture__updateBounds(this, v11);
       boundsUpdateCount = this->fields._boundsUpdateCount;
-      v5 = __OFSUB__(boundsUpdateCount, 1);
-      v6 = boundsUpdateCount - 1;
-      if ( v6 < 0 == v5 )
-        this->fields._boundsUpdateCount = v6;
+      v13 = __OFSUB__(boundsUpdateCount, 1);
+      v14 = boundsUpdateCount - 1;
+      if ( v14 < 0 == v13 )
+        this->fields._boundsUpdateCount = v14;
     }
-    peRenderTexture__updateTransform(this, v3);
+    peRenderTexture__updateTransform(this, v11);
     rasterCamera = (UnityEngine_Object_o *)this->fields.rasterCamera;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -572,35 +600,35 @@ void __fastcall peRenderTexture__LateUpdate(peRenderTexture_o *this, const Metho
       }
       if ( UnityEngine_Object__op_Inequality(boardrenderer, 0LL, 0LL) )
       {
-        v13 = this->fields.rasterCamera;
-        v43.fields.m_Width = 1.0;
-        v43.fields.m_XMin = 0.0;
-        v43.fields.m_YMin = 0.0;
-        v43.fields.m_Height = 1.0;
+        v21 = this->fields.rasterCamera;
+        v51.fields.m_Width = 1.0;
+        v51.fields.m_XMin = 0.0;
+        v51.fields.m_YMin = 0.0;
+        v51.fields.m_Height = 1.0;
         methoda.methodPointer = 0LL;
         methoda.invoker_method = 0LL;
-        UnityEngine_Rect___ctor(v43, v9, v10, v11, v12, &methoda);
-        if ( !v13 )
+        UnityEngine_Rect___ctor(v51, v17, v18, v19, v20, &methoda);
+        if ( !v21 )
           goto LABEL_30;
-        *(_QWORD *)&v44.fields.m_XMin = methoda.methodPointer;
-        *(_QWORD *)&v44.fields.m_Width = methoda.invoker_method;
-        UnityEngine_Camera__set_rect(v13, v44, 0LL);
-        v41.fields.x = 1.0;
-        v41.fields.z = -1.0;
-        v41.fields.y = 1.0;
-        UnityEngine_Matrix4x4__Scale(&v37, v41, 0LL);
-        v38 = v37;
+        *(_QWORD *)&v52.fields.m_XMin = methoda.methodPointer;
+        *(_QWORD *)&v52.fields.m_Width = methoda.invoker_method;
+        UnityEngine_Camera__set_rect(v21, v52, 0LL);
+        v49.fields.x = 1.0;
+        v49.fields.z = -1.0;
+        v49.fields.y = 1.0;
+        UnityEngine_Matrix4x4__Scale(&v45, v49, 0LL);
+        v46 = v45;
         transform = (UnityEngine_Component_o *)this->fields.rasterCamera;
         if ( !transform )
           goto LABEL_30;
         transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(transform, 0LL);
         if ( !transform )
           goto LABEL_30;
-        UnityEngine_Transform__get_worldToLocalMatrix(&v37, (UnityEngine_Transform_o *)transform, 0LL);
-        v35 = v37;
-        v36 = v38;
-        UnityEngine_Matrix4x4__op_Multiply(&v37, &v36, &v35, 0LL);
-        v40 = v37;
+        UnityEngine_Transform__get_worldToLocalMatrix(&v45, (UnityEngine_Transform_o *)transform, 0LL);
+        v43 = v45;
+        v44 = v46;
+        UnityEngine_Matrix4x4__op_Multiply(&v45, &v44, &v43, 0LL);
+        v48 = v45;
         transform = (UnityEngine_Component_o *)this->fields.rasterCamera;
         if ( !transform )
           goto LABEL_30;
@@ -608,23 +636,23 @@ void __fastcall peRenderTexture__LateUpdate(peRenderTexture_o *this, const Metho
         transform = (UnityEngine_Component_o *)this->fields.rasterCamera;
         if ( !transform )
           goto LABEL_30;
-        v17 = fieldOfView;
+        v25 = fieldOfView;
         aspect = UnityEngine_Camera__get_aspect((UnityEngine_Camera_o *)transform, 0LL);
         transform = (UnityEngine_Component_o *)this->fields.rasterCamera;
         if ( !transform )
           goto LABEL_30;
-        v19 = aspect;
-        v20 = UnityEngine_Camera__get_nearClipPlane((UnityEngine_Camera_o *)transform, 0LL);
+        v27 = aspect;
+        v28 = UnityEngine_Camera__get_nearClipPlane((UnityEngine_Camera_o *)transform, 0LL);
         transform = (UnityEngine_Component_o *)this->fields.rasterCamera;
         if ( !transform )
           goto LABEL_30;
-        v21 = v20;
+        v29 = v28;
         farClipPlane = UnityEngine_Camera__get_farClipPlane((UnityEngine_Camera_o *)transform, 0LL);
-        UnityEngine_Matrix4x4__Perspective(&v37, v17, v19, v21, farClipPlane, 0LL);
-        *(UnityEngine_Matrix4x4_o *)&methoda.name = v37;
-        v34 = v37;
-        UnityEngine_GL__GetGPUProjectionMatrix(&v37, &v34, 1, 0LL);
-        *(UnityEngine_Matrix4x4_o *)&methoda.name = v37;
+        UnityEngine_Matrix4x4__Perspective(&v45, v25, v27, v29, farClipPlane, 0LL);
+        *(UnityEngine_Matrix4x4_o *)&methoda.name = v45;
+        v42 = v45;
+        UnityEngine_GL__GetGPUProjectionMatrix(&v45, &v42, 1, 0LL);
+        *(UnityEngine_Matrix4x4_o *)&methoda.name = v45;
         UnityEngine_Vector4__get_zero(0LL);
         transform = (UnityEngine_Component_o *)this->fields.rasterCamera;
         if ( !transform )
@@ -633,37 +661,37 @@ void __fastcall peRenderTexture__LateUpdate(peRenderTexture_o *this, const Metho
         if ( !transform )
           goto LABEL_30;
         position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0LL);
-        *(UnityEngine_Vector4_o *)&v23 = UnityEngine_Vector4__op_Implicit(position, 0LL);
+        *(UnityEngine_Vector4_o *)&v31 = UnityEngine_Vector4__op_Implicit(position, 0LL);
         transform = (UnityEngine_Component_o *)this->fields.boardrenderer;
         if ( !transform )
           goto LABEL_30;
-        v26 = v23;
-        v27 = v24;
-        v28 = v25;
+        v34 = v31;
+        v35 = v32;
+        v36 = v33;
         sharedMaterial = UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)transform, 0LL);
-        v32 = *(UnityEngine_Matrix4x4_o *)&methoda.name;
-        v31 = v40;
-        transform = (UnityEngine_Component_o *)UnityEngine_Matrix4x4__op_Multiply(&v33, &v32, &v31, 0LL);
-        v37 = v33;
+        v40 = *(UnityEngine_Matrix4x4_o *)&methoda.name;
+        v39 = v48;
+        transform = (UnityEngine_Component_o *)UnityEngine_Matrix4x4__op_Multiply(&v41, &v40, &v39, 0LL);
+        v45 = v41;
         if ( !sharedMaterial
-          || (v30 = v37,
-              UnityEngine_Material__SetMatrix(sharedMaterial, (System_String_o *)StringLiteral_16147/*"_ProjectorMatrixVP"*/, &v30, 0LL),
+          || (v38 = v45,
+              UnityEngine_Material__SetMatrix(sharedMaterial, (System_String_o *)StringLiteral_16232/*"_ProjectorMatrixVP"*/, &v38, 0LL),
               (transform = (UnityEngine_Component_o *)this->fields.boardrenderer) == 0LL)
           || (transform = (UnityEngine_Component_o *)UnityEngine_Renderer__get_sharedMaterial(
                                                        (UnityEngine_Renderer_o *)transform,
                                                        0LL)) == 0LL )
         {
 LABEL_30:
-          sub_B52A5C(transform, v15);
+          sub_B5D69C(transform, v23);
         }
-        v45.fields.w = 1.0;
-        v45.fields.x = v26;
-        v45.fields.y = v27;
-        v45.fields.z = v28;
+        v53.fields.w = 1.0;
+        v53.fields.x = v34;
+        v53.fields.y = v35;
+        v53.fields.z = v36;
         UnityEngine_Material__SetVector(
           (UnityEngine_Material_o *)transform,
-          (System_String_o *)StringLiteral_16148/*"_ProjectorPos"*/,
-          v45,
+          (System_String_o *)StringLiteral_16233/*"_ProjectorPos"*/,
+          v53,
           0LL);
       }
     }
@@ -687,46 +715,76 @@ void __fastcall peRenderTexture__Update(peRenderTexture_o *this, const MethodInf
 
 void __fastcall peRenderTexture__finalize(peRenderTexture_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
   struct UnityEngine_Camera_o **p_rasterCamera; // x20
   UnityEngine_Object_o *rasterCamera; // x21
-  __int64 v5; // x1
-  UnityEngine_Component_o *v6; // x0
+  __int64 v19; // x1
+  UnityEngine_Component_o *v20; // x0
   UnityEngine_Object_o *gameObject; // x21
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  System_String_array **v22; // x2
+  System_String_array **v23; // x3
+  System_Boolean_array **v24; // x4
+  System_Int32_array **v25; // x5
+  System_Int32_array *v26; // x6
+  System_Int32_array *v27; // x7
   struct UnityEngine_RenderTexture_o **p_renderTexture; // x20
   UnityEngine_Object_o *renderTexture; // x21
-  UnityEngine_Object_o *v16; // x21
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
+  UnityEngine_Object_o *v30; // x21
+  System_String_array **v31; // x2
+  System_String_array **v32; // x3
+  System_Boolean_array **v33; // x4
+  System_Int32_array **v34; // x5
+  System_Int32_array *v35; // x6
+  System_Int32_array *v36; // x7
   struct System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *targetChangeLayerObjects; // x0
-  __int64 v24; // x1
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
-  System_Collections_Generic_List_Enumerator_T__o v31; // [xsp+8h] [xbp-38h] BYREF
+  __int64 v38; // x1
+  System_String_array **v39; // x2
+  System_String_array **v40; // x3
+  System_Boolean_array **v41; // x4
+  System_Int32_array **v42; // x5
+  System_Int32_array *v43; // x6
+  System_Int32_array *v44; // x7
+  System_Collections_Generic_List_Enumerator_T__o v45; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_42BD12B & 1) == 0 )
+  if ( (byte_42F5AAC & 1) == 0 )
   {
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__Dispose__);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__MoveNext__);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__get_Current__);
-    sub_B52984(&Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__GetEnumerator__);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42BD12B = 1;
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__Dispose__,
+      (_DWORD)method,
+      v2,
+      v3);
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__MoveNext__,
+      v5,
+      v6,
+      v7);
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__get_Current__,
+      v8,
+      v9,
+      v10);
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__GetEnumerator__,
+      v11,
+      v12,
+      v13);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v14, v15, v16);
+    byte_42F5AAC = 1;
   }
-  memset(&v31, 0, sizeof(v31));
+  memset(&v45, 0, sizeof(v45));
   if ( this->fields.isInitialized )
   {
     p_rasterCamera = &this->fields.rasterCamera;
@@ -738,18 +796,18 @@ void __fastcall peRenderTexture__finalize(peRenderTexture_o *this, const MethodI
     }
     if ( UnityEngine_Object__op_Inequality(rasterCamera, 0LL, 0LL) )
     {
-      v6 = (UnityEngine_Component_o *)*p_rasterCamera;
+      v20 = (UnityEngine_Component_o *)*p_rasterCamera;
       if ( !*p_rasterCamera )
         goto LABEL_31;
-      gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v6, 0LL);
+      gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v20, 0LL);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      UnityEngine_Object__DestroyImmediate_35617168(gameObject, 0LL);
+      UnityEngine_Object__DestroyImmediate_35620448(gameObject, 0LL);
       *p_rasterCamera = 0LL;
-      sub_B52920((BattleServantConfConponent_o *)&this->fields.rasterCamera, 0LL, v8, v9, v10, v11, v12, v13);
+      sub_B5D560((BattleServantConfConponent_o *)&this->fields.rasterCamera, 0LL, v22, v23, v24, v25, v26, v27);
     }
     p_renderTexture = &this->fields.renderTexture;
     renderTexture = (UnityEngine_Object_o *)this->fields.renderTexture;
@@ -760,54 +818,54 @@ void __fastcall peRenderTexture__finalize(peRenderTexture_o *this, const MethodI
     }
     if ( !UnityEngine_Object__op_Inequality(renderTexture, 0LL, 0LL) )
       goto LABEL_22;
-    v6 = (UnityEngine_Component_o *)*p_renderTexture;
+    v20 = (UnityEngine_Component_o *)*p_renderTexture;
     if ( *p_renderTexture )
     {
-      UnityEngine_RenderTexture__Release((UnityEngine_RenderTexture_o *)v6, 0LL);
-      v16 = (UnityEngine_Object_o *)*p_renderTexture;
+      UnityEngine_RenderTexture__Release((UnityEngine_RenderTexture_o *)v20, 0LL);
+      v30 = (UnityEngine_Object_o *)*p_renderTexture;
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      UnityEngine_Object__DestroyImmediate_35617168(v16, 0LL);
+      UnityEngine_Object__DestroyImmediate_35620448(v30, 0LL);
       *p_renderTexture = 0LL;
-      sub_B52920((BattleServantConfConponent_o *)&this->fields.renderTexture, 0LL, v17, v18, v19, v20, v21, v22);
+      sub_B5D560((BattleServantConfConponent_o *)&this->fields.renderTexture, 0LL, v31, v32, v33, v34, v35, v36);
 LABEL_22:
       targetChangeLayerObjects = this->fields.targetChangeLayerObjects;
       if ( targetChangeLayerObjects )
       {
         System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-          &v31,
+          &v45,
           (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)targetChangeLayerObjects,
-          (const MethodInfo_2FF2480 *)Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__GetEnumerator__);
+          (const MethodInfo_3057E3C *)Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__GetEnumerator__);
         while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-                  &v31,
-                  (const MethodInfo_201195C *)Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__MoveNext__) )
+                  &v45,
+                  (const MethodInfo_201EFD0 *)Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__MoveNext__) )
         {
-          if ( !v31.fields.current )
-            sub_B52A5C(0LL, v24);
-          peRenderTexture_ChangeLayerObject__Finalize((peRenderTexture_ChangeLayerObject_o *)v31.fields.current, 0LL);
+          if ( !v45.fields.current )
+            sub_B5D69C(0LL, v38);
+          peRenderTexture_ChangeLayerObject__Finalize((peRenderTexture_ChangeLayerObject_o *)v45.fields.current, 0LL);
         }
         System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-          &v31,
-          (const MethodInfo_2011958 *)Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__Dispose__);
+          &v45,
+          (const MethodInfo_201EFCC *)Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__Dispose__);
         this->fields.targetChangeLayerObjects = 0LL;
-        sub_B52920(
+        sub_B5D560(
           (BattleServantConfConponent_o *)&this->fields.targetChangeLayerObjects,
           0LL,
-          v25,
-          v26,
-          v27,
-          v28,
-          v29,
-          v30);
+          v39,
+          v40,
+          v41,
+          v42,
+          v43,
+          v44);
       }
       this->fields.isInitialized = 0;
       return;
     }
 LABEL_31:
-    sub_B52A5C(v6, v5);
+    sub_B5D69C(v20, v19);
   }
 }
 
@@ -815,125 +873,172 @@ LABEL_31:
 // local variable allocation has failed, the output may be wrong!
 void __fastcall peRenderTexture__initialize(peRenderTexture_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  int v17; // w1
+  int v18; // w2
+  __int64 v19; // x3
+  int v20; // w1
+  int v21; // w2
+  __int64 v22; // x3
+  int v23; // w1
+  int v24; // w2
+  __int64 v25; // x3
+  int v26; // w1
+  int v27; // w2
+  __int64 v28; // x3
+  int v29; // w1
+  int v30; // w2
+  __int64 v31; // x3
+  int v32; // w1
+  int v33; // w2
+  __int64 v34; // x3
+  int v35; // w1
+  int v36; // w2
+  __int64 v37; // x3
+  int v38; // w1
+  int v39; // w2
+  __int64 v40; // x3
+  int v41; // w1
+  int v42; // w2
+  __int64 v43; // x3
+  int v44; // w1
+  int v45; // w2
+  __int64 v46; // x3
+  int v47; // w1
+  int v48; // w2
+  __int64 v49; // x3
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v4; // x1
+  __int64 v51; // x1
   UnityEngine_Object_o *transform; // x20
-  UnityEngine_Object_o *v6; // x21
+  UnityEngine_Object_o *v53; // x21
   struct UnityEngine_Camera_o *Component_WebViewObject; // x0
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  System_String_array **v55; // x2
+  System_String_array **v56; // x3
+  System_Boolean_array **v57; // x4
+  System_Int32_array **v58; // x5
+  System_Int32_array *v59; // x6
+  System_Int32_array *v60; // x7
   struct UnityEngine_Camera_o **p_targetCamera; // x20
   UnityEngine_Object_o *targetCamera; // x21
   System_Int32_array **main; // x0
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
-  UnityEngine_Object_o *v23; // x21
-  struct UnityEngine_GameObject_o *v24; // x1
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
+  System_String_array **v64; // x2
+  System_String_array **v65; // x3
+  System_Boolean_array **v66; // x4
+  System_Int32_array **v67; // x5
+  System_Int32_array *v68; // x6
+  System_Int32_array *v69; // x7
+  UnityEngine_Object_o *v70; // x21
+  struct UnityEngine_GameObject_o *v71; // x1
+  System_String_array **v72; // x2
+  System_String_array **v73; // x3
+  System_Boolean_array **v74; // x4
+  System_Int32_array **v75; // x5
+  System_Int32_array *v76; // x6
+  System_Int32_array *v77; // x7
   struct UnityEngine_GameObject_o **p_targetObject; // x0
   struct UnityEngine_Renderer_o **p_boardrenderer; // x21
   UnityEngine_Object_o *boardrenderer; // x22
-  struct UnityEngine_Renderer_o *v34; // x0
-  System_String_array **v35; // x2
-  System_String_array **v36; // x3
-  System_Boolean_array **v37; // x4
-  System_Int32_array **v38; // x5
-  System_Int32_array *v39; // x6
-  System_Int32_array *v40; // x7
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v41; // x22
-  System_String_array **v42; // x2
-  System_String_array **v43; // x3
-  System_Boolean_array **v44; // x4
-  System_Int32_array **v45; // x5
-  System_Int32_array *v46; // x6
-  System_Int32_array *v47; // x7
-  const MethodInfo *v48; // x2
+  struct UnityEngine_Renderer_o *v81; // x0
+  System_String_array **v82; // x2
+  System_String_array **v83; // x3
+  System_Boolean_array **v84; // x4
+  System_Int32_array **v85; // x5
+  System_Int32_array *v86; // x6
+  System_Int32_array *v87; // x7
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v88; // x22
+  System_String_array **v89; // x2
+  System_String_array **v90; // x3
+  System_Boolean_array **v91; // x4
+  System_Int32_array **v92; // x5
+  System_Int32_array *v93; // x6
+  System_Int32_array *v94; // x7
+  const MethodInfo *v95; // x2
   Il2CppObject *current; // x22
-  UnityEngine_GameObject_o *v50; // x0
-  __int64 v51; // x1
-  UnityEngine_Transform_o *v52; // x0
-  __int64 v53; // x1
-  UnityEngine_Object_o *v54; // x22
-  _BOOL8 v55; // x0
-  __int64 v56; // x1
-  UnityEngine_GameObject_o *v57; // x0
-  const MethodInfo *v58; // x2
-  int v59; // w22
+  UnityEngine_GameObject_o *v97; // x0
+  __int64 v98; // x1
+  UnityEngine_Transform_o *v99; // x0
+  __int64 v100; // x1
+  UnityEngine_Object_o *v101; // x22
+  _BOOL8 v102; // x0
+  __int64 v103; // x1
+  UnityEngine_GameObject_o *v104; // x0
+  const MethodInfo *v105; // x2
+  int v106; // w22
   UnityEngine_Component_o **p_rasterCamera; // x22
   UnityEngine_Object_o *rasterCamera; // x23
-  UnityEngine_Object_o *v62; // x23
-  UnityEngine_Object_o *v63; // x23
-  UnityEngine_Object_o *v64; // x21
+  UnityEngine_Object_o *v109; // x23
+  UnityEngine_Object_o *v110; // x23
+  UnityEngine_Object_o *v111; // x21
   int32_t textureWidth; // w21
   int32_t textureHeight; // w23
   int32_t textureDepth; // w24
   int32_t textureFormat; // w25
-  UnityEngine_RenderTexture_o *v69; // x26
+  UnityEngine_RenderTexture_o *v116; // x26
   UnityEngine_RenderTexture_o **p_renderTexture; // x21
-  System_String_array **v71; // x2
-  System_String_array **v72; // x3
-  System_Boolean_array **v73; // x4
-  System_Int32_array **v74; // x5
-  System_Int32_array *v75; // x6
-  System_Int32_array *v76; // x7
-  struct UnityEngine_Camera_o *v77; // x23
-  System_Int32_array **v78; // x0
-  System_String_array **v79; // x2
-  System_String_array **v80; // x3
-  System_Boolean_array **v81; // x4
-  System_Int32_array **v82; // x5
-  System_Int32_array *v83; // x6
-  System_Int32_array *v84; // x7
-  UnityEngine_Component_o *v85; // x8
-  UnityEngine_Transform_o *v86; // x20
-  UnityEngine_Transform_o *v87; // x20
-  float v88; // s0
-  float v89; // s1
-  float v90; // s2
+  System_String_array **v118; // x2
+  System_String_array **v119; // x3
+  System_Boolean_array **v120; // x4
+  System_Int32_array **v121; // x5
+  System_Int32_array *v122; // x6
+  System_Int32_array *v123; // x7
+  struct UnityEngine_Camera_o *v124; // x23
+  System_Int32_array **v125; // x0
+  System_String_array **v126; // x2
+  System_String_array **v127; // x3
+  System_Boolean_array **v128; // x4
+  System_Int32_array **v129; // x5
+  System_Int32_array *v130; // x6
+  System_Int32_array *v131; // x7
+  UnityEngine_Component_o *v132; // x8
+  UnityEngine_Transform_o *v133; // x20
+  UnityEngine_Transform_o *v134; // x20
+  float v135; // s0
+  float v136; // s1
+  float v137; // s2
   int32_t boundsUpdateCount; // w8
-  System_Collections_Generic_List_Enumerator_T__o v92; // [xsp+8h] [xbp-B8h] BYREF
-  int v93[2]; // [xsp+20h] [xbp-A0h]
-  int v94; // [xsp+28h] [xbp-98h]
-  System_Collections_Generic_List_Enumerator_T__o v95; // [xsp+30h] [xbp-90h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v139; // [xsp+8h] [xbp-B8h] BYREF
+  int v140[2]; // [xsp+20h] [xbp-A0h]
+  int v141; // [xsp+28h] [xbp-98h]
+  System_Collections_Generic_List_Enumerator_T__o v142; // [xsp+30h] [xbp-90h] BYREF
   System_Collections_Generic_List_Enumerator_T__o i; // [xsp+50h] [xbp-70h] BYREF
-  UnityEngine_Vector3_o v97; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v144; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_42BD12A & 1) == 0 )
+  if ( (byte_42F5AAB & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_Component_GetComponent_Camera___);
-    sub_B52984(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_B52984(&Method_System_Collections_Generic_List_string__GetEnumerator__);
-    sub_B52984(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_B52984(&Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject___ctor__);
-    sub_B52984(&System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__TypeInfo);
-    sub_B52984(&Method_UnityEngine_Object_Instantiate_Camera___);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    sub_B52984(&UnityEngine_RenderTexture_TypeInfo);
-    sub_B52984(&StringLiteral_16120/*"_MainTex"*/);
-    byte_42BD12A = 1;
+    sub_B5D5C4(&Method_UnityEngine_Component_GetComponent_Camera___, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_UnityEngine_Component_GetComponent_Renderer___, v5, v6, v7);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v8, v9, v10);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__, v11, v12, v13);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__, v14, v15, v16);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v17, v18, v19);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__, v20, v21, v22);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v23, v24, v25);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_string__GetEnumerator__, v26, v27, v28);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v29, v30, v31);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject___ctor__, v32, v33, v34);
+    sub_B5D5C4(&System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__TypeInfo, v35, v36, v37);
+    sub_B5D5C4(&Method_UnityEngine_Object_Instantiate_Camera___, v38, v39, v40);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v41, v42, v43);
+    sub_B5D5C4(&UnityEngine_RenderTexture_TypeInfo, v44, v45, v46);
+    sub_B5D5C4(&StringLiteral_16205/*"_MainTex"*/, v47, v48, v49);
+    byte_42F5AAB = 1;
   }
   memset(&i, 0, sizeof(i));
-  memset(&v95, 0, sizeof(v95));
-  v94 = 0;
+  memset(&v142, 0, sizeof(v142));
+  v141 = 0;
   if ( !this->fields.isInitialized )
   {
     if ( !System_String__IsNullOrEmpty(this->fields.targetCameraPath, 0LL) )
@@ -955,18 +1060,20 @@ void __fastcall peRenderTexture__initialize(peRenderTexture_o *this, const Metho
       }
       if ( UnityEngine_Object__op_Equality(transform, 0LL, 0LL) )
       {
-        v6 = (UnityEngine_Object_o *)UnityEngine_GameObject__Find(this->fields.targetCameraPath, 0LL);
+        v53 = (UnityEngine_Object_o *)UnityEngine_GameObject__Find(this->fields.targetCameraPath, 0LL);
         if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         }
-        gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(v6, 0LL, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(v53, 0LL, 0LL);
         if ( ((unsigned __int8)gameObject & 1) != 0 )
         {
-          if ( !v6 )
+          if ( !v53 )
             goto LABEL_100;
-          transform = (UnityEngine_Object_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v6, 0LL);
+          transform = (UnityEngine_Object_o *)UnityEngine_GameObject__get_transform(
+                                                (UnityEngine_GameObject_o *)v53,
+                                                0LL);
         }
       }
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -981,17 +1088,17 @@ void __fastcall peRenderTexture__initialize(peRenderTexture_o *this, const Metho
           goto LABEL_100;
         Component_WebViewObject = (struct UnityEngine_Camera_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                                    (UnityEngine_Component_o *)transform,
-                                                                   (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                                                                   (const MethodInfo_1ADE2A0 *)Method_UnityEngine_Component_GetComponent_Camera___);
         this->fields.targetCamera = Component_WebViewObject;
-        sub_B52920(
+        sub_B5D560(
           (BattleServantConfConponent_o *)&this->fields.targetCamera,
           (System_Int32_array **)Component_WebViewObject,
-          v8,
-          v9,
-          v10,
-          v11,
-          v12,
-          v13);
+          v55,
+          v56,
+          v57,
+          v58,
+          v59,
+          v60);
       }
     }
     p_targetCamera = &this->fields.targetCamera;
@@ -1005,7 +1112,7 @@ void __fastcall peRenderTexture__initialize(peRenderTexture_o *this, const Metho
     {
       main = (System_Int32_array **)UnityEngine_Camera__get_main(0LL);
       *p_targetCamera = (struct UnityEngine_Camera_o *)main;
-      sub_B52920((BattleServantConfConponent_o *)&this->fields.targetCamera, main, v17, v18, v19, v20, v21, v22);
+      sub_B5D560((BattleServantConfConponent_o *)&this->fields.targetCamera, main, v64, v65, v66, v67, v68, v69);
     }
     if ( !System_String__IsNullOrEmpty(this->fields.targetObjectPath, 0LL) )
     {
@@ -1015,7 +1122,7 @@ void __fastcall peRenderTexture__initialize(peRenderTexture_o *this, const Metho
       gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0LL);
       if ( !gameObject )
         goto LABEL_100;
-      v23 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(
+      v70 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(
                                       (UnityEngine_Transform_o *)gameObject,
                                       this->fields.targetObjectPath,
                                       0LL);
@@ -1024,30 +1131,30 @@ void __fastcall peRenderTexture__initialize(peRenderTexture_o *this, const Metho
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(v23, 0LL, 0LL);
+      gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(v70, 0LL, 0LL);
       if ( ((unsigned __int8)gameObject & 1) != 0 )
       {
-        if ( !v23 )
+        if ( !v70 )
           goto LABEL_100;
-        v24 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v23, 0LL);
-        this->fields.targetObject = v24;
+        v71 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v70, 0LL);
+        this->fields.targetObject = v71;
         p_targetObject = &this->fields.targetObject;
       }
       else
       {
-        v24 = UnityEngine_GameObject__Find(this->fields.targetObjectPath, 0LL);
+        v71 = UnityEngine_GameObject__Find(this->fields.targetObjectPath, 0LL);
         p_targetObject = &this->fields.targetObject;
-        this->fields.targetObject = v24;
+        this->fields.targetObject = v71;
       }
-      sub_B52920(
+      sub_B5D560(
         (BattleServantConfConponent_o *)p_targetObject,
-        (System_Int32_array **)v24,
-        v25,
-        v26,
-        v27,
-        v28,
-        v29,
-        v30);
+        (System_Int32_array **)v71,
+        v72,
+        v73,
+        v74,
+        v75,
+        v76,
+        v77);
     }
     p_boardrenderer = &this->fields.boardrenderer;
     boardrenderer = (UnityEngine_Object_o *)this->fields.boardrenderer;
@@ -1058,96 +1165,96 @@ void __fastcall peRenderTexture__initialize(peRenderTexture_o *this, const Metho
     }
     if ( UnityEngine_Object__op_Equality(boardrenderer, 0LL, 0LL) )
     {
-      v34 = (struct UnityEngine_Renderer_o *)UnityEngine_Component__GetComponent_WebViewObject_(
+      v81 = (struct UnityEngine_Renderer_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                (UnityEngine_Component_o *)this,
-                                               (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_Renderer___);
-      this->fields.boardrenderer = v34;
-      sub_B52920(
+                                               (const MethodInfo_1ADE2A0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+      this->fields.boardrenderer = v81;
+      sub_B5D560(
         (BattleServantConfConponent_o *)&this->fields.boardrenderer,
-        (System_Int32_array **)v34,
-        v35,
-        v36,
-        v37,
-        v38,
-        v39,
-        v40);
+        (System_Int32_array **)v81,
+        v82,
+        v83,
+        v84,
+        v85,
+        v86,
+        v87);
     }
-    v41 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__TypeInfo);
+    v88 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B5D694(System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__TypeInfo);
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-      v41,
-      (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject___ctor__);
-    this->fields.targetChangeLayerObjects = (struct System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *)v41;
-    sub_B52920(
+      v88,
+      (const MethodInfo_30562FC *)Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject___ctor__);
+    this->fields.targetChangeLayerObjects = (struct System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *)v88;
+    sub_B5D560(
       (BattleServantConfConponent_o *)&this->fields.targetChangeLayerObjects,
-      (System_Int32_array **)v41,
-      v42,
-      v43,
-      v44,
-      v45,
-      v46,
-      v47);
+      (System_Int32_array **)v88,
+      v89,
+      v90,
+      v91,
+      v92,
+      v93,
+      v94);
     gameObject = (UnityEngine_GameObject_o *)this->fields.changeLayerObjects;
     if ( gameObject )
     {
       System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-        &v92,
+        &v139,
         (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)gameObject,
-        (const MethodInfo_2FF2480 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-      for ( i = v92;
+        (const MethodInfo_3057E3C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+      for ( i = v139;
             System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
               &i,
-              (const MethodInfo_201195C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-            peRenderTexture__registChangeLayerObjects(this, (UnityEngine_GameObject_o *)i.fields.current, v48) )
+              (const MethodInfo_201EFD0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+            peRenderTexture__registChangeLayerObjects(this, (UnityEngine_GameObject_o *)i.fields.current, v95) )
       {
         ;
       }
-      v93[0] = 297;
-      v94 = 1;
+      v140[0] = 297;
+      v141 = 1;
       System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
         &i,
-        (const MethodInfo_2011958 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-      v94 = 0;
+        (const MethodInfo_201EFCC *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+      v141 = 0;
       gameObject = (UnityEngine_GameObject_o *)this->fields.changeLayerObjectPaths;
       if ( gameObject )
       {
         System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-          &v92,
+          &v139,
           (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)gameObject,
-          (const MethodInfo_2FF2480 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
-        v95 = v92;
+          (const MethodInfo_3057E3C *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+        v142 = v139;
         while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-                  &v95,
-                  (const MethodInfo_201195C *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
+                  &v142,
+                  (const MethodInfo_201EFD0 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
         {
-          current = v95.fields.current;
-          v50 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-          if ( !v50 )
-            sub_B52A5C(0LL, v51);
-          v52 = UnityEngine_GameObject__get_transform(v50, 0LL);
-          if ( !v52 )
-            sub_B52A5C(0LL, v53);
-          v54 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(v52, (System_String_o *)current, 0LL);
+          current = v142.fields.current;
+          v97 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+          if ( !v97 )
+            sub_B5D69C(0LL, v98);
+          v99 = UnityEngine_GameObject__get_transform(v97, 0LL);
+          if ( !v99 )
+            sub_B5D69C(0LL, v100);
+          v101 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(v99, (System_String_o *)current, 0LL);
           if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           }
-          v55 = UnityEngine_Object__op_Inequality(v54, 0LL, 0LL);
-          if ( v55 )
+          v102 = UnityEngine_Object__op_Inequality(v101, 0LL, 0LL);
+          if ( v102 )
           {
-            if ( !v54 )
-              sub_B52A5C(v55, v56);
-            v57 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v54, 0LL);
-            peRenderTexture__registChangeLayerObjects(this, v57, v58);
+            if ( !v101 )
+              sub_B5D69C(v102, v103);
+            v104 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v101, 0LL);
+            peRenderTexture__registChangeLayerObjects(this, v104, v105);
           }
         }
-        v93[0] = 389;
-        v59 = ++v94;
+        v140[0] = 389;
+        v106 = ++v141;
         System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-          &v95,
-          (const MethodInfo_2011958 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
-        if ( v59 && v93[v59 - 1] == 389 )
-          v94 = v59 - 1;
+          &v142,
+          (const MethodInfo_201EFCC *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+        if ( v106 && v140[v106 - 1] == 389 )
+          v141 = v106 - 1;
         p_rasterCamera = (UnityEngine_Component_o **)&this->fields.rasterCamera;
         rasterCamera = (UnityEngine_Object_o *)this->fields.rasterCamera;
         if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1157,48 +1264,48 @@ void __fastcall peRenderTexture__initialize(peRenderTexture_o *this, const Metho
         }
         if ( !UnityEngine_Object__op_Equality(rasterCamera, 0LL, 0LL) )
         {
-          v62 = (UnityEngine_Object_o *)*p_boardrenderer;
+          v109 = (UnityEngine_Object_o *)*p_boardrenderer;
           if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           }
-          if ( !UnityEngine_Object__op_Equality(v62, 0LL, 0LL) )
+          if ( !UnityEngine_Object__op_Equality(v109, 0LL, 0LL) )
             goto LABEL_95;
         }
-        v63 = (UnityEngine_Object_o *)*p_targetCamera;
+        v110 = (UnityEngine_Object_o *)*p_targetCamera;
         if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         }
-        if ( !UnityEngine_Object__op_Inequality(v63, 0LL, 0LL) )
+        if ( !UnityEngine_Object__op_Inequality(v110, 0LL, 0LL) )
           goto LABEL_95;
-        v64 = (UnityEngine_Object_o *)*p_boardrenderer;
+        v111 = (UnityEngine_Object_o *)*p_boardrenderer;
         if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         }
-        if ( !UnityEngine_Object__op_Inequality(v64, 0LL, 0LL) )
+        if ( !UnityEngine_Object__op_Inequality(v111, 0LL, 0LL) )
           goto LABEL_95;
         textureWidth = this->fields.textureWidth;
         textureHeight = this->fields.textureHeight;
         textureDepth = this->fields.textureDepth;
         textureFormat = this->fields.textureFormat;
-        v69 = (UnityEngine_RenderTexture_o *)sub_B52A54(UnityEngine_RenderTexture_TypeInfo);
-        UnityEngine_RenderTexture___ctor_35675304(v69, textureWidth, textureHeight, textureDepth, textureFormat, 0LL);
+        v116 = (UnityEngine_RenderTexture_o *)sub_B5D694(UnityEngine_RenderTexture_TypeInfo);
+        UnityEngine_RenderTexture___ctor_35678584(v116, textureWidth, textureHeight, textureDepth, textureFormat, 0LL);
         p_renderTexture = &this->fields.renderTexture;
-        this->fields.renderTexture = v69;
-        sub_B52920(
+        this->fields.renderTexture = v116;
+        sub_B5D560(
           (BattleServantConfConponent_o *)&this->fields.renderTexture,
-          (System_Int32_array **)v69,
-          v71,
-          v72,
-          v73,
-          v74,
-          v75,
-          v76);
+          (System_Int32_array **)v116,
+          v118,
+          v119,
+          v120,
+          v121,
+          v122,
+          v123);
         gameObject = (UnityEngine_GameObject_o *)this->fields.renderTexture;
         if ( gameObject )
         {
@@ -1210,31 +1317,39 @@ void __fastcall peRenderTexture__initialize(peRenderTexture_o *this, const Metho
               gameObject,
               (unsigned int)this->fields.textureDimension,
               gameObject->klass[1]._1.declaringType);
-            v77 = this->fields.targetCamera;
+            v124 = this->fields.targetCamera;
             if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
             }
-            v78 = (System_Int32_array **)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
-                                           (UnityEngine_UI_Dropdown_DropdownItem_o *)v77,
-                                           (const MethodInfo_1F711B8 *)Method_UnityEngine_Object_Instantiate_Camera___);
-            *p_rasterCamera = (UnityEngine_Component_o *)v78;
-            sub_B52920((BattleServantConfConponent_o *)&this->fields.rasterCamera, v78, v79, v80, v81, v82, v83, v84);
+            v125 = (System_Int32_array **)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
+                                            (UnityEngine_UI_Dropdown_DropdownItem_o *)v124,
+                                            (const MethodInfo_1E662D8 *)Method_UnityEngine_Object_Instantiate_Camera___);
+            *p_rasterCamera = (UnityEngine_Component_o *)v125;
+            sub_B5D560(
+              (BattleServantConfConponent_o *)&this->fields.rasterCamera,
+              v125,
+              v126,
+              v127,
+              v128,
+              v129,
+              v130,
+              v131);
             gameObject = (UnityEngine_GameObject_o *)*p_rasterCamera;
             if ( *p_rasterCamera )
             {
               gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                          (UnityEngine_Component_o *)gameObject,
                                                          0LL);
-              v85 = (UnityEngine_Component_o *)*p_targetCamera;
+              v132 = (UnityEngine_Component_o *)*p_targetCamera;
               if ( *p_targetCamera )
               {
-                v86 = (UnityEngine_Transform_o *)gameObject;
-                gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(v85, 0LL);
-                if ( v86 )
+                v133 = (UnityEngine_Transform_o *)gameObject;
+                gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(v132, 0LL);
+                if ( v133 )
                 {
-                  UnityEngine_Transform__SetParent(v86, (UnityEngine_Transform_o *)gameObject, 0LL);
+                  UnityEngine_Transform__SetParent(v133, (UnityEngine_Transform_o *)gameObject, 0LL);
                   gameObject = (UnityEngine_GameObject_o *)*p_rasterCamera;
                   if ( *p_rasterCamera )
                   {
@@ -1254,21 +1369,21 @@ void __fastcall peRenderTexture__initialize(peRenderTexture_o *this, const Metho
                                                                    0LL);
                         if ( *p_rasterCamera )
                         {
-                          v87 = (UnityEngine_Transform_o *)gameObject;
+                          v134 = (UnityEngine_Transform_o *)gameObject;
                           gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                                      *p_rasterCamera,
                                                                      0LL);
                           if ( gameObject )
                           {
-                            *(UnityEngine_Vector3_o *)&v88 = UnityEngine_Transform__get_position(
-                                                               (UnityEngine_Transform_o *)gameObject,
-                                                               0LL);
-                            if ( v87 )
+                            *(UnityEngine_Vector3_o *)&v135 = UnityEngine_Transform__get_position(
+                                                                (UnityEngine_Transform_o *)gameObject,
+                                                                0LL);
+                            if ( v134 )
                             {
-                              v97.fields.x = v88 + this->fields.cameraOffset.fields.x;
-                              v97.fields.y = v89 + this->fields.cameraOffset.fields.y;
-                              v97.fields.z = v90 + this->fields.cameraOffset.fields.z;
-                              UnityEngine_Transform__set_position(v87, v97, 0LL);
+                              v144.fields.x = v135 + this->fields.cameraOffset.fields.x;
+                              v144.fields.y = v136 + this->fields.cameraOffset.fields.y;
+                              v144.fields.z = v137 + this->fields.cameraOffset.fields.z;
+                              UnityEngine_Transform__set_position(v134, v144, 0LL);
                               gameObject = (UnityEngine_GameObject_o *)this->fields.boardrenderer;
                               if ( gameObject )
                               {
@@ -1279,7 +1394,7 @@ void __fastcall peRenderTexture__initialize(peRenderTexture_o *this, const Metho
                                 {
                                   UnityEngine_Material__SetTexture(
                                     (UnityEngine_Material_o *)gameObject,
-                                    (System_String_o *)StringLiteral_16120/*"_MainTex"*/,
+                                    (System_String_o *)StringLiteral_16205/*"_MainTex"*/,
                                     (UnityEngine_Texture_o *)*p_renderTexture,
                                     0LL);
 LABEL_95:
@@ -1303,7 +1418,7 @@ LABEL_95:
       }
     }
 LABEL_100:
-    sub_B52A5C(gameObject, v4);
+    sub_B5D69C(gameObject, v51);
   }
 }
 
@@ -1360,76 +1475,118 @@ void __fastcall peRenderTexture__registChangeLayerObjects(
         UnityEngine_GameObject_o *gameObject,
         const MethodInfo *method)
 {
-  __int64 v5; // x22
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  int v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
+  int v18; // w1
+  int v19; // w2
+  __int64 v20; // x3
+  int v21; // w1
+  int v22; // w2
+  __int64 v23; // x3
+  int v24; // w1
+  int v25; // w2
+  __int64 v26; // x3
+  int v27; // w1
+  int v28; // w2
+  __int64 v29; // x3
+  int v30; // w1
+  int v31; // w2
+  __int64 v32; // x3
+  int v33; // w1
+  int v34; // w2
+  __int64 v35; // x3
+  int v36; // w1
+  int v37; // w2
+  __int64 v38; // x3
+  __int64 v39; // x22
   UnityEngine_GameObject_o *transform; // x0
-  __int64 v7; // x1
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
-  UnityEngine_GameObject_o **v14; // x20
+  __int64 v41; // x1
+  System_String_array **v42; // x2
+  System_String_array **v43; // x3
+  System_Boolean_array **v44; // x4
+  System_Int32_array **v45; // x5
+  System_Int32_array *v46; // x6
+  System_Int32_array *v47; // x7
+  UnityEngine_GameObject_o **v48; // x20
   UnityEngine_Object_o *Component_srcLineSprite; // x21
   System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *targetChangeLayerObjects; // x21
-  System_Predicate_peRenderTexture_ChangeLayerObject__o *v17; // x23
-  struct System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *v18; // x21
-  UnityEngine_GameObject_o *v19; // x23
-  peRenderTexture_ChangeLayerObject_o *v20; // x22
-  __int64 v21; // x1
-  __int64 v22; // x3
+  System_Predicate_peRenderTexture_ChangeLayerObject__o *v51; // x23
+  struct System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *v52; // x21
+  UnityEngine_GameObject_o *v53; // x23
+  peRenderTexture_ChangeLayerObject_o *v54; // x22
+  __int64 v55; // x1
+  __int64 v56; // x3
   System_Collections_IEnumerator_o *Enumerator; // x20
   System_Collections_IEnumerator_c *klass; // x8
-  unsigned __int64 v25; // x10
+  unsigned __int64 v59; // x10
   int32_t *p_offset; // x11
   __int64 p_method; // x0
-  __int64 v28; // x3
-  System_Collections_IEnumerator_c *v29; // x8
-  unsigned __int64 v30; // x10
-  System_Collections_IEnumerator_c **v31; // x11
-  __int64 v32; // x0
-  UnityEngine_Component_o *v33; // x0
-  __int64 v34; // x1
-  __int64 v35; // x9
-  UnityEngine_GameObject_o *v36; // x0
-  const MethodInfo *v37; // x2
-  __int64 v38; // x0
-  __int64 v39; // x3
-  __int64 v40; // x8
-  __int64 v41; // x20
-  unsigned __int64 v42; // x10
-  int *v43; // x11
-  __int64 v44; // x0
+  __int64 v62; // x3
+  System_Collections_IEnumerator_c *v63; // x8
+  unsigned __int64 v64; // x10
+  System_Collections_IEnumerator_c **v65; // x11
+  __int64 v66; // x0
+  UnityEngine_Component_o *v67; // x0
+  __int64 v68; // x1
+  __int64 v69; // x9
+  UnityEngine_GameObject_o *v70; // x0
+  const MethodInfo *v71; // x2
+  __int64 v72; // x0
+  __int64 v73; // x3
+  __int64 v74; // x8
+  __int64 v75; // x20
+  unsigned __int64 v76; // x10
+  int *v77; // x11
+  __int64 v78; // x0
 
-  if ( (byte_42BD12C & 1) == 0 )
+  if ( (byte_42F5AAD & 1) == 0 )
   {
-    sub_B52984(&peRenderTexture_ChangeLayerObject_TypeInfo);
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_Renderer___);
-    sub_B52984(&System_IDisposable_TypeInfo);
-    sub_B52984(&System_Collections_IEnumerator_TypeInfo);
-    sub_B52984(&Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__Add__);
-    sub_B52984(&Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__Find__);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    sub_B52984(&Method_System_Predicate_peRenderTexture_ChangeLayerObject___ctor__);
-    sub_B52984(&System_Predicate_peRenderTexture_ChangeLayerObject__TypeInfo);
-    sub_B52984(&UnityEngine_Transform_TypeInfo);
-    sub_B52984(&Method_peRenderTexture___c__DisplayClass48_0__registChangeLayerObjects_b__0__);
-    sub_B52984(&peRenderTexture___c__DisplayClass48_0_TypeInfo);
-    byte_42BD12C = 1;
+    sub_B5D5C4(&peRenderTexture_ChangeLayerObject_TypeInfo, (_DWORD)gameObject, (_DWORD)method, v3);
+    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_Renderer___, v6, v7, v8);
+    sub_B5D5C4(&System_IDisposable_TypeInfo, v9, v10, v11);
+    sub_B5D5C4(&System_Collections_IEnumerator_TypeInfo, v12, v13, v14);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__Add__, v15, v16, v17);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__Find__, v18, v19, v20);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v21, v22, v23);
+    sub_B5D5C4(&Method_System_Predicate_peRenderTexture_ChangeLayerObject___ctor__, v24, v25, v26);
+    sub_B5D5C4(&System_Predicate_peRenderTexture_ChangeLayerObject__TypeInfo, v27, v28, v29);
+    sub_B5D5C4(&UnityEngine_Transform_TypeInfo, v30, v31, v32);
+    sub_B5D5C4(&Method_peRenderTexture___c__DisplayClass48_0__registChangeLayerObjects_b__0__, v33, v34, v35);
+    sub_B5D5C4(&peRenderTexture___c__DisplayClass48_0_TypeInfo, v36, v37, v38);
+    byte_42F5AAD = 1;
   }
-  v5 = sub_B52A54(peRenderTexture___c__DisplayClass48_0_TypeInfo);
-  peRenderTexture___c__DisplayClass48_0___ctor((peRenderTexture___c__DisplayClass48_0_o *)v5, 0LL);
-  if ( !v5 )
+  v39 = sub_B5D694(peRenderTexture___c__DisplayClass48_0_TypeInfo);
+  peRenderTexture___c__DisplayClass48_0___ctor((peRenderTexture___c__DisplayClass48_0_o *)v39, 0LL);
+  if ( !v39 )
     goto LABEL_44;
-  *(_QWORD *)(v5 + 16) = gameObject;
-  v14 = (UnityEngine_GameObject_o **)(v5 + 16);
-  sub_B52920((BattleServantConfConponent_o *)(v5 + 16), (System_Int32_array **)gameObject, v8, v9, v10, v11, v12, v13);
-  transform = *(UnityEngine_GameObject_o **)(v5 + 16);
+  *(_QWORD *)(v39 + 16) = gameObject;
+  v48 = (UnityEngine_GameObject_o **)(v39 + 16);
+  sub_B5D560(
+    (BattleServantConfConponent_o *)(v39 + 16),
+    (System_Int32_array **)gameObject,
+    v42,
+    v43,
+    v44,
+    v45,
+    v46,
+    v47);
+  transform = *(UnityEngine_GameObject_o **)(v39 + 16);
   if ( !transform )
     goto LABEL_44;
   Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                       transform,
-                                                      (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                                                      (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -1438,50 +1595,50 @@ void __fastcall peRenderTexture__registChangeLayerObjects(
   if ( UnityEngine_Object__op_Inequality(Component_srcLineSprite, 0LL, 0LL) )
   {
     targetChangeLayerObjects = this->fields.targetChangeLayerObjects;
-    v17 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B52A54(System_Predicate_peRenderTexture_ChangeLayerObject__TypeInfo);
+    v51 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B5D694(System_Predicate_peRenderTexture_ChangeLayerObject__TypeInfo);
     System_Predicate_peRenderTexture_ChangeLayerObject____ctor(
-      v17,
-      (Il2CppObject *)v5,
+      v51,
+      (Il2CppObject *)v39,
       Method_peRenderTexture___c__DisplayClass48_0__registChangeLayerObjects_b__0__,
-      (const MethodInfo_28D2DBC *)Method_System_Predicate_peRenderTexture_ChangeLayerObject___ctor__);
+      (const MethodInfo_2B9320C *)Method_System_Predicate_peRenderTexture_ChangeLayerObject___ctor__);
     if ( !targetChangeLayerObjects )
       goto LABEL_44;
     if ( !System_Collections_Generic_List_peRenderTexture_ChangeLayerObject___Find(
             targetChangeLayerObjects,
-            (System_Predicate_T__o *)v17,
-            (const MethodInfo_2FF1EC4 *)Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__Find__) )
+            (System_Predicate_T__o *)v51,
+            (const MethodInfo_3057880 *)Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__Find__) )
     {
-      v18 = this->fields.targetChangeLayerObjects;
-      v19 = *v14;
-      v20 = (peRenderTexture_ChangeLayerObject_o *)sub_B52A54(peRenderTexture_ChangeLayerObject_TypeInfo);
-      peRenderTexture_ChangeLayerObject___ctor(v20, v19, 0LL);
-      if ( !v18 )
+      v52 = this->fields.targetChangeLayerObjects;
+      v53 = *v48;
+      v54 = (peRenderTexture_ChangeLayerObject_o *)sub_B5D694(peRenderTexture_ChangeLayerObject_TypeInfo);
+      peRenderTexture_ChangeLayerObject___ctor(v54, v53, 0LL);
+      if ( !v52 )
         goto LABEL_44;
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v18,
-        (EventMissionProgressRequest_Argument_ProgressData_o *)v20,
-        (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__Add__);
+        (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v52,
+        (EventMissionProgressRequest_Argument_ProgressData_o *)v54,
+        (const MethodInfo_3056FC0 *)Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__Add__);
     }
   }
-  transform = *v14;
-  if ( !*v14 || (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0LL)) == 0LL )
+  transform = *v48;
+  if ( !*v48 || (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0LL)) == 0LL )
 LABEL_44:
-    sub_B52A5C(transform, v7);
+    sub_B5D69C(transform, v41);
   Enumerator = UnityEngine_Transform__GetEnumerator((UnityEngine_Transform_o *)transform, 0LL);
   if ( !Enumerator )
-    sub_B52A5C(0LL, v21);
+    sub_B5D69C(0LL, v55);
   while ( 1 )
   {
     klass = Enumerator->klass;
     if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
     {
-      v25 = 0LL;
+      v59 = 0LL;
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        ++v25;
+        ++v59;
         p_offset += 4;
-        if ( v25 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+        if ( v59 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
           goto LABEL_20;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -1489,186 +1646,187 @@ LABEL_44:
     else
     {
 LABEL_20:
-      p_method = sub_AEB880(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL, v22);
+      p_method = sub_AF54C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL, v56);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v29 = Enumerator->klass;
+    v63 = Enumerator->klass;
     if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
     {
-      v30 = 0LL;
-      v31 = (System_Collections_IEnumerator_c **)&v29->_1.interfaceOffsets->offset;
-      while ( *(v31 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v64 = 0LL;
+      v65 = (System_Collections_IEnumerator_c **)&v63->_1.interfaceOffsets->offset;
+      while ( *(v65 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        ++v30;
-        v31 += 2;
-        if ( v30 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+        ++v64;
+        v65 += 2;
+        if ( v64 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
           goto LABEL_27;
       }
-      v32 = (__int64)&v29->vtable[*(_DWORD *)v31 + 1].method;
+      v66 = (__int64)&v63->vtable[*(_DWORD *)v65 + 1].method;
     }
     else
     {
 LABEL_27:
-      v32 = sub_AEB880(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL, v28);
+      v66 = sub_AF54C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL, v62);
     }
-    v33 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v32)(
+    v67 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v66)(
                                        Enumerator,
-                                       *(_QWORD *)(v32 + 8));
-    if ( !v33 )
+                                       *(_QWORD *)(v66 + 8));
+    if ( !v67 )
       goto LABEL_43;
-    v35 = *(&UnityEngine_Transform_TypeInfo->_2.bitflags2 + 1);
-    if ( *(&v33->klass->_2.bitflags2 + 1) < (unsigned int)v35
-      || (UnityEngine_Transform_c *)v33->klass->_2.typeHierarchy[v35 - 1] != UnityEngine_Transform_TypeInfo )
+    v69 = *(&UnityEngine_Transform_TypeInfo->_2.bitflags2 + 1);
+    if ( *(&v67->klass->_2.bitflags2 + 1) < (unsigned int)v69
+      || (UnityEngine_Transform_c *)v67->klass->_2.typeHierarchy[v69 - 1] != UnityEngine_Transform_TypeInfo )
     {
-      sub_B52D50(v33);
+      sub_B5D990(v67);
 LABEL_43:
-      sub_B52A5C(v33, v34);
+      sub_B5D69C(v67, v68);
     }
-    v36 = UnityEngine_Component__get_gameObject(v33, 0LL);
-    peRenderTexture__registChangeLayerObjects(this, v36, v37);
+    v70 = UnityEngine_Component__get_gameObject(v67, 0LL);
+    peRenderTexture__registChangeLayerObjects(this, v70, v71);
   }
-  v38 = sub_B52A44(Enumerator, System_IDisposable_TypeInfo);
-  if ( v38 )
+  v72 = sub_B5D684(Enumerator, System_IDisposable_TypeInfo);
+  if ( v72 )
   {
-    v40 = *(_QWORD *)v38;
-    v41 = v38;
-    if ( *(_WORD *)(*(_QWORD *)v38 + 298LL) )
+    v74 = *(_QWORD *)v72;
+    v75 = v72;
+    if ( *(_WORD *)(*(_QWORD *)v72 + 298LL) )
     {
-      v42 = 0LL;
-      v43 = (int *)(*(_QWORD *)(v40 + 176) + 8LL);
-      while ( *((System_IDisposable_c **)v43 - 1) != System_IDisposable_TypeInfo )
+      v76 = 0LL;
+      v77 = (int *)(*(_QWORD *)(v74 + 176) + 8LL);
+      while ( *((System_IDisposable_c **)v77 - 1) != System_IDisposable_TypeInfo )
       {
-        ++v42;
-        v43 += 4;
-        if ( v42 >= *(unsigned __int16 *)(*(_QWORD *)v38 + 298LL) )
+        ++v76;
+        v77 += 4;
+        if ( v76 >= *(unsigned __int16 *)(*(_QWORD *)v72 + 298LL) )
           goto LABEL_38;
       }
-      v44 = v40 + 16LL * *v43 + 312;
+      v78 = v74 + 16LL * *v77 + 312;
     }
     else
     {
 LABEL_38:
-      v44 = sub_AEB880(v38, System_IDisposable_TypeInfo, 0LL, v39);
+      v78 = sub_AF54C0(v72, System_IDisposable_TypeInfo, 0LL, v73);
     }
-    (*(void (__fastcall **)(__int64, _QWORD))v44)(v41, *(_QWORD *)(v44 + 8));
+    (*(void (__fastcall **)(__int64, _QWORD))v78)(v75, *(_QWORD *)(v78 + 8));
   }
 }
 
 
 void __fastcall peRenderTexture__updateBounds(peRenderTexture_o *this, const MethodInfo *method)
 {
-  const MethodInfo *v2; // x3
+  int v2; // w2
+  const MethodInfo *v3; // x3
   UnityEngine_GameObject_o *targetObject; // x1
   float x; // s8
   float y; // s11
   float z; // s9
-  float v8; // s12
-  float v9; // s10
-  float v10; // s0
-  float v11; // s1
-  float v12; // s12
-  float v13; // s11
+  float v9; // s12
+  float v10; // s10
+  float v11; // s0
+  float v12; // s1
+  float v13; // s12
+  float v14; // s11
   void *Component_WebViewObject; // x0
-  __int64 v15; // x1
+  __int64 v16; // x1
   __int64 RBindex; // x8
-  unsigned int v17; // w10
-  _DWORD *v18; // x20
+  unsigned int v18; // w10
+  _DWORD *v19; // x20
   __int64 LTindex; // x9
-  __int64 v20; // x8
-  __int64 v21; // x9
-  float v22; // s14
-  float v23; // s9
-  float v24; // s15
-  float v25; // s11
-  float v26; // s13
-  float v27; // s0
+  __int64 v21; // x8
+  __int64 v22; // x9
+  float v23; // s14
+  float v24; // s9
+  float v25; // s15
+  float v26; // s11
+  float v27; // s13
+  float v28; // s0
   float targetBoundsOffsetX; // s8
   float targetBoundsOffsetY; // s15
-  float v30; // s14
-  float v31; // s11
-  float v32; // s9
-  float v33; // s8
-  float v34; // s10
-  float v35; // s4
-  float v36; // s5
-  float v37; // s6
-  float v38; // s7
-  __int64 v39; // x8
-  float *v40; // x8
-  float v41; // s4
-  float v42; // s5
-  float v43; // s6
-  float v44; // s7
-  __int64 v45; // x8
-  float *v46; // x8
-  __int64 v47; // x0
-  UnityEngine_Matrix4x4_o v48; // [xsp+0h] [xbp-1D0h] BYREF
-  MethodInfo v49; // [xsp+40h] [xbp-190h] BYREF
-  __int128 v50; // [xsp+90h] [xbp-140h]
-  __int128 v51; // [xsp+A0h] [xbp-130h]
-  __int128 v52; // [xsp+B0h] [xbp-120h]
+  float v31; // s14
+  float v32; // s11
+  float v33; // s9
+  float v34; // s8
+  float v35; // s10
+  float v36; // s4
+  float v37; // s5
+  float v38; // s6
+  float v39; // s7
+  __int64 v40; // x8
+  float *v41; // x8
+  float v42; // s4
+  float v43; // s5
+  float v44; // s6
+  float v45; // s7
+  __int64 v46; // x8
+  float *v47; // x8
+  __int64 v48; // x0
+  UnityEngine_Matrix4x4_o v49; // [xsp+0h] [xbp-1D0h] BYREF
+  MethodInfo v50; // [xsp+40h] [xbp-190h] BYREF
+  __int128 v51; // [xsp+90h] [xbp-140h]
+  __int128 v52; // [xsp+A0h] [xbp-130h]
+  __int128 v53; // [xsp+B0h] [xbp-120h]
   MethodInfo methoda; // [xsp+C0h] [xbp-110h] BYREF
   __int128 bounds; // [xsp+110h] [xbp-C0h] BYREF
   __int128 bounds_16; // [xsp+120h] [xbp-B0h]
-  __int128 v56; // [xsp+130h] [xbp-A0h]
-  __int128 v57; // [xsp+140h] [xbp-90h]
-  UnityEngine_Bounds_o v58; // [xsp+150h] [xbp-80h] BYREF
-  float v59; // [xsp+1B8h] [xbp-18h]
-  float v60; // [xsp+1BCh] [xbp-14h]
+  __int128 v57; // [xsp+130h] [xbp-A0h]
+  __int128 v58; // [xsp+140h] [xbp-90h]
+  UnityEngine_Bounds_o v59; // [xsp+150h] [xbp-80h] BYREF
+  float v60; // [xsp+1B8h] [xbp-18h]
+  float v61; // [xsp+1BCh] [xbp-14h]
   UnityEngine_Vector3_o center; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o extents; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v63; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v64; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v65; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v66; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v67; // 0:s3.4,4:s4.4,8:s5.4
+  UnityEngine_Vector3_o v67; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v68; // 0:s3.4,4:s4.4,8:s5.4
   UnityEngine_Vector3_o v69; // 0:s3.4,4:s4.4,8:s5.4
-  UnityEngine_Vector4_o v70; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o v70; // 0:s3.4,4:s4.4,8:s5.4
   UnityEngine_Vector4_o v71; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Vector4_o v72; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Vector4_o v73; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Vector4_o v74; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Vector4_o v75; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v76; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_42BD12E & 1) == 0 )
+  if ( (byte_42F5AAF & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_Component_GetComponent_MeshFilter___);
-    byte_42BD12E = 1;
+    sub_B5D5C4(&Method_UnityEngine_Component_GetComponent_MeshFilter___, (_DWORD)method, v2, v3);
+    byte_42F5AAF = 1;
   }
-  memset(&v58, 0, sizeof(v58));
+  memset(&v59, 0, sizeof(v59));
   targetObject = this->fields.targetObject;
   bounds = 0uLL;
   *(_QWORD *)&bounds_16 = 0LL;
-  peRenderTexture__CalcRendererBounds_47036060(this, targetObject, (UnityEngine_Bounds_o *)&bounds, v2);
-  *(_QWORD *)&v58.fields.m_Extents.fields.y = bounds_16;
-  *(_OWORD *)&v58.fields.m_Center.fields.x = bounds;
-  center = UnityEngine_Bounds__get_center(&v58, 0LL);
+  peRenderTexture__CalcRendererBounds_47085952(this, targetObject, (UnityEngine_Bounds_o *)&bounds, v3);
+  *(_QWORD *)&v59.fields.m_Extents.fields.y = bounds_16;
+  *(_OWORD *)&v59.fields.m_Center.fields.x = bounds;
+  center = UnityEngine_Bounds__get_center(&v59, 0LL);
   x = center.fields.x;
   y = center.fields.y;
   z = center.fields.z;
-  extents = UnityEngine_Bounds__get_extents(&v58, 0LL);
-  v8 = extents.fields.y;
-  v9 = y + extents.fields.y;
-  v67.fields.x = x + extents.fields.x;
-  v67.fields.z = z - extents.fields.z;
+  extents = UnityEngine_Bounds__get_extents(&v59, 0LL);
+  v9 = extents.fields.y;
+  v10 = y + extents.fields.y;
+  v68.fields.x = x + extents.fields.x;
+  v68.fields.z = z - extents.fields.z;
   extents.fields.x = x - extents.fields.x;
-  extents.fields.y = v9;
+  extents.fields.y = v10;
   extents.fields.z = z + extents.fields.z;
-  v67.fields.y = v9;
-  v10 = UnityEngine_Vector3__Distance(extents, v67, 0LL);
-  if ( (float)(y - v8) >= -0.5 )
-    v11 = (float)(v9 - (float)(y - v8)) * (float)(v9 - (float)(y - v8));
+  v68.fields.y = v10;
+  v11 = UnityEngine_Vector3__Distance(extents, v68, 0LL);
+  if ( (float)(y - v9) >= -0.5 )
+    v12 = (float)(v10 - (float)(y - v9)) * (float)(v10 - (float)(y - v9));
   else
-    v11 = (float)(v9 + 0.5) * (float)(v9 + 0.5);
-  v12 = sqrtf(v11);
-  v13 = v10;
+    v12 = (float)(v10 + 0.5) * (float)(v10 + 0.5);
+  v13 = sqrtf(v12);
+  v14 = v11;
   Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                               (UnityEngine_Component_o *)this,
-                              (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_MeshFilter___);
+                              (const MethodInfo_1ADE2A0 *)Method_UnityEngine_Component_GetComponent_MeshFilter___);
   if ( !Component_WebViewObject )
     goto LABEL_22;
   Component_WebViewObject = UnityEngine_MeshFilter__get_sharedMesh(
@@ -1680,37 +1838,37 @@ void __fastcall peRenderTexture__updateBounds(peRenderTexture_o *this, const Met
   if ( !Component_WebViewObject )
     goto LABEL_22;
   RBindex = this->fields._RBindex;
-  v17 = *((_DWORD *)Component_WebViewObject + 6);
-  v18 = Component_WebViewObject;
-  if ( (unsigned int)RBindex >= v17 || (v59 = z, v60 = x, LTindex = this->fields._LTindex, (unsigned int)LTindex >= v17) )
+  v18 = *((_DWORD *)Component_WebViewObject + 6);
+  v19 = Component_WebViewObject;
+  if ( (unsigned int)RBindex >= v18 || (v60 = z, v61 = x, LTindex = this->fields._LTindex, (unsigned int)LTindex >= v18) )
   {
 LABEL_23:
-    v47 = sub_B52A88(Component_WebViewObject);
-    sub_B52A28(v47, 0LL);
+    v48 = sub_B5D6C8(Component_WebViewObject);
+    sub_B5D668(v48, 0LL);
   }
-  v20 = (__int64)Component_WebViewObject + 12 * RBindex + 32;
-  v21 = (__int64)Component_WebViewObject + 12 * LTindex + 32;
-  v22 = *(float *)v20;
-  v23 = v13;
-  v24 = *(float *)(v20 + 4);
-  v63.fields.y = *(float *)(v20 + 8);
+  v21 = (__int64)Component_WebViewObject + 12 * RBindex + 32;
+  v22 = (__int64)Component_WebViewObject + 12 * LTindex + 32;
+  v23 = *(float *)v21;
+  v24 = v14;
   v25 = *(float *)(v21 + 4);
-  v68.fields.y = *(float *)(v21 + 8);
-  v68.fields.x = *(float *)v21;
-  v63.fields.z = 0.0;
-  v68.fields.z = 0.0;
-  v63.fields.x = *(float *)v20;
-  v26 = UnityEngine_Vector3__Distance(v63, v68, 0LL);
+  v64.fields.y = *(float *)(v21 + 8);
+  v26 = *(float *)(v22 + 4);
+  v69.fields.y = *(float *)(v22 + 8);
+  v69.fields.x = *(float *)v22;
   v64.fields.z = 0.0;
   v69.fields.z = 0.0;
-  v64.fields.x = v22;
-  v64.fields.y = v24;
-  v69.fields.x = v22;
-  v69.fields.y = v25;
+  v64.fields.x = *(float *)v21;
   v27 = UnityEngine_Vector3__Distance(v64, v69, 0LL);
+  v65.fields.z = 0.0;
+  v70.fields.z = 0.0;
+  v65.fields.x = v23;
+  v65.fields.y = v25;
+  v70.fields.x = v23;
+  v70.fields.y = v26;
+  v28 = UnityEngine_Vector3__Distance(v65, v70, 0LL);
   targetBoundsOffsetX = this->fields.targetBoundsOffsetX;
   targetBoundsOffsetY = this->fields.targetBoundsOffsetY;
-  v30 = v27;
+  v31 = v28;
   Component_WebViewObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !Component_WebViewObject )
     goto LABEL_22;
@@ -1719,29 +1877,29 @@ LABEL_23:
                               0LL);
   if ( !Component_WebViewObject )
     goto LABEL_22;
-  v31 = v12 * 0.5;
-  v65.fields.x = (float)(v23 + targetBoundsOffsetX) / v26;
-  v65.fields.y = (float)((float)(v31 + v31) + targetBoundsOffsetY) / v30;
-  v65.fields.z = 1.0;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)Component_WebViewObject, v65, 0LL);
+  v32 = v13 * 0.5;
+  v66.fields.x = (float)(v24 + targetBoundsOffsetX) / v27;
+  v66.fields.y = (float)((float)(v32 + v32) + targetBoundsOffsetY) / v31;
+  v66.fields.z = 1.0;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)Component_WebViewObject, v66, 0LL);
   Component_WebViewObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !Component_WebViewObject )
     goto LABEL_22;
   Component_WebViewObject = UnityEngine_GameObject__get_transform(
                               (UnityEngine_GameObject_o *)Component_WebViewObject,
                               0LL);
-  v32 = v59;
+  v33 = v60;
   if ( !Component_WebViewObject )
     goto LABEL_22;
-  v33 = v9 - v31;
-  v34 = v60;
-  v66.fields.y = v33 - v31;
-  v66.fields.z = v59;
-  v66.fields.x = v60;
-  UnityEngine_Transform__set_position((UnityEngine_Transform_o *)Component_WebViewObject, v66, 0LL);
-  this->fields.targetBoundsCenter.fields.x = v34;
-  this->fields.targetBoundsCenter.fields.y = v33;
-  this->fields.targetBoundsCenter.fields.z = v32;
+  v34 = v10 - v32;
+  v35 = v61;
+  v67.fields.y = v34 - v32;
+  v67.fields.z = v60;
+  v67.fields.x = v61;
+  UnityEngine_Transform__set_position((UnityEngine_Transform_o *)Component_WebViewObject, v67, 0LL);
+  this->fields.targetBoundsCenter.fields.x = v35;
+  this->fields.targetBoundsCenter.fields.y = v34;
+  this->fields.targetBoundsCenter.fields.z = v33;
   Component_WebViewObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !Component_WebViewObject )
     goto LABEL_22;
@@ -1754,29 +1912,29 @@ LABEL_23:
                               (UnityEngine_Matrix4x4_o *)&methoda.name,
                               (UnityEngine_Transform_o *)Component_WebViewObject,
                               0LL);
-  v56 = *(_OWORD *)&methoda.rgctx_data;
-  v57 = *(_OWORD *)&methoda.token;
+  v57 = *(_OWORD *)&methoda.rgctx_data;
+  v58 = *(_OWORD *)&methoda.token;
   bounds = *(_OWORD *)&methoda.name;
   bounds_16 = *(_OWORD *)&methoda.return_type;
-  v39 = this->fields._RBindex;
-  if ( (unsigned int)v39 >= v18[6] )
+  v40 = this->fields._RBindex;
+  if ( (unsigned int)v40 >= v19[6] )
     goto LABEL_23;
-  v40 = (float *)&v18[3 * v39];
-  v70.fields.x = v40[8];
-  v70.fields.y = v40[9];
-  v70.fields.z = v40[10];
-  v70.fields.w = 1.0;
+  v41 = (float *)&v19[3 * v40];
+  v71.fields.x = v41[8];
+  v71.fields.y = v41[9];
+  v71.fields.z = v41[10];
+  v71.fields.w = 1.0;
   methoda.methodPointer = 0LL;
   methoda.invoker_method = 0LL;
-  UnityEngine_Vector4___ctor(v70, v35, v36, v37, v38, &methoda);
-  *(_QWORD *)&v71.fields.x = methoda.methodPointer;
-  *(_QWORD *)&v71.fields.z = methoda.invoker_method;
-  v51 = v56;
+  UnityEngine_Vector4___ctor(v71, v36, v37, v38, v39, &methoda);
+  *(_QWORD *)&v72.fields.x = methoda.methodPointer;
+  *(_QWORD *)&v72.fields.z = methoda.invoker_method;
   v52 = v57;
-  *(_OWORD *)&v49.token = bounds;
-  v50 = bounds_16;
-  v72 = UnityEngine_Matrix4x4__op_Multiply_41531080((UnityEngine_Matrix4x4_o *)&v49.token, v71, 0LL);
-  this->fields.targetBoundsRB = UnityEngine_Vector4__op_Implicit_50870468(v72, 0LL);
+  v53 = v58;
+  *(_OWORD *)&v50.token = bounds;
+  v51 = bounds_16;
+  v73 = UnityEngine_Matrix4x4__op_Multiply_41635228((UnityEngine_Matrix4x4_o *)&v50.token, v72, 0LL);
+  this->fields.targetBoundsRB = UnityEngine_Vector4__op_Implicit_51047752(v73, 0LL);
   Component_WebViewObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !Component_WebViewObject
     || (Component_WebViewObject = UnityEngine_GameObject__get_transform(
@@ -1784,60 +1942,90 @@ LABEL_23:
                                     0LL)) == 0LL )
   {
 LABEL_22:
-    sub_B52A5C(Component_WebViewObject, v15);
+    sub_B5D69C(Component_WebViewObject, v16);
   }
   Component_WebViewObject = UnityEngine_Transform__get_localToWorldMatrix(
-                              (UnityEngine_Matrix4x4_o *)&v49,
+                              (UnityEngine_Matrix4x4_o *)&v50,
                               (UnityEngine_Transform_o *)Component_WebViewObject,
                               0LL);
-  *(_OWORD *)&methoda.rgctx_data = *(_OWORD *)&v49.return_type;
-  *(_OWORD *)&methoda.token = *(_OWORD *)&v49.rgctx_data;
-  *(_OWORD *)&methoda.name = *(_OWORD *)&v49.methodPointer;
-  *(_OWORD *)&methoda.return_type = *(_OWORD *)&v49.name;
-  v45 = this->fields._LTindex;
-  if ( (unsigned int)v45 >= v18[6] )
+  *(_OWORD *)&methoda.rgctx_data = *(_OWORD *)&v50.return_type;
+  *(_OWORD *)&methoda.token = *(_OWORD *)&v50.rgctx_data;
+  *(_OWORD *)&methoda.name = *(_OWORD *)&v50.methodPointer;
+  *(_OWORD *)&methoda.return_type = *(_OWORD *)&v50.name;
+  v46 = this->fields._LTindex;
+  if ( (unsigned int)v46 >= v19[6] )
     goto LABEL_23;
-  v46 = (float *)&v18[3 * v45];
-  v73.fields.x = v46[8];
-  v73.fields.y = v46[9];
-  v73.fields.z = v46[10];
-  v73.fields.w = 1.0;
-  v49.methodPointer = 0LL;
-  v49.invoker_method = 0LL;
-  UnityEngine_Vector4___ctor(v73, v41, v42, v43, v44, &v49);
-  *(_QWORD *)&v74.fields.x = v49.methodPointer;
-  *(_QWORD *)&v74.fields.z = v49.invoker_method;
-  v48 = *(UnityEngine_Matrix4x4_o *)&methoda.name;
-  v75 = UnityEngine_Matrix4x4__op_Multiply_41531080(&v48, v74, 0LL);
-  this->fields.targetBoundsLT = UnityEngine_Vector4__op_Implicit_50870468(v75, 0LL);
+  v47 = (float *)&v19[3 * v46];
+  v74.fields.x = v47[8];
+  v74.fields.y = v47[9];
+  v74.fields.z = v47[10];
+  v74.fields.w = 1.0;
+  v50.methodPointer = 0LL;
+  v50.invoker_method = 0LL;
+  UnityEngine_Vector4___ctor(v74, v42, v43, v44, v45, &v50);
+  *(_QWORD *)&v75.fields.x = v50.methodPointer;
+  *(_QWORD *)&v75.fields.z = v50.invoker_method;
+  v49 = *(UnityEngine_Matrix4x4_o *)&methoda.name;
+  v76 = UnityEngine_Matrix4x4__op_Multiply_41635228(&v49, v75, 0LL);
+  this->fields.targetBoundsLT = UnityEngine_Vector4__op_Implicit_51047752(v76, 0LL);
 }
 
 
 void __fastcall peRenderTexture__updateLayer(peRenderTexture_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
   UnityEngine_Object_o *rasterCamera; // x20
   UnityEngine_Camera_o *targetChangeLayerObjects; // x0
   int32_t cullingMask; // w0
-  _BOOL8 v6; // x0
-  __int64 v7; // x1
+  _BOOL8 v20; // x0
+  __int64 v21; // x1
   Il2CppObject *current; // x20
   UnityEngine_Object_o *changeLayerObjectMaterial; // x21
-  _BOOL8 v10; // x0
-  __int64 v11; // x1
-  int32_t v12; // w0
-  System_Collections_Generic_List_Enumerator_T__o v13; // [xsp+8h] [xbp-68h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v14; // [xsp+20h] [xbp-50h] BYREF
+  _BOOL8 v24; // x0
+  __int64 v25; // x1
+  int32_t v26; // w0
+  System_Collections_Generic_List_Enumerator_T__o v27; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v28; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_42BD12D & 1) == 0 )
+  if ( (byte_42F5AAE & 1) == 0 )
   {
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__Dispose__);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__MoveNext__);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__get_Current__);
-    sub_B52984(&Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__GetEnumerator__);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42BD12D = 1;
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__Dispose__,
+      (_DWORD)method,
+      v2,
+      v3);
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__MoveNext__,
+      v5,
+      v6,
+      v7);
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__get_Current__,
+      v8,
+      v9,
+      v10);
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__GetEnumerator__,
+      v11,
+      v12,
+      v13);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v14, v15, v16);
+    byte_42F5AAE = 1;
   }
-  memset(&v14, 0, sizeof(v14));
+  memset(&v28, 0, sizeof(v28));
   if ( this->fields.changeCullingMaskEnabled )
   {
     rasterCamera = (UnityEngine_Object_o *)this->fields.rasterCamera;
@@ -1865,26 +2053,26 @@ void __fastcall peRenderTexture__updateLayer(peRenderTexture_o *this, const Meth
   targetChangeLayerObjects = (UnityEngine_Camera_o *)this->fields.targetChangeLayerObjects;
   if ( !targetChangeLayerObjects )
 LABEL_31:
-    sub_B52A5C(targetChangeLayerObjects, method);
+    sub_B5D69C(targetChangeLayerObjects, method);
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v13,
+    &v27,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)targetChangeLayerObjects,
-    (const MethodInfo_2FF2480 *)Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__GetEnumerator__);
-  v14 = v13;
+    (const MethodInfo_3057E3C *)Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__GetEnumerator__);
+  v28 = v27;
   while ( 1 )
   {
-    v6 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-           &v14,
-           (const MethodInfo_201195C *)Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__MoveNext__);
-    if ( !v6 )
+    v20 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
+            &v28,
+            (const MethodInfo_201EFD0 *)Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__MoveNext__);
+    if ( !v20 )
       break;
-    current = v14.fields.current;
+    current = v28.fields.current;
     if ( this->fields.changeLayerEnabled )
     {
-      if ( !v14.fields.current )
-        sub_B52A5C(v6, v7);
+      if ( !v28.fields.current )
+        sub_B5D69C(v20, v21);
       peRenderTexture_ChangeLayerObject__ChangeLayer(
-        (peRenderTexture_ChangeLayerObject_o *)v14.fields.current,
+        (peRenderTexture_ChangeLayerObject_o *)v28.fields.current,
         this->fields.changeLayer,
         0LL);
     }
@@ -1894,22 +2082,22 @@ LABEL_31:
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    v10 = UnityEngine_Object__op_Inequality(changeLayerObjectMaterial, 0LL, 0LL);
-    if ( v10 )
+    v24 = UnityEngine_Object__op_Inequality(changeLayerObjectMaterial, 0LL, 0LL);
+    if ( v24 )
     {
       if ( !current )
-        sub_B52A5C(v10, v11);
+        sub_B5D69C(v24, v25);
       if ( peRenderTexture_ChangeLayerObject__SyncLayer((peRenderTexture_ChangeLayerObject_o *)current, 0LL) )
       {
-        v12 = peRenderTexture_ChangeLayerObject__get_layer((peRenderTexture_ChangeLayerObject_o *)current, 0LL);
-        if ( v12 == this->fields.changeLayerObjectMaterialTargetLayer )
+        v26 = peRenderTexture_ChangeLayerObject__get_layer((peRenderTexture_ChangeLayerObject_o *)current, 0LL);
+        if ( v26 == this->fields.changeLayerObjectMaterialTargetLayer )
         {
           peRenderTexture_ChangeLayerObject__ChangeMaterial(
             (peRenderTexture_ChangeLayerObject_o *)current,
             this->fields.changeLayerObjectMaterial,
             0LL);
         }
-        else if ( v12 == this->fields.changeLayerObjectMaterialRestoreLayer )
+        else if ( v26 == this->fields.changeLayerObjectMaterialRestoreLayer )
         {
           peRenderTexture_ChangeLayerObject__RestoreMaterial((peRenderTexture_ChangeLayerObject_o *)current, 0LL);
         }
@@ -1917,67 +2105,97 @@ LABEL_31:
     }
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v14,
-    (const MethodInfo_2011958 *)Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__Dispose__);
+    &v28,
+    (const MethodInfo_201EFCC *)Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__Dispose__);
 }
 
 
 void __fastcall peRenderTexture__updateTransform(peRenderTexture_o *this, const MethodInfo *method)
 {
-  System_String_o *v3; // x1
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  System_String_o *v17; // x1
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *targetChangeLayerObjects; // x0
   struct UnityEngine_Matrix4x4_o *p_MainCamVP; // x23
   struct UnityEngine_Matrix4x4_o *p_orthoViewMat; // x22
   struct UnityEngine_Matrix4x4_o *p_orthoProjectionMat; // x21
   UnityEngine_Object_o *monitor; // x20
-  _BOOL8 v9; // x0
-  __int64 v10; // x1
+  _BOOL8 v23; // x0
+  __int64 v24; // x1
   UnityEngine_Material_o *sharedMaterial; // x0
-  __int128 v12; // q1
-  __int128 v13; // q2
-  __int128 v14; // q3
+  __int128 v26; // q1
+  __int128 v27; // q2
+  __int128 v28; // q3
   System_String_o *MainCamVPMat; // x1
-  UnityEngine_Material_o *v16; // x0
-  __int128 v17; // q1
-  __int128 v18; // q2
-  __int128 v19; // q3
+  UnityEngine_Material_o *v30; // x0
+  __int128 v31; // q1
+  __int128 v32; // q2
+  __int128 v33; // q3
   System_String_o *ParallelViewMat; // x1
-  UnityEngine_Material_o *v21; // x0
-  __int128 v22; // q1
-  __int128 v23; // q2
-  __int128 v24; // q3
+  UnityEngine_Material_o *v35; // x0
+  __int128 v36; // q1
+  __int128 v37; // q2
+  __int128 v38; // q3
   System_String_o *ParallelProjectionMat; // x1
   UnityEngine_Object_o *boardrenderer; // x20
-  __int128 v27; // q1
-  __int128 v28; // q2
-  __int128 v29; // q3
-  __int128 v30; // q1
-  __int128 v31; // q2
-  __int128 v32; // q3
-  __int128 v33; // q1
-  __int128 v34; // q2
-  __int128 v35; // q3
-  UnityEngine_Matrix4x4_o v36; // [xsp+10h] [xbp-2A0h] BYREF
-  UnityEngine_Matrix4x4_o v37; // [xsp+50h] [xbp-260h] BYREF
-  UnityEngine_Matrix4x4_o v38; // [xsp+90h] [xbp-220h] BYREF
-  UnityEngine_Matrix4x4_o v39; // [xsp+D0h] [xbp-1E0h] BYREF
-  UnityEngine_Matrix4x4_o v40; // [xsp+110h] [xbp-1A0h]
-  UnityEngine_Matrix4x4_o v41; // [xsp+150h] [xbp-160h] BYREF
-  UnityEngine_Matrix4x4_o v42; // [xsp+190h] [xbp-120h]
-  UnityEngine_Matrix4x4_o v43; // [xsp+1D0h] [xbp-E0h] BYREF
-  UnityEngine_Matrix4x4_o v44; // [xsp+210h] [xbp-A0h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v45; // [xsp+250h] [xbp-60h] BYREF
+  __int128 v41; // q1
+  __int128 v42; // q2
+  __int128 v43; // q3
+  __int128 v44; // q1
+  __int128 v45; // q2
+  __int128 v46; // q3
+  __int128 v47; // q1
+  __int128 v48; // q2
+  __int128 v49; // q3
+  UnityEngine_Matrix4x4_o v50; // [xsp+10h] [xbp-2A0h] BYREF
+  UnityEngine_Matrix4x4_o v51; // [xsp+50h] [xbp-260h] BYREF
+  UnityEngine_Matrix4x4_o v52; // [xsp+90h] [xbp-220h] BYREF
+  UnityEngine_Matrix4x4_o v53; // [xsp+D0h] [xbp-1E0h] BYREF
+  UnityEngine_Matrix4x4_o v54; // [xsp+110h] [xbp-1A0h]
+  UnityEngine_Matrix4x4_o v55; // [xsp+150h] [xbp-160h] BYREF
+  UnityEngine_Matrix4x4_o v56; // [xsp+190h] [xbp-120h]
+  UnityEngine_Matrix4x4_o v57; // [xsp+1D0h] [xbp-E0h] BYREF
+  UnityEngine_Matrix4x4_o v58; // [xsp+210h] [xbp-A0h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v59; // [xsp+250h] [xbp-60h] BYREF
 
-  if ( (byte_42BD12F & 1) == 0 )
+  if ( (byte_42F5AB0 & 1) == 0 )
   {
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__Dispose__);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__MoveNext__);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__get_Current__);
-    sub_B52984(&Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__GetEnumerator__);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42BD12F = 1;
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__Dispose__,
+      (_DWORD)method,
+      v2,
+      v3);
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__MoveNext__,
+      v5,
+      v6,
+      v7);
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__get_Current__,
+      v8,
+      v9,
+      v10);
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__GetEnumerator__,
+      v11,
+      v12,
+      v13);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v14, v15, v16);
+    byte_42F5AB0 = 1;
   }
-  memset(&v45, 0, sizeof(v45));
+  memset(&v59, 0, sizeof(v59));
   peRenderTexture__CreatePVMatrix(
     this,
     this->fields.targetBoundsCenter,
@@ -1988,76 +2206,76 @@ void __fastcall peRenderTexture__updateTransform(peRenderTexture_o *this, const 
   if ( !targetChangeLayerObjects )
     goto LABEL_32;
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v44,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v58,
     targetChangeLayerObjects,
-    (const MethodInfo_2FF2480 *)Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__GetEnumerator__);
-  v45.fields.current = *(Il2CppObject **)&v44.fields.m01;
-  *(_OWORD *)&v45.fields.list = *(_OWORD *)&v44.fields.m00;
+    (const MethodInfo_3057E3C *)Method_System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__GetEnumerator__);
+  v59.fields.current = *(Il2CppObject **)&v58.fields.m01;
+  *(_OWORD *)&v59.fields.list = *(_OWORD *)&v58.fields.m00;
   p_MainCamVP = &this->fields.MainCamVP;
   p_orthoViewMat = &this->fields.orthoViewMat;
   p_orthoProjectionMat = &this->fields.orthoProjectionMat;
   while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-            &v45,
-            (const MethodInfo_201195C *)Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__MoveNext__) )
+            &v59,
+            (const MethodInfo_201EFD0 *)Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__MoveNext__) )
   {
-    if ( v45.fields.current )
+    if ( v59.fields.current )
     {
-      monitor = (UnityEngine_Object_o *)v45.fields.current[1].monitor;
+      monitor = (UnityEngine_Object_o *)v59.fields.current[1].monitor;
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      v9 = UnityEngine_Object__op_Inequality(monitor, 0LL, 0LL);
-      if ( v9 )
+      v23 = UnityEngine_Object__op_Inequality(monitor, 0LL, 0LL);
+      if ( v23 )
       {
         if ( !monitor )
-          sub_B52A5C(v9, v10);
+          sub_B5D69C(v23, v24);
         sharedMaterial = UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)monitor, 0LL);
-        v12 = *(_OWORD *)&this->fields.MainCamVP.fields.m03;
-        v13 = *(_OWORD *)&p_MainCamVP->fields.m00;
-        v14 = *(_OWORD *)&this->fields.MainCamVP.fields.m01;
+        v26 = *(_OWORD *)&this->fields.MainCamVP.fields.m03;
+        v27 = *(_OWORD *)&p_MainCamVP->fields.m00;
+        v28 = *(_OWORD *)&this->fields.MainCamVP.fields.m01;
         MainCamVPMat = this->fields.MainCamVPMat;
-        *(_OWORD *)&v44.fields.m02 = *(_OWORD *)&this->fields.MainCamVP.fields.m02;
-        *(_OWORD *)&v44.fields.m03 = v12;
-        *(_OWORD *)&v44.fields.m00 = v13;
-        *(_OWORD *)&v44.fields.m01 = v14;
+        *(_OWORD *)&v58.fields.m02 = *(_OWORD *)&this->fields.MainCamVP.fields.m02;
+        *(_OWORD *)&v58.fields.m03 = v26;
+        *(_OWORD *)&v58.fields.m00 = v27;
+        *(_OWORD *)&v58.fields.m01 = v28;
         if ( !sharedMaterial )
-          sub_B52A5C(0LL, MainCamVPMat);
-        v43 = v44;
-        UnityEngine_Material__SetMatrix(sharedMaterial, MainCamVPMat, &v43, 0LL);
-        v16 = UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)monitor, 0LL);
-        v17 = *(_OWORD *)&this->fields.orthoViewMat.fields.m03;
-        v18 = *(_OWORD *)&p_orthoViewMat->fields.m00;
-        v19 = *(_OWORD *)&this->fields.orthoViewMat.fields.m01;
+          sub_B5D69C(0LL, MainCamVPMat);
+        v57 = v58;
+        UnityEngine_Material__SetMatrix(sharedMaterial, MainCamVPMat, &v57, 0LL);
+        v30 = UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)monitor, 0LL);
+        v31 = *(_OWORD *)&this->fields.orthoViewMat.fields.m03;
+        v32 = *(_OWORD *)&p_orthoViewMat->fields.m00;
+        v33 = *(_OWORD *)&this->fields.orthoViewMat.fields.m01;
         ParallelViewMat = this->fields.ParallelViewMat;
-        *(_OWORD *)&v42.fields.m02 = *(_OWORD *)&this->fields.orthoViewMat.fields.m02;
-        *(_OWORD *)&v42.fields.m03 = v17;
-        *(_OWORD *)&v42.fields.m00 = v18;
-        *(_OWORD *)&v42.fields.m01 = v19;
-        if ( !v16 )
-          sub_B52A5C(0LL, ParallelViewMat);
-        v41 = v42;
-        UnityEngine_Material__SetMatrix(v16, ParallelViewMat, &v41, 0LL);
-        v21 = UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)monitor, 0LL);
-        v22 = *(_OWORD *)&this->fields.orthoProjectionMat.fields.m03;
-        v23 = *(_OWORD *)&p_orthoProjectionMat->fields.m00;
-        v24 = *(_OWORD *)&this->fields.orthoProjectionMat.fields.m01;
+        *(_OWORD *)&v56.fields.m02 = *(_OWORD *)&this->fields.orthoViewMat.fields.m02;
+        *(_OWORD *)&v56.fields.m03 = v31;
+        *(_OWORD *)&v56.fields.m00 = v32;
+        *(_OWORD *)&v56.fields.m01 = v33;
+        if ( !v30 )
+          sub_B5D69C(0LL, ParallelViewMat);
+        v55 = v56;
+        UnityEngine_Material__SetMatrix(v30, ParallelViewMat, &v55, 0LL);
+        v35 = UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)monitor, 0LL);
+        v36 = *(_OWORD *)&this->fields.orthoProjectionMat.fields.m03;
+        v37 = *(_OWORD *)&p_orthoProjectionMat->fields.m00;
+        v38 = *(_OWORD *)&this->fields.orthoProjectionMat.fields.m01;
         ParallelProjectionMat = this->fields.ParallelProjectionMat;
-        *(_OWORD *)&v40.fields.m02 = *(_OWORD *)&this->fields.orthoProjectionMat.fields.m02;
-        *(_OWORD *)&v40.fields.m03 = v22;
-        *(_OWORD *)&v40.fields.m00 = v23;
-        *(_OWORD *)&v40.fields.m01 = v24;
-        if ( !v21 )
-          sub_B52A5C(0LL, ParallelProjectionMat);
-        v39 = v40;
-        UnityEngine_Material__SetMatrix(v21, ParallelProjectionMat, &v39, 0LL);
+        *(_OWORD *)&v54.fields.m02 = *(_OWORD *)&this->fields.orthoProjectionMat.fields.m02;
+        *(_OWORD *)&v54.fields.m03 = v36;
+        *(_OWORD *)&v54.fields.m00 = v37;
+        *(_OWORD *)&v54.fields.m01 = v38;
+        if ( !v35 )
+          sub_B5D69C(0LL, ParallelProjectionMat);
+        v53 = v54;
+        UnityEngine_Material__SetMatrix(v35, ParallelProjectionMat, &v53, 0LL);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v45,
-    (const MethodInfo_2011958 *)Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__Dispose__);
+    &v59,
+    (const MethodInfo_201EFCC *)Method_System_Collections_Generic_List_Enumerator_peRenderTexture_ChangeLayerObject__Dispose__);
   boardrenderer = (UnityEngine_Object_o *)this->fields.boardrenderer;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2070,50 +2288,50 @@ void __fastcall peRenderTexture__updateTransform(peRenderTexture_o *this, const 
     if ( targetChangeLayerObjects )
     {
       targetChangeLayerObjects = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)targetChangeLayerObjects, 0LL);
-      v27 = *(_OWORD *)&this->fields.MainCamVP.fields.m03;
-      v28 = *(_OWORD *)&p_MainCamVP->fields.m00;
-      v29 = *(_OWORD *)&this->fields.MainCamVP.fields.m01;
-      v3 = this->fields.MainCamVPMat;
-      *(_OWORD *)&v44.fields.m02 = *(_OWORD *)&this->fields.MainCamVP.fields.m02;
-      *(_OWORD *)&v44.fields.m03 = v27;
-      *(_OWORD *)&v44.fields.m00 = v28;
-      *(_OWORD *)&v44.fields.m01 = v29;
+      v41 = *(_OWORD *)&this->fields.MainCamVP.fields.m03;
+      v42 = *(_OWORD *)&p_MainCamVP->fields.m00;
+      v43 = *(_OWORD *)&this->fields.MainCamVP.fields.m01;
+      v17 = this->fields.MainCamVPMat;
+      *(_OWORD *)&v58.fields.m02 = *(_OWORD *)&this->fields.MainCamVP.fields.m02;
+      *(_OWORD *)&v58.fields.m03 = v41;
+      *(_OWORD *)&v58.fields.m00 = v42;
+      *(_OWORD *)&v58.fields.m01 = v43;
       if ( targetChangeLayerObjects )
       {
-        v38 = v44;
-        UnityEngine_Material__SetMatrix((UnityEngine_Material_o *)targetChangeLayerObjects, v3, &v38, 0LL);
+        v52 = v58;
+        UnityEngine_Material__SetMatrix((UnityEngine_Material_o *)targetChangeLayerObjects, v17, &v52, 0LL);
         targetChangeLayerObjects = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)this->fields.boardrenderer;
         if ( targetChangeLayerObjects )
         {
           targetChangeLayerObjects = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)targetChangeLayerObjects, 0LL);
-          v30 = *(_OWORD *)&this->fields.orthoViewMat.fields.m03;
-          v31 = *(_OWORD *)&p_orthoViewMat->fields.m00;
-          v32 = *(_OWORD *)&this->fields.orthoViewMat.fields.m01;
-          v3 = this->fields.ParallelViewMat;
-          *(_OWORD *)&v42.fields.m02 = *(_OWORD *)&this->fields.orthoViewMat.fields.m02;
-          *(_OWORD *)&v42.fields.m03 = v30;
-          *(_OWORD *)&v42.fields.m00 = v31;
-          *(_OWORD *)&v42.fields.m01 = v32;
+          v44 = *(_OWORD *)&this->fields.orthoViewMat.fields.m03;
+          v45 = *(_OWORD *)&p_orthoViewMat->fields.m00;
+          v46 = *(_OWORD *)&this->fields.orthoViewMat.fields.m01;
+          v17 = this->fields.ParallelViewMat;
+          *(_OWORD *)&v56.fields.m02 = *(_OWORD *)&this->fields.orthoViewMat.fields.m02;
+          *(_OWORD *)&v56.fields.m03 = v44;
+          *(_OWORD *)&v56.fields.m00 = v45;
+          *(_OWORD *)&v56.fields.m01 = v46;
           if ( targetChangeLayerObjects )
           {
-            v37 = v42;
-            UnityEngine_Material__SetMatrix((UnityEngine_Material_o *)targetChangeLayerObjects, v3, &v37, 0LL);
+            v51 = v56;
+            UnityEngine_Material__SetMatrix((UnityEngine_Material_o *)targetChangeLayerObjects, v17, &v51, 0LL);
             targetChangeLayerObjects = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)this->fields.boardrenderer;
             if ( targetChangeLayerObjects )
             {
               targetChangeLayerObjects = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)targetChangeLayerObjects, 0LL);
-              v33 = *(_OWORD *)&this->fields.orthoProjectionMat.fields.m03;
-              v34 = *(_OWORD *)&p_orthoProjectionMat->fields.m00;
-              v35 = *(_OWORD *)&this->fields.orthoProjectionMat.fields.m01;
-              v3 = this->fields.ParallelProjectionMat;
-              *(_OWORD *)&v40.fields.m02 = *(_OWORD *)&this->fields.orthoProjectionMat.fields.m02;
-              *(_OWORD *)&v40.fields.m03 = v33;
-              *(_OWORD *)&v40.fields.m00 = v34;
-              *(_OWORD *)&v40.fields.m01 = v35;
+              v47 = *(_OWORD *)&this->fields.orthoProjectionMat.fields.m03;
+              v48 = *(_OWORD *)&p_orthoProjectionMat->fields.m00;
+              v49 = *(_OWORD *)&this->fields.orthoProjectionMat.fields.m01;
+              v17 = this->fields.ParallelProjectionMat;
+              *(_OWORD *)&v54.fields.m02 = *(_OWORD *)&this->fields.orthoProjectionMat.fields.m02;
+              *(_OWORD *)&v54.fields.m03 = v47;
+              *(_OWORD *)&v54.fields.m00 = v48;
+              *(_OWORD *)&v54.fields.m01 = v49;
               if ( targetChangeLayerObjects )
               {
-                v36 = v40;
-                UnityEngine_Material__SetMatrix((UnityEngine_Material_o *)targetChangeLayerObjects, v3, &v36, 0LL);
+                v50 = v54;
+                UnityEngine_Material__SetMatrix((UnityEngine_Material_o *)targetChangeLayerObjects, v17, &v50, 0LL);
                 return;
               }
             }
@@ -2122,7 +2340,7 @@ void __fastcall peRenderTexture__updateTransform(peRenderTexture_o *this, const 
       }
     }
 LABEL_32:
-    sub_B52A5C(targetChangeLayerObjects, v3);
+    sub_B5D69C(targetChangeLayerObjects, v17);
   }
 }
 
@@ -2136,7 +2354,7 @@ void __fastcall peRenderTexture_ChangeLayerObject___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.gameObject = gameObject;
-  sub_B52920(&this->fields);
+  sub_B5D560(&this->fields);
   peRenderTexture_ChangeLayerObject__Initialize(this, v5);
 }
 
@@ -2146,15 +2364,16 @@ void __fastcall peRenderTexture_ChangeLayerObject__ChangeLayer(
         int32_t layer,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
   UnityEngine_Object_o *gameObject; // x21
-  __int64 v6; // x1
-  UnityEngine_GameObject_o *v7; // x0
-  UnityEngine_GameObject_o *v8; // x8
+  __int64 v7; // x1
+  UnityEngine_GameObject_o *v8; // x0
+  UnityEngine_GameObject_o *v9; // x8
 
-  if ( (byte_42AD79C & 1) == 0 )
+  if ( (byte_42E601E & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42AD79C = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, layer, (_DWORD)method, v3);
+    byte_42E601E = 1;
   }
   gameObject = (UnityEngine_Object_o *)this->fields.gameObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2164,25 +2383,25 @@ void __fastcall peRenderTexture_ChangeLayerObject__ChangeLayer(
   }
   if ( UnityEngine_Object__op_Inequality(gameObject, 0LL, 0LL) )
   {
-    v7 = this->fields.gameObject;
-    if ( v7 )
+    v8 = this->fields.gameObject;
+    if ( v8 )
     {
-      v7 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_layer(v7, 0LL);
-      v8 = this->fields.gameObject;
-      this->fields.prevLayer = (int)v7;
-      if ( v8 )
+      v8 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_layer(v8, 0LL);
+      v9 = this->fields.gameObject;
+      this->fields.prevLayer = (int)v8;
+      if ( v9 )
       {
-        if ( UnityEngine_GameObject__get_layer(v8, 0LL) == layer )
+        if ( UnityEngine_GameObject__get_layer(v9, 0LL) == layer )
           return;
-        v7 = this->fields.gameObject;
-        if ( v7 )
+        v8 = this->fields.gameObject;
+        if ( v8 )
         {
-          UnityEngine_GameObject__set_layer(v7, layer, 0LL);
+          UnityEngine_GameObject__set_layer(v8, layer, 0LL);
           return;
         }
       }
     }
-    sub_B52A5C(v7, v6);
+    sub_B5D69C(v8, v7);
   }
 }
 
@@ -2192,20 +2411,24 @@ void __fastcall peRenderTexture_ChangeLayerObject__ChangeMaterial(
         UnityEngine_Material_o *material,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
   UnityEngine_Object_o *renderer; // x21
   UnityEngine_Object_o *changeMaterial; // x22
-  __int64 v7; // x1
-  UnityEngine_Material_o *v8; // x22
+  __int64 v11; // x1
+  UnityEngine_Material_o *v12; // x22
   UnityEngine_Renderer_o *sharedMaterial; // x0
   UnityEngine_Object_o *orgMaterial; // x20
-  UnityEngine_Material_o *v11; // x8
-  UnityEngine_Material_o *v12; // x19
+  UnityEngine_Material_o *v15; // x8
+  UnityEngine_Material_o *v16; // x19
 
-  if ( (byte_42AD79E & 1) == 0 )
+  if ( (byte_42E6020 & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Material_TypeInfo);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42AD79E = 1;
+    sub_B5D5C4(&UnityEngine_Material_TypeInfo, (_DWORD)material, (_DWORD)method, v3);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v6, v7, v8);
+    byte_42E6020 = 1;
   }
   renderer = (UnityEngine_Object_o *)this->fields.renderer;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2223,10 +2446,10 @@ void __fastcall peRenderTexture_ChangeLayerObject__ChangeMaterial(
     }
     if ( UnityEngine_Object__op_Equality(changeMaterial, 0LL, 0LL) )
     {
-      v8 = (UnityEngine_Material_o *)sub_B52A54(UnityEngine_Material_TypeInfo);
-      UnityEngine_Material___ctor_41516484(v8, material, 0LL);
-      this->fields.changeMaterial = v8;
-      sub_B52920(&this->fields.changeMaterial);
+      v12 = (UnityEngine_Material_o *)sub_B5D694(UnityEngine_Material_TypeInfo);
+      UnityEngine_Material___ctor_41620632(v12, material, 0LL);
+      this->fields.changeMaterial = v12;
+      sub_B5D560(&this->fields.changeMaterial);
     }
     sharedMaterial = this->fields.renderer;
     if ( !sharedMaterial )
@@ -2244,20 +2467,20 @@ void __fastcall peRenderTexture_ChangeLayerObject__ChangeMaterial(
       if ( sharedMaterial )
       {
         sharedMaterial = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(sharedMaterial, 0LL);
-        v11 = this->fields.orgMaterial;
-        if ( v11 )
+        v15 = this->fields.orgMaterial;
+        if ( v15 )
         {
-          v12 = (UnityEngine_Material_o *)sharedMaterial;
-          sharedMaterial = (UnityEngine_Renderer_o *)UnityEngine_Material__get_mainTexture(v11, 0LL);
-          if ( v12 )
+          v16 = (UnityEngine_Material_o *)sharedMaterial;
+          sharedMaterial = (UnityEngine_Renderer_o *)UnityEngine_Material__get_mainTexture(v15, 0LL);
+          if ( v16 )
           {
-            UnityEngine_Material__set_mainTexture(v12, (UnityEngine_Texture_o *)sharedMaterial, 0LL);
+            UnityEngine_Material__set_mainTexture(v16, (UnityEngine_Texture_o *)sharedMaterial, 0LL);
             return;
           }
         }
       }
 LABEL_22:
-      sub_B52A5C(sharedMaterial, v7);
+      sub_B5D69C(sharedMaterial, v11);
     }
   }
 }
@@ -2267,19 +2490,21 @@ void __fastcall peRenderTexture_ChangeLayerObject__Finalize(
         peRenderTexture_ChangeLayerObject_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   struct UnityEngine_Material_o **p_changeMaterial; // x20
   UnityEngine_Object_o *changeMaterial; // x21
-  UnityEngine_Object_o *v5; // x21
+  UnityEngine_Object_o *v7; // x21
   UnityEngine_Renderer_o **p_renderer; // x20
   UnityEngine_Object_o *renderer; // x21
-  __int64 v8; // x1
+  __int64 v10; // x1
   struct UnityEngine_Material_o **p_orgMaterial; // x19
   UnityEngine_Material_o *orgMaterial; // t1
 
-  if ( (byte_42AD79B & 1) == 0 )
+  if ( (byte_42E601D & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42AD79B = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E601D = 1;
   }
   p_changeMaterial = &this->fields.changeMaterial;
   changeMaterial = (UnityEngine_Object_o *)this->fields.changeMaterial;
@@ -2290,15 +2515,15 @@ void __fastcall peRenderTexture_ChangeLayerObject__Finalize(
   }
   if ( UnityEngine_Object__op_Inequality(changeMaterial, 0LL, 0LL) )
   {
-    v5 = (UnityEngine_Object_o *)*p_changeMaterial;
+    v7 = (UnityEngine_Object_o *)*p_changeMaterial;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__DestroyImmediate_35617168(v5, 0LL);
+    UnityEngine_Object__DestroyImmediate_35620448(v7, 0LL);
     *p_changeMaterial = 0LL;
-    sub_B52920(&this->fields.changeMaterial);
+    sub_B5D560(&this->fields.changeMaterial);
   }
   p_renderer = &this->fields.renderer;
   renderer = (UnityEngine_Object_o *)this->fields.renderer;
@@ -2310,7 +2535,7 @@ void __fastcall peRenderTexture_ChangeLayerObject__Finalize(
   if ( UnityEngine_Object__op_Inequality(renderer, 0LL, 0LL) )
   {
     if ( !*p_renderer )
-      sub_B52A5C(0LL, v8);
+      sub_B5D69C(0LL, v10);
     orgMaterial = this->fields.orgMaterial;
     p_orgMaterial = &this->fields.orgMaterial;
     UnityEngine_Renderer__set_sharedMaterial(*p_renderer, orgMaterial, 0LL);
@@ -2320,9 +2545,9 @@ void __fastcall peRenderTexture_ChangeLayerObject__Finalize(
     p_orgMaterial = &this->fields.orgMaterial;
   }
   *p_orgMaterial = 0LL;
-  sub_B52920(p_orgMaterial);
+  sub_B5D560(p_orgMaterial);
   *p_renderer = 0LL;
-  sub_B52920(p_renderer);
+  sub_B5D560(p_renderer);
 }
 
 
@@ -2330,16 +2555,21 @@ void __fastcall peRenderTexture_ChangeLayerObject__Initialize(
         peRenderTexture_ChangeLayerObject_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
   UnityEngine_Object_o *gameObject; // x20
-  __int64 v4; // x1
+  __int64 v9; // x1
   UnityEngine_GameObject_o *layer; // x0
   UnityEngine_Renderer_o *renderer; // x8
 
-  if ( (byte_42AD79A & 1) == 0 )
+  if ( (byte_42E601C & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_Renderer___);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42AD79A = 1;
+    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_Renderer___, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v5, v6, v7);
+    byte_42E601C = 1;
   }
   gameObject = (UnityEngine_Object_o *)this->fields.gameObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2353,18 +2583,18 @@ void __fastcall peRenderTexture_ChangeLayerObject__Initialize(
     if ( !layer
       || (this->fields.renderer = (struct UnityEngine_Renderer_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                      layer,
-                                                                     (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_Renderer___),
-          sub_B52920(&this->fields.renderer),
+                                                                     (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_Renderer___),
+          sub_B5D560(&this->fields.renderer),
           (layer = this->fields.gameObject) == 0LL)
       || (layer = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_layer(layer, 0LL),
           renderer = this->fields.renderer,
           this->fields.prevLayer = (int)layer,
           !renderer) )
     {
-      sub_B52A5C(layer, v4);
+      sub_B5D69C(layer, v9);
     }
     this->fields.orgMaterial = UnityEngine_Renderer__get_sharedMaterial(renderer, 0LL);
-    sub_B52920(&this->fields.orgMaterial);
+    sub_B5D560(&this->fields.orgMaterial);
   }
 }
 
@@ -2373,14 +2603,16 @@ void __fastcall peRenderTexture_ChangeLayerObject__RestoreMaterial(
         peRenderTexture_ChangeLayerObject_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   UnityEngine_Object_o *renderer; // x20
-  __int64 v4; // x1
-  UnityEngine_Renderer_o *v5; // x0
+  __int64 v6; // x1
+  UnityEngine_Renderer_o *v7; // x0
 
-  if ( (byte_42AD79F & 1) == 0 )
+  if ( (byte_42E6021 & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42AD79F = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E6021 = 1;
   }
   renderer = (UnityEngine_Object_o *)this->fields.renderer;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2390,10 +2622,10 @@ void __fastcall peRenderTexture_ChangeLayerObject__RestoreMaterial(
   }
   if ( UnityEngine_Object__op_Inequality(renderer, 0LL, 0LL) )
   {
-    v5 = this->fields.renderer;
-    if ( !v5 )
-      sub_B52A5C(0LL, v4);
-    UnityEngine_Renderer__set_sharedMaterial(v5, this->fields.orgMaterial, 0LL);
+    v7 = this->fields.renderer;
+    if ( !v7 )
+      sub_B5D69C(0LL, v6);
+    UnityEngine_Renderer__set_sharedMaterial(v7, this->fields.orgMaterial, 0LL);
   }
 }
 
@@ -2402,14 +2634,16 @@ bool __fastcall peRenderTexture_ChangeLayerObject__SyncLayer(
         peRenderTexture_ChangeLayerObject_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   UnityEngine_Object_o *gameObject; // x20
-  __int64 v4; // x1
-  UnityEngine_GameObject_o *v5; // x0
+  __int64 v6; // x1
+  UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_42AD79D & 1) == 0 )
+  if ( (byte_42E601F & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42AD79D = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E601F = 1;
   }
   gameObject = (UnityEngine_Object_o *)this->fields.gameObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2419,16 +2653,16 @@ bool __fastcall peRenderTexture_ChangeLayerObject__SyncLayer(
   }
   if ( !UnityEngine_Object__op_Inequality(gameObject, 0LL, 0LL) )
     return 0;
-  v5 = this->fields.gameObject;
-  if ( !v5 )
+  v7 = this->fields.gameObject;
+  if ( !v7 )
     goto LABEL_12;
-  if ( UnityEngine_GameObject__get_layer(v5, 0LL) == this->fields.prevLayer )
+  if ( UnityEngine_GameObject__get_layer(v7, 0LL) == this->fields.prevLayer )
     return 0;
-  v5 = this->fields.gameObject;
-  if ( !v5 )
+  v7 = this->fields.gameObject;
+  if ( !v7 )
 LABEL_12:
-    sub_B52A5C(v5, v4);
-  this->fields.prevLayer = UnityEngine_GameObject__get_layer(v5, 0LL);
+    sub_B5D69C(v7, v6);
+  this->fields.prevLayer = UnityEngine_GameObject__get_layer(v7, 0LL);
   return 1;
 }
 
@@ -2437,14 +2671,16 @@ int32_t __fastcall peRenderTexture_ChangeLayerObject__get_layer(
         peRenderTexture_ChangeLayerObject_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   UnityEngine_Object_o *gameObject; // x20
-  __int64 v4; // x1
-  UnityEngine_GameObject_o *v5; // x0
+  __int64 v6; // x1
+  UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_42AD799 & 1) == 0 )
+  if ( (byte_42E601B & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42AD799 = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E601B = 1;
   }
   gameObject = (UnityEngine_Object_o *)this->fields.gameObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2454,10 +2690,10 @@ int32_t __fastcall peRenderTexture_ChangeLayerObject__get_layer(
   }
   if ( !UnityEngine_Object__op_Inequality(gameObject, 0LL, 0LL) )
     return -1;
-  v5 = this->fields.gameObject;
-  if ( !v5 )
-    sub_B52A5C(0LL, v4);
-  return UnityEngine_GameObject__get_layer(v5, 0LL);
+  v7 = this->fields.gameObject;
+  if ( !v7 )
+    sub_B5D69C(0LL, v6);
+  return UnityEngine_GameObject__get_layer(v7, 0LL);
 }
 
 
@@ -2474,24 +2710,29 @@ bool __fastcall peRenderTexture___c__DisplayClass48_0___registChangeLayerObjects
         peRenderTexture_ChangeLayerObject_o *n,
         const MethodInfo *method)
 {
-  peRenderTexture___c__DisplayClass48_0_o *v4; // x20
+  __int64 v3; // x3
+  peRenderTexture___c__DisplayClass48_0_o *v5; // x20
   UnityEngine_Object_o *gameObject; // x19
-  UnityEngine_Object_o *v6; // x20
+  UnityEngine_Object_o *v7; // x20
 
-  v4 = this;
-  if ( (byte_42AD798 & 1) == 0 )
+  v5 = this;
+  if ( (byte_42E601A & 1) == 0 )
   {
-    this = (peRenderTexture___c__DisplayClass48_0_o *)sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42AD798 = 1;
+    this = (peRenderTexture___c__DisplayClass48_0_o *)sub_B5D5C4(
+                                                        &UnityEngine_Object_TypeInfo,
+                                                        (_DWORD)n,
+                                                        (_DWORD)method,
+                                                        v3);
+    byte_42E601A = 1;
   }
   if ( !n )
-    sub_B52A5C(this, n);
+    sub_B5D69C(this, n);
   gameObject = (UnityEngine_Object_o *)n->fields.gameObject;
-  v6 = (UnityEngine_Object_o *)v4->fields.gameObject;
+  v7 = (UnityEngine_Object_o *)v5->fields.gameObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  return UnityEngine_Object__op_Equality(gameObject, v6, 0LL);
+  return UnityEngine_Object__op_Equality(gameObject, v7, 0LL);
 }

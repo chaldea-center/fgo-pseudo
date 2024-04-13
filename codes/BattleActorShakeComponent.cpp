@@ -46,7 +46,7 @@ void __fastcall BattleActorShakeComponent__Update(BattleActorShakeComponent_o *t
         !v8) )
   {
 LABEL_9:
-    sub_B52A5C(v3, v4);
+    sub_B5D69C(v3, v4);
   }
   v15.fields.y = v5 * v9;
   v15.fields.z = v7 * v9;

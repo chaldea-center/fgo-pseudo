@@ -1,27 +1,32 @@
 void __fastcall UserGachaHistoryEntity___ctor(UserGachaHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42AEF26 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E711E & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_string___ctor__);
-    byte_42AEF26 = 1;
+    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
+    byte_42E711E = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall UserGachaHistoryEntity__CreatePK(int64_t userId, int32_t gachaId, const MethodInfo *method)
 {
-  if ( (byte_42AEF25 & 1) == 0 )
+  __int64 v3; // x3
+
+  if ( (byte_42E711D & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_42AEF25 = 1;
+    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_long__int___, gachaId, (_DWORD)method, v3);
+    byte_42E711D = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            gachaId,
-           (const MethodInfo_1A4E080 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_1AE3148 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -46,7 +51,7 @@ System_String_o *__fastcall UserGachaHistoryEntity__ToString(UserGachaHistoryEnt
          this->fields.num,
          0LL);
   if ( !v2 )
-    sub_B52A5C(0LL, v3);
+    sub_B5D69C(0LL, v3);
   return v2->fields.name;
 }
 
@@ -55,20 +60,22 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_CreatedAtToString(
         UserGachaHistoryEntity_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   BattleServantConfConponent_o *p_createdAtString; // x19
   int64_t createdAt; // x20
   System_Int32_array **DateTime; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  System_String_array **v8; // x2
+  System_String_array **v9; // x3
+  System_Boolean_array **v10; // x4
+  System_Int32_array **v11; // x5
+  System_Int32_array *v12; // x6
+  System_Int32_array *v13; // x7
 
-  if ( (byte_42AEF23 & 1) == 0 )
+  if ( (byte_42E711B & 1) == 0 )
   {
-    sub_B52984(&LocalizationManager_TypeInfo);
-    byte_42AEF23 = 1;
+    sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E711B = 1;
   }
   p_createdAtString = (BattleServantConfConponent_o *)&this->fields.createdAtString;
   if ( System_String__IsNullOrEmpty(this->fields.createdAtString, 0LL) )
@@ -81,7 +88,7 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_CreatedAtToString(
     }
     DateTime = (System_Int32_array **)LocalizationManager__GetDateTime(createdAt, 0LL);
     p_createdAtString->klass = (BattleServantConfConponent_c *)DateTime;
-    sub_B52920(p_createdAtString, DateTime, v6, v7, v8, v9, v10, v11);
+    sub_B5D560(p_createdAtString, DateTime, v8, v9, v10, v11, v12, v13);
   }
   return (System_String_o *)p_createdAtString->klass;
 }
@@ -91,22 +98,30 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_TitleToString(
         UserGachaHistoryEntity_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
   System_String_o **p_titleString; // x19
-  __int64 *v4; // x8
-  System_Int32_array **v5; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  __int64 *v12; // x8
+  System_Int32_array **v13; // x0
+  System_String_array **v14; // x2
+  System_String_array **v15; // x3
+  System_Boolean_array **v16; // x4
+  System_Int32_array **v17; // x5
+  System_Int32_array *v18; // x6
+  System_Int32_array *v19; // x7
 
-  if ( (byte_42AEF24 & 1) == 0 )
+  if ( (byte_42E711C & 1) == 0 )
   {
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&StringLiteral_12520/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/);
-    sub_B52984(&StringLiteral_12530/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/);
-    byte_42AEF24 = 1;
+    sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&StringLiteral_12579/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/, v5, v6, v7);
+    sub_B5D5C4(&StringLiteral_12589/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/, v8, v9, v10);
+    byte_42E711C = 1;
   }
   p_titleString = &this->fields.titleString;
   if ( System_String__IsNullOrEmpty(this->fields.titleString, 0LL) )
@@ -118,7 +133,7 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_TitleToString(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v4 = &StringLiteral_12530/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/;
+      v12 = &StringLiteral_12589/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/;
     }
     else
     {
@@ -127,11 +142,11 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_TitleToString(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v4 = &StringLiteral_12520/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/;
+      v12 = &StringLiteral_12579/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/;
     }
-    v5 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)*v4, 0LL);
-    *p_titleString = (System_String_o *)v5;
-    sub_B52920((BattleServantConfConponent_o *)&this->fields.titleString, v5, v6, v7, v8, v9, v10, v11);
+    v13 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)*v12, 0LL);
+    *p_titleString = (System_String_o *)v13;
+    sub_B5D560((BattleServantConfConponent_o *)&this->fields.titleString, v13, v14, v15, v16, v17, v18, v19);
   }
   return *p_titleString;
 }

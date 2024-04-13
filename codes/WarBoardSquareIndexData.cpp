@@ -4,7 +4,7 @@ void __fastcall WarBoardSquareIndexData___ctor(WarBoardSquareIndexData_o *this, 
 }
 
 
-void __fastcall WarBoardSquareIndexData___ctor_29098244(
+void __fastcall WarBoardSquareIndexData___ctor_29175512(
         WarBoardSquareIndexData_o *this,
         WarBoardSquareIndexData_SaveData_o *squareIndexData,
         const MethodInfo *method)
@@ -28,11 +28,11 @@ void __fastcall WarBoardSquareIndexData___ctor_29098244(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !squareIndexData )
-    sub_B52A5C(v5, v6);
+    sub_B5D69C(v5, v6);
   this->fields.squareIndex = squareIndexData->fields.squareIndex;
   effectIds = squareIndexData->fields.effectIds;
   this->fields.effectIds = effectIds;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.effectIds,
     (System_Int32_array **)effectIds,
     v7,
@@ -43,7 +43,7 @@ void __fastcall WarBoardSquareIndexData___ctor_29098244(
     v12);
   script = squareIndexData->fields.script;
   this->fields.script = script;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.script,
     (System_Int32_array **)script,
     v15,
@@ -62,13 +62,13 @@ void __fastcall WarBoardSquareIndexData_SaveData___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.squareIndex = 0;
   this->fields.effectIds = 0LL;
-  sub_B52920(&this->fields.effectIds);
+  sub_B5D560(&this->fields.effectIds);
   this->fields.script = 0LL;
-  sub_B52920(&this->fields.script);
+  sub_B5D560(&this->fields.script);
 }
 
 
-void __fastcall WarBoardSquareIndexData_SaveData___ctor_20320752(
+void __fastcall WarBoardSquareIndexData_SaveData___ctor_20366340(
         WarBoardSquareIndexData_SaveData_o *this,
         WarBoardSquareIndexData_o *squareIndexData,
         const MethodInfo *method)
@@ -78,10 +78,10 @@ void __fastcall WarBoardSquareIndexData_SaveData___ctor_20320752(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !squareIndexData )
-    sub_B52A5C(v5, v6);
+    sub_B5D69C(v5, v6);
   this->fields.squareIndex = squareIndexData->fields.squareIndex;
   this->fields.effectIds = squareIndexData->fields.effectIds;
-  sub_B52920(&this->fields.effectIds);
+  sub_B5D560(&this->fields.effectIds);
   this->fields.script = squareIndexData->fields.script;
-  sub_B52920(&this->fields.script);
+  sub_B5D560(&this->fields.script);
 }

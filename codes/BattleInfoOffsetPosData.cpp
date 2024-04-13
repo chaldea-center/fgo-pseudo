@@ -18,7 +18,7 @@ void __fastcall BattleInfoOffsetPosData___ctor(
   System_Object___ctor((Il2CppObject *)v4, 0LL);
   v4->fields.obj = obj;
   v4 = (BattleInfoOffsetPosData_o *)((char *)v4 + 16);
-  sub_B52920(v4);
+  sub_B5D560(v4);
   *(float *)&v4->monitor = x;
   *((float *)&v4->monitor + 1) = y;
   *(float *)&v4->fields.obj = z;
@@ -27,14 +27,16 @@ void __fastcall BattleInfoOffsetPosData___ctor(
 
 bool __fastcall BattleInfoOffsetPosData__get_IsActive(BattleInfoOffsetPosData_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   UnityEngine_Object_o *obj; // x20
-  __int64 v4; // x1
-  UnityEngine_GameObject_o *v5; // x0
+  __int64 v6; // x1
+  UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_42AD1EC & 1) == 0 )
+  if ( (byte_42E5958 & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42AD1EC = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E5958 = 1;
   }
   obj = (UnityEngine_Object_o *)this->fields.obj;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -44,10 +46,10 @@ bool __fastcall BattleInfoOffsetPosData__get_IsActive(BattleInfoOffsetPosData_o 
   }
   if ( !UnityEngine_Object__op_Inequality(obj, 0LL, 0LL) )
     return 0;
-  v5 = this->fields.obj;
-  if ( !v5 )
-    sub_B52A5C(0LL, v4);
-  return UnityEngine_GameObject__get_activeInHierarchy(v5, 0LL);
+  v7 = this->fields.obj;
+  if ( !v7 )
+    sub_B5D69C(0LL, v6);
+  return UnityEngine_GameObject__get_activeInHierarchy(v7, 0LL);
 }
 
 

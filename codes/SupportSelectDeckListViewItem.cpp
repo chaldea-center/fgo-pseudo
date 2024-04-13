@@ -15,10 +15,10 @@ void __fastcall SupportSelectDeckListViewItem___ctor(
   System_Int32_array *v15; // x7
 
   v9 = this;
-  ListViewItem___ctor_23532700((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_23901828((ListViewItem_o *)this, index, 0LL);
   v9->fields.supportData = data;
   v9 = (SupportSelectDeckListViewItem_o *)((char *)v9 + 112);
-  sub_B52920((BattleServantConfConponent_o *)v9, (System_Int32_array **)data, v10, v11, v12, v13, v14, v15);
+  sub_B5D560((BattleServantConfConponent_o *)v9, (System_Int32_array **)data, v10, v11, v12, v13, v14, v15);
   LOBYTE(v9->monitor) = isSameKind;
   BYTE1(v9->monitor) = isPossibleCopy;
 }

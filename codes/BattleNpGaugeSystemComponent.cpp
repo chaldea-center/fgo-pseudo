@@ -1,20 +1,25 @@
 void __fastcall BattleNpGaugeSystemComponent___ctor(BattleNpGaugeSystemComponent_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_List_float__o *v3; // x20
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  System_Collections_Generic_List_float__o *v8; // x20
 
-  if ( (byte_42AC991 & 1) == 0 )
+  if ( (byte_42E5086 & 1) == 0 )
   {
-    sub_B52984(&Method_System_Collections_Generic_List_float___ctor__);
-    sub_B52984(&System_Collections_Generic_List_float__TypeInfo);
-    byte_42AC991 = 1;
+    sub_B5D5C4(&Method_System_Collections_Generic_List_float___ctor__, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&System_Collections_Generic_List_float__TypeInfo, v5, v6, v7);
+    byte_42E5086 = 1;
   }
   this->fields.isPercent = 1;
-  v3 = (System_Collections_Generic_List_float__o *)sub_B52A54(System_Collections_Generic_List_float__TypeInfo);
+  v8 = (System_Collections_Generic_List_float__o *)sub_B5D694(System_Collections_Generic_List_float__TypeInfo);
   System_Collections_Generic_List_float____ctor(
-    v3,
-    (const MethodInfo_2FD7B4C *)Method_System_Collections_Generic_List_float___ctor__);
-  this->fields.sliderDefaultValue = v3;
-  sub_B52920(&this->fields.sliderDefaultValue);
+    v8,
+    (const MethodInfo_300504C *)Method_System_Collections_Generic_List_float___ctor__);
+  this->fields.sliderDefaultValue = v8;
+  sub_B5D560(&this->fields.sliderDefaultValue);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -26,7 +31,7 @@ void __fastcall BattleNpGaugeSystemComponent__EndTweenFunc(
 {
   const MethodInfo *v3; // x3
 
-  BattleNpGaugeSystemComponent__updateNpGauge_18650228(this, targetParam, this->fields.maxparam, v3);
+  BattleNpGaugeSystemComponent__updateNpGauge_18512480(this, targetParam, this->fields.maxparam, v3);
 }
 
 
@@ -34,73 +39,87 @@ void __fastcall BattleNpGaugeSystemComponent__InitSliderValue(
         BattleNpGaugeSystemComponent_o *this,
         const MethodInfo *method)
 {
-  BattleNpGaugeSystemComponent_o *v2; // x19
+  int v2; // w2
+  __int64 v3; // x3
+  BattleNpGaugeSystemComponent_o *v4; // x19
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
   struct UIProgressBar_array *sliderlist; // x8
   struct System_Collections_Generic_List_float__o *sliderDefaultValue; // x9
   System_Collections_Generic_List_float__o **p_sliderDefaultValue; // x20
-  System_Collections_Generic_List_float__o *v6; // x21
-  __int64 v7; // x22
+  System_Collections_Generic_List_float__o *v20; // x21
+  __int64 v21; // x22
   int max_length; // w9
-  System_Collections_Generic_List_float__o *v9; // x21
+  System_Collections_Generic_List_float__o *v23; // x21
   float value; // s0
-  __int64 v11; // x22
-  int v12; // w9
-  System_Collections_Generic_List_float__o *v13; // x23
-  UIProgressBar_o **v14; // x8
-  __int64 v15; // x0
+  __int64 v25; // x22
+  int v26; // w9
+  System_Collections_Generic_List_float__o *v27; // x23
+  UIProgressBar_o **v28; // x8
+  __int64 v29; // x0
 
-  v2 = this;
-  if ( (byte_42AC98D & 1) == 0 )
+  v4 = this;
+  if ( (byte_42E5082 & 1) == 0 )
   {
-    sub_B52984(&Method_System_Collections_Generic_List_float__Add__);
-    sub_B52984(&Method_System_Collections_Generic_List_float___ctor__);
-    sub_B52984(&Method_System_Collections_Generic_List_float__get_Count__);
-    sub_B52984(&Method_System_Collections_Generic_List_float__get_Item__);
-    this = (BattleNpGaugeSystemComponent_o *)sub_B52984(&System_Collections_Generic_List_float__TypeInfo);
-    byte_42AC98D = 1;
+    sub_B5D5C4(&Method_System_Collections_Generic_List_float__Add__, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_float___ctor__, v5, v6, v7);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_float__get_Count__, v8, v9, v10);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_float__get_Item__, v11, v12, v13);
+    this = (BattleNpGaugeSystemComponent_o *)sub_B5D5C4(&System_Collections_Generic_List_float__TypeInfo, v14, v15, v16);
+    byte_42E5082 = 1;
   }
-  sliderlist = v2->fields.sliderlist;
+  sliderlist = v4->fields.sliderlist;
   if ( sliderlist )
   {
-    p_sliderDefaultValue = &v2->fields.sliderDefaultValue;
-    sliderDefaultValue = v2->fields.sliderDefaultValue;
+    p_sliderDefaultValue = &v4->fields.sliderDefaultValue;
+    sliderDefaultValue = v4->fields.sliderDefaultValue;
     if ( !sliderDefaultValue || !sliderDefaultValue->fields._size )
     {
-      v6 = (System_Collections_Generic_List_float__o *)sub_B52A54(System_Collections_Generic_List_float__TypeInfo);
+      v20 = (System_Collections_Generic_List_float__o *)sub_B5D694(System_Collections_Generic_List_float__TypeInfo);
       System_Collections_Generic_List_float____ctor(
-        v6,
-        (const MethodInfo_2FD7B4C *)Method_System_Collections_Generic_List_float___ctor__);
-      v2->fields.sliderDefaultValue = v6;
-      sub_B52920(&v2->fields.sliderDefaultValue);
-      sliderlist = v2->fields.sliderlist;
+        v20,
+        (const MethodInfo_300504C *)Method_System_Collections_Generic_List_float___ctor__);
+      v4->fields.sliderDefaultValue = v20;
+      sub_B5D560(&v4->fields.sliderDefaultValue);
+      sliderlist = v4->fields.sliderlist;
       if ( !sliderlist )
 LABEL_22:
-        sub_B52A5C(this, method);
-      v7 = 0LL;
+        sub_B5D69C(this, method);
+      v21 = 0LL;
       while ( 1 )
       {
         max_length = sliderlist->max_length;
-        if ( (int)v7 >= max_length )
+        if ( (int)v21 >= max_length )
           break;
-        if ( (unsigned int)v7 >= max_length )
+        if ( (unsigned int)v21 >= max_length )
         {
 LABEL_24:
-          v15 = sub_B52A88(this);
-          sub_B52A28(v15, 0LL);
+          v29 = sub_B5D6C8(this);
+          sub_B5D668(v29, 0LL);
         }
-        this = (BattleNpGaugeSystemComponent_o *)sliderlist->m_Items[v7];
+        this = (BattleNpGaugeSystemComponent_o *)sliderlist->m_Items[v21];
         if ( this )
         {
-          v9 = *p_sliderDefaultValue;
+          v23 = *p_sliderDefaultValue;
           value = UIProgressBar__get_value((UIProgressBar_o *)this, 0LL);
-          if ( v9 )
+          if ( v23 )
           {
             System_Collections_Generic_List_float___Add(
-              v9,
+              v23,
               value,
-              (const MethodInfo_2FD88A4 *)Method_System_Collections_Generic_List_float__Add__);
-            sliderlist = v2->fields.sliderlist;
-            ++v7;
+              (const MethodInfo_3005DA4 *)Method_System_Collections_Generic_List_float__Add__);
+            sliderlist = v4->fields.sliderlist;
+            ++v21;
             if ( sliderlist )
               continue;
           }
@@ -108,25 +127,25 @@ LABEL_24:
         goto LABEL_22;
       }
     }
-    v11 = 0LL;
+    v25 = 0LL;
     while ( 1 )
     {
-      v12 = sliderlist->max_length;
-      if ( (int)v11 >= v12 )
+      v26 = sliderlist->max_length;
+      if ( (int)v25 >= v26 )
         break;
-      if ( (unsigned int)v11 >= v12 )
+      if ( (unsigned int)v25 >= v26 )
         goto LABEL_24;
-      v13 = *p_sliderDefaultValue;
+      v27 = *p_sliderDefaultValue;
       if ( *p_sliderDefaultValue )
       {
-        v14 = (UIProgressBar_o **)(&sliderlist->obj.klass + v11);
-        if ( v13->fields._size <= (unsigned int)v11 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
-        if ( v14[4] )
+        v28 = (UIProgressBar_o **)(&sliderlist->obj.klass + v25);
+        if ( v27->fields._size <= (unsigned int)v25 )
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42302284(0LL);
+        if ( v28[4] )
         {
-          UIProgressBar__set_value(v14[4], v13->fields._items->m_Items[v11 + 1], 0LL);
-          sliderlist = v2->fields.sliderlist;
-          ++v11;
+          UIProgressBar__set_value(v28[4], v27->fields._items->m_Items[v25 + 1], 0LL);
+          sliderlist = v4->fields.sliderlist;
+          ++v25;
           if ( sliderlist )
             continue;
         }
@@ -142,247 +161,281 @@ void __fastcall BattleNpGaugeSystemComponent__changeParam(
         int32_t param,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  int v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
+  int v18; // w1
+  int v19; // w2
+  __int64 v20; // x3
+  int v21; // w1
+  int v22; // w2
+  __int64 v23; // x3
+  int v24; // w1
+  int v25; // w2
+  __int64 v26; // x3
+  int v27; // w1
+  int v28; // w2
+  __int64 v29; // x3
+  int v30; // w1
+  int v31; // w2
+  __int64 v32; // x3
+  int v33; // w1
+  int v34; // w2
+  __int64 v35; // x3
+  int v36; // w1
+  int v37; // w2
+  __int64 v38; // x3
   UnityEngine_GameObject_o *gameObject; // x19
-  UnityEngine_GameObject_o *v6; // x19
-  __int64 v7; // x0
-  __int64 v8; // x1
-  System_Object_array *v9; // x20
-  __int64 v10; // x0
-  __int64 v11; // x1
-  Il2CppObject *v12; // x22
-  __int64 v13; // x1
-  Il2CppObject *v14; // x22
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  Il2CppObject *v20; // x21
-  __int64 v21; // x1
-  Il2CppObject *v22; // x21
-  System_Collections_Hashtable_o *v23; // x0
-  __int64 v24; // x0
-  __int64 v25; // x0
-  int v26; // [xsp+8h] [xbp-38h] BYREF
-  int32_t v27; // [xsp+Ch] [xbp-34h] BYREF
-  int32_t v28; // [xsp+18h] [xbp-28h] BYREF
+  UnityEngine_GameObject_o *v40; // x19
+  __int64 v41; // x0
+  __int64 v42; // x1
+  System_Object_array *v43; // x20
+  __int64 v44; // x0
+  __int64 v45; // x1
+  Il2CppObject *v46; // x22
+  __int64 v47; // x1
+  Il2CppObject *v48; // x22
+  __int64 v49; // x1
+  __int64 v50; // x1
+  __int64 v51; // x1
+  __int64 v52; // x1
+  __int64 v53; // x1
+  Il2CppObject *v54; // x21
+  __int64 v55; // x1
+  Il2CppObject *v56; // x21
+  System_Collections_Hashtable_o *v57; // x0
+  __int64 v58; // x0
+  __int64 v59; // x0
+  int v60; // [xsp+8h] [xbp-38h] BYREF
+  int32_t v61; // [xsp+Ch] [xbp-34h] BYREF
+  int32_t v62; // [xsp+18h] [xbp-28h] BYREF
   int32_t prevparam; // [xsp+1Ch] [xbp-24h] BYREF
 
-  if ( (byte_42AC98F & 1) == 0 )
+  if ( (byte_42E5084 & 1) == 0 )
   {
-    sub_B52984(&int_TypeInfo);
-    sub_B52984(&object___TypeInfo);
-    sub_B52984(&float_TypeInfo);
-    sub_B52984(&StringLiteral_19056/*"from"*/);
-    sub_B52984(&StringLiteral_22867/*"time"*/);
-    sub_B52984(&StringLiteral_21434/*"oncompleteparams"*/);
-    sub_B52984(&StringLiteral_21442/*"onupdate"*/);
-    sub_B52984(&StringLiteral_22904/*"to"*/);
-    sub_B52984(&StringLiteral_23131/*"updateNpGauge"*/);
-    sub_B52984(&StringLiteral_21433/*"oncomplete"*/);
-    sub_B52984(&StringLiteral_6029/*"EndTweenFunc"*/);
-    sub_B52984(&iTween_TypeInfo);
-    byte_42AC98F = 1;
+    sub_B5D5C4(&int_TypeInfo, param, (_DWORD)method, v3);
+    sub_B5D5C4(&object___TypeInfo, v6, v7, v8);
+    sub_B5D5C4(&float_TypeInfo, v9, v10, v11);
+    sub_B5D5C4(&StringLiteral_19153/*"from"*/, v12, v13, v14);
+    sub_B5D5C4(&StringLiteral_22982/*"time"*/, v15, v16, v17);
+    sub_B5D5C4(&StringLiteral_21543/*"oncompleteparams"*/, v18, v19, v20);
+    sub_B5D5C4(&StringLiteral_21551/*"onupdate"*/, v21, v22, v23);
+    sub_B5D5C4(&StringLiteral_23019/*"to"*/, v24, v25, v26);
+    sub_B5D5C4(&StringLiteral_23246/*"updateNpGauge"*/, v27, v28, v29);
+    sub_B5D5C4(&StringLiteral_21542/*"oncomplete"*/, v30, v31, v32);
+    sub_B5D5C4(&StringLiteral_6065/*"EndTweenFunc"*/, v33, v34, v35);
+    sub_B5D5C4(&iTween_TypeInfo, v36, v37, v38);
+    byte_42E5084 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( (BYTE3(iTween_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__Stop_43341232(gameObject, 0LL);
-  v6 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  v7 = sub_B5299C(object___TypeInfo, 12LL);
-  if ( !v7 )
-    sub_B52A5C(0LL, v8);
-  v9 = (System_Object_array *)v7;
-  v10 = StringLiteral_19056/*"from"*/;
-  if ( StringLiteral_19056/*"from"*/ )
+  iTween__Stop_43300928(gameObject, 0LL);
+  v40 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  v41 = sub_B5D5DC(object___TypeInfo, 12LL);
+  if ( !v41 )
+    sub_B5D69C(0LL, v42);
+  v43 = (System_Object_array *)v41;
+  v44 = StringLiteral_19153/*"from"*/;
+  if ( StringLiteral_19153/*"from"*/ )
   {
-    v10 = sub_B52A44(StringLiteral_19056/*"from"*/, v9->obj.klass->_1.element_class);
-    if ( !v10 )
+    v44 = sub_B5D684(StringLiteral_19153/*"from"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_61;
-    v11 = StringLiteral_19056/*"from"*/;
+    v45 = StringLiteral_19153/*"from"*/;
   }
   else
   {
-    v11 = 0LL;
+    v45 = 0LL;
   }
-  if ( !v9->max_length )
+  if ( !v43->max_length )
     goto LABEL_60;
-  v9->m_Items[0] = (Il2CppObject *)v11;
-  sub_B52920(v9->m_Items);
+  v43->m_Items[0] = (Il2CppObject *)v45;
+  sub_B5D560(v43->m_Items);
   prevparam = this->fields.prevparam;
-  v10 = j_il2cpp_value_box_0(int_TypeInfo, &prevparam);
-  v12 = (Il2CppObject *)v10;
-  if ( v10 )
+  v44 = j_il2cpp_value_box_0(int_TypeInfo, &prevparam);
+  v46 = (Il2CppObject *)v44;
+  if ( v44 )
   {
-    v10 = sub_B52A44(v10, v9->obj.klass->_1.element_class);
-    if ( !v10 )
+    v44 = sub_B5D684(v44, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_61;
   }
-  if ( v9->max_length <= 1 )
+  if ( v43->max_length <= 1 )
     goto LABEL_60;
-  v9->m_Items[1] = v12;
-  sub_B52920(&v9->m_Items[1]);
-  v10 = StringLiteral_22904/*"to"*/;
-  if ( StringLiteral_22904/*"to"*/ )
+  v43->m_Items[1] = v46;
+  sub_B5D560(&v43->m_Items[1]);
+  v44 = StringLiteral_23019/*"to"*/;
+  if ( StringLiteral_23019/*"to"*/ )
   {
-    v10 = sub_B52A44(StringLiteral_22904/*"to"*/, v9->obj.klass->_1.element_class);
-    if ( !v10 )
+    v44 = sub_B5D684(StringLiteral_23019/*"to"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_61;
-    v13 = StringLiteral_22904/*"to"*/;
+    v47 = StringLiteral_23019/*"to"*/;
   }
   else
   {
-    v13 = 0LL;
+    v47 = 0LL;
   }
-  if ( v9->max_length <= 2 )
+  if ( v43->max_length <= 2 )
     goto LABEL_60;
-  v9->m_Items[2] = (Il2CppObject *)v13;
-  sub_B52920(&v9->m_Items[2]);
-  v28 = param;
-  v10 = j_il2cpp_value_box_0(int_TypeInfo, &v28);
-  v14 = (Il2CppObject *)v10;
-  if ( v10 )
+  v43->m_Items[2] = (Il2CppObject *)v47;
+  sub_B5D560(&v43->m_Items[2]);
+  v62 = param;
+  v44 = j_il2cpp_value_box_0(int_TypeInfo, &v62);
+  v48 = (Il2CppObject *)v44;
+  if ( v44 )
   {
-    v10 = sub_B52A44(v10, v9->obj.klass->_1.element_class);
-    if ( !v10 )
+    v44 = sub_B5D684(v44, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_61;
   }
-  if ( v9->max_length <= 3 )
+  if ( v43->max_length <= 3 )
     goto LABEL_60;
-  v9->m_Items[3] = v14;
-  sub_B52920(&v9->m_Items[3]);
-  v10 = StringLiteral_21442/*"onupdate"*/;
-  if ( StringLiteral_21442/*"onupdate"*/ )
+  v43->m_Items[3] = v48;
+  sub_B5D560(&v43->m_Items[3]);
+  v44 = StringLiteral_21551/*"onupdate"*/;
+  if ( StringLiteral_21551/*"onupdate"*/ )
   {
-    v10 = sub_B52A44(StringLiteral_21442/*"onupdate"*/, v9->obj.klass->_1.element_class);
-    if ( !v10 )
+    v44 = sub_B5D684(StringLiteral_21551/*"onupdate"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_61;
-    v15 = StringLiteral_21442/*"onupdate"*/;
+    v49 = StringLiteral_21551/*"onupdate"*/;
   }
   else
   {
-    v15 = 0LL;
+    v49 = 0LL;
   }
-  if ( v9->max_length <= 4 )
+  if ( v43->max_length <= 4 )
     goto LABEL_60;
-  v9->m_Items[4] = (Il2CppObject *)v15;
-  sub_B52920(&v9->m_Items[4]);
-  v10 = StringLiteral_23131/*"updateNpGauge"*/;
-  if ( StringLiteral_23131/*"updateNpGauge"*/ )
+  v43->m_Items[4] = (Il2CppObject *)v49;
+  sub_B5D560(&v43->m_Items[4]);
+  v44 = StringLiteral_23246/*"updateNpGauge"*/;
+  if ( StringLiteral_23246/*"updateNpGauge"*/ )
   {
-    v10 = sub_B52A44(StringLiteral_23131/*"updateNpGauge"*/, v9->obj.klass->_1.element_class);
-    if ( !v10 )
+    v44 = sub_B5D684(StringLiteral_23246/*"updateNpGauge"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_61;
-    v16 = StringLiteral_23131/*"updateNpGauge"*/;
+    v50 = StringLiteral_23246/*"updateNpGauge"*/;
   }
   else
   {
-    v16 = 0LL;
+    v50 = 0LL;
   }
-  if ( v9->max_length <= 5 )
+  if ( v43->max_length <= 5 )
     goto LABEL_60;
-  v9->m_Items[5] = (Il2CppObject *)v16;
-  sub_B52920(&v9->m_Items[5]);
-  v10 = StringLiteral_21433/*"oncomplete"*/;
-  if ( StringLiteral_21433/*"oncomplete"*/ )
+  v43->m_Items[5] = (Il2CppObject *)v50;
+  sub_B5D560(&v43->m_Items[5]);
+  v44 = StringLiteral_21542/*"oncomplete"*/;
+  if ( StringLiteral_21542/*"oncomplete"*/ )
   {
-    v10 = sub_B52A44(StringLiteral_21433/*"oncomplete"*/, v9->obj.klass->_1.element_class);
-    if ( !v10 )
+    v44 = sub_B5D684(StringLiteral_21542/*"oncomplete"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_61;
-    v17 = StringLiteral_21433/*"oncomplete"*/;
+    v51 = StringLiteral_21542/*"oncomplete"*/;
   }
   else
   {
-    v17 = 0LL;
+    v51 = 0LL;
   }
-  if ( v9->max_length <= 6 )
+  if ( v43->max_length <= 6 )
     goto LABEL_60;
-  v9->m_Items[6] = (Il2CppObject *)v17;
-  sub_B52920(&v9->m_Items[6]);
-  v10 = StringLiteral_6029/*"EndTweenFunc"*/;
-  if ( StringLiteral_6029/*"EndTweenFunc"*/ )
+  v43->m_Items[6] = (Il2CppObject *)v51;
+  sub_B5D560(&v43->m_Items[6]);
+  v44 = StringLiteral_6065/*"EndTweenFunc"*/;
+  if ( StringLiteral_6065/*"EndTweenFunc"*/ )
   {
-    v10 = sub_B52A44(StringLiteral_6029/*"EndTweenFunc"*/, v9->obj.klass->_1.element_class);
-    if ( !v10 )
+    v44 = sub_B5D684(StringLiteral_6065/*"EndTweenFunc"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_61;
-    v18 = StringLiteral_6029/*"EndTweenFunc"*/;
+    v52 = StringLiteral_6065/*"EndTweenFunc"*/;
   }
   else
   {
-    v18 = 0LL;
+    v52 = 0LL;
   }
-  if ( v9->max_length <= 7 )
+  if ( v43->max_length <= 7 )
     goto LABEL_60;
-  v9->m_Items[7] = (Il2CppObject *)v18;
-  sub_B52920(&v9->m_Items[7]);
-  v10 = StringLiteral_21434/*"oncompleteparams"*/;
-  if ( StringLiteral_21434/*"oncompleteparams"*/ )
+  v43->m_Items[7] = (Il2CppObject *)v52;
+  sub_B5D560(&v43->m_Items[7]);
+  v44 = StringLiteral_21543/*"oncompleteparams"*/;
+  if ( StringLiteral_21543/*"oncompleteparams"*/ )
   {
-    v10 = sub_B52A44(StringLiteral_21434/*"oncompleteparams"*/, v9->obj.klass->_1.element_class);
-    if ( !v10 )
+    v44 = sub_B5D684(StringLiteral_21543/*"oncompleteparams"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_61;
-    v19 = StringLiteral_21434/*"oncompleteparams"*/;
+    v53 = StringLiteral_21543/*"oncompleteparams"*/;
   }
   else
   {
-    v19 = 0LL;
+    v53 = 0LL;
   }
-  if ( v9->max_length <= 8 )
+  if ( v43->max_length <= 8 )
     goto LABEL_60;
-  v9->m_Items[8] = (Il2CppObject *)v19;
-  sub_B52920(&v9->m_Items[8]);
-  v27 = param;
-  v10 = j_il2cpp_value_box_0(int_TypeInfo, &v27);
-  v20 = (Il2CppObject *)v10;
-  if ( v10 )
+  v43->m_Items[8] = (Il2CppObject *)v53;
+  sub_B5D560(&v43->m_Items[8]);
+  v61 = param;
+  v44 = j_il2cpp_value_box_0(int_TypeInfo, &v61);
+  v54 = (Il2CppObject *)v44;
+  if ( v44 )
   {
-    v10 = sub_B52A44(v10, v9->obj.klass->_1.element_class);
-    if ( !v10 )
+    v44 = sub_B5D684(v44, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_61;
   }
-  if ( v9->max_length <= 9 )
+  if ( v43->max_length <= 9 )
     goto LABEL_60;
-  v9->m_Items[9] = v20;
-  sub_B52920(&v9->m_Items[9]);
-  v10 = StringLiteral_22867/*"time"*/;
-  if ( StringLiteral_22867/*"time"*/ )
+  v43->m_Items[9] = v54;
+  sub_B5D560(&v43->m_Items[9]);
+  v44 = StringLiteral_22982/*"time"*/;
+  if ( StringLiteral_22982/*"time"*/ )
   {
-    v10 = sub_B52A44(StringLiteral_22867/*"time"*/, v9->obj.klass->_1.element_class);
-    if ( !v10 )
+    v44 = sub_B5D684(StringLiteral_22982/*"time"*/, v43->obj.klass->_1.element_class);
+    if ( !v44 )
       goto LABEL_61;
-    v21 = StringLiteral_22867/*"time"*/;
+    v55 = StringLiteral_22982/*"time"*/;
   }
   else
   {
-    v21 = 0LL;
+    v55 = 0LL;
   }
-  if ( v9->max_length <= 0xA )
+  if ( v43->max_length <= 0xA )
     goto LABEL_60;
-  v9->m_Items[10] = (Il2CppObject *)v21;
-  sub_B52920(&v9->m_Items[10]);
-  v26 = 1050253722;
-  v10 = j_il2cpp_value_box_0(float_TypeInfo, &v26);
-  v22 = (Il2CppObject *)v10;
-  if ( v10 )
+  v43->m_Items[10] = (Il2CppObject *)v55;
+  sub_B5D560(&v43->m_Items[10]);
+  v60 = 1050253722;
+  v44 = j_il2cpp_value_box_0(float_TypeInfo, &v60);
+  v56 = (Il2CppObject *)v44;
+  if ( v44 )
   {
-    v10 = sub_B52A44(v10, v9->obj.klass->_1.element_class);
-    if ( !v10 )
+    v44 = sub_B5D684(v44, v43->obj.klass->_1.element_class);
+    if ( !v44 )
     {
 LABEL_61:
-      v25 = sub_B52A7C();
-      sub_B52A28(v25, 0LL);
+      v59 = sub_B5D6BC();
+      sub_B5D668(v59, 0LL);
     }
   }
-  if ( v9->max_length <= 0xB )
+  if ( v43->max_length <= 0xB )
   {
 LABEL_60:
-    v24 = sub_B52A88(v10);
-    sub_B52A28(v24, 0LL);
+    v58 = sub_B5D6C8(v44);
+    sub_B5D668(v58, 0LL);
   }
-  v9->m_Items[11] = v22;
-  sub_B52920(&v9->m_Items[11]);
-  v23 = iTween__Hash(v9, 0LL);
-  iTween__ValueTo(v6, v23, 0LL);
+  v43->m_Items[11] = v56;
+  sub_B5D560(&v43->m_Items[11]);
+  v57 = iTween__Hash(v43, 0LL);
+  iTween__ValueTo(v40, v57, 0LL);
 }
 
 
@@ -390,53 +443,58 @@ void __fastcall BattleNpGaugeSystemComponent__resetSlider(
         BattleNpGaugeSystemComponent_o *this,
         const MethodInfo *method)
 {
-  BattleNpGaugeSystemComponent_o *v2; // x19
+  int v2; // w2
+  __int64 v3; // x3
+  BattleNpGaugeSystemComponent_o *v4; // x19
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
   struct UIProgressBar_array *sliderlist; // x8
-  __int64 v4; // x20
+  __int64 v9; // x20
   int max_length; // w9
   UnityEngine_GameObject_o *gameObject; // x20
   UnityEngine_Object_o *fullGauge; // x20
   UnityEngine_Object_o *overGauge; // x20
-  __int64 v9; // x0
+  __int64 v14; // x0
 
-  v2 = this;
-  if ( (byte_42AC98E & 1) == 0 )
+  v4 = this;
+  if ( (byte_42E5083 & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    this = (BattleNpGaugeSystemComponent_o *)sub_B52984(&iTween_TypeInfo);
-    byte_42AC98E = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
+    this = (BattleNpGaugeSystemComponent_o *)sub_B5D5C4(&iTween_TypeInfo, v5, v6, v7);
+    byte_42E5083 = 1;
   }
-  sliderlist = v2->fields.sliderlist;
+  sliderlist = v4->fields.sliderlist;
   if ( sliderlist )
   {
-    v4 = 0LL;
+    v9 = 0LL;
     while ( 1 )
     {
       max_length = sliderlist->max_length;
-      if ( (int)v4 >= max_length )
+      if ( (int)v9 >= max_length )
         break;
-      if ( (unsigned int)v4 >= max_length )
+      if ( (unsigned int)v9 >= max_length )
       {
-        v9 = sub_B52A88(this);
-        sub_B52A28(v9, 0LL);
+        v14 = sub_B5D6C8(this);
+        sub_B5D668(v14, 0LL);
       }
-      this = (BattleNpGaugeSystemComponent_o *)sliderlist->m_Items[v4];
+      this = (BattleNpGaugeSystemComponent_o *)sliderlist->m_Items[v9];
       if ( this )
       {
         UIProgressBar__set_value((UIProgressBar_o *)this, 0.0, 0LL);
-        sliderlist = v2->fields.sliderlist;
-        ++v4;
+        sliderlist = v4->fields.sliderlist;
+        ++v9;
         if ( sliderlist )
           continue;
       }
       goto LABEL_9;
     }
   }
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v2, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v4, 0LL);
   if ( (BYTE3(iTween_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__Stop_43341232(gameObject, 0LL);
-  fullGauge = (UnityEngine_Object_o *)v2->fields.fullGauge;
+  iTween__Stop_43300928(gameObject, 0LL);
+  fullGauge = (UnityEngine_Object_o *)v4->fields.fullGauge;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -444,7 +502,7 @@ void __fastcall BattleNpGaugeSystemComponent__resetSlider(
   }
   if ( UnityEngine_Object__op_Inequality(fullGauge, 0LL, 0LL) )
   {
-    this = (BattleNpGaugeSystemComponent_o *)v2->fields.fullGauge;
+    this = (BattleNpGaugeSystemComponent_o *)v4->fields.fullGauge;
     if ( !this )
       goto LABEL_9;
     this = (BattleNpGaugeSystemComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -452,7 +510,7 @@ void __fastcall BattleNpGaugeSystemComponent__resetSlider(
       goto LABEL_9;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
   }
-  overGauge = (UnityEngine_Object_o *)v2->fields.overGauge;
+  overGauge = (UnityEngine_Object_o *)v4->fields.overGauge;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -460,7 +518,7 @@ void __fastcall BattleNpGaugeSystemComponent__resetSlider(
   }
   if ( UnityEngine_Object__op_Inequality(overGauge, 0LL, 0LL) )
   {
-    this = (BattleNpGaugeSystemComponent_o *)v2->fields.overGauge;
+    this = (BattleNpGaugeSystemComponent_o *)v4->fields.overGauge;
     if ( this )
     {
       this = (BattleNpGaugeSystemComponent_o *)UnityEngine_Component__get_gameObject(
@@ -473,7 +531,7 @@ void __fastcall BattleNpGaugeSystemComponent__resetSlider(
       }
     }
 LABEL_9:
-    sub_B52A5C(this, method);
+    sub_B5D69C(this, method);
   }
 }
 
@@ -507,7 +565,7 @@ void __fastcall BattleNpGaugeSystemComponent__setNowParam(
   maxparam = this->fields.maxparam;
   this->fields.nowparam = nowparam;
   if ( maxparam )
-    BattleNpGaugeSystemComponent__updateNpGauge_18650228(this, nowparam, maxparam, v3);
+    BattleNpGaugeSystemComponent__updateNpGauge_18512480(this, nowparam, maxparam, v3);
 }
 
 
@@ -547,7 +605,7 @@ void __fastcall BattleNpGaugeSystemComponent__setUseNp(
           !label) )
     {
 LABEL_8:
-      sub_B52A5C(v5, v6);
+      sub_B5D69C(v5, v6);
     }
   }
   UIWidget__set_color(label, *(UnityEngine_Color_o *)&v12, 0LL);
@@ -561,101 +619,113 @@ void __fastcall BattleNpGaugeSystemComponent__updateNpGauge(
 {
   const MethodInfo *v3; // x3
 
-  BattleNpGaugeSystemComponent__updateNpGauge_18650228(this, now, this->fields.maxparam, v3);
+  BattleNpGaugeSystemComponent__updateNpGauge_18512480(this, now, this->fields.maxparam, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BattleNpGaugeSystemComponent__updateNpGauge_18650228(
+void __fastcall BattleNpGaugeSystemComponent__updateNpGauge_18512480(
         BattleNpGaugeSystemComponent_o *this,
         int32_t now,
         int32_t max,
         const MethodInfo *method)
 {
   BattleNpGaugeSystemComponent_o *v6; // x19
+  int v7; // w1
+  int v8; // w2
+  __int64 v9; // x3
+  int v10; // w1
+  int v11; // w2
+  __int64 v12; // x3
+  int v13; // w1
+  int v14; // w2
+  __int64 v15; // x3
+  int v16; // w1
+  int v17; // w2
+  __int64 v18; // x3
   struct UIProgressBar_array *sliderlist; // x8
-  __int64 v8; // x23
+  __int64 v20; // x23
   int max_length; // w9
-  unsigned int v10; // w22
-  float v11; // s9
+  unsigned int v22; // w22
+  float v23; // s9
   float value; // s0
-  struct UIProgressBar_array *v13; // x8
-  float v14; // s0
-  struct UIProgressBar_array *v15; // x8
+  struct UIProgressBar_array *v25; // x8
+  float v26; // s0
+  struct UIProgressBar_array *v27; // x8
   UnityEngine_Object_o *fullGauge; // x22
-  float v17; // s10
+  float v29; // s10
   UnityEngine_Object_o *overGauge; // x22
-  struct UIProgressBar_array *v19; // x8
-  UnityEngine_GameObject_o *v20; // x22
-  float v21; // s0
+  struct UIProgressBar_array *v31; // x8
+  UnityEngine_GameObject_o *v32; // x22
+  float v33; // s0
   _BOOL4 isPercent; // w8
-  int32_t v23; // w0
+  int32_t v35; // w0
   UILabel_o *label; // x19
-  Il2CppObject *v25; // x0
-  System_String_o *v26; // x1
-  __int64 v27; // x0
-  int32_t v28; // [xsp+28h] [xbp-38h] BYREF
-  int32_t v29; // [xsp+2Ch] [xbp-34h] BYREF
+  Il2CppObject *v37; // x0
+  System_String_o *v38; // x1
+  __int64 v39; // x0
+  int32_t v40; // [xsp+28h] [xbp-38h] BYREF
+  int32_t v41; // [xsp+2Ch] [xbp-34h] BYREF
 
   v6 = this;
-  v29 = now;
-  if ( (byte_42AC990 & 1) == 0 )
+  v41 = now;
+  if ( (byte_42E5085 & 1) == 0 )
   {
-    sub_B52984(&int_TypeInfo);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    sub_B52984(&SeManager_TypeInfo);
-    sub_B52984(&StringLiteral_23677/*"{0,3}%"*/);
-    this = (BattleNpGaugeSystemComponent_o *)sub_B52984(&StringLiteral_1/*""*/);
-    byte_42AC990 = 1;
+    sub_B5D5C4(&int_TypeInfo, now, max, method);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v7, v8, v9);
+    sub_B5D5C4(&SeManager_TypeInfo, v10, v11, v12);
+    sub_B5D5C4(&StringLiteral_23795/*"{0,3}%"*/, v13, v14, v15);
+    this = (BattleNpGaugeSystemComponent_o *)sub_B5D5C4(&StringLiteral_1/*""*/, v16, v17, v18);
+    byte_42E5085 = 1;
   }
   sliderlist = v6->fields.sliderlist;
   if ( !sliderlist )
     goto LABEL_51;
-  v8 = 4LL;
+  v20 = 4LL;
   while ( 1 )
   {
     max_length = sliderlist->max_length;
-    v10 = v8 - 4;
-    if ( (int)v8 - 4 >= max_length )
+    v22 = v20 - 4;
+    if ( (int)v20 - 4 >= max_length )
       break;
-    if ( v10 >= max_length )
+    if ( v22 >= max_length )
       goto LABEL_52;
-    this = (BattleNpGaugeSystemComponent_o *)*((_QWORD *)&sliderlist->obj.klass + v8);
+    this = (BattleNpGaugeSystemComponent_o *)*((_QWORD *)&sliderlist->obj.klass + v20);
     if ( !this )
       goto LABEL_51;
-    v11 = (float)((float)now / (float)(max / v6->fields.lineCount)) - (float)(int)v10;
+    v23 = (float)((float)now / (float)(max / v6->fields.lineCount)) - (float)(int)v22;
     value = UIProgressBar__get_value((UIProgressBar_o *)this, 0LL);
-    if ( v11 <= 0.0 )
+    if ( v23 <= 0.0 )
     {
-      v15 = v6->fields.sliderlist;
-      if ( !v15 )
+      v27 = v6->fields.sliderlist;
+      if ( !v27 )
         goto LABEL_51;
-      if ( v10 >= v15->max_length )
+      if ( v22 >= v27->max_length )
         goto LABEL_52;
-      this = (BattleNpGaugeSystemComponent_o *)*((_QWORD *)&v15->obj.klass + v8);
+      this = (BattleNpGaugeSystemComponent_o *)*((_QWORD *)&v27->obj.klass + v20);
       if ( !this )
         goto LABEL_51;
-      v14 = 0.0;
+      v26 = 0.0;
       goto LABEL_18;
     }
-    v13 = v6->fields.sliderlist;
-    if ( !v13 )
+    v25 = v6->fields.sliderlist;
+    if ( !v25 )
       goto LABEL_51;
-    if ( v10 >= v13->max_length )
+    if ( v22 >= v25->max_length )
       goto LABEL_52;
-    this = (BattleNpGaugeSystemComponent_o *)*((_QWORD *)&v13->obj.klass + v8);
+    this = (BattleNpGaugeSystemComponent_o *)*((_QWORD *)&v25->obj.klass + v20);
     if ( !this )
       goto LABEL_51;
-    if ( v11 < 1.0 )
+    if ( v23 < 1.0 )
     {
-      v14 = v11;
+      v26 = v23;
 LABEL_18:
-      UIProgressBar__set_value((UIProgressBar_o *)this, v14, 0LL);
+      UIProgressBar__set_value((UIProgressBar_o *)this, v26, 0LL);
       goto LABEL_19;
     }
-    v17 = value;
+    v29 = value;
     UIProgressBar__set_value((UIProgressBar_o *)this, 1.0, 0LL);
-    if ( v17 < 1.0 )
+    if ( v29 < 1.0 )
     {
       if ( (BYTE3(SeManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SeManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
@@ -682,7 +752,7 @@ LABEL_19:
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, now >= max, 0LL);
     }
     sliderlist = v6->fields.sliderlist;
-    ++v8;
+    ++v20;
     if ( !sliderlist )
       goto LABEL_51;
   }
@@ -700,55 +770,55 @@ LABEL_19:
       this = (BattleNpGaugeSystemComponent_o *)UnityEngine_Component__get_gameObject(
                                                  (UnityEngine_Component_o *)this,
                                                  0LL);
-      v19 = v6->fields.sliderlist;
-      if ( v19 )
+      v31 = v6->fields.sliderlist;
+      if ( v31 )
       {
-        if ( !v19->max_length )
+        if ( !v31->max_length )
         {
 LABEL_52:
-          v27 = sub_B52A88(this);
-          sub_B52A28(v27, 0LL);
+          v39 = sub_B5D6C8(this);
+          sub_B5D668(v39, 0LL);
         }
-        v20 = (UnityEngine_GameObject_o *)this;
-        this = (BattleNpGaugeSystemComponent_o *)v19->m_Items[0];
+        v32 = (UnityEngine_GameObject_o *)this;
+        this = (BattleNpGaugeSystemComponent_o *)v31->m_Items[0];
         if ( this )
         {
-          v21 = UIProgressBar__get_value((UIProgressBar_o *)this, 0LL);
-          if ( v20 )
+          v33 = UIProgressBar__get_value((UIProgressBar_o *)this, 0LL);
+          if ( v32 )
           {
-            UnityEngine_GameObject__SetActive(v20, v21 >= 1.0, 0LL);
+            UnityEngine_GameObject__SetActive(v32, v33 >= 1.0, 0LL);
             goto LABEL_43;
           }
         }
       }
     }
 LABEL_51:
-    sub_B52A5C(this, *(_QWORD *)&now);
+    sub_B5D69C(this, *(_QWORD *)&now);
   }
 LABEL_43:
   isPercent = v6->fields.isPercent;
   v6->fields.prevparam = now;
   if ( isPercent )
   {
-    v23 = BattleUtility__FloorToInt_24779348((double)v6->fields.lineCount * 100.0 * (double)now / (double)max, 0LL);
+    v35 = BattleUtility__FloorToInt_23938964((double)v6->fields.lineCount * 100.0 * (double)now / (double)max, 0LL);
     label = v6->fields.label;
-    v28 = v23;
-    v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v28);
-    this = (BattleNpGaugeSystemComponent_o *)System_String__Format((System_String_o *)StringLiteral_23677/*"{0,3}%"*/, v25, 0LL);
+    v40 = v35;
+    v37 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v40);
+    this = (BattleNpGaugeSystemComponent_o *)System_String__Format((System_String_o *)StringLiteral_23795/*"{0,3}%"*/, v37, 0LL);
     if ( !label )
       goto LABEL_51;
-    v26 = (System_String_o *)this;
+    v38 = (System_String_o *)this;
   }
   else
   {
     label = v6->fields.label;
-    this = (BattleNpGaugeSystemComponent_o *)System_Int32__ToString((int32_t)&v29, 0LL);
+    this = (BattleNpGaugeSystemComponent_o *)System_Int32__ToString((int32_t)&v41, 0LL);
     if ( !label )
       goto LABEL_51;
     if ( this )
-      v26 = (System_String_o *)this;
+      v38 = (System_String_o *)this;
     else
-      v26 = (System_String_o *)StringLiteral_1/*""*/;
+      v38 = (System_String_o *)StringLiteral_1/*""*/;
   }
-  UILabel__set_text(label, v26, 0LL);
+  UILabel__set_text(label, v38, 0LL);
 }

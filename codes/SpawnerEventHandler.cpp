@@ -7,32 +7,34 @@ void __fastcall SpawnerEventHandler___ctor(SpawnerEventHandler_o *this, const Me
 
 void __fastcall SpawnerEventHandler__Init(SpawnerEventHandler_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   System_Int32_array **ComponentsInChildren_USTimelineContainer; // x0
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
 
-  if ( (byte_42B0A2E & 1) == 0 )
+  if ( (byte_42E920B & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
-    byte_42B0A2E = 1;
+    sub_B5D5C4(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___, (_DWORD)method, v2, v3);
+    byte_42E920B = 1;
   }
   ComponentsInChildren_USTimelineContainer = (System_Int32_array **)UnityEngine_Component__GetComponentsInChildren_USTimelineContainer_(
                                                                       (UnityEngine_Component_o *)this,
-                                                                      (const MethodInfo_1A495E0 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
+                                                                      (const MethodInfo_1ADE6A8 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
   *(_QWORD *)&this->fields.isInitilized = ComponentsInChildren_USTimelineContainer;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.isInitilized,
     ComponentsInChildren_USTimelineContainer,
-    v4,
-    v5,
     v6,
     v7,
     v8,
-    v9);
+    v9,
+    v10,
+    v11);
   LOBYTE(this[1].klass) = 1;
 }
 
@@ -59,8 +61,8 @@ void __fastcall SpawnerEventHandler__OnDespawn(SpawnerEventHandler_o *this, cons
         break;
       if ( (unsigned int)v4 >= v5 )
       {
-        v6 = sub_B52A88(this);
-        sub_B52A28(v6, 0LL);
+        v6 = sub_B5D6C8(this);
+        sub_B5D668(v6, 0LL);
       }
       this = *(SpawnerEventHandler_o **)(v3 + 8 * v4 + 32);
       if ( this )
@@ -71,7 +73,7 @@ void __fastcall SpawnerEventHandler__OnDespawn(SpawnerEventHandler_o *this, cons
         if ( v3 )
           continue;
       }
-      sub_B52A5C(this, method);
+      sub_B5D69C(this, method);
     }
   }
 }

@@ -1,12 +1,15 @@
 void __fastcall RestrictionMaster___ctor(RestrictionMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B28B1 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42EAF02 & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int___ctor__);
-    byte_42B28B1 = 1;
+    sub_B5D5C4(&Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int___ctor__, (_DWORD)method, v2, v3);
+    byte_42EAF02 = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     174,
-    (const MethodInfo_23E223C *)Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int___ctor__);
+    (const MethodInfo_23FAD74 *)Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int___ctor__);
 }

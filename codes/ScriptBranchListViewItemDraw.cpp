@@ -15,25 +15,28 @@ void __fastcall ScriptBranchListViewItemDraw__SetItem(
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
   System_String_o *title; // x1
   UILabel_o *titleTextLabel; // x0
   UILabel_o *commentTextLabel; // x22
   UnityEngine_Object_o *Component_srcLineSprite; // x22
   UIWidget_o *baseImageTexture; // x22
-  int v16; // s0
+  int v19; // s0
   struct ScriptBranchListViewItem_o **p_drawItem; // x0
-  System_Int32_array **v21; // x1
-  const MethodInfo *v22; // x1
+  System_Int32_array **v24; // x1
+  const MethodInfo *v25; // x1
   bool IsFlagOn; // w0
   UIWidget_o *checkSprite; // x21
-  const MethodInfo *v25; // x1
-  int v26; // s0
+  const MethodInfo *v28; // x1
+  int v29; // s0
 
-  if ( (byte_42B4720 & 1) == 0 )
+  if ( (byte_42ED154 & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42B4720 = 1;
+    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_TweenColor___, (_DWORD)item, mode, method);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v11, v12, v13);
+    byte_42ED154 = 1;
   }
   if ( item && mode )
   {
@@ -60,11 +63,11 @@ void __fastcall ScriptBranchListViewItemDraw__SetItem(
                                           0LL)) == 0LL )
     {
 LABEL_30:
-      sub_B52A5C(titleTextLabel, title);
+      sub_B5D69C(titleTextLabel, title);
     }
     Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                         (UnityEngine_GameObject_o *)titleTextLabel,
-                                                        (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                                                        (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
@@ -80,46 +83,46 @@ LABEL_30:
     baseImageTexture = (UIWidget_o *)this->fields.baseImageTexture;
     if ( mode == 1 )
     {
-      *(UnityEngine_Color_o *)&v16 = UnityEngine_Color__get_gray(0LL);
+      *(UnityEngine_Color_o *)&v19 = UnityEngine_Color__get_gray(0LL);
       if ( !baseImageTexture )
         goto LABEL_30;
     }
     else
     {
-      *(UnityEngine_Color_o *)&v16 = UnityEngine_Color__get_white(0LL);
+      *(UnityEngine_Color_o *)&v19 = UnityEngine_Color__get_white(0LL);
       if ( !baseImageTexture )
         goto LABEL_30;
     }
-    UIWidget__set_color(baseImageTexture, *(UnityEngine_Color_o *)&v16, 0LL);
-    IsFlagOn = ScriptBranchListViewItem__get_IsFlagOn(item, v22);
+    UIWidget__set_color(baseImageTexture, *(UnityEngine_Color_o *)&v19, 0LL);
+    IsFlagOn = ScriptBranchListViewItem__get_IsFlagOn(item, v25);
     checkSprite = (UIWidget_o *)this->fields.checkSprite;
     this->fields.checkFlag = IsFlagOn;
-    if ( ScriptBranchListViewItem__get_IsFlagOn(item, v25) )
+    if ( ScriptBranchListViewItem__get_IsFlagOn(item, v28) )
     {
-      *(UnityEngine_Color_o *)&v26 = UnityEngine_Color__get_white(0LL);
+      *(UnityEngine_Color_o *)&v29 = UnityEngine_Color__get_white(0LL);
       if ( !checkSprite )
         goto LABEL_30;
     }
     else
     {
-      *(UnityEngine_Color_o *)&v26 = UnityEngine_Color__get_gray(0LL);
+      *(UnityEngine_Color_o *)&v29 = UnityEngine_Color__get_gray(0LL);
       if ( !checkSprite )
         goto LABEL_30;
     }
-    UIWidget__set_color(checkSprite, *(UnityEngine_Color_o *)&v26, 0LL);
+    UIWidget__set_color(checkSprite, *(UnityEngine_Color_o *)&v29, 0LL);
     this->fields.drawItem = item;
     p_drawItem = &this->fields.drawItem;
-    v21 = (System_Int32_array **)item;
+    v24 = (System_Int32_array **)item;
   }
   else
   {
     this->fields.drawItem = 0LL;
     p_drawItem = &this->fields.drawItem;
-    v21 = 0LL;
+    v24 = 0LL;
   }
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)p_drawItem,
-    v21,
+    v24,
     *(System_String_array ***)&mode,
     (System_String_array **)method,
     v4,
@@ -144,7 +147,7 @@ void __fastcall ScriptBranchListViewItemDraw__Update(ScriptBranchListViewItemDra
         !this->fields.drawItem) )
   {
 LABEL_15:
-    sub_B52A5C(drawItem, method);
+    sub_B5D69C(drawItem, method);
   }
   v4 = (int)drawItem;
   drawItem = (ScriptBranchListViewItem_o *)ScriptBranchListViewItem__get_CommentText(this->fields.drawItem, method);

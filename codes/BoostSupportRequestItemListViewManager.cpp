@@ -14,57 +14,67 @@ void __fastcall BoostSupportRequestItemListViewManager__CreateList(
         const MethodInfo *method)
 {
   BoostSupportRequestItemListViewManager_o *v8; // x19
-  __int64 v9; // x0
-  __int64 v10; // x8
-  unsigned __int64 v11; // x23
-  BoostEntity_o *v12; // x25
-  BoostSupportRequsetItemListViewItem_o *v13; // x24
-  __int64 v14; // x0
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  __int64 v15; // x0
+  __int64 v16; // x8
+  unsigned __int64 v17; // x23
+  BoostEntity_o *v18; // x25
+  BoostSupportRequsetItemListViewItem_o *v19; // x24
+  __int64 v20; // x0
 
   v8 = this;
-  if ( (byte_42AFF56 & 1) == 0 )
+  if ( (byte_42E86DB & 1) == 0 )
   {
-    sub_B52984(&BoostSupportRequsetItemListViewItem_TypeInfo);
-    sub_B52984(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    this = (BoostSupportRequestItemListViewManager_o *)sub_B52984(&StringLiteral_21257/*"no data(test label)"*/);
-    byte_42AFF56 = 1;
+    sub_B5D5C4(
+      &BoostSupportRequsetItemListViewItem_TypeInfo,
+      (_DWORD)boostEntityList,
+      (_DWORD)recommendedBoostIds,
+      usrItemEntityList);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_ListViewItem__Add__, v9, v10, v11);
+    this = (BoostSupportRequestItemListViewManager_o *)sub_B5D5C4(&StringLiteral_21363/*"no data(test label)"*/, v12, v13, v14);
+    byte_42E86DB = 1;
   }
   if ( !boostEntityList )
     goto LABEL_12;
   ListViewManager__CreateList((ListViewManager_o *)v8, boostEntityList->max_length, 0LL);
-  v10 = *(_QWORD *)&boostEntityList->max_length;
-  if ( (int)v10 >= 1 )
+  v16 = *(_QWORD *)&boostEntityList->max_length;
+  if ( (int)v16 >= 1 )
   {
-    v11 = 0LL;
+    v17 = 0LL;
     while ( 1 )
     {
-      if ( v11 >= (unsigned int)v10 )
+      if ( v17 >= (unsigned int)v16 )
       {
-        v14 = sub_B52A88(v9);
-        sub_B52A28(v14, 0LL);
+        v20 = sub_B5D6C8(v15);
+        sub_B5D668(v20, 0LL);
       }
-      v12 = boostEntityList->m_Items[v11];
-      v13 = (BoostSupportRequsetItemListViewItem_o *)sub_B52A54(BoostSupportRequsetItemListViewItem_TypeInfo);
-      BoostSupportRequsetItemListViewItem___ctor(v13, v11, v12, usrItemEntityList, recommendedBoostIds, 0LL);
+      v18 = boostEntityList->m_Items[v17];
+      v19 = (BoostSupportRequsetItemListViewItem_o *)sub_B5D694(BoostSupportRequsetItemListViewItem_TypeInfo);
+      BoostSupportRequsetItemListViewItem___ctor(v19, v17, v18, usrItemEntityList, recommendedBoostIds, 0LL);
       this = (BoostSupportRequestItemListViewManager_o *)v8->fields.itemList;
       if ( !this )
         break;
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
         (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
-        (EventMissionProgressRequest_Argument_ProgressData_o *)v13,
-        (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_ListViewItem__Add__);
-      LODWORD(v10) = boostEntityList->max_length;
-      if ( (__int64)++v11 >= (int)v10 )
+        (EventMissionProgressRequest_Argument_ProgressData_o *)v19,
+        (const MethodInfo_3056FC0 *)Method_System_Collections_Generic_List_ListViewItem__Add__);
+      LODWORD(v16) = boostEntityList->max_length;
+      if ( (__int64)++v17 >= (int)v16 )
         goto LABEL_9;
     }
 LABEL_12:
-    sub_B52A5C(this, boostEntityList);
+    sub_B5D69C(this, boostEntityList);
   }
 LABEL_9:
   this = (BoostSupportRequestItemListViewManager_o *)v8->fields.emptyMessageLabel;
   if ( !this )
     goto LABEL_12;
-  UILabel__set_text((UILabel_o *)this, (System_String_o *)StringLiteral_21257/*"no data(test label)"*/, 0LL);
+  UILabel__set_text((UILabel_o *)this, (System_String_o *)StringLiteral_21363/*"no data(test label)"*/, 0LL);
   ListViewManager__SortItem((ListViewManager_o *)v8, -1, 0, -1, 0LL);
 }
 
@@ -74,28 +84,32 @@ BoostSupportRequsetItemListViewItem_o *__fastcall BoostSupportRequestItemListVie
         int32_t index,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
   struct System_Collections_Generic_List_ListViewItem__o *itemList; // x20
-  ListViewItem_o *v6; // x8
-  __int64 v7; // x11
+  ListViewItem_o *v10; // x8
+  __int64 v11; // x11
 
-  if ( (byte_42AFF54 & 1) == 0 )
+  if ( (byte_42E86D9 & 1) == 0 )
   {
-    sub_B52984(&BoostSupportRequsetItemListViewItem_TypeInfo);
-    sub_B52984(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    byte_42AFF54 = 1;
+    sub_B5D5C4(&BoostSupportRequsetItemListViewItem_TypeInfo, index, (_DWORD)method, v3);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, v6, v7, v8);
+    byte_42E86D9 = 1;
   }
   itemList = this->fields.itemList;
   if ( !itemList )
     return 0LL;
   if ( itemList->fields._size <= (unsigned int)index )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
-  v6 = itemList->fields._items->m_Items[index];
-  if ( !v6 )
+    System_ThrowHelper__ThrowArgumentOutOfRangeException_42302284(0LL);
+  v10 = itemList->fields._items->m_Items[index];
+  if ( !v10 )
     return 0LL;
-  v7 = *(&BoostSupportRequsetItemListViewItem_TypeInfo->_2.bitflags2 + 1);
-  if ( *(&v6->klass->_2.bitflags2 + 1) < (unsigned int)v7 )
+  v11 = *(&BoostSupportRequsetItemListViewItem_TypeInfo->_2.bitflags2 + 1);
+  if ( *(&v10->klass->_2.bitflags2 + 1) < (unsigned int)v11 )
     return 0LL;
-  if ( (BoostSupportRequsetItemListViewItem_c *)v6->klass->_2.typeHierarchy[v7 - 1] == BoostSupportRequsetItemListViewItem_TypeInfo )
+  if ( (BoostSupportRequsetItemListViewItem_c *)v10->klass->_2.typeHierarchy[v11 - 1] == BoostSupportRequsetItemListViewItem_TypeInfo )
     return (BoostSupportRequsetItemListViewItem_o *)itemList->fields._items->m_Items[index];
   return 0LL;
 }
@@ -106,41 +120,45 @@ void __fastcall BoostSupportRequestItemListViewManager__OnClickListView(
         ListViewObject_o *obj,
         const MethodInfo *method)
 {
-  BoostSupportRequestItemListViewManager_o *v4; // x20
+  __int64 v3; // x3
+  BoostSupportRequestItemListViewManager_o *v5; // x20
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
   BoostSupportRequestItemListViewManager_CallbackFunc_o *callbackFunc; // x20
-  __int64 v6; // x10
-  int v7; // w8
+  __int64 v10; // x10
+  int v11; // w8
   int32_t Index; // w0
-  int32_t v9; // w1
+  int32_t v13; // w1
 
-  v4 = this;
-  if ( (byte_42AFF5A & 1) == 0 )
+  v5 = this;
+  if ( (byte_42E86DF & 1) == 0 )
   {
-    sub_B52984(&BoostSupportRequestItemListViewObject_TypeInfo);
-    this = (BoostSupportRequestItemListViewManager_o *)sub_B52984(&SoundManager_TypeInfo);
-    byte_42AFF5A = 1;
+    sub_B5D5C4(&BoostSupportRequestItemListViewObject_TypeInfo, (_DWORD)obj, (_DWORD)method, v3);
+    this = (BoostSupportRequestItemListViewManager_o *)sub_B5D5C4(&SoundManager_TypeInfo, v6, v7, v8);
+    byte_42E86DF = 1;
   }
-  callbackFunc = v4->fields.callbackFunc;
+  callbackFunc = v5->fields.callbackFunc;
   if ( callbackFunc )
   {
     if ( !obj
-      || (v6 = *(&BoostSupportRequestItemListViewObject_TypeInfo->_2.bitflags2 + 1),
-          *(&obj->klass->_2.bitflags2 + 1) < (unsigned int)v6)
-      || (BoostSupportRequestItemListViewObject_c *)obj->klass->_2.typeHierarchy[v6 - 1] != BoostSupportRequestItemListViewObject_TypeInfo )
+      || (v10 = *(&BoostSupportRequestItemListViewObject_TypeInfo->_2.bitflags2 + 1),
+          *(&obj->klass->_2.bitflags2 + 1) < (unsigned int)v10)
+      || (BoostSupportRequestItemListViewObject_c *)obj->klass->_2.typeHierarchy[v10 - 1] != BoostSupportRequestItemListViewObject_TypeInfo )
     {
-      sub_B52A5C(this, obj);
+      sub_B5D69C(this, obj);
     }
-    v7 = *((_DWORD *)&obj->fields.isBusy + 1);
-    if ( v7 == 3 )
+    v11 = *((_DWORD *)&obj->fields.isBusy + 1);
+    if ( v11 == 3 )
     {
       Index = ListViewObject__get_Index(obj, 0LL);
-      v9 = 3;
+      v13 = 3;
     }
     else
     {
-      if ( v7 != 2 )
+      if ( v11 != 2 )
       {
-        if ( v7 == 1 )
+        if ( v11 == 1 )
         {
           if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -152,9 +170,9 @@ void __fastcall BoostSupportRequestItemListViewManager__OnClickListView(
         return;
       }
       Index = ListViewObject__get_Index(obj, 0LL);
-      v9 = 2;
+      v13 = 2;
     }
-    BoostSupportRequestItemListViewManager_CallbackFunc__Invoke(callbackFunc, v9, Index, 0LL);
+    BoostSupportRequestItemListViewManager_CallbackFunc__Invoke(callbackFunc, v13, Index, 0LL);
   }
 }
 
@@ -163,25 +181,27 @@ void __fastcall BoostSupportRequestItemListViewManager__OnMoveEnd(
         BoostSupportRequestItemListViewManager_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   int32_t callbackCount; // w8
-  bool v4; // vf
-  int32_t v5; // w8
+  bool v6; // vf
+  int32_t v7; // w8
   UnityEngine_Object_o *scrollView; // x20
-  __int64 v7; // x1
-  struct UIScrollView_o *v8; // x0
+  __int64 v9; // x1
+  struct UIScrollView_o *v10; // x0
 
-  if ( (byte_42AFF59 & 1) == 0 )
+  if ( (byte_42E86DE & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42AFF59 = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E86DE = 1;
   }
   callbackCount = this->fields.callbackCount;
-  v4 = __OFSUB__(callbackCount, 1);
-  v5 = callbackCount - 1;
-  if ( v5 < 0 == v4 )
+  v6 = __OFSUB__(callbackCount, 1);
+  v7 = callbackCount - 1;
+  if ( v7 < 0 == v6 )
   {
-    this->fields.callbackCount = v5;
-    if ( !v5 )
+    this->fields.callbackCount = v7;
+    if ( !v7 )
     {
       ListViewManager__DragMaskEnd((ListViewManager_o *)this, 0LL);
       scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
@@ -192,13 +212,13 @@ void __fastcall BoostSupportRequestItemListViewManager__OnMoveEnd(
       }
       if ( UnityEngine_Object__op_Inequality(scrollView, 0LL, 0LL) )
       {
-        v8 = this->fields.scrollView;
-        if ( !v8 )
-          sub_B52A5C(0LL, v7);
-        ((void (__fastcall *)(struct UIScrollView_o *, __int64, Il2CppMethodPointer))v8->klass->vtable._8_UpdateScrollbars.method)(
-          v8,
+        v10 = this->fields.scrollView;
+        if ( !v10 )
+          sub_B5D69C(0LL, v9);
+        ((void (__fastcall *)(struct UIScrollView_o *, __int64, Il2CppMethodPointer))v10->klass->vtable._8_UpdateScrollbars.method)(
+          v10,
           1LL,
-          v8->klass->vtable._9_SetDragAmount.methodPtr);
+          v10->klass->vtable._9_SetDragAmount.methodPtr);
       }
     }
   }
@@ -209,41 +229,83 @@ void __fastcall BoostSupportRequestItemListViewManager__RequestListObject(
         BoostSupportRequestItemListViewManager_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  int v17; // w1
+  int v18; // w2
+  __int64 v19; // x3
+  int v20; // w1
+  int v21; // w2
+  __int64 v22; // x3
+  int v23; // w1
+  int v24; // w2
+  __int64 v25; // x3
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *ObjectList; // x0
-  __int64 v4; // x1
+  __int64 v27; // x1
   int32_t size; // w8
   Il2CppObject *current; // x20
-  System_Action_o *v7; // x21
-  __int64 v8; // x0
-  __int64 v9; // x1
-  const MethodInfo *v10; // x3
-  System_Collections_Generic_List_Enumerator_T__o v11; // [xsp+8h] [xbp-48h] BYREF
+  System_Action_o *v30; // x21
+  __int64 v31; // x0
+  __int64 v32; // x1
+  System_Collections_Generic_List_Enumerator_T__o v33; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_42AFF58 & 1) == 0 )
+  if ( (byte_42E86DD & 1) == 0 )
   {
-    sub_B52984(&System_Action_TypeInfo);
-    sub_B52984(&Method_BoostSupportRequestItemListViewManager_OnMoveEnd__);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_BoostSupportRequestItemListViewObject__Dispose__);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_BoostSupportRequestItemListViewObject__MoveNext__);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_BoostSupportRequestItemListViewObject__get_Current__);
-    sub_B52984(&Method_System_Collections_Generic_List_BoostSupportRequestItemListViewObject__GetEnumerator__);
-    sub_B52984(&Method_System_Collections_Generic_List_BoostSupportRequestItemListViewObject__get_Count__);
-    sub_B52984(&StringLiteral_10100/*"OnMoveEnd"*/);
-    byte_42AFF58 = 1;
+    sub_B5D5C4(&System_Action_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_BoostSupportRequestItemListViewManager_OnMoveEnd__, v5, v6, v7);
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_List_Enumerator_BoostSupportRequestItemListViewObject__Dispose__,
+      v8,
+      v9,
+      v10);
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_List_Enumerator_BoostSupportRequestItemListViewObject__MoveNext__,
+      v11,
+      v12,
+      v13);
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_List_Enumerator_BoostSupportRequestItemListViewObject__get_Current__,
+      v14,
+      v15,
+      v16);
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_List_BoostSupportRequestItemListViewObject__GetEnumerator__,
+      v17,
+      v18,
+      v19);
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_List_BoostSupportRequestItemListViewObject__get_Count__,
+      v20,
+      v21,
+      v22);
+    sub_B5D5C4(&StringLiteral_10142/*"OnMoveEnd"*/, v23, v24, v25);
+    byte_42E86DD = 1;
   }
-  memset(&v11, 0, sizeof(v11));
+  memset(&v33, 0, sizeof(v33));
   ObjectList = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)BoostSupportRequestItemListViewManager__get_ObjectList(
                                                                                                 this,
                                                                                                 method);
   if ( !ObjectList )
-    sub_B52A5C(0LL, v4);
+    sub_B5D69C(0LL, v27);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10100/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_10142/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -251,23 +313,23 @@ void __fastcall BoostSupportRequestItemListViewManager__RequestListObject(
   {
     this->fields.callbackCount = size;
     System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-      &v11,
+      &v33,
       ObjectList,
-      (const MethodInfo_2FF2480 *)Method_System_Collections_Generic_List_BoostSupportRequestItemListViewObject__GetEnumerator__);
+      (const MethodInfo_3057E3C *)Method_System_Collections_Generic_List_BoostSupportRequestItemListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-              &v11,
-              (const MethodInfo_201195C *)Method_System_Collections_Generic_List_Enumerator_BoostSupportRequestItemListViewObject__MoveNext__) )
+              &v33,
+              (const MethodInfo_201EFD0 *)Method_System_Collections_Generic_List_Enumerator_BoostSupportRequestItemListViewObject__MoveNext__) )
     {
-      current = v11.fields.current;
-      v7 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
-      System_Action___ctor(v7, (Il2CppObject *)this, Method_BoostSupportRequestItemListViewManager_OnMoveEnd__, 0LL);
+      current = v33.fields.current;
+      v30 = (System_Action_o *)sub_B5D694(System_Action_TypeInfo);
+      System_Action___ctor(v30, (Il2CppObject *)this, Method_BoostSupportRequestItemListViewManager_OnMoveEnd__, 0LL);
       if ( !current )
-        sub_B52A5C(v8, v9);
-      BoostSupportRequestItemListViewObject__Init((BoostSupportRequestItemListViewObject_o *)current, v7, 0, v10);
+        sub_B5D69C(v31, v32);
+      BoostSupportRequestItemListViewObject__Init_28511464((BoostSupportRequestItemListViewObject_o *)current, v30, 0LL);
     }
     System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-      &v11,
-      (const MethodInfo_2011958 *)Method_System_Collections_Generic_List_Enumerator_BoostSupportRequestItemListViewObject__Dispose__);
+      &v33,
+      (const MethodInfo_201EFCC *)Method_System_Collections_Generic_List_Enumerator_BoostSupportRequestItemListViewObject__Dispose__);
   }
 }
 
@@ -285,7 +347,7 @@ void __fastcall BoostSupportRequestItemListViewManager__SetCallBack(
   const MethodInfo *v9; // x1
 
   this->fields.callbackFunc = callback;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.callbackFunc,
     (System_Int32_array **)callback,
     (System_String_array **)method,
@@ -305,29 +367,34 @@ void __fastcall BoostSupportRequestItemListViewManager__SetObjectItem(
         ListViewItem_o *item,
         const MethodInfo *method)
 {
-  System_Action_o *v6; // x21
-  __int64 v7; // x0
-  __int64 v8; // x1
-  const MethodInfo *v9; // x3
-  __int64 v10; // x10
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  System_Action_o *v12; // x21
+  __int64 v13; // x0
+  __int64 v14; // x1
+  __int64 v15; // x10
 
-  if ( (byte_42AFF57 & 1) == 0 )
+  if ( (byte_42E86DC & 1) == 0 )
   {
-    sub_B52984(&System_Action_TypeInfo);
-    sub_B52984(&Method_BoostSupportRequestItemListViewManager_OnMoveEnd__);
-    sub_B52984(&BoostSupportRequestItemListViewObject_TypeInfo);
-    byte_42AFF57 = 1;
+    sub_B5D5C4(&System_Action_TypeInfo, (_DWORD)obj, (_DWORD)item, method);
+    sub_B5D5C4(&Method_BoostSupportRequestItemListViewManager_OnMoveEnd__, v6, v7, v8);
+    sub_B5D5C4(&BoostSupportRequestItemListViewObject_TypeInfo, v9, v10, v11);
+    byte_42E86DC = 1;
   }
-  v6 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
-  System_Action___ctor(v6, (Il2CppObject *)this, Method_BoostSupportRequestItemListViewManager_OnMoveEnd__, 0LL);
+  v12 = (System_Action_o *)sub_B5D694(System_Action_TypeInfo);
+  System_Action___ctor(v12, (Il2CppObject *)this, Method_BoostSupportRequestItemListViewManager_OnMoveEnd__, 0LL);
   if ( !obj
-    || (v10 = *(&BoostSupportRequestItemListViewObject_TypeInfo->_2.bitflags2 + 1),
-        *(&obj->klass->_2.bitflags2 + 1) < (unsigned int)v10)
-    || (BoostSupportRequestItemListViewObject_c *)obj->klass->_2.typeHierarchy[v10 - 1] != BoostSupportRequestItemListViewObject_TypeInfo )
+    || (v15 = *(&BoostSupportRequestItemListViewObject_TypeInfo->_2.bitflags2 + 1),
+        *(&obj->klass->_2.bitflags2 + 1) < (unsigned int)v15)
+    || (BoostSupportRequestItemListViewObject_c *)obj->klass->_2.typeHierarchy[v15 - 1] != BoostSupportRequestItemListViewObject_TypeInfo )
   {
-    sub_B52A5C(v7, v8);
+    sub_B5D69C(v13, v14);
   }
-  BoostSupportRequestItemListViewObject__Init((BoostSupportRequestItemListViewObject_o *)obj, v6, 0, v9);
+  BoostSupportRequestItemListViewObject__Init_28511464((BoostSupportRequestItemListViewObject_o *)obj, v12, 0LL);
 }
 
 
@@ -336,38 +403,39 @@ void __fastcall BoostSupportRequestItemListViewManager__add_callbackFunc(
         BoostSupportRequestItemListViewManager_CallbackFunc_o *value,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
   System_Delegate_o *callbackFunc; // x21
   struct BoostSupportRequestItemListViewManager_CallbackFunc_o **p_callbackFunc; // x20
-  System_Delegate_o *v7; // x0
-  __int64 v8; // x0
-  bool v9; // zf
-  BoostSupportRequestItemListViewManager_o *v10; // x0
-  BoostSupportRequestItemListViewManager_CallbackFunc_o *v11; // x1
-  const MethodInfo *v12; // x2
+  System_Delegate_o *v8; // x0
+  __int64 v9; // x0
+  bool v10; // zf
+  BoostSupportRequestItemListViewManager_o *v11; // x0
+  BoostSupportRequestItemListViewManager_CallbackFunc_o *v12; // x1
+  const MethodInfo *v13; // x2
 
-  if ( (byte_42AFF52 & 1) == 0 )
+  if ( (byte_42E86D7 & 1) == 0 )
   {
-    sub_B52984(&BoostSupportRequestItemListViewManager_CallbackFunc_TypeInfo);
-    byte_42AFF52 = 1;
+    sub_B5D5C4(&BoostSupportRequestItemListViewManager_CallbackFunc_TypeInfo, (_DWORD)value, (_DWORD)method, v3);
+    byte_42E86D7 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
   while ( 1 )
   {
-    v7 = System_Delegate__Combine(callbackFunc, (System_Delegate_o *)value, 0LL);
-    if ( v7 )
+    v8 = System_Delegate__Combine(callbackFunc, (System_Delegate_o *)value, 0LL);
+    if ( v8 )
     {
-      if ( (BoostSupportRequestItemListViewManager_CallbackFunc_c *)v7->klass != BoostSupportRequestItemListViewManager_CallbackFunc_TypeInfo )
+      if ( (BoostSupportRequestItemListViewManager_CallbackFunc_c *)v8->klass != BoostSupportRequestItemListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_B4739C(p_callbackFunc, v7, callbackFunc);
-    v9 = callbackFunc == (System_Delegate_o *)v8;
-    callbackFunc = (System_Delegate_o *)v8;
-    if ( v9 )
+    v9 = sub_B51FDC(p_callbackFunc, v8, callbackFunc);
+    v10 = callbackFunc == (System_Delegate_o *)v9;
+    callbackFunc = (System_Delegate_o *)v9;
+    if ( v10 )
       return;
   }
-  v10 = (BoostSupportRequestItemListViewManager_o *)sub_B52D50(v7);
-  BoostSupportRequestItemListViewManager__remove_callbackFunc(v10, v11, v12);
+  v11 = (BoostSupportRequestItemListViewManager_o *)sub_B5D990(v8);
+  BoostSupportRequestItemListViewManager__remove_callbackFunc(v11, v12, v13);
 }
 
 
@@ -375,72 +443,98 @@ System_Collections_Generic_List_BoostSupportRequestItemListViewObject__o *__fast
         BoostSupportRequestItemListViewManager_o *this,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x19
-  __int64 v4; // x1
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  int v17; // w1
+  int v18; // w2
+  __int64 v19; // x3
+  int v20; // w1
+  int v21; // w2
+  __int64 v22; // x3
+  int v23; // w1
+  int v24; // w2
+  __int64 v25; // x3
+  int v26; // w1
+  int v27; // w2
+  __int64 v28; // x3
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v29; // x19
+  __int64 v30; // x1
   struct System_Collections_Generic_List_GameObject__o *objectList; // x0
   Il2CppObject *current; // x20
-  _BOOL8 v7; // x0
-  __int64 v8; // x1
+  _BOOL8 v33; // x0
+  __int64 v34; // x1
   EventMissionProgressRequest_Argument_ProgressData_o *Component_srcLineSprite; // x0
-  System_Collections_Generic_List_Enumerator_T__o v11; // [xsp+8h] [xbp-68h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v12; // [xsp+20h] [xbp-50h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v37; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v38; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_42AFF55 & 1) == 0 )
+  if ( (byte_42E86DA & 1) == 0 )
   {
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewObject___);
-    sub_B52984(&Method_System_Collections_Generic_List_BoostSupportRequestItemListViewObject__Add__);
-    sub_B52984(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_B52984(&Method_System_Collections_Generic_List_BoostSupportRequestItemListViewObject___ctor__);
-    sub_B52984(&System_Collections_Generic_List_BoostSupportRequestItemListViewObject__TypeInfo);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42AFF55 = 1;
+    sub_B5D5C4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v5, v6, v7);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v8, v9, v10);
+    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewObject___, v11, v12, v13);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_BoostSupportRequestItemListViewObject__Add__, v14, v15, v16);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v17, v18, v19);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_BoostSupportRequestItemListViewObject___ctor__, v20, v21, v22);
+    sub_B5D5C4(&System_Collections_Generic_List_BoostSupportRequestItemListViewObject__TypeInfo, v23, v24, v25);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v26, v27, v28);
+    byte_42E86DA = 1;
   }
-  memset(&v12, 0, sizeof(v12));
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_BoostSupportRequestItemListViewObject__TypeInfo);
+  memset(&v38, 0, sizeof(v38));
+  v29 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B5D694(System_Collections_Generic_List_BoostSupportRequestItemListViewObject__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v3,
-    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_BoostSupportRequestItemListViewObject___ctor__);
+    v29,
+    (const MethodInfo_30562FC *)Method_System_Collections_Generic_List_BoostSupportRequestItemListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_B52A5C(0LL, v4);
+    sub_B5D69C(0LL, v30);
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v11,
+    &v37,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)objectList,
-    (const MethodInfo_2FF2480 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v12 = v11;
+    (const MethodInfo_3057E3C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v38 = v37;
   while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-            &v12,
-            (const MethodInfo_201195C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v38,
+            (const MethodInfo_201EFD0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v12.fields.current;
+    current = v38.fields.current;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0LL, 0LL);
-    if ( v7 )
+    v33 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0LL, 0LL);
+    if ( v33 )
     {
       if ( !current )
-        sub_B52A5C(v7, v8);
+        sub_B5D69C(v33, v34);
       Component_srcLineSprite = (EventMissionProgressRequest_Argument_ProgressData_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                                          (UnityEngine_GameObject_o *)current,
-                                                                                         (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewObject___);
-      if ( !v3 )
-        sub_B52A5C(Component_srcLineSprite, Component_srcLineSprite);
+                                                                                         (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewObject___);
+      if ( !v29 )
+        sub_B5D69C(Component_srcLineSprite, Component_srcLineSprite);
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        v3,
+        v29,
         Component_srcLineSprite,
-        (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_BoostSupportRequestItemListViewObject__Add__);
+        (const MethodInfo_3056FC0 *)Method_System_Collections_Generic_List_BoostSupportRequestItemListViewObject__Add__);
     }
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v12,
-    (const MethodInfo_2011958 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-  return (System_Collections_Generic_List_BoostSupportRequestItemListViewObject__o *)v3;
+    &v38,
+    (const MethodInfo_201EFCC *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+  return (System_Collections_Generic_List_BoostSupportRequestItemListViewObject__o *)v29;
 }
 
 
@@ -449,38 +543,39 @@ void __fastcall BoostSupportRequestItemListViewManager__remove_callbackFunc(
         BoostSupportRequestItemListViewManager_CallbackFunc_o *value,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
   System_Delegate_o *callbackFunc; // x21
   struct BoostSupportRequestItemListViewManager_CallbackFunc_o **p_callbackFunc; // x20
-  System_Delegate_o *v7; // x0
-  __int64 v8; // x0
-  bool v9; // zf
-  BoostSupportRequestItemListViewManager_o *v10; // x0
-  int32_t v11; // w1
-  const MethodInfo *v12; // x2
+  System_Delegate_o *v8; // x0
+  __int64 v9; // x0
+  bool v10; // zf
+  BoostSupportRequestItemListViewManager_o *v11; // x0
+  int32_t v12; // w1
+  const MethodInfo *v13; // x2
 
-  if ( (byte_42AFF53 & 1) == 0 )
+  if ( (byte_42E86D8 & 1) == 0 )
   {
-    sub_B52984(&BoostSupportRequestItemListViewManager_CallbackFunc_TypeInfo);
-    byte_42AFF53 = 1;
+    sub_B5D5C4(&BoostSupportRequestItemListViewManager_CallbackFunc_TypeInfo, (_DWORD)value, (_DWORD)method, v3);
+    byte_42E86D8 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
   while ( 1 )
   {
-    v7 = System_Delegate__Remove(callbackFunc, (System_Delegate_o *)value, 0LL);
-    if ( v7 )
+    v8 = System_Delegate__Remove(callbackFunc, (System_Delegate_o *)value, 0LL);
+    if ( v8 )
     {
-      if ( (BoostSupportRequestItemListViewManager_CallbackFunc_c *)v7->klass != BoostSupportRequestItemListViewManager_CallbackFunc_TypeInfo )
+      if ( (BoostSupportRequestItemListViewManager_CallbackFunc_c *)v8->klass != BoostSupportRequestItemListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_B4739C(p_callbackFunc, v7, callbackFunc);
-    v9 = callbackFunc == (System_Delegate_o *)v8;
-    callbackFunc = (System_Delegate_o *)v8;
-    if ( v9 )
+    v9 = sub_B51FDC(p_callbackFunc, v8, callbackFunc);
+    v10 = callbackFunc == (System_Delegate_o *)v9;
+    callbackFunc = (System_Delegate_o *)v9;
+    if ( v10 )
       return;
   }
-  v10 = (BoostSupportRequestItemListViewManager_o *)sub_B52D50(v7);
-  BoostSupportRequestItemListViewManager__GetItem(v10, v11, v12);
+  v11 = (BoostSupportRequestItemListViewManager_o *)sub_B5D990(v8);
+  BoostSupportRequestItemListViewManager__GetItem(v11, v12, v13);
 }
 
 
@@ -499,7 +594,7 @@ void __fastcall BoostSupportRequestItemListViewManager_CallbackFunc___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B52920(p_method);
+  sub_B5D560(p_method);
 }
 
 
@@ -511,22 +606,25 @@ System_IAsyncResult_o *__fastcall BoostSupportRequestItemListViewManager_Callbac
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v10[3]; // [xsp+0h] [xbp-40h] BYREF
-  int32_t v11; // [xsp+18h] [xbp-28h] BYREF
-  int32_t v12; // [xsp+1Ch] [xbp-24h] BYREF
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  __int64 v13[3]; // [xsp+0h] [xbp-40h] BYREF
+  int32_t v14; // [xsp+18h] [xbp-28h] BYREF
+  int32_t v15; // [xsp+1Ch] [xbp-24h] BYREF
 
-  v11 = index;
-  v12 = result;
-  if ( (byte_42AD679 & 1) == 0 )
+  v14 = index;
+  v15 = result;
+  if ( (byte_42E5E30 & 1) == 0 )
   {
-    sub_B52984(&int_TypeInfo);
-    sub_B52984(&BoostSupportRequestItemListViewManager_ResultKind_TypeInfo);
-    byte_42AD679 = 1;
+    sub_B5D5C4(&int_TypeInfo, result, index, callback);
+    sub_B5D5C4(&BoostSupportRequestItemListViewManager_ResultKind_TypeInfo, v9, v10, v11);
+    byte_42E5E30 = 1;
   }
-  v10[2] = 0LL;
-  v10[0] = j_il2cpp_value_box_0(BoostSupportRequestItemListViewManager_ResultKind_TypeInfo, &v12);
-  v10[1] = j_il2cpp_value_box_0(int_TypeInfo, &v11);
-  return (System_IAsyncResult_o *)sub_B52928(this, v10, callback, object);
+  v13[2] = 0LL;
+  v13[0] = j_il2cpp_value_box_0(BoostSupportRequestItemListViewManager_ResultKind_TypeInfo, &v15);
+  v13[1] = j_il2cpp_value_box_0(int_TypeInfo, &v14);
+  return (System_IAsyncResult_o *)sub_B5D568(this, v13, callback, object);
 }
 
 
@@ -535,7 +633,7 @@ void __fastcall BoostSupportRequestItemListViewManager_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B5292C(result, 0LL, method);
+  sub_B5D56C(result, 0LL, method);
 }
 
 
@@ -599,8 +697,8 @@ LABEL_5:
       v23 = *(_QWORD *)&v21->fields.extra_arg;
       v24 = *(void (__fastcall **)(unsigned int *, _QWORD, __int64))&v21->fields.method_ptr;
       if ( *(__int16 *)(v23 + 72) == -1 )
-        sub_B52A40(*(_QWORD *)&v21->fields.extra_arg, *(_QWORD *)&result, *(_QWORD *)&index, method);
-      if ( (sub_B529B4(v23) & 1) == 0 )
+        sub_B5D680(*(_QWORD *)&v21->fields.extra_arg, *(_QWORD *)&result, *(_QWORD *)&index);
+      if ( (sub_B5D5F4(v23) & 1) == 0 )
         break;
       if ( *(_BYTE *)(v23 + 74) != 2 )
         goto LABEL_36;
@@ -616,8 +714,8 @@ LABEL_38:
     }
     if ( *(__int16 *)(v23 + 72) != -1 && (*(_BYTE *)(*v22 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v25 = sub_B529AC(v23);
-      v26 = sub_B52DB0(v23);
+      v25 = sub_B5D5EC(v23);
+      v26 = sub_B5D9F0(v23);
       if ( (v25 & 1) != 0 )
       {
         v28 = v34;
@@ -642,7 +740,7 @@ LABEL_38:
           else
           {
 LABEL_35:
-            v19 = sub_AEB880(v22, v30, v31, v27);
+            v19 = sub_AF54C0(v22, v30, v31, v27);
           }
           v18 = *(_QWORD *)(v19 + 8);
         }
@@ -650,7 +748,7 @@ LABEL_35:
         {
           v18 = *(_QWORD *)(*v22 + 16LL * *(unsigned __int16 *)(v23 + 72) + 320);
         }
-        v20 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))sub_B52A34(v18, v23);
+        v20 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))sub_B5D674(v18, v23);
         (*v20)(v22, v28, (unsigned int)index, v20);
       }
       else
@@ -677,7 +775,7 @@ LABEL_35:
           else
           {
 LABEL_11:
-            v17 = sub_AEB880(v22, class_0, v10, v12);
+            v17 = sub_AF54C0(v22, class_0, v10, v12);
           }
           (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))v17)(
             v22,

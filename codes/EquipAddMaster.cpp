@@ -1,14 +1,17 @@
 void __fastcall EquipAddMaster___ctor(EquipAddMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B4692 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42ED01B & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string___ctor__);
-    byte_42B4692 = 1;
+    sub_B5D5C4(&Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string___ctor__, (_DWORD)method, v2, v3);
+    byte_42ED01B = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     404,
-    (const MethodInfo_23E268C *)Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string___ctor__);
+    (const MethodInfo_23FB1C4 *)Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string___ctor__);
 }
 
 
@@ -21,14 +24,14 @@ EquipAddEntity_o *__fastcall EquipAddMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_42B4693 & 1) == 0 )
+  if ( (byte_42ED01C & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string__GetEntity__);
-    byte_42B4693 = 1;
+    sub_B5D5C4(&Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string__GetEntity__, id, equipId, method);
+    byte_42ED01C = 1;
   }
   PK = EquipAddEntity__CreatePK(id, equipId, *(const MethodInfo **)&equipId);
   return (EquipAddEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                PK,
-                               (const MethodInfo_23E2728 *)Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string__GetEntity__);
+                               (const MethodInfo_23FB260 *)Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string__GetEntity__);
 }

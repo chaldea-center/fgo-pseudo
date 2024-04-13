@@ -17,7 +17,7 @@ void __fastcall SubmarineUnreleasedScanSaveInfo___ctor(
   v6->fields._closeBtnObject = (struct UnityEngine_GameObject_o *)scanIds;
   v6 = (BattleServantConfConponent_o *)((char *)v6 + 24);
   *(_DWORD *)&v6[-1].fields.isOpenAfter = eventId;
-  sub_B52920(v6, (System_Int32_array **)scanIds, v7, v8, v9, v10, v11, v12);
+  sub_B5D560(v6, (System_Int32_array **)scanIds, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -25,115 +25,132 @@ SubmarineUnreleasedScanSaveInfo_o *__fastcall SubmarineUnreleasedScanSaveInfo__C
         System_String_o *value,
         const MethodInfo *method)
 {
-  __int64 v3; // x20
-  System_Char_array *v4; // x0
-  System_Char_array *v5; // x1
-  System_String_array *v6; // x20
-  System_Collections_Generic_List_int__o *v7; // x19
-  __int64 v8; // x0
-  __int64 v9; // x1
-  __int64 v10; // x8
-  int v11; // w21
-  __int64 v12; // x22
-  __int64 v13; // x23
-  __int64 v14; // x0
-  unsigned __int64 v15; // x8
-  __int64 v16; // x0
-  System_Int32_array **v17; // x19
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  int v17; // w1
+  int v18; // w2
+  __int64 v19; // x3
+  __int64 v20; // x20
+  System_Char_array *v21; // x0
+  System_Char_array *v22; // x1
+  System_String_array *v23; // x20
+  System_Collections_Generic_List_int__o *v24; // x19
   __int64 v25; // x0
-  __int64 v26; // x0
+  __int64 v26; // x1
+  __int64 v27; // x8
+  int v28; // w21
+  __int64 v29; // x22
+  __int64 v30; // x23
+  __int64 v31; // x0
+  unsigned __int64 v32; // x8
+  __int64 v33; // x0
+  System_Int32_array **v34; // x19
+  System_String_array **v35; // x2
+  System_String_array **v36; // x3
+  System_Boolean_array **v37; // x4
+  System_Int32_array **v38; // x5
+  System_Int32_array *v39; // x6
+  System_Int32_array *v40; // x7
+  __int64 v42; // x0
+  __int64 v43; // x0
 
-  if ( (byte_42B1915 & 1) == 0 )
+  if ( (byte_42EA385 & 1) == 0 )
   {
-    sub_B52984(&char___TypeInfo);
-    sub_B52984(&Method_System_Collections_Generic_List_int__Add__);
-    sub_B52984(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_B52984(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_B52984(&System_Collections_Generic_List_int__TypeInfo);
-    sub_B52984(&SubmarineUnreleasedScanSaveInfo_TypeInfo);
-    byte_42B1915 = 1;
+    sub_B5D5C4(&char___TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_int__Add__, v5, v6, v7);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_int__ToArray__, v8, v9, v10);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_int___ctor___68740224, v11, v12, v13);
+    sub_B5D5C4(&System_Collections_Generic_List_int__TypeInfo, v14, v15, v16);
+    sub_B5D5C4(&SubmarineUnreleasedScanSaveInfo_TypeInfo, v17, v18, v19);
+    byte_42EA385 = 1;
   }
-  v3 = 0LL;
+  v20 = 0LL;
   if ( !System_String__IsNullOrEmpty(value, 0LL) )
   {
-    v4 = (System_Char_array *)sub_B5299C(char___TypeInfo, 1LL);
-    if ( v4 )
+    v21 = (System_Char_array *)sub_B5D5DC(char___TypeInfo, 1LL);
+    if ( v21 )
     {
-      v5 = v4;
-      if ( !v4->max_length )
+      v22 = v21;
+      if ( !v21->max_length )
       {
-        v25 = sub_B52A88(v4);
-        sub_B52A28(v25, 0LL);
+        v42 = sub_B5D6C8(v21);
+        sub_B5D668(v42, 0LL);
       }
-      v4->m_Items[2] = 44;
+      v21->m_Items[2] = 44;
       if ( value )
       {
-        v6 = System_String__Split(value, v4, 0LL);
-        v7 = (System_Collections_Generic_List_int__o *)sub_B52A54(System_Collections_Generic_List_int__TypeInfo);
+        v23 = System_String__Split(value, v21, 0LL);
+        v24 = (System_Collections_Generic_List_int__o *)sub_B5D694(System_Collections_Generic_List_int__TypeInfo);
         System_Collections_Generic_List_int____ctor(
-          v7,
-          (const MethodInfo_3056254 *)Method_System_Collections_Generic_List_int___ctor__);
-        if ( !v6 )
-          sub_B52A5C(v8, v9);
-        if ( !v6->max_length )
+          v24,
+          (const MethodInfo_30836B0 *)Method_System_Collections_Generic_List_int___ctor___68740224);
+        if ( !v23 )
+          sub_B5D69C(v25, v26);
+        if ( !v23->max_length )
         {
-          v26 = sub_B52A88(v8);
-          sub_B52A28(v26, 0LL);
+          v43 = sub_B5D6C8(v25);
+          sub_B5D668(v43, 0LL);
         }
-        v4 = (System_Char_array *)System_Int32__Parse(v6->m_Items[0], 0LL);
-        v10 = *(_QWORD *)&v6->max_length;
-        v11 = (int)v4;
-        if ( (int)v10 >= 2 )
+        v21 = (System_Char_array *)System_Int32__Parse(v23->m_Items[0], 0LL);
+        v27 = *(_QWORD *)&v23->max_length;
+        v28 = (int)v21;
+        if ( (int)v27 >= 2 )
         {
-          if ( (v10 & 0xFFFFFFFE) == 0 )
+          if ( (v27 & 0xFFFFFFFE) == 0 )
           {
 LABEL_15:
-            v16 = sub_B52A88(v4);
-            sub_B52A28(v16, 0LL);
+            v33 = sub_B5D6C8(v21);
+            sub_B5D668(v33, 0LL);
           }
-          v12 = (int)v10;
-          v13 = 5LL;
+          v29 = (int)v27;
+          v30 = 5LL;
           while ( 1 )
           {
-            v14 = System_Int32__Parse(*((System_String_o **)&v6->obj.klass + v13), 0LL);
-            if ( !v7 )
-              sub_B52A5C(v14, (unsigned int)v14);
+            v31 = System_Int32__Parse(*((System_String_o **)&v23->obj.klass + v30), 0LL);
+            if ( !v24 )
+              sub_B5D69C(v31, (unsigned int)v31);
             System_Collections_Generic_List_int___Add(
-              v7,
-              v14,
-              (const MethodInfo_3056FB0 *)Method_System_Collections_Generic_List_int__Add__);
-            v15 = v13 - 3;
-            if ( v13 - 3 >= v12 )
+              v24,
+              v31,
+              (const MethodInfo_308440C *)Method_System_Collections_Generic_List_int__Add__);
+            v32 = v30 - 3;
+            if ( v30 - 3 >= v29 )
               goto LABEL_17;
-            ++v13;
-            if ( v15 >= v6->max_length )
+            ++v30;
+            if ( v32 >= v23->max_length )
               goto LABEL_15;
           }
         }
-        if ( v7 )
+        if ( v24 )
         {
 LABEL_17:
-          v17 = (System_Int32_array **)System_Collections_Generic_List_int___ToArray(
-                                         v7,
-                                         (const MethodInfo_30590BC *)Method_System_Collections_Generic_List_int__ToArray__);
-          v3 = sub_B52A54(SubmarineUnreleasedScanSaveInfo_TypeInfo);
-          System_Object___ctor((Il2CppObject *)v3, 0LL);
-          *(_DWORD *)(v3 + 16) = v11;
-          *(_QWORD *)(v3 + 24) = v17;
-          sub_B52920((BattleServantConfConponent_o *)(v3 + 24), v17, v18, v19, v20, v21, v22, v23);
-          return (SubmarineUnreleasedScanSaveInfo_o *)v3;
+          v34 = (System_Int32_array **)System_Collections_Generic_List_int___ToArray(
+                                         v24,
+                                         (const MethodInfo_3086518 *)Method_System_Collections_Generic_List_int__ToArray__);
+          v20 = sub_B5D694(SubmarineUnreleasedScanSaveInfo_TypeInfo);
+          System_Object___ctor((Il2CppObject *)v20, 0LL);
+          *(_DWORD *)(v20 + 16) = v28;
+          *(_QWORD *)(v20 + 24) = v34;
+          sub_B5D560((BattleServantConfConponent_o *)(v20 + 24), v34, v35, v36, v37, v38, v39, v40);
+          return (SubmarineUnreleasedScanSaveInfo_o *)v20;
         }
       }
     }
-    sub_B52A5C(v4, v5);
+    sub_B5D69C(v21, v22);
   }
-  return (SubmarineUnreleasedScanSaveInfo_o *)v3;
+  return (SubmarineUnreleasedScanSaveInfo_o *)v20;
 }
 
 
@@ -141,103 +158,135 @@ System_String_o *__fastcall SubmarineUnreleasedScanSaveInfo__GetSaveValue(
         SubmarineUnreleasedScanSaveInfo_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  int v17; // w1
+  int v18; // w2
+  __int64 v19; // x3
+  int v20; // w1
+  int v21; // w2
+  __int64 v22; // x3
+  int v23; // w1
+  int v24; // w2
+  __int64 v25; // x3
+  int v26; // w1
+  int v27; // w2
+  __int64 v28; // x3
+  int v29; // w1
+  int v30; // w2
+  __int64 v31; // x3
+  int v32; // w1
+  int v33; // w2
+  __int64 v34; // x3
   System_Collections_Generic_IEnumerable_T__o *ScanIds_k__BackingField; // x21
-  System_Collections_Generic_List_int__o *v4; // x20
-  SubmarineUnreleasedScanSaveInfo___c_c *v5; // x0
+  System_Collections_Generic_List_int__o *v36; // x20
+  SubmarineUnreleasedScanSaveInfo___c_c *v37; // x0
   struct SubmarineUnreleasedScanSaveInfo___c_StaticFields *static_fields; // x8
   System_Func_int__BattleActionData_SideEffectData__o *_9__9_0; // x21
-  Il2CppObject *v8; // x22
-  struct SubmarineUnreleasedScanSaveInfo___c_StaticFields *v9; // x0
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v16; // x0
-  System_Collections_Generic_List_XWeaponTrail_Element__o *v17; // x20
-  System_String_o *v18; // x0
-  __int64 v19; // x1
-  System_String_array *v20; // x0
+  Il2CppObject *v40; // x22
+  struct SubmarineUnreleasedScanSaveInfo___c_StaticFields *v41; // x0
+  System_String_array **v42; // x2
+  System_String_array **v43; // x3
+  System_Boolean_array **v44; // x4
+  System_Int32_array **v45; // x5
+  System_Int32_array *v46; // x6
+  System_Int32_array *v47; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v48; // x0
+  System_Collections_Generic_List_XWeaponTrail_Element__o *v49; // x20
+  System_String_o *v50; // x0
+  __int64 v51; // x1
+  System_String_array *v52; // x0
   int32_t EventId_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_42B1914 & 1) == 0 )
+  if ( (byte_42EA384 & 1) == 0 )
   {
-    sub_B52984(&Method_System_Linq_Enumerable_Select_int__string___);
-    sub_B52984(&Method_System_Linq_Enumerable_ToList_string___);
-    sub_B52984(&Method_System_Func_int__string___ctor__);
-    sub_B52984(&System_Func_int__string__TypeInfo);
-    sub_B52984(&Method_System_Collections_Generic_List_string__Insert__);
-    sub_B52984(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_B52984(&Method_System_Collections_Generic_List_int___ctor___68512808);
-    sub_B52984(&System_Collections_Generic_List_int__TypeInfo);
-    sub_B52984(&Method_SubmarineUnreleasedScanSaveInfo___c__GetSaveValue_b__9_0__);
-    sub_B52984(&SubmarineUnreleasedScanSaveInfo___c_TypeInfo);
-    sub_B52984(&StringLiteral_709/*","*/);
-    byte_42B1914 = 1;
+    sub_B5D5C4(&Method_System_Linq_Enumerable_Select_int__string___, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_System_Linq_Enumerable_ToList_string___, v5, v6, v7);
+    sub_B5D5C4(&Method_System_Func_int__string___ctor__, v8, v9, v10);
+    sub_B5D5C4(&System_Func_int__string__TypeInfo, v11, v12, v13);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_string__Insert__, v14, v15, v16);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_string__ToArray__, v17, v18, v19);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_int___ctor__, v20, v21, v22);
+    sub_B5D5C4(&System_Collections_Generic_List_int__TypeInfo, v23, v24, v25);
+    sub_B5D5C4(&Method_SubmarineUnreleasedScanSaveInfo___c__GetSaveValue_b__9_0__, v26, v27, v28);
+    sub_B5D5C4(&SubmarineUnreleasedScanSaveInfo___c_TypeInfo, v29, v30, v31);
+    sub_B5D5C4(&StringLiteral_707/*","*/, v32, v33, v34);
+    byte_42EA384 = 1;
   }
   EventId_k__BackingField = 0;
   ScanIds_k__BackingField = (System_Collections_Generic_IEnumerable_T__o *)this->fields._ScanIds_k__BackingField;
-  v4 = (System_Collections_Generic_List_int__o *)sub_B52A54(System_Collections_Generic_List_int__TypeInfo);
-  System_Collections_Generic_List_int____ctor_50685004(
-    v4,
+  v36 = (System_Collections_Generic_List_int__o *)sub_B5D694(System_Collections_Generic_List_int__TypeInfo);
+  System_Collections_Generic_List_int____ctor_50870440(
+    v36,
     ScanIds_k__BackingField,
-    (const MethodInfo_305644C *)Method_System_Collections_Generic_List_int___ctor___68512808);
-  v5 = SubmarineUnreleasedScanSaveInfo___c_TypeInfo;
+    (const MethodInfo_30838A8 *)Method_System_Collections_Generic_List_int___ctor__);
+  v37 = SubmarineUnreleasedScanSaveInfo___c_TypeInfo;
   if ( (BYTE3(SubmarineUnreleasedScanSaveInfo___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !SubmarineUnreleasedScanSaveInfo___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SubmarineUnreleasedScanSaveInfo___c_TypeInfo);
-    v5 = SubmarineUnreleasedScanSaveInfo___c_TypeInfo;
+    v37 = SubmarineUnreleasedScanSaveInfo___c_TypeInfo;
   }
-  static_fields = v5->static_fields;
+  static_fields = v37->static_fields;
   _9__9_0 = (System_Func_int__BattleActionData_SideEffectData__o *)static_fields->__9__9_0;
   if ( !_9__9_0 )
   {
-    if ( (BYTE3(v5->vtable._0_Equals.methodPtr) & 4) != 0 && !v5->_2.cctor_finished )
+    if ( (BYTE3(v37->vtable._0_Equals.methodPtr) & 4) != 0 && !v37->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v5);
+      j_il2cpp_runtime_class_init_0(v37);
       static_fields = SubmarineUnreleasedScanSaveInfo___c_TypeInfo->static_fields;
     }
-    v8 = (Il2CppObject *)static_fields->__9;
-    _9__9_0 = (System_Func_int__BattleActionData_SideEffectData__o *)sub_B52A54(System_Func_int__string__TypeInfo);
+    v40 = (Il2CppObject *)static_fields->__9;
+    _9__9_0 = (System_Func_int__BattleActionData_SideEffectData__o *)sub_B5D694(System_Func_int__string__TypeInfo);
     System_Func_int__BattleActionData_SideEffectData____ctor(
       _9__9_0,
-      v8,
+      v40,
       Method_SubmarineUnreleasedScanSaveInfo___c__GetSaveValue_b__9_0__,
-      (const MethodInfo_2BC49BC *)Method_System_Func_int__string___ctor__);
-    v9 = SubmarineUnreleasedScanSaveInfo___c_TypeInfo->static_fields;
-    v9->__9__9_0 = (struct System_Func_int__string__o *)_9__9_0;
-    sub_B52920(
-      (BattleServantConfConponent_o *)&v9->__9__9_0,
+      (const MethodInfo_2C29938 *)Method_System_Func_int__string___ctor__);
+    v41 = SubmarineUnreleasedScanSaveInfo___c_TypeInfo->static_fields;
+    v41->__9__9_0 = (struct System_Func_int__string__o *)_9__9_0;
+    sub_B5D560(
+      (BattleServantConfConponent_o *)&v41->__9__9_0,
       (System_Int32_array **)_9__9_0,
-      v10,
-      v11,
-      v12,
-      v13,
-      v14,
-      v15);
+      v42,
+      v43,
+      v44,
+      v45,
+      v46,
+      v47);
   }
-  v16 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_int__BattleActionData_SideEffectData_(
-                                                               (System_Collections_Generic_IEnumerable_TSource__o *)v4,
+  v48 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_int__BattleActionData_SideEffectData_(
+                                                               (System_Collections_Generic_IEnumerable_TSource__o *)v36,
                                                                (System_Func_TSource__TResult__o *)_9__9_0,
-                                                               (const MethodInfo_1B68D9C *)Method_System_Linq_Enumerable_Select_int__string___);
-  v17 = (System_Collections_Generic_List_XWeaponTrail_Element__o *)System_Linq_Enumerable__ToList_WarBoardManager_WarBoardOnboardSkillTarget_(
-                                                                     v16,
-                                                                     (const MethodInfo_1B714E4 *)Method_System_Linq_Enumerable_ToList_string___);
+                                                               (const MethodInfo_1CB1D40 *)Method_System_Linq_Enumerable_Select_int__string___);
+  v49 = (System_Collections_Generic_List_XWeaponTrail_Element__o *)System_Linq_Enumerable__ToList_WarBoardManager_WarBoardOnboardSkillTarget_(
+                                                                     v48,
+                                                                     (const MethodInfo_1CBA734 *)Method_System_Linq_Enumerable_ToList_string___);
   EventId_k__BackingField = this->fields._EventId_k__BackingField;
-  v18 = System_Int32__ToString((int32_t)&EventId_k__BackingField, 0LL);
-  if ( !v17 )
-    sub_B52A5C(v18, v19);
+  v50 = System_Int32__ToString((int32_t)&EventId_k__BackingField, 0LL);
+  if ( !v49 )
+    sub_B5D69C(v50, v51);
   System_Collections_Generic_List_XWeaponTrail_Element___Insert(
-    v17,
+    v49,
     0,
-    (XWeaponTrail_Element_o *)v18,
-    (const MethodInfo_2FF2818 *)Method_System_Collections_Generic_List_string__Insert__);
-  v20 = (System_String_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                 (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v17,
-                                 (const MethodInfo_2FF3750 *)Method_System_Collections_Generic_List_string__ToArray__);
-  return System_String__Join((System_String_o *)StringLiteral_709/*","*/, v20, 0LL);
+    (XWeaponTrail_Element_o *)v50,
+    (const MethodInfo_30581D4 *)Method_System_Collections_Generic_List_string__Insert__);
+  v52 = (System_String_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
+                                 (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v49,
+                                 (const MethodInfo_305910C *)Method_System_Collections_Generic_List_string__ToArray__);
+  return System_String__Join((System_String_o *)StringLiteral_707/*","*/, v52, 0LL);
 }
 
 
@@ -278,7 +327,7 @@ void __fastcall SubmarineUnreleasedScanSaveInfo__set_ScanIds(
   System_Int32_array *v7; // x7
 
   this->fields._ScanIds_k__BackingField = value;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields._ScanIds_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -292,19 +341,22 @@ void __fastcall SubmarineUnreleasedScanSaveInfo__set_ScanIds(
 
 void __fastcall SubmarineUnreleasedScanSaveInfo___c___cctor(const MethodInfo *method)
 {
-  Il2CppObject *v1; // x19
+  int v1; // w1
+  int v2; // w2
+  __int64 v3; // x3
+  Il2CppObject *v4; // x19
   struct SubmarineUnreleasedScanSaveInfo___c_StaticFields *static_fields; // x0
 
-  if ( (byte_42ADD8B & 1) == 0 )
+  if ( (byte_42E6465 & 1) == 0 )
   {
-    sub_B52984(&SubmarineUnreleasedScanSaveInfo___c_TypeInfo);
-    byte_42ADD8B = 1;
+    sub_B5D5C4(&SubmarineUnreleasedScanSaveInfo___c_TypeInfo, v1, v2, v3);
+    byte_42E6465 = 1;
   }
-  v1 = (Il2CppObject *)sub_B52A54(SubmarineUnreleasedScanSaveInfo___c_TypeInfo);
-  System_Object___ctor(v1, 0LL);
+  v4 = (Il2CppObject *)sub_B5D694(SubmarineUnreleasedScanSaveInfo___c_TypeInfo);
+  System_Object___ctor(v4, 0LL);
   static_fields = SubmarineUnreleasedScanSaveInfo___c_TypeInfo->static_fields;
-  static_fields->__9 = (struct SubmarineUnreleasedScanSaveInfo___c_o *)v1;
-  sub_B52920(static_fields);
+  static_fields->__9 = (struct SubmarineUnreleasedScanSaveInfo___c_o *)v4;
+  sub_B5D560(static_fields);
 }
 
 

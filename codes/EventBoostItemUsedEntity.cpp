@@ -1,13 +1,16 @@
 void __fastcall EventBoostItemUsedEntity___ctor(EventBoostItemUsedEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B26A5 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42EB8C4 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_long___ctor__);
-    byte_42B26A5 = 1;
+    sub_B5D5C4(&Method_DataEntityBase_long___ctor__, (_DWORD)method, v2, v3);
+    byte_42EB8C4 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_23E21DC *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_23FAD14 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -42,7 +45,7 @@ UsedCount_o *__fastcall EventBoostItemUsedEntity__GetUsedCount(
   {
     result = m_Items[v5];
     if ( !result )
-      sub_B52A5C(0LL, userId);
+      sub_B5D69C(0LL, userId);
     if ( result->fields.userId == userId )
       break;
     if ( (int)++v5 >= (int)v4 )

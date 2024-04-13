@@ -35,17 +35,17 @@ void __fastcall QuestKnockdownResult___ctor(
   System_Int32_array *v35; // x6
   System_Int32_array *v36; // x7
 
-  if ( (byte_42B0226 & 1) == 0 )
+  if ( (byte_42E8B17 & 1) == 0 )
   {
-    sub_B52984(&QuestKnockdownInfo_TypeInfo);
-    byte_42B0226 = 1;
+    sub_B5D5C4(&QuestKnockdownInfo_TypeInfo, isRecord, (_DWORD)data, method);
+    byte_42E8B17 = 1;
   }
-  v7 = (Il2CppObject *)sub_B52A54(QuestKnockdownInfo_TypeInfo);
+  v7 = (Il2CppObject *)sub_B5D694(QuestKnockdownInfo_TypeInfo);
   System_Object___ctor(v7, 0LL);
   v7[1].klass = 0LL;
   v7[1].monitor = 0LL;
   this->fields.current = (struct QuestKnockdownInfo_o *)v7;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.current,
     (System_Int32_array **)v7,
     v8,
@@ -54,12 +54,12 @@ void __fastcall QuestKnockdownResult___ctor(
     v11,
     v12,
     v13);
-  v14 = (Il2CppObject *)sub_B52A54(QuestKnockdownInfo_TypeInfo);
+  v14 = (Il2CppObject *)sub_B5D694(QuestKnockdownInfo_TypeInfo);
   System_Object___ctor(v14, 0LL);
   v14[1].klass = 0LL;
   v14[1].monitor = 0LL;
   this->fields.record = (struct QuestKnockdownInfo_o *)v14;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.record,
     (System_Int32_array **)v14,
     v15,
@@ -71,11 +71,11 @@ void __fastcall QuestKnockdownResult___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.isNewRecord = isRecord;
   if ( !data )
-    sub_B52A5C(v21, v22);
+    sub_B5D69C(v21, v22);
   this->fields.isTrialOpen = BattleData__isKnockdownTrialQuest(data, 0LL);
   currenctKnockdown = data->fields.currenctKnockdown;
   this->fields.current = currenctKnockdown;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.current,
     (System_Int32_array **)currenctKnockdown,
     v24,
@@ -86,7 +86,7 @@ void __fastcall QuestKnockdownResult___ctor(
     v29);
   QuestKnockdownRecord = BattleData__getQuestKnockdownRecord(data, 0LL);
   this->fields.record = QuestKnockdownRecord;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.record,
     (System_Int32_array **)QuestKnockdownRecord,
     v31,

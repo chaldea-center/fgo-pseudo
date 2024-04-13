@@ -3,7 +3,7 @@ void __fastcall NormalRaidTypeBossBattleInfoPosData___ctor(
         const MethodInfo *method)
 {
   *(_QWORD *)&this->fields.existsOtherSkipPos.fields.y = 1112801280LL;
-  *(_OWORD *)&this->fields.onlyBossSkipPos.fields.x = xmmword_327C5B0;
+  *(_OWORD *)&this->fields.onlyBossSkipPos.fields.x = xmmword_32A3CF0;
   BaseBattleInfoPosData___ctor((BaseBattleInfoPosData_o *)this, 0LL);
 }
 
@@ -26,7 +26,7 @@ UnityEngine_Vector3_o __fastcall NormalRaidTypeBossBattleInfoPosData__get_SkillS
   if ( !Perf_k__BackingField
     || (Perf_k__BackingField = (BattlePerformance_o *)BattlePerformance__get_EnemyPerf(Perf_k__BackingField, 0LL)) == 0LL )
   {
-    sub_B52A5C(Perf_k__BackingField, method);
+    sub_B5D69C(Perf_k__BackingField, method);
   }
   exists = BattlePerformanceEnemy__ExistsFieldNormalEnemy((BattlePerformanceEnemy_o *)Perf_k__BackingField, 0LL);
   v5 = 24LL;

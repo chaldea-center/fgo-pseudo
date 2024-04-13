@@ -1,13 +1,16 @@
 void __fastcall BlankEarthSpotNavimenuEntity___ctor(BlankEarthSpotNavimenuEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42AFE9B & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E8620 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_int___ctor__);
-    byte_42AFE9B = 1;
+    sub_B5D5C4(&Method_DataEntityBase_int___ctor__, (_DWORD)method, v2, v3);
+    byte_42E8620 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_23E2184 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_23FACBC *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -21,14 +24,16 @@ int32_t __fastcall BlankEarthSpotNavimenuEntity__CreatePrimaryKey(
 
 bool __fastcall BlankEarthSpotNavimenuEntity__IsEnable(BlankEarthSpotNavimenuEntity_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   int32_t condId; // w20
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_42AFE9A & 1) == 0 )
+  if ( (byte_42E861F & 1) == 0 )
   {
-    sub_B52984(&CondType_TypeInfo);
-    byte_42AFE9A = 1;
+    sub_B5D5C4(&CondType_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E861F = 1;
   }
   condType = this->fields.condType;
   condId = this->fields.condId;

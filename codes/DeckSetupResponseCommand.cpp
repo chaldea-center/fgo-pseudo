@@ -10,7 +10,7 @@ int32_t __fastcall DeckSetupResponseCommand__ExecuteResponse(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_B52A5C(this, 0LL);
+    sub_B5D69C(this, 0LL);
   return data->fields.success == 0LL;
 }
 

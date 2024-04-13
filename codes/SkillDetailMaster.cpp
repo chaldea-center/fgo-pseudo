@@ -1,14 +1,17 @@
 void __fastcall SkillDetailMaster___ctor(SkillDetailMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B0D15 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E97AF & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int___ctor__);
-    byte_42B0D15 = 1;
+    sub_B5D5C4(&Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int___ctor__, (_DWORD)method, v2, v3);
+    byte_42E97AF = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     53,
-    (const MethodInfo_23E223C *)Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int___ctor__);
+    (const MethodInfo_23FAD74 *)Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int___ctor__);
 }
 
 
@@ -18,29 +21,34 @@ System_String_o *__fastcall SkillDetailMaster__getDetail(
         bool isShort,
         const MethodInfo *method)
 {
-  const MethodInfo *v7; // x1
-  LocalizationManager_c *v9; // x0
+  int v7; // w1
+  char v8; // w2
+  __int64 v9; // x3
+  const MethodInfo *v10; // x1
+  char v11; // w2
+  __int64 v12; // x3
+  LocalizationManager_c *v14; // x0
   WarEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_42B0D16 & 1) == 0 )
+  if ( (byte_42E97B0 & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__TryGetEntity__);
-    sub_B52984(&LocalizationManager_TypeInfo);
-    byte_42B0D16 = 1;
+    sub_B5D5C4(&Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__TryGetEntity__, id, isShort, method);
+    sub_B5D5C4(&LocalizationManager_TypeInfo, v7, v8, v9);
+    byte_42E97B0 = 1;
   }
   entity = 0LL;
   if ( DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
          (DataMasterBase_WarMaster__WarEntity__int__o *)this,
          &entity,
          id,
-         (const MethodInfo_23E2334 *)Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__TryGetEntity__) )
+         (const MethodInfo_23FAE6C *)Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__TryGetEntity__) )
   {
     if ( !entity )
-      sub_B52A5C(0LL, v7);
+      sub_B5D69C(0LL, v10);
     if ( isShort )
-      return SkillDetailEntity__getDetailShort((SkillDetailEntity_o *)entity, v7);
+      return SkillDetailEntity__getDetailShort((SkillDetailEntity_o *)entity, v10);
     else
-      return SkillDetailEntity__getDetail((SkillDetailEntity_o *)entity, v7);
+      return SkillDetailEntity__getDetail((SkillDetailEntity_o *)entity, v10);
   }
   else
   {
@@ -49,18 +57,18 @@ System_String_o *__fastcall SkillDetailMaster__getDetail(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    if ( !byte_42ADEE6 )
+    if ( !byte_42E6772 )
     {
-      sub_B52984(&LocalizationManager_TypeInfo);
-      byte_42ADEE6 = 1;
+      sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)v10, v11, v12);
+      byte_42E6772 = 1;
     }
-    v9 = LocalizationManager_TypeInfo;
+    v14 = LocalizationManager_TypeInfo;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v9 = LocalizationManager_TypeInfo;
+      v14 = LocalizationManager_TypeInfo;
     }
-    return v9->static_fields->unknownNameText;
+    return v14->static_fields->unknownNameText;
   }
 }

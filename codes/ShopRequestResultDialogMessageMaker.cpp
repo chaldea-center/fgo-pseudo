@@ -2,20 +2,25 @@ System_String_o *__fastcall ShopRequestResultDialogMessageMaker__GetAddNewLine(
         System_String_o *message,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
   bool IsNullOrEmpty; // w0
-  System_String_o **v4; // x8
+  System_String_o **v9; // x8
 
-  if ( (byte_42B1AB3 & 1) == 0 )
+  if ( (byte_42EA6AC & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_26/*"\n"*/);
-    sub_B52984(&StringLiteral_1/*""*/);
-    byte_42B1AB3 = 1;
+    sub_B5D5C4(&StringLiteral_26/*"\n"*/, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&StringLiteral_1/*""*/, v5, v6, v7);
+    byte_42EA6AC = 1;
   }
   IsNullOrEmpty = System_String__IsNullOrEmpty(message, 0LL);
-  v4 = (System_String_o **)&StringLiteral_1/*""*/;
+  v9 = (System_String_o **)&StringLiteral_1/*""*/;
   if ( !IsNullOrEmpty )
-    v4 = (System_String_o **)&StringLiteral_26/*"\n"*/;
-  return *v4;
+    v9 = (System_String_o **)&StringLiteral_26/*"\n"*/;
+  return *v9;
 }
 
 
@@ -26,27 +31,45 @@ System_String_o *__fastcall ShopRequestResultDialogMessageMaker__GetRequestResul
         const MethodInfo *method)
 {
   ShopEntity_o *v6; // x20
+  int v7; // w1
+  int v8; // w2
+  __int64 v9; // x3
+  int v10; // w1
+  int v11; // w2
+  __int64 v12; // x3
+  int v13; // w1
+  int v14; // w2
+  __int64 v15; // x3
+  int v16; // w1
+  int v17; // w2
+  __int64 v18; // x3
+  int v19; // w1
+  int v20; // w2
+  __int64 v21; // x3
+  int v22; // w1
+  int v23; // w2
+  __int64 v24; // x3
   int32_t type; // w8
   int32_t klass; // w21
   UserGameEntity_o *SelfUserGame; // x21
-  System_String_o *v11; // x22
+  System_String_o *v29; // x22
   Il2CppObject *NumberFormat; // x19
   int32_t qp; // w0
   UserItemMaster_o *MasterData_WarQuestSelectionMaster; // x21
   int64_t UserId; // x22
-  Il2CppObject *v16; // x0
+  Il2CppObject *v34; // x0
 
   v6 = entity;
-  if ( (byte_42B1AAE & 1) == 0 )
+  if ( (byte_42EA6A7 & 1) == 0 )
   {
-    sub_B52984(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&NetworkManager_TypeInfo);
-    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B52984(&StringLiteral_2665/*"BUY_AFTER_QP_NUM"*/);
-    sub_B52984(&StringLiteral_2666/*"BUY_AFTER_USER_ITEM_NUM"*/);
-    entity = (ShopEntity_o *)sub_B52984(&StringLiteral_1/*""*/);
-    byte_42B1AAE = 1;
+    sub_B5D5C4(&Method_DataManager_GetMasterData_UserItemMaster___, (_DWORD)itemEntity, buyCount, method);
+    sub_B5D5C4(&LocalizationManager_TypeInfo, v7, v8, v9);
+    sub_B5D5C4(&NetworkManager_TypeInfo, v10, v11, v12);
+    sub_B5D5C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13, v14, v15);
+    sub_B5D5C4(&StringLiteral_2687/*"BUY_AFTER_QP_NUM"*/, v16, v17, v18);
+    sub_B5D5C4(&StringLiteral_2688/*"BUY_AFTER_USER_ITEM_NUM"*/, v19, v20, v21);
+    entity = (ShopEntity_o *)sub_B5D5C4(&StringLiteral_1/*""*/, v22, v23, v24);
+    byte_42EA6A7 = 1;
   }
   if ( !v6 )
     goto LABEL_38;
@@ -86,7 +109,7 @@ LABEL_33:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v11 = LocalizationManager__Get((System_String_o *)StringLiteral_2666/*"BUY_AFTER_USER_ITEM_NUM"*/, 0LL);
+          v29 = LocalizationManager__Get((System_String_o *)StringLiteral_2688/*"BUY_AFTER_USER_ITEM_NUM"*/, 0LL);
           NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(klass - v6->fields.setNum * buyCount, 0LL);
           qp = klass;
           goto LABEL_37;
@@ -106,15 +129,15 @@ LABEL_33:
         goto LABEL_33;
       }
 LABEL_38:
-      sub_B52A5C(entity, itemEntity);
+      sub_B5D69C(entity, itemEntity);
     }
 LABEL_26:
-    entity = (ShopEntity_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    entity = (ShopEntity_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( entity )
     {
       MasterData_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                  (DataManager_o *)entity,
-                                                                 (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                                                 (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_UserItemMaster___);
       if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !NetworkManager_TypeInfo->_2.cctor_finished )
       {
@@ -144,17 +167,17 @@ LABEL_26:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  entity = (ShopEntity_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2665/*"BUY_AFTER_QP_NUM"*/, 0LL);
+  entity = (ShopEntity_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2687/*"BUY_AFTER_QP_NUM"*/, 0LL);
   if ( !SelfUserGame )
     goto LABEL_38;
-  v11 = (System_String_o *)entity;
+  v29 = (System_String_o *)entity;
   NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(
                                    SelfUserGame->fields.qp - v6->fields.setNum * buyCount,
                                    0LL);
   qp = SelfUserGame->fields.qp;
 LABEL_37:
-  v16 = (Il2CppObject *)LocalizationManager__GetNumberFormat(qp, 0LL);
-  return System_String__Format_44563852(v11, NumberFormat, v16, 0LL);
+  v34 = (Il2CppObject *)LocalizationManager__GetNumberFormat(qp, 0LL);
+  return System_String__Format_44573324(v29, NumberFormat, v34, 0LL);
 }
 
 
@@ -163,252 +186,283 @@ System_String_o *__fastcall ShopRequestResultDialogMessageMaker__GetRequestResul
         int32_t buyCount,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  int v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
+  int v18; // w1
+  int v19; // w2
+  __int64 v20; // x3
+  int v21; // w1
+  int v22; // w2
+  __int64 v23; // x3
+  int v24; // w1
+  int v25; // w2
+  __int64 v26; // x3
+  int v27; // w1
+  int v28; // w2
+  __int64 v29; // x3
+  int v30; // w1
+  int v31; // w2
+  __int64 v32; // x3
+  int v33; // w1
+  int v34; // w2
+  __int64 v35; // x3
   __int64 Instance; // x0
-  __int64 v6; // x1
-  SetItemMaster_o *v7; // x19
+  __int64 v37; // x1
+  SetItemMaster_o *v38; // x19
   SetItemEntity_array *List; // x22
-  System_String_o *v9; // x19
+  System_String_o *v40; // x19
   ServantMaster_o *MasterData_WarQuestSelectionMaster; // x24
-  ItemMaster_o *v11; // x25
-  ShopEntity_o *v12; // x2
-  const MethodInfo *v13; // x6
-  __int64 v14; // x23
-  __int64 v15; // x8
-  unsigned __int64 v16; // x28
-  System_String_o *v17; // x23
-  SetItemEntity_o *v18; // x26
+  ItemMaster_o *v42; // x25
+  ShopEntity_o *v43; // x2
+  const MethodInfo *v44; // x6
+  __int64 v45; // x23
+  __int64 v46; // x8
+  unsigned __int64 v47; // x28
+  System_String_o *v48; // x23
+  SetItemEntity_o *v49; // x26
   System_String_o *RequestResultPresentBoxMessage; // x0
-  const MethodInfo *v20; // x5
+  const MethodInfo *v51; // x5
   System_String_o *UserItemMessage; // x0
-  System_String_o *v23; // x1
-  System_String_o *v24; // x0
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
-  System_String_array *v31; // x20
-  System_String_array **v32; // x2
-  System_String_array **v33; // x3
-  System_Boolean_array **v34; // x4
-  System_Int32_array **v35; // x5
-  System_Int32_array *v36; // x6
-  System_Int32_array *v37; // x7
-  System_Int32_array **v38; // x21
-  System_String_array **v39; // x2
-  System_String_array **v40; // x3
-  System_Boolean_array **v41; // x4
-  System_Int32_array **v42; // x5
-  System_Int32_array *v43; // x6
-  System_Int32_array *v44; // x7
-  System_Int32_array **v45; // x1
-  System_String_array **v46; // x2
-  System_String_array **v47; // x3
-  System_Boolean_array **v48; // x4
-  System_Int32_array **v49; // x5
-  System_Int32_array *v50; // x6
-  System_Int32_array *v51; // x7
-  System_String_array **v52; // x2
-  System_String_array **v53; // x3
-  System_Boolean_array **v54; // x4
-  System_Int32_array **v55; // x5
-  System_Int32_array *v56; // x6
-  System_Int32_array *v57; // x7
-  System_Int32_array **v58; // x19
-  __int64 v59; // x0
-  __int64 v60; // x0
+  System_String_o *v54; // x1
+  System_String_o *v55; // x0
+  System_String_array **v56; // x2
+  System_String_array **v57; // x3
+  System_Boolean_array **v58; // x4
+  System_Int32_array **v59; // x5
+  System_Int32_array *v60; // x6
+  System_Int32_array *v61; // x7
+  System_String_array *v62; // x20
+  System_String_array **v63; // x2
+  System_String_array **v64; // x3
+  System_Boolean_array **v65; // x4
+  System_Int32_array **v66; // x5
+  System_Int32_array *v67; // x6
+  System_Int32_array *v68; // x7
+  System_Int32_array **v69; // x21
+  System_String_array **v70; // x2
+  System_String_array **v71; // x3
+  System_Boolean_array **v72; // x4
+  System_Int32_array **v73; // x5
+  System_Int32_array *v74; // x6
+  System_Int32_array *v75; // x7
+  System_Int32_array **v76; // x1
+  System_String_array **v77; // x2
+  System_String_array **v78; // x3
+  System_Boolean_array **v79; // x4
+  System_Int32_array **v80; // x5
+  System_Int32_array *v81; // x6
+  System_Int32_array *v82; // x7
+  System_String_array **v83; // x2
+  System_String_array **v84; // x3
+  System_Boolean_array **v85; // x4
+  System_Int32_array **v86; // x5
+  System_Int32_array *v87; // x6
+  System_Int32_array *v88; // x7
+  System_Int32_array **v89; // x19
+  __int64 v90; // x0
+  __int64 v91; // x0
 
-  if ( (byte_42B1AB0 & 1) == 0 )
+  if ( (byte_42EA6A9 & 1) == 0 )
   {
-    sub_B52984(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_B52984(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_B52984(&Method_DataManager_GetMasterData_SetItemMaster___);
-    sub_B52984(&Method_DataManager_GetMasterData_ShopDetailMaster___);
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B52984(&string___TypeInfo);
-    sub_B52984(&StringLiteral_12159/*"SET_ITEM_GET_SERVANT_MSG"*/);
-    sub_B52984(&StringLiteral_27/*"\n\n"*/);
-    sub_B52984(&StringLiteral_1/*""*/);
-    sub_B52984(&StringLiteral_12158/*"SET_ITEM_GET_ITEM_MSG"*/);
-    byte_42B1AB0 = 1;
+    sub_B5D5C4(&Method_DataManager_GetMasterData_ItemMaster___, buyCount, (_DWORD)method, v3);
+    sub_B5D5C4(&Method_DataManager_GetMasterData_ServantMaster___, v6, v7, v8);
+    sub_B5D5C4(&Method_DataManager_GetMasterData_SetItemMaster___, v9, v10, v11);
+    sub_B5D5C4(&Method_DataManager_GetMasterData_ShopDetailMaster___, v12, v13, v14);
+    sub_B5D5C4(&LocalizationManager_TypeInfo, v15, v16, v17);
+    sub_B5D5C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18, v19, v20);
+    sub_B5D5C4(&string___TypeInfo, v21, v22, v23);
+    sub_B5D5C4(&StringLiteral_12217/*"SET_ITEM_GET_SERVANT_MSG"*/, v24, v25, v26);
+    sub_B5D5C4(&StringLiteral_27/*"\n\n"*/, v27, v28, v29);
+    sub_B5D5C4(&StringLiteral_1/*""*/, v30, v31, v32);
+    sub_B5D5C4(&StringLiteral_12216/*"SET_ITEM_GET_ITEM_MSG"*/, v33, v34, v35);
+    byte_42EA6A9 = 1;
   }
-  Instance = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_57;
   Instance = (__int64)DataManager__GetMasterData_WarQuestSelectionMaster_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_SetItemMaster___);
+                        (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_SetItemMaster___);
   if ( !entity )
     goto LABEL_57;
-  v7 = (SetItemMaster_o *)Instance;
+  v38 = (SetItemMaster_o *)Instance;
   Instance = ShopEntity__get_TargetId(entity, 0LL);
-  if ( !v7 )
+  if ( !v38 )
     goto LABEL_57;
-  List = SetItemMaster__GetList(v7, Instance, 0LL);
-  v9 = (System_String_o *)StringLiteral_1/*""*/;
-  Instance = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  List = SetItemMaster__GetList(v38, Instance, 0LL);
+  v40 = (System_String_o *)StringLiteral_1/*""*/;
+  Instance = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_57;
   MasterData_WarQuestSelectionMaster = (ServantMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                             (DataManager_o *)Instance,
-                                                            (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_ServantMaster___);
-  Instance = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                                                            (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_ServantMaster___);
+  Instance = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_57;
-  v11 = (ItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+  v42 = (ItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_ItemMaster___);
-  Instance = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                          (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_ItemMaster___);
+  Instance = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_57;
   Instance = (__int64)DataManager__GetMasterData_WarQuestSelectionMaster_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_ShopDetailMaster___);
+                        (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_ShopDetailMaster___);
   if ( !Instance )
     goto LABEL_57;
   Instance = (__int64)ShopDetailMaster__getShopDetailEntity((ShopDetailMaster_o *)Instance, entity->fields.id, 0LL);
   if ( Instance )
   {
-    v14 = Instance;
+    v45 = Instance;
     Instance = System_String__IsNullOrEmpty(*(System_String_o **)(Instance + 40), 0LL);
     if ( (Instance & 1) == 0 )
-      return *(System_String_o **)(v14 + 40);
+      return *(System_String_o **)(v45 + 40);
   }
   if ( !List )
     goto LABEL_57;
-  v15 = *(_QWORD *)&List->max_length;
-  if ( (int)v15 >= 1 )
+  v46 = *(_QWORD *)&List->max_length;
+  if ( (int)v46 >= 1 )
   {
-    v16 = 0LL;
-    v17 = v9;
-    while ( v16 < (unsigned int)v15 )
+    v47 = 0LL;
+    v48 = v40;
+    while ( v47 < (unsigned int)v46 )
     {
-      v18 = List->m_Items[v16];
+      v49 = List->m_Items[v47];
       RequestResultPresentBoxMessage = ShopRequestResultDialogMessageMaker__GetRequestResultPresentBoxMessage(
                                          MasterData_WarQuestSelectionMaster,
-                                         v11,
-                                         v12,
-                                         v18,
-                                         v17,
+                                         v42,
+                                         v43,
+                                         v49,
+                                         v48,
                                          buyCount,
-                                         v13);
-      v17 = System_String__Concat_44568316(v17, RequestResultPresentBoxMessage, 0LL);
+                                         v44);
+      v48 = System_String__Concat_44577788(v48, RequestResultPresentBoxMessage, 0LL);
       UserItemMessage = ShopRequestResultDialogMessageMaker__GetRequestResultGetUserItemMessage(
-                          v11,
+                          v42,
                           entity,
-                          v18,
-                          v9,
+                          v49,
+                          v40,
                           buyCount,
-                          v20);
-      Instance = (__int64)System_String__Concat_44568316(v9, UserItemMessage, 0LL);
-      LODWORD(v15) = List->max_length;
-      ++v16;
-      v9 = (System_String_o *)Instance;
-      if ( (__int64)v16 >= (int)v15 )
+                          v51);
+      Instance = (__int64)System_String__Concat_44577788(v40, UserItemMessage, 0LL);
+      LODWORD(v46) = List->max_length;
+      ++v47;
+      v40 = (System_String_o *)Instance;
+      if ( (__int64)v47 >= (int)v46 )
         goto LABEL_20;
     }
 LABEL_56:
-    v59 = sub_B52A88(Instance);
-    sub_B52A28(v59, 0LL);
+    v90 = sub_B5D6C8(Instance);
+    sub_B5D668(v90, 0LL);
   }
-  v17 = v9;
+  v48 = v40;
 LABEL_20:
-  if ( !System_String__IsNullOrEmpty(v17, 0LL) && !System_String__IsNullOrEmpty(v9, 0LL) )
+  if ( !System_String__IsNullOrEmpty(v48, 0LL) && !System_String__IsNullOrEmpty(v40, 0LL) )
   {
-    Instance = sub_B5299C(string___TypeInfo, 5LL);
+    Instance = sub_B5D5DC(string___TypeInfo, 5LL);
     if ( Instance )
     {
-      v31 = (System_String_array *)Instance;
-      if ( !v17 || (Instance = sub_B52A44(v17, *(_QWORD *)(*(_QWORD *)Instance + 64LL))) != 0 )
+      v62 = (System_String_array *)Instance;
+      if ( !v48 || (Instance = sub_B5D684(v48, *(_QWORD *)(*(_QWORD *)Instance + 64LL))) != 0 )
       {
-        if ( !v31->max_length )
+        if ( !v62->max_length )
           goto LABEL_56;
-        v31->m_Items[0] = v17;
-        sub_B52920(
-          (BattleServantConfConponent_o *)v31->m_Items,
-          (System_Int32_array **)v17,
-          v25,
-          v26,
-          v27,
-          v28,
-          v29,
-          v30);
+        v62->m_Items[0] = v48;
+        sub_B5D560(
+          (BattleServantConfConponent_o *)v62->m_Items,
+          (System_Int32_array **)v48,
+          v56,
+          v57,
+          v58,
+          v59,
+          v60,
+          v61);
         if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !LocalizationManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        Instance = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_12159/*"SET_ITEM_GET_SERVANT_MSG"*/, 0LL);
-        v38 = (System_Int32_array **)Instance;
-        if ( !Instance || (Instance = sub_B52A44(Instance, v31->obj.klass->_1.element_class)) != 0 )
+        Instance = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_12217/*"SET_ITEM_GET_SERVANT_MSG"*/, 0LL);
+        v69 = (System_Int32_array **)Instance;
+        if ( !Instance || (Instance = sub_B5D684(Instance, v62->obj.klass->_1.element_class)) != 0 )
         {
-          if ( v31->max_length <= 1 )
+          if ( v62->max_length <= 1 )
             goto LABEL_56;
-          v31->m_Items[1] = (System_String_o *)v38;
-          sub_B52920((BattleServantConfConponent_o *)&v31->m_Items[1], v38, v32, v33, v34, v35, v36, v37);
+          v62->m_Items[1] = (System_String_o *)v69;
+          sub_B5D560((BattleServantConfConponent_o *)&v62->m_Items[1], v69, v63, v64, v65, v66, v67, v68);
           Instance = StringLiteral_27/*"\n\n"*/;
           if ( StringLiteral_27/*"\n\n"*/ )
           {
-            Instance = sub_B52A44(StringLiteral_27/*"\n\n"*/, v31->obj.klass->_1.element_class);
+            Instance = sub_B5D684(StringLiteral_27/*"\n\n"*/, v62->obj.klass->_1.element_class);
             if ( !Instance )
               goto LABEL_58;
-            v45 = (System_Int32_array **)StringLiteral_27/*"\n\n"*/;
+            v76 = (System_Int32_array **)StringLiteral_27/*"\n\n"*/;
           }
           else
           {
-            v45 = 0LL;
+            v76 = 0LL;
           }
-          if ( v31->max_length <= 2 )
+          if ( v62->max_length <= 2 )
             goto LABEL_56;
-          v31->m_Items[2] = (System_String_o *)v45;
-          sub_B52920((BattleServantConfConponent_o *)&v31->m_Items[2], v45, v39, v40, v41, v42, v43, v44);
-          if ( !v9 || (Instance = sub_B52A44(v9, v31->obj.klass->_1.element_class)) != 0 )
+          v62->m_Items[2] = (System_String_o *)v76;
+          sub_B5D560((BattleServantConfConponent_o *)&v62->m_Items[2], v76, v70, v71, v72, v73, v74, v75);
+          if ( !v40 || (Instance = sub_B5D684(v40, v62->obj.klass->_1.element_class)) != 0 )
           {
-            if ( v31->max_length <= 3 )
+            if ( v62->max_length <= 3 )
               goto LABEL_56;
-            v31->m_Items[3] = v9;
-            sub_B52920(
-              (BattleServantConfConponent_o *)&v31->m_Items[3],
-              (System_Int32_array **)v9,
-              v46,
-              v47,
-              v48,
-              v49,
-              v50,
-              v51);
-            Instance = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_12158/*"SET_ITEM_GET_ITEM_MSG"*/, 0LL);
-            v58 = (System_Int32_array **)Instance;
-            if ( !Instance || (Instance = sub_B52A44(Instance, v31->obj.klass->_1.element_class)) != 0 )
+            v62->m_Items[3] = v40;
+            sub_B5D560(
+              (BattleServantConfConponent_o *)&v62->m_Items[3],
+              (System_Int32_array **)v40,
+              v77,
+              v78,
+              v79,
+              v80,
+              v81,
+              v82);
+            Instance = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_12216/*"SET_ITEM_GET_ITEM_MSG"*/, 0LL);
+            v89 = (System_Int32_array **)Instance;
+            if ( !Instance || (Instance = sub_B5D684(Instance, v62->obj.klass->_1.element_class)) != 0 )
             {
-              if ( v31->max_length <= 4 )
+              if ( v62->max_length <= 4 )
                 goto LABEL_56;
-              v31->m_Items[4] = (System_String_o *)v58;
-              sub_B52920((BattleServantConfConponent_o *)&v31->m_Items[4], v58, v52, v53, v54, v55, v56, v57);
-              return System_String__Concat_44648440(v31, 0LL);
+              v62->m_Items[4] = (System_String_o *)v89;
+              sub_B5D560((BattleServantConfConponent_o *)&v62->m_Items[4], v89, v83, v84, v85, v86, v87, v88);
+              return System_String__Concat_44657912(v62, 0LL);
             }
           }
         }
       }
 LABEL_58:
-      v60 = sub_B52A7C(Instance);
-      sub_B52A28(v60, 0LL);
+      v91 = sub_B5D6BC(Instance);
+      sub_B5D668(v91, 0LL);
     }
 LABEL_57:
-    sub_B52A5C(Instance, v6);
+    sub_B5D69C(Instance, v37);
   }
-  if ( System_String__IsNullOrEmpty(v17, 0LL) )
+  if ( System_String__IsNullOrEmpty(v48, 0LL) )
   {
-    if ( System_String__IsNullOrEmpty(v9, 0LL) )
+    if ( System_String__IsNullOrEmpty(v40, 0LL) )
       return (System_String_o *)StringLiteral_1/*""*/;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_12158/*"SET_ITEM_GET_ITEM_MSG"*/, 0LL);
-    v24 = v9;
+    v54 = LocalizationManager__Get((System_String_o *)StringLiteral_12216/*"SET_ITEM_GET_ITEM_MSG"*/, 0LL);
+    v55 = v40;
   }
   else
   {
@@ -417,10 +471,10 @@ LABEL_57:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_12159/*"SET_ITEM_GET_SERVANT_MSG"*/, 0LL);
-    v24 = v17;
+    v54 = LocalizationManager__Get((System_String_o *)StringLiteral_12217/*"SET_ITEM_GET_SERVANT_MSG"*/, 0LL);
+    v55 = v48;
   }
-  return System_String__Concat_44568316(v24, v23, 0LL);
+  return System_String__Concat_44577788(v55, v54, 0LL);
 }
 
 
@@ -431,31 +485,49 @@ System_String_o *__fastcall ShopRequestResultDialogMessageMaker__GetRequestResul
         const MethodInfo *method)
 {
   ShopBuyItemListViewItem_o *v6; // x22
+  int v7; // w1
+  int v8; // w2
+  __int64 v9; // x3
+  int v10; // w1
+  int v11; // w2
+  __int64 v12; // x3
+  int v13; // w1
+  int v14; // w2
+  __int64 v15; // x3
+  int v16; // w1
+  int v17; // w2
+  __int64 v18; // x3
+  int v19; // w1
+  int v20; // w2
+  __int64 v21; // x3
+  int v22; // w1
+  int v23; // w2
+  __int64 v24; // x3
   System_String_o *BulkNameText; // x19
-  System_String_o *v8; // x19
+  System_String_o *v26; // x19
   Il2CppObject *NumberFormat; // x23
   ShopDetailEntity_o *ShopDetailEntity; // x0
-  ShopDetailEntity_o *v11; // x24
-  System_String_o *v12; // x0
-  System_String_o *v13; // x0
-  System_String_o *v14; // x0
-  __int64 *v15; // x8
-  System_String_o *v17; // x0
+  ShopDetailEntity_o *v29; // x24
+  System_String_o *v30; // x0
+  System_String_o *v31; // x0
+  System_String_o *v32; // x0
+  __int64 *v33; // x8
+  System_String_o *v35; // x0
   bool isQuest; // [xsp+Ch] [xbp-44h] BYREF
   bool isSend; // [xsp+18h] [xbp-38h] BYREF
   bool isTake; // [xsp+1Ch] [xbp-34h] BYREF
 
   v6 = item;
-  if ( (byte_42B1AAC & 1) == 0 )
+  if ( (byte_42EA6A5 & 1) == 0 )
   {
-    sub_B52984(&Method_DataManager_GetMasterData_ShopDetailMaster___);
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B52984(&StringLiteral_12224/*"SHOP_BUY_SUCCESS_SEND_PRESENT_BOX"*/);
-    sub_B52984(&StringLiteral_12221/*"SHOP_BUY_SUCCESS"*/);
-    sub_B52984(&StringLiteral_12223/*"SHOP_BUY_SUCCESS_SEND_MIX"*/);
-    item = (ShopBuyItemListViewItem_o *)sub_B52984(&StringLiteral_12222/*"SHOP_BUY_SUCCESS_MULTIPLE"*/);
-    byte_42B1AAC = 1;
+    sub_B5D5C4(&Method_DataManager_GetMasterData_ShopDetailMaster___, (_DWORD)entity, buyCount, method);
+    sub_B5D5C4(&LocalizationManager_TypeInfo, v7, v8, v9);
+    sub_B5D5C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10, v11, v12);
+    sub_B5D5C4(&StringLiteral_12282/*"SHOP_BUY_SUCCESS_SEND_PRESENT_BOX"*/, v13, v14, v15);
+    sub_B5D5C4(&StringLiteral_12279/*"SHOP_BUY_SUCCESS"*/, v16, v17, v18);
+    sub_B5D5C4(&StringLiteral_12281/*"SHOP_BUY_SUCCESS_SEND_MIX"*/, v19, v20, v21);
+    item = (ShopBuyItemListViewItem_o *)sub_B5D5C4(&StringLiteral_12280/*"SHOP_BUY_SUCCESS_MULTIPLE"*/, v22, v23, v24);
+    byte_42EA6A5 = 1;
   }
   isTake = 0;
   isSend = 0;
@@ -471,26 +543,26 @@ System_String_o *__fastcall ShopRequestResultDialogMessageMaker__GetRequestResul
   }
   item = (ShopBuyItemListViewItem_o *)LocalizationManager__ReplaceCommonTag(BulkNameText, 0, 0LL);
   if ( !entity
-    || (v8 = (System_String_o *)item,
+    || (v26 = (System_String_o *)item,
         NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(entity->fields.setNum * buyCount, 0LL),
-        (item = (ShopBuyItemListViewItem_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
+        (item = (ShopBuyItemListViewItem_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
     || (item = (ShopBuyItemListViewItem_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                               (DataManager_o *)item,
-                                              (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_ShopDetailMaster___)) == 0LL )
+                                              (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_ShopDetailMaster___)) == 0LL )
   {
 LABEL_38:
-    sub_B52A5C(item, entity);
+    sub_B5D69C(item, entity);
   }
   ShopDetailEntity = ShopDetailMaster__getShopDetailEntity((ShopDetailMaster_o *)item, entity->fields.id, 0LL);
   if ( ShopDetailEntity )
   {
-    v11 = ShopDetailEntity;
+    v29 = ShopDetailEntity;
     if ( !System_String__IsNullOrEmpty(ShopDetailEntity->fields.afterMessage, 0LL) )
-      return v11->fields.afterMessage;
+      return v29->fields.afterMessage;
   }
   if ( ShopBuyItemListViewItem__get_IsExchangeQP(v6, 0LL) )
   {
-    v12 = System_String__Format(v8, NumberFormat, 0LL);
+    v30 = System_String__Format(v26, NumberFormat, 0LL);
   }
   else
   {
@@ -501,11 +573,11 @@ LABEL_38:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_12222/*"SHOP_BUY_SUCCESS_MULTIPLE"*/, 0LL);
-    v14 = System_String__Format(v13, NumberFormat, 0LL);
-    v12 = System_String__Concat_44568316(v8, v14, 0LL);
+    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_12280/*"SHOP_BUY_SUCCESS_MULTIPLE"*/, 0LL);
+    v32 = System_String__Format(v31, NumberFormat, 0LL);
+    v30 = System_String__Concat_44577788(v26, v32, 0LL);
   }
-  v8 = v12;
+  v26 = v30;
 LABEL_21:
   if ( isSend && isTake )
   {
@@ -514,7 +586,7 @@ LABEL_21:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v15 = &StringLiteral_12223/*"SHOP_BUY_SUCCESS_SEND_MIX"*/;
+    v33 = &StringLiteral_12281/*"SHOP_BUY_SUCCESS_SEND_MIX"*/;
   }
   else if ( isSend )
   {
@@ -523,7 +595,7 @@ LABEL_21:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v15 = &StringLiteral_12224/*"SHOP_BUY_SUCCESS_SEND_PRESENT_BOX"*/;
+    v33 = &StringLiteral_12282/*"SHOP_BUY_SUCCESS_SEND_PRESENT_BOX"*/;
   }
   else
   {
@@ -532,10 +604,10 @@ LABEL_21:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v15 = &StringLiteral_12221/*"SHOP_BUY_SUCCESS"*/;
+    v33 = &StringLiteral_12279/*"SHOP_BUY_SUCCESS"*/;
   }
-  v17 = LocalizationManager__Get((System_String_o *)*v15, 0LL);
-  return System_String__Format(v17, (Il2CppObject *)v8, 0LL);
+  v35 = LocalizationManager__Get((System_String_o *)*v33, 0LL);
+  return System_String__Format(v35, (Il2CppObject *)v26, 0LL);
 }
 
 
@@ -545,47 +617,63 @@ System_String_o *__fastcall ShopRequestResultDialogMessageMaker__GetRequestResul
         int32_t buyCount,
         const MethodInfo *method)
 {
-  ShopEntity_o *v4; // x20
+  __int64 v3; // x3
+  ShopEntity_o *v5; // x20
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  int v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
+  int v18; // w1
+  int v19; // w2
+  __int64 v20; // x3
   System_String_o *Name; // x21
-  System_String_o *v6; // x21
+  System_String_o *v22; // x21
   Il2CppObject *NumberFormat; // x22
-  System_String_o *v8; // x0
-  System_String_o *v9; // x0
-  System_String_o *v10; // x0
+  System_String_o *v24; // x0
+  System_String_o *v25; // x0
+  System_String_o *v26; // x0
   WarEntity_o *entitya; // [xsp+8h] [xbp-28h] BYREF
 
-  v4 = entity;
-  if ( (byte_42B1AAD & 1) == 0 )
+  v5 = entity;
+  if ( (byte_42EA6A6 & 1) == 0 )
   {
-    sub_B52984(&Method_DataManager_GetMaster_ShopDetailMaster___);
-    sub_B52984(&DataManager_TypeInfo);
-    sub_B52984(&Method_DataMasterBase_ShopDetailMaster__ShopDetailEntity__int__TryGetEntity__);
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&StringLiteral_12221/*"SHOP_BUY_SUCCESS"*/);
-    entity = (ShopEntity_o *)sub_B52984(&StringLiteral_12222/*"SHOP_BUY_SUCCESS_MULTIPLE"*/);
-    byte_42B1AAD = 1;
+    sub_B5D5C4(&Method_DataManager_GetMaster_ShopDetailMaster___, buyCount, (_DWORD)method, v3);
+    sub_B5D5C4(&DataManager_TypeInfo, v6, v7, v8);
+    sub_B5D5C4(&Method_DataMasterBase_ShopDetailMaster__ShopDetailEntity__int__TryGetEntity__, v9, v10, v11);
+    sub_B5D5C4(&LocalizationManager_TypeInfo, v12, v13, v14);
+    sub_B5D5C4(&StringLiteral_12279/*"SHOP_BUY_SUCCESS"*/, v15, v16, v17);
+    entity = (ShopEntity_o *)sub_B5D5C4(&StringLiteral_12280/*"SHOP_BUY_SUCCESS_MULTIPLE"*/, v18, v19, v20);
+    byte_42EA6A6 = 1;
   }
   entitya = 0LL;
-  if ( !v4 )
+  if ( !v5 )
     goto LABEL_25;
-  Name = ShopEntity__getName(v4, 0LL);
+  Name = ShopEntity__getName(v5, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v6 = LocalizationManager__ReplaceCommonTag(Name, 0, 0LL);
-  NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(v4->fields.setNum * buyCount, 0LL);
+  v22 = LocalizationManager__ReplaceCommonTag(Name, 0, 0LL);
+  NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(v5->fields.setNum * buyCount, 0LL);
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  entity = (ShopEntity_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_ShopDetailMaster___);
+  entity = (ShopEntity_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1AE41EC *)Method_DataManager_GetMaster_ShopDetailMaster___);
   if ( !entity )
     goto LABEL_25;
   entity = (ShopEntity_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
                              (DataMasterBase_WarMaster__WarEntity__int__o *)entity,
                              &entitya,
-                             v4->fields.id,
-                             (const MethodInfo_23E2334 *)Method_DataMasterBase_ShopDetailMaster__ShopDetailEntity__int__TryGetEntity__);
+                             v5->fields.id,
+                             (const MethodInfo_23FAE6C *)Method_DataMasterBase_ShopDetailMaster__ShopDetailEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)entity & 1) != 0 )
   {
     if ( entitya )
@@ -597,27 +685,27 @@ System_String_o *__fastcall ShopRequestResultDialogMessageMaker__GetRequestResul
         return entitya->fields.longName;
     }
 LABEL_25:
-    sub_B52A5C(entity, *(_QWORD *)&buyCount);
+    sub_B5D69C(entity, *(_QWORD *)&buyCount);
   }
 LABEL_14:
-  if ( v4->fields.setNum * buyCount >= 1 )
+  if ( v5->fields.setNum * buyCount >= 1 )
   {
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_12222/*"SHOP_BUY_SUCCESS_MULTIPLE"*/, 0LL);
-    v9 = System_String__Format(v8, NumberFormat, 0LL);
-    v6 = System_String__Concat_44568316(v6, v9, 0LL);
+    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_12280/*"SHOP_BUY_SUCCESS_MULTIPLE"*/, 0LL);
+    v25 = System_String__Format(v24, NumberFormat, 0LL);
+    v22 = System_String__Concat_44577788(v22, v25, 0LL);
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_12221/*"SHOP_BUY_SUCCESS"*/, 0LL);
-  return System_String__Format(v10, (Il2CppObject *)v6, 0LL);
+  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_12279/*"SHOP_BUY_SUCCESS"*/, 0LL);
+  return System_String__Format(v26, (Il2CppObject *)v22, 0LL);
 }
 
 
@@ -626,27 +714,40 @@ System_String_o *__fastcall ShopRequestResultDialogMessageMaker__GetRequestResul
         ItemEntity_o *itemEntity,
         const MethodInfo *method)
 {
-  ShopEntity_o *v4; // x20
+  __int64 v3; // x3
+  ShopEntity_o *v5; // x20
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  int v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
   int32_t type; // w8
-  __int64 *v6; // x8
+  __int64 *v19; // x8
 
-  v4 = shopEntity;
-  if ( (byte_42B1AAF & 1) == 0 )
+  v5 = shopEntity;
+  if ( (byte_42EA6A8 & 1) == 0 )
   {
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&StringLiteral_1676/*"ADD_USER_ITEM_MSG"*/);
-    sub_B52984(&StringLiteral_1677/*"ADD_USER_QP_MSG"*/);
-    sub_B52984(&StringLiteral_1678/*"ADD_USER_SVT_COIN_MSG"*/);
-    shopEntity = (ShopEntity_o *)sub_B52984(&StringLiteral_1/*""*/);
-    byte_42B1AAF = 1;
+    sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)itemEntity, (_DWORD)method, v3);
+    sub_B5D5C4(&StringLiteral_1681/*"ADD_USER_ITEM_MSG"*/, v6, v7, v8);
+    sub_B5D5C4(&StringLiteral_1682/*"ADD_USER_QP_MSG"*/, v9, v10, v11);
+    sub_B5D5C4(&StringLiteral_1683/*"ADD_USER_SVT_COIN_MSG"*/, v12, v13, v14);
+    shopEntity = (ShopEntity_o *)sub_B5D5C4(&StringLiteral_1/*""*/, v15, v16, v17);
+    byte_42EA6A8 = 1;
   }
-  if ( !v4 )
+  if ( !v5 )
     goto LABEL_22;
-  if ( v4->fields.purchaseType != 1 )
+  if ( v5->fields.purchaseType != 1 )
     return (System_String_o *)StringLiteral_1/*""*/;
   if ( !itemEntity )
 LABEL_22:
-    sub_B52A5C(shopEntity, itemEntity);
+    sub_B5D69C(shopEntity, itemEntity);
   type = itemEntity->fields.type;
   if ( type == 1 )
   {
@@ -655,7 +756,7 @@ LABEL_22:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = &StringLiteral_1677/*"ADD_USER_QP_MSG"*/;
+    v19 = &StringLiteral_1682/*"ADD_USER_QP_MSG"*/;
   }
   else if ( type == 29 )
   {
@@ -664,7 +765,7 @@ LABEL_22:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = &StringLiteral_1678/*"ADD_USER_SVT_COIN_MSG"*/;
+    v19 = &StringLiteral_1683/*"ADD_USER_SVT_COIN_MSG"*/;
   }
   else
   {
@@ -673,9 +774,9 @@ LABEL_22:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = &StringLiteral_1676/*"ADD_USER_ITEM_MSG"*/;
+    v19 = &StringLiteral_1681/*"ADD_USER_ITEM_MSG"*/;
   }
-  return LocalizationManager__Get((System_String_o *)*v6, 0LL);
+  return LocalizationManager__Get((System_String_o *)*v19, 0LL);
 }
 
 
@@ -688,45 +789,64 @@ System_String_o *__fastcall ShopRequestResultDialogMessageMaker__GetRequestResul
         const MethodInfo *method)
 {
   ItemMaster_o *v10; // x23
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  int v17; // w1
+  int v18; // w2
+  __int64 v19; // x3
+  int v20; // w1
+  int v21; // w2
+  __int64 v22; // x3
+  int v23; // w1
+  int v24; // w2
+  __int64 v25; // x3
   int32_t purchaseType; // w8
-  System_String_o *v12; // x20
+  System_String_o *v27; // x20
   System_String_o *Name; // x22
-  System_String_o *v14; // x22
+  System_String_o *v29; // x22
   System_String_o *NumberFormat; // x0
-  const MethodInfo *v16; // x1
-  Il2CppObject *v17; // x23
-  System_String_o *v18; // x0
-  System_String_o *v19; // x0
-  System_String_o *v20; // x0
-  System_String_o *v21; // x19
-  System_String_o *v22; // x0
-  System_String_o *v23; // x0
-  System_String_o *v25; // x24
-  Il2CppObject *v26; // x0
-  System_String_o *v27; // x21
-  const MethodInfo *v28; // x1
-  System_String_o *AddNewLine; // x0
-  System_String_o *v30; // x19
-  System_String_o *v31; // x20
-  Il2CppObject *v32; // x0
+  const MethodInfo *v31; // x1
+  Il2CppObject *v32; // x23
   System_String_o *v33; // x0
-  int v34; // [xsp+Ch] [xbp-34h] BYREF
+  System_String_o *v34; // x0
+  System_String_o *v35; // x0
+  System_String_o *v36; // x19
+  System_String_o *v37; // x0
+  System_String_o *v38; // x0
+  System_String_o *v40; // x24
+  Il2CppObject *v41; // x0
+  System_String_o *v42; // x21
+  const MethodInfo *v43; // x1
+  System_String_o *AddNewLine; // x0
+  System_String_o *v45; // x19
+  System_String_o *v46; // x20
+  Il2CppObject *v47; // x0
+  System_String_o *v48; // x0
+  int v49; // [xsp+Ch] [xbp-34h] BYREF
 
   v10 = itemMaster;
-  if ( (byte_42B1AB1 & 1) == 0 )
+  if ( (byte_42EA6AA & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_B52984(&int_TypeInfo);
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&StringLiteral_12222/*"SHOP_BUY_SUCCESS_MULTIPLE"*/);
-    sub_B52984(&StringLiteral_12160/*"SET_ITEM_INDIVIDUAL"*/);
-    itemMaster = (ItemMaster_o *)sub_B52984(&StringLiteral_1/*""*/);
-    byte_42B1AB1 = 1;
+    sub_B5D5C4(
+      &Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__,
+      (_DWORD)entity,
+      (_DWORD)setItemEntity,
+      getUserItemMessage);
+    sub_B5D5C4(&int_TypeInfo, v11, v12, v13);
+    sub_B5D5C4(&LocalizationManager_TypeInfo, v14, v15, v16);
+    sub_B5D5C4(&StringLiteral_12280/*"SHOP_BUY_SUCCESS_MULTIPLE"*/, v17, v18, v19);
+    sub_B5D5C4(&StringLiteral_12218/*"SET_ITEM_INDIVIDUAL"*/, v20, v21, v22);
+    itemMaster = (ItemMaster_o *)sub_B5D5C4(&StringLiteral_1/*""*/, v23, v24, v25);
+    byte_42EA6AA = 1;
   }
   if ( !setItemEntity )
     goto LABEL_27;
   purchaseType = setItemEntity->fields.purchaseType;
-  v12 = (System_String_o *)StringLiteral_1/*""*/;
+  v27 = (System_String_o *)StringLiteral_1/*""*/;
   if ( purchaseType == 1 )
   {
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -734,32 +854,32 @@ System_String_o *__fastcall ShopRequestResultDialogMessageMaker__GetRequestResul
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_12222/*"SHOP_BUY_SUCCESS_MULTIPLE"*/, 0LL);
-    v34 = setItemEntity->fields.setNum * buyCount;
-    v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v34);
-    v27 = System_String__Format(v25, v26, 0LL);
-    AddNewLine = ShopRequestResultDialogMessageMaker__GetAddNewLine(getUserItemMessage, v28);
-    v30 = System_String__Concat_44568316(v12, AddNewLine, 0LL);
-    itemMaster = (ItemMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12160/*"SET_ITEM_INDIVIDUAL"*/, 0LL);
+    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_12280/*"SHOP_BUY_SUCCESS_MULTIPLE"*/, 0LL);
+    v49 = setItemEntity->fields.setNum * buyCount;
+    v41 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v49);
+    v42 = System_String__Format(v40, v41, 0LL);
+    AddNewLine = ShopRequestResultDialogMessageMaker__GetAddNewLine(getUserItemMessage, v43);
+    v45 = System_String__Concat_44577788(v27, AddNewLine, 0LL);
+    itemMaster = (ItemMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12218/*"SET_ITEM_INDIVIDUAL"*/, 0LL);
     if ( v10 )
     {
-      v31 = (System_String_o *)itemMaster;
+      v46 = (System_String_o *)itemMaster;
       itemMaster = (ItemMaster_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                      (DataMasterBase_WarMaster__WarEntity__int__o *)v10,
                                      setItemEntity->fields.targetId,
-                                     (const MethodInfo_23E22D8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                                     (const MethodInfo_23FAE10 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
       if ( itemMaster )
       {
-        v32 = (Il2CppObject *)System_String__Concat_44568316(itemMaster->fields._MasterName_k__BackingField, v27, 0LL);
-        v33 = System_String__Format(v31, v32, 0LL);
-        return System_String__Concat_44568316(v30, v33, 0LL);
+        v47 = (Il2CppObject *)System_String__Concat_44577788(itemMaster->fields._MasterName_k__BackingField, v42, 0LL);
+        v48 = System_String__Format(v46, v47, 0LL);
+        return System_String__Concat_44577788(v45, v48, 0LL);
       }
     }
 LABEL_27:
-    sub_B52A5C(itemMaster, entity);
+    sub_B5D69C(itemMaster, entity);
   }
   if ( purchaseType != 7 )
-    return v12;
+    return v27;
   if ( !entity )
     goto LABEL_27;
   Name = ShopEntity__getName(entity, 0LL);
@@ -768,30 +888,30 @@ LABEL_27:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v14 = LocalizationManager__ReplaceCommonTag(Name, 0, 0LL);
+  v29 = LocalizationManager__ReplaceCommonTag(Name, 0, 0LL);
   NumberFormat = LocalizationManager__GetNumberFormat(entity->fields.setNum * buyCount, 0LL);
   if ( NumberFormat && entity->fields.setNum * buyCount >= 1 )
   {
-    v17 = (Il2CppObject *)NumberFormat;
+    v32 = (Il2CppObject *)NumberFormat;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_12222/*"SHOP_BUY_SUCCESS_MULTIPLE"*/, 0LL);
-    v19 = System_String__Format(v18, v17, 0LL);
-    v14 = System_String__Concat_44568316(v14, v19, 0LL);
+    v33 = LocalizationManager__Get((System_String_o *)StringLiteral_12280/*"SHOP_BUY_SUCCESS_MULTIPLE"*/, 0LL);
+    v34 = System_String__Format(v33, v32, 0LL);
+    v29 = System_String__Concat_44577788(v29, v34, 0LL);
   }
-  v20 = ShopRequestResultDialogMessageMaker__GetAddNewLine(getUserItemMessage, v16);
-  v21 = System_String__Concat_44568316(v12, v20, 0LL);
+  v35 = ShopRequestResultDialogMessageMaker__GetAddNewLine(getUserItemMessage, v31);
+  v36 = System_String__Concat_44577788(v27, v35, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_12160/*"SET_ITEM_INDIVIDUAL"*/, 0LL);
-  v23 = System_String__Format(v22, (Il2CppObject *)v14, 0LL);
-  return System_String__Concat_44568316(v21, v23, 0LL);
+  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_12218/*"SET_ITEM_INDIVIDUAL"*/, 0LL);
+  v38 = System_String__Format(v37, (Il2CppObject *)v29, 0LL);
+  return System_String__Concat_44577788(v36, v38, 0LL);
 }
 
 
@@ -804,106 +924,128 @@ System_String_o *__fastcall ShopRequestResultDialogMessageMaker__GetRequestResul
         int32_t buyCount,
         const MethodInfo *method)
 {
-  System_String_o *v12; // x24
-  void *v13; // x0
-  __int64 v14; // x1
-  System_String_o *v15; // x25
-  Il2CppObject *v16; // x0
-  System_String_o *v17; // x0
-  const MethodInfo *v18; // x1
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  int v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
+  int v18; // w1
+  int v19; // w2
+  __int64 v20; // x3
+  int v21; // w1
+  int v22; // w2
+  __int64 v23; // x3
+  int v24; // w1
+  int v25; // w2
+  __int64 v26; // x3
+  int v27; // w1
+  int v28; // w2
+  __int64 v29; // x3
+  System_String_o *v30; // x24
+  void *v31; // x0
+  __int64 v32; // x1
+  System_String_o *v33; // x25
+  Il2CppObject *v34; // x0
+  System_String_o *v35; // x0
+  const MethodInfo *v36; // x1
   int32_t purchaseType; // w8
-  System_String_o *v20; // x22
-  System_String_o *v21; // x0
-  System_String_o *v22; // x21
-  System_String_o *v23; // x23
+  System_String_o *v38; // x22
+  System_String_o *v39; // x0
+  System_String_o *v40; // x21
+  System_String_o *v41; // x23
   System_String_o *Name; // x0
-  Il2CppObject *v25; // x0
-  System_String_o *v26; // x1
-  System_String_o *v27; // x0
+  Il2CppObject *v43; // x0
+  System_String_o *v44; // x1
+  System_String_o *v45; // x0
   System_String_o *AddNewLine; // x0
-  System_String_o *v29; // x20
-  System_String_o *v30; // x23
-  Il2CppObject *v31; // x0
-  int v33; // [xsp+Ch] [xbp-44h] BYREF
+  System_String_o *v47; // x20
+  System_String_o *v48; // x23
+  Il2CppObject *v49; // x0
+  int v51; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_42B1AB2 & 1) == 0 )
+  if ( (byte_42EA6AB & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_B52984(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_B52984(&int_TypeInfo);
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&StringLiteral_12222/*"SHOP_BUY_SUCCESS_MULTIPLE"*/);
-    sub_B52984(&StringLiteral_12160/*"SET_ITEM_INDIVIDUAL"*/);
-    sub_B52984(&StringLiteral_1/*""*/);
-    byte_42B1AB2 = 1;
+    sub_B5D5C4(
+      &Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__,
+      (_DWORD)itemMaster,
+      (_DWORD)entity,
+      setItemEntity);
+    sub_B5D5C4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v12, v13, v14);
+    sub_B5D5C4(&int_TypeInfo, v15, v16, v17);
+    sub_B5D5C4(&LocalizationManager_TypeInfo, v18, v19, v20);
+    sub_B5D5C4(&StringLiteral_12280/*"SHOP_BUY_SUCCESS_MULTIPLE"*/, v21, v22, v23);
+    sub_B5D5C4(&StringLiteral_12218/*"SET_ITEM_INDIVIDUAL"*/, v24, v25, v26);
+    sub_B5D5C4(&StringLiteral_1/*""*/, v27, v28, v29);
+    byte_42EA6AB = 1;
   }
-  v12 = (System_String_o *)StringLiteral_1/*""*/;
+  v30 = (System_String_o *)StringLiteral_1/*""*/;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_12222/*"SHOP_BUY_SUCCESS_MULTIPLE"*/, 0LL);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_12280/*"SHOP_BUY_SUCCESS_MULTIPLE"*/, 0LL);
   if ( !setItemEntity )
     goto LABEL_23;
-  v15 = (System_String_o *)v13;
-  v33 = setItemEntity->fields.setNum * buyCount;
-  v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v33);
-  v17 = System_String__Format(v15, v16, 0LL);
+  v33 = (System_String_o *)v31;
+  v51 = setItemEntity->fields.setNum * buyCount;
+  v34 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v51);
+  v35 = System_String__Format(v33, v34, 0LL);
   purchaseType = setItemEntity->fields.purchaseType;
-  v20 = v17;
+  v38 = v35;
   if ( purchaseType == 18 )
   {
-    AddNewLine = ShopRequestResultDialogMessageMaker__GetAddNewLine(presentBoxMessage, v18);
-    v29 = System_String__Concat_44568316(v12, AddNewLine, 0LL);
+    AddNewLine = ShopRequestResultDialogMessageMaker__GetAddNewLine(presentBoxMessage, v36);
+    v47 = System_String__Concat_44577788(v30, AddNewLine, 0LL);
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_12160/*"SET_ITEM_INDIVIDUAL"*/, 0LL);
+    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_12218/*"SET_ITEM_INDIVIDUAL"*/, 0LL);
     if ( itemMaster )
     {
-      v30 = (System_String_o *)v13;
-      v13 = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
+      v48 = (System_String_o *)v31;
+      v31 = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
               (DataMasterBase_WarMaster__WarEntity__int__o *)itemMaster,
               setItemEntity->fields.targetId,
-              (const MethodInfo_23E22D8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-      if ( v13 )
+              (const MethodInfo_23FAE10 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+      if ( v31 )
       {
-        v31 = (Il2CppObject *)System_String__Concat_44568316(*((System_String_o **)v13 + 3), v20, 0LL);
-        v26 = System_String__Format(v30, v31, 0LL);
-        v27 = v29;
-        return System_String__Concat_44568316(v27, v26, 0LL);
+        v49 = (Il2CppObject *)System_String__Concat_44577788(*((System_String_o **)v31 + 3), v38, 0LL);
+        v44 = System_String__Format(v48, v49, 0LL);
+        v45 = v47;
+        return System_String__Concat_44577788(v45, v44, 0LL);
       }
     }
 LABEL_23:
-    sub_B52A5C(v13, v14);
+    sub_B5D69C(v31, v32);
   }
   if ( purchaseType == 4 )
   {
-    v21 = ShopRequestResultDialogMessageMaker__GetAddNewLine(presentBoxMessage, v18);
-    v22 = System_String__Concat_44568316(v12, v21, 0LL);
+    v39 = ShopRequestResultDialogMessageMaker__GetAddNewLine(presentBoxMessage, v36);
+    v40 = System_String__Concat_44577788(v30, v39, 0LL);
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_12160/*"SET_ITEM_INDIVIDUAL"*/, 0LL);
+    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_12218/*"SET_ITEM_INDIVIDUAL"*/, 0LL);
     if ( servantMaster )
     {
-      v23 = (System_String_o *)v13;
-      v13 = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
+      v41 = (System_String_o *)v31;
+      v31 = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
               (DataMasterBase_WarMaster__WarEntity__int__o *)servantMaster,
               setItemEntity->fields.targetId,
-              (const MethodInfo_23E22D8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-      if ( v13 )
+              (const MethodInfo_23FAE10 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+      if ( v31 )
       {
-        Name = ServantEntity__getName((ServantEntity_o *)v13, 0, -1, 0LL);
-        v25 = (Il2CppObject *)System_String__Concat_44568316(Name, v20, 0LL);
-        v26 = System_String__Format(v23, v25, 0LL);
-        v27 = v22;
-        return System_String__Concat_44568316(v27, v26, 0LL);
+        Name = ServantEntity__getName((ServantEntity_o *)v31, 0, -1, 0LL);
+        v43 = (Il2CppObject *)System_String__Concat_44577788(Name, v38, 0LL);
+        v44 = System_String__Format(v41, v43, 0LL);
+        v45 = v40;
+        return System_String__Concat_44577788(v45, v44, 0LL);
       }
     }
     goto LABEL_23;

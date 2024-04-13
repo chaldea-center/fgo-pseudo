@@ -14,14 +14,14 @@ System_String_o *__fastcall ReplaceMasterName__Replace(
   __int64 v5; // x1
   System_String_o *name; // x19
 
-  if ( (byte_42B3A6F & 1) == 0 )
+  if ( (byte_42EC55F & 1) == 0 )
   {
-    sub_B52984(&LocalizationManager_TypeInfo);
-    byte_42B3A6F = 1;
+    sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)parse, (_DWORD)str, method);
+    byte_42EC55F = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !SelfUserGame )
-    sub_B52A5C(0LL, v5);
+    sub_B5D69C(0LL, v5);
   name = SelfUserGame->fields.name;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -34,10 +34,13 @@ System_String_o *__fastcall ReplaceMasterName__Replace(
 
 System_String_o *__fastcall ReplaceMasterName__get_Tag(ReplaceMasterName_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B3A6E & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42EC55E & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_20557/*"masterName"*/);
-    byte_42B3A6E = 1;
+    sub_B5D5C4(&StringLiteral_20662/*"masterName"*/, (_DWORD)method, v2, v3);
+    byte_42EC55E = 1;
   }
-  return (System_String_o *)StringLiteral_20557/*"masterName"*/;
+  return (System_String_o *)StringLiteral_20662/*"masterName"*/;
 }

@@ -8,16 +8,18 @@ BattlePlayAnimationComponent_SaveData_o *__fastcall BattlePlayAnimationComponent
         BattlePlayAnimationComponent_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   System_String_o *WrapAnimation; // x0
-  __int64 v4; // x1
+  __int64 v6; // x1
   BattlePlayAnimationComponent_SaveData_o *result; // x0
-  BattlePlayAnimationComponent_SaveData_o *v6; // x20
-  BattlePlayAnimationComponent_SaveData_o *v7; // x21
+  BattlePlayAnimationComponent_SaveData_o *v8; // x20
+  BattlePlayAnimationComponent_SaveData_o *v9; // x21
 
-  if ( (byte_42B09EB & 1) == 0 )
+  if ( (byte_42E9610 & 1) == 0 )
   {
-    sub_B52984(&BattlePlayAnimationComponent_SaveData_TypeInfo);
-    byte_42B09EB = 1;
+    sub_B5D5C4(&BattlePlayAnimationComponent_SaveData_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E9610 = 1;
   }
   WrapAnimation = (System_String_o *)BattlePlayAnimationComponent__get_WrapAnimation(this, method);
   if ( !WrapAnimation )
@@ -27,18 +29,18 @@ BattlePlayAnimationComponent_SaveData_o *__fastcall BattlePlayAnimationComponent
                                                         WrapAnimation->klass->vtable._6_GetTypeCode.methodPtr);
   if ( result )
   {
-    v6 = result;
-    v7 = (BattlePlayAnimationComponent_SaveData_o *)sub_B52A54(BattlePlayAnimationComponent_SaveData_TypeInfo);
-    BattlePlayAnimationComponent_SaveData___ctor(v7, 0LL);
+    v8 = result;
+    v9 = (BattlePlayAnimationComponent_SaveData_o *)sub_B5D694(BattlePlayAnimationComponent_SaveData_TypeInfo);
+    BattlePlayAnimationComponent_SaveData___ctor(v9, 0LL);
     WrapAnimation = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
-    if ( v7 )
+    if ( v9 )
       return BattlePlayAnimationComponent_SaveData__Init(
-               v7,
+               v9,
                WrapAnimation,
-               (WrapBattleBaseAnimation_SimpleData_o *)v6,
+               (WrapBattleBaseAnimation_SimpleData_o *)v8,
                0LL);
 LABEL_8:
-    sub_B52A5C(WrapAnimation, v4);
+    sub_B5D69C(WrapAnimation, v6);
   }
   return result;
 }
@@ -73,7 +75,7 @@ void __fastcall BattlePlayAnimationComponent__PlayAnimation(
   v4 = *(long double *)&timeline;
   WrapAnimation = BattlePlayAnimationComponent__get_WrapAnimation(this, (const MethodInfo *)animName);
   if ( !WrapAnimation )
-    sub_B52A5C(0LL, v7);
+    sub_B5D69C(0LL, v7);
   ((void (__fastcall *)(WrapBattleBaseAnimation_o *, System_String_o *, Il2CppMethodPointer, long double))WrapAnimation->klass->vtable._4_PlayAnimation.method)(
     WrapAnimation,
     animName,
@@ -118,7 +120,7 @@ WrapBattleBaseAnimation_o *__fastcall BattlePlayAnimationComponent__get_WrapAnim
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     wrapAnimation = WrapBattleBaseAnimation__MakeWrapAnimation(gameObject, 0LL);
     this->fields._wrapAnimation = wrapAnimation;
-    sub_B52920(
+    sub_B5D560(
       (BattleServantConfConponent_o *)p_wrapAnimation,
       (System_Int32_array **)wrapAnimation,
       v6,
@@ -136,15 +138,18 @@ void __fastcall BattlePlayAnimationComponent_SaveData___ctor(
         BattlePlayAnimationComponent_SaveData_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_42AD81F & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E60A2 & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_1/*""*/);
-    byte_42AD81F = 1;
+    sub_B5D5C4(&StringLiteral_1/*""*/, (_DWORD)method, v2, v3);
+    byte_42E60A2 = 1;
   }
   this->fields.componentName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B52920(&this->fields);
+  sub_B5D560(&this->fields);
   this->fields.animName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B52920(&this->fields.animName);
+  sub_B5D560(&this->fields.animName);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -160,11 +165,11 @@ BattlePlayAnimationComponent_SaveData_o *__fastcall BattlePlayAnimationComponent
   BattlePlayAnimationComponent_SaveData_o *result; // x0
 
   this->fields.componentName = objName;
-  sub_B52920(&this->fields);
+  sub_B5D560(&this->fields);
   if ( !data )
-    sub_B52A5C(v6, v7);
+    sub_B5D69C(v6, v7);
   this->fields.animName = data->fields.animName;
-  sub_B52920(&this->fields.animName);
+  sub_B5D560(&this->fields.animName);
   result = this;
   this->fields.timeline = data->fields.timeline;
   return result;

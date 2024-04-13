@@ -1,12 +1,15 @@
 void __fastcall IllustratorMaster___ctor(IllustratorMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B1B87 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42EA4AC & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_IllustratorMaster__IllustratorEntity__int___ctor__);
-    byte_42B1B87 = 1;
+    sub_B5D5C4(&Method_DataMasterBase_IllustratorMaster__IllustratorEntity__int___ctor__, (_DWORD)method, v2, v3);
+    byte_42EA4AC = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     89,
-    (const MethodInfo_23E223C *)Method_DataMasterBase_IllustratorMaster__IllustratorEntity__int___ctor__);
+    (const MethodInfo_23FAD74 *)Method_DataMasterBase_IllustratorMaster__IllustratorEntity__int___ctor__);
 }

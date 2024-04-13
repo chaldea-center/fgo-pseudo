@@ -8,25 +8,37 @@ bool __fastcall ServantCharaGraphFilterLogic__IsEventUpValShow(
         ServantCharaGraphFilterLogic_o *this,
         const MethodInfo *method)
 {
-  ServantCharaGraphFilterLogic_o *v2; // x19
+  int v2; // w2
+  __int64 v3; // x3
+  ServantCharaGraphFilterLogic_o *v4; // x19
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
   struct ListViewSort_o *sort; // x8
   int32_t bonusKind2; // w8
   struct CharaGraphListViewItemBase_o *item; // x20
-  EventUpValSetupInfo_o *v6; // x21
+  EventUpValSetupInfo_o *v14; // x21
   ServantFilterMaster_o *MasterData_WarQuestSelectionMaster; // x20
-  const MethodInfo *v9; // x1
+  const MethodInfo *v17; // x1
   int32_t klass; // w21
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v11; // kr00_16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v19; // kr00_16
 
-  v2 = this;
-  if ( (byte_42B1089 & 1) == 0 )
+  v4 = this;
+  if ( (byte_42E996F & 1) == 0 )
   {
-    sub_B52984(&Method_DataManager_GetMasterData_ServantFilterMaster___);
-    sub_B52984(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    this = (ServantCharaGraphFilterLogic_o *)sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_42B1089 = 1;
+    sub_B5D5C4(&Method_DataManager_GetMasterData_ServantFilterMaster___, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5, v6, v7);
+    this = (ServantCharaGraphFilterLogic_o *)sub_B5D5C4(
+                                               &Method_SingletonMonoBehaviour_DataManager__get_Instance__,
+                                               v8,
+                                               v9,
+                                               v10);
+    byte_42E996F = 1;
   }
-  sort = v2->fields.sort;
+  sort = v4->fields.sort;
   if ( !sort )
     goto LABEL_21;
   if ( !sort->fields.isBonusKind )
@@ -36,38 +48,38 @@ bool __fastcall ServantCharaGraphFilterLogic__IsEventUpValShow(
   {
     if ( bonusKind2 == 1 )
     {
-      this = (ServantCharaGraphFilterLogic_o *)ServantCharaGraphFilterLogic__get_ListViewItem(v2, method);
+      this = (ServantCharaGraphFilterLogic_o *)ServantCharaGraphFilterLogic__get_ListViewItem(v4, method);
       if ( this )
       {
         item = this[5].fields.item;
-        this = (ServantCharaGraphFilterLogic_o *)ServantCharaGraphFilterLogic__get_ListViewItem(v2, method);
+        this = (ServantCharaGraphFilterLogic_o *)ServantCharaGraphFilterLogic__get_ListViewItem(v4, method);
         if ( this )
         {
-          v6 = (EventUpValSetupInfo_o *)this[5].fields.sort;
-          this = (ServantCharaGraphFilterLogic_o *)ServantCharaGraphFilterLogic__get_ListViewItem(v2, method);
+          v14 = (EventUpValSetupInfo_o *)this[5].fields.sort;
+          this = (ServantCharaGraphFilterLogic_o *)ServantCharaGraphFilterLogic__get_ListViewItem(v4, method);
           if ( this )
           {
             if ( item )
-              return UserServantEntity__getEventUpVal_21508832(
+              return UserServantEntity__getEventUpVal_21840416(
                        (UserServantEntity_o *)item,
-                       v6,
+                       v14,
                        (int32_t)this[4].fields.sort,
                        0LL);
           }
         }
       }
 LABEL_21:
-      sub_B52A5C(this, method);
+      sub_B5D69C(this, method);
     }
     return 1;
   }
-  this = (ServantCharaGraphFilterLogic_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (ServantCharaGraphFilterLogic_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_21;
   MasterData_WarQuestSelectionMaster = (ServantFilterMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                   (DataManager_o *)this,
-                                                                  (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_ServantFilterMaster___);
-  this = (ServantCharaGraphFilterLogic_o *)ServantCharaGraphFilterLogic__get_ListViewItem(v2, v9);
+                                                                  (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_ServantFilterMaster___);
+  this = (ServantCharaGraphFilterLogic_o *)ServantCharaGraphFilterLogic__get_ListViewItem(v4, v17);
   if ( !this )
     goto LABEL_21;
   klass = (int32_t)this[6].klass;
@@ -76,15 +88,15 @@ LABEL_21:
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   }
-  v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(klass, 0LL);
+  v19 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(klass, 0LL);
   this = (ServantCharaGraphFilterLogic_o *)ServantCharaGraphFilterLogic__get_ListViewItem(
-                                             v2,
-                                             *(const MethodInfo **)&v11.fields.fakeValue);
+                                             v4,
+                                             *(const MethodInfo **)&v19.fields.fakeValue);
   if ( !this || !MasterData_WarQuestSelectionMaster )
     goto LABEL_21;
   return ServantFilterMaster__IsEnableServant(
            MasterData_WarQuestSelectionMaster,
-           v11,
+           v19,
            (int32_t)this[4].fields.sort,
            0LL);
 }
@@ -128,38 +140,115 @@ bool __fastcall ServantCharaGraphFilterLogic__IsMatchClassFilter(
         ServantCharaGraphFilterLogic_o *this,
         const MethodInfo *method)
 {
-  FilterKindList_c *v3; // x0
-  const MethodInfo *v4; // x1
+  int v2; // w2
+  __int64 v3; // x3
+  FilterKindList_c *v5; // x0
+  const MethodInfo *v6; // x1
+  FilterKindList_c *v7; // x0
+  const MethodInfo *v8; // x1
+  ListViewSort_o *sort; // x20
+  CharaGraphServantListViewItem_o *ListViewItem; // x0
+  __int64 v12; // x1
+  ListViewSort_o *v13; // x20
+
+  if ( (byte_42E9968 & 1) == 0 )
+  {
+    sub_B5D5C4(&FilterKindList_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E9968 = 1;
+  }
+  v5 = FilterKindList_TypeInfo;
+  if ( (BYTE3(FilterKindList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
+    && !FilterKindList_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo);
+    v5 = FilterKindList_TypeInfo;
+  }
+  if ( !CharaGraphFilterLogicBase__IsAllFilterOff(
+          (CharaGraphFilterLogicBase_o *)this,
+          v5->static_fields->ClassGroupFilterKindList,
+          0LL) )
+  {
+    sort = this->fields.sort;
+    ListViewItem = ServantCharaGraphFilterLogic__get_ListViewItem(this, v6);
+    if ( ListViewItem && sort )
+      return ListViewSort__IsMatchClassGroupFilter(sort, ListViewItem->fields._ServantEntity_k__BackingField, 0LL);
+LABEL_18:
+    sub_B5D69C(ListViewItem, v12);
+  }
+  v7 = FilterKindList_TypeInfo;
+  if ( (BYTE3(FilterKindList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
+    && !FilterKindList_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo);
+    v7 = FilterKindList_TypeInfo;
+  }
+  if ( CharaGraphFilterLogicBase__IsAllFilterOff(
+         (CharaGraphFilterLogicBase_o *)this,
+         v7->static_fields->ClassFilterKindList,
+         0LL) )
+  {
+    return 1;
+  }
+  v13 = this->fields.sort;
+  ListViewItem = ServantCharaGraphFilterLogic__get_ListViewItem(this, v8);
+  if ( !ListViewItem || !v13 )
+    goto LABEL_18;
+  return ListViewSort__IsMatchClassFilter(v13, ListViewItem->fields._ServantEntity_k__BackingField, 0LL);
+}
+
+
+bool __fastcall ServantCharaGraphFilterLogic__IsMatchEventBonusFilter(
+        ServantCharaGraphFilterLogic_o *this,
+        const MethodInfo *method)
+{
+  int v2; // w2
+  __int64 v3; // x3
+  ListViewSort_o *sort; // x0
+  const MethodInfo *v6; // x1
+  UserServantEntity_o *saveKey; // x20
+  ListViewSort_o *v9; // x19
+
+  if ( (byte_42E996C & 1) == 0 )
+  {
+    sub_B5D5C4(&ServantEventBonusFilterController_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E996C = 1;
+  }
+  sort = this->fields.sort;
+  if ( !sort )
+    goto LABEL_12;
+  if ( ListViewSort__CheckSvtEventBonusFilterDefaultAll(sort, -1, 0LL) )
+    return 1;
+  sort = (ListViewSort_o *)ServantCharaGraphFilterLogic__get_ListViewItem(this, v6);
+  if ( !sort )
+LABEL_12:
+    sub_B5D69C(sort, method);
+  saveKey = (UserServantEntity_o *)sort[1].fields.saveKey;
+  v9 = this->fields.sort;
+  if ( (BYTE3(ServantEventBonusFilterController_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
+    && !ServantEventBonusFilterController_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(ServantEventBonusFilterController_TypeInfo);
+  }
+  return !ServantEventBonusFilterController__IsHideServant(saveKey, v9, -1, 0LL);
+}
+
+
+bool __fastcall ServantCharaGraphFilterLogic__IsMatchNPEffectFilter(
+        ServantCharaGraphFilterLogic_o *this,
+        const MethodInfo *method)
+{
+  int v2; // w2
+  __int64 v3; // x3
   FilterKindList_c *v5; // x0
   const MethodInfo *v6; // x1
   ListViewSort_o *sort; // x20
   CharaGraphServantListViewItem_o *ListViewItem; // x0
   __int64 v10; // x1
-  ListViewSort_o *v11; // x20
 
-  if ( (byte_42B1082 & 1) == 0 )
+  if ( (byte_42E996A & 1) == 0 )
   {
-    sub_B52984(&FilterKindList_TypeInfo);
-    byte_42B1082 = 1;
-  }
-  v3 = FilterKindList_TypeInfo;
-  if ( (BYTE3(FilterKindList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !FilterKindList_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo);
-    v3 = FilterKindList_TypeInfo;
-  }
-  if ( !CharaGraphFilterLogicBase__IsAllFilterOff(
-          (CharaGraphFilterLogicBase_o *)this,
-          v3->static_fields->ClassGroupFilterKindList,
-          0LL) )
-  {
-    sort = this->fields.sort;
-    ListViewItem = ServantCharaGraphFilterLogic__get_ListViewItem(this, v4);
-    if ( ListViewItem && sort )
-      return ListViewSort__IsMatchClassGroupFilter(sort, ListViewItem->fields._ServantEntity_k__BackingField, 0LL);
-LABEL_18:
-    sub_B52A5C(ListViewItem, v10);
+    sub_B5D5C4(&FilterKindList_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E996A = 1;
   }
   v5 = FilterKindList_TypeInfo;
   if ( (BYTE3(FilterKindList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -170,86 +259,15 @@ LABEL_18:
   }
   if ( CharaGraphFilterLogicBase__IsAllFilterOff(
          (CharaGraphFilterLogicBase_o *)this,
-         v5->static_fields->ClassFilterKindList,
+         v5->static_fields->NpEffectFilterKindList,
          0LL) )
   {
     return 1;
   }
-  v11 = this->fields.sort;
+  sort = this->fields.sort;
   ListViewItem = ServantCharaGraphFilterLogic__get_ListViewItem(this, v6);
-  if ( !ListViewItem || !v11 )
-    goto LABEL_18;
-  return ListViewSort__IsMatchClassFilter(v11, ListViewItem->fields._ServantEntity_k__BackingField, 0LL);
-}
-
-
-bool __fastcall ServantCharaGraphFilterLogic__IsMatchEventBonusFilter(
-        ServantCharaGraphFilterLogic_o *this,
-        const MethodInfo *method)
-{
-  ListViewSort_o *sort; // x0
-  const MethodInfo *v4; // x1
-  UserServantEntity_o *saveKey; // x20
-  ListViewSort_o *v7; // x19
-
-  if ( (byte_42B1086 & 1) == 0 )
-  {
-    sub_B52984(&ServantEventBonusFilterController_TypeInfo);
-    byte_42B1086 = 1;
-  }
-  sort = this->fields.sort;
-  if ( !sort )
-    goto LABEL_12;
-  if ( ListViewSort__CheckSvtEventBonusFilterDefaultAll(sort, -1, 0LL) )
-    return 1;
-  sort = (ListViewSort_o *)ServantCharaGraphFilterLogic__get_ListViewItem(this, v4);
-  if ( !sort )
-LABEL_12:
-    sub_B52A5C(sort, method);
-  saveKey = (UserServantEntity_o *)sort[1].fields.saveKey;
-  v7 = this->fields.sort;
-  if ( (BYTE3(ServantEventBonusFilterController_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ServantEventBonusFilterController_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(ServantEventBonusFilterController_TypeInfo);
-  }
-  return !ServantEventBonusFilterController__IsHideServant(saveKey, v7, -1, 0LL);
-}
-
-
-bool __fastcall ServantCharaGraphFilterLogic__IsMatchNPEffectFilter(
-        ServantCharaGraphFilterLogic_o *this,
-        const MethodInfo *method)
-{
-  FilterKindList_c *v3; // x0
-  const MethodInfo *v4; // x1
-  ListViewSort_o *sort; // x20
-  CharaGraphServantListViewItem_o *ListViewItem; // x0
-  __int64 v8; // x1
-
-  if ( (byte_42B1084 & 1) == 0 )
-  {
-    sub_B52984(&FilterKindList_TypeInfo);
-    byte_42B1084 = 1;
-  }
-  v3 = FilterKindList_TypeInfo;
-  if ( (BYTE3(FilterKindList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !FilterKindList_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo);
-    v3 = FilterKindList_TypeInfo;
-  }
-  if ( CharaGraphFilterLogicBase__IsAllFilterOff(
-         (CharaGraphFilterLogicBase_o *)this,
-         v3->static_fields->NpEffectFilterKindList,
-         0LL) )
-  {
-    return 1;
-  }
-  sort = this->fields.sort;
-  ListViewItem = ServantCharaGraphFilterLogic__get_ListViewItem(this, v4);
   if ( !ListViewItem || !sort )
-    sub_B52A5C(ListViewItem, v8);
+    sub_B5D69C(ListViewItem, v10);
   return ListViewSort__IsMatchNPEffectFilter(sort, ListViewItem->fields._UserServantEntity_k__BackingField, 0LL);
 }
 
@@ -258,35 +276,37 @@ bool __fastcall ServantCharaGraphFilterLogic__IsMatchNPTypeFilter(
         ServantCharaGraphFilterLogic_o *this,
         const MethodInfo *method)
 {
-  FilterKindList_c *v3; // x0
-  const MethodInfo *v4; // x1
+  int v2; // w2
+  __int64 v3; // x3
+  FilterKindList_c *v5; // x0
+  const MethodInfo *v6; // x1
   ListViewSort_o *sort; // x20
   CharaGraphServantListViewItem_o *ListViewItem; // x0
-  __int64 v8; // x1
+  __int64 v10; // x1
 
-  if ( (byte_42B1083 & 1) == 0 )
+  if ( (byte_42E9969 & 1) == 0 )
   {
-    sub_B52984(&FilterKindList_TypeInfo);
-    byte_42B1083 = 1;
+    sub_B5D5C4(&FilterKindList_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E9969 = 1;
   }
-  v3 = FilterKindList_TypeInfo;
+  v5 = FilterKindList_TypeInfo;
   if ( (BYTE3(FilterKindList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !FilterKindList_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo);
-    v3 = FilterKindList_TypeInfo;
+    v5 = FilterKindList_TypeInfo;
   }
   if ( CharaGraphFilterLogicBase__IsAllFilterOff(
          (CharaGraphFilterLogicBase_o *)this,
-         v3->static_fields->NpTypeFilterKindList,
+         v5->static_fields->NpTypeFilterKindList,
          0LL) )
   {
     return 1;
   }
   sort = this->fields.sort;
-  ListViewItem = ServantCharaGraphFilterLogic__get_ListViewItem(this, v4);
+  ListViewItem = ServantCharaGraphFilterLogic__get_ListViewItem(this, v6);
   if ( !ListViewItem || !sort )
-    sub_B52A5C(ListViewItem, v8);
+    sub_B5D69C(ListViewItem, v10);
   return ListViewSort__IsMatchNPTypeFilter(sort, ListViewItem->fields._UserServantEntity_k__BackingField, 0LL);
 }
 
@@ -295,41 +315,43 @@ bool __fastcall ServantCharaGraphFilterLogic__IsMatchRarityFilter(
         ServantCharaGraphFilterLogic_o *this,
         const MethodInfo *method)
 {
-  FilterKindList_c *v3; // x0
-  FilterKindList_c *v4; // x0
-  __int64 v5; // x1
+  int v2; // w2
+  __int64 v3; // x3
+  FilterKindList_c *v5; // x0
+  FilterKindList_c *v6; // x0
+  __int64 v7; // x1
   struct CharaGraphListViewItemBase_o *item; // x0
   ListViewSort_o *sort; // x19
 
-  if ( (byte_42B1088 & 1) == 0 )
+  if ( (byte_42E996E & 1) == 0 )
   {
-    sub_B52984(&FilterKindList_TypeInfo);
-    byte_42B1088 = 1;
+    sub_B5D5C4(&FilterKindList_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E996E = 1;
   }
-  v3 = FilterKindList_TypeInfo;
+  v5 = FilterKindList_TypeInfo;
   if ( (BYTE3(FilterKindList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !FilterKindList_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo);
-    v3 = FilterKindList_TypeInfo;
+    v5 = FilterKindList_TypeInfo;
   }
   if ( CharaGraphFilterLogicBase__IsAllFilterOff(
          (CharaGraphFilterLogicBase_o *)this,
-         v3->static_fields->RarityFilterKindList,
+         v5->static_fields->RarityFilterKindList,
          0LL) )
   {
     return 1;
   }
-  v4 = FilterKindList_TypeInfo;
+  v6 = FilterKindList_TypeInfo;
   if ( (BYTE3(FilterKindList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !FilterKindList_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo);
-    v4 = FilterKindList_TypeInfo;
+    v6 = FilterKindList_TypeInfo;
   }
   if ( CharaGraphFilterLogicBase__IsAllFilterOn(
          (CharaGraphFilterLogicBase_o *)this,
-         v4->static_fields->RarityFilterKindList,
+         v6->static_fields->RarityFilterKindList,
          0LL) )
   {
     return 1;
@@ -342,7 +364,7 @@ bool __fastcall ServantCharaGraphFilterLogic__IsMatchRarityFilter(
                                                         item->klass->vtable._10_ModifyLocal.methodPtr),
         !sort) )
   {
-    sub_B52A5C(item, v5);
+    sub_B5D69C(item, v7);
   }
   return ListViewSort__IsMatchRarityFilter(sort, (int32_t)item, 0LL);
 }
@@ -352,35 +374,37 @@ bool __fastcall ServantCharaGraphFilterLogic__IsMatchServantTypeFilter(
         ServantCharaGraphFilterLogic_o *this,
         const MethodInfo *method)
 {
-  FilterKindList_c *v3; // x0
-  const MethodInfo *v4; // x1
+  int v2; // w2
+  __int64 v3; // x3
+  FilterKindList_c *v5; // x0
+  const MethodInfo *v6; // x1
   ListViewSort_o *sort; // x20
   CharaGraphServantListViewItem_o *ListViewItem; // x0
-  __int64 v8; // x1
+  __int64 v10; // x1
 
-  if ( (byte_42B1085 & 1) == 0 )
+  if ( (byte_42E996B & 1) == 0 )
   {
-    sub_B52984(&FilterKindList_TypeInfo);
-    byte_42B1085 = 1;
+    sub_B5D5C4(&FilterKindList_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E996B = 1;
   }
-  v3 = FilterKindList_TypeInfo;
+  v5 = FilterKindList_TypeInfo;
   if ( (BYTE3(FilterKindList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !FilterKindList_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo);
-    v3 = FilterKindList_TypeInfo;
+    v5 = FilterKindList_TypeInfo;
   }
   if ( CharaGraphFilterLogicBase__IsAllFilterOff(
          (CharaGraphFilterLogicBase_o *)this,
-         v3->static_fields->ServantTypeFilterKindList,
+         v5->static_fields->ServantTypeFilterKindList,
          0LL) )
   {
     return 1;
   }
   sort = this->fields.sort;
-  ListViewItem = ServantCharaGraphFilterLogic__get_ListViewItem(this, v4);
+  ListViewItem = ServantCharaGraphFilterLogic__get_ListViewItem(this, v6);
   if ( !ListViewItem || !sort )
-    sub_B52A5C(ListViewItem, v8);
+    sub_B5D69C(ListViewItem, v10);
   return ListViewSort__IsMatchServantTypeFilter(sort, ListViewItem->fields._ServantEntity_k__BackingField, 0LL);
 }
 
@@ -389,78 +413,80 @@ bool __fastcall ServantCharaGraphFilterLogic__IsMatchSkillAndTreasureDeviceFilte
         ServantCharaGraphFilterLogic_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   void *sort; // x0
-  ListViewSort_o *v5; // x20
+  ListViewSort_o *v7; // x20
   _BOOL4 IsUnSelectedAllTargetFilters; // w0
-  ListViewSort_o *v7; // x21
-  _BOOL4 v8; // w20
-  _BOOL4 v9; // w21
-  const MethodInfo *v10; // x1
-  _BOOL4 IsMatchEffectCategory; // w22
+  ListViewSort_o *v9; // x21
+  _BOOL4 v10; // w20
+  _BOOL4 v11; // w21
   const MethodInfo *v12; // x1
-  _BOOL4 v13; // w0
-  __int64 v14; // x0
+  _BOOL4 IsMatchEffectCategory; // w22
+  const MethodInfo *v14; // x1
+  _BOOL4 v15; // w0
+  __int64 v16; // x0
 
-  if ( (byte_42B1087 & 1) == 0 )
+  if ( (byte_42E996D & 1) == 0 )
   {
-    sub_B52984(&ListViewSort_FilterKind___TypeInfo);
-    byte_42B1087 = 1;
+    sub_B5D5C4(&ListViewSort_FilterKind___TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E996D = 1;
   }
   sort = this->fields.sort;
   if ( !sort )
     goto LABEL_22;
   if ( ListViewSort__CheckSvtEquipEffectFilterDefaultAll((ListViewSort_o *)sort, 0LL) )
     return 1;
-  v5 = this->fields.sort;
-  sort = (void *)sub_B5299C(ListViewSort_FilterKind___TypeInfo, 1LL);
+  v7 = this->fields.sort;
+  sort = (void *)sub_B5D5DC(ListViewSort_FilterKind___TypeInfo, 1LL);
   if ( !sort )
     goto LABEL_22;
   method = (const MethodInfo *)sort;
   if ( !*((_DWORD *)sort + 6) )
     goto LABEL_23;
   *((_DWORD *)sort + 8) = 50;
-  if ( !v5
+  if ( !v7
     || (IsUnSelectedAllTargetFilters = ListViewSort__IsUnSelectedAllTargetFilters(
-                                         v5,
+                                         v7,
                                          (ListViewSort_FilterKind_array *)sort,
                                          0LL),
-        v7 = this->fields.sort,
-        v8 = IsUnSelectedAllTargetFilters,
-        (sort = (void *)sub_B5299C(ListViewSort_FilterKind___TypeInfo, 1LL)) == 0LL) )
+        v9 = this->fields.sort,
+        v10 = IsUnSelectedAllTargetFilters,
+        (sort = (void *)sub_B5D5DC(ListViewSort_FilterKind___TypeInfo, 1LL)) == 0LL) )
   {
 LABEL_22:
-    sub_B52A5C(sort, method);
+    sub_B5D69C(sort, method);
   }
   method = (const MethodInfo *)sort;
   if ( !*((_DWORD *)sort + 6) )
   {
 LABEL_23:
-    v14 = sub_B52A88(sort);
-    sub_B52A28(v14, 0LL);
+    v16 = sub_B5D6C8(sort);
+    sub_B5D668(v16, 0LL);
   }
   *((_DWORD *)sort + 8) = 51;
-  if ( !v7 )
+  if ( !v9 )
     goto LABEL_22;
-  v9 = ListViewSort__IsUnSelectedAllTargetFilters(v7, (ListViewSort_FilterKind_array *)sort, 0LL);
-  sort = ServantCharaGraphFilterLogic__get_ListViewItem(this, v10);
+  v11 = ListViewSort__IsUnSelectedAllTargetFilters(v9, (ListViewSort_FilterKind_array *)sort, 0LL);
+  sort = ServantCharaGraphFilterLogic__get_ListViewItem(this, v12);
   if ( !sort )
     goto LABEL_22;
   IsMatchEffectCategory = ServantEquipEffectFilterController__IsMatchEffectCategory(
                             *((System_Int32_array **)sort + 32),
                             this->fields.sort,
                             0LL);
-  sort = ServantCharaGraphFilterLogic__get_ListViewItem(this, v12);
+  sort = ServantCharaGraphFilterLogic__get_ListViewItem(this, v14);
   if ( !sort )
     goto LABEL_22;
-  v13 = ServantEquipEffectFilterController__IsMatchEffectCategory(
+  v15 = ServantEquipEffectFilterController__IsMatchEffectCategory(
           *((System_Int32_array **)sort + 31),
           this->fields.sort,
           0LL);
-  if ( ((v8 ^ v9) & 1) != 0 )
+  if ( ((v10 ^ v11) & 1) != 0 )
   {
-    if ( v8 )
+    if ( v10 )
     {
-      if ( v13 )
+      if ( v15 )
         return 1;
     }
     else if ( IsMatchEffectCategory )
@@ -468,7 +494,7 @@ LABEL_23:
       return 1;
     }
   }
-  else if ( IsMatchEffectCategory || v13 )
+  else if ( IsMatchEffectCategory || v15 )
   {
     return 1;
   }
@@ -493,10 +519,10 @@ CharaGraphServantListViewItem_o *__fastcall ServantCharaGraphFilterLogic__get_Li
   ServantCharaGraphEquipFilterLogic_o *v14; // x0
   const MethodInfo *v15; // x1
 
-  if ( (byte_42B1081 & 1) == 0 )
+  if ( (byte_42E9967 & 1) == 0 )
   {
-    sub_B52984(&CharaGraphServantListViewItem_TypeInfo);
-    byte_42B1081 = 1;
+    sub_B5D5C4(&CharaGraphServantListViewItem_TypeInfo, (_DWORD)method, (_DWORD)v2, v3);
+    byte_42E9967 = 1;
   }
   p_listViewItem = (BattleServantConfConponent_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
@@ -510,9 +536,9 @@ CharaGraphServantListViewItem_o *__fastcall ServantCharaGraphFilterLogic__get_Li
   {
     item = (System_Int32_array **)this->fields.item;
     p_listViewItem->klass = (BattleServantConfConponent_c *)listViewItem;
-    sub_B52920(p_listViewItem, item, v2, v3, v4, v5, v6, v7);
+    sub_B5D560(p_listViewItem, item, v2, v3, v4, v5, v6, v7);
     return listViewItem;
   }
-  v14 = (ServantCharaGraphEquipFilterLogic_o *)sub_B52D50(this->fields.item);
+  v14 = (ServantCharaGraphEquipFilterLogic_o *)sub_B5D990(this->fields.item);
   return (CharaGraphServantListViewItem_o *)ServantCharaGraphEquipFilterLogic__IsMatchClassFilter(v14, v15);
 }

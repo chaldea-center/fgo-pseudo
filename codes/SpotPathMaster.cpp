@@ -1,14 +1,17 @@
 void __fastcall SpotPathMaster___ctor(SpotPathMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B0A8D & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E926A & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
-    byte_42B0A8D = 1;
+    sub_B5D5C4(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__, (_DWORD)method, v2, v3);
+    byte_42E926A = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     216,
-    (const MethodInfo_23E223C *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
+    (const MethodInfo_23FAD74 *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
 }
 
 
@@ -42,31 +45,41 @@ SpotPathEntity_o *__fastcall SpotPathMaster__GetSpotPathEntity(
         int32_t groupId,
         const MethodInfo *method)
 {
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
   SpotPathEntity_o *result; // x0
   int32_t Count; // w0
-  int v11; // w23
-  int32_t v12; // w21
-  int32_t v13; // w22
-  __int64 v14; // x10
+  int v17; // w23
+  int32_t v18; // w21
+  int32_t v19; // w22
+  __int64 v20; // x10
 
-  if ( (byte_42B0A8E & 1) == 0 )
+  if ( (byte_42E926B & 1) == 0 )
   {
-    sub_B52984(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B52984(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B52984(&SpotPathEntity_TypeInfo);
-    byte_42B0A8E = 1;
+    sub_B5D5C4(
+      &Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__,
+      eventId,
+      termId,
+      *(_QWORD *)&groupId);
+    sub_B5D5C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v9, v10, v11);
+    sub_B5D5C4(&SpotPathEntity_TypeInfo, v12, v13, v14);
+    byte_42E926B = 1;
   }
   result = (SpotPathEntity_o *)this->fields.list;
   if ( !result )
     goto LABEL_16;
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)result,
-            (const MethodInfo_2B98558 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2BB85C4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
-    v11 = termId + 100 * eventId;
-    v12 = Count;
-    v13 = 0;
+    v17 = termId + 100 * eventId;
+    v18 = Count;
+    v19 = 0;
     while ( 1 )
     {
       result = (SpotPathEntity_o *)this->fields.list;
@@ -74,23 +87,23 @@ SpotPathEntity_o *__fastcall SpotPathMaster__GetSpotPathEntity(
         break;
       result = (SpotPathEntity_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                                      (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)result,
-                                     v13,
-                                     (const MethodInfo_2B985FC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                     v19,
+                                     (const MethodInfo_2BB8668 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !result )
         break;
-      v14 = *(&SpotPathEntity_TypeInfo->_2.bitflags2 + 1);
-      if ( *(&result->klass->_2.bitflags2 + 1) < (unsigned int)v14
-        || (SpotPathEntity_c *)result->klass->_2.typeHierarchy[v14 - 1] != SpotPathEntity_TypeInfo )
+      v20 = *(&SpotPathEntity_TypeInfo->_2.bitflags2 + 1);
+      if ( *(&result->klass->_2.bitflags2 + 1) < (unsigned int)v20
+        || (SpotPathEntity_c *)result->klass->_2.typeHierarchy[v20 - 1] != SpotPathEntity_TypeInfo )
       {
         break;
       }
-      if ( result->fields.valueType == 1 && result->fields.targetId == v11 && result->fields.targetValue == groupId )
+      if ( result->fields.valueType == 1 && result->fields.targetId == v17 && result->fields.targetValue == groupId )
         return result;
-      if ( ++v13 >= v12 )
+      if ( ++v19 >= v18 )
         return 0LL;
     }
 LABEL_16:
-    sub_B52A5C(result, *(_QWORD *)&eventId);
+    sub_B5D69C(result, *(_QWORD *)&eventId);
   }
   return 0LL;
 }

@@ -14,6 +14,6 @@ void __fastcall SetLimitCntInfoComponent__setEnableOnImg(
 
   onImg = (UnityEngine_Component_o *)this->fields.onImg;
   if ( !onImg || (onImg = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(onImg, 0LL)) == 0LL )
-    sub_B52A5C(onImg, isOn);
+    sub_B5D69C(onImg, isOn);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)onImg, isOn, 0LL);
 }

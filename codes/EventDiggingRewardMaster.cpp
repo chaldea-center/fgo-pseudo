@@ -1,12 +1,19 @@
 void __fastcall EventDiggingRewardMaster___ctor(EventDiggingRewardMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B27FB & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42EB1AF & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_EventDiggingRewardMaster__EventDiggingRewardEntity__int___ctor__);
-    byte_42B27FB = 1;
+    sub_B5D5C4(
+      &Method_DataMasterBase_EventDiggingRewardMaster__EventDiggingRewardEntity__int___ctor__,
+      (_DWORD)method,
+      v2,
+      v3);
+    byte_42EB1AF = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     345,
-    (const MethodInfo_23E223C *)Method_DataMasterBase_EventDiggingRewardMaster__EventDiggingRewardEntity__int___ctor__);
+    (const MethodInfo_23FAD74 *)Method_DataMasterBase_EventDiggingRewardMaster__EventDiggingRewardEntity__int___ctor__);
 }

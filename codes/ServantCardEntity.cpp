@@ -1,27 +1,32 @@
 void __fastcall ServantCardEntity___ctor(ServantCardEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B1063 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E9949 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_string___ctor__);
-    byte_42B1063 = 1;
+    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
+    byte_42E9949 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall ServantCardEntity__CreatePK(int32_t svtId, int32_t cardId, const MethodInfo *method)
 {
-  if ( (byte_42B1062 & 1) == 0 )
+  __int64 v3; // x3
+
+  if ( (byte_42E9948 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_42B1062 = 1;
+    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_int__int___, cardId, (_DWORD)method, v3);
+    byte_42E9948 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            cardId,
-           (const MethodInfo_1A4DF50 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1AE3018 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

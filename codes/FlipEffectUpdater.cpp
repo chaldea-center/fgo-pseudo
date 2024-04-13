@@ -14,30 +14,32 @@ void __fastcall FlipEffectUpdater__LateUpdate(FlipEffectUpdater_o *this, const M
 // local variable allocation has failed, the output may be wrong!
 void __fastcall FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   UnityEngine_Object_o *ConnectTarget; // x19
   UnityEngine_Transform_o **p_mTrans; // x19
   UnityEngine_Object_o *mTrans; // x21
-  __int64 v6; // x1
+  __int64 v8; // x1
   struct UnityEngine_Transform_o *transform; // x0
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  System_String_array **v10; // x2
+  System_String_array **v11; // x3
+  System_Boolean_array **v12; // x4
+  System_Int32_array **v13; // x5
+  System_Int32_array *v14; // x6
+  System_Int32_array *v15; // x7
   UnityEngine_Transform_o *parent; // x0
-  UnityEngine_Transform_o *v15; // x21
-  UnityEngine_Transform_o *v16; // x20
-  int v17; // s0
-  UnityEngine_Transform_o *v20; // x20
-  int v21; // s0
-  UnityEngine_Transform_o *v24; // x20
-  int v25; // s0
+  UnityEngine_Transform_o *v17; // x21
+  UnityEngine_Transform_o *v18; // x20
+  int v19; // s0
+  UnityEngine_Transform_o *v22; // x20
+  int v23; // s0
+  UnityEngine_Transform_o *v26; // x20
+  int v27; // s0
 
-  if ( (byte_42AE9EA & 1) == 0 )
+  if ( (byte_42E69FA & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42AE9EA = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E69FA = 1;
   }
   ConnectTarget = (UnityEngine_Object_o *)this->fields.ConnectTarget;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -58,15 +60,15 @@ void __fastcall FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
       this->fields.mTrans = transform;
-      sub_B52920(
+      sub_B5D560(
         (BattleServantConfConponent_o *)&this->fields.mTrans,
         (System_Int32_array **)transform,
-        v8,
-        v9,
         v10,
         v11,
         v12,
-        v13);
+        v13,
+        v14,
+        v15);
     }
     parent = *p_mTrans;
     if ( !*p_mTrans )
@@ -74,26 +76,26 @@ void __fastcall FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const
     parent = UnityEngine_Transform__get_parent(parent, 0LL);
     if ( !*p_mTrans )
       goto LABEL_20;
-    v15 = parent;
+    v17 = parent;
     UnityEngine_Transform__set_parent(*p_mTrans, this->fields.ConnectTarget, 0LL);
-    v16 = this->fields.mTrans;
-    *(UnityEngine_Vector3_o *)&v17 = UnityEngine_Vector3__get_zero(0LL);
-    if ( !v16 )
+    v18 = this->fields.mTrans;
+    *(UnityEngine_Vector3_o *)&v19 = UnityEngine_Vector3__get_zero(0LL);
+    if ( !v18 )
       goto LABEL_20;
-    UnityEngine_Transform__set_localPosition(v16, *(UnityEngine_Vector3_o *)&v17, 0LL);
-    v20 = *p_mTrans;
-    *(UnityEngine_Vector3_o *)&v21 = UnityEngine_Vector3__get_zero(0LL);
-    if ( !v20
-      || (UnityEngine_Transform__set_localEulerAngles(v20, *(UnityEngine_Vector3_o *)&v21, 0LL),
-          v24 = *p_mTrans,
-          *(UnityEngine_Vector3_o *)&v25 = UnityEngine_Vector3__get_one(0LL),
-          !v24)
-      || (UnityEngine_Transform__set_localScale(v24, *(UnityEngine_Vector3_o *)&v25, 0LL), (parent = *p_mTrans) == 0LL) )
+    UnityEngine_Transform__set_localPosition(v18, *(UnityEngine_Vector3_o *)&v19, 0LL);
+    v22 = *p_mTrans;
+    *(UnityEngine_Vector3_o *)&v23 = UnityEngine_Vector3__get_zero(0LL);
+    if ( !v22
+      || (UnityEngine_Transform__set_localEulerAngles(v22, *(UnityEngine_Vector3_o *)&v23, 0LL),
+          v26 = *p_mTrans,
+          *(UnityEngine_Vector3_o *)&v27 = UnityEngine_Vector3__get_one(0LL),
+          !v26)
+      || (UnityEngine_Transform__set_localScale(v26, *(UnityEngine_Vector3_o *)&v27, 0LL), (parent = *p_mTrans) == 0LL) )
     {
 LABEL_20:
-      sub_B52A5C(parent, v6);
+      sub_B5D69C(parent, v8);
     }
-    UnityEngine_Transform__set_parent(parent, v15, 0LL);
+    UnityEngine_Transform__set_parent(parent, v17, 0LL);
   }
 }
 
@@ -110,7 +112,7 @@ void __fastcall FlipEffectUpdater__Start(FlipEffectUpdater_o *this, const Method
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   this->fields.mTrans = transform;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.mTrans,
     (System_Int32_array **)transform,
     v4,

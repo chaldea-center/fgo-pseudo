@@ -23,46 +23,51 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetClassIcons(
         System_Int32_array *classImageIds,
         const MethodInfo *method)
 {
-  RestrictionNotSatisfySlotIcons_o *v4; // x19
+  __int64 v3; // x3
+  RestrictionNotSatisfySlotIcons_o *v5; // x19
   struct UISprite_array *classIcons; // x8
   signed int max_length; // w24
-  __int64 v7; // x23
-  int v8; // w9
-  struct UISprite_array *v9; // x8
-  UISprite_o *v10; // x21
-  int32_t v11; // w22
-  struct UISprite_array *v12; // x8
+  __int64 v8; // x23
+  int v9; // w9
+  struct UISprite_array *v10; // x8
+  UISprite_o *v11; // x21
+  int32_t v12; // w22
+  struct UISprite_array *v13; // x8
   UnityEngine_GameObject_o *gameObject; // x0
   struct ServantFaceIconComponent_array *servantFaceIcons; // x20
-  int v15; // w8
-  __int64 v16; // x21
+  int v16; // w8
+  __int64 v17; // x21
   struct UISprite_array *supportIcons; // x19
-  int v18; // w8
-  __int64 v19; // x20
-  __int64 v20; // x0
+  int v19; // w8
+  __int64 v20; // x20
+  __int64 v21; // x0
 
-  v4 = this;
-  if ( (byte_42B28C1 & 1) == 0 )
+  v5 = this;
+  if ( (byte_42EAF12 & 1) == 0 )
   {
-    this = (RestrictionNotSatisfySlotIcons_o *)sub_B52984(&AtlasManager_TypeInfo);
-    byte_42B28C1 = 1;
+    this = (RestrictionNotSatisfySlotIcons_o *)sub_B5D5C4(
+                                                 &AtlasManager_TypeInfo,
+                                                 (_DWORD)classImageIds,
+                                                 (_DWORD)method,
+                                                 v3);
+    byte_42EAF12 = 1;
   }
-  classIcons = v4->fields.classIcons;
+  classIcons = v5->fields.classIcons;
   if ( classIcons )
   {
     if ( !classImageIds )
 LABEL_43:
-      sub_B52A5C(this, classImageIds);
+      sub_B5D69C(this, classImageIds);
     max_length = classImageIds->max_length;
-    v7 = 0LL;
+    v8 = 0LL;
     while ( 1 )
     {
-      v8 = classIcons->max_length;
-      if ( (int)v7 >= v8 )
+      v9 = classIcons->max_length;
+      if ( (int)v8 >= v9 )
         break;
-      if ( (unsigned int)v7 >= v8 )
+      if ( (unsigned int)v8 >= v9 )
         goto LABEL_44;
-      this = (RestrictionNotSatisfySlotIcons_o *)classIcons->m_Items[v7];
+      this = (RestrictionNotSatisfySlotIcons_o *)classIcons->m_Items[v8];
       if ( !this )
         goto LABEL_43;
       this = (RestrictionNotSatisfySlotIcons_o *)UnityEngine_Component__get_gameObject(
@@ -70,56 +75,56 @@ LABEL_43:
                                                    0LL);
       if ( !this )
         goto LABEL_43;
-      if ( (int)v7 >= max_length )
+      if ( (int)v8 >= max_length )
       {
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
       }
       else
       {
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-        v9 = v4->fields.classIcons;
-        if ( !v9 )
+        v10 = v5->fields.classIcons;
+        if ( !v10 )
           goto LABEL_43;
-        if ( (unsigned int)v7 >= v9->max_length || (unsigned int)v7 >= classImageIds->max_length )
+        if ( (unsigned int)v8 >= v10->max_length || (unsigned int)v8 >= classImageIds->max_length )
           goto LABEL_44;
-        v10 = v9->m_Items[v7];
-        v11 = classImageIds->m_Items[v7 + 1];
+        v11 = v10->m_Items[v8];
+        v12 = classImageIds->m_Items[v8 + 1];
         if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !AtlasManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
         }
-        this = (RestrictionNotSatisfySlotIcons_o *)AtlasManager__SetClassIcon(v10, v11, 3, 0LL);
+        this = (RestrictionNotSatisfySlotIcons_o *)AtlasManager__SetClassIcon(v11, v12, 3, 0LL);
       }
-      if ( max_length == 1 || max_length == 3 && (_DWORD)v7 == 2 )
+      if ( max_length == 1 || max_length == 3 && (_DWORD)v8 == 2 )
       {
-        v12 = v4->fields.classIcons;
-        if ( !v12 )
+        v13 = v5->fields.classIcons;
+        if ( !v13 )
           goto LABEL_43;
-        if ( (unsigned int)v7 >= v12->max_length )
+        if ( (unsigned int)v8 >= v13->max_length )
           goto LABEL_44;
-        this = (RestrictionNotSatisfySlotIcons_o *)v12->m_Items[v7];
+        this = (RestrictionNotSatisfySlotIcons_o *)v13->m_Items[v8];
         if ( !this )
           goto LABEL_43;
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
         GameObjectExtensions__SetLocalPositionX(gameObject, 0.0, 0LL);
       }
-      classIcons = v4->fields.classIcons;
-      ++v7;
+      classIcons = v5->fields.classIcons;
+      ++v8;
       if ( !classIcons )
         goto LABEL_43;
     }
   }
-  servantFaceIcons = v4->fields.servantFaceIcons;
+  servantFaceIcons = v5->fields.servantFaceIcons;
   if ( servantFaceIcons )
   {
-    v15 = servantFaceIcons->max_length;
-    if ( v15 >= 1 )
+    v16 = servantFaceIcons->max_length;
+    if ( v16 >= 1 )
     {
-      v16 = 0LL;
-      while ( (unsigned int)v16 < v15 )
+      v17 = 0LL;
+      while ( (unsigned int)v17 < v16 )
       {
-        this = (RestrictionNotSatisfySlotIcons_o *)servantFaceIcons->m_Items[v16];
+        this = (RestrictionNotSatisfySlotIcons_o *)servantFaceIcons->m_Items[v17];
         if ( !this )
           goto LABEL_43;
         this = (RestrictionNotSatisfySlotIcons_o *)UnityEngine_Component__get_gameObject(
@@ -128,26 +133,26 @@ LABEL_43:
         if ( !this )
           goto LABEL_43;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
-        v15 = servantFaceIcons->max_length;
-        if ( (int)++v16 >= v15 )
+        v16 = servantFaceIcons->max_length;
+        if ( (int)++v17 >= v16 )
           goto LABEL_35;
       }
 LABEL_44:
-      v20 = sub_B52A88(this);
-      sub_B52A28(v20, 0LL);
+      v21 = sub_B5D6C8(this);
+      sub_B5D668(v21, 0LL);
     }
   }
 LABEL_35:
-  supportIcons = v4->fields.supportIcons;
+  supportIcons = v5->fields.supportIcons;
   if ( supportIcons )
   {
-    v18 = supportIcons->max_length;
-    if ( v18 >= 1 )
+    v19 = supportIcons->max_length;
+    if ( v19 >= 1 )
     {
-      v19 = 0LL;
-      while ( (unsigned int)v19 < v18 )
+      v20 = 0LL;
+      while ( (unsigned int)v20 < v19 )
       {
-        this = (RestrictionNotSatisfySlotIcons_o *)supportIcons->m_Items[v19];
+        this = (RestrictionNotSatisfySlotIcons_o *)supportIcons->m_Items[v20];
         if ( !this )
           goto LABEL_43;
         this = (RestrictionNotSatisfySlotIcons_o *)UnityEngine_Component__get_gameObject(
@@ -156,8 +161,8 @@ LABEL_35:
         if ( !this )
           goto LABEL_43;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
-        v18 = supportIcons->max_length;
-        if ( (int)++v19 >= v18 )
+        v19 = supportIcons->max_length;
+        if ( (int)++v20 >= v19 )
           return;
       }
       goto LABEL_44;
@@ -176,38 +181,58 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetServantIcons(
         const MethodInfo *method)
 {
   RestrictionNotSatisfySlotIcons_o *v11; // x19
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  int v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
+  int v18; // w1
+  int v19; // w2
+  __int64 v20; // x3
+  int v21; // w1
+  int v22; // w2
+  __int64 v23; // x3
   struct ServantFaceIconComponent_array *servantFaceIcons; // x8
-  __int64 v13; // x26
-  unsigned __int64 v14; // x25
-  int32_t *v15; // x27
+  __int64 v25; // x26
+  unsigned __int64 v26; // x25
+  int32_t *v27; // x27
   unsigned __int64 max_length; // x9
-  int32_t v17; // w20
-  struct UISprite_array *v18; // x8
+  int32_t v29; // w20
+  struct UISprite_array *v30; // x8
   UserServantEntity_o *HeroineData; // x0
   struct UISprite_array *supportIcons; // x8
-  struct UISprite_array *v21; // x8
-  int32_t v22; // w3
-  struct ServantFaceIconComponent_array *v23; // x8
-  struct ServantFaceIconComponent_array *v24; // x8
-  struct ServantFaceIconComponent_array *v25; // x8
+  struct UISprite_array *v33; // x8
+  int32_t v34; // w3
+  struct ServantFaceIconComponent_array *v35; // x8
+  struct ServantFaceIconComponent_array *v36; // x8
+  struct ServantFaceIconComponent_array *v37; // x8
   UnityEngine_GameObject_o *gameObject; // x0
-  struct UISprite_array *v27; // x8
-  UnityEngine_GameObject_o *v28; // x0
+  struct UISprite_array *v39; // x8
+  UnityEngine_GameObject_o *v40; // x0
   struct UISprite_array *classIcons; // x20
-  int v30; // w8
-  __int64 v31; // x21
-  __int64 v32; // x0
+  int v42; // w8
+  __int64 v43; // x21
+  __int64 v44; // x0
   WarEntity_o *entity; // [xsp+68h] [xbp-58h] BYREF
 
   v11 = this;
-  if ( (byte_42B28C0 & 1) == 0 )
+  if ( (byte_42EAF11 & 1) == 0 )
   {
-    sub_B52984(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_B52984(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_B52984(&DataManager_TypeInfo);
-    sub_B52984(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    this = (RestrictionNotSatisfySlotIcons_o *)sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_42B28C0 = 1;
+    sub_B5D5C4(
+      &Method_DataManager_GetMasterData_UserServantMaster___,
+      (_DWORD)servantIds,
+      (_DWORD)limitCounts,
+      imageServantIds);
+    sub_B5D5C4(&Method_DataManager_GetMaster_ServantMaster___, v12, v13, v14);
+    sub_B5D5C4(&DataManager_TypeInfo, v15, v16, v17);
+    sub_B5D5C4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v18, v19, v20);
+    this = (RestrictionNotSatisfySlotIcons_o *)sub_B5D5C4(
+                                                 &Method_SingletonMonoBehaviour_DataManager__get_Instance__,
+                                                 v21,
+                                                 v22,
+                                                 v23);
+    byte_42EAF11 = 1;
   }
   entity = 0LL;
   servantFaceIcons = v11->fields.servantFaceIcons;
@@ -215,19 +240,19 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetServantIcons(
   {
     if ( !servantIds )
       goto LABEL_83;
-    v13 = *(_QWORD *)&servantIds->max_length;
-    v14 = 0LL;
-    v15 = &servantIds->m_Items[1];
+    v25 = *(_QWORD *)&servantIds->max_length;
+    v26 = 0LL;
+    v27 = &servantIds->m_Items[1];
     while ( 1 )
     {
       max_length = servantFaceIcons->max_length;
-      if ( (__int64)v14 >= (int)max_length )
+      if ( (__int64)v26 >= (int)max_length )
         break;
-      if ( (__int64)v14 >= (int)v13 )
+      if ( (__int64)v26 >= (int)v25 )
       {
-        if ( v14 >= max_length )
+        if ( v26 >= max_length )
           goto LABEL_84;
-        this = (RestrictionNotSatisfySlotIcons_o *)servantFaceIcons->m_Items[v14];
+        this = (RestrictionNotSatisfySlotIcons_o *)servantFaceIcons->m_Items[v26];
         if ( !this )
           goto LABEL_83;
         this = (RestrictionNotSatisfySlotIcons_o *)UnityEngine_Component__get_gameObject(
@@ -239,9 +264,9 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetServantIcons(
         supportIcons = v11->fields.supportIcons;
         if ( !supportIcons )
           goto LABEL_83;
-        if ( v14 >= supportIcons->max_length )
+        if ( v26 >= supportIcons->max_length )
           goto LABEL_84;
-        this = (RestrictionNotSatisfySlotIcons_o *)supportIcons->m_Items[v14];
+        this = (RestrictionNotSatisfySlotIcons_o *)supportIcons->m_Items[v26];
         if ( !this )
           goto LABEL_83;
         this = (RestrictionNotSatisfySlotIcons_o *)UnityEngine_Component__get_gameObject(
@@ -253,26 +278,26 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetServantIcons(
       }
       else
       {
-        if ( v14 >= servantIds->max_length || v14 >= max_length )
+        if ( v26 >= servantIds->max_length || v26 >= max_length )
           goto LABEL_84;
-        this = (RestrictionNotSatisfySlotIcons_o *)servantFaceIcons->m_Items[v14];
+        this = (RestrictionNotSatisfySlotIcons_o *)servantFaceIcons->m_Items[v26];
         if ( !this )
           goto LABEL_83;
-        v17 = v15[v14];
+        v29 = v27[v26];
         this = (RestrictionNotSatisfySlotIcons_o *)UnityEngine_Component__get_gameObject(
                                                      (UnityEngine_Component_o *)this,
                                                      0LL);
         if ( !this )
           goto LABEL_83;
-        if ( v17 )
+        if ( v29 )
         {
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-          v18 = v11->fields.supportIcons;
-          if ( !v18 )
+          v30 = v11->fields.supportIcons;
+          if ( !v30 )
             goto LABEL_83;
-          if ( v14 >= v18->max_length )
+          if ( v26 >= v30->max_length )
             goto LABEL_84;
-          this = (RestrictionNotSatisfySlotIcons_o *)v18->m_Items[v14];
+          this = (RestrictionNotSatisfySlotIcons_o *)v30->m_Items[v26];
           if ( !this )
             goto LABEL_83;
           this = (RestrictionNotSatisfySlotIcons_o *)UnityEngine_Component__get_gameObject(
@@ -288,16 +313,16 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetServantIcons(
             {
               j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
             }
-            this = (RestrictionNotSatisfySlotIcons_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_ServantMaster___);
-            if ( v14 >= servantIds->max_length )
+            this = (RestrictionNotSatisfySlotIcons_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1AE41EC *)Method_DataManager_GetMaster_ServantMaster___);
+            if ( v26 >= servantIds->max_length )
               goto LABEL_84;
             if ( !this )
               goto LABEL_83;
             this = (RestrictionNotSatisfySlotIcons_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
                                                          (DataMasterBase_WarMaster__WarEntity__int__o *)this,
                                                          &entity,
-                                                         v15[v14],
-                                                         (const MethodInfo_23E2334 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                                                         v27[v26],
+                                                         (const MethodInfo_23FAE6C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
             if ( ((unsigned __int8)this & 1) == 0 )
               goto LABEL_43;
             this = (RestrictionNotSatisfySlotIcons_o *)entity;
@@ -306,18 +331,18 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetServantIcons(
             this = (RestrictionNotSatisfySlotIcons_o *)ServantEntity__checkIsHeroineSvt((ServantEntity_o *)entity, 0LL);
             if ( ((unsigned __int8)this & 1) != 0 )
             {
-              this = (RestrictionNotSatisfySlotIcons_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+              this = (RestrictionNotSatisfySlotIcons_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
               if ( !this )
                 goto LABEL_83;
               this = (RestrictionNotSatisfySlotIcons_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                            (DataManager_o *)this,
-                                                           (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_UserServantMaster___);
-              if ( v14 >= servantIds->max_length )
+                                                           (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_UserServantMaster___);
+              if ( v26 >= servantIds->max_length )
                 goto LABEL_84;
               if ( !this )
                 goto LABEL_83;
-              HeroineData = UserServantMaster__getHeroineData((UserServantMaster_o *)this, v15[v14], 0LL);
-              this = (RestrictionNotSatisfySlotIcons_o *)QuestRestrictionInfo__ConvertOverwriteImageLimitCount_34167368(
+              HeroineData = UserServantMaster__getHeroineData((UserServantMaster_o *)this, v27[v26], 0LL);
+              this = (RestrictionNotSatisfySlotIcons_o *)QuestRestrictionInfo__ConvertOverwriteImageLimitCount_34279132(
                                                            questRestrictionInfo,
                                                            HeroineData,
                                                            0LL);
@@ -325,40 +350,40 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetServantIcons(
             else
             {
 LABEL_43:
-              if ( v14 >= servantIds->max_length )
+              if ( v26 >= servantIds->max_length )
                 goto LABEL_84;
               this = (RestrictionNotSatisfySlotIcons_o *)QuestRestrictionInfo__ConvertOverwriteImageLimitCount(
                                                            questRestrictionInfo,
-                                                           v15[v14],
+                                                           v27[v26],
                                                            0LL);
             }
-            v22 = (int)this;
+            v34 = (int)this;
           }
           else
           {
-            v22 = -1;
+            v34 = -1;
           }
-          v23 = v11->fields.servantFaceIcons;
-          if ( !v23 )
+          v35 = v11->fields.servantFaceIcons;
+          if ( !v35 )
             goto LABEL_83;
-          if ( v14 >= v23->max_length || v14 >= servantIds->max_length )
+          if ( v26 >= v35->max_length || v26 >= servantIds->max_length )
             goto LABEL_84;
           if ( !limitCounts )
             goto LABEL_83;
-          if ( v14 >= limitCounts->max_length )
+          if ( v26 >= limitCounts->max_length )
             goto LABEL_84;
           if ( !imageServantIds )
             goto LABEL_83;
-          if ( v14 >= imageServantIds->max_length )
+          if ( v26 >= imageServantIds->max_length )
             goto LABEL_84;
-          this = (RestrictionNotSatisfySlotIcons_o *)v23->m_Items[v14];
+          this = (RestrictionNotSatisfySlotIcons_o *)v35->m_Items[v26];
           if ( !this )
             goto LABEL_83;
-          ServantFaceIconComponent__Set_30467316(
+          ServantFaceIconComponent__Set_30846632(
             (ServantFaceIconComponent_o *)this,
-            v15[v14],
-            limitCounts->m_Items[v14 + 1],
-            v22,
+            v27[v26],
+            limitCounts->m_Items[v26 + 1],
+            v34,
             0,
             0LL,
             0LL,
@@ -368,21 +393,21 @@ LABEL_43:
             0LL,
             1,
             0,
-            imageServantIds->m_Items[v14 + 1],
+            imageServantIds->m_Items[v26 + 1],
             0,
             0LL);
           if ( !rarityHideFlags )
             goto LABEL_83;
-          if ( v14 >= rarityHideFlags->max_length )
+          if ( v26 >= rarityHideFlags->max_length )
             goto LABEL_84;
-          if ( rarityHideFlags->m_Items[v14 + 4] )
+          if ( rarityHideFlags->m_Items[v26 + 4] )
           {
-            v24 = v11->fields.servantFaceIcons;
-            if ( !v24 )
+            v36 = v11->fields.servantFaceIcons;
+            if ( !v36 )
               goto LABEL_83;
-            if ( v14 >= v24->max_length )
+            if ( v26 >= v36->max_length )
               goto LABEL_84;
-            this = (RestrictionNotSatisfySlotIcons_o *)v24->m_Items[v14];
+            this = (RestrictionNotSatisfySlotIcons_o *)v36->m_Items[v26];
             if ( !this )
               goto LABEL_83;
             ServantFaceIconComponent__SetDispRaritySprite((ServantFaceIconComponent_o *)this, 0, 0LL);
@@ -391,12 +416,12 @@ LABEL_43:
         else
         {
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
-          v21 = v11->fields.supportIcons;
-          if ( !v21 )
+          v33 = v11->fields.supportIcons;
+          if ( !v33 )
             goto LABEL_83;
-          if ( v14 >= v21->max_length )
+          if ( v26 >= v33->max_length )
             goto LABEL_84;
-          this = (RestrictionNotSatisfySlotIcons_o *)v21->m_Items[v14];
+          this = (RestrictionNotSatisfySlotIcons_o *)v33->m_Items[v26];
           if ( !this )
             goto LABEL_83;
           this = (RestrictionNotSatisfySlotIcons_o *)UnityEngine_Component__get_gameObject(
@@ -406,32 +431,32 @@ LABEL_43:
             goto LABEL_83;
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
         }
-        if ( (_DWORD)v13 == 1 || (_DWORD)v13 == 3 && v14 == 2 )
+        if ( (_DWORD)v25 == 1 || (_DWORD)v25 == 3 && v26 == 2 )
         {
-          v25 = v11->fields.servantFaceIcons;
-          if ( !v25 )
+          v37 = v11->fields.servantFaceIcons;
+          if ( !v37 )
             goto LABEL_83;
-          if ( v14 >= v25->max_length )
+          if ( v26 >= v37->max_length )
             goto LABEL_84;
-          this = (RestrictionNotSatisfySlotIcons_o *)v25->m_Items[v14];
+          this = (RestrictionNotSatisfySlotIcons_o *)v37->m_Items[v26];
           if ( !this )
             goto LABEL_83;
           gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
           GameObjectExtensions__SetLocalPositionX(gameObject, 0.0, 0LL);
-          v27 = v11->fields.supportIcons;
-          if ( !v27 )
+          v39 = v11->fields.supportIcons;
+          if ( !v39 )
             goto LABEL_83;
-          if ( v14 >= v27->max_length )
+          if ( v26 >= v39->max_length )
             goto LABEL_84;
-          this = (RestrictionNotSatisfySlotIcons_o *)v27->m_Items[v14];
+          this = (RestrictionNotSatisfySlotIcons_o *)v39->m_Items[v26];
           if ( !this )
             goto LABEL_83;
-          v28 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-          GameObjectExtensions__SetLocalPositionX(v28, 0.0, 0LL);
+          v40 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+          GameObjectExtensions__SetLocalPositionX(v40, 0.0, 0LL);
         }
       }
       servantFaceIcons = v11->fields.servantFaceIcons;
-      ++v14;
+      ++v26;
       if ( !servantFaceIcons )
         goto LABEL_83;
     }
@@ -439,13 +464,13 @@ LABEL_43:
   classIcons = v11->fields.classIcons;
   if ( classIcons )
   {
-    v30 = classIcons->max_length;
-    if ( v30 >= 1 )
+    v42 = classIcons->max_length;
+    if ( v42 >= 1 )
     {
-      v31 = 0LL;
-      while ( (unsigned int)v31 < v30 )
+      v43 = 0LL;
+      while ( (unsigned int)v43 < v42 )
       {
-        this = (RestrictionNotSatisfySlotIcons_o *)classIcons->m_Items[v31];
+        this = (RestrictionNotSatisfySlotIcons_o *)classIcons->m_Items[v43];
         if ( !this )
           goto LABEL_83;
         this = (RestrictionNotSatisfySlotIcons_o *)UnityEngine_Component__get_gameObject(
@@ -454,19 +479,19 @@ LABEL_43:
         if ( !this )
           goto LABEL_83;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
-        v30 = classIcons->max_length;
-        if ( (int)++v31 >= v30 )
+        v42 = classIcons->max_length;
+        if ( (int)++v43 >= v42 )
           goto LABEL_81;
       }
 LABEL_84:
-      v32 = sub_B52A88(this);
-      sub_B52A28(v32, 0LL);
+      v44 = sub_B5D6C8(this);
+      sub_B5D668(v44, 0LL);
     }
   }
 LABEL_81:
   this = (RestrictionNotSatisfySlotIcons_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v11, 0LL);
   if ( !this )
 LABEL_83:
-    sub_B52A5C(this, servantIds);
+    sub_B5D69C(this, servantIds);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
 }

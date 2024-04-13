@@ -22,10 +22,10 @@ void __fastcall MasterEquipSettingListViewItem___ctor(
   System_Int32_array *v23; // x7
 
   v11 = this;
-  ListViewItem___ctor_23532700((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_23901828((ListViewItem_o *)this, index, 0LL);
   v11->fields._EquipId_k__BackingField = equipId;
   v11->fields._EquipTexture_k__BackingField = equipTexture;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&v11->fields._EquipTexture_k__BackingField,
     (System_Int32_array **)equipTexture,
     v12,
@@ -36,7 +36,7 @@ void __fastcall MasterEquipSettingListViewItem___ctor(
     v17);
   v11->fields._ShortName_k__BackingField = shortName;
   v11 = (MasterEquipSettingListViewItem_o *)((char *)v11 + 128);
-  sub_B52920((BattleServantConfConponent_o *)v11, (System_Int32_array **)shortName, v18, v19, v20, v21, v22, v23);
+  sub_B5D560((BattleServantConfConponent_o *)v11, (System_Int32_array **)shortName, v18, v19, v20, v21, v22, v23);
   LOBYTE(v11->monitor) = equipId == selectedImageId;
 }
 
@@ -62,7 +62,7 @@ void __fastcall MasterEquipSettingListViewItem__ModifyItemTexture(
   System_Int32_array *v7; // x7
 
   this->fields._EquipTexture_k__BackingField = texture;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields._EquipTexture_k__BackingField,
     (System_Int32_array **)texture,
     (System_String_array **)method,
@@ -133,7 +133,7 @@ void __fastcall MasterEquipSettingListViewItem__set_EquipTexture(
   System_Int32_array *v7; // x7
 
   this->fields._EquipTexture_k__BackingField = value;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields._EquipTexture_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

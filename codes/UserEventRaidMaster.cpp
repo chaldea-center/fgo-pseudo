@@ -1,14 +1,17 @@
 void __fastcall UserEventRaidMaster___ctor(UserEventRaidMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_42AEEC9 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E70C1 & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_UserEventRaidMaster__UserEventRaidEntity__string___ctor__);
-    byte_42AEEC9 = 1;
+    sub_B5D5C4(&Method_DataMasterBase_UserEventRaidMaster__UserEventRaidEntity__string___ctor__, (_DWORD)method, v2, v3);
+    byte_42E70C1 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     149,
-    (const MethodInfo_23E268C *)Method_DataMasterBase_UserEventRaidMaster__UserEventRaidEntity__string___ctor__);
+    (const MethodInfo_23FB1C4 *)Method_DataMasterBase_UserEventRaidMaster__UserEventRaidEntity__string___ctor__);
 }
 
 
@@ -22,16 +25,20 @@ UserEventRaidEntity_o *__fastcall UserEventRaidMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_42AEEC7 & 1) == 0 )
+  if ( (byte_42E70BF & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_UserEventRaidMaster__UserEventRaidEntity__string__GetEntity__);
-    byte_42AEEC7 = 1;
+    sub_B5D5C4(
+      &Method_DataMasterBase_UserEventRaidMaster__UserEventRaidEntity__string__GetEntity__,
+      userId,
+      eventId,
+      *(_QWORD *)&day);
+    byte_42E70BF = 1;
   }
   PK = UserEventRaidEntity__CreatePK(userId, eventId, day, *(const MethodInfo **)&day);
   return (UserEventRaidEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                     (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                     PK,
-                                    (const MethodInfo_23E2728 *)Method_DataMasterBase_UserEventRaidMaster__UserEventRaidEntity__string__GetEntity__);
+                                    (const MethodInfo_23FB260 *)Method_DataMasterBase_UserEventRaidMaster__UserEventRaidEntity__string__GetEntity__);
 }
 
 
@@ -46,17 +53,21 @@ bool __fastcall UserEventRaidMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_42AEEC8 & 1) == 0 )
+  if ( (byte_42E70C0 & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_UserEventRaidMaster__UserEventRaidEntity__string__TryGetEntity__);
-    byte_42AEEC8 = 1;
+    sub_B5D5C4(
+      &Method_DataMasterBase_UserEventRaidMaster__UserEventRaidEntity__string__TryGetEntity__,
+      (_DWORD)entity,
+      userId,
+      *(_QWORD *)&eventId);
+    byte_42E70C0 = 1;
   }
   PK = UserEventRaidEntity__CreatePK(userId, eventId, day, *(const MethodInfo **)&eventId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_23E2780 *)Method_DataMasterBase_UserEventRaidMaster__UserEventRaidEntity__string__TryGetEntity__);
+           (const MethodInfo_23FB2B8 *)Method_DataMasterBase_UserEventRaidMaster__UserEventRaidEntity__string__TryGetEntity__);
 }
 
 
@@ -66,19 +77,25 @@ int64_t __fastcall UserEventRaidMaster__getDamagePoint(
         int32_t day,
         const MethodInfo *method)
 {
+  int v7; // w1
+  int v8; // w2
+  __int64 v9; // x3
+  int v10; // w1
+  int v11; // w2
+  __int64 v12; // x3
   int64_t UserId; // x0
-  const MethodInfo *v8; // x4
+  const MethodInfo *v14; // x4
   int64_t result; // x0
-  int64_t v10; // x19
-  BalanceConfig_c *v11; // x0
+  int64_t v16; // x19
+  BalanceConfig_c *v17; // x0
   int64_t UserRaidDamagePointMax; // x20
 
-  if ( (byte_42AEECB & 1) == 0 )
+  if ( (byte_42E70C3 & 1) == 0 )
   {
-    sub_B52984(&BalanceConfig_TypeInfo);
-    sub_B52984(&System_Math_TypeInfo);
-    sub_B52984(&NetworkManager_TypeInfo);
-    byte_42AEECB = 1;
+    sub_B5D5C4(&BalanceConfig_TypeInfo, eventId, day, method);
+    sub_B5D5C4(&System_Math_TypeInfo, v7, v8, v9);
+    sub_B5D5C4(&NetworkManager_TypeInfo, v10, v11, v12);
+    byte_42E70C3 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -86,21 +103,21 @@ int64_t __fastcall UserEventRaidMaster__getDamagePoint(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   UserId = NetworkManager__get_UserId(0LL);
-  result = (int64_t)UserEventRaidMaster__GetEntity(this, UserId, eventId, day, v8);
+  result = (int64_t)UserEventRaidMaster__GetEntity(this, UserId, eventId, day, v14);
   if ( result )
   {
-    v10 = *(_QWORD *)(result + 32);
-    v11 = BalanceConfig_TypeInfo;
+    v16 = *(_QWORD *)(result + 32);
+    v17 = BalanceConfig_TypeInfo;
     if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v11 = BalanceConfig_TypeInfo;
+      v17 = BalanceConfig_TypeInfo;
     }
-    UserRaidDamagePointMax = v11->static_fields->UserRaidDamagePointMax;
+    UserRaidDamagePointMax = v17->static_fields->UserRaidDamagePointMax;
     if ( (BYTE3(System_Math_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    return System_Math__Min_45037076(v10, UserRaidDamagePointMax, 0LL);
+    return System_Math__Min_45149944(v16, UserRaidDamagePointMax, 0LL);
   }
   return result;
 }
@@ -113,58 +130,70 @@ UserEventRaidEntity_o *__fastcall UserEventRaidMaster__getEntityFromEventIdAndDa
         int32_t day,
         const MethodInfo *method)
 {
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
-  __int64 v8; // x1
+  int v7; // w1
+  int v8; // w2
   __int64 v9; // x3
+  int v10; // w1
+  int v11; // w2
+  __int64 v12; // x3
+  int v13; // w1
+  int v14; // w2
+  __int64 v15; // x3
+  int v16; // w1
+  int v17; // w2
+  __int64 v18; // x3
+  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
+  __int64 v20; // x1
+  __int64 v21; // x3
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  unsigned __int64 v12; // x10
+  unsigned __int64 v24; // x10
   int32_t *p_offset; // x11
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v15; // x8
-  unsigned __int64 v16; // x10
-  int32_t *v17; // x11
-  __int64 v18; // x0
-  UserEventRaidEntity_o *v19; // x0
-  UserEventRaidEntity_o *v20; // x22
-  __int64 v21; // x9
-  int v22; // w8
-  System_Collections_Generic_IEnumerator_T__c *v23; // x8
-  unsigned __int64 v24; // x10
-  int32_t *v25; // x11
-  __int64 v26; // x0
-  int v28; // [xsp+0h] [xbp-50h]
+  System_Collections_Generic_IEnumerator_T__c *v27; // x8
+  unsigned __int64 v28; // x10
+  int32_t *v29; // x11
+  __int64 v30; // x0
+  UserEventRaidEntity_o *v31; // x0
+  UserEventRaidEntity_o *v32; // x22
+  __int64 v33; // x9
+  int v34; // w8
+  System_Collections_Generic_IEnumerator_T__c *v35; // x8
+  unsigned __int64 v36; // x10
+  int32_t *v37; // x11
+  __int64 v38; // x0
+  int v40; // [xsp+0h] [xbp-50h]
 
-  if ( (byte_42AEECC & 1) == 0 )
+  if ( (byte_42E70C4 & 1) == 0 )
   {
-    sub_B52984(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
-    sub_B52984(&System_IDisposable_TypeInfo);
-    sub_B52984(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
-    sub_B52984(&System_Collections_IEnumerator_TypeInfo);
-    sub_B52984(&UserEventRaidEntity_TypeInfo);
-    byte_42AEECC = 1;
+    sub_B5D5C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, eventId, day, method);
+    sub_B5D5C4(&System_IDisposable_TypeInfo, v7, v8, v9);
+    sub_B5D5C4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v10, v11, v12);
+    sub_B5D5C4(&System_Collections_IEnumerator_TypeInfo, v13, v14, v15);
+    sub_B5D5C4(&UserEventRaidEntity_TypeInfo, v16, v17, v18);
+    byte_42E70C4 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
 LABEL_35:
-    sub_B52A5C(list, *(_QWORD *)&eventId);
+    sub_B5D69C(list, *(_QWORD *)&eventId);
   Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
                  list,
-                 (const MethodInfo_2B98BDC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_2BB8C48 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B52A5C(0LL, v8);
+    sub_B5D69C(0LL, v20);
   while ( 1 )
   {
     klass = Enumerator->klass;
     if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
     {
-      v12 = 0LL;
+      v24 = 0LL;
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        ++v12;
+        ++v24;
         p_offset += 4;
-        if ( v12 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+        if ( v24 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
           goto LABEL_9;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -172,78 +201,78 @@ LABEL_35:
     else
     {
 LABEL_9:
-      p_method = sub_AEB880(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL, v9);
+      p_method = sub_AF54C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL, v21);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v15 = Enumerator->klass;
+    v27 = Enumerator->klass;
     if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
     {
-      v16 = 0LL;
-      v17 = &v15->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v17 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v28 = 0LL;
+      v29 = &v27->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v29 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        ++v16;
-        v17 += 4;
-        if ( v16 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+        ++v28;
+        v29 += 4;
+        if ( v28 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
           goto LABEL_16;
       }
-      v18 = (__int64)&v15->vtable[*v17].method;
+      v30 = (__int64)&v27->vtable[*v29].method;
     }
     else
     {
 LABEL_16:
-      v18 = sub_AEB880(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL, v9);
+      v30 = sub_AF54C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL, v21);
     }
-    v19 = (UserEventRaidEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v18)(
+    v31 = (UserEventRaidEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v30)(
                                      Enumerator,
-                                     *(_QWORD *)(v18 + 8));
-    v20 = v19;
-    if ( v19 )
+                                     *(_QWORD *)(v30 + 8));
+    v32 = v31;
+    if ( v31 )
     {
-      v21 = *(&UserEventRaidEntity_TypeInfo->_2.bitflags2 + 1);
-      if ( *(&v19->klass->_2.bitflags2 + 1) < (unsigned int)v21
-        || (UserEventRaidEntity_c *)v19->klass->_2.typeHierarchy[v21 - 1] != UserEventRaidEntity_TypeInfo )
+      v33 = *(&UserEventRaidEntity_TypeInfo->_2.bitflags2 + 1);
+      if ( *(&v31->klass->_2.bitflags2 + 1) < (unsigned int)v33
+        || (UserEventRaidEntity_c *)v31->klass->_2.typeHierarchy[v33 - 1] != UserEventRaidEntity_TypeInfo )
       {
-        list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)sub_B52D50(v19);
+        list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)sub_B5D990(v31);
         goto LABEL_35;
       }
-      if ( v19->fields.eventId == eventId && v19->fields.day == day )
+      if ( v31->fields.eventId == eventId && v31->fields.day == day )
       {
-        v22 = 73;
+        v34 = 73;
         goto LABEL_25;
       }
     }
   }
-  v20 = 0LL;
-  v22 = 71;
+  v32 = 0LL;
+  v34 = 71;
 LABEL_25:
-  v28 = v22;
-  v23 = Enumerator->klass;
+  v40 = v34;
+  v35 = Enumerator->klass;
   if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
   {
-    v24 = 0LL;
-    v25 = &v23->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v25 - 1) != System_IDisposable_TypeInfo )
+    v36 = 0LL;
+    v37 = &v35->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v37 - 1) != System_IDisposable_TypeInfo )
     {
-      ++v24;
-      v25 += 4;
-      if ( v24 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+      ++v36;
+      v37 += 4;
+      if ( v36 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
         goto LABEL_29;
     }
-    v26 = (__int64)&v23->vtable[*v25].method;
+    v38 = (__int64)&v35->vtable[*v37].method;
   }
   else
   {
 LABEL_29:
-    v26 = sub_AEB880(Enumerator, System_IDisposable_TypeInfo, 0LL, v9);
+    v38 = sub_AF54C0(Enumerator, System_IDisposable_TypeInfo, 0LL, v21);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v26)(Enumerator, *(_QWORD *)(v26 + 8));
-  if ( v28 == 71 )
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v38)(Enumerator, *(_QWORD *)(v38 + 8));
+  if ( v40 == 71 )
     return 0LL;
-  return v20;
+  return v32;
 }
 
 
@@ -252,42 +281,64 @@ int64_t __fastcall UserEventRaidMaster__getTotalDamagePoint(
         int32_t eventId,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  int v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
+  int v18; // w1
+  int v19; // w2
+  __int64 v20; // x3
+  int v21; // w1
+  int v22; // w2
+  __int64 v23; // x3
+  int v24; // w1
+  int v25; // w2
+  __int64 v26; // x3
   int64_t UserId; // x0
-  __int64 v6; // x1
-  int64_t v7; // x22
-  __int64 v8; // x1
-  __int64 v9; // x3
+  __int64 v28; // x1
+  int64_t v29; // x22
+  __int64 v30; // x1
+  __int64 v31; // x3
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x20
-  int64_t v11; // x19
-  System_Collections_Generic_IEnumerator_T__c *v12; // x8
-  unsigned __int64 v13; // x10
-  int32_t *v14; // x11
-  __int64 v15; // x0
-  __int64 v16; // x0
-  __int64 v17; // x9
+  int64_t v33; // x19
+  System_Collections_Generic_IEnumerator_T__c *v34; // x8
+  unsigned __int64 v35; // x10
+  int32_t *v36; // x11
+  __int64 v37; // x0
+  __int64 v38; // x0
+  __int64 v39; // x9
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  unsigned __int64 v19; // x10
+  unsigned __int64 v41; // x10
   int32_t *p_offset; // x11
   __int64 p_method; // x0
-  __int64 v22; // x3
-  System_Collections_Generic_IEnumerator_T__c *v23; // x8
-  unsigned __int64 v24; // x10
-  int32_t *v25; // x11
-  __int64 v26; // x0
-  BalanceConfig_c *v27; // x0
+  __int64 v44; // x3
+  System_Collections_Generic_IEnumerator_T__c *v45; // x8
+  unsigned __int64 v46; // x10
+  int32_t *v47; // x11
+  __int64 v48; // x0
+  BalanceConfig_c *v49; // x0
   int64_t UserRaidDamagePointMax; // x20
 
-  if ( (byte_42AEECA & 1) == 0 )
+  if ( (byte_42E70C2 & 1) == 0 )
   {
-    sub_B52984(&BalanceConfig_TypeInfo);
-    sub_B52984(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
-    sub_B52984(&System_IDisposable_TypeInfo);
-    sub_B52984(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
-    sub_B52984(&System_Collections_IEnumerator_TypeInfo);
-    sub_B52984(&System_Math_TypeInfo);
-    sub_B52984(&NetworkManager_TypeInfo);
-    sub_B52984(&UserEventRaidEntity_TypeInfo);
-    byte_42AEECA = 1;
+    sub_B5D5C4(&BalanceConfig_TypeInfo, eventId, (_DWORD)method, v3);
+    sub_B5D5C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, v6, v7, v8);
+    sub_B5D5C4(&System_IDisposable_TypeInfo, v9, v10, v11);
+    sub_B5D5C4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v12, v13, v14);
+    sub_B5D5C4(&System_Collections_IEnumerator_TypeInfo, v15, v16, v17);
+    sub_B5D5C4(&System_Math_TypeInfo, v18, v19, v20);
+    sub_B5D5C4(&NetworkManager_TypeInfo, v21, v22, v23);
+    sub_B5D5C4(&UserEventRaidEntity_TypeInfo, v24, v25, v26);
+    byte_42E70C2 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -297,26 +348,26 @@ int64_t __fastcall UserEventRaidMaster__getTotalDamagePoint(
   UserId = NetworkManager__get_UserId(0LL);
   if ( !this->fields.list )
 LABEL_42:
-    sub_B52A5C(UserId, v6);
-  v7 = UserId;
+    sub_B5D69C(UserId, v28);
+  v29 = UserId;
   Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
                  (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list,
-                 (const MethodInfo_2B98BDC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_2BB8C48 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B52A5C(0LL, v8);
-  v11 = 0LL;
+    sub_B5D69C(0LL, v30);
+  v33 = 0LL;
   while ( 1 )
   {
     klass = Enumerator->klass;
     if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
     {
-      v19 = 0LL;
+      v41 = 0LL;
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        ++v19;
+        ++v41;
         p_offset += 4;
-        if ( v19 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+        if ( v41 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
           goto LABEL_25;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -324,76 +375,76 @@ LABEL_42:
     else
     {
 LABEL_25:
-      p_method = sub_AEB880(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL, v9);
+      p_method = sub_AF54C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL, v31);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v12 = Enumerator->klass;
+    v34 = Enumerator->klass;
     if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
     {
-      v13 = 0LL;
-      v14 = &v12->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v14 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v35 = 0LL;
+      v36 = &v34->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v36 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        ++v13;
-        v14 += 4;
-        if ( v13 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+        ++v35;
+        v36 += 4;
+        if ( v35 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
           goto LABEL_13;
       }
-      v15 = (__int64)&v12->vtable[*v14].method;
+      v37 = (__int64)&v34->vtable[*v36].method;
     }
     else
     {
 LABEL_13:
-      v15 = sub_AEB880(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL, v22);
+      v37 = sub_AF54C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL, v44);
     }
-    v16 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v15)(
+    v38 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v37)(
             Enumerator,
-            *(_QWORD *)(v15 + 8));
-    if ( v16 )
+            *(_QWORD *)(v37 + 8));
+    if ( v38 )
     {
-      v17 = *(&UserEventRaidEntity_TypeInfo->_2.bitflags2 + 1);
-      if ( *(unsigned __int8 *)(*(_QWORD *)v16 + 300LL) < (unsigned int)v17
-        || *(UserEventRaidEntity_c **)(*(_QWORD *)(*(_QWORD *)v16 + 200LL) + 8 * v17 - 8) != UserEventRaidEntity_TypeInfo )
+      v39 = *(&UserEventRaidEntity_TypeInfo->_2.bitflags2 + 1);
+      if ( *(unsigned __int8 *)(*(_QWORD *)v38 + 300LL) < (unsigned int)v39
+        || *(UserEventRaidEntity_c **)(*(_QWORD *)(*(_QWORD *)v38 + 200LL) + 8 * v39 - 8) != UserEventRaidEntity_TypeInfo )
       {
-        UserId = sub_B52D50(v16);
+        UserId = sub_B5D990(v38);
         goto LABEL_42;
       }
-      if ( *(_QWORD *)(v16 + 16) == v7 && *(_DWORD *)(v16 + 24) == eventId )
-        v11 += *(_QWORD *)(v16 + 32);
+      if ( *(_QWORD *)(v38 + 16) == v29 && *(_DWORD *)(v38 + 24) == eventId )
+        v33 += *(_QWORD *)(v38 + 32);
     }
   }
-  v23 = Enumerator->klass;
+  v45 = Enumerator->klass;
   if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
   {
-    v24 = 0LL;
-    v25 = &v23->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v25 - 1) != System_IDisposable_TypeInfo )
+    v46 = 0LL;
+    v47 = &v45->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v47 - 1) != System_IDisposable_TypeInfo )
     {
-      ++v24;
-      v25 += 4;
-      if ( v24 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+      ++v46;
+      v47 += 4;
+      if ( v46 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
         goto LABEL_32;
     }
-    v26 = (__int64)&v23->vtable[*v25].method;
+    v48 = (__int64)&v45->vtable[*v47].method;
   }
   else
   {
 LABEL_32:
-    v26 = sub_AEB880(Enumerator, System_IDisposable_TypeInfo, 0LL, v22);
+    v48 = sub_AF54C0(Enumerator, System_IDisposable_TypeInfo, 0LL, v44);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v26)(Enumerator, *(_QWORD *)(v26 + 8));
-  v27 = BalanceConfig_TypeInfo;
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v48)(Enumerator, *(_QWORD *)(v48 + 8));
+  v49 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v27 = BalanceConfig_TypeInfo;
+    v49 = BalanceConfig_TypeInfo;
   }
-  UserRaidDamagePointMax = v27->static_fields->UserRaidDamagePointMax;
+  UserRaidDamagePointMax = v49->static_fields->UserRaidDamagePointMax;
   if ( (BYTE3(System_Math_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  return System_Math__Min_45037076(v11, UserRaidDamagePointMax, 0LL);
+  return System_Math__Min_45149944(v33, UserRaidDamagePointMax, 0LL);
 }

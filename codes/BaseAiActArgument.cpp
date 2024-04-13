@@ -6,9 +6,9 @@ void __fastcall BaseAiActArgument___ctor(
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._AiActEnt_k__BackingField = aiActEnt;
-  sub_B52920(&this->fields);
+  sub_B5D560(&this->fields);
   this->fields._AiEnt_k__BackingField = aiEnt;
-  sub_B52920(&this->fields._AiEnt_k__BackingField);
+  sub_B5D560(&this->fields._AiEnt_k__BackingField);
 }
 
 
@@ -30,19 +30,19 @@ BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask(
   BattleLogicTask_o *v7; // x22
   const MethodInfo *v8; // x3
 
-  if ( (byte_42ACF01 & 1) == 0 )
+  if ( (byte_42E6626 & 1) == 0 )
   {
-    sub_B52984(&BaseAiActBattleLogicTask_TypeInfo);
-    byte_42ACF01 = 1;
+    sub_B5D5C4(&BaseAiActBattleLogicTask_TypeInfo, (_DWORD)logicAi, actType, method);
+    byte_42E6626 = 1;
   }
-  v7 = (BattleLogicTask_o *)sub_B52A54(BaseAiActBattleLogicTask_TypeInfo);
+  v7 = (BattleLogicTask_o *)sub_B5D694(BaseAiActBattleLogicTask_TypeInfo);
   BattleLogicTask___ctor(v7, 0LL);
   v7->fields.actiontype = actType;
-  return BaseAiActArgument__MakeTask_19333784(this, (BaseAiActBattleLogicTask_o *)v7, logicAi, v8);
+  return BaseAiActArgument__MakeTask_21070520(this, (BaseAiActBattleLogicTask_o *)v7, logicAi, v8);
 }
 
 
-BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask_19333784(
+BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask_21070520(
         BaseAiActArgument_o *this,
         BaseAiActBattleLogicTask_o *task,
         BattleLogicBaseAi_o *logicAi,
@@ -61,7 +61,7 @@ BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask_19333784(
                                         v5->klass->vtable._5_InitCommonTask.methodPtr),
         !task) )
   {
-    sub_B52A5C(this, task);
+    sub_B5D69C(this, task);
   }
   BattleLogicTask__setActor((BattleLogicTask_o *)task, v6, (int32_t)this, 0LL);
   ((void (__fastcall *)(BaseAiActBattleLogicTask_o *, struct AiActEntity_o *, struct AiBaseEntity_o *, void *))task->klass->vtable._8_Init.method)(
@@ -101,7 +101,7 @@ void __fastcall BaseAiActArgument__set_AiActEnt(
         const MethodInfo *method)
 {
   this->fields._AiActEnt_k__BackingField = value;
-  sub_B52920(&this->fields);
+  sub_B5D560(&this->fields);
 }
 
 
@@ -111,5 +111,5 @@ void __fastcall BaseAiActArgument__set_AiEnt(
         const MethodInfo *method)
 {
   this->fields._AiEnt_k__BackingField = value;
-  sub_B52920(&this->fields._AiEnt_k__BackingField);
+  sub_B5D560(&this->fields._AiEnt_k__BackingField);
 }

@@ -1,22 +1,24 @@
 void __fastcall MoveWindowComponent___ctor(MoveWindowComponent_o *this, const MethodInfo *method)
 {
-  System_Collections_Hashtable_o *v3; // x20
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  int v2; // w2
+  __int64 v3; // x3
+  System_Collections_Hashtable_o *v5; // x20
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
 
-  if ( (byte_42AE858 & 1) == 0 )
+  if ( (byte_42E7461 & 1) == 0 )
   {
-    sub_B52984(&System_Collections_Hashtable_TypeInfo);
-    byte_42AE858 = 1;
+    sub_B5D5C4(&System_Collections_Hashtable_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E7461 = 1;
   }
-  v3 = (System_Collections_Hashtable_o *)sub_B52A54(System_Collections_Hashtable_TypeInfo);
-  System_Collections_Hashtable___ctor_39351252(v3, 0LL);
-  this->fields.table = v3;
-  sub_B52920((BattleServantConfConponent_o *)&this->fields.table, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
+  v5 = (System_Collections_Hashtable_o *)sub_B5D694(System_Collections_Hashtable_TypeInfo);
+  System_Collections_Hashtable___ctor_39706016(v5, 0LL);
+  this->fields.table = v5;
+  sub_B5D560((BattleServantConfConponent_o *)&this->fields.table, (System_Int32_array **)v5, v6, v7, v8, v9, v10, v11);
   this->fields.closepositionadjust = 1;
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
@@ -35,7 +37,7 @@ void __fastcall MoveWindowComponent__Awake(MoveWindowComponent_o *this, const Me
     if ( !gameObject
       || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0LL)) == 0LL )
     {
-      sub_B52A5C(gameObject, v5);
+      sub_B5D69C(gameObject, v5);
     }
     this->fields.closeposition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0LL);
   }
@@ -45,32 +47,57 @@ void __fastcall MoveWindowComponent__Awake(MoveWindowComponent_o *this, const Me
 void __fastcall MoveWindowComponent__closeWindow(MoveWindowComponent_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
-  __int64 v4; // x1
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  int v17; // w1
+  int v18; // w2
+  __int64 v19; // x3
+  int v20; // w1
+  int v21; // w2
+  __int64 v22; // x3
+  int v23; // w1
+  int v24; // w2
+  __int64 v25; // x3
+  int v26; // w1
+  int v27; // w2
+  __int64 v28; // x3
+  __int64 v29; // x1
   struct System_Collections_Hashtable_o *table; // x0
-  struct System_Collections_Hashtable_o *v6; // x20
-  struct System_Collections_Hashtable_o *v7; // x20
+  struct System_Collections_Hashtable_o *v31; // x20
+  struct System_Collections_Hashtable_o *v32; // x20
   float z; // w9
-  struct System_Collections_Hashtable_o *v9; // x20
+  struct System_Collections_Hashtable_o *v34; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  System_Collections_Hashtable_o *v11; // x19
-  UnityEngine_GameObject_o *v12; // x20
-  int v13; // [xsp+Ch] [xbp-24h] BYREF
-  __int64 v14; // [xsp+10h] [xbp-20h] BYREF
-  float v15; // [xsp+18h] [xbp-18h]
-  char v16[4]; // [xsp+1Ch] [xbp-14h] BYREF
+  System_Collections_Hashtable_o *v36; // x19
+  UnityEngine_GameObject_o *v37; // x20
+  int v38; // [xsp+Ch] [xbp-24h] BYREF
+  __int64 v39; // [xsp+10h] [xbp-20h] BYREF
+  float v40; // [xsp+18h] [xbp-18h]
+  char v41[4]; // [xsp+1Ch] [xbp-14h] BYREF
 
-  if ( (byte_42AE857 & 1) == 0 )
+  if ( (byte_42E7460 & 1) == 0 )
   {
-    sub_B52984(&bool_TypeInfo);
-    sub_B52984(&float_TypeInfo);
-    sub_B52984(&UnityEngine_Vector3_TypeInfo);
-    sub_B52984(&StringLiteral_22867/*"time"*/);
-    sub_B52984(&StringLiteral_21410/*"onCloseComplete"*/);
-    sub_B52984(&StringLiteral_21687/*"position"*/);
-    sub_B52984(&StringLiteral_20088/*"isLocal"*/);
-    sub_B52984(&StringLiteral_21433/*"oncomplete"*/);
-    sub_B52984(&iTween_TypeInfo);
-    byte_42AE857 = 1;
+    sub_B5D5C4(&bool_TypeInfo, (_DWORD)method, (_DWORD)v2, v3);
+    sub_B5D5C4(&float_TypeInfo, v5, v6, v7);
+    sub_B5D5C4(&UnityEngine_Vector3_TypeInfo, v8, v9, v10);
+    sub_B5D5C4(&StringLiteral_22982/*"time"*/, v11, v12, v13);
+    sub_B5D5C4(&StringLiteral_21519/*"onCloseComplete"*/, v14, v15, v16);
+    sub_B5D5C4(&StringLiteral_21800/*"position"*/, v17, v18, v19);
+    sub_B5D5C4(&StringLiteral_20191/*"isLocal"*/, v20, v21, v22);
+    sub_B5D5C4(&StringLiteral_21542/*"oncomplete"*/, v23, v24, v25);
+    sub_B5D5C4(&iTween_TypeInfo, v26, v27, v28);
+    byte_42E7460 = 1;
   }
   MoveWindowComponent__setContentsCollider(this, 0, v2);
   table = this->fields.table;
@@ -79,52 +106,52 @@ void __fastcall MoveWindowComponent__closeWindow(MoveWindowComponent_o *this, co
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, Il2CppMethodPointer))table->klass->vtable._24_Clear.method)(
     table,
     table->klass->vtable._25_Clone.methodPtr);
-  v6 = this->fields.table;
-  v16[0] = 1;
-  table = (struct System_Collections_Hashtable_o *)j_il2cpp_value_box_0(bool_TypeInfo, v16);
-  if ( !v6 )
+  v31 = this->fields.table;
+  v41[0] = 1;
+  table = (struct System_Collections_Hashtable_o *)j_il2cpp_value_box_0(bool_TypeInfo, v41);
+  if ( !v31 )
     goto LABEL_12;
-  ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, struct System_Collections_Hashtable_o *, Il2CppMethodPointer))v6->klass->vtable._23_Add.method)(
-    v6,
-    StringLiteral_20088/*"isLocal"*/,
+  ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, struct System_Collections_Hashtable_o *, Il2CppMethodPointer))v31->klass->vtable._23_Add.method)(
+    v31,
+    StringLiteral_20191/*"isLocal"*/,
     table,
-    v6->klass->vtable._24_Clear.methodPtr);
-  v7 = this->fields.table;
+    v31->klass->vtable._24_Clear.methodPtr);
+  v32 = this->fields.table;
   z = this->fields.closeposition.fields.z;
-  v14 = *(_QWORD *)&this->fields.closeposition.fields.x;
-  v15 = z;
-  table = (struct System_Collections_Hashtable_o *)j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, &v14);
-  if ( !v7
-    || (((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, struct System_Collections_Hashtable_o *, Il2CppMethodPointer))v7->klass->vtable._23_Add.method)(
-          v7,
-          StringLiteral_21687/*"position"*/,
+  v39 = *(_QWORD *)&this->fields.closeposition.fields.x;
+  v40 = z;
+  table = (struct System_Collections_Hashtable_o *)j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, &v39);
+  if ( !v32
+    || (((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, struct System_Collections_Hashtable_o *, Il2CppMethodPointer))v32->klass->vtable._23_Add.method)(
+          v32,
+          StringLiteral_21800/*"position"*/,
           table,
-          v7->klass->vtable._24_Clear.methodPtr),
+          v32->klass->vtable._24_Clear.methodPtr),
         (table = this->fields.table) == 0LL)
     || (((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))table->klass->vtable._23_Add.method)(
           table,
-          StringLiteral_21433/*"oncomplete"*/,
-          StringLiteral_21410/*"onCloseComplete"*/,
+          StringLiteral_21542/*"oncomplete"*/,
+          StringLiteral_21519/*"onCloseComplete"*/,
           table->klass->vtable._24_Clear.methodPtr),
-        v9 = this->fields.table,
-        v13 = 1065353216,
-        table = (struct System_Collections_Hashtable_o *)j_il2cpp_value_box_0(float_TypeInfo, &v13),
-        !v9) )
+        v34 = this->fields.table,
+        v38 = 1065353216,
+        table = (struct System_Collections_Hashtable_o *)j_il2cpp_value_box_0(float_TypeInfo, &v38),
+        !v34) )
   {
 LABEL_12:
-    sub_B52A5C(table, v4);
+    sub_B5D69C(table, v29);
   }
-  ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, struct System_Collections_Hashtable_o *, Il2CppMethodPointer))v9->klass->vtable._23_Add.method)(
-    v9,
-    StringLiteral_22867/*"time"*/,
+  ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, struct System_Collections_Hashtable_o *, Il2CppMethodPointer))v34->klass->vtable._23_Add.method)(
+    v34,
+    StringLiteral_22982/*"time"*/,
     table,
-    v9->klass->vtable._24_Clear.methodPtr);
+    v34->klass->vtable._24_Clear.methodPtr);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  v11 = this->fields.table;
-  v12 = gameObject;
+  v36 = this->fields.table;
+  v37 = gameObject;
   if ( (BYTE3(iTween_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__MoveTo_43223368(v12, v11, 0LL);
+  iTween__MoveTo_43183064(v37, v36, 0LL);
 }
 
 
@@ -145,31 +172,57 @@ void __fastcall MoveWindowComponent__onOpenComplete(MoveWindowComponent_o *this,
 
 void __fastcall MoveWindowComponent__openWindow(MoveWindowComponent_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  int v17; // w1
+  int v18; // w2
+  __int64 v19; // x3
+  int v20; // w1
+  int v21; // w2
+  __int64 v22; // x3
+  int v23; // w1
+  int v24; // w2
+  __int64 v25; // x3
+  int v26; // w1
+  int v27; // w2
+  __int64 v28; // x3
   struct System_Collections_Hashtable_o *table; // x0
-  struct System_Collections_Hashtable_o *v4; // x20
-  struct System_Collections_Hashtable_o *v5; // x20
+  struct System_Collections_Hashtable_o *v30; // x20
+  struct System_Collections_Hashtable_o *v31; // x20
   float z; // w9
-  struct System_Collections_Hashtable_o *v7; // x20
+  struct System_Collections_Hashtable_o *v33; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  System_Collections_Hashtable_o *v9; // x19
-  UnityEngine_GameObject_o *v10; // x20
-  int v11; // [xsp+Ch] [xbp-24h] BYREF
-  __int64 v12; // [xsp+10h] [xbp-20h] BYREF
-  float v13; // [xsp+18h] [xbp-18h]
-  char v14[4]; // [xsp+1Ch] [xbp-14h] BYREF
+  System_Collections_Hashtable_o *v35; // x19
+  UnityEngine_GameObject_o *v36; // x20
+  int v37; // [xsp+Ch] [xbp-24h] BYREF
+  __int64 v38; // [xsp+10h] [xbp-20h] BYREF
+  float v39; // [xsp+18h] [xbp-18h]
+  char v40[4]; // [xsp+1Ch] [xbp-14h] BYREF
 
-  if ( (byte_42AE856 & 1) == 0 )
+  if ( (byte_42E745F & 1) == 0 )
   {
-    sub_B52984(&bool_TypeInfo);
-    sub_B52984(&float_TypeInfo);
-    sub_B52984(&UnityEngine_Vector3_TypeInfo);
-    sub_B52984(&StringLiteral_21422/*"onOpenComplete"*/);
-    sub_B52984(&StringLiteral_22867/*"time"*/);
-    sub_B52984(&StringLiteral_21687/*"position"*/);
-    sub_B52984(&StringLiteral_20088/*"isLocal"*/);
-    sub_B52984(&StringLiteral_21433/*"oncomplete"*/);
-    sub_B52984(&iTween_TypeInfo);
-    byte_42AE856 = 1;
+    sub_B5D5C4(&bool_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&float_TypeInfo, v5, v6, v7);
+    sub_B5D5C4(&UnityEngine_Vector3_TypeInfo, v8, v9, v10);
+    sub_B5D5C4(&StringLiteral_21531/*"onOpenComplete"*/, v11, v12, v13);
+    sub_B5D5C4(&StringLiteral_22982/*"time"*/, v14, v15, v16);
+    sub_B5D5C4(&StringLiteral_21800/*"position"*/, v17, v18, v19);
+    sub_B5D5C4(&StringLiteral_20191/*"isLocal"*/, v20, v21, v22);
+    sub_B5D5C4(&StringLiteral_21542/*"oncomplete"*/, v23, v24, v25);
+    sub_B5D5C4(&iTween_TypeInfo, v26, v27, v28);
+    byte_42E745F = 1;
   }
   table = this->fields.table;
   if ( !table )
@@ -177,52 +230,52 @@ void __fastcall MoveWindowComponent__openWindow(MoveWindowComponent_o *this, con
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, Il2CppMethodPointer))table->klass->vtable._24_Clear.method)(
     table,
     table->klass->vtable._25_Clone.methodPtr);
-  v4 = this->fields.table;
-  v14[0] = 1;
-  table = (struct System_Collections_Hashtable_o *)j_il2cpp_value_box_0(bool_TypeInfo, v14);
-  if ( !v4 )
+  v30 = this->fields.table;
+  v40[0] = 1;
+  table = (struct System_Collections_Hashtable_o *)j_il2cpp_value_box_0(bool_TypeInfo, v40);
+  if ( !v30 )
     goto LABEL_12;
-  ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, struct System_Collections_Hashtable_o *, Il2CppMethodPointer))v4->klass->vtable._23_Add.method)(
-    v4,
-    StringLiteral_20088/*"isLocal"*/,
+  ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, struct System_Collections_Hashtable_o *, Il2CppMethodPointer))v30->klass->vtable._23_Add.method)(
+    v30,
+    StringLiteral_20191/*"isLocal"*/,
     table,
-    v4->klass->vtable._24_Clear.methodPtr);
-  v5 = this->fields.table;
+    v30->klass->vtable._24_Clear.methodPtr);
+  v31 = this->fields.table;
   z = this->fields.openposition.fields.z;
-  v12 = *(_QWORD *)&this->fields.openposition.fields.x;
-  v13 = z;
-  table = (struct System_Collections_Hashtable_o *)j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, &v12);
-  if ( !v5
-    || (((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, struct System_Collections_Hashtable_o *, Il2CppMethodPointer))v5->klass->vtable._23_Add.method)(
-          v5,
-          StringLiteral_21687/*"position"*/,
+  v38 = *(_QWORD *)&this->fields.openposition.fields.x;
+  v39 = z;
+  table = (struct System_Collections_Hashtable_o *)j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, &v38);
+  if ( !v31
+    || (((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, struct System_Collections_Hashtable_o *, Il2CppMethodPointer))v31->klass->vtable._23_Add.method)(
+          v31,
+          StringLiteral_21800/*"position"*/,
           table,
-          v5->klass->vtable._24_Clear.methodPtr),
+          v31->klass->vtable._24_Clear.methodPtr),
         (table = this->fields.table) == 0LL)
     || (((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))table->klass->vtable._23_Add.method)(
           table,
-          StringLiteral_21433/*"oncomplete"*/,
-          StringLiteral_21422/*"onOpenComplete"*/,
+          StringLiteral_21542/*"oncomplete"*/,
+          StringLiteral_21531/*"onOpenComplete"*/,
           table->klass->vtable._24_Clear.methodPtr),
-        v7 = this->fields.table,
-        v11 = 1065353216,
-        table = (struct System_Collections_Hashtable_o *)j_il2cpp_value_box_0(float_TypeInfo, &v11),
-        !v7) )
+        v33 = this->fields.table,
+        v37 = 1065353216,
+        table = (struct System_Collections_Hashtable_o *)j_il2cpp_value_box_0(float_TypeInfo, &v37),
+        !v33) )
   {
 LABEL_12:
-    sub_B52A5C(table, method);
+    sub_B5D69C(table, method);
   }
-  ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, struct System_Collections_Hashtable_o *, Il2CppMethodPointer))v7->klass->vtable._23_Add.method)(
-    v7,
-    StringLiteral_22867/*"time"*/,
+  ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, struct System_Collections_Hashtable_o *, Il2CppMethodPointer))v33->klass->vtable._23_Add.method)(
+    v33,
+    StringLiteral_22982/*"time"*/,
     table,
-    v7->klass->vtable._24_Clear.methodPtr);
+    v33->klass->vtable._24_Clear.methodPtr);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  v9 = this->fields.table;
-  v10 = gameObject;
+  v35 = this->fields.table;
+  v36 = gameObject;
   if ( (BYTE3(iTween_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__MoveTo_43223368(v10, v9, 0LL);
+  iTween__MoveTo_43183064(v36, v35, 0LL);
 }
 
 
@@ -252,8 +305,8 @@ void __fastcall MoveWindowComponent__setContentsCollider(
         break;
       if ( (unsigned int)v5 >= max_length )
       {
-        v8 = sub_B52A88(this);
-        sub_B52A28(v8, 0LL);
+        v8 = sub_B5D6C8(this);
+        sub_B5D668(v8, 0LL);
       }
       this = (MoveWindowComponent_o *)contentscolliderlist->m_Items[v5];
       if ( this )
@@ -264,7 +317,7 @@ void __fastcall MoveWindowComponent__setContentsCollider(
         if ( contentscolliderlist )
           continue;
       }
-      sub_B52A5C(this, flg);
+      sub_B5D69C(this, flg);
     }
   }
 }

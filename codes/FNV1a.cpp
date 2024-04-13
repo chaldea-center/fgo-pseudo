@@ -13,14 +13,14 @@ uint32_t __fastcall FNV1a__Hash32(
   if ( offset < len )
   {
     if ( !bytes )
-      sub_B52A5C(0LL, offset);
+      sub_B5D69C(0LL, offset);
     v5 = offset + 32LL;
     do
     {
       if ( offset >= bytes->max_length )
       {
-        v9 = sub_B52A88(bytes);
-        sub_B52A28(v9, 0LL);
+        v9 = sub_B5D6C8(bytes);
+        sub_B5D668(v9, 0LL);
       }
       v6 = *((unsigned __int8 *)&bytes->obj.klass + v5);
       v7 = v5 - 31;
@@ -34,7 +34,7 @@ uint32_t __fastcall FNV1a__Hash32(
 }
 
 
-uint32_t __fastcall FNV1a__Hash32_25471336(System_String_o *str, const MethodInfo *method)
+uint32_t __fastcall FNV1a__Hash32_25602496(System_String_o *str, const MethodInfo *method)
 {
   System_Byte_array *UTF8; // x0
   __int64 v4; // x1
@@ -47,7 +47,7 @@ uint32_t __fastcall FNV1a__Hash32_25471336(System_String_o *str, const MethodInf
                                       str,
                                       UTF8->obj.klass->vtable[19].methodPtr)) == 0LL )
   {
-    sub_B52A5C(UTF8, v4);
+    sub_B5D69C(UTF8, v4);
   }
   return FNV1a__Hash32(UTF8, 0, UTF8->max_length, 0x811C9DC5, v5);
 }
@@ -68,14 +68,14 @@ uint64_t __fastcall FNV1a__Hash64(
   if ( offset < len )
   {
     if ( !bytes )
-      sub_B52A5C(0LL, offset);
+      sub_B5D69C(0LL, offset);
     v5 = offset + 32LL;
     do
     {
       if ( offset >= bytes->max_length )
       {
-        v9 = sub_B52A88(bytes);
-        sub_B52A28(v9, 0LL);
+        v9 = sub_B5D6C8(bytes);
+        sub_B5D668(v9, 0LL);
       }
       v6 = *((unsigned __int8 *)&bytes->obj.klass + v5);
       v7 = v5 - 31;

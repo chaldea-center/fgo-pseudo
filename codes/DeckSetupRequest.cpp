@@ -10,62 +10,86 @@ void __fastcall DeckSetupRequest__beginRequest(
         UserDeckEntity_o *userDeck,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v7; // x21
-  __int64 v8; // x0
-  __int64 v9; // x1
-  MiniMessagePack_MiniMessagePacker_o *v10; // x20
-  System_Byte_array *v11; // x20
-  System_String_o *v12; // x0
+  int v7; // w1
+  int v8; // w2
+  __int64 v9; // x3
+  int v10; // w1
+  int v11; // w2
+  __int64 v12; // x3
+  int v13; // w1
+  int v14; // w2
+  __int64 v15; // x3
+  int v16; // w1
+  int v17; // w2
+  __int64 v18; // x3
+  int v19; // w1
+  int v20; // w2
+  __int64 v21; // x3
+  int v22; // w1
+  int v23; // w2
+  __int64 v24; // x3
+  int v25; // w1
+  int v26; // w2
+  __int64 v27; // x3
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v28; // x21
+  __int64 v29; // x0
+  __int64 v30; // x1
+  MiniMessagePack_MiniMessagePacker_o *v31; // x20
+  System_Byte_array *v32; // x20
+  System_String_o *v33; // x0
 
-  if ( (byte_42ABC7C & 1) == 0 )
+  if ( (byte_42E44EF & 1) == 0 )
   {
-    sub_B52984(&System_Convert_TypeInfo);
-    sub_B52984(&JsonManager_TypeInfo);
-    sub_B52984(&Method_System_Collections_Generic_List_UserDeckEntity__Add__);
-    sub_B52984(&Method_System_Collections_Generic_List_UserDeckEntity___ctor__);
-    sub_B52984(&System_Collections_Generic_List_UserDeckEntity__TypeInfo);
-    sub_B52984(&MiniMessagePack_MiniMessagePacker_TypeInfo);
-    sub_B52984(&StringLiteral_16350/*"activeDeckId"*/);
-    sub_B52984(&StringLiteral_23193/*"userDeck"*/);
-    byte_42ABC7C = 1;
+    sub_B5D5C4(&System_Convert_TypeInfo, activeDeckId, (_DWORD)userDeck, method);
+    sub_B5D5C4(&JsonManager_TypeInfo, v7, v8, v9);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_UserDeckEntity__Add__, v10, v11, v12);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_UserDeckEntity___ctor__, v13, v14, v15);
+    sub_B5D5C4(&System_Collections_Generic_List_UserDeckEntity__TypeInfo, v16, v17, v18);
+    sub_B5D5C4(&MiniMessagePack_MiniMessagePacker_TypeInfo, v19, v20, v21);
+    sub_B5D5C4(&StringLiteral_16435/*"activeDeckId"*/, v22, v23, v24);
+    sub_B5D5C4(&StringLiteral_23308/*"userDeck"*/, v25, v26, v27);
+    byte_42E44EF = 1;
   }
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   JsonManager__toJson((Il2CppObject *)userDeck, 0, 0, 0LL);
-  RequestBase__addField_32020452((RequestBase_o *)this, (System_String_o *)StringLiteral_16350/*"activeDeckId"*/, activeDeckId, 0LL);
-  v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_UserDeckEntity__TypeInfo);
+  RequestBase__addField_32361792((RequestBase_o *)this, (System_String_o *)StringLiteral_16435/*"activeDeckId"*/, activeDeckId, 0LL);
+  v28 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B5D694(System_Collections_Generic_List_UserDeckEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v7,
-    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_UserDeckEntity___ctor__);
-  if ( !v7
+    v28,
+    (const MethodInfo_30562FC *)Method_System_Collections_Generic_List_UserDeckEntity___ctor__);
+  if ( !v28
     || (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          v7,
+          v28,
           (EventMissionProgressRequest_Argument_ProgressData_o *)userDeck,
-          (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_UserDeckEntity__Add__),
-        v10 = (MiniMessagePack_MiniMessagePacker_o *)sub_B52A54(MiniMessagePack_MiniMessagePacker_TypeInfo),
-        MiniMessagePack_MiniMessagePacker___ctor(v10, 0LL),
-        !v10) )
+          (const MethodInfo_3056FC0 *)Method_System_Collections_Generic_List_UserDeckEntity__Add__),
+        v31 = (MiniMessagePack_MiniMessagePacker_o *)sub_B5D694(MiniMessagePack_MiniMessagePacker_TypeInfo),
+        MiniMessagePack_MiniMessagePacker___ctor(v31, 0LL),
+        !v31) )
   {
-    sub_B52A5C(v8, v9);
+    sub_B5D69C(v29, v30);
   }
-  v11 = MiniMessagePack_MiniMessagePacker__PackClass(v10, (Il2CppObject *)v7, 0LL);
+  v32 = MiniMessagePack_MiniMessagePacker__PackClass(v31, (Il2CppObject *)v28, 0LL);
   if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !System_Convert_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
-  v12 = System_Convert__ToBase64String(v11, 0LL);
-  RequestBase__addField_32020920((RequestBase_o *)this, (System_String_o *)StringLiteral_23193/*"userDeck"*/, v12, 0LL);
+  v33 = System_Convert__ToBase64String(v32, 0LL);
+  RequestBase__addField_32362260((RequestBase_o *)this, (System_String_o *)StringLiteral_23308/*"userDeck"*/, v33, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
 
 System_String_o *__fastcall DeckSetupRequest__getMockData(DeckSetupRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_42ABC7B & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E44EE & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_1/*""*/);
-    byte_42ABC7B = 1;
+    sub_B5D5C4(&StringLiteral_1/*""*/, (_DWORD)method, v2, v3);
+    byte_42E44EE = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -73,13 +97,18 @@ System_String_o *__fastcall DeckSetupRequest__getMockData(DeckSetupRequest_o *th
 
 System_String_o *__fastcall DeckSetupRequest__getURL(DeckSetupRequest_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v4; // w1
+  int v5; // w2
+  __int64 v6; // x3
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_42ABC7A & 1) == 0 )
+  if ( (byte_42E44ED & 1) == 0 )
   {
-    sub_B52984(&NetworkManager_TypeInfo);
-    sub_B52984(&StringLiteral_18051/*"deck/setup"*/);
-    byte_42ABC7A = 1;
+    sub_B5D5C4(&NetworkManager_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&StringLiteral_18145/*"deck/setup"*/, v4, v5, v6);
+    byte_42E44ED = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -87,7 +116,7 @@ System_String_o *__fastcall DeckSetupRequest__getURL(DeckSetupRequest_o *this, c
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_44568316(BaseUrl, (System_String_o *)StringLiteral_18051/*"deck/setup"*/, 0LL);
+  return System_String__Concat_44577788(BaseUrl, (System_String_o *)StringLiteral_18145/*"deck/setup"*/, 0LL);
 }
 
 
@@ -96,25 +125,32 @@ void __fastcall DeckSetupRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  ResponseData_o *v5; // x0
-  __int64 *v6; // x8
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  ResponseData_o *v12; // x0
+  __int64 *v13; // x8
 
-  if ( (byte_42ABC7D & 1) == 0 )
+  if ( (byte_42E44F0 & 1) == 0 )
   {
-    sub_B52984(&ResponseCommandKind_TypeInfo);
-    sub_B52984(&StringLiteral_21388/*"ok"*/);
-    sub_B52984(&StringLiteral_21239/*"ng"*/);
-    byte_42ABC7D = 1;
+    sub_B5D5C4(&ResponseCommandKind_TypeInfo, (_DWORD)responseList, (_DWORD)method, v3);
+    sub_B5D5C4(&StringLiteral_21497/*"ok"*/, v6, v7, v8);
+    sub_B5D5C4(&StringLiteral_21345/*"ng"*/, v9, v10, v11);
+    byte_42E44F0 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   }
-  v5 = ResponseCommandKind__SearchData(7, responseList, 0LL);
-  if ( v5 && ResponseData__checkError_29724768(v5, 0LL) )
-    v6 = &StringLiteral_21388/*"ok"*/;
+  v12 = ResponseCommandKind__SearchData(7, responseList, 0LL);
+  if ( v12 && ResponseData__checkError_29500464(v12, 0LL) )
+    v13 = &StringLiteral_21497/*"ok"*/;
   else
-    v6 = &StringLiteral_21239/*"ng"*/;
-  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v6, 0LL);
+    v13 = &StringLiteral_21345/*"ng"*/;
+  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v13, 0LL);
 }

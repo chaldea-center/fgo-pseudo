@@ -51,7 +51,7 @@ void __fastcall LimitUpResultInfoComponent__Open(
         (v7 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_7:
-    sub_B52A5C(v7, v8);
+    sub_B5D69C(v7, v8);
   }
   UnityEngine_GameObject__SetActive(v7, 1, 0LL);
 }
@@ -63,14 +63,17 @@ void __fastcall LimitUpResultInfoComponent__Setup(
         System_String_o *detail,
         const MethodInfo *method)
 {
+  int v7; // w1
+  int v8; // w2
+  __int64 v9; // x3
   UILabel_o *titleLabel; // x0
   UISprite_o *lineSprite; // x19
 
-  if ( (byte_42AF1E5 & 1) == 0 )
+  if ( (byte_42E7D6C & 1) == 0 )
   {
-    sub_B52984(&AtlasManager_TypeInfo);
-    sub_B52984(&StringLiteral_20387/*"line_whiteAlpha"*/);
-    byte_42AF1E5 = 1;
+    sub_B5D5C4(&AtlasManager_TypeInfo, (_DWORD)title, (_DWORD)detail, method);
+    sub_B5D5C4(&StringLiteral_20490/*"line_whiteAlpha"*/, v7, v8, v9);
+    byte_42E7D6C = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -78,11 +81,11 @@ void __fastcall LimitUpResultInfoComponent__Setup(
     || (WrapControlText__textAdjust(titleLabel, detail, titleLabel->fields.mFontSize, 0, 0, 0LL),
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B52A5C(titleLabel, title);
+    sub_B5D69C(titleLabel, title);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
   lineSprite = this->fields.lineSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(lineSprite, (System_String_o *)StringLiteral_20387/*"line_whiteAlpha"*/, 0LL);
+  AtlasManager__SetEventUI(lineSprite, (System_String_o *)StringLiteral_20490/*"line_whiteAlpha"*/, 0LL);
 }

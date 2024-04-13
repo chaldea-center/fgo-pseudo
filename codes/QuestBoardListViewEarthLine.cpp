@@ -6,62 +6,84 @@ void __fastcall QuestBoardListViewEarthLine___ctor(QuestBoardListViewEarthLine_o
 
 void __fastcall QuestBoardListViewEarthLine__Awake(QuestBoardListViewEarthLine_o *this, const MethodInfo *method)
 {
-  CStateManager_QAASpotStateController_IMapSpot__o *v3; // x21
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  CStateManager_QAASpotStateController_IMapSpot__o *v17; // x21
+  System_String_array **v18; // x2
+  System_String_array **v19; // x3
+  System_Boolean_array **v20; // x4
+  System_Int32_array **v21; // x5
+  System_Int32_array *v22; // x6
+  System_Int32_array *v23; // x7
   struct CStateManager_QuestBoardListViewEarthLine__o *mFSM; // x21
-  QuestBoardListViewEarthLine_StateNone_o *v11; // x22
-  __int64 v12; // x0
-  __int64 v13; // x1
-  struct CStateManager_QuestBoardListViewEarthLine__o *v14; // x20
-  QuestBoardListViewEarthLine_StateMain_o *v15; // x21
-  const MethodInfo *v16; // x2
+  QuestBoardListViewEarthLine_StateNone_o *v25; // x22
+  __int64 v26; // x0
+  __int64 v27; // x1
+  struct CStateManager_QuestBoardListViewEarthLine__o *v28; // x20
+  QuestBoardListViewEarthLine_StateMain_o *v29; // x21
+  const MethodInfo *v30; // x2
 
-  if ( (byte_42B18BC & 1) == 0 )
+  if ( (byte_42EA01D & 1) == 0 )
   {
-    sub_B52984(&Method_CStateManager_QuestBoardListViewEarthLine___ctor__);
-    sub_B52984(&Method_CStateManager_QuestBoardListViewEarthLine__add__);
-    sub_B52984(&CStateManager_QuestBoardListViewEarthLine__TypeInfo);
-    sub_B52984(&QuestBoardListViewEarthLine_StateMain_TypeInfo);
-    sub_B52984(&QuestBoardListViewEarthLine_StateNone_TypeInfo);
-    byte_42B18BC = 1;
+    sub_B5D5C4(&Method_CStateManager_QuestBoardListViewEarthLine___ctor__, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_CStateManager_QuestBoardListViewEarthLine__add__, v5, v6, v7);
+    sub_B5D5C4(&CStateManager_QuestBoardListViewEarthLine__TypeInfo, v8, v9, v10);
+    sub_B5D5C4(&QuestBoardListViewEarthLine_StateMain_TypeInfo, v11, v12, v13);
+    sub_B5D5C4(&QuestBoardListViewEarthLine_StateNone_TypeInfo, v14, v15, v16);
+    byte_42EA01D = 1;
   }
   if ( !this->fields.mFSM )
   {
-    v3 = (CStateManager_QAASpotStateController_IMapSpot__o *)sub_B52A54(CStateManager_QuestBoardListViewEarthLine__TypeInfo);
+    v17 = (CStateManager_QAASpotStateController_IMapSpot__o *)sub_B5D694(CStateManager_QuestBoardListViewEarthLine__TypeInfo);
     CStateManager_QAASpotStateController_IMapSpot____ctor(
-      v3,
+      v17,
       (QAASpotStateController_IMapSpot_o *)this,
       2,
-      (const MethodInfo_2B925C4 *)Method_CStateManager_QuestBoardListViewEarthLine___ctor__);
-    this->fields.mFSM = (struct CStateManager_QuestBoardListViewEarthLine__o *)v3;
-    sub_B52920((BattleServantConfConponent_o *)&this->fields.mFSM, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
+      (const MethodInfo_2BB2630 *)Method_CStateManager_QuestBoardListViewEarthLine___ctor__);
+    this->fields.mFSM = (struct CStateManager_QuestBoardListViewEarthLine__o *)v17;
+    sub_B5D560(
+      (BattleServantConfConponent_o *)&this->fields.mFSM,
+      (System_Int32_array **)v17,
+      v18,
+      v19,
+      v20,
+      v21,
+      v22,
+      v23);
     mFSM = this->fields.mFSM;
-    v11 = (QuestBoardListViewEarthLine_StateNone_o *)sub_B52A54(QuestBoardListViewEarthLine_StateNone_TypeInfo);
-    QuestBoardListViewEarthLine_StateNone___ctor(v11, 0LL);
+    v25 = (QuestBoardListViewEarthLine_StateNone_o *)sub_B5D694(QuestBoardListViewEarthLine_StateNone_TypeInfo);
+    QuestBoardListViewEarthLine_StateNone___ctor(v25, 0LL);
     if ( !mFSM
       || (CStateManager_QAASpotStateController_IMapSpot___add(
             (CStateManager_QAASpotStateController_IMapSpot__o *)mFSM,
             0,
-            (IState_T__o *)v11,
-            (const MethodInfo_2B92690 *)Method_CStateManager_QuestBoardListViewEarthLine__add__),
-          v14 = this->fields.mFSM,
-          v15 = (QuestBoardListViewEarthLine_StateMain_o *)sub_B52A54(QuestBoardListViewEarthLine_StateMain_TypeInfo),
-          QuestBoardListViewEarthLine_StateMain___ctor(v15, 0LL),
-          !v14) )
+            (IState_T__o *)v25,
+            (const MethodInfo_2BB26FC *)Method_CStateManager_QuestBoardListViewEarthLine__add__),
+          v28 = this->fields.mFSM,
+          v29 = (QuestBoardListViewEarthLine_StateMain_o *)sub_B5D694(QuestBoardListViewEarthLine_StateMain_TypeInfo),
+          QuestBoardListViewEarthLine_StateMain___ctor(v29, 0LL),
+          !v28) )
     {
-      sub_B52A5C(v12, v13);
+      sub_B5D69C(v26, v27);
     }
     CStateManager_QAASpotStateController_IMapSpot___add(
-      (CStateManager_QAASpotStateController_IMapSpot__o *)v14,
+      (CStateManager_QAASpotStateController_IMapSpot__o *)v28,
       1,
-      (IState_T__o *)v15,
-      (const MethodInfo_2B92690 *)Method_CStateManager_QuestBoardListViewEarthLine__add__);
-    QuestBoardListViewEarthLine__SetState(this, 0, v16);
+      (IState_T__o *)v29,
+      (const MethodInfo_2BB26FC *)Method_CStateManager_QuestBoardListViewEarthLine__add__);
+    QuestBoardListViewEarthLine__SetState(this, 0, v30);
   }
 }
 
@@ -96,7 +118,7 @@ UnityEngine_Vector3_o __fastcall QuestBoardListViewEarthLine__GetEndScreenPositi
                                                     (UnityEngine_Component_o *)this,
                                                     0LL)) == 0LL) )
   {
-    sub_B52A5C(mEarthPoint, method);
+    sub_B5D69C(mEarthPoint, method);
   }
   lossyScale = UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)mEarthPoint, 0LL);
   v8 = y / lossyScale.fields.y;
@@ -132,18 +154,24 @@ UnityEngine_Vector3_o __fastcall QuestBoardListViewEarthLine__GetStartScreenPosi
 
 int32_t __fastcall QuestBoardListViewEarthLine__GetState(QuestBoardListViewEarthLine_o *this, const MethodInfo *method)
 {
-  QuestBoardListViewEarthLine_o *v2; // x19
+  int v2; // w2
+  __int64 v3; // x3
+  QuestBoardListViewEarthLine_o *v4; // x19
   struct CStateManager_QuestBoardListViewEarthLine__o *mFSM; // x8
 
-  v2 = this;
-  if ( (byte_42B18BF & 1) == 0 )
+  v4 = this;
+  if ( (byte_42EA020 & 1) == 0 )
   {
-    this = (QuestBoardListViewEarthLine_o *)sub_B52984(&Method_CStateManager_QuestBoardListViewEarthLine__getState__);
-    byte_42B18BF = 1;
+    this = (QuestBoardListViewEarthLine_o *)sub_B5D5C4(
+                                              &Method_CStateManager_QuestBoardListViewEarthLine__getState__,
+                                              (_DWORD)method,
+                                              v2,
+                                              v3);
+    byte_42EA020 = 1;
   }
-  mFSM = v2->fields.mFSM;
+  mFSM = v4->fields.mFSM;
   if ( !mFSM )
-    sub_B52A5C(this, method);
+    sub_B5D69C(this, method);
   return mFSM->fields.m_state;
 }
 
@@ -174,7 +202,7 @@ UnityEngine_Vector3_o __fastcall QuestBoardListViewEarthLine__GetThisScreenPosit
     || (LODWORD(v8) = (unsigned int)UnityEngine_Transform__get_lossyScale(transform, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B52A5C(transform, v7);
+    sub_B5D69C(transform, v7);
   }
   lossyScale = UnityEngine_Transform__get_lossyScale(transform, 0LL);
   v9 = y / lossyScale.fields.y;
@@ -206,18 +234,20 @@ bool __fastcall QuestBoardListViewEarthLine__IsVisiblePossible(
 
 void __fastcall QuestBoardListViewEarthLine__LateUpdate(QuestBoardListViewEarthLine_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   struct CStateManager_QuestBoardListViewEarthLine__o *mFSM; // x0
 
-  if ( (byte_42B18BD & 1) == 0 )
+  if ( (byte_42EA01E & 1) == 0 )
   {
-    sub_B52984(&Method_CStateManager_QuestBoardListViewEarthLine__update__);
-    byte_42B18BD = 1;
+    sub_B5D5C4(&Method_CStateManager_QuestBoardListViewEarthLine__update__, (_DWORD)method, v2, v3);
+    byte_42EA01E = 1;
   }
   mFSM = this->fields.mFSM;
   if ( mFSM )
     CStateManager_QAASpotStateController_IMapSpot___update(
       (CStateManager_QAASpotStateController_IMapSpot__o *)mFSM,
-      (const MethodInfo_2B9270C *)Method_CStateManager_QuestBoardListViewEarthLine__update__);
+      (const MethodInfo_2BB2778 *)Method_CStateManager_QuestBoardListViewEarthLine__update__);
   QuestBoardListViewEarthLine__Hide(this, method);
 }
 
@@ -227,19 +257,20 @@ void __fastcall QuestBoardListViewEarthLine__SetState(
         int32_t state,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
   struct CStateManager_QuestBoardListViewEarthLine__o *mFSM; // x0
 
-  if ( (byte_42B18C0 & 1) == 0 )
+  if ( (byte_42EA021 & 1) == 0 )
   {
-    sub_B52984(&Method_CStateManager_QuestBoardListViewEarthLine__setState__);
-    byte_42B18C0 = 1;
+    sub_B5D5C4(&Method_CStateManager_QuestBoardListViewEarthLine__setState__, state, (_DWORD)method, v3);
+    byte_42EA021 = 1;
   }
   mFSM = this->fields.mFSM;
   if ( mFSM )
     CStateManager_QAASpotStateController_IMapSpot___setState(
       (CStateManager_QAASpotStateController_IMapSpot__o *)mFSM,
       state,
-      (const MethodInfo_2B92734 *)Method_CStateManager_QuestBoardListViewEarthLine__setState__);
+      (const MethodInfo_2BB27A0 *)Method_CStateManager_QuestBoardListViewEarthLine__setState__);
 }
 
 
@@ -264,7 +295,7 @@ void __fastcall QuestBoardListViewEarthLine__SetupFirst(
 
   this->fields.mLineRenderer = lr;
   p_mLineRenderer = &this->fields.mLineRenderer;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.mLineRenderer,
     (System_Int32_array **)lr,
     (System_String_array **)method,
@@ -299,7 +330,7 @@ void __fastcall QuestBoardListViewEarthLine__SetupFirst(
                                                          0LL)) == 0LL )
   {
 LABEL_9:
-    sub_B52A5C(sharedMaterial, v9);
+    sub_B5D69C(sharedMaterial, v9);
   }
   UnityEngine_Material__set_renderQueue((UnityEngine_Material_o *)sharedMaterial, 3100, 0LL);
 }
@@ -320,56 +351,59 @@ void __fastcall QuestBoardListViewEarthLine__SetupSecond(
   float z; // s8
   float y; // s9
   float x; // s10
+  int v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
   BattleServantConfConponent_o *p_mListViewObject; // x20
-  __int64 v16; // x1
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
+  __int64 v19; // x1
+  System_String_array **v20; // x2
+  System_String_array **v21; // x3
+  System_Boolean_array **v22; // x4
+  System_Int32_array **v23; // x5
+  System_Int32_array *v24; // x6
+  System_Int32_array *v25; // x7
   BaseCore_o *mEarthCore; // x0
   UnityEngine_GameObject_c *klass; // x8
-  struct StandFigureSlideComponent_o *v25; // x1
-  System_String_array **v26; // x2
-  System_String_array **v27; // x3
-  System_Boolean_array **v28; // x4
-  System_Int32_array **v29; // x5
-  System_Int32_array *v30; // x6
-  System_Int32_array *v31; // x7
-  UnityEngine_GameObject_c *v32; // x8
-  struct BaseCore_o *v33; // x1
+  struct StandFigureSlideComponent_o *v28; // x1
+  System_String_array **v29; // x2
+  System_String_array **v30; // x3
+  System_Boolean_array **v31; // x4
+  System_Int32_array **v32; // x5
+  System_Int32_array *v33; // x6
+  System_Int32_array *v34; // x7
+  UnityEngine_GameObject_c *v35; // x8
+  struct BaseCore_o *v36; // x1
   struct BaseEarthPoint_o *EarthPoint; // x0
   struct BaseEarthPoint_o **p_mEarthPoint; // x21
-  System_String_array **v36; // x2
-  System_String_array **v37; // x3
-  System_Boolean_array **v38; // x4
-  System_Int32_array **v39; // x5
-  System_Int32_array *v40; // x6
-  System_Int32_array *v41; // x7
-  UnityEngine_Object_o *v42; // x21
-  System_String_array **v43; // x2
-  System_String_array **v44; // x3
-  System_Boolean_array **v45; // x4
-  System_Int32_array **v46; // x5
-  System_Int32_array *v47; // x6
-  System_Int32_array *v48; // x7
+  System_String_array **v39; // x2
+  System_String_array **v40; // x3
+  System_Boolean_array **v41; // x4
+  System_Int32_array **v42; // x5
+  System_Int32_array *v43; // x6
+  System_Int32_array *v44; // x7
+  UnityEngine_Object_o *v45; // x21
+  System_String_array **v46; // x2
+  System_String_array **v47; // x3
+  System_Boolean_array **v48; // x4
+  System_Int32_array **v49; // x5
+  System_Int32_array *v50; // x6
+  System_Int32_array *v51; // x7
 
   z = st_pos.fields.z;
   y = st_pos.fields.y;
   x = st_pos.fields.x;
-  if ( (byte_42B18BE & 1) == 0 )
+  if ( (byte_42EA01F & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    sub_B52984(&TerminalSceneComponent_TypeInfo);
-    byte_42B18BE = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)lvo, war_id, method);
+    sub_B5D5C4(&TerminalSceneComponent_TypeInfo, v15, v16, v17);
+    byte_42EA01F = 1;
   }
   this->fields.mListViewObject = 0LL;
   p_mListViewObject = (BattleServantConfConponent_o *)&this->fields.mListViewObject;
   this->fields.mLineStartPos.fields.x = x;
   this->fields.mLineStartPos.fields.y = y;
   this->fields.mLineStartPos.fields.z = z;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.mListViewObject,
     0LL,
     *(System_String_array ***)&war_id,
@@ -383,10 +417,10 @@ void __fastcall QuestBoardListViewEarthLine__SetupSecond(
   {
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
   }
-  if ( !byte_42AC2A0 )
+  if ( !byte_42E4B1E )
   {
-    sub_B52984(&TerminalSceneComponent_TypeInfo);
-    byte_42AC2A0 = 1;
+    sub_B5D5C4(&TerminalSceneComponent_TypeInfo, v19, (_DWORD)v20, v21);
+    byte_42E4B1E = 1;
   }
   mEarthCore = (BaseCore_o *)TerminalSceneComponent_TypeInfo;
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -398,21 +432,21 @@ void __fastcall QuestBoardListViewEarthLine__SetupSecond(
   klass = mEarthCore[1].fields.mEarthPointRoot->klass;
   if ( !klass )
     goto LABEL_24;
-  v25 = *(struct StandFigureSlideComponent_o **)&klass->_2.interfaces_count;
-  this->fields.mTerminalServant = v25;
-  sub_B52920(
+  v28 = *(struct StandFigureSlideComponent_o **)&klass->_2.interfaces_count;
+  this->fields.mTerminalServant = v28;
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.mTerminalServant,
-    (System_Int32_array **)v25,
-    v17,
-    v18,
-    v19,
+    (System_Int32_array **)v28,
     v20,
     v21,
-    v22);
-  if ( !byte_42AC2A0 )
+    v22,
+    v23,
+    v24,
+    v25);
+  if ( !byte_42E4B1E )
   {
-    sub_B52984(&TerminalSceneComponent_TypeInfo);
-    byte_42AC2A0 = 1;
+    sub_B5D5C4(&TerminalSceneComponent_TypeInfo, v19, (_DWORD)v29, v30);
+    byte_42E4B1E = 1;
   }
   mEarthCore = (BaseCore_o *)TerminalSceneComponent_TypeInfo;
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -421,46 +455,46 @@ void __fastcall QuestBoardListViewEarthLine__SetupSecond(
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
     mEarthCore = (BaseCore_o *)TerminalSceneComponent_TypeInfo;
   }
-  v32 = mEarthCore[1].fields.mEarthPointRoot->klass;
-  if ( !v32
-    || (v33 = (struct BaseCore_o *)v32->vtable._3_ToString.method,
-        this->fields.mEarthCore = v33,
-        sub_B52920(
+  v35 = mEarthCore[1].fields.mEarthPointRoot->klass;
+  if ( !v35
+    || (v36 = (struct BaseCore_o *)v35->vtable._3_ToString.method,
+        this->fields.mEarthCore = v36,
+        sub_B5D560(
           (BattleServantConfConponent_o *)&this->fields.mEarthCore,
-          (System_Int32_array **)v33,
-          v26,
-          v27,
-          v28,
+          (System_Int32_array **)v36,
           v29,
           v30,
-          v31),
+          v31,
+          v32,
+          v33,
+          v34),
         (mEarthCore = this->fields.mEarthCore) == 0LL) )
   {
 LABEL_24:
-    sub_B52A5C(mEarthCore, v16);
+    sub_B5D69C(mEarthCore, v19);
   }
   EarthPoint = BaseCore__GetEarthPoint(mEarthCore, war_id, 0LL);
   this->fields.mEarthPoint = EarthPoint;
   p_mEarthPoint = &this->fields.mEarthPoint;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)p_mEarthPoint,
     (System_Int32_array **)EarthPoint,
-    v36,
-    v37,
-    v38,
     v39,
     v40,
-    v41);
-  v42 = (UnityEngine_Object_o *)*p_mEarthPoint;
+    v41,
+    v42,
+    v43,
+    v44);
+  v45 = (UnityEngine_Object_o *)*p_mEarthPoint;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( !UnityEngine_Object__op_Equality(v42, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Equality(v45, 0LL, 0LL) )
   {
     p_mListViewObject->klass = (BattleServantConfConponent_c *)lvo;
-    sub_B52920(p_mListViewObject, (System_Int32_array **)lvo, v43, v44, v45, v46, v47, v48);
+    sub_B5D560(p_mListViewObject, (System_Int32_array **)lvo, v46, v47, v48, v49, v50, v51);
   }
 }
 
@@ -487,44 +521,57 @@ void __fastcall QuestBoardListViewEarthLine_StateMain__begin(
         QuestBoardListViewEarthLine_o *that,
         const MethodInfo *method)
 {
-  __int64 v5; // x19
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  int v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
+  __int64 v18; // x19
   UnityEngine_LineRenderer_o *mLineRenderer; // x0
-  __int64 v7; // x1
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  __int64 v20; // x1
+  System_String_array **v21; // x2
+  System_String_array **v22; // x3
+  System_Boolean_array **v23; // x4
+  System_Int32_array **v24; // x5
+  System_Int32_array *v25; // x6
+  System_Int32_array *v26; // x7
   UnityEngine_GameObject_o *gameObject; // x0
   System_Int32_array **Component_UIWidget; // x0
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  EasingObject_o *v22; // x20
-  System_Action_o *v23; // x21
-  System_Action_o *v24; // x22
+  System_String_array **v29; // x2
+  System_String_array **v30; // x3
+  System_Boolean_array **v31; // x4
+  System_Int32_array **v32; // x5
+  System_Int32_array *v33; // x6
+  System_Int32_array *v34; // x7
+  EasingObject_o *v35; // x20
+  System_Action_o *v36; // x21
+  System_Action_o *v37; // x22
 
-  if ( (byte_42AF236 & 1) == 0 )
+  if ( (byte_42E7EDA & 1) == 0 )
   {
-    sub_B52984(&System_Action_TypeInfo);
-    sub_B52984(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-    sub_B52984(&Method_QuestBoardListViewEarthLine_StateMain___c__DisplayClass2_0__begin_b__0__);
-    sub_B52984(&Method_QuestBoardListViewEarthLine_StateMain___c__DisplayClass2_0__begin_b__1__);
-    sub_B52984(&QuestBoardListViewEarthLine_StateMain___c__DisplayClass2_0_TypeInfo);
-    byte_42AF236 = 1;
+    sub_B5D5C4(&System_Action_TypeInfo, (_DWORD)that, (_DWORD)method, v3);
+    sub_B5D5C4(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v6, v7, v8);
+    sub_B5D5C4(&Method_QuestBoardListViewEarthLine_StateMain___c__DisplayClass2_0__begin_b__0__, v9, v10, v11);
+    sub_B5D5C4(&Method_QuestBoardListViewEarthLine_StateMain___c__DisplayClass2_0__begin_b__1__, v12, v13, v14);
+    sub_B5D5C4(&QuestBoardListViewEarthLine_StateMain___c__DisplayClass2_0_TypeInfo, v15, v16, v17);
+    byte_42E7EDA = 1;
   }
-  v5 = sub_B52A54(QuestBoardListViewEarthLine_StateMain___c__DisplayClass2_0_TypeInfo);
+  v18 = sub_B5D694(QuestBoardListViewEarthLine_StateMain___c__DisplayClass2_0_TypeInfo);
   QuestBoardListViewEarthLine_StateMain___c__DisplayClass2_0___ctor(
-    (QuestBoardListViewEarthLine_StateMain___c__DisplayClass2_0_o *)v5,
+    (QuestBoardListViewEarthLine_StateMain___c__DisplayClass2_0_o *)v18,
     0LL);
-  if ( !v5 )
+  if ( !v18 )
     goto LABEL_9;
-  *(_QWORD *)(v5 + 16) = this;
-  sub_B52920((BattleServantConfConponent_o *)(v5 + 16), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
+  *(_QWORD *)(v18 + 16) = this;
+  sub_B5D560((BattleServantConfConponent_o *)(v18 + 16), (System_Int32_array **)this, v21, v22, v23, v24, v25, v26);
   if ( !that )
     goto LABEL_9;
   mLineRenderer = that->fields.mLineRenderer;
@@ -535,31 +582,31 @@ void __fastcall QuestBoardListViewEarthLine_StateMain__begin(
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
   Component_UIWidget = (System_Int32_array **)GameObjectExtensions__SafeGetComponent_UIWidget_(
                                                 gameObject,
-                                                (const MethodInfo_1B7BF3C *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-  *(_QWORD *)(v5 + 24) = Component_UIWidget;
-  sub_B52920((BattleServantConfConponent_o *)(v5 + 24), Component_UIWidget, v16, v17, v18, v19, v20, v21);
-  mLineRenderer = *(UnityEngine_LineRenderer_o **)(v5 + 24);
+                                                (const MethodInfo_1E5984C *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+  *(_QWORD *)(v18 + 24) = Component_UIWidget;
+  sub_B5D560((BattleServantConfConponent_o *)(v18 + 24), Component_UIWidget, v29, v30, v31, v32, v33, v34);
+  mLineRenderer = *(UnityEngine_LineRenderer_o **)(v18 + 24);
   if ( !mLineRenderer
     || (UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)mLineRenderer, 1, 0LL),
-        v22 = *(EasingObject_o **)(v5 + 24),
-        v23 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo),
+        v35 = *(EasingObject_o **)(v18 + 24),
+        v36 = (System_Action_o *)sub_B5D694(System_Action_TypeInfo),
         System_Action___ctor(
-          v23,
-          (Il2CppObject *)v5,
+          v36,
+          (Il2CppObject *)v18,
           Method_QuestBoardListViewEarthLine_StateMain___c__DisplayClass2_0__begin_b__0__,
           0LL),
-        v24 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo),
+        v37 = (System_Action_o *)sub_B5D694(System_Action_TypeInfo),
         System_Action___ctor(
-          v24,
-          (Il2CppObject *)v5,
+          v37,
+          (Il2CppObject *)v18,
           Method_QuestBoardListViewEarthLine_StateMain___c__DisplayClass2_0__begin_b__1__,
           0LL),
-        !v22) )
+        !v35) )
   {
 LABEL_9:
-    sub_B52A5C(mLineRenderer, v7);
+    sub_B5D69C(mLineRenderer, v20);
   }
-  EasingObject__Play(v22, 0.5, v23, v24, 0.0, 17, 0LL);
+  EasingObject__Play(v35, 0.5, v36, v37, 0.0, 17, 0LL);
 }
 
 
@@ -648,7 +695,7 @@ void __fastcall QuestBoardListViewEarthLine_StateMain__update(
   v5 = that->fields.mLineRenderer;
   if ( !v5 )
 LABEL_11:
-    sub_B52A5C(v5, v6);
+    sub_B5D69C(v5, v6);
   UnityEngine_LineRenderer__SetPosition(v5, 1, *(UnityEngine_Vector3_o *)&v13, 0LL);
 }
 
@@ -670,7 +717,7 @@ void __fastcall QuestBoardListViewEarthLine_StateMain___c__DisplayClass2_0___beg
 
   eo = this->fields.eo;
   if ( !eo || (_4__this = this->fields.__4__this) == 0LL )
-    sub_B52A5C(this, method);
+    sub_B5D69C(this, method);
   _4__this->fields.mTgtRate = eo->fields.mStartTime;
 }
 
@@ -683,7 +730,7 @@ void __fastcall QuestBoardListViewEarthLine_StateMain___c__DisplayClass2_0___beg
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_B52A5C(this, method);
+    sub_B5D69C(this, method);
   _4__this->fields.mTgtRate = 1.0;
 }
 
@@ -701,14 +748,18 @@ void __fastcall QuestBoardListViewEarthLine_StateNone__begin(
         QuestBoardListViewEarthLine_o *that,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
   UnityEngine_Object_o *mLineRenderer; // x20
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_42AF237 & 1) == 0 )
+  if ( (byte_42E7EDB & 1) == 0 )
   {
-    sub_B52984(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-    this = (QuestBoardListViewEarthLine_StateNone_o *)sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42AF237 = 1;
+    sub_B5D5C4(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, (_DWORD)that, (_DWORD)method, v3);
+    this = (QuestBoardListViewEarthLine_StateNone_o *)sub_B5D5C4(&UnityEngine_Object_TypeInfo, v5, v6, v7);
+    byte_42E7EDB = 1;
   }
   if ( !that )
     goto LABEL_12;
@@ -727,7 +778,7 @@ void __fastcall QuestBoardListViewEarthLine_StateNone__begin(
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
       this = (QuestBoardListViewEarthLine_StateNone_o *)GameObjectExtensions__SafeGetComponent_UIWidget_(
                                                           gameObject,
-                                                          (const MethodInfo_1B7BF3C *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+                                                          (const MethodInfo_1E5984C *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
       if ( this )
       {
         UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0LL);
@@ -735,7 +786,7 @@ void __fastcall QuestBoardListViewEarthLine_StateNone__begin(
       }
     }
 LABEL_12:
-    sub_B52A5C(this, that);
+    sub_B5D69C(this, that);
   }
 }
 

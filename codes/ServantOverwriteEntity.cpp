@@ -1,13 +1,16 @@
 void __fastcall ServantOverwriteEntity___ctor(ServantOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B20A2 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42EAA01 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_string___ctor__);
-    byte_42B20A2 = 1;
+    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
+    byte_42EAA01 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +20,16 @@ System_String_o *__fastcall ServantOverwriteEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_42B20A1 & 1) == 0 )
+  if ( (byte_42EAA00 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_42B20A1 = 1;
+    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, type, priority, method);
+    byte_42EAA00 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            type,
            priority,
-           (const MethodInfo_1A4E378 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1AE3440 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -45,14 +48,16 @@ int32_t __fastcall ServantOverwriteEntity__GetOverwriteTreasureDeviceId(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_42B20A0 & 1) == 0 )
+  __int64 v3; // x3
+
+  if ( (byte_42EA9FF & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_21556/*"overwriteTreasureDeviceId"*/);
-    byte_42B20A0 = 1;
+    sub_B5D5C4(&StringLiteral_21669/*"overwriteTreasureDeviceId"*/, defaultValue, (_DWORD)method, v3);
+    byte_42EA9FF = 1;
   }
   return EntityScriptUtil__GetIntValue(
            this->fields.overwriteValue,
-           (System_String_o *)StringLiteral_21556/*"overwriteTreasureDeviceId"*/,
+           (System_String_o *)StringLiteral_21669/*"overwriteTreasureDeviceId"*/,
            defaultValue,
            0LL);
 }

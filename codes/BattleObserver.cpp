@@ -10,7 +10,7 @@ void __fastcall BattleObserver__Add(BattleObserver_o *this, BattleSubject_o *sub
   {
     BattleSubject__Add(subject, this, 0LL);
     this->fields.battleSubject = subject;
-    sub_B52920(&this->fields);
+    sub_B5D560(&this->fields);
   }
 }
 

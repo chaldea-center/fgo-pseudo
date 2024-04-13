@@ -1,16 +1,17 @@
 void __fastcall DataAsset___ctor(DataAsset_o *this, System_Byte_array *bytes, const MethodInfo *method)
 {
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  __int64 v3; // x3
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
 
-  if ( (byte_42B1A11 & 1) == 0 )
+  if ( (byte_42EA341 & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42B1A11 = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)bytes, (_DWORD)method, v3);
+    byte_42EA341 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -19,31 +20,32 @@ void __fastcall DataAsset___ctor(DataAsset_o *this, System_Byte_array *bytes, co
   }
   UnityEngine_Object___ctor((UnityEngine_Object_o *)this, 0LL);
   this->fields.byteData = bytes;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.byteData,
     (System_Int32_array **)bytes,
-    v5,
     v6,
     v7,
     v8,
     v9,
-    v10);
+    v10,
+    v11);
 }
 
 
-void __fastcall DataAsset___ctor_28059408(DataAsset_o *this, System_String_o *text, const MethodInfo *method)
+void __fastcall DataAsset___ctor_28257744(DataAsset_o *this, System_String_o *text, const MethodInfo *method)
 {
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  __int64 v3; // x3
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
 
-  if ( (byte_42B1A12 & 1) == 0 )
+  if ( (byte_42EA342 & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42B1A12 = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)text, (_DWORD)method, v3);
+    byte_42EA342 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -52,15 +54,15 @@ void __fastcall DataAsset___ctor_28059408(DataAsset_o *this, System_String_o *te
   }
   UnityEngine_Object___ctor((UnityEngine_Object_o *)this, 0LL);
   this->fields.textData = text;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.textData,
     (System_Int32_array **)text,
-    v5,
     v6,
     v7,
     v8,
     v9,
-    v10);
+    v10,
+    v11);
 }
 
 

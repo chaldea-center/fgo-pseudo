@@ -16,6 +16,7 @@ void __fastcall ClassBoardDialogSkillDetailPartsComponent__Awake(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 float __fastcall ClassBoardDialogSkillDetailPartsComponent__SetDetail(
         ClassBoardDialogSkillDetailPartsComponent_o *this,
         System_String_o *name,
@@ -34,10 +35,10 @@ float __fastcall ClassBoardDialogSkillDetailPartsComponent__SetDetail(
   double v18; // d0
   System_String_o *ClassBoardSkillIconName; // x20
 
-  if ( (byte_42B382C & 1) == 0 )
+  if ( (byte_42E9C0E & 1) == 0 )
   {
-    sub_B52984(&ClassBoardUtility_TypeInfo);
-    byte_42B382C = 1;
+    sub_B5D5C4(&ClassBoardUtility_TypeInfo, (_DWORD)name, (_DWORD)detail, *(_QWORD *)&iconId);
+    byte_42E9C0E = 1;
   }
   effectNameLabel = this->fields.effectNameLabel;
   if ( !effectNameLabel )
@@ -72,10 +73,10 @@ float __fastcall ClassBoardDialogSkillDetailPartsComponent__SetDetail(
     j_il2cpp_runtime_class_init_0(ClassBoardUtility_TypeInfo);
   }
   ClassBoardSkillIconName = ClassBoardUtility__GetClassBoardSkillIconName(iconId, skillType, 0LL);
-  effectNameLabel = (UILabel_o *)ClassBoardGlobalObject__get_IconAtlasManagerUnit((const MethodInfo *)ClassBoardSkillIconName);
+  effectNameLabel = (UILabel_o *)ClassBoardGlobalObject__get_IconAtlasManagerUnit(0LL);
   if ( !effectNameLabel )
 LABEL_18:
-    sub_B52A5C(effectNameLabel, name);
+    sub_B5D69C(effectNameLabel, name);
   AtlasManagerUnit__SetUI((AtlasManagerUnit_o *)effectNameLabel, this->fields.effectIcon, ClassBoardSkillIconName, 0LL);
   return v17;
 }

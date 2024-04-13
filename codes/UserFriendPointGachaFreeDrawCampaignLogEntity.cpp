@@ -2,14 +2,17 @@ void __fastcall UserFriendPointGachaFreeDrawCampaignLogEntity___ctor(
         UserFriendPointGachaFreeDrawCampaignLogEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_42AEF0F & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E7107 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_string___ctor__);
-    byte_42AEF0F = 1;
+    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
+    byte_42E7107 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,10 +20,13 @@ System_String_o *__fastcall UserFriendPointGachaFreeDrawCampaignLogEntity__Creat
         UserFriendPointGachaFreeDrawCampaignLogEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_42AEF0E & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E7106 & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_1/*""*/);
-    byte_42AEF0E = 1;
+    sub_B5D5C4(&StringLiteral_1/*""*/, (_DWORD)method, v2, v3);
+    byte_42E7106 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }

@@ -1,13 +1,16 @@
 void __fastcall NpcFollowerEntity___ctor(NpcFollowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42ADAF1 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E6288 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_string___ctor__);
-    byte_42ADAF1 = 1;
+    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
+    byte_42E6288 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +20,16 @@ System_String_o *__fastcall NpcFollowerEntity__CreatePK(
         int32_t questPhase,
         const MethodInfo *method)
 {
-  if ( (byte_42ADAE1 & 1) == 0 )
+  if ( (byte_42E6278 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
-    byte_42ADAE1 = 1;
+    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_long__int__int___, questId, questPhase, method);
+    byte_42E6278 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            id,
            questId,
            questPhase,
-           (const MethodInfo_1A4E618 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_1AE36E0 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
@@ -47,15 +50,15 @@ int32_t __fastcall NpcFollowerEntity__GetBattleSvtId(
 {
   const MethodInfo *v7; // x4
 
-  if ( (byte_42ADAEB & 1) == 0 )
+  if ( (byte_42E6282 & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_16788/*"battle_svt_id"*/);
-    byte_42ADAEB = 1;
+    sub_B5D5C4(&StringLiteral_16879/*"battle_svt_id"*/, priority, defaultValue, method);
+    byte_42E6282 = 1;
   }
   if ( NpcFollowerEntity__IsExistSvtChangeParam(this, *(const MethodInfo **)&priority) )
     return NpcFollowerEntity__GetSvtChangeValueInt(
              this,
-             (System_String_o *)StringLiteral_16788/*"battle_svt_id"*/,
+             (System_String_o *)StringLiteral_16879/*"battle_svt_id"*/,
              priority,
              defaultValue,
              v7);
@@ -66,40 +69,43 @@ int32_t __fastcall NpcFollowerEntity__GetBattleSvtId(
 
 int32_t __fastcall NpcFollowerEntity__GetDispLimitCnt(NpcFollowerEntity_o *this, const MethodInfo *method)
 {
-  const MethodInfo *v2; // x3
+  int v2; // w2
+  const MethodInfo *v3; // x3
 
-  if ( (byte_42ADAE3 & 1) == 0 )
+  if ( (byte_42E627A & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_18162/*"dispLimitCount"*/);
-    byte_42ADAE3 = 1;
+    sub_B5D5C4(&StringLiteral_18256/*"dispLimitCount"*/, (_DWORD)method, v2, v3);
+    byte_42E627A = 1;
   }
-  return NpcFollowerEntity__GetScriptInt(this, (System_String_o *)StringLiteral_18162/*"dispLimitCount"*/, -1, v2);
+  return NpcFollowerEntity__GetScriptInt(this, (System_String_o *)StringLiteral_18256/*"dispLimitCount"*/, -1, v3);
 }
 
 
 int32_t __fastcall NpcFollowerEntity__GetEventDeckIndex(NpcFollowerEntity_o *this, const MethodInfo *method)
 {
-  const MethodInfo *v2; // x3
+  int v2; // w2
+  const MethodInfo *v3; // x3
 
-  if ( (byte_42ADAED & 1) == 0 )
+  if ( (byte_42E6284 & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_18604/*"eventDeckIndex"*/);
-    byte_42ADAED = 1;
+    sub_B5D5C4(&StringLiteral_18699/*"eventDeckIndex"*/, (_DWORD)method, v2, v3);
+    byte_42E6284 = 1;
   }
-  return NpcFollowerEntity__GetScriptInt(this, (System_String_o *)StringLiteral_18604/*"eventDeckIndex"*/, 0, v2);
+  return NpcFollowerEntity__GetScriptInt(this, (System_String_o *)StringLiteral_18699/*"eventDeckIndex"*/, 0, v3);
 }
 
 
 int32_t __fastcall NpcFollowerEntity__GetImageSvtId(NpcFollowerEntity_o *this, const MethodInfo *method)
 {
-  const MethodInfo *v2; // x3
+  int v2; // w2
+  const MethodInfo *v3; // x3
 
-  if ( (byte_42ADAEE & 1) == 0 )
+  if ( (byte_42E6285 & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_19564/*"imageSvtId"*/);
-    byte_42ADAEE = 1;
+    sub_B5D5C4(&StringLiteral_19662/*"imageSvtId"*/, (_DWORD)method, v2, v3);
+    byte_42E6285 = 1;
   }
-  return NpcFollowerEntity__GetScriptInt(this, (System_String_o *)StringLiteral_19564/*"imageSvtId"*/, 0, v2);
+  return NpcFollowerEntity__GetScriptInt(this, (System_String_o *)StringLiteral_19662/*"imageSvtId"*/, 0, v3);
 }
 
 
@@ -107,12 +113,15 @@ System_String_o *__fastcall NpcFollowerEntity__GetOverwriteServantName(
         NpcFollowerEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_42ADAEF & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E6286 & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_22640/*"supportName"*/);
-    byte_42ADAEF = 1;
+    sub_B5D5C4(&StringLiteral_22755/*"supportName"*/, (_DWORD)method, v2, v3);
+    byte_42E6286 = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.npcScript, (System_String_o *)StringLiteral_22640/*"supportName"*/, 0LL, 0LL);
+  return EntityScriptUtil__GetStringValue(this->fields.npcScript, (System_String_o *)StringLiteral_22755/*"supportName"*/, 0LL, 0LL);
 }
 
 
@@ -122,17 +131,22 @@ int32_t __fastcall NpcFollowerEntity__GetScriptInt(
         int32_t defVal,
         const MethodInfo *method)
 {
+  int32_t v4; // w19
+  int v7; // w1
+  int v8; // w2
+  __int64 v9; // x3
   struct System_Collections_Generic_Dictionary_string__object__o *npcScript; // x0
-  __int64 v8; // x1
-  NpcFollowerEntity_o *v10; // x0
-  const MethodInfo *v11; // x1
+  __int64 v11; // x1
+  NpcFollowerEntity_o *v13; // x0
+  const MethodInfo *v14; // x1
   System_Xml_Schema_XmlSchemaObject_o *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_42ADAE2 & 1) == 0 )
+  v4 = defVal;
+  if ( (byte_42E6279 & 1) == 0 )
   {
-    sub_B52984(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_B52984(&long_TypeInfo);
-    byte_42ADAE2 = 1;
+    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, (_DWORD)key, defVal, method);
+    sub_B5D5C4(&long_TypeInfo, v7, v8, v9);
+    byte_42E6279 = 1;
   }
   value = 0LL;
   npcScript = this->fields.npcScript;
@@ -141,16 +155,16 @@ int32_t __fastcall NpcFollowerEntity__GetScriptInt(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)npcScript,
           (System_Xml_XmlQualifiedName_o *)key,
           &value,
-          (const MethodInfo_2F1D600 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_2F289BC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
-    return defVal;
+    return v4;
   }
   if ( !value )
-    sub_B52A5C(0LL, v8);
+    sub_B5D69C(0LL, v11);
   if ( value->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(value);
-  v10 = (NpcFollowerEntity_o *)sub_B52D50(value);
-  return NpcFollowerEntity__GetDispLimitCnt(v10, v11);
+  v13 = (NpcFollowerEntity_o *)sub_B5D990(value);
+  return NpcFollowerEntity__GetDispLimitCnt(v13, v14);
 }
 
 
@@ -163,15 +177,15 @@ System_String_o *__fastcall NpcFollowerEntity__GetServantName(
 {
   const MethodInfo *v7; // x4
 
-  if ( (byte_42ADAE9 & 1) == 0 )
+  if ( (byte_42E6280 & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_21171/*"name"*/);
-    byte_42ADAE9 = 1;
+    sub_B5D5C4(&StringLiteral_21277/*"name"*/, priority, (_DWORD)defaultValue, method);
+    byte_42E6280 = 1;
   }
   if ( NpcFollowerEntity__IsExistSvtChangeParam(this, *(const MethodInfo **)&priority) )
     return NpcFollowerEntity__GetSvtChangeValueString(
              this,
-             (System_String_o *)StringLiteral_21171/*"name"*/,
+             (System_String_o *)StringLiteral_21277/*"name"*/,
              priority,
              defaultValue,
              v7);
@@ -189,15 +203,15 @@ int32_t __fastcall NpcFollowerEntity__GetServantTd(
 {
   const MethodInfo *v7; // x4
 
-  if ( (byte_42ADAEA & 1) == 0 )
+  if ( (byte_42E6281 & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_22812/*"td"*/);
-    byte_42ADAEA = 1;
+    sub_B5D5C4(&StringLiteral_22927/*"td"*/, priority, defaultValue, method);
+    byte_42E6281 = 1;
   }
   if ( NpcFollowerEntity__IsExistSvtChangeParam(this, *(const MethodInfo **)&priority) )
     return NpcFollowerEntity__GetSvtChangeValueInt(
              this,
-             (System_String_o *)StringLiteral_22812/*"td"*/,
+             (System_String_o *)StringLiteral_22927/*"td"*/,
              priority,
              defaultValue,
              v7);
@@ -215,15 +229,15 @@ int32_t __fastcall NpcFollowerEntity__GetServantVoiceId(
 {
   const MethodInfo *v7; // x4
 
-  if ( (byte_42ADAEC & 1) == 0 )
+  if ( (byte_42E6283 & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_22668/*"svt_voice_id"*/);
-    byte_42ADAEC = 1;
+    sub_B5D5C4(&StringLiteral_22783/*"svt_voice_id"*/, priority, defaultValue, method);
+    byte_42E6283 = 1;
   }
   if ( NpcFollowerEntity__IsExistSvtChangeParam(this, *(const MethodInfo **)&priority) )
     return NpcFollowerEntity__GetSvtChangeValueInt(
              this,
-             (System_String_o *)StringLiteral_22668/*"svt_voice_id"*/,
+             (System_String_o *)StringLiteral_22783/*"svt_voice_id"*/,
              priority,
              defaultValue,
              v7);
@@ -236,36 +250,44 @@ System_Collections_Generic_Dictionary_string__object__o *__fastcall NpcFollowerE
         NpcFollowerEntity_o *this,
         const MethodInfo *method)
 {
-  bool v3; // w8
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  bool v11; // w8
   System_Collections_Generic_Dictionary_string__object__o *result; // x0
-  __int64 v5; // x11
+  __int64 v13; // x11
   System_Xml_Schema_XmlSchemaObject_o *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_42ADAE5 & 1) == 0 )
+  if ( (byte_42E627C & 1) == 0 )
   {
-    sub_B52984(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_B52984(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_B52984(&StringLiteral_22664/*"svt_change"*/);
-    byte_42ADAE5 = 1;
+    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v5, v6, v7);
+    sub_B5D5C4(&StringLiteral_22779/*"svt_change"*/, v8, v9, v10);
+    byte_42E627C = 1;
   }
   value = 0LL;
-  v3 = NpcFollowerEntity__IsExistSvtChangeParam(this, method);
+  v11 = NpcFollowerEntity__IsExistSvtChangeParam(this, method);
   result = 0LL;
-  if ( v3 )
+  if ( v11 )
   {
     result = this->fields.npcScript;
     if ( result )
     {
       if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
              (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)result,
-             (System_Xml_XmlQualifiedName_o *)StringLiteral_22664/*"svt_change"*/,
+             (System_Xml_XmlQualifiedName_o *)StringLiteral_22779/*"svt_change"*/,
              &value,
-             (const MethodInfo_2F1D600 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__)
+             (const MethodInfo_2F289BC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__)
         && value
-        && (v5 = *(&System_Collections_Generic_Dictionary_string__object__TypeInfo->_2.bitflags2 + 1),
-            *(&value->klass->_2.bitflags2 + 1) >= (unsigned int)v5) )
+        && (v13 = *(&System_Collections_Generic_Dictionary_string__object__TypeInfo->_2.bitflags2 + 1),
+            *(&value->klass->_2.bitflags2 + 1) >= (unsigned int)v13) )
       {
-        if ( (System_Collections_Generic_Dictionary_string__object__c *)value->klass->_2.typeHierarchy[v5 - 1] == System_Collections_Generic_Dictionary_string__object__TypeInfo )
+        if ( (System_Collections_Generic_Dictionary_string__object__c *)value->klass->_2.typeHierarchy[v13 - 1] == System_Collections_Generic_Dictionary_string__object__TypeInfo )
           return (System_Collections_Generic_Dictionary_string__object__o *)value;
         else
           return 0LL;
@@ -285,96 +307,131 @@ System_Collections_Generic_Dictionary_string__object__array *__fastcall NpcFollo
         System_String_o *key,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v5; // x19
-  const MethodInfo *v6; // x1
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  int v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
+  int v18; // w1
+  int v19; // w2
+  __int64 v20; // x3
+  int v21; // w1
+  int v22; // w2
+  __int64 v23; // x3
+  int v24; // w1
+  int v25; // w2
+  __int64 v26; // x3
+  int v27; // w1
+  int v28; // w2
+  __int64 v29; // x3
+  int v30; // w1
+  int v31; // w2
+  __int64 v32; // x3
+  int v33; // w1
+  int v34; // w2
+  __int64 v35; // x3
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v36; // x19
+  const MethodInfo *v37; // x1
   System_Collections_Generic_Dictionary_string__object__array *result; // x0
-  __int64 v8; // x1
-  System_Xml_Schema_XmlSchemaObject_o *v9; // x0
-  __int64 v10; // x9
-  _BOOL8 v11; // x0
-  __int64 v12; // x10
-  System_Collections_Generic_List_Enumerator_T__o v13; // [xsp+8h] [xbp-58h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v14; // [xsp+20h] [xbp-40h] BYREF
+  __int64 v39; // x1
+  System_Xml_Schema_XmlSchemaObject_o *v40; // x0
+  __int64 v41; // x9
+  _BOOL8 v42; // x0
+  __int64 v43; // x10
+  System_Collections_Generic_List_Enumerator_T__o v44; // [xsp+8h] [xbp-58h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v45; // [xsp+20h] [xbp-40h] BYREF
   System_Xml_Schema_XmlSchemaObject_o *value; // [xsp+38h] [xbp-28h] BYREF
 
-  if ( (byte_42ADAE6 & 1) == 0 )
+  if ( (byte_42E627D & 1) == 0 )
   {
-    sub_B52984(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_B52984(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_object__Dispose__);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_object__MoveNext__);
-    sub_B52984(&Method_System_Collections_Generic_List_Enumerator_object__get_Current__);
-    sub_B52984(&Method_System_Collections_Generic_List_Dictionary_string__object___Add__);
-    sub_B52984(&Method_System_Collections_Generic_List_object__GetEnumerator__);
-    sub_B52984(&Method_System_Collections_Generic_List_Dictionary_string__object___ToArray__);
-    sub_B52984(&Method_System_Collections_Generic_List_Dictionary_string__object____ctor__);
-    sub_B52984(&System_Collections_Generic_List_Dictionary_string__object___TypeInfo);
-    sub_B52984(&System_Collections_Generic_List_object__TypeInfo);
-    byte_42ADAE6 = 1;
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__,
+      (_DWORD)key,
+      (_DWORD)method,
+      v3);
+    sub_B5D5C4(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v6, v7, v8);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_Enumerator_object__Dispose__, v9, v10, v11);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_Enumerator_object__MoveNext__, v12, v13, v14);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_Enumerator_object__get_Current__, v15, v16, v17);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_Dictionary_string__object___Add__, v18, v19, v20);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_object__GetEnumerator__, v21, v22, v23);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_Dictionary_string__object___ToArray__, v24, v25, v26);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_Dictionary_string__object____ctor__, v27, v28, v29);
+    sub_B5D5C4(&System_Collections_Generic_List_Dictionary_string__object___TypeInfo, v30, v31, v32);
+    sub_B5D5C4(&System_Collections_Generic_List_object__TypeInfo, v33, v34, v35);
+    byte_42E627D = 1;
   }
   value = 0LL;
-  memset(&v14, 0, sizeof(v14));
-  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B52A54(System_Collections_Generic_List_Dictionary_string__object___TypeInfo);
+  memset(&v45, 0, sizeof(v45));
+  v36 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B5D694(System_Collections_Generic_List_Dictionary_string__object___TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v5,
-    (const MethodInfo_2FF0940 *)Method_System_Collections_Generic_List_Dictionary_string__object____ctor__);
-  result = (System_Collections_Generic_Dictionary_string__object__array *)NpcFollowerEntity__GetSvtChangeData(this, v6);
+    v36,
+    (const MethodInfo_30562FC *)Method_System_Collections_Generic_List_Dictionary_string__object____ctor__);
+  result = (System_Collections_Generic_Dictionary_string__object__array *)NpcFollowerEntity__GetSvtChangeData(this, v37);
   if ( result )
   {
     if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
             (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)result,
             (System_Xml_XmlQualifiedName_o *)key,
             &value,
-            (const MethodInfo_2F1D600 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+            (const MethodInfo_2F289BC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       return 0LL;
-    v9 = value;
+    v40 = value;
     if ( value )
     {
-      v10 = *(&System_Collections_Generic_List_object__TypeInfo->_2.bitflags2 + 1);
-      if ( *(&value->klass->_2.bitflags2 + 1) >= (unsigned int)v10
-        && (System_Collections_Generic_List_object__c *)value->klass->_2.typeHierarchy[v10 - 1] == System_Collections_Generic_List_object__TypeInfo )
+      v41 = *(&System_Collections_Generic_List_object__TypeInfo->_2.bitflags2 + 1);
+      if ( *(&value->klass->_2.bitflags2 + 1) >= (unsigned int)v41
+        && (System_Collections_Generic_List_object__c *)value->klass->_2.typeHierarchy[v41 - 1] == System_Collections_Generic_List_object__TypeInfo )
       {
         System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-          &v13,
+          &v44,
           (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)value,
-          (const MethodInfo_2FF2480 *)Method_System_Collections_Generic_List_object__GetEnumerator__);
-        v14 = v13;
+          (const MethodInfo_3057E3C *)Method_System_Collections_Generic_List_object__GetEnumerator__);
+        v45 = v44;
         while ( 1 )
         {
-          v11 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-                  &v14,
-                  (const MethodInfo_201195C *)Method_System_Collections_Generic_List_Enumerator_object__MoveNext__);
-          if ( !v11 )
+          v42 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
+                  &v45,
+                  (const MethodInfo_201EFD0 *)Method_System_Collections_Generic_List_Enumerator_object__MoveNext__);
+          if ( !v42 )
             break;
-          if ( v14.fields.current )
+          if ( v45.fields.current )
           {
-            v12 = *(&System_Collections_Generic_Dictionary_string__object__TypeInfo->_2.bitflags2 + 1);
-            if ( *(&v14.fields.current->klass->_2.bitflags2 + 1) >= (unsigned int)v12
-              && (System_Collections_Generic_Dictionary_string__object__c *)v14.fields.current->klass->_2.typeHierarchy[v12 - 1] == System_Collections_Generic_Dictionary_string__object__TypeInfo )
+            v43 = *(&System_Collections_Generic_Dictionary_string__object__TypeInfo->_2.bitflags2 + 1);
+            if ( *(&v45.fields.current->klass->_2.bitflags2 + 1) >= (unsigned int)v43
+              && (System_Collections_Generic_Dictionary_string__object__c *)v45.fields.current->klass->_2.typeHierarchy[v43 - 1] == System_Collections_Generic_Dictionary_string__object__TypeInfo )
             {
-              if ( !v5 )
-                sub_B52A5C(v11, v14.fields.current);
+              if ( !v36 )
+                sub_B5D69C(v42, v45.fields.current);
               System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-                v5,
-                (EventMissionProgressRequest_Argument_ProgressData_o *)v14.fields.current,
-                (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_Dictionary_string__object___Add__);
+                v36,
+                (EventMissionProgressRequest_Argument_ProgressData_o *)v45.fields.current,
+                (const MethodInfo_3056FC0 *)Method_System_Collections_Generic_List_Dictionary_string__object___Add__);
             }
           }
         }
         System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-          &v14,
-          (const MethodInfo_2011958 *)Method_System_Collections_Generic_List_Enumerator_object__Dispose__);
-        if ( v5 )
+          &v45,
+          (const MethodInfo_201EFCC *)Method_System_Collections_Generic_List_Enumerator_object__Dispose__);
+        if ( v36 )
           return (System_Collections_Generic_Dictionary_string__object__array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                                                                  (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v5,
-                                                                                  (const MethodInfo_2FF3750 *)Method_System_Collections_Generic_List_Dictionary_string__object___ToArray__);
+                                                                                  (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v36,
+                                                                                  (const MethodInfo_305910C *)Method_System_Collections_Generic_List_Dictionary_string__object___ToArray__);
       }
       else
       {
-        v9 = (System_Xml_Schema_XmlSchemaObject_o *)sub_B52D50(value);
+        v40 = (System_Xml_Schema_XmlSchemaObject_o *)sub_B5D990(value);
       }
     }
-    sub_B52A5C(v9, v8);
+    sub_B5D69C(v40, v39);
   }
   return result;
 }
@@ -388,73 +445,85 @@ int32_t __fastcall NpcFollowerEntity__GetSvtChangeValueInt(
         int32_t defaultValue,
         const MethodInfo *method)
 {
+  int32_t v5; // w20
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
   _DWORD *Item; // x0
-  __int64 v10; // x1
-  int v11; // w8
-  _DWORD *v12; // x21
-  __int64 v13; // x23
-  System_Collections_Generic_Dictionary_Type__IStoreExtension__o *v14; // x22
-  System_String_o *v15; // x0
-  System_String_o *v16; // x0
-  __int64 v18; // x0
+  __int64 v16; // x1
+  int v17; // w8
+  _DWORD *v18; // x21
+  __int64 v19; // x23
+  System_Collections_Generic_Dictionary_Type__IStoreExtension__o *v20; // x22
+  System_String_o *v21; // x0
+  System_String_o *v22; // x0
+  __int64 v24; // x0
 
-  if ( (byte_42ADAE8 & 1) == 0 )
+  v5 = defaultValue;
+  if ( (byte_42E627F & 1) == 0 )
   {
-    sub_B52984(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B52984(&StringLiteral_21707/*"priority"*/);
-    sub_B52984(&StringLiteral_23304/*"value"*/);
-    byte_42ADAE8 = 1;
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_Dictionary_string__object__get_Item__,
+      (_DWORD)key,
+      priority,
+      *(_QWORD *)&defaultValue);
+    sub_B5D5C4(&StringLiteral_21820/*"priority"*/, v9, v10, v11);
+    sub_B5D5C4(&StringLiteral_23420/*"value"*/, v12, v13, v14);
+    byte_42E627F = 1;
   }
   Item = NpcFollowerEntity__GetSvtChangeDataParams(this, key, *(const MethodInfo **)&priority);
   if ( Item )
   {
-    v11 = Item[6];
-    v12 = Item;
-    if ( v11 >= 1 )
+    v17 = Item[6];
+    v18 = Item;
+    if ( v17 >= 1 )
     {
-      v13 = 0LL;
+      v19 = 0LL;
       do
       {
-        if ( (unsigned int)v13 >= v11 )
+        if ( (unsigned int)v19 >= v17 )
         {
-          v18 = sub_B52A88(Item);
-          sub_B52A28(v18, 0LL);
+          v24 = sub_B5D6C8(Item);
+          sub_B5D668(v24, 0LL);
         }
-        v14 = *(System_Collections_Generic_Dictionary_Type__IStoreExtension__o **)&v12[2 * v13 + 8];
-        if ( !v14
+        v20 = *(System_Collections_Generic_Dictionary_Type__IStoreExtension__o **)&v18[2 * v19 + 8];
+        if ( !v20
           || (Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                       *(System_Collections_Generic_Dictionary_Type__IStoreExtension__o **)&v12[2 * v13 + 8],
-                       (System_Type_o *)StringLiteral_21707/*"priority"*/,
-                       (const MethodInfo_2F1B73C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                       *(System_Collections_Generic_Dictionary_Type__IStoreExtension__o **)&v18[2 * v19 + 8],
+                       (System_Type_o *)StringLiteral_21820/*"priority"*/,
+                       (const MethodInfo_2F26AF8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
         {
 LABEL_14:
-          sub_B52A5C(Item, v10);
+          sub_B5D69C(Item, v16);
         }
-        v15 = (System_String_o *)(*(__int64 (__fastcall **)(_DWORD *, _QWORD))(*(_QWORD *)Item + 360LL))(
+        v21 = (System_String_o *)(*(__int64 (__fastcall **)(_DWORD *, _QWORD))(*(_QWORD *)Item + 360LL))(
                                    Item,
                                    *(_QWORD *)(*(_QWORD *)Item + 368LL));
-        Item = (_DWORD *)System_Int32__Parse(v15, 0LL);
+        Item = (_DWORD *)System_Int32__Parse(v21, 0LL);
         if ( (_DWORD)Item == priority )
         {
           Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                   v14,
-                   (System_Type_o *)StringLiteral_23304/*"value"*/,
-                   (const MethodInfo_2F1B73C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                   v20,
+                   (System_Type_o *)StringLiteral_23420/*"value"*/,
+                   (const MethodInfo_2F26AF8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
           if ( !Item )
             goto LABEL_14;
-          v16 = (System_String_o *)(*(__int64 (__fastcall **)(_DWORD *, _QWORD))(*(_QWORD *)Item + 360LL))(
+          v22 = (System_String_o *)(*(__int64 (__fastcall **)(_DWORD *, _QWORD))(*(_QWORD *)Item + 360LL))(
                                      Item,
                                      *(_QWORD *)(*(_QWORD *)Item + 368LL));
-          Item = (_DWORD *)System_Int32__Parse(v16, 0LL);
-          defaultValue = (int)Item;
+          Item = (_DWORD *)System_Int32__Parse(v22, 0LL);
+          v5 = (int)Item;
         }
-        v11 = v12[6];
-        ++v13;
+        v17 = v18[6];
+        ++v19;
       }
-      while ( (int)v13 < v11 );
+      while ( (int)v19 < v17 );
     }
   }
-  return defaultValue;
+  return v5;
 }
 
 
@@ -466,72 +535,83 @@ System_String_o *__fastcall NpcFollowerEntity__GetSvtChangeValueString(
         System_String_o *defaultValue,
         const MethodInfo *method)
 {
-  System_String_o *Item; // x0
-  __int64 v10; // x1
-  int klass; // w8
-  System_String_o *v12; // x21
-  __int64 v13; // x23
-  System_Collections_Generic_Dictionary_Type__IStoreExtension__o *v14; // x22
-  System_String_o *v15; // x0
-  __int64 v17; // x0
+  System_String_o *v5; // x20
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  __int64 Item; // x0
+  __int64 v16; // x1
+  int v17; // w8
+  __int64 v18; // x21
+  __int64 v19; // x23
+  System_Collections_Generic_Dictionary_Type__IStoreExtension__o *v20; // x22
+  System_String_o *v21; // x0
+  __int64 v23; // x0
 
-  if ( (byte_42ADAE7 & 1) == 0 )
+  v5 = defaultValue;
+  if ( (byte_42E627E & 1) == 0 )
   {
-    sub_B52984(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B52984(&StringLiteral_21707/*"priority"*/);
-    sub_B52984(&StringLiteral_23304/*"value"*/);
-    byte_42ADAE7 = 1;
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_Dictionary_string__object__get_Item__,
+      (_DWORD)key,
+      priority,
+      defaultValue);
+    sub_B5D5C4(&StringLiteral_21820/*"priority"*/, v9, v10, v11);
+    sub_B5D5C4(&StringLiteral_23420/*"value"*/, v12, v13, v14);
+    byte_42E627E = 1;
   }
-  Item = (System_String_o *)NpcFollowerEntity__GetSvtChangeDataParams(this, key, *(const MethodInfo **)&priority);
+  Item = (__int64)NpcFollowerEntity__GetSvtChangeDataParams(this, key, *(const MethodInfo **)&priority);
   if ( Item )
   {
-    klass = (int)Item[1].klass;
-    v12 = Item;
-    if ( klass >= 1 )
+    v17 = *(_DWORD *)(Item + 24);
+    v18 = Item;
+    if ( v17 >= 1 )
     {
-      v13 = 0LL;
+      v19 = 0LL;
       do
       {
-        if ( (unsigned int)v13 >= klass )
+        if ( (unsigned int)v19 >= v17 )
         {
-          v17 = sub_B52A88(Item);
-          sub_B52A28(v17, 0LL);
+          v23 = sub_B5D6C8(Item);
+          sub_B5D668(v23, 0LL);
         }
-        v14 = (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)*((_QWORD *)&v12[1].monitor + v13);
-        if ( !v14
-          || (Item = (System_String_o *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                                          *((System_Collections_Generic_Dictionary_Type__IStoreExtension__o **)&v12[1].monitor
-                                          + v13),
-                                          (System_Type_o *)StringLiteral_21707/*"priority"*/,
-                                          (const MethodInfo_2F1B73C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+        v20 = *(System_Collections_Generic_Dictionary_Type__IStoreExtension__o **)(v18 + 32 + 8 * v19);
+        if ( !v20
+          || (Item = (__int64)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
+                                *(System_Collections_Generic_Dictionary_Type__IStoreExtension__o **)(v18 + 32 + 8 * v19),
+                                (System_Type_o *)StringLiteral_21820/*"priority"*/,
+                                (const MethodInfo_2F26AF8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
         {
 LABEL_14:
-          sub_B52A5C(Item, v10);
+          sub_B5D69C(Item, v16);
         }
-        v15 = (System_String_o *)((__int64 (__fastcall *)(System_String_o *, Il2CppMethodPointer))Item->klass->vtable._3_ToString.method)(
+        v21 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)Item + 360LL))(
                                    Item,
-                                   Item->klass->vtable._4_CompareTo.methodPtr);
-        Item = (System_String_o *)System_Int32__Parse(v15, 0LL);
+                                   *(_QWORD *)(*(_QWORD *)Item + 368LL));
+        Item = System_Int32__Parse(v21, 0LL);
         if ( (_DWORD)Item == priority )
         {
-          Item = (System_String_o *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                                      v14,
-                                      (System_Type_o *)StringLiteral_23304/*"value"*/,
-                                      (const MethodInfo_2F1B73C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+          Item = (__int64)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
+                            v20,
+                            (System_Type_o *)StringLiteral_23420/*"value"*/,
+                            (const MethodInfo_2F26AF8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
           if ( !Item )
             goto LABEL_14;
-          Item = (System_String_o *)((__int64 (__fastcall *)(System_String_o *, Il2CppMethodPointer))Item->klass->vtable._3_ToString.method)(
-                                      Item,
-                                      Item->klass->vtable._4_CompareTo.methodPtr);
-          defaultValue = Item;
+          Item = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)Item + 360LL))(
+                   Item,
+                   *(_QWORD *)(*(_QWORD *)Item + 368LL));
+          v5 = (System_String_o *)Item;
         }
-        klass = (int)v12[1].klass;
-        ++v13;
+        v17 = *(_DWORD *)(v18 + 24);
+        ++v19;
       }
-      while ( (int)v13 < klass );
+      while ( (int)v19 < v17 );
     }
   }
-  return defaultValue;
+  return v5;
 }
 
 
@@ -543,20 +623,25 @@ bool __fastcall NpcFollowerEntity__HasFlag(NpcFollowerEntity_o *this, int32_t ta
 
 bool __fastcall NpcFollowerEntity__IsExistSvtChangeParam(NpcFollowerEntity_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
   struct System_Collections_Generic_Dictionary_string__object__o *npcScript; // x0
 
-  if ( (byte_42ADAE4 & 1) == 0 )
+  if ( (byte_42E627B & 1) == 0 )
   {
-    sub_B52984(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_B52984(&StringLiteral_22664/*"svt_change"*/);
-    byte_42ADAE4 = 1;
+    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&StringLiteral_22779/*"svt_change"*/, v5, v6, v7);
+    byte_42E627B = 1;
   }
   npcScript = this->fields.npcScript;
   if ( npcScript )
     LOBYTE(npcScript) = System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
                           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)npcScript,
-                          (System_Xml_XmlQualifiedName_o *)StringLiteral_22664/*"svt_change"*/,
-                          (const MethodInfo_2F1BA74 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                          (System_Xml_XmlQualifiedName_o *)StringLiteral_22779/*"svt_change"*/,
+                          (const MethodInfo_2F26E30 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   return (char)npcScript;
 }
 
@@ -575,12 +660,15 @@ bool __fastcall NpcFollowerEntity__IsMyServantOrNpc(NpcFollowerEntity_o *this, c
 
 bool __fastcall NpcFollowerEntity__IsOverwriteTreasureDevice(NpcFollowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42ADAF0 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E6287 & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_22660/*"svtOverwriteTreasureDevice"*/);
-    byte_42ADAF0 = 1;
+    sub_B5D5C4(&StringLiteral_22775/*"svtOverwriteTreasureDevice"*/, (_DWORD)method, v2, v3);
+    byte_42E6287 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.npcScript, (System_String_o *)StringLiteral_22660/*"svtOverwriteTreasureDevice"*/, 0, 0LL) != 0;
+  return EntityScriptUtil__GetIntValue(this->fields.npcScript, (System_String_o *)StringLiteral_22775/*"svtOverwriteTreasureDevice"*/, 0, 0LL) != 0;
 }
 
 

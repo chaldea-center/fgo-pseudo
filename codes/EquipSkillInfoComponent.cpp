@@ -1,42 +1,46 @@
 void __fastcall EquipSkillInfoComponent___ctor(EquipSkillInfoComponent_o *this, const MethodInfo *method)
 {
-  IconLabelInfo_o *v3; // x20
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  int v2; // w2
+  __int64 v3; // x3
+  IconLabelInfo_o *v5; // x20
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
 
-  if ( (byte_42B2634 & 1) == 0 )
+  if ( (byte_42EB852 & 1) == 0 )
   {
-    sub_B52984(&IconLabelInfo_TypeInfo);
-    byte_42B2634 = 1;
+    sub_B5D5C4(&IconLabelInfo_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42EB852 = 1;
   }
-  v3 = (IconLabelInfo_o *)sub_B52A54(IconLabelInfo_TypeInfo);
-  IconLabelInfo___ctor(v3, 0LL);
-  this->fields.iconLabelInfo = v3;
-  sub_B52920(
+  v5 = (IconLabelInfo_o *)sub_B5D694(IconLabelInfo_TypeInfo);
+  IconLabelInfo___ctor(v5, 0LL);
+  this->fields.iconLabelInfo = v5;
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.iconLabelInfo,
-    (System_Int32_array **)v3,
-    v4,
-    v5,
+    (System_Int32_array **)v5,
     v6,
     v7,
     v8,
-    v9);
+    v9,
+    v10,
+    v11);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
 
 void __fastcall EquipSkillInfoComponent__OnClickSkill(EquipSkillInfoComponent_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   EquipSkillInfoComponent_ClickDelegate_o *clickCallbackFunc; // x0
 
-  if ( (byte_42B2633 & 1) == 0 )
+  if ( (byte_42EB851 & 1) == 0 )
   {
-    sub_B52984(&SoundManager_TypeInfo);
-    byte_42B2633 = 1;
+    sub_B5D5C4(&SoundManager_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42EB851 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -62,39 +66,60 @@ void __fastcall EquipSkillInfoComponent__setEquipSkillInfo(
         EquipSkillInfoComponent_ClickDelegate_o *callback,
         const MethodInfo *method)
 {
-  __int64 v14; // x1
-  __int64 v15; // x24
-  __int64 v16; // x24
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  int v17; // w1
+  int v18; // w2
+  __int64 v19; // x3
+  int v20; // w1
+  int v21; // w2
+  __int64 v22; // x3
+  int v23; // w1
+  int v24; // w2
+  __int64 v25; // x3
+  int v26; // w1
+  int v27; // w2
+  __int64 v28; // x3
+  int v29; // w1
+  int v30; // w2
+  __int64 v31; // x3
+  int v32; // w1
+  int v33; // w2
+  __int64 v34; // x3
+  __int64 v35; // x1
+  __int64 v36; // x24
+  __int64 v37; // x24
   DataManager_o *MasterData_WarQuestSelectionMaster; // x0
   WarEntity_o *Entity; // x0
   UISprite_o *skillIndxImg; // x25
-  SkillEntity_o *v20; // x24
-  System_String_o *v21; // x0
+  SkillEntity_o *v41; // x24
+  System_String_o *v42; // x0
   UILabel_o *skillNameLb; // x23
   UILabel_o *skillLvLabel; // x23
-  System_String_o *v24; // x25
-  Il2CppObject *v25; // x26
-  Il2CppObject *v26; // x0
+  System_String_o *v45; // x25
+  Il2CppObject *v46; // x26
+  Il2CppObject *v47; // x0
   UnityEngine_Object_o *newIcon; // x21
   int32_t maxLv; // [xsp+Ch] [xbp-54h] BYREF
-  int32_t v29; // [xsp+18h] [xbp-48h] BYREF
-  int v30; // [xsp+1Ch] [xbp-44h] BYREF
+  int32_t v50; // [xsp+18h] [xbp-48h] BYREF
+  int v51; // [xsp+1Ch] [xbp-44h] BYREF
 
-  if ( (byte_42B2632 & 1) == 0 )
+  if ( (byte_42EB850 & 1) == 0 )
   {
-    sub_B52984(&Method_DataManager_GetMasterData_SkillMaster___);
-    sub_B52984(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    sub_B52984(&int_TypeInfo);
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    sub_B52984(&StringLiteral_8681/*"MASTER_EQSKILL_LV_INFO"*/);
-    sub_B52984(&StringLiteral_19775/*"img_skill_0"*/);
-    byte_42B2632 = 1;
+    sub_B5D5C4(&Method_DataManager_GetMasterData_SkillMaster___, idx, skillId, *(_QWORD *)&skillLv);
+    sub_B5D5C4(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v14, v15, v16);
+    sub_B5D5C4(&int_TypeInfo, v17, v18, v19);
+    sub_B5D5C4(&LocalizationManager_TypeInfo, v20, v21, v22);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v23, v24, v25);
+    sub_B5D5C4(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v26, v27, v28);
+    sub_B5D5C4(&StringLiteral_8718/*"MASTER_EQSKILL_LV_INFO"*/, v29, v30, v31);
+    sub_B5D5C4(&StringLiteral_19877/*"img_skill_0"*/, v32, v33, v34);
+    byte_42EB850 = 1;
   }
-  v30 = 0;
+  v51 = 0;
   this->fields.clickCallbackFunc = callback;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.clickCallbackFunc,
     (System_Int32_array **)callback,
     *(System_String_array ***)&skillId,
@@ -103,31 +128,31 @@ void __fastcall EquipSkillInfoComponent__setEquipSkillInfo(
     (System_Int32_array **)isNew,
     (System_Int32_array *)callback,
     (System_Int32_array *)method);
-  v15 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3);
-  if ( (*(_BYTE *)(v15 + 306) & 1) == 0 )
-    sub_AEB684(*((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3));
-  v16 = **(_QWORD **)(v15 + 192);
-  if ( (*(_BYTE *)(v16 + 306) & 1) == 0 )
-    sub_AEB684(v16);
-  MasterData_WarQuestSelectionMaster = **(DataManager_o ***)(v16 + 184);
+  v36 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3);
+  if ( (*(_BYTE *)(v36 + 306) & 1) == 0 )
+    sub_AF52C4(*((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3));
+  v37 = **(_QWORD **)(v36 + 192);
+  if ( (*(_BYTE *)(v37 + 306) & 1) == 0 )
+    sub_AF52C4(v37);
+  MasterData_WarQuestSelectionMaster = **(DataManager_o ***)(v37 + 184);
   if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_26;
   MasterData_WarQuestSelectionMaster = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                           MasterData_WarQuestSelectionMaster,
-                                                          (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_SkillMaster___);
+                                                          (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_SkillMaster___);
   if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_26;
   Entity = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
              (DataMasterBase_WarMaster__WarEntity__int__o *)MasterData_WarQuestSelectionMaster,
              skillId,
-             (const MethodInfo_23E22D8 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+             (const MethodInfo_23FAE10 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   skillIndxImg = this->fields.skillIndxImg;
-  v20 = (SkillEntity_o *)Entity;
-  v30 = idx + 1;
-  v21 = System_Int32__ToString((int32_t)&v30, 0LL);
-  MasterData_WarQuestSelectionMaster = (DataManager_o *)System_String__Concat_44568316(
-                                                          (System_String_o *)StringLiteral_19775/*"img_skill_0"*/,
-                                                          v21,
+  v41 = (SkillEntity_o *)Entity;
+  v51 = idx + 1;
+  v42 = System_Int32__ToString((int32_t)&v51, 0LL);
+  MasterData_WarQuestSelectionMaster = (DataManager_o *)System_String__Concat_44577788(
+                                                          (System_String_o *)StringLiteral_19877/*"img_skill_0"*/,
+                                                          v42,
                                                           0LL);
   if ( !skillIndxImg )
     goto LABEL_26;
@@ -135,11 +160,11 @@ void __fastcall EquipSkillInfoComponent__setEquipSkillInfo(
   MasterData_WarQuestSelectionMaster = (DataManager_o *)this->fields.skillIconInfo;
   if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_26;
-  SkillIconComponent__Set_26537744((SkillIconComponent_o *)MasterData_WarQuestSelectionMaster, skillId, skillLv, 0LL);
-  if ( !v20 )
+  SkillIconComponent__Set_26822028((SkillIconComponent_o *)MasterData_WarQuestSelectionMaster, skillId, skillLv, 0LL);
+  if ( !v41 )
     goto LABEL_26;
   skillNameLb = this->fields.skillNameLb;
-  MasterData_WarQuestSelectionMaster = (DataManager_o *)SkillEntity__getName(v20, 0LL);
+  MasterData_WarQuestSelectionMaster = (DataManager_o *)SkillEntity__getName(v41, 0LL);
   if ( !skillNameLb )
     goto LABEL_26;
   UILabel__set_text(skillNameLb, (System_String_o *)MasterData_WarQuestSelectionMaster, 0LL);
@@ -149,12 +174,12 @@ void __fastcall EquipSkillInfoComponent__setEquipSkillInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_8681/*"MASTER_EQSKILL_LV_INFO"*/, 0LL);
-  v29 = skillLv;
-  v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v29);
-  maxLv = v20->fields.maxLv;
-  v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &maxLv);
-  MasterData_WarQuestSelectionMaster = (DataManager_o *)System_String__Format_44563852(v24, v25, v26, 0LL);
+  v45 = LocalizationManager__Get((System_String_o *)StringLiteral_8718/*"MASTER_EQSKILL_LV_INFO"*/, 0LL);
+  v50 = skillLv;
+  v46 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50);
+  maxLv = v41->fields.maxLv;
+  v47 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &maxLv);
+  MasterData_WarQuestSelectionMaster = (DataManager_o *)System_String__Format_44573324(v45, v46, v47, 0LL);
   if ( !skillLvLabel )
     goto LABEL_26;
   UILabel__set_text(skillLvLabel, (System_String_o *)MasterData_WarQuestSelectionMaster, 0LL);
@@ -178,7 +203,7 @@ void __fastcall EquipSkillInfoComponent__setEquipSkillInfo(
       return;
     }
 LABEL_26:
-    sub_B52A5C(MasterData_WarQuestSelectionMaster, v14);
+    sub_B5D69C(MasterData_WarQuestSelectionMaster, v35);
   }
 }
 
@@ -198,7 +223,7 @@ void __fastcall EquipSkillInfoComponent_ClickDelegate___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B52920(p_method);
+  sub_B5D560(p_method);
 }
 
 
@@ -216,15 +241,15 @@ System_IAsyncResult_o *__fastcall EquipSkillInfoComponent_ClickDelegate__BeginIn
 
   v11 = skillLv;
   v12 = skillId;
-  if ( (byte_42AD8A5 & 1) == 0 )
+  if ( (byte_42E64E3 & 1) == 0 )
   {
-    sub_B52984(&int_TypeInfo);
-    byte_42AD8A5 = 1;
+    sub_B5D5C4(&int_TypeInfo, skillId, skillLv, callback);
+    byte_42E64E3 = 1;
   }
   v10[2] = 0LL;
   v10[0] = j_il2cpp_value_box_0(int_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(int_TypeInfo, &v11);
-  return (System_IAsyncResult_o *)sub_B52928(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_B5D568(this, v10, callback, object);
 }
 
 
@@ -233,7 +258,7 @@ void __fastcall EquipSkillInfoComponent_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B5292C(result, 0LL, method);
+  sub_B5D56C(result, 0LL, method);
 }
 
 
@@ -293,8 +318,8 @@ LABEL_5:
       v23 = *(_QWORD *)&v21->fields.extra_arg;
       v24 = *(void (__fastcall **)(_QWORD, _QWORD, __int64))&v21->fields.method_ptr;
       if ( *(__int16 *)(v23 + 72) == -1 )
-        sub_B52A40(*(_QWORD *)&v21->fields.extra_arg, *(_QWORD *)&skillId, *(_QWORD *)&skillLv, method);
-      if ( (sub_B529B4(v23) & 1) == 0 )
+        sub_B5D680(*(_QWORD *)&v21->fields.extra_arg, *(_QWORD *)&skillId, *(_QWORD *)&skillLv);
+      if ( (sub_B5D5F4(v23) & 1) == 0 )
         break;
       if ( *(_BYTE *)(v23 + 74) != 2 )
         goto LABEL_35;
@@ -305,8 +330,8 @@ LABEL_36:
     }
     if ( v22 && *(__int16 *)(v23 + 72) != -1 && (*(_BYTE *)(*v22 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v25 = sub_B529AC(v23);
-      v26 = sub_B52DB0(v23);
+      v25 = sub_B5D5EC(v23);
+      v26 = sub_B5D9F0(v23);
       if ( (v25 & 1) != 0 )
       {
         if ( (v26 & 1) != 0 )
@@ -330,7 +355,7 @@ LABEL_36:
           else
           {
 LABEL_34:
-            v19 = sub_AEB880(v22, v29, v30, v27);
+            v19 = sub_AF54C0(v22, v29, v30, v27);
           }
           v18 = *(_QWORD *)(v19 + 8);
         }
@@ -338,7 +363,7 @@ LABEL_34:
         {
           v18 = *(_QWORD *)(*v22 + 16LL * *(unsigned __int16 *)(v23 + 72) + 320);
         }
-        v20 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))sub_B52A34(v18, v23);
+        v20 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))sub_B5D674(v18, v23);
         (*v20)(v22, (unsigned int)skillId, (unsigned int)skillLv, v20);
       }
       else
@@ -364,7 +389,7 @@ LABEL_34:
           else
           {
 LABEL_11:
-            v17 = sub_AEB880(v22, class_0, v11, v13);
+            v17 = sub_AF54C0(v22, class_0, v11, v13);
           }
           (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))v17)(
             v22,

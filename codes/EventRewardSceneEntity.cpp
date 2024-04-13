@@ -1,27 +1,32 @@
 void __fastcall EventRewardSceneEntity___ctor(EventRewardSceneEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B343D & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42EBFFB & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_string___ctor__);
-    byte_42B343D = 1;
+    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
+    byte_42EBFFB = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall EventRewardSceneEntity__CreatePK(int32_t eventId, int32_t slot, const MethodInfo *method)
 {
-  if ( (byte_42B343B & 1) == 0 )
+  __int64 v3; // x3
+
+  if ( (byte_42EBFF9 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_42B343B = 1;
+    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_int__int___, slot, (_DWORD)method, v3);
+    byte_42EBFF9 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            slot,
-           (const MethodInfo_1A4DF50 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1AE3018 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -37,40 +42,51 @@ System_String_o *__fastcall EventRewardSceneEntity__CreatePrimaryKey(
 
 int32_t __fastcall EventRewardSceneEntity__GetBgmId(EventRewardSceneEntity_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
   DataManager_o *Instance; // x0
-  __int64 v4; // x1
+  __int64 v15; // x1
   WarEntity_o *Entity; // x0
-  WarEntity_o *v6; // x20
+  WarEntity_o *v17; // x20
 
-  if ( (byte_42B343C & 1) == 0 )
+  if ( (byte_42EBFFA & 1) == 0 )
   {
-    sub_B52984(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_B52984(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
-    sub_B52984(&NetworkManager_TypeInfo);
-    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_42B343C = 1;
+    sub_B5D5C4(&Method_DataManager_GetMasterData_EventMaster___, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v5, v6, v7);
+    sub_B5D5C4(&NetworkManager_TypeInfo, v8, v9, v10);
+    sub_B5D5C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11, v12, v13);
+    byte_42EBFFA = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_EventMaster___)) == 0LL )
+                                      (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_EventMaster___)) == 0LL )
   {
-    sub_B52A5C(Instance, v4);
+    sub_B5D69C(Instance, v15);
   }
   Entity = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
              (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
              this->fields.eventId,
-             (const MethodInfo_23E22D8 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+             (const MethodInfo_23FAE10 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
   if ( Entity )
   {
-    v6 = Entity;
+    v17 = Entity;
     if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     }
-    if ( NetworkManager__getTime(0LL) <= *(_QWORD *)&v6->fields.eventId )
+    if ( NetworkManager__getTime(0LL) <= *(_QWORD *)&v17->fields.eventId )
       LODWORD(Entity) = this->fields.bgmId;
     else
       LODWORD(Entity) = this->fields.afterBgmId;

@@ -34,7 +34,7 @@ void __fastcall TitleInfoEventLeagueVsGaugeFlashEffect__endAnim(
   p_endCallBack = (BattleServantConfConponent_o *)&this->fields.endCallBack;
   v9 = endCallBack;
   p_endCallBack->klass = 0LL;
-  sub_B52920(p_endCallBack, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B5D560(p_endCallBack, 0LL, v2, v3, v4, v5, v6, v7);
   if ( endCallBack )
     ActionExtensions__Call(v9, 0LL);
 }
@@ -50,44 +50,50 @@ void __fastcall TitleInfoEventLeagueVsGaugeFlashEffect__setup(
         const MethodInfo *method)
 {
   TitleInfoEventLeagueVsGaugeFlashEffect_o *v10; // x20
-  float v11; // s0
-  float v12; // s8
-  double v13; // d0
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  float v17; // s0
+  float v18; // s8
+  double v19; // d0
   struct UIProgressBar_array *gaugeBar; // x8
-  struct UIProgressBar_array *v15; // x8
-  Il2CppObject *v16; // x0
-  System_String_o *v17; // x0
+  struct UIProgressBar_array *v21; // x8
+  Il2CppObject *v22; // x0
+  System_String_o *v23; // x0
   UnityEngine_Object_o *gaugeSimpleAnim; // x22
-  System_String_o *v19; // x21
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
+  System_String_o *v25; // x21
+  System_String_array **v26; // x2
+  System_String_array **v27; // x3
+  System_Boolean_array **v28; // x4
+  System_Int32_array **v29; // x5
+  System_Int32_array *v30; // x6
+  System_Int32_array *v31; // x7
   UnityEngine_Object_o *gaugeAnim; // x22
   UnityEngine_Object_o *Clip; // x22
-  __int64 v28; // x0
-  int32_t v29; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v34; // x0
+  int32_t v35; // [xsp+Ch] [xbp-34h] BYREF
 
   v10 = this;
-  if ( (byte_42B442D & 1) == 0 )
+  if ( (byte_42ECBFB & 1) == 0 )
   {
-    sub_B52984(&int_TypeInfo);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)sub_B52984(&StringLiteral_16959/*"bit_vs_gauge_flash_"*/);
-    byte_42B442D = 1;
+    sub_B5D5C4(&int_TypeInfo, joinGroupId, point1, point2);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v11, v12, v13);
+    this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)sub_B5D5C4(&StringLiteral_17050/*"bit_vs_gauge_flash_"*/, v14, v15, v16);
+    byte_42ECBFB = 1;
   }
   if ( point1 == point2 )
   {
-    v11 = 0.5;
-    v12 = 0.5;
+    v17 = 0.5;
+    v18 = 0.5;
   }
   else
   {
-    v13 = fmin((double)point1 / (double)(point2 + point1), 1.0);
-    v12 = v13;
-    v11 = 1.0 - v13;
+    v19 = fmin((double)point1 / (double)(point2 + point1), 1.0);
+    v18 = v19;
+    v17 = 1.0 - v19;
   }
   gaugeBar = v10->fields.gaugeBar;
   if ( !gaugeBar )
@@ -97,25 +103,25 @@ void __fastcall TitleInfoEventLeagueVsGaugeFlashEffect__setup(
   this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)gaugeBar->m_Items[0];
   if ( !this )
     goto LABEL_33;
-  UIProgressBar__set_value((UIProgressBar_o *)this, v11, 0LL);
-  v15 = v10->fields.gaugeBar;
-  if ( !v15 )
+  UIProgressBar__set_value((UIProgressBar_o *)this, v17, 0LL);
+  v21 = v10->fields.gaugeBar;
+  if ( !v21 )
     goto LABEL_33;
-  if ( v15->max_length <= 1 )
+  if ( v21->max_length <= 1 )
   {
 LABEL_34:
-    v28 = sub_B52A88(this);
-    sub_B52A28(v28, 0LL);
+    v34 = sub_B5D6C8(this);
+    sub_B5D668(v34, 0LL);
   }
-  this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v15->m_Items[1];
+  this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v21->m_Items[1];
   if ( !this )
     goto LABEL_33;
-  UIProgressBar__set_value((UIProgressBar_o *)this, v12, 0LL);
-  v29 = joinGroupId;
-  v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v29);
-  v17 = System_String__Concat((Il2CppObject *)StringLiteral_16959/*"bit_vs_gauge_flash_"*/, v16, 0LL);
+  UIProgressBar__set_value((UIProgressBar_o *)this, v18, 0LL);
+  v35 = joinGroupId;
+  v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v35);
+  v23 = System_String__Concat((Il2CppObject *)StringLiteral_17050/*"bit_vs_gauge_flash_"*/, v22, 0LL);
   gaugeSimpleAnim = (UnityEngine_Object_o *)v10->fields.gaugeSimpleAnim;
-  v19 = v17;
+  v25 = v23;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -134,7 +140,7 @@ LABEL_34:
     this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeAnim;
     if ( this )
     {
-      Clip = (UnityEngine_Object_o *)UnityEngine_Animation__GetClip((UnityEngine_Animation_o *)this, v19, 0LL);
+      Clip = (UnityEngine_Object_o *)UnityEngine_Animation__GetClip((UnityEngine_Animation_o *)this, v25, 0LL);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
@@ -145,17 +151,17 @@ LABEL_34:
       this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeAnim;
       if ( this )
       {
-        UnityEngine_Animation__Play_51067744((UnityEngine_Animation_o *)this, v19, 0LL);
+        UnityEngine_Animation__Play_51249124((UnityEngine_Animation_o *)this, v25, 0LL);
         goto LABEL_32;
       }
     }
 LABEL_33:
-    sub_B52A5C(this, *(_QWORD *)&joinGroupId);
+    sub_B5D69C(this, *(_QWORD *)&joinGroupId);
   }
   this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeSimpleAnim;
   if ( !this )
     goto LABEL_33;
-  if ( !SimpleAnimation__get_Item((SimpleAnimation_o *)this, v19, 0LL) )
+  if ( !SimpleAnimation__get_Item((SimpleAnimation_o *)this, v25, 0LL) )
   {
 LABEL_29:
     ActionExtensions__Call(callback, 0LL);
@@ -164,16 +170,16 @@ LABEL_29:
   this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeSimpleAnim;
   if ( !this )
     goto LABEL_33;
-  SimpleAnimation__Play_16625408((SimpleAnimation_o *)this, v19, 0LL);
+  SimpleAnimation__Play_16676044((SimpleAnimation_o *)this, v25, 0LL);
 LABEL_32:
   v10->fields.endCallBack = callback;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&v10->fields.endCallBack,
     (System_Int32_array **)callback,
-    v20,
-    v21,
-    v22,
-    v23,
-    v24,
-    v25);
+    v26,
+    v27,
+    v28,
+    v29,
+    v30,
+    v31);
 }

@@ -1,16 +1,20 @@
 void __fastcall EventTutorialCondEntity___ctor(EventTutorialCondEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42AF899 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E84B0 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_string___ctor__);
-    byte_42AF899 = 1;
+    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
+    byte_42E84B0 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventTutorialCondEntity__CreatePK(
         int32_t eventId,
         int32_t flagType,
@@ -18,17 +22,17 @@ System_String_o *__fastcall EventTutorialCondEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_42AF898 & 1) == 0 )
+  if ( (byte_42E84AF & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_42AF898 = 1;
+    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, flagType, num, *(_QWORD *)&idx);
+    byte_42E84AF = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            eventId,
            flagType,
            num,
            idx,
-           (const MethodInfo_1A4E810 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_1AE38D8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 

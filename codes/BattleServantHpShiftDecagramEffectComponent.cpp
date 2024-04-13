@@ -2,10 +2,13 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent___ctor(
         BattleServantHpShiftDecagramEffectComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_42B2A2D & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42EB24E & 1) == 0 )
   {
-    sub_B52984(&CommonEffectComponent_TypeInfo);
-    byte_42B2A2D = 1;
+    sub_B5D5C4(&CommonEffectComponent_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42EB24E = 1;
   }
   if ( (BYTE3(CommonEffectComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CommonEffectComponent_TypeInfo->_2.cctor_finished )
@@ -21,15 +24,16 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent__UpdateIcon(
         int32_t index,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
   UnityEngine_Object_o *Parent_k__BackingField; // x21
-  __int64 v6; // x1
-  const MethodInfo *v7; // x3
-  BattleServantHpShiftComponent_o *v8; // x0
+  __int64 v7; // x1
+  const MethodInfo *v8; // x3
+  BattleServantHpShiftComponent_o *v9; // x0
 
-  if ( (byte_42B2A2B & 1) == 0 )
+  if ( (byte_42EB24C & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42B2A2B = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, index, (_DWORD)method, v3);
+    byte_42EB24C = 1;
   }
   Parent_k__BackingField = (UnityEngine_Object_o *)this->fields._Parent_k__BackingField;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -39,10 +43,10 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent__UpdateIcon(
   }
   if ( UnityEngine_Object__op_Inequality(Parent_k__BackingField, 0LL, 0LL) )
   {
-    v8 = this->fields._Parent_k__BackingField;
-    if ( !v8 )
-      sub_B52A5C(0LL, v6);
-    BattleServantHpShiftComponent__UpdateIconActive(v8, index, 1, v7);
+    v9 = this->fields._Parent_k__BackingField;
+    if ( !v9 )
+      sub_B5D69C(0LL, v7);
+    BattleServantHpShiftComponent__UpdateIconActive(v9, index, 1, v8);
   }
 }
 
@@ -52,15 +56,16 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent__UpdateIconInactive(
         int32_t index,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
   UnityEngine_Object_o *Parent_k__BackingField; // x21
-  __int64 v6; // x1
-  const MethodInfo *v7; // x3
-  BattleServantHpShiftComponent_o *v8; // x0
+  __int64 v7; // x1
+  const MethodInfo *v8; // x3
+  BattleServantHpShiftComponent_o *v9; // x0
 
-  if ( (byte_42B2A2C & 1) == 0 )
+  if ( (byte_42EB24D & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42B2A2C = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, index, (_DWORD)method, v3);
+    byte_42EB24D = 1;
   }
   Parent_k__BackingField = (UnityEngine_Object_o *)this->fields._Parent_k__BackingField;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -70,10 +75,10 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent__UpdateIconInactive(
   }
   if ( UnityEngine_Object__op_Inequality(Parent_k__BackingField, 0LL, 0LL) )
   {
-    v8 = this->fields._Parent_k__BackingField;
-    if ( !v8 )
-      sub_B52A5C(0LL, v6);
-    BattleServantHpShiftComponent__UpdateIconActive(v8, index, 0, v7);
+    v9 = this->fields._Parent_k__BackingField;
+    if ( !v9 )
+      sub_B5D69C(0LL, v7);
+    BattleServantHpShiftComponent__UpdateIconActive(v9, index, 0, v8);
   }
 }
 
@@ -98,7 +103,7 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent__set_Parent(
   System_Int32_array *v7; // x7
 
   this->fields._Parent_k__BackingField = value;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields._Parent_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

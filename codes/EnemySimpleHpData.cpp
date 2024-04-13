@@ -8,7 +8,7 @@ void __fastcall EnemySimpleHpData___ctor(
 
   SimpleHpData___ctor((SimpleHpData_o *)this, svtData, 0LL);
   if ( !svtData )
-    sub_B52A5C(v5, v6);
+    sub_B5D69C(v5, v6);
   this->fields._NextTpTurn_k__BackingField = svtData->fields.nexttpturn;
   this->fields._MaxTpTurn_k__BackingField = svtData->fields.maxtpturn;
 }

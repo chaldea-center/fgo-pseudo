@@ -12,24 +12,27 @@ void __fastcall BattleResultMasterUpStatusComponent__setData(
         int32_t newVal,
         const MethodInfo *method)
 {
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
   UnityEngine_Object_o *oldParamLabel; // x20
-  UILabel_o *v6; // x20
-  System_String_o *v7; // x0
-  __int64 v8; // x1
-  System_String_o *v9; // x1
-  UnityEngine_Object_o *newParamLabel; // x20
-  UILabel_o *v11; // x19
+  UILabel_o *v9; // x20
+  System_String_o *v10; // x0
+  __int64 v11; // x1
   System_String_o *v12; // x1
-  int32_t v13; // [xsp+8h] [xbp-18h] BYREF
-  int32_t v14; // [xsp+Ch] [xbp-14h] BYREF
+  UnityEngine_Object_o *newParamLabel; // x20
+  UILabel_o *v14; // x19
+  System_String_o *v15; // x1
+  int32_t v16; // [xsp+8h] [xbp-18h] BYREF
+  int32_t v17; // [xsp+Ch] [xbp-14h] BYREF
 
-  v13 = newVal;
-  v14 = oldVal;
-  if ( (byte_42B02F6 & 1) == 0 )
+  v16 = newVal;
+  v17 = oldVal;
+  if ( (byte_42E5727 & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    sub_B52984(&StringLiteral_1/*""*/);
-    byte_42B02F6 = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, oldVal, newVal, method);
+    sub_B5D5C4(&StringLiteral_1/*""*/, v5, v6, v7);
+    byte_42E5727 = 1;
   }
   oldParamLabel = (UnityEngine_Object_o *)this->fields.oldParamLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -39,15 +42,15 @@ void __fastcall BattleResultMasterUpStatusComponent__setData(
   }
   if ( UnityEngine_Object__op_Inequality(oldParamLabel, 0LL, 0LL) )
   {
-    v6 = this->fields.oldParamLabel;
-    v7 = System_Int32__ToString((int32_t)&v14, 0LL);
-    if ( !v6 )
+    v9 = this->fields.oldParamLabel;
+    v10 = System_Int32__ToString((int32_t)&v17, 0LL);
+    if ( !v9 )
       goto LABEL_22;
-    if ( v7 )
-      v9 = v7;
+    if ( v10 )
+      v12 = v10;
     else
-      v9 = (System_String_o *)StringLiteral_1/*""*/;
-    UILabel__set_text(v6, v9, 0LL);
+      v12 = (System_String_o *)StringLiteral_1/*""*/;
+    UILabel__set_text(v9, v12, 0LL);
   }
   newParamLabel = (UnityEngine_Object_o *)this->fields.newParamLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -57,19 +60,19 @@ void __fastcall BattleResultMasterUpStatusComponent__setData(
   }
   if ( UnityEngine_Object__op_Inequality(newParamLabel, 0LL, 0LL) )
   {
-    v11 = this->fields.newParamLabel;
-    v7 = System_Int32__ToString((int32_t)&v13, 0LL);
-    if ( v11 )
+    v14 = this->fields.newParamLabel;
+    v10 = System_Int32__ToString((int32_t)&v16, 0LL);
+    if ( v14 )
     {
-      if ( v7 )
-        v12 = v7;
+      if ( v10 )
+        v15 = v10;
       else
-        v12 = (System_String_o *)StringLiteral_1/*""*/;
-      UILabel__set_text(v11, v12, 0LL);
+        v15 = (System_String_o *)StringLiteral_1/*""*/;
+      UILabel__set_text(v14, v15, 0LL);
       return;
     }
 LABEL_22:
-    sub_B52A5C(v7, v8);
+    sub_B5D69C(v10, v11);
   }
 }
 
@@ -79,16 +82,20 @@ void __fastcall BattleResultMasterUpStatusComponent__setTitle(
         System_String_o *key,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
   UnityEngine_Object_o *titleParamLabel; // x21
-  System_String_o *v6; // x0
-  __int64 v7; // x1
-  System_String_o *v8; // x21
+  System_String_o *v10; // x0
+  __int64 v11; // x1
+  System_String_o *v12; // x21
 
-  if ( (byte_42B02F5 & 1) == 0 )
+  if ( (byte_42E5726 & 1) == 0 )
   {
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42B02F5 = 1;
+    sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)key, (_DWORD)method, v3);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v6, v7, v8);
+    byte_42E5726 = 1;
   }
   titleParamLabel = (UnityEngine_Object_o *)this->fields.titleParamLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -103,19 +110,19 @@ void __fastcall BattleResultMasterUpStatusComponent__setTitle(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = LocalizationManager__Get(key, 0LL);
-    if ( v6 )
+    v10 = LocalizationManager__Get(key, 0LL);
+    if ( v10 )
     {
-      v8 = v6;
-      if ( System_String__Equals_44555656(v6, key, 0LL) )
+      v12 = v10;
+      if ( System_String__Equals_44565128(v10, key, 0LL) )
         return;
-      v6 = (System_String_o *)this->fields.titleParamLabel;
-      if ( v6 )
+      v10 = (System_String_o *)this->fields.titleParamLabel;
+      if ( v10 )
       {
-        UILabel__set_text((UILabel_o *)v6, v8, 0LL);
+        UILabel__set_text((UILabel_o *)v10, v12, 0LL);
         return;
       }
     }
-    sub_B52A5C(v6, v7);
+    sub_B5D69C(v10, v11);
   }
 }

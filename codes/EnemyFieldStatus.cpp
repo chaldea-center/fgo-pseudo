@@ -4,6 +4,7 @@ void __fastcall EnemyFieldStatus___ctor(EnemyFieldStatus_o *this, const MethodIn
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_Double_array *__fastcall EnemyFieldStatus__getAiParam(
         EnemyFieldStatus_o *this,
         BattleData_o *bData,
@@ -20,10 +21,10 @@ System_Double_array *__fastcall EnemyFieldStatus__getAiParam(
   __int64 v13; // x0
 
   v10 = (BattleFieldStatus_o *)this;
-  if ( (byte_42B4674 & 1) == 0 )
+  if ( (byte_42ECFFD & 1) == 0 )
   {
-    this = (EnemyFieldStatus_o *)sub_B52984(&double___TypeInfo);
-    byte_42B4674 = 1;
+    this = (EnemyFieldStatus_o *)sub_B5D5C4(&double___TypeInfo, (_DWORD)bData, param, *(_QWORD *)&turn);
+    byte_42ECFFD = 1;
   }
   if ( param == 20 )
   {
@@ -37,17 +38,17 @@ System_Double_array *__fastcall EnemyFieldStatus__getAiParam(
       return v10->fields.wkZeroParam;
     if ( !bData )
 LABEL_13:
-      sub_B52A5C(this, bData);
+      sub_B5D69C(this, bData);
     v11 = BattleFieldStatus__CommonAliveCount(v10, bData->fields.enemy_datalist, 0LL);
   }
   v12 = v11;
-  this = (EnemyFieldStatus_o *)sub_B5299C(double___TypeInfo, 1LL);
+  this = (EnemyFieldStatus_o *)sub_B5D5DC(double___TypeInfo, 1LL);
   if ( !this )
     goto LABEL_13;
   if ( !LODWORD(this[1].klass) )
   {
-    v13 = sub_B52A88(this);
-    sub_B52A28(v13, 0LL);
+    v13 = sub_B5D6C8(this);
+    sub_B5D668(v13, 0LL);
   }
   *(double *)&this[1].monitor = (double)v12;
   return (System_Double_array *)this;

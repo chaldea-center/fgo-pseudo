@@ -9,12 +9,13 @@ void __fastcall ServantCostumeEventBalloon__Set(
         int32_t itemId,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
   UISprite_o *itemSprite; // x20
 
-  if ( (byte_42B2E1D & 1) == 0 )
+  if ( (byte_42EB8E4 & 1) == 0 )
   {
-    sub_B52984(&AtlasManager_TypeInfo);
-    byte_42B2E1D = 1;
+    sub_B5D5C4(&AtlasManager_TypeInfo, itemId, (_DWORD)method, v3);
+    byte_42EB8E4 = 1;
   }
   itemSprite = this->fields.itemSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )

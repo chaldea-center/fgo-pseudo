@@ -13,7 +13,7 @@ void __fastcall TimeSyncAlphaSwitcher__Clear(TimeSyncAlphaSwitcher_o *this, cons
   widget = this->fields.widget;
   *(_QWORD *)&this->fields.toggleNum = 1LL;
   if ( !widget )
-    sub_B52A5C(0LL, method);
+    sub_B5D69C(0LL, method);
   ((void (__fastcall *)(struct UIWidget_o *, Il2CppMethodPointer, float))widget->klass->vtable._8_set_alpha.method)(
     widget,
     widget->klass->vtable._9_CalculateFinalAlpha.methodPtr,
@@ -49,7 +49,7 @@ void __fastcall TimeSyncAlphaSwitcher__SetAlphaBlink(
   this->fields.toggleIndex = index;
   v11 = fmodf(v8, 1.0);
   if ( !this )
-    sub_B52A5C(v9, v10);
+    sub_B5D69C(v9, v10);
   toggleNum = this->fields.toggleNum;
   toggleIndex = this->fields.toggleIndex;
   v14 = v11 > 0.5;
@@ -139,7 +139,7 @@ LABEL_15:
         return;
       }
     }
-    sub_B52A5C(v6, v3);
+    sub_B5D69C(v6, v3);
   }
 }
 

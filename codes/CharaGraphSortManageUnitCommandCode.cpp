@@ -10,16 +10,18 @@ CharaGraphFilterLogicBase_o *__fastcall CharaGraphSortManageUnitCommandCode__Cre
         CharaGraphSortManageUnitCommandCode_o *this,
         const MethodInfo *method)
 {
-  CommandCodeCharaGraphFilterLogic_o *v2; // x19
+  int v2; // w2
+  __int64 v3; // x3
+  CommandCodeCharaGraphFilterLogic_o *v4; // x19
 
-  if ( (byte_42AFDEE & 1) == 0 )
+  if ( (byte_42E96FB & 1) == 0 )
   {
-    sub_B52984(&CommandCodeCharaGraphFilterLogic_TypeInfo);
-    byte_42AFDEE = 1;
+    sub_B5D5C4(&CommandCodeCharaGraphFilterLogic_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E96FB = 1;
   }
-  v2 = (CommandCodeCharaGraphFilterLogic_o *)sub_B52A54(CommandCodeCharaGraphFilterLogic_TypeInfo);
-  CommandCodeCharaGraphFilterLogic___ctor(v2, 0LL);
-  return (CharaGraphFilterLogicBase_o *)v2;
+  v4 = (CommandCodeCharaGraphFilterLogic_o *)sub_B5D694(CommandCodeCharaGraphFilterLogic_TypeInfo);
+  CommandCodeCharaGraphFilterLogic___ctor(v4, 0LL);
+  return (CharaGraphFilterLogicBase_o *)v4;
 }
 
 
@@ -27,16 +29,18 @@ CharaGraphSortLogicBase_o *__fastcall CharaGraphSortManageUnitCommandCode__Creat
         CharaGraphSortManageUnitCommandCode_o *this,
         const MethodInfo *method)
 {
-  CommandCodeCharaGraphSortLogic_o *v2; // x19
+  int v2; // w2
+  __int64 v3; // x3
+  CommandCodeCharaGraphSortLogic_o *v4; // x19
 
-  if ( (byte_42AFDED & 1) == 0 )
+  if ( (byte_42E96FA & 1) == 0 )
   {
-    sub_B52984(&CommandCodeCharaGraphSortLogic_TypeInfo);
-    byte_42AFDED = 1;
+    sub_B5D5C4(&CommandCodeCharaGraphSortLogic_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E96FA = 1;
   }
-  v2 = (CommandCodeCharaGraphSortLogic_o *)sub_B52A54(CommandCodeCharaGraphSortLogic_TypeInfo);
-  CommandCodeCharaGraphSortLogic___ctor(v2, 0LL);
-  return (CharaGraphSortLogicBase_o *)v2;
+  v4 = (CommandCodeCharaGraphSortLogic_o *)sub_B5D694(CommandCodeCharaGraphSortLogic_TypeInfo);
+  CommandCodeCharaGraphSortLogic___ctor(v4, 0LL);
+  return (CharaGraphSortLogicBase_o *)v4;
 }
 
 
@@ -76,10 +80,13 @@ System_String_o *__fastcall CharaGraphSortManageUnitCommandCode__get_SortSaveKey
         CharaGraphSortManageUnitCommandCode_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_42AFDEC & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E96F9 & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_1187/*"4"*/);
-    byte_42AFDEC = 1;
+    sub_B5D5C4(&StringLiteral_1192/*"4"*/, (_DWORD)method, v2, v3);
+    byte_42E96F9 = 1;
   }
-  return (System_String_o *)StringLiteral_1187/*"4"*/;
+  return (System_String_o *)StringLiteral_1192/*"4"*/;
 }

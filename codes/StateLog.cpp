@@ -1,11 +1,14 @@
 void __fastcall StateLog___ctor(StateLog_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B0B3D & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E931C & 1) == 0 )
   {
-    sub_B52984(&Method_SingletonMonoBehaviour_StateLog___ctor__);
-    byte_42B0B3D = 1;
+    sub_B5D5C4(&Method_SingletonMonoBehaviour_StateLog___ctor__, (_DWORD)method, v2, v3);
+    byte_42E931C = 1;
   }
   SingletonMonoBehaviour_WebViewManager____ctor(
     (SingletonMonoBehaviour_WebViewManager__o *)this,
-    (const MethodInfo_2B7611C *)Method_SingletonMonoBehaviour_StateLog___ctor__);
+    (const MethodInfo_2A301CC *)Method_SingletonMonoBehaviour_StateLog___ctor__);
 }

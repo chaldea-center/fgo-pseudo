@@ -9,18 +9,19 @@ void __fastcall ChangeBattlePhaseObserver__Update(
         BattleSubject_o *subject,
         const MethodInfo *method)
 {
-  __int64 v5; // x10
+  __int64 v3; // x3
+  __int64 v6; // x10
 
-  if ( (byte_42B1705 & 1) == 0 )
+  if ( (byte_42EB6CC & 1) == 0 )
   {
-    sub_B52984(&ChangeBattlePhaseNotify_TypeInfo);
-    byte_42B1705 = 1;
+    sub_B5D5C4(&ChangeBattlePhaseNotify_TypeInfo, (_DWORD)subject, (_DWORD)method, v3);
+    byte_42EB6CC = 1;
   }
   if ( subject )
   {
-    v5 = *(&ChangeBattlePhaseNotify_TypeInfo->_2.bitflags2 + 1);
-    if ( *(&subject->klass->_2.bitflags2 + 1) >= (unsigned int)v5
-      && (ChangeBattlePhaseNotify_c *)subject->klass->_2.typeHierarchy[v5 - 1] == ChangeBattlePhaseNotify_TypeInfo )
+    v6 = *(&ChangeBattlePhaseNotify_TypeInfo->_2.bitflags2 + 1);
+    if ( *(&subject->klass->_2.bitflags2 + 1) >= (unsigned int)v6
+      && (ChangeBattlePhaseNotify_c *)subject->klass->_2.typeHierarchy[v6 - 1] == ChangeBattlePhaseNotify_TypeInfo )
     {
       ((void (__fastcall *)(ChangeBattlePhaseObserver_o *, BattleSubject_o *, const char *))this->klass[1]._1.gc_desc)(
         this,

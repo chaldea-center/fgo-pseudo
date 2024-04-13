@@ -10,14 +10,14 @@ void __fastcall EventInfoSpotCooltimeNoticeButton___ctor(
   System_Int32_array *v7; // x7
   System_Int32_array **v9; // x1
 
-  if ( (byte_42B0E5C & 1) == 0 )
+  if ( (byte_42E954D & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_12391/*"SPOT_COOLTIME_NOTICE_BUTTON_TITLE_"*/);
-    byte_42B0E5C = 1;
+    sub_B5D5C4(&StringLiteral_12449/*"SPOT_COOLTIME_NOTICE_BUTTON_TITLE_"*/, (_DWORD)method, (_DWORD)v2, v3);
+    byte_42E954D = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_12391/*"SPOT_COOLTIME_NOTICE_BUTTON_TITLE_"*/;
-  this->fields.SPOT_COOLTIME_NOTICE_BUTTON_TITLE = (struct System_String_o *)StringLiteral_12391/*"SPOT_COOLTIME_NOTICE_BUTTON_TITLE_"*/;
-  sub_B52920(
+  v9 = (System_Int32_array **)StringLiteral_12449/*"SPOT_COOLTIME_NOTICE_BUTTON_TITLE_"*/;
+  this->fields.SPOT_COOLTIME_NOTICE_BUTTON_TITLE = (struct System_String_o *)StringLiteral_12449/*"SPOT_COOLTIME_NOTICE_BUTTON_TITLE_"*/;
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.SPOT_COOLTIME_NOTICE_BUTTON_TITLE,
     v9,
     v2,
@@ -35,13 +35,14 @@ System_String_o *__fastcall EventInfoSpotCooltimeNoticeButton__GetBgSpriteNameBy
         int32_t eventId,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
   EventInfoSpotCooltimeNoticeButton_EventInfo_o *EventInfo; // x0
   System_String_o **p_BgSpriteName; // x8
 
-  if ( (byte_42B0E5B & 1) == 0 )
+  if ( (byte_42E954C & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_1/*""*/);
-    byte_42B0E5B = 1;
+    sub_B5D5C4(&StringLiteral_1/*""*/, eventId, (_DWORD)method, v3);
+    byte_42E954C = 1;
   }
   EventInfo = EventInfoSpotCooltimeNoticeButton__GetEventInfo(this, eventId, method);
   p_BgSpriteName = &EventInfo->fields.BgSpriteName;
@@ -94,7 +95,7 @@ EventInfoSpotCooltimeNoticeButton_EventInfo_o *__fastcall EventInfoSpotCooltimeN
         return 0LL;
     }
 LABEL_9:
-    sub_B52A5C(this, eventId);
+    sub_B5D69C(this, eventId);
   }
   return 0LL;
 }
@@ -105,47 +106,54 @@ void __fastcall EventInfoSpotCooltimeNoticeButton__Initialization(
         int32_t eventId,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
   System_String_o *BgSpriteNameByEventId; // x0
   UnityEngine_Object_o *bgSprite; // x21
-  System_String_o *v7; // x20
-  UISprite_o *v8; // x21
+  System_String_o *v14; // x20
+  UISprite_o *v15; // x21
   UnityEngine_Object_o *buttonSprite; // x20
-  UISprite_o *v10; // x20
+  UISprite_o *v17; // x20
   System_String_o *SPOT_COOLTIME_NOTICE_BUTTON_TITLE; // x20
-  System_String_o *v12; // x0
-  System_String_o *v13; // x20
+  System_String_o *v19; // x0
+  System_String_o *v20; // x20
   UILabel_o *buttonTextLabel; // x21
-  System_String_o *v15; // x0
-  __int64 v16; // x1
-  const MethodInfo *v17; // x1
+  System_String_o *v22; // x0
+  __int64 v23; // x1
+  const MethodInfo *v24; // x1
   int32_t eventIda; // [xsp+Ch] [xbp-24h] BYREF
 
   eventIda = eventId;
-  if ( (byte_42B0E58 & 1) == 0 )
+  if ( (byte_42E9549 & 1) == 0 )
   {
-    sub_B52984(&AtlasManager_TypeInfo);
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42B0E58 = 1;
+    sub_B5D5C4(&AtlasManager_TypeInfo, eventId, (_DWORD)method, v3);
+    sub_B5D5C4(&LocalizationManager_TypeInfo, v6, v7, v8);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v9, v10, v11);
+    byte_42E9549 = 1;
   }
   this->fields.eventId = eventId;
   BgSpriteNameByEventId = EventInfoSpotCooltimeNoticeButton__GetBgSpriteNameByEventId(this, eventId, method);
   bgSprite = (UnityEngine_Object_o *)this->fields.bgSprite;
-  v7 = BgSpriteNameByEventId;
+  v14 = BgSpriteNameByEventId;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(bgSprite, 0LL, 0LL) && !System_String__IsNullOrEmpty(v7, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(bgSprite, 0LL, 0LL) && !System_String__IsNullOrEmpty(v14, 0LL) )
   {
-    v8 = this->fields.bgSprite;
+    v15 = this->fields.bgSprite;
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !AtlasManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventUI(v8, v7, 0LL);
+    AtlasManager__SetEventUI(v15, v14, 0LL);
   }
   buttonSprite = (UnityEngine_Object_o *)this->fields.buttonSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -155,23 +163,23 @@ void __fastcall EventInfoSpotCooltimeNoticeButton__Initialization(
   }
   if ( UnityEngine_Object__op_Inequality(buttonSprite, 0LL, 0LL) )
   {
-    v10 = this->fields.buttonSprite;
+    v17 = this->fields.buttonSprite;
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !AtlasManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetCommon(v10, 0LL);
+    AtlasManager__SetCommon(v17, 0LL);
   }
   SPOT_COOLTIME_NOTICE_BUTTON_TITLE = this->fields.SPOT_COOLTIME_NOTICE_BUTTON_TITLE;
-  v12 = System_Int32__ToString((int32_t)&eventIda, 0LL);
-  v13 = System_String__Concat_44568316(SPOT_COOLTIME_NOTICE_BUTTON_TITLE, v12, 0LL);
+  v19 = System_Int32__ToString((int32_t)&eventIda, 0LL);
+  v20 = System_String__Concat_44577788(SPOT_COOLTIME_NOTICE_BUTTON_TITLE, v19, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  if ( LocalizationManager__ContainsKey(v13, 0LL) )
+  if ( LocalizationManager__ContainsKey(v20, 0LL) )
   {
     buttonTextLabel = this->fields.buttonTextLabel;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -179,16 +187,16 @@ void __fastcall EventInfoSpotCooltimeNoticeButton__Initialization(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v15 = LocalizationManager__Get(v13, 0LL);
+    v22 = LocalizationManager__Get(v20, 0LL);
     if ( !buttonTextLabel
-      || (UILabel__set_text(buttonTextLabel, v15, 0LL), (v15 = (System_String_o *)this->fields.buttonTextLabel) == 0LL) )
+      || (UILabel__set_text(buttonTextLabel, v22, 0LL), (v22 = (System_String_o *)this->fields.buttonTextLabel) == 0LL) )
     {
-      sub_B52A5C(v15, v16);
+      sub_B5D69C(v22, v23);
     }
-    UILabel__SetCondensedScale((UILabel_o *)v15, this->fields.buttonTextMaxWidth, 0LL);
+    UILabel__SetCondensedScale((UILabel_o *)v22, this->fields.buttonTextMaxWidth, 0LL);
   }
   this->fields.isButtonOn = EventRewardSaveData__NeedSpotCooltimeNotification(eventIda, 0LL);
-  EventInfoSpotCooltimeNoticeButton__UpdateButtonDisp(this, v17);
+  EventInfoSpotCooltimeNoticeButton__UpdateButtonDisp(this, v24);
 }
 
 
@@ -196,14 +204,16 @@ void __fastcall EventInfoSpotCooltimeNoticeButton__OnClickButton(
         EventInfoSpotCooltimeNoticeButton_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   _BOOL4 isButtonOn; // w9
-  int32_t v4; // w0
-  const MethodInfo *v5; // x1
+  int32_t v6; // w0
+  const MethodInfo *v7; // x1
 
-  if ( (byte_42B0E5A & 1) == 0 )
+  if ( (byte_42E954B & 1) == 0 )
   {
-    sub_B52984(&SoundManager_TypeInfo);
-    byte_42B0E5A = 1;
+    sub_B5D5C4(&SoundManager_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E954B = 1;
   }
   isButtonOn = this->fields.isButtonOn;
   this->fields.isButtonOn = !isButtonOn;
@@ -214,7 +224,7 @@ void __fastcall EventInfoSpotCooltimeNoticeButton__OnClickButton(
     {
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     }
-    v4 = 1;
+    v6 = 1;
   }
   else
   {
@@ -223,11 +233,11 @@ void __fastcall EventInfoSpotCooltimeNoticeButton__OnClickButton(
     {
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     }
-    v4 = 0;
+    v6 = 0;
   }
-  SoundManager__playSystemSe(v4, 0LL);
+  SoundManager__playSystemSe(v6, 0LL);
   EventRewardSaveData__SetSpotCooltimeNotification(this->fields.eventId, this->fields.isButtonOn, 0LL);
-  EventInfoSpotCooltimeNoticeButton__UpdateButtonDisp(this, v5);
+  EventInfoSpotCooltimeNoticeButton__UpdateButtonDisp(this, v7);
 }
 
 
@@ -246,7 +256,7 @@ void __fastcall EventInfoSpotCooltimeNoticeButton__SetDispActive(
         (bgSprite = (UnityEngine_Component_o *)this->fields.noticeButton) == 0LL)
     || (bgSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bgSprite, 0LL)) == 0LL )
   {
-    sub_B52A5C(bgSprite, isActive);
+    sub_B5D69C(bgSprite, isActive);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bgSprite, isActive, 0LL);
 }
@@ -256,23 +266,28 @@ void __fastcall EventInfoSpotCooltimeNoticeButton__UpdateButtonDisp(
         EventInfoSpotCooltimeNoticeButton_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
   UIButton_o *noticeButton; // x0
-  __int64 *v4; // x8
+  __int64 *v9; // x8
 
-  if ( (byte_42B0E59 & 1) == 0 )
+  if ( (byte_42E954A & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_17124/*"btn_on"*/);
-    sub_B52984(&StringLiteral_17123/*"btn_off"*/);
-    byte_42B0E59 = 1;
+    sub_B5D5C4(&StringLiteral_17215/*"btn_on"*/, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&StringLiteral_17214/*"btn_off"*/, v5, v6, v7);
+    byte_42E954A = 1;
   }
   noticeButton = this->fields.noticeButton;
   if ( !noticeButton )
-    sub_B52A5C(0LL, method);
+    sub_B5D69C(0LL, method);
   if ( this->fields.isButtonOn )
-    v4 = &StringLiteral_17124/*"btn_on"*/;
+    v9 = &StringLiteral_17215/*"btn_on"*/;
   else
-    v4 = &StringLiteral_17123/*"btn_off"*/;
-  UIButton__set_normalSprite(noticeButton, (System_String_o *)*v4, 0LL);
+    v9 = &StringLiteral_17214/*"btn_off"*/;
+  UIButton__set_normalSprite(noticeButton, (System_String_o *)*v9, 0LL);
 }
 
 

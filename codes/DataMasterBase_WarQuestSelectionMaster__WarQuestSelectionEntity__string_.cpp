@@ -2,33 +2,38 @@
 void __fastcall DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
         DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *this,
         int32_t kind,
-        const MethodInfo_23E268C *method)
+        const MethodInfo_23FB1C4 *method)
 {
-  DataMasterBase_o *v5; // x20
+  __int64 v3; // x3
+  DataMasterBase_o *v6; // x20
 
-  v5 = (DataMasterBase_o *)this;
-  if ( (byte_42B8058 & 1) == 0 )
+  v6 = (DataMasterBase_o *)this;
+  if ( (byte_42F09D1 & 1) == 0 )
   {
-    this = (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)sub_B52984(&DataMasterBase_TypeInfo);
-    byte_42B8058 = 1;
+    this = (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)sub_B5D5C4(
+                                                                                           &DataMasterBase_TypeInfo,
+                                                                                           kind,
+                                                                                           (_DWORD)method,
+                                                                                           v3);
+    byte_42F09D1 = 1;
   }
-  if ( !v5 )
-    sub_B52A5C(this, *(_QWORD *)&kind);
+  if ( !v6 )
+    sub_B5D69C(this, *(_QWORD *)&kind);
   if ( (BYTE3(DataMasterBase_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !DataMasterBase_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(DataMasterBase_TypeInfo);
   }
-  DataMasterBase___ctor(v5, kind, 0LL);
+  DataMasterBase___ctor(v6, kind, 0LL);
   ((void (__fastcall *)(_QWORD, struct System_String_o *))method->klass->rgctx_data->_0_DataMasterBase_RegisterKindAndName_TMaster_->methodPointer)(
-    (unsigned int)v5->fields._MasterKind_k__BackingField,
-    v5->fields._MasterName_k__BackingField);
+    (unsigned int)v6->fields._MasterKind_k__BackingField,
+    v6->fields._MasterName_k__BackingField);
 }
 
 
 void __fastcall DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___ForForceDerived(
         DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *this,
-        const MethodInfo_23E28A8 *method)
+        const MethodInfo_23FB3E0 *method)
 {
   ;
 }
@@ -38,7 +43,7 @@ bool __fastcall DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity_
         DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *this,
         WarQuestSelectionEntity_o **entity,
         System_String_o *key,
-        const MethodInfo_23E2780 *method)
+        const MethodInfo_23FB2B8 *method)
 {
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *v5; // x20
 
@@ -49,7 +54,7 @@ bool __fastcall DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity_
                                                                                                key->klass->vtable._4_CompareTo.methodPtr),
         !v5) )
   {
-    sub_B52A5C(this, entity);
+    sub_B5D69C(this, entity);
   }
   return ((__int64 (__fastcall *)(DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *, WarQuestSelectionEntity_o **, DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *))method->klass->rgctx_data->_3_DataMasterBase_TryGetEntityFromId_TEntity_->methodPointer)(
            v5,
@@ -61,12 +66,14 @@ bool __fastcall DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity_
 DataEntityBase_array *__fastcall DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___getList(
         DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *this,
         Il2CppObject *obj,
-        const MethodInfo_23E282C *method)
+        const MethodInfo_23FB364 *method)
 {
-  if ( (byte_42B8059 & 1) == 0 )
+  __int64 v3; // x3
+
+  if ( (byte_42F09D2 & 1) == 0 )
   {
-    sub_B52984(&JsonManager_TypeInfo);
-    byte_42B8059 = 1;
+    sub_B5D5C4(&JsonManager_TypeInfo, (_DWORD)obj, (_DWORD)method, v3);
+    byte_42F09D2 = 1;
   }
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);

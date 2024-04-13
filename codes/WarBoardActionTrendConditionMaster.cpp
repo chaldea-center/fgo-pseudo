@@ -2,15 +2,22 @@ void __fastcall WarBoardActionTrendConditionMaster___ctor(
         WarBoardActionTrendConditionMaster_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_42AE09B & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E6927 & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_WarBoardActionTrendConditionMaster__WarBoardActionTrendConditionEntity__int___ctor__);
-    byte_42AE09B = 1;
+    sub_B5D5C4(
+      &Method_DataMasterBase_WarBoardActionTrendConditionMaster__WarBoardActionTrendConditionEntity__int___ctor__,
+      (_DWORD)method,
+      v2,
+      v3);
+    byte_42E6927 = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     336,
-    (const MethodInfo_23E223C *)Method_DataMasterBase_WarBoardActionTrendConditionMaster__WarBoardActionTrendConditionEntity__int___ctor__);
+    (const MethodInfo_23FAD74 *)Method_DataMasterBase_WarBoardActionTrendConditionMaster__WarBoardActionTrendConditionEntity__int___ctor__);
 }
 
 
@@ -32,15 +39,19 @@ bool __fastcall WarBoardActionTrendConditionMaster__HasMatchCondition(
   __int64 v15; // x0
 
   v6 = condEntityArray;
-  if ( (byte_42AE09C & 1) == 0 )
+  if ( (byte_42E6928 & 1) == 0 )
   {
-    condEntityArray = (WarBoardActionTrendConditionEntity_array *)sub_B52984(&Method_System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool__Invoke__);
-    byte_42AE09C = 1;
+    condEntityArray = (WarBoardActionTrendConditionEntity_array *)sub_B5D5C4(
+                                                                    &Method_System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool__Invoke__,
+                                                                    (_DWORD)matchCond,
+                                                                    (_DWORD)condType,
+                                                                    method);
+    byte_42E6928 = 1;
   }
   *condType = 0;
   if ( !v6 )
 LABEL_18:
-    sub_B52A5C(condEntityArray, matchCond);
+    sub_B5D69C(condEntityArray, matchCond);
   max_length = v6->max_length;
   if ( max_length < 1 )
     return 0;
@@ -50,8 +61,8 @@ LABEL_18:
     if ( v8 >= max_length )
     {
 LABEL_19:
-      v15 = sub_B52A88(condEntityArray);
-      sub_B52A28(v15, 0LL);
+      v15 = sub_B5D6C8(condEntityArray);
+      sub_B5D668(v15, 0LL);
     }
     v9 = v6->m_Items[v8];
     if ( !v9 )
@@ -78,7 +89,7 @@ LABEL_15:
     condEntityArray = (WarBoardActionTrendConditionEntity_array *)System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool___Invoke(
                                                                     matchCond,
                                                                     v13,
-                                                                    (const MethodInfo_2BC58D0 *)Method_System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool__Invoke__);
+                                                                    (const MethodInfo_2C2A84C *)Method_System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool__Invoke__);
     if ( ((unsigned __int8)condEntityArray & 1) != 0 )
       break;
     LODWORD(v11) = conditionTypes->max_length;

@@ -1,13 +1,16 @@
 void __fastcall BlankEarthSpotEntity___ctor(BlankEarthSpotEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42AFE91 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E8616 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_int___ctor__);
-    byte_42AFE91 = 1;
+    sub_B5D5C4(&Method_DataEntityBase_int___ctor__, (_DWORD)method, v2, v3);
+    byte_42E8616 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_23E2184 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_23FACBC *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -34,14 +37,16 @@ bool __fastcall BlankEarthSpotEntity__IsForceTouchDisabled(BlankEarthSpotEntity_
 
 bool __fastcall BlankEarthSpotEntity__IsOpen(BlankEarthSpotEntity_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   int32_t condTargetId; // w20
   int32_t condTargetType; // w21
   int64_t condTargetNum; // x19
 
-  if ( (byte_42AFE8F & 1) == 0 )
+  if ( (byte_42E8614 & 1) == 0 )
   {
-    sub_B52984(&CondType_TypeInfo);
-    byte_42AFE8F = 1;
+    sub_B5D5C4(&CondType_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E8614 = 1;
   }
   condTargetType = this->fields.condTargetType;
   condTargetId = this->fields.condTargetId;
@@ -62,10 +67,10 @@ bool __fastcall BlankEarthSpotEntity__IsOpenForQAA(
   int32_t condTargetType; // w23
   int64_t condTargetNum; // x21
 
-  if ( (byte_42AFE90 & 1) == 0 )
+  if ( (byte_42E8615 & 1) == 0 )
   {
-    sub_B52984(&CondType_TypeInfo);
-    byte_42AFE90 = 1;
+    sub_B5D5C4(&CondType_TypeInfo, beforeClearQuestId, isCheckResetFlag, method);
+    byte_42E8615 = 1;
   }
   condTargetType = this->fields.condTargetType;
   condTargetId = this->fields.condTargetId;

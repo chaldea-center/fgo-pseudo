@@ -13,25 +13,27 @@ void __fastcall changeVColor__LateUpdate(changeVColor_o *this, const MethodInfo 
 
 void __fastcall changeVColor__UpdateVColor(changeVColor_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   bool isPlaying; // w20
   UnityEngine_MeshFilter_o *Component_WebViewObject; // x0
-  __int64 v5; // x1
-  UnityEngine_Mesh_o *v6; // x20
+  __int64 v7; // x1
+  UnityEngine_Mesh_o *v8; // x20
   UnityEngine_Color_array *colors; // x21
   UnityEngine_MeshFilter_c *klass; // x10
   unsigned __int64 max_length; // x9
-  unsigned __int64 v10; // x8
-  __int64 v11; // x0
+  unsigned __int64 v12; // x8
+  __int64 v13; // x0
 
-  if ( (byte_42AF9B7 & 1) == 0 )
+  if ( (byte_42E73D3 & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_Component_GetComponent_MeshFilter___);
-    byte_42AF9B7 = 1;
+    sub_B5D5C4(&Method_UnityEngine_Component_GetComponent_MeshFilter___, (_DWORD)method, v2, v3);
+    byte_42E73D3 = 1;
   }
   isPlaying = UnityEngine_Application__get_isPlaying(0LL);
   Component_WebViewObject = (UnityEngine_MeshFilter_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                           (UnityEngine_Component_o *)this,
-                                                          (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_MeshFilter___);
+                                                          (const MethodInfo_1ADE2A0 *)Method_UnityEngine_Component_GetComponent_MeshFilter___);
   if ( !Component_WebViewObject )
     goto LABEL_16;
   Component_WebViewObject = (UnityEngine_MeshFilter_o *)(isPlaying
@@ -39,11 +41,11 @@ void __fastcall changeVColor__UpdateVColor(changeVColor_o *this, const MethodInf
                                                        : UnityEngine_MeshFilter__get_sharedMesh(
                                                            Component_WebViewObject,
                                                            0LL));
-  v6 = (UnityEngine_Mesh_o *)Component_WebViewObject;
+  v8 = (UnityEngine_Mesh_o *)Component_WebViewObject;
   if ( !Component_WebViewObject )
     goto LABEL_16;
   colors = UnityEngine_Mesh__get_colors((UnityEngine_Mesh_o *)Component_WebViewObject, 0LL);
-  Component_WebViewObject = (UnityEngine_MeshFilter_o *)UnityEngine_Mesh__get_colors(v6, 0LL);
+  Component_WebViewObject = (UnityEngine_MeshFilter_o *)UnityEngine_Mesh__get_colors(v8, 0LL);
   if ( !Component_WebViewObject )
     goto LABEL_16;
   klass = Component_WebViewObject[1].klass;
@@ -51,19 +53,19 @@ void __fastcall changeVColor__UpdateVColor(changeVColor_o *this, const MethodInf
     goto LABEL_14;
   if ( !colors )
 LABEL_16:
-    sub_B52A5C(Component_WebViewObject, v5);
+    sub_B5D69C(Component_WebViewObject, v7);
   max_length = colors->max_length;
-  v10 = 0LL;
+  v12 = 0LL;
   do
   {
-    if ( v10 >= max_length )
+    if ( v12 >= max_length )
     {
-      v11 = sub_B52A88(Component_WebViewObject);
-      sub_B52A28(v11, 0LL);
+      v13 = sub_B5D6C8(Component_WebViewObject);
+      sub_B5D668(v13, 0LL);
     }
-    *(_OWORD *)&colors->m_Items[v10++].fields.g = *(_OWORD *)&this->fields.color.fields.g;
+    *(_OWORD *)&colors->m_Items[v12++].fields.g = *(_OWORD *)&this->fields.color.fields.g;
   }
-  while ( (__int64)v10 < (int)klass );
+  while ( (__int64)v12 < (int)klass );
 LABEL_14:
-  UnityEngine_Mesh__set_colors(v6, colors, 0LL);
+  UnityEngine_Mesh__set_colors(v8, colors, 0LL);
 }

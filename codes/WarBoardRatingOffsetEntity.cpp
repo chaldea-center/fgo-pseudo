@@ -1,37 +1,41 @@
 void __fastcall WarBoardRatingOffsetEntity___ctor(WarBoardRatingOffsetEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B21C2 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42EAB21 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_int___ctor__);
-    byte_42B21C2 = 1;
+    sub_B5D5C4(&Method_DataEntityBase_int___ctor__, (_DWORD)method, v2, v3);
+    byte_42EAB21 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_23E2184 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_23FACBC *)Method_DataEntityBase_int___ctor__);
   *(_QWORD *)&this->fields.id = 0LL;
   *(_QWORD *)&this->fields.category = 0LL;
   *(_QWORD *)&this->fields.value2 = 0LL;
 }
 
 
-void __fastcall WarBoardRatingOffsetEntity___ctor_29034948(
+void __fastcall WarBoardRatingOffsetEntity___ctor_29112216(
         WarBoardRatingOffsetEntity_o *this,
         WarBoardRatingOffsetEntity_o *cSrc,
         const MethodInfo *method)
 {
-  __int64 v5; // x0
-  __int64 v6; // x1
+  __int64 v3; // x3
+  __int64 v6; // x0
+  __int64 v7; // x1
 
-  if ( (byte_42B21C3 & 1) == 0 )
+  if ( (byte_42EAB22 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_int___ctor__);
-    byte_42B21C3 = 1;
+    sub_B5D5C4(&Method_DataEntityBase_int___ctor__, (_DWORD)cSrc, (_DWORD)method, v3);
+    byte_42EAB22 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_23E2184 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_23FACBC *)Method_DataEntityBase_int___ctor__);
   if ( !cSrc )
-    sub_B52A5C(v5, v6);
+    sub_B5D69C(v6, v7);
   this->fields.id = cSrc->fields.id;
   this->fields.category = cSrc->fields.category;
   this->fields.type = cSrc->fields.type;

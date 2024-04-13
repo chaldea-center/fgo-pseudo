@@ -1,27 +1,32 @@
 void __fastcall UserFollowEntity___ctor(UserFollowEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42AEEFF & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E70F7 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_string___ctor__);
-    byte_42AEEFF = 1;
+    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
+    byte_42E70F7 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall UserFollowEntity__CreatePK(int64_t userId, int64_t followId, const MethodInfo *method)
 {
-  if ( (byte_42AEEFE & 1) == 0 )
+  __int64 v3; // x3
+
+  if ( (byte_42E70F6 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_long__long___);
-    byte_42AEEFE = 1;
+    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_long__long___, followId, (_DWORD)method, v3);
+    byte_42E70F6 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long_(
            userId,
            followId,
-           (const MethodInfo_1A4E118 *)Method_DataEntityBase_CreateMultiplePK_long__long___);
+           (const MethodInfo_1AE31E0 *)Method_DataEntityBase_CreateMultiplePK_long__long___);
 }
 
 

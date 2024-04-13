@@ -1,13 +1,16 @@
 void __fastcall UserEventMissionEntity___ctor(UserEventMissionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B1564 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E7093 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_string___ctor__);
-    byte_42B1564 = 1;
+    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
+    byte_42E7093 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -16,15 +19,17 @@ System_String_o *__fastcall UserEventMissionEntity__CreatePK(
         int32_t missionId,
         const MethodInfo *method)
 {
-  if ( (byte_42B1562 & 1) == 0 )
+  __int64 v3; // x3
+
+  if ( (byte_42E7091 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_42B1562 = 1;
+    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_long__int___, missionId, (_DWORD)method, v3);
+    byte_42E7091 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            missionId,
-           (const MethodInfo_1A4E080 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_1AE3148 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -40,13 +45,15 @@ System_String_o *__fastcall UserEventMissionEntity__CreatePrimaryKey(
 
 bool __fastcall UserEventMissionEntity__IsTodayMissionData(UserEventMissionEntity_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   int64_t TodayStartTime; // x0
   int64_t updatedAt; // x19
 
-  if ( (byte_42B1563 & 1) == 0 )
+  if ( (byte_42E7092 & 1) == 0 )
   {
-    sub_B52984(&NetworkManager_TypeInfo);
-    byte_42B1563 = 1;
+    sub_B5D5C4(&NetworkManager_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E7092 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )

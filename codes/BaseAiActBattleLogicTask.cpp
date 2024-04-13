@@ -37,10 +37,10 @@ void __fastcall BaseAiActBattleLogicTask__InterruptAction(
     if ( !IsNullOrEmpty )
     {
       if ( !perf )
-        sub_B52A5C(IsNullOrEmpty, v7);
+        sub_B5D69C(IsNullOrEmpty, v7);
       BattlePerformance__addActionData(perf, *p_interruptActions, 0LL);
       *p_interruptActions = 0LL;
-      sub_B52920(p_interruptActions);
+      sub_B5D560(p_interruptActions);
     }
   }
 }
@@ -52,5 +52,5 @@ void __fastcall BaseAiActBattleLogicTask__SetInterruptAction(
         const MethodInfo *method)
 {
   this->fields.interruptActions = actions;
-  sub_B52920(&this->fields.interruptActions);
+  sub_B5D560(&this->fields.interruptActions);
 }

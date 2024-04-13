@@ -6,27 +6,30 @@ void __fastcall FsmEventData___ctor(FsmEventData_o *this, const MethodInfo *meth
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
-  System_Int32_array **v9; // x1
-  System_Int32_array **v10; // x1
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  System_Int32_array **v12; // x1
+  System_Int32_array **v13; // x1
+  System_String_array **v14; // x2
+  System_String_array **v15; // x3
+  System_Boolean_array **v16; // x4
+  System_Int32_array **v17; // x5
+  System_Int32_array *v18; // x6
+  System_Int32_array *v19; // x7
 
-  if ( (byte_42B2BB6 & 1) == 0 )
+  if ( (byte_42EB520 & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_21291/*"none"*/);
-    sub_B52984(&StringLiteral_1/*""*/);
-    byte_42B2BB6 = 1;
+    sub_B5D5C4(&StringLiteral_21397/*"none"*/, (_DWORD)method, (_DWORD)v2, v3);
+    sub_B5D5C4(&StringLiteral_1/*""*/, v9, v10, v11);
+    byte_42EB520 = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_21291/*"none"*/;
-  this->fields.eventData = (struct System_String_o *)StringLiteral_21291/*"none"*/;
-  sub_B52920((BattleServantConfConponent_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
-  v10 = (System_Int32_array **)StringLiteral_1/*""*/;
+  v12 = (System_Int32_array **)StringLiteral_21397/*"none"*/;
+  this->fields.eventData = (struct System_String_o *)StringLiteral_21397/*"none"*/;
+  sub_B5D560((BattleServantConfConponent_o *)&this->fields, v12, v2, v3, v4, v5, v6, v7);
+  v13 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.title = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B52920((BattleServantConfConponent_o *)&this->fields.title, v10, v11, v12, v13, v14, v15, v16);
+  sub_B5D560((BattleServantConfConponent_o *)&this->fields.title, v13, v14, v15, v16, v17, v18, v19);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -58,7 +61,7 @@ void __fastcall FsmEventData__set_EventData(FsmEventData_o *this, System_String_
   System_Int32_array *v7; // x7
 
   this->fields.eventData = value;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -79,7 +82,7 @@ void __fastcall FsmEventData__set_Title(FsmEventData_o *this, System_String_o *v
   System_Int32_array *v7; // x7
 
   this->fields.title = value;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.title,
     (System_Int32_array **)value,
     (System_String_array **)method,

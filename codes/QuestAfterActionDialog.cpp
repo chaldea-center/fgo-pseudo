@@ -1,9 +1,12 @@
 void __fastcall QuestAfterActionDialog___ctor(QuestAfterActionDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B1897 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E9FF8 & 1) == 0 )
   {
-    sub_B52984(&BaseDialog_TypeInfo);
-    byte_42B1897 = 1;
+    sub_B5D5C4(&BaseDialog_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E9FF8 = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -13,22 +16,30 @@ void __fastcall QuestAfterActionDialog___ctor(QuestAfterActionDialog_o *this, co
 
 void __fastcall QuestAfterActionDialog__Init(QuestAfterActionDialog_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  __int64 v11; // x1
   UILabel_o *titleLabel; // x0
   UILabel_o *closeLabel; // x20
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  System_String_array **v14; // x2
+  System_String_array **v15; // x3
+  System_Boolean_array **v16; // x4
+  System_Int32_array **v17; // x5
+  System_Int32_array *v18; // x6
+  System_Int32_array *v19; // x7
 
-  if ( (byte_42B1893 & 1) == 0 )
+  if ( (byte_42E9FF4 & 1) == 0 )
   {
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&StringLiteral_3294/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_B52984(&StringLiteral_1/*""*/);
-    byte_42B1893 = 1;
+    sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&StringLiteral_3327/*"COMMON_CONFIRM_CLOSE"*/, v5, v6, v7);
+    sub_B5D5C4(&StringLiteral_1/*""*/, v8, v9, v10);
+    byte_42E9FF4 = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   titleLabel = this->fields.titleLabel;
@@ -45,33 +56,41 @@ void __fastcall QuestAfterActionDialog__Init(QuestAfterActionDialog_o *this, con
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3294/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3327/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
 LABEL_10:
-    sub_B52A5C(titleLabel, v3);
+    sub_B5D69C(titleLabel, v11);
   UILabel__set_text(closeLabel, (System_String_o *)titleLabel, 0LL);
   this->fields.closeAction = 0LL;
-  sub_B52920((BattleServantConfConponent_o *)&this->fields.closeAction, 0LL, v6, v7, v8, v9, v10, v11);
+  sub_B5D560((BattleServantConfConponent_o *)&this->fields.closeAction, 0LL, v14, v15, v16, v17, v18, v19);
 }
 
 
 void __fastcall QuestAfterActionDialog__OnClickCloseButton(QuestAfterActionDialog_o *this, const MethodInfo *method)
 {
-  System_Action_o *v3; // x20
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  System_Action_o *v11; // x20
 
-  if ( (byte_42B1895 & 1) == 0 )
+  if ( (byte_42E9FF6 & 1) == 0 )
   {
-    sub_B52984(&System_Action_TypeInfo);
-    sub_B52984(&Method_QuestAfterActionDialog__OnClickCloseButton_b__8_0__);
-    sub_B52984(&SoundManager_TypeInfo);
-    byte_42B1895 = 1;
+    sub_B5D5C4(&System_Action_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_QuestAfterActionDialog__OnClickCloseButton_b__8_0__, v5, v6, v7);
+    sub_B5D5C4(&SoundManager_TypeInfo, v8, v9, v10);
+    byte_42E9FF6 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playSystemSe(0, 0LL);
-  v3 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
-  System_Action___ctor(v3, (Il2CppObject *)this, Method_QuestAfterActionDialog__OnClickCloseButton_b__8_0__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v3, 0LL);
+  v11 = (System_Action_o *)sub_B5D694(System_Action_TypeInfo);
+  System_Action___ctor(v11, (Il2CppObject *)this, Method_QuestAfterActionDialog__OnClickCloseButton_b__8_0__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
 
 
@@ -96,10 +115,10 @@ void __fastcall QuestAfterActionDialog__Open(
   BaseDialog__Open((BaseDialog_o *)this, 0LL, 0, 0LL);
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel || (UILabel__set_text(titleLabel, title, 0LL), (titleLabel = this->fields.messageLabel) == 0LL) )
-    sub_B52A5C(titleLabel, v9);
+    sub_B5D69C(titleLabel, v9);
   UILabel__set_text(titleLabel, message, 0LL);
   this->fields.closeAction = closeAction;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.closeAction,
     (System_Int32_array **)closeAction,
     v11,
@@ -114,17 +133,19 @@ void __fastcall QuestAfterActionDialog__Open(
 
 void __fastcall QuestAfterActionDialog__ResetScrollPosition(QuestAfterActionDialog_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   UnityEngine_Component_o *messageLabel; // x0
   UnityEngine_GameObject_o *gameObject; // x20
   struct UIScrollView_o *scrollView; // x20
   float height; // s0
-  struct UILabel_o *v7; // x8
-  int v8; // w8
+  struct UILabel_o *v9; // x8
+  int v10; // w8
 
-  if ( (byte_42B1894 & 1) == 0 )
+  if ( (byte_42E9FF5 & 1) == 0 )
   {
-    sub_B52984(&NGUITools_TypeInfo);
-    byte_42B1894 = 1;
+    sub_B5D5C4(&NGUITools_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E9FF5 = 1;
   }
   messageLabel = (UnityEngine_Component_o *)this->fields.messageLabel;
   if ( !messageLabel )
@@ -132,7 +153,7 @@ void __fastcall QuestAfterActionDialog__ResetScrollPosition(QuestAfterActionDial
   gameObject = UnityEngine_Component__get_gameObject(messageLabel, 0LL);
   if ( (BYTE3(NGUITools_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  NGUITools__UpdateWidgetCollider_46084448(gameObject, 1, 0LL);
+  NGUITools__UpdateWidgetCollider_46199640(gameObject, 1, 0LL);
   scrollView = this->fields.scrollView;
   if ( !scrollView )
     goto LABEL_15;
@@ -140,15 +161,15 @@ void __fastcall QuestAfterActionDialog__ResetScrollPosition(QuestAfterActionDial
   if ( !messageLabel )
     goto LABEL_15;
   height = UIPanel__get_height((UIPanel_o *)messageLabel, 0LL);
-  v7 = this->fields.messageLabel;
-  if ( !v7 )
+  v9 = this->fields.messageLabel;
+  if ( !v9 )
     goto LABEL_15;
-  v8 = height <= (float)v7->fields.mHeight ? 1 : 4;
-  HIDWORD(scrollView->fields.onDragStarted) = v8;
+  v10 = height <= (float)v9->fields.mHeight ? 1 : 4;
+  HIDWORD(scrollView->fields.onDragStarted) = v10;
   messageLabel = (UnityEngine_Component_o *)this->fields.scrollView;
   if ( !messageLabel )
 LABEL_15:
-    sub_B52A5C(messageLabel, method);
+    sub_B5D69C(messageLabel, method);
   UIScrollView__ResetPosition((UIScrollView_o *)messageLabel, 0LL);
 }
 
@@ -168,10 +189,13 @@ System_String_o *__fastcall QuestAfterActionDialog__get_closeBtnPath(
         QuestAfterActionDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_42B1896 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E9FF7 & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_15584/*"Window/CloseButton"*/);
-    byte_42B1896 = 1;
+    sub_B5D5C4(&StringLiteral_15669/*"Window/CloseButton"*/, (_DWORD)method, v2, v3);
+    byte_42E9FF7 = 1;
   }
-  return (System_String_o *)StringLiteral_15584/*"Window/CloseButton"*/;
+  return (System_String_o *)StringLiteral_15669/*"Window/CloseButton"*/;
 }

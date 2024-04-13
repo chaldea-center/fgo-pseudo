@@ -3,41 +3,48 @@ void __fastcall UserItemListViewItem___ctor(
         UserItemData_o *usrItemData,
         const MethodInfo *method)
 {
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  System_String_array **v12; // x2
+  System_String_array **v13; // x3
+  System_Boolean_array **v14; // x4
+  System_Int32_array **v15; // x5
+  System_Int32_array *v16; // x6
+  System_Int32_array *v17; // x7
   DataManager_o *Instance; // x0
-  __int64 v12; // x1
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
+  __int64 v19; // x1
+  System_String_array **v20; // x2
+  System_String_array **v21; // x3
+  System_Boolean_array **v22; // x4
+  System_Int32_array **v23; // x5
+  System_Int32_array *v24; // x6
+  System_Int32_array *v25; // x7
   struct System_String_o *name; // x1
   WarEntity_o *Entity; // x0
 
-  if ( (byte_42AEF6D & 1) == 0 )
+  if ( (byte_42E716D & 1) == 0 )
   {
-    sub_B52984(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_B52984(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_42AEF6D = 1;
+    sub_B5D5C4(&Method_DataManager_GetMasterData_ItemMaster___, (_DWORD)usrItemData, (_DWORD)method, v3);
+    sub_B5D5C4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v6, v7, v8);
+    sub_B5D5C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9, v10, v11);
+    byte_42E716D = 1;
   }
   ListViewItem___ctor((ListViewItem_o *)this, 0LL);
   this->fields.itemData = usrItemData;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.itemData,
     (System_Int32_array **)usrItemData,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10);
+    v12,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17);
   if ( !usrItemData )
     goto LABEL_9;
   this->fields.itemId = usrItemData->fields.itemId;
@@ -46,29 +53,29 @@ void __fastcall UserItemListViewItem___ctor(
   this->fields.itemImgId = usrItemData->fields.itemImgId;
   name = usrItemData->fields.name;
   this->fields.itemName = name;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.itemName,
     (System_Int32_array **)name,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
+    v20,
+    v21,
+    v22,
+    v23,
+    v24,
+    v25);
   this->fields.itemNum = usrItemData->fields.num;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL )
+                                      (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL )
   {
 LABEL_9:
-    sub_B52A5C(Instance, v12);
+    sub_B5D69C(Instance, v19);
   }
   Entity = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
              (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
              this->fields.itemId,
-             (const MethodInfo_23E22D8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+             (const MethodInfo_23FAE10 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   if ( Entity )
     this->fields.itemLostTime = *(_QWORD *)&Entity->fields.eventId;
 }

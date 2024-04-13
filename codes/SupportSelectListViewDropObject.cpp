@@ -14,7 +14,7 @@ void __fastcall SupportSelectListViewDropObject__ActivateEquipOnly(
 
   memberObject = this->fields.memberObject;
   if ( !memberObject || (this = (SupportSelectListViewDropObject_o *)memberObject->fields.itemDraw) == 0LL )
-    sub_B52A5C(this, method);
+    sub_B5D69C(this, method);
   SupportSelectItemDraw__ActivateEquipOnly((SupportSelectItemDraw_o *)this, method);
 }
 
@@ -23,29 +23,31 @@ UnityEngine_GameObject_o *__fastcall SupportSelectListViewDropObject__CreateDrag
         SupportSelectListViewDropObject_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   UnityEngine_GameObject_o *DragObject; // x0
-  __int64 v4; // x1
-  UnityEngine_GameObject_o *v5; // x19
-  const MethodInfo *v6; // x5
+  __int64 v6; // x1
+  UnityEngine_GameObject_o *v7; // x19
+  const MethodInfo *v8; // x5
   struct SupportSelectObject_o *memberObject; // x8
-  SupportSelectListViewDropObject_o *v8; // x20
-  const MethodInfo *v9; // x1
+  SupportSelectListViewDropObject_o *v10; // x20
+  const MethodInfo *v11; // x1
 
-  if ( (byte_42B299A & 1) == 0 )
+  if ( (byte_42EB3CE & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewDropObject___);
-    byte_42B299A = 1;
+    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewDropObject___, (_DWORD)method, v2, v3);
+    byte_42EB3CE = 1;
   }
   DragObject = ListViewDropObject__CreateDragObject((ListViewDropObject_o *)this, 0LL);
   if ( !DragObject
-    || (v5 = DragObject,
+    || (v7 = DragObject,
         DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                    DragObject,
-                                                   (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewDropObject___),
+                                                   (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewDropObject___),
         (memberObject = this->fields.memberObject) == 0LL)
-    || (v8 = (SupportSelectListViewDropObject_o *)DragObject) == 0LL )
+    || (v10 = (SupportSelectListViewDropObject_o *)DragObject) == 0LL )
   {
-    sub_B52A5C(DragObject, v4);
+    sub_B5D69C(DragObject, v6);
   }
   SupportSelectListViewDropObject__SetData(
     (SupportSelectListViewDropObject_o *)DragObject,
@@ -53,33 +55,41 @@ UnityEngine_GameObject_o *__fastcall SupportSelectListViewDropObject__CreateDrag
     memberObject->fields.deckNum,
     memberObject->fields.classPos,
     memberObject->fields.eventFriendPoints,
-    v6);
-  SupportSelectListViewDropObject__ActivateEquipOnly(v8, v9);
-  return v5;
+    v8);
+  SupportSelectListViewDropObject__ActivateEquipOnly(v10, v11);
+  return v7;
 }
 
 
-UnityEngine_GameObject_o *__fastcall SupportSelectListViewDropObject__CreateDragObject_29840600(
+UnityEngine_GameObject_o *__fastcall SupportSelectListViewDropObject__CreateDragObject_30207024(
         SupportSelectListViewDropObject_o *this,
         int32_t addDepth,
         const MethodInfo *method)
 {
-  UnityEngine_Object_o *v5; // x20
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  UnityEngine_Object_o *v9; // x20
   SupportSelectObject_o *msSpriteName; // x0
-  __int64 v7; // x1
+  __int64 v11; // x1
   srcLineSprite_o *Component_srcLineSprite; // x21
-  const MethodInfo *v9; // x2
-  const MethodInfo *v10; // x5
-  struct System_String_o *v11; // x8
-  const MethodInfo *v12; // x1
+  const MethodInfo *v13; // x2
+  const MethodInfo *v14; // x5
+  struct System_String_o *v15; // x8
+  const MethodInfo *v16; // x1
 
-  if ( (byte_42B299B & 1) == 0 )
+  if ( (byte_42EB3CF & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewDropObject___);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42B299B = 1;
+    sub_B5D5C4(
+      &Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewDropObject___,
+      addDepth,
+      (_DWORD)method,
+      v3);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v6, v7, v8);
+    byte_42EB3CF = 1;
   }
-  v5 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(SupportSelectListViewDropObject_o *, Il2CppMethodPointer, const MethodInfo *))this->klass->vtable._8_CreateDragObject.method)(
+  v9 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(SupportSelectListViewDropObject_o *, Il2CppMethodPointer, const MethodInfo *))this->klass->vtable._8_CreateDragObject.method)(
                                  this,
                                  this->klass->vtable._9_SetInput.methodPtr,
                                  method);
@@ -88,14 +98,14 @@ UnityEngine_GameObject_o *__fastcall SupportSelectListViewDropObject__CreateDrag
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  msSpriteName = (SupportSelectObject_o *)UnityEngine_Object__op_Inequality(v5, 0LL, 0LL);
+  msSpriteName = (SupportSelectObject_o *)UnityEngine_Object__op_Inequality(v9, 0LL, 0LL);
   if ( ((unsigned __int8)msSpriteName & 1) != 0 )
   {
-    if ( !v5 )
+    if ( !v9 )
       goto LABEL_17;
     Component_srcLineSprite = UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                (UnityEngine_GameObject_o *)v5,
-                                (const MethodInfo_1B7B1B8 *)Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewDropObject___);
+                                (UnityEngine_GameObject_o *)v9,
+                                (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewDropObject___);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
@@ -112,29 +122,29 @@ UnityEngine_GameObject_o *__fastcall SupportSelectListViewDropObject__CreateDrag
         msSpriteName = (SupportSelectObject_o *)Component_srcLineSprite->fields.msSpriteName;
         if ( msSpriteName )
         {
-          SupportSelectObject__AddDepth(msSpriteName, addDepth, v9);
-          v11 = Component_srcLineSprite->fields.msSpriteName;
-          if ( v11 )
+          SupportSelectObject__AddDepth(msSpriteName, addDepth, v13);
+          v15 = Component_srcLineSprite->fields.msSpriteName;
+          if ( v15 )
           {
             SupportSelectListViewDropObject__SetData(
               (SupportSelectListViewDropObject_o *)Component_srcLineSprite,
-              *(SupportServantData_o **)&v11[1].fields,
-              (int32_t)v11[2].klass,
-              HIDWORD(v11[2].klass),
-              (EventCampaignEntity_array *)v11[2].monitor,
-              v10);
+              *(SupportServantData_o **)&v15[1].fields,
+              (int32_t)v15[2].klass,
+              HIDWORD(v15[2].klass),
+              (EventCampaignEntity_array *)v15[2].monitor,
+              v14);
             SupportSelectListViewDropObject__ActivateEquipOnly(
               (SupportSelectListViewDropObject_o *)Component_srcLineSprite,
-              v12);
-            return (UnityEngine_GameObject_o *)v5;
+              v16);
+            return (UnityEngine_GameObject_o *)v9;
           }
         }
       }
 LABEL_17:
-      sub_B52A5C(msSpriteName, v7);
+      sub_B5D69C(msSpriteName, v11);
     }
   }
-  return (UnityEngine_GameObject_o *)v5;
+  return (UnityEngine_GameObject_o *)v9;
 }
 
 
@@ -142,39 +152,44 @@ void __fastcall SupportSelectListViewDropObject__DestroyDragObj(
         SupportSelectListViewDropObject_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
   BattleServantConfConponent_o *p_dragObject; // x19
-  UnityEngine_Object_o *v4; // x20
+  UnityEngine_Object_o *v9; // x20
   struct UnityEngine_GameObject_o *dragObject; // t1
   UnityEngine_Object_o *klass; // x20
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
+  System_String_array **v12; // x2
+  System_String_array **v13; // x3
+  System_Boolean_array **v14; // x4
+  System_Int32_array **v15; // x5
+  System_Int32_array *v16; // x6
+  System_Int32_array *v17; // x7
 
-  if ( (byte_42B2999 & 1) == 0 )
+  if ( (byte_42EB3CD & 1) == 0 )
   {
-    sub_B52984(&NGUITools_TypeInfo);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42B2999 = 1;
+    sub_B5D5C4(&NGUITools_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v5, v6, v7);
+    byte_42EB3CD = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (BattleServantConfConponent_o *)&this->fields.dragObject;
-  v4 = (UnityEngine_Object_o *)dragObject;
+  v9 = (UnityEngine_Object_o *)dragObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(v4, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v9, 0LL, 0LL) )
   {
     klass = (UnityEngine_Object_o *)p_dragObject->klass;
     if ( (BYTE3(NGUITools_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_B52920(p_dragObject, 0LL, v7, v8, v9, v10, v11, v12);
+    sub_B5D560(p_dragObject, 0LL, v12, v13, v14, v15, v16, v17);
   }
 }
 
@@ -190,7 +205,7 @@ void __fastcall SupportSelectListViewDropObject__DoSwap(
   float z; // s9
   float y; // s10
   float x; // s11
-  struct UnityEngine_GameObject_o *DragObject_29840600; // x0
+  struct UnityEngine_GameObject_o *DragObject_30207024; // x0
   System_String_array **v11; // x2
   System_String_array **v12; // x3
   System_Boolean_array **v13; // x4
@@ -209,11 +224,11 @@ void __fastcall SupportSelectListViewDropObject__DoSwap(
   z = targetPosition.fields.z;
   y = targetPosition.fields.y;
   x = targetPosition.fields.x;
-  DragObject_29840600 = SupportSelectListViewDropObject__CreateDragObject_29840600(this, -100, v4);
-  this->fields.dragObject = DragObject_29840600;
-  sub_B52920(
+  DragObject_30207024 = SupportSelectListViewDropObject__CreateDragObject_30207024(this, -100, v4);
+  this->fields.dragObject = DragObject_30207024;
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.dragObject,
-    (System_Int32_array **)DragObject_29840600,
+    (System_Int32_array **)DragObject_30207024,
     v11,
     v12,
     v13,
@@ -245,7 +260,7 @@ void __fastcall SupportSelectListViewDropObject__DoSwap(
                                            0LL);
   if ( !transform )
 LABEL_6:
-    sub_B52A5C(transform, v18);
+    sub_B5D69C(transform, v18);
   LODWORD(transform[1].klass) = 3;
 }
 
@@ -266,7 +281,7 @@ void __fastcall SupportSelectListViewDropObject__HideEquip(
 
   memberObject = this->fields.memberObject;
   if ( !memberObject )
-    sub_B52A5C(0LL, method);
+    sub_B5D69C(0LL, method);
   SupportSelectObject__HideEquip(memberObject, method);
 }
 
@@ -275,43 +290,48 @@ bool __fastcall SupportSelectListViewDropObject__IsCanDrag(
         SupportSelectListViewDropObject_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
   struct ListViewManager_o *manager; // x8
-  __int64 v4; // x11
-  struct ListViewManager_o *v5; // x20
-  _BOOL8 v6; // x0
-  __int64 v7; // x1
+  __int64 v9; // x11
+  struct ListViewManager_o *v10; // x20
+  _BOOL8 v11; // x0
+  __int64 v12; // x1
 
-  if ( (byte_42B2998 & 1) == 0 )
+  if ( (byte_42EB3CC & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    sub_B52984(&SupportSelectListViewManager_TypeInfo);
-    byte_42B2998 = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&SupportSelectListViewManager_TypeInfo, v5, v6, v7);
+    byte_42EB3CC = 1;
   }
   manager = this->fields.manager;
   if ( manager
-    && (v4 = *(&SupportSelectListViewManager_TypeInfo->_2.bitflags2 + 1),
-        *(&manager->klass->_2.bitflags2 + 1) >= (unsigned int)v4) )
+    && (v9 = *(&SupportSelectListViewManager_TypeInfo->_2.bitflags2 + 1),
+        *(&manager->klass->_2.bitflags2 + 1) >= (unsigned int)v9) )
   {
-    if ( (SupportSelectListViewManager_c *)manager->klass->_2.typeHierarchy[v4 - 1] == SupportSelectListViewManager_TypeInfo )
-      v5 = this->fields.manager;
+    if ( (SupportSelectListViewManager_c *)manager->klass->_2.typeHierarchy[v9 - 1] == SupportSelectListViewManager_TypeInfo )
+      v10 = this->fields.manager;
     else
-      v5 = 0LL;
+      v10 = 0LL;
   }
   else
   {
-    v5 = 0LL;
+    v10 = 0LL;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  v6 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v5, 0LL, 0LL);
-  if ( !v6 )
+  v11 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v10, 0LL, 0LL);
+  if ( !v11 )
     return 0;
-  if ( !v5 )
-    sub_B52A5C(v6, v7);
-  return LOBYTE(v5[1].fields.sortOrderSprite) && this->fields.isEquipPress;
+  if ( !v10 )
+    sub_B5D69C(v11, v12);
+  return LOBYTE(v10[1].fields.sortOrderSprite) && this->fields.isEquipPress;
 }
 
 
@@ -319,39 +339,44 @@ void __fastcall SupportSelectListViewDropObject__OnDestroy(
         SupportSelectListViewDropObject_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
   BattleServantConfConponent_o *p_dragObject; // x19
-  UnityEngine_Object_o *v4; // x20
+  UnityEngine_Object_o *v9; // x20
   struct UnityEngine_GameObject_o *dragObject; // t1
   UnityEngine_Object_o *klass; // x20
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
+  System_String_array **v12; // x2
+  System_String_array **v13; // x3
+  System_Boolean_array **v14; // x4
+  System_Int32_array **v15; // x5
+  System_Int32_array *v16; // x6
+  System_Int32_array *v17; // x7
 
-  if ( (byte_42B2997 & 1) == 0 )
+  if ( (byte_42EB3CB & 1) == 0 )
   {
-    sub_B52984(&NGUITools_TypeInfo);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42B2997 = 1;
+    sub_B5D5C4(&NGUITools_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v5, v6, v7);
+    byte_42EB3CB = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (BattleServantConfConponent_o *)&this->fields.dragObject;
-  v4 = (UnityEngine_Object_o *)dragObject;
+  v9 = (UnityEngine_Object_o *)dragObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(v4, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v9, 0LL, 0LL) )
   {
     klass = (UnityEngine_Object_o *)p_dragObject->klass;
     if ( (BYTE3(NGUITools_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_B52920(p_dragObject, 0LL, v7, v8, v9, v10, v11, v12);
+    sub_B5D560(p_dragObject, 0LL, v12, v13, v14, v15, v16, v17);
   }
 }
 
@@ -372,6 +397,7 @@ void __fastcall SupportSelectListViewDropObject__OnPressItem(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall SupportSelectListViewDropObject__SetData(
         SupportSelectListViewDropObject_o *this,
         SupportServantData_o *supportServantData,
@@ -385,10 +411,10 @@ void __fastcall SupportSelectListViewDropObject__SetData(
   const MethodInfo *v13; // x6
   SupportSelectObject_o *v14; // x0
 
-  if ( (byte_42B299C & 1) == 0 )
+  if ( (byte_42EB3D0 & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42B299C = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)supportServantData, deckNum, *(_QWORD *)&classPos);
+    byte_42EB3D0 = 1;
   }
   memberObject = (UnityEngine_Object_o *)this->fields.memberObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -400,7 +426,7 @@ void __fastcall SupportSelectListViewDropObject__SetData(
   {
     v14 = this->fields.memberObject;
     if ( !v14 )
-      sub_B52A5C(0LL, v12);
+      sub_B5D69C(0LL, v12);
     SupportSelectObject__SetItem(v14, supportServantData, deckNum, classPos, friendPointCampaigns, 0LL, v13);
   }
 }
@@ -414,6 +440,6 @@ void __fastcall SupportSelectListViewDropObject__ShowEquip(
 
   memberObject = this->fields.memberObject;
   if ( !memberObject )
-    sub_B52A5C(0LL, method);
+    sub_B5D69C(0LL, method);
   SupportSelectObject__ShowEquip(memberObject, method);
 }

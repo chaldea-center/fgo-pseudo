@@ -14,7 +14,7 @@ void __fastcall FriendshipExceedControl___ctor(FriendshipExceedControl_o *this, 
   v7 = 1065156608;
   v9 = 0;
   *(_QWORD *)&v10.fields.r = 0LL;
-  UnityEngine_Color___ctor_41463668(*(UnityEngine_Color_o *)(&v2 - 3), v3, v4, v5, (const MethodInfo *)&v10);
+  UnityEngine_Color___ctor_41567816(*(UnityEngine_Color_o *)(&v2 - 3), v3, v4, v5, (const MethodInfo *)&v10);
   this->fields.NORMAL_COLOR = v10;
   CombineMenuControl___ctor((CombineMenuControl_o *)this, 0LL);
 }
@@ -36,75 +36,93 @@ int32_t __fastcall FriendshipExceedControl__GetTutorialOpenType(
 
 void __fastcall FriendshipExceedControl__InitButtons(FriendshipExceedControl_o *this, const MethodInfo *method)
 {
-  FriendshipExceedControl_o *v2; // x19
+  int v2; // w2
+  __int64 v3; // x3
+  FriendshipExceedControl_o *v4; // x19
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
   struct UIButton_o *executeButton; // x8
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *onClick; // x20
-  EventDelegate_Callback_o *v5; // x22
-  EventDelegate_o *v6; // x21
+  EventDelegate_Callback_o *v19; // x22
+  EventDelegate_o *v20; // x21
   struct UITouchPress_o *baseServantTouchPress; // x8
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v8; // x20
-  EventDelegate_Callback_o *v9; // x22
-  EventDelegate_o *v10; // x21
-  struct UITouchPress_o *v11; // x8
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v22; // x20
+  EventDelegate_Callback_o *v23; // x22
+  EventDelegate_o *v24; // x21
+  struct UITouchPress_o *v25; // x8
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *onLongPress; // x20
-  EventDelegate_Callback_o *v13; // x22
-  EventDelegate_o *v14; // x21
+  EventDelegate_Callback_o *v27; // x22
+  EventDelegate_o *v28; // x21
 
-  v2 = this;
-  if ( (byte_42B2B88 & 1) == 0 )
+  v4 = this;
+  if ( (byte_42EB4F1 & 1) == 0 )
   {
-    sub_B52984(&EventDelegate_Callback_TypeInfo);
-    sub_B52984(&Method_CombineMenuControl_OnLongPushListView__);
-    sub_B52984(&EventDelegate_TypeInfo);
-    sub_B52984(&Method_FriendshipExceedControl_OnClickExecute__);
-    this = (FriendshipExceedControl_o *)sub_B52984(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    byte_42B2B88 = 1;
+    sub_B5D5C4(&EventDelegate_Callback_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_CombineMenuControl_OnLongPushListView__, v5, v6, v7);
+    sub_B5D5C4(&EventDelegate_TypeInfo, v8, v9, v10);
+    sub_B5D5C4(&Method_FriendshipExceedControl_OnClickExecute__, v11, v12, v13);
+    this = (FriendshipExceedControl_o *)sub_B5D5C4(
+                                          &Method_System_Collections_Generic_List_EventDelegate__Add__,
+                                          v14,
+                                          v15,
+                                          v16);
+    byte_42EB4F1 = 1;
   }
-  if ( !v2->fields.isButtonInitialized )
+  if ( !v4->fields.isButtonInitialized )
   {
-    executeButton = v2->fields.executeButton;
+    executeButton = v4->fields.executeButton;
     if ( !executeButton )
       goto LABEL_12;
     onClick = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)executeButton->fields.onClick;
-    v5 = (EventDelegate_Callback_o *)sub_B52A54(EventDelegate_Callback_TypeInfo);
-    EventDelegate_Callback___ctor(v5, (Il2CppObject *)v2, Method_FriendshipExceedControl_OnClickExecute__, 0LL);
-    v6 = (EventDelegate_o *)sub_B52A54(EventDelegate_TypeInfo);
-    EventDelegate___ctor_29649660(v6, v5, 0LL);
+    v19 = (EventDelegate_Callback_o *)sub_B5D694(EventDelegate_Callback_TypeInfo);
+    EventDelegate_Callback___ctor(v19, (Il2CppObject *)v4, Method_FriendshipExceedControl_OnClickExecute__, 0LL);
+    v20 = (EventDelegate_o *)sub_B5D694(EventDelegate_TypeInfo);
+    EventDelegate___ctor_29822308(v20, v19, 0LL);
     if ( !onClick )
       goto LABEL_12;
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
       onClick,
-      (EventMissionProgressRequest_Argument_ProgressData_o *)v6,
-      (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_EventDelegate__Add__);
-    baseServantTouchPress = v2->fields.baseServantTouchPress;
+      (EventMissionProgressRequest_Argument_ProgressData_o *)v20,
+      (const MethodInfo_3056FC0 *)Method_System_Collections_Generic_List_EventDelegate__Add__);
+    baseServantTouchPress = v4->fields.baseServantTouchPress;
     if ( !baseServantTouchPress )
       goto LABEL_12;
-    v8 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)baseServantTouchPress->fields.onClick;
-    v9 = (EventDelegate_Callback_o *)sub_B52A54(EventDelegate_Callback_TypeInfo);
-    EventDelegate_Callback___ctor(v9, (Il2CppObject *)v2, (intptr_t)v2->klass->vtable._5_OnClickHelp.methodPtr, 0LL);
-    v10 = (EventDelegate_o *)sub_B52A54(EventDelegate_TypeInfo);
-    EventDelegate___ctor_29649660(v10, v9, 0LL);
-    if ( !v8
+    v22 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)baseServantTouchPress->fields.onClick;
+    v23 = (EventDelegate_Callback_o *)sub_B5D694(EventDelegate_Callback_TypeInfo);
+    EventDelegate_Callback___ctor(v23, (Il2CppObject *)v4, (intptr_t)v4->klass->vtable._5_OnClickHelp.methodPtr, 0LL);
+    v24 = (EventDelegate_o *)sub_B5D694(EventDelegate_TypeInfo);
+    EventDelegate___ctor_29822308(v24, v23, 0LL);
+    if ( !v22
       || (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            v8,
-            (EventMissionProgressRequest_Argument_ProgressData_o *)v10,
-            (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_EventDelegate__Add__),
-          (v11 = v2->fields.baseServantTouchPress) == 0LL)
-      || (onLongPress = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v11->fields.onLongPress,
-          v13 = (EventDelegate_Callback_o *)sub_B52A54(EventDelegate_Callback_TypeInfo),
-          EventDelegate_Callback___ctor(v13, (Il2CppObject *)v2, Method_CombineMenuControl_OnLongPushListView__, 0LL),
-          v14 = (EventDelegate_o *)sub_B52A54(EventDelegate_TypeInfo),
-          EventDelegate___ctor_29649660(v14, v13, 0LL),
+            v22,
+            (EventMissionProgressRequest_Argument_ProgressData_o *)v24,
+            (const MethodInfo_3056FC0 *)Method_System_Collections_Generic_List_EventDelegate__Add__),
+          (v25 = v4->fields.baseServantTouchPress) == 0LL)
+      || (onLongPress = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v25->fields.onLongPress,
+          v27 = (EventDelegate_Callback_o *)sub_B5D694(EventDelegate_Callback_TypeInfo),
+          EventDelegate_Callback___ctor(v27, (Il2CppObject *)v4, Method_CombineMenuControl_OnLongPushListView__, 0LL),
+          v28 = (EventDelegate_o *)sub_B5D694(EventDelegate_TypeInfo),
+          EventDelegate___ctor_29822308(v28, v27, 0LL),
           !onLongPress) )
     {
 LABEL_12:
-      sub_B52A5C(this, method);
+      sub_B5D69C(this, method);
     }
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
       onLongPress,
-      (EventMissionProgressRequest_Argument_ProgressData_o *)v14,
-      (const MethodInfo_2FF1604 *)Method_System_Collections_Generic_List_EventDelegate__Add__);
-    v2->fields.isButtonInitialized = 1;
+      (EventMissionProgressRequest_Argument_ProgressData_o *)v28,
+      (const MethodInfo_3056FC0 *)Method_System_Collections_Generic_List_EventDelegate__Add__);
+    v4->fields.isButtonInitialized = 1;
   }
 }
 
@@ -113,55 +131,63 @@ void __fastcall FriendshipExceedControl__InitFriendshipExceed(
         FriendshipExceedControl_o *this,
         const MethodInfo *method)
 {
-  BalanceConfig_c *v3; // x0
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
-  const MethodInfo *v10; // x1
-  const MethodInfo *v11; // x1
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  BalanceConfig_c *v11; // x0
+  System_String_array **v12; // x2
+  System_String_array **v13; // x3
+  System_Boolean_array **v14; // x4
+  System_Int32_array **v15; // x5
+  System_Int32_array *v16; // x6
+  System_Int32_array *v17; // x7
+  const MethodInfo *v18; // x1
+  const MethodInfo *v19; // x1
   UILabel_o *preSelectBaseLabel; // x20
   System_String_o *gameObject; // x0
-  __int64 v14; // x1
+  __int64 v22; // x1
 
-  if ( (byte_42B2B86 & 1) == 0 )
+  if ( (byte_42EB4EF & 1) == 0 )
   {
-    sub_B52984(&BalanceConfig_TypeInfo);
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&StringLiteral_8892/*"MSG_PRESELECT_BASE_FRIENDSHIP_EXCEED"*/);
-    byte_42B2B86 = 1;
+    sub_B5D5C4(&BalanceConfig_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&LocalizationManager_TypeInfo, v5, v6, v7);
+    sub_B5D5C4(&StringLiteral_8929/*"MSG_PRESELECT_BASE_FRIENDSHIP_EXCEED"*/, v8, v9, v10);
+    byte_42EB4EF = 1;
   }
-  v3 = BalanceConfig_TypeInfo;
+  v11 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v3 = BalanceConfig_TypeInfo;
+    v11 = BalanceConfig_TypeInfo;
   }
-  if ( v3->static_fields->DisableFriendshipExceed <= 0 )
+  if ( v11->static_fields->DisableFriendshipExceed <= 0 )
   {
     CombineMenuControl__InitMenuControl((CombineMenuControl_o *)this, 0LL);
     this->fields._FriendshipEntity_k__BackingField = 0LL;
-    sub_B52920(
+    sub_B5D560(
       (BattleServantConfConponent_o *)&this->fields._FriendshipEntity_k__BackingField,
       0LL,
-      v4,
-      v5,
-      v6,
-      v7,
-      v8,
-      v9);
-    FriendshipExceedControl__InitButtons(this, v10);
-    FriendshipExceedControl__InitInfo(this, v11);
+      v12,
+      v13,
+      v14,
+      v15,
+      v16,
+      v17);
+    FriendshipExceedControl__InitButtons(this, v18);
+    FriendshipExceedControl__InitInfo(this, v19);
     preSelectBaseLabel = this->fields.preSelectBaseLabel;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_8892/*"MSG_PRESELECT_BASE_FRIENDSHIP_EXCEED"*/, 0LL);
+    gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_8929/*"MSG_PRESELECT_BASE_FRIENDSHIP_EXCEED"*/, 0LL);
     if ( !preSelectBaseLabel
       || (UILabel__set_text(preSelectBaseLabel, gameObject, 0LL),
           (gameObject = (System_String_o *)this->fields.preSelectBaseLabel) == 0LL)
@@ -171,7 +197,7 @@ void __fastcall FriendshipExceedControl__InitFriendshipExceed(
       || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL),
           (gameObject = (System_String_o *)this->fields.baseSelectInfoLabel) == 0LL) )
     {
-      sub_B52A5C(gameObject, v14);
+      sub_B5D69C(gameObject, v22);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
   }
@@ -186,80 +212,90 @@ void __fastcall FriendshipExceedControl__InitInfo(FriendshipExceedControl_o *thi
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  const MethodInfo *v15; // x1
-  const MethodInfo *v16; // x1
-  const MethodInfo *v17; // x1
-  const MethodInfo *v18; // x1
-  __int64 v19; // x1
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  System_String_array **v15; // x2
+  System_String_array **v16; // x3
+  System_Boolean_array **v17; // x4
+  System_Int32_array **v18; // x5
+  System_Int32_array *v19; // x6
+  System_Int32_array *v20; // x7
+  const MethodInfo *v21; // x1
+  const MethodInfo *v22; // x1
+  const MethodInfo *v23; // x1
+  const MethodInfo *v24; // x1
+  __int64 v25; // x1
   UnityEngine_GameObject_o *splitImage; // x0
-  const MethodInfo *v21; // x6
+  const MethodInfo *v27; // x6
   struct System_Collections_Generic_List_LimitCntUpItemComponent__o *limitCntUpItemComponentList; // x22
-  __int64 v23; // x20
+  __int64 v29; // x20
   int size; // w8
-  unsigned int v25; // w21
-  struct System_Collections_Generic_List_LimitCntUpItemComponent__o *v26; // x22
+  unsigned int v31; // w21
+  struct System_Collections_Generic_List_LimitCntUpItemComponent__o *v32; // x22
   struct System_Collections_Generic_List_GameObject__o *materialImages; // x22
   bool isItemEnough; // w3
 
-  if ( (byte_42B2B87 & 1) == 0 )
+  if ( (byte_42EB4F0 & 1) == 0 )
   {
-    sub_B52984(&Method_System_Collections_Generic_List_LimitCntUpItemComponent__get_Count__);
-    sub_B52984(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_B52984(&Method_System_Collections_Generic_List_LimitCntUpItemComponent__get_Item__);
-    byte_42B2B87 = 1;
+    sub_B5D5C4(
+      &Method_System_Collections_Generic_List_LimitCntUpItemComponent__get_Count__,
+      (_DWORD)method,
+      (_DWORD)v2,
+      v3);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_GameObject__get_Item__, v9, v10, v11);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_LimitCntUpItemComponent__get_Item__, v12, v13, v14);
+    byte_42EB4F0 = 1;
   }
   this->fields.isBaseSelected = 0;
   this->fields.baseUserServantEntity = 0LL;
-  sub_B52920((BattleServantConfConponent_o *)&this->fields.baseUserServantEntity, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B5D560((BattleServantConfConponent_o *)&this->fields.baseUserServantEntity, 0LL, v2, v3, v4, v5, v6, v7);
   this->fields.baseUserServantCollectionEntity = 0LL;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.baseUserServantCollectionEntity,
     0LL,
-    v9,
-    v10,
-    v11,
-    v12,
-    v13,
-    v14);
-  FriendshipExceedControl__SetUserQpInfo(this, v15);
-  FriendshipExceedControl__SetRequiredQpInfo(this, v16);
+    v15,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20);
+  FriendshipExceedControl__SetUserQpInfo(this, v21);
+  FriendshipExceedControl__SetRequiredQpInfo(this, v22);
   *(_WORD *)&this->fields.isFriendshipRankMax = 257;
   this->fields.isItemEnough = 1;
-  FriendshipExceedControl__SetExecuteButtonState(this, v17);
-  FriendshipExceedControl__ResetCharacterGraphic(this, v18);
+  FriendshipExceedControl__SetExecuteButtonState(this, v23);
+  FriendshipExceedControl__ResetCharacterGraphic(this, v24);
   splitImage = this->fields.splitImage;
   if ( !splitImage
     || (UnityEngine_GameObject__SetActive(splitImage, 0, 0LL),
         (limitCntUpItemComponentList = this->fields.limitCntUpItemComponentList) == 0LL) )
   {
 LABEL_29:
-    sub_B52A5C(splitImage, v19);
+    sub_B5D69C(splitImage, v25);
   }
-  v23 = 4LL;
+  v29 = 4LL;
   while ( 1 )
   {
     size = limitCntUpItemComponentList->fields._size;
-    v25 = v23 - 4;
-    if ( (int)v23 - 4 >= size )
+    v31 = v29 - 4;
+    if ( (int)v29 - 4 >= size )
       break;
-    if ( size <= v25 )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
-    splitImage = (UnityEngine_GameObject_o *)*((_QWORD *)&limitCntUpItemComponentList->fields._items->obj.klass + v23);
+    if ( size <= v31 )
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_42302284(0LL);
+    splitImage = (UnityEngine_GameObject_o *)*((_QWORD *)&limitCntUpItemComponentList->fields._items->obj.klass + v29);
     if ( splitImage )
     {
       LimitCntUpItemComponent__enableDispItemInfo((LimitCntUpItemComponent_o *)splitImage, 0LL);
-      v26 = this->fields.limitCntUpItemComponentList;
-      if ( v26 )
+      v32 = this->fields.limitCntUpItemComponentList;
+      if ( v32 )
       {
-        if ( v26->fields._size <= v25 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
-        splitImage = (UnityEngine_GameObject_o *)*((_QWORD *)&v26->fields._items->obj.klass + v23);
+        if ( v32->fields._size <= v31 )
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42302284(0LL);
+        splitImage = (UnityEngine_GameObject_o *)*((_QWORD *)&v32->fields._items->obj.klass + v29);
         if ( splitImage )
         {
           splitImage = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)splitImage, 0LL);
@@ -269,9 +305,9 @@ LABEL_29:
             materialImages = this->fields.materialImages;
             if ( materialImages )
             {
-              if ( materialImages->fields._size <= v25 )
-                System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
-              splitImage = (UnityEngine_GameObject_o *)*((_QWORD *)&materialImages->fields._items->obj.klass + v23);
+              if ( materialImages->fields._size <= v31 )
+                System_ThrowHelper__ThrowArgumentOutOfRangeException_42302284(0LL);
+              splitImage = (UnityEngine_GameObject_o *)*((_QWORD *)&materialImages->fields._items->obj.klass + v29);
               if ( splitImage )
               {
                 splitImage = UnityEngine_GameObject__get_gameObject(splitImage, 0LL);
@@ -279,7 +315,7 @@ LABEL_29:
                 {
                   UnityEngine_GameObject__SetActive(splitImage, 0, 0LL);
                   limitCntUpItemComponentList = this->fields.limitCntUpItemComponentList;
-                  ++v23;
+                  ++v29;
                   if ( limitCntUpItemComponentList )
                     continue;
                 }
@@ -311,32 +347,37 @@ LABEL_29:
     isItemEnough,
     0,
     0,
-    v21);
+    v27);
 }
 
 
 void __fastcall FriendshipExceedControl__OnClickExecute(FriendshipExceedControl_o *this, const MethodInfo *method)
 {
-  System_String_o *v3; // x0
-  __int64 v4; // x1
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  System_String_o *v8; // x0
+  __int64 v9; // x1
 
-  if ( (byte_42B2B91 & 1) == 0 )
+  if ( (byte_42EB4FA & 1) == 0 )
   {
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&StringLiteral_3365/*"CONFIRM_TITLE_FRIENDSHIP_EXCEED_COMBINE"*/);
-    byte_42B2B91 = 1;
+    sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&StringLiteral_3398/*"CONFIRM_TITLE_FRIENDSHIP_EXCEED_COMBINE"*/, v5, v6, v7);
+    byte_42EB4FA = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_3365/*"CONFIRM_TITLE_FRIENDSHIP_EXCEED_COMBINE"*/, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3398/*"CONFIRM_TITLE_FRIENDSHIP_EXCEED_COMBINE"*/, 0LL);
   if ( !this->fields.exeCombineDlg )
-    sub_B52A5C(v3, v4);
+    sub_B5D69C(v8, v9);
   SetRarityDialogControl__SetFriendshipExceedInfo(
     this->fields.exeCombineDlg,
-    v3,
+    v8,
     this->fields.requiredQp,
     this->fields.userQp,
     0LL);
@@ -347,21 +388,23 @@ void __fastcall FriendshipExceedControl__ResetCharacterGraphic(
         FriendshipExceedControl_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   UnityEngine_Object_o *characterGraphic; // x20
-  __int64 v4; // x1
+  __int64 v6; // x1
   UnityEngine_Component_o **p_characterGraphic; // x19
   UnityEngine_Object_o *gameObject; // x20
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
+  System_String_array **v9; // x2
+  System_String_array **v10; // x3
+  System_Boolean_array **v11; // x4
+  System_Int32_array **v12; // x5
+  System_Int32_array *v13; // x6
+  System_Int32_array *v14; // x7
 
-  if ( (byte_42B2B90 & 1) == 0 )
+  if ( (byte_42EB4F9 & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42B2B90 = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42EB4F9 = 1;
   }
   characterGraphic = (UnityEngine_Object_o *)this->fields.characterGraphic;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -373,16 +416,16 @@ void __fastcall FriendshipExceedControl__ResetCharacterGraphic(
   {
     p_characterGraphic = (UnityEngine_Component_o **)&this->fields.characterGraphic;
     if ( !*p_characterGraphic )
-      sub_B52A5C(0LL, v4);
+      sub_B5D69C(0LL, v6);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(*p_characterGraphic, 0LL);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_35616956(gameObject, 0LL);
+    UnityEngine_Object__Destroy_35620236(gameObject, 0LL);
     *p_characterGraphic = 0LL;
-    sub_B52920((BattleServantConfConponent_o *)p_characterGraphic, 0LL, v7, v8, v9, v10, v11, v12);
+    sub_B5D560((BattleServantConfConponent_o *)p_characterGraphic, 0LL, v9, v10, v11, v12, v13, v14);
   }
 }
 
@@ -397,38 +440,47 @@ void __fastcall FriendshipExceedControl__SetBaseServantCardImage(
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
+  int v10; // w1
+  int v11; // w2
+  __int64 v12; // x3
+  int v13; // w1
+  int v14; // w2
+  __int64 v15; // x3
+  int v16; // w1
+  int v17; // w2
+  __int64 v18; // x3
   UserServantEntity_o **p_baseUserServantEntity; // x20
-  __int64 v11; // x1
+  __int64 v20; // x1
   UserServantEntity_o *baseUserServantEntity; // x0
   int32_t CardImageLimitCount; // w21
-  UserServantEntity_o *v14; // x8
-  ServantLimitImageMaster_o *v15; // x22
-  __int64 v16; // x23
-  __int64 v17; // x24
+  UserServantEntity_o *v23; // x8
+  ServantLimitImageMaster_o *v24; // x22
+  __int64 v25; // x23
+  __int64 v26; // x24
   int32_t ServantImageLimitSealAfter; // w0
   UnityEngine_Object_o *characterGraphic; // x23
-  int32_t v20; // w21
+  int32_t v29; // w21
   struct UICharaGraphTexture_o **p_characterGraphic; // x22
-  struct UICharaGraphTexture_o *TexturePrefab_24904472; // x0
-  System_String_array **v23; // x2
-  System_String_array **v24; // x3
-  System_Boolean_array **v25; // x4
-  System_Int32_array **v26; // x5
-  System_Int32_array *v27; // x6
-  System_Int32_array *v28; // x7
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v29; // 0:x0.16
+  struct UICharaGraphTexture_o *TexturePrefab_26715804; // x0
+  System_String_array **v32; // x2
+  System_String_array **v33; // x3
+  System_Boolean_array **v34; // x4
+  System_Int32_array **v35; // x5
+  System_Int32_array *v36; // x6
+  System_Int32_array *v37; // x7
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v38; // 0:x0.16
 
-  if ( (byte_42B2B8F & 1) == 0 )
+  if ( (byte_42EB4F8 & 1) == 0 )
   {
-    sub_B52984(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    sub_B52984(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_42B2B8F = 1;
+    sub_B5D5C4(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, (_DWORD)entity, (_DWORD)method, v3);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v10, v11, v12);
+    sub_B5D5C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v13, v14, v15);
+    sub_B5D5C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16, v17, v18);
+    byte_42EB4F8 = 1;
   }
   this->fields.baseUserServantEntity = entity;
   p_baseUserServantEntity = &this->fields.baseUserServantEntity;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.baseUserServantEntity,
     (System_Int32_array **)entity,
     (System_String_array **)method,
@@ -441,37 +493,37 @@ void __fastcall FriendshipExceedControl__SetBaseServantCardImage(
   if ( !baseUserServantEntity )
     goto LABEL_17;
   CardImageLimitCount = UserServantEntity__getCardImageLimitCount(baseUserServantEntity, 0, 0LL);
-  baseUserServantEntity = (UserServantEntity_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  baseUserServantEntity = (UserServantEntity_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !baseUserServantEntity )
     goto LABEL_17;
   baseUserServantEntity = (UserServantEntity_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                    (DataManager_o *)baseUserServantEntity,
-                                                   (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-  v14 = *p_baseUserServantEntity;
+                                                   (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+  v23 = *p_baseUserServantEntity;
   if ( !*p_baseUserServantEntity )
     goto LABEL_17;
-  v15 = (ServantLimitImageMaster_o *)baseUserServantEntity;
-  v17 = *(_QWORD *)&v14->fields.svtId.fields.currentCryptoKey;
-  v16 = *(_QWORD *)&v14->fields.svtId.fields.fakeValue;
+  v24 = (ServantLimitImageMaster_o *)baseUserServantEntity;
+  v26 = *(_QWORD *)&v23->fields.svtId.fields.currentCryptoKey;
+  v25 = *(_QWORD *)&v23->fields.svtId.fields.fakeValue;
   if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   }
-  *(_QWORD *)&v29.fields.currentCryptoKey = v17;
-  *(_QWORD *)&v29.fields.fakeValue = v16;
-  baseUserServantEntity = (UserServantEntity_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44786420(
-                                                   v29,
+  *(_QWORD *)&v38.fields.currentCryptoKey = v26;
+  *(_QWORD *)&v38.fields.fakeValue = v25;
+  baseUserServantEntity = (UserServantEntity_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44899288(
+                                                   v38,
                                                    0LL);
-  if ( !v15 )
+  if ( !v24 )
     goto LABEL_17;
   ServantImageLimitSealAfter = ServantLimitImageMaster__GetServantImageLimitSealAfter(
-                                 v15,
+                                 v24,
                                  (int32_t)baseUserServantEntity,
                                  CardImageLimitCount,
                                  0LL);
   characterGraphic = (UnityEngine_Object_o *)this->fields.characterGraphic;
-  v20 = ServantImageLimitSealAfter;
+  v29 = ServantImageLimitSealAfter;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -480,34 +532,34 @@ void __fastcall FriendshipExceedControl__SetBaseServantCardImage(
   p_characterGraphic = &this->fields.characterGraphic;
   if ( UnityEngine_Object__op_Equality(characterGraphic, 0LL, 0LL) )
   {
-    TexturePrefab_24904472 = CharaGraphManager__CreateTexturePrefab_24904472(
+    TexturePrefab_26715804 = CharaGraphManager__CreateTexturePrefab_26715804(
                                this->fields.characterGraphicBase,
                                this->fields.baseUserServantEntity,
-                               v20,
+                               v29,
                                10,
                                0LL,
                                0,
                                0LL);
-    this->fields.characterGraphic = TexturePrefab_24904472;
-    sub_B52920(
+    this->fields.characterGraphic = TexturePrefab_26715804;
+    sub_B5D560(
       (BattleServantConfConponent_o *)&this->fields.characterGraphic,
-      (System_Int32_array **)TexturePrefab_24904472,
-      v23,
-      v24,
-      v25,
-      v26,
-      v27,
-      v28);
+      (System_Int32_array **)TexturePrefab_26715804,
+      v32,
+      v33,
+      v34,
+      v35,
+      v36,
+      v37);
     return;
   }
   baseUserServantEntity = (UserServantEntity_o *)*p_characterGraphic;
   if ( !*p_characterGraphic )
 LABEL_17:
-    sub_B52A5C(baseUserServantEntity, v11);
-  UICharaGraphTexture__SetCharacter_35944152(
+    sub_B5D69C(baseUserServantEntity, v20);
+  UICharaGraphTexture__SetCharacter_35988116(
     (UICharaGraphTexture_o *)baseUserServantEntity,
     *p_baseUserServantEntity,
-    v20,
+    v29,
     0LL,
     0,
     0LL);
@@ -516,172 +568,192 @@ LABEL_17:
 
 void __fastcall FriendshipExceedControl__SetEntities(FriendshipExceedControl_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  int v17; // w1
+  int v18; // w2
+  __int64 v19; // x3
+  int v20; // w1
+  int v21; // w2
+  __int64 v22; // x3
   int64_t Instance; // x0
-  __int64 v4; // x1
+  __int64 v24; // x1
   struct UserServantEntity_o *baseUserServantEntity; // x8
-  DataMasterBase_WarMaster__WarEntity__int__o *v6; // x20
-  __int64 v7; // x21
-  __int64 v8; // x22
-  WarEntity_o *v9; // x20
-  struct UserServantEntity_o *v10; // x8
-  __int128 v11; // q1
-  UserServantCollectionMaster_o *v12; // x21
-  struct UserServantEntity_o *v13; // x8
-  int64_t v14; // x22
-  struct UserServantCollectionEntity_o *v15; // x0
+  DataMasterBase_WarMaster__WarEntity__int__o *v26; // x20
+  __int64 v27; // x21
+  __int64 v28; // x22
+  WarEntity_o *v29; // x20
+  struct UserServantEntity_o *v30; // x8
+  __int128 v31; // q1
+  UserServantCollectionMaster_o *v32; // x21
+  struct UserServantEntity_o *v33; // x8
+  int64_t v34; // x22
+  struct UserServantCollectionEntity_o *v35; // x0
   struct UserServantCollectionEntity_o **p_baseUserServantCollectionEntity; // x21
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
+  System_String_array **v37; // x2
+  System_String_array **v38; // x3
+  System_Boolean_array **v39; // x4
+  System_Int32_array **v40; // x5
+  System_Int32_array *v41; // x6
+  System_Int32_array *v42; // x7
   struct UserServantCollectionEntity_o *baseUserServantCollectionEntity; // x8
   int32_t friendshipExceedCount; // w25
   int32_t lastQuestId; // w22
-  const MethodInfo *v26; // x4
-  System_String_array **v27; // x2
-  System_String_array **v28; // x3
-  System_Boolean_array **v29; // x4
-  System_Int32_array **v30; // x5
-  System_Int32_array *v31; // x6
-  System_Int32_array *v32; // x7
-  System_Int32_array **v33; // x1
-  struct UserServantCollectionEntity_o *v34; // x8
-  __int64 v35; // x21
-  __int64 v36; // x22
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v37; // [xsp+0h] [xbp-80h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v38; // [xsp+20h] [xbp-60h]
+  const MethodInfo *v46; // x4
+  System_String_array **v47; // x2
+  System_String_array **v48; // x3
+  System_Boolean_array **v49; // x4
+  System_Int32_array **v50; // x5
+  System_Int32_array *v51; // x6
+  System_Int32_array *v52; // x7
+  System_Int32_array **v53; // x1
+  struct UserServantCollectionEntity_o *v54; // x8
+  __int64 v55; // x21
+  __int64 v56; // x22
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v57; // [xsp+0h] [xbp-80h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v58; // [xsp+20h] [xbp-60h]
   FriendshipEntity_o *entity; // [xsp+48h] [xbp-38h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v40; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v41; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v60; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v61; // 0:x0.16
 
-  if ( (byte_42B2B8D & 1) == 0 )
+  if ( (byte_42EB4F6 & 1) == 0 )
   {
-    sub_B52984(&Method_DataManager_GetMasterData_FriendshipMaster___);
-    sub_B52984(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_B52984(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_B52984(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_B52984(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B52984(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_B52984(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_42B2B8D = 1;
+    sub_B5D5C4(&Method_DataManager_GetMasterData_FriendshipMaster___, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_DataManager_GetMasterData_ServantMaster___, v5, v6, v7);
+    sub_B5D5C4(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, v8, v9, v10);
+    sub_B5D5C4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v11, v12, v13);
+    sub_B5D5C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14, v15, v16);
+    sub_B5D5C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v17, v18, v19);
+    sub_B5D5C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v20, v21, v22);
+    byte_42EB4F6 = 1;
   }
   entity = 0LL;
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_27;
   Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_ServantMaster___);
+                        (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_ServantMaster___);
   baseUserServantEntity = this->fields.baseUserServantEntity;
   if ( !baseUserServantEntity )
     goto LABEL_27;
-  v6 = (DataMasterBase_WarMaster__WarEntity__int__o *)Instance;
-  v8 = *(_QWORD *)&baseUserServantEntity->fields.svtId.fields.currentCryptoKey;
-  v7 = *(_QWORD *)&baseUserServantEntity->fields.svtId.fields.fakeValue;
+  v26 = (DataMasterBase_WarMaster__WarEntity__int__o *)Instance;
+  v28 = *(_QWORD *)&baseUserServantEntity->fields.svtId.fields.currentCryptoKey;
+  v27 = *(_QWORD *)&baseUserServantEntity->fields.svtId.fields.fakeValue;
   if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   }
-  *(_QWORD *)&v40.fields.currentCryptoKey = v8;
-  *(_QWORD *)&v40.fields.fakeValue = v7;
-  Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44786420(v40, 0LL);
-  if ( !v6 )
+  *(_QWORD *)&v60.fields.currentCryptoKey = v28;
+  *(_QWORD *)&v60.fields.fakeValue = v27;
+  Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44899288(v60, 0LL);
+  if ( !v26 )
     goto LABEL_27;
-  v9 = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-         v6,
-         Instance,
-         (const MethodInfo_23E22D8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v29 = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
+          v26,
+          Instance,
+          (const MethodInfo_23FAE10 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_27;
   Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-  v10 = this->fields.baseUserServantEntity;
-  if ( !v10 )
+                        (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+  v30 = this->fields.baseUserServantEntity;
+  if ( !v30 )
     goto LABEL_27;
-  v11 = *(_OWORD *)&v10->fields.userId.fields.fakeValue;
-  v12 = (UserServantCollectionMaster_o *)Instance;
-  *(_OWORD *)&v38.fields.currentCryptoKey = *(_OWORD *)&v10->fields.userId.fields.currentCryptoKey;
-  *(_OWORD *)&v38.fields.fakeValue = v11;
+  v31 = *(_OWORD *)&v30->fields.userId.fields.fakeValue;
+  v32 = (UserServantCollectionMaster_o *)Instance;
+  *(_OWORD *)&v58.fields.currentCryptoKey = *(_OWORD *)&v30->fields.userId.fields.currentCryptoKey;
+  *(_OWORD *)&v58.fields.fakeValue = v31;
   if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   }
-  v37 = v38;
-  Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44789576(&v37, 0LL);
-  v13 = this->fields.baseUserServantEntity;
-  if ( !v13 )
+  v57 = v58;
+  Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44902444(&v57, 0LL);
+  v33 = this->fields.baseUserServantEntity;
+  if ( !v33 )
     goto LABEL_27;
-  v14 = Instance;
-  Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44786420(v13->fields.svtId, 0LL);
-  if ( !v12 )
+  v34 = Instance;
+  Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44899288(v33->fields.svtId, 0LL);
+  if ( !v32 )
     goto LABEL_27;
-  v15 = UserServantCollectionMaster__GetEntity(v12, v14, Instance, 0LL);
+  v35 = UserServantCollectionMaster__GetEntity(v32, v34, Instance, 0LL);
   p_baseUserServantCollectionEntity = &this->fields.baseUserServantCollectionEntity;
-  this->fields.baseUserServantCollectionEntity = v15;
-  sub_B52920(
+  this->fields.baseUserServantCollectionEntity = v35;
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.baseUserServantCollectionEntity,
-    (System_Int32_array **)v15,
-    v17,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22);
+    (System_Int32_array **)v35,
+    v37,
+    v38,
+    v39,
+    v40,
+    v41,
+    v42);
   baseUserServantCollectionEntity = this->fields.baseUserServantCollectionEntity;
   if ( !baseUserServantCollectionEntity )
     goto LABEL_27;
-  if ( !v9 )
+  if ( !v29 )
     goto LABEL_27;
   friendshipExceedCount = baseUserServantCollectionEntity->fields.friendshipExceedCount;
-  lastQuestId = v9->fields.lastQuestId;
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2B75DB0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  lastQuestId = v29->fields.lastQuestId;
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_27;
   Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_1A4F184 *)Method_DataManager_GetMasterData_FriendshipMaster___);
+                        (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_FriendshipMaster___);
   if ( !Instance )
     goto LABEL_27;
   Instance = FriendshipMaster__TryGetEntity(
                (FriendshipMaster_o *)Instance,
                &entity,
-               v9->fields.eventId,
+               v29->fields.eventId,
                friendshipExceedCount + lastQuestId + 1,
-               v26);
+               v46);
   if ( (Instance & 1) != 0 )
   {
-    v33 = (System_Int32_array **)entity;
+    v53 = (System_Int32_array **)entity;
     this->fields._FriendshipEntity_k__BackingField = entity;
-    sub_B52920(
+    sub_B5D560(
       (BattleServantConfConponent_o *)&this->fields._FriendshipEntity_k__BackingField,
-      v33,
-      v27,
-      v28,
-      v29,
-      v30,
-      v31,
-      v32);
+      v53,
+      v47,
+      v48,
+      v49,
+      v50,
+      v51,
+      v52);
   }
-  v34 = *p_baseUserServantCollectionEntity;
+  v54 = *p_baseUserServantCollectionEntity;
   if ( !*p_baseUserServantCollectionEntity )
 LABEL_27:
-    sub_B52A5C(Instance, v4);
-  v35 = *(_QWORD *)&v34->fields.friendshipRank.fields.currentCryptoKey;
-  v36 = *(_QWORD *)&v34->fields.friendshipRank.fields.fakeValue;
+    sub_B5D69C(Instance, v24);
+  v55 = *(_QWORD *)&v54->fields.friendshipRank.fields.currentCryptoKey;
+  v56 = *(_QWORD *)&v54->fields.friendshipRank.fields.fakeValue;
   if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   }
-  *(_QWORD *)&v41.fields.currentCryptoKey = v35;
-  *(_QWORD *)&v41.fields.fakeValue = v36;
-  this->fields.isFriendshipRankMax = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44786420(v41, 0LL) == v9->fields.lastQuestId + friendshipExceedCount;
+  *(_QWORD *)&v61.fields.currentCryptoKey = v55;
+  *(_QWORD *)&v61.fields.fakeValue = v56;
+  this->fields.isFriendshipRankMax = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44899288(v61, 0LL) == v29->fields.lastQuestId + friendshipExceedCount;
 }
 
 
@@ -690,28 +762,30 @@ void __fastcall FriendshipExceedControl__SetExecuteButtonState(
         FriendshipExceedControl_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   UnityEngine_Component_o *combineTextImage; // x0
   struct UIButton_o *executeButton; // x8
-  UnityEngine_Behaviour_o *v5; // x20
+  UnityEngine_Behaviour_o *v7; // x20
   UIWidget_o *combineButtonText; // x21
-  int v7; // s0
+  int v9; // s0
   UIWidget_o *combineButtonBg; // x21
-  int v12; // s0
+  int v14; // s0
 
-  if ( (byte_42B2B8E & 1) == 0 )
+  if ( (byte_42EB4F7 & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_Component_GetComponent_TweenScale___);
-    byte_42B2B8E = 1;
+    sub_B5D5C4(&Method_UnityEngine_Component_GetComponent_TweenScale___, (_DWORD)method, v2, v3);
+    byte_42EB4F7 = 1;
   }
   combineTextImage = (UnityEngine_Component_o *)this->fields.combineTextImage;
   if ( !combineTextImage )
 LABEL_36:
-    sub_B52A5C(combineTextImage, method);
+    sub_B5D69C(combineTextImage, method);
   combineTextImage = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                   combineTextImage,
-                                                  (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_TweenScale___);
+                                                  (const MethodInfo_1ADE2A0 *)Method_UnityEngine_Component_GetComponent_TweenScale___);
   executeButton = this->fields.executeButton;
-  v5 = (UnityEngine_Behaviour_o *)combineTextImage;
+  v7 = (UnityEngine_Behaviour_o *)combineTextImage;
   if ( this->fields.isBaseSelected && this->fields.isFriendshipRankMax && this->fields.isQpEnough )
   {
     method = (const MethodInfo *)this->fields.isItemEnough;
@@ -728,56 +802,56 @@ LABEL_36:
   if ( this->fields.isBaseSelected && this->fields.isFriendshipRankMax && this->fields.isQpEnough )
   {
     method = (const MethodInfo *)this->fields.isItemEnough;
-    if ( !v5 )
+    if ( !v7 )
       goto LABEL_36;
   }
   else
   {
     method = 0LL;
-    if ( !v5 )
+    if ( !v7 )
       goto LABEL_36;
   }
-  UnityEngine_Behaviour__set_enabled(v5, (bool)method, 0LL);
+  UnityEngine_Behaviour__set_enabled(v7, (bool)method, 0LL);
   combineButtonText = (UIWidget_o *)this->fields.combineButtonText;
   if ( this->fields.isBaseSelected
     && this->fields.isFriendshipRankMax
     && this->fields.isQpEnough
     && this->fields.isItemEnough )
   {
-    *(UnityEngine_Color_o *)&v7 = UnityEngine_Color__get_white(0LL);
+    *(UnityEngine_Color_o *)&v9 = UnityEngine_Color__get_white(0LL);
     if ( !combineButtonText )
       goto LABEL_36;
   }
   else
   {
-    *(UnityEngine_Color_o *)&v7 = UnityEngine_Color__get_gray(0LL);
+    *(UnityEngine_Color_o *)&v9 = UnityEngine_Color__get_gray(0LL);
     if ( !combineButtonText )
       goto LABEL_36;
   }
-  UIWidget__set_color(combineButtonText, *(UnityEngine_Color_o *)&v7, 0LL);
+  UIWidget__set_color(combineButtonText, *(UnityEngine_Color_o *)&v9, 0LL);
   combineButtonBg = (UIWidget_o *)this->fields.combineButtonBg;
   if ( this->fields.isBaseSelected
     && this->fields.isFriendshipRankMax
     && this->fields.isQpEnough
     && this->fields.isItemEnough )
   {
-    *(UnityEngine_Color_o *)&v12 = UnityEngine_Color__get_white(0LL);
+    *(UnityEngine_Color_o *)&v14 = UnityEngine_Color__get_white(0LL);
     if ( !combineButtonBg )
       goto LABEL_36;
   }
   else
   {
-    *(UnityEngine_Color_o *)&v12 = UnityEngine_Color__get_gray(0LL);
+    *(UnityEngine_Color_o *)&v14 = UnityEngine_Color__get_gray(0LL);
     if ( !combineButtonBg )
       goto LABEL_36;
   }
-  UIWidget__set_color(combineButtonBg, *(UnityEngine_Color_o *)&v12, 0LL);
+  UIWidget__set_color(combineButtonBg, *(UnityEngine_Color_o *)&v14, 0LL);
   if ( this->fields.isBaseSelected
     && this->fields.isFriendshipRankMax
     && this->fields.isQpEnough
     && this->fields.isItemEnough )
   {
-    UITweener__PlayForward((UITweener_o *)v5, 0LL);
+    UITweener__PlayForward((UITweener_o *)v7, 0LL);
   }
 }
 
@@ -798,7 +872,7 @@ void __fastcall FriendshipExceedControl__SetFriendshipExceedInfo(
   splitImage = this->fields.splitImage;
   if ( !splitImage )
 LABEL_9:
-    sub_B52A5C(splitImage, method);
+    sub_B5D69C(splitImage, method);
   UnityEngine_GameObject__SetActive(splitImage, 1, 0LL);
   FriendshipExceedControl__SetEntities(this, v4);
   splitImage = (UnityEngine_GameObject_o *)this->fields.friendshipExceedInfoComponent;
@@ -836,26 +910,42 @@ void __fastcall FriendshipExceedControl__SetInfoMessage(
         int32_t state,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  int v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
+  int v18; // w1
+  int v19; // w2
+  __int64 v20; // x3
   UILabel_o *detailInfoLabel; // x20
-  __int64 *v6; // x8
-  System_String_o *v7; // x0
-  __int64 v8; // x1
+  __int64 *v22; // x8
+  System_String_o *v23; // x0
+  __int64 v24; // x1
   float r; // s0
   float g; // s1
   float b; // s2
   float a; // s3
-  __int64 *v13; // x8
-  struct UILabel_o *v14; // x19
+  __int64 *v29; // x8
+  struct UILabel_o *v30; // x19
 
-  if ( (byte_42B2B92 & 1) == 0 )
+  if ( (byte_42EB4FB & 1) == 0 )
   {
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&StringLiteral_7324/*"INFO_MSG_FRIENDSHIP_EXCEED"*/);
-    sub_B52984(&StringLiteral_8887/*"MSG_FRIENDSHIP_EXCEED_BASE"*/);
-    sub_B52984(&StringLiteral_5802/*"EXE_FRIENDSHIP_EXCEED_COMBINE_TXT"*/);
-    sub_B52984(&StringLiteral_12303/*"SHORT_ITEM_INFO_MSG"*/);
-    sub_B52984(&StringLiteral_12304/*"SHORT_QP_INFO_MSG"*/);
-    byte_42B2B92 = 1;
+    sub_B5D5C4(&LocalizationManager_TypeInfo, state, (_DWORD)method, v3);
+    sub_B5D5C4(&StringLiteral_7360/*"INFO_MSG_FRIENDSHIP_EXCEED"*/, v6, v7, v8);
+    sub_B5D5C4(&StringLiteral_8924/*"MSG_FRIENDSHIP_EXCEED_BASE"*/, v9, v10, v11);
+    sub_B5D5C4(&StringLiteral_5837/*"EXE_FRIENDSHIP_EXCEED_COMBINE_TXT"*/, v12, v13, v14);
+    sub_B5D5C4(&StringLiteral_12361/*"SHORT_ITEM_INFO_MSG"*/, v15, v16, v17);
+    sub_B5D5C4(&StringLiteral_12362/*"SHORT_QP_INFO_MSG"*/, v18, v19, v20);
+    byte_42EB4FB = 1;
   }
   if ( state == 2 )
   {
@@ -871,21 +961,21 @@ void __fastcall FriendshipExceedControl__SetInfoMessage(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v6 = &StringLiteral_5802/*"EXE_FRIENDSHIP_EXCEED_COMBINE_TXT"*/;
+          v22 = &StringLiteral_5837/*"EXE_FRIENDSHIP_EXCEED_COMBINE_TXT"*/;
 LABEL_9:
-          v7 = LocalizationManager__Get((System_String_o *)*v6, 0LL);
+          v23 = LocalizationManager__Get((System_String_o *)*v22, 0LL);
           if ( detailInfoLabel )
           {
-            UILabel__set_text(detailInfoLabel, v7, 0LL);
-            v7 = (System_String_o *)this->fields.detailInfoLabel;
-            if ( v7 )
+            UILabel__set_text(detailInfoLabel, v23, 0LL);
+            v23 = (System_String_o *)this->fields.detailInfoLabel;
+            if ( v23 )
             {
               r = this->fields.NORMAL_COLOR.fields.r;
               g = this->fields.NORMAL_COLOR.fields.g;
               b = this->fields.NORMAL_COLOR.fields.b;
               a = this->fields.NORMAL_COLOR.fields.a;
 LABEL_35:
-              UIWidget__set_color((UIWidget_o *)v7, *(UnityEngine_Color_o *)&r, 0LL);
+              UIWidget__set_color((UIWidget_o *)v23, *(UnityEngine_Color_o *)&r, 0LL);
               return;
             }
           }
@@ -896,7 +986,7 @@ LABEL_35:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v13 = &StringLiteral_12304/*"SHORT_QP_INFO_MSG"*/;
+        v29 = &StringLiteral_12362/*"SHORT_QP_INFO_MSG"*/;
       }
       else
       {
@@ -906,7 +996,7 @@ LABEL_35:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v13 = &StringLiteral_12303/*"SHORT_ITEM_INFO_MSG"*/;
+        v29 = &StringLiteral_12361/*"SHORT_ITEM_INFO_MSG"*/;
       }
     }
     else
@@ -917,22 +1007,22 @@ LABEL_35:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v13 = &StringLiteral_8887/*"MSG_FRIENDSHIP_EXCEED_BASE"*/;
+      v29 = &StringLiteral_8924/*"MSG_FRIENDSHIP_EXCEED_BASE"*/;
     }
-    v7 = LocalizationManager__Get((System_String_o *)*v13, 0LL);
+    v23 = LocalizationManager__Get((System_String_o *)*v29, 0LL);
     if ( detailInfoLabel )
     {
-      UILabel__set_text(detailInfoLabel, v7, 0LL);
-      v14 = this->fields.detailInfoLabel;
+      UILabel__set_text(detailInfoLabel, v23, 0LL);
+      v30 = this->fields.detailInfoLabel;
       *(UnityEngine_Color_o *)&r = UnityEngine_Color__get_white(0LL);
-      if ( v14 )
+      if ( v30 )
       {
-        v7 = (System_String_o *)v14;
+        v23 = (System_String_o *)v30;
         goto LABEL_35;
       }
     }
 LABEL_36:
-    sub_B52A5C(v7, v8);
+    sub_B5D69C(v23, v24);
   }
   if ( !state )
   {
@@ -942,7 +1032,7 @@ LABEL_36:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = &StringLiteral_7324/*"INFO_MSG_FRIENDSHIP_EXCEED"*/;
+    v22 = &StringLiteral_7360/*"INFO_MSG_FRIENDSHIP_EXCEED"*/;
     goto LABEL_9;
   }
 }
@@ -952,58 +1042,73 @@ void __fastcall FriendshipExceedControl__SetLimitCntUpItemComponents(
         FriendshipExceedControl_o *this,
         const MethodInfo *method)
 {
-  FriendshipExceedControl_o *v2; // x19
+  int v2; // w2
+  __int64 v3; // x3
+  FriendshipExceedControl_o *v4; // x19
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
   struct System_Collections_Generic_List_LimitCntUpItemComponent__o *limitCntUpItemComponentList; // x20
-  __int64 v4; // x21
+  __int64 v15; // x21
   int size; // w8
   struct FriendshipEntity_o *FriendshipEntity_k__BackingField; // x8
   struct System_Int32_array *itemIds; // x8
   struct System_Collections_Generic_List_GameObject__o *materialImages; // x20
-  struct FriendshipEntity_o *v9; // x8
-  struct System_Int32_array *v10; // x8
-  struct FriendshipEntity_o *v11; // x8
-  struct System_Int32_array *v12; // x8
-  struct System_Collections_Generic_List_LimitCntUpItemComponent__o *v13; // x20
+  struct FriendshipEntity_o *v20; // x8
+  struct System_Int32_array *v21; // x8
+  struct FriendshipEntity_o *v22; // x8
+  struct System_Int32_array *v23; // x8
+  struct System_Collections_Generic_List_LimitCntUpItemComponent__o *v24; // x20
   struct UserServantEntity_o *baseUserServantEntity; // x8
-  __int128 v15; // q1
-  LimitCntUpItemComponent_o *v16; // x20
-  struct FriendshipEntity_o *v17; // x9
-  struct System_Int32_array *v18; // x8
+  __int128 v26; // q1
+  LimitCntUpItemComponent_o *v27; // x20
+  struct FriendshipEntity_o *v28; // x9
+  struct System_Int32_array *v29; // x8
   struct System_Int32_array *itemNums; // x9
-  struct System_Collections_Generic_List_LimitCntUpItemComponent__o *v20; // x20
-  LimitCntUpItemComponent_o *v21; // x8
-  __int64 v22; // x0
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v23; // [xsp+0h] [xbp-60h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v24; // [xsp+20h] [xbp-40h]
+  struct System_Collections_Generic_List_LimitCntUpItemComponent__o *v31; // x20
+  LimitCntUpItemComponent_o *v32; // x8
+  __int64 v33; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v34; // [xsp+0h] [xbp-60h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v35; // [xsp+20h] [xbp-40h]
 
-  v2 = this;
-  if ( (byte_42B2B8C & 1) == 0 )
+  v4 = this;
+  if ( (byte_42EB4F5 & 1) == 0 )
   {
-    sub_B52984(&Method_System_Collections_Generic_List_LimitCntUpItemComponent__get_Count__);
-    sub_B52984(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_B52984(&Method_System_Collections_Generic_List_LimitCntUpItemComponent__get_Item__);
-    this = (FriendshipExceedControl_o *)sub_B52984(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_42B2B8C = 1;
+    sub_B5D5C4(&Method_System_Collections_Generic_List_LimitCntUpItemComponent__get_Count__, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_GameObject__get_Item__, v5, v6, v7);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_LimitCntUpItemComponent__get_Item__, v8, v9, v10);
+    this = (FriendshipExceedControl_o *)sub_B5D5C4(
+                                          &CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo,
+                                          v11,
+                                          v12,
+                                          v13);
+    byte_42EB4F5 = 1;
   }
-  if ( v2->fields._FriendshipEntity_k__BackingField )
+  if ( v4->fields._FriendshipEntity_k__BackingField )
   {
-    limitCntUpItemComponentList = v2->fields.limitCntUpItemComponentList;
+    limitCntUpItemComponentList = v4->fields.limitCntUpItemComponentList;
     if ( !limitCntUpItemComponentList )
 LABEL_42:
-      sub_B52A5C(this, method);
-    v4 = 0LL;
+      sub_B5D69C(this, method);
+    v15 = 0LL;
     while ( 1 )
     {
       size = limitCntUpItemComponentList->fields._size;
-      if ( (int)v4 >= size )
+      if ( (int)v15 >= size )
         break;
-      if ( size <= (unsigned int)v4 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
-      this = (FriendshipExceedControl_o *)limitCntUpItemComponentList->fields._items->m_Items[v4];
+      if ( size <= (unsigned int)v15 )
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42302284(0LL);
+      this = (FriendshipExceedControl_o *)limitCntUpItemComponentList->fields._items->m_Items[v15];
       if ( !this )
         goto LABEL_42;
       this = (FriendshipExceedControl_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-      FriendshipEntity_k__BackingField = v2->fields._FriendshipEntity_k__BackingField;
+      FriendshipEntity_k__BackingField = v4->fields._FriendshipEntity_k__BackingField;
       if ( !FriendshipEntity_k__BackingField )
         goto LABEL_42;
       itemIds = FriendshipEntity_k__BackingField->fields.itemIds;
@@ -1013,90 +1118,90 @@ LABEL_42:
         goto LABEL_42;
       UnityEngine_GameObject__SetActive(
         (UnityEngine_GameObject_o *)this,
-        (int)v4 < (signed int)itemIds->max_length,
+        (int)v15 < (signed int)itemIds->max_length,
         0LL);
-      materialImages = v2->fields.materialImages;
+      materialImages = v4->fields.materialImages;
       if ( !materialImages )
         goto LABEL_42;
-      if ( materialImages->fields._size <= (unsigned int)v4 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
-      v9 = v2->fields._FriendshipEntity_k__BackingField;
-      if ( !v9 )
+      if ( materialImages->fields._size <= (unsigned int)v15 )
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42302284(0LL);
+      v20 = v4->fields._FriendshipEntity_k__BackingField;
+      if ( !v20 )
         goto LABEL_42;
-      v10 = v9->fields.itemIds;
-      if ( !v10 )
+      v21 = v20->fields.itemIds;
+      if ( !v21 )
         goto LABEL_42;
-      this = (FriendshipExceedControl_o *)materialImages->fields._items->m_Items[v4];
+      this = (FriendshipExceedControl_o *)materialImages->fields._items->m_Items[v15];
       if ( !this )
         goto LABEL_42;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, (int)v4 >= (signed int)v10->max_length, 0LL);
-      v11 = v2->fields._FriendshipEntity_k__BackingField;
-      if ( !v11 )
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, (int)v15 >= (signed int)v21->max_length, 0LL);
+      v22 = v4->fields._FriendshipEntity_k__BackingField;
+      if ( !v22 )
         goto LABEL_42;
-      v12 = v11->fields.itemIds;
-      if ( !v12 )
+      v23 = v22->fields.itemIds;
+      if ( !v23 )
         goto LABEL_42;
-      if ( (int)v4 < (signed int)v12->max_length )
+      if ( (int)v15 < (signed int)v23->max_length )
       {
-        v13 = v2->fields.limitCntUpItemComponentList;
-        if ( !v13 )
+        v24 = v4->fields.limitCntUpItemComponentList;
+        if ( !v24 )
           goto LABEL_42;
-        if ( v13->fields._size <= (unsigned int)v4 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
-        baseUserServantEntity = v2->fields.baseUserServantEntity;
+        if ( v24->fields._size <= (unsigned int)v15 )
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42302284(0LL);
+        baseUserServantEntity = v4->fields.baseUserServantEntity;
         if ( !baseUserServantEntity )
           goto LABEL_42;
-        v15 = *(_OWORD *)&baseUserServantEntity->fields.userId.fields.fakeValue;
-        v16 = v13->fields._items->m_Items[v4];
-        *(_OWORD *)&v24.fields.currentCryptoKey = *(_OWORD *)&baseUserServantEntity->fields.userId.fields.currentCryptoKey;
-        *(_OWORD *)&v24.fields.fakeValue = v15;
+        v26 = *(_OWORD *)&baseUserServantEntity->fields.userId.fields.fakeValue;
+        v27 = v24->fields._items->m_Items[v15];
+        *(_OWORD *)&v35.fields.currentCryptoKey = *(_OWORD *)&baseUserServantEntity->fields.userId.fields.currentCryptoKey;
+        *(_OWORD *)&v35.fields.fakeValue = v26;
         if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
         }
-        v23 = v24;
-        this = (FriendshipExceedControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44789576(
-                                              &v23,
+        v34 = v35;
+        this = (FriendshipExceedControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44902444(
+                                              &v34,
                                               0LL);
-        v17 = v2->fields._FriendshipEntity_k__BackingField;
-        if ( !v17 )
+        v28 = v4->fields._FriendshipEntity_k__BackingField;
+        if ( !v28 )
           goto LABEL_42;
-        v18 = v17->fields.itemIds;
-        if ( !v18 )
+        v29 = v28->fields.itemIds;
+        if ( !v29 )
           goto LABEL_42;
-        if ( (unsigned int)v4 >= v18->max_length )
+        if ( (unsigned int)v15 >= v29->max_length )
           goto LABEL_44;
-        itemNums = v17->fields.itemNums;
+        itemNums = v28->fields.itemNums;
         if ( !itemNums )
           goto LABEL_42;
-        if ( (unsigned int)v4 >= itemNums->max_length )
+        if ( (unsigned int)v15 >= itemNums->max_length )
         {
 LABEL_44:
-          v22 = sub_B52A88(this);
-          sub_B52A28(v22, 0LL);
+          v33 = sub_B5D6C8(this);
+          sub_B5D668(v33, 0LL);
         }
-        if ( !v16 )
+        if ( !v27 )
           goto LABEL_42;
         LimitCntUpItemComponent__setLimitUpItemInfo(
-          v16,
+          v27,
           (int64_t)this,
-          v18->m_Items[v4 + 1],
-          itemNums->m_Items[v4 + 1],
+          v29->m_Items[v15 + 1],
+          itemNums->m_Items[v15 + 1],
           0LL);
-        v20 = v2->fields.limitCntUpItemComponentList;
-        if ( !v20 )
+        v31 = v4->fields.limitCntUpItemComponentList;
+        if ( !v31 )
           goto LABEL_42;
-        if ( v20->fields._size <= (unsigned int)v4 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_42202232(0LL);
-        v21 = v20->fields._items->m_Items[v4];
-        if ( !v21 )
+        if ( v31->fields._size <= (unsigned int)v15 )
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42302284(0LL);
+        v32 = v31->fields._items->m_Items[v15];
+        if ( !v32 )
           goto LABEL_42;
-        if ( !v21->fields.isItemNum )
-          v2->fields.isItemEnough = 0;
+        if ( !v32->fields.isItemNum )
+          v4->fields.isItemEnough = 0;
       }
-      limitCntUpItemComponentList = v2->fields.limitCntUpItemComponentList;
-      ++v4;
+      limitCntUpItemComponentList = v4->fields.limitCntUpItemComponentList;
+      ++v15;
       if ( !limitCntUpItemComponentList )
         goto LABEL_42;
     }
@@ -1107,50 +1212,52 @@ LABEL_44:
 // local variable allocation has failed, the output may be wrong!
 void __fastcall FriendshipExceedControl__SetRequiredQpInfo(FriendshipExceedControl_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   struct FriendshipEntity_o *FriendshipEntity_k__BackingField; // x8
-  int32_t v4; // w0
+  int32_t v6; // w0
   UILabel_o *requiredQpLabel; // x20
-  System_String_o *v6; // x0
-  __int64 v7; // x1
-  UIWidget_o *v8; // x20
-  int v9; // s0
+  System_String_o *v8; // x0
+  __int64 v9; // x1
+  UIWidget_o *v10; // x20
+  int v11; // s0
 
-  if ( (byte_42B2B8A & 1) == 0 )
+  if ( (byte_42EB4F3 & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_9323/*"N0"*/);
-    byte_42B2B8A = 1;
+    sub_B5D5C4(&StringLiteral_9361/*"N0"*/, (_DWORD)method, v2, v3);
+    byte_42EB4F3 = 1;
   }
   if ( this->fields.isBaseSelected
     && (FriendshipEntity_k__BackingField = this->fields._FriendshipEntity_k__BackingField) != 0LL )
   {
-    v4 = (_DWORD)this + 260;
+    v6 = (_DWORD)this + 260;
     this->fields.requiredQp = FriendshipEntity_k__BackingField->fields.qp;
   }
   else
   {
-    v4 = (_DWORD)this + 260;
+    v6 = (_DWORD)this + 260;
     this->fields.requiredQp = 0;
   }
   requiredQpLabel = this->fields.requiredQpLabel;
-  v6 = System_Int32__ToString_39387012(v4, (System_String_o *)StringLiteral_9323/*"N0"*/, 0LL);
+  v8 = System_Int32__ToString_39741776(v6, (System_String_o *)StringLiteral_9361/*"N0"*/, 0LL);
   if ( !requiredQpLabel )
 LABEL_13:
-    sub_B52A5C(v6, v7);
-  UILabel__set_text(requiredQpLabel, v6, 0LL);
-  v8 = (UIWidget_o *)this->fields.requiredQpLabel;
+    sub_B5D69C(v8, v9);
+  UILabel__set_text(requiredQpLabel, v8, 0LL);
+  v10 = (UIWidget_o *)this->fields.requiredQpLabel;
   if ( this->fields.userQp >= this->fields.requiredQp )
   {
-    *(UnityEngine_Color_o *)&v9 = UnityEngine_Color__get_white(0LL);
-    if ( !v8 )
+    *(UnityEngine_Color_o *)&v11 = UnityEngine_Color__get_white(0LL);
+    if ( !v10 )
       goto LABEL_13;
   }
   else
   {
-    *(UnityEngine_Color_o *)&v9 = UnityEngine_Color__get_red(0LL);
-    if ( !v8 )
+    *(UnityEngine_Color_o *)&v11 = UnityEngine_Color__get_red(0LL);
+    if ( !v10 )
       goto LABEL_13;
   }
-  UIWidget__set_color(v8, *(UnityEngine_Color_o *)&v9, 0LL);
+  UIWidget__set_color(v10, *(UnityEngine_Color_o *)&v11, 0LL);
   this->fields.isQpEnough = this->fields.userQp >= this->fields.requiredQp;
 }
 
@@ -1175,10 +1282,10 @@ void __fastcall FriendshipExceedControl__SetSelectedBaseServantId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v17; // [xsp+20h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v18; // [xsp+40h] [xbp-40h]
 
-  if ( (byte_42B2B8B & 1) == 0 )
+  if ( (byte_42EB4F4 & 1) == 0 )
   {
-    sub_B52984(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_42B2B8B = 1;
+    sub_B5D5C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, (_DWORD)selectData, (_DWORD)method, v3);
+    byte_42EB4F4 = 1;
   }
   if ( selectData )
   {
@@ -1195,11 +1302,11 @@ void __fastcall FriendshipExceedControl__SetSelectedBaseServantId(
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
       }
       v17 = v18;
-      v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44789576(&v17, 0LL);
+      v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44902444(&v17, 0LL);
       v14 = *(_OWORD *)&selectData->fields.id.fields.fakeValue;
       *(_OWORD *)&v16.fields.currentCryptoKey = *(_OWORD *)&selectData->fields.id.fields.currentCryptoKey;
       *(_OWORD *)&v16.fields.fakeValue = v14;
-      if ( v13 != CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44789576(&v16, 0LL) )
+      if ( v13 != CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44902444(&v16, 0LL) )
         FriendshipExceedControl__InitInfo(this, v15);
     }
     this->fields.isBaseSelected = 1;
@@ -1211,7 +1318,7 @@ void __fastcall FriendshipExceedControl__SetSelectedBaseServantId(
     this->fields.isBaseSelected = 0;
   }
   p_baseUserServantEntity->klass = (BattleServantConfConponent_c *)selectData;
-  sub_B52920(
+  sub_B5D560(
     p_baseUserServantEntity,
     (System_Int32_array **)selectData,
     (System_String_array **)method,
@@ -1225,23 +1332,25 @@ void __fastcall FriendshipExceedControl__SetSelectedBaseServantId(
 
 void __fastcall FriendshipExceedControl__SetUserQpInfo(FriendshipExceedControl_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   System_String_o *SelfUserGame; // x0
-  __int64 v4; // x1
+  __int64 v6; // x1
   UILabel_o *userQpLabel; // x20
 
-  if ( (byte_42B2B89 & 1) == 0 )
+  if ( (byte_42EB4F2 & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_9323/*"N0"*/);
-    byte_42B2B89 = 1;
+    sub_B5D5C4(&StringLiteral_9361/*"N0"*/, (_DWORD)method, v2, v3);
+    byte_42EB4F2 = 1;
   }
   SelfUserGame = (System_String_o *)UserGameMaster__getSelfUserGame(0LL);
   if ( !SelfUserGame
     || (userQpLabel = this->fields.userQpLabel,
         this->fields.userQp = (int32_t)SelfUserGame[4].klass,
-        SelfUserGame = System_Int32__ToString_39387012((int)this + 256, (System_String_o *)StringLiteral_9323/*"N0"*/, 0LL),
+        SelfUserGame = System_Int32__ToString_39741776((int)this + 256, (System_String_o *)StringLiteral_9361/*"N0"*/, 0LL),
         !userQpLabel) )
   {
-    sub_B52A5C(SelfUserGame, v4);
+    sub_B5D69C(SelfUserGame, v6);
   }
   UILabel__set_text(userQpLabel, SelfUserGame, 0LL);
 }
@@ -1261,7 +1370,7 @@ void __fastcall FriendshipExceedControl__ShowItemListInfo(FriendshipExceedContro
           0LL),
         (preSelectBaseLabel = (UnityEngine_Component_o *)this->fields.baseSelectInfoLabel) == 0LL) )
   {
-    sub_B52A5C(preSelectBaseLabel, method);
+    sub_B5D69C(preSelectBaseLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)preSelectBaseLabel, !this->fields.isBaseSelected, 0LL);
   if ( this->fields.isBaseSelected )
@@ -1306,7 +1415,7 @@ void __fastcall FriendshipExceedControl__set_FriendshipEntity(
   System_Int32_array *v7; // x7
 
   this->fields._FriendshipEntity_k__BackingField = value;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields._FriendshipEntity_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

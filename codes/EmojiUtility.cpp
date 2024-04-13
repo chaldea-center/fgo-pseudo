@@ -1,11 +1,13 @@
 bool __fastcall EmojiUtility__IsEmojiChar(uint16_t ch, const MethodInfo *method)
 {
-  int v4; // w9
+  int v2; // w2
+  __int64 v3; // x3
+  int v6; // w9
 
-  if ( (byte_42B4638 & 1) == 0 )
+  if ( (byte_42ECFC1 & 1) == 0 )
   {
-    sub_B52984(&char_TypeInfo);
-    byte_42B4638 = 1;
+    sub_B5D5C4(&char_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42ECFC1 = 1;
   }
   if ( (BYTE3(char_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !char_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(char_TypeInfo);
@@ -142,14 +144,14 @@ bool __fastcall EmojiUtility__IsEmojiChar(uint16_t ch, const MethodInfo *method)
       {
         return 1;
       }
-      v4 = 9410;
+      v6 = 9410;
       goto LABEL_56;
     }
     if ( ch > 0x2121u )
     {
       if ( (unsigned int)ch - 8596 <= 0x16 && ((1 << (ch + 108)) & 0x60003F) != 0 || ch == 8482 )
         return 1;
-      v4 = 8505;
+      v6 = 8505;
       goto LABEL_56;
     }
     if ( ch > 0x2001u )
@@ -159,7 +161,7 @@ bool __fastcall EmojiUtility__IsEmojiChar(uint16_t ch, const MethodInfo *method)
       {
         return 1;
       }
-      v4 = 8419;
+      v6 = 8419;
       goto LABEL_56;
     }
     if ( ch != 169 && ch != 174 )
@@ -198,16 +200,16 @@ bool __fastcall EmojiUtility__IsEmojiChar(uint16_t ch, const MethodInfo *method)
   {
     if ( (unsigned int)ch - 65038 >= 2 )
     {
-      v4 = 12953;
+      v6 = 12953;
       goto LABEL_56;
     }
     return 1;
   }
   if ( ch == 12336 || ch == 12349 )
     return 1;
-  v4 = 12951;
+  v6 = 12951;
 LABEL_56:
-  if ( ch == v4 )
+  if ( ch == v6 )
     return 1;
   return ch == 10175;
 }

@@ -1,45 +1,54 @@
 void __fastcall FuncParamValueUpInfoDefault___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x0
-  __int64 v2; // x1
-  System_String_array **v3; // x2
-  System_String_array **v4; // x3
-  System_Boolean_array **v5; // x4
-  System_Int32_array **v6; // x5
-  System_Int32_array *v7; // x6
-  System_Int32_array *v8; // x7
-  System_Int32_array **v9; // x1
+  int v1; // w1
+  int v2; // w2
+  __int64 v3; // x3
+  int v4; // w1
+  int v5; // w2
+  __int64 v6; // x3
+  __int64 v7; // x0
+  __int64 v8; // x1
+  System_String_array **v9; // x2
+  System_String_array **v10; // x3
+  System_Boolean_array **v11; // x4
+  System_Int32_array **v12; // x5
+  System_Int32_array *v13; // x6
+  System_Int32_array *v14; // x7
+  System_Int32_array **v15; // x1
   BattleServantConfConponent_o *static_fields; // x0
-  __int64 v11; // x0
+  __int64 v17; // x0
 
-  if ( (byte_42B2BD1 & 1) == 0 )
+  if ( (byte_42EB53B & 1) == 0 )
   {
-    sub_B52984(&FuncParamValueUpInfoDefault_TypeInfo);
-    sub_B52984(&DataVals_TYPE___TypeInfo);
-    byte_42B2BD1 = 1;
+    sub_B5D5C4(&FuncParamValueUpInfoDefault_TypeInfo, v1, v2, v3);
+    sub_B5D5C4(&DataVals_TYPE___TypeInfo, v4, v5, v6);
+    byte_42EB53B = 1;
   }
-  v1 = sub_B5299C(DataVals_TYPE___TypeInfo, 1LL);
-  if ( !v1 )
-    sub_B52A5C(0LL, v2);
-  v9 = (System_Int32_array **)v1;
-  if ( !*(_DWORD *)(v1 + 24) )
+  v7 = sub_B5D5DC(DataVals_TYPE___TypeInfo, 1LL);
+  if ( !v7 )
+    sub_B5D69C(0LL, v8);
+  v15 = (System_Int32_array **)v7;
+  if ( !*(_DWORD *)(v7 + 24) )
   {
-    v11 = sub_B52A88(v1);
-    sub_B52A28(v11, 0LL);
+    v17 = sub_B5D6C8(v7);
+    sub_B5D668(v17, 0LL);
   }
-  *(_DWORD *)(v1 + 32) = 3;
+  *(_DWORD *)(v7 + 32) = 3;
   static_fields = (BattleServantConfConponent_o *)FuncParamValueUpInfoDefault_TypeInfo->static_fields;
-  static_fields->klass = (BattleServantConfConponent_c *)v9;
-  sub_B52920(static_fields, v9, v3, v4, v5, v6, v7, v8);
+  static_fields->klass = (BattleServantConfConponent_c *)v15;
+  sub_B5D560(static_fields, v15, v9, v10, v11, v12, v13, v14);
 }
 
 
 void __fastcall FuncParamValueUpInfoDefault___ctor(FuncParamValueUpInfoDefault_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B2BD0 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42EB53A & 1) == 0 )
   {
-    sub_B52984(&FuncParamValueUpInfoBase_TypeInfo);
-    byte_42B2BD0 = 1;
+    sub_B5D5C4(&FuncParamValueUpInfoBase_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42EB53A = 1;
   }
   if ( (BYTE3(FuncParamValueUpInfoBase_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !FuncParamValueUpInfoBase_TypeInfo->_2.cctor_finished )
@@ -55,35 +64,39 @@ FuncParamValueUpInfoDefault_o *__fastcall FuncParamValueUpInfoDefault__Create(
         int32_t valueUp,
         const MethodInfo *method)
 {
-  __int64 v5; // x21
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  __int64 v9; // x21
   struct FunctionEntity_o *funcEnt; // x23
   _BOOL4 isParam; // w0
-  const MethodInfo *v8; // x1
+  const MethodInfo *v12; // x1
   int32_t funcType; // w22
-  _BOOL4 v10; // w21
-  const MethodInfo *v11; // x1
-  int32_t v12; // w22
+  _BOOL4 v14; // w21
+  const MethodInfo *v15; // x1
+  int32_t v16; // w22
   _BOOL4 IsIgnoreValueUpBuffType; // w0
-  const MethodInfo *v14; // x1
-  __int64 v15; // x0
-  const MethodInfo *v16; // x1
+  const MethodInfo *v18; // x1
+  __int64 v19; // x0
+  const MethodInfo *v20; // x1
   System_Int32_array **ValueUpTypeArray; // x0
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
+  System_String_array **v22; // x2
+  System_String_array **v23; // x3
+  System_Boolean_array **v24; // x4
+  System_Int32_array **v25; // x5
+  System_Int32_array *v26; // x6
+  System_Int32_array *v27; // x7
 
-  if ( (byte_42B2BCC & 1) == 0 )
+  if ( (byte_42EB536 & 1) == 0 )
   {
-    sub_B52984(&Method_BasicHelper_IndexValue_int____68584400);
-    sub_B52984(&FuncParamValueUpInfoDefault_TypeInfo);
-    byte_42B2BCC = 1;
+    sub_B5D5C4(&Method_BasicHelper_IndexValue_int____68811968, valueUp, (_DWORD)method, v3);
+    sub_B5D5C4(&FuncParamValueUpInfoDefault_TypeInfo, v6, v7, v8);
+    byte_42EB536 = 1;
   }
   if ( !dataVals )
     return 0LL;
-  v5 = 0LL;
+  v9 = 0LL;
   if ( valueUp )
   {
     funcEnt = dataVals->fields.funcEnt;
@@ -91,20 +104,20 @@ FuncParamValueUpInfoDefault_o *__fastcall FuncParamValueUpInfoDefault__Create(
     {
       isParam = DataVals__isParam(dataVals, 122, 0LL);
       funcType = funcEnt->fields.funcType;
-      v10 = isParam;
+      v14 = isParam;
       if ( funcType == 1 || funcType == 16 )
       {
-        v12 = BasicHelper__IndexValue_int_(
+        v16 = BasicHelper__IndexValue_int_(
                 funcEnt->fields.vals,
                 0,
                 0,
-                (const MethodInfo_1A43EDC *)Method_BasicHelper_IndexValue_int____68584400);
+                (const MethodInfo_1AD8FA4 *)Method_BasicHelper_IndexValue_int____68811968);
         if ( (BYTE3(FuncParamValueUpInfoDefault_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !FuncParamValueUpInfoDefault_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(FuncParamValueUpInfoDefault_TypeInfo);
         }
-        IsIgnoreValueUpBuffType = FuncParamValueUpInfoDefault__IsIgnoreValueUpBuffType(v12, v11);
+        IsIgnoreValueUpBuffType = FuncParamValueUpInfoDefault__IsIgnoreValueUpBuffType(v16, v15);
       }
       else
       {
@@ -113,26 +126,26 @@ FuncParamValueUpInfoDefault_o *__fastcall FuncParamValueUpInfoDefault__Create(
         {
           j_il2cpp_runtime_class_init_0(FuncParamValueUpInfoDefault_TypeInfo);
         }
-        IsIgnoreValueUpBuffType = FuncParamValueUpInfoDefault__IsIgnoreValueUpFuncType(funcType, v8);
+        IsIgnoreValueUpBuffType = FuncParamValueUpInfoDefault__IsIgnoreValueUpFuncType(funcType, v12);
       }
-      if ( v10 || IsIgnoreValueUpBuffType )
+      if ( v14 || IsIgnoreValueUpBuffType )
         return 0LL;
-      v5 = sub_B52A54(FuncParamValueUpInfoDefault_TypeInfo);
-      FuncParamValueUpInfoDefault___ctor((FuncParamValueUpInfoDefault_o *)v5, v14);
-      if ( !v5 )
-        sub_B52A5C(v15, v16);
-      *(_DWORD *)(v5 + 16) = valueUp;
+      v9 = sub_B5D694(FuncParamValueUpInfoDefault_TypeInfo);
+      FuncParamValueUpInfoDefault___ctor((FuncParamValueUpInfoDefault_o *)v9, v18);
+      if ( !v9 )
+        sub_B5D69C(v19, v20);
+      *(_DWORD *)(v9 + 16) = valueUp;
       if ( (BYTE3(FuncParamValueUpInfoDefault_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !FuncParamValueUpInfoDefault_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(FuncParamValueUpInfoDefault_TypeInfo);
       }
-      ValueUpTypeArray = (System_Int32_array **)FuncParamValueUpInfoDefault__ExtractValueUpTypeArray(dataVals, v16);
-      *(_QWORD *)(v5 + 24) = ValueUpTypeArray;
-      sub_B52920((BattleServantConfConponent_o *)(v5 + 24), ValueUpTypeArray, v18, v19, v20, v21, v22, v23);
+      ValueUpTypeArray = (System_Int32_array **)FuncParamValueUpInfoDefault__ExtractValueUpTypeArray(dataVals, v20);
+      *(_QWORD *)(v9 + 24) = ValueUpTypeArray;
+      sub_B5D560((BattleServantConfConponent_o *)(v9 + 24), ValueUpTypeArray, v22, v23, v24, v25, v26, v27);
     }
   }
-  return (FuncParamValueUpInfoDefault_o *)v5;
+  return (FuncParamValueUpInfoDefault_o *)v9;
 }
 
 
@@ -140,131 +153,162 @@ DataVals_TYPE_array *__fastcall FuncParamValueUpInfoDefault__ExtractValueUpTypeA
         DataVals_o *dataVals,
         const MethodInfo *method)
 {
-  DataVals_o *v2; // x19
+  int v2; // w2
+  __int64 v3; // x3
+  DataVals_o *v4; // x19
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
+  int v17; // w1
+  int v18; // w2
+  __int64 v19; // x3
   System_Collections_ICollection_o *ParamAsStringArray; // x19
   bool IsNullOrEmpty; // w8
-  DataVals_TYPE_array *v5; // x0
-  System_Collections_Generic_List_VoiceCondType_Type__o *v6; // x20
+  DataVals_TYPE_array *v22; // x0
+  System_Collections_Generic_List_VoiceCondType_Type__o *v23; // x20
   void *monitor; // x8
-  unsigned __int64 v8; // x22
-  System_String_o *v9; // x21
-  __int64 v10; // x0
+  unsigned __int64 v25; // x22
+  System_String_o *v26; // x21
+  __int64 v27; // x0
   int32_t result; // [xsp+Ch] [xbp-44h] BYREF
 
-  v2 = dataVals;
-  if ( (byte_42B2BCD & 1) == 0 )
+  v4 = dataVals;
+  if ( (byte_42EB537 & 1) == 0 )
   {
-    sub_B52984(&Method_System_Enum_TryParse_DataVals_TYPE___);
-    sub_B52984(&System_Enum_TypeInfo);
-    sub_B52984(&Method_System_Collections_Generic_List_DataVals_TYPE__Add__);
-    sub_B52984(&Method_System_Collections_Generic_List_DataVals_TYPE__ToArray__);
-    sub_B52984(&Method_System_Collections_Generic_List_DataVals_TYPE___ctor__);
-    dataVals = (DataVals_o *)sub_B52984(&System_Collections_Generic_List_DataVals_TYPE__TypeInfo);
-    byte_42B2BCD = 1;
+    sub_B5D5C4(&Method_System_Enum_TryParse_DataVals_TYPE___, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&System_Enum_TypeInfo, v5, v6, v7);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_DataVals_TYPE__Add__, v8, v9, v10);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_DataVals_TYPE__ToArray__, v11, v12, v13);
+    sub_B5D5C4(&Method_System_Collections_Generic_List_DataVals_TYPE___ctor__, v14, v15, v16);
+    dataVals = (DataVals_o *)sub_B5D5C4(&System_Collections_Generic_List_DataVals_TYPE__TypeInfo, v17, v18, v19);
+    byte_42EB537 = 1;
   }
   result = 0;
-  if ( !v2 )
+  if ( !v4 )
     goto LABEL_20;
-  ParamAsStringArray = (System_Collections_ICollection_o *)DataVals__GetParamAsStringArray(v2, 123, 0LL, 0LL);
+  ParamAsStringArray = (System_Collections_ICollection_o *)DataVals__GetParamAsStringArray(v4, 123, 0LL, 0LL);
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty(ParamAsStringArray, 0LL);
-  v5 = 0LL;
+  v22 = 0LL;
   if ( IsNullOrEmpty )
-    return v5;
-  v6 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B52A54(System_Collections_Generic_List_DataVals_TYPE__TypeInfo);
+    return v22;
+  v23 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B5D694(System_Collections_Generic_List_DataVals_TYPE__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
-    v6,
-    (const MethodInfo_305922C *)Method_System_Collections_Generic_List_DataVals_TYPE___ctor__);
+    v23,
+    (const MethodInfo_3043A54 *)Method_System_Collections_Generic_List_DataVals_TYPE___ctor__);
   if ( !ParamAsStringArray )
     goto LABEL_20;
   monitor = ParamAsStringArray[1].monitor;
   if ( (int)monitor >= 1 )
   {
-    v8 = 0LL;
+    v25 = 0LL;
     do
     {
-      if ( v8 >= (unsigned int)monitor )
+      if ( v25 >= (unsigned int)monitor )
       {
-        v10 = sub_B52A88(dataVals);
-        sub_B52A28(v10, 0LL);
+        v27 = sub_B5D6C8(dataVals);
+        sub_B5D668(v27, 0LL);
       }
-      v9 = (System_String_o *)*((_QWORD *)&ParamAsStringArray[2].klass + v8);
+      v26 = (System_String_o *)*((_QWORD *)&ParamAsStringArray[2].klass + v25);
       if ( (BYTE3(System_Enum_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !System_Enum_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
       }
       dataVals = (DataVals_o *)System_Enum__TryParse_DataVals_TYPE_(
-                                 v9,
+                                 v26,
                                  &result,
-                                 (const MethodInfo_1A518A0 *)Method_System_Enum_TryParse_DataVals_TYPE___);
+                                 (const MethodInfo_1AE6968 *)Method_System_Enum_TryParse_DataVals_TYPE___);
       if ( ((unsigned __int8)dataVals & 1) != 0 )
       {
-        if ( !v6 )
+        if ( !v23 )
           goto LABEL_20;
         System_Collections_Generic_List_VoiceCondType_Type___Add(
-          v6,
+          v23,
           result,
-          (const MethodInfo_3059F88 *)Method_System_Collections_Generic_List_DataVals_TYPE__Add__);
+          (const MethodInfo_30447B0 *)Method_System_Collections_Generic_List_DataVals_TYPE__Add__);
       }
       LODWORD(monitor) = ParamAsStringArray[1].monitor;
-      ++v8;
+      ++v25;
     }
-    while ( (__int64)v8 < (int)monitor );
+    while ( (__int64)v25 < (int)monitor );
   }
-  if ( !v6 )
+  if ( !v23 )
 LABEL_20:
-    sub_B52A5C(dataVals, method);
+    sub_B5D69C(dataVals, method);
   return (DataVals_TYPE_array *)System_Collections_Generic_List_Voice_BATTLE___ToArray(
-                                  (System_Collections_Generic_List_Voice_BATTLE__o *)v6,
-                                  (const MethodInfo_305C094 *)Method_System_Collections_Generic_List_DataVals_TYPE__ToArray__);
+                                  (System_Collections_Generic_List_Voice_BATTLE__o *)v23,
+                                  (const MethodInfo_30468BC *)Method_System_Collections_Generic_List_DataVals_TYPE__ToArray__);
 }
 
 
 bool __fastcall FuncParamValueUpInfoDefault__IsIgnoreValueUpBuffType(int32_t buffId, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
+  int v11; // w1
+  int v12; // w2
+  __int64 v13; // x3
+  int v14; // w1
+  int v15; // w2
+  __int64 v16; // x3
   WarQuestSelectionMaster_o *Master_WarQuestSelectionMaster; // x0
-  __int64 v4; // x1
-  WarEntity_o *v6; // [xsp+0h] [xbp-20h] BYREF
+  __int64 v18; // x1
+  WarEntity_o *v20; // [xsp+0h] [xbp-20h] BYREF
   WarEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_42B2BCF & 1) == 0 )
+  if ( (byte_42EB539 & 1) == 0 )
   {
-    sub_B52984(&Method_DataManager_GetMaster_BuffMaster___);
-    sub_B52984(&Method_DataManager_GetMaster_BuffTypeDetailMaster___);
-    sub_B52984(&DataManager_TypeInfo);
-    sub_B52984(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
-    sub_B52984(&Method_DataMasterBase_BuffTypeDetailMaster__BuffTypeDetailEntity__int__TryGetEntity__);
-    byte_42B2BCF = 1;
+    sub_B5D5C4(&Method_DataManager_GetMaster_BuffMaster___, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_DataManager_GetMaster_BuffTypeDetailMaster___, v5, v6, v7);
+    sub_B5D5C4(&DataManager_TypeInfo, v8, v9, v10);
+    sub_B5D5C4(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v11, v12, v13);
+    sub_B5D5C4(&Method_DataMasterBase_BuffTypeDetailMaster__BuffTypeDetailEntity__int__TryGetEntity__, v14, v15, v16);
+    byte_42EB539 = 1;
   }
-  v6 = 0LL;
+  v20 = 0LL;
   entity = 0LL;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_BuffMaster___);
+  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1AE41EC *)Method_DataManager_GetMaster_BuffMaster___);
   if ( !Master_WarQuestSelectionMaster )
     goto LABEL_19;
   if ( !DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
           (DataMasterBase_WarMaster__WarEntity__int__o *)Master_WarQuestSelectionMaster,
           &entity,
           buffId,
-          (const MethodInfo_23E2334 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__) )
+          (const MethodInfo_23FAE6C *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__) )
     return 1;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_BuffTypeDetailMaster___);
+  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1AE41EC *)Method_DataManager_GetMaster_BuffTypeDetailMaster___);
   if ( !entity || !Master_WarQuestSelectionMaster )
     goto LABEL_19;
   Master_WarQuestSelectionMaster = (WarQuestSelectionMaster_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
                                                                   (DataMasterBase_WarMaster__WarEntity__int__o *)Master_WarQuestSelectionMaster,
-                                                                  &v6,
+                                                                  &v20,
                                                                   *(&entity->fields.id + 1),
-                                                                  (const MethodInfo_23E2334 *)Method_DataMasterBase_BuffTypeDetailMaster__BuffTypeDetailEntity__int__TryGetEntity__);
+                                                                  (const MethodInfo_23FAE6C *)Method_DataMasterBase_BuffTypeDetailMaster__BuffTypeDetailEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_WarQuestSelectionMaster & 1) != 0 )
   {
-    if ( v6 )
-      return LOBYTE(v6->fields.name) != 0;
+    if ( v20 )
+      return LOBYTE(v20->fields.name) != 0;
 LABEL_19:
-    sub_B52A5C(Master_WarQuestSelectionMaster, v4);
+    sub_B5D69C(Master_WarQuestSelectionMaster, v18);
   }
   return 0;
 }
@@ -272,34 +316,42 @@ LABEL_19:
 
 bool __fastcall FuncParamValueUpInfoDefault__IsIgnoreValueUpFuncType(int32_t funcType, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
   WarQuestSelectionMaster_o *Master_WarQuestSelectionMaster; // x0
-  __int64 v4; // x1
+  __int64 v12; // x1
   WarEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_42B2BCE & 1) == 0 )
+  if ( (byte_42EB538 & 1) == 0 )
   {
-    sub_B52984(&Method_DataManager_GetMaster_FuncTypeDetailMaster___);
-    sub_B52984(&DataManager_TypeInfo);
-    sub_B52984(&Method_DataMasterBase_FuncTypeDetailMaster__FuncTypeDetailEntity__int__TryGetEntity__);
-    byte_42B2BCE = 1;
+    sub_B5D5C4(&Method_DataManager_GetMaster_FuncTypeDetailMaster___, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&DataManager_TypeInfo, v5, v6, v7);
+    sub_B5D5C4(&Method_DataMasterBase_FuncTypeDetailMaster__FuncTypeDetailEntity__int__TryGetEntity__, v8, v9, v10);
+    byte_42EB538 = 1;
   }
   entity = 0LL;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1A4F124 *)Method_DataManager_GetMaster_FuncTypeDetailMaster___);
+  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1AE41EC *)Method_DataManager_GetMaster_FuncTypeDetailMaster___);
   if ( !Master_WarQuestSelectionMaster )
     goto LABEL_12;
   Master_WarQuestSelectionMaster = (WarQuestSelectionMaster_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
                                                                   (DataMasterBase_WarMaster__WarEntity__int__o *)Master_WarQuestSelectionMaster,
                                                                   &entity,
                                                                   funcType,
-                                                                  (const MethodInfo_23E2334 *)Method_DataMasterBase_FuncTypeDetailMaster__FuncTypeDetailEntity__int__TryGetEntity__);
+                                                                  (const MethodInfo_23FAE6C *)Method_DataMasterBase_FuncTypeDetailMaster__FuncTypeDetailEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_WarQuestSelectionMaster & 1) != 0 )
   {
     if ( entity )
       return *((_BYTE *)&entity->fields.id + 4) != 0;
 LABEL_12:
-    sub_B52A5C(Master_WarQuestSelectionMaster, v4);
+    sub_B5D69C(Master_WarQuestSelectionMaster, v12);
   }
   return 0;
 }
@@ -309,25 +361,27 @@ DataVals_TYPE_array *__fastcall FuncParamValueUpInfoDefault__get_ValueUpTypeArra
         FuncParamValueUpInfoDefault_o *this,
         const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   DataVals_TYPE_array *result; // x0
-  FuncParamValueUpInfoDefault_c *v4; // x0
+  FuncParamValueUpInfoDefault_c *v6; // x0
 
-  if ( (byte_42B2BCB & 1) == 0 )
+  if ( (byte_42EB535 & 1) == 0 )
   {
-    sub_B52984(&FuncParamValueUpInfoDefault_TypeInfo);
-    byte_42B2BCB = 1;
+    sub_B5D5C4(&FuncParamValueUpInfoDefault_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42EB535 = 1;
   }
   result = this->fields.overwriteValueUpTypeArray;
   if ( !result )
   {
-    v4 = FuncParamValueUpInfoDefault_TypeInfo;
+    v6 = FuncParamValueUpInfoDefault_TypeInfo;
     if ( (BYTE3(FuncParamValueUpInfoDefault_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !FuncParamValueUpInfoDefault_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(FuncParamValueUpInfoDefault_TypeInfo);
-      v4 = FuncParamValueUpInfoDefault_TypeInfo;
+      v6 = FuncParamValueUpInfoDefault_TypeInfo;
     }
-    return v4->static_fields->defaultValueUpValsTypes;
+    return v6->static_fields->defaultValueUpValsTypes;
   }
   return result;
 }

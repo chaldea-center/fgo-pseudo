@@ -1,9 +1,12 @@
 void __fastcall RaceResultEffectComponent___ctor(RaceResultEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_42AE4F6 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E6F67 & 1) == 0 )
   {
-    sub_B52984(&CommonEffectComponent_TypeInfo);
-    byte_42AE4F6 = 1;
+    sub_B5D5C4(&CommonEffectComponent_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E6F67 = 1;
   }
   if ( (BYTE3(CommonEffectComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CommonEffectComponent_TypeInfo->_2.cctor_finished )
@@ -43,14 +46,14 @@ void __fastcall RaceResultEffectComponent__SetParam(
   __int64 v18; // x24
   __int64 v19; // x0
 
-  if ( (byte_42AE4F5 & 1) == 0 )
+  if ( (byte_42E6F66 & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
-    byte_42AE4F5 = 1;
+    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___, (_DWORD)param, (_DWORD)method, v3);
+    byte_42E6F66 = 1;
   }
   this->fields.param = param;
   p_param = &this->fields.param;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)p_param,
     (System_Int32_array **)param,
     (System_String_array **)method,
@@ -62,7 +65,7 @@ void __fastcall RaceResultEffectComponent__SetParam(
   v13 = (__int64)*(p_param - 1);
   if ( !v13 )
 LABEL_17:
-    sub_B52A5C(Components_iTween, v12);
+    sub_B5D69C(Components_iTween, v12);
   v14 = *(_DWORD *)(v13 + 24);
   if ( v14 >= 1 )
   {
@@ -76,7 +79,7 @@ LABEL_17:
         goto LABEL_17;
       Components_iTween = UnityEngine_GameObject__GetComponents_iTween_(
                             (UnityEngine_GameObject_o *)Components_iTween,
-                            (const MethodInfo_1B7B464 *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
+                            (const MethodInfo_1CC4648 *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
       if ( Components_iTween )
       {
         max_length = Components_iTween->max_length;
@@ -104,7 +107,7 @@ LABEL_14:
         goto LABEL_14;
     }
 LABEL_16:
-    v19 = sub_B52A88(Components_iTween);
-    sub_B52A28(v19, 0LL);
+    v19 = sub_B5D6C8(Components_iTween);
+    sub_B5D668(v19, 0LL);
   }
 }

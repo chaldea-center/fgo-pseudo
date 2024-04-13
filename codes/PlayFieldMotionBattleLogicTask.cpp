@@ -17,6 +17,6 @@ void __fastcall PlayFieldMotionBattleLogicTask___ctor(
   v6->fields.motionName = motionName;
   v6 = (PlayFieldMotionBattleLogicTask_o *)((char *)v6 + 104);
   v6[-1].fields._AiTimingPriority_k__BackingField = 44;
-  sub_B52920((BattleServantConfConponent_o *)v6, (System_Int32_array **)motionName, v7, v8, v9, v10, v11, v12);
+  sub_B5D560((BattleServantConfConponent_o *)v6, (System_Int32_array **)motionName, v7, v8, v9, v10, v11, v12);
   LOBYTE(v6->fields.command) = isForcedSpeedOne;
 }

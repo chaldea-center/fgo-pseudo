@@ -1,12 +1,15 @@
 void __fastcall UserFollowerMaster___ctor(UserFollowerMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_42AEF07 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E70FF & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_UserFollowerMaster__UserFollowerEntity__long___ctor__);
-    byte_42AEF07 = 1;
+    sub_B5D5C4(&Method_DataMasterBase_UserFollowerMaster__UserFollowerEntity__long___ctor__, (_DWORD)method, v2, v3);
+    byte_42E70FF = 1;
   }
   DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long____ctor(
     (DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long__o *)this,
     93,
-    (const MethodInfo_23E2464 *)Method_DataMasterBase_UserFollowerMaster__UserFollowerEntity__long___ctor__);
+    (const MethodInfo_23FAF9C *)Method_DataMasterBase_UserFollowerMaster__UserFollowerEntity__long___ctor__);
 }

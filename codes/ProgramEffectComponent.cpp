@@ -19,24 +19,30 @@ void __fastcall ProgramEffectComponent__Init(
   float b; // s10
   float g; // s11
   float r; // s12
+  char v16; // w1
+  char v17; // w2
+  __int64 v18; // x3
+  char v19; // w1
+  char v20; // w2
+  __int64 v21; // x3
   UnityEngine_Object_o *gameObject; // x20
   System_String_o *transform; // x0
-  __int64 v18; // x1
+  __int64 v24; // x1
   UnityEngine_Object_o *parent; // x20
-  UnityEngine_Transform_o *v20; // x20
+  UnityEngine_Transform_o *v26; // x20
   int32_t layer; // w2
-  const MethodInfo *v22; // x3
+  const MethodInfo *v28; // x3
 
   a = color.fields.a;
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_42AFB95 & 1) == 0 )
+  if ( (byte_42E87DA & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    sub_B52984(&StringLiteral_5853/*"Effect("*/);
-    sub_B52984(&StringLiteral_661/*")"*/);
-    byte_42AFB95 = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, isSkip, isPause, method);
+    sub_B5D5C4(&StringLiteral_5889/*"Effect("*/, v16, v17, v18);
+    sub_B5D5C4(&StringLiteral_659/*")"*/, v19, v20, v21);
+    byte_42E87DA = 1;
   }
   this->fields.duration = time;
   this->fields.effectColor.fields.r = r;
@@ -47,10 +53,10 @@ void __fastcall ProgramEffectComponent__Init(
   this->fields.isSkip = isSkip;
   this->fields.isPause = isPause;
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  transform = System_String__Concat_44570600(
-                (System_String_o *)StringLiteral_5853/*"Effect("*/,
+  transform = System_String__Concat_44580072(
+                (System_String_o *)StringLiteral_5889/*"Effect("*/,
                 this->fields.effectName,
-                (System_String_o *)StringLiteral_661/*")"*/,
+                (System_String_o *)StringLiteral_659/*")"*/,
                 0LL);
   if ( !gameObject )
     goto LABEL_14;
@@ -66,7 +72,7 @@ void __fastcall ProgramEffectComponent__Init(
   }
   if ( UnityEngine_Object__op_Inequality(parent, 0LL, 0LL) )
   {
-    v20 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+    v26 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     transform = (System_String_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     if ( transform )
     {
@@ -77,13 +83,13 @@ void __fastcall ProgramEffectComponent__Init(
         if ( transform )
         {
           layer = UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)transform, 0LL);
-          ProgramEffectComponent__SetChildInit(this, v20, layer, v22);
+          ProgramEffectComponent__SetChildInit(this, v26, layer, v28);
           return;
         }
       }
     }
 LABEL_14:
-    sub_B52A5C(transform, v18);
+    sub_B5D69C(transform, v24);
   }
 }
 
@@ -111,42 +117,48 @@ void __fastcall ProgramEffectComponent__SetChildInit(
         const MethodInfo *method)
 {
   ProgramEffectComponent_o *v6; // x21
-  __int64 v7; // x1
-  __int64 v8; // x3
+  int v7; // w1
+  int v8; // w2
+  __int64 v9; // x3
+  int v10; // w1
+  int v11; // w2
+  __int64 v12; // x3
+  __int64 v13; // x1
+  __int64 v14; // x3
   System_Collections_IEnumerator_o *Enumerator; // x19
   System_Collections_IEnumerator_c *klass; // x8
-  unsigned __int64 v11; // x10
+  unsigned __int64 v17; // x10
   int32_t *p_offset; // x11
   __int64 p_method; // x0
-  __int64 v14; // x3
-  System_Collections_IEnumerator_c *v15; // x8
-  unsigned __int64 v16; // x10
-  System_Collections_IEnumerator_c **v17; // x11
-  __int64 v18; // x0
-  UnityEngine_Transform_o *v19; // x0
-  const MethodInfo *v20; // x3
-  __int64 v21; // x10
-  __int64 v22; // x0
-  __int64 v23; // x3
-  __int64 v24; // x8
-  __int64 v25; // x19
-  unsigned __int64 v26; // x10
-  int *v27; // x11
+  __int64 v20; // x3
+  System_Collections_IEnumerator_c *v21; // x8
+  unsigned __int64 v22; // x10
+  System_Collections_IEnumerator_c **v23; // x11
+  __int64 v24; // x0
+  UnityEngine_Transform_o *v25; // x0
+  const MethodInfo *v26; // x3
+  __int64 v27; // x10
   __int64 v28; // x0
+  __int64 v29; // x3
+  __int64 v30; // x8
+  __int64 v31; // x19
+  unsigned __int64 v32; // x10
+  int *v33; // x11
+  __int64 v34; // x0
 
   v6 = this;
-  if ( (byte_42AFB96 & 1) == 0 )
+  if ( (byte_42E87DB & 1) == 0 )
   {
-    sub_B52984(&System_IDisposable_TypeInfo);
-    sub_B52984(&System_Collections_IEnumerator_TypeInfo);
-    this = (ProgramEffectComponent_o *)sub_B52984(&UnityEngine_Transform_TypeInfo);
-    byte_42AFB96 = 1;
+    sub_B5D5C4(&System_IDisposable_TypeInfo, (_DWORD)tf, layer, method);
+    sub_B5D5C4(&System_Collections_IEnumerator_TypeInfo, v7, v8, v9);
+    this = (ProgramEffectComponent_o *)sub_B5D5C4(&UnityEngine_Transform_TypeInfo, v10, v11, v12);
+    byte_42E87DB = 1;
   }
   if ( !tf
     || (this = (ProgramEffectComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)tf, 0LL)) == 0LL )
   {
 LABEL_35:
-    sub_B52A5C(this, tf);
+    sub_B5D69C(this, tf);
   }
   if ( UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)this, 0LL) != layer )
   {
@@ -156,19 +168,19 @@ LABEL_35:
     UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)this, layer, 0LL);
     Enumerator = UnityEngine_Transform__GetEnumerator(tf, 0LL);
     if ( !Enumerator )
-      sub_B52A5C(0LL, v7);
+      sub_B5D69C(0LL, v13);
     while ( 1 )
     {
       klass = Enumerator->klass;
       if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
       {
-        v11 = 0LL;
+        v17 = 0LL;
         p_offset = &klass->_1.interfaceOffsets->offset;
         while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
         {
-          ++v11;
+          ++v17;
           p_offset += 4;
-          if ( v11 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+          if ( v17 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
             goto LABEL_12;
         }
         p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -176,70 +188,70 @@ LABEL_35:
       else
       {
 LABEL_12:
-        p_method = sub_AEB880(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL, v8);
+        p_method = sub_AF54C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL, v14);
       }
       if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))p_method)(
               Enumerator,
               *(_QWORD *)(p_method + 8)) & 1) == 0 )
         break;
-      v15 = Enumerator->klass;
+      v21 = Enumerator->klass;
       if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
       {
-        v16 = 0LL;
-        v17 = (System_Collections_IEnumerator_c **)&v15->_1.interfaceOffsets->offset;
-        while ( *(v17 - 1) != System_Collections_IEnumerator_TypeInfo )
+        v22 = 0LL;
+        v23 = (System_Collections_IEnumerator_c **)&v21->_1.interfaceOffsets->offset;
+        while ( *(v23 - 1) != System_Collections_IEnumerator_TypeInfo )
         {
-          ++v16;
-          v17 += 2;
-          if ( v16 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+          ++v22;
+          v23 += 2;
+          if ( v22 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
             goto LABEL_19;
         }
-        v18 = (__int64)&v15->vtable[*(_DWORD *)v17 + 1].method;
+        v24 = (__int64)&v21->vtable[*(_DWORD *)v23 + 1].method;
       }
       else
       {
 LABEL_19:
-        v18 = sub_AEB880(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL, v14);
+        v24 = sub_AF54C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL, v20);
       }
-      v19 = (UnityEngine_Transform_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v18)(
+      v25 = (UnityEngine_Transform_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v24)(
                                          Enumerator,
-                                         *(_QWORD *)(v18 + 8));
-      if ( v19 )
+                                         *(_QWORD *)(v24 + 8));
+      if ( v25 )
       {
-        v21 = *(&UnityEngine_Transform_TypeInfo->_2.bitflags2 + 1);
-        if ( *(&v19->klass->_2.bitflags2 + 1) < (unsigned int)v21
-          || (UnityEngine_Transform_c *)v19->klass->_2.typeHierarchy[v21 - 1] != UnityEngine_Transform_TypeInfo )
+        v27 = *(&UnityEngine_Transform_TypeInfo->_2.bitflags2 + 1);
+        if ( *(&v25->klass->_2.bitflags2 + 1) < (unsigned int)v27
+          || (UnityEngine_Transform_c *)v25->klass->_2.typeHierarchy[v27 - 1] != UnityEngine_Transform_TypeInfo )
         {
-          this = (ProgramEffectComponent_o *)sub_B52D50(v19);
+          this = (ProgramEffectComponent_o *)sub_B5D990(v25);
           goto LABEL_35;
         }
       }
-      ProgramEffectComponent__SetChildInit(v6, v19, layer, v20);
+      ProgramEffectComponent__SetChildInit(v6, v25, layer, v26);
     }
-    v22 = sub_B52A44(Enumerator, System_IDisposable_TypeInfo);
-    if ( v22 )
+    v28 = sub_B5D684(Enumerator, System_IDisposable_TypeInfo);
+    if ( v28 )
     {
-      v24 = *(_QWORD *)v22;
-      v25 = v22;
-      if ( *(_WORD *)(*(_QWORD *)v22 + 298LL) )
+      v30 = *(_QWORD *)v28;
+      v31 = v28;
+      if ( *(_WORD *)(*(_QWORD *)v28 + 298LL) )
       {
-        v26 = 0LL;
-        v27 = (int *)(*(_QWORD *)(v24 + 176) + 8LL);
-        while ( *((System_IDisposable_c **)v27 - 1) != System_IDisposable_TypeInfo )
+        v32 = 0LL;
+        v33 = (int *)(*(_QWORD *)(v30 + 176) + 8LL);
+        while ( *((System_IDisposable_c **)v33 - 1) != System_IDisposable_TypeInfo )
         {
-          ++v26;
-          v27 += 4;
-          if ( v26 >= *(unsigned __int16 *)(*(_QWORD *)v22 + 298LL) )
+          ++v32;
+          v33 += 4;
+          if ( v32 >= *(unsigned __int16 *)(*(_QWORD *)v28 + 298LL) )
             goto LABEL_30;
         }
-        v28 = v24 + 16LL * *v27 + 312;
+        v34 = v30 + 16LL * *v33 + 312;
       }
       else
       {
 LABEL_30:
-        v28 = sub_AEB880(v22, System_IDisposable_TypeInfo, 0LL, v23);
+        v34 = sub_AF54C0(v28, System_IDisposable_TypeInfo, 0LL, v29);
       }
-      (*(void (__fastcall **)(__int64, _QWORD))v28)(v25, *(_QWORD *)(v28 + 8));
+      (*(void (__fastcall **)(__int64, _QWORD))v34)(v31, *(_QWORD *)(v34 + 8));
     }
   }
 }
@@ -247,12 +259,14 @@ LABEL_30:
 
 void __fastcall ProgramEffectComponent__Stop(ProgramEffectComponent_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_42AFB97 & 1) == 0 )
+  if ( (byte_42E87DC & 1) == 0 )
   {
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42AFB97 = 1;
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E87DC = 1;
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -260,7 +274,7 @@ void __fastcall ProgramEffectComponent__Stop(ProgramEffectComponent_o *this, con
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  UnityEngine_Object__Destroy_35616956(gameObject, 0LL);
+  UnityEngine_Object__Destroy_35620236(gameObject, 0LL);
 }
 
 

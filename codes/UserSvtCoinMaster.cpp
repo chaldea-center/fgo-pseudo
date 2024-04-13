@@ -1,14 +1,17 @@
 void __fastcall UserSvtCoinMaster___ctor(UserSvtCoinMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_42B5E66 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42EE6CD & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string___ctor__);
-    byte_42B5E66 = 1;
+    sub_B5D5C4(&Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string___ctor__, (_DWORD)method, v2, v3);
+    byte_42EE6CD = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     373,
-    (const MethodInfo_23E268C *)Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string___ctor__);
+    (const MethodInfo_23FB1C4 *)Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string___ctor__);
 }
 
 
@@ -21,19 +24,20 @@ UserSvtCoinEntity_o *__fastcall UserSvtCoinMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_42B5E64 & 1) == 0 )
+  if ( (byte_42EE6CB & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string__GetEntity__);
-    byte_42B5E64 = 1;
+    sub_B5D5C4(&Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string__GetEntity__, userId, svtId, method);
+    byte_42EE6CB = 1;
   }
   PK = UserSvtCoinEntity__CreatePK(userId, svtId, *(const MethodInfo **)&svtId);
   return (UserSvtCoinEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                   (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                   PK,
-                                  (const MethodInfo_23E2728 *)Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string__GetEntity__);
+                                  (const MethodInfo_23FB260 *)Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string__GetEntity__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall UserSvtCoinMaster__TryGetEntity(
         UserSvtCoinMaster_o *this,
         UserSvtCoinEntity_o **entity,
@@ -43,15 +47,19 @@ bool __fastcall UserSvtCoinMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_42B5E65 & 1) == 0 )
+  if ( (byte_42EE6CC & 1) == 0 )
   {
-    sub_B52984(&Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string__TryGetEntity__);
-    byte_42B5E65 = 1;
+    sub_B5D5C4(
+      &Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string__TryGetEntity__,
+      (_DWORD)entity,
+      userId,
+      *(_QWORD *)&svtId);
+    byte_42EE6CC = 1;
   }
   PK = UserSvtCoinEntity__CreatePK(userId, svtId, (const MethodInfo *)userId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_23E2780 *)Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string__TryGetEntity__);
+           (const MethodInfo_23FB2B8 *)Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string__TryGetEntity__);
 }

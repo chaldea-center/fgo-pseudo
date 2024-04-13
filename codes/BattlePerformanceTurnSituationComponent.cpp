@@ -1,24 +1,28 @@
 void __fastcall BattlePerformanceTurnSituationComponent___cctor(const MethodInfo *method)
 {
-  System_String_array **v1; // x2
-  System_String_array **v2; // x3
-  System_Boolean_array **v3; // x4
-  System_Int32_array **v4; // x5
-  System_Int32_array *v5; // x6
-  System_Int32_array *v6; // x7
+  int v1; // w1
+  System_String_array **v2; // x2
+  System_String_array **v3; // x3
+  System_Boolean_array **v4; // x4
+  System_Int32_array **v5; // x5
+  System_Int32_array *v6; // x6
+  System_Int32_array *v7; // x7
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
   BattleServantConfConponent_o *static_fields; // x0
-  System_Int32_array **v8; // x1
+  System_Int32_array **v12; // x1
 
-  if ( (byte_42B09EA & 1) == 0 )
+  if ( (byte_42E960F & 1) == 0 )
   {
-    sub_B52984(&BattlePerformanceTurnSituationComponent_TypeInfo);
-    sub_B52984(&StringLiteral_2567/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/);
-    byte_42B09EA = 1;
+    sub_B5D5C4(&BattlePerformanceTurnSituationComponent_TypeInfo, v1, (_DWORD)v2, v3);
+    sub_B5D5C4(&StringLiteral_2589/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/, v8, v9, v10);
+    byte_42E960F = 1;
   }
   static_fields = (BattleServantConfConponent_o *)BattlePerformanceTurnSituationComponent_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_2567/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2567/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/;
-  sub_B52920(static_fields, v8, v1, v2, v3, v4, v5, v6);
+  v12 = (System_Int32_array **)StringLiteral_2589/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2589/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/;
+  sub_B5D560(static_fields, v12, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -37,46 +41,55 @@ void __fastcall BattlePerformanceTurnSituationComponent__SetLabelWithRaidName(
         int64_t param,
         const MethodInfo *method)
 {
-  BattlePerformanceTurnSituationComponent_c *v9; // x0
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  int v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
+  BattlePerformanceTurnSituationComponent_c *v18; // x0
   System_String_o *LABEL_WITH_RAIDNAME_KEY; // x23
-  Il2CppObject *v11; // x0
-  System_String_o *v12; // x22
-  System_String_o *v13; // x22
-  Il2CppObject *v14; // x0
-  System_String_o *v15; // x0
-  const MethodInfo *v16; // x2
-  int64_t v17; // [xsp+8h] [xbp-38h] BYREF
-  int32_t v18; // [xsp+1Ch] [xbp-24h] BYREF
+  Il2CppObject *v20; // x0
+  System_String_o *v21; // x22
+  System_String_o *v22; // x22
+  Il2CppObject *v23; // x0
+  System_String_o *v24; // x0
+  const MethodInfo *v25; // x2
+  int64_t v26; // [xsp+8h] [xbp-38h] BYREF
+  int32_t v27; // [xsp+1Ch] [xbp-24h] BYREF
 
-  if ( (byte_42B09E9 & 1) == 0 )
+  if ( (byte_42E960E & 1) == 0 )
   {
-    sub_B52984(&BattlePerformanceTurnSituationComponent_TypeInfo);
-    sub_B52984(&int_TypeInfo);
-    sub_B52984(&long_TypeInfo);
-    sub_B52984(&LocalizationManager_TypeInfo);
-    byte_42B09E9 = 1;
+    sub_B5D5C4(&BattlePerformanceTurnSituationComponent_TypeInfo, situationNo, (_DWORD)bossName, param);
+    sub_B5D5C4(&int_TypeInfo, v9, v10, v11);
+    sub_B5D5C4(&long_TypeInfo, v12, v13, v14);
+    sub_B5D5C4(&LocalizationManager_TypeInfo, v15, v16, v17);
+    byte_42E960E = 1;
   }
-  v9 = BattlePerformanceTurnSituationComponent_TypeInfo;
+  v18 = BattlePerformanceTurnSituationComponent_TypeInfo;
   if ( (BYTE3(BattlePerformanceTurnSituationComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BattlePerformanceTurnSituationComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattlePerformanceTurnSituationComponent_TypeInfo);
-    v9 = BattlePerformanceTurnSituationComponent_TypeInfo;
+    v18 = BattlePerformanceTurnSituationComponent_TypeInfo;
   }
-  LABEL_WITH_RAIDNAME_KEY = v9->static_fields->LABEL_WITH_RAIDNAME_KEY;
-  v18 = situationNo;
-  v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v18);
-  v12 = System_String__Format(LABEL_WITH_RAIDNAME_KEY, v11, 0LL);
+  LABEL_WITH_RAIDNAME_KEY = v18->static_fields->LABEL_WITH_RAIDNAME_KEY;
+  v27 = situationNo;
+  v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v27);
+  v21 = System_String__Format(LABEL_WITH_RAIDNAME_KEY, v20, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v13 = LocalizationManager__Get(v12, 0LL);
-  v17 = param;
-  v14 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v17);
-  v15 = System_String__Format_44563852(v13, (Il2CppObject *)bossName, v14, 0LL);
-  BattlePerformanceTurnSituationComponent__setMessage(this, v15, v16);
+  v22 = LocalizationManager__Get(v21, 0LL);
+  v26 = param;
+  v23 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v26);
+  v24 = System_String__Format_44573324(v22, (Il2CppObject *)bossName, v23, 0LL);
+  BattlePerformanceTurnSituationComponent__setMessage(this, v24, v25);
 }
 
 
@@ -85,29 +98,33 @@ void __fastcall BattlePerformanceTurnSituationComponent__setMessage(
         System_String_o *message,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
   UnityEngine_Object_o *Component_WebViewObject; // x20
-  _BOOL8 v6; // x0
-  __int64 v7; // x1
+  _BOOL8 v10; // x0
+  __int64 v11; // x1
 
-  if ( (byte_42B09E8 & 1) == 0 )
+  if ( (byte_42E960D & 1) == 0 )
   {
-    sub_B52984(&Method_UnityEngine_Component_GetComponent_UILabel___);
-    sub_B52984(&UnityEngine_Object_TypeInfo);
-    byte_42B09E8 = 1;
+    sub_B5D5C4(&Method_UnityEngine_Component_GetComponent_UILabel___, (_DWORD)message, (_DWORD)method, v3);
+    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v6, v7, v8);
+    byte_42E960D = 1;
   }
   Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                       (UnityEngine_Component_o *)this,
-                                                      (const MethodInfo_1A491D8 *)Method_UnityEngine_Component_GetComponent_UILabel___);
+                                                      (const MethodInfo_1ADE2A0 *)Method_UnityEngine_Component_GetComponent_UILabel___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  v6 = UnityEngine_Object__op_Equality(Component_WebViewObject, 0LL, 0LL);
-  if ( !v6 )
+  v10 = UnityEngine_Object__op_Equality(Component_WebViewObject, 0LL, 0LL);
+  if ( !v10 )
   {
     if ( !Component_WebViewObject )
-      sub_B52A5C(v6, v7);
+      sub_B5D69C(v10, v11);
     UILabel__set_text((UILabel_o *)Component_WebViewObject, message, 0LL);
   }
 }

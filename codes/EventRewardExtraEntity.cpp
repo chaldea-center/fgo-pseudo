@@ -1,27 +1,32 @@
 void __fastcall EventRewardExtraEntity___ctor(EventRewardExtraEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_42ACB1C & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E5536 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_string___ctor__);
-    byte_42ACB1C = 1;
+    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
+    byte_42E5536 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23E2224 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall EventRewardExtraEntity__CreatePK(int32_t eventId, int64_t point, const MethodInfo *method)
 {
-  if ( (byte_42ACB1B & 1) == 0 )
+  __int64 v3; // x3
+
+  if ( (byte_42E5535 & 1) == 0 )
   {
-    sub_B52984(&Method_DataEntityBase_CreateMultiplePK_int__long___);
-    byte_42ACB1B = 1;
+    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_int__long___, point, (_DWORD)method, v3);
+    byte_42E5535 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__long_(
            eventId,
            point,
-           (const MethodInfo_1A4DFE8 *)Method_DataEntityBase_CreateMultiplePK_int__long___);
+           (const MethodInfo_1AE30B0 *)Method_DataEntityBase_CreateMultiplePK_int__long___);
 }
 
 

@@ -1,9 +1,12 @@
 void __fastcall PresentBoxNotificationMenu___ctor(PresentBoxNotificationMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_42AFB6B & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E87B0 & 1) == 0 )
   {
-    sub_B52984(&BaseDialog_TypeInfo);
-    byte_42AFB6B = 1;
+    sub_B5D5C4(&BaseDialog_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E87B0 = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -15,17 +18,20 @@ void __fastcall PresentBoxNotificationMenu__BackBuyBankItem(
         PresentBoxNotificationMenu_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_42AFB67 & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E87AC & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_10100/*"OnMoveEnd"*/);
-    byte_42AFB67 = 1;
+    sub_B5D5C4(&StringLiteral_10142/*"OnMoveEnd"*/, (_DWORD)method, v2, v3);
+    byte_42E87AC = 1;
   }
   if ( this->fields.state == 4 )
   {
     this->fields.state = 5;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10100/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_10142/*"OnMoveEnd"*/,
       0.1,
       0LL);
   }
@@ -50,7 +56,7 @@ void __fastcall PresentBoxNotificationMenu__Callback(
   p_callbackFunc = (BattleServantConfConponent_o *)&this->fields.callbackFunc;
   v9 = callbackFunc;
   p_callbackFunc->klass = 0LL;
-  sub_B52920(p_callbackFunc, 0LL, (System_String_array **)method, v3, v4, v5, v6, v7);
+  sub_B5D560(p_callbackFunc, 0LL, (System_String_array **)method, v3, v4, v5, v6, v7);
   if ( callbackFunc )
     PresentBoxNotificationMenu_CallbackFunc__Invoke(v9, result, 0LL);
 }
@@ -66,18 +72,21 @@ void __fastcall PresentBoxNotificationMenu__Close(
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
-  System_Action_o *v10; // x20
+  int v10; // w1
+  int v11; // w2
+  __int64 v12; // x3
+  System_Action_o *v13; // x20
 
-  if ( (byte_42AFB66 & 1) == 0 )
+  if ( (byte_42E87AB & 1) == 0 )
   {
-    sub_B52984(&System_Action_TypeInfo);
-    sub_B52984(&Method_PresentBoxNotificationMenu_OnMoveEnd__);
-    byte_42AFB66 = 1;
+    sub_B5D5C4(&System_Action_TypeInfo, (_DWORD)callback, (_DWORD)method, v3);
+    sub_B5D5C4(&Method_PresentBoxNotificationMenu_OnMoveEnd__, v10, v11, v12);
+    byte_42E87AB = 1;
   }
   if ( this->fields.state )
   {
     this->fields.closeCallbackFunc = callback;
-    sub_B52920(
+    sub_B5D560(
       (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc,
       (System_Int32_array **)callback,
       (System_String_array **)method,
@@ -87,9 +96,9 @@ void __fastcall PresentBoxNotificationMenu__Close(
       v6,
       v7);
     this->fields.state = 5;
-    v10 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
-    System_Action___ctor(v10, (Il2CppObject *)this, Method_PresentBoxNotificationMenu_OnMoveEnd__, 0LL);
-    BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
+    v13 = (System_Action_o *)sub_B5D694(System_Action_TypeInfo);
+    System_Action___ctor(v13, (Il2CppObject *)this, Method_PresentBoxNotificationMenu_OnMoveEnd__, 0LL);
+    BaseDialog__Close((BaseDialog_o *)this, v13, 0LL);
   }
   else if ( callback )
   {
@@ -100,12 +109,14 @@ void __fastcall PresentBoxNotificationMenu__Close(
 
 void __fastcall PresentBoxNotificationMenu__Init(PresentBoxNotificationMenu_o *this, const MethodInfo *method)
 {
+  int v2; // w2
+  __int64 v3; // x3
   UILabel_o *message1Label; // x0
 
-  if ( (byte_42AFB64 & 1) == 0 )
+  if ( (byte_42E87A9 & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_1/*""*/);
-    byte_42AFB64 = 1;
+    sub_B5D5C4(&StringLiteral_1/*""*/, (_DWORD)method, v2, v3);
+    byte_42E87A9 = 1;
   }
   message1Label = this->fields.message1Label;
   if ( !message1Label
@@ -116,7 +127,7 @@ void __fastcall PresentBoxNotificationMenu__Init(PresentBoxNotificationMenu_o *t
     || (UILabel__set_text(message1Label, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (message1Label = (UILabel_o *)this->fields.ItemListViewManager) == 0LL) )
   {
-    sub_B52A5C(message1Label, method);
+    sub_B5D69C(message1Label, method);
   }
   ListViewManager__DestroyList((ListViewManager_o *)message1Label, 0LL);
   this->fields.state = 0;
@@ -126,93 +137,100 @@ void __fastcall PresentBoxNotificationMenu__Init(PresentBoxNotificationMenu_o *t
 
 void __fastcall PresentBoxNotificationMenu__OnClickClose(PresentBoxNotificationMenu_o *this, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x2
+  int v2; // w2
+  __int64 v3; // x3
+  const MethodInfo *v5; // x2
 
-  if ( (byte_42AFB69 & 1) == 0 )
+  if ( (byte_42E87AE & 1) == 0 )
   {
-    sub_B52984(&SoundManager_TypeInfo);
-    byte_42AFB69 = 1;
+    sub_B5D5C4(&SoundManager_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42E87AE = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playSystemSe(1, 0LL);
-  PresentBoxNotificationMenu__Callback(this, 0, v3);
+  PresentBoxNotificationMenu__Callback(this, 0, v5);
 }
 
 
 void __fastcall PresentBoxNotificationMenu__OnMoveEnd(PresentBoxNotificationMenu_o *this, const MethodInfo *method)
 {
-  int32_t v3; // w8
+  int v2; // w2
+  __int64 v3; // x3
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int32_t v8; // w8
   struct PresentBoxNotificationListViewManager_o *ItemListViewManager; // x20
-  PresentBoxNotificationListViewManager_CallbackFunc_o *v5; // x21
-  __int64 v6; // x0
-  __int64 v7; // x1
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
-  const MethodInfo *v14; // x2
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
+  PresentBoxNotificationListViewManager_CallbackFunc_o *v10; // x21
+  __int64 v11; // x0
+  __int64 v12; // x1
+  System_String_array **v13; // x2
+  System_String_array **v14; // x3
+  System_Boolean_array **v15; // x4
+  System_Int32_array **v16; // x5
+  System_Int32_array *v17; // x6
+  System_Int32_array *v18; // x7
+  const MethodInfo *v19; // x2
+  System_String_array **v20; // x2
+  System_String_array **v21; // x3
+  System_Boolean_array **v22; // x4
+  System_Int32_array **v23; // x5
+  System_Int32_array *v24; // x6
+  System_Int32_array *v25; // x7
   BattleServantConfConponent_o *p_closeCallbackFunc; // x19
-  System_Action_o *v22; // x20
+  System_Action_o *v27; // x20
   struct System_Action_o *closeCallbackFunc; // t1
 
-  if ( (byte_42AFB68 & 1) == 0 )
+  if ( (byte_42E87AD & 1) == 0 )
   {
-    sub_B52984(&PresentBoxNotificationListViewManager_CallbackFunc_TypeInfo);
-    sub_B52984(&Method_PresentBoxNotificationMenu_OnSelectBuyItem__);
-    byte_42AFB68 = 1;
+    sub_B5D5C4(&PresentBoxNotificationListViewManager_CallbackFunc_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&Method_PresentBoxNotificationMenu_OnSelectBuyItem__, v5, v6, v7);
+    byte_42E87AD = 1;
   }
   switch ( this->fields.state )
   {
     case 2:
-      v3 = 3;
+      v8 = 3;
       goto LABEL_6;
     case 3:
       this->fields.state = 4;
       ItemListViewManager = this->fields.ItemListViewManager;
-      v5 = (PresentBoxNotificationListViewManager_CallbackFunc_o *)sub_B52A54(PresentBoxNotificationListViewManager_CallbackFunc_TypeInfo);
+      v10 = (PresentBoxNotificationListViewManager_CallbackFunc_o *)sub_B5D694(PresentBoxNotificationListViewManager_CallbackFunc_TypeInfo);
       PresentBoxNotificationListViewManager_CallbackFunc___ctor(
-        v5,
+        v10,
         (Il2CppObject *)this,
         Method_PresentBoxNotificationMenu_OnSelectBuyItem__,
         0LL);
       if ( !ItemListViewManager )
-        sub_B52A5C(v6, v7);
-      ItemListViewManager->fields.callbackFunc = v5;
-      sub_B52920(
+        sub_B5D69C(v11, v12);
+      ItemListViewManager->fields.callbackFunc = v10;
+      sub_B5D560(
         (BattleServantConfConponent_o *)&ItemListViewManager->fields.callbackFunc,
-        (System_Int32_array **)v5,
-        v8,
-        v9,
-        v10,
-        v11,
-        v12,
-        v13);
-      PresentBoxNotificationListViewManager__SetMode_24667356(ItemListViewManager, 1, v14);
+        (System_Int32_array **)v10,
+        v13,
+        v14,
+        v15,
+        v16,
+        v17,
+        v18);
+      PresentBoxNotificationListViewManager__SetMode_25072916(ItemListViewManager, 1, v19);
       break;
     case 5:
-      v3 = 6;
+      v8 = 6;
 LABEL_6:
-      this->fields.state = v3;
+      this->fields.state = v8;
       break;
     case 6:
       PresentBoxNotificationMenu__Init(this, method);
       closeCallbackFunc = this->fields.closeCallbackFunc;
       p_closeCallbackFunc = (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc;
-      v22 = closeCallbackFunc;
+      v27 = closeCallbackFunc;
       if ( closeCallbackFunc )
       {
         p_closeCallbackFunc->klass = 0LL;
-        sub_B52920(p_closeCallbackFunc, 0LL, v15, v16, v17, v18, v19, v20);
-        System_Action__Invoke(v22, 0LL);
+        sub_B5D560(p_closeCallbackFunc, 0LL, v20, v21, v22, v23, v24, v25);
+        System_Action__Invoke(v27, 0LL);
       }
       break;
     default:
@@ -236,29 +254,44 @@ void __fastcall PresentBoxNotificationMenu__Open(
         PresentBoxNotificationMenu_CallbackFunc_o *callback,
         const MethodInfo *method)
 {
+  int v7; // w1
+  int v8; // w2
+  __int64 v9; // x3
+  int v10; // w1
+  int v11; // w2
+  __int64 v12; // x3
+  int v13; // w1
+  int v14; // w2
+  __int64 v15; // x3
+  int v16; // w1
+  int v17; // w2
+  __int64 v18; // x3
+  int v19; // w1
+  int v20; // w2
+  __int64 v21; // x3
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v8; // x1
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
+  __int64 v23; // x1
+  System_String_array **v24; // x2
+  System_String_array **v25; // x3
+  System_Boolean_array **v26; // x4
+  System_Int32_array **v27; // x5
+  System_Int32_array *v28; // x6
+  System_Int32_array *v29; // x7
   UILabel_o *message1Label; // x21
   UILabel_o *message2Label; // x21
   UILabel_o *closeLabel; // x21
-  const MethodInfo *v18; // x3
-  System_Action_o *v19; // x20
+  const MethodInfo *v33; // x3
+  System_Action_o *v34; // x20
 
-  if ( (byte_42AFB65 & 1) == 0 )
+  if ( (byte_42E87AA & 1) == 0 )
   {
-    sub_B52984(&System_Action_TypeInfo);
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&Method_PresentBoxNotificationMenu_OnMoveEnd__);
-    sub_B52984(&StringLiteral_10565/*"PRESENT_BOX_NOTIFICATION_MESSAGE2"*/);
-    sub_B52984(&StringLiteral_10564/*"PRESENT_BOX_NOTIFICATION_MESSAGE1"*/);
-    sub_B52984(&StringLiteral_10563/*"PRESENT_BOX_NOTIFICATION_CLOSE"*/);
-    byte_42AFB65 = 1;
+    sub_B5D5C4(&System_Action_TypeInfo, (_DWORD)presentList, (_DWORD)callback, method);
+    sub_B5D5C4(&LocalizationManager_TypeInfo, v7, v8, v9);
+    sub_B5D5C4(&Method_PresentBoxNotificationMenu_OnMoveEnd__, v10, v11, v12);
+    sub_B5D5C4(&StringLiteral_10609/*"PRESENT_BOX_NOTIFICATION_MESSAGE2"*/, v13, v14, v15);
+    sub_B5D5C4(&StringLiteral_10608/*"PRESENT_BOX_NOTIFICATION_MESSAGE1"*/, v16, v17, v18);
+    sub_B5D5C4(&StringLiteral_10607/*"PRESENT_BOX_NOTIFICATION_CLOSE"*/, v19, v20, v21);
+    byte_42E87AA = 1;
   }
   if ( !this->fields.state )
   {
@@ -267,15 +300,15 @@ void __fastcall PresentBoxNotificationMenu__Open(
       goto LABEL_14;
     UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
     this->fields.callbackFunc = callback;
-    sub_B52920(
+    sub_B5D560(
       (BattleServantConfConponent_o *)&this->fields.callbackFunc,
       (System_Int32_array **)callback,
-      v9,
-      v10,
-      v11,
-      v12,
-      v13,
-      v14);
+      v24,
+      v25,
+      v26,
+      v27,
+      v28,
+      v29);
     gameObject = (UnityEngine_GameObject_o *)this->fields.ItemListViewManager;
     if ( !gameObject )
       goto LABEL_14;
@@ -286,32 +319,32 @@ void __fastcall PresentBoxNotificationMenu__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10564/*"PRESENT_BOX_NOTIFICATION_MESSAGE1"*/, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10608/*"PRESENT_BOX_NOTIFICATION_MESSAGE1"*/, 0LL);
     if ( !message1Label )
       goto LABEL_14;
     UILabel__set_text(message1Label, (System_String_o *)gameObject, 0LL);
     message2Label = this->fields.message2Label;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10565/*"PRESENT_BOX_NOTIFICATION_MESSAGE2"*/, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10609/*"PRESENT_BOX_NOTIFICATION_MESSAGE2"*/, 0LL);
     if ( !message2Label
       || (UILabel__set_text(message2Label, (System_String_o *)gameObject, 0LL),
           closeLabel = this->fields.closeLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10563/*"PRESENT_BOX_NOTIFICATION_CLOSE"*/, 0LL),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10607/*"PRESENT_BOX_NOTIFICATION_CLOSE"*/, 0LL),
           !closeLabel)
       || (UILabel__set_text(closeLabel, (System_String_o *)gameObject, 0LL),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.ItemListViewManager) == 0LL) )
     {
 LABEL_14:
-      sub_B52A5C(gameObject, v8);
+      sub_B5D69C(gameObject, v23);
     }
     PresentBoxNotificationListViewManager__CreateList(
       (PresentBoxNotificationListViewManager_o *)gameObject,
       0,
       presentList,
-      v18);
+      v33);
     this->fields.state = 2;
-    v19 = (System_Action_o *)sub_B52A54(System_Action_TypeInfo);
-    System_Action___ctor(v19, (Il2CppObject *)this, Method_PresentBoxNotificationMenu_OnMoveEnd__, 0LL);
-    BaseDialog__Open((BaseDialog_o *)this, v19, 0, 0LL);
+    v34 = (System_Action_o *)sub_B5D694(System_Action_TypeInfo);
+    System_Action___ctor(v34, (Il2CppObject *)this, Method_PresentBoxNotificationMenu_OnMoveEnd__, 0LL);
+    BaseDialog__Open((BaseDialog_o *)this, v34, 0, 0LL);
   }
 }
 
@@ -321,40 +354,41 @@ void __fastcall PresentBoxNotificationMenu__add_callbackFunc(
         PresentBoxNotificationMenu_CallbackFunc_o *value,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
   struct PresentBoxNotificationMenu_CallbackFunc_o **p_callbackFunc; // x20
-  System_Delegate_o *v6; // x21
+  System_Delegate_o *v7; // x21
   struct PresentBoxNotificationMenu_CallbackFunc_o *callbackFunc; // t1
-  System_Delegate_o *v8; // x0
-  __int64 v9; // x0
-  bool v10; // zf
-  PresentBoxNotificationMenu_o *v11; // x0
-  PresentBoxNotificationMenu_CallbackFunc_o *v12; // x1
-  const MethodInfo *v13; // x2
+  System_Delegate_o *v9; // x0
+  __int64 v10; // x0
+  bool v11; // zf
+  PresentBoxNotificationMenu_o *v12; // x0
+  PresentBoxNotificationMenu_CallbackFunc_o *v13; // x1
+  const MethodInfo *v14; // x2
 
-  if ( (byte_42AFB62 & 1) == 0 )
+  if ( (byte_42E87A7 & 1) == 0 )
   {
-    sub_B52984(&PresentBoxNotificationMenu_CallbackFunc_TypeInfo);
-    byte_42AFB62 = 1;
+    sub_B5D5C4(&PresentBoxNotificationMenu_CallbackFunc_TypeInfo, (_DWORD)value, (_DWORD)method, v3);
+    byte_42E87A7 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
-  v6 = (System_Delegate_o *)callbackFunc;
+  v7 = (System_Delegate_o *)callbackFunc;
   while ( 1 )
   {
-    v8 = System_Delegate__Combine(v6, (System_Delegate_o *)value, 0LL);
-    if ( v8 )
+    v9 = System_Delegate__Combine(v7, (System_Delegate_o *)value, 0LL);
+    if ( v9 )
     {
-      if ( (PresentBoxNotificationMenu_CallbackFunc_c *)v8->klass != PresentBoxNotificationMenu_CallbackFunc_TypeInfo )
+      if ( (PresentBoxNotificationMenu_CallbackFunc_c *)v9->klass != PresentBoxNotificationMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B4739C(p_callbackFunc, v8, v6);
-    v10 = v6 == (System_Delegate_o *)v9;
-    v6 = (System_Delegate_o *)v9;
-    if ( v10 )
+    v10 = sub_B51FDC(p_callbackFunc, v9, v7);
+    v11 = v7 == (System_Delegate_o *)v10;
+    v7 = (System_Delegate_o *)v10;
+    if ( v11 )
       return;
   }
-  v11 = (PresentBoxNotificationMenu_o *)sub_B52D50(v8);
-  PresentBoxNotificationMenu__remove_callbackFunc(v11, v12, v13);
+  v12 = (PresentBoxNotificationMenu_o *)sub_B5D990(v9);
+  PresentBoxNotificationMenu__remove_callbackFunc(v12, v13, v14);
 }
 
 
@@ -362,12 +396,15 @@ System_String_o *__fastcall PresentBoxNotificationMenu__get_closeBtnPath(
         PresentBoxNotificationMenu_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_42AFB6A & 1) == 0 )
+  int v2; // w2
+  __int64 v3; // x3
+
+  if ( (byte_42E87AF & 1) == 0 )
   {
-    sub_B52984(&StringLiteral_8952/*"MainPanel/BaseView/CloseButton"*/);
-    byte_42AFB6A = 1;
+    sub_B5D5C4(&StringLiteral_8989/*"MainPanel/BaseView/CloseButton"*/, (_DWORD)method, v2, v3);
+    byte_42E87AF = 1;
   }
-  return (System_String_o *)StringLiteral_8952/*"MainPanel/BaseView/CloseButton"*/;
+  return (System_String_o *)StringLiteral_8989/*"MainPanel/BaseView/CloseButton"*/;
 }
 
 
@@ -376,39 +413,40 @@ void __fastcall PresentBoxNotificationMenu__remove_callbackFunc(
         PresentBoxNotificationMenu_CallbackFunc_o *value,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
   struct PresentBoxNotificationMenu_CallbackFunc_o **p_callbackFunc; // x20
-  System_Delegate_o *v6; // x21
+  System_Delegate_o *v7; // x21
   struct PresentBoxNotificationMenu_CallbackFunc_o *callbackFunc; // t1
-  System_Delegate_o *v8; // x0
-  __int64 v9; // x0
-  bool v10; // zf
-  PresentBoxNotificationMenu_o *v11; // x0
-  const MethodInfo *v12; // x1
+  System_Delegate_o *v9; // x0
+  __int64 v10; // x0
+  bool v11; // zf
+  PresentBoxNotificationMenu_o *v12; // x0
+  const MethodInfo *v13; // x1
 
-  if ( (byte_42AFB63 & 1) == 0 )
+  if ( (byte_42E87A8 & 1) == 0 )
   {
-    sub_B52984(&PresentBoxNotificationMenu_CallbackFunc_TypeInfo);
-    byte_42AFB63 = 1;
+    sub_B5D5C4(&PresentBoxNotificationMenu_CallbackFunc_TypeInfo, (_DWORD)value, (_DWORD)method, v3);
+    byte_42E87A8 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
-  v6 = (System_Delegate_o *)callbackFunc;
+  v7 = (System_Delegate_o *)callbackFunc;
   while ( 1 )
   {
-    v8 = System_Delegate__Remove(v6, (System_Delegate_o *)value, 0LL);
-    if ( v8 )
+    v9 = System_Delegate__Remove(v7, (System_Delegate_o *)value, 0LL);
+    if ( v9 )
     {
-      if ( (PresentBoxNotificationMenu_CallbackFunc_c *)v8->klass != PresentBoxNotificationMenu_CallbackFunc_TypeInfo )
+      if ( (PresentBoxNotificationMenu_CallbackFunc_c *)v9->klass != PresentBoxNotificationMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B4739C(p_callbackFunc, v8, v6);
-    v10 = v6 == (System_Delegate_o *)v9;
-    v6 = (System_Delegate_o *)v9;
-    if ( v10 )
+    v10 = sub_B51FDC(p_callbackFunc, v9, v7);
+    v11 = v7 == (System_Delegate_o *)v10;
+    v7 = (System_Delegate_o *)v10;
+    if ( v11 )
       return;
   }
-  v11 = (PresentBoxNotificationMenu_o *)sub_B52D50(v8);
-  PresentBoxNotificationMenu__Init(v11, v12);
+  v12 = (PresentBoxNotificationMenu_o *)sub_B5D990(v9);
+  PresentBoxNotificationMenu__Init(v12, v13);
 }
 
 
@@ -427,7 +465,7 @@ void __fastcall PresentBoxNotificationMenu_CallbackFunc___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B52920(p_method);
+  sub_B5D560(p_method);
 }
 
 
@@ -442,14 +480,14 @@ System_IAsyncResult_o *__fastcall PresentBoxNotificationMenu_CallbackFunc__Begin
   int32_t v10; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10 = result;
-  if ( (byte_42AD440 & 1) == 0 )
+  if ( (byte_42E5AB4 & 1) == 0 )
   {
-    sub_B52984(&PresentBoxNotificationMenu_Result_TypeInfo);
-    byte_42AD440 = 1;
+    sub_B5D5C4(&PresentBoxNotificationMenu_Result_TypeInfo, result, (_DWORD)callback, object);
+    byte_42E5AB4 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(PresentBoxNotificationMenu_Result_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_B52928(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_B5D568(this, v9, callback, object);
 }
 
 
@@ -458,7 +496,7 @@ void __fastcall PresentBoxNotificationMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B5292C(result, 0LL, method);
+  sub_B5D56C(result, 0LL, method);
 }
 
 
@@ -468,154 +506,153 @@ void __fastcall PresentBoxNotificationMenu_CallbackFunc__Invoke(
         int32_t result,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  __int64 v4; // x8
-  __int64 v6; // x24
-  PresentBoxNotificationMenu_CallbackFunc_o **v7; // x25
-  __int64 v8; // x26
-  unsigned int v9; // w23
+  __int64 v3; // x8
+  __int64 v5; // x24
+  PresentBoxNotificationMenu_CallbackFunc_o **v6; // x25
+  __int64 v7; // x26
+  unsigned int v8; // w23
   __int64 class_0; // x0
-  __int64 v11; // x3
-  __int64 v12; // x8
-  unsigned int v13; // w22
-  unsigned __int64 v14; // x10
-  _DWORD *v15; // x11
+  __int64 v10; // x3
+  __int64 v11; // x8
+  unsigned int v12; // w22
+  unsigned __int64 v13; // x10
+  _DWORD *v14; // x11
+  __int64 v15; // x0
   __int64 v16; // x0
   __int64 v17; // x0
-  __int64 v18; // x0
-  void (__fastcall **v19)(__int64 *, _QWORD, _QWORD); // x0
-  PresentBoxNotificationMenu_CallbackFunc_o *v20; // x8
-  __int64 *v21; // x21
-  __int64 v22; // x22
-  void (__fastcall *v23)(unsigned int *, __int64); // x23
-  char v24; // w23
-  char v25; // w0
-  __int64 v26; // x3
-  unsigned int v27; // w23
-  __int64 v28; // x8
-  __int64 v29; // x1
-  __int64 v30; // x2
-  unsigned __int64 v31; // x10
-  _DWORD *v32; // x11
-  unsigned int v33; // [xsp+4h] [xbp-4Ch] BYREF
-  PresentBoxNotificationMenu_CallbackFunc_o *v34; // [xsp+8h] [xbp-48h] BYREF
+  void (__fastcall **v18)(__int64 *, _QWORD, _QWORD); // x0
+  PresentBoxNotificationMenu_CallbackFunc_o *v19; // x8
+  __int64 *v20; // x21
+  __int64 v21; // x22
+  void (__fastcall *v22)(unsigned int *, __int64); // x23
+  char v23; // w23
+  char v24; // w0
+  __int64 v25; // x3
+  unsigned int v26; // w23
+  __int64 v27; // x8
+  __int64 v28; // x1
+  __int64 v29; // x2
+  unsigned __int64 v30; // x10
+  _DWORD *v31; // x11
+  unsigned int v32; // [xsp+4h] [xbp-4Ch] BYREF
+  PresentBoxNotificationMenu_CallbackFunc_o *v33; // [xsp+8h] [xbp-48h] BYREF
 
-  v34 = this;
-  v33 = result;
-  v4 = *(_QWORD *)&this[1].fields.method_ptr;
-  if ( !v4 )
+  v33 = this;
+  v32 = result;
+  v3 = *(_QWORD *)&this[1].fields.method_ptr;
+  if ( !v3 )
   {
-    v7 = &v34;
-    v6 = 1LL;
+    v6 = &v33;
+    v5 = 1LL;
     goto LABEL_5;
   }
-  v6 = *(_QWORD *)(v4 + 24);
-  if ( v6 )
+  v5 = *(_QWORD *)(v3 + 24);
+  if ( v5 )
   {
-    v7 = (PresentBoxNotificationMenu_CallbackFunc_o **)(v4 + 32);
+    v6 = (PresentBoxNotificationMenu_CallbackFunc_o **)(v3 + 32);
 LABEL_5:
-    v8 = 0LL;
+    v7 = 0LL;
     while ( 1 )
     {
-      v20 = v7[v8];
-      v21 = *(__int64 **)&v20->fields.method;
-      v22 = *(_QWORD *)&v20->fields.extra_arg;
-      v23 = *(void (__fastcall **)(unsigned int *, __int64))&v20->fields.method_ptr;
-      if ( *(__int16 *)(v22 + 72) == -1 )
-        sub_B52A40(*(_QWORD *)&v20->fields.extra_arg, *(_QWORD *)&result, method, v3);
-      if ( (sub_B529B4(v22) & 1) == 0 )
+      v19 = v6[v7];
+      v20 = *(__int64 **)&v19->fields.method;
+      v21 = *(_QWORD *)&v19->fields.extra_arg;
+      v22 = *(void (__fastcall **)(unsigned int *, __int64))&v19->fields.method_ptr;
+      if ( *(__int16 *)(v21 + 72) == -1 )
+        sub_B5D680(*(_QWORD *)&v19->fields.extra_arg, *(_QWORD *)&result, method);
+      if ( (sub_B5D5F4(v21) & 1) == 0 )
         break;
-      if ( *(_BYTE *)(v22 + 74) != 1 )
+      if ( *(_BYTE *)(v21 + 74) != 1 )
         goto LABEL_36;
-      v23((unsigned int *)v33, v22);
+      v22((unsigned int *)v32, v21);
 LABEL_38:
-      if ( ++v8 == v6 )
+      if ( ++v7 == v5 )
         return;
     }
-    if ( !v21 )
+    if ( !v20 )
     {
-      v23(&v33 - 4, v22);
+      v22(&v32 - 4, v21);
       goto LABEL_38;
     }
-    if ( *(__int16 *)(v22 + 72) != -1 && (*(_BYTE *)(*v21 + 277) & 1) == 0 && this->fields.m_target )
+    if ( *(__int16 *)(v21 + 72) != -1 && (*(_BYTE *)(*v20 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v24 = sub_B529AC(v22);
-      v25 = sub_B52DB0(v22);
-      if ( (v24 & 1) != 0 )
+      v23 = sub_B5D5EC(v21);
+      v24 = sub_B5D9F0(v21);
+      if ( (v23 & 1) != 0 )
       {
-        v27 = v33;
-        if ( (v25 & 1) != 0 )
+        v26 = v32;
+        if ( (v24 & 1) != 0 )
         {
-          v28 = *v21;
-          v29 = *(_QWORD *)(v22 + 24);
-          v30 = *(unsigned __int16 *)(v22 + 72);
-          if ( *(_WORD *)(*v21 + 298) )
+          v27 = *v20;
+          v28 = *(_QWORD *)(v21 + 24);
+          v29 = *(unsigned __int16 *)(v21 + 72);
+          if ( *(_WORD *)(*v20 + 298) )
           {
-            v31 = 0LL;
-            v32 = (_DWORD *)(*(_QWORD *)(v28 + 176) + 8LL);
-            while ( *((_QWORD *)v32 - 1) != v29 )
+            v30 = 0LL;
+            v31 = (_DWORD *)(*(_QWORD *)(v27 + 176) + 8LL);
+            while ( *((_QWORD *)v31 - 1) != v28 )
             {
-              ++v31;
-              v32 += 4;
-              if ( v31 >= *(unsigned __int16 *)(*v21 + 298) )
+              ++v30;
+              v31 += 4;
+              if ( v30 >= *(unsigned __int16 *)(*v20 + 298) )
                 goto LABEL_35;
             }
-            v18 = v28 + 16LL * (*v32 + (int)v30) + 312;
+            v17 = v27 + 16LL * (*v31 + (int)v29) + 312;
           }
           else
           {
 LABEL_35:
-            v18 = sub_AEB880(v21, v29, v30, v26);
+            v17 = sub_AF54C0(v20, v28, v29, v25);
           }
-          v17 = *(_QWORD *)(v18 + 8);
+          v16 = *(_QWORD *)(v17 + 8);
         }
         else
         {
-          v17 = *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320);
+          v16 = *(_QWORD *)(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 320);
         }
-        v19 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD))sub_B52A34(v17, v22);
-        (*v19)(v21, v27, v19);
+        v18 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD))sub_B5D674(v16, v21);
+        (*v18)(v20, v26, v18);
       }
       else
       {
-        v9 = *(unsigned __int16 *)(v22 + 72);
-        if ( (v25 & 1) != 0 )
+        v8 = *(unsigned __int16 *)(v21 + 72);
+        if ( (v24 & 1) != 0 )
         {
-          class_0 = j_il2cpp_method_get_class_0(v22);
-          v12 = *v21;
-          v13 = v33;
-          if ( *(_WORD *)(*v21 + 298) )
+          class_0 = j_il2cpp_method_get_class_0(v21);
+          v11 = *v20;
+          v12 = v32;
+          if ( *(_WORD *)(*v20 + 298) )
           {
-            v14 = 0LL;
-            v15 = (_DWORD *)(*(_QWORD *)(v12 + 176) + 8LL);
-            while ( *((_QWORD *)v15 - 1) != class_0 )
+            v13 = 0LL;
+            v14 = (_DWORD *)(*(_QWORD *)(v11 + 176) + 8LL);
+            while ( *((_QWORD *)v14 - 1) != class_0 )
             {
-              ++v14;
-              v15 += 4;
-              if ( v14 >= *(unsigned __int16 *)(*v21 + 298) )
+              ++v13;
+              v14 += 4;
+              if ( v13 >= *(unsigned __int16 *)(*v20 + 298) )
                 goto LABEL_11;
             }
-            v16 = v12 + 16LL * (int)(*v15 + v9) + 312;
+            v15 = v11 + 16LL * (int)(*v14 + v8) + 312;
           }
           else
           {
 LABEL_11:
-            v16 = sub_AEB880(v21, class_0, v9, v11);
+            v15 = sub_AF54C0(v20, class_0, v8, v10);
           }
-          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD))v16)(v21, v13, *(_QWORD *)(v16 + 8));
+          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD))v15)(v20, v12, *(_QWORD *)(v15 + 8));
         }
         else
         {
-          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD))(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 312))(
-            v21,
-            v33,
-            *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320));
+          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD))(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 312))(
+            v20,
+            v32,
+            *(_QWORD *)(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 320));
         }
       }
       goto LABEL_38;
     }
 LABEL_36:
-    ((void (__fastcall *)(__int64 *, _QWORD, __int64))v23)(v21, v33, v22);
+    ((void (__fastcall *)(__int64 *, _QWORD, __int64))v22)(v20, v32, v21);
     goto LABEL_38;
   }
 }

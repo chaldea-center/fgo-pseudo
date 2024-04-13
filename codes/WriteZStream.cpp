@@ -26,12 +26,12 @@ __int64 __fastcall WriteZStream(__int64 *a1, __int64 a2, unsigned int a3)
             *(_DWORD *)(v6 + 32) = 4096;
             *(_QWORD *)(v6 + 24) = v7;
           }
-          result = sub_AAED84(*a1, 0LL);
+          result = sub_AB89C4(*a1, 0LL);
           if ( (unsigned int)result > 1 )
             break;
           if ( !*(_DWORD *)(v6 + 32) )
           {
-            result = sub_B48604(a1);
+            result = sub_B53244(a1);
             if ( (result & 0x80000000) != 0 )
               break;
           }

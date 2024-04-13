@@ -19,7 +19,7 @@ void __fastcall ShopNoticeRemainTimeLabel___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.label = label;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.label,
     (System_Int32_array **)label,
     v7,
@@ -29,7 +29,7 @@ void __fastcall ShopNoticeRemainTimeLabel___ctor(
     v11,
     v12);
   this->fields.monoBehaviour = monoBehaviour;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)monoBehaviour,
     v13,
@@ -68,10 +68,10 @@ void __fastcall ShopNoticeRemainTimeLabel__Start(ShopNoticeRemainTimeLabel_o *th
   monoBehaviour = this->fields.monoBehaviour;
   updated = ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel(this, v4);
   if ( !monoBehaviour )
-    sub_B52A5C(updated, v6);
-  started = UnityEngine_MonoBehaviour__StartCoroutine_35611808(monoBehaviour, updated, 0LL);
+    sub_B5D69C(updated, v6);
+  started = UnityEngine_MonoBehaviour__StartCoroutine_35615088(monoBehaviour, updated, 0LL);
   this->fields.coroutine = started;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.coroutine,
     (System_Int32_array **)started,
     v8,
@@ -101,10 +101,10 @@ void __fastcall ShopNoticeRemainTimeLabel__Stop(ShopNoticeRemainTimeLabel_o *thi
   {
     monoBehaviour = this->fields.monoBehaviour;
     if ( !monoBehaviour )
-      sub_B52A5C(0LL, coroutine);
-    UnityEngine_MonoBehaviour__StopCoroutine_35612476(monoBehaviour, coroutine, 0LL);
+      sub_B5D69C(0LL, coroutine);
+    UnityEngine_MonoBehaviour__StopCoroutine_35615756(monoBehaviour, coroutine, 0LL);
     p_coroutine->klass = 0LL;
-    sub_B52920(p_coroutine, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_B5D560(p_coroutine, 0LL, v5, v6, v7, v8, v9, v10);
   }
 }
 
@@ -113,31 +113,33 @@ System_Collections_IEnumerator_o *__fastcall ShopNoticeRemainTimeLabel__UpdateRe
         ShopNoticeRemainTimeLabel_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x20
-  __int64 v4; // x0
-  __int64 v5; // x1
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  int v2; // w2
+  __int64 v3; // x3
+  __int64 v5; // x20
+  __int64 v6; // x0
+  __int64 v7; // x1
+  System_String_array **v8; // x2
+  System_String_array **v9; // x3
+  System_Boolean_array **v10; // x4
+  System_Int32_array **v11; // x5
+  System_Int32_array *v12; // x6
+  System_Int32_array *v13; // x7
 
-  if ( (byte_42B1A8E & 1) == 0 )
+  if ( (byte_42EA687 & 1) == 0 )
   {
-    sub_B52984(&ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_TypeInfo);
-    byte_42B1A8E = 1;
+    sub_B5D5C4(&ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_TypeInfo, (_DWORD)method, v2, v3);
+    byte_42EA687 = 1;
   }
-  v3 = sub_B52A54(ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_TypeInfo);
+  v5 = sub_B5D694(ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_TypeInfo);
   ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8___ctor(
-    (ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_o *)v3,
+    (ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_o *)v5,
     0,
     0LL);
-  if ( !v3 )
-    sub_B52A5C(v4, v5);
-  *(_QWORD *)(v3 + 32) = this;
-  sub_B52920((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
-  return (System_Collections_IEnumerator_o *)v3;
+  if ( !v5 )
+    sub_B5D69C(v6, v7);
+  *(_QWORD *)(v5 + 32) = this;
+  sub_B5D560((BattleServantConfConponent_o *)(v5 + 32), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
+  return (System_Collections_IEnumerator_o *)v5;
 }
 
 
@@ -155,28 +157,40 @@ bool __fastcall ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8__MoveNext(
         ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_o *this,
         const MethodInfo *method)
 {
-  ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_o *v2; // x19
+  int v2; // w2
+  __int64 v3; // x3
+  ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_o *v4; // x19
+  int v5; // w1
+  int v6; // w2
+  __int64 v7; // x3
+  int v8; // w1
+  int v9; // w2
+  __int64 v10; // x3
   int32_t _1__state; // w8
   struct ShopNoticeRemainTimeLabel_o *_4__this; // x22
-  UnityEngine_WaitForSeconds_o *v5; // x20
+  UnityEngine_WaitForSeconds_o *v13; // x20
   UILabel_o *label; // x20
   int64_t timeLimit; // x21
-  int64_t v8; // x20
+  int64_t v16; // x20
   bool result; // w0
 
-  v2 = this;
-  if ( (byte_42AD3AF & 1) == 0 )
+  v4 = this;
+  if ( (byte_42E5DC7 & 1) == 0 )
   {
-    sub_B52984(&LocalizationManager_TypeInfo);
-    sub_B52984(&NetworkManager_TypeInfo);
-    this = (ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_o *)sub_B52984(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_42AD3AF = 1;
+    sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)method, v2, v3);
+    sub_B5D5C4(&NetworkManager_TypeInfo, v5, v6, v7);
+    this = (ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_o *)sub_B5D5C4(
+                                                                        &UnityEngine_WaitForSeconds_TypeInfo,
+                                                                        v8,
+                                                                        v9,
+                                                                        v10);
+    byte_42E5DC7 = 1;
   }
-  _1__state = v2->fields.__1__state;
-  _4__this = v2->fields.__4__this;
+  _1__state = v4->fields.__1__state;
+  _4__this = v4->fields.__4__this;
   if ( _1__state == 1 )
   {
-    v2->fields.__1__state = -1;
+    v4->fields.__1__state = -1;
     if ( !_4__this )
       goto LABEL_18;
   }
@@ -184,11 +198,11 @@ bool __fastcall ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8__MoveNext(
   {
     if ( _1__state )
       return 0;
-    v2->fields.__1__state = -1;
-    v5 = (UnityEngine_WaitForSeconds_o *)sub_B52A54(UnityEngine_WaitForSeconds_TypeInfo);
-    UnityEngine_WaitForSeconds___ctor(v5, 1.0, 0LL);
-    v2->fields._loopWait_5__2 = v5;
-    sub_B52920(&v2->fields._loopWait_5__2);
+    v4->fields.__1__state = -1;
+    v13 = (UnityEngine_WaitForSeconds_o *)sub_B5D694(UnityEngine_WaitForSeconds_TypeInfo);
+    UnityEngine_WaitForSeconds___ctor(v13, 1.0, 0LL);
+    v4->fields._loopWait_5__2 = v13;
+    sub_B5D560(&v4->fields._loopWait_5__2);
     if ( !_4__this )
       goto LABEL_18;
   }
@@ -205,20 +219,20 @@ bool __fastcall ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8__MoveNext(
                                                                       0LL);
   if ( !label )
 LABEL_18:
-    sub_B52A5C(this, method);
+    sub_B5D69C(this, method);
   UILabel__set_text(label, (System_String_o *)this, 0LL);
-  v8 = _4__this->fields.timeLimit;
+  v16 = _4__this->fields.timeLimit;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
-  if ( v8 < NetworkManager__getTime(0LL) )
+  if ( v16 < NetworkManager__getTime(0LL) )
     return 0;
-  v2->fields.__2__current = (Il2CppObject *)v2->fields._loopWait_5__2;
-  sub_B52920(&v2->fields.__2__current);
+  v4->fields.__2__current = (Il2CppObject *)v4->fields._loopWait_5__2;
+  sub_B5D560(&v4->fields.__2__current);
   result = 1;
-  v2->fields.__1__state = 1;
+  v4->fields.__1__state = 1;
   return result;
 }
 
@@ -239,11 +253,11 @@ void __fastcall __noreturn ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B52988(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B52A54(v2);
+  v2 = sub_B5D5C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B5D694(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B52988(&Method_ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_System_Collections_IEnumerator_Reset__);
-  sub_B52A28(v3, v4);
+  v4 = sub_B5D5C8(&Method_ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_System_Collections_IEnumerator_Reset__);
+  sub_B5D668(v3, v4);
 }
 
 

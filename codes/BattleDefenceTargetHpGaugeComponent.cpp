@@ -20,7 +20,7 @@ void __fastcall BattleDefenceTargetHpGaugeComponent__CompleteDefenceTargetDamage
     || (UIProgressBar__set_value(damageGauge, (float)nowval / (float)this->fields.maxval, 0LL),
         (damageGauge = this->fields.damageGauge) == 0LL) )
   {
-    sub_B52A5C(damageGauge, method);
+    sub_B5D69C(damageGauge, method);
   }
   UIProgressBar__set_alpha(damageGauge, 1.0, 0LL);
 }
@@ -42,7 +42,7 @@ void __fastcall BattleDefenceTargetHpGaugeComponent__SetHpGauge(
     || (UIProgressBar__set_value(damageGauge, (float)this->fields.nowval / (float)this->fields.maxval, 0LL),
         (damageGauge = this->fields.damageGauge) == 0LL) )
   {
-    sub_B52A5C(damageGauge, v4);
+    sub_B5D69C(damageGauge, v4);
   }
   UIProgressBar__set_alpha(damageGauge, 1.0, 0LL);
 }
@@ -71,7 +71,7 @@ void __fastcall BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetDamageGa
 
   damageGauge = this->fields.damageGauge;
   if ( !damageGauge )
-    sub_B52A5C(0LL, method);
+    sub_B5D69C(0LL, method);
   UIProgressBar__set_alpha(damageGauge, 1.0 - per, 0LL);
 }
 
@@ -81,316 +81,350 @@ void __fastcall BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
         int32_t nowHp,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
+  int v6; // w1
+  int v7; // w2
+  __int64 v8; // x3
+  int v9; // w1
+  int v10; // w2
+  __int64 v11; // x3
+  int v12; // w1
+  int v13; // w2
+  __int64 v14; // x3
+  int v15; // w1
+  int v16; // w2
+  __int64 v17; // x3
+  int v18; // w1
+  int v19; // w2
+  __int64 v20; // x3
+  int v21; // w1
+  int v22; // w2
+  __int64 v23; // x3
+  int v24; // w1
+  int v25; // w2
+  __int64 v26; // x3
+  int v27; // w1
+  int v28; // w2
+  __int64 v29; // x3
+  int v30; // w1
+  int v31; // w2
+  __int64 v32; // x3
+  int v33; // w1
+  int v34; // w2
+  __int64 v35; // x3
+  int v36; // w1
+  int v37; // w2
+  __int64 v38; // x3
   UnityEngine_GameObject_o *gameObject; // x19
-  __int64 v6; // x0
-  __int64 v7; // x1
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
-  System_Object_array *v14; // x20
-  __int64 v15; // x0
-  System_Int32_array **v16; // x1
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
-  System_Int32_array **v23; // x21
-  System_String_array **v24; // x2
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
-  System_Int32_array **v30; // x1
-  System_String_array **v31; // x2
-  System_String_array **v32; // x3
-  System_Boolean_array **v33; // x4
-  System_Int32_array **v34; // x5
-  System_Int32_array *v35; // x6
-  System_Int32_array *v36; // x7
-  System_Int32_array **v37; // x21
-  System_String_array **v38; // x2
-  System_String_array **v39; // x3
-  System_Boolean_array **v40; // x4
-  System_Int32_array **v41; // x5
-  System_Int32_array *v42; // x6
-  System_Int32_array *v43; // x7
-  System_Int32_array **v44; // x1
-  System_String_array **v45; // x2
-  System_String_array **v46; // x3
-  System_Boolean_array **v47; // x4
-  System_Int32_array **v48; // x5
-  System_Int32_array *v49; // x6
-  System_Int32_array *v50; // x7
-  System_Int32_array **v51; // x1
-  System_String_array **v52; // x2
-  System_String_array **v53; // x3
-  System_Boolean_array **v54; // x4
-  System_Int32_array **v55; // x5
-  System_Int32_array *v56; // x6
-  System_Int32_array *v57; // x7
-  System_Int32_array **v58; // x1
-  System_String_array **v59; // x2
-  System_String_array **v60; // x3
-  System_Boolean_array **v61; // x4
-  System_Int32_array **v62; // x5
-  System_Int32_array *v63; // x6
-  System_Int32_array *v64; // x7
-  System_Int32_array **v65; // x1
-  System_String_array **v66; // x2
-  System_String_array **v67; // x3
-  System_Boolean_array **v68; // x4
-  System_Int32_array **v69; // x5
-  System_Int32_array *v70; // x6
-  System_Int32_array *v71; // x7
-  System_Int32_array **v72; // x1
-  System_String_array **v73; // x2
-  System_String_array **v74; // x3
-  System_Boolean_array **v75; // x4
-  System_Int32_array **v76; // x5
-  System_Int32_array *v77; // x6
-  System_Int32_array *v78; // x7
-  System_Int32_array **v79; // x21
-  System_String_array **v80; // x2
-  System_String_array **v81; // x3
-  System_Boolean_array **v82; // x4
-  System_Int32_array **v83; // x5
-  System_Int32_array *v84; // x6
-  System_Int32_array *v85; // x7
-  System_Int32_array **v86; // x1
-  System_String_array **v87; // x2
-  System_String_array **v88; // x3
-  System_Boolean_array **v89; // x4
-  System_Int32_array **v90; // x5
-  System_Int32_array *v91; // x6
-  System_Int32_array *v92; // x7
-  System_Int32_array **v93; // x21
-  System_Collections_Hashtable_o *v94; // x0
-  __int64 v95; // x0
-  __int64 v96; // x0
-  int v97; // [xsp+8h] [xbp-38h] BYREF
-  int v98; // [xsp+Ch] [xbp-34h] BYREF
-  __int64 v99; // [xsp+10h] [xbp-30h] BYREF
-  __int64 v100; // [xsp+18h] [xbp-28h] BYREF
+  __int64 v40; // x0
+  __int64 v41; // x1
+  System_String_array **v42; // x2
+  System_String_array **v43; // x3
+  System_Boolean_array **v44; // x4
+  System_Int32_array **v45; // x5
+  System_Int32_array *v46; // x6
+  System_Int32_array *v47; // x7
+  System_Object_array *v48; // x20
+  __int64 v49; // x0
+  System_Int32_array **v50; // x1
+  System_String_array **v51; // x2
+  System_String_array **v52; // x3
+  System_Boolean_array **v53; // x4
+  System_Int32_array **v54; // x5
+  System_Int32_array *v55; // x6
+  System_Int32_array *v56; // x7
+  System_Int32_array **v57; // x21
+  System_String_array **v58; // x2
+  System_String_array **v59; // x3
+  System_Boolean_array **v60; // x4
+  System_Int32_array **v61; // x5
+  System_Int32_array *v62; // x6
+  System_Int32_array *v63; // x7
+  System_Int32_array **v64; // x1
+  System_String_array **v65; // x2
+  System_String_array **v66; // x3
+  System_Boolean_array **v67; // x4
+  System_Int32_array **v68; // x5
+  System_Int32_array *v69; // x6
+  System_Int32_array *v70; // x7
+  System_Int32_array **v71; // x21
+  System_String_array **v72; // x2
+  System_String_array **v73; // x3
+  System_Boolean_array **v74; // x4
+  System_Int32_array **v75; // x5
+  System_Int32_array *v76; // x6
+  System_Int32_array *v77; // x7
+  System_Int32_array **v78; // x1
+  System_String_array **v79; // x2
+  System_String_array **v80; // x3
+  System_Boolean_array **v81; // x4
+  System_Int32_array **v82; // x5
+  System_Int32_array *v83; // x6
+  System_Int32_array *v84; // x7
+  System_Int32_array **v85; // x1
+  System_String_array **v86; // x2
+  System_String_array **v87; // x3
+  System_Boolean_array **v88; // x4
+  System_Int32_array **v89; // x5
+  System_Int32_array *v90; // x6
+  System_Int32_array *v91; // x7
+  System_Int32_array **v92; // x1
+  System_String_array **v93; // x2
+  System_String_array **v94; // x3
+  System_Boolean_array **v95; // x4
+  System_Int32_array **v96; // x5
+  System_Int32_array *v97; // x6
+  System_Int32_array *v98; // x7
+  System_Int32_array **v99; // x1
+  System_String_array **v100; // x2
+  System_String_array **v101; // x3
+  System_Boolean_array **v102; // x4
+  System_Int32_array **v103; // x5
+  System_Int32_array *v104; // x6
+  System_Int32_array *v105; // x7
+  System_Int32_array **v106; // x1
+  System_String_array **v107; // x2
+  System_String_array **v108; // x3
+  System_Boolean_array **v109; // x4
+  System_Int32_array **v110; // x5
+  System_Int32_array *v111; // x6
+  System_Int32_array *v112; // x7
+  System_Int32_array **v113; // x21
+  System_String_array **v114; // x2
+  System_String_array **v115; // x3
+  System_Boolean_array **v116; // x4
+  System_Int32_array **v117; // x5
+  System_Int32_array *v118; // x6
+  System_Int32_array *v119; // x7
+  System_Int32_array **v120; // x1
+  System_String_array **v121; // x2
+  System_String_array **v122; // x3
+  System_Boolean_array **v123; // x4
+  System_Int32_array **v124; // x5
+  System_Int32_array *v125; // x6
+  System_Int32_array *v126; // x7
+  System_Int32_array **v127; // x21
+  System_Collections_Hashtable_o *v128; // x0
+  __int64 v129; // x0
+  __int64 v130; // x0
+  int v131; // [xsp+8h] [xbp-38h] BYREF
+  int v132; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v133; // [xsp+10h] [xbp-30h] BYREF
+  __int64 v134; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_42AECCB & 1) == 0 )
+  if ( (byte_42E7808 & 1) == 0 )
   {
-    sub_B52984(&double_TypeInfo);
-    sub_B52984(&object___TypeInfo);
-    sub_B52984(&float_TypeInfo);
-    sub_B52984(&StringLiteral_19056/*"from"*/);
-    sub_B52984(&StringLiteral_22867/*"time"*/);
-    sub_B52984(&StringLiteral_21442/*"onupdate"*/);
-    sub_B52984(&StringLiteral_15160/*"UpdateDefenceTargetDamageGauge"*/);
-    sub_B52984(&StringLiteral_18079/*"delay"*/);
-    sub_B52984(&StringLiteral_22904/*"to"*/);
-    sub_B52984(&StringLiteral_4239/*"CompleteDefenceTargetDamageGauge"*/);
-    sub_B52984(&StringLiteral_21433/*"oncomplete"*/);
-    sub_B52984(&iTween_TypeInfo);
-    byte_42AECCB = 1;
+    sub_B5D5C4(&double_TypeInfo, nowHp, (_DWORD)method, v3);
+    sub_B5D5C4(&object___TypeInfo, v6, v7, v8);
+    sub_B5D5C4(&float_TypeInfo, v9, v10, v11);
+    sub_B5D5C4(&StringLiteral_19153/*"from"*/, v12, v13, v14);
+    sub_B5D5C4(&StringLiteral_22982/*"time"*/, v15, v16, v17);
+    sub_B5D5C4(&StringLiteral_21551/*"onupdate"*/, v18, v19, v20);
+    sub_B5D5C4(&StringLiteral_15219/*"UpdateDefenceTargetDamageGauge"*/, v21, v22, v23);
+    sub_B5D5C4(&StringLiteral_18173/*"delay"*/, v24, v25, v26);
+    sub_B5D5C4(&StringLiteral_23019/*"to"*/, v27, v28, v29);
+    sub_B5D5C4(&StringLiteral_4272/*"CompleteDefenceTargetDamageGauge"*/, v30, v31, v32);
+    sub_B5D5C4(&StringLiteral_21542/*"oncomplete"*/, v33, v34, v35);
+    sub_B5D5C4(&iTween_TypeInfo, v36, v37, v38);
+    byte_42E7808 = 1;
   }
   this->fields.nowval = nowHp;
   BattleHpGaugeBarComponent__updateNomalGauge((BattleHpGaugeBarComponent_o *)this, nowHp, 0LL);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  v6 = sub_B5299C(object___TypeInfo, 12LL);
-  if ( !v6 )
-    sub_B52A5C(0LL, v7);
-  v14 = (System_Object_array *)v6;
-  v15 = StringLiteral_19056/*"from"*/;
-  if ( StringLiteral_19056/*"from"*/ )
+  v40 = sub_B5D5DC(object___TypeInfo, 12LL);
+  if ( !v40 )
+    sub_B5D69C(0LL, v41);
+  v48 = (System_Object_array *)v40;
+  v49 = StringLiteral_19153/*"from"*/;
+  if ( StringLiteral_19153/*"from"*/ )
   {
-    v15 = sub_B52A44(StringLiteral_19056/*"from"*/, v14->obj.klass->_1.element_class);
-    if ( !v15 )
+    v49 = sub_B5D684(StringLiteral_19153/*"from"*/, v48->obj.klass->_1.element_class);
+    if ( !v49 )
       goto LABEL_61;
-    v16 = (System_Int32_array **)StringLiteral_19056/*"from"*/;
+    v50 = (System_Int32_array **)StringLiteral_19153/*"from"*/;
   }
   else
   {
-    v16 = 0LL;
+    v50 = 0LL;
   }
-  if ( !v14->max_length )
+  if ( !v48->max_length )
     goto LABEL_60;
-  v14->m_Items[0] = (Il2CppObject *)v16;
-  sub_B52920((BattleServantConfConponent_o *)v14->m_Items, v16, v8, v9, v10, v11, v12, v13);
-  v100 = 0LL;
-  v15 = j_il2cpp_value_box_0(double_TypeInfo, &v100);
-  v23 = (System_Int32_array **)v15;
-  if ( v15 )
+  v48->m_Items[0] = (Il2CppObject *)v50;
+  sub_B5D560((BattleServantConfConponent_o *)v48->m_Items, v50, v42, v43, v44, v45, v46, v47);
+  v134 = 0LL;
+  v49 = j_il2cpp_value_box_0(double_TypeInfo, &v134);
+  v57 = (System_Int32_array **)v49;
+  if ( v49 )
   {
-    v15 = sub_B52A44(v15, v14->obj.klass->_1.element_class);
-    if ( !v15 )
+    v49 = sub_B5D684(v49, v48->obj.klass->_1.element_class);
+    if ( !v49 )
       goto LABEL_61;
   }
-  if ( v14->max_length <= 1 )
+  if ( v48->max_length <= 1 )
     goto LABEL_60;
-  v14->m_Items[1] = (Il2CppObject *)v23;
-  sub_B52920((BattleServantConfConponent_o *)&v14->m_Items[1], v23, v17, v18, v19, v20, v21, v22);
-  v15 = StringLiteral_22904/*"to"*/;
-  if ( StringLiteral_22904/*"to"*/ )
+  v48->m_Items[1] = (Il2CppObject *)v57;
+  sub_B5D560((BattleServantConfConponent_o *)&v48->m_Items[1], v57, v51, v52, v53, v54, v55, v56);
+  v49 = StringLiteral_23019/*"to"*/;
+  if ( StringLiteral_23019/*"to"*/ )
   {
-    v15 = sub_B52A44(StringLiteral_22904/*"to"*/, v14->obj.klass->_1.element_class);
-    if ( !v15 )
+    v49 = sub_B5D684(StringLiteral_23019/*"to"*/, v48->obj.klass->_1.element_class);
+    if ( !v49 )
       goto LABEL_61;
-    v30 = (System_Int32_array **)StringLiteral_22904/*"to"*/;
+    v64 = (System_Int32_array **)StringLiteral_23019/*"to"*/;
   }
   else
   {
-    v30 = 0LL;
+    v64 = 0LL;
   }
-  if ( v14->max_length <= 2 )
+  if ( v48->max_length <= 2 )
     goto LABEL_60;
-  v14->m_Items[2] = (Il2CppObject *)v30;
-  sub_B52920((BattleServantConfConponent_o *)&v14->m_Items[2], v30, v24, v25, v26, v27, v28, v29);
-  v99 = 0x3FF0000000000000LL;
-  v15 = j_il2cpp_value_box_0(double_TypeInfo, &v99);
-  v37 = (System_Int32_array **)v15;
-  if ( v15 )
+  v48->m_Items[2] = (Il2CppObject *)v64;
+  sub_B5D560((BattleServantConfConponent_o *)&v48->m_Items[2], v64, v58, v59, v60, v61, v62, v63);
+  v133 = 0x3FF0000000000000LL;
+  v49 = j_il2cpp_value_box_0(double_TypeInfo, &v133);
+  v71 = (System_Int32_array **)v49;
+  if ( v49 )
   {
-    v15 = sub_B52A44(v15, v14->obj.klass->_1.element_class);
-    if ( !v15 )
+    v49 = sub_B5D684(v49, v48->obj.klass->_1.element_class);
+    if ( !v49 )
       goto LABEL_61;
   }
-  if ( v14->max_length <= 3 )
+  if ( v48->max_length <= 3 )
     goto LABEL_60;
-  v14->m_Items[3] = (Il2CppObject *)v37;
-  sub_B52920((BattleServantConfConponent_o *)&v14->m_Items[3], v37, v31, v32, v33, v34, v35, v36);
-  v15 = StringLiteral_21442/*"onupdate"*/;
-  if ( StringLiteral_21442/*"onupdate"*/ )
+  v48->m_Items[3] = (Il2CppObject *)v71;
+  sub_B5D560((BattleServantConfConponent_o *)&v48->m_Items[3], v71, v65, v66, v67, v68, v69, v70);
+  v49 = StringLiteral_21551/*"onupdate"*/;
+  if ( StringLiteral_21551/*"onupdate"*/ )
   {
-    v15 = sub_B52A44(StringLiteral_21442/*"onupdate"*/, v14->obj.klass->_1.element_class);
-    if ( !v15 )
+    v49 = sub_B5D684(StringLiteral_21551/*"onupdate"*/, v48->obj.klass->_1.element_class);
+    if ( !v49 )
       goto LABEL_61;
-    v44 = (System_Int32_array **)StringLiteral_21442/*"onupdate"*/;
+    v78 = (System_Int32_array **)StringLiteral_21551/*"onupdate"*/;
   }
   else
   {
-    v44 = 0LL;
+    v78 = 0LL;
   }
-  if ( v14->max_length <= 4 )
+  if ( v48->max_length <= 4 )
     goto LABEL_60;
-  v14->m_Items[4] = (Il2CppObject *)v44;
-  sub_B52920((BattleServantConfConponent_o *)&v14->m_Items[4], v44, v38, v39, v40, v41, v42, v43);
-  v15 = StringLiteral_15160/*"UpdateDefenceTargetDamageGauge"*/;
-  if ( StringLiteral_15160/*"UpdateDefenceTargetDamageGauge"*/ )
+  v48->m_Items[4] = (Il2CppObject *)v78;
+  sub_B5D560((BattleServantConfConponent_o *)&v48->m_Items[4], v78, v72, v73, v74, v75, v76, v77);
+  v49 = StringLiteral_15219/*"UpdateDefenceTargetDamageGauge"*/;
+  if ( StringLiteral_15219/*"UpdateDefenceTargetDamageGauge"*/ )
   {
-    v15 = sub_B52A44(StringLiteral_15160/*"UpdateDefenceTargetDamageGauge"*/, v14->obj.klass->_1.element_class);
-    if ( !v15 )
+    v49 = sub_B5D684(StringLiteral_15219/*"UpdateDefenceTargetDamageGauge"*/, v48->obj.klass->_1.element_class);
+    if ( !v49 )
       goto LABEL_61;
-    v51 = (System_Int32_array **)StringLiteral_15160/*"UpdateDefenceTargetDamageGauge"*/;
+    v85 = (System_Int32_array **)StringLiteral_15219/*"UpdateDefenceTargetDamageGauge"*/;
   }
   else
   {
-    v51 = 0LL;
+    v85 = 0LL;
   }
-  if ( v14->max_length <= 5 )
+  if ( v48->max_length <= 5 )
     goto LABEL_60;
-  v14->m_Items[5] = (Il2CppObject *)v51;
-  sub_B52920((BattleServantConfConponent_o *)&v14->m_Items[5], v51, v45, v46, v47, v48, v49, v50);
-  v15 = StringLiteral_21433/*"oncomplete"*/;
-  if ( StringLiteral_21433/*"oncomplete"*/ )
+  v48->m_Items[5] = (Il2CppObject *)v85;
+  sub_B5D560((BattleServantConfConponent_o *)&v48->m_Items[5], v85, v79, v80, v81, v82, v83, v84);
+  v49 = StringLiteral_21542/*"oncomplete"*/;
+  if ( StringLiteral_21542/*"oncomplete"*/ )
   {
-    v15 = sub_B52A44(StringLiteral_21433/*"oncomplete"*/, v14->obj.klass->_1.element_class);
-    if ( !v15 )
+    v49 = sub_B5D684(StringLiteral_21542/*"oncomplete"*/, v48->obj.klass->_1.element_class);
+    if ( !v49 )
       goto LABEL_61;
-    v58 = (System_Int32_array **)StringLiteral_21433/*"oncomplete"*/;
+    v92 = (System_Int32_array **)StringLiteral_21542/*"oncomplete"*/;
   }
   else
   {
-    v58 = 0LL;
+    v92 = 0LL;
   }
-  if ( v14->max_length <= 6 )
+  if ( v48->max_length <= 6 )
     goto LABEL_60;
-  v14->m_Items[6] = (Il2CppObject *)v58;
-  sub_B52920((BattleServantConfConponent_o *)&v14->m_Items[6], v58, v52, v53, v54, v55, v56, v57);
-  v15 = StringLiteral_4239/*"CompleteDefenceTargetDamageGauge"*/;
-  if ( StringLiteral_4239/*"CompleteDefenceTargetDamageGauge"*/ )
+  v48->m_Items[6] = (Il2CppObject *)v92;
+  sub_B5D560((BattleServantConfConponent_o *)&v48->m_Items[6], v92, v86, v87, v88, v89, v90, v91);
+  v49 = StringLiteral_4272/*"CompleteDefenceTargetDamageGauge"*/;
+  if ( StringLiteral_4272/*"CompleteDefenceTargetDamageGauge"*/ )
   {
-    v15 = sub_B52A44(StringLiteral_4239/*"CompleteDefenceTargetDamageGauge"*/, v14->obj.klass->_1.element_class);
-    if ( !v15 )
+    v49 = sub_B5D684(StringLiteral_4272/*"CompleteDefenceTargetDamageGauge"*/, v48->obj.klass->_1.element_class);
+    if ( !v49 )
       goto LABEL_61;
-    v65 = (System_Int32_array **)StringLiteral_4239/*"CompleteDefenceTargetDamageGauge"*/;
+    v99 = (System_Int32_array **)StringLiteral_4272/*"CompleteDefenceTargetDamageGauge"*/;
   }
   else
   {
-    v65 = 0LL;
+    v99 = 0LL;
   }
-  if ( v14->max_length <= 7 )
+  if ( v48->max_length <= 7 )
     goto LABEL_60;
-  v14->m_Items[7] = (Il2CppObject *)v65;
-  sub_B52920((BattleServantConfConponent_o *)&v14->m_Items[7], v65, v59, v60, v61, v62, v63, v64);
-  v15 = StringLiteral_18079/*"delay"*/;
-  if ( StringLiteral_18079/*"delay"*/ )
+  v48->m_Items[7] = (Il2CppObject *)v99;
+  sub_B5D560((BattleServantConfConponent_o *)&v48->m_Items[7], v99, v93, v94, v95, v96, v97, v98);
+  v49 = StringLiteral_18173/*"delay"*/;
+  if ( StringLiteral_18173/*"delay"*/ )
   {
-    v15 = sub_B52A44(StringLiteral_18079/*"delay"*/, v14->obj.klass->_1.element_class);
-    if ( !v15 )
+    v49 = sub_B5D684(StringLiteral_18173/*"delay"*/, v48->obj.klass->_1.element_class);
+    if ( !v49 )
       goto LABEL_61;
-    v72 = (System_Int32_array **)StringLiteral_18079/*"delay"*/;
+    v106 = (System_Int32_array **)StringLiteral_18173/*"delay"*/;
   }
   else
   {
-    v72 = 0LL;
+    v106 = 0LL;
   }
-  if ( v14->max_length <= 8 )
+  if ( v48->max_length <= 8 )
     goto LABEL_60;
-  v14->m_Items[8] = (Il2CppObject *)v72;
-  sub_B52920((BattleServantConfConponent_o *)&v14->m_Items[8], v72, v66, v67, v68, v69, v70, v71);
-  v98 = 1056964608;
-  v15 = j_il2cpp_value_box_0(float_TypeInfo, &v98);
-  v79 = (System_Int32_array **)v15;
-  if ( v15 )
+  v48->m_Items[8] = (Il2CppObject *)v106;
+  sub_B5D560((BattleServantConfConponent_o *)&v48->m_Items[8], v106, v100, v101, v102, v103, v104, v105);
+  v132 = 1056964608;
+  v49 = j_il2cpp_value_box_0(float_TypeInfo, &v132);
+  v113 = (System_Int32_array **)v49;
+  if ( v49 )
   {
-    v15 = sub_B52A44(v15, v14->obj.klass->_1.element_class);
-    if ( !v15 )
+    v49 = sub_B5D684(v49, v48->obj.klass->_1.element_class);
+    if ( !v49 )
       goto LABEL_61;
   }
-  if ( v14->max_length <= 9 )
+  if ( v48->max_length <= 9 )
     goto LABEL_60;
-  v14->m_Items[9] = (Il2CppObject *)v79;
-  sub_B52920((BattleServantConfConponent_o *)&v14->m_Items[9], v79, v73, v74, v75, v76, v77, v78);
-  v15 = StringLiteral_22867/*"time"*/;
-  if ( StringLiteral_22867/*"time"*/ )
+  v48->m_Items[9] = (Il2CppObject *)v113;
+  sub_B5D560((BattleServantConfConponent_o *)&v48->m_Items[9], v113, v107, v108, v109, v110, v111, v112);
+  v49 = StringLiteral_22982/*"time"*/;
+  if ( StringLiteral_22982/*"time"*/ )
   {
-    v15 = sub_B52A44(StringLiteral_22867/*"time"*/, v14->obj.klass->_1.element_class);
-    if ( !v15 )
+    v49 = sub_B5D684(StringLiteral_22982/*"time"*/, v48->obj.klass->_1.element_class);
+    if ( !v49 )
       goto LABEL_61;
-    v86 = (System_Int32_array **)StringLiteral_22867/*"time"*/;
+    v120 = (System_Int32_array **)StringLiteral_22982/*"time"*/;
   }
   else
   {
-    v86 = 0LL;
+    v120 = 0LL;
   }
-  if ( v14->max_length <= 0xA )
+  if ( v48->max_length <= 0xA )
     goto LABEL_60;
-  v14->m_Items[10] = (Il2CppObject *)v86;
-  sub_B52920((BattleServantConfConponent_o *)&v14->m_Items[10], v86, v80, v81, v82, v83, v84, v85);
-  v97 = 1065353216;
-  v15 = j_il2cpp_value_box_0(float_TypeInfo, &v97);
-  v93 = (System_Int32_array **)v15;
-  if ( v15 )
+  v48->m_Items[10] = (Il2CppObject *)v120;
+  sub_B5D560((BattleServantConfConponent_o *)&v48->m_Items[10], v120, v114, v115, v116, v117, v118, v119);
+  v131 = 1065353216;
+  v49 = j_il2cpp_value_box_0(float_TypeInfo, &v131);
+  v127 = (System_Int32_array **)v49;
+  if ( v49 )
   {
-    v15 = sub_B52A44(v15, v14->obj.klass->_1.element_class);
-    if ( !v15 )
+    v49 = sub_B5D684(v49, v48->obj.klass->_1.element_class);
+    if ( !v49 )
     {
 LABEL_61:
-      v96 = sub_B52A7C();
-      sub_B52A28(v96, 0LL);
+      v130 = sub_B5D6BC();
+      sub_B5D668(v130, 0LL);
     }
   }
-  if ( v14->max_length <= 0xB )
+  if ( v48->max_length <= 0xB )
   {
 LABEL_60:
-    v95 = sub_B52A88(v15);
-    sub_B52A28(v95, 0LL);
+    v129 = sub_B5D6C8(v49);
+    sub_B5D668(v129, 0LL);
   }
-  v14->m_Items[11] = (Il2CppObject *)v93;
-  sub_B52920((BattleServantConfConponent_o *)&v14->m_Items[11], v93, v87, v88, v89, v90, v91, v92);
+  v48->m_Items[11] = (Il2CppObject *)v127;
+  sub_B5D560((BattleServantConfConponent_o *)&v48->m_Items[11], v127, v121, v122, v123, v124, v125, v126);
   if ( (BYTE3(iTween_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  v94 = iTween__Hash(v14, 0LL);
-  iTween__ValueTo(gameObject, v94, 0LL);
+  v128 = iTween__Hash(v48, 0LL);
+  iTween__ValueTo(gameObject, v128, 0LL);
 }

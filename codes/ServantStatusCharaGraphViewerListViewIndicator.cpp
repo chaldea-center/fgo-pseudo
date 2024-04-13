@@ -18,7 +18,7 @@ void __fastcall ServantStatusCharaGraphViewerListViewIndicator__Init(
   System_Int32_array *v7; // x7
 
   this->fields.onModifyCenterItem = onModifyCenter;
-  sub_B52920(
+  sub_B5D560(
     (BattleServantConfConponent_o *)&this->fields.onModifyCenterItem,
     (System_Int32_array **)onModifyCenter,
     (System_String_array **)method,
@@ -30,6 +30,7 @@ void __fastcall ServantStatusCharaGraphViewerListViewIndicator__Init(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantStatusCharaGraphViewerListViewIndicator__OnModifyCenterItem(
         ServantStatusCharaGraphViewerListViewIndicator_o *this,
         ListViewManager_o *manager,
@@ -44,10 +45,10 @@ void __fastcall ServantStatusCharaGraphViewerListViewIndicator__OnModifyCenterIt
   __int64 v11; // x10
   ListViewItem_o *v12; // x1
 
-  if ( (byte_42AE3E0 & 1) == 0 )
+  if ( (byte_42E6E51 & 1) == 0 )
   {
-    sub_B52984(&ServantStatusCharaGraphListViewItem_TypeInfo);
-    byte_42AE3E0 = 1;
+    sub_B5D5C4(&ServantStatusCharaGraphListViewItem_TypeInfo, (_DWORD)manager, (_DWORD)item, isTop);
+    byte_42E6E51 = 1;
   }
   onModifyCenterItem = this->fields.onModifyCenterItem;
   if ( onModifyCenterItem )
@@ -88,7 +89,7 @@ void __fastcall ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEve
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B52920(p_method);
+  sub_B5D560(p_method);
 }
 
 
@@ -103,7 +104,7 @@ System_IAsyncResult_o *__fastcall ServantStatusCharaGraphViewerListViewIndicator
 
   v6[0] = (__int64)item;
   v6[1] = 0LL;
-  return (System_IAsyncResult_o *)sub_B52928(this, v6, callback, object);
+  return (System_IAsyncResult_o *)sub_B5D568(this, v6, callback, object);
 }
 
 
@@ -112,7 +113,7 @@ void __fastcall ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEve
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B5292C(result, 0LL, method);
+  sub_B5D56C(result, 0LL, method);
 }
 
 
@@ -121,253 +122,252 @@ void __fastcall ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEve
         ServantStatusCharaGraphListViewItem_o *item,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  __int64 v4; // x8
-  __int64 v7; // x24
-  ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent_o **v8; // x25
+  __int64 v3; // x8
+  __int64 v6; // x24
+  ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent_o **v7; // x25
   __int64 i; // x26
-  unsigned int v10; // w22
+  unsigned int v9; // w22
   __int64 class_0; // x0
-  __int64 v12; // x3
-  ServantStatusCharaGraphListViewItem_c *v13; // x8
-  unsigned __int64 v14; // x10
-  int32_t *v15; // x11
+  __int64 v11; // x3
+  ServantStatusCharaGraphListViewItem_c *v12; // x8
+  unsigned __int64 v13; // x10
+  int32_t *v14; // x11
+  __int64 v15; // x0
   __int64 v16; // x0
-  __int64 v17; // x0
-  unsigned int v18; // w23
-  __int64 v19; // x0
-  __int64 v20; // x3
-  __int64 v21; // x8
-  unsigned __int64 v22; // x10
-  _DWORD *v23; // x11
+  unsigned int v17; // w23
+  __int64 v18; // x0
+  __int64 v19; // x3
+  __int64 v20; // x8
+  unsigned __int64 v21; // x10
+  _DWORD *v22; // x11
+  __int64 v23; // x0
   __int64 v24; // x0
   __int64 v25; // x0
-  __int64 v26; // x0
-  void (__fastcall **v27)(ServantStatusCharaGraphListViewItem_o *, _QWORD); // x0
-  __int64 v28; // x0
-  void (__fastcall **v29)(__int64 *, ServantStatusCharaGraphListViewItem_o *, _QWORD); // x0
-  ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent_o *v30; // x8
-  __int64 v31; // x21
-  __int64 *v32; // x22
-  void (__fastcall *v33)(ServantStatusCharaGraphListViewItem_o *, __int64); // x23
-  char v34; // w0
-  int v35; // w8
-  char v36; // w23
-  char v37; // w0
-  __int64 v38; // x3
-  __int64 v39; // x8
-  __int64 v40; // x1
-  __int64 v41; // x2
-  unsigned __int64 v42; // x10
-  _DWORD *v43; // x11
-  char v44; // w22
-  char v45; // w0
-  __int64 v46; // x3
+  void (__fastcall **v26)(ServantStatusCharaGraphListViewItem_o *, _QWORD); // x0
+  __int64 v27; // x0
+  void (__fastcall **v28)(__int64 *, ServantStatusCharaGraphListViewItem_o *, _QWORD); // x0
+  ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent_o *v29; // x8
+  __int64 v30; // x21
+  __int64 *v31; // x22
+  void (__fastcall *v32)(ServantStatusCharaGraphListViewItem_o *, __int64); // x23
+  char v33; // w0
+  int v34; // w8
+  char v35; // w23
+  char v36; // w0
+  __int64 v37; // x3
+  __int64 v38; // x8
+  __int64 v39; // x1
+  __int64 v40; // x2
+  unsigned __int64 v41; // x10
+  _DWORD *v42; // x11
+  char v43; // w22
+  char v44; // w0
+  __int64 v45; // x3
   ServantStatusCharaGraphListViewItem_c *klass; // x8
-  __int64 v48; // x1
-  __int64 v49; // x2
-  unsigned __int64 v50; // x10
+  __int64 v47; // x1
+  __int64 v48; // x2
+  unsigned __int64 v49; // x10
   int32_t *p_offset; // x11
-  ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent_o *v52; // [xsp+8h] [xbp-48h] BYREF
+  ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent_o *v51; // [xsp+8h] [xbp-48h] BYREF
 
-  v52 = this;
-  v4 = *(_QWORD *)&this[1].fields.method_ptr;
-  if ( !v4 )
+  v51 = this;
+  v3 = *(_QWORD *)&this[1].fields.method_ptr;
+  if ( !v3 )
   {
-    v8 = &v52;
-    v7 = 1LL;
+    v7 = &v51;
+    v6 = 1LL;
     goto LABEL_5;
   }
-  v7 = *(_QWORD *)(v4 + 24);
-  if ( v7 )
+  v6 = *(_QWORD *)(v3 + 24);
+  if ( v6 )
   {
-    v8 = (ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent_o **)(v4 + 32);
+    v7 = (ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent_o **)(v3 + 32);
 LABEL_5:
-    for ( i = 0LL; i != v7; ++i )
+    for ( i = 0LL; i != v6; ++i )
     {
-      v30 = v8[i];
-      v32 = *(__int64 **)&v30->fields.method;
-      v31 = *(_QWORD *)&v30->fields.extra_arg;
-      v33 = *(void (__fastcall **)(ServantStatusCharaGraphListViewItem_o *, __int64))&v30->fields.method_ptr;
-      if ( *(__int16 *)(v31 + 72) == -1 )
-        sub_B52A40(*(_QWORD *)&v30->fields.extra_arg, item, method, v3);
-      v34 = sub_B529B4(v31);
-      v35 = *(unsigned __int8 *)(v31 + 74);
-      if ( (v34 & 1) != 0 )
+      v29 = v7[i];
+      v31 = *(__int64 **)&v29->fields.method;
+      v30 = *(_QWORD *)&v29->fields.extra_arg;
+      v32 = *(void (__fastcall **)(ServantStatusCharaGraphListViewItem_o *, __int64))&v29->fields.method_ptr;
+      if ( *(__int16 *)(v30 + 72) == -1 )
+        sub_B5D680(*(_QWORD *)&v29->fields.extra_arg, item, method);
+      v33 = sub_B5D5F4(v30);
+      v34 = *(unsigned __int8 *)(v30 + 74);
+      if ( (v33 & 1) != 0 )
       {
-        if ( v35 == 1 )
+        if ( v34 == 1 )
           goto LABEL_58;
       }
       else
       {
-        if ( v35 != 1 )
+        if ( v34 != 1 )
         {
-          if ( *(__int16 *)(v31 + 72) != -1 && this->fields.m_target )
+          if ( *(__int16 *)(v30 + 72) != -1 && this->fields.m_target )
           {
-            v44 = sub_B529AC(v31);
-            v45 = sub_B52DB0(v31);
-            if ( (v44 & 1) != 0 )
+            v43 = sub_B5D5EC(v30);
+            v44 = sub_B5D9F0(v30);
+            if ( (v43 & 1) != 0 )
             {
-              if ( (v45 & 1) != 0 )
+              if ( (v44 & 1) != 0 )
               {
                 klass = item->klass;
-                v48 = *(_QWORD *)(v31 + 24);
-                v49 = *(unsigned __int16 *)(v31 + 72);
+                v47 = *(_QWORD *)(v30 + 24);
+                v48 = *(unsigned __int16 *)(v30 + 72);
                 if ( *(_WORD *)&item->klass->_2.bitflags1 )
                 {
-                  v50 = 0LL;
+                  v49 = 0LL;
                   p_offset = &klass->_1.interfaceOffsets->offset;
-                  while ( *((_QWORD *)p_offset - 1) != v48 )
+                  while ( *((_QWORD *)p_offset - 1) != v47 )
                   {
-                    ++v50;
+                    ++v49;
                     p_offset += 4;
-                    if ( v50 >= *(unsigned __int16 *)&item->klass->_2.bitflags1 )
+                    if ( v49 >= *(unsigned __int16 *)&item->klass->_2.bitflags1 )
                       goto LABEL_57;
                   }
-                  v26 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset + 2 * (int)v49);
+                  v25 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset + 2 * (int)v48);
                 }
                 else
                 {
 LABEL_57:
-                  v26 = sub_AEB880(item, v48, v49, v46);
+                  v25 = sub_AF54C0(item, v47, v48, v45);
                 }
-                v17 = *(_QWORD *)(v26 + 8);
+                v16 = *(_QWORD *)(v25 + 8);
               }
               else
               {
-                v17 = *((_QWORD *)&item->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v31 + 72));
+                v16 = *((_QWORD *)&item->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v30 + 72));
               }
-              v27 = (void (__fastcall **)(ServantStatusCharaGraphListViewItem_o *, _QWORD))sub_B52A34(v17, v31);
-              (*v27)(item, v27);
+              v26 = (void (__fastcall **)(ServantStatusCharaGraphListViewItem_o *, _QWORD))sub_B5D674(v16, v30);
+              (*v26)(item, v26);
             }
             else
             {
-              v10 = *(unsigned __int16 *)(v31 + 72);
-              if ( (v45 & 1) != 0 )
+              v9 = *(unsigned __int16 *)(v30 + 72);
+              if ( (v44 & 1) != 0 )
               {
-                class_0 = j_il2cpp_method_get_class_0(v31);
-                v13 = item->klass;
+                class_0 = j_il2cpp_method_get_class_0(v30);
+                v12 = item->klass;
                 if ( *(_WORD *)&item->klass->_2.bitflags1 )
                 {
-                  v14 = 0LL;
-                  v15 = &v13->_1.interfaceOffsets->offset;
-                  while ( *((_QWORD *)v15 - 1) != class_0 )
+                  v13 = 0LL;
+                  v14 = &v12->_1.interfaceOffsets->offset;
+                  while ( *((_QWORD *)v14 - 1) != class_0 )
                   {
-                    ++v14;
-                    v15 += 4;
-                    if ( v14 >= *(unsigned __int16 *)&item->klass->_2.bitflags1 )
+                    ++v13;
+                    v14 += 4;
+                    if ( v13 >= *(unsigned __int16 *)&item->klass->_2.bitflags1 )
                       goto LABEL_11;
                   }
-                  v16 = (__int64)(&v13->vtable._0_Equals.method + 2 * (int)(*v15 + v10));
+                  v15 = (__int64)(&v12->vtable._0_Equals.method + 2 * (int)(*v14 + v9));
                 }
                 else
                 {
 LABEL_11:
-                  v16 = sub_AEB880(item, class_0, v10, v12);
+                  v15 = sub_AF54C0(item, class_0, v9, v11);
                 }
-                (*(void (__fastcall **)(ServantStatusCharaGraphListViewItem_o *, _QWORD))v16)(
+                (*(void (__fastcall **)(ServantStatusCharaGraphListViewItem_o *, _QWORD))v15)(
                   item,
-                  *(_QWORD *)(v16 + 8));
+                  *(_QWORD *)(v15 + 8));
               }
               else
               {
                 (*((void (__fastcall **)(ServantStatusCharaGraphListViewItem_o *, _QWORD))&item->klass->vtable._0_Equals.method
-                 + 2 * *(unsigned __int16 *)(v31 + 72)))(
+                 + 2 * *(unsigned __int16 *)(v30 + 72)))(
                   item,
-                  *((_QWORD *)&item->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v31 + 72)));
+                  *((_QWORD *)&item->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v30 + 72)));
               }
             }
             continue;
           }
 LABEL_58:
-          v33(item, v31);
+          v32(item, v30);
           continue;
         }
-        if ( !v32 )
+        if ( !v31 )
           goto LABEL_58;
-        if ( *(__int16 *)(v31 + 72) != -1 && (*(_BYTE *)(*v32 + 277) & 1) == 0 && this->fields.m_target )
+        if ( *(__int16 *)(v30 + 72) != -1 && (*(_BYTE *)(*v31 + 277) & 1) == 0 && this->fields.m_target )
         {
-          v36 = sub_B529AC(v31);
-          v37 = sub_B52DB0(v31);
-          if ( (v36 & 1) != 0 )
+          v35 = sub_B5D5EC(v30);
+          v36 = sub_B5D9F0(v30);
+          if ( (v35 & 1) != 0 )
           {
-            if ( (v37 & 1) != 0 )
+            if ( (v36 & 1) != 0 )
             {
-              v39 = *v32;
-              v40 = *(_QWORD *)(v31 + 24);
-              v41 = *(unsigned __int16 *)(v31 + 72);
-              if ( *(_WORD *)(*v32 + 298) )
+              v38 = *v31;
+              v39 = *(_QWORD *)(v30 + 24);
+              v40 = *(unsigned __int16 *)(v30 + 72);
+              if ( *(_WORD *)(*v31 + 298) )
               {
-                v42 = 0LL;
-                v43 = (_DWORD *)(*(_QWORD *)(v39 + 176) + 8LL);
-                while ( *((_QWORD *)v43 - 1) != v40 )
+                v41 = 0LL;
+                v42 = (_DWORD *)(*(_QWORD *)(v38 + 176) + 8LL);
+                while ( *((_QWORD *)v42 - 1) != v39 )
                 {
-                  ++v42;
-                  v43 += 4;
-                  if ( v42 >= *(unsigned __int16 *)(*v32 + 298) )
+                  ++v41;
+                  v42 += 4;
+                  if ( v41 >= *(unsigned __int16 *)(*v31 + 298) )
                     goto LABEL_48;
                 }
-                v28 = v39 + 16LL * (*v43 + (int)v41) + 312;
+                v27 = v38 + 16LL * (*v42 + (int)v40) + 312;
               }
               else
               {
 LABEL_48:
-                v28 = sub_AEB880(v32, v40, v41, v38);
+                v27 = sub_AF54C0(v31, v39, v40, v37);
               }
-              v25 = *(_QWORD *)(v28 + 8);
+              v24 = *(_QWORD *)(v27 + 8);
             }
             else
             {
-              v25 = *(_QWORD *)(*v32 + 16LL * *(unsigned __int16 *)(v31 + 72) + 320);
+              v24 = *(_QWORD *)(*v31 + 16LL * *(unsigned __int16 *)(v30 + 72) + 320);
             }
-            v29 = (void (__fastcall **)(__int64 *, ServantStatusCharaGraphListViewItem_o *, _QWORD))sub_B52A34(v25, v31);
-            (*v29)(v32, item, v29);
+            v28 = (void (__fastcall **)(__int64 *, ServantStatusCharaGraphListViewItem_o *, _QWORD))sub_B5D674(v24, v30);
+            (*v28)(v31, item, v28);
           }
           else
           {
-            v18 = *(unsigned __int16 *)(v31 + 72);
-            if ( (v37 & 1) != 0 )
+            v17 = *(unsigned __int16 *)(v30 + 72);
+            if ( (v36 & 1) != 0 )
             {
-              v19 = j_il2cpp_method_get_class_0(v31);
-              v21 = *v32;
-              if ( *(_WORD *)(*v32 + 298) )
+              v18 = j_il2cpp_method_get_class_0(v30);
+              v20 = *v31;
+              if ( *(_WORD *)(*v31 + 298) )
               {
-                v22 = 0LL;
-                v23 = (_DWORD *)(*(_QWORD *)(v21 + 176) + 8LL);
-                while ( *((_QWORD *)v23 - 1) != v19 )
+                v21 = 0LL;
+                v22 = (_DWORD *)(*(_QWORD *)(v20 + 176) + 8LL);
+                while ( *((_QWORD *)v22 - 1) != v18 )
                 {
-                  ++v22;
-                  v23 += 4;
-                  if ( v22 >= *(unsigned __int16 *)(*v32 + 298) )
+                  ++v21;
+                  v22 += 4;
+                  if ( v21 >= *(unsigned __int16 *)(*v31 + 298) )
                     goto LABEL_19;
                 }
-                v24 = v21 + 16LL * (int)(*v23 + v18) + 312;
+                v23 = v20 + 16LL * (int)(*v22 + v17) + 312;
               }
               else
               {
 LABEL_19:
-                v24 = sub_AEB880(v32, v19, v18, v20);
+                v23 = sub_AF54C0(v31, v18, v17, v19);
               }
-              (*(void (__fastcall **)(__int64 *, ServantStatusCharaGraphListViewItem_o *, _QWORD))v24)(
-                v32,
+              (*(void (__fastcall **)(__int64 *, ServantStatusCharaGraphListViewItem_o *, _QWORD))v23)(
+                v31,
                 item,
-                *(_QWORD *)(v24 + 8));
+                *(_QWORD *)(v23 + 8));
             }
             else
             {
-              (*(void (__fastcall **)(__int64 *, ServantStatusCharaGraphListViewItem_o *, _QWORD))(*v32
+              (*(void (__fastcall **)(__int64 *, ServantStatusCharaGraphListViewItem_o *, _QWORD))(*v31
                                                                                                  + 16LL
-                                                                                                 * *(unsigned __int16 *)(v31 + 72)
+                                                                                                 * *(unsigned __int16 *)(v30 + 72)
                                                                                                  + 312))(
-                v32,
+                v31,
                 item,
-                *(_QWORD *)(*v32 + 16LL * *(unsigned __int16 *)(v31 + 72) + 320));
+                *(_QWORD *)(*v31 + 16LL * *(unsigned __int16 *)(v30 + 72) + 320));
             }
           }
           continue;
         }
       }
-      ((void (__fastcall *)(__int64 *, ServantStatusCharaGraphListViewItem_o *, __int64))v33)(v32, item, v31);
+      ((void (__fastcall *)(__int64 *, ServantStatusCharaGraphListViewItem_o *, __int64))v32)(v31, item, v30);
     }
   }
 }
