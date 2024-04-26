@@ -1,33 +1,30 @@
 void __fastcall UserShopEntity___ctor(UserShopEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EE6B0 & 1) == 0 )
+  if ( (byte_4357BC4 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
-    byte_42EE6B0 = 1;
+    sub_B70694(&Method_DataEntityBase_string___ctor__);
+    byte_4357BC4 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void __fastcall UserShopEntity___ctor_35246476(
+void __fastcall UserShopEntity___ctor_35459960(
         UserShopEntity_o *this,
         int64_t userId,
         int32_t shopId,
         const MethodInfo *method)
 {
-  if ( (byte_42EE6B1 & 1) == 0 )
+  if ( (byte_4357BC5 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, userId, shopId, method);
-    byte_42EE6B1 = 1;
+    sub_B70694(&Method_DataEntityBase_string___ctor__);
+    byte_4357BC5 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
   this->fields.userId = userId;
   this->fields.shopId = shopId;
   *(int64_t *)((char *)&this->fields.flag + 4) = 0LL;
@@ -50,17 +47,15 @@ bool __fastcall UserShopEntity__CheckFlagKind(UserShopEntity_o *this, int32_t fl
 
 System_String_o *__fastcall UserShopEntity__CreatePK(int64_t userId, int32_t shopId, const MethodInfo *method)
 {
-  __int64 v3; // x3
-
-  if ( (byte_42EE6AF & 1) == 0 )
+  if ( (byte_4357BC3 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_long__int___, shopId, (_DWORD)method, v3);
-    byte_42EE6AF = 1;
+    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4357BC3 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            shopId,
-           (const MethodInfo_1AE3148 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_1CA249C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

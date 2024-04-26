@@ -20,6 +20,6 @@ bool __fastcall DeadServantAiTask__IsActable(DeadServantAiTask_o *this, BattleLo
     return 0;
   if ( !logic || (svtData = (BattleServantData_o *)logic->fields.data) == 0LL )
 LABEL_7:
-    sub_B5D69C(svtData, logic);
+    sub_B7076C(svtData, logic);
   return BattleData__checkAlivePlayers((BattleData_o *)svtData, 0LL);
 }

@@ -4,14 +4,14 @@ void __fastcall NpcBackStepBattleLogicTask___ctor(
         bool isForcedSpeedOne,
         const MethodInfo *method)
 {
-  if ( (byte_42E6276 & 1) == 0 )
+  if ( (byte_4350B72 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_9461/*"NPC_BACKSTEP"*/, targetId, isForcedSpeedOne, method);
-    byte_42E6276 = 1;
+    sub_B70694(&StringLiteral_9477/*"NPC_BACKSTEP"*/);
+    byte_4350B72 = 1;
   }
   PlayFieldMotionNpcBattleLogicTask___ctor(
     (PlayFieldMotionNpcBattleLogicTask_o *)this,
-    (System_String_o *)StringLiteral_9461/*"NPC_BACKSTEP"*/,
+    (System_String_o *)StringLiteral_9477/*"NPC_BACKSTEP"*/,
     targetId,
     isForcedSpeedOne,
     0LL);
@@ -23,21 +23,20 @@ bool __fastcall NpcBackStepBattleLogicTask__IsMakeAble(
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  PlayFieldMotionNpcBattleLogicTask_o *v5; // x20
+  PlayFieldMotionNpcBattleLogicTask_o *v4; // x20
   BattlePerformance_o *perf; // x19
   BattleActorControl_o *AiNpcActor; // x19
 
-  v5 = (PlayFieldMotionNpcBattleLogicTask_o *)this;
-  if ( (byte_42E6277 & 1) == 0 )
+  v4 = (PlayFieldMotionNpcBattleLogicTask_o *)this;
+  if ( (byte_4350B73 & 1) == 0 )
   {
-    this = (NpcBackStepBattleLogicTask_o *)sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)logic, (_DWORD)method, v3);
-    byte_42E6277 = 1;
+    this = (NpcBackStepBattleLogicTask_o *)sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4350B73 = 1;
   }
   if ( !logic )
     goto LABEL_12;
   perf = logic->fields.perf;
-  this = (NpcBackStepBattleLogicTask_o *)PlayFieldMotionNpcBattleLogicTask__get_TargetId(v5, 0LL);
+  this = (NpcBackStepBattleLogicTask_o *)PlayFieldMotionNpcBattleLogicTask__get_TargetId(v4, 0LL);
   if ( !perf )
     goto LABEL_12;
   AiNpcActor = BattlePerformance__GetAiNpcActor(perf, (int32_t)this, 0LL);
@@ -52,7 +51,7 @@ bool __fastcall NpcBackStepBattleLogicTask__IsMakeAble(
     if ( AiNpcActor )
       return AiNpcActor->fields._IsStepInBattle_k__BackingField;
 LABEL_12:
-    sub_B5D69C(this, logic);
+    sub_B7076C(this, logic);
   }
   return 0;
 }

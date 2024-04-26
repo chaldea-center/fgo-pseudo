@@ -15,7 +15,6 @@ void __fastcall FSWidgetSize__Awake(FSWidgetSize_o *this, const MethodInfo *meth
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall FSWidgetSize__GetSize(
         FSWidgetSize_o *this,
         int32_t size_16_9,
@@ -28,10 +27,10 @@ int32_t __fastcall FSWidgetSize__GetSize(
   int32_t height; // w0
   float v12; // s0
 
-  if ( (byte_42E8CB3 & 1) == 0 )
+  if ( (byte_435222A & 1) == 0 )
   {
-    sub_B5D5C4(&FSUtility_TypeInfo, size_16_9, size_21_9, fix);
-    byte_42E8CB3 = 1;
+    sub_B70694(&FSUtility_TypeInfo);
+    byte_435222A = 1;
   }
   if ( fix )
   {
@@ -57,52 +56,47 @@ int32_t __fastcall FSWidgetSize__GetSize(
 
 void __fastcall FSWidgetSize__SetSize(FSWidgetSize_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
   UnityEngine_Object_o *Component_WebViewObject; // x20
-  _BOOL8 v9; // x0
-  const MethodInfo *v10; // x4
+  _BOOL8 v4; // x0
+  const MethodInfo *v5; // x4
   __int64 Size; // x0
-  __int64 v12; // x1
-  FSWidgetSize_o *v13; // x0
-  const MethodInfo *v14; // x4
-  int32_t v15; // w1
+  __int64 v7; // x1
+  FSWidgetSize_o *v8; // x0
+  const MethodInfo *v9; // x4
+  int32_t v10; // w1
 
-  if ( (byte_42E8CB2 & 1) == 0 )
+  if ( (byte_4352229 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_UnityEngine_Component_GetComponent_UIWidget___, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v5, v6, v7);
-    byte_42E8CB2 = 1;
+    sub_B70694(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4352229 = 1;
   }
   Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                       (UnityEngine_Component_o *)this,
-                                                      (const MethodInfo_1ADE2A0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                                                      (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  v9 = UnityEngine_Object__op_Inequality(Component_WebViewObject, 0LL, 0LL);
-  if ( v9 )
+  v4 = UnityEngine_Object__op_Inequality(Component_WebViewObject, 0LL, 0LL);
+  if ( v4 )
   {
     Size = FSWidgetSize__GetSize(
-             (FSWidgetSize_o *)v9,
+             (FSWidgetSize_o *)v4,
              this->fields.size_16_9.fields.m_Y,
              this->fields.size_21_9.fields.m_Y,
              (bool)this[1].klass,
-             v10);
+             v5);
     if ( !Component_WebViewObject )
-      sub_B5D69C(Size, v12);
+      sub_B7076C(Size, v7);
     UIWidget__set_width((UIWidget_o *)Component_WebViewObject, Size, 0LL);
-    v15 = FSWidgetSize__GetSize(
-            v13,
+    v10 = FSWidgetSize__GetSize(
+            v8,
             this->fields.size_21_9.fields.m_X,
             *(_DWORD *)&this->fields.fixWidth,
             BYTE1(this[1].klass),
-            v14);
-    UIWidget__set_height((UIWidget_o *)Component_WebViewObject, v15, 0LL);
+            v9);
+    UIWidget__set_height((UIWidget_o *)Component_WebViewObject, v10, 0LL);
   }
 }

@@ -11,41 +11,32 @@ void __fastcall MasterEquipSettingListViewItemDraw__SetButton(
         MasterEquipSettingListViewItem_o *item,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  MasterEquipSettingListViewItemDraw_o *v5; // x20
-  int v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  int v12; // w2
-  __int64 v13; // x3
+  MasterEquipSettingListViewItemDraw_o *v4; // x20
   UIRangeLabel_o *equipShortNameLabel; // x21
-  float *v15; // x11
-  float *v16; // x8
-  float *v17; // x9
-  float *v18; // x10
-  float *v19; // x11
-  float *v20; // x11
-  __int64 *v21; // x8
-  UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float *v6; // x11
+  float *v7; // x8
+  float *v8; // x9
+  float *v9; // x10
+  float *v10; // x11
+  float *v11; // x11
+  __int64 *v12; // x8
+  UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  v5 = this;
-  if ( (byte_42EBB79 & 1) == 0 )
+  v4 = this;
+  if ( (byte_4354E02 & 1) == 0 )
   {
-    sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)item, (_DWORD)method, v3);
-    sub_B5D5C4(&StringLiteral_17174/*"btn_bg_20"*/, v6, v7, v8);
-    this = (MasterEquipSettingListViewItemDraw_o *)sub_B5D5C4(&StringLiteral_17175/*"btn_bg_21"*/, v9, v10, v11);
-    byte_42EBB79 = 1;
+    sub_B70694(&LocalizationManager_TypeInfo);
+    sub_B70694(&StringLiteral_17221/*"btn_bg_20"*/);
+    this = (MasterEquipSettingListViewItemDraw_o *)sub_B70694(&StringLiteral_17222/*"btn_bg_21"*/);
+    byte_4354E02 = 1;
   }
   if ( !item )
     goto LABEL_30;
-  this = (MasterEquipSettingListViewItemDraw_o *)v5->fields.equipShortNameLabel;
+  this = (MasterEquipSettingListViewItemDraw_o *)v4->fields.equipShortNameLabel;
   if ( !this )
     goto LABEL_30;
   UIRangeLabel__Set((UIRangeLabel_o *)this, item->fields._ShortName_k__BackingField, 0LL, 1, 0, 0LL);
-  equipShortNameLabel = v5->fields.equipShortNameLabel;
+  equipShortNameLabel = v4->fields.equipShortNameLabel;
   if ( !item->fields._IsSelected_k__BackingField )
   {
     if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
@@ -53,10 +44,10 @@ void __fastcall MasterEquipSettingListViewItemDraw__SetButton(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    if ( !byte_42E563C )
+    if ( !byte_434E9FD )
     {
-      sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)item, v12, v13);
-      byte_42E563C = 1;
+      sub_B70694(&LocalizationManager_TypeInfo);
+      byte_434E9FD = 1;
     }
     this = (MasterEquipSettingListViewItemDraw_o *)LocalizationManager_TypeInfo;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -65,25 +56,25 @@ void __fastcall MasterEquipSettingListViewItemDraw__SetButton(
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       this = (MasterEquipSettingListViewItemDraw_o *)LocalizationManager_TypeInfo;
     }
-    v20 = *(float **)&this[3].fields.m_CachedPtr;
-    v16 = v20 + 20;
-    v17 = v20 + 21;
-    v18 = v20 + 22;
-    v19 = v20 + 23;
+    v11 = *(float **)&this[3].fields.m_CachedPtr;
+    v7 = v11 + 20;
+    v8 = v11 + 21;
+    v9 = v11 + 22;
+    v10 = v11 + 23;
     if ( equipShortNameLabel )
       goto LABEL_25;
 LABEL_30:
-    sub_B5D69C(this, item);
+    sub_B7076C(this, item);
   }
   if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  if ( !byte_42E563D )
+  if ( !byte_434E9FE )
   {
-    sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)item, v12, v13);
-    byte_42E563D = 1;
+    sub_B70694(&LocalizationManager_TypeInfo);
+    byte_434E9FE = 1;
   }
   this = (MasterEquipSettingListViewItemDraw_o *)LocalizationManager_TypeInfo;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -92,27 +83,27 @@ LABEL_30:
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     this = (MasterEquipSettingListViewItemDraw_o *)LocalizationManager_TypeInfo;
   }
-  v15 = *(float **)&this[3].fields.m_CachedPtr;
-  v16 = v15 + 24;
-  v17 = v15 + 25;
-  v18 = v15 + 26;
-  v19 = v15 + 27;
+  v6 = *(float **)&this[3].fields.m_CachedPtr;
+  v7 = v6 + 24;
+  v8 = v6 + 25;
+  v9 = v6 + 26;
+  v10 = v6 + 27;
   if ( !equipShortNameLabel )
     goto LABEL_30;
 LABEL_25:
-  v22.fields.b = *v18;
-  v22.fields.g = *v17;
-  v22.fields.r = *v16;
-  v22.fields.a = *v19;
-  UIRangeLabel__set_effectColor(equipShortNameLabel, v22, 0LL);
-  this = (MasterEquipSettingListViewItemDraw_o *)v5->fields.equipSetButtonSprite;
+  v13.fields.b = *v9;
+  v13.fields.g = *v8;
+  v13.fields.r = *v7;
+  v13.fields.a = *v10;
+  UIRangeLabel__set_effectColor(equipShortNameLabel, v13, 0LL);
+  this = (MasterEquipSettingListViewItemDraw_o *)v4->fields.equipSetButtonSprite;
   if ( !this )
     goto LABEL_30;
   if ( item->fields._IsSelected_k__BackingField )
-    v21 = &StringLiteral_17175/*"btn_bg_21"*/;
+    v12 = &StringLiteral_17222/*"btn_bg_21"*/;
   else
-    v21 = &StringLiteral_17174/*"btn_bg_20"*/;
-  UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v21, 0LL);
+    v12 = &StringLiteral_17221/*"btn_bg_20"*/;
+  UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v12, 0LL);
 }
 
 
@@ -122,19 +113,16 @@ void __fastcall MasterEquipSettingListViewItemDraw__SetInput(
         bool isInput,
         const MethodInfo *method)
 {
-  int v7; // w1
-  char v8; // w2
-  __int64 v9; // x3
   UnityEngine_Object_o *baseButton; // x22
-  __int64 v11; // x1
+  __int64 v8; // x1
   UnityEngine_Component_o *Component_WebViewObject; // x0
-  const MethodInfo *v13; // x2
+  const MethodInfo *v10; // x2
 
-  if ( (byte_42EBB78 & 1) == 0 )
+  if ( (byte_4354E01 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_UnityEngine_Component_GetComponent_Collider___, (_DWORD)item, isInput, method);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v7, v8, v9);
-    byte_42EBB78 = 1;
+    sub_B70694(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4354E01 = 1;
   }
   if ( item )
   {
@@ -151,7 +139,7 @@ void __fastcall MasterEquipSettingListViewItemDraw__SetInput(
         goto LABEL_15;
       Component_WebViewObject = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                              Component_WebViewObject,
-                                                             (const MethodInfo_1ADE2A0 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                             (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_Collider___);
       if ( !Component_WebViewObject )
         goto LABEL_15;
       UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_WebViewObject, isInput, 0LL);
@@ -171,11 +159,11 @@ void __fastcall MasterEquipSettingListViewItemDraw__SetInput(
         Component_WebViewObject,
         item->fields._EquipTexture_k__BackingField,
         Component_WebViewObject->klass[2]._1.name);
-      MasterEquipSettingListViewItemDraw__SetButton(this, item, v13);
+      MasterEquipSettingListViewItemDraw__SetButton(this, item, v10);
       return;
     }
 LABEL_15:
-    sub_B5D69C(Component_WebViewObject, v11);
+    sub_B7076C(Component_WebViewObject, v8);
   }
 }
 
@@ -191,10 +179,10 @@ void __fastcall MasterEquipSettingListViewItemDraw__SetItem(
   const MethodInfo *v9; // x2
   struct UITexture_o *masterEquipIconSprite; // x0
 
-  if ( (byte_42EBB77 & 1) == 0 )
+  if ( (byte_4354E00 & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)item, mode, method);
-    byte_42EBB77 = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4354E00 = 1;
   }
   if ( item && mode )
   {
@@ -208,7 +196,7 @@ void __fastcall MasterEquipSettingListViewItemDraw__SetItem(
     {
       masterEquipIconSprite = this->fields.masterEquipIconSprite;
       if ( !masterEquipIconSprite )
-        sub_B5D69C(0LL, v8);
+        sub_B7076C(0LL, v8);
       ((void (__fastcall *)(struct UITexture_o *, struct UnityEngine_Texture2D_o *, Il2CppMethodPointer))masterEquipIconSprite->klass->vtable._27_set_mainTexture.method)(
         masterEquipIconSprite,
         item->fields._EquipTexture_k__BackingField,

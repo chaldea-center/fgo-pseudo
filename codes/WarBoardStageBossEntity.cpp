@@ -1,32 +1,27 @@
 void __fastcall WarBoardStageBossEntity___ctor(WarBoardStageBossEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EABC5 & 1) == 0 )
+  if ( (byte_4353A71 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
-    byte_42EABC5 = 1;
+    sub_B70694(&Method_DataEntityBase_string___ctor__);
+    byte_4353A71 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall WarBoardStageBossEntity__CreatePK(int32_t stageId, int32_t idx, const MethodInfo *method)
 {
-  __int64 v3; // x3
-
-  if ( (byte_42EABC4 & 1) == 0 )
+  if ( (byte_4353A70 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_int__int___, idx, (_DWORD)method, v3);
-    byte_42EABC4 = 1;
+    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4353A70 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            stageId,
            idx,
-           (const MethodInfo_1AE3018 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1CA236C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -44,41 +39,33 @@ System_String_array *__fastcall WarBoardStageBossEntity__GetTextEffectColors(
         WarBoardStageBossEntity_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
   System_String_o *StringValue; // x19
-  System_Char_array *v13; // x0
-  System_Char_array *v14; // x1
-  __int64 v15; // x0
+  System_Char_array *v5; // x0
+  System_Char_array *v6; // x1
+  __int64 v7; // x0
 
-  if ( (byte_42EABC3 & 1) == 0 )
+  if ( (byte_4353A6F & 1) == 0 )
   {
-    sub_B5D5C4(&char___TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&string___TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&StringLiteral_22963/*"text_effect_colors"*/, v8, v9, v10);
-    byte_42EABC3 = 1;
+    sub_B70694(&char___TypeInfo);
+    sub_B70694(&string___TypeInfo);
+    sub_B70694(&StringLiteral_23034/*"text_effect_colors"*/);
+    byte_4353A6F = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_22963/*"text_effect_colors"*/, 0LL, 0LL);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_23034/*"text_effect_colors"*/, 0LL, 0LL);
   if ( System_String__IsNullOrEmpty(StringValue, 0LL) )
-    return (System_String_array *)sub_B5D5DC(string___TypeInfo, 0LL);
-  v13 = (System_Char_array *)sub_B5D5DC(char___TypeInfo, 1LL);
-  if ( !v13 )
+    return (System_String_array *)sub_B706AC(string___TypeInfo, 0LL);
+  v5 = (System_Char_array *)sub_B706AC(char___TypeInfo, 1LL);
+  if ( !v5 )
     goto LABEL_9;
-  v14 = v13;
-  if ( !v13->max_length )
+  v6 = v5;
+  if ( !v5->max_length )
   {
-    v15 = sub_B5D6C8(v13);
-    sub_B5D668(v15, 0LL);
+    v7 = sub_B70798(v5);
+    sub_B70738(v7, 0LL);
   }
-  v13->m_Items[2] = 44;
+  v5->m_Items[2] = 44;
   if ( !StringValue )
 LABEL_9:
-    sub_B5D69C(v13, v14);
-  return System_String__Split(StringValue, v13, 0LL);
+    sub_B7076C(v5, v6);
+  return System_String__Split(StringValue, v5, 0LL);
 }

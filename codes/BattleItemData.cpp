@@ -1,16 +1,10 @@
 void __fastcall BattleItemData___ctor(BattleItemData_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-
-  if ( (byte_42E5976 & 1) == 0 )
+  if ( (byte_434EB3B & 1) == 0 )
   {
-    sub_B5D5C4(&Method_SingletonTemplate_BattleItemData___ctor__, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&SingletonTemplate_BattleItemData__TypeInfo, v5, v6, v7);
-    byte_42E5976 = 1;
+    sub_B70694(&Method_SingletonTemplate_BattleItemData___ctor__);
+    sub_B70694(&SingletonTemplate_BattleItemData__TypeInfo);
+    byte_434EB3B = 1;
   }
   if ( (BYTE3(SingletonTemplate_BattleItemData__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !SingletonTemplate_BattleItemData__TypeInfo->_2.cctor_finished )
@@ -19,7 +13,7 @@ void __fastcall BattleItemData___ctor(BattleItemData_o *this, const MethodInfo *
   }
   SingletonTemplate_clsQuestCheck____ctor(
     (SingletonTemplate_clsQuestCheck__o *)this,
-    (const MethodInfo_2A304CC *)Method_SingletonTemplate_BattleItemData___ctor__);
+    (const MethodInfo_2CE9F98 *)Method_SingletonTemplate_BattleItemData___ctor__);
 }
 
 
@@ -66,25 +60,23 @@ int32_t __fastcall BattleItemData__GetItemId(BattleItemData_o *this, const Metho
 
 BattleItemData_SaveData_o *__fastcall BattleItemData__GetSaveData(BattleItemData_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  BattleItemData_SaveData_o *v5; // x20
-  __int64 v6; // x0
-  __int64 v7; // x1
+  BattleItemData_SaveData_o *v3; // x20
+  __int64 v4; // x0
+  __int64 v5; // x1
   BattleItemData_SaveData_o *result; // x0
 
-  if ( (byte_42E5975 & 1) == 0 )
+  if ( (byte_434EB3A & 1) == 0 )
   {
-    sub_B5D5C4(&BattleItemData_SaveData_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E5975 = 1;
+    sub_B70694(&BattleItemData_SaveData_TypeInfo);
+    byte_434EB3A = 1;
   }
-  v5 = (BattleItemData_SaveData_o *)sub_B5D694(BattleItemData_SaveData_TypeInfo);
-  BattleItemData_SaveData___ctor(v5, 0LL);
-  if ( !v5 )
-    sub_B5D69C(v6, v7);
-  result = v5;
-  v5->fields.id = this->fields.itemId;
-  v5->fields.number = this->fields.itemNumber;
+  v3 = (BattleItemData_SaveData_o *)sub_B70764(BattleItemData_SaveData_TypeInfo);
+  BattleItemData_SaveData___ctor(v3, 0LL);
+  if ( !v3 )
+    sub_B7076C(v4, v5);
+  result = v3;
+  v3->fields.id = this->fields.itemId;
+  v3->fields.number = this->fields.itemNumber;
   return result;
 }
 

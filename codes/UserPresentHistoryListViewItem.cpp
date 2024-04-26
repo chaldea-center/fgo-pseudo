@@ -11,9 +11,9 @@ void __fastcall UserPresentHistoryListViewItem___ctor(
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  ListViewItem___ctor_23901828((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_23967088((ListViewItem_o *)this, index, 0LL);
   this->fields._Message_k__BackingField = message;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields._Message_k__BackingField,
     (System_Int32_array **)message,
     v6,
@@ -45,7 +45,7 @@ void __fastcall UserPresentHistoryListViewItem__set_Message(
   System_Int32_array *v7; // x7
 
   this->fields._Message_k__BackingField = value;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields._Message_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

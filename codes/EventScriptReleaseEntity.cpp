@@ -1,20 +1,16 @@
 void __fastcall EventScriptReleaseEntity___ctor(EventScriptReleaseEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EC024 & 1) == 0 )
+  if ( (byte_43555FF & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
-    byte_42EC024 = 1;
+    sub_B70694(&Method_DataEntityBase_string___ctor__);
+    byte_43555FF = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventScriptReleaseEntity__CreatePK(
         int32_t eventId,
         int32_t flagId,
@@ -22,17 +18,17 @@ System_String_o *__fastcall EventScriptReleaseEntity__CreatePK(
         int32_t targetId,
         const MethodInfo *method)
 {
-  if ( (byte_42EC022 & 1) == 0 )
+  if ( (byte_43555FD & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, flagId, type, *(_QWORD *)&targetId);
-    byte_42EC022 = 1;
+    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_43555FD = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            eventId,
            flagId,
            type,
            targetId,
-           (const MethodInfo_1AE38D8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_1CA2C2C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -59,16 +55,14 @@ int32_t __fastcall EventScriptReleaseEntity__GetCondType(EventScriptReleaseEntit
 
 bool __fastcall EventScriptReleaseEntity__isAvailable(EventScriptReleaseEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   int32_t targetId; // w20
   int32_t type; // w21
   int64_t value; // x19
 
-  if ( (byte_42EC023 & 1) == 0 )
+  if ( (byte_43555FE & 1) == 0 )
   {
-    sub_B5D5C4(&CondType_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EC023 = 1;
+    sub_B70694(&CondType_TypeInfo);
+    byte_43555FE = 1;
   }
   type = this->fields.type;
   targetId = this->fields.targetId;

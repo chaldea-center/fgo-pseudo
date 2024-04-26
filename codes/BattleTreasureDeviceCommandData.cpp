@@ -3,14 +3,13 @@ void __fastcall BattleTreasureDeviceCommandData___ctor(
         BattleServantData_o *svtData,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  __int64 v6; // x0
-  __int64 v7; // x1
+  __int64 v5; // x0
+  __int64 v6; // x1
 
-  if ( (byte_42EB2F7 & 1) == 0 )
+  if ( (byte_435121F & 1) == 0 )
   {
-    sub_B5D5C4(&BattleCommandData_TypeInfo, (_DWORD)svtData, (_DWORD)method, v3);
-    byte_42EB2F7 = 1;
+    sub_B70694(&BattleCommandData_TypeInfo);
+    byte_435121F = 1;
   }
   if ( (BYTE3(BattleCommandData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BattleCommandData_TypeInfo->_2.cctor_finished )
@@ -19,7 +18,7 @@ void __fastcall BattleTreasureDeviceCommandData___ctor(
   }
   BattleCommandData___ctor((BattleCommandData_o *)this, 0LL);
   if ( !svtData )
-    sub_B5D69C(v6, v7);
+    sub_B7076C(v5, v6);
   this->fields._type = BattleServantData__getTreasureDvcCardId(svtData, 0LL);
   this->fields.svtlimit = BattleServantData__getDispLimitCount(svtData, 1, 0LL);
   this->fields.uniqueId = svtData->fields.uniqueId;

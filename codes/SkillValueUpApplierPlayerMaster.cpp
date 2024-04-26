@@ -12,7 +12,7 @@ void __fastcall SkillValueUpApplierPlayerMaster___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.data = data;
-  sub_B5D560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)data, v5, v6, v7, v8, v9, v10);
+  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)data, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -21,69 +21,53 @@ void __fastcall SkillValueUpApplierPlayerMaster__ApplyTo(
         BattleLogicFunctionProcess_FunctionUnitCheck_o *funcUnit,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  SkillValueUpApplierPlayerMaster_o *v5; // x20
-  int v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  int v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
-  int v15; // w1
-  int v16; // w2
-  __int64 v17; // x3
+  SkillValueUpApplierPlayerMaster_o *v4; // x20
   struct DataVals_o *dataVals_k__BackingField; // x19
-  System_Int32_array **v19; // x0
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
+  System_Int32_array **v6; // x0
+  System_String_array **v7; // x2
+  System_String_array **v8; // x3
+  System_Boolean_array **v9; // x4
+  System_Int32_array **v10; // x5
+  System_Int32_array *v11; // x6
+  System_Int32_array *v12; // x7
   System_Collections_Generic_IEnumerable_T__o *dependDataValsList; // x0
-  __int64 v27; // x3
   SkillValueUpApplierPlayerMaster_c *klass; // x8
-  SkillValueUpApplierPlayerMaster_o *v29; // x19
-  unsigned __int64 v30; // x10
+  SkillValueUpApplierPlayerMaster_o *v15; // x19
+  unsigned __int64 v16; // x10
   int32_t *p_offset; // x11
-  __int64 v32; // x0
-  __int64 v33; // x1
-  __int64 v34; // x3
-  __int64 v35; // x19
-  __int64 v36; // x8
-  unsigned __int64 v37; // x10
-  int *v38; // x11
-  __int64 v39; // x0
-  __int64 v40; // x3
-  __int64 v41; // x8
-  unsigned __int64 v42; // x10
-  int *v43; // x11
-  __int64 v44; // x0
-  __int64 v45; // x21
-  System_Int32_array **v46; // x0
-  System_String_array **v47; // x2
-  System_String_array **v48; // x3
-  System_Boolean_array **v49; // x4
-  System_Int32_array **v50; // x5
-  System_Int32_array *v51; // x6
-  System_Int32_array *v52; // x7
-  __int64 v53; // x8
-  unsigned __int64 v54; // x10
-  int *v55; // x11
-  __int64 v56; // x0
+  __int64 v18; // x0
+  __int64 v19; // x1
+  __int64 v20; // x19
+  __int64 v21; // x8
+  unsigned __int64 v22; // x10
+  int *v23; // x11
+  __int64 v24; // x0
+  __int64 v25; // x8
+  unsigned __int64 v26; // x10
+  int *v27; // x11
+  __int64 v28; // x0
+  __int64 v29; // x21
+  System_Int32_array **v30; // x0
+  System_String_array **v31; // x2
+  System_String_array **v32; // x3
+  System_Boolean_array **v33; // x4
+  System_Int32_array **v34; // x5
+  System_Int32_array *v35; // x6
+  System_Int32_array *v36; // x7
+  __int64 v37; // x8
+  unsigned __int64 v38; // x10
+  int *v39; // x11
+  __int64 v40; // x0
 
-  v5 = this;
-  if ( (byte_42E78E4 & 1) == 0 )
+  v4 = this;
+  if ( (byte_4350A5B & 1) == 0 )
   {
-    sub_B5D5C4(&Method_BasicHelper_ExcludeNull_DataVals___, (_DWORD)funcUnit, (_DWORD)method, v3);
-    sub_B5D5C4(&System_IDisposable_TypeInfo, v6, v7, v8);
-    sub_B5D5C4(&System_Collections_Generic_IEnumerable_DataVals__TypeInfo, v9, v10, v11);
-    sub_B5D5C4(&System_Collections_Generic_IEnumerator_DataVals__TypeInfo, v12, v13, v14);
-    this = (SkillValueUpApplierPlayerMaster_o *)sub_B5D5C4(&System_Collections_IEnumerator_TypeInfo, v15, v16, v17);
-    byte_42E78E4 = 1;
+    sub_B70694(&Method_BasicHelper_ExcludeNull_DataVals___);
+    sub_B70694(&System_IDisposable_TypeInfo);
+    sub_B70694(&System_Collections_Generic_IEnumerable_DataVals__TypeInfo);
+    sub_B70694(&System_Collections_Generic_IEnumerator_DataVals__TypeInfo);
+    this = (SkillValueUpApplierPlayerMaster_o *)sub_B70694(&System_Collections_IEnumerator_TypeInfo);
+    byte_4350A5B = 1;
   }
   if ( !funcUnit )
     goto LABEL_40;
@@ -92,126 +76,126 @@ void __fastcall SkillValueUpApplierPlayerMaster__ApplyTo(
     return;
   if ( !dataVals_k__BackingField->fields.funcEnt )
     return;
-  if ( !v5->fields.valueUpRate )
+  if ( !v4->fields.valueUpRate )
     return;
-  v19 = (System_Int32_array **)((__int64 (__fastcall *)(SkillValueUpApplierPlayerMaster_o *, struct DataVals_o *, Il2CppMethodPointer))v5->klass->vtable._6_CreateFuncParamValueUpInfo.method)(
-                                 v5,
-                                 dataVals_k__BackingField,
-                                 v5->klass->vtable._7_CalcSkillValueUpRate.methodPtr);
-  dataVals_k__BackingField->fields._FuncParamValueUpInfo_k__BackingField = (struct FuncParamValueUpInfoBase_o *)v19;
-  sub_B5D560(
+  v6 = (System_Int32_array **)((__int64 (__fastcall *)(SkillValueUpApplierPlayerMaster_o *, struct DataVals_o *, Il2CppMethodPointer))v4->klass->vtable._6_CreateFuncParamValueUpInfo.method)(
+                                v4,
+                                dataVals_k__BackingField,
+                                v4->klass->vtable._7_CalcSkillValueUpRate.methodPtr);
+  dataVals_k__BackingField->fields._FuncParamValueUpInfo_k__BackingField = (struct FuncParamValueUpInfoBase_o *)v6;
+  sub_B70630(
     (BattleServantConfConponent_o *)&dataVals_k__BackingField->fields._FuncParamValueUpInfo_k__BackingField,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23,
-    v24,
-    v25);
+    v6,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11,
+    v12);
   dependDataValsList = (System_Collections_Generic_IEnumerable_T__o *)dataVals_k__BackingField->fields.dependDataValsList;
   if ( !dependDataValsList )
     return;
   this = (SkillValueUpApplierPlayerMaster_o *)BasicHelper__ExcludeNull_BlankEarthSpotAnimStateManager_SpotStateData_(
                                                 dependDataValsList,
-                                                (const MethodInfo_1AD70CC *)Method_BasicHelper_ExcludeNull_DataVals___);
+                                                (const MethodInfo_1BDCE20 *)Method_BasicHelper_ExcludeNull_DataVals___);
   if ( !this )
 LABEL_40:
-    sub_B5D69C(this, funcUnit);
+    sub_B7076C(this, funcUnit);
   klass = this->klass;
-  v29 = this;
+  v15 = this;
   if ( *(_WORD *)&this->klass->_2.bitflags1 )
   {
-    v30 = 0LL;
+    v16 = 0LL;
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_Generic_IEnumerable_DataVals__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_DataVals__TypeInfo )
     {
-      ++v30;
+      ++v16;
       p_offset += 4;
-      if ( v30 >= *(unsigned __int16 *)&this->klass->_2.bitflags1 )
+      if ( v16 >= *(unsigned __int16 *)&this->klass->_2.bitflags1 )
         goto LABEL_13;
     }
-    v32 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v18 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
 LABEL_13:
-    v32 = sub_AF54C0(this, System_Collections_Generic_IEnumerable_DataVals__TypeInfo, 0LL, v27);
+    v18 = sub_B08590(this, System_Collections_Generic_IEnumerable_DataVals__TypeInfo, 0LL);
   }
-  v35 = (*(__int64 (__fastcall **)(SkillValueUpApplierPlayerMaster_o *, _QWORD))v32)(v29, *(_QWORD *)(v32 + 8));
-  if ( !v35 )
-    sub_B5D69C(0LL, v33);
+  v20 = (*(__int64 (__fastcall **)(SkillValueUpApplierPlayerMaster_o *, _QWORD))v18)(v15, *(_QWORD *)(v18 + 8));
+  if ( !v20 )
+    sub_B7076C(0LL, v19);
   while ( 1 )
   {
-    v36 = *(_QWORD *)v35;
-    if ( *(_WORD *)(*(_QWORD *)v35 + 298LL) )
+    v21 = *(_QWORD *)v20;
+    if ( *(_WORD *)(*(_QWORD *)v20 + 298LL) )
     {
-      v37 = 0LL;
-      v38 = (int *)(*(_QWORD *)(v36 + 176) + 8LL);
-      while ( *((System_Collections_IEnumerator_c **)v38 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v22 = 0LL;
+      v23 = (int *)(*(_QWORD *)(v21 + 176) + 8LL);
+      while ( *((System_Collections_IEnumerator_c **)v23 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        ++v37;
-        v38 += 4;
-        if ( v37 >= *(unsigned __int16 *)(*(_QWORD *)v35 + 298LL) )
+        ++v22;
+        v23 += 4;
+        if ( v22 >= *(unsigned __int16 *)(*(_QWORD *)v20 + 298LL) )
           goto LABEL_20;
       }
-      v39 = v36 + 16LL * *v38 + 312;
+      v24 = v21 + 16LL * *v23 + 312;
     }
     else
     {
 LABEL_20:
-      v39 = sub_AF54C0(v35, System_Collections_IEnumerator_TypeInfo, 0LL, v34);
+      v24 = sub_B08590(v20, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
-    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v39)(v35, *(_QWORD *)(v39 + 8)) & 1) == 0 )
+    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v24)(v20, *(_QWORD *)(v24 + 8)) & 1) == 0 )
       break;
-    v41 = *(_QWORD *)v35;
-    if ( *(_WORD *)(*(_QWORD *)v35 + 298LL) )
+    v25 = *(_QWORD *)v20;
+    if ( *(_WORD *)(*(_QWORD *)v20 + 298LL) )
     {
-      v42 = 0LL;
-      v43 = (int *)(*(_QWORD *)(v41 + 176) + 8LL);
-      while ( *((System_Collections_Generic_IEnumerator_DataVals__c **)v43 - 1) != System_Collections_Generic_IEnumerator_DataVals__TypeInfo )
+      v26 = 0LL;
+      v27 = (int *)(*(_QWORD *)(v25 + 176) + 8LL);
+      while ( *((System_Collections_Generic_IEnumerator_DataVals__c **)v27 - 1) != System_Collections_Generic_IEnumerator_DataVals__TypeInfo )
       {
-        ++v42;
-        v43 += 4;
-        if ( v42 >= *(unsigned __int16 *)(*(_QWORD *)v35 + 298LL) )
+        ++v26;
+        v27 += 4;
+        if ( v26 >= *(unsigned __int16 *)(*(_QWORD *)v20 + 298LL) )
           goto LABEL_27;
       }
-      v44 = v41 + 16LL * *v43 + 312;
+      v28 = v25 + 16LL * *v27 + 312;
     }
     else
     {
 LABEL_27:
-      v44 = sub_AF54C0(v35, System_Collections_Generic_IEnumerator_DataVals__TypeInfo, 0LL, v40);
+      v28 = sub_B08590(v20, System_Collections_Generic_IEnumerator_DataVals__TypeInfo, 0LL);
     }
-    v45 = (*(__int64 (__fastcall **)(__int64, _QWORD))v44)(v35, *(_QWORD *)(v44 + 8));
-    v46 = (System_Int32_array **)((__int64 (__fastcall *)(SkillValueUpApplierPlayerMaster_o *, __int64, Il2CppMethodPointer))v5->klass->vtable._6_CreateFuncParamValueUpInfo.method)(
-                                   v5,
-                                   v45,
-                                   v5->klass->vtable._7_CalcSkillValueUpRate.methodPtr);
-    if ( !v45 )
-      sub_B5D69C(v46, v46);
-    *(_QWORD *)(v45 + 104) = v46;
-    sub_B5D560((BattleServantConfConponent_o *)(v45 + 104), v46, v47, v48, v49, v50, v51, v52);
+    v29 = (*(__int64 (__fastcall **)(__int64, _QWORD))v28)(v20, *(_QWORD *)(v28 + 8));
+    v30 = (System_Int32_array **)((__int64 (__fastcall *)(SkillValueUpApplierPlayerMaster_o *, __int64, Il2CppMethodPointer))v4->klass->vtable._6_CreateFuncParamValueUpInfo.method)(
+                                   v4,
+                                   v29,
+                                   v4->klass->vtable._7_CalcSkillValueUpRate.methodPtr);
+    if ( !v29 )
+      sub_B7076C(v30, v30);
+    *(_QWORD *)(v29 + 104) = v30;
+    sub_B70630((BattleServantConfConponent_o *)(v29 + 104), v30, v31, v32, v33, v34, v35, v36);
   }
-  v53 = *(_QWORD *)v35;
-  if ( *(_WORD *)(*(_QWORD *)v35 + 298LL) )
+  v37 = *(_QWORD *)v20;
+  if ( *(_WORD *)(*(_QWORD *)v20 + 298LL) )
   {
-    v54 = 0LL;
-    v55 = (int *)(*(_QWORD *)(v53 + 176) + 8LL);
-    while ( *((System_IDisposable_c **)v55 - 1) != System_IDisposable_TypeInfo )
+    v38 = 0LL;
+    v39 = (int *)(*(_QWORD *)(v37 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v39 - 1) != System_IDisposable_TypeInfo )
     {
-      ++v54;
-      v55 += 4;
-      if ( v54 >= *(unsigned __int16 *)(*(_QWORD *)v35 + 298LL) )
+      ++v38;
+      v39 += 4;
+      if ( v38 >= *(unsigned __int16 *)(*(_QWORD *)v20 + 298LL) )
         goto LABEL_35;
     }
-    v56 = v53 + 16LL * *v55 + 312;
+    v40 = v37 + 16LL * *v39 + 312;
   }
   else
   {
 LABEL_35:
-    v56 = sub_AF54C0(v35, System_IDisposable_TypeInfo, 0LL, v40);
+    v40 = sub_B08590(v20, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(__int64, _QWORD))v56)(v35, *(_QWORD *)(v56 + 8));
+  (*(void (__fastcall **)(__int64, _QWORD))v40)(v20, *(_QWORD *)(v40 + 8));
 }
 
 
@@ -219,97 +203,62 @@ int32_t __fastcall SkillValueUpApplierPlayerMaster__CalcSkillValueUpRate(
         SkillValueUpApplierPlayerMaster_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  int v14; // w1
-  int v15; // w2
-  __int64 v16; // x3
-  int v17; // w1
-  int v18; // w2
-  __int64 v19; // x3
-  int v20; // w1
-  int v21; // w2
-  __int64 v22; // x3
-  int v23; // w1
-  int v24; // w2
-  __int64 v25; // x3
-  int v26; // w1
-  int v27; // w2
-  __int64 v28; // x3
-  int v29; // w1
-  int v30; // w2
-  __int64 v31; // x3
-  int v32; // w1
-  int v33; // w2
-  __int64 v34; // x3
   BattleData_o *data; // x0
   System_Collections_Generic_IEnumerable_TSource__o *FieldPlayerServantList; // x19
-  SkillValueUpApplierPlayerMaster___c_c *v37; // x8
+  SkillValueUpApplierPlayerMaster___c_c *v5; // x8
   struct SkillValueUpApplierPlayerMaster___c_StaticFields *static_fields; // x9
   System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *_9__5_0; // x20
-  Il2CppObject *v40; // x21
-  struct SkillValueUpApplierPlayerMaster___c_StaticFields *v41; // x0
-  System_String_array **v42; // x2
-  System_String_array **v43; // x3
-  System_Boolean_array **v44; // x4
-  System_Int32_array **v45; // x5
-  System_Int32_array *v46; // x6
-  System_Int32_array *v47; // x7
-  __int64 v48; // x3
+  Il2CppObject *v8; // x21
+  struct SkillValueUpApplierPlayerMaster___c_StaticFields *v9; // x0
+  System_String_array **v10; // x2
+  System_String_array **v11; // x3
+  System_Boolean_array **v12; // x4
+  System_Int32_array **v13; // x5
+  System_Int32_array *v14; // x6
+  System_Int32_array *v15; // x7
   BattleData_c *klass; // x8
-  BattleData_o *v50; // x19
-  unsigned __int64 v51; // x10
+  BattleData_o *v17; // x19
+  unsigned __int64 v18; // x10
   int32_t *p_offset; // x11
-  __int64 v53; // x0
+  __int64 v20; // x0
   BattleBuffData_ActValueResponse_o *ActValueDetail; // x0
-  BattleBuffData_ActValueResponse_o *v55; // x1
-  __int64 v56; // x3
-  BattleBuffData_ActValueResponse_o *v57; // x20
-  BattleBuffData_ActValueResponse_o *v58; // x19
-  BattleBuffData_ActValueResponse_c *v59; // x8
-  unsigned __int64 v60; // x10
-  int *v61; // x11
-  __int64 v62; // x0
-  BattleServantData_o *v63; // x21
-  BattleBuffData_CheckIndividualitiesData_o *v64; // x23
-  BattleBuffData_ActValueRequest_o *v65; // x22
-  __int64 v66; // x0
-  __int64 v67; // x1
+  BattleBuffData_ActValueResponse_o *v22; // x1
+  BattleBuffData_ActValueResponse_o *v23; // x20
+  BattleBuffData_ActValueResponse_o *v24; // x19
+  BattleBuffData_ActValueResponse_c *v25; // x8
+  unsigned __int64 v26; // x10
+  int *v27; // x11
+  __int64 v28; // x0
+  BattleServantData_o *v29; // x21
+  BattleBuffData_CheckIndividualitiesData_o *v30; // x23
+  BattleBuffData_ActValueRequest_o *v31; // x22
+  __int64 v32; // x0
+  __int64 v33; // x1
   BattleBuffData_o *BuffData; // x0
-  __int64 v69; // x1
-  BattleBuffData_ActValueResponse_c *v70; // x8
-  unsigned __int64 v71; // x10
-  int *v72; // x11
-  __int64 v73; // x0
-  __int64 v74; // x3
-  BattleBuffData_ActValueResponse_c *v75; // x8
-  unsigned __int64 v76; // x10
-  int *v77; // x11
-  __int64 v78; // x0
+  __int64 v35; // x1
+  BattleBuffData_ActValueResponse_c *v36; // x8
+  unsigned __int64 v37; // x10
+  int *v38; // x11
+  __int64 v39; // x0
+  BattleBuffData_ActValueResponse_c *v40; // x8
+  unsigned __int64 v41; // x10
+  int *v42; // x11
+  __int64 v43; // x0
 
-  if ( (byte_42E78E6 & 1) == 0 )
+  if ( (byte_4350A5D & 1) == 0 )
   {
-    sub_B5D5C4(&BattleBuffData_ActValueRequest_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&BattleBuffData_CheckIndividualitiesData_TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&Method_System_Linq_Enumerable_Where_BattleServantData___, v8, v9, v10);
-    sub_B5D5C4(&Method_System_Func_BattleServantData__bool___ctor__, v11, v12, v13);
-    sub_B5D5C4(&System_Func_BattleServantData__bool__TypeInfo, v14, v15, v16);
-    sub_B5D5C4(&System_IDisposable_TypeInfo, v17, v18, v19);
-    sub_B5D5C4(&System_Collections_Generic_IEnumerable_BattleServantData__TypeInfo, v20, v21, v22);
-    sub_B5D5C4(&System_Collections_Generic_IEnumerator_BattleServantData__TypeInfo, v23, v24, v25);
-    sub_B5D5C4(&System_Collections_IEnumerator_TypeInfo, v26, v27, v28);
-    sub_B5D5C4(&Method_SkillValueUpApplierPlayerMaster___c__CalcSkillValueUpRate_b__5_0__, v29, v30, v31);
-    sub_B5D5C4(&SkillValueUpApplierPlayerMaster___c_TypeInfo, v32, v33, v34);
-    byte_42E78E6 = 1;
+    sub_B70694(&BattleBuffData_ActValueRequest_TypeInfo);
+    sub_B70694(&BattleBuffData_CheckIndividualitiesData_TypeInfo);
+    sub_B70694(&Method_System_Linq_Enumerable_Where_BattleServantData___);
+    sub_B70694(&Method_System_Func_BattleServantData__bool___ctor__);
+    sub_B70694(&System_Func_BattleServantData__bool__TypeInfo);
+    sub_B70694(&System_IDisposable_TypeInfo);
+    sub_B70694(&System_Collections_Generic_IEnumerable_BattleServantData__TypeInfo);
+    sub_B70694(&System_Collections_Generic_IEnumerator_BattleServantData__TypeInfo);
+    sub_B70694(&System_Collections_IEnumerator_TypeInfo);
+    sub_B70694(&Method_SkillValueUpApplierPlayerMaster___c__CalcSkillValueUpRate_b__5_0__);
+    sub_B70694(&SkillValueUpApplierPlayerMaster___c_TypeInfo);
+    byte_4350A5D = 1;
   }
   data = this->fields.data;
   if ( !data )
@@ -317,158 +266,158 @@ int32_t __fastcall SkillValueUpApplierPlayerMaster__CalcSkillValueUpRate(
   FieldPlayerServantList = (System_Collections_Generic_IEnumerable_TSource__o *)BattleData__getFieldPlayerServantList(
                                                                                   data,
                                                                                   0LL);
-  v37 = SkillValueUpApplierPlayerMaster___c_TypeInfo;
+  v5 = SkillValueUpApplierPlayerMaster___c_TypeInfo;
   if ( (BYTE3(SkillValueUpApplierPlayerMaster___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !SkillValueUpApplierPlayerMaster___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SkillValueUpApplierPlayerMaster___c_TypeInfo);
-    v37 = SkillValueUpApplierPlayerMaster___c_TypeInfo;
+    v5 = SkillValueUpApplierPlayerMaster___c_TypeInfo;
   }
-  static_fields = v37->static_fields;
+  static_fields = v5->static_fields;
   _9__5_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)static_fields->__9__5_0;
   if ( !_9__5_0 )
   {
-    if ( (BYTE3(v37->vtable._0_Equals.methodPtr) & 4) != 0 && !v37->_2.cctor_finished )
+    if ( (BYTE3(v5->vtable._0_Equals.methodPtr) & 4) != 0 && !v5->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v37);
+      j_il2cpp_runtime_class_init_0(v5);
       static_fields = SkillValueUpApplierPlayerMaster___c_TypeInfo->static_fields;
     }
-    v40 = (Il2CppObject *)static_fields->__9;
-    _9__5_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B5D694(System_Func_BattleServantData__bool__TypeInfo);
+    v8 = (Il2CppObject *)static_fields->__9;
+    _9__5_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_BattleServantData__bool__TypeInfo);
     System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
       _9__5_0,
-      v40,
+      v8,
       Method_SkillValueUpApplierPlayerMaster___c__CalcSkillValueUpRate_b__5_0__,
-      (const MethodInfo_2C2ECD0 *)Method_System_Func_BattleServantData__bool___ctor__);
-    v41 = SkillValueUpApplierPlayerMaster___c_TypeInfo->static_fields;
-    v41->__9__5_0 = (struct System_Func_BattleServantData__bool__o *)_9__5_0;
-    sub_B5D560(
-      (BattleServantConfConponent_o *)&v41->__9__5_0,
+      (const MethodInfo_29AC578 *)Method_System_Func_BattleServantData__bool___ctor__);
+    v9 = SkillValueUpApplierPlayerMaster___c_TypeInfo->static_fields;
+    v9->__9__5_0 = (struct System_Func_BattleServantData__bool__o *)_9__5_0;
+    sub_B70630(
+      (BattleServantConfConponent_o *)&v9->__9__5_0,
       (System_Int32_array **)_9__5_0,
-      v42,
-      v43,
-      v44,
-      v45,
-      v46,
-      v47);
+      v10,
+      v11,
+      v12,
+      v13,
+      v14,
+      v15);
   }
   data = (BattleData_o *)System_Linq_Enumerable__Where_WarBoardManager_WarBoardOnboardSkillTarget_(
                            FieldPlayerServantList,
                            (System_Func_TSource__bool__o *)_9__5_0,
-                           (const MethodInfo_1CBBF10 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
+                           (const MethodInfo_1CCCE44 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
   if ( !data )
 LABEL_51:
-    sub_B5D69C(data, method);
+    sub_B7076C(data, method);
   klass = data->klass;
-  v50 = data;
+  v17 = data;
   if ( *(_WORD *)&data->klass->_2.bitflags1 )
   {
-    v51 = 0LL;
+    v18 = 0LL;
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_Generic_IEnumerable_BattleServantData__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_BattleServantData__TypeInfo )
     {
-      ++v51;
+      ++v18;
       p_offset += 4;
-      if ( v51 >= *(unsigned __int16 *)&data->klass->_2.bitflags1 )
+      if ( v18 >= *(unsigned __int16 *)&data->klass->_2.bitflags1 )
         goto LABEL_17;
     }
-    v53 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v20 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
 LABEL_17:
-    v53 = sub_AF54C0(data, System_Collections_Generic_IEnumerable_BattleServantData__TypeInfo, 0LL, v48);
+    v20 = sub_B08590(data, System_Collections_Generic_IEnumerable_BattleServantData__TypeInfo, 0LL);
   }
-  ActValueDetail = (BattleBuffData_ActValueResponse_o *)(*(__int64 (__fastcall **)(BattleData_o *, _QWORD))v53)(
-                                                          v50,
-                                                          *(_QWORD *)(v53 + 8));
-  v57 = ActValueDetail;
-  v58 = 0LL;
+  ActValueDetail = (BattleBuffData_ActValueResponse_o *)(*(__int64 (__fastcall **)(BattleData_o *, _QWORD))v20)(
+                                                          v17,
+                                                          *(_QWORD *)(v20 + 8));
+  v23 = ActValueDetail;
+  v24 = 0LL;
   while ( 1 )
   {
-    if ( !v57 )
-      sub_B5D69C(ActValueDetail, v55);
-    v70 = v57->klass;
-    if ( *(_WORD *)&v57->klass->_2.bitflags1 )
+    if ( !v23 )
+      sub_B7076C(ActValueDetail, v22);
+    v36 = v23->klass;
+    if ( *(_WORD *)&v23->klass->_2.bitflags1 )
     {
-      v71 = 0LL;
-      v72 = &v70->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_IEnumerator_c **)v72 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v37 = 0LL;
+      v38 = &v36->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_IEnumerator_c **)v38 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        ++v71;
-        v72 += 4;
-        if ( v71 >= *(unsigned __int16 *)&v57->klass->_2.bitflags1 )
+        ++v37;
+        v38 += 4;
+        if ( v37 >= *(unsigned __int16 *)&v23->klass->_2.bitflags1 )
           goto LABEL_36;
       }
-      v73 = (__int64)(&v70->vtable._0_Equals.method + 2 * *v72);
+      v39 = (__int64)(&v36->vtable._0_Equals.method + 2 * *v38);
     }
     else
     {
 LABEL_36:
-      v73 = sub_AF54C0(v57, System_Collections_IEnumerator_TypeInfo, 0LL, v56);
+      v39 = sub_B08590(v23, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
-    if ( ((*(__int64 (__fastcall **)(BattleBuffData_ActValueResponse_o *, _QWORD))v73)(v57, *(_QWORD *)(v73 + 8)) & 1) == 0 )
+    if ( ((*(__int64 (__fastcall **)(BattleBuffData_ActValueResponse_o *, _QWORD))v39)(v23, *(_QWORD *)(v39 + 8)) & 1) == 0 )
       break;
-    v59 = v57->klass;
-    if ( *(_WORD *)&v57->klass->_2.bitflags1 )
+    v25 = v23->klass;
+    if ( *(_WORD *)&v23->klass->_2.bitflags1 )
     {
-      v60 = 0LL;
-      v61 = &v59->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_BattleServantData__c **)v61 - 1) != System_Collections_Generic_IEnumerator_BattleServantData__TypeInfo )
+      v26 = 0LL;
+      v27 = &v25->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_BattleServantData__c **)v27 - 1) != System_Collections_Generic_IEnumerator_BattleServantData__TypeInfo )
       {
-        ++v60;
-        v61 += 4;
-        if ( v60 >= *(unsigned __int16 *)&v57->klass->_2.bitflags1 )
+        ++v26;
+        v27 += 4;
+        if ( v26 >= *(unsigned __int16 *)&v23->klass->_2.bitflags1 )
           goto LABEL_24;
       }
-      v62 = (__int64)(&v59->vtable._0_Equals.method + 2 * *v61);
+      v28 = (__int64)(&v25->vtable._0_Equals.method + 2 * *v27);
     }
     else
     {
 LABEL_24:
-      v62 = sub_AF54C0(v57, System_Collections_Generic_IEnumerator_BattleServantData__TypeInfo, 0LL, v74);
+      v28 = sub_B08590(v23, System_Collections_Generic_IEnumerator_BattleServantData__TypeInfo, 0LL);
     }
-    v63 = (BattleServantData_o *)(*(__int64 (__fastcall **)(BattleBuffData_ActValueResponse_o *, _QWORD))v62)(
-                                   v57,
-                                   *(_QWORD *)(v62 + 8));
-    v64 = (BattleBuffData_CheckIndividualitiesData_o *)sub_B5D694(BattleBuffData_CheckIndividualitiesData_TypeInfo);
-    BattleBuffData_CheckIndividualitiesData___ctor(v64, v63, 0LL, 0LL, 0LL, 0LL, 0LL);
-    v65 = (BattleBuffData_ActValueRequest_o *)sub_B5D694(BattleBuffData_ActValueRequest_TypeInfo);
-    BattleBuffData_ActValueRequest___ctor(v65, 113, v64, 0LL, 0LL);
-    if ( !v63 )
-      sub_B5D69C(v66, v67);
-    BuffData = BattleServantData__get_BuffData(v63, 0LL);
+    v29 = (BattleServantData_o *)(*(__int64 (__fastcall **)(BattleBuffData_ActValueResponse_o *, _QWORD))v28)(
+                                   v23,
+                                   *(_QWORD *)(v28 + 8));
+    v30 = (BattleBuffData_CheckIndividualitiesData_o *)sub_B70764(BattleBuffData_CheckIndividualitiesData_TypeInfo);
+    BattleBuffData_CheckIndividualitiesData___ctor(v30, v29, 0LL, 0LL, 0LL, 0LL, 0LL);
+    v31 = (BattleBuffData_ActValueRequest_o *)sub_B70764(BattleBuffData_ActValueRequest_TypeInfo);
+    BattleBuffData_ActValueRequest___ctor(v31, 113, v30, 0LL, 0LL);
+    if ( !v29 )
+      sub_B7076C(v32, v33);
+    BuffData = BattleServantData__get_BuffData(v29, 0LL);
     if ( !BuffData )
-      sub_B5D69C(0LL, v69);
-    ActValueDetail = BattleBuffData__GetActValueDetail(BuffData, v65, 0LL);
-    v55 = ActValueDetail;
-    if ( v58 )
-      BattleBuffData_ActValueResponse__Merge(v58, ActValueDetail, 0LL);
+      sub_B7076C(0LL, v35);
+    ActValueDetail = BattleBuffData__GetActValueDetail(BuffData, v31, 0LL);
+    v22 = ActValueDetail;
+    if ( v24 )
+      BattleBuffData_ActValueResponse__Merge(v24, ActValueDetail, 0LL);
     else
-      v58 = ActValueDetail;
+      v24 = ActValueDetail;
   }
-  v75 = v57->klass;
-  if ( *(_WORD *)&v57->klass->_2.bitflags1 )
+  v40 = v23->klass;
+  if ( *(_WORD *)&v23->klass->_2.bitflags1 )
   {
-    v76 = 0LL;
-    v77 = &v75->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v77 - 1) != System_IDisposable_TypeInfo )
+    v41 = 0LL;
+    v42 = &v40->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v42 - 1) != System_IDisposable_TypeInfo )
     {
-      ++v76;
-      v77 += 4;
-      if ( v76 >= *(unsigned __int16 *)&v57->klass->_2.bitflags1 )
+      ++v41;
+      v42 += 4;
+      if ( v41 >= *(unsigned __int16 *)&v23->klass->_2.bitflags1 )
         goto LABEL_43;
     }
-    v78 = (__int64)(&v75->vtable._0_Equals.method + 2 * *v77);
+    v43 = (__int64)(&v40->vtable._0_Equals.method + 2 * *v42);
   }
   else
   {
 LABEL_43:
-    v78 = sub_AF54C0(v57, System_IDisposable_TypeInfo, 0LL, v74);
+    v43 = sub_B08590(v23, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(BattleBuffData_ActValueResponse_o *, _QWORD))v78)(v57, *(_QWORD *)(v78 + 8));
-  if ( v58 )
-    return BattleBuffData_ActValueResponse__GetClampedValue(v58, 0LL);
+  (*(void (__fastcall **)(BattleBuffData_ActValueResponse_o *, _QWORD))v43)(v23, *(_QWORD *)(v43 + 8));
+  if ( v24 )
+    return BattleBuffData_ActValueResponse__GetClampedValue(v24, 0LL);
   else
     return 0;
 }
@@ -479,13 +428,12 @@ FuncParamValueUpInfoBase_o *__fastcall SkillValueUpApplierPlayerMaster__CreateFu
         DataVals_o *dataVals,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
   int32_t valueUpRate; // w20
 
-  if ( (byte_42E78E5 & 1) == 0 )
+  if ( (byte_4350A5C & 1) == 0 )
   {
-    sub_B5D5C4(&FuncParamValueUpInfoDefault_TypeInfo, (_DWORD)dataVals, (_DWORD)method, v3);
-    byte_42E78E5 = 1;
+    sub_B70694(&FuncParamValueUpInfoDefault_TypeInfo);
+    byte_4350A5C = 1;
   }
   valueUpRate = this->fields.valueUpRate;
   if ( (BYTE3(FuncParamValueUpInfoDefault_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -509,22 +457,25 @@ void __fastcall SkillValueUpApplierPlayerMaster__Init(
 
 void __fastcall SkillValueUpApplierPlayerMaster___c___cctor(const MethodInfo *method)
 {
-  int v1; // w1
-  int v2; // w2
-  __int64 v3; // x3
-  Il2CppObject *v4; // x19
-  struct SkillValueUpApplierPlayerMaster___c_StaticFields *static_fields; // x0
+  Il2CppObject *v1; // x19
+  BattleServantConfConponent_o *static_fields; // x0
+  System_String_array **v3; // x2
+  System_String_array **v4; // x3
+  System_Boolean_array **v5; // x4
+  System_Int32_array **v6; // x5
+  System_Int32_array *v7; // x6
+  System_Int32_array *v8; // x7
 
-  if ( (byte_42E5DE9 & 1) == 0 )
+  if ( (byte_434F8A2 & 1) == 0 )
   {
-    sub_B5D5C4(&SkillValueUpApplierPlayerMaster___c_TypeInfo, v1, v2, v3);
-    byte_42E5DE9 = 1;
+    sub_B70694(&SkillValueUpApplierPlayerMaster___c_TypeInfo);
+    byte_434F8A2 = 1;
   }
-  v4 = (Il2CppObject *)sub_B5D694(SkillValueUpApplierPlayerMaster___c_TypeInfo);
-  System_Object___ctor(v4, 0LL);
-  static_fields = SkillValueUpApplierPlayerMaster___c_TypeInfo->static_fields;
-  static_fields->__9 = (struct SkillValueUpApplierPlayerMaster___c_o *)v4;
-  sub_B5D560(static_fields);
+  v1 = (Il2CppObject *)sub_B70764(SkillValueUpApplierPlayerMaster___c_TypeInfo);
+  System_Object___ctor(v1, 0LL);
+  static_fields = (BattleServantConfConponent_o *)SkillValueUpApplierPlayerMaster___c_TypeInfo->static_fields;
+  static_fields->klass = (BattleServantConfConponent_c *)v1;
+  sub_B70630(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
 }
 
 

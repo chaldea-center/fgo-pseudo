@@ -8,14 +8,14 @@ void __fastcall MapFogData___ctor(MapFogData_o *this, const MethodInfo *method)
   System_Int32_array *v7; // x7
   System_Int32_array **v9; // x1
 
-  if ( (byte_42EBAD7 & 1) == 0 )
+  if ( (byte_4354D59 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_16184/*"_FogColor"*/, (_DWORD)method, (_DWORD)v2, v3);
-    byte_42EBAD7 = 1;
+    sub_B70694(&StringLiteral_16217/*"_FogColor"*/);
+    byte_4354D59 = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_16184/*"_FogColor"*/;
-  this->fields.propertyName = (struct System_String_o *)StringLiteral_16184/*"_FogColor"*/;
-  sub_B5D560((BattleServantConfConponent_o *)&this->fields.propertyName, v9, v2, v3, v4, v5, v6, v7);
+  v9 = (System_Int32_array **)StringLiteral_16217/*"_FogColor"*/;
+  this->fields.propertyName = (struct System_String_o *)StringLiteral_16217/*"_FogColor"*/;
+  sub_B70630((BattleServantConfConponent_o *)&this->fields.propertyName, v9, v2, v3, v4, v5, v6, v7);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -53,8 +53,8 @@ void __fastcall MapFogData__ApplyColor(MapFogData_o *this, UnityEngine_Color_o c
     {
       if ( v11 >= v9 )
       {
-        v12 = sub_B5D6C8(renderer);
-        sub_B5D668(v12, 0LL);
+        v12 = sub_B70798(renderer);
+        sub_B70738(v12, 0LL);
       }
       renderer = (void *)*((_QWORD *)v10 + (int)v11 + 4);
       if ( !renderer )
@@ -69,7 +69,7 @@ void __fastcall MapFogData__ApplyColor(MapFogData_o *this, UnityEngine_Color_o c
         return;
     }
 LABEL_10:
-    sub_B5D69C(renderer, method);
+    sub_B7076C(renderer, method);
   }
 }
 
@@ -86,7 +86,7 @@ void __fastcall MapFogData__SetRenderer(
   System_Int32_array *v7; // x7
 
   this->fields.renderer = setRenderer;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)setRenderer,
     (System_String_array **)method,
@@ -103,22 +103,17 @@ System_Nullable_Color__o *__fastcall MapFogData__get_Color(
         MapFogData_o *this,
         const MethodInfo *method)
 {
-  int v3; // w2
-  __int64 v4; // x3
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
   System_Nullable_Color__o *result; // x0
-  __int64 v11; // x1
+  __int64 v6; // x1
   UnityEngine_Renderer_o *renderer; // x0
   UnityEngine_Object_o *material; // x21
   UnityEngine_Color_o Color; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_42EBAD5 & 1) == 0 )
+  if ( (byte_4354D57 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Nullable_Color___ctor__, (_DWORD)method, v3, v4);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v7, v8, v9);
-    byte_42EBAD5 = 1;
+    sub_B70694(&Method_System_Nullable_Color___ctor__);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4354D57 = 1;
   }
   result = (System_Nullable_Color__o *)MapFogData__get_HasRenderer(this, method);
   if ( ((unsigned __int8)result & 1) == 0 )
@@ -144,26 +139,24 @@ LABEL_9:
   renderer = this->fields.renderer;
   if ( !renderer || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL )
 LABEL_13:
-    sub_B5D69C(renderer, v11);
+    sub_B7076C(renderer, v6);
   Color = UnityEngine_Material__GetColor((UnityEngine_Material_o *)renderer, this->fields.propertyName, 0LL);
   *(_DWORD *)&retstr->fields.has_value = 0;
   *(_QWORD *)&retstr->fields.value.fields.r = 0LL;
   *(_QWORD *)&retstr->fields.value.fields.b = 0LL;
-  System_Nullable_Color____ctor(retstr, Color, (const MethodInfo_2348A24 *)Method_System_Nullable_Color___ctor__);
+  System_Nullable_Color____ctor(retstr, Color, (const MethodInfo_2435898 *)Method_System_Nullable_Color___ctor__);
   return result;
 }
 
 
 bool __fastcall MapFogData__get_HasRenderer(MapFogData_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   UnityEngine_Object_o *renderer; // x19
 
-  if ( (byte_42EBAD6 & 1) == 0 )
+  if ( (byte_4354D58 & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EBAD6 = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4354D58 = 1;
   }
   renderer = (UnityEngine_Object_o *)this->fields.renderer;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

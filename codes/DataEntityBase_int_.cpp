@@ -1,20 +1,20 @@
-void __fastcall DataEntityBase_int____ctor(DataEntityBase_int__o *this, const MethodInfo_23FACBC *method)
+void __fastcall DataEntityBase_int____ctor(DataEntityBase_int__o *this, const MethodInfo_21C02EC *method)
 {
   if ( !this )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   DataEntityBase___ctor((DataEntityBase_o *)this, 0LL);
 }
 
 
 System_String_o *__fastcall DataEntityBase_int___get_PrimaryKey(
         DataEntityBase_int__o *this,
-        const MethodInfo_23FAC7C *method)
+        const MethodInfo_21C02AC *method)
 {
   int v3; // [xsp+Ch] [xbp-4h] BYREF
 
   v3 = 0;
   if ( !this )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   v3 = ((__int64 (__fastcall *)(DataEntityBase_int__o *, const char *))this->klass[1]._1.gc_desc)(
          this,
          this->klass[1]._1.name);

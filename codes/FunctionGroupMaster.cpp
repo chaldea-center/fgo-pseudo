@@ -1,17 +1,14 @@
 void __fastcall FunctionGroupMaster___ctor(FunctionGroupMaster_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EB553 & 1) == 0 )
+  if ( (byte_43540FA & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string___ctor__, (_DWORD)method, v2, v3);
-    byte_42EB553 = 1;
+    sub_B70694(&Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string___ctor__);
+    byte_43540FA = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     146,
-    (const MethodInfo_23FB1C4 *)Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string___ctor__);
+    (const MethodInfo_21C07F4 *)Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string___ctor__);
 }
 
 
@@ -24,20 +21,16 @@ FunctionGroupEntity_o *__fastcall FunctionGroupMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_42EB551 & 1) == 0 )
+  if ( (byte_43540F8 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string__GetEntity__,
-      funcId,
-      eventId,
-      method);
-    byte_42EB551 = 1;
+    sub_B70694(&Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string__GetEntity__);
+    byte_43540F8 = 1;
   }
   PK = FunctionGroupEntity__CreatePK(funcId, eventId, *(const MethodInfo **)&eventId);
   return (FunctionGroupEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                     (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                     PK,
-                                    (const MethodInfo_23FB260 *)Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string__GetEntity__);
+                                    (const MethodInfo_21C0890 *)Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string__GetEntity__);
 }
 
 
@@ -51,19 +44,15 @@ bool __fastcall FunctionGroupMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_42EB552 & 1) == 0 )
+  if ( (byte_43540F9 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string__TryGetEntity__,
-      (_DWORD)entity,
-      funcId,
-      *(_QWORD *)&eventId);
-    byte_42EB552 = 1;
+    sub_B70694(&Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string__TryGetEntity__);
+    byte_43540F9 = 1;
   }
   PK = FunctionGroupEntity__CreatePK(funcId, eventId, *(const MethodInfo **)&funcId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_23FB2B8 *)Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string__TryGetEntity__);
+           (const MethodInfo_21C08E8 *)Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string__TryGetEntity__);
 }

@@ -1,13 +1,9 @@
 void __fastcall ServantStatusListViewItemDrawClassSkill___cctor(const MethodInfo *method)
 {
-  int v1; // w1
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42ED35F & 1) == 0 )
+  if ( (byte_435933A & 1) == 0 )
   {
-    sub_B5D5C4(&ServantStatusListViewItemDrawClassSkill_TypeInfo, v1, v2, v3);
-    byte_42ED35F = 1;
+    sub_B70694(&ServantStatusListViewItemDrawClassSkill_TypeInfo);
+    byte_435933A = 1;
   }
   ServantStatusListViewItemDrawClassSkill_TypeInfo->static_fields->DETAIL_FONT_SIZE = 18;
   ServantStatusListViewItemDrawClassSkill_TypeInfo->static_fields->MAX_HEIGHT = 500;
@@ -19,72 +15,84 @@ void __fastcall ServantStatusListViewItemDrawClassSkill___ctor(
         ServantStatusListViewItemDrawClassSkill_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  int v14; // w1
-  int v15; // w2
-  __int64 v16; // x3
-  BalanceConfig_c *v17; // x0
-  struct SkillIconComponent_array *v18; // x0
+  BalanceConfig_c *v3; // x0
+  struct SkillIconComponent_array *v4; // x0
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
+  struct UIRangeLabel_array *v11; // x0
+  System_String_array **v12; // x2
+  System_String_array **v13; // x3
+  System_Boolean_array **v14; // x4
+  System_Int32_array **v15; // x5
+  System_Int32_array *v16; // x6
+  System_Int32_array *v17; // x7
+  struct UILabel_array *v18; // x0
   System_String_array **v19; // x2
   System_String_array **v20; // x3
   System_Boolean_array **v21; // x4
   System_Int32_array **v22; // x5
   System_Int32_array *v23; // x6
   System_Int32_array *v24; // x7
-  struct UIRangeLabel_array *v25; // x0
+  struct UISprite_o *v25; // x0
   System_String_array **v26; // x2
   System_String_array **v27; // x3
   System_Boolean_array **v28; // x4
   System_Int32_array **v29; // x5
   System_Int32_array *v30; // x6
   System_Int32_array *v31; // x7
-  struct UILabel_array *v32; // x0
-  System_String_array **v33; // x2
-  System_String_array **v34; // x3
-  System_Boolean_array **v35; // x4
-  System_Int32_array **v36; // x5
-  System_Int32_array *v37; // x6
-  System_Int32_array *v38; // x7
-  System_Int32_array **v39; // x0
-  System_String_array **v40; // x2
-  System_String_array **v41; // x3
-  System_Boolean_array **v42; // x4
-  System_Int32_array **v43; // x5
-  System_Int32_array *v44; // x6
-  System_Int32_array *v45; // x7
 
-  if ( (byte_42ED35E & 1) == 0 )
+  if ( (byte_4359339 & 1) == 0 )
   {
-    sub_B5D5C4(&BalanceConfig_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&UnityEngine_GameObject___TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&SkillIconComponent___TypeInfo, v8, v9, v10);
-    sub_B5D5C4(&UILabel___TypeInfo, v11, v12, v13);
-    sub_B5D5C4(&UIRangeLabel___TypeInfo, v14, v15, v16);
-    byte_42ED35E = 1;
+    sub_B70694(&BalanceConfig_TypeInfo);
+    sub_B70694(&UnityEngine_GameObject___TypeInfo);
+    sub_B70694(&SkillIconComponent___TypeInfo);
+    sub_B70694(&UILabel___TypeInfo);
+    sub_B70694(&UIRangeLabel___TypeInfo);
+    byte_4359339 = 1;
   }
-  v17 = BalanceConfig_TypeInfo;
+  v3 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v17 = BalanceConfig_TypeInfo;
+    v3 = BalanceConfig_TypeInfo;
   }
-  v18 = (struct SkillIconComponent_array *)sub_B5D5DC(
-                                             UnityEngine_GameObject___TypeInfo,
-                                             (unsigned int)v17->static_fields->SvtSkillListMax);
-  this->fields.skillIconList = v18;
-  sub_B5D560(
+  v4 = (struct SkillIconComponent_array *)sub_B706AC(
+                                            UnityEngine_GameObject___TypeInfo,
+                                            (unsigned int)v3->static_fields->SvtSkillListMax);
+  this->fields.skillIconList = v4;
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.skillIconList,
+    (System_Int32_array **)v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10);
+  v11 = (struct UIRangeLabel_array *)sub_B706AC(
+                                       SkillIconComponent___TypeInfo,
+                                       (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
+  this->fields.skillTitleRangeLabelList = v11;
+  sub_B70630(
+    (BattleServantConfConponent_o *)&this->fields.skillTitleRangeLabelList,
+    (System_Int32_array **)v11,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17);
+  v18 = (struct UILabel_array *)sub_B706AC(
+                                  UIRangeLabel___TypeInfo,
+                                  (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
+  this->fields.skillExplanationLabelList = v18;
+  sub_B70630(
+    (BattleServantConfConponent_o *)&this->fields.skillExplanationLabelList,
     (System_Int32_array **)v18,
     v19,
     v20,
@@ -92,12 +100,12 @@ void __fastcall ServantStatusListViewItemDrawClassSkill___ctor(
     v22,
     v23,
     v24);
-  v25 = (struct UIRangeLabel_array *)sub_B5D5DC(
-                                       SkillIconComponent___TypeInfo,
-                                       (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
-  this->fields.skillTitleRangeLabelList = v25;
-  sub_B5D560(
-    (BattleServantConfConponent_o *)&this->fields.skillTitleRangeLabelList,
+  v25 = (struct UISprite_o *)sub_B706AC(
+                               UILabel___TypeInfo,
+                               (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
+  this->fields.transformNameSprite = v25;
+  sub_B70630(
+    (BattleServantConfConponent_o *)&this->fields.transformNameSprite,
     (System_Int32_array **)v25,
     v26,
     v27,
@@ -105,24 +113,7 @@ void __fastcall ServantStatusListViewItemDrawClassSkill___ctor(
     v29,
     v30,
     v31);
-  v32 = (struct UILabel_array *)sub_B5D5DC(
-                                  UIRangeLabel___TypeInfo,
-                                  (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
-  this->fields.skillExplanationLabelList = v32;
-  sub_B5D560(
-    (BattleServantConfConponent_o *)&this->fields.skillExplanationLabelList,
-    (System_Int32_array **)v32,
-    v33,
-    v34,
-    v35,
-    v36,
-    v37,
-    v38);
-  v39 = (System_Int32_array **)sub_B5D5DC(
-                                 UILabel___TypeInfo,
-                                 (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
-  *(_QWORD *)&this->fields.skillPitch = v39;
-  sub_B5D560((BattleServantConfConponent_o *)&this->fields.skillPitch, v39, v40, v41, v42, v43, v44, v45);
+  LODWORD(this->fields.baseSize.fields.x) = 34;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -214,12 +205,12 @@ void __fastcall ServantStatusListViewItemDrawClassSkill__Awake(
   v3->fields.skillBasePosition.fields.y = v14;
   if ( !v15 )
 LABEL_24:
-    sub_B5D69C(this, method);
+    sub_B7076C(this, method);
   if ( !v15->max_length )
   {
 LABEL_25:
-    v18 = sub_B5D6C8(this);
-    sub_B5D668(v18, 0LL);
+    v18 = sub_B70798(this);
+    sub_B70738(v18, 0LL);
   }
   this = (ServantStatusListViewItemDrawClassSkill_o *)v15->m_Items[0];
   if ( !this )
@@ -231,8 +222,8 @@ LABEL_25:
     goto LABEL_24;
   v20 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0LL);
   v3->fields.skillBasePosition.fields.z = v20.fields.x;
-  *(float *)&v3[1].klass = v20.fields.y - v17;
-  HIDWORD(v3[1].klass) = LODWORD(v20.fields.z);
+  *((float *)&v3->fields.skillBasePosition + 3) = v20.fields.y - v17;
+  *(float *)&v3[1].klass = v20.fields.z;
 }
 
 
@@ -250,82 +241,76 @@ void __fastcall ServantStatusListViewItemDrawClassSkill__SetItem(
         int32_t mode,
         const MethodInfo *method)
 {
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
-  int v10; // w1
-  int v11; // w2
-  __int64 v12; // x3
-  int v13; // w1
-  int v14; // w2
-  __int64 v15; // x3
   UILabel_o *skillBaseList; // x21
-  SkillIconComponent_o *titleSprite; // x0
-  __int64 v18; // x1
-  const MethodInfo *v19; // x4
+  SkillIconComponent_o *transformNameLabel; // x0
+  __int64 v9; // x1
+  const MethodInfo *v10; // x5
   struct UIRangeLabel_array *skillTitleRangeLabelList; // x9
-  __int64 v21; // x11
+  __int64 v12; // x11
   unsigned __int64 max_length; // x10
-  signed __int64 v23; // x9
-  int v24; // w22
-  int v25; // w13
+  signed __int64 v14; // x9
+  int v15; // w22
+  int v16; // w13
+  _BOOL4 IsTransformServant_k__BackingField; // w21
+  __int64 v18; // x8
+  float x; // w25
+  int v20; // w24
   struct SkillIconComponent_array *skillIconList; // x8
-  int v27; // w24
-  __int64 v28; // x26
-  unsigned __int64 v29; // x27
-  __int64 v30; // x8
-  ServantStatusListViewItemDrawClassSkill_c *v31; // x0
-  UILabel_o *v32; // x20
-  System_String_o *v33; // x21
-  __int64 v34; // x8
-  __int64 v35; // x8
-  int v36; // w10
+  __int64 v22; // x27
+  unsigned __int64 v23; // x28
+  struct UISprite_o *transformNameSprite; // x8
+  ServantStatusListViewItemDrawClassSkill_c *v25; // x0
+  UILabel_o *v26; // x20
+  System_String_o *v27; // x21
+  struct UISprite_o *v28; // x8
+  __int64 v29; // x8
+  int v30; // w10
   float y; // w8
-  int v38; // w9
-  float x; // s8
+  int v32; // w9
+  float v33; // s8
   float z; // s9
-  float v41; // s10
+  float v35; // s10
   UnityEngine_Object_o *baseSprite; // x20
-  float v43; // s8
-  double v44; // d0
-  double v45; // d0
-  int v46; // w20
-  float v47; // s8
-  float v48; // s11
-  float v49; // s9
-  float v50; // s10
+  float v37; // s8
+  double v38; // d0
+  double v39; // d0
+  int v40; // w20
+  float v41; // s8
+  float v42; // s10
+  float v43; // s9
+  int v44; // w21
+  struct SkillIconComponent_array *v45; // x8
+  float v46; // s8
+  float v47; // s9
+  __int64 v48; // x20
+  float v49; // s10
+  int v50; // w9
   struct SkillIconComponent_array *v51; // x8
-  float v52; // s8
-  float v53; // s9
-  __int64 v54; // x20
-  float v55; // s10
-  int v56; // w9
-  struct SkillIconComponent_array *v57; // x8
-  struct UIRangeLabel_array *v58; // x8
+  struct UIRangeLabel_array *v52; // x8
   struct UILabel_array *skillExplanationLabelList; // x8
-  __int64 v60; // x8
-  __int64 v61; // x8
-  int v62; // w21
-  float v63; // w9
-  __int64 v64; // x0
-  System_String_array *v65; // [xsp+0h] [xbp-80h] BYREF
-  System_String_array *titleList; // [xsp+8h] [xbp-78h] BYREF
-  System_Int32_array *idList; // [xsp+38h] [xbp-48h] BYREF
-  UnityEngine_Vector3_o v68; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v69; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v70; // 0:s0.4,4:s1.4,8:s2.4
+  struct UISprite_o *v54; // x8
+  __int64 v55; // x8
+  int v56; // w21
+  float v57; // w9
+  __int64 v58; // x0
+  System_String_array *explanationList; // [xsp+8h] [xbp-88h] BYREF
+  System_String_array *titleList; // [xsp+10h] [xbp-80h] BYREF
+  System_Int32_array *idList; // [xsp+18h] [xbp-78h] BYREF
+  UnityEngine_Vector3_o v62; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v63; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v64; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_42ED35D & 1) == 0 )
+  if ( (byte_4359338 & 1) == 0 )
   {
-    sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)item, mode, method);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v7, v8, v9);
-    sub_B5D5C4(&ServantStatusListViewItemDrawClassSkill_TypeInfo, v10, v11, v12);
-    sub_B5D5C4(&StringLiteral_12131/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/, v13, v14, v15);
-    byte_42ED35D = 1;
+    sub_B70694(&LocalizationManager_TypeInfo);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    sub_B70694(&ServantStatusListViewItemDrawClassSkill_TypeInfo);
+    sub_B70694(&StringLiteral_12152/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/);
+    byte_4359338 = 1;
   }
-  idList = 0LL;
-  v65 = 0LL;
   titleList = 0LL;
+  idList = 0LL;
+  explanationList = 0LL;
   LODWORD(this->fields.baseButton) = mode;
   if ( !item || !mode )
     return;
@@ -335,250 +320,277 @@ void __fastcall ServantStatusListViewItemDrawClassSkill__SetItem(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  titleSprite = (SkillIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12131/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/, 0LL);
+  transformNameLabel = (SkillIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12152/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/, 0LL);
   if ( !skillBaseList )
-    goto LABEL_88;
-  UILabel__set_text(skillBaseList, (System_String_o *)titleSprite, 0LL);
-  ServantStatusListViewItem__GetPassiveSkillInfo(item, &idList, &titleList, &v65, v19);
+    goto LABEL_96;
+  UILabel__set_text(skillBaseList, (System_String_o *)transformNameLabel, 0LL);
+  ServantStatusListViewItem__GetPassiveSkillInfo(item, &idList, &titleList, &explanationList, 1, v10);
   if ( !idList )
     return;
   skillTitleRangeLabelList = this->fields.skillTitleRangeLabelList;
   if ( !skillTitleRangeLabelList )
-    goto LABEL_88;
-  v21 = *(_QWORD *)&skillTitleRangeLabelList->max_length;
-  if ( v21 << 32 < 1 )
+    goto LABEL_96;
+  v12 = *(_QWORD *)&skillTitleRangeLabelList->max_length;
+  if ( v12 << 32 < 1 )
   {
-    v24 = 1;
+    v15 = 1;
   }
   else
   {
     max_length = idList->max_length;
-    v23 = 0LL;
-    v24 = 1;
+    v14 = 0LL;
+    v15 = 1;
     do
     {
-      if ( v23 >= (int)max_length )
+      if ( v14 >= (int)max_length )
       {
-        ++v23;
+        ++v14;
       }
       else
       {
-        if ( v23 >= max_length )
+        if ( v14 >= max_length )
         {
-LABEL_90:
-          v64 = sub_B5D6C8(titleSprite);
-          sub_B5D668(v64, 0LL);
+LABEL_98:
+          v58 = sub_B70798(transformNameLabel);
+          sub_B70738(v58, 0LL);
         }
-        v25 = idList->m_Items[++v23];
-        if ( v25 >= 1 )
-          v24 = v23;
+        v16 = idList->m_Items[++v14];
+        if ( v16 >= 1 )
+          v15 = v14;
       }
     }
-    while ( v23 < (int)v21 );
+    while ( v14 < (int)v12 );
+  }
+  transformNameLabel = (SkillIconComponent_o *)this->fields.transformNameLabel;
+  if ( !transformNameLabel )
+    goto LABEL_96;
+  IsTransformServant_k__BackingField = item->fields._IsTransformServant_k__BackingField;
+  transformNameLabel = (SkillIconComponent_o *)UnityEngine_Component__get_gameObject(
+                                                 (UnityEngine_Component_o *)transformNameLabel,
+                                                 0LL);
+  if ( !transformNameLabel )
+    goto LABEL_96;
+  if ( IsTransformServant_k__BackingField )
+  {
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transformNameLabel, 1, 0LL);
+    transformNameLabel = *(SkillIconComponent_o **)&this->fields.transformNameAddHeight;
+    if ( !transformNameLabel )
+      goto LABEL_96;
+    v18 = 544LL;
+    if ( item->fields._IsTransformed_k__BackingField )
+      v18 = 552LL;
+    UILabel__set_text((UILabel_o *)transformNameLabel, *(System_String_o **)((char *)&item->klass + v18), 0LL);
+    x = this->fields.baseSize.fields.x;
+    v20 = -LODWORD(x);
+  }
+  else
+  {
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transformNameLabel, 0, 0LL);
+    v20 = 0;
+    x = 0.0;
   }
   skillIconList = this->fields.skillIconList;
   if ( !skillIconList )
-    goto LABEL_88;
-  v27 = 0;
-  v28 = 4LL;
+    goto LABEL_96;
+  v22 = 4LL;
   while ( 1 )
   {
-    v29 = v28 - 4;
-    if ( v28 - 4 >= (int)skillIconList->max_length )
+    v23 = v22 - 4;
+    if ( v22 - 4 >= (int)skillIconList->max_length )
       break;
-    if ( (__int64)v29 < v24 )
+    if ( (__int64)v23 < v15 )
     {
-      v30 = *(_QWORD *)&this->fields.skillPitch;
-      if ( !v30 )
-        goto LABEL_88;
-      if ( v29 >= *(unsigned int *)(v30 + 24) )
-        goto LABEL_90;
-      if ( !v65 )
-        goto LABEL_88;
-      if ( v29 >= v65->max_length )
-        goto LABEL_90;
-      v31 = ServantStatusListViewItemDrawClassSkill_TypeInfo;
-      v32 = *(UILabel_o **)(v30 + 8 * v28);
-      v33 = (System_String_o *)*((_QWORD *)&v65->obj.klass + v28);
+      transformNameSprite = this->fields.transformNameSprite;
+      if ( !transformNameSprite )
+        goto LABEL_96;
+      if ( v23 >= LODWORD(transformNameSprite->fields.leftAnchor) )
+        goto LABEL_98;
+      if ( !explanationList )
+        goto LABEL_96;
+      if ( v23 >= explanationList->max_length )
+        goto LABEL_98;
+      v25 = ServantStatusListViewItemDrawClassSkill_TypeInfo;
+      v26 = (UILabel_o *)*((_QWORD *)&transformNameSprite->klass + v22);
+      v27 = (System_String_o *)*((_QWORD *)&explanationList->obj.klass + v22);
       if ( (BYTE3(ServantStatusListViewItemDrawClassSkill_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !ServantStatusListViewItemDrawClassSkill_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(ServantStatusListViewItemDrawClassSkill_TypeInfo);
-        v31 = ServantStatusListViewItemDrawClassSkill_TypeInfo;
+        v25 = ServantStatusListViewItemDrawClassSkill_TypeInfo;
       }
-      titleSprite = (SkillIconComponent_o *)WrapControlText__textAdjust(
-                                              v32,
-                                              v33,
-                                              v31->static_fields->DETAIL_FONT_SIZE,
-                                              v31->static_fields->DETAIL_FONT_SIZE,
-                                              v31->static_fields->MAX_HEIGHT,
-                                              0LL);
-      v34 = *(_QWORD *)&this->fields.skillPitch;
-      if ( !v34 )
-        goto LABEL_88;
-      if ( v29 >= *(unsigned int *)(v34 + 24) )
-        goto LABEL_90;
-      v35 = *(_QWORD *)(v34 + 8 * v28);
-      if ( !v35 )
-        goto LABEL_88;
-      v36 = *(_DWORD *)(v35 + 164);
+      transformNameLabel = (SkillIconComponent_o *)WrapControlText__textAdjust(
+                                                     v26,
+                                                     v27,
+                                                     v25->static_fields->DETAIL_FONT_SIZE,
+                                                     v25->static_fields->DETAIL_FONT_SIZE,
+                                                     v25->static_fields->MAX_HEIGHT,
+                                                     0LL);
+      v28 = this->fields.transformNameSprite;
+      if ( !v28 )
+        goto LABEL_96;
+      if ( v23 >= LODWORD(v28->fields.leftAnchor) )
+        goto LABEL_98;
+      v29 = *((_QWORD *)&v28->klass + v22);
+      if ( !v29 )
+        goto LABEL_96;
+      v30 = *(_DWORD *)(v29 + 164);
       y = this->fields.baseSize.fields.y;
-      v38 = v36 + ServantStatusListViewItemDrawClassSkill_TypeInfo->static_fields->ADJUST_HEIGHT;
-      if ( v38 >= SLODWORD(y) )
-        v27 += v38;
+      v32 = v30 + ServantStatusListViewItemDrawClassSkill_TypeInfo->static_fields->ADJUST_HEIGHT;
+      if ( v32 >= SLODWORD(y) )
+        LODWORD(x) += v32;
       else
-        v27 += LODWORD(y);
+        LODWORD(x) += LODWORD(y);
     }
     skillIconList = this->fields.skillIconList;
-    ++v28;
+    ++v22;
     if ( !skillIconList )
-      goto LABEL_88;
+      goto LABEL_96;
   }
   z = this->fields.baseSize.fields.z;
-  x = this->fields.titleBasePosition.fields.x;
-  v41 = this->fields.titleBasePosition.fields.y;
+  v33 = this->fields.titleBasePosition.fields.x;
+  v35 = this->fields.titleBasePosition.fields.y;
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  v43 = x + (float)v27;
+  v37 = v33 + (float)SLODWORD(x);
   if ( UnityEngine_Object__op_Inequality(baseSprite, 0LL, 0LL) )
   {
-    titleSprite = (SkillIconComponent_o *)this->fields.baseSprite;
-    if ( !titleSprite )
-      goto LABEL_88;
-    v68.fields.x = z;
-    v68.fields.y = v43;
-    v68.fields.z = v41;
-    UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)titleSprite, v68, 0LL);
+    transformNameLabel = (SkillIconComponent_o *)this->fields.baseSprite;
+    if ( !transformNameLabel )
+      goto LABEL_96;
+    v62.fields.x = z;
+    v62.fields.y = v37;
+    v62.fields.z = v35;
+    UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)transformNameLabel, v62, 0LL);
   }
-  titleSprite = (SkillIconComponent_o *)this->fields.titleSprite;
-  if ( !titleSprite )
-    goto LABEL_88;
-  v44 = z;
+  transformNameLabel = (SkillIconComponent_o *)this->fields.titleSprite;
+  if ( !transformNameLabel )
+    goto LABEL_96;
+  v38 = z;
   if ( z == INFINITY )
-    v44 = -z;
-  UIWidget__set_width((UIWidget_o *)titleSprite, (int)v44, 0LL);
-  titleSprite = (SkillIconComponent_o *)this->fields.titleSprite;
-  if ( !titleSprite )
-    goto LABEL_88;
-  v45 = v43;
-  if ( v43 == INFINITY )
-    v45 = -INFINITY;
-  UIWidget__set_height((UIWidget_o *)titleSprite, (int)v45, 0LL);
-  titleSprite = (SkillIconComponent_o *)this->fields.explanationLabel;
-  v46 = v27 >= 0 ? v27 : v27 + 1;
-  if ( !titleSprite )
-    goto LABEL_88;
-  v47 = this->fields.titleBasePosition.fields.z;
-  v48 = this->fields.skillBasePosition.fields.x;
-  v49 = this->fields.skillBasePosition.fields.y;
-  titleSprite = (SkillIconComponent_o *)UnityEngine_Component__get_transform(
-                                          (UnityEngine_Component_o *)titleSprite,
-                                          0LL);
-  if ( !titleSprite
-    || (v50 = (float)(v46 >> 1),
-        v69.fields.y = v48 + v50,
-        v69.fields.x = v47,
-        v69.fields.z = v49,
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)titleSprite, v69, 0LL),
-        (v51 = this->fields.skillIconList) == 0LL) )
+    v38 = -z;
+  UIWidget__set_width((UIWidget_o *)transformNameLabel, (int)v38, 0LL);
+  transformNameLabel = (SkillIconComponent_o *)this->fields.titleSprite;
+  if ( !transformNameLabel )
+    goto LABEL_96;
+  v39 = v37;
+  if ( v37 == INFINITY )
+    v39 = -INFINITY;
+  UIWidget__set_height((UIWidget_o *)transformNameLabel, (int)v39, 0LL);
+  transformNameLabel = (SkillIconComponent_o *)this->fields.explanationLabel;
+  v40 = x >= 0.0 ? LODWORD(x) : LODWORD(x) + 1;
+  if ( !transformNameLabel )
+    goto LABEL_96;
+  v41 = this->fields.titleBasePosition.fields.z;
+  v42 = this->fields.skillBasePosition.fields.x;
+  v43 = this->fields.skillBasePosition.fields.y;
+  transformNameLabel = (SkillIconComponent_o *)UnityEngine_Component__get_transform(
+                                                 (UnityEngine_Component_o *)transformNameLabel,
+                                                 0LL);
+  if ( !transformNameLabel
+    || (v44 = v40 >> 1,
+        v63.fields.y = v42 + (float)(v40 >> 1),
+        v63.fields.x = v41,
+        v63.fields.z = v43,
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transformNameLabel, v63, 0LL),
+        (v45 = this->fields.skillIconList) == 0LL) )
   {
-LABEL_88:
-    sub_B5D69C(titleSprite, v18);
+LABEL_96:
+    sub_B7076C(transformNameLabel, v9);
   }
-  v52 = this->fields.skillBasePosition.fields.z;
-  v53 = *((float *)&this[1].klass + 1);
-  v54 = 0LL;
-  v55 = *(float *)&this[1].klass + v50;
+  v46 = this->fields.skillBasePosition.fields.z;
+  v47 = *(float *)&this[1].klass;
+  v48 = 0LL;
+  v49 = *((float *)&this->fields.skillBasePosition + 3) + (float)(v44 + v20);
   while ( 1 )
   {
-    v56 = v51->max_length;
-    if ( (int)v54 >= v56 )
+    v50 = v45->max_length;
+    if ( (int)v48 >= v50 )
       break;
-    if ( (unsigned int)v54 >= v56 )
-      goto LABEL_90;
-    titleSprite = v51->m_Items[v54];
-    if ( !titleSprite )
-      goto LABEL_88;
-    if ( (int)v54 >= v24 )
+    if ( (unsigned int)v48 >= v50 )
+      goto LABEL_98;
+    transformNameLabel = v45->m_Items[v48];
+    if ( !transformNameLabel )
+      goto LABEL_96;
+    if ( (int)v48 >= v15 )
     {
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleSprite, 0, 0LL);
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transformNameLabel, 0, 0LL);
     }
     else
     {
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleSprite, 1, 0LL);
-      v57 = this->fields.skillIconList;
-      if ( !v57 )
-        goto LABEL_88;
-      if ( (unsigned int)v54 >= v57->max_length )
-        goto LABEL_90;
-      titleSprite = v57->m_Items[v54];
-      if ( !titleSprite )
-        goto LABEL_88;
-      titleSprite = (SkillIconComponent_o *)UnityEngine_GameObject__get_transform(
-                                              (UnityEngine_GameObject_o *)titleSprite,
-                                              0LL);
-      if ( !titleSprite )
-        goto LABEL_88;
-      v70.fields.x = v52;
-      v70.fields.y = v55;
-      v70.fields.z = v53;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)titleSprite, v70, 0LL);
-      v58 = this->fields.skillTitleRangeLabelList;
-      if ( !v58 )
-        goto LABEL_88;
-      if ( (unsigned int)v54 >= v58->max_length )
-        goto LABEL_90;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transformNameLabel, 1, 0LL);
+      v51 = this->fields.skillIconList;
+      if ( !v51 )
+        goto LABEL_96;
+      if ( (unsigned int)v48 >= v51->max_length )
+        goto LABEL_98;
+      transformNameLabel = v51->m_Items[v48];
+      if ( !transformNameLabel )
+        goto LABEL_96;
+      transformNameLabel = (SkillIconComponent_o *)UnityEngine_GameObject__get_transform(
+                                                     (UnityEngine_GameObject_o *)transformNameLabel,
+                                                     0LL);
+      if ( !transformNameLabel )
+        goto LABEL_96;
+      v64.fields.x = v46;
+      v64.fields.y = v49;
+      v64.fields.z = v47;
+      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transformNameLabel, v64, 0LL);
+      v52 = this->fields.skillTitleRangeLabelList;
+      if ( !v52 )
+        goto LABEL_96;
+      if ( (unsigned int)v48 >= v52->max_length )
+        goto LABEL_98;
       if ( !idList )
-        goto LABEL_88;
-      if ( (unsigned int)v54 >= idList->max_length )
-        goto LABEL_90;
-      titleSprite = (SkillIconComponent_o *)v58->m_Items[v54];
-      if ( !titleSprite )
-        goto LABEL_88;
-      SkillIconComponent__Set(titleSprite, idList->m_Items[v54 + 1], 0LL);
+        goto LABEL_96;
+      if ( (unsigned int)v48 >= idList->max_length )
+        goto LABEL_98;
+      transformNameLabel = (SkillIconComponent_o *)v52->m_Items[v48];
+      if ( !transformNameLabel )
+        goto LABEL_96;
+      SkillIconComponent__Set(transformNameLabel, idList->m_Items[v48 + 1], 0LL);
       skillExplanationLabelList = this->fields.skillExplanationLabelList;
       if ( !skillExplanationLabelList )
-        goto LABEL_88;
-      if ( (unsigned int)v54 >= skillExplanationLabelList->max_length )
-        goto LABEL_90;
+        goto LABEL_96;
+      if ( (unsigned int)v48 >= skillExplanationLabelList->max_length )
+        goto LABEL_98;
       if ( !titleList )
-        goto LABEL_88;
-      if ( (unsigned int)v54 >= titleList->max_length )
-        goto LABEL_90;
-      titleSprite = (SkillIconComponent_o *)skillExplanationLabelList->m_Items[v54];
-      if ( !titleSprite )
-        goto LABEL_88;
-      UIRangeLabel__Set((UIRangeLabel_o *)titleSprite, titleList->m_Items[v54], 0LL, 1, 0, 0LL);
+        goto LABEL_96;
+      if ( (unsigned int)v48 >= titleList->max_length )
+        goto LABEL_98;
+      transformNameLabel = (SkillIconComponent_o *)skillExplanationLabelList->m_Items[v48];
+      if ( !transformNameLabel )
+        goto LABEL_96;
+      UIRangeLabel__Set((UIRangeLabel_o *)transformNameLabel, titleList->m_Items[v48], 0LL, 1, 0, 0LL);
     }
-    v60 = *(_QWORD *)&this->fields.skillPitch;
-    if ( !v60 )
-      goto LABEL_88;
-    if ( (unsigned int)v54 >= *(_DWORD *)(v60 + 24) )
-      goto LABEL_90;
-    v61 = *(_QWORD *)(v60 + 8 * v54 + 32);
-    if ( v61 )
+    v54 = this->fields.transformNameSprite;
+    if ( !v54 )
+      goto LABEL_96;
+    if ( (unsigned int)v48 >= LODWORD(v54->fields.leftAnchor) )
+      goto LABEL_98;
+    v55 = *((_QWORD *)&v54->fields.rightAnchor + v48);
+    if ( v55 )
     {
-      titleSprite = (SkillIconComponent_o *)ServantStatusListViewItemDrawClassSkill_TypeInfo;
-      v62 = *(_DWORD *)(v61 + 164);
+      transformNameLabel = (SkillIconComponent_o *)ServantStatusListViewItemDrawClassSkill_TypeInfo;
+      v56 = *(_DWORD *)(v55 + 164);
       if ( (BYTE3(ServantStatusListViewItemDrawClassSkill_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !ServantStatusListViewItemDrawClassSkill_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(ServantStatusListViewItemDrawClassSkill_TypeInfo);
-        titleSprite = (SkillIconComponent_o *)ServantStatusListViewItemDrawClassSkill_TypeInfo;
+        transformNameLabel = (SkillIconComponent_o *)ServantStatusListViewItemDrawClassSkill_TypeInfo;
       }
-      ++v54;
-      v51 = this->fields.skillIconList;
-      LODWORD(v63) = LODWORD(titleSprite[2].fields.baseSprite->monitor) + v62;
-      if ( SLODWORD(v63) < SLODWORD(this->fields.baseSize.fields.y) )
-        v63 = this->fields.baseSize.fields.y;
-      v55 = v55 - (float)SLODWORD(v63);
-      if ( v51 )
+      ++v48;
+      v45 = this->fields.skillIconList;
+      LODWORD(v57) = LODWORD(transformNameLabel[2].fields.baseSprite->monitor) + v56;
+      if ( SLODWORD(v57) < SLODWORD(this->fields.baseSize.fields.y) )
+        v57 = this->fields.baseSize.fields.y;
+      v49 = v49 - (float)SLODWORD(v57);
+      if ( v45 )
         continue;
     }
-    goto LABEL_88;
+    goto LABEL_96;
   }
 }

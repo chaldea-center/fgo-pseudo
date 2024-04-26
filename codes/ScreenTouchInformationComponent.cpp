@@ -10,41 +10,33 @@ void __fastcall ScreenTouchInformationComponent__Awake(
         ScreenTouchInformationComponent_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
   UnityEngine_Component_o *overSp; // x0
-  UnityEngine_GameObject_o *v12; // x20
+  UnityEngine_GameObject_o *v4; // x20
   srcLineSprite_o *Component_srcLineSprite; // x0
   struct TweenScale_o **p_tScale; // x21
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
+  System_String_array **v7; // x2
+  System_String_array **v8; // x3
+  System_Boolean_array **v9; // x4
+  System_Int32_array **v10; // x5
+  System_Int32_array *v11; // x6
+  System_Int32_array *v12; // x7
   UnityEngine_Object_o *tScale; // x22
-  struct TweenAlpha_o *v22; // x0
+  struct TweenAlpha_o *v14; // x0
   struct TweenAlpha_o **p_tAlpha; // x20
-  System_String_array **v24; // x2
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
+  System_String_array **v16; // x2
+  System_String_array **v17; // x3
+  System_Boolean_array **v18; // x4
+  System_Int32_array **v19; // x5
+  System_Int32_array *v20; // x6
+  System_Int32_array *v21; // x7
   UnityEngine_Object_o *tAlpha; // x21
 
-  if ( (byte_42ED0F5 & 1) == 0 )
+  if ( (byte_4356514 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_TweenScale___, v5, v6, v7);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v8, v9, v10);
-    byte_42ED0F5 = 1;
+    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
+    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_TweenScale___);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4356514 = 1;
   }
   overSp = (UnityEngine_Component_o *)this->fields.overSp;
   if ( !overSp )
@@ -52,21 +44,21 @@ void __fastcall ScreenTouchInformationComponent__Awake(
   overSp = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(overSp, 0LL);
   if ( !overSp )
     goto LABEL_18;
-  v12 = (UnityEngine_GameObject_o *)overSp;
+  v4 = (UnityEngine_GameObject_o *)overSp;
   Component_srcLineSprite = UnityEngine_GameObject__GetComponent_srcLineSprite_(
                               (UnityEngine_GameObject_o *)overSp,
-                              (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_TweenScale___);
+                              (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___);
   this->fields.tScale = (struct TweenScale_o *)Component_srcLineSprite;
   p_tScale = &this->fields.tScale;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.tScale,
     (System_Int32_array **)Component_srcLineSprite,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19,
-    v20);
+    v7,
+    v8,
+    v9,
+    v10,
+    v11,
+    v12);
   tScale = (UnityEngine_Object_o *)this->fields.tScale;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -80,20 +72,20 @@ void __fastcall ScreenTouchInformationComponent__Awake(
       goto LABEL_18;
     (*p_tScale)->fields.duration = 2.0;
   }
-  v22 = (struct TweenAlpha_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                 v12,
-                                 (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
-  this->fields.tAlpha = v22;
+  v14 = (struct TweenAlpha_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
+                                 v4,
+                                 (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
+  this->fields.tAlpha = v14;
   p_tAlpha = &this->fields.tAlpha;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.tAlpha,
-    (System_Int32_array **)v22,
-    v24,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29);
+    (System_Int32_array **)v14,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20,
+    v21);
   tAlpha = (UnityEngine_Object_o *)this->fields.tAlpha;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -109,7 +101,7 @@ void __fastcall ScreenTouchInformationComponent__Awake(
       goto LABEL_17;
     }
 LABEL_18:
-    sub_B5D69C(overSp, method);
+    sub_B7076C(overSp, method);
   }
 LABEL_17:
   *(_WORD *)&this->fields.isOnClick = 0;
@@ -132,7 +124,7 @@ void __fastcall ScreenTouchInformationComponent__OnClickDecide(
 
   callbackFunc = this->fields.callbackFunc;
   if ( !callbackFunc )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   System_Action__Invoke(callbackFunc, 0LL);
 }
 
@@ -162,25 +154,24 @@ void __fastcall ScreenTouchInformationComponent__ResetPlayTweener(
         UITweener_o *tweener,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  _BOOL8 v5; // x0
-  __int64 v6; // x1
+  _BOOL8 v4; // x0
+  __int64 v5; // x1
 
-  if ( (byte_42ED0F7 & 1) == 0 )
+  if ( (byte_4356516 & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)tweener, (_DWORD)method, v3);
-    byte_42ED0F7 = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4356516 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  v5 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)tweener, 0LL, 0LL);
-  if ( !v5 )
+  v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)tweener, 0LL, 0LL);
+  if ( !v4 )
   {
     if ( !tweener )
-      sub_B5D69C(v5, v6);
+      sub_B7076C(v4, v5);
     UITweener__ResetToBeginning(tweener, 0LL);
     UITweener__PlayForward(tweener, 0LL);
   }
@@ -202,7 +193,7 @@ void __fastcall ScreenTouchInformationComponent__Setup(
   this->fields.callbackFunc = callback;
   p_callbackFunc = &this->fields.callbackFunc;
   *((_WORD *)p_callbackFunc + 4) = 256;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)p_callbackFunc,
     (System_Int32_array **)callback,
     (System_String_array **)method,
@@ -218,15 +209,13 @@ void __fastcall ScreenTouchInformationComponent__Update(
         ScreenTouchInformationComponent_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  __int64 v5; // x1
+  __int64 v3; // x1
   System_Action_o *callbackFunc; // x0
 
-  if ( (byte_42ED0F6 & 1) == 0 )
+  if ( (byte_4356515 & 1) == 0 )
   {
-    sub_B5D5C4(&CTouch_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42ED0F6 = 1;
+    sub_B70694(&CTouch_TypeInfo);
+    byte_4356515 = 1;
   }
   if ( this->fields.isExpand )
   {
@@ -237,7 +226,7 @@ void __fastcall ScreenTouchInformationComponent__Update(
       callbackFunc = this->fields.callbackFunc;
       this->fields.isOnClick = 1;
       if ( !callbackFunc )
-        sub_B5D69C(0LL, v5);
+        sub_B7076C(0LL, v3);
       System_Action__Invoke(callbackFunc, 0LL);
     }
   }

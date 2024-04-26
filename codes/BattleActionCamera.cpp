@@ -1,264 +1,215 @@
 void __fastcall BattleActionCamera___ctor(BattleActionCamera_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  int v14; // w1
-  int v15; // w2
-  __int64 v16; // x3
-  int v17; // w1
-  int v18; // w2
-  __int64 v19; // x3
-  int v20; // w1
-  int v21; // w2
-  __int64 v22; // x3
-  int v23; // w1
-  int v24; // w2
-  __int64 v25; // x3
-  System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *v26; // x20
-  System_String_array **v27; // x2
-  System_String_array **v28; // x3
-  System_Boolean_array **v29; // x4
-  System_Int32_array **v30; // x5
-  System_Int32_array *v31; // x6
-  System_Int32_array *v32; // x7
-  System_Collections_Generic_Dictionary_int__int__o *v33; // x20
-  System_String_array **v34; // x2
-  System_String_array **v35; // x3
-  System_Boolean_array **v36; // x4
-  System_Int32_array **v37; // x5
-  System_Int32_array *v38; // x6
-  System_Int32_array *v39; // x7
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v40; // x20
-  System_String_array **v41; // x2
-  System_String_array **v42; // x3
-  System_Boolean_array **v43; // x4
-  System_Int32_array **v44; // x5
-  System_Int32_array *v45; // x6
-  System_Int32_array *v46; // x7
-  System_Collections_Generic_List_int__o *v47; // x20
-  System_String_array **v48; // x2
-  System_String_array **v49; // x3
-  System_Boolean_array **v50; // x4
-  System_Int32_array **v51; // x5
-  System_Int32_array *v52; // x6
-  System_Int32_array *v53; // x7
+  System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *v3; // x20
+  System_String_array **v4; // x2
+  System_String_array **v5; // x3
+  System_Boolean_array **v6; // x4
+  System_Int32_array **v7; // x5
+  System_Int32_array *v8; // x6
+  System_Int32_array *v9; // x7
+  System_Collections_Generic_Dictionary_int__int__o *v10; // x20
+  System_String_array **v11; // x2
+  System_String_array **v12; // x3
+  System_Boolean_array **v13; // x4
+  System_Int32_array **v14; // x5
+  System_Int32_array *v15; // x6
+  System_Int32_array *v16; // x7
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v17; // x20
+  System_String_array **v18; // x2
+  System_String_array **v19; // x3
+  System_Boolean_array **v20; // x4
+  System_Int32_array **v21; // x5
+  System_Int32_array *v22; // x6
+  System_Int32_array *v23; // x7
+  System_Collections_Generic_List_int__o *v24; // x20
+  System_String_array **v25; // x2
+  System_String_array **v26; // x3
+  System_Boolean_array **v27; // x4
+  System_Int32_array **v28; // x5
+  System_Int32_array *v29; // x6
+  System_Int32_array *v30; // x7
 
-  if ( (byte_42E7F7E & 1) == 0 )
+  if ( (byte_4351045 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__int___ctor__, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM___ctor__, v5, v6, v7);
-    sub_B5D5C4(&System_Collections_Generic_Dictionary_int__int__TypeInfo, v8, v9, v10);
-    sub_B5D5C4(&System_Collections_Generic_Dictionary_int__PlayMakerFSM__TypeInfo, v11, v12, v13);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_PlayMakerFSM___ctor___68743688, v14, v15, v16);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_int___ctor___68740224, v17, v18, v19);
-    sub_B5D5C4(&System_Collections_Generic_List_int__TypeInfo, v20, v21, v22);
-    sub_B5D5C4(&System_Collections_Generic_List_PlayMakerFSM__TypeInfo, v23, v24, v25);
-    byte_42E7F7E = 1;
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM___ctor__);
+    sub_B70694(&System_Collections_Generic_Dictionary_int__int__TypeInfo);
+    sub_B70694(&System_Collections_Generic_Dictionary_int__PlayMakerFSM__TypeInfo);
+    sub_B70694(&Method_System_Collections_Generic_List_PlayMakerFSM___ctor___69168440);
+    sub_B70694(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_B70694(&System_Collections_Generic_List_int__TypeInfo);
+    sub_B70694(&System_Collections_Generic_List_PlayMakerFSM__TypeInfo);
+    byte_4351045 = 1;
   }
-  v26 = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)sub_B5D694(System_Collections_Generic_Dictionary_int__PlayMakerFSM__TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)sub_B70764(System_Collections_Generic_Dictionary_int__PlayMakerFSM__TypeInfo);
   System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare____ctor(
-    v26,
-    (const MethodInfo_2F31510 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM___ctor__);
-  this->fields.cameraFsmDictionary = (struct System_Collections_Generic_Dictionary_int__PlayMakerFSM__o *)v26;
-  sub_B5D560(
+    v3,
+    (const MethodInfo_2FC59B4 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM___ctor__);
+  this->fields.cameraFsmDictionary = (struct System_Collections_Generic_Dictionary_int__PlayMakerFSM__o *)v3;
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.cameraFsmDictionary,
-    (System_Int32_array **)v26,
+    (System_Int32_array **)v3,
+    v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9);
+  v10 = (System_Collections_Generic_Dictionary_int__int__o *)sub_B70764(System_Collections_Generic_Dictionary_int__int__TypeInfo);
+  System_Collections_Generic_Dictionary_int__int____ctor(
+    v10,
+    (const MethodInfo_2FBA5BC *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+  this->fields.cameraTargetDictionary = v10;
+  sub_B70630(
+    (BattleServantConfConponent_o *)&this->fields.cameraTargetDictionary,
+    (System_Int32_array **)v10,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16);
+  v17 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_PlayMakerFSM__TypeInfo);
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
+    v17,
+    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_PlayMakerFSM___ctor___69168440);
+  this->fields.fieldCameraFsmList = (struct System_Collections_Generic_List_PlayMakerFSM__o *)v17;
+  sub_B70630(
+    (BattleServantConfConponent_o *)&this->fields.fieldCameraFsmList,
+    (System_Int32_array **)v17,
+    v18,
+    v19,
+    v20,
+    v21,
+    v22,
+    v23);
+  v24 = (System_Collections_Generic_List_int__o *)sub_B70764(System_Collections_Generic_List_int__TypeInfo);
+  System_Collections_Generic_List_int____ctor(
+    v24,
+    (const MethodInfo_30B547C *)Method_System_Collections_Generic_List_int___ctor__);
+  this->fields._FieldCameraIdList_k__BackingField = v24;
+  sub_B70630(
+    (BattleServantConfConponent_o *)&this->fields._FieldCameraIdList_k__BackingField,
+    (System_Int32_array **)v24,
+    v25,
+    v26,
     v27,
     v28,
     v29,
-    v30,
-    v31,
-    v32);
-  v33 = (System_Collections_Generic_Dictionary_int__int__o *)sub_B5D694(System_Collections_Generic_Dictionary_int__int__TypeInfo);
-  System_Collections_Generic_Dictionary_int__int____ctor(
-    v33,
-    (const MethodInfo_2F0A2B4 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
-  this->fields.cameraTargetDictionary = v33;
-  sub_B5D560(
-    (BattleServantConfConponent_o *)&this->fields.cameraTargetDictionary,
-    (System_Int32_array **)v33,
-    v34,
-    v35,
-    v36,
-    v37,
-    v38,
-    v39);
-  v40 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B5D694(System_Collections_Generic_List_PlayMakerFSM__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v40,
-    (const MethodInfo_30562FC *)Method_System_Collections_Generic_List_PlayMakerFSM___ctor___68743688);
-  this->fields.fieldCameraFsmList = (struct System_Collections_Generic_List_PlayMakerFSM__o *)v40;
-  sub_B5D560(
-    (BattleServantConfConponent_o *)&this->fields.fieldCameraFsmList,
-    (System_Int32_array **)v40,
-    v41,
-    v42,
-    v43,
-    v44,
-    v45,
-    v46);
-  v47 = (System_Collections_Generic_List_int__o *)sub_B5D694(System_Collections_Generic_List_int__TypeInfo);
-  System_Collections_Generic_List_int____ctor(
-    v47,
-    (const MethodInfo_30836B0 *)Method_System_Collections_Generic_List_int___ctor___68740224);
-  this->fields._FieldCameraIdList_k__BackingField = v47;
-  sub_B5D560(
-    (BattleServantConfConponent_o *)&this->fields._FieldCameraIdList_k__BackingField,
-    (System_Int32_array **)v47,
-    v48,
-    v49,
-    v50,
-    v51,
-    v52,
-    v53);
+    v30);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
 
 void __fastcall BattleActionCamera__InitFieldCameraList(BattleActionCamera_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  BattleActionCamera_o *v4; // x19
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  int v14; // w1
-  int v15; // w2
-  __int64 v16; // x3
-  int v17; // w1
-  int v18; // w2
-  __int64 v19; // x3
-  int v20; // w1
-  int v21; // w2
-  __int64 v22; // x3
-  int v23; // w1
-  int v24; // w2
-  __int64 v25; // x3
-  int v26; // w1
-  int v27; // w2
-  __int64 v28; // x3
+  BattleActionCamera_o *v2; // x19
   struct System_Collections_Generic_List_PlayMakerFSM__o *fieldCameraFsmList; // x8
   System_Collections_Generic_IEnumerable_T__o *NotNullFieldCameraFsmEnumerable; // x21
-  BattleActionCamera___c_c *v31; // x8
+  BattleActionCamera___c_c *v5; // x8
   struct BattleActionCamera___c_StaticFields *static_fields; // x9
   System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *_9__26_0; // x22
-  Il2CppObject *v34; // x23
-  struct BattleActionCamera___c_StaticFields *v35; // x0
-  System_String_array **v36; // x2
-  System_String_array **v37; // x3
-  System_Boolean_array **v38; // x4
-  System_Int32_array **v39; // x5
-  System_Int32_array *v40; // x6
-  System_Int32_array *v41; // x7
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v42; // x21
-  System_String_array **v43; // x2
-  System_String_array **v44; // x3
-  System_Boolean_array **v45; // x4
-  System_Int32_array **v46; // x5
-  System_Int32_array *v47; // x6
-  System_Int32_array *v48; // x7
+  Il2CppObject *v8; // x23
+  struct BattleActionCamera___c_StaticFields *v9; // x0
+  System_String_array **v10; // x2
+  System_String_array **v11; // x3
+  System_Boolean_array **v12; // x4
+  System_Int32_array **v13; // x5
+  System_Int32_array *v14; // x6
+  System_Int32_array *v15; // x7
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v16; // x21
+  System_String_array **v17; // x2
+  System_String_array **v18; // x3
+  System_Boolean_array **v19; // x4
+  System_Int32_array **v20; // x5
+  System_Int32_array *v21; // x6
+  System_Int32_array *v22; // x7
 
-  v4 = this;
-  if ( (byte_42E7F6A & 1) == 0 )
+  v2 = this;
+  if ( (byte_4351031 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Action_PlayMakerFSM___ctor__, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&System_Action_PlayMakerFSM__TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&Method_BasicHelper_ForEach_PlayMakerFSM___, v8, v9, v10);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_int__Clear__, v11, v12, v13);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_PlayMakerFSM___ctor___68743688, v14, v15, v16);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_PlayMakerFSM__get_Count__, v17, v18, v19);
-    sub_B5D5C4(&System_Collections_Generic_List_PlayMakerFSM__TypeInfo, v20, v21, v22);
-    sub_B5D5C4(&Method_BattleActionCamera___c__InitFieldCameraList_b__26_0__, v23, v24, v25);
-    this = (BattleActionCamera_o *)sub_B5D5C4(&BattleActionCamera___c_TypeInfo, v26, v27, v28);
-    byte_42E7F6A = 1;
+    sub_B70694(&Method_System_Action_PlayMakerFSM___ctor__);
+    sub_B70694(&System_Action_PlayMakerFSM__TypeInfo);
+    sub_B70694(&Method_BasicHelper_ForEach_PlayMakerFSM___);
+    sub_B70694(&Method_System_Collections_Generic_List_int__Clear__);
+    sub_B70694(&Method_System_Collections_Generic_List_PlayMakerFSM___ctor___69168440);
+    sub_B70694(&Method_System_Collections_Generic_List_PlayMakerFSM__get_Count__);
+    sub_B70694(&System_Collections_Generic_List_PlayMakerFSM__TypeInfo);
+    sub_B70694(&Method_BattleActionCamera___c__InitFieldCameraList_b__26_0__);
+    this = (BattleActionCamera_o *)sub_B70694(&BattleActionCamera___c_TypeInfo);
+    byte_4351031 = 1;
   }
-  fieldCameraFsmList = v4->fields.fieldCameraFsmList;
+  fieldCameraFsmList = v2->fields.fieldCameraFsmList;
   if ( !fieldCameraFsmList )
     goto LABEL_16;
   if ( fieldCameraFsmList->fields._size >= 1 )
   {
     NotNullFieldCameraFsmEnumerable = (System_Collections_Generic_IEnumerable_T__o *)BattleActionCamera__get_NotNullFieldCameraFsmEnumerable(
-                                                                                       v4,
+                                                                                       v2,
                                                                                        method);
-    v31 = BattleActionCamera___c_TypeInfo;
+    v5 = BattleActionCamera___c_TypeInfo;
     if ( (BYTE3(BattleActionCamera___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !BattleActionCamera___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BattleActionCamera___c_TypeInfo);
-      v31 = BattleActionCamera___c_TypeInfo;
+      v5 = BattleActionCamera___c_TypeInfo;
     }
-    static_fields = v31->static_fields;
+    static_fields = v5->static_fields;
     _9__26_0 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)static_fields->__9__26_0;
     if ( !_9__26_0 )
     {
-      if ( (BYTE3(v31->vtable._0_Equals.methodPtr) & 4) != 0 && !v31->_2.cctor_finished )
+      if ( (BYTE3(v5->vtable._0_Equals.methodPtr) & 4) != 0 && !v5->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v31);
+        j_il2cpp_runtime_class_init_0(v5);
         static_fields = BattleActionCamera___c_TypeInfo->static_fields;
       }
-      v34 = (Il2CppObject *)static_fields->__9;
-      _9__26_0 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B5D694(System_Action_PlayMakerFSM__TypeInfo);
+      v8 = (Il2CppObject *)static_fields->__9;
+      _9__26_0 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B70764(System_Action_PlayMakerFSM__TypeInfo);
       System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData____ctor(
         _9__26_0,
-        v34,
+        v8,
         Method_BattleActionCamera___c__InitFieldCameraList_b__26_0__,
-        (const MethodInfo_258B320 *)Method_System_Action_PlayMakerFSM___ctor__);
-      v35 = BattleActionCamera___c_TypeInfo->static_fields;
-      v35->__9__26_0 = (struct System_Action_PlayMakerFSM__o *)_9__26_0;
-      sub_B5D560(
-        (BattleServantConfConponent_o *)&v35->__9__26_0,
+        (const MethodInfo_264C148 *)Method_System_Action_PlayMakerFSM___ctor__);
+      v9 = BattleActionCamera___c_TypeInfo->static_fields;
+      v9->__9__26_0 = (struct System_Action_PlayMakerFSM__o *)_9__26_0;
+      sub_B70630(
+        (BattleServantConfConponent_o *)&v9->__9__26_0,
         (System_Int32_array **)_9__26_0,
-        v36,
-        v37,
-        v38,
-        v39,
-        v40,
-        v41);
+        v10,
+        v11,
+        v12,
+        v13,
+        v14,
+        v15);
     }
     BasicHelper__ForEach_DrawLotsDisplayMessage_DisplayedInGroup_SaveData_(
       NotNullFieldCameraFsmEnumerable,
       (System_Action_T__o *)_9__26_0,
-      (const MethodInfo_1AD82D8 *)Method_BasicHelper_ForEach_PlayMakerFSM___);
-    v42 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B5D694(System_Collections_Generic_List_PlayMakerFSM__TypeInfo);
+      (const MethodInfo_1BDE02C *)Method_BasicHelper_ForEach_PlayMakerFSM___);
+    v16 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_PlayMakerFSM__TypeInfo);
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-      v42,
-      (const MethodInfo_30562FC *)Method_System_Collections_Generic_List_PlayMakerFSM___ctor___68743688);
-    v4->fields.fieldCameraFsmList = (struct System_Collections_Generic_List_PlayMakerFSM__o *)v42;
-    sub_B5D560(
-      (BattleServantConfConponent_o *)&v4->fields.fieldCameraFsmList,
-      (System_Int32_array **)v42,
-      v43,
-      v44,
-      v45,
-      v46,
-      v47,
-      v48);
-    this = (BattleActionCamera_o *)v4->fields._FieldCameraIdList_k__BackingField;
+      v16,
+      (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_PlayMakerFSM___ctor___69168440);
+    v2->fields.fieldCameraFsmList = (struct System_Collections_Generic_List_PlayMakerFSM__o *)v16;
+    sub_B70630(
+      (BattleServantConfConponent_o *)&v2->fields.fieldCameraFsmList,
+      (System_Int32_array **)v16,
+      v17,
+      v18,
+      v19,
+      v20,
+      v21,
+      v22);
+    this = (BattleActionCamera_o *)v2->fields._FieldCameraIdList_k__BackingField;
     if ( this )
     {
       System_Collections_Generic_List_int___Clear(
         (System_Collections_Generic_List_int__o *)this,
-        (const MethodInfo_3084818 *)Method_System_Collections_Generic_List_int__Clear__);
+        (const MethodInfo_30B65E4 *)Method_System_Collections_Generic_List_int__Clear__);
       return;
     }
 LABEL_16:
-    sub_B5D69C(this, method);
+    sub_B7076C(this, method);
   }
 }
 
@@ -268,235 +219,192 @@ void __fastcall BattleActionCamera__Initialize(
         BattlePerformance_o *inPerf,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  int v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  int v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
-  int v15; // w1
-  int v16; // w2
-  __int64 v17; // x3
-  int v18; // w1
-  int v19; // w2
-  __int64 v20; // x3
-  int v21; // w1
-  int v22; // w2
-  __int64 v23; // x3
-  int v24; // w1
-  int v25; // w2
-  __int64 v26; // x3
-  int v27; // w1
-  int v28; // w2
-  __int64 v29; // x3
-  int v30; // w1
-  int v31; // w2
-  __int64 v32; // x3
-  int v33; // w1
-  int v34; // w2
-  __int64 v35; // x3
-  int v36; // w1
-  int v37; // w2
-  __int64 v38; // x3
-  int v39; // w1
-  int v40; // w2
-  __int64 v41; // x3
-  int v42; // w1
-  int v43; // w2
-  __int64 v44; // x3
-  int v45; // w1
-  int v46; // w2
-  __int64 v47; // x3
   System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__o *cameraFsmDictionary; // x0
   struct System_Collections_Generic_Dictionary_int__PlayMakerFSM__o **p_cameraFsmDictionary; // x21
-  __int64 v50; // x1
+  __int64 v7; // x1
   UnityEngine_Object_o *gameObject; // x22
-  System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *v52; // x22
-  System_String_array **v53; // x2
-  System_String_array **v54; // x3
-  System_Boolean_array **v55; // x4
-  System_Int32_array **v56; // x5
-  System_Int32_array *v57; // x6
-  System_Int32_array *v58; // x7
-  System_Collections_Generic_Dictionary_int__int__o *v59; // x21
-  System_String_array **v60; // x2
-  System_String_array **v61; // x3
-  System_Boolean_array **v62; // x4
-  System_Int32_array **v63; // x5
-  System_Int32_array *v64; // x6
-  System_Int32_array *v65; // x7
-  System_String_array **v66; // x2
-  System_String_array **v67; // x3
-  System_Boolean_array **v68; // x4
-  System_Int32_array **v69; // x5
-  System_Int32_array *v70; // x6
-  System_Int32_array *v71; // x7
+  System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *v9; // x22
+  System_String_array **v10; // x2
+  System_String_array **v11; // x3
+  System_Boolean_array **v12; // x4
+  System_Int32_array **v13; // x5
+  System_Int32_array *v14; // x6
+  System_Int32_array *v15; // x7
+  System_Collections_Generic_Dictionary_int__int__o *v16; // x21
+  System_String_array **v17; // x2
+  System_String_array **v18; // x3
+  System_Boolean_array **v19; // x4
+  System_Int32_array **v20; // x5
+  System_Int32_array *v21; // x6
+  System_Int32_array *v22; // x7
+  System_String_array **v23; // x2
+  System_String_array **v24; // x3
+  System_Boolean_array **v25; // x4
+  System_Int32_array **v26; // x5
+  System_Int32_array *v27; // x6
+  System_Int32_array *v28; // x7
   struct PlayMakerFSM_o *Component_WebViewObject; // x0
-  System_String_array **v73; // x2
-  System_String_array **v74; // x3
-  System_Boolean_array **v75; // x4
-  System_Int32_array **v76; // x5
-  System_Int32_array *v77; // x6
-  System_Int32_array *v78; // x7
-  System_String_array **v79; // x2
-  System_String_array **v80; // x3
-  System_Boolean_array **v81; // x4
-  System_Int32_array **v82; // x5
-  System_Int32_array *v83; // x6
-  System_Int32_array *v84; // x7
+  System_String_array **v30; // x2
+  System_String_array **v31; // x3
+  System_Boolean_array **v32; // x4
+  System_Int32_array **v33; // x5
+  System_Int32_array *v34; // x6
+  System_Int32_array *v35; // x7
+  System_String_array **v36; // x2
+  System_String_array **v37; // x3
+  System_Boolean_array **v38; // x4
+  System_Int32_array **v39; // x5
+  System_Int32_array *v40; // x6
+  System_Int32_array *v41; // x7
   struct System_Single_array *actorCameraDefaultClipRange_k__BackingField; // x21
-  float v86; // s0
+  float v43; // s0
   float farClipPlane; // s0
-  System_String_array **v88; // x2
-  System_String_array **v89; // x3
-  System_Boolean_array **v90; // x4
-  System_Int32_array **v91; // x5
-  System_Int32_array *v92; // x6
-  System_Int32_array *v93; // x7
+  System_String_array **v45; // x2
+  System_String_array **v46; // x3
+  System_Boolean_array **v47; // x4
+  System_Int32_array **v48; // x5
+  System_Int32_array *v49; // x6
+  System_Int32_array *v50; // x7
   struct System_Single_array *middleCameraDefaultClipRange_k__BackingField; // x21
-  float v95; // s0
-  float v96; // s0
-  const MethodInfo *v97; // x1
-  __int64 v98; // x0
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v99; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v100; // [xsp+30h] [xbp-60h] BYREF
+  float v52; // s0
+  float v53; // s0
+  const MethodInfo *v54; // x1
+  __int64 v55; // x0
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v56; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v57; // [xsp+30h] [xbp-60h] BYREF
 
-  if ( (byte_42E7F69 & 1) == 0 )
+  if ( (byte_4351030 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___, (_DWORD)inPerf, (_DWORD)method, v3);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__Add__, v6, v7, v8);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__GetEnumerator__, v9, v10, v11);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__int___ctor__, v12, v13, v14);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM___ctor__, v15, v16, v17);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__get_Count__, v18, v19, v20);
-    sub_B5D5C4(&System_Collections_Generic_Dictionary_int__int__TypeInfo, v21, v22, v23);
-    sub_B5D5C4(&System_Collections_Generic_Dictionary_int__PlayMakerFSM__TypeInfo, v24, v25, v26);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__Dispose__, v27, v28, v29);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__MoveNext__, v30, v31, v32);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__get_Current__, v33, v34, v35);
-    sub_B5D5C4(&Method_System_Collections_Generic_KeyValuePair_int__PlayMakerFSM__get_Key__, v36, v37, v38);
-    sub_B5D5C4(&Method_System_Collections_Generic_KeyValuePair_int__PlayMakerFSM__get_Value__, v39, v40, v41);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v42, v43, v44);
-    sub_B5D5C4(&float___TypeInfo, v45, v46, v47);
-    byte_42E7F69 = 1;
+    sub_B70694(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__Add__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__GetEnumerator__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM___ctor__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__get_Count__);
+    sub_B70694(&System_Collections_Generic_Dictionary_int__int__TypeInfo);
+    sub_B70694(&System_Collections_Generic_Dictionary_int__PlayMakerFSM__TypeInfo);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__Dispose__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__MoveNext__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__get_Current__);
+    sub_B70694(&Method_System_Collections_Generic_KeyValuePair_int__PlayMakerFSM__get_Key__);
+    sub_B70694(&Method_System_Collections_Generic_KeyValuePair_int__PlayMakerFSM__get_Value__);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    sub_B70694(&float___TypeInfo);
+    byte_4351030 = 1;
   }
-  memset(&v100, 0, sizeof(v100));
+  memset(&v57, 0, sizeof(v57));
   p_cameraFsmDictionary = &this->fields.cameraFsmDictionary;
   cameraFsmDictionary = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__o *)this->fields.cameraFsmDictionary;
   if ( !cameraFsmDictionary )
     goto LABEL_32;
   if ( System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___get_Count(
          (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)cameraFsmDictionary,
-         (const MethodInfo_2F31CC0 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__get_Count__) >= 1 )
+         (const MethodInfo_2FC6164 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__get_Count__) >= 1 )
   {
     cameraFsmDictionary = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__o *)*p_cameraFsmDictionary;
     if ( !*p_cameraFsmDictionary )
       goto LABEL_32;
     System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval___GetEnumerator(
-      &v99,
+      &v56,
       cameraFsmDictionary,
-      (const MethodInfo_2F326A8 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__GetEnumerator__);
-    v100 = v99;
+      (const MethodInfo_2FC6B4C *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__GetEnumerator__);
+    v57 = v56;
     while ( System_Collections_Generic_Dictionary_Enumerator_int__WarBoardEvalValueSquare_CalcEval___MoveNext(
-              &v100,
-              (const MethodInfo_28A1C74 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__MoveNext__) )
+              &v57,
+              (const MethodInfo_2832CC4 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__MoveNext__) )
     {
-      if ( LODWORD(v100.fields.current.fields.key) )
+      if ( LODWORD(v57.fields.current.fields.key) )
       {
-        if ( !v100.fields.current.fields.value )
-          sub_B5D69C(0LL, v50);
+        if ( !v57.fields.current.fields.value )
+          sub_B7076C(0LL, v7);
         gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
-                                               (UnityEngine_Component_o *)v100.fields.current.fields.value,
+                                               (UnityEngine_Component_o *)v57.fields.current.fields.value,
                                                0LL);
         if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         }
-        UnityEngine_Object__Destroy_35620236(gameObject, 0LL);
+        UnityEngine_Object__Destroy_36067208(gameObject, 0LL);
       }
     }
     System_Collections_Generic_Dictionary_Enumerator_int__WarBoardEvalValueSquare_CalcEval___Dispose(
-      &v100,
-      (const MethodInfo_28A1DE0 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__Dispose__);
-    v52 = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)sub_B5D694(System_Collections_Generic_Dictionary_int__PlayMakerFSM__TypeInfo);
+      &v57,
+      (const MethodInfo_2832E30 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__Dispose__);
+    v9 = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)sub_B70764(System_Collections_Generic_Dictionary_int__PlayMakerFSM__TypeInfo);
     System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare____ctor(
-      v52,
-      (const MethodInfo_2F31510 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM___ctor__);
-    *p_cameraFsmDictionary = (struct System_Collections_Generic_Dictionary_int__PlayMakerFSM__o *)v52;
-    sub_B5D560(
+      v9,
+      (const MethodInfo_2FC59B4 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM___ctor__);
+    *p_cameraFsmDictionary = (struct System_Collections_Generic_Dictionary_int__PlayMakerFSM__o *)v9;
+    sub_B70630(
       (BattleServantConfConponent_o *)&this->fields.cameraFsmDictionary,
-      (System_Int32_array **)v52,
-      v53,
-      v54,
-      v55,
-      v56,
-      v57,
-      v58);
+      (System_Int32_array **)v9,
+      v10,
+      v11,
+      v12,
+      v13,
+      v14,
+      v15);
   }
-  v59 = (System_Collections_Generic_Dictionary_int__int__o *)sub_B5D694(System_Collections_Generic_Dictionary_int__int__TypeInfo);
+  v16 = (System_Collections_Generic_Dictionary_int__int__o *)sub_B70764(System_Collections_Generic_Dictionary_int__int__TypeInfo);
   System_Collections_Generic_Dictionary_int__int____ctor(
-    v59,
-    (const MethodInfo_2F0A2B4 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
-  this->fields.cameraTargetDictionary = v59;
-  sub_B5D560(
+    v16,
+    (const MethodInfo_2FBA5BC *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+  this->fields.cameraTargetDictionary = v16;
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.cameraTargetDictionary,
-    (System_Int32_array **)v59,
-    v60,
-    v61,
-    v62,
-    v63,
-    v64,
-    v65);
+    (System_Int32_array **)v16,
+    v17,
+    v18,
+    v19,
+    v20,
+    v21,
+    v22);
   this->fields.perf = inPerf;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.perf,
     (System_Int32_array **)inPerf,
-    v66,
-    v67,
-    v68,
-    v69,
-    v70,
-    v71);
+    v23,
+    v24,
+    v25,
+    v26,
+    v27,
+    v28);
   Component_WebViewObject = (struct PlayMakerFSM_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                        (UnityEngine_Component_o *)this,
-                                                       (const MethodInfo_1ADE2A0 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+                                                       (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
   this->fields.mainFsm = Component_WebViewObject;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.mainFsm,
     (System_Int32_array **)Component_WebViewObject,
-    v73,
-    v74,
-    v75,
-    v76,
-    v77,
-    v78);
+    v30,
+    v31,
+    v32,
+    v33,
+    v34,
+    v35);
   cameraFsmDictionary = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__o *)this->fields.cameraFsmDictionary;
   if ( !cameraFsmDictionary )
 LABEL_32:
-    sub_B5D69C(cameraFsmDictionary, inPerf);
+    sub_B7076C(cameraFsmDictionary, inPerf);
   System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___Add(
     (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)cameraFsmDictionary,
     0,
     (WarBoardEvalValueSquare_EvalValueSquare_o *)this->fields.mainFsm,
-    (const MethodInfo_2F320C4 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__Add__);
+    (const MethodInfo_2FC6568 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__Add__);
   actorCameraDefaultClipRange_k__BackingField = this->fields._actorCameraDefaultClipRange_k__BackingField;
   if ( !actorCameraDefaultClipRange_k__BackingField )
   {
-    cameraFsmDictionary = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__o *)sub_B5D5DC(float___TypeInfo, 2LL);
+    cameraFsmDictionary = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__o *)sub_B706AC(float___TypeInfo, 2LL);
     if ( !this->fields.actorcamera )
       goto LABEL_32;
     actorCameraDefaultClipRange_k__BackingField = (struct System_Single_array *)cameraFsmDictionary;
-    v86 = UnityEngine_Camera__get_nearClipPlane(this->fields.actorcamera, 0LL);
+    v43 = UnityEngine_Camera__get_nearClipPlane(this->fields.actorcamera, 0LL);
     if ( !actorCameraDefaultClipRange_k__BackingField )
       goto LABEL_32;
     if ( !actorCameraDefaultClipRange_k__BackingField->max_length )
       goto LABEL_33;
-    actorCameraDefaultClipRange_k__BackingField->m_Items[1] = v86;
+    actorCameraDefaultClipRange_k__BackingField->m_Items[1] = v43;
     cameraFsmDictionary = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__o *)this->fields.actorcamera;
     if ( !cameraFsmDictionary )
       goto LABEL_32;
@@ -506,40 +414,40 @@ LABEL_32:
     actorCameraDefaultClipRange_k__BackingField->m_Items[2] = farClipPlane;
   }
   this->fields._actorCameraDefaultClipRange_k__BackingField = actorCameraDefaultClipRange_k__BackingField;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields._actorCameraDefaultClipRange_k__BackingField,
     (System_Int32_array **)actorCameraDefaultClipRange_k__BackingField,
-    v79,
-    v80,
-    v81,
-    v82,
-    v83,
-    v84);
+    v36,
+    v37,
+    v38,
+    v39,
+    v40,
+    v41);
   middleCameraDefaultClipRange_k__BackingField = this->fields._middleCameraDefaultClipRange_k__BackingField;
   if ( !middleCameraDefaultClipRange_k__BackingField )
   {
-    cameraFsmDictionary = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__o *)sub_B5D5DC(float___TypeInfo, 2LL);
+    cameraFsmDictionary = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__o *)sub_B706AC(float___TypeInfo, 2LL);
     if ( this->fields.middleCamera )
     {
       middleCameraDefaultClipRange_k__BackingField = (struct System_Single_array *)cameraFsmDictionary;
-      v95 = UnityEngine_Camera__get_nearClipPlane(this->fields.middleCamera, 0LL);
+      v52 = UnityEngine_Camera__get_nearClipPlane(this->fields.middleCamera, 0LL);
       if ( middleCameraDefaultClipRange_k__BackingField )
       {
         if ( !middleCameraDefaultClipRange_k__BackingField->max_length )
           goto LABEL_33;
-        middleCameraDefaultClipRange_k__BackingField->m_Items[1] = v95;
+        middleCameraDefaultClipRange_k__BackingField->m_Items[1] = v52;
         cameraFsmDictionary = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__o *)this->fields.middleCamera;
         if ( cameraFsmDictionary )
         {
-          v96 = UnityEngine_Camera__get_farClipPlane((UnityEngine_Camera_o *)cameraFsmDictionary, 0LL);
+          v53 = UnityEngine_Camera__get_farClipPlane((UnityEngine_Camera_o *)cameraFsmDictionary, 0LL);
           if ( middleCameraDefaultClipRange_k__BackingField->max_length > 1 )
           {
-            middleCameraDefaultClipRange_k__BackingField->m_Items[2] = v96;
+            middleCameraDefaultClipRange_k__BackingField->m_Items[2] = v53;
             goto LABEL_30;
           }
 LABEL_33:
-          v98 = sub_B5D6C8(cameraFsmDictionary);
-          sub_B5D668(v98, 0LL);
+          v55 = sub_B70798(cameraFsmDictionary);
+          sub_B70738(v55, 0LL);
         }
       }
     }
@@ -547,16 +455,16 @@ LABEL_33:
   }
 LABEL_30:
   this->fields._middleCameraDefaultClipRange_k__BackingField = middleCameraDefaultClipRange_k__BackingField;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields._middleCameraDefaultClipRange_k__BackingField,
     (System_Int32_array **)middleCameraDefaultClipRange_k__BackingField,
-    v88,
-    v89,
-    v90,
-    v91,
-    v92,
-    v93);
-  BattleActionCamera__InitFieldCameraList(this, v97);
+    v45,
+    v46,
+    v47,
+    v48,
+    v49,
+    v50);
+  BattleActionCamera__InitFieldCameraList(this, v54);
 }
 
 
@@ -565,48 +473,26 @@ void __fastcall BattleActionCamera__RegisterFieldCameraFsm(
         int32_t cameraId,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  int v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  int v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
-  int v15; // w1
-  int v16; // w2
-  __int64 v17; // x3
-  int v18; // w1
-  int v19; // w2
-  __int64 v20; // x3
-  int v21; // w1
-  int v22; // w2
-  __int64 v23; // x3
-  int v24; // w1
-  int v25; // w2
-  __int64 v26; // x3
-  System_String_o *v27; // x21
+  System_String_o *v5; // x21
   BaseMonoBehaviour_o *perf; // x21
-  Il2CppObject *v29; // x22
+  Il2CppObject *v7; // x22
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v31; // x1
-  const MethodInfo *v32; // x2
+  __int64 v9; // x1
+  const MethodInfo *v10; // x2
   PlayMakerFSM_o *targetFsm; // [xsp+0h] [xbp-30h] BYREF
   Il2CppObject *data; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_42E7F7A & 1) == 0 )
+  if ( (byte_4351041 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_AssetManager_TryGetAssetObject_GameObject___, cameraId, (_DWORD)method, v3);
-    sub_B5D5C4(&AssetManager_TypeInfo, v6, v7, v8);
-    sub_B5D5C4(&BattleDataDefine_TypeInfo, v9, v10, v11);
-    sub_B5D5C4(&Method_GameObjectExtensions_HasComponent_PlayMakerFSM___, v12, v13, v14);
-    sub_B5D5C4(&Method_UnityEngine_GameObject_TryGetComponent_PlayMakerFSM___, v15, v16, v17);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_PlayMakerFSM__Add__, v18, v19, v20);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_int__Add__, v21, v22, v23);
-    sub_B5D5C4(&StringLiteral_15090/*"UniqueCameraPrefab"*/, v24, v25, v26);
-    byte_42E7F7A = 1;
+    sub_B70694(&Method_AssetManager_TryGetAssetObject_GameObject___);
+    sub_B70694(&AssetManager_TypeInfo);
+    sub_B70694(&BattleDataDefine_TypeInfo);
+    sub_B70694(&Method_GameObjectExtensions_HasComponent_PlayMakerFSM___);
+    sub_B70694(&Method_UnityEngine_GameObject_TryGetComponent_PlayMakerFSM___);
+    sub_B70694(&Method_System_Collections_Generic_List_PlayMakerFSM__Add__);
+    sub_B70694(&Method_System_Collections_Generic_List_int__Add__);
+    sub_B70694(&StringLiteral_15118/*"UniqueCameraPrefab"*/);
+    byte_4351041 = 1;
   }
   targetFsm = 0LL;
   data = 0LL;
@@ -615,20 +501,20 @@ void __fastcall BattleActionCamera__RegisterFieldCameraFsm(
   {
     j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
   }
-  v27 = BattleDataDefine__AddUniqueCameraPath(cameraId, 0LL);
+  v5 = BattleDataDefine__AddUniqueCameraPath(cameraId, 0LL);
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   if ( AssetManager__TryGetAssetObject_object_(
          &data,
-         v27,
-         (System_String_o *)StringLiteral_15090/*"UniqueCameraPrefab"*/,
-         (const MethodInfo_1AD0D68 *)Method_AssetManager_TryGetAssetObject_GameObject___)
+         v5,
+         (System_String_o *)StringLiteral_15118/*"UniqueCameraPrefab"*/,
+         (const MethodInfo_1BD6ABC *)Method_AssetManager_TryGetAssetObject_GameObject___)
     && GameObjectExtensions__HasComponent_StoneCountRefreshComponent_(
          (UnityEngine_GameObject_o *)data,
-         (const MethodInfo_1CC4F14 *)Method_GameObjectExtensions_HasComponent_PlayMakerFSM___) )
+         (const MethodInfo_1D4B9A0 *)Method_GameObjectExtensions_HasComponent_PlayMakerFSM___) )
   {
     perf = (BaseMonoBehaviour_o *)this->fields.perf;
-    v29 = data;
+    v7 = data;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
       goto LABEL_19;
@@ -637,269 +523,229 @@ void __fastcall BattleActionCamera__RegisterFieldCameraFsm(
       goto LABEL_19;
     gameObject = BaseMonoBehaviour__createObject(
                    perf,
-                   (UnityEngine_GameObject_o *)v29,
+                   (UnityEngine_GameObject_o *)v7,
                    (UnityEngine_Transform_o *)gameObject,
                    0LL,
                    0LL);
     if ( !gameObject )
       goto LABEL_19;
-    if ( !UnityEngine_GameObject__TryGetComponent_UISprite_(
+    if ( !UnityEngine_GameObject__TryGetComponent_UITexture_(
             gameObject,
-            (UISprite_o **)&targetFsm,
-            (const MethodInfo_1CC4B3C *)Method_UnityEngine_GameObject_TryGetComponent_PlayMakerFSM___) )
+            (UITexture_o **)&targetFsm,
+            (const MethodInfo_1D4B5C8 *)Method_UnityEngine_GameObject_TryGetComponent_PlayMakerFSM___) )
       return;
-    BattleActionCamera__initializeRegisterFsm(this, targetFsm, v32);
+    BattleActionCamera__initializeRegisterFsm(this, targetFsm, v10);
     gameObject = (UnityEngine_GameObject_o *)this->fields.fieldCameraFsmList;
     if ( !gameObject
       || (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
             (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)gameObject,
             (EventMissionProgressRequest_Argument_ProgressData_o *)targetFsm,
-            (const MethodInfo_3056FC0 *)Method_System_Collections_Generic_List_PlayMakerFSM__Add__),
+            (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_PlayMakerFSM__Add__),
           (gameObject = (UnityEngine_GameObject_o *)this->fields._FieldCameraIdList_k__BackingField) == 0LL) )
     {
 LABEL_19:
-      sub_B5D69C(gameObject, v31);
+      sub_B7076C(gameObject, v9);
     }
     System_Collections_Generic_List_int___Add(
       (System_Collections_Generic_List_int__o *)gameObject,
       cameraId,
-      (const MethodInfo_308440C *)Method_System_Collections_Generic_List_int__Add__);
+      (const MethodInfo_30B61D8 *)Method_System_Collections_Generic_List_int__Add__);
   }
 }
 
 
 void __fastcall BattleActionCamera__ResetAllCameraEvent(BattleActionCamera_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  int v14; // w1
-  int v15; // w2
-  __int64 v16; // x3
-  int v17; // w1
-  int v18; // w2
-  __int64 v19; // x3
-  int v20; // w1
-  int v21; // w2
-  __int64 v22; // x3
-  int v23; // w1
-  int v24; // w2
-  __int64 v25; // x3
-  int v26; // w1
-  int v27; // w2
-  __int64 v28; // x3
   struct System_Collections_Generic_Dictionary_int__PlayMakerFSM__o *cameraFsmDictionary; // x20
-  BattleActionCamera___c_c *v30; // x0
+  BattleActionCamera___c_c *v4; // x0
   struct BattleActionCamera___c_StaticFields *static_fields; // x8
   System_Func_KeyValuePair_int__WarBoardAIRoute_PiecePersonality___bool__o *_9__41_0; // x21
-  Il2CppObject *v33; // x22
-  struct BattleActionCamera___c_StaticFields *v34; // x0
-  System_String_array **v35; // x2
-  System_String_array **v36; // x3
-  System_Boolean_array **v37; // x4
-  System_Int32_array **v38; // x5
-  System_Int32_array *v39; // x6
-  System_Int32_array *v40; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v41; // x0
-  BattleActionCamera___c_c *v42; // x8
-  System_Collections_Generic_IEnumerable_T__o *v43; // x20
-  struct BattleActionCamera___c_StaticFields *v44; // x9
+  Il2CppObject *v7; // x22
+  struct BattleActionCamera___c_StaticFields *v8; // x0
+  System_String_array **v9; // x2
+  System_String_array **v10; // x3
+  System_Boolean_array **v11; // x4
+  System_Int32_array **v12; // x5
+  System_Int32_array *v13; // x6
+  System_Int32_array *v14; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v15; // x0
+  BattleActionCamera___c_c *v16; // x8
+  System_Collections_Generic_IEnumerable_T__o *v17; // x20
+  struct BattleActionCamera___c_StaticFields *v18; // x9
   System_Action_KeyValuePair_int__PlayMakerFSM___o *_9__41_1; // x21
-  Il2CppObject *v46; // x22
-  struct BattleActionCamera___c_StaticFields *v47; // x0
-  System_String_array **v48; // x2
-  System_String_array **v49; // x3
-  System_Boolean_array **v50; // x4
-  System_Int32_array **v51; // x5
-  System_Int32_array *v52; // x6
-  System_Int32_array *v53; // x7
-  const MethodInfo *v54; // x1
+  Il2CppObject *v20; // x22
+  struct BattleActionCamera___c_StaticFields *v21; // x0
+  System_String_array **v22; // x2
+  System_String_array **v23; // x3
+  System_Boolean_array **v24; // x4
+  System_Int32_array **v25; // x5
+  System_Int32_array *v26; // x6
+  System_Int32_array *v27; // x7
+  const MethodInfo *v28; // x1
 
-  if ( (byte_42E7F72 & 1) == 0 )
+  if ( (byte_4351039 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Action_KeyValuePair_int__PlayMakerFSM____ctor__, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&System_Action_KeyValuePair_int__PlayMakerFSM___TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&Method_BasicHelper_ForEach_KeyValuePair_int__PlayMakerFSM____, v8, v9, v10);
-    sub_B5D5C4(&Method_System_Linq_Enumerable_Where_KeyValuePair_int__PlayMakerFSM____, v11, v12, v13);
-    sub_B5D5C4(&Method_System_Func_KeyValuePair_int__PlayMakerFSM___bool___ctor__, v14, v15, v16);
-    sub_B5D5C4(&System_Func_KeyValuePair_int__PlayMakerFSM___bool__TypeInfo, v17, v18, v19);
-    sub_B5D5C4(&Method_BattleActionCamera___c__ResetAllCameraEvent_b__41_0__, v20, v21, v22);
-    sub_B5D5C4(&Method_BattleActionCamera___c__ResetAllCameraEvent_b__41_1__, v23, v24, v25);
-    sub_B5D5C4(&BattleActionCamera___c_TypeInfo, v26, v27, v28);
-    byte_42E7F72 = 1;
+    sub_B70694(&Method_System_Action_KeyValuePair_int__PlayMakerFSM____ctor__);
+    sub_B70694(&System_Action_KeyValuePair_int__PlayMakerFSM___TypeInfo);
+    sub_B70694(&Method_BasicHelper_ForEach_KeyValuePair_int__PlayMakerFSM____);
+    sub_B70694(&Method_System_Linq_Enumerable_Where_KeyValuePair_int__PlayMakerFSM____);
+    sub_B70694(&Method_System_Func_KeyValuePair_int__PlayMakerFSM___bool___ctor__);
+    sub_B70694(&System_Func_KeyValuePair_int__PlayMakerFSM___bool__TypeInfo);
+    sub_B70694(&Method_BattleActionCamera___c__ResetAllCameraEvent_b__41_0__);
+    sub_B70694(&Method_BattleActionCamera___c__ResetAllCameraEvent_b__41_1__);
+    sub_B70694(&BattleActionCamera___c_TypeInfo);
+    byte_4351039 = 1;
   }
   cameraFsmDictionary = this->fields.cameraFsmDictionary;
-  v30 = BattleActionCamera___c_TypeInfo;
+  v4 = BattleActionCamera___c_TypeInfo;
   if ( (BYTE3(BattleActionCamera___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BattleActionCamera___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleActionCamera___c_TypeInfo);
-    v30 = BattleActionCamera___c_TypeInfo;
+    v4 = BattleActionCamera___c_TypeInfo;
   }
-  static_fields = v30->static_fields;
+  static_fields = v4->static_fields;
   _9__41_0 = (System_Func_KeyValuePair_int__WarBoardAIRoute_PiecePersonality___bool__o *)static_fields->__9__41_0;
   if ( !_9__41_0 )
   {
-    if ( (BYTE3(v30->vtable._0_Equals.methodPtr) & 4) != 0 && !v30->_2.cctor_finished )
+    if ( (BYTE3(v4->vtable._0_Equals.methodPtr) & 4) != 0 && !v4->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v30);
+      j_il2cpp_runtime_class_init_0(v4);
       static_fields = BattleActionCamera___c_TypeInfo->static_fields;
     }
-    v33 = (Il2CppObject *)static_fields->__9;
-    _9__41_0 = (System_Func_KeyValuePair_int__WarBoardAIRoute_PiecePersonality___bool__o *)sub_B5D694(System_Func_KeyValuePair_int__PlayMakerFSM___bool__TypeInfo);
+    v7 = (Il2CppObject *)static_fields->__9;
+    _9__41_0 = (System_Func_KeyValuePair_int__WarBoardAIRoute_PiecePersonality___bool__o *)sub_B70764(System_Func_KeyValuePair_int__PlayMakerFSM___bool__TypeInfo);
     System_Func_KeyValuePair_int__WarBoardAIRoute_PiecePersonality___bool____ctor(
       _9__41_0,
-      v33,
+      v7,
       Method_BattleActionCamera___c__ResetAllCameraEvent_b__41_0__,
-      (const MethodInfo_27926E4 *)Method_System_Func_KeyValuePair_int__PlayMakerFSM___bool___ctor__);
-    v34 = BattleActionCamera___c_TypeInfo->static_fields;
-    v34->__9__41_0 = (struct System_Func_KeyValuePair_int__PlayMakerFSM___bool__o *)_9__41_0;
-    sub_B5D560(
-      (BattleServantConfConponent_o *)&v34->__9__41_0,
+      (const MethodInfo_299904C *)Method_System_Func_KeyValuePair_int__PlayMakerFSM___bool___ctor__);
+    v8 = BattleActionCamera___c_TypeInfo->static_fields;
+    v8->__9__41_0 = (struct System_Func_KeyValuePair_int__PlayMakerFSM___bool__o *)_9__41_0;
+    sub_B70630(
+      (BattleServantConfConponent_o *)&v8->__9__41_0,
       (System_Int32_array **)_9__41_0,
-      v35,
-      v36,
-      v37,
-      v38,
-      v39,
-      v40);
+      v9,
+      v10,
+      v11,
+      v12,
+      v13,
+      v14);
   }
-  v41 = System_Linq_Enumerable__Where_KeyValuePair_int__PlayMakerFSM__(
+  v15 = System_Linq_Enumerable__Where_KeyValuePair_int__PlayMakerFSM__(
           (System_Collections_Generic_IEnumerable_TSource__o *)cameraFsmDictionary,
           (System_Func_TSource__bool__o *)_9__41_0,
-          (const MethodInfo_1CBAF98 *)Method_System_Linq_Enumerable_Where_KeyValuePair_int__PlayMakerFSM____);
-  v42 = BattleActionCamera___c_TypeInfo;
-  v43 = (System_Collections_Generic_IEnumerable_T__o *)v41;
+          (const MethodInfo_1CCBECC *)Method_System_Linq_Enumerable_Where_KeyValuePair_int__PlayMakerFSM____);
+  v16 = BattleActionCamera___c_TypeInfo;
+  v17 = (System_Collections_Generic_IEnumerable_T__o *)v15;
   if ( (BYTE3(BattleActionCamera___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BattleActionCamera___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleActionCamera___c_TypeInfo);
-    v42 = BattleActionCamera___c_TypeInfo;
+    v16 = BattleActionCamera___c_TypeInfo;
   }
-  v44 = v42->static_fields;
-  _9__41_1 = v44->__9__41_1;
+  v18 = v16->static_fields;
+  _9__41_1 = v18->__9__41_1;
   if ( !_9__41_1 )
   {
-    if ( (BYTE3(v42->vtable._0_Equals.methodPtr) & 4) != 0 && !v42->_2.cctor_finished )
+    if ( (BYTE3(v16->vtable._0_Equals.methodPtr) & 4) != 0 && !v16->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v42);
-      v44 = BattleActionCamera___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v16);
+      v18 = BattleActionCamera___c_TypeInfo->static_fields;
     }
-    v46 = (Il2CppObject *)v44->__9;
-    _9__41_1 = (System_Action_KeyValuePair_int__PlayMakerFSM___o *)sub_B5D694(System_Action_KeyValuePair_int__PlayMakerFSM___TypeInfo);
+    v20 = (Il2CppObject *)v18->__9;
+    _9__41_1 = (System_Action_KeyValuePair_int__PlayMakerFSM___o *)sub_B70764(System_Action_KeyValuePair_int__PlayMakerFSM___TypeInfo);
     System_Action_KeyValuePair_int__PlayMakerFSM_____ctor(
       _9__41_1,
-      v46,
+      v20,
       Method_BattleActionCamera___c__ResetAllCameraEvent_b__41_1__,
-      (const MethodInfo_2585170 *)Method_System_Action_KeyValuePair_int__PlayMakerFSM____ctor__);
-    v47 = BattleActionCamera___c_TypeInfo->static_fields;
-    v47->__9__41_1 = _9__41_1;
-    sub_B5D560(
-      (BattleServantConfConponent_o *)&v47->__9__41_1,
+      (const MethodInfo_2645C8C *)Method_System_Action_KeyValuePair_int__PlayMakerFSM____ctor__);
+    v21 = BattleActionCamera___c_TypeInfo->static_fields;
+    v21->__9__41_1 = _9__41_1;
+    sub_B70630(
+      (BattleServantConfConponent_o *)&v21->__9__41_1,
       (System_Int32_array **)_9__41_1,
-      v48,
-      v49,
-      v50,
-      v51,
-      v52,
-      v53);
+      v22,
+      v23,
+      v24,
+      v25,
+      v26,
+      v27);
   }
   BasicHelper__ForEach_KeyValuePair_int__PlayMakerFSM__(
-    v43,
+    v17,
     (System_Action_T__o *)_9__41_1,
-    (const MethodInfo_1AD7484 *)Method_BasicHelper_ForEach_KeyValuePair_int__PlayMakerFSM____);
-  BattleActionCamera__ResetFieldCameraEvent(this, v54);
+    (const MethodInfo_1BDD1D8 *)Method_BasicHelper_ForEach_KeyValuePair_int__PlayMakerFSM____);
+  BattleActionCamera__ResetFieldCameraEvent(this, v28);
 }
 
 
 void __fastcall BattleActionCamera__ResetFieldCameraEvent(BattleActionCamera_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  int v14; // w1
-  int v15; // w2
-  __int64 v16; // x3
   System_Collections_Generic_IEnumerable_T__o *NotNullFieldCameraFsmEnumerable; // x19
-  BattleActionCamera___c_c *v18; // x8
+  BattleActionCamera___c_c *v4; // x8
   struct BattleActionCamera___c_StaticFields *static_fields; // x9
   System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *_9__42_0; // x20
-  Il2CppObject *v21; // x21
-  struct BattleActionCamera___c_StaticFields *v22; // x0
-  System_String_array **v23; // x2
-  System_String_array **v24; // x3
-  System_Boolean_array **v25; // x4
-  System_Int32_array **v26; // x5
-  System_Int32_array *v27; // x6
-  System_Int32_array *v28; // x7
+  Il2CppObject *v7; // x21
+  struct BattleActionCamera___c_StaticFields *v8; // x0
+  System_String_array **v9; // x2
+  System_String_array **v10; // x3
+  System_Boolean_array **v11; // x4
+  System_Int32_array **v12; // x5
+  System_Int32_array *v13; // x6
+  System_Int32_array *v14; // x7
 
-  if ( (byte_42E7F73 & 1) == 0 )
+  if ( (byte_435103A & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Action_PlayMakerFSM___ctor__, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&System_Action_PlayMakerFSM__TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&Method_BasicHelper_ForEach_PlayMakerFSM___, v8, v9, v10);
-    sub_B5D5C4(&Method_BattleActionCamera___c__ResetFieldCameraEvent_b__42_0__, v11, v12, v13);
-    sub_B5D5C4(&BattleActionCamera___c_TypeInfo, v14, v15, v16);
-    byte_42E7F73 = 1;
+    sub_B70694(&Method_System_Action_PlayMakerFSM___ctor__);
+    sub_B70694(&System_Action_PlayMakerFSM__TypeInfo);
+    sub_B70694(&Method_BasicHelper_ForEach_PlayMakerFSM___);
+    sub_B70694(&Method_BattleActionCamera___c__ResetFieldCameraEvent_b__42_0__);
+    sub_B70694(&BattleActionCamera___c_TypeInfo);
+    byte_435103A = 1;
   }
   NotNullFieldCameraFsmEnumerable = (System_Collections_Generic_IEnumerable_T__o *)BattleActionCamera__get_NotNullFieldCameraFsmEnumerable(
                                                                                      this,
                                                                                      method);
-  v18 = BattleActionCamera___c_TypeInfo;
+  v4 = BattleActionCamera___c_TypeInfo;
   if ( (BYTE3(BattleActionCamera___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BattleActionCamera___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleActionCamera___c_TypeInfo);
-    v18 = BattleActionCamera___c_TypeInfo;
+    v4 = BattleActionCamera___c_TypeInfo;
   }
-  static_fields = v18->static_fields;
+  static_fields = v4->static_fields;
   _9__42_0 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)static_fields->__9__42_0;
   if ( !_9__42_0 )
   {
-    if ( (BYTE3(v18->vtable._0_Equals.methodPtr) & 4) != 0 && !v18->_2.cctor_finished )
+    if ( (BYTE3(v4->vtable._0_Equals.methodPtr) & 4) != 0 && !v4->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v18);
+      j_il2cpp_runtime_class_init_0(v4);
       static_fields = BattleActionCamera___c_TypeInfo->static_fields;
     }
-    v21 = (Il2CppObject *)static_fields->__9;
-    _9__42_0 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B5D694(System_Action_PlayMakerFSM__TypeInfo);
+    v7 = (Il2CppObject *)static_fields->__9;
+    _9__42_0 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B70764(System_Action_PlayMakerFSM__TypeInfo);
     System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData____ctor(
       _9__42_0,
-      v21,
+      v7,
       Method_BattleActionCamera___c__ResetFieldCameraEvent_b__42_0__,
-      (const MethodInfo_258B320 *)Method_System_Action_PlayMakerFSM___ctor__);
-    v22 = BattleActionCamera___c_TypeInfo->static_fields;
-    v22->__9__42_0 = (struct System_Action_PlayMakerFSM__o *)_9__42_0;
-    sub_B5D560(
-      (BattleServantConfConponent_o *)&v22->__9__42_0,
+      (const MethodInfo_264C148 *)Method_System_Action_PlayMakerFSM___ctor__);
+    v8 = BattleActionCamera___c_TypeInfo->static_fields;
+    v8->__9__42_0 = (struct System_Action_PlayMakerFSM__o *)_9__42_0;
+    sub_B70630(
+      (BattleServantConfConponent_o *)&v8->__9__42_0,
       (System_Int32_array **)_9__42_0,
-      v23,
-      v24,
-      v25,
-      v26,
-      v27,
-      v28);
+      v9,
+      v10,
+      v11,
+      v12,
+      v13,
+      v14);
   }
   BasicHelper__ForEach_DrawLotsDisplayMessage_DisplayedInGroup_SaveData_(
     NotNullFieldCameraFsmEnumerable,
     (System_Action_T__o *)_9__42_0,
-    (const MethodInfo_1AD82D8 *)Method_BasicHelper_ForEach_PlayMakerFSM___);
+    (const MethodInfo_1BDE02C *)Method_BasicHelper_ForEach_PlayMakerFSM___);
 }
 
 
@@ -908,78 +754,62 @@ bool __fastcall BattleActionCamera__SendFieldEvent(
         System_String_o *eventName,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  int v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  int v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
-  int v15; // w1
-  int v16; // w2
-  __int64 v17; // x3
-  int v18; // w1
-  int v19; // w2
-  __int64 v20; // x3
-  __int64 v21; // x22
-  __int64 v22; // x0
-  __int64 v23; // x1
-  System_String_array **v24; // x2
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
-  const MethodInfo *v30; // x1
+  __int64 v5; // x22
+  __int64 v6; // x0
+  __int64 v7; // x1
+  System_String_array **v8; // x2
+  System_String_array **v9; // x3
+  System_Boolean_array **v10; // x4
+  System_Int32_array **v11; // x5
+  System_Int32_array *v12; // x6
+  System_Int32_array *v13; // x7
+  const MethodInfo *v14; // x1
   System_Collections_Generic_IEnumerable_TSource__o *NotNullFieldCameraFsmEnumerable; // x21
-  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *v32; // x23
-  UnityEngine_Object_o *v33; // x21
-  const MethodInfo *v34; // x1
+  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *v16; // x23
+  UnityEngine_Object_o *v17; // x21
+  const MethodInfo *v18; // x1
 
-  if ( (byte_42E7F71 & 1) == 0 )
+  if ( (byte_4351038 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Linq_Enumerable_FirstOrDefault_PlayMakerFSM___, (_DWORD)eventName, (_DWORD)method, v3);
-    sub_B5D5C4(&Method_System_Func_PlayMakerFSM__bool___ctor__, v6, v7, v8);
-    sub_B5D5C4(&System_Func_PlayMakerFSM__bool__TypeInfo, v9, v10, v11);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v12, v13, v14);
-    sub_B5D5C4(&Method_BattleActionCamera___c__DisplayClass40_0__SendFieldEvent_b__0__, v15, v16, v17);
-    sub_B5D5C4(&BattleActionCamera___c__DisplayClass40_0_TypeInfo, v18, v19, v20);
-    byte_42E7F71 = 1;
+    sub_B70694(&Method_System_Linq_Enumerable_FirstOrDefault_PlayMakerFSM___);
+    sub_B70694(&Method_System_Func_PlayMakerFSM__bool___ctor__);
+    sub_B70694(&System_Func_PlayMakerFSM__bool__TypeInfo);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    sub_B70694(&Method_BattleActionCamera___c__DisplayClass40_0__SendFieldEvent_b__0__);
+    sub_B70694(&BattleActionCamera___c__DisplayClass40_0_TypeInfo);
+    byte_4351038 = 1;
   }
-  v21 = sub_B5D694(BattleActionCamera___c__DisplayClass40_0_TypeInfo);
-  BattleActionCamera___c__DisplayClass40_0___ctor((BattleActionCamera___c__DisplayClass40_0_o *)v21, 0LL);
-  if ( !v21 )
+  v5 = sub_B70764(BattleActionCamera___c__DisplayClass40_0_TypeInfo);
+  BattleActionCamera___c__DisplayClass40_0___ctor((BattleActionCamera___c__DisplayClass40_0_o *)v5, 0LL);
+  if ( !v5 )
     goto LABEL_11;
-  *(_QWORD *)(v21 + 16) = eventName;
-  sub_B5D560((BattleServantConfConponent_o *)(v21 + 16), (System_Int32_array **)eventName, v24, v25, v26, v27, v28, v29);
+  *(_QWORD *)(v5 + 16) = eventName;
+  sub_B70630((BattleServantConfConponent_o *)(v5 + 16), (System_Int32_array **)eventName, v8, v9, v10, v11, v12, v13);
   NotNullFieldCameraFsmEnumerable = (System_Collections_Generic_IEnumerable_TSource__o *)BattleActionCamera__get_NotNullFieldCameraFsmEnumerable(
                                                                                            this,
-                                                                                           v30);
-  v32 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B5D694(System_Func_PlayMakerFSM__bool__TypeInfo);
+                                                                                           v14);
+  v16 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_PlayMakerFSM__bool__TypeInfo);
   System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
-    v32,
-    (Il2CppObject *)v21,
+    v16,
+    (Il2CppObject *)v5,
     Method_BattleActionCamera___c__DisplayClass40_0__SendFieldEvent_b__0__,
-    (const MethodInfo_2C2ECD0 *)Method_System_Func_PlayMakerFSM__bool___ctor__);
-  v33 = (UnityEngine_Object_o *)System_Linq_Enumerable__FirstOrDefault_WarBoardData_SquareRangeSearch_(
+    (const MethodInfo_29AC578 *)Method_System_Func_PlayMakerFSM__bool___ctor__);
+  v17 = (UnityEngine_Object_o *)System_Linq_Enumerable__FirstOrDefault_WarBoardData_SquareRangeSearch_(
                                   NotNullFieldCameraFsmEnumerable,
-                                  (System_Func_TSource__bool__o *)v32,
-                                  (const MethodInfo_1CAC850 *)Method_System_Linq_Enumerable_FirstOrDefault_PlayMakerFSM___);
+                                  (System_Func_TSource__bool__o *)v16,
+                                  (const MethodInfo_1CBD194 *)Method_System_Linq_Enumerable_FirstOrDefault_PlayMakerFSM___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Equality(v33, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality(v17, 0LL, 0LL) )
     return 0;
-  BattleActionCamera__ResetAllCameraEvent(this, v34);
-  if ( !v33 )
+  BattleActionCamera__ResetAllCameraEvent(this, v18);
+  if ( !v17 )
 LABEL_11:
-    sub_B5D69C(v22, v23);
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)v33, *(System_String_o **)(v21 + 16), 0LL);
+    sub_B7076C(v6, v7);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)v17, *(System_String_o **)(v5 + 16), 0LL);
   return 1;
 }
 
@@ -990,85 +820,70 @@ void __fastcall BattleActionCamera__SetGameObjectToField(
         System_String_o *varName,
         const MethodInfo *method)
 {
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
-  int v10; // w1
-  int v11; // w2
-  __int64 v12; // x3
-  int v13; // w1
-  int v14; // w2
-  __int64 v15; // x3
-  int v16; // w1
-  int v17; // w2
-  __int64 v18; // x3
-  int v19; // w1
-  int v20; // w2
-  __int64 v21; // x3
-  __int64 v22; // x20
-  __int64 v23; // x0
-  __int64 v24; // x1
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
-  System_String_array **v31; // x2
-  System_String_array **v32; // x3
-  System_Boolean_array **v33; // x4
-  System_Int32_array **v34; // x5
-  System_Int32_array *v35; // x6
-  System_Int32_array *v36; // x7
-  UnityEngine_Object_o *v37; // x21
-  const MethodInfo *v38; // x1
+  __int64 v7; // x20
+  __int64 v8; // x0
+  __int64 v9; // x1
+  System_String_array **v10; // x2
+  System_String_array **v11; // x3
+  System_Boolean_array **v12; // x4
+  System_Int32_array **v13; // x5
+  System_Int32_array *v14; // x6
+  System_Int32_array *v15; // x7
+  System_String_array **v16; // x2
+  System_String_array **v17; // x3
+  System_Boolean_array **v18; // x4
+  System_Int32_array **v19; // x5
+  System_Int32_array *v20; // x6
+  System_Int32_array *v21; // x7
+  UnityEngine_Object_o *v22; // x21
+  const MethodInfo *v23; // x1
   System_Collections_Generic_IEnumerable_T__o *NotNullFieldCameraFsmEnumerable; // x21
-  System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *v40; // x22
+  System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *v25; // x22
 
-  if ( (byte_42E7F75 & 1) == 0 )
+  if ( (byte_435103C & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Action_PlayMakerFSM___ctor__, (_DWORD)obj, (_DWORD)varName, method);
-    sub_B5D5C4(&System_Action_PlayMakerFSM__TypeInfo, v7, v8, v9);
-    sub_B5D5C4(&Method_BasicHelper_ForEach_PlayMakerFSM___, v10, v11, v12);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v13, v14, v15);
-    sub_B5D5C4(&Method_BattleActionCamera___c__DisplayClass44_0__SetGameObjectToField_b__0__, v16, v17, v18);
-    sub_B5D5C4(&BattleActionCamera___c__DisplayClass44_0_TypeInfo, v19, v20, v21);
-    byte_42E7F75 = 1;
+    sub_B70694(&Method_System_Action_PlayMakerFSM___ctor__);
+    sub_B70694(&System_Action_PlayMakerFSM__TypeInfo);
+    sub_B70694(&Method_BasicHelper_ForEach_PlayMakerFSM___);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    sub_B70694(&Method_BattleActionCamera___c__DisplayClass44_0__SetGameObjectToField_b__0__);
+    sub_B70694(&BattleActionCamera___c__DisplayClass44_0_TypeInfo);
+    byte_435103C = 1;
   }
-  v22 = sub_B5D694(BattleActionCamera___c__DisplayClass44_0_TypeInfo);
-  BattleActionCamera___c__DisplayClass44_0___ctor((BattleActionCamera___c__DisplayClass44_0_o *)v22, 0LL);
-  if ( !v22 )
-    sub_B5D69C(v23, v24);
-  *(_QWORD *)(v22 + 16) = varName;
-  sub_B5D560((BattleServantConfConponent_o *)(v22 + 16), (System_Int32_array **)varName, v25, v26, v27, v28, v29, v30);
-  *(_QWORD *)(v22 + 24) = obj;
-  sub_B5D560((BattleServantConfConponent_o *)(v22 + 24), (System_Int32_array **)obj, v31, v32, v33, v34, v35, v36);
-  v37 = *(UnityEngine_Object_o **)(v22 + 24);
+  v7 = sub_B70764(BattleActionCamera___c__DisplayClass44_0_TypeInfo);
+  BattleActionCamera___c__DisplayClass44_0___ctor((BattleActionCamera___c__DisplayClass44_0_o *)v7, 0LL);
+  if ( !v7 )
+    sub_B7076C(v8, v9);
+  *(_QWORD *)(v7 + 16) = varName;
+  sub_B70630((BattleServantConfConponent_o *)(v7 + 16), (System_Int32_array **)varName, v10, v11, v12, v13, v14, v15);
+  *(_QWORD *)(v7 + 24) = obj;
+  sub_B70630((BattleServantConfConponent_o *)(v7 + 24), (System_Int32_array **)obj, v16, v17, v18, v19, v20, v21);
+  v22 = *(UnityEngine_Object_o **)(v7 + 24);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( !UnityEngine_Object__op_Equality(v37, 0LL, 0LL)
-    && !System_String__IsNullOrEmpty(*(System_String_o **)(v22 + 16), 0LL) )
+  if ( !UnityEngine_Object__op_Equality(v22, 0LL, 0LL)
+    && !System_String__IsNullOrEmpty(*(System_String_o **)(v7 + 16), 0LL) )
   {
     NotNullFieldCameraFsmEnumerable = (System_Collections_Generic_IEnumerable_T__o *)BattleActionCamera__get_NotNullFieldCameraFsmEnumerable(
                                                                                        this,
-                                                                                       v38);
-    v40 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B5D694(System_Action_PlayMakerFSM__TypeInfo);
+                                                                                       v23);
+    v25 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B70764(System_Action_PlayMakerFSM__TypeInfo);
     System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData____ctor(
-      v40,
-      (Il2CppObject *)v22,
+      v25,
+      (Il2CppObject *)v7,
       Method_BattleActionCamera___c__DisplayClass44_0__SetGameObjectToField_b__0__,
-      (const MethodInfo_258B320 *)Method_System_Action_PlayMakerFSM___ctor__);
+      (const MethodInfo_264C148 *)Method_System_Action_PlayMakerFSM___ctor__);
     BasicHelper__ForEach_DrawLotsDisplayMessage_DisplayedInGroup_SaveData_(
       NotNullFieldCameraFsmEnumerable,
-      (System_Action_T__o *)v40,
-      (const MethodInfo_1AD82D8 *)Method_BasicHelper_ForEach_PlayMakerFSM___);
+      (System_Action_T__o *)v25,
+      (const MethodInfo_1BDE02C *)Method_BasicHelper_ForEach_PlayMakerFSM___);
     PlayMakerFSMHelper__SetFsmGameObject(
       this->fields.mainFsm,
-      *(System_String_o **)(v22 + 16),
-      *(UnityEngine_GameObject_o **)(v22 + 24),
+      *(System_String_o **)(v7 + 16),
+      *(UnityEngine_GameObject_o **)(v7 + 24),
       0LL);
   }
 }
@@ -1091,77 +906,72 @@ void __fastcall BattleActionCamera__ShakePosition(
 // local variable allocation has failed, the output may be wrong!
 void __fastcall BattleActionCamera__Update(BattleActionCamera_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  bool v8; // w0
+  bool v3; // w0
   float ShakeTime; // s8
-  int v10; // w20
-  double v11; // d0
-  float v12; // s0
-  double v13; // d1
-  float v14; // s8
-  float v15; // s9
-  float v16; // s10
+  int v5; // w20
+  double v6; // d0
+  float v7; // s0
+  double v8; // d1
+  float v9; // s8
+  float v10; // s9
+  float v11; // s10
   UnityEngine_Transform_o *transform; // x0
-  __int64 v18; // x1
-  UnityEngine_Transform_o *v19; // x20
-  int v20; // s0
+  __int64 v13; // x1
+  UnityEngine_Transform_o *v14; // x20
+  int v15; // s0
   UnityEngine_Object_o *perf; // x20
-  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_42E7F7B & 1) == 0 )
+  if ( (byte_4351042 & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&StringLiteral_12228/*"SHAKE"*/, v5, v6, v7);
-    byte_42E7F7B = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    sub_B70694(&StringLiteral_12249/*"SHAKE"*/);
+    byte_4351042 = 1;
   }
   if ( this->fields.Shaking )
   {
-    v8 = UnityEngine_Mathf__Approximately(this->fields.ShakeTime, 0.0, 0LL);
+    v3 = UnityEngine_Mathf__Approximately(this->fields.ShakeTime, 0.0, 0LL);
     ShakeTime = this->fields.ShakeTime;
-    if ( v8 )
+    if ( v3 )
     {
-      v10 = -1;
+      v5 = -1;
     }
     else
     {
-      v11 = (float)(ShakeTime * 30.0) == INFINITY ? -(float)(ShakeTime * 30.0) : (float)(ShakeTime * 30.0);
-      v10 = (int)v11;
+      v6 = (float)(ShakeTime * 30.0) == INFINITY ? -(float)(ShakeTime * 30.0) : (float)(ShakeTime * 30.0);
+      v5 = (int)v6;
     }
-    v12 = ShakeTime + UnityEngine_Time__get_deltaTime(0LL);
-    v13 = (float)(v12 * 30.0) == INFINITY ? -(float)(v12 * 30.0) : (float)(v12 * 30.0);
-    this->fields.ShakeTime = v12;
-    if ( v10 < (int)v13 )
+    v7 = ShakeTime + UnityEngine_Time__get_deltaTime(0LL);
+    v8 = (float)(v7 * 30.0) == INFINITY ? -(float)(v7 * 30.0) : (float)(v7 * 30.0);
+    this->fields.ShakeTime = v7;
+    if ( v5 < (int)v8 )
     {
-      v14 = UnityEngine_Random__Range(
-              this->fields.ShakeRange.fields.x * -0.5,
-              this->fields.ShakeRange.fields.x * 0.5,
-              0LL);
-      v15 = UnityEngine_Random__Range(
+      v9 = UnityEngine_Random__Range(
+             this->fields.ShakeRange.fields.x * -0.5,
+             this->fields.ShakeRange.fields.x * 0.5,
+             0LL);
+      v10 = UnityEngine_Random__Range(
               this->fields.ShakeRange.fields.y * -0.5,
               this->fields.ShakeRange.fields.y * 0.5,
               0LL);
-      v16 = UnityEngine_Random__Range(
+      v11 = UnityEngine_Random__Range(
               this->fields.ShakeRange.fields.z * -0.5,
               this->fields.ShakeRange.fields.z * 0.5,
               0LL);
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
       if ( !transform )
         goto LABEL_25;
-      v24.fields.x = v14;
-      v24.fields.y = v15;
-      v24.fields.z = v16;
-      UnityEngine_Transform__set_localPosition(transform, v24, 0LL);
+      v19.fields.x = v9;
+      v19.fields.y = v10;
+      v19.fields.z = v11;
+      UnityEngine_Transform__set_localPosition(transform, v19, 0LL);
       if ( this->fields.ShakeTime >= this->fields.ShakeTargetTime )
       {
-        v19 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-        *(UnityEngine_Vector3_o *)&v20 = UnityEngine_Vector3__get_zero(0LL);
-        if ( !v19 )
+        v14 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+        *(UnityEngine_Vector3_o *)&v15 = UnityEngine_Vector3__get_zero(0LL);
+        if ( !v14 )
           goto LABEL_25;
-        UnityEngine_Transform__set_localPosition(v19, *(UnityEngine_Vector3_o *)&v20, 0LL);
+        UnityEngine_Transform__set_localPosition(v14, *(UnityEngine_Vector3_o *)&v15, 0LL);
         this->fields.Shaking = 0;
       }
       perf = (UnityEngine_Object_o *)this->fields.perf;
@@ -1177,12 +987,12 @@ void __fastcall BattleActionCamera__Update(BattleActionCamera_o *this, const Met
         {
           BattlePerformance__sendLocalEventFieldMotion(
             (BattlePerformance_o *)transform,
-            (System_String_o *)StringLiteral_12228/*"SHAKE"*/,
+            (System_String_o *)StringLiteral_12249/*"SHAKE"*/,
             0LL);
           return;
         }
 LABEL_25:
-        sub_B5D69C(transform, v18);
+        sub_B7076C(transform, v13);
       }
     }
   }
@@ -1195,87 +1005,70 @@ void __fastcall BattleActionCamera__UpdateFieldUniqueCameraFsm(
         bool isInitFieldCamera,
         const MethodInfo *method)
 {
-  System_Collections_Generic_IEnumerable_T__o *v5; // x21
-  int v7; // w1
-  char v8; // w2
-  __int64 v9; // x3
-  int v10; // w1
-  char v11; // w2
-  __int64 v12; // x3
-  int v13; // w1
-  char v14; // w2
-  __int64 v15; // x3
-  int v16; // w1
-  char v17; // w2
-  __int64 v18; // x3
-  int v19; // w1
-  char v20; // w2
-  __int64 v21; // x3
-  _QWORD **v22; // x22
-  __int64 v23; // x21
-  __int16 v24; // w8
-  __int64 v25; // x21
-  __int64 v26; // x21
-  __int64 v27; // x21
-  const MethodInfo *v28; // x1
-  System_Action_int__o *v29; // x20
+  _QWORD **v7; // x22
+  __int64 v8; // x21
+  __int16 v9; // w8
+  __int64 v10; // x21
+  __int64 v11; // x21
+  __int64 v12; // x21
+  const MethodInfo *v13; // x1
+  System_Action_int__o *v14; // x20
 
-  v5 = (System_Collections_Generic_IEnumerable_T__o *)cameraIds;
-  if ( (byte_42E7F79 & 1) == 0 )
+  if ( (byte_4351040 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Action_int___ctor__, (_DWORD)cameraIds, isInitFieldCamera, method);
-    sub_B5D5C4(&System_Action_int__TypeInfo, v7, v8, v9);
-    sub_B5D5C4(&Method_System_Array_Empty_int___, v10, v11, v12);
-    sub_B5D5C4(&Method_BasicHelper_ForEach_int___, v13, v14, v15);
-    sub_B5D5C4(&Method_BattleActionCamera_RegisterFieldCameraFsm__, v16, v17, v18);
-    sub_B5D5C4(&Method_System_Linq_Enumerable_SequenceEqual_int___, v19, v20, v21);
-    byte_42E7F79 = 1;
+    sub_B70694(&Method_System_Action_int___ctor__);
+    sub_B70694(&System_Action_int__TypeInfo);
+    sub_B70694(&Method_System_Array_Empty_int___);
+    sub_B70694(&Method_BasicHelper_ForEach_int___);
+    sub_B70694(&Method_BattleActionCamera_RegisterFieldCameraFsm__);
+    sub_B70694(&Method_System_Linq_Enumerable_SequenceEqual_int___);
+    byte_4351040 = 1;
   }
-  if ( !v5 )
+  if ( !cameraIds )
   {
-    v22 = (_QWORD **)Method_System_Array_Empty_int___;
-    v23 = **((_QWORD **)Method_System_Array_Empty_int___ + 6);
-    v24 = *(_WORD *)(v23 + 306);
-    if ( (v24 & 1) == 0 )
+    v7 = (_QWORD **)Method_System_Array_Empty_int___;
+    v8 = **((_QWORD **)Method_System_Array_Empty_int___ + 6);
+    v9 = *(_WORD *)(v8 + 306);
+    if ( (v9 & 1) == 0 )
     {
-      sub_AF52C4(**((_QWORD **)Method_System_Array_Empty_int___ + 6));
-      v24 = *(_WORD *)(v23 + 306);
+      sub_B08394(**((_QWORD **)Method_System_Array_Empty_int___ + 6));
+      v9 = *(_WORD *)(v8 + 306);
     }
-    if ( (v24 & 0x400) != 0 )
+    if ( (v9 & 0x400) != 0 )
     {
-      v25 = *v22[6];
-      if ( (*(_BYTE *)(v25 + 306) & 1) == 0 )
-        sub_AF52C4(*v22[6]);
-      if ( !*(_DWORD *)(v25 + 224) )
+      v10 = *v7[6];
+      if ( (*(_BYTE *)(v10 + 306) & 1) == 0 )
+        sub_B08394(*v7[6]);
+      if ( !*(_DWORD *)(v10 + 224) )
       {
-        v26 = *v22[6];
-        if ( (*(_BYTE *)(v26 + 306) & 1) == 0 )
-          sub_AF52C4(*v22[6]);
-        j_il2cpp_runtime_class_init_0(v26);
+        v11 = *v7[6];
+        if ( (*(_BYTE *)(v11 + 306) & 1) == 0 )
+          sub_B08394(*v7[6]);
+        j_il2cpp_runtime_class_init_0(v11);
       }
     }
-    v27 = *v22[6];
-    if ( (*(_BYTE *)(v27 + 306) & 1) == 0 )
-      sub_AF52C4(*v22[6]);
-    v5 = **(System_Collections_Generic_IEnumerable_T__o ***)(v27 + 184);
+    v12 = *v7[6];
+    if ( (*(_BYTE *)(v12 + 306) & 1) == 0 )
+      sub_B08394(*v7[6]);
+    cameraIds = **(System_Int32_array ***)(v12 + 184);
   }
   if ( !System_Linq_Enumerable__SequenceEqual_int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)this->fields._FieldCameraIdList_k__BackingField,
-          (System_Collections_Generic_IEnumerable_TSource__o *)v5,
-          (const MethodInfo_1CB4CD8 *)Method_System_Linq_Enumerable_SequenceEqual_int___) )
+          (System_Collections_Generic_IEnumerable_TSource__o *)cameraIds,
+          (const MethodInfo_1CC5B2C *)Method_System_Linq_Enumerable_SequenceEqual_int___) )
   {
     if ( isInitFieldCamera )
-      BattleActionCamera__InitFieldCameraList(this, v28);
-    v29 = (System_Action_int__o *)sub_B5D694(System_Action_int__TypeInfo);
+      BattleActionCamera__InitFieldCameraList(this, v13);
+    v14 = (System_Action_int__o *)sub_B70764(System_Action_int__TypeInfo);
     System_Action_int____ctor(
-      v29,
+      v14,
       (Il2CppObject *)this,
       Method_BattleActionCamera_RegisterFieldCameraFsm__,
-      (const MethodInfo_2589D90 *)Method_System_Action_int___ctor__);
+      (const MethodInfo_264ABB8 *)Method_System_Action_int___ctor__);
     BasicHelper__ForEach_int_(
-      v5,
-      (System_Action_T__o *)v29,
-      (const MethodInfo_1AD7A44 *)Method_BasicHelper_ForEach_int___);
+      (System_Collections_Generic_IEnumerable_T__o *)cameraIds,
+      (System_Action_T__o *)v14,
+      (const MethodInfo_1BDD798 *)Method_BasicHelper_ForEach_int___);
   }
 }
 
@@ -1287,60 +1080,30 @@ void __fastcall BattleActionCamera__deleteCamera(
         int32_t cameraId,
         const MethodInfo *method)
 {
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
-  int v10; // w1
-  int v11; // w2
-  __int64 v12; // x3
-  int v13; // w1
-  int v14; // w2
-  __int64 v15; // x3
-  int v16; // w1
-  int v17; // w2
-  __int64 v18; // x3
-  int v19; // w1
-  int v20; // w2
-  __int64 v21; // x3
-  int v22; // w1
-  int v23; // w2
-  __int64 v24; // x3
-  int v25; // w1
-  int v26; // w2
-  __int64 v27; // x3
-  int v28; // w1
-  int v29; // w2
-  __int64 v30; // x3
-  int v31; // w1
-  int v32; // w2
-  __int64 v33; // x3
-  int v34; // w1
-  int v35; // w2
-  __int64 v36; // x3
   System_Collections_Generic_Dictionary_int__int__o *cameraTargetDictionary; // x0
-  char v38; // w22
+  char v8; // w22
   struct System_Collections_Generic_Dictionary_int__PlayMakerFSM__o *cameraFsmDictionary; // x8
-  UnityEngine_Object_o *v40; // x20
+  UnityEngine_Object_o *v10; // x20
   UnityEngine_Object_o *gameObject; // x19
-  __int128 v42[2]; // [xsp+0h] [xbp-60h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v43; // [xsp+20h] [xbp-40h] BYREF
+  __int128 v12[2]; // [xsp+0h] [xbp-60h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v13; // [xsp+20h] [xbp-40h] BYREF
 
-  if ( (byte_42E7F78 & 1) == 0 )
+  if ( (byte_435103F & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__, uniqueId, cameraId, method);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__ContainsKey__, v7, v8, v9);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__int__GetEnumerator__, v10, v11, v12);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__Remove__, v13, v14, v15);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__int__Remove__, v16, v17, v18);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__get_Item__, v19, v20, v21);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_Enumerator_int__int__Dispose__, v22, v23, v24);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_Enumerator_int__int__MoveNext__, v25, v26, v27);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_Enumerator_int__int__get_Current__, v28, v29, v30);
-    sub_B5D5C4(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Value__, v31, v32, v33);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v34, v35, v36);
-    byte_42E7F78 = 1;
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__ContainsKey__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int__GetEnumerator__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__Remove__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int__Remove__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__get_Item__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_Enumerator_int__int__Dispose__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_Enumerator_int__int__MoveNext__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_Enumerator_int__int__get_Current__);
+    sub_B70694(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Value__);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_435103F = 1;
   }
-  memset(&v43, 0, 32);
+  memset(&v13, 0, 32);
   if ( cameraId )
   {
     cameraTargetDictionary = this->fields.cameraTargetDictionary;
@@ -1349,7 +1112,7 @@ void __fastcall BattleActionCamera__deleteCamera(
     if ( System_Collections_Generic_Dictionary_int__int___ContainsKey(
            cameraTargetDictionary,
            uniqueId,
-           (const MethodInfo_2F0B0BC *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__) )
+           (const MethodInfo_2FBB3C4 *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__) )
     {
       cameraTargetDictionary = this->fields.cameraTargetDictionary;
       if ( !cameraTargetDictionary )
@@ -1357,26 +1120,26 @@ void __fastcall BattleActionCamera__deleteCamera(
       System_Collections_Generic_Dictionary_int__int___Remove(
         cameraTargetDictionary,
         uniqueId,
-        (const MethodInfo_2F0C750 *)Method_System_Collections_Generic_Dictionary_int__int__Remove__);
+        (const MethodInfo_2FBCA58 *)Method_System_Collections_Generic_Dictionary_int__int__Remove__);
     }
     cameraTargetDictionary = this->fields.cameraTargetDictionary;
     if ( !cameraTargetDictionary )
       goto LABEL_27;
     System_Collections_Generic_Dictionary_int__int___GetEnumerator(
-      (System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o *)v42,
+      (System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o *)v12,
       cameraTargetDictionary,
-      (const MethodInfo_2F0B3CC *)Method_System_Collections_Generic_Dictionary_int__int__GetEnumerator__);
-    v38 = 1;
-    *(_OWORD *)&v43.fields.dictionary = v42[0];
-    v43.fields.current = (struct System_Collections_Generic_KeyValuePair_TKey__TValue__o)v42[1];
+      (const MethodInfo_2FBB6D4 *)Method_System_Collections_Generic_Dictionary_int__int__GetEnumerator__);
+    v8 = 1;
+    *(_OWORD *)&v13.fields.dictionary = v12[0];
+    v13.fields.current = (struct System_Collections_Generic_KeyValuePair_TKey__TValue__o)v12[1];
     while ( System_Collections_Generic_Dictionary_Enumerator_int__int___MoveNext(
-              &v43,
-              (const MethodInfo_289F694 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__int__MoveNext__) )
-      v38 &= HIDWORD(v43.fields.current.fields.key) != cameraId;
+              &v13,
+              (const MethodInfo_28306E4 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__int__MoveNext__) )
+      v8 &= HIDWORD(v13.fields.current.fields.key) != cameraId;
     System_Collections_Generic_Dictionary_Enumerator_int__int___Dispose(
-      &v43,
-      (const MethodInfo_289F7DC *)Method_System_Collections_Generic_Dictionary_Enumerator_int__int__Dispose__);
-    if ( (v38 & 1) == 0 )
+      &v13,
+      (const MethodInfo_283082C *)Method_System_Collections_Generic_Dictionary_Enumerator_int__int__Dispose__);
+    if ( (v8 & 1) == 0 )
       return;
     cameraTargetDictionary = (System_Collections_Generic_Dictionary_int__int__o *)this->fields.cameraFsmDictionary;
     if ( !cameraTargetDictionary )
@@ -1384,44 +1147,44 @@ void __fastcall BattleActionCamera__deleteCamera(
     if ( !System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData___ContainsKey(
             (System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData__o *)cameraTargetDictionary,
             cameraId,
-            (const MethodInfo_2F32338 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__ContainsKey__) )
+            (const MethodInfo_2FC67DC *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__ContainsKey__) )
       return;
     cameraTargetDictionary = (System_Collections_Generic_Dictionary_int__int__o *)this->fields.cameraFsmDictionary;
     if ( !cameraTargetDictionary
       || (cameraTargetDictionary = (System_Collections_Generic_Dictionary_int__int__o *)System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___get_Item(
                                                                                           (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)cameraTargetDictionary,
                                                                                           cameraId,
-                                                                                          (const MethodInfo_2F32000 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__get_Item__),
+                                                                                          (const MethodInfo_2FC64A4 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__get_Item__),
           (cameraFsmDictionary = this->fields.cameraFsmDictionary) == 0LL) )
     {
 LABEL_27:
-      sub_B5D69C(cameraTargetDictionary, *(_QWORD *)&uniqueId);
+      sub_B7076C(cameraTargetDictionary, *(_QWORD *)&uniqueId);
     }
-    v40 = (UnityEngine_Object_o *)cameraTargetDictionary;
+    v10 = (UnityEngine_Object_o *)cameraTargetDictionary;
     System_Collections_Generic_Dictionary_int__WarBoardAIRoute_PiecePersonality___Remove(
       (System_Collections_Generic_Dictionary_int__WarBoardAIRoute_PiecePersonality__o *)cameraFsmDictionary,
       cameraId,
-      (const MethodInfo_2F33AA0 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__Remove__);
+      (const MethodInfo_2FC7F44 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__Remove__);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
     cameraTargetDictionary = (System_Collections_Generic_Dictionary_int__int__o *)UnityEngine_Object__op_Inequality(
-                                                                                    v40,
+                                                                                    v10,
                                                                                     0LL,
                                                                                     0LL);
     if ( ((unsigned __int8)cameraTargetDictionary & 1) != 0 )
     {
-      if ( v40 )
+      if ( v10 )
       {
-        gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v40, 0LL);
+        gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v10, 0LL);
         if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         }
-        UnityEngine_Object__Destroy_35620236(gameObject, 0LL);
+        UnityEngine_Object__Destroy_36067208(gameObject, 0LL);
         return;
       }
       goto LABEL_27;
@@ -1439,43 +1202,30 @@ PlayMakerFSM_o *__fastcall BattleActionCamera__getUniqueFsm(
   int32_t cameraId; // [xsp+Ch] [xbp-4h] BYREF
 
   cameraId = 0;
-  return BattleActionCamera__getUniqueFsm_24120556(this, uniqueId, &cameraId, v3);
+  return BattleActionCamera__getUniqueFsm_23764908(this, uniqueId, &cameraId, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-PlayMakerFSM_o *__fastcall BattleActionCamera__getUniqueFsm_24120556(
+PlayMakerFSM_o *__fastcall BattleActionCamera__getUniqueFsm_23764908(
         BattleActionCamera_o *this,
         int32_t uniqueId,
         int32_t *cameraId,
         const MethodInfo *method)
 {
   int32_t v5; // w21
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
-  int v10; // w1
-  int v11; // w2
-  __int64 v12; // x3
-  int v13; // w1
-  int v14; // w2
-  __int64 v15; // x3
   System_Collections_Generic_Dictionary_int__int__o *cameraTargetDictionary; // x0
   unsigned int Item; // w0
-  UnityEngine_Object_o *v18; // x19
+  UnityEngine_Object_o *v9; // x19
 
   v5 = uniqueId;
-  if ( (byte_42E7F76 & 1) == 0 )
+  if ( (byte_435103D & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__,
-      uniqueId,
-      (_DWORD)cameraId,
-      method);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__get_Item__, v7, v8, v9);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__int__get_Item__, v10, v11, v12);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v13, v14, v15);
-    byte_42E7F76 = 1;
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__get_Item__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_435103D = 1;
   }
   *cameraId = 0;
   cameraTargetDictionary = this->fields.cameraTargetDictionary;
@@ -1484,33 +1234,33 @@ PlayMakerFSM_o *__fastcall BattleActionCamera__getUniqueFsm_24120556(
   if ( !System_Collections_Generic_Dictionary_int__int___ContainsKey(
           cameraTargetDictionary,
           v5,
-          (const MethodInfo_2F0B0BC *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__) )
+          (const MethodInfo_2FBB3C4 *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__) )
     return 0LL;
   cameraTargetDictionary = this->fields.cameraTargetDictionary;
   if ( !cameraTargetDictionary
     || (Item = System_Collections_Generic_Dictionary_int__int___get_Item(
                  cameraTargetDictionary,
                  v5,
-                 (const MethodInfo_2F0AD98 *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__),
+                 (const MethodInfo_2FBB0A0 *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__),
         *cameraId = Item,
         *(_QWORD *)&uniqueId = Item,
         (cameraTargetDictionary = (System_Collections_Generic_Dictionary_int__int__o *)this->fields.cameraFsmDictionary) == 0LL) )
   {
 LABEL_13:
-    sub_B5D69C(cameraTargetDictionary, *(_QWORD *)&uniqueId);
+    sub_B7076C(cameraTargetDictionary, *(_QWORD *)&uniqueId);
   }
-  v18 = (UnityEngine_Object_o *)System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___get_Item(
-                                  (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)cameraTargetDictionary,
-                                  uniqueId,
-                                  (const MethodInfo_2F32000 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__get_Item__);
+  v9 = (UnityEngine_Object_o *)System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___get_Item(
+                                 (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)cameraTargetDictionary,
+                                 uniqueId,
+                                 (const MethodInfo_2FC64A4 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__get_Item__);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( !UnityEngine_Object__op_Inequality(v18, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Inequality(v9, 0LL, 0LL) )
     return 0LL;
-  return (PlayMakerFSM_o *)v18;
+  return (PlayMakerFSM_o *)v9;
 }
 
 
@@ -1526,17 +1276,14 @@ System_Collections_Generic_IEnumerable_PlayMakerFSM__o *__fastcall BattleActionC
         BattleActionCamera_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42E7F68 & 1) == 0 )
+  if ( (byte_435102F & 1) == 0 )
   {
-    sub_B5D5C4(&Method_BasicHelper_ExcludeNull_PlayMakerFSM___, (_DWORD)method, v2, v3);
-    byte_42E7F68 = 1;
+    sub_B70694(&Method_BasicHelper_ExcludeNull_PlayMakerFSM___);
+    byte_435102F = 1;
   }
   return (System_Collections_Generic_IEnumerable_PlayMakerFSM__o *)BasicHelper__ExcludeNull_BlankEarthSpotAnimStateManager_SpotStateData_(
                                                                      (System_Collections_Generic_IEnumerable_T__o *)this->fields.fieldCameraFsmList,
-                                                                     (const MethodInfo_1AD70CC *)Method_BasicHelper_ExcludeNull_PlayMakerFSM___);
+                                                                     (const MethodInfo_1BDCE20 *)Method_BasicHelper_ExcludeNull_PlayMakerFSM___);
 }
 
 
@@ -1561,21 +1308,17 @@ void __fastcall BattleActionCamera__initializeRegisterFsm(
         PlayMakerFSM_o *targetFsm,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  BattleActionCamera_o *v5; // x19
-  int v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
-  HutongGames_PlayMaker_FsmGameObject_o *v9; // x21
+  BattleActionCamera_o *v4; // x19
+  HutongGames_PlayMaker_FsmGameObject_o *v5; // x21
   PlayMakerFSM_o *mainFsm; // x8
-  HutongGames_PlayMaker_FsmGameObject_o *v11; // x19
+  HutongGames_PlayMaker_FsmGameObject_o *v7; // x19
 
-  v5 = this;
-  if ( (byte_42E7F6E & 1) == 0 )
+  v4 = this;
+  if ( (byte_4351035 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_3538/*"Camera"*/, (_DWORD)targetFsm, (_DWORD)method, v3);
-    this = (BattleActionCamera_o *)sub_B5D5C4(&StringLiteral_3547/*"Camera_obj"*/, v6, v7, v8);
-    byte_42E7F6E = 1;
+    sub_B70694(&StringLiteral_3547/*"Camera"*/);
+    this = (BattleActionCamera_o *)sub_B70694(&StringLiteral_3556/*"Camera_obj"*/);
+    byte_4351035 = 1;
   }
   if ( !targetFsm )
     goto LABEL_15;
@@ -1584,48 +1327,48 @@ void __fastcall BattleActionCamera__initializeRegisterFsm(
     goto LABEL_15;
   this = (BattleActionCamera_o *)HutongGames_PlayMaker_Fsm__GetFsmGameObject(
                                    (HutongGames_PlayMaker_Fsm_o *)this,
-                                   (System_String_o *)StringLiteral_3538/*"Camera"*/,
+                                   (System_String_o *)StringLiteral_3547/*"Camera"*/,
                                    0LL);
-  if ( !v5->fields.mainFsm )
+  if ( !v4->fields.mainFsm )
     goto LABEL_15;
-  v9 = (HutongGames_PlayMaker_FsmGameObject_o *)this;
-  this = (BattleActionCamera_o *)PlayMakerFSM__get_Fsm(v5->fields.mainFsm, 0LL);
+  v5 = (HutongGames_PlayMaker_FsmGameObject_o *)this;
+  this = (BattleActionCamera_o *)PlayMakerFSM__get_Fsm(v4->fields.mainFsm, 0LL);
   if ( !this )
     goto LABEL_15;
   this = (BattleActionCamera_o *)HutongGames_PlayMaker_Fsm__GetFsmGameObject(
                                    (HutongGames_PlayMaker_Fsm_o *)this,
-                                   (System_String_o *)StringLiteral_3538/*"Camera"*/,
+                                   (System_String_o *)StringLiteral_3547/*"Camera"*/,
                                    0LL);
   if ( !this )
     goto LABEL_15;
   this = (BattleActionCamera_o *)HutongGames_PlayMaker_FsmGameObject__get_Value(
                                    (HutongGames_PlayMaker_FsmGameObject_o *)this,
                                    0LL);
-  if ( !v9 )
+  if ( !v5 )
     goto LABEL_15;
-  HutongGames_PlayMaker_FsmGameObject__set_Value(v9, (UnityEngine_GameObject_o *)this, 0LL);
+  HutongGames_PlayMaker_FsmGameObject__set_Value(v5, (UnityEngine_GameObject_o *)this, 0LL);
   this = (BattleActionCamera_o *)PlayMakerFSM__get_Fsm(targetFsm, 0LL);
   if ( !this
     || (this = (BattleActionCamera_o *)HutongGames_PlayMaker_Fsm__GetFsmGameObject(
                                          (HutongGames_PlayMaker_Fsm_o *)this,
-                                         (System_String_o *)StringLiteral_3547/*"Camera_obj"*/,
+                                         (System_String_o *)StringLiteral_3556/*"Camera_obj"*/,
                                          0LL),
-        (mainFsm = v5->fields.mainFsm) == 0LL)
-    || (v11 = (HutongGames_PlayMaker_FsmGameObject_o *)this,
+        (mainFsm = v4->fields.mainFsm) == 0LL)
+    || (v7 = (HutongGames_PlayMaker_FsmGameObject_o *)this,
         (this = (BattleActionCamera_o *)PlayMakerFSM__get_Fsm(mainFsm, 0LL)) == 0LL)
     || (this = (BattleActionCamera_o *)HutongGames_PlayMaker_Fsm__GetFsmGameObject(
                                          (HutongGames_PlayMaker_Fsm_o *)this,
-                                         (System_String_o *)StringLiteral_3547/*"Camera_obj"*/,
+                                         (System_String_o *)StringLiteral_3556/*"Camera_obj"*/,
                                          0LL)) == 0LL
     || (this = (BattleActionCamera_o *)HutongGames_PlayMaker_FsmGameObject__get_Value(
                                          (HutongGames_PlayMaker_FsmGameObject_o *)this,
                                          0LL),
-        !v11) )
+        !v7) )
   {
 LABEL_15:
-    sub_B5D69C(this, targetFsm);
+    sub_B7076C(this, targetFsm);
   }
-  HutongGames_PlayMaker_FsmGameObject__set_Value(v11, (UnityEngine_GameObject_o *)this, 0LL);
+  HutongGames_PlayMaker_FsmGameObject__set_Value(v7, (UnityEngine_GameObject_o *)this, 0LL);
 }
 
 
@@ -1649,27 +1392,14 @@ void __fastcall BattleActionCamera__loadEffectStatusCamera(
         System_Collections_Generic_Dictionary_string__bool__o *stat,
         const MethodInfo *method)
 {
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
-  int v10; // w1
-  int v11; // w2
-  __int64 v12; // x3
-  int v13; // w1
-  int v14; // w2
-  __int64 v15; // x3
-  int v16; // w1
-  int v17; // w2
-  __int64 v18; // x3
-
-  if ( (byte_42E7F6D & 1) == 0 )
+  if ( (byte_4351034 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_BattleActionCamera_loadEffectStatus_Bloom___, (_DWORD)targetCamera, (_DWORD)stat, method);
-    sub_B5D5C4(&Method_BattleActionCamera_loadEffectStatus_GrayscaleEffect___, v7, v8, v9);
-    sub_B5D5C4(&Method_BattleActionCamera_loadEffectStatus_MotionBlur___, v10, v11, v12);
-    sub_B5D5C4(&Method_BattleActionCamera_loadEffectStatus_Vignetting___, v13, v14, v15);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v16, v17, v18);
-    byte_42E7F6D = 1;
+    sub_B70694(&Method_BattleActionCamera_loadEffectStatus_Bloom___);
+    sub_B70694(&Method_BattleActionCamera_loadEffectStatus_GrayscaleEffect___);
+    sub_B70694(&Method_BattleActionCamera_loadEffectStatus_MotionBlur___);
+    sub_B70694(&Method_BattleActionCamera_loadEffectStatus_Vignetting___);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4351034 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1682,22 +1412,22 @@ void __fastcall BattleActionCamera__loadEffectStatusCamera(
       this,
       targetCamera,
       stat,
-      (const MethodInfo_1AD9D1C *)Method_BattleActionCamera_loadEffectStatus_Bloom___);
+      (const MethodInfo_1BDFA70 *)Method_BattleActionCamera_loadEffectStatus_Bloom___);
     BattleActionCamera__loadEffectStatus_Vignetting_(
       this,
       targetCamera,
       stat,
-      (const MethodInfo_1AD9D1C *)Method_BattleActionCamera_loadEffectStatus_MotionBlur___);
+      (const MethodInfo_1BDFA70 *)Method_BattleActionCamera_loadEffectStatus_MotionBlur___);
     BattleActionCamera__loadEffectStatus_Vignetting_(
       this,
       targetCamera,
       stat,
-      (const MethodInfo_1AD9D1C *)Method_BattleActionCamera_loadEffectStatus_Vignetting___);
+      (const MethodInfo_1BDFA70 *)Method_BattleActionCamera_loadEffectStatus_Vignetting___);
     BattleActionCamera__loadEffectStatus_Vignetting_(
       this,
       targetCamera,
       stat,
-      (const MethodInfo_1AD9D1C *)Method_BattleActionCamera_loadEffectStatus_GrayscaleEffect___);
+      (const MethodInfo_1BDFA70 *)Method_BattleActionCamera_loadEffectStatus_GrayscaleEffect___);
   }
 }
 
@@ -1706,43 +1436,33 @@ void __fastcall BattleActionCamera__loadEffectStatus_Vignetting_(
         BattleActionCamera_o *this,
         UnityEngine_Camera_o *cam,
         System_Collections_Generic_Dictionary_string__bool__o *stat,
-        const MethodInfo_1AD9D1C *method)
+        const MethodInfo_1BDFA70 *method)
 {
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
-  int v10; // w1
-  int v11; // w2
-  __int64 v12; // x3
-  UnityEngine_Object_o *v13; // x20
-  System_String_o *v14; // x0
+  UnityEngine_Object_o *v7; // x20
+  System_String_o *v8; // x0
   bool Item; // w1
 
-  if ( (byte_42EA27C & 1) == 0 )
+  if ( (byte_4353FA3 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_Dictionary_string__bool__ContainsKey__,
-      (_DWORD)cam,
-      (_DWORD)stat,
-      method);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_string__bool__get_Item__, v7, v8, v9);
-    this = (BattleActionCamera_o *)sub_B5D5C4(&UnityEngine_Object_TypeInfo, v10, v11, v12);
-    byte_42EA27C = 1;
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__bool__ContainsKey__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__bool__get_Item__);
+    this = (BattleActionCamera_o *)sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4353FA3 = 1;
   }
   if ( !cam )
     goto LABEL_15;
-  v13 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(UnityEngine_Camera_o *))method->rgctx_data->_0_UnityEngine_Component_GetComponent_T_->methodPointer)(cam);
+  v7 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(UnityEngine_Camera_o *))method->rgctx_data->_0_UnityEngine_Component_GetComponent_T_->methodPointer)(cam);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  this = (BattleActionCamera_o *)UnityEngine_Object__op_Inequality(v13, 0LL, 0LL);
+  this = (BattleActionCamera_o *)UnityEngine_Object__op_Inequality(v7, 0LL, 0LL);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    if ( !v13 )
+    if ( !v7 )
       goto LABEL_15;
-    this = (BattleActionCamera_o *)System_Object__GetType((Il2CppObject *)v13, 0LL);
+    this = (BattleActionCamera_o *)System_Object__GetType((Il2CppObject *)v7, 0LL);
     if ( !this )
       goto LABEL_15;
     this = (BattleActionCamera_o *)((__int64 (__fastcall *)(BattleActionCamera_o *, Il2CppClass *))this->klass[1]._1.castClass)(
@@ -1753,23 +1473,23 @@ void __fastcall BattleActionCamera__loadEffectStatus_Vignetting_(
     if ( System_Collections_Generic_Dictionary_string__bool___ContainsKey(
            stat,
            (System_String_o *)this,
-           (const MethodInfo_2F138DC *)Method_System_Collections_Generic_Dictionary_string__bool__ContainsKey__) )
+           (const MethodInfo_2FA7E50 *)Method_System_Collections_Generic_Dictionary_string__bool__ContainsKey__) )
     {
-      this = (BattleActionCamera_o *)System_Object__GetType((Il2CppObject *)v13, 0LL);
+      this = (BattleActionCamera_o *)System_Object__GetType((Il2CppObject *)v7, 0LL);
       if ( this )
       {
-        v14 = (System_String_o *)((__int64 (__fastcall *)(BattleActionCamera_o *, Il2CppClass *))this->klass[1]._1.castClass)(
-                                   this,
-                                   this->klass[1]._1.declaringType);
+        v8 = (System_String_o *)((__int64 (__fastcall *)(BattleActionCamera_o *, Il2CppClass *))this->klass[1]._1.castClass)(
+                                  this,
+                                  this->klass[1]._1.declaringType);
         Item = System_Collections_Generic_Dictionary_string__bool___get_Item(
                  stat,
-                 v14,
-                 (const MethodInfo_2F1358C *)Method_System_Collections_Generic_Dictionary_string__bool__get_Item__);
-        UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)v13, Item, 0LL);
+                 v8,
+                 (const MethodInfo_2FA7B00 *)Method_System_Collections_Generic_Dictionary_string__bool__get_Item__);
+        UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)v7, Item, 0LL);
         return;
       }
 LABEL_15:
-      sub_B5D69C(this, cam);
+      sub_B7076C(this, cam);
     }
   }
 }
@@ -1780,48 +1500,37 @@ void __fastcall BattleActionCamera__playCameraAnimation(
         System_String_o *animName,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  int v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  int v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v16; // x1
+  __int64 v6; // x1
   UnityEngine_Object_o *Component_srcLineSprite; // x20
-  UnityEngine_Object_o *v18; // x21
-  __int64 v19; // x3
+  UnityEngine_Object_o *v8; // x21
   UnityEngine_GameObject_c *klass; // x8
-  UnityEngine_GameObject_o *v21; // x21
-  unsigned __int64 v22; // x10
+  UnityEngine_GameObject_o *v10; // x21
+  unsigned __int64 v11; // x10
   SimpleAnimation_State_c **p_offset; // x11
-  __int64 v24; // x0
+  __int64 v13; // x0
   UnityEngine_TrackedReference_o *Item; // x0
 
-  if ( (byte_42E7F7C & 1) == 0 )
+  if ( (byte_4351043 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_Animation___, (_DWORD)animName, (_DWORD)method, v3);
-    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, v6, v7, v8);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v9, v10, v11);
-    sub_B5D5C4(&SimpleAnimation_State_TypeInfo, v12, v13, v14);
-    byte_42E7F7C = 1;
+    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    sub_B70694(&SimpleAnimation_State_TypeInfo);
+    byte_4351043 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_28;
   Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                       gameObject,
-                                                      (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                                                      (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_28;
-  v18 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                  gameObject,
-                                  (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+  v8 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
+                                 gameObject,
+                                 (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -1835,31 +1544,31 @@ void __fastcall BattleActionCamera__playCameraAnimation(
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(v18, 0LL, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(v8, 0LL, 0LL);
     if ( ((unsigned __int8)gameObject & 1) == 0 )
       return;
-    if ( v18 )
+    if ( v8 )
     {
       Item = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(
-                                                 (UnityEngine_Animation_o *)v18,
+                                                 (UnityEngine_Animation_o *)v8,
                                                  animName,
                                                  0LL);
       if ( !UnityEngine_TrackedReference__op_Inequality(Item, 0LL, 0LL) )
         return;
       gameObject = (UnityEngine_GameObject_o *)UnityEngine_Animation__get_Item(
-                                                 (UnityEngine_Animation_o *)v18,
+                                                 (UnityEngine_Animation_o *)v8,
                                                  animName,
                                                  0LL);
       if ( gameObject )
       {
         UnityEngine_AnimationState__set_time((UnityEngine_AnimationState_o *)gameObject, 0.0, 0LL);
-        UnityEngine_Animation__Sample((UnityEngine_Animation_o *)v18, 0LL);
-        UnityEngine_Animation__Play_51249124((UnityEngine_Animation_o *)v18, animName, 0LL);
+        UnityEngine_Animation__Sample((UnityEngine_Animation_o *)v8, 0LL);
+        UnityEngine_Animation__Play_51542184((UnityEngine_Animation_o *)v8, animName, 0LL);
         return;
       }
     }
 LABEL_28:
-    sub_B5D69C(gameObject, v16);
+    sub_B7076C(gameObject, v6);
   }
   if ( !Component_srcLineSprite )
     goto LABEL_28;
@@ -1872,28 +1581,28 @@ LABEL_28:
   if ( !gameObject )
     goto LABEL_28;
   klass = gameObject->klass;
-  v21 = gameObject;
+  v10 = gameObject;
   if ( *(_WORD *)&gameObject->klass->_2.bitflags1 )
   {
-    v22 = 0LL;
+    v11 = 0LL;
     p_offset = (SimpleAnimation_State_c **)&klass->_1.interfaceOffsets->offset;
     while ( *(p_offset - 1) != SimpleAnimation_State_TypeInfo )
     {
-      ++v22;
+      ++v11;
       p_offset += 2;
-      if ( v22 >= *(unsigned __int16 *)&gameObject->klass->_2.bitflags1 )
+      if ( v11 >= *(unsigned __int16 *)&gameObject->klass->_2.bitflags1 )
         goto LABEL_16;
     }
-    v24 = (__int64)(&klass[1]._1.gc_desc + 2 * *(_DWORD *)p_offset);
+    v13 = (__int64)(&klass[1]._1.gc_desc + 2 * *(_DWORD *)p_offset);
   }
   else
   {
 LABEL_16:
-    v24 = sub_AF54C0(gameObject, SimpleAnimation_State_TypeInfo, 4LL, v19);
+    v13 = sub_B08590(gameObject, SimpleAnimation_State_TypeInfo, 4LL);
   }
-  (*(void (__fastcall **)(UnityEngine_GameObject_o *, _QWORD, float))v24)(v21, *(_QWORD *)(v24 + 8), 0.0);
+  (*(void (__fastcall **)(UnityEngine_GameObject_o *, _QWORD, float))v13)(v10, *(_QWORD *)(v13 + 8), 0.0);
   SimpleAnimation__Sample((SimpleAnimation_o *)Component_srcLineSprite, 0LL);
-  SimpleAnimation__Play_16676044((SimpleAnimation_o *)Component_srcLineSprite, animName, 0LL);
+  SimpleAnimation__Play_16672920((SimpleAnimation_o *)Component_srcLineSprite, animName, 0LL);
 }
 
 
@@ -1904,47 +1613,26 @@ void __fastcall BattleActionCamera__registerCamera(
         int32_t cameraId,
         const MethodInfo *method)
 {
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
-  int v10; // w1
-  int v11; // w2
-  __int64 v12; // x3
-  int v13; // w1
-  int v14; // w2
-  __int64 v15; // x3
-  int v16; // w1
-  int v17; // w2
-  __int64 v18; // x3
-  int v19; // w1
-  int v20; // w2
-  __int64 v21; // x3
-  int v22; // w1
-  int v23; // w2
-  __int64 v24; // x3
-  int v25; // w1
-  int v26; // w2
-  __int64 v27; // x3
   System_Collections_Generic_Dictionary_int__int__o *cameraTargetDictionary; // x0
   UnityEngine_Transform_o *transform; // x21
   UnityEngine_Object_o *Manager__loadCameraAction; // x20
-  System_String_o *v31; // x1
+  System_String_o *v10; // x1
   PlayMakerFSM_o *Component_srcLineSprite; // x20
-  const MethodInfo *v33; // x2
+  const MethodInfo *v12; // x2
   int32_t key; // [xsp+Ch] [xbp-24h] BYREF
 
   key = cameraId;
-  if ( (byte_42E7F77 & 1) == 0 )
+  if ( (byte_435103E & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__int__Add__, uniqueId, cameraId, method);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__Add__, v7, v8, v9);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__, v10, v11, v12);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__ContainsKey__, v13, v14, v15);
-    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___, v16, v17, v18);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v19, v20, v21);
-    sub_B5D5C4(&ServantAssetLoadManager_TypeInfo, v22, v23, v24);
-    sub_B5D5C4(&StringLiteral_1/*""*/, v25, v26, v27);
-    byte_42E7F77 = 1;
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int__Add__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__Add__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__ContainsKey__);
+    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    sub_B70694(&ServantAssetLoadManager_TypeInfo);
+    sub_B70694(&StringLiteral_1/*""*/);
+    byte_435103E = 1;
   }
   if ( cameraId )
   {
@@ -1954,7 +1642,7 @@ void __fastcall BattleActionCamera__registerCamera(
     if ( !System_Collections_Generic_Dictionary_int__int___ContainsKey(
             cameraTargetDictionary,
             uniqueId,
-            (const MethodInfo_2F0B0BC *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__) )
+            (const MethodInfo_2FBB3C4 *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__) )
     {
       cameraTargetDictionary = this->fields.cameraTargetDictionary;
       if ( !cameraTargetDictionary )
@@ -1963,7 +1651,7 @@ void __fastcall BattleActionCamera__registerCamera(
         cameraTargetDictionary,
         uniqueId,
         cameraId,
-        (const MethodInfo_2F0AE58 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
+        (const MethodInfo_2FBB160 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
     }
     cameraTargetDictionary = (System_Collections_Generic_Dictionary_int__int__o *)this->fields.cameraFsmDictionary;
     if ( !cameraTargetDictionary )
@@ -1971,7 +1659,7 @@ void __fastcall BattleActionCamera__registerCamera(
     if ( System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData___ContainsKey(
            (System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData__o *)cameraTargetDictionary,
            cameraId,
-           (const MethodInfo_2F32338 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__ContainsKey__) )
+           (const MethodInfo_2FC67DC *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__ContainsKey__) )
     {
       return;
     }
@@ -1980,7 +1668,7 @@ void __fastcall BattleActionCamera__registerCamera(
                                                                                     0LL);
     if ( !cameraTargetDictionary )
 LABEL_29:
-      sub_B5D69C(cameraTargetDictionary, *(_QWORD *)&uniqueId);
+      sub_B7076C(cameraTargetDictionary, *(_QWORD *)&uniqueId);
     transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)cameraTargetDictionary, 0LL);
     if ( (BYTE3(ServantAssetLoadManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !ServantAssetLoadManager_TypeInfo->_2.cctor_finished )
@@ -2003,11 +1691,11 @@ LABEL_29:
                                                                                       0LL);
       if ( !Manager__loadCameraAction )
         goto LABEL_29;
-      v31 = cameraTargetDictionary ? (System_String_o *)cameraTargetDictionary : (System_String_o *)StringLiteral_1/*""*/;
-      UnityEngine_Object__set_name(Manager__loadCameraAction, v31, 0LL);
+      v10 = cameraTargetDictionary ? (System_String_o *)cameraTargetDictionary : (System_String_o *)StringLiteral_1/*""*/;
+      UnityEngine_Object__set_name(Manager__loadCameraAction, v10, 0LL);
       Component_srcLineSprite = (PlayMakerFSM_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                     (UnityEngine_GameObject_o *)Manager__loadCameraAction,
-                                                    (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___);
+                                                    (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
@@ -2015,7 +1703,7 @@ LABEL_29:
       }
       if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_srcLineSprite, 0LL, 0LL) )
       {
-        BattleActionCamera__initializeRegisterFsm(this, Component_srcLineSprite, v33);
+        BattleActionCamera__initializeRegisterFsm(this, Component_srcLineSprite, v12);
         cameraTargetDictionary = (System_Collections_Generic_Dictionary_int__int__o *)this->fields.cameraFsmDictionary;
         if ( cameraTargetDictionary )
         {
@@ -2023,7 +1711,7 @@ LABEL_29:
             (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)cameraTargetDictionary,
             key,
             (WarBoardEvalValueSquare_EvalValueSquare_o *)Component_srcLineSprite,
-            (const MethodInfo_2F320C4 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__Add__);
+            (const MethodInfo_2FC6568 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__Add__);
           return;
         }
         goto LABEL_29;
@@ -2054,7 +1742,7 @@ void __fastcall BattleActionCamera__saveEffectStatus(BattleActionCamera_o *this,
 
   v4 = BattleActionCamera__saveEffectStatusCamera(this, this->fields.frontcamera, v2);
   this->fields.frontCameraEffectsStatus = v4;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.frontCameraEffectsStatus,
     (System_Int32_array **)v4,
     v5,
@@ -2065,7 +1753,7 @@ void __fastcall BattleActionCamera__saveEffectStatus(BattleActionCamera_o *this,
     v10);
   v12 = BattleActionCamera__saveEffectStatusCamera(this, this->fields.middleCamera, v11);
   this->fields.middleCameraEffectsStatus = v12;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.middleCameraEffectsStatus,
     (System_Int32_array **)v12,
     v13,
@@ -2082,72 +1770,53 @@ System_Collections_Generic_Dictionary_string__bool__o *__fastcall BattleActionCa
         UnityEngine_Camera_o *targetCamera,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  int v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  int v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
-  int v15; // w1
-  int v16; // w2
-  __int64 v17; // x3
-  int v18; // w1
-  int v19; // w2
-  __int64 v20; // x3
-  int v21; // w1
-  int v22; // w2
-  __int64 v23; // x3
-  System_Collections_Generic_Dictionary_string__bool__o *v24; // x21
+  System_Collections_Generic_Dictionary_string__bool__o *v5; // x21
 
-  if ( (byte_42E7F6C & 1) == 0 )
+  if ( (byte_4351033 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_BattleActionCamera_saveEffectStatus_Bloom___, (_DWORD)targetCamera, (_DWORD)method, v3);
-    sub_B5D5C4(&Method_BattleActionCamera_saveEffectStatus_GrayscaleEffect___, v6, v7, v8);
-    sub_B5D5C4(&Method_BattleActionCamera_saveEffectStatus_MotionBlur___, v9, v10, v11);
-    sub_B5D5C4(&Method_BattleActionCamera_saveEffectStatus_Vignetting___, v12, v13, v14);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_string__bool___ctor__, v15, v16, v17);
-    sub_B5D5C4(&System_Collections_Generic_Dictionary_string__bool__TypeInfo, v18, v19, v20);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v21, v22, v23);
-    byte_42E7F6C = 1;
+    sub_B70694(&Method_BattleActionCamera_saveEffectStatus_Bloom___);
+    sub_B70694(&Method_BattleActionCamera_saveEffectStatus_GrayscaleEffect___);
+    sub_B70694(&Method_BattleActionCamera_saveEffectStatus_MotionBlur___);
+    sub_B70694(&Method_BattleActionCamera_saveEffectStatus_Vignetting___);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__bool___ctor__);
+    sub_B70694(&System_Collections_Generic_Dictionary_string__bool__TypeInfo);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4351033 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  v24 = 0LL;
+  v5 = 0LL;
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)targetCamera, 0LL, 0LL) )
   {
-    v24 = (System_Collections_Generic_Dictionary_string__bool__o *)sub_B5D694(System_Collections_Generic_Dictionary_string__bool__TypeInfo);
+    v5 = (System_Collections_Generic_Dictionary_string__bool__o *)sub_B70764(System_Collections_Generic_Dictionary_string__bool__TypeInfo);
     System_Collections_Generic_Dictionary_string__bool____ctor(
-      v24,
-      (const MethodInfo_2F12A9C *)Method_System_Collections_Generic_Dictionary_string__bool___ctor__);
+      v5,
+      (const MethodInfo_2FA7010 *)Method_System_Collections_Generic_Dictionary_string__bool___ctor__);
     BattleActionCamera__saveEffectStatus_Vignetting_(
       this,
       targetCamera,
-      v24,
-      (const MethodInfo_1AD9E68 *)Method_BattleActionCamera_saveEffectStatus_Bloom___);
+      v5,
+      (const MethodInfo_1BDFBBC *)Method_BattleActionCamera_saveEffectStatus_Bloom___);
     BattleActionCamera__saveEffectStatus_Vignetting_(
       this,
       targetCamera,
-      v24,
-      (const MethodInfo_1AD9E68 *)Method_BattleActionCamera_saveEffectStatus_MotionBlur___);
+      v5,
+      (const MethodInfo_1BDFBBC *)Method_BattleActionCamera_saveEffectStatus_MotionBlur___);
     BattleActionCamera__saveEffectStatus_Vignetting_(
       this,
       targetCamera,
-      v24,
-      (const MethodInfo_1AD9E68 *)Method_BattleActionCamera_saveEffectStatus_Vignetting___);
+      v5,
+      (const MethodInfo_1BDFBBC *)Method_BattleActionCamera_saveEffectStatus_Vignetting___);
     BattleActionCamera__saveEffectStatus_Vignetting_(
       this,
       targetCamera,
-      v24,
-      (const MethodInfo_1AD9E68 *)Method_BattleActionCamera_saveEffectStatus_GrayscaleEffect___);
+      v5,
+      (const MethodInfo_1BDFBBC *)Method_BattleActionCamera_saveEffectStatus_GrayscaleEffect___);
   }
-  return v24;
+  return v5;
 }
 
 
@@ -2155,57 +1824,50 @@ void __fastcall BattleActionCamera__saveEffectStatus_Vignetting_(
         BattleActionCamera_o *this,
         UnityEngine_Camera_o *cam,
         System_Collections_Generic_Dictionary_string__bool__o *stat,
-        const MethodInfo_1AD9E68 *method)
+        const MethodInfo_1BDFBBC *method)
 {
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
-  UnityEngine_Object_o *v10; // x20
-  System_String_o *v11; // x21
+  UnityEngine_Object_o *v7; // x20
+  System_String_o *v8; // x21
 
-  if ( (byte_42EA27D & 1) == 0 )
+  if ( (byte_4353FA4 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_Dictionary_string__bool__set_Item__,
-      (_DWORD)cam,
-      (_DWORD)stat,
-      method);
-    this = (BattleActionCamera_o *)sub_B5D5C4(&UnityEngine_Object_TypeInfo, v7, v8, v9);
-    byte_42EA27D = 1;
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__bool__set_Item__);
+    this = (BattleActionCamera_o *)sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4353FA4 = 1;
   }
   if ( !cam )
     goto LABEL_13;
-  v10 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(UnityEngine_Camera_o *))method->rgctx_data->_0_UnityEngine_Component_GetComponent_T_->methodPointer)(cam);
+  v7 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(UnityEngine_Camera_o *))method->rgctx_data->_0_UnityEngine_Component_GetComponent_T_->methodPointer)(cam);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  this = (BattleActionCamera_o *)UnityEngine_Object__op_Inequality(v10, 0LL, 0LL);
+  this = (BattleActionCamera_o *)UnityEngine_Object__op_Inequality(v7, 0LL, 0LL);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    if ( v10 )
+    if ( v7 )
     {
-      this = (BattleActionCamera_o *)System_Object__GetType((Il2CppObject *)v10, 0LL);
+      this = (BattleActionCamera_o *)System_Object__GetType((Il2CppObject *)v7, 0LL);
       if ( this )
       {
-        v11 = (System_String_o *)((__int64 (__fastcall *)(BattleActionCamera_o *, Il2CppClass *))this->klass[1]._1.castClass)(
-                                   this,
-                                   this->klass[1]._1.declaringType);
-        this = (BattleActionCamera_o *)UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)v10, 0LL);
+        v8 = (System_String_o *)((__int64 (__fastcall *)(BattleActionCamera_o *, Il2CppClass *))this->klass[1]._1.castClass)(
+                                  this,
+                                  this->klass[1]._1.declaringType);
+        this = (BattleActionCamera_o *)UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)v7, 0LL);
         if ( stat )
         {
           System_Collections_Generic_Dictionary_string__bool___set_Item(
             stat,
-            v11,
+            v8,
             (unsigned __int8)this & 1,
-            (const MethodInfo_2F13628 *)Method_System_Collections_Generic_Dictionary_string__bool__set_Item__);
+            (const MethodInfo_2FA7B9C *)Method_System_Collections_Generic_Dictionary_string__bool__set_Item__);
           return;
         }
       }
     }
 LABEL_13:
-    sub_B5D69C(this, cam);
+    sub_B7076C(this, cam);
   }
 }
 
@@ -2217,93 +1879,68 @@ void __fastcall BattleActionCamera__sendCameraEvent(
         System_String_o *eventName,
         const MethodInfo *method)
 {
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
-  int v10; // w1
-  int v11; // w2
-  __int64 v12; // x3
-  int v13; // w1
-  int v14; // w2
-  __int64 v15; // x3
-  int v16; // w1
-  int v17; // w2
-  __int64 v18; // x3
-  int v19; // w1
-  int v20; // w2
-  __int64 v21; // x3
-  int v22; // w1
-  int v23; // w2
-  __int64 v24; // x3
-  int v25; // w1
-  int v26; // w2
-  __int64 v27; // x3
   struct System_Collections_Generic_Dictionary_int__PlayMakerFSM__o *cameraFsmDictionary; // x0
   int key; // w26
   Il2CppObject *value; // x22
-  _BOOL8 v31; // x0
-  __int64 v32; // x1
-  const MethodInfo *v33; // x1
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v34; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v35; // [xsp+30h] [xbp-70h] BYREF
+  _BOOL8 v10; // x0
+  __int64 v11; // x1
+  const MethodInfo *v12; // x1
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v13; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v14; // [xsp+30h] [xbp-70h] BYREF
 
-  if ( (byte_42E7F6F & 1) == 0 )
+  if ( (byte_4351036 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__GetEnumerator__,
-      cameraId,
-      (_DWORD)eventName,
-      method);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__Dispose__, v7, v8, v9);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__MoveNext__, v10, v11, v12);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__get_Current__, v13, v14, v15);
-    sub_B5D5C4(&Method_System_Collections_Generic_KeyValuePair_int__PlayMakerFSM__get_Key__, v16, v17, v18);
-    sub_B5D5C4(&Method_System_Collections_Generic_KeyValuePair_int__PlayMakerFSM__get_Value__, v19, v20, v21);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v22, v23, v24);
-    sub_B5D5C4(&StringLiteral_2972/*"CAMERA_END"*/, v25, v26, v27);
-    byte_42E7F6F = 1;
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__GetEnumerator__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__Dispose__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__MoveNext__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__get_Current__);
+    sub_B70694(&Method_System_Collections_Generic_KeyValuePair_int__PlayMakerFSM__get_Key__);
+    sub_B70694(&Method_System_Collections_Generic_KeyValuePair_int__PlayMakerFSM__get_Value__);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    sub_B70694(&StringLiteral_2981/*"CAMERA_END"*/);
+    byte_4351036 = 1;
   }
-  memset(&v35, 0, sizeof(v35));
+  memset(&v14, 0, sizeof(v14));
   cameraFsmDictionary = this->fields.cameraFsmDictionary;
   if ( !cameraFsmDictionary )
-    sub_B5D69C(0LL, *(_QWORD *)&cameraId);
+    sub_B7076C(0LL, *(_QWORD *)&cameraId);
   System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval___GetEnumerator(
-    &v34,
+    &v13,
     (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__o *)cameraFsmDictionary,
-    (const MethodInfo_2F326A8 *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__GetEnumerator__);
-  v35 = v34;
+    (const MethodInfo_2FC6B4C *)Method_System_Collections_Generic_Dictionary_int__PlayMakerFSM__GetEnumerator__);
+  v14 = v13;
   while ( System_Collections_Generic_Dictionary_Enumerator_int__WarBoardEvalValueSquare_CalcEval___MoveNext(
-            &v35,
-            (const MethodInfo_28A1C74 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__MoveNext__) )
+            &v14,
+            (const MethodInfo_2832CC4 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__MoveNext__) )
   {
-    key = (int)v35.fields.current.fields.key;
-    value = v35.fields.current.fields.value;
+    key = (int)v14.fields.current.fields.key;
+    value = v14.fields.current.fields.value;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    v31 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)value, 0LL, 0LL);
-    if ( !v31 )
+    v10 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)value, 0LL, 0LL);
+    if ( !v10 )
     {
       if ( key == cameraId )
       {
         if ( !value )
-          sub_B5D69C(v31, v32);
+          sub_B7076C(v10, v11);
         PlayMakerFSM__SendEvent((PlayMakerFSM_o *)value, eventName, 0LL);
       }
       else
       {
         if ( !value )
-          sub_B5D69C(v31, v32);
-        PlayMakerFSM__SendEvent((PlayMakerFSM_o *)value, (System_String_o *)StringLiteral_2972/*"CAMERA_END"*/, 0LL);
+          sub_B7076C(v10, v11);
+        PlayMakerFSM__SendEvent((PlayMakerFSM_o *)value, (System_String_o *)StringLiteral_2981/*"CAMERA_END"*/, 0LL);
       }
     }
   }
   System_Collections_Generic_Dictionary_Enumerator_int__WarBoardEvalValueSquare_CalcEval___Dispose(
-    &v35,
-    (const MethodInfo_28A1DE0 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__Dispose__);
-  BattleActionCamera__ResetFieldCameraEvent(this, v33);
+    &v14,
+    (const MethodInfo_2832E30 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__PlayMakerFSM__Dispose__);
+  BattleActionCamera__ResetFieldCameraEvent(this, v12);
 }
 
 
@@ -2313,19 +1950,19 @@ void __fastcall BattleActionCamera__sendEvent(
         System_String_o *eventName,
         const MethodInfo *method)
 {
-  UnityEngine_Object_o *UniqueFsm_24120556; // x21
+  UnityEngine_Object_o *UniqueFsm_23764908; // x21
   const MethodInfo *v8; // x3
   int32_t v9; // w1
   BattleActionCamera_o *v10; // x0
   int32_t cameraId; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_42E7F70 & 1) == 0 )
+  if ( (byte_4351037 & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, uniqueId, (_DWORD)eventName, method);
-    byte_42E7F70 = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4351037 = 1;
   }
   cameraId = 0;
-  UniqueFsm_24120556 = (UnityEngine_Object_o *)BattleActionCamera__getUniqueFsm_24120556(
+  UniqueFsm_23764908 = (UnityEngine_Object_o *)BattleActionCamera__getUniqueFsm_23764908(
                                                  this,
                                                  uniqueId,
                                                  &cameraId,
@@ -2335,8 +1972,8 @@ void __fastcall BattleActionCamera__sendEvent(
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(UniqueFsm_24120556, 0LL, 0LL)
-    && PlayMakerFSMHelper__checkFsmGlobalTransitions((PlayMakerFSM_o *)UniqueFsm_24120556, eventName, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(UniqueFsm_23764908, 0LL, 0LL)
+    && PlayMakerFSMHelper__checkFsmGlobalTransitions((PlayMakerFSM_o *)UniqueFsm_23764908, eventName, 0LL) )
   {
     v9 = cameraId;
     v10 = this;
@@ -2368,19 +2005,19 @@ void __fastcall BattleActionCamera__setGameObject(
         System_String_o *nameStr,
         const MethodInfo *method)
 {
-  UnityEngine_Object_o *UniqueFsm_24120556; // x22
+  UnityEngine_Object_o *UniqueFsm_23764908; // x22
   HutongGames_PlayMaker_FsmVariables_o *FsmVariables; // x0
   __int64 v11; // x1
   HutongGames_PlayMaker_FsmGameObject_o *FsmGameObject; // x0
   int32_t cameraId; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_42E7F74 & 1) == 0 )
+  if ( (byte_435103B & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, uniqueId, (_DWORD)obj, nameStr);
-    byte_42E7F74 = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_435103B = 1;
   }
   cameraId = 0;
-  UniqueFsm_24120556 = (UnityEngine_Object_o *)BattleActionCamera__getUniqueFsm_24120556(
+  UniqueFsm_23764908 = (UnityEngine_Object_o *)BattleActionCamera__getUniqueFsm_23764908(
                                                  this,
                                                  uniqueId,
                                                  &cameraId,
@@ -2390,12 +2027,12 @@ void __fastcall BattleActionCamera__setGameObject(
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  FsmVariables = (HutongGames_PlayMaker_FsmVariables_o *)UnityEngine_Object__op_Inequality(UniqueFsm_24120556, 0LL, 0LL);
+  FsmVariables = (HutongGames_PlayMaker_FsmVariables_o *)UnityEngine_Object__op_Inequality(UniqueFsm_23764908, 0LL, 0LL);
   if ( ((unsigned __int8)FsmVariables & 1) != 0 )
   {
-    if ( !UniqueFsm_24120556 )
+    if ( !UniqueFsm_23764908 )
       goto LABEL_19;
-    FsmVariables = PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)UniqueFsm_24120556, 0LL);
+    FsmVariables = PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)UniqueFsm_23764908, 0LL);
     if ( !FsmVariables )
       goto LABEL_19;
     FsmGameObject = HutongGames_PlayMaker_FsmVariables__FindFsmGameObject(FsmVariables, nameStr, 0LL);
@@ -2431,7 +2068,7 @@ void __fastcall BattleActionCamera__setGameObject(
       }
     }
 LABEL_19:
-    sub_B5D69C(FsmVariables, v11);
+    sub_B7076C(FsmVariables, v11);
   }
 }
 
@@ -2446,16 +2083,15 @@ void __fastcall BattleActionCamera__setNormalMode(BattleActionCamera_o *this, co
 
 void __fastcall BattleActionCamera__setSpecialCamera(BattleActionCamera_o *this, bool active, const MethodInfo *method)
 {
-  __int64 v3; // x3
   UnityEngine_Object_o *frontcamera; // x21
-  __int64 v7; // x1
+  __int64 v6; // x1
   UnityEngine_Component_o *gameObject; // x0
   UnityEngine_Object_o *middleCamera; // x21
 
-  if ( (byte_42E7F6B & 1) == 0 )
+  if ( (byte_4351032 & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, active, (_DWORD)method, v3);
-    byte_42E7F6B = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4351032 = 1;
   }
   frontcamera = (UnityEngine_Object_o *)this->fields.frontcamera;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2492,7 +2128,7 @@ void __fastcall BattleActionCamera__setSpecialCamera(BattleActionCamera_o *this,
       }
     }
 LABEL_18:
-    sub_B5D69C(gameObject, v7);
+    sub_B7076C(gameObject, v6);
   }
 }
 
@@ -2517,7 +2153,7 @@ void __fastcall BattleActionCamera__set_actorCameraDefaultClipRange(
   System_Int32_array *v7; // x7
 
   this->fields._actorCameraDefaultClipRange_k__BackingField = value;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields._actorCameraDefaultClipRange_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -2541,7 +2177,7 @@ void __fastcall BattleActionCamera__set_middleCameraDefaultClipRange(
   System_Int32_array *v7; // x7
 
   this->fields._middleCameraDefaultClipRange_k__BackingField = value;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields._middleCameraDefaultClipRange_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -2556,44 +2192,36 @@ void __fastcall BattleActionCamera__set_middleCameraDefaultClipRange(
 // local variable allocation has failed, the output may be wrong!
 void __fastcall BattleActionCamera__stopCameraAnimation(BattleActionCamera_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v12; // x1
+  __int64 v4; // x1
   UnityEngine_Object_o *Component_srcLineSprite; // x21
-  UnityEngine_Object_o *v14; // x20
+  UnityEngine_Object_o *v6; // x20
   UnityEngine_Transform_o *transform; // x20
+  int v8; // s0
+  UnityEngine_Transform_o *v11; // x20
+  int v12; // s0
+  UnityEngine_Transform_o *v15; // x19
   int v16; // s0
-  UnityEngine_Transform_o *v19; // x20
-  int v20; // s0
-  UnityEngine_Transform_o *v23; // x19
-  int v24; // s0
 
-  if ( (byte_42E7F7D & 1) == 0 )
+  if ( (byte_4351044 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_Animation___, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, v5, v6, v7);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v8, v9, v10);
-    byte_42E7F7D = 1;
+    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4351044 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_21;
   Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                       gameObject,
-                                                      (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                                                      (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_21;
-  v14 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                  gameObject,
-                                  (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+  v6 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
+                                 gameObject,
+                                 (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -2613,57 +2241,54 @@ void __fastcall BattleActionCamera__stopCameraAnimation(BattleActionCamera_o *th
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(v14, 0LL, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(v6, 0LL, 0LL);
     if ( ((unsigned __int8)gameObject & 1) != 0 )
     {
-      if ( !v14 )
+      if ( !v6 )
         goto LABEL_21;
-      UnityEngine_Animation__Stop((UnityEngine_Animation_o *)v14, 0LL);
+      UnityEngine_Animation__Stop((UnityEngine_Animation_o *)v6, 0LL);
     }
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  *(UnityEngine_Vector3_o *)&v16 = UnityEngine_Vector3__get_zero(0LL);
+  *(UnityEngine_Vector3_o *)&v8 = UnityEngine_Vector3__get_zero(0LL);
   if ( !transform
-    || (UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&v16, 0LL),
-        v19 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL),
-        *(UnityEngine_Vector3_o *)&v20 = UnityEngine_Vector3__get_one(0LL),
-        !v19)
-    || (UnityEngine_Transform__set_localScale(v19, *(UnityEngine_Vector3_o *)&v20, 0LL),
-        v23 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL),
-        *(UnityEngine_Vector3_o *)&v24 = UnityEngine_Vector3__get_zero(0LL),
-        !v23) )
+    || (UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&v8, 0LL),
+        v11 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL),
+        *(UnityEngine_Vector3_o *)&v12 = UnityEngine_Vector3__get_one(0LL),
+        !v11)
+    || (UnityEngine_Transform__set_localScale(v11, *(UnityEngine_Vector3_o *)&v12, 0LL),
+        v15 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL),
+        *(UnityEngine_Vector3_o *)&v16 = UnityEngine_Vector3__get_zero(0LL),
+        !v15) )
   {
 LABEL_21:
-    sub_B5D69C(gameObject, v12);
+    sub_B7076C(gameObject, v4);
   }
-  UnityEngine_Transform__set_eulerAngles(v23, *(UnityEngine_Vector3_o *)&v24, 0LL);
+  UnityEngine_Transform__set_eulerAngles(v15, *(UnityEngine_Vector3_o *)&v16, 0LL);
 }
 
 
 void __fastcall BattleActionCamera___c___cctor(const MethodInfo *method)
 {
-  int v1; // w1
-  int v2; // w2
-  __int64 v3; // x3
-  Il2CppObject *v4; // x19
+  Il2CppObject *v1; // x19
   BattleServantConfConponent_o *static_fields; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  System_String_array **v3; // x2
+  System_String_array **v4; // x3
+  System_Boolean_array **v5; // x4
+  System_Int32_array **v6; // x5
+  System_Int32_array *v7; // x6
+  System_Int32_array *v8; // x7
 
-  if ( (byte_42E7552 & 1) == 0 )
+  if ( (byte_43509F1 & 1) == 0 )
   {
-    sub_B5D5C4(&BattleActionCamera___c_TypeInfo, v1, v2, v3);
-    byte_42E7552 = 1;
+    sub_B70694(&BattleActionCamera___c_TypeInfo);
+    byte_43509F1 = 1;
   }
-  v4 = (Il2CppObject *)sub_B5D694(BattleActionCamera___c_TypeInfo);
-  System_Object___ctor(v4, 0LL);
+  v1 = (Il2CppObject *)sub_B70764(BattleActionCamera___c_TypeInfo);
+  System_Object___ctor(v1, 0LL);
   static_fields = (BattleServantConfConponent_o *)BattleActionCamera___c_TypeInfo->static_fields;
-  static_fields->klass = (BattleServantConfConponent_c *)v4;
-  sub_B5D560(static_fields, (System_Int32_array **)v4, v6, v7, v8, v9, v10, v11);
+  static_fields->klass = (BattleServantConfConponent_c *)v1;
+  sub_B70630(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -2678,23 +2303,22 @@ void __fastcall BattleActionCamera___c___InitFieldCameraList_b__26_0(
         PlayMakerFSM_o *x,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_42E7553 & 1) == 0 )
+  if ( (byte_43509F2 & 1) == 0 )
   {
-    this = (BattleActionCamera___c_o *)sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)x, (_DWORD)method, v3);
-    byte_42E7553 = 1;
+    this = (BattleActionCamera___c_o *)sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_43509F2 = 1;
   }
   if ( !x )
-    sub_B5D69C(this, x);
+    sub_B7076C(this, x);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)x, 0LL);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  UnityEngine_Object__Destroy_35620236(gameObject, 0LL);
+  UnityEngine_Object__Destroy_36067208(gameObject, 0LL);
 }
 
 
@@ -2704,20 +2328,13 @@ bool __fastcall BattleActionCamera___c___ResetAllCameraEvent_b__41_0(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *value; // x19
-  int v4; // w1
-  int v5; // w2
-  __int64 v6; // x3
 
   value = (UnityEngine_Object_o *)pair.fields.value;
-  if ( (byte_42E7554 & 1) == 0 )
+  if ( (byte_43509F3 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_KeyValuePair_int__PlayMakerFSM__get_Value__,
-      pair.fields.key,
-      pair.fields.value,
-      method);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v4, v5, v6);
-    byte_42E7554 = 1;
+    sub_B70694(&Method_System_Collections_Generic_KeyValuePair_int__PlayMakerFSM__get_Value__);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_43509F3 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2734,24 +2351,17 @@ void __fastcall BattleActionCamera___c___ResetAllCameraEvent_b__41_1(
         const MethodInfo *method)
 {
   PlayMakerFSM_o *value; // x19
-  int v4; // w1
-  int v5; // w2
-  __int64 v6; // x3
 
   value = pair.fields.value;
-  if ( (byte_42E7555 & 1) == 0 )
+  if ( (byte_43509F4 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_KeyValuePair_int__PlayMakerFSM__get_Value__,
-      pair.fields.key,
-      pair.fields.value,
-      method);
-    this = (BattleActionCamera___c_o *)sub_B5D5C4(&StringLiteral_2972/*"CAMERA_END"*/, v4, v5, v6);
-    byte_42E7555 = 1;
+    sub_B70694(&Method_System_Collections_Generic_KeyValuePair_int__PlayMakerFSM__get_Value__);
+    this = (BattleActionCamera___c_o *)sub_B70694(&StringLiteral_2981/*"CAMERA_END"*/);
+    byte_43509F4 = 1;
   }
   if ( !value )
-    sub_B5D69C(this, *(_QWORD *)&pair.fields.key);
-  PlayMakerFSM__SendEvent(value, (System_String_o *)StringLiteral_2972/*"CAMERA_END"*/, 0LL);
+    sub_B7076C(this, *(_QWORD *)&pair.fields.key);
+  PlayMakerFSM__SendEvent(value, (System_String_o *)StringLiteral_2981/*"CAMERA_END"*/, 0LL);
 }
 
 
@@ -2760,16 +2370,14 @@ void __fastcall BattleActionCamera___c___ResetFieldCameraEvent_b__42_0(
         PlayMakerFSM_o *fsm,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-
-  if ( (byte_42E7556 & 1) == 0 )
+  if ( (byte_43509F5 & 1) == 0 )
   {
-    this = (BattleActionCamera___c_o *)sub_B5D5C4(&StringLiteral_2972/*"CAMERA_END"*/, (_DWORD)fsm, (_DWORD)method, v3);
-    byte_42E7556 = 1;
+    this = (BattleActionCamera___c_o *)sub_B70694(&StringLiteral_2981/*"CAMERA_END"*/);
+    byte_43509F5 = 1;
   }
   if ( !fsm )
-    sub_B5D69C(this, fsm);
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_2972/*"CAMERA_END"*/, 0LL);
+    sub_B7076C(this, fsm);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_2981/*"CAMERA_END"*/, 0LL);
 }
 
 

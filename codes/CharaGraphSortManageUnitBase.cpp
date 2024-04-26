@@ -16,7 +16,7 @@ void __fastcall CharaGraphSortManageUnitBase__SetSortSaveKeyPrefix(
   System_Int32_array *v7; // x7
 
   this->fields._SortSaveKeyPrefix_k__BackingField = sortSaveKeyPrefix;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)sortSaveKeyPrefix,
     (System_String_array **)method,
@@ -32,56 +32,54 @@ ListViewSort_o *__fastcall CharaGraphSortManageUnitBase__get_SortInfo(
         CharaGraphSortManageUnitBase_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   struct ListViewSort_o *sortInfo; // x21
   System_String_o *SortSaveKeyPrefix_k__BackingField; // x21
-  System_String_o *v7; // x0
-  System_String_o *v8; // x22
-  int32_t v9; // w23
-  __int64 v10; // x0
-  __int64 v11; // x1
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
+  System_String_o *v5; // x0
+  System_String_o *v6; // x22
+  int32_t v7; // w23
+  __int64 v8; // x0
+  __int64 v9; // x1
+  System_String_array **v10; // x2
+  System_String_array **v11; // x3
+  System_Boolean_array **v12; // x4
+  System_Int32_array **v13; // x5
+  System_Int32_array *v14; // x6
+  System_Int32_array *v15; // x7
 
-  if ( (byte_42E96F8 & 1) == 0 )
+  if ( (byte_4354A7C & 1) == 0 )
   {
-    sub_B5D5C4(&ListViewSort_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E96F8 = 1;
+    sub_B70694(&ListViewSort_TypeInfo);
+    byte_4354A7C = 1;
   }
   sortInfo = this->fields.sortInfo;
   if ( !sortInfo )
   {
     SortSaveKeyPrefix_k__BackingField = this->fields._SortSaveKeyPrefix_k__BackingField;
-    v7 = (System_String_o *)((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, const char *))this->klass[1]._1.gc_desc)(
+    v5 = (System_String_o *)((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, const char *))this->klass[1]._1.gc_desc)(
                               this,
                               this->klass[1]._1.name);
-    v8 = System_String__Concat_44577788(SortSaveKeyPrefix_k__BackingField, v7, 0LL);
-    v9 = ((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, void *))this->klass[1]._1.namespaze)(
+    v6 = System_String__Concat_44758168(SortSaveKeyPrefix_k__BackingField, v5, 0LL);
+    v7 = ((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, void *))this->klass[1]._1.namespaze)(
            this,
            this->klass[1]._1.byval_arg.data);
-    sortInfo = (struct ListViewSort_o *)sub_B5D694(ListViewSort_TypeInfo);
-    ListViewSort___ctor_34028932(sortInfo, v8, v9, 0, 0LL);
-    v10 = (*(__int64 (__fastcall **)(CharaGraphSortManageUnitBase_o *, void *))&this->klass[1]._1.byval_arg.bits)(
-            this,
-            this->klass[1]._1.this_arg.data);
+    sortInfo = (struct ListViewSort_o *)sub_B70764(ListViewSort_TypeInfo);
+    ListViewSort___ctor_33980040(sortInfo, v6, v7, 0, 0LL);
+    v8 = (*(__int64 (__fastcall **)(CharaGraphSortManageUnitBase_o *, void *))&this->klass[1]._1.byval_arg.bits)(
+           this,
+           this->klass[1]._1.this_arg.data);
     if ( !sortInfo )
-      sub_B5D69C(v10, v11);
-    sortInfo->fields.listViewKind = v10;
+      sub_B7076C(v8, v9);
+    sortInfo->fields.listViewKind = v8;
     this->fields.sortInfo = sortInfo;
-    sub_B5D560(
+    sub_B70630(
       (BattleServantConfConponent_o *)&this->fields.sortInfo,
       (System_Int32_array **)sortInfo,
+      v10,
+      v11,
       v12,
       v13,
       v14,
-      v15,
-      v16,
-      v17);
+      v15);
   }
   return sortInfo;
 }
@@ -107,7 +105,7 @@ void __fastcall CharaGraphSortManageUnitBase__set_SortSaveKeyPrefix(
   System_Int32_array *v7; // x7
 
   this->fields._SortSaveKeyPrefix_k__BackingField = value;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)value,
     (System_String_array **)method,

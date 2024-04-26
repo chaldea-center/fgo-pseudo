@@ -3,27 +3,26 @@ System_Int32_array *__fastcall CommonFunction__JoinIndiv(
         System_Int32_array *addIndiv,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  __int64 v6; // x8
-  __int64 v7; // x9
-  System_Array_o *v8; // x21
+  __int64 v5; // x8
+  __int64 v6; // x9
+  System_Array_o *v7; // x21
 
-  if ( (byte_42E4D42 & 1) == 0 )
+  if ( (byte_434DFA3 & 1) == 0 )
   {
-    sub_B5D5C4(&int___TypeInfo, (_DWORD)addIndiv, (_DWORD)method, v3);
-    byte_42E4D42 = 1;
+    sub_B70694(&int___TypeInfo);
+    byte_434DFA3 = 1;
   }
   if ( addIndiv )
   {
-    v6 = *(_QWORD *)&addIndiv->max_length;
-    if ( v6 )
+    v5 = *(_QWORD *)&addIndiv->max_length;
+    if ( v5 )
     {
-      if ( baseIndiv && (v7 = *(_QWORD *)&baseIndiv->max_length) != 0 )
+      if ( baseIndiv && (v6 = *(_QWORD *)&baseIndiv->max_length) != 0 )
       {
-        v8 = (System_Array_o *)sub_B5D5DC(int___TypeInfo, (unsigned int)(v7 + v6));
-        System_Array__CopyTo((System_Array_o *)baseIndiv, v8, 0, 0LL);
-        System_Array__CopyTo((System_Array_o *)addIndiv, v8, baseIndiv->max_length, 0LL);
-        return (System_Int32_array *)v8;
+        v7 = (System_Array_o *)sub_B706AC(int___TypeInfo, (unsigned int)(v6 + v5));
+        System_Array__CopyTo((System_Array_o *)baseIndiv, v7, 0, 0LL);
+        System_Array__CopyTo((System_Array_o *)addIndiv, v7, baseIndiv->max_length, 0LL);
+        return (System_Int32_array *)v7;
       }
       else
       {
@@ -37,45 +36,37 @@ System_Int32_array *__fastcall CommonFunction__JoinIndiv(
 
 bool __fastcall CommonFunction__ReScaleUiFunc(UIRoot_o *uiRoot, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
   int32_t height; // w20
   int32_t width; // w0
-  __int64 v14; // x1
-  int32_t v15; // w21
-  CommonUI_o *v16; // x0
+  __int64 v6; // x1
+  int32_t v7; // w21
+  CommonUI_o *v8; // x0
   struct ErrorDialog_o *errorDialog; // x8
   int closeBtnObject; // w24
   int32_t titleLabel; // w25
-  float v20; // s0
-  float v21; // s0
-  double v22; // d0
-  float v23; // s0
-  double v24; // d0
+  float v12; // s0
+  float v13; // s0
+  double v14; // d0
+  float v15; // s0
+  double v16; // d0
   UnityEngine_Object_o *Instance; // x19
-  ManagerConfig_c *v26; // x0
-  int32_t v27; // w19
-  int32_t v28; // w20
-  const MethodInfo *v29; // x3
-  float v30; // s1
-  float v31; // s0
-  double v32; // d3
-  bool v33; // zf
-  double v34; // d1
-  double v35; // d0
+  ManagerConfig_c *v18; // x0
+  int32_t v19; // w19
+  int32_t v20; // w20
+  const MethodInfo *v21; // x3
+  float v22; // s1
+  float v23; // s0
+  double v24; // d3
+  bool v25; // zf
+  double v26; // d1
+  double v27; // d0
 
-  if ( (byte_42E4D40 & 1) == 0 )
+  if ( (byte_434DFA1 & 1) == 0 )
   {
-    sub_B5D5C4(&ManagerConfig_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8, v9, v10);
-    byte_42E4D40 = 1;
+    sub_B70694(&ManagerConfig_TypeInfo);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_434DFA1 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -91,43 +82,43 @@ bool __fastcall CommonFunction__ReScaleUiFunc(UIRoot_o *uiRoot, const MethodInfo
     height = UnityEngine_Screen__get_width(0LL);
     width = UnityEngine_Screen__get_height(0LL);
   }
-  v15 = width;
-  v16 = (CommonUI_o *)ManagerConfig_TypeInfo;
+  v7 = width;
+  v8 = (CommonUI_o *)ManagerConfig_TypeInfo;
   if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v16 = (CommonUI_o *)ManagerConfig_TypeInfo;
+    v8 = (CommonUI_o *)ManagerConfig_TypeInfo;
   }
-  errorDialog = v16->fields.errorDialog;
+  errorDialog = v8->fields.errorDialog;
   closeBtnObject = (int)errorDialog->fields._closeBtnObject;
   titleLabel = (int32_t)errorDialog->fields.titleLabel;
-  v20 = (float)(closeBtnObject * height) / (float)(titleLabel * v15);
-  if ( v20 <= 1.0 )
+  v12 = (float)(closeBtnObject * height) / (float)(titleLabel * v7);
+  if ( v12 <= 1.0 )
   {
-    v23 = (float)closeBtnObject / v20;
-    if ( v23 == INFINITY )
-      v24 = -v23;
+    v15 = (float)closeBtnObject / v12;
+    if ( v15 == INFINITY )
+      v16 = -v15;
     else
-      v24 = v23;
-    closeBtnObject = (int)v24;
+      v16 = v15;
+    closeBtnObject = (int)v16;
     if ( !uiRoot )
       goto LABEL_40;
   }
   else
   {
-    v21 = v20 * (float)titleLabel;
-    if ( v21 == INFINITY )
-      v22 = -v21;
+    v13 = v12 * (float)titleLabel;
+    if ( v13 == INFINITY )
+      v14 = -v13;
     else
-      v22 = v21;
-    titleLabel = (int)v22;
+      v14 = v13;
+    titleLabel = (int)v14;
     if ( !uiRoot )
       goto LABEL_40;
   }
   if ( uiRoot->fields.minimumHeight != titleLabel )
     uiRoot->fields.minimumHeight = titleLabel;
-  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -135,31 +126,31 @@ bool __fastcall CommonFunction__ReScaleUiFunc(UIRoot_o *uiRoot, const MethodInfo
   }
   if ( !UnityEngine_Object__op_Inequality(Instance, 0LL, 0LL) )
     return 1;
-  v26 = ManagerConfig_TypeInfo;
+  v18 = ManagerConfig_TypeInfo;
   if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v26 = ManagerConfig_TypeInfo;
+    v18 = ManagerConfig_TypeInfo;
   }
-  v27 = UnityEngine_Mathf__Abs_41629140(titleLabel - v26->static_fields->HEIGHT, 0LL);
-  v28 = UnityEngine_Mathf__Abs_41629140(ManagerConfig_TypeInfo->static_fields->WIDTH - closeBtnObject, 0LL);
-  v16 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  if ( !v16 )
+  v19 = UnityEngine_Mathf__Abs_41127592(titleLabel - v18->static_fields->HEIGHT, 0LL);
+  v20 = UnityEngine_Mathf__Abs_41127592(ManagerConfig_TypeInfo->static_fields->WIDTH - closeBtnObject, 0LL);
+  v8 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  if ( !v8 )
 LABEL_40:
-    sub_B5D69C(v16, v14);
-  v30 = ceilf((float)v27 * 0.5);
-  v31 = ceilf((float)v28 * 0.5);
-  v32 = v30;
-  v33 = v30 == INFINITY;
-  v34 = -v30;
-  if ( !v33 )
-    v34 = v32;
-  if ( v31 == INFINITY )
-    v35 = -v31;
+    sub_B7076C(v8, v6);
+  v22 = ceilf((float)v19 * 0.5);
+  v23 = ceilf((float)v20 * 0.5);
+  v24 = v22;
+  v25 = v22 == INFINITY;
+  v26 = -v22;
+  if ( !v25 )
+    v26 = v24;
+  if ( v23 == INFINITY )
+    v27 = -v23;
   else
-    v35 = v31;
-  CommonUI__setObiImgSize(v16, (int)v34, (int)v35, v29);
+    v27 = v23;
+  CommonUI__setObiImgSize(v8, (int)v26, (int)v27, v21);
   return 1;
 }
 
@@ -211,7 +202,7 @@ void __fastcall CommonFunction__ScalingLabelWidth(UILabel_o *label, int32_t maxW
       }
     }
 LABEL_9:
-    sub_B5D69C(label, *(_QWORD *)&maxWidth);
+    sub_B7076C(label, *(_QWORD *)&maxWidth);
   }
 }
 
@@ -223,57 +214,50 @@ void __fastcall CommonFunction__SetColor(
         UnityEngine_Color_o color,
         const MethodInfo *method)
 {
-  __int64 v4; // x3
   float a; // s8
   float b; // s9
   float g; // s10
   float r; // s11
-  char v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  char v14; // w1
-  int v15; // w2
-  __int64 v16; // x3
-  _BOOL8 v17; // x0
-  __int64 v18; // x1
+  _BOOL8 v10; // x0
+  __int64 v11; // x1
   UnityEngine_Object_o *Component_srcLineSprite; // x21
-  UIWidget_o *v20; // x0
-  UnityEngine_Object_o *v21; // x20
+  UIWidget_o *v13; // x0
+  UnityEngine_Object_o *v14; // x20
   UnityEngine_Color_o white; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v24; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   a = color.fields.a;
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_42E4D41 & 1) == 0 )
+  if ( (byte_434DFA2 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_UILabel___, isEnable, (_DWORD)method, v4);
-    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v11, v12, v13);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v14, v15, v16);
-    byte_42E4D41 = 1;
+    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
+    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_434DFA2 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  v17 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)obj, 0LL, 0LL);
-  if ( !v17 )
+  v10 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)obj, 0LL, 0LL);
+  if ( !v10 )
   {
     if ( obj )
     {
       Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                           obj,
-                                                          (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                                                          (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      v17 = UnityEngine_Object__op_Inequality(Component_srcLineSprite, 0LL, 0LL);
-      if ( v17 )
+      v10 = UnityEngine_Object__op_Inequality(Component_srcLineSprite, 0LL, 0LL);
+      if ( v10 )
       {
         if ( isEnable )
         {
@@ -285,45 +269,45 @@ void __fastcall CommonFunction__SetColor(
         }
         if ( Component_srcLineSprite )
         {
-          v20 = (UIWidget_o *)Component_srcLineSprite;
+          v13 = (UIWidget_o *)Component_srcLineSprite;
 LABEL_25:
-          v24.fields.b = b;
-          v24.fields.a = a;
-          v24.fields.r = r;
-          v24.fields.g = g;
-          UIWidget__set_color(v20, v24, 0LL);
+          v17.fields.b = b;
+          v17.fields.a = a;
+          v17.fields.r = r;
+          v17.fields.g = g;
+          UIWidget__set_color(v13, v17, 0LL);
           return;
         }
       }
       else
       {
-        v21 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
+        v14 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                         obj,
-                                        (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                        (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
         if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         }
-        v17 = UnityEngine_Object__op_Inequality(v21, 0LL, 0LL);
-        if ( !v17 )
+        v10 = UnityEngine_Object__op_Inequality(v14, 0LL, 0LL);
+        if ( !v10 )
           return;
         if ( isEnable )
         {
-          v23 = UnityEngine_Color__get_white(0LL);
-          r = v23.fields.r;
-          g = v23.fields.g;
-          b = v23.fields.b;
-          a = v23.fields.a;
+          v16 = UnityEngine_Color__get_white(0LL);
+          r = v16.fields.r;
+          g = v16.fields.g;
+          b = v16.fields.b;
+          a = v16.fields.a;
         }
-        if ( v21 )
+        if ( v14 )
         {
-          v20 = (UIWidget_o *)v21;
+          v13 = (UIWidget_o *)v14;
           goto LABEL_25;
         }
       }
     }
-    sub_B5D69C(v17, v18);
+    sub_B7076C(v10, v11);
   }
 }
 
@@ -381,6 +365,6 @@ void __fastcall CommonFunction__SetColorAllChild(
         return;
     }
 LABEL_7:
-    sub_B5D69C(parentTransform, isEnable);
+    sub_B7076C(parentTransform, isEnable);
   }
 }

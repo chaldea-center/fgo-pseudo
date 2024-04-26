@@ -1,7 +1,7 @@
 void __fastcall BitValue_CompensateArgForShowAll_EffectType____ctor(
         BitValue_CompensateArgForShowAll_EffectType__o *this,
         System_Func_T__int__o *func,
-        const MethodInfo_2BABCE8 *method)
+        const MethodInfo_2C78FB0 *method)
 {
   System_String_array **v5; // x2
   System_String_array **v6; // x3
@@ -11,10 +11,10 @@ void __fastcall BitValue_CompensateArgForShowAll_EffectType____ctor(
   System_Int32_array *v10; // x7
 
   if ( !this )
-    sub_B5D69C(0LL, func);
+    sub_B7076C(0LL, func);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.convertFunc = func;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.convertFunc,
     (System_Int32_array **)func,
     v5,
@@ -29,7 +29,7 @@ void __fastcall BitValue_CompensateArgForShowAll_EffectType____ctor(
 bool __fastcall BitValue_CompensateArgForShowAll_EffectType___Check(
         BitValue_CompensateArgForShowAll_EffectType__o *this,
         int32_t val,
-        const MethodInfo_2BABDB4 *method)
+        const MethodInfo_2C7907C *method)
 {
   struct System_Func_T__int__o *convertFunc; // x0
   int32_t value; // w19
@@ -38,7 +38,7 @@ bool __fastcall BitValue_CompensateArgForShowAll_EffectType___Check(
 
   convertFunc = this->fields.convertFunc;
   if ( !convertFunc )
-    sub_B5D69C(0LL, val);
+    sub_B7076C(0LL, val);
   value = this->fields.value;
   v6 = ((__int64 (__fastcall *)(struct System_Func_T__int__o *, int32_t))method->klass->rgctx_data->_0_System_Func_T__int__Invoke->methodPointer)(
          convertFunc,
@@ -50,14 +50,14 @@ bool __fastcall BitValue_CompensateArgForShowAll_EffectType___Check(
 void __fastcall BitValue_CompensateArgForShowAll_EffectType___On(
         BitValue_CompensateArgForShowAll_EffectType__o *this,
         int32_t val,
-        const MethodInfo_2BABD24 *method)
+        const MethodInfo_2C78FEC *method)
 {
   struct System_Func_T__int__o *convertFunc; // x0
   int32_t value; // w20
 
   convertFunc = this->fields.convertFunc;
   if ( !convertFunc )
-    sub_B5D69C(0LL, val);
+    sub_B7076C(0LL, val);
   value = this->fields.value;
   this->fields.value = ((__int64 (__fastcall *)(struct System_Func_T__int__o *, int32_t))method->klass->rgctx_data->_0_System_Func_T__int__Invoke->methodPointer)(
                          convertFunc,

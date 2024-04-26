@@ -1,27 +1,21 @@
 void __fastcall FuncParamValueUpInfoBase___cctor(const MethodInfo *method)
 {
-  int v1; // w1
-  int v2; // w2
-  __int64 v3; // x3
-  int v4; // w1
-  int v5; // w2
-  __int64 v6; // x3
-  BattleDataDefine_c *v7; // x0
+  BattleDataDefine_c *v1; // x0
 
-  if ( (byte_42EB534 & 1) == 0 )
+  if ( (byte_43540D9 & 1) == 0 )
   {
-    sub_B5D5C4(&BattleDataDefine_TypeInfo, v1, v2, v3);
-    sub_B5D5C4(&FuncParamValueUpInfoBase_TypeInfo, v4, v5, v6);
-    byte_42EB534 = 1;
+    sub_B70694(&BattleDataDefine_TypeInfo);
+    sub_B70694(&FuncParamValueUpInfoBase_TypeInfo);
+    byte_43540D9 = 1;
   }
-  v7 = BattleDataDefine_TypeInfo;
+  v1 = BattleDataDefine_TypeInfo;
   if ( (BYTE3(BattleDataDefine_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BattleDataDefine_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
-    v7 = BattleDataDefine_TypeInfo;
+    v1 = BattleDataDefine_TypeInfo;
   }
-  FuncParamValueUpInfoBase_TypeInfo->static_fields->ValueEnhanceDenominator = v7->static_fields->PERMILLAGE_DENOMINATOR_INT;
+  FuncParamValueUpInfoBase_TypeInfo->static_fields->ValueEnhanceDenominator = v1->static_fields->PERMILLAGE_DENOMINATOR_INT;
 }
 
 
@@ -39,43 +33,40 @@ int32_t __fastcall FuncParamValueUpInfoBase__Enhance(
         const MethodInfo *method)
 {
   __int64 v4; // x19
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
-  FuncParamValueUpInfoBase_c *v11; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v7; // x0
+  FuncParamValueUpInfoBase_c *v8; // x0
 
   LODWORD(v4) = value;
-  if ( (byte_42EB533 & 1) == 0 )
+  if ( (byte_43540D8 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Linq_Enumerable_Contains_DataVals_TYPE___, type, value, method);
-    sub_B5D5C4(&FuncParamValueUpInfoBase_TypeInfo, v7, v8, v9);
-    byte_42EB533 = 1;
+    sub_B70694(&Method_System_Linq_Enumerable_Contains_DataVals_TYPE___);
+    sub_B70694(&FuncParamValueUpInfoBase_TypeInfo);
+    byte_43540D8 = 1;
   }
   if ( this->fields._ValueEnhanceRate_k__BackingField )
   {
-    v10 = (System_Collections_Generic_IEnumerable_TSource__o *)((__int64 (__fastcall *)(FuncParamValueUpInfoBase_o *, Il2CppMethodPointer, _QWORD, const MethodInfo *))this->klass->vtable._4_unknown.method)(
-                                                                 this,
-                                                                 this->klass->vtable._5_Enhance.methodPtr,
-                                                                 *(_QWORD *)&value,
-                                                                 method);
-    if ( v10 )
+    v7 = (System_Collections_Generic_IEnumerable_TSource__o *)((__int64 (__fastcall *)(FuncParamValueUpInfoBase_o *, Il2CppMethodPointer, _QWORD, const MethodInfo *))this->klass->vtable._4_unknown.method)(
+                                                                this,
+                                                                this->klass->vtable._5_Enhance.methodPtr,
+                                                                *(_QWORD *)&value,
+                                                                method);
+    if ( v7 )
     {
       if ( System_Linq_Enumerable__Contains_ListViewSort_FilterKind_(
-             v10,
+             v7,
              type,
-             (const MethodInfo_1CA4F88 *)Method_System_Linq_Enumerable_Contains_DataVals_TYPE___) )
+             (const MethodInfo_1CB58CC *)Method_System_Linq_Enumerable_Contains_DataVals_TYPE___) )
       {
-        v11 = FuncParamValueUpInfoBase_TypeInfo;
+        v8 = FuncParamValueUpInfoBase_TypeInfo;
         if ( (BYTE3(FuncParamValueUpInfoBase_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !FuncParamValueUpInfoBase_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(FuncParamValueUpInfoBase_TypeInfo);
-          v11 = FuncParamValueUpInfoBase_TypeInfo;
+          v8 = FuncParamValueUpInfoBase_TypeInfo;
         }
-        return (this->fields._ValueEnhanceRate_k__BackingField + v11->static_fields->ValueEnhanceDenominator)
+        return (this->fields._ValueEnhanceRate_k__BackingField + v8->static_fields->ValueEnhanceDenominator)
              * (__int64)(int)v4
-             / v11->static_fields->ValueEnhanceDenominator;
+             / v8->static_fields->ValueEnhanceDenominator;
       }
     }
   }

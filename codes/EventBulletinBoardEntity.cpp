@@ -1,16 +1,13 @@
 void __fastcall EventBulletinBoardEntity___ctor(EventBulletinBoardEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EB116 & 1) == 0 )
+  if ( (byte_43544B5 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_int___ctor__, (_DWORD)method, v2, v3);
-    byte_42EB116 = 1;
+    sub_B70694(&Method_DataEntityBase_int___ctor__);
+    byte_43544B5 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_23FACBC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
 }
 
 

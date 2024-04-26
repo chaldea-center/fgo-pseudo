@@ -4,109 +4,97 @@ void __fastcall NoblePhantasmNameOverwriter__SetOverwriteNpLabel(
         UILabel_o *npRubyLabel,
         const MethodInfo *method)
 {
-  UserServantEntity_o *v6; // x21
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
-  int v10; // w1
-  int v11; // w2
-  __int64 v12; // x3
-  int v13; // w1
-  int v14; // w2
-  __int64 v15; // x3
-  int v16; // w1
-  int v17; // w2
-  __int64 v18; // x3
-  int v19; // w1
-  int v20; // w2
-  __int64 v21; // x3
   int32_t SvtId; // w22
-  int32_t DispSelectLimitCount; // w23
-  int32_t ServantLimitCountSealAfter; // w23
-  DataMasterBase_WarMaster__WarEntity__int__o *MasterData_WarQuestSelectionMaster; // x22
-  System_String_o *OverwriteTDName; // x0
-  const MethodInfo *v27; // x2
-  System_String_o *OverwriteTDRuby; // x0
-  const MethodInfo *v29; // x2
-  ServantLimitAddEntity_o *entitya; // [xsp+8h] [xbp-38h] BYREF
+  int32_t DispSelectLimitCount; // w0
+  const MethodInfo *v9; // x4
 
-  v6 = entity;
-  if ( (byte_42E919A & 1) == 0 )
+  if ( !entity )
+    sub_B7076C(0LL, npNameLabel);
+  SvtId = UserServantEntity__getSvtId(entity, 0LL);
+  DispSelectLimitCount = UserServantEntity__getDispSelectLimitCount(entity, 0, 0LL);
+  NoblePhantasmNameOverwriter__SetOverwriteNpLabel_25979184(SvtId, DispSelectLimitCount, npNameLabel, npRubyLabel, v9);
+}
+
+
+void __fastcall NoblePhantasmNameOverwriter__SetOverwriteNpLabel_25979184(
+        int32_t servantId,
+        int32_t dispLimitCount,
+        UILabel_o *npNameLabel,
+        UILabel_o *npRubyLabel,
+        const MethodInfo *method)
+{
+  ServantLimitImageMaster_o *Master_WarQuestSelectionMaster; // x0
+  __int64 v10; // x1
+  int32_t ServantLimitCountSealAfter; // w22
+  System_String_o *OverwriteTDName; // x0
+  const MethodInfo *v13; // x2
+  System_String_o *OverwriteTDRuby; // x0
+  const MethodInfo *v15; // x2
+  ServantLimitAddEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
+
+  if ( (byte_43523E2 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_DataManager_GetMasterData_ServantLimitAddMaster___,
-      (_DWORD)npNameLabel,
-      (_DWORD)npRubyLabel,
-      method);
-    sub_B5D5C4(&Method_DataManager_GetMasterData_ServantMaster___, v7, v8, v9);
-    sub_B5D5C4(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v10, v11, v12);
-    sub_B5D5C4(&DataManager_TypeInfo, v13, v14, v15);
-    sub_B5D5C4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v16, v17, v18);
-    entity = (UserServantEntity_o *)sub_B5D5C4(
-                                      &Method_SingletonMonoBehaviour_DataManager__get_Instance__,
-                                      v19,
-                                      v20,
-                                      v21);
-    byte_42E919A = 1;
+    sub_B70694(&Method_DataManager_GetMasterData_ServantLimitAddMaster___);
+    sub_B70694(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_B70694(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_B70694(&DataManager_TypeInfo);
+    sub_B70694(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_43523E2 = 1;
   }
-  entitya = 0LL;
-  if ( !v6 )
-    goto LABEL_19;
-  SvtId = UserServantEntity__getSvtId(v6, 0LL);
-  DispSelectLimitCount = UserServantEntity__getDispSelectLimitCount(v6, 0, 0LL);
+  entity = 0LL;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  entity = (UserServantEntity_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1AE41EC *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
-  if ( !entity )
-    goto LABEL_19;
+  Master_WarQuestSelectionMaster = (ServantLimitImageMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  if ( !Master_WarQuestSelectionMaster )
+    goto LABEL_18;
   ServantLimitCountSealAfter = ServantLimitImageMaster__GetServantLimitCountSealAfter(
-                                 (ServantLimitImageMaster_o *)entity,
-                                 SvtId,
-                                 DispSelectLimitCount,
+                                 Master_WarQuestSelectionMaster,
+                                 servantId,
+                                 dispLimitCount,
                                  0LL);
-  entity = (UserServantEntity_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-  if ( !entity )
-    goto LABEL_19;
-  entity = (UserServantEntity_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                    (DataManager_o *)entity,
-                                    (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
-  if ( !entity )
-    goto LABEL_19;
+  Master_WarQuestSelectionMaster = (ServantLimitImageMaster_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  if ( !Master_WarQuestSelectionMaster )
+    goto LABEL_18;
+  Master_WarQuestSelectionMaster = (ServantLimitImageMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                                                  (DataManager_o *)Master_WarQuestSelectionMaster,
+                                                                  (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
+  if ( !Master_WarQuestSelectionMaster )
+    goto LABEL_18;
   if ( !ServantLimitAddMaster__TryGetEntity(
-          (ServantLimitAddMaster_o *)entity,
-          &entitya,
-          SvtId,
+          (ServantLimitAddMaster_o *)Master_WarQuestSelectionMaster,
+          &entity,
+          servantId,
           ServantLimitCountSealAfter,
           0LL) )
     return;
-  entity = (UserServantEntity_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-  if ( !entity )
-    goto LABEL_19;
-  MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                                        (DataManager_o *)entity,
-                                                                                        (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_ServantMaster___);
-  entity = (UserServantEntity_o *)UserServantEntity__getSvtId(v6, 0LL);
-  if ( !MasterData_WarQuestSelectionMaster )
-    goto LABEL_19;
-  entity = (UserServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                                    MasterData_WarQuestSelectionMaster,
-                                    (int32_t)entity,
-                                    (const MethodInfo_23FAE10 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-  if ( !entity )
-    goto LABEL_19;
-  if ( !ServantEntity__IsNameTrue((ServantEntity_o *)entity, 0LL) )
+  Master_WarQuestSelectionMaster = (ServantLimitImageMaster_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  if ( !Master_WarQuestSelectionMaster )
+    goto LABEL_18;
+  Master_WarQuestSelectionMaster = (ServantLimitImageMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                                                  (DataManager_o *)Master_WarQuestSelectionMaster,
+                                                                  (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantMaster___);
+  if ( !Master_WarQuestSelectionMaster )
+    goto LABEL_18;
+  Master_WarQuestSelectionMaster = (ServantLimitImageMaster_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
+                                                                  (DataMasterBase_WarMaster__WarEntity__int__o *)Master_WarQuestSelectionMaster,
+                                                                  servantId,
+                                                                  (const MethodInfo_21C0440 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+  if ( !Master_WarQuestSelectionMaster )
+    goto LABEL_18;
+  if ( !ServantEntity__IsNameTrue((ServantEntity_o *)Master_WarQuestSelectionMaster, 0LL) )
     return;
-  entity = (UserServantEntity_o *)entitya;
-  if ( !entitya
-    || (OverwriteTDName = ServantLimitAddEntity__GetOverwriteTDName(entitya, 0LL),
-        NoblePhantasmNameOverwriter__SetOverwriteText(npNameLabel, OverwriteTDName, v27),
-        (entity = (UserServantEntity_o *)entitya) == 0LL) )
+  Master_WarQuestSelectionMaster = (ServantLimitImageMaster_o *)entity;
+  if ( !entity
+    || (OverwriteTDName = ServantLimitAddEntity__GetOverwriteTDName(entity, 0LL),
+        NoblePhantasmNameOverwriter__SetOverwriteText(npNameLabel, OverwriteTDName, v13),
+        (Master_WarQuestSelectionMaster = (ServantLimitImageMaster_o *)entity) == 0LL) )
   {
-LABEL_19:
-    sub_B5D69C(entity, npNameLabel);
+LABEL_18:
+    sub_B7076C(Master_WarQuestSelectionMaster, v10);
   }
-  OverwriteTDRuby = ServantLimitAddEntity__GetOverwriteTDRuby(entitya, 0LL);
-  NoblePhantasmNameOverwriter__SetOverwriteText(npRubyLabel, OverwriteTDRuby, v29);
+  OverwriteTDRuby = ServantLimitAddEntity__GetOverwriteTDRuby(entity, 0LL);
+  NoblePhantasmNameOverwriter__SetOverwriteText(npRubyLabel, OverwriteTDRuby, v15);
 }
 
 
@@ -122,7 +110,7 @@ void __fastcall NoblePhantasmNameOverwriter__SetOverwriteText(
   if ( !IsNullOrEmpty )
   {
     if ( !label )
-      sub_B5D69C(IsNullOrEmpty, v6);
+      sub_B7076C(IsNullOrEmpty, v6);
     UILabel__set_text(label, overwriteText, 0LL);
   }
 }

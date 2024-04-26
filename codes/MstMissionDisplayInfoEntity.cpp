@@ -1,16 +1,13 @@
 void __fastcall MstMissionDisplayInfoEntity___ctor(MstMissionDisplayInfoEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42E7489 & 1) == 0 )
+  if ( (byte_4350D61 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_int___ctor__, (_DWORD)method, v2, v3);
-    byte_42E7489 = 1;
+    sub_B70694(&Method_DataEntityBase_int___ctor__);
+    byte_4350D61 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_23FACBC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -24,14 +21,12 @@ int32_t __fastcall MstMissionDisplayInfoEntity__CreatePrimaryKey(
 
 bool __fastcall MstMissionDisplayInfoEntity__isOpenNow(MstMissionDisplayInfoEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   int64_t Time; // x0
 
-  if ( (byte_42E7488 & 1) == 0 )
+  if ( (byte_4350D60 & 1) == 0 )
   {
-    sub_B5D5C4(&NetworkManager_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E7488 = 1;
+    sub_B70694(&NetworkManager_TypeInfo);
+    byte_4350D60 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )

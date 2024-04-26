@@ -26,7 +26,7 @@ void __fastcall SupportSelectUIDragDropListViewSurface__set_DropObject(
   System_Int32_array *v7; // x7
 
   this->fields.dropObject = value;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.dropObject,
     (System_Int32_array **)value,
     (System_String_array **)method,

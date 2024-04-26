@@ -13,7 +13,7 @@ void __fastcall BattleLogicCameraTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, 0LL);
   BattleLogicTask__setCamera((BattleLogicTask_o *)this, 0LL);
   this->fields.endCameraName = cameraName;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.endCameraName,
     (System_Int32_array **)cameraName,
     v5,

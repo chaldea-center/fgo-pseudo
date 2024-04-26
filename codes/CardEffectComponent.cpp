@@ -1,12 +1,9 @@
 void __fastcall CardEffectComponent___ctor(CardEffectComponent_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EB65C & 1) == 0 )
+  if ( (byte_4354B3A & 1) == 0 )
   {
-    sub_B5D5C4(&EffectComponent_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EB65C = 1;
+    sub_B70694(&EffectComponent_TypeInfo);
+    byte_4354B3A = 1;
   }
   if ( (BYTE3(EffectComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EffectComponent_TypeInfo->_2.cctor_finished )
@@ -55,14 +52,14 @@ void __fastcall CardEffectComponent__SetCardEffectDepth(
         goto LABEL_7;
     }
 LABEL_14:
-    v14 = sub_B5D6C8(this);
-    sub_B5D668(v14, 0LL);
+    v14 = sub_B70798(this);
+    sub_B70738(v14, 0LL);
   }
 LABEL_7:
   klass = v7[1].klass;
   if ( !klass )
 LABEL_15:
-    sub_B5D69C(this, *(_QWORD *)&onBaseDepth);
+    sub_B7076C(this, *(_QWORD *)&onBaseDepth);
   namespaze = (int)klass->_1.namespaze;
   if ( namespaze >= 1 )
   {

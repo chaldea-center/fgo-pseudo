@@ -2,26 +2,24 @@ void __fastcall ClassBoardResourceCatalogStandalone___ctor(
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  Il2CppObject *v5; // x20
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  Il2CppObject *v3; // x20
+  System_String_array **v4; // x2
+  System_String_array **v5; // x3
+  System_Boolean_array **v6; // x4
+  System_Int32_array **v7; // x5
+  System_Int32_array *v8; // x6
+  System_Int32_array *v9; // x7
 
-  if ( (byte_42EA85F & 1) == 0 )
+  if ( (byte_4353B53 & 1) == 0 )
   {
-    sub_B5D5C4(&ClassBoardResourceContents_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EA85F = 1;
+    sub_B70694(&ClassBoardResourceContents_TypeInfo);
+    byte_4353B53 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v5 = (Il2CppObject *)sub_B5D694(ClassBoardResourceContents_TypeInfo);
-  System_Object___ctor(v5, 0LL);
-  this->fields._Contents_k__BackingField = (struct ClassBoardResourceContents_o *)v5;
-  sub_B5D560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v5, v6, v7, v8, v9, v10, v11);
+  v3 = (Il2CppObject *)sub_B70764(ClassBoardResourceContents_TypeInfo);
+  System_Object___ctor(v3, 0LL);
+  this->fields._Contents_k__BackingField = (struct ClassBoardResourceContents_o *)v3;
+  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
 }
 
 
@@ -30,27 +28,26 @@ ClassBoardBlank_o *__fastcall ClassBoardResourceCatalogStandalone__GetUniqueBlan
         int32_t assetId,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  System_String_o *v5; // x19
+  System_String_o *v4; // x19
+  System_String_o *v5; // x0
   System_String_o *v6; // x0
-  System_String_o *v7; // x0
-  int32_t v9; // [xsp+Ch] [xbp-14h] BYREF
+  int32_t v8; // [xsp+Ch] [xbp-14h] BYREF
 
-  v9 = assetId;
-  if ( (byte_42EA862 & 1) == 0 )
+  v8 = assetId;
+  if ( (byte_4353B56 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_UnityEngine_Resources_Load_ClassBoardBlank___, assetId, (_DWORD)method, v3);
-    byte_42EA862 = 1;
+    sub_B70694(&Method_UnityEngine_Resources_Load_ClassBoardBlank___);
+    byte_4353B56 = 1;
   }
-  v5 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer, const MethodInfo *))this->klass->vtable._14_get_BLANK_PATH.method)(
+  v4 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer, const MethodInfo *))this->klass->vtable._14_get_BLANK_PATH.method)(
                             this,
                             this->klass->vtable._15_get_DISABLE_OPEN_DIALOG_PATH.methodPtr,
                             method);
-  v6 = System_Int32__ToString((int32_t)&v9, 0LL);
-  v7 = System_String__Concat_44577788(v5, v6, 0LL);
+  v5 = System_Int32__ToString((int32_t)&v8, 0LL);
+  v6 = System_String__Concat_44758168(v4, v5, 0LL);
   return (ClassBoardBlank_o *)UnityEngine_Resources__Load_UIAtlas_(
-                                v7,
-                                (const MethodInfo_1E6964C *)Method_UnityEngine_Resources_Load_ClassBoardBlank___);
+                                v6,
+                                (const MethodInfo_1D5BAD8 *)Method_UnityEngine_Resources_Load_ClassBoardBlank___);
 }
 
 
@@ -59,27 +56,26 @@ ClassBoardLock_o *__fastcall ClassBoardResourceCatalogStandalone__GetUniqueLockO
         int32_t assetId,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  System_String_o *v5; // x19
+  System_String_o *v4; // x19
+  System_String_o *v5; // x0
   System_String_o *v6; // x0
-  System_String_o *v7; // x0
-  int32_t v9; // [xsp+Ch] [xbp-14h] BYREF
+  int32_t v8; // [xsp+Ch] [xbp-14h] BYREF
 
-  v9 = assetId;
-  if ( (byte_42EA863 & 1) == 0 )
+  v8 = assetId;
+  if ( (byte_4353B57 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_UnityEngine_Resources_Load_ClassBoardLock___, assetId, (_DWORD)method, v3);
-    byte_42EA863 = 1;
+    sub_B70694(&Method_UnityEngine_Resources_Load_ClassBoardLock___);
+    byte_4353B57 = 1;
   }
-  v5 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer, const MethodInfo *))this->klass->vtable._13_get_LOCK_PATH.method)(
+  v4 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer, const MethodInfo *))this->klass->vtable._13_get_LOCK_PATH.method)(
                             this,
                             this->klass->vtable._14_get_BLANK_PATH.methodPtr,
                             method);
-  v6 = System_Int32__ToString((int32_t)&v9, 0LL);
-  v7 = System_String__Concat_44577788(v5, v6, 0LL);
+  v5 = System_Int32__ToString((int32_t)&v8, 0LL);
+  v6 = System_String__Concat_44758168(v4, v5, 0LL);
   return (ClassBoardLock_o *)UnityEngine_Resources__Load_UIAtlas_(
-                               v7,
-                               (const MethodInfo_1E6964C *)Method_UnityEngine_Resources_Load_ClassBoardLock___);
+                               v6,
+                               (const MethodInfo_1D5BAD8 *)Method_UnityEngine_Resources_Load_ClassBoardLock___);
 }
 
 
@@ -88,27 +84,26 @@ ClassBoardSquare_o *__fastcall ClassBoardResourceCatalogStandalone__GetUniqueSqu
         int32_t assetId,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  System_String_o *v5; // x19
+  System_String_o *v4; // x19
+  System_String_o *v5; // x0
   System_String_o *v6; // x0
-  System_String_o *v7; // x0
-  int32_t v9; // [xsp+Ch] [xbp-14h] BYREF
+  int32_t v8; // [xsp+Ch] [xbp-14h] BYREF
 
-  v9 = assetId;
-  if ( (byte_42EA861 & 1) == 0 )
+  v8 = assetId;
+  if ( (byte_4353B55 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_UnityEngine_Resources_Load_ClassBoardSquare___, assetId, (_DWORD)method, v3);
-    byte_42EA861 = 1;
+    sub_B70694(&Method_UnityEngine_Resources_Load_ClassBoardSquare___);
+    byte_4353B55 = 1;
   }
-  v5 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer, const MethodInfo *))this->klass->vtable._12_get_SQUARE_PATH.method)(
+  v4 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer, const MethodInfo *))this->klass->vtable._12_get_SQUARE_PATH.method)(
                             this,
                             this->klass->vtable._13_get_LOCK_PATH.methodPtr,
                             method);
-  v6 = System_Int32__ToString((int32_t)&v9, 0LL);
-  v7 = System_String__Concat_44577788(v5, v6, 0LL);
+  v5 = System_Int32__ToString((int32_t)&v8, 0LL);
+  v6 = System_String__Concat_44758168(v4, v5, 0LL);
   return (ClassBoardSquare_o *)UnityEngine_Resources__Load_UIAtlas_(
-                                 v7,
-                                 (const MethodInfo_1E6964C *)Method_UnityEngine_Resources_Load_ClassBoardSquare___);
+                                 v6,
+                                 (const MethodInfo_1D5BAD8 *)Method_UnityEngine_Resources_Load_ClassBoardSquare___);
 }
 
 
@@ -117,204 +112,170 @@ void __fastcall ClassBoardResourceCatalogStandalone__LoadSystemAsset(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  int v14; // w1
-  int v15; // w2
-  __int64 v16; // x3
-  int v17; // w1
-  int v18; // w2
-  __int64 v19; // x3
-  int v20; // w1
-  int v21; // w2
-  __int64 v22; // x3
-  int v23; // w1
-  int v24; // w2
-  __int64 v25; // x3
-  int v26; // w1
-  int v27; // w2
-  __int64 v28; // x3
-  int v29; // w1
-  int v30; // w2
-  __int64 v31; // x3
-  int v32; // w1
-  int v33; // w2
-  __int64 v34; // x3
-  int v35; // w1
-  int v36; // w2
-  __int64 v37; // x3
-  System_String_o *v38; // x0
-  System_String_o *v39; // x0
-  System_String_o *v40; // x0
-  ClassBoardLock_o *v41; // x23
-  System_String_o *v42; // x0
-  ClassBoardBlank_o *v43; // x24
-  System_String_o *v44; // x0
-  ClassBoardDisableOpenDialog_o *v45; // x27
-  System_String_o *v46; // x0
-  ClassBoardSquareOpenConfirmDialog_o *v47; // x28
-  System_String_o *v48; // x0
-  ClassBoardLockOpenConfirmDialog_o *v49; // x19
-  System_String_o *v50; // x0
-  ClassBoardLockReleaseConditionDialog_o *v51; // x21
-  System_String_o *v52; // x0
-  ClassBoardSquareDetailDialog_o *v53; // x22
-  System_String_o *v54; // x0
-  ClassBoardUIController_o *v55; // x26
-  System_String_o *v56; // x0
+  System_String_o *v4; // x0
+  System_String_o *v5; // x0
+  System_String_o *v6; // x0
+  ClassBoardLock_o *v7; // x23
+  System_String_o *v8; // x0
+  ClassBoardBlank_o *v9; // x24
+  System_String_o *v10; // x0
+  ClassBoardDisableOpenDialog_o *v11; // x27
+  System_String_o *v12; // x0
+  ClassBoardSquareOpenConfirmDialog_o *v13; // x28
+  System_String_o *v14; // x0
+  ClassBoardLockOpenConfirmDialog_o *v15; // x19
+  System_String_o *v16; // x0
+  ClassBoardLockReleaseConditionDialog_o *v17; // x21
+  System_String_o *v18; // x0
+  ClassBoardSquareDetailDialog_o *v19; // x22
+  System_String_o *v20; // x0
+  ClassBoardUIController_o *v21; // x26
+  System_String_o *v22; // x0
   char *Contents_k__BackingField; // x0
-  __int64 v58; // x1
-  const MethodInfo *v59; // x5
-  System_Int32_array **v60; // x25
-  const MethodInfo *v61; // x6
-  ClassBoardResourceContents_o *v62; // x19
-  System_String_o *v63; // x22
-  AtlasManagerUnit_o *v64; // x21
-  System_String_o *v65; // x23
-  AtlasManagerUnit_o *v66; // x22
-  System_String_o *v67; // x24
-  AtlasManagerUnit_o *v68; // x23
-  const MethodInfo *v69; // x5
-  System_String_array **v70; // x2
-  System_String_array **v71; // x3
-  System_Boolean_array **v72; // x4
-  System_Int32_array **v73; // x5
-  System_Int32_array *v74; // x6
-  System_Int32_array *v75; // x7
-  ClassBoardLine_o *v76; // [xsp+8h] [xbp-68h]
+  __int64 v24; // x1
+  const MethodInfo *v25; // x5
+  System_Int32_array **v26; // x25
+  const MethodInfo *v27; // x6
+  ClassBoardResourceContents_o *v28; // x19
+  System_String_o *v29; // x22
+  AtlasManagerUnit_o *v30; // x21
+  System_String_o *v31; // x23
+  AtlasManagerUnit_o *v32; // x22
+  System_String_o *v33; // x24
+  AtlasManagerUnit_o *v34; // x23
+  const MethodInfo *v35; // x5
+  System_String_array **v36; // x2
+  System_String_array **v37; // x3
+  System_Boolean_array **v38; // x4
+  System_Int32_array **v39; // x5
+  System_Int32_array *v40; // x6
+  System_Int32_array *v41; // x7
+  ClassBoardLine_o *v42; // [xsp+8h] [xbp-68h]
   ClassBoardSquare_o *UIAtlas; // [xsp+10h] [xbp-60h]
 
-  if ( (byte_42EA860 & 1) == 0 )
+  if ( (byte_4353B54 & 1) == 0 )
   {
-    sub_B5D5C4(&AtlasManagerUnit_TypeInfo, (_DWORD)callback, (_DWORD)method, v3);
-    sub_B5D5C4(&Method_UnityEngine_Resources_Load_ClassBoardBackground___, v5, v6, v7);
-    sub_B5D5C4(&Method_UnityEngine_Resources_Load_ClassBoardBlank___, v8, v9, v10);
-    sub_B5D5C4(&Method_UnityEngine_Resources_Load_ClassBoardDisableOpenDialog___, v11, v12, v13);
-    sub_B5D5C4(&Method_UnityEngine_Resources_Load_ClassBoardLine___, v14, v15, v16);
-    sub_B5D5C4(&Method_UnityEngine_Resources_Load_ClassBoardLockOpenConfirmDialog___, v17, v18, v19);
-    sub_B5D5C4(&Method_UnityEngine_Resources_Load_ClassBoardLockReleaseConditionDialog___, v20, v21, v22);
-    sub_B5D5C4(&Method_UnityEngine_Resources_Load_ClassBoardLock___, v23, v24, v25);
-    sub_B5D5C4(&Method_UnityEngine_Resources_Load_ClassBoardSquareDetailDialog___, v26, v27, v28);
-    sub_B5D5C4(&Method_UnityEngine_Resources_Load_ClassBoardSquareOpenConfirmDialog___, v29, v30, v31);
-    sub_B5D5C4(&Method_UnityEngine_Resources_Load_ClassBoardSquare___, v32, v33, v34);
-    sub_B5D5C4(&Method_UnityEngine_Resources_Load_ClassBoardUIController___, v35, v36, v37);
-    byte_42EA860 = 1;
+    sub_B70694(&AtlasManagerUnit_TypeInfo);
+    sub_B70694(&Method_UnityEngine_Resources_Load_ClassBoardBackground___);
+    sub_B70694(&Method_UnityEngine_Resources_Load_ClassBoardBlank___);
+    sub_B70694(&Method_UnityEngine_Resources_Load_ClassBoardDisableOpenDialog___);
+    sub_B70694(&Method_UnityEngine_Resources_Load_ClassBoardLine___);
+    sub_B70694(&Method_UnityEngine_Resources_Load_ClassBoardLockOpenConfirmDialog___);
+    sub_B70694(&Method_UnityEngine_Resources_Load_ClassBoardLockReleaseConditionDialog___);
+    sub_B70694(&Method_UnityEngine_Resources_Load_ClassBoardLock___);
+    sub_B70694(&Method_UnityEngine_Resources_Load_ClassBoardSquareDetailDialog___);
+    sub_B70694(&Method_UnityEngine_Resources_Load_ClassBoardSquareOpenConfirmDialog___);
+    sub_B70694(&Method_UnityEngine_Resources_Load_ClassBoardSquare___);
+    sub_B70694(&Method_UnityEngine_Resources_Load_ClassBoardUIController___);
+    byte_4353B54 = 1;
   }
-  v38 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer, const MethodInfo *))this->klass->vtable._12_get_SQUARE_PATH.method)(
-                             this,
-                             this->klass->vtable._13_get_LOCK_PATH.methodPtr,
-                             method);
+  v4 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer, const MethodInfo *))this->klass->vtable._12_get_SQUARE_PATH.method)(
+                            this,
+                            this->klass->vtable._13_get_LOCK_PATH.methodPtr,
+                            method);
   UIAtlas = (ClassBoardSquare_o *)UnityEngine_Resources__Load_UIAtlas_(
-                                    v38,
-                                    (const MethodInfo_1E6964C *)Method_UnityEngine_Resources_Load_ClassBoardSquare___);
-  v39 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._11_get_LINE_PATH.method)(
-                             this,
-                             this->klass->vtable._12_get_SQUARE_PATH.methodPtr);
-  v76 = (ClassBoardLine_o *)UnityEngine_Resources__Load_UIAtlas_(
-                              v39,
-                              (const MethodInfo_1E6964C *)Method_UnityEngine_Resources_Load_ClassBoardLine___);
-  v40 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._13_get_LOCK_PATH.method)(
-                             this,
-                             this->klass->vtable._14_get_BLANK_PATH.methodPtr);
-  v41 = (ClassBoardLock_o *)UnityEngine_Resources__Load_UIAtlas_(
-                              v40,
-                              (const MethodInfo_1E6964C *)Method_UnityEngine_Resources_Load_ClassBoardLock___);
-  v42 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._14_get_BLANK_PATH.method)(
-                             this,
-                             this->klass->vtable._15_get_DISABLE_OPEN_DIALOG_PATH.methodPtr);
-  v43 = (ClassBoardBlank_o *)UnityEngine_Resources__Load_UIAtlas_(
-                               v42,
-                               (const MethodInfo_1E6964C *)Method_UnityEngine_Resources_Load_ClassBoardBlank___);
-  v44 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._15_get_DISABLE_OPEN_DIALOG_PATH.method)(
+                                    v4,
+                                    (const MethodInfo_1D5BAD8 *)Method_UnityEngine_Resources_Load_ClassBoardSquare___);
+  v5 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._11_get_LINE_PATH.method)(
+                            this,
+                            this->klass->vtable._12_get_SQUARE_PATH.methodPtr);
+  v42 = (ClassBoardLine_o *)UnityEngine_Resources__Load_UIAtlas_(
+                              v5,
+                              (const MethodInfo_1D5BAD8 *)Method_UnityEngine_Resources_Load_ClassBoardLine___);
+  v6 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._13_get_LOCK_PATH.method)(
+                            this,
+                            this->klass->vtable._14_get_BLANK_PATH.methodPtr);
+  v7 = (ClassBoardLock_o *)UnityEngine_Resources__Load_UIAtlas_(
+                             v6,
+                             (const MethodInfo_1D5BAD8 *)Method_UnityEngine_Resources_Load_ClassBoardLock___);
+  v8 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._14_get_BLANK_PATH.method)(
+                            this,
+                            this->klass->vtable._15_get_DISABLE_OPEN_DIALOG_PATH.methodPtr);
+  v9 = (ClassBoardBlank_o *)UnityEngine_Resources__Load_UIAtlas_(
+                              v8,
+                              (const MethodInfo_1D5BAD8 *)Method_UnityEngine_Resources_Load_ClassBoardBlank___);
+  v10 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._15_get_DISABLE_OPEN_DIALOG_PATH.method)(
                              this,
                              this->klass->vtable._16_get_SQUARE_OPEN_CONFIRM_DIALOG_PATH.methodPtr);
-  v45 = (ClassBoardDisableOpenDialog_o *)UnityEngine_Resources__Load_UIAtlas_(
-                                           v44,
-                                           (const MethodInfo_1E6964C *)Method_UnityEngine_Resources_Load_ClassBoardDisableOpenDialog___);
-  v46 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._16_get_SQUARE_OPEN_CONFIRM_DIALOG_PATH.method)(
+  v11 = (ClassBoardDisableOpenDialog_o *)UnityEngine_Resources__Load_UIAtlas_(
+                                           v10,
+                                           (const MethodInfo_1D5BAD8 *)Method_UnityEngine_Resources_Load_ClassBoardDisableOpenDialog___);
+  v12 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._16_get_SQUARE_OPEN_CONFIRM_DIALOG_PATH.method)(
                              this,
                              this->klass->vtable._17_get_LOCK_OPEN_CONFIRM_DIALOG_PATH.methodPtr);
-  v47 = (ClassBoardSquareOpenConfirmDialog_o *)UnityEngine_Resources__Load_UIAtlas_(
-                                                 v46,
-                                                 (const MethodInfo_1E6964C *)Method_UnityEngine_Resources_Load_ClassBoardSquareOpenConfirmDialog___);
-  v48 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._17_get_LOCK_OPEN_CONFIRM_DIALOG_PATH.method)(
+  v13 = (ClassBoardSquareOpenConfirmDialog_o *)UnityEngine_Resources__Load_UIAtlas_(
+                                                 v12,
+                                                 (const MethodInfo_1D5BAD8 *)Method_UnityEngine_Resources_Load_ClassBoardSquareOpenConfirmDialog___);
+  v14 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._17_get_LOCK_OPEN_CONFIRM_DIALOG_PATH.method)(
                              this,
                              this->klass->vtable._18_get_LOCK_RELEASE_CONDITION_DIALOG_PATH.methodPtr);
-  v49 = (ClassBoardLockOpenConfirmDialog_o *)UnityEngine_Resources__Load_UIAtlas_(
-                                               v48,
-                                               (const MethodInfo_1E6964C *)Method_UnityEngine_Resources_Load_ClassBoardLockOpenConfirmDialog___);
-  v50 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._18_get_LOCK_RELEASE_CONDITION_DIALOG_PATH.method)(
+  v15 = (ClassBoardLockOpenConfirmDialog_o *)UnityEngine_Resources__Load_UIAtlas_(
+                                               v14,
+                                               (const MethodInfo_1D5BAD8 *)Method_UnityEngine_Resources_Load_ClassBoardLockOpenConfirmDialog___);
+  v16 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._18_get_LOCK_RELEASE_CONDITION_DIALOG_PATH.method)(
                              this,
                              this->klass->vtable._19_get_SQUARE_DETAIL_DIALOG_PATH.methodPtr);
-  v51 = (ClassBoardLockReleaseConditionDialog_o *)UnityEngine_Resources__Load_UIAtlas_(
-                                                    v50,
-                                                    (const MethodInfo_1E6964C *)Method_UnityEngine_Resources_Load_ClassBoardLockReleaseConditionDialog___);
-  v52 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._19_get_SQUARE_DETAIL_DIALOG_PATH.method)(
+  v17 = (ClassBoardLockReleaseConditionDialog_o *)UnityEngine_Resources__Load_UIAtlas_(
+                                                    v16,
+                                                    (const MethodInfo_1D5BAD8 *)Method_UnityEngine_Resources_Load_ClassBoardLockReleaseConditionDialog___);
+  v18 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._19_get_SQUARE_DETAIL_DIALOG_PATH.method)(
                              this,
                              this->klass->vtable._20_get_BOARD_UI_PATH.methodPtr);
-  v53 = (ClassBoardSquareDetailDialog_o *)UnityEngine_Resources__Load_UIAtlas_(
-                                            v52,
-                                            (const MethodInfo_1E6964C *)Method_UnityEngine_Resources_Load_ClassBoardSquareDetailDialog___);
-  v54 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._20_get_BOARD_UI_PATH.method)(
+  v19 = (ClassBoardSquareDetailDialog_o *)UnityEngine_Resources__Load_UIAtlas_(
+                                            v18,
+                                            (const MethodInfo_1D5BAD8 *)Method_UnityEngine_Resources_Load_ClassBoardSquareDetailDialog___);
+  v20 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._20_get_BOARD_UI_PATH.method)(
                              this,
                              this->klass->vtable._21_get_ICON_ATLAS_PATH.methodPtr);
-  v55 = (ClassBoardUIController_o *)UnityEngine_Resources__Load_UIAtlas_(
-                                      v54,
-                                      (const MethodInfo_1E6964C *)Method_UnityEngine_Resources_Load_ClassBoardUIController___);
-  v56 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._22_get_BOARD_BG_MODEL_PATH.method)(
+  v21 = (ClassBoardUIController_o *)UnityEngine_Resources__Load_UIAtlas_(
+                                      v20,
+                                      (const MethodInfo_1D5BAD8 *)Method_UnityEngine_Resources_Load_ClassBoardUIController___);
+  v22 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._22_get_BOARD_BG_MODEL_PATH.method)(
                              this,
                              this->klass->vtable._23_get_UI_ATLAS_PATH.methodPtr);
   Contents_k__BackingField = (char *)UnityEngine_Resources__Load_UIAtlas_(
-                                       v56,
-                                       (const MethodInfo_1E6964C *)Method_UnityEngine_Resources_Load_ClassBoardBackground___);
+                                       v22,
+                                       (const MethodInfo_1D5BAD8 *)Method_UnityEngine_Resources_Load_ClassBoardBackground___);
   if ( !this->fields._Contents_k__BackingField )
     goto LABEL_9;
-  v60 = (System_Int32_array **)Contents_k__BackingField;
-  ClassBoardResourceContents__SetContents(this->fields._Contents_k__BackingField, UIAtlas, v76, v41, v43, v59);
+  v26 = (System_Int32_array **)Contents_k__BackingField;
+  ClassBoardResourceContents__SetContents(this->fields._Contents_k__BackingField, UIAtlas, v42, v7, v9, v25);
   Contents_k__BackingField = (char *)this->fields._Contents_k__BackingField;
   if ( !Contents_k__BackingField )
     goto LABEL_9;
   ClassBoardResourceContents__SetContentsDialog(
     (ClassBoardResourceContents_o *)Contents_k__BackingField,
-    v45,
-    v47,
-    v49,
-    v51,
-    v53,
-    v61);
-  v62 = this->fields._Contents_k__BackingField;
-  v63 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._23_get_UI_ATLAS_PATH.method)(
+    v11,
+    v13,
+    v15,
+    v17,
+    v19,
+    v27);
+  v28 = this->fields._Contents_k__BackingField;
+  v29 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._23_get_UI_ATLAS_PATH.method)(
                              this,
                              this->klass->vtable._24_get_CLASS_UI_ATLAS_PATH.methodPtr);
-  v64 = (AtlasManagerUnit_o *)sub_B5D694(AtlasManagerUnit_TypeInfo);
-  AtlasManagerUnit___ctor(v64, v63, 0LL, 0LL);
-  v65 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._21_get_ICON_ATLAS_PATH.method)(
+  v30 = (AtlasManagerUnit_o *)sub_B70764(AtlasManagerUnit_TypeInfo);
+  AtlasManagerUnit___ctor(v30, v29, 0LL, 0LL);
+  v31 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._21_get_ICON_ATLAS_PATH.method)(
                              this,
                              this->klass->vtable._22_get_BOARD_BG_MODEL_PATH.methodPtr);
-  v66 = (AtlasManagerUnit_o *)sub_B5D694(AtlasManagerUnit_TypeInfo);
-  AtlasManagerUnit___ctor(v66, v65, 0LL, 0LL);
-  v67 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._24_get_CLASS_UI_ATLAS_PATH.method)(
+  v32 = (AtlasManagerUnit_o *)sub_B70764(AtlasManagerUnit_TypeInfo);
+  AtlasManagerUnit___ctor(v32, v31, 0LL, 0LL);
+  v33 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, Il2CppMethodPointer))this->klass->vtable._24_get_CLASS_UI_ATLAS_PATH.method)(
                              this,
                              this->klass->vtable._25_LoadSystemAsset.methodPtr);
-  v68 = (AtlasManagerUnit_o *)sub_B5D694(AtlasManagerUnit_TypeInfo);
-  AtlasManagerUnit___ctor(v68, v67, 0LL, 0LL);
-  if ( !v62
-    || (ClassBoardResourceContents__SetContentsUI(v62, v55, v64, v66, v68, v69),
+  v34 = (AtlasManagerUnit_o *)sub_B70764(AtlasManagerUnit_TypeInfo);
+  AtlasManagerUnit___ctor(v34, v33, 0LL, 0LL);
+  if ( !v28
+    || (ClassBoardResourceContents__SetContentsUI(v28, v21, v30, v32, v34, v35),
         (Contents_k__BackingField = (char *)this->fields._Contents_k__BackingField) == 0LL)
-    || (*((_QWORD *)Contents_k__BackingField + 12) = v60,
-        sub_B5D560((BattleServantConfConponent_o *)(Contents_k__BackingField + 96), v60, v70, v71, v72, v73, v74, v75),
+    || (*((_QWORD *)Contents_k__BackingField + 12) = v26,
+        sub_B70630((BattleServantConfConponent_o *)(Contents_k__BackingField + 96), v26, v36, v37, v38, v39, v40, v41),
         (Contents_k__BackingField = (char *)callback) == 0LL) )
   {
 LABEL_9:
-    sub_B5D69C(Contents_k__BackingField, v58);
+    sub_B7076C(Contents_k__BackingField, v24);
   }
   System_Action__Invoke(callback, 0LL);
 }
@@ -342,15 +303,12 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_BLANK_PATH(
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA854 & 1) == 0 )
+  if ( (byte_4353B48 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_4052/*"ClassBoard/ClassBoardBlank"*/, (_DWORD)method, v2, v3);
-    byte_42EA854 = 1;
+    sub_B70694(&StringLiteral_4061/*"ClassBoard/ClassBoardBlank"*/);
+    byte_4353B48 = 1;
   }
-  return (System_String_o *)StringLiteral_4052/*"ClassBoard/ClassBoardBlank"*/;
+  return (System_String_o *)StringLiteral_4061/*"ClassBoard/ClassBoardBlank"*/;
 }
 
 
@@ -358,15 +316,12 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_BOARD_BG_MO
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA85C & 1) == 0 )
+  if ( (byte_4353B50 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_4051/*"ClassBoard/Bg/ClassBoardBg"*/, (_DWORD)method, v2, v3);
-    byte_42EA85C = 1;
+    sub_B70694(&StringLiteral_4060/*"ClassBoard/Bg/ClassBoardBg"*/);
+    byte_4353B50 = 1;
   }
-  return (System_String_o *)StringLiteral_4051/*"ClassBoard/Bg/ClassBoardBg"*/;
+  return (System_String_o *)StringLiteral_4060/*"ClassBoard/Bg/ClassBoardBg"*/;
 }
 
 
@@ -374,15 +329,12 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_BOARD_UI_PA
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA85A & 1) == 0 )
+  if ( (byte_4353B4E & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_4061/*"ClassBoard/ClassBoardUI"*/, (_DWORD)method, v2, v3);
-    byte_42EA85A = 1;
+    sub_B70694(&StringLiteral_4070/*"ClassBoard/ClassBoardUI"*/);
+    byte_4353B4E = 1;
   }
-  return (System_String_o *)StringLiteral_4061/*"ClassBoard/ClassBoardUI"*/;
+  return (System_String_o *)StringLiteral_4070/*"ClassBoard/ClassBoardUI"*/;
 }
 
 
@@ -390,15 +342,12 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_CLASS_UI_AT
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA85E & 1) == 0 )
+  if ( (byte_4353B52 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_4065/*"ClassBoard/UI/DownloadClassBoardClassUIAtlas"*/, (_DWORD)method, v2, v3);
-    byte_42EA85E = 1;
+    sub_B70694(&StringLiteral_4074/*"ClassBoard/UI/DownloadClassBoardClassUIAtlas"*/);
+    byte_4353B52 = 1;
   }
-  return (System_String_o *)StringLiteral_4065/*"ClassBoard/UI/DownloadClassBoardClassUIAtlas"*/;
+  return (System_String_o *)StringLiteral_4074/*"ClassBoard/UI/DownloadClassBoardClassUIAtlas"*/;
 }
 
 
@@ -414,15 +363,12 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_DISABLE_OPE
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA855 & 1) == 0 )
+  if ( (byte_4353B49 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_4053/*"ClassBoard/ClassBoardDisableOpenDialog"*/, (_DWORD)method, v2, v3);
-    byte_42EA855 = 1;
+    sub_B70694(&StringLiteral_4062/*"ClassBoard/ClassBoardDisableOpenDialog"*/);
+    byte_4353B49 = 1;
   }
-  return (System_String_o *)StringLiteral_4053/*"ClassBoard/ClassBoardDisableOpenDialog"*/;
+  return (System_String_o *)StringLiteral_4062/*"ClassBoard/ClassBoardDisableOpenDialog"*/;
 }
 
 
@@ -430,15 +376,12 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_ICON_ATLAS_
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA85B & 1) == 0 )
+  if ( (byte_4353B4F & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_4062/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/, (_DWORD)method, v2, v3);
-    byte_42EA85B = 1;
+    sub_B70694(&StringLiteral_4071/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/);
+    byte_4353B4F = 1;
   }
-  return (System_String_o *)StringLiteral_4062/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/;
+  return (System_String_o *)StringLiteral_4071/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/;
 }
 
 
@@ -446,15 +389,12 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_LINE_PATH(
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA851 & 1) == 0 )
+  if ( (byte_4353B45 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_4054/*"ClassBoard/ClassBoardLine"*/, (_DWORD)method, v2, v3);
-    byte_42EA851 = 1;
+    sub_B70694(&StringLiteral_4063/*"ClassBoard/ClassBoardLine"*/);
+    byte_4353B45 = 1;
   }
-  return (System_String_o *)StringLiteral_4054/*"ClassBoard/ClassBoardLine"*/;
+  return (System_String_o *)StringLiteral_4063/*"ClassBoard/ClassBoardLine"*/;
 }
 
 
@@ -462,15 +402,12 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_LOCK_OPEN_C
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA857 & 1) == 0 )
+  if ( (byte_4353B4B & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_4056/*"ClassBoard/ClassBoardLockOpenConfirmDialog"*/, (_DWORD)method, v2, v3);
-    byte_42EA857 = 1;
+    sub_B70694(&StringLiteral_4065/*"ClassBoard/ClassBoardLockOpenConfirmDialog"*/);
+    byte_4353B4B = 1;
   }
-  return (System_String_o *)StringLiteral_4056/*"ClassBoard/ClassBoardLockOpenConfirmDialog"*/;
+  return (System_String_o *)StringLiteral_4065/*"ClassBoard/ClassBoardLockOpenConfirmDialog"*/;
 }
 
 
@@ -478,15 +415,12 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_LOCK_PATH(
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA853 & 1) == 0 )
+  if ( (byte_4353B47 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_4055/*"ClassBoard/ClassBoardLock"*/, (_DWORD)method, v2, v3);
-    byte_42EA853 = 1;
+    sub_B70694(&StringLiteral_4064/*"ClassBoard/ClassBoardLock"*/);
+    byte_4353B47 = 1;
   }
-  return (System_String_o *)StringLiteral_4055/*"ClassBoard/ClassBoardLock"*/;
+  return (System_String_o *)StringLiteral_4064/*"ClassBoard/ClassBoardLock"*/;
 }
 
 
@@ -494,15 +428,12 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_LOCK_RELEAS
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA858 & 1) == 0 )
+  if ( (byte_4353B4C & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_4057/*"ClassBoard/ClassBoardLockReleaseConditionDialog"*/, (_DWORD)method, v2, v3);
-    byte_42EA858 = 1;
+    sub_B70694(&StringLiteral_4066/*"ClassBoard/ClassBoardLockReleaseConditionDialog"*/);
+    byte_4353B4C = 1;
   }
-  return (System_String_o *)StringLiteral_4057/*"ClassBoard/ClassBoardLockReleaseConditionDialog"*/;
+  return (System_String_o *)StringLiteral_4066/*"ClassBoard/ClassBoardLockReleaseConditionDialog"*/;
 }
 
 
@@ -510,15 +441,12 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_SQUARE_DETA
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA859 & 1) == 0 )
+  if ( (byte_4353B4D & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_4059/*"ClassBoard/ClassBoardSquareDetailDialog"*/, (_DWORD)method, v2, v3);
-    byte_42EA859 = 1;
+    sub_B70694(&StringLiteral_4068/*"ClassBoard/ClassBoardSquareDetailDialog"*/);
+    byte_4353B4D = 1;
   }
-  return (System_String_o *)StringLiteral_4059/*"ClassBoard/ClassBoardSquareDetailDialog"*/;
+  return (System_String_o *)StringLiteral_4068/*"ClassBoard/ClassBoardSquareDetailDialog"*/;
 }
 
 
@@ -526,15 +454,12 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_SQUARE_OPEN
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA856 & 1) == 0 )
+  if ( (byte_4353B4A & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_4060/*"ClassBoard/ClassBoardSquareOpenConfirmDialog"*/, (_DWORD)method, v2, v3);
-    byte_42EA856 = 1;
+    sub_B70694(&StringLiteral_4069/*"ClassBoard/ClassBoardSquareOpenConfirmDialog"*/);
+    byte_4353B4A = 1;
   }
-  return (System_String_o *)StringLiteral_4060/*"ClassBoard/ClassBoardSquareOpenConfirmDialog"*/;
+  return (System_String_o *)StringLiteral_4069/*"ClassBoard/ClassBoardSquareOpenConfirmDialog"*/;
 }
 
 
@@ -542,15 +467,12 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_SQUARE_PATH
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA852 & 1) == 0 )
+  if ( (byte_4353B46 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_4058/*"ClassBoard/ClassBoardSquare"*/, (_DWORD)method, v2, v3);
-    byte_42EA852 = 1;
+    sub_B70694(&StringLiteral_4067/*"ClassBoard/ClassBoardSquare"*/);
+    byte_4353B46 = 1;
   }
-  return (System_String_o *)StringLiteral_4058/*"ClassBoard/ClassBoardSquare"*/;
+  return (System_String_o *)StringLiteral_4067/*"ClassBoard/ClassBoardSquare"*/;
 }
 
 
@@ -558,13 +480,10 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_UI_ATLAS_PA
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA85D & 1) == 0 )
+  if ( (byte_4353B51 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_4066/*"ClassBoard/UI/DownloadClassBoardUIAtlas"*/, (_DWORD)method, v2, v3);
-    byte_42EA85D = 1;
+    sub_B70694(&StringLiteral_4075/*"ClassBoard/UI/DownloadClassBoardUIAtlas"*/);
+    byte_4353B51 = 1;
   }
-  return (System_String_o *)StringLiteral_4066/*"ClassBoard/UI/DownloadClassBoardUIAtlas"*/;
+  return (System_String_o *)StringLiteral_4075/*"ClassBoard/UI/DownloadClassBoardUIAtlas"*/;
 }

@@ -2,10 +2,10 @@ void __fastcall WeightRate_WeightSeed_int____ctor(
         WeightRate_WeightSeed_T__o *this,
         int32_t w,
         int32_t t,
-        const MethodInfo_2BFAA2C *method)
+        const MethodInfo_2CBD7E0 *method)
 {
   if ( !this )
-    sub_B5D69C(0LL, w);
+    sub_B7076C(0LL, w);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.weight = w;
   *(&this->fields.weight + 1) = t;
@@ -16,7 +16,7 @@ void __fastcall WeightRate_WeightSeed_object____ctor(
         WeightRate_WeightSeed_T__o *this,
         int32_t w,
         Il2CppObject *t,
-        const MethodInfo_2BFAA6C *method)
+        const MethodInfo_2CBD820 *method)
 {
   BattleServantConfConponent_o *v6; // x21
   System_String_array **v7; // x2
@@ -27,22 +27,22 @@ void __fastcall WeightRate_WeightSeed_object____ctor(
   System_Int32_array *v12; // x7
 
   if ( !this )
-    sub_B5D69C(0LL, w);
+    sub_B7076C(0LL, w);
   v6 = (BattleServantConfConponent_o *)this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v6->fields._closeBtnObject = (struct UnityEngine_GameObject_o *)t;
   v6 = (BattleServantConfConponent_o *)((char *)v6 + 24);
   *(_DWORD *)&v6[-1].fields.isOpenAfter = w;
-  sub_B5D560(v6, (System_Int32_array **)t, v7, v8, v9, v10, v11, v12);
+  sub_B70630(v6, (System_Int32_array **)t, v7, v8, v9, v10, v11, v12);
 }
 
 
 void __fastcall WeightRate___c__DisplayClass4_0_int____ctor(
         WeightRate___c__DisplayClass4_0_T__o *this,
-        const MethodInfo_1F50D80 *method)
+        const MethodInfo_1F39F5C *method)
 {
   if ( !this )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -50,20 +50,20 @@ void __fastcall WeightRate___c__DisplayClass4_0_int____ctor(
 bool __fastcall WeightRate___c__DisplayClass4_0_int____removeWeight_b__0(
         WeightRate___c__DisplayClass4_0_T__o *this,
         WeightRate_WeightSeed_T__o *s,
-        const MethodInfo_1F50D98 *method)
+        const MethodInfo_1F39F74 *method)
 {
   if ( !s )
-    sub_B5D69C(this, 0LL);
-  return System_Int32__CompareTo_39741540((_DWORD)this + 16, *(&s->fields.weight + 1), 0LL) == 0;
+    sub_B7076C(this, 0LL);
+  return System_Int32__CompareTo_39283748((_DWORD)this + 16, *(&s->fields.weight + 1), 0LL) == 0;
 }
 
 
 void __fastcall WeightRate___c__DisplayClass4_0_object____ctor(
         WeightRate___c__DisplayClass4_0_T__o *this,
-        const MethodInfo_1F50E0C *method)
+        const MethodInfo_1F39FE8 *method)
 {
   if ( !this )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -71,36 +71,35 @@ void __fastcall WeightRate___c__DisplayClass4_0_object____ctor(
 bool __fastcall WeightRate___c__DisplayClass4_0_object____removeWeight_b__0(
         WeightRate___c__DisplayClass4_0_T__o *this,
         WeightRate_WeightSeed_T__o *s,
-        const MethodInfo_1F50E24 *method)
+        const MethodInfo_1F3A000 *method)
 {
-  __int64 v3; // x3
   Il2CppObject *t; // x19
   Il2CppObject *value; // x20
   Il2CppClass *_1_System_IComparable_T; // x21
   Il2CppClass *klass; // x8
-  unsigned __int64 v9; // x10
+  unsigned __int64 v8; // x10
   int32_t *p_offset; // x11
   __int64 p_method; // x0
 
   if ( !s || (t = this->fields.t) == 0LL )
-    sub_B5D69C(this, s);
+    sub_B7076C(this, s);
   value = s->fields.value;
   _1_System_IComparable_T = method->klass->rgctx_data->_1_System_IComparable_T_;
   if ( (BYTE2(_1_System_IComparable_T->vtable[0].methodPtr) & 1) == 0 )
   {
-    sub_AF52C4(method->klass->rgctx_data->_1_System_IComparable_T_);
+    sub_B08394(method->klass->rgctx_data->_1_System_IComparable_T_);
     t = this->fields.t;
   }
   klass = t->klass;
   if ( *(_WORD *)&t->klass->_2.bitflags1 )
   {
-    v9 = 0LL;
+    v8 = 0LL;
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((Il2CppClass **)p_offset - 1) != _1_System_IComparable_T )
     {
-      ++v9;
+      ++v8;
       p_offset += 4;
-      if ( v9 >= *(unsigned __int16 *)&t->klass->_2.bitflags1 )
+      if ( v8 >= *(unsigned __int16 *)&t->klass->_2.bitflags1 )
         goto LABEL_9;
     }
     p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -108,7 +107,7 @@ bool __fastcall WeightRate___c__DisplayClass4_0_object____removeWeight_b__0(
   else
   {
 LABEL_9:
-    p_method = sub_AF54C0(t, _1_System_IComparable_T, 0LL, v3);
+    p_method = sub_B08590(t, _1_System_IComparable_T, 0LL);
   }
   return (*(unsigned int (__fastcall **)(Il2CppObject *, Il2CppObject *, _QWORD))p_method)(
            t,
@@ -117,7 +116,7 @@ LABEL_9:
 }
 
 
-void __fastcall WeightRate___c_int____cctor(const MethodInfo_1F49BD4 *method)
+void __fastcall WeightRate___c_int____cctor(const MethodInfo_1F32DB0 *method)
 {
   WeightRate___c_T__c *klass; // x20
   Il2CppClass *_0_WeightRate___c_T; // x20
@@ -139,41 +138,41 @@ void __fastcall WeightRate___c_int____cctor(const MethodInfo_1F49BD4 *method)
 
   klass = method->klass;
   if ( (BYTE2(klass->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_AF52C4(method->klass);
+    sub_B08394(method->klass);
   _0_WeightRate___c_T = klass->rgctx_data->_0_WeightRate___c_T_;
   if ( (BYTE2(_0_WeightRate___c_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_AF52C4(_0_WeightRate___c_T);
-  v4 = sub_B5D694(_0_WeightRate___c_T);
+    sub_B08394(_0_WeightRate___c_T);
+  v4 = sub_B70764(_0_WeightRate___c_T);
   v5 = method->klass;
   v6 = (System_Int32_array **)v4;
   v7 = WORD1(v5->vtable._0_Equals.methodPtr);
   v8 = v5;
   if ( (v7 & 1) == 0 )
   {
-    sub_AF52C4(method->klass);
+    sub_B08394(method->klass);
     v8 = method->klass;
     v7 = WORD1(v8->vtable._0_Equals.methodPtr);
   }
   methodPointer = (void (__fastcall *)(System_Int32_array **, MethodInfo *))v5->rgctx_data->_1_WeightRate___c_T___ctor->methodPointer;
   if ( (v7 & 1) == 0 )
-    sub_AF52C4(v8);
+    sub_B08394(v8);
   methodPointer(v6, v8->rgctx_data->_1_WeightRate___c_T___ctor);
   v16 = method->klass;
   if ( (BYTE2(v16->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_AF52C4(v16);
+    sub_B08394(v16);
   _2_WeightRate___c_T = v16->rgctx_data->_2_WeightRate___c_T_;
   if ( (BYTE2(_2_WeightRate___c_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_AF52C4(_2_WeightRate___c_T);
+    sub_B08394(_2_WeightRate___c_T);
   static_fields = (BattleServantConfConponent_o *)_2_WeightRate___c_T->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v6;
-  sub_B5D560(static_fields, v6, v10, v11, v12, v13, v14, v15);
+  sub_B70630(static_fields, v6, v10, v11, v12, v13, v14, v15);
 }
 
 
-void __fastcall WeightRate___c_int____ctor(WeightRate___c_T__o *this, const MethodInfo_1F49CB0 *method)
+void __fastcall WeightRate___c_int____ctor(WeightRate___c_T__o *this, const MethodInfo_1F32E8C *method)
 {
   if ( !this )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -182,15 +181,15 @@ int32_t __fastcall WeightRate___c_int____ReverseWeight_b__11_0(
         WeightRate___c_T__o *this,
         WeightRate_WeightSeed_T__o *a,
         WeightRate_WeightSeed_T__o *b,
-        const MethodInfo_1F49CC8 *method)
+        const MethodInfo_1F32EA4 *method)
 {
   if ( !b || !a )
-    sub_B5D69C(this, a);
+    sub_B7076C(this, a);
   return b->fields.weight - a->fields.weight;
 }
 
 
-void __fastcall WeightRate___c_object____cctor(const MethodInfo_1F4AA4C *method)
+void __fastcall WeightRate___c_object____cctor(const MethodInfo_1F33C28 *method)
 {
   WeightRate___c_T__c *klass; // x20
   Il2CppClass *_0_WeightRate___c_T; // x20
@@ -212,41 +211,41 @@ void __fastcall WeightRate___c_object____cctor(const MethodInfo_1F4AA4C *method)
 
   klass = method->klass;
   if ( (BYTE2(klass->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_AF52C4(method->klass);
+    sub_B08394(method->klass);
   _0_WeightRate___c_T = klass->rgctx_data->_0_WeightRate___c_T_;
   if ( (BYTE2(_0_WeightRate___c_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_AF52C4(_0_WeightRate___c_T);
-  v4 = sub_B5D694(_0_WeightRate___c_T);
+    sub_B08394(_0_WeightRate___c_T);
+  v4 = sub_B70764(_0_WeightRate___c_T);
   v5 = method->klass;
   v6 = (System_Int32_array **)v4;
   v7 = WORD1(v5->vtable._0_Equals.methodPtr);
   v8 = v5;
   if ( (v7 & 1) == 0 )
   {
-    sub_AF52C4(method->klass);
+    sub_B08394(method->klass);
     v8 = method->klass;
     v7 = WORD1(v8->vtable._0_Equals.methodPtr);
   }
   methodPointer = (void (__fastcall *)(System_Int32_array **, MethodInfo *))v5->rgctx_data->_1_WeightRate___c_T___ctor->methodPointer;
   if ( (v7 & 1) == 0 )
-    sub_AF52C4(v8);
+    sub_B08394(v8);
   methodPointer(v6, v8->rgctx_data->_1_WeightRate___c_T___ctor);
   v16 = method->klass;
   if ( (BYTE2(v16->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_AF52C4(v16);
+    sub_B08394(v16);
   _2_WeightRate___c_T = v16->rgctx_data->_2_WeightRate___c_T_;
   if ( (BYTE2(_2_WeightRate___c_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_AF52C4(_2_WeightRate___c_T);
+    sub_B08394(_2_WeightRate___c_T);
   static_fields = (BattleServantConfConponent_o *)_2_WeightRate___c_T->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v6;
-  sub_B5D560(static_fields, v6, v10, v11, v12, v13, v14, v15);
+  sub_B70630(static_fields, v6, v10, v11, v12, v13, v14, v15);
 }
 
 
-void __fastcall WeightRate___c_object____ctor(WeightRate___c_T__o *this, const MethodInfo_1F4AB28 *method)
+void __fastcall WeightRate___c_object____ctor(WeightRate___c_T__o *this, const MethodInfo_1F33D04 *method)
 {
   if ( !this )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -255,9 +254,9 @@ int32_t __fastcall WeightRate___c_object____ReverseWeight_b__11_0(
         WeightRate___c_T__o *this,
         WeightRate_WeightSeed_T__o *a,
         WeightRate_WeightSeed_T__o *b,
-        const MethodInfo_1F4AB40 *method)
+        const MethodInfo_1F33D1C *method)
 {
   if ( !b || !a )
-    sub_B5D69C(this, a);
+    sub_B7076C(this, a);
   return b->fields.weight - a->fields.weight;
 }

@@ -10,18 +10,16 @@ CharaGraphFilterLogicBase_o *__fastcall CharaGraphSortManageUnitServant__CreateF
         CharaGraphSortManageUnitServant_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  ServantCharaGraphFilterLogic_o *v4; // x19
+  ServantCharaGraphFilterLogic_o *v2; // x19
 
-  if ( (byte_42E96FE & 1) == 0 )
+  if ( (byte_4354A82 & 1) == 0 )
   {
-    sub_B5D5C4(&ServantCharaGraphFilterLogic_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E96FE = 1;
+    sub_B70694(&ServantCharaGraphFilterLogic_TypeInfo);
+    byte_4354A82 = 1;
   }
-  v4 = (ServantCharaGraphFilterLogic_o *)sub_B5D694(ServantCharaGraphFilterLogic_TypeInfo);
-  ServantCharaGraphFilterLogic___ctor(v4, 0LL);
-  return (CharaGraphFilterLogicBase_o *)v4;
+  v2 = (ServantCharaGraphFilterLogic_o *)sub_B70764(ServantCharaGraphFilterLogic_TypeInfo);
+  ServantCharaGraphFilterLogic___ctor(v2, 0LL);
+  return (CharaGraphFilterLogicBase_o *)v2;
 }
 
 
@@ -29,18 +27,16 @@ CharaGraphSortLogicBase_o *__fastcall CharaGraphSortManageUnitServant__CreateSor
         CharaGraphSortManageUnitServant_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  ServantCharaGraphSortLogic_o *v4; // x19
+  ServantCharaGraphSortLogic_o *v2; // x19
 
-  if ( (byte_42E96FD & 1) == 0 )
+  if ( (byte_4354A81 & 1) == 0 )
   {
-    sub_B5D5C4(&ServantCharaGraphSortLogic_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E96FD = 1;
+    sub_B70694(&ServantCharaGraphSortLogic_TypeInfo);
+    byte_4354A81 = 1;
   }
-  v4 = (ServantCharaGraphSortLogic_o *)sub_B5D694(ServantCharaGraphSortLogic_TypeInfo);
-  ServantCharaGraphSortLogic___ctor(v4, 0LL);
-  return (CharaGraphSortLogicBase_o *)v4;
+  v2 = (ServantCharaGraphSortLogic_o *)sub_B70764(ServantCharaGraphSortLogic_TypeInfo);
+  ServantCharaGraphSortLogic___ctor(v2, 0LL);
+  return (CharaGraphSortLogicBase_o *)v2;
 }
 
 
@@ -80,13 +76,10 @@ System_String_o *__fastcall CharaGraphSortManageUnitServant__get_SortSaveKeySuff
         CharaGraphSortManageUnitServant_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42E96FC & 1) == 0 )
+  if ( (byte_4354A80 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_1026/*"1"*/, (_DWORD)method, v2, v3);
-    byte_42E96FC = 1;
+    sub_B70694(&StringLiteral_1031/*"1"*/);
+    byte_4354A80 = 1;
   }
-  return (System_String_o *)StringLiteral_1026/*"1"*/;
+  return (System_String_o *)StringLiteral_1031/*"1"*/;
 }

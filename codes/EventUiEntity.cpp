@@ -1,13 +1,9 @@
 void __fastcall EventUiEntity___cctor(const MethodInfo *method)
 {
-  int v1; // w1
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42E84E5 & 1) == 0 )
+  if ( (byte_4350FE5 & 1) == 0 )
   {
-    sub_B5D5C4(&EventUiEntity_TypeInfo, v1, v2, v3);
-    byte_42E84E5 = 1;
+    sub_B70694(&EventUiEntity_TypeInfo);
+    byte_4350FE5 = 1;
   }
   LODWORD(EventUiEntity_TypeInfo->static_fields->EVNET_UI_POSITION_MAGNIFICATION) = (struct EventUiEntity_StaticFields)1008981770;
 }
@@ -15,30 +11,28 @@ void __fastcall EventUiEntity___cctor(const MethodInfo *method)
 
 void __fastcall EventUiEntity___ctor(EventUiEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   struct System_Int32_array **p_spotIds; // x19
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  System_String_array **v4; // x2
+  System_String_array **v5; // x3
+  System_Boolean_array **v6; // x4
+  System_Int32_array **v7; // x5
+  System_Int32_array *v8; // x6
+  System_Int32_array *v9; // x7
 
-  if ( (byte_42E84E2 & 1) == 0 )
+  if ( (byte_4350FE2 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
-    byte_42E84E2 = 1;
+    sub_B70694(&Method_DataEntityBase_string___ctor__);
+    byte_4350FE2 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
   this->fields.spotIds = 0LL;
   p_spotIds = &this->fields.spotIds;
   *(p_spotIds - 3) = 0LL;
   *(p_spotIds - 2) = 0LL;
   *((_DWORD *)p_spotIds - 2) = 0;
-  sub_B5D560((BattleServantConfConponent_o *)p_spotIds, 0LL, v6, v7, v8, v9, v10, v11);
+  sub_B70630((BattleServantConfConponent_o *)p_spotIds, 0LL, v4, v5, v6, v7, v8, v9);
   *(struct System_Int32_array **)((char *)p_spotIds + 20) = 0LL;
   *(struct System_Int32_array **)((char *)p_spotIds + 12) = 0LL;
   *((_DWORD *)p_spotIds + 2) = 1;
@@ -48,31 +42,28 @@ void __fastcall EventUiEntity___ctor(EventUiEntity_o *this, const MethodInfo *me
 
 System_String_o *__fastcall EventUiEntity__CreatePK(int32_t id, int32_t priority, const MethodInfo *method)
 {
-  __int64 v3; // x3
-
-  if ( (byte_42E84E4 & 1) == 0 )
+  if ( (byte_4350FE4 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_int__int___, priority, (_DWORD)method, v3);
-    byte_42E84E4 = 1;
+    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4350FE4 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            priority,
-           (const MethodInfo_1AE3018 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1CA236C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
 System_String_o *__fastcall EventUiEntity__CreatePrimaryKey(EventUiEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
-  __int64 v3; // x3
   int32_t priority; // w19
   int32_t id; // w20
 
-  if ( (byte_42E84E3 & 1) == 0 )
+  if ( (byte_4350FE3 & 1) == 0 )
   {
-    sub_B5D5C4(&EventUiEntity_TypeInfo, (_DWORD)method, (_DWORD)v2, v3);
-    byte_42E84E3 = 1;
+    sub_B70694(&EventUiEntity_TypeInfo);
+    byte_4350FE3 = 1;
   }
   id = this->fields.id;
   priority = this->fields.priority;

@@ -61,7 +61,7 @@ void __fastcall PresentBoxNotificationListViewItemDraw__SetItem(
           (nameTextLabel = this->fields.countTextLabel) == 0LL) )
     {
 LABEL_13:
-      sub_B5D69C(nameTextLabel, item);
+      sub_B7076C(nameTextLabel, item);
     }
     UILabel__set_text(nameTextLabel, v6->fields.presentCount, 0LL);
   }

@@ -1,12 +1,9 @@
 void __fastcall TabOpenEffectComponent___ctor(TabOpenEffectComponent_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42E5B0E & 1) == 0 )
+  if ( (byte_434EDF7 & 1) == 0 )
   {
-    sub_B5D5C4(&CommonEffectComponent_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E5B0E = 1;
+    sub_B70694(&CommonEffectComponent_TypeInfo);
+    byte_434EDF7 = 1;
   }
   if ( (BYTE3(CommonEffectComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CommonEffectComponent_TypeInfo->_2.cctor_finished )
@@ -39,39 +36,31 @@ void __fastcall TabOpenEffectComponent__ChangeUIFunc(TabOpenEffectComponent_o *t
 
 void __fastcall TabOpenEffectComponent__PlayAnimation(TabOpenEffectComponent_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
   UnityEngine_Object_o *Component_WebViewObject; // x20
-  UnityEngine_Object_o *v12; // x19
-  _BOOL8 v13; // x0
-  __int64 v14; // x1
+  UnityEngine_Object_o *v4; // x19
+  _BOOL8 v5; // x0
+  __int64 v6; // x1
 
-  if ( (byte_42E5B0D & 1) == 0 )
+  if ( (byte_434EDF6 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_UnityEngine_Component_GetComponent_Animation___, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v5, v6, v7);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v8, v9, v10);
-    byte_42E5B0D = 1;
+    sub_B70694(&Method_UnityEngine_Component_GetComponent_Animation___);
+    sub_B70694(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_434EDF6 = 1;
   }
   Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                       (UnityEngine_Component_o *)this,
-                                                      (const MethodInfo_1ADE2A0 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
-  v12 = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
-                                  (UnityEngine_Component_o *)this,
-                                  (const MethodInfo_1ADE2A0 *)Method_UnityEngine_Component_GetComponent_Animation___);
+                                                      (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+  v4 = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
+                                 (UnityEngine_Component_o *)this,
+                                 (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_Animation___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  v13 = UnityEngine_Object__op_Inequality(Component_WebViewObject, 0LL, 0LL);
-  if ( v13 )
+  v5 = UnityEngine_Object__op_Inequality(Component_WebViewObject, 0LL, 0LL);
+  if ( v5 )
   {
     if ( Component_WebViewObject )
     {
@@ -79,19 +68,19 @@ void __fastcall TabOpenEffectComponent__PlayAnimation(TabOpenEffectComponent_o *
       return;
     }
 LABEL_16:
-    sub_B5D69C(v13, v14);
+    sub_B7076C(v5, v6);
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  v13 = UnityEngine_Object__op_Inequality(v12, 0LL, 0LL);
-  if ( v13 )
+  v5 = UnityEngine_Object__op_Inequality(v4, 0LL, 0LL);
+  if ( v5 )
   {
-    if ( !v12 )
+    if ( !v4 )
       goto LABEL_16;
-    UnityEngine_Animation__Play((UnityEngine_Animation_o *)v12, 0LL);
+    UnityEngine_Animation__Play((UnityEngine_Animation_o *)v4, 0LL);
   }
 }
 
@@ -104,7 +93,7 @@ void __fastcall TabOpenEffectComponent__SetAnimationEndCallback(
   if ( callback )
   {
     this->fields.animEndCallback = callback;
-    sub_B5D560(&this->fields.animEndCallback);
+    sub_B70630(&this->fields.animEndCallback);
   }
 }
 
@@ -117,6 +106,6 @@ void __fastcall TabOpenEffectComponent__SetChangeUICallback(
   if ( callback )
   {
     this->fields.changeUICallback = callback;
-    sub_B5D560(&this->fields.changeUICallback);
+    sub_B70630(&this->fields.changeUICallback);
   }
 }

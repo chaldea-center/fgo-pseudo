@@ -16,7 +16,7 @@ void __fastcall FriendshipExceedFriendshipGauge___ctor(
   v7 = 1050935296;
   v9 = 0;
   *(_QWORD *)&v10.fields.r = 0LL;
-  UnityEngine_Color___ctor_41567816(*(UnityEngine_Color_o *)(&v2 - 3), v3, v4, v5, (const MethodInfo *)&v10);
+  UnityEngine_Color___ctor_41064944(*(UnityEngine_Color_o *)(&v2 - 3), v3, v4, v5, (const MethodInfo *)&v10);
   this->fields.DISABLE_COLOR = v10;
   this->fields.EXCEEDED_COLOR = UnityEngine_Color__get_yellow(0LL);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
@@ -27,18 +27,13 @@ void __fastcall FriendshipExceedFriendshipGauge__InitUISpriteAtlas(
         FriendshipExceedFriendshipGauge_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
   UISprite_o *exceededIconUISprite; // x20
 
-  if ( (byte_42EB4FD & 1) == 0 )
+  if ( (byte_43540A1 & 1) == 0 )
   {
-    sub_B5D5C4(&AtlasManager_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&StringLiteral_19695/*"img_bondsgage_11"*/, v5, v6, v7);
-    byte_42EB4FD = 1;
+    sub_B70694(&AtlasManager_TypeInfo);
+    sub_B70694(&StringLiteral_19754/*"img_bondsgage_11"*/);
+    byte_43540A1 = 1;
   }
   if ( !this->fields.isInitUISpriteAtlas )
   {
@@ -48,7 +43,7 @@ void __fastcall FriendshipExceedFriendshipGauge__InitUISpriteAtlas(
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetBondAtlasImage(exceededIconUISprite, (System_String_o *)StringLiteral_19695/*"img_bondsgage_11"*/, 0LL);
+    AtlasManager__SetBondAtlasImage(exceededIconUISprite, (System_String_o *)StringLiteral_19754/*"img_bondsgage_11"*/, 0LL);
     this->fields.isInitUISpriteAtlas = 1;
   }
 }
@@ -72,10 +67,10 @@ void __fastcall FriendshipExceedFriendshipGauge__Set(
   int v17; // w2
   int v18; // w3
 
-  if ( (byte_42EB4FC & 1) == 0 )
+  if ( (byte_43540A0 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_UIGrid___, level, max, *(_QWORD *)&type);
-    byte_42EB4FC = 1;
+    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UIGrid___);
+    byte_43540A0 = 1;
   }
   FriendshipExceedFriendshipGauge__InitUISpriteAtlas(this, *(const MethodInfo **)&level);
   FriendshipExceedFriendshipGauge__SetLabel(this, level, max, type, v11);
@@ -108,10 +103,10 @@ void __fastcall FriendshipExceedFriendshipGauge__Set(
   if ( !normalRoot
     || (normalRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                    normalRoot,
-                                                   (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_UIGrid___)) == 0LL )
+                                                   (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UIGrid___)) == 0LL )
   {
 LABEL_12:
-    sub_B5D69C(normalRoot, v12);
+    sub_B7076C(normalRoot, v12);
   }
   ((void (__fastcall *)(UnityEngine_GameObject_o *, Il2CppClass *))normalRoot->klass[1]._1.castClass)(
     normalRoot,
@@ -145,8 +140,8 @@ void __fastcall FriendshipExceedFriendshipGauge__SetGaugeList(
     {
       if ( v11 >= (unsigned int)max_length )
       {
-        v16 = sub_B5D6C8(this);
-        sub_B5D668(v16, 0LL);
+        v16 = sub_B70798(this);
+        sub_B70738(v16, 0LL);
       }
       v12 = &sliderList->obj.klass + v11;
       v13 = (UIProgressBar_o *)v12[4];
@@ -182,7 +177,7 @@ void __fastcall FriendshipExceedFriendshipGauge__SetGaugeList(
         return;
     }
 LABEL_14:
-    sub_B5D69C(this, sliderList);
+    sub_B7076C(this, sliderList);
   }
 }
 
@@ -257,7 +252,7 @@ void __fastcall FriendshipExceedFriendshipGauge__SetLabel(
       goto LABEL_10;
     }
 LABEL_17:
-    sub_B5D69C(v8, v9);
+    sub_B7076C(v8, v9);
   }
   v8 = (System_String_o *)this->fields.levelLabel;
   if ( !v8 )

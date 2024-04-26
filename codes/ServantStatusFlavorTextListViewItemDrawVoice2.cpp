@@ -107,7 +107,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawVoice2__SetItem(
       || (baseSprite = (UILabel_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)baseSprite, 0LL)) == 0LL )
     {
 LABEL_23:
-      sub_B5D69C(baseSprite, v9);
+      sub_B7076C(baseSprite, v9);
     }
     v30.fields.y = v24 + (float)(v26 >> 1);
     v30.fields.x = v23;

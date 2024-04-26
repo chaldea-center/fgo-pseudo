@@ -2,22 +2,15 @@ void __fastcall UserEventMissionCondDetailMaster___ctor(
         UserEventMissionCondDetailMaster_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42E7090 & 1) == 0 )
+  if ( (byte_4350656 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string___ctor__,
-      (_DWORD)method,
-      v2,
-      v3);
-    byte_42E7090 = 1;
+    sub_B70694(&Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string___ctor__);
+    byte_4350656 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     142,
-    (const MethodInfo_23FB1C4 *)Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string___ctor__);
+    (const MethodInfo_21C07F4 *)Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string___ctor__);
 }
 
 
@@ -30,24 +23,19 @@ UserEventMissionCondDetailEntity_o *__fastcall UserEventMissionCondDetailMaster_
 {
   System_String_o *PK; // x1
 
-  if ( (byte_42E708E & 1) == 0 )
+  if ( (byte_4350654 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string__GetEntity__,
-      userId,
-      conditionDetailId,
-      method);
-    byte_42E708E = 1;
+    sub_B70694(&Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string__GetEntity__);
+    byte_4350654 = 1;
   }
   PK = UserEventMissionCondDetailEntity__CreatePK(userId, conditionDetailId, *(const MethodInfo **)&conditionDetailId);
   return (UserEventMissionCondDetailEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                                  (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                                  PK,
-                                                 (const MethodInfo_23FB260 *)Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string__GetEntity__);
+                                                 (const MethodInfo_21C0890 *)Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string__GetEntity__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall UserEventMissionCondDetailMaster__TryGetEntity(
         UserEventMissionCondDetailMaster_o *this,
         UserEventMissionCondDetailEntity_o **entity,
@@ -57,19 +45,15 @@ bool __fastcall UserEventMissionCondDetailMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_42E708F & 1) == 0 )
+  if ( (byte_4350655 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string__TryGetEntity__,
-      (_DWORD)entity,
-      userId,
-      *(_QWORD *)&conditionDetailId);
-    byte_42E708F = 1;
+    sub_B70694(&Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string__TryGetEntity__);
+    byte_4350655 = 1;
   }
   PK = UserEventMissionCondDetailEntity__CreatePK(userId, conditionDetailId, (const MethodInfo *)userId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_23FB2B8 *)Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string__TryGetEntity__);
+           (const MethodInfo_21C08E8 *)Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string__TryGetEntity__);
 }

@@ -46,14 +46,9 @@ void __fastcall ServantStatusFlavorTextListViewItemDraw__SetItem(
 }
 
 
-void __fastcall ServantStatusFlavorTextListViewItemDraw__SetParameterGauge(
+void __fastcall ServantStatusFlavorTextListViewItemDraw__UpdateParameter(
         ServantStatusFlavorTextListViewItemDraw_o *this,
-        int32_t power,
-        int32_t defense,
-        int32_t agility,
-        int32_t magic,
-        int32_t luck,
-        int32_t np,
+        ServantStatusListViewItem_o *item,
         const MethodInfo *method)
 {
   ;

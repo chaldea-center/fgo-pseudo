@@ -7,30 +7,19 @@ void __fastcall SetSpoilerProtectionControl___ctor(SetSpoilerProtectionControl_o
 
 void __fastcall SetSpoilerProtectionControl__Init(SetSpoilerProtectionControl_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
   UILabel_o *infoLabel; // x20
-  System_String_o *v15; // x0
-  __int64 v16; // x1
-  UILabel_o *v17; // x20
-  const MethodInfo *v18; // x1
+  System_String_o *v4; // x0
+  __int64 v5; // x1
+  UILabel_o *v6; // x20
+  const MethodInfo *v7; // x1
 
-  if ( (byte_42ECEED & 1) == 0 )
+  if ( (byte_435630C & 1) == 0 )
   {
-    sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&OptionManager_TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&StringLiteral_9919/*"OPTION_SPOILER_PROTECTION_INFO"*/, v8, v9, v10);
-    sub_B5D5C4(&StringLiteral_9920/*"OPTION_SPOILER_PROTECTION_TITLE"*/, v11, v12, v13);
-    byte_42ECEED = 1;
+    sub_B70694(&LocalizationManager_TypeInfo);
+    sub_B70694(&OptionManager_TypeInfo);
+    sub_B70694(&StringLiteral_9935/*"OPTION_SPOILER_PROTECTION_INFO"*/);
+    sub_B70694(&StringLiteral_9936/*"OPTION_SPOILER_PROTECTION_TITLE"*/);
+    byte_435630C = 1;
   }
   infoLabel = this->fields.infoLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -38,23 +27,23 @@ void __fastcall SetSpoilerProtectionControl__Init(SetSpoilerProtectionControl_o 
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_9920/*"OPTION_SPOILER_PROTECTION_TITLE"*/, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9936/*"OPTION_SPOILER_PROTECTION_TITLE"*/, 0LL);
   if ( !infoLabel
-    || (UILabel__set_text(infoLabel, v15, 0LL),
-        v17 = *(UILabel_o **)&this->fields.isSpoilerSetting,
-        v15 = LocalizationManager__Get((System_String_o *)StringLiteral_9919/*"OPTION_SPOILER_PROTECTION_INFO"*/, 0LL),
-        !v17) )
+    || (UILabel__set_text(infoLabel, v4, 0LL),
+        v6 = *(UILabel_o **)&this->fields.isSpoilerSetting,
+        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9935/*"OPTION_SPOILER_PROTECTION_INFO"*/, 0LL),
+        !v6) )
   {
-    sub_B5D69C(v15, v16);
+    sub_B7076C(v4, v5);
   }
-  UILabel__set_text(v17, v15, 0LL);
+  UILabel__set_text(v6, v4, 0LL);
   if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
   }
   LOBYTE(this[1].klass) = OptionManager__GetSpoilerSetting(0LL);
-  SetSpoilerProtectionControl__SetSpoilerProtectionDispValue(this, v18);
+  SetSpoilerProtectionControl__SetSpoilerProtectionDispValue(this, v7);
 }
 
 
@@ -62,14 +51,12 @@ void __fastcall SetSpoilerProtectionControl__OnClickSpoilerProtection(
         SetSpoilerProtectionControl_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  const MethodInfo *v5; // x1
+  const MethodInfo *v3; // x1
 
-  if ( (byte_42ECEF0 & 1) == 0 )
+  if ( (byte_435630F & 1) == 0 )
   {
-    sub_B5D5C4(&SoundManager_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42ECEF0 = 1;
+    sub_B70694(&SoundManager_TypeInfo);
+    byte_435630F = 1;
   }
   if ( LOBYTE(this[1].klass) )
   {
@@ -91,20 +78,18 @@ void __fastcall SetSpoilerProtectionControl__OnClickSpoilerProtection(
     SoundManager__playSystemSe(1, 0LL);
     LOBYTE(this[1].klass) = 1;
   }
-  SetSpoilerProtectionControl__SetSpoilerProtectionDispValue(this, v5);
+  SetSpoilerProtectionControl__SetSpoilerProtectionDispValue(this, v3);
 }
 
 
 void __fastcall SetSpoilerProtectionControl__Reflection(SetSpoilerProtectionControl_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   int klass_low; // w19
 
-  if ( (byte_42ECEEF & 1) == 0 )
+  if ( (byte_435630E & 1) == 0 )
   {
-    sub_B5D5C4(&OptionManager_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42ECEEF = 1;
+    sub_B70694(&OptionManager_TypeInfo);
+    byte_435630E = 1;
   }
   klass_low = LOBYTE(this[1].klass);
   if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -120,26 +105,21 @@ void __fastcall SetSpoilerProtectionControl__SetSpoilerProtectionDispValue(
         SetSpoilerProtectionControl_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
   struct UILabel_o *btnTitle; // x0
-  __int64 *v9; // x8
+  __int64 *v4; // x8
 
-  if ( (byte_42ECEEE & 1) == 0 )
+  if ( (byte_435630D & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_17215/*"btn_on"*/, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&StringLiteral_17214/*"btn_off"*/, v5, v6, v7);
-    byte_42ECEEE = 1;
+    sub_B70694(&StringLiteral_17262/*"btn_on"*/);
+    sub_B70694(&StringLiteral_17261/*"btn_off"*/);
+    byte_435630D = 1;
   }
   btnTitle = this->fields.btnTitle;
   if ( !btnTitle )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   if ( LOBYTE(this[1].klass) )
-    v9 = &StringLiteral_17214/*"btn_off"*/;
+    v4 = &StringLiteral_17261/*"btn_off"*/;
   else
-    v9 = &StringLiteral_17215/*"btn_on"*/;
-  UIButton__set_normalSprite((UIButton_o *)btnTitle, (System_String_o *)*v9, 0LL);
+    v4 = &StringLiteral_17262/*"btn_on"*/;
+  UIButton__set_normalSprite((UIButton_o *)btnTitle, (System_String_o *)*v4, 0LL);
 }

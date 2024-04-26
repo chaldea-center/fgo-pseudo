@@ -17,10 +17,10 @@ void __fastcall CombineHelpListViewItemDraw__Awake(CombineHelpListViewItemDraw_o
 
   baseImageSprite = this->fields.baseImageSprite;
   if ( !baseImageSprite )
-    sub_B5D69C(this, method);
+    sub_B7076C(this, method);
   mAtlas = baseImageSprite->fields.mAtlas;
   this->fields.baseImageBasicAtlas = mAtlas;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.baseImageBasicAtlas,
     (System_Int32_array **)mAtlas,
     v2,
@@ -39,54 +39,42 @@ void __fastcall CombineHelpListViewItemDraw__SetItem(
         int32_t mode,
         const MethodInfo *method)
 {
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
-  int v10; // w1
-  int v11; // w2
-  __int64 v12; // x3
-  int v13; // w1
-  int v14; // w2
-  __int64 v15; // x3
-  int v16; // w1
-  int v17; // w2
-  __int64 v18; // x3
   UnityEngine_Object_o *rangeSprite; // x22
   UnityEngine_Component_o *gameObject; // x0
-  const MethodInfo *v21; // x1
+  const MethodInfo *v9; // x1
   struct CombineHelpInfo_o *info; // x8
   System_String_o *imageName; // x21
   UILabel_o *infoTextLabel; // x22
-  System_String_o *v25; // x1
-  struct CombineHelpInfo_o *v26; // x8
+  System_String_o *v13; // x1
+  struct CombineHelpInfo_o *v14; // x8
   UISprite_o *baseImageSprite; // x22
-  struct CombineHelpInfo_o *v28; // x8
+  struct CombineHelpInfo_o *v16; // x8
   int32_t line; // w8
-  int v30; // s0
-  int v31; // s2
-  int v32; // s8
-  int v33; // s9
-  float v34; // s1
-  int v35; // s0
-  int v36; // s2
-  int v37; // s0
-  int v38; // s2
-  int v39; // s0
-  int v40; // s2
-  float v41; // s1
-  float v42; // s2
-  float v43; // s8
-  float v44; // s9
-  UnityEngine_Vector3_o v45; // 0:s0.4,4:s1.4,8:s2.4
+  int v18; // s0
+  int v19; // s2
+  int v20; // s8
+  int v21; // s9
+  float v22; // s1
+  int v23; // s0
+  int v24; // s2
+  int v25; // s0
+  int v26; // s2
+  int v27; // s0
+  int v28; // s2
+  float v29; // s1
+  float v30; // s2
+  float v31; // s8
+  float v32; // s9
+  UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_42E998A & 1) == 0 )
+  if ( (byte_43519D1 & 1) == 0 )
   {
-    sub_B5D5C4(&AtlasManager_TypeInfo, (_DWORD)item, mode, method);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v7, v8, v9);
-    sub_B5D5C4(&StringLiteral_19855/*"img_shop_0"*/, v10, v11, v12);
-    sub_B5D5C4(&StringLiteral_1/*""*/, v13, v14, v15);
-    sub_B5D5C4(&StringLiteral_19902/*"img_tutorial_txtbg"*/, v16, v17, v18);
-    byte_42E998A = 1;
+    sub_B70694(&AtlasManager_TypeInfo);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    sub_B70694(&StringLiteral_19914/*"img_shop_0"*/);
+    sub_B70694(&StringLiteral_1/*""*/);
+    sub_B70694(&StringLiteral_19961/*"img_tutorial_txtbg"*/);
+    byte_43519D1 = 1;
   }
   if ( item )
   {
@@ -119,22 +107,22 @@ void __fastcall CombineHelpListViewItemDraw__SetItem(
       {
         if ( !infoTextLabel )
           goto LABEL_54;
-        imageName = (System_String_o *)StringLiteral_19855/*"img_shop_0"*/;
-        v25 = (System_String_o *)StringLiteral_1/*""*/;
+        imageName = (System_String_o *)StringLiteral_19914/*"img_shop_0"*/;
+        v13 = (System_String_o *)StringLiteral_1/*""*/;
       }
       else
       {
-        gameObject = (UnityEngine_Component_o *)CombineHelpListViewItem__get_InfoText(item, v21);
+        gameObject = (UnityEngine_Component_o *)CombineHelpListViewItem__get_InfoText(item, v9);
         if ( !infoTextLabel )
           goto LABEL_54;
-        v25 = (System_String_o *)gameObject;
+        v13 = (System_String_o *)gameObject;
       }
-      UILabel__set_text(infoTextLabel, v25, 0LL);
-      v26 = item->fields.info;
-      if ( v26 )
+      UILabel__set_text(infoTextLabel, v13, 0LL);
+      v14 = item->fields.info;
+      if ( v14 )
       {
         baseImageSprite = this->fields.baseImageSprite;
-        if ( (v26->fields.kind & 0xFFFFFFFE) == 12 )
+        if ( (v14->fields.kind & 0xFFFFFFFE) == 12 )
         {
           if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -153,10 +141,10 @@ void __fastcall CombineHelpListViewItemDraw__SetItem(
             goto LABEL_54;
           UISprite__set_spriteName((UISprite_o *)gameObject, imageName, 0LL);
         }
-        v28 = item->fields.info;
-        if ( !v28 )
+        v16 = item->fields.info;
+        if ( !v16 )
           goto LABEL_54;
-        line = v28->fields.line;
+        line = v16->fields.line;
         gameObject = (UnityEngine_Component_o *)this->fields.infoTextLabel;
         if ( line == 1 )
         {
@@ -169,18 +157,18 @@ void __fastcall CombineHelpListViewItemDraw__SetItem(
           gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0LL);
           if ( !gameObject )
             goto LABEL_54;
-          *(UnityEngine_Vector3_o *)&v30 = UnityEngine_Transform__get_localPosition(
+          *(UnityEngine_Vector3_o *)&v18 = UnityEngine_Transform__get_localPosition(
                                              (UnityEngine_Transform_o *)gameObject,
                                              0LL);
           gameObject = (UnityEngine_Component_o *)this->fields.infoTextLabel;
           if ( !gameObject )
             goto LABEL_54;
-          v32 = v30;
-          v33 = v31;
+          v20 = v18;
+          v21 = v19;
           gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0LL);
           if ( !gameObject )
             goto LABEL_54;
-          v34 = -12.0;
+          v22 = -12.0;
         }
         else
         {
@@ -195,18 +183,18 @@ void __fastcall CombineHelpListViewItemDraw__SetItem(
             gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0LL);
             if ( !gameObject )
               goto LABEL_54;
-            *(UnityEngine_Vector3_o *)&v35 = UnityEngine_Transform__get_localPosition(
+            *(UnityEngine_Vector3_o *)&v23 = UnityEngine_Transform__get_localPosition(
                                                (UnityEngine_Transform_o *)gameObject,
                                                0LL);
             gameObject = (UnityEngine_Component_o *)this->fields.infoTextLabel;
             if ( !gameObject )
               goto LABEL_54;
-            v32 = v35;
-            v33 = v36;
+            v20 = v23;
+            v21 = v24;
             gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0LL);
             if ( !gameObject )
               goto LABEL_54;
-            v34 = -18.0;
+            v22 = -18.0;
           }
           else
           {
@@ -217,51 +205,51 @@ void __fastcall CombineHelpListViewItemDraw__SetItem(
             gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0LL);
             if ( !gameObject )
               goto LABEL_54;
-            *(UnityEngine_Vector3_o *)&v37 = UnityEngine_Transform__get_localPosition(
+            *(UnityEngine_Vector3_o *)&v25 = UnityEngine_Transform__get_localPosition(
                                                (UnityEngine_Transform_o *)gameObject,
                                                0LL);
             gameObject = (UnityEngine_Component_o *)this->fields.infoTextLabel;
             if ( !gameObject )
               goto LABEL_54;
-            v32 = v37;
-            v33 = v38;
+            v20 = v25;
+            v21 = v26;
             gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0LL);
             if ( !gameObject )
               goto LABEL_54;
-            v34 = -22.0;
+            v22 = -22.0;
           }
         }
-        v39 = v32;
-        v40 = v33;
+        v27 = v20;
+        v28 = v21;
         UnityEngine_Transform__set_localPosition(
           (UnityEngine_Transform_o *)gameObject,
-          *(UnityEngine_Vector3_o *)(&v34 - 1),
+          *(UnityEngine_Vector3_o *)(&v22 - 1),
           0LL);
         gameObject = (UnityEngine_Component_o *)this->fields.baseTextSprite;
         if ( gameObject )
         {
-          UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_19902/*"img_tutorial_txtbg"*/, 0LL);
+          UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_19961/*"img_tutorial_txtbg"*/, 0LL);
           gameObject = (UnityEngine_Component_o *)this->fields.infoTextLabel;
           if ( gameObject )
           {
             gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0LL);
             if ( gameObject )
             {
-              *(UnityEngine_Vector3_o *)(&v41 - 1) = UnityEngine_Transform__get_localPosition(
+              *(UnityEngine_Vector3_o *)(&v29 - 1) = UnityEngine_Transform__get_localPosition(
                                                        (UnityEngine_Transform_o *)gameObject,
                                                        0LL);
               gameObject = (UnityEngine_Component_o *)this->fields.infoTextLabel;
               if ( gameObject )
               {
-                v43 = v41;
-                v44 = v42;
+                v31 = v29;
+                v32 = v30;
                 gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0LL);
                 if ( gameObject )
                 {
-                  v45.fields.x = -251.0;
-                  v45.fields.y = v43;
-                  v45.fields.z = v44;
-                  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v45, 0LL);
+                  v33.fields.x = -251.0;
+                  v33.fields.y = v31;
+                  v33.fields.z = v32;
+                  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v33, 0LL);
                   return;
                 }
               }
@@ -270,7 +258,7 @@ void __fastcall CombineHelpListViewItemDraw__SetItem(
         }
       }
 LABEL_54:
-      sub_B5D69C(gameObject, v21);
+      sub_B7076C(gameObject, v9);
     }
   }
 }

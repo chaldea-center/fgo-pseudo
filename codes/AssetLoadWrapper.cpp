@@ -16,10 +16,10 @@ bool __fastcall AssetLoadWrapper__LoadAssetStorage(
   __int64 v9; // x1
   AssetPathLoadCounter_o *pathCounter; // x0
 
-  if ( (byte_42EB78B & 1) == 0 )
+  if ( (byte_4354F40 & 1) == 0 )
   {
-    sub_B5D5C4(&AssetManager_TypeInfo, (_DWORD)path, (_DWORD)callbackFunc, *(_QWORD *)&maxParallelLoad);
-    byte_42EB78B = 1;
+    sub_B70694(&AssetManager_TypeInfo);
+    byte_4354F40 = 1;
   }
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -27,7 +27,7 @@ bool __fastcall AssetLoadWrapper__LoadAssetStorage(
     return 0;
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_B5D69C(0LL, v9);
+    sub_B7076C(0LL, v9);
   AssetPathLoadCounter__AddCount(pathCounter, path, 0LL);
   return 1;
 }
@@ -35,12 +35,10 @@ bool __fastcall AssetLoadWrapper__LoadAssetStorage(
 
 void __fastcall AssetLoadWrapper__Release(AssetLoadWrapper_o *this, System_String_o *path, const MethodInfo *method)
 {
-  __int64 v3; // x3
-
-  if ( (byte_42EB78C & 1) == 0 )
+  if ( (byte_4354F41 & 1) == 0 )
   {
-    sub_B5D5C4(&AssetManager_TypeInfo, (_DWORD)path, (_DWORD)method, v3);
-    byte_42EB78C = 1;
+    sub_B70694(&AssetManager_TypeInfo);
+    byte_4354F41 = 1;
   }
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -62,6 +60,6 @@ void __fastcall AssetLoadWrapper__ReleaseAssetStorage(
     this->klass[1]._1.image);
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_B5D69C(0LL, v5);
+    sub_B7076C(0LL, v5);
   AssetPathLoadCounter__SubCount(pathCounter, path, 0LL);
 }

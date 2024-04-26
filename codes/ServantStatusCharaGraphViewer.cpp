@@ -13,7 +13,7 @@ void __fastcall ServantStatusCharaGraphViewer__DeactivateScrollViewObjects(
   viewerListViewManager = this->fields.viewerListViewManager;
   this->fields._IsAbleToSwitchDispMode_k__BackingField = 0;
   if ( !viewerListViewManager )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   viewerListViewManager->fields.currentPhase = 0;
   ListViewManager__DestroyList((ListViewManager_o *)viewerListViewManager, 0LL);
 }
@@ -28,7 +28,7 @@ void __fastcall ServantStatusCharaGraphViewer__FadeoutFrameScrollViewObjects(
 
   viewerListViewManager = this->fields.viewerListViewManager;
   if ( !viewerListViewManager )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   ServantStatusCharaGraphViewerListViewManager__PlayFadeOutObjectFrame(viewerListViewManager, delay, method);
 }
 
@@ -37,33 +37,27 @@ ServantStatusCharaGraphListViewItem_o *__fastcall ServantStatusCharaGraphViewer_
         ServantStatusCharaGraphViewer_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  ServantStatusCharaGraphViewer_o *v4; // x19
+  ServantStatusCharaGraphViewer_o *v2; // x19
   struct ServantStatusCharaGraphViewerListViewManager_o *viewerListViewManager; // x8
   ServantStatusCharaGraphListViewItem_o *centerItem; // x8
-  __int64 v7; // x11
+  __int64 v5; // x11
 
-  v4 = this;
-  if ( (byte_42E6E4F & 1) == 0 )
+  v2 = this;
+  if ( (byte_434FF4B & 1) == 0 )
   {
-    this = (ServantStatusCharaGraphViewer_o *)sub_B5D5C4(
-                                                &ServantStatusCharaGraphListViewItem_TypeInfo,
-                                                (_DWORD)method,
-                                                v2,
-                                                v3);
-    byte_42E6E4F = 1;
+    this = (ServantStatusCharaGraphViewer_o *)sub_B70694(&ServantStatusCharaGraphListViewItem_TypeInfo);
+    byte_434FF4B = 1;
   }
-  viewerListViewManager = v4->fields.viewerListViewManager;
+  viewerListViewManager = v2->fields.viewerListViewManager;
   if ( !viewerListViewManager )
-    sub_B5D69C(this, method);
+    sub_B7076C(this, method);
   centerItem = (ServantStatusCharaGraphListViewItem_o *)viewerListViewManager->fields.centerItem;
   if ( !centerItem )
     return 0LL;
-  v7 = *(&ServantStatusCharaGraphListViewItem_TypeInfo->_2.bitflags2 + 1);
-  if ( *(&centerItem->klass->_2.bitflags2 + 1) < (unsigned int)v7 )
+  v5 = *(&ServantStatusCharaGraphListViewItem_TypeInfo->_2.bitflags2 + 1);
+  if ( *(&centerItem->klass->_2.bitflags2 + 1) < (unsigned int)v5 )
     return 0LL;
-  if ( (ServantStatusCharaGraphListViewItem_c *)centerItem->klass->_2.typeHierarchy[v7 - 1] == ServantStatusCharaGraphListViewItem_TypeInfo )
+  if ( (ServantStatusCharaGraphListViewItem_c *)centerItem->klass->_2.typeHierarchy[v5 - 1] == ServantStatusCharaGraphListViewItem_TypeInfo )
     return centerItem;
   return 0LL;
 }
@@ -98,7 +92,7 @@ bool __fastcall ServantStatusCharaGraphViewer__IsAbleToPinch(
   viewerListViewManager = this->fields.viewerListViewManager;
   if ( !viewerListViewManager )
 LABEL_11:
-    sub_B5D69C(viewerListViewManager, method);
+    sub_B7076C(viewerListViewManager, method);
   if ( centerItem->fields.basePosition.fields.y <= CenterPosition.fields.y )
     v6 = CenterPosition.fields.y - CenterPosition.fields.x;
   else
@@ -144,7 +138,7 @@ void __fastcall ServantStatusCharaGraphViewer__SetDispType(
         }
       }
 LABEL_17:
-      sub_B5D69C(viewerListViewManager, *(_QWORD *)&dispType);
+      sub_B7076C(viewerListViewManager, *(_QWORD *)&dispType);
     case 1:
       viewerListViewManager = (ServantStatusCharaGraphViewerListViewManager_o *)this->fields.dragObjRootPanel;
       if ( viewerListViewManager )
@@ -203,7 +197,7 @@ void __fastcall ServantStatusCharaGraphViewer__SetItemDataType(
 
   viewerListViewManager = this->fields.viewerListViewManager;
   if ( !viewerListViewManager )
-    sub_B5D69C(0LL, dispType);
+    sub_B7076C(0LL, dispType);
   ServantStatusCharaGraphViewerListViewManager__SetItemDataType(viewerListViewManager, dispType, method);
 }
 
@@ -213,16 +207,15 @@ void __fastcall ServantStatusCharaGraphViewer__SetModifyScrollViewCenter(
         ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent_o *onModifyScrollViewCenter,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
   UnityEngine_Object_o *viewerListViewManager; // x21
-  __int64 v7; // x1
-  const MethodInfo *v8; // x2
-  ServantStatusCharaGraphViewerListViewManager_o *v9; // x0
+  __int64 v6; // x1
+  const MethodInfo *v7; // x2
+  ServantStatusCharaGraphViewerListViewManager_o *v8; // x0
 
-  if ( (byte_42E6E50 & 1) == 0 )
+  if ( (byte_434FF4C & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)onModifyScrollViewCenter, (_DWORD)method, v3);
-    byte_42E6E50 = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_434FF4C = 1;
   }
   viewerListViewManager = (UnityEngine_Object_o *)this->fields.viewerListViewManager;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -232,10 +225,10 @@ void __fastcall ServantStatusCharaGraphViewer__SetModifyScrollViewCenter(
   }
   if ( UnityEngine_Object__op_Inequality(viewerListViewManager, 0LL, 0LL) )
   {
-    v9 = this->fields.viewerListViewManager;
-    if ( !v9 )
-      sub_B5D69C(0LL, v7);
-    ServantStatusCharaGraphViewerListViewManager__SetModifyScrollViewCenter(v9, onModifyScrollViewCenter, v8);
+    v8 = this->fields.viewerListViewManager;
+    if ( !v8 )
+      sub_B7076C(0LL, v6);
+    ServantStatusCharaGraphViewerListViewManager__SetModifyScrollViewCenter(v8, onModifyScrollViewCenter, v7);
   }
 }
 
@@ -256,7 +249,7 @@ void __fastcall ServantStatusCharaGraphViewer__Setup(
     viewerListViewManager = this->fields.viewerListViewManager;
     this->fields._IsAbleToSwitchDispMode_k__BackingField = 1;
     if ( !viewerListViewManager )
-      sub_B5D69C(0LL, v7);
+      sub_B7076C(0LL, v7);
     ServantStatusCharaGraphViewerListViewManager__CreateList(viewerListViewManager, currentIndex, items, v8);
   }
   else

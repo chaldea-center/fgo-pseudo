@@ -6,52 +6,46 @@ void __fastcall BgmPlayArgs___ctor(
         int64_t startTime,
         const MethodInfo *method)
 {
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  int v14; // w1
-  int v15; // w2
-  __int64 v16; // x3
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
+  System_String_array **v11; // x2
+  System_String_array **v12; // x3
+  System_Boolean_array **v13; // x4
+  System_Int32_array **v14; // x5
+  System_Int32_array *v15; // x6
+  System_Int32_array *v16; // x7
   float value; // s0
-  BgmManager_c *v24; // x0
+  BgmManager_c *v18; // x0
 
-  if ( (byte_42E7E3C & 1) == 0 )
+  if ( (byte_43512B2 & 1) == 0 )
   {
-    sub_B5D5C4(&BgmManager_TypeInfo, (_DWORD)bgmName, LODWORD(volume.fields.value), startTime);
-    sub_B5D5C4(&Method_System_Nullable_float__GetValueOrDefault__, v11, v12, v13);
-    sub_B5D5C4(&Method_System_Nullable_float__get_HasValue__, v14, v15, v16);
-    byte_42E7E3C = 1;
+    sub_B70694(&BgmManager_TypeInfo);
+    sub_B70694(&Method_System_Nullable_float__GetValueOrDefault__);
+    sub_B70694(&Method_System_Nullable_float__get_HasValue__);
+    byte_43512B2 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._BgmName_k__BackingField = bgmName;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)bgmName,
-    v17,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22);
+    v11,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16);
   if ( (*(_QWORD *)&volume & 0xFF00000000LL) != 0 )
   {
     value = volume.fields.value;
   }
   else
   {
-    v24 = BgmManager_TypeInfo;
+    v18 = BgmManager_TypeInfo;
     if ( (BYTE3(BgmManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BgmManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-      v24 = BgmManager_TypeInfo;
+      v18 = BgmManager_TypeInfo;
     }
-    value = v24->static_fields->DEFAULT_VOLUME;
+    value = v18->static_fields->DEFAULT_VOLUME;
   }
   this->fields._Volume_k__BackingField = value;
   this->fields._FadeTime_k__BackingField = fadeTime;
@@ -69,37 +63,24 @@ void __fastcall BgmPlayArgs__Update(
   bool has_value; // w21
   int64_t value; // x19
   BgmPlayArgs_o *v9; // x20
-  int v10; // w1
-  int v11; // w2
-  __int64 v12; // x3
-  int v13; // w1
-  int v14; // w2
-  __int64 v15; // x3
-  int v16; // w1
-  int v17; // w2
-  __int64 v18; // x3
   float Volume_k__BackingField; // s0
   float FadeTime_k__BackingField; // s0
 
   has_value = startTime.fields.has_value;
   value = startTime.fields.value;
   v9 = this;
-  if ( (byte_42E7E3D & 1) == 0 )
+  if ( (byte_43512B3 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_System_Nullable_long__GetValueOrDefault__,
-      LODWORD(volume.fields.value),
-      LODWORD(fadeTime.fields.value),
-      startTime.fields.value);
-    sub_B5D5C4(&Method_System_Nullable_float__GetValueOrDefault__, v10, v11, v12);
-    sub_B5D5C4(&Method_System_Nullable_long__get_HasValue__, v13, v14, v15);
-    this = (BgmPlayArgs_o *)sub_B5D5C4(&Method_System_Nullable_float__get_HasValue__, v16, v17, v18);
-    byte_42E7E3D = 1;
+    sub_B70694(&Method_System_Nullable_long__GetValueOrDefault__);
+    sub_B70694(&Method_System_Nullable_float__GetValueOrDefault__);
+    sub_B70694(&Method_System_Nullable_long__get_HasValue__);
+    this = (BgmPlayArgs_o *)sub_B70694(&Method_System_Nullable_float__get_HasValue__);
+    byte_43512B3 = 1;
   }
   if ( (*(_QWORD *)&volume & 0xFF00000000LL) != 0 )
   {
     if ( !v9 )
-      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_B5D69C)(this, volume);
+      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_B7076C)(this, volume);
     Volume_k__BackingField = volume.fields.value;
   }
   else
@@ -151,7 +132,7 @@ void __fastcall BgmPlayArgs__set_BgmName(BgmPlayArgs_o *this, System_String_o *v
   System_Int32_array *v7; // x7
 
   this->fields._BgmName_k__BackingField = value;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)value,
     (System_String_array **)method,

@@ -9,63 +9,56 @@ System_String_o *__fastcall FollowerSetupRequest__GetDeckNameData(
         SupportServantData_array *supportServantData,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  il2cpp_array_size_t v11; // w22
-  System_String_o *v12; // x20
-  int v13; // w23
-  SupportServantData_o *v14; // x0
-  System_String_o *v15; // x0
-  System_String_o *v16; // x21
-  __int64 v18; // x0
+  il2cpp_array_size_t v4; // w22
+  System_String_o *v5; // x20
+  int v6; // w23
+  SupportServantData_o *v7; // x0
+  System_String_o *v8; // x0
+  System_String_o *v9; // x21
+  __int64 v11; // x0
 
-  if ( (byte_42EBC2F & 1) == 0 )
+  if ( (byte_43553C6 & 1) == 0 )
   {
-    sub_B5D5C4(&BalanceConfig_TypeInfo, (_DWORD)supportServantData, (_DWORD)method, v3);
-    sub_B5D5C4(&StringLiteral_707/*","*/, v5, v6, v7);
-    sub_B5D5C4(&StringLiteral_1/*""*/, v8, v9, v10);
-    byte_42EBC2F = 1;
+    sub_B70694(&BalanceConfig_TypeInfo);
+    sub_B70694(&StringLiteral_712/*","*/);
+    sub_B70694(&StringLiteral_1/*""*/);
+    byte_43553C6 = 1;
   }
-  v11 = 0;
-  v12 = (System_String_o *)StringLiteral_1/*""*/;
-  v13 = 0;
+  v4 = 0;
+  v5 = (System_String_o *)StringLiteral_1/*""*/;
+  v6 = 0;
   while ( 1 )
   {
-    v14 = (SupportServantData_o *)BalanceConfig_TypeInfo;
+    v7 = (SupportServantData_o *)BalanceConfig_TypeInfo;
     if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v14 = (SupportServantData_o *)BalanceConfig_TypeInfo;
+      v7 = (SupportServantData_o *)BalanceConfig_TypeInfo;
     }
-    if ( (signed int)v11 >= SLODWORD(v14[1].fields.oldEquipIdList->m_Items[15]) )
-      return v12;
+    if ( (signed int)v4 >= SLODWORD(v7[1].fields.oldEquipIdList->m_Items[15]) )
+      return v5;
     if ( !supportServantData )
       goto LABEL_17;
-    if ( v11 >= supportServantData->max_length )
+    if ( v4 >= supportServantData->max_length )
     {
-      v18 = sub_B5D6C8(v14);
-      sub_B5D668(v18, 0LL);
+      v11 = sub_B70798(v7);
+      sub_B70738(v11, 0LL);
     }
-    v14 = supportServantData->m_Items[v11];
-    if ( !v14 )
+    v7 = supportServantData->m_Items[v4];
+    if ( !v7 )
 LABEL_17:
-      sub_B5D69C(v14, supportServantData);
-    v15 = SupportServantData__updateNameCheck(v14, 0LL);
-    if ( v15 )
+      sub_B7076C(v7, supportServantData);
+    v8 = SupportServantData__updateNameCheck(v7, 0LL);
+    if ( v8 )
     {
-      v16 = v15;
-      if ( v13 >= 1 )
-        v12 = System_String__Concat_44577788(v12, (System_String_o *)StringLiteral_707/*","*/, 0LL);
-      v12 = System_String__Concat_44577788(v12, v16, 0LL);
-      ++v13;
+      v9 = v8;
+      if ( v6 >= 1 )
+        v5 = System_String__Concat_44758168(v5, (System_String_o *)StringLiteral_712/*","*/, 0LL);
+      v5 = System_String__Concat_44758168(v5, v9, 0LL);
+      ++v6;
     }
-    ++v11;
+    ++v4;
   }
 }
 
@@ -75,78 +68,71 @@ System_String_o *__fastcall FollowerSetupRequest__GetFollowerData(
         SupportServantData_array *supportServantData,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  unsigned __int64 v11; // x23
-  System_String_o *v12; // x20
-  BalanceConfig_c *v13; // x0
-  int v14; // w24
-  int32_t v15; // w21
-  BalanceConfig_c **v16; // x27
-  System_String_o *v17; // x0
-  System_String_o *v18; // x22
-  __int64 v20; // x0
+  unsigned __int64 v4; // x23
+  System_String_o *v5; // x20
+  BalanceConfig_c *v6; // x0
+  int v7; // w24
+  int32_t v8; // w21
+  BalanceConfig_c **v9; // x27
+  System_String_o *v10; // x0
+  System_String_o *v11; // x22
+  __int64 v13; // x0
 
-  if ( (byte_42EBC2E & 1) == 0 )
+  if ( (byte_43553C5 & 1) == 0 )
   {
-    sub_B5D5C4(&BalanceConfig_TypeInfo, (_DWORD)supportServantData, (_DWORD)method, v3);
-    sub_B5D5C4(&StringLiteral_707/*","*/, v5, v6, v7);
-    sub_B5D5C4(&StringLiteral_1/*""*/, v8, v9, v10);
-    byte_42EBC2E = 1;
+    sub_B70694(&BalanceConfig_TypeInfo);
+    sub_B70694(&StringLiteral_712/*","*/);
+    sub_B70694(&StringLiteral_1/*""*/);
+    byte_43553C5 = 1;
   }
-  v11 = 0LL;
-  v12 = (System_String_o *)StringLiteral_1/*""*/;
-  v13 = BalanceConfig_TypeInfo;
-  v14 = 0;
+  v4 = 0LL;
+  v5 = (System_String_o *)StringLiteral_1/*""*/;
+  v6 = BalanceConfig_TypeInfo;
+  v7 = 0;
   while ( 1 )
   {
-    if ( (BYTE3(v13->vtable._0_Equals.methodPtr) & 4) != 0 && !v13->_2.cctor_finished )
+    if ( (BYTE3(v6->vtable._0_Equals.methodPtr) & 4) != 0 && !v6->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v13);
-      v13 = BalanceConfig_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v6);
+      v6 = BalanceConfig_TypeInfo;
     }
-    if ( (__int64)v11 >= v13->static_fields->SupportDeckMax )
-      return v12;
-    v15 = 0;
-    v16 = (BalanceConfig_c **)&supportServantData->m_Items[v11];
+    if ( (__int64)v4 >= v6->static_fields->SupportDeckMax )
+      return v5;
+    v8 = 0;
+    v9 = (BalanceConfig_c **)&supportServantData->m_Items[v4];
     while ( 1 )
     {
-      if ( (BYTE3(v13->vtable._0_Equals.methodPtr) & 4) != 0 && !v13->_2.cctor_finished )
+      if ( (BYTE3(v6->vtable._0_Equals.methodPtr) & 4) != 0 && !v6->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v13);
-        v13 = BalanceConfig_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v6);
+        v6 = BalanceConfig_TypeInfo;
       }
-      if ( v15 >= v13->static_fields->SupportDeckMemberMax )
+      if ( v8 >= v6->static_fields->SupportDeckMemberMax )
         break;
       if ( !supportServantData )
         goto LABEL_23;
-      if ( v11 >= supportServantData->max_length )
+      if ( v4 >= supportServantData->max_length )
       {
-        v20 = sub_B5D6C8(v13);
-        sub_B5D668(v20, 0LL);
+        v13 = sub_B70798(v6);
+        sub_B70738(v13, 0LL);
       }
-      v13 = *v16;
-      if ( !*v16 )
+      v6 = *v9;
+      if ( !*v9 )
 LABEL_23:
-        sub_B5D69C(v13, supportServantData);
-      v17 = SupportServantData__updateCheck((SupportServantData_o *)v13, v15, 0LL);
-      if ( v17 )
+        sub_B7076C(v6, supportServantData);
+      v10 = SupportServantData__updateCheck((SupportServantData_o *)v6, v8, 0LL);
+      if ( v10 )
       {
-        v18 = v17;
-        if ( v14 >= 1 )
-          v12 = System_String__Concat_44577788(v12, (System_String_o *)StringLiteral_707/*","*/, 0LL);
-        v12 = System_String__Concat_44577788(v12, v18, 0LL);
-        ++v14;
+        v11 = v10;
+        if ( v7 >= 1 )
+          v5 = System_String__Concat_44758168(v5, (System_String_o *)StringLiteral_712/*","*/, 0LL);
+        v5 = System_String__Concat_44758168(v5, v11, 0LL);
+        ++v7;
       }
-      v13 = BalanceConfig_TypeInfo;
-      ++v15;
+      v6 = BalanceConfig_TypeInfo;
+      ++v8;
     }
-    ++v11;
+    ++v4;
   }
 }
 
@@ -156,37 +142,27 @@ System_Collections_Generic_List_SupportServantData_FollowerData__o *__fastcall F
         SupportServantData_array *supportServantData,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v14; // x20
-  __int64 v15; // x1
-  unsigned __int64 v16; // x22
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v4; // x20
+  __int64 v5; // x1
+  unsigned __int64 v6; // x22
   _BYTE *FollowerDataIfUpdated; // x0
-  int32_t v18; // w21
-  void **v19; // x25
-  __int64 v21; // x0
+  int32_t v8; // w21
+  void **v9; // x25
+  __int64 v11; // x0
 
-  if ( (byte_42EBC2D & 1) == 0 )
+  if ( (byte_43553C4 & 1) == 0 )
   {
-    sub_B5D5C4(&BalanceConfig_TypeInfo, (_DWORD)supportServantData, (_DWORD)method, v3);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_SupportServantData_FollowerData__Add__, v5, v6, v7);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_SupportServantData_FollowerData___ctor__, v8, v9, v10);
-    sub_B5D5C4(&System_Collections_Generic_List_SupportServantData_FollowerData__TypeInfo, v11, v12, v13);
-    byte_42EBC2D = 1;
+    sub_B70694(&BalanceConfig_TypeInfo);
+    sub_B70694(&Method_System_Collections_Generic_List_SupportServantData_FollowerData__Add__);
+    sub_B70694(&Method_System_Collections_Generic_List_SupportServantData_FollowerData___ctor__);
+    sub_B70694(&System_Collections_Generic_List_SupportServantData_FollowerData__TypeInfo);
+    byte_43553C4 = 1;
   }
-  v14 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B5D694(System_Collections_Generic_List_SupportServantData_FollowerData__TypeInfo);
+  v4 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_SupportServantData_FollowerData__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v14,
-    (const MethodInfo_30562FC *)Method_System_Collections_Generic_List_SupportServantData_FollowerData___ctor__);
-  v16 = 0LL;
+    v4,
+    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_SupportServantData_FollowerData___ctor__);
+  v6 = 0LL;
   FollowerDataIfUpdated = BalanceConfig_TypeInfo;
   while ( 1 )
   {
@@ -195,10 +171,10 @@ System_Collections_Generic_List_SupportServantData_FollowerData__o *__fastcall F
       j_il2cpp_runtime_class_init_0(FollowerDataIfUpdated);
       FollowerDataIfUpdated = BalanceConfig_TypeInfo;
     }
-    if ( (__int64)v16 >= *(int *)(*((_QWORD *)FollowerDataIfUpdated + 23) + 152LL) )
-      return (System_Collections_Generic_List_SupportServantData_FollowerData__o *)v14;
-    v18 = 0;
-    v19 = (void **)&supportServantData->m_Items[v16];
+    if ( (__int64)v6 >= *(int *)(*((_QWORD *)FollowerDataIfUpdated + 23) + 152LL) )
+      return (System_Collections_Generic_List_SupportServantData_FollowerData__o *)v4;
+    v8 = 0;
+    v9 = (void **)&supportServantData->m_Items[v6];
     while ( 1 )
     {
       if ( (FollowerDataIfUpdated[307] & 4) != 0 && !*((_DWORD *)FollowerDataIfUpdated + 56) )
@@ -206,36 +182,36 @@ System_Collections_Generic_List_SupportServantData_FollowerData__o *__fastcall F
         j_il2cpp_runtime_class_init_0(FollowerDataIfUpdated);
         FollowerDataIfUpdated = BalanceConfig_TypeInfo;
       }
-      if ( v18 >= *(_DWORD *)(*((_QWORD *)FollowerDataIfUpdated + 23) + 164LL) )
+      if ( v8 >= *(_DWORD *)(*((_QWORD *)FollowerDataIfUpdated + 23) + 164LL) )
         break;
       if ( !supportServantData )
         goto LABEL_22;
-      if ( v16 >= supportServantData->max_length )
+      if ( v6 >= supportServantData->max_length )
       {
-        v21 = sub_B5D6C8(FollowerDataIfUpdated);
-        sub_B5D668(v21, 0LL);
+        v11 = sub_B70798(FollowerDataIfUpdated);
+        sub_B70738(v11, 0LL);
       }
-      FollowerDataIfUpdated = *v19;
-      if ( !*v19 )
+      FollowerDataIfUpdated = *v9;
+      if ( !*v9 )
 LABEL_22:
-        sub_B5D69C(FollowerDataIfUpdated, v15);
+        sub_B7076C(FollowerDataIfUpdated, v5);
       FollowerDataIfUpdated = SupportServantData__GetFollowerDataIfUpdated(
                                 (SupportServantData_o *)FollowerDataIfUpdated,
-                                v18,
+                                v8,
                                 0LL);
       if ( FollowerDataIfUpdated )
       {
-        if ( !v14 )
+        if ( !v4 )
           goto LABEL_22;
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          v14,
+          v4,
           (EventMissionProgressRequest_Argument_ProgressData_o *)FollowerDataIfUpdated,
-          (const MethodInfo_3056FC0 *)Method_System_Collections_Generic_List_SupportServantData_FollowerData__Add__);
+          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_SupportServantData_FollowerData__Add__);
       }
       FollowerDataIfUpdated = BalanceConfig_TypeInfo;
-      ++v18;
+      ++v8;
     }
-    ++v16;
+    ++v6;
   }
 }
 
@@ -250,90 +226,63 @@ bool __fastcall FollowerSetupRequest__beginRequest(
         const MethodInfo *method)
 {
   RequestBase_o *v10; // x19
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  int v14; // w1
-  int v15; // w2
-  __int64 v16; // x3
-  int v17; // w1
-  int v18; // w2
-  __int64 v19; // x3
-  int v20; // w1
-  int v21; // w2
-  __int64 v22; // x3
-  int v23; // w1
-  int v24; // w2
-  __int64 v25; // x3
-  int v26; // w1
-  int v27; // w2
-  __int64 v28; // x3
-  int v29; // w1
-  int v30; // w2
-  __int64 v31; // x3
-  int v32; // w1
-  int v33; // w2
-  __int64 v34; // x3
-  int v35; // w1
-  int v36; // w2
-  __int64 v37; // x3
   System_String_o *FollowerData; // x0
-  const MethodInfo *v39; // x2
+  const MethodInfo *v12; // x2
   System_String_o *DeckNameData; // x24
-  System_String_o *v41; // x22
-  System_String_o *v42; // x23
-  System_String_o *v43; // x0
-  MiniMessagePack_MiniMessagePacker_o *v44; // x21
-  FollowerSetupRequest_o *v45; // x0
-  const MethodInfo *v46; // x2
+  System_String_o *v14; // x22
+  System_String_o *v15; // x23
+  System_String_o *v16; // x0
+  MiniMessagePack_MiniMessagePacker_o *v17; // x21
+  FollowerSetupRequest_o *v18; // x0
+  const MethodInfo *v19; // x2
   Il2CppObject *FollowerDataList; // x0
-  __int64 v48; // x1
-  System_Byte_array *v49; // x20
-  System_String_o *v50; // x0
+  __int64 v21; // x1
+  System_Byte_array *v22; // x20
+  System_String_o *v23; // x0
 
   v10 = (RequestBase_o *)this;
-  if ( (byte_42EBC30 & 1) == 0 )
+  if ( (byte_43553C7 & 1) == 0 )
   {
-    sub_B5D5C4(&System_Convert_TypeInfo, (_DWORD)supportServantData, supportDeckId, fixMainSupportDeckIds);
-    sub_B5D5C4(&JsonManager_TypeInfo, v11, v12, v13);
-    sub_B5D5C4(&MiniMessagePack_MiniMessagePacker_TypeInfo, v14, v15, v16);
-    sub_B5D5C4(&StringLiteral_22754/*"supportDeckId"*/, v17, v18, v19);
-    sub_B5D5C4(&StringLiteral_18986/*"fixEventSupportDeckIds"*/, v20, v21, v22);
-    sub_B5D5C4(&StringLiteral_18148/*"deckName"*/, v23, v24, v25);
-    sub_B5D5C4(&StringLiteral_15824/*"["*/, v26, v27, v28);
-    sub_B5D5C4(&StringLiteral_18987/*"fixMainSupportDeckIds"*/, v29, v30, v31);
-    sub_B5D5C4(&StringLiteral_16061/*"]"*/, v32, v33, v34);
-    this = (FollowerSetupRequest_o *)sub_B5D5C4(&StringLiteral_19024/*"followerData"*/, v35, v36, v37);
-    byte_42EBC30 = 1;
+    sub_B70694(&System_Convert_TypeInfo);
+    sub_B70694(&JsonManager_TypeInfo);
+    sub_B70694(&MiniMessagePack_MiniMessagePacker_TypeInfo);
+    sub_B70694(&StringLiteral_22825/*"supportDeckId"*/);
+    sub_B70694(&StringLiteral_19038/*"fixEventSupportDeckIds"*/);
+    sub_B70694(&StringLiteral_18195/*"deckName"*/);
+    sub_B70694(&StringLiteral_15855/*"["*/);
+    sub_B70694(&StringLiteral_19039/*"fixMainSupportDeckIds"*/);
+    sub_B70694(&StringLiteral_16092/*"]"*/);
+    this = (FollowerSetupRequest_o *)sub_B70694(&StringLiteral_19076/*"followerData"*/);
+    byte_43553C7 = 1;
   }
   FollowerData = FollowerSetupRequest__GetFollowerData(this, supportServantData, *(const MethodInfo **)&supportDeckId);
-  DeckNameData = FollowerSetupRequest__GetDeckNameData((FollowerSetupRequest_o *)FollowerData, supportServantData, v39);
+  DeckNameData = FollowerSetupRequest__GetDeckNameData((FollowerSetupRequest_o *)FollowerData, supportServantData, v12);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  v41 = JsonManager__toJson(&fixMainSupportDeckIds->obj, 0, 0, 0LL);
-  v42 = JsonManager__toJson(&fixEventSupportDeckIds->obj, 0, 0, 0LL);
-  RequestBase__addField(v10, (System_String_o *)StringLiteral_22754/*"supportDeckId"*/, supportDeckId, 0LL);
-  v43 = System_String__Concat_44580072(
-          (System_String_o *)StringLiteral_15824/*"["*/,
+  v14 = JsonManager__toJson(&fixMainSupportDeckIds->obj, 0, 0, 0LL);
+  v15 = JsonManager__toJson(&fixEventSupportDeckIds->obj, 0, 0, 0LL);
+  RequestBase__addField(v10, (System_String_o *)StringLiteral_22825/*"supportDeckId"*/, supportDeckId, 0LL);
+  v16 = System_String__Concat_44760452(
+          (System_String_o *)StringLiteral_15855/*"["*/,
           DeckNameData,
-          (System_String_o *)StringLiteral_16061/*"]"*/,
+          (System_String_o *)StringLiteral_16092/*"]"*/,
           0LL);
-  RequestBase__addField_32362260(v10, (System_String_o *)StringLiteral_18148/*"deckName"*/, v43, 0LL);
-  v44 = (MiniMessagePack_MiniMessagePacker_o *)sub_B5D694(MiniMessagePack_MiniMessagePacker_TypeInfo);
-  MiniMessagePack_MiniMessagePacker___ctor(v44, 0LL);
-  FollowerDataList = (Il2CppObject *)FollowerSetupRequest__GetFollowerDataList(v45, supportServantData, v46);
-  if ( !v44 )
-    sub_B5D69C(FollowerDataList, v48);
-  v49 = MiniMessagePack_MiniMessagePacker__PackClass(v44, FollowerDataList, 0LL);
+  RequestBase__addField_32336576(v10, (System_String_o *)StringLiteral_18195/*"deckName"*/, v16, 0LL);
+  v17 = (MiniMessagePack_MiniMessagePacker_o *)sub_B70764(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  MiniMessagePack_MiniMessagePacker___ctor(v17, 0LL);
+  FollowerDataList = (Il2CppObject *)FollowerSetupRequest__GetFollowerDataList(v18, supportServantData, v19);
+  if ( !v17 )
+    sub_B7076C(FollowerDataList, v21);
+  v22 = MiniMessagePack_MiniMessagePacker__PackClass(v17, FollowerDataList, 0LL);
   if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !System_Convert_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
-  v50 = System_Convert__ToBase64String(v49, 0LL);
-  RequestBase__addField_32362260(v10, (System_String_o *)StringLiteral_19024/*"followerData"*/, v50, 0LL);
-  RequestBase__addField_32362260(v10, (System_String_o *)StringLiteral_18987/*"fixMainSupportDeckIds"*/, v41, 0LL);
-  RequestBase__addField_32362260(v10, (System_String_o *)StringLiteral_18986/*"fixEventSupportDeckIds"*/, v42, 0LL);
+  v23 = System_Convert__ToBase64String(v22, 0LL);
+  RequestBase__addField_32336576(v10, (System_String_o *)StringLiteral_19076/*"followerData"*/, v23, 0LL);
+  RequestBase__addField_32336576(v10, (System_String_o *)StringLiteral_19039/*"fixMainSupportDeckIds"*/, v14, 0LL);
+  RequestBase__addField_32336576(v10, (System_String_o *)StringLiteral_19038/*"fixEventSupportDeckIds"*/, v15, 0LL);
   RequestBase__beginRequest(v10, 0LL);
   return 1;
 }
@@ -341,13 +290,10 @@ bool __fastcall FollowerSetupRequest__beginRequest(
 
 System_String_o *__fastcall FollowerSetupRequest__getMockData(FollowerSetupRequest_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EBC2C & 1) == 0 )
+  if ( (byte_43553C3 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_1/*""*/, (_DWORD)method, v2, v3);
-    byte_42EBC2C = 1;
+    sub_B70694(&StringLiteral_1/*""*/);
+    byte_43553C3 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -355,18 +301,13 @@ System_String_o *__fastcall FollowerSetupRequest__getMockData(FollowerSetupReque
 
 System_String_o *__fastcall FollowerSetupRequest__getURL(FollowerSetupRequest_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v4; // w1
-  int v5; // w2
-  __int64 v6; // x3
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_42EBC2B & 1) == 0 )
+  if ( (byte_43553C2 & 1) == 0 )
   {
-    sub_B5D5C4(&NetworkManager_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&StringLiteral_19022/*"follower/setup"*/, v4, v5, v6);
-    byte_42EBC2B = 1;
+    sub_B70694(&NetworkManager_TypeInfo);
+    sub_B70694(&StringLiteral_19074/*"follower/setup"*/);
+    byte_43553C2 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -374,7 +315,7 @@ System_String_o *__fastcall FollowerSetupRequest__getURL(FollowerSetupRequest_o 
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_44577788(BaseUrl, (System_String_o *)StringLiteral_19022/*"follower/setup"*/, 0LL);
+  return System_String__Concat_44758168(BaseUrl, (System_String_o *)StringLiteral_19074/*"follower/setup"*/, 0LL);
 }
 
 
@@ -383,32 +324,25 @@ void __fastcall FollowerSetupRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  int v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  ResponseData_o *v12; // x0
-  __int64 *v13; // x8
+  ResponseData_o *v5; // x0
+  __int64 *v6; // x8
 
-  if ( (byte_42EBC31 & 1) == 0 )
+  if ( (byte_43553C8 & 1) == 0 )
   {
-    sub_B5D5C4(&ResponseCommandKind_TypeInfo, (_DWORD)responseList, (_DWORD)method, v3);
-    sub_B5D5C4(&StringLiteral_21497/*"ok"*/, v6, v7, v8);
-    sub_B5D5C4(&StringLiteral_21345/*"ng"*/, v9, v10, v11);
-    byte_42EBC31 = 1;
+    sub_B70694(&ResponseCommandKind_TypeInfo);
+    sub_B70694(&StringLiteral_21560/*"ok"*/);
+    sub_B70694(&StringLiteral_21408/*"ng"*/);
+    byte_43553C8 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   }
-  v12 = ResponseCommandKind__SearchData(51, responseList, 0LL);
-  if ( v12 && ResponseData__checkError_29500464(v12, 0LL) )
-    v13 = &StringLiteral_21497/*"ok"*/;
+  v5 = ResponseCommandKind__SearchData(51, responseList, 0LL);
+  if ( v5 && ResponseData__checkError_29653500(v5, 0LL) )
+    v6 = &StringLiteral_21560/*"ok"*/;
   else
-    v13 = &StringLiteral_21345/*"ng"*/;
-  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v13, 0LL);
+    v6 = &StringLiteral_21408/*"ng"*/;
+  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v6, 0LL);
 }

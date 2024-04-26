@@ -1,32 +1,27 @@
 void __fastcall MapCondEntity___ctor(MapCondEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42E72F5 & 1) == 0 )
+  if ( (byte_43508BC & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
-    byte_42E72F5 = 1;
+    sub_B70694(&Method_DataEntityBase_string___ctor__);
+    byte_43508BC = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall MapCondEntity__CreatePK(int32_t id, int32_t mapId, const MethodInfo *method)
 {
-  __int64 v3; // x3
-
-  if ( (byte_42E72F3 & 1) == 0 )
+  if ( (byte_43508BA & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_int__int___, mapId, (_DWORD)method, v3);
-    byte_42E72F3 = 1;
+    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_43508BA = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            mapId,
-           (const MethodInfo_1AE3018 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1CA236C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -70,16 +65,14 @@ bool __fastcall MapCondEntity__IsCondAboutQuestClear(
 
 bool __fastcall MapCondEntity__IsOpen(MapCondEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   int32_t condTargetId; // w20
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_42E72F4 & 1) == 0 )
+  if ( (byte_43508BB & 1) == 0 )
   {
-    sub_B5D5C4(&CondType_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E72F4 = 1;
+    sub_B70694(&CondType_TypeInfo);
+    byte_43508BB = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

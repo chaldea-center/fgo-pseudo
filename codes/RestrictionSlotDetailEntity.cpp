@@ -1,32 +1,27 @@
 void __fastcall RestrictionSlotDetailEntity___ctor(RestrictionSlotDetailEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EAF1B & 1) == 0 )
+  if ( (byte_435433C & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
-    byte_42EAF1B = 1;
+    sub_B70694(&Method_DataEntityBase_string___ctor__);
+    byte_435433C = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall RestrictionSlotDetailEntity__CreatePK(int32_t id, int32_t idx, const MethodInfo *method)
 {
-  __int64 v3; // x3
-
-  if ( (byte_42EAF1A & 1) == 0 )
+  if ( (byte_435433B & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_int__int___, idx, (_DWORD)method, v3);
-    byte_42EAF1A = 1;
+    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_435433B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            idx,
-           (const MethodInfo_1AE3018 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1CA236C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -93,8 +88,8 @@ bool __fastcall RestrictionSlotDetailEntity__IsSearchVals(
           if ( v7 >= v6 )
           {
 LABEL_16:
-            v10 = sub_B5D6C8(0LL);
-            sub_B5D668(v10, 0LL);
+            v10 = sub_B70798(0LL);
+            sub_B70738(v10, 0LL);
           }
           max_length = vList->max_length;
           if ( max_length >= 1 )

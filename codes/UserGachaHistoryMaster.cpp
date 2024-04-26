@@ -1,21 +1,14 @@
 void __fastcall UserGachaHistoryMaster___ctor(UserGachaHistoryMaster_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42E711F & 1) == 0 )
+  if ( (byte_43506E5 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_DataMasterBase_UserGachaHistoryMaster__UserGachaHistoryEntity__string___ctor__,
-      (_DWORD)method,
-      v2,
-      v3);
-    byte_42E711F = 1;
+    sub_B70694(&Method_DataMasterBase_UserGachaHistoryMaster__UserGachaHistoryEntity__string___ctor__);
+    byte_43506E5 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     396,
-    (const MethodInfo_23FB1C4 *)Method_DataMasterBase_UserGachaHistoryMaster__UserGachaHistoryEntity__string___ctor__);
+    (const MethodInfo_21C07F4 *)Method_DataMasterBase_UserGachaHistoryMaster__UserGachaHistoryEntity__string___ctor__);
 }
 
 
@@ -23,159 +16,129 @@ System_Collections_Generic_List_UserGachaHistoryEntity__o *__fastcall UserGachaH
         UserGachaHistoryMaster_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  int v14; // w1
-  int v15; // w2
-  __int64 v16; // x3
-  int v17; // w1
-  int v18; // w2
-  __int64 v19; // x3
-  int v20; // w1
-  int v21; // w2
-  __int64 v22; // x3
-  int v23; // w1
-  int v24; // w2
-  __int64 v25; // x3
-  int v26; // w1
-  int v27; // w2
-  __int64 v28; // x3
   System_Collections_ObjectModel_ObservableCollection_T__o *list; // x19
-  UserGachaHistoryMaster___c_c *v30; // x0
+  UserGachaHistoryMaster___c_c *v4; // x0
   struct UserGachaHistoryMaster___c_StaticFields *static_fields; // x8
   System_Converter_string__string__o *_9__1_0; // x20
-  Il2CppObject *v33; // x21
-  struct UserGachaHistoryMaster___c_StaticFields *v34; // x0
-  System_String_array **v35; // x2
-  System_String_array **v36; // x3
-  System_Boolean_array **v37; // x4
-  System_Int32_array **v38; // x5
-  System_Int32_array *v39; // x6
-  System_Int32_array *v40; // x7
-  System_Collections_Generic_List_TOutput__o *v41; // x0
-  __int64 v42; // x1
-  UserGachaHistoryMaster___c_c *v43; // x8
-  System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__o *v44; // x19
-  struct UserGachaHistoryMaster___c_StaticFields *v45; // x9
+  Il2CppObject *v7; // x21
+  struct UserGachaHistoryMaster___c_StaticFields *v8; // x0
+  System_String_array **v9; // x2
+  System_String_array **v10; // x3
+  System_Boolean_array **v11; // x4
+  System_Int32_array **v12; // x5
+  System_Int32_array *v13; // x6
+  System_Int32_array *v14; // x7
+  System_Collections_Generic_List_TOutput__o *v15; // x0
+  __int64 v16; // x1
+  UserGachaHistoryMaster___c_c *v17; // x8
+  System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__o *v18; // x19
+  struct UserGachaHistoryMaster___c_StaticFields *v19; // x9
   System_Comparison_TitleInfoControl_EventEndTimeInfo__o *_9__1_1; // x20
-  Il2CppObject *v47; // x21
-  struct UserGachaHistoryMaster___c_StaticFields *v48; // x0
-  System_String_array **v49; // x2
-  System_String_array **v50; // x3
-  System_Boolean_array **v51; // x4
-  System_Int32_array **v52; // x5
-  System_Int32_array *v53; // x6
-  System_Int32_array *v54; // x7
+  Il2CppObject *v21; // x21
+  struct UserGachaHistoryMaster___c_StaticFields *v22; // x0
+  System_String_array **v23; // x2
+  System_String_array **v24; // x3
+  System_Boolean_array **v25; // x4
+  System_Int32_array **v26; // x5
+  System_Int32_array *v27; // x6
+  System_Int32_array *v28; // x7
 
-  if ( (byte_42E7120 & 1) == 0 )
+  if ( (byte_43506E6 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Comparison_UserGachaHistoryEntity___ctor__, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&System_Comparison_UserGachaHistoryEntity__TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&Method_System_Converter_DataEntityBase__UserGachaHistoryEntity___ctor__, v8, v9, v10);
-    sub_B5D5C4(&System_Converter_DataEntityBase__UserGachaHistoryEntity__TypeInfo, v11, v12, v13);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_UserGachaHistoryEntity__Sort__, v14, v15, v16);
-    sub_B5D5C4(
-      &Method_ObservableCollectionExtensions_ConvertAll_DataEntityBase__UserGachaHistoryEntity___,
-      v17,
-      v18,
-      v19);
-    sub_B5D5C4(&Method_UserGachaHistoryMaster___c__GetEntityList_b__1_0__, v20, v21, v22);
-    sub_B5D5C4(&Method_UserGachaHistoryMaster___c__GetEntityList_b__1_1__, v23, v24, v25);
-    sub_B5D5C4(&UserGachaHistoryMaster___c_TypeInfo, v26, v27, v28);
-    byte_42E7120 = 1;
+    sub_B70694(&Method_System_Comparison_UserGachaHistoryEntity___ctor__);
+    sub_B70694(&System_Comparison_UserGachaHistoryEntity__TypeInfo);
+    sub_B70694(&Method_System_Converter_DataEntityBase__UserGachaHistoryEntity___ctor__);
+    sub_B70694(&System_Converter_DataEntityBase__UserGachaHistoryEntity__TypeInfo);
+    sub_B70694(&Method_System_Collections_Generic_List_UserGachaHistoryEntity__Sort__);
+    sub_B70694(&Method_ObservableCollectionExtensions_ConvertAll_DataEntityBase__UserGachaHistoryEntity___);
+    sub_B70694(&Method_UserGachaHistoryMaster___c__GetEntityList_b__1_0__);
+    sub_B70694(&Method_UserGachaHistoryMaster___c__GetEntityList_b__1_1__);
+    sub_B70694(&UserGachaHistoryMaster___c_TypeInfo);
+    byte_43506E6 = 1;
   }
   list = (System_Collections_ObjectModel_ObservableCollection_T__o *)this->fields.list;
-  v30 = UserGachaHistoryMaster___c_TypeInfo;
+  v4 = UserGachaHistoryMaster___c_TypeInfo;
   if ( (BYTE3(UserGachaHistoryMaster___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UserGachaHistoryMaster___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UserGachaHistoryMaster___c_TypeInfo);
-    v30 = UserGachaHistoryMaster___c_TypeInfo;
+    v4 = UserGachaHistoryMaster___c_TypeInfo;
   }
-  static_fields = v30->static_fields;
+  static_fields = v4->static_fields;
   _9__1_0 = (System_Converter_string__string__o *)static_fields->__9__1_0;
   if ( !_9__1_0 )
   {
-    if ( (BYTE3(v30->vtable._0_Equals.methodPtr) & 4) != 0 && !v30->_2.cctor_finished )
+    if ( (BYTE3(v4->vtable._0_Equals.methodPtr) & 4) != 0 && !v4->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v30);
+      j_il2cpp_runtime_class_init_0(v4);
       static_fields = UserGachaHistoryMaster___c_TypeInfo->static_fields;
     }
-    v33 = (Il2CppObject *)static_fields->__9;
-    _9__1_0 = (System_Converter_string__string__o *)sub_B5D694(System_Converter_DataEntityBase__UserGachaHistoryEntity__TypeInfo);
+    v7 = (Il2CppObject *)static_fields->__9;
+    _9__1_0 = (System_Converter_string__string__o *)sub_B70764(System_Converter_DataEntityBase__UserGachaHistoryEntity__TypeInfo);
     System_Converter_string__string____ctor(
       _9__1_0,
-      v33,
+      v7,
       Method_UserGachaHistoryMaster___c__GetEntityList_b__1_0__,
-      (const MethodInfo_23F738C *)Method_System_Converter_DataEntityBase__UserGachaHistoryEntity___ctor__);
-    v34 = UserGachaHistoryMaster___c_TypeInfo->static_fields;
-    v34->__9__1_0 = (struct System_Converter_DataEntityBase__UserGachaHistoryEntity__o *)_9__1_0;
-    sub_B5D560(
-      (BattleServantConfConponent_o *)&v34->__9__1_0,
+      (const MethodInfo_21BC9BC *)Method_System_Converter_DataEntityBase__UserGachaHistoryEntity___ctor__);
+    v8 = UserGachaHistoryMaster___c_TypeInfo->static_fields;
+    v8->__9__1_0 = (struct System_Converter_DataEntityBase__UserGachaHistoryEntity__o *)_9__1_0;
+    sub_B70630(
+      (BattleServantConfConponent_o *)&v8->__9__1_0,
       (System_Int32_array **)_9__1_0,
-      v35,
-      v36,
-      v37,
-      v38,
-      v39,
-      v40);
+      v9,
+      v10,
+      v11,
+      v12,
+      v13,
+      v14);
   }
-  v41 = ObservableCollectionExtensions__ConvertAll_object__object_(
+  v15 = ObservableCollectionExtensions__ConvertAll_object__object_(
           list,
           (System_Converter_T__TOutput__o *)_9__1_0,
-          (const MethodInfo_1E6698C *)Method_ObservableCollectionExtensions_ConvertAll_DataEntityBase__UserGachaHistoryEntity___);
-  v43 = UserGachaHistoryMaster___c_TypeInfo;
-  v44 = (System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__o *)v41;
+          (const MethodInfo_1D58E18 *)Method_ObservableCollectionExtensions_ConvertAll_DataEntityBase__UserGachaHistoryEntity___);
+  v17 = UserGachaHistoryMaster___c_TypeInfo;
+  v18 = (System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__o *)v15;
   if ( (BYTE3(UserGachaHistoryMaster___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UserGachaHistoryMaster___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UserGachaHistoryMaster___c_TypeInfo);
-    v43 = UserGachaHistoryMaster___c_TypeInfo;
+    v17 = UserGachaHistoryMaster___c_TypeInfo;
   }
-  v45 = v43->static_fields;
-  _9__1_1 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)v45->__9__1_1;
+  v19 = v17->static_fields;
+  _9__1_1 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)v19->__9__1_1;
   if ( !_9__1_1 )
   {
-    if ( (BYTE3(v43->vtable._0_Equals.methodPtr) & 4) != 0 && !v43->_2.cctor_finished )
+    if ( (BYTE3(v17->vtable._0_Equals.methodPtr) & 4) != 0 && !v17->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v43);
-      v45 = UserGachaHistoryMaster___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v17);
+      v19 = UserGachaHistoryMaster___c_TypeInfo->static_fields;
     }
-    v47 = (Il2CppObject *)v45->__9;
-    _9__1_1 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B5D694(System_Comparison_UserGachaHistoryEntity__TypeInfo);
+    v21 = (Il2CppObject *)v19->__9;
+    _9__1_1 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B70764(System_Comparison_UserGachaHistoryEntity__TypeInfo);
     System_Comparison_TitleInfoControl_EventEndTimeInfo____ctor(
       _9__1_1,
-      v47,
+      v21,
       Method_UserGachaHistoryMaster___c__GetEntityList_b__1_1__,
-      (const MethodInfo_249B1FC *)Method_System_Comparison_UserGachaHistoryEntity___ctor__);
-    v48 = UserGachaHistoryMaster___c_TypeInfo->static_fields;
-    v48->__9__1_1 = (struct System_Comparison_UserGachaHistoryEntity__o *)_9__1_1;
-    sub_B5D560(
-      (BattleServantConfConponent_o *)&v48->__9__1_1,
+      (const MethodInfo_2B05B38 *)Method_System_Comparison_UserGachaHistoryEntity___ctor__);
+    v22 = UserGachaHistoryMaster___c_TypeInfo->static_fields;
+    v22->__9__1_1 = (struct System_Comparison_UserGachaHistoryEntity__o *)_9__1_1;
+    sub_B70630(
+      (BattleServantConfConponent_o *)&v22->__9__1_1,
       (System_Int32_array **)_9__1_1,
-      v49,
-      v50,
-      v51,
-      v52,
-      v53,
-      v54);
+      v23,
+      v24,
+      v25,
+      v26,
+      v27,
+      v28);
   }
-  if ( !v44 )
-    sub_B5D69C(v41, v42);
+  if ( !v18 )
+    sub_B7076C(v15, v16);
   System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo___Sort(
-    v44,
+    v18,
     (System_Comparison_T__o *)_9__1_1,
-    (const MethodInfo_305909C *)Method_System_Collections_Generic_List_UserGachaHistoryEntity__Sort__);
-  return (System_Collections_Generic_List_UserGachaHistoryEntity__o *)v44;
+    (const MethodInfo_3027764 *)Method_System_Collections_Generic_List_UserGachaHistoryEntity__Sort__);
+  return (System_Collections_Generic_List_UserGachaHistoryEntity__o *)v18;
 }
 
 
@@ -183,62 +146,50 @@ System_Collections_Generic_IEnumerator_UserGachaHistoryEntity__o *__fastcall Use
         UserGachaHistoryMaster_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *EntityList; // x0
-  __int64 v9; // x1
-  System_Collections_Generic_List_Enumerator_T__o v11; // [xsp+0h] [xbp-40h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v12; // [xsp+18h] [xbp-28h] BYREF
+  __int64 v4; // x1
+  __int64 v5; // x2
+  System_Collections_Generic_List_Enumerator_T__o v7; // [xsp+0h] [xbp-40h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v8; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_42E7121 & 1) == 0 )
+  if ( (byte_43506E7 & 1) == 0 )
   {
-    sub_B5D5C4(&System_Collections_Generic_List_Enumerator_UserGachaHistoryEntity__TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_UserGachaHistoryEntity__GetEnumerator__, v5, v6, v7);
-    byte_42E7121 = 1;
+    sub_B70694(&System_Collections_Generic_List_Enumerator_UserGachaHistoryEntity__TypeInfo);
+    sub_B70694(&Method_System_Collections_Generic_List_UserGachaHistoryEntity__GetEnumerator__);
+    byte_43506E7 = 1;
   }
   EntityList = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)UserGachaHistoryMaster__GetEntityList(
                                                                                                 this,
                                                                                                 method);
   if ( !EntityList )
-    sub_B5D69C(0LL, v9);
+    sub_B7076C(0LL, v4);
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v12,
+    &v8,
     EntityList,
-    (const MethodInfo_3057E3C *)Method_System_Collections_Generic_List_UserGachaHistoryEntity__GetEnumerator__);
-  v11 = v12;
+    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_UserGachaHistoryEntity__GetEnumerator__);
+  v7 = v8;
   return (System_Collections_Generic_IEnumerator_UserGachaHistoryEntity__o *)j_il2cpp_value_box_0(
                                                                                System_Collections_Generic_List_Enumerator_UserGachaHistoryEntity__TypeInfo,
-                                                                               &v11);
+                                                                               &v7,
+                                                                               v5);
 }
 
 
 void __fastcall UserGachaHistoryMaster___c___cctor(const MethodInfo *method)
 {
-  int v1; // w1
-  int v2; // w2
-  __int64 v3; // x3
-  Il2CppObject *v4; // x19
-  BattleServantConfConponent_o *static_fields; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  Il2CppObject *v1; // x19
+  struct UserGachaHistoryMaster___c_StaticFields *static_fields; // x0
 
-  if ( (byte_42E6FFE & 1) == 0 )
+  if ( (byte_434F30C & 1) == 0 )
   {
-    sub_B5D5C4(&UserGachaHistoryMaster___c_TypeInfo, v1, v2, v3);
-    byte_42E6FFE = 1;
+    sub_B70694(&UserGachaHistoryMaster___c_TypeInfo);
+    byte_434F30C = 1;
   }
-  v4 = (Il2CppObject *)sub_B5D694(UserGachaHistoryMaster___c_TypeInfo);
-  System_Object___ctor(v4, 0LL);
-  static_fields = (BattleServantConfConponent_o *)UserGachaHistoryMaster___c_TypeInfo->static_fields;
-  static_fields->klass = (BattleServantConfConponent_c *)v4;
-  sub_B5D560(static_fields, (System_Int32_array **)v4, v6, v7, v8, v9, v10, v11);
+  v1 = (Il2CppObject *)sub_B70764(UserGachaHistoryMaster___c_TypeInfo);
+  System_Object___ctor(v1, 0LL);
+  static_fields = UserGachaHistoryMaster___c_TypeInfo->static_fields;
+  static_fields->__9 = (struct UserGachaHistoryMaster___c_o *)v1;
+  sub_B70630(static_fields);
 }
 
 
@@ -253,20 +204,19 @@ UserGachaHistoryEntity_o *__fastcall UserGachaHistoryMaster___c___GetEntityList_
         DataEntityBase_o *entity,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  __int64 v5; // x10
+  __int64 v4; // x10
 
-  if ( (byte_42E6FFF & 1) == 0 )
+  if ( (byte_434F30D & 1) == 0 )
   {
-    sub_B5D5C4(&UserGachaHistoryEntity_TypeInfo, (_DWORD)entity, (_DWORD)method, v3);
-    byte_42E6FFF = 1;
+    sub_B70694(&UserGachaHistoryEntity_TypeInfo);
+    byte_434F30D = 1;
   }
   if ( !entity )
     return 0LL;
-  v5 = *(&UserGachaHistoryEntity_TypeInfo->_2.bitflags2 + 1);
-  if ( *(&entity->klass->_2.bitflags2 + 1) < (unsigned int)v5 )
+  v4 = *(&UserGachaHistoryEntity_TypeInfo->_2.bitflags2 + 1);
+  if ( *(&entity->klass->_2.bitflags2 + 1) < (unsigned int)v4 )
     return 0LL;
-  if ( (UserGachaHistoryEntity_c *)entity->klass->_2.typeHierarchy[v5 - 1] == UserGachaHistoryEntity_TypeInfo )
+  if ( (UserGachaHistoryEntity_c *)entity->klass->_2.typeHierarchy[v4 - 1] == UserGachaHistoryEntity_TypeInfo )
     return (UserGachaHistoryEntity_o *)entity;
   return 0LL;
 }
@@ -279,6 +229,6 @@ int32_t __fastcall UserGachaHistoryMaster___c___GetEntityList_b__1_1(
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_B5D69C(this, a);
+    sub_B7076C(this, a);
   return a->fields.idx - b->fields.idx;
 }

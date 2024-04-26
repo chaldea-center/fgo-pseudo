@@ -6,33 +6,31 @@ void __fastcall DropInfo___ctor(DropInfo_o *this, const MethodInfo *method)
 
 DropInfo_SaveData_o *__fastcall DropInfo__GetSaveData(DropInfo_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  DropInfo_SaveData_o *v5; // x20
-  __int64 v6; // x0
-  __int64 v7; // x1
+  DropInfo_SaveData_o *v3; // x20
+  __int64 v4; // x0
+  __int64 v5; // x1
   DropInfo_SaveData_o *result; // x0
 
-  if ( (byte_42EA9DE & 1) == 0 )
+  if ( (byte_4353802 & 1) == 0 )
   {
-    sub_B5D5C4(&DropInfo_SaveData_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EA9DE = 1;
+    sub_B70694(&DropInfo_SaveData_TypeInfo);
+    byte_4353802 = 1;
   }
-  v5 = (DropInfo_SaveData_o *)sub_B5D694(DropInfo_SaveData_TypeInfo);
-  DropInfo_SaveData___ctor(v5, 0LL);
-  if ( !v5 )
-    sub_B5D69C(v6, v7);
-  result = v5;
-  v5->fields.type = this->fields.type;
-  v5->fields.objectId = this->fields.objectId;
-  v5->fields.num = this->fields.num;
-  v5->fields.limitCount = this->fields.limitCount;
-  v5->fields.lv = this->fields.lv;
-  v5->fields.rarity = this->fields.rarity;
-  v5->fields.isRateUp = this->fields.isRateUp;
-  v5->fields.originalNum = this->fields.originalNum;
-  v5->fields.effectType = this->fields.effectType;
-  v5->fields.isAdd = this->fields.isAdd;
+  v3 = (DropInfo_SaveData_o *)sub_B70764(DropInfo_SaveData_TypeInfo);
+  DropInfo_SaveData___ctor(v3, 0LL);
+  if ( !v3 )
+    sub_B7076C(v4, v5);
+  result = v3;
+  v3->fields.type = this->fields.type;
+  v3->fields.objectId = this->fields.objectId;
+  v3->fields.num = this->fields.num;
+  v3->fields.limitCount = this->fields.limitCount;
+  v3->fields.lv = this->fields.lv;
+  v3->fields.rarity = this->fields.rarity;
+  v3->fields.isRateUp = this->fields.isRateUp;
+  v3->fields.originalNum = this->fields.originalNum;
+  v3->fields.effectType = this->fields.effectType;
+  v3->fields.isAdd = this->fields.isAdd;
   return result;
 }
 
@@ -43,7 +41,7 @@ void __fastcall DropInfo__SetDataFromSaveData(
         const MethodInfo *method)
 {
   if ( !saveData )
-    sub_B5D69C(this, 0LL);
+    sub_B7076C(this, 0LL);
   this->fields.type = saveData->fields.type;
   this->fields.objectId = saveData->fields.objectId;
   this->fields.num = saveData->fields.num;
@@ -59,13 +57,13 @@ void __fastcall DropInfo__SetDataFromSaveData(
 
 bool __fastcall DropInfo__isItem(DropInfo_o *this, const MethodInfo *method)
 {
-  return Gift__IsItem_28424904(this->fields.type, 0LL);
+  return Gift__IsItem_27751740(this->fields.type, 0LL);
 }
 
 
 bool __fastcall DropInfo__isServant(DropInfo_o *this, const MethodInfo *method)
 {
-  return Gift__IsServant_28424960(this->fields.type, 0LL);
+  return Gift__IsServant_27751796(this->fields.type, 0LL);
 }
 
 

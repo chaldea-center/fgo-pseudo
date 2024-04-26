@@ -1,16 +1,13 @@
 void __fastcall EventFilterEntity___ctor(EventFilterEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EB21A & 1) == 0 )
+  if ( (byte_43545B9 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_int___ctor__, (_DWORD)method, v2, v3);
-    byte_42EB21A = 1;
+    sub_B70694(&Method_DataEntityBase_int___ctor__);
+    byte_43545B9 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_23FACBC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -28,15 +25,13 @@ bool __fastcall EventFilterEntity__HasStatus(EventFilterEntity_o *this, int32_t 
 
 bool __fastcall EventFilterEntity__IsOpen(EventFilterEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   int32_t closeQuestId; // w19
   int32_t openQuestId; // w20
 
-  if ( (byte_42EB219 & 1) == 0 )
+  if ( (byte_43545B8 & 1) == 0 )
   {
-    sub_B5D5C4(&CondType_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EB219 = 1;
+    sub_B70694(&CondType_TypeInfo);
+    byte_43545B8 = 1;
   }
   openQuestId = this->fields.openQuestId;
   closeQuestId = this->fields.closeQuestId;

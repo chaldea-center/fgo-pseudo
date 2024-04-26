@@ -2,13 +2,10 @@ void __fastcall UserPresentHistoryListViewObject___ctor(
         UserPresentHistoryListViewObject_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42E6A57 & 1) == 0 )
+  if ( (byte_434FCF1 & 1) == 0 )
   {
-    sub_B5D5C4(&ListViewObject_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E6A57 = 1;
+    sub_B70694(&ListViewObject_TypeInfo);
+    byte_434FCF1 = 1;
   }
   if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ListViewObject_TypeInfo->_2.cctor_finished )
@@ -23,44 +20,38 @@ void __fastcall UserPresentHistoryListViewObject__Awake(
         UserPresentHistoryListViewObject_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  __int64 v5; // x1
+  __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   struct UserPresentHistoryListViewItemDraw_o *Component_srcLineSprite; // x0
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
 
-  if ( (byte_42E6A55 & 1) == 0 )
+  if ( (byte_434FCEF & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_UnityEngine_GameObject_GetComponent_UserPresentHistoryListViewItemDraw___,
-      (_DWORD)method,
-      v2,
-      v3);
-    byte_42E6A55 = 1;
+    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UserPresentHistoryListViewItemDraw___);
+    byte_434FCEF = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_B5D69C(0LL, v5);
+    sub_B7076C(0LL, v3);
   Component_srcLineSprite = (struct UserPresentHistoryListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                              dispObject,
-                                                                             (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_UserPresentHistoryListViewItemDraw___);
+                                                                             (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UserPresentHistoryListViewItemDraw___);
   this->fields.itemDraw = Component_srcLineSprite;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.itemDraw,
     (System_Int32_array **)Component_srcLineSprite,
+    v6,
+    v7,
     v8,
     v9,
     v10,
-    v11,
-    v12,
-    v13);
+    v11);
 }
 
 
@@ -94,7 +85,7 @@ void __fastcall UserPresentHistoryListViewObject__SetItem(
     goto LABEL_13;
   v8 = this;
   item->fields.viewObject = (struct ListViewObject_o *)this;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&item->fields.viewObject,
     (System_Int32_array **)this,
     (System_String_array **)seed,
@@ -104,7 +95,7 @@ void __fastcall UserPresentHistoryListViewObject__SetItem(
     v6,
     v7);
   v8->fields.linkItem = item;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&v8->fields.linkItem,
     (System_Int32_array **)item,
     v11,
@@ -157,7 +148,7 @@ void __fastcall UserPresentHistoryListViewObject__SetItem(
         !v28) )
   {
 LABEL_13:
-    sub_B5D69C(this, item);
+    sub_B7076C(this, item);
   }
   UnityEngine_GameObject__set_layer(v28, (int32_t)this, 0LL);
   ListViewObject__SetVisible((ListViewObject_o *)v8, 1, 0LL);
@@ -172,40 +163,35 @@ void __fastcall UserPresentHistoryListViewObject__SetupDisp(
         UserPresentHistoryListViewObject_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
   struct ListViewItem_o *linkItem; // x8
-  __int64 v9; // x11
-  struct ListViewItem_o *v10; // x20
+  __int64 v4; // x11
+  struct ListViewItem_o *v5; // x20
   UnityEngine_Object_o *itemDraw; // x21
-  __int64 v12; // x1
-  const MethodInfo *v13; // x2
-  UserPresentHistoryListViewItemDraw_o *v14; // x0
+  __int64 v7; // x1
+  const MethodInfo *v8; // x2
+  UserPresentHistoryListViewItemDraw_o *v9; // x0
 
-  if ( (byte_42E6A56 & 1) == 0 )
+  if ( (byte_434FCF0 & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&UserPresentHistoryListViewItem_TypeInfo, v5, v6, v7);
-    byte_42E6A56 = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    sub_B70694(&UserPresentHistoryListViewItem_TypeInfo);
+    byte_434FCF0 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
-    && (v9 = *(&UserPresentHistoryListViewItem_TypeInfo->_2.bitflags2 + 1),
-        *(&linkItem->klass->_2.bitflags2 + 1) >= (unsigned int)v9) )
+    && (v4 = *(&UserPresentHistoryListViewItem_TypeInfo->_2.bitflags2 + 1),
+        *(&linkItem->klass->_2.bitflags2 + 1) >= (unsigned int)v4) )
   {
-    if ( (UserPresentHistoryListViewItem_c *)linkItem->klass->_2.typeHierarchy[v9 - 1] == UserPresentHistoryListViewItem_TypeInfo )
-      v10 = this->fields.linkItem;
+    if ( (UserPresentHistoryListViewItem_c *)linkItem->klass->_2.typeHierarchy[v4 - 1] == UserPresentHistoryListViewItem_TypeInfo )
+      v5 = this->fields.linkItem;
     else
-      v10 = 0LL;
+      v5 = 0LL;
   }
   else
   {
-    v10 = 0LL;
+    v5 = 0LL;
   }
-  ListViewObject__SetVisible((ListViewObject_o *)this, v10 != 0LL, 0LL);
+  ListViewObject__SetVisible((ListViewObject_o *)this, v5 != 0LL, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -214,9 +200,9 @@ void __fastcall UserPresentHistoryListViewObject__SetupDisp(
   }
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v14 = this->fields.itemDraw;
-    if ( !v14 )
-      sub_B5D69C(0LL, v12);
-    UserPresentHistoryListViewItemDraw__SetItem(v14, (UserPresentHistoryListViewItem_o *)v10, v13);
+    v9 = this->fields.itemDraw;
+    if ( !v9 )
+      sub_B7076C(0LL, v7);
+    UserPresentHistoryListViewItemDraw__SetItem(v9, (UserPresentHistoryListViewItem_o *)v5, v8);
   }
 }

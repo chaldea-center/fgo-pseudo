@@ -4,7 +4,7 @@ void __fastcall BattleCallBack_object__object__object____ctor(
         Il2CppObject *arg2,
         Il2CppObject *arg3,
         System_Action_T1__T2__T3__o *callBack,
-        const MethodInfo_2DCCFD4 *method)
+        const MethodInfo_2C6F244 *method)
 {
   System_String_array **v11; // x2
   System_String_array **v12; // x3
@@ -32,12 +32,12 @@ void __fastcall BattleCallBack_object__object__object____ctor(
   System_Int32_array *v34; // x7
 
   if ( !this )
-    sub_B5D69C(0LL, arg1);
+    sub_B7076C(0LL, arg1);
   BattleCallBackBase___ctor((BattleCallBackBase_o *)this, 0LL);
   this->fields.arg1 = arg1;
-  sub_B5D560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)arg1, v11, v12, v13, v14, v15, v16);
+  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)arg1, v11, v12, v13, v14, v15, v16);
   this->fields.arg2 = arg2;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.arg2,
     (System_Int32_array **)arg2,
     v17,
@@ -47,7 +47,7 @@ void __fastcall BattleCallBack_object__object__object____ctor(
     v21,
     v22);
   this->fields.arg3 = arg3;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.arg3,
     (System_Int32_array **)arg3,
     v23,
@@ -57,7 +57,7 @@ void __fastcall BattleCallBack_object__object__object____ctor(
     v27,
     v28);
   this->fields.callBack = callBack;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.callBack,
     (System_Int32_array **)callBack,
     v29,
@@ -71,7 +71,7 @@ void __fastcall BattleCallBack_object__object__object____ctor(
 
 void __fastcall BattleCallBack_object__object__object___call(
         BattleCallBack_T1__T2__T3__o *this,
-        const MethodInfo_2DCD05C *method)
+        const MethodInfo_2C6F2CC *method)
 {
   ((void (__fastcall *)(struct System_Action_T1__T2__T3__o *, Il2CppObject *, Il2CppObject *, Il2CppObject *))method->klass->rgctx_data->_0_ActionExtensions_Call_T1__T2__T3_->methodPointer)(
     this->fields.callBack,

@@ -2,7 +2,7 @@ void __fastcall ClassBoardEffectListDialogSkillDetailComponent___ctor(
         ClassBoardEffectListDialogSkillDetailComponent_o *this,
         const MethodInfo *method)
 {
-  *(_OWORD *)&this->fields.detailMinHeight = xmmword_32A4360;
+  *(_OWORD *)&this->fields.detailMinHeight = xmmword_32ECE10;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -27,7 +27,7 @@ void __fastcall ClassBoardEffectListDialogSkillDetailComponent__Init(
   System_Int32_array *v7; // x7
 
   this->fields.listComponent = listComponent;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.listComponent,
     (System_Int32_array **)listComponent,
     (System_String_array **)method,
@@ -39,7 +39,6 @@ void __fastcall ClassBoardEffectListDialogSkillDetailComponent__Init(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetail(
         ClassBoardEffectListDialogSkillDetailComponent_o *this,
         System_String_o *name,
@@ -54,14 +53,15 @@ float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetail(
   float ContentHeight; // s0
   float v16; // s8
   double v17; // d0
-  const MethodInfo *v18; // x3
+  const MethodInfo *v18; // x2
+  const MethodInfo *v19; // x3
   struct ClassBoardEffectListDialogSkillListComponent_o *listComponent; // x8
-  System_String_o *v20; // x2
+  System_String_o *v21; // x2
 
-  if ( (byte_42E9C2E & 1) == 0 )
+  if ( (byte_4353ADA & 1) == 0 )
   {
-    sub_B5D5C4(&ClassBoardUtility_TypeInfo, (_DWORD)name, (_DWORD)detail, *(_QWORD *)&iconId);
-    byte_42E9C2E = 1;
+    sub_B70694(&ClassBoardUtility_TypeInfo);
+    byte_4353ADA = 1;
   }
   effectNameLabel = this->fields.effectNameLabel;
   if ( !effectNameLabel )
@@ -86,26 +86,26 @@ float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetail(
   {
     j_il2cpp_runtime_class_init_0(ClassBoardUtility_TypeInfo);
   }
-  effectNameLabel = (UILabel_o *)ClassBoardUtility__GetClassBoardSkillIconName(iconId, skillType, 0LL);
+  effectNameLabel = (UILabel_o *)ClassBoardUtility__GetClassBoardSkillIconName(iconId, skillType, v18);
   if ( !fromBattleSvtWindow )
   {
     listComponent = this->fields.listComponent;
     if ( listComponent )
     {
-      v20 = (System_String_o *)effectNameLabel;
+      v21 = (System_String_o *)effectNameLabel;
       effectNameLabel = (UILabel_o *)listComponent->fields.dialog;
       if ( effectNameLabel )
       {
         ClassBoardEffectListDialog__SetIcon(
           (ClassBoardEffectListDialog_o *)effectNameLabel,
           this->fields.effectIcon,
-          v20,
-          v18);
+          v21,
+          v19);
         return v16 + (float)this->fields.adjustSetPosY;
       }
     }
 LABEL_17:
-    sub_B5D69C(effectNameLabel, name);
+    sub_B7076C(effectNameLabel, name);
   }
   return v16 + (float)this->fields.adjustSetPosY;
 }
@@ -138,7 +138,7 @@ float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetailTextAn
         LocalPositionY = GameObjectExtensions__GetLocalPositionY(gameObject, 0LL),
         (v8 = this->fields.effectDetailLabel) == 0LL) )
   {
-    sub_B5D69C(effectDetailLabel, detail);
+    sub_B7076C(effectDetailLabel, detail);
   }
   detailMinHeight = this->fields.detailMinHeight;
   result = (float)(fabsf(LocalPositionY) + (float)v8->fields.mHeight) + (float)this->fields.detailUnderMargin;
@@ -155,6 +155,6 @@ void __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetIconFromBattl
         const MethodInfo *method)
 {
   if ( !atlasManagerUnit )
-    sub_B5D69C(this, 0LL);
+    sub_B7076C(this, 0LL);
   AtlasManagerUnit__SetUI(atlasManagerUnit, this->fields.effectIcon, spriteName, 0LL);
 }

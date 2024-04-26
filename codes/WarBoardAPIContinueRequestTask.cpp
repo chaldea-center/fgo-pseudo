@@ -6,7 +6,7 @@ void __fastcall WarBoardAPIContinueRequestTask___ctor(
         bool onStartBeginRequest,
         const MethodInfo *method)
 {
-  WarBoardAPIRequestTask___ctor_21403204(
+  WarBoardAPIRequestTask___ctor_21188152(
     (WarBoardAPIRequestTask_o *)this,
     resultCallback,
     onStartBeginRequest,
@@ -19,34 +19,26 @@ void __fastcall WarBoardAPIContinueRequestTask__SetRequest(
         WarBoardAPIContinueRequestTask_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
   WarBoardContinueRequest_o *Instance; // x0
-  __int64 v12; // x1
+  __int64 v4; // x1
   WarBoardData_o *paramString; // x20
-  WarBoardContinueRequest_o *v14; // x21
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
+  WarBoardContinueRequest_o *v6; // x21
+  System_String_array **v7; // x2
+  System_String_array **v8; // x3
+  System_Boolean_array **v9; // x4
+  System_Int32_array **v10; // x5
+  System_Int32_array *v11; // x6
+  System_Int32_array *v12; // x7
   int32_t id; // w0
 
-  if ( (byte_42E6908 & 1) == 0 )
+  if ( (byte_434FA0F & 1) == 0 )
   {
-    sub_B5D5C4(&Method_NetworkManager_getRequest_WarBoardContinueRequest___, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&NetworkManager_TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v8, v9, v10);
-    byte_42E6908 = 1;
+    sub_B70694(&Method_NetworkManager_getRequest_WarBoardContinueRequest___);
+    sub_B70694(&NetworkManager_TypeInfo);
+    sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_434FA0F = 1;
   }
-  Instance = (WarBoardContinueRequest_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardContinueRequest_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   paramString = (WarBoardData_o *)Instance[10].fields.paramString;
@@ -57,31 +49,31 @@ void __fastcall WarBoardAPIContinueRequestTask__SetRequest(
   }
   Instance = (WarBoardContinueRequest_o *)NetworkManager__getRequest_WarBoardWallAttackRequest_(
                                             0LL,
-                                            (const MethodInfo_1E656EC *)Method_NetworkManager_getRequest_WarBoardContinueRequest___);
+                                            (const MethodInfo_1D57A4C *)Method_NetworkManager_getRequest_WarBoardContinueRequest___);
   if ( !Instance )
     goto LABEL_12;
-  v14 = Instance;
+  v6 = Instance;
   Instance = (WarBoardContinueRequest_o *)RequestBase__beginRetryRequest((RequestBase_o *)Instance, 0, 0LL);
   if ( ((unsigned __int8)Instance & 1) == 0 )
   {
     if ( paramString )
     {
       id = WarBoardData__get_id(paramString, 0LL);
-      WarBoardContinueRequest__beginRequest(v14, id, this->fields.consumeType, paramString, 0LL);
+      WarBoardContinueRequest__beginRequest(v6, id, this->fields.consumeType, paramString, 0LL);
       goto LABEL_11;
     }
 LABEL_12:
-    sub_B5D69C(Instance, v12);
+    sub_B7076C(Instance, v4);
   }
 LABEL_11:
-  this->fields.request = (struct RequestBase_o *)v14;
-  sub_B5D560(
+  this->fields.request = (struct RequestBase_o *)v6;
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.request,
-    (System_Int32_array **)v14,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19,
-    v20);
+    (System_Int32_array **)v6,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11,
+    v12);
 }

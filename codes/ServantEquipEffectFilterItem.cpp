@@ -1,13 +1,9 @@
 void __fastcall ServantEquipEffectFilterItem___cctor(const MethodInfo *method)
 {
-  int v1; // w1
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EB977 & 1) == 0 )
+  if ( (byte_435519C & 1) == 0 )
   {
-    sub_B5D5C4(&ServantEquipEffectFilterItem_TypeInfo, v1, v2, v3);
-    byte_42EB977 = 1;
+    sub_B70694(&ServantEquipEffectFilterItem_TypeInfo);
+    byte_435519C = 1;
   }
   ServantEquipEffectFilterItem_TypeInfo->static_fields->LABEL_MAX_WIDTH = 160;
 }
@@ -48,13 +44,13 @@ void __fastcall ServantEquipEffectFilterItem__Init(
   System_Int32_array *v28; // x7
   const MethodInfo *v29; // x1
 
-  if ( (byte_42EB976 & 1) == 0 )
+  if ( (byte_435519B & 1) == 0 )
   {
-    sub_B5D5C4(&ServantEquipEffectFilterItem_TypeInfo, (_DWORD)entity, (_DWORD)sort, isSelected);
-    byte_42EB976 = 1;
+    sub_B70694(&ServantEquipEffectFilterItem_TypeInfo);
+    byte_435519B = 1;
   }
   this->fields.entity = entity;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.entity,
     (System_Int32_array **)entity,
     (System_String_array **)sort,
@@ -79,11 +75,11 @@ void __fastcall ServantEquipEffectFilterItem__Init(
   }
   if ( !v16 )
 LABEL_10:
-    sub_B5D69C(titleLabel, v14);
+    sub_B7076C(titleLabel, v14);
   UILabel__SetCondensedScale(v16, ServantEquipEffectFilterItem_TypeInfo->static_fields->LABEL_MAX_WIDTH, 0LL);
   this->fields.isSelected = isSelected;
   this->fields.sort = sort;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.sort,
     (System_Int32_array **)sort,
     v17,
@@ -93,7 +89,7 @@ LABEL_10:
     v21,
     v22);
   this->fields.onClickEvent = onClickEvent;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.onClickEvent,
     (System_Int32_array **)onClickEvent,
     v23,
@@ -147,7 +143,7 @@ void __fastcall ServantEquipEffectFilterItem__SetCheckMark(
   if ( !checkMarkSprite
     || (checkMarkSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(checkMarkSprite, 0LL)) == 0LL )
   {
-    sub_B5D69C(checkMarkSprite, method);
+    sub_B7076C(checkMarkSprite, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)checkMarkSprite, this->fields.isSelected, 0LL);
 }
@@ -162,7 +158,7 @@ void __fastcall ServantEquipEffectFilterItem__SetEnableFilterButton(
 
   button = this->fields.button;
   if ( !button )
-    sub_B5D69C(0LL, isEnable);
+    sub_B7076C(0LL, isEnable);
   UICommonButton__SetButtonEnableWithCollider(button, isEnable, 0LL);
 }
 
@@ -181,6 +177,6 @@ void __fastcall ServantEquipEffectFilterItem__SetSelectState(
   ServantEquipEffectFilterItem__SetCheckMark(this, (const MethodInfo *)isSelected);
   entity = this->fields.entity;
   if ( !entity || (sort = this->fields.sort) == 0LL )
-    sub_B5D69C(sort, v5);
-  ListViewSort__SetSvtEquipEffectFilter_34051896(sort, entity->fields.id, this->fields.isSelected, 0LL);
+    sub_B7076C(sort, v5);
+  ListViewSort__SetSvtEquipEffectFilter_34003024(sort, entity->fields.id, this->fields.isSelected, 0LL);
 }

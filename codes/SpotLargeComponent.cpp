@@ -7,119 +7,91 @@ void __fastcall SpotLargeComponent___ctor(SpotLargeComponent_o *this, const Meth
 
 void __fastcall SpotLargeComponent__Awake(SpotLargeComponent_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  int v14; // w1
-  int v15; // w2
-  __int64 v16; // x3
-  int v17; // w1
-  int v18; // w2
-  __int64 v19; // x3
-  int v20; // w1
-  int v21; // w2
-  __int64 v22; // x3
   struct CStateManager_SpotLargeComponent__o **p_mFSM; // x20
-  CStateManager_QAASpotStateController_IMapSpot__o *v24; // x21
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
+  CStateManager_QAASpotStateController_IMapSpot__o *v4; // x21
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
   struct CStateManager_SpotLargeComponent__o *mFSM; // x21
-  SpotLargeComponent_StateNone_o *v32; // x22
-  __int64 v33; // x0
-  __int64 v34; // x1
-  CStateManager_QAASpotStateController_IMapSpot__o *v35; // x21
-  SpotLargeComponent_StateLargeIn_o *v36; // x22
-  CStateManager_QAASpotStateController_IMapSpot__o *v37; // x21
-  SpotLargeComponent_StateLargeMain_o *v38; // x22
-  CStateManager_QAASpotStateController_IMapSpot__o *v39; // x20
-  SpotLargeComponent_StateLargeOut_o *v40; // x21
-  const MethodInfo *v41; // x2
+  SpotLargeComponent_StateNone_o *v12; // x22
+  __int64 v13; // x0
+  __int64 v14; // x1
+  CStateManager_QAASpotStateController_IMapSpot__o *v15; // x21
+  SpotLargeComponent_StateLargeIn_o *v16; // x22
+  CStateManager_QAASpotStateController_IMapSpot__o *v17; // x21
+  SpotLargeComponent_StateLargeMain_o *v18; // x22
+  CStateManager_QAASpotStateController_IMapSpot__o *v19; // x20
+  SpotLargeComponent_StateLargeOut_o *v20; // x21
+  const MethodInfo *v21; // x2
 
-  if ( (byte_42E9256 & 1) == 0 )
+  if ( (byte_435278D & 1) == 0 )
   {
-    sub_B5D5C4(&Method_CStateManager_SpotLargeComponent___ctor__, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&Method_CStateManager_SpotLargeComponent__add__, v5, v6, v7);
-    sub_B5D5C4(&CStateManager_SpotLargeComponent__TypeInfo, v8, v9, v10);
-    sub_B5D5C4(&SpotLargeComponent_StateLargeIn_TypeInfo, v11, v12, v13);
-    sub_B5D5C4(&SpotLargeComponent_StateLargeMain_TypeInfo, v14, v15, v16);
-    sub_B5D5C4(&SpotLargeComponent_StateLargeOut_TypeInfo, v17, v18, v19);
-    sub_B5D5C4(&SpotLargeComponent_StateNone_TypeInfo, v20, v21, v22);
-    byte_42E9256 = 1;
+    sub_B70694(&Method_CStateManager_SpotLargeComponent___ctor__);
+    sub_B70694(&Method_CStateManager_SpotLargeComponent__add__);
+    sub_B70694(&CStateManager_SpotLargeComponent__TypeInfo);
+    sub_B70694(&SpotLargeComponent_StateLargeIn_TypeInfo);
+    sub_B70694(&SpotLargeComponent_StateLargeMain_TypeInfo);
+    sub_B70694(&SpotLargeComponent_StateLargeOut_TypeInfo);
+    sub_B70694(&SpotLargeComponent_StateNone_TypeInfo);
+    byte_435278D = 1;
   }
   p_mFSM = &this->fields.mFSM;
   if ( !this->fields.mFSM )
   {
-    v24 = (CStateManager_QAASpotStateController_IMapSpot__o *)sub_B5D694(CStateManager_SpotLargeComponent__TypeInfo);
+    v4 = (CStateManager_QAASpotStateController_IMapSpot__o *)sub_B70764(CStateManager_SpotLargeComponent__TypeInfo);
     CStateManager_QAASpotStateController_IMapSpot____ctor(
-      v24,
+      v4,
       (QAASpotStateController_IMapSpot_o *)this,
       4,
-      (const MethodInfo_2BB2630 *)Method_CStateManager_SpotLargeComponent___ctor__);
-    this->fields.mFSM = (struct CStateManager_SpotLargeComponent__o *)v24;
-    sub_B5D560(
-      (BattleServantConfConponent_o *)&this->fields.mFSM,
-      (System_Int32_array **)v24,
-      v25,
-      v26,
-      v27,
-      v28,
-      v29,
-      v30);
+      (const MethodInfo_2C7FFDC *)Method_CStateManager_SpotLargeComponent___ctor__);
+    this->fields.mFSM = (struct CStateManager_SpotLargeComponent__o *)v4;
+    sub_B70630((BattleServantConfConponent_o *)&this->fields.mFSM, (System_Int32_array **)v4, v5, v6, v7, v8, v9, v10);
     mFSM = this->fields.mFSM;
-    v32 = (SpotLargeComponent_StateNone_o *)sub_B5D694(SpotLargeComponent_StateNone_TypeInfo);
-    SpotLargeComponent_StateNone___ctor(v32, 0LL);
+    v12 = (SpotLargeComponent_StateNone_o *)sub_B70764(SpotLargeComponent_StateNone_TypeInfo);
+    SpotLargeComponent_StateNone___ctor(v12, 0LL);
     if ( !mFSM )
       goto LABEL_9;
     CStateManager_QAASpotStateController_IMapSpot___add(
       (CStateManager_QAASpotStateController_IMapSpot__o *)mFSM,
       0,
-      (IState_T__o *)v32,
-      (const MethodInfo_2BB26FC *)Method_CStateManager_SpotLargeComponent__add__);
-    v35 = (CStateManager_QAASpotStateController_IMapSpot__o *)*p_mFSM;
-    v36 = (SpotLargeComponent_StateLargeIn_o *)sub_B5D694(SpotLargeComponent_StateLargeIn_TypeInfo);
-    SpotLargeComponent_StateLargeIn___ctor(v36, 0LL);
-    if ( !v35 )
+      (IState_T__o *)v12,
+      (const MethodInfo_2C800A8 *)Method_CStateManager_SpotLargeComponent__add__);
+    v15 = (CStateManager_QAASpotStateController_IMapSpot__o *)*p_mFSM;
+    v16 = (SpotLargeComponent_StateLargeIn_o *)sub_B70764(SpotLargeComponent_StateLargeIn_TypeInfo);
+    SpotLargeComponent_StateLargeIn___ctor(v16, 0LL);
+    if ( !v15 )
       goto LABEL_9;
     CStateManager_QAASpotStateController_IMapSpot___add(
-      v35,
+      v15,
       1,
-      (IState_T__o *)v36,
-      (const MethodInfo_2BB26FC *)Method_CStateManager_SpotLargeComponent__add__);
-    v37 = (CStateManager_QAASpotStateController_IMapSpot__o *)*p_mFSM;
-    v38 = (SpotLargeComponent_StateLargeMain_o *)sub_B5D694(SpotLargeComponent_StateLargeMain_TypeInfo);
-    SpotLargeComponent_StateLargeMain___ctor(v38, 0LL);
-    if ( !v37
+      (IState_T__o *)v16,
+      (const MethodInfo_2C800A8 *)Method_CStateManager_SpotLargeComponent__add__);
+    v17 = (CStateManager_QAASpotStateController_IMapSpot__o *)*p_mFSM;
+    v18 = (SpotLargeComponent_StateLargeMain_o *)sub_B70764(SpotLargeComponent_StateLargeMain_TypeInfo);
+    SpotLargeComponent_StateLargeMain___ctor(v18, 0LL);
+    if ( !v17
       || (CStateManager_QAASpotStateController_IMapSpot___add(
-            v37,
+            v17,
             2,
-            (IState_T__o *)v38,
-            (const MethodInfo_2BB26FC *)Method_CStateManager_SpotLargeComponent__add__),
-          v39 = (CStateManager_QAASpotStateController_IMapSpot__o *)*p_mFSM,
-          v40 = (SpotLargeComponent_StateLargeOut_o *)sub_B5D694(SpotLargeComponent_StateLargeOut_TypeInfo),
-          SpotLargeComponent_StateLargeOut___ctor(v40, 0LL),
-          !v39) )
+            (IState_T__o *)v18,
+            (const MethodInfo_2C800A8 *)Method_CStateManager_SpotLargeComponent__add__),
+          v19 = (CStateManager_QAASpotStateController_IMapSpot__o *)*p_mFSM,
+          v20 = (SpotLargeComponent_StateLargeOut_o *)sub_B70764(SpotLargeComponent_StateLargeOut_TypeInfo),
+          SpotLargeComponent_StateLargeOut___ctor(v20, 0LL),
+          !v19) )
     {
 LABEL_9:
-      sub_B5D69C(v33, v34);
+      sub_B7076C(v13, v14);
     }
     CStateManager_QAASpotStateController_IMapSpot___add(
-      v39,
+      v19,
       3,
-      (IState_T__o *)v40,
-      (const MethodInfo_2BB26FC *)Method_CStateManager_SpotLargeComponent__add__);
-    SpotLargeComponent__SetState(this, 0, v41);
+      (IState_T__o *)v20,
+      (const MethodInfo_2C800A8 *)Method_CStateManager_SpotLargeComponent__add__);
+    SpotLargeComponent__SetState(this, 0, v21);
   }
 }
 
@@ -132,7 +104,7 @@ void __fastcall SpotLargeComponent__ForceOff(SpotLargeComponent_o *this, const M
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B5D69C(0LL, v4);
+    sub_B7076C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   if ( this->fields.mFSM )
     SpotLargeComponent__SetState(this, 0, v5);
@@ -144,34 +116,32 @@ UnityEngine_Vector3_o __fastcall SpotLargeComponent__GetBasePosition(
         SpotLargeComponent_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   UnityEngine_Object_o *mBaseSpot; // x20
   UnityEngine_Object_o *mMapCamera; // x20
   UnityEngine_Component_o *mScrl; // x0
-  __int64 v8; // x1
-  float v9; // s0
-  float v10; // s1
-  float v11; // s2
+  __int64 v6; // x1
+  float v7; // s0
+  float v8; // s1
+  float v9; // s2
   float x; // s9
   float y; // s10
   float z; // s8
   UnityEngine_GameObject_o *gameObject; // x0
-  struct MapCamera_o *v16; // x8
+  struct MapCamera_o *v14; // x8
   UnityEngine_Vector2_o ScrlPos; // kr00_8
-  const MethodInfo *v18; // x1
+  const MethodInfo *v16; // x1
   float BaseScale; // s0
-  float v20; // s9
-  float v21; // s10
-  float v22; // s8
+  float v18; // s9
+  float v19; // s10
+  float v20; // s8
   UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o up; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_42E925C & 1) == 0 )
+  if ( (byte_4352793 & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E925C = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4352793 = 1;
   }
   mBaseSpot = (UnityEngine_Object_o *)this->fields.mBaseSpot;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -207,51 +177,49 @@ UnityEngine_Vector3_o __fastcall SpotLargeComponent__GetBasePosition(
         y = LocalPosition.fields.y;
         z = LocalPosition.fields.z;
       }
-      v16 = this->fields.mMapCamera;
-      if ( v16 )
+      v14 = this->fields.mMapCamera;
+      if ( v14 )
       {
-        mScrl = (UnityEngine_Component_o *)v16->fields.mScrl;
+        mScrl = (UnityEngine_Component_o *)v14->fields.mScrl;
         if ( mScrl )
         {
           ScrlPos = MapScroll__GetScrlPos((MapScroll_o *)mScrl, 0LL);
-          BaseScale = SpotLargeComponent__GetBaseScale(this, v18);
-          v20 = BaseScale * (float)(x - ScrlPos.fields.x);
-          v21 = BaseScale * (float)(y - ScrlPos.fields.y);
-          v22 = z * BaseScale;
+          BaseScale = SpotLargeComponent__GetBaseScale(this, v16);
+          v18 = BaseScale * (float)(x - ScrlPos.fields.x);
+          v19 = BaseScale * (float)(y - ScrlPos.fields.y);
+          v20 = z * BaseScale;
           up = UnityEngine_Vector3__get_up(0LL);
-          v9 = v20 - (float)(up.fields.x * 32.0);
-          v10 = v21 - (float)(up.fields.y * 32.0);
-          v11 = v22 - (float)(up.fields.z * 32.0);
+          v7 = v18 - (float)(up.fields.x * 32.0);
+          v8 = v19 - (float)(up.fields.y * 32.0);
+          v9 = v20 - (float)(up.fields.z * 32.0);
           goto LABEL_20;
         }
       }
 LABEL_19:
-      sub_B5D69C(mScrl, v8);
+      sub_B7076C(mScrl, v6);
     }
   }
-  *(UnityEngine_Vector3_o *)&v9 = UnityEngine_Vector3__get_zero(0LL);
+  *(UnityEngine_Vector3_o *)&v7 = UnityEngine_Vector3__get_zero(0LL);
 LABEL_20:
-  result.fields.z = v11;
-  result.fields.y = v10;
-  result.fields.x = v9;
+  result.fields.z = v9;
+  result.fields.y = v8;
+  result.fields.x = v7;
   return result;
 }
 
 
 float __fastcall SpotLargeComponent__GetBaseScale(SpotLargeComponent_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   UnityEngine_Object_o *mMapCamera; // x20
   MapZoom_o *mZoom; // x0
-  __int64 v7; // x1
+  __int64 v5; // x1
   float result; // s0
-  struct MapCamera_o *v9; // x8
+  struct MapCamera_o *v7; // x8
 
-  if ( (byte_42E925B & 1) == 0 )
+  if ( (byte_4352792 & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E925B = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4352792 = 1;
   }
   mMapCamera = (UnityEngine_Object_o *)this->fields.mMapCamera;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -263,9 +231,9 @@ float __fastcall SpotLargeComponent__GetBaseScale(SpotLargeComponent_o *this, co
   result = 0.0;
   if ( ((unsigned __int8)mZoom & 1) == 0 )
   {
-    v9 = this->fields.mMapCamera;
-    if ( !v9 || (mZoom = v9->fields.mZoom) == 0LL )
-      sub_B5D69C(mZoom, v7);
+    v7 = this->fields.mMapCamera;
+    if ( !v7 || (mZoom = v7->fields.mZoom) == 0LL )
+      sub_B7076C(mZoom, v5);
     return 1.0 / MapZoom__GetZoomSize(mZoom, 0LL);
   }
   return result;
@@ -274,24 +242,18 @@ float __fastcall SpotLargeComponent__GetBaseScale(SpotLargeComponent_o *this, co
 
 int32_t __fastcall SpotLargeComponent__GetState(SpotLargeComponent_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  SpotLargeComponent_o *v4; // x19
+  SpotLargeComponent_o *v2; // x19
   struct CStateManager_SpotLargeComponent__o *mFSM; // x8
 
-  v4 = this;
-  if ( (byte_42E9259 & 1) == 0 )
+  v2 = this;
+  if ( (byte_4352790 & 1) == 0 )
   {
-    this = (SpotLargeComponent_o *)sub_B5D5C4(
-                                     &Method_CStateManager_SpotLargeComponent__getState__,
-                                     (_DWORD)method,
-                                     v2,
-                                     v3);
-    byte_42E9259 = 1;
+    this = (SpotLargeComponent_o *)sub_B70694(&Method_CStateManager_SpotLargeComponent__getState__);
+    byte_4352790 = 1;
   }
-  mFSM = v4->fields.mFSM;
+  mFSM = v2->fields.mFSM;
   if ( !mFSM )
-    sub_B5D69C(this, method);
+    sub_B7076C(this, method);
   return mFSM->fields.m_state;
 }
 
@@ -311,68 +273,60 @@ void __fastcall SpotLargeComponent__LargeIn(
   float z; // s8
   float y; // s9
   float x; // s10
-  int v18; // w1
-  int v19; // w2
-  __int64 v20; // x3
-  int v21; // w1
-  int v22; // w2
-  __int64 v23; // x3
   struct SrcSpotBasePrefab_o **p_mBaseSpot; // x22
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
+  System_String_array **v19; // x2
+  System_String_array **v20; // x3
+  System_Boolean_array **v21; // x4
+  System_Int32_array **v22; // x5
+  System_Int32_array *v23; // x6
+  System_Int32_array *v24; // x7
   MapControl_SpotInfo_o *mMapCtrl_SpotInfo; // x0
-  const MethodInfo *v32; // x1
+  const MethodInfo *v26; // x1
   SpotEntity_o *Mine; // x24
-  int v34; // w2
-  __int64 v35; // x3
-  __int64 v36; // x8
-  char v37; // w26
-  UnityEngine_GameObject_o *v38; // x25
-  bool v39; // w1
-  const MethodInfo *v40; // x3
+  __int64 v28; // x8
+  char v29; // w26
+  UnityEngine_GameObject_o *v30; // x25
+  bool v31; // w1
+  const MethodInfo *v32; // x3
   System_Collections_Generic_List_UIAtlas__o *atlases; // x25
   UISprite_o *mSpotSp; // x26
-  const MethodInfo *v43; // x4
+  const MethodInfo *v35; // x4
   UnityEngine_GameObject_o *gameObject; // x0
-  float v45; // s0
-  float v46; // s1
-  float v47; // s2
-  float v48; // s8
-  float v49; // s9
-  float v50; // s10
-  UnityEngine_GameObject_o *v51; // x0
+  float v37; // s0
+  float v38; // s1
+  float v39; // s2
+  float v40; // s8
+  float v41; // s9
+  float v42; // s10
+  UnityEngine_GameObject_o *v43; // x0
   float BaseScale; // s8
-  UnityEngine_GameObject_o *v53; // x0
-  const MethodInfo *v54; // x1
-  float v55; // s8
-  float v56; // s9
-  float v57; // s10
-  UnityEngine_GameObject_o *v58; // x0
-  System_String_array **v59; // x2
-  System_String_array **v60; // x3
-  System_Boolean_array **v61; // x4
-  System_Int32_array **v62; // x5
-  System_Int32_array *v63; // x6
-  System_Int32_array *v64; // x7
-  const MethodInfo *v65; // x2
-  UnityEngine_Vector3_o v66; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_GameObject_o *v45; // x0
+  const MethodInfo *v46; // x1
+  float v47; // s8
+  float v48; // s9
+  float v49; // s10
+  UnityEngine_GameObject_o *v50; // x0
+  System_String_array **v51; // x2
+  System_String_array **v52; // x3
+  System_Boolean_array **v53; // x4
+  System_Int32_array **v54; // x5
+  System_Int32_array *v55; // x6
+  System_Int32_array *v56; // x7
+  const MethodInfo *v57; // x2
+  UnityEngine_Vector3_o v58; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o BasePosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v68; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v60; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o LocalPosition; // 0:s3.4,4:s4.4,8:s5.4
 
   z = screenSpotPosition.fields.z;
   y = screenSpotPosition.fields.y;
   x = screenSpotPosition.fields.x;
-  if ( (byte_42E9258 & 1) == 0 )
+  if ( (byte_435278F & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)spot, (_DWORD)mapCamera, mapModelCamera);
-    sub_B5D5C4(&SrcSpotBasePrefab_TypeInfo, v18, v19, v20);
-    sub_B5D5C4(&TerminalSceneComponent_TypeInfo, v21, v22, v23);
-    byte_42E9258 = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    sub_B70694(&SrcSpotBasePrefab_TypeInfo);
+    sub_B70694(&TerminalSceneComponent_TypeInfo);
+    byte_435278F = 1;
   }
   this->fields.screenSpotPosition.fields.x = x;
   this->fields.screenSpotPosition.fields.y = y;
@@ -380,7 +334,7 @@ void __fastcall SpotLargeComponent__LargeIn(
   this->fields.isMapModel = isMapModel;
   this->fields.mBaseSpot = spot;
   p_mBaseSpot = &this->fields.mBaseSpot;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.mBaseSpot,
     (System_Int32_array **)spot,
     (System_String_array **)mapCamera,
@@ -390,15 +344,15 @@ void __fastcall SpotLargeComponent__LargeIn(
     (System_Int32_array *)method,
     v8);
   this->fields.mMapCamera = mapCamera;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.mMapCamera,
     (System_Int32_array **)mapCamera,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29,
-    v30);
+    v19,
+    v20,
+    v21,
+    v22,
+    v23,
+    v24);
   if ( !this->fields.mBaseSpot )
     goto LABEL_42;
   mMapCtrl_SpotInfo = this->fields.mBaseSpot->fields.mMapCtrl_SpotInfo;
@@ -416,10 +370,10 @@ void __fastcall SpotLargeComponent__LargeIn(
   {
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
   }
-  if ( !byte_42E4B1E )
+  if ( !byte_434DEA1 )
   {
-    sub_B5D5C4(&TerminalSceneComponent_TypeInfo, (_DWORD)v32, v34, v35);
-    byte_42E4B1E = 1;
+    sub_B70694(&TerminalSceneComponent_TypeInfo);
+    byte_434DEA1 = 1;
   }
   mMapCtrl_SpotInfo = (MapControl_SpotInfo_o *)TerminalSceneComponent_TypeInfo;
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -428,12 +382,12 @@ void __fastcall SpotLargeComponent__LargeIn(
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
     mMapCtrl_SpotInfo = (MapControl_SpotInfo_o *)TerminalSceneComponent_TypeInfo;
   }
-  v36 = *(_QWORD *)mMapCtrl_SpotInfo[2].monitor;
-  if ( !v36 )
+  v28 = *(_QWORD *)mMapCtrl_SpotInfo[2].monitor;
+  if ( !v28 )
     goto LABEL_42;
   if ( !spot )
     goto LABEL_42;
-  mMapCtrl_SpotInfo = *(MapControl_SpotInfo_o **)(v36 + 248);
+  mMapCtrl_SpotInfo = *(MapControl_SpotInfo_o **)(v28 + 248);
   if ( !mMapCtrl_SpotInfo )
     goto LABEL_42;
   mMapCtrl_SpotInfo = (MapControl_SpotInfo_o *)ScrTerminalListTop__IsDispEventUIForSpot(
@@ -442,12 +396,12 @@ void __fastcall SpotLargeComponent__LargeIn(
                                                  0LL);
   if ( !this->fields.mSpotNameSp )
     goto LABEL_42;
-  v37 = (char)mMapCtrl_SpotInfo;
+  v29 = (char)mMapCtrl_SpotInfo;
   mMapCtrl_SpotInfo = (MapControl_SpotInfo_o *)UnityEngine_Component__get_gameObject(
                                                  (UnityEngine_Component_o *)this->fields.mSpotNameSp,
                                                  0LL);
-  v38 = (UnityEngine_GameObject_o *)mMapCtrl_SpotInfo;
-  if ( (v37 & 1) != 0 )
+  v30 = (UnityEngine_GameObject_o *)mMapCtrl_SpotInfo;
+  if ( (v29 & 1) != 0 )
   {
     if ( !mMapCtrl_SpotInfo )
       goto LABEL_42;
@@ -460,16 +414,16 @@ void __fastcall SpotLargeComponent__LargeIn(
                                                    0LL);
     if ( !mMapCtrl_SpotInfo )
       goto LABEL_42;
-    v39 = 0;
+    v31 = 0;
   }
   else
   {
     if ( !*p_mBaseSpot )
       goto LABEL_42;
     mMapCtrl_SpotInfo = (MapControl_SpotInfo_o *)System_String__IsNullOrEmpty((*p_mBaseSpot)->fields.mSpotNameStr, 0LL);
-    if ( !v38 )
+    if ( !v30 )
       goto LABEL_42;
-    UnityEngine_GameObject__SetActive(v38, ((unsigned __int8)mMapCtrl_SpotInfo & 1) == 0, 0LL);
+    UnityEngine_GameObject__SetActive(v30, ((unsigned __int8)mMapCtrl_SpotInfo & 1) == 0, 0LL);
     mMapCtrl_SpotInfo = (MapControl_SpotInfo_o *)this->fields.mSpotSp;
     if ( !mMapCtrl_SpotInfo )
       goto LABEL_42;
@@ -478,9 +432,9 @@ void __fastcall SpotLargeComponent__LargeIn(
                                                    0LL);
     if ( !mMapCtrl_SpotInfo )
       goto LABEL_42;
-    v39 = 1;
+    v31 = 1;
   }
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)mMapCtrl_SpotInfo, v39, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)mMapCtrl_SpotInfo, v31, 0LL);
   if ( !*p_mBaseSpot )
     goto LABEL_42;
   atlases = (*p_mBaseSpot)->fields.atlases;
@@ -490,16 +444,16 @@ void __fastcall SpotLargeComponent__LargeIn(
   {
     j_il2cpp_runtime_class_init_0(SrcSpotBasePrefab_TypeInfo);
   }
-  SrcSpotBasePrefab__SetSpotUIWithOffsetY(atlases, mSpotSp, Mine, 0.0, v40);
+  SrcSpotBasePrefab__SetSpotUIWithOffsetY(atlases, mSpotSp, Mine, 0.0, v32);
   if ( !*p_mBaseSpot )
 LABEL_42:
-    sub_B5D69C(mMapCtrl_SpotInfo, v32);
+    sub_B7076C(mMapCtrl_SpotInfo, v26);
   SrcSpotBasePrefab__SetSpotNameUI(
     (*p_mBaseSpot)->fields.atlases,
     this->fields.mSpotNameSp,
     this->fields.mSpotNameLabel,
     (*p_mBaseSpot)->fields.mSpotNameStr,
-    v43);
+    v35);
   this->fields.mapModelScale = 1.0;
   if ( isMapModel )
   {
@@ -517,19 +471,19 @@ LABEL_42:
       if ( mapModelCamera )
       {
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)mapModelCamera, 0LL);
-        *(UnityEngine_Vector3_o *)&v45 = GameObjectExtensions__GetLocalPosition(gameObject, 0LL);
+        *(UnityEngine_Vector3_o *)&v37 = GameObjectExtensions__GetLocalPosition(gameObject, 0LL);
         mMapCtrl_SpotInfo = (MapControl_SpotInfo_o *)*p_mBaseSpot;
         if ( *p_mBaseSpot )
         {
-          v48 = v45;
-          v49 = v46;
-          v50 = v47;
-          v51 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)mMapCtrl_SpotInfo, 0LL);
-          LocalPosition = GameObjectExtensions__GetLocalPosition(v51, 0LL);
-          v66.fields.x = v48;
-          v66.fields.y = v49;
-          v66.fields.z = v50;
-          this->fields.mapModelScale = 2000.0 / UnityEngine_Vector3__Distance(v66, LocalPosition, 0LL);
+          v40 = v37;
+          v41 = v38;
+          v42 = v39;
+          v43 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)mMapCtrl_SpotInfo, 0LL);
+          LocalPosition = GameObjectExtensions__GetLocalPosition(v43, 0LL);
+          v58.fields.x = v40;
+          v58.fields.y = v41;
+          v58.fields.z = v42;
+          this->fields.mapModelScale = 2000.0 / UnityEngine_Vector3__Distance(v58, LocalPosition, 0LL);
           goto LABEL_41;
         }
       }
@@ -537,29 +491,29 @@ LABEL_42:
     }
   }
 LABEL_41:
-  BaseScale = SpotLargeComponent__GetBaseScale(this, v32);
-  v53 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  GameObjectExtensions__SetLocalScale_32432652(v53, BaseScale, 0LL);
-  BasePosition = SpotLargeComponent__GetBasePosition(this, v54);
-  v55 = BasePosition.fields.x;
-  v56 = BasePosition.fields.y;
-  v57 = BasePosition.fields.z;
-  v58 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  v68.fields.x = v55;
-  v68.fields.y = v56;
-  v68.fields.z = v57;
-  GameObjectExtensions__SetLocalPosition(v58, v68, 0LL);
+  BaseScale = SpotLargeComponent__GetBaseScale(this, v26);
+  v45 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  GameObjectExtensions__SetLocalScale_32499584(v45, BaseScale, 0LL);
+  BasePosition = SpotLargeComponent__GetBasePosition(this, v46);
+  v47 = BasePosition.fields.x;
+  v48 = BasePosition.fields.y;
+  v49 = BasePosition.fields.z;
+  v50 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  v60.fields.x = v47;
+  v60.fields.y = v48;
+  v60.fields.z = v49;
+  GameObjectExtensions__SetLocalPosition(v50, v60, 0LL);
   this->fields.mShowEndAct = endAct;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.mShowEndAct,
     (System_Int32_array **)endAct,
-    v59,
-    v60,
-    v61,
-    v62,
-    v63,
-    v64);
-  SpotLargeComponent__SetState(this, 1, v65);
+    v51,
+    v52,
+    v53,
+    v54,
+    v55,
+    v56);
+  SpotLargeComponent__SetState(this, 1, v57);
 }
 
 
@@ -576,7 +530,7 @@ void __fastcall SpotLargeComponent__LargeOut(
   const MethodInfo *v9; // x2
 
   this->fields.mHideEndAct = end_act;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.mHideEndAct,
     (System_Int32_array **)end_act,
     (System_String_array **)method,
@@ -607,32 +561,31 @@ void __fastcall SpotLargeComponent__SetLargeSpotNameScale_NormalScale(
   *(UnityEngine_Vector3_o *)&v5 = GameObjectExtensions__GetLocalScale(gameObject, 0LL);
   mSpotNameSp = (UnityEngine_Component_o *)this->fields.mSpotNameSp;
   if ( !mSpotNameSp )
-    sub_B5D69C(0LL, v4);
+    sub_B7076C(0LL, v4);
   v8 = v5;
   v9 = v6;
   v10 = UnityEngine_Component__get_gameObject(mSpotNameSp, 0LL);
-  GameObjectExtensions__SetLocalScale_32432716(v10, 1.0 / v8, 1.0 / v9, 0LL);
+  GameObjectExtensions__SetLocalScale_32499648(v10, 1.0 / v8, 1.0 / v9, 0LL);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 void __fastcall SpotLargeComponent__SetState(SpotLargeComponent_o *this, int32_t state, const MethodInfo *method)
 {
-  __int64 v3; // x3
   struct CStateManager_SpotLargeComponent__o *mFSM; // x0
 
-  if ( (byte_42E925A & 1) == 0 )
+  if ( (byte_4352791 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_CStateManager_SpotLargeComponent__setState__, state, (_DWORD)method, v3);
-    byte_42E925A = 1;
+    sub_B70694(&Method_CStateManager_SpotLargeComponent__setState__);
+    byte_4352791 = 1;
   }
   mFSM = this->fields.mFSM;
   if ( !mFSM )
-    sub_B5D69C(0LL, *(_QWORD *)&state);
+    sub_B7076C(0LL, *(_QWORD *)&state);
   CStateManager_QAASpotStateController_IMapSpot___setState(
     (CStateManager_QAASpotStateController_IMapSpot__o *)mFSM,
     state,
-    (const MethodInfo_2BB27A0 *)Method_CStateManager_SpotLargeComponent__setState__);
+    (const MethodInfo_2C8014C *)Method_CStateManager_SpotLargeComponent__setState__);
 }
 
 
@@ -650,7 +603,7 @@ void __fastcall SpotLargeComponent__StateLargeIn_End(SpotLargeComponent_o *this,
   p_mShowEndAct = (BattleServantConfConponent_o *)&this->fields.mShowEndAct;
   ActionExtensions__Call(this->fields.mShowEndAct, 0LL);
   p_mShowEndAct->klass = 0LL;
-  sub_B5D560(p_mShowEndAct, 0LL, v4, v5, v6, v7, v8, v9);
+  sub_B70630(p_mShowEndAct, 0LL, v4, v5, v6, v7, v8, v9);
   SpotLargeComponent__SetState(this, 2, v10);
 }
 
@@ -669,27 +622,25 @@ void __fastcall SpotLargeComponent__StateLargeOut_End(SpotLargeComponent_o *this
   p_mHideEndAct = (BattleServantConfConponent_o *)&this->fields.mHideEndAct;
   ActionExtensions__Call(this->fields.mHideEndAct, 0LL);
   p_mHideEndAct->klass = 0LL;
-  sub_B5D560(p_mHideEndAct, 0LL, v4, v5, v6, v7, v8, v9);
+  sub_B70630(p_mHideEndAct, 0LL, v4, v5, v6, v7, v8, v9);
   SpotLargeComponent__SetState(this, 0, v10);
 }
 
 
 void __fastcall SpotLargeComponent__Update(SpotLargeComponent_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   struct CStateManager_SpotLargeComponent__o *mFSM; // x0
 
-  if ( (byte_42E9257 & 1) == 0 )
+  if ( (byte_435278E & 1) == 0 )
   {
-    sub_B5D5C4(&Method_CStateManager_SpotLargeComponent__update__, (_DWORD)method, v2, v3);
-    byte_42E9257 = 1;
+    sub_B70694(&Method_CStateManager_SpotLargeComponent__update__);
+    byte_435278E = 1;
   }
   mFSM = this->fields.mFSM;
   if ( mFSM )
     CStateManager_QAASpotStateController_IMapSpot___update(
       (CStateManager_QAASpotStateController_IMapSpot__o *)mFSM,
-      (const MethodInfo_2BB2778 *)Method_CStateManager_SpotLargeComponent__update__);
+      (const MethodInfo_2C80124 *)Method_CStateManager_SpotLargeComponent__update__);
 }
 
 
@@ -707,85 +658,91 @@ void __fastcall SpotLargeComponent_StateLargeIn__begin(
         SpotLargeComponent_o *that,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
   UnityEngine_GameObject_o *gameObject; // x0
-  TweenWidth_o *v15; // x20
-  UnityEngine_GameObject_o *v16; // x0
-  int32_t v17; // s0
-  int32_t v18; // s1
-  int v19; // s2
-  UnityEngine_GameObject_o *v20; // x0
-  TweenWidth_o *v21; // x20
-  UnityEngine_GameObject_o *v22; // x0
-  float v23; // s0
-  float v24; // s1
-  float v25; // s2
+  TweenWidth_o *v5; // x20
+  UnityEngine_GameObject_o *v6; // x0
+  int32_t v7; // s0
+  int32_t v8; // s1
+  int v9; // s2
+  UnityEngine_GameObject_o *v10; // x0
+  TweenWidth_o *v11; // x20
+  UnityEngine_GameObject_o *v12; // x0
+  float v13; // s0
+  float v14; // s1
+  float v15; // s2
   float mapModelScale; // s3
-  UnityEngine_GameObject_o *v27; // x0
-  SpotLargeComponent_StateLargeIn_o *v28; // x20
+  UnityEngine_GameObject_o *v17; // x0
+  SpotLargeComponent_StateLargeIn_o *v18; // x20
+  System_Int32_array **v19; // x0
+  System_String_array **v20; // x2
+  System_String_array **v21; // x3
+  System_Boolean_array **v22; // x4
+  System_Int32_array **v23; // x5
+  System_Int32_array *v24; // x6
+  System_Int32_array *v25; // x7
+  System_Int32_array **v26; // x1
+  System_String_array **v27; // x2
+  System_String_array **v28; // x3
+  System_Boolean_array **v29; // x4
+  System_Int32_array **v30; // x5
+  System_Int32_array *v31; // x6
+  System_Int32_array *v32; // x7
 
-  if ( (byte_42E643A & 1) == 0 )
+  if ( (byte_434F8F1 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_UITweener_Begin_TweenAlpha___, (_DWORD)that, (_DWORD)method, v3);
-    sub_B5D5C4(&Method_UITweener_Begin_TweenPosition___, v5, v6, v7);
-    sub_B5D5C4(&Method_UITweener_Begin_TweenScale___, v8, v9, v10);
-    this = (SpotLargeComponent_StateLargeIn_o *)sub_B5D5C4(&StringLiteral_13219/*"StateLargeIn_End"*/, v11, v12, v13);
-    byte_42E643A = 1;
+    sub_B70694(&Method_UITweener_Begin_TweenAlpha___);
+    sub_B70694(&Method_UITweener_Begin_TweenPosition___);
+    sub_B70694(&Method_UITweener_Begin_TweenScale___);
+    this = (SpotLargeComponent_StateLargeIn_o *)sub_B70694(&StringLiteral_13244/*"StateLargeIn_End"*/);
+    byte_434F8F1 = 1;
   }
   if ( !that )
     goto LABEL_8;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
-  v15 = UITweener__Begin_TweenWidth_(
-          gameObject,
-          0.15,
-          (const MethodInfo_1E72118 *)Method_UITweener_Begin_TweenPosition___);
-  v16 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
-  *(UnityEngine_Vector3_o *)&v17 = GameObjectExtensions__GetLocalPosition(v16, 0LL);
-  if ( !v15 )
+  v5 = UITweener__Begin_TweenWidth_(
+         gameObject,
+         0.15,
+         (const MethodInfo_1D645B8 *)Method_UITweener_Begin_TweenPosition___);
+  v6 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
+  *(UnityEngine_Vector3_o *)&v7 = GameObjectExtensions__GetLocalPosition(v6, 0LL);
+  if ( !v5 )
     goto LABEL_8;
-  v15->fields.from = v17;
-  v15->fields.to = v18;
-  *(_DWORD *)&v15->fields.updateTable = v19;
-  HIDWORD(v15->fields.mWidget) = 0;
-  *(_QWORD *)(&v15->fields.updateTable + 4) = 0xC2AA0000C3660000LL;
-  v15->fields.style = 2;
-  v20 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
-  v21 = UITweener__Begin_TweenWidth_(v20, 0.15, (const MethodInfo_1E72118 *)Method_UITweener_Begin_TweenScale___);
-  v22 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
-  *(UnityEngine_Vector3_o *)&v23 = GameObjectExtensions__GetLocalScale(v22, 0LL);
-  if ( !v21 )
+  v5->fields.from = v7;
+  v5->fields.to = v8;
+  *(_DWORD *)&v5->fields.updateTable = v9;
+  HIDWORD(v5->fields.mWidget) = 0;
+  *(_QWORD *)(&v5->fields.updateTable + 4) = 0xC2AA0000C3660000LL;
+  v5->fields.style = 2;
+  v10 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
+  v11 = UITweener__Begin_TweenWidth_(v10, 0.15, (const MethodInfo_1D645B8 *)Method_UITweener_Begin_TweenScale___);
+  v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
+  *(UnityEngine_Vector3_o *)&v13 = GameObjectExtensions__GetLocalScale(v12, 0LL);
+  if ( !v11 )
     goto LABEL_8;
   mapModelScale = that->fields.mapModelScale;
-  *(_QWORD *)(&v21->fields.updateTable + 4) = 0x4000000040000000LL;
-  HIDWORD(v21->fields.mWidget) = 1065353216;
-  *(float *)&v21->fields.from = v23 * mapModelScale;
-  *(float *)&v21->fields.to = v24 * mapModelScale;
-  *(float *)&v21->fields.updateTable = v25 * mapModelScale;
-  v21->fields.style = 2;
-  v27 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
+  *(_QWORD *)(&v11->fields.updateTable + 4) = 0x4000000040000000LL;
+  HIDWORD(v11->fields.mWidget) = 1065353216;
+  *(float *)&v11->fields.from = v13 * mapModelScale;
+  *(float *)&v11->fields.to = v14 * mapModelScale;
+  *(float *)&v11->fields.updateTable = v15 * mapModelScale;
+  v11->fields.style = 2;
+  v17 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
   this = (SpotLargeComponent_StateLargeIn_o *)UITweener__Begin_TweenWidth_(
-                                                v27,
+                                                v17,
                                                 0.15,
-                                                (const MethodInfo_1E72118 *)Method_UITweener_Begin_TweenAlpha___);
+                                                (const MethodInfo_1D645B8 *)Method_UITweener_Begin_TweenAlpha___);
   if ( !this )
 LABEL_8:
-    sub_B5D69C(this, that);
-  v28 = this;
+    sub_B7076C(this, that);
+  v18 = this;
   LODWORD(this[1].monitor) = 2;
   this[7].monitor = (void *)0x3F80000000000000LL;
-  this[4].monitor = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
-  sub_B5D560(&v28[4].monitor);
-  v28[5].klass = (SpotLargeComponent_StateLargeIn_c *)StringLiteral_13219/*"StateLargeIn_End"*/;
-  sub_B5D560(&v28[5]);
+  v19 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
+  v18[4].monitor = v19;
+  sub_B70630((BattleServantConfConponent_o *)&v18[4].monitor, v19, v20, v21, v22, v23, v24, v25);
+  v26 = (System_Int32_array **)StringLiteral_13244/*"StateLargeIn_End"*/;
+  v18[5].klass = (SpotLargeComponent_StateLargeIn_c *)StringLiteral_13244/*"StateLargeIn_End"*/;
+  sub_B70630((BattleServantConfConponent_o *)&v18[5], v26, v27, v28, v29, v30, v31, v32);
 }
 
 
@@ -804,7 +761,7 @@ void __fastcall SpotLargeComponent_StateLargeIn__update(
         const MethodInfo *method)
 {
   if ( !that )
-    sub_B5D69C(this, 0LL);
+    sub_B7076C(this, 0LL);
   SpotLargeComponent__SetLargeSpotNameScale_NormalScale(that, 0LL);
 }
 
@@ -822,26 +779,20 @@ void __fastcall SpotLargeComponent_StateLargeMain__begin(
         SpotLargeComponent_o *that,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
   UnityEngine_GameObject_o *gameObject; // x0
-  int v9; // w2
-  __int64 v10; // x3
-  __int64 v11; // x8
-  __int64 v12; // x8
+  __int64 v5; // x8
+  __int64 v6; // x8
   struct UISprite_o *mSpotSp; // x21
-  System_Collections_Generic_List_UIAtlas__o *v14; // x20
+  System_Collections_Generic_List_UIAtlas__o *v8; // x20
   UIAtlas_o *UIAtlasBySpriteName; // x0
   struct UISprite_o *mSpotNameSp; // x19
-  UIAtlas_o *v17; // x1
+  UIAtlas_o *v11; // x1
 
-  if ( (byte_42E643B & 1) == 0 )
+  if ( (byte_434F8F2 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_UnityEngine_Component_GetComponent_UIPanel___, (_DWORD)that, (_DWORD)method, v3);
-    this = (SpotLargeComponent_StateLargeMain_o *)sub_B5D5C4(&TerminalSceneComponent_TypeInfo, v5, v6, v7);
-    byte_42E643B = 1;
+    sub_B70694(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    this = (SpotLargeComponent_StateLargeMain_o *)sub_B70694(&TerminalSceneComponent_TypeInfo);
+    byte_434F8F2 = 1;
   }
   if ( !that )
     goto LABEL_21;
@@ -852,7 +803,7 @@ void __fastcall SpotLargeComponent_StateLargeMain__begin(
     goto LABEL_21;
   this = (SpotLargeComponent_StateLargeMain_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                   (UnityEngine_Component_o *)this,
-                                                  (const MethodInfo_1ADE2A0 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                                                  (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   if ( !this )
     goto LABEL_21;
   ((void (__fastcall *)(SpotLargeComponent_StateLargeMain_o *, __int64, void *))this->klass[1]._1.parent)(
@@ -876,10 +827,10 @@ void __fastcall SpotLargeComponent_StateLargeMain__begin(
   {
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
   }
-  if ( !byte_42E4B1E )
+  if ( !byte_434DEA1 )
   {
-    sub_B5D5C4(&TerminalSceneComponent_TypeInfo, (_DWORD)that, v9, v10);
-    byte_42E4B1E = 1;
+    sub_B70694(&TerminalSceneComponent_TypeInfo);
+    byte_434DEA1 = 1;
   }
   this = (SpotLargeComponent_StateLargeMain_o *)TerminalSceneComponent_TypeInfo;
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -888,20 +839,20 @@ void __fastcall SpotLargeComponent_StateLargeMain__begin(
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
     this = (SpotLargeComponent_StateLargeMain_o *)TerminalSceneComponent_TypeInfo;
   }
-  v11 = *(_QWORD *)this[11].monitor;
-  if ( !v11
-    || (v12 = *(_QWORD *)(v11 + 256)) == 0
+  v5 = *(_QWORD *)this[11].monitor;
+  if ( !v5
+    || (v6 = *(_QWORD *)(v5 + 256)) == 0
     || (mSpotSp = that->fields.mSpotSp) == 0LL
-    || (v14 = *(System_Collections_Generic_List_UIAtlas__o **)(v12 + 288),
-        UIAtlasBySpriteName = UIAtlas__GetUIAtlasBySpriteName(v14, mSpotSp->fields.mSpriteName, 0LL),
+    || (v8 = *(System_Collections_Generic_List_UIAtlas__o **)(v6 + 288),
+        UIAtlasBySpriteName = UIAtlas__GetUIAtlasBySpriteName(v8, mSpotSp->fields.mSpriteName, 0LL),
         UISprite__set_atlas(mSpotSp, UIAtlasBySpriteName, 0LL),
         (mSpotNameSp = that->fields.mSpotNameSp) == 0LL) )
   {
 LABEL_21:
-    sub_B5D69C(this, that);
+    sub_B7076C(this, that);
   }
-  v17 = UIAtlas__GetUIAtlasBySpriteName(v14, mSpotNameSp->fields.mSpriteName, 0LL);
-  UISprite__set_atlas(mSpotNameSp, v17, 0LL);
+  v11 = UIAtlas__GetUIAtlasBySpriteName(v8, mSpotNameSp->fields.mSpriteName, 0LL);
+  UISprite__set_atlas(mSpotNameSp, v11, 0LL);
 }
 
 
@@ -937,85 +888,91 @@ void __fastcall SpotLargeComponent_StateLargeOut__begin(
         SpotLargeComponent_o *that,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
   UnityEngine_GameObject_o *gameObject; // x0
-  TweenWidth_o *v15; // x20
-  UnityEngine_GameObject_o *v16; // x0
-  int32_t v17; // s0
-  int32_t v18; // s1
-  int v19; // s2
-  UnityEngine_GameObject_o *v20; // x0
-  TweenWidth_o *v21; // x20
-  UnityEngine_GameObject_o *v22; // x0
-  int32_t v23; // s0
-  int32_t v24; // s1
-  int v25; // s2
-  float v26; // s0
-  UnityEngine_GameObject_o *v27; // x0
-  SpotLargeComponent_StateLargeOut_o *v28; // x20
+  TweenWidth_o *v5; // x20
+  UnityEngine_GameObject_o *v6; // x0
+  int32_t v7; // s0
+  int32_t v8; // s1
+  int v9; // s2
+  UnityEngine_GameObject_o *v10; // x0
+  TweenWidth_o *v11; // x20
+  UnityEngine_GameObject_o *v12; // x0
+  int32_t v13; // s0
+  int32_t v14; // s1
+  int v15; // s2
+  float v16; // s0
+  UnityEngine_GameObject_o *v17; // x0
+  SpotLargeComponent_StateLargeOut_o *v18; // x20
+  System_Int32_array **v19; // x0
+  System_String_array **v20; // x2
+  System_String_array **v21; // x3
+  System_Boolean_array **v22; // x4
+  System_Int32_array **v23; // x5
+  System_Int32_array *v24; // x6
+  System_Int32_array *v25; // x7
+  System_Int32_array **v26; // x1
+  System_String_array **v27; // x2
+  System_String_array **v28; // x3
+  System_Boolean_array **v29; // x4
+  System_Int32_array **v30; // x5
+  System_Int32_array *v31; // x6
+  System_Int32_array *v32; // x7
 
-  if ( (byte_42E643C & 1) == 0 )
+  if ( (byte_434F8F3 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_UITweener_Begin_TweenAlpha___, (_DWORD)that, (_DWORD)method, v3);
-    sub_B5D5C4(&Method_UITweener_Begin_TweenPosition___, v5, v6, v7);
-    sub_B5D5C4(&Method_UITweener_Begin_TweenScale___, v8, v9, v10);
-    this = (SpotLargeComponent_StateLargeOut_o *)sub_B5D5C4(&StringLiteral_13220/*"StateLargeOut_End"*/, v11, v12, v13);
-    byte_42E643C = 1;
+    sub_B70694(&Method_UITweener_Begin_TweenAlpha___);
+    sub_B70694(&Method_UITweener_Begin_TweenPosition___);
+    sub_B70694(&Method_UITweener_Begin_TweenScale___);
+    this = (SpotLargeComponent_StateLargeOut_o *)sub_B70694(&StringLiteral_13245/*"StateLargeOut_End"*/);
+    byte_434F8F3 = 1;
   }
   if ( !that )
     goto LABEL_8;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
-  v15 = UITweener__Begin_TweenWidth_(
-          gameObject,
-          0.05,
-          (const MethodInfo_1E72118 *)Method_UITweener_Begin_TweenPosition___);
-  v16 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
-  *(UnityEngine_Vector3_o *)&v17 = GameObjectExtensions__GetLocalPosition(v16, 0LL);
-  if ( !v15 )
+  v5 = UITweener__Begin_TweenWidth_(
+         gameObject,
+         0.05,
+         (const MethodInfo_1D645B8 *)Method_UITweener_Begin_TweenPosition___);
+  v6 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
+  *(UnityEngine_Vector3_o *)&v7 = GameObjectExtensions__GetLocalPosition(v6, 0LL);
+  if ( !v5 )
     goto LABEL_8;
-  v15->fields.from = v17;
-  v15->fields.to = v18;
-  *(_DWORD *)&v15->fields.updateTable = v19;
-  *(UnityEngine_Vector3_o *)(&v15->fields.updateTable + 4) = SpotLargeComponent__GetBasePosition(that, 0LL);
-  v15->fields.style = 2;
-  v20 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
-  v21 = UITweener__Begin_TweenWidth_(v20, 0.05, (const MethodInfo_1E72118 *)Method_UITweener_Begin_TweenScale___);
-  v22 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
-  *(UnityEngine_Vector3_o *)&v23 = GameObjectExtensions__GetLocalScale(v22, 0LL);
-  if ( !v21 )
+  v5->fields.from = v7;
+  v5->fields.to = v8;
+  *(_DWORD *)&v5->fields.updateTable = v9;
+  *(UnityEngine_Vector3_o *)(&v5->fields.updateTable + 4) = SpotLargeComponent__GetBasePosition(that, 0LL);
+  v5->fields.style = 2;
+  v10 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
+  v11 = UITweener__Begin_TweenWidth_(v10, 0.05, (const MethodInfo_1D645B8 *)Method_UITweener_Begin_TweenScale___);
+  v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
+  *(UnityEngine_Vector3_o *)&v13 = GameObjectExtensions__GetLocalScale(v12, 0LL);
+  if ( !v11 )
     goto LABEL_8;
-  v21->fields.from = v23;
-  v21->fields.to = v24;
-  *(_DWORD *)&v21->fields.updateTable = v25;
-  v26 = SpotLargeComponent__GetBaseScale(that, 0LL) * that->fields.mapModelScale;
-  HIDWORD(v21->fields.mWidget) = 1065353216;
-  *((float *)&v21->fields.updateTable + 1) = v26;
-  *(float *)&v21->fields.mWidget = v26;
-  v21->fields.style = 2;
-  v27 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
+  v11->fields.from = v13;
+  v11->fields.to = v14;
+  *(_DWORD *)&v11->fields.updateTable = v15;
+  v16 = SpotLargeComponent__GetBaseScale(that, 0LL) * that->fields.mapModelScale;
+  HIDWORD(v11->fields.mWidget) = 1065353216;
+  *((float *)&v11->fields.updateTable + 1) = v16;
+  *(float *)&v11->fields.mWidget = v16;
+  v11->fields.style = 2;
+  v17 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
   this = (SpotLargeComponent_StateLargeOut_o *)UITweener__Begin_TweenWidth_(
-                                                 v27,
+                                                 v17,
                                                  0.05,
-                                                 (const MethodInfo_1E72118 *)Method_UITweener_Begin_TweenAlpha___);
+                                                 (const MethodInfo_1D645B8 *)Method_UITweener_Begin_TweenAlpha___);
   if ( !this )
 LABEL_8:
-    sub_B5D69C(this, that);
-  v28 = this;
+    sub_B7076C(this, that);
+  v18 = this;
   LODWORD(this[1].monitor) = 2;
   this[7].monitor = (void *)1065353216;
-  this[4].monitor = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
-  sub_B5D560(&v28[4].monitor);
-  v28[5].klass = (SpotLargeComponent_StateLargeOut_c *)StringLiteral_13220/*"StateLargeOut_End"*/;
-  sub_B5D560(&v28[5]);
+  v19 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
+  v18[4].monitor = v19;
+  sub_B70630((BattleServantConfConponent_o *)&v18[4].monitor, v19, v20, v21, v22, v23, v24, v25);
+  v26 = (System_Int32_array **)StringLiteral_13245/*"StateLargeOut_End"*/;
+  v18[5].klass = (SpotLargeComponent_StateLargeOut_c *)StringLiteral_13245/*"StateLargeOut_End"*/;
+  sub_B70630((BattleServantConfConponent_o *)&v18[5], v26, v27, v28, v29, v30, v31, v32);
 }
 
 
@@ -1034,7 +991,7 @@ void __fastcall SpotLargeComponent_StateLargeOut__update(
         const MethodInfo *method)
 {
   if ( !that )
-    sub_B5D69C(this, 0LL);
+    sub_B7076C(this, 0LL);
   SpotLargeComponent__SetLargeSpotNameScale_NormalScale(that, 0LL);
 }
 

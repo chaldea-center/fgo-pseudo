@@ -1,16 +1,13 @@
 void __fastcall NpcFollowerReleaseEntity___ctor(NpcFollowerReleaseEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42E6292 & 1) == 0 )
+  if ( (byte_4350B8E & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
-    byte_42E6292 = 1;
+    sub_B70694(&Method_DataEntityBase_string___ctor__);
+    byte_4350B8E = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -20,16 +17,16 @@ System_String_o *__fastcall NpcFollowerReleaseEntity__CreatePK(
         int32_t questPhase,
         const MethodInfo *method)
 {
-  if ( (byte_42E6290 & 1) == 0 )
+  if ( (byte_4350B8C & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_long__int__int___, questId, questPhase, method);
-    byte_42E6290 = 1;
+    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_4350B8C = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            id,
            questId,
            questPhase,
-           (const MethodInfo_1AE36E0 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_1CA2A34 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
@@ -51,16 +48,14 @@ int32_t __fastcall NpcFollowerReleaseEntity__GetCondType(NpcFollowerReleaseEntit
 
 bool __fastcall NpcFollowerReleaseEntity__IsEnable(NpcFollowerReleaseEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   int32_t condTargetId; // w20
   int32_t condType; // w21
   int64_t condValue; // x19
 
-  if ( (byte_42E6291 & 1) == 0 )
+  if ( (byte_4350B8D & 1) == 0 )
   {
-    sub_B5D5C4(&CondType_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E6291 = 1;
+    sub_B70694(&CondType_TypeInfo);
+    byte_4350B8D = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

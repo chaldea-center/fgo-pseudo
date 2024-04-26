@@ -16,7 +16,7 @@ bool __fastcall RectExtension__HasAnyIntersects(
 
   v15 = self;
   if ( !rects )
-    sub_B5D69C(0LL, allowInverse);
+    sub_B7076C(0LL, allowInverse);
   v8 = rects;
   v9 = allowInverse;
   v10 = rects->max_length - 1;
@@ -25,12 +25,12 @@ bool __fastcall RectExtension__HasAnyIntersects(
   {
     if ( v10 >= v8->max_length )
     {
-      v14 = sub_B5D6C8(rects);
-      sub_B5D668(v14, 0LL);
+      v14 = sub_B70798(rects);
+      sub_B70738(v14, 0LL);
     }
     --v10;
     v12 = v11 - 1;
-    rects = (UnityEngine_Rect_array *)UnityEngine_Rect__Overlaps_35655680(
+    rects = (UnityEngine_Rect_array *)UnityEngine_Rect__Overlaps_36102652(
                                         *(UnityEngine_Rect_o *)((char *)v11 - 12),
                                         *(UnityEngine_Rect_o *)&v4,
                                         (bool)&v15,

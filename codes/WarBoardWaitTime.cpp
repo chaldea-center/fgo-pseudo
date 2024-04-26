@@ -9,30 +9,28 @@ System_Collections_IEnumerator_o *__fastcall WarBoardWaitTime__Execute(
         WarBoardWaitTime_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  __int64 v5; // x20
-  __int64 v6; // x0
-  __int64 v7; // x1
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  __int64 v3; // x20
+  __int64 v4; // x0
+  __int64 v5; // x1
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
 
-  if ( (byte_42E9355 & 1) == 0 )
+  if ( (byte_435267C & 1) == 0 )
   {
-    sub_B5D5C4(&WarBoardWaitTime__Execute_d__2_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E9355 = 1;
+    sub_B70694(&WarBoardWaitTime__Execute_d__2_TypeInfo);
+    byte_435267C = 1;
   }
-  v5 = sub_B5D694(WarBoardWaitTime__Execute_d__2_TypeInfo);
-  WarBoardWaitTime__Execute_d__2___ctor((WarBoardWaitTime__Execute_d__2_o *)v5, 0, 0LL);
-  if ( !v5 )
-    sub_B5D69C(v6, v7);
-  *(_QWORD *)(v5 + 32) = this;
-  sub_B5D560((BattleServantConfConponent_o *)(v5 + 32), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
-  return (System_Collections_IEnumerator_o *)v5;
+  v3 = sub_B70764(WarBoardWaitTime__Execute_d__2_TypeInfo);
+  WarBoardWaitTime__Execute_d__2___ctor((WarBoardWaitTime__Execute_d__2_o *)v3, 0, 0LL);
+  if ( !v3 )
+    sub_B7076C(v4, v5);
+  *(_QWORD *)(v3 + 32) = this;
+  sub_B70630((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  return (System_Collections_IEnumerator_o *)v3;
 }
 
 
@@ -50,9 +48,15 @@ bool __fastcall WarBoardWaitTime__Execute_d__2__MoveNext(
         WarBoardWaitTime__Execute_d__2_o *this,
         const MethodInfo *method)
 {
+  System_String_array **v2; // x2
+  System_String_array **v3; // x3
+  System_Boolean_array **v4; // x4
+  System_Int32_array **v5; // x5
+  System_Int32_array *v6; // x6
+  System_Int32_array *v7; // x7
   int32_t _1__state; // w8
   struct WarBoardWaitTime_o *_4__this; // x20
-  float v5; // s0
+  float v11; // s0
   float espTime_5__2; // s8
   bool result; // w0
   Il2CppObject **p__2__current; // x19
@@ -69,26 +73,26 @@ bool __fastcall WarBoardWaitTime__Execute_d__2__MoveNext(
       if ( *(float *)(&_4__this->fields._isPause_k__BackingField + 3) >= 0.0 )
       {
         this->fields._espTime_5__2 = 0.0;
-        v5 = 0.0;
+        v11 = 0.0;
         goto LABEL_7;
       }
       return 0;
     }
 LABEL_10:
-    sub_B5D69C(this, method);
+    sub_B7076C(this, method);
   }
   espTime_5__2 = this->fields._espTime_5__2;
   this->fields.__1__state = -1;
-  v5 = espTime_5__2 + UnityEngine_Time__get_deltaTime(0LL);
-  this->fields._espTime_5__2 = v5;
+  v11 = espTime_5__2 + UnityEngine_Time__get_deltaTime(0LL);
+  this->fields._espTime_5__2 = v11;
   if ( !_4__this )
     goto LABEL_10;
 LABEL_7:
-  if ( v5 >= *(float *)(&_4__this->fields._isPause_k__BackingField + 3) )
+  if ( v11 >= *(float *)(&_4__this->fields._isPause_k__BackingField + 3) )
     return 0;
   this->fields.__2__current = 0LL;
   p__2__current = &this->fields.__2__current;
-  sub_B5D560(p__2__current);
+  sub_B70630((BattleServantConfConponent_o *)p__2__current, 0LL, v2, v3, v4, v5, v6, v7);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -111,11 +115,11 @@ void __fastcall __noreturn WarBoardWaitTime__Execute_d__2__System_Collections_IE
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B5D5C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B5D694(v2);
+  v2 = sub_B70698(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B70764(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B5D5C8(&Method_WarBoardWaitTime__Execute_d__2_System_Collections_IEnumerator_Reset__);
-  sub_B5D668(v3, v4);
+  v4 = sub_B70698(&Method_WarBoardWaitTime__Execute_d__2_System_Collections_IEnumerator_Reset__);
+  sub_B70738(v3, v4);
 }
 
 

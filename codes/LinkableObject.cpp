@@ -6,23 +6,15 @@ void __fastcall LinkableObject___ctor(LinkableObject_o *this, const MethodInfo *
 
 void __fastcall LinkableObject__OnClick(LinkableObject_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
   int linkUrl; // w8
   System_String_o *klass; // x19
 
-  if ( (byte_42E7D7C & 1) == 0 )
+  if ( (byte_43511D9 & 1) == 0 )
   {
-    sub_B5D5C4(&SoundManager_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&WebViewManager_TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&StringLiteral_1/*""*/, v8, v9, v10);
-    byte_42E7D7C = 1;
+    sub_B70694(&SoundManager_TypeInfo);
+    sub_B70694(&WebViewManager_TypeInfo);
+    sub_B70694(&StringLiteral_1/*""*/);
+    byte_43511D9 = 1;
   }
   linkUrl = (int)this->fields.linkUrl;
   if ( linkUrl == 2 )
@@ -69,7 +61,7 @@ void __fastcall LinkableObject__SetUp(
   this[1].klass = (LinkableObject_c *)lnkUrl;
   v8 = (BattleServantConfConponent_o *)&this[1];
   *(_DWORD *)&v8[-1].fields.isOpenAfter = lnkType;
-  sub_B5D560(
+  sub_B70630(
     v8,
     (System_Int32_array **)lnkUrl,
     (System_String_array **)lnkUrl,

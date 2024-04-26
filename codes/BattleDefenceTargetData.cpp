@@ -9,80 +9,66 @@ void __fastcall BattleDefenceTargetData__BuffTurnProgress(
         BattlePerformanceDefenceTarget_o *defenceTarget,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  int v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  int v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
   BattleBuffData_o *buffData; // x0
   BattleBuffData_BuffData_array *ActiveList; // x21
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v17; // x22
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v7; // x22
   BattleBuffData_o *ShowServantParam; // x0
-  EventMissionProgressRequest_Argument_ProgressData_o *v19; // x1
+  EventMissionProgressRequest_Argument_ProgressData_o *v9; // x1
   int max_length; // w8
-  unsigned int v21; // w23
-  int v22; // w8
-  __int64 v23; // x0
+  unsigned int v11; // w23
+  int v12; // w8
+  __int64 v13; // x0
 
-  if ( (byte_42E7807 & 1) == 0 )
+  if ( (byte_435057D & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__,
-      (_DWORD)defenceTarget,
-      (_DWORD)method,
-      v3);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v6, v7, v8);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__, v9, v10, v11);
-    sub_B5D5C4(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v12, v13, v14);
-    byte_42E7807 = 1;
+    sub_B70694(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__);
+    sub_B70694(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    sub_B70694(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__);
+    sub_B70694(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+    byte_435057D = 1;
   }
   buffData = this->fields.buffData;
   if ( buffData )
   {
     ActiveList = BattleBuffData__getActiveList(buffData, 1, 0LL);
-    v17 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B5D694(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+    v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-      v17,
-      (const MethodInfo_30562FC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+      v7,
+      (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
     if ( !ActiveList )
       goto LABEL_21;
     max_length = ActiveList->max_length;
     if ( max_length >= 1 )
     {
-      v21 = 0;
+      v11 = 0;
       do
       {
-        if ( v21 >= max_length )
+        if ( v11 >= max_length )
         {
-          v23 = sub_B5D6C8(ShowServantParam);
-          sub_B5D668(v23, 0LL);
+          v13 = sub_B70798(ShowServantParam);
+          sub_B70738(v13, 0LL);
         }
-        v19 = (EventMissionProgressRequest_Argument_ProgressData_o *)ActiveList->m_Items[v21];
-        if ( !v19 )
+        v9 = (EventMissionProgressRequest_Argument_ProgressData_o *)ActiveList->m_Items[v11];
+        if ( !v9 )
           goto LABEL_21;
-        v22 = v19->fields.missionConditionDetailId - 1;
-        v19->fields.missionConditionDetailId = v22;
-        if ( !v22 )
+        v12 = v9->fields.missionConditionDetailId - 1;
+        v9->fields.missionConditionDetailId = v12;
+        if ( !v12 )
         {
-          if ( !v17 )
+          if ( !v7 )
             goto LABEL_21;
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            v17,
-            v19,
-            (const MethodInfo_3056FC0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__);
+            v7,
+            v9,
+            (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__);
         }
         max_length = ActiveList->max_length;
       }
-      while ( (int)++v21 < max_length );
+      while ( (int)++v11 < max_length );
     }
-    if ( !v17 )
+    if ( !v7 )
       goto LABEL_21;
-    if ( v17->fields._size >= 1 )
+    if ( v7->fields._size >= 1 )
     {
       ShowServantParam = this->fields.buffData;
       if ( !ShowServantParam )
@@ -95,7 +81,7 @@ void __fastcall BattleDefenceTargetData__BuffTurnProgress(
           !defenceTarget) )
     {
 LABEL_21:
-      sub_B5D69C(ShowServantParam, v19);
+      sub_B7076C(ShowServantParam, v9);
     }
     BattlePerformanceDefenceTarget__UpdateBuffIcon(
       defenceTarget,
@@ -118,44 +104,41 @@ BattleDefenceTargetData_SaveData_o *__fastcall BattleDefenceTargetData__GetSaveD
         BattleDefenceTargetData_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  __int64 v5; // x20
+  __int64 v3; // x20
   BattleBuffData_o *buffData; // x0
-  __int64 v7; // x1
+  __int64 v5; // x1
   System_Int32_array **SaveData; // x0
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
+  System_String_array **v7; // x2
+  System_String_array **v8; // x3
+  System_Boolean_array **v9; // x4
+  System_Int32_array **v10; // x5
+  System_Int32_array *v11; // x6
+  System_Int32_array *v12; // x7
 
-  if ( (byte_42E7805 & 1) == 0 )
+  if ( (byte_435057B & 1) == 0 )
   {
-    sub_B5D5C4(&BattleDefenceTargetData_SaveData_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E7805 = 1;
+    sub_B70694(&BattleDefenceTargetData_SaveData_TypeInfo);
+    byte_435057B = 1;
   }
   if ( this->fields.maxHp < 1 || this->fields.uiId < 1 )
     return 0LL;
-  v5 = sub_B5D694(BattleDefenceTargetData_SaveData_TypeInfo);
-  BattleDefenceTargetData_SaveData___ctor((BattleDefenceTargetData_SaveData_o *)v5, 0LL);
-  if ( !v5
-    || (*(_DWORD *)(v5 + 16) = this->fields.nowHp,
-        *(_DWORD *)(v5 + 20) = this->fields.maxHp,
+  v3 = sub_B70764(BattleDefenceTargetData_SaveData_TypeInfo);
+  BattleDefenceTargetData_SaveData___ctor((BattleDefenceTargetData_SaveData_o *)v3, 0LL);
+  if ( !v3
+    || (*(_DWORD *)(v3 + 16) = this->fields.nowHp,
+        *(_DWORD *)(v3 + 20) = this->fields.maxHp,
         (buffData = this->fields.buffData) == 0LL) )
   {
-    sub_B5D69C(buffData, v7);
+    sub_B7076C(buffData, v5);
   }
   SaveData = (System_Int32_array **)BattleBuffData__getSaveData(buffData, 0LL);
-  *(_QWORD *)(v5 + 24) = SaveData;
-  sub_B5D560((BattleServantConfConponent_o *)(v5 + 24), SaveData, v9, v10, v11, v12, v13, v14);
-  *(_DWORD *)(v5 + 32) = this->fields.uiId;
-  return (BattleDefenceTargetData_SaveData_o *)v5;
+  *(_QWORD *)(v3 + 24) = SaveData;
+  sub_B70630((BattleServantConfConponent_o *)(v3 + 24), SaveData, v7, v8, v9, v10, v11, v12);
+  *(_DWORD *)(v3 + 32) = this->fields.uiId;
+  return (BattleDefenceTargetData_SaveData_o *)v3;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall BattleDefenceTargetData__Initialize(
         BattleDefenceTargetData_o *this,
         int32_t nowHp,
@@ -174,10 +157,10 @@ void __fastcall BattleDefenceTargetData__Initialize(
   System_Int32_array *v17; // x7
   __int64 v18; // x1
 
-  if ( (byte_42E7804 & 1) == 0 )
+  if ( (byte_435057A & 1) == 0 )
   {
-    sub_B5D5C4(&BattleBuffData_TypeInfo, nowHp, maxHp, *(_QWORD *)&uiId);
-    byte_42E7804 = 1;
+    sub_B70694(&BattleBuffData_TypeInfo);
+    byte_435057A = 1;
   }
   p_buffData = &this->fields.buffData;
   buffData = this->fields.buffData;
@@ -185,10 +168,10 @@ void __fastcall BattleDefenceTargetData__Initialize(
   this->fields.maxHp = maxHp;
   if ( !buffData )
   {
-    v11 = (BattleBuffData_o *)sub_B5D694(BattleBuffData_TypeInfo);
+    v11 = (BattleBuffData_o *)sub_B70764(BattleBuffData_TypeInfo);
     BattleBuffData___ctor(v11, 0LL);
     *p_buffData = v11;
-    sub_B5D560(
+    sub_B70630(
       (BattleServantConfConponent_o *)&this->fields.buffData,
       (System_Int32_array **)v11,
       v12,
@@ -199,7 +182,7 @@ void __fastcall BattleDefenceTargetData__Initialize(
       v17);
     buffData = *p_buffData;
     if ( !*p_buffData )
-      sub_B5D69C(0LL, v18);
+      sub_B7076C(0LL, v18);
   }
   BattleBuffData__Initialize(buffData, 0LL);
   this->fields.uiId = uiId;
@@ -225,22 +208,21 @@ void __fastcall BattleDefenceTargetData__SetSaveData(
         BattleDefenceTargetData_SaveData_o *saveData,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
   BattleBuffData_o *buffData; // x0
   struct BattleBuffData_o **p_buffData; // x21
-  BattleBuffData_o *v8; // x22
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  __int64 v15; // x1
+  BattleBuffData_o *v7; // x22
+  System_String_array **v8; // x2
+  System_String_array **v9; // x3
+  System_Boolean_array **v10; // x4
+  System_Int32_array **v11; // x5
+  System_Int32_array *v12; // x6
+  System_Int32_array *v13; // x7
+  __int64 v14; // x1
 
-  if ( (byte_42E7806 & 1) == 0 )
+  if ( (byte_435057C & 1) == 0 )
   {
-    sub_B5D5C4(&BattleBuffData_TypeInfo, (_DWORD)saveData, (_DWORD)method, v3);
-    byte_42E7806 = 1;
+    sub_B70694(&BattleBuffData_TypeInfo);
+    byte_435057C = 1;
   }
   if ( saveData )
   {
@@ -250,21 +232,21 @@ void __fastcall BattleDefenceTargetData__SetSaveData(
     this->fields.maxHp = saveData->fields.maxHp;
     if ( !buffData )
     {
-      v8 = (BattleBuffData_o *)sub_B5D694(BattleBuffData_TypeInfo);
-      BattleBuffData___ctor(v8, 0LL);
-      *p_buffData = v8;
-      sub_B5D560(
+      v7 = (BattleBuffData_o *)sub_B70764(BattleBuffData_TypeInfo);
+      BattleBuffData___ctor(v7, 0LL);
+      *p_buffData = v7;
+      sub_B70630(
         (BattleServantConfConponent_o *)&this->fields.buffData,
-        (System_Int32_array **)v8,
+        (System_Int32_array **)v7,
+        v8,
         v9,
         v10,
         v11,
         v12,
-        v13,
-        v14);
+        v13);
       buffData = *p_buffData;
       if ( !*p_buffData )
-        sub_B5D69C(0LL, v15);
+        sub_B7076C(0LL, v14);
     }
     BattleBuffData__setSaveData(buffData, saveData->fields.buffDataSave, 0LL);
     this->fields.uiId = saveData->fields.uiId;

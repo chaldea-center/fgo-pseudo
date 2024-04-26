@@ -23,7 +23,7 @@ void __fastcall WarBoardPopTextEffectPerformance___ctor(
   System_Int32_array *v21; // x7
   UnityEngine_GameObject_o *effetctPrefaba; // [xsp+38h] [xbp-58h]
 
-  if ( (byte_42EAB16 & 1) == 0 )
+  if ( (byte_43539C2 & 1) == 0 )
   {
     v10 = *(_QWORD *)&angle.fields.value.fields.z;
     v11 = *(_QWORD *)&angle.fields.value.fields.x;
@@ -31,14 +31,14 @@ void __fastcall WarBoardPopTextEffectPerformance___ctor(
     v13 = *(_QWORD *)&position.fields.value.fields.x;
     effetctPrefaba = effetctPrefab;
     v14 = parent;
-    sub_B5D5C4(&StringLiteral_22151/*"root_text/type01/dm_base"*/, (_DWORD)parent, (_DWORD)effetctPrefab, *(_QWORD *)&position.fields.value.fields.x);
+    sub_B70694(&StringLiteral_22219/*"root_text/type01/dm_base"*/);
     effetctPrefab = effetctPrefaba;
     parent = v14;
     *(_QWORD *)&position.fields.value.fields.x = v13;
     *(_QWORD *)&position.fields.value.fields.z = v12;
     *(_QWORD *)&angle.fields.value.fields.x = v11;
     *(_QWORD *)&angle.fields.value.fields.z = v10;
-    byte_42EAB16 = 1;
+    byte_43539C2 = 1;
   }
   WarBoardCommonEffectPerformance___ctor(
     (WarBoardCommonEffectPerformance_o *)this,
@@ -51,9 +51,9 @@ void __fastcall WarBoardPopTextEffectPerformance___ctor(
     doInstantiate,
     1,
     0LL);
-  v15 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_22151/*"root_text/type01/dm_base"*/, 0LL);
+  v15 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_22219/*"root_text/type01/dm_base"*/, 0LL);
   this->fields.textObject = v15;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.textObject,
     (System_Int32_array **)v15,
     v16,
@@ -71,19 +71,16 @@ void __fastcall WarBoardPopTextEffectPerformance__SetPopText(
         int32_t color,
         const MethodInfo *method)
 {
-  int v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
   UnityEngine_Object_o *textObject; // x21
-  __int64 v10; // x1
-  UnityEngine_GameObject_o *v11; // x0
+  __int64 v7; // x1
+  UnityEngine_GameObject_o *v8; // x0
   UnityEngine_Object_o *Component_srcLineSprite; // x20
 
-  if ( (byte_42EAB17 & 1) == 0 )
+  if ( (byte_43539C3 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_UILabel___, (_DWORD)text, color, method);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v6, v7, v8);
-    byte_42EAB17 = 1;
+    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_43539C3 = 1;
   }
   textObject = (UnityEngine_Object_o *)this->fields.textObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -93,19 +90,19 @@ void __fastcall WarBoardPopTextEffectPerformance__SetPopText(
   }
   if ( !UnityEngine_Object__op_Equality(textObject, 0LL, 0LL) )
   {
-    v11 = this->fields.textObject;
-    if ( v11 )
+    v8 = this->fields.textObject;
+    if ( v8 )
     {
       Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                          v11,
-                                                          (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                                                          v8,
+                                                          (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      v11 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(Component_srcLineSprite, 0LL, 0LL);
-      if ( ((unsigned __int8)v11 & 1) != 0 )
+      v8 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(Component_srcLineSprite, 0LL, 0LL);
+      if ( ((unsigned __int8)v8 & 1) != 0 )
         return;
       if ( Component_srcLineSprite )
       {
@@ -113,6 +110,6 @@ void __fastcall WarBoardPopTextEffectPerformance__SetPopText(
         return;
       }
     }
-    sub_B5D69C(v11, v10);
+    sub_B7076C(v8, v7);
   }
 }

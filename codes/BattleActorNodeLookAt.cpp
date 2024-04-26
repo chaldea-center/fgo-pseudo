@@ -17,7 +17,7 @@ void __fastcall BattleActorNodeLookAt__Awake(BattleActorNodeLookAt_o *this, cons
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   this->fields.selfTransform = transform;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.selfTransform,
     (System_Int32_array **)transform,
     v4,
@@ -32,40 +32,38 @@ void __fastcall BattleActorNodeLookAt__Awake(BattleActorNodeLookAt_o *this, cons
 // local variable allocation has failed, the output may be wrong!
 void __fastcall BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   float x; // w8
-  struct UnityEngine_Transform_o *v6; // x20
+  struct UnityEngine_Transform_o *v4; // x20
   UnityEngine_Transform_o *selfTransform; // x0
-  __int64 v8; // x1
-  int v9; // s0
-  UnityEngine_Transform_o *v13; // x0
+  __int64 v6; // x1
+  int v7; // s0
+  UnityEngine_Transform_o *v11; // x0
   UnityEngine_Object_o *lookTargetObj; // x20
-  float v15; // s0
-  float v16; // s1
-  float v17; // s2
-  float v18; // s8
-  float v19; // s9
-  float v20; // s10
-  float v21; // s8
+  float v13; // s0
+  float v14; // s1
+  float v15; // s2
+  float v16; // s8
+  float v17; // s9
+  float v18; // s10
+  float v19; // s8
   float y; // s9
   float z; // s10
   float w; // s11
   float deltaTime; // s0
-  float v26; // s0
-  UnityEngine_Transform_o *v27; // x19
-  float v28; // s12
+  float v24; // s0
+  UnityEngine_Transform_o *v25; // x19
+  float v26; // s12
   MethodInfo methoda; // [xsp+10h] [xbp-50h] BYREF
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Quaternion_o v32; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Quaternion_o v34; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
+  UnityEngine_Quaternion_o v32; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
-  if ( (byte_42EC0E7 & 1) == 0 )
+  if ( (byte_43553E1 & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EC0E7 = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_43553E1 = 1;
   }
   LODWORD(methoda.invoker_method) = 0;
   methoda.methodPointer = 0LL;
@@ -83,59 +81,59 @@ void __fastcall BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this,
       selfTransform = this->fields.lookTargetObj;
       if ( !selfTransform )
         goto LABEL_18;
-      *(UnityEngine_Vector3_o *)&v15 = UnityEngine_Transform__get_position(selfTransform, 0LL);
+      *(UnityEngine_Vector3_o *)&v13 = UnityEngine_Transform__get_position(selfTransform, 0LL);
       selfTransform = this->fields.selfTransform;
       if ( !selfTransform )
         goto LABEL_18;
+      v16 = v13;
+      v17 = v14;
       v18 = v15;
-      v19 = v16;
-      v20 = v17;
       position = UnityEngine_Transform__get_position(selfTransform, 0LL);
-      position.fields.x = v18 - position.fields.x;
-      position.fields.y = v19 - position.fields.y;
-      position.fields.z = v20 - position.fields.z;
+      position.fields.x = v16 - position.fields.x;
+      position.fields.y = v17 - position.fields.y;
+      position.fields.z = v18 - position.fields.z;
       methoda.methodPointer = *(Il2CppMethodPointer *)&position.fields.x;
       *(float *)&methoda.invoker_method = position.fields.z;
       if ( UnityEngine_Vector3__get_magnitude(position, &methoda) > 0.001 )
       {
-        *(_QWORD *)&v31.fields.x = methoda.methodPointer;
-        v31.fields.z = *(float *)&methoda.invoker_method;
-        v32 = UnityEngine_Quaternion__LookRotation_35651248(v31, 0LL);
-        v21 = v32.fields.x;
-        y = v32.fields.y;
-        z = v32.fields.z;
-        w = v32.fields.w;
+        *(_QWORD *)&v29.fields.x = methoda.methodPointer;
+        v29.fields.z = *(float *)&methoda.invoker_method;
+        v30 = UnityEngine_Quaternion__LookRotation_36098220(v29, 0LL);
+        v19 = v30.fields.x;
+        y = v30.fields.y;
+        z = v30.fields.z;
+        w = v30.fields.w;
         deltaTime = UnityEngine_Time__get_deltaTime(0LL);
-        v26 = UnityEngine_Mathf__Clamp(deltaTime * this->fields.speed, 0.0, 1.0, 0LL);
-        v27 = this->fields.selfTransform;
-        if ( v27 )
+        v24 = UnityEngine_Mathf__Clamp(deltaTime * this->fields.speed, 0.0, 1.0, 0LL);
+        v25 = this->fields.selfTransform;
+        if ( v25 )
         {
-          v28 = v26;
-          rotation = UnityEngine_Transform__get_rotation(v27, 0LL);
-          v34.fields.x = v21;
-          v34.fields.y = y;
-          v34.fields.z = z;
-          v34.fields.w = w;
-          *(UnityEngine_Quaternion_o *)&v9 = UnityEngine_Quaternion__Slerp(rotation, v34, v28, 0LL);
-          v13 = v27;
+          v26 = v24;
+          rotation = UnityEngine_Transform__get_rotation(v25, 0LL);
+          v32.fields.x = v19;
+          v32.fields.y = y;
+          v32.fields.z = z;
+          v32.fields.w = w;
+          *(UnityEngine_Quaternion_o *)&v7 = UnityEngine_Quaternion__Slerp(rotation, v32, v26, 0LL);
+          v11 = v25;
           goto LABEL_7;
         }
 LABEL_18:
-        sub_B5D69C(selfTransform, v8);
+        sub_B7076C(selfTransform, v6);
       }
     }
   }
   else if ( x == 0.0 )
   {
-    v6 = this->fields.selfTransform;
-    *(UnityEngine_Quaternion_o *)&v9 = UnityEngine_Quaternion__Euler_35652376(
+    v4 = this->fields.selfTransform;
+    *(UnityEngine_Quaternion_o *)&v7 = UnityEngine_Quaternion__Euler_36099348(
                                          *(UnityEngine_Vector3_o *)&this->fields.lookWorldVec.fields.y,
                                          0LL);
-    if ( v6 )
+    if ( v4 )
     {
-      v13 = v6;
+      v11 = v4;
 LABEL_7:
-      UnityEngine_Transform__set_rotation(v13, *(UnityEngine_Quaternion_o *)&v9, 0LL);
+      UnityEngine_Transform__set_rotation(v11, *(UnityEngine_Quaternion_o *)&v7, 0LL);
       return;
     }
     goto LABEL_18;

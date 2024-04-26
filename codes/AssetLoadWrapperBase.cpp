@@ -1,24 +1,22 @@
 void __fastcall AssetLoadWrapperBase___ctor(AssetLoadWrapperBase_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  AssetPathLoadCounter_o *v5; // x20
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  AssetPathLoadCounter_o *v3; // x20
+  System_String_array **v4; // x2
+  System_String_array **v5; // x3
+  System_Boolean_array **v6; // x4
+  System_Int32_array **v7; // x5
+  System_Int32_array *v8; // x6
+  System_Int32_array *v9; // x7
 
-  if ( (byte_42EB78E & 1) == 0 )
+  if ( (byte_4354F43 & 1) == 0 )
   {
-    sub_B5D5C4(&AssetPathLoadCounter_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EB78E = 1;
+    sub_B70694(&AssetPathLoadCounter_TypeInfo);
+    byte_4354F43 = 1;
   }
-  v5 = (AssetPathLoadCounter_o *)sub_B5D694(AssetPathLoadCounter_TypeInfo);
-  AssetPathLoadCounter___ctor(v5, 0LL);
-  this->fields.pathCounter = v5;
-  sub_B5D560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v5, v6, v7, v8, v9, v10, v11);
+  v3 = (AssetPathLoadCounter_o *)sub_B70764(AssetPathLoadCounter_TypeInfo);
+  AssetPathLoadCounter___ctor(v3, 0LL);
+  this->fields.pathCounter = v3;
+  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -32,76 +30,60 @@ void __fastcall AssetLoadWrapperBase__AddLoadCount(
 
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_B5D69C(0LL, path);
+    sub_B7076C(0LL, path);
   AssetPathLoadCounter__AddCount(pathCounter, path, 0LL);
 }
 
 
 void __fastcall AssetLoadWrapperBase__ReleaseAll(AssetLoadWrapperBase_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  int v14; // w1
-  int v15; // w2
-  __int64 v16; // x3
   AssetPathLoadCounter_o *pathCounter; // x0
-  __int64 v18; // x1
-  __int64 v19; // x3
+  __int64 v4; // x1
   System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *Enumerator; // x20
-  System_Collections_Generic_IEnumerator_KeyValuePair_string__int___c *v21; // x8
-  unsigned __int64 v22; // x10
-  int32_t *v23; // x11
-  __int64 v24; // x0
-  __int64 v25; // x0
-  int v26; // w1
-  __int64 v27; // x21
-  int v28; // w24
+  System_Collections_Generic_IEnumerator_KeyValuePair_string__int___c *v6; // x8
+  unsigned __int64 v7; // x10
+  int32_t *v8; // x11
+  __int64 v9; // x0
+  __int64 v10; // x0
+  int v11; // w1
+  __int64 v12; // x21
+  int v13; // w24
   System_Collections_Generic_IEnumerator_KeyValuePair_string__int___c *klass; // x8
-  unsigned __int64 v30; // x10
+  unsigned __int64 v15; // x10
   int32_t *p_offset; // x11
   __int64 p_method; // x0
-  __int64 v33; // x3
-  System_Collections_Generic_IEnumerator_KeyValuePair_string__int___c *v34; // x8
-  unsigned __int64 v35; // x10
-  int32_t *v36; // x11
-  __int64 v37; // x0
+  System_Collections_Generic_IEnumerator_KeyValuePair_string__int___c *v18; // x8
+  unsigned __int64 v19; // x10
+  int32_t *v20; // x11
+  __int64 v21; // x0
 
-  if ( (byte_42EB78D & 1) == 0 )
+  if ( (byte_4354F42 & 1) == 0 )
   {
-    sub_B5D5C4(&System_IDisposable_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&System_Collections_IEnumerator_TypeInfo, v8, v9, v10);
-    sub_B5D5C4(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Key__, v11, v12, v13);
-    sub_B5D5C4(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Value__, v14, v15, v16);
-    byte_42EB78D = 1;
+    sub_B70694(&System_IDisposable_TypeInfo);
+    sub_B70694(&System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo);
+    sub_B70694(&System_Collections_IEnumerator_TypeInfo);
+    sub_B70694(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Key__);
+    sub_B70694(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Value__);
+    byte_4354F42 = 1;
   }
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
     goto LABEL_30;
   Enumerator = AssetPathLoadCounter__GetEnumerator(pathCounter, 0LL);
   if ( !Enumerator )
-    sub_B5D69C(0LL, v18);
+    sub_B7076C(0LL, v4);
   while ( 1 )
   {
     klass = Enumerator->klass;
     if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
     {
-      v30 = 0LL;
+      v15 = 0LL;
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        ++v30;
+        ++v15;
         p_offset += 4;
-        if ( v30 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+        if ( v15 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
           goto LABEL_19;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -109,75 +91,75 @@ void __fastcall AssetLoadWrapperBase__ReleaseAll(AssetLoadWrapperBase_o *this, c
     else
     {
 LABEL_19:
-      p_method = sub_AF54C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL, v19);
+      p_method = sub_B08590(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v21 = Enumerator->klass;
+    v6 = Enumerator->klass;
     if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
     {
-      v22 = 0LL;
-      v23 = &v21->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_KeyValuePair_string__int___c **)v23 - 1) != System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo )
+      v7 = 0LL;
+      v8 = &v6->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_KeyValuePair_string__int___c **)v8 - 1) != System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo )
       {
-        ++v22;
-        v23 += 4;
-        if ( v22 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+        ++v7;
+        v8 += 4;
+        if ( v7 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
           goto LABEL_10;
       }
-      v24 = (__int64)&v21->vtable[*v23].method;
+      v9 = (__int64)&v6->vtable[*v8].method;
     }
     else
     {
 LABEL_10:
-      v24 = sub_AF54C0(Enumerator, System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo, 0LL, v33);
+      v9 = sub_B08590(Enumerator, System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo, 0LL);
     }
-    v25 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *, _QWORD))v24)(
+    v10 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *, _QWORD))v9)(
             Enumerator,
-            *(_QWORD *)(v24 + 8));
-    if ( v26 >= 1 )
+            *(_QWORD *)(v9 + 8));
+    if ( v11 >= 1 )
     {
-      v27 = v25;
-      v28 = v26 + 1;
+      v12 = v10;
+      v13 = v11 + 1;
       do
       {
         ((void (__fastcall *)(AssetLoadWrapperBase_o *, __int64, const char *))this->klass[1]._1.gc_desc)(
           this,
-          v27,
+          v12,
           this->klass[1]._1.name);
-        --v28;
+        --v13;
       }
-      while ( v28 >= 2 );
+      while ( v13 >= 2 );
     }
   }
-  v34 = Enumerator->klass;
+  v18 = Enumerator->klass;
   if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
   {
-    v35 = 0LL;
-    v36 = &v34->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v36 - 1) != System_IDisposable_TypeInfo )
+    v19 = 0LL;
+    v20 = &v18->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v20 - 1) != System_IDisposable_TypeInfo )
     {
-      ++v35;
-      v36 += 4;
-      if ( v35 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+      ++v19;
+      v20 += 4;
+      if ( v19 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
         goto LABEL_26;
     }
-    v37 = (__int64)&v34->vtable[*v36].method;
+    v21 = (__int64)&v18->vtable[*v20].method;
   }
   else
   {
 LABEL_26:
-    v37 = sub_AF54C0(Enumerator, System_IDisposable_TypeInfo, 0LL, v33);
+    v21 = sub_B08590(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *, _QWORD))v37)(
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *, _QWORD))v21)(
     Enumerator,
-    *(_QWORD *)(v37 + 8));
+    *(_QWORD *)(v21 + 8));
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
 LABEL_30:
-    sub_B5D69C(pathCounter, method);
+    sub_B7076C(pathCounter, method);
   AssetPathLoadCounter__Clear(pathCounter, 0LL);
 }
 
@@ -191,6 +173,6 @@ void __fastcall AssetLoadWrapperBase__SubLoadCount(
 
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_B5D69C(0LL, path);
+    sub_B7076C(0LL, path);
   AssetPathLoadCounter__SubCount(pathCounter, path, 0LL);
 }

@@ -1,16 +1,13 @@
 void __fastcall QuestScriptReleaseEntity___ctor(QuestScriptReleaseEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42E6F35 & 1) == 0 )
+  if ( (byte_435021C & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
-    byte_42E6F35 = 1;
+    sub_B70694(&Method_DataEntityBase_string___ctor__);
+    byte_435021C = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -20,16 +17,16 @@ System_String_o *__fastcall QuestScriptReleaseEntity__CreatePK(
         int32_t id,
         const MethodInfo *method)
 {
-  if ( (byte_42E6F33 & 1) == 0 )
+  if ( (byte_435021A & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, phase, id, method);
-    byte_42E6F33 = 1;
+    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_435021A = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            scriptId,
            phase,
            id,
-           (const MethodInfo_1AE3440 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1CA2794 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -54,16 +51,14 @@ bool __fastcall QuestScriptReleaseEntity__HasFlag(
 
 bool __fastcall QuestScriptReleaseEntity__IsOpen(QuestScriptReleaseEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   int32_t condType; // w21
   System_Int32_array *targetIds; // x20
   int32_t targetNum; // w19
 
-  if ( (byte_42E6F34 & 1) == 0 )
+  if ( (byte_435021B & 1) == 0 )
   {
-    sub_B5D5C4(&CondType_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E6F34 = 1;
+    sub_B70694(&CondType_TypeInfo);
+    byte_435021B = 1;
   }
   condType = this->fields.condType;
   targetIds = this->fields.targetIds;

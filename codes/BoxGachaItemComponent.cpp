@@ -6,20 +6,18 @@ void __fastcall BoxGachaItemComponent___ctor(BoxGachaItemComponent_o *this, cons
 
 void __fastcall BoxGachaItemComponent__Clear(BoxGachaItemComponent_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   ItemIconComponent_o *itemIcon; // x0
 
-  if ( (byte_42EA56C & 1) == 0 )
+  if ( (byte_4353E8E & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_1/*""*/, (_DWORD)method, v2, v3);
-    byte_42EA56C = 1;
+    sub_B70694(&StringLiteral_1/*""*/);
+    byte_4353E8E = 1;
   }
   itemIcon = this->fields.itemIcon;
   if ( !itemIcon
     || (ItemIconComponent__Clear(itemIcon, 0LL), (itemIcon = (ItemIconComponent_o *)this->fields.dataLabel) == 0LL) )
   {
-    sub_B5D69C(itemIcon, method);
+    sub_B7076C(itemIcon, method);
   }
   UILabel__set_text((UILabel_o *)itemIcon, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
@@ -35,10 +33,10 @@ void __fastcall BoxGachaItemComponent__Set(
   ItemIconComponent_o *itemIcon; // x0
   UILabel_o *dataLabel; // x20
 
-  if ( (byte_42EA56D & 1) == 0 )
+  if ( (byte_4353E8F & 1) == 0 )
   {
-    sub_B5D5C4(&LocalizationManager_TypeInfo, itemId, payNum, method);
-    byte_42EA56D = 1;
+    sub_B70694(&LocalizationManager_TypeInfo);
+    byte_4353E8F = 1;
   }
   if ( itemId < 1 )
   {
@@ -59,7 +57,7 @@ void __fastcall BoxGachaItemComponent__Set(
     itemIcon = (ItemIconComponent_o *)LocalizationManager__GetNumberFormat(payNum, 0LL);
     if ( !dataLabel )
 LABEL_11:
-      sub_B5D69C(itemIcon, *(_QWORD *)&itemId);
+      sub_B7076C(itemIcon, *(_QWORD *)&itemId);
     UILabel__set_text(dataLabel, (System_String_o *)itemIcon, 0LL);
   }
 }

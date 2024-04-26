@@ -49,12 +49,12 @@ void __fastcall CharaGraphListViewItemBase___ctor(
   System_Int32_array *v48; // x6
   System_Int32_array *v49; // x7
 
-  ListViewItem___ctor_23901828((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_23967088((ListViewItem_o *)this, index, 0LL);
   if ( !listViewPattern )
     goto LABEL_5;
   FilterLogic = CharaGraphListViewPatternBase__CreateFilterLogic(listViewPattern, v7);
   this->fields.filterLogic = FilterLogic;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.filterLogic,
     (System_Int32_array **)FilterLogic,
     v9,
@@ -65,7 +65,7 @@ void __fastcall CharaGraphListViewItemBase___ctor(
     v14);
   SortLogic = CharaGraphListViewPatternBase__CreateSortLogic(listViewPattern, v15);
   this->fields.sortLogic = SortLogic;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.sortLogic,
     (System_Int32_array **)SortLogic,
     v17,
@@ -76,7 +76,7 @@ void __fastcall CharaGraphListViewItemBase___ctor(
     v22);
   ItemDrawPattern = CharaGraphListViewPatternBase__get_ItemDrawPattern(listViewPattern, v23);
   this->fields._DrawPattern_k__BackingField = ItemDrawPattern;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields._DrawPattern_k__BackingField,
     (System_Int32_array **)ItemDrawPattern,
     v25,
@@ -87,7 +87,7 @@ void __fastcall CharaGraphListViewItemBase___ctor(
     v30);
   RootInfo_k__BackingField = listViewPattern->fields._RootInfo_k__BackingField;
   this->fields._RootInfo_k__BackingField = RootInfo_k__BackingField;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields._RootInfo_k__BackingField,
     (System_Int32_array **)RootInfo_k__BackingField,
     v32,
@@ -99,14 +99,14 @@ void __fastcall CharaGraphListViewItemBase___ctor(
   v6 = (char *)this->fields.filterLogic;
   if ( !v6
     || (*((_QWORD *)v6 + 3) = this,
-        sub_B5D560((BattleServantConfConponent_o *)(v6 + 24), (System_Int32_array **)this, v38, v39, v40, v41, v42, v43),
+        sub_B70630((BattleServantConfConponent_o *)(v6 + 24), (System_Int32_array **)this, v38, v39, v40, v41, v42, v43),
         (v6 = (char *)this->fields.sortLogic) == 0LL) )
   {
 LABEL_5:
-    sub_B5D69C(v6, v7);
+    sub_B7076C(v6, v7);
   }
   *((_QWORD *)v6 + 3) = this;
-  sub_B5D560((BattleServantConfConponent_o *)(v6 + 24), (System_Int32_array **)this, v44, v45, v46, v47, v48, v49);
+  sub_B70630((BattleServantConfConponent_o *)(v6 + 24), (System_Int32_array **)this, v44, v45, v46, v47, v48, v49);
 }
 
 
@@ -142,7 +142,7 @@ void __fastcall CharaGraphListViewItemBase__ApplySortValue(
   this->fields.sortValue2B = sortLogic->fields._SortValue2B_k__BackingField;
   IconInfo1_k__BackingField = sortLogic->fields._IconInfo1_k__BackingField;
   this->fields._IconInfo1_k__BackingField = IconInfo1_k__BackingField;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields._IconInfo1_k__BackingField,
     (System_Int32_array **)IconInfo1_k__BackingField,
     v2,
@@ -154,10 +154,10 @@ void __fastcall CharaGraphListViewItemBase__ApplySortValue(
   v17 = this->fields.sortLogic;
   if ( !v17 )
 LABEL_4:
-    sub_B5D69C(this, method);
+    sub_B7076C(this, method);
   IconInfo2_k__BackingField = v17->fields._IconInfo2_k__BackingField;
   this->fields._IconInfo2_k__BackingField = IconInfo2_k__BackingField;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields._IconInfo2_k__BackingField,
     (System_Int32_array **)IconInfo2_k__BackingField,
     v11,
@@ -174,24 +174,23 @@ bool __fastcall CharaGraphListViewItemBase__GetNpInfo(
         TreasureDvcInfo_o **tdInfo,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  TreasureDvcInfo_o *v5; // x20
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  TreasureDvcInfo_o *v4; // x20
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
 
-  if ( (byte_42E968A & 1) == 0 )
+  if ( (byte_4354A0E & 1) == 0 )
   {
-    sub_B5D5C4(&TreasureDvcInfo_TypeInfo, (_DWORD)tdInfo, (_DWORD)method, v3);
-    byte_42E968A = 1;
+    sub_B70694(&TreasureDvcInfo_TypeInfo);
+    byte_4354A0E = 1;
   }
-  v5 = (TreasureDvcInfo_o *)sub_B5D694(TreasureDvcInfo_TypeInfo);
-  TreasureDvcInfo___ctor(v5, 0LL);
-  *tdInfo = v5;
-  sub_B5D560((BattleServantConfConponent_o *)tdInfo, (System_Int32_array **)v5, v6, v7, v8, v9, v10, v11);
+  v4 = (TreasureDvcInfo_o *)sub_B70764(TreasureDvcInfo_TypeInfo);
+  TreasureDvcInfo___ctor(v4, 0LL);
+  *tdInfo = v4;
+  sub_B70630((BattleServantConfConponent_o *)tdInfo, (System_Int32_array **)v4, v5, v6, v7, v8, v9, v10);
   return 0;
 }
 
@@ -211,7 +210,7 @@ bool __fastcall CharaGraphListViewItemBase__IsMatchFilter(
   filterLogic = this->fields.filterLogic;
   if ( !filterLogic
     || (filterLogic->fields.sort = sort,
-        sub_B5D560(
+        sub_B70630(
           (BattleServantConfConponent_o *)&filterLogic->fields,
           (System_Int32_array **)sort,
           (System_String_array **)method,
@@ -222,7 +221,7 @@ bool __fastcall CharaGraphListViewItemBase__IsMatchFilter(
           v7),
         (filterLogic = this->fields.filterLogic) == 0LL) )
   {
-    sub_B5D69C(filterLogic, sort);
+    sub_B7076C(filterLogic, sort);
   }
   return ((__int64 (__fastcall *)(struct CharaGraphFilterLogicBase_o *, Il2CppMethodPointer))filterLogic->klass->vtable._4_unknown.method)(
            filterLogic,
@@ -243,7 +242,7 @@ void __fastcall CharaGraphListViewItemBase__Modify(
          args,
          this->klass->vtable._11_OnBeforeMatchingFilter.methodPtr);
   if ( !args )
-    sub_B5D69C(v5, v6);
+    sub_B7076C(v5, v6);
   if ( args->fields._IsResetSwap_k__BackingField )
     *(_WORD *)&this->fields._IsSwapLock_k__BackingField = 0;
 }
@@ -312,7 +311,7 @@ bool __fastcall CharaGraphListViewItemBase__SetSortValue(
     sortLogic = this->fields.sortLogic;
     if ( !sortLogic
       || (sortLogic->fields.sort = sort,
-          sub_B5D560(
+          sub_B70630(
             (BattleServantConfConponent_o *)&sortLogic->fields,
             (System_Int32_array **)sort,
             v7,
@@ -323,7 +322,7 @@ bool __fastcall CharaGraphListViewItemBase__SetSortValue(
             v12),
           (v16 = this->fields.sortLogic) == 0LL) )
     {
-      sub_B5D69C(sortLogic, v6);
+      sub_B7076C(sortLogic, v6);
     }
     CharaGraphSortLogicBase__InitSortValue(this->fields.sortLogic, v6);
     ((void (__fastcall *)(struct CharaGraphSortLogicBase_o *, void *))v16->klass->vtable._4_SetSortValueLocal.method)(
@@ -646,7 +645,7 @@ void __fastcall CharaGraphListViewItemBase__set_DrawPattern(
   System_Int32_array *v7; // x7
 
   this->fields._DrawPattern_k__BackingField = value;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields._DrawPattern_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -697,7 +696,7 @@ void __fastcall CharaGraphListViewItemBase__set_IconInfo1(
   System_Int32_array *v7; // x7
 
   this->fields._IconInfo1_k__BackingField = value;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields._IconInfo1_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -721,7 +720,7 @@ void __fastcall CharaGraphListViewItemBase__set_IconInfo2(
   System_Int32_array *v7; // x7
 
   this->fields._IconInfo2_k__BackingField = value;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields._IconInfo2_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -889,7 +888,7 @@ void __fastcall CharaGraphListViewItemBase__set_RootInfo(
   System_Int32_array *v7; // x7
 
   this->fields._RootInfo_k__BackingField = value;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields._RootInfo_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

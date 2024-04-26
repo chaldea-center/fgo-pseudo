@@ -14,24 +14,23 @@ bool __fastcall SimpleTreasureDeviceData__Equals(
         Il2CppObject *obj,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  _QWORD *v6; // x0
+  _QWORD *v5; // x0
   bool result; // w0
 
-  if ( (byte_42E9797 & 1) == 0 )
+  if ( (byte_43528BD & 1) == 0 )
   {
-    sub_B5D5C4(&SimpleTreasureDeviceData_TypeInfo, (_DWORD)obj, (_DWORD)method, v3);
-    byte_42E9797 = 1;
+    sub_B70694(&SimpleTreasureDeviceData_TypeInfo);
+    byte_43528BD = 1;
   }
   result = obj
         && (SimpleTreasureDeviceData_c *)obj->klass == SimpleTreasureDeviceData_TypeInfo
-        && (v6 = (_QWORD *)j_il2cpp_object_unbox_0(obj), *(_DWORD *)this.fields.id == (unsigned int)*v6)
-        && *(_DWORD *)(*(_QWORD *)&this + 4LL) == HIDWORD(*v6);
+        && (v5 = (_QWORD *)j_il2cpp_object_unbox_0(obj), *(_DWORD *)this.fields.id == (unsigned int)*v5)
+        && *(_DWORD *)(*(_QWORD *)&this + 4LL) == HIDWORD(*v5);
   return result;
 }
 
 
-bool __fastcall SimpleTreasureDeviceData__Equals_26797688(
+bool __fastcall SimpleTreasureDeviceData__Equals_26459296(
         SimpleTreasureDeviceData_o this,
         SimpleTreasureDeviceData_o toCompare,
         const MethodInfo *method)
@@ -42,22 +41,20 @@ bool __fastcall SimpleTreasureDeviceData__Equals_26797688(
 
 int32_t __fastcall SimpleTreasureDeviceData__GetHashCode(SimpleTreasureDeviceData_o this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   System_Tuple_T1__T2__o *int__int; // x0
-  __int64 v6; // x1
+  __int64 v4; // x1
 
-  if ( (byte_42E9798 & 1) == 0 )
+  if ( (byte_43528BE & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Tuple_Create_int__int___, (_DWORD)method, v2, v3);
-    byte_42E9798 = 1;
+    sub_B70694(&Method_System_Tuple_Create_int__int___);
+    byte_43528BE = 1;
   }
   int__int = System_Tuple__Create_int__int_(
                *(_DWORD *)this.fields.id,
                *(_DWORD *)(*(_QWORD *)&this + 4LL),
-               (const MethodInfo_1E71354 *)Method_System_Tuple_Create_int__int___);
+               (const MethodInfo_1D637F4 *)Method_System_Tuple_Create_int__int___);
   if ( !int__int )
-    sub_B5D69C(0LL, v6);
+    sub_B7076C(0LL, v4);
   return ((__int64 (__fastcall *)(System_Tuple_T1__T2__o *, Il2CppMethodPointer))int__int->klass->vtable._2_GetHashCode.method)(
            int__int,
            int__int->klass->vtable._3_ToString.methodPtr);

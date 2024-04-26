@@ -12,26 +12,24 @@ void __fastcall TextureUpdate__Start(TextureUpdate_o *this, const MethodInfo *me
 
 void __fastcall TextureUpdate__Update(TextureUpdate_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   WebViewObject_o *Component_WebViewObject; // x0
-  __int64 v6; // x1
-  UnityEngine_Behaviour_o *v7; // x19
+  __int64 v4; // x1
+  UnityEngine_Behaviour_o *v5; // x19
 
-  if ( (byte_42E4F32 & 1) == 0 )
+  if ( (byte_434E484 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_UnityEngine_Component_GetComponent_UITexture___, (_DWORD)method, v2, v3);
-    byte_42E4F32 = 1;
+    sub_B70694(&Method_UnityEngine_Component_GetComponent_UITexture___);
+    byte_434E484 = 1;
   }
   Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                               (UnityEngine_Component_o *)this,
-                              (const MethodInfo_1ADE2A0 *)Method_UnityEngine_Component_GetComponent_UITexture___);
+                              (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UITexture___);
   if ( !Component_WebViewObject )
-    sub_B5D69C(0LL, v6);
-  v7 = (UnityEngine_Behaviour_o *)Component_WebViewObject;
+    sub_B7076C(0LL, v4);
+  v5 = (UnityEngine_Behaviour_o *)Component_WebViewObject;
   ((void (__fastcall *)(WebViewObject_o *, void *))Component_WebViewObject->klass[2]._1.namespaze)(
     Component_WebViewObject,
     Component_WebViewObject->klass[2]._1.byval_arg.data);
-  UnityEngine_Behaviour__set_enabled(v7, 0, 0LL);
-  UnityEngine_Behaviour__set_enabled(v7, 1, 0LL);
+  UnityEngine_Behaviour__set_enabled(v5, 0, 0LL);
+  UnityEngine_Behaviour__set_enabled(v5, 1, 0LL);
 }

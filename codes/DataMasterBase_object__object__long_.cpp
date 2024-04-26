@@ -1,8 +1,8 @@
 Il2CppObject *__fastcall DataMasterBase_object__object__long___GetSingleEntity(
         DataMasterBase_TMaster__TEntity__PKType__o *this,
-        const MethodInfo_23FB0FC *method)
+        const MethodInfo_21C072C *method)
 {
   if ( !this )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   return (Il2CppObject *)((__int64 (*)(void))method->klass->rgctx_data->_4_DataMasterBase_GetSingleEntity_TEntity_->methodPointer)();
 }

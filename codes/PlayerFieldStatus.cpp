@@ -4,7 +4,6 @@ void __fastcall PlayerFieldStatus___ctor(PlayerFieldStatus_o *this, const Method
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_Double_array *__fastcall PlayerFieldStatus__getAiParam(
         PlayerFieldStatus_o *this,
         BattleData_o *bData,
@@ -21,10 +20,10 @@ System_Double_array *__fastcall PlayerFieldStatus__getAiParam(
   __int64 v13; // x0
 
   v10 = (BattleFieldStatus_o *)this;
-  if ( (byte_42E841A & 1) == 0 )
+  if ( (byte_4351BDF & 1) == 0 )
   {
-    this = (PlayerFieldStatus_o *)sub_B5D5C4(&double___TypeInfo, (_DWORD)bData, param, *(_QWORD *)&turn);
-    byte_42E841A = 1;
+    this = (PlayerFieldStatus_o *)sub_B70694(&double___TypeInfo);
+    byte_4351BDF = 1;
   }
   if ( param == 20 )
   {
@@ -38,17 +37,17 @@ System_Double_array *__fastcall PlayerFieldStatus__getAiParam(
       return v10->fields.wkZeroParam;
     if ( !bData )
 LABEL_13:
-      sub_B5D69C(this, bData);
+      sub_B7076C(this, bData);
     v11 = BattleFieldStatus__CommonAliveCount(v10, bData->fields.player_datalist, 0LL);
   }
   v12 = v11;
-  this = (PlayerFieldStatus_o *)sub_B5D5DC(double___TypeInfo, 1LL);
+  this = (PlayerFieldStatus_o *)sub_B706AC(double___TypeInfo, 1LL);
   if ( !this )
     goto LABEL_13;
   if ( !LODWORD(this[1].klass) )
   {
-    v13 = sub_B5D6C8(this);
-    sub_B5D668(v13, 0LL);
+    v13 = sub_B70798(this);
+    sub_B70738(v13, 0LL);
   }
   *(double *)&this[1].monitor = (double)v12;
   return (System_Double_array *)this;

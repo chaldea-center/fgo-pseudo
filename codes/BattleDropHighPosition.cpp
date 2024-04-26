@@ -86,7 +86,7 @@ void __fastcall BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *th
       }
     }
 LABEL_19:
-    sub_B5D69C(activeSelf, v5);
+    sub_B7076C(activeSelf, v5);
   }
 }
 
@@ -97,29 +97,27 @@ void __fastcall BattleDropHighPosition__Initialize(
         UnityEngine_Vector3_o pos,
         const MethodInfo *method)
 {
-  int v3; // w2
-  __int64 v4; // x3
   float z; // s8
   float y; // s9
   float x; // s10
   UnityEngine_Object_o *treasureObj; // x20
   UnityEngine_Transform_o *transform; // x0
-  __int64 v11; // x1
-  UnityEngine_Transform_o *v12; // x20
-  float v13; // s8
-  float v14; // s9
-  float v15; // s10
+  __int64 v9; // x1
+  UnityEngine_Transform_o *v10; // x20
+  float v11; // s8
+  float v12; // s9
+  float v13; // s10
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o zero; // 0:s3.4,4:s4.4,8:s5.4
 
   z = pos.fields.z;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_42E7823 & 1) == 0 )
+  if ( (byte_4350599 & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v3, v4);
-    byte_42E7823 = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4350599 = 1;
   }
   this->fields.movingFlag = 1;
   treasureObj = (UnityEngine_Object_o *)this->fields.treasureObj;
@@ -133,22 +131,22 @@ void __fastcall BattleDropHighPosition__Initialize(
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     if ( transform )
     {
-      v12 = transform;
+      v10 = transform;
       localPosition = UnityEngine_Transform__get_localPosition(transform, 0LL);
       localPosition.fields.x = localPosition.fields.x + (float)(x + this->fields.startPos.fields.x);
       localPosition.fields.y = localPosition.fields.y + (float)(y + this->fields.startPos.fields.y);
       localPosition.fields.z = localPosition.fields.z + (float)(z + this->fields.startPos.fields.z);
-      UnityEngine_Transform__set_localPosition(v12, localPosition, 0LL);
+      UnityEngine_Transform__set_localPosition(v10, localPosition, 0LL);
       if ( !this->fields.rigidbodyComp )
         return;
-      v13 = this->fields.startAcceleration.fields.x;
-      v14 = this->fields.startAcceleration.fields.y;
-      v15 = this->fields.startAcceleration.fields.z;
+      v11 = this->fields.startAcceleration.fields.x;
+      v12 = this->fields.startAcceleration.fields.y;
+      v13 = this->fields.startAcceleration.fields.z;
       zero = UnityEngine_Vector3__get_zero(0LL);
-      v17.fields.x = v13;
-      v17.fields.y = v14;
-      v17.fields.z = v15;
-      if ( UnityEngine_Vector3__op_Equality(v17, zero, 0LL) )
+      v15.fields.x = v11;
+      v15.fields.y = v12;
+      v15.fields.z = v13;
+      if ( UnityEngine_Vector3__op_Equality(v15, zero, 0LL) )
         return;
       transform = (UnityEngine_Transform_o *)this->fields.rigidbodyComp;
       if ( transform )
@@ -157,7 +155,7 @@ void __fastcall BattleDropHighPosition__Initialize(
         return;
       }
     }
-    sub_B5D69C(transform, v11);
+    sub_B7076C(transform, v9);
   }
 }
 

@@ -1,109 +1,109 @@
 void __fastcall BuffList___cctor(const MethodInfo *method)
 {
-  int v1; // w1
-  int v2; // w2
-  __int64 v3; // x3
-  int v4; // w1
-  int v5; // w2
-  __int64 v6; // x3
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
-  int v10; // w1
-  int v11; // w2
-  __int64 v12; // x3
-  int v13; // w1
-  int v14; // w2
-  __int64 v15; // x3
-  int v16; // w1
-  int v17; // w2
-  __int64 v18; // x3
-  int v19; // w1
-  int v20; // w2
-  __int64 v21; // x3
-  int v22; // w1
-  int v23; // w2
-  __int64 v24; // x3
-  int v25; // w1
-  int v26; // w2
-  __int64 v27; // x3
-  int v28; // w1
-  int v29; // w2
-  __int64 v30; // x3
-  int v31; // w1
-  int v32; // w2
-  __int64 v33; // x3
-  int v34; // w1
-  int v35; // w2
-  __int64 v36; // x3
-  int v37; // w1
-  int v38; // w2
-  __int64 v39; // x3
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *v40; // x19
-  BuffList_ActInfo_o *v41; // x0
-  __int64 v42; // x1
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *v1; // x19
+  BuffList_ActInfo_o *v2; // x0
+  __int64 v3; // x1
   int plusTypes; // w8
-  BuffList_TYPE_array *v44; // x20
-  int v45; // w8
-  BuffList_TYPE_array *v46; // x21
-  BuffList_ActInfo_o *v47; // x22
-  int v48; // w8
-  BuffList_TYPE_array *v49; // x20
-  int v50; // w8
-  BuffList_TYPE_array *v51; // x21
-  BuffList_ActInfo_o *v52; // x22
-  BuffList_TYPE_array *v53; // x20
-  BuffList_TYPE_array *v54; // x21
-  BuffList_ActInfo_o *v55; // x22
-  BuffList_TYPE_array *v56; // x20
-  BuffList_TYPE_array *v57; // x21
-  BuffList_ActInfo_o *v58; // x22
+  BuffList_TYPE_array *v5; // x20
+  int v6; // w8
+  BuffList_TYPE_array *v7; // x21
+  BuffList_ActInfo_o *v8; // x22
+  int v9; // w8
+  BuffList_TYPE_array *v10; // x20
+  int v11; // w8
+  BuffList_TYPE_array *v12; // x21
+  BuffList_ActInfo_o *v13; // x22
+  BuffList_TYPE_array *v14; // x20
+  BuffList_TYPE_array *v15; // x21
+  BuffList_ActInfo_o *v16; // x22
+  BuffList_TYPE_array *v17; // x20
+  BuffList_TYPE_array *v18; // x21
+  BuffList_ActInfo_o *v19; // x22
+  BuffList_TYPE_array *v20; // x20
+  BuffList_TYPE_array *v21; // x21
+  BuffList_ActInfo_o *v22; // x22
+  BuffList_TYPE_array *v23; // x20
+  BuffList_TYPE_array *v24; // x21
+  BuffList_ActInfo_o *v25; // x22
+  System_String_o *v26; // x0
+  BuffList_TYPE_array *v27; // x20
+  BuffList_TYPE_array *v28; // x21
+  BuffList_ActInfo_o *v29; // x22
+  System_String_o *v30; // x0
+  BuffList_TYPE_array *v31; // x20
+  BuffList_TYPE_array *v32; // x21
+  BuffList_ActInfo_o *v33; // x22
+  System_String_o *v34; // x0
+  BuffList_TYPE_array *v35; // x20
+  BuffList_TYPE_array *v36; // x21
+  BuffList_ActInfo_o *v37; // x22
+  System_String_o *v38; // x0
+  BuffList_TYPE_array *v39; // x20
+  BuffList_TYPE_array *v40; // x21
+  BuffList_ActInfo_o *v41; // x22
+  System_String_o *v42; // x0
+  BuffList_TYPE_array *v43; // x20
+  BuffList_TYPE_array *v44; // x21
+  BuffList_ActInfo_o *v45; // x22
+  System_String_o *v46; // x0
+  BuffList_TYPE_array *v47; // x20
+  BuffList_TYPE_array *v48; // x21
+  BuffList_ActInfo_o *v49; // x22
+  System_String_o *v50; // x0
+  BuffList_TYPE_array *v51; // x20
+  BuffList_TYPE_array *v52; // x21
+  BuffList_ActInfo_o *v53; // x22
+  System_String_o *v54; // x0
+  BuffList_TYPE_array *v55; // x20
+  BuffList_TYPE_array *v56; // x21
+  BuffList_ActInfo_o *v57; // x22
+  System_String_o *v58; // x0
   BuffList_TYPE_array *v59; // x20
-  BuffList_TYPE_array *v60; // x21
-  BuffList_ActInfo_o *v61; // x22
-  BuffList_TYPE_array *v62; // x20
-  BuffList_TYPE_array *v63; // x21
-  BuffList_ActInfo_o *v64; // x22
-  System_String_o *v65; // x0
-  BuffList_TYPE_array *v66; // x20
-  BuffList_TYPE_array *v67; // x21
-  BuffList_ActInfo_o *v68; // x22
-  System_String_o *v69; // x0
+  BuffList_TYPE_array *v60; // x22
+  BuffList_ActInfo_o *v61; // x21
+  System_String_o *v62; // x0
+  BuffList_TYPE_array *v63; // x20
+  BuffList_TYPE_array *v64; // x21
+  BuffList_ActInfo_o *v65; // x22
+  System_String_o *v66; // x0
+  BuffList_TYPE_array *v67; // x20
+  BuffList_TYPE_array *v68; // x21
+  BuffList_ActInfo_o *v69; // x22
   BuffList_TYPE_array *v70; // x20
   BuffList_TYPE_array *v71; // x21
   BuffList_ActInfo_o *v72; // x22
-  System_String_o *v73; // x0
-  BuffList_TYPE_array *v74; // x20
-  BuffList_TYPE_array *v75; // x21
-  BuffList_ActInfo_o *v76; // x22
-  System_String_o *v77; // x0
-  BuffList_TYPE_array *v78; // x20
-  BuffList_TYPE_array *v79; // x21
-  BuffList_ActInfo_o *v80; // x22
-  System_String_o *v81; // x0
+  BuffList_TYPE_array *v73; // x20
+  BuffList_TYPE_array *v74; // x21
+  BuffList_ActInfo_o *v75; // x22
+  BuffList_TYPE_array *v76; // x20
+  BuffList_TYPE_array *v77; // x21
+  BuffList_ActInfo_o *v78; // x22
+  BuffList_TYPE_array *v79; // x20
+  BuffList_TYPE_array *v80; // x21
+  BuffList_ActInfo_o *v81; // x22
   BuffList_TYPE_array *v82; // x20
   BuffList_TYPE_array *v83; // x21
   BuffList_ActInfo_o *v84; // x22
-  System_String_o *v85; // x0
-  BuffList_TYPE_array *v86; // x20
-  BuffList_TYPE_array *v87; // x21
-  BuffList_ActInfo_o *v88; // x22
-  System_String_o *v89; // x0
-  BuffList_TYPE_array *v90; // x20
+  BuffList_TYPE_array *v85; // x20
+  BuffList_TYPE_array *v86; // x21
+  BuffList_ActInfo_o *v87; // x22
+  int v88; // w8
+  BuffList_TYPE_array *v89; // x20
+  int v90; // w8
   BuffList_TYPE_array *v91; // x21
   BuffList_ActInfo_o *v92; // x22
-  System_String_o *v93; // x0
-  BuffList_TYPE_array *v94; // x20
-  BuffList_TYPE_array *v95; // x21
-  BuffList_ActInfo_o *v96; // x22
-  System_String_o *v97; // x0
-  BuffList_TYPE_array *v98; // x20
-  BuffList_TYPE_array *v99; // x21
-  BuffList_ActInfo_o *v100; // x22
-  BuffList_TYPE_array *v101; // x20
-  BuffList_TYPE_array *v102; // x21
-  BuffList_ActInfo_o *v103; // x22
-  BuffList_TYPE_array *v104; // x20
+  BuffList_TYPE_array *v93; // x20
+  BuffList_TYPE_array *v94; // x21
+  BuffList_ActInfo_o *v95; // x22
+  BuffList_TYPE_array *v96; // x20
+  BuffList_TYPE_array *v97; // x21
+  BuffList_ActInfo_o *v98; // x22
+  BuffList_TYPE_array *v99; // x20
+  BuffList_TYPE_array *v100; // x21
+  BuffList_ActInfo_o *v101; // x22
+  int v102; // w8
+  BuffList_TYPE_array *v103; // x20
+  int v104; // w8
   BuffList_TYPE_array *v105; // x21
   BuffList_ActInfo_o *v106; // x22
   BuffList_TYPE_array *v107; // x20
@@ -112,31 +112,31 @@ void __fastcall BuffList___cctor(const MethodInfo *method)
   BuffList_TYPE_array *v110; // x20
   BuffList_TYPE_array *v111; // x21
   BuffList_ActInfo_o *v112; // x22
-  BuffList_TYPE_array *v113; // x20
-  BuffList_TYPE_array *v114; // x21
-  BuffList_ActInfo_o *v115; // x22
-  BuffList_TYPE_array *v116; // x20
-  BuffList_TYPE_array *v117; // x21
-  BuffList_ActInfo_o *v118; // x22
-  int v119; // w8
-  BuffList_TYPE_array *v120; // x20
-  int v121; // w8
-  BuffList_TYPE_array *v122; // x21
-  BuffList_ActInfo_o *v123; // x22
-  BuffList_TYPE_array *v124; // x20
-  BuffList_TYPE_array *v125; // x21
-  BuffList_ActInfo_o *v126; // x22
-  BuffList_TYPE_array *v127; // x20
-  BuffList_TYPE_array *v128; // x21
-  BuffList_ActInfo_o *v129; // x22
-  BuffList_TYPE_array *v130; // x20
-  BuffList_TYPE_array *v131; // x21
-  BuffList_ActInfo_o *v132; // x22
-  int v133; // w8
-  BuffList_TYPE_array *v134; // x20
-  int v135; // w8
-  BuffList_TYPE_array *v136; // x21
-  BuffList_ActInfo_o *v137; // x22
+  System_String_o *v113; // x0
+  BuffList_TYPE_array *v114; // x20
+  BuffList_TYPE_array *v115; // x21
+  BuffList_ActInfo_o *v116; // x22
+  BuffList_TYPE_array *v117; // x20
+  BuffList_TYPE_array *v118; // x21
+  BuffList_ActInfo_o *v119; // x22
+  System_String_o *v120; // x0
+  BuffList_TYPE_array *v121; // x20
+  BuffList_TYPE_array *v122; // x22
+  BuffList_ActInfo_o *v123; // x21
+  System_String_o *v124; // x0
+  BuffList_TYPE_array *v125; // x20
+  BuffList_TYPE_array *v126; // x22
+  BuffList_ActInfo_o *v127; // x21
+  System_String_o *v128; // x0
+  BuffList_TYPE_array *v129; // x20
+  BuffList_TYPE_array *v130; // x22
+  BuffList_ActInfo_o *v131; // x21
+  System_String_o *v132; // x0
+  BuffList_TYPE_array *v133; // x20
+  BuffList_TYPE_array *v134; // x21
+  BuffList_ActInfo_o *v135; // x22
+  __int64 v136; // x1
+  System_String_o *v137; // x0
   BuffList_TYPE_array *v138; // x20
   BuffList_TYPE_array *v139; // x21
   BuffList_ActInfo_o *v140; // x22
@@ -147,35 +147,35 @@ void __fastcall BuffList___cctor(const MethodInfo *method)
   BuffList_TYPE_array *v145; // x20
   BuffList_TYPE_array *v146; // x21
   BuffList_ActInfo_o *v147; // x22
-  BuffList_TYPE_array *v148; // x20
-  BuffList_TYPE_array *v149; // x21
-  BuffList_ActInfo_o *v150; // x22
-  System_String_o *v151; // x0
-  BuffList_TYPE_array *v152; // x20
-  BuffList_TYPE_array *v153; // x22
-  BuffList_ActInfo_o *v154; // x21
-  System_String_o *v155; // x0
+  System_String_o *v148; // x0
+  BuffList_TYPE_array *v149; // x20
+  BuffList_TYPE_array *v150; // x21
+  BuffList_ActInfo_o *v151; // x22
+  System_String_o *v152; // x0
+  BuffList_TYPE_array *v153; // x20
+  BuffList_TYPE_array *v154; // x21
+  BuffList_ActInfo_o *v155; // x22
   BuffList_TYPE_array *v156; // x20
-  BuffList_TYPE_array *v157; // x22
-  BuffList_ActInfo_o *v158; // x21
-  System_String_o *v159; // x0
-  BuffList_TYPE_array *v160; // x20
-  BuffList_TYPE_array *v161; // x22
-  BuffList_ActInfo_o *v162; // x21
-  System_String_o *v163; // x0
-  BuffList_TYPE_array *v164; // x20
-  BuffList_TYPE_array *v165; // x21
-  BuffList_ActInfo_o *v166; // x22
-  BuffList_TYPE_array *v167; // x20
-  BuffList_TYPE_array *v168; // x21
-  BuffList_ActInfo_o *v169; // x22
-  System_String_o *v170; // x0
+  BuffList_TYPE_array *v157; // x21
+  BuffList_ActInfo_o *v158; // x22
+  BuffList_TYPE_array *v159; // x20
+  BuffList_TYPE_array *v160; // x21
+  BuffList_ActInfo_o *v161; // x22
+  BuffList_TYPE_array *v162; // x20
+  BuffList_TYPE_array *v163; // x21
+  BuffList_ActInfo_o *v164; // x22
+  BuffList_TYPE_array *v165; // x20
+  BuffList_TYPE_array *v166; // x21
+  BuffList_ActInfo_o *v167; // x22
+  BuffList_TYPE_array *v168; // x20
+  BuffList_TYPE_array *v169; // x21
+  BuffList_ActInfo_o *v170; // x22
   BuffList_TYPE_array *v171; // x20
-  BuffList_TYPE_array *v172; // x0
-  __int64 v173; // x1
-  BuffList_TYPE_array *v174; // x21
-  BuffList_ActInfo_o *v175; // x22
-  System_String_o *v176; // x0
+  BuffList_TYPE_array *v172; // x21
+  BuffList_ActInfo_o *v173; // x22
+  BuffList_TYPE_array *v174; // x20
+  BuffList_TYPE_array *v175; // x21
+  BuffList_ActInfo_o *v176; // x22
   BuffList_TYPE_array *v177; // x20
   BuffList_TYPE_array *v178; // x21
   BuffList_ActInfo_o *v179; // x22
@@ -184,17 +184,17 @@ void __fastcall BuffList___cctor(const MethodInfo *method)
   BuffList_TYPE_array *v182; // x21
   BuffList_ActInfo_o *v183; // x22
   BuffList_TYPE_array *v184; // x20
-  BuffList_TYPE_array *v185; // x21
-  BuffList_ActInfo_o *v186; // x22
-  BuffList_TYPE_array *v187; // x20
-  BuffList_TYPE_array *v188; // x21
-  BuffList_ActInfo_o *v189; // x22
-  BuffList_TYPE_array *v190; // x20
-  BuffList_TYPE_array *v191; // x21
-  BuffList_ActInfo_o *v192; // x22
-  BuffList_TYPE_array *v193; // x20
-  BuffList_TYPE_array *v194; // x21
-  BuffList_ActInfo_o *v195; // x22
+  BuffList_TYPE_array *v185; // x22
+  BuffList_ActInfo_o *v186; // x21
+  System_String_o *v187; // x0
+  BuffList_TYPE_array *v188; // x20
+  BuffList_TYPE_array *v189; // x22
+  BuffList_ActInfo_o *v190; // x21
+  System_String_o *v191; // x0
+  BuffList_TYPE_array *v192; // x20
+  BuffList_TYPE_array *v193; // x22
+  BuffList_ActInfo_o *v194; // x21
+  System_String_o *v195; // x0
   BuffList_TYPE_array *v196; // x20
   BuffList_TYPE_array *v197; // x21
   BuffList_ActInfo_o *v198; // x22
@@ -204,45 +204,45 @@ void __fastcall BuffList___cctor(const MethodInfo *method)
   BuffList_TYPE_array *v202; // x20
   BuffList_TYPE_array *v203; // x21
   BuffList_ActInfo_o *v204; // x22
-  BuffList_TYPE_array *v205; // x20
-  BuffList_TYPE_array *v206; // x21
-  BuffList_ActInfo_o *v207; // x22
-  System_String_o *v208; // x0
-  BuffList_TYPE_array *v209; // x20
-  BuffList_TYPE_array *v210; // x21
-  BuffList_ActInfo_o *v211; // x22
-  BuffList_TYPE_array *v212; // x20
-  BuffList_TYPE_array *v213; // x22
-  BuffList_ActInfo_o *v214; // x21
-  System_String_o *v215; // x0
+  System_String_o *v205; // x0
+  BuffList_TYPE_array *v206; // x20
+  BuffList_TYPE_array *v207; // x21
+  BuffList_ActInfo_o *v208; // x22
+  System_String_o *v209; // x0
+  BuffList_TYPE_array *v210; // x20
+  BuffList_TYPE_array *v211; // x21
+  BuffList_ActInfo_o *v212; // x22
+  BuffList_TYPE_array *v213; // x20
+  BuffList_TYPE_array *v214; // x21
+  BuffList_ActInfo_o *v215; // x22
   BuffList_TYPE_array *v216; // x20
-  BuffList_TYPE_array *v217; // x22
-  BuffList_ActInfo_o *v218; // x21
-  System_String_o *v219; // x0
-  BuffList_TYPE_array *v220; // x20
-  BuffList_TYPE_array *v221; // x22
-  BuffList_ActInfo_o *v222; // x21
-  System_String_o *v223; // x0
-  BuffList_TYPE_array *v224; // x20
-  BuffList_TYPE_array *v225; // x21
-  BuffList_ActInfo_o *v226; // x22
-  BuffList_TYPE_array *v227; // x20
-  BuffList_TYPE_array *v228; // x21
-  BuffList_ActInfo_o *v229; // x22
-  BuffList_TYPE_array *v230; // x20
-  BuffList_TYPE_array *v231; // x21
-  BuffList_ActInfo_o *v232; // x22
-  System_String_o *v233; // x0
-  BuffList_TYPE_array *v234; // x20
-  BuffList_TYPE_array *v235; // x21
-  BuffList_ActInfo_o *v236; // x22
-  System_String_o *v237; // x0
-  BuffList_TYPE_array *v238; // x20
-  BuffList_TYPE_array *v239; // x21
-  BuffList_ActInfo_o *v240; // x22
-  BuffList_TYPE_array *v241; // x20
-  BuffList_TYPE_array *v242; // x21
-  BuffList_ActInfo_o *v243; // x22
+  BuffList_TYPE_array *v217; // x21
+  BuffList_ActInfo_o *v218; // x22
+  BuffList_TYPE_array *v219; // x20
+  BuffList_TYPE_array *v220; // x21
+  BuffList_ActInfo_o *v221; // x22
+  BuffList_TYPE_array *v222; // x20
+  BuffList_TYPE_array *v223; // x21
+  BuffList_ActInfo_o *v224; // x22
+  BuffList_TYPE_array *v225; // x20
+  BuffList_TYPE_array *v226; // x21
+  BuffList_ActInfo_o *v227; // x22
+  BuffList_TYPE_array *v228; // x20
+  BuffList_TYPE_array *v229; // x22
+  BuffList_ActInfo_o *v230; // x21
+  System_String_o *v231; // x0
+  BuffList_TYPE_array *v232; // x20
+  BuffList_TYPE_array *v233; // x21
+  BuffList_ActInfo_o *v234; // x22
+  System_String_o *v235; // x0
+  BuffList_TYPE_array *v236; // x20
+  BuffList_TYPE_array *v237; // x21
+  BuffList_ActInfo_o *v238; // x22
+  System_String_o *v239; // x0
+  BuffList_TYPE_array *v240; // x20
+  BuffList_TYPE_array *v241; // x21
+  BuffList_ActInfo_o *v242; // x22
+  System_String_o *v243; // x0
   BuffList_TYPE_array *v244; // x20
   BuffList_TYPE_array *v245; // x21
   BuffList_ActInfo_o *v246; // x22
@@ -256,21 +256,21 @@ void __fastcall BuffList___cctor(const MethodInfo *method)
   BuffList_TYPE_array *v254; // x21
   BuffList_ActInfo_o *v255; // x22
   BuffList_TYPE_array *v256; // x20
-  BuffList_TYPE_array *v257; // x22
-  BuffList_ActInfo_o *v258; // x21
+  BuffList_TYPE_array *v257; // x21
+  BuffList_ActInfo_o *v258; // x22
   System_String_o *v259; // x0
   BuffList_TYPE_array *v260; // x20
   BuffList_TYPE_array *v261; // x21
   BuffList_ActInfo_o *v262; // x22
-  System_String_o *v263; // x0
-  BuffList_TYPE_array *v264; // x20
-  BuffList_TYPE_array *v265; // x21
-  BuffList_ActInfo_o *v266; // x22
-  System_String_o *v267; // x0
-  BuffList_TYPE_array *v268; // x20
-  BuffList_TYPE_array *v269; // x21
-  BuffList_ActInfo_o *v270; // x22
-  System_String_o *v271; // x0
+  BuffList_TYPE_array *v263; // x20
+  BuffList_TYPE_array *v264; // x21
+  BuffList_ActInfo_o *v265; // x22
+  BuffList_TYPE_array *v266; // x20
+  BuffList_TYPE_array *v267; // x21
+  BuffList_ActInfo_o *v268; // x22
+  BuffList_TYPE_array *v269; // x20
+  BuffList_TYPE_array *v270; // x21
+  BuffList_ActInfo_o *v271; // x22
   BuffList_TYPE_array *v272; // x20
   BuffList_TYPE_array *v273; // x21
   BuffList_ActInfo_o *v274; // x22
@@ -286,64 +286,64 @@ void __fastcall BuffList___cctor(const MethodInfo *method)
   BuffList_TYPE_array *v284; // x20
   BuffList_TYPE_array *v285; // x21
   BuffList_ActInfo_o *v286; // x22
-  System_String_o *v287; // x0
-  BuffList_TYPE_array *v288; // x20
-  BuffList_TYPE_array *v289; // x21
-  BuffList_ActInfo_o *v290; // x22
+  BuffList_TYPE_array *v287; // x20
+  BuffList_TYPE_array *v288; // x22
+  BuffList_ActInfo_o *v289; // x21
+  System_String_o *v290; // x0
   BuffList_TYPE_array *v291; // x20
-  BuffList_TYPE_array *v292; // x21
-  BuffList_ActInfo_o *v293; // x22
-  BuffList_TYPE_array *v294; // x20
-  BuffList_TYPE_array *v295; // x21
-  BuffList_ActInfo_o *v296; // x22
-  BuffList_TYPE_array *v297; // x20
-  BuffList_TYPE_array *v298; // x21
-  BuffList_ActInfo_o *v299; // x22
-  BuffList_TYPE_array *v300; // x20
-  BuffList_TYPE_array *v301; // x21
-  BuffList_ActInfo_o *v302; // x22
-  BuffList_TYPE_array *v303; // x20
-  BuffList_TYPE_array *v304; // x21
-  BuffList_ActInfo_o *v305; // x22
-  BuffList_TYPE_array *v306; // x20
-  BuffList_TYPE_array *v307; // x21
-  BuffList_ActInfo_o *v308; // x22
-  BuffList_TYPE_array *v309; // x20
-  BuffList_TYPE_array *v310; // x21
-  BuffList_ActInfo_o *v311; // x22
-  BuffList_TYPE_array *v312; // x20
-  BuffList_TYPE_array *v313; // x21
-  BuffList_ActInfo_o *v314; // x22
-  BuffList_TYPE_array *v315; // x20
-  BuffList_TYPE_array *v316; // x22
-  BuffList_ActInfo_o *v317; // x21
-  System_String_o *v318; // x0
-  BuffList_TYPE_array *v319; // x20
-  BuffList_TYPE_array *v320; // x22
-  BuffList_ActInfo_o *v321; // x21
-  System_String_o *v322; // x0
-  BuffList_TYPE_array *v323; // x20
-  BuffList_TYPE_array *v324; // x21
-  BuffList_ActInfo_o *v325; // x22
-  BuffList_TYPE_array *v326; // x20
-  BuffList_TYPE_array *v327; // x21
-  BuffList_ActInfo_o *v328; // x22
-  BuffList_TYPE_array *v329; // x20
-  BuffList_TYPE_array *v330; // x21
-  BuffList_ActInfo_o *v331; // x22
+  BuffList_TYPE_array *v292; // x22
+  BuffList_ActInfo_o *v293; // x21
+  System_String_o *v294; // x0
+  BuffList_TYPE_array *v295; // x20
+  BuffList_TYPE_array *v296; // x21
+  BuffList_ActInfo_o *v297; // x22
+  BuffList_TYPE_array *v298; // x20
+  BuffList_TYPE_array *v299; // x21
+  BuffList_ActInfo_o *v300; // x22
+  BuffList_TYPE_array *v301; // x20
+  BuffList_TYPE_array *v302; // x21
+  BuffList_ActInfo_o *v303; // x22
+  __int64 v304; // x1
+  BuffList_TYPE_array *v305; // x20
+  BuffList_TYPE_array *v306; // x21
+  BuffList_ActInfo_o *v307; // x22
+  BuffList_TYPE_array *v308; // x20
+  BuffList_TYPE_array *v309; // x21
+  BuffList_ActInfo_o *v310; // x22
+  BuffList_TYPE_array *v311; // x20
+  BuffList_TYPE_array *v312; // x21
+  BuffList_ActInfo_o *v313; // x22
+  System_Array_o *v314; // x21
+  BuffList_TYPE_array *v315; // x22
+  BuffList_ActInfo_o *v316; // x20
+  System_String_o *v317; // x0
+  BuffList_TYPE_array *v318; // x20
+  BuffList_TYPE_array *v319; // x21
+  BuffList_ActInfo_o *v320; // x22
+  BuffList_TYPE_array *v321; // x20
+  BuffList_TYPE_array *v322; // x21
+  BuffList_ActInfo_o *v323; // x22
+  BuffList_TYPE_array *v324; // x20
+  BuffList_TYPE_array *v325; // x21
+  BuffList_ActInfo_o *v326; // x22
+  System_String_o *v327; // x0
+  BuffList_TYPE_array *v328; // x20
+  BuffList_TYPE_array *v329; // x21
+  BuffList_ActInfo_o *v330; // x22
+  System_String_o *v331; // x0
   BuffList_TYPE_array *v332; // x20
-  BuffList_TYPE_array *v333; // x21
-  BuffList_ActInfo_o *v334; // x22
-  BuffList_TYPE_array *v335; // x20
-  BuffList_TYPE_array *v336; // x21
-  BuffList_ActInfo_o *v337; // x22
-  BuffList_TYPE_array *v338; // x20
-  BuffList_TYPE_array *v339; // x21
-  BuffList_ActInfo_o *v340; // x22
-  System_Array_o *v341; // x21
-  BuffList_TYPE_array *v342; // x22
-  BuffList_ActInfo_o *v343; // x20
-  System_String_o *v344; // x0
+  BuffList_TYPE_array *v333; // x22
+  BuffList_ActInfo_o *v334; // x21
+  System_String_o *v335; // x0
+  BuffList_TYPE_array *v336; // x20
+  BuffList_TYPE_array *v337; // x21
+  BuffList_ActInfo_o *v338; // x22
+  BuffList_TYPE_array *v339; // x20
+  BuffList_TYPE_array *v340; // x21
+  BuffList_ActInfo_o *v341; // x22
+  BuffList_TYPE_array *v342; // x20
+  BuffList_TYPE_array *v343; // x21
+  BuffList_ActInfo_o *v344; // x22
   BuffList_TYPE_array *v345; // x20
   BuffList_TYPE_array *v346; // x21
   BuffList_ActInfo_o *v347; // x22
@@ -351,18 +351,18 @@ void __fastcall BuffList___cctor(const MethodInfo *method)
   BuffList_TYPE_array *v349; // x21
   BuffList_ActInfo_o *v350; // x22
   BuffList_TYPE_array *v351; // x20
-  __int64 v352; // x1
-  BuffList_TYPE_array *v353; // x21
-  BuffList_ActInfo_o *v354; // x22
-  System_String_o *v355; // x0
-  BuffList_TYPE_array *v356; // x20
-  BuffList_TYPE_array *v357; // x21
-  BuffList_ActInfo_o *v358; // x22
-  System_String_o *v359; // x0
-  BuffList_TYPE_array *v360; // x20
-  BuffList_TYPE_array *v361; // x22
-  BuffList_ActInfo_o *v362; // x21
-  System_String_o *v363; // x0
+  BuffList_TYPE_array *v352; // x21
+  BuffList_ActInfo_o *v353; // x22
+  BuffList_TYPE_array *v354; // x20
+  BuffList_TYPE_array *v355; // x22
+  BuffList_ActInfo_o *v356; // x21
+  System_String_o *v357; // x0
+  BuffList_TYPE_array *v358; // x20
+  BuffList_TYPE_array *v359; // x21
+  BuffList_ActInfo_o *v360; // x22
+  BuffList_TYPE_array *v361; // x20
+  BuffList_TYPE_array *v362; // x21
+  BuffList_ActInfo_o *v363; // x22
   BuffList_TYPE_array *v364; // x20
   BuffList_TYPE_array *v365; // x21
   BuffList_ActInfo_o *v366; // x22
@@ -371,42 +371,42 @@ void __fastcall BuffList___cctor(const MethodInfo *method)
   BuffList_ActInfo_o *v369; // x22
   BuffList_TYPE_array *v370; // x20
   BuffList_TYPE_array *v371; // x21
-  BuffList_ActInfo_o *v372; // x22
+  BuffList_ToFieldActInfo_o *v372; // x22
   BuffList_TYPE_array *v373; // x20
   BuffList_TYPE_array *v374; // x21
-  BuffList_ActInfo_o *v375; // x22
+  BuffList_ToFieldActInfo_o *v375; // x22
   BuffList_TYPE_array *v376; // x20
-  BuffList_TYPE_array *v377; // x21
-  BuffList_ActInfo_o *v378; // x22
-  BuffList_TYPE_array *v379; // x20
-  BuffList_TYPE_array *v380; // x21
-  BuffList_ActInfo_o *v381; // x22
-  BuffList_TYPE_array *v382; // x20
-  BuffList_TYPE_array *v383; // x22
-  BuffList_ActInfo_o *v384; // x21
-  System_String_o *v385; // x0
+  BuffList_TYPE_array *v377; // x22
+  BuffList_ActInfo_o *v378; // x21
+  System_String_o *v379; // x0
+  BuffList_TYPE_array *v380; // x20
+  BuffList_TYPE_array *v381; // x21
+  BuffList_ActInfo_o *v382; // x22
+  BuffList_TYPE_array *v383; // x20
+  BuffList_TYPE_array *v384; // x21
+  BuffList_ActInfo_o *v385; // x22
   BuffList_TYPE_array *v386; // x20
-  BuffList_TYPE_array *v387; // x21
-  BuffList_ActInfo_o *v388; // x22
-  BuffList_TYPE_array *v389; // x20
-  BuffList_TYPE_array *v390; // x21
-  BuffList_ActInfo_o *v391; // x22
-  BuffList_TYPE_array *v392; // x20
-  BuffList_TYPE_array *v393; // x21
-  BuffList_ActInfo_o *v394; // x22
+  BuffList_TYPE_array *v387; // x22
+  BuffList_ActInfo_o *v388; // x21
+  System_String_o *v389; // x0
+  BuffList_TYPE_array *v390; // x20
+  BuffList_TYPE_array *v391; // x21
+  BuffList_ActInfo_o *v392; // x22
+  System_String_o *v393; // x0
+  int v394; // w8
   BuffList_TYPE_array *v395; // x20
   BuffList_TYPE_array *v396; // x21
   BuffList_ActInfo_o *v397; // x22
   BuffList_TYPE_array *v398; // x20
-  BuffList_TYPE_array *v399; // x21
-  BuffList_ToFieldActInfo_o *v400; // x22
-  BuffList_TYPE_array *v401; // x20
-  BuffList_TYPE_array *v402; // x21
-  BuffList_ToFieldActInfo_o *v403; // x22
-  BuffList_TYPE_array *v404; // x20
-  BuffList_TYPE_array *v405; // x22
-  BuffList_ActInfo_o *v406; // x21
-  System_String_o *v407; // x0
+  BuffList_TYPE_array *v399; // x22
+  BuffList_ActInfo_o *v400; // x21
+  System_String_o *v401; // x0
+  BuffList_TYPE_array *v402; // x20
+  BuffList_TYPE_array *v403; // x21
+  BuffList_ActInfo_o *v404; // x22
+  BuffList_TYPE_array *v405; // x20
+  BuffList_TYPE_array *v406; // x21
+  BuffList_ActInfo_o *v407; // x22
   BuffList_TYPE_array *v408; // x20
   BuffList_TYPE_array *v409; // x21
   BuffList_ActInfo_o *v410; // x22
@@ -414,42 +414,42 @@ void __fastcall BuffList___cctor(const MethodInfo *method)
   BuffList_TYPE_array *v412; // x21
   BuffList_ActInfo_o *v413; // x22
   BuffList_TYPE_array *v414; // x20
-  BuffList_TYPE_array *v415; // x22
-  BuffList_ActInfo_o *v416; // x21
-  System_String_o *v417; // x0
-  BuffList_TYPE_array *v418; // x20
-  BuffList_TYPE_array *v419; // x21
-  BuffList_ActInfo_o *v420; // x22
-  System_String_o *v421; // x0
-  il2cpp_array_size_t max_length; // w8
+  BuffList_TYPE_array *v415; // x21
+  BuffList_ActInfo_o *v416; // x22
+  BuffList_TYPE_array *v417; // x20
+  BuffList_TYPE_array *v418; // x21
+  BuffList_ActInfo_o *v419; // x22
+  BuffList_TYPE_array *v420; // x20
+  BuffList_TYPE_array *v421; // x21
+  BuffList_ActInfo_o *v422; // x22
   BuffList_TYPE_array *v423; // x20
   BuffList_TYPE_array *v424; // x21
   BuffList_ActInfo_o *v425; // x22
   BuffList_TYPE_array *v426; // x20
-  BuffList_TYPE_array *v427; // x22
-  BuffList_ActInfo_o *v428; // x21
-  System_String_o *v429; // x0
-  BuffList_TYPE_array *v430; // x20
-  BuffList_TYPE_array *v431; // x21
-  BuffList_ActInfo_o *v432; // x22
-  BuffList_TYPE_array *v433; // x20
-  BuffList_TYPE_array *v434; // x21
-  BuffList_ActInfo_o *v435; // x22
-  BuffList_TYPE_array *v436; // x20
-  BuffList_TYPE_array *v437; // x21
-  BuffList_ActInfo_o *v438; // x22
-  BuffList_TYPE_array *v439; // x20
-  BuffList_TYPE_array *v440; // x21
-  BuffList_ActInfo_o *v441; // x22
-  BuffList_TYPE_array *v442; // x20
-  BuffList_TYPE_array *v443; // x21
-  BuffList_ActInfo_o *v444; // x22
-  BuffList_TYPE_array *v445; // x20
-  BuffList_TYPE_array *v446; // x21
-  BuffList_ActInfo_o *v447; // x22
-  BuffList_TYPE_array *v448; // x20
-  BuffList_TYPE_array *v449; // x21
-  BuffList_ActInfo_o *v450; // x22
+  BuffList_TYPE_array *v427; // x21
+  BuffList_ActInfo_o *v428; // x22
+  BuffList_TYPE_array *v429; // x20
+  BuffList_TYPE_array *v430; // x21
+  BuffList_ActInfo_o *v431; // x22
+  BuffList_TYPE_array *v432; // x20
+  BuffList_TYPE_array *v433; // x21
+  BuffList_ActInfo_o *v434; // x22
+  BuffList_TYPE_array *v435; // x20
+  BuffList_TYPE_array *v436; // x21
+  BuffList_ActInfo_o *v437; // x22
+  BuffList_TYPE_array *v438; // x20
+  BuffList_TYPE_array *v439; // x21
+  BuffList_ActInfo_o *v440; // x22
+  BuffList_TYPE_array *v441; // x20
+  BuffList_TYPE_array *v442; // x21
+  BuffList_ActInfo_o *v443; // x22
+  BuffList_TYPE_array *v444; // x20
+  BuffList_TYPE_array *v445; // x21
+  BuffList_ActInfo_o *v446; // x22
+  BuffList_TYPE_array *v447; // x20
+  BuffList_TYPE_array *v448; // x21
+  BuffList_ActInfo_o *v449; // x22
+  int v450; // w8
   BuffList_TYPE_array *v451; // x20
   BuffList_TYPE_array *v452; // x21
   BuffList_ActInfo_o *v453; // x22
@@ -462,2495 +462,2611 @@ void __fastcall BuffList___cctor(const MethodInfo *method)
   BuffList_TYPE_array *v460; // x20
   BuffList_TYPE_array *v461; // x21
   BuffList_ActInfo_o *v462; // x22
-  BuffList_TYPE_array *v463; // x20
-  BuffList_TYPE_array *v464; // x21
-  BuffList_ActInfo_o *v465; // x22
-  BuffList_TYPE_array *v466; // x20
-  BuffList_TYPE_array *v467; // x21
-  BuffList_ActInfo_o *v468; // x22
-  BuffList_TYPE_array *v469; // x20
-  BuffList_TYPE_array *v470; // x21
-  BuffList_ActInfo_o *v471; // x22
-  il2cpp_array_size_t v472; // w8
-  BuffList_TYPE_array *v473; // x20
-  BuffList_TYPE_array *v474; // x21
-  BuffList_ActInfo_o *v475; // x22
   BattleServantConfConponent_o *static_fields; // x0
-  System_String_array **v477; // x2
-  System_String_array **v478; // x3
-  System_Boolean_array **v479; // x4
-  System_Int32_array **v480; // x5
-  System_Int32_array *v481; // x6
-  System_Int32_array *v482; // x7
-  System_String_array **v483; // x2
-  System_String_array **v484; // x3
-  System_Boolean_array **v485; // x4
-  System_Int32_array **v486; // x5
-  System_Int32_array *v487; // x6
-  System_Int32_array *v488; // x7
-  il2cpp_array_size_t v489; // w8
-  System_Int32_array **v490; // x1
-  struct BuffList_StaticFields *v491; // x0
-  System_Array_o *v492; // x19
-  struct BuffList_StaticFields *v493; // x0
-  System_String_array **v494; // x2
-  System_String_array **v495; // x3
-  System_Boolean_array **v496; // x4
-  System_Int32_array **v497; // x5
-  System_Int32_array *v498; // x6
-  System_Int32_array *v499; // x7
-  System_Collections_Generic_HashSet_EventMissionCondDetailEntity_MissionCondType__o *v500; // x19
-  struct BuffList_StaticFields *v501; // x0
-  System_String_array **v502; // x2
-  System_String_array **v503; // x3
-  System_Boolean_array **v504; // x4
-  System_Int32_array **v505; // x5
-  System_Int32_array *v506; // x6
-  System_Int32_array *v507; // x7
-  __int64 v508; // x0
-  __int64 v509; // x0
-  __int64 v510; // x0
-  System_RuntimeFieldHandle_o v511; // 0:w1.4
-  System_RuntimeFieldHandle_o v512; // 0:w1.4
+  System_String_array **v464; // x2
+  System_String_array **v465; // x3
+  System_Boolean_array **v466; // x4
+  System_Int32_array **v467; // x5
+  System_Int32_array *v468; // x6
+  System_Int32_array *v469; // x7
+  System_String_array **v470; // x2
+  System_String_array **v471; // x3
+  System_Boolean_array **v472; // x4
+  System_Int32_array **v473; // x5
+  System_Int32_array *v474; // x6
+  System_Int32_array *v475; // x7
+  int v476; // w8
+  System_Int32_array **v477; // x1
+  struct BuffList_StaticFields *v478; // x0
+  System_Array_o *v479; // x19
+  struct BuffList_StaticFields *v480; // x0
+  System_String_array **v481; // x2
+  System_String_array **v482; // x3
+  System_Boolean_array **v483; // x4
+  System_Int32_array **v484; // x5
+  System_Int32_array *v485; // x6
+  System_Int32_array *v486; // x7
+  System_Collections_Generic_HashSet_EventMissionCondDetailEntity_MissionCondType__o *v487; // x19
+  struct BuffList_StaticFields *v488; // x0
+  System_String_array **v489; // x2
+  System_String_array **v490; // x3
+  System_Boolean_array **v491; // x4
+  System_Int32_array **v492; // x5
+  System_Int32_array *v493; // x6
+  System_Int32_array *v494; // x7
+  __int64 v495; // x0
+  __int64 v496; // x0
+  __int64 v497; // x0
+  System_RuntimeFieldHandle_o v498; // 0:w1.4
+  System_RuntimeFieldHandle_o v499; // 0:w1.4
 
-  if ( (byte_42EA61B & 1) == 0 )
+  if ( (byte_4353F41 & 1) == 0 )
   {
-    sub_B5D5C4(&BuffList_ACTION___TypeInfo, v1, v2, v3);
-    sub_B5D5C4(&BuffList_ActInfo_TypeInfo, v4, v5, v6);
-    sub_B5D5C4(&BuffList_TypeInfo, v7, v8, v9);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__, v10, v11, v12);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo___ctor__, v13, v14, v15);
-    sub_B5D5C4(&System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__TypeInfo, v16, v17, v18);
-    sub_B5D5C4(&Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__, v19, v20, v21);
-    sub_B5D5C4(&Method_System_Collections_Generic_HashSet_BuffList_TYPE___ctor__, v22, v23, v24);
-    sub_B5D5C4(&System_Collections_Generic_HashSet_BuffList_TYPE__TypeInfo, v25, v26, v27);
-    sub_B5D5C4(&BuffList_TYPE___TypeInfo, v28, v29, v30);
-    sub_B5D5C4(&BuffList_ToFieldActInfo_TypeInfo, v31, v32, v33);
-    sub_B5D5C4(
-      &Field__PrivateImplementationDetails__4EECD95FEC87B9ABE1EA9376D9C9CF1F7F1C01299268E427022C2F5192383D9E,
-      v34,
-      v35,
-      v36);
-    sub_B5D5C4(
-      &Field__PrivateImplementationDetails__F74CB50F9D18C1E2A044410ED05D3C7285B0A0EF1A7321D9BD37EE90BF1D943E,
-      v37,
-      v38,
-      v39);
-    byte_42EA61B = 1;
+    sub_B70694(&BuffList_ACTION___TypeInfo);
+    sub_B70694(&BuffList_ActInfo_TypeInfo);
+    sub_B70694(&BuffList_TypeInfo);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo___ctor__);
+    sub_B70694(&System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__TypeInfo);
+    sub_B70694(&Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__);
+    sub_B70694(&Method_System_Collections_Generic_HashSet_BuffList_TYPE___ctor__);
+    sub_B70694(&System_Collections_Generic_HashSet_BuffList_TYPE__TypeInfo);
+    sub_B70694(&BuffList_TYPE___TypeInfo);
+    sub_B70694(&BuffList_ToFieldActInfo_TypeInfo);
+    sub_B70694(&Field__PrivateImplementationDetails__4EECD95FEC87B9ABE1EA9376D9C9CF1F7F1C01299268E427022C2F5192383D9E);
+    sub_B70694(&Field__PrivateImplementationDetails__F74CB50F9D18C1E2A044410ED05D3C7285B0A0EF1A7321D9BD37EE90BF1D943E);
+    byte_4353F41 = 1;
   }
-  v40 = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)sub_B5D694(System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__TypeInfo);
+  v1 = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)sub_B70764(System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__TypeInfo);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string____ctor(
-    v40,
-    (const MethodInfo_2F48DA8 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo___ctor__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 2LL);
-  if ( !v41 )
-    goto LABEL_398;
-  plusTypes = (int)v41->fields.plusTypes;
-  v44 = (BuffList_TYPE_array *)v41;
+    v1,
+    (const MethodInfo_2F71470 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo___ctor__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 2LL);
+  if ( !v2 )
+    goto LABEL_421;
+  plusTypes = (int)v2->fields.plusTypes;
+  v5 = (BuffList_TYPE_array *)v2;
   if ( !plusTypes )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 1;
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 1;
   if ( plusTypes == 1 )
-    goto LABEL_400;
-  HIDWORD(v41->fields.minusTypes) = 52;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 2LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v45 = (int)v41->fields.plusTypes;
-  v46 = (BuffList_TYPE_array *)v41;
-  if ( !v45 )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 66;
-  if ( v45 == 1 )
-    goto LABEL_400;
-  HIDWORD(v41->fields.minusTypes) = 60;
-  v47 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v47, 3, v44, v46, 0LL);
-  if ( !v40 )
-    goto LABEL_398;
+    goto LABEL_423;
+  HIDWORD(v2->fields.minusTypes) = 52;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 2LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v6 = (int)v2->fields.plusTypes;
+  v7 = (BuffList_TYPE_array *)v2;
+  if ( !v6 )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 66;
+  if ( v6 == 1 )
+    goto LABEL_423;
+  HIDWORD(v2->fields.minusTypes) = 60;
+  v8 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v8, 3, v5, v7, 0LL);
+  if ( !v1 )
+    goto LABEL_421;
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     1,
-    (System_String_o *)v47,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 2LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v48 = (int)v41->fields.plusTypes;
-  v49 = (BuffList_TYPE_array *)v41;
-  if ( !v48 )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 105;
-  if ( v48 == 1 )
-    goto LABEL_400;
-  HIDWORD(v41->fields.minusTypes) = 128;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 2LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v50 = (int)v41->fields.plusTypes;
-  v51 = (BuffList_TYPE_array *)v41;
-  if ( !v50 )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 106;
-  if ( v50 == 1 )
-    goto LABEL_400;
-  HIDWORD(v41->fields.minusTypes) = 129;
-  v52 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v52, 1, v49, v51, 0LL);
+    (System_String_o *)v8,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 2LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v9 = (int)v2->fields.plusTypes;
+  v10 = (BuffList_TYPE_array *)v2;
+  if ( !v9 )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 105;
+  if ( v9 == 1 )
+    goto LABEL_423;
+  HIDWORD(v2->fields.minusTypes) = 128;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 2LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v11 = (int)v2->fields.plusTypes;
+  v12 = (BuffList_TYPE_array *)v2;
+  if ( !v11 )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 106;
+  if ( v11 == 1 )
+    goto LABEL_423;
+  HIDWORD(v2->fields.minusTypes) = 129;
+  v13 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v13, 1, v10, v12, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     2,
-    (System_String_o *)v52,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v53 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 9;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v54 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 10;
-  v55 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v55, 3, v53, v54, 0LL);
+    (System_String_o *)v13,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v14 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 9;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v15 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 10;
+  v16 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v16, 3, v14, v15, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     3,
-    (System_String_o *)v55,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v56 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 42;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v57 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 43;
-  v58 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v58, 2, v56, v57, 0LL);
+    (System_String_o *)v16,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v17 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 42;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v18 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 43;
+  v19 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v19, 2, v17, v18, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     4,
-    (System_String_o *)v58,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v59 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v60 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 43;
-  v61 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v61, 2, v59, v60, 0LL);
+    (System_String_o *)v19,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v20 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v21 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 43;
+  v22 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v22, 2, v20, v21, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     5,
-    (System_String_o *)v61,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v62 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 91;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v63 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 92;
-  v64 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v64, 3, v62, v63, 0LL);
-  if ( !v64 )
-    goto LABEL_398;
-  v65 = (System_String_o *)BuffList_ActInfo__setBaseValue(v64, 1000, 0LL);
+    (System_String_o *)v22,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v23 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 91;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v24 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 92;
+  v25 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v25, 3, v23, v24, 0LL);
+  if ( !v25 )
+    goto LABEL_421;
+  v26 = (System_String_o *)BuffList_ActInfo__setBaseValue(v25, 1000, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     6,
-    v65,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v66 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 11;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v67 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 12;
-  v68 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v68, 1, v66, v67, 0LL);
-  if ( !v68 )
-    goto LABEL_398;
-  v69 = (System_String_o *)BuffList_ActInfo__setBaseValue(v68, 1000, 0LL);
+    v26,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v27 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 11;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v28 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 12;
+  v29 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v29, 1, v27, v28, 0LL);
+  if ( !v29 )
+    goto LABEL_421;
+  v30 = (System_String_o *)BuffList_ActInfo__setBaseValue(v29, 1000, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     7,
-    v69,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v70 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 110;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v71 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 111;
-  v72 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v72, 1, v70, v71, 0LL);
-  if ( !v72 )
-    goto LABEL_398;
-  v73 = (System_String_o *)BuffList_ActInfo__setBaseValue(v72, 1000, 0LL);
+    v30,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v31 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 110;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v32 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 111;
+  v33 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v33, 1, v31, v32, 0LL);
+  if ( !v33 )
+    goto LABEL_421;
+  v34 = (System_String_o *)BuffList_ActInfo__setBaseValue(v33, 1000, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     8,
-    v73,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v74 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 112;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v75 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 113;
-  v76 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v76, 1, v74, v75, 0LL);
-  if ( !v76 )
-    goto LABEL_398;
-  v77 = (System_String_o *)BuffList_ActInfo__setBaseValue(v76, 1000, 0LL);
+    v34,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v35 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 112;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v36 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 113;
+  v37 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v37, 1, v35, v36, 0LL);
+  if ( !v37 )
+    goto LABEL_421;
+  v38 = (System_String_o *)BuffList_ActInfo__setBaseValue(v37, 1000, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     9,
-    v77,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
+    v38,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v39 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 20;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v40 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 21;
+  v41 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v41, 1, v39, v40, 0LL);
   if ( !v41 )
-    goto LABEL_398;
-  v78 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 20;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v79 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 21;
-  v80 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v80, 1, v78, v79, 0LL);
-  if ( !v80 )
-    goto LABEL_398;
-  v81 = (System_String_o *)BuffList_ActInfo__setBaseValue(v80, 1000, 0LL);
+    goto LABEL_421;
+  v42 = (System_String_o *)BuffList_ActInfo__setBaseValue(v41, 1000, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     10,
-    v81,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v82 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 18;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v83 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 19;
-  v84 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v84, 1, v82, v83, 0LL);
-  if ( !v84 )
-    goto LABEL_398;
-  v85 = (System_String_o *)BuffList_ActInfo__setBaseValue(v84, 1000, 0LL);
+    v42,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v43 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 18;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v44 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 19;
+  v45 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v45, 1, v43, v44, 0LL);
+  if ( !v45 )
+    goto LABEL_421;
+  v46 = (System_String_o *)BuffList_ActInfo__setBaseValue(v45, 1000, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     11,
-    v85,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v86 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 15;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v87 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 16;
-  v88 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v88, 1, v86, v87, 0LL);
-  if ( !v88 )
-    goto LABEL_398;
-  v89 = (System_String_o *)BuffList_ActInfo__setBaseValue(v88, 1000, 0LL);
+    v46,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v47 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 15;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v48 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 16;
+  v49 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v49, 1, v47, v48, 0LL);
+  if ( !v49 )
+    goto LABEL_421;
+  v50 = (System_String_o *)BuffList_ActInfo__setBaseValue(v49, 1000, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     12,
-    v89,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v90 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 13;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v91 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 14;
-  v92 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v92, 0, v90, v91, 0LL);
-  if ( !v92 )
-    goto LABEL_398;
-  v93 = (System_String_o *)BuffList_ActInfo__setBaseParam(v92, 0, 0LL);
+    v50,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v51 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 13;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v52 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 14;
+  v53 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v53, 0, v51, v52, 0LL);
+  if ( !v53 )
+    goto LABEL_421;
+  v54 = (System_String_o *)BuffList_ActInfo__setBaseParam(v53, 0, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     13,
-    v93,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v94 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 22;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v95 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 23;
-  v96 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v96, 0, v94, v95, 0LL);
-  if ( !v96 )
-    goto LABEL_398;
-  v97 = (System_String_o *)BuffList_ActInfo__setBaseParam(v96, 0, 0LL);
+    v54,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v55 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 22;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v56 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 23;
+  v57 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v57, 0, v55, v56, 0LL);
+  if ( !v57 )
+    goto LABEL_421;
+  v58 = (System_String_o *)BuffList_ActInfo__setBaseParam(v57, 0, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     14,
-    v97,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v98 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 72;
-  v99 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v100 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v100, 0, v98, v99, 0LL);
+    v58,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v59 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 22;
+  v60 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v61 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v61, 0, v59, v60, 0LL);
+  if ( !v61 )
+    goto LABEL_421;
+  v62 = (System_String_o *)BuffList_ActInfo__setBaseParam(v61, 0, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
+    133,
+    v62,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v63 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 195;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v64 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 196;
+  v65 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v65, 0, v63, v64, 0LL);
+  if ( !v65 )
+    goto LABEL_421;
+  v66 = (System_String_o *)BuffList_ActInfo__setBaseParam(v65, 0, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    134,
+    v66,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v67 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 72;
+  v68 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v69 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v69, 0, v67, v68, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
     15,
-    (System_String_o *)v100,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v101 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 26;
-  v102 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v103 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v103, 0, v101, v102, 0LL);
+    (System_String_o *)v69,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v70 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 26;
+  v71 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v72 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v72, 0, v70, v71, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     16,
-    (System_String_o *)v103,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v104 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 25;
-  v105 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v106 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v106, 0, v104, v105, 0LL);
+    (System_String_o *)v72,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v73 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 25;
+  v74 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v75 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v75, 0, v73, v74, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     17,
-    (System_String_o *)v106,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v107 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 24;
-  v108 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v109 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v109, 0, v107, v108, 0LL);
+    (System_String_o *)v75,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v76 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 24;
+  v77 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v78 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v78, 0, v76, v77, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     18,
-    (System_String_o *)v109,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v110 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 107;
-  v111 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v112 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v112, 0, v110, v111, 0LL);
+    (System_String_o *)v78,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v79 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 107;
+  v80 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v81 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v81, 0, v79, v80, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     19,
-    (System_String_o *)v112,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v113 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 108;
-  v114 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v115 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v115, 0, v113, v114, 0LL);
+    (System_String_o *)v81,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v82 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 108;
+  v83 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v84 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v84, 0, v82, v83, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     20,
-    (System_String_o *)v115,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v116 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 109;
-  v117 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v118 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v118, 0, v116, v117, 0LL);
+    (System_String_o *)v84,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v85 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 109;
+  v86 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v87 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v87, 0, v85, v86, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     21,
-    (System_String_o *)v118,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 2LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v119 = (int)v41->fields.plusTypes;
-  v120 = (BuffList_TYPE_array *)v41;
-  if ( !v119 )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 51;
-  if ( v119 == 1 )
-    goto LABEL_400;
-  HIDWORD(v41->fields.minusTypes) = 52;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 2LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v121 = (int)v41->fields.plusTypes;
-  v122 = (BuffList_TYPE_array *)v41;
-  if ( !v121 )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 68;
-  if ( v121 == 1 )
-    goto LABEL_400;
-  HIDWORD(v41->fields.minusTypes) = 60;
-  v123 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v123, 3, v120, v122, 0LL);
+    (System_String_o *)v87,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 2LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v88 = (int)v2->fields.plusTypes;
+  v89 = (BuffList_TYPE_array *)v2;
+  if ( !v88 )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 51;
+  if ( v88 == 1 )
+    goto LABEL_423;
+  HIDWORD(v2->fields.minusTypes) = 52;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 2LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v90 = (int)v2->fields.plusTypes;
+  v91 = (BuffList_TYPE_array *)v2;
+  if ( !v90 )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 68;
+  if ( v90 == 1 )
+    goto LABEL_423;
+  HIDWORD(v2->fields.minusTypes) = 60;
+  v92 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v92, 3, v89, v91, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     22,
-    (System_String_o *)v123,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v124 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 105;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v125 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 106;
-  v126 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v126, 1, v124, v125, 0LL);
+    (System_String_o *)v92,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v93 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 105;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v94 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 106;
+  v95 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v95, 1, v93, v94, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     23,
-    (System_String_o *)v126,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v127 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 17;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v128 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 63;
-  v129 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v129, 3, v127, v128, 0LL);
+    (System_String_o *)v95,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v96 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 17;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v97 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 63;
+  v98 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v98, 3, v96, v97, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     24,
-    (System_String_o *)v129,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v130 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 93;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v131 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 94;
-  v132 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v132, 3, v130, v131, 0LL);
+    (System_String_o *)v98,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v99 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 93;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v100 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 94;
+  v101 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v101, 3, v99, v100, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     25,
-    (System_String_o *)v132,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 2LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v133 = (int)v41->fields.plusTypes;
-  v134 = (BuffList_TYPE_array *)v41;
-  if ( !v133 )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 50;
-  if ( v133 == 1 )
-    goto LABEL_400;
-  HIDWORD(v41->fields.minusTypes) = 52;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 2LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v135 = (int)v41->fields.plusTypes;
-  v136 = (BuffList_TYPE_array *)v41;
-  if ( !v135 || (LODWORD(v41->fields.minusTypes) = 67, v135 == 1) )
-  {
-LABEL_400:
-    v508 = sub_B5D6C8(v41);
-    sub_B5D668(v508, 0LL);
-  }
-  HIDWORD(v41->fields.minusTypes) = 60;
-  v137 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v137, 3, v134, v136, 0LL);
+    (System_String_o *)v101,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 2LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v102 = (int)v2->fields.plusTypes;
+  v103 = (BuffList_TYPE_array *)v2;
+  if ( !v102 )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 50;
+  if ( v102 == 1 )
+    goto LABEL_423;
+  HIDWORD(v2->fields.minusTypes) = 52;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 2LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v104 = (int)v2->fields.plusTypes;
+  v105 = (BuffList_TYPE_array *)v2;
+  if ( !v104 )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 67;
+  if ( v104 == 1 )
+    goto LABEL_423;
+  HIDWORD(v2->fields.minusTypes) = 60;
+  v106 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v106, 3, v103, v105, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     26,
-    (System_String_o *)v137,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v138 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 105;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v139 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 106;
-  v140 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v140, 1, v138, v139, 0LL);
+    (System_String_o *)v106,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v107 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 105;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v108 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 106;
+  v109 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v109, 1, v107, v108, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     27,
-    (System_String_o *)v140,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v141 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 3;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v142 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 4;
-  v143 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v143, 3, v141, v142, 0LL);
-  if ( !v143 )
-    goto LABEL_398;
-  v144 = (System_String_o *)BuffList_ActInfo__setBaseValue(v143, 1000, 0LL);
+    (System_String_o *)v109,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v110 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 3;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v111 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 4;
+  v112 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v112, 3, v110, v111, 0LL);
+  if ( !v112 )
+    goto LABEL_421;
+  v113 = (System_String_o *)BuffList_ActInfo__setBaseValue(v112, 1000, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     28,
-    v144,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v145 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 2;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v146 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 61;
-  v147 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v147, 3, v145, v146, 0LL);
+    v113,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v114 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 2;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v115 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 61;
+  v116 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v116, 3, v114, v115, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     29,
-    (System_String_o *)v147,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v148 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 5;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v149 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 62;
-  v150 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v150, 0, v148, v149, 0LL);
-  if ( !v150 )
-    goto LABEL_398;
-  v41 = BuffList_ActInfo__setBaseParam(v150, 0, 0LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v41 = BuffList_ActInfo__setRec(v41, 0, 0LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v151 = (System_String_o *)BuffList_ActInfo__setPlusAction(v41, 71, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    30,
-    v151,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v152 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 6;
-  v153 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v154 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v154, 0, v152, v153, 0LL);
-  if ( !v154 )
-    goto LABEL_398;
-  v41 = BuffList_ActInfo__setBaseParam(v154, 0, 0LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v155 = (System_String_o *)BuffList_ActInfo__setRec(v41, 0, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    31,
-    v155,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v156 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 7;
-  v157 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v158 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v158, 0, v156, v157, 0LL);
-  if ( !v158 )
-    goto LABEL_398;
-  v41 = BuffList_ActInfo__setBaseParam(v158, 0, 0LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v159 = (System_String_o *)BuffList_ActInfo__setRec(v41, 0, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    32,
-    v159,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v160 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 8;
-  v161 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v162 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v162, 0, v160, v161, 0LL);
-  if ( !v162 )
-    goto LABEL_398;
-  v41 = BuffList_ActInfo__setBaseParam(v162, 0, 0LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v41 = BuffList_ActInfo__setRec(v41, 0, 0LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v163 = (System_String_o *)BuffList_ActInfo__setPlusAction(v41, 72, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    33,
-    v163,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v164 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 64;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v165 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 65;
-  v166 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v166, 3, v164, v165, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    34,
-    (System_String_o *)v166,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v167 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 114;
-  v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v41 )
-    goto LABEL_398;
-  v168 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 115;
-  v169 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v169, 0, v167, v168, 0LL);
-  if ( !v169
-    || (v170 = (System_String_o *)BuffList_ActInfo__setBaseParam(v169, 0, 0LL),
-        System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-          v40,
-          35,
-          v170,
-          (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__),
-        (v41 = (BuffList_ActInfo_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL)) == 0LL) )
+    (System_String_o *)v116,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v117 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 5;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v118 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
   {
-LABEL_398:
-    sub_B5D69C(v41, v42);
+LABEL_423:
+    v495 = sub_B70798(v2);
+    sub_B70738(v495, 0LL);
   }
-  v171 = (BuffList_TYPE_array *)v41;
-  if ( !LODWORD(v41->fields.plusTypes) )
-    goto LABEL_400;
-  LODWORD(v41->fields.minusTypes) = 27;
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v174 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 28;
-  v175 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v175, 3, v171, v174, 0LL);
-  if ( !v175 )
-    goto LABEL_399;
-  v176 = (System_String_o *)BuffList_ActInfo__setBaseValue(v175, 1000, 0LL);
+  LODWORD(v2->fields.minusTypes) = 62;
+  v119 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v119, 0, v117, v118, 0LL);
+  if ( !v119 )
+    goto LABEL_421;
+  v2 = BuffList_ActInfo__setBaseParam(v119, 0, 0LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v2 = BuffList_ActInfo__setRec(v2, 0, 0LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v120 = (System_String_o *)BuffList_ActInfo__setPlusAction(v2, 71, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
+    30,
+    v120,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v121 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 6;
+  v122 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v123 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v123, 0, v121, v122, 0LL);
+  if ( !v123 )
+    goto LABEL_421;
+  v2 = BuffList_ActInfo__setBaseParam(v123, 0, 0LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v124 = (System_String_o *)BuffList_ActInfo__setRec(v2, 0, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    31,
+    v124,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v125 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 7;
+  v126 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v127 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v127, 0, v125, v126, 0LL);
+  if ( !v127 )
+    goto LABEL_421;
+  v2 = BuffList_ActInfo__setBaseParam(v127, 0, 0LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v128 = (System_String_o *)BuffList_ActInfo__setRec(v2, 0, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    32,
+    v128,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v129 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 8;
+  v130 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v131 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v131, 0, v129, v130, 0LL);
+  if ( !v131
+    || (v2 = BuffList_ActInfo__setBaseParam(v131, 0, 0LL)) == 0LL
+    || (v2 = BuffList_ActInfo__setRec(v2, 0, 0LL)) == 0LL
+    || (v132 = (System_String_o *)BuffList_ActInfo__setPlusAction(v2, 72, 0LL),
+        System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+          v1,
+          33,
+          v132,
+          (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__),
+        (v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL)) == 0LL) )
+  {
+LABEL_421:
+    sub_B7076C(v2, v3);
+  }
+  v133 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_423;
+  LODWORD(v2->fields.minusTypes) = 197;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_421;
+  v134 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 198;
+  v135 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v135, 0, v133, v134, 0LL);
+  if ( !v135 )
+    goto LABEL_422;
+  v137 = (System_String_o *)BuffList_ActInfo__setBaseParam(v135, 0, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    135,
+    v137,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v138 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 64;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v139 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 65;
+  v140 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v140, 3, v138, v139, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    34,
+    (System_String_o *)v140,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v141 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 114;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v142 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 115;
+  v143 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v143, 0, v141, v142, 0LL);
+  if ( !v143 )
+    goto LABEL_422;
+  v144 = (System_String_o *)BuffList_ActInfo__setBaseParam(v143, 0, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    35,
+    v144,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v145 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 27;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v146 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 28;
+  v147 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v147, 3, v145, v146, 0LL);
+  if ( !v147 )
+    goto LABEL_422;
+  v148 = (System_String_o *)BuffList_ActInfo__setBaseValue(v147, 1000, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
     36,
-    v176,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v177 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 29;
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v178 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 30;
-  v179 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    v148,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v149 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 29;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v150 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 30;
+  v151 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v151, 3, v149, v150, 0LL);
+  if ( !v151 )
+    goto LABEL_422;
+  v152 = (System_String_o *)BuffList_ActInfo__setBaseValue(v151, 1000, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    37,
+    v152,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v153 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 31;
+  v154 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v155 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v155, 0, v153, v154, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    38,
+    (System_String_o *)v155,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v156 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 32;
+  v157 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v158 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v158, 0, v156, v157, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    39,
+    (System_String_o *)v158,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v159 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 33;
+  v160 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v161 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v161, 0, v159, v160, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    40,
+    (System_String_o *)v161,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v162 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 34;
+  v163 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v164 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v164, 0, v162, v163, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    41,
+    (System_String_o *)v164,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v165 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 35;
+  v166 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v167 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v167, 0, v165, v166, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    42,
+    (System_String_o *)v167,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v168 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 40;
+  v169 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v170 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v170, 0, v168, v169, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    43,
+    (System_String_o *)v170,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v171 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 41;
+  v172 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v173 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v173, 0, v171, v172, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    44,
+    (System_String_o *)v173,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v174 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 38;
+  v175 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v176 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v176, 0, v174, v175, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    45,
+    (System_String_o *)v176,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v177 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 70;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v178 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 71;
+  v179 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v179, 3, v177, v178, 0LL);
   if ( !v179 )
-    goto LABEL_399;
+    goto LABEL_422;
   v180 = (System_String_o *)BuffList_ActInfo__setBaseValue(v179, 1000, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    37,
+    v1,
+    46,
     v180,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v181 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 31;
-  v182 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v183 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v183, 0, v181, v182, 0LL);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v181 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 73;
+  v182 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v183 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v183, 3, v181, v182, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    38,
+    v1,
+    47,
     (System_String_o *)v183,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v184 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 32;
-  v185 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v186 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v186, 0, v184, v185, 0LL);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v184 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 74;
+  v185 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v186 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v186, 3, v184, v185, 0LL);
+  if ( !v186 )
+    goto LABEL_422;
+  v187 = (System_String_o *)BuffList_ActInfo__setBaseValue(v186, 1000, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    39,
-    (System_String_o *)v186,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v187 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 33;
-  v188 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v189 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v189, 0, v187, v188, 0LL);
+    v1,
+    48,
+    v187,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v188 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 75;
+  v189 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v190 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v190, 3, v188, v189, 0LL);
+  if ( !v190 )
+    goto LABEL_422;
+  v191 = (System_String_o *)BuffList_ActInfo__setBaseValue(v190, 1000, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    40,
-    (System_String_o *)v189,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v190 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 34;
-  v191 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v192 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v192, 0, v190, v191, 0LL);
+    v1,
+    49,
+    v191,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v192 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 77;
+  v193 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v194 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v194, 0, v192, v193, 0LL);
+  if ( !v194 )
+    goto LABEL_422;
+  v195 = (System_String_o *)BuffList_ActInfo__setBaseValue(v194, 1000, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    41,
-    (System_String_o *)v192,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v193 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 35;
-  v194 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v195 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v195, 0, v193, v194, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    42,
-    (System_String_o *)v195,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v196 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 40;
-  v197 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v198 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    v1,
+    50,
+    v195,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v196 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 78;
+  v197 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v198 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v198, 0, v196, v197, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    43,
+    v1,
+    51,
     (System_String_o *)v198,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v199 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 41;
-  v200 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v201 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v199 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 149;
+  v200 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v201 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v201, 0, v199, v200, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    44,
-    (System_String_o *)v201,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v202 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 38;
-  v203 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v204 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v204, 0, v202, v203, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    45,
-    (System_String_o *)v204,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v205 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 70;
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v206 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 71;
-  v207 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v207, 3, v205, v206, 0LL);
-  if ( !v207 )
-    goto LABEL_399;
-  v208 = (System_String_o *)BuffList_ActInfo__setBaseValue(v207, 1000, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    46,
-    v208,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v209 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 73;
-  v210 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v211 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v211, 3, v209, v210, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    47,
-    (System_String_o *)v211,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v212 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 74;
-  v213 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v214 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v214, 3, v212, v213, 0LL);
-  if ( !v214 )
-    goto LABEL_399;
-  v215 = (System_String_o *)BuffList_ActInfo__setBaseValue(v214, 1000, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    48,
-    v215,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v216 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 75;
-  v217 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v218 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v218, 3, v216, v217, 0LL);
-  if ( !v218 )
-    goto LABEL_399;
-  v219 = (System_String_o *)BuffList_ActInfo__setBaseValue(v218, 1000, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    49,
-    v219,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v220 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 77;
-  v221 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v222 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v222, 0, v220, v221, 0LL);
-  if ( !v222 )
-    goto LABEL_399;
-  v223 = (System_String_o *)BuffList_ActInfo__setBaseValue(v222, 1000, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    50,
-    v223,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v224 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 78;
-  v225 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v226 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v226, 0, v224, v225, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    51,
-    (System_String_o *)v226,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v227 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 149;
-  v228 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v229 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v229, 0, v227, v228, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     89,
-    (System_String_o *)v229,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v230 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 79;
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v231 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 80;
-  v232 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v232, 3, v230, v231, 0LL);
-  if ( !v232 )
-    goto LABEL_399;
-  v233 = (System_String_o *)BuffList_ActInfo__setBaseValue(v232, 1000, 0LL);
+    (System_String_o *)v201,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v202 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 79;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v203 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 80;
+  v204 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v204, 3, v202, v203, 0LL);
+  if ( !v204 )
+    goto LABEL_422;
+  v205 = (System_String_o *)BuffList_ActInfo__setBaseValue(v204, 1000, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     52,
-    v233,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v234 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 81;
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v235 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 82;
-  v236 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v236, 0, v234, v235, 0LL);
-  if ( !v236 )
-    goto LABEL_399;
-  v237 = (System_String_o *)BuffList_ActInfo__setBaseParam(v236, 0, 0LL);
+    v205,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v206 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 81;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v207 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 82;
+  v208 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v208, 0, v206, v207, 0LL);
+  if ( !v208 )
+    goto LABEL_422;
+  v209 = (System_String_o *)BuffList_ActInfo__setBaseParam(v208, 0, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     53,
-    v237,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v238 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 84;
-  v239 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v240 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v240, 0, v238, v239, 0LL);
+    v209,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v210 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 84;
+  v211 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v212 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v212, 0, v210, v211, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     54,
-    (System_String_o *)v240,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v241 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 85;
-  v242 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v243 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v243, 0, v241, v242, 0LL);
+    (System_String_o *)v212,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v213 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 85;
+  v214 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v215 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v215, 0, v213, v214, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     55,
-    (System_String_o *)v243,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v244 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 87;
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v245 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 88;
-  v246 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v246, 3, v244, v245, 0LL);
+    (System_String_o *)v215,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v216 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 87;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v217 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 88;
+  v218 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v218, 3, v216, v217, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     56,
+    (System_String_o *)v218,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v219 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 89;
+  v220 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v221 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v221, 0, v219, v220, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    57,
+    (System_String_o *)v221,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v222 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 90;
+  v223 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v224 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v224, 0, v222, v223, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    58,
+    (System_String_o *)v224,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v225 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 95;
+  v226 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v227 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v227, 0, v225, v226, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    59,
+    (System_String_o *)v227,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v228 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 96;
+  v229 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v230 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v230, 0, v228, v229, 0LL);
+  if ( !v230 )
+    goto LABEL_422;
+  v231 = (System_String_o *)BuffList_ActInfo__setBaseParam(v230, 0, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    60,
+    v231,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v232 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 98;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v233 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 99;
+  v234 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v234, 3, v232, v233, 0LL);
+  if ( !v234 )
+    goto LABEL_422;
+  v235 = (System_String_o *)BuffList_ActInfo__setBaseValue(v234, 1000, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    61,
+    v235,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v236 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 100;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v237 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 101;
+  v238 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v238, 3, v236, v237, 0LL);
+  if ( !v238 )
+    goto LABEL_422;
+  v239 = (System_String_o *)BuffList_ActInfo__setBaseValue(v238, 1000, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    62,
+    v239,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v240 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 102;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v241 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 103;
+  v242 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v242, 3, v240, v241, 0LL);
+  if ( !v242 )
+    goto LABEL_422;
+  v243 = (System_String_o *)BuffList_ActInfo__setBaseValue(v242, 1000, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    63,
+    v243,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v244 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 86;
+  v245 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v246 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v246, 0, v244, v245, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    64,
     (System_String_o *)v246,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v247 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 89;
-  v248 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v249 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v247 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 97;
+  v248 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v249 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v249, 0, v247, v248, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    57,
+    v1,
+    65,
     (System_String_o *)v249,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v250 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 90;
-  v251 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v252 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v250 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 116;
+  v251 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v252 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v252, 0, v250, v251, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    58,
+    v1,
+    66,
     (System_String_o *)v252,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v253 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 95;
-  v254 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v255 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v255, 0, v253, v254, 0LL);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v253 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 117;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v254 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 118;
+  v255 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v255, 1, v253, v254, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    59,
+    v1,
+    67,
     (System_String_o *)v255,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v256 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 96;
-  v257 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v258 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v256 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 119;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v257 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 120;
+  v258 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v258, 0, v256, v257, 0LL);
   if ( !v258 )
-    goto LABEL_399;
-  v259 = (System_String_o *)BuffList_ActInfo__setBaseParam(v258, 0, 0LL);
+    goto LABEL_422;
+  v259 = (System_String_o *)BuffList_ActInfo__setBaseValue(v258, 1000, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    60,
+    v1,
+    68,
     v259,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v260 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 98;
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v261 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 99;
-  v262 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v262, 3, v260, v261, 0LL);
-  if ( !v262 )
-    goto LABEL_399;
-  v263 = (System_String_o *)BuffList_ActInfo__setBaseValue(v262, 1000, 0LL);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v260 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 121;
+  v261 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v262 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v262, 0, v260, v261, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    61,
-    v263,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v264 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 100;
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v265 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 101;
-  v266 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v266, 3, v264, v265, 0LL);
-  if ( !v266 )
-    goto LABEL_399;
-  v267 = (System_String_o *)BuffList_ActInfo__setBaseValue(v266, 1000, 0LL);
+    v1,
+    69,
+    (System_String_o *)v262,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v263 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 122;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v264 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 123;
+  v265 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v265, 0, v263, v264, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    62,
-    v267,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v268 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 102;
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v269 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 103;
-  v270 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v270, 3, v268, v269, 0LL);
-  if ( !v270 )
-    goto LABEL_399;
-  v271 = (System_String_o *)BuffList_ActInfo__setBaseValue(v270, 1000, 0LL);
+    v1,
+    70,
+    (System_String_o *)v265,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v266 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 124;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v267 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 125;
+  v268 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v268, 0, v266, v267, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    63,
-    v271,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v272 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 86;
-  v273 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v274 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    v1,
+    71,
+    (System_String_o *)v268,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v269 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 126;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v270 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 127;
+  v271 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v271, 0, v269, v270, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    72,
+    (System_String_o *)v271,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v272 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 130;
+  v273 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v274 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v274, 0, v272, v273, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    64,
+    v1,
+    73,
     (System_String_o *)v274,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v275 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 97;
-  v276 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v277 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v275 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 131;
+  v276 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v277 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v277, 0, v275, v276, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    65,
+    v1,
+    74,
     (System_String_o *)v277,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v278 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 116;
-  v279 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v280 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v278 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 132;
+  v279 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v280 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v280, 0, v278, v279, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    66,
-    (System_String_o *)v280,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v281 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 117;
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v282 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 118;
-  v283 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v283, 1, v281, v282, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    67,
-    (System_String_o *)v283,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v284 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 119;
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v285 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 120;
-  v286 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v286, 0, v284, v285, 0LL);
-  if ( !v286 )
-    goto LABEL_399;
-  v287 = (System_String_o *)BuffList_ActInfo__setBaseValue(v286, 1000, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    68,
-    v287,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v288 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 121;
-  v289 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v290 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v290, 0, v288, v289, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    69,
-    (System_String_o *)v290,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v291 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 122;
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v292 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 123;
-  v293 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v293, 0, v291, v292, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    70,
-    (System_String_o *)v293,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v294 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 124;
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v295 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 125;
-  v296 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v296, 0, v294, v295, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    71,
-    (System_String_o *)v296,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v297 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 126;
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v298 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 127;
-  v299 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v299, 0, v297, v298, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    72,
-    (System_String_o *)v299,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v300 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 130;
-  v301 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v302 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v302, 0, v300, v301, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    73,
-    (System_String_o *)v302,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v303 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 131;
-  v304 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v305 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v305, 0, v303, v304, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    74,
-    (System_String_o *)v305,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v306 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 132;
-  v307 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v308 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v308, 0, v306, v307, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     75,
-    (System_String_o *)v308,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v309 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 133;
-  v310 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v311 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v311, 0, v309, v310, 0LL);
+    (System_String_o *)v280,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v281 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 133;
+  v282 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v283 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v283, 0, v281, v282, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     76,
-    (System_String_o *)v311,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v312 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 134;
-  v313 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v314 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v314, 0, v312, v313, 0LL);
+    (System_String_o *)v283,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v284 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 134;
+  v285 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v286 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v286, 0, v284, v285, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     77,
-    (System_String_o *)v314,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v315 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 135;
-  v316 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v317 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v317, 1, v315, v316, 0LL);
-  if ( !v317 )
-    goto LABEL_399;
-  v318 = (System_String_o *)BuffList_ActInfo__setBaseValue(v317, 1000, 0LL);
+    (System_String_o *)v286,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v287 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 135;
+  v288 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v289 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v289, 1, v287, v288, 0LL);
+  if ( !v289 )
+    goto LABEL_422;
+  v290 = (System_String_o *)BuffList_ActInfo__setBaseValue(v289, 1000, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
+    v1,
     78,
-    v318,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v319 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 136;
-  v320 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v321 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v321, 1, v319, v320, 0LL);
-  if ( !v321 )
-    goto LABEL_399;
-  v322 = (System_String_o *)BuffList_ActInfo__setBaseValue(v321, 1000, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    79,
-    v322,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v323 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 137;
-  v324 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v325 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v325, 0, v323, v324, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    80,
-    (System_String_o *)v325,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v326 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 138;
-  v327 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v328 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v328, 0, v326, v327, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    81,
-    (System_String_o *)v328,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v329 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 139;
-  v330 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v331 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v331, 0, v329, v330, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    82,
-    (System_String_o *)v331,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v332 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 140;
-  v333 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v334 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v334, 0, v332, v333, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    83,
-    (System_String_o *)v334,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v335 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 141;
-  v336 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v337 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v337, 0, v335, v336, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    84,
-    (System_String_o *)v337,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v338 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 142;
-  v339 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v340 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v340, 0, v338, v339, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    85,
-    (System_String_o *)v340,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v341 = (System_Array_o *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 4LL);
-  v511.fields.value = Field__PrivateImplementationDetails__F74CB50F9D18C1E2A044410ED05D3C7285B0A0EF1A7321D9BD37EE90BF1D943E;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43674272(v341, v511, 0LL);
-  v342 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v343 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v343, 0, (BuffList_TYPE_array *)v341, v342, 0LL);
-  if ( !v343
-    || (v344 = (System_String_o *)BuffList_ActInfo__setBaseParam(v343, -1, 0LL),
+    v290,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v291 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 136;
+  v292 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v293 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v293, 1, v291, v292, 0LL);
+  if ( !v293
+    || (v294 = (System_String_o *)BuffList_ActInfo__setBaseValue(v293, 1000, 0LL),
         System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-          v40,
-          86,
-          v344,
-          (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__),
-        (v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL)) == 0LL) )
+          v1,
+          79,
+          v294,
+          (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__),
+        (v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL)) == 0LL) )
   {
-LABEL_399:
-    sub_B5D69C(v172, v173);
+LABEL_422:
+    sub_B7076C(v2, v136);
   }
-  v345 = v172;
-  if ( !v172->max_length )
-    goto LABEL_401;
-  v172->m_Items[1] = 144;
-  v346 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v347 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+  v295 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_424;
+  LODWORD(v2->fields.minusTypes) = 137;
+  v296 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v297 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v297, 0, v295, v296, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    80,
+    (System_String_o *)v297,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v298 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+  {
+LABEL_424:
+    v496 = sub_B70798(v2);
+    sub_B70738(v496, 0LL);
+  }
+  LODWORD(v2->fields.minusTypes) = 138;
+  v299 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v300 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v300, 0, v298, v299, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    81,
+    (System_String_o *)v300,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_422;
+  v301 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 139;
+  v302 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v303 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v303, 0, v301, v302, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    82,
+    (System_String_o *)v303,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v305 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 140;
+  v306 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v307 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v307, 0, v305, v306, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    83,
+    (System_String_o *)v307,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v308 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 141;
+  v309 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v310 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v310, 0, v308, v309, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    84,
+    (System_String_o *)v310,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v311 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 142;
+  v312 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v313 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v313, 0, v311, v312, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    85,
+    (System_String_o *)v313,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v314 = (System_Array_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 4LL);
+  v498.fields.value = Field__PrivateImplementationDetails__F74CB50F9D18C1E2A044410ED05D3C7285B0A0EF1A7321D9BD37EE90BF1D943E;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v314, v498, 0LL);
+  v315 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v316 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v316, 0, (BuffList_TYPE_array *)v314, v315, 0LL);
+  if ( !v316 )
+    goto LABEL_426;
+  v317 = (System_String_o *)BuffList_ActInfo__setBaseParam(v316, -1, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    86,
+    v317,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v318 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 144;
+  v319 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v320 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v320, 0, v318, v319, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    87,
+    (System_String_o *)v320,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v321 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 148;
+  v322 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v323 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v323, 0, v321, v322, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    88,
+    (System_String_o *)v323,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v324 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 150;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v325 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 151;
+  v326 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v326, 3, v324, v325, 0LL);
+  if ( !v326 )
+    goto LABEL_426;
+  v327 = (System_String_o *)BuffList_ActInfo__setBaseValue(v326, 1000, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    90,
+    v327,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v328 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 152;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v329 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 153;
+  v330 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v330, 3, v328, v329, 0LL);
+  if ( !v330 )
+    goto LABEL_426;
+  v331 = (System_String_o *)BuffList_ActInfo__setBaseValue(v330, 1000, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    91,
+    v331,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v332 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 154;
+  v333 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v334 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v334, 3, v332, v333, 0LL);
+  if ( !v334 )
+    goto LABEL_426;
+  v335 = (System_String_o *)BuffList_ActInfo__setBaseParam(v334, 0, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    92,
+    v335,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v336 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 155;
+  v337 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v338 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v338, 3, v336, v337, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    93,
+    (System_String_o *)v338,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v339 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 156;
+  v340 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v341 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v341, 0, v339, v340, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    94,
+    (System_String_o *)v341,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v342 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 157;
+  v343 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v344 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v344, 0, v342, v343, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    95,
+    (System_String_o *)v344,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v345 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 158;
+  v346 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v347 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v347, 0, v345, v346, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    87,
+    v1,
+    96,
     (System_String_o *)v347,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v348 = v172;
-  if ( !v172->max_length )
-  {
-LABEL_401:
-    v509 = sub_B5D6C8(v172);
-    sub_B5D668(v509, 0LL);
-  }
-  v172->m_Items[1] = 148;
-  v349 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v350 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v348 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 159;
+  v349 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v350 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v350, 0, v348, v349, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    88,
+    v1,
+    97,
     (System_String_o *)v350,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_399;
-  v351 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 150;
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v353 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 151;
-  v354 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v354, 3, v351, v353, 0LL);
-  if ( !v354 )
-    goto LABEL_403;
-  v355 = (System_String_o *)BuffList_ActInfo__setBaseValue(v354, 1000, 0LL);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v351 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 160;
+  v352 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v353 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v353, 0, v351, v352, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    90,
-    v355,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v356 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 152;
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v357 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 153;
-  v358 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v358, 3, v356, v357, 0LL);
-  if ( !v358 )
-    goto LABEL_403;
-  v359 = (System_String_o *)BuffList_ActInfo__setBaseValue(v358, 1000, 0LL);
+    v1,
+    98,
+    (System_String_o *)v353,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v354 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 161;
+  v355 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v356 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v356, 0, v354, v355, 0LL);
+  if ( !v356 )
+    goto LABEL_426;
+  v357 = (System_String_o *)BuffList_ActInfo__setBaseParam(v356, 0, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    91,
-    v359,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v360 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 154;
-  v361 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v362 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v362, 3, v360, v361, 0LL);
-  if ( !v362 )
-    goto LABEL_403;
-  v363 = (System_String_o *)BuffList_ActInfo__setBaseParam(v362, 0, 0LL);
+    v1,
+    99,
+    v357,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v358 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 163;
+  v359 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v360 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v360, 0, v358, v359, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    92,
-    v363,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v364 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 155;
-  v365 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v366 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v366, 3, v364, v365, 0LL);
+    v1,
+    100,
+    (System_String_o *)v360,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v361 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 162;
+  v362 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v363 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v363, 3, v361, v362, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    93,
+    v1,
+    101,
+    (System_String_o *)v363,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v364 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 165;
+  v365 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v366 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v366, 0, v364, v365, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    102,
     (System_String_o *)v366,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v367 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 156;
-  v368 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v369 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v367 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 166;
+  v368 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v369 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v369, 0, v367, v368, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    94,
+    v1,
+    103,
     (System_String_o *)v369,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v370 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 157;
-  v371 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v372 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v372, 0, v370, v371, 0LL);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v370 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 10002;
+  v371 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v372 = (BuffList_ToFieldActInfo_o *)sub_B70764(BuffList_ToFieldActInfo_TypeInfo);
+  BuffList_ToFieldActInfo___ctor(v372, 0, v370, v371, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    95,
+    v1,
+    105,
     (System_String_o *)v372,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v373 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 158;
-  v374 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v375 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v375, 0, v373, v374, 0LL);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v373 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 10003;
+  v374 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v375 = (BuffList_ToFieldActInfo_o *)sub_B70764(BuffList_ToFieldActInfo_TypeInfo);
+  BuffList_ToFieldActInfo___ctor(v375, 0, v373, v374, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    96,
+    v1,
+    112,
     (System_String_o *)v375,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v376 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 159;
-  v377 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v378 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v378, 0, v376, v377, 0LL);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v376 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 27;
+  v377 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v378 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v378, 3, v376, v377, 0LL);
+  if ( !v378 )
+    goto LABEL_426;
+  v379 = (System_String_o *)BuffList_ActInfo__setBaseValue(v378, 1000, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    97,
-    (System_String_o *)v378,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v379 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 160;
-  v380 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v381 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v381, 0, v379, v380, 0LL);
+    v1,
+    106,
+    v379,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v380 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 167;
+  v381 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v382 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v382, 3, v380, v381, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    98,
-    (System_String_o *)v381,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v382 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 161;
-  v383 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v384 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v384, 0, v382, v383, 0LL);
-  if ( !v384 )
-    goto LABEL_403;
-  v385 = (System_String_o *)BuffList_ActInfo__setBaseParam(v384, 0, 0LL);
+    v1,
+    107,
+    (System_String_o *)v382,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v383 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 168;
+  v384 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v385 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v385, 0, v383, v384, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    99,
-    v385,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v386 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 163;
-  v387 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v388 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    v1,
+    108,
+    (System_String_o *)v385,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v386 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 169;
+  v387 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v388 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v388, 0, v386, v387, 0LL);
+  if ( !v388 )
+    goto LABEL_426;
+  v389 = (System_String_o *)BuffList_ActInfo__setBaseParam(v388, 0, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    100,
-    (System_String_o *)v388,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v389 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 162;
-  v390 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v391 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v391, 3, v389, v390, 0LL);
+    v1,
+    109,
+    v389,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v390 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 170;
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v391 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 171;
+  v392 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v392, 0, v390, v391, 0LL);
+  if ( !v392 )
+    goto LABEL_426;
+  v393 = (System_String_o *)BuffList_ActInfo__setBaseParam(v392, 0, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    101,
-    (System_String_o *)v391,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v392 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 165;
-  v393 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v394 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v394, 0, v392, v393, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    102,
-    (System_String_o *)v394,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v395 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 166;
-  v396 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v397 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    v1,
+    110,
+    v393,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 2LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v394 = (int)v2->fields.plusTypes;
+  v395 = (BuffList_TYPE_array *)v2;
+  if ( !v394 )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 172;
+  if ( v394 == 1 )
+    goto LABEL_425;
+  HIDWORD(v2->fields.minusTypes) = 173;
+  v396 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v397 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v397, 0, v395, v396, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    103,
+    v1,
+    111,
     (System_String_o *)v397,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v398 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 10002;
-  v399 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v400 = (BuffList_ToFieldActInfo_o *)sub_B5D694(BuffList_ToFieldActInfo_TypeInfo);
-  BuffList_ToFieldActInfo___ctor(v400, 0, v398, v399, 0LL);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v398 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 174;
+  v399 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v400 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v400, 3, v398, v399, 0LL);
+  if ( !v400
+    || (v401 = (System_String_o *)BuffList_ActInfo__setBaseParam(v400, 0, 0LL),
+        System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+          v1,
+          113,
+          v401,
+          (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__),
+        (v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL)) == 0LL) )
+  {
+LABEL_426:
+    sub_B7076C(v2, v304);
+  }
+  v402 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 175;
+  v403 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v404 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v404, 0, v402, v403, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    105,
-    (System_String_o *)v400,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v401 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 10003;
-  v402 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v403 = (BuffList_ToFieldActInfo_o *)sub_B5D694(BuffList_ToFieldActInfo_TypeInfo);
-  BuffList_ToFieldActInfo___ctor(v403, 0, v401, v402, 0LL);
+    v1,
+    114,
+    (System_String_o *)v404,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v405 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 176;
+  v406 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v407 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v407, 0, v405, v406, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    112,
-    (System_String_o *)v403,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v404 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 27;
-  v405 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v406 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v406, 3, v404, v405, 0LL);
-  if ( !v406 )
-    goto LABEL_403;
-  v407 = (System_String_o *)BuffList_ActInfo__setBaseValue(v406, 1000, 0LL);
+    v1,
+    115,
+    (System_String_o *)v407,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v408 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 177;
+  v409 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v410 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v410, 0, v408, v409, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    106,
-    v407,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v408 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 167;
-  v409 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v410 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v410, 3, v408, v409, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    107,
+    v1,
+    116,
     (System_String_o *)v410,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v411 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 168;
-  v412 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v413 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v411 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 178;
+  v412 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v413 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v413, 0, v411, v412, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    108,
+    v1,
+    117,
     (System_String_o *)v413,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v414 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 169;
-  v415 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v416 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v414 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 179;
+  v415 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v416 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v416, 0, v414, v415, 0LL);
-  if ( !v416 )
-    goto LABEL_403;
-  v417 = (System_String_o *)BuffList_ActInfo__setBaseParam(v416, 0, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    109,
-    v417,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v418 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 170;
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v419 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 171;
-  v420 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v420, 0, v418, v419, 0LL);
-  if ( !v420 )
-    goto LABEL_403;
-  v421 = (System_String_o *)BuffList_ActInfo__setBaseParam(v420, 0, 0LL);
+    v1,
+    118,
+    (System_String_o *)v416,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v417 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 180;
+  v418 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v419 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v419, 0, v417, v418, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    110,
-    v421,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 2LL);
-  if ( !v172 )
-    goto LABEL_403;
-  max_length = v172->max_length;
-  v423 = v172;
-  if ( !max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 172;
-  if ( max_length == 1 )
-    goto LABEL_402;
-  v172->m_Items[2] = 173;
-  v424 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v425 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    v1,
+    119,
+    (System_String_o *)v419,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v420 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 181;
+  v421 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v422 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v422, 0, v420, v421, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    120,
+    (System_String_o *)v422,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v423 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 182;
+  v424 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v425 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v425, 0, v423, v424, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    111,
+    v1,
+    121,
     (System_String_o *)v425,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v426 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 174;
-  v427 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v428 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v428, 3, v426, v427, 0LL);
-  if ( !v428
-    || (v429 = (System_String_o *)BuffList_ActInfo__setBaseParam(v428, 0, 0LL),
-        System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-          v40,
-          113,
-          v429,
-          (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__),
-        (v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL)) == 0LL) )
-  {
-LABEL_403:
-    sub_B5D69C(v172, v352);
-  }
-  v430 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 175;
-  v431 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v432 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v432, 0, v430, v431, 0LL);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v426 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 185;
+  v427 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v428 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v428, 0, v426, v427, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    114,
-    (System_String_o *)v432,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v433 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 176;
-  v434 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v435 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v435, 0, v433, v434, 0LL);
+    v1,
+    122,
+    (System_String_o *)v428,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v429 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 187;
+  v430 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v431 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v431, 0, v429, v430, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    115,
-    (System_String_o *)v435,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v436 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 177;
-  v437 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v438 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v438, 0, v436, v437, 0LL);
+    v1,
+    123,
+    (System_String_o *)v431,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v432 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 186;
+  v433 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v434 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v434, 0, v432, v433, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    116,
-    (System_String_o *)v438,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v439 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 178;
-  v440 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v441 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v441, 0, v439, v440, 0LL);
+    v1,
+    124,
+    (System_String_o *)v434,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v435 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 188;
+  v436 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v437 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v437, 0, v435, v436, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    117,
-    (System_String_o *)v441,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v442 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 179;
-  v443 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v444 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v444, 0, v442, v443, 0LL);
+    v1,
+    125,
+    (System_String_o *)v437,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v438 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 189;
+  v439 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v440 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v440, 0, v438, v439, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    118,
-    (System_String_o *)v444,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v445 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 180;
-  v446 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v447 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v447, 0, v445, v446, 0LL);
+    v1,
+    127,
+    (System_String_o *)v440,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v441 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 190;
+  v442 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v443 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v443, 0, v441, v442, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    119,
-    (System_String_o *)v447,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v448 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 181;
-  v449 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v450 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v450, 0, v448, v449, 0LL);
+    v1,
+    128,
+    (System_String_o *)v443,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v444 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 191;
+  v445 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v446 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v446, 0, v444, v445, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    120,
-    (System_String_o *)v450,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v451 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 182;
-  v452 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v453 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    v1,
+    129,
+    (System_String_o *)v446,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v447 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 192;
+  v448 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v449 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v449, 0, v447, v448, 0LL);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v1,
+    130,
+    (System_String_o *)v449,
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 2LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v450 = (int)v2->fields.plusTypes;
+  v451 = (BuffList_TYPE_array *)v2;
+  if ( !v450 )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 37;
+  if ( v450 == 1 )
+    goto LABEL_425;
+  HIDWORD(v2->fields.minusTypes) = 104;
+  v452 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v453 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v453, 0, v451, v452, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    121,
+    v1,
+    126,
     (System_String_o *)v453,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v454 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 185;
-  v455 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v456 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v454 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 194;
+  v455 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v456 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v456, 0, v454, v455, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    122,
+    v1,
+    131,
     (System_String_o *)v456,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v457 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 187;
-  v458 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v459 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v457 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 199;
+  v458 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v459 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v459, 0, v457, v458, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    123,
+    v1,
+    136,
     (System_String_o *)v459,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v460 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 186;
-  v461 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v462 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v460 = (BuffList_TYPE_array *)v2;
+  if ( !LODWORD(v2->fields.plusTypes) )
+    goto LABEL_425;
+  LODWORD(v2->fields.minusTypes) = 193;
+  v461 = (BuffList_TYPE_array *)sub_B706AC(BuffList_TYPE___TypeInfo, 0LL);
+  v462 = (BuffList_ActInfo_o *)sub_B70764(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v462, 0, v460, v461, 0LL);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    124,
+    v1,
+    132,
     (System_String_o *)v462,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v463 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 188;
-  v464 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v465 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v465, 0, v463, v464, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    125,
-    (System_String_o *)v465,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v466 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 189;
-  v467 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v468 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v468, 0, v466, v467, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    127,
-    (System_String_o *)v468,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v469 = v172;
-  if ( !v172->max_length )
-    goto LABEL_402;
-  v172->m_Items[1] = 190;
-  v470 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v471 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v471, 0, v469, v470, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    128,
-    (System_String_o *)v471,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 2LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v472 = v172->max_length;
-  v473 = v172;
-  if ( !v472 )
-    goto LABEL_402;
-  v172->m_Items[1] = 37;
-  if ( v472 == 1 )
-    goto LABEL_402;
-  v172->m_Items[2] = 104;
-  v474 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 0LL);
-  v475 = (BuffList_ActInfo_o *)sub_B5D694(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v475, 0, v473, v474, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v40,
-    126,
-    (System_String_o *)v475,
-    (const MethodInfo_2F4995C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
   static_fields = (BattleServantConfConponent_o *)BuffList_TypeInfo->static_fields;
-  static_fields->klass = (BattleServantConfConponent_c *)v40;
-  sub_B5D560(static_fields, (System_Int32_array **)v40, v477, v478, v479, v480, v481, v482);
-  v172 = (BuffList_TYPE_array *)sub_B5D5DC(BuffList_TYPE___TypeInfo, 2LL);
-  if ( !v172 )
-    goto LABEL_403;
-  v489 = v172->max_length;
-  v490 = (System_Int32_array **)v172;
-  if ( !v489 || (v172->m_Items[1] = 104, v489 == 1) )
+  static_fields->klass = (BattleServantConfConponent_c *)v1;
+  sub_B70630(static_fields, (System_Int32_array **)v1, v464, v465, v466, v467, v468, v469);
+  v2 = (BuffList_ActInfo_o *)sub_B706AC(BuffList_TYPE___TypeInfo, 2LL);
+  if ( !v2 )
+    goto LABEL_426;
+  v476 = (int)v2->fields.plusTypes;
+  v477 = (System_Int32_array **)v2;
+  if ( !v476 || (LODWORD(v2->fields.minusTypes) = 104, v476 == 1) )
   {
-LABEL_402:
-    v510 = sub_B5D6C8(v172);
-    sub_B5D668(v510, 0LL);
+LABEL_425:
+    v497 = sub_B70798(v2);
+    sub_B70738(v497, 0LL);
   }
-  v172->m_Items[2] = 37;
-  v491 = BuffList_TypeInfo->static_fields;
-  v491->GutsList = (struct BuffList_TYPE_array *)v490;
-  sub_B5D560((BattleServantConfConponent_o *)&v491->GutsList, v490, v483, v484, v485, v486, v487, v488);
-  v492 = (System_Array_o *)sub_B5D5DC(BuffList_ACTION___TypeInfo, 4LL);
-  v512.fields.value = Field__PrivateImplementationDetails__4EECD95FEC87B9ABE1EA9376D9C9CF1F7F1C01299268E427022C2F5192383D9E;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43674272(v492, v512, 0LL);
-  v493 = BuffList_TypeInfo->static_fields;
-  v493->CommandCodeFunctionActs = (struct BuffList_ACTION_array *)v492;
-  sub_B5D560(
-    (BattleServantConfConponent_o *)&v493->CommandCodeFunctionActs,
-    (System_Int32_array **)v492,
-    v494,
-    v495,
-    v496,
-    v497,
-    v498,
-    v499);
-  v500 = (System_Collections_Generic_HashSet_EventMissionCondDetailEntity_MissionCondType__o *)sub_B5D694(System_Collections_Generic_HashSet_BuffList_TYPE__TypeInfo);
+  HIDWORD(v2->fields.minusTypes) = 37;
+  v478 = BuffList_TypeInfo->static_fields;
+  v478->GutsList = (struct BuffList_TYPE_array *)v477;
+  sub_B70630((BattleServantConfConponent_o *)&v478->GutsList, v477, v470, v471, v472, v473, v474, v475);
+  v479 = (System_Array_o *)sub_B706AC(BuffList_ACTION___TypeInfo, 4LL);
+  v499.fields.value = Field__PrivateImplementationDetails__4EECD95FEC87B9ABE1EA9376D9C9CF1F7F1C01299268E427022C2F5192383D9E;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v479, v499, 0LL);
+  v480 = BuffList_TypeInfo->static_fields;
+  v480->CommandCodeFunctionActs = (struct BuffList_ACTION_array *)v479;
+  sub_B70630(
+    (BattleServantConfConponent_o *)&v480->CommandCodeFunctionActs,
+    (System_Int32_array **)v479,
+    v481,
+    v482,
+    v483,
+    v484,
+    v485,
+    v486);
+  v487 = (System_Collections_Generic_HashSet_EventMissionCondDetailEntity_MissionCondType__o *)sub_B70764(System_Collections_Generic_HashSet_BuffList_TYPE__TypeInfo);
   System_Collections_Generic_HashSet_EventMissionCondDetailEntity_MissionCondType____ctor(
-    v500,
-    (const MethodInfo_25017F0 *)Method_System_Collections_Generic_HashSet_BuffList_TYPE___ctor__);
-  if ( !v500 )
-    goto LABEL_403;
+    v487,
+    (const MethodInfo_2EB01EC *)Method_System_Collections_Generic_HashSet_BuffList_TYPE___ctor__);
+  if ( !v487 )
+    goto LABEL_426;
   System_Collections_Generic_HashSet_EventMissionCondDetailEntity_MissionCondType___Add(
-    v500,
+    v487,
     138,
-    (const MethodInfo_25029CC *)Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__);
+    (const MethodInfo_2EB13C8 *)Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__);
   System_Collections_Generic_HashSet_EventMissionCondDetailEntity_MissionCondType___Add(
-    v500,
+    v487,
     159,
-    (const MethodInfo_25029CC *)Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__);
+    (const MethodInfo_2EB13C8 *)Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__);
   System_Collections_Generic_HashSet_EventMissionCondDetailEntity_MissionCondType___Add(
-    v500,
+    v487,
     177,
-    (const MethodInfo_25029CC *)Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__);
+    (const MethodInfo_2EB13C8 *)Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__);
   System_Collections_Generic_HashSet_EventMissionCondDetailEntity_MissionCondType___Add(
-    v500,
+    v487,
     178,
-    (const MethodInfo_25029CC *)Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__);
-  v501 = BuffList_TypeInfo->static_fields;
-  v501->CommandCodeBuffHash = (struct System_Collections_Generic_HashSet_BuffList_TYPE__o *)v500;
-  sub_B5D560(
-    (BattleServantConfConponent_o *)&v501->CommandCodeBuffHash,
-    (System_Int32_array **)v500,
-    v502,
-    v503,
-    v504,
-    v505,
-    v506,
-    v507);
+    (const MethodInfo_2EB13C8 *)Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__);
+  v488 = BuffList_TypeInfo->static_fields;
+  v488->CommandCodeBuffHash = (struct System_Collections_Generic_HashSet_BuffList_TYPE__o *)v487;
+  sub_B70630(
+    (BattleServantConfConponent_o *)&v488->CommandCodeBuffHash,
+    (System_Int32_array **)v487,
+    v489,
+    v490,
+    v491,
+    v492,
+    v493,
+    v494);
 }
 
 
 bool __fastcall BuffList__CheckAccumulation(int32_t type, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA616 & 1) == 0 )
+  if ( (byte_4353F3C & 1) == 0 )
   {
-    sub_B5D5C4(&BuffList_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EA616 = 1;
+    sub_B70694(&BuffList_TypeInfo);
+    byte_4353F3C = 1;
   }
   if ( (BYTE3(BuffList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
@@ -2960,42 +3076,40 @@ bool __fastcall BuffList__CheckAccumulation(int32_t type, const MethodInfo *meth
 
 bool __fastcall BuffList__CheckGutsType(int32_t type, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  BuffList_c *v5; // x0
+  BuffList_c *v3; // x0
   struct BuffList_TYPE_array *GutsList; // x8
   int max_length; // w9
-  unsigned int v8; // w10
-  __int64 v10; // x0
+  unsigned int v6; // w10
+  __int64 v8; // x0
 
-  if ( (byte_42EA618 & 1) == 0 )
+  if ( (byte_4353F3E & 1) == 0 )
   {
-    sub_B5D5C4(&BuffList_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EA618 = 1;
+    sub_B70694(&BuffList_TypeInfo);
+    byte_4353F3E = 1;
   }
-  v5 = BuffList_TypeInfo;
+  v3 = BuffList_TypeInfo;
   if ( (BYTE3(BuffList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BuffList_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
-    v5 = BuffList_TypeInfo;
+    v3 = BuffList_TypeInfo;
   }
-  GutsList = v5->static_fields->GutsList;
+  GutsList = v3->static_fields->GutsList;
   if ( !GutsList )
-    sub_B5D69C(v5, method);
+    sub_B7076C(v3, method);
   max_length = GutsList->max_length;
   if ( max_length < 1 )
     return 0;
-  v8 = 0;
+  v6 = 0;
   while ( 1 )
   {
-    if ( v8 >= max_length )
+    if ( v6 >= max_length )
     {
-      v10 = sub_B5D6C8(v5);
-      sub_B5D668(v10, 0LL);
+      v8 = sub_B70798(v3);
+      sub_B70738(v8, 0LL);
     }
-    if ( GutsList->m_Items[v8 + 1] == type )
+    if ( GutsList->m_Items[v6 + 1] == type )
       break;
-    if ( (int)++v8 >= max_length )
+    if ( (int)++v6 >= max_length )
       return 0;
   }
   return 1;
@@ -3010,13 +3124,10 @@ bool __fastcall BuffList__CheckType(int32_t self, int32_t type, const MethodInfo
 
 bool __fastcall BuffList__CheckUpdateHp(int32_t type, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA615 & 1) == 0 )
+  if ( (byte_4353F3B & 1) == 0 )
   {
-    sub_B5D5C4(&BuffList_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EA615 = 1;
+    sub_B70694(&BuffList_TypeInfo);
+    byte_4353F3B = 1;
   }
   if ( (BYTE3(BuffList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
@@ -3052,16 +3163,12 @@ int32_t __fastcall BuffList__GetProgressTurnCond(int32_t type, const MethodInfo 
 
 bool __fastcall BuffList__IsConstantMasterIndvAddBuffActive(const MethodInfo *method)
 {
-  int v1; // w1
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA61A & 1) == 0 )
+  if ( (byte_4353F40 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_8935/*"MST_BUFF_INDV_ADD_BUFF_ACTIVE"*/, v1, v2, v3);
-    byte_42EA61A = 1;
+    sub_B70694(&StringLiteral_8950/*"MST_BUFF_INDV_ADD_BUFF_ACTIVE"*/);
+    byte_4353F40 = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_8935/*"MST_BUFF_INDV_ADD_BUFF_ACTIVE"*/, 0LL) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_8950/*"MST_BUFF_INDV_ADD_BUFF_ACTIVE"*/, 0LL) == 1;
 }
 
 
@@ -3097,9 +3204,9 @@ bool __fastcall BuffList__IsFunctionBuff(int32_t type, const MethodInfo *method)
     else
     {
       v2 = type + 91;
-      if ( (unsigned int)(type - 165) < 0x18 )
+      if ( (unsigned int)(type - 165) < 0x1E )
       {
-        v3 = 15986697;
+        v3 = 552857609;
 LABEL_12:
         LODWORD(v4) = (v3 >> v2) & 1;
         return v4;
@@ -3125,171 +3232,155 @@ LABEL_13:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall BuffList__IsIntervalPossibleBuff(int32_t type, const MethodInfo *method)
 {
   char v2; // w8
-  char v3; // w8
-  unsigned __int64 v4; // x9
+  unsigned int v3; // w9
+  char v4; // w8
+  _BOOL8 v5; // x0
+  char v6; // w8
+  unsigned __int64 v7; // x9
 
-  if ( type <= 104 )
+  if ( type > 109 )
   {
-    if ( type > 61 )
+    if ( type > 190 )
     {
-      if ( type > 82 )
+      if ( type <= 199 )
       {
-        v2 = 0;
-        if ( type == 95 || type == 104 )
-          goto LABEL_24;
-        goto LABEL_22;
+        v4 = 0;
+        if ( type == 194 || type == 199 )
+          goto LABEL_31;
+        goto LABEL_29;
       }
-      if ( (unsigned int)(type - 76) < 7 )
+      if ( (type | 2) != 10003 )
+        goto LABEL_29;
+LABEL_30:
+      v4 = 0;
+      goto LABEL_31;
+    }
+    if ( type > 156 )
+    {
+      v2 = type + 95;
+      if ( (unsigned int)(type - 161) >= 0x10 )
       {
-        LOBYTE(type) = (((_BYTE)type - 76) & 0x7F) == 1;
-        return type;
+        if ( (unsigned int)(type - 189) > 1 )
+          goto LABEL_29;
+        goto LABEL_30;
       }
+      v3 = 24794;
       goto LABEL_22;
     }
-    v3 = type - 2;
-    if ( (unsigned int)(type - 2) >= 0x3C )
-      goto LABEL_22;
-    v4 = 0x7FFFF343FFFFFFELL;
+    v6 = type - 122;
+    if ( (unsigned int)(type - 122) >= 0x23 )
+      goto LABEL_29;
+    v7 = 0x3FC01E5FCLL;
+    return (v7 >> v6) & 1;
+  }
+  if ( type <= 76 )
+  {
+    if ( type > 41 )
+    {
+      v4 = 0;
+      if ( type == 61 || type == 76 )
+        goto LABEL_31;
+      goto LABEL_29;
+    }
+    v6 = type - 2;
+    if ( (unsigned int)(type - 2) >= 0x28 )
+    {
+LABEL_29:
+      v4 = 1;
+LABEL_31:
+      LOBYTE(v5) = v4;
+      return v5;
+    }
+    v7 = 0x343FFFFFFELL;
+    return (v7 >> v6) & 1;
+  }
+  if ( type <= 95 )
+  {
+    v2 = type - 78;
+    if ( (unsigned int)(type - 78) >= 0x12 )
+      goto LABEL_29;
+    v3 = 131040;
   }
   else
   {
-    if ( type > 156 )
-    {
-      if ( type > 190 )
-      {
-        if ( (type | 2) != 10003 )
-          goto LABEL_22;
-LABEL_23:
-        v2 = 0;
-        goto LABEL_24;
-      }
-      if ( (unsigned int)(type - 161) < 0x10 )
-        return (0x60DAu >> (type + 95)) & 1;
-      if ( (unsigned int)(type - 189) <= 1 )
-        goto LABEL_23;
-LABEL_22:
-      v2 = 1;
-LABEL_24:
-      LOBYTE(type) = v2;
-      return type;
-    }
-    if ( (unsigned int)(type - 107) < 3 )
-      goto LABEL_23;
-    v3 = type - 122;
-    if ( (unsigned int)(type - 122) >= 0x23 )
-      goto LABEL_22;
-    v4 = 0x3FC01E5FCLL;
+    v2 = type - 104;
+    if ( (unsigned int)(type - 104) >= 6 )
+      goto LABEL_29;
+    v3 = 6;
   }
-  *(_QWORD *)&type = (v4 >> v3) & 1;
-  return type;
+LABEL_22:
+  LODWORD(v5) = (v3 >> v2) & 1;
+  return v5;
 }
 
 
 void __fastcall BuffList__SetBattleData(BattleData_o *setData, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  int v14; // w1
-  int v15; // w2
-  __int64 v16; // x3
-  int v17; // w1
-  int v18; // w2
-  __int64 v19; // x3
-  BuffList_c *v20; // x0
+  BuffList_c *v3; // x0
   System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *ActionList; // x0
-  __int64 v22; // x1
-  System_String_array **v23; // x2
-  System_String_array **v24; // x3
-  System_Boolean_array **v25; // x4
-  System_Int32_array **v26; // x5
-  System_Int32_array *v27; // x6
-  System_Int32_array *v28; // x7
+  __int64 v5; // x1
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
   Il2CppObject *currentValue; // x0
-  System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v30; // [xsp+8h] [xbp-28h] BYREF
+  System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v13; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_42EA619 & 1) == 0 )
+  if ( (byte_4353F3F & 1) == 0 )
   {
-    sub_B5D5C4(&BuffList_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__get_Values__,
-      v5,
-      v6,
-      v7);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__Dispose__,
-      v8,
-      v9,
-      v10);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__MoveNext__,
-      v11,
-      v12,
-      v13);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__get_Current__,
-      v14,
-      v15,
-      v16);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_Dictionary_ValueCollection_BuffList_ACTION__BuffList_ActInfo__GetEnumerator__,
-      v17,
-      v18,
-      v19);
-    byte_42EA619 = 1;
+    sub_B70694(&BuffList_TypeInfo);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__get_Values__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__Dispose__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__MoveNext__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__get_Current__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_ValueCollection_BuffList_ACTION__BuffList_ActInfo__GetEnumerator__);
+    byte_4353F3F = 1;
   }
-  memset(&v30, 0, sizeof(v30));
-  v20 = BuffList_TypeInfo;
+  memset(&v13, 0, sizeof(v13));
+  v3 = BuffList_TypeInfo;
   if ( (BYTE3(BuffList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BuffList_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
-    v20 = BuffList_TypeInfo;
+    v3 = BuffList_TypeInfo;
   }
-  ActionList = (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)v20->static_fields->ActionList;
+  ActionList = (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)v3->static_fields->ActionList;
   if ( !ActionList
     || (ActionList = System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo___get_Values(
                        (System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__o *)ActionList,
-                       (const MethodInfo_2F49700 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__get_Values__)) == 0LL )
+                       (const MethodInfo_2F71DC8 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__get_Values__)) == 0LL )
   {
-    sub_B5D69C(ActionList, method);
+    sub_B7076C(ActionList, method);
   }
   System_Collections_Generic_Dictionary_ValueCollection_BuffList_ACTION__BuffList_ActInfo___GetEnumerator(
-    &v30,
+    &v13,
     ActionList,
-    (const MethodInfo_23BD144 *)Method_System_Collections_Generic_Dictionary_ValueCollection_BuffList_ACTION__BuffList_ActInfo__GetEnumerator__);
+    (const MethodInfo_25F8F88 *)Method_System_Collections_Generic_Dictionary_ValueCollection_BuffList_ACTION__BuffList_ActInfo__GetEnumerator__);
   while ( System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo___MoveNext(
-            &v30,
-            (const MethodInfo_28A7988 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__MoveNext__) )
+            &v13,
+            (const MethodInfo_2772BB8 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__MoveNext__) )
   {
-    currentValue = v30.fields.currentValue;
-    if ( !v30.fields.currentValue )
-      sub_B5D69C(0LL, v22);
-    v30.fields.currentValue[4].klass = (Il2CppClass *)setData;
-    sub_B5D560(
+    currentValue = v13.fields.currentValue;
+    if ( !v13.fields.currentValue )
+      sub_B7076C(0LL, v5);
+    v13.fields.currentValue[4].klass = (Il2CppClass *)setData;
+    sub_B70630(
       (BattleServantConfConponent_o *)&currentValue[4],
       (System_Int32_array **)setData,
-      v23,
-      v24,
-      v25,
-      v26,
-      v27,
-      v28);
+      v6,
+      v7,
+      v8,
+      v9,
+      v10,
+      v11);
   }
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo___Dispose(
-    &v30,
-    (const MethodInfo_28A7984 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__Dispose__);
+    &v13,
+    (const MethodInfo_2772BB4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__Dispose__);
 }
 
 
@@ -3298,35 +3389,31 @@ BuffList_ActInfo_o *__fastcall BuffList__getActInfo(
         BattleServantData_o *opponentSvt,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  int v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
-  BuffList_c *v9; // x0
+  BuffList_c *v5; // x0
   System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *ActionList; // x0
   System_String_o *Item; // x0
-  BuffList_ActInfo_o *v12; // x20
+  BuffList_ActInfo_o *v8; // x20
 
-  if ( (byte_42EA614 & 1) == 0 )
+  if ( (byte_4353F3A & 1) == 0 )
   {
-    sub_B5D5C4(&BuffList_TypeInfo, (_DWORD)opponentSvt, (_DWORD)method, v3);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__get_Item__, v6, v7, v8);
-    byte_42EA614 = 1;
+    sub_B70694(&BuffList_TypeInfo);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__get_Item__);
+    byte_4353F3A = 1;
   }
-  v9 = BuffList_TypeInfo;
+  v5 = BuffList_TypeInfo;
   if ( (BYTE3(BuffList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BuffList_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
-    v9 = BuffList_TypeInfo;
+    v5 = BuffList_TypeInfo;
   }
-  ActionList = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)v9->static_fields->ActionList;
+  ActionList = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)v5->static_fields->ActionList;
   if ( !ActionList )
     goto LABEL_11;
   Item = System_Collections_Generic_Dictionary_Voice_BATTLE__string___get_Item(
            ActionList,
            action,
-           (const MethodInfo_2F49898 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__get_Item__);
-  v12 = (BuffList_ActInfo_o *)Item;
+           (const MethodInfo_2F71F60 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__get_Item__);
+  v8 = (BuffList_ActInfo_o *)Item;
   if ( Item )
   {
     ActionList = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)Item[2].monitor;
@@ -3336,24 +3423,21 @@ BuffList_ActInfo_o *__fastcall BuffList__getActInfo(
         ActionList,
         opponentSvt,
         ActionList->klass->vtable._5_set_Item.methodPtr);
-      return v12;
+      return v8;
     }
 LABEL_11:
-    sub_B5D69C(ActionList, opponentSvt);
+    sub_B7076C(ActionList, opponentSvt);
   }
-  return v12;
+  return v8;
 }
 
 
 bool __fastcall BuffList__isSpHit(int32_t type, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA617 & 1) == 0 )
+  if ( (byte_4353F3D & 1) == 0 )
   {
-    sub_B5D5C4(&BuffList_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EA617 = 1;
+    sub_B70694(&BuffList_TypeInfo);
+    byte_4353F3D = 1;
   }
   if ( (BYTE3(BuffList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
@@ -3392,15 +3476,15 @@ void __fastcall BuffList_ActInfo___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.limit = inLimit;
   this->fields.plusTypes = inPlus;
-  sub_B5D560(&this->fields.plusTypes);
+  sub_B70630(&this->fields.plusTypes);
   this->fields.minusTypes = inMinus;
-  *(__n128 *)&v9 = sub_B5D560(&this->fields.minusTypes);
+  *(__n128 *)&v9 = sub_B70630(&this->fields.minusTypes);
   this->fields._OpponentInvokeCond_k__BackingField = (struct BuffList_BaseInvokeCond_o *)((__int64 (__fastcall *)(BuffList_ActInfo_o *, _QWORD, void *, long double))this->klass->vtable._4_MakeInvokeCond.method)(
                                                                                            this,
                                                                                            0LL,
                                                                                            this->klass[1]._1.image,
                                                                                            v9);
-  sub_B5D560(&this->fields._OpponentInvokeCond_k__BackingField);
+  sub_B70630(&this->fields._OpponentInvokeCond_k__BackingField);
 }
 
 
@@ -3409,18 +3493,17 @@ BuffList_BaseInvokeCond_o *__fastcall BuffList_ActInfo__MakeInvokeCond(
         bool isSelfSide,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  BuffList_BaseInvokeCond_o *v5; // x20
-  const MethodInfo *v6; // x2
+  BuffList_BaseInvokeCond_o *v4; // x20
+  const MethodInfo *v5; // x2
 
-  if ( (byte_42E5E35 & 1) == 0 )
+  if ( (byte_434ED50 & 1) == 0 )
   {
-    sub_B5D5C4(&BuffList_BaseInvokeCond_TypeInfo, isSelfSide, (_DWORD)method, v3);
-    byte_42E5E35 = 1;
+    sub_B70694(&BuffList_BaseInvokeCond_TypeInfo);
+    byte_434ED50 = 1;
   }
-  v5 = (BuffList_BaseInvokeCond_o *)sub_B5D694(BuffList_BaseInvokeCond_TypeInfo);
-  BuffList_BaseInvokeCond___ctor(v5, isSelfSide, v6);
-  return v5;
+  v4 = (BuffList_BaseInvokeCond_o *)sub_B70764(BuffList_BaseInvokeCond_TypeInfo);
+  BuffList_BaseInvokeCond___ctor(v4, isSelfSide, v5);
+  return v4;
 }
 
 
@@ -3487,7 +3570,7 @@ void __fastcall BuffList_ActInfo__set_OpponentInvokeCond(
         const MethodInfo *method)
 {
   this->fields._OpponentInvokeCond_k__BackingField = value;
-  sub_B5D560(&this->fields._OpponentInvokeCond_k__BackingField);
+  sub_B70630(&this->fields._OpponentInvokeCond_k__BackingField);
 }
 
 
@@ -3496,53 +3579,36 @@ void __fastcall BuffList_BaseInvokeCond___ctor(
         bool isSelfSide,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  char v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
-  char v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  char v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
-  char v15; // w1
-  int v16; // w2
-  __int64 v17; // x3
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *v18; // x21
-  __int64 v19; // x0
-  __int64 v20; // x1
-  struct System_String_o **v21; // x8
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *v5; // x21
+  __int64 v6; // x0
+  __int64 v7; // x1
+  struct System_String_o **v8; // x8
 
-  if ( (byte_42E5E37 & 1) == 0 )
+  if ( (byte_434ED52 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int_____ctor__,
-      isSelfSide,
-      (_DWORD)method,
-      v3);
-    sub_B5D5C4(&System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____TypeInfo, v6, v7, v8);
-    sub_B5D5C4(&StringLiteral_12816/*"Self"*/, v9, v10, v11);
-    sub_B5D5C4(&StringLiteral_10224/*"Opponent"*/, v12, v13, v14);
-    sub_B5D5C4(&StringLiteral_1/*""*/, v15, v16, v17);
-    byte_42E5E37 = 1;
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int_____ctor__);
+    sub_B70694(&System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____TypeInfo);
+    sub_B70694(&StringLiteral_12837/*"Self"*/);
+    sub_B70694(&StringLiteral_10241/*"Opponent"*/);
+    sub_B70694(&StringLiteral_1/*""*/);
+    byte_434ED52 = 1;
   }
-  v18 = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)sub_B5D694(System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____TypeInfo);
+  v5 = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)sub_B70764(System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____TypeInfo);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string____ctor(
-    v18,
-    (const MethodInfo_2F48DA8 *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int_____ctor__);
-  this->fields.dicCacheSelfValue = (struct System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____o *)v18;
-  sub_B5D560(&this->fields.dicCacheSelfValue);
+    v5,
+    (const MethodInfo_2F71470 *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int_____ctor__);
+  this->fields.dicCacheSelfValue = (struct System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____o *)v5;
+  sub_B70630(&this->fields.dicCacheSelfValue);
   this->fields.targetSideStr = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B5D560(&this->fields.targetSideStr);
+  sub_B70630(&this->fields.targetSideStr);
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v21 = (struct System_String_o **)&StringLiteral_12816/*"Self"*/;
+  v8 = (struct System_String_o **)&StringLiteral_12837/*"Self"*/;
   if ( !isSelfSide )
-    v21 = (struct System_String_o **)&StringLiteral_10224/*"Opponent"*/;
+    v8 = (struct System_String_o **)&StringLiteral_10241/*"Opponent"*/;
   if ( !this )
-    sub_B5D69C(v19, v20);
-  this->fields.targetSideStr = *v21;
-  sub_B5D560(&this->fields.targetSideStr);
+    sub_B7076C(v6, v7);
+  this->fields.targetSideStr = *v8;
+  sub_B70630(&this->fields.targetSideStr);
 }
 
 
@@ -3553,34 +3619,17 @@ bool __fastcall BuffList_BaseInvokeCond__CheckBuffTypeCond(
         System_Int32_array *condValues,
         const MethodInfo *method)
 {
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  int v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
-  int v15; // w1
-  int v16; // w2
-  __int64 v17; // x3
   BattleBuffData_o *dicCacheSelfValue; // x0
   BattleServantData_o *SvtData_k__BackingField; // x0
-  struct System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____o *v20; // x23
+  struct System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____o *v11; // x23
 
-  if ( (byte_42E5E39 & 1) == 0 )
+  if ( (byte_434ED54 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____ContainsKey__,
-      (_DWORD)buffData,
-      (_DWORD)buffEnt,
-      condValues);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____get_Item__, v9, v10, v11);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____set_Item__,
-      v12,
-      v13,
-      v14);
-    sub_B5D5C4(&int___TypeInfo, v15, v16, v17);
-    byte_42E5E39 = 1;
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____ContainsKey__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____get_Item__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____set_Item__);
+    sub_B70694(&int___TypeInfo);
+    byte_434ED54 = 1;
   }
   dicCacheSelfValue = (BattleBuffData_o *)this->fields.dicCacheSelfValue;
   if ( !dicCacheSelfValue )
@@ -3588,10 +3637,10 @@ bool __fastcall BuffList_BaseInvokeCond__CheckBuffTypeCond(
   if ( !System_Collections_Generic_Dictionary_Voice_BATTLE__string___ContainsKey(
           (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)dicCacheSelfValue,
           1,
-          (const MethodInfo_2F49BD0 *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____ContainsKey__) )
+          (const MethodInfo_2F72298 *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____ContainsKey__) )
   {
     SvtData_k__BackingField = this->fields._SvtData_k__BackingField;
-    v20 = this->fields.dicCacheSelfValue;
+    v11 = this->fields.dicCacheSelfValue;
     if ( SvtData_k__BackingField )
     {
       dicCacheSelfValue = BattleServantData__get_BuffData(SvtData_k__BackingField, 0LL);
@@ -3601,19 +3650,19 @@ bool __fastcall BuffList_BaseInvokeCond__CheckBuffTypeCond(
     }
     else
     {
-      dicCacheSelfValue = (BattleBuffData_o *)sub_B5D5DC(int___TypeInfo, 0LL);
+      dicCacheSelfValue = (BattleBuffData_o *)sub_B706AC(int___TypeInfo, 0LL);
     }
-    if ( v20 )
+    if ( v11 )
     {
       System_Collections_Generic_Dictionary_QuestAfterAction_COMMAND_TYPE__List_int____set_Item(
-        (System_Collections_Generic_Dictionary_QuestAfterAction_COMMAND_TYPE__List_int___o *)v20,
+        (System_Collections_Generic_Dictionary_QuestAfterAction_COMMAND_TYPE__List_int___o *)v11,
         1,
         (System_Collections_Generic_List_int__o *)dicCacheSelfValue,
-        (const MethodInfo_2F49934 *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____set_Item__);
+        (const MethodInfo_2F71FFC *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____set_Item__);
       goto LABEL_11;
     }
 LABEL_14:
-    sub_B5D69C(dicCacheSelfValue, buffData);
+    sub_B7076C(dicCacheSelfValue, buffData);
   }
 LABEL_11:
   dicCacheSelfValue = (BattleBuffData_o *)this->fields.dicCacheSelfValue;
@@ -3622,7 +3671,7 @@ LABEL_11:
   dicCacheSelfValue = (BattleBuffData_o *)System_Collections_Generic_Dictionary_Voice_BATTLE__string___get_Item(
                                             (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)dicCacheSelfValue,
                                             1,
-                                            (const MethodInfo_2F49898 *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____get_Item__);
+                                            (const MethodInfo_2F71F60 *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____get_Item__);
   if ( !buffData )
     goto LABEL_14;
   return BattleBuffData__checkBuffTypeIndiviuality(
@@ -3666,7 +3715,7 @@ bool __fastcall BuffList_BaseInvokeCond__CheckInvokeCond(
   }
   if ( !buffData )
 LABEL_6:
-    sub_B5D69C(v13, v14);
+    sub_B7076C(v13, v14);
   return BattleBuffData__checkBuffTypeIndiviuality(
            buffData,
            selfIndivValues,
@@ -3682,29 +3731,24 @@ void __fastcall BuffList_BaseInvokeCond__Init(
         BattleServantData_o *svtData,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
   BuffList_BaseInvokeCond_Fields *p_fields; // x20
-  __int64 v7; // x1
+  __int64 v6; // x1
   System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____o *dicCacheSelfValue; // x0
 
-  if ( (byte_42E5E38 & 1) == 0 )
+  if ( (byte_434ED53 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____Clear__,
-      (_DWORD)svtData,
-      (_DWORD)method,
-      v3);
-    byte_42E5E38 = 1;
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____Clear__);
+    byte_434ED53 = 1;
   }
   this->fields._SvtData_k__BackingField = svtData;
   p_fields = &this->fields;
-  sub_B5D560(p_fields);
+  sub_B70630(p_fields);
   dicCacheSelfValue = p_fields->dicCacheSelfValue;
   if ( !dicCacheSelfValue )
-    sub_B5D69C(0LL, v7);
+    sub_B7076C(0LL, v6);
   System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int_____Clear(
     dicCacheSelfValue,
-    (const MethodInfo_2F49B38 *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____Clear__);
+    (const MethodInfo_2F72200 *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____Clear__);
 }
 
 
@@ -3712,15 +3756,12 @@ System_String_o *__fastcall BuffList_BaseInvokeCond__get_BuffTypeCondKeyName(
         BuffList_BaseInvokeCond_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42E5E36 & 1) == 0 )
+  if ( (byte_434ED51 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_4008/*"Check{0}BuffTypes"*/, (_DWORD)method, v2, v3);
-    byte_42E5E36 = 1;
+    sub_B70694(&StringLiteral_4017/*"Check{0}BuffTypes"*/);
+    byte_434ED51 = 1;
   }
-  return System_String__Format((System_String_o *)StringLiteral_4008/*"Check{0}BuffTypes"*/, (Il2CppObject *)this->fields.targetSideStr, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_4017/*"Check{0}BuffTypes"*/, (Il2CppObject *)this->fields.targetSideStr, 0LL);
 }
 
 
@@ -3738,5 +3779,5 @@ void __fastcall BuffList_BaseInvokeCond__set_SvtData(
         const MethodInfo *method)
 {
   this->fields._SvtData_k__BackingField = value;
-  sub_B5D560(&this->fields);
+  sub_B70630(&this->fields);
 }

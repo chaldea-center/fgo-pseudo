@@ -1,17 +1,14 @@
 void __fastcall MapLayerMaster___ctor(MapLayerMaster_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EBB22 & 1) == 0 )
+  if ( (byte_4354DA4 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string___ctor__, (_DWORD)method, v2, v3);
-    byte_42EBB22 = 1;
+    sub_B70694(&Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string___ctor__);
+    byte_4354DA4 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     432,
-    (const MethodInfo_23FB1C4 *)Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string___ctor__);
+    (const MethodInfo_21C07F4 *)Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string___ctor__);
 }
 
 
@@ -24,16 +21,16 @@ MapLayerEntity_o *__fastcall MapLayerMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_42EBB23 & 1) == 0 )
+  if ( (byte_4354DA5 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string__GetEntity__, mapId, layer, method);
-    byte_42EBB23 = 1;
+    sub_B70694(&Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string__GetEntity__);
+    byte_4354DA5 = 1;
   }
   PK = MapLayerEntity__CreatePK(mapId, layer, *(const MethodInfo **)&layer);
   return (MapLayerEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                PK,
-                               (const MethodInfo_23FB260 *)Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string__GetEntity__);
+                               (const MethodInfo_21C0890 *)Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string__GetEntity__);
 }
 
 
@@ -47,19 +44,15 @@ bool __fastcall MapLayerMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_42EBB24 & 1) == 0 )
+  if ( (byte_4354DA6 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string__TryGetEntity__,
-      (_DWORD)entity,
-      mapId,
-      *(_QWORD *)&layer);
-    byte_42EBB24 = 1;
+    sub_B70694(&Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string__TryGetEntity__);
+    byte_4354DA6 = 1;
   }
   PK = MapLayerEntity__CreatePK(mapId, layer, *(const MethodInfo **)&mapId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_23FB2B8 *)Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string__TryGetEntity__);
+           (const MethodInfo_21C08E8 *)Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string__TryGetEntity__);
 }

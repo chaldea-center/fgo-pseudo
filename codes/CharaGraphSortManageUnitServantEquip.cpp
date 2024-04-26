@@ -10,18 +10,16 @@ CharaGraphFilterLogicBase_o *__fastcall CharaGraphSortManageUnitServantEquip__Cr
         CharaGraphSortManageUnitServantEquip_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  ServantCharaGraphEquipFilterLogic_o *v4; // x19
+  ServantCharaGraphEquipFilterLogic_o *v2; // x19
 
-  if ( (byte_42E9701 & 1) == 0 )
+  if ( (byte_4354A85 & 1) == 0 )
   {
-    sub_B5D5C4(&ServantCharaGraphEquipFilterLogic_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E9701 = 1;
+    sub_B70694(&ServantCharaGraphEquipFilterLogic_TypeInfo);
+    byte_4354A85 = 1;
   }
-  v4 = (ServantCharaGraphEquipFilterLogic_o *)sub_B5D694(ServantCharaGraphEquipFilterLogic_TypeInfo);
-  ServantCharaGraphEquipFilterLogic___ctor(v4, 0LL);
-  return (CharaGraphFilterLogicBase_o *)v4;
+  v2 = (ServantCharaGraphEquipFilterLogic_o *)sub_B70764(ServantCharaGraphEquipFilterLogic_TypeInfo);
+  ServantCharaGraphEquipFilterLogic___ctor(v2, 0LL);
+  return (CharaGraphFilterLogicBase_o *)v2;
 }
 
 
@@ -29,18 +27,16 @@ CharaGraphSortLogicBase_o *__fastcall CharaGraphSortManageUnitServantEquip__Crea
         CharaGraphSortManageUnitServantEquip_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  ServantEquipCharaGraphSortLogic_o *v4; // x19
+  ServantEquipCharaGraphSortLogic_o *v2; // x19
 
-  if ( (byte_42E9700 & 1) == 0 )
+  if ( (byte_4354A84 & 1) == 0 )
   {
-    sub_B5D5C4(&ServantEquipCharaGraphSortLogic_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E9700 = 1;
+    sub_B70694(&ServantEquipCharaGraphSortLogic_TypeInfo);
+    byte_4354A84 = 1;
   }
-  v4 = (ServantEquipCharaGraphSortLogic_o *)sub_B5D694(ServantEquipCharaGraphSortLogic_TypeInfo);
-  ServantEquipCharaGraphSortLogic___ctor(v4, 0LL);
-  return (CharaGraphSortLogicBase_o *)v4;
+  v2 = (ServantEquipCharaGraphSortLogic_o *)sub_B70764(ServantEquipCharaGraphSortLogic_TypeInfo);
+  ServantEquipCharaGraphSortLogic___ctor(v2, 0LL);
+  return (CharaGraphSortLogicBase_o *)v2;
 }
 
 
@@ -80,13 +76,10 @@ System_String_o *__fastcall CharaGraphSortManageUnitServantEquip__get_SortSaveKe
         CharaGraphSortManageUnitServantEquip_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42E96FF & 1) == 0 )
+  if ( (byte_4354A83 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_1124/*"2"*/, (_DWORD)method, v2, v3);
-    byte_42E96FF = 1;
+    sub_B70694(&StringLiteral_1130/*"2"*/);
+    byte_4354A83 = 1;
   }
-  return (System_String_o *)StringLiteral_1124/*"2"*/;
+  return (System_String_o *)StringLiteral_1130/*"2"*/;
 }

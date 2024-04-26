@@ -1,13 +1,9 @@
 void __fastcall SvtClassAttri___cctor(const MethodInfo *method)
 {
-  int v1; // w1
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EE4AC & 1) == 0 )
+  if ( (byte_4357934 & 1) == 0 )
   {
-    sub_B5D5C4(&SvtClassAttri_TypeInfo, v1, v2, v3);
-    byte_42EE4AC = 1;
+    sub_B70694(&SvtClassAttri_TypeInfo);
+    byte_4357934 = 1;
   }
   SvtClassAttri_TypeInfo->static_fields->MAX_EXP_UP_RARITY = 5;
 }
@@ -59,32 +55,28 @@ int32_t __fastcall SvtClassAttri__getClassId(int32_t type, const MethodInfo *met
 
 float __fastcall SvtClassAttri__getMagnification(int32_t attack, int32_t defense, const MethodInfo *method)
 {
-  __int64 v3; // x3
-  int v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
   DataManager_o *Instance; // x0
-  __int64 v10; // x1
-  ServantClassMaster_o *v11; // x21
+  __int64 v6; // x1
+  ServantClassMaster_o *v7; // x21
   int32_t RelationId; // w20
-  int32_t v13; // w1
+  int32_t v9; // w1
 
-  if ( (byte_42EE4AB & 1) == 0 )
+  if ( (byte_4357933 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataManager_GetMasterData_ServantClassMaster___, defense, (_DWORD)method, v3);
-    sub_B5D5C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6, v7, v8);
-    byte_42EE4AB = 1;
+    sub_B70694(&Method_DataManager_GetMasterData_ServantClassMaster___);
+    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4357933 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_ServantClassMaster___)) == 0LL )
+                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantClassMaster___)) == 0LL )
   {
-    sub_B5D69C(Instance, v10);
+    sub_B7076C(Instance, v6);
   }
-  v11 = (ServantClassMaster_o *)Instance;
+  v7 = (ServantClassMaster_o *)Instance;
   RelationId = ServantClassMaster__getRelationId((ServantClassMaster_o *)Instance, attack, 0LL);
-  v13 = ServantClassMaster__getRelationId(v11, defense, 0LL);
-  return ClassRelationMaster__getRate(RelationId, v13, 0LL);
+  v9 = ServantClassMaster__getRelationId(v7, defense, 0LL);
+  return ClassRelationMaster__getRate(RelationId, v9, 0LL);
 }

@@ -4,9 +4,16 @@ void __fastcall OrganizationTopListViewItem___ctor(
         OrganizationTopItemInfo_o *info,
         const MethodInfo *method)
 {
-  ListViewItem___ctor_23901828((ListViewItem_o *)this, index, 0LL);
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
+
+  ListViewItem___ctor_23967088((ListViewItem_o *)this, index, 0LL);
   this->fields.info = info;
-  sub_B5D560(&this->fields.info);
+  sub_B70630((BattleServantConfConponent_o *)&this->fields.info, (System_Int32_array **)info, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -20,21 +27,19 @@ System_String_o *__fastcall OrganizationTopListViewItem__ToString(
         OrganizationTopListViewItem_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  OrganizationTopListViewItem_o *v4; // x19
+  OrganizationTopListViewItem_o *v2; // x19
   struct OrganizationTopItemInfo_o *info; // x8
 
-  v4 = this;
-  if ( (byte_42E6321 & 1) == 0 )
+  v2 = this;
+  if ( (byte_4350C1E & 1) == 0 )
   {
-    this = (OrganizationTopListViewItem_o *)sub_B5D5C4(&StringLiteral_10255/*"OrganizationTopItem "*/, (_DWORD)method, v2, v3);
-    byte_42E6321 = 1;
+    this = (OrganizationTopListViewItem_o *)sub_B70694(&StringLiteral_10272/*"OrganizationTopItem "*/);
+    byte_4350C1E = 1;
   }
-  info = v4->fields.info;
+  info = v2->fields.info;
   if ( !info )
-    sub_B5D69C(this, method);
-  return System_String__Concat_44577788((System_String_o *)StringLiteral_10255/*"OrganizationTopItem "*/, info->fields.textCode, 0LL);
+    sub_B7076C(this, method);
+  return System_String__Concat_44758168((System_String_o *)StringLiteral_10272/*"OrganizationTopItem "*/, info->fields.textCode, 0LL);
 }
 
 
@@ -46,7 +51,7 @@ System_String_o *__fastcall OrganizationTopListViewItem__get_EventData(
 
   info = this->fields.info;
   if ( !info )
-    sub_B5D69C(this, method);
+    sub_B7076C(this, method);
   return info->fields.eventData;
 }
 
@@ -59,7 +64,7 @@ System_String_o *__fastcall OrganizationTopListViewItem__get_ImageName(
 
   info = this->fields.info;
   if ( !info )
-    sub_B5D69C(this, method);
+    sub_B7076C(this, method);
   return info->fields.imageName;
 }
 
@@ -76,21 +81,19 @@ System_String_o *__fastcall OrganizationTopListViewItem__get_InfoText(
         OrganizationTopListViewItem_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  OrganizationTopListViewItem_o *v4; // x19
+  OrganizationTopListViewItem_o *v2; // x19
   struct OrganizationTopItemInfo_o *info; // x8
   System_String_o *textCode; // x19
 
-  v4 = this;
-  if ( (byte_42E6320 & 1) == 0 )
+  v2 = this;
+  if ( (byte_4350C1D & 1) == 0 )
   {
-    this = (OrganizationTopListViewItem_o *)sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E6320 = 1;
+    this = (OrganizationTopListViewItem_o *)sub_B70694(&LocalizationManager_TypeInfo);
+    byte_4350C1D = 1;
   }
-  info = v4->fields.info;
+  info = v2->fields.info;
   if ( !info )
-    sub_B5D69C(this, method);
+    sub_B7076C(this, method);
   textCode = info->fields.textCode;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )

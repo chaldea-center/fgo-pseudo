@@ -1,16 +1,13 @@
 void __fastcall TblUserEntity___ctor(TblUserEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42E5B47 & 1) == 0 )
+  if ( (byte_434EE30 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_long___ctor__, (_DWORD)method, v2, v3);
-    byte_42E5B47 = 1;
+    sub_B70694(&Method_DataEntityBase_long___ctor__);
+    byte_434EE30 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_23FAD14 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_21C0344 *)Method_DataEntityBase_long___ctor__);
 }
 
 

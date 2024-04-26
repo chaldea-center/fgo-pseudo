@@ -1,16 +1,13 @@
 void __fastcall BoxGachaHistoryEntity___ctor(BoxGachaHistoryEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA56A & 1) == 0 )
+  if ( (byte_4353E8C & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_int___ctor__, (_DWORD)method, v2, v3);
-    byte_42EA56A = 1;
+    sub_B70694(&Method_DataEntityBase_int___ctor__);
+    byte_4353E8C = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_23FACBC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -48,10 +45,10 @@ int32_t __fastcall BoxGachaHistoryEntity__getDrawNum(
     {
       if ( v8 >= (unsigned int)v4 )
       {
-        v11 = sub_B5D6C8(this);
-        sub_B5D668(v11, 0LL);
+        v11 = sub_B70798(this);
+        sub_B70738(v11, 0LL);
       }
-      this = (BoxGachaHistoryEntity_o *)System_Int32__Equals_39741700((_DWORD)numbers + i, no, 0LL);
+      this = (BoxGachaHistoryEntity_o *)System_Int32__Equals_39283908((_DWORD)numbers + i, no, 0LL);
       numbers = v6->fields.numbers;
       if ( !numbers )
         break;
@@ -62,7 +59,7 @@ int32_t __fastcall BoxGachaHistoryEntity__getDrawNum(
         return v5;
     }
 LABEL_9:
-    sub_B5D69C(this, *(_QWORD *)&no);
+    sub_B7076C(this, *(_QWORD *)&no);
   }
   return v5;
 }

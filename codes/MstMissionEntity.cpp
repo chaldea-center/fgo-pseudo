@@ -1,17 +1,14 @@
 void __fastcall MstMissionEntity___ctor(MstMissionEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42E7491 & 1) == 0 )
+  if ( (byte_4350D69 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_int___ctor__, (_DWORD)method, v2, v3);
-    byte_42E7491 = 1;
+    sub_B70694(&Method_DataEntityBase_int___ctor__);
+    byte_4350D69 = 1;
   }
   this->fields.WEEK_TIME = 604800;
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_23FACBC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -23,29 +20,24 @@ int32_t __fastcall MstMissionEntity__CreatePrimaryKey(MstMissionEntity_o *this, 
 
 int32_t __fastcall MstMissionEntity__getMissionType(MstMissionEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
   DataManager_o *Instance; // x0
-  __int64 v9; // x1
+  __int64 v4; // x1
   struct DataMasterBase_array *datalist; // x8
   struct System_Collections_Generic_Dictionary_int__DataMasterBase__o *lookup; // x8
-  __int64 v13; // x0
+  __int64 v8; // x0
 
-  if ( (byte_42E7490 & 1) == 0 )
+  if ( (byte_4350D68 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataManager_GetMasterData_EventMissionMaster___, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5, v6, v7);
-    byte_42E7490 = 1;
+    sub_B70694(&Method_DataManager_GetMasterData_EventMissionMaster___);
+    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4350D68 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_EventMissionMaster___);
+                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventMissionMaster___);
   if ( !Instance )
     goto LABEL_11;
   Instance = (DataManager_o *)EventMissionMaster__getEventMissionList(
@@ -59,14 +51,14 @@ int32_t __fastcall MstMissionEntity__getMissionType(MstMissionEntity_o *this, co
   {
     if ( !(_DWORD)datalist )
     {
-      v13 = sub_B5D6C8(Instance);
-      sub_B5D668(v13, 0LL);
+      v8 = sub_B70798(Instance);
+      sub_B70738(v8, 0LL);
     }
     lookup = Instance->fields.lookup;
     if ( lookup )
       return (int32_t)lookup->fields.entries;
 LABEL_11:
-    sub_B5D69C(Instance, v9);
+    sub_B7076C(Instance, v4);
   }
   return 0;
 }
@@ -74,69 +66,61 @@ LABEL_11:
 
 bool __fastcall MstMissionEntity__hasUnarchived(MstMissionEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
   void *Instance; // x0
-  __int64 v12; // x1
+  __int64 v4; // x1
   System_Int32_array *MissionIdListByEvent; // x20
-  int v14; // w8
-  __int64 v15; // x9
-  __int64 v16; // x11
+  int v6; // w8
+  __int64 v7; // x9
+  __int64 v8; // x11
 
-  if ( (byte_42E748F & 1) == 0 )
+  if ( (byte_4350D67 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataManager_GetMasterData_EventMissionMaster___, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&Method_DataManager_GetMasterData_UserEventMissionMaster___, v5, v6, v7);
-    sub_B5D5C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8, v9, v10);
-    byte_42E748F = 1;
+    sub_B70694(&Method_DataManager_GetMasterData_EventMissionMaster___);
+    sub_B70694(&Method_DataManager_GetMasterData_UserEventMissionMaster___);
+    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4350D67 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
                (DataManager_o *)Instance,
-               (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_EventMissionMaster___);
+               (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventMissionMaster___);
   if ( !Instance )
     goto LABEL_17;
   MissionIdListByEvent = EventMissionMaster__getMissionIdListByEvent(
                            (EventMissionMaster_o *)Instance,
                            this->fields.id,
                            0LL);
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
                (DataManager_o *)Instance,
-               (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_UserEventMissionMaster___);
+               (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserEventMissionMaster___);
   if ( !Instance )
     goto LABEL_17;
   Instance = UserEventMissionMaster__getUserEventMissionList((UserEventMissionMaster_o *)Instance, this->fields.id, 0LL);
   if ( !Instance || !MissionIdListByEvent )
     goto LABEL_17;
-  v14 = *((_DWORD *)Instance + 6);
-  if ( MissionIdListByEvent->max_length != v14 )
+  v6 = *((_DWORD *)Instance + 6);
+  if ( MissionIdListByEvent->max_length != v6 )
     return 1;
-  if ( v14 >= 1 )
+  if ( v6 >= 1 )
   {
-    v15 = 0LL;
+    v7 = 0LL;
     while ( 1 )
     {
-      v16 = *((_QWORD *)Instance + v15 + 4);
-      if ( !v16 )
+      v8 = *((_QWORD *)Instance + v7 + 4);
+      if ( !v8 )
         break;
-      if ( *(_DWORD *)(v16 + 32) != 5 )
+      if ( *(_DWORD *)(v8 + 32) != 5 )
         return 1;
-      if ( (int)++v15 >= v14 )
+      if ( (int)++v7 >= v6 )
         return 0;
     }
 LABEL_17:
-    sub_B5D69C(Instance, v12);
+    sub_B7076C(Instance, v4);
   }
   return 0;
 }
@@ -150,14 +134,12 @@ bool __fastcall MstMissionEntity__isActive(MstMissionEntity_o *this, int64_t che
 
 bool __fastcall MstMissionEntity__isActiveNow(MstMissionEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   int64_t Time; // x0
 
-  if ( (byte_42E748E & 1) == 0 )
+  if ( (byte_4350D66 & 1) == 0 )
   {
-    sub_B5D5C4(&NetworkManager_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E748E = 1;
+    sub_B70694(&NetworkManager_TypeInfo);
+    byte_4350D66 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -177,14 +159,12 @@ bool __fastcall MstMissionEntity__isOpen(MstMissionEntity_o *this, int64_t check
 
 bool __fastcall MstMissionEntity__isOpenNow(MstMissionEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   int64_t Time; // x0
 
-  if ( (byte_42E748D & 1) == 0 )
+  if ( (byte_4350D65 & 1) == 0 )
   {
-    sub_B5D5C4(&NetworkManager_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E748D = 1;
+    sub_B70694(&NetworkManager_TypeInfo);
+    byte_4350D65 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )

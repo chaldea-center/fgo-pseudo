@@ -1,31 +1,31 @@
 void __fastcall CatAndMouseGame___cctor(const MethodInfo *method)
 {
-  int v1; // w1
-  int v2; // w2
-  __int64 v3; // x3
-  int v4; // w1
-  int v5; // w2
-  __int64 v6; // x3
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
-  int v10; // w1
-  int v11; // w2
-  __int64 v12; // x3
-  int v13; // w1
-  int v14; // w2
-  __int64 v15; // x3
-  int v16; // w1
-  int v17; // w2
-  __int64 v18; // x3
-  int v19; // w1
-  int v20; // w2
-  __int64 v21; // x3
-  int v22; // w1
-  int v23; // w2
-  __int64 v24; // x3
-  System_Int32_array **v25; // x0
+  System_Int32_array **v1; // x0
   BattleServantConfConponent_o *static_fields; // x8
+  System_String_array **v3; // x2
+  System_String_array **v4; // x3
+  System_Boolean_array **v5; // x4
+  System_Int32_array **v6; // x5
+  System_Int32_array *v7; // x6
+  System_Int32_array *v8; // x7
+  System_Int32_array **v9; // x0
+  struct CatAndMouseGame_StaticFields *v10; // x8
+  System_String_array **v11; // x2
+  System_String_array **v12; // x3
+  System_Boolean_array **v13; // x4
+  System_Int32_array **v14; // x5
+  System_Int32_array *v15; // x6
+  System_Int32_array *v16; // x7
+  System_Int32_array **v17; // x0
+  struct CatAndMouseGame_StaticFields *v18; // x8
+  System_String_array **v19; // x2
+  System_String_array **v20; // x3
+  System_Boolean_array **v21; // x4
+  System_Int32_array **v22; // x5
+  System_Int32_array *v23; // x6
+  System_Int32_array *v24; // x7
+  System_Int32_array **v25; // x0
+  struct CatAndMouseGame_StaticFields *v26; // x8
   System_String_array **v27; // x2
   System_String_array **v28; // x3
   System_Boolean_array **v29; // x4
@@ -96,317 +96,293 @@ void __fastcall CatAndMouseGame___cctor(const MethodInfo *method)
   System_Int32_array **v94; // x5
   System_Int32_array *v95; // x6
   System_Int32_array *v96; // x7
-  System_Int32_array **v97; // x0
-  struct CatAndMouseGame_StaticFields *v98; // x8
+  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *v97; // x19
+  struct CatAndMouseGame_StaticFields *v98; // x0
   System_String_array **v99; // x2
   System_String_array **v100; // x3
   System_Boolean_array **v101; // x4
   System_Int32_array **v102; // x5
   System_Int32_array *v103; // x6
   System_Int32_array *v104; // x7
-  System_Int32_array **v105; // x0
-  struct CatAndMouseGame_StaticFields *v106; // x8
+  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *v105; // x19
+  struct CatAndMouseGame_StaticFields *v106; // x0
   System_String_array **v107; // x2
   System_String_array **v108; // x3
   System_Boolean_array **v109; // x4
   System_Int32_array **v110; // x5
   System_Int32_array *v111; // x6
   System_Int32_array *v112; // x7
-  System_Int32_array **v113; // x0
-  struct CatAndMouseGame_StaticFields *v114; // x8
-  System_String_array **v115; // x2
-  System_String_array **v116; // x3
-  System_Boolean_array **v117; // x4
-  System_Int32_array **v118; // x5
-  System_Int32_array *v119; // x6
-  System_Int32_array *v120; // x7
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *v121; // x19
-  struct CatAndMouseGame_StaticFields *v122; // x0
-  System_String_array **v123; // x2
-  System_String_array **v124; // x3
-  System_Boolean_array **v125; // x4
-  System_Int32_array **v126; // x5
-  System_Int32_array *v127; // x6
-  System_Int32_array *v128; // x7
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *v129; // x19
-  struct CatAndMouseGame_StaticFields *v130; // x0
-  System_String_array **v131; // x2
-  System_String_array **v132; // x3
-  System_Boolean_array **v133; // x4
-  System_Int32_array **v134; // x5
-  System_Int32_array *v135; // x6
-  System_Int32_array *v136; // x7
   System_Text_Encoding_o *UTF8; // x0
-  __int64 v138; // x1
-  __int64 v139; // x19
-  unsigned __int64 v140; // x8
-  unsigned int v141; // w10
-  struct CatAndMouseGame_StaticFields *v142; // x11
+  __int64 v114; // x1
+  __int64 v115; // x19
+  unsigned __int64 v116; // x8
+  unsigned int v117; // w10
+  struct CatAndMouseGame_StaticFields *v118; // x11
   struct System_Byte_array *stageTop; // x10
-  __int64 v144; // x11
-  uint8_t v145; // w12
+  __int64 v120; // x11
+  uint8_t v121; // w12
   struct System_Globalization_CodePageDataItem_o *dataItem; // x10
-  unsigned __int64 v147; // x8
-  __int64 v148; // x9
-  struct CatAndMouseGame_StaticFields *v149; // x11
+  unsigned __int64 v123; // x8
+  __int64 v124; // x9
+  struct CatAndMouseGame_StaticFields *v125; // x11
   struct System_Byte_array *baseData; // x11
-  signed int v151; // w10
-  struct System_Byte_array *v152; // x12
-  __int64 v153; // x13
-  struct System_Byte_array *v154; // x12
-  __int64 v155; // x11
-  char *v156; // x11
-  __int64 v157; // x12
-  struct System_Byte_array *v158; // x11
-  unsigned int v159; // w10
+  signed int v127; // w10
+  struct System_Byte_array *v128; // x12
+  __int64 v129; // x13
+  struct System_Byte_array *v130; // x12
+  __int64 v131; // x11
+  char *v132; // x11
+  __int64 v133; // x12
+  struct System_Byte_array *v134; // x11
+  unsigned int v135; // w10
   struct System_Byte_array *baseTop; // x11
-  signed int v161; // w10
-  struct System_Byte_array *v162; // x12
-  __int64 v163; // x13
-  struct System_Byte_array *v164; // x12
-  __int64 v165; // x11
-  __int64 v166; // x0
+  signed int v137; // w10
+  struct System_Byte_array *v138; // x12
+  __int64 v139; // x13
+  struct System_Byte_array *v140; // x12
+  __int64 v141; // x11
+  __int64 v142; // x0
 
-  if ( (byte_42EB67B & 1) == 0 )
+  if ( (byte_4354B59 & 1) == 0 )
   {
-    sub_B5D5C4(&byte___TypeInfo, v1, v2, v3);
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, v4, v5, v6);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_string__byte_______ctor__, v7, v8, v9);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_string__string___ctor__, v10, v11, v12);
-    sub_B5D5C4(&System_Collections_Generic_Dictionary_string__byte______TypeInfo, v13, v14, v15);
-    sub_B5D5C4(&System_Collections_Generic_Dictionary_string__string__TypeInfo, v16, v17, v18);
-    sub_B5D5C4(&StringLiteral_20420/*"kzdMtpmzqCHAfx00saU1gIhTjYCuOD1JstqtisXsGYqRVcqrHRydj3k6vJCySu3g"*/, v19, v20, v21);
-    sub_B5D5C4(&StringLiteral_10544/*"PFBs0eIuunoxKkCcLbqDVerU1rShhS276SAL3A8tFLUfGvtz3F3FFeKELIk3Nvi4"*/, v22, v23, v24);
-    byte_42EB67B = 1;
+    sub_B70694(&byte___TypeInfo);
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__byte_______ctor__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+    sub_B70694(&System_Collections_Generic_Dictionary_string__byte______TypeInfo);
+    sub_B70694(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
+    sub_B70694(&StringLiteral_20480/*"kzdMtpmzqCHAfx00saU1gIhTjYCuOD1JstqtisXsGYqRVcqrHRydj3k6vJCySu3g"*/);
+    sub_B70694(&StringLiteral_10565/*"PFBs0eIuunoxKkCcLbqDVerU1rShhS276SAL3A8tFLUfGvtz3F3FFeKELIk3Nvi4"*/);
+    byte_4354B59 = 1;
   }
-  v25 = (System_Int32_array **)sub_B5D5DC(byte___TypeInfo, 32LL);
+  v1 = (System_Int32_array **)sub_B706AC(byte___TypeInfo, 32LL);
   static_fields = (BattleServantConfConponent_o *)CatAndMouseGame_TypeInfo->static_fields;
-  static_fields->klass = (BattleServantConfConponent_c *)v25;
-  sub_B5D560(static_fields, v25, v27, v28, v29, v30, v31, v32);
-  v33 = (System_Int32_array **)sub_B5D5DC(byte___TypeInfo, 32LL);
+  static_fields->klass = (BattleServantConfConponent_c *)v1;
+  sub_B70630(static_fields, v1, v3, v4, v5, v6, v7, v8);
+  v9 = (System_Int32_array **)sub_B706AC(byte___TypeInfo, 32LL);
+  v10 = CatAndMouseGame_TypeInfo->static_fields;
+  v10->ownerData = (struct System_Byte_array *)v9;
+  sub_B70630((BattleServantConfConponent_o *)&v10->ownerData, v9, v11, v12, v13, v14, v15, v16);
+  v17 = (System_Int32_array **)sub_B706AC(byte___TypeInfo, 32LL);
+  v18 = CatAndMouseGame_TypeInfo->static_fields;
+  v18->InfoTop = (struct System_Byte_array *)v17;
+  sub_B70630((BattleServantConfConponent_o *)&v18->InfoTop, v17, v19, v20, v21, v22, v23, v24);
+  v25 = (System_Int32_array **)sub_B706AC(byte___TypeInfo, 32LL);
+  v26 = CatAndMouseGame_TypeInfo->static_fields;
+  v26->infoData = (struct System_Byte_array *)v25;
+  sub_B70630((BattleServantConfConponent_o *)&v26->infoData, v25, v27, v28, v29, v30, v31, v32);
+  v33 = (System_Int32_array **)sub_B706AC(byte___TypeInfo, 32LL);
   v34 = CatAndMouseGame_TypeInfo->static_fields;
-  v34->ownerData = (struct System_Byte_array *)v33;
-  sub_B5D560((BattleServantConfConponent_o *)&v34->ownerData, v33, v35, v36, v37, v38, v39, v40);
-  v41 = (System_Int32_array **)sub_B5D5DC(byte___TypeInfo, 32LL);
+  v34->stageTop = (struct System_Byte_array *)v33;
+  sub_B70630((BattleServantConfConponent_o *)&v34->stageTop, v33, v35, v36, v37, v38, v39, v40);
+  v41 = (System_Int32_array **)sub_B706AC(byte___TypeInfo, 32LL);
   v42 = CatAndMouseGame_TypeInfo->static_fields;
-  v42->InfoTop = (struct System_Byte_array *)v41;
-  sub_B5D560((BattleServantConfConponent_o *)&v42->InfoTop, v41, v43, v44, v45, v46, v47, v48);
-  v49 = (System_Int32_array **)sub_B5D5DC(byte___TypeInfo, 32LL);
+  v42->stageData = (struct System_Byte_array *)v41;
+  sub_B70630((BattleServantConfConponent_o *)&v42->stageData, v41, v43, v44, v45, v46, v47, v48);
+  v49 = (System_Int32_array **)sub_B706AC(byte___TypeInfo, 32LL);
   v50 = CatAndMouseGame_TypeInfo->static_fields;
-  v50->infoData = (struct System_Byte_array *)v49;
-  sub_B5D560((BattleServantConfConponent_o *)&v50->infoData, v49, v51, v52, v53, v54, v55, v56);
-  v57 = (System_Int32_array **)sub_B5D5DC(byte___TypeInfo, 32LL);
+  v50->baseTop = (struct System_Byte_array *)v49;
+  sub_B70630((BattleServantConfConponent_o *)&v50->baseTop, v49, v51, v52, v53, v54, v55, v56);
+  v57 = (System_Int32_array **)sub_B706AC(byte___TypeInfo, 32LL);
   v58 = CatAndMouseGame_TypeInfo->static_fields;
-  v58->stageTop = (struct System_Byte_array *)v57;
-  sub_B5D560((BattleServantConfConponent_o *)&v58->stageTop, v57, v59, v60, v61, v62, v63, v64);
-  v65 = (System_Int32_array **)sub_B5D5DC(byte___TypeInfo, 32LL);
+  v58->baseData = (struct System_Byte_array *)v57;
+  sub_B70630((BattleServantConfConponent_o *)&v58->baseData, v57, v59, v60, v61, v62, v63, v64);
+  v65 = (System_Int32_array **)sub_B706AC(byte___TypeInfo, 32LL);
   v66 = CatAndMouseGame_TypeInfo->static_fields;
-  v66->stageData = (struct System_Byte_array *)v65;
-  sub_B5D560((BattleServantConfConponent_o *)&v66->stageData, v65, v67, v68, v69, v70, v71, v72);
-  v73 = (System_Int32_array **)sub_B5D5DC(byte___TypeInfo, 32LL);
+  v66->BattleKey = (struct System_Byte_array *)v65;
+  sub_B70630((BattleServantConfConponent_o *)&v66->BattleKey, v65, v67, v68, v69, v70, v71, v72);
+  v73 = (System_Int32_array **)sub_B706AC(byte___TypeInfo, 32LL);
   v74 = CatAndMouseGame_TypeInfo->static_fields;
-  v74->baseTop = (struct System_Byte_array *)v73;
-  sub_B5D560((BattleServantConfConponent_o *)&v74->baseTop, v73, v75, v76, v77, v78, v79, v80);
-  v81 = (System_Int32_array **)sub_B5D5DC(byte___TypeInfo, 32LL);
+  v74->BattleIV = (struct System_Byte_array *)v73;
+  sub_B70630((BattleServantConfConponent_o *)&v74->BattleIV, v73, v75, v76, v77, v78, v79, v80);
+  v81 = (System_Int32_array **)sub_B706AC(byte___TypeInfo, 32LL);
   v82 = CatAndMouseGame_TypeInfo->static_fields;
-  v82->baseData = (struct System_Byte_array *)v81;
-  sub_B5D560((BattleServantConfConponent_o *)&v82->baseData, v81, v83, v84, v85, v86, v87, v88);
-  v89 = (System_Int32_array **)sub_B5D5DC(byte___TypeInfo, 32LL);
+  v82->sideTop = (struct System_Byte_array *)v81;
+  sub_B70630((BattleServantConfConponent_o *)&v82->sideTop, v81, v83, v84, v85, v86, v87, v88);
+  v89 = (System_Int32_array **)sub_B706AC(byte___TypeInfo, 32LL);
   v90 = CatAndMouseGame_TypeInfo->static_fields;
-  v90->BattleKey = (struct System_Byte_array *)v89;
-  sub_B5D560((BattleServantConfConponent_o *)&v90->BattleKey, v89, v91, v92, v93, v94, v95, v96);
-  v97 = (System_Int32_array **)sub_B5D5DC(byte___TypeInfo, 32LL);
+  v90->sideData = (struct System_Byte_array *)v89;
+  sub_B70630((BattleServantConfConponent_o *)&v90->sideData, v89, v91, v92, v93, v94, v95, v96);
+  v97 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)sub_B70764(System_Collections_Generic_Dictionary_string__string__TypeInfo);
+  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject____ctor(
+    v97,
+    (const MethodInfo_2F4EE38 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
   v98 = CatAndMouseGame_TypeInfo->static_fields;
-  v98->BattleIV = (struct System_Byte_array *)v97;
-  sub_B5D560((BattleServantConfConponent_o *)&v98->BattleIV, v97, v99, v100, v101, v102, v103, v104);
-  v105 = (System_Int32_array **)sub_B5D5DC(byte___TypeInfo, 32LL);
+  v98->assetbundleKeyCollection = (struct System_Collections_Generic_Dictionary_string__string__o *)v97;
+  sub_B70630(
+    (BattleServantConfConponent_o *)&v98->assetbundleKeyCollection,
+    (System_Int32_array **)v97,
+    v99,
+    v100,
+    v101,
+    v102,
+    v103,
+    v104);
+  v105 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)sub_B70764(System_Collections_Generic_Dictionary_string__byte______TypeInfo);
+  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject____ctor(
+    v105,
+    (const MethodInfo_2F4EE38 *)Method_System_Collections_Generic_Dictionary_string__byte_______ctor__);
   v106 = CatAndMouseGame_TypeInfo->static_fields;
-  v106->sideTop = (struct System_Byte_array *)v105;
-  sub_B5D560((BattleServantConfConponent_o *)&v106->sideTop, v105, v107, v108, v109, v110, v111, v112);
-  v113 = (System_Int32_array **)sub_B5D5DC(byte___TypeInfo, 32LL);
-  v114 = CatAndMouseGame_TypeInfo->static_fields;
-  v114->sideData = (struct System_Byte_array *)v113;
-  sub_B5D560((BattleServantConfConponent_o *)&v114->sideData, v113, v115, v116, v117, v118, v119, v120);
-  v121 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)sub_B5D694(System_Collections_Generic_Dictionary_string__string__TypeInfo);
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject____ctor(
-    v121,
-    (const MethodInfo_2F2600C *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-  v122 = CatAndMouseGame_TypeInfo->static_fields;
-  v122->assetbundleKeyCollection = (struct System_Collections_Generic_Dictionary_string__string__o *)v121;
-  sub_B5D560(
-    (BattleServantConfConponent_o *)&v122->assetbundleKeyCollection,
-    (System_Int32_array **)v121,
-    v123,
-    v124,
-    v125,
-    v126,
-    v127,
-    v128);
-  v129 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)sub_B5D694(System_Collections_Generic_Dictionary_string__byte______TypeInfo);
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject____ctor(
-    v129,
-    (const MethodInfo_2F2600C *)Method_System_Collections_Generic_Dictionary_string__byte_______ctor__);
-  v130 = CatAndMouseGame_TypeInfo->static_fields;
-  v130->keyCollection = (struct System_Collections_Generic_Dictionary_string__byte______o *)v129;
-  sub_B5D560(
-    (BattleServantConfConponent_o *)&v130->keyCollection,
-    (System_Int32_array **)v129,
-    v131,
-    v132,
-    v133,
-    v134,
-    v135,
-    v136);
+  v106->keyCollection = (struct System_Collections_Generic_Dictionary_string__byte______o *)v105;
+  sub_B70630(
+    (BattleServantConfConponent_o *)&v106->keyCollection,
+    (System_Int32_array **)v105,
+    v107,
+    v108,
+    v109,
+    v110,
+    v111,
+    v112);
   if ( !UnityEngine_Application__get_isPlaying(0LL) )
   {
     UTF8 = System_Text_Encoding__get_UTF8(0LL);
     if ( !UTF8 )
       goto LABEL_50;
-    v139 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
+    v115 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
              UTF8,
-             StringLiteral_20420/*"kzdMtpmzqCHAfx00saU1gIhTjYCuOD1JstqtisXsGYqRVcqrHRydj3k6vJCySu3g"*/,
+             StringLiteral_20480/*"kzdMtpmzqCHAfx00saU1gIhTjYCuOD1JstqtisXsGYqRVcqrHRydj3k6vJCySu3g"*/,
              UTF8->klass->vtable._19_GetBytes.methodPtr);
     UTF8 = System_Text_Encoding__get_UTF8(0LL);
     if ( !UTF8 )
       goto LABEL_50;
     UTF8 = (System_Text_Encoding_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
                                        UTF8,
-                                       StringLiteral_10544/*"PFBs0eIuunoxKkCcLbqDVerU1rShhS276SAL3A8tFLUfGvtz3F3FFeKELIk3Nvi4"*/,
+                                       StringLiteral_10565/*"PFBs0eIuunoxKkCcLbqDVerU1rShhS276SAL3A8tFLUfGvtz3F3FFeKELIk3Nvi4"*/,
                                        UTF8->klass->vtable._19_GetBytes.methodPtr);
-    if ( !v139 )
+    if ( !v115 )
       goto LABEL_50;
-    if ( (int)*(_QWORD *)(v139 + 24) >= 1 )
+    if ( (int)*(_QWORD *)(v115 + 24) >= 1 )
     {
-      v140 = 0LL;
-      v141 = *(_QWORD *)(v139 + 24);
+      v116 = 0LL;
+      v117 = *(_QWORD *)(v115 + 24);
       do
       {
-        v142 = CatAndMouseGame_TypeInfo->static_fields;
-        if ( (v140 & 1) != 0 )
+        v118 = CatAndMouseGame_TypeInfo->static_fields;
+        if ( (v116 & 1) != 0 )
         {
-          if ( v140 >= v141 )
+          if ( v116 >= v117 )
             goto LABEL_49;
-          stageTop = v142->stageTop;
+          stageTop = v118->stageTop;
           if ( !stageTop )
             goto LABEL_50;
         }
         else
         {
-          if ( v140 >= v141 )
+          if ( v116 >= v117 )
             goto LABEL_49;
-          stageTop = v142->stageData;
+          stageTop = v118->stageData;
           if ( !stageTop )
             goto LABEL_50;
         }
-        v144 = (unsigned int)v140 >> 1;
-        if ( (unsigned int)v144 >= stageTop->max_length )
+        v120 = (unsigned int)v116 >> 1;
+        if ( (unsigned int)v120 >= stageTop->max_length )
         {
 LABEL_49:
-          v166 = sub_B5D6C8(UTF8);
-          sub_B5D668(v166, 0LL);
+          v142 = sub_B70798(UTF8);
+          sub_B70738(v142, 0LL);
         }
-        v145 = *(_BYTE *)(v139 + 32 + v140++);
-        stageTop->m_Items[v144 + 4] = v145;
-        v141 = *(_DWORD *)(v139 + 24);
+        v121 = *(_BYTE *)(v115 + 32 + v116++);
+        stageTop->m_Items[v120 + 4] = v121;
+        v117 = *(_DWORD *)(v115 + 24);
       }
-      while ( (__int64)v140 < (int)v141 );
+      while ( (__int64)v116 < (int)v117 );
     }
     if ( !UTF8 )
 LABEL_50:
-      sub_B5D69C(UTF8, v138);
+      sub_B7076C(UTF8, v114);
     dataItem = UTF8->fields.dataItem;
     if ( (int)dataItem >= 4 )
     {
-      v147 = 0LL;
-      v148 = 0LL;
+      v123 = 0LL;
+      v124 = 0LL;
       do
       {
-        v149 = CatAndMouseGame_TypeInfo->static_fields;
-        if ( (v148 & 1) != 0 )
+        v125 = CatAndMouseGame_TypeInfo->static_fields;
+        if ( (v124 & 1) != 0 )
         {
-          if ( v147 >= (unsigned int)dataItem )
+          if ( v123 >= (unsigned int)dataItem )
             goto LABEL_49;
-          baseTop = v149->baseTop;
+          baseTop = v125->baseTop;
           if ( !baseTop )
             goto LABEL_50;
-          v161 = (2 * v148) & 0xFFFFFFFC;
-          if ( v161 >= baseTop->max_length )
+          v137 = (2 * v124) & 0xFFFFFFFC;
+          if ( v137 >= baseTop->max_length )
             goto LABEL_49;
-          baseTop->m_Items[v161 + 4] = *(&UTF8->fields.m_deserializedFromEverett + v147);
-          if ( v147 + 1 >= LODWORD(UTF8->fields.dataItem) )
+          baseTop->m_Items[v137 + 4] = *(&UTF8->fields.m_deserializedFromEverett + v123);
+          if ( v123 + 1 >= LODWORD(UTF8->fields.dataItem) )
             goto LABEL_49;
-          v162 = CatAndMouseGame_TypeInfo->static_fields->baseTop;
-          if ( !v162 )
+          v138 = CatAndMouseGame_TypeInfo->static_fields->baseTop;
+          if ( !v138 )
             goto LABEL_50;
-          v163 = v161 | 1LL;
-          if ( (unsigned int)v163 >= v162->max_length )
+          v139 = v137 | 1LL;
+          if ( (unsigned int)v139 >= v138->max_length )
             goto LABEL_49;
-          v162->m_Items[v163 + 4] = *(&UTF8->fields.m_isReadOnly + v147);
-          if ( v147 + 2 >= LODWORD(UTF8->fields.dataItem) )
+          v138->m_Items[v139 + 4] = *(&UTF8->fields.m_isReadOnly + v123);
+          if ( v123 + 2 >= LODWORD(UTF8->fields.dataItem) )
             goto LABEL_49;
-          v164 = CatAndMouseGame_TypeInfo->static_fields->baseTop;
-          if ( !v164 )
+          v140 = CatAndMouseGame_TypeInfo->static_fields->baseTop;
+          if ( !v140 )
             goto LABEL_50;
-          v165 = v161 | 2LL;
-          if ( (unsigned int)v165 >= v164->max_length )
+          v141 = v137 | 2LL;
+          if ( (unsigned int)v141 >= v140->max_length )
             goto LABEL_49;
-          v164->m_Items[v165 + 4] = *(&UTF8->fields.m_isReadOnly + v147 + 1);
-          if ( v147 + 3 >= LODWORD(UTF8->fields.dataItem) )
+          v140->m_Items[v141 + 4] = *(&UTF8->fields.m_isReadOnly + v123 + 1);
+          if ( v123 + 3 >= LODWORD(UTF8->fields.dataItem) )
             goto LABEL_49;
-          v158 = CatAndMouseGame_TypeInfo->static_fields->baseTop;
-          if ( !v158 )
+          v134 = CatAndMouseGame_TypeInfo->static_fields->baseTop;
+          if ( !v134 )
             goto LABEL_50;
-          v159 = v161 | 3;
-          if ( v159 >= v158->max_length )
+          v135 = v137 | 3;
+          if ( v135 >= v134->max_length )
             goto LABEL_49;
-          v157 = (4 * v148) | 3;
+          v133 = (4 * v124) | 3;
         }
         else
         {
-          if ( v147 >= (unsigned int)dataItem )
+          if ( v123 >= (unsigned int)dataItem )
             goto LABEL_49;
-          baseData = v149->baseData;
+          baseData = v125->baseData;
           if ( !baseData )
             goto LABEL_50;
-          v151 = (2 * v148) & 0xFFFFFFFC;
-          if ( v151 >= baseData->max_length )
+          v127 = (2 * v124) & 0xFFFFFFFC;
+          if ( v127 >= baseData->max_length )
             goto LABEL_49;
-          baseData->m_Items[v151 + 4] = *(&UTF8->fields.m_deserializedFromEverett + v147);
-          if ( v147 + 1 >= LODWORD(UTF8->fields.dataItem) )
+          baseData->m_Items[v127 + 4] = *(&UTF8->fields.m_deserializedFromEverett + v123);
+          if ( v123 + 1 >= LODWORD(UTF8->fields.dataItem) )
             goto LABEL_49;
-          v152 = CatAndMouseGame_TypeInfo->static_fields->baseData;
-          if ( !v152 )
+          v128 = CatAndMouseGame_TypeInfo->static_fields->baseData;
+          if ( !v128 )
             goto LABEL_50;
-          v153 = v151 | 1LL;
-          if ( (unsigned int)v153 >= v152->max_length )
+          v129 = v127 | 1LL;
+          if ( (unsigned int)v129 >= v128->max_length )
             goto LABEL_49;
-          v152->m_Items[v153 + 4] = *(&UTF8->fields.m_isReadOnly + v147);
-          if ( v147 + 2 >= LODWORD(UTF8->fields.dataItem) )
+          v128->m_Items[v129 + 4] = *(&UTF8->fields.m_isReadOnly + v123);
+          if ( v123 + 2 >= LODWORD(UTF8->fields.dataItem) )
             goto LABEL_49;
-          v154 = CatAndMouseGame_TypeInfo->static_fields->baseData;
-          if ( !v154 )
+          v130 = CatAndMouseGame_TypeInfo->static_fields->baseData;
+          if ( !v130 )
             goto LABEL_50;
-          v155 = v151 | 2LL;
-          if ( (unsigned int)v155 >= v154->max_length )
+          v131 = v127 | 2LL;
+          if ( (unsigned int)v131 >= v130->max_length )
             goto LABEL_49;
-          v156 = (char *)v154 + v155;
-          v157 = v147 + 3;
-          v156[32] = *(&UTF8->fields.m_isReadOnly + v147 + 1);
-          if ( v147 + 3 >= LODWORD(UTF8->fields.dataItem) )
+          v132 = (char *)v130 + v131;
+          v133 = v123 + 3;
+          v132[32] = *(&UTF8->fields.m_isReadOnly + v123 + 1);
+          if ( v123 + 3 >= LODWORD(UTF8->fields.dataItem) )
             goto LABEL_49;
-          v158 = CatAndMouseGame_TypeInfo->static_fields->baseData;
-          if ( !v158 )
+          v134 = CatAndMouseGame_TypeInfo->static_fields->baseData;
+          if ( !v134 )
             goto LABEL_50;
-          v159 = v151 | 3;
-          if ( v159 >= v158->max_length )
+          v135 = v127 | 3;
+          if ( v135 >= v134->max_length )
             goto LABEL_49;
         }
-        ++v148;
-        v147 += 4LL;
-        v158->m_Items[v159 + 4] = *(&UTF8->fields.m_deserializedFromEverett + v157);
+        ++v124;
+        v123 += 4LL;
+        v134->m_Items[v135 + 4] = *(&UTF8->fields.m_deserializedFromEverett + v133);
         LODWORD(dataItem) = UTF8->fields.dataItem;
       }
-      while ( v148 < (int)dataItem / 4 );
+      while ( v124 < (int)dataItem / 4 );
     }
   }
 }
@@ -420,299 +396,271 @@ void __fastcall CatAndMouseGame___ctor(CatAndMouseGame_o *this, const MethodInfo
 
 System_String_o *__fastcall CatAndMouseGame__CatGame1(System_String_o *str, bool isCompress, const MethodInfo *method)
 {
-  __int64 v3; // x3
-  char v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
-  char v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  char v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
-  char v15; // w1
-  int v16; // w2
-  __int64 v17; // x3
-  char v18; // w1
-  int v19; // w2
-  __int64 v20; // x3
-  char v21; // w1
-  int v22; // w2
-  __int64 v23; // x3
-  char v24; // w1
-  int v25; // w2
-  __int64 v26; // x3
   System_Text_Encoding_o *UTF8; // x0
-  __int64 v28; // x1
-  __int64 v29; // x21
-  __int64 v30; // x20
-  __int64 v31; // x24
-  System_Security_Cryptography_TripleDESCryptoServiceProvider_o *v32; // x22
-  System_IO_MemoryStream_o *v33; // x19
-  __int64 v34; // x0
-  __int64 v35; // x1
-  System_Security_Cryptography_ICryptoTransform_o *v36; // x24
-  System_Security_Cryptography_CryptoStream_o *v37; // x20
-  __int64 v38; // x0
-  __int64 v39; // x1
-  ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *v40; // x23
-  __int64 v41; // x0
-  __int64 v42; // x1
-  __int64 v43; // x3
+  __int64 v6; // x1
+  __int64 v7; // x21
+  __int64 v8; // x20
+  __int64 v9; // x24
+  System_Security_Cryptography_TripleDESCryptoServiceProvider_o *v10; // x22
+  System_IO_MemoryStream_o *v11; // x19
+  __int64 v12; // x0
+  __int64 v13; // x1
+  System_Security_Cryptography_ICryptoTransform_o *v14; // x24
+  System_Security_Cryptography_CryptoStream_o *v15; // x20
+  __int64 v16; // x0
+  __int64 v17; // x1
+  ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *v18; // x23
+  __int64 v19; // x0
+  __int64 v20; // x1
   ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_c *klass; // x8
-  unsigned __int64 v45; // x10
+  unsigned __int64 v22; // x10
   int32_t *p_offset; // x11
-  __int64 v47; // x0
-  __int64 v48; // x0
-  __int64 v49; // x1
-  __int64 v50; // x3
-  int v51; // w25
-  System_Security_Cryptography_CryptoStream_c *v52; // x8
-  unsigned __int64 v53; // x10
-  int32_t *v54; // x11
-  __int64 v55; // x0
-  __int64 v56; // x0
-  __int64 v57; // x1
-  int v58; // w8
-  System_Byte_array *v59; // x20
-  __int64 v60; // x3
-  int v61; // w25
-  System_IO_MemoryStream_c *v62; // x8
-  unsigned __int64 v63; // x10
-  int32_t *v64; // x11
-  __int64 v65; // x0
-  int v67[3]; // [xsp+0h] [xbp-50h]
-  int v68; // [xsp+Ch] [xbp-44h]
+  __int64 v24; // x0
+  __int64 v25; // x0
+  __int64 v26; // x1
+  int v27; // w25
+  System_Security_Cryptography_CryptoStream_c *v28; // x8
+  unsigned __int64 v29; // x10
+  int32_t *v30; // x11
+  __int64 v31; // x0
+  __int64 v32; // x0
+  __int64 v33; // x1
+  int v34; // w8
+  System_Byte_array *v35; // x20
+  int v36; // w25
+  System_IO_MemoryStream_c *v37; // x8
+  unsigned __int64 v38; // x10
+  int32_t *v39; // x11
+  __int64 v40; // x0
+  int v42[3]; // [xsp+0h] [xbp-50h]
+  int v43; // [xsp+Ch] [xbp-44h]
 
-  if ( (byte_42EB67C & 1) == 0 )
+  if ( (byte_4354B5A & 1) == 0 )
   {
-    sub_B5D5C4(&ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo, isCompress, (_DWORD)method, v3);
-    sub_B5D5C4(&System_Convert_TypeInfo, v6, v7, v8);
-    sub_B5D5C4(&System_Security_Cryptography_CryptoStream_TypeInfo, v9, v10, v11);
-    sub_B5D5C4(&System_IDisposable_TypeInfo, v12, v13, v14);
-    sub_B5D5C4(&System_IO_MemoryStream_TypeInfo, v15, v16, v17);
-    sub_B5D5C4(&System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo, v18, v19, v20);
-    sub_B5D5C4(&StringLiteral_23626/*"wuD6keVr"*/, v21, v22, v23);
-    sub_B5D5C4(&StringLiteral_16748/*"b5nHjsMrqaeNliSs3jyOzgpD"*/, v24, v25, v26);
-    byte_42EB67C = 1;
+    sub_B70694(&ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo);
+    sub_B70694(&System_Convert_TypeInfo);
+    sub_B70694(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_B70694(&System_IDisposable_TypeInfo);
+    sub_B70694(&System_IO_MemoryStream_TypeInfo);
+    sub_B70694(&System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
+    sub_B70694(&StringLiteral_23698/*"wuD6keVr"*/);
+    sub_B70694(&StringLiteral_16792/*"b5nHjsMrqaeNliSs3jyOzgpD"*/);
+    byte_4354B5A = 1;
   }
-  v68 = 0;
+  v43 = 0;
   UTF8 = System_Text_Encoding__get_UTF8(0LL);
   if ( !UTF8
-    || (v29 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
-                UTF8,
-                str,
-                UTF8->klass->vtable._19_GetBytes.methodPtr),
+    || (v7 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
+               UTF8,
+               str,
+               UTF8->klass->vtable._19_GetBytes.methodPtr),
         (UTF8 = System_Text_Encoding__get_UTF8(0LL)) == 0LL)
-    || (v30 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
-                UTF8,
-                StringLiteral_16748/*"b5nHjsMrqaeNliSs3jyOzgpD"*/,
-                UTF8->klass->vtable._19_GetBytes.methodPtr),
+    || (v8 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
+               UTF8,
+               StringLiteral_16792/*"b5nHjsMrqaeNliSs3jyOzgpD"*/,
+               UTF8->klass->vtable._19_GetBytes.methodPtr),
         (UTF8 = System_Text_Encoding__get_UTF8(0LL)) == 0LL) )
   {
-    sub_B5D69C(UTF8, v28);
+    sub_B7076C(UTF8, v6);
   }
-  v31 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
-          UTF8,
-          StringLiteral_23626/*"wuD6keVr"*/,
-          UTF8->klass->vtable._19_GetBytes.methodPtr);
-  v32 = (System_Security_Cryptography_TripleDESCryptoServiceProvider_o *)sub_B5D694(System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
-  System_Security_Cryptography_TripleDESCryptoServiceProvider___ctor(v32, 0LL);
-  v33 = (System_IO_MemoryStream_o *)sub_B5D694(System_IO_MemoryStream_TypeInfo);
-  System_IO_MemoryStream___ctor(v33, 0LL);
-  if ( !v32 )
-    sub_B5D69C(v34, v35);
-  v36 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_TripleDESCryptoServiceProvider_o *, __int64, __int64, Il2CppMethodPointer))v32->klass->vtable._23_CreateEncryptor.method)(
-                                                             v32,
-                                                             v30,
-                                                             v31,
-                                                             v32->klass->vtable._24_CreateDecryptor.methodPtr);
-  v37 = (System_Security_Cryptography_CryptoStream_o *)sub_B5D694(System_Security_Cryptography_CryptoStream_TypeInfo);
-  System_Security_Cryptography_CryptoStream___ctor(v37, (System_IO_Stream_o *)v33, v36, 1, 0LL);
+  v9 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
+         UTF8,
+         StringLiteral_23698/*"wuD6keVr"*/,
+         UTF8->klass->vtable._19_GetBytes.methodPtr);
+  v10 = (System_Security_Cryptography_TripleDESCryptoServiceProvider_o *)sub_B70764(System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
+  System_Security_Cryptography_TripleDESCryptoServiceProvider___ctor(v10, 0LL);
+  v11 = (System_IO_MemoryStream_o *)sub_B70764(System_IO_MemoryStream_TypeInfo);
+  System_IO_MemoryStream___ctor(v11, 0LL);
+  if ( !v10 )
+    sub_B7076C(v12, v13);
+  v14 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_TripleDESCryptoServiceProvider_o *, __int64, __int64, Il2CppMethodPointer))v10->klass->vtable._23_CreateEncryptor.method)(
+                                                             v10,
+                                                             v8,
+                                                             v9,
+                                                             v10->klass->vtable._24_CreateDecryptor.methodPtr);
+  v15 = (System_Security_Cryptography_CryptoStream_o *)sub_B70764(System_Security_Cryptography_CryptoStream_TypeInfo);
+  System_Security_Cryptography_CryptoStream___ctor(v15, (System_IO_Stream_o *)v11, v14, 1, 0LL);
   if ( isCompress )
   {
-    v40 = (ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *)sub_B5D694(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo);
-    ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream___ctor(v40, (System_IO_Stream_o *)v37, 0LL);
-    if ( !v29 )
-      sub_B5D69C(v41, v42);
-    if ( !v40 )
-      sub_B5D69C(v41, v42);
-    ((void (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v40->klass->vtable._32_Write.method)(
-      v40,
-      v29,
+    v18 = (ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *)sub_B70764(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo);
+    ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream___ctor(v18, (System_IO_Stream_o *)v15, 0LL);
+    if ( !v7 )
+      sub_B7076C(v19, v20);
+    if ( !v18 )
+      sub_B7076C(v19, v20);
+    ((void (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v18->klass->vtable._32_Write.method)(
+      v18,
+      v7,
       0LL,
-      *(unsigned int *)(v29 + 24),
-      v40->klass->vtable._33_WriteByte.methodPtr);
-    ((void (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *, Il2CppMethodPointer))v40->klass->vtable._18_Close.method)(
-      v40,
-      v40->klass->vtable._19_Dispose.methodPtr);
-    v67[0] = 132;
-    v68 = 1;
-    klass = v40->klass;
-    if ( *(_WORD *)&v40->klass->_2.bitflags1 )
+      *(unsigned int *)(v7 + 24),
+      v18->klass->vtable._33_WriteByte.methodPtr);
+    ((void (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *, Il2CppMethodPointer))v18->klass->vtable._18_Close.method)(
+      v18,
+      v18->klass->vtable._19_Dispose.methodPtr);
+    v42[0] = 132;
+    v43 = 1;
+    klass = v18->klass;
+    if ( *(_WORD *)&v18->klass->_2.bitflags1 )
     {
-      v45 = 0LL;
+      v22 = 0LL;
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
       {
-        ++v45;
+        ++v22;
         p_offset += 4;
-        if ( v45 >= *(unsigned __int16 *)&v40->klass->_2.bitflags1 )
+        if ( v22 >= *(unsigned __int16 *)&v18->klass->_2.bitflags1 )
           goto LABEL_14;
       }
-      v47 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+      v24 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
     }
     else
     {
 LABEL_14:
-      v47 = sub_AF54C0(v40, System_IDisposable_TypeInfo, 0LL, v43);
+      v24 = sub_B08590(v18, System_IDisposable_TypeInfo, 0LL);
     }
-    (*(void (__fastcall **)(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *, _QWORD))v47)(v40, *(_QWORD *)(v47 + 8));
-    v68 = 0;
+    (*(void (__fastcall **)(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *, _QWORD))v24)(v18, *(_QWORD *)(v24 + 8));
+    v43 = 0;
   }
   else
   {
-    if ( !v29 )
-      sub_B5D69C(v38, v39);
-    if ( !v37 )
-      sub_B5D69C(v38, v39);
-    ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v37->klass->vtable._32_Write.method)(
-      v37,
-      v29,
+    if ( !v7 )
+      sub_B7076C(v16, v17);
+    if ( !v15 )
+      sub_B7076C(v16, v17);
+    ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v15->klass->vtable._32_Write.method)(
+      v15,
+      v7,
       0LL,
-      *(unsigned int *)(v29 + 24),
-      v37->klass->vtable._33_WriteByte.methodPtr);
+      *(unsigned int *)(v7 + 24),
+      v15->klass->vtable._33_WriteByte.methodPtr);
   }
-  System_Security_Cryptography_SymmetricAlgorithm__Clear((System_Security_Cryptography_SymmetricAlgorithm_o *)v32, 0LL);
-  if ( !v37 )
-    sub_B5D69C(v48, v49);
-  ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, Il2CppMethodPointer))v37->klass->vtable._18_Close.method)(
-    v37,
-    v37->klass->vtable._19_Dispose.methodPtr);
-  v67[0] = 159;
-  v51 = ++v68;
-  v52 = v37->klass;
-  if ( *(_WORD *)&v37->klass->_2.bitflags1 )
+  System_Security_Cryptography_SymmetricAlgorithm__Clear((System_Security_Cryptography_SymmetricAlgorithm_o *)v10, 0LL);
+  if ( !v15 )
+    sub_B7076C(v25, v26);
+  ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, Il2CppMethodPointer))v15->klass->vtable._18_Close.method)(
+    v15,
+    v15->klass->vtable._19_Dispose.methodPtr);
+  v42[0] = 159;
+  v27 = ++v43;
+  v28 = v15->klass;
+  if ( *(_WORD *)&v15->klass->_2.bitflags1 )
   {
-    v53 = 0LL;
-    v54 = &v52->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v54 - 1) != System_IDisposable_TypeInfo )
+    v29 = 0LL;
+    v30 = &v28->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v30 - 1) != System_IDisposable_TypeInfo )
     {
-      ++v53;
-      v54 += 4;
-      if ( v53 >= *(unsigned __int16 *)&v37->klass->_2.bitflags1 )
+      ++v29;
+      v30 += 4;
+      if ( v29 >= *(unsigned __int16 *)&v15->klass->_2.bitflags1 )
         goto LABEL_26;
     }
-    v55 = (__int64)(&v52->vtable._0_Equals.method + 2 * *v54);
+    v31 = (__int64)(&v28->vtable._0_Equals.method + 2 * *v30);
   }
   else
   {
 LABEL_26:
-    v55 = sub_AF54C0(v37, System_IDisposable_TypeInfo, 0LL, v50);
+    v31 = sub_B08590(v15, System_IDisposable_TypeInfo, 0LL);
   }
-  v56 = (*(__int64 (__fastcall **)(System_Security_Cryptography_CryptoStream_o *, _QWORD))v55)(
-          v37,
-          *(_QWORD *)(v55 + 8));
-  if ( v51 )
+  v32 = (*(__int64 (__fastcall **)(System_Security_Cryptography_CryptoStream_o *, _QWORD))v31)(
+          v15,
+          *(_QWORD *)(v31 + 8));
+  if ( v27 )
   {
-    v58 = v51 - 1;
-    if ( v67[v51 - 1] == 159 )
+    v34 = v27 - 1;
+    if ( v42[v27 - 1] == 159 )
     {
-      --v51;
-      v68 = v58;
+      --v27;
+      v43 = v34;
     }
   }
-  if ( !v33 )
-    sub_B5D69C(v56, v57);
-  v59 = (System_Byte_array *)((__int64 (__fastcall *)(System_IO_MemoryStream_o *, void *))v33->klass->vtable._37_ToArray.method)(
-                               v33,
-                               v33->klass[1]._1.image);
-  ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v33->klass->vtable._18_Close.method)(
-    v33,
-    v33->klass->vtable._19_Dispose.methodPtr);
-  v67[v51] = 189;
-  v61 = ++v68;
-  v62 = v33->klass;
-  if ( *(_WORD *)&v33->klass->_2.bitflags1 )
+  if ( !v11 )
+    sub_B7076C(v32, v33);
+  v35 = (System_Byte_array *)((__int64 (__fastcall *)(System_IO_MemoryStream_o *, void *))v11->klass->vtable._37_ToArray.method)(
+                               v11,
+                               v11->klass[1]._1.image);
+  ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v11->klass->vtable._18_Close.method)(
+    v11,
+    v11->klass->vtable._19_Dispose.methodPtr);
+  v42[v27] = 189;
+  v36 = ++v43;
+  v37 = v11->klass;
+  if ( *(_WORD *)&v11->klass->_2.bitflags1 )
   {
-    v63 = 0LL;
-    v64 = &v62->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v64 - 1) != System_IDisposable_TypeInfo )
+    v38 = 0LL;
+    v39 = &v37->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v39 - 1) != System_IDisposable_TypeInfo )
     {
-      ++v63;
-      v64 += 4;
-      if ( v63 >= *(unsigned __int16 *)&v33->klass->_2.bitflags1 )
+      ++v38;
+      v39 += 4;
+      if ( v38 >= *(unsigned __int16 *)&v11->klass->_2.bitflags1 )
         goto LABEL_36;
     }
-    v65 = (__int64)(&v62->vtable._0_Equals.method + 2 * *v64);
+    v40 = (__int64)(&v37->vtable._0_Equals.method + 2 * *v39);
   }
   else
   {
 LABEL_36:
-    v65 = sub_AF54C0(v33, System_IDisposable_TypeInfo, 0LL, v60);
+    v40 = sub_B08590(v11, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v65)(v33, *(_QWORD *)(v65 + 8));
-  if ( v61 && v67[v61 - 1] == 189 )
-    v68 = v61 - 1;
+  (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v40)(v11, *(_QWORD *)(v40 + 8));
+  if ( v36 && v42[v36 - 1] == 189 )
+    v43 = v36 - 1;
   if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !System_Convert_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
-  return System_Convert__ToBase64String(v59, 0LL);
+  return System_Convert__ToBase64String(v35, 0LL);
 }
 
 
 System_String_o *__fastcall CatAndMouseGame__CatGame2(System_String_o *str, bool isCompress, const MethodInfo *method)
 {
-  __int64 v3; // x3
   System_Text_Encoding_o *UTF8; // x0
-  __int64 v6; // x1
-  const MethodInfo *v7; // x4
-  System_Byte_array *v8; // x19
-  CatAndMouseGame_c *v9; // x8
+  __int64 v5; // x1
+  const MethodInfo *v6; // x4
+  System_Byte_array *v7; // x19
+  CatAndMouseGame_c *v8; // x8
 
-  if ( (byte_42EB67E & 1) == 0 )
+  if ( (byte_4354B5C & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, isCompress, (_DWORD)method, v3);
-    byte_42EB67E = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B5C = 1;
   }
   UnityEngine_Application__get_isPlaying(0LL);
   UTF8 = System_Text_Encoding__get_UTF8(0LL);
   if ( !UTF8 )
-    sub_B5D69C(0LL, v6);
-  v8 = (System_Byte_array *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
+    sub_B7076C(0LL, v5);
+  v7 = (System_Byte_array *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
                               UTF8,
                               str,
                               UTF8->klass->vtable._19_GetBytes.methodPtr);
-  v9 = CatAndMouseGame_TypeInfo;
+  v8 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v9 = CatAndMouseGame_TypeInfo;
+    v8 = CatAndMouseGame_TypeInfo;
   }
-  return CatAndMouseGame__CatHome(v8, v9->static_fields->ownerData, v9->static_fields->ownerTop, 1, v7);
+  return CatAndMouseGame__CatHome(v7, v8->static_fields->ownerData, v8->static_fields->ownerTop, 1, v6);
 }
 
 
 System_String_o *__fastcall CatAndMouseGame__CatGame3(System_String_o *str, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   unsigned int *UTF8; // x0
-  __int64 v6; // x1
-  const MethodInfo *v7; // x4
-  unsigned __int64 v8; // x8
-  System_Byte_array *v9; // x19
-  unsigned __int64 v10; // x9
-  CatAndMouseGame_c *v11; // x0
-  __int64 v13; // x0
+  __int64 v4; // x1
+  const MethodInfo *v5; // x4
+  unsigned __int64 v6; // x8
+  System_Byte_array *v7; // x19
+  unsigned __int64 v8; // x9
+  CatAndMouseGame_c *v9; // x0
+  __int64 v11; // x0
 
-  if ( (byte_42EB685 & 1) == 0 )
+  if ( (byte_4354B63 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EB685 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B63 = 1;
   }
   UTF8 = (unsigned int *)System_Text_Encoding__get_UTF8(0LL);
   if ( !UTF8
@@ -721,56 +669,55 @@ System_String_o *__fastcall CatAndMouseGame__CatGame3(System_String_o *str, cons
                                  str,
                                  *(_QWORD *)(*(_QWORD *)UTF8 + 608LL))) == 0LL )
   {
-    sub_B5D69C(UTF8, v6);
+    sub_B7076C(UTF8, v4);
   }
-  v8 = UTF8[6];
-  v9 = (System_Byte_array *)UTF8;
-  if ( (__int64)(v8 << 32) >= 1 )
+  v6 = UTF8[6];
+  v7 = (System_Byte_array *)UTF8;
+  if ( (__int64)(v6 << 32) >= 1 )
   {
-    v10 = 0LL;
+    v8 = 0LL;
     do
     {
-      if ( v10 >= v8 )
+      if ( v8 >= v6 )
       {
-        v13 = sub_B5D6C8(UTF8);
-        sub_B5D668(v13, 0LL);
+        v11 = sub_B70798(UTF8);
+        sub_B70738(v11, 0LL);
       }
-      *((_BYTE *)UTF8 + v10 + 32) = ~*((_BYTE *)UTF8 + v10 + 32);
-      ++v10;
+      *((_BYTE *)UTF8 + v8 + 32) = ~*((_BYTE *)UTF8 + v8 + 32);
+      ++v8;
     }
-    while ( (__int64)v10 < (int)v8 );
+    while ( (__int64)v8 < (int)v6 );
   }
-  v11 = CatAndMouseGame_TypeInfo;
+  v9 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v11 = CatAndMouseGame_TypeInfo;
+    v9 = CatAndMouseGame_TypeInfo;
   }
-  return CatAndMouseGame__CatHome(v9, v11->static_fields->stageData, v11->static_fields->stageTop, 1, v7);
+  return CatAndMouseGame__CatHome(v7, v9->static_fields->stageData, v9->static_fields->stageTop, 1, v5);
 }
 
 
-System_String_o *__fastcall CatAndMouseGame__CatGame3_30531564(
+System_String_o *__fastcall CatAndMouseGame__CatGame3_30670292(
         System_String_o *str,
         System_String_o *key,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  const MethodInfo *v6; // x1
+  const MethodInfo *v5; // x1
   System_Text_Encoding_o *UTF8; // x0
-  __int64 v9; // x1
-  __int64 v10; // x0
-  const MethodInfo *v11; // x3
-  System_Byte_array *v12; // x20
-  const MethodInfo *v13; // x4
+  __int64 v8; // x1
+  __int64 v9; // x0
+  const MethodInfo *v10; // x3
+  System_Byte_array *v11; // x20
+  const MethodInfo *v12; // x4
   System_Byte_array *info; // [xsp+8h] [xbp-28h] BYREF
   System_Byte_array *home; // [xsp+18h] [xbp-18h] BYREF
 
-  if ( (byte_42EB686 & 1) == 0 )
+  if ( (byte_4354B64 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)key, (_DWORD)method, v3);
-    byte_42EB686 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B64 = 1;
   }
   home = 0LL;
   info = 0LL;
@@ -781,111 +728,108 @@ System_String_o *__fastcall CatAndMouseGame__CatGame3_30531564(
     {
       j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
     }
-    return CatAndMouseGame__CatGame3(str, v6);
+    return CatAndMouseGame__CatGame3(str, v5);
   }
   else
   {
     UTF8 = System_Text_Encoding__get_UTF8(0LL);
     if ( !UTF8 )
-      sub_B5D69C(0LL, v9);
-    v10 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
-            UTF8,
-            str,
-            UTF8->klass->vtable._19_GetBytes.methodPtr);
+      sub_B7076C(0LL, v8);
+    v9 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
+           UTF8,
+           str,
+           UTF8->klass->vtable._19_GetBytes.methodPtr);
     home = 0LL;
     info = 0LL;
-    v12 = (System_Byte_array *)v10;
+    v11 = (System_Byte_array *)v9;
     if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
     }
-    CatAndMouseGame__OtherHomeBuilding(key, &home, &info, v11);
-    return CatAndMouseGame__CatHome(v12, home, info, 1, v13);
+    CatAndMouseGame__OtherHomeBuilding(key, &home, &info, v10);
+    return CatAndMouseGame__CatHome(v11, home, info, 1, v12);
   }
 }
 
 
 System_Byte_array *__fastcall CatAndMouseGame__CatGame4(System_Byte_array *data, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  const MethodInfo *v4; // x4
-  System_Byte_array *v5; // x19
+  const MethodInfo *v2; // x4
+  System_Byte_array *v3; // x19
   int max_length; // w11
-  int v7; // w8
-  il2cpp_array_size_t v8; // w12
-  char *v9; // x11
-  uint8_t *v10; // x14
-  uint8_t v11; // w13
-  _BYTE *v12; // x11
-  char v13; // t1
-  CatAndMouseGame_c *v14; // x0
-  __int64 v16; // x0
+  int v5; // w8
+  il2cpp_array_size_t v6; // w12
+  char *v7; // x11
+  uint8_t *v8; // x14
+  uint8_t v9; // w13
+  _BYTE *v10; // x11
+  char v11; // t1
+  CatAndMouseGame_c *v12; // x0
+  __int64 v14; // x0
 
-  v5 = data;
-  if ( (byte_42EB688 & 1) == 0 )
+  v3 = data;
+  if ( (byte_4354B66 & 1) == 0 )
   {
-    data = (System_Byte_array *)sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EB688 = 1;
+    data = (System_Byte_array *)sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B66 = 1;
   }
-  if ( !v5 )
-    sub_B5D69C(data, method);
-  max_length = v5->max_length;
+  if ( !v3 )
+    sub_B7076C(data, method);
+  max_length = v3->max_length;
   if ( max_length >= 1 )
   {
-    v7 = 0;
+    v5 = 0;
     do
     {
-      v8 = v7 + 1;
-      if ( v7 + 1 >= max_length )
+      v6 = v5 + 1;
+      if ( v5 + 1 >= max_length )
         break;
-      if ( v7 < (unsigned int)max_length && v8 < max_length )
+      if ( v5 < (unsigned int)max_length && v6 < max_length )
       {
-        v9 = (char *)v5 + (int)v8;
-        v10 = &v5->m_Items[v7 + 4];
-        v11 = *v10;
-        v13 = v9[32];
-        v12 = v9 + 32;
-        *v10 = v13 ^ 0xCE;
-        if ( v8 < v5->max_length )
+        v7 = (char *)v3 + (int)v6;
+        v8 = &v3->m_Items[v5 + 4];
+        v9 = *v8;
+        v11 = v7[32];
+        v10 = v7 + 32;
+        *v8 = v11 ^ 0xCE;
+        if ( v6 < v3->max_length )
           continue;
       }
-      v16 = sub_B5D6C8(data);
-      sub_B5D668(v16, 0LL);
-      *v12 = v11 ^ 0xD2;
-      max_length = v5->max_length;
-      v7 += 2;
+      v14 = sub_B70798(data);
+      sub_B70738(v14, 0LL);
+      *v10 = v9 ^ 0xD2;
+      max_length = v3->max_length;
+      v5 += 2;
     }
-    while ( v7 < max_length );
+    while ( v5 < max_length );
   }
-  v14 = CatAndMouseGame_TypeInfo;
+  v12 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v14 = CatAndMouseGame_TypeInfo;
+    v12 = CatAndMouseGame_TypeInfo;
   }
-  return CatAndMouseGame__CatHomeMain(v5, v14->static_fields->baseData, v14->static_fields->baseTop, 0, v4);
+  return CatAndMouseGame__CatHomeMain(v3, v12->static_fields->baseData, v12->static_fields->baseTop, 0, v2);
 }
 
 
-System_Byte_array *__fastcall CatAndMouseGame__CatGame4_30535176(
+System_Byte_array *__fastcall CatAndMouseGame__CatGame4_30673904(
         System_Byte_array *data,
         System_String_o *key,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  const MethodInfo *v6; // x1
-  const MethodInfo *v7; // x3
-  const MethodInfo *v9; // x4
+  const MethodInfo *v5; // x1
+  const MethodInfo *v6; // x3
+  const MethodInfo *v8; // x4
   System_Byte_array *info; // [xsp+8h] [xbp-28h] BYREF
   System_Byte_array *home; // [xsp+18h] [xbp-18h] BYREF
 
-  if ( (byte_42EB689 & 1) == 0 )
+  if ( (byte_4354B67 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)key, (_DWORD)method, v3);
-    byte_42EB689 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B67 = 1;
   }
   home = 0LL;
   info = 0LL;
@@ -896,7 +840,7 @@ System_Byte_array *__fastcall CatAndMouseGame__CatGame4_30535176(
     {
       j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
     }
-    return CatAndMouseGame__CatGame4(data, v6);
+    return CatAndMouseGame__CatGame4(data, v5);
   }
   else
   {
@@ -907,39 +851,34 @@ System_Byte_array *__fastcall CatAndMouseGame__CatGame4_30535176(
     {
       j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
     }
-    CatAndMouseGame__OtherHomeBuilding(key, &home, &info, v7);
-    return CatAndMouseGame__CatHomeMain(data, home, info, 0, v9);
+    CatAndMouseGame__OtherHomeBuilding(key, &home, &info, v6);
+    return CatAndMouseGame__CatHomeMain(data, home, info, 0, v8);
   }
 }
 
 
 System_String_o *__fastcall CatAndMouseGame__CatGame5(System_String_o *str, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
   System_Byte_array *UTF8; // x0
-  __int64 v9; // x8
+  __int64 v4; // x8
   struct System_Byte_array *BattleIV; // x8
-  System_Byte_array *v11; // x19
-  System_Byte_array *v12; // x20
-  const MethodInfo *v13; // x4
-  System_Byte_array *v14; // x21
+  System_Byte_array *v6; // x19
+  System_Byte_array *v7; // x20
+  const MethodInfo *v8; // x4
+  System_Byte_array *v9; // x21
   __int64 i; // x23
   struct System_Byte_array *BattleKey; // x8
-  unsigned __int64 v17; // x24
+  unsigned __int64 v12; // x24
   __int64 j; // x23
-  struct System_Byte_array *v19; // x8
-  unsigned __int64 v20; // x24
-  __int64 v22; // x0
+  struct System_Byte_array *v14; // x8
+  unsigned __int64 v15; // x24
+  __int64 v17; // x0
 
-  if ( (byte_42EB68C & 1) == 0 )
+  if ( (byte_4354B6A & 1) == 0 )
   {
-    sub_B5D5C4(&byte___TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, v5, v6, v7);
-    byte_42EB68C = 1;
+    sub_B70694(&byte___TypeInfo);
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B6A = 1;
   }
   UTF8 = (System_Byte_array *)CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -948,21 +887,21 @@ System_String_o *__fastcall CatAndMouseGame__CatGame5(System_String_o *str, cons
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
     UTF8 = (System_Byte_array *)CatAndMouseGame_TypeInfo;
   }
-  v9 = *(_QWORD *)(*(_QWORD *)&UTF8->m_Items[156] + 64LL);
-  if ( !v9
-    || (UTF8 = (System_Byte_array *)sub_B5D5DC(byte___TypeInfo, *(unsigned int *)(v9 + 24)),
+  v4 = *(_QWORD *)(*(_QWORD *)&UTF8->m_Items[156] + 64LL);
+  if ( !v4
+    || (UTF8 = (System_Byte_array *)sub_B706AC(byte___TypeInfo, *(unsigned int *)(v4 + 24)),
         (BattleIV = CatAndMouseGame_TypeInfo->static_fields->BattleIV) == 0LL)
-    || (v11 = UTF8,
-        v12 = (System_Byte_array *)sub_B5D5DC(byte___TypeInfo, BattleIV->max_length),
+    || (v6 = UTF8,
+        v7 = (System_Byte_array *)sub_B706AC(byte___TypeInfo, BattleIV->max_length),
         (UTF8 = (System_Byte_array *)System_Text_Encoding__get_UTF8(0LL)) == 0LL) )
   {
 LABEL_40:
-    sub_B5D69C(UTF8, method);
+    sub_B7076C(UTF8, method);
   }
-  v14 = (System_Byte_array *)((__int64 (__fastcall *)(System_Byte_array *, System_String_o *, Il2CppMethodPointer))UTF8->obj.klass->vtable[18].method)(
-                               UTF8,
-                               str,
-                               UTF8->obj.klass->vtable[19].methodPtr);
+  v9 = (System_Byte_array *)((__int64 (__fastcall *)(System_Byte_array *, System_String_o *, Il2CppMethodPointer))UTF8->obj.klass->vtable[18].method)(
+                              UTF8,
+                              str,
+                              UTF8->obj.klass->vtable[19].methodPtr);
   for ( i = 32LL; ; ++i )
   {
     UTF8 = (System_Byte_array *)CatAndMouseGame_TypeInfo;
@@ -975,7 +914,7 @@ LABEL_40:
     BattleKey = *(struct System_Byte_array **)(*(_QWORD *)&UTF8->m_Items[156] + 64LL);
     if ( !BattleKey )
       goto LABEL_40;
-    v17 = i - 32;
+    v12 = i - 32;
     if ( i - 32 >= (int)BattleKey->max_length )
       break;
     if ( (UTF8->m_Items[279] & 4) != 0 && !*(_DWORD *)&UTF8->m_Items[196] )
@@ -985,17 +924,17 @@ LABEL_40:
       if ( !BattleKey )
         goto LABEL_40;
     }
-    if ( v17 >= BattleKey->max_length )
+    if ( v12 >= BattleKey->max_length )
       goto LABEL_39;
-    if ( !v11 )
+    if ( !v6 )
       goto LABEL_40;
-    if ( v17 >= v11->max_length )
+    if ( v12 >= v6->max_length )
     {
 LABEL_39:
-      v22 = sub_B5D6C8(UTF8);
-      sub_B5D668(v22, 0LL);
+      v17 = sub_B70798(UTF8);
+      sub_B70738(v17, 0LL);
     }
-    *((_BYTE *)&v11->obj.klass + i) = *((_BYTE *)&BattleKey->obj.klass + i) ^ 4;
+    *((_BYTE *)&v6->obj.klass + i) = *((_BYTE *)&BattleKey->obj.klass + i) ^ 4;
   }
   for ( j = 32LL; ; ++j )
   {
@@ -1004,280 +943,264 @@ LABEL_39:
       j_il2cpp_runtime_class_init_0(UTF8);
       UTF8 = (System_Byte_array *)CatAndMouseGame_TypeInfo;
     }
-    v19 = *(struct System_Byte_array **)(*(_QWORD *)&UTF8->m_Items[156] + 72LL);
-    if ( !v19 )
+    v14 = *(struct System_Byte_array **)(*(_QWORD *)&UTF8->m_Items[156] + 72LL);
+    if ( !v14 )
       goto LABEL_40;
-    v20 = j - 32;
-    if ( j - 32 >= (int)v19->max_length )
+    v15 = j - 32;
+    if ( j - 32 >= (int)v14->max_length )
       break;
     if ( (*(_WORD *)&UTF8->m_Items[278] & 0x400) != 0 && !*(_DWORD *)&UTF8->m_Items[196] )
     {
       j_il2cpp_runtime_class_init_0(UTF8);
-      v19 = CatAndMouseGame_TypeInfo->static_fields->BattleIV;
-      if ( !v19 )
+      v14 = CatAndMouseGame_TypeInfo->static_fields->BattleIV;
+      if ( !v14 )
         goto LABEL_40;
     }
-    if ( v20 >= v19->max_length )
+    if ( v15 >= v14->max_length )
       goto LABEL_39;
-    if ( !v12 )
+    if ( !v7 )
       goto LABEL_40;
-    if ( v20 >= v12->max_length )
+    if ( v15 >= v7->max_length )
       goto LABEL_39;
-    *((_BYTE *)&v12->obj.klass + j) = *((_BYTE *)&v19->obj.klass + j) ^ 8;
+    *((_BYTE *)&v7->obj.klass + j) = *((_BYTE *)&v14->obj.klass + j) ^ 8;
     UTF8 = (System_Byte_array *)CatAndMouseGame_TypeInfo;
   }
   if ( (*(_WORD *)&UTF8->m_Items[278] & 0x400) != 0 && !*(_DWORD *)&UTF8->m_Items[196] )
     j_il2cpp_runtime_class_init_0(UTF8);
-  return CatAndMouseGame__CatHome(v14, v11, v12, 0, v13);
+  return CatAndMouseGame__CatHome(v9, v6, v7, 0, v8);
 }
 
 
 System_Byte_array *__fastcall CatAndMouseGame__CatGame5Bytes(System_Byte_array *data, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  CatAndMouseGame_c *v8; // x0
+  CatAndMouseGame_c *v3; // x0
   struct System_Byte_array *BattleKey; // x8
   struct System_Byte_array *BattleIV; // x8
-  System_Byte_array *v11; // x20
-  const MethodInfo *v12; // x4
-  System_Byte_array *v13; // x21
+  System_Byte_array *v6; // x20
+  const MethodInfo *v7; // x4
+  System_Byte_array *v8; // x21
   __int64 i; // x23
-  struct System_Byte_array *v15; // x8
-  unsigned __int64 v16; // x24
+  struct System_Byte_array *v10; // x8
+  unsigned __int64 v11; // x24
   __int64 j; // x23
-  struct System_Byte_array *v18; // x8
-  unsigned __int64 v19; // x24
-  __int64 v21; // x0
+  struct System_Byte_array *v13; // x8
+  unsigned __int64 v14; // x24
+  __int64 v16; // x0
 
-  if ( (byte_42EB68D & 1) == 0 )
+  if ( (byte_4354B6B & 1) == 0 )
   {
-    sub_B5D5C4(&byte___TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, v5, v6, v7);
-    byte_42EB68D = 1;
+    sub_B70694(&byte___TypeInfo);
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B6B = 1;
   }
-  v8 = CatAndMouseGame_TypeInfo;
+  v3 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v8 = CatAndMouseGame_TypeInfo;
+    v3 = CatAndMouseGame_TypeInfo;
   }
-  BattleKey = v8->static_fields->BattleKey;
+  BattleKey = v3->static_fields->BattleKey;
   if ( !BattleKey
-    || (v8 = (CatAndMouseGame_c *)sub_B5D5DC(byte___TypeInfo, BattleKey->max_length),
+    || (v3 = (CatAndMouseGame_c *)sub_B706AC(byte___TypeInfo, BattleKey->max_length),
         (BattleIV = CatAndMouseGame_TypeInfo->static_fields->BattleIV) == 0LL) )
   {
 LABEL_39:
-    sub_B5D69C(v8, method);
+    sub_B7076C(v3, method);
   }
-  v11 = (System_Byte_array *)v8;
-  v13 = (System_Byte_array *)sub_B5D5DC(byte___TypeInfo, BattleIV->max_length);
+  v6 = (System_Byte_array *)v3;
+  v8 = (System_Byte_array *)sub_B706AC(byte___TypeInfo, BattleIV->max_length);
   for ( i = 32LL; ; ++i )
   {
-    v8 = CatAndMouseGame_TypeInfo;
+    v3 = CatAndMouseGame_TypeInfo;
     if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-      v8 = CatAndMouseGame_TypeInfo;
+      v3 = CatAndMouseGame_TypeInfo;
     }
-    v15 = v8->static_fields->BattleKey;
-    if ( !v15 )
+    v10 = v3->static_fields->BattleKey;
+    if ( !v10 )
       goto LABEL_39;
-    v16 = i - 32;
-    if ( i - 32 >= (int)v15->max_length )
+    v11 = i - 32;
+    if ( i - 32 >= (int)v10->max_length )
       break;
-    if ( (BYTE3(v8->vtable._0_Equals.methodPtr) & 4) != 0 && !v8->_2.cctor_finished )
+    if ( (BYTE3(v3->vtable._0_Equals.methodPtr) & 4) != 0 && !v3->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v8);
-      v15 = CatAndMouseGame_TypeInfo->static_fields->BattleKey;
-      if ( !v15 )
+      j_il2cpp_runtime_class_init_0(v3);
+      v10 = CatAndMouseGame_TypeInfo->static_fields->BattleKey;
+      if ( !v10 )
         goto LABEL_39;
     }
-    if ( v16 >= v15->max_length )
+    if ( v11 >= v10->max_length )
       goto LABEL_38;
-    if ( !v11 )
+    if ( !v6 )
       goto LABEL_39;
-    if ( v16 >= v11->max_length )
+    if ( v11 >= v6->max_length )
     {
 LABEL_38:
-      v21 = sub_B5D6C8(v8);
-      sub_B5D668(v21, 0LL);
+      v16 = sub_B70798(v3);
+      sub_B70738(v16, 0LL);
     }
-    *((_BYTE *)&v11->obj.klass + i) = *((_BYTE *)&v15->obj.klass + i) ^ 4;
+    *((_BYTE *)&v6->obj.klass + i) = *((_BYTE *)&v10->obj.klass + i) ^ 4;
   }
   for ( j = 32LL; ; ++j )
   {
-    if ( (BYTE3(v8->vtable._0_Equals.methodPtr) & 4) != 0 && !v8->_2.cctor_finished )
+    if ( (BYTE3(v3->vtable._0_Equals.methodPtr) & 4) != 0 && !v3->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v8);
-      v8 = CatAndMouseGame_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v3);
+      v3 = CatAndMouseGame_TypeInfo;
     }
-    v18 = v8->static_fields->BattleIV;
-    if ( !v18 )
-      goto LABEL_39;
-    v19 = j - 32;
-    if ( j - 32 >= (int)v18->max_length )
-      break;
-    if ( (WORD1(v8->vtable._0_Equals.methodPtr) & 0x400) != 0 && !v8->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(v8);
-      v18 = CatAndMouseGame_TypeInfo->static_fields->BattleIV;
-      if ( !v18 )
-        goto LABEL_39;
-    }
-    if ( v19 >= v18->max_length )
-      goto LABEL_38;
+    v13 = v3->static_fields->BattleIV;
     if ( !v13 )
       goto LABEL_39;
-    if ( v19 >= v13->max_length )
+    v14 = j - 32;
+    if ( j - 32 >= (int)v13->max_length )
+      break;
+    if ( (WORD1(v3->vtable._0_Equals.methodPtr) & 0x400) != 0 && !v3->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(v3);
+      v13 = CatAndMouseGame_TypeInfo->static_fields->BattleIV;
+      if ( !v13 )
+        goto LABEL_39;
+    }
+    if ( v14 >= v13->max_length )
       goto LABEL_38;
-    *((_BYTE *)&v13->obj.klass + j) = *((_BYTE *)&v18->obj.klass + j) ^ 8;
-    v8 = CatAndMouseGame_TypeInfo;
+    if ( !v8 )
+      goto LABEL_39;
+    if ( v14 >= v8->max_length )
+      goto LABEL_38;
+    *((_BYTE *)&v8->obj.klass + j) = *((_BYTE *)&v13->obj.klass + j) ^ 8;
+    v3 = CatAndMouseGame_TypeInfo;
   }
-  if ( (WORD1(v8->vtable._0_Equals.methodPtr) & 0x400) != 0 && !v8->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(v8);
-  return CatAndMouseGame__CatHomeMain(data, v11, v13, 0, v12);
+  if ( (WORD1(v3->vtable._0_Equals.methodPtr) & 0x400) != 0 && !v3->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(v3);
+  return CatAndMouseGame__CatHomeMain(data, v6, v8, 0, v7);
 }
 
 
 System_String_o *__fastcall CatAndMouseGame__CatGame6(System_String_o *str, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   System_Text_Encoding_o *UTF8; // x0
-  __int64 v6; // x1
-  const MethodInfo *v7; // x4
-  System_Byte_array *v8; // x19
-  CatAndMouseGame_c *v9; // x8
+  __int64 v4; // x1
+  const MethodInfo *v5; // x4
+  System_Byte_array *v6; // x19
+  CatAndMouseGame_c *v7; // x8
 
-  if ( (byte_42EB69F & 1) == 0 )
+  if ( (byte_4354B7D & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EB69F = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B7D = 1;
   }
   UTF8 = System_Text_Encoding__get_UTF8(0LL);
   if ( !UTF8 )
-    sub_B5D69C(0LL, v6);
-  v8 = (System_Byte_array *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
+    sub_B7076C(0LL, v4);
+  v6 = (System_Byte_array *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
                               UTF8,
                               str,
                               UTF8->klass->vtable._19_GetBytes.methodPtr);
-  v9 = CatAndMouseGame_TypeInfo;
+  v7 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v9 = CatAndMouseGame_TypeInfo;
+    v7 = CatAndMouseGame_TypeInfo;
   }
-  return CatAndMouseGame__CatHome(v8, v9->static_fields->sideData, v9->static_fields->sideTop, 0, v7);
+  return CatAndMouseGame__CatHome(v6, v7->static_fields->sideData, v7->static_fields->sideTop, 0, v5);
 }
 
 
-System_String_o *__fastcall CatAndMouseGame__CatGame6_30543996(System_Byte_array *data, const MethodInfo *method)
+System_String_o *__fastcall CatAndMouseGame__CatGame6_30682724(System_Byte_array *data, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  const MethodInfo *v4; // x4
-  CatAndMouseGame_c *v6; // x0
+  const MethodInfo *v2; // x4
+  CatAndMouseGame_c *v4; // x0
 
-  if ( (byte_42EB6A0 & 1) == 0 )
+  if ( (byte_4354B7E & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EB6A0 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B7E = 1;
   }
-  v6 = CatAndMouseGame_TypeInfo;
+  v4 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v6 = CatAndMouseGame_TypeInfo;
+    v4 = CatAndMouseGame_TypeInfo;
   }
-  return CatAndMouseGame__CatHome(data, v6->static_fields->sideData, v6->static_fields->sideTop, 0, v4);
+  return CatAndMouseGame__CatHome(data, v4->static_fields->sideData, v4->static_fields->sideTop, 0, v2);
 }
 
 
 System_Byte_array *__fastcall CatAndMouseGame__CatGame7(System_Byte_array *data, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  System_Byte_array *v4; // x20
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  const MethodInfo *v8; // x4
-  System_Byte_array *v9; // x19
-  unsigned __int64 v10; // x8
+  System_Byte_array *v2; // x20
+  const MethodInfo *v3; // x4
+  System_Byte_array *v4; // x19
+  unsigned __int64 v5; // x8
   il2cpp_array_size_t max_length; // w11
-  CatAndMouseGame_c *v12; // x0
-  __int64 v14; // x0
+  CatAndMouseGame_c *v7; // x0
+  __int64 v9; // x0
 
-  v4 = data;
-  if ( (byte_42EB68F & 1) == 0 )
+  v2 = data;
+  if ( (byte_4354B6D & 1) == 0 )
   {
-    sub_B5D5C4(&byte___TypeInfo, (_DWORD)method, v2, v3);
-    data = (System_Byte_array *)sub_B5D5C4(&CatAndMouseGame_TypeInfo, v5, v6, v7);
-    byte_42EB68F = 1;
+    sub_B70694(&byte___TypeInfo);
+    data = (System_Byte_array *)sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B6D = 1;
   }
-  if ( !v4 )
+  if ( !v2 )
 LABEL_15:
-    sub_B5D69C(data, method);
-  data = (System_Byte_array *)sub_B5D5DC(byte___TypeInfo, v4->max_length);
-  v9 = data;
-  if ( (int)*(_QWORD *)&v4->max_length >= 1 )
+    sub_B7076C(data, method);
+  data = (System_Byte_array *)sub_B706AC(byte___TypeInfo, v2->max_length);
+  v4 = data;
+  if ( (int)*(_QWORD *)&v2->max_length >= 1 )
   {
-    v10 = 0LL;
-    max_length = *(_QWORD *)&v4->max_length;
+    v5 = 0LL;
+    max_length = *(_QWORD *)&v2->max_length;
     do
     {
-      if ( v10 >= max_length )
+      if ( v5 >= max_length )
         goto LABEL_14;
       if ( !data )
         goto LABEL_15;
-      if ( v10 >= data->max_length )
+      if ( v5 >= data->max_length )
       {
 LABEL_14:
-        v14 = sub_B5D6C8(data);
-        sub_B5D668(v14, 0LL);
+        v9 = sub_B70798(data);
+        sub_B70738(v9, 0LL);
       }
-      data->m_Items[v10 + 4] = ~v4->m_Items[v10 + 4];
-      max_length = v4->max_length;
-      ++v10;
+      data->m_Items[v5 + 4] = ~v2->m_Items[v5 + 4];
+      max_length = v2->max_length;
+      ++v5;
     }
-    while ( (__int64)v10 < (int)max_length );
+    while ( (__int64)v5 < (int)max_length );
   }
-  v12 = CatAndMouseGame_TypeInfo;
+  v7 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v12 = CatAndMouseGame_TypeInfo;
+    v7 = CatAndMouseGame_TypeInfo;
   }
-  return CatAndMouseGame__CatHomeMain(v9, v12->static_fields->stageData, v12->static_fields->stageTop, 1, v8);
+  return CatAndMouseGame__CatHomeMain(v4, v7->static_fields->stageData, v7->static_fields->stageTop, 1, v3);
 }
 
 
 System_String_o *__fastcall CatAndMouseGame__CatGame8(System_String_o *str, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   unsigned int *UTF8; // x0
-  __int64 v6; // x1
-  const MethodInfo *v7; // x4
-  unsigned __int64 v8; // x8
-  System_Byte_array *v9; // x19
-  unsigned __int64 v10; // x9
-  CatAndMouseGame_c *v11; // x0
-  __int64 v13; // x0
+  __int64 v4; // x1
+  const MethodInfo *v5; // x4
+  unsigned __int64 v6; // x8
+  System_Byte_array *v7; // x19
+  unsigned __int64 v8; // x9
+  CatAndMouseGame_c *v9; // x0
+  __int64 v11; // x0
 
-  if ( (byte_42EB691 & 1) == 0 )
+  if ( (byte_4354B6F & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EB691 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B6F = 1;
   }
   UTF8 = (unsigned int *)System_Text_Encoding__get_UTF8(0LL);
   if ( !UTF8
@@ -1286,60 +1209,57 @@ System_String_o *__fastcall CatAndMouseGame__CatGame8(System_String_o *str, cons
                                  str,
                                  *(_QWORD *)(*(_QWORD *)UTF8 + 608LL))) == 0LL )
   {
-    sub_B5D69C(UTF8, v6);
+    sub_B7076C(UTF8, v4);
   }
-  v8 = UTF8[6];
-  v9 = (System_Byte_array *)UTF8;
-  if ( (__int64)(v8 << 32) >= 1 )
+  v6 = UTF8[6];
+  v7 = (System_Byte_array *)UTF8;
+  if ( (__int64)(v6 << 32) >= 1 )
   {
-    v10 = 0LL;
+    v8 = 0LL;
     do
     {
-      if ( v10 >= v8 )
+      if ( v8 >= v6 )
       {
-        v13 = sub_B5D6C8(UTF8);
-        sub_B5D668(v13, 0LL);
+        v11 = sub_B70798(UTF8);
+        sub_B70738(v11, 0LL);
       }
-      *((_BYTE *)UTF8 + v10 + 32) = ~*((_BYTE *)UTF8 + v10 + 32);
-      ++v10;
+      *((_BYTE *)UTF8 + v8 + 32) = ~*((_BYTE *)UTF8 + v8 + 32);
+      ++v8;
     }
-    while ( (__int64)v10 < (int)v8 );
+    while ( (__int64)v8 < (int)v6 );
   }
-  v11 = CatAndMouseGame_TypeInfo;
+  v9 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v11 = CatAndMouseGame_TypeInfo;
+    v9 = CatAndMouseGame_TypeInfo;
   }
-  return CatAndMouseGame__CatHomeZ2(v9, v11->static_fields->stageData, v11->static_fields->stageTop, 1, v7);
+  return CatAndMouseGame__CatHomeZ2(v7, v9->static_fields->stageData, v9->static_fields->stageTop, 1, v5);
 }
 
 
 System_IO_Stream_o *__fastcall CatAndMouseGame__CatGameZ(System_IO_Stream_o *stream, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  const MethodInfo *v4; // x4
-  CatAndMouseGame_c *v6; // x0
+  const MethodInfo *v2; // x4
+  CatAndMouseGame_c *v4; // x0
 
-  if ( (byte_42EB683 & 1) == 0 )
+  if ( (byte_4354B61 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EB683 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B61 = 1;
   }
-  v6 = CatAndMouseGame_TypeInfo;
+  v4 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v6 = CatAndMouseGame_TypeInfo;
+    v4 = CatAndMouseGame_TypeInfo;
   }
-  return CatAndMouseGame__CatHomeMainZ(stream, v6->static_fields->stageData, v6->static_fields->stageTop, 1, v4);
+  return CatAndMouseGame__CatHomeMainZ(stream, v4->static_fields->stageData, v4->static_fields->stageTop, 1, v2);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall CatAndMouseGame__CatHome(
         System_Byte_array *data,
         System_Byte_array *home,
@@ -1347,17 +1267,14 @@ System_String_o *__fastcall CatAndMouseGame__CatHome(
         bool isCompress,
         const MethodInfo *method)
 {
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
   System_String_o *result; // x0
-  System_String_o *v13; // x19
+  System_String_o *v10; // x19
 
-  if ( (byte_42EB6A4 & 1) == 0 )
+  if ( (byte_4354B82 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)home, (_DWORD)info, isCompress);
-    sub_B5D5C4(&System_Convert_TypeInfo, v9, v10, v11);
-    byte_42EB6A4 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&System_Convert_TypeInfo);
+    byte_4354B82 = 1;
   }
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
@@ -1367,19 +1284,18 @@ System_String_o *__fastcall CatAndMouseGame__CatHome(
   result = (System_String_o *)CatAndMouseGame__CatHomeMain(data, home, info, isCompress, method);
   if ( result )
   {
-    v13 = result;
+    v10 = result;
     if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !System_Convert_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
     }
-    return System_Convert__ToBase64String((System_Byte_array *)v13, 0LL);
+    return System_Convert__ToBase64String((System_Byte_array *)v10, 0LL);
   }
   return result;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_Byte_array *__fastcall CatAndMouseGame__CatHomeMain(
         System_Byte_array *data,
         System_Byte_array *home,
@@ -1387,127 +1303,117 @@ System_Byte_array *__fastcall CatAndMouseGame__CatHomeMain(
         bool isCompress,
         const MethodInfo *method)
 {
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  int v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
-  int v15; // w1
-  int v16; // w2
-  __int64 v17; // x3
-  System_Security_Cryptography_RijndaelManaged_o *v18; // x23
-  __int64 v19; // x0
-  __int64 v20; // x1
+  System_Security_Cryptography_RijndaelManaged_o *v9; // x23
+  __int64 v10; // x0
+  __int64 v11; // x1
+  __int64 v12; // x0
+  __int64 v13; // x1
+  System_Security_Cryptography_ICryptoTransform_o *v14; // x23
+  System_IO_MemoryStream_o *v15; // x0
+  il2cpp_array_size_t max_length; // w8
+  System_IO_Stream_o *v17; // x19
+  int v18; // w9
+  int v19; // w8
+  System_Security_Cryptography_CryptoStream_o *v20; // x20
   __int64 v21; // x0
   __int64 v22; // x1
-  System_Security_Cryptography_ICryptoTransform_o *v23; // x23
-  System_IO_MemoryStream_o *v24; // x0
-  il2cpp_array_size_t max_length; // w8
-  System_IO_Stream_o *v26; // x19
-  int v27; // w9
-  int v28; // w8
-  System_Security_Cryptography_CryptoStream_o *v29; // x20
-  __int64 v30; // x0
-  __int64 v31; // x1
-  ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *v32; // x22
-  __int64 v33; // x0
-  __int64 v34; // x1
-  __int64 v35; // x0
-  __int64 v36; // x1
-  System_Byte_array *v37; // x22
+  ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *v23; // x22
+  __int64 v24; // x0
+  __int64 v25; // x1
+  __int64 v26; // x0
+  __int64 v27; // x1
+  System_Byte_array *v28; // x22
 
-  if ( (byte_42EB6A8 & 1) == 0 )
+  if ( (byte_4354B86 & 1) == 0 )
   {
-    sub_B5D5C4(&ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo, (_DWORD)home, (_DWORD)info, isCompress);
-    sub_B5D5C4(&System_Security_Cryptography_CryptoStream_TypeInfo, v9, v10, v11);
-    sub_B5D5C4(&System_IO_MemoryStream_TypeInfo, v12, v13, v14);
-    sub_B5D5C4(&System_Security_Cryptography_RijndaelManaged_TypeInfo, v15, v16, v17);
-    byte_42EB6A8 = 1;
+    sub_B70694(&ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo);
+    sub_B70694(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_B70694(&System_IO_MemoryStream_TypeInfo);
+    sub_B70694(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
+    byte_4354B86 = 1;
   }
-  v18 = (System_Security_Cryptography_RijndaelManaged_o *)sub_B5D694(System_Security_Cryptography_RijndaelManaged_TypeInfo);
-  System_Security_Cryptography_RijndaelManaged___ctor(v18, 0LL);
-  if ( !v18 )
-    sub_B5D69C(v19, v20);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v18->klass->vtable._21_set_Padding.method)(
-    v18,
+  v9 = (System_Security_Cryptography_RijndaelManaged_o *)sub_B70764(System_Security_Cryptography_RijndaelManaged_TypeInfo);
+  System_Security_Cryptography_RijndaelManaged___ctor(v9, 0LL);
+  if ( !v9 )
+    sub_B7076C(v10, v11);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._21_set_Padding.method)(
+    v9,
     2LL,
-    v18->klass->vtable._22_CreateEncryptor.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v18->klass->vtable._19_set_Mode.method)(
-    v18,
+    v9->klass->vtable._22_CreateEncryptor.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._19_set_Mode.method)(
+    v9,
     1LL,
-    v18->klass->vtable._20_get_Padding.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v18->klass->vtable._17_set_KeySize.method)(
-    v18,
+    v9->klass->vtable._20_get_Padding.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._17_set_KeySize.method)(
+    v9,
     256LL,
-    v18->klass->vtable._18_get_Mode.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v18->klass->vtable._7_set_BlockSize.method)(
-    v18,
+    v9->klass->vtable._18_get_Mode.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._7_set_BlockSize.method)(
+    v9,
     256LL,
-    v18->klass->vtable._8_get_FeedbackSize.methodPtr);
-  v21 = ((__int64 (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, System_Byte_array *, System_Byte_array *, Il2CppMethodPointer))v18->klass->vtable._23_CreateEncryptor.method)(
-          v18,
+    v9->klass->vtable._8_get_FeedbackSize.methodPtr);
+  v12 = ((__int64 (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, System_Byte_array *, System_Byte_array *, Il2CppMethodPointer))v9->klass->vtable._23_CreateEncryptor.method)(
+          v9,
           home,
           info,
-          v18->klass->vtable._24_CreateDecryptor.methodPtr);
+          v9->klass->vtable._24_CreateDecryptor.methodPtr);
   if ( !data )
-    sub_B5D69C(v21, v22);
-  v23 = (System_Security_Cryptography_ICryptoTransform_o *)v21;
-  v24 = (System_IO_MemoryStream_o *)sub_B5D694(System_IO_MemoryStream_TypeInfo);
+    sub_B7076C(v12, v13);
+  v14 = (System_Security_Cryptography_ICryptoTransform_o *)v12;
+  v15 = (System_IO_MemoryStream_o *)sub_B70764(System_IO_MemoryStream_TypeInfo);
   max_length = data->max_length;
-  v26 = (System_IO_Stream_o *)v24;
-  v27 = max_length + 255;
-  v28 = max_length + 510;
-  if ( v27 >= 0 )
-    v28 = v27;
-  System_IO_MemoryStream___ctor_45158880(v24, v28 & 0xFFFFFF00, 0LL);
-  v29 = (System_Security_Cryptography_CryptoStream_o *)sub_B5D694(System_Security_Cryptography_CryptoStream_TypeInfo);
-  System_Security_Cryptography_CryptoStream___ctor(v29, v26, v23, 1, 0LL);
+  v17 = (System_IO_Stream_o *)v15;
+  v18 = max_length + 255;
+  v19 = max_length + 510;
+  if ( v18 >= 0 )
+    v19 = v18;
+  System_IO_MemoryStream___ctor_45610480(v15, v19 & 0xFFFFFF00, 0LL);
+  v20 = (System_Security_Cryptography_CryptoStream_o *)sub_B70764(System_Security_Cryptography_CryptoStream_TypeInfo);
+  System_Security_Cryptography_CryptoStream___ctor(v20, v17, v14, 1, 0LL);
   if ( isCompress )
   {
-    v32 = (ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *)sub_B5D694(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo);
-    ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream___ctor_51074312(v32, (System_IO_Stream_o *)v29, 1, 0LL);
-    if ( !v32 )
-      sub_B5D69C(v33, v34);
-    ((void (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *, System_Byte_array *, _QWORD, _QWORD, Il2CppMethodPointer))v32->klass->vtable._32_Write.method)(
-      v32,
+    v23 = (ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *)sub_B70764(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo);
+    ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream___ctor_51343108(v23, (System_IO_Stream_o *)v20, 1, 0LL);
+    if ( !v23 )
+      sub_B7076C(v24, v25);
+    ((void (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *, System_Byte_array *, _QWORD, _QWORD, Il2CppMethodPointer))v23->klass->vtable._32_Write.method)(
+      v23,
       data,
       0LL,
       data->max_length,
-      v32->klass->vtable._33_WriteByte.methodPtr);
-    v35 = ((__int64 (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *, Il2CppMethodPointer))v32->klass->vtable._18_Close.method)(
-            v32,
-            v32->klass->vtable._19_Dispose.methodPtr);
+      v23->klass->vtable._33_WriteByte.methodPtr);
+    v26 = ((__int64 (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *, Il2CppMethodPointer))v23->klass->vtable._18_Close.method)(
+            v23,
+            v23->klass->vtable._19_Dispose.methodPtr);
   }
   else
   {
-    if ( !v29 )
-      sub_B5D69C(v30, v31);
-    ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, System_Byte_array *, _QWORD, _QWORD, Il2CppMethodPointer))v29->klass->vtable._32_Write.method)(
-      v29,
+    if ( !v20 )
+      sub_B7076C(v21, v22);
+    ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, System_Byte_array *, _QWORD, _QWORD, Il2CppMethodPointer))v20->klass->vtable._32_Write.method)(
+      v20,
       data,
       0LL,
       data->max_length,
-      v29->klass->vtable._33_WriteByte.methodPtr);
-    System_Security_Cryptography_CryptoStream__FlushFinalBlock(v29, 0LL);
+      v20->klass->vtable._33_WriteByte.methodPtr);
+    System_Security_Cryptography_CryptoStream__FlushFinalBlock(v20, 0LL);
   }
-  if ( !v26 )
-    sub_B5D69C(v35, v36);
-  v37 = (System_Byte_array *)(*(__int64 (__fastcall **)(System_IO_Stream_o *, Il2CppClass *))&v26->klass[1]._1.this_arg.bits)(
-                               v26,
-                               v26->klass[1]._1.element_class);
-  ((void (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer))v26->klass->vtable._18_Close.method)(
-    v26,
-    v26->klass->vtable._19_Dispose.methodPtr);
-  if ( v29 )
-    ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, Il2CppMethodPointer))v29->klass->vtable._18_Close.method)(
-      v29,
-      v29->klass->vtable._19_Dispose.methodPtr);
-  return v37;
+  if ( !v17 )
+    sub_B7076C(v26, v27);
+  v28 = (System_Byte_array *)(*(__int64 (__fastcall **)(System_IO_Stream_o *, Il2CppClass *))&v17->klass[1]._1.this_arg.bits)(
+                               v17,
+                               v17->klass[1]._1.element_class);
+  ((void (__fastcall *)(System_IO_Stream_o *, Il2CppMethodPointer))v17->klass->vtable._18_Close.method)(
+    v17,
+    v17->klass->vtable._19_Dispose.methodPtr);
+  if ( v20 )
+    ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, Il2CppMethodPointer))v20->klass->vtable._18_Close.method)(
+      v20,
+      v20->klass->vtable._19_Dispose.methodPtr);
+  return v28;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_IO_Stream_o *__fastcall CatAndMouseGame__CatHomeMainZ(
         System_IO_Stream_o *stream,
         System_Byte_array *home,
@@ -1515,64 +1421,57 @@ System_IO_Stream_o *__fastcall CatAndMouseGame__CatHomeMainZ(
         bool isCompress,
         const MethodInfo *method)
 {
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  int v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
-  System_Security_Cryptography_RijndaelManaged_o *v15; // x23
-  __int64 v16; // x0
-  __int64 v17; // x1
-  System_Security_Cryptography_ICryptoTransform_o *v18; // x22
-  System_Security_Cryptography_CryptoStream_o *v19; // x21
-  ICSharpCode_SharpZipLib_GZip_GZipOutputStream_o *v20; // x19
+  System_Security_Cryptography_RijndaelManaged_o *v9; // x23
+  __int64 v10; // x0
+  __int64 v11; // x1
+  System_Security_Cryptography_ICryptoTransform_o *v12; // x22
+  System_Security_Cryptography_CryptoStream_o *v13; // x21
+  ICSharpCode_SharpZipLib_GZip_GZipOutputStream_o *v14; // x19
 
-  if ( (byte_42EB6A6 & 1) == 0 )
+  if ( (byte_4354B84 & 1) == 0 )
   {
-    sub_B5D5C4(&System_Security_Cryptography_CryptoStream_TypeInfo, (_DWORD)home, (_DWORD)info, isCompress);
-    sub_B5D5C4(&ICSharpCode_SharpZipLib_GZip_GZipOutputStream_TypeInfo, v9, v10, v11);
-    sub_B5D5C4(&System_Security_Cryptography_RijndaelManaged_TypeInfo, v12, v13, v14);
-    byte_42EB6A6 = 1;
+    sub_B70694(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_B70694(&ICSharpCode_SharpZipLib_GZip_GZipOutputStream_TypeInfo);
+    sub_B70694(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
+    byte_4354B84 = 1;
   }
-  v15 = (System_Security_Cryptography_RijndaelManaged_o *)sub_B5D694(System_Security_Cryptography_RijndaelManaged_TypeInfo);
-  System_Security_Cryptography_RijndaelManaged___ctor(v15, 0LL);
-  if ( !v15 )
-    sub_B5D69C(v16, v17);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v15->klass->vtable._21_set_Padding.method)(
-    v15,
+  v9 = (System_Security_Cryptography_RijndaelManaged_o *)sub_B70764(System_Security_Cryptography_RijndaelManaged_TypeInfo);
+  System_Security_Cryptography_RijndaelManaged___ctor(v9, 0LL);
+  if ( !v9 )
+    sub_B7076C(v10, v11);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._21_set_Padding.method)(
+    v9,
     2LL,
-    v15->klass->vtable._22_CreateEncryptor.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v15->klass->vtable._19_set_Mode.method)(
-    v15,
+    v9->klass->vtable._22_CreateEncryptor.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._19_set_Mode.method)(
+    v9,
     1LL,
-    v15->klass->vtable._20_get_Padding.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v15->klass->vtable._17_set_KeySize.method)(
-    v15,
+    v9->klass->vtable._20_get_Padding.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._17_set_KeySize.method)(
+    v9,
     256LL,
-    v15->klass->vtable._18_get_Mode.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v15->klass->vtable._7_set_BlockSize.method)(
-    v15,
+    v9->klass->vtable._18_get_Mode.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._7_set_BlockSize.method)(
+    v9,
     256LL,
-    v15->klass->vtable._8_get_FeedbackSize.methodPtr);
-  v18 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, System_Byte_array *, System_Byte_array *, Il2CppMethodPointer))v15->klass->vtable._23_CreateEncryptor.method)(
-                                                             v15,
+    v9->klass->vtable._8_get_FeedbackSize.methodPtr);
+  v12 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, System_Byte_array *, System_Byte_array *, Il2CppMethodPointer))v9->klass->vtable._23_CreateEncryptor.method)(
+                                                             v9,
                                                              home,
                                                              info,
-                                                             v15->klass->vtable._24_CreateDecryptor.methodPtr);
-  v19 = (System_Security_Cryptography_CryptoStream_o *)sub_B5D694(System_Security_Cryptography_CryptoStream_TypeInfo);
-  System_Security_Cryptography_CryptoStream___ctor(v19, stream, v18, 1, 0LL);
+                                                             v9->klass->vtable._24_CreateDecryptor.methodPtr);
+  v13 = (System_Security_Cryptography_CryptoStream_o *)sub_B70764(System_Security_Cryptography_CryptoStream_TypeInfo);
+  System_Security_Cryptography_CryptoStream___ctor(v13, stream, v12, 1, 0LL);
   if ( isCompress )
   {
-    v20 = (ICSharpCode_SharpZipLib_GZip_GZipOutputStream_o *)sub_B5D694(ICSharpCode_SharpZipLib_GZip_GZipOutputStream_TypeInfo);
-    ICSharpCode_SharpZipLib_GZip_GZipOutputStream___ctor(v20, (System_IO_Stream_o *)v19, 0LL);
-    return (System_IO_Stream_o *)v20;
+    v14 = (ICSharpCode_SharpZipLib_GZip_GZipOutputStream_o *)sub_B70764(ICSharpCode_SharpZipLib_GZip_GZipOutputStream_TypeInfo);
+    ICSharpCode_SharpZipLib_GZip_GZipOutputStream___ctor(v14, (System_IO_Stream_o *)v13, 0LL);
+    return (System_IO_Stream_o *)v14;
   }
-  return (System_IO_Stream_o *)v19;
+  return (System_IO_Stream_o *)v13;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_Byte_array *__fastcall CatAndMouseGame__CatHomeMainZ2(
         System_Byte_array *data,
         System_Byte_array *home,
@@ -1580,116 +1479,106 @@ System_Byte_array *__fastcall CatAndMouseGame__CatHomeMainZ2(
         bool isCompress,
         const MethodInfo *method)
 {
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  int v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
-  int v15; // w1
-  int v16; // w2
-  __int64 v17; // x3
-  System_Security_Cryptography_RijndaelManaged_o *v18; // x23
-  __int64 v19; // x0
-  __int64 v20; // x1
-  System_Security_Cryptography_ICryptoTransform_o *v21; // x23
-  System_IO_MemoryStream_o *v22; // x19
-  System_Security_Cryptography_CryptoStream_o *v23; // x20
-  __int64 v24; // x0
-  __int64 v25; // x1
-  ICSharpCode_SharpZipLib_GZip_GZipOutputStream_o *v26; // x22
-  __int64 v27; // x0
-  __int64 v28; // x1
-  __int64 v29; // x0
-  __int64 v30; // x1
-  System_Byte_array *v31; // x22
+  System_Security_Cryptography_RijndaelManaged_o *v9; // x23
+  __int64 v10; // x0
+  __int64 v11; // x1
+  System_Security_Cryptography_ICryptoTransform_o *v12; // x23
+  System_IO_MemoryStream_o *v13; // x19
+  System_Security_Cryptography_CryptoStream_o *v14; // x20
+  __int64 v15; // x0
+  __int64 v16; // x1
+  ICSharpCode_SharpZipLib_GZip_GZipOutputStream_o *v17; // x22
+  __int64 v18; // x0
+  __int64 v19; // x1
+  __int64 v20; // x0
+  __int64 v21; // x1
+  System_Byte_array *v22; // x22
 
-  if ( (byte_42EB6A7 & 1) == 0 )
+  if ( (byte_4354B85 & 1) == 0 )
   {
-    sub_B5D5C4(&System_Security_Cryptography_CryptoStream_TypeInfo, (_DWORD)home, (_DWORD)info, isCompress);
-    sub_B5D5C4(&ICSharpCode_SharpZipLib_GZip_GZipOutputStream_TypeInfo, v9, v10, v11);
-    sub_B5D5C4(&System_IO_MemoryStream_TypeInfo, v12, v13, v14);
-    sub_B5D5C4(&System_Security_Cryptography_RijndaelManaged_TypeInfo, v15, v16, v17);
-    byte_42EB6A7 = 1;
+    sub_B70694(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_B70694(&ICSharpCode_SharpZipLib_GZip_GZipOutputStream_TypeInfo);
+    sub_B70694(&System_IO_MemoryStream_TypeInfo);
+    sub_B70694(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
+    byte_4354B85 = 1;
   }
-  v18 = (System_Security_Cryptography_RijndaelManaged_o *)sub_B5D694(System_Security_Cryptography_RijndaelManaged_TypeInfo);
-  System_Security_Cryptography_RijndaelManaged___ctor(v18, 0LL);
-  if ( !v18 )
-    sub_B5D69C(v19, v20);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v18->klass->vtable._21_set_Padding.method)(
-    v18,
+  v9 = (System_Security_Cryptography_RijndaelManaged_o *)sub_B70764(System_Security_Cryptography_RijndaelManaged_TypeInfo);
+  System_Security_Cryptography_RijndaelManaged___ctor(v9, 0LL);
+  if ( !v9 )
+    sub_B7076C(v10, v11);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._21_set_Padding.method)(
+    v9,
     2LL,
-    v18->klass->vtable._22_CreateEncryptor.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v18->klass->vtable._19_set_Mode.method)(
-    v18,
+    v9->klass->vtable._22_CreateEncryptor.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._19_set_Mode.method)(
+    v9,
     1LL,
-    v18->klass->vtable._20_get_Padding.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v18->klass->vtable._17_set_KeySize.method)(
-    v18,
+    v9->klass->vtable._20_get_Padding.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._17_set_KeySize.method)(
+    v9,
     256LL,
-    v18->klass->vtable._18_get_Mode.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v18->klass->vtable._7_set_BlockSize.method)(
-    v18,
+    v9->klass->vtable._18_get_Mode.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._7_set_BlockSize.method)(
+    v9,
     256LL,
-    v18->klass->vtable._8_get_FeedbackSize.methodPtr);
-  v21 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, System_Byte_array *, System_Byte_array *, Il2CppMethodPointer))v18->klass->vtable._23_CreateEncryptor.method)(
-                                                             v18,
+    v9->klass->vtable._8_get_FeedbackSize.methodPtr);
+  v12 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, System_Byte_array *, System_Byte_array *, Il2CppMethodPointer))v9->klass->vtable._23_CreateEncryptor.method)(
+                                                             v9,
                                                              home,
                                                              info,
-                                                             v18->klass->vtable._24_CreateDecryptor.methodPtr);
-  v22 = (System_IO_MemoryStream_o *)sub_B5D694(System_IO_MemoryStream_TypeInfo);
-  System_IO_MemoryStream___ctor(v22, 0LL);
-  v23 = (System_Security_Cryptography_CryptoStream_o *)sub_B5D694(System_Security_Cryptography_CryptoStream_TypeInfo);
-  System_Security_Cryptography_CryptoStream___ctor(v23, (System_IO_Stream_o *)v22, v21, 1, 0LL);
+                                                             v9->klass->vtable._24_CreateDecryptor.methodPtr);
+  v13 = (System_IO_MemoryStream_o *)sub_B70764(System_IO_MemoryStream_TypeInfo);
+  System_IO_MemoryStream___ctor(v13, 0LL);
+  v14 = (System_Security_Cryptography_CryptoStream_o *)sub_B70764(System_Security_Cryptography_CryptoStream_TypeInfo);
+  System_Security_Cryptography_CryptoStream___ctor(v14, (System_IO_Stream_o *)v13, v12, 1, 0LL);
   if ( isCompress )
   {
-    v26 = (ICSharpCode_SharpZipLib_GZip_GZipOutputStream_o *)sub_B5D694(ICSharpCode_SharpZipLib_GZip_GZipOutputStream_TypeInfo);
-    ICSharpCode_SharpZipLib_GZip_GZipOutputStream___ctor(v26, (System_IO_Stream_o *)v23, 0LL);
+    v17 = (ICSharpCode_SharpZipLib_GZip_GZipOutputStream_o *)sub_B70764(ICSharpCode_SharpZipLib_GZip_GZipOutputStream_TypeInfo);
+    ICSharpCode_SharpZipLib_GZip_GZipOutputStream___ctor(v17, (System_IO_Stream_o *)v14, 0LL);
     if ( !data )
-      sub_B5D69C(v27, v28);
-    if ( !v26 )
-      sub_B5D69C(v27, v28);
-    ((void (__fastcall *)(ICSharpCode_SharpZipLib_GZip_GZipOutputStream_o *, System_Byte_array *, _QWORD, _QWORD, Il2CppMethodPointer))v26->klass->vtable._32_Write.method)(
-      v26,
+      sub_B7076C(v18, v19);
+    if ( !v17 )
+      sub_B7076C(v18, v19);
+    ((void (__fastcall *)(ICSharpCode_SharpZipLib_GZip_GZipOutputStream_o *, System_Byte_array *, _QWORD, _QWORD, Il2CppMethodPointer))v17->klass->vtable._32_Write.method)(
+      v17,
       data,
       0LL,
       data->max_length,
-      v26->klass->vtable._33_WriteByte.methodPtr);
-    v29 = ((__int64 (__fastcall *)(ICSharpCode_SharpZipLib_GZip_GZipOutputStream_o *, Il2CppMethodPointer))v26->klass->vtable._18_Close.method)(
-            v26,
-            v26->klass->vtable._19_Dispose.methodPtr);
+      v17->klass->vtable._33_WriteByte.methodPtr);
+    v20 = ((__int64 (__fastcall *)(ICSharpCode_SharpZipLib_GZip_GZipOutputStream_o *, Il2CppMethodPointer))v17->klass->vtable._18_Close.method)(
+            v17,
+            v17->klass->vtable._19_Dispose.methodPtr);
   }
   else
   {
     if ( !data )
-      sub_B5D69C(v24, v25);
-    if ( !v23 )
-      sub_B5D69C(v24, v25);
-    ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, System_Byte_array *, _QWORD, _QWORD, Il2CppMethodPointer))v23->klass->vtable._32_Write.method)(
-      v23,
+      sub_B7076C(v15, v16);
+    if ( !v14 )
+      sub_B7076C(v15, v16);
+    ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, System_Byte_array *, _QWORD, _QWORD, Il2CppMethodPointer))v14->klass->vtable._32_Write.method)(
+      v14,
       data,
       0LL,
       data->max_length,
-      v23->klass->vtable._33_WriteByte.methodPtr);
-    System_Security_Cryptography_CryptoStream__FlushFinalBlock(v23, 0LL);
+      v14->klass->vtable._33_WriteByte.methodPtr);
+    System_Security_Cryptography_CryptoStream__FlushFinalBlock(v14, 0LL);
   }
-  if ( !v22 )
-    sub_B5D69C(v29, v30);
-  v31 = (System_Byte_array *)((__int64 (__fastcall *)(System_IO_MemoryStream_o *, void *))v22->klass->vtable._37_ToArray.method)(
-                               v22,
-                               v22->klass[1]._1.image);
-  ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v22->klass->vtable._18_Close.method)(
-    v22,
-    v22->klass->vtable._19_Dispose.methodPtr);
-  if ( v23 )
-    ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, Il2CppMethodPointer))v23->klass->vtable._18_Close.method)(
-      v23,
-      v23->klass->vtable._19_Dispose.methodPtr);
-  return v31;
+  if ( !v13 )
+    sub_B7076C(v20, v21);
+  v22 = (System_Byte_array *)((__int64 (__fastcall *)(System_IO_MemoryStream_o *, void *))v13->klass->vtable._37_ToArray.method)(
+                               v13,
+                               v13->klass[1]._1.image);
+  ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v13->klass->vtable._18_Close.method)(
+    v13,
+    v13->klass->vtable._19_Dispose.methodPtr);
+  if ( v14 )
+    ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, Il2CppMethodPointer))v14->klass->vtable._18_Close.method)(
+      v14,
+      v14->klass->vtable._19_Dispose.methodPtr);
+  return v22;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall CatAndMouseGame__CatHomeZ2(
         System_Byte_array *data,
         System_Byte_array *home,
@@ -1697,17 +1586,14 @@ System_String_o *__fastcall CatAndMouseGame__CatHomeZ2(
         bool isCompress,
         const MethodInfo *method)
 {
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
   System_String_o *result; // x0
-  System_String_o *v13; // x19
+  System_String_o *v10; // x19
 
-  if ( (byte_42EB6A5 & 1) == 0 )
+  if ( (byte_4354B83 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)home, (_DWORD)info, isCompress);
-    sub_B5D5C4(&System_Convert_TypeInfo, v9, v10, v11);
-    byte_42EB6A5 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&System_Convert_TypeInfo);
+    byte_4354B83 = 1;
   }
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
@@ -1717,13 +1603,13 @@ System_String_o *__fastcall CatAndMouseGame__CatHomeZ2(
   result = (System_String_o *)CatAndMouseGame__CatHomeMainZ2(data, home, info, isCompress, method);
   if ( result )
   {
-    v13 = result;
+    v10 = result;
     if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !System_Convert_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
     }
-    return System_Convert__ToBase64String((System_Byte_array *)v13, 0LL);
+    return System_Convert__ToBase64String((System_Byte_array *)v10, 0LL);
   }
   return result;
 }
@@ -1731,41 +1617,36 @@ System_String_o *__fastcall CatAndMouseGame__CatHomeZ2(
 
 void __fastcall CatAndMouseGame__ForthHomeBuilding(System_String_o *data, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
   bool isPlaying; // w20
   _QWORD *UTF8; // x0
-  __int64 v10; // x1
-  _QWORD *v11; // x19
-  __int64 v12; // x8
-  unsigned __int64 v13; // x20
-  __int64 v14; // x21
-  __int64 v15; // x9
-  unsigned int v16; // w8
+  __int64 v5; // x1
+  _QWORD *v6; // x19
+  __int64 v7; // x8
+  unsigned __int64 v8; // x20
+  __int64 v9; // x21
+  __int64 v10; // x9
+  unsigned int v11; // w8
   struct System_Byte_array *baseData; // x10
-  __int64 v18; // x11
-  struct System_Byte_array *v19; // x10
+  __int64 v13; // x11
+  struct System_Byte_array *v14; // x10
+  __int64 v15; // x9
+  char *v16; // x9
+  __int64 v17; // x10
+  struct System_Byte_array *v18; // x9
+  unsigned int v19; // w8
   __int64 v20; // x9
-  char *v21; // x9
-  __int64 v22; // x10
-  struct System_Byte_array *v23; // x9
-  unsigned int v24; // w8
-  __int64 v25; // x9
-  unsigned int v26; // w8
+  unsigned int v21; // w8
   struct System_Byte_array *baseTop; // x10
-  __int64 v28; // x11
-  struct System_Byte_array *v29; // x10
-  __int64 v30; // x9
-  __int64 v31; // x0
+  __int64 v23; // x11
+  struct System_Byte_array *v24; // x10
+  __int64 v25; // x9
+  __int64 v26; // x0
 
-  if ( (byte_42EB696 & 1) == 0 )
+  if ( (byte_4354B74 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&StringLiteral_10544/*"PFBs0eIuunoxKkCcLbqDVerU1rShhS276SAL3A8tFLUfGvtz3F3FFeKELIk3Nvi4"*/, v5, v6, v7);
-    byte_42EB696 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&StringLiteral_10565/*"PFBs0eIuunoxKkCcLbqDVerU1rShhS276SAL3A8tFLUfGvtz3F3FFeKELIk3Nvi4"*/);
+    byte_4354B74 = 1;
   }
   isPlaying = UnityEngine_Application__get_isPlaying(0LL);
   UTF8 = System_Text_Encoding__get_UTF8(0LL);
@@ -1773,74 +1654,74 @@ void __fastcall CatAndMouseGame__ForthHomeBuilding(System_String_o *data, const 
     || (!isPlaying
       ? (UTF8 = (_QWORD *)(*(__int64 (__fastcall **)(_QWORD *, __int64, _QWORD))(*UTF8 + 600LL))(
                             UTF8,
-                            StringLiteral_10544/*"PFBs0eIuunoxKkCcLbqDVerU1rShhS276SAL3A8tFLUfGvtz3F3FFeKELIk3Nvi4"*/,
+                            StringLiteral_10565/*"PFBs0eIuunoxKkCcLbqDVerU1rShhS276SAL3A8tFLUfGvtz3F3FFeKELIk3Nvi4"*/,
                             *(_QWORD *)(*UTF8 + 608LL)))
       : (UTF8 = (_QWORD *)(*(__int64 (__fastcall **)(_QWORD *, System_String_o *, _QWORD))(*UTF8 + 600LL))(
                             UTF8,
                             data,
                             *(_QWORD *)(*UTF8 + 608LL))),
-        (v11 = UTF8) == 0LL) )
+        (v6 = UTF8) == 0LL) )
   {
 LABEL_46:
-    sub_B5D69C(UTF8, v10);
+    sub_B7076C(UTF8, v5);
   }
-  v12 = UTF8[3];
-  if ( (int)v12 >= 4 )
+  v7 = UTF8[3];
+  if ( (int)v7 >= 4 )
   {
-    v13 = 0LL;
-    v14 = 0LL;
+    v8 = 0LL;
+    v9 = 0LL;
     do
     {
       UTF8 = &CatAndMouseGame_TypeInfo->_1.image;
-      if ( (v14 & 1) != 0 )
+      if ( (v9 & 1) != 0 )
       {
         if ( (WORD1(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
           && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
           UTF8 = &CatAndMouseGame_TypeInfo->_1.image;
-          LODWORD(v12) = *((_DWORD *)v11 + 6);
+          LODWORD(v7) = *((_DWORD *)v6 + 6);
         }
-        if ( v13 >= (unsigned int)v12 )
+        if ( v8 >= (unsigned int)v7 )
           goto LABEL_45;
-        v25 = *(_QWORD *)(UTF8[23] + 48LL);
-        if ( !v25 )
+        v20 = *(_QWORD *)(UTF8[23] + 48LL);
+        if ( !v20 )
           goto LABEL_46;
-        v26 = (2 * v14) & 0xFFFFFFFC;
-        if ( v26 >= *(_DWORD *)(v25 + 24) )
+        v21 = (2 * v9) & 0xFFFFFFFC;
+        if ( v21 >= *(_DWORD *)(v20 + 24) )
           goto LABEL_45;
-        *(_BYTE *)(v25 + (int)v26 + 32) = *((_BYTE *)v11 + v13 + 32);
-        if ( v13 + 1 >= *((unsigned int *)v11 + 6) )
+        *(_BYTE *)(v20 + (int)v21 + 32) = *((_BYTE *)v6 + v8 + 32);
+        if ( v8 + 1 >= *((unsigned int *)v6 + 6) )
           goto LABEL_45;
         baseTop = CatAndMouseGame_TypeInfo->static_fields->baseTop;
         if ( !baseTop )
           goto LABEL_46;
-        v28 = (int)v26 | 1LL;
-        if ( (unsigned int)v28 >= baseTop->max_length )
+        v23 = (int)v21 | 1LL;
+        if ( (unsigned int)v23 >= baseTop->max_length )
           goto LABEL_45;
-        baseTop->m_Items[v28 + 4] = *((_BYTE *)v11 + v13 + 33);
-        if ( v13 + 2 >= *((unsigned int *)v11 + 6) )
+        baseTop->m_Items[v23 + 4] = *((_BYTE *)v6 + v8 + 33);
+        if ( v8 + 2 >= *((unsigned int *)v6 + 6) )
           goto LABEL_45;
-        v29 = CatAndMouseGame_TypeInfo->static_fields->baseTop;
-        if ( !v29 )
+        v24 = CatAndMouseGame_TypeInfo->static_fields->baseTop;
+        if ( !v24 )
           goto LABEL_46;
-        v30 = (int)v26 | 2LL;
-        if ( (unsigned int)v30 >= v29->max_length )
+        v25 = (int)v21 | 2LL;
+        if ( (unsigned int)v25 >= v24->max_length )
           goto LABEL_45;
-        v29->m_Items[v30 + 4] = *((_BYTE *)v11 + v13 + 34);
-        if ( v13 + 3 >= *((unsigned int *)v11 + 6) )
+        v24->m_Items[v25 + 4] = *((_BYTE *)v6 + v8 + 34);
+        if ( v8 + 3 >= *((unsigned int *)v6 + 6) )
           goto LABEL_45;
-        v23 = CatAndMouseGame_TypeInfo->static_fields->baseTop;
-        if ( !v23 )
+        v18 = CatAndMouseGame_TypeInfo->static_fields->baseTop;
+        if ( !v18 )
           goto LABEL_46;
-        v24 = v26 | 3;
-        if ( v24 >= v23->max_length )
+        v19 = v21 | 3;
+        if ( v19 >= v18->max_length )
         {
 LABEL_45:
-          v31 = sub_B5D6C8(UTF8);
-          sub_B5D668(v31, 0LL);
+          v26 = sub_B70798(UTF8);
+          sub_B70738(v26, 0LL);
         }
-        v22 = (4 * v14) | 3;
+        v17 = (4 * v9) | 3;
       }
       else
       {
@@ -1849,89 +1730,84 @@ LABEL_45:
         {
           j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
           UTF8 = &CatAndMouseGame_TypeInfo->_1.image;
-          LODWORD(v12) = *((_DWORD *)v11 + 6);
+          LODWORD(v7) = *((_DWORD *)v6 + 6);
         }
-        if ( v13 >= (unsigned int)v12 )
+        if ( v8 >= (unsigned int)v7 )
           goto LABEL_45;
-        v15 = *(_QWORD *)(UTF8[23] + 56LL);
-        if ( !v15 )
+        v10 = *(_QWORD *)(UTF8[23] + 56LL);
+        if ( !v10 )
           goto LABEL_46;
-        v16 = (2 * v14) & 0xFFFFFFFC;
-        if ( v16 >= *(_DWORD *)(v15 + 24) )
+        v11 = (2 * v9) & 0xFFFFFFFC;
+        if ( v11 >= *(_DWORD *)(v10 + 24) )
           goto LABEL_45;
-        *(_BYTE *)(v15 + (int)v16 + 32) = *((_BYTE *)v11 + v13 + 32);
-        if ( v13 + 1 >= *((unsigned int *)v11 + 6) )
+        *(_BYTE *)(v10 + (int)v11 + 32) = *((_BYTE *)v6 + v8 + 32);
+        if ( v8 + 1 >= *((unsigned int *)v6 + 6) )
           goto LABEL_45;
         baseData = CatAndMouseGame_TypeInfo->static_fields->baseData;
         if ( !baseData )
           goto LABEL_46;
-        v18 = (int)v16 | 1LL;
-        if ( (unsigned int)v18 >= baseData->max_length )
+        v13 = (int)v11 | 1LL;
+        if ( (unsigned int)v13 >= baseData->max_length )
           goto LABEL_45;
-        baseData->m_Items[v18 + 4] = *((_BYTE *)v11 + v13 + 33);
-        if ( v13 + 2 >= *((unsigned int *)v11 + 6) )
+        baseData->m_Items[v13 + 4] = *((_BYTE *)v6 + v8 + 33);
+        if ( v8 + 2 >= *((unsigned int *)v6 + 6) )
           goto LABEL_45;
-        v19 = CatAndMouseGame_TypeInfo->static_fields->baseData;
-        if ( !v19 )
+        v14 = CatAndMouseGame_TypeInfo->static_fields->baseData;
+        if ( !v14 )
           goto LABEL_46;
-        v20 = (int)v16 | 2LL;
-        if ( (unsigned int)v20 >= v19->max_length )
+        v15 = (int)v11 | 2LL;
+        if ( (unsigned int)v15 >= v14->max_length )
           goto LABEL_45;
-        v21 = (char *)v19 + v20;
-        v22 = v13 + 3;
-        v21[32] = *((_BYTE *)v11 + v13 + 34);
-        if ( v13 + 3 >= *((unsigned int *)v11 + 6) )
+        v16 = (char *)v14 + v15;
+        v17 = v8 + 3;
+        v16[32] = *((_BYTE *)v6 + v8 + 34);
+        if ( v8 + 3 >= *((unsigned int *)v6 + 6) )
           goto LABEL_45;
-        v23 = CatAndMouseGame_TypeInfo->static_fields->baseData;
-        if ( !v23 )
+        v18 = CatAndMouseGame_TypeInfo->static_fields->baseData;
+        if ( !v18 )
           goto LABEL_46;
-        v24 = v16 | 3;
-        if ( v24 >= v23->max_length )
+        v19 = v11 | 3;
+        if ( v19 >= v18->max_length )
           goto LABEL_45;
       }
-      ++v14;
-      v13 += 4LL;
-      v23->m_Items[v24 + 4] = *((_BYTE *)v11 + v22 + 32);
-      LODWORD(v12) = v11[3];
+      ++v9;
+      v8 += 4LL;
+      v18->m_Items[v19 + 4] = *((_BYTE *)v6 + v17 + 32);
+      LODWORD(v7) = v6[3];
     }
-    while ( v14 < (int)v12 / 4 );
+    while ( v9 < (int)v7 / 4 );
   }
 }
 
 
 System_String_o *__fastcall CatAndMouseGame__GetAssetbundleKey(System_String_o *keyType, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  CatAndMouseGame_c *v8; // x0
+  CatAndMouseGame_c *v3; // x0
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *assetbundleKeyCollection; // x0
   System_Xml_Schema_XmlSchemaObject_o *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_42EB69D & 1) == 0 )
+  if ( (byte_4354B7B & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__, v5, v6, v7);
-    byte_42EB69D = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__);
+    byte_4354B7B = 1;
   }
   value = 0LL;
-  v8 = CatAndMouseGame_TypeInfo;
+  v3 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v8 = CatAndMouseGame_TypeInfo;
+    v3 = CatAndMouseGame_TypeInfo;
   }
-  assetbundleKeyCollection = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v8->static_fields->assetbundleKeyCollection;
+  assetbundleKeyCollection = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v3->static_fields->assetbundleKeyCollection;
   if ( !assetbundleKeyCollection )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
          assetbundleKeyCollection,
          (System_Xml_XmlQualifiedName_o *)keyType,
          &value,
-         (const MethodInfo_2F289BC *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
+         (const MethodInfo_2F517E8 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
   {
     return (System_String_o *)value;
   }
@@ -1947,337 +1823,307 @@ System_String_o *__fastcall CatAndMouseGame__MouseGame1(
         bool isCompress,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  char v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
-  char v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  char v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
-  char v15; // w1
-  int v16; // w2
-  __int64 v17; // x3
-  char v18; // w1
-  int v19; // w2
-  __int64 v20; // x3
-  char v21; // w1
-  int v22; // w2
-  __int64 v23; // x3
-  char v24; // w1
-  int v25; // w2
-  __int64 v26; // x3
-  char v27; // w1
-  int v28; // w2
-  __int64 v29; // x3
-  System_Byte_array *v30; // x23
+  System_Byte_array *v5; // x23
   System_Text_Encoding_o *UTF8; // x0
-  __int64 v32; // x1
-  __int64 v33; // x19
-  __int64 v34; // x24
-  System_Security_Cryptography_TripleDESCryptoServiceProvider_o *v35; // x22
-  System_IO_MemoryStream_o *v36; // x21
-  __int64 v37; // x0
-  __int64 v38; // x1
-  System_Security_Cryptography_ICryptoTransform_o *v39; // x24
-  System_Security_Cryptography_CryptoStream_o *v40; // x19
-  __int64 v41; // x0
-  __int64 v42; // x1
-  __int64 v43; // x3
+  __int64 v7; // x1
+  __int64 v8; // x19
+  __int64 v9; // x24
+  System_Security_Cryptography_TripleDESCryptoServiceProvider_o *v10; // x22
+  System_IO_MemoryStream_o *v11; // x21
+  __int64 v12; // x0
+  __int64 v13; // x1
+  System_Security_Cryptography_ICryptoTransform_o *v14; // x24
+  System_Security_Cryptography_CryptoStream_o *v15; // x19
+  __int64 v16; // x0
+  __int64 v17; // x1
   System_Security_Cryptography_CryptoStream_c *klass; // x8
-  unsigned __int64 v45; // x10
+  unsigned __int64 v19; // x10
   int32_t *p_offset; // x11
+  __int64 v21; // x0
+  __int64 v22; // x0
+  __int64 v23; // x1
+  System_Byte_array *v24; // x19
+  System_IO_MemoryStream_c *v25; // x8
+  unsigned __int64 v26; // x10
+  int32_t *v27; // x11
+  __int64 v28; // x0
+  System_IO_MemoryStream_o *v29; // x20
+  System_IO_MemoryStream_o *v30; // x21
+  ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *v31; // x22
+  __int64 v32; // x0
+  __int64 v33; // x1
+  __int64 v34; // x23
+  __int64 v35; // x0
+  __int64 v36; // x1
+  __int64 v37; // x21
+  ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_c *v38; // x8
+  unsigned __int64 v39; // x10
+  int32_t *v40; // x11
+  __int64 v41; // x0
+  __int64 v42; // x0
+  __int64 v43; // x1
+  System_IO_MemoryStream_c *v44; // x8
+  unsigned __int64 v45; // x10
+  int32_t *v46; // x11
   __int64 v47; // x0
   __int64 v48; // x0
   __int64 v49; // x1
-  System_Byte_array *v50; // x19
-  __int64 v51; // x3
-  System_IO_MemoryStream_c *v52; // x8
-  unsigned __int64 v53; // x10
-  int32_t *v54; // x11
-  __int64 v55; // x0
-  System_IO_MemoryStream_o *v56; // x20
-  System_IO_MemoryStream_o *v57; // x21
-  ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *v58; // x22
-  __int64 v59; // x0
-  __int64 v60; // x1
-  __int64 v61; // x23
-  __int64 v62; // x0
-  __int64 v63; // x1
-  __int64 v64; // x21
-  __int64 v65; // x3
-  ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_c *v66; // x8
-  unsigned __int64 v67; // x10
-  int32_t *v68; // x11
-  __int64 v69; // x0
-  __int64 v70; // x0
-  __int64 v71; // x1
-  __int64 v72; // x3
-  System_IO_MemoryStream_c *v73; // x8
-  unsigned __int64 v74; // x10
-  int32_t *v75; // x11
-  __int64 v76; // x0
-  __int64 v77; // x0
-  __int64 v78; // x1
-  __int64 v79; // x3
-  System_IO_MemoryStream_c *v80; // x8
-  unsigned __int64 v81; // x10
-  int32_t *v82; // x11
-  __int64 v83; // x0
-  _DWORD v85[5]; // [xsp+8h] [xbp-58h]
-  int v86; // [xsp+1Ch] [xbp-44h]
+  System_IO_MemoryStream_c *v50; // x8
+  unsigned __int64 v51; // x10
+  int32_t *v52; // x11
+  __int64 v53; // x0
+  _DWORD v55[5]; // [xsp+8h] [xbp-58h]
+  int v56; // [xsp+1Ch] [xbp-44h]
 
-  if ( (byte_42EB67D & 1) == 0 )
+  if ( (byte_4354B5B & 1) == 0 )
   {
-    sub_B5D5C4(&ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo, isCompress, (_DWORD)method, v3);
-    sub_B5D5C4(&byte___TypeInfo, v6, v7, v8);
-    sub_B5D5C4(&System_Convert_TypeInfo, v9, v10, v11);
-    sub_B5D5C4(&System_Security_Cryptography_CryptoStream_TypeInfo, v12, v13, v14);
-    sub_B5D5C4(&System_IDisposable_TypeInfo, v15, v16, v17);
-    sub_B5D5C4(&System_IO_MemoryStream_TypeInfo, v18, v19, v20);
-    sub_B5D5C4(&System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo, v21, v22, v23);
-    sub_B5D5C4(&StringLiteral_23626/*"wuD6keVr"*/, v24, v25, v26);
-    sub_B5D5C4(&StringLiteral_16748/*"b5nHjsMrqaeNliSs3jyOzgpD"*/, v27, v28, v29);
-    byte_42EB67D = 1;
+    sub_B70694(&ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo);
+    sub_B70694(&byte___TypeInfo);
+    sub_B70694(&System_Convert_TypeInfo);
+    sub_B70694(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_B70694(&System_IDisposable_TypeInfo);
+    sub_B70694(&System_IO_MemoryStream_TypeInfo);
+    sub_B70694(&System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
+    sub_B70694(&StringLiteral_23698/*"wuD6keVr"*/);
+    sub_B70694(&StringLiteral_16792/*"b5nHjsMrqaeNliSs3jyOzgpD"*/);
+    byte_4354B5B = 1;
   }
-  v86 = 0;
+  v56 = 0;
   if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !System_Convert_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
-  v30 = System_Convert__FromBase64String(str, 0LL);
+  v5 = System_Convert__FromBase64String(str, 0LL);
   UTF8 = System_Text_Encoding__get_UTF8(0LL);
   if ( !UTF8 )
     goto LABEL_69;
-  v33 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
-          UTF8,
-          StringLiteral_16748/*"b5nHjsMrqaeNliSs3jyOzgpD"*/,
-          UTF8->klass->vtable._19_GetBytes.methodPtr);
+  v8 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
+         UTF8,
+         StringLiteral_16792/*"b5nHjsMrqaeNliSs3jyOzgpD"*/,
+         UTF8->klass->vtable._19_GetBytes.methodPtr);
   UTF8 = System_Text_Encoding__get_UTF8(0LL);
   if ( !UTF8 )
     goto LABEL_69;
-  v34 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
-          UTF8,
-          StringLiteral_23626/*"wuD6keVr"*/,
-          UTF8->klass->vtable._19_GetBytes.methodPtr);
-  v35 = (System_Security_Cryptography_TripleDESCryptoServiceProvider_o *)sub_B5D694(System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
-  System_Security_Cryptography_TripleDESCryptoServiceProvider___ctor(v35, 0LL);
-  v36 = (System_IO_MemoryStream_o *)sub_B5D694(System_IO_MemoryStream_TypeInfo);
-  System_IO_MemoryStream___ctor(v36, 0LL);
-  if ( !v35 )
-    sub_B5D69C(v37, v38);
-  v39 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_TripleDESCryptoServiceProvider_o *, __int64, __int64, Il2CppMethodPointer))v35->klass->vtable._25_CreateDecryptor.method)(
-                                                             v35,
-                                                             v33,
-                                                             v34,
-                                                             v35->klass->vtable._26_GenerateKey.methodPtr);
-  v40 = (System_Security_Cryptography_CryptoStream_o *)sub_B5D694(System_Security_Cryptography_CryptoStream_TypeInfo);
-  System_Security_Cryptography_CryptoStream___ctor(v40, (System_IO_Stream_o *)v36, v39, 1, 0LL);
-  if ( !v30 )
-    sub_B5D69C(v41, v42);
-  if ( !v40 )
-    sub_B5D69C(v41, v42);
-  ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, System_Byte_array *, _QWORD, _QWORD, Il2CppMethodPointer))v40->klass->vtable._32_Write.method)(
-    v40,
-    v30,
+  v9 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
+         UTF8,
+         StringLiteral_23698/*"wuD6keVr"*/,
+         UTF8->klass->vtable._19_GetBytes.methodPtr);
+  v10 = (System_Security_Cryptography_TripleDESCryptoServiceProvider_o *)sub_B70764(System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
+  System_Security_Cryptography_TripleDESCryptoServiceProvider___ctor(v10, 0LL);
+  v11 = (System_IO_MemoryStream_o *)sub_B70764(System_IO_MemoryStream_TypeInfo);
+  System_IO_MemoryStream___ctor(v11, 0LL);
+  if ( !v10 )
+    sub_B7076C(v12, v13);
+  v14 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_TripleDESCryptoServiceProvider_o *, __int64, __int64, Il2CppMethodPointer))v10->klass->vtable._25_CreateDecryptor.method)(
+                                                             v10,
+                                                             v8,
+                                                             v9,
+                                                             v10->klass->vtable._26_GenerateKey.methodPtr);
+  v15 = (System_Security_Cryptography_CryptoStream_o *)sub_B70764(System_Security_Cryptography_CryptoStream_TypeInfo);
+  System_Security_Cryptography_CryptoStream___ctor(v15, (System_IO_Stream_o *)v11, v14, 1, 0LL);
+  if ( !v5 )
+    sub_B7076C(v16, v17);
+  if ( !v15 )
+    sub_B7076C(v16, v17);
+  ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, System_Byte_array *, _QWORD, _QWORD, Il2CppMethodPointer))v15->klass->vtable._32_Write.method)(
+    v15,
+    v5,
     0LL,
-    v30->max_length,
-    v40->klass->vtable._33_WriteByte.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, Il2CppMethodPointer))v40->klass->vtable._18_Close.method)(
-    v40,
-    v40->klass->vtable._19_Dispose.methodPtr);
-  v85[v86++] = 103;
-  klass = v40->klass;
-  if ( *(_WORD *)&v40->klass->_2.bitflags1 )
+    v5->max_length,
+    v15->klass->vtable._33_WriteByte.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, Il2CppMethodPointer))v15->klass->vtable._18_Close.method)(
+    v15,
+    v15->klass->vtable._19_Dispose.methodPtr);
+  v55[v56++] = 103;
+  klass = v15->klass;
+  if ( *(_WORD *)&v15->klass->_2.bitflags1 )
   {
-    v45 = 0LL;
+    v19 = 0LL;
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      ++v45;
+      ++v19;
       p_offset += 4;
-      if ( v45 >= *(unsigned __int16 *)&v40->klass->_2.bitflags1 )
+      if ( v19 >= *(unsigned __int16 *)&v15->klass->_2.bitflags1 )
         goto LABEL_15;
     }
-    v47 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v21 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
 LABEL_15:
-    v47 = sub_AF54C0(v40, System_IDisposable_TypeInfo, 0LL, v43);
+    v21 = sub_B08590(v15, System_IDisposable_TypeInfo, 0LL);
   }
-  v48 = (*(__int64 (__fastcall **)(System_Security_Cryptography_CryptoStream_o *, _QWORD))v47)(
-          v40,
-          *(_QWORD *)(v47 + 8));
-  if ( v86 && v85[v86 - 1] == 103 )
-    --v86;
-  if ( !v36 )
-    sub_B5D69C(v48, v49);
-  v50 = (System_Byte_array *)((__int64 (__fastcall *)(System_IO_MemoryStream_o *, void *))v36->klass->vtable._37_ToArray.method)(
-                               v36,
-                               v36->klass[1]._1.image);
-  System_Security_Cryptography_SymmetricAlgorithm__Clear((System_Security_Cryptography_SymmetricAlgorithm_o *)v35, 0LL);
-  ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v36->klass->vtable._18_Close.method)(
-    v36,
-    v36->klass->vtable._19_Dispose.methodPtr);
-  v85[v86++] = 139;
-  v52 = v36->klass;
-  if ( *(_WORD *)&v36->klass->_2.bitflags1 )
+  v22 = (*(__int64 (__fastcall **)(System_Security_Cryptography_CryptoStream_o *, _QWORD))v21)(
+          v15,
+          *(_QWORD *)(v21 + 8));
+  if ( v56 && v55[v56 - 1] == 103 )
+    --v56;
+  if ( !v11 )
+    sub_B7076C(v22, v23);
+  v24 = (System_Byte_array *)((__int64 (__fastcall *)(System_IO_MemoryStream_o *, void *))v11->klass->vtable._37_ToArray.method)(
+                               v11,
+                               v11->klass[1]._1.image);
+  System_Security_Cryptography_SymmetricAlgorithm__Clear((System_Security_Cryptography_SymmetricAlgorithm_o *)v10, 0LL);
+  ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v11->klass->vtable._18_Close.method)(
+    v11,
+    v11->klass->vtable._19_Dispose.methodPtr);
+  v55[v56++] = 139;
+  v25 = v11->klass;
+  if ( *(_WORD *)&v11->klass->_2.bitflags1 )
   {
-    v53 = 0LL;
-    v54 = &v52->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v54 - 1) != System_IDisposable_TypeInfo )
+    v26 = 0LL;
+    v27 = &v25->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v27 - 1) != System_IDisposable_TypeInfo )
     {
-      ++v53;
-      v54 += 4;
-      if ( v53 >= *(unsigned __int16 *)&v36->klass->_2.bitflags1 )
+      ++v26;
+      v27 += 4;
+      if ( v26 >= *(unsigned __int16 *)&v11->klass->_2.bitflags1 )
         goto LABEL_25;
     }
-    v55 = (__int64)(&v52->vtable._0_Equals.method + 2 * *v54);
+    v28 = (__int64)(&v25->vtable._0_Equals.method + 2 * *v27);
   }
   else
   {
 LABEL_25:
-    v55 = sub_AF54C0(v36, System_IDisposable_TypeInfo, 0LL, v51);
+    v28 = sub_B08590(v11, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v55)(v36, *(_QWORD *)(v55 + 8));
-  if ( v86 && v85[v86 - 1] == 139 )
-    --v86;
+  (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v28)(v11, *(_QWORD *)(v28 + 8));
+  if ( v56 && v55[v56 - 1] == 139 )
+    --v56;
   if ( isCompress )
   {
-    v56 = (System_IO_MemoryStream_o *)sub_B5D694(System_IO_MemoryStream_TypeInfo);
-    System_IO_MemoryStream___ctor(v56, 0LL);
-    v57 = (System_IO_MemoryStream_o *)sub_B5D694(System_IO_MemoryStream_TypeInfo);
-    System_IO_MemoryStream___ctor_45159160(v57, v50, 0LL);
-    v58 = (ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *)sub_B5D694(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo);
-    ICSharpCode_SharpZipLib_BZip2_BZip2InputStream___ctor(v58, (System_IO_Stream_o *)v57, 0LL);
-    v59 = sub_B5D5DC(byte___TypeInfo, 0x4000LL);
-    v61 = v59;
-    if ( !v59 )
-      sub_B5D69C(0LL, v60);
-    if ( !v58 )
-      sub_B5D69C(v59, v60);
+    v29 = (System_IO_MemoryStream_o *)sub_B70764(System_IO_MemoryStream_TypeInfo);
+    System_IO_MemoryStream___ctor(v29, 0LL);
+    v30 = (System_IO_MemoryStream_o *)sub_B70764(System_IO_MemoryStream_TypeInfo);
+    System_IO_MemoryStream___ctor_45610760(v30, v24, 0LL);
+    v31 = (ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *)sub_B70764(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo);
+    ICSharpCode_SharpZipLib_BZip2_BZip2InputStream___ctor(v31, (System_IO_Stream_o *)v30, 0LL);
+    v32 = sub_B706AC(byte___TypeInfo, 0x4000LL);
+    v34 = v32;
+    if ( !v32 )
+      sub_B7076C(0LL, v33);
+    if ( !v31 )
+      sub_B7076C(v32, v33);
     while ( 1 )
     {
-      v62 = ((__int64 (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v58->klass->vtable._30_Read.method)(
-              v58,
-              v61,
+      v35 = ((__int64 (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v31->klass->vtable._30_Read.method)(
+              v31,
+              v34,
               0LL,
-              *(unsigned int *)(v61 + 24),
-              v58->klass->vtable._31_ReadByte.methodPtr);
-      if ( (int)v62 < 1 )
+              *(unsigned int *)(v34 + 24),
+              v31->klass->vtable._31_ReadByte.methodPtr);
+      if ( (int)v35 < 1 )
         break;
-      if ( !v56 )
-        sub_B5D69C(v62, v63);
-      ((void (__fastcall *)(System_IO_MemoryStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v56->klass->vtable._32_Write.method)(
-        v56,
-        v61,
+      if ( !v29 )
+        sub_B7076C(v35, v36);
+      ((void (__fastcall *)(System_IO_MemoryStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v29->klass->vtable._32_Write.method)(
+        v29,
+        v34,
         0LL,
-        (unsigned int)v62,
-        v56->klass->vtable._33_WriteByte.methodPtr);
+        (unsigned int)v35,
+        v29->klass->vtable._33_WriteByte.methodPtr);
     }
-    ((void (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *, Il2CppMethodPointer))v58->klass->vtable._18_Close.method)(
-      v58,
-      v58->klass->vtable._19_Dispose.methodPtr);
-    v85[v86++] = 237;
-    v66 = v58->klass;
-    if ( *(_WORD *)&v58->klass->_2.bitflags1 )
+    ((void (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *, Il2CppMethodPointer))v31->klass->vtable._18_Close.method)(
+      v31,
+      v31->klass->vtable._19_Dispose.methodPtr);
+    v55[v56++] = 237;
+    v38 = v31->klass;
+    if ( *(_WORD *)&v31->klass->_2.bitflags1 )
     {
-      v67 = 0LL;
-      v68 = &v66->_1.interfaceOffsets->offset;
-      while ( *((System_IDisposable_c **)v68 - 1) != System_IDisposable_TypeInfo )
+      v39 = 0LL;
+      v40 = &v38->_1.interfaceOffsets->offset;
+      while ( *((System_IDisposable_c **)v40 - 1) != System_IDisposable_TypeInfo )
       {
-        ++v67;
-        v68 += 4;
-        if ( v67 >= *(unsigned __int16 *)&v58->klass->_2.bitflags1 )
+        ++v39;
+        v40 += 4;
+        if ( v39 >= *(unsigned __int16 *)&v31->klass->_2.bitflags1 )
           goto LABEL_41;
       }
-      v69 = (__int64)(&v66->vtable._0_Equals.method + 2 * *v68);
+      v41 = (__int64)(&v38->vtable._0_Equals.method + 2 * *v40);
     }
     else
     {
 LABEL_41:
-      v69 = sub_AF54C0(v58, System_IDisposable_TypeInfo, 0LL, v65);
+      v41 = sub_B08590(v31, System_IDisposable_TypeInfo, 0LL);
     }
-    v70 = (*(__int64 (__fastcall **)(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *, _QWORD))v69)(
-            v58,
-            *(_QWORD *)(v69 + 8));
-    if ( v86 && v85[v86 - 1] == 237 )
-      --v86;
-    if ( !v57 )
-      sub_B5D69C(v70, v71);
-    ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v57->klass->vtable._18_Close.method)(
-      v57,
-      v57->klass->vtable._19_Dispose.methodPtr);
-    v85[v86++] = 258;
-    v73 = v57->klass;
-    if ( *(_WORD *)&v57->klass->_2.bitflags1 )
+    v42 = (*(__int64 (__fastcall **)(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *, _QWORD))v41)(
+            v31,
+            *(_QWORD *)(v41 + 8));
+    if ( v56 && v55[v56 - 1] == 237 )
+      --v56;
+    if ( !v30 )
+      sub_B7076C(v42, v43);
+    ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v30->klass->vtable._18_Close.method)(
+      v30,
+      v30->klass->vtable._19_Dispose.methodPtr);
+    v55[v56++] = 258;
+    v44 = v30->klass;
+    if ( *(_WORD *)&v30->klass->_2.bitflags1 )
     {
-      v74 = 0LL;
-      v75 = &v73->_1.interfaceOffsets->offset;
-      while ( *((System_IDisposable_c **)v75 - 1) != System_IDisposable_TypeInfo )
+      v45 = 0LL;
+      v46 = &v44->_1.interfaceOffsets->offset;
+      while ( *((System_IDisposable_c **)v46 - 1) != System_IDisposable_TypeInfo )
       {
-        ++v74;
-        v75 += 4;
-        if ( v74 >= *(unsigned __int16 *)&v57->klass->_2.bitflags1 )
+        ++v45;
+        v46 += 4;
+        if ( v45 >= *(unsigned __int16 *)&v30->klass->_2.bitflags1 )
           goto LABEL_51;
       }
-      v76 = (__int64)(&v73->vtable._0_Equals.method + 2 * *v75);
+      v47 = (__int64)(&v44->vtable._0_Equals.method + 2 * *v46);
     }
     else
     {
 LABEL_51:
-      v76 = sub_AF54C0(v57, System_IDisposable_TypeInfo, 0LL, v72);
+      v47 = sub_B08590(v30, System_IDisposable_TypeInfo, 0LL);
     }
-    v77 = (*(__int64 (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v76)(v57, *(_QWORD *)(v76 + 8));
-    if ( v86 && v85[v86 - 1] == 258 )
-      --v86;
-    if ( !v56 )
-      sub_B5D69C(v77, v78);
-    v64 = ((__int64 (__fastcall *)(System_IO_MemoryStream_o *, void *))v56->klass->vtable._37_ToArray.method)(
-            v56,
-            v56->klass[1]._1.image);
-    ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v56->klass->vtable._18_Close.method)(
-      v56,
-      v56->klass->vtable._19_Dispose.methodPtr);
-    v85[v86++] = 288;
-    v80 = v56->klass;
-    if ( *(_WORD *)&v56->klass->_2.bitflags1 )
+    v48 = (*(__int64 (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v47)(v30, *(_QWORD *)(v47 + 8));
+    if ( v56 && v55[v56 - 1] == 258 )
+      --v56;
+    if ( !v29 )
+      sub_B7076C(v48, v49);
+    v37 = ((__int64 (__fastcall *)(System_IO_MemoryStream_o *, void *))v29->klass->vtable._37_ToArray.method)(
+            v29,
+            v29->klass[1]._1.image);
+    ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v29->klass->vtable._18_Close.method)(
+      v29,
+      v29->klass->vtable._19_Dispose.methodPtr);
+    v55[v56++] = 288;
+    v50 = v29->klass;
+    if ( *(_WORD *)&v29->klass->_2.bitflags1 )
     {
-      v81 = 0LL;
-      v82 = &v80->_1.interfaceOffsets->offset;
-      while ( *((System_IDisposable_c **)v82 - 1) != System_IDisposable_TypeInfo )
+      v51 = 0LL;
+      v52 = &v50->_1.interfaceOffsets->offset;
+      while ( *((System_IDisposable_c **)v52 - 1) != System_IDisposable_TypeInfo )
       {
-        ++v81;
-        v82 += 4;
-        if ( v81 >= *(unsigned __int16 *)&v56->klass->_2.bitflags1 )
+        ++v51;
+        v52 += 4;
+        if ( v51 >= *(unsigned __int16 *)&v29->klass->_2.bitflags1 )
           goto LABEL_61;
       }
-      v83 = (__int64)(&v80->vtable._0_Equals.method + 2 * *v82);
+      v53 = (__int64)(&v50->vtable._0_Equals.method + 2 * *v52);
     }
     else
     {
 LABEL_61:
-      v83 = sub_AF54C0(v56, System_IDisposable_TypeInfo, 0LL, v79);
+      v53 = sub_B08590(v29, System_IDisposable_TypeInfo, 0LL);
     }
-    (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v83)(v56, *(_QWORD *)(v83 + 8));
-    if ( v86 && v85[v86 - 1] == 288 )
-      --v86;
+    (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v53)(v29, *(_QWORD *)(v53 + 8));
+    if ( v56 && v55[v56 - 1] == 288 )
+      --v56;
   }
   else
   {
-    v64 = (__int64)v50;
+    v37 = (__int64)v24;
   }
   UTF8 = System_Text_Encoding__get_UTF8(0LL);
   if ( !UTF8 )
 LABEL_69:
-    sub_B5D69C(UTF8, v32);
+    sub_B7076C(UTF8, v7);
   return (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._34_GetString.method)(
                               UTF8,
-                              v64,
+                              v37,
                               UTF8->klass->vtable._35_GetString.methodPtr);
 }
 
@@ -2287,62 +2133,55 @@ System_String_o *__fastcall CatAndMouseGame__MouseGame2(
         bool isCompress,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  char v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  char v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  CatAndMouseGame_c *v11; // x0
+  CatAndMouseGame_c *v4; // x0
   System_Text_Encoding_o *UTF8; // x0
-  __int64 v13; // x1
-  System_Array_o *v14; // x20
-  System_Int32_array **v15; // x0
+  __int64 v6; // x1
+  System_Array_o *v7; // x20
+  System_Int32_array **v8; // x0
   struct CatAndMouseGame_StaticFields *static_fields; // x8
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
-  const MethodInfo *v23; // x4
+  System_String_array **v10; // x2
+  System_String_array **v11; // x3
+  System_Boolean_array **v12; // x4
+  System_Int32_array **v13; // x5
+  System_Int32_array *v14; // x6
+  System_Int32_array *v15; // x7
+  const MethodInfo *v16; // x4
 
-  if ( (byte_42EB67F & 1) == 0 )
+  if ( (byte_4354B5D & 1) == 0 )
   {
-    sub_B5D5C4(&byte___TypeInfo, isCompress, (_DWORD)method, v3);
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&StringLiteral_21677/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/, v8, v9, v10);
-    byte_42EB67F = 1;
+    sub_B70694(&byte___TypeInfo);
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&StringLiteral_21740/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/);
+    byte_4354B5D = 1;
   }
-  v11 = CatAndMouseGame_TypeInfo;
+  v4 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v11 = CatAndMouseGame_TypeInfo;
+    v4 = CatAndMouseGame_TypeInfo;
   }
-  System_Array__Copy_43381116((System_Array_o *)data, 0, (System_Array_o *)v11->static_fields->ownerTop, 0, 32, 0LL);
+  System_Array__Copy_43134268((System_Array_o *)data, 0, (System_Array_o *)v4->static_fields->ownerTop, 0, 32, 0LL);
   if ( !data
-    || (v14 = (System_Array_o *)sub_B5D5DC(byte___TypeInfo, data->max_length - 32),
-        System_Array__Copy_43381116((System_Array_o *)data, 32, v14, 0, data->max_length - 32, 0LL),
+    || (v7 = (System_Array_o *)sub_B706AC(byte___TypeInfo, data->max_length - 32),
+        System_Array__Copy_43134268((System_Array_o *)data, 32, v7, 0, data->max_length - 32, 0LL),
         (UTF8 = System_Text_Encoding__get_UTF8(0LL)) == 0LL) )
   {
-    sub_B5D69C(UTF8, v13);
+    sub_B7076C(UTF8, v6);
   }
-  v15 = (System_Int32_array **)((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
-                                 UTF8,
-                                 StringLiteral_21677/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/,
-                                 UTF8->klass->vtable._19_GetBytes.methodPtr);
+  v8 = (System_Int32_array **)((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
+                                UTF8,
+                                StringLiteral_21740/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/,
+                                UTF8->klass->vtable._19_GetBytes.methodPtr);
   static_fields = CatAndMouseGame_TypeInfo->static_fields;
-  static_fields->ownerData = (struct System_Byte_array *)v15;
-  sub_B5D560((BattleServantConfConponent_o *)&static_fields->ownerData, v15, v17, v18, v19, v20, v21, v22);
+  static_fields->ownerData = (struct System_Byte_array *)v8;
+  sub_B70630((BattleServantConfConponent_o *)&static_fields->ownerData, v8, v10, v11, v12, v13, v14, v15);
   return CatAndMouseGame__MouseHome(
-           (System_Byte_array *)v14,
+           (System_Byte_array *)v7,
            CatAndMouseGame_TypeInfo->static_fields->ownerData,
            CatAndMouseGame_TypeInfo->static_fields->ownerTop,
            1,
-           v23);
+           v16);
 }
 
 
@@ -2351,62 +2190,55 @@ System_Byte_array *__fastcall CatAndMouseGame__MouseGame2Bytes(
         bool isCompress,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  char v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  char v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  CatAndMouseGame_c *v11; // x0
+  CatAndMouseGame_c *v4; // x0
   System_Text_Encoding_o *UTF8; // x0
-  __int64 v13; // x1
-  System_Array_o *v14; // x20
-  System_Int32_array **v15; // x0
+  __int64 v6; // x1
+  System_Array_o *v7; // x20
+  System_Int32_array **v8; // x0
   struct CatAndMouseGame_StaticFields *static_fields; // x8
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
-  const MethodInfo *v23; // x4
+  System_String_array **v10; // x2
+  System_String_array **v11; // x3
+  System_Boolean_array **v12; // x4
+  System_Int32_array **v13; // x5
+  System_Int32_array *v14; // x6
+  System_Int32_array *v15; // x7
+  const MethodInfo *v16; // x4
 
-  if ( (byte_42EB682 & 1) == 0 )
+  if ( (byte_4354B60 & 1) == 0 )
   {
-    sub_B5D5C4(&byte___TypeInfo, isCompress, (_DWORD)method, v3);
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&StringLiteral_21677/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/, v8, v9, v10);
-    byte_42EB682 = 1;
+    sub_B70694(&byte___TypeInfo);
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&StringLiteral_21740/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/);
+    byte_4354B60 = 1;
   }
-  v11 = CatAndMouseGame_TypeInfo;
+  v4 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v11 = CatAndMouseGame_TypeInfo;
+    v4 = CatAndMouseGame_TypeInfo;
   }
-  System_Array__Copy_43381116((System_Array_o *)data, 0, (System_Array_o *)v11->static_fields->ownerTop, 0, 32, 0LL);
+  System_Array__Copy_43134268((System_Array_o *)data, 0, (System_Array_o *)v4->static_fields->ownerTop, 0, 32, 0LL);
   if ( !data
-    || (v14 = (System_Array_o *)sub_B5D5DC(byte___TypeInfo, data->max_length - 32),
-        System_Array__Copy_43381116((System_Array_o *)data, 32, v14, 0, data->max_length - 32, 0LL),
+    || (v7 = (System_Array_o *)sub_B706AC(byte___TypeInfo, data->max_length - 32),
+        System_Array__Copy_43134268((System_Array_o *)data, 32, v7, 0, data->max_length - 32, 0LL),
         (UTF8 = System_Text_Encoding__get_UTF8(0LL)) == 0LL) )
   {
-    sub_B5D69C(UTF8, v13);
+    sub_B7076C(UTF8, v6);
   }
-  v15 = (System_Int32_array **)((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
-                                 UTF8,
-                                 StringLiteral_21677/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/,
-                                 UTF8->klass->vtable._19_GetBytes.methodPtr);
+  v8 = (System_Int32_array **)((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
+                                UTF8,
+                                StringLiteral_21740/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/,
+                                UTF8->klass->vtable._19_GetBytes.methodPtr);
   static_fields = CatAndMouseGame_TypeInfo->static_fields;
-  static_fields->ownerData = (struct System_Byte_array *)v15;
-  sub_B5D560((BattleServantConfConponent_o *)&static_fields->ownerData, v15, v17, v18, v19, v20, v21, v22);
+  static_fields->ownerData = (struct System_Byte_array *)v8;
+  sub_B70630((BattleServantConfConponent_o *)&static_fields->ownerData, v8, v10, v11, v12, v13, v14, v15);
   return CatAndMouseGame__MouseHomeSub(
-           (System_Byte_array *)v14,
+           (System_Byte_array *)v7,
            CatAndMouseGame_TypeInfo->static_fields->ownerData,
            CatAndMouseGame_TypeInfo->static_fields->ownerTop,
            1,
-           v23);
+           v16);
 }
 
 
@@ -2415,62 +2247,55 @@ Il2CppObject *__fastcall CatAndMouseGame__MouseGame2MsgPack(
         bool isCompress,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  char v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  char v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  CatAndMouseGame_c *v11; // x0
+  CatAndMouseGame_c *v4; // x0
   System_Text_Encoding_o *UTF8; // x0
-  __int64 v13; // x1
-  System_Array_o *v14; // x20
-  System_Int32_array **v15; // x0
+  __int64 v6; // x1
+  System_Array_o *v7; // x20
+  System_Int32_array **v8; // x0
   struct CatAndMouseGame_StaticFields *static_fields; // x8
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
-  const MethodInfo *v23; // x4
+  System_String_array **v10; // x2
+  System_String_array **v11; // x3
+  System_Boolean_array **v12; // x4
+  System_Int32_array **v13; // x5
+  System_Int32_array *v14; // x6
+  System_Int32_array *v15; // x7
+  const MethodInfo *v16; // x4
 
-  if ( (byte_42EB680 & 1) == 0 )
+  if ( (byte_4354B5E & 1) == 0 )
   {
-    sub_B5D5C4(&byte___TypeInfo, isCompress, (_DWORD)method, v3);
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&StringLiteral_21677/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/, v8, v9, v10);
-    byte_42EB680 = 1;
+    sub_B70694(&byte___TypeInfo);
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&StringLiteral_21740/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/);
+    byte_4354B5E = 1;
   }
-  v11 = CatAndMouseGame_TypeInfo;
+  v4 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v11 = CatAndMouseGame_TypeInfo;
+    v4 = CatAndMouseGame_TypeInfo;
   }
-  System_Array__Copy_43381116((System_Array_o *)data, 0, (System_Array_o *)v11->static_fields->ownerTop, 0, 32, 0LL);
+  System_Array__Copy_43134268((System_Array_o *)data, 0, (System_Array_o *)v4->static_fields->ownerTop, 0, 32, 0LL);
   if ( !data
-    || (v14 = (System_Array_o *)sub_B5D5DC(byte___TypeInfo, data->max_length - 32),
-        System_Array__Copy_43381116((System_Array_o *)data, 32, v14, 0, data->max_length - 32, 0LL),
+    || (v7 = (System_Array_o *)sub_B706AC(byte___TypeInfo, data->max_length - 32),
+        System_Array__Copy_43134268((System_Array_o *)data, 32, v7, 0, data->max_length - 32, 0LL),
         (UTF8 = System_Text_Encoding__get_UTF8(0LL)) == 0LL) )
   {
-    sub_B5D69C(UTF8, v13);
+    sub_B7076C(UTF8, v6);
   }
-  v15 = (System_Int32_array **)((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
-                                 UTF8,
-                                 StringLiteral_21677/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/,
-                                 UTF8->klass->vtable._19_GetBytes.methodPtr);
+  v8 = (System_Int32_array **)((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
+                                UTF8,
+                                StringLiteral_21740/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/,
+                                UTF8->klass->vtable._19_GetBytes.methodPtr);
   static_fields = CatAndMouseGame_TypeInfo->static_fields;
-  static_fields->ownerData = (struct System_Byte_array *)v15;
-  sub_B5D560((BattleServantConfConponent_o *)&static_fields->ownerData, v15, v17, v18, v19, v20, v21, v22);
+  static_fields->ownerData = (struct System_Byte_array *)v8;
+  sub_B70630((BattleServantConfConponent_o *)&static_fields->ownerData, v8, v10, v11, v12, v13, v14, v15);
   return CatAndMouseGame__MouseHomeMsgPack(
-           (System_Byte_array *)v14,
+           (System_Byte_array *)v7,
            CatAndMouseGame_TypeInfo->static_fields->ownerData,
            CatAndMouseGame_TypeInfo->static_fields->ownerTop,
            1,
-           v23);
+           v16);
 }
 
 
@@ -2479,165 +2304,149 @@ Il2CppObject *__fastcall CatAndMouseGame__MouseGame2Unpacker(
         bool isCompress,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  char v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  char v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  CatAndMouseGame_c *v11; // x0
+  CatAndMouseGame_c *v4; // x0
   System_Text_Encoding_o *UTF8; // x0
-  __int64 v13; // x1
-  System_Array_o *v14; // x20
-  System_Int32_array **v15; // x0
+  __int64 v6; // x1
+  System_Array_o *v7; // x20
+  System_Int32_array **v8; // x0
   struct CatAndMouseGame_StaticFields *static_fields; // x8
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
-  const MethodInfo *v23; // x4
+  System_String_array **v10; // x2
+  System_String_array **v11; // x3
+  System_Boolean_array **v12; // x4
+  System_Int32_array **v13; // x5
+  System_Int32_array *v14; // x6
+  System_Int32_array *v15; // x7
+  const MethodInfo *v16; // x4
 
-  if ( (byte_42EB681 & 1) == 0 )
+  if ( (byte_4354B5F & 1) == 0 )
   {
-    sub_B5D5C4(&byte___TypeInfo, isCompress, (_DWORD)method, v3);
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&StringLiteral_21677/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/, v8, v9, v10);
-    byte_42EB681 = 1;
+    sub_B70694(&byte___TypeInfo);
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&StringLiteral_21740/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/);
+    byte_4354B5F = 1;
   }
-  v11 = CatAndMouseGame_TypeInfo;
+  v4 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v11 = CatAndMouseGame_TypeInfo;
+    v4 = CatAndMouseGame_TypeInfo;
   }
-  System_Array__Copy_43381116((System_Array_o *)data, 0, (System_Array_o *)v11->static_fields->ownerTop, 0, 32, 0LL);
+  System_Array__Copy_43134268((System_Array_o *)data, 0, (System_Array_o *)v4->static_fields->ownerTop, 0, 32, 0LL);
   if ( !data
-    || (v14 = (System_Array_o *)sub_B5D5DC(byte___TypeInfo, data->max_length - 32),
-        System_Array__Copy_43381116((System_Array_o *)data, 32, v14, 0, data->max_length - 32, 0LL),
+    || (v7 = (System_Array_o *)sub_B706AC(byte___TypeInfo, data->max_length - 32),
+        System_Array__Copy_43134268((System_Array_o *)data, 32, v7, 0, data->max_length - 32, 0LL),
         (UTF8 = System_Text_Encoding__get_UTF8(0LL)) == 0LL) )
   {
-    sub_B5D69C(UTF8, v13);
+    sub_B7076C(UTF8, v6);
   }
-  v15 = (System_Int32_array **)((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
-                                 UTF8,
-                                 StringLiteral_21677/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/,
-                                 UTF8->klass->vtable._19_GetBytes.methodPtr);
+  v8 = (System_Int32_array **)((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, Il2CppMethodPointer))UTF8->klass->vtable._18_GetBytes.method)(
+                                UTF8,
+                                StringLiteral_21740/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/,
+                                UTF8->klass->vtable._19_GetBytes.methodPtr);
   static_fields = CatAndMouseGame_TypeInfo->static_fields;
-  static_fields->ownerData = (struct System_Byte_array *)v15;
-  sub_B5D560((BattleServantConfConponent_o *)&static_fields->ownerData, v15, v17, v18, v19, v20, v21, v22);
+  static_fields->ownerData = (struct System_Byte_array *)v8;
+  sub_B70630((BattleServantConfConponent_o *)&static_fields->ownerData, v8, v10, v11, v12, v13, v14, v15);
   return CatAndMouseGame__MouseHomeMaster(
-           (System_Byte_array *)v14,
+           (System_Byte_array *)v7,
            CatAndMouseGame_TypeInfo->static_fields->ownerData,
            CatAndMouseGame_TypeInfo->static_fields->ownerTop,
            1,
-           v23);
+           v16);
 }
 
 
 System_String_o *__fastcall CatAndMouseGame__MouseGame3(System_String_o *str, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  const MethodInfo *v11; // x4
-  System_Byte_array *v12; // x19
-  CatAndMouseGame_c *v13; // x8
+  const MethodInfo *v3; // x4
+  System_Byte_array *v4; // x19
+  CatAndMouseGame_c *v5; // x8
   System_String_o *result; // x0
-  System_String_o *v15; // x19
+  System_String_o *v7; // x19
   unsigned __int64 klass; // x9
-  unsigned __int64 v17; // x8
+  unsigned __int64 v9; // x8
   System_Text_Encoding_o *UTF8; // x0
-  __int64 v19; // x1
-  System_String_o *v20; // x19
-  __int64 v21; // x0
+  __int64 v11; // x1
+  System_String_o *v12; // x19
+  __int64 v13; // x0
 
-  if ( (byte_42EB687 & 1) == 0 )
+  if ( (byte_4354B65 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&char___TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&System_Convert_TypeInfo, v8, v9, v10);
-    byte_42EB687 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&char___TypeInfo);
+    sub_B70694(&System_Convert_TypeInfo);
+    byte_4354B65 = 1;
   }
   if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !System_Convert_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
-  v12 = System_Convert__FromBase64String(str, 0LL);
-  v13 = CatAndMouseGame_TypeInfo;
+  v4 = System_Convert__FromBase64String(str, 0LL);
+  v5 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v13 = CatAndMouseGame_TypeInfo;
+    v5 = CatAndMouseGame_TypeInfo;
   }
   result = (System_String_o *)CatAndMouseGame__MouseHomeMain(
-                                v12,
-                                v13->static_fields->stageData,
-                                v13->static_fields->stageTop,
+                                v4,
+                                v5->static_fields->stageData,
+                                v5->static_fields->stageTop,
                                 1,
-                                v11);
+                                v3);
   if ( result )
   {
-    v15 = result;
+    v7 = result;
     if ( (int)result[1].klass >= 1 )
     {
       klass = (unsigned int)result[1].klass;
-      v17 = 0LL;
+      v9 = 0LL;
       do
       {
-        if ( v17 >= klass )
+        if ( v9 >= klass )
         {
-          v21 = sub_B5D6C8(result);
-          sub_B5D668(v21, 0LL);
+          v13 = sub_B70798(result);
+          sub_B70738(v13, 0LL);
         }
-        *((_BYTE *)&result[1].monitor + v17) = ~*((_BYTE *)&result[1].monitor + v17);
-        ++v17;
+        *((_BYTE *)&result[1].monitor + v9) = ~*((_BYTE *)&result[1].monitor + v9);
+        ++v9;
       }
-      while ( (__int64)v17 < (int)klass );
+      while ( (__int64)v9 < (int)klass );
     }
     UTF8 = System_Text_Encoding__get_UTF8(0LL);
     if ( !UTF8
-      || (v20 = (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, Il2CppMethodPointer))UTF8->klass->vtable._34_GetString.method)(
+      || (v12 = (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, Il2CppMethodPointer))UTF8->klass->vtable._34_GetString.method)(
                                      UTF8,
-                                     v15,
+                                     v7,
                                      UTF8->klass->vtable._35_GetString.methodPtr),
-          UTF8 = (System_Text_Encoding_o *)sub_B5D5DC(char___TypeInfo, 1LL),
-          !v20) )
+          UTF8 = (System_Text_Encoding_o *)sub_B706AC(char___TypeInfo, 1LL),
+          !v12) )
     {
-      sub_B5D69C(UTF8, v19);
+      sub_B7076C(UTF8, v11);
     }
-    return System_String__TrimEnd(v20, (System_Char_array *)UTF8, 0LL);
+    return System_String__TrimEnd(v12, (System_Char_array *)UTF8, 0LL);
   }
   return result;
 }
 
 
-System_String_o *__fastcall CatAndMouseGame__MouseGame3_30542220(
+System_String_o *__fastcall CatAndMouseGame__MouseGame3_30680948(
         System_String_o *str,
         System_String_o *key,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  const MethodInfo *v6; // x1
-  const MethodInfo *v7; // x3
-  const MethodInfo *v9; // x3
+  const MethodInfo *v5; // x1
+  const MethodInfo *v6; // x3
+  const MethodInfo *v8; // x3
   System_Byte_array *info; // [xsp+8h] [xbp-28h] BYREF
   System_Byte_array *home; // [xsp+18h] [xbp-18h] BYREF
 
-  if ( (byte_42EB697 & 1) == 0 )
+  if ( (byte_4354B75 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)key, (_DWORD)method, v3);
-    byte_42EB697 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B75 = 1;
   }
   home = 0LL;
   info = 0LL;
@@ -2648,7 +2457,7 @@ System_String_o *__fastcall CatAndMouseGame__MouseGame3_30542220(
     {
       j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
     }
-    return CatAndMouseGame__MouseGame3(str, v6);
+    return CatAndMouseGame__MouseGame3(str, v5);
   }
   else
   {
@@ -2659,66 +2468,60 @@ System_String_o *__fastcall CatAndMouseGame__MouseGame3_30542220(
     {
       j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
     }
-    CatAndMouseGame__OtherHomeBuilding(key, &home, &info, v7);
-    return CatAndMouseGame__MouseGame3_30542432(str, home, info, v9);
+    CatAndMouseGame__OtherHomeBuilding(key, &home, &info, v6);
+    return CatAndMouseGame__MouseGame3_30681160(str, home, info, v8);
   }
 }
 
 
-System_String_o *__fastcall CatAndMouseGame__MouseGame3_30542432(
+System_String_o *__fastcall CatAndMouseGame__MouseGame3_30681160(
         System_String_o *str,
         System_Byte_array *home,
         System_Byte_array *info,
         const MethodInfo *method)
 {
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
-  int v10; // w1
-  int v11; // w2
-  __int64 v12; // x3
-  const MethodInfo *v13; // x4
-  System_Byte_array *v14; // x21
+  const MethodInfo *v7; // x4
+  System_Byte_array *v8; // x21
   System_String_o *result; // x0
-  System_String_o *v16; // x19
+  System_String_o *v10; // x19
   System_Text_Encoding_o *UTF8; // x0
-  __int64 v18; // x1
-  System_String_o *v19; // x19
+  __int64 v12; // x1
+  System_String_o *v13; // x19
 
-  if ( (byte_42EB698 & 1) == 0 )
+  if ( (byte_4354B76 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)home, (_DWORD)info, method);
-    sub_B5D5C4(&char___TypeInfo, v7, v8, v9);
-    sub_B5D5C4(&System_Convert_TypeInfo, v10, v11, v12);
-    byte_42EB698 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&char___TypeInfo);
+    sub_B70694(&System_Convert_TypeInfo);
+    byte_4354B76 = 1;
   }
   if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !System_Convert_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
-  v14 = System_Convert__FromBase64String(str, 0LL);
+  v8 = System_Convert__FromBase64String(str, 0LL);
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
   }
-  result = (System_String_o *)CatAndMouseGame__MouseHomeMain(v14, home, info, 1, v13);
+  result = (System_String_o *)CatAndMouseGame__MouseHomeMain(v8, home, info, 1, v7);
   if ( result )
   {
-    v16 = result;
+    v10 = result;
     UTF8 = System_Text_Encoding__get_UTF8(0LL);
     if ( !UTF8
-      || (v19 = (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, Il2CppMethodPointer))UTF8->klass->vtable._34_GetString.method)(
+      || (v13 = (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, Il2CppMethodPointer))UTF8->klass->vtable._34_GetString.method)(
                                      UTF8,
-                                     v16,
+                                     v10,
                                      UTF8->klass->vtable._35_GetString.methodPtr),
-          UTF8 = (System_Text_Encoding_o *)sub_B5D5DC(char___TypeInfo, 1LL),
-          !v19) )
+          UTF8 = (System_Text_Encoding_o *)sub_B706AC(char___TypeInfo, 1LL),
+          !v13) )
     {
-      sub_B5D69C(UTF8, v18);
+      sub_B7076C(UTF8, v12);
     }
-    return System_String__TrimEnd(v19, (System_Char_array *)UTF8, 0LL);
+    return System_String__TrimEnd(v13, (System_Char_array *)UTF8, 0LL);
   }
   return result;
 }
@@ -2726,64 +2529,62 @@ System_String_o *__fastcall CatAndMouseGame__MouseGame3_30542432(
 
 System_Byte_array *__fastcall CatAndMouseGame__MouseGame4(System_Byte_array *data, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  const MethodInfo *v4; // x4
-  CatAndMouseGame_c *v6; // x0
+  const MethodInfo *v2; // x4
+  CatAndMouseGame_c *v4; // x0
   System_Byte_array *result; // x0
   signed int max_length; // w8
-  il2cpp_array_size_t v9; // w9
-  il2cpp_array_size_t v10; // w12
-  il2cpp_array_size_t v11; // w13
-  char *v12; // x13
-  uint8_t *v13; // x15
-  uint8_t v14; // w14
-  _BYTE *v15; // x13
-  char v16; // t1
-  __int64 v17; // x0
+  il2cpp_array_size_t v7; // w9
+  il2cpp_array_size_t v8; // w12
+  il2cpp_array_size_t v9; // w13
+  char *v10; // x13
+  uint8_t *v11; // x15
+  uint8_t v12; // w14
+  _BYTE *v13; // x13
+  char v14; // t1
+  __int64 v15; // x0
 
-  if ( (byte_42EB68A & 1) == 0 )
+  if ( (byte_4354B68 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EB68A = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B68 = 1;
   }
-  v6 = CatAndMouseGame_TypeInfo;
+  v4 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v6 = CatAndMouseGame_TypeInfo;
+    v4 = CatAndMouseGame_TypeInfo;
   }
-  result = CatAndMouseGame__MouseHomeMain(data, v6->static_fields->baseData, v6->static_fields->baseTop, 0, v4);
+  result = CatAndMouseGame__MouseHomeMain(data, v4->static_fields->baseData, v4->static_fields->baseTop, 0, v2);
   if ( result )
   {
     max_length = result->max_length;
     if ( max_length >= 1 )
     {
-      v9 = 0;
+      v7 = 0;
       do
       {
-        v10 = v9 + 1;
-        if ( (int)(v9 + 1) >= max_length )
+        v8 = v7 + 1;
+        if ( (int)(v7 + 1) >= max_length )
           break;
-        v11 = result->max_length;
-        if ( v9 < v11 && v10 < v11 )
+        v9 = result->max_length;
+        if ( v7 < v9 && v8 < v9 )
         {
-          v12 = (char *)result + (int)v10;
-          v13 = &result->m_Items[v9 + 4];
-          v14 = *v13;
-          v16 = v12[32];
-          v15 = v12 + 32;
-          *v13 = v16 ^ 0xD2;
-          if ( v10 < result->max_length )
+          v10 = (char *)result + (int)v8;
+          v11 = &result->m_Items[v7 + 4];
+          v12 = *v11;
+          v14 = v10[32];
+          v13 = v10 + 32;
+          *v11 = v14 ^ 0xD2;
+          if ( v8 < result->max_length )
             continue;
         }
-        v17 = sub_B5D6C8(result);
-        sub_B5D668(v17, 0LL);
-        v9 += 2;
-        *v15 = v14 ^ 0xCE;
+        v15 = sub_B70798(result);
+        sub_B70738(v15, 0LL);
+        v7 += 2;
+        *v13 = v12 ^ 0xCE;
       }
-      while ( (int)v9 < max_length );
+      while ( (int)v7 < max_length );
     }
   }
   return result;
@@ -2794,48 +2595,45 @@ System_Security_Cryptography_CryptoStream_o *__fastcall CatAndMouseGame__MouseGa
         System_IO_Stream_o *outputStream,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  const MethodInfo *v4; // x4
-  CatAndMouseGame_c *v6; // x0
+  const MethodInfo *v2; // x4
+  CatAndMouseGame_c *v4; // x0
 
-  if ( (byte_42EB68B & 1) == 0 )
+  if ( (byte_4354B69 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EB68B = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B69 = 1;
   }
-  v6 = CatAndMouseGame_TypeInfo;
+  v4 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v6 = CatAndMouseGame_TypeInfo;
+    v4 = CatAndMouseGame_TypeInfo;
   }
   return CatAndMouseGame__MouseHomeMainStream(
            outputStream,
-           v6->static_fields->baseData,
-           v6->static_fields->baseTop,
+           v4->static_fields->baseData,
+           v4->static_fields->baseTop,
            0,
-           v4);
+           v2);
 }
 
 
-System_Security_Cryptography_CryptoStream_o *__fastcall CatAndMouseGame__MouseGame4Stream_30543076(
+System_Security_Cryptography_CryptoStream_o *__fastcall CatAndMouseGame__MouseGame4Stream_30681804(
         System_IO_Stream_o *outputStream,
         System_String_o *key,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  const MethodInfo *v6; // x1
-  const MethodInfo *v7; // x3
-  const MethodInfo *v9; // x4
+  const MethodInfo *v5; // x1
+  const MethodInfo *v6; // x3
+  const MethodInfo *v8; // x4
   System_Byte_array *info; // [xsp+8h] [xbp-28h] BYREF
   System_Byte_array *home; // [xsp+18h] [xbp-18h] BYREF
 
-  if ( (byte_42EB69A & 1) == 0 )
+  if ( (byte_4354B78 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)key, (_DWORD)method, v3);
-    byte_42EB69A = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B78 = 1;
   }
   home = 0LL;
   info = 0LL;
@@ -2846,7 +2644,7 @@ System_Security_Cryptography_CryptoStream_o *__fastcall CatAndMouseGame__MouseGa
     {
       j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
     }
-    return CatAndMouseGame__MouseGame4Stream(outputStream, v6);
+    return CatAndMouseGame__MouseGame4Stream(outputStream, v5);
   }
   else
   {
@@ -2857,28 +2655,27 @@ System_Security_Cryptography_CryptoStream_o *__fastcall CatAndMouseGame__MouseGa
     {
       j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
     }
-    CatAndMouseGame__OtherHomeBuilding(key, &home, &info, v7);
-    return CatAndMouseGame__MouseHomeMainStream(outputStream, home, info, 0, v9);
+    CatAndMouseGame__OtherHomeBuilding(key, &home, &info, v6);
+    return CatAndMouseGame__MouseHomeMainStream(outputStream, home, info, 0, v8);
   }
 }
 
 
-System_Byte_array *__fastcall CatAndMouseGame__MouseGame4_30542740(
+System_Byte_array *__fastcall CatAndMouseGame__MouseGame4_30681468(
         System_Byte_array *data,
         System_String_o *key,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  const MethodInfo *v6; // x1
-  const MethodInfo *v7; // x3
-  const MethodInfo *v9; // x3
+  const MethodInfo *v5; // x1
+  const MethodInfo *v6; // x3
+  const MethodInfo *v8; // x3
   System_Byte_array *info; // [xsp+8h] [xbp-28h] BYREF
   System_Byte_array *home; // [xsp+18h] [xbp-18h] BYREF
 
-  if ( (byte_42EB699 & 1) == 0 )
+  if ( (byte_4354B77 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)key, (_DWORD)method, v3);
-    byte_42EB699 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B77 = 1;
   }
   home = 0LL;
   info = 0LL;
@@ -2889,7 +2686,7 @@ System_Byte_array *__fastcall CatAndMouseGame__MouseGame4_30542740(
     {
       j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
     }
-    return CatAndMouseGame__MouseGame4(data, v6);
+    return CatAndMouseGame__MouseGame4(data, v5);
   }
   else
   {
@@ -2900,13 +2697,13 @@ System_Byte_array *__fastcall CatAndMouseGame__MouseGame4_30542740(
     {
       j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
     }
-    CatAndMouseGame__OtherHomeBuilding(key, &home, &info, v7);
-    return CatAndMouseGame__MouseGame4_30542952(data, home, info, v9);
+    CatAndMouseGame__OtherHomeBuilding(key, &home, &info, v6);
+    return CatAndMouseGame__MouseGame4_30681680(data, home, info, v8);
   }
 }
 
 
-System_Byte_array *__fastcall CatAndMouseGame__MouseGame4_30542952(
+System_Byte_array *__fastcall CatAndMouseGame__MouseGame4_30681680(
         System_Byte_array *data,
         System_Byte_array *home,
         System_Byte_array *info,
@@ -2914,10 +2711,10 @@ System_Byte_array *__fastcall CatAndMouseGame__MouseGame4_30542952(
 {
   const MethodInfo *v4; // x4
 
-  if ( (byte_42EB69B & 1) == 0 )
+  if ( (byte_4354B79 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)home, (_DWORD)info, method);
-    byte_42EB69B = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B79 = 1;
   }
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
@@ -2930,238 +2727,218 @@ System_Byte_array *__fastcall CatAndMouseGame__MouseGame4_30542952(
 
 System_String_o *__fastcall CatAndMouseGame__MouseGame5(System_String_o *str, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  CatAndMouseGame_c *v11; // x0
+  CatAndMouseGame_c *v3; // x0
   struct System_Byte_array *BattleKey; // x8
   struct System_Byte_array *BattleIV; // x8
-  System_Byte_array *v14; // x19
-  System_Byte_array *v15; // x20
-  const MethodInfo *v16; // x4
-  System_Byte_array *v17; // x21
+  System_Byte_array *v6; // x19
+  System_Byte_array *v7; // x20
+  const MethodInfo *v8; // x4
+  System_Byte_array *v9; // x21
   __int64 i; // x23
-  struct System_Byte_array *v19; // x8
-  unsigned __int64 v20; // x24
+  struct System_Byte_array *v11; // x8
+  unsigned __int64 v12; // x24
   __int64 j; // x23
-  struct System_Byte_array *v22; // x8
-  unsigned __int64 v23; // x24
-  __int64 v25; // x0
+  struct System_Byte_array *v14; // x8
+  unsigned __int64 v15; // x24
+  __int64 v17; // x0
 
-  if ( (byte_42EB68E & 1) == 0 )
+  if ( (byte_4354B6C & 1) == 0 )
   {
-    sub_B5D5C4(&byte___TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&System_Convert_TypeInfo, v8, v9, v10);
-    byte_42EB68E = 1;
+    sub_B70694(&byte___TypeInfo);
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&System_Convert_TypeInfo);
+    byte_4354B6C = 1;
   }
-  v11 = CatAndMouseGame_TypeInfo;
+  v3 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v11 = CatAndMouseGame_TypeInfo;
+    v3 = CatAndMouseGame_TypeInfo;
   }
-  BattleKey = v11->static_fields->BattleKey;
+  BattleKey = v3->static_fields->BattleKey;
   if ( !BattleKey
-    || (v11 = (CatAndMouseGame_c *)sub_B5D5DC(byte___TypeInfo, BattleKey->max_length),
+    || (v3 = (CatAndMouseGame_c *)sub_B706AC(byte___TypeInfo, BattleKey->max_length),
         (BattleIV = CatAndMouseGame_TypeInfo->static_fields->BattleIV) == 0LL) )
   {
 LABEL_42:
-    sub_B5D69C(v11, method);
+    sub_B7076C(v3, method);
   }
-  v14 = (System_Byte_array *)v11;
-  v15 = (System_Byte_array *)sub_B5D5DC(byte___TypeInfo, BattleIV->max_length);
+  v6 = (System_Byte_array *)v3;
+  v7 = (System_Byte_array *)sub_B706AC(byte___TypeInfo, BattleIV->max_length);
   if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !System_Convert_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
-  v17 = System_Convert__FromBase64String(str, 0LL);
+  v9 = System_Convert__FromBase64String(str, 0LL);
   for ( i = 32LL; ; ++i )
   {
-    v11 = CatAndMouseGame_TypeInfo;
+    v3 = CatAndMouseGame_TypeInfo;
     if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-      v11 = CatAndMouseGame_TypeInfo;
+      v3 = CatAndMouseGame_TypeInfo;
     }
-    v19 = v11->static_fields->BattleKey;
-    if ( !v19 )
+    v11 = v3->static_fields->BattleKey;
+    if ( !v11 )
       goto LABEL_42;
-    v20 = i - 32;
-    if ( i - 32 >= (int)v19->max_length )
+    v12 = i - 32;
+    if ( i - 32 >= (int)v11->max_length )
       break;
-    if ( (BYTE3(v11->vtable._0_Equals.methodPtr) & 4) != 0 && !v11->_2.cctor_finished )
+    if ( (BYTE3(v3->vtable._0_Equals.methodPtr) & 4) != 0 && !v3->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v11);
-      v19 = CatAndMouseGame_TypeInfo->static_fields->BattleKey;
-      if ( !v19 )
+      j_il2cpp_runtime_class_init_0(v3);
+      v11 = CatAndMouseGame_TypeInfo->static_fields->BattleKey;
+      if ( !v11 )
         goto LABEL_42;
     }
-    if ( v20 >= v19->max_length )
+    if ( v12 >= v11->max_length )
       goto LABEL_41;
-    if ( !v14 )
+    if ( !v6 )
       goto LABEL_42;
-    if ( v20 >= v14->max_length )
+    if ( v12 >= v6->max_length )
     {
 LABEL_41:
-      v25 = sub_B5D6C8(v11);
-      sub_B5D668(v25, 0LL);
+      v17 = sub_B70798(v3);
+      sub_B70738(v17, 0LL);
     }
-    *((_BYTE *)&v14->obj.klass + i) = *((_BYTE *)&v19->obj.klass + i) ^ 4;
+    *((_BYTE *)&v6->obj.klass + i) = *((_BYTE *)&v11->obj.klass + i) ^ 4;
   }
   for ( j = 32LL; ; ++j )
   {
-    if ( (BYTE3(v11->vtable._0_Equals.methodPtr) & 4) != 0 && !v11->_2.cctor_finished )
+    if ( (BYTE3(v3->vtable._0_Equals.methodPtr) & 4) != 0 && !v3->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v11);
-      v11 = CatAndMouseGame_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v3);
+      v3 = CatAndMouseGame_TypeInfo;
     }
-    v22 = v11->static_fields->BattleIV;
-    if ( !v22 )
+    v14 = v3->static_fields->BattleIV;
+    if ( !v14 )
       goto LABEL_42;
-    v23 = j - 32;
-    if ( j - 32 >= (int)v22->max_length )
+    v15 = j - 32;
+    if ( j - 32 >= (int)v14->max_length )
       break;
-    if ( (WORD1(v11->vtable._0_Equals.methodPtr) & 0x400) != 0 && !v11->_2.cctor_finished )
+    if ( (WORD1(v3->vtable._0_Equals.methodPtr) & 0x400) != 0 && !v3->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v11);
-      v22 = CatAndMouseGame_TypeInfo->static_fields->BattleIV;
-      if ( !v22 )
+      j_il2cpp_runtime_class_init_0(v3);
+      v14 = CatAndMouseGame_TypeInfo->static_fields->BattleIV;
+      if ( !v14 )
         goto LABEL_42;
     }
-    if ( v23 >= v22->max_length )
+    if ( v15 >= v14->max_length )
       goto LABEL_41;
-    if ( !v15 )
+    if ( !v7 )
       goto LABEL_42;
-    if ( v23 >= v15->max_length )
+    if ( v15 >= v7->max_length )
       goto LABEL_41;
-    *((_BYTE *)&v15->obj.klass + j) = *((_BYTE *)&v22->obj.klass + j) ^ 8;
-    v11 = CatAndMouseGame_TypeInfo;
+    *((_BYTE *)&v7->obj.klass + j) = *((_BYTE *)&v14->obj.klass + j) ^ 8;
+    v3 = CatAndMouseGame_TypeInfo;
   }
-  if ( (WORD1(v11->vtable._0_Equals.methodPtr) & 0x400) != 0 && !v11->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(v11);
-  return CatAndMouseGame__MouseHome(v17, v14, v15, 0, v16);
+  if ( (WORD1(v3->vtable._0_Equals.methodPtr) & 0x400) != 0 && !v3->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(v3);
+  return CatAndMouseGame__MouseHome(v9, v6, v7, 0, v8);
 }
 
 
 System_String_o *__fastcall CatAndMouseGame__MouseGame6(System_String_o *str, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  const MethodInfo *v8; // x4
-  System_Byte_array *v9; // x19
-  CatAndMouseGame_c *v10; // x8
+  const MethodInfo *v3; // x4
+  System_Byte_array *v4; // x19
+  CatAndMouseGame_c *v5; // x8
 
-  if ( (byte_42EB6A1 & 1) == 0 )
+  if ( (byte_4354B7F & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&System_Convert_TypeInfo, v5, v6, v7);
-    byte_42EB6A1 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&System_Convert_TypeInfo);
+    byte_4354B7F = 1;
   }
   if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !System_Convert_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
-  v9 = System_Convert__FromBase64String(str, 0LL);
-  v10 = CatAndMouseGame_TypeInfo;
+  v4 = System_Convert__FromBase64String(str, 0LL);
+  v5 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v10 = CatAndMouseGame_TypeInfo;
+    v5 = CatAndMouseGame_TypeInfo;
   }
-  return CatAndMouseGame__MouseHome(v9, v10->static_fields->sideData, v10->static_fields->sideTop, 0, v8);
+  return CatAndMouseGame__MouseHome(v4, v5->static_fields->sideData, v5->static_fields->sideTop, 0, v3);
 }
 
 
 System_Byte_array *__fastcall CatAndMouseGame__MouseGame6ForMsgPack(System_String_o *str, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  const MethodInfo *v8; // x4
-  System_Byte_array *v9; // x19
-  CatAndMouseGame_c *v10; // x8
+  const MethodInfo *v3; // x4
+  System_Byte_array *v4; // x19
+  CatAndMouseGame_c *v5; // x8
 
-  if ( (byte_42EB6A2 & 1) == 0 )
+  if ( (byte_4354B80 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&System_Convert_TypeInfo, v5, v6, v7);
-    byte_42EB6A2 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&System_Convert_TypeInfo);
+    byte_4354B80 = 1;
   }
   if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !System_Convert_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
-  v9 = System_Convert__FromBase64String(str, 0LL);
-  v10 = CatAndMouseGame_TypeInfo;
+  v4 = System_Convert__FromBase64String(str, 0LL);
+  v5 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v10 = CatAndMouseGame_TypeInfo;
+    v5 = CatAndMouseGame_TypeInfo;
   }
-  return CatAndMouseGame__MouseHomeSub(v9, v10->static_fields->sideData, v10->static_fields->sideTop, 0, v8);
+  return CatAndMouseGame__MouseHomeSub(v4, v5->static_fields->sideData, v5->static_fields->sideTop, 0, v3);
 }
 
 
 System_Byte_array *__fastcall CatAndMouseGame__MouseGame7(System_Byte_array *data, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  const MethodInfo *v4; // x4
-  CatAndMouseGame_c *v6; // x0
+  const MethodInfo *v2; // x4
+  CatAndMouseGame_c *v4; // x0
   System_Byte_array *result; // x0
-  __int64 v8; // x1
+  __int64 v6; // x1
   unsigned __int64 max_length; // x8
-  unsigned __int64 v10; // x9
-  __int64 v11; // x0
+  unsigned __int64 v8; // x9
+  __int64 v9; // x0
 
-  if ( (byte_42EB690 & 1) == 0 )
+  if ( (byte_4354B6E & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EB690 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B6E = 1;
   }
-  v6 = CatAndMouseGame_TypeInfo;
+  v4 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v6 = CatAndMouseGame_TypeInfo;
+    v4 = CatAndMouseGame_TypeInfo;
   }
-  result = CatAndMouseGame__MouseHomeMain(data, v6->static_fields->stageData, v6->static_fields->stageTop, 1, v4);
+  result = CatAndMouseGame__MouseHomeMain(data, v4->static_fields->stageData, v4->static_fields->stageTop, 1, v2);
   if ( !result )
-    sub_B5D69C(0LL, v8);
+    sub_B7076C(0LL, v6);
   max_length = result->max_length;
   if ( (__int64)(max_length << 32) >= 1 )
   {
-    v10 = 0LL;
+    v8 = 0LL;
     do
     {
-      if ( v10 >= max_length )
+      if ( v8 >= max_length )
       {
-        v11 = sub_B5D6C8(result);
-        sub_B5D668(v11, 0LL);
+        v9 = sub_B70798(result);
+        sub_B70738(v9, 0LL);
       }
-      result->m_Items[v10 + 4] = ~result->m_Items[v10 + 4];
-      ++v10;
+      result->m_Items[v8 + 4] = ~result->m_Items[v8 + 4];
+      ++v8;
     }
-    while ( (__int64)v10 < (int)max_length );
+    while ( (__int64)v8 < (int)max_length );
   }
   return result;
 }
@@ -3169,102 +2946,94 @@ System_Byte_array *__fastcall CatAndMouseGame__MouseGame7(System_Byte_array *dat
 
 System_String_o *__fastcall CatAndMouseGame__MouseGame8(System_String_o *str, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  const MethodInfo *v11; // x4
-  System_Byte_array *v12; // x19
-  CatAndMouseGame_c *v13; // x8
+  const MethodInfo *v3; // x4
+  System_Byte_array *v4; // x19
+  CatAndMouseGame_c *v5; // x8
   System_String_o *result; // x0
-  const MethodInfo *v15; // x4
-  System_String_o *v16; // x20
-  CatAndMouseGame_c *v17; // x0
+  const MethodInfo *v7; // x4
+  System_String_o *v8; // x20
+  CatAndMouseGame_c *v9; // x0
   unsigned __int64 klass_low; // x8
-  unsigned __int64 v19; // x9
+  unsigned __int64 v11; // x9
   System_Text_Encoding_o *UTF8; // x0
-  __int64 v21; // x1
-  System_String_o *v22; // x19
-  __int64 v23; // x0
+  __int64 v13; // x1
+  System_String_o *v14; // x19
+  __int64 v15; // x0
 
-  if ( (byte_42EB692 & 1) == 0 )
+  if ( (byte_4354B70 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&char___TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&System_Convert_TypeInfo, v8, v9, v10);
-    byte_42EB692 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&char___TypeInfo);
+    sub_B70694(&System_Convert_TypeInfo);
+    byte_4354B70 = 1;
   }
   if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !System_Convert_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
-  v12 = System_Convert__FromBase64String(str, 0LL);
-  v13 = CatAndMouseGame_TypeInfo;
+  v4 = System_Convert__FromBase64String(str, 0LL);
+  v5 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v13 = CatAndMouseGame_TypeInfo;
+    v5 = CatAndMouseGame_TypeInfo;
   }
   result = (System_String_o *)CatAndMouseGame__MouseHomeMainZ2(
-                                v12,
-                                v13->static_fields->stageData,
-                                v13->static_fields->stageTop,
+                                v4,
+                                v5->static_fields->stageData,
+                                v5->static_fields->stageTop,
                                 1,
-                                v11);
-  v16 = result;
+                                v3);
+  v8 = result;
   if ( result )
     goto LABEL_14;
-  v17 = CatAndMouseGame_TypeInfo;
+  v9 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v17 = CatAndMouseGame_TypeInfo;
+    v9 = CatAndMouseGame_TypeInfo;
   }
   result = (System_String_o *)CatAndMouseGame__MouseHomeMain(
-                                v12,
-                                v17->static_fields->stageData,
-                                v17->static_fields->stageTop,
+                                v4,
+                                v9->static_fields->stageData,
+                                v9->static_fields->stageTop,
                                 1,
-                                v15);
-  v16 = result;
+                                v7);
+  v8 = result;
   if ( result )
   {
 LABEL_14:
-    klass_low = LODWORD(v16[1].klass);
+    klass_low = LODWORD(v8[1].klass);
     if ( (__int64)(klass_low << 32) >= 1 )
     {
-      v19 = 0LL;
+      v11 = 0LL;
       do
       {
-        if ( v19 >= klass_low )
+        if ( v11 >= klass_low )
         {
-          v23 = sub_B5D6C8(result);
-          sub_B5D668(v23, 0LL);
+          v15 = sub_B70798(result);
+          sub_B70738(v15, 0LL);
         }
-        *((_BYTE *)&v16[1].monitor + v19) = ~*((_BYTE *)&v16[1].monitor + v19);
-        ++v19;
+        *((_BYTE *)&v8[1].monitor + v11) = ~*((_BYTE *)&v8[1].monitor + v11);
+        ++v11;
       }
-      while ( (__int64)v19 < (int)klass_low );
+      while ( (__int64)v11 < (int)klass_low );
     }
     UTF8 = System_Text_Encoding__get_UTF8(0LL);
     if ( !UTF8
-      || (v22 = (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, Il2CppMethodPointer))UTF8->klass->vtable._34_GetString.method)(
+      || (v14 = (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, Il2CppMethodPointer))UTF8->klass->vtable._34_GetString.method)(
                                      UTF8,
-                                     v16,
+                                     v8,
                                      UTF8->klass->vtable._35_GetString.methodPtr),
-          UTF8 = (System_Text_Encoding_o *)sub_B5D5DC(char___TypeInfo, 1LL),
-          !v22) )
+          UTF8 = (System_Text_Encoding_o *)sub_B706AC(char___TypeInfo, 1LL),
+          !v14) )
     {
-      sub_B5D69C(UTF8, v21);
+      sub_B7076C(UTF8, v13);
     }
-    return System_String__TrimEnd(v22, (System_Char_array *)UTF8, 0LL);
+    return System_String__TrimEnd(v14, (System_Char_array *)UTF8, 0LL);
   }
   return result;
 }
@@ -3272,28 +3041,25 @@ LABEL_14:
 
 System_IO_Stream_o *__fastcall CatAndMouseGame__MouseGameZ(System_IO_Stream_o *stream, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  const MethodInfo *v4; // x4
-  CatAndMouseGame_c *v6; // x0
+  const MethodInfo *v2; // x4
+  CatAndMouseGame_c *v4; // x0
 
-  if ( (byte_42EB684 & 1) == 0 )
+  if ( (byte_4354B62 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EB684 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B62 = 1;
   }
-  v6 = CatAndMouseGame_TypeInfo;
+  v4 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v6 = CatAndMouseGame_TypeInfo;
+    v4 = CatAndMouseGame_TypeInfo;
   }
-  return CatAndMouseGame__MouseHomeMainZ(stream, v6->static_fields->stageData, v6->static_fields->stageTop, 1, v4);
+  return CatAndMouseGame__MouseHomeMainZ(stream, v4->static_fields->stageData, v4->static_fields->stageTop, 1, v2);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall CatAndMouseGame__MouseHome(
         System_Byte_array *data,
         System_Byte_array *home,
@@ -3301,42 +3067,38 @@ System_String_o *__fastcall CatAndMouseGame__MouseHome(
         bool isCompress,
         const MethodInfo *method)
 {
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  System_Byte_array *v12; // x19
+  System_Byte_array *v9; // x19
   System_Text_Encoding_o *UTF8; // x0
-  __int64 v14; // x1
-  System_String_o *v15; // x19
+  __int64 v11; // x1
+  System_String_o *v12; // x19
 
-  if ( (byte_42EB6A9 & 1) == 0 )
+  if ( (byte_4354B87 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)home, (_DWORD)info, isCompress);
-    sub_B5D5C4(&char___TypeInfo, v9, v10, v11);
-    byte_42EB6A9 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&char___TypeInfo);
+    byte_4354B87 = 1;
   }
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
   }
-  v12 = CatAndMouseGame__MouseHomeMain(data, home, info, isCompress, method);
+  v9 = CatAndMouseGame__MouseHomeMain(data, home, info, isCompress, method);
   UTF8 = System_Text_Encoding__get_UTF8(0LL);
   if ( !UTF8
-    || (v15 = (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_Byte_array *, Il2CppMethodPointer))UTF8->klass->vtable._34_GetString.method)(
+    || (v12 = (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_Byte_array *, Il2CppMethodPointer))UTF8->klass->vtable._34_GetString.method)(
                                    UTF8,
-                                   v12,
+                                   v9,
                                    UTF8->klass->vtable._35_GetString.methodPtr),
-        UTF8 = (System_Text_Encoding_o *)sub_B5D5DC(char___TypeInfo, 1LL),
-        !v15) )
+        UTF8 = (System_Text_Encoding_o *)sub_B706AC(char___TypeInfo, 1LL),
+        !v12) )
   {
-    sub_B5D69C(UTF8, v14);
+    sub_B7076C(UTF8, v11);
   }
-  return System_String__TrimEnd(v15, (System_Char_array *)UTF8, 0LL);
+  return System_String__TrimEnd(v12, (System_Char_array *)UTF8, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_Byte_array *__fastcall CatAndMouseGame__MouseHomeMain(
         System_Byte_array *data,
         System_Byte_array *home,
@@ -3344,119 +3106,110 @@ System_Byte_array *__fastcall CatAndMouseGame__MouseHomeMain(
         bool isCompress,
         const MethodInfo *method)
 {
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  int v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
-  System_Security_Cryptography_RijndaelManaged_o *v15; // x23
-  __int64 v16; // x0
-  __int64 v17; // x1
-  System_Security_Cryptography_ICryptoTransform_o *v18; // x19
-  CatAndMouseGame_DataDecryptor_o *v19; // x21
-  __int64 v20; // x0
-  __int64 v21; // x1
-  __int64 v22; // x3
-  System_Byte_array *v23; // x20
+  System_Security_Cryptography_RijndaelManaged_o *v9; // x23
+  __int64 v10; // x0
+  __int64 v11; // x1
+  System_Security_Cryptography_ICryptoTransform_o *v12; // x19
+  CatAndMouseGame_DataDecryptor_o *v13; // x21
+  __int64 v14; // x0
+  __int64 v15; // x1
+  System_Byte_array *v16; // x20
   CatAndMouseGame_DataDecryptor_c *klass; // x8
-  unsigned __int64 v25; // x10
+  unsigned __int64 v18; // x10
   int32_t *p_offset; // x11
-  __int64 v27; // x0
-  __int64 v28; // x3
-  System_Security_Cryptography_ICryptoTransform_c *v29; // x8
-  unsigned __int64 v30; // x10
-  int32_t *v31; // x11
+  __int64 v20; // x0
+  System_Security_Cryptography_ICryptoTransform_c *v21; // x8
+  unsigned __int64 v22; // x10
+  int32_t *v23; // x11
   __int64 p_method; // x0
 
-  if ( (byte_42EB6AE & 1) == 0 )
+  if ( (byte_4354B8C & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_DataDecryptor_TypeInfo, (_DWORD)home, (_DWORD)info, isCompress);
-    sub_B5D5C4(&System_IDisposable_TypeInfo, v9, v10, v11);
-    sub_B5D5C4(&System_Security_Cryptography_RijndaelManaged_TypeInfo, v12, v13, v14);
-    byte_42EB6AE = 1;
+    sub_B70694(&CatAndMouseGame_DataDecryptor_TypeInfo);
+    sub_B70694(&System_IDisposable_TypeInfo);
+    sub_B70694(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
+    byte_4354B8C = 1;
   }
-  v15 = (System_Security_Cryptography_RijndaelManaged_o *)sub_B5D694(System_Security_Cryptography_RijndaelManaged_TypeInfo);
-  System_Security_Cryptography_RijndaelManaged___ctor(v15, 0LL);
-  if ( !v15 )
-    sub_B5D69C(v16, v17);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v15->klass->vtable._21_set_Padding.method)(
-    v15,
+  v9 = (System_Security_Cryptography_RijndaelManaged_o *)sub_B70764(System_Security_Cryptography_RijndaelManaged_TypeInfo);
+  System_Security_Cryptography_RijndaelManaged___ctor(v9, 0LL);
+  if ( !v9 )
+    sub_B7076C(v10, v11);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._21_set_Padding.method)(
+    v9,
     2LL,
-    v15->klass->vtable._22_CreateEncryptor.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v15->klass->vtable._19_set_Mode.method)(
-    v15,
+    v9->klass->vtable._22_CreateEncryptor.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._19_set_Mode.method)(
+    v9,
     1LL,
-    v15->klass->vtable._20_get_Padding.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v15->klass->vtable._17_set_KeySize.method)(
-    v15,
+    v9->klass->vtable._20_get_Padding.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._17_set_KeySize.method)(
+    v9,
     256LL,
-    v15->klass->vtable._18_get_Mode.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v15->klass->vtable._7_set_BlockSize.method)(
-    v15,
+    v9->klass->vtable._18_get_Mode.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._7_set_BlockSize.method)(
+    v9,
     256LL,
-    v15->klass->vtable._8_get_FeedbackSize.methodPtr);
-  v18 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, System_Byte_array *, System_Byte_array *, Il2CppMethodPointer))v15->klass->vtable._25_CreateDecryptor.method)(
-                                                             v15,
+    v9->klass->vtable._8_get_FeedbackSize.methodPtr);
+  v12 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, System_Byte_array *, System_Byte_array *, Il2CppMethodPointer))v9->klass->vtable._25_CreateDecryptor.method)(
+                                                             v9,
                                                              home,
                                                              info,
-                                                             v15->klass->vtable._26_GenerateKey.methodPtr);
-  v19 = (CatAndMouseGame_DataDecryptor_o *)sub_B5D694(CatAndMouseGame_DataDecryptor_TypeInfo);
-  CatAndMouseGame_DataDecryptor___ctor(v19, v18, data, isCompress, 0LL);
-  if ( !v19 )
-    sub_B5D69C(v20, v21);
-  CatAndMouseGame_DataDecryptor__ApplyWrite(v19, 0LL);
-  v23 = CatAndMouseGame_DataDecryptor__ToByteArray(v19, 0LL);
-  klass = v19->klass;
-  if ( *(_WORD *)&v19->klass->_2.bitflags1 )
+                                                             v9->klass->vtable._26_GenerateKey.methodPtr);
+  v13 = (CatAndMouseGame_DataDecryptor_o *)sub_B70764(CatAndMouseGame_DataDecryptor_TypeInfo);
+  CatAndMouseGame_DataDecryptor___ctor(v13, v12, data, isCompress, 0LL);
+  if ( !v13 )
+    sub_B7076C(v14, v15);
+  CatAndMouseGame_DataDecryptor__ApplyWrite(v13, 0LL);
+  v16 = CatAndMouseGame_DataDecryptor__ToByteArray(v13, 0LL);
+  klass = v13->klass;
+  if ( *(_WORD *)&v13->klass->_2.bitflags1 )
   {
-    v25 = 0LL;
+    v18 = 0LL;
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      ++v25;
+      ++v18;
       p_offset += 4;
-      if ( v25 >= *(unsigned __int16 *)&v19->klass->_2.bitflags1 )
+      if ( v18 >= *(unsigned __int16 *)&v13->klass->_2.bitflags1 )
         goto LABEL_9;
     }
-    v27 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v20 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
 LABEL_9:
-    v27 = sub_AF54C0(v19, System_IDisposable_TypeInfo, 0LL, v22);
+    v20 = sub_B08590(v13, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(CatAndMouseGame_DataDecryptor_o *, _QWORD))v27)(v19, *(_QWORD *)(v27 + 8));
-  if ( v18 )
+  (*(void (__fastcall **)(CatAndMouseGame_DataDecryptor_o *, _QWORD))v20)(v13, *(_QWORD *)(v20 + 8));
+  if ( v12 )
   {
-    v29 = v18->klass;
-    if ( *(_WORD *)&v18->klass->_2.bitflags1 )
+    v21 = v12->klass;
+    if ( *(_WORD *)&v12->klass->_2.bitflags1 )
     {
-      v30 = 0LL;
-      v31 = &v29->_1.interfaceOffsets->offset;
-      while ( *((System_IDisposable_c **)v31 - 1) != System_IDisposable_TypeInfo )
+      v22 = 0LL;
+      v23 = &v21->_1.interfaceOffsets->offset;
+      while ( *((System_IDisposable_c **)v23 - 1) != System_IDisposable_TypeInfo )
       {
-        ++v30;
-        v31 += 4;
-        if ( v30 >= *(unsigned __int16 *)&v18->klass->_2.bitflags1 )
+        ++v22;
+        v23 += 4;
+        if ( v22 >= *(unsigned __int16 *)&v12->klass->_2.bitflags1 )
           goto LABEL_16;
       }
-      p_method = (__int64)&v29->vtable[*v31].method;
+      p_method = (__int64)&v21->vtable[*v23].method;
     }
     else
     {
 LABEL_16:
-      p_method = sub_AF54C0(v18, System_IDisposable_TypeInfo, 0LL, v28);
+      p_method = sub_B08590(v12, System_IDisposable_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(System_Security_Cryptography_ICryptoTransform_o *, _QWORD))p_method)(
-      v18,
+      v12,
       *(_QWORD *)(p_method + 8));
   }
-  return v23;
+  return v16;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_Security_Cryptography_CryptoStream_o *__fastcall CatAndMouseGame__MouseHomeMainStream(
         System_IO_Stream_o *outputStream,
         System_Byte_array *home,
@@ -3464,53 +3217,49 @@ System_Security_Cryptography_CryptoStream_o *__fastcall CatAndMouseGame__MouseHo
         bool isCompress,
         const MethodInfo *method)
 {
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  System_Security_Cryptography_RijndaelManaged_o *v11; // x22
-  __int64 v12; // x0
-  __int64 v13; // x1
-  System_Security_Cryptography_ICryptoTransform_o *v14; // x20
-  System_Security_Cryptography_CryptoStream_o *v15; // x21
+  System_Security_Cryptography_RijndaelManaged_o *v8; // x22
+  __int64 v9; // x0
+  __int64 v10; // x1
+  System_Security_Cryptography_ICryptoTransform_o *v11; // x20
+  System_Security_Cryptography_CryptoStream_o *v12; // x21
 
-  if ( (byte_42EB6AF & 1) == 0 )
+  if ( (byte_4354B8D & 1) == 0 )
   {
-    sub_B5D5C4(&System_Security_Cryptography_CryptoStream_TypeInfo, (_DWORD)home, (_DWORD)info, isCompress);
-    sub_B5D5C4(&System_Security_Cryptography_RijndaelManaged_TypeInfo, v8, v9, v10);
-    byte_42EB6AF = 1;
+    sub_B70694(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_B70694(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
+    byte_4354B8D = 1;
   }
-  v11 = (System_Security_Cryptography_RijndaelManaged_o *)sub_B5D694(System_Security_Cryptography_RijndaelManaged_TypeInfo);
-  System_Security_Cryptography_RijndaelManaged___ctor(v11, 0LL);
-  if ( !v11 )
-    sub_B5D69C(v12, v13);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v11->klass->vtable._21_set_Padding.method)(
-    v11,
+  v8 = (System_Security_Cryptography_RijndaelManaged_o *)sub_B70764(System_Security_Cryptography_RijndaelManaged_TypeInfo);
+  System_Security_Cryptography_RijndaelManaged___ctor(v8, 0LL);
+  if ( !v8 )
+    sub_B7076C(v9, v10);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v8->klass->vtable._21_set_Padding.method)(
+    v8,
     2LL,
-    v11->klass->vtable._22_CreateEncryptor.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v11->klass->vtable._19_set_Mode.method)(
-    v11,
+    v8->klass->vtable._22_CreateEncryptor.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v8->klass->vtable._19_set_Mode.method)(
+    v8,
     1LL,
-    v11->klass->vtable._20_get_Padding.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v11->klass->vtable._17_set_KeySize.method)(
-    v11,
+    v8->klass->vtable._20_get_Padding.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v8->klass->vtable._17_set_KeySize.method)(
+    v8,
     256LL,
-    v11->klass->vtable._18_get_Mode.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v11->klass->vtable._7_set_BlockSize.method)(
-    v11,
+    v8->klass->vtable._18_get_Mode.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v8->klass->vtable._7_set_BlockSize.method)(
+    v8,
     256LL,
-    v11->klass->vtable._8_get_FeedbackSize.methodPtr);
-  v14 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, System_Byte_array *, System_Byte_array *, Il2CppMethodPointer))v11->klass->vtable._25_CreateDecryptor.method)(
-                                                             v11,
+    v8->klass->vtable._8_get_FeedbackSize.methodPtr);
+  v11 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, System_Byte_array *, System_Byte_array *, Il2CppMethodPointer))v8->klass->vtable._25_CreateDecryptor.method)(
+                                                             v8,
                                                              home,
                                                              info,
-                                                             v11->klass->vtable._26_GenerateKey.methodPtr);
-  v15 = (System_Security_Cryptography_CryptoStream_o *)sub_B5D694(System_Security_Cryptography_CryptoStream_TypeInfo);
-  System_Security_Cryptography_CryptoStream___ctor(v15, outputStream, v14, 1, 0LL);
-  return v15;
+                                                             v8->klass->vtable._26_GenerateKey.methodPtr);
+  v12 = (System_Security_Cryptography_CryptoStream_o *)sub_B70764(System_Security_Cryptography_CryptoStream_TypeInfo);
+  System_Security_Cryptography_CryptoStream___ctor(v12, outputStream, v11, 1, 0LL);
+  return v12;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_IO_Stream_o *__fastcall CatAndMouseGame__MouseHomeMainZ(
         System_IO_Stream_o *stream,
         System_Byte_array *home,
@@ -3518,64 +3267,57 @@ System_IO_Stream_o *__fastcall CatAndMouseGame__MouseHomeMainZ(
         bool isCompress,
         const MethodInfo *method)
 {
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  int v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
-  System_Security_Cryptography_RijndaelManaged_o *v15; // x23
-  __int64 v16; // x0
-  __int64 v17; // x1
-  System_Security_Cryptography_ICryptoTransform_o *v18; // x22
-  System_Security_Cryptography_CryptoStream_o *v19; // x21
-  ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *v20; // x19
+  System_Security_Cryptography_RijndaelManaged_o *v9; // x23
+  __int64 v10; // x0
+  __int64 v11; // x1
+  System_Security_Cryptography_ICryptoTransform_o *v12; // x22
+  System_Security_Cryptography_CryptoStream_o *v13; // x21
+  ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *v14; // x19
 
-  if ( (byte_42EB6AC & 1) == 0 )
+  if ( (byte_4354B8A & 1) == 0 )
   {
-    sub_B5D5C4(&System_Security_Cryptography_CryptoStream_TypeInfo, (_DWORD)home, (_DWORD)info, isCompress);
-    sub_B5D5C4(&ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo, v9, v10, v11);
-    sub_B5D5C4(&System_Security_Cryptography_RijndaelManaged_TypeInfo, v12, v13, v14);
-    byte_42EB6AC = 1;
+    sub_B70694(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_B70694(&ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
+    sub_B70694(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
+    byte_4354B8A = 1;
   }
-  v15 = (System_Security_Cryptography_RijndaelManaged_o *)sub_B5D694(System_Security_Cryptography_RijndaelManaged_TypeInfo);
-  System_Security_Cryptography_RijndaelManaged___ctor(v15, 0LL);
-  if ( !v15 )
-    sub_B5D69C(v16, v17);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v15->klass->vtable._21_set_Padding.method)(
-    v15,
+  v9 = (System_Security_Cryptography_RijndaelManaged_o *)sub_B70764(System_Security_Cryptography_RijndaelManaged_TypeInfo);
+  System_Security_Cryptography_RijndaelManaged___ctor(v9, 0LL);
+  if ( !v9 )
+    sub_B7076C(v10, v11);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._21_set_Padding.method)(
+    v9,
     2LL,
-    v15->klass->vtable._22_CreateEncryptor.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v15->klass->vtable._19_set_Mode.method)(
-    v15,
+    v9->klass->vtable._22_CreateEncryptor.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._19_set_Mode.method)(
+    v9,
     1LL,
-    v15->klass->vtable._20_get_Padding.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v15->klass->vtable._17_set_KeySize.method)(
-    v15,
+    v9->klass->vtable._20_get_Padding.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._17_set_KeySize.method)(
+    v9,
     256LL,
-    v15->klass->vtable._18_get_Mode.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v15->klass->vtable._7_set_BlockSize.method)(
-    v15,
+    v9->klass->vtable._18_get_Mode.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._7_set_BlockSize.method)(
+    v9,
     256LL,
-    v15->klass->vtable._8_get_FeedbackSize.methodPtr);
-  v18 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, System_Byte_array *, System_Byte_array *, Il2CppMethodPointer))v15->klass->vtable._25_CreateDecryptor.method)(
-                                                             v15,
+    v9->klass->vtable._8_get_FeedbackSize.methodPtr);
+  v12 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, System_Byte_array *, System_Byte_array *, Il2CppMethodPointer))v9->klass->vtable._25_CreateDecryptor.method)(
+                                                             v9,
                                                              home,
                                                              info,
-                                                             v15->klass->vtable._26_GenerateKey.methodPtr);
-  v19 = (System_Security_Cryptography_CryptoStream_o *)sub_B5D694(System_Security_Cryptography_CryptoStream_TypeInfo);
-  System_Security_Cryptography_CryptoStream___ctor(v19, stream, v18, 0, 0LL);
+                                                             v9->klass->vtable._26_GenerateKey.methodPtr);
+  v13 = (System_Security_Cryptography_CryptoStream_o *)sub_B70764(System_Security_Cryptography_CryptoStream_TypeInfo);
+  System_Security_Cryptography_CryptoStream___ctor(v13, stream, v12, 0, 0LL);
   if ( isCompress )
   {
-    v20 = (ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *)sub_B5D694(ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
-    ICSharpCode_SharpZipLib_GZip_GZipInputStream___ctor(v20, (System_IO_Stream_o *)v19, 0LL);
-    return (System_IO_Stream_o *)v20;
+    v14 = (ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *)sub_B70764(ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
+    ICSharpCode_SharpZipLib_GZip_GZipInputStream___ctor(v14, (System_IO_Stream_o *)v13, 0LL);
+    return (System_IO_Stream_o *)v14;
   }
-  return (System_IO_Stream_o *)v19;
+  return (System_IO_Stream_o *)v13;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_Byte_array *__fastcall CatAndMouseGame__MouseHomeMainZ2(
         System_Byte_array *data,
         System_Byte_array *home,
@@ -3583,182 +3325,169 @@ System_Byte_array *__fastcall CatAndMouseGame__MouseHomeMainZ2(
         bool isCompress,
         const MethodInfo *method)
 {
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  int v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
-  int v15; // w1
-  int v16; // w2
-  __int64 v17; // x3
-  int v18; // w1
-  int v19; // w2
-  __int64 v20; // x3
-  System_Security_Cryptography_RijndaelManaged_o *v21; // x23
-  __int64 v22; // x0
-  __int64 v23; // x1
-  __int64 v24; // x0
-  __int64 v25; // x1
-  System_Security_Cryptography_ICryptoTransform_o *v26; // x23
-  System_Byte_array *v27; // x21
-  System_IO_MemoryStream_o *v28; // x19
-  System_Security_Cryptography_CryptoStream_o *v29; // x20
+  System_Security_Cryptography_RijndaelManaged_o *v9; // x23
+  __int64 v10; // x0
+  __int64 v11; // x1
+  __int64 v12; // x0
+  __int64 v13; // x1
+  System_Security_Cryptography_ICryptoTransform_o *v14; // x23
+  System_Byte_array *v15; // x21
+  System_IO_MemoryStream_o *v16; // x19
+  System_Security_Cryptography_CryptoStream_o *v17; // x20
+  __int64 v18; // x0
+  __int64 v19; // x1
+  __int64 v20; // x0
+  unsigned int max_length; // w8
+  System_IO_MemoryStream_o *v22; // x22
+  System_IO_MemoryStream_o *v23; // x23
+  ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *v24; // x21
+  __int64 v25; // x0
+  __int64 v26; // x1
+  __int64 v27; // x24
+  __int64 v28; // x0
+  __int64 v29; // x1
   __int64 v30; // x0
   __int64 v31; // x1
   __int64 v32; // x0
-  unsigned int max_length; // w8
-  System_IO_MemoryStream_o *v34; // x22
-  System_IO_MemoryStream_o *v35; // x23
-  ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *v36; // x21
-  __int64 v37; // x0
-  __int64 v38; // x1
-  __int64 v39; // x24
-  __int64 v40; // x0
-  __int64 v41; // x1
-  __int64 v42; // x0
-  __int64 v43; // x1
-  __int64 v44; // x0
-  __int64 v45; // x1
-  __int64 v47; // x0
-  __int64 v48; // x0
+  __int64 v33; // x1
+  __int64 v35; // x0
+  __int64 v36; // x0
 
-  if ( (byte_42EB6AD & 1) == 0 )
+  if ( (byte_4354B8B & 1) == 0 )
   {
-    sub_B5D5C4(&byte___TypeInfo, (_DWORD)home, (_DWORD)info, isCompress);
-    sub_B5D5C4(&System_Security_Cryptography_CryptoStream_TypeInfo, v9, v10, v11);
-    sub_B5D5C4(&ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo, v12, v13, v14);
-    sub_B5D5C4(&System_IO_MemoryStream_TypeInfo, v15, v16, v17);
-    sub_B5D5C4(&System_Security_Cryptography_RijndaelManaged_TypeInfo, v18, v19, v20);
-    byte_42EB6AD = 1;
+    sub_B70694(&byte___TypeInfo);
+    sub_B70694(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_B70694(&ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
+    sub_B70694(&System_IO_MemoryStream_TypeInfo);
+    sub_B70694(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
+    byte_4354B8B = 1;
   }
-  v21 = (System_Security_Cryptography_RijndaelManaged_o *)sub_B5D694(System_Security_Cryptography_RijndaelManaged_TypeInfo);
-  System_Security_Cryptography_RijndaelManaged___ctor(v21, 0LL);
-  if ( !v21 )
-    sub_B5D69C(v22, v23);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v21->klass->vtable._21_set_Padding.method)(
-    v21,
+  v9 = (System_Security_Cryptography_RijndaelManaged_o *)sub_B70764(System_Security_Cryptography_RijndaelManaged_TypeInfo);
+  System_Security_Cryptography_RijndaelManaged___ctor(v9, 0LL);
+  if ( !v9 )
+    sub_B7076C(v10, v11);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._21_set_Padding.method)(
+    v9,
     2LL,
-    v21->klass->vtable._22_CreateEncryptor.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v21->klass->vtable._19_set_Mode.method)(
-    v21,
+    v9->klass->vtable._22_CreateEncryptor.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._19_set_Mode.method)(
+    v9,
     1LL,
-    v21->klass->vtable._20_get_Padding.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v21->klass->vtable._17_set_KeySize.method)(
-    v21,
+    v9->klass->vtable._20_get_Padding.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._17_set_KeySize.method)(
+    v9,
     256LL,
-    v21->klass->vtable._18_get_Mode.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v21->klass->vtable._7_set_BlockSize.method)(
-    v21,
+    v9->klass->vtable._18_get_Mode.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._7_set_BlockSize.method)(
+    v9,
     256LL,
-    v21->klass->vtable._8_get_FeedbackSize.methodPtr);
-  v24 = ((__int64 (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, System_Byte_array *, System_Byte_array *, Il2CppMethodPointer))v21->klass->vtable._25_CreateDecryptor.method)(
-          v21,
+    v9->klass->vtable._8_get_FeedbackSize.methodPtr);
+  v12 = ((__int64 (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, System_Byte_array *, System_Byte_array *, Il2CppMethodPointer))v9->klass->vtable._25_CreateDecryptor.method)(
+          v9,
           home,
           info,
-          v21->klass->vtable._26_GenerateKey.methodPtr);
+          v9->klass->vtable._26_GenerateKey.methodPtr);
   if ( !data )
-    sub_B5D69C(v24, v25);
-  v26 = (System_Security_Cryptography_ICryptoTransform_o *)v24;
-  v27 = (System_Byte_array *)sub_B5D5DC(byte___TypeInfo, data->max_length);
-  v28 = (System_IO_MemoryStream_o *)sub_B5D694(System_IO_MemoryStream_TypeInfo);
-  System_IO_MemoryStream___ctor_45159160(v28, data, 0LL);
-  v29 = (System_Security_Cryptography_CryptoStream_o *)sub_B5D694(System_Security_Cryptography_CryptoStream_TypeInfo);
-  System_Security_Cryptography_CryptoStream___ctor(v29, (System_IO_Stream_o *)v28, v26, 0, 0LL);
-  if ( !v27 )
-    sub_B5D69C(v30, v31);
-  if ( !v29 )
-    sub_B5D69C(v30, v31);
-  v32 = ((__int64 (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, System_Byte_array *, _QWORD, _QWORD, Il2CppMethodPointer))v29->klass->vtable._30_Read.method)(
-          v29,
-          v27,
+    sub_B7076C(v12, v13);
+  v14 = (System_Security_Cryptography_ICryptoTransform_o *)v12;
+  v15 = (System_Byte_array *)sub_B706AC(byte___TypeInfo, data->max_length);
+  v16 = (System_IO_MemoryStream_o *)sub_B70764(System_IO_MemoryStream_TypeInfo);
+  System_IO_MemoryStream___ctor_45610760(v16, data, 0LL);
+  v17 = (System_Security_Cryptography_CryptoStream_o *)sub_B70764(System_Security_Cryptography_CryptoStream_TypeInfo);
+  System_Security_Cryptography_CryptoStream___ctor(v17, (System_IO_Stream_o *)v16, v14, 0, 0LL);
+  if ( !v15 )
+    sub_B7076C(v18, v19);
+  if ( !v17 )
+    sub_B7076C(v18, v19);
+  v20 = ((__int64 (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, System_Byte_array *, _QWORD, _QWORD, Il2CppMethodPointer))v17->klass->vtable._30_Read.method)(
+          v17,
+          v15,
           0LL,
-          v27->max_length,
-          v29->klass->vtable._31_ReadByte.methodPtr);
+          v15->max_length,
+          v17->klass->vtable._31_ReadByte.methodPtr);
   if ( isCompress )
   {
-    max_length = v27->max_length;
+    max_length = v15->max_length;
     if ( !max_length )
     {
-      v47 = sub_B5D6C8(v32);
-      sub_B5D668(v47, 0LL);
+      v35 = sub_B70798(v20);
+      sub_B70738(v35, 0LL);
     }
-    if ( v27->m_Items[4] != 66 )
+    if ( v15->m_Items[4] != 66 )
       goto LABEL_13;
     if ( max_length <= 1 )
     {
-      v48 = sub_B5D6C8(v32);
-      sub_B5D668(v48, 0LL);
+      v36 = sub_B70798(v20);
+      sub_B70738(v36, 0LL);
     }
-    if ( v27->m_Items[5] == 90 )
+    if ( v15->m_Items[5] == 90 )
     {
-      v27 = 0LL;
+      v15 = 0LL;
     }
     else
     {
 LABEL_13:
-      v34 = (System_IO_MemoryStream_o *)sub_B5D694(System_IO_MemoryStream_TypeInfo);
-      System_IO_MemoryStream___ctor(v34, 0LL);
-      v35 = (System_IO_MemoryStream_o *)sub_B5D694(System_IO_MemoryStream_TypeInfo);
-      System_IO_MemoryStream___ctor_45159160(v35, v27, 0LL);
-      v36 = (ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *)sub_B5D694(ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
-      ICSharpCode_SharpZipLib_GZip_GZipInputStream___ctor(v36, (System_IO_Stream_o *)v35, 0LL);
-      v37 = sub_B5D5DC(byte___TypeInfo, 0x4000LL);
-      v39 = v37;
-      if ( !v37 )
-        sub_B5D69C(0LL, v38);
-      if ( !v36 )
-        sub_B5D69C(v37, v38);
+      v22 = (System_IO_MemoryStream_o *)sub_B70764(System_IO_MemoryStream_TypeInfo);
+      System_IO_MemoryStream___ctor(v22, 0LL);
+      v23 = (System_IO_MemoryStream_o *)sub_B70764(System_IO_MemoryStream_TypeInfo);
+      System_IO_MemoryStream___ctor_45610760(v23, v15, 0LL);
+      v24 = (ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *)sub_B70764(ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
+      ICSharpCode_SharpZipLib_GZip_GZipInputStream___ctor(v24, (System_IO_Stream_o *)v23, 0LL);
+      v25 = sub_B706AC(byte___TypeInfo, 0x4000LL);
+      v27 = v25;
+      if ( !v25 )
+        sub_B7076C(0LL, v26);
+      if ( !v24 )
+        sub_B7076C(v25, v26);
       while ( 1 )
       {
-        v40 = ((__int64 (__fastcall *)(ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v36->klass->vtable._30_Read.method)(
-                v36,
-                v39,
+        v28 = ((__int64 (__fastcall *)(ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v24->klass->vtable._30_Read.method)(
+                v24,
+                v27,
                 0LL,
-                *(unsigned int *)(v39 + 24),
-                v36->klass->vtable._31_ReadByte.methodPtr);
-        if ( (int)v40 < 1 )
+                *(unsigned int *)(v27 + 24),
+                v24->klass->vtable._31_ReadByte.methodPtr);
+        if ( (int)v28 < 1 )
           break;
-        if ( !v34 )
-          sub_B5D69C(v40, v41);
-        ((void (__fastcall *)(System_IO_MemoryStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v34->klass->vtable._32_Write.method)(
-          v34,
-          v39,
+        if ( !v22 )
+          sub_B7076C(v28, v29);
+        ((void (__fastcall *)(System_IO_MemoryStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v22->klass->vtable._32_Write.method)(
+          v22,
+          v27,
           0LL,
-          (unsigned int)v40,
-          v34->klass->vtable._33_WriteByte.methodPtr);
+          (unsigned int)v28,
+          v22->klass->vtable._33_WriteByte.methodPtr);
       }
-      v42 = ((__int64 (__fastcall *)(ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *, Il2CppMethodPointer))v36->klass->vtable._18_Close.method)(
-              v36,
-              v36->klass->vtable._19_Dispose.methodPtr);
-      if ( !v34 )
-        sub_B5D69C(v42, v43);
-      v44 = ((__int64 (__fastcall *)(System_IO_MemoryStream_o *, void *))v34->klass->vtable._37_ToArray.method)(
-              v34,
-              v34->klass[1]._1.image);
-      if ( !v35 )
-        sub_B5D69C(v44, v45);
-      v27 = (System_Byte_array *)v44;
-      ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v35->klass->vtable._18_Close.method)(
-        v35,
-        v35->klass->vtable._19_Dispose.methodPtr);
-      ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v34->klass->vtable._18_Close.method)(
-        v34,
-        v34->klass->vtable._19_Dispose.methodPtr);
+      v30 = ((__int64 (__fastcall *)(ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *, Il2CppMethodPointer))v24->klass->vtable._18_Close.method)(
+              v24,
+              v24->klass->vtable._19_Dispose.methodPtr);
+      if ( !v22 )
+        sub_B7076C(v30, v31);
+      v32 = ((__int64 (__fastcall *)(System_IO_MemoryStream_o *, void *))v22->klass->vtable._37_ToArray.method)(
+              v22,
+              v22->klass[1]._1.image);
+      if ( !v23 )
+        sub_B7076C(v32, v33);
+      v15 = (System_Byte_array *)v32;
+      ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v23->klass->vtable._18_Close.method)(
+        v23,
+        v23->klass->vtable._19_Dispose.methodPtr);
+      ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v22->klass->vtable._18_Close.method)(
+        v22,
+        v22->klass->vtable._19_Dispose.methodPtr);
     }
   }
-  if ( v28 )
-    ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v28->klass->vtable._18_Close.method)(
-      v28,
-      v28->klass->vtable._19_Dispose.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, Il2CppMethodPointer))v29->klass->vtable._18_Close.method)(
-    v29,
-    v29->klass->vtable._19_Dispose.methodPtr);
-  return v27;
+  if ( v16 )
+    ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v16->klass->vtable._18_Close.method)(
+      v16,
+      v16->klass->vtable._19_Dispose.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, Il2CppMethodPointer))v17->klass->vtable._18_Close.method)(
+    v17,
+    v17->klass->vtable._19_Dispose.methodPtr);
+  return v15;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 Il2CppObject *__fastcall CatAndMouseGame__MouseHomeMaster(
         System_Byte_array *data,
         System_Byte_array *home,
@@ -3766,35 +3495,31 @@ Il2CppObject *__fastcall CatAndMouseGame__MouseHomeMaster(
         bool isCompress,
         const MethodInfo *method)
 {
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  System_Byte_array *v12; // x19
-  MasterDataUnpakcer_o *v13; // x20
-  __int64 v14; // x0
-  __int64 v15; // x1
+  System_Byte_array *v9; // x19
+  MasterDataUnpakcer_o *v10; // x20
+  __int64 v11; // x0
+  __int64 v12; // x1
 
-  if ( (byte_42EB6AB & 1) == 0 )
+  if ( (byte_4354B89 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)home, (_DWORD)info, isCompress);
-    sub_B5D5C4(&MasterDataUnpakcer_TypeInfo, v9, v10, v11);
-    byte_42EB6AB = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&MasterDataUnpakcer_TypeInfo);
+    byte_4354B89 = 1;
   }
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
   }
-  v12 = CatAndMouseGame__MouseHomeSub(data, home, info, isCompress, method);
-  v13 = (MasterDataUnpakcer_o *)sub_B5D694(MasterDataUnpakcer_TypeInfo);
-  MasterDataUnpakcer___ctor(v13, 0LL);
-  if ( !v13 )
-    sub_B5D69C(v14, v15);
-  return MasterDataUnpakcer__Unpack_31013520(v13, v12, 0LL);
+  v9 = CatAndMouseGame__MouseHomeSub(data, home, info, isCompress, method);
+  v10 = (MasterDataUnpakcer_o *)sub_B70764(MasterDataUnpakcer_TypeInfo);
+  MasterDataUnpakcer___ctor(v10, 0LL);
+  if ( !v10 )
+    sub_B7076C(v11, v12);
+  return MasterDataUnpakcer__Unpack_30965448(v10, v9, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 Il2CppObject *__fastcall CatAndMouseGame__MouseHomeMsgPack(
         System_Byte_array *data,
         System_Byte_array *home,
@@ -3802,35 +3527,31 @@ Il2CppObject *__fastcall CatAndMouseGame__MouseHomeMsgPack(
         bool isCompress,
         const MethodInfo *method)
 {
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  MiniMessagePack_MiniMessagePacker_o *v12; // x23
-  const MethodInfo *v13; // x4
-  System_Byte_array *v14; // x0
-  __int64 v15; // x1
+  MiniMessagePack_MiniMessagePacker_o *v9; // x23
+  const MethodInfo *v10; // x4
+  System_Byte_array *v11; // x0
+  __int64 v12; // x1
 
-  if ( (byte_42EB6AA & 1) == 0 )
+  if ( (byte_4354B88 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)home, (_DWORD)info, isCompress);
-    sub_B5D5C4(&MiniMessagePack_MiniMessagePacker_TypeInfo, v9, v10, v11);
-    byte_42EB6AA = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&MiniMessagePack_MiniMessagePacker_TypeInfo);
+    byte_4354B88 = 1;
   }
-  v12 = (MiniMessagePack_MiniMessagePacker_o *)sub_B5D694(MiniMessagePack_MiniMessagePacker_TypeInfo);
-  MiniMessagePack_MiniMessagePacker___ctor(v12, 0LL);
+  v9 = (MiniMessagePack_MiniMessagePacker_o *)sub_B70764(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  MiniMessagePack_MiniMessagePacker___ctor(v9, 0LL);
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
   }
-  v14 = CatAndMouseGame__MouseHomeSub(data, home, info, isCompress, v13);
-  if ( !v12 )
-    sub_B5D69C(v14, v15);
-  return MiniMessagePack_MiniMessagePacker__Unpack_25000720(v12, v14, 0LL);
+  v11 = CatAndMouseGame__MouseHomeSub(data, home, info, isCompress, v10);
+  if ( !v9 )
+    sub_B7076C(v11, v12);
+  return MiniMessagePack_MiniMessagePacker__Unpack_22577800(v9, v11, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_Byte_array *__fastcall CatAndMouseGame__MouseHomeSub(
         System_Byte_array *data,
         System_Byte_array *home,
@@ -3838,278 +3559,250 @@ System_Byte_array *__fastcall CatAndMouseGame__MouseHomeSub(
         bool isCompress,
         const MethodInfo *method)
 {
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  int v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
-  int v15; // w1
-  int v16; // w2
-  __int64 v17; // x3
-  int v18; // w1
-  int v19; // w2
-  __int64 v20; // x3
-  System_Security_Cryptography_RijndaelManaged_o *v21; // x23
+  System_Security_Cryptography_RijndaelManaged_o *v9; // x23
+  __int64 v10; // x0
+  __int64 v11; // x1
+  System_Security_Cryptography_ICryptoTransform_o *v12; // x23
+  System_IO_MemoryStream_o *v13; // x19
+  System_Security_Cryptography_CryptoStream_o *v14; // x20
+  __int64 v15; // x0
+  __int64 v16; // x1
+  System_IO_MemoryStream_o *v17; // x21
+  ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *v18; // x22
+  __int64 v19; // x0
+  __int64 v20; // x1
+  __int64 v21; // x23
   __int64 v22; // x0
   __int64 v23; // x1
-  System_Security_Cryptography_ICryptoTransform_o *v24; // x23
-  System_IO_MemoryStream_o *v25; // x19
-  System_Security_Cryptography_CryptoStream_o *v26; // x20
+  __int64 v24; // x0
+  __int64 v25; // x1
+  System_Byte_array *v26; // x22
   __int64 v27; // x0
   __int64 v28; // x1
-  System_IO_MemoryStream_o *v29; // x21
-  ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *v30; // x22
-  __int64 v31; // x0
-  __int64 v32; // x1
-  __int64 v33; // x23
-  __int64 v34; // x0
-  __int64 v35; // x1
-  __int64 v36; // x0
-  __int64 v37; // x1
-  System_Byte_array *v38; // x22
-  __int64 v39; // x0
-  __int64 v40; // x1
 
-  if ( (byte_42EB6B0 & 1) == 0 )
+  if ( (byte_4354B8E & 1) == 0 )
   {
-    sub_B5D5C4(&byte___TypeInfo, (_DWORD)home, (_DWORD)info, isCompress);
-    sub_B5D5C4(&System_Security_Cryptography_CryptoStream_TypeInfo, v9, v10, v11);
-    sub_B5D5C4(&ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo, v12, v13, v14);
-    sub_B5D5C4(&System_IO_MemoryStream_TypeInfo, v15, v16, v17);
-    sub_B5D5C4(&System_Security_Cryptography_RijndaelManaged_TypeInfo, v18, v19, v20);
-    byte_42EB6B0 = 1;
+    sub_B70694(&byte___TypeInfo);
+    sub_B70694(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_B70694(&ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
+    sub_B70694(&System_IO_MemoryStream_TypeInfo);
+    sub_B70694(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
+    byte_4354B8E = 1;
   }
-  v21 = (System_Security_Cryptography_RijndaelManaged_o *)sub_B5D694(System_Security_Cryptography_RijndaelManaged_TypeInfo);
-  System_Security_Cryptography_RijndaelManaged___ctor(v21, 0LL);
-  if ( !v21 )
-    sub_B5D69C(v22, v23);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v21->klass->vtable._21_set_Padding.method)(
-    v21,
+  v9 = (System_Security_Cryptography_RijndaelManaged_o *)sub_B70764(System_Security_Cryptography_RijndaelManaged_TypeInfo);
+  System_Security_Cryptography_RijndaelManaged___ctor(v9, 0LL);
+  if ( !v9 )
+    sub_B7076C(v10, v11);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._21_set_Padding.method)(
+    v9,
     2LL,
-    v21->klass->vtable._22_CreateEncryptor.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v21->klass->vtable._19_set_Mode.method)(
-    v21,
+    v9->klass->vtable._22_CreateEncryptor.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._19_set_Mode.method)(
+    v9,
     1LL,
-    v21->klass->vtable._20_get_Padding.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v21->klass->vtable._17_set_KeySize.method)(
-    v21,
+    v9->klass->vtable._20_get_Padding.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._17_set_KeySize.method)(
+    v9,
     256LL,
-    v21->klass->vtable._18_get_Mode.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v21->klass->vtable._7_set_BlockSize.method)(
-    v21,
+    v9->klass->vtable._18_get_Mode.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._7_set_BlockSize.method)(
+    v9,
     256LL,
-    v21->klass->vtable._8_get_FeedbackSize.methodPtr);
-  v24 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, System_Byte_array *, System_Byte_array *, Il2CppMethodPointer))v21->klass->vtable._25_CreateDecryptor.method)(
-                                                             v21,
+    v9->klass->vtable._8_get_FeedbackSize.methodPtr);
+  v12 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, System_Byte_array *, System_Byte_array *, Il2CppMethodPointer))v9->klass->vtable._25_CreateDecryptor.method)(
+                                                             v9,
                                                              home,
                                                              info,
-                                                             v21->klass->vtable._26_GenerateKey.methodPtr);
-  v25 = (System_IO_MemoryStream_o *)sub_B5D694(System_IO_MemoryStream_TypeInfo);
-  System_IO_MemoryStream___ctor_45159160(v25, data, 0LL);
-  v26 = (System_Security_Cryptography_CryptoStream_o *)sub_B5D694(System_Security_Cryptography_CryptoStream_TypeInfo);
-  System_Security_Cryptography_CryptoStream___ctor(v26, (System_IO_Stream_o *)v25, v24, 0, 0LL);
+                                                             v9->klass->vtable._26_GenerateKey.methodPtr);
+  v13 = (System_IO_MemoryStream_o *)sub_B70764(System_IO_MemoryStream_TypeInfo);
+  System_IO_MemoryStream___ctor_45610760(v13, data, 0LL);
+  v14 = (System_Security_Cryptography_CryptoStream_o *)sub_B70764(System_Security_Cryptography_CryptoStream_TypeInfo);
+  System_Security_Cryptography_CryptoStream___ctor(v14, (System_IO_Stream_o *)v13, v12, 0, 0LL);
   if ( isCompress )
   {
-    v29 = (System_IO_MemoryStream_o *)sub_B5D694(System_IO_MemoryStream_TypeInfo);
-    System_IO_MemoryStream___ctor(v29, 0LL);
-    v30 = (ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *)sub_B5D694(ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
-    ICSharpCode_SharpZipLib_GZip_GZipInputStream___ctor(v30, (System_IO_Stream_o *)v26, 0LL);
-    v31 = sub_B5D5DC(byte___TypeInfo, 0x4000LL);
-    v33 = v31;
-    if ( !v31 )
-      sub_B5D69C(0LL, v32);
-    if ( !v30 )
-      sub_B5D69C(v31, v32);
+    v17 = (System_IO_MemoryStream_o *)sub_B70764(System_IO_MemoryStream_TypeInfo);
+    System_IO_MemoryStream___ctor(v17, 0LL);
+    v18 = (ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *)sub_B70764(ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
+    ICSharpCode_SharpZipLib_GZip_GZipInputStream___ctor(v18, (System_IO_Stream_o *)v14, 0LL);
+    v19 = sub_B706AC(byte___TypeInfo, 0x4000LL);
+    v21 = v19;
+    if ( !v19 )
+      sub_B7076C(0LL, v20);
+    if ( !v18 )
+      sub_B7076C(v19, v20);
     while ( 1 )
     {
-      v34 = ((__int64 (__fastcall *)(ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v30->klass->vtable._30_Read.method)(
-              v30,
-              v33,
+      v22 = ((__int64 (__fastcall *)(ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v18->klass->vtable._30_Read.method)(
+              v18,
+              v21,
               0LL,
-              *(unsigned int *)(v33 + 24),
-              v30->klass->vtable._31_ReadByte.methodPtr);
-      if ( (int)v34 < 1 )
+              *(unsigned int *)(v21 + 24),
+              v18->klass->vtable._31_ReadByte.methodPtr);
+      if ( (int)v22 < 1 )
         break;
-      if ( !v29 )
-        sub_B5D69C(v34, v35);
-      ((void (__fastcall *)(System_IO_MemoryStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v29->klass->vtable._32_Write.method)(
-        v29,
-        v33,
+      if ( !v17 )
+        sub_B7076C(v22, v23);
+      ((void (__fastcall *)(System_IO_MemoryStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v17->klass->vtable._32_Write.method)(
+        v17,
+        v21,
         0LL,
-        (unsigned int)v34,
-        v29->klass->vtable._33_WriteByte.methodPtr);
+        (unsigned int)v22,
+        v17->klass->vtable._33_WriteByte.methodPtr);
     }
-    System_IO_Stream__Dispose((System_IO_Stream_o *)v30, 0LL);
-    if ( !v29 )
-      sub_B5D69C(v39, v40);
-    v38 = (System_Byte_array *)((__int64 (__fastcall *)(System_IO_MemoryStream_o *, void *))v29->klass->vtable._37_ToArray.method)(
-                                 v29,
-                                 v29->klass[1]._1.image);
-    System_IO_Stream__Dispose((System_IO_Stream_o *)v29, 0LL);
+    System_IO_Stream__Dispose((System_IO_Stream_o *)v18, 0LL);
+    if ( !v17 )
+      sub_B7076C(v27, v28);
+    v26 = (System_Byte_array *)((__int64 (__fastcall *)(System_IO_MemoryStream_o *, void *))v17->klass->vtable._37_ToArray.method)(
+                                 v17,
+                                 v17->klass[1]._1.image);
+    System_IO_Stream__Dispose((System_IO_Stream_o *)v17, 0LL);
   }
   else
   {
     if ( !data )
-      sub_B5D69C(v27, v28);
-    v36 = sub_B5D5DC(byte___TypeInfo, data->max_length);
-    v38 = (System_Byte_array *)v36;
-    if ( !v36 )
-      sub_B5D69C(0LL, v37);
-    if ( !v26 )
-      sub_B5D69C(v36, v37);
-    ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v26->klass->vtable._30_Read.method)(
-      v26,
-      v36,
+      sub_B7076C(v15, v16);
+    v24 = sub_B706AC(byte___TypeInfo, data->max_length);
+    v26 = (System_Byte_array *)v24;
+    if ( !v24 )
+      sub_B7076C(0LL, v25);
+    if ( !v14 )
+      sub_B7076C(v24, v25);
+    ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v14->klass->vtable._30_Read.method)(
+      v14,
+      v24,
       0LL,
-      *(unsigned int *)(v36 + 24),
-      v26->klass->vtable._31_ReadByte.methodPtr);
+      *(unsigned int *)(v24 + 24),
+      v14->klass->vtable._31_ReadByte.methodPtr);
   }
-  if ( v25 )
-    ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v25->klass->vtable._18_Close.method)(
-      v25,
-      v25->klass->vtable._19_Dispose.methodPtr);
-  if ( v26 )
-    ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, Il2CppMethodPointer))v26->klass->vtable._18_Close.method)(
-      v26,
-      v26->klass->vtable._19_Dispose.methodPtr);
-  return v38;
+  if ( v13 )
+    ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v13->klass->vtable._18_Close.method)(
+      v13,
+      v13->klass->vtable._19_Dispose.methodPtr);
+  if ( v14 )
+    ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, Il2CppMethodPointer))v14->klass->vtable._18_Close.method)(
+      v14,
+      v14->klass->vtable._19_Dispose.methodPtr);
+  return v26;
 }
 
 
 System_String_o *__fastcall CatAndMouseGame__MouseInfo(System_Byte_array *data, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  System_Byte_array *v4; // x19
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  System_Array_o *v11; // x20
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
-  System_Int32_array **v18; // x21
-  CatAndMouseGame_c *v19; // x8
+  System_Byte_array *v2; // x19
+  System_Array_o *v3; // x20
+  System_String_array **v4; // x2
+  System_String_array **v5; // x3
+  System_Boolean_array **v6; // x4
+  System_Int32_array **v7; // x5
+  System_Int32_array *v8; // x6
+  System_Int32_array *v9; // x7
+  System_Int32_array **v10; // x21
+  CatAndMouseGame_c *v11; // x8
   struct CatAndMouseGame_StaticFields *static_fields; // x0
-  const MethodInfo *v21; // x4
+  const MethodInfo *v13; // x4
 
-  v4 = data;
-  if ( (byte_42EB693 & 1) == 0 )
+  v2 = data;
+  if ( (byte_4354B71 & 1) == 0 )
   {
-    sub_B5D5C4(&byte___TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, v5, v6, v7);
-    data = (System_Byte_array *)sub_B5D5C4(&StringLiteral_15387/*"W0Juh4cFJSYPkebJB9WpswNF51oa6Gm7"*/, v8, v9, v10);
-    byte_42EB693 = 1;
+    sub_B70694(&byte___TypeInfo);
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    data = (System_Byte_array *)sub_B70694(&StringLiteral_15418/*"W0Juh4cFJSYPkebJB9WpswNF51oa6Gm7"*/);
+    byte_4354B71 = 1;
   }
-  if ( !v4
-    || (v11 = (System_Array_o *)sub_B5D5DC(byte___TypeInfo, v4->max_length - 32),
+  if ( !v2
+    || (v3 = (System_Array_o *)sub_B706AC(byte___TypeInfo, v2->max_length - 32),
         (data = (System_Byte_array *)System_Text_Encoding__get_UTF8(0LL)) == 0LL) )
   {
-    sub_B5D69C(data, method);
+    sub_B7076C(data, method);
   }
-  v18 = (System_Int32_array **)((__int64 (__fastcall *)(System_Byte_array *, __int64, Il2CppMethodPointer))data->obj.klass->vtable[18].method)(
+  v10 = (System_Int32_array **)((__int64 (__fastcall *)(System_Byte_array *, __int64, Il2CppMethodPointer))data->obj.klass->vtable[18].method)(
                                  data,
-                                 StringLiteral_15387/*"W0Juh4cFJSYPkebJB9WpswNF51oa6Gm7"*/,
+                                 StringLiteral_15418/*"W0Juh4cFJSYPkebJB9WpswNF51oa6Gm7"*/,
                                  data->obj.klass->vtable[19].methodPtr);
-  v19 = CatAndMouseGame_TypeInfo;
+  v11 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v19 = CatAndMouseGame_TypeInfo;
+    v11 = CatAndMouseGame_TypeInfo;
   }
-  static_fields = v19->static_fields;
-  static_fields->infoData = (struct System_Byte_array *)v18;
-  sub_B5D560((BattleServantConfConponent_o *)&static_fields->infoData, v18, v12, v13, v14, v15, v16, v17);
-  System_Array__Copy_43381116(
-    (System_Array_o *)v4,
+  static_fields = v11->static_fields;
+  static_fields->infoData = (struct System_Byte_array *)v10;
+  sub_B70630((BattleServantConfConponent_o *)&static_fields->infoData, v10, v4, v5, v6, v7, v8, v9);
+  System_Array__Copy_43134268(
+    (System_Array_o *)v2,
     0,
     (System_Array_o *)CatAndMouseGame_TypeInfo->static_fields->InfoTop,
     0,
     32,
     0LL);
-  System_Array__Copy_43381116((System_Array_o *)v4, 32, v11, 0, v4->max_length - 32, 0LL);
+  System_Array__Copy_43134268((System_Array_o *)v2, 32, v3, 0, v2->max_length - 32, 0LL);
   return CatAndMouseGame__MouseHome(
-           (System_Byte_array *)v11,
+           (System_Byte_array *)v3,
            CatAndMouseGame_TypeInfo->static_fields->infoData,
            CatAndMouseGame_TypeInfo->static_fields->InfoTop,
            1,
-           v21);
+           v13);
 }
 
 
 Il2CppObject *__fastcall CatAndMouseGame__MouseInfoMsgPack(System_Byte_array *data, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  System_Byte_array *v4; // x19
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  System_Array_o *v11; // x20
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
-  System_Int32_array **v18; // x21
-  CatAndMouseGame_c *v19; // x8
+  System_Byte_array *v2; // x19
+  System_Array_o *v3; // x20
+  System_String_array **v4; // x2
+  System_String_array **v5; // x3
+  System_Boolean_array **v6; // x4
+  System_Int32_array **v7; // x5
+  System_Int32_array *v8; // x6
+  System_Int32_array *v9; // x7
+  System_Int32_array **v10; // x21
+  CatAndMouseGame_c *v11; // x8
   struct CatAndMouseGame_StaticFields *static_fields; // x0
-  const MethodInfo *v21; // x4
+  const MethodInfo *v13; // x4
 
-  v4 = data;
-  if ( (byte_42EB694 & 1) == 0 )
+  v2 = data;
+  if ( (byte_4354B72 & 1) == 0 )
   {
-    sub_B5D5C4(&byte___TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, v5, v6, v7);
-    data = (System_Byte_array *)sub_B5D5C4(&StringLiteral_15387/*"W0Juh4cFJSYPkebJB9WpswNF51oa6Gm7"*/, v8, v9, v10);
-    byte_42EB694 = 1;
+    sub_B70694(&byte___TypeInfo);
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    data = (System_Byte_array *)sub_B70694(&StringLiteral_15418/*"W0Juh4cFJSYPkebJB9WpswNF51oa6Gm7"*/);
+    byte_4354B72 = 1;
   }
-  if ( !v4
-    || (v11 = (System_Array_o *)sub_B5D5DC(byte___TypeInfo, v4->max_length - 32),
+  if ( !v2
+    || (v3 = (System_Array_o *)sub_B706AC(byte___TypeInfo, v2->max_length - 32),
         (data = (System_Byte_array *)System_Text_Encoding__get_UTF8(0LL)) == 0LL) )
   {
-    sub_B5D69C(data, method);
+    sub_B7076C(data, method);
   }
-  v18 = (System_Int32_array **)((__int64 (__fastcall *)(System_Byte_array *, __int64, Il2CppMethodPointer))data->obj.klass->vtable[18].method)(
+  v10 = (System_Int32_array **)((__int64 (__fastcall *)(System_Byte_array *, __int64, Il2CppMethodPointer))data->obj.klass->vtable[18].method)(
                                  data,
-                                 StringLiteral_15387/*"W0Juh4cFJSYPkebJB9WpswNF51oa6Gm7"*/,
+                                 StringLiteral_15418/*"W0Juh4cFJSYPkebJB9WpswNF51oa6Gm7"*/,
                                  data->obj.klass->vtable[19].methodPtr);
-  v19 = CatAndMouseGame_TypeInfo;
+  v11 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v19 = CatAndMouseGame_TypeInfo;
+    v11 = CatAndMouseGame_TypeInfo;
   }
-  static_fields = v19->static_fields;
-  static_fields->infoData = (struct System_Byte_array *)v18;
-  sub_B5D560((BattleServantConfConponent_o *)&static_fields->infoData, v18, v12, v13, v14, v15, v16, v17);
-  System_Array__Copy_43381116(
-    (System_Array_o *)v4,
+  static_fields = v11->static_fields;
+  static_fields->infoData = (struct System_Byte_array *)v10;
+  sub_B70630((BattleServantConfConponent_o *)&static_fields->infoData, v10, v4, v5, v6, v7, v8, v9);
+  System_Array__Copy_43134268(
+    (System_Array_o *)v2,
     0,
     (System_Array_o *)CatAndMouseGame_TypeInfo->static_fields->InfoTop,
     0,
     32,
     0LL);
-  System_Array__Copy_43381116((System_Array_o *)v4, 32, v11, 0, v4->max_length - 32, 0LL);
+  System_Array__Copy_43134268((System_Array_o *)v2, 32, v3, 0, v2->max_length - 32, 0LL);
   return CatAndMouseGame__MouseHomeMsgPack(
-           (System_Byte_array *)v11,
+           (System_Byte_array *)v3,
            CatAndMouseGame_TypeInfo->static_fields->infoData,
            CatAndMouseGame_TypeInfo->static_fields->InfoTop,
            1,
-           v21);
+           v13);
 }
 
 
@@ -4119,139 +3812,124 @@ void __fastcall CatAndMouseGame__OtherHomeBuilding(
         System_Byte_array **info,
         const MethodInfo *method)
 {
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
-  int v10; // w1
-  int v11; // w2
-  __int64 v12; // x3
-  int v13; // w1
-  int v14; // w2
-  __int64 v15; // x3
-  int v16; // w1
-  int v17; // w2
-  __int64 v18; // x3
-  int v19; // w1
-  int v20; // w2
-  __int64 v21; // x3
-  CatAndMouseGame_c *v22; // x0
+  CatAndMouseGame_c *v7; // x0
   void *keyCollection; // x0
-  CatAndMouseGame_c *v24; // x0
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
-  System_Byte_array *v31; // x1
-  System_String_array **v32; // x2
-  System_String_array **v33; // x3
-  System_Boolean_array **v34; // x4
-  System_Int32_array **v35; // x5
-  System_Int32_array *v36; // x6
-  System_Int32_array *v37; // x7
-  System_Byte_array *v38; // x1
-  __int64 v39; // x22
-  System_Byte_array *v40; // x0
-  System_String_array **v41; // x2
-  System_String_array **v42; // x3
-  System_Boolean_array **v43; // x4
-  System_Int32_array **v44; // x5
-  System_Int32_array *v45; // x6
-  System_Int32_array *v46; // x7
-  System_Byte_array *v47; // x0
-  System_String_array **v48; // x2
-  System_String_array **v49; // x3
-  System_Boolean_array **v50; // x4
-  System_Int32_array **v51; // x5
-  System_Int32_array *v52; // x6
-  System_Int32_array *v53; // x7
-  unsigned __int64 v54; // x8
-  unsigned int v55; // w10
-  __int64 v56; // x9
-  unsigned __int64 v57; // x11
-  System_Byte_array *v58; // x10
-  System_Byte_array *v59; // x10
-  CatAndMouseGame_c *v60; // x0
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *v61; // x22
-  System_String_array **v62; // x2
-  System_String_array **v63; // x3
-  System_Boolean_array **v64; // x4
-  System_Int32_array **v65; // x5
-  System_Int32_array *v66; // x6
-  System_Int32_array *v67; // x7
-  System_Int32_array **v68; // x21
-  System_Xml_Schema_XmlSchemaObject_o *v69; // x23
-  System_String_array **v70; // x2
-  System_String_array **v71; // x3
-  System_Boolean_array **v72; // x4
-  System_Int32_array **v73; // x5
-  System_Int32_array *v74; // x6
-  System_Int32_array *v75; // x7
-  System_Int32_array **v76; // x20
-  __int64 v77; // x0
-  __int64 v78; // x0
+  CatAndMouseGame_c *v9; // x0
+  System_String_array **v10; // x2
+  System_String_array **v11; // x3
+  System_Boolean_array **v12; // x4
+  System_Int32_array **v13; // x5
+  System_Int32_array *v14; // x6
+  System_Int32_array *v15; // x7
+  System_Byte_array *v16; // x1
+  System_String_array **v17; // x2
+  System_String_array **v18; // x3
+  System_Boolean_array **v19; // x4
+  System_Int32_array **v20; // x5
+  System_Int32_array *v21; // x6
+  System_Int32_array *v22; // x7
+  System_Byte_array *v23; // x1
+  __int64 v24; // x22
+  System_Byte_array *v25; // x0
+  System_String_array **v26; // x2
+  System_String_array **v27; // x3
+  System_Boolean_array **v28; // x4
+  System_Int32_array **v29; // x5
+  System_Int32_array *v30; // x6
+  System_Int32_array *v31; // x7
+  System_Byte_array *v32; // x0
+  System_String_array **v33; // x2
+  System_String_array **v34; // x3
+  System_Boolean_array **v35; // x4
+  System_Int32_array **v36; // x5
+  System_Int32_array *v37; // x6
+  System_Int32_array *v38; // x7
+  unsigned __int64 v39; // x8
+  unsigned int v40; // w10
+  __int64 v41; // x9
+  unsigned __int64 v42; // x11
+  System_Byte_array *v43; // x10
+  System_Byte_array *v44; // x10
+  CatAndMouseGame_c *v45; // x0
+  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *v46; // x22
+  System_String_array **v47; // x2
+  System_String_array **v48; // x3
+  System_Boolean_array **v49; // x4
+  System_Int32_array **v50; // x5
+  System_Int32_array *v51; // x6
+  System_Int32_array *v52; // x7
+  System_Int32_array **v53; // x21
+  System_Xml_Schema_XmlSchemaObject_o *v54; // x23
+  System_String_array **v55; // x2
+  System_String_array **v56; // x3
+  System_Boolean_array **v57; // x4
+  System_Int32_array **v58; // x5
+  System_Int32_array *v59; // x6
+  System_Int32_array *v60; // x7
+  System_Int32_array **v61; // x20
+  __int64 v62; // x0
+  __int64 v63; // x0
 
-  if ( (byte_42EB69E & 1) == 0 )
+  if ( (byte_4354B7C & 1) == 0 )
   {
-    sub_B5D5C4(&byte_____TypeInfo, (_DWORD)home, (_DWORD)info, method);
-    sub_B5D5C4(&byte___TypeInfo, v7, v8, v9);
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, v10, v11, v12);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_string__byte______Add__, v13, v14, v15);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_string__byte______ContainsKey__, v16, v17, v18);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_string__byte______get_Item__, v19, v20, v21);
-    byte_42EB69E = 1;
+    sub_B70694(&byte_____TypeInfo);
+    sub_B70694(&byte___TypeInfo);
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__byte______Add__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__byte______ContainsKey__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__byte______get_Item__);
+    byte_4354B7C = 1;
   }
-  v22 = CatAndMouseGame_TypeInfo;
+  v7 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v22 = CatAndMouseGame_TypeInfo;
+    v7 = CatAndMouseGame_TypeInfo;
   }
-  keyCollection = v22->static_fields->keyCollection;
+  keyCollection = v7->static_fields->keyCollection;
   if ( !keyCollection )
     goto LABEL_45;
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)keyCollection,
          (System_Xml_XmlQualifiedName_o *)data,
-         (const MethodInfo_2F26E30 *)Method_System_Collections_Generic_Dictionary_string__byte______ContainsKey__) )
+         (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__byte______ContainsKey__) )
   {
-    v24 = CatAndMouseGame_TypeInfo;
+    v9 = CatAndMouseGame_TypeInfo;
     if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-      v24 = CatAndMouseGame_TypeInfo;
+      v9 = CatAndMouseGame_TypeInfo;
     }
-    keyCollection = v24->static_fields->keyCollection;
+    keyCollection = v9->static_fields->keyCollection;
     if ( keyCollection )
     {
       keyCollection = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                         (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)keyCollection,
                         (System_Type_o *)data,
-                        (const MethodInfo_2F26AF8 *)Method_System_Collections_Generic_Dictionary_string__byte______get_Item__);
+                        (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__byte______get_Item__);
       if ( keyCollection )
       {
         if ( !*((_DWORD *)keyCollection + 6) )
           goto LABEL_44;
-        v31 = (System_Byte_array *)*((_QWORD *)keyCollection + 4);
-        *home = v31;
-        sub_B5D560((BattleServantConfConponent_o *)home, (System_Int32_array **)v31, v25, v26, v27, v28, v29, v30);
+        v16 = (System_Byte_array *)*((_QWORD *)keyCollection + 4);
+        *home = v16;
+        sub_B70630((BattleServantConfConponent_o *)home, (System_Int32_array **)v16, v10, v11, v12, v13, v14, v15);
         keyCollection = CatAndMouseGame_TypeInfo->static_fields->keyCollection;
         if ( keyCollection )
         {
           keyCollection = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                             (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)keyCollection,
                             (System_Type_o *)data,
-                            (const MethodInfo_2F26AF8 *)Method_System_Collections_Generic_Dictionary_string__byte______get_Item__);
+                            (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__byte______get_Item__);
           if ( keyCollection )
           {
             if ( *((_DWORD *)keyCollection + 6) > 1u )
             {
-              v38 = (System_Byte_array *)*((_QWORD *)keyCollection + 5);
-              *info = v38;
-              sub_B5D560((BattleServantConfConponent_o *)info, (System_Int32_array **)v38, v32, v33, v34, v35, v36, v37);
+              v23 = (System_Byte_array *)*((_QWORD *)keyCollection + 5);
+              *info = v23;
+              sub_B70630((BattleServantConfConponent_o *)info, (System_Int32_array **)v23, v17, v18, v19, v20, v21, v22);
               return;
             }
             goto LABEL_44;
@@ -4264,305 +3942,224 @@ void __fastcall CatAndMouseGame__OtherHomeBuilding(
   keyCollection = System_Text_Encoding__get_UTF8(0LL);
   if ( !keyCollection )
     goto LABEL_45;
-  v39 = (*(__int64 (__fastcall **)(void *, System_String_o *, _QWORD))(*(_QWORD *)keyCollection + 600LL))(
+  v24 = (*(__int64 (__fastcall **)(void *, System_String_o *, _QWORD))(*(_QWORD *)keyCollection + 600LL))(
           keyCollection,
           data,
           *(_QWORD *)(*(_QWORD *)keyCollection + 608LL));
-  v40 = (System_Byte_array *)sub_B5D5DC(byte___TypeInfo, 32LL);
-  *home = v40;
-  sub_B5D560((BattleServantConfConponent_o *)home, (System_Int32_array **)v40, v41, v42, v43, v44, v45, v46);
-  v47 = (System_Byte_array *)sub_B5D5DC(byte___TypeInfo, 32LL);
-  *info = v47;
-  sub_B5D560((BattleServantConfConponent_o *)info, (System_Int32_array **)v47, v48, v49, v50, v51, v52, v53);
-  if ( !v39 )
+  v25 = (System_Byte_array *)sub_B706AC(byte___TypeInfo, 32LL);
+  *home = v25;
+  sub_B70630((BattleServantConfConponent_o *)home, (System_Int32_array **)v25, v26, v27, v28, v29, v30, v31);
+  v32 = (System_Byte_array *)sub_B706AC(byte___TypeInfo, 32LL);
+  *info = v32;
+  sub_B70630((BattleServantConfConponent_o *)info, (System_Int32_array **)v32, v33, v34, v35, v36, v37, v38);
+  if ( !v24 )
     goto LABEL_45;
-  if ( (int)*(_QWORD *)(v39 + 24) >= 1 )
+  if ( (int)*(_QWORD *)(v24 + 24) >= 1 )
   {
-    v54 = 0LL;
-    v55 = *(_QWORD *)(v39 + 24);
-    v56 = v39 + 32;
+    v39 = 0LL;
+    v40 = *(_QWORD *)(v24 + 24);
+    v41 = v24 + 32;
     do
     {
-      v57 = v54 & 0x1F;
-      if ( (v54 & 0x1F) != 0 )
+      v42 = v39 & 0x1F;
+      if ( (v39 & 0x1F) != 0 )
       {
-        if ( v54 >= v55 )
+        if ( v39 >= v40 )
           goto LABEL_44;
-        v58 = *info;
+        v43 = *info;
         if ( !*info )
           goto LABEL_45;
-        if ( (unsigned int)v57 >= v58->max_length )
+        if ( (unsigned int)v42 >= v43->max_length )
           goto LABEL_44;
-        v58->m_Items[v57 + 4] = *(_BYTE *)(v56 + v54);
+        v43->m_Items[v42 + 4] = *(_BYTE *)(v41 + v39);
       }
       else
       {
-        if ( v54 >= v55 )
+        if ( v39 >= v40 )
           goto LABEL_44;
-        v59 = *home;
+        v44 = *home;
         if ( !*home )
           goto LABEL_45;
-        if ( !v59->max_length )
+        if ( !v44->max_length )
           goto LABEL_44;
-        v59->m_Items[4] = *(_BYTE *)(v56 + v54);
+        v44->m_Items[4] = *(_BYTE *)(v41 + v39);
       }
-      v55 = *(_DWORD *)(v39 + 24);
+      v40 = *(_DWORD *)(v24 + 24);
     }
-    while ( (__int64)++v54 < (int)v55 );
+    while ( (__int64)++v39 < (int)v40 );
   }
-  v60 = CatAndMouseGame_TypeInfo;
+  v45 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v60 = CatAndMouseGame_TypeInfo;
+    v45 = CatAndMouseGame_TypeInfo;
   }
-  v61 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v60->static_fields->keyCollection;
-  keyCollection = (void *)sub_B5D5DC(byte_____TypeInfo, 2LL);
+  v46 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v45->static_fields->keyCollection;
+  keyCollection = (void *)sub_B706AC(byte_____TypeInfo, 2LL);
   if ( !keyCollection )
     goto LABEL_45;
-  v68 = (System_Int32_array **)*home;
-  v69 = (System_Xml_Schema_XmlSchemaObject_o *)keyCollection;
-  if ( v68 )
+  v53 = (System_Int32_array **)*home;
+  v54 = (System_Xml_Schema_XmlSchemaObject_o *)keyCollection;
+  if ( v53 )
   {
-    keyCollection = (void *)sub_B5D684(v68, *(_QWORD *)(*(_QWORD *)keyCollection + 64LL));
+    keyCollection = (void *)sub_B70754(v53, *(_QWORD *)(*(_QWORD *)keyCollection + 64LL));
     if ( !keyCollection )
       goto LABEL_46;
   }
-  if ( !LODWORD(v69->fields.sourceUri) )
+  if ( !LODWORD(v54->fields.sourceUri) )
     goto LABEL_44;
-  v69->fields.namespaces = (struct System_Xml_Serialization_XmlSerializerNamespaces_o *)v68;
-  sub_B5D560((BattleServantConfConponent_o *)&v69->fields.namespaces, v68, v62, v63, v64, v65, v66, v67);
-  v76 = (System_Int32_array **)*info;
-  if ( v76 )
+  v54->fields.namespaces = (struct System_Xml_Serialization_XmlSerializerNamespaces_o *)v53;
+  sub_B70630((BattleServantConfConponent_o *)&v54->fields.namespaces, v53, v47, v48, v49, v50, v51, v52);
+  v61 = (System_Int32_array **)*info;
+  if ( v61 )
   {
-    keyCollection = (void *)sub_B5D684(v76, v69->klass->_1.element_class);
+    keyCollection = (void *)sub_B70754(v61, v54->klass->_1.element_class);
     if ( !keyCollection )
     {
 LABEL_46:
-      v78 = sub_B5D6BC(keyCollection);
-      sub_B5D668(v78, 0LL);
+      v63 = sub_B7078C(keyCollection);
+      sub_B70738(v63, 0LL);
     }
   }
-  if ( LODWORD(v69->fields.sourceUri) <= 1 )
+  if ( LODWORD(v54->fields.sourceUri) <= 1 )
   {
 LABEL_44:
-    v77 = sub_B5D6C8(keyCollection);
-    sub_B5D668(v77, 0LL);
+    v62 = sub_B70798(keyCollection);
+    sub_B70738(v62, 0LL);
   }
-  v69->fields.parent = (struct System_Xml_Schema_XmlSchemaObject_o *)v76;
-  sub_B5D560((BattleServantConfConponent_o *)&v69->fields.parent, v76, v70, v71, v72, v73, v74, v75);
-  if ( !v61 )
+  v54->fields.parent = (struct System_Xml_Schema_XmlSchemaObject_o *)v61;
+  sub_B70630((BattleServantConfConponent_o *)&v54->fields.parent, v61, v55, v56, v57, v58, v59, v60);
+  if ( !v46 )
 LABEL_45:
-    sub_B5D69C(keyCollection, home);
+    sub_B7076C(keyCollection, home);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
-    v61,
+    v46,
     (System_Xml_XmlQualifiedName_o *)data,
-    v69,
-    (const MethodInfo_2F26BBC *)Method_System_Collections_Generic_Dictionary_string__byte______Add__);
+    v54,
+    (const MethodInfo_2F4F9E8 *)Method_System_Collections_Generic_Dictionary_string__byte______Add__);
 }
 
 
 void __fastcall CatAndMouseGame__SetAssetbundleKeys(Il2CppObject *obj, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  int v14; // w1
-  int v15; // w2
-  __int64 v16; // x3
-  CatAndMouseGame_c *v17; // x0
+  CatAndMouseGame_c *v3; // x0
   void *assetbundleKeyCollection; // x0
-  int v19; // w8
-  void *v20; // x19
-  unsigned int v21; // w21
-  __int64 v22; // x23
-  __int64 v23; // x0
+  int v5; // w8
+  void *v6; // x19
+  unsigned int v7; // w21
+  __int64 v8; // x23
+  __int64 v9; // x0
 
-  if ( (byte_42EB69C & 1) == 0 )
+  if ( (byte_4354B7A & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_string__string__Clear__, v5, v6, v7);
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__, v8, v9, v10);
-    sub_B5D5C4(&Method_JsonManager_DeserializeArray_CatAndMouseGame_AssetbundleKeyEntity___, v11, v12, v13);
-    sub_B5D5C4(&JsonManager_TypeInfo, v14, v15, v16);
-    byte_42EB69C = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__string__Clear__);
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    sub_B70694(&Method_JsonManager_DeserializeArray_CatAndMouseGame_AssetbundleKeyEntity___);
+    sub_B70694(&JsonManager_TypeInfo);
+    byte_4354B7A = 1;
   }
-  v17 = CatAndMouseGame_TypeInfo;
+  v3 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v17 = CatAndMouseGame_TypeInfo;
+    v3 = CatAndMouseGame_TypeInfo;
   }
-  assetbundleKeyCollection = v17->static_fields->assetbundleKeyCollection;
+  assetbundleKeyCollection = v3->static_fields->assetbundleKeyCollection;
   if ( !assetbundleKeyCollection )
     goto LABEL_21;
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Clear(
     (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)assetbundleKeyCollection,
-    (const MethodInfo_2F26D98 *)Method_System_Collections_Generic_Dictionary_string__string__Clear__);
+    (const MethodInfo_2F4FBC4 *)Method_System_Collections_Generic_Dictionary_string__string__Clear__);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   assetbundleKeyCollection = JsonManager__DeserializeArray_UserPresentBoxWindow_resData_(
                                obj,
-                               (const MethodInfo_1E5E1D0 *)Method_JsonManager_DeserializeArray_CatAndMouseGame_AssetbundleKeyEntity___);
+                               (const MethodInfo_1D50530 *)Method_JsonManager_DeserializeArray_CatAndMouseGame_AssetbundleKeyEntity___);
   if ( !assetbundleKeyCollection )
     goto LABEL_21;
-  v19 = *((_DWORD *)assetbundleKeyCollection + 6);
-  v20 = assetbundleKeyCollection;
-  if ( v19 >= 1 )
+  v5 = *((_DWORD *)assetbundleKeyCollection + 6);
+  v6 = assetbundleKeyCollection;
+  if ( v5 >= 1 )
   {
-    v21 = 0;
+    v7 = 0;
     while ( 1 )
     {
-      if ( v21 >= v19 )
+      if ( v7 >= v5 )
       {
-        v23 = sub_B5D6C8(assetbundleKeyCollection);
-        sub_B5D668(v23, 0LL);
+        v9 = sub_B70798(assetbundleKeyCollection);
+        sub_B70738(v9, 0LL);
       }
       assetbundleKeyCollection = CatAndMouseGame_TypeInfo;
-      v22 = *((_QWORD *)v20 + (int)v21 + 4);
+      v8 = *((_QWORD *)v6 + (int)v7 + 4);
       if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
         assetbundleKeyCollection = CatAndMouseGame_TypeInfo;
       }
-      if ( !v22 )
+      if ( !v8 )
         break;
       assetbundleKeyCollection = *(void **)(*((_QWORD *)assetbundleKeyCollection + 23) + 96LL);
       if ( !assetbundleKeyCollection )
         break;
       System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
         (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)assetbundleKeyCollection,
-        *(System_Xml_XmlQualifiedName_o **)(v22 + 16),
-        *(System_Xml_Schema_XmlSchemaObject_o **)(v22 + 24),
-        (const MethodInfo_2F26B94 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
-      v19 = *((_DWORD *)v20 + 6);
-      if ( (int)++v21 >= v19 )
+        *(System_Xml_XmlQualifiedName_o **)(v8 + 16),
+        *(System_Xml_Schema_XmlSchemaObject_o **)(v8 + 24),
+        (const MethodInfo_2F4F9C0 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+      v5 = *((_DWORD *)v6 + 6);
+      if ( (int)++v7 >= v5 )
         return;
     }
 LABEL_21:
-    sub_B5D69C(assetbundleKeyCollection, method);
+    sub_B7076C(assetbundleKeyCollection, method);
   }
 }
 
 
 void __fastcall CatAndMouseGame__SixHomeBuilding(System_String_o *data, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   void *UTF8; // x0
-  __int64 v6; // x1
-  void *v7; // x20
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
-  System_Int32_array **v14; // x20
-  CatAndMouseGame_c *v15; // x8
+  __int64 v4; // x1
+  void *v5; // x20
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
+  System_Int32_array **v12; // x20
+  CatAndMouseGame_c *v13; // x8
   struct CatAndMouseGame_StaticFields *static_fields; // x0
-  System_Text_Encoding_o *v17; // x20
-  System_Int32_array **v18; // x0
-  struct CatAndMouseGame_StaticFields *v19; // x8
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
+  System_Text_Encoding_o *v15; // x20
+  System_Int32_array **v16; // x0
+  struct CatAndMouseGame_StaticFields *v17; // x8
+  System_String_array **v18; // x2
+  System_String_array **v19; // x3
+  System_Boolean_array **v20; // x4
+  System_Int32_array **v21; // x5
+  System_Int32_array *v22; // x6
+  System_Int32_array *v23; // x7
 
-  if ( (byte_42EB6A3 & 1) == 0 )
+  if ( (byte_4354B81 & 1) == 0 )
   {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EB6A3 = 1;
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    byte_4354B81 = 1;
   }
   UTF8 = System_Text_Encoding__get_UTF8(0LL);
   if ( !data )
     goto LABEL_10;
-  v7 = UTF8;
+  v5 = UTF8;
   UTF8 = System_String__Substring(data, 32, 0LL);
-  if ( !v7 )
+  if ( !v5 )
     goto LABEL_10;
-  v14 = (System_Int32_array **)(*(__int64 (__fastcall **)(void *, void *, _QWORD))(*(_QWORD *)v7 + 600LL))(
-                                 v7,
+  v12 = (System_Int32_array **)(*(__int64 (__fastcall **)(void *, void *, _QWORD))(*(_QWORD *)v5 + 600LL))(
+                                 v5,
                                  UTF8,
-                                 *(_QWORD *)(*(_QWORD *)v7 + 608LL));
-  v15 = CatAndMouseGame_TypeInfo;
-  if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-    v15 = CatAndMouseGame_TypeInfo;
-  }
-  static_fields = v15->static_fields;
-  static_fields->sideData = (struct System_Byte_array *)v14;
-  sub_B5D560((BattleServantConfConponent_o *)&static_fields->sideData, v14, v8, v9, v10, v11, v12, v13);
-  v17 = System_Text_Encoding__get_UTF8(0LL);
-  UTF8 = System_String__Substring_44641524(data, 0, 32, 0LL);
-  if ( !v17 )
-LABEL_10:
-    sub_B5D69C(UTF8, v6);
-  v18 = (System_Int32_array **)((__int64 (__fastcall *)(System_Text_Encoding_o *, void *, Il2CppMethodPointer))v17->klass->vtable._18_GetBytes.method)(
-                                 v17,
-                                 UTF8,
-                                 v17->klass->vtable._19_GetBytes.methodPtr);
-  v19 = CatAndMouseGame_TypeInfo->static_fields;
-  v19->sideTop = (struct System_Byte_array *)v18;
-  sub_B5D560((BattleServantConfConponent_o *)&v19->sideTop, v18, v20, v21, v22, v23, v24, v25);
-}
-
-
-void __fastcall CatAndMouseGame__ThirdHomeBuilding(System_String_o *data, const MethodInfo *method)
-{
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  bool isPlaying; // w20
-  _QWORD *UTF8; // x0
-  __int64 v10; // x1
-  __int64 v11; // x0
-  __int64 v12; // x19
-  CatAndMouseGame_c *v13; // x0
-  __int64 v14; // x8
-  unsigned __int64 v15; // x21
-  __int64 v16; // x9
-  char v17; // w10
-  __int64 v18; // x0
-
-  if ( (byte_42EB695 & 1) == 0 )
-  {
-    sub_B5D5C4(&CatAndMouseGame_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&StringLiteral_20420/*"kzdMtpmzqCHAfx00saU1gIhTjYCuOD1JstqtisXsGYqRVcqrHRydj3k6vJCySu3g"*/, v5, v6, v7);
-    byte_42EB695 = 1;
-  }
-  isPlaying = UnityEngine_Application__get_isPlaying(0LL);
-  UTF8 = System_Text_Encoding__get_UTF8(0LL);
-  if ( !UTF8 )
-    goto LABEL_29;
-  if ( isPlaying )
-    v11 = (*(__int64 (__fastcall **)(_QWORD *, System_String_o *, _QWORD))(*UTF8 + 600LL))(
-            UTF8,
-            data,
-            *(_QWORD *)(*UTF8 + 608LL));
-  else
-    v11 = (*(__int64 (__fastcall **)(_QWORD *, __int64, _QWORD))(*UTF8 + 600LL))(
-            UTF8,
-            StringLiteral_20420/*"kzdMtpmzqCHAfx00saU1gIhTjYCuOD1JstqtisXsGYqRVcqrHRydj3k6vJCySu3g"*/,
-            *(_QWORD *)(*UTF8 + 608LL));
-  v12 = v11;
+                                 *(_QWORD *)(*(_QWORD *)v5 + 608LL));
   v13 = CatAndMouseGame_TypeInfo;
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
@@ -4570,41 +4167,101 @@ void __fastcall CatAndMouseGame__ThirdHomeBuilding(System_String_o *data, const 
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
     v13 = CatAndMouseGame_TypeInfo;
   }
-  System_Array__Copy_43381116((System_Array_o *)v12, 0, (System_Array_o *)v13->static_fields->BattleKey, 0, 32, 0LL);
-  if ( !v12 )
+  static_fields = v13->static_fields;
+  static_fields->sideData = (struct System_Byte_array *)v12;
+  sub_B70630((BattleServantConfConponent_o *)&static_fields->sideData, v12, v6, v7, v8, v9, v10, v11);
+  v15 = System_Text_Encoding__get_UTF8(0LL);
+  UTF8 = System_String__Substring_44821904(data, 0, 32, 0LL);
+  if ( !v15 )
+LABEL_10:
+    sub_B7076C(UTF8, v4);
+  v16 = (System_Int32_array **)((__int64 (__fastcall *)(System_Text_Encoding_o *, void *, Il2CppMethodPointer))v15->klass->vtable._18_GetBytes.method)(
+                                 v15,
+                                 UTF8,
+                                 v15->klass->vtable._19_GetBytes.methodPtr);
+  v17 = CatAndMouseGame_TypeInfo->static_fields;
+  v17->sideTop = (struct System_Byte_array *)v16;
+  sub_B70630((BattleServantConfConponent_o *)&v17->sideTop, v16, v18, v19, v20, v21, v22, v23);
+}
+
+
+void __fastcall CatAndMouseGame__ThirdHomeBuilding(System_String_o *data, const MethodInfo *method)
+{
+  bool isPlaying; // w20
+  _QWORD *UTF8; // x0
+  __int64 v5; // x1
+  __int64 v6; // x0
+  __int64 v7; // x19
+  CatAndMouseGame_c *v8; // x0
+  __int64 v9; // x8
+  unsigned __int64 v10; // x21
+  __int64 v11; // x9
+  char v12; // w10
+  __int64 v13; // x0
+
+  if ( (byte_4354B73 & 1) == 0 )
+  {
+    sub_B70694(&CatAndMouseGame_TypeInfo);
+    sub_B70694(&StringLiteral_20480/*"kzdMtpmzqCHAfx00saU1gIhTjYCuOD1JstqtisXsGYqRVcqrHRydj3k6vJCySu3g"*/);
+    byte_4354B73 = 1;
+  }
+  isPlaying = UnityEngine_Application__get_isPlaying(0LL);
+  UTF8 = System_Text_Encoding__get_UTF8(0LL);
+  if ( !UTF8 )
+    goto LABEL_29;
+  if ( isPlaying )
+    v6 = (*(__int64 (__fastcall **)(_QWORD *, System_String_o *, _QWORD))(*UTF8 + 600LL))(
+           UTF8,
+           data,
+           *(_QWORD *)(*UTF8 + 608LL));
+  else
+    v6 = (*(__int64 (__fastcall **)(_QWORD *, __int64, _QWORD))(*UTF8 + 600LL))(
+           UTF8,
+           StringLiteral_20480/*"kzdMtpmzqCHAfx00saU1gIhTjYCuOD1JstqtisXsGYqRVcqrHRydj3k6vJCySu3g"*/,
+           *(_QWORD *)(*UTF8 + 608LL));
+  v7 = v6;
+  v8 = CatAndMouseGame_TypeInfo;
+  if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
+    && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
+    v8 = CatAndMouseGame_TypeInfo;
+  }
+  System_Array__Copy_43134268((System_Array_o *)v7, 0, (System_Array_o *)v8->static_fields->BattleKey, 0, 32, 0LL);
+  if ( !v7 )
 LABEL_29:
-    sub_B5D69C(UTF8, v10);
-  System_Array__Copy_43381116(
-    (System_Array_o *)v12,
+    sub_B7076C(UTF8, v5);
+  System_Array__Copy_43134268(
+    (System_Array_o *)v7,
     32,
     (System_Array_o *)CatAndMouseGame_TypeInfo->static_fields->BattleIV,
     0,
-    *(_DWORD *)(v12 + 24) - 32,
+    *(_DWORD *)(v7 + 24) - 32,
     0LL);
-  v14 = *(_QWORD *)(v12 + 24);
-  if ( (int)v14 >= 1 )
+  v9 = *(_QWORD *)(v7 + 24);
+  if ( (int)v9 >= 1 )
   {
-    v15 = 0LL;
+    v10 = 0LL;
     do
     {
       UTF8 = &CatAndMouseGame_TypeInfo->_1.image;
-      if ( (v15 & 1) != 0 )
+      if ( (v10 & 1) != 0 )
       {
         if ( (WORD1(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
           && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
           UTF8 = &CatAndMouseGame_TypeInfo->_1.image;
-          LODWORD(v14) = *(_DWORD *)(v12 + 24);
+          LODWORD(v9) = *(_DWORD *)(v7 + 24);
         }
-        if ( v15 >= (unsigned int)v14 )
+        if ( v10 >= (unsigned int)v9 )
         {
 LABEL_28:
-          v18 = sub_B5D6C8(UTF8);
-          sub_B5D668(v18, 0LL);
+          v13 = sub_B70798(UTF8);
+          sub_B70738(v13, 0LL);
         }
-        v14 = *(_QWORD *)(UTF8[23] + 32LL);
-        if ( !v14 )
+        v9 = *(_QWORD *)(UTF8[23] + 32LL);
+        if ( !v9 )
           goto LABEL_29;
       }
       else
@@ -4614,22 +4271,22 @@ LABEL_28:
         {
           j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
           UTF8 = &CatAndMouseGame_TypeInfo->_1.image;
-          LODWORD(v14) = *(_DWORD *)(v12 + 24);
+          LODWORD(v9) = *(_DWORD *)(v7 + 24);
         }
-        if ( v15 >= (unsigned int)v14 )
+        if ( v10 >= (unsigned int)v9 )
           goto LABEL_28;
-        v14 = *(_QWORD *)(UTF8[23] + 40LL);
-        if ( !v14 )
+        v9 = *(_QWORD *)(UTF8[23] + 40LL);
+        if ( !v9 )
           goto LABEL_29;
       }
-      v16 = (unsigned int)v15 >> 1;
-      if ( (unsigned int)v16 >= *(_DWORD *)(v14 + 24) )
+      v11 = (unsigned int)v10 >> 1;
+      if ( (unsigned int)v11 >= *(_DWORD *)(v9 + 24) )
         goto LABEL_28;
-      v17 = *(_BYTE *)(v12 + 32 + v15++);
-      *(_BYTE *)(v14 + v16 + 32) = v17;
-      LODWORD(v14) = *(_DWORD *)(v12 + 24);
+      v12 = *(_BYTE *)(v7 + 32 + v10++);
+      *(_BYTE *)(v9 + v11 + 32) = v12;
+      LODWORD(v9) = *(_DWORD *)(v7 + 24);
     }
-    while ( (__int64)v15 < (int)v14 );
+    while ( (__int64)v10 < (int)v9 );
   }
 }
 
@@ -4642,7 +4299,6 @@ void __fastcall CatAndMouseGame_AssetbundleKeyEntity___ctor(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall CatAndMouseGame_DataDecryptor___ctor(
         CatAndMouseGame_DataDecryptor_o *this,
         System_Security_Cryptography_ICryptoTransform_o *decryptor,
@@ -4650,42 +4306,39 @@ void __fastcall CatAndMouseGame_DataDecryptor___ctor(
         bool isCompress,
         const MethodInfo *method)
 {
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  __int64 v12; // x0
-  __int64 v13; // x1
-  System_IO_MemoryStream_o *v14; // x0
+  __int64 v9; // x0
+  __int64 v10; // x1
+  System_IO_MemoryStream_o *v11; // x0
   int32_t max_length; // w1
-  struct System_IO_MemoryStream_o *v16; // x21
+  struct System_IO_MemoryStream_o *v13; // x21
   struct System_IO_MemoryStream_o **p_memoryStream; // x20
-  System_IO_Stream_o *v18; // x21
-  System_Security_Cryptography_CryptoStream_o *v19; // x22
+  System_IO_Stream_o *v15; // x21
+  System_Security_Cryptography_CryptoStream_o *v16; // x22
 
-  if ( (byte_42E5E42 & 1) == 0 )
+  if ( (byte_434ED5D & 1) == 0 )
   {
-    sub_B5D5C4(&System_Security_Cryptography_CryptoStream_TypeInfo, (_DWORD)decryptor, (_DWORD)data, isCompress);
-    sub_B5D5C4(&System_IO_MemoryStream_TypeInfo, v9, v10, v11);
-    byte_42E5E42 = 1;
+    sub_B70694(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_B70694(&System_IO_MemoryStream_TypeInfo);
+    byte_434ED5D = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.data = data;
-  sub_B5D560(&this->fields);
+  sub_B70630(&this->fields);
   this->fields.isCompress = isCompress;
   if ( !data )
-    sub_B5D69C(v12, v13);
-  v14 = (System_IO_MemoryStream_o *)sub_B5D694(System_IO_MemoryStream_TypeInfo);
+    sub_B7076C(v9, v10);
+  v11 = (System_IO_MemoryStream_o *)sub_B70764(System_IO_MemoryStream_TypeInfo);
   max_length = data->max_length;
-  v16 = v14;
-  System_IO_MemoryStream___ctor_45158880(v14, max_length, 0LL);
-  this->fields.memoryStream = v16;
+  v13 = v11;
+  System_IO_MemoryStream___ctor_45610480(v11, max_length, 0LL);
+  this->fields.memoryStream = v13;
   p_memoryStream = &this->fields.memoryStream;
-  sub_B5D560(p_memoryStream);
-  v18 = (System_IO_Stream_o *)*p_memoryStream;
-  v19 = (System_Security_Cryptography_CryptoStream_o *)sub_B5D694(System_Security_Cryptography_CryptoStream_TypeInfo);
-  System_Security_Cryptography_CryptoStream___ctor(v19, v18, decryptor, 1, 0LL);
-  p_memoryStream[1] = (struct System_IO_MemoryStream_o *)v19;
-  sub_B5D560(p_memoryStream + 1);
+  sub_B70630(p_memoryStream);
+  v15 = (System_IO_Stream_o *)*p_memoryStream;
+  v16 = (System_Security_Cryptography_CryptoStream_o *)sub_B70764(System_Security_Cryptography_CryptoStream_TypeInfo);
+  System_Security_Cryptography_CryptoStream___ctor(v16, v15, decryptor, 1, 0LL);
+  p_memoryStream[1] = (struct System_IO_MemoryStream_o *)v16;
+  sub_B70630(p_memoryStream + 1);
 }
 
 
@@ -4693,77 +4346,69 @@ void __fastcall CatAndMouseGame_DataDecryptor__ApplyWrite(
         CatAndMouseGame_DataDecryptor_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  CatAndMouseGame_DataDecryptor_o *v4; // x19
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
+  CatAndMouseGame_DataDecryptor_o *v2; // x19
   struct System_Byte_array *data; // x1
   int max_length; // w21
-  int v13; // w20
-  il2cpp_array_size_t v14; // w8
-  il2cpp_array_size_t v15; // w23
-  System_IO_MemoryStream_o *v16; // x20
+  int v5; // w20
+  il2cpp_array_size_t v6; // w8
+  il2cpp_array_size_t v7; // w23
+  System_IO_MemoryStream_o *v8; // x20
   CatAndMouseGame_DataDecryptor_o **p_memoryStreamBZip; // x19
-  System_IO_Stream_o *v18; // x20
-  ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *v19; // x21
-  CatAndMouseGame_DataDecryptor_o **v20; // x20
+  System_IO_Stream_o *v10; // x20
+  ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *v11; // x21
+  CatAndMouseGame_DataDecryptor_o **v12; // x20
   CatAndMouseGame_DataDecryptor_o *i; // x21
-  __int64 v22; // x3
-  int v23; // w0
+  __int64 v14; // x3
+  int v15; // w0
 
-  v4 = this;
-  if ( (byte_42E5E43 & 1) == 0 )
+  v2 = this;
+  if ( (byte_434ED5E & 1) == 0 )
   {
-    sub_B5D5C4(&ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&byte___TypeInfo, v5, v6, v7);
-    this = (CatAndMouseGame_DataDecryptor_o *)sub_B5D5C4(&System_IO_MemoryStream_TypeInfo, v8, v9, v10);
-    byte_42E5E43 = 1;
+    sub_B70694(&ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo);
+    sub_B70694(&byte___TypeInfo);
+    this = (CatAndMouseGame_DataDecryptor_o *)sub_B70694(&System_IO_MemoryStream_TypeInfo);
+    byte_434ED5E = 1;
   }
-  data = v4->fields.data;
+  data = v2->fields.data;
   if ( !data )
     goto LABEL_21;
   max_length = data->max_length;
-  this = (CatAndMouseGame_DataDecryptor_o *)v4->fields.cryptoStream;
+  this = (CatAndMouseGame_DataDecryptor_o *)v2->fields.cryptoStream;
   if ( max_length >= 1 )
   {
     if ( this )
     {
-      v13 = 0;
-      v14 = data->max_length;
+      v5 = 0;
+      v6 = data->max_length;
       do
       {
-        v15 = v14 - 0x4000;
+        v7 = v6 - 0x4000;
         ((void (*)(void))this->klass[2]._1.namespaze)();
-        this = (CatAndMouseGame_DataDecryptor_o *)v4->fields.cryptoStream;
+        this = (CatAndMouseGame_DataDecryptor_o *)v2->fields.cryptoStream;
         if ( !this )
           break;
         ((void (__fastcall *)(CatAndMouseGame_DataDecryptor_o *, _QWORD))this->klass[1]._2.genericContainerHandle)(
           this,
           *(_QWORD *)&this->klass[1]._2.instance_size);
-        this = (CatAndMouseGame_DataDecryptor_o *)v4->fields.cryptoStream;
-        v13 += 0x4000;
-        if ( v13 >= max_length )
+        this = (CatAndMouseGame_DataDecryptor_o *)v2->fields.cryptoStream;
+        v5 += 0x4000;
+        if ( v5 >= max_length )
           goto LABEL_11;
-        data = v4->fields.data;
-        v14 = v15;
+        data = v2->fields.data;
+        v6 = v7;
       }
       while ( this );
     }
 LABEL_21:
-    sub_B5D69C(this, data);
+    sub_B7076C(this, data);
   }
 LABEL_11:
   if ( !this )
     goto LABEL_21;
   System_Security_Cryptography_CryptoStream__FlushFinalBlock((System_Security_Cryptography_CryptoStream_o *)this, 0LL);
-  if ( v4->fields.isCompress )
+  if ( v2->fields.isCompress )
   {
-    this = (CatAndMouseGame_DataDecryptor_o *)v4->fields.memoryStream;
+    this = (CatAndMouseGame_DataDecryptor_o *)v2->fields.memoryStream;
     if ( this )
     {
       ((void (__fastcall *)(CatAndMouseGame_DataDecryptor_o *, _QWORD, _QWORD, Il2CppMethodPointer))this->klass[1].vtable._3_ToString.method)(
@@ -4771,18 +4416,18 @@ LABEL_11:
         0LL,
         0LL,
         this->klass[1].vtable._4_Dispose.methodPtr);
-      v16 = (System_IO_MemoryStream_o *)sub_B5D694(System_IO_MemoryStream_TypeInfo);
-      System_IO_MemoryStream___ctor(v16, 0LL);
-      v4->fields.memoryStreamBZip = v16;
-      p_memoryStreamBZip = (CatAndMouseGame_DataDecryptor_o **)&v4->fields.memoryStreamBZip;
-      sub_B5D560(p_memoryStreamBZip);
-      v18 = (System_IO_Stream_o *)*(p_memoryStreamBZip - 2);
-      v19 = (ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *)sub_B5D694(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo);
-      ICSharpCode_SharpZipLib_BZip2_BZip2InputStream___ctor(v19, v18, 0LL);
-      v20 = p_memoryStreamBZip + 1;
-      p_memoryStreamBZip[1] = (CatAndMouseGame_DataDecryptor_o *)v19;
-      sub_B5D560(p_memoryStreamBZip + 1);
-      this = (CatAndMouseGame_DataDecryptor_o *)sub_B5D5DC(byte___TypeInfo, 0x4000LL);
+      v8 = (System_IO_MemoryStream_o *)sub_B70764(System_IO_MemoryStream_TypeInfo);
+      System_IO_MemoryStream___ctor(v8, 0LL);
+      v2->fields.memoryStreamBZip = v8;
+      p_memoryStreamBZip = (CatAndMouseGame_DataDecryptor_o **)&v2->fields.memoryStreamBZip;
+      sub_B70630(p_memoryStreamBZip);
+      v10 = (System_IO_Stream_o *)*(p_memoryStreamBZip - 2);
+      v11 = (ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *)sub_B70764(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo);
+      ICSharpCode_SharpZipLib_BZip2_BZip2InputStream___ctor(v11, v10, 0LL);
+      v12 = p_memoryStreamBZip + 1;
+      p_memoryStreamBZip[1] = (CatAndMouseGame_DataDecryptor_o *)v11;
+      sub_B70630(p_memoryStreamBZip + 1);
+      this = (CatAndMouseGame_DataDecryptor_o *)sub_B706AC(byte___TypeInfo, 0x4000LL);
       if ( this )
       {
         for ( i = this;
@@ -4791,21 +4436,21 @@ LABEL_11:
                 this,
                 i,
                 0LL,
-                v22,
+                v14,
                 this->klass[2]._1.byval_arg.data) )
         {
-          this = *v20;
-          if ( !*v20 )
+          this = *v12;
+          if ( !*v12 )
             break;
-          v23 = ((__int64 (__fastcall *)(CatAndMouseGame_DataDecryptor_o *, CatAndMouseGame_DataDecryptor_o *, _QWORD, _QWORD, void *))this->klass[1].vtable._5_Dispose.method)(
+          v15 = ((__int64 (__fastcall *)(CatAndMouseGame_DataDecryptor_o *, CatAndMouseGame_DataDecryptor_o *, _QWORD, _QWORD, void *))this->klass[1].vtable._5_Dispose.method)(
                   this,
                   i,
                   0LL,
                   *(unsigned int *)&i->fields.isCompress,
                   this->klass[2]._1.image);
-          if ( v23 <= 0 )
+          if ( v15 <= 0 )
             return;
-          v22 = (unsigned int)v23;
+          v14 = (unsigned int)v15;
           this = *p_memoryStreamBZip;
           if ( !*p_memoryStreamBZip )
             goto LABEL_21;
@@ -4819,13 +4464,10 @@ LABEL_11:
 
 void __fastcall CatAndMouseGame_DataDecryptor__Dispose(CatAndMouseGame_DataDecryptor_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42E5E45 & 1) == 0 )
+  if ( (byte_434ED60 & 1) == 0 )
   {
-    sub_B5D5C4(&System_GC_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E5E45 = 1;
+    sub_B70694(&System_GC_TypeInfo);
+    byte_434ED60 = 1;
   }
   ((void (__fastcall *)(CatAndMouseGame_DataDecryptor_o *, __int64, void *))this->klass->vtable._5_Dispose.method)(
     this,
@@ -4837,7 +4479,7 @@ void __fastcall CatAndMouseGame_DataDecryptor__Dispose(CatAndMouseGame_DataDecry
 }
 
 
-void __fastcall CatAndMouseGame_DataDecryptor__Dispose_20191632(
+void __fastcall CatAndMouseGame_DataDecryptor__Dispose_19680224(
         CatAndMouseGame_DataDecryptor_o *this,
         bool isDisposing,
         const MethodInfo *method)
@@ -4856,28 +4498,28 @@ void __fastcall CatAndMouseGame_DataDecryptor__Dispose_20191632(
       {
         System_IO_Stream__Dispose(memoryStream, 0LL);
         this->fields.memoryStream = 0LL;
-        sub_B5D560(&this->fields.memoryStream);
+        sub_B70630(&this->fields.memoryStream);
       }
       cryptoStream = (System_IO_Stream_o *)this->fields.cryptoStream;
       if ( cryptoStream )
       {
         System_IO_Stream__Dispose(cryptoStream, 0LL);
         this->fields.cryptoStream = 0LL;
-        sub_B5D560(&this->fields.cryptoStream);
+        sub_B70630(&this->fields.cryptoStream);
       }
       memoryStreamBZip = (System_IO_Stream_o *)this->fields.memoryStreamBZip;
       if ( memoryStreamBZip )
       {
         System_IO_Stream__Dispose(memoryStreamBZip, 0LL);
         this->fields.memoryStreamBZip = 0LL;
-        sub_B5D560(&this->fields.memoryStreamBZip);
+        sub_B70630(&this->fields.memoryStreamBZip);
       }
       bzipStream = (System_IO_Stream_o *)this->fields.bzipStream;
       if ( bzipStream )
       {
         System_IO_Stream__Dispose(bzipStream, 0LL);
         this->fields.bzipStream = 0LL;
-        sub_B5D560(&this->fields.bzipStream);
+        sub_B70630(&this->fields.bzipStream);
       }
     }
     this->fields.isDisposed = 1;
@@ -4889,68 +4531,63 @@ System_Byte_array *__fastcall CatAndMouseGame_DataDecryptor__ToByteArray(
         CatAndMouseGame_DataDecryptor_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
   struct System_IO_MemoryStream_o *memoryStreamBZip; // x0
-  __int64 v9; // x0
-  __int64 v10; // x1
-  struct System_IO_MemoryStream_o *v11; // x8
-  int v12; // w20
-  struct System_IO_MemoryStream_o *v13; // x8
+  __int64 v4; // x0
+  __int64 v5; // x1
+  struct System_IO_MemoryStream_o *v6; // x8
+  int v7; // w20
+  struct System_IO_MemoryStream_o *v8; // x8
   System_IO_MemoryStream_c *klass; // x9
-  const MethodInfo *v15; // x2
+  const MethodInfo *v10; // x2
   void *image; // x1
   struct System_IO_MemoryStream_o *memoryStream; // x0
-  struct System_IO_MemoryStream_o *v18; // x8
-  int v19; // w20
-  __int64 v20; // x9
-  int v21; // w11
-  __int64 v22; // x10
+  struct System_IO_MemoryStream_o *v13; // x8
+  int v14; // w20
+  __int64 v15; // x9
+  int v16; // w11
+  __int64 v17; // x10
   System_Byte_array *result; // x0
-  _QWORD **v24; // x20
+  _QWORD **v19; // x20
+  __int64 v20; // x19
+  __int16 v21; // w8
+  __int64 v22; // x19
+  __int64 v23; // x19
+  __int64 v24; // x19
   __int64 v25; // x19
-  __int16 v26; // w8
-  __int64 v27; // x19
-  __int64 v28; // x19
-  __int64 v29; // x19
-  __int64 v30; // x19
 
-  if ( (byte_42E5E44 & 1) == 0 )
+  if ( (byte_434ED5F & 1) == 0 )
   {
-    sub_B5D5C4(&byte___TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&Method_System_Linq_Enumerable_Empty_byte___, v5, v6, v7);
-    byte_42E5E44 = 1;
+    sub_B70694(&byte___TypeInfo);
+    sub_B70694(&Method_System_Linq_Enumerable_Empty_byte___);
+    byte_434ED5F = 1;
   }
   if ( !this->fields.isCompress )
   {
     memoryStream = this->fields.memoryStream;
     if ( memoryStream )
     {
-      v9 = ((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, Il2CppMethodPointer))memoryStream->klass->vtable._35_get_Capacity.method)(
+      v4 = ((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, Il2CppMethodPointer))memoryStream->klass->vtable._35_get_Capacity.method)(
              memoryStream,
              memoryStream->klass->vtable._36_set_Capacity.methodPtr);
-      v18 = this->fields.memoryStream;
-      if ( v18 )
+      v13 = this->fields.memoryStream;
+      if ( v13 )
       {
-        v19 = v9;
-        v9 = ((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, Il2CppMethodPointer))v18->klass->vtable._11_get_Length.method)(
+        v14 = v4;
+        v4 = ((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, Il2CppMethodPointer))v13->klass->vtable._11_get_Length.method)(
                this->fields.memoryStream,
-               v18->klass->vtable._12_get_Position.methodPtr);
-        v13 = this->fields.memoryStream;
-        if ( v13 )
+               v13->klass->vtable._12_get_Position.methodPtr);
+        v8 = this->fields.memoryStream;
+        if ( v8 )
         {
-          v20 = v9 + 255;
-          v21 = v19 + 255;
-          if ( v9 + 255 < 0 )
-            v20 = v9 + 510;
-          v22 = v20 >> 8;
-          klass = v13->klass;
-          if ( v21 < 0 )
-            v21 = v19 + 510;
-          if ( v22 != v21 >> 8 )
+          v15 = v4 + 255;
+          v16 = v14 + 255;
+          if ( v4 + 255 < 0 )
+            v15 = v4 + 510;
+          v17 = v15 >> 8;
+          klass = v8->klass;
+          if ( v16 < 0 )
+            v16 = v14 + 510;
+          if ( v17 != v16 >> 8 )
             goto LABEL_17;
           goto LABEL_8;
         }
@@ -4961,69 +4598,69 @@ System_Byte_array *__fastcall CatAndMouseGame_DataDecryptor__ToByteArray(
   memoryStreamBZip = this->fields.memoryStreamBZip;
   if ( memoryStreamBZip )
   {
-    v9 = ((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, Il2CppMethodPointer))memoryStreamBZip->klass->vtable._35_get_Capacity.method)(
+    v4 = ((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, Il2CppMethodPointer))memoryStreamBZip->klass->vtable._35_get_Capacity.method)(
            memoryStreamBZip,
            memoryStreamBZip->klass->vtable._36_set_Capacity.methodPtr);
-    v11 = this->fields.memoryStreamBZip;
-    if ( v11 )
+    v6 = this->fields.memoryStreamBZip;
+    if ( v6 )
     {
-      v12 = v9;
-      v9 = ((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, Il2CppMethodPointer))v11->klass->vtable._11_get_Length.method)(
+      v7 = v4;
+      v4 = ((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, Il2CppMethodPointer))v6->klass->vtable._11_get_Length.method)(
              this->fields.memoryStreamBZip,
-             v11->klass->vtable._12_get_Position.methodPtr);
-      v13 = this->fields.memoryStreamBZip;
-      if ( v13 )
+             v6->klass->vtable._12_get_Position.methodPtr);
+      v8 = this->fields.memoryStreamBZip;
+      if ( v8 )
       {
-        klass = v13->klass;
-        if ( v9 != v12 )
+        klass = v8->klass;
+        if ( v4 != v7 )
         {
 LABEL_17:
-          v15 = klass->vtable._37_ToArray.method;
+          v10 = klass->vtable._37_ToArray.method;
           image = klass[1]._1.image;
-          return (System_Byte_array *)((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, void *))v15)(
-                                        v13,
+          return (System_Byte_array *)((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, void *))v10)(
+                                        v8,
                                         image);
         }
 LABEL_8:
-        v15 = klass->vtable._34_GetBuffer.method;
+        v10 = klass->vtable._34_GetBuffer.method;
         image = klass->vtable._35_get_Capacity.methodPtr;
-        return (System_Byte_array *)((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, void *))v15)(v13, image);
+        return (System_Byte_array *)((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, void *))v10)(v8, image);
       }
     }
 LABEL_35:
-    sub_B5D69C(v9, v10);
+    sub_B7076C(v4, v5);
   }
-  v24 = (_QWORD **)Method_System_Linq_Enumerable_Empty_byte___;
-  v25 = **((_QWORD **)Method_System_Linq_Enumerable_Empty_byte___ + 6);
-  v26 = *(_WORD *)(v25 + 306);
-  if ( (v26 & 1) == 0 )
+  v19 = (_QWORD **)Method_System_Linq_Enumerable_Empty_byte___;
+  v20 = **((_QWORD **)Method_System_Linq_Enumerable_Empty_byte___ + 6);
+  v21 = *(_WORD *)(v20 + 306);
+  if ( (v21 & 1) == 0 )
   {
-    sub_AF52C4(**((_QWORD **)Method_System_Linq_Enumerable_Empty_byte___ + 6));
-    v26 = *(_WORD *)(v25 + 306);
+    sub_B08394(**((_QWORD **)Method_System_Linq_Enumerable_Empty_byte___ + 6));
+    v21 = *(_WORD *)(v20 + 306);
   }
-  if ( (v26 & 0x400) != 0 )
+  if ( (v21 & 0x400) != 0 )
   {
-    v27 = *v24[6];
-    if ( (*(_BYTE *)(v27 + 306) & 1) == 0 )
-      sub_AF52C4(*v24[6]);
-    if ( !*(_DWORD *)(v27 + 224) )
+    v22 = *v19[6];
+    if ( (*(_BYTE *)(v22 + 306) & 1) == 0 )
+      sub_B08394(*v19[6]);
+    if ( !*(_DWORD *)(v22 + 224) )
     {
-      v28 = *v24[6];
-      if ( (*(_BYTE *)(v28 + 306) & 1) == 0 )
-        sub_AF52C4(*v24[6]);
-      j_il2cpp_runtime_class_init_0(v28);
+      v23 = *v19[6];
+      if ( (*(_BYTE *)(v23 + 306) & 1) == 0 )
+        sub_B08394(*v19[6]);
+      j_il2cpp_runtime_class_init_0(v23);
     }
   }
-  v29 = *v24[6];
-  if ( (*(_BYTE *)(v29 + 306) & 1) == 0 )
-    sub_AF52C4(*v24[6]);
-  v30 = **(_QWORD **)(v29 + 184);
-  if ( v30 )
+  v24 = *v19[6];
+  if ( (*(_BYTE *)(v24 + 306) & 1) == 0 )
+    sub_B08394(*v19[6]);
+  v25 = **(_QWORD **)(v24 + 184);
+  if ( v25 )
   {
-    result = (System_Byte_array *)sub_B5D684(v30, byte___TypeInfo);
+    result = (System_Byte_array *)sub_B70754(v25, byte___TypeInfo);
     if ( result )
       return result;
-    sub_B5D990(v30);
+    sub_B70A60(v25);
   }
   return 0LL;
 }

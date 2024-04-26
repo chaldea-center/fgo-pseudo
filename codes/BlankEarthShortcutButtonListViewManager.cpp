@@ -2,42 +2,37 @@ void __fastcall BlankEarthShortcutButtonListViewManager___ctor(
         BlankEarthShortcutButtonListViewManager_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v8; // x20
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x20
+  System_String_array **v4; // x2
+  System_String_array **v5; // x3
+  System_Boolean_array **v6; // x4
+  System_Int32_array **v7; // x5
+  System_Int32_array *v8; // x6
+  System_Int32_array *v9; // x7
 
-  if ( (byte_42E85FE & 1) == 0 )
+  if ( (byte_4351639 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Collections_Generic_List_GameObject___ctor__, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&System_Collections_Generic_List_GameObject__TypeInfo, v5, v6, v7);
-    byte_42E85FE = 1;
+    sub_B70694(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_B70694(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_4351639 = 1;
   }
   this->fields.spotMoveEasingType = 15;
   *(_QWORD *)&this->fields.spotMoveTime = 0x3D23D70A3FC00000LL;
   this->fields.moveDistanceMultipleValue = 0.18;
-  v8 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B5D694(System_Collections_Generic_List_GameObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v8,
-    (const MethodInfo_30562FC *)Method_System_Collections_Generic_List_GameObject___ctor__);
-  this->fields.spotEffectList = (struct System_Collections_Generic_List_GameObject__o *)v8;
-  sub_B5D560(
+    v3,
+    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+  this->fields.spotEffectList = (struct System_Collections_Generic_List_GameObject__o *)v3;
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.spotEffectList,
-    (System_Int32_array **)v8,
-    v9,
-    v10,
-    v11,
-    v12,
-    v13,
-    v14);
+    (System_Int32_array **)v3,
+    v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9);
   ListViewManager___ctor((ListViewManager_o *)this, 0LL);
 }
 
@@ -48,114 +43,72 @@ void __fastcall BlankEarthShortcutButtonListViewManager__CreateList(
         UIAtlas_o *commonUIAtlas,
         const MethodInfo *method)
 {
-  int v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  int v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
-  int v15; // w1
-  int v16; // w2
-  __int64 v17; // x3
-  int v18; // w1
-  int v19; // w2
-  __int64 v20; // x3
-  int v21; // w1
-  int v22; // w2
-  __int64 v23; // x3
-  int v24; // w1
-  int v25; // w2
-  __int64 v26; // x3
-  int v27; // w1
-  int v28; // w2
-  __int64 v29; // x3
-  int v30; // w1
-  int v31; // w2
-  __int64 v32; // x3
-  int v33; // w1
-  int v34; // w2
-  __int64 v35; // x3
-  int v36; // w1
-  int v37; // w2
-  __int64 v38; // x3
-  int v39; // w1
-  int v40; // w2
-  __int64 v41; // x3
-  int v42; // w1
-  int v43; // w2
-  __int64 v44; // x3
-  int v45; // w1
-  int v46; // w2
-  __int64 v47; // x3
-  System_String_array **v48; // x2
-  System_String_array **v49; // x3
-  System_Boolean_array **v50; // x4
-  System_Int32_array **v51; // x5
-  System_Int32_array *v52; // x6
-  System_Int32_array *v53; // x7
-  const MethodInfo *v54; // x2
-  const MethodInfo *v55; // x1
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
+  const MethodInfo *v12; // x2
+  const MethodInfo *v13; // x1
   UnityEngine_Component_o *scrollBar; // x0
   UnityEngine_Object_o *Object_WarBoardWaitTimeSetting; // x22
   BlankEarthSpotNavimenuEntity_array *EnableShortcutButtons; // x22
-  BlankEarthShortcutButtonListViewManager___c__DisplayClass13_0_c **v59; // x26
-  const MethodInfo_23FAE6C **v60; // x21
-  DataMasterBase_WarMaster__WarEntity__int__o *v61; // x23
-  int32_t v62; // w24
-  __int64 v63; // x25
-  System_String_array **v64; // x2
-  System_String_array **v65; // x3
-  System_Boolean_array **v66; // x4
-  System_Int32_array **v67; // x5
-  System_Int32_array *v68; // x6
-  System_Int32_array *v69; // x7
-  BlankEarthSpotNavimenuEntity_o *v70; // x20
-  const MethodInfo_23FAE6C **v71; // x19
-  BlankEarthShortcutButtonListViewManager___c__DisplayClass13_0_c **v72; // x21
-  BlankEarthShortcutButtonListViewManager_o *v73; // x27
+  BlankEarthShortcutButtonListViewManager___c__DisplayClass13_0_c **v17; // x26
+  const MethodInfo_21C049C **v18; // x21
+  DataMasterBase_WarMaster__WarEntity__int__o *v19; // x23
+  int32_t v20; // w24
+  __int64 v21; // x25
+  System_String_array **v22; // x2
+  System_String_array **v23; // x3
+  System_Boolean_array **v24; // x4
+  System_Int32_array **v25; // x5
+  System_Int32_array *v26; // x6
+  System_Int32_array *v27; // x7
+  BlankEarthSpotNavimenuEntity_o *v28; // x20
+  const MethodInfo_21C049C **v29; // x19
+  BlankEarthShortcutButtonListViewManager___c__DisplayClass13_0_c **v30; // x21
+  BlankEarthShortcutButtonListViewManager_o *v31; // x27
   struct System_Collections_Generic_List_ListViewItem__o *itemList; // x26
   System_String_o *name; // x28
-  System_Action_o *v76; // x20
-  BlankEarthShortcutButtonListViewItem_o *v77; // x25
-  const MethodInfo *v78; // x7
-  __int64 v79; // x0
+  System_Action_o *v34; // x20
+  BlankEarthShortcutButtonListViewItem_o *v35; // x25
+  const MethodInfo *v36; // x7
+  __int64 v37; // x0
   srcLineSprite_o *Component_srcLineSprite; // [xsp+10h] [xbp-60h]
   int32_t iconId; // [xsp+1Ch] [xbp-54h]
 
-  if ( (byte_42E85F5 & 1) == 0 )
+  if ( (byte_4351630 & 1) == 0 )
   {
-    sub_B5D5C4(&System_Action_TypeInfo, (_DWORD)blankEarth, (_DWORD)commonUIAtlas, method);
-    sub_B5D5C4(&Method_AssetData_GetObject_GameObject____68807504, v6, v7, v8);
-    sub_B5D5C4(&AssetManager_TypeInfo, v9, v10, v11);
-    sub_B5D5C4(&BlankEarthShortcutButtonListViewItem_TypeInfo, v12, v13, v14);
-    sub_B5D5C4(&Method_DataManager_GetMaster_BlankEarthSpotMaster___, v15, v16, v17);
-    sub_B5D5C4(&Method_DataManager_GetMaster_BlankEarthSpotNavimenuMaster___, v18, v19, v20);
-    sub_B5D5C4(&DataManager_TypeInfo, v21, v22, v23);
-    sub_B5D5C4(&Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__TryGetEntity__, v24, v25, v26);
-    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v27, v28, v29);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_ListViewItem__Add__, v30, v31, v32);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v33, v34, v35);
-    sub_B5D5C4(&Method_BlankEarthShortcutButtonListViewManager___c__DisplayClass13_0__CreateList_b__0__, v36, v37, v38);
-    sub_B5D5C4(&BlankEarthShortcutButtonListViewManager___c__DisplayClass13_0_TypeInfo, v39, v40, v41);
-    sub_B5D5C4(&StringLiteral_9037/*"MapShortcut/DownloadMapShortcut"*/, v42, v43, v44);
-    sub_B5D5C4(&StringLiteral_5461/*"DownloadMapShortcutAtlas"*/, v45, v46, v47);
-    byte_42E85F5 = 1;
+    sub_B70694(&System_Action_TypeInfo);
+    sub_B70694(&Method_AssetData_GetObject_GameObject____69232720);
+    sub_B70694(&AssetManager_TypeInfo);
+    sub_B70694(&BlankEarthShortcutButtonListViewItem_TypeInfo);
+    sub_B70694(&Method_DataManager_GetMaster_BlankEarthSpotMaster___);
+    sub_B70694(&Method_DataManager_GetMaster_BlankEarthSpotNavimenuMaster___);
+    sub_B70694(&DataManager_TypeInfo);
+    sub_B70694(&Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__TryGetEntity__);
+    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    sub_B70694(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    sub_B70694(&Method_BlankEarthShortcutButtonListViewManager___c__DisplayClass13_0__CreateList_b__0__);
+    sub_B70694(&BlankEarthShortcutButtonListViewManager___c__DisplayClass13_0_TypeInfo);
+    sub_B70694(&StringLiteral_9052/*"MapShortcut/DownloadMapShortcut"*/);
+    sub_B70694(&StringLiteral_5472/*"DownloadMapShortcutAtlas"*/);
+    byte_4351630 = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
   this->fields.blankEarth = blankEarth;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.blankEarth,
     (System_Int32_array **)blankEarth,
-    v48,
-    v49,
-    v50,
-    v51,
-    v52,
-    v53);
-  BlankEarthShortcutButtonListViewManager__SetTouchEnable(this, 0, v54);
+    v6,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11);
+  BlankEarthShortcutButtonListViewManager__SetTouchEnable(this, 0, v12);
   scrollBar = (UnityEngine_Component_o *)this->fields.scrollBar;
   if ( !scrollBar )
     goto LABEL_32;
@@ -165,13 +118,13 @@ void __fastcall BlankEarthShortcutButtonListViewManager__CreateList(
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)scrollBar, 0, 0LL);
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  scrollBar = (UnityEngine_Component_o *)AssetManager__getAssetStorage((System_String_o *)StringLiteral_9037/*"MapShortcut/DownloadMapShortcut"*/, 0LL);
+  scrollBar = (UnityEngine_Component_o *)AssetManager__getAssetStorage((System_String_o *)StringLiteral_9052/*"MapShortcut/DownloadMapShortcut"*/, 0LL);
   if ( !scrollBar )
     goto LABEL_32;
   Object_WarBoardWaitTimeSetting = (UnityEngine_Object_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                              (AssetData_o *)scrollBar,
-                                                             (System_String_o *)StringLiteral_5461/*"DownloadMapShortcutAtlas"*/,
-                                                             (const MethodInfo_1AD09CC *)Method_AssetData_GetObject_GameObject____68807504);
+                                                             (System_String_o *)StringLiteral_5472/*"DownloadMapShortcutAtlas"*/,
+                                                             (const MethodInfo_1BD6720 *)Method_AssetData_GetObject_GameObject____69232720);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -185,86 +138,86 @@ void __fastcall BlankEarthShortcutButtonListViewManager__CreateList(
       goto LABEL_32;
     Component_srcLineSprite = UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                 (UnityEngine_GameObject_o *)Object_WarBoardWaitTimeSetting,
-                                (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                                (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  scrollBar = (UnityEngine_Component_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1AE41EC *)Method_DataManager_GetMaster_BlankEarthSpotNavimenuMaster___);
+  scrollBar = (UnityEngine_Component_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_BlankEarthSpotNavimenuMaster___);
   if ( !scrollBar
     || (EnableShortcutButtons = BlankEarthSpotNavimenuMaster__GetEnableShortcutButtons(
                                   (BlankEarthSpotNavimenuMaster_o *)scrollBar,
-                                  v55),
-        scrollBar = (UnityEngine_Component_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1AE41EC *)Method_DataManager_GetMaster_BlankEarthSpotMaster___),
+                                  v13),
+        scrollBar = (UnityEngine_Component_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_BlankEarthSpotMaster___),
         !EnableShortcutButtons) )
   {
 LABEL_32:
-    sub_B5D69C(scrollBar, v55);
+    sub_B7076C(scrollBar, v13);
   }
   if ( (int)EnableShortcutButtons->max_length >= 1 )
   {
-    v59 = &BlankEarthShortcutButtonListViewManager___c__DisplayClass13_0_TypeInfo;
-    v60 = (const MethodInfo_23FAE6C **)&Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__TryGetEntity__;
-    v61 = (DataMasterBase_WarMaster__WarEntity__int__o *)scrollBar;
-    v62 = 0;
+    v17 = &BlankEarthShortcutButtonListViewManager___c__DisplayClass13_0_TypeInfo;
+    v18 = (const MethodInfo_21C049C **)&Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__TryGetEntity__;
+    v19 = (DataMasterBase_WarMaster__WarEntity__int__o *)scrollBar;
+    v20 = 0;
     do
     {
-      v63 = sub_B5D694(*v59);
+      v21 = sub_B70764(*v17);
       BlankEarthShortcutButtonListViewManager___c__DisplayClass13_0___ctor(
-        (BlankEarthShortcutButtonListViewManager___c__DisplayClass13_0_o *)v63,
+        (BlankEarthShortcutButtonListViewManager___c__DisplayClass13_0_o *)v21,
         0LL);
-      if ( !v63 )
+      if ( !v21 )
         goto LABEL_32;
-      *(_QWORD *)(v63 + 32) = this;
-      sub_B5D560((BattleServantConfConponent_o *)(v63 + 32), (System_Int32_array **)this, v64, v65, v66, v67, v68, v69);
-      if ( v62 >= EnableShortcutButtons->max_length )
+      *(_QWORD *)(v21 + 32) = this;
+      sub_B70630((BattleServantConfConponent_o *)(v21 + 32), (System_Int32_array **)this, v22, v23, v24, v25, v26, v27);
+      if ( v20 >= EnableShortcutButtons->max_length )
       {
-        v79 = sub_B5D6C8(scrollBar);
-        sub_B5D668(v79, 0LL);
+        v37 = sub_B70798(scrollBar);
+        sub_B70738(v37, 0LL);
       }
-      v70 = EnableShortcutButtons->m_Items[v62];
-      *(_DWORD *)(v63 + 16) = v62;
-      if ( !v70 || !v61 )
+      v28 = EnableShortcutButtons->m_Items[v20];
+      *(_DWORD *)(v21 + 16) = v20;
+      if ( !v28 || !v19 )
         goto LABEL_32;
       if ( DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-             v61,
-             (WarEntity_o **)(v63 + 24),
-             v70->fields.blankEarthSpotId,
-             *v60) )
+             v19,
+             (WarEntity_o **)(v21 + 24),
+             v28->fields.blankEarthSpotId,
+             *v18) )
       {
-        v71 = v60;
-        v72 = v59;
-        v73 = this;
-        iconId = v70->fields.iconId;
+        v29 = v18;
+        v30 = v17;
+        v31 = this;
+        iconId = v28->fields.iconId;
         itemList = this->fields.itemList;
-        name = v70->fields.name;
-        v76 = (System_Action_o *)sub_B5D694(System_Action_TypeInfo);
+        name = v28->fields.name;
+        v34 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
         System_Action___ctor(
-          v76,
-          (Il2CppObject *)v63,
+          v34,
+          (Il2CppObject *)v21,
           Method_BlankEarthShortcutButtonListViewManager___c__DisplayClass13_0__CreateList_b__0__,
           0LL);
-        v77 = (BlankEarthShortcutButtonListViewItem_o *)sub_B5D694(BlankEarthShortcutButtonListViewItem_TypeInfo);
+        v35 = (BlankEarthShortcutButtonListViewItem_o *)sub_B70764(BlankEarthShortcutButtonListViewItem_TypeInfo);
         BlankEarthShortcutButtonListViewItem___ctor(
-          v77,
-          v62,
+          v35,
+          v20,
           iconId,
           name,
           commonUIAtlas,
           (UIAtlas_o *)Component_srcLineSprite,
-          v76,
-          v78);
+          v34,
+          v36);
         if ( !itemList )
           goto LABEL_32;
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)itemList,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)v77,
-          (const MethodInfo_3056FC0 *)Method_System_Collections_Generic_List_ListViewItem__Add__);
-        v59 = v72;
-        v60 = v71;
-        this = v73;
+          (EventMissionProgressRequest_Argument_ProgressData_o *)v35,
+          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_ListViewItem__Add__);
+        v17 = v30;
+        v18 = v29;
+        this = v31;
       }
     }
-    while ( ++v62 < (signed int)EnableShortcutButtons->max_length );
+    while ( ++v20 < (signed int)EnableShortcutButtons->max_length );
   }
   scrollBar = (UnityEngine_Component_o *)this->fields.scrollView;
   if ( !scrollBar )
@@ -289,72 +242,52 @@ void __fastcall BlankEarthShortcutButtonListViewManager__DestroyShortcutButtonSp
         BlankEarthShortcutButtonListViewManager_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  int v14; // w1
-  int v15; // w2
-  __int64 v16; // x3
-  int v17; // w1
-  int v18; // w2
-  __int64 v19; // x3
-  int v20; // w1
-  int v21; // w2
-  __int64 v22; // x3
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *spotEffectList; // x0
   Il2CppObject *current; // x20
-  __int64 v25; // x1
-  struct System_Collections_Generic_List_GameObject__o *v26; // x0
-  System_Collections_Generic_List_Enumerator_T__o v27; // [xsp+8h] [xbp-38h] BYREF
+  __int64 v5; // x1
+  struct System_Collections_Generic_List_GameObject__o *v6; // x0
+  System_Collections_Generic_List_Enumerator_T__o v7; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_42E85F8 & 1) == 0 )
+  if ( (byte_4351633 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v5, v6, v7);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v8, v9, v10);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_GameObject__Clear__, v11, v12, v13);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v14, v15, v16);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_GameObject__get_Count__, v17, v18, v19);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v20, v21, v22);
-    byte_42E85F8 = 1;
+    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_B70694(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_B70694(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_B70694(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4351633 = 1;
   }
-  memset(&v27, 0, sizeof(v27));
+  memset(&v7, 0, sizeof(v7));
   spotEffectList = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)this->fields.spotEffectList;
   if ( spotEffectList && spotEffectList->fields._size >= 1 )
   {
     System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-      &v27,
+      &v7,
       spotEffectList,
-      (const MethodInfo_3057E3C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+      (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-              &v27,
-              (const MethodInfo_201EFD0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+              &v7,
+              (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
     {
-      current = v27.fields.current;
+      current = v7.fields.current;
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      UnityEngine_Object__Destroy_35620236((UnityEngine_Object_o *)current, 0LL);
+      UnityEngine_Object__Destroy_36067208((UnityEngine_Object_o *)current, 0LL);
     }
     System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-      &v27,
-      (const MethodInfo_201EFCC *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    v26 = this->fields.spotEffectList;
-    if ( !v26 )
-      sub_B5D69C(0LL, v25);
+      &v7,
+      (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    v6 = this->fields.spotEffectList;
+    if ( !v6 )
+      sub_B7076C(0LL, v5);
     System_Collections_Generic_List_XWeaponTrail_Element___Clear(
-      (System_Collections_Generic_List_XWeaponTrail_Element__o *)v26,
-      (const MethodInfo_30573C8 *)Method_System_Collections_Generic_List_GameObject__Clear__);
+      (System_Collections_Generic_List_XWeaponTrail_Element__o *)v6,
+      (const MethodInfo_3025A90 *)Method_System_Collections_Generic_List_GameObject__Clear__);
   }
 }
 
@@ -363,152 +296,96 @@ void __fastcall BlankEarthShortcutButtonListViewManager__FrameIn(
         BlankEarthShortcutButtonListViewManager_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  int v14; // w1
-  int v15; // w2
-  __int64 v16; // x3
-  int v17; // w1
-  int v18; // w2
-  __int64 v19; // x3
-  int v20; // w1
-  int v21; // w2
-  __int64 v22; // x3
-  int v23; // w1
-  int v24; // w2
-  __int64 v25; // x3
-  int v26; // w1
-  int v27; // w2
-  __int64 v28; // x3
-  int v29; // w1
-  int v30; // w2
-  __int64 v31; // x3
-  int v32; // w1
-  int v33; // w2
-  __int64 v34; // x3
-  const MethodInfo *v35; // x1
+  const MethodInfo *v3; // x1
   System_Collections_Generic_IEnumerable_T__o *ObjectList; // x21
-  System_Collections_Generic_List_WarBoardAIRoute_RouteData__o *v37; // x20
-  System_Action_o *v38; // x21
-  __int64 v39; // x0
-  __int64 v40; // x1
+  System_Collections_Generic_List_WarBoardAIRoute_RouteData__o *v5; // x20
+  System_Action_o *v6; // x21
+  __int64 v7; // x0
+  __int64 v8; // x1
   Il2CppObject *current; // x19
-  System_String_o *string; // x22
-  _BOOL8 v43; // x0
-  __int64 v44; // x1
-  const MethodInfo *v45; // x2
-  System_Action_o *v46; // x1
+  UnityEngine_Object_o *TransformServantInfo; // x22
+  _BOOL8 v11; // x0
+  __int64 v12; // x1
+  const MethodInfo *v13; // x2
+  System_Action_o *v14; // x1
   BlankEarth_o *blankEarth; // x20
-  System_Action_o *v48; // x21
-  System_Collections_Generic_List_Enumerator_T__o v49; // [xsp+8h] [xbp-58h] BYREF
+  System_Action_o *v16; // x21
+  System_Collections_Generic_List_Enumerator_T__o v17; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_42E85F9 & 1) == 0 )
+  if ( (byte_4351634 & 1) == 0 )
   {
-    sub_B5D5C4(&System_Action_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&Method_BlankEarthShortcutButtonListViewManager__FrameIn_b__18_0__, v5, v6, v7);
-    sub_B5D5C4(&Method_BlankEarthShortcutButtonListViewManager__FrameIn_b__18_1__, v8, v9, v10);
-    sub_B5D5C4(&Method_System_Linq_Enumerable_Last_BlankEarthShortcutButtonListViewObject___, v11, v12, v13);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__Dispose__,
-      v14,
-      v15,
-      v16);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__MoveNext__,
-      v17,
-      v18,
-      v19);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__get_Current__,
-      v20,
-      v21,
-      v22);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__GetEnumerator__,
-      v23,
-      v24,
-      v25);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject___ctor___68730184,
-      v26,
-      v27,
-      v28);
-    sub_B5D5C4(&System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__TypeInfo, v29, v30, v31);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v32, v33, v34);
-    byte_42E85F9 = 1;
+    sub_B70694(&System_Action_TypeInfo);
+    sub_B70694(&Method_BlankEarthShortcutButtonListViewManager__FrameIn_b__18_0__);
+    sub_B70694(&Method_BlankEarthShortcutButtonListViewManager__FrameIn_b__18_1__);
+    sub_B70694(&Method_System_Linq_Enumerable_Last_BlankEarthShortcutButtonListViewObject___);
+    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__Dispose__);
+    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__MoveNext__);
+    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__get_Current__);
+    sub_B70694(&Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__GetEnumerator__);
+    sub_B70694(&Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject___ctor___69154912);
+    sub_B70694(&System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__TypeInfo);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4351634 = 1;
   }
-  memset(&v49, 0, sizeof(v49));
+  memset(&v17, 0, sizeof(v17));
   if ( ListViewManager__get_ObjectSum((ListViewManager_o *)this, 0LL) <= 0 )
   {
     blankEarth = this->fields.blankEarth;
-    v48 = (System_Action_o *)sub_B5D694(System_Action_TypeInfo);
+    v16 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
     System_Action___ctor(
-      v48,
+      v16,
       (Il2CppObject *)this,
       Method_BlankEarthShortcutButtonListViewManager__FrameIn_b__18_0__,
       0LL);
     if ( blankEarth )
     {
-      BlankEarth__ExecuteAfterStartUpScaling(blankEarth, v48, 0LL);
+      BlankEarth__ExecuteAfterStartUpScaling(blankEarth, v16, 0LL);
       return;
     }
 LABEL_20:
-    sub_B5D69C(v39, v40);
+    sub_B7076C(v7, v8);
   }
   ObjectList = (System_Collections_Generic_IEnumerable_T__o *)BlankEarthShortcutButtonListViewManager__get_ObjectList(
                                                                 this,
-                                                                v35);
-  v37 = (System_Collections_Generic_List_WarBoardAIRoute_RouteData__o *)sub_B5D694(System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__TypeInfo);
+                                                                v3);
+  v5 = (System_Collections_Generic_List_WarBoardAIRoute_RouteData__o *)sub_B70764(System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__TypeInfo);
   System_Collections_Generic_List_WarBoardAIRoute_RouteData____ctor(
-    v37,
+    v5,
     ObjectList,
-    (const MethodInfo_30564F4 *)Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject___ctor___68730184);
-  v38 = (System_Action_o *)sub_B5D694(System_Action_TypeInfo);
-  System_Action___ctor(
-    v38,
-    (Il2CppObject *)this,
-    Method_BlankEarthShortcutButtonListViewManager__FrameIn_b__18_1__,
-    0LL);
-  if ( !v37 )
+    (const MethodInfo_3024BBC *)Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject___ctor___69154912);
+  v6 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  System_Action___ctor(v6, (Il2CppObject *)this, Method_BlankEarthShortcutButtonListViewManager__FrameIn_b__18_1__, 0LL);
+  if ( !v5 )
     goto LABEL_20;
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v49,
-    (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v37,
-    (const MethodInfo_3057E3C *)Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__GetEnumerator__);
+    &v17,
+    (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v5,
+    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-            &v49,
-            (const MethodInfo_201EFD0 *)Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__MoveNext__) )
+            &v17,
+            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__MoveNext__) )
   {
-    current = v49.fields.current;
-    string = System_Linq_Enumerable__Last_string_(
-               (System_Collections_Generic_IEnumerable_TSource__o *)v37,
-               (const MethodInfo_1CAD41C *)Method_System_Linq_Enumerable_Last_BlankEarthShortcutButtonListViewObject___);
+    current = v17.fields.current;
+    TransformServantInfo = (UnityEngine_Object_o *)System_Linq_Enumerable__Last_TransformServantInfo_(
+                                                     (System_Collections_Generic_IEnumerable_TSource__o *)v5,
+                                                     (const MethodInfo_1CBDD60 *)Method_System_Linq_Enumerable_Last_BlankEarthShortcutButtonListViewObject___);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    v43 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)current, (UnityEngine_Object_o *)string, 0LL);
+    v11 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)current, TransformServantInfo, 0LL);
     if ( !current )
-      sub_B5D69C(v43, v44);
-    if ( v43 )
-      v46 = v38;
+      sub_B7076C(v11, v12);
+    if ( v11 )
+      v14 = v6;
     else
-      v46 = 0LL;
-    BlankEarthShortcutButtonListViewObject__SetEntryAnim((BlankEarthShortcutButtonListViewObject_o *)current, v46, v45);
+      v14 = 0LL;
+    BlankEarthShortcutButtonListViewObject__SetEntryAnim((BlankEarthShortcutButtonListViewObject_o *)current, v14, v13);
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v49,
-    (const MethodInfo_201EFCC *)Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__Dispose__);
+    &v17,
+    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__Dispose__);
 }
 
 
@@ -516,70 +393,43 @@ void __fastcall BlankEarthShortcutButtonListViewManager__FrameOut(
         BlankEarthShortcutButtonListViewManager_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  const MethodInfo *v14; // x1
+  const MethodInfo *v3; // x1
   System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__o *ObjectList; // x0
-  __int64 v16; // x1
-  const MethodInfo *v17; // x1
-  System_Collections_Generic_List_Enumerator_T__o v18; // [xsp+8h] [xbp-28h] BYREF
+  __int64 v5; // x1
+  const MethodInfo *v6; // x1
+  System_Collections_Generic_List_Enumerator_T__o v7; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_42E85FA & 1) == 0 )
+  if ( (byte_4351635 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__Dispose__,
-      (_DWORD)method,
-      v2,
-      v3);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__MoveNext__,
-      v5,
-      v6,
-      v7);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__get_Current__,
-      v8,
-      v9,
-      v10);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__GetEnumerator__,
-      v11,
-      v12,
-      v13);
-    byte_42E85FA = 1;
+    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__Dispose__);
+    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__MoveNext__);
+    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__get_Current__);
+    sub_B70694(&Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__GetEnumerator__);
+    byte_4351635 = 1;
   }
-  memset(&v18, 0, sizeof(v18));
+  memset(&v7, 0, sizeof(v7));
   if ( ListViewManager__get_ObjectSum((ListViewManager_o *)this, 0LL) >= 1 )
   {
-    ObjectList = BlankEarthShortcutButtonListViewManager__get_ObjectList(this, v14);
+    ObjectList = BlankEarthShortcutButtonListViewManager__get_ObjectList(this, v3);
     if ( !ObjectList )
-      sub_B5D69C(0LL, v16);
+      sub_B7076C(0LL, v5);
     System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-      &v18,
+      &v7,
       (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)ObjectList,
-      (const MethodInfo_3057E3C *)Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__GetEnumerator__);
+      (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-              &v18,
-              (const MethodInfo_201EFD0 *)Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__MoveNext__) )
+              &v7,
+              (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__MoveNext__) )
     {
-      if ( !v18.fields.current )
-        sub_B5D69C(0LL, v17);
+      if ( !v7.fields.current )
+        sub_B7076C(0LL, v6);
       BlankEarthShortcutButtonListViewObject__FrameOut(
-        (BlankEarthShortcutButtonListViewObject_o *)v18.fields.current,
-        v17);
+        (BlankEarthShortcutButtonListViewObject_o *)v7.fields.current,
+        v6);
     }
     System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-      &v18,
-      (const MethodInfo_201EFCC *)Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__Dispose__);
+      &v7,
+      (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__Dispose__);
   }
 }
 
@@ -590,121 +440,72 @@ void __fastcall BlankEarthShortcutButtonListViewManager__OnClickButton(
         BlankEarthSpotEntity_o *bSpotEnt,
         const MethodInfo *method)
 {
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
-  int v10; // w1
-  int v11; // w2
-  __int64 v12; // x3
-  int v13; // w1
-  int v14; // w2
-  __int64 v15; // x3
-  int v16; // w1
-  int v17; // w2
-  __int64 v18; // x3
-  int v19; // w1
-  int v20; // w2
-  __int64 v21; // x3
-  int v22; // w1
-  int v23; // w2
-  __int64 v24; // x3
-  int v25; // w1
-  int v26; // w2
-  __int64 v27; // x3
-  int v28; // w1
-  int v29; // w2
-  __int64 v30; // x3
-  int v31; // w1
-  int v32; // w2
-  __int64 v33; // x3
-  int v34; // w1
-  int v35; // w2
-  __int64 v36; // x3
-  int v37; // w1
-  int v38; // w2
-  __int64 v39; // x3
-  int v40; // w1
-  int v41; // w2
-  __int64 v42; // x3
-  __int64 v43; // x20
+  __int64 v7; // x20
   TitleInfoControl_o *genericContainerHandle; // x0
-  __int64 v45; // x1
-  System_String_array **v46; // x2
-  System_String_array **v47; // x3
-  System_Boolean_array **v48; // x4
-  System_Int32_array **v49; // x5
-  System_Int32_array *v50; // x6
-  System_Int32_array *v51; // x7
-  int v52; // w2
-  __int64 v53; // x3
+  __int64 v9; // x1
+  System_String_array **v10; // x2
+  System_String_array **v11; // x3
+  System_Boolean_array **v12; // x4
+  System_Int32_array **v13; // x5
+  System_Int32_array *v14; // x6
+  System_Int32_array *v15; // x7
   int32_t id; // w8
-  _QWORD *v55; // x0
-  System_Reflection_MethodBase_o *v56; // x0
+  _QWORD *v17; // x0
+  System_Reflection_MethodBase_o *v18; // x0
   UISprite_c *klass; // x8
-  _QWORD *v58; // x0
-  System_Reflection_MethodBase_o *v59; // x0
-  System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *v60; // x22
+  _QWORD *v20; // x0
+  System_Reflection_MethodBase_o *v21; // x0
+  System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *v22; // x22
   float moveDefaultTime; // s8
   float moveDistanceMultipleValue; // s9
-  BlankEarth_RotateEarthTimeCalculateParam_o *v63; // x23
-  const MethodInfo *v64; // x1
+  BlankEarth_RotateEarthTimeCalculateParam_o *v25; // x23
+  const MethodInfo *v26; // x1
   System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__o *ObjectList; // x21
-  System_Predicate_peRenderTexture_ChangeLayerObject__o *v66; // x22
-  const MethodInfo *v67; // x2
-  BlankEarthShortcutButtonListViewObject_o *v68; // x21
-  const MethodInfo *v69; // x1
-  int v70; // w1
-  int v71; // w2
-  __int64 v72; // x3
-  TerminalPramsManager_c *v73; // x0
+  System_Predicate_peRenderTexture_ChangeLayerObject__o *v28; // x22
+  const MethodInfo *v29; // x2
+  BlankEarthShortcutButtonListViewObject_o *v30; // x21
+  const MethodInfo *v31; // x1
+  TerminalPramsManager_c *v32; // x0
 
-  if ( (byte_42E85F6 & 1) == 0 )
+  if ( (byte_4351631 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Action_BlankEarth_QAARotateEarthResponse___ctor__, index, (_DWORD)bSpotEnt, method);
-    sub_B5D5C4(&System_Action_BlankEarth_QAARotateEarthResponse__TypeInfo, v7, v8, v9);
-    sub_B5D5C4(&Method_BlankEarthShortcutButtonListViewManager_OnClickButton__, v10, v11, v12);
-    sub_B5D5C4(&BlankEarthShortcutButtonListViewObject_TypeInfo, v13, v14, v15);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__Find__, v16, v17, v18);
-    sub_B5D5C4(&Method_System_Predicate_BlankEarthShortcutButtonListViewObject___ctor__, v19, v20, v21);
-    sub_B5D5C4(&System_Predicate_BlankEarthShortcutButtonListViewObject__TypeInfo, v22, v23, v24);
-    sub_B5D5C4(&BlankEarth_RotateEarthTimeCalculateParam_TypeInfo, v25, v26, v27);
-    sub_B5D5C4(&TerminalPramsManager_TypeInfo, v28, v29, v30);
-    sub_B5D5C4(&TerminalSceneComponent_TypeInfo, v31, v32, v33);
-    sub_B5D5C4(
-      &Method_BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0__OnClickButton_b__0__,
-      v34,
-      v35,
-      v36);
-    sub_B5D5C4(
-      &Method_BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0__OnClickButton_b__1__,
-      v37,
-      v38,
-      v39);
-    sub_B5D5C4(&BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0_TypeInfo, v40, v41, v42);
-    byte_42E85F6 = 1;
+    sub_B70694(&Method_System_Action_BlankEarth_QAARotateEarthResponse___ctor__);
+    sub_B70694(&System_Action_BlankEarth_QAARotateEarthResponse__TypeInfo);
+    sub_B70694(&Method_BlankEarthShortcutButtonListViewManager_OnClickButton__);
+    sub_B70694(&BlankEarthShortcutButtonListViewObject_TypeInfo);
+    sub_B70694(&Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__Find__);
+    sub_B70694(&Method_System_Predicate_BlankEarthShortcutButtonListViewObject___ctor__);
+    sub_B70694(&System_Predicate_BlankEarthShortcutButtonListViewObject__TypeInfo);
+    sub_B70694(&BlankEarth_RotateEarthTimeCalculateParam_TypeInfo);
+    sub_B70694(&TerminalPramsManager_TypeInfo);
+    sub_B70694(&TerminalSceneComponent_TypeInfo);
+    sub_B70694(&Method_BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0__OnClickButton_b__0__);
+    sub_B70694(&Method_BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0__OnClickButton_b__1__);
+    sub_B70694(&BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0_TypeInfo);
+    byte_4351631 = 1;
   }
-  v43 = sub_B5D694(BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0_TypeInfo);
+  v7 = sub_B70764(BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0_TypeInfo);
   BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0___ctor(
-    (BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0_o *)v43,
+    (BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0_o *)v7,
     0LL);
-  if ( !v43 )
+  if ( !v7 )
     goto LABEL_39;
-  *(_QWORD *)(v43 + 16) = this;
-  sub_B5D560((BattleServantConfConponent_o *)(v43 + 16), (System_Int32_array **)this, v46, v47, v48, v49, v50, v51);
-  *(_DWORD *)(v43 + 28) = index;
+  *(_QWORD *)(v7 + 16) = this;
+  sub_B70630((BattleServantConfConponent_o *)(v7 + 16), (System_Int32_array **)this, v10, v11, v12, v13, v14, v15);
+  *(_DWORD *)(v7 + 28) = index;
   if ( !this->fields.itemList )
     return;
   if ( !bSpotEnt )
     goto LABEL_39;
   id = bSpotEnt->fields.id;
-  *(_DWORD *)(v43 + 24) = id;
+  *(_DWORD *)(v7 + 24) = id;
   if ( id == this->fields.goalSpotId )
   {
-    v55 = Method_BlankEarthShortcutButtonListViewManager_OnClickButton__;
+    v17 = Method_BlankEarthShortcutButtonListViewManager_OnClickButton__;
     if ( (*((_BYTE *)Method_BlankEarthShortcutButtonListViewManager_OnClickButton__ + 75) & 2) != 0 )
-      v55 = (_QWORD *)sub_B5D5CC(Method_BlankEarthShortcutButtonListViewManager_OnClickButton__);
-    v56 = (System_Reflection_MethodBase_o *)sub_B5D5A8(v55, v55[3]);
-    OverwriteAssetSoundName__PlaySystemSe(v56, 2, 0LL);
+      v17 = (_QWORD *)sub_B7069C(Method_BlankEarthShortcutButtonListViewManager_OnClickButton__);
+    v18 = (System_Reflection_MethodBase_o *)sub_B70678(v17, v17[3]);
+    OverwriteAssetSoundName__PlaySystemSe(v18, 2, 0LL);
     return;
   }
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -712,10 +513,10 @@ void __fastcall BlankEarthShortcutButtonListViewManager__OnClickButton(
   {
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
   }
-  if ( !byte_42E4B1E )
+  if ( !byte_434DEA1 )
   {
-    sub_B5D5C4(&TerminalSceneComponent_TypeInfo, v45, v52, v53);
-    byte_42E4B1E = 1;
+    sub_B70694(&TerminalSceneComponent_TypeInfo);
+    byte_434DEA1 = 1;
   }
   genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -731,25 +532,25 @@ void __fastcall BlankEarthShortcutButtonListViewManager__OnClickButton(
   if ( !genericContainerHandle )
     goto LABEL_39;
   TitleInfoControl__SetTouchEnable(genericContainerHandle, 0, 0LL);
-  v58 = Method_BlankEarthShortcutButtonListViewManager_OnClickButton__;
+  v20 = Method_BlankEarthShortcutButtonListViewManager_OnClickButton__;
   if ( (*((_BYTE *)Method_BlankEarthShortcutButtonListViewManager_OnClickButton__ + 75) & 2) != 0 )
-    v58 = (_QWORD *)sub_B5D5CC(Method_BlankEarthShortcutButtonListViewManager_OnClickButton__);
-  v59 = (System_Reflection_MethodBase_o *)sub_B5D5A8(v58, v58[3]);
-  OverwriteAssetSoundName__PlaySystemSe(v59, 0, 0LL);
-  v60 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B5D694(System_Action_BlankEarth_QAARotateEarthResponse__TypeInfo);
+    v20 = (_QWORD *)sub_B7069C(Method_BlankEarthShortcutButtonListViewManager_OnClickButton__);
+  v21 = (System_Reflection_MethodBase_o *)sub_B70678(v20, v20[3]);
+  OverwriteAssetSoundName__PlaySystemSe(v21, 0, 0LL);
+  v22 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B70764(System_Action_BlankEarth_QAARotateEarthResponse__TypeInfo);
   System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData____ctor(
-    v60,
-    (Il2CppObject *)v43,
+    v22,
+    (Il2CppObject *)v7,
     Method_BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0__OnClickButton_b__0__,
-    (const MethodInfo_258B320 *)Method_System_Action_BlankEarth_QAARotateEarthResponse___ctor__);
+    (const MethodInfo_264C148 *)Method_System_Action_BlankEarth_QAARotateEarthResponse___ctor__);
   genericContainerHandle = (TitleInfoControl_o *)this->fields.blankEarth;
   if ( !genericContainerHandle )
     goto LABEL_39;
   BlankEarth__SaveSpotRotation((BlankEarth_o *)genericContainerHandle, bSpotEnt, 0LL);
   moveDefaultTime = this->fields.moveDefaultTime;
   moveDistanceMultipleValue = this->fields.moveDistanceMultipleValue;
-  v63 = (BlankEarth_RotateEarthTimeCalculateParam_o *)sub_B5D694(BlankEarth_RotateEarthTimeCalculateParam_TypeInfo);
-  BlankEarth_RotateEarthTimeCalculateParam___ctor(v63, moveDefaultTime, moveDistanceMultipleValue, 0LL);
+  v25 = (BlankEarth_RotateEarthTimeCalculateParam_o *)sub_B70764(BlankEarth_RotateEarthTimeCalculateParam_TypeInfo);
+  BlankEarth_RotateEarthTimeCalculateParam___ctor(v25, moveDefaultTime, moveDistanceMultipleValue, 0LL);
   genericContainerHandle = (TitleInfoControl_o *)this->fields.blankEarth;
   if ( !genericContainerHandle )
     goto LABEL_39;
@@ -759,54 +560,54 @@ void __fastcall BlankEarthShortcutButtonListViewManager__OnClickButton(
     this->fields.spotMoveTime,
     this->fields.spotMoveEasingType,
     1,
-    (System_Action_BlankEarth_QAARotateEarthResponse__o *)v60,
-    v63,
+    (System_Action_BlankEarth_QAARotateEarthResponse__o *)v22,
+    v25,
     0LL);
-  ObjectList = BlankEarthShortcutButtonListViewManager__get_ObjectList(this, v64);
-  v66 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B5D694(System_Predicate_BlankEarthShortcutButtonListViewObject__TypeInfo);
+  ObjectList = BlankEarthShortcutButtonListViewManager__get_ObjectList(this, v26);
+  v28 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B70764(System_Predicate_BlankEarthShortcutButtonListViewObject__TypeInfo);
   System_Predicate_peRenderTexture_ChangeLayerObject____ctor(
-    v66,
-    (Il2CppObject *)v43,
+    v28,
+    (Il2CppObject *)v7,
     Method_BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0__OnClickButton_b__1__,
-    (const MethodInfo_2B9320C *)Method_System_Predicate_BlankEarthShortcutButtonListViewObject___ctor__);
+    (const MethodInfo_2BF23B8 *)Method_System_Predicate_BlankEarthShortcutButtonListViewObject___ctor__);
   if ( !ObjectList )
     goto LABEL_39;
   genericContainerHandle = (TitleInfoControl_o *)System_Collections_Generic_List_peRenderTexture_ChangeLayerObject___Find(
                                                    (System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *)ObjectList,
-                                                   (System_Predicate_T__o *)v66,
-                                                   (const MethodInfo_3057880 *)Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__Find__);
-  v68 = (BlankEarthShortcutButtonListViewObject_o *)genericContainerHandle;
+                                                   (System_Predicate_T__o *)v28,
+                                                   (const MethodInfo_3025F48 *)Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__Find__);
+  v30 = (BlankEarthShortcutButtonListViewObject_o *)genericContainerHandle;
   if ( !genericContainerHandle )
   {
-    v68 = (BlankEarthShortcutButtonListViewObject_o *)sub_B5D694(BlankEarthShortcutButtonListViewObject_TypeInfo);
-    BlankEarthShortcutButtonListViewObject___ctor(v68, v69);
+    v30 = (BlankEarthShortcutButtonListViewObject_o *)sub_B70764(BlankEarthShortcutButtonListViewObject_TypeInfo);
+    BlankEarthShortcutButtonListViewObject___ctor(v30, v31);
   }
-  if ( !v68 || (genericContainerHandle = (TitleInfoControl_o *)v68->fields.itemDraw) == 0LL )
+  if ( !v30 || (genericContainerHandle = (TitleInfoControl_o *)v30->fields.itemDraw) == 0LL )
 LABEL_39:
-    sub_B5D69C(genericContainerHandle, v45);
+    sub_B7076C(genericContainerHandle, v9);
   BlankEarthShortcutButtonListViewItemDraw__SetShortcutButtonEnable(
     (BlankEarthShortcutButtonListViewItemDraw_o *)genericContainerHandle,
     0,
-    v67);
+    v29);
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   }
-  if ( !byte_42E5EDA )
+  if ( !byte_434EDC9 )
   {
-    sub_B5D5C4(&TerminalPramsManager_TypeInfo, v70, v71, v72);
-    byte_42E5EDA = 1;
+    sub_B70694(&TerminalPramsManager_TypeInfo);
+    byte_434EDC9 = 1;
   }
-  v73 = TerminalPramsManager_TypeInfo;
+  v32 = TerminalPramsManager_TypeInfo;
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    v73 = TerminalPramsManager_TypeInfo;
+    v32 = TerminalPramsManager_TypeInfo;
   }
-  v73->static_fields->_IsBlankEarthShortcutMoving_k__BackingField = 1;
-  this->fields.goalSpotId = *(_DWORD *)(v43 + 24);
+  v32->static_fields->_IsBlankEarthShortcutMoving_k__BackingField = 1;
+  this->fields.goalSpotId = *(_DWORD *)(v7 + 24);
 }
 
 
@@ -823,70 +624,43 @@ void __fastcall BlankEarthShortcutButtonListViewManager__QuickFrameOut(
         BlankEarthShortcutButtonListViewManager_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  const MethodInfo *v14; // x1
+  const MethodInfo *v3; // x1
   System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__o *ObjectList; // x0
-  __int64 v16; // x1
-  const MethodInfo *v17; // x1
-  System_Collections_Generic_List_Enumerator_T__o v18; // [xsp+8h] [xbp-28h] BYREF
+  __int64 v5; // x1
+  const MethodInfo *v6; // x1
+  System_Collections_Generic_List_Enumerator_T__o v7; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_42E85FB & 1) == 0 )
+  if ( (byte_4351636 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__Dispose__,
-      (_DWORD)method,
-      v2,
-      v3);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__MoveNext__,
-      v5,
-      v6,
-      v7);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__get_Current__,
-      v8,
-      v9,
-      v10);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__GetEnumerator__,
-      v11,
-      v12,
-      v13);
-    byte_42E85FB = 1;
+    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__Dispose__);
+    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__MoveNext__);
+    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__get_Current__);
+    sub_B70694(&Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__GetEnumerator__);
+    byte_4351636 = 1;
   }
-  memset(&v18, 0, sizeof(v18));
+  memset(&v7, 0, sizeof(v7));
   if ( ListViewManager__get_ObjectSum((ListViewManager_o *)this, 0LL) >= 1 )
   {
-    ObjectList = BlankEarthShortcutButtonListViewManager__get_ObjectList(this, v14);
+    ObjectList = BlankEarthShortcutButtonListViewManager__get_ObjectList(this, v3);
     if ( !ObjectList )
-      sub_B5D69C(0LL, v16);
+      sub_B7076C(0LL, v5);
     System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-      &v18,
+      &v7,
       (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)ObjectList,
-      (const MethodInfo_3057E3C *)Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__GetEnumerator__);
+      (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-              &v18,
-              (const MethodInfo_201EFD0 *)Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__MoveNext__) )
+              &v7,
+              (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__MoveNext__) )
     {
-      if ( !v18.fields.current )
-        sub_B5D69C(0LL, v17);
+      if ( !v7.fields.current )
+        sub_B7076C(0LL, v6);
       BlankEarthShortcutButtonListViewObject__QuickFrameOut(
-        (BlankEarthShortcutButtonListViewObject_o *)v18.fields.current,
-        v17);
+        (BlankEarthShortcutButtonListViewObject_o *)v7.fields.current,
+        v6);
     }
     System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-      &v18,
-      (const MethodInfo_201EFCC *)Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__Dispose__);
+      &v7,
+      (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__Dispose__);
   }
 }
 
@@ -895,78 +669,51 @@ void __fastcall BlankEarthShortcutButtonListViewManager__SetAllButtonsClickable(
         BlankEarthShortcutButtonListViewManager_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
   System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__o *ObjectList; // x0
-  __int64 v15; // x1
-  _BOOL8 v16; // x0
-  __int64 v17; // x1
-  const MethodInfo *v18; // x2
+  __int64 v4; // x1
+  _BOOL8 v5; // x0
+  __int64 v6; // x1
+  const MethodInfo *v7; // x2
   Il2CppClass *klass; // x0
-  System_Collections_Generic_List_Enumerator_T__o v20; // [xsp+8h] [xbp-28h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v9; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_42E85FC & 1) == 0 )
+  if ( (byte_4351637 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__Dispose__,
-      (_DWORD)method,
-      v2,
-      v3);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__MoveNext__,
-      v5,
-      v6,
-      v7);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__get_Current__,
-      v8,
-      v9,
-      v10);
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__GetEnumerator__,
-      v11,
-      v12,
-      v13);
-    byte_42E85FC = 1;
+    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__Dispose__);
+    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__MoveNext__);
+    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__get_Current__);
+    sub_B70694(&Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__GetEnumerator__);
+    byte_4351637 = 1;
   }
-  memset(&v20, 0, sizeof(v20));
+  memset(&v9, 0, sizeof(v9));
   this->fields.goalSpotId = 0;
   ObjectList = BlankEarthShortcutButtonListViewManager__get_ObjectList(this, method);
   if ( !ObjectList )
-    sub_B5D69C(0LL, v15);
+    sub_B7076C(0LL, v4);
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v20,
+    &v9,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)ObjectList,
-    (const MethodInfo_3057E3C *)Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__GetEnumerator__);
+    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__GetEnumerator__);
   while ( 1 )
   {
-    v16 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-            &v20,
-            (const MethodInfo_201EFD0 *)Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__MoveNext__);
-    if ( !v16 )
+    v5 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
+           &v9,
+           (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__MoveNext__);
+    if ( !v5 )
       break;
-    if ( !v20.fields.current )
-      sub_B5D69C(v16, v17);
-    klass = v20.fields.current[10].klass;
+    if ( !v9.fields.current )
+      sub_B7076C(v5, v6);
+    klass = v9.fields.current[10].klass;
     if ( !klass )
-      sub_B5D69C(0LL, v17);
+      sub_B7076C(0LL, v6);
     BlankEarthShortcutButtonListViewItemDraw__SetShortcutButtonEnable(
       (BlankEarthShortcutButtonListViewItemDraw_o *)klass,
       1,
-      v18);
+      v7);
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v20,
-    (const MethodInfo_201EFCC *)Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__Dispose__);
+    &v9,
+    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_BlankEarthShortcutButtonListViewObject__Dispose__);
 }
 
 
@@ -978,21 +725,17 @@ void __fastcall BlankEarthShortcutButtonListViewManager__SetObjectItem(
 {
   __int64 v5; // x10
 
-  if ( (byte_42E85F7 & 1) == 0 )
+  if ( (byte_4351632 & 1) == 0 )
   {
-    this = (BlankEarthShortcutButtonListViewManager_o *)sub_B5D5C4(
-                                                          &BlankEarthShortcutButtonListViewObject_TypeInfo,
-                                                          (_DWORD)obj,
-                                                          (_DWORD)item,
-                                                          method);
-    byte_42E85F7 = 1;
+    this = (BlankEarthShortcutButtonListViewManager_o *)sub_B70694(&BlankEarthShortcutButtonListViewObject_TypeInfo);
+    byte_4351632 = 1;
   }
   if ( !obj
     || (v5 = *(&BlankEarthShortcutButtonListViewObject_TypeInfo->_2.bitflags2 + 1),
         *(&obj->klass->_2.bitflags2 + 1) < (unsigned int)v5)
     || (BlankEarthShortcutButtonListViewObject_c *)obj->klass->_2.typeHierarchy[v5 - 1] != BlankEarthShortcutButtonListViewObject_TypeInfo )
   {
-    sub_B5D69C(this, obj);
+    sub_B7076C(this, obj);
   }
   BlankEarthShortcutButtonListViewObject__SetupDisp(
     (BlankEarthShortcutButtonListViewObject_o *)obj,
@@ -1005,38 +748,34 @@ void __fastcall BlankEarthShortcutButtonListViewManager__SetTouchEnable(
         bool isEnable,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  char v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
   UnityEngine_Object_o *blockMask; // x21
   BattleServantConfConponent_o *p_blockMask; // x20
   UnityEngine_Object_o *klass; // x19
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
+  System_String_array **v8; // x2
+  System_String_array **v9; // x3
+  System_Boolean_array **v10; // x4
+  System_Int32_array **v11; // x5
+  System_Int32_array *v12; // x6
+  System_Int32_array *v13; // x7
   UnityEngine_Object_o *blockMaskPrefab; // x21
-  struct UnityEngine_GameObject_o *v19; // x21
-  struct UnityEngine_GameObject_o *v20; // x0
-  System_String_array **v21; // x2
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
-  UnityEngine_GameObject_o *v27; // x20
-  __int64 v28; // x1
-  UnityEngine_GameObject_o *v29; // x0
+  struct UnityEngine_GameObject_o *v15; // x21
+  struct UnityEngine_GameObject_o *v16; // x0
+  System_String_array **v17; // x2
+  System_String_array **v18; // x3
+  System_Boolean_array **v19; // x4
+  System_Int32_array **v20; // x5
+  System_Int32_array *v21; // x6
+  System_Int32_array *v22; // x7
+  UnityEngine_GameObject_o *v23; // x20
+  __int64 v24; // x1
+  UnityEngine_GameObject_o *v25; // x0
   UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_42E85FD & 1) == 0 )
+  if ( (byte_4351638 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_UnityEngine_Object_Instantiate_GameObject___, isEnable, (_DWORD)method, v3);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v6, v7, v8);
-    byte_42E85FD = 1;
+    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4351638 = 1;
   }
   blockMask = (UnityEngine_Object_o *)this->fields.blockMask;
   p_blockMask = (BattleServantConfConponent_o *)&this->fields.blockMask;
@@ -1055,9 +794,9 @@ void __fastcall BlankEarthShortcutButtonListViewManager__SetTouchEnable(
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      UnityEngine_Object__DestroyImmediate_35620448(klass, 0LL);
+      UnityEngine_Object__DestroyImmediate_36067420(klass, 0LL);
       p_blockMask->klass = 0LL;
-      sub_B5D560(p_blockMask, 0LL, v12, v13, v14, v15, v16, v17);
+      sub_B70630(p_blockMask, 0LL, v8, v9, v10, v11, v12, v13);
     }
   }
   else
@@ -1077,36 +816,36 @@ void __fastcall BlankEarthShortcutButtonListViewManager__SetTouchEnable(
       }
       if ( UnityEngine_Object__op_Inequality(blockMaskPrefab, 0LL, 0LL) )
       {
-        v19 = this->fields.blockMaskPrefab;
+        v15 = this->fields.blockMaskPrefab;
         if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         }
-        v20 = (struct UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
-                                                   (UnityEngine_UI_Dropdown_DropdownItem_o *)v19,
-                                                   (const MethodInfo_1E662D8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-        this->fields.blockMask = v20;
-        sub_B5D560(
+        v16 = (struct UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
+                                                   (UnityEngine_UI_Dropdown_DropdownItem_o *)v15,
+                                                   (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+        this->fields.blockMask = v16;
+        sub_B70630(
           (BattleServantConfConponent_o *)&this->fields.blockMask,
-          (System_Int32_array **)v20,
+          (System_Int32_array **)v16,
+          v17,
+          v18,
+          v19,
+          v20,
           v21,
-          v22,
-          v23,
-          v24,
-          v25,
-          v26);
+          v22);
         GameObjectExtensions__SafeSetParent(
           this->fields.blockMask,
           (UnityEngine_Component_o *)this->fields.blockMaskPanel,
           0LL);
-        v27 = this->fields.blockMask;
+        v23 = this->fields.blockMask;
         zero = UnityEngine_Vector3__get_zero(0LL);
-        GameObjectExtensions__SetLocalPosition(v27, zero, 0LL);
-        v29 = this->fields.blockMask;
-        if ( !v29 )
-          sub_B5D69C(0LL, v28);
-        UnityEngine_GameObject__SetActive(v29, 1, 0LL);
+        GameObjectExtensions__SetLocalPosition(v23, zero, 0LL);
+        v25 = this->fields.blockMask;
+        if ( !v25 )
+          sub_B7076C(0LL, v24);
+        UnityEngine_GameObject__SetActive(v25, 1, 0LL);
       }
     }
   }
@@ -1127,29 +866,24 @@ void __fastcall BlankEarthShortcutButtonListViewManager___FrameIn_b__18_1(
         BlankEarthShortcutButtonListViewManager_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
   BlankEarth_o *blankEarth; // x20
-  System_Action_o *v9; // x21
-  __int64 v10; // x0
-  __int64 v11; // x1
+  System_Action_o *v4; // x21
+  __int64 v5; // x0
+  __int64 v6; // x1
 
-  if ( (byte_42E85FF & 1) == 0 )
+  if ( (byte_435163A & 1) == 0 )
   {
-    sub_B5D5C4(&System_Action_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&Method_BlankEarthShortcutButtonListViewManager__FrameIn_b__18_2__, v5, v6, v7);
-    byte_42E85FF = 1;
+    sub_B70694(&System_Action_TypeInfo);
+    sub_B70694(&Method_BlankEarthShortcutButtonListViewManager__FrameIn_b__18_2__);
+    byte_435163A = 1;
   }
   BlankEarthShortcutButtonListViewManager__SetAllButtonsClickable(this, method);
   blankEarth = this->fields.blankEarth;
-  v9 = (System_Action_o *)sub_B5D694(System_Action_TypeInfo);
-  System_Action___ctor(v9, (Il2CppObject *)this, Method_BlankEarthShortcutButtonListViewManager__FrameIn_b__18_2__, 0LL);
+  v4 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  System_Action___ctor(v4, (Il2CppObject *)this, Method_BlankEarthShortcutButtonListViewManager__FrameIn_b__18_2__, 0LL);
   if ( !blankEarth )
-    sub_B5D69C(v10, v11);
-  BlankEarth__ExecuteAfterStartUpScaling(blankEarth, v9, 0LL);
+    sub_B7076C(v5, v6);
+  BlankEarth__ExecuteAfterStartUpScaling(blankEarth, v4, 0LL);
 }
 
 
@@ -1167,98 +901,72 @@ System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__o *__fas
         BlankEarthShortcutButtonListViewManager_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  int v14; // w1
-  int v15; // w2
-  __int64 v16; // x3
-  int v17; // w1
-  int v18; // w2
-  __int64 v19; // x3
-  int v20; // w1
-  int v21; // w2
-  __int64 v22; // x3
-  int v23; // w1
-  int v24; // w2
-  __int64 v25; // x3
-  int v26; // w1
-  int v27; // w2
-  __int64 v28; // x3
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v29; // x19
-  __int64 v30; // x1
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x19
+  __int64 v4; // x1
   struct System_Collections_Generic_List_GameObject__o *objectList; // x0
   Il2CppObject *current; // x20
-  _BOOL8 v33; // x0
-  __int64 v34; // x1
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
   EventMissionProgressRequest_Argument_ProgressData_o *Component_srcLineSprite; // x0
-  System_Collections_Generic_List_Enumerator_T__o v37; // [xsp+8h] [xbp-68h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v38; // [xsp+20h] [xbp-50h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v11; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v12; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_42E85F4 & 1) == 0 )
+  if ( (byte_435162F & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v5, v6, v7);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v8, v9, v10);
-    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_BlankEarthShortcutButtonListViewObject___, v11, v12, v13);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__Add__, v14, v15, v16);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v17, v18, v19);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject___ctor__, v20, v21, v22);
-    sub_B5D5C4(&System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__TypeInfo, v23, v24, v25);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v26, v27, v28);
-    byte_42E85F4 = 1;
+    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_BlankEarthShortcutButtonListViewObject___);
+    sub_B70694(&Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__Add__);
+    sub_B70694(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_B70694(&Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject___ctor__);
+    sub_B70694(&System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__TypeInfo);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_435162F = 1;
   }
-  memset(&v38, 0, sizeof(v38));
-  v29 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B5D694(System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__TypeInfo);
+  memset(&v12, 0, sizeof(v12));
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v29,
-    (const MethodInfo_30562FC *)Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject___ctor__);
+    v3,
+    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_B5D69C(0LL, v30);
+    sub_B7076C(0LL, v4);
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v37,
+    &v11,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)objectList,
-    (const MethodInfo_3057E3C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v38 = v37;
+    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v12 = v11;
   while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-            &v38,
-            (const MethodInfo_201EFD0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v12,
+            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v38.fields.current;
+    current = v12.fields.current;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    v33 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0LL, 0LL);
-    if ( v33 )
+    v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0LL, 0LL);
+    if ( v7 )
     {
       if ( !current )
-        sub_B5D69C(v33, v34);
+        sub_B7076C(v7, v8);
       Component_srcLineSprite = (EventMissionProgressRequest_Argument_ProgressData_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                                          (UnityEngine_GameObject_o *)current,
-                                                                                         (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_BlankEarthShortcutButtonListViewObject___);
-      if ( !v29 )
-        sub_B5D69C(Component_srcLineSprite, Component_srcLineSprite);
+                                                                                         (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_BlankEarthShortcutButtonListViewObject___);
+      if ( !v3 )
+        sub_B7076C(Component_srcLineSprite, Component_srcLineSprite);
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        v29,
+        v3,
         Component_srcLineSprite,
-        (const MethodInfo_3056FC0 *)Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__Add__);
+        (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__Add__);
     }
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v38,
-    (const MethodInfo_201EFCC *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-  return (System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__o *)v29;
+    &v12,
+    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+  return (System_Collections_Generic_List_BlankEarthShortcutButtonListViewObject__o *)v3;
 }
 
 
@@ -1278,7 +986,7 @@ void __fastcall BlankEarthShortcutButtonListViewManager___c__DisplayClass13_0___
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   BlankEarthShortcutButtonListViewManager__OnClickButton(_4__this, this->fields.itemIndex, this->fields.bSpotEnt, 0LL);
 }
 
@@ -1296,82 +1004,46 @@ void __fastcall BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0___
         BlankEarth_QAARotateEarthResponse_o *response,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  int v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  int v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
-  int v15; // w1
-  int v16; // w2
-  __int64 v17; // x3
-  int v18; // w1
-  int v19; // w2
-  __int64 v20; // x3
-  int v21; // w1
-  int v22; // w2
-  __int64 v23; // x3
-  int v24; // w1
-  int v25; // w2
-  __int64 v26; // x3
-  int v27; // w1
-  int v28; // w2
-  __int64 v29; // x3
-  int v30; // w1
-  int v31; // w2
-  __int64 v32; // x3
   ScrTerminalListTop_o *blankEarth; // x0
-  __int64 v34; // x8
-  int v35; // w2
-  __int64 v36; // x3
+  __int64 v6; // x8
   struct BlankEarthShortcutButtonListViewManager_o *_4__this; // x8
   UnityEngine_Object_o *EarthPoint; // x20
-  int v39; // w2
-  __int64 v40; // x3
-  __int64 v41; // x8
-  struct BlankEarthShortcutButtonListViewManager_o *v42; // x8
-  UnityEngine_Object_o *v43; // x20
-  struct BlankEarth_o *v44; // x8
+  __int64 v9; // x8
+  struct BlankEarthShortcutButtonListViewManager_o *v10; // x8
+  UnityEngine_Object_o *v11; // x20
+  struct BlankEarth_o *v12; // x8
   UnityEngine_UI_Dropdown_DropdownItem_o *shortcutSpotEffect; // x20
-  struct BlankEarthShortcutButtonListViewManager_o *v46; // x8
-  UnityEngine_GameObject_o *v47; // x20
-  UnityEngine_Component_o *v48; // x0
-  struct BlankEarthShortcutButtonListViewManager_o *v49; // x8
+  struct BlankEarthShortcutButtonListViewManager_o *v14; // x8
+  UnityEngine_GameObject_o *v15; // x20
+  UnityEngine_Component_o *v16; // x0
+  struct BlankEarthShortcutButtonListViewManager_o *v17; // x8
   System_Action_o *_9__2; // x22
-  UnityEngine_MonoBehaviour_o *v51; // x20
-  UnityEngine_Vector3_o v52; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_MonoBehaviour_o *v19; // x20
+  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_42E5E16 & 1) == 0 )
+  if ( (byte_434ED31 & 1) == 0 )
   {
-    sub_B5D5C4(&System_Action_TypeInfo, (_DWORD)response, (_DWORD)method, v3);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_GameObject__Add__, v6, v7, v8);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_GameObject__RemoveAt__, v9, v10, v11);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_GameObject__get_Count__, v12, v13, v14);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_GameObject__get_Item__, v15, v16, v17);
-    sub_B5D5C4(&Method_UnityEngine_Object_Instantiate_GameObject___, v18, v19, v20);
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, v21, v22, v23);
-    sub_B5D5C4(&TerminalPramsManager_TypeInfo, v24, v25, v26);
-    sub_B5D5C4(&TerminalSceneComponent_TypeInfo, v27, v28, v29);
-    sub_B5D5C4(
-      &Method_BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0__OnClickButton_b__2__,
-      v30,
-      v31,
-      v32);
-    byte_42E5E16 = 1;
+    sub_B70694(&System_Action_TypeInfo);
+    sub_B70694(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_B70694(&Method_System_Collections_Generic_List_GameObject__RemoveAt__);
+    sub_B70694(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_B70694(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    sub_B70694(&TerminalPramsManager_TypeInfo);
+    sub_B70694(&TerminalSceneComponent_TypeInfo);
+    sub_B70694(&Method_BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0__OnClickButton_b__2__);
+    byte_434ED31 = 1;
   }
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
   }
-  if ( !byte_42E4B1E )
+  if ( !byte_434DEA1 )
   {
-    sub_B5D5C4(&TerminalSceneComponent_TypeInfo, (_DWORD)response, (_DWORD)method, v3);
-    byte_42E4B1E = 1;
+    sub_B70694(&TerminalSceneComponent_TypeInfo);
+    byte_434DEA1 = 1;
   }
   blankEarth = (ScrTerminalListTop_o *)TerminalSceneComponent_TypeInfo;
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1380,10 +1052,10 @@ void __fastcall BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0___
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
     blankEarth = (ScrTerminalListTop_o *)TerminalSceneComponent_TypeInfo;
   }
-  v34 = **(_QWORD **)&blankEarth->fields.boardGameTokenEffectId;
-  if ( !v34 )
+  v6 = **(_QWORD **)&blankEarth->fields.boardGameTokenEffectId;
+  if ( !v6 )
     goto LABEL_61;
-  blankEarth = *(ScrTerminalListTop_o **)(v34 + 248);
+  blankEarth = *(ScrTerminalListTop_o **)(v6 + 248);
   if ( !blankEarth )
     goto LABEL_61;
   ScrTerminalListTop__SetAllBlankEarthShortcutButtonsClickable(blankEarth, 0LL);
@@ -1392,10 +1064,10 @@ void __fastcall BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0___
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   }
-  if ( !byte_42E5EDA )
+  if ( !byte_434EDC9 )
   {
-    sub_B5D5C4(&TerminalPramsManager_TypeInfo, (_DWORD)response, v35, v36);
-    byte_42E5EDA = 1;
+    sub_B70694(&TerminalPramsManager_TypeInfo);
+    byte_434EDC9 = 1;
   }
   blankEarth = (ScrTerminalListTop_o *)TerminalPramsManager_TypeInfo;
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1429,10 +1101,10 @@ void __fastcall BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0___
     {
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
     }
-    if ( !byte_42E4B1E )
+    if ( !byte_434DEA1 )
     {
-      sub_B5D5C4(&TerminalSceneComponent_TypeInfo, (_DWORD)response, v39, v40);
-      byte_42E4B1E = 1;
+      sub_B70694(&TerminalSceneComponent_TypeInfo);
+      byte_434DEA1 = 1;
     }
     blankEarth = (ScrTerminalListTop_o *)TerminalSceneComponent_TypeInfo;
     if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1441,10 +1113,10 @@ void __fastcall BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0___
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
       blankEarth = (ScrTerminalListTop_o *)TerminalSceneComponent_TypeInfo;
     }
-    v41 = **(_QWORD **)&blankEarth->fields.boardGameTokenEffectId;
-    if ( v41 )
+    v9 = **(_QWORD **)&blankEarth->fields.boardGameTokenEffectId;
+    if ( v9 )
     {
-      blankEarth = *(ScrTerminalListTop_o **)(v41 + 232);
+      blankEarth = *(ScrTerminalListTop_o **)(v9 + 232);
       if ( blankEarth )
       {
         TitleInfoControl__SetTouchEnable((TitleInfoControl_o *)blankEarth, 1, 0LL);
@@ -1452,35 +1124,35 @@ void __fastcall BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0___
       }
     }
 LABEL_61:
-    sub_B5D69C(blankEarth, response);
+    sub_B7076C(blankEarth, response);
   }
-  v42 = this->fields.__4__this;
-  if ( !v42 )
+  v10 = this->fields.__4__this;
+  if ( !v10 )
     goto LABEL_61;
-  blankEarth = (ScrTerminalListTop_o *)v42->fields.spotEffectList;
+  blankEarth = (ScrTerminalListTop_o *)v10->fields.spotEffectList;
   if ( !blankEarth )
     goto LABEL_61;
   if ( SLODWORD(blankEarth->fields.mTargetFsm) >= 2 )
   {
-    v43 = *(UnityEngine_Object_o **)(*(_QWORD *)&blankEarth->fields.m_CachedPtr + 32LL);
+    v11 = *(UnityEngine_Object_o **)(*(_QWORD *)&blankEarth->fields.m_CachedPtr + 32LL);
     System_Collections_Generic_List_XWeaponTrail_Element___RemoveAt(
       (System_Collections_Generic_List_XWeaponTrail_Element__o *)blankEarth,
       0,
-      (const MethodInfo_3058CB0 *)Method_System_Collections_Generic_List_GameObject__RemoveAt__);
+      (const MethodInfo_3027378 *)Method_System_Collections_Generic_List_GameObject__RemoveAt__);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_35620236(v43, 0LL);
-    v42 = this->fields.__4__this;
-    if ( !v42 )
+    UnityEngine_Object__Destroy_36067208(v11, 0LL);
+    v10 = this->fields.__4__this;
+    if ( !v10 )
       goto LABEL_61;
   }
-  v44 = v42->fields.blankEarth;
-  if ( !v44 )
+  v12 = v10->fields.blankEarth;
+  if ( !v12 )
     goto LABEL_61;
-  shortcutSpotEffect = (UnityEngine_UI_Dropdown_DropdownItem_o *)v44->fields.shortcutSpotEffect;
+  shortcutSpotEffect = (UnityEngine_UI_Dropdown_DropdownItem_o *)v12->fields.shortcutSpotEffect;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -1488,53 +1160,53 @@ LABEL_61:
   }
   blankEarth = (ScrTerminalListTop_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                          shortcutSpotEffect,
-                                         (const MethodInfo_1E662D8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-  v46 = this->fields.__4__this;
-  if ( !v46 )
+                                         (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  v14 = this->fields.__4__this;
+  if ( !v14 )
     goto LABEL_61;
-  v47 = (UnityEngine_GameObject_o *)blankEarth;
-  blankEarth = (ScrTerminalListTop_o *)v46->fields.blankEarth;
+  v15 = (UnityEngine_GameObject_o *)blankEarth;
+  blankEarth = (ScrTerminalListTop_o *)v14->fields.blankEarth;
   if ( !blankEarth )
     goto LABEL_61;
-  v48 = (UnityEngine_Component_o *)BlankEarth__GetEarthPoint((BlankEarth_o *)blankEarth, this->fields.spotId, 0LL);
-  GameObjectExtensions__SetParent(v47, v48, 0LL);
-  GameObjectExtensions__ResetTransform(v47, 0LL);
-  if ( !v47 )
+  v16 = (UnityEngine_Component_o *)BlankEarth__GetEarthPoint((BlankEarth_o *)blankEarth, this->fields.spotId, 0LL);
+  GameObjectExtensions__SetParent(v15, v16, 0LL);
+  GameObjectExtensions__ResetTransform(v15, 0LL);
+  if ( !v15 )
     goto LABEL_61;
-  blankEarth = (ScrTerminalListTop_o *)UnityEngine_GameObject__get_transform(v47, 0LL);
+  blankEarth = (ScrTerminalListTop_o *)UnityEngine_GameObject__get_transform(v15, 0LL);
   if ( !blankEarth )
     goto LABEL_61;
-  v52.fields.x = -90.0;
-  v52.fields.y = 0.0;
-  v52.fields.z = 0.0;
-  UnityEngine_Transform__Rotate_35742348((UnityEngine_Transform_o *)blankEarth, v52, 0LL);
-  v49 = this->fields.__4__this;
-  if ( !v49 )
+  v20.fields.x = -90.0;
+  v20.fields.y = 0.0;
+  v20.fields.z = 0.0;
+  UnityEngine_Transform__Rotate_36189384((UnityEngine_Transform_o *)blankEarth, v20, 0LL);
+  v17 = this->fields.__4__this;
+  if ( !v17 )
     goto LABEL_61;
-  blankEarth = (ScrTerminalListTop_o *)v49->fields.spotEffectList;
+  blankEarth = (ScrTerminalListTop_o *)v17->fields.spotEffectList;
   if ( !blankEarth )
     goto LABEL_61;
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)blankEarth,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)v47,
-    (const MethodInfo_3056FC0 *)Method_System_Collections_Generic_List_GameObject__Add__);
+    (EventMissionProgressRequest_Argument_ProgressData_o *)v15,
+    (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_GameObject__Add__);
   _9__2 = this->fields.__9__2;
-  v51 = (UnityEngine_MonoBehaviour_o *)this->fields.__4__this;
+  v19 = (UnityEngine_MonoBehaviour_o *)this->fields.__4__this;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_B5D694(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)this,
       Method_BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0__OnClickButton_b__2__,
       0LL);
     this->fields.__9__2 = _9__2;
-    sub_B5D560(&this->fields.__9__2);
+    sub_B70630(&this->fields.__9__2);
   }
   blankEarth = (ScrTerminalListTop_o *)BasicHelper__DelayCall(0.01, _9__2, 0LL);
-  if ( !v51 )
+  if ( !v19 )
     goto LABEL_61;
-  UnityEngine_MonoBehaviour__StartCoroutine_35615088(v51, (System_Collections_IEnumerator_o *)blankEarth, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_36062060(v19, (System_Collections_IEnumerator_o *)blankEarth, 0LL);
 }
 
 
@@ -1544,7 +1216,7 @@ bool __fastcall BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0___
         const MethodInfo *method)
 {
   if ( !n )
-    sub_B5D69C(this, 0LL);
+    sub_B7076C(this, 0LL);
   return ListViewObject__get_Index((ListViewObject_o *)n, 0LL) == this->fields.index;
 }
 
@@ -1553,25 +1225,17 @@ void __fastcall BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0___
         BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0_o *v4; // x19
+  BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0_o *v2; // x19
   struct BlankEarthShortcutButtonListViewManager_o *_4__this; // x8
-  int v6; // w2
-  __int64 v7; // x3
-  __int64 v8; // x8
+  __int64 v4; // x8
 
-  v4 = this;
-  if ( (byte_42E5E17 & 1) == 0 )
+  v2 = this;
+  if ( (byte_434ED32 & 1) == 0 )
   {
-    this = (BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0_o *)sub_B5D5C4(
-                                                                                &TerminalSceneComponent_TypeInfo,
-                                                                                (_DWORD)method,
-                                                                                v2,
-                                                                                v3);
-    byte_42E5E17 = 1;
+    this = (BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0_o *)sub_B70694(&TerminalSceneComponent_TypeInfo);
+    byte_434ED32 = 1;
   }
-  _4__this = v4->fields.__4__this;
+  _4__this = v2->fields.__4__this;
   if ( !_4__this )
     goto LABEL_17;
   this = (BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0_o *)_4__this->fields.blankEarth;
@@ -1579,7 +1243,7 @@ void __fastcall BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0___
     goto LABEL_17;
   this = (BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0_o *)BlankEarth__GetEarthPoint(
                                                                               (BlankEarth_o *)this,
-                                                                              v4->fields.spotId,
+                                                                              v2->fields.spotId,
                                                                               0LL);
   if ( !this )
     goto LABEL_17;
@@ -1589,10 +1253,10 @@ void __fastcall BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0___
   {
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
   }
-  if ( !byte_42E4B1E )
+  if ( !byte_434DEA1 )
   {
-    sub_B5D5C4(&TerminalSceneComponent_TypeInfo, (_DWORD)method, v6, v7);
-    byte_42E4B1E = 1;
+    sub_B70694(&TerminalSceneComponent_TypeInfo);
+    byte_434DEA1 = 1;
   }
   this = (BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0_o *)TerminalSceneComponent_TypeInfo;
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1601,9 +1265,9 @@ void __fastcall BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0___
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
     this = (BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0_o *)TerminalSceneComponent_TypeInfo;
   }
-  v8 = **(_QWORD **)&this[4].fields.spotId;
-  if ( !v8 || (this = *(BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0_o **)(v8 + 232)) == 0LL )
+  v4 = **(_QWORD **)&this[4].fields.spotId;
+  if ( !v4 || (this = *(BlankEarthShortcutButtonListViewManager___c__DisplayClass14_0_o **)(v4 + 232)) == 0LL )
 LABEL_17:
-    sub_B5D69C(this, method);
+    sub_B7076C(this, method);
   TitleInfoControl__SetTouchEnable((TitleInfoControl_o *)this, 1, 0LL);
 }

@@ -2,22 +2,15 @@ void __fastcall ServantTreasureDeviceDamageMaster___ctor(
         ServantTreasureDeviceDamageMaster_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EBF28 & 1) == 0 )
+  if ( (byte_4354421 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string___ctor__,
-      (_DWORD)method,
-      v2,
-      v3);
-    byte_42EBF28 = 1;
+    sub_B70694(&Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string___ctor__);
+    byte_4354421 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     295,
-    (const MethodInfo_23FB1C4 *)Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string___ctor__);
+    (const MethodInfo_21C07F4 *)Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string___ctor__);
 }
 
 
@@ -30,20 +23,16 @@ ServantTreasureDeviceDamageEntity_o *__fastcall ServantTreasureDeviceDamageMaste
 {
   System_String_o *PK; // x1
 
-  if ( (byte_42EBF26 & 1) == 0 )
+  if ( (byte_435441F & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string__GetEntity__,
-      svtId,
-      voicePrefix,
-      method);
-    byte_42EBF26 = 1;
+    sub_B70694(&Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string__GetEntity__);
+    byte_435441F = 1;
   }
   PK = ServantTreasureDeviceDamageEntity__CreatePK(svtId, voicePrefix, *(const MethodInfo **)&voicePrefix);
   return (ServantTreasureDeviceDamageEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                                   (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                                   PK,
-                                                  (const MethodInfo_23FB260 *)Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string__GetEntity__);
+                                                  (const MethodInfo_21C0890 *)Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string__GetEntity__);
 }
 
 
@@ -57,19 +46,15 @@ bool __fastcall ServantTreasureDeviceDamageMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_42EBF27 & 1) == 0 )
+  if ( (byte_4354420 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string__TryGetEntity__,
-      (_DWORD)entity,
-      svtId,
-      *(_QWORD *)&voicePrefix);
-    byte_42EBF27 = 1;
+    sub_B70694(&Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string__TryGetEntity__);
+    byte_4354420 = 1;
   }
   PK = ServantTreasureDeviceDamageEntity__CreatePK(svtId, voicePrefix, *(const MethodInfo **)&svtId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_23FB2B8 *)Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string__TryGetEntity__);
+           (const MethodInfo_21C08E8 *)Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string__TryGetEntity__);
 }

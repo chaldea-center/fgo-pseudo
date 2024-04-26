@@ -9,7 +9,7 @@ void __fastcall BaseNpGaugeConvert__Init(BaseNpGaugeConvert_o *this, DataVals_o 
   int32_t Param; // w20
 
   if ( !baseVals )
-    sub_B5D69C(this, 0LL);
+    sub_B7076C(this, 0LL);
   Param = DataVals__GetParam(baseVals, 4, 0, 0LL);
   this->fields.convertCoefficient = (float)Param
                                   / ((float (__fastcall *)(BaseNpGaugeConvert_o *, Il2CppMethodPointer))this->klass->vtable._4_get_Denominator.method)(

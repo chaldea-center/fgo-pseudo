@@ -1,12 +1,9 @@
 void __fastcall SoundPlayerOpenEffectComponent___ctor(SoundPlayerOpenEffectComponent_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42E79C4 & 1) == 0 )
+  if ( (byte_4350B3C & 1) == 0 )
   {
-    sub_B5D5C4(&CommonEffectComponent_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E79C4 = 1;
+    sub_B70694(&CommonEffectComponent_TypeInfo);
+    byte_4350B3C = 1;
   }
   if ( (BYTE3(CommonEffectComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CommonEffectComponent_TypeInfo->_2.cctor_finished )
@@ -65,7 +62,7 @@ void __fastcall SoundPlayerOpenEffectComponent__setAnimEndCallback(
   System_Int32_array *v7; // x7
 
   this->fields.animEndCallback = callback;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.animEndCallback,
     (System_Int32_array **)callback,
     (System_String_array **)method,
@@ -89,7 +86,7 @@ void __fastcall SoundPlayerOpenEffectComponent__setChangeUiCallback(
   System_Int32_array *v7; // x7
 
   this->fields.changeUiCallback = callback;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.changeUiCallback,
     (System_Int32_array **)callback,
     (System_String_array **)method,
@@ -113,7 +110,7 @@ void __fastcall SoundPlayerOpenEffectComponent__setPlayIconAnimCallBack(
   System_Int32_array *v7; // x7
 
   this->fields.playIconAnimCallback = callback;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.playIconAnimCallback,
     (System_Int32_array **)callback,
     (System_String_array **)method,

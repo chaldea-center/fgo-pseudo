@@ -4,449 +4,365 @@ void __fastcall WarBoardSquareData___ctor(
         WarBoardRoadEntity_array *roadEntities,
         const MethodInfo *method)
 {
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
-  int v10; // w1
-  int v11; // w2
-  __int64 v12; // x3
-  int v13; // w1
-  int v14; // w2
-  __int64 v15; // x3
-  int v16; // w1
-  int v17; // w2
-  __int64 v18; // x3
-  int v19; // w1
-  int v20; // w2
-  __int64 v21; // x3
-  int v22; // w1
-  int v23; // w2
-  __int64 v24; // x3
-  int v25; // w1
-  int v26; // w2
-  __int64 v27; // x3
-  int v28; // w1
-  int v29; // w2
-  __int64 v30; // x3
-  int v31; // w1
-  int v32; // w2
-  __int64 v33; // x3
-  int v34; // w1
-  int v35; // w2
-  __int64 v36; // x3
-  int v37; // w1
-  int v38; // w2
-  __int64 v39; // x3
-  int v40; // w1
-  int v41; // w2
-  __int64 v42; // x3
-  int v43; // w1
-  int v44; // w2
-  __int64 v45; // x3
-  int v46; // w1
-  int v47; // w2
-  __int64 v48; // x3
-  int v49; // w1
-  int v50; // w2
-  __int64 v51; // x3
-  int v52; // w1
-  int v53; // w2
-  __int64 v54; // x3
-  int v55; // w1
-  int v56; // w2
-  __int64 v57; // x3
-  int v58; // w1
-  int v59; // w2
-  __int64 v60; // x3
-  int v61; // w1
-  int v62; // w2
-  __int64 v63; // x3
-  int v64; // w1
-  int v65; // w2
-  __int64 v66; // x3
-  int v67; // w1
-  int v68; // w2
-  __int64 v69; // x3
-  int v70; // w1
-  int v71; // w2
-  __int64 v72; // x3
-  int v73; // w1
-  int v74; // w2
-  __int64 v75; // x3
-  int v76; // w1
-  int v77; // w2
-  __int64 v78; // x3
-  __int64 v79; // x23
-  __int64 v80; // x0
-  __int64 v81; // x1
+  __int64 v7; // x23
+  __int64 v8; // x0
+  __int64 v9; // x1
+  System_String_array **v10; // x2
+  System_String_array **v11; // x3
+  System_Boolean_array **v12; // x4
+  System_Int32_array **v13; // x5
+  System_Int32_array *v14; // x6
+  System_Int32_array *v15; // x7
+  System_String_array **v16; // x2
+  System_String_array **v17; // x3
+  System_Boolean_array **v18; // x4
+  System_Int32_array **v19; // x5
+  System_Int32_array *v20; // x6
+  System_Int32_array *v21; // x7
+  __int64 v22; // x22
+  System_String_array **v23; // x2
+  System_String_array **v24; // x3
+  System_Boolean_array **v25; // x4
+  System_Int32_array **v26; // x5
+  System_Int32_array *v27; // x6
+  System_Int32_array *v28; // x7
+  Il2CppObject **v29; // x20
+  __int64 v30; // x8
+  _DWORD *monitor; // x8
+  _DWORD *v32; // x8
+  _DWORD *v33; // x8
+  _DWORD *v34; // x8
+  System_Int32_array **Master_WarQuestSelectionMaster; // x0
+  System_String_array **v36; // x2
+  System_String_array **v37; // x3
+  System_Boolean_array **v38; // x4
+  System_Int32_array **v39; // x5
+  System_Int32_array *v40; // x6
+  System_Int32_array *v41; // x7
+  System_Int32_array **v42; // x0
+  System_String_array **v43; // x2
+  System_String_array **v44; // x3
+  System_Boolean_array **v45; // x4
+  System_Int32_array **v46; // x5
+  System_Int32_array *v47; // x6
+  System_Int32_array *v48; // x7
+  Il2CppObject *v49; // x23
+  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *v50; // x24
+  System_Collections_Generic_IEnumerable_TSource__o *v51; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v52; // x21
+  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *v53; // x23
+  System_Collections_Generic_IEnumerable_TSource__o *v54; // x0
+  DrawLotsDisplayMessage_DisplayedInGroup_SaveData_array *v55; // x0
+  Il2CppObject *v56; // x23
+  System_Collections_Generic_IEnumerable_TSource__o *v57; // x21
+  System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *v58; // x24
+  System_Collections_Generic_IEnumerable_TSource__o *v59; // x0
+  struct System_Int32_array *v60; // x0
+  System_String_array **v61; // x2
+  System_String_array **v62; // x3
+  System_Boolean_array **v63; // x4
+  System_Int32_array **v64; // x5
+  System_Int32_array *v65; // x6
+  System_Int32_array *v66; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *linkedSquares; // x24
+  System_Func_int__bool__o *v68; // x25
+  System_Collections_Generic_IEnumerable_TSource__o *v69; // x0
+  struct System_Int32_array *v70; // x0
+  System_String_array **v71; // x2
+  System_String_array **v72; // x3
+  System_Boolean_array **v73; // x4
+  System_Int32_array **v74; // x5
+  System_Int32_array *v75; // x6
+  System_Int32_array *v76; // x7
+  WarBoardSquareData___c_c *v77; // x0
+  struct WarBoardSquareData___c_StaticFields *static_fields; // x8
+  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *_9__29_4; // x22
+  Il2CppObject *v80; // x23
+  struct WarBoardSquareData___c_StaticFields *v81; // x0
   System_String_array **v82; // x2
   System_String_array **v83; // x3
   System_Boolean_array **v84; // x4
   System_Int32_array **v85; // x5
   System_Int32_array *v86; // x6
   System_Int32_array *v87; // x7
-  System_String_array **v88; // x2
-  System_String_array **v89; // x3
-  System_Boolean_array **v90; // x4
-  System_Int32_array **v91; // x5
-  System_Int32_array *v92; // x6
-  System_Int32_array *v93; // x7
-  __int64 v94; // x22
-  System_String_array **v95; // x2
-  System_String_array **v96; // x3
-  System_Boolean_array **v97; // x4
-  System_Int32_array **v98; // x5
-  System_Int32_array *v99; // x6
-  System_Int32_array *v100; // x7
-  Il2CppObject **v101; // x20
-  __int64 v102; // x8
-  _DWORD *monitor; // x8
-  _DWORD *v104; // x8
-  _DWORD *v105; // x8
-  _DWORD *v106; // x8
-  System_Int32_array **Master_WarQuestSelectionMaster; // x0
-  System_String_array **v108; // x2
-  System_String_array **v109; // x3
-  System_Boolean_array **v110; // x4
-  System_Int32_array **v111; // x5
-  System_Int32_array *v112; // x6
-  System_Int32_array *v113; // x7
-  System_Int32_array **v114; // x0
-  System_String_array **v115; // x2
-  System_String_array **v116; // x3
-  System_Boolean_array **v117; // x4
-  System_Int32_array **v118; // x5
-  System_Int32_array *v119; // x6
-  System_Int32_array *v120; // x7
-  Il2CppObject *v121; // x23
-  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *v122; // x24
-  System_Collections_Generic_IEnumerable_TSource__o *v123; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v124; // x21
-  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *v125; // x23
-  System_Collections_Generic_IEnumerable_TSource__o *v126; // x0
-  DrawLotsDisplayMessage_DisplayedInGroup_SaveData_array *v127; // x0
-  Il2CppObject *v128; // x23
-  System_Collections_Generic_IEnumerable_TSource__o *v129; // x21
-  System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *v130; // x24
-  System_Collections_Generic_IEnumerable_TSource__o *v131; // x0
-  struct System_Int32_array *v132; // x0
-  System_String_array **v133; // x2
-  System_String_array **v134; // x3
-  System_Boolean_array **v135; // x4
-  System_Int32_array **v136; // x5
-  System_Int32_array *v137; // x6
-  System_Int32_array *v138; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *linkedSquares; // x24
-  System_Func_int__bool__o *v140; // x25
-  System_Collections_Generic_IEnumerable_TSource__o *v141; // x0
-  struct System_Int32_array *v142; // x0
-  System_String_array **v143; // x2
-  System_String_array **v144; // x3
-  System_Boolean_array **v145; // x4
-  System_Int32_array **v146; // x5
-  System_Int32_array *v147; // x6
-  System_Int32_array *v148; // x7
-  WarBoardSquareData___c_c *v149; // x0
-  struct WarBoardSquareData___c_StaticFields *static_fields; // x8
-  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *_9__29_4; // x22
-  Il2CppObject *v152; // x23
-  struct WarBoardSquareData___c_StaticFields *v153; // x0
-  System_String_array **v154; // x2
-  System_String_array **v155; // x3
-  System_Boolean_array **v156; // x4
-  System_Int32_array **v157; // x5
-  System_Int32_array *v158; // x6
-  System_Int32_array *v159; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v160; // x0
-  Il2CppObject *v161; // x22
-  System_Collections_Generic_IEnumerable_TSource__o *v162; // x20
-  System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *v163; // x21
-  WarBoardSquareData___c_c *v164; // x0
-  struct WarBoardSquareData___c_StaticFields *v165; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v88; // x0
+  Il2CppObject *v89; // x22
+  System_Collections_Generic_IEnumerable_TSource__o *v90; // x20
+  System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *v91; // x21
+  WarBoardSquareData___c_c *v92; // x0
+  struct WarBoardSquareData___c_StaticFields *v93; // x8
   System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *_9__29_6; // x22
-  Il2CppObject *v167; // x23
-  struct WarBoardSquareData___c_StaticFields *v168; // x0
-  System_String_array **v169; // x2
-  System_String_array **v170; // x3
-  System_Boolean_array **v171; // x4
-  System_Int32_array **v172; // x5
-  System_Int32_array *v173; // x6
-  System_Int32_array *v174; // x7
-  struct System_Collections_Generic_Dictionary_int__int__o *v175; // x0
-  System_String_array **v176; // x2
-  System_String_array **v177; // x3
-  System_Boolean_array **v178; // x4
-  System_Int32_array **v179; // x5
-  System_Int32_array *v180; // x6
-  System_Int32_array *v181; // x7
+  Il2CppObject *v95; // x23
+  struct WarBoardSquareData___c_StaticFields *v96; // x0
+  System_String_array **v97; // x2
+  System_String_array **v98; // x3
+  System_Boolean_array **v99; // x4
+  System_Int32_array **v100; // x5
+  System_Int32_array *v101; // x6
+  System_Int32_array *v102; // x7
+  struct System_Collections_Generic_Dictionary_int__int__o *v103; // x0
+  System_String_array **v104; // x2
+  System_String_array **v105; // x3
+  System_Boolean_array **v106; // x4
+  System_Int32_array **v107; // x5
+  System_Int32_array *v108; // x6
+  System_Int32_array *v109; // x7
 
-  if ( (byte_42EABAC & 1) == 0 )
+  if ( (byte_4353A58 & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_DataManager_GetMaster_WarBoardCommonReleaseMaster___,
-      (_DWORD)layoutEntity,
-      (_DWORD)roadEntities,
-      method);
-    sub_B5D5C4(&Method_DataManager_GetMaster_WarBoardStageLayoutMaster___, v7, v8, v9);
-    sub_B5D5C4(&DataManager_TypeInfo, v10, v11, v12);
-    sub_B5D5C4(&Method_System_Linq_Enumerable_Select_WarBoardRoadEntity__int___, v13, v14, v15);
-    sub_B5D5C4(&Method_System_Linq_Enumerable_ToArray_int___, v16, v17, v18);
-    sub_B5D5C4(&Method_System_Linq_Enumerable_ToArray_WarBoardRoadEntity___, v19, v20, v21);
-    sub_B5D5C4(&Method_System_Linq_Enumerable_ToDictionary_WarBoardRoadEntity__int__int___, v22, v23, v24);
-    sub_B5D5C4(&Method_System_Linq_Enumerable_Where_int___, v25, v26, v27);
-    sub_B5D5C4(&Method_System_Linq_Enumerable_Where_WarBoardRoadEntity___, v28, v29, v30);
-    sub_B5D5C4(&Method_System_Func_WarBoardRoadEntity__int___ctor__, v31, v32, v33);
-    sub_B5D5C4(&Method_System_Func_WarBoardRoadEntity__bool___ctor__, v34, v35, v36);
-    sub_B5D5C4(&Method_System_Func_int__bool___ctor__, v37, v38, v39);
-    sub_B5D5C4(&System_Func_WarBoardRoadEntity__bool__TypeInfo, v40, v41, v42);
-    sub_B5D5C4(&System_Func_int__bool__TypeInfo, v43, v44, v45);
-    sub_B5D5C4(&System_Func_WarBoardRoadEntity__int__TypeInfo, v46, v47, v48);
-    sub_B5D5C4(&Method_WarBoardSquareData___c___ctor_b__29_4__, v49, v50, v51);
-    sub_B5D5C4(&Method_WarBoardSquareData___c___ctor_b__29_6__, v52, v53, v54);
-    sub_B5D5C4(&Method_WarBoardSquareData___c__DisplayClass29_0___ctor_b__0__, v55, v56, v57);
-    sub_B5D5C4(&Method_WarBoardSquareData___c__DisplayClass29_0___ctor_b__2__, v58, v59, v60);
-    sub_B5D5C4(&Method_WarBoardSquareData___c__DisplayClass29_0___ctor_b__5__, v61, v62, v63);
-    sub_B5D5C4(&WarBoardSquareData___c__DisplayClass29_0_TypeInfo, v64, v65, v66);
-    sub_B5D5C4(&Method_WarBoardSquareData___c__DisplayClass29_1___ctor_b__1__, v67, v68, v69);
-    sub_B5D5C4(&Method_WarBoardSquareData___c__DisplayClass29_1___ctor_b__3__, v70, v71, v72);
-    sub_B5D5C4(&WarBoardSquareData___c__DisplayClass29_1_TypeInfo, v73, v74, v75);
-    sub_B5D5C4(&WarBoardSquareData___c_TypeInfo, v76, v77, v78);
-    byte_42EABAC = 1;
+    sub_B70694(&Method_DataManager_GetMaster_WarBoardCommonReleaseMaster___);
+    sub_B70694(&Method_DataManager_GetMaster_WarBoardStageLayoutMaster___);
+    sub_B70694(&DataManager_TypeInfo);
+    sub_B70694(&Method_System_Linq_Enumerable_Select_WarBoardRoadEntity__int___);
+    sub_B70694(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_B70694(&Method_System_Linq_Enumerable_ToArray_WarBoardRoadEntity___);
+    sub_B70694(&Method_System_Linq_Enumerable_ToDictionary_WarBoardRoadEntity__int__int___);
+    sub_B70694(&Method_System_Linq_Enumerable_Where_int___);
+    sub_B70694(&Method_System_Linq_Enumerable_Where_WarBoardRoadEntity___);
+    sub_B70694(&Method_System_Func_WarBoardRoadEntity__int___ctor__);
+    sub_B70694(&Method_System_Func_WarBoardRoadEntity__bool___ctor__);
+    sub_B70694(&Method_System_Func_int__bool___ctor__);
+    sub_B70694(&System_Func_WarBoardRoadEntity__bool__TypeInfo);
+    sub_B70694(&System_Func_int__bool__TypeInfo);
+    sub_B70694(&System_Func_WarBoardRoadEntity__int__TypeInfo);
+    sub_B70694(&Method_WarBoardSquareData___c___ctor_b__29_4__);
+    sub_B70694(&Method_WarBoardSquareData___c___ctor_b__29_6__);
+    sub_B70694(&Method_WarBoardSquareData___c__DisplayClass29_0___ctor_b__0__);
+    sub_B70694(&Method_WarBoardSquareData___c__DisplayClass29_0___ctor_b__2__);
+    sub_B70694(&Method_WarBoardSquareData___c__DisplayClass29_0___ctor_b__5__);
+    sub_B70694(&WarBoardSquareData___c__DisplayClass29_0_TypeInfo);
+    sub_B70694(&Method_WarBoardSquareData___c__DisplayClass29_1___ctor_b__1__);
+    sub_B70694(&Method_WarBoardSquareData___c__DisplayClass29_1___ctor_b__3__);
+    sub_B70694(&WarBoardSquareData___c__DisplayClass29_1_TypeInfo);
+    sub_B70694(&WarBoardSquareData___c_TypeInfo);
+    byte_4353A58 = 1;
   }
   *(_QWORD *)&this->fields.squareFuncId = -1LL;
-  v79 = sub_B5D694(WarBoardSquareData___c__DisplayClass29_0_TypeInfo);
-  WarBoardSquareData___c__DisplayClass29_0___ctor((WarBoardSquareData___c__DisplayClass29_0_o *)v79, 0LL);
-  if ( !v79 )
+  v7 = sub_B70764(WarBoardSquareData___c__DisplayClass29_0_TypeInfo);
+  WarBoardSquareData___c__DisplayClass29_0___ctor((WarBoardSquareData___c__DisplayClass29_0_o *)v7, 0LL);
+  if ( !v7 )
     goto LABEL_35;
-  *(_QWORD *)(v79 + 24) = layoutEntity;
-  sub_B5D560(
-    (BattleServantConfConponent_o *)(v79 + 24),
+  *(_QWORD *)(v7 + 24) = layoutEntity;
+  sub_B70630(
+    (BattleServantConfConponent_o *)(v7 + 24),
     (System_Int32_array **)layoutEntity,
-    v82,
-    v83,
-    v84,
-    v85,
-    v86,
-    v87);
+    v10,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15);
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  *(_QWORD *)(v79 + 16) = this;
-  sub_B5D560((BattleServantConfConponent_o *)(v79 + 16), (System_Int32_array **)this, v88, v89, v90, v91, v92, v93);
-  v94 = sub_B5D694(WarBoardSquareData___c__DisplayClass29_1_TypeInfo);
-  WarBoardSquareData___c__DisplayClass29_1___ctor((WarBoardSquareData___c__DisplayClass29_1_o *)v94, 0LL);
-  if ( !v94 )
+  *(_QWORD *)(v7 + 16) = this;
+  sub_B70630((BattleServantConfConponent_o *)(v7 + 16), (System_Int32_array **)this, v16, v17, v18, v19, v20, v21);
+  v22 = sub_B70764(WarBoardSquareData___c__DisplayClass29_1_TypeInfo);
+  WarBoardSquareData___c__DisplayClass29_1___ctor((WarBoardSquareData___c__DisplayClass29_1_o *)v22, 0LL);
+  if ( !v22 )
     goto LABEL_35;
-  *(_QWORD *)(v94 + 32) = v79;
-  v101 = (Il2CppObject **)(v94 + 32);
-  sub_B5D560((BattleServantConfConponent_o *)(v94 + 32), (System_Int32_array **)v79, v95, v96, v97, v98, v99, v100);
-  if ( !*(_QWORD *)(v94 + 32) )
+  *(_QWORD *)(v22 + 32) = v7;
+  v29 = (Il2CppObject **)(v22 + 32);
+  sub_B70630((BattleServantConfConponent_o *)(v22 + 32), (System_Int32_array **)v7, v23, v24, v25, v26, v27, v28);
+  if ( !*(_QWORD *)(v22 + 32) )
     goto LABEL_35;
-  v102 = *(_QWORD *)(*(_QWORD *)(v94 + 32) + 24LL);
-  if ( !v102 )
+  v30 = *(_QWORD *)(*(_QWORD *)(v22 + 32) + 24LL);
+  if ( !v30 )
     goto LABEL_35;
-  this->fields._squareIndex_k__BackingField = *(_DWORD *)(v102 + 20);
-  if ( !*v101
-    || (monitor = (*v101)[1].monitor) == 0LL
-    || (this->fields._effectId_k__BackingField = monitor[7], !*v101)
-    || (v104 = (*v101)[1].monitor) == 0LL
-    || (this->fields._type_k__BackingField = v104[6], !*v101)
-    || (v105 = (*v101)[1].monitor) == 0LL
-    || (this->fields._evalValue_k__BackingField = v105[16], !*v101)
-    || (v106 = (*v101)[1].monitor) == 0LL )
+  this->fields._squareIndex_k__BackingField = *(_DWORD *)(v30 + 20);
+  if ( !*v29
+    || (monitor = (*v29)[1].monitor) == 0LL
+    || (this->fields._effectId_k__BackingField = monitor[7], !*v29)
+    || (v32 = (*v29)[1].monitor) == 0LL
+    || (this->fields._type_k__BackingField = v32[6], !*v29)
+    || (v33 = (*v29)[1].monitor) == 0LL
+    || (this->fields._evalValue_k__BackingField = v33[16], !*v29)
+    || (v34 = (*v29)[1].monitor) == 0LL )
   {
 LABEL_35:
-    sub_B5D69C(v80, v81);
+    sub_B7076C(v8, v9);
   }
-  this->fields._imageId_k__BackingField = v106[17];
+  this->fields._imageId_k__BackingField = v34[17];
   this->fields.flag = 0;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (System_Int32_array **)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1AE41EC *)Method_DataManager_GetMaster_WarBoardStageLayoutMaster___);
-  *(_QWORD *)(v94 + 24) = Master_WarQuestSelectionMaster;
-  sub_B5D560(
-    (BattleServantConfConponent_o *)(v94 + 24),
-    Master_WarQuestSelectionMaster,
-    v108,
-    v109,
-    v110,
-    v111,
-    v112,
-    v113);
-  v114 = (System_Int32_array **)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1AE41EC *)Method_DataManager_GetMaster_WarBoardCommonReleaseMaster___);
-  *(_QWORD *)(v94 + 16) = v114;
-  sub_B5D560((BattleServantConfConponent_o *)(v94 + 16), v114, v115, v116, v117, v118, v119, v120);
-  v121 = *(Il2CppObject **)(v94 + 32);
-  v122 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B5D694(System_Func_WarBoardRoadEntity__bool__TypeInfo);
+  Master_WarQuestSelectionMaster = (System_Int32_array **)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_WarBoardStageLayoutMaster___);
+  *(_QWORD *)(v22 + 24) = Master_WarQuestSelectionMaster;
+  sub_B70630((BattleServantConfConponent_o *)(v22 + 24), Master_WarQuestSelectionMaster, v36, v37, v38, v39, v40, v41);
+  v42 = (System_Int32_array **)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_WarBoardCommonReleaseMaster___);
+  *(_QWORD *)(v22 + 16) = v42;
+  sub_B70630((BattleServantConfConponent_o *)(v22 + 16), v42, v43, v44, v45, v46, v47, v48);
+  v49 = *(Il2CppObject **)(v22 + 32);
+  v50 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_WarBoardRoadEntity__bool__TypeInfo);
   System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
-    v122,
-    v121,
+    v50,
+    v49,
     Method_WarBoardSquareData___c__DisplayClass29_0___ctor_b__0__,
-    (const MethodInfo_2C2ECD0 *)Method_System_Func_WarBoardRoadEntity__bool___ctor__);
-  v123 = System_Linq_Enumerable__Where_WarBoardManager_WarBoardOnboardSkillTarget_(
-           (System_Collections_Generic_IEnumerable_TSource__o *)roadEntities,
-           (System_Func_TSource__bool__o *)v122,
-           (const MethodInfo_1CBBF10 *)Method_System_Linq_Enumerable_Where_WarBoardRoadEntity___);
-  v124 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_DrawLotsDisplayMessage_DisplayedInGroup_SaveData_(
-                                                                v123,
-                                                                (const MethodInfo_1CB7860 *)Method_System_Linq_Enumerable_ToArray_WarBoardRoadEntity___);
-  v125 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B5D694(System_Func_WarBoardRoadEntity__bool__TypeInfo);
+    (const MethodInfo_29AC578 *)Method_System_Func_WarBoardRoadEntity__bool___ctor__);
+  v51 = System_Linq_Enumerable__Where_WarBoardManager_WarBoardOnboardSkillTarget_(
+          (System_Collections_Generic_IEnumerable_TSource__o *)roadEntities,
+          (System_Func_TSource__bool__o *)v50,
+          (const MethodInfo_1CCCE44 *)Method_System_Linq_Enumerable_Where_WarBoardRoadEntity___);
+  v52 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_DrawLotsDisplayMessage_DisplayedInGroup_SaveData_(
+                                                               v51,
+                                                               (const MethodInfo_1CC8794 *)Method_System_Linq_Enumerable_ToArray_WarBoardRoadEntity___);
+  v53 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_WarBoardRoadEntity__bool__TypeInfo);
   System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
-    v125,
-    (Il2CppObject *)v94,
+    v53,
+    (Il2CppObject *)v22,
     Method_WarBoardSquareData___c__DisplayClass29_1___ctor_b__1__,
-    (const MethodInfo_2C2ECD0 *)Method_System_Func_WarBoardRoadEntity__bool___ctor__);
-  v126 = System_Linq_Enumerable__Where_WarBoardManager_WarBoardOnboardSkillTarget_(
-           v124,
-           (System_Func_TSource__bool__o *)v125,
-           (const MethodInfo_1CBBF10 *)Method_System_Linq_Enumerable_Where_WarBoardRoadEntity___);
-  v127 = System_Linq_Enumerable__ToArray_DrawLotsDisplayMessage_DisplayedInGroup_SaveData_(
-           v126,
-           (const MethodInfo_1CB7860 *)Method_System_Linq_Enumerable_ToArray_WarBoardRoadEntity___);
-  v128 = *(Il2CppObject **)(v94 + 32);
-  v129 = (System_Collections_Generic_IEnumerable_TSource__o *)v127;
-  v130 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B5D694(System_Func_WarBoardRoadEntity__int__TypeInfo);
+    (const MethodInfo_29AC578 *)Method_System_Func_WarBoardRoadEntity__bool___ctor__);
+  v54 = System_Linq_Enumerable__Where_WarBoardManager_WarBoardOnboardSkillTarget_(
+          v52,
+          (System_Func_TSource__bool__o *)v53,
+          (const MethodInfo_1CCCE44 *)Method_System_Linq_Enumerable_Where_WarBoardRoadEntity___);
+  v55 = System_Linq_Enumerable__ToArray_DrawLotsDisplayMessage_DisplayedInGroup_SaveData_(
+          v54,
+          (const MethodInfo_1CC8794 *)Method_System_Linq_Enumerable_ToArray_WarBoardRoadEntity___);
+  v56 = *(Il2CppObject **)(v22 + 32);
+  v57 = (System_Collections_Generic_IEnumerable_TSource__o *)v55;
+  v58 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B70764(System_Func_WarBoardRoadEntity__int__TypeInfo);
   System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int____ctor(
-    v130,
-    v128,
+    v58,
+    v56,
     Method_WarBoardSquareData___c__DisplayClass29_0___ctor_b__2__,
-    (const MethodInfo_2C2F87C *)Method_System_Func_WarBoardRoadEntity__int___ctor__);
-  v131 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_BattleLogicBuff_ReduceHpProcess_BuffInfo__int_(
-                                                                v129,
-                                                                (System_Func_TSource__TResult__o *)v130,
-                                                                (const MethodInfo_1CB2FF4 *)Method_System_Linq_Enumerable_Select_WarBoardRoadEntity__int___);
-  v132 = System_Linq_Enumerable__ToArray_int_(
-           v131,
-           (const MethodInfo_1CB76BC *)Method_System_Linq_Enumerable_ToArray_int___);
-  this->fields.linkedSquares = v132;
-  sub_B5D560(
+    (const MethodInfo_29AD124 *)Method_System_Func_WarBoardRoadEntity__int___ctor__);
+  v59 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_BattleLogicBuff_ReduceHpProcess_BuffInfo__int_(
+                                                               v57,
+                                                               (System_Func_TSource__TResult__o *)v58,
+                                                               (const MethodInfo_1CC3CC0 *)Method_System_Linq_Enumerable_Select_WarBoardRoadEntity__int___);
+  v60 = System_Linq_Enumerable__ToArray_int_(
+          v59,
+          (const MethodInfo_1CC85F0 *)Method_System_Linq_Enumerable_ToArray_int___);
+  this->fields.linkedSquares = v60;
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.linkedSquares,
-    (System_Int32_array **)v132,
-    v133,
-    v134,
-    v135,
-    v136,
-    v137,
-    v138);
+    (System_Int32_array **)v60,
+    v61,
+    v62,
+    v63,
+    v64,
+    v65,
+    v66);
   linkedSquares = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.linkedSquares;
-  v140 = (System_Func_int__bool__o *)sub_B5D694(System_Func_int__bool__TypeInfo);
+  v68 = (System_Func_int__bool__o *)sub_B70764(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(
-    v140,
-    (Il2CppObject *)v94,
+    v68,
+    (Il2CppObject *)v22,
     Method_WarBoardSquareData___c__DisplayClass29_1___ctor_b__3__,
-    (const MethodInfo_2C28A40 *)Method_System_Func_int__bool___ctor__);
-  v141 = System_Linq_Enumerable__Where_int_(
-           linkedSquares,
-           (System_Func_TSource__bool__o *)v140,
-           (const MethodInfo_1CBBC7C *)Method_System_Linq_Enumerable_Where_int___);
-  v142 = System_Linq_Enumerable__ToArray_int_(
-           v141,
-           (const MethodInfo_1CB76BC *)Method_System_Linq_Enumerable_ToArray_int___);
-  this->fields.linkedSquares = v142;
-  sub_B5D560(
+    (const MethodInfo_29A62E8 *)Method_System_Func_int__bool___ctor__);
+  v69 = System_Linq_Enumerable__Where_int_(
+          linkedSquares,
+          (System_Func_TSource__bool__o *)v68,
+          (const MethodInfo_1CCCBB0 *)Method_System_Linq_Enumerable_Where_int___);
+  v70 = System_Linq_Enumerable__ToArray_int_(
+          v69,
+          (const MethodInfo_1CC85F0 *)Method_System_Linq_Enumerable_ToArray_int___);
+  this->fields.linkedSquares = v70;
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.linkedSquares,
-    (System_Int32_array **)v142,
-    v143,
-    v144,
-    v145,
-    v146,
-    v147,
-    v148);
-  v149 = WarBoardSquareData___c_TypeInfo;
+    (System_Int32_array **)v70,
+    v71,
+    v72,
+    v73,
+    v74,
+    v75,
+    v76);
+  v77 = WarBoardSquareData___c_TypeInfo;
   if ( (BYTE3(WarBoardSquareData___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !WarBoardSquareData___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(WarBoardSquareData___c_TypeInfo);
-    v149 = WarBoardSquareData___c_TypeInfo;
+    v77 = WarBoardSquareData___c_TypeInfo;
   }
-  static_fields = v149->static_fields;
+  static_fields = v77->static_fields;
   _9__29_4 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)static_fields->__9__29_4;
   if ( !_9__29_4 )
   {
-    if ( (BYTE3(v149->vtable._0_Equals.methodPtr) & 4) != 0 && !v149->_2.cctor_finished )
+    if ( (BYTE3(v77->vtable._0_Equals.methodPtr) & 4) != 0 && !v77->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v149);
+      j_il2cpp_runtime_class_init_0(v77);
       static_fields = WarBoardSquareData___c_TypeInfo->static_fields;
     }
-    v152 = (Il2CppObject *)static_fields->__9;
-    _9__29_4 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B5D694(System_Func_WarBoardRoadEntity__bool__TypeInfo);
+    v80 = (Il2CppObject *)static_fields->__9;
+    _9__29_4 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_WarBoardRoadEntity__bool__TypeInfo);
     System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
       _9__29_4,
-      v152,
+      v80,
       Method_WarBoardSquareData___c___ctor_b__29_4__,
-      (const MethodInfo_2C2ECD0 *)Method_System_Func_WarBoardRoadEntity__bool___ctor__);
-    v153 = WarBoardSquareData___c_TypeInfo->static_fields;
-    v153->__9__29_4 = (struct System_Func_WarBoardRoadEntity__bool__o *)_9__29_4;
-    sub_B5D560(
-      (BattleServantConfConponent_o *)&v153->__9__29_4,
+      (const MethodInfo_29AC578 *)Method_System_Func_WarBoardRoadEntity__bool___ctor__);
+    v81 = WarBoardSquareData___c_TypeInfo->static_fields;
+    v81->__9__29_4 = (struct System_Func_WarBoardRoadEntity__bool__o *)_9__29_4;
+    sub_B70630(
+      (BattleServantConfConponent_o *)&v81->__9__29_4,
       (System_Int32_array **)_9__29_4,
-      v154,
-      v155,
-      v156,
-      v157,
-      v158,
-      v159);
+      v82,
+      v83,
+      v84,
+      v85,
+      v86,
+      v87);
   }
-  v160 = System_Linq_Enumerable__Where_WarBoardManager_WarBoardOnboardSkillTarget_(
-           v129,
-           (System_Func_TSource__bool__o *)_9__29_4,
-           (const MethodInfo_1CBBF10 *)Method_System_Linq_Enumerable_Where_WarBoardRoadEntity___);
-  v161 = *v101;
-  v162 = v160;
-  v163 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B5D694(System_Func_WarBoardRoadEntity__int__TypeInfo);
+  v88 = System_Linq_Enumerable__Where_WarBoardManager_WarBoardOnboardSkillTarget_(
+          v57,
+          (System_Func_TSource__bool__o *)_9__29_4,
+          (const MethodInfo_1CCCE44 *)Method_System_Linq_Enumerable_Where_WarBoardRoadEntity___);
+  v89 = *v29;
+  v90 = v88;
+  v91 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B70764(System_Func_WarBoardRoadEntity__int__TypeInfo);
   System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int____ctor(
-    v163,
-    v161,
+    v91,
+    v89,
     Method_WarBoardSquareData___c__DisplayClass29_0___ctor_b__5__,
-    (const MethodInfo_2C2F87C *)Method_System_Func_WarBoardRoadEntity__int___ctor__);
-  v164 = WarBoardSquareData___c_TypeInfo;
+    (const MethodInfo_29AD124 *)Method_System_Func_WarBoardRoadEntity__int___ctor__);
+  v92 = WarBoardSquareData___c_TypeInfo;
   if ( (BYTE3(WarBoardSquareData___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !WarBoardSquareData___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(WarBoardSquareData___c_TypeInfo);
-    v164 = WarBoardSquareData___c_TypeInfo;
+    v92 = WarBoardSquareData___c_TypeInfo;
   }
-  v165 = v164->static_fields;
-  _9__29_6 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)v165->__9__29_6;
+  v93 = v92->static_fields;
+  _9__29_6 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)v93->__9__29_6;
   if ( !_9__29_6 )
   {
-    if ( (BYTE3(v164->vtable._0_Equals.methodPtr) & 4) != 0 && !v164->_2.cctor_finished )
+    if ( (BYTE3(v92->vtable._0_Equals.methodPtr) & 4) != 0 && !v92->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v164);
-      v165 = WarBoardSquareData___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v92);
+      v93 = WarBoardSquareData___c_TypeInfo->static_fields;
     }
-    v167 = (Il2CppObject *)v165->__9;
-    _9__29_6 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B5D694(System_Func_WarBoardRoadEntity__int__TypeInfo);
+    v95 = (Il2CppObject *)v93->__9;
+    _9__29_6 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B70764(System_Func_WarBoardRoadEntity__int__TypeInfo);
     System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int____ctor(
       _9__29_6,
-      v167,
+      v95,
       Method_WarBoardSquareData___c___ctor_b__29_6__,
-      (const MethodInfo_2C2F87C *)Method_System_Func_WarBoardRoadEntity__int___ctor__);
-    v168 = WarBoardSquareData___c_TypeInfo->static_fields;
-    v168->__9__29_6 = (struct System_Func_WarBoardRoadEntity__int__o *)_9__29_6;
-    sub_B5D560(
-      (BattleServantConfConponent_o *)&v168->__9__29_6,
+      (const MethodInfo_29AD124 *)Method_System_Func_WarBoardRoadEntity__int___ctor__);
+    v96 = WarBoardSquareData___c_TypeInfo->static_fields;
+    v96->__9__29_6 = (struct System_Func_WarBoardRoadEntity__int__o *)_9__29_6;
+    sub_B70630(
+      (BattleServantConfConponent_o *)&v96->__9__29_6,
       (System_Int32_array **)_9__29_6,
-      v169,
-      v170,
-      v171,
-      v172,
-      v173,
-      v174);
+      v97,
+      v98,
+      v99,
+      v100,
+      v101,
+      v102);
   }
-  v175 = (struct System_Collections_Generic_Dictionary_int__int__o *)System_Linq_Enumerable__ToDictionary_WarBoardRoadEntity__int__int_(
-                                                                       v162,
-                                                                       (System_Func_TSource__TKey__o *)v163,
+  v103 = (struct System_Collections_Generic_Dictionary_int__int__o *)System_Linq_Enumerable__ToDictionary_WarBoardRoadEntity__int__int_(
+                                                                       v90,
+                                                                       (System_Func_TSource__TKey__o *)v91,
                                                                        (System_Func_TSource__TElement__o *)_9__29_6,
-                                                                       (const MethodInfo_1CB7C08 *)Method_System_Linq_Enumerable_ToDictionary_WarBoardRoadEntity__int__int___);
-  this->fields.linkedSquareMobilityLimitations = v175;
-  sub_B5D560(
+                                                                       (const MethodInfo_1CC8B3C *)Method_System_Linq_Enumerable_ToDictionary_WarBoardRoadEntity__int__int___);
+  this->fields.linkedSquareMobilityLimitations = v103;
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.linkedSquareMobilityLimitations,
-    (System_Int32_array **)v175,
-    v176,
-    v177,
-    v178,
-    v179,
-    v180,
-    v181);
+    (System_Int32_array **)v103,
+    v104,
+    v105,
+    v106,
+    v107,
+    v108,
+    v109);
 }
 
 
@@ -456,7 +372,7 @@ void __fastcall WarBoardSquareData__ActiveEditPointArrow(WarBoardSquareData_o *t
 
   squareComponent = this->fields.squareComponent;
   if ( !squareComponent )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   WarBoardSquareComponent__ActiveEditPointArrow(squareComponent, method);
 }
 
@@ -476,7 +392,7 @@ void __fastcall WarBoardSquareData__DeactiveEditPointArrow(WarBoardSquareData_o 
 
   squareComponent = this->fields.squareComponent;
   if ( !squareComponent )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   WarBoardSquareComponent__DeactiveEditPointArrow(squareComponent, method);
 }
 
@@ -487,7 +403,7 @@ void __fastcall WarBoardSquareData__Deselect(WarBoardSquareData_o *this, const M
 
   squareComponent = this->fields.squareComponent;
   if ( !squareComponent )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   WarBoardSquareComponent__OnDeselect(squareComponent, method);
 }
 
@@ -498,7 +414,7 @@ void __fastcall WarBoardSquareData__DisableEditPosition(WarBoardSquareData_o *th
 
   squareComponent = this->fields.squareComponent;
   if ( !squareComponent )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   WarBoardSquareComponent__DisableEditPosition(squareComponent, method);
 }
 
@@ -512,7 +428,7 @@ void __fastcall WarBoardSquareData__DispBattleRange(
 
   squareComponent = this->fields.squareComponent;
   if ( !squareComponent )
-    sub_B5D69C(0LL, isPlayerForce);
+    sub_B7076C(0LL, isPlayerForce);
   WarBoardSquareComponent__DispBattleRange(squareComponent, isPlayerForce, method);
 }
 
@@ -523,7 +439,7 @@ void __fastcall WarBoardSquareData__EnableEditPosition(WarBoardSquareData_o *thi
 
   squareComponent = this->fields.squareComponent;
   if ( !squareComponent )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   WarBoardSquareComponent__EnableEditPosition(squareComponent, method);
 }
 
@@ -553,24 +469,23 @@ int32_t __fastcall WarBoardSquareData__GetMobilityLimitation(
         int32_t destination,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
   System_Collections_Generic_Dictionary_int__int__o *linkedSquareMobilityLimitations; // x0
   int32_t value; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_42EABB2 & 1) == 0 )
+  if ( (byte_4353A5E & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__, destination, (_DWORD)method, v3);
-    byte_42EABB2 = 1;
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
+    byte_4353A5E = 1;
   }
   value = 0;
   linkedSquareMobilityLimitations = this->fields.linkedSquareMobilityLimitations;
   if ( !linkedSquareMobilityLimitations )
-    sub_B5D69C(0LL, *(_QWORD *)&destination);
+    sub_B7076C(0LL, *(_QWORD *)&destination);
   if ( System_Collections_Generic_Dictionary_int__int___TryGetValue(
          linkedSquareMobilityLimitations,
          destination,
          &value,
-         (const MethodInfo_2F0CA68 *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__) )
+         (const MethodInfo_2FBCD70 *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__) )
   {
     return value & ~(value >> 31);
   }
@@ -585,72 +500,70 @@ System_Int32_array *__fastcall WarBoardSquareData__GetMyAndLinkedSquareIndecies(
         WarBoardSquareData_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  WarBoardSquareData_o *v4; // x19
+  WarBoardSquareData_o *v2; // x19
   System_Int32_array **p_myAndLinkedSquareIndecies; // x20
   struct System_Int32_array *linkedSquares; // x8
-  System_Int32_array **v7; // x0
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  System_Int32_array **v5; // x0
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
   struct System_Int32_array *myAndLinkedSquareIndecies; // x8
-  struct System_Int32_array *v15; // x8
-  __int64 v16; // x9
-  unsigned __int64 v17; // x10
-  System_Int32_array *v18; // x12
-  __int64 v20; // x0
+  struct System_Int32_array *v13; // x8
+  __int64 v14; // x9
+  unsigned __int64 v15; // x10
+  System_Int32_array *v16; // x12
+  __int64 v18; // x0
 
-  v4 = this;
-  if ( (byte_42EABB5 & 1) == 0 )
+  v2 = this;
+  if ( (byte_4353A61 & 1) == 0 )
   {
-    this = (WarBoardSquareData_o *)sub_B5D5C4(&int___TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EABB5 = 1;
+    this = (WarBoardSquareData_o *)sub_B70694(&int___TypeInfo);
+    byte_4353A61 = 1;
   }
-  p_myAndLinkedSquareIndecies = &v4->fields.myAndLinkedSquareIndecies;
-  if ( !v4->fields.myAndLinkedSquareIndecies )
+  p_myAndLinkedSquareIndecies = &v2->fields.myAndLinkedSquareIndecies;
+  if ( !v2->fields.myAndLinkedSquareIndecies )
   {
-    linkedSquares = v4->fields.linkedSquares;
+    linkedSquares = v2->fields.linkedSquares;
     if ( !linkedSquares )
       goto LABEL_15;
-    v7 = (System_Int32_array **)sub_B5D5DC(int___TypeInfo, linkedSquares->max_length + 1);
-    v4->fields.myAndLinkedSquareIndecies = (struct System_Int32_array *)v7;
-    sub_B5D560((BattleServantConfConponent_o *)&v4->fields.myAndLinkedSquareIndecies, v7, v8, v9, v10, v11, v12, v13);
-    myAndLinkedSquareIndecies = v4->fields.myAndLinkedSquareIndecies;
+    v5 = (System_Int32_array **)sub_B706AC(int___TypeInfo, linkedSquares->max_length + 1);
+    v2->fields.myAndLinkedSquareIndecies = (struct System_Int32_array *)v5;
+    sub_B70630((BattleServantConfConponent_o *)&v2->fields.myAndLinkedSquareIndecies, v5, v6, v7, v8, v9, v10, v11);
+    myAndLinkedSquareIndecies = v2->fields.myAndLinkedSquareIndecies;
     if ( !myAndLinkedSquareIndecies )
       goto LABEL_15;
     if ( !myAndLinkedSquareIndecies->max_length )
       goto LABEL_17;
-    myAndLinkedSquareIndecies->m_Items[1] = v4->fields._squareIndex_k__BackingField;
-    v15 = v4->fields.linkedSquares;
-    if ( !v15 )
+    myAndLinkedSquareIndecies->m_Items[1] = v2->fields._squareIndex_k__BackingField;
+    v13 = v2->fields.linkedSquares;
+    if ( !v13 )
 LABEL_15:
-      sub_B5D69C(this, method);
-    v16 = *(_QWORD *)&v15->max_length;
-    if ( (int)v16 >= 1 )
+      sub_B7076C(this, method);
+    v14 = *(_QWORD *)&v13->max_length;
+    if ( (int)v14 >= 1 )
     {
-      v17 = 0LL;
-      while ( v17 < v15->max_length )
+      v15 = 0LL;
+      while ( v15 < v13->max_length )
       {
-        v18 = *p_myAndLinkedSquareIndecies;
+        v16 = *p_myAndLinkedSquareIndecies;
         if ( !*p_myAndLinkedSquareIndecies )
           goto LABEL_15;
-        if ( v17 + 1 >= v18->max_length )
+        if ( v15 + 1 >= v16->max_length )
           break;
-        v18->m_Items[v17 + 2] = v15->m_Items[v17 + 1];
-        if ( (__int64)(v17 + 1) >= (int)v16 )
+        v16->m_Items[v15 + 2] = v13->m_Items[v15 + 1];
+        if ( (__int64)(v15 + 1) >= (int)v14 )
           return *p_myAndLinkedSquareIndecies;
-        v15 = v4->fields.linkedSquares;
-        ++v17;
-        if ( !v15 )
+        v13 = v2->fields.linkedSquares;
+        ++v15;
+        if ( !v13 )
           goto LABEL_15;
       }
 LABEL_17:
-      v20 = sub_B5D6C8(this);
-      sub_B5D668(v20, 0LL);
+      v18 = sub_B70798(this);
+      sub_B70738(v18, 0LL);
     }
   }
   return *p_myAndLinkedSquareIndecies;
@@ -663,26 +576,25 @@ bool __fastcall WarBoardSquareData__HasMobilityLimitation(
         int32_t destination,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
   System_Collections_Generic_Dictionary_int__int__o *linkedSquareMobilityLimitations; // x0
-  bool v7; // w0
+  bool v6; // w0
   int32_t value; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_42EABB1 & 1) == 0 )
+  if ( (byte_4353A5D & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__, destination, (_DWORD)method, v3);
-    byte_42EABB1 = 1;
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
+    byte_4353A5D = 1;
   }
   value = 0;
   linkedSquareMobilityLimitations = this->fields.linkedSquareMobilityLimitations;
   if ( !linkedSquareMobilityLimitations )
-    sub_B5D69C(0LL, *(_QWORD *)&destination);
-  v7 = System_Collections_Generic_Dictionary_int__int___TryGetValue(
+    sub_B7076C(0LL, *(_QWORD *)&destination);
+  v6 = System_Collections_Generic_Dictionary_int__int___TryGetValue(
          linkedSquareMobilityLimitations,
          destination,
          &value,
-         (const MethodInfo_2F0CA68 *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
-  return v7 && value > 0;
+         (const MethodInfo_2FBCD70 *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
+  return v6 && value > 0;
 }
 
 
@@ -701,23 +613,21 @@ void __fastcall WarBoardSquareData__NondispBattleRange(
 
   squareComponent = this->fields.squareComponent;
   if ( !squareComponent )
-    sub_B5D69C(0LL, isPlayerForce);
+    sub_B7076C(0LL, isPlayerForce);
   WarBoardSquareComponent__NondispBattleRange(squareComponent, isPlayerForce, method);
 }
 
 
 void __fastcall WarBoardSquareData__PlayUnDispCostAnim(WarBoardSquareData_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   UnityEngine_Object_o *squareComponent; // x20
-  const MethodInfo *v6; // x1
-  WarBoardSquareComponent_o *v7; // x0
+  const MethodInfo *v4; // x1
+  WarBoardSquareComponent_o *v5; // x0
 
-  if ( (byte_42EABAF & 1) == 0 )
+  if ( (byte_4353A5B & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EABAF = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4353A5B = 1;
   }
   squareComponent = (UnityEngine_Object_o *)this->fields.squareComponent;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -727,10 +637,10 @@ void __fastcall WarBoardSquareData__PlayUnDispCostAnim(WarBoardSquareData_o *thi
   }
   if ( UnityEngine_Object__op_Inequality(squareComponent, 0LL, 0LL) )
   {
-    v7 = this->fields.squareComponent;
-    if ( !v7 )
-      sub_B5D69C(0LL, v6);
-    WarBoardSquareComponent__PlayUnDispCostAnim(v7, v6);
+    v5 = this->fields.squareComponent;
+    if ( !v5 )
+      sub_B7076C(0LL, v4);
+    WarBoardSquareComponent__PlayUnDispCostAnim(v5, v4);
   }
 }
 
@@ -753,7 +663,7 @@ void __fastcall WarBoardSquareData__Select(WarBoardSquareData_o *this, const Met
 
   squareComponent = this->fields.squareComponent;
   if ( !squareComponent )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   WarBoardSquareComponent__OnSelect(squareComponent, method);
 }
 
@@ -763,26 +673,22 @@ void __fastcall WarBoardSquareData__Selectable(
         bool isOnActionPiece,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  char v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
   UnityEngine_Object_o *squareComponent; // x21
-  __int64 v10; // x1
-  const MethodInfo *v11; // x2
+  __int64 v6; // x1
+  const MethodInfo *v7; // x2
   void *Instance; // x0
-  WarBoardData_o *v13; // x20
-  WarBoardPieceData_o *Piece_23181536; // x0
+  WarBoardData_o *v9; // x20
+  WarBoardPieceData_o *Piece_22472604; // x0
   WarBoardItemData_o *Item; // x0
   WarBoardEffectData_o *Effect; // x0
   WarBoardTreasureData_o *Treasure; // x0
   WarBoardWallData_o *Wall; // x0
 
-  if ( (byte_42EABAE & 1) == 0 )
+  if ( (byte_4353A5A & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, isOnActionPiece, (_DWORD)method, v3);
-    sub_B5D5C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v6, v7, v8);
-    byte_42EABAE = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4353A5A = 1;
   }
   squareComponent = (UnityEngine_Object_o *)this->fields.squareComponent;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -795,26 +701,26 @@ void __fastcall WarBoardSquareData__Selectable(
     Instance = this->fields.squareComponent;
     if ( !Instance )
       goto LABEL_27;
-    WarBoardSquareComponent__Selectable((WarBoardSquareComponent_o *)Instance, isOnActionPiece, v11);
+    WarBoardSquareComponent__Selectable((WarBoardSquareComponent_o *)Instance, isOnActionPiece, v7);
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-  if ( !Instance || (v13 = (WarBoardData_o *)*((_QWORD *)Instance + 54)) == 0LL )
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  if ( !Instance || (v9 = (WarBoardData_o *)*((_QWORD *)Instance + 54)) == 0LL )
 LABEL_27:
-    sub_B5D69C(Instance, v10);
-  Piece_23181536 = WarBoardData__GetPiece_23181536(
+    sub_B7076C(Instance, v6);
+  Piece_22472604 = WarBoardData__GetPiece_22472604(
                      *((WarBoardData_o **)Instance + 54),
                      this->fields._squareIndex_k__BackingField,
                      0LL);
-  if ( Piece_23181536 )
+  if ( Piece_22472604 )
   {
-    Instance = Piece_23181536->fields.pieceComponent;
+    Instance = Piece_22472604->fields.pieceComponent;
     if ( !Instance )
       goto LABEL_27;
     (*(void (__fastcall **)(void *, _QWORD))(*(_QWORD *)Instance + 600LL))(
       Instance,
       *(_QWORD *)(*(_QWORD *)Instance + 608LL));
   }
-  Item = WarBoardData__GetItem(v13, this->fields._squareIndex_k__BackingField, 0LL);
+  Item = WarBoardData__GetItem(v9, this->fields._squareIndex_k__BackingField, 0LL);
   if ( Item )
   {
     Instance = Item->fields.component;
@@ -824,7 +730,7 @@ LABEL_27:
       Instance,
       *(_QWORD *)(*(_QWORD *)Instance + 384LL));
   }
-  Effect = WarBoardData__GetEffect(v13, this->fields._squareIndex_k__BackingField, 0LL);
+  Effect = WarBoardData__GetEffect(v9, this->fields._squareIndex_k__BackingField, 0LL);
   if ( Effect )
   {
     Instance = Effect->fields.component;
@@ -834,7 +740,7 @@ LABEL_27:
       Instance,
       *(_QWORD *)(*(_QWORD *)Instance + 384LL));
   }
-  Treasure = WarBoardData__GetTreasure(v13, this->fields._squareIndex_k__BackingField, 0LL);
+  Treasure = WarBoardData__GetTreasure(v9, this->fields._squareIndex_k__BackingField, 0LL);
   if ( Treasure )
   {
     Instance = Treasure->fields.component;
@@ -844,7 +750,7 @@ LABEL_27:
       Instance,
       *(_QWORD *)(*(_QWORD *)Instance + 384LL));
   }
-  Wall = WarBoardData__GetWall(v13, this->fields._squareIndex_k__BackingField, 0, 0LL);
+  Wall = WarBoardData__GetWall(v9, this->fields._squareIndex_k__BackingField, 0, 0LL);
   if ( Wall )
   {
     Instance = Wall->fields.component;
@@ -872,7 +778,7 @@ void __fastcall WarBoardSquareData__SetComponent(
   System_Int32_array *v7; // x7
 
   this->fields.squareComponent = component;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.squareComponent,
     (System_Int32_array **)component,
     (System_String_array **)method,
@@ -896,7 +802,7 @@ void __fastcall WarBoardSquareData__SetCostLabel(
 
   squareComponent = this->fields.squareComponent;
   if ( !squareComponent )
-    sub_B5D69C(0LL, cost);
+    sub_B7076C(0LL, cost);
   WarBoardSquareComponent__SetCost(squareComponent, cost, gradientTop, gradientBottom, method);
 }
 
@@ -910,44 +816,43 @@ void __fastcall WarBoardSquareData__SetFlag(WarBoardSquareData_o *this, int32_t 
 // local variable allocation has failed, the output may be wrong!
 void __fastcall WarBoardSquareData__SetSquareEnable(WarBoardSquareData_o *this, bool enable, const MethodInfo *method)
 {
-  __int64 v3; // x3
   void *squareComponent; // x0
-  WarBoardData_o *v7; // x21
-  WarBoardPieceData_o *Piece_23181536; // x0
+  WarBoardData_o *v6; // x21
+  WarBoardPieceData_o *Piece_22472604; // x0
   WarBoardItemData_o *Item; // x0
   WarBoardEffectData_o *Effect; // x0
   WarBoardTreasureData_o *Treasure; // x0
   WarBoardWallData_o *Wall; // x0
 
-  if ( (byte_42EABB4 & 1) == 0 )
+  if ( (byte_4353A60 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, enable, (_DWORD)method, v3);
-    byte_42EABB4 = 1;
+    sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4353A60 = 1;
   }
   squareComponent = this->fields.squareComponent;
   if ( !squareComponent
     || (WarBoardSquareComponent__SetButtonEnable((WarBoardSquareComponent_o *)squareComponent, enable, method),
-        (squareComponent = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0LL)
-    || (v7 = (WarBoardData_o *)*((_QWORD *)squareComponent + 54)) == 0LL )
+        (squareComponent = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0LL)
+    || (v6 = (WarBoardData_o *)*((_QWORD *)squareComponent + 54)) == 0LL )
   {
-    sub_B5D69C(squareComponent, enable);
+    sub_B7076C(squareComponent, enable);
   }
-  Piece_23181536 = WarBoardData__GetPiece_23181536(
+  Piece_22472604 = WarBoardData__GetPiece_22472604(
                      *((WarBoardData_o **)squareComponent + 54),
                      this->fields._squareIndex_k__BackingField,
                      0LL);
-  if ( Piece_23181536 )
-    WarBoardPieceData__SetPieceEnable(Piece_23181536, enable, 0LL);
-  Item = WarBoardData__GetItem(v7, this->fields._squareIndex_k__BackingField, 0LL);
+  if ( Piece_22472604 )
+    WarBoardPieceData__SetPieceEnable(Piece_22472604, enable, 0LL);
+  Item = WarBoardData__GetItem(v6, this->fields._squareIndex_k__BackingField, 0LL);
   if ( Item )
     WarBoardItemData__SetItemEnable(Item, enable, 0LL);
-  Effect = WarBoardData__GetEffect(v7, this->fields._squareIndex_k__BackingField, 0LL);
+  Effect = WarBoardData__GetEffect(v6, this->fields._squareIndex_k__BackingField, 0LL);
   if ( Effect )
     WarBoardEffectData__SetEffectEnable(Effect, enable, 0LL);
-  Treasure = WarBoardData__GetTreasure(v7, this->fields._squareIndex_k__BackingField, 0LL);
+  Treasure = WarBoardData__GetTreasure(v6, this->fields._squareIndex_k__BackingField, 0LL);
   if ( Treasure )
     WarBoardTreasureData__SetTreasureEnable(Treasure, enable, 0LL);
-  Wall = WarBoardData__GetWall(v7, this->fields._squareIndex_k__BackingField, 0, 0LL);
+  Wall = WarBoardData__GetWall(v6, this->fields._squareIndex_k__BackingField, 0, 0LL);
   if ( Wall )
     WarBoardWallData__SetWallEnable(Wall, enable, 0LL);
 }
@@ -962,16 +867,16 @@ void __fastcall WarBoardSquareData__SetTouchEnable(
 {
   void *squareComponent; // x0
   WarBoardData_o *v8; // x21
-  WarBoardPieceData_o *Piece_23181536; // x0
+  WarBoardPieceData_o *Piece_22472604; // x0
   WarBoardItemData_o *Item; // x0
   WarBoardEffectData_o *Effect; // x0
   WarBoardTreasureData_o *Treasure; // x0
   WarBoardWallData_o *Wall; // x0
 
-  if ( (byte_42EABB3 & 1) == 0 )
+  if ( (byte_4353A5F & 1) == 0 )
   {
-    sub_B5D5C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, enable, withOnObject, method);
-    byte_42EABB3 = 1;
+    sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4353A5F = 1;
   }
   squareComponent = this->fields.squareComponent;
   if ( !squareComponent )
@@ -982,16 +887,16 @@ void __fastcall WarBoardSquareData__SetTouchEnable(
     (const MethodInfo *)withOnObject);
   if ( !withOnObject )
     return;
-  squareComponent = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  squareComponent = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !squareComponent || (v8 = (WarBoardData_o *)*((_QWORD *)squareComponent + 54)) == 0LL )
 LABEL_18:
-    sub_B5D69C(squareComponent, enable);
-  Piece_23181536 = WarBoardData__GetPiece_23181536(
+    sub_B7076C(squareComponent, enable);
+  Piece_22472604 = WarBoardData__GetPiece_22472604(
                      *((WarBoardData_o **)squareComponent + 54),
                      this->fields._squareIndex_k__BackingField,
                      0LL);
-  if ( Piece_23181536 )
-    WarBoardPieceData__SetTouchEnable(Piece_23181536, enable, 0LL);
+  if ( Piece_22472604 )
+    WarBoardPieceData__SetTouchEnable(Piece_22472604, enable, 0LL);
   Item = WarBoardData__GetItem(v8, this->fields._squareIndex_k__BackingField, 0LL);
   if ( Item )
     WarBoardItemData__SetTouchEnable(Item, enable, 0LL);
@@ -1012,26 +917,22 @@ void __fastcall WarBoardSquareData__Unselectable(
         bool isDispCostLabel,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  char v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
   UnityEngine_Object_o *squareComponent; // x21
-  __int64 v10; // x1
-  const MethodInfo *v11; // x2
+  __int64 v6; // x1
+  const MethodInfo *v7; // x2
   void *Instance; // x0
-  WarBoardData_o *v13; // x20
-  WarBoardPieceData_o *Piece_23181536; // x0
+  WarBoardData_o *v9; // x20
+  WarBoardPieceData_o *Piece_22472604; // x0
   WarBoardItemData_o *Item; // x0
   WarBoardEffectData_o *Effect; // x0
   WarBoardTreasureData_o *Treasure; // x0
   WarBoardWallData_o *Wall; // x0
 
-  if ( (byte_42EABB0 & 1) == 0 )
+  if ( (byte_4353A5C & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, isDispCostLabel, (_DWORD)method, v3);
-    sub_B5D5C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v6, v7, v8);
-    byte_42EABB0 = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4353A5C = 1;
   }
   squareComponent = (UnityEngine_Object_o *)this->fields.squareComponent;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1044,26 +945,26 @@ void __fastcall WarBoardSquareData__Unselectable(
     Instance = this->fields.squareComponent;
     if ( !Instance )
       goto LABEL_27;
-    WarBoardSquareComponent__Unselectable((WarBoardSquareComponent_o *)Instance, isDispCostLabel, v11);
+    WarBoardSquareComponent__Unselectable((WarBoardSquareComponent_o *)Instance, isDispCostLabel, v7);
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-  if ( !Instance || (v13 = (WarBoardData_o *)*((_QWORD *)Instance + 54)) == 0LL )
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  if ( !Instance || (v9 = (WarBoardData_o *)*((_QWORD *)Instance + 54)) == 0LL )
 LABEL_27:
-    sub_B5D69C(Instance, v10);
-  Piece_23181536 = WarBoardData__GetPiece_23181536(
+    sub_B7076C(Instance, v6);
+  Piece_22472604 = WarBoardData__GetPiece_22472604(
                      *((WarBoardData_o **)Instance + 54),
                      this->fields._squareIndex_k__BackingField,
                      0LL);
-  if ( Piece_23181536 )
+  if ( Piece_22472604 )
   {
-    Instance = Piece_23181536->fields.pieceComponent;
+    Instance = Piece_22472604->fields.pieceComponent;
     if ( !Instance )
       goto LABEL_27;
     (*(void (__fastcall **)(void *, _QWORD))(*(_QWORD *)Instance + 616LL))(
       Instance,
       *(_QWORD *)(*(_QWORD *)Instance + 624LL));
   }
-  Item = WarBoardData__GetItem(v13, this->fields._squareIndex_k__BackingField, 0LL);
+  Item = WarBoardData__GetItem(v9, this->fields._squareIndex_k__BackingField, 0LL);
   if ( Item )
   {
     Instance = Item->fields.component;
@@ -1073,7 +974,7 @@ LABEL_27:
       Instance,
       *(_QWORD *)(*(_QWORD *)Instance + 400LL));
   }
-  Effect = WarBoardData__GetEffect(v13, this->fields._squareIndex_k__BackingField, 0LL);
+  Effect = WarBoardData__GetEffect(v9, this->fields._squareIndex_k__BackingField, 0LL);
   if ( Effect )
   {
     Instance = Effect->fields.component;
@@ -1083,7 +984,7 @@ LABEL_27:
       Instance,
       *(_QWORD *)(*(_QWORD *)Instance + 400LL));
   }
-  Treasure = WarBoardData__GetTreasure(v13, this->fields._squareIndex_k__BackingField, 0LL);
+  Treasure = WarBoardData__GetTreasure(v9, this->fields._squareIndex_k__BackingField, 0LL);
   if ( Treasure )
   {
     Instance = Treasure->fields.component;
@@ -1093,7 +994,7 @@ LABEL_27:
       Instance,
       *(_QWORD *)(*(_QWORD *)Instance + 400LL));
   }
-  Wall = WarBoardData__GetWall(v13, this->fields._squareIndex_k__BackingField, 0, 0LL);
+  Wall = WarBoardData__GetWall(v9, this->fields._squareIndex_k__BackingField, 0, 0LL);
   if ( Wall )
   {
     Instance = Wall->fields.component;
@@ -1114,71 +1015,61 @@ void __fastcall WarBoardSquareData__UpdateLinkedSquareList(
         int32_t addSquareIdx,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  int v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
-  int v9; // w1
-  int v10; // w2
-  __int64 v11; // x3
-  int v12; // w1
-  int v13; // w2
-  __int64 v14; // x3
   System_Collections_Generic_IEnumerable_T__o *linkedSquares; // x23
-  System_Collections_Generic_List_int__o *v16; // x22
-  __int64 v17; // x0
-  __int64 v18; // x1
-  struct System_Int32_array *v19; // x0
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
-  System_String_array **v26; // x2
-  System_String_array **v27; // x3
-  System_Boolean_array **v28; // x4
-  System_Int32_array **v29; // x5
-  System_Int32_array *v30; // x6
-  System_Int32_array *v31; // x7
-  const MethodInfo *v32; // x1
+  System_Collections_Generic_List_int__o *v6; // x22
+  __int64 v7; // x0
+  __int64 v8; // x1
+  struct System_Int32_array *v9; // x0
+  System_String_array **v10; // x2
+  System_String_array **v11; // x3
+  System_Boolean_array **v12; // x4
+  System_Int32_array **v13; // x5
+  System_Int32_array *v14; // x6
+  System_Int32_array *v15; // x7
+  System_String_array **v16; // x2
+  System_String_array **v17; // x3
+  System_Boolean_array **v18; // x4
+  System_Int32_array **v19; // x5
+  System_Int32_array *v20; // x6
+  System_Int32_array *v21; // x7
+  const MethodInfo *v22; // x1
 
-  if ( (byte_42EABAD & 1) == 0 )
+  if ( (byte_4353A59 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Collections_Generic_List_int__Add__, addSquareIdx, (_DWORD)method, v3);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_int__ToArray__, v6, v7, v8);
-    sub_B5D5C4(&Method_System_Collections_Generic_List_int___ctor__, v9, v10, v11);
-    sub_B5D5C4(&System_Collections_Generic_List_int__TypeInfo, v12, v13, v14);
-    byte_42EABAD = 1;
+    sub_B70694(&Method_System_Collections_Generic_List_int__Add__);
+    sub_B70694(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_B70694(&Method_System_Collections_Generic_List_int___ctor___69164920);
+    sub_B70694(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4353A59 = 1;
   }
   linkedSquares = (System_Collections_Generic_IEnumerable_T__o *)this->fields.linkedSquares;
-  v16 = (System_Collections_Generic_List_int__o *)sub_B5D694(System_Collections_Generic_List_int__TypeInfo);
-  System_Collections_Generic_List_int____ctor_50870440(
-    v16,
+  v6 = (System_Collections_Generic_List_int__o *)sub_B70764(System_Collections_Generic_List_int__TypeInfo);
+  System_Collections_Generic_List_int____ctor_51074676(
+    v6,
     linkedSquares,
-    (const MethodInfo_30838A8 *)Method_System_Collections_Generic_List_int___ctor__);
-  if ( !v16 )
-    sub_B5D69C(v17, v18);
+    (const MethodInfo_30B5674 *)Method_System_Collections_Generic_List_int___ctor___69164920);
+  if ( !v6 )
+    sub_B7076C(v7, v8);
   System_Collections_Generic_List_int___Add(
-    v16,
+    v6,
     addSquareIdx,
-    (const MethodInfo_308440C *)Method_System_Collections_Generic_List_int__Add__);
-  v19 = System_Collections_Generic_List_int___ToArray(
-          v16,
-          (const MethodInfo_3086518 *)Method_System_Collections_Generic_List_int__ToArray__);
-  this->fields.linkedSquares = v19;
-  sub_B5D560(
+    (const MethodInfo_30B61D8 *)Method_System_Collections_Generic_List_int__Add__);
+  v9 = System_Collections_Generic_List_int___ToArray(
+         v6,
+         (const MethodInfo_30B82E4 *)Method_System_Collections_Generic_List_int__ToArray__);
+  this->fields.linkedSquares = v9;
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.linkedSquares,
-    (System_Int32_array **)v19,
-    v20,
-    v21,
-    v22,
-    v23,
-    v24,
-    v25);
+    (System_Int32_array **)v9,
+    v10,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15);
   this->fields.myAndLinkedSquareIndecies = 0LL;
-  sub_B5D560((BattleServantConfConponent_o *)&this->fields.myAndLinkedSquareIndecies, 0LL, v26, v27, v28, v29, v30, v31);
-  WarBoardSquareData__GetMyAndLinkedSquareIndecies(this, v32);
+  sub_B70630((BattleServantConfConponent_o *)&this->fields.myAndLinkedSquareIndecies, 0LL, v16, v17, v18, v19, v20, v21);
+  WarBoardSquareData__GetMyAndLinkedSquareIndecies(this, v22);
 }
 
 
@@ -1268,24 +1159,44 @@ void __fastcall WarBoardSquareData_SaveData___ctor(WarBoardSquareData_SaveData_o
 }
 
 
-void __fastcall WarBoardSquareData_SaveData___ctor_20366008(
+void __fastcall WarBoardSquareData_SaveData___ctor_21471052(
         WarBoardSquareData_SaveData_o *this,
         WarBoardSquareData_o *owner,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  struct WarBoardSquareData_o *v6; // x0
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
+  __int64 v11; // x1
+  System_String_array **v12; // x2
+  System_String_array **v13; // x3
+  System_Boolean_array **v14; // x4
+  System_Int32_array **v15; // x5
+  System_Int32_array *v16; // x6
+  System_Int32_array *v17; // x7
+  struct WarBoardSquareData_o *v18; // x0
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.owner = owner;
-  sub_B5D560(&this->fields.owner);
-  v6 = this->fields.owner;
-  if ( !v6 )
-    sub_B5D69C(0LL, v5);
-  this->fields.squareIndex = v6->fields._squareIndex_k__BackingField;
-  this->fields.flag = v6->fields.flag;
-  v6->fields.localSaveData = this;
-  sub_B5D560(&v6->fields.localSaveData);
+  sub_B70630((BattleServantConfConponent_o *)&this->fields.owner, (System_Int32_array **)owner, v5, v6, v7, v8, v9, v10);
+  v18 = this->fields.owner;
+  if ( !v18 )
+    sub_B7076C(0LL, v11);
+  this->fields.squareIndex = v18->fields._squareIndex_k__BackingField;
+  this->fields.flag = v18->fields.flag;
+  v18->fields.localSaveData = this;
+  sub_B70630(
+    (BattleServantConfConponent_o *)&v18->fields.localSaveData,
+    (System_Int32_array **)this,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17);
 }
 
 
@@ -1305,7 +1216,7 @@ void __fastcall WarBoardSquareData_SaveData__Save(WarBoardSquareData_SaveData_o 
 
   owner = this->fields.owner;
   if ( !owner )
-    sub_B5D69C(this, method);
+    sub_B7076C(this, method);
   this->fields.squareIndex = owner->fields._squareIndex_k__BackingField;
   this->fields.flag = owner->fields.flag;
 }
@@ -1316,39 +1227,72 @@ void __fastcall WarBoardSquareData_SaveData__SetOwner(
         WarBoardData_o *data,
         const MethodInfo *method)
 {
+  struct WarBoardSquareData_o *Square; // x0
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
+  System_String_array **v11; // x2
+  System_String_array **v12; // x3
+  System_Boolean_array **v13; // x4
+  System_Int32_array **v14; // x5
+  System_Int32_array *v15; // x6
+  System_Int32_array *v16; // x7
   struct WarBoardSquareData_o *owner; // x0
 
   if ( !data )
-    sub_B5D69C(this, 0LL);
-  this->fields.owner = WarBoardData__GetSquare(data, this->fields.squareIndex, 0LL);
-  sub_B5D560(&this->fields.owner);
+    sub_B7076C(this, 0LL);
+  Square = WarBoardData__GetSquare(data, this->fields.squareIndex, 0LL);
+  this->fields.owner = Square;
+  sub_B70630(
+    (BattleServantConfConponent_o *)&this->fields.owner,
+    (System_Int32_array **)Square,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10);
   owner = this->fields.owner;
   if ( owner )
   {
     owner->fields.localSaveData = this;
-    sub_B5D560(&owner->fields.localSaveData);
+    sub_B70630(
+      (BattleServantConfConponent_o *)&owner->fields.localSaveData,
+      (System_Int32_array **)this,
+      v11,
+      v12,
+      v13,
+      v14,
+      v15,
+      v16);
   }
 }
 
 
 void __fastcall WarBoardSquareData___c___cctor(const MethodInfo *method)
 {
-  int v1; // w1
-  int v2; // w2
-  __int64 v3; // x3
-  Il2CppObject *v4; // x19
-  struct WarBoardSquareData___c_StaticFields *static_fields; // x0
+  Il2CppObject *v1; // x19
+  BattleServantConfConponent_o *static_fields; // x0
+  System_String_array **v3; // x2
+  System_String_array **v4; // x3
+  System_Boolean_array **v5; // x4
+  System_Int32_array **v6; // x5
+  System_Int32_array *v7; // x6
+  System_Int32_array *v8; // x7
 
-  if ( (byte_42E5FD5 & 1) == 0 )
+  if ( (byte_434FCA0 & 1) == 0 )
   {
-    sub_B5D5C4(&WarBoardSquareData___c_TypeInfo, v1, v2, v3);
-    byte_42E5FD5 = 1;
+    sub_B70694(&WarBoardSquareData___c_TypeInfo);
+    byte_434FCA0 = 1;
   }
-  v4 = (Il2CppObject *)sub_B5D694(WarBoardSquareData___c_TypeInfo);
-  System_Object___ctor(v4, 0LL);
-  static_fields = WarBoardSquareData___c_TypeInfo->static_fields;
-  static_fields->__9 = (struct WarBoardSquareData___c_o *)v4;
-  sub_B5D560(static_fields);
+  v1 = (Il2CppObject *)sub_B70764(WarBoardSquareData___c_TypeInfo);
+  System_Object___ctor(v1, 0LL);
+  static_fields = (BattleServantConfConponent_o *)WarBoardSquareData___c_TypeInfo->static_fields;
+  static_fields->klass = (BattleServantConfConponent_c *)v1;
+  sub_B70630(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -1364,7 +1308,7 @@ bool __fastcall WarBoardSquareData___c____ctor_b__29_4(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_B5D69C(this, 0LL);
+    sub_B7076C(this, 0LL);
   return x->fields.mobilityLimitId > 0;
 }
 
@@ -1375,7 +1319,7 @@ int32_t __fastcall WarBoardSquareData___c____ctor_b__29_6(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_B5D69C(this, 0LL);
+    sub_B7076C(this, 0LL);
   return x->fields.mobilityLimitId;
 }
 
@@ -1397,7 +1341,7 @@ bool __fastcall WarBoardSquareData___c__DisplayClass29_0____ctor_b__0(
   int32_t squareIndex_k__BackingField; // w8
 
   if ( !x || (_4__this = this->fields.__4__this) == 0LL )
-    sub_B5D69C(this, x);
+    sub_B7076C(this, x);
   squareIndex_k__BackingField = _4__this->fields._squareIndex_k__BackingField;
   return x->fields.squareIndex1 == squareIndex_k__BackingField || x->fields.squareIndex2 == squareIndex_k__BackingField;
 }
@@ -1412,7 +1356,7 @@ int32_t __fastcall WarBoardSquareData___c__DisplayClass29_0____ctor_b__2(
   int32_t result; // w0
 
   if ( !x || (_4__this = this->fields.__4__this) == 0LL )
-    sub_B5D69C(this, x);
+    sub_B7076C(this, x);
   result = x->fields.squareIndex1;
   if ( result == _4__this->fields._squareIndex_k__BackingField )
     return x->fields.squareIndex2;
@@ -1429,7 +1373,7 @@ int32_t __fastcall WarBoardSquareData___c__DisplayClass29_0____ctor_b__5(
   int32_t result; // w0
 
   if ( !x || (_4__this = this->fields.__4__this) == 0LL )
-    sub_B5D69C(this, x);
+    sub_B7076C(this, x);
   result = x->fields.squareIndex1;
   if ( result == _4__this->fields._squareIndex_k__BackingField )
     return x->fields.squareIndex2;
@@ -1459,7 +1403,7 @@ bool __fastcall WarBoardSquareData___c__DisplayClass29_1____ctor_b__1(
     if ( this )
       return WarBoardCommonReleaseMaster__IsOpen((WarBoardCommonReleaseMaster_o *)this, (int32_t)x, 0LL);
 LABEL_6:
-    sub_B5D69C(this, x);
+    sub_B7076C(this, x);
   }
   return 1;
 }
@@ -1503,6 +1447,6 @@ bool __fastcall WarBoardSquareData___c__DisplayClass29_1____ctor_b__3(
   this = (WarBoardSquareData___c__DisplayClass29_1_o *)v5->fields.commonReleaseMaster;
   if ( !this )
 LABEL_12:
-    sub_B5D69C(this, *(_QWORD *)&x);
+    sub_B7076C(this, *(_QWORD *)&x);
   return WarBoardCommonReleaseMaster__IsOpen((WarBoardCommonReleaseMaster_o *)this, x, 0LL);
 }

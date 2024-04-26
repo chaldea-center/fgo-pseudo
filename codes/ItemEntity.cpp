@@ -1,16 +1,13 @@
 void __fastcall ItemEntity___ctor(ItemEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EA512 & 1) == 0 )
+  if ( (byte_4353211 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_int___ctor__, (_DWORD)method, v2, v3);
-    byte_42EA512 = 1;
+    sub_B70694(&Method_DataEntityBase_int___ctor__);
+    byte_4353211 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_23FACBC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -22,65 +19,58 @@ int32_t __fastcall ItemEntity__CreatePrimaryKey(ItemEntity_o *this, const Method
 
 System_String_o *__fastcall ItemEntity__GetAnotherPayName(ItemEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  const MethodInfo *v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
+  const MethodInfo *v2; // x3
 
-  if ( (byte_42EA50D & 1) == 0 )
+  if ( (byte_435320C & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_16553/*"anotherPayName"*/, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&StringLiteral_1/*""*/, v5, v6, v7);
-    byte_42EA50D = 1;
+    sub_B70694(&StringLiteral_16597/*"anotherPayName"*/);
+    sub_B70694(&StringLiteral_1/*""*/);
+    byte_435320C = 1;
   }
-  return ItemEntity__getScript_28493868(
+  return ItemEntity__getScript_27820976(
            this,
-           (System_String_o *)StringLiteral_16553/*"anotherPayName"*/,
+           (System_String_o *)StringLiteral_16597/*"anotherPayName"*/,
            (System_String_o *)StringLiteral_1/*""*/,
-           v3);
+           v2);
 }
 
 
 int32_t __fastcall ItemEntity__GetBattleAppearEffect(ItemEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  const MethodInfo *v3; // x3
+  const MethodInfo *v2; // x3
 
-  if ( (byte_42EA50F & 1) == 0 )
+  if ( (byte_435320E & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_16843/*"battleAppearEffectId"*/, (_DWORD)method, v2, v3);
-    byte_42EA50F = 1;
+    sub_B70694(&StringLiteral_16887/*"battleAppearEffectId"*/);
+    byte_435320E = 1;
   }
-  return ItemEntity__getScript(this, (System_String_o *)StringLiteral_16843/*"battleAppearEffectId"*/, 0, v3);
+  return ItemEntity__getScript(this, (System_String_o *)StringLiteral_16887/*"battleAppearEffectId"*/, 0, v2);
 }
 
 
 int32_t __fastcall ItemEntity__GetBattleAppearItemWait(ItemEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  const MethodInfo *v3; // x3
+  const MethodInfo *v2; // x3
 
-  if ( (byte_42EA511 & 1) == 0 )
+  if ( (byte_4353210 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_16844/*"battleAppearItemWait"*/, (_DWORD)method, v2, v3);
-    byte_42EA511 = 1;
+    sub_B70694(&StringLiteral_16888/*"battleAppearItemWait"*/);
+    byte_4353210 = 1;
   }
-  return ItemEntity__getScript(this, (System_String_o *)StringLiteral_16844/*"battleAppearItemWait"*/, 0, v3);
+  return ItemEntity__getScript(this, (System_String_o *)StringLiteral_16888/*"battleAppearItemWait"*/, 0, v2);
 }
 
 
 int32_t __fastcall ItemEntity__GetBattleGetEffect(ItemEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  const MethodInfo *v3; // x3
+  const MethodInfo *v2; // x3
 
-  if ( (byte_42EA510 & 1) == 0 )
+  if ( (byte_435320F & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_16851/*"battleGetEffectId"*/, (_DWORD)method, v2, v3);
-    byte_42EA510 = 1;
+    sub_B70694(&StringLiteral_16895/*"battleGetEffectId"*/);
+    byte_435320F = 1;
   }
-  return ItemEntity__getScript(this, (System_String_o *)StringLiteral_16851/*"battleGetEffectId"*/, 0, v3);
+  return ItemEntity__getScript(this, (System_String_o *)StringLiteral_16895/*"battleGetEffectId"*/, 0, v2);
 }
 
 
@@ -93,7 +83,7 @@ System_String_o *__fastcall ItemEntity__GetCountText(ItemEntity_o *this, int32_t
   if ( System_String__IsNullOrEmpty(this->fields.unit, 0LL) )
     return ItemType__GetCountText(this->fields.type, num, 0LL);
   v6 = System_Int32__ToString((int32_t)&v7, 0LL);
-  return System_String__Concat_44577788(v6, this->fields.unit, 0LL);
+  return System_String__Concat_44758168(v6, this->fields.unit, 0LL);
 }
 
 
@@ -102,74 +92,62 @@ System_String_o *__fastcall ItemEntity__GetCountTextWithPrefix(
         int32_t num,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  int v6; // w1
-  int v7; // w2
-  __int64 v8; // x3
   bool IsCountableWithPlus; // w0
   int32_t type; // w8
-  bool v11; // w19
+  bool v7; // w19
   System_String_o *CountText; // x1
-  __int64 *v13; // x8
-  System_String_o *v14; // x0
-  int32_t v16; // [xsp+Ch] [xbp-14h] BYREF
+  __int64 *v9; // x8
+  System_String_o *v10; // x0
+  int32_t v12; // [xsp+Ch] [xbp-14h] BYREF
 
-  v16 = num;
-  if ( (byte_42EA506 & 1) == 0 )
+  v12 = num;
+  if ( (byte_4353205 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_699/*"+"*/, num, (_DWORD)method, v3);
-    sub_B5D5C4(&StringLiteral_24017/*"×"*/, v6, v7, v8);
-    byte_42EA506 = 1;
+    sub_B70694(&StringLiteral_704/*"+"*/);
+    sub_B70694(&StringLiteral_24089/*"×"*/);
+    byte_4353205 = 1;
   }
   if ( System_String__IsNullOrEmpty(this->fields.unit, 0LL) )
   {
     IsCountableWithPlus = ItemType__IsCountableWithPlus(this->fields.type, 0LL);
     type = this->fields.type;
-    v11 = IsCountableWithPlus;
+    v7 = IsCountableWithPlus;
     CountText = ItemType__GetCountText(type, num, 0LL);
-    if ( v11 )
-      v13 = &StringLiteral_699/*"+"*/;
+    if ( v7 )
+      v9 = &StringLiteral_704/*"+"*/;
     else
-      v13 = &StringLiteral_24017/*"×"*/;
-    return System_String__Concat_44577788((System_String_o *)*v13, CountText, 0LL);
+      v9 = &StringLiteral_24089/*"×"*/;
+    return System_String__Concat_44758168((System_String_o *)*v9, CountText, 0LL);
   }
   else
   {
-    v14 = System_Int32__ToString((int32_t)&v16, 0LL);
-    return System_String__Concat_44577788(v14, this->fields.unit, 0LL);
+    v10 = System_Int32__ToString((int32_t)&v12, 0LL);
+    return System_String__Concat_44758168(v10, this->fields.unit, 0LL);
   }
 }
 
 
 int32_t __fastcall ItemEntity__GetImageId(ItemEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
   System_String_o *OverwriteImageIdInfo; // x21
   CommonReleaseMaster_o *Master_WarQuestSelectionMaster; // x20
   System_String_array *IsOpen; // x0
-  System_String_array *v14; // x1
-  __int64 v15; // x8
-  System_String_array *v16; // x21
-  __int64 v17; // x25
-  System_String_o *v18; // x22
-  System_String_array *v19; // x22
-  int32_t v20; // w23
-  int32_t v21; // w22
-  __int64 v23; // x0
+  System_String_array *v6; // x1
+  __int64 v7; // x8
+  System_String_array *v8; // x21
+  __int64 v9; // x25
+  System_String_o *v10; // x22
+  System_String_array *v11; // x22
+  int32_t v12; // w23
+  int32_t v13; // w22
+  __int64 v15; // x0
 
-  if ( (byte_42EA508 & 1) == 0 )
+  if ( (byte_4353207 & 1) == 0 )
   {
-    sub_B5D5C4(&char___TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&Method_DataManager_GetMaster_CommonReleaseMaster___, v5, v6, v7);
-    sub_B5D5C4(&DataManager_TypeInfo, v8, v9, v10);
-    byte_42EA508 = 1;
+    sub_B70694(&char___TypeInfo);
+    sub_B70694(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_B70694(&DataManager_TypeInfo);
+    byte_4353207 = 1;
   }
   if ( this->fields.type == 29 )
   {
@@ -181,11 +159,11 @@ int32_t __fastcall ItemEntity__GetImageId(ItemEntity_o *this, const MethodInfo *
       {
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
       }
-      Master_WarQuestSelectionMaster = (CommonReleaseMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1AE41EC *)Method_DataManager_GetMaster_CommonReleaseMaster___);
-      IsOpen = (System_String_array *)sub_B5D5DC(char___TypeInfo, 1LL);
+      Master_WarQuestSelectionMaster = (CommonReleaseMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+      IsOpen = (System_String_array *)sub_B706AC(char___TypeInfo, 1LL);
       if ( !IsOpen )
         goto LABEL_27;
-      v14 = IsOpen;
+      v6 = IsOpen;
       if ( !IsOpen->max_length )
         goto LABEL_28;
       LOWORD(IsOpen->m_Items[0]) = 44;
@@ -193,55 +171,55 @@ int32_t __fastcall ItemEntity__GetImageId(ItemEntity_o *this, const MethodInfo *
         || (IsOpen = System_String__Split(OverwriteImageIdInfo, (System_Char_array *)IsOpen, 0LL)) == 0LL )
       {
 LABEL_27:
-        sub_B5D69C(IsOpen, v14);
+        sub_B7076C(IsOpen, v6);
       }
-      v15 = *(_QWORD *)&IsOpen->max_length;
-      v16 = IsOpen;
-      if ( v15 && (int)v15 >= 1 )
+      v7 = *(_QWORD *)&IsOpen->max_length;
+      v8 = IsOpen;
+      if ( v7 && (int)v7 >= 1 )
       {
-        v17 = 0LL;
-        while ( (unsigned int)v17 < (unsigned int)v15 )
+        v9 = 0LL;
+        while ( (unsigned int)v9 < (unsigned int)v7 )
         {
-          v18 = v16->m_Items[v17];
-          IsOpen = (System_String_array *)sub_B5D5DC(char___TypeInfo, 1LL);
+          v10 = v8->m_Items[v9];
+          IsOpen = (System_String_array *)sub_B706AC(char___TypeInfo, 1LL);
           if ( !IsOpen )
             goto LABEL_27;
-          v14 = IsOpen;
+          v6 = IsOpen;
           if ( !IsOpen->max_length )
             break;
           LOWORD(IsOpen->m_Items[0]) = 47;
-          if ( !v18 )
+          if ( !v10 )
             goto LABEL_27;
-          IsOpen = System_String__Split(v18, (System_Char_array *)IsOpen, 0LL);
+          IsOpen = System_String__Split(v10, (System_Char_array *)IsOpen, 0LL);
           if ( !IsOpen )
             goto LABEL_27;
-          v19 = IsOpen;
+          v11 = IsOpen;
           if ( (int)IsOpen->max_length >= 2 )
           {
             IsOpen = (System_String_array *)System_Int32__Parse(IsOpen->m_Items[0], 0LL);
-            if ( v19->max_length <= 1 )
+            if ( v11->max_length <= 1 )
               break;
-            v20 = (int)IsOpen;
-            IsOpen = (System_String_array *)System_Int32__Parse(v19->m_Items[1], 0LL);
+            v12 = (int)IsOpen;
+            IsOpen = (System_String_array *)System_Int32__Parse(v11->m_Items[1], 0LL);
             if ( !Master_WarQuestSelectionMaster )
               goto LABEL_27;
-            v21 = (int)IsOpen;
+            v13 = (int)IsOpen;
             IsOpen = (System_String_array *)CommonReleaseMaster__IsOpen(
                                               Master_WarQuestSelectionMaster,
-                                              v20,
+                                              v12,
                                               0LL,
                                               0,
                                               0LL);
             if ( ((unsigned __int8)IsOpen & 1) != 0 )
-              return v21;
+              return v13;
           }
-          LODWORD(v15) = v16->max_length;
-          if ( (int)++v17 >= (int)v15 )
+          LODWORD(v7) = v8->max_length;
+          if ( (int)++v9 >= (int)v7 )
             return this->fields.imageId;
         }
 LABEL_28:
-        v23 = sub_B5D6C8(IsOpen);
-        sub_B5D668(v23, 0LL);
+        v15 = sub_B70798(IsOpen);
+        sub_B70738(v15, 0LL);
       }
     }
   }
@@ -257,59 +235,50 @@ int32_t __fastcall ItemEntity__GetItemType(ItemEntity_o *this, const MethodInfo 
 
 int32_t __fastcall ItemEntity__GetMaxNum(ItemEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  const MethodInfo *v3; // x3
+  const MethodInfo *v2; // x3
 
-  if ( (byte_42EA50E & 1) == 0 )
+  if ( (byte_435320D & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_20701/*"maxNum"*/, (_DWORD)method, v2, v3);
-    byte_42EA50E = 1;
+    sub_B70694(&StringLiteral_20761/*"maxNum"*/);
+    byte_435320D = 1;
   }
-  return ItemEntity__getScript(this, (System_String_o *)StringLiteral_20701/*"maxNum"*/, 0, v3);
+  return ItemEntity__getScript(this, (System_String_o *)StringLiteral_20761/*"maxNum"*/, 0, v2);
 }
 
 
 System_String_o *__fastcall ItemEntity__GetOverwriteImageIdInfo(ItemEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  const MethodInfo *v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
+  const MethodInfo *v2; // x3
 
-  if ( (byte_42EA50A & 1) == 0 )
+  if ( (byte_4353209 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_21648/*"overwriteImageIdInfo"*/, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&StringLiteral_1/*""*/, v5, v6, v7);
-    byte_42EA50A = 1;
+    sub_B70694(&StringLiteral_21711/*"overwriteImageIdInfo"*/);
+    sub_B70694(&StringLiteral_1/*""*/);
+    byte_4353209 = 1;
   }
-  return ItemEntity__getScript_28493868(
+  return ItemEntity__getScript_27820976(
            this,
-           (System_String_o *)StringLiteral_21648/*"overwriteImageIdInfo"*/,
+           (System_String_o *)StringLiteral_21711/*"overwriteImageIdInfo"*/,
            (System_String_o *)StringLiteral_1/*""*/,
-           v3);
+           v2);
 }
 
 
 System_String_o *__fastcall ItemEntity__GetOverwritePresentboxDetail(ItemEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  const MethodInfo *v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
+  const MethodInfo *v2; // x3
 
-  if ( (byte_42EA509 & 1) == 0 )
+  if ( (byte_4353208 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_21657/*"overwritePresentboxDetail"*/, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&StringLiteral_1/*""*/, v5, v6, v7);
-    byte_42EA509 = 1;
+    sub_B70694(&StringLiteral_21720/*"overwritePresentboxDetail"*/);
+    sub_B70694(&StringLiteral_1/*""*/);
+    byte_4353208 = 1;
   }
-  return ItemEntity__getScript_28493868(
+  return ItemEntity__getScript_27820976(
            this,
-           (System_String_o *)StringLiteral_21657/*"overwritePresentboxDetail"*/,
+           (System_String_o *)StringLiteral_21720/*"overwritePresentboxDetail"*/,
            (System_String_o *)StringLiteral_1/*""*/,
-           v3);
+           v2);
 }
 
 
@@ -333,14 +302,12 @@ int32_t __fastcall ItemEntity__GetPriceUnitIcon(ItemEntity_o *this, const Method
 
 bool __fastcall ItemEntity__IsEnable(ItemEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   int64_t Time; // x0
 
-  if ( (byte_42EA505 & 1) == 0 )
+  if ( (byte_4353204 & 1) == 0 )
   {
-    sub_B5D5C4(&NetworkManager_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EA505 = 1;
+    sub_B70694(&NetworkManager_TypeInfo);
+    byte_4353204 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -352,7 +319,7 @@ bool __fastcall ItemEntity__IsEnable(ItemEntity_o *this, const MethodInfo *metho
 }
 
 
-bool __fastcall ItemEntity__IsEnable_28493400(ItemEntity_o *this, int64_t checkTime, const MethodInfo *method)
+bool __fastcall ItemEntity__IsEnable_27820508(ItemEntity_o *this, int64_t checkTime, const MethodInfo *method)
 {
   return this->fields.startedAt <= checkTime && (this->fields.endedAt == 0 || this->fields.endedAt >= checkTime);
 }
@@ -360,15 +327,14 @@ bool __fastcall ItemEntity__IsEnable_28493400(ItemEntity_o *this, int64_t checkT
 
 bool __fastcall ItemEntity__IsRewardDispTogether(ItemEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  const MethodInfo *v3; // x3
+  const MethodInfo *v2; // x3
 
-  if ( (byte_42EA50B & 1) == 0 )
+  if ( (byte_435320A & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_21779/*"playEffect"*/, (_DWORD)method, v2, v3);
-    byte_42EA50B = 1;
+    sub_B70694(&StringLiteral_21843/*"playEffect"*/);
+    byte_435320A = 1;
   }
-  return ItemEntity__getScript(this, (System_String_o *)StringLiteral_21779/*"playEffect"*/, 0, v3) != 1;
+  return ItemEntity__getScript(this, (System_String_o *)StringLiteral_21843/*"playEffect"*/, 0, v2) != 1;
 }
 
 
@@ -378,22 +344,17 @@ int32_t __fastcall ItemEntity__getScript(
         int32_t defVal,
         const MethodInfo *method)
 {
-  int32_t v4; // w19
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
-  __int64 v11; // x1
-  ItemEntity_o *v13; // x0
-  const MethodInfo *v14; // x1
+  __int64 v8; // x1
+  ItemEntity_o *v10; // x0
+  const MethodInfo *v11; // x1
   System_Xml_Schema_XmlSchemaObject_o *value; // [xsp+8h] [xbp-28h] BYREF
 
-  v4 = defVal;
-  if ( (byte_42EA507 & 1) == 0 )
+  if ( (byte_4353206 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, (_DWORD)key, defVal, method);
-    sub_B5D5C4(&long_TypeInfo, v7, v8, v9);
-    byte_42EA507 = 1;
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_B70694(&long_TypeInfo);
+    byte_4353206 = 1;
   }
   value = 0LL;
   script = this->fields.script;
@@ -402,58 +363,49 @@ int32_t __fastcall ItemEntity__getScript(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
           (System_Xml_XmlQualifiedName_o *)key,
           &value,
-          (const MethodInfo_2F289BC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_2F517E8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
-    return v4;
+    return defVal;
   }
   if ( !value )
-    sub_B5D69C(0LL, v11);
+    sub_B7076C(0LL, v8);
   if ( value->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(value);
-  v13 = (ItemEntity_o *)sub_B5D990(value);
-  return (unsigned int)ItemEntity__GetOverwriteImageIdInfo(v13, v14);
+  v10 = (ItemEntity_o *)sub_B70A60(value);
+  return (unsigned int)ItemEntity__GetOverwriteImageIdInfo(v10, v11);
 }
 
 
-System_String_o *__fastcall ItemEntity__getScript_28493868(
+System_String_o *__fastcall ItemEntity__getScript_27820976(
         ItemEntity_o *this,
         System_String_o *key,
         System_String_o *defVal,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x19
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
-  ItemEntity_o *v12; // x0
-  const MethodInfo *v13; // x1
+  ItemEntity_o *v9; // x0
+  const MethodInfo *v10; // x1
   System_Xml_Schema_XmlSchemaObject_o *value; // [xsp+8h] [xbp-28h] BYREF
 
-  v4 = defVal;
-  if ( (byte_42EA50C & 1) == 0 )
+  if ( (byte_435320B & 1) == 0 )
   {
-    sub_B5D5C4(
-      &Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__,
-      (_DWORD)key,
-      (_DWORD)defVal,
-      method);
-    sub_B5D5C4(&string_TypeInfo, v7, v8, v9);
-    byte_42EA50C = 1;
+    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_B70694(&string_TypeInfo);
+    byte_435320B = 1;
   }
   value = 0LL;
   script = this->fields.script;
   if ( !script )
-    return v4;
+    return defVal;
   if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
           (System_Xml_XmlQualifiedName_o *)key,
           &value,
-          (const MethodInfo_2F289BC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
-    return v4;
-  v4 = (System_String_o *)value;
+          (const MethodInfo_2F517E8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+    return defVal;
+  defVal = (System_String_o *)value;
   if ( !value || (System_String_c *)value->klass == string_TypeInfo )
-    return v4;
-  v12 = (ItemEntity_o *)sub_B5D990(value);
-  return (System_String_o *)ItemEntity__IsRewardDispTogether(v12, v13);
+    return defVal;
+  v9 = (ItemEntity_o *)sub_B70A60(value);
+  return (System_String_o *)ItemEntity__IsRewardDispTogether(v9, v10);
 }

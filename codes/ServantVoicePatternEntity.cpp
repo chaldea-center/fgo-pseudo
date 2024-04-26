@@ -1,16 +1,13 @@
 void __fastcall ServantVoicePatternEntity___ctor(ServantVoicePatternEntity_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EBF77 & 1) == 0 )
+  if ( (byte_4354470 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_string___ctor__, (_DWORD)method, v2, v3);
-    byte_42EBF77 = 1;
+    sub_B70694(&Method_DataEntityBase_string___ctor__);
+    byte_4354470 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_23FAD5C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -20,42 +17,28 @@ bool __fastcall ServantVoicePatternEntity__CheckAddCond(
         int32_t targetValue,
         const MethodInfo *method)
 {
-  int32_t svtId; // w21
-  int v7; // w1
-  int v8; // w2
-  __int64 v9; // x3
-  int v10; // w1
-  int v11; // w2
-  __int64 v12; // x3
-  int v13; // w1
-  int v14; // w2
-  __int64 v15; // x3
-  int v16; // w1
-  int v17; // w2
-  __int64 v18; // x3
   int32_t value2; // w19
-  int32_t v20; // w20
+  int32_t v8; // w20
   int32_t value1; // w8
-  DataManager_o *Instance; // x0
-  __int64 v24; // x1
-  UserServantCollectionMaster_o *MasterData_WarQuestSelectionMaster; // x20
-  int64_t UserId; // x21
-  const MethodInfo *v27; // x1
+  UserServantCollectionMaster_o *Master_WarQuestSelectionMaster; // x21
+  int64_t UserId; // x22
+  const MethodInfo *v13; // x2
+  UserServantCollectionEntity_o *FixSvtId; // x0
+  __int64 v15; // x1
   int32_t FriendShipRank; // w0
-  ServantLimitImageMaster_o *v29; // x21
-  const MethodInfo *v30; // x1
+  ServantLimitImageMaster_o *v17; // x21
+  const MethodInfo *v18; // x2
 
-  svtId = targetValue;
-  if ( (byte_42EBF75 & 1) == 0 )
+  if ( (byte_435446E & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, limitCount, targetValue, method);
-    sub_B5D5C4(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, v7, v8, v9);
-    sub_B5D5C4(&NetworkManager_TypeInfo, v10, v11, v12);
-    sub_B5D5C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13, v14, v15);
-    sub_B5D5C4(&VoiceCondType_TypeInfo, v16, v17, v18);
-    byte_42EBF75 = 1;
+    sub_B70694(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_B70694(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_B70694(&DataManager_TypeInfo);
+    sub_B70694(&NetworkManager_TypeInfo);
+    sub_B70694(&VoiceCondType_TypeInfo);
+    byte_435446E = 1;
   }
-  if ( svtId == -1 )
+  if ( targetValue == -1 )
   {
     value1 = this->fields.value1;
     if ( value1 <= 5 )
@@ -64,7 +47,7 @@ bool __fastcall ServantVoicePatternEntity__CheckAddCond(
         goto LABEL_16;
       if ( value1 == 5 )
       {
-        svtId = this->fields.svtId;
+        targetValue = this->fields.svtId;
         goto LABEL_4;
       }
     }
@@ -72,79 +55,75 @@ bool __fastcall ServantVoicePatternEntity__CheckAddCond(
     {
       if ( ((1 << value1) & 0x7020200) != 0 )
       {
-        svtId = limitCount;
+        targetValue = limitCount;
         goto LABEL_4;
       }
       if ( ((1 << value1) & 0x500000) != 0 )
       {
 LABEL_16:
-        Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-        if ( Instance )
+        if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
+          && !DataManager_TypeInfo->_2.cctor_finished )
         {
-          MasterData_WarQuestSelectionMaster = (UserServantCollectionMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                                  Instance,
-                                                                                  (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-          if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !NetworkManager_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+        }
+        Master_WarQuestSelectionMaster = (UserServantCollectionMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+        if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
+          && !NetworkManager_TypeInfo->_2.cctor_finished )
+        {
+          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+        }
+        UserId = NetworkManager__get_UserId(0LL);
+        FixSvtId = (UserServantCollectionEntity_o *)ServantVoicePatternEntity__GetFixSvtId(this, limitCount, v13);
+        if ( Master_WarQuestSelectionMaster )
+        {
+          FixSvtId = UserServantCollectionMaster__GetEntityDefinitely(
+                       Master_WarQuestSelectionMaster,
+                       UserId,
+                       (int32_t)FixSvtId,
+                       0LL);
+          if ( FixSvtId )
           {
-            j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-          }
-          UserId = NetworkManager__get_UserId(0LL);
-          Instance = (DataManager_o *)ServantVoicePatternEntity__GetFixSvtId(this, v27);
-          if ( MasterData_WarQuestSelectionMaster )
-          {
-            Instance = (DataManager_o *)UserServantCollectionMaster__GetEntityDefinitely(
-                                          MasterData_WarQuestSelectionMaster,
-                                          UserId,
-                                          (int32_t)Instance,
-                                          0LL);
-            if ( Instance )
-            {
-              FriendShipRank = UserServantCollectionEntity__getFriendShipRank(
-                                 (UserServantCollectionEntity_o *)Instance,
-                                 0LL);
-LABEL_23:
-              svtId = FriendShipRank;
-              goto LABEL_4;
-            }
+            FriendShipRank = UserServantCollectionEntity__getFriendShipRank(FixSvtId, 0LL);
+LABEL_25:
+            targetValue = FriendShipRank;
+            goto LABEL_4;
           }
         }
-        goto LABEL_29;
+        goto LABEL_33;
       }
       if ( value1 == 23 )
       {
-        Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A2FE60 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-        if ( Instance )
+        if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
+          && !DataManager_TypeInfo->_2.cctor_finished )
         {
-          v29 = (ServantLimitImageMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                               Instance,
-                                               (const MethodInfo_1AE424C *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-          Instance = (DataManager_o *)ServantVoicePatternEntity__GetFixSvtId(this, v30);
-          if ( v29 )
-          {
-            FriendShipRank = ServantLimitImageMaster__GetServantImageLimitSealAfter(
-                               v29,
-                               (int32_t)Instance,
-                               limitCount,
-                               0LL);
-            goto LABEL_23;
-          }
+          j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
         }
-LABEL_29:
-        sub_B5D69C(Instance, v24);
+        v17 = (ServantLimitImageMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+        FixSvtId = (UserServantCollectionEntity_o *)ServantVoicePatternEntity__GetFixSvtId(this, limitCount, v18);
+        if ( v17 )
+        {
+          FriendShipRank = ServantLimitImageMaster__GetServantImageLimitSealAfter(
+                             v17,
+                             (int32_t)FixSvtId,
+                             limitCount,
+                             0LL);
+          goto LABEL_25;
+        }
+LABEL_33:
+        sub_B7076C(FixSvtId, v15);
       }
     }
-    svtId = -1;
+    targetValue = -1;
   }
 LABEL_4:
-  v20 = this->fields.value1;
+  v8 = this->fields.value1;
   value2 = this->fields.value2;
   if ( (BYTE3(VoiceCondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !VoiceCondType_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(VoiceCondType_TypeInfo);
   }
-  return VoiceCondType__IsSatisfyCondition(v20, value2, svtId, 0LL);
+  return VoiceCondType__IsSatisfyCondition(v8, value2, targetValue, 0LL);
 }
 
 
@@ -154,16 +133,16 @@ System_String_o *__fastcall ServantVoicePatternEntity__CreatePK(
         System_String_o *voiceId,
         const MethodInfo *method)
 {
-  if ( (byte_42EBF74 & 1) == 0 )
+  if ( (byte_435446D & 1) == 0 )
   {
-    sub_B5D5C4(&Method_DataEntityBase_CreateMultiplePK_int__int__string___, svtId, (_DWORD)voiceId, method);
-    byte_42EBF74 = 1;
+    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int__string___);
+    byte_435446D = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__string_(
            id,
            svtId,
            voiceId,
-           (const MethodInfo_1AE3590 *)Method_DataEntityBase_CreateMultiplePK_int__int__string___);
+           (const MethodInfo_1CA28E4 *)Method_DataEntityBase_CreateMultiplePK_int__int__string___);
 }
 
 
@@ -189,20 +168,28 @@ int32_t __fastcall ServantVoicePatternEntity__GetCondValue(ServantVoicePatternEn
 }
 
 
-int32_t __fastcall ServantVoicePatternEntity__GetFixSvtId(ServantVoicePatternEntity_o *this, const MethodInfo *method)
+int32_t __fastcall ServantVoicePatternEntity__GetFixSvtId(
+        ServantVoicePatternEntity_o *this,
+        int32_t dispLimitCount,
+        const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   int32_t *p_svtId; // x19
-  int32_t v6; // w21
+  int32_t v6; // w22
   int32_t svtId; // t1
   BalanceConfig_c *v8; // x0
   struct BalanceConfig_StaticFields *static_fields; // x8
+  int32_t *p_ServantIdJekyll; // x8
+  ServantTransformMaster_o *Master_WarQuestSelectionMaster; // x0
+  __int64 v12; // x1
+  const MethodInfo *v13; // x3
+  ServantTransformEntity_o *v14; // x0
 
-  if ( (byte_42EBF76 & 1) == 0 )
+  if ( (byte_435446F & 1) == 0 )
   {
-    sub_B5D5C4(&BalanceConfig_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EBF76 = 1;
+    sub_B70694(&BalanceConfig_TypeInfo);
+    sub_B70694(&Method_DataManager_GetMaster_ServantTransformMaster___);
+    sub_B70694(&DataManager_TypeInfo);
+    byte_435446F = 1;
   }
   svtId = this->fields.svtId;
   p_svtId = &this->fields.svtId;
@@ -222,9 +209,25 @@ int32_t __fastcall ServantVoicePatternEntity__GetFixSvtId(ServantVoicePatternEnt
       j_il2cpp_runtime_class_init_0(v8);
       static_fields = BalanceConfig_TypeInfo->static_fields;
     }
-    p_svtId = &static_fields->ServantIdJekyll;
+    p_ServantIdJekyll = &static_fields->ServantIdJekyll;
   }
-  return *p_svtId;
+  else
+  {
+    if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+    Master_WarQuestSelectionMaster = (ServantTransformMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ServantTransformMaster___);
+    if ( !Master_WarQuestSelectionMaster )
+      sub_B7076C(0LL, v12);
+    v14 = ServantTransformMaster__GetBeforeTransformEntity(
+            Master_WarQuestSelectionMaster,
+            *p_svtId,
+            dispLimitCount + 1,
+            v13);
+    p_ServantIdJekyll = &v14->fields.befSvtId;
+    if ( !v14 )
+      p_ServantIdJekyll = p_svtId;
+  }
+  return *p_ServantIdJekyll;
 }
 
 

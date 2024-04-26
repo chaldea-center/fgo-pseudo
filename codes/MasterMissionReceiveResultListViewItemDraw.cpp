@@ -1,13 +1,9 @@
 void __fastcall MasterMissionReceiveResultListViewItemDraw___cctor(const MethodInfo *method)
 {
-  int v1; // w1
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42E89F7 & 1) == 0 )
+  if ( (byte_43522E8 & 1) == 0 )
   {
-    sub_B5D5C4(&MasterMissionReceiveResultListViewItemDraw_TypeInfo, v1, v2, v3);
-    byte_42E89F7 = 1;
+    sub_B70694(&MasterMissionReceiveResultListViewItemDraw_TypeInfo);
+    byte_43522E8 = 1;
   }
   LODWORD(MasterMissionReceiveResultListViewItemDraw_TypeInfo->static_fields->MESSAGE_LABEL_WIDTH) = (struct MasterMissionReceiveResultListViewItemDraw_StaticFields)1142947840;
 }
@@ -26,31 +22,30 @@ void __fastcall MasterMissionReceiveResultListViewItemDraw__SetItem(
         System_String_o *message,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
   UILabel_o *messageLabel; // x0
-  UILabel_o *v7; // x19
+  UILabel_o *v6; // x19
 
-  if ( (byte_42E89F6 & 1) == 0 )
+  if ( (byte_43522E7 & 1) == 0 )
   {
-    sub_B5D5C4(&MasterMissionReceiveResultListViewItemDraw_TypeInfo, (_DWORD)message, (_DWORD)method, v3);
-    byte_42E89F6 = 1;
+    sub_B70694(&MasterMissionReceiveResultListViewItemDraw_TypeInfo);
+    byte_43522E7 = 1;
   }
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_9;
   UILabel__set_text(messageLabel, message, 0LL);
-  v7 = this->fields.messageLabel;
+  v6 = this->fields.messageLabel;
   messageLabel = (UILabel_o *)MasterMissionReceiveResultListViewItemDraw_TypeInfo;
   if ( (BYTE3(MasterMissionReceiveResultListViewItemDraw_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !MasterMissionReceiveResultListViewItemDraw_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MasterMissionReceiveResultListViewItemDraw_TypeInfo);
   }
-  if ( !v7 )
+  if ( !v6 )
 LABEL_9:
-    sub_B5D69C(messageLabel, message);
-  UILabel__SetCondensedScale_41950620(
-    v7,
+    sub_B7076C(messageLabel, message);
+  UILabel__SetCondensedScale_41496620(
+    v6,
     MasterMissionReceiveResultListViewItemDraw_TypeInfo->static_fields->MESSAGE_LABEL_WIDTH,
     0LL);
 }

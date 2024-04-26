@@ -10,30 +10,19 @@ void __fastcall SetAdvantageClassAutoOptionControl__Init(
         SetAdvantageClassAutoOptionControl_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
-  int v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
   UILabel_o *infoLabel; // x20
-  System_String_o *v15; // x0
-  __int64 v16; // x1
+  System_String_o *v4; // x0
+  __int64 v5; // x1
   UILabel_o *switchButton; // x20
-  const MethodInfo *v18; // x1
+  const MethodInfo *v7; // x1
 
-  if ( (byte_42EBF9A & 1) == 0 )
+  if ( (byte_435410A & 1) == 0 )
   {
-    sub_B5D5C4(&LocalizationManager_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&OptionManager_TypeInfo, v5, v6, v7);
-    sub_B5D5C4(&StringLiteral_9876/*"OPTION_ADVANTAGE_CLASS_AUTO_INFO"*/, v8, v9, v10);
-    sub_B5D5C4(&StringLiteral_9875/*"OPTION_ADVANTAGE_CLASS_AUTO"*/, v11, v12, v13);
-    byte_42EBF9A = 1;
+    sub_B70694(&LocalizationManager_TypeInfo);
+    sub_B70694(&OptionManager_TypeInfo);
+    sub_B70694(&StringLiteral_9892/*"OPTION_ADVANTAGE_CLASS_AUTO_INFO"*/);
+    sub_B70694(&StringLiteral_9891/*"OPTION_ADVANTAGE_CLASS_AUTO"*/);
+    byte_435410A = 1;
   }
   infoLabel = this->fields.infoLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -41,23 +30,23 @@ void __fastcall SetAdvantageClassAutoOptionControl__Init(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_9875/*"OPTION_ADVANTAGE_CLASS_AUTO"*/, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9891/*"OPTION_ADVANTAGE_CLASS_AUTO"*/, 0LL);
   if ( !infoLabel
-    || (UILabel__set_text(infoLabel, v15, 0LL),
+    || (UILabel__set_text(infoLabel, v4, 0LL),
         switchButton = (UILabel_o *)this->fields.switchButton,
-        v15 = LocalizationManager__Get((System_String_o *)StringLiteral_9876/*"OPTION_ADVANTAGE_CLASS_AUTO_INFO"*/, 0LL),
+        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9892/*"OPTION_ADVANTAGE_CLASS_AUTO_INFO"*/, 0LL),
         !switchButton) )
   {
-    sub_B5D69C(v15, v16);
+    sub_B7076C(v4, v5);
   }
-  UILabel__set_text(switchButton, v15, 0LL);
+  UILabel__set_text(switchButton, v4, 0LL);
   if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
   }
   LOBYTE(this[1].klass) = OptionManager__GetAdvantageClassAuto(0LL);
-  SetAdvantageClassAutoOptionControl__RefreshDisplay(this, v18);
+  SetAdvantageClassAutoOptionControl__RefreshDisplay(this, v7);
 }
 
 
@@ -65,27 +54,25 @@ void __fastcall SetAdvantageClassAutoOptionControl__OnClickButton(
         SetAdvantageClassAutoOptionControl_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   SetAdvantageClassAutoOptionControl_c *klass; // x9
-  int v6; // w20
-  const MethodInfo *v7; // x1
+  int v4; // w20
+  const MethodInfo *v5; // x1
 
-  if ( (byte_42EBF9C & 1) == 0 )
+  if ( (byte_435410C & 1) == 0 )
   {
-    sub_B5D5C4(&SoundManager_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EBF9C = 1;
+    sub_B70694(&SoundManager_TypeInfo);
+    byte_435410C = 1;
   }
   klass = this->klass;
   LOBYTE(this[1].klass) ^= 1u;
   ((void (__fastcall *)(SetAdvantageClassAutoOptionControl_o *, Il2CppMethodPointer))klass->vtable._5_Reflection.method)(
     this,
     klass->vtable._6_IsAvailable.methodPtr);
-  v6 = LOBYTE(this[1].klass) ^ 1;
+  v4 = LOBYTE(this[1].klass) ^ 1;
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__playSystemSe(v6, 0LL);
-  SetAdvantageClassAutoOptionControl__RefreshDisplay(this, v7);
+  SoundManager__playSystemSe(v4, 0LL);
+  SetAdvantageClassAutoOptionControl__RefreshDisplay(this, v5);
 }
 
 
@@ -93,14 +80,12 @@ void __fastcall SetAdvantageClassAutoOptionControl__Reflection(
         SetAdvantageClassAutoOptionControl_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   int klass_low; // w19
 
-  if ( (byte_42EBF9D & 1) == 0 )
+  if ( (byte_435410D & 1) == 0 )
   {
-    sub_B5D5C4(&OptionManager_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EBF9D = 1;
+    sub_B70694(&OptionManager_TypeInfo);
+    byte_435410D = 1;
   }
   klass_low = LOBYTE(this[1].klass);
   if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -116,26 +101,21 @@ void __fastcall SetAdvantageClassAutoOptionControl__RefreshDisplay(
         SetAdvantageClassAutoOptionControl_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  UIButton_o *v8; // x0
-  __int64 *v9; // x8
+  UIButton_o *v3; // x0
+  __int64 *v4; // x8
 
-  if ( (byte_42EBF9B & 1) == 0 )
+  if ( (byte_435410B & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_17215/*"btn_on"*/, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&StringLiteral_17214/*"btn_off"*/, v5, v6, v7);
-    byte_42EBF9B = 1;
+    sub_B70694(&StringLiteral_17262/*"btn_on"*/);
+    sub_B70694(&StringLiteral_17261/*"btn_off"*/);
+    byte_435410B = 1;
   }
-  v8 = *(UIButton_o **)&this->fields.flag;
-  if ( !v8 )
-    sub_B5D69C(0LL, method);
+  v3 = *(UIButton_o **)&this->fields.flag;
+  if ( !v3 )
+    sub_B7076C(0LL, method);
   if ( LOBYTE(this[1].klass) )
-    v9 = &StringLiteral_17215/*"btn_on"*/;
+    v4 = &StringLiteral_17262/*"btn_on"*/;
   else
-    v9 = &StringLiteral_17214/*"btn_off"*/;
-  UIButton__set_normalSprite(v8, (System_String_o *)*v9, 0LL);
+    v4 = &StringLiteral_17261/*"btn_off"*/;
+  UIButton__set_normalSprite(v3, (System_String_o *)*v4, 0LL);
 }

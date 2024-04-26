@@ -2,13 +2,10 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject___ctor(
         BonusSelectSummonPartyOrganizationListViewObject_o *this,
         const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42E8675 & 1) == 0 )
+  if ( (byte_43516B0 & 1) == 0 )
   {
-    sub_B5D5C4(&ListViewObject_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E8675 = 1;
+    sub_B70694(&ListViewObject_TypeInfo);
+    byte_43516B0 = 1;
   }
   if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ListViewObject_TypeInfo->_2.cctor_finished )
@@ -48,7 +45,7 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__Init(
   BonusSelectSummonPartyOrganizationListViewItemDraw_o *itemDraw; // x0
 
   this->fields.listViewItem = item;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.listViewItem,
     (System_Int32_array **)item,
     (System_String_array **)onTapEvent,
@@ -58,7 +55,7 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__Init(
     v6,
     v7);
   this->fields.onTapEvent = onTapEvent;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.onTapEvent,
     (System_Int32_array **)onTapEvent,
     v10,
@@ -69,7 +66,7 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__Init(
     v15);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_B5D69C(0LL, v16);
+    sub_B7076C(0LL, v16);
   BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(itemDraw, this->fields.listViewItem, 3, v17);
   ((void (__fastcall *)(BonusSelectSummonPartyOrganizationListViewObject_o *, __int64, Il2CppMethodPointer))this->klass->vtable._9_SetInput.method)(
     this,
@@ -87,7 +84,7 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__Modfy(
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_B5D69C(0LL, method);
+    sub_B7076C(0LL, method);
   BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(itemDraw, this->fields.listViewItem, 3, v2);
 }
 

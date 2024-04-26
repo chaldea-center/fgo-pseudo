@@ -8,38 +8,36 @@ void __fastcall EventInfoCondenseLabel___ctor(EventInfoCondenseLabel_o *this, co
   System_Int32_array *v7; // x7
   System_Int32_array **v9; // x1
 
-  if ( (byte_42E94AB & 1) == 0 )
+  if ( (byte_43529E6 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_1/*""*/, (_DWORD)method, (_DWORD)v2, v3);
-    byte_42E94AB = 1;
+    sub_B70694(&StringLiteral_1/*""*/);
+    byte_43529E6 = 1;
   }
   v9 = (System_Int32_array **)StringLiteral_1/*""*/;
   this[1].klass = (EventInfoCondenseLabel_c *)StringLiteral_1/*""*/;
-  sub_B5D560((BattleServantConfConponent_o *)&this[1], v9, v2, v3, v4, v5, v6, v7);
+  sub_B70630((BattleServantConfConponent_o *)&this[1], v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
 
 void __fastcall EventInfoCondenseLabel__SetCondensedScale(EventInfoCondenseLabel_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   struct System_String_o *beforeText; // x20
-  struct System_String_o *v6; // x0
-  __int64 v7; // x1
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
-  struct System_String_o *v14; // x8
+  struct System_String_o *v4; // x0
+  __int64 v5; // x1
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
+  struct System_String_o *v12; // x8
   EventInfoCondenseLabel_c *klass; // x1
 
-  if ( (byte_42E94AA & 1) == 0 )
+  if ( (byte_43529E5 & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E94AA = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_43529E5 = 1;
   }
   beforeText = this->fields.beforeText;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -47,77 +45,73 @@ void __fastcall EventInfoCondenseLabel__SetCondensedScale(EventInfoCondenseLabel
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  v6 = (struct System_String_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)beforeText, 0LL, 0LL);
-  if ( ((unsigned __int8)v6 & 1) != 0 && SLODWORD(this->fields.label) >= 1 )
+  v4 = (struct System_String_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)beforeText, 0LL, 0LL);
+  if ( ((unsigned __int8)v4 & 1) != 0 && SLODWORD(this->fields.label) >= 1 )
   {
-    v14 = this->fields.beforeText;
-    if ( !v14
-      || (klass = (EventInfoCondenseLabel_c *)v14[17].klass,
+    v12 = this->fields.beforeText;
+    if ( !v12
+      || (klass = (EventInfoCondenseLabel_c *)v12[17].klass,
           this[1].klass = klass,
-          sub_B5D560((BattleServantConfConponent_o *)&this[1], (System_Int32_array **)klass, v8, v9, v10, v11, v12, v13),
-          (v6 = this->fields.beforeText) == 0LL) )
+          sub_B70630((BattleServantConfConponent_o *)&this[1], (System_Int32_array **)klass, v6, v7, v8, v9, v10, v11),
+          (v4 = this->fields.beforeText) == 0LL) )
     {
-      sub_B5D69C(v6, v7);
+      sub_B7076C(v4, v5);
     }
-    UILabel__SetCondensedScale((UILabel_o *)v6, (int32_t)this->fields.label, 0LL);
+    UILabel__SetCondensedScale((UILabel_o *)v4, (int32_t)this->fields.label, 0LL);
   }
 }
 
 
 void __fastcall EventInfoCondenseLabel__Start(EventInfoCondenseLabel_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v6; // x1
+  __int64 v4; // x1
   struct System_String_o *Component_srcLineSprite; // x0
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
-  const MethodInfo *v14; // x1
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
+  const MethodInfo *v12; // x1
 
-  if ( (byte_42E94A8 & 1) == 0 )
+  if ( (byte_43529E3 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_UnityEngine_GameObject_GetComponent_UILabel___, (_DWORD)method, v2, v3);
-    byte_42E94A8 = 1;
+    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
+    byte_43529E3 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B5D69C(0LL, v6);
+    sub_B7076C(0LL, v4);
   Component_srcLineSprite = (struct System_String_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                         gameObject,
-                                                        (const MethodInfo_1CC439C *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                                                        (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
   this->fields.beforeText = Component_srcLineSprite;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.beforeText,
     (System_Int32_array **)Component_srcLineSprite,
+    v6,
+    v7,
     v8,
     v9,
     v10,
-    v11,
-    v12,
-    v13);
-  EventInfoCondenseLabel__SetCondensedScale(this, v14);
+    v11);
+  EventInfoCondenseLabel__SetCondensedScale(this, v12);
 }
 
 
 void __fastcall EventInfoCondenseLabel__Update(EventInfoCondenseLabel_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   struct System_String_o *beforeText; // x20
-  _BOOL8 v6; // x0
-  __int64 v7; // x1
-  struct System_String_o *v8; // x8
-  const MethodInfo *v9; // x1
+  _BOOL8 v4; // x0
+  __int64 v5; // x1
+  struct System_String_o *v6; // x8
+  const MethodInfo *v7; // x1
 
-  if ( (byte_42E94A9 & 1) == 0 )
+  if ( (byte_43529E4 & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42E94A9 = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_43529E4 = 1;
   }
   beforeText = this->fields.beforeText;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -125,13 +119,13 @@ void __fastcall EventInfoCondenseLabel__Update(EventInfoCondenseLabel_o *this, c
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  v6 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)beforeText, 0LL, 0LL);
-  if ( v6 )
+  v4 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)beforeText, 0LL, 0LL);
+  if ( v4 )
   {
-    v8 = this->fields.beforeText;
-    if ( !v8 )
-      sub_B5D69C(v6, v7);
-    if ( System_String__op_Inequality((System_String_o *)this[1].klass, (System_String_o *)v8[17].klass, 0LL) )
-      EventInfoCondenseLabel__SetCondensedScale(this, v9);
+    v6 = this->fields.beforeText;
+    if ( !v6 )
+      sub_B7076C(v4, v5);
+    if ( System_String__op_Inequality((System_String_o *)this[1].klass, (System_String_o *)v6[17].klass, 0LL) )
+      EventInfoCondenseLabel__SetCondensedScale(this, v7);
   }
 }

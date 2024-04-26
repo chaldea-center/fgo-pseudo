@@ -13,25 +13,23 @@ void __fastcall AutoDestroyObjectComponent__Start(AutoDestroyObjectComponent_o *
 
 void __fastcall AutoDestroyObjectComponent__Update(AutoDestroyObjectComponent_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  float v5; // s8
+  float v3; // s8
   float deltaTime; // s0
   float elapsedTime; // s1
-  float v8; // s0
+  float v6; // s0
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_42EBD92 & 1) == 0 )
+  if ( (byte_4355349 & 1) == 0 )
   {
-    sub_B5D5C4(&UnityEngine_Object_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EBD92 = 1;
+    sub_B70694(&UnityEngine_Object_TypeInfo);
+    byte_4355349 = 1;
   }
-  v5 = *((float *)&this->fields + 3);
+  v3 = *((float *)&this->fields + 3);
   deltaTime = UnityEngine_Time__get_deltaTime(0LL);
   elapsedTime = this->fields.elapsedTime;
-  v8 = v5 + deltaTime;
-  *((float *)&this->fields + 3) = v8;
-  if ( elapsedTime < v8 )
+  v6 = v3 + deltaTime;
+  *((float *)&this->fields + 3) = v6;
+  if ( elapsedTime < v6 )
   {
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -39,6 +37,6 @@ void __fastcall AutoDestroyObjectComponent__Update(AutoDestroyObjectComponent_o 
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_35620236(gameObject, 0LL);
+    UnityEngine_Object__Destroy_36067208(gameObject, 0LL);
   }
 }

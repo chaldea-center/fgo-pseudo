@@ -10,10 +10,10 @@ void __fastcall TerminalBoardOptionTextData___ctor(
   v8 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v8->fields._ForwardText_k__BackingField = forwardText;
-  sub_B5D560(&v8->fields);
+  sub_B70630(&v8->fields);
   v8->fields._BehindTextFormat_k__BackingField = behindTextFormat;
   v8 = (TerminalBoardOptionTextData_o *)((char *)v8 + 32);
-  sub_B5D560(v8);
+  sub_B70630(v8);
   LODWORD(v8->monitor) = itemImageId;
 }
 
@@ -24,19 +24,19 @@ void __fastcall TerminalBoardOptionTextData__SetParamsToBehindText(
         const MethodInfo *method)
 {
   if ( !args )
-    sub_B5D69C(this, 0LL);
+    sub_B7076C(this, 0LL);
   if ( *(_QWORD *)&args->max_length )
   {
-    this->fields._BehindText_k__BackingField = System_String__Format_44656512(
+    this->fields._BehindText_k__BackingField = System_String__Format_44836892(
                                                  this->fields._BehindTextFormat_k__BackingField,
                                                  args,
                                                  0LL);
-    sub_B5D560(&this->fields._BehindText_k__BackingField);
+    sub_B70630(&this->fields._BehindText_k__BackingField);
   }
   else
   {
     this->fields._BehindText_k__BackingField = this->fields._BehindTextFormat_k__BackingField;
-    sub_B5D560(&this->fields._BehindText_k__BackingField);
+    sub_B70630(&this->fields._BehindText_k__BackingField);
   }
 }
 
@@ -79,7 +79,7 @@ void __fastcall TerminalBoardOptionTextData__set_BehindText(
         const MethodInfo *method)
 {
   this->fields._BehindText_k__BackingField = value;
-  sub_B5D560(&this->fields._BehindText_k__BackingField);
+  sub_B70630(&this->fields._BehindText_k__BackingField);
 }
 
 
@@ -89,7 +89,7 @@ void __fastcall TerminalBoardOptionTextData__set_BehindTextFormat(
         const MethodInfo *method)
 {
   this->fields._BehindTextFormat_k__BackingField = value;
-  sub_B5D560(&this->fields._BehindTextFormat_k__BackingField);
+  sub_B70630(&this->fields._BehindTextFormat_k__BackingField);
 }
 
 
@@ -99,7 +99,7 @@ void __fastcall TerminalBoardOptionTextData__set_ForwardText(
         const MethodInfo *method)
 {
   this->fields._ForwardText_k__BackingField = value;
-  sub_B5D560(&this->fields);
+  sub_B70630(&this->fields);
 }
 
 

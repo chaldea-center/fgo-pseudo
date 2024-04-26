@@ -34,14 +34,14 @@ void __fastcall FGOStandFigureMColor__OnUpdate(FGOStandFigureMColor_o *this, con
         {
           if ( (unsigned int)v7 >= max_length )
           {
-            v9 = sub_B5D6C8(v3);
-            sub_B5D668(v9, 0LL);
+            v9 = sub_B70798(v3);
+            sub_B70738(v9, 0LL);
           }
           material = (UnityEngine_Renderer_o *)renderers->m_Items[v7];
           if ( !material
             || (material = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(material, 0LL)) == 0LL )
           {
-            sub_B5D69C(material, v4);
+            sub_B7076C(material, v4);
           }
           UnityEngine_Material__set_color(
             (UnityEngine_Material_o *)material,

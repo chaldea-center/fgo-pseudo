@@ -1,12 +1,9 @@
 void __fastcall ScriptSkipDialog___ctor(ScriptSkipDialog_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-
-  if ( (byte_42EE319 & 1) == 0 )
+  if ( (byte_43576C9 & 1) == 0 )
   {
-    sub_B5D5C4(&BaseDialog_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EE319 = 1;
+    sub_B70694(&BaseDialog_TypeInfo);
+    byte_43576C9 = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -18,11 +15,11 @@ void __fastcall ScriptSkipDialog__Close(ScriptSkipDialog_o *this, const MethodIn
 {
   const MethodInfo *v2; // x2
 
-  ScriptSkipDialog__Close_34806716(this, 0LL, v2);
+  ScriptSkipDialog__Close_34677936(this, 0LL, v2);
 }
 
 
-void __fastcall ScriptSkipDialog__Close_34806716(
+void __fastcall ScriptSkipDialog__Close_34677936(
         ScriptSkipDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -32,19 +29,16 @@ void __fastcall ScriptSkipDialog__Close_34806716(
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
-  int v10; // w1
-  int v11; // w2
-  __int64 v12; // x3
-  System_Action_o *v13; // x20
+  System_Action_o *v10; // x20
 
-  if ( (byte_42EE314 & 1) == 0 )
+  if ( (byte_43576C4 & 1) == 0 )
   {
-    sub_B5D5C4(&System_Action_TypeInfo, (_DWORD)callback, (_DWORD)method, v3);
-    sub_B5D5C4(&Method_ScriptSkipDialog_EndClose__, v10, v11, v12);
-    byte_42EE314 = 1;
+    sub_B70694(&System_Action_TypeInfo);
+    sub_B70694(&Method_ScriptSkipDialog_EndClose__);
+    byte_43576C4 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc,
     (System_Int32_array **)callback,
     (System_String_array **)method,
@@ -54,9 +48,9 @@ void __fastcall ScriptSkipDialog__Close_34806716(
     v6,
     v7);
   this->fields.isButtonEnable = 0;
-  v13 = (System_Action_o *)sub_B5D694(System_Action_TypeInfo);
-  System_Action___ctor(v13, (Il2CppObject *)this, Method_ScriptSkipDialog_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v13, 0LL);
+  v10 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  System_Action___ctor(v10, (Il2CppObject *)this, Method_ScriptSkipDialog_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
 }
 
 
@@ -77,7 +71,7 @@ void __fastcall ScriptSkipDialog__EndClose(ScriptSkipDialog_o *this, const Metho
   ScriptSkipDialog__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B5D69C(0LL, v4);
+    sub_B7076C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc;
@@ -85,7 +79,7 @@ void __fastcall ScriptSkipDialog__EndClose(ScriptSkipDialog_o *this, const Metho
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_B5D560(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_B70630(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
     System_Action__Invoke(v12, 0LL);
   }
 }
@@ -99,14 +93,12 @@ void __fastcall ScriptSkipDialog__EndOpen(ScriptSkipDialog_o *this, const Method
 
 void __fastcall ScriptSkipDialog__Init(ScriptSkipDialog_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   UILabel_o *messageLabel; // x0
 
-  if ( (byte_42EE312 & 1) == 0 )
+  if ( (byte_43576C2 & 1) == 0 )
   {
-    sub_B5D5C4(&StringLiteral_1/*""*/, (_DWORD)method, v2, v3);
-    byte_42EE312 = 1;
+    sub_B70694(&StringLiteral_1/*""*/);
+    byte_43576C2 = 1;
   }
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
@@ -135,7 +127,7 @@ void __fastcall ScriptSkipDialog__Init(ScriptSkipDialog_o *this, const MethodInf
         (messageLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_12:
-    sub_B5D69C(messageLabel, method);
+    sub_B7076C(messageLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)messageLabel, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -144,14 +136,12 @@ LABEL_12:
 
 void __fastcall ScriptSkipDialog__OnClickCancel(ScriptSkipDialog_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   ScriptSkipDialog_ClickDelegate_o *clickFunc; // x0
 
-  if ( (byte_42EE316 & 1) == 0 )
+  if ( (byte_43576C6 & 1) == 0 )
   {
-    sub_B5D5C4(&SoundManager_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EE316 = 1;
+    sub_B70694(&SoundManager_TypeInfo);
+    byte_43576C6 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
@@ -171,14 +161,12 @@ void __fastcall ScriptSkipDialog__OnClickCancel(ScriptSkipDialog_o *this, const 
 
 void __fastcall ScriptSkipDialog__OnClickDecide(ScriptSkipDialog_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
   ScriptSkipDialog_ClickDelegate_o *clickFunc; // x0
 
-  if ( (byte_42EE315 & 1) == 0 )
+  if ( (byte_43576C5 & 1) == 0 )
   {
-    sub_B5D5C4(&SoundManager_TypeInfo, (_DWORD)method, v2, v3);
-    byte_42EE315 = 1;
+    sub_B70694(&SoundManager_TypeInfo);
+    byte_43576C5 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
@@ -198,24 +186,22 @@ void __fastcall ScriptSkipDialog__OnClickDecide(ScriptSkipDialog_o *this, const 
 
 void __fastcall ScriptSkipDialog__OnClickExit(ScriptSkipDialog_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  _QWORD *v5; // x0
-  System_Reflection_MethodBase_o *v6; // x0
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
   ScriptSkipDialog_ClickDelegate_o *clickFunc; // x0
 
-  if ( (byte_42EE317 & 1) == 0 )
+  if ( (byte_43576C7 & 1) == 0 )
   {
-    sub_B5D5C4(&Method_ScriptSkipDialog_OnClickExit__, (_DWORD)method, v2, v3);
-    byte_42EE317 = 1;
+    sub_B70694(&Method_ScriptSkipDialog_OnClickExit__);
+    byte_43576C7 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
-    v5 = Method_ScriptSkipDialog_OnClickExit__;
+    v3 = Method_ScriptSkipDialog_OnClickExit__;
     if ( (*((_BYTE *)Method_ScriptSkipDialog_OnClickExit__ + 75) & 2) != 0 )
-      v5 = (_QWORD *)sub_B5D5CC(Method_ScriptSkipDialog_OnClickExit__);
-    v6 = (System_Reflection_MethodBase_o *)sub_B5D5A8(v5, v5[3]);
-    OverwriteAssetSoundName__PlaySystemSe(v6, 8, 0LL);
+      v3 = (_QWORD *)sub_B7069C(Method_ScriptSkipDialog_OnClickExit__);
+    v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0LL);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
     if ( clickFunc )
@@ -226,23 +212,15 @@ void __fastcall ScriptSkipDialog__OnClickExit(ScriptSkipDialog_o *this, const Me
 
 void __fastcall ScriptSkipDialog__OnEnable(ScriptSkipDialog_o *this, const MethodInfo *method)
 {
-  int v2; // w2
-  __int64 v3; // x3
-  int v5; // w1
-  int v6; // w2
-  __int64 v7; // x3
-  int v8; // w1
-  int v9; // w2
-  __int64 v10; // x3
   UnityEngine_Transform_o *transform; // x20
-  UnityEngine_Transform_o *v12; // x0
+  UnityEngine_Transform_o *v4; // x0
 
-  if ( (byte_42EE318 & 1) == 0 )
+  if ( (byte_43576C8 & 1) == 0 )
   {
-    sub_B5D5C4(&AndroidBackKeyManager_TypeInfo, (_DWORD)method, v2, v3);
-    sub_B5D5C4(&StringLiteral_15674/*"Window/NormalBase/CancelButton"*/, v5, v6, v7);
-    sub_B5D5C4(&StringLiteral_15670/*"Window/ExitBase/CancelButton"*/, v8, v9, v10);
-    byte_42EE318 = 1;
+    sub_B70694(&AndroidBackKeyManager_TypeInfo);
+    sub_B70694(&StringLiteral_15705/*"Window/NormalBase/CancelButton"*/);
+    sub_B70694(&StringLiteral_15701/*"Window/ExitBase/CancelButton"*/);
+    byte_43576C8 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( (BYTE3(AndroidBackKeyManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -250,9 +228,9 @@ void __fastcall ScriptSkipDialog__OnEnable(ScriptSkipDialog_o *this, const Metho
   {
     j_il2cpp_runtime_class_init_0(AndroidBackKeyManager_TypeInfo);
   }
-  AndroidBackKeyManager__AddBackBtn_21237572(transform, (System_String_o *)StringLiteral_15674/*"Window/NormalBase/CancelButton"*/, 0LL);
-  v12 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_21237572(v12, (System_String_o *)StringLiteral_15670/*"Window/ExitBase/CancelButton"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_21318328(transform, (System_String_o *)StringLiteral_15705/*"Window/NormalBase/CancelButton"*/, 0LL);
+  v4 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  AndroidBackKeyManager__AddBackBtn_21318328(v4, (System_String_o *)StringLiteral_15701/*"Window/ExitBase/CancelButton"*/, 0LL);
 }
 
 
@@ -266,48 +244,30 @@ void __fastcall ScriptSkipDialog__Open(
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
-  char v11; // w1
-  int v12; // w2
-  __int64 v13; // x3
-  char v14; // w1
-  int v15; // w2
-  __int64 v16; // x3
-  char v17; // w1
-  int v18; // w2
-  __int64 v19; // x3
-  char v20; // w1
-  int v21; // w2
-  __int64 v22; // x3
-  char v23; // w1
-  int v24; // w2
-  __int64 v25; // x3
-  char v26; // w1
-  int v27; // w2
-  __int64 v28; // x3
-  __int64 v29; // x1
+  __int64 v11; // x1
   UnityEngine_GameObject_o *normalBase; // x0
   UILabel_o *message2Label; // x20
   UILabel_o *buttonDecide2Label; // x20
   UILabel_o *buttonCancel2Label; // x20
   UILabel_o *buttonExitLabel; // x20
-  __int64 *v35; // x8
+  __int64 *v17; // x8
   UILabel_o *messageLabel; // x20
   UILabel_o *buttonDecideLabel; // x20
-  System_Action_o *v38; // x20
+  System_Action_o *v20; // x20
 
-  if ( (byte_42EE313 & 1) == 0 )
+  if ( (byte_43576C3 & 1) == 0 )
   {
-    sub_B5D5C4(&System_Action_TypeInfo, isUseExit, (_DWORD)func, method);
-    sub_B5D5C4(&LocalizationManager_TypeInfo, v11, v12, v13);
-    sub_B5D5C4(&Method_ScriptSkipDialog_EndOpen__, v14, v15, v16);
-    sub_B5D5C4(&StringLiteral_11737/*"SCRIPT_ACTION_SKIP_CONFIRM_DETAIL"*/, v17, v18, v19);
-    sub_B5D5C4(&StringLiteral_11738/*"SCRIPT_ACTION_SKIP_CONFIRM_EXIT"*/, v20, v21, v22);
-    sub_B5D5C4(&StringLiteral_3330/*"COMMON_CONFIRM_NO"*/, v23, v24, v25);
-    sub_B5D5C4(&StringLiteral_3333/*"COMMON_CONFIRM_YES"*/, v26, v27, v28);
-    byte_42EE313 = 1;
+    sub_B70694(&System_Action_TypeInfo);
+    sub_B70694(&LocalizationManager_TypeInfo);
+    sub_B70694(&Method_ScriptSkipDialog_EndOpen__);
+    sub_B70694(&StringLiteral_11758/*"SCRIPT_ACTION_SKIP_CONFIRM_DETAIL"*/);
+    sub_B70694(&StringLiteral_11759/*"SCRIPT_ACTION_SKIP_CONFIRM_EXIT"*/);
+    sub_B70694(&StringLiteral_3339/*"COMMON_CONFIRM_NO"*/);
+    sub_B70694(&StringLiteral_3342/*"COMMON_CONFIRM_YES"*/);
+    byte_43576C3 = 1;
   }
   this->fields.clickFunc = func;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.clickFunc,
     (System_Int32_array **)func,
     (System_String_array **)func,
@@ -332,28 +292,28 @@ void __fastcall ScriptSkipDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11737/*"SCRIPT_ACTION_SKIP_CONFIRM_DETAIL"*/, 0LL);
+    normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11758/*"SCRIPT_ACTION_SKIP_CONFIRM_DETAIL"*/, 0LL);
     if ( message2Label )
     {
       UILabel__set_text(message2Label, (System_String_o *)normalBase, 0LL);
       buttonDecide2Label = this->fields.buttonDecide2Label;
-      normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3333/*"COMMON_CONFIRM_YES"*/, 0LL);
+      normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3342/*"COMMON_CONFIRM_YES"*/, 0LL);
       if ( buttonDecide2Label )
       {
         UILabel__set_text(buttonDecide2Label, (System_String_o *)normalBase, 0LL);
         buttonCancel2Label = this->fields.buttonCancel2Label;
-        normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3330/*"COMMON_CONFIRM_NO"*/, 0LL);
+        normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3339/*"COMMON_CONFIRM_NO"*/, 0LL);
         if ( buttonCancel2Label )
         {
           UILabel__set_text(buttonCancel2Label, (System_String_o *)normalBase, 0LL);
           buttonExitLabel = this->fields.buttonExitLabel;
-          v35 = &StringLiteral_11738/*"SCRIPT_ACTION_SKIP_CONFIRM_EXIT"*/;
+          v17 = &StringLiteral_11759/*"SCRIPT_ACTION_SKIP_CONFIRM_EXIT"*/;
           goto LABEL_19;
         }
       }
     }
 LABEL_21:
-    sub_B5D69C(normalBase, v29);
+    sub_B7076C(normalBase, v11);
   }
   messageLabel = this->fields.messageLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -361,26 +321,26 @@ LABEL_21:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11737/*"SCRIPT_ACTION_SKIP_CONFIRM_DETAIL"*/, 0LL);
+  normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11758/*"SCRIPT_ACTION_SKIP_CONFIRM_DETAIL"*/, 0LL);
   if ( !messageLabel )
     goto LABEL_21;
   UILabel__set_text(messageLabel, (System_String_o *)normalBase, 0LL);
   buttonDecideLabel = this->fields.buttonDecideLabel;
-  normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3333/*"COMMON_CONFIRM_YES"*/, 0LL);
+  normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3342/*"COMMON_CONFIRM_YES"*/, 0LL);
   if ( !buttonDecideLabel )
     goto LABEL_21;
   UILabel__set_text(buttonDecideLabel, (System_String_o *)normalBase, 0LL);
   buttonExitLabel = this->fields.buttonCancelLabel;
-  v35 = &StringLiteral_3330/*"COMMON_CONFIRM_NO"*/;
+  v17 = &StringLiteral_3339/*"COMMON_CONFIRM_NO"*/;
 LABEL_19:
-  normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v35, 0LL);
+  normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v17, 0LL);
   if ( !buttonExitLabel )
     goto LABEL_21;
   UILabel__set_text(buttonExitLabel, (System_String_o *)normalBase, 0LL);
   this->fields.isButtonEnable = 0;
-  v38 = (System_Action_o *)sub_B5D694(System_Action_TypeInfo);
-  System_Action___ctor(v38, (Il2CppObject *)this, Method_ScriptSkipDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v38, 0, 0LL);
+  v20 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  System_Action___ctor(v20, (Il2CppObject *)this, Method_ScriptSkipDialog_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v20, 0, 0LL);
 }
 
 
@@ -399,7 +359,7 @@ void __fastcall ScriptSkipDialog_ClickDelegate___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B5D560(p_method);
+  sub_B70630(p_method);
 }
 
 
@@ -414,14 +374,14 @@ System_IAsyncResult_o *__fastcall ScriptSkipDialog_ClickDelegate__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10 = result;
-  if ( (byte_42E5D1B & 1) == 0 )
+  if ( (byte_434F1FA & 1) == 0 )
   {
-    sub_B5D5C4(&ScriptSkipDialog_ResultKind_TypeInfo, result, (_DWORD)callback, object);
-    byte_42E5D1B = 1;
+    sub_B70694(&ScriptSkipDialog_ResultKind_TypeInfo);
+    byte_434F1FA = 1;
   }
   v9[1] = 0LL;
-  v9[0] = j_il2cpp_value_box_0(ScriptSkipDialog_ResultKind_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_B5D568(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(ScriptSkipDialog_ResultKind_TypeInfo, &v10, callback);
+  return (System_IAsyncResult_o *)sub_B70638(this, v9, callback, object);
 }
 
 
@@ -430,7 +390,7 @@ void __fastcall ScriptSkipDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B5D56C(result, 0LL, method);
+  sub_B7063C(result, 0LL, method);
 }
 
 
@@ -446,37 +406,35 @@ void __fastcall ScriptSkipDialog_ClickDelegate__Invoke(
   __int64 v7; // x26
   unsigned int v8; // w23
   __int64 class_0; // x0
-  __int64 v10; // x3
-  __int64 v11; // x8
-  unsigned int v12; // w22
-  unsigned __int64 v13; // x10
-  _DWORD *v14; // x11
+  __int64 v10; // x8
+  unsigned int v11; // w22
+  unsigned __int64 v12; // x10
+  _DWORD *v13; // x11
+  __int64 v14; // x0
   __int64 v15; // x0
   __int64 v16; // x0
-  __int64 v17; // x0
-  void (__fastcall **v18)(__int64 *, _QWORD, _QWORD); // x0
-  ScriptSkipDialog_ClickDelegate_o *v19; // x8
-  __int64 *v20; // x21
-  __int64 v21; // x22
-  void (__fastcall *v22)(unsigned int *, __int64); // x23
-  char v23; // w23
-  char v24; // w0
-  __int64 v25; // x3
-  unsigned int v26; // w23
-  __int64 v27; // x8
-  __int64 v28; // x1
-  __int64 v29; // x2
-  unsigned __int64 v30; // x10
-  _DWORD *v31; // x11
-  unsigned int v32; // [xsp+4h] [xbp-4Ch] BYREF
-  ScriptSkipDialog_ClickDelegate_o *v33; // [xsp+8h] [xbp-48h] BYREF
+  void (__fastcall **v17)(__int64 *, _QWORD, _QWORD); // x0
+  ScriptSkipDialog_ClickDelegate_o *v18; // x8
+  __int64 *v19; // x21
+  __int64 v20; // x22
+  void (__fastcall *v21)(unsigned int *, __int64); // x23
+  char v22; // w23
+  char v23; // w0
+  unsigned int v24; // w23
+  __int64 v25; // x8
+  __int64 v26; // x1
+  __int64 v27; // x2
+  unsigned __int64 v28; // x10
+  _DWORD *v29; // x11
+  unsigned int v30; // [xsp+4h] [xbp-4Ch] BYREF
+  ScriptSkipDialog_ClickDelegate_o *v31; // [xsp+8h] [xbp-48h] BYREF
 
-  v33 = this;
-  v32 = result;
+  v31 = this;
+  v30 = result;
   v3 = *(_QWORD *)&this[1].fields.method_ptr;
   if ( !v3 )
   {
-    v6 = &v33;
+    v6 = &v31;
     v5 = 1LL;
     goto LABEL_5;
   }
@@ -488,105 +446,105 @@ LABEL_5:
     v7 = 0LL;
     while ( 1 )
     {
-      v19 = v6[v7];
-      v20 = *(__int64 **)&v19->fields.method;
-      v21 = *(_QWORD *)&v19->fields.extra_arg;
-      v22 = *(void (__fastcall **)(unsigned int *, __int64))&v19->fields.method_ptr;
-      if ( *(__int16 *)(v21 + 72) == -1 )
-        sub_B5D680(*(_QWORD *)&v19->fields.extra_arg, *(_QWORD *)&result, method);
-      if ( (sub_B5D5F4(v21) & 1) == 0 )
+      v18 = v6[v7];
+      v19 = *(__int64 **)&v18->fields.method;
+      v20 = *(_QWORD *)&v18->fields.extra_arg;
+      v21 = *(void (__fastcall **)(unsigned int *, __int64))&v18->fields.method_ptr;
+      if ( *(__int16 *)(v20 + 72) == -1 )
+        sub_B70750(*(_QWORD *)&v18->fields.extra_arg, *(_QWORD *)&result);
+      if ( (sub_B706C4(v20) & 1) == 0 )
         break;
-      if ( *(_BYTE *)(v21 + 74) != 1 )
+      if ( *(_BYTE *)(v20 + 74) != 1 )
         goto LABEL_36;
-      v22((unsigned int *)v32, v21);
+      v21((unsigned int *)v30, v20);
 LABEL_38:
       if ( ++v7 == v5 )
         return;
     }
-    if ( !v20 )
+    if ( !v19 )
     {
-      v22(&v32 - 4, v21);
+      v21(&v30 - 4, v20);
       goto LABEL_38;
     }
-    if ( *(__int16 *)(v21 + 72) != -1 && (*(_BYTE *)(*v20 + 277) & 1) == 0 && this->fields.m_target )
+    if ( *(__int16 *)(v20 + 72) != -1 && (*(_BYTE *)(*v19 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v23 = sub_B5D5EC(v21);
-      v24 = sub_B5D9F0(v21);
-      if ( (v23 & 1) != 0 )
+      v22 = sub_B706BC(v20);
+      v23 = sub_B70AC0(v20);
+      if ( (v22 & 1) != 0 )
       {
-        v26 = v32;
-        if ( (v24 & 1) != 0 )
+        v24 = v30;
+        if ( (v23 & 1) != 0 )
         {
-          v27 = *v20;
-          v28 = *(_QWORD *)(v21 + 24);
-          v29 = *(unsigned __int16 *)(v21 + 72);
-          if ( *(_WORD *)(*v20 + 298) )
+          v25 = *v19;
+          v26 = *(_QWORD *)(v20 + 24);
+          v27 = *(unsigned __int16 *)(v20 + 72);
+          if ( *(_WORD *)(*v19 + 298) )
           {
-            v30 = 0LL;
-            v31 = (_DWORD *)(*(_QWORD *)(v27 + 176) + 8LL);
-            while ( *((_QWORD *)v31 - 1) != v28 )
+            v28 = 0LL;
+            v29 = (_DWORD *)(*(_QWORD *)(v25 + 176) + 8LL);
+            while ( *((_QWORD *)v29 - 1) != v26 )
             {
-              ++v30;
-              v31 += 4;
-              if ( v30 >= *(unsigned __int16 *)(*v20 + 298) )
+              ++v28;
+              v29 += 4;
+              if ( v28 >= *(unsigned __int16 *)(*v19 + 298) )
                 goto LABEL_35;
             }
-            v17 = v27 + 16LL * (*v31 + (int)v29) + 312;
+            v16 = v25 + 16LL * (*v29 + (int)v27) + 312;
           }
           else
           {
 LABEL_35:
-            v17 = sub_AF54C0(v20, v28, v29, v25);
+            v16 = sub_B08590(v19, v26, v27);
           }
-          v16 = *(_QWORD *)(v17 + 8);
+          v15 = *(_QWORD *)(v16 + 8);
         }
         else
         {
-          v16 = *(_QWORD *)(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 320);
+          v15 = *(_QWORD *)(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 320);
         }
-        v18 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD))sub_B5D674(v16, v21);
-        (*v18)(v20, v26, v18);
+        v17 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD))sub_B70744(v15, v20);
+        (*v17)(v19, v24, v17);
       }
       else
       {
-        v8 = *(unsigned __int16 *)(v21 + 72);
-        if ( (v24 & 1) != 0 )
+        v8 = *(unsigned __int16 *)(v20 + 72);
+        if ( (v23 & 1) != 0 )
         {
-          class_0 = j_il2cpp_method_get_class_0(v21);
-          v11 = *v20;
-          v12 = v32;
-          if ( *(_WORD *)(*v20 + 298) )
+          class_0 = j_il2cpp_method_get_class_0(v20);
+          v10 = *v19;
+          v11 = v30;
+          if ( *(_WORD *)(*v19 + 298) )
           {
-            v13 = 0LL;
-            v14 = (_DWORD *)(*(_QWORD *)(v11 + 176) + 8LL);
-            while ( *((_QWORD *)v14 - 1) != class_0 )
+            v12 = 0LL;
+            v13 = (_DWORD *)(*(_QWORD *)(v10 + 176) + 8LL);
+            while ( *((_QWORD *)v13 - 1) != class_0 )
             {
-              ++v13;
-              v14 += 4;
-              if ( v13 >= *(unsigned __int16 *)(*v20 + 298) )
+              ++v12;
+              v13 += 4;
+              if ( v12 >= *(unsigned __int16 *)(*v19 + 298) )
                 goto LABEL_11;
             }
-            v15 = v11 + 16LL * (int)(*v14 + v8) + 312;
+            v14 = v10 + 16LL * (int)(*v13 + v8) + 312;
           }
           else
           {
 LABEL_11:
-            v15 = sub_AF54C0(v20, class_0, v8, v10);
+            v14 = sub_B08590(v19, class_0, v8);
           }
-          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD))v15)(v20, v12, *(_QWORD *)(v15 + 8));
+          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD))v14)(v19, v11, *(_QWORD *)(v14 + 8));
         }
         else
         {
-          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD))(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 312))(
-            v20,
-            v32,
-            *(_QWORD *)(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 320));
+          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD))(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 312))(
+            v19,
+            v30,
+            *(_QWORD *)(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 320));
         }
       }
       goto LABEL_38;
     }
 LABEL_36:
-    ((void (__fastcall *)(__int64 *, _QWORD, __int64))v22)(v20, v32, v21);
+    ((void (__fastcall *)(__int64 *, _QWORD, __int64))v21)(v19, v30, v20);
     goto LABEL_38;
   }
 }

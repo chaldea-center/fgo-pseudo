@@ -3,18 +3,17 @@ void __fastcall UpdateViewIntervalBuffActionData___ctor(
         BattleActionData_o *actData,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
 
-  if ( (byte_42EA148 & 1) == 0 )
+  if ( (byte_4353317 & 1) == 0 )
   {
-    sub_B5D5C4(&BattleActionData_TypeInfo, (_DWORD)actData, (_DWORD)method, v3);
-    byte_42EA148 = 1;
+    sub_B70694(&BattleActionData_TypeInfo);
+    byte_4353317 = 1;
   }
   if ( (BYTE3(BattleActionData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BattleActionData_TypeInfo->_2.cctor_finished )
@@ -24,15 +23,15 @@ void __fastcall UpdateViewIntervalBuffActionData___ctor(
   BattleActionData___ctor((BattleActionData_o *)this, 0LL);
   this->fields.state = 7;
   this->fields.targetActionData = actData;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.targetActionData,
     (System_Int32_array **)actData,
+    v5,
     v6,
     v7,
     v8,
     v9,
-    v10,
-    v11);
+    v10);
 }
 
 

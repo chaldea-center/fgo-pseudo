@@ -18,12 +18,12 @@ void __fastcall AudioData___ctor(AudioData_o *this, UnityEngine_AudioClip_o *cli
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !clip )
-    sub_B5D69C(v5, v6);
+    sub_B7076C(v5, v6);
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)clip, 0LL);
   this->fields.name = name;
-  sub_B5D560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)name, v8, v9, v10, v11, v12, v13);
+  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)name, v8, v9, v10, v11, v12, v13);
   this->fields.data = clip;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.data,
     (System_Int32_array **)clip,
     v14,
@@ -35,7 +35,7 @@ void __fastcall AudioData___ctor(AudioData_o *this, UnityEngine_AudioClip_o *cli
 }
 
 
-void __fastcall AudioData___ctor_31237312(
+void __fastcall AudioData___ctor_31599276(
         AudioData_o *this,
         System_String_o *name,
         UnityEngine_AudioClip_o *clip,
@@ -56,9 +56,9 @@ void __fastcall AudioData___ctor_31237312(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.name = name;
-  sub_B5D560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)name, v7, v8, v9, v10, v11, v12);
+  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)name, v7, v8, v9, v10, v11, v12);
   this->fields.data = clip;
-  sub_B5D560(
+  sub_B70630(
     (BattleServantConfConponent_o *)&this->fields.data,
     (System_Int32_array **)clip,
     v13,
@@ -70,7 +70,7 @@ void __fastcall AudioData___ctor_31237312(
 }
 
 
-void __fastcall AudioData___ctor_31237392(
+void __fastcall AudioData___ctor_31599356(
         AudioData_o *this,
         System_String_o *name,
         System_Single_array *buf,
@@ -95,17 +95,17 @@ void __fastcall AudioData___ctor_31237392(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.name = name;
-  sub_B5D560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)name, v7, v8, v9, v10, v11, v12);
+  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)name, v7, v8, v9, v10, v11, v12);
   if ( !buf
     || (v15 = UnityEngine_AudioClip__Create(name, buf->max_length, 1, 44100, 0, 0, 0LL),
         this->fields.data = v15,
         p_data = &this->fields.data,
-        sub_B5D560((BattleServantConfConponent_o *)p_data, (System_Int32_array **)v15, v17, v18, v19, v20, v21, v22),
+        sub_B70630((BattleServantConfConponent_o *)p_data, (System_Int32_array **)v15, v17, v18, v19, v20, v21, v22),
         (v13 = *p_data) == 0LL) )
   {
-    sub_B5D69C(v13, v14);
+    sub_B7076C(v13, v14);
   }
-  UnityEngine_AudioClip__SetData_16871476(v13, buf, 0, 0LL);
+  UnityEngine_AudioClip__SetData_16860160(v13, buf, 0, 0LL);
 }
 
 
@@ -115,8 +115,8 @@ bool __fastcall AudioData__IsSame(AudioData_o *this, System_String_o *name, cons
 
   v3 = this->fields.name;
   if ( !v3 )
-    sub_B5D69C(0LL, name);
-  return System_String__Equals_44565128(v3, name, 0LL);
+    sub_B7076C(0LL, name);
+  return System_String__Equals_44745508(v3, name, 0LL);
 }
 
 
