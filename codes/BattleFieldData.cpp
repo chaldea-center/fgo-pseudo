@@ -15,19 +15,19 @@ void __fastcall BattleFieldData___ctor(BattleFieldData_o *this, const MethodInfo
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
 
-  if ( (byte_435061E & 1) == 0 )
+  if ( (byte_4389C47 & 1) == 0 )
   {
-    sub_B70694(&double___TypeInfo);
-    sub_B70694(&BattleFieldData_SaveData_TypeInfo);
-    byte_435061E = 1;
+    sub_B775C4(&double___TypeInfo);
+    sub_B775C4(&BattleFieldData_SaveData_TypeInfo);
+    byte_4389C47 = 1;
   }
-  v3 = (BattleFieldData_SaveData_o *)sub_B70764(BattleFieldData_SaveData_TypeInfo);
+  v3 = (BattleFieldData_SaveData_o *)sub_B77694(BattleFieldData_SaveData_TypeInfo);
   BattleFieldData_SaveData___ctor(v3, 0LL);
   this->fields.tmpsave = v3;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.tmpsave, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (struct System_Double_array *)sub_B706AC(double___TypeInfo, 1LL);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.tmpsave, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (struct System_Double_array *)sub_B775DC(double___TypeInfo, 1LL);
   this->fields.wkZeroParam = v10;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.wkZeroParam,
     (System_Int32_array **)v10,
     v11,
@@ -40,7 +40,7 @@ void __fastcall BattleFieldData___ctor(BattleFieldData_o *this, const MethodInfo
 }
 
 
-void __fastcall BattleFieldData___ctor_22745196(
+void __fastcall BattleFieldData___ctor_22967844(
         BattleFieldData_o *this,
         int32_t inIndex,
         Il2CppObject *obj,
@@ -85,24 +85,24 @@ void __fastcall BattleFieldData___ctor_22745196(
   BattleFieldData_o *v43; // x0
   const MethodInfo *v44; // x1
 
-  if ( (byte_435061F & 1) == 0 )
+  if ( (byte_4389C48 & 1) == 0 )
   {
-    sub_B70694(&BattleFieldData_AiField_TypeInfo);
-    sub_B70694(&AiState_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B70694(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_B70694(&double___TypeInfo);
-    sub_B70694(&long_TypeInfo);
-    sub_B70694(&BattleFieldData_SaveData_TypeInfo);
-    sub_B70694(&StringLiteral_22034/*"raid"*/);
-    sub_B70694(&StringLiteral_19684/*"id"*/);
-    byte_435061F = 1;
+    sub_B775C4(&BattleFieldData_AiField_TypeInfo);
+    sub_B775C4(&AiState_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_B775C4(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_B775C4(&double___TypeInfo);
+    sub_B775C4(&long_TypeInfo);
+    sub_B775C4(&BattleFieldData_SaveData_TypeInfo);
+    sub_B775C4(&StringLiteral_22133/*"raid"*/);
+    sub_B775C4(&StringLiteral_19774/*"id"*/);
+    byte_4389C48 = 1;
   }
-  v7 = (BattleFieldData_SaveData_o *)sub_B70764(BattleFieldData_SaveData_TypeInfo);
+  v7 = (BattleFieldData_SaveData_o *)sub_B77694(BattleFieldData_SaveData_TypeInfo);
   BattleFieldData_SaveData___ctor(v7, 0LL);
   this->fields.tmpsave = v7;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.tmpsave,
     (System_Int32_array **)v7,
     v8,
@@ -111,9 +111,9 @@ void __fastcall BattleFieldData___ctor_22745196(
     v11,
     v12,
     v13);
-  v14 = (struct System_Double_array *)sub_B706AC(double___TypeInfo, 1LL);
+  v14 = (struct System_Double_array *)sub_B775DC(double___TypeInfo, 1LL);
   this->fields.wkZeroParam = v14;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.wkZeroParam,
     (System_Int32_array **)v14,
     v15,
@@ -125,11 +125,11 @@ void __fastcall BattleFieldData___ctor_22745196(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.index = inIndex;
   this->fields.uniqueId = -1;
-  v21 = (BattleFieldData_AiField_o *)sub_B70764(BattleFieldData_AiField_TypeInfo);
+  v21 = (BattleFieldData_AiField_o *)sub_B77694(BattleFieldData_AiField_TypeInfo);
   BattleFieldData_AiField___ctor(v21, 0LL);
   p_aiField = &this->fields.aiField;
   this->fields.aiField = v21;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.aiField,
     (System_Int32_array **)v21,
     v23,
@@ -144,19 +144,19 @@ void __fastcall BattleFieldData___ctor_22745196(
   if ( *(&obj->klass->_2.bitflags2 + 1) < (unsigned int)v31
     || (System_Collections_Generic_Dictionary_string__object__c *)obj->klass->_2.typeHierarchy[v31 - 1] != System_Collections_Generic_Dictionary_string__object__TypeInfo )
   {
-    Item = (UnityEngine_Purchasing_IStoreExtension_o *)sub_B70A60(obj);
+    Item = (UnityEngine_Purchasing_IStoreExtension_o *)sub_B77990(obj);
     goto LABEL_21;
   }
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)obj,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_22034/*"raid"*/,
-         (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_22133/*"raid"*/,
+         (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     v32 = *p_aiField;
     Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
              (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)obj,
-             (System_Type_o *)StringLiteral_22034/*"raid"*/,
-             (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (System_Type_o *)StringLiteral_22133/*"raid"*/,
+             (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !v32 || !Item )
       goto LABEL_19;
     if ( Item->klass->_1.element_class != long_TypeInfo->_1.element_class )
@@ -165,15 +165,15 @@ void __fastcall BattleFieldData___ctor_22745196(
   }
   if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)obj,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_19684/*"id"*/,
-          (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_19774/*"id"*/,
+          (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
 LABEL_16:
-    v34 = (AiState_o *)sub_B70764(AiState_TypeInfo);
+    v34 = (AiState_o *)sub_B77694(AiState_TypeInfo);
     AiState___ctor(v34, 0LL);
     this->fields.aiState = v34;
     p_aiState = (BattleServantConfConponent_o *)&this->fields.aiState;
-    sub_B70630(p_aiState, (System_Int32_array **)v34, v36, v37, v38, v39, v40, v41);
+    sub_B77560(p_aiState, (System_Int32_array **)v34, v36, v37, v38, v39, v40, v41);
     monitor = p_aiState->monitor;
     if ( monitor )
     {
@@ -185,13 +185,13 @@ LABEL_16:
       }
     }
 LABEL_19:
-    sub_B7076C(Item, v30);
+    sub_B7769C(Item, v30);
   }
   v33 = *p_aiField;
   Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
            (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)obj,
-           (System_Type_o *)StringLiteral_19684/*"id"*/,
-           (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           (System_Type_o *)StringLiteral_19774/*"id"*/,
+           (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !v33 || !Item )
     goto LABEL_19;
   if ( Item->klass->_1.element_class == long_TypeInfo->_1.element_class )
@@ -200,7 +200,7 @@ LABEL_19:
     goto LABEL_16;
   }
 LABEL_21:
-  v43 = (BattleFieldData_o *)sub_B70A60(Item);
+  v43 = (BattleFieldData_o *)sub_B77990(Item);
   BattleFieldData__getUniqueID(v43, v44);
 }
 
@@ -226,16 +226,16 @@ System_Double_array *__fastcall BattleFieldData__getAiParam(
   __int64 v19; // x0
 
   v11 = this;
-  if ( (byte_4350620 & 1) == 0 )
+  if ( (byte_4389C49 & 1) == 0 )
   {
-    this = (BattleFieldData_o *)sub_B70694(&double___TypeInfo);
-    byte_4350620 = 1;
+    this = (BattleFieldData_o *)sub_B775C4(&double___TypeInfo);
+    byte_4389C49 = 1;
   }
   if ( param <= 16 )
   {
     if ( param == 1 )
     {
-      this = (BattleFieldData_o *)sub_B706AC(double___TypeInfo, 1LL);
+      this = (BattleFieldData_o *)sub_B775DC(double___TypeInfo, 1LL);
       if ( this )
       {
         if ( LODWORD(this->fields.aiState) )
@@ -246,7 +246,7 @@ System_Double_array *__fastcall BattleFieldData__getAiParam(
         goto LABEL_27;
       }
 LABEL_26:
-      sub_B7076C(this, bData);
+      sub_B7769C(this, bData);
     }
     if ( param != 16 )
       return v11->fields.wkZeroParam;
@@ -262,7 +262,7 @@ LABEL_15:
     if ( RaidInfo )
     {
       v18 = RaidInfo;
-      this = (BattleFieldData_o *)sub_B706AC(double___TypeInfo, 1LL);
+      this = (BattleFieldData_o *)sub_B775DC(double___TypeInfo, 1LL);
       if ( this )
       {
         if ( LODWORD(this->fields.aiState) )
@@ -271,8 +271,8 @@ LABEL_15:
           goto LABEL_25;
         }
 LABEL_27:
-        v19 = sub_B70798(this);
-        sub_B70738(v19, 0LL);
+        v19 = sub_B776C8(this);
+        sub_B77668(v19, 0LL);
       }
       goto LABEL_26;
     }
@@ -287,7 +287,7 @@ LABEL_27:
   if ( !v13 )
     return v11->fields.wkZeroParam;
   v14 = v13;
-  this = (BattleFieldData_o *)sub_B706AC(double___TypeInfo, 1LL);
+  this = (BattleFieldData_o *)sub_B775DC(double___TypeInfo, 1LL);
   if ( !this )
     goto LABEL_26;
   if ( !LODWORD(this->fields.aiState) )
@@ -324,9 +324,9 @@ BattleFieldData_SaveData_o *__fastcall BattleFieldData__getSaveData(BattleFieldD
 
   aiState = this->fields.aiState;
   if ( !aiState || (tmpsave = this->fields.tmpsave, aiState = (AiState_o *)AiState__getSaveData(aiState, 0LL), !tmpsave) )
-    sub_B7076C(aiState, method);
+    sub_B7769C(aiState, method);
   tmpsave->fields.aistateSave = (struct AiState_SaveData_o *)aiState;
-  sub_B70630((BattleServantConfConponent_o *)&tmpsave->fields, (System_Int32_array **)aiState, v5, v6, v7, v8, v9, v10);
+  sub_B77560((BattleServantConfConponent_o *)&tmpsave->fields, (System_Int32_array **)aiState, v5, v6, v7, v8, v9, v10);
   return this->fields.tmpsave;
 }
 
@@ -354,7 +354,7 @@ void __fastcall BattleFieldData__setSaveData(
         const MethodInfo *method)
 {
   if ( !save || (this = (BattleFieldData_o *)this->fields.aiState) == 0LL )
-    sub_B7076C(this, save);
+    sub_B7769C(this, save);
   AiState__setSaveData((AiState_o *)this, save->fields.aistateSave, 0LL);
 }
 

@@ -34,17 +34,17 @@ void __fastcall PartiallyModifiableGrayScale__OnRenderImage(
   UnityEngine_Vector4_o v27; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v6 = this;
-  if ( (byte_4350CB3 & 1) == 0 )
+  if ( (byte_438A35C & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Graphics_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_16232/*"_IsSet"*/);
-    sub_B70694(&StringLiteral_16260/*"_OverTex"*/);
-    sub_B70694(&StringLiteral_16293/*"_Size"*/);
-    sub_B70694(&StringLiteral_16286/*"_Saturation"*/);
-    sub_B70694(&StringLiteral_16324/*"_UVPosition"*/);
-    this = (PartiallyModifiableGrayScale_o *)sub_B70694(&StringLiteral_16243/*"_MaskTex"*/);
-    byte_4350CB3 = 1;
+    sub_B775C4(&UnityEngine_Graphics_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_16302/*"_IsSet"*/);
+    sub_B775C4(&StringLiteral_16330/*"_OverTex"*/);
+    sub_B775C4(&StringLiteral_16363/*"_Size"*/);
+    sub_B775C4(&StringLiteral_16356/*"_Saturation"*/);
+    sub_B775C4(&StringLiteral_16394/*"_UVPosition"*/);
+    this = (PartiallyModifiableGrayScale_o *)sub_B775C4(&StringLiteral_16313/*"_MaskTex"*/);
+    byte_438A35C = 1;
   }
   if ( !source )
     goto LABEL_47;
@@ -66,7 +66,7 @@ void __fastcall PartiallyModifiableGrayScale__OnRenderImage(
       goto LABEL_47;
     UnityEngine_Material__SetTexture(
       (UnityEngine_Material_o *)this,
-      (System_String_o *)StringLiteral_16243/*"_MaskTex"*/,
+      (System_String_o *)StringLiteral_16313/*"_MaskTex"*/,
       (UnityEngine_Texture_o *)v6->fields.MaskTexture,
       0LL);
   }
@@ -83,7 +83,7 @@ void __fastcall PartiallyModifiableGrayScale__OnRenderImage(
       goto LABEL_47;
     UnityEngine_Material__SetTexture(
       (UnityEngine_Material_o *)this,
-      (System_String_o *)StringLiteral_16260/*"_OverTex"*/,
+      (System_String_o *)StringLiteral_16330/*"_OverTex"*/,
       (UnityEngine_Texture_o *)v6->fields.OverTexture,
       0LL);
   }
@@ -92,7 +92,7 @@ void __fastcall PartiallyModifiableGrayScale__OnRenderImage(
     goto LABEL_47;
   UnityEngine_Material__SetFloat(
     (UnityEngine_Material_o *)this,
-    (System_String_o *)StringLiteral_16286/*"_Saturation"*/,
+    (System_String_o *)StringLiteral_16356/*"_Saturation"*/,
     v6->fields.saturation,
     0LL);
   this = (PartiallyModifiableGrayScale_o *)ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0LL);
@@ -100,7 +100,7 @@ void __fastcall PartiallyModifiableGrayScale__OnRenderImage(
     goto LABEL_47;
   UnityEngine_Material__SetFloat(
     (UnityEngine_Material_o *)this,
-    (System_String_o *)StringLiteral_16293/*"_Size"*/,
+    (System_String_o *)StringLiteral_16363/*"_Size"*/,
     v6->fields.radius,
     0LL);
   material = ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0LL);
@@ -113,13 +113,13 @@ void __fastcall PartiallyModifiableGrayScale__OnRenderImage(
   UnityEngine_Vector4___ctor(v26, v13, v14, v15, v16, &v25);
   if ( !material )
 LABEL_47:
-    sub_B7076C(this, source);
+    sub_B7769C(this, source);
   *(_QWORD *)&v27.fields.x = v25.methodPointer;
   *(_QWORD *)&v27.fields.z = v25.invoker_method;
-  UnityEngine_Material__SetVector(material, (System_String_o *)StringLiteral_16324/*"_UVPosition"*/, v27, 0LL);
+  UnityEngine_Material__SetVector(material, (System_String_o *)StringLiteral_16394/*"_UVPosition"*/, v27, 0LL);
   this = (PartiallyModifiableGrayScale_o *)ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0LL);
   v17 = (UnityEngine_Material_o *)this;
-  v18 = (System_String_o *)StringLiteral_16232/*"_IsSet"*/;
+  v18 = (System_String_o *)StringLiteral_16302/*"_IsSet"*/;
   if ( v6->fields.radius < 0.03 )
   {
     v19 = 0;
@@ -182,5 +182,5 @@ LABEL_23:
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
   }
-  UnityEngine_Graphics__Blit_41098560((UnityEngine_Texture_o *)source, destination, v20, 0LL);
+  UnityEngine_Graphics__Blit_41444448((UnityEngine_Texture_o *)source, destination, v20, 0LL);
 }

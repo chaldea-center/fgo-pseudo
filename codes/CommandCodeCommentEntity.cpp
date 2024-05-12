@@ -1,13 +1,13 @@
 void __fastcall CommandCodeCommentEntity___ctor(CommandCodeCommentEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4354688 & 1) == 0 )
+  if ( (byte_438DF47 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_int___ctor__);
-    byte_4354688 = 1;
+    sub_B775C4(&Method_DataEntityBase_int___ctor__);
+    byte_438DF47 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -25,10 +25,10 @@ System_String_o *__fastcall CommandCodeCommentEntity__GetComment(
 {
   System_String_o *comment; // x19
 
-  if ( (byte_4354687 & 1) == 0 )
+  if ( (byte_438DF46 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    byte_4354687 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    byte_438DF46 = 1;
   }
   comment = this->fields.comment;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

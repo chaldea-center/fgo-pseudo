@@ -1,14 +1,14 @@
 void __fastcall WarGroupMaster___ctor(WarGroupMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_43526AF & 1) == 0 )
+  if ( (byte_438BE2B & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string___ctor__);
-    byte_43526AF = 1;
+    sub_B775C4(&Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string___ctor__);
+    byte_438BE2B = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     351,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string___ctor__);
 }
 
 
@@ -28,23 +28,23 @@ bool __fastcall WarGroupMaster__CanUseContinueItem(
   unsigned __int64 v15; // x9
   __int64 v17; // x0
 
-  if ( (byte_43526B0 & 1) == 0 )
+  if ( (byte_438BE2C & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&WarGroupEntity_TypeInfo);
-    byte_43526B0 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&WarGroupEntity_TypeInfo);
+    byte_438BE2C = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
 LABEL_20:
-    sub_B7076C(list, *(_QWORD *)&warId);
+    sub_B7769C(list, *(_QWORD *)&warId);
   v12 = 0;
   while ( 1 )
   {
     if ( v12 >= System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
                   list,
-                  (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
+                  (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
       return 0;
     list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
     if ( !list )
@@ -52,7 +52,7 @@ LABEL_20:
     list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                                                                                          list,
                                                                                          v12,
-                                                                                         (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                                                                         (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
     if ( list )
     {
       v13 = *(&WarGroupEntity_TypeInfo->_2.bitflags2 + 1);
@@ -77,8 +77,8 @@ LABEL_19:
   {
     if ( v15 >= max_length )
     {
-      v17 = sub_B70798(list);
-      sub_B70738(v17, 0LL);
+      v17 = sub_B776C8(list);
+      sub_B77668(v17, 0LL);
     }
     if ( LODWORD(list->fields.items) == targetIds->m_Items[v15 + 1]
       && HIDWORD(list->fields.items) == warId
@@ -104,16 +104,16 @@ WarGroupEntity_o *__fastcall WarGroupMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_43526AD & 1) == 0 )
+  if ( (byte_438BE29 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__GetEntity__);
-    byte_43526AD = 1;
+    sub_B775C4(&Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__GetEntity__);
+    byte_438BE29 = 1;
   }
   PK = WarGroupEntity__CreatePK(id, warId, questAfterClear, questType, *(const MethodInfo **)&questType);
   return (WarGroupEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                PK,
-                               (const MethodInfo_21C0890 *)Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__GetEntity__);
+                               (const MethodInfo_21FBCE4 *)Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__GetEntity__);
 }
 
 
@@ -132,7 +132,7 @@ bool __fastcall WarGroupMaster__HasEntity(
   __int64 v15; // x0
 
   if ( !targetIds )
-    sub_B7076C(this, warId);
+    sub_B7769C(this, warId);
   v6 = *(_QWORD *)&targetIds->max_length;
   if ( (int)v6 < 1 )
     return 0;
@@ -142,8 +142,8 @@ bool __fastcall WarGroupMaster__HasEntity(
   {
     if ( v12 >= (unsigned int)v6 )
     {
-      v15 = sub_B70798(this);
-      sub_B70738(v15, 0LL);
+      v15 = sub_B776C8(this);
+      sub_B77668(v15, 0LL);
     }
     PK = WarGroupEntity__CreatePK(
            targetIds->m_Items[v12 + 1],
@@ -151,7 +151,7 @@ bool __fastcall WarGroupMaster__HasEntity(
            questAfterClear,
            questType,
            (const MethodInfo *)targetIds);
-    this = (WarGroupMaster_o *)DataMasterBase__isEntityExistsFromId_30421208(v11, PK, 0LL);
+    this = (WarGroupMaster_o *)DataMasterBase__isEntityExistsFromId_30806236(v11, PK, 0LL);
     if ( ((unsigned __int8)this & 1) != 0 )
       break;
     LODWORD(v6) = targetIds->max_length;
@@ -174,15 +174,15 @@ bool __fastcall WarGroupMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_43526AE & 1) == 0 )
+  if ( (byte_438BE2A & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__TryGetEntity__);
-    byte_43526AE = 1;
+    sub_B775C4(&Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__TryGetEntity__);
+    byte_438BE2A = 1;
   }
   PK = WarGroupEntity__CreatePK(id, warId, questAfterClear, questType, *(const MethodInfo **)&questAfterClear);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__TryGetEntity__);
 }

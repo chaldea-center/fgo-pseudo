@@ -79,31 +79,31 @@ void __fastcall PlayerStatusRaidPointComponent___cctor(const MethodInfo *method)
   __int64 v77; // x0
   __int64 v78; // x0
 
-  if ( (byte_4351BF8 & 1) == 0 )
+  if ( (byte_438B37F & 1) == 0 )
   {
-    sub_B70694(&int___TypeInfo);
-    sub_B70694(&PlayerStatusRaidPointComponent_TypeInfo);
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_22050/*"raid_point_old"*/);
-    sub_B70694(&StringLiteral_22047/*"raid_point"*/);
-    sub_B70694(&StringLiteral_22051/*"raid_point_over"*/);
-    sub_B70694(&StringLiteral_22685/*"status_raid_point_frame"*/);
-    sub_B70694(&StringLiteral_22049/*"raid_point_frame_old"*/);
-    sub_B70694(&StringLiteral_22052/*"raid_point_over_old"*/);
-    byte_4351BF8 = 1;
+    sub_B775C4(&int___TypeInfo);
+    sub_B775C4(&PlayerStatusRaidPointComponent_TypeInfo);
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_22149/*"raid_point_old"*/);
+    sub_B775C4(&StringLiteral_22146/*"raid_point"*/);
+    sub_B775C4(&StringLiteral_22150/*"raid_point_over"*/);
+    sub_B775C4(&StringLiteral_22786/*"status_raid_point_frame"*/);
+    sub_B775C4(&StringLiteral_22148/*"raid_point_frame_old"*/);
+    sub_B775C4(&StringLiteral_22151/*"raid_point_over_old"*/);
+    byte_438B37F = 1;
   }
   PlayerStatusRaidPointComponent_TypeInfo->static_fields->RAID_MARKDISP_STEP_DEFAULT = 5;
-  v1 = sub_B706AC(string___TypeInfo, 2LL);
+  v1 = sub_B775DC(string___TypeInfo, 2LL);
   if ( !v1 )
     goto LABEL_41;
   v9 = (System_Int32_array **)v1;
-  v1 = StringLiteral_22049/*"raid_point_frame_old"*/;
-  if ( StringLiteral_22049/*"raid_point_frame_old"*/ )
+  v1 = StringLiteral_22148/*"raid_point_frame_old"*/;
+  if ( StringLiteral_22148/*"raid_point_frame_old"*/ )
   {
-    v1 = sub_B70754(StringLiteral_22049/*"raid_point_frame_old"*/, *(_QWORD *)&(*v9)->m_Items[9]);
+    v1 = sub_B77684(StringLiteral_22148/*"raid_point_frame_old"*/, *(_QWORD *)&(*v9)->m_Items[9]);
     if ( !v1 )
       goto LABEL_40;
-    v10 = (System_Int32_array **)StringLiteral_22049/*"raid_point_frame_old"*/;
+    v10 = (System_Int32_array **)StringLiteral_22148/*"raid_point_frame_old"*/;
   }
   else
   {
@@ -112,14 +112,14 @@ void __fastcall PlayerStatusRaidPointComponent___cctor(const MethodInfo *method)
   if ( !*((_DWORD *)v9 + 6) )
     goto LABEL_39;
   v9[4] = (System_Int32_array *)v10;
-  sub_B70630((BattleServantConfConponent_o *)(v9 + 4), v10, v3, v4, v5, v6, v7, v8);
-  v1 = StringLiteral_22685/*"status_raid_point_frame"*/;
-  if ( StringLiteral_22685/*"status_raid_point_frame"*/ )
+  sub_B77560((BattleServantConfConponent_o *)(v9 + 4), v10, v3, v4, v5, v6, v7, v8);
+  v1 = StringLiteral_22786/*"status_raid_point_frame"*/;
+  if ( StringLiteral_22786/*"status_raid_point_frame"*/ )
   {
-    v1 = sub_B70754(StringLiteral_22685/*"status_raid_point_frame"*/, *(_QWORD *)&(*v9)->m_Items[9]);
+    v1 = sub_B77684(StringLiteral_22786/*"status_raid_point_frame"*/, *(_QWORD *)&(*v9)->m_Items[9]);
     if ( !v1 )
       goto LABEL_40;
-    v17 = (System_Int32_array **)StringLiteral_22685/*"status_raid_point_frame"*/;
+    v17 = (System_Int32_array **)StringLiteral_22786/*"status_raid_point_frame"*/;
   }
   else
   {
@@ -128,21 +128,21 @@ void __fastcall PlayerStatusRaidPointComponent___cctor(const MethodInfo *method)
   if ( *((_DWORD *)v9 + 6) <= 1u )
     goto LABEL_39;
   v9[5] = (System_Int32_array *)v17;
-  sub_B70630((BattleServantConfConponent_o *)(v9 + 5), v17, v11, v12, v13, v14, v15, v16);
+  sub_B77560((BattleServantConfConponent_o *)(v9 + 5), v17, v11, v12, v13, v14, v15, v16);
   static_fields = PlayerStatusRaidPointComponent_TypeInfo->static_fields;
   static_fields->RP_SPNAME_FRAME = (struct System_String_array *)v9;
-  sub_B70630((BattleServantConfConponent_o *)&static_fields->RP_SPNAME_FRAME, v9, v19, v20, v21, v22, v23, v24);
-  v1 = sub_B706AC(string___TypeInfo, 2LL);
+  sub_B77560((BattleServantConfConponent_o *)&static_fields->RP_SPNAME_FRAME, v9, v19, v20, v21, v22, v23, v24);
+  v1 = sub_B775DC(string___TypeInfo, 2LL);
   if ( !v1 )
     goto LABEL_41;
   v31 = (System_Int32_array **)v1;
-  v1 = StringLiteral_22050/*"raid_point_old"*/;
-  if ( StringLiteral_22050/*"raid_point_old"*/ )
+  v1 = StringLiteral_22149/*"raid_point_old"*/;
+  if ( StringLiteral_22149/*"raid_point_old"*/ )
   {
-    v1 = sub_B70754(StringLiteral_22050/*"raid_point_old"*/, *(_QWORD *)&(*v31)->m_Items[9]);
+    v1 = sub_B77684(StringLiteral_22149/*"raid_point_old"*/, *(_QWORD *)&(*v31)->m_Items[9]);
     if ( !v1 )
       goto LABEL_40;
-    v32 = (System_Int32_array **)StringLiteral_22050/*"raid_point_old"*/;
+    v32 = (System_Int32_array **)StringLiteral_22149/*"raid_point_old"*/;
   }
   else
   {
@@ -151,14 +151,14 @@ void __fastcall PlayerStatusRaidPointComponent___cctor(const MethodInfo *method)
   if ( !*((_DWORD *)v31 + 6) )
     goto LABEL_39;
   v31[4] = (System_Int32_array *)v32;
-  sub_B70630((BattleServantConfConponent_o *)(v31 + 4), v32, v25, v26, v27, v28, v29, v30);
-  v1 = StringLiteral_22047/*"raid_point"*/;
-  if ( StringLiteral_22047/*"raid_point"*/ )
+  sub_B77560((BattleServantConfConponent_o *)(v31 + 4), v32, v25, v26, v27, v28, v29, v30);
+  v1 = StringLiteral_22146/*"raid_point"*/;
+  if ( StringLiteral_22146/*"raid_point"*/ )
   {
-    v1 = sub_B70754(StringLiteral_22047/*"raid_point"*/, *(_QWORD *)&(*v31)->m_Items[9]);
+    v1 = sub_B77684(StringLiteral_22146/*"raid_point"*/, *(_QWORD *)&(*v31)->m_Items[9]);
     if ( !v1 )
       goto LABEL_40;
-    v39 = (System_Int32_array **)StringLiteral_22047/*"raid_point"*/;
+    v39 = (System_Int32_array **)StringLiteral_22146/*"raid_point"*/;
   }
   else
   {
@@ -167,21 +167,21 @@ void __fastcall PlayerStatusRaidPointComponent___cctor(const MethodInfo *method)
   if ( *((_DWORD *)v31 + 6) <= 1u )
     goto LABEL_39;
   v31[5] = (System_Int32_array *)v39;
-  sub_B70630((BattleServantConfConponent_o *)(v31 + 5), v39, v33, v34, v35, v36, v37, v38);
+  sub_B77560((BattleServantConfConponent_o *)(v31 + 5), v39, v33, v34, v35, v36, v37, v38);
   v40 = PlayerStatusRaidPointComponent_TypeInfo->static_fields;
   v40->RP_SPNAME_NORMAL = (struct System_String_array *)v31;
-  sub_B70630((BattleServantConfConponent_o *)&v40->RP_SPNAME_NORMAL, v31, v41, v42, v43, v44, v45, v46);
-  v1 = sub_B706AC(string___TypeInfo, 2LL);
+  sub_B77560((BattleServantConfConponent_o *)&v40->RP_SPNAME_NORMAL, v31, v41, v42, v43, v44, v45, v46);
+  v1 = sub_B775DC(string___TypeInfo, 2LL);
   if ( !v1 )
     goto LABEL_41;
   v53 = (System_Int32_array **)v1;
-  v1 = StringLiteral_22052/*"raid_point_over_old"*/;
-  if ( StringLiteral_22052/*"raid_point_over_old"*/ )
+  v1 = StringLiteral_22151/*"raid_point_over_old"*/;
+  if ( StringLiteral_22151/*"raid_point_over_old"*/ )
   {
-    v1 = sub_B70754(StringLiteral_22052/*"raid_point_over_old"*/, *(_QWORD *)&(*v53)->m_Items[9]);
+    v1 = sub_B77684(StringLiteral_22151/*"raid_point_over_old"*/, *(_QWORD *)&(*v53)->m_Items[9]);
     if ( !v1 )
       goto LABEL_40;
-    v54 = (System_Int32_array **)StringLiteral_22052/*"raid_point_over_old"*/;
+    v54 = (System_Int32_array **)StringLiteral_22151/*"raid_point_over_old"*/;
   }
   else
   {
@@ -190,44 +190,44 @@ void __fastcall PlayerStatusRaidPointComponent___cctor(const MethodInfo *method)
   if ( !*((_DWORD *)v53 + 6) )
     goto LABEL_39;
   v53[4] = (System_Int32_array *)v54;
-  sub_B70630((BattleServantConfConponent_o *)(v53 + 4), v54, v47, v48, v49, v50, v51, v52);
-  v1 = StringLiteral_22051/*"raid_point_over"*/;
-  if ( StringLiteral_22051/*"raid_point_over"*/ )
+  sub_B77560((BattleServantConfConponent_o *)(v53 + 4), v54, v47, v48, v49, v50, v51, v52);
+  v1 = StringLiteral_22150/*"raid_point_over"*/;
+  if ( StringLiteral_22150/*"raid_point_over"*/ )
   {
-    v1 = sub_B70754(StringLiteral_22051/*"raid_point_over"*/, *(_QWORD *)&(*v53)->m_Items[9]);
+    v1 = sub_B77684(StringLiteral_22150/*"raid_point_over"*/, *(_QWORD *)&(*v53)->m_Items[9]);
     if ( v1 )
     {
-      v61 = (System_Int32_array **)StringLiteral_22051/*"raid_point_over"*/;
+      v61 = (System_Int32_array **)StringLiteral_22150/*"raid_point_over"*/;
       goto LABEL_35;
     }
 LABEL_40:
-    v78 = sub_B7078C(v1);
-    sub_B70738(v78, 0LL);
+    v78 = sub_B776BC(v1);
+    sub_B77668(v78, 0LL);
   }
   v61 = 0LL;
 LABEL_35:
   if ( *((_DWORD *)v53 + 6) <= 1u )
     goto LABEL_39;
   v53[5] = (System_Int32_array *)v61;
-  sub_B70630((BattleServantConfConponent_o *)(v53 + 5), v61, v55, v56, v57, v58, v59, v60);
+  sub_B77560((BattleServantConfConponent_o *)(v53 + 5), v61, v55, v56, v57, v58, v59, v60);
   v62 = PlayerStatusRaidPointComponent_TypeInfo->static_fields;
   v62->RP_SPNAME_OVER = (struct System_String_array *)v53;
-  sub_B70630((BattleServantConfConponent_o *)&v62->RP_SPNAME_OVER, v53, v63, v64, v65, v66, v67, v68);
-  v1 = sub_B706AC(int___TypeInfo, 2LL);
+  sub_B77560((BattleServantConfConponent_o *)&v62->RP_SPNAME_OVER, v53, v63, v64, v65, v66, v67, v68);
+  v1 = sub_B775DC(int___TypeInfo, 2LL);
   if ( !v1 )
 LABEL_41:
-    sub_B7076C(v1, v2);
+    sub_B7769C(v1, v2);
   v75 = (System_Int32_array **)v1;
   if ( !*(_DWORD *)(v1 + 24) )
   {
 LABEL_39:
-    v77 = sub_B70798(v1);
-    sub_B70738(v77, 0LL);
+    v77 = sub_B776C8(v1);
+    sub_B77668(v77, 0LL);
   }
   *(_DWORD *)(v1 + 32) = 5;
   v76 = PlayerStatusRaidPointComponent_TypeInfo->static_fields;
   v76->RP_OFFSET = (struct System_Int32_array *)v75;
-  sub_B70630((BattleServantConfConponent_o *)&v76->RP_OFFSET, v75, v69, v70, v71, v72, v73, v74);
+  sub_B77560((BattleServantConfConponent_o *)&v76->RP_OFFSET, v75, v69, v70, v71, v72, v73, v74);
 }
 
 
@@ -249,10 +249,10 @@ void __fastcall PlayerStatusRaidPointComponent__SetDispType(
   __int64 BpType; // x9
   __int64 v9; // x0
 
-  if ( (byte_4351BF7 & 1) == 0 )
+  if ( (byte_438B37E & 1) == 0 )
   {
-    sub_B70694(&PlayerStatusRaidPointComponent_TypeInfo);
-    byte_4351BF7 = 1;
+    sub_B775C4(&PlayerStatusRaidPointComponent_TypeInfo);
+    byte_438B37E = 1;
   }
   switch ( dispType )
   {
@@ -299,8 +299,8 @@ LABEL_22:
       BpType = this->fields.BpType;
       if ( (unsigned int)BpType >= *(_DWORD *)(v7 + 24) )
       {
-        v9 = sub_B70798(raidPointSp);
-        sub_B70738(v9, 0LL);
+        v9 = sub_B776C8(raidPointSp);
+        sub_B77668(v9, 0LL);
       }
       if ( !v6 )
         goto LABEL_27;
@@ -324,7 +324,7 @@ LABEL_22:
         }
       }
 LABEL_27:
-      sub_B7076C(raidPointSp, *(_QWORD *)&dispType);
+      sub_B7769C(raidPointSp, *(_QWORD *)&dispType);
   }
 }
 
@@ -354,11 +354,11 @@ void __fastcall PlayerStatusRaidPointComponent__Setup(
   int32_t v22; // [xsp+Ch] [xbp-14h] BYREF
 
   v22 = index;
-  if ( (byte_4351BF6 & 1) == 0 )
+  if ( (byte_438B37D & 1) == 0 )
   {
-    sub_B70694(&PlayerStatusRaidPointComponent_TypeInfo);
-    sub_B70694(&StringLiteral_11158/*"RAID_MARKDISP_STEP"*/);
-    byte_4351BF6 = 1;
+    sub_B775C4(&PlayerStatusRaidPointComponent_TypeInfo);
+    sub_B775C4(&StringLiteral_11217/*"RAID_MARKDISP_STEP"*/);
+    byte_438B37D = 1;
   }
   this->fields.BpType = iBpType;
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -367,10 +367,10 @@ void __fastcall PlayerStatusRaidPointComponent__Setup(
   v8 = gameObject;
   name = UnityEngine_Object__get_name(gameObject, 0LL);
   v10 = System_Int32__ToString((int32_t)&v22, 0LL);
-  v11 = System_String__Concat_44758168(name, v10, 0LL);
+  v11 = System_String__Concat_44901936(name, v10, 0LL);
   UnityEngine_Object__set_name(v8, v11, 0LL);
   v12 = v22 - 1;
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_11158/*"RAID_MARKDISP_STEP"*/, 0LL);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_11217/*"RAID_MARKDISP_STEP"*/, 0LL);
   if ( Value <= 0 )
   {
     v14 = PlayerStatusRaidPointComponent_TypeInfo;
@@ -424,14 +424,14 @@ void __fastcall PlayerStatusRaidPointComponent__Setup(
         (RP_OFFSET = PlayerStatusRaidPointComponent_TypeInfo->static_fields->RP_OFFSET) == 0LL) )
   {
 LABEL_27:
-    sub_B7076C(gameObject, v7);
+    sub_B7769C(gameObject, v7);
   }
   v20 = this->fields.BpType;
   if ( (unsigned int)v20 >= RP_OFFSET->max_length )
   {
 LABEL_28:
-    v21 = sub_B70798(gameObject);
-    sub_B70738(v21, 0LL);
+    v21 = sub_B776C8(gameObject);
+    sub_B77668(v21, 0LL);
   }
   GameObjectExtensions__SetLocalPositionX(
     (UnityEngine_GameObject_o *)gameObject,

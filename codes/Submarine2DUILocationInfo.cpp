@@ -17,64 +17,64 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
   UnityEngine_Rect_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4350E2A & 1) == 0 )
+  if ( (byte_438A59E & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_Rect__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_Rect___ctor__);
-    sub_B70694(&System_Collections_Generic_List_Rect__TypeInfo);
-    byte_4350E2A = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_Rect__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Rect___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_Rect__TypeInfo);
+    byte_438A59E = 1;
   }
   Base2DUILocationInfo___ctor((Base2DUILocationInfo_o *)this, 0LL);
-  v3 = (System_Collections_Generic_List_Rect__o *)sub_B70764(System_Collections_Generic_List_Rect__TypeInfo);
+  v3 = (System_Collections_Generic_List_Rect__o *)sub_B77694(System_Collections_Generic_List_Rect__TypeInfo);
   System_Collections_Generic_List_Rect____ctor(
     v3,
-    (const MethodInfo_3037F80 *)Method_System_Collections_Generic_List_Rect___ctor__);
+    (const MethodInfo_3065B90 *)Method_System_Collections_Generic_List_Rect___ctor__);
   v4 = ((__int64 (__fastcall *)(Submarine2DUILocationInfo_o *, Il2CppMethodPointer))this->klass->vtable._8_GetScanDialogRect.method)(
          this,
          this->klass->vtable._9_GetStorageRect.methodPtr);
   if ( !v3 )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   System_Collections_Generic_List_Rect___Add(
     v3,
     *(UnityEngine_Rect_o *)&v6,
-    (const MethodInfo_3038D14 *)Method_System_Collections_Generic_List_Rect__Add__);
+    (const MethodInfo_3066924 *)Method_System_Collections_Generic_List_Rect__Add__);
   v16.fields.m_XMin = ((float (__fastcall *)(Submarine2DUILocationInfo_o *, void *))this->klass->vtable._9_GetStorageRect.method)(
                         this,
                         this->klass[1]._1.image);
   System_Collections_Generic_List_Rect___Add(
     v3,
     v16,
-    (const MethodInfo_3038D14 *)Method_System_Collections_Generic_List_Rect__Add__);
+    (const MethodInfo_3066924 *)Method_System_Collections_Generic_List_Rect__Add__);
   v17.fields.m_XMin = ((float (__fastcall *)(Submarine2DUILocationInfo_o *, Il2CppMethodPointer))this->klass->vtable._4_GetTitleInfoRect.method)(
                         this,
                         this->klass->vtable._5_GetMenuButtonRect.methodPtr);
   System_Collections_Generic_List_Rect___Add(
     v3,
     v17,
-    (const MethodInfo_3038D14 *)Method_System_Collections_Generic_List_Rect__Add__);
+    (const MethodInfo_3066924 *)Method_System_Collections_Generic_List_Rect__Add__);
   v18.fields.m_XMin = ((float (__fastcall *)(Submarine2DUILocationInfo_o *, Il2CppMethodPointer))this->klass->vtable._6_GetMapChangeButtonRect.method)(
                         this,
                         this->klass->vtable._7_GetMasterIconSurroundsRect.methodPtr);
   System_Collections_Generic_List_Rect___Add(
     v3,
     v18,
-    (const MethodInfo_3038D14 *)Method_System_Collections_Generic_List_Rect__Add__);
+    (const MethodInfo_3066924 *)Method_System_Collections_Generic_List_Rect__Add__);
   v19.fields.m_XMin = ((float (__fastcall *)(Submarine2DUILocationInfo_o *, Il2CppMethodPointer))this->klass->vtable._5_GetMenuButtonRect.method)(
                         this,
                         this->klass->vtable._6_GetMapChangeButtonRect.methodPtr);
   System_Collections_Generic_List_Rect___Add(
     v3,
     v19,
-    (const MethodInfo_3038D14 *)Method_System_Collections_Generic_List_Rect__Add__);
+    (const MethodInfo_3066924 *)Method_System_Collections_Generic_List_Rect__Add__);
   v20.fields.m_XMin = ((float (__fastcall *)(Submarine2DUILocationInfo_o *, Il2CppMethodPointer))this->klass->vtable._7_GetMasterIconSurroundsRect.method)(
                         this,
                         this->klass->vtable._8_GetScanDialogRect.methodPtr);
   System_Collections_Generic_List_Rect___Add(
     v3,
     v20,
-    (const MethodInfo_3038D14 *)Method_System_Collections_Generic_List_Rect__Add__);
+    (const MethodInfo_3066924 *)Method_System_Collections_Generic_List_Rect__Add__);
   this->fields._rects_k__BackingField = v3;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v3, v10, v11, v12, v13, v14, v15);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v3, v10, v11, v12, v13, v14, v15);
 }
 
 

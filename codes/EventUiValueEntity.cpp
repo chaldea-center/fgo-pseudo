@@ -8,19 +8,19 @@ void __fastcall EventUiValueEntity___ctor(EventUiValueEntity_o *this, const Meth
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_4350FF4 & 1) == 0 )
+  if ( (byte_438A6F6 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4350FF4 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438A6F6 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
   *(_QWORD *)&this->fields.id = 0LL;
   v3 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.value = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.value, v3, v4, v5, v6, v7, v8, v9);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.value, v3, v4, v5, v6, v7, v8, v9);
   this->fields.priority = 0;
 }
 
@@ -31,16 +31,16 @@ System_String_o *__fastcall EventUiValueEntity__CreatePK(
         System_String_o *value,
         const MethodInfo *method)
 {
-  if ( (byte_4350FF5 & 1) == 0 )
+  if ( (byte_438A6F7 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_long__long__string___);
-    byte_4350FF5 = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_long__long__string___);
+    byte_438A6F7 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long__string_(
            id,
            type,
            value,
-           (const MethodInfo_1CA2ADC *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
+           (const MethodInfo_1D1792C *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
 }
 
 

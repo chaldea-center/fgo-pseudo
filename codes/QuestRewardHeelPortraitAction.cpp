@@ -8,15 +8,15 @@ void __fastcall QuestRewardHeelPortraitAction___ctor(QuestRewardHeelPortraitActi
   System_Int32_array *v7; // x7
   System_Int32_array **v9; // x1
 
-  if ( (byte_43501CF & 1) == 0 )
+  if ( (byte_4389902 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_6294/*"EventUI/Prefabs/"*/);
-    byte_43501CF = 1;
+    sub_B775C4(&StringLiteral_6350/*"EventUI/Prefabs/"*/);
+    byte_4389902 = 1;
   }
   *(_QWORD *)&this->fields.screenTouchInfoPosY = 0x40000000FFFFFF23LL;
-  v9 = (System_Int32_array **)StringLiteral_6294/*"EventUI/Prefabs/"*/;
-  this->fields.loadAssetName = (struct System_String_o *)StringLiteral_6294/*"EventUI/Prefabs/"*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.loadAssetName, v9, v2, v3, v4, v5, v6, v7);
+  v9 = (System_Int32_array **)StringLiteral_6350/*"EventUI/Prefabs/"*/;
+  this->fields.loadAssetName = (struct System_String_o *)StringLiteral_6350/*"EventUI/Prefabs/"*/;
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.loadAssetName, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -33,7 +33,7 @@ void __fastcall QuestRewardHeelPortraitAction__Init(
   this->fields.state = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
 }
 
@@ -65,25 +65,25 @@ void __fastcall QuestRewardHeelPortraitAction__LoadEventUI(
   System_String_o *v24; // x19
   AssetLoader_LoadEndDataHandler_o *v25; // x21
 
-  if ( (byte_43501CB & 1) == 0 )
+  if ( (byte_43898FE & 1) == 0 )
   {
-    sub_B70694(&AssetManager_TypeInfo);
-    sub_B70694(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_B70694(&Method_QuestRewardHeelPortraitAction___c__DisplayClass14_0__LoadEventUI_b__0__);
-    sub_B70694(&QuestRewardHeelPortraitAction___c__DisplayClass14_0_TypeInfo);
-    byte_43501CB = 1;
+    sub_B775C4(&AssetManager_TypeInfo);
+    sub_B775C4(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_B775C4(&Method_QuestRewardHeelPortraitAction___c__DisplayClass14_0__LoadEventUI_b__0__);
+    sub_B775C4(&QuestRewardHeelPortraitAction___c__DisplayClass14_0_TypeInfo);
+    byte_43898FE = 1;
   }
-  v5 = sub_B70764(QuestRewardHeelPortraitAction___c__DisplayClass14_0_TypeInfo);
+  v5 = sub_B77694(QuestRewardHeelPortraitAction___c__DisplayClass14_0_TypeInfo);
   QuestRewardHeelPortraitAction___c__DisplayClass14_0___ctor(
     (QuestRewardHeelPortraitAction___c__DisplayClass14_0_o *)v5,
     0LL);
   if ( !v5 )
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   *(_QWORD *)(v5 + 16) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v5 + 16), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
+  sub_B77560((BattleServantConfConponent_o *)(v5 + 16), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = callback;
   v14 = (System_Action_o **)(v5 + 24);
-  sub_B70630((BattleServantConfConponent_o *)(v5 + 24), (System_Int32_array **)callback, v15, v16, v17, v18, v19, v20);
+  sub_B77560((BattleServantConfConponent_o *)(v5 + 24), (System_Int32_array **)callback, v15, v16, v17, v18, v19, v20);
   eventUIAssetData = this->fields.eventUIAssetData;
   if ( eventUIAssetData && !AssetData__get_IsEmpty(eventUIAssetData, 0LL) )
   {
@@ -94,8 +94,8 @@ void __fastcall QuestRewardHeelPortraitAction__LoadEventUI(
   {
     loadAssetName = this->fields.loadAssetName;
     v23 = System_Int32__ToString((int)this + 80, 0LL);
-    v24 = System_String__Concat_44758168(loadAssetName, v23, 0LL);
-    v25 = (AssetLoader_LoadEndDataHandler_o *)sub_B70764(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v24 = System_String__Concat_44901936(loadAssetName, v23, 0LL);
+    v25 = (AssetLoader_LoadEndDataHandler_o *)sub_B77694(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       v25,
       (Il2CppObject *)v5,
@@ -132,19 +132,19 @@ System_Collections_IEnumerator_o *__fastcall QuestRewardHeelPortraitAction__Play
   System_Int32_array *v18; // x6
   System_Int32_array *v19; // x7
 
-  if ( (byte_43501CE & 1) == 0 )
+  if ( (byte_4389901 & 1) == 0 )
   {
-    sub_B70694(&QuestRewardHeelPortraitAction__Play_d__17_TypeInfo);
-    byte_43501CE = 1;
+    sub_B775C4(&QuestRewardHeelPortraitAction__Play_d__17_TypeInfo);
+    byte_4389901 = 1;
   }
-  v5 = sub_B70764(QuestRewardHeelPortraitAction__Play_d__17_TypeInfo);
+  v5 = sub_B77694(QuestRewardHeelPortraitAction__Play_d__17_TypeInfo);
   QuestRewardHeelPortraitAction__Play_d__17___ctor((QuestRewardHeelPortraitAction__Play_d__17_o *)v5, 0, 0LL);
   if ( !v5 )
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   *(_QWORD *)(v5 + 32) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v5 + 32), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
+  sub_B77560((BattleServantConfConponent_o *)(v5 + 32), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 40) = endAction;
-  sub_B70630((BattleServantConfConponent_o *)(v5 + 40), (System_Int32_array **)endAction, v14, v15, v16, v17, v18, v19);
+  sub_B77560((BattleServantConfConponent_o *)(v5 + 40), (System_Int32_array **)endAction, v14, v15, v16, v17, v18, v19);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -161,17 +161,17 @@ void __fastcall QuestRewardHeelPortraitAction__ReleaseEventUI(
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_43501CC & 1) == 0 )
+  if ( (byte_43898FF & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    byte_43501CC = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    byte_43898FF = 1;
   }
   eventId = this->fields.eventId;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__ReleaseEventUI_31552244(eventId, 0LL);
+  AtlasManager__ReleaseEventUI_24479600(eventId, 0LL);
   this->fields.eventUIAssetData = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.eventUIAssetData, 0LL, v4, v5, v6, v7, v8, v9);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.eventUIAssetData, 0LL, v4, v5, v6, v7, v8, v9);
 }
 
 
@@ -231,25 +231,25 @@ void __fastcall QuestRewardHeelPortraitAction__Setup(
   QuestRewardHeelPortraitAction_o *v48; // [xsp+0h] [xbp-60h]
   WarEntity_o *entity; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_43501CD & 1) == 0 )
+  if ( (byte_4389900 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Array_Sort_QuestRewardInfo___);
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&Method_System_Comparison_QuestRewardInfo___ctor__);
-    sub_B70694(&System_Comparison_QuestRewardInfo__TypeInfo);
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_UIGrid___);
-    sub_B70694(&System_Convert_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMaster_HeelPortraitMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&Method_DataMasterBase_HeelPortraitMaster__HeelPortraitEntity__int__TryGetEntity__);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B70694(&Method_QuestRewardHeelPortraitAction___c__Setup_b__16_0__);
-    sub_B70694(&QuestRewardHeelPortraitAction___c_TypeInfo);
-    byte_43501CD = 1;
+    sub_B775C4(&Method_System_Array_Sort_QuestRewardInfo___);
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&Method_System_Comparison_QuestRewardInfo___ctor__);
+    sub_B775C4(&System_Comparison_QuestRewardInfo__TypeInfo);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UIGrid___);
+    sub_B775C4(&System_Convert_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMaster_HeelPortraitMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&Method_DataMasterBase_HeelPortraitMaster__HeelPortraitEntity__int__TryGetEntity__);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B775C4(&Method_QuestRewardHeelPortraitAction___c__Setup_b__16_0__);
+    sub_B775C4(&QuestRewardHeelPortraitAction___c_TypeInfo);
+    byte_4389900 = 1;
   }
   entity = 0LL;
   v5 = QuestRewardHeelPortraitAction___c_TypeInfo;
@@ -269,15 +269,15 @@ void __fastcall QuestRewardHeelPortraitAction__Setup(
       static_fields = QuestRewardHeelPortraitAction___c_TypeInfo->static_fields;
     }
     v8 = (Il2CppObject *)static_fields->__9;
-    _9__16_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B70764(System_Comparison_QuestRewardInfo__TypeInfo);
+    _9__16_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B77694(System_Comparison_QuestRewardInfo__TypeInfo);
     System_Comparison_TitleInfoControl_EventEndTimeInfo____ctor(
       _9__16_0,
       v8,
       Method_QuestRewardHeelPortraitAction___c__Setup_b__16_0__,
-      (const MethodInfo_2B05B38 *)Method_System_Comparison_QuestRewardInfo___ctor__);
+      (const MethodInfo_2B42C0C *)Method_System_Comparison_QuestRewardInfo___ctor__);
     v9 = QuestRewardHeelPortraitAction___c_TypeInfo->static_fields;
     v9->__9__16_0 = (struct System_Comparison_QuestRewardInfo__o *)_9__16_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v9->__9__16_0,
       (System_Int32_array **)_9__16_0,
       v10,
@@ -290,10 +290,10 @@ void __fastcall QuestRewardHeelPortraitAction__Setup(
   System_Array__Sort_BattleBuffData_BuffData_(
     (BattleBuffData_BuffData_array *)infos,
     (System_Comparison_T__o *)_9__16_0,
-    (const MethodInfo_1BCD49C *)Method_System_Array_Sort_QuestRewardInfo___);
+    (const MethodInfo_1C56B58 *)Method_System_Array_Sort_QuestRewardInfo___);
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_HeelPortraitMaster___);
+  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_HeelPortraitMaster___);
   if ( !infos )
     goto LABEL_52;
   v18 = *(_QWORD *)&infos->max_length;
@@ -306,8 +306,8 @@ void __fastcall QuestRewardHeelPortraitAction__Setup(
     {
       if ( v20 >= (unsigned int)v18 )
       {
-        v47 = sub_B70798(Master_WarQuestSelectionMaster);
-        sub_B70738(v47, 0LL);
+        v47 = sub_B776C8(Master_WarQuestSelectionMaster);
+        sub_B77668(v47, 0LL);
       }
       v21 = infos->m_Items[v20];
       if ( v21 && v21->fields.type == 15 )
@@ -320,7 +320,7 @@ void __fastcall QuestRewardHeelPortraitAction__Setup(
         }
         Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                                                                           (UnityEngine_UI_Dropdown_DropdownItem_o *)portraitObj,
-                                                                                          (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                                                          (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
         if ( !Master_WarQuestSelectionMaster )
           goto LABEL_52;
         v23 = (UnityEngine_GameObject_o *)Master_WarQuestSelectionMaster;
@@ -345,7 +345,7 @@ void __fastcall QuestRewardHeelPortraitAction__Setup(
         UnityEngine_Transform__set_localScale(v28, *(UnityEngine_Vector3_o *)&v29, 0LL);
         Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                                           v23,
-                                                                                          (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                                                                          (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
         if ( !v19 )
           goto LABEL_52;
         v32 = (UISprite_o *)Master_WarQuestSelectionMaster;
@@ -353,7 +353,7 @@ void __fastcall QuestRewardHeelPortraitAction__Setup(
                                                                                           v19,
                                                                                           &entity,
                                                                                           v21->fields.objectId,
-                                                                                          (const MethodInfo_21C049C *)Method_DataMasterBase_HeelPortraitMaster__HeelPortraitEntity__int__TryGetEntity__);
+                                                                                          (const MethodInfo_21FB8F0 *)Method_DataMasterBase_HeelPortraitMaster__HeelPortraitEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)Master_WarQuestSelectionMaster & 1) != 0 )
         {
           if ( !entity )
@@ -365,13 +365,13 @@ void __fastcall QuestRewardHeelPortraitAction__Setup(
           {
             j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
           }
-          v35 = System_Convert__ToString_42444396(name, 0LL);
+          v35 = System_Convert__ToString_42790284(name, 0LL);
           if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !AtlasManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
           }
-          AtlasManager__SetEventUI_31552376(eventId, v32, v35, 0LL);
+          AtlasManager__SetEventUI_24479740(eventId, v32, v35, 0LL);
           this = v48;
         }
         UnityEngine_GameObject__SetActive(v23, 1, 0LL);
@@ -385,7 +385,7 @@ void __fastcall QuestRewardHeelPortraitAction__Setup(
     goto LABEL_52;
   Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                                                     (UnityEngine_Component_o *)Master_WarQuestSelectionMaster,
-                                                                                    (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
+                                                                                    (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
   if ( !Master_WarQuestSelectionMaster )
     goto LABEL_52;
   ((void (__fastcall *)(DataMasterBase_WarMaster__WarEntity__int__o *, void *))Master_WarQuestSelectionMaster->klass->vtable._8_OnListChangedImplementation.method)(
@@ -400,7 +400,7 @@ void __fastcall QuestRewardHeelPortraitAction__Setup(
   }
   if ( UnityEngine_Object__op_Equality(screenTouchInfo, 0LL, 0LL) )
   {
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)UnityEngine_Component__get_transform(
                                                                                       (UnityEngine_Component_o *)this,
                                                                                       0LL);
@@ -415,9 +415,9 @@ void __fastcall QuestRewardHeelPortraitAction__Setup(
       {
         Component_srcLineSprite = (System_Int32_array **)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                            (UnityEngine_GameObject_o *)Master_WarQuestSelectionMaster,
-                                                           (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
+                                                           (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
         *p_screenTouchInfo = (struct ScreenTouchInformationComponent_o *)Component_srcLineSprite;
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)&this->fields.screenTouchInfo,
           Component_srcLineSprite,
           v40,
@@ -430,7 +430,7 @@ void __fastcall QuestRewardHeelPortraitAction__Setup(
       }
     }
 LABEL_52:
-    sub_B7076C(Master_WarQuestSelectionMaster, v17);
+    sub_B7769C(Master_WarQuestSelectionMaster, v17);
   }
 LABEL_48:
   Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)*p_screenTouchInfo;
@@ -461,15 +461,15 @@ void __fastcall QuestRewardHeelPortraitAction__Update(QuestRewardHeelPortraitAct
   float DEFAULT_FADE_TIME; // s8
   System_Action_o *v10; // x21
 
-  if ( (byte_43501CA & 1) == 0 )
+  if ( (byte_43898FD & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&AvalonSceneManager_TypeInfo);
-    sub_B70694(&CTouch_TypeInfo);
-    sub_B70694(&Method_QuestRewardHeelPortraitAction__Update_b__11_0__);
-    sub_B70694(&Method_QuestRewardHeelPortraitAction_Update__);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_43501CA = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&AvalonSceneManager_TypeInfo);
+    sub_B775C4(&CTouch_TypeInfo);
+    sub_B775C4(&Method_QuestRewardHeelPortraitAction__Update_b__11_0__);
+    sub_B775C4(&Method_QuestRewardHeelPortraitAction_Update__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_43898FD = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -488,10 +488,10 @@ void __fastcall QuestRewardHeelPortraitAction__Update(QuestRewardHeelPortraitAct
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)screenTouchInfo, 0, 0LL);
       v5 = Method_QuestRewardHeelPortraitAction_Update__;
       if ( (*((_BYTE *)Method_QuestRewardHeelPortraitAction_Update__ + 75) & 2) != 0 )
-        v5 = (_QWORD *)sub_B7069C(Method_QuestRewardHeelPortraitAction_Update__);
-      v6 = (System_Reflection_MethodBase_o *)sub_B70678(v5, v5[3]);
+        v5 = (_QWORD *)sub_B775CC(Method_QuestRewardHeelPortraitAction_Update__);
+      v6 = (System_Reflection_MethodBase_o *)sub_B775A8(v5, v5[3]);
       OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0LL);
-      Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v8 = AvalonSceneManager_TypeInfo;
       if ( (BYTE3(AvalonSceneManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -500,11 +500,11 @@ void __fastcall QuestRewardHeelPortraitAction__Update(QuestRewardHeelPortraitAct
         v8 = AvalonSceneManager_TypeInfo;
       }
       DEFAULT_FADE_TIME = v8->static_fields->DEFAULT_FADE_TIME;
-      v10 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+      v10 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
       System_Action___ctor(v10, (Il2CppObject *)this, Method_QuestRewardHeelPortraitAction__Update_b__11_0__, 0LL);
       if ( !Instance )
 LABEL_18:
-        sub_B7076C(screenTouchInfo, v3);
+        sub_B7769C(screenTouchInfo, v3);
       CommonUI__maskFadeout(Instance, 1, DEFAULT_FADE_TIME, v10, 0LL);
     }
   }
@@ -558,14 +558,14 @@ bool __fastcall QuestRewardHeelPortraitAction__Play_d__17__MoveNext(
   bool result; // w0
 
   v8 = this;
-  if ( (byte_4351B26 & 1) == 0 )
+  if ( (byte_438B1A4 & 1) == 0 )
   {
-    sub_B70694(&AvalonSceneManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B70694(&Method_QuestRewardHeelPortraitAction__Play_d__17_MoveNext__);
-    sub_B70694(&UnityEngine_WaitForSeconds_TypeInfo);
-    this = (QuestRewardHeelPortraitAction__Play_d__17_o *)sub_B70694(&StringLiteral_16684/*"ar236"*/);
-    byte_4351B26 = 1;
+    sub_B775C4(&AvalonSceneManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B775C4(&Method_QuestRewardHeelPortraitAction__Play_d__17_MoveNext__);
+    sub_B775C4(&UnityEngine_WaitForSeconds_TypeInfo);
+    this = (QuestRewardHeelPortraitAction__Play_d__17_o *)sub_B775C4(&StringLiteral_16763/*"ar236"*/);
+    byte_438B1A4 = 1;
   }
   _1__state = v8->fields.__1__state;
   _4__this = v8->fields.__4__this;
@@ -596,7 +596,7 @@ bool __fastcall QuestRewardHeelPortraitAction__Play_d__17__MoveNext(
         _4__this->fields.state = 1;
         endAction = (System_Int32_array **)v8->fields.endAction;
         _4__this->fields.endAct = (struct System_Action_o *)endAction;
-        sub_B70630((BattleServantConfConponent_o *)&_4__this->fields.endAct, endAction, v2, v3, v4, v5, v6, v7);
+        sub_B77560((BattleServantConfConponent_o *)&_4__this->fields.endAct, endAction, v2, v3, v4, v5, v6, v7);
         this = (QuestRewardHeelPortraitAction__Play_d__17_o *)UnityEngine_Component__get_gameObject(
                                                                 (UnityEngine_Component_o *)_4__this,
                                                                 0LL);
@@ -605,10 +605,10 @@ bool __fastcall QuestRewardHeelPortraitAction__Play_d__17__MoveNext(
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
           v12 = Method_QuestRewardHeelPortraitAction__Play_d__17_MoveNext__;
           if ( (*((_BYTE *)Method_QuestRewardHeelPortraitAction__Play_d__17_MoveNext__ + 75) & 2) != 0 )
-            v12 = (_QWORD *)sub_B7069C(Method_QuestRewardHeelPortraitAction__Play_d__17_MoveNext__);
-          v13 = (System_Reflection_MethodBase_o *)sub_B70678(v12, v12[3]);
-          OverwriteAssetSoundName__PlaySe(v13, (System_String_o *)StringLiteral_16684/*"ar236"*/, 0LL);
-          this = (QuestRewardHeelPortraitAction__Play_d__17_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+            v12 = (_QWORD *)sub_B775CC(Method_QuestRewardHeelPortraitAction__Play_d__17_MoveNext__);
+          v13 = (System_Reflection_MethodBase_o *)sub_B775A8(v12, v12[3]);
+          OverwriteAssetSoundName__PlaySe(v13, (System_String_o *)StringLiteral_16763/*"ar236"*/, 0LL);
+          this = (QuestRewardHeelPortraitAction__Play_d__17_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           v14 = (CommonUI_o *)this;
           if ( (BYTE3(AvalonSceneManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -619,11 +619,11 @@ bool __fastcall QuestRewardHeelPortraitAction__Play_d__17__MoveNext(
           {
             CommonUI__maskFadein(v14, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0LL, 0LL);
             dispTouchWaitTime = _4__this->fields.dispTouchWaitTime;
-            v16 = (UnityEngine_WaitForSeconds_o *)sub_B70764(UnityEngine_WaitForSeconds_TypeInfo);
+            v16 = (UnityEngine_WaitForSeconds_o *)sub_B77694(UnityEngine_WaitForSeconds_TypeInfo);
             UnityEngine_WaitForSeconds___ctor(v16, dispTouchWaitTime, 0LL);
             v8->fields.__2__current = (Il2CppObject *)v16;
             p__2__current = (BattleServantConfConponent_o *)&v8->fields.__2__current;
-            sub_B70630(p__2__current, (System_Int32_array **)v16, v18, v19, v20, v21, v22, v23);
+            sub_B77560(p__2__current, (System_Int32_array **)v16, v18, v19, v20, v21, v22, v23);
             result = 1;
             *(_DWORD *)&p__2__current[-1].fields.isOpenAfter = 1;
             return result;
@@ -631,7 +631,7 @@ bool __fastcall QuestRewardHeelPortraitAction__Play_d__17__MoveNext(
         }
       }
 LABEL_19:
-      sub_B7076C(this, method);
+      sub_B7769C(this, method);
     }
     return 0;
   }
@@ -655,11 +655,11 @@ void __fastcall __noreturn QuestRewardHeelPortraitAction__Play_d__17__System_Col
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B70698(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B70764(v2);
+  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B70698(&Method_QuestRewardHeelPortraitAction__Play_d__17_System_Collections_IEnumerator_Reset__);
-  sub_B70738(v3, v4);
+  v4 = sub_B775C8(&Method_QuestRewardHeelPortraitAction__Play_d__17_System_Collections_IEnumerator_Reset__);
+  sub_B77668(v3, v4);
 }
 
 
@@ -690,16 +690,16 @@ void __fastcall QuestRewardHeelPortraitAction___c___cctor(const MethodInfo *meth
   System_Int32_array *v7; // x6
   System_Int32_array *v8; // x7
 
-  if ( (byte_4351B24 & 1) == 0 )
+  if ( (byte_438B1A2 & 1) == 0 )
   {
-    sub_B70694(&QuestRewardHeelPortraitAction___c_TypeInfo);
-    byte_4351B24 = 1;
+    sub_B775C4(&QuestRewardHeelPortraitAction___c_TypeInfo);
+    byte_438B1A2 = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(QuestRewardHeelPortraitAction___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(QuestRewardHeelPortraitAction___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = (BattleServantConfConponent_o *)QuestRewardHeelPortraitAction___c_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B70630(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  sub_B77560(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -718,7 +718,7 @@ int32_t __fastcall QuestRewardHeelPortraitAction___c___Setup_b__16_0(
         const MethodInfo *method)
 {
   if ( !x || !y )
-    sub_B7076C(this, x);
+    sub_B7769C(this, x);
   return x->fields.objectId - y->fields.objectId;
 }
 
@@ -748,28 +748,28 @@ void __fastcall QuestRewardHeelPortraitAction___c__DisplayClass14_0___LoadEventU
   System_Int32_array *v12; // x7
 
   v3 = this;
-  if ( (byte_4351B25 & 1) == 0 )
+  if ( (byte_438B1A3 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&AtlasManager_TypeInfo);
-    this = (QuestRewardHeelPortraitAction___c__DisplayClass14_0_o *)sub_B70694(&Method_QuestRewardHeelPortraitAction___c__DisplayClass14_0__LoadEventUI_b__1__);
-    byte_4351B25 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&AtlasManager_TypeInfo);
+    this = (QuestRewardHeelPortraitAction___c__DisplayClass14_0_o *)sub_B775C4(&Method_QuestRewardHeelPortraitAction___c__DisplayClass14_0__LoadEventUI_b__1__);
+    byte_438B1A3 = 1;
   }
   _4__this = v3->fields.__4__this;
   if ( !_4__this )
-    sub_B7076C(this, assetData);
+    sub_B7769C(this, assetData);
   eventId = _4__this->fields.eventId;
   _9__1 = v3->fields.__9__1;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v3,
       Method_QuestRewardHeelPortraitAction___c__DisplayClass14_0__LoadEventUI_b__1__,
       0LL);
     v3->fields.__9__1 = _9__1;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v3->fields.__9__1,
       (System_Int32_array **)_9__1,
       v7,
@@ -781,7 +781,7 @@ void __fastcall QuestRewardHeelPortraitAction___c__DisplayClass14_0___LoadEventU
   }
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadEventUI_31552064(eventId, _9__1, 1, 0LL);
+  AtlasManager__LoadEventUI_24479412(eventId, _9__1, 1, 0LL);
 }
 
 

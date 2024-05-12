@@ -24,7 +24,7 @@ void __fastcall GiftListViewItemIcon__OnClick(GiftListViewItemIcon_o *this, cons
         return;
       }
 LABEL_9:
-      sub_B7076C(this, itemData);
+      sub_B7769C(this, itemData);
     }
   }
 }
@@ -49,7 +49,7 @@ void __fastcall GiftListViewItemIcon__Set(GiftListViewItemIcon_o *this, GiftEnti
 
   this->fields.itemData = indata;
   p_itemData = &this->fields.itemData;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.itemData,
     (System_Int32_array **)indata,
     (System_String_array **)method,
@@ -73,7 +73,7 @@ LABEL_5:
       return;
     }
 LABEL_14:
-    sub_B7076C(item, type);
+    sub_B7769C(item, type);
   }
   if ( (_DWORD)type == 11 )
   {
@@ -117,7 +117,7 @@ void __fastcall GiftListViewItemIcon__SetCallBack(
   System_Int32_array *v7; // x7
 
   this->fields.callbackFunc = call;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.callbackFunc,
     (System_Int32_array **)call,
     (System_String_array **)method,
@@ -135,18 +135,18 @@ void __fastcall GiftListViewItemIcon__SetTouch(GiftListViewItemIcon_o *this, boo
   __int64 v6; // x1
   UnityEngine_Object_o *Component_srcLineSprite; // x20
 
-  if ( (byte_4353163 & 1) == 0 )
+  if ( (byte_438C8E2 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_Collider___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4353163 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_Collider___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438C8E2 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_11;
   Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                       gameObject,
-                                                      (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+                                                      (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -161,7 +161,7 @@ void __fastcall GiftListViewItemIcon__SetTouch(GiftListViewItemIcon_o *this, boo
       return;
     }
 LABEL_11:
-    sub_B7076C(gameObject, v6);
+    sub_B7769C(gameObject, v6);
   }
 }
 
@@ -173,7 +173,7 @@ void __fastcall GiftListViewItemIcon__Show(GiftListViewItemIcon_o *this, const M
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
 }
 
@@ -193,7 +193,7 @@ void __fastcall GiftListViewItemIcon_ClickDelegate___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B70630(p_method);
+  sub_B77560(p_method);
 }
 
 
@@ -208,7 +208,7 @@ System_IAsyncResult_o *__fastcall GiftListViewItemIcon_ClickDelegate__BeginInvok
 
   v6[0] = (__int64)gift;
   v6[1] = 0LL;
-  return (System_IAsyncResult_o *)sub_B70638(this, v6, callback, object);
+  return (System_IAsyncResult_o *)sub_B77568(this, v6, callback, object);
 }
 
 
@@ -217,7 +217,7 @@ void __fastcall GiftListViewItemIcon_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7063C(result, 0LL, method);
+  sub_B7756C(result, 0LL, method);
 }
 
 
@@ -290,8 +290,8 @@ LABEL_5:
       v28 = *(_QWORD *)&v27->fields.extra_arg;
       v30 = *(void (__fastcall **)(GiftEntity_o *, __int64))&v27->fields.method_ptr;
       if ( *(__int16 *)(v28 + 72) == -1 )
-        sub_B70750(*(_QWORD *)&v27->fields.extra_arg, gift);
-      v31 = sub_B706C4(v28);
+        sub_B77680(*(_QWORD *)&v27->fields.extra_arg, gift);
+      v31 = sub_B775F4(v28);
       v32 = *(unsigned __int8 *)(v28 + 74);
       if ( (v31 & 1) != 0 )
       {
@@ -304,8 +304,8 @@ LABEL_5:
         {
           if ( *(__int16 *)(v28 + 72) != -1 && this->fields.m_target )
           {
-            v40 = sub_B706BC(v28);
-            v41 = sub_B70AC0(v28);
+            v40 = sub_B775EC(v28);
+            v41 = sub_B779F0(v28);
             if ( (v40 & 1) != 0 )
             {
               if ( (v41 & 1) != 0 )
@@ -329,7 +329,7 @@ LABEL_5:
                 else
                 {
 LABEL_57:
-                  v23 = sub_B08590(gift, v43, v44);
+                  v23 = sub_B0F4C0(gift, v43, v44);
                 }
                 v15 = *(_QWORD *)(v23 + 8);
               }
@@ -337,7 +337,7 @@ LABEL_57:
               {
                 v15 = *((_QWORD *)&gift->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v28 + 72));
               }
-              v24 = (void (__fastcall **)(GiftEntity_o *, _QWORD))sub_B70744(v15, v28);
+              v24 = (void (__fastcall **)(GiftEntity_o *, _QWORD))sub_B77674(v15, v28);
               (*v24)(gift, v24);
             }
             else
@@ -363,7 +363,7 @@ LABEL_57:
                 else
                 {
 LABEL_11:
-                  v14 = sub_B08590(gift, class_0, v9);
+                  v14 = sub_B0F4C0(gift, class_0, v9);
                 }
                 (*(void (__fastcall **)(GiftEntity_o *, _QWORD))v14)(gift, *(_QWORD *)(v14 + 8));
               }
@@ -385,8 +385,8 @@ LABEL_58:
           goto LABEL_58;
         if ( *(__int16 *)(v28 + 72) != -1 && (*(_BYTE *)(*v29 + 277) & 1) == 0 && this->fields.m_target )
         {
-          v33 = sub_B706BC(v28);
-          v34 = sub_B70AC0(v28);
+          v33 = sub_B775EC(v28);
+          v34 = sub_B779F0(v28);
           if ( (v33 & 1) != 0 )
           {
             if ( (v34 & 1) != 0 )
@@ -410,7 +410,7 @@ LABEL_58:
               else
               {
 LABEL_48:
-                v25 = sub_B08590(v29, v36, v37);
+                v25 = sub_B0F4C0(v29, v36, v37);
               }
               v22 = *(_QWORD *)(v25 + 8);
             }
@@ -418,7 +418,7 @@ LABEL_48:
             {
               v22 = *(_QWORD *)(*v29 + 16LL * *(unsigned __int16 *)(v28 + 72) + 320);
             }
-            v26 = (void (__fastcall **)(__int64 *, GiftEntity_o *, _QWORD))sub_B70744(v22, v28);
+            v26 = (void (__fastcall **)(__int64 *, GiftEntity_o *, _QWORD))sub_B77674(v22, v28);
             (*v26)(v29, gift, v26);
           }
           else
@@ -444,7 +444,7 @@ LABEL_48:
               else
               {
 LABEL_19:
-                v21 = sub_B08590(v29, v17, v16);
+                v21 = sub_B0F4C0(v29, v17, v16);
               }
               (*(void (__fastcall **)(__int64 *, GiftEntity_o *, _QWORD))v21)(v29, gift, *(_QWORD *)(v21 + 8));
             }

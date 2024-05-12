@@ -1,9 +1,9 @@
 void __fastcall ChangeGenderTypeWindow___ctor(ChangeGenderTypeWindow_o *this, const MethodInfo *method)
 {
-  if ( (byte_4354BB7 & 1) == 0 )
+  if ( (byte_438E476 & 1) == 0 )
   {
-    sub_B70694(&BaseDialog_TypeInfo);
-    byte_4354BB7 = 1;
+    sub_B775C4(&BaseDialog_TypeInfo);
+    byte_438E476 = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -32,7 +32,7 @@ void __fastcall ChangeGenderTypeWindow__Callback(
   if ( callbackFunc )
   {
     this->fields.callbackFunc = 0LL;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)p_callbackFunc,
       0LL,
       *(System_String_array ***)&changeType,
@@ -50,11 +50,11 @@ void __fastcall ChangeGenderTypeWindow__Close(ChangeGenderTypeWindow_o *this, co
 {
   const MethodInfo *v2; // x2
 
-  ChangeGenderTypeWindow__Close_30696432(this, 0LL, v2);
+  ChangeGenderTypeWindow__Close_31171176(this, 0LL, v2);
 }
 
 
-void __fastcall ChangeGenderTypeWindow__Close_30696432(
+void __fastcall ChangeGenderTypeWindow__Close_31171176(
         ChangeGenderTypeWindow_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -66,14 +66,14 @@ void __fastcall ChangeGenderTypeWindow__Close_30696432(
   System_Int32_array *v7; // x7
   System_Action_o *v10; // x20
 
-  if ( (byte_4354BB6 & 1) == 0 )
+  if ( (byte_438E475 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_ChangeGenderTypeWindow_EndClose__);
-    byte_4354BB6 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_ChangeGenderTypeWindow_EndClose__);
+    byte_438E475 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc,
     (System_Int32_array **)callback,
     (System_String_array **)method,
@@ -82,7 +82,7 @@ void __fastcall ChangeGenderTypeWindow__Close_30696432(
     v5,
     v6,
     v7);
-  v10 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_ChangeGenderTypeWindow_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
 }
@@ -105,7 +105,7 @@ void __fastcall ChangeGenderTypeWindow__EndClose(ChangeGenderTypeWindow_o *this,
   ChangeGenderTypeWindow__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc;
@@ -113,7 +113,7 @@ void __fastcall ChangeGenderTypeWindow__EndClose(ChangeGenderTypeWindow_o *this,
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_B70630(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_B77560(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
     System_Action__Invoke(v12, 0LL);
   }
 }
@@ -133,7 +133,7 @@ void __fastcall ChangeGenderTypeWindow__Init(ChangeGenderTypeWindow_o *this, con
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -148,7 +148,7 @@ void __fastcall ChangeGenderTypeWindow__OnClickFemale(ChangeGenderTypeWindow_o *
   bool v6; // w1
 
   this->fields.changeGenderType = 2;
-  if ( System_Int32__Equals_39283908((_DWORD)this + 136, 2, 0LL) )
+  if ( System_Int32__Equals_39547160((_DWORD)this + 136, 2, 0LL) )
   {
     v5 = this;
     v6 = 0;
@@ -170,7 +170,7 @@ void __fastcall ChangeGenderTypeWindow__OnClickMale(ChangeGenderTypeWindow_o *th
   bool v6; // w1
 
   this->fields.changeGenderType = 1;
-  if ( System_Int32__Equals_39283908((_DWORD)this + 136, 1, 0LL) )
+  if ( System_Int32__Equals_39547160((_DWORD)this + 136, 1, 0LL) )
   {
     v5 = this;
     v6 = 0;
@@ -204,16 +204,16 @@ void __fastcall ChangeGenderTypeWindow__OpenChangeGenderWindow(
   UILabel_o *maleTxt; // x20
   System_Action_o *v19; // x20
 
-  if ( (byte_4354BB5 & 1) == 0 )
+  if ( (byte_438E474 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_ChangeGenderTypeWindow_EndOpen__);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_8720/*"MALE_TEXT"*/);
-    sub_B70694(&StringLiteral_6424/*"FEMALE_TEXT"*/);
-    sub_B70694(&StringLiteral_3019/*"CHANGE_GENDER_INFO"*/);
-    sub_B70694(&StringLiteral_3020/*"CHANGE_GENDER_TITLE"*/);
-    byte_4354BB5 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_ChangeGenderTypeWindow_EndOpen__);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_8776/*"MALE_TEXT"*/);
+    sub_B775C4(&StringLiteral_6480/*"FEMALE_TEXT"*/);
+    sub_B775C4(&StringLiteral_3068/*"CHANGE_GENDER_INFO"*/);
+    sub_B775C4(&StringLiteral_3069/*"CHANGE_GENDER_TITLE"*/);
+    byte_438E474 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
@@ -221,7 +221,7 @@ void __fastcall ChangeGenderTypeWindow__OpenChangeGenderWindow(
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   this->fields.callbackFunc = callback;
   this->fields.currentGenderType = currentType;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.callbackFunc,
     (System_Int32_array **)callback,
     v9,
@@ -236,28 +236,28 @@ void __fastcall ChangeGenderTypeWindow__OpenChangeGenderWindow(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3020/*"CHANGE_GENDER_TITLE"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3069/*"CHANGE_GENDER_TITLE"*/, 0LL);
   if ( !titleLb )
     goto LABEL_12;
   UILabel__set_text(titleLb, (System_String_o *)gameObject, 0LL);
   inputInfoLb = this->fields.inputInfoLb;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3019/*"CHANGE_GENDER_INFO"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3068/*"CHANGE_GENDER_INFO"*/, 0LL);
   if ( !inputInfoLb
     || (UILabel__set_text(inputInfoLb, (System_String_o *)gameObject, 0LL),
         femaleTxt = this->fields.femaleTxt,
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6424/*"FEMALE_TEXT"*/, 0LL),
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6480/*"FEMALE_TEXT"*/, 0LL),
         !femaleTxt)
     || (UILabel__set_text(femaleTxt, (System_String_o *)gameObject, 0LL),
         maleTxt = this->fields.maleTxt,
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8720/*"MALE_TEXT"*/, 0LL),
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8776/*"MALE_TEXT"*/, 0LL),
         !maleTxt) )
   {
 LABEL_12:
-    sub_B7076C(gameObject, v8);
+    sub_B7769C(gameObject, v8);
   }
   UILabel__set_text(maleTxt, (System_String_o *)gameObject, 0LL);
   this->fields.state = 1;
-  v19 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v19 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v19, (Il2CppObject *)this, Method_ChangeGenderTypeWindow_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v19, 0, 0LL);
 }
@@ -278,10 +278,10 @@ void __fastcall ChangeGenderTypeWindow__add_callbackFunc(
   ChangeGenderTypeWindow_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4354BB3 & 1) == 0 )
+  if ( (byte_438E472 & 1) == 0 )
   {
-    sub_B70694(&ChangeGenderTypeWindow_CallbackFunc_TypeInfo);
-    byte_4354BB3 = 1;
+    sub_B775C4(&ChangeGenderTypeWindow_CallbackFunc_TypeInfo);
+    byte_438E472 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -294,13 +294,13 @@ void __fastcall ChangeGenderTypeWindow__add_callbackFunc(
       if ( (ChangeGenderTypeWindow_CallbackFunc_c *)v8->klass != ChangeGenderTypeWindow_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B70A60(v8);
+  sub_B77990(v8);
   ChangeGenderTypeWindow__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -319,10 +319,10 @@ void __fastcall ChangeGenderTypeWindow__remove_callbackFunc(
   ChangeGenderTypeWindow_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4354BB4 & 1) == 0 )
+  if ( (byte_438E473 & 1) == 0 )
   {
-    sub_B70694(&ChangeGenderTypeWindow_CallbackFunc_TypeInfo);
-    byte_4354BB4 = 1;
+    sub_B775C4(&ChangeGenderTypeWindow_CallbackFunc_TypeInfo);
+    byte_438E473 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -335,13 +335,13 @@ void __fastcall ChangeGenderTypeWindow__remove_callbackFunc(
       if ( (ChangeGenderTypeWindow_CallbackFunc_c *)v8->klass != ChangeGenderTypeWindow_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B70A60(v8);
+  sub_B77990(v8);
   ChangeGenderTypeWindow__Init(v11, v12);
 }
 
@@ -361,7 +361,7 @@ void __fastcall ChangeGenderTypeWindow_CallbackFunc___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B70630(p_method);
+  sub_B77560(p_method);
 }
 
 
@@ -381,16 +381,16 @@ System_IAsyncResult_o *__fastcall ChangeGenderTypeWindow_CallbackFunc__BeginInvo
 
   v13[0] = result;
   v12 = changeType;
-  if ( (byte_434ED65 & 1) == 0 )
+  if ( (byte_4388554 & 1) == 0 )
   {
-    sub_B70694(&bool_TypeInfo);
-    sub_B70694(&int_TypeInfo);
-    byte_434ED65 = 1;
+    sub_B775C4(&bool_TypeInfo);
+    sub_B775C4(&int_TypeInfo);
+    byte_4388554 = 1;
   }
   v11[2] = 0LL;
   v11[0] = j_il2cpp_value_box_0(bool_TypeInfo, v13, *(_QWORD *)&changeType);
   v11[1] = j_il2cpp_value_box_0(int_TypeInfo, &v12, v9);
-  return (System_IAsyncResult_o *)sub_B70638(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_B77568(this, v11, callback, object);
 }
 
 
@@ -399,7 +399,7 @@ void __fastcall ChangeGenderTypeWindow_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7063C(result, 0LL, method);
+  sub_B7756C(result, 0LL, method);
 }
 
 
@@ -457,8 +457,8 @@ LABEL_5:
       v22 = *(_QWORD *)&v20->fields.extra_arg;
       v23 = *(void (__fastcall **)(bool, _QWORD, __int64))&v20->fields.method_ptr;
       if ( *(__int16 *)(v22 + 72) == -1 )
-        sub_B70750(*(_QWORD *)&v20->fields.extra_arg, result);
-      if ( (sub_B706C4(v22) & 1) == 0 )
+        sub_B77680(*(_QWORD *)&v20->fields.extra_arg, result);
+      if ( (sub_B775F4(v22) & 1) == 0 )
         break;
       if ( *(_BYTE *)(v22 + 74) != 2 )
         goto LABEL_35;
@@ -469,8 +469,8 @@ LABEL_36:
     }
     if ( v21 && *(__int16 *)(v22 + 72) != -1 && (*(_BYTE *)(*v21 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v24 = sub_B706BC(v22);
-      v25 = sub_B70AC0(v22);
+      v24 = sub_B775EC(v22);
+      v25 = sub_B779F0(v22);
       if ( (v24 & 1) != 0 )
       {
         if ( (v25 & 1) != 0 )
@@ -494,7 +494,7 @@ LABEL_36:
           else
           {
 LABEL_34:
-            v18 = sub_B08590(v21, v27, v28);
+            v18 = sub_B0F4C0(v21, v27, v28);
           }
           v17 = *(_QWORD *)(v18 + 8);
         }
@@ -502,7 +502,7 @@ LABEL_34:
         {
           v17 = *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320);
         }
-        v19 = (void (__fastcall **)(__int64 *, bool, _QWORD, _QWORD))sub_B70744(v17, v22);
+        v19 = (void (__fastcall **)(__int64 *, bool, _QWORD, _QWORD))sub_B77674(v17, v22);
         (*v19)(v21, result, (unsigned int)changeType, v19);
       }
       else
@@ -528,7 +528,7 @@ LABEL_34:
           else
           {
 LABEL_11:
-            v16 = sub_B08590(v21, class_0, v11);
+            v16 = sub_B0F4C0(v21, class_0, v11);
           }
           (*(void (__fastcall **)(__int64 *, bool, _QWORD, _QWORD))v16)(
             v21,

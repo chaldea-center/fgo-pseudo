@@ -12,10 +12,10 @@ void __fastcall WarBoardDispChangeButton__ApplyFsOffsetAdjustment(
   __int64 v4; // x1
   FSOffset_o *v5; // x0
 
-  if ( (byte_434E58C & 1) == 0 )
+  if ( (byte_4387B5D & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_434E58C = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4387B5D = 1;
   }
   fsOffset = (UnityEngine_Object_o *)this->fields.fsOffset;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -27,7 +27,7 @@ void __fastcall WarBoardDispChangeButton__ApplyFsOffsetAdjustment(
   {
     v5 = this->fields.fsOffset;
     if ( !v5 || (FSOffset__AddOffsetX(v5, 0LL), (v5 = this->fields.fsOffset) == 0LL) )
-      sub_B7076C(v5, v4);
+      sub_B7769C(v5, v4);
     FSOffset__AddBottomY(v5, 0LL);
   }
 }
@@ -40,7 +40,7 @@ void __fastcall WarBoardDispChangeButton__Awake(WarBoardDispChangeButton_o *this
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   this->fields._DispChangeIsTouch_k__BackingField = 0;
 }
@@ -57,28 +57,28 @@ void __fastcall WarBoardDispChangeButton__OnClickButton(WarBoardDispChangeButton
   __int64 v9; // x19
   WarBoardManager_o *v10; // x0
 
-  if ( (byte_434E58B & 1) == 0 )
+  if ( (byte_4387B5C & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__);
-    sub_B70694(&Method_WarBoardDispChangeButton_OnClickButton__);
-    byte_434E58B = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__);
+    sub_B775C4(&Method_WarBoardDispChangeButton_OnClickButton__);
+    byte_4387B5C = 1;
   }
   v3 = Method_WarBoardDispChangeButton_OnClickButton__;
   if ( (*((_BYTE *)Method_WarBoardDispChangeButton_OnClickButton__ + 75) & 2) != 0 )
-    v3 = (_QWORD *)sub_B7069C();
-  v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+    v3 = (_QWORD *)sub_B775CC();
+  v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
   this->fields._DispChangeIsTouch_k__BackingField = 1;
   WarBoardDispChangeButton__SetDispUIRoot(this, 0, v5);
   v8 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 3);
   if ( (*(_BYTE *)(v8 + 306) & 1) == 0 )
-    sub_B08394(*((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 3));
+    sub_B0F2C4(*((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 3));
   v9 = **(_QWORD **)(v8 + 192);
   if ( (*(_BYTE *)(v9 + 306) & 1) == 0 )
-    sub_B08394(v9);
+    sub_B0F2C4(v9);
   v10 = **(WarBoardManager_o ***)(v9 + 184);
   if ( !v10 )
-    sub_B7076C(0LL, v6);
+    sub_B7769C(0LL, v6);
   WarBoardManager__ChangeMapUIStateDelayCall(v10, 1, v7);
 }
 
@@ -93,7 +93,7 @@ void __fastcall WarBoardDispChangeButton__SetActive(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v5);
+    sub_B7769C(0LL, v5);
   UnityEngine_GameObject__SetActive(gameObject, flag, 0LL);
 }
 
@@ -119,19 +119,19 @@ void __fastcall WarBoardDispChangeButton__SetDispUIRoot(
   WarBoardDispChangeComponent_o *v16; // x0
 
   v4 = (UnityEngine_Component_o *)this;
-  if ( (byte_434E58D & 1) == 0 )
+  if ( (byte_4387B5E & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_WarBoardDispChangeComponent___);
-    this = (WarBoardDispChangeButton_o *)sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__);
-    byte_434E58D = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_WarBoardDispChangeComponent___);
+    this = (WarBoardDispChangeButton_o *)sub_B775C4(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__);
+    byte_4387B5E = 1;
   }
   v5 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 3);
   if ( (*(_BYTE *)(v5 + 306) & 1) == 0 )
-    this = (WarBoardDispChangeButton_o *)sub_B08394(*((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__
+    this = (WarBoardDispChangeButton_o *)sub_B0F2C4(*((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__
                                                     + 3));
   v6 = **(_QWORD **)(v5 + 192);
   if ( (*(_BYTE *)(v6 + 306) & 1) == 0 )
-    this = (WarBoardDispChangeButton_o *)sub_B08394(v6);
+    this = (WarBoardDispChangeButton_o *)sub_B0F2C4(v6);
   v7 = *(WarBoardManager_o ***)(v6 + 184);
   v8 = *v7;
   if ( !*v7
@@ -141,9 +141,9 @@ void __fastcall WarBoardDispChangeButton__SetDispUIRoot(
     || (this = (WarBoardDispChangeButton_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL
     || (this = (WarBoardDispChangeButton_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                (UnityEngine_GameObject_o *)this,
-                                               (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_WarBoardDispChangeComponent___)) == 0LL )
+                                               (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_WarBoardDispChangeComponent___)) == 0LL )
   {
-    sub_B7076C(this, isDisp);
+    sub_B7769C(this, isDisp);
   }
   v10 = this;
   WarBoardDispChangeComponent__SetUiRootAlpha((WarBoardDispChangeComponent_o *)this, isDisp, v9);
@@ -174,7 +174,7 @@ void __fastcall WarBoardDispChangeButton__SetUpPositionForConfigurationMode(
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_Transform__set_localPosition(transform, this->fields.positionForConfigurationMode, 0LL);
   WarBoardDispChangeButton__ApplyFsOffsetAdjustment(this, v5);
 }
@@ -190,7 +190,7 @@ void __fastcall WarBoardDispChangeButton__SetUpPositionForPlayMode(
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_Transform__set_localPosition(transform, this->fields.positionForPlayMode, 0LL);
   WarBoardDispChangeButton__ApplyFsOffsetAdjustment(this, v5);
 }

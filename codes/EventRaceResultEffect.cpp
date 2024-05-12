@@ -9,16 +9,16 @@ void __fastcall EventRaceResultEffect___cctor(const MethodInfo *method)
   BattleServantConfConponent_o *static_fields; // x0
   System_Int32_array **v8; // x1
 
-  if ( (byte_43525B6 & 1) == 0 )
+  if ( (byte_438BD32 & 1) == 0 )
   {
-    sub_B70694(&EventRaceResultEffect_TypeInfo);
-    sub_B70694(&StringLiteral_22032/*"raceresults_team_{0}"*/);
-    byte_43525B6 = 1;
+    sub_B775C4(&EventRaceResultEffect_TypeInfo);
+    sub_B775C4(&StringLiteral_22131/*"raceresults_team_{0}"*/);
+    byte_438BD32 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventRaceResultEffect_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_22032/*"raceresults_team_{0}"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_22032/*"raceresults_team_{0}"*/;
-  sub_B70630(static_fields, v8, v1, v2, v3, v4, v5, v6);
+  v8 = (System_Int32_array **)StringLiteral_22131/*"raceresults_team_{0}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_22131/*"raceresults_team_{0}"*/;
+  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
   EventRaceResultEffect_TypeInfo->static_fields->REST_DISTANCE_FONT_SIZE = 16;
 }
 
@@ -49,29 +49,29 @@ void __fastcall EventRaceResultEffect__Awake(EventRaceResultEffect_o *this, cons
   EventRaceResultEffect_StateTouchWait_o *v18; // x21
   const MethodInfo *v19; // x2
 
-  if ( (byte_43525AE & 1) == 0 )
+  if ( (byte_438BD2A & 1) == 0 )
   {
-    sub_B70694(&Method_CStateManager_EventRaceResultEffect___ctor__);
-    sub_B70694(&Method_CStateManager_EventRaceResultEffect__add__);
-    sub_B70694(&CStateManager_EventRaceResultEffect__TypeInfo);
-    sub_B70694(&EventRaceResultEffect_StateNone_TypeInfo);
-    sub_B70694(&EventRaceResultEffect_StatePlay_TypeInfo);
-    sub_B70694(&EventRaceResultEffect_StateTouchWait_TypeInfo);
-    byte_43525AE = 1;
+    sub_B775C4(&Method_CStateManager_EventRaceResultEffect___ctor__);
+    sub_B775C4(&Method_CStateManager_EventRaceResultEffect__add__);
+    sub_B775C4(&CStateManager_EventRaceResultEffect__TypeInfo);
+    sub_B775C4(&EventRaceResultEffect_StateNone_TypeInfo);
+    sub_B775C4(&EventRaceResultEffect_StatePlay_TypeInfo);
+    sub_B775C4(&EventRaceResultEffect_StateTouchWait_TypeInfo);
+    byte_438BD2A = 1;
   }
   p_mFSM = &this->fields.mFSM;
   if ( !this->fields.mFSM )
   {
-    v4 = (CStateManager_QAASpotStateController_IMapSpot__o *)sub_B70764(CStateManager_EventRaceResultEffect__TypeInfo);
+    v4 = (CStateManager_QAASpotStateController_IMapSpot__o *)sub_B77694(CStateManager_EventRaceResultEffect__TypeInfo);
     CStateManager_QAASpotStateController_IMapSpot____ctor(
       v4,
       (QAASpotStateController_IMapSpot_o *)this,
       3,
-      (const MethodInfo_2C7FFDC *)Method_CStateManager_EventRaceResultEffect___ctor__);
+      (const MethodInfo_2CBF0B0 *)Method_CStateManager_EventRaceResultEffect___ctor__);
     this->fields.mFSM = (struct CStateManager_EventRaceResultEffect__o *)v4;
-    sub_B70630((BattleServantConfConponent_o *)&this->fields.mFSM, (System_Int32_array **)v4, v5, v6, v7, v8, v9, v10);
+    sub_B77560((BattleServantConfConponent_o *)&this->fields.mFSM, (System_Int32_array **)v4, v5, v6, v7, v8, v9, v10);
     mFSM = this->fields.mFSM;
-    v12 = (EventRaceResultEffect_StateNone_o *)sub_B70764(EventRaceResultEffect_StateNone_TypeInfo);
+    v12 = (EventRaceResultEffect_StateNone_o *)sub_B77694(EventRaceResultEffect_StateNone_TypeInfo);
     EventRaceResultEffect_StateNone___ctor(v12, 0LL);
     if ( !mFSM )
       goto LABEL_8;
@@ -79,29 +79,29 @@ void __fastcall EventRaceResultEffect__Awake(EventRaceResultEffect_o *this, cons
       (CStateManager_QAASpotStateController_IMapSpot__o *)mFSM,
       0,
       (IState_T__o *)v12,
-      (const MethodInfo_2C800A8 *)Method_CStateManager_EventRaceResultEffect__add__);
+      (const MethodInfo_2CBF17C *)Method_CStateManager_EventRaceResultEffect__add__);
     v15 = (CStateManager_QAASpotStateController_IMapSpot__o *)*p_mFSM;
-    v16 = (EventRaceResultEffect_StatePlay_o *)sub_B70764(EventRaceResultEffect_StatePlay_TypeInfo);
+    v16 = (EventRaceResultEffect_StatePlay_o *)sub_B77694(EventRaceResultEffect_StatePlay_TypeInfo);
     EventRaceResultEffect_StatePlay___ctor(v16, 0LL);
     if ( !v15
       || (CStateManager_QAASpotStateController_IMapSpot___add(
             v15,
             1,
             (IState_T__o *)v16,
-            (const MethodInfo_2C800A8 *)Method_CStateManager_EventRaceResultEffect__add__),
+            (const MethodInfo_2CBF17C *)Method_CStateManager_EventRaceResultEffect__add__),
           v17 = (CStateManager_QAASpotStateController_IMapSpot__o *)*p_mFSM,
-          v18 = (EventRaceResultEffect_StateTouchWait_o *)sub_B70764(EventRaceResultEffect_StateTouchWait_TypeInfo),
+          v18 = (EventRaceResultEffect_StateTouchWait_o *)sub_B77694(EventRaceResultEffect_StateTouchWait_TypeInfo),
           EventRaceResultEffect_StateTouchWait___ctor(v18, 0LL),
           !v17) )
     {
 LABEL_8:
-      sub_B7076C(v13, v14);
+      sub_B7769C(v13, v14);
     }
     CStateManager_QAASpotStateController_IMapSpot___add(
       v17,
       2,
       (IState_T__o *)v18,
-      (const MethodInfo_2C800A8 *)Method_CStateManager_EventRaceResultEffect__add__);
+      (const MethodInfo_2CBF17C *)Method_CStateManager_EventRaceResultEffect__add__);
     EventRaceResultEffect__SetState(this, 0, v19);
   }
 }
@@ -113,14 +113,14 @@ int32_t __fastcall EventRaceResultEffect__GetState(EventRaceResultEffect_o *this
   struct CStateManager_EventRaceResultEffect__o *mFSM; // x8
 
   v2 = this;
-  if ( (byte_43525B4 & 1) == 0 )
+  if ( (byte_438BD30 & 1) == 0 )
   {
-    this = (EventRaceResultEffect_o *)sub_B70694(&Method_CStateManager_EventRaceResultEffect__getState__);
-    byte_43525B4 = 1;
+    this = (EventRaceResultEffect_o *)sub_B775C4(&Method_CStateManager_EventRaceResultEffect__getState__);
+    byte_438BD30 = 1;
   }
   mFSM = v2->fields.mFSM;
   if ( !mFSM )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return mFSM->fields.m_state;
 }
 
@@ -135,19 +135,19 @@ System_String_o *__fastcall EventRaceResultEffect__MakeRestDistanceStr(
   Il2CppObject *v6; // x0
   int64_t v8; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_43525B2 & 1) == 0 )
+  if ( (byte_438BD2E & 1) == 0 )
   {
-    sub_B70694(&long_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_5768/*"EVENT_RACE_RESULT_PATH_LENGTH"*/);
-    byte_43525B2 = 1;
+    sub_B775C4(&long_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_5823/*"EVENT_RACE_RESULT_PATH_LENGTH"*/);
+    byte_438BD2E = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_5768/*"EVENT_RACE_RESULT_PATH_LENGTH"*/, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_5823/*"EVENT_RACE_RESULT_PATH_LENGTH"*/, 0LL);
   v8 = restDistance;
   v6 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v8, v5);
   return System_String__Format(v4, v6, 0LL);
@@ -173,12 +173,12 @@ System_String_o *__fastcall EventRaceResultEffect__MakeTimeStr(
   int v16; // [xsp+18h] [xbp-28h] BYREF
   int v17; // [xsp+1Ch] [xbp-24h] BYREF
 
-  if ( (byte_43525B1 & 1) == 0 )
+  if ( (byte_438BD2D & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_5773/*"EVENT_RACE_RESULT_TIME_STR"*/);
-    byte_43525B1 = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_5828/*"EVENT_RACE_RESULT_TIME_STR"*/);
+    byte_438BD2D = 1;
   }
   v4 = utime / 3600;
   v5 = (int)utime % 60;
@@ -188,14 +188,14 @@ System_String_o *__fastcall EventRaceResultEffect__MakeTimeStr(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_5773/*"EVENT_RACE_RESULT_TIME_STR"*/, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_5828/*"EVENT_RACE_RESULT_TIME_STR"*/, 0LL);
   v17 = v4;
   v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17, v8);
   v16 = v6;
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16, v10);
   v15 = v5;
   v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15, v12);
-  return System_String__Format_44759232(v7, v9, v11, v13, 0LL);
+  return System_String__Format_44903000(v7, v9, v11, v13, 0LL);
 }
 
 
@@ -232,19 +232,19 @@ void __fastcall EventRaceResultEffect__Play(
   AvalonSceneManager_c *v30; // x8
   System_Action_o *v31; // x21
 
-  if ( (byte_43525B3 & 1) == 0 )
+  if ( (byte_438BD2F & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&AvalonSceneManager_TypeInfo);
-    sub_B70694(&Method_EventRaceResultEffect__Play_b__17_0__);
-    sub_B70694(&Method_EventRaceResultEffect__Play_b__17_1__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B70694(&SimpleAnimation_State_TypeInfo);
-    byte_43525B3 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&AvalonSceneManager_TypeInfo);
+    sub_B775C4(&Method_EventRaceResultEffect__Play_b__17_0__);
+    sub_B775C4(&Method_EventRaceResultEffect__Play_b__17_1__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B775C4(&SimpleAnimation_State_TypeInfo);
+    byte_438BD2F = 1;
   }
   this->fields.mEndAct = end_act;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.mEndAct,
     (System_Int32_array **)end_act,
     (System_String_array **)method,
@@ -296,7 +296,7 @@ void __fastcall EventRaceResultEffect__Play(
           if ( gameObject )
           {
             UnityEngine_AnimationState__set_speed((UnityEngine_AnimationState_o *)gameObject, 0.0, 0LL);
-            Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+            Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
             v25 = AvalonSceneManager_TypeInfo;
             if ( (BYTE3(AvalonSceneManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -305,7 +305,7 @@ void __fastcall EventRaceResultEffect__Play(
               v25 = AvalonSceneManager_TypeInfo;
             }
             DEFAULT_FADE_TIME = v25->static_fields->DEFAULT_FADE_TIME;
-            v27 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+            v27 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
             v28 = &Method_EventRaceResultEffect__Play_b__17_1__;
             goto LABEL_35;
           }
@@ -313,7 +313,7 @@ void __fastcall EventRaceResultEffect__Play(
       }
     }
 LABEL_37:
-    sub_B7076C(gameObject, v11);
+    sub_B7769C(gameObject, v11);
   }
   v14 = this->fields.mSimpleAnimation;
   if ( !v14 )
@@ -343,10 +343,10 @@ LABEL_37:
   else
   {
 LABEL_16:
-    v20 = sub_B08590(gameObject, SimpleAnimation_State_TypeInfo, 8LL);
+    v20 = sub_B0F4C0(gameObject, SimpleAnimation_State_TypeInfo, 8LL);
   }
   (*(void (__fastcall **)(UnityEngine_GameObject_o *, _QWORD, float))v20)(v17, *(_QWORD *)(v20 + 8), 0.0);
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v30 = AvalonSceneManager_TypeInfo;
   if ( (BYTE3(AvalonSceneManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -355,7 +355,7 @@ LABEL_16:
     v30 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v30->static_fields->DEFAULT_FADE_TIME;
-  v27 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v27 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   v28 = &Method_EventRaceResultEffect__Play_b__17_0__;
 LABEL_35:
   v31 = v27;
@@ -371,18 +371,18 @@ void __fastcall EventRaceResultEffect__SetState(EventRaceResultEffect_o *this, i
 {
   struct CStateManager_EventRaceResultEffect__o *mFSM; // x0
 
-  if ( (byte_43525B5 & 1) == 0 )
+  if ( (byte_438BD31 & 1) == 0 )
   {
-    sub_B70694(&Method_CStateManager_EventRaceResultEffect__setState__);
-    byte_43525B5 = 1;
+    sub_B775C4(&Method_CStateManager_EventRaceResultEffect__setState__);
+    byte_438BD31 = 1;
   }
   mFSM = this->fields.mFSM;
   if ( !mFSM )
-    sub_B7076C(0LL, *(_QWORD *)&state);
+    sub_B7769C(0LL, *(_QWORD *)&state);
   CStateManager_QAASpotStateController_IMapSpot___setState(
     (CStateManager_QAASpotStateController_IMapSpot__o *)mFSM,
     state,
-    (const MethodInfo_2C8014C *)Method_CStateManager_EventRaceResultEffect__setState__);
+    (const MethodInfo_2CBF220 *)Method_CStateManager_EventRaceResultEffect__setState__);
 }
 
 
@@ -436,26 +436,26 @@ void __fastcall EventRaceResultEffect__SetUp(
   int v49; // [xsp+18h] [xbp-58h] BYREF
   int32_t v50; // [xsp+1Ch] [xbp-54h] BYREF
 
-  if ( (byte_43525B0 & 1) == 0 )
+  if ( (byte_438BD2C & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponentInChildren_Animation___);
-    sub_B70694(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
-    sub_B70694(&EventRaceResultEffect_TypeInfo);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&TerminalSceneComponent_TypeInfo);
-    sub_B70694(&StringLiteral_11156/*"RACE_TARGET_GOAL_RANK"*/);
-    sub_B70694(&StringLiteral_2716/*"Back/back{0}"*/);
-    byte_43525B0 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
+    sub_B775C4(&EventRaceResultEffect_TypeInfo);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&TerminalSceneComponent_TypeInfo);
+    sub_B775C4(&StringLiteral_11215/*"RACE_TARGET_GOAL_RANK"*/);
+    sub_B775C4(&StringLiteral_2762/*"Back/back{0}"*/);
+    byte_438BD2C = 1;
   }
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
   }
-  if ( !byte_434DEA1 )
+  if ( !byte_4387463 )
   {
-    sub_B70694(&TerminalSceneComponent_TypeInfo);
-    byte_434DEA1 = 1;
+    sub_B775C4(&TerminalSceneComponent_TypeInfo);
+    byte_4387463 = 1;
   }
   UIAtlasBySpriteName = (UISprite_o *)TerminalSceneComponent_TypeInfo;
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -526,7 +526,7 @@ void __fastcall EventRaceResultEffect__SetUp(
     ((void (__fastcall *)(UISprite_o *, Il2CppMethodPointer))UIAtlasBySpriteName->klass->vtable._33_MakePixelPerfect.method)(
       UIAtlasBySpriteName,
       UIAtlasBySpriteName->klass->vtable._34_get_minWidth.methodPtr);
-    UIAtlasBySpriteName = (UISprite_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_11156/*"RACE_TARGET_GOAL_RANK"*/, 0LL);
+    UIAtlasBySpriteName = (UISprite_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_11215/*"RACE_TARGET_GOAL_RANK"*/, 0LL);
     teamTimes = this->fields.teamTimes;
     if ( !teamTimes )
       goto LABEL_52;
@@ -568,8 +568,8 @@ void __fastcall EventRaceResultEffect__SetUp(
       if ( (unsigned int)v16 >= goalTimes->max_length )
       {
 LABEL_53:
-        v47 = sub_B70798(UIAtlasBySpriteName);
-        sub_B70738(v47, 0LL);
+        v47 = sub_B776C8(UIAtlasBySpriteName);
+        sub_B77668(v47, 0LL);
       }
       UIAtlasBySpriteName = (UISprite_o *)EventRaceResultEffect__MakeTimeStr(
                                             (EventRaceResultEffect_o *)UIAtlasBySpriteName,
@@ -589,9 +589,9 @@ LABEL_53:
     goto LABEL_52;
   ComponentInChildren_UIWidget = (struct SimpleAnimation_o *)UnityEngine_Component__GetComponentInChildren_UIWidget_(
                                                                (UnityEngine_Component_o *)UIAtlasBySpriteName,
-                                                               (const MethodInfo_1BE40A0 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
+                                                               (const MethodInfo_1C6D75C *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
   this->fields.mSimpleAnimation = ComponentInChildren_UIWidget;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.mSimpleAnimation,
     (System_Int32_array **)ComponentInChildren_UIWidget,
     v30,
@@ -605,17 +605,17 @@ LABEL_53:
     goto LABEL_52;
   v36 = (struct UnityEngine_Animation_o *)UnityEngine_Component__GetComponentInChildren_UIWidget_(
                                             (UnityEngine_Component_o *)UIAtlasBySpriteName,
-                                            (const MethodInfo_1BE40A0 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+                                            (const MethodInfo_1C6D75C *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
   this->fields.mAnimation = v36;
   p_mAnimation = &this->fields.mAnimation;
-  sub_B70630((BattleServantConfConponent_o *)p_mAnimation, (System_Int32_array **)v36, v38, v39, v40, v41, v42, v43);
+  sub_B77560((BattleServantConfConponent_o *)p_mAnimation, (System_Int32_array **)v36, v38, v39, v40, v41, v42, v43);
   v44 = (ExUITexture_o *)*(p_mAnimation - 7);
   v49 = *((_DWORD *)p_mAnimation - 8);
   v46 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v49, v45);
-  UIAtlasBySpriteName = (UISprite_o *)System_String__Format((System_String_o *)StringLiteral_2716/*"Back/back{0}"*/, v46, 0LL);
+  UIAtlasBySpriteName = (UISprite_o *)System_String__Format((System_String_o *)StringLiteral_2762/*"Back/back{0}"*/, v46, 0LL);
   if ( !v44 )
 LABEL_52:
-    sub_B7076C(UIAtlasBySpriteName, *(_QWORD *)&eventId);
+    sub_B7769C(UIAtlasBySpriteName, *(_QWORD *)&eventId);
   ExUITexture__SetAssetImage(v44, (System_String_o *)UIAtlasBySpriteName, onSetupEnd, 0LL);
 }
 
@@ -624,16 +624,16 @@ void __fastcall EventRaceResultEffect__Update(EventRaceResultEffect_o *this, con
 {
   struct CStateManager_EventRaceResultEffect__o *mFSM; // x0
 
-  if ( (byte_43525AF & 1) == 0 )
+  if ( (byte_438BD2B & 1) == 0 )
   {
-    sub_B70694(&Method_CStateManager_EventRaceResultEffect__update__);
-    byte_43525AF = 1;
+    sub_B775C4(&Method_CStateManager_EventRaceResultEffect__update__);
+    byte_438BD2B = 1;
   }
   mFSM = this->fields.mFSM;
   if ( mFSM )
     CStateManager_QAASpotStateController_IMapSpot___update(
       (CStateManager_QAASpotStateController_IMapSpot__o *)mFSM,
-      (const MethodInfo_2C80124 *)Method_CStateManager_EventRaceResultEffect__update__);
+      (const MethodInfo_2CBF1F8 *)Method_CStateManager_EventRaceResultEffect__update__);
 }
 
 
@@ -722,11 +722,11 @@ void __fastcall EventRaceResultEffect_StatePlay__begin(
   __int64 v22; // x0
 
   v4 = this;
-  if ( (byte_434EA25 & 1) == 0 )
+  if ( (byte_4387FF6 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    this = (EventRaceResultEffect_StatePlay_o *)sub_B70694(&SimpleAnimation_State_TypeInfo);
-    byte_434EA25 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    this = (EventRaceResultEffect_StatePlay_o *)sub_B775C4(&SimpleAnimation_State_TypeInfo);
+    byte_4387FF6 = 1;
   }
   if ( !that )
     goto LABEL_37;
@@ -757,7 +757,7 @@ void __fastcall EventRaceResultEffect_StatePlay__begin(
         name = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
         v4->fields.mAnimState = UnityEngine_Animation__get_Item(v15, name, 0LL);
         p_mAnimState = (EventRaceResultEffect_StatePlay_o **)&v4->fields.mAnimState;
-        sub_B70630(p_mAnimState);
+        sub_B77560(p_mAnimState);
         this = (EventRaceResultEffect_StatePlay_o *)that->fields.mAnimation;
         if ( this )
         {
@@ -777,7 +777,7 @@ void __fastcall EventRaceResultEffect_StatePlay__begin(
       }
     }
 LABEL_37:
-    sub_B7076C(this, that);
+    sub_B7769C(this, that);
   }
   v6 = that->fields.mSimpleAnimation;
   if ( !v6 )
@@ -788,7 +788,7 @@ LABEL_37:
   v7 = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
   v4->fields.mSimpleAnimState = SimpleAnimation__get_Item(v6, v7, 0LL);
   p_fields = &v4->fields;
-  sub_B70630(p_fields);
+  sub_B77560(p_fields);
   this = (EventRaceResultEffect_StatePlay_o *)that->fields.mSimpleAnimation;
   if ( !this )
     goto LABEL_37;
@@ -813,7 +813,7 @@ LABEL_37:
   else
   {
 LABEL_16:
-    p_method = sub_B08590(p_fields->mSimpleAnimState, SimpleAnimation_State_TypeInfo, 6LL);
+    p_method = sub_B0F4C0(p_fields->mSimpleAnimState, SimpleAnimation_State_TypeInfo, 6LL);
   }
   this = (EventRaceResultEffect_StatePlay_o *)(*(__int64 (__fastcall **)(struct SimpleAnimation_State_o *, _QWORD, float))p_method)(
                                                 mSimpleAnimState,
@@ -839,7 +839,7 @@ LABEL_16:
   else
   {
 LABEL_34:
-    v22 = sub_B08590(v18, SimpleAnimation_State_TypeInfo, 8LL);
+    v22 = sub_B0F4C0(v18, SimpleAnimation_State_TypeInfo, 8LL);
   }
   (*(void (__fastcall **)(struct SimpleAnimation_State_o *, _QWORD, float))v22)(v18, *(_QWORD *)(v22 + 8), 1.0);
 }
@@ -864,10 +864,10 @@ void __fastcall EventRaceResultEffect_StatePlay__update(
   UnityEngine_Animation_o *mAnimation; // x20
   System_String_o *v7; // x0
 
-  if ( (byte_434EA26 & 1) == 0 )
+  if ( (byte_4387FF7 & 1) == 0 )
   {
-    this = (EventRaceResultEffect_StatePlay_o *)sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_434EA26 = 1;
+    this = (EventRaceResultEffect_StatePlay_o *)sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4387FF7 = 1;
   }
   if ( !that )
     goto LABEL_16;
@@ -881,7 +881,7 @@ void __fastcall EventRaceResultEffect_StatePlay__update(
   this = (EventRaceResultEffect_StatePlay_o *)SimpleAnimation__IsPlaying(mSimpleAnimation, name, 0LL);
   if ( ((unsigned __int8)this & 1) == 0 )
   {
-    this = (EventRaceResultEffect_StatePlay_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    this = (EventRaceResultEffect_StatePlay_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !this )
       goto LABEL_16;
     this = (EventRaceResultEffect_StatePlay_o *)CommonUI__maskFadeIsBusy((CommonUI_o *)this, 0LL);
@@ -901,10 +901,10 @@ LABEL_15:
   v7 = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
   if ( UnityEngine_Animation__IsPlaying(mAnimation, v7, 0LL) )
     return;
-  this = (EventRaceResultEffect_StatePlay_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  this = (EventRaceResultEffect_StatePlay_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !this )
 LABEL_16:
-    sub_B7076C(this, that);
+    sub_B7769C(this, that);
   if ( !CommonUI__maskFadeIsBusy((CommonUI_o *)this, 0LL) )
     goto LABEL_15;
 }
@@ -924,7 +924,7 @@ void __fastcall EventRaceResultEffect_StateTouchWait__begin(
         const MethodInfo *method)
 {
   if ( !that || (this = (EventRaceResultEffect_StateTouchWait_o *)that->fields.mScreenTouchInfo) == 0LL )
-    sub_B7076C(this, that);
+    sub_B7769C(this, that);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
 }
 
@@ -952,24 +952,24 @@ void __fastcall EventRaceResultEffect_StateTouchWait__update(
   float DEFAULT_FADE_TIME; // s8
   System_Action_o *v11; // x22
 
-  if ( (byte_434EA27 & 1) == 0 )
+  if ( (byte_4387FF8 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&AvalonSceneManager_TypeInfo);
-    sub_B70694(&CTouch_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B70694(&SoundManager_TypeInfo);
-    sub_B70694(&Method_EventRaceResultEffect_StateTouchWait___c__DisplayClass1_0__update_b__0__);
-    sub_B70694(&EventRaceResultEffect_StateTouchWait___c__DisplayClass1_0_TypeInfo);
-    byte_434EA27 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&AvalonSceneManager_TypeInfo);
+    sub_B775C4(&CTouch_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B775C4(&SoundManager_TypeInfo);
+    sub_B775C4(&Method_EventRaceResultEffect_StateTouchWait___c__DisplayClass1_0__update_b__0__);
+    sub_B775C4(&EventRaceResultEffect_StateTouchWait___c__DisplayClass1_0_TypeInfo);
+    byte_4387FF8 = 1;
   }
-  v4 = (EventRaceResultEffect_StateTouchWait___c__DisplayClass1_0_o *)sub_B70764(EventRaceResultEffect_StateTouchWait___c__DisplayClass1_0_TypeInfo);
+  v4 = (EventRaceResultEffect_StateTouchWait___c__DisplayClass1_0_o *)sub_B77694(EventRaceResultEffect_StateTouchWait___c__DisplayClass1_0_TypeInfo);
   EventRaceResultEffect_StateTouchWait___c__DisplayClass1_0___ctor(v4, 0LL);
   if ( !v4 )
     goto LABEL_21;
   v4->fields.that = that;
   p_fields = &v4->fields;
-  sub_B70630(&v4->fields);
+  sub_B77560(&v4->fields);
   if ( (BYTE3(CTouch_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CTouch_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
   isTouchPush = (UnityEngine_GameObject_o *)CTouch__isTouchPush(0LL);
@@ -990,7 +990,7 @@ void __fastcall EventRaceResultEffect_StateTouchWait__update(
             j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
           }
           SoundManager__playSystemSe(0, 0LL);
-          Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           v9 = AvalonSceneManager_TypeInfo;
           if ( (BYTE3(AvalonSceneManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -999,7 +999,7 @@ void __fastcall EventRaceResultEffect_StateTouchWait__update(
             v9 = AvalonSceneManager_TypeInfo;
           }
           DEFAULT_FADE_TIME = v9->static_fields->DEFAULT_FADE_TIME;
-          v11 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+          v11 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
           System_Action___ctor(
             v11,
             (Il2CppObject *)v4,
@@ -1019,7 +1019,7 @@ void __fastcall EventRaceResultEffect_StateTouchWait__update(
       }
     }
 LABEL_21:
-    sub_B7076C(isTouchPush, v6);
+    sub_B7769C(isTouchPush, v6);
   }
 }
 
@@ -1040,6 +1040,6 @@ void __fastcall EventRaceResultEffect_StateTouchWait___c__DisplayClass1_0___upda
 
   that = this->fields.that;
   if ( !that )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   ActionExtensions__Call(that->fields.mEndAct, 0LL);
 }

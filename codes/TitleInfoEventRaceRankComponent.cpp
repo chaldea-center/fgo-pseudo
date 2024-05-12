@@ -3,10 +3,10 @@ void __fastcall TitleInfoEventRaceRankComponent___cctor(const MethodInfo *method
   struct TitleInfoEventRaceRankComponent_StaticFields *static_fields; // x9
   TitleInfoEventRaceRankComponent_c *v2; // x8
 
-  if ( (byte_43560D3 & 1) == 0 )
+  if ( (byte_438F751 & 1) == 0 )
   {
-    sub_B70694(&TitleInfoEventRaceRankComponent_TypeInfo);
-    byte_43560D3 = 1;
+    sub_B775C4(&TitleInfoEventRaceRankComponent_TypeInfo);
+    byte_438F751 = 1;
   }
   static_fields = TitleInfoEventRaceRankComponent_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->RAIDBOSS_ANIM_ROOT_POS.fields.x = 0x42A0000000000000LL;
@@ -67,12 +67,12 @@ void __fastcall TitleInfoEventRaceRankComponent__FrameIn(
   System_Int32_array *v31; // x6
   System_Int32_array *v32; // x7
 
-  if ( (byte_43560D1 & 1) == 0 )
+  if ( (byte_438F74F & 1) == 0 )
   {
-    sub_B70694(&TitleInfoEventRaceRankComponent_TypeInfo);
-    sub_B70694(&Method_UITweener_Begin_TweenPosition___);
-    sub_B70694(&StringLiteral_6885/*"FrameInFinish"*/);
-    byte_43560D1 = 1;
+    sub_B775C4(&TitleInfoEventRaceRankComponent_TypeInfo);
+    sub_B775C4(&Method_UITweener_Begin_TweenPosition___);
+    sub_B775C4(&StringLiteral_6941/*"FrameInFinish"*/);
+    byte_438F74F = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v6 = TitleInfoEventRaceRankComponent_TypeInfo;
@@ -85,9 +85,9 @@ void __fastcall TitleInfoEventRaceRankComponent__FrameIn(
   v7 = UITweener__Begin_TweenWidth_(
          gameObject,
          v6->static_fields->ANIM_DURATION_FRAME_IN,
-         (const MethodInfo_1D645B8 *)Method_UITweener_Begin_TweenPosition___);
+         (const MethodInfo_1E05754 *)Method_UITweener_Begin_TweenPosition___);
   if ( !v7 )
-    sub_B7076C(0LL, v8);
+    sub_B7769C(0LL, v8);
   v9 = v7;
   static_fields = (float32x2_t *)TitleInfoEventRaceRankComponent_TypeInfo->static_fields;
   v11 = *(float *)&this->fields.endTime + static_fields[1].n64_f32[0];
@@ -101,12 +101,12 @@ void __fastcall TitleInfoEventRaceRankComponent__FrameIn(
   v7->fields.style = 2;
   v13 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v9->fields.eventReceiver = (struct UnityEngine_GameObject_o *)v13;
-  sub_B70630((BattleServantConfConponent_o *)&v9->fields.eventReceiver, v13, v14, v15, v16, v17, v18, v19);
-  v20 = (System_Int32_array **)StringLiteral_6885/*"FrameInFinish"*/;
-  v9->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6885/*"FrameInFinish"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v9->fields.callWhenFinished, v20, v21, v22, v23, v24, v25, v26);
+  sub_B77560((BattleServantConfConponent_o *)&v9->fields.eventReceiver, v13, v14, v15, v16, v17, v18, v19);
+  v20 = (System_Int32_array **)StringLiteral_6941/*"FrameInFinish"*/;
+  v9->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6941/*"FrameInFinish"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v9->fields.callWhenFinished, v20, v21, v22, v23, v24, v25, v26);
   this[1].klass = (TitleInfoEventRaceRankComponent_c *)callback;
-  sub_B70630((BattleServantConfConponent_o *)&this[1], (System_Int32_array **)callback, v27, v28, v29, v30, v31, v32);
+  sub_B77560((BattleServantConfConponent_o *)&this[1], (System_Int32_array **)callback, v27, v28, v29, v30, v31, v32);
 }
 
 
@@ -128,7 +128,7 @@ void __fastcall TitleInfoEventRaceRankComponent__FrameInFinish(
   v8 = (BattleServantConfConponent_o *)&this[1];
   v9 = (System_Action_o *)klass;
   v8->klass = 0LL;
-  sub_B70630(v8, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B77560(v8, 0LL, v2, v3, v4, v5, v6, v7);
   if ( klass )
     ActionExtensions__Call(v9, 0LL);
 }
@@ -164,12 +164,12 @@ void __fastcall TitleInfoEventRaceRankComponent__FrameOut(
   System_Int32_array *v26; // x6
   System_Int32_array *v27; // x7
 
-  if ( (byte_43560D2 & 1) == 0 )
+  if ( (byte_438F750 & 1) == 0 )
   {
-    sub_B70694(&TitleInfoEventRaceRankComponent_TypeInfo);
-    sub_B70694(&Method_UITweener_Begin_TweenPosition___);
-    sub_B70694(&StringLiteral_6887/*"FrameOutFinish"*/);
-    byte_43560D2 = 1;
+    sub_B775C4(&TitleInfoEventRaceRankComponent_TypeInfo);
+    sub_B775C4(&Method_UITweener_Begin_TweenPosition___);
+    sub_B775C4(&StringLiteral_6943/*"FrameOutFinish"*/);
+    byte_438F750 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v4 = TitleInfoEventRaceRankComponent_TypeInfo;
@@ -182,9 +182,9 @@ void __fastcall TitleInfoEventRaceRankComponent__FrameOut(
   v5 = UITweener__Begin_TweenWidth_(
          gameObject,
          v4->static_fields->ANIM_DURATION_FRAME_IN,
-         (const MethodInfo_1D645B8 *)Method_UITweener_Begin_TweenPosition___);
+         (const MethodInfo_1E05754 *)Method_UITweener_Begin_TweenPosition___);
   if ( !v5 )
-    sub_B7076C(0LL, v6);
+    sub_B7769C(0LL, v6);
   endTime = this->fields.endTime;
   v8 = v5;
   *(_QWORD *)&v5->fields.from = *(_QWORD *)&this->fields.originPos.fields.z;
@@ -199,10 +199,10 @@ void __fastcall TitleInfoEventRaceRankComponent__FrameOut(
   *((float *)&v5->fields.mWidget + 1) = v10 + z;
   v14 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v8->fields.eventReceiver = (struct UnityEngine_GameObject_o *)v14;
-  sub_B70630((BattleServantConfConponent_o *)&v8->fields.eventReceiver, v14, v15, v16, v17, v18, v19, v20);
-  v21 = (System_Int32_array **)StringLiteral_6887/*"FrameOutFinish"*/;
-  v8->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6887/*"FrameOutFinish"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v8->fields.callWhenFinished, v21, v22, v23, v24, v25, v26, v27);
+  sub_B77560((BattleServantConfConponent_o *)&v8->fields.eventReceiver, v14, v15, v16, v17, v18, v19, v20);
+  v21 = (System_Int32_array **)StringLiteral_6943/*"FrameOutFinish"*/;
+  v8->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6943/*"FrameOutFinish"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v8->fields.callWhenFinished, v21, v22, v23, v24, v25, v26, v27);
 }
 
 
@@ -323,57 +323,57 @@ void __fastcall TitleInfoEventRaceRankComponent__Setup(
   int32_t v83; // [xsp+2Ch] [xbp-54h] BYREF
 
   v83 = eventId;
-  if ( (byte_43560D0 & 1) == 0 )
+  if ( (byte_438F74E & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&CondType_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_EventRaceMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_EventRaceResultMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_QuestGroupMaster___);
-    sub_B70694(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
-    sub_B70694(&Method_System_Collections_Generic_List_bool__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_bool___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventRaceMaster_GroupRankData__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventRaceMaster_GroupRankData__get_Item__);
-    sub_B70694(&Method_System_Collections_Generic_List_bool__get_Item__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_B70694(&System_Collections_Generic_List_int__TypeInfo);
-    sub_B70694(&System_Collections_Generic_List_bool__TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&TitleInfoEventRaceRankComponent_TypeInfo);
-    sub_B70694(&StringLiteral_22030/*"race_status_goal_"*/);
-    sub_B70694(&StringLiteral_16127/*"_"*/);
-    sub_B70694(&StringLiteral_22031/*"race_status_rank_"*/);
-    sub_B70694(&StringLiteral_22029/*"race_status_"*/);
-    sub_B70694(&StringLiteral_988/*"000"*/);
-    byte_43560D0 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&CondType_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMasterData_EventDetailMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_EventRaceMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_EventRaceResultMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_QuestGroupMaster___);
+    sub_B775C4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+    sub_B775C4(&Method_System_Collections_Generic_List_bool__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_bool___ctor__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int___ctor___69397304);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventRaceMaster_GroupRankData__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventRaceMaster_GroupRankData__get_Item__);
+    sub_B775C4(&Method_System_Collections_Generic_List_bool__get_Item__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_B775C4(&System_Collections_Generic_List_int__TypeInfo);
+    sub_B775C4(&System_Collections_Generic_List_bool__TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&TitleInfoEventRaceRankComponent_TypeInfo);
+    sub_B775C4(&StringLiteral_22129/*"race_status_goal_"*/);
+    sub_B775C4(&StringLiteral_16197/*"_"*/);
+    sub_B775C4(&StringLiteral_22130/*"race_status_rank_"*/);
+    sub_B775C4(&StringLiteral_22128/*"race_status_"*/);
+    sub_B775C4(&StringLiteral_990/*"000"*/);
+    byte_438F74E = 1;
   }
   v81 = 0uLL;
   v82 = 0LL;
   v80 = 0;
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_136;
   Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventDetailMaster___);
   if ( !Instance )
     goto LABEL_136;
   DataMasterBase_WarMaster__WarEntity__int___GetEntity(
     (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
     eventId,
-    (const MethodInfo_21C0440 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_21FB894 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_136;
   MasterData_WarQuestSelectionMaster = (EventRaceResultMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                     (DataManager_o *)Instance,
-                                                                    (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventRaceResultMaster___);
+                                                                    (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventRaceResultMaster___);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -400,20 +400,20 @@ void __fastcall TitleInfoEventRaceRankComponent__Setup(
   {
     v13 = 0;
   }
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_136;
   Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_QuestGroupMaster___);
+                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_QuestGroupMaster___);
   if ( !Instance )
     goto LABEL_136;
   v14 = (QuestGroupMaster_o *)Instance;
   QuestIdListByEventId = QuestGroupMaster__GetQuestIdListByEventId((QuestGroupMaster_o *)Instance, eventId, 0LL);
-  v16 = (System_Collections_Generic_List_int__o *)sub_B70764(System_Collections_Generic_List_int__TypeInfo);
+  v16 = (System_Collections_Generic_List_int__o *)sub_B77694(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v16,
-    (const MethodInfo_30B547C *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_30E508C *)Method_System_Collections_Generic_List_int___ctor___69397304);
   if ( !QuestIdListByEventId )
     goto LABEL_136;
   v17 = *(_QWORD *)&QuestIdListByEventId->max_length;
@@ -426,8 +426,8 @@ void __fastcall TitleInfoEventRaceRankComponent__Setup(
       if ( v18 >= (unsigned int)v17 )
       {
 LABEL_138:
-        v77 = sub_B70798(Instance);
-        sub_B70738(v77, 0LL);
+        v77 = sub_B776C8(Instance);
+        sub_B77668(v77, 0LL);
       }
       Instance = QuestGroupMaster__GetGroupId(v14, v19[v18], 5, 0LL);
       if ( (_DWORD)Instance == termId )
@@ -439,7 +439,7 @@ LABEL_138:
         System_Collections_Generic_List_int___Add(
           v16,
           v19[v18],
-          (const MethodInfo_30B61D8 *)Method_System_Collections_Generic_List_int__Add__);
+          (const MethodInfo_30E5DE8 *)Method_System_Collections_Generic_List_int__Add__);
       }
       LODWORD(v17) = QuestIdListByEventId->max_length;
     }
@@ -460,7 +460,7 @@ LABEL_37:
     while ( 1 )
     {
       if ( v21 >= (unsigned int)size )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       v23 = v16->fields._items->m_Items[v21 + 1];
       if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
@@ -471,21 +471,21 @@ LABEL_37:
         goto LABEL_37;
     }
   }
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
                               (DataManager_o *)Instance,
-                              (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventRaceMaster___)) == 0
+                              (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventRaceMaster___)) == 0
     || (v78 = v13,
         GroupIdData = EventRaceMaster__getGroupIdData((EventRaceMaster_o *)Instance, eventId, termId, 0LL),
-        v25 = (System_Collections_Generic_List_bool__o *)sub_B70764(System_Collections_Generic_List_bool__TypeInfo),
+        v25 = (System_Collections_Generic_List_bool__o *)sub_B77694(System_Collections_Generic_List_bool__TypeInfo),
         System_Collections_Generic_List_bool____ctor(
           v25,
-          (const MethodInfo_3054A50 *)Method_System_Collections_Generic_List_bool___ctor__),
+          (const MethodInfo_3082660 *)Method_System_Collections_Generic_List_bool___ctor__),
         !GroupIdData) )
   {
 LABEL_136:
-    sub_B7076C(Instance, v7);
+    sub_B7769C(Instance, v7);
   }
   LODWORD(v26) = GroupIdData->fields._size;
   if ( (int)v26 >= 1 )
@@ -495,7 +495,7 @@ LABEL_136:
     do
     {
       if ( v27 >= (unsigned int)v26 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       v29 = *(_DWORD *)((char *)&GroupIdData->fields._items->obj.klass + v28);
       if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
@@ -505,7 +505,7 @@ LABEL_136:
       System_Collections_Generic_List_bool___Add(
         v25,
         Instance & 1,
-        (const MethodInfo_30557B4 *)Method_System_Collections_Generic_List_bool__Add__);
+        (const MethodInfo_30833C4 *)Method_System_Collections_Generic_List_bool__Add__);
       v26 = GroupIdData->fields._size;
       ++v27;
       v28 += 24LL;
@@ -554,10 +554,10 @@ LABEL_136:
     if ( v38 <= (int)v33 )
     {
       v47 = System_Int32__ToString((int32_t)&v83, 0LL);
-      v48 = System_String__Concat_44760452(
-              (System_String_o *)StringLiteral_22029/*"race_status_"*/,
+      v48 = System_String__Concat_44904220(
+              (System_String_o *)StringLiteral_22128/*"race_status_"*/,
               v47,
-              (System_String_o *)StringLiteral_988/*"000"*/,
+              (System_String_o *)StringLiteral_990/*"000"*/,
               0LL);
       if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -571,13 +571,13 @@ LABEL_136:
     else
     {
       if ( v38 <= (unsigned int)v33 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       v40 = (char *)GroupIdData->fields._items + v31 * 24;
       v41 = *((_OWORD *)v40 + 2);
       v82 = *((_QWORD *)v40 + 6);
       v81 = v41;
       v42 = System_Int32__ToString((int32_t)&v81, 0LL);
-      v43 = System_String__Concat_44758168((System_String_o *)StringLiteral_22029/*"race_status_"*/, v42, 0LL);
+      v43 = System_String__Concat_44901936((System_String_o *)StringLiteral_22128/*"race_status_"*/, v42, 0LL);
       if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !AtlasManager_TypeInfo->_2.cctor_finished )
       {
@@ -586,13 +586,13 @@ LABEL_136:
       Instance = AtlasManager__SetEventUI(v39, v43, 0LL);
       v44 = Instance;
       if ( GroupIdData->fields._size <= (unsigned int)v33 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       if ( GroupIdData->fields._items->m_Items[v31].fields.isGoal )
       {
         if ( !v25 )
           goto LABEL_136;
         if ( v25->fields._size <= (unsigned int)v33 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
         if ( v25->fields._items->m_Items[v33 + 4] )
         {
           v45 = this->fields.carBackSpr;
@@ -640,10 +640,10 @@ LABEL_89:
       goto LABEL_138;
     v54 = (UISprite_o *)*((_QWORD *)&goalIcon->obj.klass + v51);
     v55 = System_Int32__ToString((int32_t)&v83, 0LL);
-    v56 = System_String__Concat_44760452(
-            (System_String_o *)StringLiteral_22029/*"race_status_"*/,
+    v56 = System_String__Concat_44904220(
+            (System_String_o *)StringLiteral_22128/*"race_status_"*/,
             v55,
-            (System_String_o *)StringLiteral_988/*"000"*/,
+            (System_String_o *)StringLiteral_990/*"000"*/,
             0LL);
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -683,10 +683,10 @@ LABEL_89:
     v61 = carIcon->m_Items[v59];
     v62 = System_Int32__ToString((int32_t)&v83, 0LL);
     v63 = System_Int32__ToString((int32_t)&v80, 0LL);
-    v64 = System_String__Concat_44761580(
-            (System_String_o *)StringLiteral_22031/*"race_status_rank_"*/,
+    v64 = System_String__Concat_44905348(
+            (System_String_o *)StringLiteral_22130/*"race_status_rank_"*/,
             v62,
-            (System_String_o *)StringLiteral_16127/*"_"*/,
+            (System_String_o *)StringLiteral_16197/*"_"*/,
             v63,
             0LL);
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -714,7 +714,7 @@ LABEL_89:
       goto LABEL_138;
     v69 = *(UISprite_o **)(v65 + 8 * v66 + 32);
     v70 = System_Int32__ToString((int32_t)&v83, 0LL);
-    v71 = System_String__Concat_44758168((System_String_o *)StringLiteral_22030/*"race_status_goal_"*/, v70, 0LL);
+    v71 = System_String__Concat_44901936((System_String_o *)StringLiteral_22129/*"race_status_goal_"*/, v70, 0LL);
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !AtlasManager_TypeInfo->_2.cctor_finished )
     {
@@ -736,13 +736,13 @@ LABEL_89:
       if ( !v25 )
         goto LABEL_136;
       if ( v25->fields._size <= (unsigned int)v66 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       v74 = v25->fields._items->m_Items[v66 + 4];
     }
     if ( (v74 & v32) != 0 )
     {
       if ( GroupIdData->fields._size <= (unsigned int)v66 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       v7 = *((_BYTE *)&GroupIdData->fields._items->obj.klass + v67) != 0;
       if ( !v73 )
         goto LABEL_136;

@@ -55,17 +55,17 @@ System_Collections_IEnumerator_o *__fastcall WarBoardMapCameraPerformance__Execu
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_43516FA & 1) == 0 )
+  if ( (byte_438AE7F & 1) == 0 )
   {
-    sub_B70694(&WarBoardMapCameraPerformance__Execute_d__9_TypeInfo);
-    byte_43516FA = 1;
+    sub_B775C4(&WarBoardMapCameraPerformance__Execute_d__9_TypeInfo);
+    byte_438AE7F = 1;
   }
-  v3 = sub_B70764(WarBoardMapCameraPerformance__Execute_d__9_TypeInfo);
+  v3 = sub_B77694(WarBoardMapCameraPerformance__Execute_d__9_TypeInfo);
   WarBoardMapCameraPerformance__Execute_d__9___ctor((WarBoardMapCameraPerformance__Execute_d__9_o *)v3, 0, 0LL);
   if ( !v3 )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  sub_B77560((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -75,14 +75,14 @@ void __fastcall WarBoardMapCameraPerformance__OnEnd(WarBoardMapCameraPerformance
   WebViewManager_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_43516FB & 1) == 0 )
+  if ( (byte_438AE80 & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_43516FB = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_438AE80 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   WarBoardManager__SetMapTouchEnable((WarBoardManager_o *)Instance, 1, 0, 0LL);
   WarBoardTaskBase__OnEnd((WarBoardTaskBase_o *)this, 0LL);
 }
@@ -93,15 +93,15 @@ void __fastcall WarBoardMapCameraPerformance__OnStart(WarBoardMapCameraPerforman
   WebViewManager_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_43516F9 & 1) == 0 )
+  if ( (byte_438AE7E & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_43516F9 = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_438AE7E = 1;
   }
   WarBoardTaskBase__OnStart((WarBoardTaskBase_o *)this, 0LL);
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   WarBoardManager__SetMapTouchEnable((WarBoardManager_o *)Instance, 0, 0, 0LL);
 }
 
@@ -126,13 +126,13 @@ bool __fastcall WarBoardMapCameraPerformance__Execute_d__9__MoveNext(
   __int64 v5; // x20
   void *Instance; // x0
   __int64 v7; // x1
-  const MethodInfo_243BBB0 *v8; // x2
+  const MethodInfo_247A004 *v8; // x2
   MapCamera_o *v9; // x22
   __int64 v10; // x23
   __int64 v11; // x24
   bool result; // w0
   System_Nullable_float__o v13; // x25
-  const MethodInfo_243BBB0 *v14; // x2
+  const MethodInfo_247A004 *v14; // x2
   char *v15; // x23
   int v16; // s0
   float ZoomSize; // s0
@@ -163,22 +163,22 @@ bool __fastcall WarBoardMapCameraPerformance__Execute_d__9__MoveNext(
   UnityEngine_Vector3_o v44; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v45; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_434FC6B & 1) == 0 )
+  if ( (byte_4389254 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_System_Func_bool___ctor__);
-    sub_B70694(&System_Func_bool__TypeInfo);
-    sub_B70694(&MapCameraViewAdjusterUtil_TypeInfo);
-    sub_B70694(&Method_System_Nullable_Vector2__GetValueOrDefault__);
-    sub_B70694(&Method_System_Nullable_float___ctor__);
-    sub_B70694(&Method_System_Nullable_Vector3___ctor__);
-    sub_B70694(&Method_System_Nullable_Vector2__get_HasValue__);
-    sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_B70694(&Method_WarBoardMapCameraPerformance___c__DisplayClass9_0__Execute_b__0__);
-    sub_B70694(&Method_WarBoardMapCameraPerformance___c__DisplayClass9_0__Execute_b__1__);
-    sub_B70694(&WarBoardMapCameraPerformance___c__DisplayClass9_0_TypeInfo);
-    sub_B70694(&UnityEngine_WaitUntil_TypeInfo);
-    byte_434FC6B = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_System_Func_bool___ctor__);
+    sub_B775C4(&System_Func_bool__TypeInfo);
+    sub_B775C4(&MapCameraViewAdjusterUtil_TypeInfo);
+    sub_B775C4(&Method_System_Nullable_Vector2__GetValueOrDefault__);
+    sub_B775C4(&Method_System_Nullable_float___ctor__);
+    sub_B775C4(&Method_System_Nullable_Vector3___ctor__);
+    sub_B775C4(&Method_System_Nullable_Vector2__get_HasValue__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_B775C4(&Method_WarBoardMapCameraPerformance___c__DisplayClass9_0__Execute_b__0__);
+    sub_B775C4(&Method_WarBoardMapCameraPerformance___c__DisplayClass9_0__Execute_b__1__);
+    sub_B775C4(&WarBoardMapCameraPerformance___c__DisplayClass9_0_TypeInfo);
+    sub_B775C4(&UnityEngine_WaitUntil_TypeInfo);
+    byte_4389254 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -191,9 +191,9 @@ bool __fastcall WarBoardMapCameraPerformance__Execute_d__9__MoveNext(
     return 0;
   this->fields.__1__state = -1;
   _4__this = this->fields.__4__this;
-  v5 = sub_B70764(WarBoardMapCameraPerformance___c__DisplayClass9_0_TypeInfo);
+  v5 = sub_B77694(WarBoardMapCameraPerformance___c__DisplayClass9_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_30;
   if ( !v5 )
@@ -259,7 +259,7 @@ bool __fastcall WarBoardMapCameraPerformance__Execute_d__9__MoveNext(
     ZoomSize = MapZoom__GetZoomSize((MapZoom_o *)Instance, 0LL);
     v37 = (System_Nullable_float__o)&v35;
     v35 = 0LL;
-    System_Nullable_float____ctor(v37, ZoomSize, (const MethodInfo_2439C24 *)Method_System_Nullable_float___ctor__);
+    System_Nullable_float____ctor(v37, ZoomSize, (const MethodInfo_2478078 *)Method_System_Nullable_float___ctor__);
     *(_QWORD *)&_4__this->fields.position.fields.has_value = v35;
   }
   v20 = *(float *)&_4__this->fields.easeType;
@@ -283,7 +283,7 @@ bool __fastcall WarBoardMapCameraPerformance__Execute_d__9__MoveNext(
   }
   v23 = *(System_Nullable_float__o *)&_4__this->fields.position.fields.has_value;
   v24 = *(_DWORD *)&_4__this->fields.size.fields.has_value;
-  v25 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v25 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(
     v25,
     (Il2CppObject *)v5,
@@ -291,22 +291,22 @@ bool __fastcall WarBoardMapCameraPerformance__Execute_d__9__MoveNext(
     0LL);
   if ( !v9 )
 LABEL_30:
-    sub_B7076C(Instance, v7);
+    sub_B7769C(Instance, v7);
   *(_QWORD *)&v43.fields.value.fields.x = v21;
   *(_QWORD *)&v43.fields.value.fields.z = v22;
   v39 = v23;
   MapCamera__StartAutoWork(v9, v20, v43, v39, v24, v25, 0LL);
-  v26 = (System_Func_bool__o *)sub_B70764(System_Func_bool__TypeInfo);
+  v26 = (System_Func_bool__o *)sub_B77694(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(
     v26,
     (Il2CppObject *)v5,
     Method_WarBoardMapCameraPerformance___c__DisplayClass9_0__Execute_b__1__,
-    (const MethodInfo_299432C *)Method_System_Func_bool___ctor__);
-  v27 = (UnityEngine_WaitUntil_o *)sub_B70764(UnityEngine_WaitUntil_TypeInfo);
+    (const MethodInfo_29D1078 *)Method_System_Func_bool___ctor__);
+  v27 = (UnityEngine_WaitUntil_o *)sub_B77694(UnityEngine_WaitUntil_TypeInfo);
   UnityEngine_WaitUntil___ctor(v27, v26, 0LL);
   this->fields.__2__current = (Il2CppObject *)v27;
   p__2__current = &this->fields.__2__current;
-  sub_B70630((BattleServantConfConponent_o *)p__2__current, (System_Int32_array **)v27, v29, v30, v31, v32, v33, v34);
+  sub_B77560((BattleServantConfConponent_o *)p__2__current, (System_Int32_array **)v27, v29, v30, v31, v32, v33, v34);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -329,11 +329,11 @@ void __fastcall __noreturn WarBoardMapCameraPerformance__Execute_d__9__System_Co
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B70698(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B70764(v2);
+  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B70698(&Method_WarBoardMapCameraPerformance__Execute_d__9_System_Collections_IEnumerator_Reset__);
-  sub_B70738(v3, v4);
+  v4 = sub_B775C8(&Method_WarBoardMapCameraPerformance__Execute_d__9_System_Collections_IEnumerator_Reset__);
+  sub_B77668(v3, v4);
 }
 
 

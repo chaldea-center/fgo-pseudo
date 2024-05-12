@@ -1,14 +1,14 @@
 void __fastcall CombineLimitGiftMaster___ctor(CombineLimitGiftMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4351A01 & 1) == 0 )
+  if ( (byte_438B21F & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_CombineLimitGiftMaster__CombineLimitGiftEntity__string___ctor__);
-    byte_4351A01 = 1;
+    sub_B775C4(&Method_DataMasterBase_CombineLimitGiftMaster__CombineLimitGiftEntity__string___ctor__);
+    byte_438B21F = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     421,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_CombineLimitGiftMaster__CombineLimitGiftEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_CombineLimitGiftMaster__CombineLimitGiftEntity__string___ctor__);
 }
 
 
@@ -61,16 +61,16 @@ int32_t __fastcall CombineLimitGiftMaster__GetCombineLimitGiftId(
   int v47[4]; // [xsp+8h] [xbp-58h]
   int v48; // [xsp+18h] [xbp-48h]
 
-  if ( (byte_4351A02 & 1) == 0 )
+  if ( (byte_438B220 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
-    sub_B70694(&CombineLimitGiftEntity_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMaster_ServantExceedMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
-    sub_B70694(&System_Collections_IEnumerator_TypeInfo);
-    byte_4351A02 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+    sub_B775C4(&CombineLimitGiftEntity_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMaster_ServantExceedMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
+    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
+    byte_438B220 = 1;
   }
   v48 = 0;
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
@@ -78,9 +78,9 @@ int32_t __fastcall CombineLimitGiftMaster__GetCombineLimitGiftId(
     goto LABEL_75;
   Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
                  list,
-                 (const MethodInfo_2C865F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_2CC56C8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B7076C(0LL, v8);
+    sub_B7769C(0LL, v8);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -100,7 +100,7 @@ int32_t __fastcall CombineLimitGiftMaster__GetCombineLimitGiftId(
     else
     {
 LABEL_9:
-      p_method = sub_B08590(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_B0F4C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -123,7 +123,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v17 = sub_B08590(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v17 = sub_B0F4C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v18 = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v17)(
                       Enumerator,
@@ -134,11 +134,11 @@ LABEL_16:
       if ( *(unsigned __int8 *)(*(_QWORD *)v18 + 300LL) < (unsigned int)v19
         || *(CombineLimitGiftEntity_c **)(*(_QWORD *)(*(_QWORD *)v18 + 200LL) + 8 * v19 - 8) != CombineLimitGiftEntity_TypeInfo )
       {
-        v37 = (_DWORD *)sub_B70A60(v18);
+        v37 = (_DWORD *)sub_B77990(v18);
 LABEL_74:
-        list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)sub_B70A60(v37);
+        list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)sub_B77990(v37);
 LABEL_75:
-        sub_B7076C(list, *(_QWORD *)&svtId);
+        sub_B7769C(list, *(_QWORD *)&svtId);
       }
       if ( v18[4] == svtId && v18[6] == limitCount )
       {
@@ -170,7 +170,7 @@ LABEL_25:
   else
   {
 LABEL_29:
-    v25 = sub_B08590(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v25 = sub_B0F4C0(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v25)(Enumerator, *(_QWORD *)(v25 + 8));
   if ( v47[0] == 76 )
@@ -178,7 +178,7 @@ LABEL_29:
     v48 = 0;
     if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ServantExceedMaster___);
+    list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ServantExceedMaster___);
     if ( !list )
       goto LABEL_75;
     list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)ServantExceedMaster__GetRarity(
@@ -190,9 +190,9 @@ LABEL_29:
     v26 = (int)list;
     v28 = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
             (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list,
-            (const MethodInfo_2C865F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+            (const MethodInfo_2CC56C8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
     if ( !v28 )
-      sub_B7076C(0LL, v27);
+      sub_B7769C(0LL, v27);
     while ( 1 )
     {
       v29 = v28->klass;
@@ -212,7 +212,7 @@ LABEL_29:
       else
       {
 LABEL_43:
-        v32 = sub_B08590(v28, System_Collections_IEnumerator_TypeInfo, 0LL);
+        v32 = sub_B0F4C0(v28, System_Collections_IEnumerator_TypeInfo, 0LL);
       }
       if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v32)(
               v28,
@@ -235,7 +235,7 @@ LABEL_43:
       else
       {
 LABEL_50:
-        v36 = sub_B08590(v28, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+        v36 = sub_B0F4C0(v28, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
       }
       v37 = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v36)(
                         v28,
@@ -277,7 +277,7 @@ LABEL_60:
     else
     {
 LABEL_64:
-      v44 = sub_B08590(v28, System_IDisposable_TypeInfo, 0LL);
+      v44 = sub_B0F4C0(v28, System_IDisposable_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v44)(v28, *(_QWORD *)(v44 + 8));
     if ( !v40 )
@@ -309,16 +309,16 @@ CombineLimitGiftEntity_o *__fastcall CombineLimitGiftMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_43519FF & 1) == 0 )
+  if ( (byte_438B21D & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_CombineLimitGiftMaster__CombineLimitGiftEntity__string__GetEntity__);
-    byte_43519FF = 1;
+    sub_B775C4(&Method_DataMasterBase_CombineLimitGiftMaster__CombineLimitGiftEntity__string__GetEntity__);
+    byte_438B21D = 1;
   }
   PK = CombineLimitGiftEntity__CreatePK(svtId, rarity, limitCount, *(const MethodInfo **)&limitCount);
   return (CombineLimitGiftEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                        (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                        PK,
-                                       (const MethodInfo_21C0890 *)Method_DataMasterBase_CombineLimitGiftMaster__CombineLimitGiftEntity__string__GetEntity__);
+                                       (const MethodInfo_21FBCE4 *)Method_DataMasterBase_CombineLimitGiftMaster__CombineLimitGiftEntity__string__GetEntity__);
 }
 
 
@@ -333,15 +333,15 @@ bool __fastcall CombineLimitGiftMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4351A00 & 1) == 0 )
+  if ( (byte_438B21E & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_CombineLimitGiftMaster__CombineLimitGiftEntity__string__TryGetEntity__);
-    byte_4351A00 = 1;
+    sub_B775C4(&Method_DataMasterBase_CombineLimitGiftMaster__CombineLimitGiftEntity__string__TryGetEntity__);
+    byte_438B21E = 1;
   }
   PK = CombineLimitGiftEntity__CreatePK(id, rarity, limitCount, *(const MethodInfo **)&rarity);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_CombineLimitGiftMaster__CombineLimitGiftEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_CombineLimitGiftMaster__CombineLimitGiftEntity__string__TryGetEntity__);
 }

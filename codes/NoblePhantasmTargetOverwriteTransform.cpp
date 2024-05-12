@@ -35,10 +35,10 @@ void __fastcall NoblePhantasmTargetOverwriteTransform__CheckAndSetTargetNode(
   System_Int32_array *v26; // x6
   System_Int32_array *v27; // x7
 
-  if ( (byte_43523E3 & 1) == 0 )
+  if ( (byte_438BA7F & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43523E3 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438BA7F = 1;
   }
   klass = (UnityEngine_Object_o *)this[1].klass;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -64,7 +64,7 @@ void __fastcall NoblePhantasmTargetOverwriteTransform__CheckAndSetTargetNode(
     LimitCount = BattleActorControl__getLimitCount(targetActor, 0LL);
     NodeFromLvName = TransformHelper__getNodeFromLvName(v10, v9, LimitCount, 1, 0LL);
     this[1].klass = (NoblePhantasmTargetOverwriteTransform_c *)NodeFromLvName;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this[1],
       (System_Int32_array **)NodeFromLvName,
       v13,
@@ -77,7 +77,7 @@ void __fastcall NoblePhantasmTargetOverwriteTransform__CheckAndSetTargetNode(
     IsNullOrEmpty = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)targetActor, 0LL);
     if ( !IsNullOrEmpty )
 LABEL_17:
-      sub_B7076C(IsNullOrEmpty, v7);
+      sub_B7769C(IsNullOrEmpty, v7);
     v20 = (UnityEngine_Object_o *)UnityEngine_GameObject__get_transform(IsNullOrEmpty, 0LL);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -89,7 +89,7 @@ LABEL_17:
 LABEL_16:
       v21 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
       this[1].klass = (NoblePhantasmTargetOverwriteTransform_c *)v21;
-      sub_B70630((BattleServantConfConponent_o *)&this[1], (System_Int32_array **)v21, v22, v23, v24, v25, v26, v27);
+      sub_B77560((BattleServantConfConponent_o *)&this[1], (System_Int32_array **)v21, v22, v23, v24, v25, v26, v27);
     }
   }
 }
@@ -112,7 +112,7 @@ void __fastcall NoblePhantasmTargetOverwriteTransform__OverwriteTarget(
           0LL),
         (klass = (UnityEngine_Transform_o *)this[1].klass) == 0LL) )
   {
-    sub_B7076C(klass, v4);
+    sub_B7769C(klass, v4);
   }
   UnityEngine_Transform__set_localRotation(
     klass,
@@ -138,7 +138,7 @@ void __fastcall NoblePhantasmTargetOverwriteTransform__ResetTarget(
           0LL),
         (klass = (UnityEngine_Transform_o *)this[1].klass) == 0LL) )
   {
-    sub_B7076C(klass, v4);
+    sub_B7769C(klass, v4);
   }
   UnityEngine_Transform__set_localRotation(
     klass,
@@ -164,7 +164,7 @@ void __fastcall NoblePhantasmTargetOverwriteTransform__SaveOriginal(
         *(UnityEngine_Vector3_o *)&this->fields.originalPosition.fields.z = localPosition,
         !klass) )
   {
-    sub_B7076C(klass, v4);
+    sub_B7769C(klass, v4);
   }
   *(UnityEngine_Quaternion_o *)&this->fields.originalRotation.fields.z = UnityEngine_Transform__get_localRotation(
                                                                            klass,

@@ -23,20 +23,20 @@ void __fastcall PointSummonInfoComponent__OnClickGacha(PointSummonInfoComponent_
   struct GachaRqParamData_o *v16; // x9
   PointSummonInfoComponent_ClickDelegate_o *clickCallbackFunc; // x0
 
-  if ( (byte_4351BFC & 1) == 0 )
+  if ( (byte_438B383 & 1) == 0 )
   {
-    sub_B70694(&GachaRqParamData_TypeInfo);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4351BFC = 1;
+    sub_B775C4(&GachaRqParamData_TypeInfo);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438B383 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playSystemSe(0, 0LL);
-  v3 = (GachaRqParamData_o *)sub_B70764(GachaRqParamData_TypeInfo);
+  v3 = (GachaRqParamData_o *)sub_B77694(GachaRqParamData_TypeInfo);
   GachaRqParamData___ctor(v3, 0LL);
   this->fields.requestData = v3;
   p_requestData = &this->fields.requestData;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.requestData,
     (System_Int32_array **)v3,
     v5,
@@ -57,7 +57,7 @@ void __fastcall PointSummonInfoComponent__OnClickGacha(PointSummonInfoComponent_
     || ((*p_requestData)->fields.gachaTime = 1, !*p_requestData) )
   {
 LABEL_16:
-    sub_B7076C(v11, v12);
+    sub_B7769C(v11, v12);
   }
   (*p_requestData)->fields.gachaResourceNum = this->fields.price;
   clickCallbackFunc = this->fields.clickCallbackFunc;
@@ -85,19 +85,19 @@ void __fastcall PointSummonInfoComponent__OnClickMutiGacha(PointSummonInfoCompon
   struct GachaRqParamData_o *v17; // x8
   PointSummonInfoComponent_ClickDelegate_o *clickCallbackFunc; // x0
 
-  if ( (byte_4351BFD & 1) == 0 )
+  if ( (byte_438B384 & 1) == 0 )
   {
-    sub_B70694(&GachaRqParamData_TypeInfo);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4351BFD = 1;
+    sub_B775C4(&GachaRqParamData_TypeInfo);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438B384 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playSystemSe(0, 0LL);
-  v3 = (GachaRqParamData_o *)sub_B70764(GachaRqParamData_TypeInfo);
+  v3 = (GachaRqParamData_o *)sub_B77694(GachaRqParamData_TypeInfo);
   GachaRqParamData___ctor(v3, 0LL);
   this->fields.requestData = v3;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.requestData,
     (System_Int32_array **)v3,
     v4,
@@ -120,7 +120,7 @@ void __fastcall PointSummonInfoComponent__OnClickMutiGacha(PointSummonInfoCompon
     || (v16->fields.gachaTime = this->fields.gachaTime, (v17 = this->fields.requestData) == 0LL) )
   {
 LABEL_16:
-    sub_B7076C(v10, v11);
+    sub_B7769C(v10, v11);
   }
   v17->fields.gachaResourceNum = this->fields.price * this->fields.gachaTime;
   clickCallbackFunc = this->fields.clickCallbackFunc;
@@ -152,7 +152,7 @@ void __fastcall PointSummonInfoComponent__init(PointSummonInfoComponent_o *this,
     || (UnityEngine_GameObject__SetActive(singleGachaBtnInfo, 0, 0LL),
         (singleGachaBtnInfo = this->fields.multiGachaBtnInfo) == 0LL) )
   {
-    sub_B7076C(singleGachaBtnInfo, method);
+    sub_B7769C(singleGachaBtnInfo, method);
   }
   UnityEngine_GameObject__SetActive(singleGachaBtnInfo, 0, 0LL);
   this->fields.isFree = 0;
@@ -264,7 +264,7 @@ void __fastcall PointSummonInfoComponent__setDispPointBtn(
         (freeGachaBtn = (UnityEngine_Behaviour_o *)this->fields.multiNumImg) == 0LL) )
   {
 LABEL_17:
-    sub_B7076C(freeGachaBtn, isDisp);
+    sub_B7769C(freeGachaBtn, isDisp);
   }
   v22.fields.r = v11;
   v22.fields.g = v12;
@@ -289,12 +289,12 @@ void __fastcall PointSummonInfoComponent__setMultiGachaNum(
   System_String_o *v11; // x0
 
   v5 = price;
-  if ( (byte_4351BFB & 1) == 0 )
+  if ( (byte_438B382 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_22814/*"summon_txt_f10"*/);
-    sub_B70694(&StringLiteral_22812/*"summon_txt_f0"*/);
-    sub_B70694(&StringLiteral_22813/*"summon_txt_f01"*/);
-    byte_4351BFB = 1;
+    sub_B775C4(&StringLiteral_22915/*"summon_txt_f10"*/);
+    sub_B775C4(&StringLiteral_22913/*"summon_txt_f0"*/);
+    sub_B775C4(&StringLiteral_22914/*"summon_txt_f01"*/);
+    byte_438B382 = 1;
   }
   v7 = usrFriendPoint / v5;
   this->fields.gachaTime = usrFriendPoint / v5;
@@ -308,11 +308,11 @@ void __fastcall PointSummonInfoComponent__setMultiGachaNum(
     singleGachaBtnInfo = (UnityEngine_GameObject_o *)this->fields.freeGachaTxtImg;
     if ( singleGachaBtnInfo )
     {
-      *(_QWORD *)&price = StringLiteral_22813/*"summon_txt_f01"*/;
+      *(_QWORD *)&price = StringLiteral_22914/*"summon_txt_f01"*/;
       goto LABEL_12;
     }
 LABEL_13:
-    sub_B7076C(singleGachaBtnInfo, *(_QWORD *)&price);
+    sub_B7769C(singleGachaBtnInfo, *(_QWORD *)&price);
   }
   UnityEngine_GameObject__SetActive(singleGachaBtnInfo, 0, 0LL);
   singleGachaBtnInfo = this->fields.multiGachaBtnInfo;
@@ -320,11 +320,11 @@ LABEL_13:
     goto LABEL_13;
   UnityEngine_GameObject__SetActive(singleGachaBtnInfo, 1, 0LL);
   v10 = System_Int32__ToString((int)this + 156, 0LL);
-  v11 = System_String__Concat_44758168((System_String_o *)StringLiteral_22812/*"summon_txt_f0"*/, v10, 0LL);
+  v11 = System_String__Concat_44901936((System_String_o *)StringLiteral_22913/*"summon_txt_f0"*/, v10, 0LL);
   if ( *p_gachaTime >= 10 )
   {
     *p_gachaTime = 10;
-    *(_QWORD *)&price = StringLiteral_22814/*"summon_txt_f10"*/;
+    *(_QWORD *)&price = StringLiteral_22915/*"summon_txt_f10"*/;
   }
   else
   {
@@ -383,33 +383,33 @@ void __fastcall PointSummonInfoComponent__setPointSummonDispInfo(
   System_DateTime_o v41; // 0:x1.8
   System_DateTime_o v42; // 0:x1.8
 
-  if ( (byte_4351BFA & 1) == 0 )
+  if ( (byte_438B381 & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMasterData_TblUserMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_UserGachaMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_UserQuestMaster___);
-    sub_B70694(&System_DateTime_TypeInfo);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&StringLiteral_10597/*"POINT_SUMMON_DETAIL"*/);
-    sub_B70694(&StringLiteral_4634/*"DAILY_SUMMON_DETAIL"*/);
-    sub_B70694(&StringLiteral_22815/*"summon_txt_free"*/);
-    byte_4351BFA = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMasterData_TblUserMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserGachaMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserQuestMaster___);
+    sub_B775C4(&System_DateTime_TypeInfo);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&StringLiteral_10656/*"POINT_SUMMON_DETAIL"*/);
+    sub_B775C4(&StringLiteral_4686/*"DAILY_SUMMON_DETAIL"*/);
+    sub_B775C4(&StringLiteral_22916/*"summon_txt_free"*/);
+    byte_438B381 = 1;
   }
   usrFriendPoint = 0;
   t1.fields.dateData = 0LL;
   PointSummonInfoComponent__init(this, method);
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_65;
   Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
                (DataManager_o *)Instance,
-               (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserQuestMaster___);
+               (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserQuestMaster___);
   if ( !SelfUserGame )
     goto LABEL_65;
   pointGachaData = this->fields.pointGachaData;
@@ -427,16 +427,16 @@ void __fastcall PointSummonInfoComponent__setPointSummonDispInfo(
   }
   v8 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3);
   if ( (*(_BYTE *)(v8 + 306) & 1) == 0 )
-    sub_B08394(*((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3));
+    sub_B0F2C4(*((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3));
   v9 = **(_QWORD **)(v8 + 192);
   if ( (*(_BYTE *)(v9 + 306) & 1) == 0 )
-    sub_B08394(v9);
+    sub_B0F2C4(v9);
   Instance = **(void ***)(v9 + 184);
   if ( !Instance )
     goto LABEL_65;
   Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
                (DataManager_o *)Instance,
-               (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_TblUserMaster___);
+               (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_TblUserMaster___);
   if ( !Instance )
     goto LABEL_65;
   Instance = TblUserMaster__getUserData((TblUserMaster_o *)Instance, SelfUserGame->fields.userId, 0LL);
@@ -449,12 +449,12 @@ void __fastcall PointSummonInfoComponent__setPointSummonDispInfo(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   dateData = NetworkManager__getServerDateTime(0LL).fields.dateData;
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_65;
   Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
                (DataManager_o *)Instance,
-               (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserGachaMaster___);
+               (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserGachaMaster___);
   v11 = this->fields.pointGachaData;
   if ( !v11 || !Instance )
     goto LABEL_65;
@@ -467,7 +467,7 @@ void __fastcall PointSummonInfoComponent__setPointSummonDispInfo(
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
-  t1.fields.dateData = NetworkManager__getServerDateTime_25948096(freeDrawAt, 0LL).fields.dateData;
+  t1.fields.dateData = NetworkManager__getServerDateTime_26207672(freeDrawAt, 0LL).fields.dateData;
   v35.fields.dateData = (uint64_t)&t1;
   Hour = System_DateTime__get_Hour(v35, 0LL);
   v15 = BalanceConfig_TypeInfo;
@@ -501,7 +501,7 @@ void __fastcall PointSummonInfoComponent__setPointSummonDispInfo(
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
-  v23.fields.dateData = NetworkManager__getServerDateTime_25948096(v22, 0LL).fields.dateData;
+  v23.fields.dateData = NetworkManager__getServerDateTime_26207672(v22, 0LL).fields.dateData;
   if ( v22 <= 0 )
     goto LABEL_47;
   v24 = v23.fields.dateData;
@@ -534,14 +534,14 @@ LABEL_47:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    Instance = LocalizationManager__Get((System_String_o *)StringLiteral_4634/*"DAILY_SUMMON_DETAIL"*/, 0LL);
+    Instance = LocalizationManager__Get((System_String_o *)StringLiteral_4686/*"DAILY_SUMMON_DETAIL"*/, 0LL);
     if ( pointGachaDetailLb )
     {
       UILabel__set_text(pointGachaDetailLb, (System_String_o *)Instance, 0LL);
       Instance = this->fields.freeGachaTxtImg;
       if ( Instance )
       {
-        UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_22815/*"summon_txt_free"*/, 0LL);
+        UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_22916/*"summon_txt_free"*/, 0LL);
         Instance = this->fields.singleGachaBtnInfo;
         if ( Instance )
         {
@@ -551,14 +551,14 @@ LABEL_47:
       }
     }
 LABEL_65:
-    sub_B7076C(Instance, v5);
+    sub_B7769C(Instance, v5);
   }
   if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_10597/*"POINT_SUMMON_DETAIL"*/, 0LL);
+  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_10656/*"POINT_SUMMON_DETAIL"*/, 0LL);
   price = this->fields.price;
   v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &price, v28);
   Instance = System_String__Format(v27, v29, 0LL);
@@ -599,7 +599,7 @@ void __fastcall PointSummonInfoComponent__setPointSummonInfo(
 
   PointSummonInfoComponent__init(this, (const MethodInfo *)pointGachaEnt);
   this->fields.clickCallbackFunc = callback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.clickCallbackFunc,
     (System_Int32_array **)callback,
     v7,
@@ -610,10 +610,10 @@ void __fastcall PointSummonInfoComponent__setPointSummonInfo(
     v12);
   this->fields.isFree = 0;
   if ( !pointGachaEnt )
-    sub_B7076C(v13, v14);
+    sub_B7769C(v13, v14);
   this->fields.price = GachaEntity__getPrice(pointGachaEnt, 0LL);
   this->fields.pointGachaData = pointGachaEnt;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.pointGachaData,
     (System_Int32_array **)pointGachaEnt,
     v15,
@@ -645,7 +645,7 @@ void __fastcall PointSummonInfoComponent_ClickDelegate___ctor(
   p_method = (BattleServantConfConponent_o *)&this->fields.method;
   p_method->monitor = *(void **)&method;
   p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B70630(
+  sub_B77560(
     p_method,
     (System_Int32_array **)object,
     *(System_String_array ***)&method,
@@ -668,7 +668,7 @@ System_IAsyncResult_o *__fastcall PointSummonInfoComponent_ClickDelegate__BeginI
 
   v6[0] = (__int64)paramData;
   v6[1] = 0LL;
-  return (System_IAsyncResult_o *)sub_B70638(this, v6, callback, object);
+  return (System_IAsyncResult_o *)sub_B77568(this, v6, callback, object);
 }
 
 
@@ -677,7 +677,7 @@ void __fastcall PointSummonInfoComponent_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7063C(result, 0LL, method);
+  sub_B7756C(result, 0LL, method);
 }
 
 
@@ -750,8 +750,8 @@ LABEL_5:
       v28 = *(_QWORD *)&v27->fields.extra_arg;
       v30 = *(void (__fastcall **)(GachaRqParamData_o *, __int64))&v27->fields.method_ptr;
       if ( *(__int16 *)(v28 + 72) == -1 )
-        sub_B70750(*(_QWORD *)&v27->fields.extra_arg, paramData);
-      v31 = sub_B706C4(v28);
+        sub_B77680(*(_QWORD *)&v27->fields.extra_arg, paramData);
+      v31 = sub_B775F4(v28);
       v32 = *(unsigned __int8 *)(v28 + 74);
       if ( (v31 & 1) != 0 )
       {
@@ -764,8 +764,8 @@ LABEL_5:
         {
           if ( *(__int16 *)(v28 + 72) != -1 && this->fields.m_target )
           {
-            v40 = sub_B706BC(v28);
-            v41 = sub_B70AC0(v28);
+            v40 = sub_B775EC(v28);
+            v41 = sub_B779F0(v28);
             if ( (v40 & 1) != 0 )
             {
               if ( (v41 & 1) != 0 )
@@ -789,7 +789,7 @@ LABEL_5:
                 else
                 {
 LABEL_57:
-                  v23 = sub_B08590(paramData, v43, v44);
+                  v23 = sub_B0F4C0(paramData, v43, v44);
                 }
                 v15 = *(_QWORD *)(v23 + 8);
               }
@@ -797,7 +797,7 @@ LABEL_57:
               {
                 v15 = *((_QWORD *)&paramData->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v28 + 72));
               }
-              v24 = (void (__fastcall **)(GachaRqParamData_o *, _QWORD))sub_B70744(v15, v28);
+              v24 = (void (__fastcall **)(GachaRqParamData_o *, _QWORD))sub_B77674(v15, v28);
               (*v24)(paramData, v24);
             }
             else
@@ -823,7 +823,7 @@ LABEL_57:
                 else
                 {
 LABEL_11:
-                  v14 = sub_B08590(paramData, class_0, v9);
+                  v14 = sub_B0F4C0(paramData, class_0, v9);
                 }
                 (*(void (__fastcall **)(GachaRqParamData_o *, _QWORD))v14)(paramData, *(_QWORD *)(v14 + 8));
               }
@@ -845,8 +845,8 @@ LABEL_58:
           goto LABEL_58;
         if ( *(__int16 *)(v28 + 72) != -1 && (*(_BYTE *)(*v29 + 277) & 1) == 0 && this->fields.m_target )
         {
-          v33 = sub_B706BC(v28);
-          v34 = sub_B70AC0(v28);
+          v33 = sub_B775EC(v28);
+          v34 = sub_B779F0(v28);
           if ( (v33 & 1) != 0 )
           {
             if ( (v34 & 1) != 0 )
@@ -870,7 +870,7 @@ LABEL_58:
               else
               {
 LABEL_48:
-                v25 = sub_B08590(v29, v36, v37);
+                v25 = sub_B0F4C0(v29, v36, v37);
               }
               v22 = *(_QWORD *)(v25 + 8);
             }
@@ -878,7 +878,7 @@ LABEL_48:
             {
               v22 = *(_QWORD *)(*v29 + 16LL * *(unsigned __int16 *)(v28 + 72) + 320);
             }
-            v26 = (void (__fastcall **)(__int64 *, GachaRqParamData_o *, _QWORD))sub_B70744(v22, v28);
+            v26 = (void (__fastcall **)(__int64 *, GachaRqParamData_o *, _QWORD))sub_B77674(v22, v28);
             (*v26)(v29, paramData, v26);
           }
           else
@@ -904,7 +904,7 @@ LABEL_48:
               else
               {
 LABEL_19:
-                v21 = sub_B08590(v29, v17, v16);
+                v21 = sub_B0F4C0(v29, v17, v16);
               }
               (*(void (__fastcall **)(__int64 *, GachaRqParamData_o *, _QWORD))v21)(
                 v29,

@@ -17,21 +17,21 @@ void __fastcall EventInfoCommandAssistLevelComponent___cctor(const MethodInfo *m
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
 
-  if ( (byte_43529D2 & 1) == 0 )
+  if ( (byte_438C1CD & 1) == 0 )
   {
-    sub_B70694(&EventInfoCommandAssistLevelComponent_TypeInfo);
-    sub_B70694(&StringLiteral_16839/*"badge_lock"*/);
-    sub_B70694(&StringLiteral_16017/*"[ffff00]"*/);
-    byte_43529D2 = 1;
+    sub_B775C4(&EventInfoCommandAssistLevelComponent_TypeInfo);
+    sub_B775C4(&StringLiteral_16921/*"badge_lock"*/);
+    sub_B775C4(&StringLiteral_16087/*"[ffff00]"*/);
+    byte_438C1CD = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventInfoCommandAssistLevelComponent_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_16839/*"badge_lock"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16839/*"badge_lock"*/;
-  sub_B70630(static_fields, v8, v1, v2, v3, v4, v5, v6);
+  v8 = (System_Int32_array **)StringLiteral_16921/*"badge_lock"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16921/*"badge_lock"*/;
+  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
   v9 = EventInfoCommandAssistLevelComponent_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_16017/*"[ffff00]"*/;
-  v9->MAX_LEVEL_TEXT_COLOR = (struct System_String_o *)StringLiteral_16017/*"[ffff00]"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v9->MAX_LEVEL_TEXT_COLOR, v10, v11, v12, v13, v14, v15, v16);
+  v10 = (System_Int32_array **)StringLiteral_16087/*"[ffff00]"*/;
+  v9->MAX_LEVEL_TEXT_COLOR = (struct System_String_o *)StringLiteral_16087/*"[ffff00]"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v9->MAX_LEVEL_TEXT_COLOR, v10, v11, v12, v13, v14, v15, v16);
 }
 
 
@@ -67,7 +67,7 @@ bool __fastcall EventInfoCommandAssistLevelComponent__IsReleasedNow(
 
   assistData = this->fields.assistData;
   if ( !assistData )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return assistData->fields.oldLv <= 0 && assistData->fields.lv > 0;
 }
 
@@ -98,10 +98,10 @@ void __fastcall EventInfoCommandAssistLevelComponent__Setup(
   const MethodInfo *v24; // x2
   struct EventInfoCommandAssistLevelComponent_AssistData_o *v25; // x8
 
-  if ( (byte_43529CE & 1) == 0 )
+  if ( (byte_438C1C9 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43529CE = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438C1C9 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -112,7 +112,7 @@ void __fastcall EventInfoCommandAssistLevelComponent__Setup(
   if ( data && !v7 )
   {
     this->fields.commandAssistLevelControl = control;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.commandAssistLevelControl,
       (System_Int32_array **)control,
       v8,
@@ -122,7 +122,7 @@ void __fastcall EventInfoCommandAssistLevelComponent__Setup(
       v12,
       v13);
     this->fields.assistData = data;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.assistData,
       (System_Int32_array **)data,
       v14,
@@ -136,7 +136,7 @@ void __fastcall EventInfoCommandAssistLevelComponent__Setup(
       || (EventInfoCommandAssistLevelComponent__SetupIcon(this, assistData->fields.oldLv, v22),
           (v25 = this->fields.assistData) == 0LL) )
     {
-      sub_B7076C(v20, v21);
+      sub_B7769C(v20, v21);
     }
     EventInfoCommandAssistLevelComponent__SetupLevel(this, v25->fields.oldLv, v24);
   }
@@ -153,11 +153,11 @@ void __fastcall EventInfoCommandAssistLevelComponent__SetupIcon(
   EventInfoCommandAssistLevelComponent_c *v7; // x0
   UISprite_o *skillIconSprite; // x19
 
-  if ( (byte_43529CF & 1) == 0 )
+  if ( (byte_438C1CA & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&EventInfoCommandAssistLevelComponent_TypeInfo);
-    byte_43529CF = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&EventInfoCommandAssistLevelComponent_TypeInfo);
+    byte_438C1CA = 1;
   }
   if ( level >= 1 && (assistData = this->fields.assistData) != 0LL )
   {
@@ -198,13 +198,13 @@ void __fastcall EventInfoCommandAssistLevelComponent__SetupLevel(
   int32_t v13; // [xsp+Ch] [xbp-14h] BYREF
 
   v13 = level;
-  if ( (byte_43529D0 & 1) == 0 )
+  if ( (byte_438C1CB & 1) == 0 )
   {
-    sub_B70694(&EventInfoCommandAssistLevelComponent_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_8476/*"LEVEL_INFO"*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43529D0 = 1;
+    sub_B775C4(&EventInfoCommandAssistLevelComponent_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_8532/*"LEVEL_INFO"*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438C1CB = 1;
   }
   if ( level < 1 )
   {
@@ -215,7 +215,7 @@ void __fastcall EventInfoCommandAssistLevelComponent__SetupLevel(
       return;
     }
 LABEL_17:
-    sub_B7076C(levelLabel, *(_QWORD *)&level);
+    sub_B7769C(levelLabel, *(_QWORD *)&level);
   }
   if ( level < 10 )
   {
@@ -239,9 +239,9 @@ LABEL_17:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_8476/*"LEVEL_INFO"*/, 0LL);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_8532/*"LEVEL_INFO"*/, 0LL);
   v11 = System_Int32__ToString((int32_t)&v13, 0LL);
-  v12 = (Il2CppObject *)System_String__Concat_44758168(v8, v11, 0LL);
+  v12 = (Il2CppObject *)System_String__Concat_44901936(v8, v11, 0LL);
   levelLabel = (UILabel_o *)System_String__Format(v10, v12, 0LL);
   if ( !v9 )
     goto LABEL_17;
@@ -259,10 +259,10 @@ void __fastcall EventInfoCommandAssistLevelComponent__UpdateDisp(
   struct EventInfoCommandAssistLevelComponent_AssistData_o *assistData; // x8
   const MethodInfo *v8; // x1
 
-  if ( (byte_43529D1 & 1) == 0 )
+  if ( (byte_438C1CC & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43529D1 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438C1CC = 1;
   }
   commandAssistLevelControl = (UnityEngine_Object_o *)this->fields.commandAssistLevelControl;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -310,7 +310,7 @@ void __fastcall EventInfoCommandAssistLevelComponent__UpdateDispLevel(
     assistData->fields.oldLv = assistData->fields.lv;
     v4 = this->fields.assistData;
     if ( !v4 )
-      sub_B7076C(this, method);
+      sub_B7769C(this, method);
     EventInfoCommandAssistLevelComponent__SetupLevel(this, v4->fields.lv, v2);
   }
 }

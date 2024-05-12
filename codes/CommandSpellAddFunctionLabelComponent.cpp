@@ -41,20 +41,20 @@ void __fastcall CommandSpellAddFunctionLabelComponent__SetData(
   __int64 v28; // x0
   ClassBoardCommandSpellEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_434DF07 & 1) == 0 )
+  if ( (byte_43874C9 & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_3329/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/);
-    sub_B70694(&StringLiteral_3328/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/);
-    byte_434DF07 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_3380/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/);
+    sub_B775C4(&StringLiteral_3379/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/);
+    byte_43874C9 = 1;
   }
   entity = 0LL;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (ClassBoardCommandSpellMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
+  Master_WarQuestSelectionMaster = (ClassBoardCommandSpellMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
   if ( !Master_WarQuestSelectionMaster )
     goto LABEL_42;
   v11 = Master_WarQuestSelectionMaster;
@@ -110,8 +110,8 @@ LABEL_25:
     {
       if ( v18 >= max_length )
       {
-        v28 = sub_B70798(Master_WarQuestSelectionMaster);
-        sub_B70738(v28, 0LL);
+        v28 = sub_B776C8(Master_WarQuestSelectionMaster);
+        sub_B77668(v28, 0LL);
       }
       v19 = classBoardAddCommandSpells->m_Items[v18];
       if ( !v19 )
@@ -143,7 +143,7 @@ LABEL_25:
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
     Master_WarQuestSelectionMaster = (ClassBoardCommandSpellMaster_o *)LocalizationManager__Get(
-                                                                         (System_String_o *)StringLiteral_3328/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/,
+                                                                         (System_String_o *)StringLiteral_3379/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/,
                                                                          0LL);
     if ( !addFunctionLabel )
       goto LABEL_42;
@@ -160,7 +160,7 @@ LABEL_25:
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
   Master_WarQuestSelectionMaster = (ClassBoardCommandSpellMaster_o *)LocalizationManager__Get(
-                                                                       (System_String_o *)StringLiteral_3329/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/,
+                                                                       (System_String_o *)StringLiteral_3380/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/,
                                                                        0LL);
   if ( !addFunctionLabel
     || (UILabel__set_text(addFunctionLabel, (System_String_o *)Master_WarQuestSelectionMaster, 0LL),
@@ -169,7 +169,7 @@ LABEL_25:
         !v23) )
   {
 LABEL_42:
-    sub_B7076C(Master_WarQuestSelectionMaster, v10);
+    sub_B7769C(Master_WarQuestSelectionMaster, v10);
   }
 LABEL_40:
   UIWidget__set_color(v23, *(UnityEngine_Color_o *)&v24, 0LL);

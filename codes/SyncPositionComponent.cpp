@@ -19,7 +19,7 @@ void __fastcall SyncPositionComponent__SetTarget(
   const MethodInfo *v4; // x1
 
   this->fields.targetTransform = targetTransform;
-  sub_B70630(&this->fields.targetTransform);
+  sub_B77560(&this->fields.targetTransform);
   SyncPositionComponent__SyncPosition(this, v4);
 }
 
@@ -34,10 +34,10 @@ void __fastcall SyncPositionComponent__SyncPosition(SyncPositionComponent_o *thi
   UnityEngine_Transform_o *v7; // x19
   int v8; // s0
 
-  if ( (byte_434EDEB & 1) == 0 )
+  if ( (byte_43882E3 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_434EDEB = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_43882E3 = 1;
   }
   targetTransform = (UnityEngine_Object_o *)this->fields.targetTransform;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -50,7 +50,7 @@ void __fastcall SyncPositionComponent__SyncPosition(SyncPositionComponent_o *thi
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     v6 = this->fields.targetTransform;
     if ( !v6 || (v7 = transform, *(UnityEngine_Vector3_o *)&v8 = UnityEngine_Transform__get_position(v6, 0LL), !v7) )
-      sub_B7076C(transform, v5);
+      sub_B7769C(transform, v5);
     UnityEngine_Transform__set_position(v7, *(UnityEngine_Vector3_o *)&v8, 0LL);
   }
 }

@@ -1,27 +1,27 @@
 void __fastcall UserGachaHistoryEntity___ctor(UserGachaHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_43506E4 & 1) == 0 )
+  if ( (byte_4389D0D & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_43506E4 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_4389D0D = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall UserGachaHistoryEntity__CreatePK(int64_t userId, int32_t gachaId, const MethodInfo *method)
 {
-  if ( (byte_43506E3 & 1) == 0 )
+  if ( (byte_4389D0C & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_43506E3 = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4389D0C = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            gachaId,
-           (const MethodInfo_1CA249C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_1D172EC *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -46,7 +46,7 @@ System_String_o *__fastcall UserGachaHistoryEntity__ToString(UserGachaHistoryEnt
          this->fields.num,
          0LL);
   if ( !v2 )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   return v2->fields.name;
 }
 
@@ -65,10 +65,10 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_CreatedAtToString(
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_43506E1 & 1) == 0 )
+  if ( (byte_4389D0A & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    byte_43506E1 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    byte_4389D0A = 1;
   }
   p_createdAtString = (BattleServantConfConponent_o *)&this->fields.createdAtString;
   if ( System_String__IsNullOrEmpty(this->fields.createdAtString, 0LL) )
@@ -81,7 +81,7 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_CreatedAtToString(
     }
     DateTime = (System_Int32_array **)LocalizationManager__GetDateTime(createdAt, 0LL);
     p_createdAtString->klass = (BattleServantConfConponent_c *)DateTime;
-    sub_B70630(p_createdAtString, DateTime, v6, v7, v8, v9, v10, v11);
+    sub_B77560(p_createdAtString, DateTime, v6, v7, v8, v9, v10, v11);
   }
   return (System_String_o *)p_createdAtString->klass;
 }
@@ -101,12 +101,12 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_TitleToString(
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_43506E2 & 1) == 0 )
+  if ( (byte_4389D0B & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_12600/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/);
-    sub_B70694(&StringLiteral_12610/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/);
-    byte_43506E2 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_12664/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/);
+    sub_B775C4(&StringLiteral_12674/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/);
+    byte_4389D0B = 1;
   }
   p_titleString = &this->fields.titleString;
   if ( System_String__IsNullOrEmpty(this->fields.titleString, 0LL) )
@@ -118,7 +118,7 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_TitleToString(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v4 = &StringLiteral_12610/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/;
+      v4 = &StringLiteral_12674/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/;
     }
     else
     {
@@ -127,11 +127,11 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_TitleToString(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v4 = &StringLiteral_12600/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/;
+      v4 = &StringLiteral_12664/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/;
     }
     v5 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)*v4, 0LL);
     *p_titleString = (System_String_o *)v5;
-    sub_B70630((BattleServantConfConponent_o *)&this->fields.titleString, v5, v6, v7, v8, v9, v10, v11);
+    sub_B77560((BattleServantConfConponent_o *)&this->fields.titleString, v5, v6, v7, v8, v9, v10, v11);
   }
   return *p_titleString;
 }

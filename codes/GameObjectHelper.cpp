@@ -11,14 +11,14 @@ bool __fastcall GameObjectHelper__IsInScene(
   int32_t m_Handle; // [xsp+8h] [xbp-18h] BYREF
 
   v4 = self;
-  if ( (byte_4355A99 & 1) == 0 )
+  if ( (byte_438F19B & 1) == 0 )
   {
-    self = (UnityEngine_GameObject_o *)sub_B70694(&SceneList_TypeInfo);
-    byte_4355A99 = 1;
+    self = (UnityEngine_GameObject_o *)sub_B775C4(&SceneList_TypeInfo);
+    byte_438F19B = 1;
   }
   m_Handle = 0;
   if ( !v4 )
-    sub_B7076C(self, *(_QWORD *)&sceneType);
+    sub_B7769C(self, *(_QWORD *)&sceneType);
   m_Handle = UnityEngine_GameObject__get_scene(v4, 0LL).fields.m_Handle;
   p_m_Handle = &m_Handle;
   name = UnityEngine_SceneManagement_Scene__get_name((UnityEngine_SceneManagement_Scene_o)p_m_Handle, 0LL);
@@ -64,20 +64,20 @@ void __fastcall GameObjectHelper__addNguiDepth(
   __int64 v31; // x0
 
   v6 = self;
-  if ( (byte_4355A98 & 1) == 0 )
+  if ( (byte_438F19A & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&System_Collections_IEnumerator_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    self = (UnityEngine_GameObject_o *)sub_B70694(&UnityEngine_Transform_TypeInfo);
-    byte_4355A98 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    self = (UnityEngine_GameObject_o *)sub_B775C4(&UnityEngine_Transform_TypeInfo);
+    byte_438F19A = 1;
   }
   if ( !v6 || (self = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v6, 0LL)) == 0LL )
-    sub_B7076C(self, *(_QWORD *)&depth);
+    sub_B7769C(self, *(_QWORD *)&depth);
   Enumerator = UnityEngine_Transform__GetEnumerator((UnityEngine_Transform_o *)self, 0LL);
   if ( !Enumerator )
-    sub_B7076C(0LL, v7);
+    sub_B7769C(0LL, v7);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -97,7 +97,7 @@ void __fastcall GameObjectHelper__addNguiDepth(
     else
     {
 LABEL_10:
-      p_method = sub_B08590(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_B0F4C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))p_method)(
             Enumerator,
@@ -120,7 +120,7 @@ LABEL_10:
     else
     {
 LABEL_17:
-      v16 = sub_B08590(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
+      v16 = sub_B0F4C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
     }
     v17 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v16)(
                                        Enumerator,
@@ -132,13 +132,13 @@ LABEL_17:
     if ( *(&v17->klass->_2.bitflags2 + 1) < (unsigned int)v20
       || (UnityEngine_Transform_c *)v17->klass->_2.typeHierarchy[v20 - 1] != UnityEngine_Transform_TypeInfo )
     {
-      sub_B70A60(v17);
+      sub_B77990(v17);
 LABEL_40:
-      sub_B7076C(v17, v18);
+      sub_B7769C(v17, v18);
     }
     Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                                 v17,
-                                (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                                (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
@@ -148,7 +148,7 @@ LABEL_40:
     if ( v22 )
     {
       if ( !Component_WebViewObject )
-        sub_B7076C(v22, v23);
+        sub_B7769C(v22, v23);
       UIWidget__set_depth(
         (UIWidget_o *)Component_WebViewObject,
         LODWORD(Component_WebViewObject[1].fields.onLoaded) + depth,
@@ -160,7 +160,7 @@ LABEL_40:
       GameObjectHelper__addNguiDepth(gameObject, depth, 1, v25);
     }
   }
-  v26 = sub_B70754(Enumerator, System_IDisposable_TypeInfo);
+  v26 = sub_B77684(Enumerator, System_IDisposable_TypeInfo);
   if ( v26 )
   {
     v27 = *(_QWORD *)v26;
@@ -181,7 +181,7 @@ LABEL_40:
     else
     {
 LABEL_35:
-      v31 = sub_B08590(v26, System_IDisposable_TypeInfo, 0LL);
+      v31 = sub_B0F4C0(v26, System_IDisposable_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v31)(v28, *(_QWORD *)(v31 + 8));
   }

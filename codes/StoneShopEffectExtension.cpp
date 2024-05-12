@@ -9,26 +9,26 @@ System_String_o *__fastcall StoneShopEffectExtension__GetDisplayName(int32_t thi
   int32_t v10; // [xsp+Ch] [xbp-14h] BYREF
 
   v10 = this;
-  if ( (byte_4350E05 & 1) == 0 )
+  if ( (byte_438A579 & 1) == 0 )
   {
-    sub_B70694(&StoneShopEffect_Kind_TypeInfo);
-    sub_B70694(&StringLiteral_6391/*"ExtendFriendMax"*/);
-    sub_B70694(&StringLiteral_2838/*"BattleContinue"*/);
-    sub_B70694(&StringLiteral_6392/*"ExtendServantEquipMax"*/);
-    sub_B70694(&StringLiteral_2017/*"ApRecover"*/);
-    sub_B70694(&StringLiteral_6393/*"ExtendServantMax"*/);
-    byte_4350E05 = 1;
+    sub_B775C4(&StoneShopEffect_Kind_TypeInfo);
+    sub_B775C4(&StringLiteral_6447/*"ExtendFriendMax"*/);
+    sub_B775C4(&StringLiteral_2884/*"BattleContinue"*/);
+    sub_B775C4(&StringLiteral_6448/*"ExtendServantEquipMax"*/);
+    sub_B775C4(&StringLiteral_2063/*"ApRecover"*/);
+    sub_B775C4(&StringLiteral_6449/*"ExtendServantMax"*/);
+    byte_438A579 = 1;
   }
   if ( this <= 10 )
   {
     if ( this == 1 )
     {
-      v4 = &StringLiteral_2838/*"BattleContinue"*/;
+      v4 = &StringLiteral_2884/*"BattleContinue"*/;
       return (System_String_o *)*v4;
     }
     if ( this == 2 )
     {
-      v4 = &StringLiteral_2017/*"ApRecover"*/;
+      v4 = &StringLiteral_2063/*"ApRecover"*/;
       return (System_String_o *)*v4;
     }
   }
@@ -37,19 +37,19 @@ System_String_o *__fastcall StoneShopEffectExtension__GetDisplayName(int32_t thi
     switch ( this )
     {
       case 11:
-        v4 = &StringLiteral_6391/*"ExtendFriendMax"*/;
+        v4 = &StringLiteral_6447/*"ExtendFriendMax"*/;
         return (System_String_o *)*v4;
       case 12:
-        v4 = &StringLiteral_6393/*"ExtendServantMax"*/;
+        v4 = &StringLiteral_6449/*"ExtendServantMax"*/;
         return (System_String_o *)*v4;
       case 13:
-        v4 = &StringLiteral_6392/*"ExtendServantEquipMax"*/;
+        v4 = &StringLiteral_6448/*"ExtendServantEquipMax"*/;
         return (System_String_o *)*v4;
     }
   }
   v7 = j_il2cpp_value_box_0(StoneShopEffect_Kind_TypeInfo, &v10, v2);
   if ( !v7 )
-    sub_B7076C(0LL, v8);
+    sub_B7769C(0LL, v8);
   v9 = v7;
   v5 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v7 + 360LL))(
                             v7,

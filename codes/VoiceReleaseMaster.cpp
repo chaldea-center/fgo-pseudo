@@ -1,14 +1,14 @@
 void __fastcall VoiceReleaseMaster___ctor(VoiceReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_434F9B0 & 1) == 0 )
+  if ( (byte_4388FAA & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_VoiceReleaseMaster__VoiceReleaseEntity__string___ctor__);
-    byte_434F9B0 = 1;
+    sub_B775C4(&Method_DataMasterBase_VoiceReleaseMaster__VoiceReleaseEntity__string___ctor__);
+    byte_4388FAA = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     168,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_VoiceReleaseMaster__VoiceReleaseEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_VoiceReleaseMaster__VoiceReleaseEntity__string___ctor__);
 }
 
 
@@ -26,28 +26,28 @@ VoiceReleaseEntity_array *__fastcall VoiceReleaseMaster__GetEntitiyList(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *items; // x25
   CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *v12; // x0
 
-  if ( (byte_434F9B1 & 1) == 0 )
+  if ( (byte_4388FAB & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&Method_System_Collections_Generic_List_VoiceReleaseEntity__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_VoiceReleaseEntity__ToArray__);
-    sub_B70694(&Method_System_Collections_Generic_List_VoiceReleaseEntity___ctor__);
-    sub_B70694(&System_Collections_Generic_List_VoiceReleaseEntity__TypeInfo);
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-    sub_B70694(&VoiceReleaseEntity_TypeInfo);
-    byte_434F9B1 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&Method_System_Collections_Generic_List_VoiceReleaseEntity__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_VoiceReleaseEntity__ToArray__);
+    sub_B775C4(&Method_System_Collections_Generic_List_VoiceReleaseEntity___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_VoiceReleaseEntity__TypeInfo);
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
+    sub_B775C4(&VoiceReleaseEntity_TypeInfo);
+    byte_4388FAB = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
     goto LABEL_19;
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             list,
-            (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-  v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_VoiceReleaseEntity__TypeInfo);
+            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+  v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_VoiceReleaseEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v7,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_VoiceReleaseEntity___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_VoiceReleaseEntity___ctor__);
   if ( Count >= 1 )
   {
     v8 = 0;
@@ -59,7 +59,7 @@ VoiceReleaseEntity_array *__fastcall VoiceReleaseMaster__GetEntitiyList(
       list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                                                                                            list,
                                                                                            v8,
-                                                                                           (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                                                                           (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( list )
       {
         v9 = (EventMissionProgressRequest_Argument_ProgressData_o *)list;
@@ -85,7 +85,7 @@ VoiceReleaseEntity_array *__fastcall VoiceReleaseMaster__GetEntitiyList(
             System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
               v7,
               v9,
-              (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_VoiceReleaseEntity__Add__);
+              (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_VoiceReleaseEntity__Add__);
           }
         }
       }
@@ -93,14 +93,14 @@ VoiceReleaseEntity_array *__fastcall VoiceReleaseMaster__GetEntitiyList(
         goto LABEL_17;
     }
 LABEL_19:
-    sub_B7076C(list, voiceId);
+    sub_B7769C(list, voiceId);
   }
 LABEL_17:
   if ( !v7 )
     goto LABEL_19;
   return (VoiceReleaseEntity_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
                                        (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v7,
-                                       (const MethodInfo_30277D4 *)Method_System_Collections_Generic_List_VoiceReleaseEntity__ToArray__);
+                                       (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_VoiceReleaseEntity__ToArray__);
 }
 
 
@@ -123,7 +123,7 @@ bool __fastcall VoiceReleaseMaster__IsCondEnable(
   EntitiyList = VoiceReleaseMaster__GetEntitiyList(this, voiceId, *(const MethodInfo **)&svtId);
   if ( !EntitiyList )
 LABEL_11:
-    sub_B7076C(EntitiyList, v6);
+    sub_B7769C(EntitiyList, v6);
   v8 = *(_QWORD *)&EntitiyList->max_length;
   v9 = EntitiyList;
   if ( (int)v8 < 1 )
@@ -141,8 +141,8 @@ LABEL_11:
       return 1;
     if ( v10 >= v9->max_length )
     {
-      v12 = sub_B70798(IsCondEnable);
-      sub_B70738(v12, 0LL);
+      v12 = sub_B776C8(IsCondEnable);
+      sub_B77668(v12, 0LL);
     }
   }
 }

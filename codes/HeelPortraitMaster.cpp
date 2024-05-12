@@ -1,14 +1,14 @@
 void __fastcall HeelPortraitMaster___ctor(HeelPortraitMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_43531A6 & 1) == 0 )
+  if ( (byte_438C925 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_HeelPortraitMaster__HeelPortraitEntity__int___ctor__);
-    byte_43531A6 = 1;
+    sub_B775C4(&Method_DataMasterBase_HeelPortraitMaster__HeelPortraitEntity__int___ctor__);
+    byte_438C925 = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     454,
-    (const MethodInfo_21C03A4 *)Method_DataMasterBase_HeelPortraitMaster__HeelPortraitEntity__int___ctor__);
+    (const MethodInfo_21FB7F8 *)Method_DataMasterBase_HeelPortraitMaster__HeelPortraitEntity__int___ctor__);
 }
 
 
@@ -36,25 +36,25 @@ int32_t __fastcall HeelPortraitMaster__GetCompleteNum(
   System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *v21; // x21
   System_Collections_Generic_IEnumerable_TSource__o *v22; // x0
 
-  if ( (byte_43531A5 & 1) == 0 )
+  if ( (byte_438C924 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Converter_DataEntityBase__HeelPortraitEntity___ctor__);
-    sub_B70694(&System_Converter_DataEntityBase__HeelPortraitEntity__TypeInfo);
-    sub_B70694(&Method_System_Linq_Enumerable_Count_HeelPortraitEntity___);
-    sub_B70694(&Method_System_Linq_Enumerable_Where_HeelPortraitEntity___);
-    sub_B70694(&Method_System_Func_HeelPortraitEntity__bool___ctor__);
-    sub_B70694(&System_Func_HeelPortraitEntity__bool__TypeInfo);
-    sub_B70694(&Method_ObservableCollectionExtensions_ConvertAll_DataEntityBase__HeelPortraitEntity___);
-    sub_B70694(&Method_HeelPortraitMaster___c__GetCompleteNum_b__1_0__);
-    sub_B70694(&Method_HeelPortraitMaster___c__DisplayClass1_0__GetCompleteNum_b__1__);
-    sub_B70694(&HeelPortraitMaster___c__DisplayClass1_0_TypeInfo);
-    sub_B70694(&HeelPortraitMaster___c_TypeInfo);
-    byte_43531A5 = 1;
+    sub_B775C4(&Method_System_Converter_DataEntityBase__HeelPortraitEntity___ctor__);
+    sub_B775C4(&System_Converter_DataEntityBase__HeelPortraitEntity__TypeInfo);
+    sub_B775C4(&Method_System_Linq_Enumerable_Count_HeelPortraitEntity___);
+    sub_B775C4(&Method_System_Linq_Enumerable_Where_HeelPortraitEntity___);
+    sub_B775C4(&Method_System_Func_HeelPortraitEntity__bool___ctor__);
+    sub_B775C4(&System_Func_HeelPortraitEntity__bool__TypeInfo);
+    sub_B775C4(&Method_ObservableCollectionExtensions_ConvertAll_DataEntityBase__HeelPortraitEntity___);
+    sub_B775C4(&Method_HeelPortraitMaster___c__GetCompleteNum_b__1_0__);
+    sub_B775C4(&Method_HeelPortraitMaster___c__DisplayClass1_0__GetCompleteNum_b__1__);
+    sub_B775C4(&HeelPortraitMaster___c__DisplayClass1_0_TypeInfo);
+    sub_B775C4(&HeelPortraitMaster___c_TypeInfo);
+    byte_438C924 = 1;
   }
-  v5 = (HeelPortraitMaster___c__DisplayClass1_0_o *)sub_B70764(HeelPortraitMaster___c__DisplayClass1_0_TypeInfo);
+  v5 = (HeelPortraitMaster___c__DisplayClass1_0_o *)sub_B77694(HeelPortraitMaster___c__DisplayClass1_0_TypeInfo);
   HeelPortraitMaster___c__DisplayClass1_0___ctor(v5, 0LL);
   if ( !v5 )
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   v5->fields.eventId = eventId;
   list = (System_Collections_ObjectModel_ObservableCollection_T__o *)this->fields.list;
   v9 = HeelPortraitMaster___c_TypeInfo;
@@ -74,15 +74,15 @@ int32_t __fastcall HeelPortraitMaster__GetCompleteNum(
       static_fields = HeelPortraitMaster___c_TypeInfo->static_fields;
     }
     v12 = (Il2CppObject *)static_fields->__9;
-    _9__1_0 = (System_Converter_string__string__o *)sub_B70764(System_Converter_DataEntityBase__HeelPortraitEntity__TypeInfo);
+    _9__1_0 = (System_Converter_string__string__o *)sub_B77694(System_Converter_DataEntityBase__HeelPortraitEntity__TypeInfo);
     System_Converter_string__string____ctor(
       _9__1_0,
       v12,
       Method_HeelPortraitMaster___c__GetCompleteNum_b__1_0__,
-      (const MethodInfo_21BC9BC *)Method_System_Converter_DataEntityBase__HeelPortraitEntity___ctor__);
+      (const MethodInfo_21F7E10 *)Method_System_Converter_DataEntityBase__HeelPortraitEntity___ctor__);
     v13 = HeelPortraitMaster___c_TypeInfo->static_fields;
     v13->__9__1_0 = (struct System_Converter_DataEntityBase__HeelPortraitEntity__o *)_9__1_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v13->__9__1_0,
       (System_Int32_array **)_9__1_0,
       v14,
@@ -95,20 +95,20 @@ int32_t __fastcall HeelPortraitMaster__GetCompleteNum(
   v20 = ObservableCollectionExtensions__ConvertAll_object__object_(
           list,
           (System_Converter_T__TOutput__o *)_9__1_0,
-          (const MethodInfo_1D58E18 *)Method_ObservableCollectionExtensions_ConvertAll_DataEntityBase__HeelPortraitEntity___);
-  v21 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_HeelPortraitEntity__bool__TypeInfo);
+          (const MethodInfo_1DF9FB4 *)Method_ObservableCollectionExtensions_ConvertAll_DataEntityBase__HeelPortraitEntity___);
+  v21 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B77694(System_Func_HeelPortraitEntity__bool__TypeInfo);
   System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
     v21,
     (Il2CppObject *)v5,
     Method_HeelPortraitMaster___c__DisplayClass1_0__GetCompleteNum_b__1__,
-    (const MethodInfo_29AC578 *)Method_System_Func_HeelPortraitEntity__bool___ctor__);
+    (const MethodInfo_29E92C4 *)Method_System_Func_HeelPortraitEntity__bool___ctor__);
   v22 = System_Linq_Enumerable__Where_WarBoardManager_WarBoardOnboardSkillTarget_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v20,
           (System_Func_TSource__bool__o *)v21,
-          (const MethodInfo_1CCCE44 *)Method_System_Linq_Enumerable_Where_HeelPortraitEntity___);
+          (const MethodInfo_1D41C94 *)Method_System_Linq_Enumerable_Where_HeelPortraitEntity___);
   return System_Linq_Enumerable__Count_WarBoardSquareIndexData_SaveData_(
            v22,
-           (const MethodInfo_1CB85E8 *)Method_System_Linq_Enumerable_Count_HeelPortraitEntity___);
+           (const MethodInfo_1D2D438 *)Method_System_Linq_Enumerable_Count_HeelPortraitEntity___);
 }
 
 
@@ -144,31 +144,31 @@ System_Collections_Generic_List_HeelPortraitEntity__o *__fastcall HeelPortraitMa
   int32_t *v29; // x11
   __int64 v30; // x0
 
-  if ( (byte_43531A4 & 1) == 0 )
+  if ( (byte_438C923 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
-    sub_B70694(&CondType_TypeInfo);
-    sub_B70694(&HeelPortraitEntity_TypeInfo);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
-    sub_B70694(&System_Collections_IEnumerator_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_HeelPortraitEntity__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_HeelPortraitEntity___ctor__);
-    sub_B70694(&System_Collections_Generic_List_HeelPortraitEntity__TypeInfo);
-    byte_43531A4 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+    sub_B775C4(&CondType_TypeInfo);
+    sub_B775C4(&HeelPortraitEntity_TypeInfo);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
+    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_HeelPortraitEntity__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_HeelPortraitEntity___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_HeelPortraitEntity__TypeInfo);
+    byte_438C923 = 1;
   }
-  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_HeelPortraitEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_HeelPortraitEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v5,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_HeelPortraitEntity___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_HeelPortraitEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
-    sub_B7076C(0LL, v6);
+    sub_B7769C(0LL, v6);
   Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
                  list,
-                 (const MethodInfo_2C865F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_2CC56C8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B7076C(0LL, v8);
+    sub_B7769C(0LL, v8);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -188,7 +188,7 @@ System_Collections_Generic_List_HeelPortraitEntity__o *__fastcall HeelPortraitMa
     else
     {
 LABEL_9:
-      p_method = sub_B08590(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_B0F4C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -211,7 +211,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v17 = sub_B08590(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v17 = sub_B0F4C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v18 = (EventMissionProgressRequest_Argument_ProgressData_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v17)(
                                                                    Enumerator,
@@ -221,7 +221,7 @@ LABEL_16:
       || (v21 = *(&HeelPortraitEntity_TypeInfo->_2.bitflags2 + 1), *(&v18->klass->_2.bitflags2 + 1) < (unsigned int)v21)
       || (HeelPortraitEntity_c *)v18->klass->_2.typeHierarchy[v21 - 1] != HeelPortraitEntity_TypeInfo )
     {
-      sub_B7076C(v18, v19);
+      sub_B7769C(v18, v19);
     }
     if ( *((_DWORD *)&v18->fields + 5) == eventId )
     {
@@ -234,11 +234,11 @@ LABEL_16:
       if ( IsOpen )
       {
         if ( !v5 )
-          sub_B7076C(IsOpen, v26);
+          sub_B7769C(IsOpen, v26);
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           v5,
           v20,
-          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_HeelPortraitEntity__Add__);
+          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_HeelPortraitEntity__Add__);
       }
     }
   }
@@ -259,7 +259,7 @@ LABEL_16:
   else
   {
 LABEL_32:
-    v30 = sub_B08590(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v30 = sub_B0F4C0(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v30)(Enumerator, *(_QWORD *)(v30 + 8));
   return (System_Collections_Generic_List_HeelPortraitEntity__o *)v5;
@@ -271,16 +271,16 @@ void __fastcall HeelPortraitMaster___c___cctor(const MethodInfo *method)
   Il2CppObject *v1; // x19
   struct HeelPortraitMaster___c_StaticFields *static_fields; // x0
 
-  if ( (byte_434F34E & 1) == 0 )
+  if ( (byte_4388930 & 1) == 0 )
   {
-    sub_B70694(&HeelPortraitMaster___c_TypeInfo);
-    byte_434F34E = 1;
+    sub_B775C4(&HeelPortraitMaster___c_TypeInfo);
+    byte_4388930 = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(HeelPortraitMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(HeelPortraitMaster___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = HeelPortraitMaster___c_TypeInfo->static_fields;
   static_fields->__9 = (struct HeelPortraitMaster___c_o *)v1;
-  sub_B70630(static_fields);
+  sub_B77560(static_fields);
 }
 
 
@@ -297,10 +297,10 @@ HeelPortraitEntity_o *__fastcall HeelPortraitMaster___c___GetCompleteNum_b__1_0(
 {
   __int64 v4; // x10
 
-  if ( (byte_434F34F & 1) == 0 )
+  if ( (byte_4388931 & 1) == 0 )
   {
-    sub_B70694(&HeelPortraitEntity_TypeInfo);
-    byte_434F34F = 1;
+    sub_B775C4(&HeelPortraitEntity_TypeInfo);
+    byte_4388931 = 1;
   }
   if ( !data )
     return 0LL;
@@ -327,6 +327,6 @@ bool __fastcall HeelPortraitMaster___c__DisplayClass1_0___GetCompleteNum_b__1(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   return data->fields.eventId == this->fields.eventId;
 }

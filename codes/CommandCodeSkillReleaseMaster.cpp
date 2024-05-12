@@ -1,14 +1,14 @@
 void __fastcall CommandCodeSkillReleaseMaster___ctor(CommandCodeSkillReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_43546B3 & 1) == 0 )
+  if ( (byte_438DF72 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string___ctor__);
-    byte_43546B3 = 1;
+    sub_B775C4(&Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string___ctor__);
+    byte_438DF72 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     255,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string___ctor__);
 }
 
 
@@ -23,16 +23,16 @@ CommandCodeSkillReleaseEntity_o *__fastcall CommandCodeSkillReleaseMaster__GetEn
 {
   System_String_o *PK; // x1
 
-  if ( (byte_43546B1 & 1) == 0 )
+  if ( (byte_438DF70 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__GetEntity__);
-    byte_43546B1 = 1;
+    sub_B775C4(&Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__GetEntity__);
+    byte_438DF70 = 1;
   }
   PK = CommandCodeSkillReleaseEntity__CreatePK(commandCodeId, num, priority, idx, *(const MethodInfo **)&idx);
   return (CommandCodeSkillReleaseEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                               (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                               PK,
-                                              (const MethodInfo_21C0890 *)Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__GetEntity__);
+                                              (const MethodInfo_21FBCE4 *)Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__GetEntity__);
 }
 
 
@@ -48,17 +48,17 @@ bool __fastcall CommandCodeSkillReleaseMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_43546B2 & 1) == 0 )
+  if ( (byte_438DF71 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__TryGetEntity__);
-    byte_43546B2 = 1;
+    sub_B775C4(&Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__TryGetEntity__);
+    byte_438DF71 = 1;
   }
   PK = CommandCodeSkillReleaseEntity__CreatePK(commandCodeId, num, priority, idx, *(const MethodInfo **)&priority);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__TryGetEntity__);
 }
 
 
@@ -87,11 +87,11 @@ bool __fastcall CommandCodeSkillReleaseMaster__isUse(
   const MethodInfo *v23; // x2
   CommandCodeSkillReleaseEntity_o *v26; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_43546B4 & 1) == 0 )
+  if ( (byte_438DF73 & 1) == 0 )
   {
-    sub_B70694(&CommandCodeSkillReleaseEntity_TypeInfo);
-    sub_B70694(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo);
-    byte_43546B4 = 1;
+    sub_B775C4(&CommandCodeSkillReleaseEntity_TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo);
+    byte_438DF73 = 1;
   }
   v26 = 0LL;
   condGroup = 0;
@@ -127,7 +127,7 @@ bool __fastcall CommandCodeSkillReleaseMaster__isUse(
     else
     {
 LABEL_17:
-      v22 = sub_B08590(lookup, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 1LL);
+      v22 = sub_B0F4C0(lookup, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 1LL);
     }
     if ( ((*(__int64 (__fastcall **)(void *, System_String_o *, CommandCodeSkillReleaseEntity_o **, _QWORD))v22)(
             v19,
@@ -142,9 +142,9 @@ LABEL_17:
     if ( *(&v26->klass->_2.bitflags2 + 1) < (unsigned int)v14
       || (CommandCodeSkillReleaseEntity_c *)v26->klass->_2.typeHierarchy[v14 - 1] != CommandCodeSkillReleaseEntity_TypeInfo )
     {
-      sub_B70A60(v26);
+      sub_B77990(v26);
 LABEL_22:
-      sub_B7076C(lookup, v17);
+      sub_B7769C(lookup, v17);
     }
     ++v12;
     if ( condGroup == v26->fields.condGroup )

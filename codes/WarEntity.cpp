@@ -1,17 +1,17 @@
 void __fastcall WarEntity___ctor(WarEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_435269B & 1) == 0 )
+  if ( (byte_438BE17 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_int___ctor__);
-    byte_435269B = 1;
+    sub_B775C4(&Method_DataEntityBase_int___ctor__);
+    byte_438BE17 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
 }
 
 
-void __fastcall WarEntity___ctor_26247140(WarEntity_o *this, WarEntity_o *cSrc, const MethodInfo *method)
+void __fastcall WarEntity___ctor_26605648(WarEntity_o *this, WarEntity_o *cSrc, const MethodInfo *method)
 {
   __int64 v5; // x0
   __int64 v6; // x1
@@ -58,23 +58,23 @@ void __fastcall WarEntity___ctor_26247140(WarEntity_o *this, WarEntity_o *cSrc, 
   System_Int32_array *v47; // x6
   System_Int32_array *v48; // x7
 
-  if ( (byte_435269C & 1) == 0 )
+  if ( (byte_438BE18 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_int___ctor__);
-    byte_435269C = 1;
+    sub_B775C4(&Method_DataEntityBase_int___ctor__);
+    byte_438BE18 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
   if ( !cSrc )
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   this->fields.id = cSrc->fields.id;
   age = cSrc->fields.age;
   this->fields.age = age;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.age, (System_Int32_array **)age, v7, v8, v9, v10, v11, v12);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.age, (System_Int32_array **)age, v7, v8, v9, v10, v11, v12);
   name = cSrc->fields.name;
   this->fields.name = name;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.name,
     (System_Int32_array **)name,
     v15,
@@ -85,7 +85,7 @@ void __fastcall WarEntity___ctor_26247140(WarEntity_o *this, WarEntity_o *cSrc, 
     v20);
   longName = cSrc->fields.longName;
   this->fields.longName = longName;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.longName,
     (System_Int32_array **)longName,
     v22,
@@ -100,7 +100,7 @@ void __fastcall WarEntity___ctor_26247140(WarEntity_o *this, WarEntity_o *cSrc, 
   this->fields.flag = cSrc->fields.flag;
   emptyMessage = cSrc->fields.emptyMessage;
   this->fields.emptyMessage = emptyMessage;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.emptyMessage,
     (System_Int32_array **)emptyMessage,
     v29,
@@ -115,7 +115,7 @@ void __fastcall WarEntity___ctor_26247140(WarEntity_o *this, WarEntity_o *cSrc, 
   this->fields.lastQuestId = cSrc->fields.lastQuestId;
   coordinate = cSrc->fields.coordinate;
   this->fields.coordinate = coordinate;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.coordinate,
     (System_Int32_array **)coordinate,
     v36,
@@ -126,7 +126,7 @@ void __fastcall WarEntity___ctor_26247140(WarEntity_o *this, WarEntity_o *cSrc, 
     v41);
   coordinates = cSrc->fields.coordinates;
   this->fields.coordinates = coordinates;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.coordinates,
     (System_Int32_array **)coordinates,
     v43,
@@ -169,19 +169,19 @@ int32_t __fastcall WarEntity__GetBaseMap(WarEntity_o *this, const MethodInfo *me
   DataManager_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_43526A6 & 1) == 0 )
+  if ( (byte_438BE22 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_WarAddMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43526A6 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_WarAddMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438BE22 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   return WarAddMaster__GetPrioredID((WarAddMaster_o *)Instance, 7, this->fields.id, 0, 0LL);
 }
@@ -192,18 +192,18 @@ System_String_o *__fastcall WarEntity__GetNoticeText(WarEntity_o *this, const Me
   WarAddMaster_o *Master_WarQuestSelectionMaster; // x0
   __int64 v4; // x1
 
-  if ( (byte_43526A8 & 1) == 0 )
+  if ( (byte_438BE24 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_WarAddMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43526A8 = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_WarAddMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438BE24 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (WarAddMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_WarAddMaster___);
+  Master_WarQuestSelectionMaster = (WarAddMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_WarAddMaster___);
   if ( !Master_WarQuestSelectionMaster )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   return WarAddMaster__GetPrioredStr(
            Master_WarQuestSelectionMaster,
            17,
@@ -218,19 +218,19 @@ int32_t __fastcall WarEntity__GetPrioredBannerId(WarEntity_o *this, const Method
   DataManager_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_435269F & 1) == 0 )
+  if ( (byte_438BE1B & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_WarAddMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_435269F = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_WarAddMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438BE1B = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   return WarAddMaster__GetPrioredID((WarAddMaster_o *)Instance, 3, this->fields.id, this->fields.bannerId, 0LL);
 }
@@ -243,21 +243,21 @@ System_Single_array_array *__fastcall WarEntity__GetPrioredCoordinates(WarEntity
   WarAddEntity_o *PrioredEntity; // x0
   Il2CppObject *overwriteStr; // x19
 
-  if ( (byte_43526A5 & 1) == 0 )
+  if ( (byte_438BE21 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_WarAddMaster___);
-    sub_B70694(&Method_JsonManager_DeserializeMultiArray_float___);
-    sub_B70694(&JsonManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43526A5 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_WarAddMaster___);
+    sub_B775C4(&Method_JsonManager_DeserializeMultiArray_float___);
+    sub_B775C4(&JsonManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438BE21 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   PrioredEntity = WarAddMaster__GetPrioredEntity((WarAddMaster_o *)Instance, 11, this->fields.id, 0LL);
   if ( !PrioredEntity )
@@ -267,7 +267,7 @@ System_Single_array_array *__fastcall WarEntity__GetPrioredCoordinates(WarEntity
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   return JsonManager__DeserializeMultiArray_float_(
            overwriteStr,
-           (const MethodInfo_1D50698 *)Method_JsonManager_DeserializeMultiArray_float___);
+           (const MethodInfo_1DF1834 *)Method_JsonManager_DeserializeMultiArray_float___);
 }
 
 
@@ -276,19 +276,19 @@ System_String_o *__fastcall WarEntity__GetPrioredLongName(WarEntity_o *this, con
   DataManager_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_43526A3 & 1) == 0 )
+  if ( (byte_438BE1F & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_WarAddMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43526A3 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_WarAddMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438BE1F = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   return WarAddMaster__GetPrioredStr((WarAddMaster_o *)Instance, 9, this->fields.id, this->fields.longName, 0LL);
 }
@@ -299,19 +299,19 @@ int32_t __fastcall WarEntity__GetPrioredMaterialParentWarId(WarEntity_o *this, c
   DataManager_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_43526A4 & 1) == 0 )
+  if ( (byte_438BE20 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_WarAddMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43526A4 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_WarAddMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438BE20 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   return WarAddMaster__GetPrioredID(
            (WarAddMaster_o *)Instance,
@@ -327,19 +327,19 @@ System_String_o *__fastcall WarEntity__GetPrioredName(WarEntity_o *this, const M
   DataManager_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_43526A2 & 1) == 0 )
+  if ( (byte_438BE1E & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_WarAddMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43526A2 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_WarAddMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438BE1E = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   return WarAddMaster__GetPrioredStr((WarAddMaster_o *)Instance, 8, this->fields.id, this->fields.name, 0LL);
 }
@@ -350,19 +350,19 @@ int32_t __fastcall WarEntity__GetPrioredParentId(WarEntity_o *this, const Method
   DataManager_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_43526A0 & 1) == 0 )
+  if ( (byte_438BE1C & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_WarAddMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43526A0 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_WarAddMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438BE1C = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   return WarAddMaster__GetPrioredID((WarAddMaster_o *)Instance, 2, this->fields.id, this->fields.parentWarId, 0LL);
 }
@@ -373,19 +373,19 @@ int32_t __fastcall WarEntity__GetQuestBoardSectionId(WarEntity_o *this, const Me
   DataManager_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_43526A1 & 1) == 0 )
+  if ( (byte_438BE1D & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_WarAddMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43526A1 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_WarAddMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438BE1D = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   return WarAddMaster__GetPrioredID((WarAddMaster_o *)Instance, 13, this->fields.id, 0, 0LL);
 }
@@ -398,17 +398,17 @@ int32_t __fastcall WarEntity__GetStartType(WarEntity_o *this, const MethodInfo *
   WarAddEntity_o *PrioredEntity; // x0
   int32_t *p_overwriteId; // x8
 
-  if ( (byte_43526A7 & 1) == 0 )
+  if ( (byte_438BE23 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_WarAddMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    byte_43526A7 = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_WarAddMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    byte_438BE23 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (WarAddMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_WarAddMaster___);
+  Master_WarQuestSelectionMaster = (WarAddMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_WarAddMaster___);
   if ( !Master_WarQuestSelectionMaster )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   PrioredEntity = WarAddMaster__GetPrioredEntity(Master_WarQuestSelectionMaster, 16, this->fields.id, 0LL);
   p_overwriteId = &PrioredEntity->fields.overwriteId;
   if ( !PrioredEntity )
@@ -422,19 +422,19 @@ bool __fastcall WarEntity__HasFlag(WarEntity_o *this, int32_t flag, const Method
   DataManager_o *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_435269E & 1) == 0 )
+  if ( (byte_438BE1A & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_WarAddMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_435269E = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_WarAddMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438BE1A = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v6);
+    sub_B7769C(Instance, v6);
   }
   return (WarAddMaster__GetPrioredID((WarAddMaster_o *)Instance, 6, this->fields.id, this->fields.flag, 0LL) & flag) != 0;
 }
@@ -469,17 +469,17 @@ bool __fastcall WarEntity__IsContainPrioredEntity(WarEntity_o *this, int32_t typ
   WarAddMaster_o *Master_WarQuestSelectionMaster; // x0
   __int64 v6; // x1
 
-  if ( (byte_43526AA & 1) == 0 )
+  if ( (byte_438BE26 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_WarAddMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    byte_43526AA = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_WarAddMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    byte_438BE26 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (WarAddMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_WarAddMaster___);
+  Master_WarQuestSelectionMaster = (WarAddMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_WarAddMaster___);
   if ( !Master_WarQuestSelectionMaster )
-    sub_B7076C(0LL, v6);
+    sub_B7769C(0LL, v6);
   return WarAddMaster__GetPrioredEntity(Master_WarQuestSelectionMaster, type, this->fields.id, 0LL) != 0LL;
 }
 
@@ -521,10 +521,10 @@ bool __fastcall WarEntity__IsMainInterlude(WarEntity_o *this, const MethodInfo *
   int32_t parentWarId; // w19
   BalanceConfig_c *v4; // x0
 
-  if ( (byte_435269D & 1) == 0 )
+  if ( (byte_438BE19 & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    byte_435269D = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    byte_438BE19 = 1;
   }
   parentWarId = this->fields.parentWarId;
   v4 = BalanceConfig_TypeInfo;
@@ -593,35 +593,35 @@ bool __fastcall WarEntity__IsPurchasedByRarePrism(WarEntity_o *this, const Metho
   System_Collections_Generic_List_T__o *datalist; // x20
   System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *v21; // x21
 
-  if ( (byte_43526A9 & 1) == 0 )
+  if ( (byte_438BE25 & 1) == 0 )
   {
-    sub_B70694(&Method_BasicHelper_Any_MapControl_QuestInfo___);
-    sub_B70694(&Method_DataManager_GetMasterData_UserQuestMaster___);
-    sub_B70694(&Method_System_Func_MapControl_QuestInfo__bool___ctor__);
-    sub_B70694(&System_Func_MapControl_QuestInfo__bool__TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    sub_B70694(&SingletonTemplate_QuestTree__TypeInfo);
-    sub_B70694(&Method_WarEntity___c__DisplayClass52_0__IsPurchasedByRarePrism_b__0__);
-    sub_B70694(&WarEntity___c__DisplayClass52_0_TypeInfo);
-    byte_43526A9 = 1;
+    sub_B775C4(&Method_BasicHelper_Any_MapControl_QuestInfo___);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserQuestMaster___);
+    sub_B775C4(&Method_System_Func_MapControl_QuestInfo__bool___ctor__);
+    sub_B775C4(&System_Func_MapControl_QuestInfo__bool__TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    sub_B775C4(&SingletonTemplate_QuestTree__TypeInfo);
+    sub_B775C4(&Method_WarEntity___c__DisplayClass52_0__IsPurchasedByRarePrism_b__0__);
+    sub_B775C4(&WarEntity___c__DisplayClass52_0_TypeInfo);
+    byte_438BE25 = 1;
   }
-  v3 = sub_B70764(WarEntity___c__DisplayClass52_0_TypeInfo);
+  v3 = sub_B77694(WarEntity___c__DisplayClass52_0_TypeInfo);
   WarEntity___c__DisplayClass52_0___ctor((WarEntity___c__DisplayClass52_0_o *)v3, 0LL);
   if ( !v3 )
     goto LABEL_12;
   *(_QWORD *)(v3 + 16) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v3 + 16), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  sub_B77560((BattleServantConfConponent_o *)(v3 + 16), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
   if ( WarEntity__HasFlag(this, 0x2000, v12) )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       MasterData_WarQuestSelectionMaster = (System_Int32_array **)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                     Instance,
-                                                                    (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserQuestMaster___);
+                                                                    (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserQuestMaster___);
       *(_QWORD *)(v3 + 24) = MasterData_WarQuestSelectionMaster;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)(v3 + 24),
         MasterData_WarQuestSelectionMaster,
         v14,
@@ -635,24 +635,24 @@ bool __fastcall WarEntity__IsPurchasedByRarePrism(WarEntity_o *this, const Metho
       {
         j_il2cpp_runtime_class_init_0(SingletonTemplate_QuestTree__TypeInfo);
       }
-      Instance = (DataManager_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2CE9CB0 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+      Instance = (DataManager_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2D168C0 *)Method_SingletonTemplate_QuestTree__get_Instance__);
       if ( Instance )
       {
         datalist = (System_Collections_Generic_List_T__o *)Instance->fields.datalist;
-        v21 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_MapControl_QuestInfo__bool__TypeInfo);
+        v21 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B77694(System_Func_MapControl_QuestInfo__bool__TypeInfo);
         System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
           v21,
           (Il2CppObject *)v3,
           Method_WarEntity___c__DisplayClass52_0__IsPurchasedByRarePrism_b__0__,
-          (const MethodInfo_29AC578 *)Method_System_Func_MapControl_QuestInfo__bool___ctor__);
+          (const MethodInfo_29E92C4 *)Method_System_Func_MapControl_QuestInfo__bool___ctor__);
         return BasicHelper__Any_WarBoardData_SquareRangeSearch_(
                  datalist,
                  (System_Func_T__bool__o *)v21,
-                 (const MethodInfo_1BDCA88 *)Method_BasicHelper_Any_MapControl_QuestInfo___);
+                 (const MethodInfo_1C66144 *)Method_BasicHelper_Any_MapControl_QuestInfo___);
       }
     }
 LABEL_12:
-    sub_B7076C(Instance, v5);
+    sub_B7769C(Instance, v5);
   }
   return 0;
 }
@@ -720,10 +720,10 @@ bool __fastcall WarEntity___c__DisplayClass52_0___IsPurchasedByRarePrism_b__0(
   UserQuestEntity_o *EntityFromId; // x0
 
   v4 = this;
-  if ( (byte_434FCB3 & 1) == 0 )
+  if ( (byte_438929C & 1) == 0 )
   {
-    this = (WarEntity___c__DisplayClass52_0_o *)sub_B70694(&NetworkManager_TypeInfo);
-    byte_434FCB3 = 1;
+    this = (WarEntity___c__DisplayClass52_0_o *)sub_B775C4(&NetworkManager_TypeInfo);
+    byte_438929C = 1;
   }
   if ( !quest )
     goto LABEL_14;
@@ -744,7 +744,7 @@ bool __fastcall WarEntity___c__DisplayClass52_0___IsPurchasedByRarePrism_b__0(
   this = (WarEntity___c__DisplayClass52_0_o *)NetworkManager__get_UserId(0LL);
   if ( !userQuestMst )
 LABEL_14:
-    sub_B7076C(this, quest);
+    sub_B7769C(this, quest);
   EntityFromId = UserQuestMaster__getEntityFromId(userQuestMst, (int64_t)this, quest->fields.questId, 0LL);
   if ( EntityFromId )
     return UserQuestEntity__HasStatus(EntityFromId, 8, 0LL);

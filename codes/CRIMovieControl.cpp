@@ -12,18 +12,18 @@ void __fastcall CRIMovieControl__Awake(CRIMovieControl_o *this, const MethodInfo
   int v5; // s0
   const MethodInfo *v8; // x1
 
-  if ( (byte_4354AB5 & 1) == 0 )
+  if ( (byte_438E374 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_786/*"--:--"*/);
-    byte_4354AB5 = 1;
+    sub_B775C4(&StringLiteral_788/*"--:--"*/);
+    byte_438E374 = 1;
   }
   nowTime = this->fields.nowTime;
   if ( !nowTime )
     goto LABEL_9;
-  UILabel__set_text(nowTime, (System_String_o *)StringLiteral_786/*"--:--"*/, 0LL);
+  UILabel__set_text(nowTime, (System_String_o *)StringLiteral_788/*"--:--"*/, 0LL);
   nowTime = this->fields.endTime;
   if ( !nowTime
-    || (UILabel__set_text(nowTime, (System_String_o *)StringLiteral_786/*"--:--"*/, 0LL),
+    || (UILabel__set_text(nowTime, (System_String_o *)StringLiteral_788/*"--:--"*/, 0LL),
         (nowTime = (UILabel_o *)this->fields.seekBar) == 0LL)
     || (UIProgressBar__set_value((UIProgressBar_o *)nowTime, 0.0, 0LL),
         (nowTime = (UILabel_o *)this->fields.texture) == 0LL)
@@ -32,7 +32,7 @@ void __fastcall CRIMovieControl__Awake(CRIMovieControl_o *this, const MethodInfo
         !transform) )
   {
 LABEL_9:
-    sub_B7076C(nowTime, method);
+    sub_B7769C(nowTime, method);
   }
   UnityEngine_Transform__set_localScale(transform, *(UnityEngine_Vector3_o *)&v5, 0LL);
   CRIMovieControl__Closed(this, v8);
@@ -47,7 +47,7 @@ void __fastcall CRIMovieControl__Close(CRIMovieControl_o *this, const MethodInfo
   window = this->fields.window;
   this->fields.status = 3;
   if ( !window )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   UnityEngine_GameObject__SetActive(window, 1, 0LL);
   CRIMovieControl__EnableControl(this, 0, v4);
 }
@@ -65,7 +65,7 @@ void __fastcall CRIMovieControl__Closed(CRIMovieControl_o *this, const MethodInf
         CRIMovieControl__EnableControl(this, 0, v4),
         (window = (UnityEngine_GameObject_o *)this->fields.panel) == 0LL) )
   {
-    sub_B7076C(window, method);
+    sub_B7769C(window, method);
   }
   ((void (__fastcall *)(UnityEngine_GameObject_o *, Il2CppClass *, float))window->klass[1]._1.castClass)(
     window,
@@ -83,7 +83,7 @@ void __fastcall CRIMovieControl__EnableControl(CRIMovieControl_o *this, bool fla
   if ( !foreground
     || (foreground = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(foreground, 0LL)) == 0LL )
   {
-    sub_B7076C(foreground, flag);
+    sub_B7769C(foreground, flag);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)foreground, !flag, 0LL);
 }
@@ -106,25 +106,25 @@ System_String_o *__fastcall CRIMovieControl__FrameToTimeString(
   int v13; // [xsp+Ch] [xbp-24h] BYREF
 
   v4 = this;
-  if ( (byte_4354AB6 & 1) == 0 )
+  if ( (byte_438E375 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    this = (CRIMovieControl_o *)sub_B70694(&StringLiteral_24009/*"{0}:{1:00}"*/);
-    byte_4354AB6 = 1;
+    sub_B775C4(&int_TypeInfo);
+    this = (CRIMovieControl_o *)sub_B775C4(&StringLiteral_24112/*"{0}:{1:00}"*/);
+    byte_438E375 = 1;
   }
   player = v4->fields.player;
   if ( !player
     || (this = *(CRIMovieControl_o **)&player->fields.renderMode) == 0LL
     || (this = (CRIMovieControl_o *)CriMana_Player__get_frameInfo((CriMana_Player_o *)this, 0LL)) == 0LL )
   {
-    sub_B7076C(this, *(_QWORD *)&frame);
+    sub_B7769C(this, *(_QWORD *)&frame);
   }
   v7 = 1000LL * frame / (unsigned __int64)this->fields.nowTime;
   v13 = (int)v7 / 60;
   v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13, v6);
   v12 = (int)v7 % 60;
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12, v9);
-  return System_String__Format_44753704((System_String_o *)StringLiteral_24009/*"{0}:{1:00}"*/, v8, v10, 0LL);
+  return System_String__Format_44897472((System_String_o *)StringLiteral_24112/*"{0}:{1:00}"*/, v8, v10, 0LL);
 }
 
 
@@ -148,7 +148,7 @@ void __fastcall CRIMovieControl__OnClickEndButton(CRIMovieControl_o *this, const
       goto LABEL_8;
     }
 LABEL_9:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
 LABEL_8:
   v3->fields.dispTime = 0.0;
@@ -176,7 +176,7 @@ void __fastcall CRIMovieControl__OnClickForwardButton(CRIMovieControl_o *this, c
       goto LABEL_8;
     }
 LABEL_9:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
 LABEL_8:
   v3->fields.dispTime = 0.0;
@@ -221,7 +221,7 @@ void __fastcall CRIMovieControl__OnClickPauseButton(CRIMovieControl_o *this, con
       }
     }
 LABEL_13:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
 LABEL_12:
   v3->fields.dispTime = 0.0;
@@ -266,7 +266,7 @@ void __fastcall CRIMovieControl__OnClickPlayButton(CRIMovieControl_o *this, cons
       }
     }
 LABEL_13:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
 LABEL_12:
   v3->fields.dispTime = 0.0;
@@ -294,7 +294,7 @@ void __fastcall CRIMovieControl__OnClickRewindButton(CRIMovieControl_o *this, co
       goto LABEL_8;
     }
 LABEL_9:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
 LABEL_8:
   v3->fields.dispTime = 0.0;
@@ -322,7 +322,7 @@ void __fastcall CRIMovieControl__OnClickStartButton(CRIMovieControl_o *this, con
       goto LABEL_8;
     }
 LABEL_9:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
 LABEL_8:
   v3->fields.dispTime = 0.0;
@@ -353,7 +353,7 @@ void __fastcall CRIMovieControl__OnClickTouch(CRIMovieControl_o *this, const Met
           return;
         }
 LABEL_9:
-        sub_B7076C(this, method);
+        sub_B7769C(this, method);
       }
     }
   }
@@ -367,7 +367,7 @@ void __fastcall CRIMovieControl__OnDoubleClickTouch(CRIMovieControl_o *this, con
 
   player = this->fields.player;
   if ( !player )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   if ( BYTE1(player->fields.cinemascopeSideFrame) )
   {
     v3 = *(CriMana_Player_o **)&player->fields.renderMode;
@@ -427,7 +427,7 @@ void __fastcall CRIMovieControl__OnPressDownSeekBar(CRIMovieControl_o *this, con
         }
       }
 LABEL_13:
-      sub_B7076C(this, method);
+      sub_B7769C(this, method);
     }
   }
 LABEL_12:
@@ -484,7 +484,7 @@ void __fastcall CRIMovieControl__OnPressUpSeekBar(CRIMovieControl_o *this, const
     || (v11 = this, (this = (CRIMovieControl_o *)v3->fields.player) == 0LL) )
   {
 LABEL_19:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   LODWORD(v10) = v11->fields.panel;
   v12 = (float)v10;
@@ -508,7 +508,7 @@ void __fastcall CRIMovieControl__OnSingleClickTouch(CRIMovieControl_o *this, con
 
   player = this->fields.player;
   if ( !player )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   if ( BYTE1(player->fields.cinemascopeSideFrame) )
   {
     v4 = *(CriMana_Player_o **)&player->fields.renderMode;
@@ -579,7 +579,7 @@ void __fastcall CRIMovieControl__OnValueChangeSeekBar(CRIMovieControl_o *this, c
       }
     }
 LABEL_16:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
 }
 
@@ -602,7 +602,7 @@ void __fastcall CRIMovieControl__Open(CRIMovieControl_o *this, const MethodInfo 
     || (window = (UnityEngine_GameObject_o *)seekBar->fields.thumb) == 0LL
     || (window = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)window, 0LL)) == 0LL )
   {
-    sub_B7076C(window, method);
+    sub_B7769C(window, method);
   }
   UnityEngine_GameObject__SetActive(window, 0, 0LL);
 }
@@ -620,7 +620,7 @@ void __fastcall CRIMovieControl__Opened(CRIMovieControl_o *this, const MethodInf
         CRIMovieControl__EnableControl(this, 1, v4),
         (window = (UnityEngine_GameObject_o *)this->fields.panel) == 0LL) )
   {
-    sub_B7076C(window, method);
+    sub_B7769C(window, method);
   }
   ((void (__fastcall *)(UnityEngine_GameObject_o *, Il2CppClass *, float))window->klass[1]._1.castClass)(
     window,
@@ -803,7 +803,7 @@ LABEL_10:
         }
       }
 LABEL_40:
-      sub_B7076C(this, method);
+      sub_B7769C(this, method);
     }
   }
 }

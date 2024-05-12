@@ -42,17 +42,17 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetClassIcons(
   __int64 v20; // x0
 
   v4 = this;
-  if ( (byte_4354333 & 1) == 0 )
+  if ( (byte_438DBF1 & 1) == 0 )
   {
-    this = (RestrictionNotSatisfySlotIcons_o *)sub_B70694(&AtlasManager_TypeInfo);
-    byte_4354333 = 1;
+    this = (RestrictionNotSatisfySlotIcons_o *)sub_B775C4(&AtlasManager_TypeInfo);
+    byte_438DBF1 = 1;
   }
   classIcons = v4->fields.classIcons;
   if ( classIcons )
   {
     if ( !classImageIds )
 LABEL_43:
-      sub_B7076C(this, classImageIds);
+      sub_B7769C(this, classImageIds);
     max_length = classImageIds->max_length;
     v7 = 0LL;
     while ( 1 )
@@ -133,8 +133,8 @@ LABEL_43:
           goto LABEL_35;
       }
 LABEL_44:
-      v20 = sub_B70798(this);
-      sub_B70738(v20, 0LL);
+      v20 = sub_B776C8(this);
+      sub_B77668(v20, 0LL);
     }
   }
 LABEL_35:
@@ -200,14 +200,14 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetServantIcons(
   WarEntity_o *entity; // [xsp+68h] [xbp-58h] BYREF
 
   v11 = this;
-  if ( (byte_4354332 & 1) == 0 )
+  if ( (byte_438DBF0 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    this = (RestrictionNotSatisfySlotIcons_o *)sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4354332 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    this = (RestrictionNotSatisfySlotIcons_o *)sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438DBF0 = 1;
   }
   entity = 0LL;
   servantFaceIcons = v11->fields.servantFaceIcons;
@@ -288,7 +288,7 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetServantIcons(
             {
               j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
             }
-            this = (RestrictionNotSatisfySlotIcons_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ServantMaster___);
+            this = (RestrictionNotSatisfySlotIcons_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ServantMaster___);
             if ( v14 >= servantIds->max_length )
               goto LABEL_84;
             if ( !this )
@@ -297,7 +297,7 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetServantIcons(
                                                          (DataMasterBase_WarMaster__WarEntity__int__o *)this,
                                                          &entity,
                                                          v15[v14],
-                                                         (const MethodInfo_21C049C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                                                         (const MethodInfo_21FB8F0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
             if ( ((unsigned __int8)this & 1) == 0 )
               goto LABEL_43;
             this = (RestrictionNotSatisfySlotIcons_o *)entity;
@@ -306,18 +306,18 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetServantIcons(
             this = (RestrictionNotSatisfySlotIcons_o *)ServantEntity__checkIsHeroineSvt((ServantEntity_o *)entity, 0LL);
             if ( ((unsigned __int8)this & 1) != 0 )
             {
-              this = (RestrictionNotSatisfySlotIcons_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+              this = (RestrictionNotSatisfySlotIcons_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
               if ( !this )
                 goto LABEL_83;
               this = (RestrictionNotSatisfySlotIcons_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                            (DataManager_o *)this,
-                                                           (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                                           (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserServantMaster___);
               if ( v14 >= servantIds->max_length )
                 goto LABEL_84;
               if ( !this )
                 goto LABEL_83;
               HeroineData = UserServantMaster__getHeroineData((UserServantMaster_o *)this, v15[v14], 0LL);
-              this = (RestrictionNotSatisfySlotIcons_o *)QuestRestrictionInfo__ConvertOverwriteImageLimitCount_34231828(
+              this = (RestrictionNotSatisfySlotIcons_o *)QuestRestrictionInfo__ConvertOverwriteImageLimitCount_34474600(
                                                            questRestrictionInfo,
                                                            HeroineData,
                                                            0LL);
@@ -354,7 +354,7 @@ LABEL_43:
           this = (RestrictionNotSatisfySlotIcons_o *)v23->m_Items[v14];
           if ( !this )
             goto LABEL_83;
-          ServantFaceIconComponent__Set_31478240(
+          ServantFaceIconComponent__Set_31755472(
             (ServantFaceIconComponent_o *)this,
             v15[v14],
             limitCounts->m_Items[v14 + 1],
@@ -459,14 +459,14 @@ LABEL_43:
           goto LABEL_81;
       }
 LABEL_84:
-      v32 = sub_B70798(this);
-      sub_B70738(v32, 0LL);
+      v32 = sub_B776C8(this);
+      sub_B77668(v32, 0LL);
     }
   }
 LABEL_81:
   this = (RestrictionNotSatisfySlotIcons_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v11, 0LL);
   if ( !this )
 LABEL_83:
-    sub_B7076C(this, servantIds);
+    sub_B7769C(this, servantIds);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
 }

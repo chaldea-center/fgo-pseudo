@@ -1,13 +1,13 @@
 void __fastcall CharaGraphManager___ctor(CharaGraphManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4354A6E & 1) == 0 )
+  if ( (byte_438E32D & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_CharaGraphManager___ctor__);
-    byte_4354A6E = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_CharaGraphManager___ctor__);
+    byte_438E32D = 1;
   }
   SingletonMonoBehaviour_WebViewManager____ctor(
     (SingletonMonoBehaviour_WebViewManager__o *)this,
-    (const MethodInfo_2CE9C98 *)Method_SingletonMonoBehaviour_CharaGraphManager___ctor__);
+    (const MethodInfo_2D168A8 *)Method_SingletonMonoBehaviour_CharaGraphManager___ctor__);
 }
 
 
@@ -31,13 +31,13 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal(
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o identity; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4354A69 & 1) == 0 )
+  if ( (byte_438E328 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UICharaGraphTexture___);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_14861/*"UICommandGraphTexture"*/);
-    byte_4354A69 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UICharaGraphTexture___);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_14929/*"UICommandGraphTexture"*/);
+    byte_438E328 = 1;
   }
   commandGraphPrefab = this->fields.commandGraphPrefab;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -47,13 +47,13 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal(
   }
   layer = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                         (UnityEngine_UI_Dropdown_DropdownItem_o *)commandGraphPrefab,
-                                        (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                        (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !layer )
     goto LABEL_12;
   v9 = layer;
   Component_srcLineSprite = (UICharaGraphRender_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                       layer,
-                                                      (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UICharaGraphTexture___);
+                                                      (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UICharaGraphTexture___);
   transform = UnityEngine_GameObject__get_transform(v9, 0LL);
   layer = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v9, 0LL);
   if ( !layer )
@@ -62,7 +62,7 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal(
   x = localScale.fields.x;
   y = localScale.fields.y;
   z = localScale.fields.z;
-  UnityEngine_Object__set_name((UnityEngine_Object_o *)v9, (System_String_o *)StringLiteral_14861/*"UICommandGraphTexture"*/, 0LL);
+  UnityEngine_Object__set_name((UnityEngine_Object_o *)v9, (System_String_o *)StringLiteral_14929/*"UICommandGraphTexture"*/, 0LL);
   if ( !parent )
     goto LABEL_12;
   layer = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(parent, 0LL);
@@ -80,13 +80,13 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal(
   layer = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_layer(parent, 0LL);
   if ( !Component_srcLineSprite )
 LABEL_12:
-    sub_B7076C(layer, v8);
+    sub_B7769C(layer, v8);
   UICharaGraphRender__SetLayer(Component_srcLineSprite, (int32_t)layer, 0LL);
   return (UICharaGraphTexture_o *)Component_srcLineSprite;
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal_30577704(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal_31052448(
         CharaGraphManager_o *this,
         UnityEngine_GameObject_o *parent,
         UserCommandCodeEntity_o *userCommandCodeEntity,
@@ -108,12 +108,12 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal_3
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v22; // 0:x0.16
 
   v10 = this;
-  if ( (byte_4354A6A & 1) == 0 )
+  if ( (byte_438E329 & 1) == 0 )
   {
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&StringLiteral_663/*")"*/);
-    this = (CharaGraphManager_o *)sub_B70694(&StringLiteral_14862/*"UICommandGraphTexture("*/);
-    byte_4354A6A = 1;
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&StringLiteral_665/*")"*/);
+    this = (CharaGraphManager_o *)sub_B775C4(&StringLiteral_14930/*"UICommandGraphTexture("*/);
+    byte_438E329 = 1;
   }
   commandCodeId = (struct CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o)0LL;
   if ( !userCommandCodeEntity )
@@ -127,7 +127,7 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal_3
   }
   *(_QWORD *)&v21.fields.currentCryptoKey = v12;
   *(_QWORD *)&v21.fields.fakeValue = v11;
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v21, 0LL);
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v21, 0LL);
   this = (CharaGraphManager_o *)CharaGraphManager__CreateCommandTextureLocal(v10, parent, v13, v14);
   if ( !this
     || (v15 = this,
@@ -136,15 +136,15 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal_3
         *(_QWORD *)&v22.fields.fakeValue = 0LL,
         commandCodeId = userCommandCodeEntity->fields.commandCodeId,
         v18 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v22, v17),
-        this = (CharaGraphManager_o *)System_String__Concat_44760452(
-                                        (System_String_o *)StringLiteral_14862/*"UICommandGraphTexture("*/,
+        this = (CharaGraphManager_o *)System_String__Concat_44904220(
+                                        (System_String_o *)StringLiteral_14930/*"UICommandGraphTexture("*/,
                                         v18,
-                                        (System_String_o *)StringLiteral_663/*")"*/,
+                                        (System_String_o *)StringLiteral_665/*")"*/,
                                         0LL),
         !gameObject) )
   {
 LABEL_10:
-    sub_B7076C(this, parent);
+    sub_B7769C(this, parent);
   }
   UnityEngine_Object__set_name(gameObject, (System_String_o *)this, 0LL);
   UICharaGraphTexture__SetCommand((UICharaGraphTexture_o *)v15, userCommandCodeEntity, callbackFunc, 0LL);
@@ -153,7 +153,7 @@ LABEL_10:
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal_30578180(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal_31052924(
         CharaGraphManager_o *this,
         UnityEngine_GameObject_o *parent,
         UserCommandCodeCollectionEntity_o *userCommandCodeCollectionEntity,
@@ -175,12 +175,12 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal_3
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v22; // 0:x0.16
 
   v10 = this;
-  if ( (byte_4354A6B & 1) == 0 )
+  if ( (byte_438E32A & 1) == 0 )
   {
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&StringLiteral_663/*")"*/);
-    this = (CharaGraphManager_o *)sub_B70694(&StringLiteral_14862/*"UICommandGraphTexture("*/);
-    byte_4354A6B = 1;
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&StringLiteral_665/*")"*/);
+    this = (CharaGraphManager_o *)sub_B775C4(&StringLiteral_14930/*"UICommandGraphTexture("*/);
+    byte_438E32A = 1;
   }
   commandCodeId = (struct CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o)0LL;
   if ( !userCommandCodeCollectionEntity )
@@ -194,7 +194,7 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal_3
   }
   *(_QWORD *)&v21.fields.currentCryptoKey = v12;
   *(_QWORD *)&v21.fields.fakeValue = v11;
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v21, 0LL);
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v21, 0LL);
   this = (CharaGraphManager_o *)CharaGraphManager__CreateCommandTextureLocal(v10, parent, v13, v14);
   if ( !this
     || (v15 = this,
@@ -203,18 +203,18 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal_3
         *(_QWORD *)&v22.fields.fakeValue = 0LL,
         commandCodeId = userCommandCodeCollectionEntity->fields.commandCodeId,
         v18 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v22, v17),
-        this = (CharaGraphManager_o *)System_String__Concat_44760452(
-                                        (System_String_o *)StringLiteral_14862/*"UICommandGraphTexture("*/,
+        this = (CharaGraphManager_o *)System_String__Concat_44904220(
+                                        (System_String_o *)StringLiteral_14930/*"UICommandGraphTexture("*/,
                                         v18,
-                                        (System_String_o *)StringLiteral_663/*")"*/,
+                                        (System_String_o *)StringLiteral_665/*")"*/,
                                         0LL),
         !gameObject) )
   {
 LABEL_10:
-    sub_B7076C(this, parent);
+    sub_B7769C(this, parent);
   }
   UnityEngine_Object__set_name(gameObject, (System_String_o *)this, 0LL);
-  UICharaGraphTexture__SetCommand_36442544(
+  UICharaGraphTexture__SetCommand_36685316(
     (UICharaGraphTexture_o *)v15,
     userCommandCodeCollectionEntity,
     callbackFunc,
@@ -224,7 +224,7 @@ LABEL_10:
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal_30578656(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal_31053400(
         CharaGraphManager_o *this,
         UnityEngine_GameObject_o *parent,
         CommandCodeEntity_o *commandCodeEntity,
@@ -246,12 +246,12 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal_3
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v22; // 0:x0.16
 
   v10 = this;
-  if ( (byte_4354A6C & 1) == 0 )
+  if ( (byte_438E32B & 1) == 0 )
   {
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&StringLiteral_663/*")"*/);
-    this = (CharaGraphManager_o *)sub_B70694(&StringLiteral_14862/*"UICommandGraphTexture("*/);
-    byte_4354A6C = 1;
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&StringLiteral_665/*")"*/);
+    this = (CharaGraphManager_o *)sub_B775C4(&StringLiteral_14930/*"UICommandGraphTexture("*/);
+    byte_438E32B = 1;
   }
   id = (struct CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o)0LL;
   if ( !commandCodeEntity )
@@ -265,7 +265,7 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal_3
   }
   *(_QWORD *)&v21.fields.currentCryptoKey = v12;
   *(_QWORD *)&v21.fields.fakeValue = v11;
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v21, 0LL);
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v21, 0LL);
   this = (CharaGraphManager_o *)CharaGraphManager__CreateCommandTextureLocal(v10, parent, v13, v14);
   if ( !this
     || (v15 = this,
@@ -274,25 +274,25 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal_3
         *(_QWORD *)&v22.fields.fakeValue = 0LL,
         id = commandCodeEntity->fields.id,
         v18 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v22, v17),
-        this = (CharaGraphManager_o *)System_String__Concat_44760452(
-                                        (System_String_o *)StringLiteral_14862/*"UICommandGraphTexture("*/,
+        this = (CharaGraphManager_o *)System_String__Concat_44904220(
+                                        (System_String_o *)StringLiteral_14930/*"UICommandGraphTexture("*/,
                                         v18,
-                                        (System_String_o *)StringLiteral_663/*")"*/,
+                                        (System_String_o *)StringLiteral_665/*")"*/,
                                         0LL),
         !gameObject) )
   {
 LABEL_10:
-    sub_B7076C(this, parent);
+    sub_B7769C(this, parent);
   }
   UnityEngine_Object__set_name(gameObject, (System_String_o *)this, 0LL);
-  UICharaGraphTexture__SetCommand_36442700((UICharaGraphTexture_o *)v15, commandCodeEntity, callbackFunc, 0LL);
+  UICharaGraphTexture__SetCommand_36685472((UICharaGraphTexture_o *)v15, commandCodeEntity, callbackFunc, 0LL);
   UICharaGraphTexture__SetDepth((UICharaGraphTexture_o *)v15, depth, 0LL);
   return (UICharaGraphTexture_o *)v15;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal_30579132(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal_31053876(
         CharaGraphManager_o *this,
         UnityEngine_GameObject_o *parent,
         int32_t commandCodeId,
@@ -308,11 +308,11 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal_3
   int32_t commandCodeIda; // [xsp+Ch] [xbp-24h] BYREF
 
   commandCodeIda = commandCodeId;
-  if ( (byte_4354A6D & 1) == 0 )
+  if ( (byte_438E32C & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_663/*")"*/);
-    sub_B70694(&StringLiteral_14862/*"UICommandGraphTexture("*/);
-    byte_4354A6D = 1;
+    sub_B775C4(&StringLiteral_665/*")"*/);
+    sub_B775C4(&StringLiteral_14930/*"UICommandGraphTexture("*/);
+    byte_438E32C = 1;
   }
   CommandTextureLocal = (UnityEngine_Component_o *)CharaGraphManager__CreateCommandTextureLocal(
                                                      this,
@@ -323,17 +323,17 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTextureLocal_3
     || (v12 = (UICharaGraphTexture_o *)CommandTextureLocal,
         gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(CommandTextureLocal, 0LL),
         v14 = System_Int32__ToString((int32_t)&commandCodeIda, 0LL),
-        CommandTextureLocal = (UnityEngine_Component_o *)System_String__Concat_44760452(
-                                                           (System_String_o *)StringLiteral_14862/*"UICommandGraphTexture("*/,
+        CommandTextureLocal = (UnityEngine_Component_o *)System_String__Concat_44904220(
+                                                           (System_String_o *)StringLiteral_14930/*"UICommandGraphTexture("*/,
                                                            v14,
-                                                           (System_String_o *)StringLiteral_663/*")"*/,
+                                                           (System_String_o *)StringLiteral_665/*")"*/,
                                                            0LL),
         !gameObject) )
   {
-    sub_B7076C(CommandTextureLocal, v11);
+    sub_B7769C(CommandTextureLocal, v11);
   }
   UnityEngine_Object__set_name(gameObject, (System_String_o *)CommandTextureLocal, 0LL);
-  UICharaGraphTexture__SetCommand_36442856(v12, commandCodeIda, callbackFunc, 0LL);
+  UICharaGraphTexture__SetCommand_36685628(v12, commandCodeIda, callbackFunc, 0LL);
   UICharaGraphTexture__SetDepth(v12, depth, 0LL);
   return v12;
 }
@@ -350,15 +350,15 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateCommandTexturePrefab(
   __int64 v10; // x1
   const MethodInfo *v11; // x5
 
-  if ( (byte_4354A5E & 1) == 0 )
+  if ( (byte_438E31D & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
-    byte_4354A5E = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+    byte_438E31D = 1;
   }
-  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v10);
-  return CharaGraphManager__CreateCommandTextureLocal_30579132(
+    sub_B7769C(0LL, v10);
+  return CharaGraphManager__CreateCommandTextureLocal_31053876(
            Instance,
            parent,
            commandCodeId,
@@ -391,30 +391,30 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal(
   UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o identity; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4354A5F & 1) == 0 )
+  if ( (byte_438E31E & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_B70694(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UICharaGraphTexture___);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&StringLiteral_14859/*"UICharaGraphTexture"*/);
-    byte_4354A5F = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_B775C4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UICharaGraphTexture___);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&StringLiteral_14927/*"UICharaGraphTexture"*/);
+    byte_438E31E = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantMaster___)) == 0LL )
   {
 LABEL_29:
-    sub_B7076C(Instance, v8);
+    sub_B7769C(Instance, v8);
   }
   Entity = (ServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                 (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                                 svtId,
-                                (const MethodInfo_21C0440 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                (const MethodInfo_21FB894 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   if ( Entity )
   {
     v10 = Entity;
@@ -436,7 +436,7 @@ LABEL_29:
     }
     v12 = (UnityEngine_Object_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                     (UnityEngine_UI_Dropdown_DropdownItem_o *)charaGraphPrefab,
-                                    (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                    (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   }
   else
   {
@@ -459,14 +459,14 @@ LABEL_15:
     }
     Instance = (DataManager_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                   (UnityEngine_UI_Dropdown_DropdownItem_o *)v13,
-                                  (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                  (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     v12 = (UnityEngine_Object_o *)Instance;
   }
   if ( !v12 )
     goto LABEL_29;
   Component_srcLineSprite = (UICharaGraphRender_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                       (UnityEngine_GameObject_o *)v12,
-                                                      (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UICharaGraphTexture___);
+                                                      (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UICharaGraphTexture___);
   transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v12, 0LL);
   Instance = (DataManager_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v12, 0LL);
   if ( !Instance )
@@ -475,7 +475,7 @@ LABEL_15:
   x = localScale.fields.x;
   y = localScale.fields.y;
   z = localScale.fields.z;
-  UnityEngine_Object__set_name(v12, (System_String_o *)StringLiteral_14859/*"UICharaGraphTexture"*/, 0LL);
+  UnityEngine_Object__set_name(v12, (System_String_o *)StringLiteral_14927/*"UICharaGraphTexture"*/, 0LL);
   if ( !parent )
     goto LABEL_29;
   Instance = (DataManager_o *)UnityEngine_GameObject__get_transform(parent, 0LL);
@@ -499,7 +499,7 @@ LABEL_15:
 
 
 // local variable allocation has failed, the output may be wrong!
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30571552(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_31046296(
         CharaGraphManager_o *this,
         UnityEngine_GameObject_o *parent,
         int32_t svtId,
@@ -522,11 +522,11 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30571552
 
   v24 = limitCount;
   v25 = svtId;
-  if ( (byte_4354A60 & 1) == 0 )
+  if ( (byte_438E31F & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_14860/*"UICharaGraphTexture("*/);
-    sub_B70694(&StringLiteral_663/*")"*/);
-    byte_4354A60 = 1;
+    sub_B775C4(&StringLiteral_14928/*"UICharaGraphTexture("*/);
+    sub_B775C4(&StringLiteral_665/*")"*/);
+    byte_438E31F = 1;
   }
   TextureLocal = (UnityEngine_Component_o *)CharaGraphManager__CreateTextureLocal(
                                               this,
@@ -538,15 +538,15 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30571552
         gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(TextureLocal, 0LL),
         v21 = System_Int32__ToString((int32_t)&v25, 0LL),
         v22 = System_Int32__ToString((int32_t)&v24, 0LL),
-        TextureLocal = (UnityEngine_Component_o *)System_String__Concat_44761580(
-                                                    (System_String_o *)StringLiteral_14860/*"UICharaGraphTexture("*/,
+        TextureLocal = (UnityEngine_Component_o *)System_String__Concat_44905348(
+                                                    (System_String_o *)StringLiteral_14928/*"UICharaGraphTexture("*/,
                                                     v21,
                                                     v22,
-                                                    (System_String_o *)StringLiteral_663/*")"*/,
+                                                    (System_String_o *)StringLiteral_665/*")"*/,
                                                     0LL),
         !gameObject) )
   {
-    sub_B7076C(TextureLocal, v18);
+    sub_B7769C(TextureLocal, v18);
   }
   UnityEngine_Object__set_name(gameObject, (System_String_o *)TextureLocal, 0LL);
   UICharaGraphTexture__SetCharacter(v19, v25, v24, exceedCount, isOwn, callbackFunc, isRealName, 0LL);
@@ -555,7 +555,7 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30571552
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30572104(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_31046848(
         CharaGraphManager_o *this,
         UnityEngine_GameObject_o *parent,
         UserServantEntity_o *userSvtEntity,
@@ -577,12 +577,12 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30572104
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v22; // 0:x0.16
 
   v10 = this;
-  if ( (byte_4354A61 & 1) == 0 )
+  if ( (byte_438E320 & 1) == 0 )
   {
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&StringLiteral_14860/*"UICharaGraphTexture("*/);
-    this = (CharaGraphManager_o *)sub_B70694(&StringLiteral_663/*")"*/);
-    byte_4354A61 = 1;
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&StringLiteral_14928/*"UICharaGraphTexture("*/);
+    this = (CharaGraphManager_o *)sub_B775C4(&StringLiteral_665/*")"*/);
+    byte_438E320 = 1;
   }
   svtId = (struct CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o)0LL;
   if ( !userSvtEntity )
@@ -596,7 +596,7 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30572104
   }
   *(_QWORD *)&v21.fields.currentCryptoKey = v12;
   *(_QWORD *)&v21.fields.fakeValue = v11;
-  v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v21, 0LL);
+  v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v21, 0LL);
   this = (CharaGraphManager_o *)CharaGraphManager__CreateTextureLocal(v10, parent, v13, v14);
   if ( !this
     || (v15 = this,
@@ -605,24 +605,24 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30572104
         *(_QWORD *)&v22.fields.fakeValue = 0LL,
         svtId = userSvtEntity->fields.svtId,
         v18 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v22, v17),
-        this = (CharaGraphManager_o *)System_String__Concat_44760452(
-                                        (System_String_o *)StringLiteral_14860/*"UICharaGraphTexture("*/,
+        this = (CharaGraphManager_o *)System_String__Concat_44904220(
+                                        (System_String_o *)StringLiteral_14928/*"UICharaGraphTexture("*/,
                                         v18,
-                                        (System_String_o *)StringLiteral_663/*")"*/,
+                                        (System_String_o *)StringLiteral_665/*")"*/,
                                         0LL),
         !gameObject) )
   {
 LABEL_10:
-    sub_B7076C(this, parent);
+    sub_B7769C(this, parent);
   }
   UnityEngine_Object__set_name(gameObject, (System_String_o *)this, 0LL);
-  UICharaGraphTexture__SetCharacter_36440380((UICharaGraphTexture_o *)v15, userSvtEntity, callbackFunc, 0LL);
+  UICharaGraphTexture__SetCharacter_36683152((UICharaGraphTexture_o *)v15, userSvtEntity, callbackFunc, 0LL);
   UICharaGraphTexture__SetDepth((UICharaGraphTexture_o *)v15, depth, 0LL);
   return (UICharaGraphTexture_o *)v15;
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30572736(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_31047480(
         CharaGraphManager_o *this,
         UnityEngine_GameObject_o *parent,
         UserServantEntity_o *userSvtEntity,
@@ -686,14 +686,14 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30572736
 
   v13 = this;
   imageLimitCounta = imageLimitCount;
-  if ( (byte_4354A62 & 1) == 0 )
+  if ( (byte_438E321 & 1) == 0 )
   {
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_806/*"-I"*/);
-    sub_B70694(&StringLiteral_14860/*"UICharaGraphTexture("*/);
-    this = (CharaGraphManager_o *)sub_B70694(&StringLiteral_663/*")"*/);
-    byte_4354A62 = 1;
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_808/*"-I"*/);
+    sub_B775C4(&StringLiteral_14928/*"UICharaGraphTexture("*/);
+    this = (CharaGraphManager_o *)sub_B775C4(&StringLiteral_665/*")"*/);
+    byte_438E321 = 1;
   }
   svtId = (struct CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o)0LL;
   if ( !userSvtEntity )
@@ -707,24 +707,24 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30572736
   }
   *(_QWORD *)&v63.fields.currentCryptoKey = v15;
   *(_QWORD *)&v63.fields.fakeValue = v14;
-  v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v63, 0LL);
+  v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v63, 0LL);
   this = (CharaGraphManager_o *)CharaGraphManager__CreateTextureLocal(v13, parent, v16, v17);
   if ( !this
     || (v18 = this,
         gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL),
-        (this = (CharaGraphManager_o *)sub_B706AC(string___TypeInfo, 5LL)) == 0LL) )
+        (this = (CharaGraphManager_o *)sub_B775DC(string___TypeInfo, 5LL)) == 0LL) )
   {
 LABEL_33:
-    sub_B7076C(this, parent);
+    sub_B7769C(this, parent);
   }
   v26 = this;
-  v27 = (System_String_o *)StringLiteral_14860/*"UICharaGraphTexture("*/;
-  if ( StringLiteral_14860/*"UICharaGraphTexture("*/ )
+  v27 = (System_String_o *)StringLiteral_14928/*"UICharaGraphTexture("*/;
+  if ( StringLiteral_14928/*"UICharaGraphTexture("*/ )
   {
-    v27 = (System_String_o *)sub_B70754(StringLiteral_14860/*"UICharaGraphTexture("*/, v26->klass->_1.element_class);
+    v27 = (System_String_o *)sub_B77684(StringLiteral_14928/*"UICharaGraphTexture("*/, v26->klass->_1.element_class);
     if ( !v27 )
       goto LABEL_34;
-    v28 = (System_Int32_array **)StringLiteral_14860/*"UICharaGraphTexture("*/;
+    v28 = (System_Int32_array **)StringLiteral_14928/*"UICharaGraphTexture("*/;
   }
   else
   {
@@ -733,7 +733,7 @@ LABEL_33:
   if ( !LODWORD(v26->fields.charaGraphPrefab) )
     goto LABEL_32;
   v26->fields.charaEquipGraphPrefab = (struct UnityEngine_GameObject_o *)v28;
-  sub_B70630((BattleServantConfConponent_o *)&v26->fields.charaEquipGraphPrefab, v28, v20, v21, v22, v23, v24, v25);
+  sub_B77560((BattleServantConfConponent_o *)&v26->fields.charaEquipGraphPrefab, v28, v20, v21, v22, v23, v24, v25);
   *(_QWORD *)&v64.fields.currentCryptoKey = &svtId;
   *(_QWORD *)&v64.fields.fakeValue = 0LL;
   svtId = userSvtEntity->fields.svtId;
@@ -741,21 +741,21 @@ LABEL_33:
   v36 = (System_Int32_array **)v27;
   if ( v27 )
   {
-    v27 = (System_String_o *)sub_B70754(v27, v26->klass->_1.element_class);
+    v27 = (System_String_o *)sub_B77684(v27, v26->klass->_1.element_class);
     if ( !v27 )
       goto LABEL_34;
   }
   if ( LODWORD(v26->fields.charaGraphPrefab) <= 1 )
     goto LABEL_32;
   v26->fields.commandGraphPrefab = (struct UnityEngine_GameObject_o *)v36;
-  sub_B70630((BattleServantConfConponent_o *)&v26->fields.commandGraphPrefab, v36, v30, v31, v32, v33, v34, v35);
-  v27 = (System_String_o *)StringLiteral_806/*"-I"*/;
-  if ( StringLiteral_806/*"-I"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v26->fields.commandGraphPrefab, v36, v30, v31, v32, v33, v34, v35);
+  v27 = (System_String_o *)StringLiteral_808/*"-I"*/;
+  if ( StringLiteral_808/*"-I"*/ )
   {
-    v27 = (System_String_o *)sub_B70754(StringLiteral_806/*"-I"*/, v26->klass->_1.element_class);
+    v27 = (System_String_o *)sub_B77684(StringLiteral_808/*"-I"*/, v26->klass->_1.element_class);
     if ( !v27 )
       goto LABEL_34;
-    v43 = (System_Int32_array **)StringLiteral_806/*"-I"*/;
+    v43 = (System_Int32_array **)StringLiteral_808/*"-I"*/;
   }
   else
   {
@@ -764,30 +764,30 @@ LABEL_33:
   if ( LODWORD(v26->fields.charaGraphPrefab) <= 2 )
     goto LABEL_32;
   v26[1].klass = (CharaGraphManager_c *)v43;
-  sub_B70630((BattleServantConfConponent_o *)&v26[1], v43, v37, v38, v39, v40, v41, v42);
+  sub_B77560((BattleServantConfConponent_o *)&v26[1], v43, v37, v38, v39, v40, v41, v42);
   v27 = System_Int32__ToString((int32_t)&imageLimitCounta, 0LL);
   v50 = (System_Int32_array **)v27;
   if ( v27 )
   {
-    v27 = (System_String_o *)sub_B70754(v27, v26->klass->_1.element_class);
+    v27 = (System_String_o *)sub_B77684(v27, v26->klass->_1.element_class);
     if ( !v27 )
     {
 LABEL_34:
-      v60 = sub_B7078C(v27);
-      sub_B70738(v60, 0LL);
+      v60 = sub_B776BC(v27);
+      sub_B77668(v60, 0LL);
     }
   }
   if ( LODWORD(v26->fields.charaGraphPrefab) <= 3 )
     goto LABEL_32;
   v26[1].monitor = v50;
-  sub_B70630((BattleServantConfConponent_o *)&v26[1].monitor, v50, v44, v45, v46, v47, v48, v49);
-  v27 = (System_String_o *)StringLiteral_663/*")"*/;
-  if ( StringLiteral_663/*")"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v26[1].monitor, v50, v44, v45, v46, v47, v48, v49);
+  v27 = (System_String_o *)StringLiteral_665/*")"*/;
+  if ( StringLiteral_665/*")"*/ )
   {
-    v27 = (System_String_o *)sub_B70754(StringLiteral_663/*")"*/, v26->klass->_1.element_class);
+    v27 = (System_String_o *)sub_B77684(StringLiteral_665/*")"*/, v26->klass->_1.element_class);
     if ( v27 )
     {
-      v57 = (System_Int32_array **)StringLiteral_663/*")"*/;
+      v57 = (System_Int32_array **)StringLiteral_665/*")"*/;
       goto LABEL_29;
     }
     goto LABEL_34;
@@ -797,16 +797,16 @@ LABEL_29:
   if ( LODWORD(v26->fields.charaGraphPrefab) <= 4 )
   {
 LABEL_32:
-    v59 = sub_B70798(v27);
-    sub_B70738(v59, 0LL);
+    v59 = sub_B776C8(v27);
+    sub_B77668(v59, 0LL);
   }
   *(_QWORD *)&v26[1].fields.m_CachedPtr = v57;
-  sub_B70630((BattleServantConfConponent_o *)&v26[1].fields, v57, v51, v52, v53, v54, v55, v56);
-  this = (CharaGraphManager_o *)System_String__Concat_44838292((System_String_array *)v26, 0LL);
+  sub_B77560((BattleServantConfConponent_o *)&v26[1].fields, v57, v51, v52, v53, v54, v55, v56);
+  this = (CharaGraphManager_o *)System_String__Concat_44982964((System_String_array *)v26, 0LL);
   if ( !gameObject )
     goto LABEL_33;
   UnityEngine_Object__set_name(gameObject, (System_String_o *)this, 0LL);
-  UICharaGraphTexture__SetCharacter_36440644(
+  UICharaGraphTexture__SetCharacter_36683416(
     (UICharaGraphTexture_o *)v18,
     userSvtEntity,
     imageLimitCounta,
@@ -818,7 +818,7 @@ LABEL_32:
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30573608(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_31048352(
         CharaGraphManager_o *this,
         UnityEngine_GameObject_o *parent,
         UserServantCollectionEntity_o *userSvtCollectionEntity,
@@ -840,12 +840,12 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30573608
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v22; // 0:x0.16
 
   v10 = this;
-  if ( (byte_4354A63 & 1) == 0 )
+  if ( (byte_438E322 & 1) == 0 )
   {
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&StringLiteral_14860/*"UICharaGraphTexture("*/);
-    this = (CharaGraphManager_o *)sub_B70694(&StringLiteral_663/*")"*/);
-    byte_4354A63 = 1;
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&StringLiteral_14928/*"UICharaGraphTexture("*/);
+    this = (CharaGraphManager_o *)sub_B775C4(&StringLiteral_665/*")"*/);
+    byte_438E322 = 1;
   }
   svtId = (struct CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o)0LL;
   if ( !userSvtCollectionEntity )
@@ -859,7 +859,7 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30573608
   }
   *(_QWORD *)&v21.fields.currentCryptoKey = v12;
   *(_QWORD *)&v21.fields.fakeValue = v11;
-  v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v21, 0LL);
+  v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v21, 0LL);
   this = (CharaGraphManager_o *)CharaGraphManager__CreateTextureLocal(v10, parent, v13, v14);
   if ( !this
     || (v15 = this,
@@ -868,24 +868,24 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30573608
         *(_QWORD *)&v22.fields.fakeValue = 0LL,
         svtId = userSvtCollectionEntity->fields.svtId,
         v18 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v22, v17),
-        this = (CharaGraphManager_o *)System_String__Concat_44760452(
-                                        (System_String_o *)StringLiteral_14860/*"UICharaGraphTexture("*/,
+        this = (CharaGraphManager_o *)System_String__Concat_44904220(
+                                        (System_String_o *)StringLiteral_14928/*"UICharaGraphTexture("*/,
                                         v18,
-                                        (System_String_o *)StringLiteral_663/*")"*/,
+                                        (System_String_o *)StringLiteral_665/*")"*/,
                                         0LL),
         !gameObject) )
   {
 LABEL_10:
-    sub_B7076C(this, parent);
+    sub_B7769C(this, parent);
   }
   UnityEngine_Object__set_name(gameObject, (System_String_o *)this, 0LL);
-  UICharaGraphTexture__SetCharacter_36440924((UICharaGraphTexture_o *)v15, userSvtCollectionEntity, callbackFunc, 0LL);
+  UICharaGraphTexture__SetCharacter_36683696((UICharaGraphTexture_o *)v15, userSvtCollectionEntity, callbackFunc, 0LL);
   UICharaGraphTexture__SetDepth((UICharaGraphTexture_o *)v15, depth, 0LL);
   return (UICharaGraphTexture_o *)v15;
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30574096(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_31048840(
         CharaGraphManager_o *this,
         UnityEngine_GameObject_o *parent,
         UserServantCollectionEntity_o *userSvtCollectionEntity,
@@ -948,14 +948,14 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30574096
 
   v11 = this;
   imageLimitCounta = imageLimitCount;
-  if ( (byte_4354A64 & 1) == 0 )
+  if ( (byte_438E323 & 1) == 0 )
   {
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_806/*"-I"*/);
-    sub_B70694(&StringLiteral_14860/*"UICharaGraphTexture("*/);
-    this = (CharaGraphManager_o *)sub_B70694(&StringLiteral_663/*")"*/);
-    byte_4354A64 = 1;
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_808/*"-I"*/);
+    sub_B775C4(&StringLiteral_14928/*"UICharaGraphTexture("*/);
+    this = (CharaGraphManager_o *)sub_B775C4(&StringLiteral_665/*")"*/);
+    byte_438E323 = 1;
   }
   svtId = (struct CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o)0LL;
   if ( !userSvtCollectionEntity )
@@ -969,24 +969,24 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30574096
   }
   *(_QWORD *)&v61.fields.currentCryptoKey = v13;
   *(_QWORD *)&v61.fields.fakeValue = v12;
-  v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v61, 0LL);
+  v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v61, 0LL);
   this = (CharaGraphManager_o *)CharaGraphManager__CreateTextureLocal(v11, parent, v14, v15);
   if ( !this
     || (v16 = this,
         gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL),
-        (this = (CharaGraphManager_o *)sub_B706AC(string___TypeInfo, 5LL)) == 0LL) )
+        (this = (CharaGraphManager_o *)sub_B775DC(string___TypeInfo, 5LL)) == 0LL) )
   {
 LABEL_33:
-    sub_B7076C(this, parent);
+    sub_B7769C(this, parent);
   }
   v24 = this;
-  v25 = (System_String_o *)StringLiteral_14860/*"UICharaGraphTexture("*/;
-  if ( StringLiteral_14860/*"UICharaGraphTexture("*/ )
+  v25 = (System_String_o *)StringLiteral_14928/*"UICharaGraphTexture("*/;
+  if ( StringLiteral_14928/*"UICharaGraphTexture("*/ )
   {
-    v25 = (System_String_o *)sub_B70754(StringLiteral_14860/*"UICharaGraphTexture("*/, v24->klass->_1.element_class);
+    v25 = (System_String_o *)sub_B77684(StringLiteral_14928/*"UICharaGraphTexture("*/, v24->klass->_1.element_class);
     if ( !v25 )
       goto LABEL_34;
-    v26 = (System_Int32_array **)StringLiteral_14860/*"UICharaGraphTexture("*/;
+    v26 = (System_Int32_array **)StringLiteral_14928/*"UICharaGraphTexture("*/;
   }
   else
   {
@@ -995,7 +995,7 @@ LABEL_33:
   if ( !LODWORD(v24->fields.charaGraphPrefab) )
     goto LABEL_32;
   v24->fields.charaEquipGraphPrefab = (struct UnityEngine_GameObject_o *)v26;
-  sub_B70630((BattleServantConfConponent_o *)&v24->fields.charaEquipGraphPrefab, v26, v18, v19, v20, v21, v22, v23);
+  sub_B77560((BattleServantConfConponent_o *)&v24->fields.charaEquipGraphPrefab, v26, v18, v19, v20, v21, v22, v23);
   *(_QWORD *)&v62.fields.currentCryptoKey = &svtId;
   *(_QWORD *)&v62.fields.fakeValue = 0LL;
   svtId = userSvtCollectionEntity->fields.svtId;
@@ -1003,21 +1003,21 @@ LABEL_33:
   v34 = (System_Int32_array **)v25;
   if ( v25 )
   {
-    v25 = (System_String_o *)sub_B70754(v25, v24->klass->_1.element_class);
+    v25 = (System_String_o *)sub_B77684(v25, v24->klass->_1.element_class);
     if ( !v25 )
       goto LABEL_34;
   }
   if ( LODWORD(v24->fields.charaGraphPrefab) <= 1 )
     goto LABEL_32;
   v24->fields.commandGraphPrefab = (struct UnityEngine_GameObject_o *)v34;
-  sub_B70630((BattleServantConfConponent_o *)&v24->fields.commandGraphPrefab, v34, v28, v29, v30, v31, v32, v33);
-  v25 = (System_String_o *)StringLiteral_806/*"-I"*/;
-  if ( StringLiteral_806/*"-I"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v24->fields.commandGraphPrefab, v34, v28, v29, v30, v31, v32, v33);
+  v25 = (System_String_o *)StringLiteral_808/*"-I"*/;
+  if ( StringLiteral_808/*"-I"*/ )
   {
-    v25 = (System_String_o *)sub_B70754(StringLiteral_806/*"-I"*/, v24->klass->_1.element_class);
+    v25 = (System_String_o *)sub_B77684(StringLiteral_808/*"-I"*/, v24->klass->_1.element_class);
     if ( !v25 )
       goto LABEL_34;
-    v41 = (System_Int32_array **)StringLiteral_806/*"-I"*/;
+    v41 = (System_Int32_array **)StringLiteral_808/*"-I"*/;
   }
   else
   {
@@ -1026,30 +1026,30 @@ LABEL_33:
   if ( LODWORD(v24->fields.charaGraphPrefab) <= 2 )
     goto LABEL_32;
   v24[1].klass = (CharaGraphManager_c *)v41;
-  sub_B70630((BattleServantConfConponent_o *)&v24[1], v41, v35, v36, v37, v38, v39, v40);
+  sub_B77560((BattleServantConfConponent_o *)&v24[1], v41, v35, v36, v37, v38, v39, v40);
   v25 = System_Int32__ToString((int32_t)&imageLimitCounta, 0LL);
   v48 = (System_Int32_array **)v25;
   if ( v25 )
   {
-    v25 = (System_String_o *)sub_B70754(v25, v24->klass->_1.element_class);
+    v25 = (System_String_o *)sub_B77684(v25, v24->klass->_1.element_class);
     if ( !v25 )
     {
 LABEL_34:
-      v58 = sub_B7078C(v25);
-      sub_B70738(v58, 0LL);
+      v58 = sub_B776BC(v25);
+      sub_B77668(v58, 0LL);
     }
   }
   if ( LODWORD(v24->fields.charaGraphPrefab) <= 3 )
     goto LABEL_32;
   v24[1].monitor = v48;
-  sub_B70630((BattleServantConfConponent_o *)&v24[1].monitor, v48, v42, v43, v44, v45, v46, v47);
-  v25 = (System_String_o *)StringLiteral_663/*")"*/;
-  if ( StringLiteral_663/*")"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v24[1].monitor, v48, v42, v43, v44, v45, v46, v47);
+  v25 = (System_String_o *)StringLiteral_665/*")"*/;
+  if ( StringLiteral_665/*")"*/ )
   {
-    v25 = (System_String_o *)sub_B70754(StringLiteral_663/*")"*/, v24->klass->_1.element_class);
+    v25 = (System_String_o *)sub_B77684(StringLiteral_665/*")"*/, v24->klass->_1.element_class);
     if ( v25 )
     {
-      v55 = (System_Int32_array **)StringLiteral_663/*")"*/;
+      v55 = (System_Int32_array **)StringLiteral_665/*")"*/;
       goto LABEL_29;
     }
     goto LABEL_34;
@@ -1059,16 +1059,16 @@ LABEL_29:
   if ( LODWORD(v24->fields.charaGraphPrefab) <= 4 )
   {
 LABEL_32:
-    v57 = sub_B70798(v25);
-    sub_B70738(v57, 0LL);
+    v57 = sub_B776C8(v25);
+    sub_B77668(v57, 0LL);
   }
   *(_QWORD *)&v24[1].fields.m_CachedPtr = v55;
-  sub_B70630((BattleServantConfConponent_o *)&v24[1].fields, v55, v49, v50, v51, v52, v53, v54);
-  this = (CharaGraphManager_o *)System_String__Concat_44838292((System_String_array *)v24, 0LL);
+  sub_B77560((BattleServantConfConponent_o *)&v24[1].fields, v55, v49, v50, v51, v52, v53, v54);
+  this = (CharaGraphManager_o *)System_String__Concat_44982964((System_String_array *)v24, 0LL);
   if ( !gameObject )
     goto LABEL_33;
   UnityEngine_Object__set_name(gameObject, (System_String_o *)this, 0LL);
-  UICharaGraphTexture__SetCharacter_36441196(
+  UICharaGraphTexture__SetCharacter_36683968(
     (UICharaGraphTexture_o *)v16,
     userSvtCollectionEntity,
     imageLimitCounta,
@@ -1079,7 +1079,7 @@ LABEL_32:
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30574960(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_31049704(
         CharaGraphManager_o *this,
         UnityEngine_GameObject_o *parent,
         ServantLeaderInfo_o *servantLeaderInfo,
@@ -1101,12 +1101,12 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30574960
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v22; // 0:x0.16
 
   v10 = this;
-  if ( (byte_4354A65 & 1) == 0 )
+  if ( (byte_438E324 & 1) == 0 )
   {
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&StringLiteral_14860/*"UICharaGraphTexture("*/);
-    this = (CharaGraphManager_o *)sub_B70694(&StringLiteral_663/*")"*/);
-    byte_4354A65 = 1;
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&StringLiteral_14928/*"UICharaGraphTexture("*/);
+    this = (CharaGraphManager_o *)sub_B775C4(&StringLiteral_665/*")"*/);
+    byte_438E324 = 1;
   }
   svtId = (struct CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o)0LL;
   if ( !servantLeaderInfo )
@@ -1120,7 +1120,7 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30574960
   }
   *(_QWORD *)&v21.fields.currentCryptoKey = v12;
   *(_QWORD *)&v21.fields.fakeValue = v11;
-  v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v21, 0LL);
+  v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v21, 0LL);
   this = (CharaGraphManager_o *)CharaGraphManager__CreateTextureLocal(v10, parent, v13, v14);
   if ( !this
     || (v15 = this,
@@ -1129,24 +1129,24 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30574960
         *(_QWORD *)&v22.fields.fakeValue = 0LL,
         svtId = servantLeaderInfo->fields.svtId,
         v18 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v22, v17),
-        this = (CharaGraphManager_o *)System_String__Concat_44760452(
-                                        (System_String_o *)StringLiteral_14860/*"UICharaGraphTexture("*/,
+        this = (CharaGraphManager_o *)System_String__Concat_44904220(
+                                        (System_String_o *)StringLiteral_14928/*"UICharaGraphTexture("*/,
                                         v18,
-                                        (System_String_o *)StringLiteral_663/*")"*/,
+                                        (System_String_o *)StringLiteral_665/*")"*/,
                                         0LL),
         !gameObject) )
   {
 LABEL_10:
-    sub_B7076C(this, parent);
+    sub_B7769C(this, parent);
   }
   UnityEngine_Object__set_name(gameObject, (System_String_o *)this, 0LL);
-  UICharaGraphTexture__SetCharacter_36441472((UICharaGraphTexture_o *)v15, servantLeaderInfo, callbackFunc, 0LL);
+  UICharaGraphTexture__SetCharacter_36684244((UICharaGraphTexture_o *)v15, servantLeaderInfo, callbackFunc, 0LL);
   UICharaGraphTexture__SetDepth((UICharaGraphTexture_o *)v15, depth, 0LL);
   return (UICharaGraphTexture_o *)v15;
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30575448(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_31050192(
         CharaGraphManager_o *this,
         UnityEngine_GameObject_o *parent,
         ServantLeaderInfo_o *servantLeaderInfo,
@@ -1209,14 +1209,14 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30575448
 
   v11 = this;
   imageLimitCounta = imageLimitCount;
-  if ( (byte_4354A66 & 1) == 0 )
+  if ( (byte_438E325 & 1) == 0 )
   {
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_806/*"-I"*/);
-    sub_B70694(&StringLiteral_14860/*"UICharaGraphTexture("*/);
-    this = (CharaGraphManager_o *)sub_B70694(&StringLiteral_663/*")"*/);
-    byte_4354A66 = 1;
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_808/*"-I"*/);
+    sub_B775C4(&StringLiteral_14928/*"UICharaGraphTexture("*/);
+    this = (CharaGraphManager_o *)sub_B775C4(&StringLiteral_665/*")"*/);
+    byte_438E325 = 1;
   }
   svtId = (struct CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o)0LL;
   if ( !servantLeaderInfo )
@@ -1230,24 +1230,24 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30575448
   }
   *(_QWORD *)&v61.fields.currentCryptoKey = v13;
   *(_QWORD *)&v61.fields.fakeValue = v12;
-  v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v61, 0LL);
+  v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v61, 0LL);
   this = (CharaGraphManager_o *)CharaGraphManager__CreateTextureLocal(v11, parent, v14, v15);
   if ( !this
     || (v16 = this,
         gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL),
-        (this = (CharaGraphManager_o *)sub_B706AC(string___TypeInfo, 5LL)) == 0LL) )
+        (this = (CharaGraphManager_o *)sub_B775DC(string___TypeInfo, 5LL)) == 0LL) )
   {
 LABEL_33:
-    sub_B7076C(this, parent);
+    sub_B7769C(this, parent);
   }
   v24 = this;
-  v25 = (System_String_o *)StringLiteral_14860/*"UICharaGraphTexture("*/;
-  if ( StringLiteral_14860/*"UICharaGraphTexture("*/ )
+  v25 = (System_String_o *)StringLiteral_14928/*"UICharaGraphTexture("*/;
+  if ( StringLiteral_14928/*"UICharaGraphTexture("*/ )
   {
-    v25 = (System_String_o *)sub_B70754(StringLiteral_14860/*"UICharaGraphTexture("*/, v24->klass->_1.element_class);
+    v25 = (System_String_o *)sub_B77684(StringLiteral_14928/*"UICharaGraphTexture("*/, v24->klass->_1.element_class);
     if ( !v25 )
       goto LABEL_34;
-    v26 = (System_Int32_array **)StringLiteral_14860/*"UICharaGraphTexture("*/;
+    v26 = (System_Int32_array **)StringLiteral_14928/*"UICharaGraphTexture("*/;
   }
   else
   {
@@ -1256,7 +1256,7 @@ LABEL_33:
   if ( !LODWORD(v24->fields.charaGraphPrefab) )
     goto LABEL_32;
   v24->fields.charaEquipGraphPrefab = (struct UnityEngine_GameObject_o *)v26;
-  sub_B70630((BattleServantConfConponent_o *)&v24->fields.charaEquipGraphPrefab, v26, v18, v19, v20, v21, v22, v23);
+  sub_B77560((BattleServantConfConponent_o *)&v24->fields.charaEquipGraphPrefab, v26, v18, v19, v20, v21, v22, v23);
   *(_QWORD *)&v62.fields.currentCryptoKey = &svtId;
   *(_QWORD *)&v62.fields.fakeValue = 0LL;
   svtId = servantLeaderInfo->fields.svtId;
@@ -1264,21 +1264,21 @@ LABEL_33:
   v34 = (System_Int32_array **)v25;
   if ( v25 )
   {
-    v25 = (System_String_o *)sub_B70754(v25, v24->klass->_1.element_class);
+    v25 = (System_String_o *)sub_B77684(v25, v24->klass->_1.element_class);
     if ( !v25 )
       goto LABEL_34;
   }
   if ( LODWORD(v24->fields.charaGraphPrefab) <= 1 )
     goto LABEL_32;
   v24->fields.commandGraphPrefab = (struct UnityEngine_GameObject_o *)v34;
-  sub_B70630((BattleServantConfConponent_o *)&v24->fields.commandGraphPrefab, v34, v28, v29, v30, v31, v32, v33);
-  v25 = (System_String_o *)StringLiteral_806/*"-I"*/;
-  if ( StringLiteral_806/*"-I"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v24->fields.commandGraphPrefab, v34, v28, v29, v30, v31, v32, v33);
+  v25 = (System_String_o *)StringLiteral_808/*"-I"*/;
+  if ( StringLiteral_808/*"-I"*/ )
   {
-    v25 = (System_String_o *)sub_B70754(StringLiteral_806/*"-I"*/, v24->klass->_1.element_class);
+    v25 = (System_String_o *)sub_B77684(StringLiteral_808/*"-I"*/, v24->klass->_1.element_class);
     if ( !v25 )
       goto LABEL_34;
-    v41 = (System_Int32_array **)StringLiteral_806/*"-I"*/;
+    v41 = (System_Int32_array **)StringLiteral_808/*"-I"*/;
   }
   else
   {
@@ -1287,30 +1287,30 @@ LABEL_33:
   if ( LODWORD(v24->fields.charaGraphPrefab) <= 2 )
     goto LABEL_32;
   v24[1].klass = (CharaGraphManager_c *)v41;
-  sub_B70630((BattleServantConfConponent_o *)&v24[1], v41, v35, v36, v37, v38, v39, v40);
+  sub_B77560((BattleServantConfConponent_o *)&v24[1], v41, v35, v36, v37, v38, v39, v40);
   v25 = System_Int32__ToString((int32_t)&imageLimitCounta, 0LL);
   v48 = (System_Int32_array **)v25;
   if ( v25 )
   {
-    v25 = (System_String_o *)sub_B70754(v25, v24->klass->_1.element_class);
+    v25 = (System_String_o *)sub_B77684(v25, v24->klass->_1.element_class);
     if ( !v25 )
     {
 LABEL_34:
-      v58 = sub_B7078C(v25);
-      sub_B70738(v58, 0LL);
+      v58 = sub_B776BC(v25);
+      sub_B77668(v58, 0LL);
     }
   }
   if ( LODWORD(v24->fields.charaGraphPrefab) <= 3 )
     goto LABEL_32;
   v24[1].monitor = v48;
-  sub_B70630((BattleServantConfConponent_o *)&v24[1].monitor, v48, v42, v43, v44, v45, v46, v47);
-  v25 = (System_String_o *)StringLiteral_663/*")"*/;
-  if ( StringLiteral_663/*")"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v24[1].monitor, v48, v42, v43, v44, v45, v46, v47);
+  v25 = (System_String_o *)StringLiteral_665/*")"*/;
+  if ( StringLiteral_665/*")"*/ )
   {
-    v25 = (System_String_o *)sub_B70754(StringLiteral_663/*")"*/, v24->klass->_1.element_class);
+    v25 = (System_String_o *)sub_B77684(StringLiteral_665/*")"*/, v24->klass->_1.element_class);
     if ( v25 )
     {
-      v55 = (System_Int32_array **)StringLiteral_663/*")"*/;
+      v55 = (System_Int32_array **)StringLiteral_665/*")"*/;
       goto LABEL_29;
     }
     goto LABEL_34;
@@ -1320,16 +1320,16 @@ LABEL_29:
   if ( LODWORD(v24->fields.charaGraphPrefab) <= 4 )
   {
 LABEL_32:
-    v57 = sub_B70798(v25);
-    sub_B70738(v57, 0LL);
+    v57 = sub_B776C8(v25);
+    sub_B77668(v57, 0LL);
   }
   *(_QWORD *)&v24[1].fields.m_CachedPtr = v55;
-  sub_B70630((BattleServantConfConponent_o *)&v24[1].fields, v55, v49, v50, v51, v52, v53, v54);
-  this = (CharaGraphManager_o *)System_String__Concat_44838292((System_String_array *)v24, 0LL);
+  sub_B77560((BattleServantConfConponent_o *)&v24[1].fields, v55, v49, v50, v51, v52, v53, v54);
+  this = (CharaGraphManager_o *)System_String__Concat_44982964((System_String_array *)v24, 0LL);
   if ( !gameObject )
     goto LABEL_33;
   UnityEngine_Object__set_name(gameObject, (System_String_o *)this, 0LL);
-  UICharaGraphTexture__SetCharacter_36441688(
+  UICharaGraphTexture__SetCharacter_36684460(
     (UICharaGraphTexture_o *)v16,
     servantLeaderInfo,
     imageLimitCounta,
@@ -1340,7 +1340,7 @@ LABEL_32:
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30576320(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_31051064(
         CharaGraphManager_o *this,
         UnityEngine_GameObject_o *parent,
         EquipTargetInfo_o *equipTargetInfo,
@@ -1363,12 +1363,12 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30576320
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v24; // 0:x0.16
 
   v12 = this;
-  if ( (byte_4354A67 & 1) == 0 )
+  if ( (byte_438E326 & 1) == 0 )
   {
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&StringLiteral_14860/*"UICharaGraphTexture("*/);
-    this = (CharaGraphManager_o *)sub_B70694(&StringLiteral_663/*")"*/);
-    byte_4354A67 = 1;
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&StringLiteral_14928/*"UICharaGraphTexture("*/);
+    this = (CharaGraphManager_o *)sub_B775C4(&StringLiteral_665/*")"*/);
+    byte_438E326 = 1;
   }
   svtId = (struct CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o)0LL;
   if ( !equipTargetInfo )
@@ -1382,7 +1382,7 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30576320
   }
   *(_QWORD *)&v23.fields.currentCryptoKey = v14;
   *(_QWORD *)&v23.fields.fakeValue = v13;
-  v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v23, 0LL);
+  v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v23, 0LL);
   this = (CharaGraphManager_o *)CharaGraphManager__CreateTextureLocal(v12, parent, v15, v16);
   if ( !this
     || (v17 = this,
@@ -1391,18 +1391,18 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30576320
         *(_QWORD *)&v24.fields.fakeValue = 0LL,
         svtId = equipTargetInfo->fields.svtId,
         v20 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v24, v19),
-        this = (CharaGraphManager_o *)System_String__Concat_44760452(
-                                        (System_String_o *)StringLiteral_14860/*"UICharaGraphTexture("*/,
+        this = (CharaGraphManager_o *)System_String__Concat_44904220(
+                                        (System_String_o *)StringLiteral_14928/*"UICharaGraphTexture("*/,
                                         v20,
-                                        (System_String_o *)StringLiteral_663/*")"*/,
+                                        (System_String_o *)StringLiteral_665/*")"*/,
                                         0LL),
         !gameObject) )
   {
 LABEL_10:
-    sub_B7076C(this, parent);
+    sub_B7769C(this, parent);
   }
   UnityEngine_Object__set_name(gameObject, (System_String_o *)this, 0LL);
-  UICharaGraphTexture__SetCharacter_36441928(
+  UICharaGraphTexture__SetCharacter_36684700(
     (UICharaGraphTexture_o *)v17,
     equipTargetInfo,
     isNpcFollowerServantEquip,
@@ -1413,7 +1413,7 @@ LABEL_10:
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30576832(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_31051576(
         CharaGraphManager_o *this,
         UnityEngine_GameObject_o *parent,
         EquipTargetInfo_o *equipTargetInfo,
@@ -1477,14 +1477,14 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30576832
 
   v13 = this;
   imageLimitCounta = imageLimitCount;
-  if ( (byte_4354A68 & 1) == 0 )
+  if ( (byte_438E327 & 1) == 0 )
   {
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_806/*"-I"*/);
-    sub_B70694(&StringLiteral_14860/*"UICharaGraphTexture("*/);
-    this = (CharaGraphManager_o *)sub_B70694(&StringLiteral_663/*")"*/);
-    byte_4354A68 = 1;
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_808/*"-I"*/);
+    sub_B775C4(&StringLiteral_14928/*"UICharaGraphTexture("*/);
+    this = (CharaGraphManager_o *)sub_B775C4(&StringLiteral_665/*")"*/);
+    byte_438E327 = 1;
   }
   svtId = (struct CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o)0LL;
   if ( !equipTargetInfo )
@@ -1498,24 +1498,24 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTextureLocal_30576832
   }
   *(_QWORD *)&v63.fields.currentCryptoKey = v15;
   *(_QWORD *)&v63.fields.fakeValue = v14;
-  v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v63, 0LL);
+  v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v63, 0LL);
   this = (CharaGraphManager_o *)CharaGraphManager__CreateTextureLocal(v13, parent, v16, v17);
   if ( !this
     || (v18 = this,
         gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL),
-        (this = (CharaGraphManager_o *)sub_B706AC(string___TypeInfo, 5LL)) == 0LL) )
+        (this = (CharaGraphManager_o *)sub_B775DC(string___TypeInfo, 5LL)) == 0LL) )
   {
 LABEL_33:
-    sub_B7076C(this, parent);
+    sub_B7769C(this, parent);
   }
   v26 = this;
-  v27 = (System_String_o *)StringLiteral_14860/*"UICharaGraphTexture("*/;
-  if ( StringLiteral_14860/*"UICharaGraphTexture("*/ )
+  v27 = (System_String_o *)StringLiteral_14928/*"UICharaGraphTexture("*/;
+  if ( StringLiteral_14928/*"UICharaGraphTexture("*/ )
   {
-    v27 = (System_String_o *)sub_B70754(StringLiteral_14860/*"UICharaGraphTexture("*/, v26->klass->_1.element_class);
+    v27 = (System_String_o *)sub_B77684(StringLiteral_14928/*"UICharaGraphTexture("*/, v26->klass->_1.element_class);
     if ( !v27 )
       goto LABEL_34;
-    v28 = (System_Int32_array **)StringLiteral_14860/*"UICharaGraphTexture("*/;
+    v28 = (System_Int32_array **)StringLiteral_14928/*"UICharaGraphTexture("*/;
   }
   else
   {
@@ -1524,7 +1524,7 @@ LABEL_33:
   if ( !LODWORD(v26->fields.charaGraphPrefab) )
     goto LABEL_32;
   v26->fields.charaEquipGraphPrefab = (struct UnityEngine_GameObject_o *)v28;
-  sub_B70630((BattleServantConfConponent_o *)&v26->fields.charaEquipGraphPrefab, v28, v20, v21, v22, v23, v24, v25);
+  sub_B77560((BattleServantConfConponent_o *)&v26->fields.charaEquipGraphPrefab, v28, v20, v21, v22, v23, v24, v25);
   *(_QWORD *)&v64.fields.currentCryptoKey = &svtId;
   *(_QWORD *)&v64.fields.fakeValue = 0LL;
   svtId = equipTargetInfo->fields.svtId;
@@ -1532,21 +1532,21 @@ LABEL_33:
   v36 = (System_Int32_array **)v27;
   if ( v27 )
   {
-    v27 = (System_String_o *)sub_B70754(v27, v26->klass->_1.element_class);
+    v27 = (System_String_o *)sub_B77684(v27, v26->klass->_1.element_class);
     if ( !v27 )
       goto LABEL_34;
   }
   if ( LODWORD(v26->fields.charaGraphPrefab) <= 1 )
     goto LABEL_32;
   v26->fields.commandGraphPrefab = (struct UnityEngine_GameObject_o *)v36;
-  sub_B70630((BattleServantConfConponent_o *)&v26->fields.commandGraphPrefab, v36, v30, v31, v32, v33, v34, v35);
-  v27 = (System_String_o *)StringLiteral_806/*"-I"*/;
-  if ( StringLiteral_806/*"-I"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v26->fields.commandGraphPrefab, v36, v30, v31, v32, v33, v34, v35);
+  v27 = (System_String_o *)StringLiteral_808/*"-I"*/;
+  if ( StringLiteral_808/*"-I"*/ )
   {
-    v27 = (System_String_o *)sub_B70754(StringLiteral_806/*"-I"*/, v26->klass->_1.element_class);
+    v27 = (System_String_o *)sub_B77684(StringLiteral_808/*"-I"*/, v26->klass->_1.element_class);
     if ( !v27 )
       goto LABEL_34;
-    v43 = (System_Int32_array **)StringLiteral_806/*"-I"*/;
+    v43 = (System_Int32_array **)StringLiteral_808/*"-I"*/;
   }
   else
   {
@@ -1555,30 +1555,30 @@ LABEL_33:
   if ( LODWORD(v26->fields.charaGraphPrefab) <= 2 )
     goto LABEL_32;
   v26[1].klass = (CharaGraphManager_c *)v43;
-  sub_B70630((BattleServantConfConponent_o *)&v26[1], v43, v37, v38, v39, v40, v41, v42);
+  sub_B77560((BattleServantConfConponent_o *)&v26[1], v43, v37, v38, v39, v40, v41, v42);
   v27 = System_Int32__ToString((int32_t)&imageLimitCounta, 0LL);
   v50 = (System_Int32_array **)v27;
   if ( v27 )
   {
-    v27 = (System_String_o *)sub_B70754(v27, v26->klass->_1.element_class);
+    v27 = (System_String_o *)sub_B77684(v27, v26->klass->_1.element_class);
     if ( !v27 )
     {
 LABEL_34:
-      v60 = sub_B7078C(v27);
-      sub_B70738(v60, 0LL);
+      v60 = sub_B776BC(v27);
+      sub_B77668(v60, 0LL);
     }
   }
   if ( LODWORD(v26->fields.charaGraphPrefab) <= 3 )
     goto LABEL_32;
   v26[1].monitor = v50;
-  sub_B70630((BattleServantConfConponent_o *)&v26[1].monitor, v50, v44, v45, v46, v47, v48, v49);
-  v27 = (System_String_o *)StringLiteral_663/*")"*/;
-  if ( StringLiteral_663/*")"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v26[1].monitor, v50, v44, v45, v46, v47, v48, v49);
+  v27 = (System_String_o *)StringLiteral_665/*")"*/;
+  if ( StringLiteral_665/*")"*/ )
   {
-    v27 = (System_String_o *)sub_B70754(StringLiteral_663/*")"*/, v26->klass->_1.element_class);
+    v27 = (System_String_o *)sub_B77684(StringLiteral_665/*")"*/, v26->klass->_1.element_class);
     if ( v27 )
     {
-      v57 = (System_Int32_array **)StringLiteral_663/*")"*/;
+      v57 = (System_Int32_array **)StringLiteral_665/*")"*/;
       goto LABEL_29;
     }
     goto LABEL_34;
@@ -1588,16 +1588,16 @@ LABEL_29:
   if ( LODWORD(v26->fields.charaGraphPrefab) <= 4 )
   {
 LABEL_32:
-    v59 = sub_B70798(v27);
-    sub_B70738(v59, 0LL);
+    v59 = sub_B776C8(v27);
+    sub_B77668(v59, 0LL);
   }
   *(_QWORD *)&v26[1].fields.m_CachedPtr = v57;
-  sub_B70630((BattleServantConfConponent_o *)&v26[1].fields, v57, v51, v52, v53, v54, v55, v56);
-  this = (CharaGraphManager_o *)System_String__Concat_44838292((System_String_array *)v26, 0LL);
+  sub_B77560((BattleServantConfConponent_o *)&v26[1].fields, v57, v51, v52, v53, v54, v55, v56);
+  this = (CharaGraphManager_o *)System_String__Concat_44982964((System_String_array *)v26, 0LL);
   if ( !gameObject )
     goto LABEL_33;
   UnityEngine_Object__set_name(gameObject, (System_String_o *)this, 0LL);
-  UICharaGraphTexture__SetCharacter_36442132(
+  UICharaGraphTexture__SetCharacter_36684904(
     (UICharaGraphTexture_o *)v18,
     equipTargetInfo,
     imageLimitCounta,
@@ -1624,15 +1624,15 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab(
   __int64 v18; // x1
   const MethodInfo *v20; // [xsp+8h] [xbp-58h]
 
-  if ( (byte_4354A51 & 1) == 0 )
+  if ( (byte_438E310 & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
-    byte_4354A51 = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+    byte_438E310 = 1;
   }
-  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v18);
-  return CharaGraphManager__CreateTextureLocal_30571552(
+    sub_B7769C(0LL, v18);
+  return CharaGraphManager__CreateTextureLocal_31046296(
            Instance,
            parent,
            svtId,
@@ -1646,7 +1646,7 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab(
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_30571872(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_31046616(
         UnityEngine_GameObject_o *parent,
         int64_t userSvtId,
         int32_t depth,
@@ -1658,28 +1658,28 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057187
   UserServantEntity_o *Entity; // x22
   const MethodInfo *v12; // x5
 
-  if ( (byte_4354A52 & 1) == 0 )
+  if ( (byte_438E311 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_B70694(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
-    byte_4354A52 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_B775C4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+    byte_438E311 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0LL
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0LL
     || (Entity = DataMasterBase_UserServantStorageMaster__UserServantEntity__long___GetEntity(
                    (DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *)Instance,
                    userSvtId,
-                   (const MethodInfo_21C0668 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__),
-        (Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__)) == 0LL) )
+                   (const MethodInfo_21FBABC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__),
+        (Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__)) == 0LL) )
   {
-    sub_B7076C(Instance, v10);
+    sub_B7769C(Instance, v10);
   }
-  return CharaGraphManager__CreateTextureLocal_30572104(
+  return CharaGraphManager__CreateTextureLocal_31046848(
            (CharaGraphManager_o *)Instance,
            parent,
            Entity,
@@ -1689,7 +1689,7 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057187
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_30572456(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_31047200(
         UnityEngine_GameObject_o *parent,
         UserServantEntity_o *userSvtEntity,
         int32_t depth,
@@ -1700,19 +1700,19 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057245
   __int64 v10; // x1
   const MethodInfo *v11; // x5
 
-  if ( (byte_4354A53 & 1) == 0 )
+  if ( (byte_438E312 & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
-    byte_4354A53 = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+    byte_438E312 = 1;
   }
-  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v10);
-  return CharaGraphManager__CreateTextureLocal_30572104(Instance, parent, userSvtEntity, depth, callbackFunc, v11);
+    sub_B7769C(0LL, v10);
+  return CharaGraphManager__CreateTextureLocal_31046848(Instance, parent, userSvtEntity, depth, callbackFunc, v11);
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_30572584(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_31047328(
         UnityEngine_GameObject_o *parent,
         UserServantEntity_o *userSvtEntity,
         int32_t imageLimitCount,
@@ -1725,15 +1725,15 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057258
   __int64 v14; // x1
   const MethodInfo *v15; // x7
 
-  if ( (byte_4354A54 & 1) == 0 )
+  if ( (byte_438E313 & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
-    byte_4354A54 = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+    byte_438E313 = 1;
   }
-  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v14);
-  return CharaGraphManager__CreateTextureLocal_30572736(
+    sub_B7769C(0LL, v14);
+  return CharaGraphManager__CreateTextureLocal_31047480(
            Instance,
            parent,
            userSvtEntity,
@@ -1745,7 +1745,7 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057258
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_30573480(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_31048224(
         UnityEngine_GameObject_o *parent,
         UserServantCollectionEntity_o *userSvtCollectionEntity,
         int32_t depth,
@@ -1756,15 +1756,15 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057348
   __int64 v10; // x1
   const MethodInfo *v11; // x5
 
-  if ( (byte_4354A55 & 1) == 0 )
+  if ( (byte_438E314 & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
-    byte_4354A55 = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+    byte_438E314 = 1;
   }
-  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v10);
-  return CharaGraphManager__CreateTextureLocal_30573608(
+    sub_B7769C(0LL, v10);
+  return CharaGraphManager__CreateTextureLocal_31048352(
            Instance,
            parent,
            userSvtCollectionEntity,
@@ -1774,7 +1774,7 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057348
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_30573960(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_31048704(
         UnityEngine_GameObject_o *parent,
         UserServantCollectionEntity_o *userSvtCollectionEntity,
         int32_t imageLimitCount,
@@ -1786,15 +1786,15 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057396
   __int64 v12; // x1
   const MethodInfo *v13; // x6
 
-  if ( (byte_4354A56 & 1) == 0 )
+  if ( (byte_438E315 & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
-    byte_4354A56 = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+    byte_438E315 = 1;
   }
-  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v12);
-  return CharaGraphManager__CreateTextureLocal_30574096(
+    sub_B7769C(0LL, v12);
+  return CharaGraphManager__CreateTextureLocal_31048840(
            Instance,
            parent,
            userSvtCollectionEntity,
@@ -1805,7 +1805,7 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057396
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_30574832(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_31049576(
         UnityEngine_GameObject_o *parent,
         ServantLeaderInfo_o *servantLeaderInfo,
         int32_t depth,
@@ -1816,19 +1816,19 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057483
   __int64 v10; // x1
   const MethodInfo *v11; // x5
 
-  if ( (byte_4354A57 & 1) == 0 )
+  if ( (byte_438E316 & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
-    byte_4354A57 = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+    byte_438E316 = 1;
   }
-  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v10);
-  return CharaGraphManager__CreateTextureLocal_30574960(Instance, parent, servantLeaderInfo, depth, callbackFunc, v11);
+    sub_B7769C(0LL, v10);
+  return CharaGraphManager__CreateTextureLocal_31049704(Instance, parent, servantLeaderInfo, depth, callbackFunc, v11);
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_30575312(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_31050056(
         UnityEngine_GameObject_o *parent,
         ServantLeaderInfo_o *servantLeaderInfo,
         int32_t imageLimitCount,
@@ -1840,15 +1840,15 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057531
   __int64 v12; // x1
   const MethodInfo *v13; // x6
 
-  if ( (byte_4354A58 & 1) == 0 )
+  if ( (byte_438E317 & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
-    byte_4354A58 = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+    byte_438E317 = 1;
   }
-  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v12);
-  return CharaGraphManager__CreateTextureLocal_30575448(
+    sub_B7769C(0LL, v12);
+  return CharaGraphManager__CreateTextureLocal_31050192(
            Instance,
            parent,
            servantLeaderInfo,
@@ -1859,7 +1859,7 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057531
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_30576184(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_31050928(
         UnityEngine_GameObject_o *parent,
         EquipTargetInfo_o *equipTargetInfo,
         int32_t depth,
@@ -1871,15 +1871,15 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057618
   __int64 v12; // x1
   const MethodInfo *v13; // x6
 
-  if ( (byte_4354A59 & 1) == 0 )
+  if ( (byte_438E318 & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
-    byte_4354A59 = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+    byte_438E318 = 1;
   }
-  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v12);
-  return CharaGraphManager__CreateTextureLocal_30576320(
+    sub_B7769C(0LL, v12);
+  return CharaGraphManager__CreateTextureLocal_31051064(
            Instance,
            parent,
            equipTargetInfo,
@@ -1890,7 +1890,7 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057618
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_30576680(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_31051424(
         UnityEngine_GameObject_o *parent,
         EquipTargetInfo_o *equipTargetInfo,
         int32_t imageLimitCount,
@@ -1903,15 +1903,15 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057668
   __int64 v14; // x1
   const MethodInfo *v15; // x7
 
-  if ( (byte_4354A5A & 1) == 0 )
+  if ( (byte_438E319 & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
-    byte_4354A5A = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+    byte_438E319 = 1;
   }
-  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v14);
-  return CharaGraphManager__CreateTextureLocal_30576832(
+    sub_B7769C(0LL, v14);
+  return CharaGraphManager__CreateTextureLocal_31051576(
            Instance,
            parent,
            equipTargetInfo,
@@ -1923,7 +1923,7 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057668
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_30577576(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_31052320(
         UnityEngine_GameObject_o *parent,
         UserCommandCodeEntity_o *userCommandCodeEntity,
         int32_t depth,
@@ -1934,15 +1934,15 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057757
   __int64 v10; // x1
   const MethodInfo *v11; // x5
 
-  if ( (byte_4354A5B & 1) == 0 )
+  if ( (byte_438E31A & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
-    byte_4354A5B = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+    byte_438E31A = 1;
   }
-  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v10);
-  return CharaGraphManager__CreateCommandTextureLocal_30577704(
+    sub_B7769C(0LL, v10);
+  return CharaGraphManager__CreateCommandTextureLocal_31052448(
            Instance,
            parent,
            userCommandCodeEntity,
@@ -1952,7 +1952,7 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057757
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_30578052(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_31052796(
         UnityEngine_GameObject_o *parent,
         UserCommandCodeCollectionEntity_o *userCommandCodeCollectionEntity,
         int32_t depth,
@@ -1963,15 +1963,15 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057805
   __int64 v10; // x1
   const MethodInfo *v11; // x5
 
-  if ( (byte_4354A5C & 1) == 0 )
+  if ( (byte_438E31B & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
-    byte_4354A5C = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+    byte_438E31B = 1;
   }
-  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v10);
-  return CharaGraphManager__CreateCommandTextureLocal_30578180(
+    sub_B7769C(0LL, v10);
+  return CharaGraphManager__CreateCommandTextureLocal_31052924(
            Instance,
            parent,
            userCommandCodeCollectionEntity,
@@ -1981,7 +1981,7 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057805
 }
 
 
-UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_30578528(
+UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_31053272(
         UnityEngine_GameObject_o *parent,
         CommandCodeEntity_o *commandCodeEntity,
         int32_t depth,
@@ -1992,15 +1992,15 @@ UICharaGraphTexture_o *__fastcall CharaGraphManager__CreateTexturePrefab_3057852
   __int64 v10; // x1
   const MethodInfo *v11; // x5
 
-  if ( (byte_4354A5D & 1) == 0 )
+  if ( (byte_438E31C & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
-    byte_4354A5D = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+    byte_438E31C = 1;
   }
-  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
+  Instance = (CharaGraphManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CharaGraphManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v10);
-  return CharaGraphManager__CreateCommandTextureLocal_30578656(
+    sub_B7769C(0LL, v10);
+  return CharaGraphManager__CreateCommandTextureLocal_31053400(
            Instance,
            parent,
            commandCodeEntity,
@@ -2018,10 +2018,10 @@ void __fastcall CharaGraphManager__DownloadAsset(
 {
   System_String_o *AssetName; // x20
 
-  if ( (byte_4354A4B & 1) == 0 )
+  if ( (byte_438E30A & 1) == 0 )
   {
-    sub_B70694(&AssetManager_TypeInfo);
-    byte_4354A4B = 1;
+    sub_B775C4(&AssetManager_TypeInfo);
+    byte_438E30A = 1;
   }
   AssetName = CharaGraphManager__GetAssetName(svtId, imageLimitCount, (const MethodInfo *)callback);
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
@@ -2037,11 +2037,11 @@ void __fastcall CharaGraphManager__DownloadCommandAsset(
 {
   System_String_o *CommandAssetName; // x20
 
-  if ( (byte_4354A4C & 1) == 0 )
+  if ( (byte_438E30B & 1) == 0 )
   {
-    sub_B70694(&AssetManager_TypeInfo);
-    sub_B70694(&UICharaGraphRender_TypeInfo);
-    byte_4354A4C = 1;
+    sub_B775C4(&AssetManager_TypeInfo);
+    sub_B775C4(&UICharaGraphRender_TypeInfo);
+    byte_438E30B = 1;
   }
   if ( (BYTE3(UICharaGraphRender_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UICharaGraphRender_TypeInfo->_2.cctor_finished )
@@ -2060,10 +2060,10 @@ System_String_o *__fastcall CharaGraphManager__GetAssetName(
         int32_t imageLimitCount,
         const MethodInfo *method)
 {
-  if ( (byte_4354A47 & 1) == 0 )
+  if ( (byte_438E306 & 1) == 0 )
   {
-    sub_B70694(&UICharaGraphRender_TypeInfo);
-    byte_4354A47 = 1;
+    sub_B775C4(&UICharaGraphRender_TypeInfo);
+    byte_438E306 = 1;
   }
   if ( (BYTE3(UICharaGraphRender_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UICharaGraphRender_TypeInfo->_2.cctor_finished )
@@ -2074,28 +2074,28 @@ System_String_o *__fastcall CharaGraphManager__GetAssetName(
 }
 
 
-System_String_o *__fastcall CharaGraphManager__GetAssetName_30570112(int32_t imageSvtId, const MethodInfo *method)
+System_String_o *__fastcall CharaGraphManager__GetAssetName_31044856(int32_t imageSvtId, const MethodInfo *method)
 {
-  if ( (byte_4354A48 & 1) == 0 )
+  if ( (byte_438E307 & 1) == 0 )
   {
-    sub_B70694(&UICharaGraphRender_TypeInfo);
-    byte_4354A48 = 1;
+    sub_B775C4(&UICharaGraphRender_TypeInfo);
+    byte_438E307 = 1;
   }
   if ( (BYTE3(UICharaGraphRender_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UICharaGraphRender_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UICharaGraphRender_TypeInfo);
   }
-  return UICharaGraphRender__GetAssetName_36426520(imageSvtId, 0LL);
+  return UICharaGraphRender__GetAssetName_36669292(imageSvtId, 0LL);
 }
 
 
 System_String_o *__fastcall CharaGraphManager__GetCommandAssetName(int32_t commandCodeId, const MethodInfo *method)
 {
-  if ( (byte_4354A49 & 1) == 0 )
+  if ( (byte_438E308 & 1) == 0 )
   {
-    sub_B70694(&UICharaGraphRender_TypeInfo);
-    byte_4354A49 = 1;
+    sub_B775C4(&UICharaGraphRender_TypeInfo);
+    byte_438E308 = 1;
   }
   if ( (BYTE3(UICharaGraphRender_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UICharaGraphRender_TypeInfo->_2.cctor_finished )
@@ -2108,10 +2108,10 @@ System_String_o *__fastcall CharaGraphManager__GetCommandAssetName(int32_t comma
 
 System_String_o *__fastcall CharaGraphManager__GetExCharaGraphAssetName(int32_t svtId, const MethodInfo *method)
 {
-  if ( (byte_4354A4A & 1) == 0 )
+  if ( (byte_438E309 & 1) == 0 )
   {
-    sub_B70694(&UICharaGraphRender_TypeInfo);
-    byte_4354A4A = 1;
+    sub_B775C4(&UICharaGraphRender_TypeInfo);
+    byte_438E309 = 1;
   }
   if ( (BYTE3(UICharaGraphRender_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UICharaGraphRender_TypeInfo->_2.cctor_finished )
@@ -2130,10 +2130,10 @@ void __fastcall CharaGraphManager__LoadAsset(
 {
   System_String_o *AssetName; // x20
 
-  if ( (byte_4354A4D & 1) == 0 )
+  if ( (byte_438E30C & 1) == 0 )
   {
-    sub_B70694(&AssetManager_TypeInfo);
-    byte_4354A4D = 1;
+    sub_B775C4(&AssetManager_TypeInfo);
+    byte_438E30C = 1;
   }
   AssetName = CharaGraphManager__GetAssetName(svtId, imageLimitCount, (const MethodInfo *)callback);
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
@@ -2149,11 +2149,11 @@ void __fastcall CharaGraphManager__LoadCommandAsset(
 {
   System_String_o *CommandAssetName; // x20
 
-  if ( (byte_4354A4E & 1) == 0 )
+  if ( (byte_438E30D & 1) == 0 )
   {
-    sub_B70694(&AssetManager_TypeInfo);
-    sub_B70694(&UICharaGraphRender_TypeInfo);
-    byte_4354A4E = 1;
+    sub_B775C4(&AssetManager_TypeInfo);
+    sub_B775C4(&UICharaGraphRender_TypeInfo);
+    byte_438E30D = 1;
   }
   if ( (BYTE3(UICharaGraphRender_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UICharaGraphRender_TypeInfo->_2.cctor_finished )
@@ -2171,10 +2171,10 @@ void __fastcall CharaGraphManager__ReleaseAsset(int32_t svtId, int32_t imageLimi
 {
   System_String_o *AssetName; // x19
 
-  if ( (byte_4354A4F & 1) == 0 )
+  if ( (byte_438E30E & 1) == 0 )
   {
-    sub_B70694(&AssetManager_TypeInfo);
-    byte_4354A4F = 1;
+    sub_B775C4(&AssetManager_TypeInfo);
+    byte_438E30E = 1;
   }
   AssetName = CharaGraphManager__GetAssetName(svtId, imageLimitCount, method);
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
@@ -2190,11 +2190,11 @@ void __fastcall CharaGraphManager__ReleaseCommandAsset(
 {
   System_String_o *CommandAssetName; // x19
 
-  if ( (byte_4354A50 & 1) == 0 )
+  if ( (byte_438E30F & 1) == 0 )
   {
-    sub_B70694(&AssetManager_TypeInfo);
-    sub_B70694(&UICharaGraphRender_TypeInfo);
-    byte_4354A50 = 1;
+    sub_B775C4(&AssetManager_TypeInfo);
+    sub_B775C4(&UICharaGraphRender_TypeInfo);
+    byte_438E30F = 1;
   }
   if ( (BYTE3(UICharaGraphRender_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UICharaGraphRender_TypeInfo->_2.cctor_finished )

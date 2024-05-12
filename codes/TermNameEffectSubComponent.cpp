@@ -18,13 +18,13 @@ void __fastcall TermNameEffectSubComponent__RecvParam(
   int32_t v11; // w21
   EventRaceEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_434EE35 & 1) == 0 )
+  if ( (byte_438833C & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_EventRaceMaster___);
-    sub_B70694(&RaceResultEffectParam_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_434EE35 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_EventRaceMaster___);
+    sub_B775C4(&RaceResultEffectParam_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438833C = 1;
   }
   entity = 0LL;
   if ( param )
@@ -43,12 +43,12 @@ void __fastcall TermNameEffectSubComponent__RecvParam(
           {
             v10 = *((_DWORD *)monitor + 8);
             v11 = *((_DWORD *)monitor + 10);
-            Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                           Instance,
-                                          (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventRaceMaster___);
+                                          (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventRaceMaster___);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)EventRaceMaster__TryGetEntity(
@@ -69,7 +69,7 @@ void __fastcall TermNameEffectSubComponent__RecvParam(
                 }
               }
 LABEL_18:
-              sub_B7076C(Instance, param);
+              sub_B7769C(Instance, param);
             }
           }
         }

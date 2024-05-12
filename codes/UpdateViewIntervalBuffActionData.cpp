@@ -10,10 +10,10 @@ void __fastcall UpdateViewIntervalBuffActionData___ctor(
   System_Int32_array *v9; // x6
   System_Int32_array *v10; // x7
 
-  if ( (byte_4353317 & 1) == 0 )
+  if ( (byte_438CA96 & 1) == 0 )
   {
-    sub_B70694(&BattleActionData_TypeInfo);
-    byte_4353317 = 1;
+    sub_B775C4(&BattleActionData_TypeInfo);
+    byte_438CA96 = 1;
   }
   if ( (BYTE3(BattleActionData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BattleActionData_TypeInfo->_2.cctor_finished )
@@ -23,7 +23,7 @@ void __fastcall UpdateViewIntervalBuffActionData___ctor(
   BattleActionData___ctor((BattleActionData_o *)this, 0LL);
   this->fields.state = 7;
   this->fields.targetActionData = actData;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.targetActionData,
     (System_Int32_array **)actData,
     v5,

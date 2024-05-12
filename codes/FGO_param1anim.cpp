@@ -17,18 +17,18 @@ void __fastcall FGO_param1anim__Start(FGO_param1anim_o *this, const MethodInfo *
   __int64 v11; // x1
   UnityEngine_Renderer_o *klass; // x0
 
-  if ( (byte_43521FC & 1) == 0 )
+  if ( (byte_438B8BF & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_B70694(&StringLiteral_16400/*"_oneValue"*/);
-    byte_43521FC = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_B775C4(&StringLiteral_16470/*"_oneValue"*/);
+    byte_438B8BF = 1;
   }
   Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                               (UnityEngine_Component_o *)this,
-                              (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                              (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   v4 = (UnityEngine_Renderer_o **)&this[1];
   this[1].klass = (FGO_param1anim_c *)Component_WebViewObject;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this[1],
     (System_Int32_array **)Component_WebViewObject,
     v5,
@@ -42,16 +42,16 @@ void __fastcall FGO_param1anim__Start(FGO_param1anim_o *this, const MethodInfo *
     || (klass = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(klass, 0LL)) == 0LL
     || (UnityEngine_Material__EnableKeyword(
           (UnityEngine_Material_o *)klass,
-          (System_String_o *)StringLiteral_16400/*"_oneValue"*/,
+          (System_String_o *)StringLiteral_16470/*"_oneValue"*/,
           0LL),
         (klass = *v4) == 0LL)
     || (klass = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(klass, 0LL)) == 0LL )
   {
-    sub_B7076C(klass, v11);
+    sub_B7769C(klass, v11);
   }
   UnityEngine_Material__SetFloat(
     (UnityEngine_Material_o *)klass,
-    (System_String_o *)StringLiteral_16400/*"_oneValue"*/,
+    (System_String_o *)StringLiteral_16470/*"_oneValue"*/,
     *(float *)&this->fields._renderer,
     0LL);
 }
@@ -61,17 +61,17 @@ void __fastcall FGO_param1anim__Update(FGO_param1anim_o *this, const MethodInfo 
 {
   UnityEngine_Renderer_o *klass; // x0
 
-  if ( (byte_43521FD & 1) == 0 )
+  if ( (byte_438B8C0 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_16400/*"_oneValue"*/);
-    byte_43521FD = 1;
+    sub_B775C4(&StringLiteral_16470/*"_oneValue"*/);
+    byte_438B8C0 = 1;
   }
   klass = (UnityEngine_Renderer_o *)this[1].klass;
   if ( !klass || (klass = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(klass, 0LL)) == 0LL )
-    sub_B7076C(klass, method);
+    sub_B7769C(klass, method);
   UnityEngine_Material__SetFloat(
     (UnityEngine_Material_o *)klass,
-    (System_String_o *)StringLiteral_16400/*"_oneValue"*/,
+    (System_String_o *)StringLiteral_16470/*"_oneValue"*/,
     *(float *)&this->fields._renderer,
     0LL);
 }

@@ -1,27 +1,27 @@
 void __fastcall UserQuestInfoEntity___ctor(UserQuestInfoEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_434FD45 & 1) == 0 )
+  if ( (byte_438932E & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_434FD45 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438932E = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall UserQuestInfoEntity__CreatePK(int64_t userId, int32_t questId, const MethodInfo *method)
 {
-  if ( (byte_434FD44 & 1) == 0 )
+  if ( (byte_438932D & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_434FD44 = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_438932D = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            questId,
-           (const MethodInfo_1CA249C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_1D172EC *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

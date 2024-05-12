@@ -28,7 +28,7 @@ void __fastcall OrganizationTopItemInfo___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.kind = kind;
   this->fields.textCode = textCode;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.textCode,
     (System_Int32_array **)textCode,
     v11,
@@ -38,7 +38,7 @@ void __fastcall OrganizationTopItemInfo___ctor(
     v15,
     v16);
   this->fields.imageName = imageName;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.imageName,
     (System_Int32_array **)imageName,
     v17,
@@ -48,7 +48,7 @@ void __fastcall OrganizationTopItemInfo___ctor(
     v21,
     v22);
   this->fields.eventData = eventData;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.eventData,
     (System_Int32_array **)eventData,
     v23,

@@ -1,9 +1,9 @@
 void __fastcall RaceResultEffectComponent___ctor(RaceResultEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_435024E & 1) == 0 )
+  if ( (byte_4389981 & 1) == 0 )
   {
-    sub_B70694(&CommonEffectComponent_TypeInfo);
-    byte_435024E = 1;
+    sub_B775C4(&CommonEffectComponent_TypeInfo);
+    byte_4389981 = 1;
   }
   if ( (BYTE3(CommonEffectComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CommonEffectComponent_TypeInfo->_2.cctor_finished )
@@ -43,14 +43,14 @@ void __fastcall RaceResultEffectComponent__SetParam(
   __int64 v18; // x24
   __int64 v19; // x0
 
-  if ( (byte_435024D & 1) == 0 )
+  if ( (byte_4389980 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
-    byte_435024D = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
+    byte_4389980 = 1;
   }
   this->fields.param = param;
   p_param = &this->fields.param;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)p_param,
     (System_Int32_array **)param,
     (System_String_array **)method,
@@ -62,7 +62,7 @@ void __fastcall RaceResultEffectComponent__SetParam(
   v13 = (__int64)*(p_param - 1);
   if ( !v13 )
 LABEL_17:
-    sub_B7076C(Components_iTween, v12);
+    sub_B7769C(Components_iTween, v12);
   v14 = *(_DWORD *)(v13 + 24);
   if ( v14 >= 1 )
   {
@@ -76,7 +76,7 @@ LABEL_17:
         goto LABEL_17;
       Components_iTween = UnityEngine_GameObject__GetComponents_iTween_(
                             (UnityEngine_GameObject_o *)Components_iTween,
-                            (const MethodInfo_1D4B0D4 *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
+                            (const MethodInfo_1DEC270 *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
       if ( Components_iTween )
       {
         max_length = Components_iTween->max_length;
@@ -104,7 +104,7 @@ LABEL_14:
         goto LABEL_14;
     }
 LABEL_16:
-    v19 = sub_B70798(Components_iTween);
-    sub_B70738(v19, 0LL);
+    v19 = sub_B776C8(Components_iTween);
+    sub_B77668(v19, 0LL);
   }
 }

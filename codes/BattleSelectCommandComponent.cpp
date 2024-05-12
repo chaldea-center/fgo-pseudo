@@ -11,26 +11,26 @@ void __fastcall BattleSelectCommandComponent___cctor(const MethodInfo *method)
   __int64 v9; // x0
   __int64 v10; // x0
 
-  if ( (byte_434EC8E & 1) == 0 )
+  if ( (byte_438825F & 1) == 0 )
   {
-    sub_B70694(&BattleSelectCommandComponent_TypeInfo);
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_17877/*"commandcard_select_3rd"*/);
-    sub_B70694(&StringLiteral_17876/*"commandcard_select_2nd"*/);
-    sub_B70694(&StringLiteral_17875/*"commandcard_select_1st"*/);
-    byte_434EC8E = 1;
+    sub_B775C4(&BattleSelectCommandComponent_TypeInfo);
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_17965/*"commandcard_select_3rd"*/);
+    sub_B775C4(&StringLiteral_17964/*"commandcard_select_2nd"*/);
+    sub_B775C4(&StringLiteral_17963/*"commandcard_select_1st"*/);
+    byte_438825F = 1;
   }
-  v1 = sub_B706AC(string___TypeInfo, 3LL);
+  v1 = sub_B775DC(string___TypeInfo, 3LL);
   if ( !v1 )
-    sub_B7076C(0LL, v2);
+    sub_B7769C(0LL, v2);
   v3 = (struct System_String_array *)v1;
-  v4 = StringLiteral_17875/*"commandcard_select_1st"*/;
-  if ( StringLiteral_17875/*"commandcard_select_1st"*/ )
+  v4 = StringLiteral_17963/*"commandcard_select_1st"*/;
+  if ( StringLiteral_17963/*"commandcard_select_1st"*/ )
   {
-    v4 = sub_B70754(StringLiteral_17875/*"commandcard_select_1st"*/, v3->obj.klass->_1.element_class);
+    v4 = sub_B77684(StringLiteral_17963/*"commandcard_select_1st"*/, v3->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_21;
-    v5 = StringLiteral_17875/*"commandcard_select_1st"*/;
+    v5 = StringLiteral_17963/*"commandcard_select_1st"*/;
   }
   else
   {
@@ -39,14 +39,14 @@ void __fastcall BattleSelectCommandComponent___cctor(const MethodInfo *method)
   if ( !v3->max_length )
     goto LABEL_20;
   v3->m_Items[0] = (System_String_o *)v5;
-  sub_B70630(v3->m_Items);
-  v4 = StringLiteral_17876/*"commandcard_select_2nd"*/;
-  if ( StringLiteral_17876/*"commandcard_select_2nd"*/ )
+  sub_B77560(v3->m_Items);
+  v4 = StringLiteral_17964/*"commandcard_select_2nd"*/;
+  if ( StringLiteral_17964/*"commandcard_select_2nd"*/ )
   {
-    v4 = sub_B70754(StringLiteral_17876/*"commandcard_select_2nd"*/, v3->obj.klass->_1.element_class);
+    v4 = sub_B77684(StringLiteral_17964/*"commandcard_select_2nd"*/, v3->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_21;
-    v6 = StringLiteral_17876/*"commandcard_select_2nd"*/;
+    v6 = StringLiteral_17964/*"commandcard_select_2nd"*/;
   }
   else
   {
@@ -55,33 +55,33 @@ void __fastcall BattleSelectCommandComponent___cctor(const MethodInfo *method)
   if ( v3->max_length <= 1 )
     goto LABEL_20;
   v3->m_Items[1] = (System_String_o *)v6;
-  sub_B70630(&v3->m_Items[1]);
-  v4 = StringLiteral_17877/*"commandcard_select_3rd"*/;
-  if ( StringLiteral_17877/*"commandcard_select_3rd"*/ )
+  sub_B77560(&v3->m_Items[1]);
+  v4 = StringLiteral_17965/*"commandcard_select_3rd"*/;
+  if ( StringLiteral_17965/*"commandcard_select_3rd"*/ )
   {
-    v4 = sub_B70754(StringLiteral_17877/*"commandcard_select_3rd"*/, v3->obj.klass->_1.element_class);
+    v4 = sub_B77684(StringLiteral_17965/*"commandcard_select_3rd"*/, v3->obj.klass->_1.element_class);
     if ( v4 )
     {
-      v7 = StringLiteral_17877/*"commandcard_select_3rd"*/;
+      v7 = StringLiteral_17965/*"commandcard_select_3rd"*/;
       goto LABEL_18;
     }
 LABEL_21:
-    v10 = sub_B7078C();
-    sub_B70738(v10, 0LL);
+    v10 = sub_B776BC();
+    sub_B77668(v10, 0LL);
   }
   v7 = 0LL;
 LABEL_18:
   if ( v3->max_length <= 2 )
   {
 LABEL_20:
-    v9 = sub_B70798(v4);
-    sub_B70738(v9, 0LL);
+    v9 = sub_B776C8(v4);
+    sub_B77668(v9, 0LL);
   }
   v3->m_Items[2] = (System_String_o *)v7;
-  sub_B70630(&v3->m_Items[2]);
+  sub_B77560(&v3->m_Items[2]);
   static_fields = BattleSelectCommandComponent_TypeInfo->static_fields;
   static_fields->frameFileList = v3;
-  sub_B70630(static_fields);
+  sub_B77560(static_fields);
 }
 
 
@@ -103,12 +103,12 @@ void __fastcall BattleSelectCommandComponent__setIndex(
   UnityEngine_Object_o *Component_srcLineSprite; // x19
   __int64 v9; // x0
 
-  if ( (byte_434EC8D & 1) == 0 )
+  if ( (byte_438825E & 1) == 0 )
   {
-    sub_B70694(&BattleSelectCommandComponent_TypeInfo);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_TweenScale___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_434EC8D = 1;
+    sub_B775C4(&BattleSelectCommandComponent_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_TweenScale___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438825E = 1;
   }
   markSprite = this->fields.markSprite;
   gameObject = (UnityEngine_Component_o *)BattleSelectCommandComponent_TypeInfo;
@@ -123,8 +123,8 @@ void __fastcall BattleSelectCommandComponent__setIndex(
     goto LABEL_18;
   if ( *(_DWORD *)(v7 + 24) <= (unsigned int)index )
   {
-    v9 = sub_B70798(gameObject);
-    sub_B70738(v9, 0LL);
+    v9 = sub_B776C8(gameObject);
+    sub_B77668(v9, 0LL);
   }
   if ( !markSprite )
     goto LABEL_18;
@@ -137,7 +137,7 @@ void __fastcall BattleSelectCommandComponent__setIndex(
     goto LABEL_18;
   Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                       (UnityEngine_GameObject_o *)gameObject,
-                                                      (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___);
+                                                      (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -153,6 +153,6 @@ void __fastcall BattleSelectCommandComponent__setIndex(
       return;
     }
 LABEL_18:
-    sub_B7076C(gameObject, *(_QWORD *)&index);
+    sub_B7769C(gameObject, *(_QWORD *)&index);
   }
 }

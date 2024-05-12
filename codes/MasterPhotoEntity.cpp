@@ -1,13 +1,13 @@
 void __fastcall MasterPhotoEntity___ctor(MasterPhotoEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_43522F0 & 1) == 0 )
+  if ( (byte_438BB90 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_43522F0 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438BB90 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *__fastcall MasterPhotoEntity__CreatePK(
         int32_t position,
         const MethodInfo *method)
 {
-  if ( (byte_43522EF & 1) == 0 )
+  if ( (byte_438BB8F & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_43522EF = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_438BB8F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            equipId,
            type,
            position,
-           (const MethodInfo_1CA2794 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1D175E4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

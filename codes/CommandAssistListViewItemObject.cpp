@@ -2,10 +2,10 @@ void __fastcall CommandAssistListViewItemObject___ctor(
         CommandAssistListViewItemObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4354606 & 1) == 0 )
+  if ( (byte_438DEC4 & 1) == 0 )
   {
-    sub_B70694(&ListViewObject_TypeInfo);
-    byte_4354606 = 1;
+    sub_B775C4(&ListViewObject_TypeInfo);
+    byte_438DEC4 = 1;
   }
   if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ListViewObject_TypeInfo->_2.cctor_finished )
@@ -30,20 +30,20 @@ void __fastcall CommandAssistListViewItemObject__Awake(
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_4354604 & 1) == 0 )
+  if ( (byte_438DEC2 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_CommandAssistListViewItemDraw___);
-    byte_4354604 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_CommandAssistListViewItemDraw___);
+    byte_438DEC2 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   Component_srcLineSprite = (struct CommandAssistListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                         dispObject,
-                                                                        (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_CommandAssistListViewItemDraw___);
+                                                                        (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_CommandAssistListViewItemDraw___);
   this->fields.itemDraw = Component_srcLineSprite;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.itemDraw,
     (System_Int32_array **)Component_srcLineSprite,
     v6,
@@ -66,23 +66,23 @@ void __fastcall CommandAssistListViewItemObject__SetItem(
   CommandAssistListViewItemDraw_o *itemDraw; // x0
   __int64 v10; // x9
 
-  if ( (byte_4354605 & 1) == 0 )
+  if ( (byte_438DEC3 & 1) == 0 )
   {
-    sub_B70694(&CommandAssistListViewItem_TypeInfo);
-    byte_4354605 = 1;
+    sub_B775C4(&CommandAssistListViewItem_TypeInfo);
+    byte_438DEC3 = 1;
   }
-  ListViewObject__SetItem_33972948((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_34301308((ListViewObject_o *)this, item, seed, 0LL);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
 LABEL_9:
-    sub_B7076C(itemDraw, v7);
+    sub_B7769C(itemDraw, v7);
   if ( item )
   {
     v10 = *(&CommandAssistListViewItem_TypeInfo->_2.bitflags2 + 1);
     if ( *(&item->klass->_2.bitflags2 + 1) < (unsigned int)v10
       || (CommandAssistListViewItem_c *)item->klass->_2.typeHierarchy[v10 - 1] != CommandAssistListViewItem_TypeInfo )
     {
-      sub_B70A60(item);
+      sub_B77990(item);
       goto LABEL_9;
     }
   }

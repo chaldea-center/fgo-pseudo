@@ -9,18 +9,18 @@ System_Func_float__float__float__float__o *__fastcall ExtraEasing__AsymptoticSer
   float v8; // s0
   System_Func_float__float__float__float__o *v9; // x20
 
-  if ( (byte_4350902 & 1) == 0 )
+  if ( (byte_4389FE6 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Func_float__float__float__float___ctor__);
-    sub_B70694(&System_Func_float__float__float__float__TypeInfo);
-    sub_B70694(&Method_ExtraEasing___c__DisplayClass1_0__AsymptoticSeriesFloat_b__0__);
-    sub_B70694(&ExtraEasing___c__DisplayClass1_0_TypeInfo);
-    byte_4350902 = 1;
+    sub_B775C4(&Method_System_Func_float__float__float__float___ctor__);
+    sub_B775C4(&System_Func_float__float__float__float__TypeInfo);
+    sub_B775C4(&Method_ExtraEasing___c__DisplayClass1_0__AsymptoticSeriesFloat_b__0__);
+    sub_B775C4(&ExtraEasing___c__DisplayClass1_0_TypeInfo);
+    byte_4389FE6 = 1;
   }
-  v5 = (ExtraEasing___c__DisplayClass1_0_o *)sub_B70764(ExtraEasing___c__DisplayClass1_0_TypeInfo);
+  v5 = (ExtraEasing___c__DisplayClass1_0_o *)sub_B77694(ExtraEasing___c__DisplayClass1_0_TypeInfo);
   ExtraEasing___c__DisplayClass1_0___ctor(v5, 0LL);
   if ( !v5 )
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   v5->fields.asymptoticSpeed = asymptoticSpeed;
   v5->fields.powerRate = powerRate;
   if ( asymptoticSpeed < 0.0 || asymptoticSpeed > 1.0 )
@@ -31,12 +31,12 @@ System_Func_float__float__float__float__o *__fastcall ExtraEasing__AsymptoticSer
   }
   if ( powerRate < 0.0 )
     v5->fields.powerRate = 0.0;
-  v9 = (System_Func_float__float__float__float__o *)sub_B70764(System_Func_float__float__float__float__TypeInfo);
+  v9 = (System_Func_float__float__float__float__o *)sub_B77694(System_Func_float__float__float__float__TypeInfo);
   System_Func_float__float__float__float____ctor(
     v9,
     (Il2CppObject *)v5,
     Method_ExtraEasing___c__DisplayClass1_0__AsymptoticSeriesFloat_b__0__,
-    (const MethodInfo_29BA4F4 *)Method_System_Func_float__float__float__float___ctor__);
+    (const MethodInfo_29F7240 *)Method_System_Func_float__float__float__float___ctor__);
   return v9;
 }
 
@@ -52,18 +52,18 @@ System_Func_Vector3__Vector3__float__Vector3__o *__fastcall ExtraEasing__Asympto
   float v8; // s0
   System_Func_Vector3__Vector3__float__Vector3__o *v9; // x20
 
-  if ( (byte_4350901 & 1) == 0 )
+  if ( (byte_4389FE5 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Func_Vector3__Vector3__float__Vector3___ctor__);
-    sub_B70694(&System_Func_Vector3__Vector3__float__Vector3__TypeInfo);
-    sub_B70694(&Method_ExtraEasing___c__DisplayClass0_0__AsymptoticSeriesVector3_b__0__);
-    sub_B70694(&ExtraEasing___c__DisplayClass0_0_TypeInfo);
-    byte_4350901 = 1;
+    sub_B775C4(&Method_System_Func_Vector3__Vector3__float__Vector3___ctor__);
+    sub_B775C4(&System_Func_Vector3__Vector3__float__Vector3__TypeInfo);
+    sub_B775C4(&Method_ExtraEasing___c__DisplayClass0_0__AsymptoticSeriesVector3_b__0__);
+    sub_B775C4(&ExtraEasing___c__DisplayClass0_0_TypeInfo);
+    byte_4389FE5 = 1;
   }
-  v5 = (ExtraEasing___c__DisplayClass0_0_o *)sub_B70764(ExtraEasing___c__DisplayClass0_0_TypeInfo);
+  v5 = (ExtraEasing___c__DisplayClass0_0_o *)sub_B77694(ExtraEasing___c__DisplayClass0_0_TypeInfo);
   ExtraEasing___c__DisplayClass0_0___ctor(v5, 0LL);
   if ( !v5 )
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   v5->fields.asymptoticSpeed = asymptoticSpeed;
   v5->fields.powerRate = powerRate;
   if ( asymptoticSpeed < 0.0 || asymptoticSpeed > 1.0 )
@@ -74,12 +74,12 @@ System_Func_Vector3__Vector3__float__Vector3__o *__fastcall ExtraEasing__Asympto
   }
   if ( powerRate < 0.0 )
     v5->fields.powerRate = 0.0;
-  v9 = (System_Func_Vector3__Vector3__float__Vector3__o *)sub_B70764(System_Func_Vector3__Vector3__float__Vector3__TypeInfo);
+  v9 = (System_Func_Vector3__Vector3__float__Vector3__o *)sub_B77694(System_Func_Vector3__Vector3__float__Vector3__TypeInfo);
   System_Func_Vector3__Vector3__float__Vector3____ctor(
     v9,
     (Il2CppObject *)v5,
     Method_ExtraEasing___c__DisplayClass0_0__AsymptoticSeriesVector3_b__0__,
-    (const MethodInfo_29BA854 *)Method_System_Func_Vector3__Vector3__float__Vector3___ctor__);
+    (const MethodInfo_29F75A0 *)Method_System_Func_Vector3__Vector3__float__Vector3___ctor__);
   return v9;
 }
 

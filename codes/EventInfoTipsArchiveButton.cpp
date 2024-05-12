@@ -5,21 +5,21 @@ NoticeNumberComponent_o *__fastcall EventInfoTipsArchiveButton__CreateBadge(
   CommonUI_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4352E4B & 1) == 0 )
+  if ( (byte_438C5CA & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4352E4B = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_438C5CA = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (Instance = (CommonUI_o *)CommonUI__CreateNoticeNumber(Instance, this->fields.noticeNumberRoot, 0LL)) == 0LL )
   {
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   return (NoticeNumberComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                       (UnityEngine_GameObject_o *)Instance,
-                                      (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
+                                      (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
 }
 
 
@@ -49,15 +49,15 @@ void __fastcall EventInfoTipsArchiveButton__Initialization(
   System_Action_o *v23; // x22
   const MethodInfo *v24; // x4
 
-  if ( (byte_4352E49 & 1) == 0 )
+  if ( (byte_438C5C8 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_EventInfoTipsArchiveButton__Initialization_b__6_0__);
-    byte_4352E49 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_EventInfoTipsArchiveButton__Initialization_b__6_0__);
+    byte_438C5C8 = 1;
   }
   Badge = EventInfoTipsArchiveButton__CreateBadge(this, (const MethodInfo *)entity);
   this->fields.badge = Badge;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.badge,
     (System_Int32_array **)Badge,
     v6,
@@ -67,7 +67,7 @@ void __fastcall EventInfoTipsArchiveButton__Initialization(
     v10,
     v11);
   this->fields.eventUiEntity = entity;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.eventUiEntity,
     (System_Int32_array **)entity,
     v12,
@@ -78,12 +78,12 @@ void __fastcall EventInfoTipsArchiveButton__Initialization(
     v17);
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_B7076C(v18, v19);
+    sub_B7769C(v18, v19);
   eventId = eventUiEntity->fields.eventId;
   warId = eventUiEntity->fields.warId;
-  v23 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v23 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v23, (Il2CppObject *)this, Method_EventInfoTipsArchiveButton__Initialization_b__6_0__, 0LL);
-  EventInfoUIBase__LoadEventUIAssetData_27310548((EventInfoUIBase_o *)this, eventId, warId, v23, v24);
+  EventInfoUIBase__LoadEventUIAssetData_27666288((EventInfoUIBase_o *)this, eventId, warId, v23, v24);
 }
 
 
@@ -97,23 +97,23 @@ void __fastcall EventInfoTipsArchiveButton__OnClickButton(EventInfoTipsArchiveBu
   __int64 v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_4352E4A & 1) == 0 )
+  if ( (byte_438C5C9 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_EventInfoTipsArchiveButton_OnClickButton__);
-    sub_B70694(&Method_EventInfoTipsArchiveButton__OnClickButton_b__8_0__);
-    byte_4352E4A = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_EventInfoTipsArchiveButton_OnClickButton__);
+    sub_B775C4(&Method_EventInfoTipsArchiveButton__OnClickButton_b__8_0__);
+    byte_438C5C9 = 1;
   }
   v3 = Method_EventInfoTipsArchiveButton_OnClickButton__;
   if ( (*((_BYTE *)Method_EventInfoTipsArchiveButton_OnClickButton__ + 75) & 2) != 0 )
-    v3 = (_QWORD *)sub_B7069C(Method_EventInfoTipsArchiveButton_OnClickButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+    v3 = (_QWORD *)sub_B775CC(Method_EventInfoTipsArchiveButton_OnClickButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
   dialog = this->fields.dialog;
-  v6 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_EventInfoTipsArchiveButton__OnClickButton_b__8_0__, 0LL);
   if ( !dialog )
-    sub_B7076C(v7, v8);
+    sub_B7769C(v7, v8);
   EventInfoTipsArchiveDialog__Open(dialog, v6, v9);
 }
 
@@ -145,15 +145,15 @@ void __fastcall EventInfoTipsArchiveButton__OnDestroy(EventInfoTipsArchiveButton
   System_Int32_array *v24; // x7
 
   v3 = this;
-  if ( (byte_4352E48 & 1) == 0 )
+  if ( (byte_438C5C7 & 1) == 0 )
   {
-    this = (EventInfoTipsArchiveButton_o *)sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4352E48 = 1;
+    this = (EventInfoTipsArchiveButton_o *)sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438C5C7 = 1;
   }
   eventUiEntity = v3->fields.eventUiEntity;
   if ( !eventUiEntity )
     goto LABEL_23;
-  EventInfoUIBase__ReleaseEventUIAssetData_27310060(
+  EventInfoUIBase__ReleaseEventUIAssetData_27665800(
     (EventInfoUIBase_o *)v3,
     eventUiEntity->fields.eventId,
     eventUiEntity->fields.warId,
@@ -177,9 +177,9 @@ void __fastcall EventInfoTipsArchiveButton__OnDestroy(EventInfoTipsArchiveButton
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_36067208(gameObject, 0LL);
+    UnityEngine_Object__Destroy_36309980(gameObject, 0LL);
     *p_badge = 0LL;
-    sub_B70630((BattleServantConfConponent_o *)&v3->fields.badge, 0LL, v9, v10, v11, v12, v13, v14);
+    sub_B77560((BattleServantConfConponent_o *)&v3->fields.badge, 0LL, v9, v10, v11, v12, v13, v14);
   }
   dialog = (UnityEngine_Object_o *)v3->fields.dialog;
   p_dialog = (EventInfoTipsArchiveButton_o **)&v3->fields.dialog;
@@ -200,13 +200,13 @@ void __fastcall EventInfoTipsArchiveButton__OnDestroy(EventInfoTipsArchiveButton
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      UnityEngine_Object__Destroy_36067208(v18, 0LL);
+      UnityEngine_Object__Destroy_36309980(v18, 0LL);
       *p_dialog = 0LL;
-      sub_B70630((BattleServantConfConponent_o *)p_dialog, 0LL, v19, v20, v21, v22, v23, v24);
+      sub_B77560((BattleServantConfConponent_o *)p_dialog, 0LL, v19, v20, v21, v22, v23, v24);
       return;
     }
 LABEL_23:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
 }
 
@@ -220,7 +220,7 @@ void __fastcall EventInfoTipsArchiveButton__SetBadge(
 
   badge = this->fields.badge;
   if ( !badge )
-    sub_B7076C(0LL, num);
+    sub_B7769C(0LL, num);
   NoticeNumberComponent__SetNumber(badge, num, 0LL);
 }
 
@@ -259,18 +259,18 @@ void __fastcall EventInfoTipsArchiveButton___Initialization_b__6_0(
   NoticeNumberComponent_o *badge; // x8
   System_Nullable_Vector3__o v22; // 0:x2.16
 
-  if ( (byte_4352E4C & 1) == 0 )
+  if ( (byte_438C5CB & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_EventInfoTipsArchiveDialog___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&TerminalSceneComponent_TypeInfo);
-    sub_B70694(&StringLiteral_14629/*"TipsArchiveDialog"*/);
-    sub_B70694(&StringLiteral_16690/*"archive_button"*/);
-    byte_4352E4C = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_EventInfoTipsArchiveDialog___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&TerminalSceneComponent_TypeInfo);
+    sub_B775C4(&StringLiteral_14695/*"TipsArchiveDialog"*/);
+    sub_B775C4(&StringLiteral_16769/*"archive_button"*/);
+    byte_438C5CB = 1;
   }
   v4 = (UnityEngine_Object_o *)EventInfoUIBase__InstantiateFromEventUIAssetData(
                                  (EventInfoUIBase_o *)this,
-                                 (System_String_o *)StringLiteral_14629/*"TipsArchiveDialog"*/,
+                                 (System_String_o *)StringLiteral_14695/*"TipsArchiveDialog"*/,
                                  v2);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -288,10 +288,10 @@ void __fastcall EventInfoTipsArchiveButton___Initialization_b__6_0(
       goto LABEL_23;
     Component_srcLineSprite = (struct EventInfoTipsArchiveDialog_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                        (UnityEngine_GameObject_o *)v4,
-                                                                       (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_EventInfoTipsArchiveDialog___);
+                                                                       (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_EventInfoTipsArchiveDialog___);
     this->fields.dialog = Component_srcLineSprite;
     p_dialog = &this->fields.dialog;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.dialog,
       (System_Int32_array **)Component_srcLineSprite,
       v11,
@@ -312,10 +312,10 @@ void __fastcall EventInfoTipsArchiveButton___Initialization_b__6_0(
     {
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
     }
-    if ( !byte_434DEA1 )
+    if ( !byte_4387463 )
     {
-      sub_B70694(&TerminalSceneComponent_TypeInfo);
-      byte_434DEA1 = 1;
+      sub_B775C4(&TerminalSceneComponent_TypeInfo);
+      byte_4387463 = 1;
     }
     v19 = TerminalSceneComponent_TypeInfo;
     if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -336,14 +336,14 @@ void __fastcall EventInfoTipsArchiveButton___Initialization_b__6_0(
           EventInfoUIBase__SetSpriteByLocalAtlas(
             (EventInfoUIBase_o *)this,
             this->fields.buttonSprite,
-            (System_String_o *)StringLiteral_16690/*"archive_button"*/,
+            (System_String_o *)StringLiteral_16769/*"archive_button"*/,
             v20),
           (mInstance = this->fields.dialog) == 0LL)
       || (mInstance = (EventInfoTipsArchiveDialog_o *)EventInfoTipsArchiveDialog__GetAllNewDispCount(mInstance, v6),
           (badge = this->fields.badge) == 0LL) )
     {
 LABEL_23:
-      sub_B7076C(mInstance, v6);
+      sub_B7769C(mInstance, v6);
     }
     NoticeNumberComponent__SetNumber(badge, (int32_t)mInstance, 0LL);
   }
@@ -361,7 +361,7 @@ void __fastcall EventInfoTipsArchiveButton___OnClickButton_b__8_0(
     || (dialog = (EventInfoTipsArchiveDialog_o *)EventInfoTipsArchiveDialog__GetAllNewDispCount(dialog, method),
         !this->fields.badge) )
   {
-    sub_B7076C(dialog, method);
+    sub_B7769C(dialog, method);
   }
   NoticeNumberComponent__SetNumber(this->fields.badge, (int32_t)dialog, 0LL);
 }

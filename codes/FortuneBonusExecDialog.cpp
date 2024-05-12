@@ -1,9 +1,9 @@
 void __fastcall FortuneBonusExecDialog___ctor(FortuneBonusExecDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_43554E3 & 1) == 0 )
+  if ( (byte_438EA7B & 1) == 0 )
   {
-    sub_B70694(&BaseDialog_TypeInfo);
-    byte_43554E3 = 1;
+    sub_B775C4(&BaseDialog_TypeInfo);
+    byte_438EA7B = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -36,23 +36,23 @@ void __fastcall FortuneBonusExecDialog__OnClickOkButton(FortuneBonusExecDialog_o
   System_Int32_array *v11; // x6
   System_Int32_array *v12; // x7
 
-  if ( (byte_43554E1 & 1) == 0 )
+  if ( (byte_438EA79 & 1) == 0 )
   {
-    sub_B70694(&Method_FortuneBonusExecDialog_OnClickOkButton__);
-    byte_43554E1 = 1;
+    sub_B775C4(&Method_FortuneBonusExecDialog_OnClickOkButton__);
+    byte_438EA79 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_FortuneBonusExecDialog_OnClickOkButton__;
     if ( (*((_BYTE *)Method_FortuneBonusExecDialog_OnClickOkButton__ + 75) & 2) != 0 )
-      v3 = (_QWORD *)sub_B7069C(Method_FortuneBonusExecDialog_OnClickOkButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+      v3 = (_QWORD *)sub_B775CC(Method_FortuneBonusExecDialog_OnClickOkButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0LL);
     clickFunc = this->fields.clickFunc;
     p_clickFunc = (BattleServantConfConponent_o *)&this->fields.clickFunc;
     ActionExtensions__Call(clickFunc, 0LL);
     p_clickFunc->klass = 0LL;
-    sub_B70630(p_clickFunc, 0LL, v7, v8, v9, v10, v11, v12);
+    sub_B77560(p_clickFunc, 0LL, v7, v8, v9, v10, v11, v12);
   }
 }
 
@@ -72,13 +72,13 @@ void __fastcall FortuneBonusExecDialog__Open(
   System_Int32_array *v12; // x7
   System_Action_o *v13; // x20
 
-  if ( (byte_43554E0 & 1) == 0 )
+  if ( (byte_438EA78 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_FortuneBonusExecDialog_EndOpened__);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_6533/*"FORTUNE_BONUS_EXEC_BUTTON"*/);
-    byte_43554E0 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_FortuneBonusExecDialog_EndOpened__);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_6589/*"FORTUNE_BONUS_EXEC_BUTTON"*/);
+    byte_438EA78 = 1;
   }
   descriptionTexture = (UnityEngine_Component_o *)this->fields.descriptionTexture;
   if ( !descriptionTexture )
@@ -99,13 +99,13 @@ void __fastcall FortuneBonusExecDialog__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  descriptionTexture = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6533/*"FORTUNE_BONUS_EXEC_BUTTON"*/, 0LL);
+  descriptionTexture = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6589/*"FORTUNE_BONUS_EXEC_BUTTON"*/, 0LL);
   if ( !okBtnLabel )
 LABEL_11:
-    sub_B7076C(descriptionTexture, nextAction);
+    sub_B7769C(descriptionTexture, nextAction);
   UILabel__set_text(okBtnLabel, (System_String_o *)descriptionTexture, 0LL);
   this->fields.clickFunc = nextAction;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.clickFunc,
     (System_Int32_array **)nextAction,
     v7,
@@ -116,7 +116,7 @@ LABEL_11:
     v12);
   this->fields.isButtonEnable = 0;
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 1, 0LL);
-  v13 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v13 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v13, (Il2CppObject *)this, Method_FortuneBonusExecDialog_EndOpened__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v13, 0, 0LL);
 }
@@ -128,14 +128,14 @@ void __fastcall FortuneBonusExecDialog__Release(FortuneBonusExecDialog_o *this, 
   __int64 v4; // x1
   UnityEngine_Object_o *v5; // x19
 
-  if ( (byte_43554E2 & 1) == 0 )
+  if ( (byte_438EA7A & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43554E2 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438EA7A = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   v5 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -143,5 +143,5 @@ void __fastcall FortuneBonusExecDialog__Release(FortuneBonusExecDialog_o *this, 
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  UnityEngine_Object__Destroy_36067208(v5, 0LL);
+  UnityEngine_Object__Destroy_36309980(v5, 0LL);
 }

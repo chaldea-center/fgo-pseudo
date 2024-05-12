@@ -15,16 +15,16 @@ BattleActionData_o *__fastcall MessageBattleLogicTask__CreateInitActionData(
   __int64 v7; // x1
   BattleActionData_o *result; // x0
 
-  if ( (byte_43504AA & 1) == 0 )
+  if ( (byte_4389AD3 & 1) == 0 )
   {
-    sub_B70694(&BattleActionData_TypeInfo);
-    byte_43504AA = 1;
+    sub_B775C4(&BattleActionData_TypeInfo);
+    byte_4389AD3 = 1;
   }
-  v5 = (BattleActionData_o *)sub_B70764(BattleActionData_TypeInfo);
+  v5 = (BattleActionData_o *)sub_B77694(BattleActionData_TypeInfo);
   BattleActionData___ctor(v5, 0LL);
   ActorId = BattleLogicTask__getActorId((BattleLogicTask_o *)this, 0LL);
   if ( !v5 || (v5->fields.actorId = ActorId, !msgEnt) )
-    sub_B7076C(ActorId, v7);
+    sub_B7769C(ActorId, v7);
   v5->fields.motionId = msgEnt->fields.motionId;
   v5->fields.state = BattleLogicTask__ConvertActorToActionState((BattleLogicTask_o *)this, 0LL);
   result = v5;
@@ -40,7 +40,7 @@ void __fastcall MessageBattleLogicTask__Init(
         const MethodInfo *method)
 {
   if ( !aiActEnt || (this->fields.isMsgGroup = aiActEnt->fields.type == 73, !aiEnt) )
-    sub_B7076C(this, aiActEnt);
+    sub_B7769C(this, aiActEnt);
   this->fields.value = AiBaseEntity__getActionValue(aiEnt, 0LL);
 }
 
@@ -65,11 +65,11 @@ BattleActionData_o *__fastcall MessageBattleLogicTask__MakeActionData(
   __int64 v17; // x0
 
   v4 = this;
-  if ( (byte_43504A9 & 1) == 0 )
+  if ( (byte_4389AD2 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_BattleMessageMaster___);
-    this = (MessageBattleLogicTask_o *)sub_B70694(&DataManager_TypeInfo);
-    byte_43504A9 = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_BattleMessageMaster___);
+    this = (MessageBattleLogicTask_o *)sub_B775C4(&DataManager_TypeInfo);
+    byte_4389AD2 = 1;
   }
   if ( v4->fields.isMsgGroup )
   {
@@ -89,10 +89,10 @@ BattleActionData_o *__fastcall MessageBattleLogicTask__MakeActionData(
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (MessageBattleLogicTask_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_BattleMessageMaster___);
+  this = (MessageBattleLogicTask_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_BattleMessageMaster___);
   if ( !this )
 LABEL_32:
-    sub_B7076C(this, logic);
+    sub_B7769C(this, logic);
   Entities = BattleMessageMaster__GetEntities((BattleMessageMaster_o *)this, value, 0LL);
   this = (MessageBattleLogicTask_o *)BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)Entities, 0LL);
   if ( ((unsigned __int8)this & 1) == 0 )
@@ -102,8 +102,8 @@ LABEL_32:
       if ( !Entities->max_length )
       {
 LABEL_33:
-        v17 = sub_B70798(this);
-        sub_B70738(v17, 0LL);
+        v17 = sub_B776C8(this);
+        sub_B77668(v17, 0LL);
       }
       this = (MessageBattleLogicTask_o *)MessageBattleLogicTask__CreateInitActionData(v4, Entities->m_Items[0], v8);
       if ( logic )
@@ -150,7 +150,7 @@ LABEL_28:
           this = (MessageBattleLogicTask_o *)logic->fields.perf;
           if ( !this )
             goto LABEL_32;
-          BattlePerformance__addActionData_18073992((BattlePerformance_o *)this, InitActionData, 0LL);
+          BattlePerformance__addActionData_18230268((BattlePerformance_o *)this, InitActionData, 0LL);
           InitActionData = MessageBattleLogicTask__CreateInitActionData(v4, v13, v15);
 LABEL_27:
           this = (MessageBattleLogicTask_o *)BattleLogic__get_ParseBattleMsg(logic, 0LL);
@@ -162,7 +162,7 @@ LABEL_29:
         this = (MessageBattleLogicTask_o *)logic->fields.perf;
         if ( this )
         {
-          BattlePerformance__addActionData_18073992((BattlePerformance_o *)this, InitActionData, 0LL);
+          BattlePerformance__addActionData_18230268((BattlePerformance_o *)this, InitActionData, 0LL);
           return 0LL;
         }
       }

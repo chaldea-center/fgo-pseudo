@@ -2,10 +2,10 @@ void __fastcall ServantCheckEquipListViewObject___ctor(
         ServantCheckEquipListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4352F6D & 1) == 0 )
+  if ( (byte_438C6EC & 1) == 0 )
   {
-    sub_B70694(&ListViewObject_TypeInfo);
-    byte_4352F6D = 1;
+    sub_B775C4(&ListViewObject_TypeInfo);
+    byte_438C6EC = 1;
   }
   if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ListViewObject_TypeInfo->_2.cctor_finished )
@@ -30,20 +30,20 @@ void __fastcall ServantCheckEquipListViewObject__Awake(
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_4352F67 & 1) == 0 )
+  if ( (byte_438C6E6 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_ServantCheckEquipListViewItemDraw___);
-    byte_4352F67 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ServantCheckEquipListViewItemDraw___);
+    byte_438C6E6 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   Component_srcLineSprite = (struct ServantCheckEquipListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                             dispObject,
-                                                                            (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_ServantCheckEquipListViewItemDraw___);
+                                                                            (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ServantCheckEquipListViewItemDraw___);
   this->fields.itemDraw = Component_srcLineSprite;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.itemDraw,
     (System_Int32_array **)Component_srcLineSprite,
     v6,
@@ -62,10 +62,10 @@ ServantCheckEquipListViewItem_o *__fastcall ServantCheckEquipListViewObject__Get
   struct ListViewItem_o *linkItem; // x8
   __int64 v4; // x11
 
-  if ( (byte_4352F68 & 1) == 0 )
+  if ( (byte_438C6E7 & 1) == 0 )
   {
-    sub_B70694(&ServantCheckEquipListViewItem_TypeInfo);
-    byte_4352F68 = 1;
+    sub_B775C4(&ServantCheckEquipListViewItem_TypeInfo);
+    byte_438C6E7 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -111,10 +111,10 @@ void __fastcall ServantCheckEquipListViewObject__Init(
   int32_t v30; // w8
   System_Action_o *klass; // x19
 
-  if ( (byte_4352F6A & 1) == 0 )
+  if ( (byte_438C6E9 & 1) == 0 )
   {
-    sub_B70694(&ServantCheckEquipListViewItem_TypeInfo);
-    byte_4352F6A = 1;
+    sub_B775C4(&ServantCheckEquipListViewItem_TypeInfo);
+    byte_438C6E9 = 1;
   }
   linkItem = this->fields.linkItem;
   state = this->fields.state;
@@ -142,12 +142,12 @@ void __fastcall ServantCheckEquipListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B7076C(transform, v15);
+    sub_B7769C(transform, v15);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (BattleServantConfConponent_o *)&this->fields.callbackFunc;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.callbackFunc,
     (System_Int32_array **)callbackFunc,
     v17,
@@ -158,8 +158,8 @@ void __fastcall ServantCheckEquipListViewObject__Init(
     v22);
   if ( v13 <= 3 )
   {
-    v30 = dword_32E8040[v13];
-    this->fields.state = dword_32EBAF8[v13];
+    v30 = dword_331B27C[v13];
+    this->fields.state = dword_331ED50[v13];
     this->fields.dispMode = v30;
   }
   if ( !state || dispMode != this->fields.dispMode )
@@ -168,7 +168,7 @@ void __fastcall ServantCheckEquipListViewObject__Init(
   if ( p_callbackFunc->klass )
   {
     p_callbackFunc->klass = 0LL;
-    sub_B70630(p_callbackFunc, 0LL, v24, v25, v26, v27, v28, v29);
+    sub_B77560(p_callbackFunc, 0LL, v24, v25, v26, v27, v28, v29);
     System_Action__Invoke(klass, 0LL);
   }
 }
@@ -183,7 +183,7 @@ void __fastcall ServantCheckEquipListViewObject__InitItem(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantCheckEquipListViewObject__Init_27412700(
+void __fastcall ServantCheckEquipListViewObject__Init_27768440(
         ServantCheckEquipListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -203,7 +203,7 @@ void __fastcall ServantCheckEquipListViewObject__Init_27412700(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantCheckEquipListViewObject__Init_27413324(
+void __fastcall ServantCheckEquipListViewObject__Init_27769064(
         ServantCheckEquipListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -224,7 +224,7 @@ void __fastcall ServantCheckEquipListViewObject__Init_27413324(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantCheckEquipListViewObject__Init_27415536(
+void __fastcall ServantCheckEquipListViewObject__Init_27771276(
         ServantCheckEquipListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -254,11 +254,11 @@ void __fastcall ServantCheckEquipListViewObject__SetInput(
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4352F69 & 1) == 0 )
+  if ( (byte_438C6E8 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&ServantCheckEquipListViewItem_TypeInfo);
-    byte_4352F69 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&ServantCheckEquipListViewItem_TypeInfo);
+    byte_438C6E8 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -269,7 +269,7 @@ void __fastcall ServantCheckEquipListViewObject__SetInput(
   }
   v6 = UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL);
   if ( v6 && !this->fields.itemDraw )
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
 }
 
 
@@ -279,12 +279,12 @@ void __fastcall ServantCheckEquipListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_33972948((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_34301308((ListViewObject_o *)this, item, seed, 0LL);
   this->fields.state = 0;
 }
 
 
-void __fastcall ServantCheckEquipListViewObject__SetItem_27414660(
+void __fastcall ServantCheckEquipListViewObject__SetItem_27770400(
         ServantCheckEquipListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -306,11 +306,11 @@ void __fastcall ServantCheckEquipListViewObject__SetupDisp(
   const MethodInfo *v8; // x3
   ServantCheckEquipListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4352F6B & 1) == 0 )
+  if ( (byte_438C6EA & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&ServantCheckEquipListViewItem_TypeInfo);
-    byte_4352F6B = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&ServantCheckEquipListViewItem_TypeInfo);
+    byte_438C6EA = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -337,7 +337,7 @@ LABEL_8:
   {
     v9 = this->fields.itemDraw;
     if ( !v9 )
-      sub_B7076C(0LL, v7);
+      sub_B7769C(0LL, v7);
     ServantCheckEquipListViewItemDraw__SetItem(
       v9,
       (ServantCheckEquipListViewItem_o *)linkItem,
@@ -364,17 +364,17 @@ System_String_o *__fastcall ServantCheckEquipListViewObject__ToString(
   float v14; // [xsp+8h] [xbp-28h]
   UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4352F6C & 1) == 0 )
+  if ( (byte_438C6EB & 1) == 0 )
   {
-    sub_B70694(&ServantCheckEquipListViewItemDraw_DispMode_TypeInfo);
-    sub_B70694(&StringLiteral_82/*" "*/);
-    byte_4352F6C = 1;
+    sub_B775C4(&ServantCheckEquipListViewItemDraw_DispMode_TypeInfo);
+    sub_B775C4(&StringLiteral_82/*" "*/);
+    byte_438C6EB = 1;
   }
   v14 = 0.0;
   v13 = 0LL;
   v4 = j_il2cpp_value_box_0(ServantCheckEquipListViewItemDraw_DispMode_TypeInfo, &this->fields.dispMode, v2);
   if ( !v4 )
-    sub_B7076C(0LL, v5);
+    sub_B7769C(0LL, v5);
   v6 = v4;
   v7 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v4 + 360LL))(
                             v4,
@@ -386,7 +386,7 @@ System_String_o *__fastcall ServantCheckEquipListViewObject__ToString(
   v13 = v9;
   v14 = z;
   v11 = UnityEngine_Vector3__ToString(v15, (const MethodInfo *)&v13);
-  return System_String__Concat_44760452(v7, (System_String_o *)StringLiteral_82/*" "*/, v11, 0LL);
+  return System_String__Concat_44904220(v7, (System_String_o *)StringLiteral_82/*" "*/, v11, 0LL);
 }
 
 
@@ -405,10 +405,10 @@ void __fastcall ServantCheckEquipListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4352F65 & 1) == 0 )
+  if ( (byte_438C6E4 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    byte_4352F65 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    byte_438C6E4 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -421,13 +421,13 @@ void __fastcall ServantCheckEquipListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (ServantCheckEquipListViewObject_o *)sub_B70A60(v8);
+  v11 = (ServantCheckEquipListViewObject_o *)sub_B77990(v8);
   ServantCheckEquipListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -446,10 +446,10 @@ void __fastcall ServantCheckEquipListViewObject__remove_callbackFunc(
   ServantCheckEquipListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4352F66 & 1) == 0 )
+  if ( (byte_438C6E5 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    byte_4352F66 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    byte_438C6E5 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -462,12 +462,12 @@ void __fastcall ServantCheckEquipListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (ServantCheckEquipListViewObject_o *)sub_B70A60(v8);
+  v11 = (ServantCheckEquipListViewObject_o *)sub_B77990(v8);
   ServantCheckEquipListViewObject__Awake(v11, v12);
 }

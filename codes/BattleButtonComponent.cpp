@@ -10,17 +10,17 @@ bool __fastcall BattleButtonComponent__get_isHide(BattleButtonComponent_o *this,
   _BOOL8 v4; // x0
   __int64 v5; // x1
 
-  if ( (byte_43554B5 & 1) == 0 )
+  if ( (byte_438EBF6 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43554B5 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438EBF6 = 1;
   }
   if ( !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0LL) )
     return 0;
   Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                       (UnityEngine_Component_o *)this,
-                                                      (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                      (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -30,7 +30,7 @@ bool __fastcall BattleButtonComponent__get_isHide(BattleButtonComponent_o *this,
   if ( !v4 )
     return 0;
   if ( !Component_WebViewObject )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   return UnityEngine_Collider__get_enabled((UnityEngine_Collider_o *)Component_WebViewObject, 0LL);
 }
 
@@ -41,15 +41,15 @@ void __fastcall BattleButtonComponent__set_isHide(BattleButtonComponent_o *this,
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_43554B6 & 1) == 0 )
+  if ( (byte_438EBF7 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43554B6 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438EBF7 = 1;
   }
   Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                       (UnityEngine_Component_o *)this,
-                                                      (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                      (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -59,7 +59,7 @@ void __fastcall BattleButtonComponent__set_isHide(BattleButtonComponent_o *this,
   if ( v6 )
   {
     if ( !Component_WebViewObject )
-      sub_B7076C(v6, v7);
+      sub_B7769C(v6, v7);
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_WebViewObject, value, 0LL);
   }
   else

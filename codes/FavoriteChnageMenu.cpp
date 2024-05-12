@@ -1,9 +1,9 @@
 void __fastcall FavoriteChnageMenu___ctor(FavoriteChnageMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4350007 & 1) == 0 )
+  if ( (byte_43896EB & 1) == 0 )
   {
-    sub_B70694(&BaseMenu_TypeInfo);
-    byte_4350007 = 1;
+    sub_B775C4(&BaseMenu_TypeInfo);
+    byte_43896EB = 1;
   }
   if ( (BYTE3(BaseMenu_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseMenu_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo);

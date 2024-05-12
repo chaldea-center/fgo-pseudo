@@ -31,7 +31,7 @@ void __fastcall BattleActorRotationComponent__RotationStop(
   v5 = transform;
   *(UnityEngine_Quaternion_o *)&v8 = UnityEngine_Quaternion__Euler(0.0, v4, 0.0, 0LL);
   if ( !v5 )
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   UnityEngine_Transform__set_localRotation(v5, *(UnityEngine_Quaternion_o *)&v8, 0LL);
 }
 
@@ -46,7 +46,7 @@ void __fastcall BattleActorRotationComponent__Start(BattleActorRotationComponent
   *(_QWORD *)&localRotation.fields.x = 0LL;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   localRotation = UnityEngine_Transform__get_localRotation(transform, 0LL);
   eulerAngles = UnityEngine_Quaternion__get_eulerAngles(localRotation, (const MethodInfo *)&localRotation);
   this->fields.ResetRotationY = eulerAngles.fields.y;
@@ -80,7 +80,7 @@ void __fastcall BattleActorRotationComponent__Update(BattleActorRotationComponen
     v9 = transform;
     *(UnityEngine_Quaternion_o *)&v12 = UnityEngine_Quaternion__Euler(0.0, v8, 0.0, 0LL);
     if ( !v9 )
-      sub_B7076C(v10, v11);
+      sub_B7769C(v10, v11);
     UnityEngine_Transform__set_localRotation(v9, *(UnityEngine_Quaternion_o *)&v12, 0LL);
   }
 }

@@ -1,14 +1,14 @@
 void __fastcall RestrictionBaseMaster___ctor(RestrictionBaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_435431B & 1) == 0 )
+  if ( (byte_438DBD9 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string___ctor__);
-    byte_435431B = 1;
+    sub_B775C4(&Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string___ctor__);
+    byte_438DBD9 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     444,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ RestrictionBaseEntity_o *__fastcall RestrictionBaseMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_435431C & 1) == 0 )
+  if ( (byte_438DBDA & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string__GetEntity__);
-    byte_435431C = 1;
+    sub_B775C4(&Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string__GetEntity__);
+    byte_438DBDA = 1;
   }
   PK = RestrictionBaseEntity__CreatePK(questId, questPhase, *(const MethodInfo **)&questPhase);
   return (RestrictionBaseEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                       (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                       PK,
-                                      (const MethodInfo_21C0890 *)Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string__GetEntity__);
+                                      (const MethodInfo_21FBCE4 *)Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string__GetEntity__);
 }
 
 
@@ -44,15 +44,15 @@ bool __fastcall RestrictionBaseMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_435431D & 1) == 0 )
+  if ( (byte_438DBDB & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string__TryGetEntity__);
-    byte_435431D = 1;
+    sub_B775C4(&Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string__TryGetEntity__);
+    byte_438DBDB = 1;
   }
   PK = RestrictionBaseEntity__CreatePK(questId, questPhase, *(const MethodInfo **)&questId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string__TryGetEntity__);
 }

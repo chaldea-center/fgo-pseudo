@@ -47,26 +47,26 @@ void __fastcall CoinRoomGaugeEffectComponent__StartAnimation(
   float v32; // [xsp+28h] [xbp-28h] BYREF
   float v33; // [xsp+2Ch] [xbp-24h] BYREF
 
-  if ( (byte_4352058 & 1) == 0 )
+  if ( (byte_438B71B & 1) == 0 )
   {
-    sub_B70694(&CoinRoomUtility_TypeInfo);
-    sub_B70694(&iTween_EaseType_TypeInfo);
-    sub_B70694(&System_Collections_Hashtable_TypeInfo);
-    sub_B70694(&iTween_LoopType_TypeInfo);
-    sub_B70694(&float_TypeInfo);
-    sub_B70694(&StringLiteral_15249/*"UpdateGauge"*/);
-    sub_B70694(&StringLiteral_21616/*"onupdatetarget"*/);
-    sub_B70694(&StringLiteral_19208/*"from"*/);
-    sub_B70694(&StringLiteral_20643/*"loopType"*/);
-    sub_B70694(&StringLiteral_23053/*"time"*/);
-    sub_B70694(&StringLiteral_21614/*"onupdate"*/);
-    sub_B70694(&StringLiteral_18220/*"delay"*/);
-    sub_B70694(&StringLiteral_23091/*"to"*/);
-    sub_B70694(&StringLiteral_6770/*"FinishGauge"*/);
-    sub_B70694(&StringLiteral_18387/*"easeType"*/);
-    sub_B70694(&StringLiteral_21605/*"oncomplete"*/);
-    sub_B70694(&iTween_TypeInfo);
-    byte_4352058 = 1;
+    sub_B775C4(&CoinRoomUtility_TypeInfo);
+    sub_B775C4(&iTween_EaseType_TypeInfo);
+    sub_B775C4(&System_Collections_Hashtable_TypeInfo);
+    sub_B775C4(&iTween_LoopType_TypeInfo);
+    sub_B775C4(&float_TypeInfo);
+    sub_B775C4(&StringLiteral_15319/*"UpdateGauge"*/);
+    sub_B775C4(&StringLiteral_21713/*"onupdatetarget"*/);
+    sub_B775C4(&StringLiteral_19296/*"from"*/);
+    sub_B775C4(&StringLiteral_20739/*"loopType"*/);
+    sub_B775C4(&StringLiteral_23154/*"time"*/);
+    sub_B775C4(&StringLiteral_21711/*"onupdate"*/);
+    sub_B775C4(&StringLiteral_18308/*"delay"*/);
+    sub_B775C4(&StringLiteral_23192/*"to"*/);
+    sub_B775C4(&StringLiteral_6826/*"FinishGauge"*/);
+    sub_B775C4(&StringLiteral_18475/*"easeType"*/);
+    sub_B775C4(&StringLiteral_21702/*"oncomplete"*/);
+    sub_B775C4(&iTween_TypeInfo);
+    byte_438B71B = 1;
   }
   if ( !this->fields.state )
   {
@@ -78,12 +78,12 @@ void __fastcall CoinRoomGaugeEffectComponent__StartAnimation(
     }
     v8 = CoinRoomUtility__MaxPoint((const MethodInfo *)v7);
     v9 = (float)beforePoint / (float)v8;
-    v10 = (System_Collections_Hashtable_o *)sub_B70764(System_Collections_Hashtable_TypeInfo);
-    System_Collections_Hashtable___ctor_39248100(v10, 0LL);
+    v10 = (System_Collections_Hashtable_o *)sub_B77694(System_Collections_Hashtable_TypeInfo);
+    System_Collections_Hashtable___ctor_39511352(v10, 0LL);
     v33 = v9;
     v12 = j_il2cpp_value_box_0(float_TypeInfo, &v33, v11);
     if ( !v10 )
-      sub_B7076C(v12, v13);
+      sub_B7769C(v12, v13);
     if ( afterPoint )
       v14 = afterPoint;
     else
@@ -91,58 +91,58 @@ void __fastcall CoinRoomGaugeEffectComponent__StartAnimation(
     v15 = (float)v14 / (float)v8;
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v10->klass->vtable._23_Add.method)(
       v10,
-      StringLiteral_19208/*"from"*/,
+      StringLiteral_19296/*"from"*/,
       v12,
       v10->klass->vtable._24_Clear.methodPtr);
     v32 = v15;
     v17 = j_il2cpp_value_box_0(float_TypeInfo, &v32, v16);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v10->klass->vtable._23_Add.method)(
       v10,
-      StringLiteral_23091/*"to"*/,
+      StringLiteral_23192/*"to"*/,
       v17,
       v10->klass->vtable._24_Clear.methodPtr);
     gaugeAnimationDelayTime = this->fields.gaugeAnimationDelayTime;
     v19 = j_il2cpp_value_box_0(float_TypeInfo, &gaugeAnimationDelayTime, v18);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v10->klass->vtable._23_Add.method)(
       v10,
-      StringLiteral_23053/*"time"*/,
+      StringLiteral_23154/*"time"*/,
       v19,
       v10->klass->vtable._24_Clear.methodPtr);
     v30 = *((_DWORD *)&this->fields.gaugeAnimationDelayTime + 1);
     v21 = j_il2cpp_value_box_0(float_TypeInfo, &v30, v20);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v10->klass->vtable._23_Add.method)(
       v10,
-      StringLiteral_18220/*"delay"*/,
+      StringLiteral_18308/*"delay"*/,
       v21,
       v10->klass->vtable._24_Clear.methodPtr);
     v29 = 1;
     v23 = j_il2cpp_value_box_0(iTween_EaseType_TypeInfo, &v29, v22);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v10->klass->vtable._23_Add.method)(
       v10,
-      StringLiteral_18387/*"easeType"*/,
+      StringLiteral_18475/*"easeType"*/,
       v23,
       v10->klass->vtable._24_Clear.methodPtr);
     v28 = 0;
     v25 = j_il2cpp_value_box_0(iTween_LoopType_TypeInfo, &v28, v24);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v10->klass->vtable._23_Add.method)(
       v10,
-      StringLiteral_20643/*"loopType"*/,
+      StringLiteral_20739/*"loopType"*/,
       v25,
       v10->klass->vtable._24_Clear.methodPtr);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v10->klass->vtable._23_Add.method)(
       v10,
-      StringLiteral_21614/*"onupdate"*/,
-      StringLiteral_15249/*"UpdateGauge"*/,
+      StringLiteral_21711/*"onupdate"*/,
+      StringLiteral_15319/*"UpdateGauge"*/,
       v10->klass->vtable._24_Clear.methodPtr);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v10->klass->vtable._23_Add.method)(
       v10,
-      StringLiteral_21605/*"oncomplete"*/,
-      StringLiteral_6770/*"FinishGauge"*/,
+      StringLiteral_21702/*"oncomplete"*/,
+      StringLiteral_6826/*"FinishGauge"*/,
       v10->klass->vtable._24_Clear.methodPtr);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, Il2CppMethodPointer))v10->klass->vtable._23_Add.method)(
       v10,
-      StringLiteral_21616/*"onupdatetarget"*/,
+      StringLiteral_21713/*"onupdatetarget"*/,
       gameObject,
       v10->klass->vtable._24_Clear.methodPtr);
     v27 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -165,7 +165,7 @@ void __fastcall CoinRoomGaugeEffectComponent__UpdateGauge(
   {
     gaugeBarSlider = (UIProgressBar_o *)this->fields.gaugeBarSlider;
     if ( !gaugeBarSlider )
-      sub_B7076C(0LL, method);
+      sub_B7769C(0LL, method);
     UIProgressBar__set_value(gaugeBarSlider, alpha, 0LL);
   }
 }

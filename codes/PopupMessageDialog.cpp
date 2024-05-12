@@ -1,9 +1,9 @@
 void __fastcall PopupMessageDialog___ctor(PopupMessageDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4351C02 & 1) == 0 )
+  if ( (byte_438B389 & 1) == 0 )
   {
-    sub_B70694(&BaseDialog_TypeInfo);
-    byte_4351C02 = 1;
+    sub_B775C4(&BaseDialog_TypeInfo);
+    byte_438B389 = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -15,14 +15,14 @@ void __fastcall PopupMessageDialog__EndClose(PopupMessageDialog_o *this, const M
 {
   UILabel_o *messageLabel; // x0
 
-  if ( (byte_4351C01 & 1) == 0 )
+  if ( (byte_438B388 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4351C01 = 1;
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438B388 = 1;
   }
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
@@ -37,12 +37,12 @@ void __fastcall PopupMessageDialog__OnClickClose(PopupMessageDialog_o *this, con
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_4351C00 & 1) == 0 )
+  if ( (byte_438B387 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_PopupMessageDialog_EndClose__);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4351C00 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_PopupMessageDialog_EndClose__);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438B387 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
@@ -53,7 +53,7 @@ void __fastcall PopupMessageDialog__OnClickClose(PopupMessageDialog_o *this, con
     }
     SoundManager__playSystemSe(1, 0LL);
     this->fields.isButtonEnable = 0;
-    v3 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v3 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     System_Action___ctor(v3, (Il2CppObject *)this, Method_PopupMessageDialog_EndClose__, 0LL);
     BaseDialog__Close((BaseDialog_o *)this, v3, 0LL);
   }
@@ -110,22 +110,22 @@ void __fastcall PopupMessageDialog__Open(
   UnityEngine_Vector3_o v46; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v47; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4351BFF & 1) == 0 )
+  if ( (byte_438B386 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_B70694(&ManagerConfig_TypeInfo);
-    sub_B70694(&Method_PopupMessageDialog_EndOpen__);
-    sub_B70694(&UICamera_TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4351BFF = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_B775C4(&ManagerConfig_TypeInfo);
+    sub_B775C4(&Method_PopupMessageDialog_EndOpen__);
+    sub_B775C4(&UICamera_TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438B386 = 1;
   }
   baseWindow = (char *)this->fields.baseWindow;
   if ( !baseWindow )
     goto LABEL_78;
   baseWindow = (char *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                          (UnityEngine_GameObject_o *)baseWindow,
-                         (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                         (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   v6 = baseWindow;
   if ( this->fields.isInit )
   {
@@ -188,7 +188,7 @@ void __fastcall PopupMessageDialog__Open(
   v43.fields.z = 0.0;
   v43.fields.x = *(float *)(v14 + 60);
   v43.fields.y = *(float *)(v14 + 64);
-  *(UnityEngine_Vector3_o *)&v15 = UnityEngine_Camera__ScreenToWorldPoint_41062500(this->fields.dialogCamera, v43, 0LL);
+  *(UnityEngine_Vector3_o *)&v15 = UnityEngine_Camera__ScreenToWorldPoint_41408388(this->fields.dialogCamera, v43, 0LL);
   baseWindow = (char *)this->fields.baseWindow;
   if ( !baseWindow )
     goto LABEL_78;
@@ -350,14 +350,14 @@ void __fastcall PopupMessageDialog__Open(
     || (baseWindow = (char *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)baseWindow, 0LL)) == 0LL )
   {
 LABEL_78:
-    sub_B7076C(baseWindow, message);
+    sub_B7769C(baseWindow, message);
   }
   v47.fields.x = printedSize.fields.x * -0.5;
   v47.fields.y = printedSize.fields.y * 0.5;
   v47.fields.z = v39;
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)baseWindow, v47, 0LL);
   this->fields.isButtonEnable = 0;
-  v41 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v41 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v41, (Il2CppObject *)this, Method_PopupMessageDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v41, 0, 0LL);
 }

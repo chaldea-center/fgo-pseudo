@@ -29,11 +29,11 @@ void __fastcall ScriptBranchListViewItemDraw__SetItem(
   const MethodInfo *v25; // x1
   int v26; // s0
 
-  if ( (byte_4356573 & 1) == 0 )
+  if ( (byte_438FB46 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4356573 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438FB46 = 1;
   }
   if ( item && mode )
   {
@@ -60,11 +60,11 @@ void __fastcall ScriptBranchListViewItemDraw__SetItem(
                                           0LL)) == 0LL )
     {
 LABEL_30:
-      sub_B7076C(titleTextLabel, title);
+      sub_B7769C(titleTextLabel, title);
     }
     Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                         (UnityEngine_GameObject_o *)titleTextLabel,
-                                                        (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                                                        (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
@@ -117,7 +117,7 @@ LABEL_30:
     p_drawItem = &this->fields.drawItem;
     v21 = 0LL;
   }
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)p_drawItem,
     v21,
     *(System_String_array ***)&mode,
@@ -144,7 +144,7 @@ void __fastcall ScriptBranchListViewItemDraw__Update(ScriptBranchListViewItemDra
         !this->fields.drawItem) )
   {
 LABEL_15:
-    sub_B7076C(drawItem, method);
+    sub_B7769C(drawItem, method);
   }
   v4 = (int)drawItem;
   drawItem = (ScriptBranchListViewItem_o *)ScriptBranchListViewItem__get_CommentText(this->fields.drawItem, method);

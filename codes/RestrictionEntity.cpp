@@ -1,13 +1,13 @@
 void __fastcall RestrictionEntity___ctor(RestrictionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4354322 & 1) == 0 )
+  if ( (byte_438DBE0 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_int___ctor__);
-    byte_4354322 = 1;
+    sub_B775C4(&Method_DataEntityBase_int___ctor__);
+    byte_438DBE0 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -65,30 +65,30 @@ System_String_o *__fastcall RestrictionEntity__GetClassIndividualityRestrictionM
   int32_t v44; // [xsp+Ch] [xbp-34h] BYREF
 
   v3 = this;
-  if ( (byte_4354321 & 1) == 0 )
+  if ( (byte_438DBDF & 1) == 0 )
   {
-    sub_B70694(&Method_System_Linq_Enumerable_OrderBy_int__int___);
-    sub_B70694(&Method_System_Linq_Enumerable_Select_int__string___);
-    sub_B70694(&Method_System_Func_int__int___ctor__);
-    sub_B70694(&Method_System_Func_int__string___ctor__);
-    sub_B70694(&System_Func_int__string__TypeInfo);
-    sub_B70694(&System_Func_int__int__TypeInfo);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&Restriction_RangeType_TypeInfo);
-    sub_B70694(&string_TypeInfo);
-    sub_B70694(&Method_RestrictionEntity___c__GetClassIndividualityRestrictionMessage_b__16_0__);
-    sub_B70694(&Method_RestrictionEntity___c__GetClassIndividualityRestrictionMessage_b__16_1__);
-    sub_B70694(&RestrictionEntity___c_TypeInfo);
-    sub_B70694(&StringLiteral_16127/*"_"*/);
-    sub_B70694(&StringLiteral_10507/*"PARTY_ORGANIZATION_RESTRICTION_HELP_MESSAGE_CLASS_INDIVIDUALITY_"*/);
-    sub_B70694(&StringLiteral_10508/*"PARTY_ORGANIZATION_RESTRICTION_HELP_MESSAGE_CLASS_INDIVIDUALITY_{0}"*/);
-    this = (RestrictionEntity_o *)sub_B70694(&StringLiteral_11834/*"SERVANT_CLASS_INDIVIDUALITY_{0}"*/);
-    byte_4354321 = 1;
+    sub_B775C4(&Method_System_Linq_Enumerable_OrderBy_int__int___);
+    sub_B775C4(&Method_System_Linq_Enumerable_Select_int__string___);
+    sub_B775C4(&Method_System_Func_int__int___ctor__);
+    sub_B775C4(&Method_System_Func_int__string___ctor__);
+    sub_B775C4(&System_Func_int__string__TypeInfo);
+    sub_B775C4(&System_Func_int__int__TypeInfo);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&Restriction_RangeType_TypeInfo);
+    sub_B775C4(&string_TypeInfo);
+    sub_B775C4(&Method_RestrictionEntity___c__GetClassIndividualityRestrictionMessage_b__16_0__);
+    sub_B775C4(&Method_RestrictionEntity___c__GetClassIndividualityRestrictionMessage_b__16_1__);
+    sub_B775C4(&RestrictionEntity___c_TypeInfo);
+    sub_B775C4(&StringLiteral_16197/*"_"*/);
+    sub_B775C4(&StringLiteral_10566/*"PARTY_ORGANIZATION_RESTRICTION_HELP_MESSAGE_CLASS_INDIVIDUALITY_"*/);
+    sub_B775C4(&StringLiteral_10567/*"PARTY_ORGANIZATION_RESTRICTION_HELP_MESSAGE_CLASS_INDIVIDUALITY_{0}"*/);
+    this = (RestrictionEntity_o *)sub_B775C4(&StringLiteral_11898/*"SERVANT_CLASS_INDIVIDUALITY_{0}"*/);
+    byte_438DBDF = 1;
   }
   targetVals = v3->fields.targetVals;
   if ( !targetVals )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   if ( targetVals->max_length != 1 )
     return string_TypeInfo->static_fields->Empty;
   targetVals2 = v3->fields.targetVals2;
@@ -96,7 +96,7 @@ System_String_o *__fastcall RestrictionEntity__GetClassIndividualityRestrictionM
     return string_TypeInfo->static_fields->Empty;
   v44 = targetVals->m_Items[1];
   v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v44, v2);
-  v7 = System_String__Format((System_String_o *)StringLiteral_11834/*"SERVANT_CLASS_INDIVIDUALITY_{0}"*/, v6, 0LL);
+  v7 = System_String__Format((System_String_o *)StringLiteral_11898/*"SERVANT_CLASS_INDIVIDUALITY_{0}"*/, v6, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
@@ -122,15 +122,15 @@ System_String_o *__fastcall RestrictionEntity__GetClassIndividualityRestrictionM
       static_fields = RestrictionEntity___c_TypeInfo->static_fields;
     }
     v12 = (Il2CppObject *)static_fields->__9;
-    _9__16_0 = (System_Func_int__int__o *)sub_B70764(System_Func_int__int__TypeInfo);
+    _9__16_0 = (System_Func_int__int__o *)sub_B77694(System_Func_int__int__TypeInfo);
     System_Func_int__int____ctor(
       _9__16_0,
       v12,
       Method_RestrictionEntity___c__GetClassIndividualityRestrictionMessage_b__16_0__,
-      (const MethodInfo_29A68EC *)Method_System_Func_int__int___ctor__);
+      (const MethodInfo_29E3638 *)Method_System_Func_int__int___ctor__);
     v13 = RestrictionEntity___c_TypeInfo->static_fields;
     v13->__9__16_0 = _9__16_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v13->__9__16_0,
       (System_Int32_array **)_9__16_0,
       v14,
@@ -143,7 +143,7 @@ System_String_o *__fastcall RestrictionEntity__GetClassIndividualityRestrictionM
   v20 = System_Linq_Enumerable__OrderBy_int__int_(
           v8,
           (System_Func_TSource__TKey__o *)_9__16_0,
-          (const MethodInfo_1CBF9F0 *)Method_System_Linq_Enumerable_OrderBy_int__int___);
+          (const MethodInfo_1D34840 *)Method_System_Linq_Enumerable_OrderBy_int__int___);
   v21 = RestrictionEntity___c_TypeInfo;
   v22 = (System_Collections_Generic_IEnumerable_TSource__o *)v20;
   if ( (BYTE3(RestrictionEntity___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -162,15 +162,15 @@ System_String_o *__fastcall RestrictionEntity__GetClassIndividualityRestrictionM
       v23 = RestrictionEntity___c_TypeInfo->static_fields;
     }
     v25 = (Il2CppObject *)v23->__9;
-    _9__16_1 = (System_Func_int__BattleActionData_SideEffectData__o *)sub_B70764(System_Func_int__string__TypeInfo);
+    _9__16_1 = (System_Func_int__BattleActionData_SideEffectData__o *)sub_B77694(System_Func_int__string__TypeInfo);
     System_Func_int__BattleActionData_SideEffectData____ctor(
       _9__16_1,
       v25,
       Method_RestrictionEntity___c__GetClassIndividualityRestrictionMessage_b__16_1__,
-      (const MethodInfo_29A71E0 *)Method_System_Func_int__string___ctor__);
+      (const MethodInfo_29E3F2C *)Method_System_Func_int__string___ctor__);
     v26 = RestrictionEntity___c_TypeInfo->static_fields;
     v26->__9__16_1 = (struct System_Func_int__string__o *)_9__16_1;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v26->__9__16_1,
       (System_Int32_array **)_9__16_1,
       v27,
@@ -183,9 +183,9 @@ System_String_o *__fastcall RestrictionEntity__GetClassIndividualityRestrictionM
   v33 = (System_Collections_Generic_IEnumerable_string__o *)System_Linq_Enumerable__Select_int__BattleActionData_SideEffectData_(
                                                               v22,
                                                               (System_Func_TSource__TResult__o *)_9__16_1,
-                                                              (const MethodInfo_1CC29A4 *)Method_System_Linq_Enumerable_Select_int__string___);
-  v34 = System_String__Join_44813612((System_String_o *)StringLiteral_16127/*"_"*/, v33, 0LL);
-  v35 = System_String__Concat_44758168((System_String_o *)StringLiteral_10507/*"PARTY_ORGANIZATION_RESTRICTION_HELP_MESSAGE_CLASS_INDIVIDUALITY_"*/, v34, 0LL);
+                                                              (const MethodInfo_1D377F4 *)Method_System_Linq_Enumerable_Select_int__string___);
+  v34 = System_String__Join_44957380((System_String_o *)StringLiteral_16197/*"_"*/, v33, 0LL);
+  v35 = System_String__Concat_44901936((System_String_o *)StringLiteral_10566/*"PARTY_ORGANIZATION_RESTRICTION_HELP_MESSAGE_CLASS_INDIVIDUALITY_"*/, v34, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
@@ -195,7 +195,7 @@ System_String_o *__fastcall RestrictionEntity__GetClassIndividualityRestrictionM
     return string_TypeInfo->static_fields->Empty;
   rangeType = v3->fields.rangeType;
   v37 = (Il2CppObject *)j_il2cpp_value_box_0(Restriction_RangeType_TypeInfo, &rangeType, v36);
-  v38 = System_String__Format((System_String_o *)StringLiteral_10508/*"PARTY_ORGANIZATION_RESTRICTION_HELP_MESSAGE_CLASS_INDIVIDUALITY_{0}"*/, v37, 0LL);
+  v38 = System_String__Format((System_String_o *)StringLiteral_10567/*"PARTY_ORGANIZATION_RESTRICTION_HELP_MESSAGE_CLASS_INDIVIDUALITY_{0}"*/, v37, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
@@ -211,7 +211,7 @@ System_String_o *__fastcall RestrictionEntity__GetClassIndividualityRestrictionM
   v39 = LocalizationManager__Get(v38, 0LL);
   v40 = (Il2CppObject *)LocalizationManager__Get(v7, 0LL);
   v41 = (Il2CppObject *)LocalizationManager__Get(v35, 0LL);
-  return System_String__Format_44753704(v39, v40, v41, 0LL);
+  return System_String__Format_44897472(v39, v40, v41, 0LL);
 }
 
 
@@ -233,8 +233,8 @@ int32_t __fastcall RestrictionEntity__GetSpecifiedPosition(RestrictionEntity_o *
     return 0;
   if ( !(_DWORD)v4 )
   {
-    v6 = sub_B70798(this);
-    sub_B70738(v6, 0LL);
+    v6 = sub_B776C8(this);
+    sub_B77668(v6, 0LL);
   }
   return targetVals2->m_Items[1];
 }
@@ -273,8 +273,8 @@ bool __fastcall RestrictionEntity__IsRestriction(RestrictionEntity_o *this, int3
         if ( !(_DWORD)v7 )
         {
 LABEL_15:
-          v9 = sub_B70798(this);
-          sub_B70738(v9, 0LL);
+          v9 = sub_B776C8(this);
+          sub_B77668(v9, 0LL);
         }
         v3 = v6->m_Items[1] < v;
       }
@@ -298,10 +298,10 @@ bool __fastcall RestrictionEntity__IsRestrictionTarget(
 {
   System_Collections_Generic_IEnumerable_TSource__o *targetVals2; // x0
 
-  if ( (byte_435431E & 1) == 0 )
+  if ( (byte_438DBDC & 1) == 0 )
   {
-    sub_B70694(&Method_System_Linq_Enumerable_Contains_int___);
-    byte_435431E = 1;
+    sub_B775C4(&Method_System_Linq_Enumerable_Contains_int___);
+    byte_438DBDC = 1;
   }
   targetVals2 = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.targetVals2;
   return !targetVals2
@@ -309,11 +309,11 @@ bool __fastcall RestrictionEntity__IsRestrictionTarget(
       || System_Linq_Enumerable__Contains_int_(
            targetVals2,
            targetType,
-           (const MethodInfo_1CB57D0 *)Method_System_Linq_Enumerable_Contains_int___);
+           (const MethodInfo_1D2A620 *)Method_System_Linq_Enumerable_Contains_int___);
 }
 
 
-bool __fastcall RestrictionEntity__IsRestriction_29661252(
+bool __fastcall RestrictionEntity__IsRestriction_30135848(
         RestrictionEntity_o *this,
         System_Int32_array *vList,
         const MethodInfo *method)
@@ -330,9 +330,9 @@ bool __fastcall RestrictionEntity__IsRestriction_29661252(
   switch ( this->fields.rangeType )
   {
     case 1:
-      return !RestrictionEntity__IsSearchVals_29660908(this, vList, method);
+      return !RestrictionEntity__IsSearchVals_30135504(this, vList, method);
     case 2:
-      return RestrictionEntity__IsSearchVals_29660908(this, vList, method);
+      return RestrictionEntity__IsSearchVals_30135504(this, vList, method);
     case 3:
       targetVals = this->fields.targetVals;
       if ( !targetVals )
@@ -366,8 +366,8 @@ bool __fastcall RestrictionEntity__IsRestriction_29661252(
         if ( !(_DWORD)v9 || !(_DWORD)v8 )
         {
 LABEL_21:
-          v11 = sub_B70798(this);
-          sub_B70738(v11, 0LL);
+          v11 = sub_B776C8(this);
+          sub_B77668(v11, 0LL);
         }
         v3 = vList->m_Items[1] > v7->m_Items[1];
       }
@@ -404,8 +404,8 @@ bool __fastcall RestrictionEntity__IsSearchVals(RestrictionEntity_o *this, int32
   {
     if ( (unsigned int)v5 >= max_length )
     {
-      v8 = sub_B70798(this);
-      sub_B70738(v8, 0LL);
+      v8 = sub_B776C8(this);
+      sub_B77668(v8, 0LL);
     }
     if ( v6[v5] == v )
       break;
@@ -416,7 +416,7 @@ bool __fastcall RestrictionEntity__IsSearchVals(RestrictionEntity_o *this, int32
 }
 
 
-bool __fastcall RestrictionEntity__IsSearchVals_29660908(
+bool __fastcall RestrictionEntity__IsSearchVals_30135504(
         RestrictionEntity_o *this,
         System_Int32_array *vList,
         const MethodInfo *method)
@@ -448,8 +448,8 @@ bool __fastcall RestrictionEntity__IsSearchVals_29660908(
           if ( v7 >= v6 )
           {
 LABEL_16:
-            v10 = sub_B70798(0LL);
-            sub_B70738(v10, 0LL);
+            v10 = sub_B776C8(0LL);
+            sub_B77668(v10, 0LL);
           }
           max_length = vList->max_length;
           if ( max_length >= 1 )
@@ -501,11 +501,11 @@ System_Boolean_array *__fastcall RestrictionEntity__getDeckPositionList(
   signed __int64 v20; // x20
   __int64 v22; // x0
 
-  if ( (byte_4354320 & 1) == 0 )
+  if ( (byte_438DBDE & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&bool___TypeInfo);
-    byte_4354320 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&bool___TypeInfo);
+    byte_438DBDE = 1;
   }
   v3 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -514,7 +514,7 @@ System_Boolean_array *__fastcall RestrictionEntity__getDeckPositionList(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v3 = BalanceConfig_TypeInfo;
   }
-  v4 = (BalanceConfig_c *)sub_B706AC(bool___TypeInfo, (unsigned int)v3->static_fields->DeckMemberMax);
+  v4 = (BalanceConfig_c *)sub_B775DC(bool___TypeInfo, (unsigned int)v3->static_fields->DeckMemberMax);
   targetVals = this->fields.targetVals;
   v7 = (System_Boolean_array *)v4;
   if ( targetVals )
@@ -579,11 +579,11 @@ System_Boolean_array *__fastcall RestrictionEntity__getDeckPositionList(
               continue;
             }
 LABEL_76:
-            v22 = sub_B70798(v4);
-            sub_B70738(v22, 0LL);
+            v22 = sub_B776C8(v4);
+            sub_B77668(v22, 0LL);
           }
 LABEL_75:
-          sub_B7076C(v4, v5);
+          sub_B7769C(v4, v5);
         }
         break;
       }
@@ -712,20 +712,20 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
   int v16; // [xsp+Ch] [xbp-14h] BYREF
 
   v2 = this;
-  if ( (byte_435431F & 1) == 0 )
+  if ( (byte_438DBDD & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_6478/*"FOLLOWER_SELECT_QUEST_RESTRICTION_MY_SERVANT_NUM_MAIN_TITLE"*/);
-    sub_B70694(&StringLiteral_6479/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SERVANT_NUM_MAIN_TITLE"*/);
-    sub_B70694(&StringLiteral_6480/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SUPPORT_ONLY_TITLE"*/);
-    sub_B70694(&StringLiteral_6482/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIEQU_SERVANT_TITLE"*/);
-    sub_B70694(&StringLiteral_6476/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_SINGLE_TITLE"*/);
-    sub_B70694(&StringLiteral_6475/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_POSITION_MAIN_TITLE"*/);
-    sub_B70694(&StringLiteral_6483/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIQUE_INDIVIDUALITY_TITLE"*/);
-    sub_B70694(&StringLiteral_6481/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/);
-    this = (RestrictionEntity_o *)sub_B70694(&StringLiteral_6477/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_SUPPORT_POSITION_TITLE"*/);
-    byte_435431F = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_6534/*"FOLLOWER_SELECT_QUEST_RESTRICTION_MY_SERVANT_NUM_MAIN_TITLE"*/);
+    sub_B775C4(&StringLiteral_6535/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SERVANT_NUM_MAIN_TITLE"*/);
+    sub_B775C4(&StringLiteral_6536/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SUPPORT_ONLY_TITLE"*/);
+    sub_B775C4(&StringLiteral_6538/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIEQU_SERVANT_TITLE"*/);
+    sub_B775C4(&StringLiteral_6532/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_SINGLE_TITLE"*/);
+    sub_B775C4(&StringLiteral_6531/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_POSITION_MAIN_TITLE"*/);
+    sub_B775C4(&StringLiteral_6539/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIQUE_INDIVIDUALITY_TITLE"*/);
+    sub_B775C4(&StringLiteral_6537/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/);
+    this = (RestrictionEntity_o *)sub_B775C4(&StringLiteral_6533/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_SUPPORT_POSITION_TITLE"*/);
+    byte_438DBDD = 1;
   }
   switch ( v2->fields.type )
   {
@@ -735,7 +735,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v3 = &StringLiteral_6480/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SUPPORT_ONLY_TITLE"*/;
+      v3 = &StringLiteral_6536/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SUPPORT_ONLY_TITLE"*/;
       goto LABEL_40;
     case 6:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -743,7 +743,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v3 = &StringLiteral_6482/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIEQU_SERVANT_TITLE"*/;
+      v3 = &StringLiteral_6538/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIEQU_SERVANT_TITLE"*/;
       goto LABEL_40;
     case 7:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -751,7 +751,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v3 = &StringLiteral_6477/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_SUPPORT_POSITION_TITLE"*/;
+      v3 = &StringLiteral_6533/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_SUPPORT_POSITION_TITLE"*/;
       goto LABEL_40;
     case 8:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -759,7 +759,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v3 = &StringLiteral_6475/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_POSITION_MAIN_TITLE"*/;
+      v3 = &StringLiteral_6531/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_POSITION_MAIN_TITLE"*/;
       goto LABEL_40;
     case 9:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -767,7 +767,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v3 = &StringLiteral_6476/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_SINGLE_TITLE"*/;
+      v3 = &StringLiteral_6532/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_SINGLE_TITLE"*/;
       goto LABEL_40;
     case 0xA:
       targetVals = v2->fields.targetVals;
@@ -775,8 +775,8 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         if ( !(_DWORD)v5 )
         {
-          v15 = sub_B70798(this);
-          sub_B70738(v15, 0LL);
+          v15 = sub_B776C8(this);
+          sub_B77668(v15, 0LL);
         }
         v6 = targetVals->m_Items[1];
       }
@@ -789,7 +789,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v9 = LocalizationManager__Get((System_String_o *)StringLiteral_6479/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SERVANT_NUM_MAIN_TITLE"*/, 0LL);
+      v9 = LocalizationManager__Get((System_String_o *)StringLiteral_6535/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SERVANT_NUM_MAIN_TITLE"*/, 0LL);
       name = v2->fields.name;
       v11 = v9;
       v16 = v6;
@@ -802,7 +802,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v3 = &StringLiteral_6478/*"FOLLOWER_SELECT_QUEST_RESTRICTION_MY_SERVANT_NUM_MAIN_TITLE"*/;
+      v3 = &StringLiteral_6534/*"FOLLOWER_SELECT_QUEST_RESTRICTION_MY_SERVANT_NUM_MAIN_TITLE"*/;
       goto LABEL_40;
     case 0xF:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -810,7 +810,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v3 = &StringLiteral_6483/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIQUE_INDIVIDUALITY_TITLE"*/;
+      v3 = &StringLiteral_6539/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIQUE_INDIVIDUALITY_TITLE"*/;
       goto LABEL_40;
     default:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -818,7 +818,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v3 = &StringLiteral_6481/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/;
+      v3 = &StringLiteral_6537/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/;
 LABEL_40:
       v7 = LocalizationManager__Get((System_String_o *)*v3, 0LL);
       return System_String__Format(v7, (Il2CppObject *)v2->fields.name, 0LL);
@@ -842,8 +842,8 @@ int32_t __fastcall RestrictionEntity__getTotalCost(RestrictionEntity_o *this, co
     return 0;
   if ( !(_DWORD)v3 )
   {
-    v5 = sub_B70798(this);
-    sub_B70738(v5, 0LL);
+    v5 = sub_B776C8(this);
+    sub_B77668(v5, 0LL);
   }
   return targetVals->m_Items[1];
 }
@@ -854,16 +854,16 @@ void __fastcall RestrictionEntity___c___cctor(const MethodInfo *method)
   Il2CppObject *v1; // x19
   struct RestrictionEntity___c_StaticFields *static_fields; // x0
 
-  if ( (byte_434F444 & 1) == 0 )
+  if ( (byte_4388A26 & 1) == 0 )
   {
-    sub_B70694(&RestrictionEntity___c_TypeInfo);
-    byte_434F444 = 1;
+    sub_B775C4(&RestrictionEntity___c_TypeInfo);
+    byte_4388A26 = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(RestrictionEntity___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(RestrictionEntity___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = RestrictionEntity___c_TypeInfo->static_fields;
   static_fields->__9 = (struct RestrictionEntity___c_o *)v1;
-  sub_B70630(static_fields);
+  sub_B77560(static_fields);
 }
 
 
@@ -893,15 +893,15 @@ System_String_o *__fastcall RestrictionEntity___c___GetClassIndividualityRestric
   System_String_o *v7; // x20
   int32_t v9; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_434F445 & 1) == 0 )
+  if ( (byte_4388A27 & 1) == 0 )
   {
-    sub_B70694(&Restriction_TargetType_TypeInfo);
-    byte_434F445 = 1;
+    sub_B775C4(&Restriction_TargetType_TypeInfo);
+    byte_4388A27 = 1;
   }
   v9 = t;
   v4 = j_il2cpp_value_box_0(Restriction_TargetType_TypeInfo, &v9, method);
   if ( !v4 )
-    sub_B7076C(0LL, v5);
+    sub_B7769C(0LL, v5);
   v6 = v4;
   v7 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v4 + 360LL))(
                             v4,

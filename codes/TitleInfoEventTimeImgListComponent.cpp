@@ -1,9 +1,9 @@
 void __fastcall TitleInfoEventTimeImgListComponent___cctor(const MethodInfo *method)
 {
-  if ( (byte_43502BB & 1) == 0 )
+  if ( (byte_438913F & 1) == 0 )
   {
-    sub_B70694(&TitleInfoEventTimeImgListComponent_TypeInfo);
-    byte_43502BB = 1;
+    sub_B775C4(&TitleInfoEventTimeImgListComponent_TypeInfo);
+    byte_438913F = 1;
   }
   TitleInfoEventTimeImgListComponent_TypeInfo->static_fields->TIME_STATUS_ICON_MOVE_TIME = 0.5;
   TitleInfoEventTimeImgListComponent_TypeInfo->static_fields->TIME_STATUS_STEP_MAX = 4;
@@ -54,24 +54,24 @@ void __fastcall TitleInfoEventTimeImgListComponent__AddTimeAnime(
   EventDelegate_Callback_o *v33; // x21
   UnityEngine_Vector3_o v34; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_43502B9 & 1) == 0 )
+  if ( (byte_438913D & 1) == 0 )
   {
-    sub_B70694(&EventDelegate_Callback_TypeInfo);
-    sub_B70694(&TitleInfoEventTimeImgListComponent_TypeInfo);
-    sub_B70694(&Method_TitleInfoEventTimeImgListComponent___c__DisplayClass19_0__AddTimeAnime_b__0__);
-    sub_B70694(&TitleInfoEventTimeImgListComponent___c__DisplayClass19_0_TypeInfo);
-    byte_43502B9 = 1;
+    sub_B775C4(&EventDelegate_Callback_TypeInfo);
+    sub_B775C4(&TitleInfoEventTimeImgListComponent_TypeInfo);
+    sub_B775C4(&Method_TitleInfoEventTimeImgListComponent___c__DisplayClass19_0__AddTimeAnime_b__0__);
+    sub_B775C4(&TitleInfoEventTimeImgListComponent___c__DisplayClass19_0_TypeInfo);
+    byte_438913D = 1;
   }
-  v5 = sub_B70764(TitleInfoEventTimeImgListComponent___c__DisplayClass19_0_TypeInfo);
+  v5 = sub_B77694(TitleInfoEventTimeImgListComponent___c__DisplayClass19_0_TypeInfo);
   TitleInfoEventTimeImgListComponent___c__DisplayClass19_0___ctor(
     (TitleInfoEventTimeImgListComponent___c__DisplayClass19_0_o *)v5,
     0LL);
   if ( !v5 )
     goto LABEL_15;
   *(_QWORD *)(v5 + 16) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v5 + 16), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
+  sub_B77560((BattleServantConfConponent_o *)(v5 + 16), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = changeDayCallback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)(v5 + 24),
     (System_Int32_array **)changeDayCallback,
     v14,
@@ -112,7 +112,7 @@ void __fastcall TitleInfoEventTimeImgListComponent__AddTimeAnime(
         if ( v26 )
         {
           v26->fields.animationCurve = (struct UnityEngine_AnimationCurve_o *)grid;
-          sub_B70630(
+          sub_B77560(
             (BattleServantConfConponent_o *)&v26->fields.animationCurve,
             (System_Int32_array **)grid,
             v27,
@@ -122,7 +122,7 @@ void __fastcall TitleInfoEventTimeImgListComponent__AddTimeAnime(
             v31,
             v32);
           v26->fields.ignoreTimeScale = 0;
-          v33 = (EventDelegate_Callback_o *)sub_B70764(EventDelegate_Callback_TypeInfo);
+          v33 = (EventDelegate_Callback_o *)sub_B77694(EventDelegate_Callback_TypeInfo);
           EventDelegate_Callback___ctor(
             v33,
             (Il2CppObject *)v5,
@@ -134,7 +134,7 @@ void __fastcall TitleInfoEventTimeImgListComponent__AddTimeAnime(
       }
     }
 LABEL_15:
-    sub_B7076C(grid, v7);
+    sub_B7769C(grid, v7);
   }
 }
 
@@ -153,12 +153,12 @@ void __fastcall TitleInfoEventTimeImgListComponent__CreateIcon(
   __int64 v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_43502B8 & 1) == 0 )
+  if ( (byte_438913C & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewObject___);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43502B8 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewObject___);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438913C = 1;
   }
   iconPrefab = this->fields.iconPrefab;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -168,7 +168,7 @@ void __fastcall TitleInfoEventTimeImgListComponent__CreateIcon(
   }
   v8 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                      (UnityEngine_UI_Dropdown_DropdownItem_o *)iconPrefab,
-                                     (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                     (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   grid = (UnityEngine_Component_o *)this->fields.grid;
   v10 = v8;
   GameObjectExtensions__SafeSetParent(v8, grid, 0LL);
@@ -176,9 +176,9 @@ void __fastcall TitleInfoEventTimeImgListComponent__CreateIcon(
   if ( !v10
     || (Component_srcLineSprite = (TitleInfoEventTimeImgListViewObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                              v10,
-                                                                             (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewObject___)) == 0LL )
+                                                                             (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewObject___)) == 0LL )
   {
-    sub_B7076C(Component_srcLineSprite, v12);
+    sub_B7769C(Component_srcLineSprite, v12);
   }
   TitleInfoEventTimeImgListViewObject__Init(Component_srcLineSprite, state, v13);
 }
@@ -198,7 +198,7 @@ void __fastcall TitleInfoEventTimeImgListComponent__CreateIconList(
   stateList = this->fields.stateList;
   if ( !stateList )
 LABEL_7:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   v5 = 0LL;
   while ( 1 )
   {
@@ -207,8 +207,8 @@ LABEL_7:
       break;
     if ( v5 >= max_length )
     {
-      v8 = sub_B70798(this);
-      sub_B70738(v8, 0LL);
+      v8 = sub_B776C8(this);
+      sub_B77668(v8, 0LL);
     }
     grid = this->fields.grid;
     if ( grid )
@@ -250,8 +250,8 @@ int32_t __fastcall TitleInfoEventTimeImgListComponent__GetChangeDayStep(
     {
       if ( v4 >= v3 )
       {
-        v9 = sub_B70798(v4);
-        sub_B70738(v9, 0LL);
+        v9 = sub_B776C8(v4);
+        sub_B77668(v9, 0LL);
       }
       v6 = list->m_Items[v4 + 1];
       if ( v6 == 2 )
@@ -286,36 +286,36 @@ TitleInfoEventTimeImgListComponent_TimeState_array *__fastcall TitleInfoEventTim
   TitleInfoEventTimeImgListComponent_TimeState_array *v6; // x19
   __int64 v7; // x1
 
-  if ( (byte_43502BA & 1) == 0 )
+  if ( (byte_438913E & 1) == 0 )
   {
-    sub_B70694(&TitleInfoEventTimeImgListComponent_TimeState___TypeInfo);
-    sub_B70694(&Field__PrivateImplementationDetails__05DC715F8E536C7C410383B0D77EB649831DF1DFAD839486E54FFC948EA3E3B2);
-    sub_B70694(&Field__PrivateImplementationDetails__08B06BA91C8EC8563FBA7CD4038FA9699D8AD7B3FD34E52E42FDBCBBDA783FFD);
-    sub_B70694(&Field__PrivateImplementationDetails__7AA877887B42A89E842F39316984E430348FB949C60728DA491E02F952A0143D);
-    sub_B70694(&Field__PrivateImplementationDetails__F68E148E70B6BFBDF5687AC243823CCFE66F0BA41CEBDBD9DC74421EEEF39CEE);
-    byte_43502BA = 1;
+    sub_B775C4(&TitleInfoEventTimeImgListComponent_TimeState___TypeInfo);
+    sub_B775C4(&Field__PrivateImplementationDetails__05DC715F8E536C7C410383B0D77EB649831DF1DFAD839486E54FFC948EA3E3B2);
+    sub_B775C4(&Field__PrivateImplementationDetails__08B06BA91C8EC8563FBA7CD4038FA9699D8AD7B3FD34E52E42FDBCBBDA783FFD);
+    sub_B775C4(&Field__PrivateImplementationDetails__7AA877887B42A89E842F39316984E430348FB949C60728DA491E02F952A0143D);
+    sub_B775C4(&Field__PrivateImplementationDetails__F68E148E70B6BFBDF5687AC243823CCFE66F0BA41CEBDBD9DC74421EEEF39CEE);
+    byte_438913E = 1;
   }
   switch ( start )
   {
     case 0:
-      v4 = (System_Array_o *)sub_B706AC(TitleInfoEventTimeImgListComponent_TimeState___TypeInfo, 4LL);
+      v4 = (System_Array_o *)sub_B775DC(TitleInfoEventTimeImgListComponent_TimeState___TypeInfo, 4LL);
       v5 = &Field__PrivateImplementationDetails__7AA877887B42A89E842F39316984E430348FB949C60728DA491E02F952A0143D;
       goto LABEL_9;
     case 1:
-      v4 = (System_Array_o *)sub_B706AC(TitleInfoEventTimeImgListComponent_TimeState___TypeInfo, 4LL);
+      v4 = (System_Array_o *)sub_B775DC(TitleInfoEventTimeImgListComponent_TimeState___TypeInfo, 4LL);
       v5 = &Field__PrivateImplementationDetails__F68E148E70B6BFBDF5687AC243823CCFE66F0BA41CEBDBD9DC74421EEEF39CEE;
       goto LABEL_9;
     case 2:
-      v4 = (System_Array_o *)sub_B706AC(TitleInfoEventTimeImgListComponent_TimeState___TypeInfo, 4LL);
+      v4 = (System_Array_o *)sub_B775DC(TitleInfoEventTimeImgListComponent_TimeState___TypeInfo, 4LL);
       v5 = &Field__PrivateImplementationDetails__05DC715F8E536C7C410383B0D77EB649831DF1DFAD839486E54FFC948EA3E3B2;
       goto LABEL_9;
     case 3:
-      v4 = (System_Array_o *)sub_B706AC(TitleInfoEventTimeImgListComponent_TimeState___TypeInfo, 4LL);
+      v4 = (System_Array_o *)sub_B775DC(TitleInfoEventTimeImgListComponent_TimeState___TypeInfo, 4LL);
       v5 = &Field__PrivateImplementationDetails__08B06BA91C8EC8563FBA7CD4038FA9699D8AD7B3FD34E52E42FDBCBBDA783FFD;
 LABEL_9:
       v7 = *v5;
       v6 = (TitleInfoEventTimeImgListComponent_TimeState_array *)v4;
-      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v4, (System_RuntimeFieldHandle_o)v7, 0LL);
+      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v4, (System_RuntimeFieldHandle_o)v7, 0LL);
       break;
     default:
       v6 = 0LL;
@@ -336,7 +336,7 @@ int32_t __fastcall TitleInfoEventTimeImgListComponent__GetStepCount(
   __int64 v6; // x0
 
   if ( !list )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   max_length = list->max_length;
   if ( max_length < 1 )
   {
@@ -349,8 +349,8 @@ int32_t __fastcall TitleInfoEventTimeImgListComponent__GetStepCount(
     {
       if ( (unsigned int)v5 >= max_length )
       {
-        v6 = sub_B70798(v5);
-        sub_B70738(v6, 0LL);
+        v6 = sub_B776C8(v5);
+        sub_B77668(v6, 0LL);
       }
       if ( list->m_Items[(int)v5 + 1] == end )
         break;
@@ -382,7 +382,7 @@ void __fastcall TitleInfoEventTimeImgListComponent__Init(
   this->fields.endState = end;
   StateList = TitleInfoEventTimeImgListComponent__GetStateList(this, start, *(const MethodInfo **)&end);
   this->fields.stateList = StateList;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.stateList,
     (System_Int32_array **)StateList,
     v6,
@@ -450,6 +450,6 @@ void __fastcall TitleInfoEventTimeImgListComponent___c__DisplayClass19_0___AddTi
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   TitleInfoEventTimeImgListComponent__AddTimeAnime(_4__this, this->fields.changeDayCallback, 0LL);
 }

@@ -34,7 +34,7 @@ void __fastcall WarBoardMovePerformance___ctor(
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, 0LL);
   v16->fields.target = target;
   v16 = (WarBoardMovePerformance_o *)((char *)v16 + 56);
-  sub_B70630((BattleServantConfConponent_o *)v16, (System_Int32_array **)target, v17, v18, v19, v20, v21, v22);
+  sub_B77560((BattleServantConfConponent_o *)v16, (System_Int32_array **)target, v17, v18, v19, v20, v21, v22);
   v24.fields.x = x - v15;
   v24.fields.y = y - v14;
   v24.fields.z = z - v13;
@@ -66,17 +66,17 @@ System_Collections_IEnumerator_o *__fastcall WarBoardMovePerformance__Execute(
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_435171D & 1) == 0 )
+  if ( (byte_438AEA2 & 1) == 0 )
   {
-    sub_B70694(&WarBoardMovePerformance__Execute_d__7_TypeInfo);
-    byte_435171D = 1;
+    sub_B775C4(&WarBoardMovePerformance__Execute_d__7_TypeInfo);
+    byte_438AEA2 = 1;
   }
-  v3 = sub_B70764(WarBoardMovePerformance__Execute_d__7_TypeInfo);
+  v3 = sub_B77694(WarBoardMovePerformance__Execute_d__7_TypeInfo);
   WarBoardMovePerformance__Execute_d__7___ctor((WarBoardMovePerformance__Execute_d__7_o *)v3, 0, 0LL);
   if ( !v3 )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  sub_B77560((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -87,7 +87,7 @@ void __fastcall WarBoardMovePerformance__OnEnd(WarBoardMovePerformance_o *this, 
 
   target = this->fields.target;
   if ( !target || (target = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(target, 0LL)) == 0LL )
-    sub_B7076C(target, method);
+    sub_B7769C(target, method);
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)target, this->fields.to, 0LL);
   WarBoardTaskBase__OnEnd((WarBoardTaskBase_o *)this, 0LL);
 }
@@ -101,7 +101,7 @@ void __fastcall WarBoardMovePerformance__OnStart(WarBoardMovePerformance_o *this
   WarBoardTaskBase__OnStart((WarBoardTaskBase_o *)this, 0LL);
   target = this->fields.target;
   if ( !target || (target = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(target, 0LL)) == 0LL )
-    sub_B7076C(target, v3);
+    sub_B7769C(target, v3);
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)target, this->fields.from, 0LL);
 }
 
@@ -161,7 +161,7 @@ bool __fastcall WarBoardMovePerformance__Execute_d__7__MoveNext(
       goto LABEL_9;
     }
 LABEL_12:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   now_5__2 = this->fields._now_5__2;
   this->fields.__1__state = -1;
@@ -190,7 +190,7 @@ LABEL_9:
     return 0;
   v10->fields.__2__current = 0LL;
   p__2__current = (BattleServantConfConponent_o *)&v10->fields.__2__current;
-  sub_B70630(p__2__current, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B77560(p__2__current, 0LL, v2, v3, v4, v5, v6, v7);
   result = 1;
   *(_DWORD *)&p__2__current[-1].fields.isOpenAfter = 1;
   return result;
@@ -213,11 +213,11 @@ void __fastcall __noreturn WarBoardMovePerformance__Execute_d__7__System_Collect
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B70698(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B70764(v2);
+  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B70698(&Method_WarBoardMovePerformance__Execute_d__7_System_Collections_IEnumerator_Reset__);
-  sub_B70738(v3, v4);
+  v4 = sub_B775C8(&Method_WarBoardMovePerformance__Execute_d__7_System_Collections_IEnumerator_Reset__);
+  sub_B77668(v3, v4);
 }
 
 

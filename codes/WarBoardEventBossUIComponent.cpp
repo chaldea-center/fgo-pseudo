@@ -3,19 +3,19 @@ void __fastcall WarBoardEventBossUIComponent___cctor(const MethodInfo *method)
   struct WarBoardEventBossUIComponent_StaticFields *static_fields; // x0
   struct WarBoardEventBossUIComponent_StaticFields *v2; // x0
 
-  if ( (byte_434E5B3 & 1) == 0 )
+  if ( (byte_4387B84 & 1) == 0 )
   {
-    sub_B70694(&WarBoardEventBossUIComponent_TypeInfo);
-    sub_B70694(&StringLiteral_15634/*"WarBoardEventBossEffect_Break{0}"*/);
-    sub_B70694(&StringLiteral_15635/*"WarBoardEventBossEffect_Dead{0}"*/);
-    byte_434E5B3 = 1;
+    sub_B775C4(&WarBoardEventBossUIComponent_TypeInfo);
+    sub_B775C4(&StringLiteral_15704/*"WarBoardEventBossEffect_Break{0}"*/);
+    sub_B775C4(&StringLiteral_15705/*"WarBoardEventBossEffect_Dead{0}"*/);
+    byte_4387B84 = 1;
   }
   static_fields = WarBoardEventBossUIComponent_TypeInfo->static_fields;
-  static_fields->BOSS_CLEAR_EFFECT_PREFAB = (struct System_String_o *)StringLiteral_15635/*"WarBoardEventBossEffect_Dead{0}"*/;
-  sub_B70630(static_fields);
+  static_fields->BOSS_CLEAR_EFFECT_PREFAB = (struct System_String_o *)StringLiteral_15705/*"WarBoardEventBossEffect_Dead{0}"*/;
+  sub_B77560(static_fields);
   v2 = WarBoardEventBossUIComponent_TypeInfo->static_fields;
-  v2->BOSS_POINT_BREAK_EFFECT_PREFAB = (struct System_String_o *)StringLiteral_15634/*"WarBoardEventBossEffect_Break{0}"*/;
-  sub_B70630(&v2->BOSS_POINT_BREAK_EFFECT_PREFAB);
+  v2->BOSS_POINT_BREAK_EFFECT_PREFAB = (struct System_String_o *)StringLiteral_15704/*"WarBoardEventBossEffect_Break{0}"*/;
+  sub_B77560(&v2->BOSS_POINT_BREAK_EFFECT_PREFAB);
 }
 
 
@@ -23,19 +23,19 @@ void __fastcall WarBoardEventBossUIComponent___ctor(WarBoardEventBossUIComponent
 {
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x20
 
-  if ( (byte_434E5B2 & 1) == 0 )
+  if ( (byte_4387B83 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_UIAtlas___ctor__);
-    sub_B70694(&System_Collections_Generic_List_UIAtlas__TypeInfo);
-    byte_434E5B2 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_UIAtlas___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_UIAtlas__TypeInfo);
+    byte_4387B83 = 1;
   }
   *(_QWORD *)&this->fields.breakEffectStartWaitTime = 0x3E99999A3F800000LL;
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_UIAtlas__TypeInfo);
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_UIAtlas__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v3,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_UIAtlas___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_UIAtlas___ctor__);
   this->fields.atlasList = (struct System_Collections_Generic_List_UIAtlas__o *)v3;
-  sub_B70630(&this->fields.atlasList);
+  sub_B77560(&this->fields.atlasList);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -64,24 +64,24 @@ UnityEngine_Color_o __fastcall WarBoardEventBossUIComponent__ConvertHexToColor(
   UnityEngine_Color_o v14; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_434E5B1 & 1) == 0 )
+  if ( (byte_4387B82 & 1) == 0 )
   {
-    sub_B70694(&System_Convert_TypeInfo);
-    byte_434E5B1 = 1;
+    sub_B775C4(&System_Convert_TypeInfo);
+    byte_4387B82 = 1;
   }
   if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !System_Convert_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
-  v4 = System_Convert__ToInt32_42445500(hexStrColor, 16, 0LL);
+  v4 = System_Convert__ToInt32_42791388(hexStrColor, 16, 0LL);
   v14.fields.a = (float)(unsigned __int8)v4;
   v14.fields.r = (float)BYTE2(v4) / 255.0;
   v14.fields.g = (float)BYTE1(v4) / 255.0;
   v14.fields.b = v14.fields.a / 255.0;
   v12 = 0LL;
   v13 = 0LL;
-  UnityEngine_Color___ctor_41064944(v14, v5, v6, v7, (const MethodInfo *)&v12);
+  UnityEngine_Color___ctor_41410832(v14, v5, v6, v7, (const MethodInfo *)&v12);
   v9 = *((float *)&v12 + 1);
   v8 = *(float *)&v12;
   v11 = *((float *)&v13 + 1);
@@ -118,30 +118,30 @@ System_String_o *__fastcall WarBoardEventBossUIComponent__CreateSaveDta(
   struct WarBoardUserServantData_o *v7; // x8
   struct WarBoardUserServantData_o *v8; // x8
 
-  if ( (byte_434E5B0 & 1) == 0 )
+  if ( (byte_4387B81 & 1) == 0 )
   {
-    sub_B70694(&System_Text_StringBuilder_TypeInfo);
-    sub_B70694(&StringLiteral_1250/*":"*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_434E5B0 = 1;
+    sub_B775C4(&System_Text_StringBuilder_TypeInfo);
+    sub_B775C4(&StringLiteral_1252/*":"*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_4387B81 = 1;
   }
   if ( !this->fields.oldBossInfo )
     return (System_String_o *)StringLiteral_1/*""*/;
-  v3 = (System_Text_StringBuilder_o *)sub_B70764(System_Text_StringBuilder_TypeInfo);
+  v3 = (System_Text_StringBuilder_o *)sub_B77694(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v3, 0LL);
   oldBossInfo = this->fields.oldBossInfo;
   if ( !oldBossInfo
     || !v3
-    || (System_Text_StringBuilder__Append_42605320(v3, oldBossInfo->fields.stageBossIdx, 0LL),
-        appended = System_Text_StringBuilder__Append_42601980(v3, (System_String_o *)StringLiteral_1250/*":"*/, 0LL),
+    || (System_Text_StringBuilder__Append_42955304(v3, oldBossInfo->fields.stageBossIdx, 0LL),
+        appended = System_Text_StringBuilder__Append_42951964(v3, (System_String_o *)StringLiteral_1252/*":"*/, 0LL),
         (v7 = this->fields.oldBossInfo) == 0LL)
-    || (System_Text_StringBuilder__Append_42605320(v3, v7->fields.currentHp, 0LL),
-        appended = System_Text_StringBuilder__Append_42601980(v3, (System_String_o *)StringLiteral_1250/*":"*/, 0LL),
+    || (System_Text_StringBuilder__Append_42955304(v3, v7->fields.currentHp, 0LL),
+        appended = System_Text_StringBuilder__Append_42951964(v3, (System_String_o *)StringLiteral_1252/*":"*/, 0LL),
         (v8 = this->fields.oldBossInfo) == 0LL) )
   {
-    sub_B7076C(appended, v5);
+    sub_B7769C(appended, v5);
   }
-  System_Text_StringBuilder__Append_42605320(v3, v8->fields.defeatPoint, 0LL);
+  System_Text_StringBuilder__Append_42955304(v3, v8->fields.defeatPoint, 0LL);
   return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v3->klass->vtable._3_ToString.method)(
                               v3,
                               v3->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
@@ -155,17 +155,17 @@ UnityEngine_GameObject_o *__fastcall WarBoardEventBossUIComponent__GetGameObject
 {
   UnityEngine_GameObject_o *result; // x0
 
-  if ( (byte_434E5A8 & 1) == 0 )
+  if ( (byte_4387B79 & 1) == 0 )
   {
-    sub_B70694(&Method_AssetData_GetObject_GameObject____69232720);
-    byte_434E5A8 = 1;
+    sub_B775C4(&Method_AssetData_GetObject_GameObject____69465408);
+    byte_4387B79 = 1;
   }
   result = (UnityEngine_GameObject_o *)this->fields.assetData;
   if ( result )
     return (UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                          (AssetData_o *)result,
                                          name,
-                                         (const MethodInfo_1BD6720 *)Method_AssetData_GetObject_GameObject____69232720);
+                                         (const MethodInfo_1C5FDDC *)Method_AssetData_GetObject_GameObject____69465408);
   return result;
 }
 
@@ -177,10 +177,10 @@ int64_t __fastcall WarBoardEventBossUIComponent__GetMaxHpByBreakPoint(
 {
   struct WarBoardUserServantData_o *currentBossInfo; // x8
 
-  if ( (byte_434E5A7 & 1) == 0 )
+  if ( (byte_4387B78 & 1) == 0 )
   {
-    sub_B70694(&Method_BasicHelper_IndexValue_int____69237232);
-    byte_434E5A7 = 1;
+    sub_B775C4(&Method_BasicHelper_IndexValue_int____69469920);
+    byte_4387B78 = 1;
   }
   currentBossInfo = this->fields.currentBossInfo;
   if ( currentBossInfo )
@@ -188,7 +188,7 @@ int64_t __fastcall WarBoardEventBossUIComponent__GetMaxHpByBreakPoint(
              currentBossInfo->fields.breakHp,
              restBreakPoint,
              currentBossInfo->fields.hp,
-             (const MethodInfo_1BDECF8 *)Method_BasicHelper_IndexValue_int____69237232);
+             (const MethodInfo_1C683B4 *)Method_BasicHelper_IndexValue_int____69469920);
   else
     return 0LL;
 }
@@ -222,39 +222,39 @@ System_String_o *__fastcall WarBoardEventBossUIComponent__GetStageBossName(
   WellFired_USFGOActorBattleActionEventConditional_OverwriteParamCondition_o *USFGOActorBattleActionEventConditional_OverwriteParamCondition; // x0
   BattleServantData_o *klass; // x0
 
-  if ( (byte_434E5A5 & 1) == 0 )
+  if ( (byte_4387B76 & 1) == 0 )
   {
-    sub_B70694(&Method_BasicHelper_Find_WarBoardPieceData___);
-    sub_B70694(&Method_System_Func_WarBoardPieceData__bool___ctor__);
-    sub_B70694(&System_Func_WarBoardPieceData__bool__TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_B70694(&string_TypeInfo);
-    sub_B70694(&Method_WarBoardEventBossUIComponent___c__DisplayClass37_0__GetStageBossName_b__0__);
-    sub_B70694(&WarBoardEventBossUIComponent___c__DisplayClass37_0_TypeInfo);
-    byte_434E5A5 = 1;
+    sub_B775C4(&Method_BasicHelper_Find_WarBoardPieceData___);
+    sub_B775C4(&Method_System_Func_WarBoardPieceData__bool___ctor__);
+    sub_B775C4(&System_Func_WarBoardPieceData__bool__TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_B775C4(&string_TypeInfo);
+    sub_B775C4(&Method_WarBoardEventBossUIComponent___c__DisplayClass37_0__GetStageBossName_b__0__);
+    sub_B775C4(&WarBoardEventBossUIComponent___c__DisplayClass37_0_TypeInfo);
+    byte_4387B76 = 1;
   }
-  v4 = (WarBoardEventBossUIComponent___c__DisplayClass37_0_o *)sub_B70764(WarBoardEventBossUIComponent___c__DisplayClass37_0_TypeInfo);
+  v4 = (WarBoardEventBossUIComponent___c__DisplayClass37_0_o *)sub_B77694(WarBoardEventBossUIComponent___c__DisplayClass37_0_TypeInfo);
   WarBoardEventBossUIComponent___c__DisplayClass37_0___ctor(v4, 0LL);
   if ( !v4
     || (v4->fields.stageBossIndex = stageBossIndex,
-        (Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0LL)
+        (Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0LL)
     || (v7 = *(_QWORD *)&Instance[4].fields.m_CachedPtr) == 0 )
   {
-    sub_B7076C(Instance, v6);
+    sub_B7769C(Instance, v6);
   }
   v8 = *(_QWORD *)(v7 + 48);
   if ( v8
     && *(_QWORD *)(v8 + 24)
-    && (v9 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_WarBoardPieceData__bool__TypeInfo),
+    && (v9 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B77694(System_Func_WarBoardPieceData__bool__TypeInfo),
         System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
           v9,
           (Il2CppObject *)v4,
           Method_WarBoardEventBossUIComponent___c__DisplayClass37_0__GetStageBossName_b__0__,
-          (const MethodInfo_29AC578 *)Method_System_Func_WarBoardPieceData__bool___ctor__),
+          (const MethodInfo_29E92C4 *)Method_System_Func_WarBoardPieceData__bool___ctor__),
         (USFGOActorBattleActionEventConditional_OverwriteParamCondition = BasicHelper__Find_USFGOActorBattleActionEventConditional_OverwriteParamCondition_(
                                                                             (WellFired_USFGOActorBattleActionEventConditional_OverwriteParamCondition_array *)v8,
                                                                             (System_Func_T__bool__o *)v9,
-                                                                            (const MethodInfo_1BDCFCC *)Method_BasicHelper_Find_WarBoardPieceData___)) != 0LL)
+                                                                            (const MethodInfo_1C66688 *)Method_BasicHelper_Find_WarBoardPieceData___)) != 0LL)
     && (klass = (BattleServantData_o *)USFGOActorBattleActionEventConditional_OverwriteParamCondition[4].klass) != 0LL )
   {
     return BattleServantData__getServantShortName(klass, 0LL);
@@ -284,12 +284,12 @@ UnityEngine_Color_o __fastcall WarBoardEventBossUIComponent__GetTextEffectColor(
   float v14; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_434E5A6 & 1) == 0 )
+  if ( (byte_4387B77 & 1) == 0 )
   {
-    sub_B70694(&Method_BasicHelper_IndexValue_string___);
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_1028/*"0x000000"*/);
-    byte_434E5A6 = 1;
+    sub_B775C4(&Method_BasicHelper_IndexValue_string___);
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_1030/*"0x000000"*/);
+    byte_4387B77 = 1;
   }
   warBoardStageBossEnt = this->fields.warBoardStageBossEnt;
   v6 = restBreakPoint - 1;
@@ -300,14 +300,14 @@ UnityEngine_Color_o __fastcall WarBoardEventBossUIComponent__GetTextEffectColor(
   }
   else
   {
-    bossColor = (WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_o *)StringLiteral_1028/*"0x000000"*/;
-    TextEffectColors = (System_String_array *)sub_B706AC(string___TypeInfo, 0LL);
+    bossColor = (WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_o *)StringLiteral_1030/*"0x000000"*/;
+    TextEffectColors = (System_String_array *)sub_B775DC(string___TypeInfo, 0LL);
   }
   v9 = (WarBoardEventBossUIComponent_o *)BasicHelper__IndexValue_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_(
                                            (WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_array *)TextEffectColors,
                                            v6,
                                            bossColor,
-                                           (const MethodInfo_1BDEDE8 *)Method_BasicHelper_IndexValue_string___);
+                                           (const MethodInfo_1C684A4 *)Method_BasicHelper_IndexValue_string___);
   *(UnityEngine_Color_o *)&v11 = WarBoardEventBossUIComponent__ConvertHexToColor(v9, (System_String_o *)v9, v10);
   result.fields.a = v14;
   result.fields.b = v13;
@@ -336,11 +336,11 @@ void __fastcall WarBoardEventBossUIComponent__LoadAnimPrefab(
   int32_t v16; // [xsp+8h] [xbp-28h] BYREF
   int32_t defeatEffectId; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_434E5A9 & 1) == 0 )
+  if ( (byte_4387B7A & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&WarBoardEventBossUIComponent_TypeInfo);
-    byte_434E5A9 = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&WarBoardEventBossUIComponent_TypeInfo);
+    byte_4387B7A = 1;
   }
   if ( ent )
   {
@@ -356,14 +356,14 @@ void __fastcall WarBoardEventBossUIComponent__LoadAnimPrefab(
     v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &defeatEffectId, method);
     v8 = System_String__Format(BOSS_CLEAR_EFFECT_PREFAB, v7, 0LL);
     this->fields.deadAnimPrefab = WarBoardEventBossUIComponent__GetGameObjectFromEventUIAssetData(this, v8, v9);
-    sub_B70630(&this->fields.deadAnimPrefab);
+    sub_B77560(&this->fields.deadAnimPrefab);
     v10 = ent->fields.defeatEffectId;
     BOSS_POINT_BREAK_EFFECT_PREFAB = WarBoardEventBossUIComponent_TypeInfo->static_fields->BOSS_POINT_BREAK_EFFECT_PREFAB;
     v16 = v10;
     v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16, v12);
     v14 = System_String__Format(BOSS_POINT_BREAK_EFFECT_PREFAB, v13, 0LL);
     this->fields.pointBreakAnimPrefab = WarBoardEventBossUIComponent__GetGameObjectFromEventUIAssetData(this, v14, v15);
-    sub_B70630(&this->fields.pointBreakAnimPrefab);
+    sub_B77560(&this->fields.pointBreakAnimPrefab);
   }
 }
 
@@ -388,34 +388,34 @@ void __fastcall WarBoardEventBossUIComponent__LoadLocalAtlas(
   int32_t v16; // [xsp+8h] [xbp-58h] BYREF
   int v17; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_434E5AA & 1) == 0 )
+  if ( (byte_4387B7B & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_UIAtlas__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_UIAtlas__Clear__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_23884/*"{0:D2}"*/);
-    sub_B70694(&StringLiteral_5467/*"DownloadEventUIAtlas{0}{1}"*/);
-    byte_434E5AA = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_UIAtlas__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_UIAtlas__Clear__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_23987/*"{0:D2}"*/);
+    sub_B775C4(&StringLiteral_5520/*"DownloadEventUIAtlas{0}{1}"*/);
+    byte_4387B7B = 1;
   }
   if ( this->fields.assetData )
   {
     atlasList = this->fields.atlasList;
     if ( !atlasList )
 LABEL_18:
-      sub_B7076C(atlasList, *(_QWORD *)&eventId);
+      sub_B7769C(atlasList, *(_QWORD *)&eventId);
     System_Collections_Generic_List_XWeaponTrail_Element___Clear(
       (System_Collections_Generic_List_XWeaponTrail_Element__o *)atlasList,
-      (const MethodInfo_3025A90 *)Method_System_Collections_Generic_List_UIAtlas__Clear__);
+      (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_UIAtlas__Clear__);
     for ( i = 1; ; ++i )
     {
       v17 = i;
       v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17, v6);
-      v10 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_23884/*"{0:D2}"*/, v9, 0LL);
+      v10 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_23987/*"{0:D2}"*/, v9, 0LL);
       v16 = eventId;
       v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16, v11);
-      v13 = System_String__Format_44753704((System_String_o *)StringLiteral_5467/*"DownloadEventUIAtlas{0}{1}"*/, v12, v10, 0LL);
+      v13 = System_String__Format_44897472((System_String_o *)StringLiteral_5520/*"DownloadEventUIAtlas{0}{1}"*/, v12, v10, 0LL);
       GameObjectFromEventUIAssetData = (UnityEngine_Object_o *)WarBoardEventBossUIComponent__GetGameObjectFromEventUIAssetData(
                                                                  this,
                                                                  v13,
@@ -435,7 +435,7 @@ LABEL_18:
         goto LABEL_18;
       Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                           (UnityEngine_GameObject_o *)GameObjectFromEventUIAssetData,
-                                                          (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                                                          (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
@@ -449,7 +449,7 @@ LABEL_18:
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
         (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)atlasList,
         (EventMissionProgressRequest_Argument_ProgressData_o *)Component_srcLineSprite,
-        (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_UIAtlas__Add__);
+        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_UIAtlas__Add__);
     }
   }
 }
@@ -475,25 +475,25 @@ void __fastcall WarBoardEventBossUIComponent__PlayDaedAnim(
   System_Action_o *v11; // x19
   System_Action_o *v12; // x19
 
-  if ( (byte_434E5AC & 1) == 0 )
+  if ( (byte_4387B7D & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_WarBoardEventBossUIComponent___c__DisplayClass52_0__PlayDaedAnim_b__0__);
-    sub_B70694(&Method_WarBoardEventBossUIComponent___c__DisplayClass52_0__PlayDaedAnim_b__1__);
-    sub_B70694(&WarBoardEventBossUIComponent___c__DisplayClass52_0_TypeInfo);
-    byte_434E5AC = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_WarBoardEventBossUIComponent___c__DisplayClass52_0__PlayDaedAnim_b__0__);
+    sub_B775C4(&Method_WarBoardEventBossUIComponent___c__DisplayClass52_0__PlayDaedAnim_b__1__);
+    sub_B775C4(&WarBoardEventBossUIComponent___c__DisplayClass52_0_TypeInfo);
+    byte_4387B7D = 1;
   }
-  v5 = (WarBoardEventBossUIComponent___c__DisplayClass52_0_o *)sub_B70764(WarBoardEventBossUIComponent___c__DisplayClass52_0_TypeInfo);
+  v5 = (WarBoardEventBossUIComponent___c__DisplayClass52_0_o *)sub_B77694(WarBoardEventBossUIComponent___c__DisplayClass52_0_TypeInfo);
   WarBoardEventBossUIComponent___c__DisplayClass52_0___ctor(v5, 0LL);
   if ( !v5 )
     goto LABEL_14;
   v5->fields.__4__this = this;
-  sub_B70630(&v5->fields);
+  sub_B77560(&v5->fields);
   v5->fields.endAction = endAction;
-  sub_B70630(&v5->fields.endAction);
+  sub_B77560(&v5->fields.endAction);
   deadAnimPrefab = this->fields.deadAnimPrefab;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -502,14 +502,14 @@ void __fastcall WarBoardEventBossUIComponent__PlayDaedAnim(
   }
   v9 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                      (UnityEngine_UI_Dropdown_DropdownItem_o *)deadAnimPrefab,
-                                     (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                     (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   GameObjectExtensions__SafeSetParent(v9, (UnityEngine_Component_o *)this, 0LL);
   GameObjectExtensions__ResetLocalPosition(v9, 0LL);
   if ( !v9 )
     goto LABEL_14;
   Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                       v9,
-                                                      (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+                                                      (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
   if ( UnityEngine_Object__op_Equality(Component_srcLineSprite, 0LL, 0LL) )
   {
     bossIconSp = (UnityEngine_Component_o *)this->fields.bossIconSp;
@@ -524,9 +524,9 @@ void __fastcall WarBoardEventBossUIComponent__PlayDaedAnim(
       }
     }
 LABEL_14:
-    sub_B7076C(bossIconSp, v7);
+    sub_B7769C(bossIconSp, v7);
   }
-  v11 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v11 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(
     v11,
     (Il2CppObject *)v5,
@@ -535,14 +535,14 @@ LABEL_14:
   if ( !Component_srcLineSprite )
     goto LABEL_14;
   CommonEffectActionComponent__SetEventAction((CommonEffectActionComponent_o *)Component_srcLineSprite, 0, v11, 0LL);
-  v12 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v12 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(
     v12,
     (Il2CppObject *)v5,
     Method_WarBoardEventBossUIComponent___c__DisplayClass52_0__PlayDaedAnim_b__1__,
     0LL);
   Component_srcLineSprite[1].monitor = v12;
-  sub_B70630(&Component_srcLineSprite[1].monitor);
+  sub_B77560(&Component_srcLineSprite[1].monitor);
 }
 
 
@@ -567,23 +567,23 @@ void __fastcall WarBoardEventBossUIComponent__PlayHpCut(
   System_Action_o *v19; // x21
   System_Action_o *v20; // x22
 
-  if ( (byte_434E5AE & 1) == 0 )
+  if ( (byte_4387B7F & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-    sub_B70694(&Method_WarBoardEventBossUIComponent___c__DisplayClass54_0__PlayHpCut_b__0__);
-    sub_B70694(&Method_WarBoardEventBossUIComponent___c__DisplayClass54_0__PlayHpCut_b__1__);
-    sub_B70694(&WarBoardEventBossUIComponent___c__DisplayClass54_0_TypeInfo);
-    byte_434E5AE = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    sub_B775C4(&Method_WarBoardEventBossUIComponent___c__DisplayClass54_0__PlayHpCut_b__0__);
+    sub_B775C4(&Method_WarBoardEventBossUIComponent___c__DisplayClass54_0__PlayHpCut_b__1__);
+    sub_B775C4(&WarBoardEventBossUIComponent___c__DisplayClass54_0_TypeInfo);
+    byte_4387B7F = 1;
   }
-  v7 = (WarBoardEventBossUIComponent___c__DisplayClass54_0_o *)sub_B70764(WarBoardEventBossUIComponent___c__DisplayClass54_0_TypeInfo);
+  v7 = (WarBoardEventBossUIComponent___c__DisplayClass54_0_o *)sub_B77694(WarBoardEventBossUIComponent___c__DisplayClass54_0_TypeInfo);
   WarBoardEventBossUIComponent___c__DisplayClass54_0___ctor(v7, 0LL);
   if ( !v7 )
     goto LABEL_20;
   v7->fields.__4__this = this;
-  sub_B70630(&v7->fields.__4__this);
+  sub_B77560(&v7->fields.__4__this);
   v7->fields.endAction = endAction;
-  sub_B70630(&v7->fields.endAction);
+  sub_B77560(&v7->fields.endAction);
   if ( this->fields.isPointBreak )
   {
     oldBossInfo = this->fields.oldBossInfo;
@@ -625,16 +625,16 @@ LABEL_10:
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v7->fields.easingObj = (struct EasingObject_o *)GameObjectExtensions__SafeGetComponent_UIWidget_(
                                                     gameObject,
-                                                    (const MethodInfo_1D4BBAC *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-  sub_B70630(&v7->fields);
+                                                    (const MethodInfo_1DECD48 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+  sub_B77560(&v7->fields);
   easingObj = v7->fields.easingObj;
-  v19 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v19 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(
     v19,
     (Il2CppObject *)v7,
     Method_WarBoardEventBossUIComponent___c__DisplayClass54_0__PlayHpCut_b__0__,
     0LL);
-  v20 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v20 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(
     v20,
     (Il2CppObject *)v7,
@@ -642,7 +642,7 @@ LABEL_10:
     0LL);
   if ( !easingObj )
 LABEL_20:
-    sub_B7076C(MaxHpByBreakPoint, v9);
+    sub_B7769C(MaxHpByBreakPoint, v9);
   EasingObject__Play(easingObj, duration, v19, v20, 0.0, 0, 0LL);
 }
 
@@ -668,23 +668,23 @@ void __fastcall WarBoardEventBossUIComponent__PlayHpRecover(
   System_Action_o *v19; // x21
   System_Action_o *v20; // x22
 
-  if ( (byte_434E5AF & 1) == 0 )
+  if ( (byte_4387B80 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-    sub_B70694(&Method_WarBoardEventBossUIComponent___c__DisplayClass55_0__PlayHpRecover_b__0__);
-    sub_B70694(&Method_WarBoardEventBossUIComponent___c__DisplayClass55_0__PlayHpRecover_b__1__);
-    sub_B70694(&WarBoardEventBossUIComponent___c__DisplayClass55_0_TypeInfo);
-    byte_434E5AF = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    sub_B775C4(&Method_WarBoardEventBossUIComponent___c__DisplayClass55_0__PlayHpRecover_b__0__);
+    sub_B775C4(&Method_WarBoardEventBossUIComponent___c__DisplayClass55_0__PlayHpRecover_b__1__);
+    sub_B775C4(&WarBoardEventBossUIComponent___c__DisplayClass55_0_TypeInfo);
+    byte_4387B80 = 1;
   }
-  v7 = (WarBoardEventBossUIComponent___c__DisplayClass55_0_o *)sub_B70764(WarBoardEventBossUIComponent___c__DisplayClass55_0_TypeInfo);
+  v7 = (WarBoardEventBossUIComponent___c__DisplayClass55_0_o *)sub_B77694(WarBoardEventBossUIComponent___c__DisplayClass55_0_TypeInfo);
   WarBoardEventBossUIComponent___c__DisplayClass55_0___ctor(v7, 0LL);
   if ( !v7 )
     goto LABEL_13;
   v7->fields.__4__this = this;
-  sub_B70630(&v7->fields.__4__this);
+  sub_B77560(&v7->fields.__4__this);
   v7->fields.endAction = endAction;
-  sub_B70630(&v7->fields.endAction);
+  sub_B77560(&v7->fields.endAction);
   bossPieceData = this->fields.bossPieceData;
   v12 = bossPieceData ? bossPieceData->fields._breakPoint_k__BackingField : 0;
   v7->fields.maxHp = WarBoardEventBossUIComponent__GetMaxHpByBreakPoint(this, v12, v10);
@@ -700,16 +700,16 @@ void __fastcall WarBoardEventBossUIComponent__PlayHpRecover(
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v7->fields.easingObj = (struct EasingObject_o *)GameObjectExtensions__SafeGetComponent_UIWidget_(
                                                     gameObject,
-                                                    (const MethodInfo_1D4BBAC *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-  sub_B70630(&v7->fields);
+                                                    (const MethodInfo_1DECD48 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+  sub_B77560(&v7->fields);
   easingObj = v7->fields.easingObj;
-  v19 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v19 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(
     v19,
     (Il2CppObject *)v7,
     Method_WarBoardEventBossUIComponent___c__DisplayClass55_0__PlayHpRecover_b__0__,
     0LL);
-  v20 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v20 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(
     v20,
     (Il2CppObject *)v7,
@@ -717,7 +717,7 @@ void __fastcall WarBoardEventBossUIComponent__PlayHpRecover(
     0LL);
   if ( !easingObj )
 LABEL_13:
-    sub_B7076C(hpBarSlider, v9);
+    sub_B7769C(hpBarSlider, v9);
   EasingObject__Play(easingObj, duration, v19, v20, 0.0, 0, 0LL);
 }
 
@@ -752,36 +752,36 @@ void __fastcall WarBoardEventBossUIComponent__PlayPointBreakAnim(
   int32_t v29; // w2
   __int64 v30; // x0
 
-  if ( (byte_434E5AD & 1) == 0 )
+  if ( (byte_4387B7E & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_WarBoardEventBossUIComponent___c__DisplayClass53_0__PlayPointBreakAnim_b__0__);
-    sub_B70694(&WarBoardEventBossUIComponent___c__DisplayClass53_0_TypeInfo);
-    byte_434E5AD = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_WarBoardEventBossUIComponent___c__DisplayClass53_0__PlayPointBreakAnim_b__0__);
+    sub_B775C4(&WarBoardEventBossUIComponent___c__DisplayClass53_0_TypeInfo);
+    byte_4387B7E = 1;
   }
-  v5 = (WarBoardEventBossUIComponent___c__DisplayClass53_0_o *)sub_B70764(WarBoardEventBossUIComponent___c__DisplayClass53_0_TypeInfo);
+  v5 = (WarBoardEventBossUIComponent___c__DisplayClass53_0_o *)sub_B77694(WarBoardEventBossUIComponent___c__DisplayClass53_0_TypeInfo);
   WarBoardEventBossUIComponent___c__DisplayClass53_0___ctor(v5, 0LL);
   if ( !v5 )
     goto LABEL_25;
   v5->fields.__4__this = this;
-  sub_B70630(&v5->fields);
+  sub_B77560(&v5->fields);
   v5->fields.endAction = endAction;
   p_endAction = &v5->fields.endAction;
-  sub_B70630(&v5->fields.endAction);
+  sub_B77560(&v5->fields.endAction);
   oldBossInfo = this->fields.oldBossInfo;
   if ( !oldBossInfo )
     goto LABEL_25;
-  Sprite = (UnityEngine_Component_o *)UnityEngine_Mathf__Max_41127884(0, oldBossInfo->fields.defeatPoint - 1, 0LL);
+  Sprite = (UnityEngine_Component_o *)UnityEngine_Mathf__Max_41473772(0, oldBossInfo->fields.defeatPoint - 1, 0LL);
   breakIconList = this->fields.breakIconList;
   if ( !breakIconList )
     goto LABEL_25;
   if ( (unsigned int)Sprite >= breakIconList->max_length )
   {
-    v30 = sub_B70798(Sprite);
-    sub_B70738(v30, 0LL);
+    v30 = sub_B776C8(Sprite);
+    sub_B77668(v30, 0LL);
   }
   v11 = breakIconList->m_Items[(int)Sprite];
   if ( !v11 )
@@ -799,17 +799,17 @@ void __fastcall WarBoardEventBossUIComponent__PlayPointBreakAnim(
   }
   v15 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                       (UnityEngine_UI_Dropdown_DropdownItem_o *)pointBreakAnimPrefab,
-                                      (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-  GameObjectExtensions__SafeSetParent_32503456(v15, v14, 0LL);
+                                      (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  GameObjectExtensions__SafeSetParent_32813688(v15, v14, 0LL);
   GameObjectExtensions__ResetLocalPosition(v15, 0LL);
   if ( !v15 )
     goto LABEL_25;
   Component_srcLineSprite = (CommonEffectActionComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                v15,
-                                                               (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+                                                               (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_srcLineSprite, 0LL, 0LL) )
   {
-    v21 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v21 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     System_Action___ctor(
       v21,
       (Il2CppObject *)v5,
@@ -821,7 +821,7 @@ void __fastcall WarBoardEventBossUIComponent__PlayPointBreakAnim(
       return;
     }
 LABEL_25:
-    sub_B7076C(Sprite, v7);
+    sub_B7769C(Sprite, v7);
   }
   bossPieceData = this->fields.bossPieceData;
   totalHpLabel = this->fields.totalHpLabel;
@@ -937,27 +937,27 @@ void __fastcall WarBoardEventBossUIComponent__SetDisp(
   int32_t iconId; // [xsp+Ch] [xbp-54h] BYREF
   UnityEngine_Color_o v87; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_434E5A3 & 1) == 0 )
+  if ( (byte_4387B74 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_B70694(&WarBoardUserServantData_TypeInfo);
-    sub_B70694(&StringLiteral_23611/*"war_board_boss_hp_frame"*/);
-    sub_B70694(&StringLiteral_23614/*"war_board_boss_hp_white"*/);
-    sub_B70694(&StringLiteral_23613/*"war_board_boss_hp_upper_{0}"*/);
-    sub_B70694(&StringLiteral_23615/*"war_board_boss_icon_{0}{1:D2}"*/);
-    sub_B70694(&StringLiteral_23610/*"war_board_boss_hp_back"*/);
-    sub_B70694(&StringLiteral_23612/*"war_board_boss_hp_lower_{0}"*/);
-    byte_434E5A3 = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_B775C4(&WarBoardUserServantData_TypeInfo);
+    sub_B775C4(&StringLiteral_23713/*"war_board_boss_hp_frame"*/);
+    sub_B775C4(&StringLiteral_23716/*"war_board_boss_hp_white"*/);
+    sub_B775C4(&StringLiteral_23715/*"war_board_boss_hp_upper_{0}"*/);
+    sub_B775C4(&StringLiteral_23717/*"war_board_boss_icon_{0}{1:D2}"*/);
+    sub_B775C4(&StringLiteral_23712/*"war_board_boss_hp_back"*/);
+    sub_B775C4(&StringLiteral_23714/*"war_board_boss_hp_lower_{0}"*/);
+    byte_4387B74 = 1;
   }
   this->fields.warBoardDataEnt = warBoardDataEntity;
   p_warBoardDataEnt = &this->fields.warBoardDataEnt;
-  sub_B70630(&this->fields.warBoardDataEnt);
+  sub_B77560(&this->fields.warBoardDataEnt);
   bossIconSp = (__int64)this->fields.bossIconSp;
   if ( !bossIconSp )
     goto LABEL_72;
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)bossIconSp, 1, 0LL);
-  bossIconSp = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  bossIconSp = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   warBoardStageBossEnt = this->fields.warBoardStageBossEnt;
   if ( !warBoardStageBossEnt )
     goto LABEL_72;
@@ -977,7 +977,7 @@ void __fastcall WarBoardEventBossUIComponent__SetDisp(
     StageBossData = 0LL;
   this->fields.currentBossInfo = StageBossData;
   p_currentBossInfo = &this->fields.currentBossInfo;
-  sub_B70630(&this->fields.currentBossInfo);
+  sub_B77560(&this->fields.currentBossInfo);
   if ( !this->fields.currentBossInfo )
   {
     bossIconSp = (__int64)this->fields.bossIconSp;
@@ -992,7 +992,7 @@ void __fastcall WarBoardEventBossUIComponent__SetDisp(
     }
     goto LABEL_72;
   }
-  bossIconSp = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  bossIconSp = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !bossIconSp )
     goto LABEL_72;
   v15 = this->fields.warBoardStageBossEnt;
@@ -1003,18 +1003,18 @@ void __fastcall WarBoardEventBossUIComponent__SetDisp(
     goto LABEL_72;
   this->fields.bossPieceData = WarBoardData__GetEventBossPiece((WarBoardData_o *)bossIconSp, v15->fields.idx, 0LL);
   p_bossPieceData = &this->fields.bossPieceData;
-  sub_B70630(&this->fields.bossPieceData);
+  sub_B77560(&this->fields.bossPieceData);
   if ( !v12 || (int)v12[6] < 3 )
     goto LABEL_31;
   if ( !*p_currentBossInfo )
     goto LABEL_72;
   if ( v12[8] == (*p_currentBossInfo)->fields.stageBossIdx )
   {
-    v17 = (WarBoardUserServantData_o *)sub_B70764(WarBoardUserServantData_TypeInfo);
+    v17 = (WarBoardUserServantData_o *)sub_B77694(WarBoardUserServantData_TypeInfo);
     WarBoardUserServantData___ctor(v17, 0LL);
     this->fields.oldBossInfo = v17;
     p_oldBossInfo = &this->fields.oldBossInfo;
-    sub_B70630(&this->fields.oldBossInfo);
+    sub_B77560(&this->fields.oldBossInfo);
     currentBossInfo = this->fields.currentBossInfo;
     if ( !currentBossInfo )
       goto LABEL_72;
@@ -1027,7 +1027,7 @@ void __fastcall WarBoardEventBossUIComponent__SetDisp(
     if ( !*p_oldBossInfo )
       goto LABEL_72;
     v20->fields.breakHp = (*p_currentBossInfo)->fields.breakHp;
-    sub_B70630(&v20->fields.breakHp);
+    sub_B77560(&v20->fields.breakHp);
     if ( !*p_currentBossInfo || !*p_oldBossInfo )
       goto LABEL_72;
     (*p_oldBossInfo)->fields.maxDefeatPoint = (*p_currentBossInfo)->fields.maxDefeatPoint;
@@ -1042,8 +1042,8 @@ void __fastcall WarBoardEventBossUIComponent__SetDisp(
     if ( v12[6] <= 1u )
     {
 LABEL_73:
-      v82 = sub_B70798(bossIconSp);
-      sub_B70738(v82, 0LL);
+      v82 = sub_B776C8(bossIconSp);
+      sub_B77668(v82, 0LL);
     }
     v22 = *p_oldBossInfo;
     if ( !v22 )
@@ -1053,11 +1053,11 @@ LABEL_73:
   else
   {
 LABEL_31:
-    v23 = (WarBoardUserServantData_o *)sub_B70764(WarBoardUserServantData_TypeInfo);
+    v23 = (WarBoardUserServantData_o *)sub_B77694(WarBoardUserServantData_TypeInfo);
     WarBoardUserServantData___ctor(v23, 0LL);
     this->fields.oldBossInfo = v23;
     v24 = &this->fields.oldBossInfo;
-    sub_B70630(&this->fields.oldBossInfo);
+    sub_B77560(&this->fields.oldBossInfo);
     v25 = this->fields.currentBossInfo;
     if ( !v25 )
       goto LABEL_72;
@@ -1070,7 +1070,7 @@ LABEL_31:
     if ( !*v24 )
       goto LABEL_72;
     v26->fields.breakHp = (*p_currentBossInfo)->fields.breakHp;
-    sub_B70630(&v26->fields.breakHp);
+    sub_B77560(&v26->fields.breakHp);
     if ( !*p_currentBossInfo || !*v24 )
       goto LABEL_72;
     (*v24)->fields.maxDefeatPoint = (*p_currentBossInfo)->fields.maxDefeatPoint;
@@ -1133,7 +1133,7 @@ LABEL_31:
   this->fields.HPto = v42;
   if ( !bossIconSp )
 LABEL_72:
-    sub_B7076C(bossIconSp, v6);
+    sub_B7769C(bossIconSp, v6);
   HPfrom = this->fields.HPfrom;
 LABEL_62:
   UIProgressBar__set_value((UIProgressBar_o *)bossIconSp, HPfrom, 0LL);
@@ -1158,32 +1158,32 @@ LABEL_62:
   v51 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId, v47);
   v85 = idx;
   v53 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v85, v52);
-  v54 = System_String__Format_44753704((System_String_o *)StringLiteral_23615/*"war_board_boss_icon_{0}{1:D2}"*/, v51, v53, 0LL);
+  v54 = System_String__Format_44897472((System_String_o *)StringLiteral_23717/*"war_board_boss_icon_{0}{1:D2}"*/, v51, v53, 0LL);
   WarBoardEventBossUIComponent__SetSpriteByLocalAtlas(this, v49, v54, v55);
   WarBoardEventBossUIComponent__SetSpriteByLocalAtlas(
     this,
     this->fields.bossHpFrame,
-    (System_String_o *)StringLiteral_23611/*"war_board_boss_hp_frame"*/,
+    (System_String_o *)StringLiteral_23713/*"war_board_boss_hp_frame"*/,
     v56);
   WarBoardEventBossUIComponent__SetSpriteByLocalAtlas(
     this,
     this->fields.bossHpBg,
-    (System_String_o *)StringLiteral_23610/*"war_board_boss_hp_back"*/,
+    (System_String_o *)StringLiteral_23712/*"war_board_boss_hp_back"*/,
     v57);
   hpBarUnderSprite = this->fields.hpBarUnderSprite;
   v84 = idx;
   v60 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v84, v59);
-  v61 = System_String__Format((System_String_o *)StringLiteral_23612/*"war_board_boss_hp_lower_{0}"*/, v60, 0LL);
+  v61 = System_String__Format((System_String_o *)StringLiteral_23714/*"war_board_boss_hp_lower_{0}"*/, v60, 0LL);
   WarBoardEventBossUIComponent__SetSpriteByLocalAtlas(this, hpBarUnderSprite, v61, v62);
   hpBarUpperSprite = this->fields.hpBarUpperSprite;
   v83 = idx;
   v65 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v83, v64);
-  v66 = System_String__Format((System_String_o *)StringLiteral_23613/*"war_board_boss_hp_upper_{0}"*/, v65, 0LL);
+  v66 = System_String__Format((System_String_o *)StringLiteral_23715/*"war_board_boss_hp_upper_{0}"*/, v65, 0LL);
   WarBoardEventBossUIComponent__SetSpriteByLocalAtlas(this, hpBarUpperSprite, v66, v67);
   bossIconSp = WarBoardEventBossUIComponent__SetSpriteByLocalAtlas(
                  this,
                  this->fields.hpBarWhiteSprite,
-                 (System_String_o *)StringLiteral_23614/*"war_board_boss_hp_white"*/,
+                 (System_String_o *)StringLiteral_23716/*"war_board_boss_hp_white"*/,
                  v68);
   v70 = this->fields.oldBossInfo;
   if ( !v70 )
@@ -1237,21 +1237,21 @@ bool __fastcall WarBoardEventBossUIComponent__SetSpriteByLocalAtlas(
   System_Collections_Generic_List_Enumerator_T__o v17; // [xsp+8h] [xbp-58h] BYREF
   System_Collections_Generic_List_Enumerator_T__o v18; // [xsp+20h] [xbp-40h] BYREF
 
-  if ( (byte_434E5AB & 1) == 0 )
+  if ( (byte_4387B7C & 1) == 0 )
   {
-    sub_B70694(&Method_System_Linq_Enumerable_Any_UIAtlas___);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
-    byte_434E5AB = 1;
+    sub_B775C4(&Method_System_Linq_Enumerable_Any_UIAtlas___);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
+    byte_4387B7C = 1;
   }
   memset(&v18, 0, sizeof(v18));
   IsNullOrEmpty = (struct System_Collections_Generic_List_UIAtlas__o *)System_String__IsNullOrEmpty(spriteName, 0LL);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0
     || (IsNullOrEmpty = (struct System_Collections_Generic_List_UIAtlas__o *)System_Linq_Enumerable__Any_WarBoardMovieHistoryManager_HistoryInfo_(
                                                                                (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.atlasList,
-                                                                               (const MethodInfo_1CA8B10 *)Method_System_Linq_Enumerable_Any_UIAtlas___),
+                                                                               (const MethodInfo_1D1D960 *)Method_System_Linq_Enumerable_Any_UIAtlas___),
         ((unsigned __int8)IsNullOrEmpty & 1) == 0) )
   {
     if ( !sprite )
@@ -1267,13 +1267,13 @@ bool __fastcall WarBoardEventBossUIComponent__SetSpriteByLocalAtlas(
     System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
       &v17,
       (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)IsNullOrEmpty,
-      (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
+      (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
     v18 = v17;
     do
     {
       v9 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
              &v18,
-             (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
+             (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
       if ( !v9 )
       {
         v14 = 0;
@@ -1282,12 +1282,12 @@ bool __fastcall WarBoardEventBossUIComponent__SetSpriteByLocalAtlas(
       }
       current = v18.fields.current;
       if ( !v18.fields.current )
-        sub_B7076C(v9, v10);
+        sub_B7769C(v9, v10);
       v12 = UIAtlas__GetSprite((UIAtlas_o *)v18.fields.current, spriteName, 0LL);
     }
     while ( !v12 );
     if ( !sprite )
-      sub_B7076C(v12, v13);
+      sub_B7769C(v12, v13);
     UISprite__set_atlas(sprite, (UIAtlas_o *)current, 0LL);
     UISprite__set_spriteName(sprite, spriteName, 0LL);
     v14 = 1;
@@ -1295,7 +1295,7 @@ bool __fastcall WarBoardEventBossUIComponent__SetSpriteByLocalAtlas(
 LABEL_16:
     System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
       &v18,
-      (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
+      (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
     if ( v15 != 17 )
     {
       if ( sprite )
@@ -1304,7 +1304,7 @@ LABEL_16:
         return 0;
       }
 LABEL_20:
-      sub_B7076C(IsNullOrEmpty, v8);
+      sub_B7769C(IsNullOrEmpty, v8);
     }
   }
   return v14;
@@ -1324,12 +1324,12 @@ void __fastcall WarBoardEventBossUIComponent__SetTotalHpText(
   __int64 v10; // x1
   int64_t v11; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_434E5A4 & 1) == 0 )
+  if ( (byte_4387B75 & 1) == 0 )
   {
-    sub_B70694(&long_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_3352/*"COMMON_NUM_FORMAT"*/);
-    byte_434E5A4 = 1;
+    sub_B775C4(&long_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_3403/*"COMMON_NUM_FORMAT"*/);
+    byte_4387B75 = 1;
   }
   totalHpLabel = this->fields.totalHpLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1337,12 +1337,12 @@ void __fastcall WarBoardEventBossUIComponent__SetTotalHpText(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_3352/*"COMMON_NUM_FORMAT"*/, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_3403/*"COMMON_NUM_FORMAT"*/, 0LL);
   v11 = hp;
   v8 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v11, v7);
   v9 = System_String__Format(v6, v8, 0LL);
   if ( !totalHpLabel )
-    sub_B7076C(v9, v10);
+    sub_B7769C(v9, v10);
   UILabel__set_text(totalHpLabel, v9, 0LL);
 }
 
@@ -1363,9 +1363,9 @@ void __fastcall WarBoardEventBossUIComponent__Setup(
   this->fields.eventId = eventId;
   this->fields.warBoardStageBossEnt = warBoardStageBossEnt;
   p_warBoardStageBossEnt = &this->fields.warBoardStageBossEnt;
-  sub_B70630(&this->fields.warBoardStageBossEnt);
+  sub_B77560(&this->fields.warBoardStageBossEnt);
   this->fields.assetData = assetData;
-  sub_B70630(&this->fields.assetData);
+  sub_B77560(&this->fields.assetData);
   WarBoardEventBossUIComponent__LoadLocalAtlas(this, eventId, v11);
   WarBoardEventBossUIComponent__LoadAnimPrefab(this, *p_warBoardStageBossEnt, v12);
   WarBoardEventBossUIComponent__SetDisp(this, warBoardDataEnt, v13);
@@ -1420,7 +1420,7 @@ LABEL_29:
         }
       }
 LABEL_33:
-      sub_B7076C(this, *(_QWORD *)&maxCount);
+      sub_B7769C(this, *(_QWORD *)&maxCount);
     }
     v13 = 1;
     LODWORD(v5) = 1.0;
@@ -1493,8 +1493,8 @@ LABEL_20:
       goto LABEL_33;
     }
 LABEL_34:
-    v23 = sub_B70798(this);
-    sub_B70738(v23, 0LL);
+    v23 = sub_B776C8(this);
+    sub_B77668(v23, 0LL);
   }
 LABEL_25:
   v19 = v9->fields.breakIcon_11;
@@ -1549,7 +1549,7 @@ void __fastcall WarBoardEventBossUIComponent__UpdateOldBossData(
         LODWORD(v7) = v7->fields._breakPoint_k__BackingField;
       if ( !v8 )
 LABEL_11:
-        sub_B7076C(bossPieceData, method);
+        sub_B7769C(bossPieceData, method);
       v8->fields.defeatPoint = (int)v7;
     }
   }
@@ -1619,7 +1619,7 @@ bool __fastcall WarBoardEventBossUIComponent___c__DisplayClass37_0___GetStageBos
         const MethodInfo *method)
 {
   if ( !n )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   return WarBoardPieceData__get_StageBossIdx(n, 0LL) == this->fields.stageBossIndex;
 }
 
@@ -1645,7 +1645,7 @@ void __fastcall WarBoardEventBossUIComponent___c__DisplayClass52_0___PlayDaedAni
                                                                          (UnityEngine_Component_o *)this,
                                                                          0LL)) == 0LL )
   {
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
 }
@@ -1697,7 +1697,7 @@ void __fastcall WarBoardEventBossUIComponent___c__DisplayClass53_0___PlayPointBr
         (v14 = this->fields.__4__this) == 0LL) )
   {
 LABEL_7:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   v14->fields.isPointBreak = 0;
   ActionExtensions__Call(this->fields.endAction, 0LL);
@@ -1739,7 +1739,7 @@ void __fastcall WarBoardEventBossUIComponent___c__DisplayClass54_0___PlayHpCut_b
         (this = (WarBoardEventBossUIComponent___c__DisplayClass54_0_o *)v4->fields.__4__this) == 0LL) )
   {
 LABEL_9:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   v8 = v7 * (double)v4->fields.maxHp;
   v9 = -v8;
@@ -1757,7 +1757,7 @@ void __fastcall WarBoardEventBossUIComponent___c__DisplayClass54_0___PlayHpCut_b
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   WarBoardEventBossUIComponent__SetTotalHpText(_4__this, this->fields.totalHp, 0LL);
   ActionExtensions__Call(this->fields.endAction, 0LL);
 }
@@ -1798,7 +1798,7 @@ void __fastcall WarBoardEventBossUIComponent___c__DisplayClass55_0___PlayHpRecov
         (this = (WarBoardEventBossUIComponent___c__DisplayClass55_0_o *)v4->fields.__4__this) == 0LL) )
   {
 LABEL_9:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   v8 = v7 * (double)v4->fields.maxHp;
   v9 = -v8;
@@ -1817,7 +1817,7 @@ void __fastcall WarBoardEventBossUIComponent___c__DisplayClass55_0___PlayHpRecov
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   CurrentBossHp = WarBoardEventBossUIComponent__get_CurrentBossHp(this->fields.__4__this, 0LL);
   WarBoardEventBossUIComponent__SetTotalHpText(_4__this, CurrentBossHp, 0LL);
   ActionExtensions__Call(this->fields.endAction, 0LL);

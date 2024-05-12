@@ -15,14 +15,14 @@ void __fastcall SetRandomLimitCountOptionControl__Init(
   __int64 v5; // x1
   SetRandomLimitCountOptionControl_CategoryInfo_o *klass; // x19
 
-  if ( (byte_43541E2 & 1) == 0 )
+  if ( (byte_438DAA0 & 1) == 0 )
   {
-    sub_B70694(&OptionManager_TypeInfo);
-    sub_B70694(&StringLiteral_9913/*"OPTION_RANDOM_LIMIT_COUNT_OWN_BUTTON"*/);
-    sub_B70694(&StringLiteral_9914/*"OPTION_RANDOM_LIMIT_COUNT_OWN_EXPLANATION"*/);
-    sub_B70694(&StringLiteral_9912/*"OPTION_RANDOM_LIMIT_COUNT_FRIEND_EXPLANATION"*/);
-    sub_B70694(&StringLiteral_9911/*"OPTION_RANDOM_LIMIT_COUNT_FRIEND_BUTTON"*/);
-    byte_43541E2 = 1;
+    sub_B775C4(&OptionManager_TypeInfo);
+    sub_B775C4(&StringLiteral_9972/*"OPTION_RANDOM_LIMIT_COUNT_OWN_BUTTON"*/);
+    sub_B775C4(&StringLiteral_9973/*"OPTION_RANDOM_LIMIT_COUNT_OWN_EXPLANATION"*/);
+    sub_B775C4(&StringLiteral_9971/*"OPTION_RANDOM_LIMIT_COUNT_FRIEND_EXPLANATION"*/);
+    sub_B775C4(&StringLiteral_9970/*"OPTION_RANDOM_LIMIT_COUNT_FRIEND_BUTTON"*/);
+    byte_438DAA0 = 1;
   }
   friendSettingInfo = this->fields.friendSettingInfo;
   if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -35,20 +35,20 @@ void __fastcall SetRandomLimitCountOptionControl__Init(
     || (SetRandomLimitCountOptionControl_CategoryInfo__Init(
           friendSettingInfo,
           RandomLimitCountOwn,
-          (System_String_o *)StringLiteral_9913/*"OPTION_RANDOM_LIMIT_COUNT_OWN_BUTTON"*/,
-          (System_String_o *)StringLiteral_9914/*"OPTION_RANDOM_LIMIT_COUNT_OWN_EXPLANATION"*/,
+          (System_String_o *)StringLiteral_9972/*"OPTION_RANDOM_LIMIT_COUNT_OWN_BUTTON"*/,
+          (System_String_o *)StringLiteral_9973/*"OPTION_RANDOM_LIMIT_COUNT_OWN_EXPLANATION"*/,
           0LL),
         klass = (SetRandomLimitCountOptionControl_CategoryInfo_o *)this[1].klass,
         RandomLimitCountOwn = OptionManager__GetRandomLimitCountFriend(0LL),
         !klass) )
   {
-    sub_B7076C(RandomLimitCountOwn, v5);
+    sub_B7769C(RandomLimitCountOwn, v5);
   }
   SetRandomLimitCountOptionControl_CategoryInfo__Init(
     klass,
     RandomLimitCountOwn,
-    (System_String_o *)StringLiteral_9911/*"OPTION_RANDOM_LIMIT_COUNT_FRIEND_BUTTON"*/,
-    (System_String_o *)StringLiteral_9912/*"OPTION_RANDOM_LIMIT_COUNT_FRIEND_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_9970/*"OPTION_RANDOM_LIMIT_COUNT_FRIEND_BUTTON"*/,
+    (System_String_o *)StringLiteral_9971/*"OPTION_RANDOM_LIMIT_COUNT_FRIEND_EXPLANATION"*/,
     0LL);
 }
 
@@ -66,10 +66,10 @@ void __fastcall SetRandomLimitCountOptionControl__OnClickFriendSettingButton(
   char v8; // w9
 
   v2 = this;
-  if ( (byte_43541E5 & 1) == 0 )
+  if ( (byte_438DAA3 & 1) == 0 )
   {
-    this = (SetRandomLimitCountOptionControl_o *)sub_B70694(&Method_SetRandomLimitCountOptionControl_OnClickFriendSettingButton__);
-    byte_43541E5 = 1;
+    this = (SetRandomLimitCountOptionControl_o *)sub_B775C4(&Method_SetRandomLimitCountOptionControl_OnClickFriendSettingButton__);
+    byte_438DAA3 = 1;
   }
   klass = v2[1].klass;
   if ( !klass )
@@ -77,8 +77,8 @@ void __fastcall SetRandomLimitCountOptionControl__OnClickFriendSettingButton(
   name_low = LOBYTE(klass->_1.name);
   v5 = Method_SetRandomLimitCountOptionControl_OnClickFriendSettingButton__;
   if ( (*((_BYTE *)Method_SetRandomLimitCountOptionControl_OnClickFriendSettingButton__ + 75) & 2) != 0 )
-    v5 = (_QWORD *)sub_B7069C(Method_SetRandomLimitCountOptionControl_OnClickFriendSettingButton__);
-  v6 = (System_Reflection_MethodBase_o *)sub_B70678(v5, v5[3]);
+    v5 = (_QWORD *)sub_B775CC(Method_SetRandomLimitCountOptionControl_OnClickFriendSettingButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_B775A8(v5, v5[3]);
   if ( name_low )
   {
     OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0LL);
@@ -99,7 +99,7 @@ void __fastcall SetRandomLimitCountOptionControl__OnClickFriendSettingButton(
   this = (SetRandomLimitCountOptionControl_o *)v2[1].klass;
   if ( !this )
 LABEL_13:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   SetRandomLimitCountOptionControl_CategoryInfo__RefreshButton(
     (SetRandomLimitCountOptionControl_CategoryInfo_o *)this,
     0LL);
@@ -119,10 +119,10 @@ void __fastcall SetRandomLimitCountOptionControl__OnClickOwnSettingButton(
   char v8; // w9
 
   v2 = this;
-  if ( (byte_43541E4 & 1) == 0 )
+  if ( (byte_438DAA2 & 1) == 0 )
   {
-    this = (SetRandomLimitCountOptionControl_o *)sub_B70694(&Method_SetRandomLimitCountOptionControl_OnClickOwnSettingButton__);
-    byte_43541E4 = 1;
+    this = (SetRandomLimitCountOptionControl_o *)sub_B775C4(&Method_SetRandomLimitCountOptionControl_OnClickOwnSettingButton__);
+    byte_438DAA2 = 1;
   }
   friendSettingInfo = v2->fields.friendSettingInfo;
   if ( !friendSettingInfo )
@@ -130,8 +130,8 @@ void __fastcall SetRandomLimitCountOptionControl__OnClickOwnSettingButton(
   flag = friendSettingInfo->fields.flag;
   v5 = Method_SetRandomLimitCountOptionControl_OnClickOwnSettingButton__;
   if ( (*((_BYTE *)Method_SetRandomLimitCountOptionControl_OnClickOwnSettingButton__ + 75) & 2) != 0 )
-    v5 = (_QWORD *)sub_B7069C(Method_SetRandomLimitCountOptionControl_OnClickOwnSettingButton__);
-  v6 = (System_Reflection_MethodBase_o *)sub_B70678(v5, v5[3]);
+    v5 = (_QWORD *)sub_B775CC(Method_SetRandomLimitCountOptionControl_OnClickOwnSettingButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_B775A8(v5, v5[3]);
   if ( flag )
   {
     OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0LL);
@@ -152,7 +152,7 @@ void __fastcall SetRandomLimitCountOptionControl__OnClickOwnSettingButton(
   this = (SetRandomLimitCountOptionControl_o *)v2->fields.friendSettingInfo;
   if ( !this )
 LABEL_13:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   SetRandomLimitCountOptionControl_CategoryInfo__RefreshButton(
     (SetRandomLimitCountOptionControl_CategoryInfo_o *)this,
     0LL);
@@ -169,10 +169,10 @@ void __fastcall SetRandomLimitCountOptionControl__Reflection(
   SetRandomLimitCountOptionControl_c *klass; // x8
 
   v2 = this;
-  if ( (byte_43541E3 & 1) == 0 )
+  if ( (byte_438DAA1 & 1) == 0 )
   {
-    this = (SetRandomLimitCountOptionControl_o *)sub_B70694(&OptionManager_TypeInfo);
-    byte_43541E3 = 1;
+    this = (SetRandomLimitCountOptionControl_o *)sub_B775C4(&OptionManager_TypeInfo);
+    byte_438DAA1 = 1;
   }
   friendSettingInfo = v2->fields.friendSettingInfo;
   if ( !friendSettingInfo )
@@ -187,7 +187,7 @@ void __fastcall SetRandomLimitCountOptionControl__Reflection(
   klass = v2[1].klass;
   if ( !klass )
 LABEL_9:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   OptionManager__SetRandomLimitCountFriend((bool)klass->_1.name, 0LL);
 }
 
@@ -213,10 +213,10 @@ void __fastcall SetRandomLimitCountOptionControl_CategoryInfo__Init(
   UILabel_o *explanationLabel; // x21
   const MethodInfo *v13; // x1
 
-  if ( (byte_434F871 & 1) == 0 )
+  if ( (byte_4388E6B & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    byte_434F871 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    byte_4388E6B = 1;
   }
   this->fields.flag = limitCountFlag;
   buttonLabel = this->fields.buttonLabel;
@@ -232,7 +232,7 @@ void __fastcall SetRandomLimitCountOptionControl_CategoryInfo__Init(
         v10 = LocalizationManager__Get(explanationKey, 0LL),
         !explanationLabel) )
   {
-    sub_B7076C(v10, v11);
+    sub_B7769C(v10, v11);
   }
   UILabel__set_text(explanationLabel, v10, 0LL);
   SetRandomLimitCountOptionControl_CategoryInfo__RefreshButton(this, v13);
@@ -246,18 +246,18 @@ void __fastcall SetRandomLimitCountOptionControl_CategoryInfo__RefreshButton(
   UIButton_o *button; // x0
   __int64 *v4; // x8
 
-  if ( (byte_434F872 & 1) == 0 )
+  if ( (byte_4388E6C & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_17262/*"btn_on"*/);
-    sub_B70694(&StringLiteral_17261/*"btn_off"*/);
-    byte_434F872 = 1;
+    sub_B775C4(&StringLiteral_17345/*"btn_on"*/);
+    sub_B775C4(&StringLiteral_17344/*"btn_off"*/);
+    byte_4388E6C = 1;
   }
   button = this->fields.button;
   if ( !button )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   if ( this->fields.flag )
-    v4 = &StringLiteral_17262/*"btn_on"*/;
+    v4 = &StringLiteral_17345/*"btn_on"*/;
   else
-    v4 = &StringLiteral_17261/*"btn_off"*/;
+    v4 = &StringLiteral_17344/*"btn_off"*/;
   UIButton__set_normalSprite(button, (System_String_o *)*v4, 0LL);
 }

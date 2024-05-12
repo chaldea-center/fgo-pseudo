@@ -1,13 +1,13 @@
 void __fastcall OuterFrameController___ctor(OuterFrameController_o *this, const MethodInfo *method)
 {
-  if ( (byte_4350C73 & 1) == 0 )
+  if ( (byte_438A31B & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_OuterFrameController___ctor__);
-    byte_4350C73 = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_OuterFrameController___ctor__);
+    byte_438A31B = 1;
   }
   SingletonMonoBehaviour_WebViewManager____ctor(
     (SingletonMonoBehaviour_WebViewManager__o *)this,
-    (const MethodInfo_2CE9C98 *)Method_SingletonMonoBehaviour_OuterFrameController___ctor__);
+    (const MethodInfo_2D168A8 *)Method_SingletonMonoBehaviour_OuterFrameController___ctor__);
 }
 
 
@@ -23,21 +23,21 @@ void __fastcall OuterFrameController__OnPressOuterFrame(OuterFrameController_o *
   UnityEngine_Touch_array *v9; // x20
   __int64 v10; // x0
 
-  if ( (byte_4350C70 & 1) == 0 )
+  if ( (byte_438A318 & 1) == 0 )
   {
-    sub_B70694(&CTouch_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_int__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__Contains__);
-    byte_4350C70 = 1;
+    sub_B775C4(&CTouch_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Contains__);
+    byte_438A318 = 1;
   }
   if ( UnityEngine_Input__get_touchCount(0LL) >= 1 )
   {
     if ( (BYTE3(CTouch_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CTouch_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
-    if ( !byte_434E402 )
+    if ( !byte_43879D3 )
     {
-      sub_B70694(&CTouch_TypeInfo);
-      byte_434E402 = 1;
+      sub_B775C4(&CTouch_TypeInfo);
+      byte_43879D3 = 1;
     }
     v2 = CTouch_TypeInfo;
     if ( (BYTE3(CTouch_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CTouch_TypeInfo->_2.cctor_finished )
@@ -60,16 +60,16 @@ void __fastcall OuterFrameController__OnPressOuterFrame(OuterFrameController_o *
       if ( System_Collections_Generic_List_int___Contains(
              ignoreFingerIDList,
              touchCount,
-             (const MethodInfo_30B662C *)Method_System_Collections_Generic_List_int__Contains__) )
+             (const MethodInfo_30E623C *)Method_System_Collections_Generic_List_int__Contains__) )
       {
         return;
       }
       if ( (BYTE3(CTouch_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CTouch_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
-      if ( !byte_434E402 )
+      if ( !byte_43879D3 )
       {
-        sub_B70694(&CTouch_TypeInfo);
-        byte_434E402 = 1;
+        sub_B775C4(&CTouch_TypeInfo);
+        byte_43879D3 = 1;
       }
       v7 = CTouch_TypeInfo;
       if ( (BYTE3(CTouch_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CTouch_TypeInfo->_2.cctor_finished )
@@ -82,7 +82,7 @@ void __fastcall OuterFrameController__OnPressOuterFrame(OuterFrameController_o *
       touchCount = UnityEngine_Input__get_touchCount(0LL);
       if ( !v9 )
 LABEL_29:
-        sub_B7076C(touchCount, v6);
+        sub_B7769C(touchCount, v6);
       if ( (unsigned int)(touchCount - 1) < v9->max_length )
       {
         touchCount = UnityEngine_Touch__get_fingerId(
@@ -93,14 +93,14 @@ LABEL_29:
           System_Collections_Generic_List_int___Add(
             v8,
             touchCount,
-            (const MethodInfo_30B61D8 *)Method_System_Collections_Generic_List_int__Add__);
+            (const MethodInfo_30E5DE8 *)Method_System_Collections_Generic_List_int__Add__);
           return;
         }
         goto LABEL_29;
       }
     }
-    v10 = sub_B70798(touchCount);
-    sub_B70738(v10, 0LL);
+    v10 = sub_B776C8(touchCount);
+    sub_B77668(v10, 0LL);
   }
 }
 
@@ -110,18 +110,18 @@ void __fastcall OuterFrameController__Start(OuterFrameController_o *this, const 
   CTouch_c *v2; // x0
   System_Collections_Generic_List_int__o *ignoreFingerIDList; // x0
 
-  if ( (byte_4350C71 & 1) == 0 )
+  if ( (byte_438A319 & 1) == 0 )
   {
-    sub_B70694(&CTouch_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_int__Clear__);
-    byte_4350C71 = 1;
+    sub_B775C4(&CTouch_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Clear__);
+    byte_438A319 = 1;
   }
   if ( (BYTE3(CTouch_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CTouch_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
-  if ( !byte_434E402 )
+  if ( !byte_43879D3 )
   {
-    sub_B70694(&CTouch_TypeInfo);
-    byte_434E402 = 1;
+    sub_B775C4(&CTouch_TypeInfo);
+    byte_43879D3 = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( (BYTE3(CTouch_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CTouch_TypeInfo->_2.cctor_finished )
@@ -131,10 +131,10 @@ void __fastcall OuterFrameController__Start(OuterFrameController_o *this, const 
   }
   ignoreFingerIDList = v2->static_fields->ignoreFingerIDList;
   if ( !ignoreFingerIDList )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   System_Collections_Generic_List_int___Clear(
     ignoreFingerIDList,
-    (const MethodInfo_30B65E4 *)Method_System_Collections_Generic_List_int__Clear__);
+    (const MethodInfo_30E61F4 *)Method_System_Collections_Generic_List_int__Clear__);
 }
 
 
@@ -150,21 +150,21 @@ void __fastcall OuterFrameController__Update(OuterFrameController_o *this, const
   System_Collections_Generic_List_int__o *v9; // x20
   __int64 v10; // x0
 
-  if ( (byte_4350C72 & 1) == 0 )
+  if ( (byte_438A31A & 1) == 0 )
   {
-    sub_B70694(&CTouch_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_int__Clear__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__Remove__);
-    byte_4350C72 = 1;
+    sub_B775C4(&CTouch_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Clear__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Remove__);
+    byte_438A31A = 1;
   }
   if ( !UnityEngine_Input__get_touchCount(0LL) )
   {
     if ( (BYTE3(CTouch_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CTouch_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
-    if ( !byte_434E402 )
+    if ( !byte_43879D3 )
     {
-      sub_B70694(&CTouch_TypeInfo);
-      byte_434E402 = 1;
+      sub_B775C4(&CTouch_TypeInfo);
+      byte_43879D3 = 1;
     }
     v3 = CTouch_TypeInfo;
     if ( (BYTE3(CTouch_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CTouch_TypeInfo->_2.cctor_finished )
@@ -177,7 +177,7 @@ void __fastcall OuterFrameController__Update(OuterFrameController_o *this, const
       goto LABEL_36;
     System_Collections_Generic_List_int___Clear(
       ignoreFingerIDList,
-      (const MethodInfo_30B65E4 *)Method_System_Collections_Generic_List_int__Clear__);
+      (const MethodInfo_30E61F4 *)Method_System_Collections_Generic_List_int__Clear__);
   }
   v5 = UnityEngine_Input__get_touchCount(0LL) - 1;
   if ( v5 >= 0 )
@@ -198,18 +198,18 @@ void __fastcall OuterFrameController__Update(OuterFrameController_o *this, const
       if ( v6 >= (unsigned int)ignoreFingerIDList->fields._size )
       {
 LABEL_37:
-        v10 = sub_B70798(ignoreFingerIDList);
-        sub_B70738(v10, 0LL);
+        v10 = sub_B776C8(ignoreFingerIDList);
+        sub_B77668(v10, 0LL);
       }
       if ( UnityEngine_Touch__get_phase((UnityEngine_Touch_o *)((char *)ignoreFingerIDList + i), 0LL) == 4 )
       {
 LABEL_40:
         if ( (BYTE3(CTouch_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CTouch_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
-        if ( !byte_434E402 )
+        if ( !byte_43879D3 )
         {
-          sub_B70694(&CTouch_TypeInfo);
-          byte_434E402 = 1;
+          sub_B775C4(&CTouch_TypeInfo);
+          byte_43879D3 = 1;
         }
         v8 = CTouch_TypeInfo;
         if ( (BYTE3(CTouch_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CTouch_TypeInfo->_2.cctor_finished )
@@ -232,12 +232,12 @@ LABEL_40:
         System_Collections_Generic_List_int___Remove(
           v9,
           (int32_t)ignoreFingerIDList,
-          (const MethodInfo_30B7B54 *)Method_System_Collections_Generic_List_int__Remove__);
+          (const MethodInfo_30E7764 *)Method_System_Collections_Generic_List_int__Remove__);
       }
       if ( (--v6 & 0x80000000) != 0 )
         return;
     }
 LABEL_36:
-    sub_B7076C(ignoreFingerIDList, v2);
+    sub_B7769C(ignoreFingerIDList, v2);
   }
 }

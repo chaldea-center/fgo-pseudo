@@ -26,30 +26,30 @@ void __fastcall FriendshipGaugeEx___cctor(const MethodInfo *method)
   System_Int32_array *v24; // x6
   System_Int32_array *v25; // x7
 
-  if ( (byte_43540AD & 1) == 0 )
+  if ( (byte_438D8D2 & 1) == 0 )
   {
-    sub_B70694(&FriendshipGaugeEx_TypeInfo);
-    sub_B70694(&StringLiteral_5453/*"DownloadBondAtlas"*/);
-    sub_B70694(&StringLiteral_19754/*"img_bondsgage_11"*/);
-    sub_B70694(&StringLiteral_2900/*"Bond/DownloadBond"*/);
-    byte_43540AD = 1;
+    sub_B775C4(&FriendshipGaugeEx_TypeInfo);
+    sub_B775C4(&StringLiteral_5506/*"DownloadBondAtlas"*/);
+    sub_B775C4(&StringLiteral_19844/*"img_bondsgage_11"*/);
+    sub_B775C4(&StringLiteral_2946/*"Bond/DownloadBond"*/);
+    byte_438D8D2 = 1;
   }
   FriendshipGaugeEx_TypeInfo->static_fields->MAX_COLUMN = 5;
   FriendshipGaugeEx_TypeInfo->static_fields->POSITION_Y_DEFAULT = 0.6;
   v7 = FriendshipGaugeEx_TypeInfo;
   FriendshipGaugeEx_TypeInfo->static_fields->POSITION_Y_OTHER = 10.0;
   static_fields = v7->static_fields;
-  v9 = (System_Int32_array **)StringLiteral_2900/*"Bond/DownloadBond"*/;
-  static_fields->AtlasPath = (struct System_String_o *)StringLiteral_2900/*"Bond/DownloadBond"*/;
-  sub_B70630((BattleServantConfConponent_o *)&static_fields->AtlasPath, v9, v1, v2, v3, v4, v5, v6);
+  v9 = (System_Int32_array **)StringLiteral_2946/*"Bond/DownloadBond"*/;
+  static_fields->AtlasPath = (struct System_String_o *)StringLiteral_2946/*"Bond/DownloadBond"*/;
+  sub_B77560((BattleServantConfConponent_o *)&static_fields->AtlasPath, v9, v1, v2, v3, v4, v5, v6);
   v10 = FriendshipGaugeEx_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_5453/*"DownloadBondAtlas"*/;
-  v10->ObjectName = (struct System_String_o *)StringLiteral_5453/*"DownloadBondAtlas"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v10->ObjectName, v11, v12, v13, v14, v15, v16, v17);
+  v11 = (System_Int32_array **)StringLiteral_5506/*"DownloadBondAtlas"*/;
+  v10->ObjectName = (struct System_String_o *)StringLiteral_5506/*"DownloadBondAtlas"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v10->ObjectName, v11, v12, v13, v14, v15, v16, v17);
   v18 = FriendshipGaugeEx_TypeInfo->static_fields;
-  v19 = (System_Int32_array **)StringLiteral_19754/*"img_bondsgage_11"*/;
-  v18->SpriteName = (struct System_String_o *)StringLiteral_19754/*"img_bondsgage_11"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v18->SpriteName, v19, v20, v21, v22, v23, v24, v25);
+  v19 = (System_Int32_array **)StringLiteral_19844/*"img_bondsgage_11"*/;
+  v18->SpriteName = (struct System_String_o *)StringLiteral_19844/*"img_bondsgage_11"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v18->SpriteName, v19, v20, v21, v22, v23, v24, v25);
 }
 
 
@@ -78,25 +78,25 @@ int32_t __fastcall FriendshipGaugeEx__ChangeGauge(
   int32_t v18; // w3
   const MethodInfo *v19; // x4
 
-  if ( (byte_43540AB & 1) == 0 )
+  if ( (byte_438D8D0 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_FriendshipMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43540AB = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_FriendshipMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438D8D0 = 1;
   }
   *max = 0;
   *isLevelUp = 0;
   *isChange = 0;
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (MasterData_WarQuestSelectionMaster = (FriendshipMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                      (DataManager_o *)Instance,
-                                                                     (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_FriendshipMaster___),
+                                                                     (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_FriendshipMaster___),
         v14 = BattleUtility__Lerp((float)this->fields.nowFriendship, (float)this->fields.nextFriendship, val, 0LL),
         Instance = (WebViewManager_o *)BattleUtility__FloorToInt(v14, 0LL),
         !MasterData_WarQuestSelectionMaster) )
   {
-    sub_B7076C(Instance, v12);
+    sub_B7769C(Instance, v12);
   }
   v16 = (int)Instance;
   FriendShipRank = FriendshipMaster__getFriendShipRank(
@@ -157,16 +157,16 @@ void __fastcall FriendshipGaugeEx__ChangeGaugeData(
   float POSITION_Y_DEFAULT; // s0
   __int64 v34; // x0
 
-  if ( (byte_43540AC & 1) == 0 )
+  if ( (byte_438D8D1 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_FriendshipMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&FriendshipGaugeEx_TypeInfo);
-    byte_43540AC = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_FriendshipMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&FriendshipGaugeEx_TypeInfo);
+    byte_438D8D1 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (int **)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_FriendshipMaster___);
+  Master_WarQuestSelectionMaster = (int **)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_FriendshipMaster___);
   if ( !Master_WarQuestSelectionMaster
     || ((v11 = (FriendshipMaster_o *)Master_WarQuestSelectionMaster,
          (Master_WarQuestSelectionMaster = (int **)FriendshipMaster__GetEntity(
@@ -179,7 +179,7 @@ void __fastcall FriendshipGaugeEx__ChangeGaugeData(
         (iconRoots = this->fields.iconRoots) == 0LL) )
   {
 LABEL_55:
-    sub_B7076C(Master_WarQuestSelectionMaster, v9);
+    sub_B7769C(Master_WarQuestSelectionMaster, v9);
   }
   v15 = 4LL;
   while ( 1 )
@@ -230,8 +230,8 @@ LABEL_55:
         if ( v17 >= v25->max_length )
         {
 LABEL_57:
-          v34 = sub_B70798(Master_WarQuestSelectionMaster);
-          sub_B70738(v34, 0LL);
+          v34 = sub_B776C8(Master_WarQuestSelectionMaster);
+          sub_B77668(v34, 0LL);
         }
         Master_WarQuestSelectionMaster = (int **)*((_QWORD *)&v25->obj.klass + v15);
         if ( !Master_WarQuestSelectionMaster )
@@ -321,7 +321,7 @@ void __fastcall FriendshipGaugeEx__Hide(FriendshipGaugeEx_o *this, const MethodI
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
 }
 
@@ -377,7 +377,7 @@ void __fastcall FriendshipGaugeEx__Show(FriendshipGaugeEx_o *this, const MethodI
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
 }
 
@@ -388,16 +388,16 @@ void __fastcall FriendshipGaugeEx__Start(FriendshipGaugeEx_o *this, const Method
   System_String_o *AtlasPath; // x20
   AssetLoader_LoadEndDataHandler_o *v5; // x21
 
-  if ( (byte_43540AA & 1) == 0 )
+  if ( (byte_438D8CF & 1) == 0 )
   {
-    sub_B70694(&AssetManager_TypeInfo);
-    sub_B70694(&Method_FriendshipGaugeEx__Start_b__19_0__);
-    sub_B70694(&FriendshipGaugeEx_TypeInfo);
-    sub_B70694(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_B70694(&StringLiteral_4681/*"DISABLE_FRIENDSHIP_EXCEED"*/);
-    byte_43540AA = 1;
+    sub_B775C4(&AssetManager_TypeInfo);
+    sub_B775C4(&Method_FriendshipGaugeEx__Start_b__19_0__);
+    sub_B775C4(&FriendshipGaugeEx_TypeInfo);
+    sub_B775C4(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_B775C4(&StringLiteral_4734/*"DISABLE_FRIENDSHIP_EXCEED"*/);
+    byte_438D8CF = 1;
   }
-  if ( ConstantMaster__getValue((System_String_o *)StringLiteral_4681/*"DISABLE_FRIENDSHIP_EXCEED"*/, 0LL) != 1 )
+  if ( ConstantMaster__getValue((System_String_o *)StringLiteral_4734/*"DISABLE_FRIENDSHIP_EXCEED"*/, 0LL) != 1 )
   {
     v3 = FriendshipGaugeEx_TypeInfo;
     if ( (BYTE3(FriendshipGaugeEx_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -407,7 +407,7 @@ void __fastcall FriendshipGaugeEx__Start(FriendshipGaugeEx_o *this, const Method
       v3 = FriendshipGaugeEx_TypeInfo;
     }
     AtlasPath = v3->static_fields->AtlasPath;
-    v5 = (AssetLoader_LoadEndDataHandler_o *)sub_B70764(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v5 = (AssetLoader_LoadEndDataHandler_o *)sub_B77694(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(v5, (Il2CppObject *)this, Method_FriendshipGaugeEx__Start_b__19_0__, 0LL);
     if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !AssetManager_TypeInfo->_2.cctor_finished )
@@ -428,12 +428,12 @@ void __fastcall FriendshipGaugeEx___Start_b__19_0(
   UnityEngine_GameObject_o *Object_WarBoardWaitTimeSetting; // x0
   __int64 v7; // x1
 
-  if ( (byte_43540AE & 1) == 0 )
+  if ( (byte_438D8D3 & 1) == 0 )
   {
-    sub_B70694(&Method_AssetData_GetObject_GameObject____69232720);
-    sub_B70694(&FriendshipGaugeEx_TypeInfo);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    byte_43540AE = 1;
+    sub_B775C4(&Method_AssetData_GetObject_GameObject____69465408);
+    sub_B775C4(&FriendshipGaugeEx_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    byte_438D8D3 = 1;
   }
   if ( asset )
   {
@@ -447,16 +447,16 @@ void __fastcall FriendshipGaugeEx___Start_b__19_0(
     Object_WarBoardWaitTimeSetting = (UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                    asset,
                                                                    v5->static_fields->ObjectName,
-                                                                   (const MethodInfo_1BD6720 *)Method_AssetData_GetObject_GameObject____69232720);
+                                                                   (const MethodInfo_1C5FDDC *)Method_AssetData_GetObject_GameObject____69465408);
     if ( !Object_WarBoardWaitTimeSetting
       || (Object_WarBoardWaitTimeSetting = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                          Object_WarBoardWaitTimeSetting,
-                                                                         (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___),
+                                                                         (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___),
           !this->fields.bigIcon)
       || (UISprite__set_atlas(this->fields.bigIcon, (UIAtlas_o *)Object_WarBoardWaitTimeSetting, 0LL),
           (Object_WarBoardWaitTimeSetting = (UnityEngine_GameObject_o *)this->fields.bigIcon) == 0LL) )
     {
-      sub_B7076C(Object_WarBoardWaitTimeSetting, v7);
+      sub_B7769C(Object_WarBoardWaitTimeSetting, v7);
     }
     UISprite__set_spriteName(
       (UISprite_o *)Object_WarBoardWaitTimeSetting,

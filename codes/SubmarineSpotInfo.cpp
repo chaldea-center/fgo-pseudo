@@ -22,10 +22,10 @@ void __fastcall SubmarineSpotInfo___ctor(
   v8 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v8->fields._SpotEntity_k__BackingField = spot;
-  sub_B70630((BattleServantConfConponent_o *)&v8->fields, (System_Int32_array **)spot, v9, v10, v11, v12, v13, v14);
+  sub_B77560((BattleServantConfConponent_o *)&v8->fields, (System_Int32_array **)spot, v9, v10, v11, v12, v13, v14);
   v8->fields._EventPanelSpotEntity_k__BackingField = eventPanelSpotEntity;
   v8 = (SubmarineSpotInfo_o *)((char *)v8 + 24);
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)v8,
     (System_Int32_array **)eventPanelSpotEntity,
     v15,
@@ -76,7 +76,7 @@ void __fastcall SubmarineSpotInfo__set_EventPanelSpotEntity(
   System_Int32_array *v7; // x7
 
   this->fields._EventPanelSpotEntity_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._EventPanelSpotEntity_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -106,7 +106,7 @@ void __fastcall SubmarineSpotInfo__set_SpotEntity(
   System_Int32_array *v7; // x7
 
   this->fields._SpotEntity_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)value,
     (System_String_array **)method,

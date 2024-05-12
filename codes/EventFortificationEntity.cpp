@@ -1,27 +1,27 @@
 void __fastcall EventFortificationEntity___ctor(EventFortificationEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_43545C8 & 1) == 0 )
+  if ( (byte_438DE86 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_43545C8 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438DE86 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall EventFortificationEntity__CreatePK(int32_t eventId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_43545C5 & 1) == 0 )
+  if ( (byte_438DE83 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_43545C5 = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_438DE83 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            idx,
-           (const MethodInfo_1CA236C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1D171BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -43,17 +43,17 @@ int32_t __fastcall EventFortificationEntity__GetGiftItemIcon(
   __int64 v4; // x1
   GiftEntity_o *DataById; // x0
 
-  if ( (byte_43545C6 & 1) == 0 )
+  if ( (byte_438DE84 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_GiftMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    byte_43545C6 = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_GiftMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    byte_438DE84 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (GiftMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_GiftMaster___);
+  Master_WarQuestSelectionMaster = (GiftMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_GiftMaster___);
   if ( !Master_WarQuestSelectionMaster )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   DataById = GiftMaster__getDataById(Master_WarQuestSelectionMaster, this->fields.giftId, 0LL);
   if ( DataById )
     return GiftEntity__getIconImageId(DataById, 0LL);
@@ -84,24 +84,24 @@ bool __fastcall EventFortificationEntity__IsOpenFortificationWarningDialog(
   System_Int32_array *v20; // x7
   UserEventFortificationEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_43545C7 & 1) == 0 )
+  if ( (byte_438DE85 & 1) == 0 )
   {
-    sub_B70694(&Method_BasicHelper_Any_SetSvtInfo___);
-    sub_B70694(&Method_DataManager_GetMaster_EventFortificationDetailMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_UserEventFortificationMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&Method_System_Func_SetSvtInfo__bool___ctor__);
-    sub_B70694(&System_Func_SetSvtInfo__bool__TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&Method_EventFortificationEntity___c__IsOpenFortificationWarningDialog_b__14_0__);
-    sub_B70694(&EventFortificationEntity___c_TypeInfo);
-    byte_43545C7 = 1;
+    sub_B775C4(&Method_BasicHelper_Any_SetSvtInfo___);
+    sub_B775C4(&Method_DataManager_GetMaster_EventFortificationDetailMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_UserEventFortificationMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&Method_System_Func_SetSvtInfo__bool___ctor__);
+    sub_B775C4(&System_Func_SetSvtInfo__bool__TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&Method_EventFortificationEntity___c__IsOpenFortificationWarningDialog_b__14_0__);
+    sub_B775C4(&EventFortificationEntity___c_TypeInfo);
+    byte_438DE85 = 1;
   }
   entity = 0LL;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
   entity = 0LL;
-  Master_WarQuestSelectionMaster = (UserEventFortificationMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_UserEventFortificationMaster___);
+  Master_WarQuestSelectionMaster = (UserEventFortificationMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_UserEventFortificationMaster___);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -117,7 +117,7 @@ bool __fastcall EventFortificationEntity__IsOpenFortificationWarningDialog(
     this->fields.eventId,
     this->fields.idx,
     0LL);
-  UserId = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_EventFortificationDetailMaster___);
+  UserId = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_EventFortificationDetailMaster___);
   if ( !UserId )
     goto LABEL_26;
   UserId = (int64_t)EventFortificationDetailMaster__GetEntitiesByOpend(
@@ -132,7 +132,7 @@ bool __fastcall EventFortificationEntity__IsOpenFortificationWarningDialog(
     return 1;
   if ( !UserId )
 LABEL_26:
-    sub_B7076C(UserId, v5);
+    sub_B7769C(UserId, v5);
   if ( (signed int)setSvtInfos->max_length < *(_DWORD *)(UserId + 24) )
     return 1;
   v10 = EventFortificationEntity___c_TypeInfo;
@@ -152,15 +152,15 @@ LABEL_26:
       static_fields = EventFortificationEntity___c_TypeInfo->static_fields;
     }
     v13 = (Il2CppObject *)static_fields->__9;
-    _9__14_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_SetSvtInfo__bool__TypeInfo);
+    _9__14_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B77694(System_Func_SetSvtInfo__bool__TypeInfo);
     System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
       _9__14_0,
       v13,
       Method_EventFortificationEntity___c__IsOpenFortificationWarningDialog_b__14_0__,
-      (const MethodInfo_29AC578 *)Method_System_Func_SetSvtInfo__bool___ctor__);
+      (const MethodInfo_29E92C4 *)Method_System_Func_SetSvtInfo__bool___ctor__);
     v14 = EventFortificationEntity___c_TypeInfo->static_fields;
     v14->__9__14_0 = (struct System_Func_SetSvtInfo__bool__o *)_9__14_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v14->__9__14_0,
       (System_Int32_array **)_9__14_0,
       v15,
@@ -173,7 +173,7 @@ LABEL_26:
   return BasicHelper__Any_USFGOPlayBgmEventConditional_CondBGM_(
            setSvtInfos,
            (System_Func_T__bool__o *)_9__14_0,
-           (const MethodInfo_1BDCB34 *)Method_BasicHelper_Any_SetSvtInfo___);
+           (const MethodInfo_1C661F0 *)Method_BasicHelper_Any_SetSvtInfo___);
 }
 
 
@@ -182,16 +182,16 @@ void __fastcall EventFortificationEntity___c___cctor(const MethodInfo *method)
   Il2CppObject *v1; // x19
   struct EventFortificationEntity___c_StaticFields *static_fields; // x0
 
-  if ( (byte_434F055 & 1) == 0 )
+  if ( (byte_4388635 & 1) == 0 )
   {
-    sub_B70694(&EventFortificationEntity___c_TypeInfo);
-    byte_434F055 = 1;
+    sub_B775C4(&EventFortificationEntity___c_TypeInfo);
+    byte_4388635 = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(EventFortificationEntity___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(EventFortificationEntity___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = EventFortificationEntity___c_TypeInfo->static_fields;
   static_fields->__9 = (struct EventFortificationEntity___c_o *)v1;
-  sub_B70630(static_fields);
+  sub_B77560(static_fields);
 }
 
 
@@ -207,6 +207,6 @@ bool __fastcall EventFortificationEntity___c___IsOpenFortificationWarningDialog_
         const MethodInfo *method)
 {
   if ( !info )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   return !info->fields.type && info->fields.svtId < 1;
 }

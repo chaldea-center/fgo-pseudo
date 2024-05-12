@@ -15,18 +15,18 @@ void __fastcall OnPressEvent___ctor(OnPressEvent_o *this, const MethodInfo *meth
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
 
-  if ( (byte_4350BAB & 1) == 0 )
+  if ( (byte_438A253 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_B70694(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    byte_4350BAB = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    byte_438A253 = 1;
   }
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v3,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onPressDown = (struct System_Collections_Generic_List_EventDelegate__o *)v3;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.onPressDown,
     (System_Int32_array **)v3,
     v4,
@@ -35,12 +35,12 @@ void __fastcall OnPressEvent___ctor(OnPressEvent_o *this, const MethodInfo *meth
     v7,
     v8,
     v9);
-  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v10,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onPressUp = (struct System_Collections_Generic_List_EventDelegate__o *)v10;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.onPressUp,
     (System_Int32_array **)v10,
     v11,
@@ -57,10 +57,10 @@ void __fastcall OnPressEvent__OnPress(OnPressEvent_o *this, bool isPressed, cons
 {
   System_Collections_Generic_List_EventDelegate__o *onPressDown; // x19
 
-  if ( (byte_4350BAA & 1) == 0 )
+  if ( (byte_438A252 & 1) == 0 )
   {
-    sub_B70694(&EventDelegate_TypeInfo);
-    byte_4350BAA = 1;
+    sub_B775C4(&EventDelegate_TypeInfo);
+    byte_438A252 = 1;
   }
   if ( isPressed )
     onPressDown = this->fields.onPressDown;
@@ -71,5 +71,5 @@ void __fastcall OnPressEvent__OnPress(OnPressEvent_o *this, bool isPressed, cons
   {
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
   }
-  EventDelegate__Execute_29878504(onPressDown, 0LL);
+  EventDelegate__Execute_30349004(onPressDown, 0LL);
 }

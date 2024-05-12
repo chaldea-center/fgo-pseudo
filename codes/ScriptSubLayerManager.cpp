@@ -8,18 +8,18 @@ void __fastcall ScriptSubLayerManager___ctor(ScriptSubLayerManager_o *this, cons
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_43576E3 & 1) == 0 )
+  if ( (byte_4390CAD & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_ScriptSubLayer___ctor__);
-    sub_B70694(&System_Collections_Generic_List_ScriptSubLayer__TypeInfo);
-    byte_43576E3 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_ScriptSubLayer___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_ScriptSubLayer__TypeInfo);
+    byte_4390CAD = 1;
   }
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_ScriptSubLayer__TypeInfo);
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_ScriptSubLayer__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v3,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_ScriptSubLayer___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_ScriptSubLayer___ctor__);
   this->fields.listSubLayer = (struct System_Collections_Generic_List_ScriptSubLayer__o *)v3;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.listSubLayer,
     (System_Int32_array **)v3,
     v4,
@@ -46,15 +46,15 @@ void __fastcall ScriptSubLayerManager__ClearSubLayer(ScriptSubLayerManager_o *th
   UnityEngine_Object_o *gameObject; // x20
   System_Collections_Generic_List_Enumerator_T__o v6; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_43576E0 & 1) == 0 )
+  if ( (byte_4390CAA & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_ScriptSubLayer__Clear__);
-    sub_B70694(&Method_System_Collections_Generic_List_ScriptSubLayer__GetEnumerator__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43576E0 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_ScriptSubLayer__Clear__);
+    sub_B775C4(&Method_System_Collections_Generic_List_ScriptSubLayer__GetEnumerator__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4390CAA = 1;
   }
   memset(&v6, 0, sizeof(v6));
   listSubLayer = this->fields.listSubLayer;
@@ -63,13 +63,13 @@ void __fastcall ScriptSubLayerManager__ClearSubLayer(ScriptSubLayerManager_o *th
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v6,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)listSubLayer,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_ScriptSubLayer__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_ScriptSubLayer__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v6,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__MoveNext__) )
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__MoveNext__) )
   {
     if ( !v6.fields.current )
-      sub_B7076C(0LL, v4);
+      sub_B7769C(0LL, v4);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
                                            (UnityEngine_Component_o *)v6.fields.current,
                                            0LL);
@@ -78,18 +78,18 @@ void __fastcall ScriptSubLayerManager__ClearSubLayer(ScriptSubLayerManager_o *th
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_36067208(gameObject, 0LL);
+    UnityEngine_Object__Destroy_36309980(gameObject, 0LL);
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v6,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__Dispose__);
   listSubLayer = this->fields.listSubLayer;
   if ( !listSubLayer )
 LABEL_14:
-    sub_B7076C(listSubLayer, method);
+    sub_B7769C(listSubLayer, method);
   System_Collections_Generic_List_XWeaponTrail_Element___Clear(
     (System_Collections_Generic_List_XWeaponTrail_Element__o *)listSubLayer,
-    (const MethodInfo_3025A90 *)Method_System_Collections_Generic_List_ScriptSubLayer__Clear__);
+    (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_ScriptSubLayer__Clear__);
 }
 
 
@@ -104,11 +104,11 @@ void __fastcall ScriptSubLayerManager__CreateSubLayer(
   UnityEngine_GameObject_o *v8; // x21
   EventMissionProgressRequest_Argument_ProgressData_o *v9; // x21
 
-  if ( (byte_43576DF & 1) == 0 )
+  if ( (byte_4390CA9 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_ScriptSubLayer___);
-    sub_B70694(&Method_System_Collections_Generic_List_ScriptSubLayer__Add__);
-    byte_43576DF = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ScriptSubLayer___);
+    sub_B775C4(&Method_System_Collections_Generic_List_ScriptSubLayer__Add__);
+    byte_4390CA9 = 1;
   }
   if ( count >= 1 )
   {
@@ -126,17 +126,17 @@ void __fastcall ScriptSubLayerManager__CreateSubLayer(
             UnityEngine_GameObject__SetActive(Object, 1, 0LL),
             (Object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                     v8,
-                                                    (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_ScriptSubLayer___)) == 0LL)
+                                                    (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ScriptSubLayer___)) == 0LL)
         || (v9 = (EventMissionProgressRequest_Argument_ProgressData_o *)Object,
             ScriptSubLayer__StartSubLayer((ScriptSubLayer_o *)Object, v7),
             (Object = (UnityEngine_GameObject_o *)this->fields.listSubLayer) == 0LL) )
       {
-        sub_B7076C(Object, v7);
+        sub_B7769C(Object, v7);
       }
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
         (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)Object,
         v9,
-        (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_ScriptSubLayer__Add__);
+        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_ScriptSubLayer__Add__);
       ++v5;
     }
     while ( v5 < count );
@@ -200,45 +200,45 @@ ScriptSubLayer_o *__fastcall ScriptSubLayerManager__GetSubLayer(
   System_Int32_array *v43; // x7
   System_Int32_array **v44; // x1
 
-  if ( (byte_43576E1 & 1) == 0 )
+  if ( (byte_4390CAB & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_ScriptSubLayer__Find__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_System_Predicate_ScriptSubLayer___ctor__);
-    sub_B70694(&System_Predicate_ScriptSubLayer__TypeInfo);
-    sub_B70694(&Method_ScriptSubLayerManager___c__GetSubLayer_b__18_1__);
-    sub_B70694(&Method_ScriptSubLayerManager___c__DisplayClass18_0__GetSubLayer_b__0__);
-    sub_B70694(&ScriptSubLayerManager___c__DisplayClass18_0_TypeInfo);
-    sub_B70694(&ScriptSubLayerManager___c_TypeInfo);
-    sub_B70694(&StringLiteral_366/*"#A"*/);
-    byte_43576E1 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_ScriptSubLayer__Find__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_System_Predicate_ScriptSubLayer___ctor__);
+    sub_B775C4(&System_Predicate_ScriptSubLayer__TypeInfo);
+    sub_B775C4(&Method_ScriptSubLayerManager___c__GetSubLayer_b__18_1__);
+    sub_B775C4(&Method_ScriptSubLayerManager___c__DisplayClass18_0__GetSubLayer_b__0__);
+    sub_B775C4(&ScriptSubLayerManager___c__DisplayClass18_0_TypeInfo);
+    sub_B775C4(&ScriptSubLayerManager___c_TypeInfo);
+    sub_B775C4(&StringLiteral_367/*"#A"*/);
+    byte_4390CAB = 1;
   }
-  v7 = sub_B70764(ScriptSubLayerManager___c__DisplayClass18_0_TypeInfo);
+  v7 = sub_B77694(ScriptSubLayerManager___c__DisplayClass18_0_TypeInfo);
   ScriptSubLayerManager___c__DisplayClass18_0___ctor((ScriptSubLayerManager___c__DisplayClass18_0_o *)v7, 0LL);
   if ( !v7 )
     goto LABEL_24;
   *(_QWORD *)(v7 + 16) = layerKey;
   v16 = (System_Int32_array ***)(v7 + 16);
-  sub_B70630((BattleServantConfConponent_o *)(v7 + 16), (System_Int32_array **)layerKey, v10, v11, v12, v13, v14, v15);
+  sub_B77560((BattleServantConfConponent_o *)(v7 + 16), (System_Int32_array **)layerKey, v10, v11, v12, v13, v14, v15);
   if ( System_String__IsNullOrEmpty(*(System_String_o **)(v7 + 16), 0LL) )
   {
-    v23 = (System_Int32_array **)StringLiteral_366/*"#A"*/;
-    *v16 = (System_Int32_array **)StringLiteral_366/*"#A"*/;
-    sub_B70630((BattleServantConfConponent_o *)(v7 + 16), v23, v17, v18, v19, v20, v21, v22);
+    v23 = (System_Int32_array **)StringLiteral_367/*"#A"*/;
+    *v16 = (System_Int32_array **)StringLiteral_367/*"#A"*/;
+    sub_B77560((BattleServantConfConponent_o *)(v7 + 16), v23, v17, v18, v19, v20, v21, v22);
   }
   listSubLayer = this->fields.listSubLayer;
-  v25 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B70764(System_Predicate_ScriptSubLayer__TypeInfo);
+  v25 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B77694(System_Predicate_ScriptSubLayer__TypeInfo);
   System_Predicate_peRenderTexture_ChangeLayerObject____ctor(
     v25,
     (Il2CppObject *)v7,
     Method_ScriptSubLayerManager___c__DisplayClass18_0__GetSubLayer_b__0__,
-    (const MethodInfo_2BF23B8 *)Method_System_Predicate_ScriptSubLayer___ctor__);
+    (const MethodInfo_2C3248C *)Method_System_Predicate_ScriptSubLayer___ctor__);
   if ( !listSubLayer )
     goto LABEL_24;
   v26 = (ScriptSubLayer_o *)System_Collections_Generic_List_peRenderTexture_ChangeLayerObject___Find(
                               (System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *)listSubLayer,
                               (System_Predicate_T__o *)v25,
-                              (const MethodInfo_3025F48 *)Method_System_Collections_Generic_List_ScriptSubLayer__Find__);
+                              (const MethodInfo_3053B58 *)Method_System_Collections_Generic_List_ScriptSubLayer__Find__);
   if ( isRegist )
   {
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -266,15 +266,15 @@ ScriptSubLayer_o *__fastcall ScriptSubLayerManager__GetSubLayer(
           static_fields = ScriptSubLayerManager___c_TypeInfo->static_fields;
         }
         v30 = (Il2CppObject *)static_fields->__9;
-        _9__18_1 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B70764(System_Predicate_ScriptSubLayer__TypeInfo);
+        _9__18_1 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B77694(System_Predicate_ScriptSubLayer__TypeInfo);
         System_Predicate_peRenderTexture_ChangeLayerObject____ctor(
           _9__18_1,
           v30,
           Method_ScriptSubLayerManager___c__GetSubLayer_b__18_1__,
-          (const MethodInfo_2BF23B8 *)Method_System_Predicate_ScriptSubLayer___ctor__);
+          (const MethodInfo_2C3248C *)Method_System_Predicate_ScriptSubLayer___ctor__);
         v31 = ScriptSubLayerManager___c_TypeInfo->static_fields;
         v31->__9__18_1 = (struct System_Predicate_ScriptSubLayer__o *)_9__18_1;
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)&v31->__9__18_1,
           (System_Int32_array **)_9__18_1,
           v32,
@@ -289,18 +289,18 @@ ScriptSubLayer_o *__fastcall ScriptSubLayerManager__GetSubLayer(
         v8 = (char *)System_Collections_Generic_List_peRenderTexture_ChangeLayerObject___Find(
                        (System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *)v27,
                        (System_Predicate_T__o *)_9__18_1,
-                       (const MethodInfo_3025F48 *)Method_System_Collections_Generic_List_ScriptSubLayer__Find__);
+                       (const MethodInfo_3053B58 *)Method_System_Collections_Generic_List_ScriptSubLayer__Find__);
         if ( v8 )
         {
           v44 = *v16;
           v26 = (ScriptSubLayer_o *)v8;
           *((_QWORD *)v8 + 3) = *v16;
-          sub_B70630((BattleServantConfConponent_o *)(v8 + 24), v44, v38, v39, v40, v41, v42, v43);
+          sub_B77560((BattleServantConfConponent_o *)(v8 + 24), v44, v38, v39, v40, v41, v42, v43);
           return v26;
         }
       }
 LABEL_24:
-      sub_B7076C(v8, v9);
+      sub_B7769C(v8, v9);
     }
   }
   return v26;
@@ -318,7 +318,7 @@ void __fastcall ScriptSubLayerManager__Init(ScriptSubLayerManager_o *this, const
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)subLayerCamera, 0, 0LL),
         (subLayerCamera = (UnityEngine_Component_o *)this->fields.subLayerCamera) == 0LL) )
   {
-    sub_B7076C(subLayerCamera, method);
+    sub_B7769C(subLayerCamera, method);
   }
   UnityEngine_Camera__set_targetTexture((UnityEngine_Camera_o *)subLayerCamera, 0LL, 0LL);
   ScriptSubLayerManager__ClearSubLayer(this, v4);
@@ -346,7 +346,7 @@ void __fastcall ScriptSubLayerManager__RegistCharaData(
   ScriptSubLayerManager__RemoveCharaData(this, charaData, (const MethodInfo *)charaData);
   SubLayer = ScriptSubLayerManager__GetSubLayer(this, layerKey, 1, v7);
   if ( !SubLayer )
-    sub_B7076C(0LL, v9);
+    sub_B7769C(0LL, v9);
   ScriptSubLayer__RegistCharaData(SubLayer, charaData, v10);
 }
 
@@ -362,16 +362,16 @@ void __fastcall ScriptSubLayerManager__RemoveCharaData(
   int size; // w8
 
   v4 = this;
-  if ( (byte_43576DE & 1) == 0 )
+  if ( (byte_4390CA8 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_ScriptSubLayer__get_Count__);
-    this = (ScriptSubLayerManager_o *)sub_B70694(&Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
-    byte_43576DE = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_ScriptSubLayer__get_Count__);
+    this = (ScriptSubLayerManager_o *)sub_B775C4(&Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
+    byte_4390CA8 = 1;
   }
   listSubLayer = v4->fields.listSubLayer;
   if ( !listSubLayer )
 LABEL_10:
-    sub_B7076C(this, charaData);
+    sub_B7769C(this, charaData);
   v6 = 0LL;
   while ( 1 )
   {
@@ -379,7 +379,7 @@ LABEL_10:
     if ( (int)v6 >= size )
       break;
     if ( size <= (unsigned int)v6 )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
     this = (ScriptSubLayerManager_o *)listSubLayer->fields._items->m_Items[v6];
     if ( this )
     {
@@ -436,14 +436,14 @@ void __fastcall ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o
   UnityEngine_Color_o v41; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = this;
-  if ( (byte_43576E2 & 1) == 0 )
+  if ( (byte_4390CAC & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Graphics_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_ScriptSubLayer__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    this = (ScriptSubLayerManager_o *)sub_B70694(&StringLiteral_16178/*"_Color"*/);
-    byte_43576E2 = 1;
+    sub_B775C4(&UnityEngine_Graphics_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_ScriptSubLayer__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    this = (ScriptSubLayerManager_o *)sub_B775C4(&StringLiteral_16248/*"_Color"*/);
+    byte_4390CAC = 1;
   }
   listSubLayer = v2->fields.listSubLayer;
   if ( !listSubLayer )
@@ -467,7 +467,7 @@ void __fastcall ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o
       if ( (int)v6 >= size )
         break;
       if ( size <= (unsigned int)v6 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       this = (ScriptSubLayerManager_o *)v5->fields._items->m_Items[v6];
       if ( this )
       {
@@ -485,7 +485,7 @@ void __fastcall ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o
       while ( 1 )
       {
         if ( size <= (unsigned int)v8 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
         v9 = v5->fields._items->m_Items[(int)v8];
         if ( !v9 )
           break;
@@ -503,7 +503,7 @@ void __fastcall ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o
             if ( v8 != v11 )
             {
               if ( v11 >= v12 )
-                System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+                System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
               this = (ScriptSubLayerManager_o *)v10->fields._items->m_Items[v11];
               if ( !this )
                 goto LABEL_84;
@@ -515,7 +515,7 @@ void __fastcall ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o
               goto LABEL_84;
           }
           if ( (unsigned int)v12 <= (unsigned int)v8 )
-            System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+            System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
           this = (ScriptSubLayerManager_o *)v10->fields._items->m_Items[(int)v8];
           if ( !this )
             break;
@@ -524,7 +524,7 @@ void __fastcall ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o
           if ( !v13 )
             break;
           if ( v13->fields._size <= (unsigned int)v8 )
-            System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+            System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
           v14 = v13->fields._items->m_Items[(int)v8];
           if ( !v14 )
             break;
@@ -538,7 +538,7 @@ void __fastcall ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o
           if ( !v15 )
             break;
           if ( v15->fields._size <= (unsigned int)v8 )
-            System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+            System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
           v16 = v15->fields._items->m_Items[(int)v8];
           if ( !v16 )
             break;
@@ -556,7 +556,7 @@ void __fastcall ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o
           if ( !v17 )
             break;
           if ( v17->fields._size <= (unsigned int)v8 )
-            System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+            System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
           v18 = v17->fields._items->m_Items[(int)v8];
           if ( !v18 )
             break;
@@ -576,7 +576,7 @@ void __fastcall ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o
             if ( !v20 )
               break;
             if ( v20->fields._size <= (unsigned int)v8 )
-              System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+              System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
             v21 = v20->fields._items->m_Items[(int)v8];
             if ( !v21 )
               break;
@@ -597,7 +597,7 @@ void __fastcall ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o
               break;
             v23 = (UnityEngine_RenderTexture_o *)this;
             if ( v22->fields._size <= (unsigned int)v8 )
-              System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+              System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
             v24 = v22->fields._items->m_Items[(int)v8];
             if ( !v24 )
               break;
@@ -607,7 +607,7 @@ void __fastcall ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o
               break;
             UnityEngine_Material__SetColor(
               v25,
-              (System_String_o *)StringLiteral_16178/*"_Color"*/,
+              (System_String_o *)StringLiteral_16248/*"_Color"*/,
               *(UnityEngine_Color_o *)&v26,
               0LL);
             this = (ScriptSubLayerManager_o *)v2->fields.subLayerCamera;
@@ -621,7 +621,7 @@ void __fastcall ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o
             {
               j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
             }
-            UnityEngine_Graphics__Blit_41098560(targetTexture, v23, v25, 0LL);
+            UnityEngine_Graphics__Blit_41444448(targetTexture, v23, v25, 0LL);
             this = (ScriptSubLayerManager_o *)v2->fields.subLayerCamera;
             if ( !this )
               break;
@@ -638,7 +638,7 @@ void __fastcall ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o
           goto LABEL_71;
       }
 LABEL_84:
-      sub_B7076C(this, method);
+      sub_B7769C(this, method);
     }
 LABEL_71:
     if ( size >= 1 )
@@ -647,7 +647,7 @@ LABEL_71:
       do
       {
         if ( size <= v32 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
         this = (ScriptSubLayerManager_o *)v5->fields._items->m_Items[v32];
         if ( !this )
           goto LABEL_84;
@@ -699,7 +699,7 @@ void __fastcall ScriptSubLayerManager__SetDepth(
 
   SubLayer = ScriptSubLayerManager__GetSubLayer(this, layerKey, 1, v4);
   if ( !SubLayer )
-    sub_B7076C(0LL, v7);
+    sub_B7769C(0LL, v7);
   ScriptSubLayer__SetDepth(SubLayer, depth, v7);
 }
 
@@ -735,7 +735,7 @@ void __fastcall ScriptSubLayerManager__StartSubLayer(
         !v12) )
   {
 LABEL_6:
-    sub_B7076C(clearFlags, v8);
+    sub_B7769C(clearFlags, v8);
   }
   UnityEngine_Camera__set_orthographicSize(v12, orthographicSize, 0LL);
   ScriptSubLayerManager__CreateSubLayer(this, count, v14);
@@ -747,16 +747,16 @@ void __fastcall ScriptSubLayerManager___c___cctor(const MethodInfo *method)
   Il2CppObject *v1; // x19
   struct ScriptSubLayerManager___c_StaticFields *static_fields; // x0
 
-  if ( (byte_434F1FB & 1) == 0 )
+  if ( (byte_43887DC & 1) == 0 )
   {
-    sub_B70694(&ScriptSubLayerManager___c_TypeInfo);
-    byte_434F1FB = 1;
+    sub_B775C4(&ScriptSubLayerManager___c_TypeInfo);
+    byte_43887DC = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(ScriptSubLayerManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(ScriptSubLayerManager___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = ScriptSubLayerManager___c_TypeInfo->static_fields;
   static_fields->__9 = (struct ScriptSubLayerManager___c_o *)v1;
-  sub_B70630(static_fields);
+  sub_B77560(static_fields);
 }
 
 
@@ -772,7 +772,7 @@ bool __fastcall ScriptSubLayerManager___c___GetSubLayer_b__18_1(
         const MethodInfo *method)
 {
   if ( !l )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   return System_String__IsNullOrEmpty(l->fields._layerKey_k__BackingField, 0LL);
 }
 
@@ -791,6 +791,6 @@ bool __fastcall ScriptSubLayerManager___c__DisplayClass18_0___GetSubLayer_b__0(
         const MethodInfo *method)
 {
   if ( !l )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   return System_String__op_Equality(l->fields._layerKey_k__BackingField, this->fields.layerKey, 0LL);
 }

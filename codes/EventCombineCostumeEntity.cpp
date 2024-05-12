@@ -1,13 +1,13 @@
 void __fastcall EventCombineCostumeEntity___ctor(EventCombineCostumeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_43544D7 & 1) == 0 )
+  if ( (byte_438DD95 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_43544D7 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438DD95 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *__fastcall EventCombineCostumeEntity__CreatePK(
         int32_t eventId,
         const MethodInfo *method)
 {
-  if ( (byte_43544D5 & 1) == 0 )
+  if ( (byte_438DD93 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_43544D5 = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_438DD93 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            costumeId,
            eventId,
-           (const MethodInfo_1CA2794 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1D175E4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -52,20 +52,20 @@ bool __fastcall EventCombineCostumeEntity__IsShortEventItem(
   __int64 v9; // x0
   UserItemEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_43544D6 & 1) == 0 )
+  if ( (byte_438DD94 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43544D6 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438DD94 = 1;
   }
   entity = 0LL;
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   MasterData_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                              (DataManager_o *)Instance,
-                                                             (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                                             (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -79,7 +79,7 @@ bool __fastcall EventCombineCostumeEntity__IsShortEventItem(
     goto LABEL_18;
   if ( !MasterData_WarQuestSelectionMaster )
 LABEL_17:
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   Instance = UserItemMaster__TryGetEntity(
                MasterData_WarQuestSelectionMaster,
                &entity,
@@ -96,8 +96,8 @@ LABEL_17:
         if ( itemNums->max_length )
           return entity->fields.num < itemNums->m_Items[1];
 LABEL_18:
-        v9 = sub_B70798(Instance);
-        sub_B70738(v9, 0LL);
+        v9 = sub_B776C8(Instance);
+        sub_B77668(v9, 0LL);
       }
     }
     goto LABEL_17;

@@ -43,73 +43,73 @@ void __fastcall SetSmoothnessControl__Init(SetSmoothnessControl_o *this, const M
   __int64 v31; // x0
   __int64 v32; // x0
 
-  if ( (byte_4356309 & 1) == 0 )
+  if ( (byte_438F987 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Action_int___ctor__);
-    sub_B70694(&System_Action_int__TypeInfo);
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&OptionManager_TypeInfo);
-    sub_B70694(&Method_SetSmoothnessControl__Init_b__5_0__);
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_9934/*"OPTION_SMOOTHNESS_BUTTON_2"*/);
-    sub_B70694(&StringLiteral_9933/*"OPTION_SMOOTHNESS_BUTTON_1"*/);
-    sub_B70694(&StringLiteral_9932/*"OPTION_SMOOTHNESS_ATTENTION"*/);
-    sub_B70694(&StringLiteral_20008/*"img_txt_framerate"*/);
-    byte_4356309 = 1;
+    sub_B775C4(&Method_System_Action_int___ctor__);
+    sub_B775C4(&System_Action_int__TypeInfo);
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&OptionManager_TypeInfo);
+    sub_B775C4(&Method_SetSmoothnessControl__Init_b__5_0__);
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_9993/*"OPTION_SMOOTHNESS_BUTTON_2"*/);
+    sub_B775C4(&StringLiteral_9992/*"OPTION_SMOOTHNESS_BUTTON_1"*/);
+    sub_B775C4(&StringLiteral_9991/*"OPTION_SMOOTHNESS_ATTENTION"*/);
+    sub_B775C4(&StringLiteral_20103/*"img_txt_framerate"*/);
+    byte_438F987 = 1;
   }
   LOWORD(this[1].klass) = 0;
   v3 = *(UISprite_o **)&this->fields.isHighQuality.fields.value;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetMyRoomImage(v3, (System_String_o *)StringLiteral_20008/*"img_txt_framerate"*/, 0LL);
+  AtlasManager__SetMyRoomImage(v3, (System_String_o *)StringLiteral_20103/*"img_txt_framerate"*/, 0LL);
   titleSptite = (UILabel_o *)this->fields.titleSptite;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  attentionLabel = LocalizationManager__Get((System_String_o *)StringLiteral_9932/*"OPTION_SMOOTHNESS_ATTENTION"*/, 0LL);
+  attentionLabel = LocalizationManager__Get((System_String_o *)StringLiteral_9991/*"OPTION_SMOOTHNESS_ATTENTION"*/, 0LL);
   if ( !titleSptite
     || (UILabel__set_text(titleSptite, attentionLabel, 0LL),
-        v7 = (System_String_array *)sub_B706AC(string___TypeInfo, 2LL),
-        attentionLabel = LocalizationManager__Get((System_String_o *)StringLiteral_9933/*"OPTION_SMOOTHNESS_BUTTON_1"*/, 0LL),
+        v7 = (System_String_array *)sub_B775DC(string___TypeInfo, 2LL),
+        attentionLabel = LocalizationManager__Get((System_String_o *)StringLiteral_9992/*"OPTION_SMOOTHNESS_BUTTON_1"*/, 0LL),
         !v7) )
   {
 LABEL_25:
-    sub_B7076C(attentionLabel, v6);
+    sub_B7769C(attentionLabel, v6);
   }
   v14 = (System_Int32_array **)attentionLabel;
   if ( attentionLabel )
   {
-    attentionLabel = (System_String_o *)sub_B70754(attentionLabel, v7->obj.klass->_1.element_class);
+    attentionLabel = (System_String_o *)sub_B77684(attentionLabel, v7->obj.klass->_1.element_class);
     if ( !attentionLabel )
       goto LABEL_27;
   }
   if ( !v7->max_length )
     goto LABEL_26;
   v7->m_Items[0] = (System_String_o *)v14;
-  sub_B70630((BattleServantConfConponent_o *)v7->m_Items, v14, v8, v9, v10, v11, v12, v13);
-  attentionLabel = LocalizationManager__Get((System_String_o *)StringLiteral_9934/*"OPTION_SMOOTHNESS_BUTTON_2"*/, 0LL);
+  sub_B77560((BattleServantConfConponent_o *)v7->m_Items, v14, v8, v9, v10, v11, v12, v13);
+  attentionLabel = LocalizationManager__Get((System_String_o *)StringLiteral_9993/*"OPTION_SMOOTHNESS_BUTTON_2"*/, 0LL);
   v21 = (System_Int32_array **)attentionLabel;
   if ( attentionLabel )
   {
-    attentionLabel = (System_String_o *)sub_B70754(attentionLabel, v7->obj.klass->_1.element_class);
+    attentionLabel = (System_String_o *)sub_B77684(attentionLabel, v7->obj.klass->_1.element_class);
     if ( !attentionLabel )
     {
 LABEL_27:
-      v32 = sub_B7078C(attentionLabel);
-      sub_B70738(v32, 0LL);
+      v32 = sub_B776BC(attentionLabel);
+      sub_B77668(v32, 0LL);
     }
   }
   if ( v7->max_length <= 1 )
   {
 LABEL_26:
-    v31 = sub_B70798(attentionLabel);
-    sub_B70738(v31, 0LL);
+    v31 = sub_B776C8(attentionLabel);
+    sub_B77668(v31, 0LL);
   }
   v7->m_Items[1] = (System_String_o *)v21;
-  sub_B70630((BattleServantConfConponent_o *)&v7->m_Items[1], v21, v15, v16, v17, v18, v19, v20);
+  sub_B77560((BattleServantConfConponent_o *)&v7->m_Items[1], v21, v15, v16, v17, v18, v19, v20);
   attentionLabel = (System_String_o *)this->fields.attentionLabel;
   if ( !attentionLabel )
     goto LABEL_25;
@@ -133,16 +133,16 @@ LABEL_26:
     1,
     0LL);
   v23 = this->fields.attentionLabel;
-  v24 = (System_Action_int__o *)sub_B70764(System_Action_int__TypeInfo);
+  v24 = (System_Action_int__o *)sub_B77694(System_Action_int__TypeInfo);
   System_Action_int____ctor(
     v24,
     (Il2CppObject *)this,
     Method_SetSmoothnessControl__Init_b__5_0__,
-    (const MethodInfo_264ABB8 *)Method_System_Action_int___ctor__);
+    (const MethodInfo_269F2D8 *)Method_System_Action_int___ctor__);
   if ( !v23 )
     goto LABEL_25;
   v23->fields.rightAnchor = (struct UIRect_AnchorPoint_o *)v24;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v23->fields.rightAnchor,
     (System_Int32_array **)v24,
     v25,
@@ -159,17 +159,17 @@ void __fastcall SetSmoothnessControl__Reflection(SetSmoothnessControl_o *this, c
   bool Value; // w19
   System_Nullable_bool__o v4; // 0:w0.2
 
-  if ( (byte_435630A & 1) == 0 )
+  if ( (byte_438F988 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Nullable_bool__get_HasValue__);
-    sub_B70694(&Method_System_Nullable_bool__get_Value__);
-    sub_B70694(&OptionManager_TypeInfo);
-    byte_435630A = 1;
+    sub_B775C4(&Method_System_Nullable_bool__get_HasValue__);
+    sub_B775C4(&Method_System_Nullable_bool__get_Value__);
+    sub_B775C4(&OptionManager_TypeInfo);
+    byte_438F988 = 1;
   }
   if ( BYTE1(this[1].klass) )
   {
     v4 = (System_Nullable_bool__o)((_WORD)this + 56);
-    Value = System_Nullable_bool___get_Value(v4, (const MethodInfo_2434D60 *)Method_System_Nullable_bool__get_Value__);
+    Value = System_Nullable_bool___get_Value(v4, (const MethodInfo_24731B4 *)Method_System_Nullable_bool__get_Value__);
     if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !OptionManager_TypeInfo->_2.cctor_finished )
     {
@@ -188,18 +188,18 @@ void __fastcall SetSmoothnessControl___Init_b__5_0(
   __int16 *v5; // x0
   __int16 v6; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_435630B & 1) == 0 )
+  if ( (byte_438F989 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Nullable_bool___ctor__);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_435630B = 1;
+    sub_B775C4(&Method_System_Nullable_bool___ctor__);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438F989 = 1;
   }
   v5 = &v6;
   v6 = 0;
   System_Nullable_bool____ctor(
     (System_Nullable_bool__o)v5,
     selectedIndex > 0,
-    (const MethodInfo_2434D44 *)Method_System_Nullable_bool___ctor__);
+    (const MethodInfo_2473198 *)Method_System_Nullable_bool___ctor__);
   LOWORD(this[1].klass) = v6;
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);

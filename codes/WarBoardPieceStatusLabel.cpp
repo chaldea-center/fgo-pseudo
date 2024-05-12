@@ -13,12 +13,12 @@ void __fastcall WarBoardPieceStatusLabel__SetupLabel(
   BattleServantData_o *battleServant_k__BackingField; // x0
   UILabel_o *v7; // x19
 
-  if ( (byte_43539B0 & 1) == 0 )
+  if ( (byte_438D1E6 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_15472/*"WARBOARD_SERVANT_STATUS_PERMANENT_SLEEP"*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43539B0 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_15542/*"WARBOARD_SERVANT_STATUS_PERMANENT_SLEEP"*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438D1E6 = 1;
   }
   label = this->fields.label;
   if ( !label )
@@ -36,13 +36,13 @@ void __fastcall WarBoardPieceStatusLabel__SetupLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    label = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15472/*"WARBOARD_SERVANT_STATUS_PERMANENT_SLEEP"*/, 0LL);
+    label = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15542/*"WARBOARD_SERVANT_STATUS_PERMANENT_SLEEP"*/, 0LL);
     if ( v7 )
     {
       UILabel__set_text(v7, (System_String_o *)label, 0LL);
       return;
     }
 LABEL_13:
-    sub_B7076C(label, pieceData);
+    sub_B7769C(label, pieceData);
   }
 }

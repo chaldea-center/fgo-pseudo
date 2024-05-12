@@ -1,14 +1,14 @@
 void __fastcall FriendshipMaster___ctor(FriendshipMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_43540B2 & 1) == 0 )
+  if ( (byte_438D8D7 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string___ctor__);
-    byte_43540B2 = 1;
+    sub_B775C4(&Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string___ctor__);
+    byte_438D8D7 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     31,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ FriendshipEntity_o *__fastcall FriendshipMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_43540B0 & 1) == 0 )
+  if ( (byte_438D8D5 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string__GetEntity__);
-    byte_43540B0 = 1;
+    sub_B775C4(&Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string__GetEntity__);
+    byte_438D8D5 = 1;
   }
   PK = FriendshipEntity__CreatePK(id, rank, *(const MethodInfo **)&rank);
   return (FriendshipEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                  (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                  PK,
-                                 (const MethodInfo_21C0890 *)Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string__GetEntity__);
+                                 (const MethodInfo_21FBCE4 *)Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string__GetEntity__);
 }
 
 
@@ -60,11 +60,11 @@ bool __fastcall FriendshipMaster__GetFriendshipRank(
   int32_t v29; // [xsp+1Ch] [xbp-54h] BYREF
 
   v29 = friendshipId;
-  if ( (byte_43540B3 & 1) == 0 )
+  if ( (byte_438D8D8 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_TryGetEntityFromId_FriendshipEntity___);
-    sub_B70694(&StringLiteral_1250/*":"*/);
-    byte_43540B3 = 1;
+    sub_B775C4(&Method_DataMasterBase_TryGetEntityFromId_FriendshipEntity___);
+    sub_B775C4(&StringLiteral_1252/*":"*/);
+    byte_438D8D8 = 1;
   }
   result = 0LL;
   *rank = -1;
@@ -76,13 +76,13 @@ bool __fastcall FriendshipMaster__GetFriendshipRank(
   {
     v20 = System_Int32__ToString((int32_t)&v29, 0LL);
     v21 = System_Int32__ToString((int32_t)max, 0LL);
-    v22 = System_String__Concat_44760452(v20, (System_String_o *)StringLiteral_1250/*":"*/, v21, 0LL);
+    v22 = System_String__Concat_44904220(v20, (System_String_o *)StringLiteral_1252/*":"*/, v21, 0LL);
     result = 0LL;
     EntityFromId_ServantVoiceEntity = DataMasterBase__TryGetEntityFromId_ServantVoiceEntity_(
                                         (DataMasterBase_o *)this,
                                         &result,
                                         v22,
-                                        (const MethodInfo_1CA3A78 *)Method_DataMasterBase_TryGetEntityFromId_FriendshipEntity___);
+                                        (const MethodInfo_1D188C8 *)Method_DataMasterBase_TryGetEntityFromId_FriendshipEntity___);
     if ( !EntityFromId_ServantVoiceEntity )
       break;
     if ( v15 <= friendship )
@@ -91,7 +91,7 @@ bool __fastcall FriendshipMaster__GetFriendshipRank(
       v17 = result;
       if ( !result )
 LABEL_23:
-        sub_B7076C(EntityFromId_ServantVoiceEntity, v24);
+        sub_B7769C(EntityFromId_ServantVoiceEntity, v24);
       type = result->fields.type;
       v19 = type < 1;
       if ( type < 1 )
@@ -133,17 +133,17 @@ bool __fastcall FriendshipMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_43540B1 & 1) == 0 )
+  if ( (byte_438D8D6 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string__TryGetEntity__);
-    byte_43540B1 = 1;
+    sub_B775C4(&Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string__TryGetEntity__);
+    byte_438D8D6 = 1;
   }
   PK = FriendshipEntity__CreatePK(id, rank, *(const MethodInfo **)&id);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string__TryGetEntity__);
 }
 
 
@@ -203,21 +203,21 @@ int32_t __fastcall FriendshipMaster__getRankMax(FriendshipMaster_o *this, int32_
   int32_t v17; // [xsp+Ch] [xbp-24h] BYREF
 
   v17 = id;
-  if ( (byte_43540B4 & 1) == 0 )
+  if ( (byte_438D8D9 & 1) == 0 )
   {
-    sub_B70694(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo);
-    sub_B70694(&StringLiteral_1250/*":"*/);
-    byte_43540B4 = 1;
+    sub_B775C4(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo);
+    sub_B775C4(&StringLiteral_1252/*":"*/);
+    byte_438D8D9 = 1;
   }
   for ( i = 0; ; i = v16 + 1 )
   {
     v16 = i;
     v5 = System_Int32__ToString((int32_t)&v17, 0LL);
     v6 = System_Int32__ToString((int32_t)&v16, 0LL);
-    v7 = System_String__Concat_44760452(v5, (System_String_o *)StringLiteral_1250/*":"*/, v6, 0LL);
+    v7 = System_String__Concat_44904220(v5, (System_String_o *)StringLiteral_1252/*":"*/, v6, 0LL);
     lookup = DataMasterBase__get_lookup((DataMasterBase_o *)this, 0LL);
     if ( !lookup )
-      sub_B7076C(0LL, v9);
+      sub_B7769C(0LL, v9);
     klass = lookup->klass;
     v11 = lookup;
     if ( *(_WORD *)&lookup->klass->_2.bitflags1 )
@@ -236,7 +236,7 @@ int32_t __fastcall FriendshipMaster__getRankMax(FriendshipMaster_o *this, int32_
     else
     {
 LABEL_10:
-      p_method = sub_B08590(
+      p_method = sub_B0F4C0(
                    lookup,
                    System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo,
                    0LL);

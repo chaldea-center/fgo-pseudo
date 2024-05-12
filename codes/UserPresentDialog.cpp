@@ -1,9 +1,9 @@
 void __fastcall UserPresentDialog___cctor(const MethodInfo *method)
 {
-  if ( (byte_434FCE7 & 1) == 0 )
+  if ( (byte_43892D0 & 1) == 0 )
   {
-    sub_B70694(&UserPresentDialog_TypeInfo);
-    byte_434FCE7 = 1;
+    sub_B775C4(&UserPresentDialog_TypeInfo);
+    byte_43892D0 = 1;
   }
   UserPresentDialog_TypeInfo->static_fields->MESSAGE_RECIEVE_POS_Y = 50;
   UserPresentDialog_TypeInfo->static_fields->LEFT_POS_X = -158;
@@ -46,18 +46,18 @@ void __fastcall UserPresentDialog__OpenRecieve(
   UILabel_o *decideLabel; // x19
   int32_t PresentBoxCheckMax; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_434FCE5 & 1) == 0 )
+  if ( (byte_43892CE & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&UserPresentDialog_TypeInfo);
-    sub_B70694(&StringLiteral_10654/*"PRESENT_RECIEVE_DIALOG_DECIDE"*/);
-    sub_B70694(&StringLiteral_10657/*"PRESENT_RECIEVE_DIALOG_TITLE"*/);
-    sub_B70694(&StringLiteral_10656/*"PRESENT_RECIEVE_DIALOG_SUBTITLE_SMALL"*/);
-    sub_B70694(&StringLiteral_10655/*"PRESENT_RECIEVE_DIALOG_SUBTITLE"*/);
-    sub_B70694(&StringLiteral_10653/*"PRESENT_RECIEVE_DIALOG_CANCEL"*/);
-    byte_434FCE5 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&UserPresentDialog_TypeInfo);
+    sub_B775C4(&StringLiteral_10713/*"PRESENT_RECIEVE_DIALOG_DECIDE"*/);
+    sub_B775C4(&StringLiteral_10716/*"PRESENT_RECIEVE_DIALOG_TITLE"*/);
+    sub_B775C4(&StringLiteral_10715/*"PRESENT_RECIEVE_DIALOG_SUBTITLE_SMALL"*/);
+    sub_B775C4(&StringLiteral_10714/*"PRESENT_RECIEVE_DIALOG_SUBTITLE"*/);
+    sub_B775C4(&StringLiteral_10712/*"PRESENT_RECIEVE_DIALOG_CANCEL"*/);
+    byte_43892CE = 1;
   }
   messageRoot = this->fields.messageRoot;
   v10 = UserPresentDialog_TypeInfo;
@@ -74,7 +74,7 @@ void __fastcall UserPresentDialog__OpenRecieve(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  decideButton = LocalizationManager__Get((System_String_o *)StringLiteral_10655/*"PRESENT_RECIEVE_DIALOG_SUBTITLE"*/, 0LL);
+  decideButton = LocalizationManager__Get((System_String_o *)StringLiteral_10714/*"PRESENT_RECIEVE_DIALOG_SUBTITLE"*/, 0LL);
   if ( !subtitle )
     goto LABEL_19;
   UILabel__set_text(subtitle, decideButton, 0LL);
@@ -87,7 +87,7 @@ void __fastcall UserPresentDialog__OpenRecieve(
     (float)UserPresentDialog_TypeInfo->static_fields->SUB_TITLE_RECIEVE_POS_Y,
     0LL);
   subtitleSmall = this->fields.subtitleSmall;
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_10656/*"PRESENT_RECIEVE_DIALOG_SUBTITLE_SMALL"*/, 0LL);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_10715/*"PRESENT_RECIEVE_DIALOG_SUBTITLE_SMALL"*/, 0LL);
   v18 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -109,18 +109,18 @@ void __fastcall UserPresentDialog__OpenRecieve(
   if ( !decideButton )
     goto LABEL_19;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)decideButton, 1, 0LL);
-  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_10657/*"PRESENT_RECIEVE_DIALOG_TITLE"*/, 0LL);
+  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_10716/*"PRESENT_RECIEVE_DIALOG_TITLE"*/, 0LL);
   TextLabelScrollDialog__Open((TextLabelScrollDialog_o *)this, v20, message, closeAction, decideAction, 0LL);
   closeLabel = this->fields.closeLabel;
-  decideButton = LocalizationManager__Get((System_String_o *)StringLiteral_10653/*"PRESENT_RECIEVE_DIALOG_CANCEL"*/, 0LL);
+  decideButton = LocalizationManager__Get((System_String_o *)StringLiteral_10712/*"PRESENT_RECIEVE_DIALOG_CANCEL"*/, 0LL);
   if ( !closeLabel
     || (UILabel__set_text(closeLabel, decideButton, 0LL),
         decideLabel = this->fields.decideLabel,
-        decideButton = LocalizationManager__Get((System_String_o *)StringLiteral_10654/*"PRESENT_RECIEVE_DIALOG_DECIDE"*/, 0LL),
+        decideButton = LocalizationManager__Get((System_String_o *)StringLiteral_10713/*"PRESENT_RECIEVE_DIALOG_DECIDE"*/, 0LL),
         !decideLabel) )
   {
 LABEL_19:
-    sub_B7076C(decideButton, v13);
+    sub_B7769C(decideButton, v13);
   }
   UILabel__set_text(decideLabel, decideButton, 0LL);
 }
@@ -128,10 +128,10 @@ LABEL_19:
 
 System_String_o *__fastcall UserPresentDialog__get_closeBtnPath(UserPresentDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_434FCE6 & 1) == 0 )
+  if ( (byte_43892CF & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_15700/*"Window/CloseButton"*/);
-    byte_434FCE6 = 1;
+    sub_B775C4(&StringLiteral_15770/*"Window/CloseButton"*/);
+    byte_43892CF = 1;
   }
-  return (System_String_o *)StringLiteral_15700/*"Window/CloseButton"*/;
+  return (System_String_o *)StringLiteral_15770/*"Window/CloseButton"*/;
 }

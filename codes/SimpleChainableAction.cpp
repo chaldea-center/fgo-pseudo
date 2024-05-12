@@ -12,7 +12,7 @@ void __fastcall SimpleChainableAction___ctor(
 
   ChainableActionBase___ctor((ChainableActionBase_o *)this, 0LL);
   this->fields.sysChainAction = action;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.sysChainAction,
     (System_Int32_array **)action,
     v5,
@@ -53,17 +53,17 @@ SimpleChainableAction_array *__fastcall SimpleChainableAction__ConvertToChainabl
   __int64 v25; // x0
 
   v2 = sysActions;
-  if ( (byte_43528BA & 1) == 0 )
+  if ( (byte_438C036 & 1) == 0 )
   {
-    sub_B70694(&SimpleChainableAction___TypeInfo);
-    sysActions = (System_Action_Action__array *)sub_B70694(&SimpleChainableAction_TypeInfo);
-    byte_43528BA = 1;
+    sub_B775C4(&SimpleChainableAction___TypeInfo);
+    sysActions = (System_Action_Action__array *)sub_B775C4(&SimpleChainableAction_TypeInfo);
+    byte_438C036 = 1;
   }
   if ( !v2 )
 LABEL_14:
-    sub_B7076C(sysActions, method);
+    sub_B7769C(sysActions, method);
   v3 = *(_QWORD *)&v2->max_length;
-  sysActions = (System_Action_Action__array *)sub_B706AC(SimpleChainableAction___TypeInfo, (unsigned int)v3);
+  sysActions = (System_Action_Action__array *)sub_B775DC(SimpleChainableAction___TypeInfo, (unsigned int)v3);
   v4 = sysActions;
   if ( (int)v3 >= 1 )
   {
@@ -76,29 +76,29 @@ LABEL_14:
       if ( v5 >= v2->max_length )
         goto LABEL_13;
       v9 = *m_Items;
-      v10 = sub_B70764(SimpleChainableAction_TypeInfo);
+      v10 = sub_B77694(SimpleChainableAction_TypeInfo);
       ChainableActionBase___ctor((ChainableActionBase_o *)v10, 0LL);
       *(_QWORD *)(v10 + 40) = v9;
-      sub_B70630((BattleServantConfConponent_o *)(v10 + 40), v9, v11, v12, v13, v14, v15, v16);
+      sub_B77560((BattleServantConfConponent_o *)(v10 + 40), v9, v11, v12, v13, v14, v15, v16);
       if ( !v4 )
         goto LABEL_14;
       if ( v10 )
       {
-        sysActions = (System_Action_Action__array *)sub_B70754(v10, v4->obj.klass->_1.element_class);
+        sysActions = (System_Action_Action__array *)sub_B77684(v10, v4->obj.klass->_1.element_class);
         if ( !sysActions )
         {
-          v25 = sub_B7078C(0LL);
-          sub_B70738(v25, 0LL);
+          v25 = sub_B776BC(0LL);
+          sub_B77668(v25, 0LL);
         }
       }
       if ( v5 >= v4->max_length )
       {
 LABEL_13:
-        v24 = sub_B70798(sysActions);
-        sub_B70738(v24, 0LL);
+        v24 = sub_B776C8(sysActions);
+        sub_B77668(v24, 0LL);
       }
       v8->klass = (BattleServantConfConponent_c *)v10;
-      sub_B70630(v8, (System_Int32_array **)v10, v17, v18, v19, v20, v21, v22);
+      sub_B77560(v8, (System_Int32_array **)v10, v17, v18, v19, v20, v21, v22);
       ++v5;
       ++m_Items;
       v8 = (BattleServantConfConponent_o *)((char *)v8 + 8);
@@ -116,20 +116,20 @@ void __fastcall SimpleChainableAction__ExecuteOnDetail(SimpleChainableAction_o *
   __int64 v5; // x1
   BlankEarth_QAARotateEarthResponse_o *v6; // x21
 
-  if ( (byte_43528B9 & 1) == 0 )
+  if ( (byte_438C035 & 1) == 0 )
   {
-    sub_B70694(&Method_ActionExtensions_Call_Action___);
-    sub_B70694(&System_Action_TypeInfo);
-    byte_43528B9 = 1;
+    sub_B775C4(&Method_ActionExtensions_Call_Action___);
+    sub_B775C4(&System_Action_TypeInfo);
+    byte_438C035 = 1;
   }
   sysChainAction = (System_Action_T__o *)this->fields.sysChainAction;
-  v4 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   if ( !this )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   v6 = (BlankEarth_QAARotateEarthResponse_o *)v4;
   System_Action___ctor(v4, (Il2CppObject *)this, (intptr_t)this->klass[1]._1.image, 0LL);
   ActionExtensions__Call_BlankEarth_QAARotateEarthResponse_(
     sysChainAction,
     v6,
-    (const MethodInfo_2BFC288 *)Method_ActionExtensions_Call_Action___);
+    (const MethodInfo_2C3C35C *)Method_ActionExtensions_Call_Action___);
 }

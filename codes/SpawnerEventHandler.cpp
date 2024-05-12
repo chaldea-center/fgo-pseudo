@@ -15,16 +15,16 @@ void __fastcall SpawnerEventHandler__Init(SpawnerEventHandler_o *this, const Met
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_4352742 & 1) == 0 )
+  if ( (byte_438BEBE & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
-    byte_4352742 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
+    byte_438BEBE = 1;
   }
   ComponentsInChildren_USTimelineContainer = (System_Int32_array **)UnityEngine_Component__GetComponentsInChildren_USTimelineContainer_(
                                                                       (UnityEngine_Component_o *)this,
-                                                                      (const MethodInfo_1BE43FC *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
+                                                                      (const MethodInfo_1C6DAB8 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
   *(_QWORD *)&this->fields.isInitilized = ComponentsInChildren_USTimelineContainer;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.isInitilized,
     ComponentsInChildren_USTimelineContainer,
     v4,
@@ -59,8 +59,8 @@ void __fastcall SpawnerEventHandler__OnDespawn(SpawnerEventHandler_o *this, cons
         break;
       if ( (unsigned int)v4 >= v5 )
       {
-        v6 = sub_B70798(this);
-        sub_B70738(v6, 0LL);
+        v6 = sub_B776C8(this);
+        sub_B77668(v6, 0LL);
       }
       this = *(SpawnerEventHandler_o **)(v3 + 8 * v4 + 32);
       if ( this )
@@ -71,7 +71,7 @@ void __fastcall SpawnerEventHandler__OnDespawn(SpawnerEventHandler_o *this, cons
         if ( v3 )
           continue;
       }
-      sub_B7076C(this, method);
+      sub_B7769C(this, method);
     }
   }
 }

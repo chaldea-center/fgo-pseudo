@@ -24,16 +24,16 @@ void __fastcall EventInfoChronologyButton__CallbackLoadAsset(
   TerminalSceneComponent_c *v16; // x0
   System_Nullable_Vector3__o v17; // 0:x2.16
 
-  if ( (byte_43534C8 & 1) == 0 )
+  if ( (byte_438CC4B & 1) == 0 )
   {
-    sub_B70694(&Method_AssetData_GetObject_GameObject____69232720);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_EventInfoChronologyDialog___);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&System_IO_Path_TypeInfo);
-    sub_B70694(&TerminalSceneComponent_TypeInfo);
-    sub_B70694(&StringLiteral_13788/*"Terminal/Info/TitleInfoChronologyDialogPrefab"*/);
-    byte_43534C8 = 1;
+    sub_B775C4(&Method_AssetData_GetObject_GameObject____69465408);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_EventInfoChronologyDialog___);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&System_IO_Path_TypeInfo);
+    sub_B775C4(&TerminalSceneComponent_TypeInfo);
+    sub_B775C4(&StringLiteral_13854/*"Terminal/Info/TitleInfoChronologyDialogPrefab"*/);
+    byte_438CC4B = 1;
   }
   if ( assetData )
   {
@@ -42,11 +42,11 @@ void __fastcall EventInfoChronologyButton__CallbackLoadAsset(
     {
       j_il2cpp_runtime_class_init_0(System_IO_Path_TypeInfo);
     }
-    FileName = System_IO_Path__GetFileName((System_String_o *)StringLiteral_13788/*"Terminal/Info/TitleInfoChronologyDialogPrefab"*/, 0LL);
+    FileName = System_IO_Path__GetFileName((System_String_o *)StringLiteral_13854/*"Terminal/Info/TitleInfoChronologyDialogPrefab"*/, 0LL);
     Object_WarBoardWaitTimeSetting = (UnityEngine_UI_Dropdown_DropdownItem_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                                  assetData,
                                                                                  FileName,
-                                                                                 (const MethodInfo_1BD6720 *)Method_AssetData_GetObject_GameObject____69232720);
+                                                                                 (const MethodInfo_1C5FDDC *)Method_AssetData_GetObject_GameObject____69465408);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
@@ -54,14 +54,14 @@ void __fastcall EventInfoChronologyButton__CallbackLoadAsset(
     }
     mInstance = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                               Object_WarBoardWaitTimeSetting,
-                                              (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                              (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !mInstance )
       goto LABEL_23;
     Component_srcLineSprite = (struct EventInfoChronologyDialog_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                       mInstance,
-                                                                      (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_EventInfoChronologyDialog___);
+                                                                      (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_EventInfoChronologyDialog___);
     this->fields.dialogChronology = Component_srcLineSprite;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.dialogChronology,
       (System_Int32_array **)Component_srcLineSprite,
       v10,
@@ -75,10 +75,10 @@ void __fastcall EventInfoChronologyButton__CallbackLoadAsset(
     {
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
     }
-    if ( !byte_434DEA1 )
+    if ( !byte_4387463 )
     {
-      sub_B70694(&TerminalSceneComponent_TypeInfo);
-      byte_434DEA1 = 1;
+      sub_B775C4(&TerminalSceneComponent_TypeInfo);
+      byte_4387463 = 1;
     }
     v16 = TerminalSceneComponent_TypeInfo;
     if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -99,7 +99,7 @@ void __fastcall EventInfoChronologyButton__CallbackLoadAsset(
           (mInstance = (UnityEngine_GameObject_o *)this->fields.button) == 0LL) )
     {
 LABEL_23:
-      sub_B7076C(mInstance, v8);
+      sub_B7769C(mInstance, v8);
     }
     UICommonButton__SetEnable((UICommonButton_o *)mInstance, 1, 0LL);
   }
@@ -120,21 +120,21 @@ void __fastcall EventInfoChronologyButton__InitButtonPosition(
   UnityEngine_GameObject_o *gameObject; // x0
   float recollectionPosY; // s0
 
-  if ( (byte_43534C6 & 1) == 0 )
+  if ( (byte_438CC49 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&TerminalSceneComponent_TypeInfo);
-    byte_43534C6 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&TerminalSceneComponent_TypeInfo);
+    byte_438CC49 = 1;
   }
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
   }
-  if ( !byte_434DEA1 )
+  if ( !byte_4387463 )
   {
-    sub_B70694(&TerminalSceneComponent_TypeInfo);
-    byte_434DEA1 = 1;
+    sub_B775C4(&TerminalSceneComponent_TypeInfo);
+    byte_4387463 = 1;
   }
   v3 = TerminalSceneComponent_TypeInfo;
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -156,10 +156,10 @@ void __fastcall EventInfoChronologyButton__InitButtonPosition(
     {
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
     }
-    if ( !byte_434DEA1 )
+    if ( !byte_4387463 )
     {
-      sub_B70694(&TerminalSceneComponent_TypeInfo);
-      byte_434DEA1 = 1;
+      sub_B775C4(&TerminalSceneComponent_TypeInfo);
+      byte_4387463 = 1;
     }
     v6 = TerminalSceneComponent_TypeInfo;
     if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -192,7 +192,7 @@ void __fastcall EventInfoChronologyButton__InitButtonPosition(
         return;
       }
     }
-    sub_B7076C(v6, v5);
+    sub_B7769C(v6, v5);
   }
 }
 
@@ -210,18 +210,18 @@ void __fastcall EventInfoChronologyButton__Initialization(
   AssetLoader_LoadEndDataHandler_o *v9; // x21
   const MethodInfo *v10; // x1
 
-  if ( (byte_43534C5 & 1) == 0 )
+  if ( (byte_438CC48 & 1) == 0 )
   {
-    sub_B70694(&AssetManager_TypeInfo);
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&Method_EventInfoChronologyButton_CallbackLoadAsset__);
-    sub_B70694(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&System_IO_Path_TypeInfo);
-    sub_B70694(&StringLiteral_13788/*"Terminal/Info/TitleInfoChronologyDialogPrefab"*/);
-    sub_B70694(&StringLiteral_17689/*"chronology_button"*/);
-    sub_B70694(&StringLiteral_3055/*"CHRONOLOGY_OPEN_BUTTON"*/);
-    byte_43534C5 = 1;
+    sub_B775C4(&AssetManager_TypeInfo);
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&Method_EventInfoChronologyButton_CallbackLoadAsset__);
+    sub_B775C4(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&System_IO_Path_TypeInfo);
+    sub_B775C4(&StringLiteral_13854/*"Terminal/Info/TitleInfoChronologyDialogPrefab"*/);
+    sub_B775C4(&StringLiteral_17772/*"chronology_button"*/);
+    sub_B775C4(&StringLiteral_3104/*"CHRONOLOGY_OPEN_BUTTON"*/);
+    byte_438CC48 = 1;
   }
   buttonLabel = this->fields.buttonLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -229,26 +229,26 @@ void __fastcall EventInfoChronologyButton__Initialization(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  button = LocalizationManager__Get((System_String_o *)StringLiteral_3055/*"CHRONOLOGY_OPEN_BUTTON"*/, 0LL);
+  button = LocalizationManager__Get((System_String_o *)StringLiteral_3104/*"CHRONOLOGY_OPEN_BUTTON"*/, 0LL);
   if ( !buttonLabel )
     goto LABEL_18;
   UILabel__set_text(buttonLabel, button, 0LL);
   buttonSprite = this->fields.buttonSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(buttonSprite, (System_String_o *)StringLiteral_17689/*"chronology_button"*/, 0LL);
+  AtlasManager__SetEventUI(buttonSprite, (System_String_o *)StringLiteral_17772/*"chronology_button"*/, 0LL);
   button = (System_String_o *)this->fields.button;
   if ( !button )
 LABEL_18:
-    sub_B7076C(button, v6);
+    sub_B7769C(button, v6);
   UICommonButton__SetEnable((UICommonButton_o *)button, 0, 0LL);
   if ( (BYTE3(System_IO_Path_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !System_IO_Path_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(System_IO_Path_TypeInfo);
   }
-  DirectoryName = System_IO_Path__GetDirectoryName((System_String_o *)StringLiteral_13788/*"Terminal/Info/TitleInfoChronologyDialogPrefab"*/, 0LL);
-  v9 = (AssetLoader_LoadEndDataHandler_o *)sub_B70764(AssetLoader_LoadEndDataHandler_TypeInfo);
+  DirectoryName = System_IO_Path__GetDirectoryName((System_String_o *)StringLiteral_13854/*"Terminal/Info/TitleInfoChronologyDialogPrefab"*/, 0LL);
+  v9 = (AssetLoader_LoadEndDataHandler_o *)sub_B77694(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v9,
     (Il2CppObject *)this,
@@ -280,14 +280,14 @@ void __fastcall EventInfoChronologyButton__OnClickOpen(EventInfoChronologyButton
   System_Int32_array *v17; // x6
   System_Int32_array *v18; // x7
 
-  if ( (byte_43534C4 & 1) == 0 )
+  if ( (byte_438CC47 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&SoundManager_TypeInfo);
-    sub_B70694(&Method_EventInfoChronologyButton___c__OnClickOpen_b__9_0__);
-    sub_B70694(&EventInfoChronologyButton___c_TypeInfo);
-    byte_43534C4 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&SoundManager_TypeInfo);
+    sub_B775C4(&Method_EventInfoChronologyButton___c__OnClickOpen_b__9_0__);
+    sub_B775C4(&EventInfoChronologyButton___c_TypeInfo);
+    byte_438CC47 = 1;
   }
   dialogChronology = (UnityEngine_Object_o *)this->fields.dialogChronology;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -327,11 +327,11 @@ void __fastcall EventInfoChronologyButton__OnClickOpen(EventInfoChronologyButton
           static_fields = EventInfoChronologyButton___c_TypeInfo->static_fields;
         }
         v11 = (Il2CppObject *)static_fields->__9;
-        _9__9_0 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+        _9__9_0 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
         System_Action___ctor(_9__9_0, v11, Method_EventInfoChronologyButton___c__OnClickOpen_b__9_0__, 0LL);
         v12 = EventInfoChronologyButton___c_TypeInfo->static_fields;
         v12->__9__9_0 = _9__9_0;
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)&v12->__9__9_0,
           (System_Int32_array **)_9__9_0,
           v13,
@@ -347,7 +347,7 @@ void __fastcall EventInfoChronologyButton__OnClickOpen(EventInfoChronologyButton
         return;
       }
 LABEL_23:
-      sub_B7076C(v4, v5);
+      sub_B7769C(v4, v5);
     }
   }
 }
@@ -375,10 +375,10 @@ void __fastcall EventInfoChronologyButton__ReleaseAsset(EventInfoChronologyButto
   System_Int32_array *v12; // x6
   System_Int32_array *v13; // x7
 
-  if ( (byte_43534C7 & 1) == 0 )
+  if ( (byte_438CC4A & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43534C7 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438CC4A = 1;
   }
   dialogChronology = this->fields.dialogChronology;
   p_dialogChronology = (UnityEngine_Component_o **)&this->fields.dialogChronology;
@@ -391,16 +391,16 @@ void __fastcall EventInfoChronologyButton__ReleaseAsset(EventInfoChronologyButto
   if ( UnityEngine_Object__op_Inequality(v4, 0LL, 0LL) )
   {
     if ( !*p_dialogChronology )
-      sub_B7076C(0LL, v6);
+      sub_B7769C(0LL, v6);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(*p_dialogChronology, 0LL);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_36067208(gameObject, 0LL);
+    UnityEngine_Object__Destroy_36309980(gameObject, 0LL);
     *p_dialogChronology = 0LL;
-    sub_B70630((BattleServantConfConponent_o *)p_dialogChronology, 0LL, v8, v9, v10, v11, v12, v13);
+    sub_B77560((BattleServantConfConponent_o *)p_dialogChronology, 0LL, v8, v9, v10, v11, v12, v13);
   }
 }
 
@@ -415,7 +415,7 @@ void __fastcall EventInfoChronologyButton__SwitchSpotState(
 
   button = (UnityEngine_Component_o *)this->fields.button;
   if ( !button || (button = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(button, 0LL)) == 0LL )
-    sub_B7076C(button, isOpen);
+    sub_B7769C(button, isOpen);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)button, !isOpen, 0LL);
 }
 
@@ -425,16 +425,16 @@ void __fastcall EventInfoChronologyButton___c___cctor(const MethodInfo *method)
   Il2CppObject *v1; // x19
   struct EventInfoChronologyButton___c_StaticFields *static_fields; // x0
 
-  if ( (byte_434F06E & 1) == 0 )
+  if ( (byte_438864E & 1) == 0 )
   {
-    sub_B70694(&EventInfoChronologyButton___c_TypeInfo);
-    byte_434F06E = 1;
+    sub_B775C4(&EventInfoChronologyButton___c_TypeInfo);
+    byte_438864E = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(EventInfoChronologyButton___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(EventInfoChronologyButton___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = EventInfoChronologyButton___c_TypeInfo->static_fields;
   static_fields->__9 = (struct EventInfoChronologyButton___c_o *)v1;
-  sub_B70630(static_fields);
+  sub_B77560(static_fields);
 }
 
 

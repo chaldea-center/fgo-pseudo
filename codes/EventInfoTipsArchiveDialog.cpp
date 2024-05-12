@@ -33,17 +33,17 @@ void __fastcall EventInfoTipsArchiveDialog___ctor(EventInfoTipsArchiveDialog_o *
   UnityEngine_Color_o v33; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v34; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4352E57 & 1) == 0 )
+  if ( (byte_438C5D6 & 1) == 0 )
   {
-    sub_B70694(&BaseDialog_TypeInfo);
-    sub_B70694(&StringLiteral_17216/*"btn_bg_08"*/);
-    sub_B70694(&StringLiteral_17217/*"btn_bg_09"*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4352E57 = 1;
+    sub_B775C4(&BaseDialog_TypeInfo);
+    sub_B775C4(&StringLiteral_17299/*"btn_bg_08"*/);
+    sub_B775C4(&StringLiteral_17300/*"btn_bg_09"*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438C5D6 = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_17217/*"btn_bg_09"*/;
-  this->fields.onButtonName = (struct System_String_o *)StringLiteral_17217/*"btn_bg_09"*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.onButtonName, v9, v2, v3, v4, v5, v6, v7);
+  v9 = (System_Int32_array **)StringLiteral_17300/*"btn_bg_09"*/;
+  this->fields.onButtonName = (struct System_String_o *)StringLiteral_17300/*"btn_bg_09"*/;
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.onButtonName, v9, v2, v3, v4, v5, v6, v7);
   v33.fields.g = 0.20784;
   v33.fields.b = 0.20392;
   v33.fields.r = 1.0;
@@ -52,9 +52,9 @@ void __fastcall EventInfoTipsArchiveDialog___ctor(EventInfoTipsArchiveDialog_o *
   var40.klass = 0LL;
   UnityEngine_Color___ctor(v33, v10, v11, v12, v13, (const MethodInfo *)&var40.name);
   this->fields.onButtonOutlineColor = *(struct UnityEngine_Color_o *)&var40.name;
-  v14 = (System_Int32_array **)StringLiteral_17216/*"btn_bg_08"*/;
-  this->fields.offButtonName = (struct System_String_o *)StringLiteral_17216/*"btn_bg_08"*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.offButtonName, v14, v15, v16, v17, v18, v19, v20);
+  v14 = (System_Int32_array **)StringLiteral_17299/*"btn_bg_08"*/;
+  this->fields.offButtonName = (struct System_String_o *)StringLiteral_17299/*"btn_bg_08"*/;
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.offButtonName, v14, v15, v16, v17, v18, v19, v20);
   v34.fields.r = 0.0;
   v34.fields.g = 0.0;
   v34.fields.b = 0.0;
@@ -64,7 +64,7 @@ void __fastcall EventInfoTipsArchiveDialog___ctor(EventInfoTipsArchiveDialog_o *
   this->fields.offButtonOutlineColor = *(struct UnityEngine_Color_o *)&var40.methodPointer;
   v25 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.tabDisabledText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.tabDisabledText, v25, v26, v27, v28, v29, v30, v31);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.tabDisabledText, v25, v26, v27, v28, v29, v30, v31);
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
@@ -99,8 +99,8 @@ int32_t __fastcall EventInfoTipsArchiveDialog__GetAllNewDispCount(
       {
         if ( v6 >= max_length )
         {
-          v10 = sub_B70798(this);
-          sub_B70738(v10, 0LL);
+          v10 = sub_B776C8(this);
+          sub_B77668(v10, 0LL);
         }
         v8 = tabDataList->m_Items[v6];
         if ( !v8 )
@@ -121,7 +121,7 @@ int32_t __fastcall EventInfoTipsArchiveDialog__GetAllNewDispCount(
           return v7;
       }
 LABEL_14:
-      sub_B7076C(this, method);
+      sub_B7769C(this, method);
     }
   }
   return 0;
@@ -140,7 +140,7 @@ void __fastcall EventInfoTipsArchiveDialog__Init(EventInfoTipsArchiveDialog_o *t
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   this->fields.buttonUpdateAction = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.buttonUpdateAction, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.buttonUpdateAction, 0LL, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -159,10 +159,10 @@ void __fastcall EventInfoTipsArchiveDialog__OnClickCharacterTab(
   __int64 v10; // x0
 
   v2 = this;
-  if ( (byte_4352E50 & 1) == 0 )
+  if ( (byte_438C5CF & 1) == 0 )
   {
-    this = (EventInfoTipsArchiveDialog_o *)sub_B70694(&Method_EventInfoTipsArchiveDialog_OnClickCharacterTab__);
-    byte_4352E50 = 1;
+    this = (EventInfoTipsArchiveDialog_o *)sub_B775C4(&Method_EventInfoTipsArchiveDialog_OnClickCharacterTab__);
+    byte_438C5CF = 1;
   }
   if ( v2->fields.state == 2 && v2->fields.currentTabKind )
   {
@@ -171,8 +171,8 @@ void __fastcall EventInfoTipsArchiveDialog__OnClickCharacterTab(
       goto LABEL_15;
     if ( !tabDataList->max_length )
     {
-      v10 = sub_B70798(this);
-      sub_B70738(v10, 0LL);
+      v10 = sub_B776C8(this);
+      sub_B77668(v10, 0LL);
     }
     v4 = tabDataList->m_Items[0];
     if ( !v4 )
@@ -180,8 +180,8 @@ void __fastcall EventInfoTipsArchiveDialog__OnClickCharacterTab(
     IsOpened_k__BackingField = v4->fields._IsOpened_k__BackingField;
     v6 = Method_EventInfoTipsArchiveDialog_OnClickCharacterTab__;
     if ( (*((_BYTE *)Method_EventInfoTipsArchiveDialog_OnClickCharacterTab__ + 75) & 2) != 0 )
-      v6 = (_QWORD *)sub_B7069C(Method_EventInfoTipsArchiveDialog_OnClickCharacterTab__);
-    v7 = (System_Reflection_MethodBase_o *)sub_B70678(v6, v6[3]);
+      v6 = (_QWORD *)sub_B775CC(Method_EventInfoTipsArchiveDialog_OnClickCharacterTab__);
+    v7 = (System_Reflection_MethodBase_o *)sub_B775A8(v6, v6[3]);
     if ( IsOpened_k__BackingField )
     {
       OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0LL);
@@ -194,7 +194,7 @@ void __fastcall EventInfoTipsArchiveDialog__OnClickCharacterTab(
         return;
       }
 LABEL_15:
-      sub_B7076C(this, method);
+      sub_B7769C(this, method);
     }
     OverwriteAssetSoundName__PlaySystemSe(v7, 2, 0LL);
   }
@@ -215,20 +215,20 @@ void __fastcall EventInfoTipsArchiveDialog__OnClickCloseButton(
   TerminalPramsManager_c *v10; // x0
   System_Action_o *v11; // x20
 
-  if ( (byte_4352E53 & 1) == 0 )
+  if ( (byte_438C5D2 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_EventInfoTipsArchiveDialog_OnClickCloseButton__);
-    sub_B70694(&Method_EventInfoTipsArchiveDialog__OnClickCloseButton_b__28_0__);
-    sub_B70694(&TerminalPramsManager_TypeInfo);
-    byte_4352E53 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_EventInfoTipsArchiveDialog_OnClickCloseButton__);
+    sub_B775C4(&Method_EventInfoTipsArchiveDialog__OnClickCloseButton_b__28_0__);
+    sub_B775C4(&TerminalPramsManager_TypeInfo);
+    byte_438C5D2 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_EventInfoTipsArchiveDialog_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_EventInfoTipsArchiveDialog_OnClickCloseButton__ + 75) & 2) != 0 )
-      v3 = (_QWORD *)sub_B7069C(Method_EventInfoTipsArchiveDialog_OnClickCloseButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+      v3 = (_QWORD *)sub_B775CC(Method_EventInfoTipsArchiveDialog_OnClickCloseButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     mainInfo = this->fields.mainInfo;
     this->fields.state = 3;
@@ -248,9 +248,9 @@ void __fastcall EventInfoTipsArchiveDialog__OnClickCloseButton(
     v5 = this->fields.mainInfo;
     if ( !v5 )
 LABEL_13:
-      sub_B7076C(v5, v6);
+      sub_B7769C(v5, v6);
     EventInfoTipsArchiveListViewItem__SaveData(v5, v6);
-    v11 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v11 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     System_Action___ctor(
       v11,
       (Il2CppObject *)this,
@@ -276,10 +276,10 @@ void __fastcall EventInfoTipsArchiveDialog__OnClickTermsTab(
   __int64 v10; // x0
 
   v2 = this;
-  if ( (byte_4352E51 & 1) == 0 )
+  if ( (byte_438C5D0 & 1) == 0 )
   {
-    this = (EventInfoTipsArchiveDialog_o *)sub_B70694(&Method_EventInfoTipsArchiveDialog_OnClickTermsTab__);
-    byte_4352E51 = 1;
+    this = (EventInfoTipsArchiveDialog_o *)sub_B775C4(&Method_EventInfoTipsArchiveDialog_OnClickTermsTab__);
+    byte_438C5D0 = 1;
   }
   if ( v2->fields.state == 2 && v2->fields.currentTabKind != 1 )
   {
@@ -288,8 +288,8 @@ void __fastcall EventInfoTipsArchiveDialog__OnClickTermsTab(
     {
       if ( tabDataList->max_length <= 1 )
       {
-        v10 = sub_B70798(this);
-        sub_B70738(v10, 0LL);
+        v10 = sub_B776C8(this);
+        sub_B77668(v10, 0LL);
       }
       v4 = tabDataList->m_Items[1];
       if ( v4 )
@@ -297,8 +297,8 @@ void __fastcall EventInfoTipsArchiveDialog__OnClickTermsTab(
         IsOpened_k__BackingField = v4->fields._IsOpened_k__BackingField;
         v6 = Method_EventInfoTipsArchiveDialog_OnClickTermsTab__;
         if ( (*((_BYTE *)Method_EventInfoTipsArchiveDialog_OnClickTermsTab__ + 75) & 2) != 0 )
-          v6 = (_QWORD *)sub_B7069C(Method_EventInfoTipsArchiveDialog_OnClickTermsTab__);
-        v7 = (System_Reflection_MethodBase_o *)sub_B70678(v6, v6[3]);
+          v6 = (_QWORD *)sub_B775CC(Method_EventInfoTipsArchiveDialog_OnClickTermsTab__);
+        v7 = (System_Reflection_MethodBase_o *)sub_B775A8(v6, v6[3]);
         if ( !IsOpened_k__BackingField )
         {
           OverwriteAssetSoundName__PlaySystemSe(v7, 2, 0LL);
@@ -315,7 +315,7 @@ void __fastcall EventInfoTipsArchiveDialog__OnClickTermsTab(
         }
       }
     }
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
 }
 
@@ -335,10 +335,10 @@ void __fastcall EventInfoTipsArchiveDialog__OnClickWorldTab(
   __int64 v10; // x0
 
   v2 = this;
-  if ( (byte_4352E52 & 1) == 0 )
+  if ( (byte_438C5D1 & 1) == 0 )
   {
-    this = (EventInfoTipsArchiveDialog_o *)sub_B70694(&Method_EventInfoTipsArchiveDialog_OnClickWorldTab__);
-    byte_4352E52 = 1;
+    this = (EventInfoTipsArchiveDialog_o *)sub_B775C4(&Method_EventInfoTipsArchiveDialog_OnClickWorldTab__);
+    byte_438C5D1 = 1;
   }
   if ( v2->fields.state == 2 && v2->fields.currentTabKind != 2 )
   {
@@ -347,8 +347,8 @@ void __fastcall EventInfoTipsArchiveDialog__OnClickWorldTab(
     {
       if ( tabDataList->max_length <= 2 )
       {
-        v10 = sub_B70798(this);
-        sub_B70738(v10, 0LL);
+        v10 = sub_B776C8(this);
+        sub_B77668(v10, 0LL);
       }
       v4 = tabDataList->m_Items[2];
       if ( v4 )
@@ -356,8 +356,8 @@ void __fastcall EventInfoTipsArchiveDialog__OnClickWorldTab(
         IsOpened_k__BackingField = v4->fields._IsOpened_k__BackingField;
         v6 = Method_EventInfoTipsArchiveDialog_OnClickWorldTab__;
         if ( (*((_BYTE *)Method_EventInfoTipsArchiveDialog_OnClickWorldTab__ + 75) & 2) != 0 )
-          v6 = (_QWORD *)sub_B7069C(Method_EventInfoTipsArchiveDialog_OnClickWorldTab__);
-        v7 = (System_Reflection_MethodBase_o *)sub_B70678(v6, v6[3]);
+          v6 = (_QWORD *)sub_B775CC(Method_EventInfoTipsArchiveDialog_OnClickWorldTab__);
+        v7 = (System_Reflection_MethodBase_o *)sub_B775A8(v6, v6[3]);
         if ( !IsOpened_k__BackingField )
         {
           OverwriteAssetSoundName__PlaySystemSe(v7, 2, 0LL);
@@ -374,7 +374,7 @@ void __fastcall EventInfoTipsArchiveDialog__OnClickWorldTab(
         }
       }
     }
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
 }
 
@@ -400,19 +400,19 @@ void __fastcall EventInfoTipsArchiveDialog__Open(
   const MethodInfo *v18; // x2
   System_Action_o *v19; // x20
 
-  if ( (byte_4352E4E & 1) == 0 )
+  if ( (byte_438C5CD & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_EventInfoTipsArchiveDialog__Open_b__22_0__);
-    byte_4352E4E = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_EventInfoTipsArchiveDialog__Open_b__22_0__);
+    byte_438C5CD = 1;
   }
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   this->fields.buttonUpdateAction = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.buttonUpdateAction, 0LL, v5, v6, v7, v8, v9, v10);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.buttonUpdateAction, 0LL, v5, v6, v7, v8, v9, v10);
   this->fields.state = 1;
   this->fields.buttonUpdateAction = updateAction;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.buttonUpdateAction,
     (System_Int32_array **)updateAction,
     v11,
@@ -422,7 +422,7 @@ void __fastcall EventInfoTipsArchiveDialog__Open(
     v15,
     v16);
   EventInfoTipsArchiveDialog__SetTerminalTouchEnable(v17, 0, v18);
-  v19 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v19 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v19, (Il2CppObject *)this, Method_EventInfoTipsArchiveDialog__Open_b__22_0__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v19, 0, 0LL);
 }
@@ -443,10 +443,10 @@ void __fastcall EventInfoTipsArchiveDialog__SaveScrollBarValue(
   float value; // s0
   __int64 v12; // x0
 
-  if ( (byte_4352E55 & 1) == 0 )
+  if ( (byte_438C5D4 & 1) == 0 )
   {
-    sub_B70694(&TerminalPramsManager_TypeInfo);
-    byte_4352E55 = 1;
+    sub_B775C4(&TerminalPramsManager_TypeInfo);
+    byte_438C5D4 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -469,13 +469,13 @@ void __fastcall EventInfoTipsArchiveDialog__SaveScrollBarValue(
         !TipsArchiveScrollValueList) )
   {
 LABEL_14:
-    sub_B7076C(v5, *(_QWORD *)&tab);
+    sub_B7769C(v5, *(_QWORD *)&tab);
   }
   if ( TipsArchiveScrollValueList->max_length <= tab )
   {
 LABEL_15:
-    v12 = sub_B70798(v5);
-    sub_B70738(v12, 0LL);
+    v12 = sub_B776C8(v5);
+    sub_B77668(v12, 0LL);
   }
   TipsArchiveScrollValueList->m_Items[tab + 1] = value;
 }
@@ -496,10 +496,10 @@ void __fastcall EventInfoTipsArchiveDialog__SetScrollBarValue(
   __int64 v10; // x0
 
   v4 = this;
-  if ( (byte_4352E56 & 1) == 0 )
+  if ( (byte_438C5D5 & 1) == 0 )
   {
-    this = (EventInfoTipsArchiveDialog_o *)sub_B70694(&TerminalPramsManager_TypeInfo);
-    byte_4352E56 = 1;
+    this = (EventInfoTipsArchiveDialog_o *)sub_B775C4(&TerminalPramsManager_TypeInfo);
+    byte_438C5D5 = 1;
   }
   tabDataList = v4->fields.tabDataList;
   if ( !tabDataList )
@@ -523,12 +523,12 @@ void __fastcall EventInfoTipsArchiveDialog__SetScrollBarValue(
   v9 = *(_QWORD *)(*(_QWORD *)&this->fields.state + 240LL);
   if ( !v9 )
 LABEL_14:
-    sub_B7076C(this, *(_QWORD *)&tab);
+    sub_B7769C(this, *(_QWORD *)&tab);
   if ( *(_DWORD *)(v9 + 24) <= (unsigned int)tab )
   {
 LABEL_15:
-    v10 = sub_B70798(this);
-    sub_B70738(v10, 0LL);
+    v10 = sub_B776C8(this);
+    sub_B77668(v10, 0LL);
   }
   if ( !scrollBar )
     goto LABEL_14;
@@ -592,19 +592,19 @@ void __fastcall EventInfoTipsArchiveDialog__SetTabKind(
   UnityEngine_Color_o v58; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v59; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4352E4F & 1) == 0 )
+  if ( (byte_438C5CE & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_EventInfoTipsArchiveDialog___c__DisplayClass23_0__SetTabKind_b__0__);
-    sub_B70694(&EventInfoTipsArchiveDialog___c__DisplayClass23_0_TypeInfo);
-    byte_4352E4F = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_EventInfoTipsArchiveDialog___c__DisplayClass23_0__SetTabKind_b__0__);
+    sub_B775C4(&EventInfoTipsArchiveDialog___c__DisplayClass23_0_TypeInfo);
+    byte_438C5CE = 1;
   }
-  v5 = sub_B70764(EventInfoTipsArchiveDialog___c__DisplayClass23_0_TypeInfo);
+  v5 = sub_B77694(EventInfoTipsArchiveDialog___c__DisplayClass23_0_TypeInfo);
   EventInfoTipsArchiveDialog___c__DisplayClass23_0___ctor((EventInfoTipsArchiveDialog___c__DisplayClass23_0_o *)v5, 0LL);
   if ( !v5 )
     goto LABEL_46;
   *(_QWORD *)(v5 + 16) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v5 + 16), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
+  sub_B77560((BattleServantConfConponent_o *)(v5 + 16), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
   *(_DWORD *)(v5 + 24) = kind;
   tabDataList = this->fields.tabDataList;
   this->fields.currentTabKind = kind;
@@ -622,8 +622,8 @@ void __fastcall EventInfoTipsArchiveDialog__SetTabKind(
     {
       if ( v18 >= max_length )
       {
-        v57 = sub_B70798(TabLabel);
-        sub_B70738(v57, 0LL);
+        v57 = sub_B776C8(TabLabel);
+        sub_B77668(v57, 0LL);
       }
       v22 = tabDataList->m_Items[v18];
       if ( !v22 )
@@ -680,14 +680,14 @@ void __fastcall EventInfoTipsArchiveDialog__SetTabKind(
             mainInfo = this->fields.mainInfo;
             if ( !v40 )
             {
-              v40 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+              v40 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
               System_Action___ctor(
                 v40,
                 (Il2CppObject *)v5,
                 Method_EventInfoTipsArchiveDialog___c__DisplayClass23_0__SetTabKind_b__0__,
                 0LL);
               *(_QWORD *)(v5 + 32) = v40;
-              sub_B70630(
+              sub_B77560(
                 (BattleServantConfConponent_o *)(v5 + 32),
                 (System_Int32_array **)v40,
                 v42,
@@ -710,7 +710,7 @@ void __fastcall EventInfoTipsArchiveDialog__SetTabKind(
           if ( !v48 )
             break;
           v48->fields.callbackFunc = 0LL;
-          sub_B70630(
+          sub_B77560(
             (BattleServantConfConponent_o *)&v48->fields.callbackFunc,
             0LL,
             v32,
@@ -719,7 +719,7 @@ void __fastcall EventInfoTipsArchiveDialog__SetTabKind(
             v35,
             v36,
             v37);
-          EventInfoTipsArchiveListViewManager__SetMode_27327296(v48, 1, v49);
+          EventInfoTipsArchiveListViewManager__SetMode_27683036(v48, 1, v49);
         }
         else
         {
@@ -770,13 +770,13 @@ void __fastcall EventInfoTipsArchiveDialog__SetTabKind(
           break;
         v55 = 0;
       }
-      ShiningIconComponent__Set_33848384((ShiningIconComponent_o *)TabLabel, v55, 0LL);
+      ShiningIconComponent__Set_34095244((ShiningIconComponent_o *)TabLabel, v55, 0LL);
       max_length = tabDataList->max_length;
       if ( (int)++v18 >= max_length )
         goto LABEL_45;
     }
 LABEL_46:
-    sub_B7076C(TabLabel, v7);
+    sub_B7769C(TabLabel, v7);
   }
 LABEL_45:
   EventInfoTipsArchiveDialog__SetScrollBarValue(this, *(_DWORD *)(v5 + 24), v14);
@@ -794,21 +794,21 @@ void __fastcall EventInfoTipsArchiveDialog__SetTerminalTouchEnable(
   TitleInfoControl_o *genericContainerHandle; // x0
   UISprite_c *klass; // x8
 
-  if ( (byte_4352E54 & 1) == 0 )
+  if ( (byte_438C5D3 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&TerminalSceneComponent_TypeInfo);
-    byte_4352E54 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&TerminalSceneComponent_TypeInfo);
+    byte_438C5D3 = 1;
   }
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
   }
-  if ( !byte_434DEA1 )
+  if ( !byte_4387463 )
   {
-    sub_B70694(&TerminalSceneComponent_TypeInfo);
-    byte_434DEA1 = 1;
+    sub_B775C4(&TerminalSceneComponent_TypeInfo);
+    byte_4387463 = 1;
   }
   v4 = TerminalSceneComponent_TypeInfo;
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -830,10 +830,10 @@ void __fastcall EventInfoTipsArchiveDialog__SetTerminalTouchEnable(
     {
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
     }
-    if ( !byte_434DEA1 )
+    if ( !byte_4387463 )
     {
-      sub_B70694(&TerminalSceneComponent_TypeInfo);
-      byte_434DEA1 = 1;
+      sub_B775C4(&TerminalSceneComponent_TypeInfo);
+      byte_4387463 = 1;
     }
     genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
     if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -844,7 +844,7 @@ void __fastcall EventInfoTipsArchiveDialog__SetTerminalTouchEnable(
     }
     klass = genericContainerHandle->fields.mEventItemEventBtn->klass;
     if ( !klass || (genericContainerHandle = (TitleInfoControl_o *)klass->_2.genericContainerHandle) == 0LL )
-      sub_B7076C(genericContainerHandle, v6);
+      sub_B7769C(genericContainerHandle, v6);
     TitleInfoControl__SetTouchEnable(genericContainerHandle, enable, 0LL);
   }
 }
@@ -900,12 +900,12 @@ void __fastcall EventInfoTipsArchiveDialog__Setup(
   int v56; // s0
   __int64 v60; // x0
 
-  if ( (byte_4352E4D & 1) == 0 )
+  if ( (byte_438C5CC & 1) == 0 )
   {
-    sub_B70694(&CondType_TypeInfo);
-    sub_B70694(&EventInfoTipsArchiveListViewItem_TypeInfo);
-    sub_B70694(&TerminalPramsManager_TypeInfo);
-    byte_4352E4D = 1;
+    sub_B775C4(&CondType_TypeInfo);
+    sub_B775C4(&EventInfoTipsArchiveListViewItem_TypeInfo);
+    sub_B775C4(&TerminalPramsManager_TypeInfo);
+    byte_438C5CC = 1;
   }
   BaseDialog__Awake((BaseDialog_o *)this, 0LL);
   v7 = TerminalPramsManager_TypeInfo;
@@ -940,10 +940,10 @@ void __fastcall EventInfoTipsArchiveDialog__Setup(
   parameterBasePrefab = this->fields.parameterBasePrefab;
   objectDataList = this->fields.objectDataList;
   this->fields.currentTabKind = v7->static_fields->TipsArchiveCurrrentTab;
-  v14 = (EventInfoTipsArchiveListViewItem_o *)sub_B70764(EventInfoTipsArchiveListViewItem_TypeInfo);
+  v14 = (EventInfoTipsArchiveListViewItem_o *)sub_B77694(EventInfoTipsArchiveListViewItem_TypeInfo);
   EventInfoTipsArchiveListViewItem___ctor(v14, eventUiId, atlasList, parameterBasePrefab, objectDataList, v15);
   this->fields.mainInfo = v14;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.mainInfo,
     (System_Int32_array **)v14,
     v16,
@@ -967,8 +967,8 @@ void __fastcall EventInfoTipsArchiveDialog__Setup(
     {
       if ( v26 >= max_length )
       {
-        v60 = sub_B70798(mainInfo);
-        sub_B70738(v60, 0LL);
+        v60 = sub_B776C8(mainInfo);
+        sub_B77668(v60, 0LL);
       }
       v27 = tabDataList->m_Items[v26];
       if ( !v27 )
@@ -1060,7 +1060,7 @@ void __fastcall EventInfoTipsArchiveDialog__Setup(
         return;
     }
 LABEL_48:
-    sub_B7076C(mainInfo, v22);
+    sub_B7769C(mainInfo, v22);
   }
 }
 
@@ -1091,8 +1091,8 @@ void __fastcall EventInfoTipsArchiveDialog__UpdateNewIconDisp(
     {
       if ( v6 >= max_length )
       {
-        v9 = sub_B70798(this);
-        sub_B70738(v9, 0LL);
+        v9 = sub_B776C8(this);
+        sub_B77668(v9, 0LL);
       }
       v7 = tabDataList->m_Items[v6];
       if ( !v7 )
@@ -1112,7 +1112,7 @@ void __fastcall EventInfoTipsArchiveDialog__UpdateNewIconDisp(
                                                method);
       if ( NewIcon )
       {
-        ShiningIconComponent__Set_33848384(NewIcon, (unsigned __int8)this & 1, 0LL);
+        ShiningIconComponent__Set_34095244(NewIcon, (unsigned __int8)this & 1, 0LL);
         this = (EventInfoTipsArchiveDialog_o *)v7->fields.ViewListManager;
         if ( this )
         {
@@ -1124,7 +1124,7 @@ void __fastcall EventInfoTipsArchiveDialog__UpdateNewIconDisp(
       }
     }
 LABEL_16:
-    sub_B7076C(this, *(_QWORD *)&kind);
+    sub_B7769C(this, *(_QWORD *)&kind);
   }
 LABEL_14:
   ActionExtensions__Call(v5->fields.buttonUpdateAction, 0LL);
@@ -1234,6 +1234,6 @@ void __fastcall EventInfoTipsArchiveDialog___c__DisplayClass23_0___SetTabKind_b_
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   EventInfoTipsArchiveDialog__SaveScrollBarValue(_4__this, this->fields.kind, 0LL);
 }

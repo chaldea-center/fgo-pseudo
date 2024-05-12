@@ -22,22 +22,22 @@ void __fastcall CharaGraphSortOwnerAllKind___ctor(CharaGraphSortOwnerAllKind_o *
   System_Int32_array *v22; // x6
   System_Int32_array *v23; // x7
 
-  if ( (byte_4354A86 & 1) == 0 )
+  if ( (byte_438E345 & 1) == 0 )
   {
-    sub_B70694(&CharaGraphSortManageUnitCommandCode_TypeInfo);
-    sub_B70694(&CharaGraphSortManageUnitServantEquip_TypeInfo);
-    sub_B70694(&CharaGraphSortManageUnitServant_TypeInfo);
-    byte_4354A86 = 1;
+    sub_B775C4(&CharaGraphSortManageUnitCommandCode_TypeInfo);
+    sub_B775C4(&CharaGraphSortManageUnitServantEquip_TypeInfo);
+    sub_B775C4(&CharaGraphSortManageUnitServant_TypeInfo);
+    byte_438E345 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v3 = (Il2CppObject *)sub_B70764(CharaGraphSortManageUnitServant_TypeInfo);
+  v3 = (Il2CppObject *)sub_B77694(CharaGraphSortManageUnitServant_TypeInfo);
   System_Object___ctor(v3, 0LL);
   this->fields._ServantSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v3;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (Il2CppObject *)sub_B70764(CharaGraphSortManageUnitServantEquip_TypeInfo);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (Il2CppObject *)sub_B77694(CharaGraphSortManageUnitServantEquip_TypeInfo);
   System_Object___ctor(v10, 0LL);
   this->fields._ServantEquipSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v10;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._ServantEquipSortManageUnit_k__BackingField,
     (System_Int32_array **)v10,
     v11,
@@ -46,10 +46,10 @@ void __fastcall CharaGraphSortOwnerAllKind___ctor(CharaGraphSortOwnerAllKind_o *
     v14,
     v15,
     v16);
-  v17 = (Il2CppObject *)sub_B70764(CharaGraphSortManageUnitCommandCode_TypeInfo);
+  v17 = (Il2CppObject *)sub_B77694(CharaGraphSortManageUnitCommandCode_TypeInfo);
   System_Object___ctor(v17, 0LL);
   this->fields._CommandCodeSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v17;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._CommandCodeSortManageUnit_k__BackingField,
     (System_Int32_array **)v17,
     v18,

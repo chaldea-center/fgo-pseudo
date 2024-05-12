@@ -1,9 +1,9 @@
 void __fastcall ScriptMessageManager___cctor(const MethodInfo *method)
 {
-  if ( (byte_435788B & 1) == 0 )
+  if ( (byte_4390E80 & 1) == 0 )
   {
-    sub_B70694(&ScriptMessageManager_TypeInfo);
-    byte_435788B = 1;
+    sub_B775C4(&ScriptMessageManager_TypeInfo);
+    byte_4390E80 = 1;
   }
   ScriptMessageManager_TypeInfo->static_fields->ALIGN_CENTER_BASE = 440.0;
   ScriptMessageManager_TypeInfo->static_fields->ALIGN_RIGHT_BASE = 840.0;
@@ -47,25 +47,25 @@ void __fastcall ScriptMessageManager__Start(ScriptMessageManager_o *this, const 
   ScriptMessageManager_c *v35; // x0
   const MethodInfo *v36; // x6
 
-  if ( (byte_435788A & 1) == 0 )
+  if ( (byte_4390E7F & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_UILabel___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&ScriptMessageLabel_TypeInfo);
-    sub_B70694(&ScriptMessageManager_TypeInfo);
-    sub_B70694(&StringLiteral_760/*"-"*/);
-    sub_B70694(&StringLiteral_24162/*"■"*/);
-    byte_435788A = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_UILabel___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&ScriptMessageLabel_TypeInfo);
+    sub_B775C4(&ScriptMessageManager_TypeInfo);
+    sub_B775C4(&StringLiteral_762/*"-"*/);
+    sub_B775C4(&StringLiteral_24266/*"■"*/);
+    byte_4390E7F = 1;
   }
   rootObject = this->fields.rootObject;
   if ( !rootObject )
     goto LABEL_18;
   Component_srcLineSprite = (struct UIPanel_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                   rootObject,
-                                                  (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+                                                  (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
   this->fields.rootPanel = Component_srcLineSprite;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.rootPanel,
     (System_Int32_array **)Component_srcLineSprite,
     v5,
@@ -79,7 +79,7 @@ void __fastcall ScriptMessageManager__Start(ScriptMessageManager_o *this, const 
   {
     j_il2cpp_runtime_class_init_0(ScriptMessageLabel_TypeInfo);
   }
-  rootObject = (UnityEngine_GameObject_o *)ScriptMessageLabel__GetFontSize((System_String_o *)StringLiteral_760/*"-"*/, 0, v11);
+  rootObject = (UnityEngine_GameObject_o *)ScriptMessageLabel__GetFontSize((System_String_o *)StringLiteral_762/*"-"*/, 0, v11);
   defaultMessageWindow = this->fields.defaultMessageWindow;
   this->fields.defaultFontSize = (int)rootObject;
   if ( !defaultMessageWindow )
@@ -92,20 +92,20 @@ void __fastcall ScriptMessageManager__Start(ScriptMessageManager_o *this, const 
   }
   rootObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                              messageMainLabel,
-                                             (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_UILabel___);
+                                             (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_UILabel___);
   v14 = this->fields.defaultMessageWindow;
   if ( !v14 )
     goto LABEL_18;
   v15 = (UILabel_o *)rootObject;
   rootObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                              (UnityEngine_UI_Dropdown_DropdownItem_o *)v14->fields.messageRubyLabel,
-                                             (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_UILabel___);
+                                             (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_UILabel___);
   if ( !v15 )
     goto LABEL_18;
   v16 = (UILabel_o *)rootObject;
   trueTypeFont = UILabel__get_trueTypeFont(v15, 0LL);
   this->fields.defaultFontType = trueTypeFont;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.defaultFontType,
     (System_Int32_array **)trueTypeFont,
     v18,
@@ -115,7 +115,7 @@ void __fastcall ScriptMessageManager__Start(ScriptMessageManager_o *this, const 
     v22,
     v23);
   this->fields.fontType = trueTypeFont;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.fontType,
     (System_Int32_array **)trueTypeFont,
     v24,
@@ -125,24 +125,24 @@ void __fastcall ScriptMessageManager__Start(ScriptMessageManager_o *this, const 
     v28,
     v29);
   UILabel__set_fontSize(v15, this->fields.defaultFontSize, 0LL);
-  UILabel__set_text(v15, (System_String_o *)StringLiteral_24162/*"■"*/, 0LL);
+  UILabel__set_text(v15, (System_String_o *)StringLiteral_24266/*"■"*/, 0LL);
   rootObject = (UnityEngine_GameObject_o *)((__int64 (__fastcall *)(UILabel_o *, Il2CppMethodPointer))v15->klass->vtable._22_get_localSize.method)(
                                              v15,
                                              v15->klass->vtable._23_get_drawingDimensions.methodPtr);
   this->fields.defaultTextOnlyLineHeight = v30;
   if ( !v16 )
 LABEL_18:
-    sub_B7076C(rootObject, method);
+    sub_B7769C(rootObject, method);
   this->fields.rubyFontSize = v16->fields.mFontSize;
-  UILabel__set_text(v16, (System_String_o *)StringLiteral_24162/*"■"*/, 0LL);
+  UILabel__set_text(v16, (System_String_o *)StringLiteral_24266/*"■"*/, 0LL);
   ((void (__fastcall *)(UILabel_o *, Il2CppMethodPointer))v16->klass->vtable._22_get_localSize.method)(
     v16,
     v16->klass->vtable._23_get_drawingDimensions.methodPtr);
   this->fields.rubyLineHeight = v31;
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v15, 0LL);
-  UnityEngine_Object__Destroy_36067208(gameObject, 0LL);
+  UnityEngine_Object__Destroy_36309980(gameObject, 0LL);
   v33 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v16, 0LL);
-  UnityEngine_Object__Destroy_36067208(v33, 0LL);
+  UnityEngine_Object__Destroy_36309980(v33, 0LL);
   v35 = ScriptMessageManager_TypeInfo;
   if ( (BYTE3(ScriptMessageManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ScriptMessageManager_TypeInfo->_2.cctor_finished )

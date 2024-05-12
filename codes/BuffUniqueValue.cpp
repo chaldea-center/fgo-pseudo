@@ -4,7 +4,7 @@ void __fastcall BuffUniqueValue___ctor(BuffUniqueValue_o *this, const MethodInfo
 }
 
 
-void __fastcall BuffUniqueValue___ctor_29144744(
+void __fastcall BuffUniqueValue___ctor_29615244(
         BuffUniqueValue_o *this,
         int32_t inBuffUniqueId,
         int32_t inGrantedUniqueId,

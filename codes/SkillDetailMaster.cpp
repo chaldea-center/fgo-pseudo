@@ -1,14 +1,14 @@
 void __fastcall SkillDetailMaster___ctor(SkillDetailMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_43528D9 & 1) == 0 )
+  if ( (byte_438C055 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int___ctor__);
-    byte_43528D9 = 1;
+    sub_B775C4(&Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int___ctor__);
+    byte_438C055 = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     53,
-    (const MethodInfo_21C03A4 *)Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int___ctor__);
+    (const MethodInfo_21FB7F8 *)Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int___ctor__);
 }
 
 
@@ -22,21 +22,21 @@ System_String_o *__fastcall SkillDetailMaster__getDetail(
   LocalizationManager_c *v9; // x0
   WarEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_43528DA & 1) == 0 )
+  if ( (byte_438C056 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__TryGetEntity__);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    byte_43528DA = 1;
+    sub_B775C4(&Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__TryGetEntity__);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    byte_438C056 = 1;
   }
   entity = 0LL;
   if ( DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
          (DataMasterBase_WarMaster__WarEntity__int__o *)this,
          &entity,
          id,
-         (const MethodInfo_21C049C *)Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__TryGetEntity__) )
+         (const MethodInfo_21FB8F0 *)Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__TryGetEntity__) )
   {
     if ( !entity )
-      sub_B7076C(0LL, v7);
+      sub_B7769C(0LL, v7);
     if ( isShort )
       return SkillDetailEntity__getDetailShort((SkillDetailEntity_o *)entity, v7);
     else
@@ -49,10 +49,10 @@ System_String_o *__fastcall SkillDetailMaster__getDetail(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    if ( !byte_434F6FF )
+    if ( !byte_4388DC6 )
     {
-      sub_B70694(&LocalizationManager_TypeInfo);
-      byte_434F6FF = 1;
+      sub_B775C4(&LocalizationManager_TypeInfo);
+      byte_4388DC6 = 1;
     }
     v9 = LocalizationManager_TypeInfo;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

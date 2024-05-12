@@ -1,14 +1,14 @@
 void __fastcall CardMaster___ctor(CardMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4354B4B & 1) == 0 )
+  if ( (byte_438E40A & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_CardMaster__CardEntity__string___ctor__);
-    byte_4354B4B = 1;
+    sub_B775C4(&Method_DataMasterBase_CardMaster__CardEntity__string___ctor__);
+    byte_438E40A = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     112,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_CardMaster__CardEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_CardMaster__CardEntity__string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ CardEntity_o *__fastcall CardMaster__GetEntity(CardMaster_o *this, int32_t id, i
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4354B49 & 1) == 0 )
+  if ( (byte_438E408 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_CardMaster__CardEntity__string__GetEntity__);
-    byte_4354B49 = 1;
+    sub_B775C4(&Method_DataMasterBase_CardMaster__CardEntity__string__GetEntity__);
+    byte_438E408 = 1;
   }
   PK = CardEntity__CreatePK(id, num, *(const MethodInfo **)&num);
   return (CardEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                            (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                            PK,
-                           (const MethodInfo_21C0890 *)Method_DataMasterBase_CardMaster__CardEntity__string__GetEntity__);
+                           (const MethodInfo_21FBCE4 *)Method_DataMasterBase_CardMaster__CardEntity__string__GetEntity__);
 }
 
 
@@ -40,17 +40,17 @@ bool __fastcall CardMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4354B4A & 1) == 0 )
+  if ( (byte_438E409 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_CardMaster__CardEntity__string__TryGetEntity__);
-    byte_4354B4A = 1;
+    sub_B775C4(&Method_DataMasterBase_CardMaster__CardEntity__string__TryGetEntity__);
+    byte_438E409 = 1;
   }
   PK = CardEntity__CreatePK(id, num, *(const MethodInfo **)&id);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_CardMaster__CardEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_CardMaster__CardEntity__string__TryGetEntity__);
 }
 
 
@@ -64,20 +64,20 @@ float __fastcall CardMaster__getAtk(int32_t type, int32_t num, const MethodInfo 
   const MethodInfo *v10; // x3
   __int64 v12; // x0
 
-  if ( (byte_4354B4C & 1) == 0 )
+  if ( (byte_438E40B & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_CardMaster___);
-    sub_B70694(&long___TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4354B4C = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_CardMaster___);
+    sub_B775C4(&long___TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438E40B = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   MasterData_WarQuestSelectionMaster = (CardMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                          Instance,
-                                                         (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_CardMaster___);
-  Instance = (DataManager_o *)sub_B706AC(long___TypeInfo, 2LL);
+                                                         (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_CardMaster___);
+  Instance = (DataManager_o *)sub_B775DC(long___TypeInfo, 2LL);
   if ( !Instance )
     goto LABEL_12;
   datalist = (int)Instance->fields.datalist;
@@ -86,8 +86,8 @@ float __fastcall CardMaster__getAtk(int32_t type, int32_t num, const MethodInfo 
     || (Instance->fields.lookup = (struct System_Collections_Generic_Dictionary_int__DataMasterBase__o *)type,
         datalist == 1) )
   {
-    v12 = sub_B70798(Instance);
-    sub_B70738(v12, 0LL);
+    v12 = sub_B776C8(Instance);
+    sub_B77668(v12, 0LL);
   }
   v9 = num + 1;
   Instance->fields.masterDataBytes = (struct System_Byte_array *)v9;
@@ -102,7 +102,7 @@ float __fastcall CardMaster__getAtk(int32_t type, int32_t num, const MethodInfo 
     if ( Instance )
       return (float)SLODWORD(Instance->fields.datalist) / 1000.0;
 LABEL_12:
-    sub_B7076C(Instance, v6);
+    sub_B7769C(Instance, v6);
   }
   return 1.0;
 }
@@ -120,20 +120,20 @@ float __fastcall CardMaster__getCritical(int32_t type, int32_t num, const Method
   float result; // s0
   __int64 v13; // x0
 
-  if ( (byte_4354B4E & 1) == 0 )
+  if ( (byte_438E40D & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_CardMaster___);
-    sub_B70694(&long___TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4354B4E = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_CardMaster___);
+    sub_B775C4(&long___TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438E40D = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   MasterData_WarQuestSelectionMaster = (DataMasterBase_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                              Instance,
-                                                             (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_CardMaster___);
-  Instance = (DataManager_o *)sub_B706AC(long___TypeInfo, 2LL);
+                                                             (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_CardMaster___);
+  Instance = (DataManager_o *)sub_B775DC(long___TypeInfo, 2LL);
   if ( !Instance )
     goto LABEL_12;
   datalist = (int)Instance->fields.datalist;
@@ -142,8 +142,8 @@ float __fastcall CardMaster__getCritical(int32_t type, int32_t num, const Method
     || (Instance->fields.lookup = (struct System_Collections_Generic_Dictionary_int__DataMasterBase__o *)type,
         datalist == 1) )
   {
-    v13 = sub_B70798(Instance);
-    sub_B70738(v13, 0LL);
+    v13 = sub_B776C8(Instance);
+    sub_B77668(v13, 0LL);
   }
   v9 = num + 1;
   Instance->fields.masterDataBytes = (struct System_Byte_array *)v9;
@@ -159,7 +159,7 @@ float __fastcall CardMaster__getCritical(int32_t type, int32_t num, const Method
   Instance = (DataManager_o *)CardMaster__GetEntity((CardMaster_o *)MasterData_WarQuestSelectionMaster, type, v9, v11);
   if ( !Instance )
 LABEL_12:
-    sub_B7076C(Instance, v6);
+    sub_B7769C(Instance, v6);
   return (float)SLODWORD(Instance->fields.lookup) / 1000.0;
 }
 
@@ -192,32 +192,32 @@ System_Int32_array *__fastcall CardMaster__getIdArrayFromIndividuality(int32_t i
   __int64 v26; // x0
   __int64 v28; // x0
 
-  if ( (byte_4354B50 & 1) == 0 )
+  if ( (byte_438E40F & 1) == 0 )
   {
-    sub_B70694(&CardEntity_TypeInfo);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
-    sub_B70694(&Method_DataManager_GetMasterData_CardMaster___);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
-    sub_B70694(&System_Collections_IEnumerator_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_int__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_B70694(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_B70694(&System_Collections_Generic_List_int__TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4354B50 = 1;
+    sub_B775C4(&CardEntity_TypeInfo);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+    sub_B775C4(&Method_DataManager_GetMasterData_CardMaster___);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
+    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int___ctor___69397304);
+    sub_B775C4(&System_Collections_Generic_List_int__TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438E40F = 1;
   }
-  v3 = (System_Collections_Generic_List_int__o *)sub_B70764(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_B77694(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v3,
-    (const MethodInfo_30B547C *)Method_System_Collections_Generic_List_int___ctor__);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_30E508C *)Method_System_Collections_Generic_List_int___ctor___69397304);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_46;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_CardMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_CardMaster___);
   if ( !Instance )
     goto LABEL_46;
   Instance = (DataManager_o *)Instance->fields.lookup;
@@ -225,9 +225,9 @@ System_Int32_array *__fastcall CardMaster__getIdArrayFromIndividuality(int32_t i
     goto LABEL_46;
   Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
                  (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)Instance,
-                 (const MethodInfo_2C865F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_2CC56C8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B7076C(0LL, v6);
+    sub_B7769C(0LL, v6);
   while ( 1 )
   {
 LABEL_7:
@@ -248,7 +248,7 @@ LABEL_7:
     else
     {
 LABEL_11:
-      p_method = sub_B08590(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_B0F4C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -271,7 +271,7 @@ LABEL_11:
     else
     {
 LABEL_18:
-      v15 = sub_B08590(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v15 = sub_B0F4C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v16 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v15)(
             Enumerator,
@@ -284,7 +284,7 @@ LABEL_18:
     if ( *(unsigned __int8 *)(*(_QWORD *)v16 + 300LL) < (unsigned int)v19
       || *(CardEntity_c **)(*(_QWORD *)(*(_QWORD *)v16 + 200LL) + 8 * v19 - 8) != CardEntity_TypeInfo )
     {
-      sub_B70A60(v16);
+      sub_B77990(v16);
       goto LABEL_46;
     }
     v20 = *(_QWORD *)(v16 + 48);
@@ -300,23 +300,23 @@ LABEL_18:
           {
             if ( v22 >= (unsigned int)v21 )
             {
-              v28 = sub_B70798(v16);
-              sub_B70738(v28, 0LL);
+              v28 = sub_B776C8(v16);
+              sub_B77668(v28, 0LL);
             }
             if ( *(_DWORD *)(v20 + 32 + 4 * v22) == individuality )
             {
               if ( !v3 )
-                sub_B7076C(v16, v18);
+                sub_B7769C(v16, v18);
               v16 = System_Collections_Generic_List_int___Contains(
                       v3,
                       *(_DWORD *)(v17 + 16),
-                      (const MethodInfo_30B662C *)Method_System_Collections_Generic_List_int__Contains__);
+                      (const MethodInfo_30E623C *)Method_System_Collections_Generic_List_int__Contains__);
               if ( (v16 & 1) == 0 )
               {
                 System_Collections_Generic_List_int___Add(
                   v3,
                   *(_DWORD *)(v17 + 16),
-                  (const MethodInfo_30B61D8 *)Method_System_Collections_Generic_List_int__Add__);
+                  (const MethodInfo_30E5DE8 *)Method_System_Collections_Generic_List_int__Add__);
                 goto LABEL_7;
               }
               LODWORD(v21) = *(_DWORD *)(v20 + 24);
@@ -345,17 +345,17 @@ LABEL_18:
   else
   {
 LABEL_39:
-    v26 = sub_B08590(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v26 = sub_B0F4C0(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   Instance = (DataManager_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v26)(
                                 Enumerator,
                                 *(_QWORD *)(v26 + 8));
   if ( !v3 )
 LABEL_46:
-    sub_B7076C(Instance, v5);
+    sub_B7769C(Instance, v5);
   return System_Collections_Generic_List_int___ToArray(
            v3,
-           (const MethodInfo_30B82E4 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_30E7EF4 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -368,20 +368,20 @@ System_Int32_array *__fastcall CardMaster__getIndividualities(int32_t type, int3
   const MethodInfo *v9; // x4
   CardEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4354B4F & 1) == 0 )
+  if ( (byte_438E40E & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_CardMaster___);
-    sub_B70694(&int___TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4354B4F = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_CardMaster___);
+    sub_B775C4(&int___TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438E40E = 1;
   }
   entity = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_CardMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_CardMaster___);
   if ( !Instance )
     goto LABEL_10;
   v8 = (CardMaster_o *)Instance;
@@ -393,9 +393,9 @@ System_Int32_array *__fastcall CardMaster__getIndividualities(int32_t type, int3
     if ( entity )
       return entity->fields.individuality;
 LABEL_10:
-    sub_B7076C(Instance, v6);
+    sub_B7769C(Instance, v6);
   }
-  return (System_Int32_array *)sub_B706AC(int___TypeInfo, 0LL);
+  return (System_Int32_array *)sub_B775DC(int___TypeInfo, 0LL);
 }
 
 
@@ -411,20 +411,20 @@ float __fastcall CardMaster__getTdGauge(int32_t type, int32_t num, const MethodI
   float result; // s0
   __int64 v13; // x0
 
-  if ( (byte_4354B4D & 1) == 0 )
+  if ( (byte_438E40C & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_CardMaster___);
-    sub_B70694(&long___TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4354B4D = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_CardMaster___);
+    sub_B775C4(&long___TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438E40C = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   MasterData_WarQuestSelectionMaster = (DataMasterBase_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                              Instance,
-                                                             (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_CardMaster___);
-  Instance = (DataManager_o *)sub_B706AC(long___TypeInfo, 2LL);
+                                                             (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_CardMaster___);
+  Instance = (DataManager_o *)sub_B775DC(long___TypeInfo, 2LL);
   if ( !Instance )
     goto LABEL_12;
   datalist = (int)Instance->fields.datalist;
@@ -433,8 +433,8 @@ float __fastcall CardMaster__getTdGauge(int32_t type, int32_t num, const MethodI
     || (Instance->fields.lookup = (struct System_Collections_Generic_Dictionary_int__DataMasterBase__o *)type,
         datalist == 1) )
   {
-    v13 = sub_B70798(Instance);
-    sub_B70738(v13, 0LL);
+    v13 = sub_B776C8(Instance);
+    sub_B77668(v13, 0LL);
   }
   v9 = num + 1;
   Instance->fields.masterDataBytes = (struct System_Byte_array *)v9;
@@ -450,6 +450,6 @@ float __fastcall CardMaster__getTdGauge(int32_t type, int32_t num, const MethodI
   Instance = (DataManager_o *)CardMaster__GetEntity((CardMaster_o *)MasterData_WarQuestSelectionMaster, type, v9, v11);
   if ( !Instance )
 LABEL_12:
-    sub_B7076C(Instance, v6);
+    sub_B7769C(Instance, v6);
   return (float)SHIDWORD(Instance->fields.datalist) / 1000.0;
 }

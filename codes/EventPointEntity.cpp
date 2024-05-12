@@ -1,27 +1,27 @@
 void __fastcall EventPointEntity___ctor(EventPointEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4351E96 & 1) == 0 )
+  if ( (byte_438B559 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_4351E96 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438B559 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall EventPointEntity__CreatePK(int32_t id, int32_t eventId, const MethodInfo *method)
 {
-  if ( (byte_4351E94 & 1) == 0 )
+  if ( (byte_438B557 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4351E94 = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_438B557 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            eventId,
-           (const MethodInfo_1CA236C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1D171BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -77,7 +77,7 @@ bool __fastcall EventPointEntity__IsGroupOnGroup1(EventPointEntity_o *this, int3
 
   group1 = this->fields.group1;
   if ( !group1 )
-    sub_B7076C(this, groupId);
+    sub_B7769C(this, groupId);
   max_length = group1->max_length;
   if ( max_length < 1 )
     return 0;
@@ -86,8 +86,8 @@ bool __fastcall EventPointEntity__IsGroupOnGroup1(EventPointEntity_o *this, int3
   {
     if ( v5 >= max_length )
     {
-      v7 = sub_B70798(this);
-      sub_B70738(v7, 0LL);
+      v7 = sub_B776C8(this);
+      sub_B77668(v7, 0LL);
     }
     if ( group1->m_Items[v5 + 1] == groupId )
       break;
@@ -113,20 +113,20 @@ System_String_o *__fastcall EventPointEntity__getNameStr(
   DataManager_o *v12; // x23
   __int64 v14; // x0
 
-  if ( (byte_4351E95 & 1) == 0 )
+  if ( (byte_438B558 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&StringLiteral_712/*","*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4351E95 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&StringLiteral_714/*","*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438B558 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
   if ( !group )
     goto LABEL_15;
   v8 = *(_QWORD *)&group->max_length;
@@ -139,8 +139,8 @@ System_String_o *__fastcall EventPointEntity__getNameStr(
     {
       if ( v11 >= (unsigned int)v8 )
       {
-        v14 = sub_B70798(Instance);
-        sub_B70738(v14, 0LL);
+        v14 = sub_B776C8(Instance);
+        sub_B77668(v14, 0LL);
       }
       if ( !v10 )
         break;
@@ -154,12 +154,12 @@ System_String_o *__fastcall EventPointEntity__getNameStr(
       v12 = Instance;
       if ( v9->fields.m_stringLength >= 2 )
       {
-        Instance = (DataManager_o *)System_String__Concat_44758168(v9, (System_String_o *)StringLiteral_712/*","*/, 0LL);
+        Instance = (DataManager_o *)System_String__Concat_44901936(v9, (System_String_o *)StringLiteral_714/*","*/, 0LL);
         v9 = (System_String_o *)Instance;
       }
       if ( !v12 )
         break;
-      Instance = (DataManager_o *)System_String__Concat_44758168(v9, (System_String_o *)v12->fields.datalist, 0LL);
+      Instance = (DataManager_o *)System_String__Concat_44901936(v9, (System_String_o *)v12->fields.datalist, 0LL);
       LODWORD(v8) = group->max_length;
       ++v11;
       v9 = (System_String_o *)Instance;
@@ -167,7 +167,7 @@ System_String_o *__fastcall EventPointEntity__getNameStr(
         return v9;
     }
 LABEL_15:
-    sub_B7076C(Instance, v6);
+    sub_B7769C(Instance, v6);
   }
   return v9;
 }

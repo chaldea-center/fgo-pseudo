@@ -14,23 +14,23 @@ void __fastcall ServantReactTaskCreator___ctor(
   unsigned int max_length; // w8
   __int64 v14; // x0
 
-  if ( (byte_43538F9 & 1) == 0 )
+  if ( (byte_438D12F & 1) == 0 )
   {
-    sub_B70694(&ServantReactTaskCreator_ExecOrder___TypeInfo);
-    byte_43538F9 = 1;
+    sub_B775C4(&ServantReactTaskCreator_ExecOrder___TypeInfo);
+    byte_438D12F = 1;
   }
-  v5 = (struct ServantReactTaskCreator_ExecOrder_array *)sub_B706AC(ServantReactTaskCreator_ExecOrder___TypeInfo, 3LL);
+  v5 = (struct ServantReactTaskCreator_ExecOrder_array *)sub_B775DC(ServantReactTaskCreator_ExecOrder___TypeInfo, 3LL);
   if ( !v5 )
-    sub_B7076C(0LL, v6);
+    sub_B7769C(0LL, v6);
   max_length = v5->max_length;
   if ( !max_length || (v5->m_Items[1] = 2, max_length <= 2) )
   {
-    v14 = sub_B70798(v5);
-    sub_B70738(v14, 0LL);
+    v14 = sub_B776C8(v5);
+    sub_B77668(v14, 0LL);
   }
   v5->m_Items[3] = 1;
   this->fields.execOrders = v5;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.execOrders,
     (System_Int32_array **)v5,
     v7,
@@ -52,12 +52,12 @@ BattleLogicTask_o *__fastcall ServantReactTaskCreator__Create(
 {
   BattleLogicTask_o *v4; // x19
 
-  if ( (byte_4353901 & 1) == 0 )
+  if ( (byte_438D137 & 1) == 0 )
   {
-    sub_B70694(&BattleLogicTask_TypeInfo);
-    byte_4353901 = 1;
+    sub_B775C4(&BattleLogicTask_TypeInfo);
+    byte_438D137 = 1;
   }
-  v4 = (BattleLogicTask_o *)sub_B70764(BattleLogicTask_TypeInfo);
+  v4 = (BattleLogicTask_o *)sub_B77694(BattleLogicTask_TypeInfo);
   BattleLogicTask___ctor(v4, 0LL);
   return v4;
 }
@@ -103,33 +103,33 @@ BattleLogicTask_array *__fastcall ServantReactTaskCreator__CreateTasks(
   const MethodInfo *v36; // x4
   __int64 v38; // x0
 
-  if ( (byte_4353900 & 1) == 0 )
+  if ( (byte_438D136 & 1) == 0 )
   {
-    sub_B70694(&Method_BasicHelper_Any_ReactTaskTarget___);
-    sub_B70694(&Method_System_Func_ReactTaskTarget__bool___ctor__);
-    sub_B70694(&System_Func_ReactTaskTarget__bool__TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-    sub_B70694(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-    sub_B70694(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
-    sub_B70694(&ServantRepeatTask_TypeInfo);
-    sub_B70694(&Method_ServantReactTaskCreator___c__DisplayClass15_0__CreateTasks_b__0__);
-    sub_B70694(&ServantReactTaskCreator___c__DisplayClass15_0_TypeInfo);
-    byte_4353900 = 1;
+    sub_B775C4(&Method_BasicHelper_Any_ReactTaskTarget___);
+    sub_B775C4(&Method_System_Func_ReactTaskTarget__bool___ctor__);
+    sub_B775C4(&System_Func_ReactTaskTarget__bool__TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+    sub_B775C4(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+    sub_B775C4(&ServantRepeatTask_TypeInfo);
+    sub_B775C4(&Method_ServantReactTaskCreator___c__DisplayClass15_0__CreateTasks_b__0__);
+    sub_B775C4(&ServantReactTaskCreator___c__DisplayClass15_0_TypeInfo);
+    byte_438D136 = 1;
   }
-  v4 = sub_B70764(ServantReactTaskCreator___c__DisplayClass15_0_TypeInfo);
+  v4 = sub_B77694(ServantReactTaskCreator___c__DisplayClass15_0_TypeInfo);
   ServantReactTaskCreator___c__DisplayClass15_0___ctor((ServantReactTaskCreator___c__DisplayClass15_0_o *)v4, 0LL);
   if ( !v4 )
     goto LABEL_17;
   *(_QWORD *)(v4 + 16) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v4 + 16), (System_Int32_array **)this, v7, v8, v9, v10, v11, v12);
+  sub_B77560((BattleServantConfConponent_o *)(v4 + 16), (System_Int32_array **)this, v7, v8, v9, v10, v11, v12);
   *(_QWORD *)(v4 + 24) = logic;
-  sub_B70630((BattleServantConfConponent_o *)(v4 + 24), (System_Int32_array **)logic, v13, v14, v15, v16, v17, v18);
+  sub_B77560((BattleServantConfConponent_o *)(v4 + 24), (System_Int32_array **)logic, v13, v14, v15, v16, v17, v18);
   *(_DWORD *)(v4 + 32) = 2 * ((this->fields._ProcState_k__BackingField & 0xFFFFFFFE) == 4);
-  v19 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v19 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v19,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
   execOrders = this->fields.execOrders;
   if ( !execOrders )
     goto LABEL_17;
@@ -142,38 +142,38 @@ BattleLogicTask_array *__fastcall ServantReactTaskCreator__CreateTasks(
     {
       if ( v23 >= (unsigned int)v22 )
       {
-        v38 = sub_B70798(v5);
-        sub_B70738(v38, 0LL);
+        v38 = sub_B776C8(v5);
+        sub_B77668(v38, 0LL);
       }
       Targets = ServantReactTaskCreator__MakeTargets(this, execOrders->m_Items[v23 + 1], v20);
       v26 = *v24;
       v27 = (WellFired_USFGOPlayBgmEventConditional_CondBGM_array *)Targets;
       if ( !*v24 )
       {
-        v26 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_ReactTaskTarget__bool__TypeInfo);
+        v26 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B77694(System_Func_ReactTaskTarget__bool__TypeInfo);
         System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
           v26,
           (Il2CppObject *)v4,
           Method_ServantReactTaskCreator___c__DisplayClass15_0__CreateTasks_b__0__,
-          (const MethodInfo_29AC578 *)Method_System_Func_ReactTaskTarget__bool___ctor__);
+          (const MethodInfo_29E92C4 *)Method_System_Func_ReactTaskTarget__bool___ctor__);
         *(_QWORD *)(v4 + 40) = v26;
-        sub_B70630((BattleServantConfConponent_o *)(v4 + 40), (System_Int32_array **)v26, v28, v29, v30, v31, v32, v33);
+        sub_B77560((BattleServantConfConponent_o *)(v4 + 40), (System_Int32_array **)v26, v28, v29, v30, v31, v32, v33);
       }
       v5 = BasicHelper__Any_USFGOPlayBgmEventConditional_CondBGM_(
              v27,
              (System_Func_T__bool__o *)v26,
-             (const MethodInfo_1BDCB34 *)Method_BasicHelper_Any_ReactTaskTarget___);
+             (const MethodInfo_1C661F0 *)Method_BasicHelper_Any_ReactTaskTarget___);
       if ( v5 )
       {
         v34 = *(_DWORD *)(v4 + 32);
-        v35 = (ServantRepeatTask_o *)sub_B70764(ServantRepeatTask_TypeInfo);
+        v35 = (ServantRepeatTask_o *)sub_B77694(ServantRepeatTask_TypeInfo);
         ServantRepeatTask___ctor(v35, this, (ReactTaskTarget_array *)v27, v34, v36);
         if ( !v19 )
           goto LABEL_17;
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           v19,
           (EventMissionProgressRequest_Argument_ProgressData_o *)v35,
-          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_BattleLogicTask__Add__);
+          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_BattleLogicTask__Add__);
       }
       LODWORD(v22) = execOrders->max_length;
       ++v23;
@@ -182,10 +182,10 @@ BattleLogicTask_array *__fastcall ServantReactTaskCreator__CreateTasks(
   }
   if ( !v19 )
 LABEL_17:
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   return (BattleLogicTask_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
                                     (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v19,
-                                    (const MethodInfo_30277D4 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }
 
 
@@ -214,12 +214,12 @@ ReactTaskTarget_o *__fastcall ServantReactTaskCreator__MakeEnemyTarget(
 {
   ReactTaskTargetEnemy_o *v2; // x19
 
-  if ( (byte_43538FE & 1) == 0 )
+  if ( (byte_438D134 & 1) == 0 )
   {
-    sub_B70694(&ReactTaskTargetEnemy_TypeInfo);
-    byte_43538FE = 1;
+    sub_B775C4(&ReactTaskTargetEnemy_TypeInfo);
+    byte_438D134 = 1;
   }
-  v2 = (ReactTaskTargetEnemy_o *)sub_B70764(ReactTaskTargetEnemy_TypeInfo);
+  v2 = (ReactTaskTargetEnemy_o *)sub_B77694(ReactTaskTargetEnemy_TypeInfo);
   ReactTaskTargetEnemy___ctor(v2, 0LL);
   return (ReactTaskTarget_o *)v2;
 }
@@ -231,12 +231,12 @@ ReactTaskTarget_o *__fastcall ServantReactTaskCreator__MakeNpcTarget(
 {
   ReactTaskTargetNpc_o *v2; // x19
 
-  if ( (byte_43538FF & 1) == 0 )
+  if ( (byte_438D135 & 1) == 0 )
   {
-    sub_B70694(&ReactTaskTargetNpc_TypeInfo);
-    byte_43538FF = 1;
+    sub_B775C4(&ReactTaskTargetNpc_TypeInfo);
+    byte_438D135 = 1;
   }
-  v2 = (ReactTaskTargetNpc_o *)sub_B70764(ReactTaskTargetNpc_TypeInfo);
+  v2 = (ReactTaskTargetNpc_o *)sub_B77694(ReactTaskTargetNpc_TypeInfo);
   ReactTaskTargetNpc___ctor(v2, 0LL);
   return (ReactTaskTarget_o *)v2;
 }
@@ -248,12 +248,12 @@ ReactTaskTarget_o *__fastcall ServantReactTaskCreator__MakePlayerTarget(
 {
   ReactTaskTargetPlayer_o *v2; // x19
 
-  if ( (byte_43538FD & 1) == 0 )
+  if ( (byte_438D133 & 1) == 0 )
   {
-    sub_B70694(&ReactTaskTargetPlayer_TypeInfo);
-    byte_43538FD = 1;
+    sub_B775C4(&ReactTaskTargetPlayer_TypeInfo);
+    byte_438D133 = 1;
   }
-  v2 = (ReactTaskTargetPlayer_o *)sub_B70764(ReactTaskTargetPlayer_TypeInfo);
+  v2 = (ReactTaskTargetPlayer_o *)sub_B77694(ReactTaskTargetPlayer_TypeInfo);
   ReactTaskTargetPlayer___ctor(v2, 0LL);
   return (ReactTaskTarget_o *)v2;
 }
@@ -280,52 +280,52 @@ ReactTaskTarget_array *__fastcall ServantReactTaskCreator__MakeTargets(
   __int64 v19; // x0
   __int64 v20; // x0
 
-  if ( (byte_43538FC & 1) == 0 )
+  if ( (byte_438D132 & 1) == 0 )
   {
-    sub_B70694(&ReactTaskTarget___TypeInfo);
-    byte_43538FC = 1;
+    sub_B775C4(&ReactTaskTarget___TypeInfo);
+    byte_438D132 = 1;
   }
   if ( execOrder == 2 )
   {
-    v5 = sub_B706AC(ReactTaskTarget___TypeInfo, 1LL);
+    v5 = sub_B775DC(ReactTaskTarget___TypeInfo, 1LL);
     v7 = this->klass->vtable._6_MakeNpcTarget.method;
     methodPtr = this->klass->vtable._7_IsCreatable.methodPtr;
   }
   else if ( execOrder == 1 )
   {
-    v5 = sub_B706AC(ReactTaskTarget___TypeInfo, 1LL);
+    v5 = sub_B775DC(ReactTaskTarget___TypeInfo, 1LL);
     v7 = this->klass->vtable._5_MakeEnemyTarget.method;
     methodPtr = this->klass->vtable._6_MakeNpcTarget.methodPtr;
   }
   else
   {
     if ( execOrder )
-      return (ReactTaskTarget_array *)sub_B706AC(ReactTaskTarget___TypeInfo, 0LL);
-    v5 = sub_B706AC(ReactTaskTarget___TypeInfo, 1LL);
+      return (ReactTaskTarget_array *)sub_B775DC(ReactTaskTarget___TypeInfo, 0LL);
+    v5 = sub_B775DC(ReactTaskTarget___TypeInfo, 1LL);
     v7 = this->klass->vtable._4_MakePlayerTarget.method;
     methodPtr = this->klass->vtable._5_MakeEnemyTarget.methodPtr;
   }
   v8 = (ReactTaskTarget_array *)v5;
   v9 = ((__int64 (__fastcall *)(ServantReactTaskCreator_o *, Il2CppMethodPointer))v7)(this, methodPtr);
   if ( !v8 )
-    sub_B7076C(v9, v10);
+    sub_B7769C(v9, v10);
   v17 = (System_Int32_array **)v9;
   if ( v9 )
   {
-    v9 = sub_B70754(v9, v8->obj.klass->_1.element_class);
+    v9 = sub_B77684(v9, v8->obj.klass->_1.element_class);
     if ( !v9 )
     {
-      v20 = sub_B7078C(0LL);
-      sub_B70738(v20, 0LL);
+      v20 = sub_B776BC(0LL);
+      sub_B77668(v20, 0LL);
     }
   }
   if ( !v8->max_length )
   {
-    v19 = sub_B70798(v9);
-    sub_B70738(v19, 0LL);
+    v19 = sub_B776C8(v9);
+    sub_B77668(v19, 0LL);
   }
   v8->m_Items[0] = (ReactTaskTarget_o *)v17;
-  sub_B70630((BattleServantConfConponent_o *)v8->m_Items, v17, v11, v12, v13, v14, v15, v16);
+  sub_B77560((BattleServantConfConponent_o *)v8->m_Items, v17, v11, v12, v13, v14, v15, v16);
   return v8;
 }
 
@@ -345,23 +345,23 @@ ServantReactTaskCreator_o *__fastcall ServantReactTaskCreator__OrderNEP(
   il2cpp_array_size_t max_length; // w8
   __int64 v13; // x0
 
-  if ( (byte_43538FB & 1) == 0 )
+  if ( (byte_438D131 & 1) == 0 )
   {
-    sub_B70694(&ServantReactTaskCreator_ExecOrder___TypeInfo);
-    byte_43538FB = 1;
+    sub_B775C4(&ServantReactTaskCreator_ExecOrder___TypeInfo);
+    byte_438D131 = 1;
   }
-  v3 = (struct ServantReactTaskCreator_ExecOrder_array *)sub_B706AC(ServantReactTaskCreator_ExecOrder___TypeInfo, 3LL);
+  v3 = (struct ServantReactTaskCreator_ExecOrder_array *)sub_B775DC(ServantReactTaskCreator_ExecOrder___TypeInfo, 3LL);
   if ( !v3 )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   max_length = v3->max_length;
   if ( !max_length || (v3->m_Items[1] = 2, max_length == 1) )
   {
-    v13 = sub_B70798(v3);
-    sub_B70738(v13, 0LL);
+    v13 = sub_B776C8(v3);
+    sub_B77668(v13, 0LL);
   }
   v3->m_Items[2] = 1;
   this->fields.execOrders = v3;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.execOrders,
     (System_Int32_array **)v3,
     v5,
@@ -389,23 +389,23 @@ ServantReactTaskCreator_o *__fastcall ServantReactTaskCreator__OrderNPE(
   unsigned int max_length; // w8
   __int64 v13; // x0
 
-  if ( (byte_43538FA & 1) == 0 )
+  if ( (byte_438D130 & 1) == 0 )
   {
-    sub_B70694(&ServantReactTaskCreator_ExecOrder___TypeInfo);
-    byte_43538FA = 1;
+    sub_B775C4(&ServantReactTaskCreator_ExecOrder___TypeInfo);
+    byte_438D130 = 1;
   }
-  v3 = (struct ServantReactTaskCreator_ExecOrder_array *)sub_B706AC(ServantReactTaskCreator_ExecOrder___TypeInfo, 3LL);
+  v3 = (struct ServantReactTaskCreator_ExecOrder_array *)sub_B775DC(ServantReactTaskCreator_ExecOrder___TypeInfo, 3LL);
   if ( !v3 )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   max_length = v3->max_length;
   if ( !max_length || (v3->m_Items[1] = 2, max_length <= 2) )
   {
-    v13 = sub_B70798(v3);
-    sub_B70738(v13, 0LL);
+    v13 = sub_B776C8(v3);
+    sub_B77668(v13, 0LL);
   }
   v3->m_Items[3] = 1;
   this->fields.execOrders = v3;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.execOrders,
     (System_Int32_array **)v3,
     v5,
@@ -430,7 +430,7 @@ ServantReactTaskCreator_o *__fastcall ServantReactTaskCreator__SetExecOrder(
   System_Int32_array *v7; // x7
 
   this->fields.execOrders = orders;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.execOrders,
     (System_Int32_array **)orders,
     (System_String_array **)method,
@@ -472,7 +472,7 @@ bool __fastcall ServantReactTaskCreator___c__DisplayClass15_0___CreateTasks_b__0
         const MethodInfo *method)
 {
   if ( !x )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   return ((__int64 (__fastcall *)(ReactTaskTarget_o *, struct ServantReactTaskCreator_o *, struct BattleLogic_o *, _QWORD, Il2CppMethodPointer))x->klass->vtable._6_ExistPriorityUpToAny.method)(
            x,
            this->fields.__4__this,

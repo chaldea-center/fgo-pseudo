@@ -35,26 +35,26 @@ void __fastcall Gender___cctor(const MethodInfo *method)
   __int64 v33; // x0
   __int64 v34; // x0
 
-  if ( (byte_4355AB1 & 1) == 0 )
+  if ( (byte_438F1B3 & 1) == 0 )
   {
-    sub_B70694(&Gender_TypeInfo);
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_6423/*"FEMALE"*/);
-    sub_B70694(&StringLiteral_9962/*"OTHER"*/);
-    sub_B70694(&StringLiteral_8719/*"MALE"*/);
-    byte_4355AB1 = 1;
+    sub_B775C4(&Gender_TypeInfo);
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_6479/*"FEMALE"*/);
+    sub_B775C4(&StringLiteral_10021/*"OTHER"*/);
+    sub_B775C4(&StringLiteral_8775/*"MALE"*/);
+    byte_438F1B3 = 1;
   }
-  v1 = sub_B706AC(string___TypeInfo, 3LL);
+  v1 = sub_B775DC(string___TypeInfo, 3LL);
   if ( !v1 )
-    sub_B7076C(0LL, v2);
+    sub_B7769C(0LL, v2);
   v9 = (System_Int32_array **)v1;
-  v10 = StringLiteral_8719/*"MALE"*/;
-  if ( StringLiteral_8719/*"MALE"*/ )
+  v10 = StringLiteral_8775/*"MALE"*/;
+  if ( StringLiteral_8775/*"MALE"*/ )
   {
-    v10 = sub_B70754(StringLiteral_8719/*"MALE"*/, *(_QWORD *)&(*v9)->m_Items[9]);
+    v10 = sub_B77684(StringLiteral_8775/*"MALE"*/, *(_QWORD *)&(*v9)->m_Items[9]);
     if ( !v10 )
       goto LABEL_21;
-    v11 = (System_Int32_array **)StringLiteral_8719/*"MALE"*/;
+    v11 = (System_Int32_array **)StringLiteral_8775/*"MALE"*/;
   }
   else
   {
@@ -63,14 +63,14 @@ void __fastcall Gender___cctor(const MethodInfo *method)
   if ( !*((_DWORD *)v9 + 6) )
     goto LABEL_20;
   v9[4] = (System_Int32_array *)v11;
-  sub_B70630((BattleServantConfConponent_o *)(v9 + 4), v11, v3, v4, v5, v6, v7, v8);
-  v10 = StringLiteral_6423/*"FEMALE"*/;
-  if ( StringLiteral_6423/*"FEMALE"*/ )
+  sub_B77560((BattleServantConfConponent_o *)(v9 + 4), v11, v3, v4, v5, v6, v7, v8);
+  v10 = StringLiteral_6479/*"FEMALE"*/;
+  if ( StringLiteral_6479/*"FEMALE"*/ )
   {
-    v10 = sub_B70754(StringLiteral_6423/*"FEMALE"*/, *(_QWORD *)&(*v9)->m_Items[9]);
+    v10 = sub_B77684(StringLiteral_6479/*"FEMALE"*/, *(_QWORD *)&(*v9)->m_Items[9]);
     if ( !v10 )
       goto LABEL_21;
-    v18 = (System_Int32_array **)StringLiteral_6423/*"FEMALE"*/;
+    v18 = (System_Int32_array **)StringLiteral_6479/*"FEMALE"*/;
   }
   else
   {
@@ -79,33 +79,33 @@ void __fastcall Gender___cctor(const MethodInfo *method)
   if ( *((_DWORD *)v9 + 6) <= 1u )
     goto LABEL_20;
   v9[5] = (System_Int32_array *)v18;
-  sub_B70630((BattleServantConfConponent_o *)(v9 + 5), v18, v12, v13, v14, v15, v16, v17);
-  v10 = StringLiteral_9962/*"OTHER"*/;
-  if ( StringLiteral_9962/*"OTHER"*/ )
+  sub_B77560((BattleServantConfConponent_o *)(v9 + 5), v18, v12, v13, v14, v15, v16, v17);
+  v10 = StringLiteral_10021/*"OTHER"*/;
+  if ( StringLiteral_10021/*"OTHER"*/ )
   {
-    v10 = sub_B70754(StringLiteral_9962/*"OTHER"*/, *(_QWORD *)&(*v9)->m_Items[9]);
+    v10 = sub_B77684(StringLiteral_10021/*"OTHER"*/, *(_QWORD *)&(*v9)->m_Items[9]);
     if ( v10 )
     {
-      v25 = (System_Int32_array **)StringLiteral_9962/*"OTHER"*/;
+      v25 = (System_Int32_array **)StringLiteral_10021/*"OTHER"*/;
       goto LABEL_18;
     }
 LABEL_21:
-    v34 = sub_B7078C(v10);
-    sub_B70738(v34, 0LL);
+    v34 = sub_B776BC(v10);
+    sub_B77668(v34, 0LL);
   }
   v25 = 0LL;
 LABEL_18:
   if ( *((_DWORD *)v9 + 6) <= 2u )
   {
 LABEL_20:
-    v33 = sub_B70798(v10);
-    sub_B70738(v33, 0LL);
+    v33 = sub_B776C8(v10);
+    sub_B77668(v33, 0LL);
   }
   v9[6] = (System_Int32_array *)v25;
-  sub_B70630((BattleServantConfConponent_o *)(v9 + 6), v25, v19, v20, v21, v22, v23, v24);
+  sub_B77560((BattleServantConfConponent_o *)(v9 + 6), v25, v19, v20, v21, v22, v23, v24);
   static_fields = (BattleServantConfConponent_o *)Gender_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v9;
-  sub_B70630(static_fields, v9, v27, v28, v29, v30, v31, v32);
+  sub_B77560(static_fields, v9, v27, v28, v29, v30, v31, v32);
 }
 
 
@@ -116,21 +116,21 @@ void __fastcall Gender___ctor(Gender_o *this, const MethodInfo *method)
 }
 
 
-void __fastcall Gender___ctor_32512044(Gender_o *this, int32_t type, const MethodInfo *method)
+void __fastcall Gender___ctor_32822276(Gender_o *this, int32_t type, const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.type = type;
 }
 
 
-void __fastcall Gender___ctor_32512088(Gender_o *this, System_String_o *name, const MethodInfo *method)
+void __fastcall Gender___ctor_32822320(Gender_o *this, System_String_o *name, const MethodInfo *method)
 {
   const MethodInfo *v5; // x1
 
-  if ( (byte_4355AAE & 1) == 0 )
+  if ( (byte_438F1B0 & 1) == 0 )
   {
-    sub_B70694(&Gender_TypeInfo);
-    byte_4355AAE = 1;
+    sub_B775C4(&Gender_TypeInfo);
+    byte_438F1B0 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( (BYTE3(Gender_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !Gender_TypeInfo->_2.cctor_finished )
@@ -152,10 +152,10 @@ int32_t __fastcall Gender__Parse(System_String_o *name, const MethodInfo *method
   struct System_String_array *nameList; // x8
   __int64 v7; // x0
 
-  if ( (byte_4355AAC & 1) == 0 )
+  if ( (byte_438F1AE & 1) == 0 )
   {
-    sub_B70694(&Gender_TypeInfo);
-    byte_4355AAC = 1;
+    sub_B775C4(&Gender_TypeInfo);
+    byte_438F1AE = 1;
   }
   v3 = 0;
   while ( 1 )
@@ -169,7 +169,7 @@ int32_t __fastcall Gender__Parse(System_String_o *name, const MethodInfo *method
     nameList = v4->static_fields->nameList;
     if ( !nameList )
 LABEL_18:
-      sub_B7076C(v4, method);
+      sub_B7769C(v4, method);
     if ( v3 >= (signed int)nameList->max_length )
       return 3;
     if ( (BYTE3(v4->vtable._0_Equals.methodPtr) & 4) != 0 && !v4->_2.cctor_finished )
@@ -181,14 +181,14 @@ LABEL_18:
     }
     if ( v3 >= nameList->max_length )
     {
-      v7 = sub_B70798(v4);
-      sub_B70738(v7, 0LL);
+      v7 = sub_B776C8(v4);
+      sub_B77668(v7, 0LL);
     }
     v4 = (Gender_c *)nameList->m_Items[v3];
     if ( !v4 )
       goto LABEL_18;
     ++v3;
-    if ( System_String__Equals_44745508((System_String_o *)v4, name, 0LL) )
+    if ( System_String__Equals_44889276((System_String_o *)v4, name, 0LL) )
       return v3;
   }
 }
@@ -200,12 +200,12 @@ void __fastcall Gender__Set(Gender_o *this, int32_t type, const MethodInfo *meth
 }
 
 
-void __fastcall Gender__Set_32512356(Gender_o *this, System_String_o *name, const MethodInfo *method)
+void __fastcall Gender__Set_32822588(Gender_o *this, System_String_o *name, const MethodInfo *method)
 {
-  if ( (byte_4355AB0 & 1) == 0 )
+  if ( (byte_438F1B2 & 1) == 0 )
   {
-    sub_B70694(&Gender_TypeInfo);
-    byte_4355AB0 = 1;
+    sub_B775C4(&Gender_TypeInfo);
+    byte_438F1B2 = 1;
   }
   if ( (BYTE3(Gender_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !Gender_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Gender_TypeInfo);
@@ -220,10 +220,10 @@ int32_t __fastcall Gender__ToData(System_String_o *name, const MethodInfo *metho
   struct System_String_array *nameList; // x8
   __int64 v7; // x0
 
-  if ( (byte_4355AAD & 1) == 0 )
+  if ( (byte_438F1AF & 1) == 0 )
   {
-    sub_B70694(&Gender_TypeInfo);
-    byte_4355AAD = 1;
+    sub_B775C4(&Gender_TypeInfo);
+    byte_438F1AF = 1;
   }
   v3 = 0;
   while ( 1 )
@@ -237,7 +237,7 @@ int32_t __fastcall Gender__ToData(System_String_o *name, const MethodInfo *metho
     nameList = v4->static_fields->nameList;
     if ( !nameList )
 LABEL_18:
-      sub_B7076C(v4, method);
+      sub_B7769C(v4, method);
     if ( v3 >= (signed int)nameList->max_length )
       return 3;
     if ( (BYTE3(v4->vtable._0_Equals.methodPtr) & 4) != 0 && !v4->_2.cctor_finished )
@@ -249,14 +249,14 @@ LABEL_18:
     }
     if ( v3 >= nameList->max_length )
     {
-      v7 = sub_B70798(v4);
-      sub_B70738(v7, 0LL);
+      v7 = sub_B776C8(v4);
+      sub_B77668(v7, 0LL);
     }
     v4 = (Gender_c *)nameList->m_Items[v3];
     if ( !v4 )
       goto LABEL_18;
     ++v3;
-    if ( System_String__Equals_44745508((System_String_o *)v4, name, 0LL) )
+    if ( System_String__Equals_44889276((System_String_o *)v4, name, 0LL) )
       return v3;
   }
 }
@@ -274,10 +274,10 @@ System_String_o *__fastcall Gender__ToName(int32_t type, const MethodInfo *metho
   struct System_String_array *nameList; // x8
   __int64 v6; // x0
 
-  if ( (byte_4355AAB & 1) == 0 )
+  if ( (byte_438F1AD & 1) == 0 )
   {
-    sub_B70694(&Gender_TypeInfo);
-    byte_4355AAB = 1;
+    sub_B775C4(&Gender_TypeInfo);
+    byte_438F1AD = 1;
   }
   v3 = Gender_TypeInfo;
   if ( (BYTE3(Gender_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !Gender_TypeInfo->_2.cctor_finished )
@@ -287,11 +287,11 @@ System_String_o *__fastcall Gender__ToName(int32_t type, const MethodInfo *metho
   }
   nameList = v3->static_fields->nameList;
   if ( !nameList )
-    sub_B7076C(v3, method);
+    sub_B7769C(v3, method);
   if ( type - 1 >= nameList->max_length )
   {
-    v6 = sub_B70798(v3);
-    sub_B70738(v6, 0LL);
+    v6 = sub_B776C8(v3);
+    sub_B77668(v6, 0LL);
   }
   return nameList->m_Items[type - 1];
 }
@@ -301,10 +301,10 @@ System_String_o *__fastcall Gender__ToString(Gender_o *this, const MethodInfo *m
 {
   int32_t type; // w19
 
-  if ( (byte_4355AAF & 1) == 0 )
+  if ( (byte_438F1B1 & 1) == 0 )
   {
-    sub_B70694(&Gender_TypeInfo);
-    byte_4355AAF = 1;
+    sub_B775C4(&Gender_TypeInfo);
+    byte_438F1B1 = 1;
   }
   type = this->fields.type;
   if ( (BYTE3(Gender_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !Gender_TypeInfo->_2.cctor_finished )

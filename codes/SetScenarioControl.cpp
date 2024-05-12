@@ -15,10 +15,10 @@ void __fastcall SetScenarioControl__Reflection(SetScenarioControl_o *this, const
 {
   float scenarioTextWaitTimeSecondValue; // s8
 
-  if ( (byte_43562FA & 1) == 0 )
+  if ( (byte_438F978 & 1) == 0 )
   {
-    sub_B70694(&OptionManager_TypeInfo);
-    byte_43562FA = 1;
+    sub_B775C4(&OptionManager_TypeInfo);
+    byte_438F978 = 1;
   }
   scenarioTextWaitTimeSecondValue = this->fields.scenarioTextWaitTimeSecondValue;
   if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -38,14 +38,14 @@ void __fastcall SetScenarioControl__getChangeScenarioSpeedValue(SetScenarioContr
   float value; // s8
   BalanceConfig_c *v6; // x0
 
-  if ( (byte_43562FC & 1) == 0 )
+  if ( (byte_438F97A & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    byte_43562FC = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    byte_438F97A = 1;
   }
   scenarioSpeedValueTxt = this->fields.scenarioSpeedValueTxt;
   if ( !scenarioSpeedValueTxt )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   value = UIProgressBar__get_value((UIProgressBar_o *)scenarioSpeedValueTxt, 0LL);
   v6 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -69,14 +69,14 @@ void __fastcall SetScenarioControl__getScenarioTextWaitTimeSecond(SetScenarioCon
   float value; // s8
   BalanceConfig_c *v6; // x0
 
-  if ( (byte_43562FE & 1) == 0 )
+  if ( (byte_438F97C & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    byte_43562FE = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    byte_438F97C = 1;
   }
   scenarioTextWaitValueTxt = this->fields.scenarioTextWaitValueTxt;
   if ( !scenarioTextWaitValueTxt )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   value = UIProgressBar__get_value((UIProgressBar_o *)scenarioTextWaitValueTxt, 0LL);
   v6 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -108,15 +108,15 @@ void __fastcall SetScenarioControl__initSetValue(SetScenarioControl_o *this, con
   const MethodInfo *v13; // x1
   const MethodInfo *v14; // x1
 
-  if ( (byte_43562F9 & 1) == 0 )
+  if ( (byte_438F977 & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&OptionManager_TypeInfo);
-    sub_B70694(&StringLiteral_9927/*"OPTION_SCENARIO_SPEED"*/);
-    sub_B70694(&StringLiteral_9925/*"OPTION_SCENARIO_COMMENT"*/);
-    sub_B70694(&StringLiteral_9928/*"OPTION_SCENARIO_TEXTWAIT_SPEED"*/);
-    byte_43562F9 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&OptionManager_TypeInfo);
+    sub_B775C4(&StringLiteral_9986/*"OPTION_SCENARIO_SPEED"*/);
+    sub_B775C4(&StringLiteral_9984/*"OPTION_SCENARIO_COMMENT"*/);
+    sub_B775C4(&StringLiteral_9987/*"OPTION_SCENARIO_TEXTWAIT_SPEED"*/);
+    byte_438F977 = 1;
   }
   scenarioSpeedSlider = (UILabel_o *)this->fields.scenarioSpeedSlider;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -124,17 +124,17 @@ void __fastcall SetScenarioControl__initSetValue(SetScenarioControl_o *this, con
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9927/*"OPTION_SCENARIO_SPEED"*/, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9986/*"OPTION_SCENARIO_SPEED"*/, 0LL);
   if ( !scenarioSpeedSlider )
     goto LABEL_20;
   UILabel__set_text(scenarioSpeedSlider, v4, 0LL);
   scenarioTextWaitSlider = (UILabel_o *)this->fields.scenarioTextWaitSlider;
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9928/*"OPTION_SCENARIO_TEXTWAIT_SPEED"*/, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9987/*"OPTION_SCENARIO_TEXTWAIT_SPEED"*/, 0LL);
   if ( !scenarioTextWaitSlider )
     goto LABEL_20;
   UILabel__set_text(scenarioTextWaitSlider, v4, 0LL);
   v7 = *(UILabel_o **)&this->fields.scenarioSpeedStep;
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9925/*"OPTION_SCENARIO_COMMENT"*/, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9984/*"OPTION_SCENARIO_COMMENT"*/, 0LL);
   if ( !v7 )
     goto LABEL_20;
   UILabel__set_text(v7, v4, 0LL);
@@ -184,7 +184,7 @@ void __fastcall SetScenarioControl__initSetValue(SetScenarioControl_o *this, con
         (v4 = (System_String_o *)this->fields.scenarioTextWaitValueTxt) == 0LL) )
   {
 LABEL_20:
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   }
   UIProgressBar__set_value(
     (UIProgressBar_o *)v4,
@@ -207,26 +207,26 @@ void __fastcall SetScenarioControl__setChangeScenarioSpeedText(SetScenarioContro
   __int64 v8; // x1
   System_String_o format; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_43562FB & 1) == 0 )
+  if ( (byte_438F979 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_6411/*"F2"*/);
-    sub_B70694(&StringLiteral_9930/*"OPTION_SCENARIO_UNIT"*/);
-    byte_43562FB = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_6467/*"F2"*/);
+    sub_B775C4(&StringLiteral_9989/*"OPTION_SCENARIO_UNIT"*/);
+    byte_438F979 = 1;
   }
   scenarioTextWaitTimeSecondValue = this->fields.scenarioTextWaitTimeSecondValue;
   scenarioTextWaitTxt = this->fields.scenarioTextWaitTxt;
   *(float *)&format.klass = (float)UnityEngine_Mathf__CeilToInt(scenarioTextWaitTimeSecondValue * 1000.0, 0LL) / 1000.0;
-  v5 = System_Single__ToString_44744840(*(float *)&format.klass, &format, (const MethodInfo *)StringLiteral_6411/*"F2"*/);
+  v5 = System_Single__ToString_44888608(*(float *)&format.klass, &format, (const MethodInfo *)StringLiteral_6467/*"F2"*/);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_9930/*"OPTION_SCENARIO_UNIT"*/, 0LL);
-  v7 = System_String__Concat_44758168(v5, v6, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_9989/*"OPTION_SCENARIO_UNIT"*/, 0LL);
+  v7 = System_String__Concat_44901936(v5, v6, 0LL);
   if ( !scenarioTextWaitTxt )
-    sub_B7076C(v7, v8);
+    sub_B7769C(v7, v8);
   UILabel__set_text(scenarioTextWaitTxt, v7, 0LL);
 }
 
@@ -239,12 +239,12 @@ void __fastcall SetScenarioControl__setDefaultValue(SetScenarioControl_o *this, 
   float ScenarioSpeedDefault; // s8
   struct UILabel_o *scenarioTextWaitValueTxt; // x19
 
-  if ( (byte_43562FF & 1) == 0 )
+  if ( (byte_438F97D & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&OptionManager_TypeInfo);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_43562FF = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&OptionManager_TypeInfo);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438F97D = 1;
   }
   scenarioSpeedValueTxt = this->fields.scenarioSpeedValueTxt;
   if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -252,10 +252,10 @@ void __fastcall SetScenarioControl__setDefaultValue(SetScenarioControl_o *this, 
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
   }
-  if ( !byte_43563B5 )
+  if ( !byte_438FA33 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    byte_43563B5 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    byte_438FA33 = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 )
@@ -295,10 +295,10 @@ LABEL_17:
   / (float)(static_fields->ScenarioSpeedHigh - static_fields->ScenarioSpeedLow),
     0LL);
   scenarioTextWaitValueTxt = this->fields.scenarioTextWaitValueTxt;
-  if ( !byte_43563B6 )
+  if ( !byte_438FA34 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    byte_43563B6 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    byte_438FA34 = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -309,7 +309,7 @@ LABEL_17:
   }
   if ( !scenarioTextWaitValueTxt )
 LABEL_27:
-    sub_B7076C(v4, method);
+    sub_B7769C(v4, method);
   UIProgressBar__set_value(
     (UIProgressBar_o *)scenarioTextWaitValueTxt,
     (float)(v4->static_fields->ScenarioTextWaitDefaultSt - v4->static_fields->ScenarioTextWaitLow)
@@ -331,25 +331,25 @@ void __fastcall SetScenarioControl__setScenarioTextWaitTimeSecond(SetScenarioCon
   __int64 v8; // x1
   System_String_o format; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_43562FD & 1) == 0 )
+  if ( (byte_438F97B & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_6411/*"F2"*/);
-    sub_B70694(&StringLiteral_9930/*"OPTION_SCENARIO_UNIT"*/);
-    byte_43562FD = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_6467/*"F2"*/);
+    sub_B775C4(&StringLiteral_9989/*"OPTION_SCENARIO_UNIT"*/);
+    byte_438F97B = 1;
   }
   v3 = *((float *)&this[1].klass + 1);
   scenarioCommentTxt = this->fields.scenarioCommentTxt;
   *(float *)&format.klass = (float)UnityEngine_Mathf__RoundToInt(v3 * 1000.0, 0LL) / 1000.0;
-  v5 = System_Single__ToString_44744840(*(float *)&format.klass, &format, (const MethodInfo *)StringLiteral_6411/*"F2"*/);
+  v5 = System_Single__ToString_44888608(*(float *)&format.klass, &format, (const MethodInfo *)StringLiteral_6467/*"F2"*/);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_9930/*"OPTION_SCENARIO_UNIT"*/, 0LL);
-  v7 = System_String__Concat_44758168(v5, v6, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_9989/*"OPTION_SCENARIO_UNIT"*/, 0LL);
+  v7 = System_String__Concat_44901936(v5, v6, 0LL);
   if ( !scenarioCommentTxt )
-    sub_B7076C(v7, v8);
+    sub_B7769C(v7, v8);
   UILabel__set_text(scenarioCommentTxt, v7, 0LL);
 }

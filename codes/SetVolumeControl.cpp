@@ -23,10 +23,10 @@ void __fastcall SetVolumeControl___cctor(const MethodInfo *method)
   UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4356345 & 1) == 0 )
+  if ( (byte_438F9C3 & 1) == 0 )
   {
-    sub_B70694(&SetVolumeControl_TypeInfo);
-    byte_4356345 = 1;
+    sub_B775C4(&SetVolumeControl_TypeInfo);
+    byte_438F9C3 = 1;
   }
   v19.fields.r = 1.0;
   v19.fields.g = 1.0;
@@ -79,10 +79,10 @@ void __fastcall SetVolumeControl__OnClickMuteButton(SetVolumeControl_o *this, co
 {
   int v3; // w19
 
-  if ( (byte_4356343 & 1) == 0 )
+  if ( (byte_438F9C1 & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4356343 = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438F9C1 = 1;
   }
   BYTE4(this[1].klass) ^= 1u;
   SetVolumeControl__muteSetting(this, method);
@@ -106,14 +106,14 @@ void __fastcall SetVolumeControl__getChangeBgmValue(SetVolumeControl_o *this, co
   const MethodInfo *v4; // x1
   float voiceValue; // s8
 
-  if ( (byte_435633C & 1) == 0 )
+  if ( (byte_438F9BA & 1) == 0 )
   {
-    sub_B70694(&OptionManager_TypeInfo);
-    byte_435633C = 1;
+    sub_B775C4(&OptionManager_TypeInfo);
+    byte_438F9BA = 1;
   }
   bgmValueTxt = this->fields.bgmValueTxt;
   if ( !bgmValueTxt )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   this->fields.voiceValue = UIProgressBar__get_value((UIProgressBar_o *)bgmValueTxt, 0LL);
   SetVolumeControl__setChangeBgmText(this, v4);
   if ( !BYTE4(this[1].klass) )
@@ -138,18 +138,18 @@ void __fastcall SetVolumeControl__getChangeSeValue(SetVolumeControl_o *this, con
   const MethodInfo *v7; // x1
   float v8; // s9
 
-  if ( (byte_435633E & 1) == 0 )
+  if ( (byte_438F9BC & 1) == 0 )
   {
-    sub_B70694(&OptionManager_TypeInfo);
-    sub_B70694(&SeManager_TypeInfo);
-    byte_435633E = 1;
+    sub_B775C4(&OptionManager_TypeInfo);
+    sub_B775C4(&SeManager_TypeInfo);
+    byte_438F9BC = 1;
   }
   seValueTxt = this->fields.seValueTxt;
   if ( !seValueTxt
     || (value = UIProgressBar__get_value((UIProgressBar_o *)seValueTxt, 0LL),
         (seValueTxt = this->fields.seValueTxt) == 0LL) )
   {
-    sub_B7076C(seValueTxt, method);
+    sub_B7769C(seValueTxt, method);
   }
   v5 = *(float *)&this->fields.muteFlag;
   v6 = value;
@@ -183,19 +183,19 @@ void __fastcall SetVolumeControl__getChangeVoiceValue(SetVolumeControl_o *this, 
   const MethodInfo *v7; // x1
   float v8; // s9
 
-  if ( (byte_4356340 & 1) == 0 )
+  if ( (byte_438F9BE & 1) == 0 )
   {
-    sub_B70694(&OptionManager_TypeInfo);
-    sub_B70694(&SoundManager_TypeInfo);
-    sub_B70694(&StringLiteral_23021/*"testVoice"*/);
-    byte_4356340 = 1;
+    sub_B775C4(&OptionManager_TypeInfo);
+    sub_B775C4(&SoundManager_TypeInfo);
+    sub_B775C4(&StringLiteral_23122/*"testVoice"*/);
+    byte_438F9BE = 1;
   }
   voiceValueTxt = this->fields.voiceValueTxt;
   if ( !voiceValueTxt
     || (value = UIProgressBar__get_value((UIProgressBar_o *)voiceValueTxt, 0LL),
         (voiceValueTxt = this->fields.voiceValueTxt) == 0LL) )
   {
-    sub_B7076C(voiceValueTxt, method);
+    sub_B7769C(voiceValueTxt, method);
   }
   v5 = *(float *)&this[1].klass;
   v6 = value;
@@ -217,7 +217,7 @@ void __fastcall SetVolumeControl__getChangeVoiceValue(SetVolumeControl_o *this, 
       {
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
       }
-      SoundManager__playVoice((System_String_o *)StringLiteral_23021/*"testVoice"*/, 0LL);
+      SoundManager__playVoice((System_String_o *)StringLiteral_23122/*"testVoice"*/, 0LL);
     }
   }
 }
@@ -245,17 +245,17 @@ void __fastcall SetVolumeControl__initSetVolume(SetVolumeControl_o *this, const 
   const MethodInfo *v20; // x1
   const MethodInfo *v21; // x1
 
-  if ( (byte_435633A & 1) == 0 )
+  if ( (byte_438F9B8 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&OptionManager_TypeInfo);
-    sub_B70694(&StringLiteral_9946/*"OPTION_VOLUME_MUTE_INFO"*/);
-    sub_B70694(&StringLiteral_9943/*"OPTION_VOICE"*/);
-    sub_B70694(&StringLiteral_9945/*"OPTION_VOLUME_MUTE_EXPLANATION"*/);
-    sub_B70694(&StringLiteral_9931/*"OPTION_SE"*/);
-    sub_B70694(&StringLiteral_9895/*"OPTION_BGM"*/);
-    sub_B70694(&StringLiteral_9944/*"OPTION_VOLUME_MUTE"*/);
-    byte_435633A = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&OptionManager_TypeInfo);
+    sub_B775C4(&StringLiteral_10005/*"OPTION_VOLUME_MUTE_INFO"*/);
+    sub_B775C4(&StringLiteral_10002/*"OPTION_VOICE"*/);
+    sub_B775C4(&StringLiteral_10004/*"OPTION_VOLUME_MUTE_EXPLANATION"*/);
+    sub_B775C4(&StringLiteral_9990/*"OPTION_SE"*/);
+    sub_B775C4(&StringLiteral_9954/*"OPTION_BGM"*/);
+    sub_B775C4(&StringLiteral_10003/*"OPTION_VOLUME_MUTE"*/);
+    byte_438F9B8 = 1;
   }
   bgmSilder = (UILabel_o *)this->fields.bgmSilder;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -263,32 +263,32 @@ void __fastcall SetVolumeControl__initSetVolume(SetVolumeControl_o *this, const 
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9895/*"OPTION_BGM"*/, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9954/*"OPTION_BGM"*/, 0LL);
   if ( !bgmSilder )
     goto LABEL_19;
   UILabel__set_text(bgmSilder, v4, 0LL);
   seSilder = (UILabel_o *)this->fields.seSilder;
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9931/*"OPTION_SE"*/, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9990/*"OPTION_SE"*/, 0LL);
   if ( !seSilder )
     goto LABEL_19;
   UILabel__set_text(seSilder, v4, 0LL);
   voiceSilder = (UILabel_o *)this->fields.voiceSilder;
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9943/*"OPTION_VOICE"*/, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_10002/*"OPTION_VOICE"*/, 0LL);
   if ( !voiceSilder )
     goto LABEL_19;
   UILabel__set_text(voiceSilder, v4, 0LL);
   muteBtnInfoTxt = this->fields.muteBtnInfoTxt;
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9944/*"OPTION_VOLUME_MUTE"*/, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_10003/*"OPTION_VOLUME_MUTE"*/, 0LL);
   if ( !muteBtnInfoTxt )
     goto LABEL_19;
   UILabel__set_text(muteBtnInfoTxt, v4, 0LL);
   muteMaskExpTxt = this->fields.muteMaskExpTxt;
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9946/*"OPTION_VOLUME_MUTE_INFO"*/, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_10005/*"OPTION_VOLUME_MUTE_INFO"*/, 0LL);
   if ( !muteMaskExpTxt )
     goto LABEL_19;
   UILabel__set_text(muteMaskExpTxt, v4, 0LL);
   v10 = *(UILabel_o **)&this->fields.bgmValue;
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9945/*"OPTION_VOLUME_MUTE_EXPLANATION"*/, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_10004/*"OPTION_VOLUME_MUTE_EXPLANATION"*/, 0LL);
   if ( !v10 )
     goto LABEL_19;
   UILabel__set_text(v10, v4, 0LL);
@@ -315,7 +315,7 @@ void __fastcall SetVolumeControl__initSetVolume(SetVolumeControl_o *this, const 
         !voiceValueTxt) )
   {
 LABEL_19:
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   }
   UIProgressBar__set_value((UIProgressBar_o *)voiceValueTxt, v17, 0LL);
   SetVolumeControl__setChangeBgmText(this, v18);
@@ -333,20 +333,20 @@ void __fastcall SetVolumeControl__muteSetting(SetVolumeControl_o *this, const Me
   UIWidget_o *v6; // x20
   float voiceValue; // s8
 
-  if ( (byte_4356344 & 1) == 0 )
+  if ( (byte_438F9C2 & 1) == 0 )
   {
-    sub_B70694(&OptionManager_TypeInfo);
-    sub_B70694(&SetVolumeControl_TypeInfo);
-    sub_B70694(&StringLiteral_17262/*"btn_on"*/);
-    sub_B70694(&StringLiteral_17261/*"btn_off"*/);
-    byte_4356344 = 1;
+    sub_B775C4(&OptionManager_TypeInfo);
+    sub_B775C4(&SetVolumeControl_TypeInfo);
+    sub_B775C4(&StringLiteral_17345/*"btn_on"*/);
+    sub_B775C4(&StringLiteral_17344/*"btn_off"*/);
+    byte_438F9C2 = 1;
   }
   muteMask = this->fields.muteMask;
   if ( !muteMask )
     goto LABEL_34;
   if ( BYTE4(this[1].klass) )
   {
-    UIButton__set_normalSprite((UIButton_o *)muteMask, (System_String_o *)StringLiteral_17262/*"btn_on"*/, 0LL);
+    UIButton__set_normalSprite((UIButton_o *)muteMask, (System_String_o *)StringLiteral_17345/*"btn_on"*/, 0LL);
     muteMask = this->fields.muteBtnTxt;
     if ( muteMask )
     {
@@ -408,9 +408,9 @@ void __fastcall SetVolumeControl__muteSetting(SetVolumeControl_o *this, const Me
       }
     }
 LABEL_34:
-    sub_B7076C(muteMask, method);
+    sub_B7769C(muteMask, method);
   }
-  UIButton__set_normalSprite((UIButton_o *)muteMask, (System_String_o *)StringLiteral_17261/*"btn_off"*/, 0LL);
+  UIButton__set_normalSprite((UIButton_o *)muteMask, (System_String_o *)StringLiteral_17344/*"btn_off"*/, 0LL);
   muteMask = this->fields.muteBtnTxt;
   if ( !muteMask )
     goto LABEL_34;
@@ -464,10 +464,10 @@ void __fastcall SetVolumeControl__reflectionVolume(SetVolumeControl_o *this, con
 {
   int v3; // w20
 
-  if ( (byte_435633B & 1) == 0 )
+  if ( (byte_438F9B9 & 1) == 0 )
   {
-    sub_B70694(&OptionManager_TypeInfo);
-    byte_435633B = 1;
+    sub_B775C4(&OptionManager_TypeInfo);
+    byte_438F9B9 = 1;
   }
   v3 = BYTE4(this[1].klass);
   if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -493,7 +493,7 @@ void __fastcall SetVolumeControl__setChangeBgmText(SetVolumeControl_o *this, con
   seTxt = this->fields.seTxt;
   v4 = System_Int32__ToString((int32_t)&v6, 0LL);
   if ( !seTxt )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   UILabel__set_text(seTxt, v4, 0LL);
 }
 
@@ -505,14 +505,14 @@ void __fastcall SetVolumeControl__setChangeBgmValue(SetVolumeControl_o *this, co
   int v5; // w8
   float v6; // s8
 
-  if ( (byte_435633D & 1) == 0 )
+  if ( (byte_438F9BB & 1) == 0 )
   {
-    sub_B70694(&OptionManager_TypeInfo);
-    byte_435633D = 1;
+    sub_B775C4(&OptionManager_TypeInfo);
+    byte_438F9BB = 1;
   }
   bgmValueTxt = this->fields.bgmValueTxt;
   if ( !bgmValueTxt )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   value = UIProgressBar__get_value((UIProgressBar_o *)bgmValueTxt, 0LL);
   v5 = BYTE4(this[1].klass);
   this->fields.voiceValue = value;
@@ -540,7 +540,7 @@ void __fastcall SetVolumeControl__setChangeSeText(SetVolumeControl_o *this, cons
   voiceTxt = this->fields.voiceTxt;
   v4 = System_Int32__ToString((int32_t)&v6, 0LL);
   if ( !voiceTxt )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   UILabel__set_text(voiceTxt, v4, 0LL);
 }
 
@@ -552,14 +552,14 @@ void __fastcall SetVolumeControl__setChangeSeValue(SetVolumeControl_o *this, con
   int v5; // w8
   float v6; // s8
 
-  if ( (byte_435633F & 1) == 0 )
+  if ( (byte_438F9BD & 1) == 0 )
   {
-    sub_B70694(&OptionManager_TypeInfo);
-    byte_435633F = 1;
+    sub_B775C4(&OptionManager_TypeInfo);
+    byte_438F9BD = 1;
   }
   seValueTxt = this->fields.seValueTxt;
   if ( !seValueTxt )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   value = UIProgressBar__get_value((UIProgressBar_o *)seValueTxt, 0LL);
   v5 = BYTE4(this[1].klass);
   *(float *)&this->fields.muteFlag = value;
@@ -587,7 +587,7 @@ void __fastcall SetVolumeControl__setChangeVoiceText(SetVolumeControl_o *this, c
   muteBtn = (UILabel_o *)this->fields.muteBtn;
   v4 = System_Int32__ToString((int32_t)&v6, 0LL);
   if ( !muteBtn )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   UILabel__set_text(muteBtn, v4, 0LL);
 }
 
@@ -599,14 +599,14 @@ void __fastcall SetVolumeControl__setChangeVoiceValue(SetVolumeControl_o *this, 
   int v5; // w8
   float v6; // s8
 
-  if ( (byte_4356341 & 1) == 0 )
+  if ( (byte_438F9BF & 1) == 0 )
   {
-    sub_B70694(&OptionManager_TypeInfo);
-    byte_4356341 = 1;
+    sub_B775C4(&OptionManager_TypeInfo);
+    byte_438F9BF = 1;
   }
   voiceValueTxt = this->fields.voiceValueTxt;
   if ( !voiceValueTxt )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   value = UIProgressBar__get_value((UIProgressBar_o *)voiceValueTxt, 0LL);
   v5 = BYTE4(this[1].klass);
   *(float *)&this[1].klass = value;
@@ -634,21 +634,21 @@ void __fastcall SetVolumeControl__setDefaultVolume(SetVolumeControl_o *this, con
   float v9; // s0
   const MethodInfo *v10; // x1
 
-  if ( (byte_4356342 & 1) == 0 )
+  if ( (byte_438F9C0 & 1) == 0 )
   {
-    sub_B70694(&OptionManager_TypeInfo);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4356342 = 1;
+    sub_B775C4(&OptionManager_TypeInfo);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438F9C0 = 1;
   }
   if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
   }
-  if ( !byte_43563B9 )
+  if ( !byte_438FA37 )
   {
-    sub_B70694(&OptionManager_TypeInfo);
-    byte_43563B9 = 1;
+    sub_B775C4(&OptionManager_TypeInfo);
+    byte_438FA37 = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -659,11 +659,11 @@ void __fastcall SetVolumeControl__setDefaultVolume(SetVolumeControl_o *this, con
   }
   bgmValueTxt = this->fields.bgmValueTxt;
   BYTE4(this[1].klass) = v3->static_fields->DEF_MUTE;
-  if ( !byte_43563BA )
+  if ( !byte_438FA38 )
   {
-    sub_B70694(&OptionManager_TypeInfo);
+    sub_B775C4(&OptionManager_TypeInfo);
     v3 = OptionManager_TypeInfo;
-    byte_43563BA = 1;
+    byte_438FA38 = 1;
   }
   if ( (BYTE3(v3->vtable._0_Equals.methodPtr) & 4) != 0 && !v3->_2.cctor_finished )
   {
@@ -676,10 +676,10 @@ void __fastcall SetVolumeControl__setDefaultVolume(SetVolumeControl_o *this, con
     goto LABEL_33;
   UIProgressBar__set_value((UIProgressBar_o *)bgmValueTxt, DEF_VOL, 0LL);
   seValueTxt = this->fields.seValueTxt;
-  if ( !byte_43563BA )
+  if ( !byte_438FA38 )
   {
-    sub_B70694(&OptionManager_TypeInfo);
-    byte_43563BA = 1;
+    sub_B775C4(&OptionManager_TypeInfo);
+    byte_438FA38 = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -694,10 +694,10 @@ void __fastcall SetVolumeControl__setDefaultVolume(SetVolumeControl_o *this, con
     goto LABEL_33;
   UIProgressBar__set_value((UIProgressBar_o *)seValueTxt, v7, 0LL);
   voiceValueTxt = this->fields.voiceValueTxt;
-  if ( !byte_43563BA )
+  if ( !byte_438FA38 )
   {
-    sub_B70694(&OptionManager_TypeInfo);
-    byte_43563BA = 1;
+    sub_B775C4(&OptionManager_TypeInfo);
+    byte_438FA38 = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -710,7 +710,7 @@ void __fastcall SetVolumeControl__setDefaultVolume(SetVolumeControl_o *this, con
   *(float *)&this[1].klass = v9;
   if ( !voiceValueTxt )
 LABEL_33:
-    sub_B7076C(v3, method);
+    sub_B7769C(v3, method);
   UIProgressBar__set_value((UIProgressBar_o *)voiceValueTxt, v9, 0LL);
   SetVolumeControl__muteSetting(this, v10);
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )

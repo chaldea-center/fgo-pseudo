@@ -18,16 +18,16 @@ void __fastcall BoostItemListViewItem___ctor(
   UserItemEntity_o *EntityDefinitely; // x0
   int32_t num; // w8
 
-  if ( (byte_43516E6 & 1) == 0 )
+  if ( (byte_438AE6B & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43516E6 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438AE6B = 1;
   }
-  ListViewItem___ctor_23967088((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
   this->fields.itemEntity = data;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.itemEntity,
     (System_Int32_array **)data,
     v11,
@@ -36,12 +36,12 @@ void __fastcall BoostItemListViewItem___ctor(
     v14,
     v15,
     v16);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   MasterData_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                              Instance,
-                                                             (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                                             (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -50,7 +50,7 @@ void __fastcall BoostItemListViewItem___ctor(
   Instance = (DataManager_o *)NetworkManager__get_UserId(0LL);
   if ( !data || !MasterData_WarQuestSelectionMaster )
 LABEL_16:
-    sub_B7076C(Instance, v18);
+    sub_B7769C(Instance, v18);
   EntityDefinitely = UserItemMaster__GetEntityDefinitely(
                        MasterData_WarQuestSelectionMaster,
                        (int64_t)Instance,
@@ -84,10 +84,10 @@ System_String_o *__fastcall BoostItemListViewItem__get_DetailText(
   struct ItemEntity_o *itemEntity; // x8
   LocalizationManager_c *v4; // x0
 
-  if ( (byte_43516E8 & 1) == 0 )
+  if ( (byte_438AE6D & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    byte_43516E8 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    byte_438AE6D = 1;
   }
   itemEntity = this->fields.itemEntity;
   if ( !itemEntity )
@@ -97,10 +97,10 @@ System_String_o *__fastcall BoostItemListViewItem__get_DetailText(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    if ( !byte_434F6FF )
+    if ( !byte_4388DC6 )
     {
-      sub_B70694(&LocalizationManager_TypeInfo);
-      byte_434F6FF = 1;
+      sub_B775C4(&LocalizationManager_TypeInfo);
+      byte_4388DC6 = 1;
     }
     v4 = LocalizationManager_TypeInfo;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -164,16 +164,16 @@ System_String_o *__fastcall BoostItemListViewItem__get_NameText(
   struct ItemEntity_o *itemEntity; // x8
   System_String_o **p_name; // x8
 
-  if ( (byte_43516E7 & 1) == 0 )
+  if ( (byte_438AE6C & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_18674/*"error"*/);
-    byte_43516E7 = 1;
+    sub_B775C4(&StringLiteral_18762/*"error"*/);
+    byte_438AE6C = 1;
   }
   itemEntity = this->fields.itemEntity;
   if ( itemEntity )
     p_name = &itemEntity->fields.name;
   else
-    p_name = (System_String_o **)&StringLiteral_18674/*"error"*/;
+    p_name = (System_String_o **)&StringLiteral_18762/*"error"*/;
   return *p_name;
 }
 
@@ -184,18 +184,18 @@ System_String_o *__fastcall BoostItemListViewItem__get_NumText(BoostItemListView
   Il2CppObject *v4; // x0
   int32_t itemPossessionSum; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_43516EA & 1) == 0 )
+  if ( (byte_438AE6F & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&StringLiteral_23910/*"{0:N0}"*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43516EA = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&StringLiteral_24013/*"{0:N0}"*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438AE6F = 1;
   }
   if ( !this->fields.itemEntity )
     return (System_String_o *)StringLiteral_1/*""*/;
   itemPossessionSum = this->fields.itemPossessionSum;
   v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &itemPossessionSum, v2);
-  return System_String__Format((System_String_o *)StringLiteral_23910/*"{0:N0}"*/, v4, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_24013/*"{0:N0}"*/, v4, 0LL);
 }
 
 
@@ -233,31 +233,31 @@ System_String_o *__fastcall BoostItemListViewItem__get_SkillText(
   struct ItemEntity_o *v6; // x8
   SkillEntity_o *Entity; // x0
 
-  if ( (byte_43516E9 & 1) == 0 )
+  if ( (byte_438AE6E & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_SkillMaster___);
-    sub_B70694(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43516E9 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_SkillMaster___);
+    sub_B775C4(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438AE6E = 1;
   }
   itemEntity = this->fields.itemEntity;
   if ( !itemEntity || itemEntity->fields.type != 19 )
     return (System_String_o *)StringLiteral_1/*""*/;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_SkillMaster___),
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_SkillMaster___),
         (v6 = this->fields.itemEntity) == 0LL)
     || !Instance )
   {
-    sub_B7076C(Instance, v5);
+    sub_B7769C(Instance, v5);
   }
   Entity = (SkillEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                               (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                               v6->fields.value,
-                              (const MethodInfo_21C0440 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                              (const MethodInfo_21FB894 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   if ( Entity )
     return SkillEntity__getEffectExplanation(Entity, 0, 0LL);
   else

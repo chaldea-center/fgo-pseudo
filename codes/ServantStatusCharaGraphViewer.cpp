@@ -13,7 +13,7 @@ void __fastcall ServantStatusCharaGraphViewer__DeactivateScrollViewObjects(
   viewerListViewManager = this->fields.viewerListViewManager;
   this->fields._IsAbleToSwitchDispMode_k__BackingField = 0;
   if ( !viewerListViewManager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   viewerListViewManager->fields.currentPhase = 0;
   ListViewManager__DestroyList((ListViewManager_o *)viewerListViewManager, 0LL);
 }
@@ -28,7 +28,7 @@ void __fastcall ServantStatusCharaGraphViewer__FadeoutFrameScrollViewObjects(
 
   viewerListViewManager = this->fields.viewerListViewManager;
   if ( !viewerListViewManager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusCharaGraphViewerListViewManager__PlayFadeOutObjectFrame(viewerListViewManager, delay, method);
 }
 
@@ -43,14 +43,14 @@ ServantStatusCharaGraphListViewItem_o *__fastcall ServantStatusCharaGraphViewer_
   __int64 v5; // x11
 
   v2 = this;
-  if ( (byte_434FF4B & 1) == 0 )
+  if ( (byte_438962F & 1) == 0 )
   {
-    this = (ServantStatusCharaGraphViewer_o *)sub_B70694(&ServantStatusCharaGraphListViewItem_TypeInfo);
-    byte_434FF4B = 1;
+    this = (ServantStatusCharaGraphViewer_o *)sub_B775C4(&ServantStatusCharaGraphListViewItem_TypeInfo);
+    byte_438962F = 1;
   }
   viewerListViewManager = v2->fields.viewerListViewManager;
   if ( !viewerListViewManager )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   centerItem = (ServantStatusCharaGraphListViewItem_o *)viewerListViewManager->fields.centerItem;
   if ( !centerItem )
     return 0LL;
@@ -92,7 +92,7 @@ bool __fastcall ServantStatusCharaGraphViewer__IsAbleToPinch(
   viewerListViewManager = this->fields.viewerListViewManager;
   if ( !viewerListViewManager )
 LABEL_11:
-    sub_B7076C(viewerListViewManager, method);
+    sub_B7769C(viewerListViewManager, method);
   if ( centerItem->fields.basePosition.fields.y <= CenterPosition.fields.y )
     v6 = CenterPosition.fields.y - CenterPosition.fields.x;
   else
@@ -138,7 +138,7 @@ void __fastcall ServantStatusCharaGraphViewer__SetDispType(
         }
       }
 LABEL_17:
-      sub_B7076C(viewerListViewManager, *(_QWORD *)&dispType);
+      sub_B7769C(viewerListViewManager, *(_QWORD *)&dispType);
     case 1:
       viewerListViewManager = (ServantStatusCharaGraphViewerListViewManager_o *)this->fields.dragObjRootPanel;
       if ( viewerListViewManager )
@@ -197,7 +197,7 @@ void __fastcall ServantStatusCharaGraphViewer__SetItemDataType(
 
   viewerListViewManager = this->fields.viewerListViewManager;
   if ( !viewerListViewManager )
-    sub_B7076C(0LL, dispType);
+    sub_B7769C(0LL, dispType);
   ServantStatusCharaGraphViewerListViewManager__SetItemDataType(viewerListViewManager, dispType, method);
 }
 
@@ -212,10 +212,10 @@ void __fastcall ServantStatusCharaGraphViewer__SetModifyScrollViewCenter(
   const MethodInfo *v7; // x2
   ServantStatusCharaGraphViewerListViewManager_o *v8; // x0
 
-  if ( (byte_434FF4C & 1) == 0 )
+  if ( (byte_4389630 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_434FF4C = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4389630 = 1;
   }
   viewerListViewManager = (UnityEngine_Object_o *)this->fields.viewerListViewManager;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -227,7 +227,7 @@ void __fastcall ServantStatusCharaGraphViewer__SetModifyScrollViewCenter(
   {
     v8 = this->fields.viewerListViewManager;
     if ( !v8 )
-      sub_B7076C(0LL, v6);
+      sub_B7769C(0LL, v6);
     ServantStatusCharaGraphViewerListViewManager__SetModifyScrollViewCenter(v8, onModifyScrollViewCenter, v7);
   }
 }
@@ -249,7 +249,7 @@ void __fastcall ServantStatusCharaGraphViewer__Setup(
     viewerListViewManager = this->fields.viewerListViewManager;
     this->fields._IsAbleToSwitchDispMode_k__BackingField = 1;
     if ( !viewerListViewManager )
-      sub_B7076C(0LL, v7);
+      sub_B7769C(0LL, v7);
     ServantStatusCharaGraphViewerListViewManager__CreateList(viewerListViewManager, currentIndex, items, v8);
   }
   else

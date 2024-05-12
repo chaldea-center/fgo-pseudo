@@ -28,12 +28,12 @@ void __fastcall TermObjectSwitchEffectSubComponent__RecvParam(
   __int64 v18; // x0
 
   v4 = this;
-  if ( (byte_434EE36 & 1) == 0 )
+  if ( (byte_438833D & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_EventRaceMaster___);
-    sub_B70694(&RaceResultEffectParam_TypeInfo);
-    this = (TermObjectSwitchEffectSubComponent_o *)sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_434EE36 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_EventRaceMaster___);
+    sub_B775C4(&RaceResultEffectParam_TypeInfo);
+    this = (TermObjectSwitchEffectSubComponent_o *)sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438833D = 1;
   }
   if ( param
     && (v5 = *(&RaceResultEffectParam_TypeInfo->_2.bitflags2 + 1), *(&param->klass->_2.bitflags2 + 1) >= (unsigned int)v5) )
@@ -61,12 +61,12 @@ void __fastcall TermObjectSwitchEffectSubComponent__RecvParam(
     goto LABEL_24;
   v11 = *((_DWORD *)monitor + 8);
   v12 = *((_DWORD *)monitor + 10);
-  this = (TermObjectSwitchEffectSubComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (TermObjectSwitchEffectSubComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_31;
   this = (TermObjectSwitchEffectSubComponent_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                    (DataManager_o *)this,
-                                                   (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventRaceMaster___);
+                                                   (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventRaceMaster___);
   if ( !this )
     goto LABEL_31;
   this = (TermObjectSwitchEffectSubComponent_o *)EventRaceMaster__GetTermIndex((EventRaceMaster_o *)this, v11, v12, 0LL);
@@ -106,8 +106,8 @@ LABEL_24:
         if ( (unsigned int)v16 >= v17->max_length )
         {
 LABEL_32:
-          v18 = sub_B70798(this);
-          sub_B70738(v18, 0LL);
+          v18 = sub_B776C8(this);
+          sub_B77668(v18, 0LL);
         }
         this = (TermObjectSwitchEffectSubComponent_o *)v17->m_Items[v16];
         if ( !this )
@@ -117,7 +117,7 @@ LABEL_32:
           return;
       }
 LABEL_31:
-      sub_B7076C(this, param);
+      sub_B7769C(this, param);
     }
   }
 }

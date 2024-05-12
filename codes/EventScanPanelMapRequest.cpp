@@ -12,18 +12,18 @@ void __fastcall EventScanPanelMapRequest__beginRequest(
         int32_t panelScanId,
         const MethodInfo *method)
 {
-  if ( (byte_43555ED & 1) == 0 )
+  if ( (byte_438EC65 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_18751/*"eventId"*/);
-    sub_B70694(&StringLiteral_20693/*"mapId"*/);
-    sub_B70694(&StringLiteral_21759/*"panelMapDetailId"*/);
-    sub_B70694(&StringLiteral_21760/*"panelScanId"*/);
-    byte_43555ED = 1;
+    sub_B775C4(&StringLiteral_18839/*"eventId"*/);
+    sub_B775C4(&StringLiteral_20789/*"mapId"*/);
+    sub_B775C4(&StringLiteral_21856/*"panelMapDetailId"*/);
+    sub_B775C4(&StringLiteral_21857/*"panelScanId"*/);
+    byte_438EC65 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18751/*"eventId"*/, eventId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20693/*"mapId"*/, mapId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21759/*"panelMapDetailId"*/, panelMapDetailId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21760/*"panelScanId"*/, panelScanId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18839/*"eventId"*/, eventId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20789/*"mapId"*/, mapId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21856/*"panelMapDetailId"*/, panelMapDetailId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21857/*"panelScanId"*/, panelScanId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -34,11 +34,11 @@ System_String_o *__fastcall EventScanPanelMapRequest__getURL(
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_43555EC & 1) == 0 )
+  if ( (byte_438EC64 & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&StringLiteral_18744/*"event/scanPanelMap"*/);
-    byte_43555EC = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&StringLiteral_18832/*"event/scanPanelMap"*/);
+    byte_438EC64 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -46,7 +46,7 @@ System_String_o *__fastcall EventScanPanelMapRequest__getURL(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_44758168(BaseUrl, (System_String_o *)StringLiteral_18744/*"event/scanPanelMap"*/, 0LL);
+  return System_String__Concat_44901936(BaseUrl, (System_String_o *)StringLiteral_18832/*"event/scanPanelMap"*/, 0LL);
 }
 
 
@@ -60,12 +60,12 @@ void __fastcall EventScanPanelMapRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v8; // x1
 
-  if ( (byte_43555EE & 1) == 0 )
+  if ( (byte_438EC66 & 1) == 0 )
   {
-    sub_B70694(&JsonManager_TypeInfo);
-    sub_B70694(&ResponseCommandKind_TypeInfo);
-    sub_B70694(&StringLiteral_21408/*"ng"*/);
-    byte_43555EE = 1;
+    sub_B775C4(&JsonManager_TypeInfo);
+    sub_B775C4(&ResponseCommandKind_TypeInfo);
+    sub_B775C4(&StringLiteral_21504/*"ng"*/);
+    byte_438EC66 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
@@ -74,7 +74,7 @@ void __fastcall EventScanPanelMapRequest__requestCompleted(
   }
   v5 = ResponseCommandKind__SearchData(104, responseList, 0LL);
   if ( v5
-    && (v6 = v5, ResponseData__checkError_29653500(v5, 0LL))
+    && (v6 = v5, ResponseData__checkError_30128096(v5, 0LL))
     && (success = (Il2CppObject *)v6->fields.success) != 0LL )
   {
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
@@ -83,7 +83,7 @@ void __fastcall EventScanPanelMapRequest__requestCompleted(
   }
   else
   {
-    v8 = (System_String_o *)StringLiteral_21408/*"ng"*/;
+    v8 = (System_String_o *)StringLiteral_21504/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v8, 0LL);
 }

@@ -12,10 +12,10 @@ void __fastcall MaskWithOpening__SetBlock(MaskWithOpening_o *this, const MethodI
   UnityEngine_Vector3_o v6; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v7; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4354DDD & 1) == 0 )
+  if ( (byte_438E5D1 & 1) == 0 )
   {
-    sub_B70694(&ManagerConfig_TypeInfo);
-    byte_4354DDD = 1;
+    sub_B775C4(&ManagerConfig_TypeInfo);
+    byte_438E5D1 = 1;
   }
   mask1 = (UnityEngine_Collider_o *)this->fields.mask1;
   if ( !mask1 )
@@ -49,7 +49,7 @@ void __fastcall MaskWithOpening__SetBlock(MaskWithOpening_o *this, const MethodI
     || (UnityEngine_Collider__set_enabled(mask1, 0, 0LL), (mask1 = (UnityEngine_Collider_o *)this->fields.mask4) == 0LL) )
   {
 LABEL_13:
-    sub_B7076C(mask1, method);
+    sub_B7769C(mask1, method);
   }
   UnityEngine_Collider__set_enabled(mask1, 0, 0LL);
 }
@@ -60,16 +60,16 @@ void __fastcall MaskWithOpening__SetDepth(MaskWithOpening_o *this, int32_t depth
   WebViewObject_o *Component_WebViewObject; // x0
   __int64 v6; // x1
 
-  if ( (byte_4354DDB & 1) == 0 )
+  if ( (byte_438E5CF & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    byte_4354DDB = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    byte_438E5CF = 1;
   }
   Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                               (UnityEngine_Component_o *)this,
-                              (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                              (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   if ( !Component_WebViewObject )
-    sub_B7076C(0LL, v6);
+    sub_B7769C(0LL, v6);
   UIPanel__set_depth((UIPanel_o *)Component_WebViewObject, depth, 0LL);
 }
 
@@ -136,10 +136,10 @@ void __fastcall MaskWithOpening__SetOpening(
 
   v43.methodPointer = *(Il2CppMethodPointer *)&hole.fields.m_XMin;
   v43.invoker_method = *(void **)&hole.fields.m_Width;
-  if ( (byte_4354DDC & 1) == 0 )
+  if ( (byte_438E5D0 & 1) == 0 )
   {
-    sub_B70694(&ManagerConfig_TypeInfo);
-    byte_4354DDC = 1;
+    sub_B775C4(&ManagerConfig_TypeInfo);
+    byte_438E5D0 = 1;
   }
   MaskWithOpening__SetDepth(this, depth, method);
   mask1 = (UnityEngine_Collider_o *)this->fields.mask1;
@@ -237,7 +237,7 @@ void __fastcall MaskWithOpening__SetOpening(
         !v40) )
   {
 LABEL_19:
-    sub_B7076C(mask1, v6);
+    sub_B7769C(mask1, v6);
   }
   v49.fields.y = v42;
   v49.fields.x = v29 - v41;
@@ -260,7 +260,7 @@ void __fastcall MaskWithOpening__Start(MaskWithOpening_o *this, const MethodInfo
         *(UnityEngine_Vector3_o *)&v5 = UnityEngine_Vector3__get_one(0LL),
         !transform) )
   {
-    sub_B7076C(gameObject, v3);
+    sub_B7769C(gameObject, v3);
   }
   UnityEngine_Transform__set_localScale(transform, *(UnityEngine_Vector3_o *)&v5, 0LL);
 }

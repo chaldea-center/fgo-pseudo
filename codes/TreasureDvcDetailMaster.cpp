@@ -1,14 +1,14 @@
 void __fastcall TreasureDvcDetailMaster___ctor(TreasureDvcDetailMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4353D9B & 1) == 0 )
+  if ( (byte_438D659 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int___ctor__);
-    byte_4353D9B = 1;
+    sub_B775C4(&Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int___ctor__);
+    byte_438D659 = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     92,
-    (const MethodInfo_21C03A4 *)Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int___ctor__);
+    (const MethodInfo_21FB7F8 *)Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int___ctor__);
 }
 
 
@@ -33,21 +33,21 @@ System_String_o *__fastcall TreasureDvcDetailMaster__getDetail(int32_t id, const
   int32_t v19; // [xsp+Ch] [xbp-24h] BYREF
 
   v19 = id;
-  if ( (byte_4353D9C & 1) == 0 )
+  if ( (byte_438D65A & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
-    sub_B70694(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&TreasureDvcDetailEntity_TypeInfo);
-    byte_4353D9C = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
+    sub_B775C4(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&TreasureDvcDetailEntity_TypeInfo);
+    byte_438D65A = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_34;
   MasterData_WarQuestSelectionMaster = (DataMasterBase_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                              Instance,
-                                                             (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
+                                                             (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
   Instance = (DataManager_o *)System_Int32__ToString((int32_t)&v19, 0LL);
   if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_34;
@@ -73,7 +73,7 @@ System_String_o *__fastcall TreasureDvcDetailMaster__getDetail(int32_t id, const
   else
   {
 LABEL_10:
-    v10 = sub_B08590(Instance, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 0LL);
+    v10 = sub_B0F4C0(Instance, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 0LL);
   }
   if ( ((*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v10)(v7, v5, *(_QWORD *)(v10 + 8)) & 1) != 0 )
   {
@@ -98,7 +98,7 @@ LABEL_10:
       else
       {
 LABEL_18:
-        v15 = sub_B08590(Instance, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 2LL);
+        v15 = sub_B0F4C0(Instance, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 2LL);
       }
       Instance = (DataManager_o *)(*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v15)(
                                     v12,
@@ -115,17 +115,17 @@ LABEL_18:
       }
     }
 LABEL_34:
-    sub_B7076C(Instance, v3);
+    sub_B7769C(Instance, v3);
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  if ( !byte_434F6FF )
+  if ( !byte_4388DC6 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    byte_434F6FF = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    byte_4388DC6 = 1;
   }
   v16 = LocalizationManager_TypeInfo;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -159,21 +159,21 @@ System_String_o *__fastcall TreasureDvcDetailMaster__getDetailShort(int32_t id, 
   int32_t v19; // [xsp+Ch] [xbp-24h] BYREF
 
   v19 = id;
-  if ( (byte_4353D9D & 1) == 0 )
+  if ( (byte_438D65B & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
-    sub_B70694(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&TreasureDvcDetailEntity_TypeInfo);
-    byte_4353D9D = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
+    sub_B775C4(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&TreasureDvcDetailEntity_TypeInfo);
+    byte_438D65B = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_34;
   MasterData_WarQuestSelectionMaster = (DataMasterBase_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                              Instance,
-                                                             (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
+                                                             (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
   Instance = (DataManager_o *)System_Int32__ToString((int32_t)&v19, 0LL);
   if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_34;
@@ -199,7 +199,7 @@ System_String_o *__fastcall TreasureDvcDetailMaster__getDetailShort(int32_t id, 
   else
   {
 LABEL_10:
-    v10 = sub_B08590(Instance, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 0LL);
+    v10 = sub_B0F4C0(Instance, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 0LL);
   }
   if ( ((*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v10)(v7, v5, *(_QWORD *)(v10 + 8)) & 1) != 0 )
   {
@@ -224,7 +224,7 @@ LABEL_10:
       else
       {
 LABEL_18:
-        v15 = sub_B08590(Instance, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 2LL);
+        v15 = sub_B0F4C0(Instance, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 2LL);
       }
       Instance = (DataManager_o *)(*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v15)(
                                     v12,
@@ -241,17 +241,17 @@ LABEL_18:
       }
     }
 LABEL_34:
-    sub_B7076C(Instance, v3);
+    sub_B7769C(Instance, v3);
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  if ( !byte_434F6FF )
+  if ( !byte_4388DC6 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    byte_434F6FF = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    byte_4388DC6 = 1;
   }
   v16 = LocalizationManager_TypeInfo;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

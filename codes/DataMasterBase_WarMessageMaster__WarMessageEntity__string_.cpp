@@ -1,7 +1,7 @@
 WarMessageEntity_o *__fastcall DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
         DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *this,
         System_String_o *key,
-        const MethodInfo_21C0890 *method)
+        const MethodInfo_21FBCE4 *method)
 {
   DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *v3; // x19
 
@@ -12,7 +12,7 @@ WarMessageEntity_o *__fastcall DataMasterBase_WarMessageMaster__WarMessageEntity
                                                                                  key->klass->vtable._4_CompareTo.methodPtr),
         !v3) )
   {
-    sub_B7076C(this, key);
+    sub_B7769C(this, key);
   }
   return (WarMessageEntity_o *)((__int64 (__fastcall *)(DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *, DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *))method->klass->rgctx_data->_2_DataMasterBase_getEntityFromKey_TEntity_->methodPointer)(
                                  v3,

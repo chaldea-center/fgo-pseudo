@@ -1,11 +1,11 @@
 void __fastcall FortuneBonusResultDialog___ctor(FortuneBonusResultDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_43554FB & 1) == 0 )
+  if ( (byte_438EA93 & 1) == 0 )
   {
-    sub_B70694(&BaseDialog_TypeInfo);
-    byte_43554FB = 1;
+    sub_B775C4(&BaseDialog_TypeInfo);
+    byte_438EA93 = 1;
   }
-  *(_OWORD *)&this->fields.dayLabelWidth = xmmword_32FCD00;
+  *(_OWORD *)&this->fields.dayLabelWidth = xmmword_332FFF0;
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
@@ -38,8 +38,8 @@ void __fastcall FortuneBonusResultDialog__CheckSerializeField(
     {
       if ( v4 >= max_length )
       {
-        v11 = sub_B70798(this);
-        sub_B70738(v11, 0LL);
+        v11 = sub_B776C8(this);
+        sub_B77668(v11, 0LL);
       }
       v5 = rewardDispUnitArray->m_Items[v4];
       if ( !v5 )
@@ -55,7 +55,7 @@ void __fastcall FortuneBonusResultDialog__CheckSerializeField(
         goto LABEL_10;
     }
 LABEL_14:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
 LABEL_10:
   lineSpriteArray = this->fields.lineSpriteArray;
@@ -81,14 +81,14 @@ void __fastcall FortuneBonusResultDialog__Close(
   System_Int32_array *v7; // x7
   System_Action_o *v10; // x20
 
-  if ( (byte_43554F5 & 1) == 0 )
+  if ( (byte_438EA8D & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_FortuneBonusResultDialog_EndClose__);
-    byte_43554F5 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_FortuneBonusResultDialog_EndClose__);
+    byte_438EA8D = 1;
   }
   this->fields.closeEndFunc = callback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.closeEndFunc,
     (System_Int32_array **)callback,
     (System_String_array **)method,
@@ -98,7 +98,7 @@ void __fastcall FortuneBonusResultDialog__Close(
     v6,
     v7);
   this->fields.isButtonEnable = 0;
-  v10 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_FortuneBonusResultDialog_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
 }
@@ -118,12 +118,12 @@ ItemIconComponent_o *__fastcall FortuneBonusResultDialog__CreateItemIcon(
   __int64 v11; // x0
   __int64 v12; // x1
 
-  if ( (byte_43554F4 & 1) == 0 )
+  if ( (byte_438EA8C & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43554F4 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438EA8C = 1;
   }
   itemIconBasePrefab = (UnityEngine_Object_o *)this->fields.itemIconBasePrefab;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -143,17 +143,17 @@ ItemIconComponent_o *__fastcall FortuneBonusResultDialog__CreateItemIcon(
     }
     v9 = (UnityEngine_Object_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                    (UnityEngine_UI_Dropdown_DropdownItem_o *)v8,
-                                   (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                   (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     v10 = UnityEngine_Object__op_Equality(v9, 0LL, 0LL);
     result = 0LL;
     if ( !v10 )
     {
-      GameObjectExtensions__SafeSetParent_32503456((UnityEngine_GameObject_o *)v9, parent, 0LL);
+      GameObjectExtensions__SafeSetParent_32813688((UnityEngine_GameObject_o *)v9, parent, 0LL);
       if ( !v9 )
-        sub_B7076C(v11, v12);
+        sub_B7769C(v11, v12);
       return (ItemIconComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                       (UnityEngine_GameObject_o *)v9,
-                                      (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+                                      (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
     }
   }
   return result;
@@ -177,7 +177,7 @@ void __fastcall FortuneBonusResultDialog__EndClose(FortuneBonusResultDialog_o *t
   v2 = (BattleServantConfConponent_o *)((char *)v2 + 176);
   ActionExtensions__Call(buffListView, 0LL);
   v2->klass = 0LL;
-  sub_B70630(v2, 0LL, v4, v5, v6, v7, v8, v9);
+  sub_B77560(v2, 0LL, v4, v5, v6, v7, v8, v9);
 }
 
 
@@ -195,15 +195,15 @@ System_String_o *__fastcall FortuneBonusResultDialog__GetCountText(
   int32_t v11; // [xsp+Ch] [xbp-14h] BYREF
 
   v11 = num;
-  if ( (byte_43554F9 & 1) == 0 )
+  if ( (byte_438EA91 & 1) == 0 )
   {
-    this = (FortuneBonusResultDialog_o *)sub_B70694(&StringLiteral_9376/*"N0"*/);
-    byte_43554F9 = 1;
+    this = (FortuneBonusResultDialog_o *)sub_B775C4(&StringLiteral_9434/*"N0"*/);
+    byte_438EA91 = 1;
   }
   if ( gType == 2 )
   {
     if ( !itemEnt )
-      sub_B7076C(this, *(_QWORD *)&gType);
+      sub_B7769C(this, *(_QWORD *)&gType);
     if ( !ItemType__IsCountableWithPlus(itemEnt->fields.type, 0LL) )
       goto LABEL_6;
 LABEL_8:
@@ -216,8 +216,8 @@ LABEL_6:
   PlusOperatorString = ItemType__get_CrossOperatorString(0LL);
 LABEL_9:
   v8 = PlusOperatorString;
-  v9 = System_Int32__ToString_39283984((int32_t)&v11, (System_String_o *)StringLiteral_9376/*"N0"*/, 0LL);
-  return System_String__Concat_44758168(v8, v9, 0LL);
+  v9 = System_Int32__ToString_39547236((int32_t)&v11, (System_String_o *)StringLiteral_9434/*"N0"*/, 0LL);
+  return System_String__Concat_44901936(v8, v9, 0LL);
 }
 
 
@@ -233,19 +233,19 @@ CommonUI_FortuneBonusDetailData_o *__fastcall FortuneBonusResultDialog__GetFortu
   struct CommonUI_FortuneBonusDetailData_array *details; // x19
   System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *v10; // x20
 
-  if ( (byte_43554F3 & 1) == 0 )
+  if ( (byte_438EA8B & 1) == 0 )
   {
-    sub_B70694(&Method_BasicHelper_Find_CommonUI_FortuneBonusDetailData___);
-    sub_B70694(&Method_System_Func_CommonUI_FortuneBonusDetailData__bool___ctor__);
-    sub_B70694(&System_Func_CommonUI_FortuneBonusDetailData__bool__TypeInfo);
-    sub_B70694(&Method_FortuneBonusResultDialog___c__DisplayClass27_0__GetFortuneBonusDetailData_b__0__);
-    sub_B70694(&FortuneBonusResultDialog___c__DisplayClass27_0_TypeInfo);
-    byte_43554F3 = 1;
+    sub_B775C4(&Method_BasicHelper_Find_CommonUI_FortuneBonusDetailData___);
+    sub_B775C4(&Method_System_Func_CommonUI_FortuneBonusDetailData__bool___ctor__);
+    sub_B775C4(&System_Func_CommonUI_FortuneBonusDetailData__bool__TypeInfo);
+    sub_B775C4(&Method_FortuneBonusResultDialog___c__DisplayClass27_0__GetFortuneBonusDetailData_b__0__);
+    sub_B775C4(&FortuneBonusResultDialog___c__DisplayClass27_0_TypeInfo);
+    byte_438EA8B = 1;
   }
-  v5 = (FortuneBonusResultDialog___c__DisplayClass27_0_o *)sub_B70764(FortuneBonusResultDialog___c__DisplayClass27_0_TypeInfo);
+  v5 = (FortuneBonusResultDialog___c__DisplayClass27_0_o *)sub_B77694(FortuneBonusResultDialog___c__DisplayClass27_0_TypeInfo);
   FortuneBonusResultDialog___c__DisplayClass27_0___ctor(v5, 0LL);
   if ( !v5 )
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   v5->fields.index = index;
   fortuneBonusData = this->fields.fortuneBonusData;
   if ( !fortuneBonusData )
@@ -253,16 +253,16 @@ CommonUI_FortuneBonusDetailData_o *__fastcall FortuneBonusResultDialog__GetFortu
   details = fortuneBonusData->fields.details;
   if ( !details || !*(_QWORD *)&details->max_length )
     return 0LL;
-  v10 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_CommonUI_FortuneBonusDetailData__bool__TypeInfo);
+  v10 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B77694(System_Func_CommonUI_FortuneBonusDetailData__bool__TypeInfo);
   System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
     v10,
     (Il2CppObject *)v5,
     Method_FortuneBonusResultDialog___c__DisplayClass27_0__GetFortuneBonusDetailData_b__0__,
-    (const MethodInfo_29AC578 *)Method_System_Func_CommonUI_FortuneBonusDetailData__bool___ctor__);
+    (const MethodInfo_29E92C4 *)Method_System_Func_CommonUI_FortuneBonusDetailData__bool___ctor__);
   return (CommonUI_FortuneBonusDetailData_o *)BasicHelper__Find_USFGOActorBattleActionEventConditional_OverwriteParamCondition_(
                                                 (WellFired_USFGOActorBattleActionEventConditional_OverwriteParamCondition_array *)details,
                                                 (System_Func_T__bool__o *)v10,
-                                                (const MethodInfo_1BDCFCC *)Method_BasicHelper_Find_CommonUI_FortuneBonusDetailData___);
+                                                (const MethodInfo_1C66688 *)Method_BasicHelper_Find_CommonUI_FortuneBonusDetailData___);
 }
 
 
@@ -278,19 +278,19 @@ CommonUI_FortuneBonusRewardData_o *__fastcall FortuneBonusResultDialog__GetFortu
   struct CommonUI_FortuneBonusRewardData_array *logs; // x19
   System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *v10; // x20
 
-  if ( (byte_43554F2 & 1) == 0 )
+  if ( (byte_438EA8A & 1) == 0 )
   {
-    sub_B70694(&Method_BasicHelper_Find_CommonUI_FortuneBonusRewardData___);
-    sub_B70694(&Method_System_Func_CommonUI_FortuneBonusRewardData__bool___ctor__);
-    sub_B70694(&System_Func_CommonUI_FortuneBonusRewardData__bool__TypeInfo);
-    sub_B70694(&Method_FortuneBonusResultDialog___c__DisplayClass26_0__GetFortuneBonusLogData_b__0__);
-    sub_B70694(&FortuneBonusResultDialog___c__DisplayClass26_0_TypeInfo);
-    byte_43554F2 = 1;
+    sub_B775C4(&Method_BasicHelper_Find_CommonUI_FortuneBonusRewardData___);
+    sub_B775C4(&Method_System_Func_CommonUI_FortuneBonusRewardData__bool___ctor__);
+    sub_B775C4(&System_Func_CommonUI_FortuneBonusRewardData__bool__TypeInfo);
+    sub_B775C4(&Method_FortuneBonusResultDialog___c__DisplayClass26_0__GetFortuneBonusLogData_b__0__);
+    sub_B775C4(&FortuneBonusResultDialog___c__DisplayClass26_0_TypeInfo);
+    byte_438EA8A = 1;
   }
-  v5 = (FortuneBonusResultDialog___c__DisplayClass26_0_o *)sub_B70764(FortuneBonusResultDialog___c__DisplayClass26_0_TypeInfo);
+  v5 = (FortuneBonusResultDialog___c__DisplayClass26_0_o *)sub_B77694(FortuneBonusResultDialog___c__DisplayClass26_0_TypeInfo);
   FortuneBonusResultDialog___c__DisplayClass26_0___ctor(v5, 0LL);
   if ( !v5 )
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   v5->fields.day = day;
   fortuneBonusData = this->fields.fortuneBonusData;
   if ( !fortuneBonusData )
@@ -298,16 +298,16 @@ CommonUI_FortuneBonusRewardData_o *__fastcall FortuneBonusResultDialog__GetFortu
   logs = fortuneBonusData->fields.logs;
   if ( !logs || !*(_QWORD *)&logs->max_length )
     return 0LL;
-  v10 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_CommonUI_FortuneBonusRewardData__bool__TypeInfo);
+  v10 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B77694(System_Func_CommonUI_FortuneBonusRewardData__bool__TypeInfo);
   System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
     v10,
     (Il2CppObject *)v5,
     Method_FortuneBonusResultDialog___c__DisplayClass26_0__GetFortuneBonusLogData_b__0__,
-    (const MethodInfo_29AC578 *)Method_System_Func_CommonUI_FortuneBonusRewardData__bool___ctor__);
+    (const MethodInfo_29E92C4 *)Method_System_Func_CommonUI_FortuneBonusRewardData__bool___ctor__);
   return (CommonUI_FortuneBonusRewardData_o *)BasicHelper__Find_USFGOActorBattleActionEventConditional_OverwriteParamCondition_(
                                                 (WellFired_USFGOActorBattleActionEventConditional_OverwriteParamCondition_array *)logs,
                                                 (System_Func_T__bool__o *)v10,
-                                                (const MethodInfo_1BDCFCC *)Method_BasicHelper_Find_CommonUI_FortuneBonusRewardData___);
+                                                (const MethodInfo_1C66688 *)Method_BasicHelper_Find_CommonUI_FortuneBonusRewardData___);
 }
 
 
@@ -350,8 +350,8 @@ CommonUI_FortuneBonusRewardData_o *__fastcall FortuneBonusResultDialog__GetFortu
     return 0LL;
   if ( !(_DWORD)v4 )
   {
-    v6 = sub_B70798(this);
-    sub_B70738(v6, 0LL);
+    v6 = sub_B776C8(this);
+    sub_B77668(v6, 0LL);
   }
   return rewards->m_Items[0];
 }
@@ -395,14 +395,14 @@ void __fastcall FortuneBonusResultDialog__GetGiftInfo(
   System_Int32_array *v36; // x7
   WarEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_43554F8 & 1) == 0 )
+  if ( (byte_438EA90 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43554F8 = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438EA90 = 1;
   }
   entity = 0LL;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -410,10 +410,10 @@ void __fastcall FortuneBonusResultDialog__GetGiftInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  if ( !byte_434F6FF )
+  if ( !byte_4388DC6 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    byte_434F6FF = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    byte_4388DC6 = 1;
   }
   v11 = LocalizationManager_TypeInfo;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -424,7 +424,7 @@ void __fastcall FortuneBonusResultDialog__GetGiftInfo(
   }
   unknownNameText = v11->static_fields->unknownNameText;
   *nameText = unknownNameText;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)nameText,
     (System_Int32_array **)unknownNameText,
     (System_String_array **)nameText,
@@ -434,7 +434,7 @@ void __fastcall FortuneBonusResultDialog__GetGiftInfo(
     v6,
     v7);
   *countText = (System_String_o *)StringLiteral_1/*""*/;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)countText,
     (System_Int32_array **)StringLiteral_1/*""*/,
     v13,
@@ -449,22 +449,22 @@ void __fastcall FortuneBonusResultDialog__GetGiftInfo(
     return;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ItemMaster___);
+  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !Master_WarQuestSelectionMaster )
     goto LABEL_21;
   Master_WarQuestSelectionMaster = (WarQuestSelectionMaster_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
                                                                   (DataMasterBase_WarMaster__WarEntity__int__o *)Master_WarQuestSelectionMaster,
                                                                   &entity,
                                                                   giftEnt->fields.objectId,
-                                                                  (const MethodInfo_21C049C *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+                                                                  (const MethodInfo_21FB8F0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_WarQuestSelectionMaster & 1) == 0 )
     return;
   if ( !entity )
 LABEL_21:
-    sub_B7076C(Master_WarQuestSelectionMaster, v20);
+    sub_B7769C(Master_WarQuestSelectionMaster, v20);
   age = entity->fields.age;
   *nameText = age;
-  sub_B70630((BattleServantConfConponent_o *)nameText, (System_Int32_array **)age, v21, v22, v23, v24, v25, v26);
+  sub_B77560((BattleServantConfConponent_o *)nameText, (System_Int32_array **)age, v21, v22, v23, v24, v25, v26);
   v30 = FortuneBonusResultDialog__GetCountText(
           v28,
           giftEnt->fields.type,
@@ -472,7 +472,7 @@ LABEL_21:
           giftEnt->fields.num,
           v29);
   *countText = v30;
-  sub_B70630((BattleServantConfConponent_o *)countText, (System_Int32_array **)v30, v31, v32, v33, v34, v35, v36);
+  sub_B77560((BattleServantConfConponent_o *)countText, (System_Int32_array **)v30, v31, v32, v33, v34, v35, v36);
 }
 
 
@@ -480,10 +480,10 @@ void __fastcall FortuneBonusResultDialog__Init(FortuneBonusResultDialog_o *this,
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_43554ED & 1) == 0 )
+  if ( (byte_438EA85 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43554ED = 1;
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438EA85 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -492,7 +492,7 @@ void __fastcall FortuneBonusResultDialog__Init(FortuneBonusResultDialog_o *this,
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B7076C(titleLabel, method);
+    sub_B7769C(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -506,21 +506,21 @@ void __fastcall FortuneBonusResultDialog__OnClickButton(FortuneBonusResultDialog
   System_Action_o *v5; // x20
   const MethodInfo *v6; // x2
 
-  if ( (byte_43554F6 & 1) == 0 )
+  if ( (byte_438EA8E & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_FortuneBonusResultDialog_OnClickButton__);
-    sub_B70694(&Method_FortuneBonusResultDialog__OnClickButton_b__31_0__);
-    byte_43554F6 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_FortuneBonusResultDialog_OnClickButton__);
+    sub_B775C4(&Method_FortuneBonusResultDialog__OnClickButton_b__31_0__);
+    byte_438EA8E = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_FortuneBonusResultDialog_OnClickButton__;
     if ( (*((_BYTE *)Method_FortuneBonusResultDialog_OnClickButton__ + 75) & 2) != 0 )
-      v3 = (_QWORD *)sub_B7069C(Method_FortuneBonusResultDialog_OnClickButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+      v3 = (_QWORD *)sub_B775CC(Method_FortuneBonusResultDialog_OnClickButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
-    v5 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_FortuneBonusResultDialog__OnClickButton_b__31_0__, 0LL);
     FortuneBonusResultDialog__Close(this, v5, v6);
   }
@@ -563,24 +563,24 @@ void __fastcall FortuneBonusResultDialog__Open(
   struct CommonUI_FortuneBonusRewardData_array *logs; // x1
   __int64 v37; // x0
 
-  if ( (byte_43554EE & 1) == 0 )
+  if ( (byte_438EA86 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&Method_FortuneBonusResultDialog__Open_b__20_0__);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_17690/*"chronology_line"*/);
-    sub_B70694(&StringLiteral_6538/*"FORTUNE_BONUS_RESULT_TITLE"*/);
-    sub_B70694(&StringLiteral_6534/*"FORTUNE_BONUS_RESULT_BUTTON"*/);
-    sub_B70694(&StringLiteral_6537/*"FORTUNE_BONUS_RESULT_SUBTITLE"*/);
-    sub_B70694(&StringLiteral_17725/*"clear00"*/);
-    byte_43554EE = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&Method_FortuneBonusResultDialog__Open_b__20_0__);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_17773/*"chronology_line"*/);
+    sub_B775C4(&StringLiteral_6594/*"FORTUNE_BONUS_RESULT_TITLE"*/);
+    sub_B775C4(&StringLiteral_6590/*"FORTUNE_BONUS_RESULT_BUTTON"*/);
+    sub_B775C4(&StringLiteral_6593/*"FORTUNE_BONUS_RESULT_SUBTITLE"*/);
+    sub_B775C4(&StringLiteral_17808/*"clear00"*/);
+    byte_438EA86 = 1;
   }
   this->fields.isButtonEnable = 0;
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 1, 0LL);
   if ( isEnabledOpenAnim )
   {
-    v9 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v9 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     System_Action___ctor(v9, (Il2CppObject *)this, Method_FortuneBonusResultDialog__Open_b__20_0__, 0LL);
     BaseDialog__Open((BaseDialog_o *)this, v9, 0, 0LL);
   }
@@ -593,7 +593,7 @@ void __fastcall FortuneBonusResultDialog__Open(
     gameObject = (UnityEngine_GameObject_o *)this->fields.maskSprite;
     if ( !gameObject )
       goto LABEL_25;
-    UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_17725/*"clear00"*/, 0LL);
+    UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_17808/*"clear00"*/, 0LL);
     gameObject = (UnityEngine_GameObject_o *)BaseDialog__get_TargetPanel((BaseDialog_o *)this, 0LL);
     if ( !gameObject )
       goto LABEL_25;
@@ -616,22 +616,22 @@ void __fastcall FortuneBonusResultDialog__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6538/*"FORTUNE_BONUS_RESULT_TITLE"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6594/*"FORTUNE_BONUS_RESULT_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_25;
   UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL);
   subTitleLabel = this->fields.subTitleLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6537/*"FORTUNE_BONUS_RESULT_SUBTITLE"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6593/*"FORTUNE_BONUS_RESULT_SUBTITLE"*/, 0LL);
   if ( !subTitleLabel
     || (UILabel__set_text(subTitleLabel, (System_String_o *)gameObject, 0LL),
         okBtnLabel = this->fields.okBtnLabel,
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6534/*"FORTUNE_BONUS_RESULT_BUTTON"*/, 0LL),
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6590/*"FORTUNE_BONUS_RESULT_BUTTON"*/, 0LL),
         !okBtnLabel)
     || (UILabel__set_text(okBtnLabel, (System_String_o *)gameObject, 0LL),
         (lineSpriteArray = this->fields.lineSpriteArray) == 0LL) )
   {
 LABEL_25:
-    sub_B7076C(gameObject, v11);
+    sub_B7769C(gameObject, v11);
   }
   v26 = 0LL;
   while ( 1 )
@@ -641,8 +641,8 @@ LABEL_25:
       break;
     if ( v26 >= max_length )
     {
-      v37 = sub_B70798(gameObject);
-      sub_B70738(v37, 0LL);
+      v37 = sub_B776C8(gameObject);
+      sub_B77668(v37, 0LL);
     }
     v28 = lineSpriteArray->m_Items[v26];
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -650,14 +650,14 @@ LABEL_25:
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    gameObject = (UnityEngine_GameObject_o *)AtlasManager__SetEventUI(v28, (System_String_o *)StringLiteral_17690/*"chronology_line"*/, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)AtlasManager__SetEventUI(v28, (System_String_o *)StringLiteral_17773/*"chronology_line"*/, 0LL);
     lineSpriteArray = this->fields.lineSpriteArray;
     ++v26;
     if ( !lineSpriteArray )
       goto LABEL_25;
   }
   this->fields.fortuneBonusData = fortuneBonus;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.fortuneBonusData,
     (System_Int32_array **)fortuneBonus,
     v19,
@@ -677,7 +677,7 @@ LABEL_25:
     }
   }
   this->fields.clickFunc = nextAction;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.clickFunc,
     (System_Int32_array **)nextAction,
     (System_String_array **)v29,
@@ -695,14 +695,14 @@ void __fastcall FortuneBonusResultDialog__Release(FortuneBonusResultDialog_o *th
   __int64 v4; // x1
   UnityEngine_Object_o *v5; // x19
 
-  if ( (byte_43554F7 & 1) == 0 )
+  if ( (byte_438EA8F & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43554F7 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438EA8F = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   v5 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -710,7 +710,7 @@ void __fastcall FortuneBonusResultDialog__Release(FortuneBonusResultDialog_o *th
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  UnityEngine_Object__Destroy_36067208(v5, 0LL);
+  UnityEngine_Object__Destroy_36309980(v5, 0LL);
 }
 
 
@@ -731,7 +731,7 @@ void __fastcall FortuneBonusResultDialog__SetTextAndCondensedScale(
         const MethodInfo *method)
 {
   if ( !targetLebel )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   UILabel__set_text(targetLebel, text, 0LL);
   if ( width >= 1 )
     UILabel__SetCondensedScale(targetLebel, width, 0LL);
@@ -758,12 +758,12 @@ void __fastcall FortuneBonusResultDialog__SetupItemDispUnitArray(
 
   v7 = itemDispUnit;
   v8 = this;
-  if ( (byte_43554F1 & 1) == 0 )
+  if ( (byte_438EA89 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    this = (FortuneBonusResultDialog_o *)sub_B70694(&StringLiteral_10650/*"PRESENT_INFO"*/);
-    byte_43554F1 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    this = (FortuneBonusResultDialog_o *)sub_B775C4(&StringLiteral_10709/*"PRESENT_INFO"*/);
+    byte_438EA89 = 1;
   }
   nameText = 0LL;
   countText = 0LL;
@@ -804,7 +804,7 @@ void __fastcall FortuneBonusResultDialog__SetupItemDispUnitArray(
           num = -1;
         else
           num = giftEnt->fields.num;
-        ItemIconComponent__SetItemImage_27826864(
+        ItemIconComponent__SetItemImage_28178620(
           (ItemIconComponent_o *)ItemIcon,
           (int32_t)itemDispUnit,
           giftEnt->fields.objectId,
@@ -817,8 +817,8 @@ void __fastcall FortuneBonusResultDialog__SetupItemDispUnitArray(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_10650/*"PRESENT_INFO"*/, 0LL);
-      v13 = System_String__Format_44753704(v12, (Il2CppObject *)nameText, (Il2CppObject *)countText, 0LL);
+      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_10709/*"PRESENT_INFO"*/, 0LL);
+      v13 = System_String__Format_44897472(v12, (Il2CppObject *)nameText, (Il2CppObject *)countText, 0LL);
       FortuneBonusResultDialog__SetTextAndCondensedScale(
         (FortuneBonusResultDialog_o *)v13,
         v7->fields.itemName,
@@ -836,7 +836,7 @@ void __fastcall FortuneBonusResultDialog__SetupItemDispUnitArray(
         }
       }
 LABEL_24:
-      sub_B7076C(this, itemDispUnit);
+      sub_B7769C(this, itemDispUnit);
     }
   }
 }
@@ -898,25 +898,25 @@ void __fastcall FortuneBonusResultDialog__SetupRewardDisp(
   int32_t v52; // [xsp+Ch] [xbp-54h] BYREF
 
   v4 = this;
-  if ( (byte_43554EF & 1) == 0 )
+  if ( (byte_438EA87 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Comparison_GiftEntity___ctor__);
-    sub_B70694(&System_Comparison_GiftEntity__TypeInfo);
-    sub_B70694(&Method_DataManager_GetMaster_GiftMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_GiftEntity__Sort__);
-    sub_B70694(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&Method_FortuneBonusResultDialog___c__SetupRewardDisp_b__21_0__);
-    sub_B70694(&FortuneBonusResultDialog___c_TypeInfo);
-    sub_B70694(&StringLiteral_6536/*"FORTUNE_BONUS_RESULT_NO_NAME"*/);
-    this = (FortuneBonusResultDialog_o *)sub_B70694(&StringLiteral_6535/*"FORTUNE_BONUS_RESULT_DAY_FORMAT"*/);
-    byte_43554EF = 1;
+    sub_B775C4(&Method_System_Comparison_GiftEntity___ctor__);
+    sub_B775C4(&System_Comparison_GiftEntity__TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMaster_GiftMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_GiftEntity__Sort__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&Method_FortuneBonusResultDialog___c__SetupRewardDisp_b__21_0__);
+    sub_B775C4(&FortuneBonusResultDialog___c_TypeInfo);
+    sub_B775C4(&StringLiteral_6592/*"FORTUNE_BONUS_RESULT_NO_NAME"*/);
+    this = (FortuneBonusResultDialog_o *)sub_B775C4(&StringLiteral_6591/*"FORTUNE_BONUS_RESULT_DAY_FORMAT"*/);
+    byte_438EA87 = 1;
   }
   if ( !logDataArray || (rewardDispUnitArray = v4->fields.rewardDispUnitArray) == 0LL )
 LABEL_66:
-    sub_B7076C(this, logDataArray);
+    sub_B7769C(this, logDataArray);
   max_length = rewardDispUnitArray->max_length;
   if ( max_length >= (signed int)logDataArray->max_length && max_length >= 1 )
   {
@@ -936,7 +936,7 @@ LABEL_66:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_6535/*"FORTUNE_BONUS_RESULT_DAY_FORMAT"*/, 0LL);
+      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_6591/*"FORTUNE_BONUS_RESULT_DAY_FORMAT"*/, 0LL);
       v52 = targetDay;
       v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v52, v13);
       v15 = System_String__Format(v12, v14, 0LL);
@@ -992,7 +992,7 @@ LABEL_66:
           {
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
           }
-          this = (FortuneBonusResultDialog_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_GiftMaster___);
+          this = (FortuneBonusResultDialog_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_GiftMaster___);
           if ( !this )
             goto LABEL_66;
           this = (FortuneBonusResultDialog_o *)GiftMaster__GetListById(
@@ -1021,15 +1021,15 @@ LABEL_66:
                   static_fields = FortuneBonusResultDialog___c_TypeInfo->static_fields;
                 }
                 v30 = (Il2CppObject *)static_fields->__9;
-                _9__21_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B70764(System_Comparison_GiftEntity__TypeInfo);
+                _9__21_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B77694(System_Comparison_GiftEntity__TypeInfo);
                 System_Comparison_TitleInfoControl_EventEndTimeInfo____ctor(
                   _9__21_0,
                   v30,
                   Method_FortuneBonusResultDialog___c__SetupRewardDisp_b__21_0__,
-                  (const MethodInfo_2B05B38 *)Method_System_Comparison_GiftEntity___ctor__);
+                  (const MethodInfo_2B42C0C *)Method_System_Comparison_GiftEntity___ctor__);
                 v31 = FortuneBonusResultDialog___c_TypeInfo->static_fields;
                 v31->__9__21_0 = (struct System_Comparison_GiftEntity__o *)_9__21_0;
-                sub_B70630(
+                sub_B77560(
                   (BattleServantConfConponent_o *)&v31->__9__21_0,
                   (System_Int32_array **)_9__21_0,
                   v32,
@@ -1042,7 +1042,7 @@ LABEL_66:
               System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo___Sort(
                 (System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__o *)v26,
                 (System_Comparison_T__o *)_9__21_0,
-                (const MethodInfo_3027764 *)Method_System_Collections_Generic_List_GiftEntity__Sort__);
+                (const MethodInfo_3055374 *)Method_System_Collections_Generic_List_GiftEntity__Sort__);
               v39 = v4->fields.rewardDispUnitArray;
               if ( !v39 )
                 goto LABEL_66;
@@ -1064,7 +1064,7 @@ LABEL_66:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        this = (FortuneBonusResultDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6536/*"FORTUNE_BONUS_RESULT_NO_NAME"*/, 0LL);
+        this = (FortuneBonusResultDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6592/*"FORTUNE_BONUS_RESULT_NO_NAME"*/, 0LL);
         v40 = v4->fields.rewardDispUnitArray;
         if ( !v40 )
           goto LABEL_66;
@@ -1131,8 +1131,8 @@ LABEL_66:
               goto LABEL_64;
           }
 LABEL_68:
-          v51 = sub_B70798(this);
-          sub_B70738(v51, 0LL);
+          v51 = sub_B776C8(this);
+          sub_B77668(v51, 0LL);
         }
       }
 LABEL_64:
@@ -1167,15 +1167,15 @@ void __fastcall FortuneBonusResultDialog__SetupRewardDispUnit(
   __int64 v17; // x0
 
   v7 = this;
-  if ( (byte_43554F0 & 1) == 0 )
+  if ( (byte_438EA88 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
-    this = (FortuneBonusResultDialog_o *)sub_B70694(&Method_System_Collections_Generic_List_GiftEntity__get_Item__);
-    byte_43554F0 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
+    this = (FortuneBonusResultDialog_o *)sub_B775C4(&Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+    byte_438EA88 = 1;
   }
   if ( !rewardDispUnit || (itemDispUnitArray = rewardDispUnit->fields.itemDispUnitArray) == 0LL || !giftEntList )
 LABEL_23:
-    sub_B7076C(this, rewardDispUnit);
+    sub_B7769C(this, rewardDispUnit);
   size = giftEntList->fields._size;
   v10 = *(_QWORD *)&itemDispUnitArray->max_length;
   if ( size >= (int)v10 && (int)v10 >= 1 )
@@ -1185,7 +1185,7 @@ LABEL_23:
     {
       v13 = i - 4;
       if ( i - 4 >= (unsigned __int64)(unsigned int)size )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       v14 = (GiftEntity_o *)*((_QWORD *)&giftEntList->fields._items->obj.klass + i);
       if ( v14 )
       {
@@ -1198,11 +1198,11 @@ LABEL_23:
           goto LABEL_23;
         if ( v13 >= v15->max_length )
         {
-          v17 = sub_B70798(this);
-          sub_B70738(v17, 0LL);
+          v17 = sub_B776C8(this);
+          sub_B77668(v17, 0LL);
         }
         if ( v13 >= (unsigned int)giftEntList->fields._size )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
         FortuneBonusResultDialog__SetupItemDispUnitArray(
           v7,
           *((FortuneBonusResultDialog_ItemDispUnit_o **)&v15->obj.klass + i),
@@ -1241,7 +1241,7 @@ void __fastcall FortuneBonusResultDialog___OnClickButton_b__31_0(
   p_clickFunc = (BattleServantConfConponent_o *)&this->fields.clickFunc;
   ActionExtensions__Call(this->fields.clickFunc, 0LL);
   p_clickFunc->klass = 0LL;
-  sub_B70630(p_clickFunc, 0LL, v4, v5, v6, v7, v8, v9);
+  sub_B77560(p_clickFunc, 0LL, v4, v5, v6, v7, v8, v9);
   FortuneBonusResultDialog__Release(this, v10);
 }
 
@@ -1256,12 +1256,12 @@ System_String_o *__fastcall FortuneBonusResultDialog__get_closeBtnPath(
         FortuneBonusResultDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_43554FA & 1) == 0 )
+  if ( (byte_438EA92 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_15709/*"Window/OkBtn"*/);
-    byte_43554FA = 1;
+    sub_B775C4(&StringLiteral_15779/*"Window/OkBtn"*/);
+    byte_438EA92 = 1;
   }
-  return (System_String_o *)StringLiteral_15709/*"Window/OkBtn"*/;
+  return (System_String_o *)StringLiteral_15779/*"Window/OkBtn"*/;
 }
 
 
@@ -1358,16 +1358,16 @@ void __fastcall FortuneBonusResultDialog___c___cctor(const MethodInfo *method)
   Il2CppObject *v1; // x19
   struct FortuneBonusResultDialog___c_StaticFields *static_fields; // x0
 
-  if ( (byte_434EAC8 & 1) == 0 )
+  if ( (byte_4388099 & 1) == 0 )
   {
-    sub_B70694(&FortuneBonusResultDialog___c_TypeInfo);
-    byte_434EAC8 = 1;
+    sub_B775C4(&FortuneBonusResultDialog___c_TypeInfo);
+    byte_4388099 = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(FortuneBonusResultDialog___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(FortuneBonusResultDialog___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = FortuneBonusResultDialog___c_TypeInfo->static_fields;
   static_fields->__9 = (struct FortuneBonusResultDialog___c_o *)v1;
-  sub_B70630(static_fields);
+  sub_B77560(static_fields);
 }
 
 
@@ -1384,7 +1384,7 @@ int32_t __fastcall FortuneBonusResultDialog___c___SetupRewardDisp_b__21_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_B7076C(this, a);
+    sub_B7769C(this, a);
   return b->fields.priority - a->fields.priority;
 }
 
@@ -1403,7 +1403,7 @@ bool __fastcall FortuneBonusResultDialog___c__DisplayClass26_0___GetFortuneBonus
         const MethodInfo *method)
 {
   if ( !d )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   return d->fields.day == this->fields.day;
 }
 
@@ -1422,6 +1422,6 @@ bool __fastcall FortuneBonusResultDialog___c__DisplayClass27_0___GetFortuneBonus
         const MethodInfo *method)
 {
   if ( !n )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   return n->fields.idx == this->fields.index;
 }

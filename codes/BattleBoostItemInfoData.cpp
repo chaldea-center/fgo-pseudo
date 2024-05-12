@@ -17,21 +17,21 @@ void __fastcall BattleBoostItemInfoData___cctor(const MethodInfo *method)
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
 
-  if ( (byte_4355402 & 1) == 0 )
+  if ( (byte_438EB43 & 1) == 0 )
   {
-    sub_B70694(&BattleBoostItemInfoData_TypeInfo);
-    sub_B70694(&StringLiteral_2644/*"BOOST_EFFECT_ICON"*/);
-    sub_B70694(&StringLiteral_2645/*"BOOST_EFFECT_TIMING"*/);
-    byte_4355402 = 1;
+    sub_B775C4(&BattleBoostItemInfoData_TypeInfo);
+    sub_B775C4(&StringLiteral_2690/*"BOOST_EFFECT_ICON"*/);
+    sub_B775C4(&StringLiteral_2691/*"BOOST_EFFECT_TIMING"*/);
+    byte_438EB43 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)BattleBoostItemInfoData_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_2644/*"BOOST_EFFECT_ICON"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2644/*"BOOST_EFFECT_ICON"*/;
-  sub_B70630(static_fields, v8, v1, v2, v3, v4, v5, v6);
+  v8 = (System_Int32_array **)StringLiteral_2690/*"BOOST_EFFECT_ICON"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2690/*"BOOST_EFFECT_ICON"*/;
+  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
   v9 = BattleBoostItemInfoData_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_2645/*"BOOST_EFFECT_TIMING"*/;
-  v9->KEY_SCRIPT_BOOST_EFFECT_TIMING = (struct System_String_o *)StringLiteral_2645/*"BOOST_EFFECT_TIMING"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v9->KEY_SCRIPT_BOOST_EFFECT_TIMING, v10, v11, v12, v13, v14, v15, v16);
+  v10 = (System_Int32_array **)StringLiteral_2691/*"BOOST_EFFECT_TIMING"*/;
+  v9->KEY_SCRIPT_BOOST_EFFECT_TIMING = (struct System_String_o *)StringLiteral_2691/*"BOOST_EFFECT_TIMING"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v9->KEY_SCRIPT_BOOST_EFFECT_TIMING, v10, v11, v12, v13, v14, v15, v16);
 }
 
 
@@ -50,10 +50,10 @@ bool __fastcall BattleBoostItemInfoData__checkEffectTiming(
   ItemEntity_o *boostItemEntity; // x20
   BattleBoostItemInfoData_c *v6; // x0
 
-  if ( (byte_43553FE & 1) == 0 )
+  if ( (byte_438EB3F & 1) == 0 )
   {
-    sub_B70694(&BattleBoostItemInfoData_TypeInfo);
-    byte_43553FE = 1;
+    sub_B775C4(&BattleBoostItemInfoData_TypeInfo);
+    byte_438EB3F = 1;
   }
   boostItemEntity = this->fields.boostItemEntity;
   v6 = BattleBoostItemInfoData_TypeInfo;
@@ -63,7 +63,7 @@ bool __fastcall BattleBoostItemInfoData__checkEffectTiming(
     j_il2cpp_runtime_class_init_0(BattleBoostItemInfoData_TypeInfo);
   }
   if ( !boostItemEntity )
-    sub_B7076C(v6, *(_QWORD *)&timing);
+    sub_B7769C(v6, *(_QWORD *)&timing);
   return ItemEntity__getScript(
            boostItemEntity,
            BattleBoostItemInfoData_TypeInfo->static_fields->KEY_SCRIPT_BOOST_EFFECT_TIMING,
@@ -80,10 +80,10 @@ int32_t __fastcall BattleBoostItemInfoData__effectIconAtlasImageId(
   ItemEntity_o *boostItemEntity; // x19
   BattleBoostItemInfoData_c *v5; // x0
 
-  if ( (byte_4355400 & 1) == 0 )
+  if ( (byte_438EB41 & 1) == 0 )
   {
-    sub_B70694(&BattleBoostItemInfoData_TypeInfo);
-    byte_4355400 = 1;
+    sub_B775C4(&BattleBoostItemInfoData_TypeInfo);
+    byte_438EB41 = 1;
   }
   if ( !BattleBoostItemInfoData__useCustomEffectIcon(this, method) )
     return this->fields.itemImageId;
@@ -95,7 +95,7 @@ int32_t __fastcall BattleBoostItemInfoData__effectIconAtlasImageId(
     j_il2cpp_runtime_class_init_0(BattleBoostItemInfoData_TypeInfo);
   }
   if ( !boostItemEntity )
-    sub_B7076C(v5, v3);
+    sub_B7769C(v5, v3);
   return ItemEntity__getScript(
            boostItemEntity,
            BattleBoostItemInfoData_TypeInfo->static_fields->KEY_SCRIPT_BOOST_EFFECT_ICON,
@@ -112,18 +112,18 @@ System_String_o *__fastcall BattleBoostItemInfoData__infoMessage(
   __int64 v4; // x1
   DataMasterBase_WarMaster__WarEntity__int__o *MasterData_WarQuestSelectionMaster; // x20
 
-  if ( (byte_4355401 & 1) == 0 )
+  if ( (byte_438EB42 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_SkillMaster___);
-    sub_B70694(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4355401 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_SkillMaster___);
+    sub_B775C4(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438EB42 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                                               Instance,
-                                                                                              (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_SkillMaster___),
+                                                                                              (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_SkillMaster___),
         Instance = (DataManager_o *)((__int64 (__fastcall *)(BattleBoostItemInfoData_o *, Il2CppMethodPointer))this->klass->vtable._5_get_skillId.method)(
                                       this,
                                       this->klass->vtable._6_get_IndividualityArray.methodPtr),
@@ -131,9 +131,9 @@ System_String_o *__fastcall BattleBoostItemInfoData__infoMessage(
     || (Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                       MasterData_WarQuestSelectionMaster,
                                       (int32_t)Instance,
-                                      (const MethodInfo_21C0440 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__)) == 0LL )
+                                      (const MethodInfo_21FB894 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__)) == 0LL )
   {
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   return SkillEntity__getName((SkillEntity_o *)Instance, 0LL);
 }
@@ -144,10 +144,10 @@ bool __fastcall BattleBoostItemInfoData__useCustomEffectIcon(BattleBoostItemInfo
   ItemEntity_o *boostItemEntity; // x19
   BattleBoostItemInfoData_c *v4; // x0
 
-  if ( (byte_43553FF & 1) == 0 )
+  if ( (byte_438EB40 & 1) == 0 )
   {
-    sub_B70694(&BattleBoostItemInfoData_TypeInfo);
-    byte_43553FF = 1;
+    sub_B775C4(&BattleBoostItemInfoData_TypeInfo);
+    byte_438EB40 = 1;
   }
   boostItemEntity = this->fields.boostItemEntity;
   v4 = BattleBoostItemInfoData_TypeInfo;
@@ -157,7 +157,7 @@ bool __fastcall BattleBoostItemInfoData__useCustomEffectIcon(BattleBoostItemInfo
     j_il2cpp_runtime_class_init_0(BattleBoostItemInfoData_TypeInfo);
   }
   if ( !boostItemEntity )
-    sub_B7076C(v4, method);
+    sub_B7769C(v4, method);
   return ItemEntity__getScript(
            boostItemEntity,
            BattleBoostItemInfoData_TypeInfo->static_fields->KEY_SCRIPT_BOOST_EFFECT_ICON,

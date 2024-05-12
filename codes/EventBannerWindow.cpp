@@ -1,9 +1,9 @@
 void __fastcall EventBannerWindow___cctor(const MethodInfo *method)
 {
-  if ( (byte_43550A4 & 1) == 0 )
+  if ( (byte_438E807 & 1) == 0 )
   {
-    sub_B70694(&EventBannerWindow_TypeInfo);
-    byte_43550A4 = 1;
+    sub_B775C4(&EventBannerWindow_TypeInfo);
+    byte_438E807 = 1;
   }
   EventBannerWindow_TypeInfo->static_fields->OPEN_POSSIBLE_COUNT = 2;
   EventBannerWindow_TypeInfo->static_fields->SCROLL_ITEM_Y_INTERVAL = 150.0;
@@ -20,19 +20,19 @@ void __fastcall EventBannerWindow___ctor(EventBannerWindow_o *this, const Method
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_43550A3 & 1) == 0 )
+  if ( (byte_438E806 & 1) == 0 )
   {
-    sub_B70694(&BaseDialog_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem___ctor__);
-    sub_B70694(&System_Collections_Generic_List_EventBannerWindowScrollItem__TypeInfo);
-    byte_43550A3 = 1;
+    sub_B775C4(&BaseDialog_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_EventBannerWindowScrollItem__TypeInfo);
+    byte_438E806 = 1;
   }
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_EventBannerWindowScrollItem__TypeInfo);
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventBannerWindowScrollItem__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v3,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_EventBannerWindowScrollItem___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventBannerWindowScrollItem___ctor__);
   this->fields.mScrollItems = (struct System_Collections_Generic_List_EventBannerWindowScrollItem__o *)v3;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.mScrollItems,
     (System_Int32_array **)v3,
     v4,
@@ -55,15 +55,15 @@ int32_t __fastcall EventBannerWindow__GetNowEventId(EventBannerWindow_o *this, c
   EventBannerWindow_c *v5; // x0
 
   v2 = this;
-  if ( (byte_43550A0 & 1) == 0 )
+  if ( (byte_438E803 & 1) == 0 )
   {
-    sub_B70694(&EventBannerWindow_TypeInfo);
-    this = (EventBannerWindow_o *)sub_B70694(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem__get_Count__);
-    byte_43550A0 = 1;
+    sub_B775C4(&EventBannerWindow_TypeInfo);
+    this = (EventBannerWindow_o *)sub_B775C4(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem__get_Count__);
+    byte_438E803 = 1;
   }
   mScrollItems = v2->fields.mScrollItems;
   if ( !mScrollItems )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   size = mScrollItems->fields._size;
   v5 = EventBannerWindow_TypeInfo;
   if ( (BYTE3(EventBannerWindow_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -94,13 +94,13 @@ void __fastcall EventBannerWindow__OnClickClose(EventBannerWindow_o *this, const
   System_Int32_array *v13; // x6
   System_Int32_array *v14; // x7
 
-  if ( (byte_43550A1 & 1) == 0 )
+  if ( (byte_438E804 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&SoundManager_TypeInfo);
-    sub_B70694(&Method_EventBannerWindow___c__OnClickClose_b__13_0__);
-    sub_B70694(&EventBannerWindow___c_TypeInfo);
-    byte_43550A1 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&SoundManager_TypeInfo);
+    sub_B775C4(&Method_EventBannerWindow___c__OnClickClose_b__13_0__);
+    sub_B775C4(&EventBannerWindow___c_TypeInfo);
+    byte_438E804 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -122,11 +122,11 @@ void __fastcall EventBannerWindow__OnClickClose(EventBannerWindow_o *this, const
       static_fields = EventBannerWindow___c_TypeInfo->static_fields;
     }
     v7 = (Il2CppObject *)static_fields->__9;
-    _9__13_0 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    _9__13_0 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     System_Action___ctor(_9__13_0, v7, Method_EventBannerWindow___c__OnClickClose_b__13_0__, 0LL);
     v8 = EventBannerWindow___c_TypeInfo->static_fields;
     v8->__9__13_0 = _9__13_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v8->__9__13_0,
       (System_Int32_array **)_9__13_0,
       v9,
@@ -137,7 +137,7 @@ void __fastcall EventBannerWindow__OnClickClose(EventBannerWindow_o *this, const
       v14);
   }
   if ( !this )
-    sub_B7076C(v4, v3);
+    sub_B7769C(v4, v3);
   BaseDialog__Close((BaseDialog_o *)this, _9__13_0, 0LL);
 }
 
@@ -150,7 +150,7 @@ void __fastcall EventBannerWindow__Open(EventBannerWindow_o *this, System_Action
   BaseDialog__Open((BaseDialog_o *)this, end_act, 0, 0LL);
   scrollView = this->fields.scrollView;
   if ( !scrollView )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UIScrollView__ResetPosition(scrollView, 0LL);
 }
 
@@ -183,26 +183,26 @@ void __fastcall EventBannerWindow__Setup(
   System_Collections_Generic_List_Enumerator_T__o v25; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_T__o v26; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_435509F & 1) == 0 )
+  if ( (byte_438E802 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_B70694(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__get_Current__);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_EventBannerWindowScrollItem___);
-    sub_B70694(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem__Clear__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem__GetEnumerator__);
-    sub_B70694(&Method_System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__get_Item__);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&StringLiteral_5648/*"EVENT_BANNER_WINDOW_MESSAGE"*/);
-    sub_B70694(&StringLiteral_5649/*"EVENT_BANNER_WINDOW_TITLE"*/);
-    byte_435509F = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_EventDetailMaster___);
+    sub_B775C4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__get_Current__);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_EventBannerWindowScrollItem___);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem__Clear__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem__GetEnumerator__);
+    sub_B775C4(&Method_System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__get_Item__);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&StringLiteral_5703/*"EVENT_BANNER_WINDOW_MESSAGE"*/);
+    sub_B775C4(&StringLiteral_5704/*"EVENT_BANNER_WINDOW_TITLE"*/);
+    byte_438E802 = 1;
   }
   memset(&v26, 0, sizeof(v26));
   mScrollItems = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)this->fields.mScrollItems;
@@ -211,21 +211,21 @@ void __fastcall EventBannerWindow__Setup(
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v25,
     mScrollItems,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_EventBannerWindowScrollItem__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_EventBannerWindowScrollItem__GetEnumerator__);
   v26 = v25;
   while ( 1 )
   {
     v6 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
            &v26,
-           (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__MoveNext__);
+           (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__MoveNext__);
     if ( !v6 )
       break;
     current = v26.fields.current;
     if ( !v26.fields.current )
-      sub_B7076C(v6, v7);
+      sub_B7769C(v6, v7);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v26.fields.current, 0LL);
     if ( !gameObject )
-      sub_B7076C(0LL, v10);
+      sub_B7769C(0LL, v10);
     UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
     v11 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)current, 0LL);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -233,11 +233,11 @@ void __fastcall EventBannerWindow__Setup(
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_36067208(v11, 0LL);
+    UnityEngine_Object__Destroy_36309980(v11, 0LL);
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v26,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__Dispose__);
   mScrollItems = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)this->fields.grid;
   if ( !mScrollItems )
     goto LABEL_46;
@@ -252,14 +252,14 @@ void __fastcall EventBannerWindow__Setup(
     goto LABEL_46;
   System_Collections_Generic_List_XWeaponTrail_Element___Clear(
     (System_Collections_Generic_List_XWeaponTrail_Element__o *)mScrollItems,
-    (const MethodInfo_3025A90 *)Method_System_Collections_Generic_List_EventBannerWindowScrollItem__Clear__);
+    (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_EventBannerWindowScrollItem__Clear__);
   this->fields.mNowEventId = 0;
-  mScrollItems = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  mScrollItems = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !mScrollItems )
     goto LABEL_46;
   mScrollItems = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                                                   (DataManager_o *)mScrollItems,
-                                                                                                  (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                                                                                                  (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventDetailMaster___);
   if ( !ev_end_time_infs )
     goto LABEL_46;
   size = ev_end_time_infs->fields._size;
@@ -272,19 +272,19 @@ void __fastcall EventBannerWindow__Setup(
     {
       v16 = v14 - 4;
       if ( v15 <= (int)v14 - 4 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       v17 = *((_QWORD *)&ev_end_time_infs->fields._items->obj.klass + v14);
       if ( !v17 )
         break;
       if ( !v13 )
         break;
-      mScrollItems = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(v13, *(_DWORD *)(v17 + 16), (const MethodInfo_21C0440 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+      mScrollItems = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(v13, *(_DWORD *)(v17 + 16), (const MethodInfo_21FB894 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
       if ( !mScrollItems )
         break;
       if ( LODWORD(mScrollItems[1].monitor) )
       {
         if ( ev_end_time_infs->fields._size <= v16 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
         v18 = *((_QWORD *)&ev_end_time_infs->fields._items->obj.klass + v14);
         if ( !v18 )
           break;
@@ -297,14 +297,14 @@ void __fastcall EventBannerWindow__Setup(
         }
         v20 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                             (UnityEngine_UI_Dropdown_DropdownItem_o *)scrollItemPrefab,
-                                            (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                            (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
         GameObjectExtensions__SafeSetParent(v20, (UnityEngine_Component_o *)this->fields.grid, 0LL);
         if ( !v20 )
           break;
-        mScrollItems = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(v20, (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_EventBannerWindowScrollItem___);
+        mScrollItems = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(v20, (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_EventBannerWindowScrollItem___);
         v22 = (EventMissionProgressRequest_Argument_ProgressData_o *)mScrollItems;
         if ( ev_end_time_infs->fields._size <= v16 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
         if ( !mScrollItems )
           break;
         EventBannerWindowScrollItem__Setup(
@@ -317,7 +317,7 @@ void __fastcall EventBannerWindow__Setup(
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)mScrollItems,
           v22,
-          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_EventBannerWindowScrollItem__Add__);
+          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventBannerWindowScrollItem__Add__);
       }
       if ( (int)v14 - 3 >= size )
         goto LABEL_39;
@@ -325,7 +325,7 @@ void __fastcall EventBannerWindow__Setup(
       ++v14;
     }
 LABEL_46:
-    sub_B7076C(mScrollItems, ev_end_time_infs);
+    sub_B7769C(mScrollItems, ev_end_time_infs);
   }
 LABEL_39:
   mScrollItems = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)this->fields.grid;
@@ -342,14 +342,14 @@ LABEL_39:
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
   mScrollItems = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)LocalizationManager__Get(
-                                                                                                  (System_String_o *)StringLiteral_5649/*"EVENT_BANNER_WINDOW_TITLE"*/,
+                                                                                                  (System_String_o *)StringLiteral_5704/*"EVENT_BANNER_WINDOW_TITLE"*/,
                                                                                                   0LL);
   if ( !titleLabel )
     goto LABEL_46;
   UILabel__set_text(titleLabel, (System_String_o *)mScrollItems, 0LL);
   titleDetailLabel = this->fields.titleDetailLabel;
   mScrollItems = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)LocalizationManager__Get(
-                                                                                                  (System_String_o *)StringLiteral_5648/*"EVENT_BANNER_WINDOW_MESSAGE"*/,
+                                                                                                  (System_String_o *)StringLiteral_5703/*"EVENT_BANNER_WINDOW_MESSAGE"*/,
                                                                                                   0LL);
   if ( !titleDetailLabel )
     goto LABEL_46;
@@ -359,12 +359,12 @@ LABEL_39:
 
 System_String_o *__fastcall EventBannerWindow__get_closeBtnPath(EventBannerWindow_o *this, const MethodInfo *method)
 {
-  if ( (byte_43550A2 & 1) == 0 )
+  if ( (byte_438E805 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_2806/*"BaseWindow/CloseBtn"*/);
-    byte_43550A2 = 1;
+    sub_B775C4(&StringLiteral_2852/*"BaseWindow/CloseBtn"*/);
+    byte_438E805 = 1;
   }
-  return (System_String_o *)StringLiteral_2806/*"BaseWindow/CloseBtn"*/;
+  return (System_String_o *)StringLiteral_2852/*"BaseWindow/CloseBtn"*/;
 }
 
 
@@ -373,16 +373,16 @@ void __fastcall EventBannerWindow___c___cctor(const MethodInfo *method)
   Il2CppObject *v1; // x19
   struct EventBannerWindow___c_StaticFields *static_fields; // x0
 
-  if ( (byte_434F032 & 1) == 0 )
+  if ( (byte_4388612 & 1) == 0 )
   {
-    sub_B70694(&EventBannerWindow___c_TypeInfo);
-    byte_434F032 = 1;
+    sub_B775C4(&EventBannerWindow___c_TypeInfo);
+    byte_4388612 = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(EventBannerWindow___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(EventBannerWindow___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = EventBannerWindow___c_TypeInfo->static_fields;
   static_fields->__9 = (struct EventBannerWindow___c_o *)v1;
-  sub_B70630(static_fields);
+  sub_B77560(static_fields);
 }
 
 

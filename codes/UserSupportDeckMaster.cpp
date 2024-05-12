@@ -1,14 +1,14 @@
 void __fastcall UserSupportDeckMaster___ctor(UserSupportDeckMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4357BDB & 1) == 0 )
+  if ( (byte_4391259 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string___ctor__);
-    byte_4357BDB = 1;
+    sub_B775C4(&Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string___ctor__);
+    byte_4391259 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     183,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ UserSupportDeckEntity_o *__fastcall UserSupportDeckMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4357BD9 & 1) == 0 )
+  if ( (byte_4391257 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__GetEntity__);
-    byte_4357BD9 = 1;
+    sub_B775C4(&Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__GetEntity__);
+    byte_4391257 = 1;
   }
   PK = UserSupportDeckEntity__CreatePK(userId, supportDeckId, *(const MethodInfo **)&supportDeckId);
   return (UserSupportDeckEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                       (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                       PK,
-                                      (const MethodInfo_21C0890 *)Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__GetEntity__);
+                                      (const MethodInfo_21FBCE4 *)Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__GetEntity__);
 }
 
 
@@ -43,17 +43,17 @@ bool __fastcall UserSupportDeckMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4357BDA & 1) == 0 )
+  if ( (byte_4391258 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__TryGetEntity__);
-    byte_4357BDA = 1;
+    sub_B775C4(&Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__TryGetEntity__);
+    byte_4391258 = 1;
   }
   PK = UserSupportDeckEntity__CreatePK(userId, supportDeckId, (const MethodInfo *)userId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__TryGetEntity__);
 }
 
 
@@ -69,11 +69,11 @@ System_String_o *__fastcall UserSupportDeckMaster__getDeckName(
   __int64 v9; // x1
   UserSupportDeckEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4357BDC & 1) == 0 )
+  if ( (byte_439125A & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4357BDC = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_439125A = 1;
   }
   entity = 0LL;
   v5 = (System_String_o *)StringLiteral_1/*""*/;
@@ -87,7 +87,7 @@ System_String_o *__fastcall UserSupportDeckMaster__getDeckName(
   if ( v8 )
   {
     if ( !entity )
-      sub_B7076C(v8, v9);
+      sub_B7769C(v8, v9);
     return entity->fields.name;
   }
   return v5;

@@ -1,13 +1,13 @@
 void __fastcall EventMissionEntity___ctor(EventMissionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4351DEF & 1) == 0 )
+  if ( (byte_438B4B2 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_int___ctor__);
-    byte_4351DEF = 1;
+    sub_B775C4(&Method_DataEntityBase_int___ctor__);
+    byte_438B4B2 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -45,12 +45,12 @@ GiftEntity_o *__fastcall EventMissionEntity__GetQpGiftEntity(EventMissionEntity_
   {
     if ( (unsigned int)v6 >= max_length )
     {
-      v9 = sub_B70798(GiftData);
-      sub_B70738(v9, 0LL);
+      v9 = sub_B776C8(GiftData);
+      sub_B77668(v9, 0LL);
     }
     v7 = v5->m_Items[v6];
     if ( !v7 )
-      sub_B7076C(GiftData, v3);
+      sub_B7769C(GiftData, v3);
     GiftData = (GiftEntity_array *)GiftEntity__isQp(v5->m_Items[v6], 0LL);
     if ( ((unsigned __int8)GiftData & 1) != 0 )
       break;
@@ -81,10 +81,10 @@ bool __fastcall EventMissionEntity__IsActiveNow(EventMissionEntity_o *this, cons
 {
   int64_t Time; // x0
 
-  if ( (byte_4351DEE & 1) == 0 )
+  if ( (byte_438B4B1 & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4351DEE = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_438B4B1 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -136,10 +136,10 @@ bool __fastcall EventMissionEntity__IsOpenNow(EventMissionEntity_o *this, const 
 {
   int64_t Time; // x0
 
-  if ( (byte_4351DED & 1) == 0 )
+  if ( (byte_438B4B0 & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4351DED = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_438B4B0 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -156,19 +156,19 @@ GiftEntity_array *__fastcall EventMissionEntity__getGiftData(EventMissionEntity_
   DataManager_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4351DEA & 1) == 0 )
+  if ( (byte_438B4AD & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_GiftMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4351DEA = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_GiftMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438B4AD = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   return GiftMaster__GetGiftListById((GiftMaster_o *)Instance, this->fields.giftId, 0LL);
 }
@@ -181,19 +181,19 @@ EventRewardSetEntity_o *__fastcall EventMissionEntity__getSetRewardData(
   DataManager_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4351DEB & 1) == 0 )
+  if ( (byte_438B4AE & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_EventRewardSetMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4351DEB = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_EventRewardSetMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438B4AE = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventRewardSetMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventRewardSetMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   return EventRewardSetMaster__GetEntity(
            (EventRewardSetMaster_o *)Instance,
@@ -208,10 +208,10 @@ bool __fastcall EventMissionEntity__isNowMission(EventMissionEntity_o *this, con
 {
   int64_t Time; // x0
 
-  if ( (byte_4351DEC & 1) == 0 )
+  if ( (byte_438B4AF & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4351DEC = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_438B4AF = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )

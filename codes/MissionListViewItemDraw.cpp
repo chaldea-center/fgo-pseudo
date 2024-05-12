@@ -8,10 +8,10 @@ void __fastcall MissionListViewItemDraw___cctor(const MethodInfo *method)
   struct UnityEngine_Color_o v6; // [xsp+0h] [xbp-20h] BYREF
   UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_43504FC & 1) == 0 )
+  if ( (byte_4389B25 & 1) == 0 )
   {
-    sub_B70694(&MissionListViewItemDraw_TypeInfo);
-    byte_43504FC = 1;
+    sub_B775C4(&MissionListViewItemDraw_TypeInfo);
+    byte_4389B25 = 1;
   }
   v7.fields.a = 1.0;
   MissionListViewItemDraw_TypeInfo->static_fields->TIME_UPDATE_ITVL_SEC = 1;
@@ -55,10 +55,10 @@ void __fastcall MissionListViewItemDraw__Awake(MissionListViewItemDraw_o *this, 
   struct UISprite_o *v20; // x8
   struct System_String_o *mSpriteName; // x1
 
-  if ( (byte_43504F3 & 1) == 0 )
+  if ( (byte_4389B1C & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43504F3 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4389B1C = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -73,7 +73,7 @@ void __fastcall MissionListViewItemDraw__Awake(MissionListViewItemDraw_o *this, 
     if ( !v12
       || (mAtlas = v12->fields.mAtlas,
           this->fields.baseAtlas = mAtlas,
-          sub_B70630(
+          sub_B77560(
             (BattleServantConfConponent_o *)&this->fields.baseAtlas,
             (System_Int32_array **)mAtlas,
             v6,
@@ -84,11 +84,11 @@ void __fastcall MissionListViewItemDraw__Awake(MissionListViewItemDraw_o *this, 
             v11),
           (v20 = this->fields.baseSprite) == 0LL) )
     {
-      sub_B7076C(v4, v5);
+      sub_B7769C(v4, v5);
     }
     mSpriteName = v20->fields.mSpriteName;
     this->fields.baseSpriteName = mSpriteName;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.baseSpriteName,
       (System_Int32_array **)mSpriteName,
       v14,
@@ -112,10 +112,10 @@ void __fastcall MissionListViewItemDraw__CheckLockMissionBoard(
   UIWidget_o *v7; // x21
   int v8; // s0
 
-  if ( (byte_43504F5 & 1) == 0 )
+  if ( (byte_4389B1E & 1) == 0 )
   {
-    sub_B70694(&MissionListViewItemDraw_TypeInfo);
-    byte_43504F5 = 1;
+    sub_B775C4(&MissionListViewItemDraw_TypeInfo);
+    byte_4389B1E = 1;
   }
   missionCondLb = (UIWidget_o *)this->fields.missionCondLb;
   v6 = MissionListViewItemDraw_TypeInfo;
@@ -134,7 +134,7 @@ void __fastcall MissionListViewItemDraw__CheckLockMissionBoard(
         !v7)
     || (UIWidget__set_color(v7, *(UnityEngine_Color_o *)&v8, 0LL), !missionListViewItem) )
   {
-    sub_B7076C(v6, missionListViewItem);
+    sub_B7769C(v6, missionListViewItem);
   }
   if ( missionListViewItem->fields.progStatus <= 1u && this->fields.isDispTime )
     ((void (__fastcall *)(MissionListViewItemDraw_o *, MissionListViewItem_o *, Il2CppMethodPointer))this->klass->vtable._6_SetLockMissionBoard.method)(
@@ -151,11 +151,11 @@ System_String_o *__fastcall MissionListViewItemDraw__GetTimeText(
 {
   System_String_o *v5; // x0
 
-  if ( (byte_43504F9 & 1) == 0 )
+  if ( (byte_4389B22 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_82/*" "*/);
-    byte_43504F9 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_82/*" "*/);
+    byte_4389B22 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -163,7 +163,7 @@ System_String_o *__fastcall MissionListViewItemDraw__GetTimeText(
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
   v5 = LocalizationManager__Get(key, 0LL);
-  return System_String__Concat_44760452(v5, (System_String_o *)StringLiteral_82/*" "*/, timrStr, 0LL);
+  return System_String__Concat_44904220(v5, (System_String_o *)StringLiteral_82/*" "*/, timrStr, 0LL);
 }
 
 
@@ -183,12 +183,12 @@ void __fastcall MissionListViewItemDraw__InitDispResTime(
 
   v3 = missionListviewItem;
   v4 = this;
-  if ( (byte_43504F6 & 1) == 0 )
+  if ( (byte_4389B1F & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_NotEndEventMissionFixMaster___);
-    sub_B70694(&NetworkManager_TypeInfo);
-    this = (MissionListViewItemDraw_o *)sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43504F6 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_NotEndEventMissionFixMaster___);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    this = (MissionListViewItemDraw_o *)sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4389B1F = 1;
   }
   entity = 0LL;
   if ( !v3 )
@@ -228,12 +228,12 @@ void __fastcall MissionListViewItemDraw__InitDispResTime(
         v8 = 1;
         v3->fields.isNowMission = 1;
       }
-      this = (MissionListViewItemDraw_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      this = (MissionListViewItemDraw_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( this )
       {
         this = (MissionListViewItemDraw_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                               (DataManager_o *)this,
-                                              (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_NotEndEventMissionFixMaster___);
+                                              (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_NotEndEventMissionFixMaster___);
         if ( this )
         {
           v9 = NotEndEventMissionFixMaster__TryGetEntity(
@@ -275,7 +275,7 @@ void __fastcall MissionListViewItemDraw__InitDispResTime(
       }
     }
 LABEL_28:
-    sub_B7076C(this, missionListviewItem);
+    sub_B7769C(this, missionListviewItem);
   }
   this = (MissionListViewItemDraw_o *)v4->fields.timeOverInfo;
   v4->fields.isDispTime = 0;
@@ -315,12 +315,12 @@ void __fastcall MissionListViewItemDraw__SetBoardImage(
   System_String_o *baseSpriteName; // x19
   UIAtlas_o *baseAtlas; // x20
 
-  if ( (byte_43504F8 & 1) == 0 )
+  if ( (byte_4389B21 & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_4654/*"DEFAULT_LOCK_BOARD_GROUP_ID"*/);
-    byte_43504F8 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_4706/*"DEFAULT_LOCK_BOARD_GROUP_ID"*/);
+    byte_4389B21 = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -332,14 +332,14 @@ void __fastcall MissionListViewItemDraw__SetBoardImage(
   if ( !v6 )
   {
     if ( !missionListviewItem )
-      sub_B7076C(v6, v7);
+      sub_B7769C(v6, v7);
     bannerGroupId = missionListviewItem->fields.bannerGroupId;
     if ( (((__int64 (__fastcall *)(MissionListViewItemDraw_o *, Il2CppMethodPointer))this->klass->vtable._7_IsUseDefaultLockBoard.method)(
             this,
             this->klass->vtable._8_SetRewardStatusImg.methodPtr) & 1) != 0
       && missionListviewItem->fields.progStatus <= 1u )
     {
-      bannerGroupId = ConstantMaster__getValue((System_String_o *)StringLiteral_4654/*"DEFAULT_LOCK_BOARD_GROUP_ID"*/, 0LL);
+      bannerGroupId = ConstantMaster__getValue((System_String_o *)StringLiteral_4706/*"DEFAULT_LOCK_BOARD_GROUP_ID"*/, 0LL);
     }
     v9 = this->fields.baseSprite;
     baseAtlas = this->fields.baseAtlas;
@@ -378,11 +378,11 @@ void __fastcall MissionListViewItemDraw__SetInput(
   UnityEngine_Object_o *addRangeSprite; // x20
   System_String_o *value; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_43504FB & 1) == 0 )
+  if ( (byte_4389B24 & 1) == 0 )
   {
-    sub_B70694(&MissionListViewItemDraw_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43504FB = 1;
+    sub_B775C4(&MissionListViewItemDraw_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4389B24 = 1;
   }
   value = 0LL;
   if ( missionListViewItem )
@@ -430,7 +430,7 @@ void __fastcall MissionListViewItemDraw__SetInput(
             }
             WrapControlText__textAdjust(missionCondLb, condMsg, v12->static_fields->DEFAULT_FONT_SIZE, 0, 0, 0LL);
             value = missionListViewItem->fields.progTxt;
-            sub_B70630(
+            sub_B77560(
               (BattleServantConfConponent_o *)&value,
               (System_Int32_array **)value,
               v13,
@@ -460,7 +460,7 @@ void __fastcall MissionListViewItemDraw__SetInput(
         }
       }
 LABEL_33:
-      sub_B7076C(miniIconComponent, v6);
+      sub_B7769C(miniIconComponent, v6);
     }
   }
   else
@@ -542,11 +542,11 @@ bool __fastcall MissionListViewItemDraw__SetItem(
   UnityEngine_Object_o *v36; // x20
   System_String_o *value; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_43504F4 & 1) == 0 )
+  if ( (byte_4389B1D & 1) == 0 )
   {
-    sub_B70694(&MissionListViewItemDraw_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43504F4 = 1;
+    sub_B775C4(&MissionListViewItemDraw_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4389B1D = 1;
   }
   value = 0LL;
   rangeSprite = (UnityEngine_Object_o *)this->fields.rangeSprite;
@@ -631,7 +631,7 @@ bool __fastcall MissionListViewItemDraw__SetItem(
                         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
                         giftEnts = missionListViewItem->fields.giftEnts;
                         this->fields.giftEntityList = giftEnts;
-                        sub_B70630(
+                        sub_B77560(
                           (BattleServantConfConponent_o *)&this->fields.giftEntityList,
                           (System_Int32_array **)giftEnts,
                           v13,
@@ -665,7 +665,7 @@ bool __fastcall MissionListViewItemDraw__SetItem(
                             (unsigned int)missionListViewItem->fields.progStatus,
                             this->klass->vtable._9_UpdateDispResTime.methodPtr);
                           value = missionListViewItem->fields.progTxt;
-                          sub_B70630(
+                          sub_B77560(
                             (BattleServantConfConponent_o *)&value,
                             (System_Int32_array **)value,
                             v23,
@@ -751,7 +751,7 @@ LABEL_44:
       }
     }
 LABEL_65:
-    sub_B7076C(gameObject, v9);
+    sub_B7769C(gameObject, v9);
   }
   if ( (WORD1(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -799,12 +799,12 @@ void __fastcall MissionListViewItemDraw__SetLockMissionBoard(
   UIWidget_o *missionCondLb; // x21
   UIWidget_o *v9; // x19
 
-  if ( (byte_43504F7 & 1) == 0 )
+  if ( (byte_4389B20 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_B70694(&MissionListViewItemDraw_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43504F7 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_B775C4(&MissionListViewItemDraw_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4389B20 = 1;
   }
   lockImgInfo = this->fields.lockImgInfo;
   if ( !lockImgInfo )
@@ -845,7 +845,7 @@ void __fastcall MissionListViewItemDraw__SetLockMissionBoard(
         missionCondLb = (UIWidget_o *)this->fields.missionCondLb;
         lockImgInfo = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                     (UnityEngine_Component_o *)Child,
-                                                    (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                                                    (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
         if ( lockImgInfo )
         {
           if ( missionCondLb )
@@ -871,7 +871,7 @@ void __fastcall MissionListViewItemDraw__SetLockMissionBoard(
         }
       }
 LABEL_24:
-      sub_B7076C(lockImgInfo, missionListViewItem);
+      sub_B7769C(lockImgInfo, missionListViewItem);
     }
   }
 }
@@ -888,7 +888,7 @@ void __fastcall MissionListViewItemDraw__SetRewardIconAlpha(
   {
     itemIcon = this->fields.itemIcon;
     if ( !itemIcon )
-      sub_B7076C(0LL, method);
+      sub_B7769C(0LL, method);
     ItemIconComponent__SetAlpha(itemIcon, alpha, 0LL);
   }
 }
@@ -942,7 +942,7 @@ LABEL_11:
       rewardImg = this->fields.lockImgInfo;
       if ( !rewardImg )
 LABEL_32:
-        sub_B7076C(rewardImg, *(_QWORD *)&status);
+        sub_B7769C(rewardImg, *(_QWORD *)&status);
 LABEL_26:
       v5 = 0;
       break;
@@ -1032,13 +1032,13 @@ void __fastcall MissionListViewItemDraw__UpdateDispResTime(
   int64_t endedAt; // x20
 
   v5 = this;
-  if ( (byte_43504FA & 1) == 0 )
+  if ( (byte_4389B23 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&MissionListViewItemDraw_TypeInfo);
-    sub_B70694(&StringLiteral_13588/*"TIME_REST_QUEST"*/);
-    this = (MissionListViewItemDraw_o *)sub_B70694(&StringLiteral_13576/*"TIME_REST_ACHIVE"*/);
-    byte_43504FA = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&MissionListViewItemDraw_TypeInfo);
+    sub_B775C4(&StringLiteral_13654/*"TIME_REST_QUEST"*/);
+    this = (MissionListViewItemDraw_o *)sub_B775C4(&StringLiteral_13642/*"TIME_REST_ACHIVE"*/);
+    byte_4389B23 = 1;
   }
   if ( !missionListViewItem )
     goto LABEL_23;
@@ -1063,7 +1063,7 @@ void __fastcall MissionListViewItemDraw__UpdateDispResTime(
     {
       j_il2cpp_runtime_class_init_0(MissionListViewItemDraw_TypeInfo);
     }
-    v12 = &StringLiteral_13576/*"TIME_REST_ACHIVE"*/;
+    v12 = &StringLiteral_13642/*"TIME_REST_ACHIVE"*/;
   }
   else
   {
@@ -1079,11 +1079,11 @@ void __fastcall MissionListViewItemDraw__UpdateDispResTime(
     {
       j_il2cpp_runtime_class_init_0(MissionListViewItemDraw_TypeInfo);
     }
-    v12 = &StringLiteral_13588/*"TIME_REST_QUEST"*/;
+    v12 = &StringLiteral_13654/*"TIME_REST_QUEST"*/;
   }
   this = (MissionListViewItemDraw_o *)MissionListViewItemDraw__GetTimeText((System_String_o *)*v12, RestTime, v10);
   if ( !resTimeLb )
 LABEL_23:
-    sub_B7076C(this, missionListViewItem);
+    sub_B7769C(this, missionListViewItem);
   UILabel__set_text(resTimeLb, (System_String_o *)this, 0LL);
 }

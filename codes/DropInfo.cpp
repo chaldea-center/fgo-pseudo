@@ -11,15 +11,15 @@ DropInfo_SaveData_o *__fastcall DropInfo__GetSaveData(DropInfo_o *this, const Me
   __int64 v5; // x1
   DropInfo_SaveData_o *result; // x0
 
-  if ( (byte_4353802 & 1) == 0 )
+  if ( (byte_438D0C0 & 1) == 0 )
   {
-    sub_B70694(&DropInfo_SaveData_TypeInfo);
-    byte_4353802 = 1;
+    sub_B775C4(&DropInfo_SaveData_TypeInfo);
+    byte_438D0C0 = 1;
   }
-  v3 = (DropInfo_SaveData_o *)sub_B70764(DropInfo_SaveData_TypeInfo);
+  v3 = (DropInfo_SaveData_o *)sub_B77694(DropInfo_SaveData_TypeInfo);
   DropInfo_SaveData___ctor(v3, 0LL);
   if ( !v3 )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   result = v3;
   v3->fields.type = this->fields.type;
   v3->fields.objectId = this->fields.objectId;
@@ -41,7 +41,7 @@ void __fastcall DropInfo__SetDataFromSaveData(
         const MethodInfo *method)
 {
   if ( !saveData )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   this->fields.type = saveData->fields.type;
   this->fields.objectId = saveData->fields.objectId;
   this->fields.num = saveData->fields.num;
@@ -57,13 +57,13 @@ void __fastcall DropInfo__SetDataFromSaveData(
 
 bool __fastcall DropInfo__isItem(DropInfo_o *this, const MethodInfo *method)
 {
-  return Gift__IsItem_27751740(this->fields.type, 0LL);
+  return Gift__IsItem_28103496(this->fields.type, 0LL);
 }
 
 
 bool __fastcall DropInfo__isServant(DropInfo_o *this, const MethodInfo *method)
 {
-  return Gift__IsServant_27751796(this->fields.type, 0LL);
+  return Gift__IsServant_28103552(this->fields.type, 0LL);
 }
 
 

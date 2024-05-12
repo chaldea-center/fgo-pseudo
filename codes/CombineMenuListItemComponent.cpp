@@ -26,14 +26,14 @@ void __fastcall CombineMenuListItemComponent__InitButton(
   UnityEngine_Color_o v10; // [xsp+10h] [xbp-30h] BYREF
   UnityEngine_Color_o color; // [xsp+20h] [xbp-20h] BYREF
 
-  if ( (byte_4351A43 & 1) == 0 )
+  if ( (byte_438B261 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_3270/*"COMBINE_PREPARATION"*/);
-    sub_B70694(&StringLiteral_364/*"#6B6B6B"*/);
-    sub_B70694(&StringLiteral_369/*"#E1C896"*/);
-    sub_B70694(&StringLiteral_367/*"#B7A37B"*/);
-    byte_4351A43 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_3321/*"COMBINE_PREPARATION"*/);
+    sub_B775C4(&StringLiteral_364/*"#6B6B6B"*/);
+    sub_B775C4(&StringLiteral_370/*"#E1C896"*/);
+    sub_B775C4(&StringLiteral_368/*"#B7A37B"*/);
+    byte_438B261 = 1;
   }
   *(_QWORD *)&color.fields.r = 0LL;
   *(_QWORD *)&color.fields.b = 0LL;
@@ -46,12 +46,12 @@ void __fastcall CombineMenuListItemComponent__InitButton(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3270/*"COMBINE_PREPARATION"*/, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3321/*"COMBINE_PREPARATION"*/, 0LL);
   if ( !preparationLabel )
     goto LABEL_11;
   UILabel__set_text(preparationLabel, v4, 0LL);
-  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_369/*"#E1C896"*/, &color, 0LL);
-  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_367/*"#B7A37B"*/, &v10, 0LL);
+  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_370/*"#E1C896"*/, &color, 0LL);
+  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_368/*"#B7A37B"*/, &v10, 0LL);
   v4 = (System_String_o *)UnityEngine_ColorUtility__TryParseHtmlString(
                             (System_String_o *)StringLiteral_364/*"#6B6B6B"*/,
                             (UnityEngine_Color_o *)&v9,
@@ -62,7 +62,7 @@ void __fastcall CombineMenuListItemComponent__InitButton(
     || (v7->fields.specifyPressedColor = v10, (v8 = this->fields.button) == 0LL) )
   {
 LABEL_11:
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   }
   v8->fields.specifyDisabledColor = (struct UnityEngine_Color_o)v9;
 }
@@ -78,7 +78,7 @@ void __fastcall CombineMenuListItemComponent__ResetDisableState(
   {
     button = this->fields.button;
     if ( !button )
-      sub_B7076C(0LL, method);
+      sub_B7769C(0LL, method);
     ((void (__fastcall *)(struct UICommonButton_o *, __int64, __int64, Il2CppMethodPointer))button->klass->vtable._14_SetState.method)(
       button,
       3LL,
@@ -112,7 +112,7 @@ void __fastcall CombineMenuListItemComponent__SetButtonState(
 LABEL_6:
   button = this->fields.button;
   if ( !button )
-    sub_B7076C(0LL, *(_QWORD *)&state);
+    sub_B7769C(0LL, *(_QWORD *)&state);
   ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, bool, Il2CppMethodPointer))button->klass->vtable._14_SetState.method)(
     button,
     (unsigned int)state,
@@ -131,7 +131,7 @@ void __fastcall CombineMenuListItemComponent__SetDisableMessage(
 
   disableMessageLabel = this->fields.disableMessageLabel;
   if ( !disableMessageLabel )
-    sub_B7076C(0LL, disableMessage);
+    sub_B7769C(0LL, disableMessage);
   UILabel__set_text(disableMessageLabel, disableMessage, 0LL);
 }
 
@@ -151,7 +151,7 @@ void __fastcall CombineMenuListItemComponent__SetDisableUiActivity(
         (preparationLabel = (UnityEngine_Component_o *)this->fields.disableMessageLabel) == 0LL)
     || (preparationLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(preparationLabel, 0LL)) == 0LL )
   {
-    sub_B7076C(preparationLabel, isActive);
+    sub_B7769C(preparationLabel, isActive);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)preparationLabel, isActive, 0LL);
 }
@@ -164,10 +164,10 @@ void __fastcall CombineMenuListItemComponent__SetEventSprite(
 {
   UISprite_o *baseSprite; // x20
 
-  if ( (byte_4351A44 & 1) == 0 )
+  if ( (byte_438B262 & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    byte_4351A44 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    byte_438B262 = 1;
   }
   baseSprite = this->fields.baseSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )

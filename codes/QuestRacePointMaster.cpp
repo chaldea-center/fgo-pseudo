@@ -1,14 +1,14 @@
 void __fastcall QuestRacePointMaster___ctor(QuestRacePointMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4356691 & 1) == 0 )
+  if ( (byte_438FD0F & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string___ctor__);
-    byte_4356691 = 1;
+    sub_B775C4(&Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string___ctor__);
+    byte_438FD0F = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     212,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string___ctor__);
 }
 
 
@@ -21,11 +21,11 @@ QuestRacePointEntity_o *__fastcall QuestRacePointMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_435668F & 1) == 0 )
+  if ( (byte_438FD0D & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__GetEntity__);
-    sub_B70694(&QuestRacePointEntity_TypeInfo);
-    byte_435668F = 1;
+    sub_B775C4(&Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__GetEntity__);
+    sub_B775C4(&QuestRacePointEntity_TypeInfo);
+    byte_438FD0D = 1;
   }
   if ( (BYTE3(QuestRacePointEntity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !QuestRacePointEntity_TypeInfo->_2.cctor_finished )
@@ -36,7 +36,7 @@ QuestRacePointEntity_o *__fastcall QuestRacePointMaster__GetEntity(
   return (QuestRacePointEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                      (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                      PK,
-                                     (const MethodInfo_21C0890 *)Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__GetEntity__);
+                                     (const MethodInfo_21FBCE4 *)Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__GetEntity__);
 }
 
 
@@ -50,11 +50,11 @@ bool __fastcall QuestRacePointMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4356690 & 1) == 0 )
+  if ( (byte_438FD0E & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__TryGetEntity__);
-    sub_B70694(&QuestRacePointEntity_TypeInfo);
-    byte_4356690 = 1;
+    sub_B775C4(&Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__TryGetEntity__);
+    sub_B775C4(&QuestRacePointEntity_TypeInfo);
+    byte_438FD0E = 1;
   }
   if ( (BYTE3(QuestRacePointEntity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !QuestRacePointEntity_TypeInfo->_2.cctor_finished )
@@ -66,5 +66,5 @@ bool __fastcall QuestRacePointMaster__TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__TryGetEntity__);
 }

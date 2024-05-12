@@ -1,13 +1,13 @@
 void __fastcall EventEquipSkillReleaseEntity___ctor(EventEquipSkillReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4354565 & 1) == 0 )
+  if ( (byte_438DE23 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_4354565 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438DE23 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *__fastcall EventEquipSkillReleaseEntity__CreatePK(
         int32_t value,
         const MethodInfo *method)
 {
-  if ( (byte_435455F & 1) == 0 )
+  if ( (byte_438DE1D & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_435455F = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_438DE1D = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            eventId,
            type,
            targetId,
            value,
-           (const MethodInfo_1CA2C2C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_1D17A7C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -60,21 +60,21 @@ int32_t __fastcall EventEquipSkillReleaseEntity__getScriptIntParam(
   const MethodInfo *v9; // x1
 
   v4 = def;
-  if ( (byte_4354562 & 1) == 0 )
+  if ( (byte_438DE20 & 1) == 0 )
   {
-    sub_B70694(&long_TypeInfo);
-    sub_B70694(&StringLiteral_19095/*"forceOverwrite"*/);
-    byte_4354562 = 1;
+    sub_B775C4(&long_TypeInfo);
+    sub_B775C4(&StringLiteral_19183/*"forceOverwrite"*/);
+    byte_438DE20 = 1;
   }
   ScriptObj = EventEquipSkillReleaseEntity__getScriptObj(
                 this,
-                (System_String_o *)StringLiteral_19095/*"forceOverwrite"*/,
+                (System_String_o *)StringLiteral_19183/*"forceOverwrite"*/,
                 *(const MethodInfo **)&def);
   if ( !ScriptObj )
     return v4;
   if ( ScriptObj->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(ScriptObj);
-  sub_B70A60(ScriptObj);
+  sub_B77990(ScriptObj);
   return EventEquipSkillReleaseEntity__isForceOverwrite(v8, v9);
 }
 
@@ -88,28 +88,28 @@ Il2CppObject *__fastcall EventEquipSkillReleaseEntity__getScriptObj(
   __int64 v6; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *v7; // x0
 
-  if ( (byte_4354561 & 1) == 0 )
+  if ( (byte_438DE1F & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    byte_4354561 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    byte_438DE1F = 1;
   }
   script = this->fields.script;
   if ( !script
     || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
           (System_Xml_XmlQualifiedName_o *)key,
-          (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return 0LL;
   }
   v7 = this->fields.script;
   if ( !v7 )
-    sub_B7076C(0LL, v6);
+    sub_B7769C(0LL, v6);
   return (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                            (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v7,
                            (System_Type_o *)key,
-                           (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                           (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
 }
 
 
@@ -119,10 +119,10 @@ bool __fastcall EventEquipSkillReleaseEntity__isForceOverwrite(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4354563 & 1) == 0 )
+  if ( (byte_438DE21 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_19095/*"forceOverwrite"*/);
-    byte_4354563 = 1;
+    sub_B775C4(&StringLiteral_19183/*"forceOverwrite"*/);
+    byte_438DE21 = 1;
   }
   return EventEquipSkillReleaseEntity__getScriptIntParam(this, (System_String_o *)method, 0, v2) == 1;
 }
@@ -134,10 +134,10 @@ bool __fastcall EventEquipSkillReleaseEntity__isOpen(EventEquipSkillReleaseEntit
   int32_t type; // w21
   int64_t value; // x19
 
-  if ( (byte_4354560 & 1) == 0 )
+  if ( (byte_438DE1E & 1) == 0 )
   {
-    sub_B70694(&CondType_TypeInfo);
-    byte_4354560 = 1;
+    sub_B775C4(&CondType_TypeInfo);
+    byte_438DE1E = 1;
   }
   type = this->fields.type;
   targetId = this->fields.targetId;
@@ -166,25 +166,25 @@ bool __fastcall EventEquipSkillReleaseEntity__tryGetSkill(
   EventEquipSkillReleaseEntity_o *v17; // x0
   const MethodInfo *v18; // x1
 
-  if ( (byte_4354564 & 1) == 0 )
+  if ( (byte_438DE22 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B70694(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_B70694(&long_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_object__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_object__get_Item__);
-    sub_B70694(&System_Collections_Generic_List_object__TypeInfo);
-    sub_B70694(&StringLiteral_19684/*"id"*/);
-    sub_B70694(&StringLiteral_22524/*"skills"*/);
-    sub_B70694(&StringLiteral_20652/*"lv"*/);
-    byte_4354564 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_B775C4(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_B775C4(&long_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_object__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_object__get_Item__);
+    sub_B775C4(&System_Collections_Generic_List_object__TypeInfo);
+    sub_B775C4(&StringLiteral_19774/*"id"*/);
+    sub_B775C4(&StringLiteral_22625/*"skills"*/);
+    sub_B775C4(&StringLiteral_20748/*"lv"*/);
+    byte_438DE22 = 1;
   }
   *id = 0;
   *lv = 0;
   ScriptObj = EventEquipSkillReleaseEntity__getScriptObj(
                 this,
-                (System_String_o *)StringLiteral_22524/*"skills"*/,
+                (System_String_o *)StringLiteral_22625/*"skills"*/,
                 (const MethodInfo *)id);
   if ( !ScriptObj )
     goto LABEL_22;
@@ -202,7 +202,7 @@ bool __fastcall EventEquipSkillReleaseEntity__tryGetSkill(
     if ( v13 > idx )
     {
       if ( v13 <= (unsigned int)idx )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       v14 = *(System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o **)(*((_QWORD *)v11 + 2)
                                                                                            + 8LL * idx
                                                                                            + 32);
@@ -214,20 +214,20 @@ bool __fastcall EventEquipSkillReleaseEntity__tryGetSkill(
         {
           if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
                   v14,
-                  (System_Xml_XmlQualifiedName_o *)StringLiteral_19684/*"id"*/,
-                  (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__)
+                  (System_Xml_XmlQualifiedName_o *)StringLiteral_19774/*"id"*/,
+                  (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__)
             || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
                   v14,
-                  (System_Xml_XmlQualifiedName_o *)StringLiteral_20652/*"lv"*/,
-                  (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+                  (System_Xml_XmlQualifiedName_o *)StringLiteral_20748/*"lv"*/,
+                  (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
           {
             LOBYTE(ScriptObj) = 0;
             return (char)ScriptObj;
           }
           ScriptObj = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                         (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v14,
-                        (System_Type_o *)StringLiteral_19684/*"id"*/,
-                        (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                        (System_Type_o *)StringLiteral_19774/*"id"*/,
+                        (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
           if ( ScriptObj )
           {
             if ( *(Il2CppClass **)(*(_QWORD *)ScriptObj + 64LL) != long_TypeInfo->_1.element_class )
@@ -235,8 +235,8 @@ bool __fastcall EventEquipSkillReleaseEntity__tryGetSkill(
             *id = *(_QWORD *)j_il2cpp_object_unbox_0(ScriptObj);
             ScriptObj = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                           (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v14,
-                          (System_Type_o *)StringLiteral_20652/*"lv"*/,
-                          (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                          (System_Type_o *)StringLiteral_20748/*"lv"*/,
+                          (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
             if ( ScriptObj )
             {
               if ( *(Il2CppClass **)(*(_QWORD *)ScriptObj + 64LL) == long_TypeInfo->_1.element_class )
@@ -247,7 +247,7 @@ bool __fastcall EventEquipSkillReleaseEntity__tryGetSkill(
                 return (char)ScriptObj;
               }
 LABEL_23:
-              sub_B70A60(ScriptObj);
+              sub_B77990(ScriptObj);
               EventEquipSkillReleaseEntity___ctor(v17, v18);
               return (char)ScriptObj;
             }
@@ -255,7 +255,7 @@ LABEL_23:
         }
       }
 LABEL_22:
-      sub_B7076C(ScriptObj, v10);
+      sub_B7769C(ScriptObj, v10);
     }
   }
   return (char)ScriptObj;

@@ -1,14 +1,14 @@
 void __fastcall MapCondMaster___ctor(MapCondMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_43508BF & 1) == 0 )
+  if ( (byte_4389EE8 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_MapCondMaster__MapCondEntity__string___ctor__);
-    byte_43508BF = 1;
+    sub_B775C4(&Method_DataMasterBase_MapCondMaster__MapCondEntity__string___ctor__);
+    byte_4389EE8 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     197,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_MapCondMaster__MapCondEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_MapCondMaster__MapCondEntity__string___ctor__);
 }
 
 
@@ -28,33 +28,33 @@ System_Collections_Generic_List_int__o *__fastcall MapCondMaster__GetAvailableBu
   System_Collections_Generic_List_int__o *v13; // x20
   int32_t value; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_43508C1 & 1) == 0 )
+  if ( (byte_4389EEA & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int__Add__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int__Remove__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int__get_Keys__);
-    sub_B70694(&System_Collections_Generic_Dictionary_int__int__TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_int___ctor___69164920);
-    sub_B70694(&System_Collections_Generic_List_int__TypeInfo);
-    sub_B70694(&MapCondEntity_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_43508C1 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__int__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__int__Remove__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__int__get_Keys__);
+    sub_B775C4(&System_Collections_Generic_Dictionary_int__int__TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_int__TypeInfo);
+    sub_B775C4(&MapCondEntity_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_4389EEA = 1;
   }
   value = 0;
-  v5 = (System_Collections_Generic_Dictionary_int__int__o *)sub_B70764(System_Collections_Generic_Dictionary_int__int__TypeInfo);
+  v5 = (System_Collections_Generic_Dictionary_int__int__o *)sub_B77694(System_Collections_Generic_Dictionary_int__int__TypeInfo);
   System_Collections_Generic_Dictionary_int__int____ctor(
     v5,
-    (const MethodInfo_2FBA5BC *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    (const MethodInfo_2FE81CC *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
   list = (int64_t)this->fields.list;
   if ( !list )
     goto LABEL_24;
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
-            (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -73,7 +73,7 @@ System_Collections_Generic_List_int__o *__fastcall MapCondMaster__GetAvailableBu
       list = (int64_t)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                         (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
                         v9,
-                        (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                        (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( list )
       {
         v10 = (MapCondEntity_o *)list;
@@ -89,7 +89,7 @@ System_Collections_Generic_List_int__o *__fastcall MapCondMaster__GetAvailableBu
                    v5,
                    *(_DWORD *)(list + 32),
                    &value,
-                   (const MethodInfo_2FBCD70 *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
+                   (const MethodInfo_2FEA980 *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
           if ( (list & 1) == 0 )
             goto LABEL_19;
           if ( v10->fields.priority >= value )
@@ -103,7 +103,7 @@ LABEL_21:
     System_Collections_Generic_Dictionary_int__int___Remove(
       v5,
       v10->fields.targetId,
-      (const MethodInfo_2FBCA58 *)Method_System_Collections_Generic_Dictionary_int__int__Remove__);
+      (const MethodInfo_2FEA668 *)Method_System_Collections_Generic_Dictionary_int__int__Remove__);
 LABEL_19:
     list = MapCondEntity__IsOpen(v10, v6);
     if ( (list & 1) != 0 )
@@ -111,21 +111,21 @@ LABEL_19:
         v5,
         v10->fields.targetId,
         v10->fields.priority,
-        (const MethodInfo_2FBB160 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
+        (const MethodInfo_2FE8D70 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
     goto LABEL_21;
   }
 LABEL_22:
   if ( !v5 )
 LABEL_24:
-    sub_B7076C(list, v6);
+    sub_B7769C(list, v6);
   Keys = System_Collections_Generic_Dictionary_int__int___get_Keys(
            v5,
-           (const MethodInfo_2FBAD70 *)Method_System_Collections_Generic_Dictionary_int__int__get_Keys__);
-  v13 = (System_Collections_Generic_List_int__o *)sub_B70764(System_Collections_Generic_List_int__TypeInfo);
-  System_Collections_Generic_List_int____ctor_51074676(
+           (const MethodInfo_2FE8980 *)Method_System_Collections_Generic_Dictionary_int__int__get_Keys__);
+  v13 = (System_Collections_Generic_List_int__o *)sub_B77694(System_Collections_Generic_List_int__TypeInfo);
+  System_Collections_Generic_List_int____ctor_51270276(
     v13,
     (System_Collections_Generic_IEnumerable_T__o *)Keys,
-    (const MethodInfo_30B5674 *)Method_System_Collections_Generic_List_int___ctor___69164920);
+    (const MethodInfo_30E5284 *)Method_System_Collections_Generic_List_int___ctor__);
   return v13;
 }
 
@@ -139,16 +139,16 @@ MapCondEntity_o *__fastcall MapCondMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_43508BD & 1) == 0 )
+  if ( (byte_4389EE6 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_MapCondMaster__MapCondEntity__string__GetEntity__);
-    byte_43508BD = 1;
+    sub_B775C4(&Method_DataMasterBase_MapCondMaster__MapCondEntity__string__GetEntity__);
+    byte_4389EE6 = 1;
   }
   PK = MapCondEntity__CreatePK(id, mapId, *(const MethodInfo **)&mapId);
   return (MapCondEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                               (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                               PK,
-                              (const MethodInfo_21C0890 *)Method_DataMasterBase_MapCondMaster__MapCondEntity__string__GetEntity__);
+                              (const MethodInfo_21FBCE4 *)Method_DataMasterBase_MapCondMaster__MapCondEntity__string__GetEntity__);
 }
 
 
@@ -177,21 +177,21 @@ int32_t __fastcall MapCondMaster__GetPrioredID(
   int32_t v25; // [xsp+4h] [xbp-5Ch]
   int priority; // [xsp+8h] [xbp-58h]
 
-  if ( (byte_43508C0 & 1) == 0 )
+  if ( (byte_4389EE9 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&MapCondEntity_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_43508C0 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&MapCondEntity_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_4389EE9 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
 LABEL_36:
-    sub_B7076C(list, *(_QWORD *)&type);
+    sub_B7769C(list, *(_QWORD *)&type);
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             list,
-            (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -212,7 +212,7 @@ LABEL_36:
       Item = (MapCondEntity_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                                   list,
                                   v15,
-                                  (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                  (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !Item )
         goto LABEL_32;
       v17 = Item;
@@ -237,7 +237,7 @@ LABEL_24:
           v22 = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                   list,
                   v15,
-                  (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                  (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
           if ( v22
             && (v23 = *(&MapCondEntity_TypeInfo->_2.bitflags2 + 1), *(&v22->klass->_2.bitflags2 + 1) >= (unsigned int)v23) )
           {
@@ -301,28 +301,28 @@ System_Collections_Generic_List_int__o *__fastcall MapCondMaster__GetReleasedMap
   __int64 v16; // x10
   int v17; // w8
 
-  if ( (byte_43508C3 & 1) == 0 )
+  if ( (byte_4389EEC & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_B70694(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_B70694(&System_Collections_Generic_List_int__TypeInfo);
-    sub_B70694(&MapCondEntity_TypeInfo);
-    byte_43508C3 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int___ctor___69397304);
+    sub_B775C4(&System_Collections_Generic_List_int__TypeInfo);
+    sub_B775C4(&MapCondEntity_TypeInfo);
+    byte_4389EEC = 1;
   }
-  v9 = (System_Collections_Generic_List_int__o *)sub_B70764(System_Collections_Generic_List_int__TypeInfo);
+  v9 = (System_Collections_Generic_List_int__o *)sub_B77694(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v9,
-    (const MethodInfo_30B547C *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_30E508C *)Method_System_Collections_Generic_List_int___ctor___69397304);
   list = this->fields.list;
   if ( !list )
 LABEL_24:
-    sub_B7076C(list, v10);
+    sub_B7769C(list, v10);
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
-            (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v13 = Count;
@@ -335,7 +335,7 @@ LABEL_24:
       list = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
                v14,
-               (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !list )
         goto LABEL_22;
       v15 = list;
@@ -361,11 +361,11 @@ LABEL_17:
         if ( !System_Collections_Generic_List_int___Contains(
                 v9,
                 *((_DWORD *)list + 8),
-                (const MethodInfo_30B662C *)Method_System_Collections_Generic_List_int__Contains__) )
+                (const MethodInfo_30E623C *)Method_System_Collections_Generic_List_int__Contains__) )
           System_Collections_Generic_List_int___Add(
             v9,
             v15[8],
-            (const MethodInfo_30B61D8 *)Method_System_Collections_Generic_List_int__Add__);
+            (const MethodInfo_30E5DE8 *)Method_System_Collections_Generic_List_int__Add__);
       }
 LABEL_22:
       if ( ++v14 >= v13 )
@@ -392,17 +392,17 @@ bool __fastcall MapCondMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_43508BE & 1) == 0 )
+  if ( (byte_4389EE7 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_MapCondMaster__MapCondEntity__string__TryGetEntity__);
-    byte_43508BE = 1;
+    sub_B775C4(&Method_DataMasterBase_MapCondMaster__MapCondEntity__string__TryGetEntity__);
+    byte_4389EE7 = 1;
   }
   PK = MapCondEntity__CreatePK(id, mapId, *(const MethodInfo **)&id);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_MapCondMaster__MapCondEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_MapCondMaster__MapCondEntity__string__TryGetEntity__);
 }
 
 
@@ -431,21 +431,21 @@ bool __fastcall MapCondMaster__TryGetOnMapCameraOffset(
   int v24; // [xsp+18h] [xbp-58h]
   int priority; // [xsp+1Ch] [xbp-54h]
 
-  if ( (byte_43508C2 & 1) == 0 )
+  if ( (byte_4389EEB & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&MapCondEntity_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_43508C2 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&MapCondEntity_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_4389EEB = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
 LABEL_44:
-    sub_B7076C(list, *(_QWORD *)&mapId);
+    sub_B7769C(list, *(_QWORD *)&mapId);
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             list,
-            (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -468,7 +468,7 @@ LABEL_44:
     Item = (MapCondEntity_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                                 list,
                                 v15,
-                                (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
     if ( Item )
     {
       v17 = Item;

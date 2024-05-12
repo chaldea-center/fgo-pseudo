@@ -15,17 +15,17 @@ void __fastcall ParticleSystemSyncComponent__Awake(ParticleSystemSyncComponent_o
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_4355B02 & 1) == 0 )
+  if ( (byte_438EFAF & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem____69251184);
-    byte_4355B02 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem____69483920);
+    byte_438EFAF = 1;
   }
   ComponentsInChildren_WarBoardControlPlayTalkUiComponent = (ParticleSystemSyncComponent_c *)UnityEngine_Component__GetComponentsInChildren_WarBoardControlPlayTalkUiComponent_(
                                                                                                (UnityEngine_Component_o *)this,
                                                                                                1,
-                                                                                               (const MethodInfo_1BE4420 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem____69251184);
+                                                                                               (const MethodInfo_1C6DADC *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem____69483920);
   this[1].klass = ComponentsInChildren_WarBoardControlPlayTalkUiComponent;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this[1],
     (System_Int32_array **)ComponentsInChildren_WarBoardControlPlayTalkUiComponent,
     v4,
@@ -67,13 +67,13 @@ bool __fastcall ParticleSystemSyncComponent__IsUnderMinTimeDiff(
     {
       if ( (unsigned int)v5 >= namespaze )
       {
-        v14 = sub_B70798(this);
-        sub_B70738(v14, 0LL);
+        v14 = sub_B776C8(this);
+        sub_B77668(v14, 0LL);
       }
       v6 = (UnityEngine_ParticleSystem_o *)*((_QWORD *)&klass->_1.byval_arg.data + v5);
       time = UnityEngine_Time__get_time(0LL);
       if ( !v6 )
-        sub_B7076C(v7, v8);
+        sub_B7769C(v7, v8);
       v10 = time;
       m_ParticleSystem = UnityEngine_ParticleSystem__get_main(v6, 0LL).fields.m_ParticleSystem;
       v16.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
@@ -127,20 +127,20 @@ void __fastcall ParticleSystemSyncComponent__SimulateParticles(
       {
         if ( (unsigned int)v4 >= namespaze )
         {
-          v12 = sub_B70798(this);
-          sub_B70738(v12, 0LL);
+          v12 = sub_B776C8(this);
+          sub_B77668(v12, 0LL);
         }
         v5 = (UnityEngine_ParticleSystem_o *)*((_QWORD *)&klass->_1.byval_arg.data + v4);
         time = UnityEngine_Time__get_time(0LL);
         if ( !v5 )
-          sub_B7076C(v6, v7);
+          sub_B7769C(v6, v7);
         v9 = time;
         m_ParticleSystem = UnityEngine_ParticleSystem__get_main(v5, 0LL).fields.m_ParticleSystem;
         v14.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
         duration = UnityEngine_ParticleSystem_MainModule__get_duration(v14, 0LL);
         v11 = fmodf(v9, duration);
-        UnityEngine_ParticleSystem__Simulate_51599544(v5, v11, 0LL);
-        UnityEngine_ParticleSystem__Play_51599716(v5, 0LL);
+        UnityEngine_ParticleSystem__Simulate_51807432(v5, v11, 0LL);
+        UnityEngine_ParticleSystem__Play_51807604(v5, 0LL);
         namespaze = (int)klass->_1.namespaze;
         ++v4;
       }

@@ -1,9 +1,9 @@
 void __fastcall EventRecipeListViewObject___ctor(EventRecipeListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_434E8C1 & 1) == 0 )
+  if ( (byte_4387E92 & 1) == 0 )
   {
-    sub_B70694(&ListViewObject_TypeInfo);
-    byte_434E8C1 = 1;
+    sub_B775C4(&ListViewObject_TypeInfo);
+    byte_4387E92 = 1;
   }
   if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ListViewObject_TypeInfo->_2.cctor_finished )
@@ -19,19 +19,19 @@ void __fastcall EventRecipeListViewObject__Awake(EventRecipeListViewObject_o *th
   __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
 
-  if ( (byte_434E8B9 & 1) == 0 )
+  if ( (byte_4387E8A & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_EventRecipeListViewItemDraw___);
-    byte_434E8B9 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_EventRecipeListViewItemDraw___);
+    byte_4387E8A = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   this->fields.itemDraw = (struct EventRecipeListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                     dispObject,
-                                                                    (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_EventRecipeListViewItemDraw___);
-  sub_B70630(&this->fields.itemDraw);
+                                                                    (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_EventRecipeListViewItemDraw___);
+  sub_B77560(&this->fields.itemDraw);
 }
 
 
@@ -47,7 +47,7 @@ void __fastcall EventRecipeListViewObject__CallOnMoveEnd(EventRecipeListViewObje
   if ( onMoveEnd )
   {
     *p_onMoveEnd = 0LL;
-    sub_B70630(p_onMoveEnd);
+    sub_B77560(p_onMoveEnd);
     System_Action__Invoke(v3, 0LL);
   }
 }
@@ -62,21 +62,21 @@ UnityEngine_GameObject_o *__fastcall EventRecipeListViewObject__CreateDragObject
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x3
 
-  if ( (byte_434E8BC & 1) == 0 )
+  if ( (byte_4387E8D & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_EventRecipeListViewObject___);
-    byte_434E8BC = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_EventRecipeListViewObject___);
+    byte_4387E8D = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                     DragObject,
-                                                    (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_EventRecipeListViewObject___)) == 0LL) )
+                                                    (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_EventRecipeListViewObject___)) == 0LL) )
   {
-    sub_B7076C(DragObject, v4);
+    sub_B7769C(DragObject, v4);
   }
-  EventRecipeListViewObject__Init_19098124((EventRecipeListViewObject_o *)DragObject, 2, 0LL, 0.0, v6);
+  EventRecipeListViewObject__Init_19254636((EventRecipeListViewObject_o *)DragObject, 2, 0LL, 0.0, v6);
   return v5;
 }
 
@@ -95,11 +95,11 @@ void __fastcall EventRecipeListViewObject__EventMove(EventRecipeListViewObject_o
   UnityEngine_Vector3_o TargetPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v13; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_434E8C0 & 1) == 0 )
+  if ( (byte_4387E91 & 1) == 0 )
   {
-    sub_B70694(&ListViewObject_TypeInfo);
-    sub_B70694(&StringLiteral_6270/*"EventMoveFinish"*/);
-    byte_434E8C0 = 1;
+    sub_B775C4(&ListViewObject_TypeInfo);
+    sub_B775C4(&StringLiteral_6326/*"EventMoveFinish"*/);
+    byte_4387E91 = 1;
   }
   TargetPosition = EventRecipeListViewObject__GetTargetPosition(this, this->fields.initMode, v2);
   dragObject = this->fields.dragObject;
@@ -118,13 +118,13 @@ void __fastcall EventRecipeListViewObject__EventMove(EventRecipeListViewObject_o
   v13.fields.z = z;
   v9 = TweenPosition__Begin(dragObject, v7->static_fields->BASE_MOVE_TIME, v13, 0LL);
   if ( !v9 )
-    sub_B7076C(0LL, v10);
+    sub_B7769C(0LL, v10);
   v11 = v9;
   v9->fields.style = 3;
   v9->fields.eventReceiver = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  sub_B70630(&v11->fields.eventReceiver);
-  v11->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6270/*"EventMoveFinish"*/;
-  sub_B70630(&v11->fields.callWhenFinished);
+  sub_B77560(&v11->fields.eventReceiver);
+  v11->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6326/*"EventMoveFinish"*/;
+  sub_B77560(&v11->fields.callWhenFinished);
 }
 
 
@@ -143,11 +143,11 @@ void __fastcall EventRecipeListViewObject__EventStart(
   const MethodInfo *v12; // x2
   int v13; // s0
 
-  if ( (byte_434E8BF & 1) == 0 )
+  if ( (byte_4387E90 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_EventRecipeListViewObject___);
-    sub_B70694(&StringLiteral_6268/*"EventMove"*/);
-    byte_434E8BF = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_EventRecipeListViewObject___);
+    sub_B775C4(&StringLiteral_6324/*"EventMove"*/);
+    byte_4387E90 = 1;
   }
   this->fields.isBusy = 1;
   EventRecipeListViewObject__SetupDisp(this, *(const MethodInfo **)&initMode);
@@ -156,24 +156,24 @@ void __fastcall EventRecipeListViewObject__EventStart(
   this->fields.dragObject = (struct UnityEngine_GameObject_o *)((__int64 (__fastcall *)(EventRecipeListViewObject_o *, Il2CppMethodPointer))this->klass->vtable._8_CreateDragObject.method)(
                                                                  this,
                                                                  this->klass->vtable._9_SetInput.methodPtr);
-  sub_B70630(&this->fields.dragObject);
+  sub_B77560(&this->fields.dragObject);
   dragObject = this->fields.dragObject;
   if ( !dragObject
     || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                    dragObject,
-                                                   (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_EventRecipeListViewObject___)) == 0LL
-    || (EventRecipeListViewObject__Init_19098124((EventRecipeListViewObject_o *)dragObject, 2, 0LL, 0.0, v10),
+                                                   (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_EventRecipeListViewObject___)) == 0LL
+    || (EventRecipeListViewObject__Init_19254636((EventRecipeListViewObject_o *)dragObject, 2, 0LL, 0.0, v10),
         (dragObject = *p_dragObject) == 0LL)
     || (transform = UnityEngine_GameObject__get_transform(dragObject, 0LL),
         *(UnityEngine_Vector3_o *)&v13 = EventRecipeListViewObject__GetStartPosition(this, initMode, v12),
         !transform) )
   {
-    sub_B7076C(dragObject, v8);
+    sub_B7769C(dragObject, v8);
   }
   UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v13, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6268/*"EventMove"*/,
+    (System_String_o *)StringLiteral_6324/*"EventMove"*/,
     delay,
     0LL);
 }
@@ -186,10 +186,10 @@ EventRecipeListViewItem_o *__fastcall EventRecipeListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 v4; // x11
 
-  if ( (byte_434E8BB & 1) == 0 )
+  if ( (byte_4387E8C & 1) == 0 )
   {
-    sub_B70694(&EventRecipeListViewItem_TypeInfo);
-    byte_434E8BB = 1;
+    sub_B775C4(&EventRecipeListViewItem_TypeInfo);
+    byte_4387E8C = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -218,9 +218,9 @@ UnityEngine_Vector3_o __fastcall EventRecipeListViewObject__GetStartPosition(
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_B7076C(0LL, v5);
+    sub_B7769C(0LL, v5);
   if ( initMode == 4 )
-    *(UnityEngine_Vector3_o *)&v6 = UnityEngine_Transform__TransformPoint_36191140(transform, 1000.0, 0.0, 0.0, 0LL);
+    *(UnityEngine_Vector3_o *)&v6 = UnityEngine_Transform__TransformPoint_36433912(transform, 1000.0, 0.0, 0.0, 0LL);
   else
     *(UnityEngine_Vector3_o *)&v6 = UnityEngine_Transform__get_position(transform, 0LL);
   result.fields.z = v8;
@@ -238,7 +238,7 @@ int32_t __fastcall EventRecipeListViewObject__GetState(
   if ( (unsigned int)initMode > 7 )
     return 0;
   else
-    return dword_32E72E0[initMode];
+    return dword_331A5E0[initMode];
 }
 
 
@@ -293,7 +293,7 @@ LABEL_13:
       }
     }
 LABEL_15:
-    sub_B7076C(dragObject, *(_QWORD *)&initMode);
+    sub_B7769C(dragObject, *(_QWORD *)&initMode);
   }
   dragObject = this->fields.dragObject;
   if ( !dragObject )
@@ -333,11 +333,11 @@ void __fastcall EventRecipeListViewObject__Init(
 {
   const MethodInfo *v3; // x3
 
-  EventRecipeListViewObject__Init_19098124(this, initMode, 0LL, 0.0, v3);
+  EventRecipeListViewObject__Init_19254636(this, initMode, 0LL, 0.0, v3);
 }
 
 
-void __fastcall EventRecipeListViewObject__Init_19098124(
+void __fastcall EventRecipeListViewObject__Init_19254636(
         EventRecipeListViewObject_o *this,
         int32_t initMode,
         System_Action_o *onMoveEnd,
@@ -357,10 +357,10 @@ void __fastcall EventRecipeListViewObject__Init_19098124(
   const MethodInfo *v19; // x1
   int32_t v20; // w8
 
-  if ( (byte_434E8BD & 1) == 0 )
+  if ( (byte_4387E8E & 1) == 0 )
   {
-    sub_B70694(&EventRecipeListViewItem_TypeInfo);
-    byte_434E8BD = 1;
+    sub_B775C4(&EventRecipeListViewItem_TypeInfo);
+    byte_4387E8E = 1;
   }
   linkItem = this->fields.linkItem;
   dispMode = this->fields.dispMode;
@@ -385,18 +385,18 @@ void __fastcall EventRecipeListViewObject__Init_19098124(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B7076C(transform, v16);
+    sub_B7769C(transform, v16);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.onMoveEnd = onMoveEnd;
-  sub_B70630(&this->fields.onMoveEnd);
+  sub_B77560(&this->fields.onMoveEnd);
   v17 = EventRecipeListViewItemDraw__GetDispMode(this->fields.initMode, 0LL);
   v19 = (const MethodInfo *)this->fields.initMode;
   this->fields.dispMode = v17;
   if ( (unsigned int)v19 > 7 )
     v20 = 0;
   else
-    v20 = dword_32E72E0[(_QWORD)v19];
+    v20 = dword_331A5E0[(_QWORD)v19];
   this->fields.state = v20;
   switch ( initMode )
   {
@@ -424,11 +424,11 @@ void __fastcall EventRecipeListViewObject__OnDestroy(EventRecipeListViewObject_o
   struct UnityEngine_GameObject_o *dragObject; // t1
   UnityEngine_Object_o *v6; // x20
 
-  if ( (byte_434E8BA & 1) == 0 )
+  if ( (byte_4387E8B & 1) == 0 )
   {
-    sub_B70694(&NGUITools_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_434E8BA = 1;
+    sub_B775C4(&NGUITools_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4387E8B = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = &this->fields.dragObject;
@@ -445,7 +445,7 @@ void __fastcall EventRecipeListViewObject__OnDestroy(EventRecipeListViewObject_o
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(v6, 0LL);
     *p_dragObject = 0LL;
-    sub_B70630(p_dragObject);
+    sub_B77560(p_dragObject);
   }
 }
 
@@ -457,7 +457,7 @@ void __fastcall EventRecipeListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_33972948((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_34301308((ListViewObject_o *)this, item, seed, 0LL);
 }
 
 
@@ -470,11 +470,11 @@ void __fastcall EventRecipeListViewObject__SetupDisp(EventRecipeListViewObject_o
   __int64 v7; // x1
   EventRecipeListViewItemDraw_o *v8; // x0
 
-  if ( (byte_434E8BE & 1) == 0 )
+  if ( (byte_4387E8F & 1) == 0 )
   {
-    sub_B70694(&EventRecipeListViewItem_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_434E8BE = 1;
+    sub_B775C4(&EventRecipeListViewItem_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4387E8F = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -501,7 +501,7 @@ LABEL_8:
   {
     v8 = this->fields.itemDraw;
     if ( !v8 )
-      sub_B7076C(0LL, v7);
+      sub_B7769C(0LL, v7);
     EventRecipeListViewItemDraw__SetItem(v8, (EventRecipeListViewItem_o *)linkItem, this->fields.dispMode, 0LL);
   }
 }
@@ -522,10 +522,10 @@ void __fastcall EventRecipeListViewObject__add_onMoveEnd(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_434E8B7 & 1) == 0 )
+  if ( (byte_4387E88 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    byte_434E8B7 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    byte_4387E88 = 1;
   }
   onMoveEnd = this->fields.onMoveEnd;
   p_onMoveEnd = &this->fields.onMoveEnd;
@@ -538,13 +538,13 @@ void __fastcall EventRecipeListViewObject__add_onMoveEnd(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_onMoveEnd, v8, v6);
+    v9 = sub_B6BFDC(p_onMoveEnd, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (EventRecipeListViewObject_o *)sub_B70A60(v8);
+  v11 = (EventRecipeListViewObject_o *)sub_B77990(v8);
   EventRecipeListViewObject__remove_onMoveEnd(v11, v12, v13);
 }
 
@@ -569,10 +569,10 @@ void __fastcall EventRecipeListViewObject__remove_onMoveEnd(
   EventRecipeListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_434E8B8 & 1) == 0 )
+  if ( (byte_4387E89 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    byte_434E8B8 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    byte_4387E89 = 1;
   }
   onMoveEnd = this->fields.onMoveEnd;
   p_onMoveEnd = &this->fields.onMoveEnd;
@@ -585,12 +585,12 @@ void __fastcall EventRecipeListViewObject__remove_onMoveEnd(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_onMoveEnd, v8, v6);
+    v9 = sub_B6BFDC(p_onMoveEnd, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (EventRecipeListViewObject_o *)sub_B70A60(v8);
+  v11 = (EventRecipeListViewObject_o *)sub_B77990(v8);
   EventRecipeListViewObject__get_DispMode(v11, v12);
 }

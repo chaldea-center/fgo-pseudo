@@ -8,15 +8,15 @@ void __fastcall MasterFormationRootComponent__Init(MasterFormationRootComponent_
 {
   PlayMakerFSM_o *myFSM; // x0
 
-  if ( (byte_4352251 & 1) == 0 )
+  if ( (byte_438BAF1 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_6989/*"GO_NEXT"*/);
-    byte_4352251 = 1;
+    sub_B775C4(&StringLiteral_7045/*"GO_NEXT"*/);
+    byte_438BAF1 = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
-    sub_B7076C(0LL, method);
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_6989/*"GO_NEXT"*/, 0LL);
+    sub_B7769C(0LL, method);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_7045/*"GO_NEXT"*/, 0LL);
 }
 
 
@@ -26,15 +26,15 @@ void __fastcall MasterFormationRootComponent__OnClickBack(
 {
   TitleInfoControl_o *titleInfo; // x0
 
-  if ( (byte_4352256 & 1) == 0 )
+  if ( (byte_438BAF6 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_3111/*"CLICK_BACK"*/);
-    byte_4352256 = 1;
+    sub_B775C4(&StringLiteral_3161/*"CLICK_BACK"*/);
+    byte_438BAF6 = 1;
   }
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
-    sub_B7076C(0LL, method);
-  TitleInfoControl__sendEvent(titleInfo, (System_String_o *)StringLiteral_3111/*"CLICK_BACK"*/, 0LL);
+    sub_B7769C(0LL, method);
+  TitleInfoControl__sendEvent(titleInfo, (System_String_o *)StringLiteral_3161/*"CLICK_BACK"*/, 0LL);
 }
 
 
@@ -47,7 +47,7 @@ void __fastcall MasterFormationRootComponent__SetBackBtnEnabled(
 
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
-    sub_B7076C(0LL, isDrag);
+    sub_B7769C(0LL, isDrag);
   TitleInfoControl__setBackBtnColliderEnable(titleInfo, !isDrag, 0LL);
 }
 
@@ -66,19 +66,19 @@ void __fastcall MasterFormationRootComponent___closeMasterFormation_b__17_0(
 {
   MasterFormationComponent_o *mstFormationComp; // x0
 
-  if ( (byte_4352258 & 1) == 0 )
+  if ( (byte_438BAF8 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_6989/*"GO_NEXT"*/);
-    byte_4352258 = 1;
+    sub_B775C4(&StringLiteral_7045/*"GO_NEXT"*/);
+    byte_438BAF8 = 1;
   }
   mstFormationComp = this->fields.mstFormationComp;
   if ( !mstFormationComp
     || (MasterFormationComponent__closeMasterFormation(mstFormationComp, 0LL),
         (mstFormationComp = (MasterFormationComponent_o *)this->fields.myFSM) == 0LL) )
   {
-    sub_B7076C(mstFormationComp, method);
+    sub_B7769C(mstFormationComp, method);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)mstFormationComp, (System_String_o *)StringLiteral_6989/*"GO_NEXT"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)mstFormationComp, (System_String_o *)StringLiteral_7045/*"GO_NEXT"*/, 0LL);
 }
 
 
@@ -97,15 +97,15 @@ void __fastcall MasterFormationRootComponent__beginInitialize(
   AvalonSceneManager_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_435224F & 1) == 0 )
+  if ( (byte_438BAEF & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_435224F = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_438BAEF = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0LL);
-  Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   AvalonSceneManager__endInitialize(Instance, (SceneRootComponent_o *)this, 0LL);
 }
 
@@ -114,7 +114,7 @@ void __fastcall MasterFormationRootComponent__beginResume(
         MasterFormationRootComponent_o *this,
         const MethodInfo *method)
 {
-  SceneRootComponent__beginResume_17527992((SceneRootComponent_o *)this, 0LL);
+  SceneRootComponent__beginResume_17679232((SceneRootComponent_o *)this, 0LL);
 }
 
 
@@ -153,23 +153,23 @@ void __fastcall MasterFormationRootComponent__beginStartUp(
   System_String_o *name; // x21
   struct SceneJumpInfo_o *v33; // x8
 
-  if ( (byte_4352250 & 1) == 0 )
+  if ( (byte_438BAF0 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMasterData_UserDeckMaster___);
-    sub_B70694(&Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__GetEntity__);
-    sub_B70694(&Method_MasterFormationRootComponent__beginStartUp_b__9_0__);
-    sub_B70694(&SceneJumpInfo_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&StringLiteral_5289/*"DeckId"*/);
-    sub_B70694(&StringLiteral_6247/*"EventDeckId"*/);
-    sub_B70694(&StringLiteral_15286/*"UserEquipId"*/);
-    byte_4352250 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserDeckMaster___);
+    sub_B775C4(&Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__GetEntity__);
+    sub_B775C4(&Method_MasterFormationRootComponent__beginStartUp_b__9_0__);
+    sub_B775C4(&SceneJumpInfo_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&StringLiteral_5342/*"DeckId"*/);
+    sub_B775C4(&StringLiteral_6303/*"EventDeckId"*/);
+    sub_B775C4(&StringLiteral_15356/*"UserEquipId"*/);
+    byte_438BAF0 = 1;
   }
   this->fields.jumpInfo = 0LL;
   p_jumpInfo = &this->fields.jumpInfo;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.jumpInfo,
     0LL,
     (System_String_array **)method,
@@ -184,7 +184,7 @@ void __fastcall MasterFormationRootComponent__beginStartUp(
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   p_usrGameEnt = &this->fields.usrGameEnt;
   this->fields.usrGameEnt = SelfUserGame;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.usrGameEnt,
     (System_Int32_array **)SelfUserGame,
     v13,
@@ -210,7 +210,7 @@ void __fastcall MasterFormationRootComponent__beginStartUp(
     goto LABEL_8;
   }
   *p_jumpInfo = (struct SceneJumpInfo_o *)data;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.jumpInfo,
     (System_Int32_array **)data,
     v22,
@@ -224,18 +224,18 @@ void __fastcall MasterFormationRootComponent__beginStartUp(
   name = (*p_jumpInfo)->fields.name;
   if ( !name )
     goto LABEL_8;
-  bgTxtSprite = (UnityEngine_Component_o *)System_String__op_Equality(name, (System_String_o *)StringLiteral_5289/*"DeckId"*/, 0LL);
+  bgTxtSprite = (UnityEngine_Component_o *)System_String__op_Equality(name, (System_String_o *)StringLiteral_5342/*"DeckId"*/, 0LL);
   if ( ((unsigned __int8)bgTxtSprite & 1) == 0 )
   {
     bgTxtSprite = (UnityEngine_Component_o *)System_String__op_Equality(
                                                name,
-                                               (System_String_o *)StringLiteral_6247/*"EventDeckId"*/,
+                                               (System_String_o *)StringLiteral_6303/*"EventDeckId"*/,
                                                0LL);
     if ( ((unsigned __int8)bgTxtSprite & 1) == 0 )
     {
       bgTxtSprite = (UnityEngine_Component_o *)System_String__op_Equality(
                                                  name,
-                                                 (System_String_o *)StringLiteral_15286/*"UserEquipId"*/,
+                                                 (System_String_o *)StringLiteral_15356/*"UserEquipId"*/,
                                                  0LL);
       if ( ((unsigned __int8)bgTxtSprite & 1) != 0 )
       {
@@ -260,12 +260,12 @@ LABEL_29:
 LABEL_9:
   if ( userId <= 0 )
   {
-    bgTxtSprite = (UnityEngine_Component_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    bgTxtSprite = (UnityEngine_Component_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( bgTxtSprite )
     {
       bgTxtSprite = (UnityEngine_Component_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                  (DataManager_o *)bgTxtSprite,
-                                                 (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserDeckMaster___);
+                                                 (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserDeckMaster___);
       if ( *p_usrGameEnt )
       {
         if ( bgTxtSprite )
@@ -273,7 +273,7 @@ LABEL_9:
           bgTxtSprite = (UnityEngine_Component_o *)DataMasterBase_UserServantStorageMaster__UserServantEntity__long___GetEntity(
                                                      (DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *)bgTxtSprite,
                                                      (*p_usrGameEnt)->fields.activeDeckId,
-                                                     (const MethodInfo_21C0668 *)Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__GetEntity__);
+                                                     (const MethodInfo_21FBABC *)Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__GetEntity__);
           if ( bgTxtSprite )
           {
             klass = bgTxtSprite[2].klass;
@@ -287,7 +287,7 @@ LABEL_9:
       }
     }
 LABEL_33:
-    sub_B7076C(bgTxtSprite, v19);
+    sub_B7769C(bgTxtSprite, v19);
   }
 LABEL_16:
   bgTxtSprite = (UnityEngine_Component_o *)this->fields.titleInfo;
@@ -297,12 +297,12 @@ LABEL_16:
   bgTxtSprite = (UnityEngine_Component_o *)this->fields.titleInfo;
   if ( !bgTxtSprite )
     goto LABEL_33;
-  TitleInfoControl__setBackBtnSprite_18532552((TitleInfoControl_o *)bgTxtSprite, 1, 0, 0, 0LL);
+  TitleInfoControl__setBackBtnSprite_18688908((TitleInfoControl_o *)bgTxtSprite, 1, 0, 0, 0LL);
   bgTxtSprite = (UnityEngine_Component_o *)this->fields.titleInfo;
   if ( !bgTxtSprite )
     goto LABEL_33;
   TitleInfoControl__setBackBtnDepth((TitleInfoControl_o *)bgTxtSprite, 29, 0LL);
-  v31 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v31 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v31, (Il2CppObject *)this, Method_MasterFormationRootComponent__beginStartUp_b__9_0__, 0LL);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -317,15 +317,15 @@ void __fastcall MasterFormationRootComponent__changeUserEquipCallback(
 {
   PlayMakerFSM_o *myFSM; // x0
 
-  if ( (byte_4352254 & 1) == 0 )
+  if ( (byte_438BAF4 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_11233/*"REQUEST_OK"*/);
-    byte_4352254 = 1;
+    sub_B775C4(&StringLiteral_11294/*"REQUEST_OK"*/);
+    byte_438BAF4 = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
-    sub_B7076C(0LL, res);
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11233/*"REQUEST_OK"*/, 0LL);
+    sub_B7769C(0LL, res);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11294/*"REQUEST_OK"*/, 0LL);
 }
 
 
@@ -340,15 +340,15 @@ void __fastcall MasterFormationRootComponent__closeMasterFormation(
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4352255 & 1) == 0 )
+  if ( (byte_438BAF5 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&AvalonSceneManager_TypeInfo);
-    sub_B70694(&Method_MasterFormationRootComponent__closeMasterFormation_b__17_0__);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4352255 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&AvalonSceneManager_TypeInfo);
+    sub_B775C4(&Method_MasterFormationRootComponent__closeMasterFormation_b__17_0__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_438BAF5 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v4 = AvalonSceneManager_TypeInfo;
   if ( (BYTE3(AvalonSceneManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -357,14 +357,14 @@ void __fastcall MasterFormationRootComponent__closeMasterFormation(
     v4 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v4->static_fields->DEFAULT_FADE_TIME;
-  v6 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(
     v6,
     (Il2CppObject *)this,
     Method_MasterFormationRootComponent__closeMasterFormation_b__17_0__,
     0LL);
   if ( !Instance )
-    sub_B7076C(v7, v8);
+    sub_B7769C(v7, v8);
   CommonUI__maskFadeout(Instance, 1, DEFAULT_FADE_TIME, v6, 0LL);
 }
 
@@ -382,14 +382,14 @@ void __fastcall MasterFormationRootComponent__gotoBack(MasterFormationRootCompon
   bool v10; // w19
 
   v2 = this;
-  if ( (byte_4352257 & 1) == 0 )
+  if ( (byte_438BAF7 & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_B70694(&TerminalPramsManager_TypeInfo);
-    sub_B70694(&StringLiteral_5289/*"DeckId"*/);
-    sub_B70694(&StringLiteral_6247/*"EventDeckId"*/);
-    this = (MasterFormationRootComponent_o *)sub_B70694(&StringLiteral_15286/*"UserEquipId"*/);
-    byte_4352257 = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_B775C4(&TerminalPramsManager_TypeInfo);
+    sub_B775C4(&StringLiteral_5342/*"DeckId"*/);
+    sub_B775C4(&StringLiteral_6303/*"EventDeckId"*/);
+    this = (MasterFormationRootComponent_o *)sub_B775C4(&StringLiteral_15356/*"UserEquipId"*/);
+    byte_438BAF7 = 1;
   }
   jumpInfo = v2->fields.jumpInfo;
   if ( !jumpInfo )
@@ -399,7 +399,7 @@ void __fastcall MasterFormationRootComponent__gotoBack(MasterFormationRootCompon
   {
     this = (MasterFormationRootComponent_o *)System_String__op_Equality(
                                                name,
-                                               (System_String_o *)StringLiteral_15286/*"UserEquipId"*/,
+                                               (System_String_o *)StringLiteral_15356/*"UserEquipId"*/,
                                                0LL);
     if ( ((unsigned __int8)this & 1) != 0 )
     {
@@ -412,12 +412,12 @@ void __fastcall MasterFormationRootComponent__gotoBack(MasterFormationRootCompon
     {
       this = (MasterFormationRootComponent_o *)System_String__op_Equality(
                                                  name,
-                                                 (System_String_o *)StringLiteral_5289/*"DeckId"*/,
+                                                 (System_String_o *)StringLiteral_5342/*"DeckId"*/,
                                                  0LL);
       if ( ((unsigned __int8)this & 1) != 0
         || (this = (MasterFormationRootComponent_o *)System_String__op_Equality(
                                                        name,
-                                                       (System_String_o *)StringLiteral_6247/*"EventDeckId"*/,
+                                                       (System_String_o *)StringLiteral_6303/*"EventDeckId"*/,
                                                        0LL),
             ((unsigned __int8)this & 1) != 0) )
       {
@@ -428,13 +428,13 @@ void __fastcall MasterFormationRootComponent__gotoBack(MasterFormationRootCompon
       }
     }
   }
-  this = (MasterFormationRootComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  this = (MasterFormationRootComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !this
     || (IsStackScene = AvalonSceneManager__IsStackScene((AvalonSceneManager_o *)this, 0LL),
-        (this = (MasterFormationRootComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0LL) )
+        (this = (MasterFormationRootComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0LL) )
   {
 LABEL_33:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   if ( !IsStackScene )
   {
@@ -448,10 +448,10 @@ LABEL_33:
     {
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     }
-    if ( !byte_434DEAC )
+    if ( !byte_438746E )
     {
-      sub_B70694(&TerminalPramsManager_TypeInfo);
-      byte_434DEAC = 1;
+      sub_B775C4(&TerminalPramsManager_TypeInfo);
+      byte_438746E = 1;
     }
     v8 = TerminalPramsManager_TypeInfo;
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -461,7 +461,7 @@ LABEL_33:
       v8 = TerminalPramsManager_TypeInfo;
     }
     v8->static_fields->_IsAutoResume_k__BackingField = 1;
-    this = (MasterFormationRootComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    this = (MasterFormationRootComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( this )
     {
       v9 = 34;
@@ -471,11 +471,11 @@ LABEL_27:
     }
     goto LABEL_33;
   }
-  this = (MasterFormationRootComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  this = (MasterFormationRootComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !this )
     goto LABEL_33;
   v10 = AvalonSceneManager__checkStackScene((AvalonSceneManager_o *)this, 80, 0LL);
-  this = (MasterFormationRootComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  this = (MasterFormationRootComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !this )
     goto LABEL_33;
   if ( v10 )
@@ -495,11 +495,11 @@ void __fastcall MasterFormationRootComponent__requestChangeUsrEquip(
   __int64 *v5; // x8
 
   v2 = this;
-  if ( (byte_4352253 & 1) == 0 )
+  if ( (byte_438BAF3 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_9465/*"NO_CHANGE_EQUIP"*/);
-    this = (MasterFormationRootComponent_o *)sub_B70694(&StringLiteral_11233/*"REQUEST_OK"*/);
-    byte_4352253 = 1;
+    sub_B775C4(&StringLiteral_9523/*"NO_CHANGE_EQUIP"*/);
+    this = (MasterFormationRootComponent_o *)sub_B775C4(&StringLiteral_11294/*"REQUEST_OK"*/);
+    byte_438BAF3 = 1;
   }
   mstFormationComp = v2->fields.mstFormationComp;
   if ( !mstFormationComp )
@@ -510,17 +510,17 @@ void __fastcall MasterFormationRootComponent__requestChangeUsrEquip(
     this = (MasterFormationRootComponent_o *)v2->fields.myFSM;
     if ( this )
     {
-      v5 = &StringLiteral_9465/*"NO_CHANGE_EQUIP"*/;
+      v5 = &StringLiteral_9523/*"NO_CHANGE_EQUIP"*/;
       goto LABEL_10;
     }
 LABEL_11:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   this = (MasterFormationRootComponent_o *)v2->fields.myFSM;
   v2->fields.userEquipId = currentUsrEquipId;
   if ( !this )
     goto LABEL_11;
-  v5 = &StringLiteral_11233/*"REQUEST_OK"*/;
+  v5 = &StringLiteral_11294/*"REQUEST_OK"*/;
 LABEL_10:
   PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)*v5, 0LL);
 }
@@ -537,13 +537,13 @@ void __fastcall MasterFormationRootComponent__showMasterFormation(
   MasterFormationComponent_NotificationDragState_o *v7; // x23
   CommonUI_o *v8; // x19
 
-  if ( (byte_4352252 & 1) == 0 )
+  if ( (byte_438BAF2 & 1) == 0 )
   {
-    sub_B70694(&AvalonSceneManager_TypeInfo);
-    sub_B70694(&Method_MasterFormationRootComponent_SetBackBtnEnabled__);
-    sub_B70694(&MasterFormationComponent_NotificationDragState_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4352252 = 1;
+    sub_B775C4(&AvalonSceneManager_TypeInfo);
+    sub_B775C4(&Method_MasterFormationRootComponent_SetBackBtnEnabled__);
+    sub_B775C4(&MasterFormationComponent_NotificationDragState_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_438BAF2 = 1;
   }
   mstFormationComp = this->fields.mstFormationComp;
   if ( !mstFormationComp )
@@ -552,7 +552,7 @@ void __fastcall MasterFormationRootComponent__showMasterFormation(
   v4 = this->fields.mstFormationComp;
   userEquipId = this->fields.userEquipId;
   usrGameEnt = this->fields.usrGameEnt;
-  v7 = (MasterFormationComponent_NotificationDragState_o *)sub_B70764(MasterFormationComponent_NotificationDragState_TypeInfo);
+  v7 = (MasterFormationComponent_NotificationDragState_o *)sub_B77694(MasterFormationComponent_NotificationDragState_TypeInfo);
   MasterFormationComponent_NotificationDragState___ctor(
     v7,
     (Il2CppObject *)this,
@@ -565,7 +565,7 @@ void __fastcall MasterFormationRootComponent__showMasterFormation(
   if ( !mstFormationComp )
     goto LABEL_11;
   TitleInfoControl__setBackBtnColliderEnable((TitleInfoControl_o *)mstFormationComp, 1, 0LL);
-  mstFormationComp = (MasterFormationComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  mstFormationComp = (MasterFormationComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v8 = (CommonUI_o *)mstFormationComp;
   if ( (BYTE3(AvalonSceneManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -574,6 +574,6 @@ void __fastcall MasterFormationRootComponent__showMasterFormation(
   }
   if ( !v8 )
 LABEL_11:
-    sub_B7076C(mstFormationComp, method);
+    sub_B7769C(mstFormationComp, method);
   CommonUI__maskFadein(v8, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0LL, 0LL);
 }

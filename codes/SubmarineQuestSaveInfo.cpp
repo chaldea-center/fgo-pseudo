@@ -38,48 +38,48 @@ SubmarineQuestSaveInfo_o *__fastcall SubmarineQuestSaveInfo__CreateBySaveValue(
   __int64 v21; // x0
   __int64 v22; // x0
 
-  if ( (byte_4350EB0 & 1) == 0 )
+  if ( (byte_438A624 & 1) == 0 )
   {
-    sub_B70694(&bool_TypeInfo);
-    sub_B70694(&char___TypeInfo);
-    sub_B70694(&SubmarineQuestSaveInfo_TypeInfo);
-    byte_4350EB0 = 1;
+    sub_B775C4(&bool_TypeInfo);
+    sub_B775C4(&char___TypeInfo);
+    sub_B775C4(&SubmarineQuestSaveInfo_TypeInfo);
+    byte_438A624 = 1;
   }
   IsNullOrEmpty = System_String__IsNullOrEmpty(value, 0LL);
   if ( IsNullOrEmpty )
     return SubmarineQuestSaveInfo__CreateDefault((const MethodInfo *)IsNullOrEmpty);
-  v5 = (System_Char_array *)sub_B706AC(char___TypeInfo, 1LL);
+  v5 = (System_Char_array *)sub_B775DC(char___TypeInfo, 1LL);
   if ( !v5 )
-    sub_B7076C(0LL, 0LL);
+    sub_B7769C(0LL, 0LL);
   if ( !v5->max_length )
   {
-    v18 = sub_B70798(v5);
-    sub_B70738(v18, 0LL);
+    v18 = sub_B776C8(v5);
+    sub_B77668(v18, 0LL);
   }
   v5->m_Items[2] = 44;
   if ( !value )
-    sub_B7076C(v5, v5);
+    sub_B7769C(v5, v5);
   v6 = System_String__Split(value, v5, 0LL);
   v8 = v6;
   if ( !v6 )
-    sub_B7076C(0LL, v7);
+    sub_B7769C(0LL, v7);
   if ( !v6->max_length )
   {
-    v19 = sub_B70798(v6);
-    sub_B70738(v19, 0LL);
+    v19 = sub_B776C8(v6);
+    sub_B77668(v19, 0LL);
   }
   v9 = System_Int32__Parse(v6->m_Items[0], 0LL);
   if ( v8->max_length <= 1 )
   {
-    v20 = sub_B70798(v9);
-    sub_B70738(v20, 0LL);
+    v20 = sub_B776C8(v9);
+    sub_B77668(v20, 0LL);
   }
   v10 = v9;
   v11 = System_Int32__Parse(v8->m_Items[1], 0LL);
   if ( v8->max_length <= 2 )
   {
-    v21 = sub_B70798(v11);
-    sub_B70738(v21, 0LL);
+    v21 = sub_B776C8(v11);
+    sub_B77668(v21, 0LL);
   }
   v12 = v11;
   v13 = v8->m_Items[2];
@@ -88,12 +88,12 @@ SubmarineQuestSaveInfo_o *__fastcall SubmarineQuestSaveInfo__CreateBySaveValue(
   v14 = System_Boolean__Parse(v13, 0LL);
   if ( v8->max_length <= 3 )
   {
-    v22 = sub_B70798(v14);
-    sub_B70738(v22, 0LL);
+    v22 = sub_B776C8(v14);
+    sub_B77668(v22, 0LL);
   }
   v15 = v14;
   v16 = System_Boolean__Parse(v8->m_Items[3], 0LL);
-  v17 = sub_B70764(SubmarineQuestSaveInfo_TypeInfo);
+  v17 = sub_B77694(SubmarineQuestSaveInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v17, 0LL);
   *(_DWORD *)(v17 + 16) = v10;
   *(_DWORD *)(v17 + 20) = v12;
@@ -107,12 +107,12 @@ SubmarineQuestSaveInfo_o *__fastcall SubmarineQuestSaveInfo__CreateDefault(const
 {
   __int64 v1; // x19
 
-  if ( (byte_4350EAF & 1) == 0 )
+  if ( (byte_438A623 & 1) == 0 )
   {
-    sub_B70694(&SubmarineQuestSaveInfo_TypeInfo);
-    byte_4350EAF = 1;
+    sub_B775C4(&SubmarineQuestSaveInfo_TypeInfo);
+    byte_438A623 = 1;
   }
-  v1 = sub_B70764(SubmarineQuestSaveInfo_TypeInfo);
+  v1 = sub_B77694(SubmarineQuestSaveInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v1, 0LL);
   *(_QWORD *)(v1 + 16) = -1LL;
   *(_WORD *)(v1 + 24) = 0;
@@ -188,36 +188,36 @@ System_String_o *__fastcall SubmarineQuestSaveInfo__GetSaveValue(
   char v65[4]; // [xsp+8h] [xbp-28h] BYREF
   int32_t QuestId_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4350EAE & 1) == 0 )
+  if ( (byte_438A622 & 1) == 0 )
   {
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_712/*","*/);
-    byte_4350EAE = 1;
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_714/*","*/);
+    byte_438A622 = 1;
   }
   v65[0] = 0;
-  v3 = (System_String_array *)sub_B706AC(string___TypeInfo, 8LL);
+  v3 = (System_String_array *)sub_B775DC(string___TypeInfo, 8LL);
   QuestId_k__BackingField = this->fields._QuestId_k__BackingField;
   v4 = System_Int32__ToString((int32_t)&QuestId_k__BackingField, 0LL);
   if ( !v3 )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   v12 = (System_Int32_array **)v4;
   if ( v4 )
   {
-    v4 = (System_String_o *)sub_B70754(v4, v3->obj.klass->_1.element_class);
+    v4 = (System_String_o *)sub_B77684(v4, v3->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_38;
   }
   if ( !v3->max_length )
     goto LABEL_37;
   v3->m_Items[0] = (System_String_o *)v12;
-  sub_B70630((BattleServantConfConponent_o *)v3->m_Items, v12, v6, v7, v8, v9, v10, v11);
-  v4 = (System_String_o *)StringLiteral_712/*","*/;
-  if ( StringLiteral_712/*","*/ )
+  sub_B77560((BattleServantConfConponent_o *)v3->m_Items, v12, v6, v7, v8, v9, v10, v11);
+  v4 = (System_String_o *)StringLiteral_714/*","*/;
+  if ( StringLiteral_714/*","*/ )
   {
-    v4 = (System_String_o *)sub_B70754(StringLiteral_712/*","*/, v3->obj.klass->_1.element_class);
+    v4 = (System_String_o *)sub_B77684(StringLiteral_714/*","*/, v3->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_38;
-    v19 = (System_Int32_array **)StringLiteral_712/*","*/;
+    v19 = (System_Int32_array **)StringLiteral_714/*","*/;
   }
   else
   {
@@ -226,27 +226,27 @@ System_String_o *__fastcall SubmarineQuestSaveInfo__GetSaveValue(
   if ( v3->max_length <= 1 )
     goto LABEL_37;
   v3->m_Items[1] = (System_String_o *)v19;
-  sub_B70630((BattleServantConfConponent_o *)&v3->m_Items[1], v19, v13, v14, v15, v16, v17, v18);
+  sub_B77560((BattleServantConfConponent_o *)&v3->m_Items[1], v19, v13, v14, v15, v16, v17, v18);
   QuestId_k__BackingField = this->fields._PhaseCnt_k__BackingField;
   v4 = System_Int32__ToString((int32_t)&QuestId_k__BackingField, 0LL);
   v26 = (System_Int32_array **)v4;
   if ( v4 )
   {
-    v4 = (System_String_o *)sub_B70754(v4, v3->obj.klass->_1.element_class);
+    v4 = (System_String_o *)sub_B77684(v4, v3->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_38;
   }
   if ( v3->max_length <= 2 )
     goto LABEL_37;
   v3->m_Items[2] = (System_String_o *)v26;
-  sub_B70630((BattleServantConfConponent_o *)&v3->m_Items[2], v26, v20, v21, v22, v23, v24, v25);
-  v4 = (System_String_o *)StringLiteral_712/*","*/;
-  if ( StringLiteral_712/*","*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v3->m_Items[2], v26, v20, v21, v22, v23, v24, v25);
+  v4 = (System_String_o *)StringLiteral_714/*","*/;
+  if ( StringLiteral_714/*","*/ )
   {
-    v4 = (System_String_o *)sub_B70754(StringLiteral_712/*","*/, v3->obj.klass->_1.element_class);
+    v4 = (System_String_o *)sub_B77684(StringLiteral_714/*","*/, v3->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_38;
-    v33 = (System_Int32_array **)StringLiteral_712/*","*/;
+    v33 = (System_Int32_array **)StringLiteral_714/*","*/;
   }
   else
   {
@@ -255,27 +255,27 @@ System_String_o *__fastcall SubmarineQuestSaveInfo__GetSaveValue(
   if ( v3->max_length <= 3 )
     goto LABEL_37;
   v3->m_Items[3] = (System_String_o *)v33;
-  sub_B70630((BattleServantConfConponent_o *)&v3->m_Items[3], v33, v27, v28, v29, v30, v31, v32);
+  sub_B77560((BattleServantConfConponent_o *)&v3->m_Items[3], v33, v27, v28, v29, v30, v31, v32);
   v65[0] = this->fields._IsQuestClear_k__BackingField;
   v4 = System_Boolean__ToString((bool)v65, 0LL);
   v40 = (System_Int32_array **)v4;
   if ( v4 )
   {
-    v4 = (System_String_o *)sub_B70754(v4, v3->obj.klass->_1.element_class);
+    v4 = (System_String_o *)sub_B77684(v4, v3->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_38;
   }
   if ( v3->max_length <= 4 )
     goto LABEL_37;
   v3->m_Items[4] = (System_String_o *)v40;
-  sub_B70630((BattleServantConfConponent_o *)&v3->m_Items[4], v40, v34, v35, v36, v37, v38, v39);
-  v4 = (System_String_o *)StringLiteral_712/*","*/;
-  if ( StringLiteral_712/*","*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v3->m_Items[4], v40, v34, v35, v36, v37, v38, v39);
+  v4 = (System_String_o *)StringLiteral_714/*","*/;
+  if ( StringLiteral_714/*","*/ )
   {
-    v4 = (System_String_o *)sub_B70754(StringLiteral_712/*","*/, v3->obj.klass->_1.element_class);
+    v4 = (System_String_o *)sub_B77684(StringLiteral_714/*","*/, v3->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_38;
-    v47 = (System_Int32_array **)StringLiteral_712/*","*/;
+    v47 = (System_Int32_array **)StringLiteral_714/*","*/;
   }
   else
   {
@@ -284,31 +284,31 @@ System_String_o *__fastcall SubmarineQuestSaveInfo__GetSaveValue(
   if ( v3->max_length <= 5 )
     goto LABEL_37;
   v3->m_Items[5] = (System_String_o *)v47;
-  sub_B70630((BattleServantConfConponent_o *)&v3->m_Items[5], v47, v41, v42, v43, v44, v45, v46);
+  sub_B77560((BattleServantConfConponent_o *)&v3->m_Items[5], v47, v41, v42, v43, v44, v45, v46);
   v65[0] = this->fields._IsQuestPhaseClear_k__BackingField;
   v4 = System_Boolean__ToString((bool)v65, 0LL);
   v54 = (System_Int32_array **)v4;
   if ( v4 )
   {
-    v4 = (System_String_o *)sub_B70754(v4, v3->obj.klass->_1.element_class);
+    v4 = (System_String_o *)sub_B77684(v4, v3->obj.klass->_1.element_class);
     if ( !v4 )
     {
 LABEL_38:
-      v64 = sub_B7078C(v4);
-      sub_B70738(v64, 0LL);
+      v64 = sub_B776BC(v4);
+      sub_B77668(v64, 0LL);
     }
   }
   if ( v3->max_length <= 6 )
     goto LABEL_37;
   v3->m_Items[6] = (System_String_o *)v54;
-  sub_B70630((BattleServantConfConponent_o *)&v3->m_Items[6], v54, v48, v49, v50, v51, v52, v53);
-  v4 = (System_String_o *)StringLiteral_712/*","*/;
-  if ( StringLiteral_712/*","*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v3->m_Items[6], v54, v48, v49, v50, v51, v52, v53);
+  v4 = (System_String_o *)StringLiteral_714/*","*/;
+  if ( StringLiteral_714/*","*/ )
   {
-    v4 = (System_String_o *)sub_B70754(StringLiteral_712/*","*/, v3->obj.klass->_1.element_class);
+    v4 = (System_String_o *)sub_B77684(StringLiteral_714/*","*/, v3->obj.klass->_1.element_class);
     if ( v4 )
     {
-      v61 = (System_Int32_array **)StringLiteral_712/*","*/;
+      v61 = (System_Int32_array **)StringLiteral_714/*","*/;
       goto LABEL_35;
     }
     goto LABEL_38;
@@ -318,12 +318,12 @@ LABEL_35:
   if ( v3->max_length <= 7 )
   {
 LABEL_37:
-    v63 = sub_B70798(v4);
-    sub_B70738(v63, 0LL);
+    v63 = sub_B776C8(v4);
+    sub_B77668(v63, 0LL);
   }
   v3->m_Items[7] = (System_String_o *)v61;
-  sub_B70630((BattleServantConfConponent_o *)&v3->m_Items[7], v61, v55, v56, v57, v58, v59, v60);
-  return System_String__Concat_44838292(v3, 0LL);
+  sub_B77560((BattleServantConfConponent_o *)&v3->m_Items[7], v61, v55, v56, v57, v58, v59, v60);
+  return System_String__Concat_44982964(v3, 0LL);
 }
 
 

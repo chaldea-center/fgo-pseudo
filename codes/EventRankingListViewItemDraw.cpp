@@ -65,51 +65,51 @@ void __fastcall EventRankingListViewItemDraw___cctor(const MethodInfo *method)
   System_Int32_array *v63; // x6
   System_Int32_array *v64; // x7
 
-  if ( (byte_4352614 & 1) == 0 )
+  if ( (byte_438BD90 & 1) == 0 )
   {
-    sub_B70694(&EventRankingListViewItemDraw_TypeInfo);
-    sub_B70694(&StringLiteral_18845/*"event_ranking_"*/);
-    sub_B70694(&StringLiteral_18804/*"event_goal_flag"*/);
-    sub_B70694(&StringLiteral_18849/*"event_ranking_rewardget_"*/);
-    sub_B70694(&StringLiteral_18848/*"event_ranking_reward_txt"*/);
-    sub_B70694(&StringLiteral_18847/*"event_ranking_group_name_"*/);
-    sub_B70694(&StringLiteral_18846/*"event_ranking_group_"*/);
-    sub_B70694(&StringLiteral_18882/*"event_support_txt"*/);
-    sub_B70694(&StringLiteral_18862/*"event_rewardranking_"*/);
-    byte_4352614 = 1;
+    sub_B775C4(&EventRankingListViewItemDraw_TypeInfo);
+    sub_B775C4(&StringLiteral_18933/*"event_ranking_"*/);
+    sub_B775C4(&StringLiteral_18892/*"event_goal_flag"*/);
+    sub_B775C4(&StringLiteral_18937/*"event_ranking_rewardget_"*/);
+    sub_B775C4(&StringLiteral_18936/*"event_ranking_reward_txt"*/);
+    sub_B775C4(&StringLiteral_18935/*"event_ranking_group_name_"*/);
+    sub_B775C4(&StringLiteral_18934/*"event_ranking_group_"*/);
+    sub_B775C4(&StringLiteral_18970/*"event_support_txt"*/);
+    sub_B775C4(&StringLiteral_18950/*"event_rewardranking_"*/);
+    byte_438BD90 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventRankingListViewItemDraw_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_18846/*"event_ranking_group_"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18846/*"event_ranking_group_"*/;
-  sub_B70630(static_fields, v8, v1, v2, v3, v4, v5, v6);
+  v8 = (System_Int32_array **)StringLiteral_18934/*"event_ranking_group_"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18934/*"event_ranking_group_"*/;
+  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
   v9 = EventRankingListViewItemDraw_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_18847/*"event_ranking_group_name_"*/;
-  v9->GROUP_NAME_IMAGE_NAME = (struct System_String_o *)StringLiteral_18847/*"event_ranking_group_name_"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v9->GROUP_NAME_IMAGE_NAME, v10, v11, v12, v13, v14, v15, v16);
+  v10 = (System_Int32_array **)StringLiteral_18935/*"event_ranking_group_name_"*/;
+  v9->GROUP_NAME_IMAGE_NAME = (struct System_String_o *)StringLiteral_18935/*"event_ranking_group_name_"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v9->GROUP_NAME_IMAGE_NAME, v10, v11, v12, v13, v14, v15, v16);
   v17 = EventRankingListViewItemDraw_TypeInfo->static_fields;
-  v18 = (System_Int32_array **)StringLiteral_18862/*"event_rewardranking_"*/;
-  v17->BOARD_IMAGE_NAME = (struct System_String_o *)StringLiteral_18862/*"event_rewardranking_"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v17->BOARD_IMAGE_NAME, v18, v19, v20, v21, v22, v23, v24);
+  v18 = (System_Int32_array **)StringLiteral_18950/*"event_rewardranking_"*/;
+  v17->BOARD_IMAGE_NAME = (struct System_String_o *)StringLiteral_18950/*"event_rewardranking_"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v17->BOARD_IMAGE_NAME, v18, v19, v20, v21, v22, v23, v24);
   v25 = EventRankingListViewItemDraw_TypeInfo->static_fields;
-  v26 = (System_Int32_array **)StringLiteral_18849/*"event_ranking_rewardget_"*/;
-  v25->REWARD_GET_IMAGE_NAME = (struct System_String_o *)StringLiteral_18849/*"event_ranking_rewardget_"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v25->REWARD_GET_IMAGE_NAME, v26, v27, v28, v29, v30, v31, v32);
+  v26 = (System_Int32_array **)StringLiteral_18937/*"event_ranking_rewardget_"*/;
+  v25->REWARD_GET_IMAGE_NAME = (struct System_String_o *)StringLiteral_18937/*"event_ranking_rewardget_"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v25->REWARD_GET_IMAGE_NAME, v26, v27, v28, v29, v30, v31, v32);
   v33 = EventRankingListViewItemDraw_TypeInfo->static_fields;
-  v34 = (System_Int32_array **)StringLiteral_18845/*"event_ranking_"*/;
-  v33->RANKING_IMAGE_NAME = (struct System_String_o *)StringLiteral_18845/*"event_ranking_"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v33->RANKING_IMAGE_NAME, v34, v35, v36, v37, v38, v39, v40);
+  v34 = (System_Int32_array **)StringLiteral_18933/*"event_ranking_"*/;
+  v33->RANKING_IMAGE_NAME = (struct System_String_o *)StringLiteral_18933/*"event_ranking_"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v33->RANKING_IMAGE_NAME, v34, v35, v36, v37, v38, v39, v40);
   v41 = EventRankingListViewItemDraw_TypeInfo->static_fields;
-  v42 = (System_Int32_array **)StringLiteral_18804/*"event_goal_flag"*/;
-  v41->GOAL_IMAGE_NAME = (struct System_String_o *)StringLiteral_18804/*"event_goal_flag"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v41->GOAL_IMAGE_NAME, v42, v43, v44, v45, v46, v47, v48);
+  v42 = (System_Int32_array **)StringLiteral_18892/*"event_goal_flag"*/;
+  v41->GOAL_IMAGE_NAME = (struct System_String_o *)StringLiteral_18892/*"event_goal_flag"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v41->GOAL_IMAGE_NAME, v42, v43, v44, v45, v46, v47, v48);
   v49 = EventRankingListViewItemDraw_TypeInfo->static_fields;
-  v50 = (System_Int32_array **)StringLiteral_18848/*"event_ranking_reward_txt"*/;
-  v49->HIGHER_REWARD_IMAGE_NAME = (struct System_String_o *)StringLiteral_18848/*"event_ranking_reward_txt"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v49->HIGHER_REWARD_IMAGE_NAME, v50, v51, v52, v53, v54, v55, v56);
+  v50 = (System_Int32_array **)StringLiteral_18936/*"event_ranking_reward_txt"*/;
+  v49->HIGHER_REWARD_IMAGE_NAME = (struct System_String_o *)StringLiteral_18936/*"event_ranking_reward_txt"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v49->HIGHER_REWARD_IMAGE_NAME, v50, v51, v52, v53, v54, v55, v56);
   v57 = EventRankingListViewItemDraw_TypeInfo->static_fields;
-  v58 = (System_Int32_array **)StringLiteral_18882/*"event_support_txt"*/;
-  v57->SUPPORT_TXT_IMAGE_NAME = (struct System_String_o *)StringLiteral_18882/*"event_support_txt"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v57->SUPPORT_TXT_IMAGE_NAME, v58, v59, v60, v61, v62, v63, v64);
+  v58 = (System_Int32_array **)StringLiteral_18970/*"event_support_txt"*/;
+  v57->SUPPORT_TXT_IMAGE_NAME = (struct System_String_o *)StringLiteral_18970/*"event_support_txt"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v57->SUPPORT_TXT_IMAGE_NAME, v58, v59, v60, v61, v62, v63, v64);
 }
 
 
@@ -140,13 +140,13 @@ void __fastcall EventRankingListViewItemDraw__ChangeNextRewardIcon(
     v5 = manager->fields.alphaAnimCnt % (int)max_length;
     if ( v5 >= max_length )
     {
-      v8 = sub_B70798(this);
-      sub_B70738(v8, 0LL);
+      v8 = sub_B776C8(this);
+      sub_B77668(v8, 0LL);
     }
     v6 = (int32_t *)giftEntityList->m_Items[v5];
     if ( !v6 || (this = (EventRankingListViewItemDraw_o *)this->fields.itemIcon) == 0LL )
 LABEL_12:
-      sub_B7076C(this, manager);
+      sub_B7769C(this, manager);
     if ( v6[7] <= 1 )
       v7 = -1;
     else
@@ -400,18 +400,18 @@ void __fastcall EventRankingListViewItemDraw__SetItem(
   int32_t eventId; // [xsp+1Ch] [xbp-54h] BYREF
 
   v5 = item;
-  if ( (byte_4352613 & 1) == 0 )
+  if ( (byte_438BD8F & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&EventRankingListViewItemDraw_TypeInfo);
-    sub_B70694(&EventRankingListViewManager_TypeInfo);
-    sub_B70694(&EventRewardRootComponent_TypeInfo);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&object___TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_16127/*"_"*/);
-    byte_4352613 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&EventRankingListViewItemDraw_TypeInfo);
+    sub_B775C4(&EventRankingListViewManager_TypeInfo);
+    sub_B775C4(&EventRewardRootComponent_TypeInfo);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&object___TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_16197/*"_"*/);
+    byte_438BD8F = 1;
   }
   if ( !v5 || !mode )
     return;
@@ -438,7 +438,7 @@ void __fastcall EventRankingListViewItemDraw__SetItem(
     ranking = 4;
   else
     ranking = v5->fields.ranking;
-  rewardGetObj = sub_B706AC(object___TypeInfo, 4LL);
+  rewardGetObj = sub_B775DC(object___TypeInfo, 4LL);
   v16 = (System_Object_array *)rewardGetObj;
   v17 = EventRankingListViewItemDraw_TypeInfo;
   if ( (BYTE3(EventRankingListViewItemDraw_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -452,14 +452,14 @@ void __fastcall EventRankingListViewItemDraw__SetItem(
   BOARD_IMAGE_NAME = (System_Int32_array **)v17->static_fields->BOARD_IMAGE_NAME;
   if ( BOARD_IMAGE_NAME )
   {
-    rewardGetObj = sub_B70754(BOARD_IMAGE_NAME, v16->obj.klass->_1.element_class);
+    rewardGetObj = sub_B77684(BOARD_IMAGE_NAME, v16->obj.klass->_1.element_class);
     if ( !rewardGetObj )
       goto LABEL_155;
   }
   if ( !v16->max_length )
     goto LABEL_154;
   v16->m_Items[0] = (Il2CppObject *)BOARD_IMAGE_NAME;
-  sub_B70630((BattleServantConfConponent_o *)v16->m_Items, BOARD_IMAGE_NAME, v10, v11, v12, v13, v14, v15);
+  sub_B77560((BattleServantConfConponent_o *)v16->m_Items, BOARD_IMAGE_NAME, v10, v11, v12, v13, v14, v15);
   itemInfo = v5->fields.itemInfo;
   if ( !itemInfo )
     goto LABEL_153;
@@ -468,21 +468,21 @@ void __fastcall EventRankingListViewItemDraw__SetItem(
   v27 = (System_Int32_array **)rewardGetObj;
   if ( rewardGetObj )
   {
-    rewardGetObj = sub_B70754(rewardGetObj, v16->obj.klass->_1.element_class);
+    rewardGetObj = sub_B77684(rewardGetObj, v16->obj.klass->_1.element_class);
     if ( !rewardGetObj )
       goto LABEL_155;
   }
   if ( v16->max_length <= 1 )
     goto LABEL_154;
   v16->m_Items[1] = (Il2CppObject *)v27;
-  sub_B70630((BattleServantConfConponent_o *)&v16->m_Items[1], v27, v21, v22, v23, v24, v25, v26);
-  rewardGetObj = StringLiteral_16127/*"_"*/;
-  if ( StringLiteral_16127/*"_"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v16->m_Items[1], v27, v21, v22, v23, v24, v25, v26);
+  rewardGetObj = StringLiteral_16197/*"_"*/;
+  if ( StringLiteral_16197/*"_"*/ )
   {
-    rewardGetObj = sub_B70754(StringLiteral_16127/*"_"*/, v16->obj.klass->_1.element_class);
+    rewardGetObj = sub_B77684(StringLiteral_16197/*"_"*/, v16->obj.klass->_1.element_class);
     if ( !rewardGetObj )
       goto LABEL_155;
-    v34 = (System_Int32_array **)StringLiteral_16127/*"_"*/;
+    v34 = (System_Int32_array **)StringLiteral_16197/*"_"*/;
   }
   else
   {
@@ -491,21 +491,21 @@ void __fastcall EventRankingListViewItemDraw__SetItem(
   if ( v16->max_length <= 2 )
     goto LABEL_154;
   v16->m_Items[2] = (Il2CppObject *)v34;
-  sub_B70630((BattleServantConfConponent_o *)&v16->m_Items[2], v34, v28, v29, v30, v31, v32, v33);
+  sub_B77560((BattleServantConfConponent_o *)&v16->m_Items[2], v34, v28, v29, v30, v31, v32, v33);
   v219 = ranking;
   rewardGetObj = j_il2cpp_value_box_0(int_TypeInfo, &v219, v35);
   v42 = (System_Int32_array **)rewardGetObj;
   if ( rewardGetObj )
   {
-    rewardGetObj = sub_B70754(rewardGetObj, v16->obj.klass->_1.element_class);
+    rewardGetObj = sub_B77684(rewardGetObj, v16->obj.klass->_1.element_class);
     if ( !rewardGetObj )
       goto LABEL_155;
   }
   if ( v16->max_length <= 3 )
     goto LABEL_154;
   v16->m_Items[3] = (Il2CppObject *)v42;
-  sub_B70630((BattleServantConfConponent_o *)&v16->m_Items[3], v42, v36, v37, v38, v39, v40, v41);
-  v43 = System_String__Concat_44767952(v16, 0LL);
+  sub_B77560((BattleServantConfConponent_o *)&v16->m_Items[3], v42, v36, v37, v38, v39, v40, v41);
+  v43 = System_String__Concat_44911720(v16, 0LL);
   if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
   {
@@ -513,21 +513,21 @@ void __fastcall EventRankingListViewItemDraw__SetItem(
   }
   EventRewardRootComponent__setRewardInfoImg(baseSprite, v43, 0LL);
   rankingSprite = this->fields.rankingSprite;
-  rewardGetObj = sub_B706AC(object___TypeInfo, 4LL);
+  rewardGetObj = sub_B775DC(object___TypeInfo, 4LL);
   if ( !rewardGetObj )
     goto LABEL_153;
   v51 = (System_Object_array *)rewardGetObj;
   RANKING_IMAGE_NAME = (System_Int32_array **)EventRankingListViewItemDraw_TypeInfo->static_fields->RANKING_IMAGE_NAME;
   if ( RANKING_IMAGE_NAME )
   {
-    rewardGetObj = sub_B70754(RANKING_IMAGE_NAME, *(_QWORD *)(*(_QWORD *)rewardGetObj + 64LL));
+    rewardGetObj = sub_B77684(RANKING_IMAGE_NAME, *(_QWORD *)(*(_QWORD *)rewardGetObj + 64LL));
     if ( !rewardGetObj )
       goto LABEL_155;
   }
   if ( !v51->max_length )
     goto LABEL_154;
   v51->m_Items[0] = (Il2CppObject *)RANKING_IMAGE_NAME;
-  sub_B70630((BattleServantConfConponent_o *)v51->m_Items, RANKING_IMAGE_NAME, v45, v46, v47, v48, v49, v50);
+  sub_B77560((BattleServantConfConponent_o *)v51->m_Items, RANKING_IMAGE_NAME, v45, v46, v47, v48, v49, v50);
   v54 = v5->fields.itemInfo;
   if ( !v54 )
     goto LABEL_153;
@@ -536,21 +536,21 @@ void __fastcall EventRankingListViewItemDraw__SetItem(
   v61 = (System_Int32_array **)rewardGetObj;
   if ( rewardGetObj )
   {
-    rewardGetObj = sub_B70754(rewardGetObj, v51->obj.klass->_1.element_class);
+    rewardGetObj = sub_B77684(rewardGetObj, v51->obj.klass->_1.element_class);
     if ( !rewardGetObj )
       goto LABEL_155;
   }
   if ( v51->max_length <= 1 )
     goto LABEL_154;
   v51->m_Items[1] = (Il2CppObject *)v61;
-  sub_B70630((BattleServantConfConponent_o *)&v51->m_Items[1], v61, v55, v56, v57, v58, v59, v60);
-  rewardGetObj = StringLiteral_16127/*"_"*/;
-  if ( StringLiteral_16127/*"_"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v51->m_Items[1], v61, v55, v56, v57, v58, v59, v60);
+  rewardGetObj = StringLiteral_16197/*"_"*/;
+  if ( StringLiteral_16197/*"_"*/ )
   {
-    rewardGetObj = sub_B70754(StringLiteral_16127/*"_"*/, v51->obj.klass->_1.element_class);
+    rewardGetObj = sub_B77684(StringLiteral_16197/*"_"*/, v51->obj.klass->_1.element_class);
     if ( !rewardGetObj )
       goto LABEL_155;
-    v68 = (System_Int32_array **)StringLiteral_16127/*"_"*/;
+    v68 = (System_Int32_array **)StringLiteral_16197/*"_"*/;
   }
   else
   {
@@ -559,38 +559,38 @@ void __fastcall EventRankingListViewItemDraw__SetItem(
   if ( v51->max_length <= 2 )
     goto LABEL_154;
   v51->m_Items[2] = (Il2CppObject *)v68;
-  sub_B70630((BattleServantConfConponent_o *)&v51->m_Items[2], v68, v62, v63, v64, v65, v66, v67);
+  sub_B77560((BattleServantConfConponent_o *)&v51->m_Items[2], v68, v62, v63, v64, v65, v66, v67);
   v217 = v5->fields.ranking;
   rewardGetObj = j_il2cpp_value_box_0(int_TypeInfo, &v217, v69);
   v76 = (System_Int32_array **)rewardGetObj;
   if ( rewardGetObj )
   {
-    rewardGetObj = sub_B70754(rewardGetObj, v51->obj.klass->_1.element_class);
+    rewardGetObj = sub_B77684(rewardGetObj, v51->obj.klass->_1.element_class);
     if ( !rewardGetObj )
       goto LABEL_155;
   }
   if ( v51->max_length <= 3 )
     goto LABEL_154;
   v51->m_Items[3] = (Il2CppObject *)v76;
-  sub_B70630((BattleServantConfConponent_o *)&v51->m_Items[3], v76, v70, v71, v72, v73, v74, v75);
-  v77 = System_String__Concat_44767952(v51, 0LL);
+  sub_B77560((BattleServantConfConponent_o *)&v51->m_Items[3], v76, v70, v71, v72, v73, v74, v75);
+  v77 = System_String__Concat_44911720(v51, 0LL);
   EventRewardRootComponent__setRewardInfoImg(rankingSprite, v77, 0LL);
   teamSprite = this->fields.teamSprite;
-  rewardGetObj = sub_B706AC(object___TypeInfo, 4LL);
+  rewardGetObj = sub_B775DC(object___TypeInfo, 4LL);
   if ( !rewardGetObj )
     goto LABEL_153;
   v85 = (System_Object_array *)rewardGetObj;
   GROUP_IMAGE_NAME = (System_Int32_array **)EventRankingListViewItemDraw_TypeInfo->static_fields->GROUP_IMAGE_NAME;
   if ( GROUP_IMAGE_NAME )
   {
-    rewardGetObj = sub_B70754(GROUP_IMAGE_NAME, *(_QWORD *)(*(_QWORD *)rewardGetObj + 64LL));
+    rewardGetObj = sub_B77684(GROUP_IMAGE_NAME, *(_QWORD *)(*(_QWORD *)rewardGetObj + 64LL));
     if ( !rewardGetObj )
       goto LABEL_155;
   }
   if ( !v85->max_length )
     goto LABEL_154;
   v85->m_Items[0] = (Il2CppObject *)GROUP_IMAGE_NAME;
-  sub_B70630((BattleServantConfConponent_o *)v85->m_Items, GROUP_IMAGE_NAME, v79, v80, v81, v82, v83, v84);
+  sub_B77560((BattleServantConfConponent_o *)v85->m_Items, GROUP_IMAGE_NAME, v79, v80, v81, v82, v83, v84);
   v88 = v5->fields.itemInfo;
   if ( !v88 )
     goto LABEL_153;
@@ -599,21 +599,21 @@ void __fastcall EventRankingListViewItemDraw__SetItem(
   v95 = (System_Int32_array **)rewardGetObj;
   if ( rewardGetObj )
   {
-    rewardGetObj = sub_B70754(rewardGetObj, v85->obj.klass->_1.element_class);
+    rewardGetObj = sub_B77684(rewardGetObj, v85->obj.klass->_1.element_class);
     if ( !rewardGetObj )
       goto LABEL_155;
   }
   if ( v85->max_length <= 1 )
     goto LABEL_154;
   v85->m_Items[1] = (Il2CppObject *)v95;
-  sub_B70630((BattleServantConfConponent_o *)&v85->m_Items[1], v95, v89, v90, v91, v92, v93, v94);
-  rewardGetObj = StringLiteral_16127/*"_"*/;
-  if ( StringLiteral_16127/*"_"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v85->m_Items[1], v95, v89, v90, v91, v92, v93, v94);
+  rewardGetObj = StringLiteral_16197/*"_"*/;
+  if ( StringLiteral_16197/*"_"*/ )
   {
-    rewardGetObj = sub_B70754(StringLiteral_16127/*"_"*/, v85->obj.klass->_1.element_class);
+    rewardGetObj = sub_B77684(StringLiteral_16197/*"_"*/, v85->obj.klass->_1.element_class);
     if ( !rewardGetObj )
       goto LABEL_155;
-    v102 = (System_Int32_array **)StringLiteral_16127/*"_"*/;
+    v102 = (System_Int32_array **)StringLiteral_16197/*"_"*/;
   }
   else
   {
@@ -622,38 +622,38 @@ void __fastcall EventRankingListViewItemDraw__SetItem(
   if ( v85->max_length <= 2 )
     goto LABEL_154;
   v85->m_Items[2] = (Il2CppObject *)v102;
-  sub_B70630((BattleServantConfConponent_o *)&v85->m_Items[2], v102, v96, v97, v98, v99, v100, v101);
+  sub_B77560((BattleServantConfConponent_o *)&v85->m_Items[2], v102, v96, v97, v98, v99, v100, v101);
   groupImageId = v5->fields.groupImageId;
   rewardGetObj = j_il2cpp_value_box_0(int_TypeInfo, &groupImageId, v103);
   v110 = (System_Int32_array **)rewardGetObj;
   if ( rewardGetObj )
   {
-    rewardGetObj = sub_B70754(rewardGetObj, v85->obj.klass->_1.element_class);
+    rewardGetObj = sub_B77684(rewardGetObj, v85->obj.klass->_1.element_class);
     if ( !rewardGetObj )
       goto LABEL_155;
   }
   if ( v85->max_length <= 3 )
     goto LABEL_154;
   v85->m_Items[3] = (Il2CppObject *)v110;
-  sub_B70630((BattleServantConfConponent_o *)&v85->m_Items[3], v110, v104, v105, v106, v107, v108, v109);
-  v111 = System_String__Concat_44767952(v85, 0LL);
+  sub_B77560((BattleServantConfConponent_o *)&v85->m_Items[3], v110, v104, v105, v106, v107, v108, v109);
+  v111 = System_String__Concat_44911720(v85, 0LL);
   EventRewardRootComponent__setRewardInfoImg(teamSprite, v111, 0LL);
   teamNameSprite = this->fields.teamNameSprite;
-  rewardGetObj = sub_B706AC(object___TypeInfo, 4LL);
+  rewardGetObj = sub_B775DC(object___TypeInfo, 4LL);
   if ( !rewardGetObj )
     goto LABEL_153;
   v119 = (System_Object_array *)rewardGetObj;
   GROUP_NAME_IMAGE_NAME = (System_Int32_array **)EventRankingListViewItemDraw_TypeInfo->static_fields->GROUP_NAME_IMAGE_NAME;
   if ( GROUP_NAME_IMAGE_NAME )
   {
-    rewardGetObj = sub_B70754(GROUP_NAME_IMAGE_NAME, *(_QWORD *)(*(_QWORD *)rewardGetObj + 64LL));
+    rewardGetObj = sub_B77684(GROUP_NAME_IMAGE_NAME, *(_QWORD *)(*(_QWORD *)rewardGetObj + 64LL));
     if ( !rewardGetObj )
       goto LABEL_155;
   }
   if ( !v119->max_length )
     goto LABEL_154;
   v119->m_Items[0] = (Il2CppObject *)GROUP_NAME_IMAGE_NAME;
-  sub_B70630((BattleServantConfConponent_o *)v119->m_Items, GROUP_NAME_IMAGE_NAME, v113, v114, v115, v116, v117, v118);
+  sub_B77560((BattleServantConfConponent_o *)v119->m_Items, GROUP_NAME_IMAGE_NAME, v113, v114, v115, v116, v117, v118);
   v122 = v5->fields.itemInfo;
   if ( !v122 )
     goto LABEL_153;
@@ -662,21 +662,21 @@ void __fastcall EventRankingListViewItemDraw__SetItem(
   v129 = (System_Int32_array **)rewardGetObj;
   if ( rewardGetObj )
   {
-    rewardGetObj = sub_B70754(rewardGetObj, v119->obj.klass->_1.element_class);
+    rewardGetObj = sub_B77684(rewardGetObj, v119->obj.klass->_1.element_class);
     if ( !rewardGetObj )
       goto LABEL_155;
   }
   if ( v119->max_length <= 1 )
     goto LABEL_154;
   v119->m_Items[1] = (Il2CppObject *)v129;
-  sub_B70630((BattleServantConfConponent_o *)&v119->m_Items[1], v129, v123, v124, v125, v126, v127, v128);
-  rewardGetObj = StringLiteral_16127/*"_"*/;
-  if ( StringLiteral_16127/*"_"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v119->m_Items[1], v129, v123, v124, v125, v126, v127, v128);
+  rewardGetObj = StringLiteral_16197/*"_"*/;
+  if ( StringLiteral_16197/*"_"*/ )
   {
-    rewardGetObj = sub_B70754(StringLiteral_16127/*"_"*/, v119->obj.klass->_1.element_class);
+    rewardGetObj = sub_B77684(StringLiteral_16197/*"_"*/, v119->obj.klass->_1.element_class);
     if ( !rewardGetObj )
       goto LABEL_155;
-    v136 = (System_Int32_array **)StringLiteral_16127/*"_"*/;
+    v136 = (System_Int32_array **)StringLiteral_16197/*"_"*/;
   }
   else
   {
@@ -685,7 +685,7 @@ void __fastcall EventRankingListViewItemDraw__SetItem(
   if ( v119->max_length <= 2 )
     goto LABEL_154;
   v119->m_Items[2] = (Il2CppObject *)v136;
-  sub_B70630((BattleServantConfConponent_o *)&v119->m_Items[2], v136, v130, v131, v132, v133, v134, v135);
+  sub_B77560((BattleServantConfConponent_o *)&v119->m_Items[2], v136, v130, v131, v132, v133, v134, v135);
   v138 = v5->fields.itemInfo;
   if ( !v138 )
     goto LABEL_153;
@@ -694,15 +694,15 @@ void __fastcall EventRankingListViewItemDraw__SetItem(
   v145 = (System_Int32_array **)rewardGetObj;
   if ( rewardGetObj )
   {
-    rewardGetObj = sub_B70754(rewardGetObj, v119->obj.klass->_1.element_class);
+    rewardGetObj = sub_B77684(rewardGetObj, v119->obj.klass->_1.element_class);
     if ( !rewardGetObj )
       goto LABEL_155;
   }
   if ( v119->max_length <= 3 )
     goto LABEL_154;
   v119->m_Items[3] = (Il2CppObject *)v145;
-  sub_B70630((BattleServantConfConponent_o *)&v119->m_Items[3], v145, v139, v140, v141, v142, v143, v144);
-  v146 = System_String__Concat_44767952(v119, 0LL);
+  sub_B77560((BattleServantConfConponent_o *)&v119->m_Items[3], v145, v139, v140, v141, v142, v143, v144);
+  v146 = System_String__Concat_44911720(v119, 0LL);
   EventRewardRootComponent__setRewardInfoImg(teamNameSprite, v146, 0LL);
   rewardGetObj = EventRewardRootComponent__setRewardInfoImg(
                    this->fields.supportTxtSprite,
@@ -756,7 +756,7 @@ void __fastcall EventRankingListViewItemDraw__SetItem(
     if ( v5->fields.isGetReward )
     {
       rewardGetSprite = this->fields.rewardGetSprite;
-      rewardGetObj = sub_B706AC(object___TypeInfo, 4LL);
+      rewardGetObj = sub_B775DC(object___TypeInfo, 4LL);
       v166 = EventRankingListViewItemDraw_TypeInfo;
       v167 = (System_Object_array *)rewardGetObj;
       if ( (BYTE3(EventRankingListViewItemDraw_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -769,12 +769,12 @@ void __fastcall EventRankingListViewItemDraw__SetItem(
         goto LABEL_153;
       REWARD_GET_IMAGE_NAME = (System_Int32_array **)v166->static_fields->REWARD_GET_IMAGE_NAME;
       if ( !REWARD_GET_IMAGE_NAME
-        || (rewardGetObj = sub_B70754(REWARD_GET_IMAGE_NAME, v167->obj.klass->_1.element_class)) != 0 )
+        || (rewardGetObj = sub_B77684(REWARD_GET_IMAGE_NAME, v167->obj.klass->_1.element_class)) != 0 )
       {
         if ( !v167->max_length )
           goto LABEL_154;
         v167->m_Items[0] = (Il2CppObject *)REWARD_GET_IMAGE_NAME;
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)v167->m_Items,
           REWARD_GET_IMAGE_NAME,
           v160,
@@ -789,19 +789,19 @@ void __fastcall EventRankingListViewItemDraw__SetItem(
         eventId = v170->fields.eventId;
         rewardGetObj = j_il2cpp_value_box_0(int_TypeInfo, &eventId, v169);
         v177 = (System_Int32_array **)rewardGetObj;
-        if ( !rewardGetObj || (rewardGetObj = sub_B70754(rewardGetObj, v167->obj.klass->_1.element_class)) != 0 )
+        if ( !rewardGetObj || (rewardGetObj = sub_B77684(rewardGetObj, v167->obj.klass->_1.element_class)) != 0 )
         {
           if ( v167->max_length <= 1 )
             goto LABEL_154;
           v167->m_Items[1] = (Il2CppObject *)v177;
-          sub_B70630((BattleServantConfConponent_o *)&v167->m_Items[1], v177, v171, v172, v173, v174, v175, v176);
-          rewardGetObj = StringLiteral_16127/*"_"*/;
-          if ( StringLiteral_16127/*"_"*/ )
+          sub_B77560((BattleServantConfConponent_o *)&v167->m_Items[1], v177, v171, v172, v173, v174, v175, v176);
+          rewardGetObj = StringLiteral_16197/*"_"*/;
+          if ( StringLiteral_16197/*"_"*/ )
           {
-            rewardGetObj = sub_B70754(StringLiteral_16127/*"_"*/, v167->obj.klass->_1.element_class);
+            rewardGetObj = sub_B77684(StringLiteral_16197/*"_"*/, v167->obj.klass->_1.element_class);
             if ( !rewardGetObj )
               goto LABEL_155;
-            v184 = (System_Int32_array **)StringLiteral_16127/*"_"*/;
+            v184 = (System_Int32_array **)StringLiteral_16197/*"_"*/;
           }
           else
           {
@@ -810,17 +810,17 @@ void __fastcall EventRankingListViewItemDraw__SetItem(
           if ( v167->max_length <= 2 )
             goto LABEL_154;
           v167->m_Items[2] = (Il2CppObject *)v184;
-          sub_B70630((BattleServantConfConponent_o *)&v167->m_Items[2], v184, v178, v179, v180, v181, v182, v183);
+          sub_B77560((BattleServantConfConponent_o *)&v167->m_Items[2], v184, v178, v179, v180, v181, v182, v183);
           v219 = ranking;
           rewardGetObj = j_il2cpp_value_box_0(int_TypeInfo, &v219, v185);
           v192 = (System_Int32_array **)rewardGetObj;
-          if ( !rewardGetObj || (rewardGetObj = sub_B70754(rewardGetObj, v167->obj.klass->_1.element_class)) != 0 )
+          if ( !rewardGetObj || (rewardGetObj = sub_B77684(rewardGetObj, v167->obj.klass->_1.element_class)) != 0 )
           {
             if ( v167->max_length <= 3 )
               goto LABEL_154;
             v167->m_Items[3] = (Il2CppObject *)v192;
-            sub_B70630((BattleServantConfConponent_o *)&v167->m_Items[3], v192, v186, v187, v188, v189, v190, v191);
-            v193 = System_String__Concat_44767952(v167, 0LL);
+            sub_B77560((BattleServantConfConponent_o *)&v167->m_Items[3], v192, v186, v187, v188, v189, v190, v191);
+            v193 = System_String__Concat_44911720(v167, 0LL);
             if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
             {
@@ -852,14 +852,14 @@ void __fastcall EventRankingListViewItemDraw__SetItem(
         }
       }
 LABEL_155:
-      v209 = sub_B7078C(rewardGetObj);
-      sub_B70738(v209, 0LL);
+      v209 = sub_B776BC(rewardGetObj);
+      sub_B77668(v209, 0LL);
     }
   }
 LABEL_130:
   giftEntityList = v5->fields.giftEntityList;
   this->fields.giftEntityList = giftEntityList;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.giftEntityList,
     (System_Int32_array **)giftEntityList,
     v150,
@@ -908,7 +908,7 @@ LABEL_130:
     if ( *(unsigned __int8 *)(*(_QWORD *)rewardGetObj + 300LL) < (unsigned int)v202
       || *(EventRankingListViewManager_c **)(*(_QWORD *)(*(_QWORD *)rewardGetObj + 200LL) + 8 * v202 - 8) != EventRankingListViewManager_TypeInfo )
     {
-      v210 = (EventRankingListViewManager_o *)sub_B70A60(rewardGetObj);
+      v210 = (EventRankingListViewManager_o *)sub_B77990(rewardGetObj);
       EventRankingListViewManager__GetAlphaAnimCnt(v210, v211, v212);
       return;
     }
@@ -933,11 +933,11 @@ LABEL_146:
         }
       }
 LABEL_153:
-      sub_B7076C(rewardGetObj, item);
+      sub_B7769C(rewardGetObj, item);
     }
 LABEL_154:
-    v208 = sub_B70798(rewardGetObj);
-    sub_B70738(v208, 0LL);
+    v208 = sub_B776C8(rewardGetObj);
+    sub_B77668(v208, 0LL);
   }
 }
 
@@ -954,7 +954,7 @@ void __fastcall EventRankingListViewItemDraw__SetListViewObject(
   System_Int32_array *v7; // x7
 
   this->fields.listViewObject = listViewObject;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.listViewObject,
     (System_Int32_array **)listViewObject,
     (System_String_array **)method,
@@ -977,7 +977,7 @@ void __fastcall EventRankingListViewItemDraw__SetRewardIconAlpha(
   {
     itemIcon = this->fields.itemIcon;
     if ( !itemIcon )
-      sub_B7076C(0LL, method);
+      sub_B7769C(0LL, method);
     ItemIconComponent__SetAlpha(itemIcon, alpha, 0LL);
   }
 }
@@ -993,7 +993,7 @@ void __fastcall EventRankingListViewItemDraw__UpdateItem(
   if ( item && mode )
   {
     if ( !manager )
-      sub_B7076C(this, item);
+      sub_B7769C(this, item);
     EventRankingListViewItemDraw__SetRewardIconAlpha(this, manager->fields.alphaAnimNow, (const MethodInfo *)item);
   }
 }

@@ -12,7 +12,7 @@ void __fastcall ShopNoticeRemainTime___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.monoBehaviour = monoBehaviour;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)monoBehaviour,
     v5,
@@ -33,17 +33,17 @@ bool __fastcall ShopNoticeRemainTime__CheckTimeUp(ShopNoticeRemainTime_o *this, 
   __int64 v6; // x22
 
   v2 = this;
-  if ( (byte_43536D3 & 1) == 0 )
+  if ( (byte_438CF91 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_long__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_long__get_Item__);
-    this = (ShopNoticeRemainTime_o *)sub_B70694(&NetworkManager_TypeInfo);
-    byte_43536D3 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_long__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_long__get_Item__);
+    this = (ShopNoticeRemainTime_o *)sub_B775C4(&NetworkManager_TypeInfo);
+    byte_438CF91 = 1;
   }
   mostRecentTimeLimits = v2->fields.mostRecentTimeLimits;
   if ( !mostRecentTimeLimits )
 LABEL_13:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   v4 = 0LL;
   while ( 1 )
   {
@@ -51,7 +51,7 @@ LABEL_13:
     if ( (int)v4 >= size )
       return 0;
     if ( size <= (unsigned int)v4 )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
     v6 = mostRecentTimeLimits->fields._items->m_Items[v4];
     if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -83,20 +83,20 @@ System_Collections_IEnumerator_o *__fastcall ShopNoticeRemainTime__ExecuteEveryS
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_43536D2 & 1) == 0 )
+  if ( (byte_438CF90 & 1) == 0 )
   {
-    sub_B70694(&ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_TypeInfo);
-    byte_43536D2 = 1;
+    sub_B775C4(&ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_TypeInfo);
+    byte_438CF90 = 1;
   }
-  v3 = sub_B70764(ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_TypeInfo);
+  v3 = sub_B77694(ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_TypeInfo);
   ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12___ctor(
     (ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_o *)v3,
     0,
     0LL);
   if ( !v3 )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  sub_B77560((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -113,7 +113,7 @@ void __fastcall ShopNoticeRemainTime__SetMostRecentTimeLimits(
   System_Int32_array *v7; // x7
 
   this->fields.mostRecentTimeLimits = mostRecentTimeLimits;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.mostRecentTimeLimits,
     (System_Int32_array **)mostRecentTimeLimits,
     (System_String_array **)method,
@@ -137,7 +137,7 @@ void __fastcall ShopNoticeRemainTime__SetOnTimeUpAction(
   System_Int32_array *v7; // x7
 
   this->fields.onTimeUpAction = onTimeUpAction;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.onTimeUpAction,
     (System_Int32_array **)onTimeUpAction,
     (System_String_array **)method,
@@ -166,37 +166,37 @@ void __fastcall ShopNoticeRemainTime__SetShopNotice(
   System_Int32_array *v14; // x7
   __int64 v15; // x1
 
-  if ( (byte_43536D1 & 1) == 0 )
+  if ( (byte_438CF8F & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_long__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_long__Clear__);
-    sub_B70694(&Method_System_Collections_Generic_List_long___ctor__);
-    sub_B70694(&System_Collections_Generic_List_long__TypeInfo);
-    byte_43536D1 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_long__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_long__Clear__);
+    sub_B775C4(&Method_System_Collections_Generic_List_long___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_long__TypeInfo);
+    byte_438CF8F = 1;
   }
   mostRecentTimeLimits = this->fields.mostRecentTimeLimits;
   p_mostRecentTimeLimits = (BattleServantConfConponent_o *)&this->fields.mostRecentTimeLimits;
   klass = mostRecentTimeLimits;
   if ( !mostRecentTimeLimits
-    && (v8 = (System_Collections_Generic_List_long__o *)sub_B70764(System_Collections_Generic_List_long__TypeInfo),
+    && (v8 = (System_Collections_Generic_List_long__o *)sub_B77694(System_Collections_Generic_List_long__TypeInfo),
         System_Collections_Generic_List_long____ctor(
           v8,
-          (const MethodInfo_30BB42C *)Method_System_Collections_Generic_List_long___ctor__),
+          (const MethodInfo_30EB03C *)Method_System_Collections_Generic_List_long___ctor__),
         p_mostRecentTimeLimits->klass = (BattleServantConfConponent_c *)v8,
-        sub_B70630(p_mostRecentTimeLimits, (System_Int32_array **)v8, v9, v10, v11, v12, v13, v14),
+        sub_B77560(p_mostRecentTimeLimits, (System_Int32_array **)v8, v9, v10, v11, v12, v13, v14),
         (klass = (System_Collections_Generic_List_long__o *)p_mostRecentTimeLimits->klass) == 0LL)
     || (System_Collections_Generic_List_long___Clear(
           klass,
-          (const MethodInfo_30BC594 *)Method_System_Collections_Generic_List_long__Clear__),
+          (const MethodInfo_30EC1A4 *)Method_System_Collections_Generic_List_long__Clear__),
         !shopNotice)
     || (klass = (System_Collections_Generic_List_long__o *)p_mostRecentTimeLimits->klass) == 0LL )
   {
-    sub_B7076C(klass, v15);
+    sub_B7769C(klass, v15);
   }
   System_Collections_Generic_List_long___Add(
     klass,
     shopNotice->fields._MostRecentTimeLimit_k__BackingField,
-    (const MethodInfo_30BC188 *)Method_System_Collections_Generic_List_long__Add__);
+    (const MethodInfo_30EBD98 *)Method_System_Collections_Generic_List_long__Add__);
 }
 
 
@@ -219,10 +219,10 @@ void __fastcall ShopNoticeRemainTime__Start(ShopNoticeRemainTime_o *this, const 
   this->fields.isLoop = 1;
   v5 = ShopNoticeRemainTime__ExecuteEverySecondLoop(this, v4);
   if ( !monoBehaviour )
-    sub_B7076C(v5, v6);
-  started = UnityEngine_MonoBehaviour__StartCoroutine_36062060(monoBehaviour, v5, 0LL);
+    sub_B7769C(v5, v6);
+  started = UnityEngine_MonoBehaviour__StartCoroutine_36304832(monoBehaviour, v5, 0LL);
   this->fields.coroutine = started;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.coroutine,
     (System_Int32_array **)started,
     v8,
@@ -253,10 +253,10 @@ void __fastcall ShopNoticeRemainTime__Stop(ShopNoticeRemainTime_o *this, const M
   {
     monoBehaviour = this->fields.monoBehaviour;
     if ( !monoBehaviour )
-      sub_B7076C(0LL, coroutine);
-    UnityEngine_MonoBehaviour__StopCoroutine_36062728(monoBehaviour, coroutine, 0LL);
+      sub_B7769C(0LL, coroutine);
+    UnityEngine_MonoBehaviour__StopCoroutine_36305500(monoBehaviour, coroutine, 0LL);
     p_coroutine->klass = 0LL;
-    sub_B70630(p_coroutine, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_B77560(p_coroutine, 0LL, v5, v6, v7, v8, v9, v10);
   }
 }
 
@@ -296,21 +296,21 @@ bool __fastcall ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12__MoveNext(
   bool result; // w0
 
   v2 = this;
-  if ( (byte_434F87F & 1) == 0 )
+  if ( (byte_4388E79 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_long__Clear__);
-    this = (ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_o *)sub_B70694(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_434F87F = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_long__Clear__);
+    this = (ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_o *)sub_B775C4(&UnityEngine_WaitForSeconds_TypeInfo);
+    byte_4388E79 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
   if ( !_1__state )
   {
     v2->fields.__1__state = -1;
-    v12 = (UnityEngine_WaitForSeconds_o *)sub_B70764(UnityEngine_WaitForSeconds_TypeInfo);
+    v12 = (UnityEngine_WaitForSeconds_o *)sub_B77694(UnityEngine_WaitForSeconds_TypeInfo);
     UnityEngine_WaitForSeconds___ctor(v12, 1.0, 0LL);
     v2->fields._loopWait_5__2 = v12;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v2->fields._loopWait_5__2,
       (System_Int32_array **)v12,
       v13,
@@ -322,7 +322,7 @@ bool __fastcall ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12__MoveNext(
     if ( _4__this )
       goto LABEL_11;
 LABEL_14:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   if ( _1__state != 1 )
     return 0;
@@ -336,7 +336,7 @@ LABEL_14:
     goto LABEL_14;
   System_Collections_Generic_List_long___Clear(
     (System_Collections_Generic_List_long__o *)this,
-    (const MethodInfo_30BC594 *)Method_System_Collections_Generic_List_long__Clear__);
+    (const MethodInfo_30EC1A4 *)Method_System_Collections_Generic_List_long__Clear__);
   onTimeUpAction = _4__this->fields.onTimeUpAction;
   if ( onTimeUpAction )
     System_Action__Invoke(onTimeUpAction, 0LL);
@@ -345,7 +345,7 @@ LABEL_11:
   {
     loopWait_5__2 = (System_Int32_array **)v2->fields._loopWait_5__2;
     v2->fields.__2__current = (Il2CppObject *)loopWait_5__2;
-    sub_B70630((BattleServantConfConponent_o *)&v2->fields.__2__current, loopWait_5__2, v5, v6, v7, v8, v9, v10);
+    sub_B77560((BattleServantConfConponent_o *)&v2->fields.__2__current, loopWait_5__2, v5, v6, v7, v8, v9, v10);
     result = 1;
     v2->fields.__1__state = 1;
     return result;
@@ -370,11 +370,11 @@ void __fastcall __noreturn ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12__S
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B70698(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B70764(v2);
+  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B70698(&Method_ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_System_Collections_IEnumerator_Reset__);
-  sub_B70738(v3, v4);
+  v4 = sub_B775C8(&Method_ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_System_Collections_IEnumerator_Reset__);
+  sub_B77668(v3, v4);
 }
 
 

@@ -16,7 +16,7 @@ void __fastcall UpdateIntervalBuffViewBattleLogicTask___ctor(
   v4->fields.AbillityBtnBg = (struct UnityEngine_GameObject_o *)actData;
   v4 = (BattleServantConfConponent_o *)((char *)v4 + 240);
   LODWORD(v4[-1].fields.StateScrollView) = 58;
-  sub_B70630(v4, (System_Int32_array **)actData, v5, v6, v7, v8, v9, v10);
+  sub_B77560(v4, (System_Int32_array **)actData, v5, v6, v7, v8, v9, v10);
   BYTE1(v4[-1].fields.BattleAssetUIAtlas) = 1;
 }
 
@@ -30,13 +30,13 @@ BattleActionData_o *__fastcall UpdateIntervalBuffViewBattleLogicTask__MakeAction
   UpdateViewIntervalBuffActionData_o *v5; // x20
   const MethodInfo *v6; // x2
 
-  if ( (byte_435330F & 1) == 0 )
+  if ( (byte_438CA8E & 1) == 0 )
   {
-    sub_B70694(&UpdateViewIntervalBuffActionData_TypeInfo);
-    byte_435330F = 1;
+    sub_B775C4(&UpdateViewIntervalBuffActionData_TypeInfo);
+    byte_438CA8E = 1;
   }
   baseActData = this->fields.baseActData;
-  v5 = (UpdateViewIntervalBuffActionData_o *)sub_B70764(UpdateViewIntervalBuffActionData_TypeInfo);
+  v5 = (UpdateViewIntervalBuffActionData_o *)sub_B77694(UpdateViewIntervalBuffActionData_TypeInfo);
   UpdateViewIntervalBuffActionData___ctor(v5, baseActData, v6);
   return (BattleActionData_o *)v5;
 }

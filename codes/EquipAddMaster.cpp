@@ -1,14 +1,14 @@
 void __fastcall EquipAddMaster___ctor(EquipAddMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_435643A & 1) == 0 )
+  if ( (byte_438FAB8 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string___ctor__);
-    byte_435643A = 1;
+    sub_B775C4(&Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string___ctor__);
+    byte_438FAB8 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     404,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string___ctor__);
 }
 
 
@@ -21,14 +21,14 @@ EquipAddEntity_o *__fastcall EquipAddMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_435643B & 1) == 0 )
+  if ( (byte_438FAB9 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string__GetEntity__);
-    byte_435643B = 1;
+    sub_B775C4(&Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string__GetEntity__);
+    byte_438FAB9 = 1;
   }
   PK = EquipAddEntity__CreatePK(id, equipId, *(const MethodInfo **)&equipId);
   return (EquipAddEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                PK,
-                               (const MethodInfo_21C0890 *)Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string__GetEntity__);
+                               (const MethodInfo_21FBCE4 *)Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string__GetEntity__);
 }

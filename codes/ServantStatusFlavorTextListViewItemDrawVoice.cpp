@@ -23,7 +23,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawVoice__SetCvName(
 
   klass = this[1].klass;
   if ( !klass )
-    sub_B7076C(0LL, cvName);
+    sub_B7769C(0LL, cvName);
   UIRangeLabel__Set((UIRangeLabel_o *)klass, cvName, 0LL, 1, 0, 0LL);
 }
 
@@ -47,12 +47,12 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawVoice__SetItem(
   System_String_o *voice; // [xsp+10h] [xbp-30h] BYREF
   System_String_o *illust; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_43592DA & 1) == 0 )
+  if ( (byte_4392913 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_12164/*"SERVANT_STATUS_PROFILE_ILLUST_TITLE"*/);
-    sub_B70694(&StringLiteral_12163/*"SERVANT_STATUS_PROFILE_CV_TITLE"*/);
-    byte_43592DA = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_12228/*"SERVANT_STATUS_PROFILE_ILLUST_TITLE"*/);
+    sub_B775C4(&StringLiteral_12227/*"SERVANT_STATUS_PROFILE_CV_TITLE"*/);
+    byte_4392913 = 1;
   }
   voice = 0LL;
   illust = 0LL;
@@ -66,12 +66,12 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawVoice__SetItem(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    cvTitleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_12164/*"SERVANT_STATUS_PROFILE_ILLUST_TITLE"*/, 0LL);
+    cvTitleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_12228/*"SERVANT_STATUS_PROFILE_ILLUST_TITLE"*/, 0LL);
     if ( !illustRangeLabel )
       goto LABEL_14;
     UILabel__set_text((UILabel_o *)illustRangeLabel, cvTitleLabel, 0LL);
     cvRangeLabel = this->fields.cvRangeLabel;
-    cvTitleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_12163/*"SERVANT_STATUS_PROFILE_CV_TITLE"*/, 0LL);
+    cvTitleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_12227/*"SERVANT_STATUS_PROFILE_CV_TITLE"*/, 0LL);
     if ( !cvRangeLabel
       || (UILabel__set_text((UILabel_o *)cvRangeLabel, cvTitleLabel, 0LL),
           ServantStatusListViewItem__GetVoiceInfo(item, &illust, &voice, &isPlayVoice, v15),
@@ -80,7 +80,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawVoice__SetItem(
           (cvTitleLabel = (System_String_o *)this[1].klass) == 0LL) )
     {
 LABEL_14:
-      sub_B7076C(cvTitleLabel, v13);
+      sub_B7769C(cvTitleLabel, v13);
     }
     UIRangeLabel__Set((UIRangeLabel_o *)cvTitleLabel, voice, 0LL, 1, 0, 0LL);
   }

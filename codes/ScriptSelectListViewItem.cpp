@@ -18,9 +18,9 @@ void __fastcall ScriptSelectListViewItem___ctor(
   System_Int32_array *v18; // x6
   System_Int32_array *v19; // x7
 
-  ListViewItem___ctor_23967088((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
   this->fields.message = message;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.message,
     (System_Int32_array **)message,
     v8,
@@ -30,7 +30,7 @@ void __fastcall ScriptSelectListViewItem___ctor(
     v12,
     v13);
   this->fields.fontType = fontType;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.fontType,
     (System_Int32_array **)fontType,
     v14,
@@ -52,12 +52,12 @@ System_String_o *__fastcall ScriptSelectListViewItem__ToString(
         ScriptSelectListViewItem_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_43576A4 & 1) == 0 )
+  if ( (byte_4390C6E & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_20794/*"message "*/);
-    byte_43576A4 = 1;
+    sub_B775C4(&StringLiteral_20890/*"message "*/);
+    byte_4390C6E = 1;
   }
-  return System_String__Concat_44758168((System_String_o *)StringLiteral_20794/*"message "*/, this->fields.message, 0LL);
+  return System_String__Concat_44901936((System_String_o *)StringLiteral_20890/*"message "*/, this->fields.message, 0LL);
 }
 
 

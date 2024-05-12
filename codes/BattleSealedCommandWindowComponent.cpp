@@ -13,12 +13,12 @@ System_String_o *__fastcall BattleSealedCommandWindowComponent__get_closeBtnPath
         BattleSealedCommandWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_434EC8C & 1) == 0 )
+  if ( (byte_438825D & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_17241/*"btn_close"*/);
-    byte_434EC8C = 1;
+    sub_B775C4(&StringLiteral_17324/*"btn_close"*/);
+    byte_438825D = 1;
   }
-  return (System_String_o *)StringLiteral_17241/*"btn_close"*/;
+  return (System_String_o *)StringLiteral_17324/*"btn_close"*/;
 }
 
 
@@ -36,15 +36,15 @@ void __fastcall BattleSealedCommandWindowComponent__setLabel(
   float x; // s0
   float y; // s1
 
-  if ( (byte_434EC8B & 1) == 0 )
+  if ( (byte_438825C & 1) == 0 )
   {
-    sub_B70694(&BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
-    sub_B70694(&Method_System_Nullable_Vector3__GetValueOrDefault__);
-    sub_B70694(&Method_System_Nullable_int__GetValueOrDefault__);
-    sub_B70694(&Method_System_Nullable_int__get_HasValue__);
-    sub_B70694(&Method_System_Nullable_Vector3__get_HasValue__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_434EC8B = 1;
+    sub_B775C4(&BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
+    sub_B775C4(&Method_System_Nullable_Vector3__GetValueOrDefault__);
+    sub_B775C4(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_B775C4(&Method_System_Nullable_int__get_HasValue__);
+    sub_B775C4(&Method_System_Nullable_Vector3__get_HasValue__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438825C = 1;
   }
   confLabel = (UnityEngine_Object_o *)this->fields.confLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -56,7 +56,7 @@ void __fastcall BattleSealedCommandWindowComponent__setLabel(
   {
     if ( !args )
     {
-      args = (BattleSealedCommandWindowComponent_LabelAdjustArgs_o *)sub_B70764(BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
+      args = (BattleSealedCommandWindowComponent_LabelAdjustArgs_o *)sub_B77694(BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
       BattleSealedCommandWindowComponent_LabelAdjustArgs___ctor(args, 0LL);
     }
     transform = this->fields.confLabel;
@@ -103,7 +103,7 @@ LABEL_17:
         }
       }
     }
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_B7076C)(transform, fontSize_k__BackingField);
+    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_B7769C)(transform, fontSize_k__BackingField);
   }
 }
 

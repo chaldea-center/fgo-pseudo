@@ -1,9 +1,9 @@
 void __fastcall ClassButtonComponent___ctor(ClassButtonComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4353BC2 & 1) == 0 )
+  if ( (byte_438D480 & 1) == 0 )
   {
-    sub_B70694(&UICommonButton_TypeInfo);
-    byte_4353BC2 = 1;
+    sub_B775C4(&UICommonButton_TypeInfo);
+    byte_438D480 = 1;
   }
   if ( (BYTE3(UICommonButton_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UICommonButton_TypeInfo->_2.cctor_finished )
@@ -39,10 +39,10 @@ void __fastcall ClassButtonComponent__add_callbackFunc(
   ClassButtonComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4353BC0 & 1) == 0 )
+  if ( (byte_438D47E & 1) == 0 )
   {
-    sub_B70694(&ClassButtonComponent_CallbackFunc_TypeInfo);
-    byte_4353BC0 = 1;
+    sub_B775C4(&ClassButtonComponent_CallbackFunc_TypeInfo);
+    byte_438D47E = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -55,13 +55,13 @@ void __fastcall ClassButtonComponent__add_callbackFunc(
       if ( (ClassButtonComponent_CallbackFunc_c *)v8->klass != ClassButtonComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B70A60(v8);
+  sub_B77990(v8);
   ClassButtonComponent__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -88,10 +88,10 @@ void __fastcall ClassButtonComponent__remove_callbackFunc(
   ClassButtonComponent_CallbackFunc_o *v13; // x2
   const MethodInfo *v14; // x3
 
-  if ( (byte_4353BC1 & 1) == 0 )
+  if ( (byte_438D47F & 1) == 0 )
   {
-    sub_B70694(&ClassButtonComponent_CallbackFunc_TypeInfo);
-    byte_4353BC1 = 1;
+    sub_B775C4(&ClassButtonComponent_CallbackFunc_TypeInfo);
+    byte_438D47F = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -104,13 +104,13 @@ void __fastcall ClassButtonComponent__remove_callbackFunc(
       if ( (ClassButtonComponent_CallbackFunc_c *)v8->klass != ClassButtonComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B70A60(v8);
+  sub_B77990(v8);
   ClassButtonComponent__setClassPos(v11, v12, v13, v14);
 }
 
@@ -130,7 +130,7 @@ void __fastcall ClassButtonComponent__setClassPos(
   this->fields.callbackFunc = callback;
   p_callbackFunc = &this->fields.callbackFunc;
   *((_DWORD *)p_callbackFunc - 2) = classPos;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)p_callbackFunc,
     (System_Int32_array **)callback,
     (System_String_array **)callback,
@@ -157,7 +157,7 @@ void __fastcall ClassButtonComponent_CallbackFunc___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B70630(p_method);
+  sub_B77560(p_method);
 }
 
 
@@ -172,14 +172,14 @@ System_IAsyncResult_o *__fastcall ClassButtonComponent_CallbackFunc__BeginInvoke
   int32_t v10; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10 = classPos;
-  if ( (byte_434EDB1 & 1) == 0 )
+  if ( (byte_43885A0 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    byte_434EDB1 = 1;
+    sub_B775C4(&int_TypeInfo);
+    byte_43885A0 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10, callback);
-  return (System_IAsyncResult_o *)sub_B70638(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_B77568(this, v9, callback, object);
 }
 
 
@@ -188,7 +188,7 @@ void __fastcall ClassButtonComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7063C(result, 0LL, method);
+  sub_B7756C(result, 0LL, method);
 }
 
 
@@ -245,8 +245,8 @@ LABEL_5:
       v20 = *(_QWORD *)&v18->fields.extra_arg;
       v21 = *(void (__fastcall **)(_QWORD, __int64))&v18->fields.method_ptr;
       if ( *(__int16 *)(v20 + 72) == -1 )
-        sub_B70750(*(_QWORD *)&v18->fields.extra_arg, *(_QWORD *)&classPos);
-      if ( (sub_B706C4(v20) & 1) == 0 )
+        sub_B77680(*(_QWORD *)&v18->fields.extra_arg, *(_QWORD *)&classPos);
+      if ( (sub_B775F4(v20) & 1) == 0 )
         break;
       if ( *(_BYTE *)(v20 + 74) != 1 )
         goto LABEL_36;
@@ -257,8 +257,8 @@ LABEL_37:
     }
     if ( v19 && *(__int16 *)(v20 + 72) != -1 && (*(_BYTE *)(*v19 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v22 = sub_B706BC(v20);
-      v23 = sub_B70AC0(v20);
+      v22 = sub_B775EC(v20);
+      v23 = sub_B779F0(v20);
       if ( (v22 & 1) != 0 )
       {
         if ( (v23 & 1) != 0 )
@@ -282,7 +282,7 @@ LABEL_37:
           else
           {
 LABEL_35:
-            v16 = sub_B08590(v19, v25, v26);
+            v16 = sub_B0F4C0(v19, v25, v26);
           }
           v15 = *(_QWORD *)(v16 + 8);
         }
@@ -290,7 +290,7 @@ LABEL_35:
         {
           v15 = *(_QWORD *)(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 320);
         }
-        v17 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD))sub_B70744(v15, v20);
+        v17 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD))sub_B77674(v15, v20);
         (*v17)(v19, (unsigned int)classPos, v17);
       }
       else
@@ -316,7 +316,7 @@ LABEL_35:
           else
           {
 LABEL_11:
-            v14 = sub_B08590(v19, class_0, v9);
+            v14 = sub_B0F4C0(v19, class_0, v9);
           }
           (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD))v14)(v19, (unsigned int)classPos, *(_QWORD *)(v14 + 8));
         }

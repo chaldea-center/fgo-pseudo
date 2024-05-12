@@ -2,10 +2,10 @@ void __fastcall QuestDialogIconImageComponent___cctor(const MethodInfo *method)
 {
   int32x2_t *static_fields; // x9
 
-  if ( (byte_43524B0 & 1) == 0 )
+  if ( (byte_438BC2C & 1) == 0 )
   {
-    sub_B70694(&QuestDialogIconImageComponent_TypeInfo);
-    byte_43524B0 = 1;
+    sub_B775C4(&QuestDialogIconImageComponent_TypeInfo);
+    byte_438BC2C = 1;
   }
   static_fields = (int32x2_t *)QuestDialogIconImageComponent_TypeInfo->static_fields;
   static_fields->n64_u64[0] = vdup_n_s32(0x3F333333u).n64_u64[0];
@@ -24,18 +24,18 @@ void __fastcall QuestDialogIconImageComponent___ctor(QuestDialogIconImageCompone
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_43524AF & 1) == 0 )
+  if ( (byte_438BC2B & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_B70694(&System_Collections_Generic_List_GameObject__TypeInfo);
-    byte_43524AF = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_438BC2B = 1;
   }
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_GameObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v3,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.mEventItemIconList = (struct System_Collections_Generic_List_GameObject__o *)v3;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.mEventItemIconList,
     (System_Int32_array **)v3,
     v4,
@@ -58,30 +58,30 @@ void __fastcall QuestDialogIconImageComponent__DestroyIcon(
   UnityEngine_Object_o *v5; // x20
 
   v2 = this;
-  if ( (byte_43524AE & 1) == 0 )
+  if ( (byte_438BC2A & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    this = (QuestDialogIconImageComponent_o *)sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43524AE = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    this = (QuestDialogIconImageComponent_o *)sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438BC2A = 1;
   }
   mEventItemIconList = (System_Collections_Generic_List_XWeaponTrail_Element__o *)v2->fields.mEventItemIconList;
   if ( !mEventItemIconList )
 LABEL_12:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   v4 = 0LL;
   while ( (__int64)v4 < mEventItemIconList->fields._size )
   {
     if ( v4 >= (unsigned int)mEventItemIconList->fields._size )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
     v5 = (UnityEngine_Object_o *)mEventItemIconList->fields._items->m_Items[v4];
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_36067208(v5, 0LL);
+    UnityEngine_Object__Destroy_36309980(v5, 0LL);
     mEventItemIconList = (System_Collections_Generic_List_XWeaponTrail_Element__o *)v2->fields.mEventItemIconList;
     ++v4;
     if ( !mEventItemIconList )
@@ -89,7 +89,7 @@ LABEL_12:
   }
   System_Collections_Generic_List_XWeaponTrail_Element___Clear(
     mEventItemIconList,
-    (const MethodInfo_3025A90 *)Method_System_Collections_Generic_List_GameObject__Clear__);
+    (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_GameObject__Clear__);
 }
 
 
@@ -98,7 +98,7 @@ void __fastcall QuestDialogIconImageComponent__SetIconData(
         QuestConsumeItemEntity_o *itemConsumeEnt,
         const MethodInfo *method)
 {
-  const MethodInfo_2CE992C **v5; // x24
+  const MethodInfo_2D1653C **v5; // x24
   int64_t Instance; // x0
   __int64 v7; // x1
   struct System_Int32_array *itemIds; // x8
@@ -118,8 +118,8 @@ void __fastcall QuestDialogIconImageComponent__SetIconData(
   ItemIconComponent_o *v22; // x23
   DataMasterBase_WarMaster__WarEntity__int__o *v23; // x21
   WarEntity_o *v24; // x0
-  const MethodInfo_2CE992C *v25; // x8
-  const MethodInfo_2CE992C **v26; // x26
+  const MethodInfo_2D1653C *v25; // x8
+  const MethodInfo_2D1653C **v26; // x26
   WarEntity_o *v27; // x24
   UserItemMaster_o *v28; // x25
   struct System_Int32_array *v29; // x8
@@ -130,27 +130,27 @@ void __fastcall QuestDialogIconImageComponent__SetIconData(
   struct UIGrid_o *v34; // x8
   __int64 v35; // x0
 
-  if ( (byte_43524AD & 1) == 0 )
+  if ( (byte_438BC29 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_B70694(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_ItemIconWithConsumptionNumberComponent___);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&QuestDialogIconImageComponent_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43524AD = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_B775C4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ItemIconWithConsumptionNumberComponent___);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&QuestDialogIconImageComponent_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438BC29 = 1;
   }
-  v5 = (const MethodInfo_2CE992C **)&Method_SingletonMonoBehaviour_DataManager__get_Instance__;
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v5 = (const MethodInfo_2D1653C **)&Method_SingletonMonoBehaviour_DataManager__get_Instance__;
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_64;
   Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ItemMaster___);
+                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !itemConsumeEnt )
     goto LABEL_64;
   itemIds = itemConsumeEnt->fields.itemIds;
@@ -172,13 +172,13 @@ void __fastcall QuestDialogIconImageComponent__SetIconData(
       Entity = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                  v9,
                  itemIds->m_Items[1],
-                 (const MethodInfo_21C0440 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                 (const MethodInfo_21FB894 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
       Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance(*v5);
       if ( !Instance )
         goto LABEL_64;
       MasterData_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                  (DataManager_o *)Instance,
-                                                                 (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                                                 (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserItemMaster___);
       if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !NetworkManager_TypeInfo->_2.cctor_finished )
       {
@@ -234,7 +234,7 @@ void __fastcall QuestDialogIconImageComponent__SetIconData(
       }
       Instance = (int64_t)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                             (UnityEngine_UI_Dropdown_DropdownItem_o *)gameObject,
-                            (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                            (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( !Instance )
         goto LABEL_64;
       v17 = (UnityEngine_GameObject_o *)Instance;
@@ -260,7 +260,7 @@ void __fastcall QuestDialogIconImageComponent__SetIconData(
       UnityEngine_Transform__set_localScale(v19, v20->static_fields->ITEM_ICON_SIZE, 0LL);
       Instance = (int64_t)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                             v17,
-                            (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_ItemIconWithConsumptionNumberComponent___);
+                            (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ItemIconWithConsumptionNumberComponent___);
       v21 = itemConsumeEnt->fields.itemIds;
       if ( !v21 )
         goto LABEL_64;
@@ -273,7 +273,7 @@ void __fastcall QuestDialogIconImageComponent__SetIconData(
       v24 = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
               v9,
               *((_DWORD *)&v21->obj.klass + v10),
-              (const MethodInfo_21C0440 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+              (const MethodInfo_21FB894 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
       v25 = *v5;
       v26 = v5;
       v27 = v24;
@@ -282,7 +282,7 @@ void __fastcall QuestDialogIconImageComponent__SetIconData(
         goto LABEL_64;
       v28 = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                   (DataManager_o *)Instance,
-                                  (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                  (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserItemMaster___);
       if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !NetworkManager_TypeInfo->_2.cctor_finished )
       {
@@ -310,8 +310,8 @@ void __fastcall QuestDialogIconImageComponent__SetIconData(
       if ( v11 >= v30->max_length )
       {
 LABEL_65:
-        v35 = sub_B70798(Instance);
-        sub_B70738(v35, 0LL);
+        v35 = sub_B776C8(Instance);
+        sub_B77668(v35, 0LL);
       }
       v5 = v26;
       ItemIconWithConsumptionNumberComponent__SetConsumptionNumber(
@@ -325,7 +325,7 @@ LABEL_65:
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
         (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)Instance,
         (EventMissionProgressRequest_Argument_ProgressData_o *)v17,
-        (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_GameObject__Add__);
+        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_GameObject__Add__);
     }
     itemIds = itemConsumeEnt->fields.itemIds;
     ++v10;
@@ -336,7 +336,7 @@ LABEL_65:
   if ( !Instance )
     goto LABEL_64;
   v31 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
-  GameObjectExtensions__SetLocalPosition_32497428(v31, 0.0, 0.0, 0LL);
+  GameObjectExtensions__SetLocalPosition_32807660(v31, 0.0, 0.0, 0LL);
   itemGrid = this->fields.itemGrid;
   Instance = (int64_t)QuestDialogIconImageComponent_TypeInfo;
   if ( (BYTE3(QuestDialogIconImageComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -351,7 +351,7 @@ LABEL_65:
     || (v34->fields.cellWidth = 0.0, (Instance = (int64_t)this->fields.itemGrid) == 0) )
   {
 LABEL_64:
-    sub_B7076C(Instance, v7);
+    sub_B7769C(Instance, v7);
   }
   (*(void (__fastcall **)(int64_t, _QWORD))(*(_QWORD *)Instance + 440LL))(
     Instance,

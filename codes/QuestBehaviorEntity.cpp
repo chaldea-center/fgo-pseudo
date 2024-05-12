@@ -1,13 +1,13 @@
 void __fastcall QuestBehaviorEntity___ctor(QuestBehaviorEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4353046 & 1) == 0 )
+  if ( (byte_438C7C5 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_4353046 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438C7C5 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *__fastcall QuestBehaviorEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4353044 & 1) == 0 )
+  if ( (byte_438C7C3 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_4353044 = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_438C7C3 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            questId,
            phase,
            num,
            priority,
-           (const MethodInfo_1CA2C2C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_1D17A7C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -73,24 +73,24 @@ bool __fastcall QuestBehaviorEntity__checkConditions(QuestBehaviorEntity_o *this
   int64_t condNum; // x19
   UserItemEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4353045 & 1) == 0 )
+  if ( (byte_438C7C4 & 1) == 0 )
   {
-    sub_B70694(&CondType_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4353045 = 1;
+    sub_B775C4(&CondType_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438C7C4 = 1;
   }
   entity = 0LL;
   condType = this->fields.condType;
   if ( condType == 2 )
   {
-    Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       MasterData_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                  (DataManager_o *)Instance,
-                                                                 (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                                                 (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserItemMaster___);
       if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !NetworkManager_TypeInfo->_2.cctor_finished )
       {
@@ -117,7 +117,7 @@ bool __fastcall QuestBehaviorEntity__checkConditions(QuestBehaviorEntity_o *this
         }
       }
     }
-    sub_B7076C(Instance, v5);
+    sub_B7769C(Instance, v5);
   }
   condTargetId = this->fields.condTargetId;
   condNum = this->fields.condNum;
@@ -134,11 +134,11 @@ int32_t __fastcall QuestBehaviorEntity__getskillId(QuestBehaviorEntity_o *this, 
 
   behaviorValues = this->fields.behaviorValues;
   if ( !behaviorValues )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   if ( !behaviorValues->max_length )
   {
-    v4 = sub_B70798(this);
-    sub_B70738(v4, 0LL);
+    v4 = sub_B776C8(this);
+    sub_B77668(v4, 0LL);
   }
   return behaviorValues->m_Items[1];
 }
@@ -151,11 +151,11 @@ int32_t __fastcall QuestBehaviorEntity__getskillLv(QuestBehaviorEntity_o *this, 
 
   behaviorValues = this->fields.behaviorValues;
   if ( !behaviorValues )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   if ( behaviorValues->max_length <= 1 )
   {
-    v4 = sub_B70798(this);
-    sub_B70738(v4, 0LL);
+    v4 = sub_B776C8(this);
+    sub_B77668(v4, 0LL);
   }
   return behaviorValues->m_Items[2];
 }

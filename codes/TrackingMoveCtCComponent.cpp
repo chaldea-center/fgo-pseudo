@@ -46,7 +46,7 @@ void __fastcall TrackingMoveCtCComponent__Set(
   z = d.fields.z;
   y = d.fields.y;
   x = d.fields.x;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.before,
     (System_Int32_array **)a,
     (System_String_array **)b,
@@ -56,10 +56,10 @@ void __fastcall TrackingMoveCtCComponent__Set(
     v7,
     v8);
   v9->fields.after = b;
-  sub_B70630((BattleServantConfConponent_o *)&v9->fields.after, (System_Int32_array **)b, v16, v17, v18, v19, v20, v21);
+  sub_B77560((BattleServantConfConponent_o *)&v9->fields.after, (System_Int32_array **)b, v16, v17, v18, v19, v20, v21);
   v9->fields.targetObject = c;
   v9 = (TrackingMoveCtCComponent_o *)((char *)v9 + 40);
-  sub_B70630((BattleServantConfConponent_o *)v9, (System_Int32_array **)c, v22, v23, v24, v25, v26, v27);
+  sub_B77560((BattleServantConfConponent_o *)v9, (System_Int32_array **)c, v22, v23, v24, v25, v26, v27);
   *(float *)&v9->monitor = x;
   *((float *)&v9->monitor + 1) = y;
   *(float *)&v9->fields.m_CachedPtr = z;
@@ -114,10 +114,10 @@ void __fastcall TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *
   UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4353D4A & 1) == 0 )
+  if ( (byte_438D608 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4353D4A = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438D608 = 1;
   }
   targetObject = (UnityEngine_Object_o *)this->fields.targetObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -140,7 +140,7 @@ void __fastcall TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *
     v22.fields.x = v7 + this->fields.addpos.fields.x;
     v22.fields.y = v8 + this->fields.addpos.fields.y;
     v22.fields.z = v9 + this->fields.addpos.fields.z;
-    *(UnityEngine_Vector3_o *)&v10 = UnityEngine_Camera__WorldToViewportPoint_41062484(before, v22, 0LL);
+    *(UnityEngine_Vector3_o *)&v10 = UnityEngine_Camera__WorldToViewportPoint_41408372(before, v22, 0LL);
     transform = (UnityEngine_GameObject_o *)this->fields.before;
     if ( !transform )
       goto LABEL_16;
@@ -159,14 +159,14 @@ void __fastcall TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *
     v23.fields.y = (float)((float)((float)(v14 + -0.5) / v17) * v18) + 0.5;
     v23.fields.x = v13;
     v23.fields.z = v15;
-    v24 = UnityEngine_Camera__ViewportToWorldPoint_41062492((UnityEngine_Camera_o *)transform, v23, 0LL);
+    v24 = UnityEngine_Camera__ViewportToWorldPoint_41408380((UnityEngine_Camera_o *)transform, v23, 0LL);
     x = v24.fields.x;
     y = v24.fields.y;
     z = v24.fields.z;
     transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     if ( !transform )
 LABEL_16:
-      sub_B7076C(transform, v4);
+      sub_B7769C(transform, v4);
     v25.fields.x = x;
     v25.fields.y = y;
     v25.fields.z = z;

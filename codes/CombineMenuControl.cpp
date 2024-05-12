@@ -27,13 +27,13 @@ UserServantEntity_o *__fastcall CombineMenuControl__GetMaterialUsrSvtData(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v17; // [xsp+20h] [xbp-30h]
 
   v2 = this;
-  if ( (byte_4351A3F & 1) == 0 )
+  if ( (byte_438B25D & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_B70694(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    this = (CombineMenuControl_o *)sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4351A3F = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_B775C4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    this = (CombineMenuControl_o *)sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438B25D = 1;
   }
   selectMaterialUsrSvtEntity = v2->fields.selectMaterialUsrSvtEntity;
   p_selectMaterialUsrSvtEntity = (BattleServantConfConponent_o *)&v2->fields.selectMaterialUsrSvtEntity;
@@ -49,22 +49,22 @@ UserServantEntity_o *__fastcall CombineMenuControl__GetMaterialUsrSvtData(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   }
   v16 = v17;
-  v7 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45183140(&v16, 0LL);
-  this = (CombineMenuControl_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v7 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45429112(&v16, 0LL);
+  this = (CombineMenuControl_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this
     || (this = (CombineMenuControl_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                          (DataManager_o *)this,
-                                         (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0LL )
+                                         (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0LL )
   {
 LABEL_10:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   Entity = (System_Int32_array **)DataMasterBase_UserServantStorageMaster__UserServantEntity__long___GetEntity(
                                     (DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *)this,
                                     v7,
-                                    (const MethodInfo_21C0668 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                                    (const MethodInfo_21FBABC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
   p_selectMaterialUsrSvtEntity->klass = (BattleServantConfConponent_c *)Entity;
-  sub_B70630(p_selectMaterialUsrSvtEntity, Entity, v9, v10, v11, v12, v13, v14);
+  sub_B77560(p_selectMaterialUsrSvtEntity, Entity, v9, v10, v11, v12, v13, v14);
   return (UserServantEntity_o *)Entity;
 }
 
@@ -83,15 +83,15 @@ void __fastcall CombineMenuControl__InitMenuControl(CombineMenuControl_o *this, 
   System_Collections_Generic_List_EventDelegate__o *klass; // x20
   EventDelegate_Callback_o *v13; // x21
 
-  if ( (byte_4351A3B & 1) == 0 )
+  if ( (byte_438B259 & 1) == 0 )
   {
-    sub_B70694(&EventDelegate_Callback_TypeInfo);
-    sub_B70694(&EventDelegate_TypeInfo);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
-    byte_4351A3B = 1;
+    sub_B775C4(&EventDelegate_Callback_TypeInfo);
+    sub_B775C4(&EventDelegate_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
+    byte_438B259 = 1;
   }
   this->fields.baseUserServantEntity = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.baseUserServantEntity, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.baseUserServantEntity, 0LL, v2, v3, v4, v5, v6, v7);
   bgTxtSprite = (UnityEngine_Component_o *)this->fields.bgTxtSprite;
   if ( !bgTxtSprite
     || (gameObject = UnityEngine_Component__get_gameObject(bgTxtSprite, 0LL),
@@ -101,19 +101,19 @@ void __fastcall CombineMenuControl__InitMenuControl(CombineMenuControl_o *this, 
         (bgTxtSprite = (UnityEngine_Component_o *)this->fields.helpBtn) == 0LL)
     || (bgTxtSprite = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                    (UnityEngine_GameObject_o *)bgTxtSprite,
-                                                   (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___)) == 0LL )
+                                                   (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___)) == 0LL )
   {
-    sub_B7076C(bgTxtSprite, v9);
+    sub_B7769C(bgTxtSprite, v9);
   }
   klass = (System_Collections_Generic_List_EventDelegate__o *)bgTxtSprite[4].klass;
-  v13 = (EventDelegate_Callback_o *)sub_B70764(EventDelegate_Callback_TypeInfo);
+  v13 = (EventDelegate_Callback_o *)sub_B77694(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(v13, (Il2CppObject *)this, (intptr_t)this->klass[1]._1.image, 0LL);
   if ( (BYTE3(EventDelegate_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EventDelegate_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
   }
-  EventDelegate__Set_29879148(klass, v13, 0LL);
+  EventDelegate__Set_30349648(klass, v13, 0LL);
 }
 
 
@@ -124,20 +124,20 @@ void __fastcall CombineMenuControl__OnClickBase(CombineMenuControl_o *this, cons
   _QWORD *v5; // x0
   System_Reflection_MethodBase_o *v6; // x0
 
-  if ( (byte_4351A3C & 1) == 0 )
+  if ( (byte_438B25A & 1) == 0 )
   {
-    sub_B70694(&Method_CombineMenuControl_OnClickBase__);
-    sub_B70694(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_B70694(&SingletonTemplate_PartyOrganizationUtility__TypeInfo);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4351A3C = 1;
+    sub_B775C4(&Method_CombineMenuControl_OnClickBase__);
+    sub_B775C4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_B775C4(&SingletonTemplate_PartyOrganizationUtility__TypeInfo);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438B25A = 1;
   }
   if ( (BYTE3(SingletonTemplate_PartyOrganizationUtility__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !SingletonTemplate_PartyOrganizationUtility__TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SingletonTemplate_PartyOrganizationUtility__TypeInfo);
   }
-  combineRootComponent = (CombineRootComponent_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2CE9CB0 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  combineRootComponent = (CombineRootComponent_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2D168C0 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !combineRootComponent )
     goto LABEL_16;
   if ( !PartyOrganizationUtility__ExistsTemporaryPartyInfo((PartyOrganizationUtility_o *)combineRootComponent, 0LL) )
@@ -155,12 +155,12 @@ void __fastcall CombineMenuControl__OnClickBase(CombineMenuControl_o *this, cons
       return;
     }
 LABEL_16:
-    sub_B7076C(combineRootComponent, v4);
+    sub_B7769C(combineRootComponent, v4);
   }
   v5 = Method_CombineMenuControl_OnClickBase__;
   if ( (*((_BYTE *)Method_CombineMenuControl_OnClickBase__ + 75) & 2) != 0 )
-    v5 = (_QWORD *)sub_B7069C(Method_CombineMenuControl_OnClickBase__);
-  v6 = (System_Reflection_MethodBase_o *)sub_B70678(v5, v5[3]);
+    v5 = (_QWORD *)sub_B775CC(Method_CombineMenuControl_OnClickBase__);
+  v6 = (System_Reflection_MethodBase_o *)sub_B775A8(v5, v5[3]);
   OverwriteAssetSoundName__PlaySystemSe(v6, 2, 0LL);
 }
 
@@ -172,24 +172,24 @@ void __fastcall CombineMenuControl__OnClickHelp(CombineMenuControl_o *this, cons
   int32_t v5; // w20
   System_Action_o *v6; // x21
 
-  if ( (byte_4351A41 & 1) == 0 )
+  if ( (byte_438B25F & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_CombineMenuControl_OnCloseHelp__);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4351A41 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_CombineMenuControl_OnCloseHelp__);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438B25F = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playSystemSe(0, 0LL);
   helpBtn = this->fields.helpBtn;
   if ( !helpBtn || (helpBtn = UnityEngine_GameObject__get_gameObject(helpBtn, 0LL)) == 0LL )
-    sub_B7076C(helpBtn, v3);
+    sub_B7769C(helpBtn, v3);
   UnityEngine_GameObject__SetActive(helpBtn, 0, 0LL);
   v5 = ((__int64 (__fastcall *)(CombineMenuControl_o *, const char *))this->klass[1]._1.gc_desc)(
          this,
          this->klass[1]._1.name);
-  v6 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_CombineMenuControl_OnCloseHelp__, 0LL);
   EventTutorialMaster__ShowTutorialWithoutCheck(0, v5, v6, 0LL);
 }
@@ -200,17 +200,17 @@ void __fastcall CombineMenuControl__OnClickLvExceedConductionWire(CombineMenuCon
   __int64 v3; // x1
   CombineRootComponent_o *combineRootComponent; // x0
 
-  if ( (byte_4351A40 & 1) == 0 )
+  if ( (byte_438B25E & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4351A40 = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438B25E = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playSystemSe(0, 0LL);
   combineRootComponent = this->fields.combineRootComponent;
   if ( !combineRootComponent )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   CombineRootComponent__ConductionWireCombine(combineRootComponent, 0LL);
 }
 
@@ -233,13 +233,13 @@ void __fastcall CombineMenuControl__OnClickMaterial(
   System_Int32_array *v16; // x6
   System_Int32_array *v17; // x7
 
-  if ( (byte_4351A3E & 1) == 0 )
+  if ( (byte_438B25C & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_B70694(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4351A3E = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_B775C4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438B25C = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -247,21 +247,21 @@ void __fastcall CombineMenuControl__OnClickMaterial(
   if ( type == 2 )
   {
     this->fields._targetType_k__BackingField = 2;
-    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                     Instance,
-                                    (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                    (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserServantMaster___);
       if ( Instance )
       {
         Entity = DataMasterBase_UserServantStorageMaster__UserServantEntity__long___GetEntity(
                    (DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *)Instance,
                    selectUsrSvtId,
-                   (const MethodInfo_21C0668 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                   (const MethodInfo_21FBABC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
         this->fields.selectMaterialUsrSvtEntity = Entity;
         p_selectMaterialUsrSvtEntity = &this->fields.selectMaterialUsrSvtEntity;
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)p_selectMaterialUsrSvtEntity,
           (System_Int32_array **)Entity,
           v12,
@@ -285,7 +285,7 @@ void __fastcall CombineMenuControl__OnClickMaterial(
   Instance = (DataManager_o *)this->fields.combineRootComponent;
   if ( !Instance )
 LABEL_20:
-    sub_B7076C(Instance, v7);
+    sub_B7769C(Instance, v7);
   v9 = *(_DWORD *)&Instance[3].fields._DispLog;
   switch ( v9 )
   {
@@ -308,7 +308,7 @@ void __fastcall CombineMenuControl__OnCloseHelp(CombineMenuControl_o *this, cons
 
   helpBtn = this->fields.helpBtn;
   if ( !helpBtn )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   UnityEngine_GameObject__SetActive(helpBtn, 1, 0LL);
 }
 
@@ -318,10 +318,10 @@ void __fastcall CombineMenuControl__OnLongPushListView(CombineMenuControl_o *thi
   __int64 v3; // x1
   CombineRootComponent_o *combineRootComponent; // x0
 
-  if ( (byte_4351A3D & 1) == 0 )
+  if ( (byte_438B25B & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4351A3D = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438B25B = 1;
   }
   if ( this->fields.baseUserServantEntity )
   {
@@ -334,7 +334,7 @@ void __fastcall CombineMenuControl__OnLongPushListView(CombineMenuControl_o *thi
     combineRootComponent = this->fields.combineRootComponent;
     this->fields._targetType_k__BackingField = 0;
     if ( !combineRootComponent )
-      sub_B7076C(0LL, v3);
+      sub_B7769C(0LL, v3);
     CombineRootComponent__SelectShowServant(combineRootComponent, 0LL);
   }
 }
@@ -352,10 +352,10 @@ void __fastcall CombineMenuControl__Quit(CombineMenuControl_o *this, const Metho
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v11; // x1
 
-  if ( (byte_4351A42 & 1) == 0 )
+  if ( (byte_438B260 & 1) == 0 )
   {
-    sub_B70694(&AssetManager_TypeInfo);
-    byte_4351A42 = 1;
+    sub_B775C4(&AssetManager_TypeInfo);
+    byte_438B260 = 1;
   }
   assetList = this->fields.assetList;
   if ( assetList )
@@ -365,13 +365,13 @@ void __fastcall CombineMenuControl__Quit(CombineMenuControl_o *this, const Metho
     {
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     }
-    AssetManager__releaseAssetStorage_31205608(assetList, 0LL);
+    AssetManager__releaseAssetStorage_24411040(assetList, 0LL);
     this->fields.assetList = 0LL;
-    sub_B70630((BattleServantConfConponent_o *)&this->fields.assetList, 0LL, v4, v5, v6, v7, v8, v9);
+    sub_B77560((BattleServantConfConponent_o *)&this->fields.assetList, 0LL, v4, v5, v6, v7, v8, v9);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v11);
+    sub_B7769C(0LL, v11);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
 }
 

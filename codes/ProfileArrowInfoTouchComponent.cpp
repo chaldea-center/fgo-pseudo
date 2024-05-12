@@ -46,10 +46,10 @@ void __fastcall ProfileArrowInfoTouchComponent__OnDragEnd(
   UnityEngine_Vector2_o v16; // [xsp+8h] [xbp-28h] BYREF
   UnityEngine_Vector2_o v17; // 0:s0.4,4:s1.4
 
-  if ( (byte_4351F0F & 1) == 0 )
+  if ( (byte_438B5D2 & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4351F0F = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438B5D2 = 1;
   }
   up = UnityEngine_Vector2__get_up(0LL);
   y = up.fields.y;
@@ -57,10 +57,10 @@ void __fastcall ProfileArrowInfoTouchComponent__OnDragEnd(
   vec = this->fields.vec;
   v16 = up;
   v15 = vec;
-  if ( !byte_4350A3B )
+  if ( !byte_4389FBA )
   {
-    sub_B70694(&System_Math_TypeInfo);
-    byte_4350A3B = 1;
+    sub_B775C4(&System_Math_TypeInfo);
+    byte_4389FBA = 1;
   }
   v17.fields.x = UnityEngine_Vector2__get_sqrMagnitude(*(UnityEngine_Vector2_o *)&x, (const MethodInfo *)&v16);
   v7 = v17.fields.x;
@@ -96,7 +96,7 @@ void __fastcall ProfileArrowInfoTouchComponent__OnDragEnd(
           return;
         }
 LABEL_26:
-        sub_B7076C(connectMark, v13);
+        sub_B7769C(connectMark, v13);
       }
       if ( (WORD1(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
         && !SoundManager_TypeInfo->_2.cctor_finished )

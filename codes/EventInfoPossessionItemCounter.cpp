@@ -13,16 +13,16 @@ void __fastcall EventInfoPossessionItemCounter__Initialization(
   System_Action_o *v5; // x21
 
   v4 = this;
-  if ( (byte_4352A57 & 1) == 0 )
+  if ( (byte_438C252 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    this = (EventInfoPossessionItemCounter_o *)sub_B70694(&Method_EventInfoPossessionItemCounter__Initialization_b__8_0__);
-    byte_4352A57 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    this = (EventInfoPossessionItemCounter_o *)sub_B775C4(&Method_EventInfoPossessionItemCounter__Initialization_b__8_0__);
+    byte_438C252 = 1;
   }
   if ( !entity )
-    sub_B7076C(this, entity);
+    sub_B7769C(this, entity);
   v4->fields.eventId = entity->fields.eventId;
-  v5 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)v4, Method_EventInfoPossessionItemCounter__Initialization_b__8_0__, 0LL);
   EventInfoUIBase__LoadEventUIAssetData((EventInfoUIBase_o *)v4, entity, v5, 0LL);
 }
@@ -51,12 +51,12 @@ void __fastcall EventInfoPossessionItemCounter__Setup(
   __int64 v10; // x0
 
   v4 = this;
-  if ( (byte_4352A58 & 1) == 0 )
+  if ( (byte_438C253 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    this = (EventInfoPossessionItemCounter_o *)sub_B70694(&StringLiteral_5758/*"EVENT_POSSESSION_ITEM_TITLE"*/);
-    byte_4352A58 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    this = (EventInfoPossessionItemCounter_o *)sub_B775C4(&StringLiteral_5813/*"EVENT_POSSESSION_ITEM_TITLE"*/);
+    byte_438C253 = 1;
   }
   if ( entity )
   {
@@ -65,8 +65,8 @@ void __fastcall EventInfoPossessionItemCounter__Setup(
     {
       if ( !(_DWORD)v5 )
       {
-        v10 = sub_B70798(this);
-        sub_B70738(v10, 0LL);
+        v10 = sub_B776C8(this);
+        sub_B77668(v10, 0LL);
       }
       v6 = entity->m_Items[0];
       if ( !v6 )
@@ -88,7 +88,7 @@ void __fastcall EventInfoPossessionItemCounter__Setup(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        this = (EventInfoPossessionItemCounter_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5758/*"EVENT_POSSESSION_ITEM_TITLE"*/, 0LL);
+        this = (EventInfoPossessionItemCounter_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5813/*"EVENT_POSSESSION_ITEM_TITLE"*/, 0LL);
         if ( v9 )
         {
           UILabel__set_text(v9, (System_String_o *)this, 0LL);
@@ -97,7 +97,7 @@ LABEL_17:
           return;
         }
 LABEL_19:
-        sub_B7076C(this, entity);
+        sub_B7769C(this, entity);
       }
     }
   }
@@ -119,22 +119,22 @@ void __fastcall EventInfoPossessionItemCounter__UpdateDisp(
   Il2CppObject *v11; // x0
   int64_t itemNum; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4352A59 & 1) == 0 )
+  if ( (byte_438C254 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_B70694(&long_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&StringLiteral_5759/*"EVENT_POSSESSION_ITEM_VALUE"*/);
-    byte_4352A59 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_B775C4(&long_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&StringLiteral_5814/*"EVENT_POSSESSION_ITEM_VALUE"*/);
+    byte_438C254 = 1;
   }
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   MasterData_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                              (DataManager_o *)Instance,
-                                                             (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                                             (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -161,13 +161,13 @@ void __fastcall EventInfoPossessionItemCounter__UpdateDisp(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5759/*"EVENT_POSSESSION_ITEM_VALUE"*/, 0LL);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5814/*"EVENT_POSSESSION_ITEM_VALUE"*/, 0LL);
   itemNum = this->fields.itemNum;
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &itemNum, v10);
   Instance = (int64_t)System_String__Format(v9, v11, 0LL);
   if ( !possessionValueLabel )
 LABEL_17:
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   UILabel__set_text(possessionValueLabel, (System_String_o *)Instance, 0LL);
 }
 

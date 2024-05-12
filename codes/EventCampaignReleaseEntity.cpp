@@ -1,13 +1,13 @@
 void __fastcall EventCampaignReleaseEntity___ctor(EventCampaignReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_43544D0 & 1) == 0 )
+  if ( (byte_438DD8E & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_43544D0 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438DD8E = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *__fastcall EventCampaignReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_43544CF & 1) == 0 )
+  if ( (byte_438DD8D & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_43544CF = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_438DD8D = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            target,
            idx,
-           (const MethodInfo_1CA2794 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1D175E4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -93,34 +93,34 @@ System_String_o *__fastcall EventCampaignReleaseEntity__getCreatePrimarykey(
   v47 = eventId;
   v46 = target;
   v45 = idx;
-  if ( (byte_43544CE & 1) == 0 )
+  if ( (byte_438DD8C & 1) == 0 )
   {
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_1250/*":"*/);
-    byte_43544CE = 1;
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_1252/*":"*/);
+    byte_438DD8C = 1;
   }
-  v4 = (System_String_array *)sub_B706AC(string___TypeInfo, 5LL);
+  v4 = (System_String_array *)sub_B775DC(string___TypeInfo, 5LL);
   v5 = System_Int32__ToString((int32_t)&v47, 0LL);
   if ( !v4 )
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   v13 = (System_Int32_array **)v5;
   if ( v5 )
   {
-    v5 = (System_String_o *)sub_B70754(v5, v4->obj.klass->_1.element_class);
+    v5 = (System_String_o *)sub_B77684(v5, v4->obj.klass->_1.element_class);
     if ( !v5 )
       goto LABEL_25;
   }
   if ( !v4->max_length )
     goto LABEL_24;
   v4->m_Items[0] = (System_String_o *)v13;
-  sub_B70630((BattleServantConfConponent_o *)v4->m_Items, v13, v7, v8, v9, v10, v11, v12);
-  v5 = (System_String_o *)StringLiteral_1250/*":"*/;
-  if ( StringLiteral_1250/*":"*/ )
+  sub_B77560((BattleServantConfConponent_o *)v4->m_Items, v13, v7, v8, v9, v10, v11, v12);
+  v5 = (System_String_o *)StringLiteral_1252/*":"*/;
+  if ( StringLiteral_1252/*":"*/ )
   {
-    v5 = (System_String_o *)sub_B70754(StringLiteral_1250/*":"*/, v4->obj.klass->_1.element_class);
+    v5 = (System_String_o *)sub_B77684(StringLiteral_1252/*":"*/, v4->obj.klass->_1.element_class);
     if ( !v5 )
       goto LABEL_25;
-    v20 = (System_Int32_array **)StringLiteral_1250/*":"*/;
+    v20 = (System_Int32_array **)StringLiteral_1252/*":"*/;
   }
   else
   {
@@ -129,26 +129,26 @@ System_String_o *__fastcall EventCampaignReleaseEntity__getCreatePrimarykey(
   if ( v4->max_length <= 1 )
     goto LABEL_24;
   v4->m_Items[1] = (System_String_o *)v20;
-  sub_B70630((BattleServantConfConponent_o *)&v4->m_Items[1], v20, v14, v15, v16, v17, v18, v19);
+  sub_B77560((BattleServantConfConponent_o *)&v4->m_Items[1], v20, v14, v15, v16, v17, v18, v19);
   v5 = System_Int32__ToString((int32_t)&v46, 0LL);
   v27 = (System_Int32_array **)v5;
   if ( v5 )
   {
-    v5 = (System_String_o *)sub_B70754(v5, v4->obj.klass->_1.element_class);
+    v5 = (System_String_o *)sub_B77684(v5, v4->obj.klass->_1.element_class);
     if ( !v5 )
       goto LABEL_25;
   }
   if ( v4->max_length <= 2 )
     goto LABEL_24;
   v4->m_Items[2] = (System_String_o *)v27;
-  sub_B70630((BattleServantConfConponent_o *)&v4->m_Items[2], v27, v21, v22, v23, v24, v25, v26);
-  v5 = (System_String_o *)StringLiteral_1250/*":"*/;
-  if ( StringLiteral_1250/*":"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v4->m_Items[2], v27, v21, v22, v23, v24, v25, v26);
+  v5 = (System_String_o *)StringLiteral_1252/*":"*/;
+  if ( StringLiteral_1252/*":"*/ )
   {
-    v5 = (System_String_o *)sub_B70754(StringLiteral_1250/*":"*/, v4->obj.klass->_1.element_class);
+    v5 = (System_String_o *)sub_B77684(StringLiteral_1252/*":"*/, v4->obj.klass->_1.element_class);
     if ( !v5 )
       goto LABEL_25;
-    v34 = (System_Int32_array **)StringLiteral_1250/*":"*/;
+    v34 = (System_Int32_array **)StringLiteral_1252/*":"*/;
   }
   else
   {
@@ -157,26 +157,26 @@ System_String_o *__fastcall EventCampaignReleaseEntity__getCreatePrimarykey(
   if ( v4->max_length <= 3 )
     goto LABEL_24;
   v4->m_Items[3] = (System_String_o *)v34;
-  sub_B70630((BattleServantConfConponent_o *)&v4->m_Items[3], v34, v28, v29, v30, v31, v32, v33);
+  sub_B77560((BattleServantConfConponent_o *)&v4->m_Items[3], v34, v28, v29, v30, v31, v32, v33);
   v5 = System_Int32__ToString((int32_t)&v45, 0LL);
   v41 = (System_Int32_array **)v5;
   if ( v5 )
   {
-    v5 = (System_String_o *)sub_B70754(v5, v4->obj.klass->_1.element_class);
+    v5 = (System_String_o *)sub_B77684(v5, v4->obj.klass->_1.element_class);
     if ( !v5 )
     {
 LABEL_25:
-      v44 = sub_B7078C(v5);
-      sub_B70738(v44, 0LL);
+      v44 = sub_B776BC(v5);
+      sub_B77668(v44, 0LL);
     }
   }
   if ( v4->max_length <= 4 )
   {
 LABEL_24:
-    v43 = sub_B70798(v5);
-    sub_B70738(v43, 0LL);
+    v43 = sub_B776C8(v5);
+    sub_B77668(v43, 0LL);
   }
   v4->m_Items[4] = (System_String_o *)v41;
-  sub_B70630((BattleServantConfConponent_o *)&v4->m_Items[4], v41, v35, v36, v37, v38, v39, v40);
-  return System_String__Concat_44838292(v4, 0LL);
+  sub_B77560((BattleServantConfConponent_o *)&v4->m_Items[4], v41, v35, v36, v37, v38, v39, v40);
+  return System_String__Concat_44982964(v4, 0LL);
 }

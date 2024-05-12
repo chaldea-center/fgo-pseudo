@@ -70,29 +70,29 @@ void __fastcall ScrollPageIndicator__CreateIndicator(
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v64; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4357732 & 1) == 0 )
+  if ( (byte_4390CFC & 1) == 0 )
   {
-    sub_B70694(&EventDelegate_Callback_TypeInfo);
-    sub_B70694(&EventDelegate_TypeInfo);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UIButton___);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_B70694(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_B70694(&NGUITools_TypeInfo);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_ScrollPageIndicator___c__DisplayClass10_0__CreateIndicator_b__0__);
-    sub_B70694(&ScrollPageIndicator___c__DisplayClass10_0_TypeInfo);
-    sub_B70694(&UISprite___TypeInfo);
-    sub_B70694(&StringLiteral_20105/*"indicator"*/);
-    byte_4357732 = 1;
+    sub_B775C4(&EventDelegate_Callback_TypeInfo);
+    sub_B775C4(&EventDelegate_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UIButton___);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_B775C4(&NGUITools_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_ScrollPageIndicator___c__DisplayClass10_0__CreateIndicator_b__0__);
+    sub_B775C4(&ScrollPageIndicator___c__DisplayClass10_0_TypeInfo);
+    sub_B775C4(&UISprite___TypeInfo);
+    sub_B775C4(&StringLiteral_20200/*"indicator"*/);
+    byte_4390CFC = 1;
   }
   v62 = 0;
   if ( count > 1 )
   {
-    v5 = (struct UISprite_array *)sub_B706AC(UISprite___TypeInfo, (unsigned int)count);
+    v5 = (struct UISprite_array *)sub_B775DC(UISprite___TypeInfo, (unsigned int)count);
     this->fields.Indicator = v5;
     p_Indicator = &this->fields.Indicator;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.Indicator,
       (System_Int32_array **)v5,
       v6,
@@ -124,12 +124,12 @@ void __fastcall ScrollPageIndicator__CreateIndicator(
           this->fields.nowIndex = 0;
           while ( 1 )
           {
-            v23 = sub_B70764(ScrollPageIndicator___c__DisplayClass10_0_TypeInfo);
+            v23 = sub_B77694(ScrollPageIndicator___c__DisplayClass10_0_TypeInfo);
             ScrollPageIndicator___c__DisplayClass10_0___ctor((ScrollPageIndicator___c__DisplayClass10_0_o *)v23, 0LL);
             if ( !v23 )
               break;
             *(_QWORD *)(v23 + 24) = this;
-            sub_B70630(
+            sub_B77560(
               (BattleServantConfConponent_o *)(v23 + 24),
               (System_Int32_array **)this,
               v24,
@@ -146,12 +146,12 @@ void __fastcall ScrollPageIndicator__CreateIndicator(
             }
             v31 = (UnityEngine_Object_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                             (UnityEngine_UI_Dropdown_DropdownItem_o *)PageIndicatorPrefab,
-                                            (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                            (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
             v32 = v20 + 1;
             v62 = v20 + 1;
             v33 = System_Int32__ToString((int32_t)&v62, 0LL);
-            Component_srcLineSprite = (UnityEngine_Transform_o *)System_String__Concat_44758168(
-                                                                   (System_String_o *)StringLiteral_20105/*"indicator"*/,
+            Component_srcLineSprite = (UnityEngine_Transform_o *)System_String__Concat_44901936(
+                                                                   (System_String_o *)StringLiteral_20200/*"indicator"*/,
                                                                    v33,
                                                                    0LL);
             if ( !v31 )
@@ -176,29 +176,29 @@ void __fastcall ScrollPageIndicator__CreateIndicator(
             UnityEngine_Transform__set_localScale(v35, *(UnityEngine_Vector3_o *)&v36, 0LL);
             Component_srcLineSprite = (UnityEngine_Transform_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                    (UnityEngine_GameObject_o *)v31,
-                                                                   (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                                                   (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
             v45 = (unsigned int *)*p_Indicator;
             if ( !*p_Indicator )
               break;
             v46 = (System_Int32_array **)Component_srcLineSprite;
             if ( Component_srcLineSprite )
             {
-              Component_srcLineSprite = (UnityEngine_Transform_o *)sub_B70754(
+              Component_srcLineSprite = (UnityEngine_Transform_o *)sub_B77684(
                                                                      Component_srcLineSprite,
                                                                      *(_QWORD *)(*(_QWORD *)v45 + 64LL));
               if ( !Component_srcLineSprite )
               {
-                v59 = sub_B7078C(0LL);
-                sub_B70738(v59, 0LL);
+                v59 = sub_B776BC(0LL);
+                sub_B77668(v59, 0LL);
               }
             }
             if ( v20 >= v45[6] )
             {
-              v58 = sub_B70798(Component_srcLineSprite);
-              sub_B70738(v58, 0LL);
+              v58 = sub_B776C8(Component_srcLineSprite);
+              sub_B77668(v58, 0LL);
             }
             *(_QWORD *)&v45[v22] = v46;
-            sub_B70630((BattleServantConfConponent_o *)&v45[v22], v46, v39, v40, v41, v42, v43, v44);
+            sub_B77560((BattleServantConfConponent_o *)&v45[v22], v46, v39, v40, v41, v42, v43, v44);
             if ( !v46 )
               break;
             UISprite__set_atlas((UISprite_o *)v46, this->fields.IndicatorAtlas, 0LL);
@@ -223,7 +223,7 @@ void __fastcall ScrollPageIndicator__CreateIndicator(
             NGUITools__SetLayer((UnityEngine_GameObject_o *)v31, layer, 0LL);
             Component_srcLineSprite = (UnityEngine_Transform_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                    (UnityEngine_GameObject_o *)v31,
-                                                                   (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UIButton___);
+                                                                   (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UIButton___);
             if ( !Component_srcLineSprite )
               break;
             v49 = (BattleServantConfConponent_o *)Component_srcLineSprite;
@@ -234,23 +234,23 @@ void __fastcall ScrollPageIndicator__CreateIndicator(
               Component_srcLineSprite->klass[1]._1.nestedTypes);
             v49->fields._closeBtnObject = 0LL;
             v49 = (BattleServantConfConponent_o *)((char *)v49 + 24);
-            sub_B70630(v49, 0LL, v50, v51, v52, v53, v54, v55);
+            sub_B77560(v49, 0LL, v50, v51, v52, v53, v54, v55);
             *(_DWORD *)(v23 + 16) = v20;
-            v56 = (EventDelegate_Callback_o *)sub_B70764(EventDelegate_Callback_TypeInfo);
+            v56 = (EventDelegate_Callback_o *)sub_B77694(EventDelegate_Callback_TypeInfo);
             EventDelegate_Callback___ctor(
               v56,
               (Il2CppObject *)v23,
               Method_ScrollPageIndicator___c__DisplayClass10_0__CreateIndicator_b__0__,
               0LL);
-            v57 = (EventDelegate_o *)sub_B70764(EventDelegate_TypeInfo);
-            EventDelegate___ctor_29875020(v57, v56, 0LL);
+            v57 = (EventDelegate_o *)sub_B77694(EventDelegate_TypeInfo);
+            EventDelegate___ctor_30345520(v57, v56, 0LL);
             Component_srcLineSprite = (UnityEngine_Transform_o *)v49->fields.equipPossessionSkillInfoComponentList;
             if ( !Component_srcLineSprite )
               break;
             System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
               (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)Component_srcLineSprite,
               (EventMissionProgressRequest_Argument_ProgressData_o *)v57,
-              (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_EventDelegate__Add__);
+              (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventDelegate__Add__);
             v22 += 2LL;
             ++v20;
             v19 += IndicatorStep;
@@ -260,7 +260,7 @@ void __fastcall ScrollPageIndicator__CreateIndicator(
         }
       }
     }
-    sub_B7076C(Component_srcLineSprite, v14);
+    sub_B7769C(Component_srcLineSprite, v14);
   }
   ScrollPageIndicator__Init(this, *(const MethodInfo **)&count);
 }
@@ -286,10 +286,10 @@ void __fastcall ScrollPageIndicator__Init(ScrollPageIndicator_o *this, const Met
   __int64 v17; // x0
 
   v8 = this;
-  if ( (byte_4357731 & 1) == 0 )
+  if ( (byte_4390CFB & 1) == 0 )
   {
-    this = (ScrollPageIndicator_o *)sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4357731 = 1;
+    this = (ScrollPageIndicator_o *)sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4390CFB = 1;
   }
   Indicator = v8->fields.Indicator;
   p_Indicator = (BattleServantConfConponent_o *)&v8->fields.Indicator;
@@ -304,8 +304,8 @@ void __fastcall ScrollPageIndicator__Init(ScrollPageIndicator_o *this, const Met
       {
         if ( v13 >= (unsigned int)v12 )
         {
-          v17 = sub_B70798(this);
-          sub_B70738(v17, 0LL);
+          v17 = sub_B776C8(this);
+          sub_B77668(v17, 0LL);
         }
         v14 = (UnityEngine_Object_o *)v10->m_Items[v13];
         if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -317,7 +317,7 @@ void __fastcall ScrollPageIndicator__Init(ScrollPageIndicator_o *this, const Met
         if ( ((unsigned __int8)this & 1) != 0 )
         {
           if ( !v14 )
-            sub_B7076C(this, v15);
+            sub_B7769C(this, v15);
           gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
                                                  (UnityEngine_Component_o *)v14,
                                                  0LL);
@@ -326,7 +326,7 @@ void __fastcall ScrollPageIndicator__Init(ScrollPageIndicator_o *this, const Met
           {
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           }
-          UnityEngine_Object__Destroy_36067208(gameObject, 0LL);
+          UnityEngine_Object__Destroy_36309980(gameObject, 0LL);
         }
         LODWORD(v12) = v10->max_length;
         ++v13;
@@ -334,7 +334,7 @@ void __fastcall ScrollPageIndicator__Init(ScrollPageIndicator_o *this, const Met
       while ( (__int64)v13 < (int)v12 );
     }
     p_Indicator->klass = 0LL;
-    sub_B70630(p_Indicator, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_B77560(p_Indicator, 0LL, v2, v3, v4, v5, v6, v7);
   }
 }
 
@@ -392,11 +392,11 @@ LABEL_13:
         goto LABEL_13;
       }
 LABEL_15:
-      sub_B7076C(this, *(_QWORD *)&idx);
+      sub_B7769C(this, *(_QWORD *)&idx);
     }
 LABEL_16:
-    v10 = sub_B70798(this);
-    sub_B70738(v10, 0LL);
+    v10 = sub_B776C8(this);
+    sub_B77668(v10, 0LL);
   }
 }
 
@@ -416,7 +416,7 @@ void __fastcall ScrollPageIndicator_OnPageChangeCallback___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B70630(p_method);
+  sub_B77560(p_method);
 }
 
 
@@ -431,14 +431,14 @@ System_IAsyncResult_o *__fastcall ScrollPageIndicator_OnPageChangeCallback__Begi
   int32_t v10; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10 = pageIndex;
-  if ( (byte_434F204 & 1) == 0 )
+  if ( (byte_43887E5 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    byte_434F204 = 1;
+    sub_B775C4(&int_TypeInfo);
+    byte_43887E5 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10, callback);
-  return (System_IAsyncResult_o *)sub_B70638(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_B77568(this, v9, callback, object);
 }
 
 
@@ -447,7 +447,7 @@ void __fastcall ScrollPageIndicator_OnPageChangeCallback__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7063C(result, 0LL, method);
+  sub_B7756C(result, 0LL, method);
 }
 
 
@@ -504,8 +504,8 @@ LABEL_5:
       v20 = *(_QWORD *)&v18->fields.extra_arg;
       v21 = *(void (__fastcall **)(_QWORD, __int64))&v18->fields.method_ptr;
       if ( *(__int16 *)(v20 + 72) == -1 )
-        sub_B70750(*(_QWORD *)&v18->fields.extra_arg, *(_QWORD *)&pageIndex);
-      if ( (sub_B706C4(v20) & 1) == 0 )
+        sub_B77680(*(_QWORD *)&v18->fields.extra_arg, *(_QWORD *)&pageIndex);
+      if ( (sub_B775F4(v20) & 1) == 0 )
         break;
       if ( *(_BYTE *)(v20 + 74) != 1 )
         goto LABEL_36;
@@ -516,8 +516,8 @@ LABEL_37:
     }
     if ( v19 && *(__int16 *)(v20 + 72) != -1 && (*(_BYTE *)(*v19 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v22 = sub_B706BC(v20);
-      v23 = sub_B70AC0(v20);
+      v22 = sub_B775EC(v20);
+      v23 = sub_B779F0(v20);
       if ( (v22 & 1) != 0 )
       {
         if ( (v23 & 1) != 0 )
@@ -541,7 +541,7 @@ LABEL_37:
           else
           {
 LABEL_35:
-            v16 = sub_B08590(v19, v25, v26);
+            v16 = sub_B0F4C0(v19, v25, v26);
           }
           v15 = *(_QWORD *)(v16 + 8);
         }
@@ -549,7 +549,7 @@ LABEL_35:
         {
           v15 = *(_QWORD *)(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 320);
         }
-        v17 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD))sub_B70744(v15, v20);
+        v17 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD))sub_B77674(v15, v20);
         (*v17)(v19, (unsigned int)pageIndex, v17);
       }
       else
@@ -575,7 +575,7 @@ LABEL_35:
           else
           {
 LABEL_11:
-            v14 = sub_B08590(v19, class_0, v9);
+            v14 = sub_B0F4C0(v19, class_0, v9);
           }
           (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD))v14)(v19, (unsigned int)pageIndex, *(_QWORD *)(v14 + 8));
         }
@@ -614,7 +614,7 @@ void __fastcall ScrollPageIndicator___c__DisplayClass10_0___CreateIndicator_b__0
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   onPageChange = _4__this->fields.onPageChange;
   if ( onPageChange )
     ScrollPageIndicator_OnPageChangeCallback__Invoke(onPageChange, this->fields.idx, v2);

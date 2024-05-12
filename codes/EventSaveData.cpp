@@ -14,21 +14,21 @@ System_String_array *__fastcall EventSaveData__GetValueByArray(
   __int64 v7; // x1
   __int64 v9; // x0
 
-  if ( (byte_43555EB & 1) == 0 )
+  if ( (byte_438EC63 & 1) == 0 )
   {
-    sub_B70694(&char___TypeInfo);
-    byte_43555EB = 1;
+    sub_B775C4(&char___TypeInfo);
+    byte_438EC63 = 1;
   }
   value = this->fields.value;
   if ( !value )
     return 0LL;
-  v6 = (System_Char_array *)sub_B706AC(char___TypeInfo, 1LL);
+  v6 = (System_Char_array *)sub_B775DC(char___TypeInfo, 1LL);
   if ( !v6 )
-    sub_B7076C(0LL, v7);
+    sub_B7769C(0LL, v7);
   if ( !v6->max_length )
   {
-    v9 = sub_B70798(v6);
-    sub_B70738(v9, 0LL);
+    v9 = sub_B776C8(v6);
+    sub_B77668(v9, 0LL);
   }
   v6->m_Items[2] = separator;
   return System_String__Split(value, v6, 0LL);
@@ -57,7 +57,7 @@ void __fastcall EventSaveData__SetValueByArray(
     v6 = System_Char__ToString((uint16_t)&v14, 0LL);
     v7 = System_String__Join(v6, valueArray, 0LL);
     this->fields.value = v7;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.value,
       (System_Int32_array **)v7,
       v8,

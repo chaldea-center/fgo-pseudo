@@ -1,14 +1,14 @@
 void __fastcall EventStatusMaster___ctor(EventStatusMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_43556A5 & 1) == 0 )
+  if ( (byte_438ED1D & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string___ctor__);
-    byte_43556A5 = 1;
+    sub_B775C4(&Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string___ctor__);
+    byte_438ED1D = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     257,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ EventStatusEntity_o *__fastcall EventStatusMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_43556A3 & 1) == 0 )
+  if ( (byte_438ED1B & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string__GetEntity__);
-    byte_43556A3 = 1;
+    sub_B775C4(&Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string__GetEntity__);
+    byte_438ED1B = 1;
   }
   PK = EventStatusEntity__CreatePK(eventId, statusId, *(const MethodInfo **)&statusId);
   return (EventStatusEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                   (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                   PK,
-                                  (const MethodInfo_21C0890 *)Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string__GetEntity__);
+                                  (const MethodInfo_21FBCE4 *)Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string__GetEntity__);
 }
 
 
@@ -44,17 +44,17 @@ bool __fastcall EventStatusMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_43556A4 & 1) == 0 )
+  if ( (byte_438ED1C & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string__TryGetEntity__);
-    byte_43556A4 = 1;
+    sub_B775C4(&Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string__TryGetEntity__);
+    byte_438ED1C = 1;
   }
   PK = EventStatusEntity__CreatePK(eventId, statusId, *(const MethodInfo **)&eventId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string__TryGetEntity__);
 }
 
 
@@ -73,22 +73,22 @@ EventStatusEntity_o *__fastcall EventStatusMaster__getNowEntity(
   int32_t v12; // w23
   __int64 v13; // x10
 
-  if ( (byte_43556A6 & 1) == 0 )
+  if ( (byte_438ED1E & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&Method_DataManager_GetMasterData_UserEventMaster___);
-    sub_B70694(&EventStatusEntity_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43556A6 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserEventMaster___);
+    sub_B775C4(&EventStatusEntity_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438ED1E = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_21;
   MasterData_WarQuestSelectionMaster = (UserEventMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                               Instance,
-                                                              (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserEventMaster___);
+                                                              (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserEventMaster___);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -110,7 +110,7 @@ EventStatusEntity_o *__fastcall EventStatusMaster__getNowEntity(
       goto LABEL_21;
     Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
               (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)Instance,
-              (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+              (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
     if ( Count >= 1 )
     {
       v11 = Count;
@@ -123,7 +123,7 @@ EventStatusEntity_o *__fastcall EventStatusMaster__getNowEntity(
         result = (EventStatusEntity_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                                           (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)Instance,
                                           v12,
-                                          (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                          (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
         if ( result )
         {
           v13 = *(&EventStatusEntity_TypeInfo->_2.bitflags2 + 1);
@@ -139,7 +139,7 @@ EventStatusEntity_o *__fastcall EventStatusMaster__getNowEntity(
           return 0LL;
       }
 LABEL_21:
-      sub_B7076C(Instance, v6);
+      sub_B7769C(Instance, v6);
     }
     return 0LL;
   }

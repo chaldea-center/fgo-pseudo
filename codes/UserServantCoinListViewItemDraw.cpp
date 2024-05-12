@@ -16,10 +16,10 @@ void __fastcall UserServantCoinListViewItemDraw__SetInput(
   __int64 v6; // x1
   struct UICommonButton_o *v7; // x0
 
-  if ( (byte_434FD7C & 1) == 0 )
+  if ( (byte_4389365 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_434FD7C = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4389365 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -37,7 +37,7 @@ void __fastcall UserServantCoinListViewItemDraw__SetInput(
             v7->klass->vtable._6_OnInit.methodPtr),
           (v7 = this->fields.baseButton) == 0LL) )
     {
-      sub_B7076C(v7, v6);
+      sub_B7769C(v7, v6);
     }
     ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, Il2CppMethodPointer))v7->klass->vtable._14_SetState.method)(
       v7,
@@ -63,11 +63,11 @@ void __fastcall UserServantCoinListViewItemDraw__SetItem(
   Il2CppObject *v13; // x0
   int v14; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_434FD7B & 1) == 0 )
+  if ( (byte_4389364 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&StringLiteral_23872/*"{0:#,0}"*/);
-    byte_434FD7B = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&StringLiteral_23975/*"{0:#,0}"*/);
+    byte_4389364 = 1;
   }
   if ( item && mode )
   {
@@ -96,10 +96,10 @@ void __fastcall UserServantCoinListViewItemDraw__SetItem(
       LODWORD(userSvtCoinEntity) = userSvtCoinEntity->fields.num;
     v14 = (int)userSvtCoinEntity;
     v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14, v10);
-    itemIcon = (ItemIconComponent_o *)System_String__Format((System_String_o *)StringLiteral_23872/*"{0:#,0}"*/, v13, 0LL);
+    itemIcon = (ItemIconComponent_o *)System_String__Format((System_String_o *)StringLiteral_23975/*"{0:#,0}"*/, v13, 0LL);
     if ( !possessionNum )
 LABEL_15:
-      sub_B7076C(itemIcon, itemId);
+      sub_B7769C(itemIcon, itemId);
     UILabel__set_text(possessionNum, (System_String_o *)itemIcon, 0LL);
   }
 }

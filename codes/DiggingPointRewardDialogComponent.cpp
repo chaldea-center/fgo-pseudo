@@ -10,16 +10,16 @@ void __fastcall DiggingPointRewardDialogComponent___ctor(
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_43537C8 & 1) == 0 )
+  if ( (byte_438D086 & 1) == 0 )
   {
-    sub_B70694(&BaseDialog_TypeInfo);
-    sub_B70694(&UnityEngine_Color___TypeInfo);
-    byte_43537C8 = 1;
+    sub_B775C4(&BaseDialog_TypeInfo);
+    sub_B775C4(&UnityEngine_Color___TypeInfo);
+    byte_438D086 = 1;
   }
   this->fields.iconScale = 0.85;
-  v3 = (struct UnityEngine_Color_array *)sub_B706AC(UnityEngine_Color___TypeInfo, 2LL);
+  v3 = (struct UnityEngine_Color_array *)sub_B775DC(UnityEngine_Color___TypeInfo, 2LL);
   this->fields.viewChangeButtonLabelEffectColors = v3;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.viewChangeButtonLabelEffectColors,
     (System_Int32_array **)v3,
     v4,
@@ -48,23 +48,23 @@ void __fastcall DiggingPointRewardDialogComponent__EndClose(
   System_Action_o *v10; // x20
   struct System_Action_o *closeCallbackFunc; // t1
 
-  if ( (byte_43537C4 & 1) == 0 )
+  if ( (byte_438D082 & 1) == 0 )
   {
-    sub_B70694(&Method_ActionExtensions_Call_bool___);
-    byte_43537C4 = 1;
+    sub_B775C4(&Method_ActionExtensions_Call_bool___);
+    byte_438D082 = 1;
   }
   DiggingPointRewardDialogComponent__Init(this, method);
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)this->fields.eventRootMaskSetActiveAction,
     0,
-    (const MethodInfo_2BFC23C *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_2C3C310 *)Method_ActionExtensions_Call_bool___);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc;
   v10 = closeCallbackFunc;
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_B70630(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_B77560(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
     System_Action__Invoke(v10, 0LL);
   }
 }
@@ -80,7 +80,7 @@ void __fastcall DiggingPointRewardDialogComponent__Init(
   this->fields.state = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -96,18 +96,18 @@ void __fastcall DiggingPointRewardDialogComponent__OnClickCloseButton(
   System_Action_o *v6; // x20
   System_Collections_Generic_List_Enumerator_T__o v7; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_43537C3 & 1) == 0 )
+  if ( (byte_438D081 & 1) == 0 )
   {
-    sub_B70694(&Method_ActionExtensions_Call_bool___);
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_DiggingPointRewardDialogComponent_EndClose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_43537C3 = 1;
+    sub_B775C4(&Method_ActionExtensions_Call_bool___);
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_DiggingPointRewardDialogComponent_EndClose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438D081 = 1;
   }
   memset(&v7, 0, sizeof(v7));
   if ( this->fields.state == 2 )
@@ -116,7 +116,7 @@ void __fastcall DiggingPointRewardDialogComponent__OnClickCloseButton(
     ActionExtensions__Call_bool_(
       (System_Action_T__o *)this->fields.eventRootMaskSetActiveAction,
       1,
-      (const MethodInfo_2BFC23C *)Method_ActionExtensions_Call_bool___);
+      (const MethodInfo_2C3C310 *)Method_ActionExtensions_Call_bool___);
     if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !SoundManager_TypeInfo->_2.cctor_finished )
     {
@@ -125,14 +125,14 @@ void __fastcall DiggingPointRewardDialogComponent__OnClickCloseButton(
     SoundManager__playSystemSe(1, 0LL);
     resultItemObjList = this->fields.resultItemObjList;
     if ( !resultItemObjList )
-      sub_B7076C(0LL, v3);
+      sub_B7769C(0LL, v3);
     System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
       &v7,
       (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)resultItemObjList,
-      (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+      (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
               &v7,
-              (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+              (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
     {
       current = v7.fields.current;
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -147,13 +147,13 @@ void __fastcall DiggingPointRewardDialogComponent__OnClickCloseButton(
         {
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         }
-        UnityEngine_Object__Destroy_36067208((UnityEngine_Object_o *)current, 0LL);
+        UnityEngine_Object__Destroy_36309980((UnityEngine_Object_o *)current, 0LL);
       }
     }
     System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
       &v7,
-      (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    v6 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+      (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    v6 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     System_Action___ctor(v6, (Il2CppObject *)this, Method_DiggingPointRewardDialogComponent_EndClose__, 0LL);
     BaseDialog__Close((BaseDialog_o *)this, v6, 0LL);
   }
@@ -182,17 +182,17 @@ void __fastcall DiggingPointRewardDialogComponent__OnClickSwitchShowMode(
   __int64 v18; // x0
   UnityEngine_Color_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_43537C5 & 1) == 0 )
+  if ( (byte_438D083 & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_B70694(&SoundManager_TypeInfo);
-    sub_B70694(&StringLiteral_23170/*"treasurechest_btn"*/);
-    sub_B70694(&StringLiteral_23172/*"treasurechest_btn_on"*/);
-    byte_43537C5 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_B775C4(&SoundManager_TypeInfo);
+    sub_B775C4(&StringLiteral_23271/*"treasurechest_btn"*/);
+    sub_B775C4(&StringLiteral_23273/*"treasurechest_btn_on"*/);
+    byte_438D083 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -202,14 +202,14 @@ void __fastcall DiggingPointRewardDialogComponent__OnClickSwitchShowMode(
   this->fields.isShowPossessionNum = !isShowPossessionNum;
   if ( !viewChangeButton )
     goto LABEL_30;
-  v6 = isShowPossessionNum ? (System_String_o **)&StringLiteral_23170/*"treasurechest_btn"*/ : (System_String_o **)&StringLiteral_23172/*"treasurechest_btn_on"*/;
+  v6 = isShowPossessionNum ? (System_String_o **)&StringLiteral_23271/*"treasurechest_btn"*/ : (System_String_o **)&StringLiteral_23273/*"treasurechest_btn_on"*/;
   UIButton__set_normalSprite(viewChangeButton, *v6, 0LL);
   viewChangeButton = this->fields.viewChangeButton;
   if ( !viewChangeButton )
     goto LABEL_30;
   viewChangeButton = (UIButton_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                      (UnityEngine_Component_o *)viewChangeButton,
-                                     (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                                     (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( !this->fields.viewChangeButton )
     goto LABEL_30;
   v7 = (UISprite_o *)viewChangeButton;
@@ -220,7 +220,7 @@ void __fastcall DiggingPointRewardDialogComponent__OnClickSwitchShowMode(
   viewChangeButtonLabelEffectColors = this->fields.viewChangeButtonLabelEffectColors;
   if ( !viewChangeButtonLabelEffectColors )
 LABEL_30:
-    sub_B7076C(viewChangeButton, v3);
+    sub_B7769C(viewChangeButton, v3);
   viewChangeButton = (UIButton_o *)this->fields.viewChangeButtonLabel;
   max_length = viewChangeButtonLabelEffectColors->max_length;
   if ( !this->fields.isShowPossessionNum )
@@ -236,8 +236,8 @@ LABEL_30:
       goto LABEL_22;
     }
 LABEL_32:
-    v18 = sub_B70798(viewChangeButton);
-    sub_B70738(v18, 0LL);
+    v18 = sub_B776C8(viewChangeButton);
+    sub_B77668(v18, 0LL);
   }
   if ( max_length <= 1 )
     goto LABEL_32;
@@ -263,13 +263,13 @@ LABEL_22:
     if ( (int)v16 >= size )
       break;
     if ( size <= (unsigned int)v16 )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
     viewChangeButton = (UIButton_o *)resultItemObjList->fields._items->m_Items[v16];
     if ( viewChangeButton )
     {
       viewChangeButton = (UIButton_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                          (UnityEngine_GameObject_o *)viewChangeButton,
-                                         (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+                                         (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
       if ( viewChangeButton )
       {
         ItemIconComponent__ShowPossession(
@@ -346,41 +346,41 @@ void __fastcall DiggingPointRewardDialogComponent__Open(
   System_Action_o *v59; // x20
   __int64 v60; // x0
 
-  if ( (byte_43537C0 & 1) == 0 )
+  if ( (byte_438D07E & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&Method_UnityEngine_Component_GetComponentInChildren_UILabel____69250872);
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_B70694(&Method_DataManager_GetMasterData_EventDiggingMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_EventRewardMaster___);
-    sub_B70694(&Method_DataMasterBase_EventDiggingMaster__EventDiggingEntity__int__GetEntity__);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_B70694(&System_Collections_Generic_List_GameObject__TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&Method_DiggingPointRewardDialogComponent___c__DisplayClass29_0__Open_b__0__);
-    sub_B70694(&DiggingPointRewardDialogComponent___c__DisplayClass29_0_TypeInfo);
-    sub_B70694(&StringLiteral_13628/*"TREASURE_BOX_EVENT_POINT_REWARD_GET_DIALOG_TITLE"*/);
-    sub_B70694(&StringLiteral_23170/*"treasurechest_btn"*/);
-    sub_B70694(&StringLiteral_23176/*"treasurechest_img_bg_reward"*/);
-    sub_B70694(&StringLiteral_4677/*"DIGGING_REWARD_DIALOG_VIEW_CHANGE"*/);
-    sub_B70694(&StringLiteral_4672/*"DIGGING_EVENT_POINT_REWARD"*/);
-    sub_B70694(&StringLiteral_2533/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/);
-    sub_B70694(&StringLiteral_4670/*"DIGGING_EVENT_POINT"*/);
-    sub_B70694(&StringLiteral_11245/*"RESET_DIGGING_CONFIRM_DIALOG_CANCEL"*/);
-    byte_43537C0 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponentInChildren_UILabel____69483608);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_B775C4(&Method_DataManager_GetMasterData_EventDiggingMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_EventRewardMaster___);
+    sub_B775C4(&Method_DataMasterBase_EventDiggingMaster__EventDiggingEntity__int__GetEntity__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&Method_DiggingPointRewardDialogComponent___c__DisplayClass29_0__Open_b__0__);
+    sub_B775C4(&DiggingPointRewardDialogComponent___c__DisplayClass29_0_TypeInfo);
+    sub_B775C4(&StringLiteral_13694/*"TREASURE_BOX_EVENT_POINT_REWARD_GET_DIALOG_TITLE"*/);
+    sub_B775C4(&StringLiteral_23271/*"treasurechest_btn"*/);
+    sub_B775C4(&StringLiteral_23277/*"treasurechest_img_bg_reward"*/);
+    sub_B775C4(&StringLiteral_4729/*"DIGGING_REWARD_DIALOG_VIEW_CHANGE"*/);
+    sub_B775C4(&StringLiteral_4724/*"DIGGING_EVENT_POINT_REWARD"*/);
+    sub_B775C4(&StringLiteral_2579/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/);
+    sub_B775C4(&StringLiteral_4722/*"DIGGING_EVENT_POINT"*/);
+    sub_B775C4(&StringLiteral_11306/*"RESET_DIGGING_CONFIRM_DIALOG_CANCEL"*/);
+    byte_438D07E = 1;
   }
-  v11 = sub_B70764(DiggingPointRewardDialogComponent___c__DisplayClass29_0_TypeInfo);
+  v11 = sub_B77694(DiggingPointRewardDialogComponent___c__DisplayClass29_0_TypeInfo);
   DiggingPointRewardDialogComponent___c__DisplayClass29_0___ctor(
     (DiggingPointRewardDialogComponent___c__DisplayClass29_0_o *)v11,
     0LL);
   if ( !v11 )
     goto LABEL_33;
   *(_QWORD *)(v11 + 16) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v11 + 16), (System_Int32_array **)this, v14, v15, v16, v17, v18, v19);
+  sub_B77560((BattleServantConfConponent_o *)(v11 + 16), (System_Int32_array **)this, v14, v15, v16, v17, v18, v19);
   *(_QWORD *)(v11 + 24) = diggingRewards;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)(v11 + 24),
     (System_Int32_array **)diggingRewards,
     v20,
@@ -391,7 +391,7 @@ void __fastcall DiggingPointRewardDialogComponent__Open(
     v25);
   this->fields.state = 1;
   this->fields.eventRootMaskSetActiveAction = setMaskMethod;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.eventRootMaskSetActiveAction,
     (System_Int32_array **)setMaskMethod,
     v26,
@@ -405,22 +405,22 @@ void __fastcall DiggingPointRewardDialogComponent__Open(
     goto LABEL_33;
   Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                               viewChangeButton,
-                              (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                              (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI((UISprite_o *)Component_WebViewObject, (System_String_o *)StringLiteral_23170/*"treasurechest_btn"*/, 0LL);
+  AtlasManager__SetEventUI((UISprite_o *)Component_WebViewObject, (System_String_o *)StringLiteral_23271/*"treasurechest_btn"*/, 0LL);
   viewChangeButton = (UnityEngine_Component_o *)this->fields.viewChangeButton;
   this->fields.isShowPossessionNum = 0;
   if ( !viewChangeButton )
     goto LABEL_33;
-  UIButton__set_normalSprite((UIButton_o *)viewChangeButton, (System_String_o *)StringLiteral_23170/*"treasurechest_btn"*/, 0LL);
+  UIButton__set_normalSprite((UIButton_o *)viewChangeButton, (System_String_o *)StringLiteral_23271/*"treasurechest_btn"*/, 0LL);
   viewChangeButtonLabelEffectColors = this->fields.viewChangeButtonLabelEffectColors;
   if ( !viewChangeButtonLabelEffectColors )
     goto LABEL_33;
   if ( !viewChangeButtonLabelEffectColors->max_length )
   {
-    v60 = sub_B70798(viewChangeButton);
-    sub_B70738(v60, 0LL);
+    v60 = sub_B776C8(viewChangeButton);
+    sub_B77668(v60, 0LL);
   }
   viewChangeButton = (UnityEngine_Component_o *)this->fields.viewChangeButtonLabel;
   if ( !viewChangeButton )
@@ -429,12 +429,12 @@ void __fastcall DiggingPointRewardDialogComponent__Open(
     (UILabel_o *)viewChangeButton,
     *(UnityEngine_Color_o *)&viewChangeButtonLabelEffectColors->m_Items[0].fields.g,
     0LL);
-  v34 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_GameObject__TypeInfo);
+  v34 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v34,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.resultItemObjList = (struct System_Collections_Generic_List_GameObject__o *)v34;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.resultItemObjList,
     (System_Int32_array **)v34,
     v35,
@@ -443,30 +443,30 @@ void __fastcall DiggingPointRewardDialogComponent__Open(
     v38,
     v39,
     v40);
-  viewChangeButton = (UnityEngine_Component_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  viewChangeButton = (UnityEngine_Component_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !viewChangeButton )
     goto LABEL_33;
   MasterData_WarQuestSelectionMaster = (EventRewardMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                 (DataManager_o *)viewChangeButton,
-                                                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventRewardMaster___);
-  viewChangeButton = (UnityEngine_Component_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                                                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventRewardMaster___);
+  viewChangeButton = (UnityEngine_Component_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !viewChangeButton )
     goto LABEL_33;
   viewChangeButton = (UnityEngine_Component_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                   (DataManager_o *)viewChangeButton,
-                                                  (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventDiggingMaster___);
+                                                  (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventDiggingMaster___);
   if ( !viewChangeButton )
     goto LABEL_33;
   Entity = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
              (DataMasterBase_WarMaster__WarEntity__int__o *)viewChangeButton,
              eventId,
-             (const MethodInfo_21C0440 *)Method_DataMasterBase_EventDiggingMaster__EventDiggingEntity__int__GetEntity__);
+             (const MethodInfo_21FB894 *)Method_DataMasterBase_EventDiggingMaster__EventDiggingEntity__int__GetEntity__);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_4670/*"DIGGING_EVENT_POINT"*/, 0LL);
+  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_4722/*"DIGGING_EVENT_POINT"*/, 0LL);
   if ( !this->fields.viewChangeButton )
     goto LABEL_33;
   v43 = (Il2CppObject *)viewChangeButton;
@@ -478,7 +478,7 @@ void __fastcall DiggingPointRewardDialogComponent__Open(
   viewChangeButton = (UnityEngine_Component_o *)UnityEngine_Component__GetComponentInChildren_UILabel_(
                                                   viewChangeButton,
                                                   1,
-                                                  (const MethodInfo_1BE4178 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____69250872);
+                                                  (const MethodInfo_1C6D834 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____69483608);
   if ( !this->fields.closeButton )
     goto LABEL_33;
   v44 = (UILabel_o *)viewChangeButton;
@@ -490,28 +490,28 @@ void __fastcall DiggingPointRewardDialogComponent__Open(
   ComponentInChildren_UILabel = UnityEngine_Component__GetComponentInChildren_UILabel_(
                                   viewChangeButton,
                                   1,
-                                  (const MethodInfo_1BE4178 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____69250872);
-  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_4677/*"DIGGING_REWARD_DIALOG_VIEW_CHANGE"*/, 0LL);
+                                  (const MethodInfo_1C6D834 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____69483608);
+  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_4729/*"DIGGING_REWARD_DIALOG_VIEW_CHANGE"*/, 0LL);
   if ( !v44 )
     goto LABEL_33;
   UILabel__set_text(v44, (System_String_o *)viewChangeButton, 0LL);
-  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11245/*"RESET_DIGGING_CONFIRM_DIALOG_CANCEL"*/, 0LL);
+  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11306/*"RESET_DIGGING_CONFIRM_DIALOG_CANCEL"*/, 0LL);
   if ( !ComponentInChildren_UILabel )
     goto LABEL_33;
   UILabel__set_text(ComponentInChildren_UILabel, (System_String_o *)viewChangeButton, 0LL);
   titleLabel = this->fields.titleLabel;
-  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_13628/*"TREASURE_BOX_EVENT_POINT_REWARD_GET_DIALOG_TITLE"*/, 0LL);
+  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_13694/*"TREASURE_BOX_EVENT_POINT_REWARD_GET_DIALOG_TITLE"*/, 0LL);
   viewChangeButton = (UnityEngine_Component_o *)System_String__Format(v47, v43, 0LL);
   if ( !titleLabel )
     goto LABEL_33;
   UILabel__set_text(titleLabel, (System_String_o *)viewChangeButton, 0LL);
   titleNextItemLabel = this->fields.titleNextItemLabel;
-  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2533/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/, 0LL);
+  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2579/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/, 0LL);
   if ( !titleNextItemLabel )
     goto LABEL_33;
   UILabel__set_text(titleNextItemLabel, (System_String_o *)viewChangeButton, 0LL);
   titleAtLabel = this->fields.titleAtLabel;
-  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_4672/*"DIGGING_EVENT_POINT_REWARD"*/, 0LL);
+  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_4724/*"DIGGING_EVENT_POINT_REWARD"*/, 0LL);
   if ( !titleAtLabel )
     goto LABEL_33;
   UILabel__set_text(titleAtLabel, (System_String_o *)viewChangeButton, 0LL);
@@ -523,8 +523,8 @@ void __fastcall DiggingPointRewardDialogComponent__Open(
   if ( !viewChangeButton )
     goto LABEL_33;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)viewChangeButton, 1, 0LL);
-  AtlasManager__SetEventUI(this->fields.eventPointBg, (System_String_o *)StringLiteral_23176/*"treasurechest_img_bg_reward"*/, 0LL);
-  AtlasManager__SetEventUI(this->fields.eventPointRewardBg, (System_String_o *)StringLiteral_23176/*"treasurechest_img_bg_reward"*/, 0LL);
+  AtlasManager__SetEventUI(this->fields.eventPointBg, (System_String_o *)StringLiteral_23277/*"treasurechest_img_bg_reward"*/, 0LL);
+  AtlasManager__SetEventUI(this->fields.eventPointRewardBg, (System_String_o *)StringLiteral_23277/*"treasurechest_img_bg_reward"*/, 0LL);
   viewChangeButton = (UnityEngine_Component_o *)UserEventPointMaster__GetEventPointNoGroup(eventId, 0LL);
   if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_33;
@@ -540,7 +540,7 @@ void __fastcall DiggingPointRewardDialogComponent__Open(
         AtlasManager__SetItem(this->fields.titleIcon, (int32_t)Entity->fields.name, 0LL),
         DiggingPointRewardDialogComponent__SetNextItemLabel(this, v50, v51, v52),
         this->fields.closeCallbackFunc = closeCallback,
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc,
           (System_Int32_array **)closeCallback,
           v53,
@@ -554,10 +554,10 @@ void __fastcall DiggingPointRewardDialogComponent__Open(
                                                          0LL)) == 0LL) )
   {
 LABEL_33:
-    sub_B7076C(viewChangeButton, v13);
+    sub_B7769C(viewChangeButton, v13);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)viewChangeButton, 1, 0LL);
-  v59 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v59 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(
     v59,
     (Il2CppObject *)v11,
@@ -587,15 +587,15 @@ void __fastcall DiggingPointRewardDialogComponent__SetNextItemLabel(
   System_String_o *countText; // [xsp+8h] [xbp-38h] BYREF
   System_String_o *nameText; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_43537C2 & 1) == 0 )
+  if ( (byte_438D080 & 1) == 0 )
   {
-    sub_B70694(&long_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_2538/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/);
-    sub_B70694(&StringLiteral_2536/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/);
-    sub_B70694(&StringLiteral_2534/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43537C2 = 1;
+    sub_B775C4(&long_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_2584/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/);
+    sub_B775C4(&StringLiteral_2582/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/);
+    sub_B775C4(&StringLiteral_2580/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438D080 = 1;
   }
   nameText = 0LL;
   countText = 0LL;
@@ -607,12 +607,12 @@ void __fastcall DiggingPointRewardDialogComponent__SetNextItemLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    nextItemNameLabel = LocalizationManager__Get((System_String_o *)StringLiteral_2536/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, 0LL);
+    nextItemNameLabel = LocalizationManager__Get((System_String_o *)StringLiteral_2582/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, 0LL);
     if ( atLabel )
     {
       UILabel__set_text(atLabel, nextItemNameLabel, 0LL);
       nextItemLabel = this->fields.nextItemLabel;
-      nextItemNameLabel = LocalizationManager__Get((System_String_o *)StringLiteral_2534/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/, 0LL);
+      nextItemNameLabel = LocalizationManager__Get((System_String_o *)StringLiteral_2580/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/, 0LL);
       if ( nextItemLabel )
       {
         UILabel__set_text(nextItemLabel, nextItemNameLabel, 0LL);
@@ -626,7 +626,7 @@ LABEL_18:
       }
     }
 LABEL_22:
-    sub_B7076C(nextItemNameLabel, v12);
+    sub_B7769C(nextItemNameLabel, v12);
   }
   EventRewardEntity__GetInfo(eventRewardEnt, &nameText, &countText, 0LL);
   v7 = this->fields.atLabel;
@@ -635,7 +635,7 @@ LABEL_22:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_2538/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_2584/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
   v17 = eventRewardEnt->fields.point - userEventPoint;
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v17, v9);
   nextItemNameLabel = System_String__Format(v8, v10, 0LL);
@@ -673,21 +673,21 @@ void __fastcall DiggingPointRewardDialogComponent__SetPossession(
   UserItemMaster_o *MasterData_WarQuestSelectionMaster; // x21
   UserItemEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_43537C6 & 1) == 0 )
+  if ( (byte_438D084 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43537C6 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438D084 = 1;
   }
   entity = 0LL;
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
   entity = 0LL;
   MasterData_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                              (DataManager_o *)Instance,
-                                                             (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                                             (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -701,7 +701,7 @@ void __fastcall DiggingPointRewardDialogComponent__SetPossession(
     return;
   if ( !entity || !item )
 LABEL_13:
-    sub_B7076C(Instance, v7);
+    sub_B7769C(Instance, v7);
   ItemIconComponent__SetPossession(item, entity->fields.num, 0LL);
 }
 
@@ -731,14 +731,14 @@ void __fastcall DiggingPointRewardDialogComponent__SetResultData(
   UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_43537C1 & 1) == 0 )
+  if ( (byte_438D07F & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_UIGrid___);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    this = (DiggingPointRewardDialogComponent_o *)sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43537C1 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UIGrid___);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    this = (DiggingPointRewardDialogComponent_o *)sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438D07F = 1;
   }
   if ( rewards )
   {
@@ -750,8 +750,8 @@ void __fastcall DiggingPointRewardDialogComponent__SetResultData(
       {
         if ( (unsigned int)v6 >= max_length )
         {
-          v21 = sub_B70798(this);
-          sub_B70738(v21, 0LL);
+          v21 = sub_B776C8(this);
+          sub_B77668(v21, 0LL);
         }
         v7 = rewards->m_Items[v6];
         if ( !v7 )
@@ -769,7 +769,7 @@ void __fastcall DiggingPointRewardDialogComponent__SetResultData(
         }
         this = (DiggingPointRewardDialogComponent_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                                         prefabResultItem,
-                                                        (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                        (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
         if ( !this )
           goto LABEL_26;
         v12 = (UnityEngine_GameObject_o *)this;
@@ -793,7 +793,7 @@ void __fastcall DiggingPointRewardDialogComponent__SetResultData(
         UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v22, 0LL);
         this = (DiggingPointRewardDialogComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                         v12,
-                                                        (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+                                                        (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
         if ( !this )
           goto LABEL_26;
         v17 = originalNum <= 1 ? -1 : originalNum;
@@ -806,14 +806,14 @@ void __fastcall DiggingPointRewardDialogComponent__SetResultData(
           || (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
                 (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
                 (EventMissionProgressRequest_Argument_ProgressData_o *)v12,
-                (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_GameObject__Add__),
+                (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_GameObject__Add__),
               (this = (DiggingPointRewardDialogComponent_o *)v4->fields.listRoot) == 0LL)
           || (this = (DiggingPointRewardDialogComponent_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                               (UnityEngine_Component_o *)this,
-                                                              (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UIGrid___)) == 0LL )
+                                                              (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UIGrid___)) == 0LL )
         {
 LABEL_26:
-          sub_B7076C(this, rewards);
+          sub_B7769C(this, rewards);
         }
         this = (DiggingPointRewardDialogComponent_o *)((__int64 (__fastcall *)(DiggingPointRewardDialogComponent_o *, void *))this->klass[1]._1.namespaze)(
                                                         this,
@@ -835,10 +835,10 @@ UnityEngine_GameObject_o *__fastcall DiggingPointRewardDialogComponent__get_clos
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_43537C7 & 1) == 0 )
+  if ( (byte_438D085 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43537C7 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438D085 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -850,7 +850,7 @@ UnityEngine_GameObject_o *__fastcall DiggingPointRewardDialogComponent__get_clos
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }
 
@@ -871,10 +871,10 @@ void __fastcall DiggingPointRewardDialogComponent___c__DisplayClass29_0___Open_b
   struct DiggingPointRewardDialogComponent_o *v4; // x8
   struct DiggingPointRewardDialogComponent_o *v5; // x8
 
-  if ( (byte_434F00E & 1) == 0 )
+  if ( (byte_43885EE & 1) == 0 )
   {
-    sub_B70694(&Method_ActionExtensions_Call_bool___);
-    byte_434F00E = 1;
+    sub_B775C4(&Method_ActionExtensions_Call_bool___);
+    byte_43885EE = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this
@@ -882,10 +882,10 @@ void __fastcall DiggingPointRewardDialogComponent___c__DisplayClass29_0___Open_b
         (v4 = this->fields.__4__this) == 0LL)
     || (v4->fields.state = 2, (v5 = this->fields.__4__this) == 0LL) )
   {
-    sub_B7076C(_4__this, method);
+    sub_B7769C(_4__this, method);
   }
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)v5->fields.eventRootMaskSetActiveAction,
     0,
-    (const MethodInfo_2BFC23C *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_2C3C310 *)Method_ActionExtensions_Call_bool___);
 }

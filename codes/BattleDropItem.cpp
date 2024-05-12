@@ -12,15 +12,15 @@ DropInfo_o *__fastcall BattleDropItem__GetDropInfo(BattleDropItem_o *this, const
   __int64 v5; // x1
   DropInfo_o *result; // x0
 
-  if ( (byte_435059A & 1) == 0 )
+  if ( (byte_4389BC3 & 1) == 0 )
   {
-    sub_B70694(&DropInfo_TypeInfo);
-    byte_435059A = 1;
+    sub_B775C4(&DropInfo_TypeInfo);
+    byte_4389BC3 = 1;
   }
-  v3 = (DropInfo_o *)sub_B70764(DropInfo_TypeInfo);
+  v3 = (DropInfo_o *)sub_B77694(DropInfo_TypeInfo);
   DropInfo___ctor(v3, 0LL);
   if ( !v3 )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   result = v3;
   v3->fields.type = this->fields.type;
   v3->fields.objectId = this->fields.objectId;
@@ -126,7 +126,7 @@ void __fastcall BattleDropItem__setData(BattleDropItem_o *this, DropInfo_o *info
   int32_t num; // w8
 
   if ( !info )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   this->fields.type = info->fields.type;
   this->fields.objectId = info->fields.objectId;
   this->fields.limitCount = info->fields.limitCount;

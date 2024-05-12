@@ -1,9 +1,9 @@
 void __fastcall GachaAppendMaster___cctor(const MethodInfo *method)
 {
-  if ( (byte_4355A2A & 1) == 0 )
+  if ( (byte_438F12C & 1) == 0 )
   {
-    sub_B70694(&GachaAppendMaster_TypeInfo);
-    byte_4355A2A = 1;
+    sub_B775C4(&GachaAppendMaster_TypeInfo);
+    byte_438F12C = 1;
   }
   GachaAppendMaster_TypeInfo->static_fields->ONEDAY_SECOND = 86400LL;
 }
@@ -11,15 +11,15 @@ void __fastcall GachaAppendMaster___cctor(const MethodInfo *method)
 
 void __fastcall GachaAppendMaster___ctor(GachaAppendMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4355A25 & 1) == 0 )
+  if ( (byte_438F127 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_GachaAppendMaster__GachaAppendEntity__string___ctor__);
-    byte_4355A25 = 1;
+    sub_B775C4(&Method_DataMasterBase_GachaAppendMaster__GachaAppendEntity__string___ctor__);
+    byte_438F127 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     365,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_GachaAppendMaster__GachaAppendEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_GachaAppendMaster__GachaAppendEntity__string___ctor__);
 }
 
 
@@ -56,27 +56,27 @@ int32_t __fastcall GachaAppendMaster__GetAppendSummonState(
   System_DateTime_o v31; // 0:x0.8
   System_DateTime_o v32; // 0:x0.8
 
-  if ( (byte_4355A29 & 1) == 0 )
+  if ( (byte_438F12B & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMaster_GachaGroupMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_UserGachaDrawLogMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&Method_DataMasterBase_GachaGroupMaster__GachaGroupEntity__int__TryGetEntity__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_GachaAppendEntity__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_GachaAppendEntity__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_GachaAppendEntity__get_Current__);
-    sub_B70694(&GachaAppendMaster_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_GachaAppendEntity__GetEnumerator__);
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4355A29 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMaster_GachaGroupMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_UserGachaDrawLogMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&Method_DataMasterBase_GachaGroupMaster__GachaGroupEntity__int__TryGetEntity__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_GachaAppendEntity__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_GachaAppendEntity__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_GachaAppendEntity__get_Current__);
+    sub_B775C4(&GachaAppendMaster_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_GachaAppendEntity__GetEnumerator__);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_438F12B = 1;
   }
   entity = 0LL;
   dateData = 0LL;
   memset(&v28, 0, sizeof(v28));
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (UserGachaDrawLogMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_UserGachaDrawLogMaster___);
+  Master_WarQuestSelectionMaster = (UserGachaDrawLogMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_UserGachaDrawLogMaster___);
   if ( !gachaEnt )
     goto LABEL_51;
   v10 = Master_WarQuestSelectionMaster;
@@ -146,14 +146,14 @@ int32_t __fastcall GachaAppendMaster__GetAppendSummonState(
     return 2;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (UserGachaDrawLogMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_GachaGroupMaster___);
+  Master_WarQuestSelectionMaster = (UserGachaDrawLogMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_GachaGroupMaster___);
   if ( !*appendEnt || !Master_WarQuestSelectionMaster )
     goto LABEL_51;
   Master_WarQuestSelectionMaster = (UserGachaDrawLogMaster_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
                                                                  (DataMasterBase_WarMaster__WarEntity__int__o *)Master_WarQuestSelectionMaster,
                                                                  &entity,
                                                                  (*appendEnt)->fields.gachaGroupId,
-                                                                 (const MethodInfo_21C049C *)Method_DataMasterBase_GachaGroupMaster__GachaGroupEntity__int__TryGetEntity__);
+                                                                 (const MethodInfo_21FB8F0 *)Method_DataMasterBase_GachaGroupMaster__GachaGroupEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_WarQuestSelectionMaster & 1) == 0 )
     return 1;
   if ( !*appendEnt )
@@ -167,7 +167,7 @@ int32_t __fastcall GachaAppendMaster__GetAppendSummonState(
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v28,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)Master_WarQuestSelectionMaster,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_GachaAppendEntity__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_GachaAppendEntity__GetEnumerator__);
   for ( i = 0;
         ;
         i += UserGachaDrawLogMaster__GetDrawLogNum(
@@ -180,11 +180,11 @@ int32_t __fastcall GachaAppendMaster__GetAppendSummonState(
   {
     v24 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v28,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_GachaAppendEntity__MoveNext__);
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_GachaAppendEntity__MoveNext__);
     if ( !v24 )
       break;
     if ( !v28.fields.current )
-      sub_B7076C(v24, v25);
+      sub_B7769C(v24, v25);
     v21 = GachaAppendMaster_TypeInfo;
     klass = (int32_t)v28.fields.current[1].klass;
     klass_high = HIDWORD(v28.fields.current[1].klass);
@@ -197,10 +197,10 @@ int32_t __fastcall GachaAppendMaster__GetAppendSummonState(
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v28,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_GachaAppendEntity__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_GachaAppendEntity__Dispose__);
   if ( !entity )
 LABEL_51:
-    sub_B7076C(Master_WarQuestSelectionMaster, v8);
+    sub_B7769C(Master_WarQuestSelectionMaster, v8);
   v26 = *(&entity->fields.id + 1);
   result = 2;
   if ( v26 >= 1 && i >= v26 )
@@ -218,16 +218,16 @@ GachaAppendEntity_o *__fastcall GachaAppendMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4355A26 & 1) == 0 )
+  if ( (byte_438F128 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_GachaAppendMaster__GachaAppendEntity__string__GetEntity__);
-    byte_4355A26 = 1;
+    sub_B775C4(&Method_DataMasterBase_GachaAppendMaster__GachaAppendEntity__string__GetEntity__);
+    byte_438F128 = 1;
   }
   PK = GachaAppendEntity__CreatePK(gachaId, idx, *(const MethodInfo **)&idx);
   return (GachaAppendEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                   (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                   PK,
-                                  (const MethodInfo_21C0890 *)Method_DataMasterBase_GachaAppendMaster__GachaAppendEntity__string__GetEntity__);
+                                  (const MethodInfo_21FBCE4 *)Method_DataMasterBase_GachaAppendMaster__GachaAppendEntity__string__GetEntity__);
 }
 
 
@@ -257,30 +257,30 @@ System_Collections_Generic_List_GachaAppendEntity__o *__fastcall GachaAppendMast
   int32_t *v23; // x11
   __int64 v24; // x0
 
-  if ( (byte_4355A28 & 1) == 0 )
+  if ( (byte_438F12A & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
-    sub_B70694(&GachaAppendEntity_TypeInfo);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
-    sub_B70694(&System_Collections_IEnumerator_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_GachaAppendEntity__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_GachaAppendEntity___ctor__);
-    sub_B70694(&System_Collections_Generic_List_GachaAppendEntity__TypeInfo);
-    byte_4355A28 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+    sub_B775C4(&GachaAppendEntity_TypeInfo);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
+    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_GachaAppendEntity__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GachaAppendEntity___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_GachaAppendEntity__TypeInfo);
+    byte_438F12A = 1;
   }
-  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_GachaAppendEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_GachaAppendEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v5,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_GachaAppendEntity___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_GachaAppendEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
-    sub_B7076C(0LL, v6);
+    sub_B7769C(0LL, v6);
   Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
                  list,
-                 (const MethodInfo_2C865F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_2CC56C8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B7076C(0LL, v8);
+    sub_B7769C(0LL, v8);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -300,7 +300,7 @@ System_Collections_Generic_List_GachaAppendEntity__o *__fastcall GachaAppendMast
     else
     {
 LABEL_9:
-      p_method = sub_B08590(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_B0F4C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -323,7 +323,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v17 = sub_B08590(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v17 = sub_B0F4C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v18 = (EventMissionProgressRequest_Argument_ProgressData_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v17)(
                                                                    Enumerator,
@@ -334,18 +334,18 @@ LABEL_16:
     if ( *(&v18->klass->_2.bitflags2 + 1) < (unsigned int)v20
       || (GachaAppendEntity_c *)v18->klass->_2.typeHierarchy[v20 - 1] != GachaAppendEntity_TypeInfo )
     {
-      sub_B70A60(v18);
+      sub_B77990(v18);
 LABEL_32:
-      sub_B7076C(v18, v19);
+      sub_B7769C(v18, v19);
     }
     if ( v18->fields.addCount == groupId )
     {
       if ( !v5 )
-        sub_B7076C(v18, GachaAppendEntity_TypeInfo);
+        sub_B7769C(v18, GachaAppendEntity_TypeInfo);
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
         v5,
         v18,
-        (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_GachaAppendEntity__Add__);
+        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_GachaAppendEntity__Add__);
     }
   }
   v21 = Enumerator->klass;
@@ -365,7 +365,7 @@ LABEL_32:
   else
   {
 LABEL_28:
-    v24 = sub_B08590(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v24 = sub_B0F4C0(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v24)(Enumerator, *(_QWORD *)(v24 + 8));
   return (System_Collections_Generic_List_GachaAppendEntity__o *)v5;
@@ -382,15 +382,15 @@ bool __fastcall GachaAppendMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4355A27 & 1) == 0 )
+  if ( (byte_438F129 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_GachaAppendMaster__GachaAppendEntity__string__TryGetEntity__);
-    byte_4355A27 = 1;
+    sub_B775C4(&Method_DataMasterBase_GachaAppendMaster__GachaAppendEntity__string__TryGetEntity__);
+    byte_438F129 = 1;
   }
   PK = GachaAppendEntity__CreatePK(gachaId, idx, *(const MethodInfo **)&gachaId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_GachaAppendMaster__GachaAppendEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_GachaAppendMaster__GachaAppendEntity__string__TryGetEntity__);
 }

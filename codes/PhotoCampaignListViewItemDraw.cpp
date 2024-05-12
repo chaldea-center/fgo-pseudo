@@ -18,11 +18,11 @@ void __fastcall PhotoCampaignListViewItemDraw__SetInput(
   UnityEngine_Object_o *maskSprite; // x21
   const MethodInfo *v13; // x2
 
-  if ( (byte_4351B66 & 1) == 0 )
+  if ( (byte_438B2ED & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4351B66 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438B2ED = 1;
   }
   if ( item )
   {
@@ -46,7 +46,7 @@ void __fastcall PhotoCampaignListViewItemDraw__SetInput(
             goto LABEL_44;
           maskLb = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                 maskLb,
-                                                (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Collider___);
           if ( !maskLb )
             goto LABEL_44;
           UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)maskLb, isInput, 0LL);
@@ -136,7 +136,7 @@ LABEL_42:
       }
     }
 LABEL_44:
-    sub_B7076C(maskLb, item);
+    sub_B7769C(maskLb, item);
   }
 }
 
@@ -155,17 +155,17 @@ void __fastcall PhotoCampaignListViewItemDraw__SetItem(
   UnityEngine_Object_o *maskSprite; // x21
   const MethodInfo *v13; // x2
 
-  if ( (byte_4351B65 & 1) == 0 )
+  if ( (byte_438B2EC & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4351B65 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438B2EC = 1;
   }
   if ( item && mode )
   {
     servantFaceIcon = this->fields.servantFaceIcon;
     if ( servantFaceIcon )
     {
-      ServantFaceIconComponent__Set_31406992(
+      ServantFaceIconComponent__Set_31684224(
         servantFaceIcon,
         item->fields.userSvtEntity,
         item->fields.iconLabelInfo1,
@@ -200,7 +200,7 @@ void __fastcall PhotoCampaignListViewItemDraw__SetItem(
                 servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.partyIcon;
                 if ( !servantFaceIcon )
                   goto LABEL_46;
-                FlashingIconComponent__Set_21993868(
+                FlashingIconComponent__Set_22311984(
                   (FlashingIconComponent_o *)servantFaceIcon,
                   item->fields.partyIndex >= 0,
                   0LL);
@@ -293,7 +293,7 @@ LABEL_44:
       }
     }
 LABEL_46:
-    sub_B7076C(servantFaceIcon, item);
+    sub_B7769C(servantFaceIcon, item);
   }
 }
 
@@ -309,12 +309,12 @@ void __fastcall PhotoCampaignListViewItemDraw__SetMaskInfo(
   __int64 *v7; // x8
 
   v4 = this;
-  if ( (byte_4351B67 & 1) == 0 )
+  if ( (byte_438B2EE & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_11774/*"SELECT_CANNOT"*/);
-    this = (PhotoCampaignListViewItemDraw_o *)sub_B70694(&StringLiteral_11797/*"SELECT_SERVANT_EVENT_JOIN"*/);
-    byte_4351B67 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_11837/*"SELECT_CANNOT"*/);
+    this = (PhotoCampaignListViewItemDraw_o *)sub_B775C4(&StringLiteral_11861/*"SELECT_SERVANT_EVENT_JOIN"*/);
+    byte_438B2EE = 1;
   }
   if ( !item )
     goto LABEL_27;
@@ -349,7 +349,7 @@ void __fastcall PhotoCampaignListViewItemDraw__SetMaskInfo(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v7 = &StringLiteral_11797/*"SELECT_SERVANT_EVENT_JOIN"*/;
+        v7 = &StringLiteral_11861/*"SELECT_SERVANT_EVENT_JOIN"*/;
 LABEL_24:
         this = (PhotoCampaignListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)*v7, 0LL);
         if ( maskLb )
@@ -358,7 +358,7 @@ LABEL_24:
           return;
         }
 LABEL_27:
-        sub_B7076C(this, item);
+        sub_B7769C(this, item);
       }
     }
   }
@@ -388,7 +388,7 @@ LABEL_27:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v7 = &StringLiteral_11774/*"SELECT_CANNOT"*/;
+    v7 = &StringLiteral_11837/*"SELECT_CANNOT"*/;
     goto LABEL_24;
   }
 }

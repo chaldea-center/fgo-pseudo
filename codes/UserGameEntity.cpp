@@ -1,14 +1,14 @@
 void __fastcall UserGameEntity___ctor(UserGameEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_435071B & 1) == 0 )
+  if ( (byte_4389D44 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_long___ctor__);
-    byte_435071B = 1;
+    sub_B775C4(&Method_DataEntityBase_long___ctor__);
+    byte_4389D44 = 1;
   }
   this->fields.mainSupportDeckId = 1;
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_21C0344 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_21FB798 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -30,29 +30,29 @@ int32_t __fastcall UserGameEntity__GetFriendPoint(UserGameEntity_o *this, const 
   __int64 v4; // x20
   void *MasterData_WarQuestSelectionMaster; // x0
 
-  if ( (byte_4350713 & 1) == 0 )
+  if ( (byte_4389D3C & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_TblUserMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    byte_4350713 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_TblUserMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    byte_4389D3C = 1;
   }
   v3 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3);
   if ( (*(_BYTE *)(v3 + 306) & 1) == 0 )
-    sub_B08394(*((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3));
+    sub_B0F2C4(*((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3));
   v4 = **(_QWORD **)(v3 + 192);
   if ( (*(_BYTE *)(v4 + 306) & 1) == 0 )
-    sub_B08394(v4);
+    sub_B0F2C4(v4);
   MasterData_WarQuestSelectionMaster = **(void ***)(v4 + 184);
   if ( !MasterData_WarQuestSelectionMaster
     || (MasterData_WarQuestSelectionMaster = DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                (DataManager_o *)MasterData_WarQuestSelectionMaster,
-                                               (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_TblUserMaster___)) == 0LL
+                                               (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_TblUserMaster___)) == 0LL
     || (MasterData_WarQuestSelectionMaster = TblUserMaster__getUserData(
                                                (TblUserMaster_o *)MasterData_WarQuestSelectionMaster,
                                                this->fields.userId,
                                                0LL)) == 0LL )
   {
-    sub_B7076C(MasterData_WarQuestSelectionMaster, method);
+    sub_B7769C(MasterData_WarQuestSelectionMaster, method);
   }
   return *((_DWORD *)MasterData_WarQuestSelectionMaster + 6);
 }
@@ -68,25 +68,25 @@ int32_t __fastcall UserGameEntity__GetSpellImageId(int32_t genderType, int64_t e
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v10; // 0:x0.16
 
   v3 = equipId;
-  if ( (byte_4350716 & 1) == 0 )
+  if ( (byte_4389D3F & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_EquipMaster___);
-    sub_B70694(&Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__);
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4350716 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_EquipMaster___);
+    sub_B775C4(&Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__);
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4389D3F = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EquipMaster___)) == 0LL
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EquipMaster___)) == 0LL
     || (Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                       (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                                       v3,
-                                      (const MethodInfo_21C0440 *)Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__)) == 0LL )
+                                      (const MethodInfo_21FB894 *)Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__)) == 0LL )
   {
-    sub_B7076C(Instance, v6);
+    sub_B7769C(Instance, v6);
   }
   if ( genderType == 2 )
   {
@@ -105,7 +105,7 @@ int32_t __fastcall UserGameEntity__GetSpellImageId(int32_t genderType, int64_t e
   }
   *(_QWORD *)&v10.fields.currentCryptoKey = writeMasterDataThreadException;
   *(_QWORD *)&v10.fields.fakeValue = klass;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v10, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v10, 0LL);
 }
 
 
@@ -131,10 +131,10 @@ bool __fastcall UserGameEntity__IsNeedRecoverAct(UserGameEntity_o *this, const M
 {
   int64_t actRecoverAt; // x19
 
-  if ( (byte_435070A & 1) == 0 )
+  if ( (byte_4389D33 & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_435070A = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_4389D33 = 1;
   }
   actRecoverAt = this->fields.actRecoverAt;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -150,10 +150,10 @@ bool __fastcall UserGameEntity__IsNeedRecoverRp(UserGameEntity_o *this, const Me
 {
   int64_t rpRecoverAt; // x19
 
-  if ( (byte_435070F & 1) == 0 )
+  if ( (byte_4389D38 & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_435070F = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_4389D38 = 1;
   }
   rpRecoverAt = this->fields.rpRecoverAt;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -181,10 +181,10 @@ int64_t __fastcall UserGameEntity__getActAllRecoverTime(UserGameEntity_o *this, 
   int64_t actRecoverAt; // x19
   int64_t Time; // x0
 
-  if ( (byte_4350708 & 1) == 0 )
+  if ( (byte_4389D31 & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4350708 = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_4389D31 = 1;
   }
   actRecoverAt = this->fields.actRecoverAt;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -210,11 +210,11 @@ int64_t __fastcall UserGameEntity__getActNextRecoverTime(UserGameEntity_o *this,
   BalanceConfig_c *v5; // x0
   int64_t UerGameActRecoverCost; // x8
 
-  if ( (byte_4350709 & 1) == 0 )
+  if ( (byte_4389D32 & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4350709 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_4389D32 = 1;
   }
   actRecoverAt = this->fields.actRecoverAt;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -259,31 +259,31 @@ int64_t __fastcall UserGameEntity__getActiveUserEquipId(UserGameEntity_o *this, 
   __int64 v4; // x1
   __int64 v5; // x8
 
-  if ( (byte_4350719 & 1) == 0 )
+  if ( (byte_4389D42 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_UserDeckMaster___);
-    sub_B70694(&Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__GetEntity__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4350719 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_UserDeckMaster___);
+    sub_B775C4(&Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__GetEntity__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4389D42 = 1;
   }
-  result = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  result = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !result )
     goto LABEL_9;
   result = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
                       (DataManager_o *)result,
-                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserDeckMaster___);
+                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserDeckMaster___);
   if ( !result )
     goto LABEL_9;
   result = (int64_t)DataMasterBase_UserServantStorageMaster__UserServantEntity__long___GetEntity(
                       (DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *)result,
                       this->fields.activeDeckId,
-                      (const MethodInfo_21C0668 *)Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__GetEntity__);
+                      (const MethodInfo_21FBABC *)Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__GetEntity__);
   if ( !result )
     return result;
   v5 = *(_QWORD *)(result + 48);
   if ( !v5 )
 LABEL_9:
-    sub_B7076C(result, v4);
+    sub_B7769C(result, v4);
   return *(_QWORD *)(v5 + 24);
 }
 
@@ -297,11 +297,11 @@ int32_t __fastcall UserGameEntity__getBaseAct(UserGameEntity_o *this, const Meth
   __int64 actMax; // x8
   __int64 v8; // x9
 
-  if ( (byte_4350707 & 1) == 0 )
+  if ( (byte_4389D30 & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4350707 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_4389D30 = 1;
   }
   actRecoverAt = this->fields.actRecoverAt;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -339,11 +339,11 @@ int32_t __fastcall UserGameEntity__getBaseRp(UserGameEntity_o *this, const Metho
   int32_t UerGameRpMax; // w19
   __int64 v9; // x8
 
-  if ( (byte_435070B & 1) == 0 )
+  if ( (byte_4389D34 & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_435070B = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_4389D34 = 1;
   }
   rpRecoverAt = this->fields.rpRecoverAt;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -352,10 +352,10 @@ int32_t __fastcall UserGameEntity__getBaseRp(UserGameEntity_o *this, const Metho
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   Time = NetworkManager__getTime(0LL);
-  if ( !byte_434DEA0 )
+  if ( !byte_4387462 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    byte_434DEA0 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    byte_4387462 = 1;
   }
   v5 = rpRecoverAt - Time;
   v6 = BalanceConfig_TypeInfo;
@@ -418,11 +418,11 @@ bool __fastcall UserGameEntity__getCmdSpellInfo(
   __int64 v14; // x11
   int32_t v15; // w8
 
-  if ( (byte_4350711 & 1) == 0 )
+  if ( (byte_4389D3A & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4350711 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_4389D3A = 1;
   }
   commandSpellRecoverAt = this->fields.commandSpellRecoverAt;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -470,12 +470,12 @@ int32_t __fastcall UserGameEntity__getCommandSpell(UserGameEntity_o *this, const
   int32_t v6; // w0
   __int64 v7; // x8
 
-  if ( (byte_4350710 & 1) == 0 )
+  if ( (byte_4389D39 & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&StringLiteral_9862/*"ONE_COMMAND_SPELL"*/);
-    sub_B70694(&StringLiteral_8791/*"MAX_COMMAND_SPELL"*/);
-    byte_4350710 = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&StringLiteral_9921/*"ONE_COMMAND_SPELL"*/);
+    sub_B775C4(&StringLiteral_8847/*"MAX_COMMAND_SPELL"*/);
+    byte_4389D39 = 1;
   }
   commandSpellRecoverAt = this->fields.commandSpellRecoverAt;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -484,10 +484,10 @@ int32_t __fastcall UserGameEntity__getCommandSpell(UserGameEntity_o *this, const
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   v4 = commandSpellRecoverAt - NetworkManager__getTime(0LL);
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8791/*"MAX_COMMAND_SPELL"*/, 0LL);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8847/*"MAX_COMMAND_SPELL"*/, 0LL);
   if ( v4 >= 1 )
   {
-    v6 = ConstantMaster__getValue((System_String_o *)StringLiteral_9862/*"ONE_COMMAND_SPELL"*/, 0LL);
+    v6 = ConstantMaster__getValue((System_String_o *)StringLiteral_9921/*"ONE_COMMAND_SPELL"*/, 0LL);
     v7 = (v4 + v6 - 1) / v6;
     if ( v7 >= Value )
       return 0;
@@ -516,13 +516,13 @@ bool __fastcall UserGameEntity__getExpInfo(
   float v17; // s0
   struct DataMasterBase_array *v18; // x8
 
-  if ( (byte_4350712 & 1) == 0 )
+  if ( (byte_4389D3B & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMasterData_UserExpMaster___);
-    sub_B70694(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4350712 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserExpMaster___);
+    sub_B775C4(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4389D3B = 1;
   }
   lv = this->fields.lv;
   v10 = BalanceConfig_TypeInfo;
@@ -534,12 +534,12 @@ bool __fastcall UserGameEntity__getExpInfo(
   }
   if ( lv < v10->static_fields->UserLevelMax )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_18;
     Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                   Instance,
-                                  (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserExpMaster___);
+                                  (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserExpMaster___);
     v13 = this->fields.lv;
     v14 = (DataMasterBase_WarMaster__WarEntity__int__o *)Instance;
     if ( v13 >= 2 )
@@ -549,7 +549,7 @@ bool __fastcall UserGameEntity__getExpInfo(
       Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                     (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                                     v13 - 1,
-                                    (const MethodInfo_21C0440 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
+                                    (const MethodInfo_21FB894 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
       if ( !Instance )
         goto LABEL_18;
       datalist = Instance->fields.datalist;
@@ -563,7 +563,7 @@ bool __fastcall UserGameEntity__getExpInfo(
     Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                   v14,
                                   this->fields.lv,
-                                  (const MethodInfo_21C0440 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
+                                  (const MethodInfo_21FB894 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
     *exp = this->fields.exp - (_QWORD)datalist;
     if ( Instance )
     {
@@ -574,7 +574,7 @@ bool __fastcall UserGameEntity__getExpInfo(
       goto LABEL_17;
     }
 LABEL_18:
-    sub_B7076C(Instance, v12);
+    sub_B7769C(Instance, v12);
   }
   result = 0;
   v17 = 1.0;
@@ -598,10 +598,10 @@ int32_t __fastcall UserGameEntity__getRp(UserGameEntity_o *this, const MethodInf
   BalanceConfig_c *v4; // x0
 
   BaseRp = UserGameEntity__getBaseRp(this, method);
-  if ( !byte_434DEA0 )
+  if ( !byte_4387462 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    byte_434DEA0 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    byte_4387462 = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -621,10 +621,10 @@ int64_t __fastcall UserGameEntity__getRpAllRecoverTime(UserGameEntity_o *this, c
   int64_t rpRecoverAt; // x19
   int64_t Time; // x0
 
-  if ( (byte_435070D & 1) == 0 )
+  if ( (byte_4389D36 & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_435070D = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_4389D36 = 1;
   }
   rpRecoverAt = this->fields.rpRecoverAt;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -641,10 +641,10 @@ int32_t __fastcall UserGameEntity__getRpMax(UserGameEntity_o *this, const Method
 {
   BalanceConfig_c *v2; // x0
 
-  if ( (byte_435070C & 1) == 0 )
+  if ( (byte_4389D35 & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    byte_435070C = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    byte_4389D35 = 1;
   }
   v2 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -664,11 +664,11 @@ int64_t __fastcall UserGameEntity__getRpNextRecoverTime(UserGameEntity_o *this, 
   BalanceConfig_c *v5; // x0
   int64_t UerGameRpRecoverCost; // x8
 
-  if ( (byte_435070E & 1) == 0 )
+  if ( (byte_4389D37 & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_435070E = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_4389D37 = 1;
   }
   rpRecoverAt = this->fields.rpRecoverAt;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -709,14 +709,14 @@ int64_t __fastcall UserGameEntity__getRpNextRecoverTime(UserGameEntity_o *this, 
 
 bool __fastcall UserGameEntity__getTutorialFlag(UserGameEntity_o *this, int32_t flagId, const MethodInfo *method)
 {
-  if ( (byte_4350717 & 1) == 0 )
+  if ( (byte_4389D40 & 1) == 0 )
   {
-    sub_B70694(&TutorialFlag_TypeInfo);
-    byte_4350717 = 1;
+    sub_B775C4(&TutorialFlag_TypeInfo);
+    byte_4389D40 = 1;
   }
   if ( (BYTE3(TutorialFlag_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  return TutorialFlag__Get_29045464(this, flagId, 0LL);
+  return TutorialFlag__Get_29515964(this, flagId, 0LL);
 }
 
 
@@ -736,10 +736,10 @@ int32_t __fastcall UserGameEntity__get_CommandCodeKeep(UserGameEntity_o *this, c
 {
   BalanceConfig_c *v2; // x0
 
-  if ( (byte_435071A & 1) == 0 )
+  if ( (byte_4389D43 & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    byte_435071A = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    byte_4389D43 = 1;
   }
   v2 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -766,26 +766,26 @@ int32_t __fastcall UserGameEntity__get_SpellImageId(UserGameEntity_o *this, cons
   const MethodInfo *v12; // x2
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v14; // 0:x0.16
 
-  if ( (byte_4350714 & 1) == 0 )
+  if ( (byte_4389D3D & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_UserEquipMaster___);
-    sub_B70694(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4350714 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_UserEquipMaster___);
+    sub_B775C4(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4389D3D = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (MasterData_WarQuestSelectionMaster = (DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(Instance, (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserEquipMaster___),
+    || (MasterData_WarQuestSelectionMaster = (DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(Instance, (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserEquipMaster___),
         Instance = (DataManager_o *)UserGameEntity__getActiveUserEquipId(this, v6),
         !MasterData_WarQuestSelectionMaster) )
   {
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   Entity = DataMasterBase_UserServantStorageMaster__UserServantEntity__long___GetEntity(
              MasterData_WarQuestSelectionMaster,
              (int64_t)Instance,
-             (const MethodInfo_21C0668 *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
+             (const MethodInfo_21FBABC *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
   if ( Entity )
   {
     genderType = this->fields.genderType;
@@ -798,7 +798,7 @@ int32_t __fastcall UserGameEntity__get_SpellImageId(UserGameEntity_o *this, cons
     }
     *(_QWORD *)&v14.fields.currentCryptoKey = fakeValue;
     *(_QWORD *)&v14.fields.fakeValue = v9;
-    v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v14, 0LL);
+    v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v14, 0LL);
     LODWORD(Entity) = UserGameEntity__GetSpellImageId(genderType, v11, v12);
   }
   return (int)Entity;
@@ -825,29 +825,29 @@ int32_t __fastcall UserGameEntity__get_SpellImageIdBattle(UserGameEntity_o *this
   int32_t v18; // w19
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v19; // 0:x0.16
 
-  if ( (byte_4350715 & 1) == 0 )
+  if ( (byte_4389D3E & 1) == 0 )
   {
-    sub_B70694(&BattleRootComponent_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMasterData_UserEquipMaster___);
-    sub_B70694(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4350715 = 1;
+    sub_B775C4(&BattleRootComponent_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserEquipMaster___);
+    sub_B775C4(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4389D3E = 1;
   }
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_28;
-  MasterData_WarQuestSelectionMaster = (DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *)DataManager__GetMasterData_WarQuestSelectionMaster_((DataManager_o *)Instance, (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserEquipMaster___);
+  MasterData_WarQuestSelectionMaster = (DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *)DataManager__GetMasterData_WarQuestSelectionMaster_((DataManager_o *)Instance, (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserEquipMaster___);
   Instance = UserGameEntity__getActiveUserEquipId(this, v6);
   if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_28;
   Entity = DataMasterBase_UserServantStorageMaster__UserServantEntity__long___GetEntity(
              MasterData_WarQuestSelectionMaster,
              Instance,
-             (const MethodInfo_21C0668 *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+             (const MethodInfo_21FBABC *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
     goto LABEL_28;
   v8 = *(_QWORD *)(Instance + 24);
@@ -891,11 +891,11 @@ int32_t __fastcall UserGameEntity__get_SpellImageIdBattle(UserGameEntity_o *this
   }
   *(_QWORD *)&v19.fields.currentCryptoKey = fakeValue;
   *(_QWORD *)&v19.fields.fakeValue = v14;
-  v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v19, 0LL);
+  v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v19, 0LL);
   Instance = UserGameEntity__GetSpellImageId(v13, v16, v17);
   if ( !*(_QWORD *)(v10 + 56) )
 LABEL_28:
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   v18 = Instance;
   result = BattleData__GetOverwriteCommandSpellIcon(*(BattleData_o **)(v10 + 56), 0LL);
   if ( !result )
@@ -906,12 +906,12 @@ LABEL_28:
 
 void __fastcall UserGameEntity__setTutorialFlag(UserGameEntity_o *this, int32_t flagId, const MethodInfo *method)
 {
-  if ( (byte_4350718 & 1) == 0 )
+  if ( (byte_4389D41 & 1) == 0 )
   {
-    sub_B70694(&TutorialFlag_TypeInfo);
-    byte_4350718 = 1;
+    sub_B775C4(&TutorialFlag_TypeInfo);
+    byte_4389D41 = 1;
   }
   if ( (BYTE3(TutorialFlag_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  TutorialFlag__Set_29046096(this, flagId, 0LL);
+  TutorialFlag__Set_29516596(this, flagId, 0LL);
 }

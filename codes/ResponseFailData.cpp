@@ -6,12 +6,12 @@ void __fastcall ResponseFailData___ctor(ResponseFailData_o *this, ResponseData_o
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !data )
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   ResponseFailData__Init(this, data->fields.nid, data->fields.resCode, data->fields.fail, v7);
 }
 
 
-void __fastcall ResponseFailData___ctor_29655072(
+void __fastcall ResponseFailData___ctor_30129668(
         ResponseFailData_o *this,
         System_String_o *nid,
         System_String_o *resCode,
@@ -25,7 +25,7 @@ void __fastcall ResponseFailData___ctor_29655072(
 }
 
 
-void __fastcall ResponseFailData___ctor_29655144(
+void __fastcall ResponseFailData___ctor_30129740(
         ResponseFailData_o *this,
         System_String_o *nid,
         System_String_o *resCode,
@@ -35,10 +35,10 @@ void __fastcall ResponseFailData___ctor_29655144(
   System_Collections_Generic_Dictionary_string__object__o *Dictionary; // x3
   const MethodInfo *v10; // x4
 
-  if ( (byte_435430C & 1) == 0 )
+  if ( (byte_438DBCA & 1) == 0 )
   {
-    sub_B70694(&JsonManager_TypeInfo);
-    byte_435430C = 1;
+    sub_B775C4(&JsonManager_TypeInfo);
+    byte_438DBCA = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
@@ -135,25 +135,25 @@ void __fastcall ResponseFailData__Init(
   System_String_o *v86; // x0
   int32_t *p_errorType; // x19
 
-  if ( (byte_435430D & 1) == 0 )
+  if ( (byte_438DBCB & 1) == 0 )
   {
-    sub_B70694(&bool_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B70694(&StringLiteral_23339/*"url"*/);
-    sub_B70694(&StringLiteral_18076/*"csId"*/);
-    sub_B70694(&StringLiteral_22255/*"sandboxDomain"*/);
-    sub_B70694(&StringLiteral_22256/*"sandboxSeurity"*/);
-    sub_B70694(&StringLiteral_22254/*"sandboxAssetsDomain"*/);
-    sub_B70694(&StringLiteral_22257/*"sandboxWebviewDomain"*/);
-    sub_B70694(&StringLiteral_18266/*"detail"*/);
-    sub_B70694(&StringLiteral_18681/*"errorType"*/);
-    sub_B70694(&StringLiteral_23079/*"title"*/);
-    sub_B70694(&StringLiteral_16472/*"action"*/);
-    byte_435430D = 1;
+    sub_B775C4(&bool_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_B775C4(&StringLiteral_23440/*"url"*/);
+    sub_B775C4(&StringLiteral_18164/*"csId"*/);
+    sub_B775C4(&StringLiteral_22356/*"sandboxDomain"*/);
+    sub_B775C4(&StringLiteral_22357/*"sandboxSeurity"*/);
+    sub_B775C4(&StringLiteral_22355/*"sandboxAssetsDomain"*/);
+    sub_B775C4(&StringLiteral_22358/*"sandboxWebviewDomain"*/);
+    sub_B775C4(&StringLiteral_18354/*"detail"*/);
+    sub_B775C4(&StringLiteral_18769/*"errorType"*/);
+    sub_B775C4(&StringLiteral_23180/*"title"*/);
+    sub_B775C4(&StringLiteral_16550/*"action"*/);
+    byte_438DBCB = 1;
   }
   this->fields.nid = nid;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)nid,
     (System_String_array **)resCode,
@@ -163,7 +163,7 @@ void __fastcall ResponseFailData__Init(
     v6,
     v7);
   this->fields.resCode = resCode;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.resCode,
     (System_Int32_array **)resCode,
     v12,
@@ -176,13 +176,13 @@ void __fastcall ResponseFailData__Init(
     goto LABEL_49;
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)failList,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_18076/*"csId"*/,
-         (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_18164/*"csId"*/,
+         (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
              (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)failList,
-             (System_Type_o *)StringLiteral_18076/*"csId"*/,
-             (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (System_Type_o *)StringLiteral_18164/*"csId"*/,
+             (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_49;
     v26 = (struct System_String_o *)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
@@ -197,16 +197,16 @@ void __fastcall ResponseFailData__Init(
     p_csId = &this->fields.csId;
     v26 = 0LL;
   }
-  sub_B70630((BattleServantConfConponent_o *)p_csId, (System_Int32_array **)v26, v20, v21, v22, v23, v24, v25);
+  sub_B77560((BattleServantConfConponent_o *)p_csId, (System_Int32_array **)v26, v20, v21, v22, v23, v24, v25);
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)failList,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_16472/*"action"*/,
-         (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_16550/*"action"*/,
+         (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
              (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)failList,
-             (System_Type_o *)StringLiteral_16472/*"action"*/,
-             (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (System_Type_o *)StringLiteral_16550/*"action"*/,
+             (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_49;
     v34 = (struct System_String_o *)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
@@ -221,16 +221,16 @@ void __fastcall ResponseFailData__Init(
     p_action = &this->fields.action;
     v34 = 0LL;
   }
-  sub_B70630((BattleServantConfConponent_o *)p_action, (System_Int32_array **)v34, v28, v29, v30, v31, v32, v33);
+  sub_B77560((BattleServantConfConponent_o *)p_action, (System_Int32_array **)v34, v28, v29, v30, v31, v32, v33);
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)failList,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_23079/*"title"*/,
-         (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_23180/*"title"*/,
+         (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
              (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)failList,
-             (System_Type_o *)StringLiteral_23079/*"title"*/,
-             (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (System_Type_o *)StringLiteral_23180/*"title"*/,
+             (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_49;
     v42 = (struct System_String_o *)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
@@ -245,16 +245,16 @@ void __fastcall ResponseFailData__Init(
     p_title = &this->fields.title;
     v42 = 0LL;
   }
-  sub_B70630((BattleServantConfConponent_o *)p_title, (System_Int32_array **)v42, v36, v37, v38, v39, v40, v41);
+  sub_B77560((BattleServantConfConponent_o *)p_title, (System_Int32_array **)v42, v36, v37, v38, v39, v40, v41);
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)failList,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_18266/*"detail"*/,
-         (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_18354/*"detail"*/,
+         (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
              (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)failList,
-             (System_Type_o *)StringLiteral_18266/*"detail"*/,
-             (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (System_Type_o *)StringLiteral_18354/*"detail"*/,
+             (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_49;
     v50 = (struct System_String_o *)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
@@ -269,16 +269,16 @@ void __fastcall ResponseFailData__Init(
     p_detail = &this->fields.detail;
     v50 = 0LL;
   }
-  sub_B70630((BattleServantConfConponent_o *)p_detail, (System_Int32_array **)v50, v44, v45, v46, v47, v48, v49);
+  sub_B77560((BattleServantConfConponent_o *)p_detail, (System_Int32_array **)v50, v44, v45, v46, v47, v48, v49);
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)failList,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_23339/*"url"*/,
-         (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_23440/*"url"*/,
+         (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
              (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)failList,
-             (System_Type_o *)StringLiteral_23339/*"url"*/,
-             (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (System_Type_o *)StringLiteral_23440/*"url"*/,
+             (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_49;
     v58 = (struct System_String_o *)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
@@ -293,16 +293,16 @@ void __fastcall ResponseFailData__Init(
     p_url = &this->fields.url;
     v58 = 0LL;
   }
-  sub_B70630((BattleServantConfConponent_o *)p_url, (System_Int32_array **)v58, v52, v53, v54, v55, v56, v57);
+  sub_B77560((BattleServantConfConponent_o *)p_url, (System_Int32_array **)v58, v52, v53, v54, v55, v56, v57);
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)failList,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_22256/*"sandboxSeurity"*/,
-         (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_22357/*"sandboxSeurity"*/,
+         (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
              (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)failList,
-             (System_Type_o *)StringLiteral_22256/*"sandboxSeurity"*/,
-             (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (System_Type_o *)StringLiteral_22357/*"sandboxSeurity"*/,
+             (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_49;
     v60 = (System_String_o *)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
@@ -319,13 +319,13 @@ void __fastcall ResponseFailData__Init(
   this->fields.sandboxSeurity = v61;
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)failList,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_22255/*"sandboxDomain"*/,
-         (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_22356/*"sandboxDomain"*/,
+         (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
              (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)failList,
-             (System_Type_o *)StringLiteral_22255/*"sandboxDomain"*/,
-             (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (System_Type_o *)StringLiteral_22356/*"sandboxDomain"*/,
+             (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_49;
     v68 = (struct System_String_o *)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
@@ -340,16 +340,16 @@ void __fastcall ResponseFailData__Init(
     p_sandboxDomain = &this->fields.sandboxDomain;
     v68 = 0LL;
   }
-  sub_B70630((BattleServantConfConponent_o *)p_sandboxDomain, (System_Int32_array **)v68, v62, v63, v64, v65, v66, v67);
+  sub_B77560((BattleServantConfConponent_o *)p_sandboxDomain, (System_Int32_array **)v68, v62, v63, v64, v65, v66, v67);
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)failList,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_22254/*"sandboxAssetsDomain"*/,
-         (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_22355/*"sandboxAssetsDomain"*/,
+         (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
              (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)failList,
-             (System_Type_o *)StringLiteral_22254/*"sandboxAssetsDomain"*/,
-             (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (System_Type_o *)StringLiteral_22355/*"sandboxAssetsDomain"*/,
+             (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_49;
     v76 = (struct System_String_o *)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
@@ -364,7 +364,7 @@ void __fastcall ResponseFailData__Init(
     p_sandboxAssetsDomain = &this->fields.sandboxAssetsDomain;
     v76 = 0LL;
   }
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)p_sandboxAssetsDomain,
     (System_Int32_array **)v76,
     v70,
@@ -375,13 +375,13 @@ void __fastcall ResponseFailData__Init(
     v75);
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)failList,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_22257/*"sandboxWebviewDomain"*/,
-         (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_22358/*"sandboxWebviewDomain"*/,
+         (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
              (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)failList,
-             (System_Type_o *)StringLiteral_22257/*"sandboxWebviewDomain"*/,
-             (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (System_Type_o *)StringLiteral_22358/*"sandboxWebviewDomain"*/,
+             (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_49;
     v84 = (struct System_String_o *)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
@@ -396,7 +396,7 @@ void __fastcall ResponseFailData__Init(
     p_sandboxWebviewDomain = &this->fields.sandboxWebviewDomain;
     v84 = 0LL;
   }
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)p_sandboxWebviewDomain,
     (System_Int32_array **)v84,
     v78,
@@ -407,19 +407,19 @@ void __fastcall ResponseFailData__Init(
     v83);
   if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)failList,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_18681/*"errorType"*/,
-          (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_18769/*"errorType"*/,
+          (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     p_errorType = &this->fields.errorType;
     goto LABEL_48;
   }
   Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
            (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)failList,
-           (System_Type_o *)StringLiteral_18681/*"errorType"*/,
-           (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           (System_Type_o *)StringLiteral_18769/*"errorType"*/,
+           (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !Item )
 LABEL_49:
-    sub_B7076C(Item, v19);
+    sub_B7769C(Item, v19);
   v86 = (System_String_o *)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
                              Item,
                              Item->klass->vtable[4].methodPtr);

@@ -12,6 +12,6 @@ void __fastcall UserPresentHistoryListViewItemDraw__SetItem(
         const MethodInfo *method)
 {
   if ( !item || (this = (UserPresentHistoryListViewItemDraw_o *)this->fields.messageLabel) == 0LL )
-    sub_B7076C(this, item);
+    sub_B7769C(this, item);
   UILabel__set_text((UILabel_o *)this, item->fields._Message_k__BackingField, 0LL);
 }

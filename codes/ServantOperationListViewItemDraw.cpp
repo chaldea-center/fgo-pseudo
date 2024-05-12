@@ -11,7 +11,7 @@ int32_t __fastcall ServantOperationListViewItemDraw__GetDispMode(int32_t initMod
   if ( (unsigned int)(initMode - 1) > 2 )
     return 0;
   else
-    return dword_32FD344[initMode - 1];
+    return dword_3330664[initMode - 1];
 }
 
 
@@ -27,22 +27,22 @@ System_String_o *__fastcall ServantOperationListViewItemDraw__GetStatusText(
   LocalizationManager_c *v8; // x0
   UserServantEntity_o *v10; // x0
 
-  if ( (byte_4355BDE & 1) == 0 )
+  if ( (byte_438F25C & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_9426/*"NONSELECT_MATERIAL"*/);
-    sub_B70694(&StringLiteral_11783/*"SELECT_LOCK"*/);
-    sub_B70694(&StringLiteral_11779/*"SELECT_FAVORITE"*/);
-    sub_B70694(&StringLiteral_12671/*"SUPPORT_MEMBER"*/);
-    sub_B70694(&StringLiteral_11796/*"SELECT_PUSH"*/);
-    sub_B70694(&StringLiteral_11774/*"SELECT_CANNOT"*/);
-    sub_B70694(&StringLiteral_11775/*"SELECT_CHOICE"*/);
-    sub_B70694(&StringLiteral_11797/*"SELECT_SERVANT_EVENT_JOIN"*/);
-    sub_B70694(&StringLiteral_11793/*"SELECT_PARTY"*/);
-    sub_B70694(&StringLiteral_9458/*"NOT_SELECT_EQUIPED"*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    this = (ServantOperationListViewItemDraw_o *)sub_B70694(&StringLiteral_11795/*"SELECT_PROTECTED_EVENT_SVT"*/);
-    byte_4355BDE = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_9484/*"NONSELECT_MATERIAL"*/);
+    sub_B775C4(&StringLiteral_11847/*"SELECT_LOCK"*/);
+    sub_B775C4(&StringLiteral_11843/*"SELECT_FAVORITE"*/);
+    sub_B775C4(&StringLiteral_12735/*"SUPPORT_MEMBER"*/);
+    sub_B775C4(&StringLiteral_11860/*"SELECT_PUSH"*/);
+    sub_B775C4(&StringLiteral_11837/*"SELECT_CANNOT"*/);
+    sub_B775C4(&StringLiteral_11838/*"SELECT_CHOICE"*/);
+    sub_B775C4(&StringLiteral_11861/*"SELECT_SERVANT_EVENT_JOIN"*/);
+    sub_B775C4(&StringLiteral_11857/*"SELECT_PARTY"*/);
+    sub_B775C4(&StringLiteral_9516/*"NOT_SELECT_EQUIPED"*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    this = (ServantOperationListViewItemDraw_o *)sub_B775C4(&StringLiteral_11859/*"SELECT_PROTECTED_EVENT_SVT"*/);
+    byte_438F25C = 1;
   }
   if ( !item )
     goto LABEL_68;
@@ -53,7 +53,7 @@ System_String_o *__fastcall ServantOperationListViewItemDraw__GetStatusText(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = &StringLiteral_11796/*"SELECT_PUSH"*/;
+    v6 = &StringLiteral_11860/*"SELECT_PUSH"*/;
     return LocalizationManager__Get((System_String_o *)*v6, 0LL);
   }
   UserServantEntity_k__BackingField = item->fields._UserServantEntity_k__BackingField;
@@ -64,7 +64,7 @@ System_String_o *__fastcall ServantOperationListViewItemDraw__GetStatusText(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = &StringLiteral_11797/*"SELECT_SERVANT_EVENT_JOIN"*/;
+    v6 = &StringLiteral_11861/*"SELECT_SERVANT_EVENT_JOIN"*/;
     return LocalizationManager__Get((System_String_o *)*v6, 0LL);
   }
   if ( item->fields.attribute )
@@ -84,7 +84,7 @@ System_String_o *__fastcall ServantOperationListViewItemDraw__GetStatusText(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = &StringLiteral_11775/*"SELECT_CHOICE"*/;
+    v6 = &StringLiteral_11838/*"SELECT_CHOICE"*/;
     return LocalizationManager__Get((System_String_o *)*v6, 0LL);
   }
   if ( item->fields._IsNotSelection_k__BackingField )
@@ -94,7 +94,7 @@ System_String_o *__fastcall ServantOperationListViewItemDraw__GetStatusText(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = &StringLiteral_9426/*"NONSELECT_MATERIAL"*/;
+    v6 = &StringLiteral_9484/*"NONSELECT_MATERIAL"*/;
     return LocalizationManager__Get((System_String_o *)*v6, 0LL);
   }
   if ( item->fields._IsLock_k__BackingField )
@@ -104,7 +104,7 @@ System_String_o *__fastcall ServantOperationListViewItemDraw__GetStatusText(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = &StringLiteral_11783/*"SELECT_LOCK"*/;
+    v6 = &StringLiteral_11847/*"SELECT_LOCK"*/;
     return LocalizationManager__Get((System_String_o *)*v6, 0LL);
   }
   if ( item->fields._IsFavorite_k__BackingField )
@@ -114,7 +114,7 @@ System_String_o *__fastcall ServantOperationListViewItemDraw__GetStatusText(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = &StringLiteral_11779/*"SELECT_FAVORITE"*/;
+    v6 = &StringLiteral_11843/*"SELECT_FAVORITE"*/;
     return LocalizationManager__Get((System_String_o *)*v6, 0LL);
   }
   if ( item->fields._IsParty_k__BackingField )
@@ -124,7 +124,7 @@ System_String_o *__fastcall ServantOperationListViewItemDraw__GetStatusText(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = &StringLiteral_11793/*"SELECT_PARTY"*/;
+    v6 = &StringLiteral_11857/*"SELECT_PARTY"*/;
     return LocalizationManager__Get((System_String_o *)*v6, 0LL);
   }
   if ( item->fields._IsUseSupportServant_k__BackingField )
@@ -134,7 +134,7 @@ System_String_o *__fastcall ServantOperationListViewItemDraw__GetStatusText(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = &StringLiteral_12671/*"SUPPORT_MEMBER"*/;
+    v6 = &StringLiteral_12735/*"SUPPORT_MEMBER"*/;
     return LocalizationManager__Get((System_String_o *)*v6, 0LL);
   }
   if ( item->fields._IsCommandCodeEquiped_k__BackingField )
@@ -144,7 +144,7 @@ System_String_o *__fastcall ServantOperationListViewItemDraw__GetStatusText(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = &StringLiteral_9458/*"NOT_SELECT_EQUIPED"*/;
+    v6 = &StringLiteral_9516/*"NOT_SELECT_EQUIPED"*/;
     return LocalizationManager__Get((System_String_o *)*v6, 0LL);
   }
   v10 = item->fields._UserServantEntity_k__BackingField;
@@ -160,7 +160,7 @@ System_String_o *__fastcall ServantOperationListViewItemDraw__GetStatusText(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v6 = &StringLiteral_11795/*"SELECT_PROTECTED_EVENT_SVT"*/;
+        v6 = &StringLiteral_11859/*"SELECT_PROTECTED_EVENT_SVT"*/;
         return LocalizationManager__Get((System_String_o *)*v6, 0LL);
       }
       if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) == 0
@@ -172,11 +172,11 @@ System_String_o *__fastcall ServantOperationListViewItemDraw__GetStatusText(
 LABEL_18:
       j_il2cpp_runtime_class_init_0(v8);
 LABEL_19:
-      v6 = &StringLiteral_11774/*"SELECT_CANNOT"*/;
+      v6 = &StringLiteral_11837/*"SELECT_CANNOT"*/;
       return LocalizationManager__Get((System_String_o *)*v6, 0LL);
     }
 LABEL_68:
-    sub_B7076C(this, item);
+    sub_B7769C(this, item);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -208,12 +208,12 @@ void __fastcall ServantOperationListViewItemDraw__SetDisp(
   UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
 
   v6 = this;
-  if ( (byte_4355BE0 & 1) == 0 )
+  if ( (byte_438F25E & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    this = (ServantOperationListViewItemDraw_o *)sub_B70694(&StringLiteral_22192/*"ribbon_noblephantasmup_01"*/);
-    byte_4355BE0 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    this = (ServantOperationListViewItemDraw_o *)sub_B775C4(&StringLiteral_22293/*"ribbon_noblephantasmup_01"*/);
+    byte_438F25E = 1;
   }
   if ( !item )
     goto LABEL_22;
@@ -277,7 +277,7 @@ void __fastcall ServantOperationListViewItemDraw__SetDisp(
       {
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       }
-      AtlasManager__SetEventSprite(v22, (System_String_o *)StringLiteral_22192/*"ribbon_noblephantasmup_01"*/, 0LL);
+      AtlasManager__SetEventSprite(v22, (System_String_o *)StringLiteral_22293/*"ribbon_noblephantasmup_01"*/, 0LL);
       if ( item->fields.isNeedAdjustIconLabelScale )
       {
         this = (ServantOperationListViewItemDraw_o *)v6->fields.servantFaceIcon;
@@ -296,7 +296,7 @@ void __fastcall ServantOperationListViewItemDraw__SetDisp(
         (this = (ServantOperationListViewItemDraw_o *)v6->fields.dragSelect) == 0LL) )
   {
 LABEL_22:
-    sub_B7076C(this, item);
+    sub_B7769C(this, item);
   }
   DragSelectComponent__Set(
     (DragSelectComponent_o *)this,
@@ -317,10 +317,10 @@ void __fastcall ServantOperationListViewItemDraw__SetInput(
   const MethodInfo *v9; // x3
   struct UICommonButton_o *v10; // x0
 
-  if ( (byte_4355BDF & 1) == 0 )
+  if ( (byte_438F25D & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355BDF = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438F25D = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -338,7 +338,7 @@ void __fastcall ServantOperationListViewItemDraw__SetInput(
             v10->klass->vtable._6_OnInit.methodPtr),
           (v10 = this->fields.baseButton) == 0LL) )
     {
-      sub_B7076C(v10, v8);
+      sub_B7769C(v10, v8);
     }
     ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, Il2CppMethodPointer))v10->klass->vtable._14_SetState.method)(
       v10,
@@ -371,11 +371,11 @@ void __fastcall ServantOperationListViewItemDraw__SetItem(
   const MethodInfo *v19; // x3
   const MethodInfo *v20; // x5
 
-  if ( (byte_4355BDA & 1) == 0 )
+  if ( (byte_438F258 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4355BDA = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438F258 = 1;
   }
   if ( item )
   {
@@ -413,7 +413,7 @@ void __fastcall ServantOperationListViewItemDraw__SetItem(
             if ( !fortificationRootObj )
               goto LABEL_30;
           }
-          FlashingIconComponent__Set_21993868(fortificationRootObj, IsParty_k__BackingField, 0LL);
+          FlashingIconComponent__Set_22311984(fortificationRootObj, IsParty_k__BackingField, 0LL);
         }
         ServantOperationListViewItemDraw__SetSpriteActive(
           (ServantOperationListViewItemDraw_o *)v14,
@@ -474,7 +474,7 @@ void __fastcall ServantOperationListViewItemDraw__SetItem(
           }
         }
 LABEL_30:
-        sub_B7076C(fortificationRootObj, IsParty_k__BackingField);
+        sub_B7769C(fortificationRootObj, IsParty_k__BackingField);
       }
     }
   }
@@ -490,10 +490,10 @@ void __fastcall ServantOperationListViewItemDraw__SetLabelText(
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4355BDB & 1) == 0 )
+  if ( (byte_438F259 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355BDB = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438F259 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -504,7 +504,7 @@ void __fastcall ServantOperationListViewItemDraw__SetLabelText(
   if ( !v6 )
   {
     if ( !label )
-      sub_B7076C(v6, v7);
+      sub_B7769C(v6, v7);
     UILabel__set_text(label, text, 0LL);
   }
 }
@@ -524,7 +524,7 @@ void __fastcall ServantOperationListViewItemDraw__SetServantFaceIcon(
       this = (ServantOperationListViewItemDraw_o *)this->fields.servantFaceIcon;
       if ( this )
       {
-        ServantFaceIconComponent__Set_31406992(
+        ServantFaceIconComponent__Set_31684224(
           (ServantFaceIconComponent_o *)this,
           item->fields._UserServantEntity_k__BackingField,
           item->fields.iconLabelInfo1,
@@ -534,7 +534,7 @@ void __fastcall ServantOperationListViewItemDraw__SetServantFaceIcon(
       }
     }
 LABEL_10:
-    sub_B7076C(this, item);
+    sub_B7769C(this, item);
   }
   if ( isCommandCode )
   {
@@ -543,7 +543,7 @@ LABEL_10:
     this = (ServantOperationListViewItemDraw_o *)this->fields.servantFaceIcon;
     if ( !this )
       goto LABEL_10;
-    ServantFaceIconComponent__Set_31487056(
+    ServantFaceIconComponent__Set_31764288(
       (ServantFaceIconComponent_o *)this,
       item->fields._UserCommandCodeEntity_k__BackingField,
       item->fields.iconLabelInfo1,
@@ -562,10 +562,10 @@ void __fastcall ServantOperationListViewItemDraw__SetSpriteActive(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v7; // x1
 
-  if ( (byte_4355BDC & 1) == 0 )
+  if ( (byte_438F25A & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355BDC = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438F25A = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -576,7 +576,7 @@ void __fastcall ServantOperationListViewItemDraw__SetSpriteActive(
   if ( ((unsigned __int8)gameObject & 1) == 0 )
   {
     if ( !sprite || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)sprite, 0LL)) == 0LL )
-      sub_B7076C(gameObject, v7);
+      sub_B7769C(gameObject, v7);
     UnityEngine_GameObject__SetActive(gameObject, isActive, 0LL);
   }
 }
@@ -606,15 +606,15 @@ void __fastcall ServantOperationListViewItemDraw__SetWarningText(
   System_String_o *v20; // x2
 
   v8 = this;
-  if ( (byte_4355BDD & 1) == 0 )
+  if ( (byte_438F25B & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&TutorialFlag_TypeInfo);
-    sub_B70694(&StringLiteral_6505/*"FORTIFICATION_APPOINTMENT"*/);
-    sub_B70694(&StringLiteral_11774/*"SELECT_CANNOT"*/);
-    sub_B70694(&StringLiteral_11797/*"SELECT_SERVANT_EVENT_JOIN"*/);
-    this = (ServantOperationListViewItemDraw_o *)sub_B70694(&StringLiteral_1/*""*/);
-    byte_4355BDD = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&TutorialFlag_TypeInfo);
+    sub_B775C4(&StringLiteral_6561/*"FORTIFICATION_APPOINTMENT"*/);
+    sub_B775C4(&StringLiteral_11837/*"SELECT_CANNOT"*/);
+    sub_B775C4(&StringLiteral_11861/*"SELECT_SERVANT_EVENT_JOIN"*/);
+    this = (ServantOperationListViewItemDraw_o *)sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438F25B = 1;
   }
   if ( (unsigned int)(modeKind - 1) < 2 )
   {
@@ -628,7 +628,7 @@ void __fastcall ServantOperationListViewItemDraw__SetWarningText(
     {
       j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
     }
-    this = (ServantOperationListViewItemDraw_o *)TutorialFlag__Get_29045252(126, 0LL);
+    this = (ServantOperationListViewItemDraw_o *)TutorialFlag__Get_29515752(126, 0LL);
     if ( ((unsigned __int8)this & 1) == 0 )
       goto LABEL_49;
   }
@@ -656,7 +656,7 @@ void __fastcall ServantOperationListViewItemDraw__SetWarningText(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v10 = &StringLiteral_11797/*"SELECT_SERVANT_EVENT_JOIN"*/;
+          v10 = &StringLiteral_11861/*"SELECT_SERVANT_EVENT_JOIN"*/;
 LABEL_48:
           v17 = LocalizationManager__Get((System_String_o *)*v10, 0LL);
           v19 = warningLabel;
@@ -704,12 +704,12 @@ LABEL_42:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v10 = &StringLiteral_11774/*"SELECT_CANNOT"*/;
+          v10 = &StringLiteral_11837/*"SELECT_CANNOT"*/;
           goto LABEL_48;
         }
       }
 LABEL_54:
-      sub_B7076C(this, item);
+      sub_B7769C(this, item);
     }
 LABEL_49:
     this = (ServantOperationListViewItemDraw_o *)v8->fields.maskSprite;
@@ -764,7 +764,7 @@ LABEL_49:
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
             this = (ServantOperationListViewItemDraw_o *)LocalizationManager__Get(
-                                                           (System_String_o *)StringLiteral_6505/*"FORTIFICATION_APPOINTMENT"*/,
+                                                           (System_String_o *)StringLiteral_6561/*"FORTIFICATION_APPOINTMENT"*/,
                                                            0LL);
             if ( fortificationAppointmentLabel )
             {

@@ -3,10 +3,10 @@ void __fastcall OutlineEffectSettings___cctor(const MethodInfo *method)
   struct OutlineEffectSettings_StaticFields *static_fields; // x9
   struct OutlineEffectSettings_StaticFields *v2; // x8
 
-  if ( (byte_4350C8D & 1) == 0 )
+  if ( (byte_438A335 & 1) == 0 )
   {
-    sub_B70694(&OutlineEffectSettings_TypeInfo);
-    byte_4350C8D = 1;
+    sub_B775C4(&OutlineEffectSettings_TypeInfo);
+    byte_438A335 = 1;
   }
   static_fields = OutlineEffectSettings_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->_DefaultVertexScale_k__BackingField.fields.x = 0x3F8000003E4CCCCDLL;
@@ -25,21 +25,21 @@ void __fastcall OutlineEffectSettings___ctor(OutlineEffectSettings_o *this, cons
   struct OutlineEffectSettings_StaticFields *v6; // x8
   __int64 v7; // x9
 
-  if ( (byte_4350C8C & 1) == 0 )
+  if ( (byte_438A334 & 1) == 0 )
   {
-    sub_B70694(&OutlineEffectSettings_TypeInfo);
-    byte_4350C8C = 1;
+    sub_B775C4(&OutlineEffectSettings_TypeInfo);
+    byte_438A334 = 1;
   }
-  *(_OWORD *)&this->fields.thickness = xmmword_32E9CE0;
+  *(_OWORD *)&this->fields.thickness = xmmword_331CE70;
   if ( (BYTE3(OutlineEffectSettings_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !OutlineEffectSettings_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OutlineEffectSettings_TypeInfo);
   }
-  if ( !byte_4350CC3 )
+  if ( !byte_438A366 )
   {
-    sub_B70694(&OutlineEffectSettings_TypeInfo);
-    byte_4350CC3 = 1;
+    sub_B775C4(&OutlineEffectSettings_TypeInfo);
+    byte_438A366 = 1;
   }
   v3 = OutlineEffectSettings_TypeInfo;
   if ( (BYTE3(OutlineEffectSettings_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -53,11 +53,11 @@ void __fastcall OutlineEffectSettings___ctor(OutlineEffectSettings_o *this, cons
   *(float *)&static_fields = static_fields->_DefaultVertexScale_k__BackingField.fields.z;
   *(_QWORD *)&this->fields.vertexScale.fields.x = v5;
   LODWORD(this->fields.vertexScale.fields.z) = (_DWORD)static_fields;
-  if ( !byte_4350CC4 )
+  if ( !byte_438A367 )
   {
-    sub_B70694(&OutlineEffectSettings_TypeInfo);
+    sub_B775C4(&OutlineEffectSettings_TypeInfo);
     v3 = OutlineEffectSettings_TypeInfo;
-    byte_4350CC4 = 1;
+    byte_438A367 = 1;
   }
   if ( (BYTE3(v3->vtable._0_Equals.methodPtr) & 4) != 0 && !v3->_2.cctor_finished )
   {
@@ -104,13 +104,13 @@ UnityEngine_Gradient_o *__fastcall OutlineEffectSettings__get_DefaultGradient(co
   UnityEngine_Color_o white; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v29; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4350C8B & 1) == 0 )
+  if ( (byte_438A333 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_GradientAlphaKey___TypeInfo);
-    sub_B70694(&UnityEngine_GradientColorKey___TypeInfo);
-    sub_B70694(&UnityEngine_Gradient_TypeInfo);
-    sub_B70694(&OutlineEffectSettings_TypeInfo);
-    byte_4350C8B = 1;
+    sub_B775C4(&UnityEngine_GradientAlphaKey___TypeInfo);
+    sub_B775C4(&UnityEngine_GradientColorKey___TypeInfo);
+    sub_B775C4(&UnityEngine_Gradient_TypeInfo);
+    sub_B775C4(&OutlineEffectSettings_TypeInfo);
+    byte_438A333 = 1;
   }
   v1 = OutlineEffectSettings_TypeInfo;
   if ( (BYTE3(OutlineEffectSettings_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -121,7 +121,7 @@ UnityEngine_Gradient_o *__fastcall OutlineEffectSettings__get_DefaultGradient(co
   }
   if ( !v1->static_fields->defaultGradient )
   {
-    v2 = (UnityEngine_Gradient_o *)sub_B70764(UnityEngine_Gradient_TypeInfo);
+    v2 = (UnityEngine_Gradient_o *)sub_B77694(UnityEngine_Gradient_TypeInfo);
     UnityEngine_Gradient___ctor(v2, 0LL);
     v9 = OutlineEffectSettings_TypeInfo;
     if ( (BYTE3(OutlineEffectSettings_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -132,7 +132,7 @@ UnityEngine_Gradient_o *__fastcall OutlineEffectSettings__get_DefaultGradient(co
     }
     static_fields = v9->static_fields;
     static_fields->defaultGradient = v2;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&static_fields->defaultGradient,
       (System_Int32_array **)v2,
       v3,
@@ -141,7 +141,7 @@ UnityEngine_Gradient_o *__fastcall OutlineEffectSettings__get_DefaultGradient(co
       v6,
       v7,
       v8);
-    v11 = sub_B706AC(UnityEngine_GradientColorKey___TypeInfo, 2LL);
+    v11 = sub_B775DC(UnityEngine_GradientColorKey___TypeInfo, 2LL);
     white = UnityEngine_Color__get_white(0LL);
     memset(&v24, 0, sizeof(v24));
     UnityEngine_GradientColorKey___ctor(&v24, white, 0.0, 0LL);
@@ -164,7 +164,7 @@ UnityEngine_Gradient_o *__fastcall OutlineEffectSettings__get_DefaultGradient(co
       v15 = *(_OWORD *)&v23.invoker_method;
       *(_DWORD *)(v11 + 68) = v23.klass;
       *(_OWORD *)(v11 + 52) = v15;
-      v16 = sub_B706AC(UnityEngine_GradientAlphaKey___TypeInfo, 2LL);
+      v16 = sub_B775DC(UnityEngine_GradientAlphaKey___TypeInfo, 2LL);
       v26.fields.alpha = 1.0;
       v26.fields.time = 0.0;
       v25 = 0LL;
@@ -180,8 +180,8 @@ UnityEngine_Gradient_o *__fastcall OutlineEffectSettings__get_DefaultGradient(co
             *(_DWORD *)(v16 + 24) <= 1u) )
       {
 LABEL_23:
-        v22 = sub_B70798(defaultGradient);
-        sub_B70738(v22, 0LL);
+        v22 = sub_B776C8(defaultGradient);
+        sub_B77668(v22, 0LL);
       }
       *(_QWORD *)(v16 + 40) = v23.methodPointer;
       defaultGradient = OutlineEffectSettings_TypeInfo->static_fields->defaultGradient;
@@ -198,7 +198,7 @@ LABEL_23:
       }
     }
 LABEL_24:
-    sub_B7076C(defaultGradient, v13);
+    sub_B7769C(defaultGradient, v13);
   }
 LABEL_19:
   if ( (BYTE3(v1->vtable._0_Equals.methodPtr) & 4) != 0 && !v1->_2.cctor_finished )
@@ -219,10 +219,10 @@ UnityEngine_Vector3_o __fastcall OutlineEffectSettings__get_DefaultVertexOffset(
   float v5; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4350C8A & 1) == 0 )
+  if ( (byte_438A332 & 1) == 0 )
   {
-    sub_B70694(&OutlineEffectSettings_TypeInfo);
-    byte_4350C8A = 1;
+    sub_B775C4(&OutlineEffectSettings_TypeInfo);
+    byte_438A332 = 1;
   }
   v1 = OutlineEffectSettings_TypeInfo;
   if ( (BYTE3(OutlineEffectSettings_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -251,10 +251,10 @@ UnityEngine_Vector3_o __fastcall OutlineEffectSettings__get_DefaultVertexScale(c
   float v5; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4350C89 & 1) == 0 )
+  if ( (byte_438A331 & 1) == 0 )
   {
-    sub_B70694(&OutlineEffectSettings_TypeInfo);
-    byte_4350C89 = 1;
+    sub_B775C4(&OutlineEffectSettings_TypeInfo);
+    byte_438A331 = 1;
   }
   v1 = OutlineEffectSettings_TypeInfo;
   if ( (BYTE3(OutlineEffectSettings_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

@@ -42,18 +42,18 @@ void __fastcall GameObjectAdjustAssort__Apply(GameObjectAdjustAssort_o *this, in
   int *v38; // x11
   __int64 v39; // x0
 
-  if ( (byte_4355A8B & 1) == 0 )
+  if ( (byte_438F18D & 1) == 0 )
   {
-    sub_B70694(&Method_System_Linq_Enumerable_Where_GameObjectAdjustAssort_AdjustParam___);
-    sub_B70694(&Method_System_Func_GameObjectAdjustAssort_AdjustParam__bool___ctor__);
-    sub_B70694(&System_Func_GameObjectAdjustAssort_AdjustParam__bool__TypeInfo);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&System_Collections_Generic_IEnumerable_GameObjectAdjustAssort_AdjustParam__TypeInfo);
-    sub_B70694(&System_Collections_Generic_IEnumerator_GameObjectAdjustAssort_AdjustParam__TypeInfo);
-    sub_B70694(&System_Collections_IEnumerator_TypeInfo);
-    sub_B70694(&Method_GameObjectAdjustAssort___c__Apply_b__2_0__);
-    sub_B70694(&GameObjectAdjustAssort___c_TypeInfo);
-    byte_4355A8B = 1;
+    sub_B775C4(&Method_System_Linq_Enumerable_Where_GameObjectAdjustAssort_AdjustParam___);
+    sub_B775C4(&Method_System_Func_GameObjectAdjustAssort_AdjustParam__bool___ctor__);
+    sub_B775C4(&System_Func_GameObjectAdjustAssort_AdjustParam__bool__TypeInfo);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IEnumerable_GameObjectAdjustAssort_AdjustParam__TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IEnumerator_GameObjectAdjustAssort_AdjustParam__TypeInfo);
+    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
+    sub_B775C4(&Method_GameObjectAdjustAssort___c__Apply_b__2_0__);
+    sub_B775C4(&GameObjectAdjustAssort___c_TypeInfo);
+    byte_438F18D = 1;
   }
   adjustParamArray = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.adjustParamArray;
   v6 = GameObjectAdjustAssort___c_TypeInfo;
@@ -73,15 +73,15 @@ void __fastcall GameObjectAdjustAssort__Apply(GameObjectAdjustAssort_o *this, in
       static_fields = GameObjectAdjustAssort___c_TypeInfo->static_fields;
     }
     v9 = (Il2CppObject *)static_fields->__9;
-    _9__2_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_GameObjectAdjustAssort_AdjustParam__bool__TypeInfo);
+    _9__2_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B77694(System_Func_GameObjectAdjustAssort_AdjustParam__bool__TypeInfo);
     System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
       _9__2_0,
       v9,
       Method_GameObjectAdjustAssort___c__Apply_b__2_0__,
-      (const MethodInfo_29AC578 *)Method_System_Func_GameObjectAdjustAssort_AdjustParam__bool___ctor__);
+      (const MethodInfo_29E92C4 *)Method_System_Func_GameObjectAdjustAssort_AdjustParam__bool___ctor__);
     v10 = GameObjectAdjustAssort___c_TypeInfo->static_fields;
     v10->__9__2_0 = (struct System_Func_GameObjectAdjustAssort_AdjustParam__bool__o *)_9__2_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v10->__9__2_0,
       (System_Int32_array **)_9__2_0,
       v11,
@@ -94,9 +94,9 @@ void __fastcall GameObjectAdjustAssort__Apply(GameObjectAdjustAssort_o *this, in
   v17 = System_Linq_Enumerable__Where_WarBoardManager_WarBoardOnboardSkillTarget_(
           adjustParamArray,
           (System_Func_TSource__bool__o *)_9__2_0,
-          (const MethodInfo_1CCCE44 *)Method_System_Linq_Enumerable_Where_GameObjectAdjustAssort_AdjustParam___);
+          (const MethodInfo_1D41C94 *)Method_System_Linq_Enumerable_Where_GameObjectAdjustAssort_AdjustParam___);
   if ( !v17 )
-    sub_B7076C(0LL, v18);
+    sub_B7769C(0LL, v18);
   klass = v17->klass;
   v20 = v17;
   if ( *(_WORD *)&v17->klass->_2.bitflags1 )
@@ -115,13 +115,13 @@ void __fastcall GameObjectAdjustAssort__Apply(GameObjectAdjustAssort_o *this, in
   else
   {
 LABEL_16:
-    p_method = sub_B08590(v17, System_Collections_Generic_IEnumerable_GameObjectAdjustAssort_AdjustParam__TypeInfo, 0LL);
+    p_method = sub_B0F4C0(v17, System_Collections_Generic_IEnumerable_GameObjectAdjustAssort_AdjustParam__TypeInfo, 0LL);
   }
   v25 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TSource__o *, _QWORD))p_method)(
           v20,
           *(_QWORD *)(p_method + 8));
   if ( !v25 )
-    sub_B7076C(0LL, v24);
+    sub_B7769C(0LL, v24);
   while ( 1 )
   {
     v26 = *(_QWORD *)v25;
@@ -141,7 +141,7 @@ LABEL_16:
     else
     {
 LABEL_23:
-      v29 = sub_B08590(v25, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v29 = sub_B0F4C0(v25, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v29)(v25, *(_QWORD *)(v29 + 8)) & 1) == 0 )
       break;
@@ -162,7 +162,7 @@ LABEL_23:
     else
     {
 LABEL_30:
-      v33 = sub_B08590(v25, System_Collections_Generic_IEnumerator_GameObjectAdjustAssort_AdjustParam__TypeInfo, 0LL);
+      v33 = sub_B0F4C0(v25, System_Collections_Generic_IEnumerator_GameObjectAdjustAssort_AdjustParam__TypeInfo, 0LL);
     }
     v34 = (GameObjectAdjustAssort_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v33)(v25, *(_QWORD *)(v33 + 8));
     GameObjectAdjustAssort__ApplyLocalPosition(v34, (GameObjectAdjustAssort_AdjustParam_o *)v34, index, v35);
@@ -184,7 +184,7 @@ LABEL_30:
   else
   {
 LABEL_37:
-    v39 = sub_B08590(v25, System_IDisposable_TypeInfo, 0LL);
+    v39 = sub_B0F4C0(v25, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v39)(v25, *(_QWORD *)(v39 + 8));
 }
@@ -199,27 +199,27 @@ void __fastcall GameObjectAdjustAssort__ApplyLocalPosition(
   struct UnityEngine_Vector3_array *localPosArray; // x8
   __int64 v7; // x0
 
-  if ( (byte_4355A8C & 1) == 0 )
+  if ( (byte_438F18E & 1) == 0 )
   {
-    this = (GameObjectAdjustAssort_o *)sub_B70694(&Method_BasicHelper_IsValidIndex_Vector3___);
-    byte_4355A8C = 1;
+    this = (GameObjectAdjustAssort_o *)sub_B775C4(&Method_BasicHelper_IsValidIndex_Vector3___);
+    byte_438F18E = 1;
   }
   if ( !adjustParam )
     goto LABEL_9;
   this = (GameObjectAdjustAssort_o *)BasicHelper__IsValidIndex_Vector3_(
                                        adjustParam->fields.localPosArray,
                                        index,
-                                       (const MethodInfo_1BDEF68 *)Method_BasicHelper_IsValidIndex_Vector3___);
+                                       (const MethodInfo_1C68624 *)Method_BasicHelper_IsValidIndex_Vector3___);
   if ( ((unsigned __int8)this & 1) == 0 )
     return;
   localPosArray = adjustParam->fields.localPosArray;
   if ( !localPosArray )
 LABEL_9:
-    sub_B7076C(this, adjustParam);
+    sub_B7769C(this, adjustParam);
   if ( localPosArray->max_length <= index )
   {
-    v7 = sub_B70798(this);
-    sub_B70738(v7, 0LL);
+    v7 = sub_B776C8(this);
+    sub_B77668(v7, 0LL);
   }
   GameObjectExtensions__SetLocalPosition(
     adjustParam->fields.target,
@@ -241,16 +241,16 @@ void __fastcall GameObjectAdjustAssort___c___cctor(const MethodInfo *method)
   Il2CppObject *v1; // x19
   struct GameObjectAdjustAssort___c_StaticFields *static_fields; // x0
 
-  if ( (byte_434EADB & 1) == 0 )
+  if ( (byte_43880AC & 1) == 0 )
   {
-    sub_B70694(&GameObjectAdjustAssort___c_TypeInfo);
-    byte_434EADB = 1;
+    sub_B775C4(&GameObjectAdjustAssort___c_TypeInfo);
+    byte_43880AC = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(GameObjectAdjustAssort___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(GameObjectAdjustAssort___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = GameObjectAdjustAssort___c_TypeInfo->static_fields;
   static_fields->__9 = (struct GameObjectAdjustAssort___c_o *)v1;
-  sub_B70630(static_fields);
+  sub_B77560(static_fields);
 }
 
 
@@ -267,13 +267,13 @@ bool __fastcall GameObjectAdjustAssort___c___Apply_b__2_0(
 {
   UnityEngine_Object_o *target; // x19
 
-  if ( (byte_434EADC & 1) == 0 )
+  if ( (byte_43880AD & 1) == 0 )
   {
-    this = (GameObjectAdjustAssort___c_o *)sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_434EADC = 1;
+    this = (GameObjectAdjustAssort___c_o *)sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_43880AD = 1;
   }
   if ( !x )
-    sub_B7076C(this, x);
+    sub_B7769C(this, x);
   target = (UnityEngine_Object_o *)x->fields.target;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )

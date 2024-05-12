@@ -8,15 +8,15 @@ void __fastcall FGOCrystalMesh___ctor(FGOCrystalMesh_o *this, const MethodInfo *
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_4350986 & 1) == 0 )
+  if ( (byte_438A06A & 1) == 0 )
   {
-    sub_B70694(&FGOCrystalMesh_CrystalData_TypeInfo);
-    byte_4350986 = 1;
+    sub_B775C4(&FGOCrystalMesh_CrystalData_TypeInfo);
+    byte_438A06A = 1;
   }
-  v3 = (FGOCrystalMesh_CrystalData_o *)sub_B70764(FGOCrystalMesh_CrystalData_TypeInfo);
+  v3 = (FGOCrystalMesh_CrystalData_o *)sub_B77694(FGOCrystalMesh_CrystalData_TypeInfo);
   FGOCrystalMesh_CrystalData___ctor(v3, 0LL);
   this->fields.crystalData = v3;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.crystalData,
     (System_Int32_array **)v3,
     v4,
@@ -86,20 +86,20 @@ void __fastcall FGOCrystalMesh__AddCrystalMesh(FGOCrystalMesh_o *this, const Met
   System_Int32_array *v55; // x7
   __int64 v56; // x0
 
-  if ( (byte_4350983 & 1) == 0 )
+  if ( (byte_438A067 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer___);
-    sub_B70694(&Method_UnityEngine_GameObject_AddComponent_FGOMeshExploder___);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_FGOCrystalMesh___);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_FGOMeshExploder___);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject____69308712);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_FGOCrystalMesh___c__DisplayClass9_0__AddCrystalMesh_b__0__);
-    sub_B70694(&FGOCrystalMesh___c__DisplayClass9_0_TypeInfo);
-    sub_B70694(&StringLiteral_23642/*"weapon_"*/);
-    sub_B70694(&StringLiteral_16375/*"_crystal"*/);
-    byte_4350983 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer___);
+    sub_B775C4(&Method_UnityEngine_GameObject_AddComponent_FGOMeshExploder___);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_FGOCrystalMesh___);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_FGOMeshExploder___);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject____69541584);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_FGOCrystalMesh___c__DisplayClass9_0__AddCrystalMesh_b__0__);
+    sub_B775C4(&FGOCrystalMesh___c__DisplayClass9_0_TypeInfo);
+    sub_B775C4(&StringLiteral_23744/*"weapon_"*/);
+    sub_B775C4(&StringLiteral_16445/*"_crystal"*/);
+    byte_438A067 = 1;
   }
   if ( this->fields.crystalData )
   {
@@ -113,7 +113,7 @@ void __fastcall FGOCrystalMesh__AddCrystalMesh(FGOCrystalMesh_o *this, const Met
     {
       ComponentsInChildren_USTimelineContainer = (UnityEngine_Component_o *)UnityEngine_Component__GetComponentsInChildren_USTimelineContainer_(
                                                                               (UnityEngine_Component_o *)this,
-                                                                              (const MethodInfo_1BE43FC *)Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer___);
+                                                                              (const MethodInfo_1C6DAB8 *)Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer___);
       if ( !ComponentsInChildren_USTimelineContainer )
         goto LABEL_51;
       v6 = ComponentsInChildren_USTimelineContainer;
@@ -122,19 +122,19 @@ void __fastcall FGOCrystalMesh__AddCrystalMesh(FGOCrystalMesh_o *this, const Met
         v7 = 0LL;
         while ( 1 )
         {
-          v8 = sub_B70764(FGOCrystalMesh___c__DisplayClass9_0_TypeInfo);
+          v8 = sub_B77694(FGOCrystalMesh___c__DisplayClass9_0_TypeInfo);
           FGOCrystalMesh___c__DisplayClass9_0___ctor((FGOCrystalMesh___c__DisplayClass9_0_o *)v8, 0LL);
           if ( v7 >= LODWORD(v6[1].klass) )
           {
-            v56 = sub_B70798(ComponentsInChildren_USTimelineContainer);
-            sub_B70738(v56, 0LL);
+            v56 = sub_B776C8(ComponentsInChildren_USTimelineContainer);
+            sub_B77668(v56, 0LL);
           }
           if ( !v8 )
             break;
           v15 = (System_Int32_array **)*((_QWORD *)&v6[1].monitor + v7);
           *(_QWORD *)(v8 + 16) = v15;
           v16 = (UnityEngine_Component_o **)(v8 + 16);
-          sub_B70630((BattleServantConfConponent_o *)(v8 + 16), v15, v9, v10, v11, v12, v13, v14);
+          sub_B77560((BattleServantConfConponent_o *)(v8 + 16), v15, v9, v10, v11, v12, v13, v14);
           crystalData = this->fields.crystalData;
           if ( !crystalData )
             break;
@@ -155,7 +155,7 @@ void __fastcall FGOCrystalMesh__AddCrystalMesh(FGOCrystalMesh_o *this, const Met
             break;
           if ( !System_String__Contains(
                   (System_String_o *)ComponentsInChildren_USTimelineContainer,
-                  (System_String_o *)StringLiteral_23642/*"weapon_"*/,
+                  (System_String_o *)StringLiteral_23744/*"weapon_"*/,
                   0LL) )
           {
 LABEL_19:
@@ -178,24 +178,24 @@ LABEL_19:
             ComponentsInChildren_USTimelineContainer = (UnityEngine_Component_o *)UnityEngine_Object__Instantiate_UILabel_(
                                                                                     v18,
                                                                                     Parent,
-                                                                                    (const MethodInfo_1D588A0 *)Method_UnityEngine_Object_Instantiate_GameObject____69308712);
+                                                                                    (const MethodInfo_1DF9A3C *)Method_UnityEngine_Object_Instantiate_GameObject____69541584);
             if ( !ComponentsInChildren_USTimelineContainer )
               break;
             v21 = (UnityEngine_GameObject_o *)ComponentsInChildren_USTimelineContainer;
             Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                 (UnityEngine_GameObject_o *)ComponentsInChildren_USTimelineContainer,
-                                                                (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_FGOCrystalMesh___);
+                                                                (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_FGOCrystalMesh___);
             if ( UnityEngine_Object__op_Inequality(Component_srcLineSprite, 0LL, 0LL) )
             {
               v23 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                               v21,
-                                              (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_FGOCrystalMesh___);
+                                              (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_FGOCrystalMesh___);
               if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                 && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
               }
-              UnityEngine_Object__Destroy_36067208(v23, 0LL);
+              UnityEngine_Object__Destroy_36309980(v23, 0LL);
             }
             ComponentsInChildren_USTimelineContainer = *v16;
             if ( !*v16 )
@@ -206,12 +206,12 @@ LABEL_19:
             if ( !ComponentsInChildren_USTimelineContainer )
               break;
             name = UnityEngine_Object__get_name((UnityEngine_Object_o *)ComponentsInChildren_USTimelineContainer, 0LL);
-            v25 = System_String__Concat_44758168(name, (System_String_o *)StringLiteral_16375/*"_crystal"*/, 0LL);
+            v25 = System_String__Concat_44901936(name, (System_String_o *)StringLiteral_16445/*"_crystal"*/, 0LL);
             UnityEngine_Object__set_name((UnityEngine_Object_o *)v21, v25, 0LL);
             FGOCrystalMesh__ChangeCrystalMaterial(this, v21, this->fields.crystalMat, v26);
             v27 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                             v21,
-                                            (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_FGOMeshExploder___);
+                                            (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_FGOMeshExploder___);
             if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             {
@@ -221,7 +221,7 @@ LABEL_19:
             {
               ComponentsInChildren_USTimelineContainer = (UnityEngine_Component_o *)UnityEngine_GameObject__AddComponent_UnitySynchronizationContext_SynchronizationContextBehavoir_(
                                                                                       v21,
-                                                                                      (const MethodInfo_1D4AD2C *)Method_UnityEngine_GameObject_AddComponent_FGOMeshExploder___);
+                                                                                      (const MethodInfo_1DEBEC8 *)Method_UnityEngine_GameObject_AddComponent_FGOMeshExploder___);
               v28 = this->fields.crystalData;
               if ( !v28 )
                 break;
@@ -276,15 +276,15 @@ LABEL_19:
                                              0LL);
               v29[3].klass = (UnityEngine_Component_c *)v41;
               v42 = v29 + 3;
-              sub_B70630((BattleServantConfConponent_o *)v42, v41, v43, v44, v45, v46, v47, v48);
-              v49 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+              sub_B77560((BattleServantConfConponent_o *)v42, v41, v43, v44, v45, v46, v47, v48);
+              v49 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
               System_Action___ctor(
                 v49,
                 (Il2CppObject *)v8,
                 Method_FGOCrystalMesh___c__DisplayClass9_0__AddCrystalMesh_b__0__,
                 0LL);
               v42->monitor = v49;
-              sub_B70630(
+              sub_B77560(
                 (BattleServantConfConponent_o *)&v42->monitor,
                 (System_Int32_array **)v49,
                 v50,
@@ -299,7 +299,7 @@ LABEL_19:
             return;
         }
 LABEL_51:
-        sub_B7076C(ComponentsInChildren_USTimelineContainer, v5);
+        sub_B7769C(ComponentsInChildren_USTimelineContainer, v5);
       }
     }
   }
@@ -346,35 +346,35 @@ void __fastcall FGOCrystalMesh__ChangeCrystalMaterial(
   FGOCrystalMesh_o *v37; // [xsp+8h] [xbp-58h]
 
   v37 = this;
-  if ( (byte_4350985 & 1) == 0 )
+  if ( (byte_438A069 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_SkinnedMeshRenderer___);
-    sub_B70694(&UnityEngine_Material___TypeInfo);
-    sub_B70694(&UnityEngine_Material_TypeInfo);
-    sub_B70694(&StringLiteral_16341/*"_Xscale"*/);
-    sub_B70694(&StringLiteral_16241/*"_MainTex"*/);
-    sub_B70694(&StringLiteral_16296/*"_StartTime"*/);
-    sub_B70694(&StringLiteral_16211/*"_FadeTime"*/);
-    sub_B70694(&StringLiteral_16327/*"_UseSubtex"*/);
-    sub_B70694(&StringLiteral_16305/*"_SubTex"*/);
-    this = (FGOCrystalMesh_o *)sub_B70694(&StringLiteral_16448/*"_xscale"*/);
-    byte_4350985 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_SkinnedMeshRenderer___);
+    sub_B775C4(&UnityEngine_Material___TypeInfo);
+    sub_B775C4(&UnityEngine_Material_TypeInfo);
+    sub_B775C4(&StringLiteral_16411/*"_Xscale"*/);
+    sub_B775C4(&StringLiteral_16311/*"_MainTex"*/);
+    sub_B775C4(&StringLiteral_16366/*"_StartTime"*/);
+    sub_B775C4(&StringLiteral_16281/*"_FadeTime"*/);
+    sub_B775C4(&StringLiteral_16397/*"_UseSubtex"*/);
+    sub_B775C4(&StringLiteral_16375/*"_SubTex"*/);
+    this = (FGOCrystalMesh_o *)sub_B775C4(&StringLiteral_16518/*"_xscale"*/);
+    byte_438A069 = 1;
   }
   if ( !o )
     goto LABEL_30;
   this = (FGOCrystalMesh_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                o,
-                               (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_SkinnedMeshRenderer___);
+                               (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_SkinnedMeshRenderer___);
   if ( !this )
     goto LABEL_30;
   v6 = (UnityEngine_Renderer_o *)this;
   this = (FGOCrystalMesh_o *)UnityEngine_Renderer__get_materials((UnityEngine_Renderer_o *)this, 0LL);
   if ( !this )
     goto LABEL_30;
-  v7 = (System_Int32_array **)sub_B706AC(UnityEngine_Material___TypeInfo, LODWORD(this->fields.crystalMat));
+  v7 = (System_Int32_array **)sub_B775DC(UnityEngine_Material___TypeInfo, LODWORD(this->fields.crystalMat));
   v37->fields.materialsArray = (struct UnityEngine_Material_array *)v7;
   p_materialsArray = &v37->fields.materialsArray;
-  sub_B70630((BattleServantConfConponent_o *)&v37->fields.materialsArray, v7, v9, v10, v11, v12, v13, v14);
+  sub_B77560((BattleServantConfConponent_o *)&v37->fields.materialsArray, v7, v9, v10, v11, v12, v13, v14);
   sortingOrder = UnityEngine_Renderer__get_sortingOrder(v6, 0LL);
   UnityEngine_Renderer__set_sortingOrder(v6, sortingOrder + 1, 0LL);
   this = (FGOCrystalMesh_o *)UnityEngine_Renderer__get_materials(v6, 0LL);
@@ -390,44 +390,44 @@ void __fastcall FGOCrystalMesh__ChangeCrystalMaterial(
       if ( v18 >= crystalMat )
       {
 LABEL_31:
-        v35 = sub_B70798(this);
-        sub_B70738(v35, 0LL);
+        v35 = sub_B776C8(this);
+        sub_B77668(v35, 0LL);
       }
       v19 = (UnityEngine_Material_o *)*((_QWORD *)&v17->fields.crystalData + (int)v18);
-      v20 = (UnityEngine_Material_o *)sub_B70764(UnityEngine_Material_TypeInfo);
-      UnityEngine_Material___ctor_41118404(v20, crystalMaterial, 0LL);
+      v20 = (UnityEngine_Material_o *)sub_B77694(UnityEngine_Material_TypeInfo);
+      UnityEngine_Material___ctor_41464292(v20, crystalMaterial, 0LL);
       if ( !v19 )
         break;
-      if ( UnityEngine_Material__HasProperty_41121140(v19, (System_String_o *)StringLiteral_16448/*"_xscale"*/, 0LL) )
+      if ( UnityEngine_Material__HasProperty_41467028(v19, (System_String_o *)StringLiteral_16518/*"_xscale"*/, 0LL) )
       {
-        Float = UnityEngine_Material__GetFloat(v19, (System_String_o *)StringLiteral_16448/*"_xscale"*/, 0LL);
+        Float = UnityEngine_Material__GetFloat(v19, (System_String_o *)StringLiteral_16518/*"_xscale"*/, 0LL);
         if ( !v20 )
           break;
-        UnityEngine_Material__SetFloat(v20, (System_String_o *)StringLiteral_16341/*"_Xscale"*/, Float, 0LL);
-        LOBYTE(this) = UnityEngine_Material__HasProperty_41121140(v19, (System_String_o *)StringLiteral_16305/*"_SubTex"*/, 0LL);
+        UnityEngine_Material__SetFloat(v20, (System_String_o *)StringLiteral_16411/*"_Xscale"*/, Float, 0LL);
+        LOBYTE(this) = UnityEngine_Material__HasProperty_41467028(v19, (System_String_o *)StringLiteral_16375/*"_SubTex"*/, 0LL);
       }
       else
       {
-        this = (FGOCrystalMesh_o *)UnityEngine_Material__HasProperty_41121140(
+        this = (FGOCrystalMesh_o *)UnityEngine_Material__HasProperty_41467028(
                                      v19,
-                                     (System_String_o *)StringLiteral_16305/*"_SubTex"*/,
+                                     (System_String_o *)StringLiteral_16375/*"_SubTex"*/,
                                      0LL);
         if ( !v20 )
           break;
       }
       if ( ((unsigned __int8)this & 1) != 0 )
       {
-        UnityEngine_Material__SetInt(v20, (System_String_o *)StringLiteral_16327/*"_UseSubtex"*/, 1, 0LL);
-        Texture = UnityEngine_Material__GetTexture(v19, (System_String_o *)StringLiteral_16305/*"_SubTex"*/, 0LL);
-        UnityEngine_Material__SetTexture(v20, (System_String_o *)StringLiteral_16305/*"_SubTex"*/, Texture, 0LL);
+        UnityEngine_Material__SetInt(v20, (System_String_o *)StringLiteral_16397/*"_UseSubtex"*/, 1, 0LL);
+        Texture = UnityEngine_Material__GetTexture(v19, (System_String_o *)StringLiteral_16375/*"_SubTex"*/, 0LL);
+        UnityEngine_Material__SetTexture(v20, (System_String_o *)StringLiteral_16375/*"_SubTex"*/, Texture, 0LL);
       }
       else
       {
-        UnityEngine_Material__SetInt(v20, (System_String_o *)StringLiteral_16327/*"_UseSubtex"*/, 0, 0LL);
+        UnityEngine_Material__SetInt(v20, (System_String_o *)StringLiteral_16397/*"_UseSubtex"*/, 0, 0LL);
       }
-      this = (FGOCrystalMesh_o *)UnityEngine_Material__HasProperty_41121140(
+      this = (FGOCrystalMesh_o *)UnityEngine_Material__HasProperty_41467028(
                                    v20,
-                                   (System_String_o *)StringLiteral_16211/*"_FadeTime"*/,
+                                   (System_String_o *)StringLiteral_16281/*"_FadeTime"*/,
                                    0LL);
       if ( ((unsigned __int8)this & 1) != 0 )
       {
@@ -436,16 +436,16 @@ LABEL_31:
           break;
         UnityEngine_Material__SetFloat(
           v20,
-          (System_String_o *)StringLiteral_16211/*"_FadeTime"*/,
+          (System_String_o *)StringLiteral_16281/*"_FadeTime"*/,
           crystalData->fields.crystalFadeTime,
           0LL);
       }
-      if ( UnityEngine_Material__HasProperty_41121140(v20, (System_String_o *)StringLiteral_16296/*"_StartTime"*/, 0LL) )
+      if ( UnityEngine_Material__HasProperty_41467028(v20, (System_String_o *)StringLiteral_16366/*"_StartTime"*/, 0LL) )
       {
         timeSinceLevelLoad = UnityEngine_Time__get_timeSinceLevelLoad(0LL);
-        UnityEngine_Material__SetFloat(v20, (System_String_o *)StringLiteral_16296/*"_StartTime"*/, timeSinceLevelLoad, 0LL);
+        UnityEngine_Material__SetFloat(v20, (System_String_o *)StringLiteral_16366/*"_StartTime"*/, timeSinceLevelLoad, 0LL);
       }
-      if ( UnityEngine_Material__HasProperty_41121140(v19, (System_String_o *)StringLiteral_16241/*"_MainTex"*/, 0LL) )
+      if ( UnityEngine_Material__HasProperty_41467028(v19, (System_String_o *)StringLiteral_16311/*"_MainTex"*/, 0LL) )
       {
         mainTexture = UnityEngine_Material__get_mainTexture(v19, 0LL);
         UnityEngine_Material__set_mainTexture(v20, mainTexture, 0LL);
@@ -455,23 +455,23 @@ LABEL_31:
       v27 = *p_materialsArray;
       if ( !*p_materialsArray )
         break;
-      this = (FGOCrystalMesh_o *)sub_B70754(v20, v27->obj.klass->_1.element_class);
+      this = (FGOCrystalMesh_o *)sub_B77684(v20, v27->obj.klass->_1.element_class);
       if ( !this )
       {
-        v36 = sub_B7078C(0LL);
-        sub_B70738(v36, 0LL);
+        v36 = sub_B776BC(0LL);
+        sub_B77668(v36, 0LL);
       }
       if ( v18 >= v27->max_length )
         goto LABEL_31;
       v34 = &v27->obj.klass + (int)v18;
       v34[4] = (Il2CppClass *)v20;
-      sub_B70630((BattleServantConfConponent_o *)(v34 + 4), (System_Int32_array **)v20, v28, v29, v30, v31, v32, v33);
+      sub_B77560((BattleServantConfConponent_o *)(v34 + 4), (System_Int32_array **)v20, v28, v29, v30, v31, v32, v33);
       crystalMat = (int)v17->fields.crystalMat;
       if ( (int)++v18 >= crystalMat )
         goto LABEL_29;
     }
 LABEL_30:
-    sub_B7076C(this, o);
+    sub_B7769C(this, o);
   }
 LABEL_29:
   UnityEngine_Renderer__set_materials(v6, *p_materialsArray, 0LL);
@@ -492,16 +492,16 @@ void __fastcall FGOCrystalMesh__ExplodeCrystalMesh(FGOCrystalMesh_o *this, const
   UnityEngine_Component_o *v12; // x21
   __int64 v13; // x0
 
-  if ( (byte_4350984 & 1) == 0 )
+  if ( (byte_438A068 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponentsInChildren_FGOMeshExploder___);
-    sub_B70694(&Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer___);
-    sub_B70694(&StringLiteral_23642/*"weapon_"*/);
-    byte_4350984 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponentsInChildren_FGOMeshExploder___);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer___);
+    sub_B775C4(&StringLiteral_23744/*"weapon_"*/);
+    byte_438A068 = 1;
   }
   ComponentsInChildren_USTimelineContainer = UnityEngine_Component__GetComponentsInChildren_USTimelineContainer_(
                                                (UnityEngine_Component_o *)this,
-                                               (const MethodInfo_1BE43FC *)Method_UnityEngine_Component_GetComponentsInChildren_FGOMeshExploder___);
+                                               (const MethodInfo_1C6DAB8 *)Method_UnityEngine_Component_GetComponentsInChildren_FGOMeshExploder___);
   if ( !ComponentsInChildren_USTimelineContainer )
     goto LABEL_23;
   v5 = *((_DWORD *)ComponentsInChildren_USTimelineContainer + 6);
@@ -520,16 +520,16 @@ void __fastcall FGOCrystalMesh__ExplodeCrystalMesh(FGOCrystalMesh_o *this, const
         goto LABEL_9;
     }
 LABEL_24:
-    v13 = sub_B70798(ComponentsInChildren_USTimelineContainer);
-    sub_B70738(v13, 0LL);
+    v13 = sub_B776C8(ComponentsInChildren_USTimelineContainer);
+    sub_B77668(v13, 0LL);
   }
 LABEL_9:
   ComponentsInChildren_USTimelineContainer = UnityEngine_Component__GetComponentsInChildren_USTimelineContainer_(
                                                (UnityEngine_Component_o *)this,
-                                               (const MethodInfo_1BE43FC *)Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer___);
+                                               (const MethodInfo_1C6DAB8 *)Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer___);
   if ( !ComponentsInChildren_USTimelineContainer )
 LABEL_23:
-    sub_B7076C(ComponentsInChildren_USTimelineContainer, v4);
+    sub_B7769C(ComponentsInChildren_USTimelineContainer, v4);
   v8 = *((_QWORD *)ComponentsInChildren_USTimelineContainer + 3);
   v9 = ComponentsInChildren_USTimelineContainer;
   if ( (int)v8 >= 1 )
@@ -557,7 +557,7 @@ LABEL_23:
           goto LABEL_23;
         ComponentsInChildren_USTimelineContainer = (void *)System_String__Contains(
                                                              (System_String_o *)ComponentsInChildren_USTimelineContainer,
-                                                             (System_String_o *)StringLiteral_23642/*"weapon_"*/,
+                                                             (System_String_o *)StringLiteral_23744/*"weapon_"*/,
                                                              0LL);
         if ( ((unsigned __int8)ComponentsInChildren_USTimelineContainer & 1) != 0 )
         {
@@ -597,7 +597,7 @@ void __fastcall FGOCrystalMesh__InitCrystalData(
   System_Int32_array *v15; // x7
 
   this->fields.crystalData = crystalData;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.crystalData,
     (System_Int32_array **)crystalData,
     (System_String_array **)crystalMat,
@@ -607,7 +607,7 @@ void __fastcall FGOCrystalMesh__InitCrystalData(
     v6,
     v7);
   this->fields.crystalMat = crystalMat;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.crystalMat,
     (System_Int32_array **)crystalMat,
     v10,
@@ -629,7 +629,7 @@ void __fastcall FGOCrystalMesh__OnDestroy(FGOCrystalMesh_o *this, const MethodIn
   System_Int32_array *v7; // x7
 
   this->fields.materialsArray = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.materialsArray, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.materialsArray, 0LL, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -653,7 +653,7 @@ void __fastcall FGOCrystalMesh_CrystalData___ctor(FGOCrystalMesh_CrystalData_o *
   this->fields.mass = 1.0;
   *(_QWORD *)&this->fields.minPieceVertex = 0x140000000ALL;
   this->fields.angularVelocity = UnityEngine_Vector3__get_zero(0LL);
-  *(_OWORD *)&this->fields.minBrokenSpeed = xmmword_32E7340;
+  *(_OWORD *)&this->fields.minBrokenSpeed = xmmword_331A640;
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -673,10 +673,10 @@ void __fastcall FGOCrystalMesh___c__DisplayClass9_0___AddCrystalMesh_b__0(
   UnityEngine_Component_o *r; // x0
   UnityEngine_Object_o *gameObject; // x20
 
-  if ( (byte_434EAA5 & 1) == 0 )
+  if ( (byte_4388076 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_434EAA5 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4388076 = 1;
   }
   r = (UnityEngine_Component_o *)this->fields.r;
   if ( !r )
@@ -700,6 +700,6 @@ void __fastcall FGOCrystalMesh___c__DisplayClass9_0___AddCrystalMesh_b__0(
       }
     }
 LABEL_12:
-    sub_B7076C(r, method);
+    sub_B7769C(r, method);
   }
 }

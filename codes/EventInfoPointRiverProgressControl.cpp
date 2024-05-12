@@ -9,16 +9,16 @@ void __fastcall EventInfoPointRiverProgressControl___cctor(const MethodInfo *met
   BattleServantConfConponent_o *static_fields; // x0
   System_Int32_array **v8; // x1
 
-  if ( (byte_4352A56 & 1) == 0 )
+  if ( (byte_438C251 & 1) == 0 )
   {
-    sub_B70694(&EventInfoPointRiverProgressControl_TypeInfo);
-    sub_B70694(&StringLiteral_8632/*"LineProgressData_"*/);
-    byte_4352A56 = 1;
+    sub_B775C4(&EventInfoPointRiverProgressControl_TypeInfo);
+    sub_B775C4(&StringLiteral_8688/*"LineProgressData_"*/);
+    byte_438C251 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventInfoPointRiverProgressControl_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_8632/*"LineProgressData_"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_8632/*"LineProgressData_"*/;
-  sub_B70630(static_fields, v8, v1, v2, v3, v4, v5, v6);
+  v8 = (System_Int32_array **)StringLiteral_8688/*"LineProgressData_"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_8688/*"LineProgressData_"*/;
+  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
   EventInfoPointRiverProgressControl_TypeInfo->static_fields->MAX_SCENARIO_RIVER_INDEX = 5;
 }
 
@@ -35,18 +35,18 @@ void __fastcall EventInfoPointRiverProgressControl___ctor(
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_4352A55 & 1) == 0 )
+  if ( (byte_438C250 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_QuestReleaseEntity___ctor__);
-    sub_B70694(&System_Collections_Generic_List_QuestReleaseEntity__TypeInfo);
-    byte_4352A55 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_QuestReleaseEntity___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_QuestReleaseEntity__TypeInfo);
+    byte_438C250 = 1;
   }
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_QuestReleaseEntity__TypeInfo);
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_QuestReleaseEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v3,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_QuestReleaseEntity___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_QuestReleaseEntity___ctor__);
   this->fields.baseQuestReleaseEntList = (struct System_Collections_Generic_List_QuestReleaseEntity__o *)v3;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.baseQuestReleaseEntList,
     (System_Int32_array **)v3,
     v4,
@@ -92,7 +92,7 @@ void __fastcall EventInfoPointRiverProgressControl__AddProgressData(
                    isFreeQuestClear,
                    v18);
   this->fields.progressData = ProgressData;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.progressData,
     (System_Int32_array **)ProgressData,
     v12,
@@ -112,7 +112,7 @@ void __fastcall EventInfoPointRiverProgressControl__ApplyProgressData(
 
   progressData = this->fields.progressData;
   if ( !progressData )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   progressData->fields.OldTotalPoint = progressData->fields.TotalPoint;
 }
 
@@ -134,15 +134,15 @@ void __fastcall EventInfoPointRiverProgressControl__Awake(
   System_Int32_array *v12; // x7
 
   v2 = this;
-  if ( (byte_4352A43 & 1) == 0 )
+  if ( (byte_438C23E & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_UserEventPointMaster___);
-    this = (EventInfoPointRiverProgressControl_o *)sub_B70694(&DataManager_TypeInfo);
-    byte_4352A43 = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_UserEventPointMaster___);
+    this = (EventInfoPointRiverProgressControl_o *)sub_B775C4(&DataManager_TypeInfo);
+    byte_438C23E = 1;
   }
   progressRiver = v2->fields.progressRiver;
   if ( !progressRiver )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   max_length = progressRiver->max_length;
   v5 = -1;
   do
@@ -150,9 +150,9 @@ void __fastcall EventInfoPointRiverProgressControl__Awake(
   while ( v5 < max_length );
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (System_Int32_array **)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_UserEventPointMaster___);
+  Master_WarQuestSelectionMaster = (System_Int32_array **)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_UserEventPointMaster___);
   v2->fields.userEventPointMaster = (struct UserEventPointMaster_o *)Master_WarQuestSelectionMaster;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v2->fields.userEventPointMaster,
     Master_WarQuestSelectionMaster,
     v7,
@@ -180,15 +180,15 @@ EventInfoPointRiverProgressControl_ProgressData_o *__fastcall EventInfoPointRive
   __int64 v18; // x0
   __int64 v19; // x1
 
-  if ( (byte_4352A54 & 1) == 0 )
+  if ( (byte_438C24F & 1) == 0 )
   {
-    sub_B70694(&EventInfoPointRiverProgressControl_ProgressData_TypeInfo);
-    byte_4352A54 = 1;
+    sub_B775C4(&EventInfoPointRiverProgressControl_ProgressData_TypeInfo);
+    byte_438C24F = 1;
   }
-  v17 = (EventInfoPointRiverProgressControl_ProgressData_o *)sub_B70764(EventInfoPointRiverProgressControl_ProgressData_TypeInfo);
+  v17 = (EventInfoPointRiverProgressControl_ProgressData_o *)sub_B77694(EventInfoPointRiverProgressControl_ProgressData_TypeInfo);
   EventInfoPointRiverProgressControl_ProgressData___ctor(v17, 0LL);
   if ( !v17 )
-    sub_B7076C(v18, v19);
+    sub_B7769C(v18, v19);
   v17->fields.IsReleaseScenarioAnimEnd = isScenarioRelease;
   v17->fields.Id = id;
   v17->fields.ReleaseScenarioIndex = releaseScenarioIndex;
@@ -233,38 +233,38 @@ void __fastcall EventInfoPointRiverProgressControl__DeleteContinueData(const Met
   WarEntity_o *entity; // [xsp+10h] [xbp-50h] BYREF
   int32_t v29; // [xsp+1Ch] [xbp-44h] BYREF
 
-  if ( (byte_4352A51 & 1) == 0 )
+  if ( (byte_438C24C & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
-    sub_B70694(&Method_DataManager_GetMaster_EventDetailMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_EventMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
-    sub_B70694(&EventEntity_TypeInfo);
-    sub_B70694(&EventInfoPointRiverProgressControl_TypeInfo);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
-    sub_B70694(&System_Collections_IEnumerator_TypeInfo);
-    byte_4352A51 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+    sub_B775C4(&Method_DataManager_GetMaster_EventDetailMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_EventMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+    sub_B775C4(&EventEntity_TypeInfo);
+    sub_B775C4(&EventInfoPointRiverProgressControl_TypeInfo);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
+    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
+    byte_438C24C = 1;
   }
   v29 = 0;
   entity = 0LL;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_EventMaster___);
+  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_EventMaster___);
   if ( !Master_WarQuestSelectionMaster
     || (list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)Master_WarQuestSelectionMaster->fields.list,
-        Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_EventDetailMaster___),
+        Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_EventDetailMaster___),
         !list) )
   {
-    sub_B7076C(Master_WarQuestSelectionMaster, v2);
+    sub_B7769C(Master_WarQuestSelectionMaster, v2);
   }
   v4 = (DataMasterBase_WarMaster__WarEntity__int__o *)Master_WarQuestSelectionMaster;
   Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
                  list,
-                 (const MethodInfo_2C865F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_2CC56C8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B7076C(0LL, v5);
+    sub_B7769C(0LL, v5);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -284,7 +284,7 @@ void __fastcall EventInfoPointRiverProgressControl__DeleteContinueData(const Met
     else
     {
 LABEL_13:
-      p_method = sub_B08590(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_B0F4C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -307,7 +307,7 @@ LABEL_13:
     else
     {
 LABEL_20:
-      v14 = sub_B08590(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v14 = sub_B0F4C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v15 = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v14)(
                       Enumerator,
@@ -321,15 +321,15 @@ LABEL_20:
         v18 = v15[4];
         v29 = v18;
         if ( !v4 )
-          sub_B7076C(v15, v16);
+          sub_B7769C(v15, v16);
         if ( DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
                v4,
                &entity,
                v18,
-               (const MethodInfo_21C049C *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+               (const MethodInfo_21FB8F0 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
         {
           if ( !entity )
-            sub_B7076C(0LL, v19);
+            sub_B7769C(0LL, v19);
           if ( EventDetailEntity__IsEventRiverProgress((EventDetailEntity_o *)entity, 0LL) )
           {
             v20 = EventInfoPointRiverProgressControl_TypeInfo;
@@ -341,7 +341,7 @@ LABEL_20:
             }
             SAVE_KEY_PREFIX_LINE_PROGRESS_DATA = v20->static_fields->SAVE_KEY_PREFIX_LINE_PROGRESS_DATA;
             v22 = System_Int32__ToString((int32_t)&v29, 0LL);
-            v23 = System_String__Concat_44758168(SAVE_KEY_PREFIX_LINE_PROGRESS_DATA, v22, 0LL);
+            v23 = System_String__Concat_44901936(SAVE_KEY_PREFIX_LINE_PROGRESS_DATA, v22, 0LL);
             UnityEngine_PlayerPrefs__DeleteKey(v23, 0LL);
           }
         }
@@ -365,7 +365,7 @@ LABEL_20:
   else
   {
 LABEL_37:
-    v27 = sub_B08590(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v27 = sub_B0F4C0(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v27)(Enumerator, *(_QWORD *)(v27 + 8));
 }
@@ -380,10 +380,10 @@ int64_t __fastcall EventInfoPointRiverProgressControl__GetUserEventPoint(
   UserEventPointMaster_o *userEventPointMaster; // x21
   int64_t UserId; // x0
 
-  if ( (byte_4352A50 & 1) == 0 )
+  if ( (byte_438C24B & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4352A50 = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_438C24B = 1;
   }
   userEventPointMaster = this->fields.userEventPointMaster;
   if ( !userEventPointMaster )
@@ -411,15 +411,15 @@ bool __fastcall EventInfoPointRiverProgressControl__HasSaveData(
   int32_t eventId; // [xsp+Ch] [xbp-14h] BYREF
 
   v2 = this;
-  if ( (byte_4352A52 & 1) == 0 )
+  if ( (byte_438C24D & 1) == 0 )
   {
-    this = (EventInfoPointRiverProgressControl_o *)sub_B70694(&EventInfoPointRiverProgressControl_TypeInfo);
-    byte_4352A52 = 1;
+    this = (EventInfoPointRiverProgressControl_o *)sub_B775C4(&EventInfoPointRiverProgressControl_TypeInfo);
+    byte_438C24D = 1;
   }
   eventId = 0;
   eventUiEntity = v2->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   eventId = eventUiEntity->fields.eventId;
   v4 = EventInfoPointRiverProgressControl_TypeInfo;
   if ( (BYTE3(EventInfoPointRiverProgressControl_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -430,7 +430,7 @@ bool __fastcall EventInfoPointRiverProgressControl__HasSaveData(
   }
   SAVE_KEY_PREFIX_LINE_PROGRESS_DATA = v4->static_fields->SAVE_KEY_PREFIX_LINE_PROGRESS_DATA;
   v6 = System_Int32__ToString((int32_t)&eventId, 0LL);
-  v7 = System_String__Concat_44758168(SAVE_KEY_PREFIX_LINE_PROGRESS_DATA, v6, 0LL);
+  v7 = System_String__Concat_44901936(SAVE_KEY_PREFIX_LINE_PROGRESS_DATA, v6, 0LL);
   return UnityEngine_PlayerPrefs__HasKey(v7, 0LL);
 }
 
@@ -466,13 +466,13 @@ void __fastcall EventInfoPointRiverProgressControl__Initialization(
   QuestReleaseEntity_o *v28; // x8
   bool v29; // vf
 
-  if ( (byte_4352A44 & 1) == 0 )
+  if ( (byte_438C23F & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_QuestReleaseEntity__RemoveAt__);
-    sub_B70694(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Item__);
-    sub_B70694(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
-    byte_4352A44 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_QuestReleaseEntity__RemoveAt__);
+    sub_B775C4(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Item__);
+    sub_B775C4(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
+    byte_438C23F = 1;
   }
   if ( entity )
   {
@@ -484,7 +484,7 @@ void __fastcall EventInfoPointRiverProgressControl__Initialization(
       entity,
       totalPointLabel->klass->vtable._5_Setup.methodPtr);
     this->fields.eventUiEntity = entity;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.eventUiEntity,
       (System_Int32_array **)entity,
       v6,
@@ -502,7 +502,7 @@ void __fastcall EventInfoPointRiverProgressControl__Initialization(
     QuestReleaseList = TitleInfoEventSubmarineStatusComponent__GetQuestReleaseList(eventId, 0LL);
     this->fields.baseQuestReleaseEntList = QuestReleaseList;
     p_baseQuestReleaseEntList = &this->fields.baseQuestReleaseEntList;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)p_baseQuestReleaseEntList,
       (System_Int32_array **)QuestReleaseList,
       v15,
@@ -522,7 +522,7 @@ void __fastcall EventInfoPointRiverProgressControl__Initialization(
       {
         v24 = v23 + 1;
         if ( v21->fields._size <= (unsigned int)(v23 + 1) )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
         v25 = v21->fields._items->m_Items[v24];
         if ( !v25 )
           break;
@@ -531,7 +531,7 @@ void __fastcall EventInfoPointRiverProgressControl__Initialization(
           break;
         value = v25->fields.value;
         if ( v26->fields._size <= (unsigned int)v23 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
         v28 = v26->fields._items->m_Items[v23];
         if ( !v28 )
           break;
@@ -543,7 +543,7 @@ void __fastcall EventInfoPointRiverProgressControl__Initialization(
           System_Collections_Generic_List_XWeaponTrail_Element___RemoveAt(
             (System_Collections_Generic_List_XWeaponTrail_Element__o *)totalPointLabel,
             v24,
-            (const MethodInfo_3027378 *)Method_System_Collections_Generic_List_QuestReleaseEntity__RemoveAt__);
+            (const MethodInfo_3054F88 *)Method_System_Collections_Generic_List_QuestReleaseEntity__RemoveAt__);
         }
         v29 = __OFSUB__(v23--, 1);
         if ( v23 < 0 != v29 )
@@ -552,7 +552,7 @@ void __fastcall EventInfoPointRiverProgressControl__Initialization(
       }
       while ( *p_baseQuestReleaseEntList );
 LABEL_23:
-      sub_B7076C(totalPointLabel, entity);
+      sub_B7769C(totalPointLabel, entity);
     }
   }
 }
@@ -571,12 +571,12 @@ bool __fastcall EventInfoPointRiverProgressControl__IsChangeRiver(
   int32_t questId; // w19
 
   v2 = this;
-  if ( (byte_4352A4B & 1) == 0 )
+  if ( (byte_438C246 & 1) == 0 )
   {
-    sub_B70694(&CondType_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Count__);
-    this = (EventInfoPointRiverProgressControl_o *)sub_B70694(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Item__);
-    byte_4352A4B = 1;
+    sub_B775C4(&CondType_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Count__);
+    this = (EventInfoPointRiverProgressControl_o *)sub_B775C4(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Item__);
+    byte_438C246 = 1;
   }
   progressData = v2->fields.progressData;
   if ( !progressData )
@@ -591,15 +591,15 @@ bool __fastcall EventInfoPointRiverProgressControl__IsChangeRiver(
   if ( (int)ReleaseScenarioIndex >= (int)(size - 1) )
     return 0;
   if ( size <= (unsigned int)ReleaseScenarioIndex )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
   v7 = baseQuestReleaseEntList->fields._items->m_Items[ReleaseScenarioIndex];
   if ( !v7 )
 LABEL_16:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   questId = v7->fields.questId;
   if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  return CondType__IsQuestClear_24296868(questId, -1, 0, 0LL);
+  return CondType__IsQuestClear_24699280(questId, -1, 0, 0LL);
 }
 
 
@@ -609,10 +609,10 @@ bool __fastcall EventInfoPointRiverProgressControl__IsClearFreeQuest(
 {
   int32_t pointRiverProgressCommonNo; // w19
 
-  if ( (byte_4352A4D & 1) == 0 )
+  if ( (byte_438C248 & 1) == 0 )
   {
-    sub_B70694(&CondType_TypeInfo);
-    byte_4352A4D = 1;
+    sub_B775C4(&CondType_TypeInfo);
+    byte_438C248 = 1;
   }
   pointRiverProgressCommonNo = this->fields.pointRiverProgressCommonNo;
   if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
@@ -627,15 +627,15 @@ bool __fastcall EventInfoPointRiverProgressControl__IsEndScenarioQuest(
 {
   int32_t endScenarioQuestId; // w19
 
-  if ( (byte_4352A4C & 1) == 0 )
+  if ( (byte_438C247 & 1) == 0 )
   {
-    sub_B70694(&CondType_TypeInfo);
-    byte_4352A4C = 1;
+    sub_B775C4(&CondType_TypeInfo);
+    byte_438C247 = 1;
   }
   endScenarioQuestId = this->fields.endScenarioQuestId;
   if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  return CondType__IsQuestClear_24296868(endScenarioQuestId, -1, 0, 0LL);
+  return CondType__IsQuestClear_24699280(endScenarioQuestId, -1, 0, 0LL);
 }
 
 
@@ -645,15 +645,15 @@ bool __fastcall EventInfoPointRiverProgressControl__IsFirstRiver(
 {
   int32_t firstRiverReleaseQuestId; // w19
 
-  if ( (byte_4352A4A & 1) == 0 )
+  if ( (byte_438C245 & 1) == 0 )
   {
-    sub_B70694(&CondType_TypeInfo);
-    byte_4352A4A = 1;
+    sub_B775C4(&CondType_TypeInfo);
+    byte_438C245 = 1;
   }
   firstRiverReleaseQuestId = this->fields.firstRiverReleaseQuestId;
   if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  return CondType__IsQuestClear_24296868(firstRiverReleaseQuestId, -1, 0, 0LL);
+  return CondType__IsQuestClear_24699280(firstRiverReleaseQuestId, -1, 0, 0LL);
 }
 
 
@@ -682,7 +682,7 @@ bool __fastcall EventInfoPointRiverProgressControl__IsPlayAnim(
                                                          *(const MethodInfo **)&type),
         (v7 = v4->fields.progressData) == 0LL) )
   {
-    sub_B7076C(this, *(_QWORD *)&type);
+    sub_B7769C(this, *(_QWORD *)&type);
   }
   v8 = v7->fields.TotalPoint >= v7->fields.NextPoint && !v7->fields.IsReleaseScenarioAnimEnd;
   return (v8 | (TotalPoint > OldTotalPoint) | (unsigned __int8)this & 1 | EventInfoPointRiverProgressControl__IsChangeRiver(
@@ -699,7 +699,7 @@ bool __fastcall EventInfoPointRiverProgressControl__IsProgressShipAnim(
 
   progressData = this->fields.progressData;
   if ( !progressData )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return progressData->fields.TotalPoint > progressData->fields.OldTotalPoint
       && !progressData->fields.IsReleaseScenarioAnimEnd;
 }
@@ -713,7 +713,7 @@ bool __fastcall EventInfoPointRiverProgressControl__IsScenarioReleaseAnim(
 
   progressData = this->fields.progressData;
   if ( !progressData )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return progressData->fields.TotalPoint >= progressData->fields.NextPoint
       && !progressData->fields.IsReleaseScenarioAnimEnd;
 }
@@ -752,7 +752,7 @@ void __fastcall EventInfoPointRiverProgressControl__LoadProgressData(
   _BOOL8 v29; // x0
   __int64 v30; // x1
   int32_t klass; // w25
-  _BOOL8 IsQuestClear_24296868; // x0
+  _BOOL8 IsQuestClear_24699280; // x0
   __int64 v33; // x1
   struct System_Collections_Generic_List_QuestReleaseEntity__o *baseQuestReleaseEntList; // x8
   int v35; // w26
@@ -801,26 +801,26 @@ void __fastcall EventInfoPointRiverProgressControl__LoadProgressData(
   int32_t v78; // [xsp+6Ch] [xbp-54h] BYREF
 
   v78 = eventId;
-  if ( (byte_4352A4F & 1) == 0 )
+  if ( (byte_438C24A & 1) == 0 )
   {
-    sub_B70694(&char___TypeInfo);
-    sub_B70694(&CondType_TypeInfo);
-    sub_B70694(&System_Convert_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__get_Current__);
-    sub_B70694(&EventInfoPointRiverProgressControl_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
-    sub_B70694(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Item__);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4352A4F = 1;
+    sub_B775C4(&char___TypeInfo);
+    sub_B775C4(&CondType_TypeInfo);
+    sub_B775C4(&System_Convert_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__get_Current__);
+    sub_B775C4(&EventInfoPointRiverProgressControl_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
+    sub_B775C4(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Item__);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438C24A = 1;
   }
   memset(&v77, 0, sizeof(v77));
   v76 = 0;
   this->fields.progressData = 0LL;
   p_progressData = (BattleServantConfConponent_o *)&this->fields.progressData;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.progressData,
     0LL,
     (System_String_array **)method,
@@ -838,12 +838,12 @@ void __fastcall EventInfoPointRiverProgressControl__LoadProgressData(
   }
   SAVE_KEY_PREFIX_LINE_PROGRESS_DATA = v9->static_fields->SAVE_KEY_PREFIX_LINE_PROGRESS_DATA;
   v11 = System_Int32__ToString((int32_t)&v78, 0LL);
-  v12 = System_String__Concat_44758168(SAVE_KEY_PREFIX_LINE_PROGRESS_DATA, v11, 0LL);
+  v12 = System_String__Concat_44901936(SAVE_KEY_PREFIX_LINE_PROGRESS_DATA, v11, 0LL);
   String = UnityEngine_PlayerPrefs__GetString(v12, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   IsNullOrEmpty = System_String__IsNullOrEmpty(String, 0LL);
   if ( (IsNullOrEmpty & 1) == 0 )
   {
-    IsNullOrEmpty = sub_B706AC(char___TypeInfo, 1LL);
+    IsNullOrEmpty = sub_B775DC(char___TypeInfo, 1LL);
     if ( !IsNullOrEmpty )
       goto LABEL_77;
     v15 = IsNullOrEmpty;
@@ -854,7 +854,7 @@ void __fastcall EventInfoPointRiverProgressControl__LoadProgressData(
       || (IsNullOrEmpty = (__int64)System_String__Split(String, (System_Char_array *)IsNullOrEmpty, 0LL)) == 0 )
     {
 LABEL_77:
-      sub_B7076C(IsNullOrEmpty, v15);
+      sub_B7769C(IsNullOrEmpty, v15);
     }
     v47 = *(_DWORD *)(IsNullOrEmpty + 24);
     v48 = IsNullOrEmpty;
@@ -942,9 +942,9 @@ LABEL_71:
               {
                 j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
               }
-              v61 = System_Convert__ToBoolean_42425024(v58, 0LL);
-              v62 = System_Convert__ToBoolean_42425024(v59, 0LL);
-              v63 = System_Convert__ToBoolean_42425024(v60, 0LL);
+              v61 = System_Convert__ToBoolean_42770912(v58, 0LL);
+              v62 = System_Convert__ToBoolean_42770912(v59, 0LL);
+              v63 = System_Convert__ToBoolean_42770912(v60, 0LL);
               ProgressData = (System_Int32_array **)EventInfoPointRiverProgressControl__CreateProgressData(
                                                       (EventInfoPointRiverProgressControl_o *)v63,
                                                       v49,
@@ -957,7 +957,7 @@ LABEL_71:
                                                       v63,
                                                       v72);
               p_progressData->klass = (BattleServantConfConponent_c *)ProgressData;
-              sub_B70630(p_progressData, ProgressData, v65, v66, v67, v68, v69, v70);
+              sub_B77560(p_progressData, ProgressData, v65, v66, v67, v68, v69, v70);
               return;
             }
             v59 = 0;
@@ -996,28 +996,28 @@ LABEL_71:
         System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
           (System_Collections_Generic_List_Enumerator_T__o *)v75,
           (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)this->fields.baseQuestReleaseEntList,
-          (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
+          (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
         v27 = 0;
         v77 = *(System_Collections_Generic_List_Enumerator_T__o *)v75;
         while ( 1 )
         {
           v29 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
                   &v77,
-                  (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
+                  (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
           if ( !v29 )
             break;
           if ( !v77.fields.current )
-            sub_B7076C(v29, v30);
+            sub_B7769C(v29, v30);
           klass = (int32_t)v77.fields.current[1].klass;
           if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-          IsQuestClear_24296868 = CondType__IsQuestClear_24296868(klass, -1, 0, 0LL);
-          if ( !IsQuestClear_24296868 )
+          IsQuestClear_24699280 = CondType__IsQuestClear_24699280(klass, -1, 0, 0LL);
+          if ( !IsQuestClear_24699280 )
             break;
           baseQuestReleaseEntList = this->fields.baseQuestReleaseEntList;
           ++v27;
           if ( !baseQuestReleaseEntList )
-            sub_B7076C(IsQuestClear_24296868, v33);
+            sub_B7769C(IsQuestClear_24699280, v33);
           size = baseQuestReleaseEntList->fields._size;
           if ( v27 >= size )
             v27 = size - 1;
@@ -1026,7 +1026,7 @@ LABEL_71:
         v35 = ++v76;
         System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
           &v77,
-          (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
+          (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
         if ( v35 )
         {
           v36 = v35 - 1;
@@ -1040,7 +1040,7 @@ LABEL_71:
         if ( !v37 )
           goto LABEL_77;
         if ( v37->fields._size <= (unsigned int)v27 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
         v38 = v37->fields._items->m_Items[v27];
         if ( !v38 )
           goto LABEL_77;
@@ -1056,7 +1056,7 @@ LABEL_71:
                                        v26 & 1,
                                        v72);
         p_progressData->klass = (BattleServantConfConponent_c *)v39;
-        sub_B70630(p_progressData, v39, v40, v41, v42, v43, v44, v45);
+        sub_B77560(p_progressData, v39, v40, v41, v42, v43, v44, v45);
         eventUiValueEntityList = v73;
         v19 = v35;
       }
@@ -1065,8 +1065,8 @@ LABEL_71:
         return;
     }
 LABEL_78:
-    v71 = sub_B70798(IsNullOrEmpty);
-    sub_B70738(v71, 0LL);
+    v71 = sub_B776C8(IsNullOrEmpty);
+    sub_B77668(v71, 0LL);
   }
 }
 
@@ -1083,20 +1083,20 @@ void __fastcall EventInfoPointRiverProgressControl__PlayAnim(
   System_Collections_IEnumerator_o *v8; // x1
 
   v6 = this;
-  if ( (byte_4352A47 & 1) == 0 )
+  if ( (byte_438C242 & 1) == 0 )
   {
-    this = (EventInfoPointRiverProgressControl_o *)sub_B70694(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Count__);
-    byte_4352A47 = 1;
+    this = (EventInfoPointRiverProgressControl_o *)sub_B775C4(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Count__);
+    byte_438C242 = 1;
   }
   if ( type != 1 )
     goto LABEL_7;
   baseQuestReleaseEntList = v6->fields.baseQuestReleaseEntList;
   if ( !baseQuestReleaseEntList )
-    sub_B7076C(this, *(_QWORD *)&type);
+    sub_B7769C(this, *(_QWORD *)&type);
   if ( baseQuestReleaseEntList->fields._size )
   {
-    v8 = EventInfoPointRiverProgressControl__PlayAnim_26715724(v6, callback, (const MethodInfo *)callback);
-    UnityEngine_MonoBehaviour__StartCoroutine_36062060((UnityEngine_MonoBehaviour_o *)v6, v8, 0LL);
+    v8 = EventInfoPointRiverProgressControl__PlayAnim_27150244(v6, callback, (const MethodInfo *)callback);
+    UnityEngine_MonoBehaviour__StartCoroutine_36304832((UnityEngine_MonoBehaviour_o *)v6, v8, 0LL);
   }
   else
   {
@@ -1106,7 +1106,7 @@ LABEL_7:
 }
 
 
-System_Collections_IEnumerator_o *__fastcall EventInfoPointRiverProgressControl__PlayAnim_26715724(
+System_Collections_IEnumerator_o *__fastcall EventInfoPointRiverProgressControl__PlayAnim_27150244(
         EventInfoPointRiverProgressControl_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -1127,22 +1127,22 @@ System_Collections_IEnumerator_o *__fastcall EventInfoPointRiverProgressControl_
   System_Int32_array *v18; // x6
   System_Int32_array *v19; // x7
 
-  if ( (byte_4352A48 & 1) == 0 )
+  if ( (byte_438C243 & 1) == 0 )
   {
-    sub_B70694(&EventInfoPointRiverProgressControl__PlayAnim_d__26_TypeInfo);
-    byte_4352A48 = 1;
+    sub_B775C4(&EventInfoPointRiverProgressControl__PlayAnim_d__26_TypeInfo);
+    byte_438C243 = 1;
   }
-  v5 = sub_B70764(EventInfoPointRiverProgressControl__PlayAnim_d__26_TypeInfo);
+  v5 = sub_B77694(EventInfoPointRiverProgressControl__PlayAnim_d__26_TypeInfo);
   EventInfoPointRiverProgressControl__PlayAnim_d__26___ctor(
     (EventInfoPointRiverProgressControl__PlayAnim_d__26_o *)v5,
     0,
     0LL);
   if ( !v5 )
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   *(_QWORD *)(v5 + 32) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v5 + 32), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
+  sub_B77560((BattleServantConfConponent_o *)(v5 + 32), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 40) = callback;
-  sub_B70630((BattleServantConfConponent_o *)(v5 + 40), (System_Int32_array **)callback, v14, v15, v16, v17, v18, v19);
+  sub_B77560((BattleServantConfConponent_o *)(v5 + 40), (System_Int32_array **)callback, v14, v15, v16, v17, v18, v19);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -1171,22 +1171,22 @@ void __fastcall EventInfoPointRiverProgressControl__PlayMoveShip(
   System_Action_o *v21; // x20
   const MethodInfo *v22; // x2
 
-  if ( (byte_4352A49 & 1) == 0 )
+  if ( (byte_438C244 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_EventInfoPointRiverProgressControl___c__DisplayClass27_0__PlayMoveShip_b__0__);
-    sub_B70694(&EventInfoPointRiverProgressControl___c__DisplayClass27_0_TypeInfo);
-    byte_4352A49 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_EventInfoPointRiverProgressControl___c__DisplayClass27_0__PlayMoveShip_b__0__);
+    sub_B775C4(&EventInfoPointRiverProgressControl___c__DisplayClass27_0_TypeInfo);
+    byte_438C244 = 1;
   }
-  v5 = sub_B70764(EventInfoPointRiverProgressControl___c__DisplayClass27_0_TypeInfo);
+  v5 = sub_B77694(EventInfoPointRiverProgressControl___c__DisplayClass27_0_TypeInfo);
   EventInfoPointRiverProgressControl___c__DisplayClass27_0___ctor(
     (EventInfoPointRiverProgressControl___c__DisplayClass27_0_o *)v5,
     0LL);
   if ( !v5
     || (*(_QWORD *)(v5 + 16) = this,
-        sub_B70630((BattleServantConfConponent_o *)(v5 + 16), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13),
+        sub_B77560((BattleServantConfConponent_o *)(v5 + 16), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13),
         *(_QWORD *)(v5 + 24) = callback,
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)(v5 + 24),
           (System_Int32_array **)callback,
           v14,
@@ -1196,7 +1196,7 @@ void __fastcall EventInfoPointRiverProgressControl__PlayMoveShip(
           v18,
           v19),
         progressShip = this->fields.progressShip,
-        v21 = (System_Action_o *)sub_B70764(System_Action_TypeInfo),
+        v21 = (System_Action_o *)sub_B77694(System_Action_TypeInfo),
         System_Action___ctor(
           v21,
           (Il2CppObject *)v5,
@@ -1204,7 +1204,7 @@ void __fastcall EventInfoPointRiverProgressControl__PlayMoveShip(
           0LL),
         !progressShip) )
   {
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   }
   EventInfoShipProgressDrawComponent__PlayProgressShipMoveAnim(progressShip, v21, v22);
 }
@@ -1228,7 +1228,7 @@ void __fastcall EventInfoPointRiverProgressControl__SaveAllData(
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   EventInfoPointRiverProgressControl__SaveProgressData(this, eventUiEntity->fields.eventId, v2);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
@@ -1270,13 +1270,13 @@ void __fastcall EventInfoPointRiverProgressControl__SaveProgressData(
   int32_t v32; // [xsp+2Ch] [xbp-24h] BYREF
 
   v32 = eventId;
-  if ( (byte_4352A53 & 1) == 0 )
+  if ( (byte_438C24E & 1) == 0 )
   {
-    sub_B70694(&System_Convert_TypeInfo);
-    sub_B70694(&EventInfoPointRiverProgressControl_TypeInfo);
-    sub_B70694(&System_Text_StringBuilder_TypeInfo);
-    sub_B70694(&StringLiteral_1250/*":"*/);
-    byte_4352A53 = 1;
+    sub_B775C4(&System_Convert_TypeInfo);
+    sub_B775C4(&EventInfoPointRiverProgressControl_TypeInfo);
+    sub_B775C4(&System_Text_StringBuilder_TypeInfo);
+    sub_B775C4(&StringLiteral_1252/*":"*/);
+    byte_438C24E = 1;
   }
   ReleaseScenarioIndex = 0;
   Id = 0;
@@ -1284,7 +1284,7 @@ void __fastcall EventInfoPointRiverProgressControl__SaveProgressData(
   OldTotalPoint = 0LL;
   v27 = 0LL;
   v26 = 0;
-  v4 = (System_Text_StringBuilder_o *)sub_B70764(System_Text_StringBuilder_TypeInfo);
+  v4 = (System_Text_StringBuilder_o *)sub_B77694(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v4, 0LL);
   progressData = this->fields.progressData;
   if ( !progressData )
@@ -1293,40 +1293,40 @@ void __fastcall EventInfoPointRiverProgressControl__SaveProgressData(
   appended = System_Int32__ToString((int32_t)&Id, 0LL);
   if ( !v4 )
     goto LABEL_18;
-  System_Text_StringBuilder__Append_42601980(v4, appended, 0LL);
-  appended = (System_String_o *)System_Text_StringBuilder__Append_42601980(
+  System_Text_StringBuilder__Append_42951964(v4, appended, 0LL);
+  appended = (System_String_o *)System_Text_StringBuilder__Append_42951964(
                                   v4,
-                                  (System_String_o *)StringLiteral_1250/*":"*/,
+                                  (System_String_o *)StringLiteral_1252/*":"*/,
                                   0LL);
   v8 = this->fields.progressData;
   if ( !v8 )
     goto LABEL_18;
   ReleaseScenarioIndex = v8->fields.ReleaseScenarioIndex;
   v9 = System_Int32__ToString((int32_t)&ReleaseScenarioIndex, 0LL);
-  System_Text_StringBuilder__Append_42601980(v4, v9, 0LL);
-  appended = (System_String_o *)System_Text_StringBuilder__Append_42601980(
+  System_Text_StringBuilder__Append_42951964(v4, v9, 0LL);
+  appended = (System_String_o *)System_Text_StringBuilder__Append_42951964(
                                   v4,
-                                  (System_String_o *)StringLiteral_1250/*":"*/,
+                                  (System_String_o *)StringLiteral_1252/*":"*/,
                                   0LL);
   v10 = this->fields.progressData;
   if ( !v10 )
     goto LABEL_18;
   OldTotalPoint = v10->fields.OldTotalPoint;
   v11 = System_Int64__ToString((int64_t)&OldTotalPoint, 0LL);
-  System_Text_StringBuilder__Append_42601980(v4, v11, 0LL);
-  appended = (System_String_o *)System_Text_StringBuilder__Append_42601980(
+  System_Text_StringBuilder__Append_42951964(v4, v11, 0LL);
+  appended = (System_String_o *)System_Text_StringBuilder__Append_42951964(
                                   v4,
-                                  (System_String_o *)StringLiteral_1250/*":"*/,
+                                  (System_String_o *)StringLiteral_1252/*":"*/,
                                   0LL);
   v12 = this->fields.progressData;
   if ( !v12 )
     goto LABEL_18;
   NextPoint = v12->fields.NextPoint;
   v13 = System_Int64__ToString((int64_t)&NextPoint, 0LL);
-  System_Text_StringBuilder__Append_42601980(v4, v13, 0LL);
-  appended = (System_String_o *)System_Text_StringBuilder__Append_42601980(
+  System_Text_StringBuilder__Append_42951964(v4, v13, 0LL);
+  appended = (System_String_o *)System_Text_StringBuilder__Append_42951964(
                                   v4,
-                                  (System_String_o *)StringLiteral_1250/*":"*/,
+                                  (System_String_o *)StringLiteral_1252/*":"*/,
                                   0LL);
   v14 = this->fields.progressData;
   if ( !v14 )
@@ -1337,30 +1337,30 @@ void __fastcall EventInfoPointRiverProgressControl__SaveProgressData(
   {
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
-  HIDWORD(v27) = System_Convert__ToInt32_42434132(IsReleaseScenarioAnimEnd, 0LL);
+  HIDWORD(v27) = System_Convert__ToInt32_42780020(IsReleaseScenarioAnimEnd, 0LL);
   v16 = System_Int32__ToString((int32_t)&v27 + 4, 0LL);
-  System_Text_StringBuilder__Append_42601980(v4, v16, 0LL);
-  appended = (System_String_o *)System_Text_StringBuilder__Append_42601980(
+  System_Text_StringBuilder__Append_42951964(v4, v16, 0LL);
+  appended = (System_String_o *)System_Text_StringBuilder__Append_42951964(
                                   v4,
-                                  (System_String_o *)StringLiteral_1250/*":"*/,
+                                  (System_String_o *)StringLiteral_1252/*":"*/,
                                   0LL);
   v17 = this->fields.progressData;
   if ( !v17
-    || (LODWORD(v27) = System_Convert__ToInt32_42434132(v17->fields.IsOpenFirstRiver, 0LL),
+    || (LODWORD(v27) = System_Convert__ToInt32_42780020(v17->fields.IsOpenFirstRiver, 0LL),
         v18 = System_Int32__ToString((int32_t)&v27, 0LL),
-        System_Text_StringBuilder__Append_42601980(v4, v18, 0LL),
-        appended = (System_String_o *)System_Text_StringBuilder__Append_42601980(
+        System_Text_StringBuilder__Append_42951964(v4, v18, 0LL),
+        appended = (System_String_o *)System_Text_StringBuilder__Append_42951964(
                                         v4,
-                                        (System_String_o *)StringLiteral_1250/*":"*/,
+                                        (System_String_o *)StringLiteral_1252/*":"*/,
                                         0LL),
         (v19 = this->fields.progressData) == 0LL) )
   {
 LABEL_18:
-    sub_B7076C(appended, v6);
+    sub_B7769C(appended, v6);
   }
-  v26 = System_Convert__ToInt32_42434132(v19->fields.IsFreeQuestClear, 0LL);
+  v26 = System_Convert__ToInt32_42780020(v19->fields.IsFreeQuestClear, 0LL);
   v20 = System_Int32__ToString((int32_t)&v26, 0LL);
-  System_Text_StringBuilder__Append_42601980(v4, v20, 0LL);
+  System_Text_StringBuilder__Append_42951964(v4, v20, 0LL);
   v21 = EventInfoPointRiverProgressControl_TypeInfo;
   if ( (BYTE3(EventInfoPointRiverProgressControl_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EventInfoPointRiverProgressControl_TypeInfo->_2.cctor_finished )
@@ -1370,7 +1370,7 @@ LABEL_18:
   }
   SAVE_KEY_PREFIX_LINE_PROGRESS_DATA = v21->static_fields->SAVE_KEY_PREFIX_LINE_PROGRESS_DATA;
   v23 = System_Int32__ToString((int32_t)&v32, 0LL);
-  v24 = System_String__Concat_44758168(SAVE_KEY_PREFIX_LINE_PROGRESS_DATA, v23, 0LL);
+  v24 = System_String__Concat_44901936(SAVE_KEY_PREFIX_LINE_PROGRESS_DATA, v23, 0LL);
   v25 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v4->klass->vtable._3_ToString.method)(
                              v4,
                              v4->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
@@ -1387,7 +1387,7 @@ void __fastcall EventInfoPointRiverProgressControl__SetMaskPanelActive(
 
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
-    sub_B7076C(0LL, isActive);
+    sub_B7769C(0LL, isActive);
   UnityEngine_GameObject__SetActive(maskPanel, isActive, 0LL);
 }
 
@@ -1425,11 +1425,11 @@ void __fastcall EventInfoPointRiverProgressControl__SetNextRiverProgressData(
   __int64 v28; // x0
 
   v2 = this;
-  if ( (byte_4352A4E & 1) == 0 )
+  if ( (byte_438C249 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Count__);
-    this = (EventInfoPointRiverProgressControl_o *)sub_B70694(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Item__);
-    byte_4352A4E = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Count__);
+    this = (EventInfoPointRiverProgressControl_o *)sub_B775C4(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Item__);
+    byte_438C249 = 1;
   }
   progressData = v2->fields.progressData;
   v2->fields.isChangeRiver = 1;
@@ -1502,8 +1502,8 @@ void __fastcall EventInfoPointRiverProgressControl__SetNextRiverProgressData(
   if ( (unsigned int)v19 >= v18->max_length )
   {
 LABEL_37:
-    v28 = sub_B70798(this);
-    sub_B70738(v28, 0LL);
+    v28 = sub_B776C8(this);
+    sub_B77668(v28, 0LL);
   }
   this = (EventInfoPointRiverProgressControl_o *)v18->m_Items[v19];
   if ( !this )
@@ -1517,7 +1517,7 @@ LABEL_37:
     goto LABEL_36;
   v23 = v21->fields.ReleaseScenarioIndex;
   if ( v22->fields._size <= (unsigned int)v23 )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
   v24 = v22->fields._items->m_Items[v23];
   if ( !v24 )
     goto LABEL_36;
@@ -1534,7 +1534,7 @@ LABEL_37:
         (v27 = v2->fields.progressData) == 0LL) )
   {
 LABEL_36:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   v27->fields.IsReleaseScenarioAnimEnd = 1;
 LABEL_34:
@@ -1575,21 +1575,21 @@ void __fastcall EventInfoPointRiverProgressControl__Setup(
   const MethodInfo *v14; // x1
   const MethodInfo *v15; // x1
 
-  if ( (byte_4352A45 & 1) == 0 )
+  if ( (byte_438C240 & 1) == 0 )
   {
-    sub_B70694(&NGUITools_TypeInfo);
-    sub_B70694(&StringLiteral_1175/*"2DUI"*/);
-    byte_4352A45 = 1;
+    sub_B775C4(&NGUITools_TypeInfo);
+    sub_B775C4(&StringLiteral_1176/*"2DUI"*/);
+    byte_438C240 = 1;
   }
   if ( entities )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-    v6 = UnityEngine_LayerMask__NameToLayer((System_String_o *)StringLiteral_1175/*"2DUI"*/, 0LL);
+    v6 = UnityEngine_LayerMask__NameToLayer((System_String_o *)StringLiteral_1176/*"2DUI"*/, 0LL);
     if ( (BYTE3(NGUITools_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__SetLayer(gameObject, v6, 0LL);
     this->fields.eventUiValueEntityList = entities;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.eventUiValueEntityList,
       (System_Int32_array **)entities,
       v7,
@@ -1663,16 +1663,16 @@ void __fastcall EventInfoPointRiverProgressControl__SetupDisp(
   UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
 
   v3 = this;
-  if ( (byte_4352A46 & 1) == 0 )
+  if ( (byte_438C241 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_EventInfoUISlideAnimation___);
-    sub_B70694(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Item__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-    sub_B70694(&SingletonTemplate_MissionNotifyManager__TypeInfo);
-    this = (EventInfoPointRiverProgressControl_o *)sub_B70694(&TerminalPramsManager_TypeInfo);
-    byte_4352A46 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_EventInfoUISlideAnimation___);
+    sub_B775C4(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_QuestReleaseEntity__get_Item__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    sub_B775C4(&SingletonTemplate_MissionNotifyManager__TypeInfo);
+    this = (EventInfoPointRiverProgressControl_o *)sub_B775C4(&TerminalPramsManager_TypeInfo);
+    byte_438C241 = 1;
   }
   eventUiEntity = v3->fields.eventUiEntity;
   if ( !eventUiEntity )
@@ -1683,10 +1683,10 @@ void __fastcall EventInfoPointRiverProgressControl__SetupDisp(
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   }
-  if ( !byte_434E57C )
+  if ( !byte_4387B4D )
   {
-    sub_B70694(&TerminalPramsManager_TypeInfo);
-    byte_434E57C = 1;
+    sub_B775C4(&TerminalPramsManager_TypeInfo);
+    byte_4387B4D = 1;
   }
   this = (EventInfoPointRiverProgressControl_o *)TerminalPramsManager_TypeInfo;
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1716,7 +1716,7 @@ void __fastcall EventInfoPointRiverProgressControl__SetupDisp(
     }
     ReleaseScenarioIndex = progressData->fields.ReleaseScenarioIndex;
     if ( baseQuestReleaseEntList->fields._size <= (unsigned int)ReleaseScenarioIndex )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
     v10 = baseQuestReleaseEntList->fields._items->m_Items[ReleaseScenarioIndex];
     if ( !v10 )
       goto LABEL_132;
@@ -1792,7 +1792,7 @@ void __fastcall EventInfoPointRiverProgressControl__SetupDisp(
     {
       j_il2cpp_runtime_class_init_0(SingletonTemplate_MissionNotifyManager__TypeInfo);
     }
-    this = (EventInfoPointRiverProgressControl_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2CE9CB0 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    this = (EventInfoPointRiverProgressControl_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2D168C0 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
     if ( !this )
       goto LABEL_132;
     MissionNotifyManager__CancelPause((MissionNotifyManager_o *)this, 0LL);
@@ -1804,10 +1804,10 @@ void __fastcall EventInfoPointRiverProgressControl__SetupDisp(
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   }
-  if ( !byte_434E57C )
+  if ( !byte_4387B4D )
   {
-    sub_B70694(&TerminalPramsManager_TypeInfo);
-    byte_434E57C = 1;
+    sub_B775C4(&TerminalPramsManager_TypeInfo);
+    byte_4387B4D = 1;
   }
   this = (EventInfoPointRiverProgressControl_o *)TerminalPramsManager_TypeInfo;
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1831,10 +1831,10 @@ LABEL_136:
       {
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
       }
-      if ( !byte_434E57C )
+      if ( !byte_4387B4D )
       {
-        sub_B70694(&TerminalPramsManager_TypeInfo);
-        byte_434E57C = 1;
+        sub_B775C4(&TerminalPramsManager_TypeInfo);
+        byte_4387B4D = 1;
       }
       this = (EventInfoPointRiverProgressControl_o *)TerminalPramsManager_TypeInfo;
       if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1859,10 +1859,10 @@ LABEL_136:
     {
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     }
-    if ( !byte_434E57C )
+    if ( !byte_4387B4D )
     {
-      sub_B70694(&TerminalPramsManager_TypeInfo);
-      byte_434E57C = 1;
+      sub_B775C4(&TerminalPramsManager_TypeInfo);
+      byte_4387B4D = 1;
     }
     v27 = TerminalPramsManager_TypeInfo;
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1907,8 +1907,8 @@ LABEL_82:
           goto LABEL_132;
         }
 LABEL_133:
-        v51 = sub_B70798(this);
-        sub_B70738(v51, 0LL);
+        v51 = sub_B776C8(this);
+        sub_B77668(v51, 0LL);
       }
     }
     this = (EventInfoPointRiverProgressControl_o *)v3->fields.releaseTermsObject;
@@ -1954,10 +1954,10 @@ LABEL_101:
         {
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
         }
-        if ( !byte_434E581 )
+        if ( !byte_4387B52 )
         {
-          sub_B70694(&TerminalPramsManager_TypeInfo);
-          byte_434E581 = 1;
+          sub_B775C4(&TerminalPramsManager_TypeInfo);
+          byte_4387B52 = 1;
         }
         v42 = TerminalPramsManager_TypeInfo;
         if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1971,14 +1971,14 @@ LABEL_101:
       }
     }
 LABEL_132:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   if ( (BYTE3(this[1].fields.userEventPointMaster) & 4) != 0 && !LODWORD(this[1].fields.assetData2) )
     j_il2cpp_runtime_class_init_0(this);
-  if ( !byte_434E581 )
+  if ( !byte_4387B52 )
   {
-    sub_B70694(&TerminalPramsManager_TypeInfo);
-    byte_434E581 = 1;
+    sub_B775C4(&TerminalPramsManager_TypeInfo);
+    byte_4387B52 = 1;
   }
   this = (EventInfoPointRiverProgressControl_o *)TerminalPramsManager_TypeInfo;
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2029,7 +2029,7 @@ LABEL_132:
     goto LABEL_132;
   Component_srcLineSprite = UnityEngine_GameObject__GetComponent_srcLineSprite_(
                               (UnityEngine_GameObject_o *)this,
-                              (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_EventInfoUISlideAnimation___);
+                              (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_EventInfoUISlideAnimation___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -2123,13 +2123,13 @@ bool __fastcall EventInfoPointRiverProgressControl__PlayAnim_d__26__MoveNext(
   __int64 v29; // x0
 
   v2 = this;
-  if ( (byte_434F08E & 1) == 0 )
+  if ( (byte_438866E & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_EventInfoPointRiverProgressControl___c__DisplayClass26_0__PlayAnim_b__0__);
-    sub_B70694(&Method_EventInfoPointRiverProgressControl___c__DisplayClass26_0__PlayAnim_b__1__);
-    this = (EventInfoPointRiverProgressControl__PlayAnim_d__26_o *)sub_B70694(&EventInfoPointRiverProgressControl___c__DisplayClass26_0_TypeInfo);
-    byte_434F08E = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_EventInfoPointRiverProgressControl___c__DisplayClass26_0__PlayAnim_b__0__);
+    sub_B775C4(&Method_EventInfoPointRiverProgressControl___c__DisplayClass26_0__PlayAnim_b__1__);
+    this = (EventInfoPointRiverProgressControl__PlayAnim_d__26_o *)sub_B775C4(&EventInfoPointRiverProgressControl___c__DisplayClass26_0_TypeInfo);
+    byte_438866E = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state == 1 )
@@ -2168,7 +2168,7 @@ bool __fastcall EventInfoPointRiverProgressControl__PlayAnim_d__26__MoveNext(
               1,
               0,
               0LL);
-      this = (EventInfoPointRiverProgressControl__PlayAnim_d__26_o *)UnityEngine_MonoBehaviour__StartCoroutine_36062060(
+      this = (EventInfoPointRiverProgressControl__PlayAnim_d__26_o *)UnityEngine_MonoBehaviour__StartCoroutine_36304832(
                                                                        (UnityEngine_MonoBehaviour_o *)_4__this,
                                                                        v21,
                                                                        0LL);
@@ -2183,7 +2183,7 @@ bool __fastcall EventInfoPointRiverProgressControl__PlayAnim_d__26__MoveNext(
       {
         _8__1 = (Il2CppObject *)v2->fields.__8__1;
         v26 = progressRiver->m_Items[ReleaseScenarioIndex];
-        v27 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+        v27 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
         System_Action___ctor(
           v27,
           _8__1,
@@ -2239,7 +2239,7 @@ LABEL_12:
               0,
               0,
               0LL);
-      this = (EventInfoPointRiverProgressControl__PlayAnim_d__26_o *)UnityEngine_MonoBehaviour__StartCoroutine_36062060(
+      this = (EventInfoPointRiverProgressControl__PlayAnim_d__26_o *)UnityEngine_MonoBehaviour__StartCoroutine_36304832(
                                                                        (UnityEngine_MonoBehaviour_o *)_4__this,
                                                                        v10,
                                                                        0LL);
@@ -2254,7 +2254,7 @@ LABEL_12:
       {
         v14 = (Il2CppObject *)v2->fields.__8__1;
         v15 = v12->m_Items[v13];
-        v16 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+        v16 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
         System_Action___ctor(
           v16,
           v14,
@@ -2267,40 +2267,40 @@ LABEL_12:
         v19 = 0;
 LABEL_36:
         v28 = EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim(v17, v18, v19, 0LL);
-        UnityEngine_MonoBehaviour__StartCoroutine_36062060((UnityEngine_MonoBehaviour_o *)_4__this, v28, 0LL);
+        UnityEngine_MonoBehaviour__StartCoroutine_36304832((UnityEngine_MonoBehaviour_o *)_4__this, v28, 0LL);
         return 0;
       }
     }
-    v29 = sub_B70798(this);
-    sub_B70738(v29, 0LL);
+    v29 = sub_B776C8(this);
+    sub_B77668(v29, 0LL);
   }
   if ( !_1__state )
   {
     v2->fields.__1__state = -1;
-    v4 = (Il2CppObject *)sub_B70764(EventInfoPointRiverProgressControl___c__DisplayClass26_0_TypeInfo);
+    v4 = (Il2CppObject *)sub_B77694(EventInfoPointRiverProgressControl___c__DisplayClass26_0_TypeInfo);
     System_Object___ctor(v4, 0LL);
     v2->fields.__8__1 = (struct EventInfoPointRiverProgressControl___c__DisplayClass26_0_o *)v4;
-    sub_B70630(&v2->fields.__8__1);
+    sub_B77560(&v2->fields.__8__1);
     this = (EventInfoPointRiverProgressControl__PlayAnim_d__26_o *)v2->fields.__8__1;
     if ( this )
     {
       *(_QWORD *)&this->fields.__1__state = v2->fields.__4__this;
-      sub_B70630(&this->fields);
+      sub_B77560(&this->fields);
       this = (EventInfoPointRiverProgressControl__PlayAnim_d__26_o *)v2->fields.__8__1;
       if ( this )
       {
         this->fields.__2__current = (Il2CppObject *)v2->fields.callback;
-        sub_B70630(&this->fields.__2__current);
+        sub_B77560(&this->fields.__2__current);
         v2->fields.__2__current = 0LL;
         p__2__current = &v2->fields.__2__current;
-        sub_B70630(p__2__current);
+        sub_B77560(p__2__current);
         result = 1;
         *((_DWORD *)p__2__current - 2) = 1;
         return result;
       }
     }
 LABEL_38:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   return 0;
 }
@@ -2322,11 +2322,11 @@ void __fastcall __noreturn EventInfoPointRiverProgressControl__PlayAnim_d__26__S
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B70698(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B70764(v2);
+  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B70698(&Method_EventInfoPointRiverProgressControl__PlayAnim_d__26_System_Collections_IEnumerator_Reset__);
-  sub_B70738(v3, v4);
+  v4 = sub_B775C8(&Method_EventInfoPointRiverProgressControl__PlayAnim_d__26_System_Collections_IEnumerator_Reset__);
+  sub_B77668(v3, v4);
 }
 
 
@@ -2369,7 +2369,7 @@ void __fastcall EventInfoPointRiverProgressControl___c__DisplayClass26_0___PlayA
         v4 = this,
         (this = (EventInfoPointRiverProgressControl___c__DisplayClass26_0_o *)this->fields.__4__this) == 0LL) )
   {
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   EventInfoPointRiverProgressControl__SaveAllData((EventInfoPointRiverProgressControl_o *)this, 0LL);
   ActionExtensions__Call(v4->fields.callback, 0LL);
@@ -2393,11 +2393,11 @@ void __fastcall EventInfoPointRiverProgressControl___c__DisplayClass26_0___PlayA
   System_Collections_IEnumerator_o *v13; // x0
   __int64 v14; // x0
 
-  if ( (byte_434F08B & 1) == 0 )
+  if ( (byte_438866B & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_EventInfoPointRiverProgressControl___c__DisplayClass26_0__PlayAnim_b__2__);
-    byte_434F08B = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_EventInfoPointRiverProgressControl___c__DisplayClass26_0__PlayAnim_b__2__);
+    byte_438866B = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -2421,7 +2421,7 @@ void __fastcall EventInfoPointRiverProgressControl___c__DisplayClass26_0___PlayA
          1,
          1,
          0LL);
-  _4__this = (EventInfoPointRiverProgressControl_o *)UnityEngine_MonoBehaviour__StartCoroutine_36062060(v5, v6, 0LL);
+  _4__this = (EventInfoPointRiverProgressControl_o *)UnityEngine_MonoBehaviour__StartCoroutine_36304832(v5, v6, 0LL);
   v7 = (UnityEngine_MonoBehaviour_o *)this->fields.__4__this;
   if ( !v7 )
     goto LABEL_16;
@@ -2434,27 +2434,27 @@ void __fastcall EventInfoPointRiverProgressControl___c__DisplayClass26_0___PlayA
   v10 = monitor[5];
   if ( (unsigned int)v10 >= v9[6] )
   {
-    v14 = sub_B70798(_4__this);
-    sub_B70738(v14, 0LL);
+    v14 = sub_B776C8(_4__this);
+    sub_B77668(v14, 0LL);
   }
   v11 = *(EventInfoRiverProgressDrawComponent_o **)&v9[2 * v10 + 8];
   _9__2 = this->fields.__9__2;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)this,
       Method_EventInfoPointRiverProgressControl___c__DisplayClass26_0__PlayAnim_b__2__,
       0LL);
     this->fields.__9__2 = _9__2;
-    sub_B70630(&this->fields.__9__2);
+    sub_B77560(&this->fields.__9__2);
   }
   if ( !v11 )
 LABEL_16:
-    sub_B7076C(_4__this, method);
+    sub_B7769C(_4__this, method);
   v13 = EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim(v11, _9__2, 1, 0LL);
-  UnityEngine_MonoBehaviour__StartCoroutine_36062060(v7, v13, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_36304832(v7, v13, 0LL);
   ActionExtensions__Call(this->fields.callback, 0LL);
 }
 
@@ -2467,11 +2467,11 @@ void __fastcall EventInfoPointRiverProgressControl___c__DisplayClass26_0___PlayA
   struct EventInfoPointRiverProgressControl_o *_4__this; // x8
 
   v2 = this;
-  if ( (byte_434F08C & 1) == 0 )
+  if ( (byte_438866C & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-    this = (EventInfoPointRiverProgressControl___c__DisplayClass26_0_o *)sub_B70694(&SingletonTemplate_MissionNotifyManager__TypeInfo);
-    byte_434F08C = 1;
+    sub_B775C4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    this = (EventInfoPointRiverProgressControl___c__DisplayClass26_0_o *)sub_B775C4(&SingletonTemplate_MissionNotifyManager__TypeInfo);
+    byte_438866C = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -2497,10 +2497,10 @@ void __fastcall EventInfoPointRiverProgressControl___c__DisplayClass26_0___PlayA
   {
     j_il2cpp_runtime_class_init_0(SingletonTemplate_MissionNotifyManager__TypeInfo);
   }
-  this = (EventInfoPointRiverProgressControl___c__DisplayClass26_0_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2CE9CB0 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  this = (EventInfoPointRiverProgressControl___c__DisplayClass26_0_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2D168C0 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !this )
 LABEL_13:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   MissionNotifyManager__CancelPause((MissionNotifyManager_o *)this, 0LL);
 }
 
@@ -2533,12 +2533,12 @@ void __fastcall EventInfoPointRiverProgressControl___c__DisplayClass27_0___PlayM
   struct EventInfoPointRiverProgressControl_o *v16; // x8
   __int64 v17; // x0
 
-  if ( (byte_434F08D & 1) == 0 )
+  if ( (byte_438866D & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&EventInfoPointRiverProgressControl_TypeInfo);
-    sub_B70694(&Method_EventInfoPointRiverProgressControl___c__DisplayClass27_0__PlayMoveShip_b__1__);
-    byte_434F08D = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&EventInfoPointRiverProgressControl_TypeInfo);
+    sub_B775C4(&Method_EventInfoPointRiverProgressControl___c__DisplayClass27_0__PlayMoveShip_b__1__);
+    byte_438866D = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -2589,21 +2589,21 @@ void __fastcall EventInfoPointRiverProgressControl___c__DisplayClass27_0___PlayM
       v10 = v8->fields.ReleaseScenarioIndex;
       if ( (unsigned int)v10 >= progressRiver->max_length )
       {
-        v17 = sub_B70798(_4__this);
-        sub_B70738(v17, 0LL);
+        v17 = sub_B776C8(_4__this);
+        sub_B77668(v17, 0LL);
       }
       v11 = progressRiver->m_Items[v10];
       _9__1 = this->fields.__9__1;
       if ( !_9__1 )
       {
-        _9__1 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+        _9__1 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
         System_Action___ctor(
           _9__1,
           (Il2CppObject *)this,
           Method_EventInfoPointRiverProgressControl___c__DisplayClass27_0__PlayMoveShip_b__1__,
           0LL);
         this->fields.__9__1 = _9__1;
-        sub_B70630(&this->fields.__9__1);
+        sub_B77560(&this->fields.__9__1);
       }
       if ( !v11 )
         goto LABEL_34;
@@ -2636,7 +2636,7 @@ void __fastcall EventInfoPointRiverProgressControl___c__DisplayClass27_0___PlayM
         }
       }
 LABEL_34:
-      sub_B7076C(_4__this, method);
+      sub_B7769C(_4__this, method);
     }
   }
 LABEL_30:
@@ -2672,7 +2672,7 @@ void __fastcall EventInfoPointRiverProgressControl___c__DisplayClass27_0___PlayM
     || (EventInfoPointRiverProgressControl__SaveAllData((EventInfoPointRiverProgressControl_o *)this, 0LL),
         (this = (EventInfoPointRiverProgressControl___c__DisplayClass27_0_o *)v4->fields.__4__this) == 0LL) )
   {
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   EventInfoPointRiverProgressControl__SetMaskPanelActive((EventInfoPointRiverProgressControl_o *)this, 0, 0LL);
   ActionExtensions__Call(v4->fields.callback, 0LL);

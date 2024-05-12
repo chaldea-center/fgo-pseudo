@@ -1,14 +1,14 @@
 void __fastcall EventAddMaster___ctor(EventAddMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4355097 & 1) == 0 )
+  if ( (byte_438E7FA & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_EventAddMaster__EventAddEntity__string___ctor__);
-    byte_4355097 = 1;
+    sub_B775C4(&Method_DataMasterBase_EventAddMaster__EventAddEntity__string___ctor__);
+    byte_438E7FA = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     201,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_EventAddMaster__EventAddEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_EventAddMaster__EventAddEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,16 @@ EventAddEntity_o *__fastcall EventAddMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4355095 & 1) == 0 )
+  if ( (byte_438E7F8 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_EventAddMaster__EventAddEntity__string__GetEntity__);
-    byte_4355095 = 1;
+    sub_B775C4(&Method_DataMasterBase_EventAddMaster__EventAddEntity__string__GetEntity__);
+    byte_438E7F8 = 1;
   }
   PK = EventAddEntity__CreatePK(eventId, overwriteType, priority, *(const MethodInfo **)&priority);
   return (EventAddEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                PK,
-                               (const MethodInfo_21C0890 *)Method_DataMasterBase_EventAddMaster__EventAddEntity__string__GetEntity__);
+                               (const MethodInfo_21FBCE4 *)Method_DataMasterBase_EventAddMaster__EventAddEntity__string__GetEntity__);
 }
 
 
@@ -46,17 +46,17 @@ bool __fastcall EventAddMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4355096 & 1) == 0 )
+  if ( (byte_438E7F9 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_EventAddMaster__EventAddEntity__string__TryGetEntity__);
-    byte_4355096 = 1;
+    sub_B775C4(&Method_DataMasterBase_EventAddMaster__EventAddEntity__string__TryGetEntity__);
+    byte_438E7F9 = 1;
   }
   PK = EventAddEntity__CreatePK(eventId, overwriteType, priority, *(const MethodInfo **)&overwriteType);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_EventAddMaster__EventAddEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_EventAddMaster__EventAddEntity__string__TryGetEntity__);
 }
 
 
@@ -87,34 +87,34 @@ EventAddEntity_o *__fastcall EventAddMaster__getOverwriteEventAddEntity(
   System_Int32_array *v25; // x7
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v27; // [xsp+8h] [xbp-58h]
 
-  if ( (byte_4355098 & 1) == 0 )
+  if ( (byte_438E7FB & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&Method_System_Comparison_EventAddEntity___ctor__);
-    sub_B70694(&System_Comparison_EventAddEntity__TypeInfo);
-    sub_B70694(&CondType_TypeInfo);
-    sub_B70694(&EventAddEntity_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_EventAddEntity__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventAddEntity__Sort__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventAddEntity___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventAddEntity__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventAddEntity__get_Item__);
-    sub_B70694(&System_Collections_Generic_List_EventAddEntity__TypeInfo);
-    sub_B70694(&Method_EventAddMaster___c__getOverwriteEventAddEntity_b__3_0__);
-    sub_B70694(&EventAddMaster___c_TypeInfo);
-    byte_4355098 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&Method_System_Comparison_EventAddEntity___ctor__);
+    sub_B775C4(&System_Comparison_EventAddEntity__TypeInfo);
+    sub_B775C4(&CondType_TypeInfo);
+    sub_B775C4(&EventAddEntity_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventAddEntity__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventAddEntity__Sort__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventAddEntity___ctor__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventAddEntity__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventAddEntity__get_Item__);
+    sub_B775C4(&System_Collections_Generic_List_EventAddEntity__TypeInfo);
+    sub_B775C4(&Method_EventAddMaster___c__getOverwriteEventAddEntity_b__3_0__);
+    sub_B775C4(&EventAddMaster___c_TypeInfo);
+    byte_438E7FB = 1;
   }
-  v27 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_EventAddEntity__TypeInfo);
+  v27 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventAddEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v27,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_EventAddEntity___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventAddEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_33;
   list = (void *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
                    (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
-                   (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+                   (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( (int)list >= 1 )
   {
     v9 = (int)list;
@@ -127,7 +127,7 @@ EventAddEntity_o *__fastcall EventAddMaster__getOverwriteEventAddEntity(
       list = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
                v10,
-               (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !list )
         break;
       v11 = (EventMissionProgressRequest_Argument_ProgressData_o *)list;
@@ -152,14 +152,14 @@ EventAddEntity_o *__fastcall EventAddMaster__getOverwriteEventAddEntity(
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
             v27,
             v11,
-            (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_EventAddEntity__Add__);
+            (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventAddEntity__Add__);
         }
       }
       if ( ++v10 >= v9 )
         goto LABEL_19;
     }
 LABEL_33:
-    sub_B7076C(list, v7);
+    sub_B7769C(list, v7);
   }
 LABEL_19:
   if ( !v27 )
@@ -183,15 +183,15 @@ LABEL_19:
       static_fields = EventAddMaster___c_TypeInfo->static_fields;
     }
     v18 = (Il2CppObject *)static_fields->__9;
-    _9__3_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B70764(System_Comparison_EventAddEntity__TypeInfo);
+    _9__3_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B77694(System_Comparison_EventAddEntity__TypeInfo);
     System_Comparison_TitleInfoControl_EventEndTimeInfo____ctor(
       _9__3_0,
       v18,
       Method_EventAddMaster___c__getOverwriteEventAddEntity_b__3_0__,
-      (const MethodInfo_2B05B38 *)Method_System_Comparison_EventAddEntity___ctor__);
+      (const MethodInfo_2B42C0C *)Method_System_Comparison_EventAddEntity___ctor__);
     v19 = EventAddMaster___c_TypeInfo->static_fields;
     v19->__9__3_0 = (struct System_Comparison_EventAddEntity__o *)_9__3_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v19->__9__3_0,
       (System_Int32_array **)_9__3_0,
       v20,
@@ -204,9 +204,9 @@ LABEL_19:
   System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo___Sort(
     (System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__o *)v27,
     (System_Comparison_T__o *)_9__3_0,
-    (const MethodInfo_3027764 *)Method_System_Collections_Generic_List_EventAddEntity__Sort__);
+    (const MethodInfo_3055374 *)Method_System_Collections_Generic_List_EventAddEntity__Sort__);
   if ( !v27->fields._size )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
   return (EventAddEntity_o *)v27->fields._items->m_Items[0];
 }
 
@@ -216,16 +216,16 @@ void __fastcall EventAddMaster___c___cctor(const MethodInfo *method)
   Il2CppObject *v1; // x19
   struct EventAddMaster___c_StaticFields *static_fields; // x0
 
-  if ( (byte_434F031 & 1) == 0 )
+  if ( (byte_4388611 & 1) == 0 )
   {
-    sub_B70694(&EventAddMaster___c_TypeInfo);
-    byte_434F031 = 1;
+    sub_B775C4(&EventAddMaster___c_TypeInfo);
+    byte_4388611 = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(EventAddMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(EventAddMaster___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = EventAddMaster___c_TypeInfo->static_fields;
   static_fields->__9 = (struct EventAddMaster___c_o *)v1;
-  sub_B70630(static_fields);
+  sub_B77560(static_fields);
 }
 
 
@@ -242,6 +242,6 @@ int32_t __fastcall EventAddMaster___c___getOverwriteEventAddEntity_b__3_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_B7076C(this, a);
+    sub_B7769C(this, a);
   return b->fields.priority - a->fields.priority;
 }

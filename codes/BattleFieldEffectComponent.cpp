@@ -12,7 +12,7 @@ int32_t __fastcall BattleFieldEffectComponent__getAmbientColors(
 
   ambientlist = this->fields.ambientlist;
   if ( !ambientlist )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return ambientlist->max_length;
 }
 
@@ -38,15 +38,15 @@ System_String_array *__fastcall BattleFieldEffectComponent__getFieldEffects(
   __int64 v17; // x0
 
   v2 = this;
-  if ( (byte_4350621 & 1) == 0 )
+  if ( (byte_4389C4A & 1) == 0 )
   {
-    this = (BattleFieldEffectComponent_o *)sub_B70694(&string___TypeInfo);
-    byte_4350621 = 1;
+    this = (BattleFieldEffectComponent_o *)sub_B775C4(&string___TypeInfo);
+    byte_4389C4A = 1;
   }
   fieldeffect = v2->fields.fieldeffect;
   if ( !fieldeffect )
     goto LABEL_15;
-  this = (BattleFieldEffectComponent_o *)sub_B706AC(string___TypeInfo, fieldeffect->max_length);
+  this = (BattleFieldEffectComponent_o *)sub_B775DC(string___TypeInfo, fieldeffect->max_length);
   if ( !this )
     goto LABEL_15;
   v4 = (System_String_array *)this;
@@ -67,27 +67,27 @@ System_String_array *__fastcall BattleFieldEffectComponent__getFieldEffects(
       v13 = (System_Int32_array **)this;
       if ( this )
       {
-        this = (BattleFieldEffectComponent_o *)sub_B70754(this, v4->obj.klass->_1.element_class);
+        this = (BattleFieldEffectComponent_o *)sub_B77684(this, v4->obj.klass->_1.element_class);
         if ( !this )
         {
-          v17 = sub_B7078C();
-          sub_B70738(v17, 0LL);
+          v17 = sub_B776BC();
+          sub_B77668(v17, 0LL);
         }
       }
       if ( v5 >= v4->max_length )
       {
 LABEL_16:
-        v16 = sub_B70798(this);
-        sub_B70738(v16, 0LL);
+        v16 = sub_B776C8(this);
+        sub_B77668(v16, 0LL);
       }
       v14 = &v4->obj.klass + (int)v5;
       v14[4] = (Il2CppClass *)v13;
-      sub_B70630((BattleServantConfConponent_o *)(v14 + 4), v13, v7, v8, v9, v10, v11, v12);
+      sub_B77560((BattleServantConfConponent_o *)(v14 + 4), v13, v7, v8, v9, v10, v11, v12);
       if ( (signed int)++v5 >= (signed int)v4->max_length )
         return v4;
     }
 LABEL_15:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   return v4;
 }
@@ -103,11 +103,11 @@ void __fastcall BattleFieldEffectComponent__setAmbientColor(
 
   ambientlist = this->fields.ambientlist;
   if ( !ambientlist )
-    sub_B7076C(this, index);
+    sub_B7769C(this, index);
   if ( ambientlist->max_length <= index )
   {
-    v4 = sub_B70798(this);
-    sub_B70738(v4, 0LL);
+    v4 = sub_B776C8(this);
+    sub_B77668(v4, 0LL);
   }
   UnityEngine_RenderSettings__set_ambientLight(*(UnityEngine_Color_o *)&ambientlist->m_Items[index].fields.g, 0LL);
 }
@@ -133,10 +133,10 @@ void __fastcall BattleFieldEffectComponent__setFieldEffect(
   System_Int32_array *v17; // x7
   __int64 v18; // x0
 
-  if ( (byte_4350622 & 1) == 0 )
+  if ( (byte_4389C4B & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4350622 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4389C4B = 1;
   }
   viewobject = (UnityEngine_Object_o *)this->fields.viewobject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -153,20 +153,20 @@ void __fastcall BattleFieldEffectComponent__setFieldEffect(
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_36067208(v8, 0LL);
+    UnityEngine_Object__Destroy_36309980(v8, 0LL);
   }
   if ( (index & 0x80000000) == 0 )
   {
     fieldeffect = this->fields.fieldeffect;
     if ( !fieldeffect )
-      sub_B7076C(v6, v7);
+      sub_B7769C(v6, v7);
     max_length = fieldeffect->max_length;
     if ( max_length > index )
     {
       if ( max_length <= (unsigned int)index )
       {
-        v18 = sub_B70798(v6);
-        sub_B70738(v18, 0LL);
+        v18 = sub_B776C8(v6);
+        sub_B77668(v18, 0LL);
       }
       Object = BaseMonoBehaviour__createObject(
                  (BaseMonoBehaviour_o *)this,
@@ -175,7 +175,7 @@ void __fastcall BattleFieldEffectComponent__setFieldEffect(
                  0LL,
                  0LL);
       this->fields.viewobject = Object;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&this->fields.viewobject,
         (System_Int32_array **)Object,
         v12,

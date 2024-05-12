@@ -6,26 +6,30 @@ void __fastcall AssetStorageCache___ctor(AssetStorageCache_o *this, const Method
 
 void __fastcall AssetStorageCache__ClearCache(bool isStandalone, const MethodInfo *method)
 {
+  AssetManager_c *v3; // x0
   System_String_o *CacheListFile; // x20
+  AssetManager_c *v5; // x0
 
-  if ( (byte_4355209 & 1) == 0 )
+  if ( (byte_438AA38 & 1) == 0 )
   {
-    sub_B70694(&AssetManager_TypeInfo);
-    byte_4355209 = 1;
+    sub_B775C4(&AssetManager_TypeInfo);
+    byte_438AA38 = 1;
   }
+  v3 = AssetManager_TypeInfo;
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  CacheListFile = AssetManager__get_CacheListFile(0LL);
+  CacheListFile = AssetManager__get_CacheListFile((const MethodInfo *)v3);
   if ( System_IO_File__Exists(CacheListFile, 0LL) )
     System_IO_File__Delete(CacheListFile, 0LL);
   if ( isStandalone )
   {
+    v5 = AssetManager_TypeInfo;
     if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !AssetManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     }
-    AssetManager__DeleteContinueData(0LL);
+    AssetManager__DeleteContinueData((const MethodInfo *)v5);
     UnityEngine_PlayerPrefs__Save(0LL);
   }
 }
@@ -48,21 +52,24 @@ void __fastcall AssetStorageCache__ClearCacheAllCommonProc(
         bool isStandalone,
         const MethodInfo *method)
 {
-  if ( (byte_4355208 & 1) == 0 )
+  AssetManager_c *v5; // x0
+
+  if ( (byte_438AA37 & 1) == 0 )
   {
-    sub_B70694(&AssetManager_TypeInfo);
-    byte_4355208 = 1;
+    sub_B775C4(&AssetManager_TypeInfo);
+    byte_438AA37 = 1;
   }
   if ( System_IO_Directory__Exists(cachePath, 0LL) )
-    System_IO_Directory__Delete_44697464(cachePath, 1, 0LL);
+    System_IO_Directory__Delete_45053296(cachePath, 1, 0LL);
   if ( isStandalone )
   {
+    v5 = AssetManager_TypeInfo;
     if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !AssetManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     }
-    AssetManager__DeleteContinueData(0LL);
+    AssetManager__DeleteContinueData((const MethodInfo *)v5);
     UnityEngine_PlayerPrefs__Save(0LL);
   }
 }
@@ -134,25 +141,25 @@ System_String_o *__fastcall AssetStorageCache__GetOldEnvPath(const MethodInfo *m
   __int64 v47; // x0
   __int64 v48; // x0
 
-  if ( (byte_4355207 & 1) == 0 )
+  if ( (byte_438AA36 & 1) == 0 )
   {
-    sub_B70694(&AndroidUtil_TypeInfo);
-    sub_B70694(&CacheFolderName_TypeInfo);
-    sub_B70694(&ManagerConfig_TypeInfo);
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_890/*"/"*/);
-    byte_4355207 = 1;
+    sub_B775C4(&AndroidUtil_TypeInfo);
+    sub_B775C4(&CacheFolderName_TypeInfo);
+    sub_B775C4(&ManagerConfig_TypeInfo);
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_892/*"/"*/);
+    byte_438AA36 = 1;
   }
-  v1 = (System_String_array *)sub_B706AC(string___TypeInfo, 6LL);
+  v1 = (System_String_array *)sub_B775DC(string___TypeInfo, 6LL);
   if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
   OldUnityPersistentDataPath = (System_Int32_array **)AndroidUtil__GetOldUnityPersistentDataPath(0LL);
   if ( !v1 )
-    sub_B7076C(OldUnityPersistentDataPath, v3);
+    sub_B7769C(OldUnityPersistentDataPath, v3);
   v10 = OldUnityPersistentDataPath;
   if ( OldUnityPersistentDataPath )
   {
-    OldUnityPersistentDataPath = (System_Int32_array **)sub_B70754(
+    OldUnityPersistentDataPath = (System_Int32_array **)sub_B77684(
                                                           OldUnityPersistentDataPath,
                                                           v1->obj.klass->_1.element_class);
     if ( !OldUnityPersistentDataPath )
@@ -161,14 +168,14 @@ System_String_o *__fastcall AssetStorageCache__GetOldEnvPath(const MethodInfo *m
   if ( !v1->max_length )
     goto LABEL_38;
   v1->m_Items[0] = (System_String_o *)v10;
-  sub_B70630((BattleServantConfConponent_o *)v1->m_Items, v10, v4, v5, v6, v7, v8, v9);
-  OldUnityPersistentDataPath = (System_Int32_array **)StringLiteral_890/*"/"*/;
-  if ( StringLiteral_890/*"/"*/ )
+  sub_B77560((BattleServantConfConponent_o *)v1->m_Items, v10, v4, v5, v6, v7, v8, v9);
+  OldUnityPersistentDataPath = (System_Int32_array **)StringLiteral_892/*"/"*/;
+  if ( StringLiteral_892/*"/"*/ )
   {
-    OldUnityPersistentDataPath = (System_Int32_array **)sub_B70754(StringLiteral_890/*"/"*/, v1->obj.klass->_1.element_class);
+    OldUnityPersistentDataPath = (System_Int32_array **)sub_B77684(StringLiteral_892/*"/"*/, v1->obj.klass->_1.element_class);
     if ( !OldUnityPersistentDataPath )
       goto LABEL_39;
-    v17 = (System_Int32_array **)StringLiteral_890/*"/"*/;
+    v17 = (System_Int32_array **)StringLiteral_892/*"/"*/;
   }
   else
   {
@@ -177,7 +184,7 @@ System_String_o *__fastcall AssetStorageCache__GetOldEnvPath(const MethodInfo *m
   if ( v1->max_length <= 1 )
     goto LABEL_38;
   v1->m_Items[1] = (System_String_o *)v17;
-  sub_B70630((BattleServantConfConponent_o *)&v1->m_Items[1], v17, v11, v12, v13, v14, v15, v16);
+  sub_B77560((BattleServantConfConponent_o *)&v1->m_Items[1], v17, v11, v12, v13, v14, v15, v16);
   if ( (BYTE3(CacheFolderName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CacheFolderName_TypeInfo->_2.cctor_finished )
   {
@@ -187,7 +194,7 @@ System_String_o *__fastcall AssetStorageCache__GetOldEnvPath(const MethodInfo *m
   v24 = OldUnityPersistentDataPath;
   if ( OldUnityPersistentDataPath )
   {
-    OldUnityPersistentDataPath = (System_Int32_array **)sub_B70754(
+    OldUnityPersistentDataPath = (System_Int32_array **)sub_B77684(
                                                           OldUnityPersistentDataPath,
                                                           v1->obj.klass->_1.element_class);
     if ( !OldUnityPersistentDataPath )
@@ -196,14 +203,14 @@ System_String_o *__fastcall AssetStorageCache__GetOldEnvPath(const MethodInfo *m
   if ( v1->max_length <= 2 )
     goto LABEL_38;
   v1->m_Items[2] = (System_String_o *)v24;
-  sub_B70630((BattleServantConfConponent_o *)&v1->m_Items[2], v24, v18, v19, v20, v21, v22, v23);
-  OldUnityPersistentDataPath = (System_Int32_array **)StringLiteral_890/*"/"*/;
-  if ( StringLiteral_890/*"/"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v1->m_Items[2], v24, v18, v19, v20, v21, v22, v23);
+  OldUnityPersistentDataPath = (System_Int32_array **)StringLiteral_892/*"/"*/;
+  if ( StringLiteral_892/*"/"*/ )
   {
-    OldUnityPersistentDataPath = (System_Int32_array **)sub_B70754(StringLiteral_890/*"/"*/, v1->obj.klass->_1.element_class);
+    OldUnityPersistentDataPath = (System_Int32_array **)sub_B77684(StringLiteral_892/*"/"*/, v1->obj.klass->_1.element_class);
     if ( !OldUnityPersistentDataPath )
       goto LABEL_39;
-    v31 = (System_Int32_array **)StringLiteral_890/*"/"*/;
+    v31 = (System_Int32_array **)StringLiteral_892/*"/"*/;
   }
   else
   {
@@ -212,7 +219,7 @@ System_String_o *__fastcall AssetStorageCache__GetOldEnvPath(const MethodInfo *m
   if ( v1->max_length <= 3 )
     goto LABEL_38;
   v1->m_Items[3] = (System_String_o *)v31;
-  sub_B70630((BattleServantConfConponent_o *)&v1->m_Items[3], v31, v25, v26, v27, v28, v29, v30);
+  sub_B77560((BattleServantConfConponent_o *)&v1->m_Items[3], v31, v25, v26, v27, v28, v29, v30);
   OldUnityPersistentDataPath = (System_Int32_array **)ManagerConfig_TypeInfo;
   if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -223,25 +230,25 @@ System_String_o *__fastcall AssetStorageCache__GetOldEnvPath(const MethodInfo *m
   v38 = *(System_Int32_array ***)&OldUnityPersistentDataPath[23]->m_Items[25];
   if ( v38 )
   {
-    OldUnityPersistentDataPath = (System_Int32_array **)sub_B70754(v38, v1->obj.klass->_1.element_class);
+    OldUnityPersistentDataPath = (System_Int32_array **)sub_B77684(v38, v1->obj.klass->_1.element_class);
     if ( !OldUnityPersistentDataPath )
     {
 LABEL_39:
-      v48 = sub_B7078C(OldUnityPersistentDataPath);
-      sub_B70738(v48, 0LL);
+      v48 = sub_B776BC(OldUnityPersistentDataPath);
+      sub_B77668(v48, 0LL);
     }
   }
   if ( v1->max_length <= 4 )
     goto LABEL_38;
   v1->m_Items[4] = (System_String_o *)v38;
-  sub_B70630((BattleServantConfConponent_o *)&v1->m_Items[4], v38, v32, v33, v34, v35, v36, v37);
-  OldUnityPersistentDataPath = (System_Int32_array **)StringLiteral_890/*"/"*/;
-  if ( StringLiteral_890/*"/"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v1->m_Items[4], v38, v32, v33, v34, v35, v36, v37);
+  OldUnityPersistentDataPath = (System_Int32_array **)StringLiteral_892/*"/"*/;
+  if ( StringLiteral_892/*"/"*/ )
   {
-    OldUnityPersistentDataPath = (System_Int32_array **)sub_B70754(StringLiteral_890/*"/"*/, v1->obj.klass->_1.element_class);
+    OldUnityPersistentDataPath = (System_Int32_array **)sub_B77684(StringLiteral_892/*"/"*/, v1->obj.klass->_1.element_class);
     if ( OldUnityPersistentDataPath )
     {
-      v45 = (System_Int32_array **)StringLiteral_890/*"/"*/;
+      v45 = (System_Int32_array **)StringLiteral_892/*"/"*/;
       goto LABEL_36;
     }
     goto LABEL_39;
@@ -251,12 +258,12 @@ LABEL_36:
   if ( v1->max_length <= 5 )
   {
 LABEL_38:
-    v47 = sub_B70798(OldUnityPersistentDataPath);
-    sub_B70738(v47, 0LL);
+    v47 = sub_B776C8(OldUnityPersistentDataPath);
+    sub_B77668(v47, 0LL);
   }
   v1->m_Items[5] = (System_String_o *)v45;
-  sub_B70630((BattleServantConfConponent_o *)&v1->m_Items[5], v45, v39, v40, v41, v42, v43, v44);
-  return System_String__Concat_44838292(v1, 0LL);
+  sub_B77560((BattleServantConfConponent_o *)&v1->m_Items[5], v45, v39, v40, v41, v42, v43, v44);
+  return System_String__Concat_44982964(v1, 0LL);
 }
 
 
@@ -265,12 +272,12 @@ System_String_o *__fastcall AssetStorageCache__GetPath(const MethodInfo *method)
   System_String_o *DatFileSavePath; // x19
   System_String_o *FolderName; // x2
 
-  if ( (byte_4355206 & 1) == 0 )
+  if ( (byte_438AA35 & 1) == 0 )
   {
-    sub_B70694(&AndroidUtil_TypeInfo);
-    sub_B70694(&CacheFolderName_TypeInfo);
-    sub_B70694(&StringLiteral_890/*"/"*/);
-    byte_4355206 = 1;
+    sub_B775C4(&AndroidUtil_TypeInfo);
+    sub_B775C4(&CacheFolderName_TypeInfo);
+    sub_B775C4(&StringLiteral_892/*"/"*/);
+    byte_438AA35 = 1;
   }
   if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -281,10 +288,10 @@ System_String_o *__fastcall AssetStorageCache__GetPath(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(CacheFolderName_TypeInfo);
   }
   FolderName = CacheFolderName__getFolderName(0, 0LL);
-  return System_String__Concat_44761580(
+  return System_String__Concat_44905348(
            DatFileSavePath,
-           (System_String_o *)StringLiteral_890/*"/"*/,
+           (System_String_o *)StringLiteral_892/*"/"*/,
            FolderName,
-           (System_String_o *)StringLiteral_890/*"/"*/,
+           (System_String_o *)StringLiteral_892/*"/"*/,
            0LL);
 }

@@ -13,10 +13,10 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetInput(
 {
   UnityEngine_GameObject_o *selectImgObj; // x0
 
-  if ( (byte_43520B8 & 1) == 0 )
+  if ( (byte_438B77B & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_1031/*"1"*/);
-    byte_43520B8 = 1;
+    sub_B775C4(&StringLiteral_1033/*"1"*/);
+    byte_438B77B = 1;
   }
   if ( item )
   {
@@ -29,11 +29,11 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetInput(
       selectImgObj = (UnityEngine_GameObject_o *)this->fields.selectNumLabel;
       if ( selectImgObj )
       {
-        UILabel__set_text((UILabel_o *)selectImgObj, (System_String_o *)StringLiteral_1031/*"1"*/, 0LL);
+        UILabel__set_text((UILabel_o *)selectImgObj, (System_String_o *)StringLiteral_1033/*"1"*/, 0LL);
         return;
       }
 LABEL_10:
-      sub_B7076C(selectImgObj, item);
+      sub_B7769C(selectImgObj, item);
     }
     UnityEngine_GameObject__SetActive(selectImgObj, 0, 0LL);
   }
@@ -49,20 +49,20 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetItem(
   ServantFaceIconComponent_o *icon; // x0
   UILabel_o *maskLabel; // x21
 
-  if ( (byte_43520B7 & 1) == 0 )
+  if ( (byte_438B77A & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_9460/*"NOT_SELECT_MAX_EQUIP"*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    sub_B70694(&StringLiteral_1031/*"1"*/);
-    byte_43520B7 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_9518/*"NOT_SELECT_MAX_EQUIP"*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    sub_B775C4(&StringLiteral_1033/*"1"*/);
+    byte_438B77A = 1;
   }
   if ( item && mode )
   {
     icon = this->fields.icon;
     if ( !icon )
       goto LABEL_33;
-    ServantFaceIconComponent__Set_31487056(
+    ServantFaceIconComponent__Set_31764288(
       icon,
       item->fields.userCommandCode,
       item->fields.iconLabelInfo1,
@@ -124,7 +124,7 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetItem(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        icon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9460/*"NOT_SELECT_MAX_EQUIP"*/, 0LL);
+        icon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9518/*"NOT_SELECT_MAX_EQUIP"*/, 0LL);
         if ( !maskLabel )
           goto LABEL_33;
         UILabel__set_text(maskLabel, (System_String_o *)icon, 0LL);
@@ -152,12 +152,12 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetItem(
         icon = (ServantFaceIconComponent_o *)this->fields.selectNumLabel;
         if ( icon )
         {
-          UILabel__set_text((UILabel_o *)icon, (System_String_o *)StringLiteral_1031/*"1"*/, 0LL);
+          UILabel__set_text((UILabel_o *)icon, (System_String_o *)StringLiteral_1033/*"1"*/, 0LL);
           return;
         }
       }
 LABEL_33:
-      sub_B7076C(icon, item);
+      sub_B7769C(icon, item);
     }
   }
 }

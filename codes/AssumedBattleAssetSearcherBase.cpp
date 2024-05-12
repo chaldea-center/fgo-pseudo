@@ -15,18 +15,18 @@ void __fastcall AssumedBattleAssetSearcherBase___ctor(AssumedBattleAssetSearcher
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
 
-  if ( (byte_4355232 & 1) == 0 )
+  if ( (byte_438AA61 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_B70694(&System_Collections_Generic_List_string__TypeInfo);
-    byte_4355232 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_string___ctor___69407008);
+    sub_B775C4(&System_Collections_Generic_List_string__TypeInfo);
+    byte_438AA61 = 1;
   }
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_string__TypeInfo);
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v3,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_string___ctor___69407008);
   this->fields.assetPathList = (struct System_Collections_Generic_List_string__o *)v3;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.assetPathList,
     (System_Int32_array **)v3,
     v4,
@@ -35,12 +35,12 @@ void __fastcall AssumedBattleAssetSearcherBase___ctor(AssumedBattleAssetSearcher
     v7,
     v8,
     v9);
-  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_string__TypeInfo);
+  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v10,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_string___ctor___69407008);
   this->fields.audioPathList = (struct System_Collections_Generic_List_string__o *)v10;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.audioPathList,
     (System_Int32_array **)v10,
     v11,
@@ -60,18 +60,18 @@ void __fastcall AssumedBattleAssetSearcherBase__AppendPreloadedAssetPath(
 {
   struct System_Collections_Generic_List_string__o *assetPathList; // x0
 
-  if ( (byte_435522D & 1) == 0 )
+  if ( (byte_438AA5C & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_string__Add__);
-    byte_435522D = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_string__Add__);
+    byte_438AA5C = 1;
   }
   assetPathList = this->fields.assetPathList;
   if ( !assetPathList )
-    sub_B7076C(0LL, path);
+    sub_B7769C(0LL, path);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)assetPathList,
     (EventMissionProgressRequest_Argument_ProgressData_o *)path,
-    (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_string__Add__);
+    (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_string__Add__);
 }
 
 
@@ -82,18 +82,18 @@ void __fastcall AssumedBattleAssetSearcherBase__AppendPreloadedAudioAssetPath(
 {
   struct System_Collections_Generic_List_string__o *audioPathList; // x0
 
-  if ( (byte_435522F & 1) == 0 )
+  if ( (byte_438AA5E & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_string__Add__);
-    byte_435522F = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_string__Add__);
+    byte_438AA5E = 1;
   }
   audioPathList = this->fields.audioPathList;
   if ( !audioPathList )
-    sub_B7076C(0LL, path);
+    sub_B7769C(0LL, path);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)audioPathList,
     (EventMissionProgressRequest_Argument_ProgressData_o *)path,
-    (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_string__Add__);
+    (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_string__Add__);
 }
 
 
@@ -103,17 +103,17 @@ System_String_array *__fastcall AssumedBattleAssetSearcherBase__GetPreloadedAsse
 {
   struct System_Collections_Generic_List_string__o *assetPathList; // x0
 
-  if ( (byte_435522E & 1) == 0 )
+  if ( (byte_438AA5D & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_string__ToArray__);
-    byte_435522E = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_string__ToArray__);
+    byte_438AA5D = 1;
   }
   assetPathList = this->fields.assetPathList;
   if ( !assetPathList )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   return (System_String_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
                                   (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)assetPathList,
-                                  (const MethodInfo_30277D4 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_string__ToArray__);
 }
 
 
@@ -123,17 +123,17 @@ System_String_array *__fastcall AssumedBattleAssetSearcherBase__GetPreloadedAudi
 {
   struct System_Collections_Generic_List_string__o *audioPathList; // x0
 
-  if ( (byte_4355230 & 1) == 0 )
+  if ( (byte_438AA5F & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_string__ToArray__);
-    byte_4355230 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_string__ToArray__);
+    byte_438AA5F = 1;
   }
   audioPathList = this->fields.audioPathList;
   if ( !audioPathList )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   return (System_String_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
                                   (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)audioPathList,
-                                  (const MethodInfo_30277D4 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_string__ToArray__);
 }
 
 
@@ -146,14 +146,14 @@ bool __fastcall AssumedBattleAssetSearcherBase__HasAnyPreloadedAssetPaths(
   struct System_Collections_Generic_List_string__o *audioPathList; // x9
 
   v2 = this;
-  if ( (byte_4355231 & 1) == 0 )
+  if ( (byte_438AA60 & 1) == 0 )
   {
-    this = (AssumedBattleAssetSearcherBase_o *)sub_B70694(&Method_System_Collections_Generic_List_string__get_Count__);
-    byte_4355231 = 1;
+    this = (AssumedBattleAssetSearcherBase_o *)sub_B775C4(&Method_System_Collections_Generic_List_string__get_Count__);
+    byte_438AA60 = 1;
   }
   assetPathList = v2->fields.assetPathList;
   if ( !assetPathList || (audioPathList = v2->fields.audioPathList) == 0LL )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return audioPathList->fields._size + assetPathList->fields._size > 0;
 }
 
@@ -170,7 +170,7 @@ void __fastcall AssumedBattleAssetSearcherBase__SetManager(
   System_Int32_array *v7; // x7
 
   this->fields.manager = manager;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.manager,
     (System_Int32_array **)manager,
     (System_String_array **)method,

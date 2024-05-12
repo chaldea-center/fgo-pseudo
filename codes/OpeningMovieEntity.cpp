@@ -1,13 +1,13 @@
 void __fastcall OpeningMovieEntity___ctor(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4350BC2 & 1) == 0 )
+  if ( (byte_438A26A & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_int___ctor__);
-    byte_4350BC2 = 1;
+    sub_B775C4(&Method_DataEntityBase_int___ctor__);
+    byte_438A26A = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,12 +19,12 @@ int32_t __fastcall OpeningMovieEntity__CreatePrimaryKey(OpeningMovieEntity_o *th
 
 int32_t __fastcall OpeningMovieEntity__GetGroupId(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4350BC0 & 1) == 0 )
+  if ( (byte_438A268 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_19383/*"groupId"*/);
-    byte_4350BC0 = 1;
+    sub_B775C4(&StringLiteral_19473/*"groupId"*/);
+    byte_438A268 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19383/*"groupId"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19473/*"groupId"*/, 0, 0LL);
 }
 
 
@@ -45,23 +45,23 @@ System_String_o *__fastcall OpeningMovieEntity__GetMoviePlayTime(OpeningMovieEnt
   System_TimeSpan_o v16; // 0:x0.8
   System_TimeSpan_o v17; // 0:x0.8
 
-  if ( (byte_4350BC1 & 1) == 0 )
+  if ( (byte_438A269 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&StringLiteral_24050/*"{0}分{1}秒"*/);
-    sub_B70694(&StringLiteral_24052/*"{0}秒"*/);
-    byte_4350BC1 = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&StringLiteral_24154/*"{0}分{1}秒"*/);
+    sub_B775C4(&StringLiteral_24156/*"{0}秒"*/);
+    byte_438A269 = 1;
   }
   v12 = 0LL;
   v13.fields._ticks = (int64_t)&v12;
-  System_TimeSpan___ctor_41941328(v13, 0, 0, this->fields.moviePlayTime, 0LL);
+  System_TimeSpan___ctor_42295408(v13, 0, 0, this->fields.moviePlayTime, 0LL);
   v14.fields._ticks = (int64_t)&v12;
   if ( System_TimeSpan__get_Minutes(v14, 0LL) < 1 )
   {
     v17.fields._ticks = (int64_t)&v12;
     Seconds = System_TimeSpan__get_Seconds(v17, 0LL);
     v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Seconds, v8);
-    return System_String__Format((System_String_o *)StringLiteral_24052/*"{0}秒"*/, v9, 0LL);
+    return System_String__Format((System_String_o *)StringLiteral_24156/*"{0}秒"*/, v9, 0LL);
   }
   else
   {
@@ -71,7 +71,7 @@ System_String_o *__fastcall OpeningMovieEntity__GetMoviePlayTime(OpeningMovieEnt
     v16.fields._ticks = (int64_t)&v12;
     v10 = System_TimeSpan__get_Seconds(v16, 0LL);
     v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v10, v5);
-    return System_String__Format_44753704((System_String_o *)StringLiteral_24050/*"{0}分{1}秒"*/, v4, v6, 0LL);
+    return System_String__Format_44897472((System_String_o *)StringLiteral_24154/*"{0}分{1}秒"*/, v4, v6, 0LL);
   }
 }
 
@@ -95,12 +95,12 @@ bool __fastcall OpeningMovieEntity__IsEnable(
   __int64 v10; // x1
   bool IsOpen; // w0
 
-  if ( (byte_4350BBD & 1) == 0 )
+  if ( (byte_438A265 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4350BBD = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438A265 = 1;
   }
   if ( !nowTime )
   {
@@ -122,13 +122,13 @@ bool __fastcall OpeningMovieEntity__IsEnable(
       return IsOpen && nowTime >= this->fields.startedAt;
     return IsOpen && OpeningMovieEntity__IsEventPeriod(this, nowTime, (const MethodInfo *)isMaterial);
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v10);
+    sub_B7769C(Instance, v10);
   }
   IsOpen = CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Instance, v8, 0LL, 0, 0LL);
   if ( !isMaterial )
@@ -142,10 +142,10 @@ bool __fastcall OpeningMovieEntity__IsEventPeriod(
         int64_t nowTime,
         const MethodInfo *method)
 {
-  if ( (byte_4350BBE & 1) == 0 )
+  if ( (byte_438A266 & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4350BBE = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_438A266 = 1;
   }
   if ( !nowTime )
   {
@@ -166,18 +166,18 @@ bool __fastcall OpeningMovieEntity__IsRegisterMaterial(OpeningMovieEntity_o *thi
   __int64 v4; // x1
   struct System_Collections_Generic_Dictionary_int__DataMasterBase__o *lookup; // x8
 
-  if ( (byte_4350BBF & 1) == 0 )
+  if ( (byte_438A267 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4350BBF = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438A267 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
   if ( !Instance )
     goto LABEL_10;
   Instance = (DataManager_o *)CommonReleaseMaster__getList(
@@ -192,7 +192,7 @@ bool __fastcall OpeningMovieEntity__IsRegisterMaterial(OpeningMovieEntity_o *thi
     if ( lookup )
       return HIDWORD(lookup->fields.entries) != 92;
 LABEL_10:
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   return 1;
 }

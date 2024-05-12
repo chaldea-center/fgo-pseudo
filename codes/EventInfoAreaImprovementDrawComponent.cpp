@@ -15,16 +15,16 @@ void __fastcall EventInfoAreaImprovementDrawComponent__UpdateAreaName(
   __int64 v4; // x1
   EventCooltimeRewardEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_43534A6 & 1) == 0 )
+  if ( (byte_438CC29 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    byte_43534A6 = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    byte_438CC29 = 1;
   }
   entity = 0LL;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (EventCooltimeRewardMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
+  Master_WarQuestSelectionMaster = (EventCooltimeRewardMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
   if ( !Master_WarQuestSelectionMaster )
     goto LABEL_13;
   Master_WarQuestSelectionMaster = (EventCooltimeRewardMaster_o *)EventCooltimeRewardMaster__TryGetEntity(
@@ -42,7 +42,7 @@ void __fastcall EventInfoAreaImprovementDrawComponent__UpdateAreaName(
         (Master_WarQuestSelectionMaster = (EventCooltimeRewardMaster_o *)this->fields.areaName) == 0LL) )
   {
 LABEL_13:
-    sub_B7076C(Master_WarQuestSelectionMaster, v4);
+    sub_B7769C(Master_WarQuestSelectionMaster, v4);
   }
   UILabel__SetCondensedScale((UILabel_o *)Master_WarQuestSelectionMaster, this->fields.areaNameWidth, 0LL);
 }
@@ -59,11 +59,11 @@ void __fastcall EventInfoAreaImprovementDrawComponent__UpdateLevelLabel(
   __int64 v7; // x1
   int32_t Level_k__BackingField; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_43534A5 & 1) == 0 )
+  if ( (byte_438CC28 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_8476/*"LEVEL_INFO"*/);
-    byte_43534A5 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_8532/*"LEVEL_INFO"*/);
+    byte_438CC28 = 1;
   }
   Level_k__BackingField = 0;
   levelLabel = this->fields.levelLabel;
@@ -72,12 +72,12 @@ void __fastcall EventInfoAreaImprovementDrawComponent__UpdateLevelLabel(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_8476/*"LEVEL_INFO"*/, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_8532/*"LEVEL_INFO"*/, 0LL);
   Level_k__BackingField = this->fields._Level_k__BackingField;
   v5 = (Il2CppObject *)System_Int32__ToString((int32_t)&Level_k__BackingField, 0LL);
   v6 = System_String__Format(v4, v5, 0LL);
   if ( !levelLabel )
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   UILabel__set_text(levelLabel, v6, 0LL);
 }
 

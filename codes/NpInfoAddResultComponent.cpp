@@ -35,24 +35,24 @@ void __fastcall NpInfoAddResultComponent__SetDisplay(
 
   v27 = afterLv;
   lv = beforeLv;
-  if ( (byte_4352445 & 1) == 0 )
+  if ( (byte_438BAE1 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
-    sub_B70694(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4352445 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
+    sub_B775C4(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438BAE1 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   v11 = Instance;
   MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                                         Instance,
-                                                                                        (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
+                                                                                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
   v13 = DataManager__GetMasterData_WarQuestSelectionMaster_(
           v11,
-          (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+          (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
   beforeLvLabel = this->fields.beforeLvLabel;
   v15 = (TreasureDvcLvMaster_o *)v13;
   Instance = (DataManager_o *)System_Int32__ToString((int32_t)&lv, 0LL);
@@ -77,7 +77,7 @@ void __fastcall NpInfoAddResultComponent__SetDisplay(
   Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                 MasterData_WarQuestSelectionMaster,
                                 v18,
-                                (const MethodInfo_21C0440 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+                                (const MethodInfo_21FB894 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
   if ( !v15 )
     goto LABEL_22;
   v19 = Instance;
@@ -105,13 +105,13 @@ void __fastcall NpInfoAddResultComponent__SetDisplay(
         (titles = tdAddEntity->fields.titles) == 0LL) )
   {
 LABEL_22:
-    sub_B7076C(Instance, v10);
+    sub_B7769C(Instance, v10);
   }
   if ( titles->max_length <= index )
   {
 LABEL_23:
-    v26 = sub_B70798(Instance);
-    sub_B70738(v26, 0LL);
+    v26 = sub_B776C8(Instance);
+    sub_B77668(v26, 0LL);
   }
   Instance = (DataManager_o *)this->fields.titleLabel;
   if ( !Instance )
@@ -129,7 +129,7 @@ LABEL_23:
 }
 
 
-void __fastcall NpInfoAddResultComponent__SetDisplay_26017564(
+void __fastcall NpInfoAddResultComponent__SetDisplay_26277176(
         NpInfoAddResultComponent_o *this,
         int32_t npIdBefore,
         int32_t npIdAfter,
@@ -156,28 +156,28 @@ void __fastcall NpInfoAddResultComponent__SetDisplay_26017564(
 
   v24 = afterLv;
   lv = beforeLv;
-  if ( (byte_4352446 & 1) == 0 )
+  if ( (byte_438BAE2 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
-    sub_B70694(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4352446 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
+    sub_B775C4(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438BAE2 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   v13 = Instance;
   MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                                         Instance,
-                                                                                        (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
+                                                                                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
   v15 = (TreasureDvcLvMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                    v13,
-                                   (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+                                   (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
   DataManager__GetMasterData_WarQuestSelectionMaster_(
     v13,
-    (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantMaster___);
+    (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantMaster___);
   beforeLvLabel = this->fields.beforeLvLabel;
   Instance = (DataManager_o *)System_Int32__ToString((int32_t)&lv, 0LL);
   if ( !beforeLvLabel )
@@ -193,7 +193,7 @@ void __fastcall NpInfoAddResultComponent__SetDisplay_26017564(
   Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                 MasterData_WarQuestSelectionMaster,
                                 npIdBefore,
-                                (const MethodInfo_21C0440 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+                                (const MethodInfo_21FB894 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
   if ( !v15 )
     goto LABEL_17;
   v18 = Instance;
@@ -222,14 +222,14 @@ void __fastcall NpInfoAddResultComponent__SetDisplay_26017564(
         DataMasterBase_WarMaster__WarEntity__int___GetEntity(
           MasterData_WarQuestSelectionMaster,
           npIdAfter,
-          (const MethodInfo_21C0440 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__),
+          (const MethodInfo_21FB894 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__),
         (Instance = (DataManager_o *)TreasureDvcLvMaster__GetEntity(v15, npIdAfter, v24, 0LL)) == 0LL)
     || (afterDetailLabel = this->fields.afterDetailLabel,
         Instance = (DataManager_o *)TreasureDvcLvEntity__getDetalShort((TreasureDvcLvEntity_o *)Instance, 0LL),
         (v23 = this->fields.afterDetailLabel) == 0LL) )
   {
 LABEL_17:
-    sub_B7076C(Instance, v12);
+    sub_B7769C(Instance, v12);
   }
   WrapControlText__textAdjust(afterDetailLabel, (System_String_o *)Instance, v23->fields.mFontSize, 0, 0, 0LL);
 }

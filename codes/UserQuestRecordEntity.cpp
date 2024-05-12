@@ -25,26 +25,26 @@ void __fastcall UserQuestRecordEntity___cctor(const MethodInfo *method)
   System_Int32_array *v23; // x6
   System_Int32_array *v24; // x7
 
-  if ( (byte_434FD5A & 1) == 0 )
+  if ( (byte_4389343 & 1) == 0 )
   {
-    sub_B70694(&UserQuestRecordEntity_TypeInfo);
-    sub_B70694(&StringLiteral_23196/*"turnMaxDamage"*/);
-    sub_B70694(&StringLiteral_20460/*"knockdownNum"*/);
-    sub_B70694(&StringLiteral_23107/*"totalDamageToAliveEnemy"*/);
-    byte_434FD5A = 1;
+    sub_B775C4(&UserQuestRecordEntity_TypeInfo);
+    sub_B775C4(&StringLiteral_23297/*"turnMaxDamage"*/);
+    sub_B775C4(&StringLiteral_20555/*"knockdownNum"*/);
+    sub_B775C4(&StringLiteral_23208/*"totalDamageToAliveEnemy"*/);
+    byte_4389343 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)UserQuestRecordEntity_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_23196/*"turnMaxDamage"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_23196/*"turnMaxDamage"*/;
-  sub_B70630(static_fields, v8, v1, v2, v3, v4, v5, v6);
+  v8 = (System_Int32_array **)StringLiteral_23297/*"turnMaxDamage"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_23297/*"turnMaxDamage"*/;
+  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
   v9 = UserQuestRecordEntity_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_20460/*"knockdownNum"*/;
-  v9->KEY_RECORD_KNOCKDOWN_NUM = (struct System_String_o *)StringLiteral_20460/*"knockdownNum"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v9->KEY_RECORD_KNOCKDOWN_NUM, v10, v11, v12, v13, v14, v15, v16);
+  v10 = (System_Int32_array **)StringLiteral_20555/*"knockdownNum"*/;
+  v9->KEY_RECORD_KNOCKDOWN_NUM = (struct System_String_o *)StringLiteral_20555/*"knockdownNum"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v9->KEY_RECORD_KNOCKDOWN_NUM, v10, v11, v12, v13, v14, v15, v16);
   v17 = UserQuestRecordEntity_TypeInfo->static_fields;
-  v18 = (System_Int32_array **)StringLiteral_23107/*"totalDamageToAliveEnemy"*/;
-  v17->KEY_RECORD_TOTAL_DAMAGE_TO_ALIVE_ENEMY = (struct System_String_o *)StringLiteral_23107/*"totalDamageToAliveEnemy"*/;
-  sub_B70630(
+  v18 = (System_Int32_array **)StringLiteral_23208/*"totalDamageToAliveEnemy"*/;
+  v17->KEY_RECORD_TOTAL_DAMAGE_TO_ALIVE_ENEMY = (struct System_String_o *)StringLiteral_23208/*"totalDamageToAliveEnemy"*/;
+  sub_B77560(
     (BattleServantConfConponent_o *)&v17->KEY_RECORD_TOTAL_DAMAGE_TO_ALIVE_ENEMY,
     v18,
     v19,
@@ -58,18 +58,18 @@ void __fastcall UserQuestRecordEntity___cctor(const MethodInfo *method)
 
 void __fastcall UserQuestRecordEntity___ctor(UserQuestRecordEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_434FD54 & 1) == 0 )
+  if ( (byte_438933D & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_434FD54 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438933D = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void __fastcall UserQuestRecordEntity___ctor_21549176(
+void __fastcall UserQuestRecordEntity___ctor_21753760(
         UserQuestRecordEntity_o *this,
         UserQuestRecordEntity_o *original,
         const MethodInfo *method)
@@ -91,23 +91,23 @@ void __fastcall UserQuestRecordEntity___ctor_21549176(
   System_Int32_array *v19; // x6
   System_Int32_array *v20; // x7
 
-  if ( (byte_434FD55 & 1) == 0 )
+  if ( (byte_438933E & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_434FD55 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438933E = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
   if ( !original )
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   this->fields.userId = original->fields.userId;
   this->fields.questId = original->fields.questId;
   this->fields.recordType = original->fields.recordType;
   this->fields.recordValue = original->fields.recordValue;
   recordValueJson = original->fields.recordValueJson;
   this->fields.recordValueJson = recordValueJson;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.recordValueJson,
     (System_Int32_array **)recordValueJson,
     v7,
@@ -118,7 +118,7 @@ void __fastcall UserQuestRecordEntity___ctor_21549176(
     v12);
   deckJson = original->fields.deckJson;
   this->fields.deckJson = deckJson;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.deckJson,
     (System_Int32_array **)deckJson,
     v15,
@@ -138,16 +138,16 @@ System_String_o *__fastcall UserQuestRecordEntity__CreatePK(
         int32_t recordType,
         const MethodInfo *method)
 {
-  if ( (byte_434FD57 & 1) == 0 )
+  if ( (byte_4389340 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
-    byte_434FD57 = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_4389340 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            questId,
            recordType,
-           (const MethodInfo_1CA2A34 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_1D17884 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
@@ -160,10 +160,10 @@ System_String_o *__fastcall UserQuestRecordEntity__CreatePrimaryKey(
   int32_t recordType; // w19
   int32_t questId; // w20
 
-  if ( (byte_434FD56 & 1) == 0 )
+  if ( (byte_438933F & 1) == 0 )
   {
-    sub_B70694(&UserQuestRecordEntity_TypeInfo);
-    byte_434FD56 = 1;
+    sub_B775C4(&UserQuestRecordEntity_TypeInfo);
+    byte_438933F = 1;
   }
   userId = this->fields.userId;
   questId = this->fields.questId;
@@ -184,17 +184,17 @@ bool __fastcall UserQuestRecordEntity__existRecordKey(
 {
   struct System_Collections_Generic_Dictionary_string__object__o *recordValueJson; // x0
 
-  if ( (byte_434FD58 & 1) == 0 )
+  if ( (byte_4389341 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    byte_434FD58 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    byte_4389341 = 1;
   }
   recordValueJson = this->fields.recordValueJson;
   if ( recordValueJson )
     LOBYTE(recordValueJson) = System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
                                 (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)recordValueJson,
                                 (System_Xml_XmlQualifiedName_o *)key,
-                                (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                                (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   return (char)recordValueJson;
 }
 
@@ -212,11 +212,11 @@ int64_t __fastcall UserQuestRecordEntity__getRecordLong(
   const MethodInfo *v10; // x0
 
   v4 = defValue;
-  if ( (byte_434FD59 & 1) == 0 )
+  if ( (byte_4389342 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B70694(&long_TypeInfo);
-    byte_434FD59 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_B775C4(&long_TypeInfo);
+    byte_4389342 = 1;
   }
   if ( !UserQuestRecordEntity__existRecordKey(this, key, (const MethodInfo *)defValue) )
     return v4;
@@ -225,13 +225,13 @@ int64_t __fastcall UserQuestRecordEntity__getRecordLong(
     || (recordValueJson = (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                                                                                               recordValueJson,
                                                                                               (System_Type_o *)key,
-                                                                                              (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                                              (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_B7076C(recordValueJson, v7);
+    sub_B7769C(recordValueJson, v7);
   }
   if ( recordValueJson->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_QWORD *)j_il2cpp_object_unbox_0(recordValueJson);
-  v10 = (const MethodInfo *)sub_B70A60(recordValueJson);
+  v10 = (const MethodInfo *)sub_B77990(recordValueJson);
   UserQuestRecordEntity___cctor(v10);
   return result;
 }

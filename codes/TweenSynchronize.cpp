@@ -9,20 +9,20 @@ void __fastcall TweenSynchronize___cctor(const MethodInfo *method)
   System_Int32_array *v7; // x6
   System_Int32_array *v8; // x7
 
-  if ( (byte_435F245 & 1) == 0 )
+  if ( (byte_4398813 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_UITweener___ctor__);
-    sub_B70694(&System_Collections_Generic_List_UITweener__TypeInfo);
-    sub_B70694(&TweenSynchronize_TypeInfo);
-    byte_435F245 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_UITweener___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_UITweener__TypeInfo);
+    sub_B775C4(&TweenSynchronize_TypeInfo);
+    byte_4398813 = 1;
   }
-  v1 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_UITweener__TypeInfo);
+  v1 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_UITweener__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v1,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_UITweener___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_UITweener___ctor__);
   static_fields = (BattleServantConfConponent_o *)TweenSynchronize_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B70630(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  sub_B77560(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -47,20 +47,20 @@ void __fastcall TweenSynchronize__Awake(TweenSynchronize_o *this, const MethodIn
   System_Collections_Generic_List_WarBoardManager_TaskList__o *tweenerList; // x0
   TweenSynchronize_c *v14; // x0
 
-  if ( (byte_435F242 & 1) == 0 )
+  if ( (byte_4398810 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_UITweener___);
-    sub_B70694(&Method_System_Collections_Generic_List_UITweener__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_UITweener__Contains__);
-    sub_B70694(&TweenSynchronize_TypeInfo);
-    byte_435F242 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UITweener___);
+    sub_B775C4(&Method_System_Collections_Generic_List_UITweener__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_UITweener__Contains__);
+    sub_B775C4(&TweenSynchronize_TypeInfo);
+    byte_4398810 = 1;
   }
   Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                               (UnityEngine_Component_o *)this,
-                              (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UITweener___);
+                              (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UITweener___);
   p_tweener = &this->fields.tweener;
   this->fields.tweener = (struct UITweener_o *)Component_WebViewObject;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.tweener,
     (System_Int32_array **)Component_WebViewObject,
     v5,
@@ -82,7 +82,7 @@ void __fastcall TweenSynchronize__Awake(TweenSynchronize_o *this, const MethodIn
   if ( System_Collections_Generic_List_WarBoardManager_TaskList___Contains(
          tweenerList,
          (WarBoardManager_TaskList_o *)*p_tweener,
-         (const MethodInfo_3025AD8 *)Method_System_Collections_Generic_List_UITweener__Contains__) )
+         (const MethodInfo_30536E8 *)Method_System_Collections_Generic_List_UITweener__Contains__) )
   {
     return;
   }
@@ -96,11 +96,11 @@ void __fastcall TweenSynchronize__Awake(TweenSynchronize_o *this, const MethodIn
   tweenerList = (System_Collections_Generic_List_WarBoardManager_TaskList__o *)v14->static_fields->tweenerList;
   if ( !tweenerList )
 LABEL_13:
-    sub_B7076C(tweenerList, v11);
+    sub_B7769C(tweenerList, v11);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)tweenerList,
     (EventMissionProgressRequest_Argument_ProgressData_o *)*p_tweener,
-    (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_UITweener__Add__);
+    (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_UITweener__Add__);
 }
 
 
@@ -109,11 +109,11 @@ void __fastcall TweenSynchronize__OnDestroy(TweenSynchronize_o *this, const Meth
   TweenSynchronize_c *v3; // x0
   System_Collections_Generic_List_WarBoardManager_TaskList__o *tweenerList; // x0
 
-  if ( (byte_435F243 & 1) == 0 )
+  if ( (byte_4398811 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_UITweener__Remove__);
-    sub_B70694(&TweenSynchronize_TypeInfo);
-    byte_435F243 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_UITweener__Remove__);
+    sub_B775C4(&TweenSynchronize_TypeInfo);
+    byte_4398811 = 1;
   }
   v3 = TweenSynchronize_TypeInfo;
   if ( (BYTE3(TweenSynchronize_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -124,11 +124,11 @@ void __fastcall TweenSynchronize__OnDestroy(TweenSynchronize_o *this, const Meth
   }
   tweenerList = (System_Collections_Generic_List_WarBoardManager_TaskList__o *)v3->static_fields->tweenerList;
   if ( !tweenerList )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   System_Collections_Generic_List_WarBoardManager_TaskList___Remove(
     tweenerList,
     (WarBoardManager_TaskList_o *)this->fields.tweener,
-    (const MethodInfo_3027034 *)Method_System_Collections_Generic_List_UITweener__Remove__);
+    (const MethodInfo_3054C44 *)Method_System_Collections_Generic_List_UITweener__Remove__);
 }
 
 
@@ -148,15 +148,15 @@ void __fastcall TweenSynchronize__synchronize(TweenSynchronize_o *this, const Me
   System_Collections_Generic_List_Enumerator_T__o v14; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_T__o v15; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_435F244 & 1) == 0 )
+  if ( (byte_4398812 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UITweener__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UITweener__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UITweener__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_UITweener__GetEnumerator__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&TweenSynchronize_TypeInfo);
-    byte_435F244 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UITweener__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UITweener__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UITweener__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_UITweener__GetEnumerator__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&TweenSynchronize_TypeInfo);
+    byte_4398812 = 1;
   }
   memset(&v15, 0, sizeof(v15));
   v3 = TweenSynchronize_TypeInfo;
@@ -168,25 +168,25 @@ void __fastcall TweenSynchronize__synchronize(TweenSynchronize_o *this, const Me
   }
   tweenerList = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v3->static_fields->tweenerList;
   if ( !tweenerList )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v14,
     tweenerList,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_UITweener__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_UITweener__GetEnumerator__);
   v15 = v14;
   while ( 1 )
   {
     v5 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
            &v15,
-           (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_UITweener__MoveNext__);
+           (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_UITweener__MoveNext__);
     if ( !v5 )
       break;
     current = v15.fields.current;
     if ( !v15.fields.current )
-      sub_B7076C(v5, v6);
+      sub_B7769C(v5, v6);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v15.fields.current, 0LL);
     if ( !gameObject )
-      sub_B7076C(0LL, v9);
+      sub_B7769C(0LL, v9);
     if ( UnityEngine_GameObject__get_active(gameObject, 0LL) )
     {
       tweener = (UnityEngine_Object_o *)this->fields.tweener;
@@ -200,7 +200,7 @@ void __fastcall TweenSynchronize__synchronize(TweenSynchronize_o *this, const Me
       {
         v13 = this->fields.tweener;
         if ( !v13 )
-          sub_B7076C(v11, v12);
+          sub_B7769C(v11, v12);
         if ( v13->fields.duration == *(float *)&current[3].klass )
         {
           ((void (__fastcall *)(struct UITweener_o *, Il2CppObject *, void *))v13->klass->vtable._8_SynchronizeTween.method)(
@@ -214,5 +214,5 @@ void __fastcall TweenSynchronize__synchronize(TweenSynchronize_o *this, const Me
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v15,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_UITweener__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_UITweener__Dispose__);
 }

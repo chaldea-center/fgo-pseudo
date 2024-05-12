@@ -18,18 +18,18 @@ void __fastcall MaskFade__EndFadein(MaskFade_o *this, const MethodInfo *method)
   System_Action_o *v12; // x20
   struct System_Action_o *callbackFunc; // t1
 
-  if ( (byte_4354DDA & 1) == 0 )
+  if ( (byte_438E5CE & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_TweenColor___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4354DDA = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_TweenColor___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438E5CE = 1;
   }
   maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
   if ( !maskSprite )
     goto LABEL_15;
   Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                       maskSprite,
-                                                      (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
+                                                      (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -52,7 +52,7 @@ void __fastcall MaskFade__EndFadein(MaskFade_o *this, const MethodInfo *method)
         (maskSprite = (UnityEngine_Component_o *)this->fields.colliderBase) == 0LL) )
   {
 LABEL_15:
-    sub_B7076C(maskSprite, method);
+    sub_B7769C(maskSprite, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, 0, 0LL);
   callbackFunc = this->fields.callbackFunc;
@@ -62,7 +62,7 @@ LABEL_15:
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_B70630(p_callbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_B77560(p_callbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
     System_Action__Invoke(v12, 0LL);
   }
 }
@@ -83,7 +83,7 @@ void __fastcall MaskFade__EndFadeout(MaskFade_o *this, const MethodInfo *method)
 
   maskSprite = this->fields.maskSprite;
   if ( !maskSprite )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer, float))maskSprite->klass->vtable._8_set_alpha.method)(
     maskSprite,
     maskSprite->klass->vtable._9_CalculateFinalAlpha.methodPtr,
@@ -95,7 +95,7 @@ void __fastcall MaskFade__EndFadeout(MaskFade_o *this, const MethodInfo *method)
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_B70630(p_callbackFunc, 0LL, v4, v5, v6, v7, v8, v9);
+    sub_B77560(p_callbackFunc, 0LL, v4, v5, v6, v7, v8, v9);
     System_Action__Invoke(v11, 0LL);
   }
 }
@@ -151,12 +151,12 @@ bool __fastcall MaskFade__FadeChangeColor(
   UnityEngine_Color_o v49; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v50; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
-  if ( (byte_4354DD8 & 1) == 0 )
+  if ( (byte_438E5CC & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_TweenColor___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_6051/*"EndFadeout"*/);
-    byte_4354DD8 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_TweenColor___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_6107/*"EndFadeout"*/);
+    byte_438E5CC = 1;
   }
   if ( this->fields.isExecuteMask )
   {
@@ -165,7 +165,7 @@ bool __fastcall MaskFade__FadeChangeColor(
       goto LABEL_31;
     Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                                 maskSprite,
-                                (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
+                                (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
@@ -188,7 +188,7 @@ bool __fastcall MaskFade__FadeChangeColor(
     }
   }
   this->fields.callbackFunc = callback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.callbackFunc,
     (System_Int32_array **)callback,
     (System_String_array **)callback,
@@ -215,7 +215,7 @@ bool __fastcall MaskFade__FadeChangeColor(
   this->fields.maskKind = kind;
   if ( !maskSprite )
 LABEL_31:
-    sub_B7076C(maskSprite, *(_QWORD *)&kind);
+    sub_B7769C(maskSprite, *(_QWORD *)&kind);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, 1, 0LL);
   if ( duration <= 0.0 )
     goto LABEL_28;
@@ -265,10 +265,10 @@ LABEL_28:
     goto LABEL_31;
   v30[3].klass = (UnityEngine_Object_c *)maskSprite;
   v37 = v30 + 3;
-  sub_B70630((BattleServantConfConponent_o *)v37, (System_Int32_array **)maskSprite, v31, v32, v33, v34, v35, v36);
-  v38 = (System_Int32_array **)StringLiteral_6051/*"EndFadeout"*/;
-  v37->monitor = (void *)StringLiteral_6051/*"EndFadeout"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v37->monitor, v38, v39, v40, v41, v42, v43, v44);
+  sub_B77560((BattleServantConfConponent_o *)v37, (System_Int32_array **)maskSprite, v31, v32, v33, v34, v35, v36);
+  v38 = (System_Int32_array **)StringLiteral_6107/*"EndFadeout"*/;
+  v37->monitor = (void *)StringLiteral_6107/*"EndFadeout"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v37->monitor, v38, v39, v40, v41, v42, v43, v44);
   return 1;
 }
 
@@ -304,12 +304,12 @@ bool __fastcall MaskFade__Fadein(MaskFade_o *this, float duration, System_Action
   System_Int32_array *v33; // x7
   UnityEngine_Color_o v34; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
-  if ( (byte_4354DD9 & 1) == 0 )
+  if ( (byte_438E5CD & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_TweenColor___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_6050/*"EndFadein"*/);
-    byte_4354DD9 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_TweenColor___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_6106/*"EndFadein"*/);
+    byte_438E5CD = 1;
   }
   if ( !this->fields.isExecuteMask )
     goto LABEL_14;
@@ -318,7 +318,7 @@ bool __fastcall MaskFade__Fadein(MaskFade_o *this, float duration, System_Action
     goto LABEL_23;
   Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                               (UnityEngine_Component_o *)maskSprite,
-                              (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
+                              (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -333,7 +333,7 @@ bool __fastcall MaskFade__Fadein(MaskFade_o *this, float duration, System_Action
   {
 LABEL_14:
     this->fields.callbackFunc = callback;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.callbackFunc,
       (System_Int32_array **)callback,
       (System_String_array **)method,
@@ -369,7 +369,7 @@ LABEL_14:
         {
           v19[3].klass = (UnityEngine_Object_c *)maskSprite;
           v26 = v19 + 3;
-          sub_B70630(
+          sub_B77560(
             (BattleServantConfConponent_o *)v26,
             (System_Int32_array **)maskSprite,
             v20,
@@ -378,15 +378,15 @@ LABEL_14:
             v23,
             v24,
             v25);
-          v27 = (System_Int32_array **)StringLiteral_6050/*"EndFadein"*/;
-          v26->monitor = (void *)StringLiteral_6050/*"EndFadein"*/;
-          sub_B70630((BattleServantConfConponent_o *)&v26->monitor, v27, v28, v29, v30, v31, v32, v33);
+          v27 = (System_Int32_array **)StringLiteral_6106/*"EndFadein"*/;
+          v26->monitor = (void *)StringLiteral_6106/*"EndFadein"*/;
+          sub_B77560((BattleServantConfConponent_o *)&v26->monitor, v27, v28, v29, v30, v31, v32, v33);
           result = 1;
           this->fields.isExecuteMask = 1;
           return result;
         }
 LABEL_23:
-        sub_B7076C(maskSprite, callback);
+        sub_B7769C(maskSprite, callback);
       }
     }
     MaskFade__EndFadein(this, (const MethodInfo *)callback);
@@ -448,12 +448,12 @@ bool __fastcall MaskFade__Fadeout(
   UnityEngine_Color_o v49; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v50; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
-  if ( (byte_4354DD7 & 1) == 0 )
+  if ( (byte_438E5CB & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_TweenColor___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_6051/*"EndFadeout"*/);
-    byte_4354DD7 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_TweenColor___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_6107/*"EndFadeout"*/);
+    byte_438E5CB = 1;
   }
   if ( this->fields.isExecuteMask )
   {
@@ -462,7 +462,7 @@ bool __fastcall MaskFade__Fadeout(
       goto LABEL_31;
     Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                                 maskSprite,
-                                (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
+                                (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
@@ -485,7 +485,7 @@ bool __fastcall MaskFade__Fadeout(
     }
   }
   this->fields.callbackFunc = callback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.callbackFunc,
     (System_Int32_array **)callback,
     (System_String_array **)callback,
@@ -512,7 +512,7 @@ bool __fastcall MaskFade__Fadeout(
   this->fields.maskKind = kind;
   if ( !maskSprite )
 LABEL_31:
-    sub_B7076C(maskSprite, *(_QWORD *)&kind);
+    sub_B7769C(maskSprite, *(_QWORD *)&kind);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, 1, 0LL);
   if ( duration <= 0.0 )
     goto LABEL_28;
@@ -565,10 +565,10 @@ LABEL_28:
     goto LABEL_31;
   v30[3].klass = (UnityEngine_Object_c *)maskSprite;
   v37 = v30 + 3;
-  sub_B70630((BattleServantConfConponent_o *)v37, (System_Int32_array **)maskSprite, v31, v32, v33, v34, v35, v36);
-  v38 = (System_Int32_array **)StringLiteral_6051/*"EndFadeout"*/;
-  v37->monitor = (void *)StringLiteral_6051/*"EndFadeout"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v37->monitor, v38, v39, v40, v41, v42, v43, v44);
+  sub_B77560((BattleServantConfConponent_o *)v37, (System_Int32_array **)maskSprite, v31, v32, v33, v34, v35, v36);
+  v38 = (System_Int32_array **)StringLiteral_6107/*"EndFadeout"*/;
+  v37->monitor = (void *)StringLiteral_6107/*"EndFadeout"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v37->monitor, v38, v39, v40, v41, v42, v43, v44);
   return 1;
 }
 
@@ -587,11 +587,11 @@ void __fastcall MaskFade__Init(MaskFade_o *this, const MethodInfo *method)
   UnityEngine_Component_o *maskSprite; // x0
   WebViewObject_o *Component_WebViewObject; // x20
 
-  if ( (byte_4354DD6 & 1) == 0 )
+  if ( (byte_438E5CA & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_TweenColor___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4354DD6 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_TweenColor___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438E5CA = 1;
   }
   if ( this->fields.isExecuteMask )
   {
@@ -600,7 +600,7 @@ void __fastcall MaskFade__Init(MaskFade_o *this, const MethodInfo *method)
       goto LABEL_16;
     Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                                 maskSprite,
-                                (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
+                                (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
@@ -614,7 +614,7 @@ void __fastcall MaskFade__Init(MaskFade_o *this, const MethodInfo *method)
     {
       if ( !Component_WebViewObject || (maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite) == 0LL )
 LABEL_16:
-        sub_B7076C(maskSprite, method);
+        sub_B7769C(maskSprite, method);
       UIWidget__set_color(
         (UIWidget_o *)maskSprite,
         *(UnityEngine_Color_o *)&Component_WebViewObject[1].fields.onJS,
@@ -650,7 +650,7 @@ bool __fastcall MaskFade__IsDisp(MaskFade_o *this, const MethodInfo *method)
 
   maskSprite = this->fields.maskSprite;
   if ( !maskSprite )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   return ((float (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))maskSprite->klass->vtable._7_get_alpha.method)(
            maskSprite,
            maskSprite->klass->vtable._8_set_alpha.methodPtr) > 0.0;
@@ -665,7 +665,7 @@ bool __fastcall MaskFade__IsOnTop(MaskFade_o *this, const MethodInfo *method)
     return 0;
   maskSprite = this->fields.maskSprite;
   if ( !maskSprite )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   return ((float (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))maskSprite->klass->vtable._7_get_alpha.method)(
            maskSprite,
            maskSprite->klass->vtable._8_set_alpha.methodPtr) >= 1.0;
@@ -693,7 +693,7 @@ void __fastcall MaskFade__SetInitColor(MaskFade_o *this, int32_t kind, const Met
       : COERCE_FLOAT(*(UnityEngine_Color_o *)&r = UnityEngine_Color__get_black(0LL)),
         (this = (MaskFade_o *)v4->fields.maskSprite) == 0LL) )
   {
-    sub_B7076C(this, *(_QWORD *)&kind);
+    sub_B7769C(this, *(_QWORD *)&kind);
   }
   maskKind = this[2].fields.maskKind;
   UIWidget__set_color((UIWidget_o *)this, *(UnityEngine_Color_o *)&r, 0LL);
@@ -706,7 +706,7 @@ void __fastcall MaskFade__SetMaskCollider(MaskFade_o *this, bool isEnable, const
 
   colliderBase = this->fields.colliderBase;
   if ( !colliderBase )
-    sub_B7076C(0LL, isEnable);
+    sub_B7769C(0LL, isEnable);
   UnityEngine_GameObject__SetActive(colliderBase, isEnable, 0LL);
 }
 
@@ -717,7 +717,7 @@ int32_t __fastcall MaskFade__get_Depth(MaskFade_o *this, const MethodInfo *metho
 
   maskSprite = this->fields.maskSprite;
   if ( !maskSprite )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return maskSprite->fields.mDepth;
 }
 
@@ -728,6 +728,6 @@ void __fastcall MaskFade__set_Depth(MaskFade_o *this, int32_t value, const Metho
 
   maskSprite = (UIWidget_o *)this->fields.maskSprite;
   if ( !maskSprite )
-    sub_B7076C(0LL, value);
+    sub_B7769C(0LL, value);
   UIWidget__set_depth(maskSprite, value, 0LL);
 }

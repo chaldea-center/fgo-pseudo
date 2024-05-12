@@ -1,14 +1,14 @@
 void __fastcall EventCampaignReleaseMaster___ctor(EventCampaignReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_43544D3 & 1) == 0 )
+  if ( (byte_438DD91 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string___ctor__);
-    byte_43544D3 = 1;
+    sub_B775C4(&Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string___ctor__);
+    byte_438DD91 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     264,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,16 @@ EventCampaignReleaseEntity_o *__fastcall EventCampaignReleaseMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_43544D1 & 1) == 0 )
+  if ( (byte_438DD8F & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__GetEntity__);
-    byte_43544D1 = 1;
+    sub_B775C4(&Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__GetEntity__);
+    byte_438DD8F = 1;
   }
   PK = EventCampaignReleaseEntity__CreatePK(eventId, target, idx, *(const MethodInfo **)&idx);
   return (EventCampaignReleaseEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                            (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                            PK,
-                                           (const MethodInfo_21C0890 *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__GetEntity__);
+                                           (const MethodInfo_21FBCE4 *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__GetEntity__);
 }
 
 
@@ -46,17 +46,17 @@ bool __fastcall EventCampaignReleaseMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_43544D2 & 1) == 0 )
+  if ( (byte_438DD90 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__TryGetEntity__);
-    byte_43544D2 = 1;
+    sub_B775C4(&Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__TryGetEntity__);
+    byte_438DD90 = 1;
   }
   PK = EventCampaignReleaseEntity__CreatePK(eventId, target, idx, *(const MethodInfo **)&target);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__TryGetEntity__);
 }
 
 
@@ -84,12 +84,12 @@ bool __fastcall EventCampaignReleaseMaster__isRelease(
   __int64 p_method; // x0
   System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__o *v24; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_43544D4 & 1) == 0 )
+  if ( (byte_438DD92 & 1) == 0 )
   {
-    sub_B70694(&CondType_TypeInfo);
-    sub_B70694(&EventCampaignReleaseEntity_TypeInfo);
-    sub_B70694(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo);
-    byte_43544D4 = 1;
+    sub_B775C4(&CondType_TypeInfo);
+    sub_B775C4(&EventCampaignReleaseEntity_TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo);
+    byte_438DD92 = 1;
   }
   v24 = 0LL;
   monitor = 0;
@@ -120,7 +120,7 @@ bool __fastcall EventCampaignReleaseMaster__isRelease(
     else
     {
 LABEL_20:
-      p_method = sub_B08590(
+      p_method = sub_B0F4C0(
                    lookup,
                    System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo,
                    1LL);
@@ -138,9 +138,9 @@ LABEL_20:
     if ( *(&v24->klass->_2.bitflags2 + 1) < (unsigned int)v11
       || (EventCampaignReleaseEntity_c *)v24->klass->_2.typeHierarchy[v11 - 1] != EventCampaignReleaseEntity_TypeInfo )
     {
-      sub_B70A60(v24);
+      sub_B77990(v24);
 LABEL_25:
-      sub_B7076C(lookup, v17);
+      sub_B7769C(lookup, v17);
     }
     ++v9;
     if ( monitor == LODWORD(v24[2].monitor) )

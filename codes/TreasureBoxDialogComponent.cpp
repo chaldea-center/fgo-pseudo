@@ -17,21 +17,21 @@ void __fastcall TreasureBoxDialogComponent___cctor(const MethodInfo *method)
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
 
-  if ( (byte_4353D7C & 1) == 0 )
+  if ( (byte_438D63A & 1) == 0 )
   {
-    sub_B70694(&TreasureBoxDialogComponent_TypeInfo);
-    sub_B70694(&StringLiteral_19737/*"img_bg_ep"*/);
-    sub_B70694(&StringLiteral_2535/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/);
-    byte_4353D7C = 1;
+    sub_B775C4(&TreasureBoxDialogComponent_TypeInfo);
+    sub_B775C4(&StringLiteral_19827/*"img_bg_ep"*/);
+    sub_B775C4(&StringLiteral_2581/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/);
+    byte_438D63A = 1;
   }
   static_fields = (BattleServantConfConponent_o *)TreasureBoxDialogComponent_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_19737/*"img_bg_ep"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_19737/*"img_bg_ep"*/;
-  sub_B70630(static_fields, v8, v1, v2, v3, v4, v5, v6);
+  v8 = (System_Int32_array **)StringLiteral_19827/*"img_bg_ep"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_19827/*"img_bg_ep"*/;
+  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
   v9 = TreasureBoxDialogComponent_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_2535/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/;
-  v9->EVENT_POINT_REWARD_AT = (struct System_String_o *)StringLiteral_2535/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v9->EVENT_POINT_REWARD_AT, v10, v11, v12, v13, v14, v15, v16);
+  v10 = (System_Int32_array **)StringLiteral_2581/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/;
+  v9->EVENT_POINT_REWARD_AT = (struct System_String_o *)StringLiteral_2581/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v9->EVENT_POINT_REWARD_AT, v10, v11, v12, v13, v14, v15, v16);
 }
 
 
@@ -52,19 +52,19 @@ void __fastcall TreasureBoxDialogComponent___ctor(TreasureBoxDialogComponent_o *
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
 
-  if ( (byte_4353D7B & 1) == 0 )
+  if ( (byte_438D639 & 1) == 0 )
   {
-    sub_B70694(&BaseDialog_TypeInfo);
-    sub_B70694(&UnityEngine_Color___TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_B70694(&System_Collections_Generic_List_GameObject__TypeInfo);
-    byte_4353D7B = 1;
+    sub_B775C4(&BaseDialog_TypeInfo);
+    sub_B775C4(&UnityEngine_Color___TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_438D639 = 1;
   }
   this->fields.TYPE_SPRITE_POS_Y = -62.2;
   this->fields.iconScale = 0.85;
-  v3 = (struct UnityEngine_Color_array *)sub_B706AC(UnityEngine_Color___TypeInfo, 2LL);
+  v3 = (struct UnityEngine_Color_array *)sub_B775DC(UnityEngine_Color___TypeInfo, 2LL);
   this->fields.viewChangeButtonLabelEffectColors = v3;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.viewChangeButtonLabelEffectColors,
     (System_Int32_array **)v3,
     v4,
@@ -75,12 +75,12 @@ void __fastcall TreasureBoxDialogComponent___ctor(TreasureBoxDialogComponent_o *
     v9);
   *(_QWORD *)&this->fields.itemDispTime = 0xC3A83126FLL;
   *(_QWORD *)&this->fields.scrollWait = 0x3D8F5C293EB33333LL;
-  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_GameObject__TypeInfo);
+  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v10,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.fallEffectObjList = (struct System_Collections_Generic_List_GameObject__o *)v10;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.fallEffectObjList,
     (System_Int32_array **)v10,
     v11,
@@ -104,12 +104,12 @@ void __fastcall TreasureBoxDialogComponent__ClickSkip(TreasureBoxDialogComponent
   _BOOL8 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4353D77 & 1) == 0 )
+  if ( (byte_438D635 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4353D77 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438D635 = 1;
   }
   if ( !this->fields.isSkip && this->fields.canSkip )
   {
@@ -124,7 +124,7 @@ void __fastcall TreasureBoxDialogComponent__ClickSkip(TreasureBoxDialogComponent
         while ( 1 )
         {
           if ( v5 >= (unsigned int)fallEffectObjList->fields._size )
-            System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+            System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
           v6 = (UnityEngine_Object_o *)fallEffectObjList->fields._items->m_Items[v5];
           if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -139,13 +139,13 @@ void __fastcall TreasureBoxDialogComponent__ClickSkip(TreasureBoxDialogComponent
             {
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
             }
-            UnityEngine_Object__Destroy_36067208(v6, 0LL);
+            UnityEngine_Object__Destroy_36309980(v6, 0LL);
           }
           if ( (__int64)++v5 >= size )
             break;
           fallEffectObjList = this->fields.fallEffectObjList;
           if ( !fallEffectObjList )
-            sub_B7076C(v7, v8);
+            sub_B7769C(v7, v8);
         }
       }
     }
@@ -165,14 +165,14 @@ void __fastcall TreasureBoxDialogComponent__Close(
   System_Int32_array *v7; // x7
   System_Action_o *v10; // x20
 
-  if ( (byte_4353D70 & 1) == 0 )
+  if ( (byte_438D62E & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_TreasureBoxDialogComponent_EndClose__);
-    byte_4353D70 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_TreasureBoxDialogComponent_EndClose__);
+    byte_438D62E = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc,
     (System_Int32_array **)callback,
     (System_String_array **)method,
@@ -181,7 +181,7 @@ void __fastcall TreasureBoxDialogComponent__Close(
     v5,
     v6,
     v7);
-  v10 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_TreasureBoxDialogComponent_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
 }
@@ -206,7 +206,7 @@ void __fastcall TreasureBoxDialogComponent__EndClose(TreasureBoxDialogComponent_
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_B70630(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_B77560(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
     System_Action__Invoke(v10, 0LL);
   }
 }
@@ -219,7 +219,7 @@ void __fastcall TreasureBoxDialogComponent__Init(TreasureBoxDialogComponent_o *t
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -232,11 +232,11 @@ void __fastcall TreasureBoxDialogComponent__OnClickCloseButton(
   __int64 v3; // x1
   UnityEngine_Collider_o *skipCollider; // x0
 
-  if ( (byte_4353D6F & 1) == 0 )
+  if ( (byte_438D62D & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4353D6F = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438D62D = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -244,9 +244,9 @@ void __fastcall TreasureBoxDialogComponent__OnClickCloseButton(
   skipCollider = (UnityEngine_Collider_o *)this->fields.skipCollider;
   if ( !skipCollider
     || (UnityEngine_Collider__set_enabled(skipCollider, 1, 0LL),
-        (skipCollider = (UnityEngine_Collider_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
+        (skipCollider = (UnityEngine_Collider_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
   {
-    sub_B7076C(skipCollider, v3);
+    sub_B7769C(skipCollider, v3);
   }
   CommonUI__CloseTreasureBoxDialog((CommonUI_o *)skipCollider, this->fields.closeCallbackFunc, 0LL);
 }
@@ -271,13 +271,13 @@ void __fastcall TreasureBoxDialogComponent__OnClickSwitchShowMode(
   __int64 v15; // x0
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4353D78 & 1) == 0 )
+  if ( (byte_438D636 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4353D78 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438D636 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -287,7 +287,7 @@ void __fastcall TreasureBoxDialogComponent__OnClickSwitchShowMode(
   this->fields.isShowPossessionNum = !isShowPossessionNum;
   if ( !viewChangeButtonLabelEffectColors )
 LABEL_21:
-    sub_B7076C(viewChangeButtonLabel, v4);
+    sub_B7769C(viewChangeButtonLabel, v4);
   viewChangeButtonLabel = this->fields.viewChangeButtonLabel;
   max_length = viewChangeButtonLabelEffectColors->max_length;
   if ( !isShowPossessionNum )
@@ -303,8 +303,8 @@ LABEL_21:
       goto LABEL_13;
     }
 LABEL_23:
-    v15 = sub_B70798(viewChangeButtonLabel);
-    sub_B70738(v15, 0LL);
+    v15 = sub_B776C8(viewChangeButtonLabel);
+    sub_B77668(v15, 0LL);
   }
   if ( !max_length )
     goto LABEL_23;
@@ -330,13 +330,13 @@ LABEL_13:
     if ( (int)v13 >= size )
       break;
     if ( size <= (unsigned int)v13 )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
     viewChangeButtonLabel = (UILabel_o *)resultItemObjList->fields._items->m_Items[v13];
     if ( viewChangeButtonLabel )
     {
       viewChangeButtonLabel = (UILabel_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                              (UnityEngine_GameObject_o *)viewChangeButtonLabel,
-                                             (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+                                             (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
       if ( viewChangeButtonLabel )
       {
         ItemIconComponent__ShowPossession(
@@ -467,56 +467,56 @@ void __fastcall TreasureBoxDialogComponent__Open(
   int v115; // [xsp+1Ch] [xbp-54h] BYREF
   UnityEngine_Vector3_o v116; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4353D6E & 1) == 0 )
+  if ( (byte_438D62C & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_BoxCollider___);
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_B70694(&Method_UnityEngine_Component_GetComponentsInChildren_UILabel____69251240);
-    sub_B70694(&Method_DataManager_GetMasterData_EventRewardMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_GiftMaster___);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
-    sub_B70694(&int___TypeInfo);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&long_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_B70694(&System_Collections_Generic_List_GameObject__TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&Method_TreasureBoxDialogComponent___c__DisplayClass58_0__Open_b__0__);
-    sub_B70694(&Method_TreasureBoxDialogComponent___c__DisplayClass58_0__Open_b__1__);
-    sub_B70694(&TreasureBoxDialogComponent___c__DisplayClass58_0_TypeInfo);
-    sub_B70694(&StringLiteral_13646/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/);
-    sub_B70694(&StringLiteral_13625/*"TREASURE_BOX_EVENT_ITEM_LINEUP_DIALOG_TITLE"*/);
-    sub_B70694(&StringLiteral_13623/*"TREASURE_BOX_EVENT_GET_POINT_NUM"*/);
-    sub_B70694(&StringLiteral_704/*"+"*/);
-    sub_B70694(&StringLiteral_13628/*"TREASURE_BOX_EVENT_POINT_REWARD_GET_DIALOG_TITLE"*/);
-    sub_B70694(&StringLiteral_23170/*"treasurechest_btn"*/);
-    sub_B70694(&StringLiteral_13624/*"TREASURE_BOX_EVENT_ITEM_GET_DIALOG_TITLE"*/);
-    sub_B70694(&StringLiteral_2538/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/);
-    sub_B70694(&StringLiteral_23176/*"treasurechest_img_bg_reward"*/);
-    sub_B70694(&StringLiteral_13627/*"TREASURE_BOX_EVENT_POINT_REWARD"*/);
-    sub_B70694(&StringLiteral_13629/*"TREASURE_BOX_EVENT_TOTAL_POINT_NUM"*/);
-    sub_B70694(&StringLiteral_2533/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/);
-    sub_B70694(&StringLiteral_13626/*"TREASURE_BOX_EVENT_POINT"*/);
-    byte_4353D6E = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_BoxCollider___);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponentsInChildren_UILabel____69483976);
+    sub_B775C4(&Method_DataManager_GetMasterData_EventRewardMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_GiftMaster___);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+    sub_B775C4(&int___TypeInfo);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&long_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&Method_TreasureBoxDialogComponent___c__DisplayClass58_0__Open_b__0__);
+    sub_B775C4(&Method_TreasureBoxDialogComponent___c__DisplayClass58_0__Open_b__1__);
+    sub_B775C4(&TreasureBoxDialogComponent___c__DisplayClass58_0_TypeInfo);
+    sub_B775C4(&StringLiteral_13712/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/);
+    sub_B775C4(&StringLiteral_13691/*"TREASURE_BOX_EVENT_ITEM_LINEUP_DIALOG_TITLE"*/);
+    sub_B775C4(&StringLiteral_13689/*"TREASURE_BOX_EVENT_GET_POINT_NUM"*/);
+    sub_B775C4(&StringLiteral_706/*"+"*/);
+    sub_B775C4(&StringLiteral_13694/*"TREASURE_BOX_EVENT_POINT_REWARD_GET_DIALOG_TITLE"*/);
+    sub_B775C4(&StringLiteral_23271/*"treasurechest_btn"*/);
+    sub_B775C4(&StringLiteral_13690/*"TREASURE_BOX_EVENT_ITEM_GET_DIALOG_TITLE"*/);
+    sub_B775C4(&StringLiteral_2584/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/);
+    sub_B775C4(&StringLiteral_23277/*"treasurechest_img_bg_reward"*/);
+    sub_B775C4(&StringLiteral_13693/*"TREASURE_BOX_EVENT_POINT_REWARD"*/);
+    sub_B775C4(&StringLiteral_13695/*"TREASURE_BOX_EVENT_TOTAL_POINT_NUM"*/);
+    sub_B775C4(&StringLiteral_2579/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/);
+    sub_B775C4(&StringLiteral_13692/*"TREASURE_BOX_EVENT_POINT"*/);
+    byte_438D62C = 1;
   }
-  v14 = sub_B70764(TreasureBoxDialogComponent___c__DisplayClass58_0_TypeInfo);
+  v14 = sub_B77694(TreasureBoxDialogComponent___c__DisplayClass58_0_TypeInfo);
   TreasureBoxDialogComponent___c__DisplayClass58_0___ctor(
     (TreasureBoxDialogComponent___c__DisplayClass58_0_o *)v14,
     0LL);
   if ( !v14 )
     goto LABEL_109;
   *(_QWORD *)(v14 + 16) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v14 + 16), (System_Int32_array **)this, v17, v18, v19, v20, v21, v22);
+  sub_B77560((BattleServantConfConponent_o *)(v14 + 16), (System_Int32_array **)this, v17, v18, v19, v20, v21, v22);
   *(_QWORD *)(v14 + 24) = giftIds;
   v23 = (System_Array_o **)(v14 + 24);
-  sub_B70630((BattleServantConfConponent_o *)(v14 + 24), (System_Int32_array **)giftIds, v24, v25, v26, v27, v28, v29);
+  sub_B77560((BattleServantConfConponent_o *)(v14 + 24), (System_Int32_array **)giftIds, v24, v25, v26, v27, v28, v29);
   *(_QWORD *)(v14 + 32) = pointRewards;
   v30 = v14 + 32;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)(v14 + 32),
     (System_Int32_array **)pointRewards,
     v31,
@@ -530,12 +530,12 @@ void __fastcall TreasureBoxDialogComponent__Open(
     goto LABEL_109;
   Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                               (UnityEngine_Component_o *)viewChangeButton,
-                              (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                              (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   viewChangeButton = AtlasManager__SetEventUI(
                        (UISprite_o *)Component_WebViewObject,
-                       (System_String_o *)StringLiteral_23170/*"treasurechest_btn"*/,
+                       (System_String_o *)StringLiteral_23271/*"treasurechest_btn"*/,
                        0LL);
   if ( !treasureBoxEnt )
     goto LABEL_109;
@@ -543,12 +543,12 @@ void __fastcall TreasureBoxDialogComponent__Open(
   this->fields.dialogType = type;
   this->fields.playCnt = 0;
   *(_WORD *)&this->fields.isSkip = 0;
-  v38 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_GameObject__TypeInfo);
+  v38 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v38,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.resultItemObjList = (struct System_Collections_Generic_List_GameObject__o *)v38;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.resultItemObjList,
     (System_Int32_array **)v38,
     v39,
@@ -557,12 +557,12 @@ void __fastcall TreasureBoxDialogComponent__Open(
     v42,
     v43,
     v44);
-  v45 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_GameObject__TypeInfo);
+  v45 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v45,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.resultIconHideObjList = (struct System_Collections_Generic_List_GameObject__o *)v45;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.resultIconHideObjList,
     (System_Int32_array **)v45,
     v46,
@@ -575,18 +575,18 @@ void __fastcall TreasureBoxDialogComponent__Open(
   if ( fallEffectObjList )
     System_Collections_Generic_List_XWeaponTrail_Element___Clear(
       (System_Collections_Generic_List_XWeaponTrail_Element__o *)fallEffectObjList,
-      (const MethodInfo_3025A90 *)Method_System_Collections_Generic_List_GameObject__Clear__);
+      (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_GameObject__Clear__);
   dialogType = this->fields.dialogType;
   if ( dialogType )
   {
     if ( dialogType == 1 )
     {
-      viewChangeButton = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      viewChangeButton = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( viewChangeButton )
       {
         viewChangeButton = (__int64)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       (DataManager_o *)viewChangeButton,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_GiftMaster___);
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_GiftMaster___);
         if ( viewChangeButton )
         {
           viewChangeButton = (__int64)GiftMaster__GetGiftListById(
@@ -615,7 +615,7 @@ void __fastcall TreasureBoxDialogComponent__Open(
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  viewChangeButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_13624/*"TREASURE_BOX_EVENT_ITEM_GET_DIALOG_TITLE"*/, 0LL);
+                  viewChangeButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_13690/*"TREASURE_BOX_EVENT_ITEM_GET_DIALOG_TITLE"*/, 0LL);
                   if ( titleLabel )
                   {
                     UILabel__set_text(titleLabel, (System_String_o *)viewChangeButton, 0LL);
@@ -642,22 +642,22 @@ void __fastcall TreasureBoxDialogComponent__Open(
                         AtlasManager__SetItem(this->fields.getEventPointIcon, *(_DWORD *)(v80 + 24), 0LL);
                         AtlasManager__SetEventUI(
                           this->fields.totalEventPointBg,
-                          (System_String_o *)StringLiteral_23176/*"treasurechest_img_bg_reward"*/,
+                          (System_String_o *)StringLiteral_23277/*"treasurechest_img_bg_reward"*/,
                           0LL);
                         AtlasManager__SetEventUI(
                           this->fields.getEventPointBg,
-                          (System_String_o *)StringLiteral_23176/*"treasurechest_img_bg_reward"*/,
+                          (System_String_o *)StringLiteral_23277/*"treasurechest_img_bg_reward"*/,
                           0LL);
                         getTitleLabel = this->fields.getTitleLabel;
                         viewChangeButton = (__int64)LocalizationManager__Get(
-                                                      (System_String_o *)StringLiteral_13623/*"TREASURE_BOX_EVENT_GET_POINT_NUM"*/,
+                                                      (System_String_o *)StringLiteral_13689/*"TREASURE_BOX_EVENT_GET_POINT_NUM"*/,
                                                       0LL);
                         if ( getTitleLabel )
                         {
                           UILabel__set_text(getTitleLabel, (System_String_o *)viewChangeButton, 0LL);
                           getNumLabel = this->fields.getNumLabel;
                           viewChangeButton = (__int64)LocalizationManager__Get(
-                                                        (System_String_o *)StringLiteral_2538/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/,
+                                                        (System_String_o *)StringLiteral_2584/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/,
                                                         0LL);
                           if ( !*(_DWORD *)(v75 + 24) )
                             goto LABEL_110;
@@ -668,8 +668,8 @@ void __fastcall TreasureBoxDialogComponent__Open(
                             v115 = this->fields.maxPlayCnt * *(_DWORD *)(v84 + 28);
                             v86 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v115, v83);
                             v87 = System_String__Format(v85, v86, 0LL);
-                            viewChangeButton = (__int64)System_String__Concat_44758168(
-                                                          (System_String_o *)StringLiteral_704/*"+"*/,
+                            viewChangeButton = (__int64)System_String__Concat_44901936(
+                                                          (System_String_o *)StringLiteral_706/*"+"*/,
                                                           v87,
                                                           0LL);
                             if ( getNumLabel )
@@ -681,20 +681,20 @@ void __fastcall TreasureBoxDialogComponent__Open(
                               totalTitleLabel = this->fields.totalTitleLabel;
                               v90 = EventPointNoGroup;
                               viewChangeButton = (__int64)LocalizationManager__Get(
-                                                            (System_String_o *)StringLiteral_13629/*"TREASURE_BOX_EVENT_TOTAL_POINT_NUM"*/,
+                                                            (System_String_o *)StringLiteral_13695/*"TREASURE_BOX_EVENT_TOTAL_POINT_NUM"*/,
                                                             0LL);
                               if ( totalTitleLabel )
                               {
                                 UILabel__set_text(totalTitleLabel, (System_String_o *)viewChangeButton, 0LL);
                                 totalNumLabel = this->fields.totalNumLabel;
-                                v92 = LocalizationManager__Get((System_String_o *)StringLiteral_2538/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
+                                v92 = LocalizationManager__Get((System_String_o *)StringLiteral_2584/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
                                 v114 = v90;
                                 v94 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v114, v93);
                                 viewChangeButton = (__int64)System_String__Format(v92, v94, 0LL);
                                 if ( totalNumLabel )
                                 {
                                   UILabel__set_text(totalNumLabel, (System_String_o *)viewChangeButton, 0LL);
-                                  viewChangeButton = sub_B706AC(
+                                  viewChangeButton = sub_B775DC(
                                                        int___TypeInfo,
                                                        (unsigned int)(this->fields.maxPlayCnt + 1));
                                   if ( viewChangeButton )
@@ -703,7 +703,7 @@ void __fastcall TreasureBoxDialogComponent__Open(
                                     if ( !*(_DWORD *)(viewChangeButton + 24) )
                                       goto LABEL_110;
                                     *(_DWORD *)(viewChangeButton + 32) = treasureBoxEnt->fields.extraGiftId;
-                                    System_Array__Copy_43134268(
+                                    System_Array__Copy_43375240(
                                       *v23,
                                       0,
                                       (System_Array_o *)viewChangeButton,
@@ -741,7 +741,7 @@ void __fastcall TreasureBoxDialogComponent__Open(
                                       viewChangeButton = (__int64)UnityEngine_Component__GetComponentsInChildren_WarBoardControlPlayTalkUiComponent_(
                                                                     (UnityEngine_Component_o *)viewChangeButton,
                                                                     1,
-                                                                    (const MethodInfo_1BE4420 *)Method_UnityEngine_Component_GetComponentsInChildren_UILabel____69251240);
+                                                                    (const MethodInfo_1C6DADC *)Method_UnityEngine_Component_GetComponentsInChildren_UILabel____69483976);
                                       if ( !viewChangeButton )
                                         goto LABEL_109;
                                       if ( !*(_DWORD *)(viewChangeButton + 24) )
@@ -753,7 +753,7 @@ void __fastcall TreasureBoxDialogComponent__Open(
                                         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                       }
                                       viewChangeButton = (__int64)LocalizationManager__Get(
-                                                                    (System_String_o *)StringLiteral_13646/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/,
+                                                                    (System_String_o *)StringLiteral_13712/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/,
                                                                     0LL);
                                       if ( !v98 )
                                         goto LABEL_109;
@@ -777,23 +777,23 @@ void __fastcall TreasureBoxDialogComponent__Open(
         }
       }
 LABEL_109:
-      sub_B7076C(viewChangeButton, v16);
+      sub_B7769C(viewChangeButton, v16);
     }
     if ( dialogType == 2 )
     {
       eventId = treasureBoxEnt->fields.eventId;
-      viewChangeButton = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      viewChangeButton = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( viewChangeButton )
       {
         MasterData_WarQuestSelectionMaster = (EventRewardMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                       (DataManager_o *)viewChangeButton,
-                                                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventRewardMaster___);
-        viewChangeButton = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                                                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventRewardMaster___);
+        viewChangeButton = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( viewChangeButton )
         {
           viewChangeButton = (__int64)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                         (DataManager_o *)viewChangeButton,
-                                        (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_GiftMaster___);
+                                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_GiftMaster___);
           if ( viewChangeButton )
           {
             GiftListById = GiftMaster__GetGiftListById(
@@ -805,21 +805,21 @@ LABEL_109:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v63 = LocalizationManager__Get((System_String_o *)StringLiteral_13626/*"TREASURE_BOX_EVENT_POINT"*/, 0LL);
+            v63 = LocalizationManager__Get((System_String_o *)StringLiteral_13692/*"TREASURE_BOX_EVENT_POINT"*/, 0LL);
             v64 = this->fields.titleLabel;
             v65 = (Il2CppObject *)v63;
-            v66 = LocalizationManager__Get((System_String_o *)StringLiteral_13628/*"TREASURE_BOX_EVENT_POINT_REWARD_GET_DIALOG_TITLE"*/, 0LL);
+            v66 = LocalizationManager__Get((System_String_o *)StringLiteral_13694/*"TREASURE_BOX_EVENT_POINT_REWARD_GET_DIALOG_TITLE"*/, 0LL);
             viewChangeButton = (__int64)System_String__Format(v66, v65, 0LL);
             if ( v64 )
             {
               UILabel__set_text(v64, (System_String_o *)viewChangeButton, 0LL);
               titleNextItemLabel = this->fields.titleNextItemLabel;
-              viewChangeButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_2533/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/, 0LL);
+              viewChangeButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_2579/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/, 0LL);
               if ( titleNextItemLabel )
               {
                 UILabel__set_text(titleNextItemLabel, (System_String_o *)viewChangeButton, 0LL);
                 titleAtLabel = this->fields.titleAtLabel;
-                viewChangeButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_13627/*"TREASURE_BOX_EVENT_POINT_REWARD"*/, 0LL);
+                viewChangeButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_13693/*"TREASURE_BOX_EVENT_POINT_REWARD"*/, 0LL);
                 if ( titleAtLabel )
                 {
                   UILabel__set_text(titleAtLabel, (System_String_o *)viewChangeButton, 0LL);
@@ -837,10 +837,10 @@ LABEL_109:
                       {
                         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
                       }
-                      AtlasManager__SetEventUI(eventPointBg, (System_String_o *)StringLiteral_23176/*"treasurechest_img_bg_reward"*/, 0LL);
+                      AtlasManager__SetEventUI(eventPointBg, (System_String_o *)StringLiteral_23277/*"treasurechest_img_bg_reward"*/, 0LL);
                       AtlasManager__SetEventUI(
                         this->fields.eventPointRewardBg,
-                        (System_String_o *)StringLiteral_23176/*"treasurechest_img_bg_reward"*/,
+                        (System_String_o *)StringLiteral_23277/*"treasurechest_img_bg_reward"*/,
                         0LL);
                       viewChangeButton = UserEventPointMaster__GetEventPointNoGroup(eventId, 0LL);
                       if ( MasterData_WarQuestSelectionMaster )
@@ -874,8 +874,8 @@ LABEL_109:
                             }
                           }
 LABEL_110:
-                          v112 = sub_B70798(viewChangeButton);
-                          sub_B70738(v112, 0LL);
+                          v112 = sub_B776C8(viewChangeButton);
+                          sub_B77668(v112, 0LL);
                         }
                       }
                     }
@@ -897,7 +897,7 @@ LABEL_110:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v101 = LocalizationManager__Get((System_String_o *)StringLiteral_13625/*"TREASURE_BOX_EVENT_ITEM_LINEUP_DIALOG_TITLE"*/, 0LL);
+    v101 = LocalizationManager__Get((System_String_o *)StringLiteral_13691/*"TREASURE_BOX_EVENT_ITEM_LINEUP_DIALOG_TITLE"*/, 0LL);
     viewChangeButton = (__int64)System_String__Format(v101, (Il2CppObject *)eventItemName, 0LL);
     if ( !v100 )
       goto LABEL_109;
@@ -937,7 +937,7 @@ LABEL_110:
       goto LABEL_109;
     viewChangeButton = (__int64)UnityEngine_Component__GetComponent_WebViewObject_(
                                   (UnityEngine_Component_o *)viewChangeButton,
-                                  (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
+                                  (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
     if ( !viewChangeButton )
       goto LABEL_109;
     v116.fields.z = 0.0;
@@ -961,7 +961,7 @@ LABEL_110:
     UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)viewChangeButton, this->fields.basePos, 0LL);
     viewChangeButton = (__int64)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                   v104,
-                                  (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                                  (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
     if ( !viewChangeButton )
       goto LABEL_109;
     UIWidget__set_height((UIWidget_o *)viewChangeButton, this->fields.height, 0LL);
@@ -982,7 +982,7 @@ LABEL_110:
       goto LABEL_109;
     viewChangeButton = (__int64)UnityEngine_Component__GetComponent_WebViewObject_(
                                   (UnityEngine_Component_o *)viewChangeButton,
-                                  (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                                  (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
     if ( !viewChangeButton )
       goto LABEL_109;
     UIWidget__set_height((UIWidget_o *)viewChangeButton, this->fields.height - 10, 0LL);
@@ -995,7 +995,7 @@ LABEL_110:
       goto LABEL_109;
     viewChangeButton = (__int64)UnityEngine_Component__GetComponent_WebViewObject_(
                                   (UnityEngine_Component_o *)viewChangeButton,
-                                  (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                                  (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
     if ( !viewChangeButton )
       goto LABEL_109;
     UIWidget__set_height((UIWidget_o *)viewChangeButton, this->fields.height, 0LL);
@@ -1005,7 +1005,7 @@ LABEL_103:
   v99 = 0;
 LABEL_104:
   this->fields.closeCallbackFunc = closeCallback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc,
     (System_Int32_array **)closeCallback,
     v52,
@@ -1021,7 +1021,7 @@ LABEL_104:
   if ( v99 )
   {
     iconId = treasureBoxEnt->fields.iconId;
-    v109 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v109 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     System_Action___ctor(
       v109,
       (Il2CppObject *)v14,
@@ -1031,7 +1031,7 @@ LABEL_104:
   }
   else
   {
-    v111 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v111 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     System_Action___ctor(
       v111,
       (Il2CppObject *)v14,
@@ -1068,14 +1068,14 @@ void __fastcall TreasureBoxDialogComponent__SetIcon(
   UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
 
   v6 = this;
-  if ( (byte_4353D75 & 1) == 0 )
+  if ( (byte_438D633 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_UIGrid___);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    this = (TreasureBoxDialogComponent_o *)sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4353D75 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UIGrid___);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    this = (TreasureBoxDialogComponent_o *)sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438D633 = 1;
   }
   if ( pointRewards )
   {
@@ -1115,7 +1115,7 @@ LABEL_12:
   }
   this = (TreasureBoxDialogComponent_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                            prefabResultItem,
-                                           (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                           (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !this )
     goto LABEL_27;
   v15 = (UnityEngine_GameObject_o *)this;
@@ -1137,7 +1137,7 @@ LABEL_12:
   UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v24, 0LL);
   this = (TreasureBoxDialogComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                            v15,
-                                           (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+                                           (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
   if ( !this )
     goto LABEL_27;
   v20 = v11 <= 1 ? -1 : v11;
@@ -1150,14 +1150,14 @@ LABEL_12:
     || (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
           (EventMissionProgressRequest_Argument_ProgressData_o *)v15,
-          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_GameObject__Add__),
+          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_GameObject__Add__),
         (this = (TreasureBoxDialogComponent_o *)v6->fields.listRoot) == 0LL)
     || (this = (TreasureBoxDialogComponent_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UIGrid___)) == 0LL )
+                                                 (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UIGrid___)) == 0LL )
   {
 LABEL_27:
-    sub_B7076C(this, gift);
+    sub_B7769C(this, gift);
   }
   ((void (__fastcall *)(TreasureBoxDialogComponent_o *, void *))this->klass[1]._1.namespaze)(
     this,
@@ -1185,11 +1185,11 @@ void __fastcall TreasureBoxDialogComponent__SetListData(
   __int64 v17; // x0
 
   v6 = this;
-  if ( (byte_4353D74 & 1) == 0 )
+  if ( (byte_438D632 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_GiftMaster___);
-    this = (TreasureBoxDialogComponent_o *)sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4353D74 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_GiftMaster___);
+    this = (TreasureBoxDialogComponent_o *)sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438D632 = 1;
   }
   if ( !giftIds )
   {
@@ -1207,21 +1207,21 @@ void __fastcall TreasureBoxDialogComponent__SetListData(
             goto LABEL_9;
         }
 LABEL_23:
-        v17 = sub_B70798(this);
-        sub_B70738(v17, 0LL);
+        v17 = sub_B776C8(this);
+        sub_B77668(v17, 0LL);
       }
     }
   }
 LABEL_9:
   if ( giftIds && !pointRewards )
   {
-    this = (TreasureBoxDialogComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (TreasureBoxDialogComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !this )
 LABEL_24:
-      sub_B7076C(this, v9);
+      sub_B7769C(this, v9);
     this = (TreasureBoxDialogComponent_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                              (DataManager_o *)this,
-                                             (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_GiftMaster___);
+                                             (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_GiftMaster___);
     v10 = *(_QWORD *)&giftIds->max_length;
     if ( (int)v10 >= 1 )
     {
@@ -1279,15 +1279,15 @@ void __fastcall TreasureBoxDialogComponent__SetNextItemLabel(
   System_String_o *countText; // [xsp+8h] [xbp-38h] BYREF
   System_String_o *nameText; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4353D76 & 1) == 0 )
+  if ( (byte_438D634 & 1) == 0 )
   {
-    sub_B70694(&long_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_2538/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/);
-    sub_B70694(&StringLiteral_2536/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/);
-    sub_B70694(&StringLiteral_2534/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4353D76 = 1;
+    sub_B775C4(&long_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_2584/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/);
+    sub_B775C4(&StringLiteral_2582/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/);
+    sub_B775C4(&StringLiteral_2580/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438D634 = 1;
   }
   nameText = 0LL;
   countText = 0LL;
@@ -1299,12 +1299,12 @@ void __fastcall TreasureBoxDialogComponent__SetNextItemLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    nextItemNameLabel = LocalizationManager__Get((System_String_o *)StringLiteral_2536/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, 0LL);
+    nextItemNameLabel = LocalizationManager__Get((System_String_o *)StringLiteral_2582/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, 0LL);
     if ( atLabel )
     {
       UILabel__set_text(atLabel, nextItemNameLabel, 0LL);
       nextItemLabel = this->fields.nextItemLabel;
-      nextItemNameLabel = LocalizationManager__Get((System_String_o *)StringLiteral_2534/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/, 0LL);
+      nextItemNameLabel = LocalizationManager__Get((System_String_o *)StringLiteral_2580/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/, 0LL);
       if ( nextItemLabel )
       {
         UILabel__set_text(nextItemLabel, nextItemNameLabel, 0LL);
@@ -1318,7 +1318,7 @@ LABEL_18:
       }
     }
 LABEL_22:
-    sub_B7076C(nextItemNameLabel, v12);
+    sub_B7769C(nextItemNameLabel, v12);
   }
   EventRewardEntity__GetInfo(eventRewardEnt, &nameText, &countText, 0LL);
   v7 = this->fields.atLabel;
@@ -1327,7 +1327,7 @@ LABEL_22:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_2538/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_2584/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
   v17 = eventRewardEnt->fields.point - userEventPoint;
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v17, v9);
   nextItemNameLabel = System_String__Format(v8, v10, 0LL);
@@ -1365,21 +1365,21 @@ void __fastcall TreasureBoxDialogComponent__SetPossession(
   UserItemMaster_o *MasterData_WarQuestSelectionMaster; // x21
   UserItemEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4353D79 & 1) == 0 )
+  if ( (byte_438D637 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4353D79 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438D637 = 1;
   }
   entity = 0LL;
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
   entity = 0LL;
   MasterData_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                              (DataManager_o *)Instance,
-                                                             (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                                             (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -1393,7 +1393,7 @@ void __fastcall TreasureBoxDialogComponent__SetPossession(
     return;
   if ( !entity || !item )
 LABEL_13:
-    sub_B7076C(Instance, v7);
+    sub_B7769C(Instance, v7);
   ItemIconComponent__SetPossession(item, entity->fields.num, 0LL);
 }
 
@@ -1432,26 +1432,26 @@ void __fastcall TreasureBoxDialogComponent__SetResultData(
   UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4353D71 & 1) == 0 )
+  if ( (byte_438D62F & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_UIGrid___);
-    sub_B70694(&Method_DataManager_GetMasterData_GiftMaster___);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4353D71 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UIGrid___);
+    sub_B775C4(&Method_DataManager_GetMasterData_GiftMaster___);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438D62F = 1;
   }
   if ( resultIds )
   {
-    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
 LABEL_46:
-      sub_B7076C(Instance, v8);
+      sub_B7769C(Instance, v8);
     Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
                  (DataManager_o *)Instance,
-                 (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_GiftMaster___);
+                 (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_GiftMaster___);
     v9 = *(_QWORD *)&resultIds->max_length;
     if ( (int)v9 >= 1 )
     {
@@ -1489,7 +1489,7 @@ LABEL_43:
         }
         Instance = UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                      (UnityEngine_UI_Dropdown_DropdownItem_o *)prefabResultItem,
-                     (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                     (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
         if ( !Instance )
           goto LABEL_46;
         v16 = (UnityEngine_GameObject_o *)Instance;
@@ -1511,7 +1511,7 @@ LABEL_43:
         UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)Instance, v36, 0LL);
         Instance = UnityEngine_GameObject__GetComponent_srcLineSprite_(
                      v16,
-                     (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+                     (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
         if ( !v15 )
           goto LABEL_46;
         v21 = (ItemIconComponent_o *)Instance;
@@ -1531,7 +1531,7 @@ LABEL_43:
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)Instance,
           (EventMissionProgressRequest_Argument_ProgressData_o *)v16,
-          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_GameObject__Add__);
+          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_GameObject__Add__);
         v25 = this->fields.prefabResultItem;
         if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1540,7 +1540,7 @@ LABEL_43:
         }
         Instance = UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                      (UnityEngine_UI_Dropdown_DropdownItem_o *)v25,
-                     (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                     (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
         if ( !Instance )
           goto LABEL_46;
         v26 = (UnityEngine_GameObject_o *)Instance;
@@ -1567,7 +1567,7 @@ LABEL_43:
         UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)Instance, v37, 0LL);
         Instance = UnityEngine_GameObject__GetComponent_srcLineSprite_(
                      v26,
-                     (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+                     (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
         if ( !Instance )
           goto LABEL_46;
         v31 = (ItemIconComponent_o *)Instance;
@@ -1580,13 +1580,13 @@ LABEL_43:
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)Instance,
           (EventMissionProgressRequest_Argument_ProgressData_o *)v26,
-          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_GameObject__Add__);
+          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_GameObject__Add__);
         Instance = this->fields.listRoot;
         if ( !Instance )
           goto LABEL_46;
         Instance = UnityEngine_Component__GetComponent_WebViewObject_(
                      (UnityEngine_Component_o *)Instance,
-                     (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
+                     (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
         if ( !Instance )
           goto LABEL_46;
         (*(void (__fastcall **)(void *, _QWORD))(*(_QWORD *)Instance + 440LL))(
@@ -1597,7 +1597,7 @@ LABEL_43:
           goto LABEL_46;
         Instance = UnityEngine_Component__GetComponent_WebViewObject_(
                      (UnityEngine_Component_o *)Instance,
-                     (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
+                     (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
         if ( !Instance )
           goto LABEL_46;
         Instance = (void *)(*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)Instance + 440LL))(
@@ -1608,8 +1608,8 @@ LABEL_43:
           goto LABEL_43;
       }
 LABEL_47:
-      v32 = sub_B70798(Instance);
-      sub_B70738(v32, 0LL);
+      v32 = sub_B776C8(Instance);
+      sub_B77668(v32, 0LL);
     }
 LABEL_44:
     ActionExtensions__Call(callBack, 0LL);
@@ -1631,17 +1631,17 @@ System_Collections_IEnumerator_o *__fastcall TreasureBoxDialogComponent__StartDi
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_4353D72 & 1) == 0 )
+  if ( (byte_438D630 & 1) == 0 )
   {
-    sub_B70694(&TreasureBoxDialogComponent__StartDisp_d__62_TypeInfo);
-    byte_4353D72 = 1;
+    sub_B775C4(&TreasureBoxDialogComponent__StartDisp_d__62_TypeInfo);
+    byte_438D630 = 1;
   }
-  v3 = sub_B70764(TreasureBoxDialogComponent__StartDisp_d__62_TypeInfo);
+  v3 = sub_B77694(TreasureBoxDialogComponent__StartDisp_d__62_TypeInfo);
   TreasureBoxDialogComponent__StartDisp_d__62___ctor((TreasureBoxDialogComponent__StartDisp_d__62_o *)v3, 0, 0LL);
   if ( !v3 )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  sub_B77560((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -1667,22 +1667,22 @@ System_Collections_IEnumerator_o *__fastcall TreasureBoxDialogComponent__StartRe
   System_Int32_array *v18; // x6
   System_Int32_array *v19; // x7
 
-  if ( (byte_4353D73 & 1) == 0 )
+  if ( (byte_438D631 & 1) == 0 )
   {
-    sub_B70694(&TreasureBoxDialogComponent__StartRewardAction_d__63_TypeInfo);
-    byte_4353D73 = 1;
+    sub_B775C4(&TreasureBoxDialogComponent__StartRewardAction_d__63_TypeInfo);
+    byte_438D631 = 1;
   }
-  v5 = sub_B70764(TreasureBoxDialogComponent__StartRewardAction_d__63_TypeInfo);
+  v5 = sub_B77694(TreasureBoxDialogComponent__StartRewardAction_d__63_TypeInfo);
   TreasureBoxDialogComponent__StartRewardAction_d__63___ctor(
     (TreasureBoxDialogComponent__StartRewardAction_d__63_o *)v5,
     0,
     0LL);
   if ( !v5 )
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   *(_QWORD *)(v5 + 32) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v5 + 32), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
+  sub_B77560((BattleServantConfConponent_o *)(v5 + 32), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 40) = rewardAction;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)(v5 + 40),
     (System_Int32_array **)rewardAction,
     v14,
@@ -1703,10 +1703,10 @@ UnityEngine_GameObject_o *__fastcall TreasureBoxDialogComponent__get_closeBtnObj
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4353D7A & 1) == 0 )
+  if ( (byte_438D638 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4353D7A = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438D638 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1718,7 +1718,7 @@ UnityEngine_GameObject_o *__fastcall TreasureBoxDialogComponent__get_closeBtnObj
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }
 
@@ -1782,25 +1782,25 @@ bool __fastcall TreasureBoxDialogComponent__StartDisp_d__62__MoveNext(
   System_Collections_Generic_List_Enumerator_T__o v36; // [xsp+8h] [xbp-68h] BYREF
 
   v2 = this;
-  if ( (byte_434F2AE & 1) == 0 )
+  if ( (byte_4388890 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_UIGrid___);
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_UIScrollBar___);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_TreasureBoxDialogComponent_RewardAction__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_B70694(&Method_System_Collections_Generic_List_TreasureBoxDialogComponent_RewardAction___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_List_TreasureBoxDialogComponent_RewardAction__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_B70694(&Method_System_Collections_Generic_List_TreasureBoxDialogComponent_RewardAction__get_Item__);
-    sub_B70694(&System_Collections_Generic_List_TreasureBoxDialogComponent_RewardAction__TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&TreasureBoxDialogComponent_RewardAction_TypeInfo);
-    this = (TreasureBoxDialogComponent__StartDisp_d__62_o *)sub_B70694(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_434F2AE = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UIGrid___);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UIScrollBar___);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_TreasureBoxDialogComponent_RewardAction__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_B775C4(&Method_System_Collections_Generic_List_TreasureBoxDialogComponent_RewardAction___ctor__);
+    sub_B775C4(&Method_System_Collections_Generic_List_TreasureBoxDialogComponent_RewardAction__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_B775C4(&Method_System_Collections_Generic_List_TreasureBoxDialogComponent_RewardAction__get_Item__);
+    sub_B775C4(&System_Collections_Generic_List_TreasureBoxDialogComponent_RewardAction__TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&TreasureBoxDialogComponent_RewardAction_TypeInfo);
+    this = (TreasureBoxDialogComponent__StartDisp_d__62_o *)sub_B775C4(&UnityEngine_WaitForSeconds_TypeInfo);
+    byte_4388890 = 1;
   }
   memset(&v36, 0, sizeof(v36));
   _4__this = v2->fields.__4__this;
@@ -1808,10 +1808,10 @@ bool __fastcall TreasureBoxDialogComponent__StartDisp_d__62__MoveNext(
   {
     case 0:
       v2->fields.__1__state = -1;
-      v4 = (UnityEngine_WaitForSeconds_o *)sub_B70764(UnityEngine_WaitForSeconds_TypeInfo);
+      v4 = (UnityEngine_WaitForSeconds_o *)sub_B77694(UnityEngine_WaitForSeconds_TypeInfo);
       UnityEngine_WaitForSeconds___ctor(v4, 0.3, 0LL);
       v2->fields.__2__current = (Il2CppObject *)v4;
-      sub_B70630(&v2->fields.__2__current);
+      sub_B77560(&v2->fields.__2__current);
       result = 1;
       v2->fields.__1__state = 1;
       return result;
@@ -1835,7 +1835,7 @@ bool __fastcall TreasureBoxDialogComponent__StartDisp_d__62__MoveNext(
         goto LABEL_35;
       this = (TreasureBoxDialogComponent__StartDisp_d__62_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                                 (UnityEngine_Component_o *)this,
-                                                                (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
+                                                                (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
       if ( !this )
         goto LABEL_35;
       _4__this_high = HIDWORD(this->fields.__4__this);
@@ -1846,7 +1846,7 @@ bool __fastcall TreasureBoxDialogComponent__StartDisp_d__62__MoveNext(
         goto LABEL_35;
       this = (TreasureBoxDialogComponent__StartDisp_d__62_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                                 (UnityEngine_Component_o *)this,
-                                                                (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UIScrollBar___);
+                                                                (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UIScrollBar___);
       if ( !this )
         goto LABEL_35;
       v11 = (UIProgressBar_o *)this;
@@ -1854,7 +1854,7 @@ bool __fastcall TreasureBoxDialogComponent__StartDisp_d__62__MoveNext(
       UIProgressBar__set_value(v11, (float)(1.0 / (float)((float)((float)v10 * 0.5) + -1.0)) + value, 0LL);
       v2->fields.__2__current = 0LL;
       p__2__current = &v2->fields.__2__current;
-      sub_B70630(p__2__current);
+      sub_B77560(p__2__current);
       v14 = 4;
       goto LABEL_84;
     case 4:
@@ -1867,14 +1867,14 @@ bool __fastcall TreasureBoxDialogComponent__StartDisp_d__62__MoveNext(
   while ( 1 )
   {
     *p_listRewardAction_5__2 = 0LL;
-    sub_B70630(p_listRewardAction_5__2);
+    sub_B77560(p_listRewardAction_5__2);
 LABEL_18:
-    v15 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_TreasureBoxDialogComponent_RewardAction__TypeInfo);
+    v15 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_TreasureBoxDialogComponent_RewardAction__TypeInfo);
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
       v15,
-      (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_TreasureBoxDialogComponent_RewardAction___ctor__);
+      (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_TreasureBoxDialogComponent_RewardAction___ctor__);
     *p_listRewardAction_5__2 = (TreasureBoxDialogComponent__StartDisp_d__62_o *)v15;
-    sub_B70630(p_listRewardAction_5__2);
+    sub_B77560(p_listRewardAction_5__2);
     if ( !_4__this )
       goto LABEL_35;
     if ( _4__this->fields.maxItemDrawNum >= 1 )
@@ -1882,7 +1882,7 @@ LABEL_18:
       v16 = 0;
       while ( v16 + _4__this->fields.playCnt < _4__this->fields.maxPlayCnt )
       {
-        v17 = sub_B70764(TreasureBoxDialogComponent_RewardAction_TypeInfo);
+        v17 = sub_B77694(TreasureBoxDialogComponent_RewardAction_TypeInfo);
         System_Object___ctor((Il2CppObject *)v17, 0LL);
         if ( !v17 )
           goto LABEL_35;
@@ -1894,7 +1894,7 @@ LABEL_18:
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
           (EventMissionProgressRequest_Argument_ProgressData_o *)v17,
-          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_TreasureBoxDialogComponent_RewardAction__Add__);
+          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_TreasureBoxDialogComponent_RewardAction__Add__);
         if ( ++v16 >= _4__this->fields.maxItemDrawNum )
           break;
       }
@@ -1913,24 +1913,24 @@ LABEL_18:
       if ( (int)v18 >= _2__current )
         break;
       if ( _2__current <= (unsigned int)v18 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       v21 = *(_QWORD *)(*(_QWORD *)&listRewardAction_5__2->fields.__1__state + v19);
       if ( LODWORD(listRewardAction_5__2->fields.__2__current) <= (unsigned int)v18 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       started = TreasureBoxDialogComponent__StartRewardAction(
                   _4__this,
                   *(TreasureBoxDialogComponent_RewardAction_o **)(*(_QWORD *)&listRewardAction_5__2->fields.__1__state
                                                                 + 8 * v18
                                                                 + 32),
                   0LL);
-      this = (TreasureBoxDialogComponent__StartDisp_d__62_o *)UnityEngine_MonoBehaviour__StartCoroutine_36062060(
+      this = (TreasureBoxDialogComponent__StartDisp_d__62_o *)UnityEngine_MonoBehaviour__StartCoroutine_36304832(
                                                                 (UnityEngine_MonoBehaviour_o *)_4__this,
                                                                 started,
                                                                 0LL);
       if ( v21 )
       {
         *(_QWORD *)(v21 + 32) = this;
-        sub_B70630(v21 + 32);
+        sub_B77560(v21 + 32);
         listRewardAction_5__2 = *p_listRewardAction_5__2;
         ++v18;
         v19 += 8LL;
@@ -1942,7 +1942,7 @@ LABEL_18:
 LABEL_36:
     v23 = (int)listRewardAction_5__2->fields.__2__current;
     if ( !v23 )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
     v24 = *(_QWORD *)(*(_QWORD *)&listRewardAction_5__2->fields.__1__state + 8LL * (v23 - 1) + 32);
     if ( !v24 )
       goto LABEL_35;
@@ -1959,7 +1959,7 @@ LABEL_36:
       {
         v2->fields.__2__current = 0LL;
         p__2__current = &v2->fields.__2__current;
-        sub_B70630(p__2__current);
+        sub_B77560(p__2__current);
         v14 = 2;
         goto LABEL_84;
       }
@@ -1972,11 +1972,11 @@ LABEL_36:
     if ( playCnt != 1 && !(playCnt % _4__this->fields.maxItemDrawNum) )
     {
       scrollWait = _4__this->fields.scrollWait;
-      v35 = (UnityEngine_WaitForSeconds_o *)sub_B70764(UnityEngine_WaitForSeconds_TypeInfo);
+      v35 = (UnityEngine_WaitForSeconds_o *)sub_B77694(UnityEngine_WaitForSeconds_TypeInfo);
       UnityEngine_WaitForSeconds___ctor(v35, scrollWait, 0LL);
       v2->fields.__2__current = (Il2CppObject *)v35;
       p__2__current = &v2->fields.__2__current;
-      sub_B70630(p__2__current);
+      sub_B77560(p__2__current);
       v14 = 3;
 LABEL_84:
       *((_DWORD *)p__2__current - 2) = v14;
@@ -1993,11 +1993,11 @@ LABEL_84:
     if ( (int)v27 >= v28 )
       break;
     if ( v28 <= (unsigned int)v27 )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
     v29 = *(_QWORD *)(*(_QWORD *)&v26->fields.__1__state + 8 * v27 + 32);
     if ( v29 )
     {
-      UnityEngine_MonoBehaviour__StopCoroutine_36062728(
+      UnityEngine_MonoBehaviour__StopCoroutine_36305500(
         (UnityEngine_MonoBehaviour_o *)_4__this,
         *(UnityEngine_Coroutine_o **)(v29 + 32),
         0LL);
@@ -2018,7 +2018,7 @@ LABEL_84:
     if ( (int)v31 >= size )
       break;
     if ( size <= (unsigned int)v31 )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
     this = (TreasureBoxDialogComponent__StartDisp_d__62_o *)resultItemObjList->fields._items->m_Items[v31];
     if ( this )
     {
@@ -2036,7 +2036,7 @@ LABEL_84:
     goto LABEL_35;
   this = (TreasureBoxDialogComponent__StartDisp_d__62_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                             (UnityEngine_Component_o *)this,
-                                                            (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UIScrollBar___);
+                                                            (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UIScrollBar___);
   if ( !this )
     goto LABEL_35;
   UIProgressBar__set_value((UIProgressBar_o *)this, 1.0, 0LL);
@@ -2047,15 +2047,15 @@ LABEL_68:
         (this = (TreasureBoxDialogComponent__StartDisp_d__62_o *)_4__this->fields.resultIconHideObjList) == 0LL) )
   {
 LABEL_35:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v36,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)this,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v36,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v36.fields.current;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2070,12 +2070,12 @@ LABEL_35:
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      UnityEngine_Object__Destroy_36067208((UnityEngine_Object_o *)current, 0LL);
+      UnityEngine_Object__Destroy_36309980((UnityEngine_Object_o *)current, 0LL);
     }
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v36,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return 0;
 }
 
@@ -2096,11 +2096,11 @@ void __fastcall __noreturn TreasureBoxDialogComponent__StartDisp_d__62__System_C
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B70698(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B70764(v2);
+  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B70698(&Method_TreasureBoxDialogComponent__StartDisp_d__62_System_Collections_IEnumerator_Reset__);
-  sub_B70738(v3, v4);
+  v4 = sub_B775C8(&Method_TreasureBoxDialogComponent__StartDisp_d__62_System_Collections_IEnumerator_Reset__);
+  sub_B77668(v3, v4);
 }
 
 
@@ -2166,13 +2166,13 @@ bool __fastcall TreasureBoxDialogComponent__StartRewardAction_d__63__MoveNext(
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_434F2AF & 1) == 0 )
+  if ( (byte_4388891 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_B70694(&UnityEngine_WaitForSeconds_TypeInfo);
-    this = (TreasureBoxDialogComponent__StartRewardAction_d__63_o *)sub_B70694(&StringLiteral_18496/*"ef_treasure_drop"*/);
-    byte_434F2AF = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_B775C4(&UnityEngine_WaitForSeconds_TypeInfo);
+    this = (TreasureBoxDialogComponent__StartRewardAction_d__63_o *)sub_B775C4(&StringLiteral_18584/*"ef_treasure_drop"*/);
+    byte_4388891 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -2198,11 +2198,11 @@ bool __fastcall TreasureBoxDialogComponent__StartRewardAction_d__63__MoveNext(
       if ( _1__state < rewardAction->fields.index )
       {
         itemDispWaitTime = _4__this->fields.itemDispWaitTime;
-        v9 = (UnityEngine_WaitForSeconds_o *)sub_B70764(UnityEngine_WaitForSeconds_TypeInfo);
+        v9 = (UnityEngine_WaitForSeconds_o *)sub_B77694(UnityEngine_WaitForSeconds_TypeInfo);
         UnityEngine_WaitForSeconds___ctor(v9, itemDispWaitTime, 0LL);
         v2->fields.__2__current = (Il2CppObject *)v9;
         p__2__current = &v2->fields.__2__current;
-        sub_B70630(p__2__current);
+        sub_B77560(p__2__current);
         result = 1;
         *((_DWORD *)p__2__current - 2) = 1;
         return result;
@@ -2212,7 +2212,7 @@ bool __fastcall TreasureBoxDialogComponent__StartRewardAction_d__63__MoveNext(
       {
         playCnt = rewardAction->fields.playCnt;
         if ( resultItemObjList->fields._size <= (unsigned int)playCnt )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
         this = (TreasureBoxDialogComponent__StartRewardAction_d__63_o *)GameObjectExtensions__GetParent(
                                                                           resultItemObjList->fields._items->m_Items[playCnt],
                                                                           0LL);
@@ -2220,7 +2220,7 @@ bool __fastcall TreasureBoxDialogComponent__StartRewardAction_d__63__MoveNext(
         {
           transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
           this = (TreasureBoxDialogComponent__StartRewardAction_d__63_o *)EventTreasureBoxPanelComponent__getEffect(
-                                                                            (System_String_o *)StringLiteral_18496/*"ef_treasure_drop"*/,
+                                                                            (System_String_o *)StringLiteral_18584/*"ef_treasure_drop"*/,
                                                                             transform,
                                                                             0LL);
           if ( this )
@@ -2238,7 +2238,7 @@ bool __fastcall TreasureBoxDialogComponent__StartRewardAction_d__63__MoveNext(
                 v18 = v16->fields.playCnt;
                 v19 = (UnityEngine_Transform_o *)this;
                 if ( v17->fields._size <= (unsigned int)v18 )
-                  System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+                  System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
                 this = (TreasureBoxDialogComponent__StartRewardAction_d__63_o *)v17->fields._items->m_Items[v18];
                 if ( this )
                 {
@@ -2268,13 +2268,13 @@ bool __fastcall TreasureBoxDialogComponent__StartRewardAction_d__63__MoveNext(
                           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
                             (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
                             (EventMissionProgressRequest_Argument_ProgressData_o *)v15,
-                            (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_GameObject__Add__);
+                            (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_GameObject__Add__);
                           v23 = _4__this->fields.itemDispWaitTime;
-                          v24 = (UnityEngine_WaitForSeconds_o *)sub_B70764(UnityEngine_WaitForSeconds_TypeInfo);
+                          v24 = (UnityEngine_WaitForSeconds_o *)sub_B77694(UnityEngine_WaitForSeconds_TypeInfo);
                           UnityEngine_WaitForSeconds___ctor(v24, v23, 0LL);
                           v2->fields.__2__current = (Il2CppObject *)v24;
                           v25 = &v2->fields.__2__current;
-                          sub_B70630(v25);
+                          sub_B77560(v25);
                           *((_DWORD *)v25 - 2) = 2;
                           return 1;
                         }
@@ -2289,7 +2289,7 @@ bool __fastcall TreasureBoxDialogComponent__StartRewardAction_d__63__MoveNext(
       }
     }
 LABEL_44:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   v2->fields.__1__state = -1;
   if ( !_4__this )
@@ -2309,7 +2309,7 @@ LABEL_44:
       goto LABEL_44;
     v29 = v27->fields.playCnt;
     if ( resultIconHideObjList->fields._size <= (unsigned int)v29 )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
     this = (TreasureBoxDialogComponent__StartRewardAction_d__63_o *)resultIconHideObjList->fields._items->m_Items[v29];
     if ( !this )
       goto LABEL_44;
@@ -2322,7 +2322,7 @@ LABEL_44:
     goto LABEL_44;
   v31 = (*p_rewardAction)->fields.playCnt;
   if ( v30->fields._size <= (unsigned int)v31 )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
   this = (TreasureBoxDialogComponent__StartRewardAction_d__63_o *)v30->fields._items->m_Items[v31];
   if ( !this )
     goto LABEL_44;
@@ -2351,11 +2351,11 @@ void __fastcall __noreturn TreasureBoxDialogComponent__StartRewardAction_d__63__
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B70698(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B70764(v2);
+  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B70698(&Method_TreasureBoxDialogComponent__StartRewardAction_d__63_System_Collections_IEnumerator_Reset__);
-  sub_B70738(v3, v4);
+  v4 = sub_B775C8(&Method_TreasureBoxDialogComponent__StartRewardAction_d__63_System_Collections_IEnumerator_Reset__);
+  sub_B77668(v3, v4);
 }
 
 
@@ -2392,23 +2392,23 @@ void __fastcall TreasureBoxDialogComponent___c__DisplayClass58_0___Open_b__0(
   BaseDialog_o *klass; // x20
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_434F2AB & 1) == 0 )
+  if ( (byte_438888D & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    this = (TreasureBoxDialogComponent___c__DisplayClass58_0_o *)sub_B70694(&Method_TreasureBoxDialogComponent___c__DisplayClass58_0__Open_b__2__);
-    byte_434F2AB = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    this = (TreasureBoxDialogComponent___c__DisplayClass58_0_o *)sub_B775C4(&Method_TreasureBoxDialogComponent___c__DisplayClass58_0__Open_b__2__);
+    byte_438888D = 1;
   }
   monitor = (System_Action_o *)v2[2].monitor;
   klass = (BaseDialog_o *)v2[1].klass;
   if ( !monitor )
   {
-    monitor = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    monitor = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     System_Action___ctor(monitor, v2, Method_TreasureBoxDialogComponent___c__DisplayClass58_0__Open_b__2__, 0LL);
     v2[2].monitor = monitor;
-    sub_B70630(&v2[2].monitor);
+    sub_B77560(&v2[2].monitor);
   }
   if ( !klass )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   BaseDialog__Open(klass, monitor, 0, 0LL);
 }
 
@@ -2419,17 +2419,17 @@ void __fastcall TreasureBoxDialogComponent___c__DisplayClass58_0___Open_b__1(
 {
   TreasureBoxDialogComponent_o *_4__this; // x0
 
-  if ( (byte_434F2AD & 1) == 0 )
+  if ( (byte_438888F & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_AutomatedAction__get_Instance__);
-    byte_434F2AD = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_AutomatedAction__get_Instance__);
+    byte_438888F = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this
     || (TreasureBoxDialogComponent__SetListData(_4__this, this->fields.giftIds, this->fields.pointRewards, 0LL),
-        (_4__this = (TreasureBoxDialogComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_AutomatedAction__get_Instance__)) == 0LL) )
+        (_4__this = (TreasureBoxDialogComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AutomatedAction__get_Instance__)) == 0LL) )
   {
-    sub_B7076C(_4__this, method);
+    sub_B7769C(_4__this, method);
   }
   AutomatedAction__SetBackGroundUntouchable((AutomatedAction_o *)_4__this, 0, 0LL);
 }
@@ -2441,13 +2441,13 @@ void __fastcall TreasureBoxDialogComponent___c__DisplayClass58_0___Open_b__2(
 {
   UnityEngine_MonoBehaviour_o *_4__this; // x0
 
-  if ( (byte_434F2AC & 1) == 0 )
+  if ( (byte_438888E & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_13223/*"StartDisp"*/);
-    byte_434F2AC = 1;
+    sub_B775C4(&StringLiteral_13287/*"StartDisp"*/);
+    byte_438888E = 1;
   }
   _4__this = (UnityEngine_MonoBehaviour_o *)this->fields.__4__this;
   if ( !_4__this )
-    sub_B7076C(0LL, method);
-  UnityEngine_MonoBehaviour__StartCoroutine(_4__this, (System_String_o *)StringLiteral_13223/*"StartDisp"*/, 0LL);
+    sub_B7769C(0LL, method);
+  UnityEngine_MonoBehaviour__StartCoroutine(_4__this, (System_String_o *)StringLiteral_13287/*"StartDisp"*/, 0LL);
 }

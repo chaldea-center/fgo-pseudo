@@ -1,9 +1,9 @@
 void __fastcall CoinBulkSelectDialog___ctor(CoinBulkSelectDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4352001 & 1) == 0 )
+  if ( (byte_438B6C4 & 1) == 0 )
   {
-    sub_B70694(&BaseDialog_TypeInfo);
-    byte_4352001 = 1;
+    sub_B775C4(&BaseDialog_TypeInfo);
+    byte_438B6C4 = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -18,22 +18,22 @@ void __fastcall CoinBulkSelectDialog__Close(
 {
   System_Action_o *v5; // x21
 
-  if ( (byte_4351FFB & 1) == 0 )
+  if ( (byte_438B6BE & 1) == 0 )
   {
-    sub_B70694(&Method_ActionExtensions_Call_int___);
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_CoinBulkSelectDialog_EndClose__);
-    byte_4351FFB = 1;
+    sub_B775C4(&Method_ActionExtensions_Call_int___);
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_CoinBulkSelectDialog_EndClose__);
+    byte_438B6BE = 1;
   }
   this->fields.state = 4;
-  v5 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_CoinBulkSelectDialog_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v5, 0LL);
   if ( action )
     ActionExtensions__Call_int_(
       (System_Action_T__o *)action,
       this->fields.selectNum,
-      (const MethodInfo_2BFC258 *)Method_ActionExtensions_Call_int___);
+      (const MethodInfo_2C3C32C *)Method_ActionExtensions_Call_int___);
 }
 
 
@@ -45,7 +45,7 @@ void __fastcall CoinBulkSelectDialog__EndClose(CoinBulkSelectDialog_o *this, con
   CoinBulkSelectDialog__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
 }
 
@@ -69,11 +69,11 @@ void __fastcall CoinBulkSelectDialog__Init(CoinBulkSelectDialog_o *this, const M
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   this->fields.state = 0;
   this->fields.userSvtCoinEntity = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.userSvtCoinEntity, 0LL, v5, v6, v7, v8, v9, v10);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.userSvtCoinEntity, 0LL, v5, v6, v7, v8, v9, v10);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
 
@@ -96,10 +96,10 @@ void __fastcall CoinBulkSelectDialog__OnClickCancel(CoinBulkSelectDialog_o *this
   UISliderWithButton_o *itemSlider; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4351FFD & 1) == 0 )
+  if ( (byte_438B6C0 & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4351FFD = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438B6C0 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -112,7 +112,7 @@ void __fastcall CoinBulkSelectDialog__OnClickCancel(CoinBulkSelectDialog_o *this
     SoundManager__playSystemSe(1, 0LL);
     itemSlider = this->fields.itemSlider;
     if ( !itemSlider )
-      sub_B7076C(0LL, v3);
+      sub_B7769C(0LL, v3);
     UISliderWithButton__grayMode(itemSlider, 0LL);
     CoinBulkSelectDialog__Close(this, 0LL, v5);
   }
@@ -129,11 +129,11 @@ void __fastcall CoinBulkSelectDialog__OnClickDecide(CoinBulkSelectDialog_o *this
   System_Int32_array *v8; // x7
   System_Action_T1__T2__o *onDecideAction; // x20
 
-  if ( (byte_4351FFC & 1) == 0 )
+  if ( (byte_438B6BF & 1) == 0 )
   {
-    sub_B70694(&Method_System_Action_CoinRoomCoinIconObject__int__Invoke__);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4351FFC = 1;
+    sub_B775C4(&Method_System_Action_CoinRoomCoinIconObject__int__Invoke__);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438B6BF = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -148,12 +148,12 @@ void __fastcall CoinBulkSelectDialog__OnClickDecide(CoinBulkSelectDialog_o *this
     if ( onDecideAction )
     {
       this->fields.onDecideAction = 0LL;
-      sub_B70630((BattleServantConfConponent_o *)&this->fields.onDecideAction, 0LL, v3, v4, v5, v6, v7, v8);
+      sub_B77560((BattleServantConfConponent_o *)&this->fields.onDecideAction, 0LL, v3, v4, v5, v6, v7, v8);
       System_Action_object__int___Invoke(
         onDecideAction,
         (Il2CppObject *)this->fields.iconObject,
         this->fields.selectNum,
-        (const MethodInfo_2659B90 *)Method_System_Action_CoinRoomCoinIconObject__int__Invoke__);
+        (const MethodInfo_26AE2B0 *)Method_System_Action_CoinRoomCoinIconObject__int__Invoke__);
     }
   }
 }
@@ -163,11 +163,11 @@ void __fastcall CoinBulkSelectDialog__OnEnable(CoinBulkSelectDialog_o *this, con
 {
   UnityEngine_Transform_o *transform; // x19
 
-  if ( (byte_4352000 & 1) == 0 )
+  if ( (byte_438B6C3 & 1) == 0 )
   {
-    sub_B70694(&AndroidBackKeyManager_TypeInfo);
-    sub_B70694(&StringLiteral_15698/*"Window/CancelButton"*/);
-    byte_4352000 = 1;
+    sub_B775C4(&AndroidBackKeyManager_TypeInfo);
+    sub_B775C4(&StringLiteral_15768/*"Window/CancelButton"*/);
+    byte_438B6C3 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( (BYTE3(AndroidBackKeyManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -175,7 +175,7 @@ void __fastcall CoinBulkSelectDialog__OnEnable(CoinBulkSelectDialog_o *this, con
   {
     j_il2cpp_runtime_class_init_0(AndroidBackKeyManager_TypeInfo);
   }
-  AndroidBackKeyManager__AddBackBtn_21318328(transform, (System_String_o *)StringLiteral_15698/*"Window/CancelButton"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_23834620(transform, (System_String_o *)StringLiteral_15768/*"Window/CancelButton"*/, 0LL);
 }
 
 
@@ -228,32 +228,32 @@ void __fastcall CoinBulkSelectDialog__Open(
   const MethodInfo *v48; // x0
   UserServantCollectionEntity_o *entitya; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4351FFA & 1) == 0 )
+  if ( (byte_438B6BD & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_CoinBulkSelectDialog_EndOpen__);
-    sub_B70694(&CoinRoomCoinIconItem_TypeInfo);
-    sub_B70694(&CoinRoomUtility_TypeInfo);
-    sub_B70694(&Method_UnityEngine_Component_GetComponentInChildren_CoinRoomCoinIconDraw___);
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_BoxCollider___);
-    sub_B70694(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_B70694(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&System_Math_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&StringLiteral_3218/*"COIN_ROOM_SELECT_LIST_SUB_TITLE"*/);
-    sub_B70694(&StringLiteral_3215/*"COIN_ROOM_SELECT_DIALOD_SELECTED_ITEM_NAME"*/);
-    sub_B70694(&StringLiteral_3216/*"COIN_ROOM_SELECT_DIALOD_SELECT_INFO_TXET"*/);
-    byte_4351FFA = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_CoinBulkSelectDialog_EndOpen__);
+    sub_B775C4(&CoinRoomCoinIconItem_TypeInfo);
+    sub_B775C4(&CoinRoomUtility_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponentInChildren_CoinRoomCoinIconDraw___);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_BoxCollider___);
+    sub_B775C4(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    sub_B775C4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&System_Math_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&StringLiteral_3269/*"COIN_ROOM_SELECT_LIST_SUB_TITLE"*/);
+    sub_B775C4(&StringLiteral_3266/*"COIN_ROOM_SELECT_DIALOD_SELECTED_ITEM_NAME"*/);
+    sub_B775C4(&StringLiteral_3267/*"COIN_ROOM_SELECT_DIALOD_SELECT_INFO_TXET"*/);
+    byte_438B6BD = 1;
   }
   entitya = 0LL;
   if ( !this->fields.state )
   {
     this->fields.onDecideAction = onDecideAction;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.onDecideAction,
       (System_Int32_array **)onDecideAction,
       (System_String_array **)iconObject,
@@ -264,7 +264,7 @@ void __fastcall CoinBulkSelectDialog__Open(
       v7);
     this->fields.userSvtCoinEntity = entity;
     p_userSvtCoinEntity = &this->fields.userSvtCoinEntity;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.userSvtCoinEntity,
       (System_Int32_array **)entity,
       v14,
@@ -279,7 +279,7 @@ void __fastcall CoinBulkSelectDialog__Open(
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
     this->fields.iconObject = iconObject;
     this->fields.isOpen = 0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.iconObject,
       (System_Int32_array **)iconObject,
       v22,
@@ -296,12 +296,12 @@ void __fastcall CoinBulkSelectDialog__Open(
            *(&linkItem->klass->_2.bitflags2 + 1) < (unsigned int)v29)
        || (CoinRoomCoinIconItem_c *)linkItem->klass->_2.typeHierarchy[v29 - 1] != CoinRoomCoinIconItem_TypeInfo) )
     {
-      v48 = (const MethodInfo *)sub_B70A60(iconObject->fields.linkItem);
+      v48 = (const MethodInfo *)sub_B77990(iconObject->fields.linkItem);
       CoinRoomUtility__MaxPoint(v48);
     }
     else
     {
-      Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       this->fields.selectNum = 1;
       v31 = (DataManager_o *)Instance;
       if ( (BYTE3(CoinRoomUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -316,12 +316,12 @@ void __fastcall CoinBulkSelectDialog__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      gameObject = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3218/*"COIN_ROOM_SELECT_LIST_SUB_TITLE"*/, 0LL);
+      gameObject = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3269/*"COIN_ROOM_SELECT_LIST_SUB_TITLE"*/, 0LL);
       if ( !subTitleLabel )
         goto LABEL_57;
       UILabel__set_text(subTitleLabel, (System_String_o *)gameObject, 0LL);
       selectInfoLabel = this->fields.selectInfoLabel;
-      gameObject = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3216/*"COIN_ROOM_SELECT_DIALOD_SELECT_INFO_TXET"*/, 0LL);
+      gameObject = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3267/*"COIN_ROOM_SELECT_DIALOD_SELECT_INFO_TXET"*/, 0LL);
       if ( !selectInfoLabel )
         goto LABEL_57;
       UILabel__set_text(selectInfoLabel, (System_String_o *)gameObject, 0LL);
@@ -330,7 +330,7 @@ void __fastcall CoinBulkSelectDialog__Open(
         goto LABEL_57;
       gameObject = (int64_t)UnityEngine_Component__GetComponentInChildren_UIWidget_(
                               (UnityEngine_Component_o *)gameObject,
-                              (const MethodInfo_1BE40A0 *)Method_UnityEngine_Component_GetComponentInChildren_CoinRoomCoinIconDraw___);
+                              (const MethodInfo_1C6D75C *)Method_UnityEngine_Component_GetComponentInChildren_CoinRoomCoinIconDraw___);
       if ( !gameObject )
         goto LABEL_57;
       CoinRoomCoinIconDraw__SetItem((CoinRoomCoinIconDraw_o *)gameObject, linkItem, 1, 1, v34);
@@ -339,7 +339,7 @@ void __fastcall CoinBulkSelectDialog__Open(
         goto LABEL_57;
       gameObject = (int64_t)UnityEngine_Component__GetComponent_WebViewObject_(
                               (UnityEngine_Component_o *)gameObject,
-                              (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
+                              (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
       if ( !gameObject )
         goto LABEL_57;
       UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)gameObject, 0, 0LL);
@@ -353,16 +353,16 @@ void __fastcall CoinBulkSelectDialog__Open(
         goto LABEL_57;
       gameObject = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
                               v31,
-                              (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                              (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantMaster___);
       if ( !gameObject )
         goto LABEL_57;
       v35 = (ServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                  (DataMasterBase_WarMaster__WarEntity__int__o *)gameObject,
                                  entity->fields.svtId,
-                                 (const MethodInfo_21C0440 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                 (const MethodInfo_21FB894 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
       MasterData_WarQuestSelectionMaster = (UserServantCollectionMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                               v31,
-                                                                              (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                                                                              (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
       if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !NetworkManager_TypeInfo->_2.cctor_finished )
       {
@@ -381,7 +381,7 @@ void __fastcall CoinBulkSelectDialog__Open(
       {
         gameObject = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 v31,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
         if ( !entitya )
           goto LABEL_57;
         if ( !gameObject )
@@ -409,7 +409,7 @@ void __fastcall CoinBulkSelectDialog__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3215/*"COIN_ROOM_SELECT_DIALOD_SELECTED_ITEM_NAME"*/, 0LL);
+      v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3266/*"COIN_ROOM_SELECT_DIALOD_SELECTED_ITEM_NAME"*/, 0LL);
       itemName = this->fields.itemName;
       gameObject = (int64_t)System_String__Format(v38, Name, 0LL);
       if ( !itemName )
@@ -435,21 +435,21 @@ void __fastcall CoinBulkSelectDialog__Open(
       {
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
       }
-      gameObject = System_Math__Min_45556056(maxPoint - currentPoint, num, 0LL);
+      gameObject = System_Math__Min_45806124(maxPoint - currentPoint, num, 0LL);
       if ( !this->fields.itemSlider
         || (v46 = gameObject,
             UISliderWithButton__init(this->fields.itemSlider, gameObject, 0, 1, 0LL),
             (gameObject = (int64_t)this->fields.itemSlider) == 0) )
       {
 LABEL_57:
-        sub_B7076C(gameObject, v21);
+        sub_B7769C(gameObject, v21);
       }
       if ( v46 >= 2 )
         UISliderWithButton__normalMode((UISliderWithButton_o *)gameObject, 0LL);
       else
         UISliderWithButton__grayMode((UISliderWithButton_o *)gameObject, 0LL);
       this->fields.state = 1;
-      v47 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+      v47 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
       System_Action___ctor(v47, (Il2CppObject *)this, Method_CoinBulkSelectDialog_EndOpen__, 0LL);
       BaseDialog__Open((BaseDialog_o *)this, v47, 0, 0LL);
       this->fields.isOpen = 1;
@@ -471,14 +471,14 @@ void __fastcall CoinBulkSelectDialog__SliderValueChange(CoinBulkSelectDialog_o *
   int32_t v11; // w8
   int32_t v12; // w2
 
-  if ( (byte_4351FFE & 1) == 0 )
+  if ( (byte_438B6C1 & 1) == 0 )
   {
-    sub_B70694(&CoinRoomUtility_TypeInfo);
-    byte_4351FFE = 1;
+    sub_B775C4(&CoinRoomUtility_TypeInfo);
+    byte_438B6C1 = 1;
   }
   itemSlider = this->fields.itemSlider;
   if ( !itemSlider )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   v4 = UISliderWithButton__sliderValueChange(itemSlider, 0LL);
   if ( this->fields.isOpen )
   {
@@ -523,20 +523,20 @@ void __fastcall CoinBulkSelectDialog__UpdateCountValue(
   int32_t v18; // [xsp+8h] [xbp-38h] BYREF
   int v19; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4351FFF & 1) == 0 )
+  if ( (byte_438B6C2 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_3214/*"COIN_ROOM_SELECT_DIALOD_SELECTED_ITEM_COUNT"*/);
-    sub_B70694(&StringLiteral_3213/*"COIN_ROOM_SELECT_DIALOD_REMAINING_TEXT"*/);
-    byte_4351FFF = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_3265/*"COIN_ROOM_SELECT_DIALOD_SELECTED_ITEM_COUNT"*/);
+    sub_B775C4(&StringLiteral_3264/*"COIN_ROOM_SELECT_DIALOD_REMAINING_TEXT"*/);
+    byte_438B6C2 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3213/*"COIN_ROOM_SELECT_DIALOD_REMAINING_TEXT"*/, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3264/*"COIN_ROOM_SELECT_DIALOD_REMAINING_TEXT"*/, 0LL);
   remainingLabel = this->fields.remainingLabel;
   v9 = v7;
   v19 = this->fields.maxPoint - point;
@@ -544,14 +544,14 @@ void __fastcall CoinBulkSelectDialog__UpdateCountValue(
   v12 = System_String__Format(v9, v11, 0LL);
   if ( !remainingLabel
     || (UILabel__set_text(remainingLabel, v12, 0LL),
-        v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3214/*"COIN_ROOM_SELECT_DIALOD_SELECTED_ITEM_COUNT"*/, 0LL),
+        v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3265/*"COIN_ROOM_SELECT_DIALOD_SELECTED_ITEM_COUNT"*/, 0LL),
         itemCount = this->fields.itemCount,
         v18 = count,
         v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v18, v16),
         v12 = System_String__Format(v14, v17, 0LL),
         !itemCount) )
   {
-    sub_B7076C(v12, v13);
+    sub_B7769C(v12, v13);
   }
   UILabel__set_text(itemCount, v12, 0LL);
 }

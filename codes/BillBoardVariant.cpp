@@ -8,15 +8,15 @@ void __fastcall BillBoardVariant___ctor(BillBoardVariant_o *this, const MethodIn
   System_Int32_array *v7; // x7
   System_Int32_array **v9; // x1
 
-  if ( (byte_43512DA & 1) == 0 )
+  if ( (byte_438A955 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43512DA = 1;
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438A955 = 1;
   }
   this->fields.enableRotationY = 1;
   v9 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.searchCameraName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.searchCameraName, v9, v2, v3, v4, v5, v6, v7);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.searchCameraName, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -48,11 +48,11 @@ void __fastcall BillBoardVariant__Start(BillBoardVariant_o *this, const MethodIn
   struct UnityEngine_Camera_o *v19; // x22
   __int64 v20; // x0
 
-  if ( (byte_43512D8 & 1) == 0 )
+  if ( (byte_438A953 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Object_FindObjectsOfType_Camera___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43512D8 = 1;
+    sub_B775C4(&Method_UnityEngine_Object_FindObjectsOfType_Camera___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438A953 = 1;
   }
   p_targetCamera = &this->fields.targetCamera;
   targetCamera = (UnityEngine_Object_o *)this->fields.targetCamera;
@@ -69,7 +69,7 @@ void __fastcall BillBoardVariant__Start(BillBoardVariant_o *this, const MethodIn
       *p_targetCamera = (struct UnityEngine_Camera_o *)main;
       v12 = &this->fields.targetCamera;
 LABEL_22:
-      sub_B70630((BattleServantConfConponent_o *)v12, main, v6, v7, v8, v9, v10, v11);
+      sub_B77560((BattleServantConfConponent_o *)v12, main, v6, v7, v8, v9, v10, v11);
       goto LABEL_23;
     }
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -77,10 +77,10 @@ LABEL_22:
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    ObjectsOfType_object = UnityEngine_Object__FindObjectsOfType_object_((const MethodInfo_1D585D8 *)Method_UnityEngine_Object_FindObjectsOfType_Camera___);
+    ObjectsOfType_object = UnityEngine_Object__FindObjectsOfType_object_((const MethodInfo_1DF9774 *)Method_UnityEngine_Object_FindObjectsOfType_Camera___);
     if ( !ObjectsOfType_object )
 LABEL_24:
-      sub_B7076C(ObjectsOfType_object, v14);
+      sub_B7769C(ObjectsOfType_object, v14);
     v15 = *((_DWORD *)ObjectsOfType_object + 6);
     v16 = ObjectsOfType_object;
     if ( v15 >= 1 )
@@ -90,8 +90,8 @@ LABEL_24:
       {
         if ( v17 >= v15 )
         {
-          v20 = sub_B70798(ObjectsOfType_object);
-          sub_B70738(v20, 0LL);
+          v20 = sub_B776C8(ObjectsOfType_object);
+          sub_B77668(v20, 0LL);
         }
         v18 = (char *)&v16[2 * v17];
         v19 = (struct UnityEngine_Camera_o *)*((_QWORD *)v18 + 4);
@@ -100,7 +100,7 @@ LABEL_24:
         ObjectsOfType_object = UnityEngine_Object__get_name(*((UnityEngine_Object_o **)v18 + 4), 0LL);
         if ( !ObjectsOfType_object )
           goto LABEL_24;
-        ObjectsOfType_object = (void *)System_String__Equals_44745508(
+        ObjectsOfType_object = (void *)System_String__Equals_44889276(
                                          (System_String_o *)ObjectsOfType_object,
                                          this->fields.searchCameraName,
                                          0LL);
@@ -141,10 +141,10 @@ void __fastcall BillBoardVariant__UpdateBillboard(BillBoardVariant_o *this, cons
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_43512D9 & 1) == 0 )
+  if ( (byte_438A954 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43512D9 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438A954 = 1;
   }
   targetCamera = (UnityEngine_Object_o *)this->fields.targetCamera;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -213,15 +213,15 @@ LABEL_23:
           v19.fields.x = x;
           v19.fields.y = y;
           v19.fields.z = z;
-          UnityEngine_Transform__LookAt_36190480(v9, v19, 0LL);
+          UnityEngine_Transform__LookAt_36433252(v9, v19, 0LL);
           if ( this->fields.enableRotationZ )
-            UnityEngine_Transform__Rotate_36189396(v9, 0.0, 0.0, v10, 0LL);
+            UnityEngine_Transform__Rotate_36432168(v9, 0.0, 0.0, v10, 0LL);
           return;
         }
       }
     }
 LABEL_26:
-    sub_B7076C(transform, v4);
+    sub_B7769C(transform, v4);
   }
 }
 
@@ -238,7 +238,7 @@ void __fastcall BillBoardVariant__setCamera(
   System_Int32_array *v7; // x7
 
   this->fields.targetCamera = wkcamera;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.targetCamera,
     (System_Int32_array **)wkcamera,
     (System_String_array **)method,

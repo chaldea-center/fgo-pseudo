@@ -1,14 +1,14 @@
 void __fastcall RecoverMaster___ctor(RecoverMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4355894 & 1) == 0 )
+  if ( (byte_438EF0C & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_RecoverMaster__RecoverEntity__int___ctor__);
-    byte_4355894 = 1;
+    sub_B775C4(&Method_DataMasterBase_RecoverMaster__RecoverEntity__int___ctor__);
+    byte_438EF0C = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     117,
-    (const MethodInfo_21C03A4 *)Method_DataMasterBase_RecoverMaster__RecoverEntity__int___ctor__);
+    (const MethodInfo_21FB7F8 *)Method_DataMasterBase_RecoverMaster__RecoverEntity__int___ctor__);
 }
 
 
@@ -33,32 +33,32 @@ System_Collections_Generic_List_RecoverEntity__o *__fastcall RecoverMaster__getR
   System_Int32_array *v18; // x6
   System_Int32_array *v19; // x7
 
-  if ( (byte_4355895 & 1) == 0 )
+  if ( (byte_438EF0D & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&Method_System_Comparison_RecoverEntity___ctor__);
-    sub_B70694(&System_Comparison_RecoverEntity__TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_RecoverEntity__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_RecoverEntity__Sort__);
-    sub_B70694(&Method_System_Collections_Generic_List_RecoverEntity___ctor__);
-    sub_B70694(&System_Collections_Generic_List_RecoverEntity__TypeInfo);
-    sub_B70694(&RecoverEntity_TypeInfo);
-    sub_B70694(&Method_RecoverMaster___c__getRecvEntityList_b__1_0__);
-    sub_B70694(&RecoverMaster___c_TypeInfo);
-    byte_4355895 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&Method_System_Comparison_RecoverEntity___ctor__);
+    sub_B775C4(&System_Comparison_RecoverEntity__TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_RecoverEntity__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_RecoverEntity__Sort__);
+    sub_B775C4(&Method_System_Collections_Generic_List_RecoverEntity___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_RecoverEntity__TypeInfo);
+    sub_B775C4(&RecoverEntity_TypeInfo);
+    sub_B775C4(&Method_RecoverMaster___c__getRecvEntityList_b__1_0__);
+    sub_B775C4(&RecoverMaster___c_TypeInfo);
+    byte_438EF0D = 1;
   }
-  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_RecoverEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_RecoverEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v5,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_RecoverEntity___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_RecoverEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_29;
   v8 = 0;
   while ( v8 < System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
                  (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
-                 (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
+                 (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
   {
     list = this->fields.list;
     if ( !list )
@@ -66,7 +66,7 @@ System_Collections_Generic_List_RecoverEntity__o *__fastcall RecoverMaster__getR
     list = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
              (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
              v8,
-             (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+             (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
     if ( list
       && (v9 = *(&RecoverEntity_TypeInfo->_2.bitflags2 + 1),
           *(unsigned __int8 *)(*(_QWORD *)list + 300LL) >= (unsigned int)v9) )
@@ -84,7 +84,7 @@ LABEL_10:
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
             v5,
             v6,
-            (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_RecoverEntity__Add__);
+            (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_RecoverEntity__Add__);
       }
     }
     else
@@ -115,15 +115,15 @@ LABEL_10:
       static_fields = RecoverMaster___c_TypeInfo->static_fields;
     }
     v12 = (Il2CppObject *)static_fields->__9;
-    _9__1_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B70764(System_Comparison_RecoverEntity__TypeInfo);
+    _9__1_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B77694(System_Comparison_RecoverEntity__TypeInfo);
     System_Comparison_TitleInfoControl_EventEndTimeInfo____ctor(
       _9__1_0,
       v12,
       Method_RecoverMaster___c__getRecvEntityList_b__1_0__,
-      (const MethodInfo_2B05B38 *)Method_System_Comparison_RecoverEntity___ctor__);
+      (const MethodInfo_2B42C0C *)Method_System_Comparison_RecoverEntity___ctor__);
     v13 = RecoverMaster___c_TypeInfo->static_fields;
     v13->__9__1_0 = (struct System_Comparison_RecoverEntity__o *)_9__1_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v13->__9__1_0,
       (System_Int32_array **)_9__1_0,
       v14,
@@ -135,11 +135,11 @@ LABEL_10:
   }
   if ( !v5 )
 LABEL_29:
-    sub_B7076C(list, v6);
+    sub_B7769C(list, v6);
   System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo___Sort(
     (System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__o *)v5,
     (System_Comparison_T__o *)_9__1_0,
-    (const MethodInfo_3027764 *)Method_System_Collections_Generic_List_RecoverEntity__Sort__);
+    (const MethodInfo_3055374 *)Method_System_Collections_Generic_List_RecoverEntity__Sort__);
   return (System_Collections_Generic_List_RecoverEntity__o *)v5;
 }
 
@@ -149,16 +149,16 @@ void __fastcall RecoverMaster___c___cctor(const MethodInfo *method)
   Il2CppObject *v1; // x19
   struct RecoverMaster___c_StaticFields *static_fields; // x0
 
-  if ( (byte_434F432 & 1) == 0 )
+  if ( (byte_4388A14 & 1) == 0 )
   {
-    sub_B70694(&RecoverMaster___c_TypeInfo);
-    byte_434F432 = 1;
+    sub_B775C4(&RecoverMaster___c_TypeInfo);
+    byte_4388A14 = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(RecoverMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(RecoverMaster___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = RecoverMaster___c_TypeInfo->static_fields;
   static_fields->__9 = (struct RecoverMaster___c_o *)v1;
-  sub_B70630(static_fields);
+  sub_B77560(static_fields);
 }
 
 
@@ -175,6 +175,6 @@ int32_t __fastcall RecoverMaster___c___getRecvEntityList_b__1_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_B7076C(this, a);
+    sub_B7769C(this, a);
   return b->fields.priority - a->fields.priority;
 }

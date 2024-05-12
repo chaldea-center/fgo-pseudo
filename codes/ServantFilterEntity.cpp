@@ -1,13 +1,13 @@
 void __fastcall ServantFilterEntity___ctor(ServantFilterEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4353BF0 & 1) == 0 )
+  if ( (byte_438D4AE & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_int___ctor__);
-    byte_4353BF0 = 1;
+    sub_B775C4(&Method_DataEntityBase_int___ctor__);
+    byte_438D4AE = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,10 +19,10 @@ int32_t __fastcall ServantFilterEntity__CreatePrimaryKey(ServantFilterEntity_o *
 
 bool __fastcall ServantFilterEntity__IsEnable(ServantFilterEntity_o *this, int64_t nowTime, const MethodInfo *method)
 {
-  if ( (byte_4353BEE & 1) == 0 )
+  if ( (byte_438D4AC & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4353BEE = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_438D4AC = 1;
   }
   if ( !nowTime )
   {
@@ -62,10 +62,10 @@ bool __fastcall ServantFilterEntity__IsEnableServant(
   v3 = *(_QWORD *)&svtId.fields.fakeValue;
   v4 = *(_QWORD *)&svtId.fields.currentCryptoKey;
   v5 = this;
-  if ( (byte_4353BEF & 1) == 0 )
+  if ( (byte_438D4AD & 1) == 0 )
   {
-    this = (ServantFilterEntity_o *)sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4353BEF = 1;
+    this = (ServantFilterEntity_o *)sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_438D4AD = 1;
   }
   svtIds = v5->fields.svtIds;
   if ( !svtIds )
@@ -80,8 +80,8 @@ bool __fastcall ServantFilterEntity__IsEnableServant(
   {
     if ( v9 >= svtIds->max_length )
     {
-      v17 = sub_B70798(this);
-      sub_B70738(v17, 0LL);
+      v17 = sub_B776C8(this);
+      sub_B77668(v17, 0LL);
     }
     v11 = (char *)svtIds + v8;
     v13 = *((_QWORD *)v11 + 4);
@@ -93,10 +93,10 @@ bool __fastcall ServantFilterEntity__IsEnableServant(
     }
     *(_QWORD *)&v18.fields.currentCryptoKey = v13;
     *(_QWORD *)&v18.fields.fakeValue = v12;
-    v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v18, 0LL);
+    v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v18, 0LL);
     *(_QWORD *)&v19.fields.currentCryptoKey = v4;
     *(_QWORD *)&v19.fields.fakeValue = v3;
-    this = (ServantFilterEntity_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v19, 0LL);
+    this = (ServantFilterEntity_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v19, 0LL);
     if ( v14 == (_DWORD)this )
       break;
     if ( (__int64)++v9 >= v10 )
@@ -104,7 +104,7 @@ bool __fastcall ServantFilterEntity__IsEnableServant(
     svtIds = v5->fields.svtIds;
     v8 += 16LL;
     if ( !svtIds )
-      sub_B7076C(this, v15);
+      sub_B7769C(this, v15);
   }
   return 1;
 }

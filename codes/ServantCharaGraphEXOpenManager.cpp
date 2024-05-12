@@ -17,25 +17,25 @@ void __fastcall ServantCharaGraphEXOpenManager___cctor(const MethodInfo *method)
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
 
-  if ( (byte_4352D1F & 1) == 0 )
+  if ( (byte_438C578 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__List_int____ctor__);
-    sub_B70694(&System_Collections_Generic_Dictionary_int__List_int___TypeInfo);
-    sub_B70694(&ServantCharaGraphEXOpenManager_TypeInfo);
-    sub_B70694(&StringLiteral_6715/*"Fgo_20210622"*/);
-    byte_4352D1F = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__List_int____ctor__);
+    sub_B775C4(&System_Collections_Generic_Dictionary_int__List_int___TypeInfo);
+    sub_B775C4(&ServantCharaGraphEXOpenManager_TypeInfo);
+    sub_B775C4(&StringLiteral_6771/*"Fgo_20210622"*/);
+    byte_438C578 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)ServantCharaGraphEXOpenManager_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_6715/*"Fgo_20210622"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6715/*"Fgo_20210622"*/;
-  sub_B70630(static_fields, v8, v1, v2, v3, v4, v5, v6);
-  v9 = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)sub_B70764(System_Collections_Generic_Dictionary_int__List_int___TypeInfo);
+  v8 = (System_Int32_array **)StringLiteral_6771/*"Fgo_20210622"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6771/*"Fgo_20210622"*/;
+  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
+  v9 = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)sub_B77694(System_Collections_Generic_Dictionary_int__List_int___TypeInfo);
   System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare____ctor(
     v9,
-    (const MethodInfo_2FC59B4 *)Method_System_Collections_Generic_Dictionary_int__List_int____ctor__);
+    (const MethodInfo_2FF35C4 *)Method_System_Collections_Generic_Dictionary_int__List_int____ctor__);
   v10 = ServantCharaGraphEXOpenManager_TypeInfo->static_fields;
   v10->svtCharaGraphEXOpenDict = (struct System_Collections_Generic_Dictionary_int__List_int___o *)v9;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v10->svtCharaGraphEXOpenDict,
     (System_Int32_array **)v9,
     v11,
@@ -59,11 +59,11 @@ void __fastcall ServantCharaGraphEXOpenManager__ClearSaveDataList(const MethodIn
   ServantCharaGraphEXOpenManager_c *v2; // x0
   System_Collections_Generic_Dictionary_int__WarBoardAIRoute_PiecePersonality__o *svtCharaGraphEXOpenDict; // x0
 
-  if ( (byte_4352D1A & 1) == 0 )
+  if ( (byte_438C573 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__List_int___Clear__);
-    sub_B70694(&ServantCharaGraphEXOpenManager_TypeInfo);
-    byte_4352D1A = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__List_int___Clear__);
+    sub_B775C4(&ServantCharaGraphEXOpenManager_TypeInfo);
+    byte_438C573 = 1;
   }
   v2 = ServantCharaGraphEXOpenManager_TypeInfo;
   if ( (BYTE3(ServantCharaGraphEXOpenManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -74,10 +74,10 @@ void __fastcall ServantCharaGraphEXOpenManager__ClearSaveDataList(const MethodIn
   }
   svtCharaGraphEXOpenDict = (System_Collections_Generic_Dictionary_int__WarBoardAIRoute_PiecePersonality__o *)v2->static_fields->svtCharaGraphEXOpenDict;
   if ( !svtCharaGraphEXOpenDict )
-    sub_B7076C(0LL, v1);
+    sub_B7769C(0LL, v1);
   System_Collections_Generic_Dictionary_int__WarBoardAIRoute_PiecePersonality___Clear(
     svtCharaGraphEXOpenDict,
-    (const MethodInfo_2FC6744 *)Method_System_Collections_Generic_Dictionary_int__List_int___Clear__);
+    (const MethodInfo_2FF4354 *)Method_System_Collections_Generic_Dictionary_int__List_int___Clear__);
 }
 
 
@@ -86,10 +86,10 @@ void __fastcall ServantCharaGraphEXOpenManager__DeleteSaveData(const MethodInfo 
   ServantCharaGraphEXOpenManager_c *v1; // x0
   System_String_o *SaveFileName; // x19
 
-  if ( (byte_4352D18 & 1) == 0 )
+  if ( (byte_438C571 & 1) == 0 )
   {
-    sub_B70694(&ServantCharaGraphEXOpenManager_TypeInfo);
-    byte_4352D18 = 1;
+    sub_B775C4(&ServantCharaGraphEXOpenManager_TypeInfo);
+    byte_438C571 = 1;
   }
   v1 = ServantCharaGraphEXOpenManager_TypeInfo;
   if ( (BYTE3(ServantCharaGraphEXOpenManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -108,12 +108,12 @@ System_String_o *__fastcall ServantCharaGraphEXOpenManager__GetSaveFileName(cons
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4352D17 & 1) == 0 )
+  if ( (byte_438C570 & 1) == 0 )
   {
-    sub_B70694(&AndroidUtil_TypeInfo);
-    sub_B70694(&DatFileName_TypeInfo);
-    sub_B70694(&StringLiteral_890/*"/"*/);
-    byte_4352D17 = 1;
+    sub_B775C4(&AndroidUtil_TypeInfo);
+    sub_B775C4(&DatFileName_TypeInfo);
+    sub_B775C4(&StringLiteral_892/*"/"*/);
+    byte_438C570 = 1;
   }
   if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -121,7 +121,7 @@ System_String_o *__fastcall ServantCharaGraphEXOpenManager__GetSaveFileName(cons
   if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(32, 0LL);
-  return System_String__Concat_44760452(DatFileSavePath, (System_String_o *)StringLiteral_890/*"/"*/, FileName, 0LL);
+  return System_String__Concat_44904220(DatFileSavePath, (System_String_o *)StringLiteral_892/*"/"*/, FileName, 0LL);
 }
 
 
@@ -129,10 +129,10 @@ void __fastcall ServantCharaGraphEXOpenManager__Initialize(const MethodInfo *met
 {
   ServantCharaGraphEXOpenManager_c *v1; // x0
 
-  if ( (byte_4352D19 & 1) == 0 )
+  if ( (byte_438C572 & 1) == 0 )
   {
-    sub_B70694(&ServantCharaGraphEXOpenManager_TypeInfo);
-    byte_4352D19 = 1;
+    sub_B775C4(&ServantCharaGraphEXOpenManager_TypeInfo);
+    byte_438C572 = 1;
   }
   v1 = ServantCharaGraphEXOpenManager_TypeInfo;
   if ( (BYTE3(ServantCharaGraphEXOpenManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -156,13 +156,13 @@ bool __fastcall ServantCharaGraphEXOpenManager__IsCharaGraphEXOpen(
   ServantCharaGraphEXOpenManager_c *v8; // x0
   WarBoardEvalValueSquare_CalcEval_o *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4352D1D & 1) == 0 )
+  if ( (byte_438C576 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__List_int___TryGetValue__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__List_int___get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_B70694(&ServantCharaGraphEXOpenManager_TypeInfo);
-    byte_4352D1D = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__List_int___TryGetValue__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__List_int___get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_B775C4(&ServantCharaGraphEXOpenManager_TypeInfo);
+    byte_438C576 = 1;
   }
   value = 0LL;
   v5 = ServantCharaGraphEXOpenManager_TypeInfo;
@@ -177,7 +177,7 @@ bool __fastcall ServantCharaGraphEXOpenManager__IsCharaGraphEXOpen(
     goto LABEL_21;
   if ( !System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___get_Count(
           (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)svtCharaGraphEXOpenDict,
-          (const MethodInfo_2FC6164 *)Method_System_Collections_Generic_Dictionary_int__List_int___get_Count__) )
+          (const MethodInfo_2FF3D74 *)Method_System_Collections_Generic_Dictionary_int__List_int___get_Count__) )
   {
     v7 = ServantCharaGraphEXOpenManager_TypeInfo;
     if ( (BYTE3(ServantCharaGraphEXOpenManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -201,16 +201,16 @@ bool __fastcall ServantCharaGraphEXOpenManager__IsCharaGraphEXOpen(
           (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__o *)svtCharaGraphEXOpenDict,
           svtId,
           &value,
-          (const MethodInfo_2FC828C *)Method_System_Collections_Generic_Dictionary_int__List_int___TryGetValue__) )
+          (const MethodInfo_2FF5E9C *)Method_System_Collections_Generic_Dictionary_int__List_int___TryGetValue__) )
     return 0;
   svtCharaGraphEXOpenDict = value;
   if ( !value )
 LABEL_21:
-    sub_B7076C(svtCharaGraphEXOpenDict, *(_QWORD *)&limitCount);
+    sub_B7769C(svtCharaGraphEXOpenDict, *(_QWORD *)&limitCount);
   return System_Collections_Generic_List_int___Contains(
            (System_Collections_Generic_List_int__o *)value,
            limitCount,
-           (const MethodInfo_30B662C *)Method_System_Collections_Generic_List_int__Contains__);
+           (const MethodInfo_30E623C *)Method_System_Collections_Generic_List_int__Contains__);
 }
 
 
@@ -243,17 +243,17 @@ bool __fastcall ServantCharaGraphEXOpenManager__ReadData(const MethodInfo *metho
   __int64 v25; // x0
   ServantCharaGraphEXOpenManager_c *v26; // x0
 
-  if ( (byte_4352D1B & 1) == 0 )
+  if ( (byte_438C574 & 1) == 0 )
   {
-    sub_B70694(&System_IO_BinaryReader_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__List_int___Add__);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_int__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_B70694(&System_Collections_Generic_List_int__TypeInfo);
-    sub_B70694(&ManagerConfig_TypeInfo);
-    sub_B70694(&ServantCharaGraphEXOpenManager_TypeInfo);
-    byte_4352D1B = 1;
+    sub_B775C4(&System_IO_BinaryReader_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__List_int___Add__);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int___ctor___69397304);
+    sub_B775C4(&System_Collections_Generic_List_int__TypeInfo);
+    sub_B775C4(&ManagerConfig_TypeInfo);
+    sub_B775C4(&ServantCharaGraphEXOpenManager_TypeInfo);
+    byte_438C574 = 1;
   }
   v1 = ManagerConfig_TypeInfo;
   if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -281,10 +281,10 @@ bool __fastcall ServantCharaGraphEXOpenManager__ReadData(const MethodInfo *metho
     }
     ServantCharaGraphEXOpenManager__ClearSaveDataList((const MethodInfo *)v5);
     v6 = (System_IO_Stream_o *)System_IO_File__OpenRead(SaveFileName, 0LL);
-    v7 = (System_IO_BinaryReader_o *)sub_B70764(System_IO_BinaryReader_TypeInfo);
+    v7 = (System_IO_BinaryReader_o *)sub_B77694(System_IO_BinaryReader_TypeInfo);
     System_IO_BinaryReader___ctor(v7, v6, 0LL);
     if ( !v7 )
-      sub_B7076C(v8, v9);
+      sub_B7769C(v8, v9);
     v10 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._22_ReadString.method)(
                                v7,
                                v7->klass->vtable._23_ReadChars.methodPtr);
@@ -314,10 +314,10 @@ bool __fastcall ServantCharaGraphEXOpenManager__ReadData(const MethodInfo *metho
           v15 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._15_ReadInt32.method)(
                   v7,
                   v7->klass->vtable._16_ReadUInt32.methodPtr);
-          v16 = (System_Collections_Generic_List_int__o *)sub_B70764(System_Collections_Generic_List_int__TypeInfo);
+          v16 = (System_Collections_Generic_List_int__o *)sub_B77694(System_Collections_Generic_List_int__TypeInfo);
           System_Collections_Generic_List_int____ctor(
             v16,
-            (const MethodInfo_30B547C *)Method_System_Collections_Generic_List_int___ctor__);
+            (const MethodInfo_30E508C *)Method_System_Collections_Generic_List_int___ctor___69397304);
           if ( v15 >= 1 )
           {
             for ( j = 0; j < v15; ++j )
@@ -326,11 +326,11 @@ bool __fastcall ServantCharaGraphEXOpenManager__ReadData(const MethodInfo *metho
                       v7,
                       v7->klass->vtable._16_ReadUInt32.methodPtr);
               if ( !v16 )
-                sub_B7076C(v19, (unsigned int)v19);
+                sub_B7769C(v19, (unsigned int)v19);
               System_Collections_Generic_List_int___Add(
                 v16,
                 v19,
-                (const MethodInfo_30B61D8 *)Method_System_Collections_Generic_List_int__Add__);
+                (const MethodInfo_30E5DE8 *)Method_System_Collections_Generic_List_int__Add__);
             }
           }
           v20 = ServantCharaGraphEXOpenManager_TypeInfo;
@@ -342,12 +342,12 @@ bool __fastcall ServantCharaGraphEXOpenManager__ReadData(const MethodInfo *metho
           }
           svtCharaGraphEXOpenDict = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)v20->static_fields->svtCharaGraphEXOpenDict;
           if ( !svtCharaGraphEXOpenDict )
-            sub_B7076C(0LL, v17);
+            sub_B7769C(0LL, v17);
           System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___Add(
             svtCharaGraphEXOpenDict,
             v14,
             (WarBoardEvalValueSquare_EvalValueSquare_o *)v16,
-            (const MethodInfo_2FC6568 *)Method_System_Collections_Generic_Dictionary_int__List_int___Add__);
+            (const MethodInfo_2FF4178 *)Method_System_Collections_Generic_Dictionary_int__List_int___Add__);
         }
       }
       v2 = 1;
@@ -369,7 +369,7 @@ bool __fastcall ServantCharaGraphEXOpenManager__ReadData(const MethodInfo *metho
     else
     {
 LABEL_37:
-      v25 = sub_B08590(v7, System_IDisposable_TypeInfo, 0LL);
+      v25 = sub_B0F4C0(v7, System_IDisposable_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v25)(v7, *(_QWORD *)(v25 + 8));
   }
@@ -402,17 +402,17 @@ void __fastcall ServantCharaGraphEXOpenManager__SetCharaGraphEXOpen(
   ServantCharaGraphEXOpenManager_c *v10; // x0
   WarBoardEvalValueSquare_CalcEval_o *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4352D1E & 1) == 0 )
+  if ( (byte_438C577 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__List_int___Add__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__List_int___TryGetValue__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__List_int___get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_B70694(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_B70694(&System_Collections_Generic_List_int__TypeInfo);
-    sub_B70694(&ServantCharaGraphEXOpenManager_TypeInfo);
-    byte_4352D1E = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__List_int___Add__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__List_int___TryGetValue__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__List_int___get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int___ctor___69397304);
+    sub_B775C4(&System_Collections_Generic_List_int__TypeInfo);
+    sub_B775C4(&ServantCharaGraphEXOpenManager_TypeInfo);
+    byte_438C577 = 1;
   }
   value = 0LL;
   v5 = ServantCharaGraphEXOpenManager_TypeInfo;
@@ -427,7 +427,7 @@ void __fastcall ServantCharaGraphEXOpenManager__SetCharaGraphEXOpen(
     goto LABEL_28;
   if ( !System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___get_Count(
           (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)svtCharaGraphEXOpenDict,
-          (const MethodInfo_2FC6164 *)Method_System_Collections_Generic_Dictionary_int__List_int___get_Count__) )
+          (const MethodInfo_2FF3D74 *)Method_System_Collections_Generic_Dictionary_int__List_int___get_Count__) )
   {
     v7 = ServantCharaGraphEXOpenManager_TypeInfo;
     if ( (BYTE3(ServantCharaGraphEXOpenManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -451,7 +451,7 @@ void __fastcall ServantCharaGraphEXOpenManager__SetCharaGraphEXOpen(
          (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__o *)svtCharaGraphEXOpenDict,
          svtId,
          &value,
-         (const MethodInfo_2FC828C *)Method_System_Collections_Generic_Dictionary_int__List_int___TryGetValue__) )
+         (const MethodInfo_2FF5E9C *)Method_System_Collections_Generic_Dictionary_int__List_int___TryGetValue__) )
   {
     svtCharaGraphEXOpenDict = value;
     if ( !value )
@@ -459,7 +459,7 @@ void __fastcall ServantCharaGraphEXOpenManager__SetCharaGraphEXOpen(
     if ( !System_Collections_Generic_List_int___Contains(
             (System_Collections_Generic_List_int__o *)value,
             limitCount,
-            (const MethodInfo_30B662C *)Method_System_Collections_Generic_List_int__Contains__) )
+            (const MethodInfo_30E623C *)Method_System_Collections_Generic_List_int__Contains__) )
     {
       svtCharaGraphEXOpenDict = value;
       if ( value )
@@ -467,25 +467,25 @@ void __fastcall ServantCharaGraphEXOpenManager__SetCharaGraphEXOpen(
         System_Collections_Generic_List_int___Add(
           (System_Collections_Generic_List_int__o *)value,
           limitCount,
-          (const MethodInfo_30B61D8 *)Method_System_Collections_Generic_List_int__Add__);
+          (const MethodInfo_30E5DE8 *)Method_System_Collections_Generic_List_int__Add__);
         return;
       }
 LABEL_28:
-      sub_B7076C(svtCharaGraphEXOpenDict, *(_QWORD *)&limitCount);
+      sub_B7769C(svtCharaGraphEXOpenDict, *(_QWORD *)&limitCount);
     }
   }
   else
   {
-    v9 = (System_Collections_Generic_List_int__o *)sub_B70764(System_Collections_Generic_List_int__TypeInfo);
+    v9 = (System_Collections_Generic_List_int__o *)sub_B77694(System_Collections_Generic_List_int__TypeInfo);
     System_Collections_Generic_List_int____ctor(
       v9,
-      (const MethodInfo_30B547C *)Method_System_Collections_Generic_List_int___ctor__);
+      (const MethodInfo_30E508C *)Method_System_Collections_Generic_List_int___ctor___69397304);
     if ( !v9 )
       goto LABEL_28;
     System_Collections_Generic_List_int___Add(
       v9,
       limitCount,
-      (const MethodInfo_30B61D8 *)Method_System_Collections_Generic_List_int__Add__);
+      (const MethodInfo_30E5DE8 *)Method_System_Collections_Generic_List_int__Add__);
     v10 = ServantCharaGraphEXOpenManager_TypeInfo;
     if ( (BYTE3(ServantCharaGraphEXOpenManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !ServantCharaGraphEXOpenManager_TypeInfo->_2.cctor_finished )
@@ -500,7 +500,7 @@ LABEL_28:
       (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)svtCharaGraphEXOpenDict,
       svtId,
       (WarBoardEvalValueSquare_EvalValueSquare_o *)v9,
-      (const MethodInfo_2FC6568 *)Method_System_Collections_Generic_Dictionary_int__List_int___Add__);
+      (const MethodInfo_2FF4178 *)Method_System_Collections_Generic_Dictionary_int__List_int___Add__);
   }
 }
 
@@ -536,22 +536,22 @@ bool __fastcall ServantCharaGraphEXOpenManager__WriteData(const MethodInfo *meth
   int v28; // [xsp+38h] [xbp-68h]
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v29; // [xsp+40h] [xbp-60h] BYREF
 
-  if ( (byte_4352D1C & 1) == 0 )
+  if ( (byte_438C575 & 1) == 0 )
   {
-    sub_B70694(&System_IO_BinaryWriter_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__List_int___GetEnumerator__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__List_int___get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___get_Current__);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_KeyValuePair_int__List_int___get_Key__);
-    sub_B70694(&Method_System_Collections_Generic_KeyValuePair_int__List_int___get_Value__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_B70694(&ManagerConfig_TypeInfo);
-    sub_B70694(&ServantCharaGraphEXOpenManager_TypeInfo);
-    byte_4352D1C = 1;
+    sub_B775C4(&System_IO_BinaryWriter_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__List_int___GetEnumerator__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__List_int___get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___get_Current__);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_KeyValuePair_int__List_int___get_Key__);
+    sub_B775C4(&Method_System_Collections_Generic_KeyValuePair_int__List_int___get_Value__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_B775C4(&ManagerConfig_TypeInfo);
+    sub_B775C4(&ServantCharaGraphEXOpenManager_TypeInfo);
+    byte_438C575 = 1;
   }
   memset(&v29, 0, sizeof(v29));
   v28 = 0;
@@ -572,8 +572,8 @@ bool __fastcall ServantCharaGraphEXOpenManager__WriteData(const MethodInfo *meth
     }
     SaveFileName = ServantCharaGraphEXOpenManager__GetSaveFileName((const MethodInfo *)v3);
     v5 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SaveFileName, 0LL);
-    v6 = (System_IO_BinaryWriter_o *)sub_B70764(System_IO_BinaryWriter_TypeInfo);
-    System_IO_BinaryWriter___ctor_39879612(v6, v5, 0LL);
+    v6 = (System_IO_BinaryWriter_o *)sub_B77694(System_IO_BinaryWriter_TypeInfo);
+    System_IO_BinaryWriter___ctor_40221404(v6, v5, 0LL);
     v8 = ServantCharaGraphEXOpenManager_TypeInfo;
     if ( (BYTE3(ServantCharaGraphEXOpenManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !ServantCharaGraphEXOpenManager_TypeInfo->_2.cctor_finished )
@@ -583,12 +583,12 @@ bool __fastcall ServantCharaGraphEXOpenManager__WriteData(const MethodInfo *meth
     }
     svtCharaGraphEXOpenDict = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)v8->static_fields->svtCharaGraphEXOpenDict;
     if ( !svtCharaGraphEXOpenDict )
-      sub_B7076C(0LL, v7);
+      sub_B7769C(0LL, v7);
     Count = System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___get_Count(
               svtCharaGraphEXOpenDict,
-              (const MethodInfo_2FC6164 *)Method_System_Collections_Generic_Dictionary_int__List_int___get_Count__);
+              (const MethodInfo_2FF3D74 *)Method_System_Collections_Generic_Dictionary_int__List_int___get_Count__);
     if ( !v6 )
-      sub_B7076C(Count, v11);
+      sub_B7769C(Count, v11);
     v12 = Count;
     ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *))v6->klass->vtable._22_Write.method)(
       v6,
@@ -600,22 +600,22 @@ bool __fastcall ServantCharaGraphEXOpenManager__WriteData(const MethodInfo *meth
       v6->klass->vtable._18_Write.methodPtr);
     v14 = ServantCharaGraphEXOpenManager_TypeInfo->static_fields->svtCharaGraphEXOpenDict;
     if ( !v14 )
-      sub_B7076C(0LL, v13);
+      sub_B7769C(0LL, v13);
     System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval___GetEnumerator(
       &v26,
       (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__o *)v14,
-      (const MethodInfo_2FC6B4C *)Method_System_Collections_Generic_Dictionary_int__List_int___GetEnumerator__);
+      (const MethodInfo_2FF475C *)Method_System_Collections_Generic_Dictionary_int__List_int___GetEnumerator__);
     v29 = v26;
     while ( 1 )
     {
       v18 = System_Collections_Generic_Dictionary_Enumerator_int__WarBoardEvalValueSquare_CalcEval___MoveNext(
               &v29,
-              (const MethodInfo_2832CC4 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___MoveNext__);
+              (const MethodInfo_28883E4 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___MoveNext__);
       if ( !v18 )
         break;
       value = v29.fields.current.fields.value;
       if ( !v29.fields.current.fields.value )
-        sub_B7076C(v18, v19);
+        sub_B7769C(v18, v19);
       monitor_low = SLODWORD(v29.fields.current.fields.value[1].monitor);
       ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v6->klass->vtable._17_Write.method)(
         v6,
@@ -630,7 +630,7 @@ bool __fastcall ServantCharaGraphEXOpenManager__WriteData(const MethodInfo *meth
         for ( i = 0LL; (__int64)i < monitor_low; ++i )
         {
           if ( i >= LODWORD(value[1].monitor) )
-            System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+            System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
           ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v6->klass->vtable._17_Write.method)(
             v6,
             *((unsigned int *)&value[1].klass->_1.byval_arg.data + i),
@@ -642,7 +642,7 @@ bool __fastcall ServantCharaGraphEXOpenManager__WriteData(const MethodInfo *meth
     v28 = 1;
     System_Collections_Generic_Dictionary_Enumerator_int__WarBoardEvalValueSquare_CalcEval___Dispose(
       &v29,
-      (const MethodInfo_2832E30 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___Dispose__);
+      (const MethodInfo_2888550 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___Dispose__);
     if ( v27[0] == 178 )
     {
       v20 = 0;
@@ -671,7 +671,7 @@ bool __fastcall ServantCharaGraphEXOpenManager__WriteData(const MethodInfo *meth
     else
     {
 LABEL_32:
-      v25 = sub_B08590(v6, System_IDisposable_TypeInfo, 0LL);
+      v25 = sub_B0F4C0(v6, System_IDisposable_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v25)(v6, *(_QWORD *)(v25 + 8));
     if ( v21 && v27[v21 - 1] == 190 )

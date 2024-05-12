@@ -86,7 +86,7 @@ void __fastcall BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *th
       }
     }
 LABEL_19:
-    sub_B7076C(activeSelf, v5);
+    sub_B7769C(activeSelf, v5);
   }
 }
 
@@ -114,10 +114,10 @@ void __fastcall BattleDropHighPosition__Initialize(
   z = pos.fields.z;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_4350599 & 1) == 0 )
+  if ( (byte_4389BC2 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4350599 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4389BC2 = 1;
   }
   this->fields.movingFlag = 1;
   treasureObj = (UnityEngine_Object_o *)this->fields.treasureObj;
@@ -155,7 +155,7 @@ void __fastcall BattleDropHighPosition__Initialize(
         return;
       }
     }
-    sub_B7076C(transform, v9);
+    sub_B7769C(transform, v9);
   }
 }
 

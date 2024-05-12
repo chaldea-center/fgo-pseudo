@@ -16,7 +16,7 @@ void __fastcall ClassBoardUIController__ActivateEffectListButton(
   if ( !effectListBtnSprite
     || (effectListBtnSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(effectListBtnSprite, 0LL)) == 0LL )
   {
-    sub_B7076C(effectListBtnSprite, value);
+    sub_B7769C(effectListBtnSprite, value);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)effectListBtnSprite, value, 0LL);
 }
@@ -36,20 +36,20 @@ void __fastcall ClassBoardUIController__Init(ClassBoardUIController_o *this, con
   UnityEngine_GameObject_o *backBtn; // x19
 
   v2 = this;
-  if ( (byte_4353BAE & 1) == 0 )
+  if ( (byte_438D46C & 1) == 0 )
   {
-    sub_B70694(&AndroidBackKeyManager_TypeInfo);
-    this = (ClassBoardUIController_o *)sub_B70694(&StringLiteral_17251/*"btn_list"*/);
-    byte_4353BAE = 1;
+    sub_B775C4(&AndroidBackKeyManager_TypeInfo);
+    this = (ClassBoardUIController_o *)sub_B775C4(&StringLiteral_17334/*"btn_list"*/);
+    byte_438D46C = 1;
   }
   v2->fields.touchBlockCount = 0;
   UiAtlasManagerUnit = ClassBoardGlobalObject__get_UiAtlasManagerUnit((const MethodInfo *)this);
   if ( !UiAtlasManagerUnit )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   AtlasManagerUnit__SetUI(
     UiAtlasManagerUnit,
     v2->fields.effectListBtnSprite,
-    (System_String_o *)StringLiteral_17251/*"btn_list"*/,
+    (System_String_o *)StringLiteral_17334/*"btn_list"*/,
     0LL);
   backBtn = v2->fields.backBtn;
   if ( (BYTE3(AndroidBackKeyManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -66,15 +66,15 @@ void __fastcall ClassBoardUIController__OnClickBack(ClassBoardUIController_o *th
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4353BB3 & 1) == 0 )
+  if ( (byte_438D471 & 1) == 0 )
   {
-    sub_B70694(&Method_ClassBoardUIController_OnClickBack__);
-    byte_4353BB3 = 1;
+    sub_B775C4(&Method_ClassBoardUIController_OnClickBack__);
+    byte_438D471 = 1;
   }
   v3 = Method_ClassBoardUIController_OnClickBack__;
   if ( (*((_BYTE *)Method_ClassBoardUIController_OnClickBack__ + 75) & 2) != 0 )
-    v3 = (_QWORD *)sub_B7069C(Method_ClassBoardUIController_OnClickBack__);
-  v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+    v3 = (_QWORD *)sub_B775CC(Method_ClassBoardUIController_OnClickBack__);
+  v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
   ActionExtensions__Call(this->fields.onClickBack, 0LL);
 }
@@ -87,15 +87,15 @@ void __fastcall ClassBoardUIController__OnClickEffectListButton(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4353BB1 & 1) == 0 )
+  if ( (byte_438D46F & 1) == 0 )
   {
-    sub_B70694(&Method_ClassBoardUIController_OnClickEffectListButton__);
-    byte_4353BB1 = 1;
+    sub_B775C4(&Method_ClassBoardUIController_OnClickEffectListButton__);
+    byte_438D46F = 1;
   }
   v3 = Method_ClassBoardUIController_OnClickEffectListButton__;
   if ( (*((_BYTE *)Method_ClassBoardUIController_OnClickEffectListButton__ + 75) & 2) != 0 )
-    v3 = (_QWORD *)sub_B7069C(Method_ClassBoardUIController_OnClickEffectListButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+    v3 = (_QWORD *)sub_B775CC(Method_ClassBoardUIController_OnClickEffectListButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
   ActionExtensions__Call(this->fields.onClickEffectList, 0LL);
 }
@@ -106,15 +106,15 @@ void __fastcall ClassBoardUIController__OnClickHelp(ClassBoardUIController_o *th
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4353BB2 & 1) == 0 )
+  if ( (byte_438D470 & 1) == 0 )
   {
-    sub_B70694(&Method_ClassBoardUIController_OnClickHelp__);
-    byte_4353BB2 = 1;
+    sub_B775C4(&Method_ClassBoardUIController_OnClickHelp__);
+    byte_438D470 = 1;
   }
   v3 = Method_ClassBoardUIController_OnClickHelp__;
   if ( (*((_BYTE *)Method_ClassBoardUIController_OnClickHelp__ + 75) & 2) != 0 )
-    v3 = (_QWORD *)sub_B7069C(Method_ClassBoardUIController_OnClickHelp__);
-  v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+    v3 = (_QWORD *)sub_B775CC(Method_ClassBoardUIController_OnClickHelp__);
+  v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
   ActionExtensions__Call(this->fields.onClickHelp, 0LL);
 }
@@ -136,24 +136,24 @@ void __fastcall ClassBoardUIController__OpenMissionClearDialog(
   System_String_o *v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4353BB5 & 1) == 0 )
+  if ( (byte_438D473 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B70694(&string_TypeInfo);
-    sub_B70694(&StringLiteral_3094/*"CLASS_BOARD_MISSION_CLEAR_MESSAGE"*/);
-    byte_4353BB5 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B775C4(&string_TypeInfo);
+    sub_B775C4(&StringLiteral_3143/*"CLASS_BOARD_MISSION_CLEAR_MESSAGE"*/);
+    byte_438D473 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   Empty = string_TypeInfo->static_fields->Empty;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_3094/*"CLASS_BOARD_MISSION_CLEAR_MESSAGE"*/, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_3143/*"CLASS_BOARD_MISSION_CLEAR_MESSAGE"*/, 0LL);
   if ( !Instance )
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   CommonUI__OpenNotificationDialog(Instance, Empty, v6, callback, -1, 0, 0, 0, 0, 0, 0, 0, 0LL, 0LL);
 }
 
@@ -171,10 +171,10 @@ void __fastcall ClassBoardUIController__SetCameraWorkBlock(
   __int64 v8; // x1
   __int64 v9; // x19
 
-  if ( (byte_4353BB4 & 1) == 0 )
+  if ( (byte_438D472 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4353BB4 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438D472 = 1;
   }
   ClassBoardPageSwitcher__SetCameraWorkBlockNum(value, (const MethodInfo *)value);
   MapCamera = (UnityEngine_Object_o *)ClassBoardGlobalObject__get_MapCamera(v4);
@@ -188,13 +188,13 @@ void __fastcall ClassBoardUIController__SetCameraWorkBlock(
   {
     v7 = (__int64)ClassBoardGlobalObject__get_MapCamera((const MethodInfo *)v6);
     v9 = v7;
-    if ( !byte_4353BE4 )
+    if ( !byte_438D4A2 )
     {
-      v7 = sub_B70694(&ClassBoardPageSwitcher_TypeInfo);
-      byte_4353BE4 = 1;
+      v7 = sub_B775C4(&ClassBoardPageSwitcher_TypeInfo);
+      byte_438D4A2 = 1;
     }
     if ( !v9 )
-      sub_B7076C(v7, v8);
+      sub_B7769C(v7, v8);
     *(_BYTE *)(v9 + 89) = ClassBoardPageSwitcher_TypeInfo->static_fields->cameraWorkBlockNum < 1;
   }
 }
@@ -209,20 +209,20 @@ void __fastcall ClassBoardUIController__SetHeaderMessage(
   ClassBoardUIController_o *v6; // x20
 
   v6 = this;
-  if ( (byte_4353BAF & 1) == 0 )
+  if ( (byte_438D46D & 1) == 0 )
   {
-    this = (ClassBoardUIController_o *)sub_B70694(&StringLiteral_19777/*"img_commonbg_11"*/);
-    byte_4353BAF = 1;
+    this = (ClassBoardUIController_o *)sub_B775C4(&StringLiteral_19867/*"img_commonbg_11"*/);
+    byte_438D46D = 1;
   }
   if ( !atlasManagerUnit
     || (AtlasManagerUnit__SetUI(
           atlasManagerUnit,
           v6->fields.headerMessageBgSprite,
-          (System_String_o *)StringLiteral_19777/*"img_commonbg_11"*/,
+          (System_String_o *)StringLiteral_19867/*"img_commonbg_11"*/,
           0LL),
         (this = (ClassBoardUIController_o *)v6->fields.headerMessageLabel) == 0LL) )
   {
-    sub_B7076C(this, atlasManagerUnit);
+    sub_B7769C(this, atlasManagerUnit);
   }
   UILabel__set_text((UILabel_o *)this, message, 0LL);
 }
@@ -241,7 +241,7 @@ void __fastcall ClassBoardUIController__SetHeaderTitle(
         AtlasManagerUnit__SetUI(atlasManagerUnit, this->fields.headerTitleSprite, spriteName, 0LL),
         (this = (ClassBoardUIController_o *)v4->fields.headerTitleSprite) == 0LL) )
   {
-    sub_B7076C(this, atlasManagerUnit);
+    sub_B7769C(this, atlasManagerUnit);
   }
   ((void (__fastcall *)(ClassBoardUIController_o *, void *))this->klass[2]._1.typeMetadataHandle)(
     this,
@@ -266,10 +266,10 @@ void __fastcall ClassBoardUIController__SetItemList(
   __int64 v14; // x0
 
   v6 = this;
-  if ( (byte_4353BB0 & 1) == 0 )
+  if ( (byte_438D46E & 1) == 0 )
   {
-    this = (ClassBoardUIController_o *)sub_B70694(&StringLiteral_19809/*"img_item_bg"*/);
-    byte_4353BB0 = 1;
+    this = (ClassBoardUIController_o *)sub_B775C4(&StringLiteral_19899/*"img_item_bg"*/);
+    byte_438D46E = 1;
   }
   if ( !dispItemIds )
     goto LABEL_22;
@@ -288,8 +288,8 @@ void __fastcall ClassBoardUIController__SetItemList(
         if ( v8 >= (unsigned int)v7 || v8 >= max_length )
         {
 LABEL_23:
-          v14 = sub_B70798(this);
-          sub_B70738(v14, 0LL);
+          v14 = sub_B776C8(this);
+          sub_B77668(v14, 0LL);
         }
         this = (ClassBoardUIController_o *)headerItemComponentList->m_Items[v8];
         if ( !this )
@@ -308,7 +308,7 @@ LABEL_23:
         this = (ClassBoardUIController_o *)AtlasManagerUnit__SetUI(
                                              atlasManagerUnit,
                                              v12->fields.baseSp,
-                                             (System_String_o *)StringLiteral_19809/*"img_item_bg"*/,
+                                             (System_String_o *)StringLiteral_19899/*"img_item_bg"*/,
                                              0LL);
         v13 = v6->fields.headerItemComponentList;
         if ( !v13 )
@@ -328,7 +328,7 @@ LABEL_23:
         return;
     }
 LABEL_22:
-    sub_B7076C(this, dispItemIds);
+    sub_B7769C(this, dispItemIds);
   }
 }
 
@@ -345,7 +345,7 @@ void __fastcall ClassBoardUIController__SetOnClickBack(
   System_Int32_array *v7; // x7
 
   this->fields.onClickBack = action;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.onClickBack,
     (System_Int32_array **)action,
     (System_String_array **)method,
@@ -369,7 +369,7 @@ void __fastcall ClassBoardUIController__SetOnClickEffectList(
   System_Int32_array *v7; // x7
 
   this->fields.onClickEffectList = action;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.onClickEffectList,
     (System_Int32_array **)action,
     (System_String_array **)method,
@@ -393,7 +393,7 @@ void __fastcall ClassBoardUIController__SetOnClickHelp(
   System_Int32_array *v7; // x7
 
   this->fields.onClickHelp = action;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.onClickHelp,
     (System_Int32_array **)action,
     (System_String_array **)method,
@@ -418,7 +418,7 @@ void __fastcall ClassBoardUIController__TouchDisable(ClassBoardUIController_o *t
   {
     touchBlock = this->fields.touchBlock;
     if ( !touchBlock )
-      sub_B7076C(0LL, method);
+      sub_B7769C(0LL, method);
     UnityEngine_GameObject__SetActive(touchBlock, 1, 0LL);
   }
 }
@@ -437,7 +437,7 @@ void __fastcall ClassBoardUIController__TouchEnable(ClassBoardUIController_o *th
   {
     touchBlock = this->fields.touchBlock;
     if ( !touchBlock )
-      sub_B7076C(0LL, method);
+      sub_B7769C(0LL, method);
     UnityEngine_GameObject__SetActive(touchBlock, 0, 0LL);
   }
 }
@@ -456,7 +456,7 @@ void __fastcall ClassBoardUIController__UpdateItemList(ClassBoardUIController_o 
   headerItemComponentList = this->fields.headerItemComponentList;
   if ( !headerItemComponentList )
 LABEL_13:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   v3 = this;
   v4 = 4LL;
   while ( 1 )
@@ -482,8 +482,8 @@ LABEL_13:
       if ( v6 >= v7->max_length )
       {
 LABEL_15:
-        v8 = sub_B70798(this);
-        sub_B70738(v8, 0LL);
+        v8 = sub_B776C8(this);
+        sub_B77668(v8, 0LL);
       }
       this = (ClassBoardUIController_o *)*((_QWORD *)&v7->obj.klass + v4);
       if ( !this )

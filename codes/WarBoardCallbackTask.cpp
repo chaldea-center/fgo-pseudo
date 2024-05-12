@@ -12,7 +12,7 @@ void __fastcall WarBoardCallbackTask___ctor(
 
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, 0LL);
   this->fields.waitYieldInstruction = waitYieldInstruction;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.waitYieldInstruction,
     (System_Int32_array **)waitYieldInstruction,
     v5,
@@ -38,17 +38,17 @@ System_Collections_IEnumerator_o *__fastcall WarBoardCallbackTask__Execute(
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_43503B9 & 1) == 0 )
+  if ( (byte_43899E2 & 1) == 0 )
   {
-    sub_B70694(&WarBoardCallbackTask__Execute_d__2_TypeInfo);
-    byte_43503B9 = 1;
+    sub_B775C4(&WarBoardCallbackTask__Execute_d__2_TypeInfo);
+    byte_43899E2 = 1;
   }
-  v3 = sub_B70764(WarBoardCallbackTask__Execute_d__2_TypeInfo);
+  v3 = sub_B77694(WarBoardCallbackTask__Execute_d__2_TypeInfo);
   WarBoardCallbackTask__Execute_d__2___ctor((WarBoardCallbackTask__Execute_d__2_o *)v3, 0, 0LL);
   if ( !v3 )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  sub_B77560((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -92,7 +92,7 @@ bool __fastcall WarBoardCallbackTask__Execute_d__2__MoveNext(
     _4__this = this->fields.__4__this;
     this->fields.__1__state = -1;
     if ( !_4__this )
-      sub_B7076C(this, method);
+      sub_B7769C(this, method);
     waitYieldInstruction = (Il2CppObject *)_4__this->fields.waitYieldInstruction;
     if ( !waitYieldInstruction )
     {
@@ -102,7 +102,7 @@ bool __fastcall WarBoardCallbackTask__Execute_d__2__MoveNext(
     {
       this->fields.__2__current = waitYieldInstruction;
       p__2__current = &this->fields.__2__current;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&this->fields.__2__current,
         (System_Int32_array **)waitYieldInstruction,
         v2,
@@ -135,11 +135,11 @@ void __fastcall __noreturn WarBoardCallbackTask__Execute_d__2__System_Collection
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B70698(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B70764(v2);
+  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B70698(&Method_WarBoardCallbackTask__Execute_d__2_System_Collections_IEnumerator_Reset__);
-  sub_B70738(v3, v4);
+  v4 = sub_B775C8(&Method_WarBoardCallbackTask__Execute_d__2_System_Collections_IEnumerator_Reset__);
+  sub_B77668(v3, v4);
 }
 
 

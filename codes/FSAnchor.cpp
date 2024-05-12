@@ -29,15 +29,15 @@ void __fastcall FSAnchor___ctor(FSAnchor_o *this, const MethodInfo *method)
   System_Int32_array *v29; // x6
   System_Int32_array *v30; // x7
 
-  if ( (byte_435220E & 1) == 0 )
+  if ( (byte_438B8D1 & 1) == 0 )
   {
-    sub_B70694(&FSAnchor_Absolute_TypeInfo);
-    byte_435220E = 1;
+    sub_B775C4(&FSAnchor_Absolute_TypeInfo);
+    byte_438B8D1 = 1;
   }
-  v3 = (FSAnchor_Absolute_o *)sub_B70764(FSAnchor_Absolute_TypeInfo);
+  v3 = (FSAnchor_Absolute_o *)sub_B77694(FSAnchor_Absolute_TypeInfo);
   FSAnchor_Absolute___ctor(v3, 1, 0, 68, 0LL);
   this->fields.leftAbsolute = v3;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.leftAbsolute,
     (System_Int32_array **)v3,
     v4,
@@ -46,10 +46,10 @@ void __fastcall FSAnchor___ctor(FSAnchor_o *this, const MethodInfo *method)
     v7,
     v8,
     v9);
-  v10 = (FSAnchor_Absolute_o *)sub_B70764(FSAnchor_Absolute_TypeInfo);
+  v10 = (FSAnchor_Absolute_o *)sub_B77694(FSAnchor_Absolute_TypeInfo);
   FSAnchor_Absolute___ctor(v10, 1, 0, -68, 0LL);
   this->fields.rightAbsolute = v10;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.rightAbsolute,
     (System_Int32_array **)v10,
     v11,
@@ -58,10 +58,10 @@ void __fastcall FSAnchor___ctor(FSAnchor_o *this, const MethodInfo *method)
     v14,
     v15,
     v16);
-  v17 = (FSAnchor_Absolute_o *)sub_B70764(FSAnchor_Absolute_TypeInfo);
+  v17 = (FSAnchor_Absolute_o *)sub_B77694(FSAnchor_Absolute_TypeInfo);
   FSAnchor_Absolute___ctor(v17, 0, 0, 0, 0LL);
   this->fields.bottomAbsolute = v17;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.bottomAbsolute,
     (System_Int32_array **)v17,
     v18,
@@ -70,10 +70,10 @@ void __fastcall FSAnchor___ctor(FSAnchor_o *this, const MethodInfo *method)
     v21,
     v22,
     v23);
-  v24 = (FSAnchor_Absolute_o *)sub_B70764(FSAnchor_Absolute_TypeInfo);
+  v24 = (FSAnchor_Absolute_o *)sub_B77694(FSAnchor_Absolute_TypeInfo);
   FSAnchor_Absolute___ctor(v24, 0, 0, 0, 0LL);
   this->fields.topAbsolute = v24;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.topAbsolute,
     (System_Int32_array **)v24,
     v25,
@@ -140,10 +140,10 @@ void __fastcall FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
   struct UIWidget_o *v43; // x9
   struct UIRect_AnchorPoint_o *topAnchor; // x9
 
-  if ( (byte_435220D & 1) == 0 )
+  if ( (byte_438B8D0 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_435220D = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438B8D0 = 1;
   }
   widget = (UnityEngine_Object_o *)this->fields.widget;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -336,7 +336,7 @@ LABEL_57:
         }
       }
 LABEL_68:
-      sub_B7076C(height, v6);
+      sub_B7769C(height, v6);
     }
   }
 }

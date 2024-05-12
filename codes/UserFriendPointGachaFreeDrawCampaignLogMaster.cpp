@@ -2,15 +2,15 @@ void __fastcall UserFriendPointGachaFreeDrawCampaignLogMaster___ctor(
         UserFriendPointGachaFreeDrawCampaignLogMaster_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_43506CE & 1) == 0 )
+  if ( (byte_4389CF7 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_UserFriendPointGachaFreeDrawCampaignLogMaster__UserFriendPointGachaFreeDrawCampaignLogEntity__string___ctor__);
-    byte_43506CE = 1;
+    sub_B775C4(&Method_DataMasterBase_UserFriendPointGachaFreeDrawCampaignLogMaster__UserFriendPointGachaFreeDrawCampaignLogEntity__string___ctor__);
+    byte_4389CF7 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     391,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_UserFriendPointGachaFreeDrawCampaignLogMaster__UserFriendPointGachaFreeDrawCampaignLogEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_UserFriendPointGachaFreeDrawCampaignLogMaster__UserFriendPointGachaFreeDrawCampaignLogEntity__string___ctor__);
 }
 
 
@@ -46,23 +46,23 @@ int32_t __fastcall UserFriendPointGachaFreeDrawCampaignLogMaster__GetDrawLogNum(
   __int64 v30; // x0
   __int64 v32; // x0
 
-  if ( (byte_43506CF & 1) == 0 )
+  if ( (byte_4389CF8 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
-    sub_B70694(&System_Collections_IEnumerator_TypeInfo);
-    sub_B70694(&UserFriendPointGachaFreeDrawCampaignLogEntity_TypeInfo);
-    byte_43506CF = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
+    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
+    sub_B775C4(&UserFriendPointGachaFreeDrawCampaignLogEntity_TypeInfo);
+    byte_4389CF8 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
-    sub_B7076C(0LL, startAt);
+    sub_B7769C(0LL, startAt);
   Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
                  list,
-                 (const MethodInfo_2C865F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_2CC56C8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B7076C(0LL, v8);
+    sub_B7769C(0LL, v8);
   v10 = 0;
   while ( 1 )
   {
@@ -83,7 +83,7 @@ int32_t __fastcall UserFriendPointGachaFreeDrawCampaignLogMaster__GetDrawLogNum(
     else
     {
 LABEL_24:
-      p_method = sub_B08590(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_B0F4C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -106,7 +106,7 @@ LABEL_24:
     else
     {
 LABEL_10:
-      v14 = sub_B08590(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v14 = sub_B0F4C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v15 = (_QWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v14)(
                       Enumerator,
@@ -117,13 +117,13 @@ LABEL_10:
     if ( *(unsigned __int8 *)(*v15 + 300LL) < (unsigned int)v17
       || *(UserFriendPointGachaFreeDrawCampaignLogEntity_c **)(*(_QWORD *)(*v15 + 200LL) + 8 * v17 - 8) != UserFriendPointGachaFreeDrawCampaignLogEntity_TypeInfo )
     {
-      v15 = (_QWORD *)sub_B70A60(v15);
+      v15 = (_QWORD *)sub_B77990(v15);
 LABEL_35:
-      sub_B7076C(v15, v16);
+      sub_B7769C(v15, v16);
     }
     v18 = v15[2];
     if ( !v18 )
-      sub_B7076C(v15, UserFriendPointGachaFreeDrawCampaignLogEntity_TypeInfo);
+      sub_B7769C(v15, UserFriendPointGachaFreeDrawCampaignLogEntity_TypeInfo);
     v19 = *(unsigned int *)(v18 + 24);
     if ( (__int64)(v19 << 32) >= 1 )
     {
@@ -133,8 +133,8 @@ LABEL_35:
       {
         if ( v20 >= v19 )
         {
-          v32 = sub_B70798(v15);
-          sub_B70738(v32, 0LL);
+          v32 = sub_B776C8(v15);
+          sub_B77668(v32, 0LL);
         }
         v22 = *(_QWORD *)(v21 + 8 * v20++);
         v10 += v22 >= startAt && v22 < endAt;
@@ -159,7 +159,7 @@ LABEL_35:
   else
   {
 LABEL_31:
-    v30 = sub_B08590(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v30 = sub_B0F4C0(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v30)(Enumerator, *(_QWORD *)(v30 + 8));
   return v10;

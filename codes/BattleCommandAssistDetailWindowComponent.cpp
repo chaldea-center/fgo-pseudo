@@ -39,18 +39,18 @@ void __fastcall BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
   int32_t v30; // [xsp+8h] [xbp-48h] BYREF
   int32_t lv; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_434E738 & 1) == 0 )
+  if ( (byte_4387D09 & 1) == 0 )
   {
-    sub_B70694(&BattleData_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_3276/*"COMMAND_ASSIST_NAME"*/);
-    sub_B70694(&StringLiteral_3336/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_434E738 = 1;
+    sub_B775C4(&BattleData_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_3327/*"COMMAND_ASSIST_NAME"*/);
+    sub_B775C4(&StringLiteral_3387/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_4387D09 = 1;
   }
   commandAssistNameLabel = (UnityEngine_Object_o *)this->fields.commandAssistNameLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -96,7 +96,7 @@ void __fastcall BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
           {
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
           }
-          Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
+          Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
           if ( commandData )
           {
             v13 = Master_WarQuestSelectionMaster;
@@ -121,14 +121,14 @@ void __fastcall BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v20 = LocalizationManager__Get((System_String_o *)StringLiteral_3276/*"COMMAND_ASSIST_NAME"*/, 0LL);
+                v20 = LocalizationManager__Get((System_String_o *)StringLiteral_3327/*"COMMAND_ASSIST_NAME"*/, 0LL);
                 name = (Il2CppObject *)v16->fields.name;
                 v22 = v20;
                 lv = v16->fields.lv;
                 v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv, v23);
                 v30 = v18->fields.lv;
                 v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v30, v25);
-                Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)System_String__Format_44759232(
+                Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)System_String__Format_44903000(
                                                                                  v22,
                                                                                  name,
                                                                                  v24,
@@ -149,7 +149,7 @@ void __fastcall BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
                 {
                   j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
                 }
-                Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_SkillLvMaster___);
+                Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_SkillLvMaster___);
                 if ( !Master_WarQuestSelectionMaster )
                   goto LABEL_54;
                 Entity = SkillLvMaster__GetEntity(
@@ -160,7 +160,7 @@ void __fastcall BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
                 if ( Entity )
                 {
                   v28 = this->fields.detailLabel;
-                  Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)SkillLvEntity__getDetail_26474216(
+                  Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)SkillLvEntity__getDetail_26832724(
                                                                                    Entity,
                                                                                    v16->fields.skillLv,
                                                                                    0,
@@ -181,7 +181,7 @@ void __fastcall BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
               Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)LocalizationManager__Get(
-                                                                               (System_String_o *)StringLiteral_3336/*"COMMON_CONFIRM_CLOSE"*/,
+                                                                               (System_String_o *)StringLiteral_3387/*"COMMON_CONFIRM_CLOSE"*/,
                                                                                0LL);
               if ( v29 )
               {
@@ -218,7 +218,7 @@ void __fastcall BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
             }
           }
 LABEL_54:
-          sub_B7076C(Master_WarQuestSelectionMaster, v12);
+          sub_B7769C(Master_WarQuestSelectionMaster, v12);
         }
       }
     }
@@ -230,10 +230,10 @@ System_String_o *__fastcall BattleCommandAssistDetailWindowComponent__get_closeB
         BattleCommandAssistDetailWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_434E739 & 1) == 0 )
+  if ( (byte_4387D0A & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_17742/*"closeBtn"*/);
-    byte_434E739 = 1;
+    sub_B775C4(&StringLiteral_17827/*"closeBtn"*/);
+    byte_4387D0A = 1;
   }
-  return (System_String_o *)StringLiteral_17742/*"closeBtn"*/;
+  return (System_String_o *)StringLiteral_17827/*"closeBtn"*/;
 }

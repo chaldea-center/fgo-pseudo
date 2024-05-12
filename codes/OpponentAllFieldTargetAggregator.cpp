@@ -28,7 +28,7 @@ System_Int32_array *__fastcall OpponentAllFieldTargetAggregator__GetCandidate(
     if ( actorId )
       return BattleData__getFieldPlayerServantIDList(actorId, 0LL, 0LL);
 LABEL_7:
-    sub_B7076C(actorId, v5);
+    sub_B7769C(actorId, v5);
   }
   actorId = (BattleData_o *)TargetAggregator__get_IsOpponentTargetOnly((TargetAggregator_o *)this, 0LL);
   if ( !v7 )

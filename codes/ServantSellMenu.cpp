@@ -1,9 +1,9 @@
 void __fastcall ServantSellMenu___ctor(ServantSellMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4353998 & 1) == 0 )
+  if ( (byte_438D1CE & 1) == 0 )
   {
-    sub_B70694(&BaseMenu_TypeInfo);
-    byte_4353998 = 1;
+    sub_B775C4(&BaseMenu_TypeInfo);
+    byte_438D1CE = 1;
   }
   if ( (BYTE3(BaseMenu_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseMenu_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo);
@@ -29,7 +29,7 @@ void __fastcall ServantSellMenu__CallOnClose(ServantSellMenu_o *this, const Meth
   if ( onClose )
   {
     p_onClose->klass = 0LL;
-    sub_B70630(p_onClose, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_B77560(p_onClose, 0LL, v2, v3, v4, v5, v6, v7);
     System_Action__Invoke(v9, 0LL);
   }
 }
@@ -53,7 +53,7 @@ void __fastcall ServantSellMenu__CallOnOpen(ServantSellMenu_o *this, const Metho
   if ( onOpen )
   {
     p_onOpen->klass = 0LL;
-    sub_B70630(p_onOpen, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_B77560(p_onOpen, 0LL, v2, v3, v4, v5, v6, v7);
     System_Action__Invoke(v9, 0LL);
   }
 }
@@ -73,10 +73,10 @@ void __fastcall ServantSellMenu__CallOnSelectServant(
   System_Action_ServantSellMenu_ResultKind__long____long____o *v13; // x23
   struct System_Action_ServantSellMenu_ResultKind__long____long____o *onSelectSellServant; // t1
 
-  if ( (byte_4353991 & 1) == 0 )
+  if ( (byte_438D1C7 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Action_ServantSellMenu_ResultKind__long____long____Invoke__);
-    byte_4353991 = 1;
+    sub_B775C4(&Method_System_Action_ServantSellMenu_ResultKind__long____long____Invoke__);
+    byte_438D1C7 = 1;
   }
   onSelectSellServant = this->fields.onSelectSellServant;
   p_onSelectSellServant = (BattleServantConfConponent_o *)&this->fields.onSelectSellServant;
@@ -84,7 +84,7 @@ void __fastcall ServantSellMenu__CallOnSelectServant(
   if ( onSelectSellServant )
   {
     p_onSelectSellServant->klass = 0LL;
-    sub_B70630(
+    sub_B77560(
       p_onSelectSellServant,
       0LL,
       (System_String_array **)servantList,
@@ -98,7 +98,7 @@ void __fastcall ServantSellMenu__CallOnSelectServant(
       result,
       servantList,
       commandCodeList,
-      (const MethodInfo_265B8F0 *)Method_System_Action_ServantSellMenu_ResultKind__long____long____Invoke__);
+      (const MethodInfo_26B0010 *)Method_System_Action_ServantSellMenu_ResultKind__long____long____Invoke__);
   }
 }
 
@@ -114,18 +114,18 @@ void __fastcall ServantSellMenu__Close(ServantSellMenu_o *this, System_Action_o 
   System_Int32_array *v11; // x7
   System_Action_o *v12; // x20
 
-  if ( (byte_435398A & 1) == 0 )
+  if ( (byte_438D1C0 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_ServantSellMenu_EndClose__);
-    byte_435398A = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_ServantSellMenu_EndClose__);
+    byte_438D1C0 = 1;
   }
   servantOperationManager = this->fields.servantOperationManager;
   if ( !servantOperationManager )
-    sub_B7076C(0LL, callback);
-  ServantOperationManager__SetMode_32703024(servantOperationManager, 1, 0LL);
+    sub_B7769C(0LL, callback);
+  ServantOperationManager__SetMode_32933500(servantOperationManager, 1, 0LL);
   this->fields.onClose = callback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.onClose,
     (System_Int32_array **)callback,
     v6,
@@ -135,7 +135,7 @@ void __fastcall ServantSellMenu__Close(ServantSellMenu_o *this, System_Action_o 
     v10,
     v11);
   this->fields.state = 4;
-  v12 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v12 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v12, (Il2CppObject *)this, Method_ServantSellMenu_EndClose__, 0LL);
   BaseMenu__Close((BaseMenu_o *)this, v12, 0LL);
 }
@@ -157,23 +157,23 @@ void __fastcall ServantSellMenu__EndCloseShowServant(ServantSellMenu_o *this, co
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4353995 & 1) == 0 )
+  if ( (byte_438D1CB & 1) == 0 )
   {
-    sub_B70694(&Method_System_Action_ServantOperationManager_ActionKind__long____long_____ctor__);
-    sub_B70694(&System_Action_ServantOperationManager_ActionKind__long____long____TypeInfo);
-    sub_B70694(&Method_ServantSellMenu_OnSelectSellServant__);
-    byte_4353995 = 1;
+    sub_B775C4(&Method_System_Action_ServantOperationManager_ActionKind__long____long_____ctor__);
+    sub_B775C4(&System_Action_ServantOperationManager_ActionKind__long____long____TypeInfo);
+    sub_B775C4(&Method_ServantSellMenu_OnSelectSellServant__);
+    byte_438D1CB = 1;
   }
   this->fields.state = 2;
   servantOperationManager = this->fields.servantOperationManager;
-  v4 = (System_Action_ServantSellMenu_ResultKind__long____long____o *)sub_B70764(System_Action_ServantOperationManager_ActionKind__long____long____TypeInfo);
+  v4 = (System_Action_ServantSellMenu_ResultKind__long____long____o *)sub_B77694(System_Action_ServantOperationManager_ActionKind__long____long____TypeInfo);
   System_Action_ServantSellMenu_ResultKind__long____long______ctor(
     v4,
     (Il2CppObject *)this,
     Method_ServantSellMenu_OnSelectSellServant__,
-    (const MethodInfo_265B8DC *)Method_System_Action_ServantOperationManager_ActionKind__long____long_____ctor__);
+    (const MethodInfo_26AFFFC *)Method_System_Action_ServantOperationManager_ActionKind__long____long_____ctor__);
   if ( !servantOperationManager )
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   ServantOperationManager__SetMode(
     servantOperationManager,
     2,
@@ -187,14 +187,14 @@ void __fastcall ServantSellMenu__EndCloseShowServantQuestJump(ServantSellMenu_o 
   AvalonSceneManager_o *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4353996 & 1) == 0 )
+  if ( (byte_438D1CC & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4353996 = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_438D1CC = 1;
   }
-  Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   AvalonSceneManager__transitionScene(Instance, 34, 1, 0LL, 0LL);
 }
 
@@ -206,25 +206,25 @@ void __fastcall ServantSellMenu__EndOpen(ServantSellMenu_o *this, const MethodIn
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4353989 & 1) == 0 )
+  if ( (byte_438D1BF & 1) == 0 )
   {
-    sub_B70694(&Method_System_Action_ServantOperationManager_ActionKind__long____long_____ctor__);
-    sub_B70694(&System_Action_ServantOperationManager_ActionKind__long____long____TypeInfo);
-    sub_B70694(&Method_ServantSellMenu_OnSelectSellServant__);
-    byte_4353989 = 1;
+    sub_B775C4(&Method_System_Action_ServantOperationManager_ActionKind__long____long_____ctor__);
+    sub_B775C4(&System_Action_ServantOperationManager_ActionKind__long____long____TypeInfo);
+    sub_B775C4(&Method_ServantSellMenu_OnSelectSellServant__);
+    byte_438D1BF = 1;
   }
   if ( this->fields.onSelectSellServant )
   {
     this->fields.state = 2;
     servantOperationManager = this->fields.servantOperationManager;
-    v4 = (System_Action_ServantSellMenu_ResultKind__long____long____o *)sub_B70764(System_Action_ServantOperationManager_ActionKind__long____long____TypeInfo);
+    v4 = (System_Action_ServantSellMenu_ResultKind__long____long____o *)sub_B77694(System_Action_ServantOperationManager_ActionKind__long____long____TypeInfo);
     System_Action_ServantSellMenu_ResultKind__long____long______ctor(
       v4,
       (Il2CppObject *)this,
       Method_ServantSellMenu_OnSelectSellServant__,
-      (const MethodInfo_265B8DC *)Method_System_Action_ServantOperationManager_ActionKind__long____long_____ctor__);
+      (const MethodInfo_26AFFFC *)Method_System_Action_ServantOperationManager_ActionKind__long____long_____ctor__);
     if ( !servantOperationManager )
-      sub_B7076C(v5, v6);
+      sub_B7769C(v5, v6);
     ServantOperationManager__SetMode(
       servantOperationManager,
       2,
@@ -250,12 +250,12 @@ void __fastcall ServantSellMenu__EndShowCommandCode(
   CommonUI_o *Instance; // x20
   System_Action_o *v8; // x21
 
-  if ( (byte_4353994 & 1) == 0 )
+  if ( (byte_438D1CA & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_ServantSellMenu_EndCloseShowServant__);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4353994 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_ServantSellMenu_EndCloseShowServant__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_438D1CA = 1;
   }
   if ( isDecide )
   {
@@ -264,12 +264,12 @@ void __fastcall ServantSellMenu__EndShowCommandCode(
       goto LABEL_8;
     ServantOperationManager__ModifyItem(servantOperationManager, this->fields.commandCodeStatusId, 0LL);
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v8 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v8 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v8, (Il2CppObject *)this, Method_ServantSellMenu_EndCloseShowServant__, 0LL);
   if ( !Instance )
 LABEL_8:
-    sub_B7076C(servantOperationManager, isDecide);
+    sub_B7769C(servantOperationManager, isDecide);
   CommonUI__CloseServantStatusDialog(Instance, v8, 0LL);
 }
 
@@ -288,13 +288,13 @@ void __fastcall ServantSellMenu__EndShowServant(
   ServantOperationManager_o *servantOperationManager; // x0
   System_Action_o *v13; // x21
 
-  if ( (byte_4353993 & 1) == 0 )
+  if ( (byte_438D1C9 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_ServantSellMenu_EndCloseShowServantQuestJump__);
-    sub_B70694(&Method_ServantSellMenu_EndCloseShowServant__);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4353993 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_ServantSellMenu_EndCloseShowServantQuestJump__);
+    sub_B775C4(&Method_ServantSellMenu_EndCloseShowServant__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_438D1C9 = 1;
   }
   if ( questId < 1 )
   {
@@ -310,17 +310,17 @@ void __fastcall ServantSellMenu__EndShowServant(
       servantOperationManager = this->fields.servantOperationManager;
       if ( !servantOperationManager )
 LABEL_14:
-        sub_B7076C(servantOperationManager, isDecide);
+        sub_B7769C(servantOperationManager, isDecide);
       ServantOperationManager__ModifyItem(servantOperationManager, this->fields.servantStatusId, 0LL);
     }
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v10 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v10 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     v11 = &Method_ServantSellMenu_EndCloseShowServant__;
   }
   else
   {
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v10 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v10 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     v11 = &Method_ServantSellMenu_EndCloseShowServantQuestJump__;
   }
   v13 = v10;
@@ -346,26 +346,26 @@ System_String_o *__fastcall ServantSellMenu__GetTabTitleSpriteName(
   __int64 *v6; // x8
   __int64 *v7; // x9
 
-  if ( (byte_435398D & 1) == 0 )
+  if ( (byte_438D1C3 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_17303/*"btn_txt_craftessence_off"*/);
-    sub_B70694(&StringLiteral_17343/*"btn_txt_servant_off"*/);
-    sub_B70694(&StringLiteral_17300/*"btn_txt_cc_off"*/);
-    sub_B70694(&StringLiteral_17301/*"btn_txt_cc_on"*/);
-    sub_B70694(&StringLiteral_17344/*"btn_txt_servant_on"*/);
-    sub_B70694(&StringLiteral_17304/*"btn_txt_craftessence_on"*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_435398D = 1;
+    sub_B775C4(&StringLiteral_17386/*"btn_txt_craftessence_off"*/);
+    sub_B775C4(&StringLiteral_17426/*"btn_txt_servant_off"*/);
+    sub_B775C4(&StringLiteral_17383/*"btn_txt_cc_off"*/);
+    sub_B775C4(&StringLiteral_17384/*"btn_txt_cc_on"*/);
+    sub_B775C4(&StringLiteral_17427/*"btn_txt_servant_on"*/);
+    sub_B775C4(&StringLiteral_17387/*"btn_txt_craftessence_on"*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438D1C3 = 1;
   }
   if ( kind == 2 )
   {
-    v6 = &StringLiteral_17300/*"btn_txt_cc_off"*/;
-    v7 = &StringLiteral_17301/*"btn_txt_cc_on"*/;
+    v6 = &StringLiteral_17383/*"btn_txt_cc_off"*/;
+    v7 = &StringLiteral_17384/*"btn_txt_cc_on"*/;
   }
   else if ( kind == 1 )
   {
-    v6 = &StringLiteral_17303/*"btn_txt_craftessence_off"*/;
-    v7 = &StringLiteral_17304/*"btn_txt_craftessence_on"*/;
+    v6 = &StringLiteral_17386/*"btn_txt_craftessence_off"*/;
+    v7 = &StringLiteral_17387/*"btn_txt_craftessence_on"*/;
   }
   else
   {
@@ -374,8 +374,8 @@ System_String_o *__fastcall ServantSellMenu__GetTabTitleSpriteName(
       v6 = (__int64 *)&StringLiteral_1/*""*/;
       return (System_String_o *)*v6;
     }
-    v6 = &StringLiteral_17343/*"btn_txt_servant_off"*/;
-    v7 = &StringLiteral_17344/*"btn_txt_servant_on"*/;
+    v6 = &StringLiteral_17426/*"btn_txt_servant_off"*/;
+    v7 = &StringLiteral_17427/*"btn_txt_servant_on"*/;
   }
   if ( isSelected )
     v6 = v7;
@@ -389,7 +389,7 @@ void __fastcall ServantSellMenu__Init(ServantSellMenu_o *this, const MethodInfo 
 
   servantOperationManager = this->fields.servantOperationManager;
   if ( !servantOperationManager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantOperationManager__DestroyList(servantOperationManager, 0LL);
   this->fields.state = 0;
   BaseMenu__Init((BaseMenu_o *)this, 0LL);
@@ -402,18 +402,18 @@ void __fastcall ServantSellMenu__InitBackListView(ServantSellMenu_o *this, const
 
   servantOperationManager = this->fields.servantOperationManager;
   if ( !servantOperationManager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantOperationManager__InitBackListView(servantOperationManager, 0LL);
 }
 
 
-void __fastcall ServantSellMenu__Init_28610108(ServantSellMenu_o *this, int32_t tabToInit, const MethodInfo *method)
+void __fastcall ServantSellMenu__Init_28978880(ServantSellMenu_o *this, int32_t tabToInit, const MethodInfo *method)
 {
   ServantOperationManager_o *servantOperationManager; // x0
 
   servantOperationManager = this->fields.servantOperationManager;
   if ( !servantOperationManager )
-    sub_B7076C(0LL, tabToInit);
+    sub_B7769C(0LL, tabToInit);
   ServantOperationManager__DestroyList(servantOperationManager, 0LL);
   this->fields.state = 0;
   this->fields.tabKind = tabToInit;
@@ -434,19 +434,19 @@ void __fastcall ServantSellMenu__ModifyListItem(
   unsigned __int64 v11; // x22
   signed __int64 v12; // x23
 
-  if ( (byte_4353997 & 1) == 0 )
+  if ( (byte_438D1CD & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_long__AddRange__);
-    sub_B70694(&Method_System_Collections_Generic_List_long___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_List_long__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_long__get_Item__);
-    sub_B70694(&System_Collections_Generic_List_long__TypeInfo);
-    byte_4353997 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_long__AddRange__);
+    sub_B775C4(&Method_System_Collections_Generic_List_long___ctor__);
+    sub_B775C4(&Method_System_Collections_Generic_List_long__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_long__get_Item__);
+    sub_B775C4(&System_Collections_Generic_List_long__TypeInfo);
+    byte_438D1CD = 1;
   }
-  v7 = (System_Collections_Generic_List_long__o *)sub_B70764(System_Collections_Generic_List_long__TypeInfo);
+  v7 = (System_Collections_Generic_List_long__o *)sub_B77694(System_Collections_Generic_List_long__TypeInfo);
   System_Collections_Generic_List_long____ctor(
     v7,
-    (const MethodInfo_30BB42C *)Method_System_Collections_Generic_List_long___ctor__);
+    (const MethodInfo_30EB03C *)Method_System_Collections_Generic_List_long___ctor__);
   if ( selectedSvtIds && selectedCommandCodeIds )
   {
     if ( !v7 )
@@ -454,11 +454,11 @@ void __fastcall ServantSellMenu__ModifyListItem(
     System_Collections_Generic_List_long___AddRange(
       v7,
       (System_Collections_Generic_IEnumerable_T__o *)selectedSvtIds,
-      (const MethodInfo_30BC3DC *)Method_System_Collections_Generic_List_long__AddRange__);
+      (const MethodInfo_30EBFEC *)Method_System_Collections_Generic_List_long__AddRange__);
     System_Collections_Generic_List_long___AddRange(
       v7,
       (System_Collections_Generic_IEnumerable_T__o *)selectedCommandCodeIds,
-      (const MethodInfo_30BC3DC *)Method_System_Collections_Generic_List_long__AddRange__);
+      (const MethodInfo_30EBFEC *)Method_System_Collections_Generic_List_long__AddRange__);
   }
   else if ( !v7 )
   {
@@ -472,7 +472,7 @@ void __fastcall ServantSellMenu__ModifyListItem(
     while ( 1 )
     {
       if ( v11 >= (unsigned int)size )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       if ( !this->fields.servantOperationManager )
         break;
       ServantOperationManager__ModifyListItem(
@@ -484,7 +484,7 @@ void __fastcall ServantSellMenu__ModifyListItem(
       size = v7->fields._size;
     }
 LABEL_16:
-    sub_B7076C(v8, v9);
+    sub_B7769C(v8, v9);
   }
 }
 
@@ -495,10 +495,10 @@ void __fastcall ServantSellMenu__OnClickTabCommandCode(ServantSellMenu_o *this, 
   __int64 v4; // x1
   ServantOperationManager_o *servantOperationManager; // x0
 
-  if ( (byte_4353990 & 1) == 0 )
+  if ( (byte_438D1C6 & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4353990 = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438D1C6 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -511,8 +511,8 @@ void __fastcall ServantSellMenu__OnClickTabCommandCode(ServantSellMenu_o *this, 
     ServantSellMenu__SetTabKind(this, 2, 0, v3);
     servantOperationManager = this->fields.servantOperationManager;
     if ( !servantOperationManager )
-      sub_B7076C(0LL, v4);
-    ServantOperationManager__SetMode_32703024(servantOperationManager, 2, 0LL);
+      sub_B7769C(0LL, v4);
+    ServantOperationManager__SetMode_32933500(servantOperationManager, 2, 0LL);
   }
 }
 
@@ -523,10 +523,10 @@ void __fastcall ServantSellMenu__OnClickTabServant(ServantSellMenu_o *this, cons
   __int64 v4; // x1
   ServantOperationManager_o *servantOperationManager; // x0
 
-  if ( (byte_435398E & 1) == 0 )
+  if ( (byte_438D1C4 & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_435398E = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438D1C4 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -539,8 +539,8 @@ void __fastcall ServantSellMenu__OnClickTabServant(ServantSellMenu_o *this, cons
     ServantSellMenu__SetTabKind(this, 0, 0, v3);
     servantOperationManager = this->fields.servantOperationManager;
     if ( !servantOperationManager )
-      sub_B7076C(0LL, v4);
-    ServantOperationManager__SetMode_32703024(servantOperationManager, 2, 0LL);
+      sub_B7769C(0LL, v4);
+    ServantOperationManager__SetMode_32933500(servantOperationManager, 2, 0LL);
   }
 }
 
@@ -551,10 +551,10 @@ void __fastcall ServantSellMenu__OnClickTabServantEquip(ServantSellMenu_o *this,
   __int64 v4; // x1
   ServantOperationManager_o *servantOperationManager; // x0
 
-  if ( (byte_435398F & 1) == 0 )
+  if ( (byte_438D1C5 & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_435398F = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438D1C5 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -568,8 +568,8 @@ void __fastcall ServantSellMenu__OnClickTabServantEquip(ServantSellMenu_o *this,
     ServantSellMenu__SetTabKind(this, 1, 0, v3);
     servantOperationManager = this->fields.servantOperationManager;
     if ( !servantOperationManager )
-      sub_B7076C(0LL, v4);
-    ServantOperationManager__SetMode_32703024(servantOperationManager, 2, 0LL);
+      sub_B7769C(0LL, v4);
+    ServantOperationManager__SetMode_32933500(servantOperationManager, 2, 0LL);
   }
 }
 
@@ -592,18 +592,18 @@ void __fastcall ServantSellMenu__OnSelectSellServant(
   ServantStatusDialog_ResultDelegate_o *v17; // x22
   __int64 v18; // x0
 
-  if ( (byte_4353992 & 1) == 0 )
+  if ( (byte_438D1C8 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_UserCommandCodeMaster___);
-    sub_B70694(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
-    sub_B70694(&ServantStatusDialog_EndIndividualityDelegate_TypeInfo);
-    sub_B70694(&ServantStatusDialog_ResultDelegate_TypeInfo);
-    sub_B70694(&Method_ServantSellMenu_EndShowCommandCode__);
-    sub_B70694(&Method_ServantSellMenu_EndShowServant__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4353992 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_UserCommandCodeMaster___);
+    sub_B775C4(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
+    sub_B775C4(&ServantStatusDialog_EndIndividualityDelegate_TypeInfo);
+    sub_B775C4(&ServantStatusDialog_ResultDelegate_TypeInfo);
+    sub_B775C4(&Method_ServantSellMenu_EndShowCommandCode__);
+    sub_B775C4(&Method_ServantSellMenu_EndShowServant__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438D1C8 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -627,20 +627,20 @@ void __fastcall ServantSellMenu__OnSelectSellServant(
       if ( commandCodeList->max_length )
       {
         this->fields.commandCodeStatusId = commandCodeList->m_Items[0];
-        Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( Instance )
         {
           Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                         Instance,
-                                        (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___);
+                                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___);
           if ( Instance )
           {
             Entity = DataMasterBase_UserServantStorageMaster__UserServantEntity__long___GetEntity(
                        (DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *)Instance,
                        this->fields.commandCodeStatusId,
-                       (const MethodInfo_21C0668 *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
-            v12 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-            v13 = (ServantStatusDialog_EndIndividualityDelegate_o *)sub_B70764(ServantStatusDialog_EndIndividualityDelegate_TypeInfo);
+                       (const MethodInfo_21FBABC *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
+            v12 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+            v13 = (ServantStatusDialog_EndIndividualityDelegate_o *)sub_B77694(ServantStatusDialog_EndIndividualityDelegate_TypeInfo);
             ServantStatusDialog_EndIndividualityDelegate___ctor(
               v13,
               (Il2CppObject *)this,
@@ -648,7 +648,7 @@ void __fastcall ServantSellMenu__OnSelectSellServant(
               0LL);
             if ( v12 )
             {
-              CommonUI__OpenServantStatusDialog_17917624(v12, 0, (UserCommandCodeEntity_o *)Entity, v13, 0LL, 0LL);
+              CommonUI__OpenServantStatusDialog_18069428(v12, 0, (UserCommandCodeEntity_o *)Entity, v13, 0LL, 0LL);
               return;
             }
           }
@@ -663,10 +663,10 @@ void __fastcall ServantSellMenu__OnSelectSellServant(
       if ( servantList->max_length )
       {
         this->fields.servantStatusId = servantList->m_Items[0];
-        v14 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        v14 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         servantStatusId = this->fields.servantStatusId;
         v16 = (CommonUI_o *)v14;
-        v17 = (ServantStatusDialog_ResultDelegate_o *)sub_B70764(ServantStatusDialog_ResultDelegate_TypeInfo);
+        v17 = (ServantStatusDialog_ResultDelegate_o *)sub_B77694(ServantStatusDialog_ResultDelegate_TypeInfo);
         ServantStatusDialog_ResultDelegate___ctor(
           v17,
           (Il2CppObject *)this,
@@ -674,15 +674,15 @@ void __fastcall ServantSellMenu__OnSelectSellServant(
           0LL);
         if ( v16 )
         {
-          CommonUI__OpenServantStatusDialog_17914808(v16, 34, servantStatusId, v17, 0LL, 0LL);
+          CommonUI__OpenServantStatusDialog_18066612(v16, 34, servantStatusId, v17, 0LL, 0LL);
           return;
         }
 LABEL_22:
-        sub_B7076C(Instance, v10);
+        sub_B7769C(Instance, v10);
       }
     }
-    v18 = sub_B70798(Instance);
-    sub_B70738(v18, 0LL);
+    v18 = sub_B776C8(Instance);
+    sub_B77668(v18, 0LL);
   }
 }
 
@@ -716,11 +716,11 @@ void __fastcall ServantSellMenu__Open(
   const MethodInfo *v27; // x3
   System_Action_o *v28; // x20
 
-  if ( (byte_4353988 & 1) == 0 )
+  if ( (byte_438D1BE & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_ServantSellMenu_EndOpen__);
-    byte_4353988 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_ServantSellMenu_EndOpen__);
+    byte_438D1BE = 1;
   }
   state = this->fields.state;
   if ( state )
@@ -728,7 +728,7 @@ void __fastcall ServantSellMenu__Open(
     if ( (state & 0xFFFFFFFE) == 2 )
     {
       this->fields.onSelectSellServant = onSelectSellServant;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&this->fields.onSelectSellServant,
         (System_Int32_array **)onSelectSellServant,
         (System_String_array **)onOpen,
@@ -738,7 +738,7 @@ void __fastcall ServantSellMenu__Open(
         v6,
         v7);
       this->fields.onOpen = onOpen;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&this->fields.onOpen,
         (System_Int32_array **)onOpen,
         v12,
@@ -753,7 +753,7 @@ void __fastcall ServantSellMenu__Open(
   else
   {
     this->fields.onSelectSellServant = onSelectSellServant;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.onSelectSellServant,
       (System_Int32_array **)onSelectSellServant,
       (System_String_array **)onOpen,
@@ -763,7 +763,7 @@ void __fastcall ServantSellMenu__Open(
       v6,
       v7);
     this->fields.onOpen = onOpen;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.onOpen,
       (System_Int32_array **)onOpen,
       v19,
@@ -778,11 +778,11 @@ void __fastcall ServantSellMenu__Open(
           ServantSellMenu__SetTabKind(this, this->fields.tabKind, 1, v27),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.servantOperationManager) == 0LL) )
     {
-      sub_B7076C(gameObject, v26);
+      sub_B7769C(gameObject, v26);
     }
-    ServantOperationManager__SetMode_32703024((ServantOperationManager_o *)gameObject, 1, 0LL);
+    ServantOperationManager__SetMode_32933500((ServantOperationManager_o *)gameObject, 1, 0LL);
     this->fields.state = 1;
-    v28 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v28 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     System_Action___ctor(v28, (Il2CppObject *)this, Method_ServantSellMenu_EndOpen__, 0LL);
     BaseMenu__Open((BaseMenu_o *)this, v28, 0LL);
   }
@@ -805,11 +805,11 @@ void __fastcall ServantSellMenu__SetTabButton(
   __int64 *v16; // x8
   _BOOL4 v17; // w20
 
-  if ( (byte_435398C & 1) == 0 )
+  if ( (byte_438D1C2 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_17218/*"btn_bg_12"*/);
-    this = (ServantSellMenu_o *)sub_B70694(&StringLiteral_17220/*"btn_bg_19"*/);
-    byte_435398C = 1;
+    sub_B775C4(&StringLiteral_17301/*"btn_bg_12"*/);
+    this = (ServantSellMenu_o *)sub_B775C4(&StringLiteral_17303/*"btn_bg_19"*/);
+    byte_438D1C2 = 1;
   }
   if ( !tabButton
     || (((void (__fastcall *)(UICommonButton_o *, __int64, Il2CppMethodPointer, UISprite_o *, _QWORD, _QWORD, bool, const MethodInfo *))tabButton->klass->vtable._5_set_isEnabled.method)(
@@ -826,11 +826,11 @@ void __fastcall ServantSellMenu__SetTabButton(
         !titleSprite)
     || (UISprite__set_spriteName(titleSprite, (System_String_o *)this, 0LL), !tabSprite) )
   {
-    sub_B7076C(this, tabButton);
+    sub_B7769C(this, tabButton);
   }
-  v16 = &StringLiteral_17220/*"btn_bg_19"*/;
+  v16 = &StringLiteral_17303/*"btn_bg_19"*/;
   if ( selectedKind != tabKind )
-    v16 = &StringLiteral_17218/*"btn_bg_12"*/;
+    v16 = &StringLiteral_17301/*"btn_bg_12"*/;
   UISprite__set_spriteName(tabSprite, (System_String_o *)*v16, 0LL);
   v17 = isInit;
   ((void (__fastcall *)(UICommonButton_o *, _QWORD, _BOOL4, Il2CppMethodPointer))tabButton->klass->vtable._14_SetState.method)(
@@ -906,7 +906,7 @@ void __fastcall ServantSellMenu__SetTabKind(
       goto LABEL_10;
     }
 LABEL_11:
-    sub_B7076C(servantOperationManager, v10);
+    sub_B7769C(servantOperationManager, v10);
   }
 LABEL_10:
   this->fields.tabKind = kind;
@@ -966,35 +966,35 @@ void __fastcall ServantSellMenu__SetTabLabel(ServantSellMenu_o *this, int32_t ki
   int32_t v52; // [xsp+Ch] [xbp-94h] BYREF
   int32_t servantEquipSum[2]; // [xsp+58h] [xbp-48h] BYREF
 
-  if ( (byte_435398B & 1) == 0 )
+  if ( (byte_438D1C1 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_UserCommandCodeMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&StringLiteral_3037/*"CHARA_GRAPH_TAB_COMMAND_CODE"*/);
-    sub_B70694(&StringLiteral_3038/*"CHARA_GRAPH_TAB_SERVANT"*/);
-    sub_B70694(&StringLiteral_3039/*"CHARA_GRAPH_TAB_SERVANT_EQUIP"*/);
-    byte_435398B = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_UserCommandCodeMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&StringLiteral_3086/*"CHARA_GRAPH_TAB_COMMAND_CODE"*/);
+    sub_B775C4(&StringLiteral_3087/*"CHARA_GRAPH_TAB_SERVANT"*/);
+    sub_B775C4(&StringLiteral_3088/*"CHARA_GRAPH_TAB_SERVANT_EQUIP"*/);
+    byte_438D1C1 = 1;
   }
   *(_QWORD *)servantEquipSum = 0LL;
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_75;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserServantMaster___);
   if ( !Instance )
     goto LABEL_75;
   UserServantMaster__getCount((UserServantMaster_o *)Instance, &servantEquipSum[1], servantEquipSum, 1, 0LL);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_75;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___);
   if ( !Instance )
     goto LABEL_75;
   Count = UserCommandCodeMaster__getCount((UserCommandCodeMaster_o *)Instance, 0LL);
@@ -1003,10 +1003,10 @@ void __fastcall ServantSellMenu__SetTabLabel(ServantSellMenu_o *this, int32_t ki
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  if ( !byte_434E9FD )
+  if ( !byte_4387FCE )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    byte_434E9FD = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    byte_4387FCE = 1;
   }
   v9 = LocalizationManager_TypeInfo;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1020,11 +1020,11 @@ void __fastcall ServantSellMenu__SetTabLabel(ServantSellMenu_o *this, int32_t ki
   v12 = static_fields[21];
   v13 = static_fields[22];
   v14 = static_fields[23];
-  if ( !byte_434E9FE )
+  if ( !byte_4387FCF )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
     v9 = LocalizationManager_TypeInfo;
-    byte_434E9FE = 1;
+    byte_4387FCF = 1;
   }
   if ( (BYTE3(v9->vtable._0_Equals.methodPtr) & 4) != 0 && !v9->_2.cctor_finished )
   {
@@ -1037,7 +1037,7 @@ void __fastcall ServantSellMenu__SetTabLabel(ServantSellMenu_o *this, int32_t ki
   v18 = v15[25];
   v19 = v15[26];
   v20 = v15[27];
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3038/*"CHARA_GRAPH_TAB_SERVANT"*/, 0LL);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3087/*"CHARA_GRAPH_TAB_SERVANT"*/, 0LL);
   v52 = servantEquipSum[1];
   Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &v52, v22);
   if ( !SelfUserGame )
@@ -1045,7 +1045,7 @@ void __fastcall ServantSellMenu__SetTabLabel(ServantSellMenu_o *this, int32_t ki
   v24 = (Il2CppObject *)Instance;
   svtKeep = SelfUserGame->fields.svtKeep;
   v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &svtKeep, v23);
-  Instance = (DataManager_o *)System_String__Format_44753704(v21, v24, v25, 0LL);
+  Instance = (DataManager_o *)System_String__Format_44897472(v21, v24, v25, 0LL);
   if ( !servantTabLabel )
     goto LABEL_75;
   UILabel__set_text(servantTabLabel, (System_String_o *)Instance, 0LL);
@@ -1075,12 +1075,12 @@ void __fastcall ServantSellMenu__SetTabLabel(ServantSellMenu_o *this, int32_t ki
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3039/*"CHARA_GRAPH_TAB_SERVANT_EQUIP"*/, 0LL);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3088/*"CHARA_GRAPH_TAB_SERVANT_EQUIP"*/, 0LL);
   v52 = servantEquipSum[0];
   v33 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v52, v32);
   svtKeep = SelfUserGame->fields.svtEquipKeep;
   v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &svtKeep, v34);
-  Instance = (DataManager_o *)System_String__Format_44753704(v31, v33, v35, 0LL);
+  Instance = (DataManager_o *)System_String__Format_44897472(v31, v33, v35, 0LL);
   if ( !servantEquipTabLabel )
     goto LABEL_75;
   UILabel__set_text(servantEquipTabLabel, (System_String_o *)Instance, 0LL);
@@ -1110,13 +1110,13 @@ void __fastcall ServantSellMenu__SetTabLabel(ServantSellMenu_o *this, int32_t ki
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v41 = LocalizationManager__Get((System_String_o *)StringLiteral_3037/*"CHARA_GRAPH_TAB_COMMAND_CODE"*/, 0LL);
+  v41 = LocalizationManager__Get((System_String_o *)StringLiteral_3086/*"CHARA_GRAPH_TAB_COMMAND_CODE"*/, 0LL);
   v52 = Count;
   v44 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v52, v42);
-  if ( !byte_434DEF6 )
+  if ( !byte_43874B8 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    byte_434DEF6 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    byte_43874B8 = 1;
   }
   v45 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1127,13 +1127,13 @@ void __fastcall ServantSellMenu__SetTabLabel(ServantSellMenu_o *this, int32_t ki
   }
   svtKeep = v45->static_fields->CommandCodeFrameMax;
   v46 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &svtKeep, v43);
-  Instance = (DataManager_o *)System_String__Format_44753704(v41, v44, v46, 0LL);
+  Instance = (DataManager_o *)System_String__Format_44897472(v41, v44, v46, 0LL);
   if ( !commandCodeTabLabel
     || (UILabel__set_text(commandCodeTabLabel, (System_String_o *)Instance, 0LL),
         (Instance = (DataManager_o *)this->fields.commandCodeTabLabel) == 0LL) )
   {
 LABEL_75:
-    sub_B7076C(Instance, v7);
+    sub_B7769C(Instance, v7);
   }
   if ( kind == 2 )
     v47 = v20;
@@ -1161,6 +1161,6 @@ bool __fastcall ServantSellMenu__get_IsSellEquipedCmdCodeLastServant(ServantSell
 
   servantOperationManager = this->fields.servantOperationManager;
   if ( !servantOperationManager )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return servantOperationManager->fields._IsSellEquipedCmdCodeLastServant_k__BackingField;
 }

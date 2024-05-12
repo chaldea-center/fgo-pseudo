@@ -17,19 +17,19 @@ BattleLogicTask_array *__fastcall ReactTaskTarget__CreateReactionTasks(
   System_Collections_Generic_IEnumerable_T__o *v12; // x19
   System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *v13; // x20
 
-  if ( (byte_435026E & 1) == 0 )
+  if ( (byte_43899A1 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Action_BattleLogicTask___ctor__);
-    sub_B70694(&System_Action_BattleLogicTask__TypeInfo);
-    sub_B70694(&Method_BasicHelper_ForEach_BattleLogicTask___);
-    sub_B70694(&Method_ReactTaskTarget___c__DisplayClass0_0__CreateReactionTasks_b__0__);
-    sub_B70694(&ReactTaskTarget___c__DisplayClass0_0_TypeInfo);
-    byte_435026E = 1;
+    sub_B775C4(&Method_System_Action_BattleLogicTask___ctor__);
+    sub_B775C4(&System_Action_BattleLogicTask__TypeInfo);
+    sub_B775C4(&Method_BasicHelper_ForEach_BattleLogicTask___);
+    sub_B775C4(&Method_ReactTaskTarget___c__DisplayClass0_0__CreateReactionTasks_b__0__);
+    sub_B775C4(&ReactTaskTarget___c__DisplayClass0_0_TypeInfo);
+    byte_43899A1 = 1;
   }
-  v9 = (ReactTaskTarget___c__DisplayClass0_0_o *)sub_B70764(ReactTaskTarget___c__DisplayClass0_0_TypeInfo);
+  v9 = (ReactTaskTarget___c__DisplayClass0_0_o *)sub_B77694(ReactTaskTarget___c__DisplayClass0_0_TypeInfo);
   ReactTaskTarget___c__DisplayClass0_0___ctor(v9, 0LL);
   if ( !v9 )
-    sub_B7076C(v10, v11);
+    sub_B7769C(v10, v11);
   v9->fields.priority = priority;
   v12 = (System_Collections_Generic_IEnumerable_T__o *)((__int64 (__fastcall *)(ReactTaskTarget_o *, ServantReactTaskCreator_o *, BattleLogic_o *, _QWORD, Il2CppMethodPointer))this->klass->vtable._4_CreateReactionTasksPartial.method)(
                                                          this,
@@ -37,16 +37,16 @@ BattleLogicTask_array *__fastcall ReactTaskTarget__CreateReactionTasks(
                                                          logic,
                                                          (unsigned int)priority,
                                                          this->klass->vtable._5_TargetServants.methodPtr);
-  v13 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B70764(System_Action_BattleLogicTask__TypeInfo);
+  v13 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B77694(System_Action_BattleLogicTask__TypeInfo);
   System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData____ctor(
     v13,
     (Il2CppObject *)v9,
     Method_ReactTaskTarget___c__DisplayClass0_0__CreateReactionTasks_b__0__,
-    (const MethodInfo_264C148 *)Method_System_Action_BattleLogicTask___ctor__);
+    (const MethodInfo_26A0868 *)Method_System_Action_BattleLogicTask___ctor__);
   BasicHelper__ForEach_DrawLotsDisplayMessage_DisplayedInGroup_SaveData_(
     v12,
     (System_Action_T__o *)v13,
-    (const MethodInfo_1BDE02C *)Method_BasicHelper_ForEach_BattleLogicTask___);
+    (const MethodInfo_1C676E8 *)Method_BasicHelper_ForEach_BattleLogicTask___);
   return (BattleLogicTask_array *)v12;
 }
 
@@ -80,25 +80,25 @@ BattleLogicTask_array *__fastcall ReactTaskTarget__CreateReactionTasksPartial(
   System_Func_WarBoardManager_WarBoardOnboardSkillTarget__WarBoardPieceData__o *v28; // x20
   System_Collections_Generic_IEnumerable_TSource__o *v29; // x0
 
-  if ( (byte_435026F & 1) == 0 )
+  if ( (byte_43899A2 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Linq_Enumerable_Select_BattleServantData__BattleLogicTask___);
-    sub_B70694(&Method_System_Linq_Enumerable_ToArray_BattleLogicTask___);
-    sub_B70694(&Method_System_Linq_Enumerable_Where_BattleServantData___);
-    sub_B70694(&Method_System_Func_BattleServantData__BattleLogicTask___ctor__);
-    sub_B70694(&Method_System_Func_BattleServantData__bool___ctor__);
-    sub_B70694(&System_Func_BattleServantData__bool__TypeInfo);
-    sub_B70694(&System_Func_BattleServantData__BattleLogicTask__TypeInfo);
-    sub_B70694(&Method_ReactTaskTarget___c__DisplayClass1_0__CreateReactionTasksPartial_b__0__);
-    sub_B70694(&Method_ReactTaskTarget___c__DisplayClass1_0__CreateReactionTasksPartial_b__1__);
-    sub_B70694(&ReactTaskTarget___c__DisplayClass1_0_TypeInfo);
-    byte_435026F = 1;
+    sub_B775C4(&Method_System_Linq_Enumerable_Select_BattleServantData__BattleLogicTask___);
+    sub_B775C4(&Method_System_Linq_Enumerable_ToArray_BattleLogicTask___);
+    sub_B775C4(&Method_System_Linq_Enumerable_Where_BattleServantData___);
+    sub_B775C4(&Method_System_Func_BattleServantData__BattleLogicTask___ctor__);
+    sub_B775C4(&Method_System_Func_BattleServantData__bool___ctor__);
+    sub_B775C4(&System_Func_BattleServantData__bool__TypeInfo);
+    sub_B775C4(&System_Func_BattleServantData__BattleLogicTask__TypeInfo);
+    sub_B775C4(&Method_ReactTaskTarget___c__DisplayClass1_0__CreateReactionTasksPartial_b__0__);
+    sub_B775C4(&Method_ReactTaskTarget___c__DisplayClass1_0__CreateReactionTasksPartial_b__1__);
+    sub_B775C4(&ReactTaskTarget___c__DisplayClass1_0_TypeInfo);
+    byte_43899A2 = 1;
   }
-  v9 = sub_B70764(ReactTaskTarget___c__DisplayClass1_0_TypeInfo);
+  v9 = sub_B77694(ReactTaskTarget___c__DisplayClass1_0_TypeInfo);
   ReactTaskTarget___c__DisplayClass1_0___ctor((ReactTaskTarget___c__DisplayClass1_0_o *)v9, 0LL);
   if ( !v9
     || (*(_QWORD *)(v9 + 16) = creator,
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)(v9 + 16),
           (System_Int32_array **)creator,
           v12,
@@ -108,7 +108,7 @@ BattleLogicTask_array *__fastcall ReactTaskTarget__CreateReactionTasksPartial(
           v16,
           v17),
         *(_QWORD *)(v9 + 24) = logic,
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)(v9 + 24),
           (System_Int32_array **)logic,
           v18,
@@ -121,35 +121,35 @@ BattleLogicTask_array *__fastcall ReactTaskTarget__CreateReactionTasksPartial(
         *(_DWORD *)(v9 + 32) = priority,
         !v24) )
   {
-    sub_B7076C(v10, v11);
+    sub_B7769C(v10, v11);
   }
   v25 = (System_Collections_Generic_IEnumerable_TSource__o *)((__int64 (__fastcall *)(ReactTaskTarget_o *, _QWORD, Il2CppMethodPointer))this->klass->vtable._5_TargetServants.method)(
                                                                this,
                                                                *(_QWORD *)(v24 + 32),
                                                                this->klass->vtable._6_ExistPriorityUpToAny.methodPtr);
-  v26 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_BattleServantData__bool__TypeInfo);
+  v26 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B77694(System_Func_BattleServantData__bool__TypeInfo);
   System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
     v26,
     (Il2CppObject *)v9,
     Method_ReactTaskTarget___c__DisplayClass1_0__CreateReactionTasksPartial_b__0__,
-    (const MethodInfo_29AC578 *)Method_System_Func_BattleServantData__bool___ctor__);
+    (const MethodInfo_29E92C4 *)Method_System_Func_BattleServantData__bool___ctor__);
   v27 = System_Linq_Enumerable__Where_WarBoardManager_WarBoardOnboardSkillTarget_(
           v25,
           (System_Func_TSource__bool__o *)v26,
-          (const MethodInfo_1CCCE44 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
-  v28 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__WarBoardPieceData__o *)sub_B70764(System_Func_BattleServantData__BattleLogicTask__TypeInfo);
+          (const MethodInfo_1D41C94 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
+  v28 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__WarBoardPieceData__o *)sub_B77694(System_Func_BattleServantData__BattleLogicTask__TypeInfo);
   System_Func_WarBoardManager_WarBoardOnboardSkillTarget__WarBoardPieceData____ctor(
     v28,
     (Il2CppObject *)v9,
     Method_ReactTaskTarget___c__DisplayClass1_0__CreateReactionTasksPartial_b__1__,
-    (const MethodInfo_29ADCC4 *)Method_System_Func_BattleServantData__BattleLogicTask___ctor__);
+    (const MethodInfo_29EAA10 *)Method_System_Func_BattleServantData__BattleLogicTask___ctor__);
   v29 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_WarBoardManager_WarBoardOnboardSkillTarget__WarBoardPieceData_(
                                                                v27,
                                                                (System_Func_TSource__TResult__o *)v28,
-                                                               (const MethodInfo_1CC4218 *)Method_System_Linq_Enumerable_Select_BattleServantData__BattleLogicTask___);
+                                                               (const MethodInfo_1D39068 *)Method_System_Linq_Enumerable_Select_BattleServantData__BattleLogicTask___);
   return (BattleLogicTask_array *)System_Linq_Enumerable__ToArray_DrawLotsDisplayMessage_DisplayedInGroup_SaveData_(
                                     v29,
-                                    (const MethodInfo_1CC8794 *)Method_System_Linq_Enumerable_ToArray_BattleLogicTask___);
+                                    (const MethodInfo_1D3D5E4 *)Method_System_Linq_Enumerable_ToArray_BattleLogicTask___);
 }
 
 
@@ -206,20 +206,20 @@ bool __fastcall ReactTaskTarget__ExistTargetPriority(
   WellFired_USFGOPlayBgmEventConditional_CondBGM_array *v25; // x19
   System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *v26; // x20
 
-  if ( (byte_4350271 & 1) == 0 )
+  if ( (byte_43899A4 & 1) == 0 )
   {
-    sub_B70694(&Method_BasicHelper_Any_BattleServantData____69235496);
-    sub_B70694(&Method_System_Func_BattleServantData__bool___ctor__);
-    sub_B70694(&System_Func_BattleServantData__bool__TypeInfo);
-    sub_B70694(&Method_ReactTaskTarget___c__DisplayClass4_0__ExistTargetPriority_b__0__);
-    sub_B70694(&ReactTaskTarget___c__DisplayClass4_0_TypeInfo);
-    byte_4350271 = 1;
+    sub_B775C4(&Method_BasicHelper_Any_BattleServantData____69468184);
+    sub_B775C4(&Method_System_Func_BattleServantData__bool___ctor__);
+    sub_B775C4(&System_Func_BattleServantData__bool__TypeInfo);
+    sub_B775C4(&Method_ReactTaskTarget___c__DisplayClass4_0__ExistTargetPriority_b__0__);
+    sub_B775C4(&ReactTaskTarget___c__DisplayClass4_0_TypeInfo);
+    byte_43899A4 = 1;
   }
-  v9 = sub_B70764(ReactTaskTarget___c__DisplayClass4_0_TypeInfo);
+  v9 = sub_B77694(ReactTaskTarget___c__DisplayClass4_0_TypeInfo);
   ReactTaskTarget___c__DisplayClass4_0___ctor((ReactTaskTarget___c__DisplayClass4_0_o *)v9, 0LL);
   if ( !v9
     || (*(_QWORD *)(v9 + 16) = creator,
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)(v9 + 16),
           (System_Int32_array **)creator,
           v12,
@@ -229,7 +229,7 @@ bool __fastcall ReactTaskTarget__ExistTargetPriority(
           v16,
           v17),
         *(_QWORD *)(v9 + 24) = logic,
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)(v9 + 24),
           (System_Int32_array **)logic,
           v18,
@@ -242,22 +242,22 @@ bool __fastcall ReactTaskTarget__ExistTargetPriority(
         *(_DWORD *)(v9 + 32) = priority,
         !v24) )
   {
-    sub_B7076C(v10, v11);
+    sub_B7769C(v10, v11);
   }
   v25 = (WellFired_USFGOPlayBgmEventConditional_CondBGM_array *)((__int64 (__fastcall *)(ReactTaskTarget_o *, _QWORD, Il2CppMethodPointer))this->klass->vtable._5_TargetServants.method)(
                                                                   this,
                                                                   *(_QWORD *)(v24 + 32),
                                                                   this->klass->vtable._6_ExistPriorityUpToAny.methodPtr);
-  v26 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_BattleServantData__bool__TypeInfo);
+  v26 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B77694(System_Func_BattleServantData__bool__TypeInfo);
   System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
     v26,
     (Il2CppObject *)v9,
     Method_ReactTaskTarget___c__DisplayClass4_0__ExistTargetPriority_b__0__,
-    (const MethodInfo_29AC578 *)Method_System_Func_BattleServantData__bool___ctor__);
+    (const MethodInfo_29E92C4 *)Method_System_Func_BattleServantData__bool___ctor__);
   return BasicHelper__Any_USFGOPlayBgmEventConditional_CondBGM_(
            v25,
            (System_Func_T__bool__o *)v26,
-           (const MethodInfo_1BDCB34 *)Method_BasicHelper_Any_BattleServantData____69235496);
+           (const MethodInfo_1C661F0 *)Method_BasicHelper_Any_BattleServantData____69468184);
 }
 
 
@@ -266,12 +266,12 @@ BattleServantData_array *__fastcall ReactTaskTarget__TargetServants(
         BattleData_o *data,
         const MethodInfo *method)
 {
-  if ( (byte_4350270 & 1) == 0 )
+  if ( (byte_43899A3 & 1) == 0 )
   {
-    sub_B70694(&BattleServantData___TypeInfo);
-    byte_4350270 = 1;
+    sub_B775C4(&BattleServantData___TypeInfo);
+    byte_43899A3 = 1;
   }
-  return (BattleServantData_array *)sub_B706AC(BattleServantData___TypeInfo, 0LL);
+  return (BattleServantData_array *)sub_B775DC(BattleServantData___TypeInfo, 0LL);
 }
 
 
@@ -289,7 +289,7 @@ void __fastcall ReactTaskTarget___c__DisplayClass0_0___CreateReactionTasks_b__0(
         const MethodInfo *method)
 {
   if ( !task )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   BattleLogicTask__SetAiPriority(task, this->fields.priority, 0LL);
 }
 
@@ -311,7 +311,7 @@ bool __fastcall ReactTaskTarget___c__DisplayClass1_0___CreateReactionTasksPartia
 
   creator = this->fields.creator;
   if ( !creator )
-    sub_B7076C(0LL, svt);
+    sub_B7769C(0LL, svt);
   return ((__int64 (__fastcall *)(struct ServantReactTaskCreator_o *, struct BattleLogic_o *, BattleServantData_o *, _QWORD, Il2CppMethodPointer))creator->klass->vtable._7_IsCreatable.method)(
            creator,
            this->fields.logic,
@@ -330,7 +330,7 @@ BattleLogicTask_o *__fastcall ReactTaskTarget___c__DisplayClass1_0___CreateReact
 
   creator = this->fields.creator;
   if ( !creator )
-    sub_B7076C(0LL, svt);
+    sub_B7769C(0LL, svt);
   return (BattleLogicTask_o *)((__int64 (__fastcall *)(struct ServantReactTaskCreator_o *, BattleServantData_o *, struct BattleLogic_o *, void *))creator->klass->vtable._8_Create.method)(
                                 creator,
                                 svt,
@@ -356,7 +356,7 @@ bool __fastcall ReactTaskTarget___c__DisplayClass4_0___ExistTargetPriority_b__0(
 
   creator = this->fields.creator;
   if ( !creator )
-    sub_B7076C(0LL, svt);
+    sub_B7769C(0LL, svt);
   return ((__int64 (__fastcall *)(struct ServantReactTaskCreator_o *, struct BattleLogic_o *, BattleServantData_o *, _QWORD, Il2CppMethodPointer))creator->klass->vtable._7_IsCreatable.method)(
            creator,
            this->fields.logic,

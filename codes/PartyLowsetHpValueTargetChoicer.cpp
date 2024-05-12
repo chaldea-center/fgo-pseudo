@@ -15,13 +15,13 @@ System_Int32_array *__fastcall PartyLowsetHpValueTargetChoicer__GetCandidate(
   int32_t actorId; // w0
   BattleServantData_o *MostMatchedServant; // x1
 
-  if ( (byte_4354CB7 & 1) == 0 )
+  if ( (byte_438E4AB & 1) == 0 )
   {
-    sub_B70694(&TargetFilterLowestHpValue_TypeInfo);
-    byte_4354CB7 = 1;
+    sub_B775C4(&TargetFilterLowestHpValue_TypeInfo);
+    byte_438E4AB = 1;
   }
   Candidate = PartyAllFieldTargetAggregator__GetCandidate((PartyAllFieldTargetAggregator_o *)this, 0LL);
-  v4 = (TargetFilterLowestHpValue_o *)sub_B70764(TargetFilterLowestHpValue_TypeInfo);
+  v4 = (TargetFilterLowestHpValue_o *)sub_B77694(TargetFilterLowestHpValue_TypeInfo);
   TargetFilterLowestHpValue___ctor(v4, 0LL);
   actorId = TargetAggregator__get_actorId((TargetAggregator_o *)this, 0LL);
   MostMatchedServant = TargetAggregator__GetMostMatchedServant(

@@ -74,53 +74,53 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
   EventMissionGroupEntity_o *entity; // [xsp+68h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_T__o v67; // [xsp+70h] [xbp-70h] BYREF
 
-  if ( (byte_4354611 & 1) == 0 )
+  if ( (byte_438DECF & 1) == 0 )
   {
-    sub_B70694(&Method_BasicHelper_Any_EventCommandAssistEntity___);
-    sub_B70694(&CommandAssistLvUpListViewItem_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMaster_CommonReleaseMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_EventMissionGroupMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_SkillDetailMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&Method_System_Linq_Enumerable_FirstOrDefault_CommonReleaseEntity___);
-    sub_B70694(&Method_System_Linq_Enumerable_ToArray_CommonReleaseEntity___);
-    sub_B70694(&Method_System_Linq_Enumerable_Where_CommonReleaseEntity___);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__get_Current__);
-    sub_B70694(&Method_System_Func_CommonReleaseEntity__bool___ctor__);
-    sub_B70694(&Method_System_Func_EventCommandAssistEntity__bool___ctor__);
-    sub_B70694(&System_Func_CommonReleaseEntity__bool__TypeInfo);
-    sub_B70694(&System_Func_EventCommandAssistEntity__bool__TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_EventCommandAssistEntity__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventCommandAssistEntity__GetEnumerator__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventCommandAssistEntity___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Item__);
-    sub_B70694(&System_Collections_Generic_List_EventCommandAssistEntity__TypeInfo);
-    sub_B70694(&string_TypeInfo);
-    sub_B70694(&Method_CommandAssistLvUpListViewManager___c__CreateList_b__0_0__);
-    sub_B70694(&Method_CommandAssistLvUpListViewManager___c__CreateList_b__0_1__);
-    sub_B70694(&CommandAssistLvUpListViewManager___c_TypeInfo);
-    byte_4354611 = 1;
+    sub_B775C4(&Method_BasicHelper_Any_EventCommandAssistEntity___);
+    sub_B775C4(&CommandAssistLvUpListViewItem_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_EventMissionGroupMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_SkillDetailMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&Method_System_Linq_Enumerable_FirstOrDefault_CommonReleaseEntity___);
+    sub_B775C4(&Method_System_Linq_Enumerable_ToArray_CommonReleaseEntity___);
+    sub_B775C4(&Method_System_Linq_Enumerable_Where_CommonReleaseEntity___);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__get_Current__);
+    sub_B775C4(&Method_System_Func_CommonReleaseEntity__bool___ctor__);
+    sub_B775C4(&Method_System_Func_EventCommandAssistEntity__bool___ctor__);
+    sub_B775C4(&System_Func_CommonReleaseEntity__bool__TypeInfo);
+    sub_B775C4(&System_Func_EventCommandAssistEntity__bool__TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventCommandAssistEntity__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventCommandAssistEntity__GetEnumerator__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventCommandAssistEntity___ctor__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Item__);
+    sub_B775C4(&System_Collections_Generic_List_EventCommandAssistEntity__TypeInfo);
+    sub_B775C4(&string_TypeInfo);
+    sub_B775C4(&Method_CommandAssistLvUpListViewManager___c__CreateList_b__0_0__);
+    sub_B775C4(&Method_CommandAssistLvUpListViewManager___c__CreateList_b__0_1__);
+    sub_B775C4(&CommandAssistLvUpListViewManager___c_TypeInfo);
+    byte_438DECF = 1;
   }
   memset(&v67, 0, sizeof(v67));
   entity = 0LL;
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (CommonReleaseMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
-  v5 = (EventMissionGroupMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_EventMissionGroupMaster___);
-  v6 = (SkillLvMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_SkillLvMaster___);
-  DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_SkillDetailMaster___);
-  v7 = (EventCommandAssistMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
-  v8 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_EventCommandAssistEntity__TypeInfo);
+  Master_WarQuestSelectionMaster = (CommonReleaseMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  v5 = (EventMissionGroupMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_EventMissionGroupMaster___);
+  v6 = (SkillLvMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_SkillLvMaster___);
+  DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_SkillDetailMaster___);
+  v7 = (EventCommandAssistMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
+  v8 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventCommandAssistEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v8,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_EventCommandAssistEntity___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventCommandAssistEntity___ctor__);
   if ( !v7 )
     goto LABEL_54;
   v64 = v8;
@@ -131,20 +131,20 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v65,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)ValidEntityList,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_EventCommandAssistEntity__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_EventCommandAssistEntity__GetEnumerator__);
   v67 = v65;
   while ( 1 )
   {
     v11 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v67,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__MoveNext__);
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__MoveNext__);
     if ( !v11 )
       break;
     current = v67.fields.current;
     if ( !v67.fields.current )
-      sub_B7076C(v11, v12);
+      sub_B7769C(v11, v12);
     if ( !Master_WarQuestSelectionMaster )
-      sub_B7076C(v11, v12);
+      sub_B7769C(v11, v12);
     List = (System_Collections_Generic_IEnumerable_TSource__o *)CommonReleaseMaster__getList(
                                                                   Master_WarQuestSelectionMaster,
                                                                   HIDWORD(v67.fields.current[3].monitor),
@@ -166,15 +166,15 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
         static_fields = CommandAssistLvUpListViewManager___c_TypeInfo->static_fields;
       }
       v18 = (Il2CppObject *)static_fields->__9;
-      _9__0_1 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_CommonReleaseEntity__bool__TypeInfo);
+      _9__0_1 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B77694(System_Func_CommonReleaseEntity__bool__TypeInfo);
       System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
         _9__0_1,
         v18,
         Method_CommandAssistLvUpListViewManager___c__CreateList_b__0_1__,
-        (const MethodInfo_29AC578 *)Method_System_Func_CommonReleaseEntity__bool___ctor__);
+        (const MethodInfo_29E92C4 *)Method_System_Func_CommonReleaseEntity__bool___ctor__);
       v19 = CommandAssistLvUpListViewManager___c_TypeInfo->static_fields;
       v19->__9__0_1 = (struct System_Func_CommonReleaseEntity__bool__o *)_9__0_1;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&v19->__9__0_1,
         (System_Int32_array **)_9__0_1,
         v20,
@@ -187,32 +187,32 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
     v26 = System_Linq_Enumerable__Where_WarBoardManager_WarBoardOnboardSkillTarget_(
             List,
             (System_Func_TSource__bool__o *)_9__0_1,
-            (const MethodInfo_1CCCE44 *)Method_System_Linq_Enumerable_Where_CommonReleaseEntity___);
+            (const MethodInfo_1D41C94 *)Method_System_Linq_Enumerable_Where_CommonReleaseEntity___);
     v27 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_DrawLotsDisplayMessage_DisplayedInGroup_SaveData_(
                                                                  v26,
-                                                                 (const MethodInfo_1CC8794 *)Method_System_Linq_Enumerable_ToArray_CommonReleaseEntity___);
+                                                                 (const MethodInfo_1D3D5E4 *)Method_System_Linq_Enumerable_ToArray_CommonReleaseEntity___);
     v28 = System_Linq_Enumerable__FirstOrDefault_PurchaseByBank_UnityIap_Request_PurchaseResult_(
             v27,
-            (const MethodInfo_1CBC6C4 *)Method_System_Linq_Enumerable_FirstOrDefault_CommonReleaseEntity___);
+            (const MethodInfo_1D31514 *)Method_System_Linq_Enumerable_FirstOrDefault_CommonReleaseEntity___);
     if ( v28 )
     {
       if ( !v5 )
-        sub_B7076C(v28, v29);
+        sub_B7769C(v28, v29);
       if ( EventMissionGroupMaster__TryGetEntity(v5, &entity, v28->fields.freeStoneNum, missionId, 0LL) )
       {
         CurrentEntity = EventCommandAssistMaster__GetCurrentEntity(v62, eventId, (int32_t)current[1].klass, -1, 0, 0LL);
         if ( !v8 )
-          sub_B7076C(0LL, CurrentEntity);
+          sub_B7769C(0LL, CurrentEntity);
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           v8,
           (EventMissionProgressRequest_Argument_ProgressData_o *)CurrentEntity,
-          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_EventCommandAssistEntity__Add__);
+          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventCommandAssistEntity__Add__);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v67,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__Dispose__);
   v31 = CommandAssistLvUpListViewManager___c_TypeInfo;
   if ( (BYTE3(CommandAssistLvUpListViewManager___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CommandAssistLvUpListViewManager___c_TypeInfo->_2.cctor_finished )
@@ -230,15 +230,15 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
       v32 = CommandAssistLvUpListViewManager___c_TypeInfo->static_fields;
     }
     v34 = (Il2CppObject *)v32->__9;
-    _9__0_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_EventCommandAssistEntity__bool__TypeInfo);
+    _9__0_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B77694(System_Func_EventCommandAssistEntity__bool__TypeInfo);
     System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
       _9__0_0,
       v34,
       Method_CommandAssistLvUpListViewManager___c__CreateList_b__0_0__,
-      (const MethodInfo_29AC578 *)Method_System_Func_EventCommandAssistEntity__bool___ctor__);
+      (const MethodInfo_29E92C4 *)Method_System_Func_EventCommandAssistEntity__bool___ctor__);
     v35 = CommandAssistLvUpListViewManager___c_TypeInfo->static_fields;
     v35->__9__0_0 = (struct System_Func_EventCommandAssistEntity__bool__o *)_9__0_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v35->__9__0_0,
       (System_Int32_array **)_9__0_0,
       v36,
@@ -251,7 +251,7 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
   ValidEntityList = (void *)BasicHelper__Any_WarBoardData_SquareRangeSearch_(
                               (System_Collections_Generic_List_T__o *)v8,
                               (System_Func_T__bool__o *)_9__0_0,
-                              (const MethodInfo_1BDCA88 *)Method_BasicHelper_Any_EventCommandAssistEntity___);
+                              (const MethodInfo_1C66144 *)Method_BasicHelper_Any_EventCommandAssistEntity___);
   if ( ((unsigned __int8)ValidEntityList & 1) == 0 )
   {
     if ( !v8 )
@@ -265,12 +265,12 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
       while ( 1 )
       {
         if ( size <= (unsigned int)v43 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
         v44 = v8->fields._items->m_Items[v43];
         if ( !v44 || !v6 )
           break;
         v45 = SkillLvMaster__GetEntity(v6, HIDWORD(v44[1].monitor), (int32_t)v44[1].klass, 0LL);
-        if ( !v45 || (Empty = SkillLvEntity__getDetail_26474216(v45, v45->fields.lv, 0, 0LL)) == 0LL )
+        if ( !v45 || (Empty = SkillLvEntity__getDetail_26832724(v45, v45->fields.lv, 0, 0LL)) == 0LL )
           Empty = string_TypeInfo->static_fields->Empty;
         ValidEntityList = EventCommandAssistMaster__GetEntity(
                             v62,
@@ -281,7 +281,7 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
           break;
         v47 = ValidEntityList;
         v48 = SkillLvMaster__GetEntity(v6, *((_DWORD *)ValidEntityList + 13), *((_DWORD *)ValidEntityList + 10), 0LL);
-        if ( !v48 || (beforeDetail = SkillLvEntity__getDetail_26474216(v48, v48->fields.lv, 0, 0LL)) == 0LL )
+        if ( !v48 || (beforeDetail = SkillLvEntity__getDetail_26832724(v48, v48->fields.lv, 0, 0LL)) == 0LL )
           beforeDetail = string_TypeInfo->static_fields->Empty;
         missionTargetId = v44->fields.missionTargetId;
         monitor = (int32_t)v44[1].monitor;
@@ -289,7 +289,7 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
         itemList = this->fields.itemList;
         v54 = (System_String_o *)*((_QWORD *)v47 + 4);
         v55 = v64->fields._size;
-        v56 = (CommandAssistLvUpListViewItem_o *)sub_B70764(CommandAssistLvUpListViewItem_TypeInfo);
+        v56 = (CommandAssistLvUpListViewItem_o *)sub_B77694(CommandAssistLvUpListViewItem_TypeInfo);
         CommandAssistLvUpListViewItem___ctor(
           v56,
           v43,
@@ -307,7 +307,7 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)itemList,
           (EventMissionProgressRequest_Argument_ProgressData_o *)v56,
-          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_ListViewItem__Add__);
+          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_ListViewItem__Add__);
         v6 = v58;
         v8 = v64;
         if ( (int)v43 + 1 >= missionIdb )
@@ -316,7 +316,7 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
         ++v43;
       }
 LABEL_54:
-      sub_B7076C(ValidEntityList, v10);
+      sub_B7769C(ValidEntityList, v10);
     }
 LABEL_51:
     ListViewManager__SortItem((ListViewManager_o *)this, -1, 1, -1, 0LL);
@@ -349,16 +349,16 @@ void __fastcall CommandAssistLvUpListViewManager___c___cctor(const MethodInfo *m
   System_Int32_array *v7; // x6
   System_Int32_array *v8; // x7
 
-  if ( (byte_434FA9D & 1) == 0 )
+  if ( (byte_4389097 & 1) == 0 )
   {
-    sub_B70694(&CommandAssistLvUpListViewManager___c_TypeInfo);
-    byte_434FA9D = 1;
+    sub_B775C4(&CommandAssistLvUpListViewManager___c_TypeInfo);
+    byte_4389097 = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(CommandAssistLvUpListViewManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(CommandAssistLvUpListViewManager___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = (BattleServantConfConponent_o *)CommandAssistLvUpListViewManager___c_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B70630(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  sub_B77560(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -385,6 +385,6 @@ bool __fastcall CommandAssistLvUpListViewManager___c___CreateList_b__0_1(
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   return ent->fields.condType == 177;
 }

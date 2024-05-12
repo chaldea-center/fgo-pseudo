@@ -34,66 +34,66 @@ void __fastcall PresentBoxNotificationListViewItem___ctor(
   System_Int32_array *v34; // x7
   BattleServantConfConponent_o *p_svtEntity; // x0
 
-  if ( (byte_4351EC8 & 1) == 0 )
+  if ( (byte_438B58B & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_B70694(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_B70694(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4351EC8 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_B775C4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_B775C4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438B58B = 1;
   }
-  ListViewItem___ctor_23967088((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
   this->fields.entity = e;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.entity, (System_Int32_array **)e, v7, v8, v9, v10, v11, v12);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.entity, (System_Int32_array **)e, v7, v8, v9, v10, v11, v12);
   this->fields.itemEntity = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.itemEntity, 0LL, v13, v14, v15, v16, v17, v18);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.itemEntity, 0LL, v13, v14, v15, v16, v17, v18);
   this->fields.svtEntity = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.svtEntity, 0LL, v19, v20, v21, v22, v23, v24);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.svtEntity, 0LL, v19, v20, v21, v22, v23, v24);
   if ( !e )
     goto LABEL_15;
   UserPresentBoxEntity__GetInfo(e, &this->fields.presentName, &this->fields.presentCount, 0LL);
   giftType = e->fields.giftType;
   if ( (unsigned int)(giftType - 6) < 2 || giftType == 1 )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                     Instance,
-                                    (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                    (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantMaster___);
       if ( Instance )
       {
         Entity = (struct ServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                              (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                                              e->fields.objectId,
-                                             (const MethodInfo_21C0440 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                             (const MethodInfo_21FB894 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
         this->fields.svtEntity = Entity;
         p_svtEntity = (BattleServantConfConponent_o *)&this->fields.svtEntity;
         goto LABEL_13;
       }
     }
 LABEL_15:
-    sub_B7076C(Instance, v26);
+    sub_B7769C(Instance, v26);
   }
   if ( giftType == 2 )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                     Instance,
-                                    (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                    (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ItemMaster___);
       if ( Instance )
       {
         Entity = (struct ServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                              (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                                              e->fields.objectId,
-                                             (const MethodInfo_21C0440 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                                             (const MethodInfo_21FB894 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
         this->fields.itemEntity = (struct ItemEntity_o *)Entity;
         p_svtEntity = (BattleServantConfConponent_o *)&this->fields.itemEntity;
 LABEL_13:
-        sub_B70630(p_svtEntity, (System_Int32_array **)Entity, v29, v30, v31, v32, v33, v34);
+        sub_B77560(p_svtEntity, (System_Int32_array **)Entity, v29, v30, v31, v32, v33, v34);
         return;
       }
     }
@@ -114,12 +114,12 @@ System_String_o *__fastcall PresentBoxNotificationListViewItem__ToString(
         PresentBoxNotificationListViewItem_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4351EC9 & 1) == 0 )
+  if ( (byte_438B58C & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_10900/*"Present "*/);
-    byte_4351EC9 = 1;
+    sub_B775C4(&StringLiteral_10959/*"Present "*/);
+    byte_438B58C = 1;
   }
-  return System_String__Concat_44758168((System_String_o *)StringLiteral_10900/*"Present "*/, this->fields.presentName, 0LL);
+  return System_String__Concat_44901936((System_String_o *)StringLiteral_10959/*"Present "*/, this->fields.presentName, 0LL);
 }
 
 

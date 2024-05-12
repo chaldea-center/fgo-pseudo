@@ -1,9 +1,9 @@
 void __fastcall TitleInfoEventOpenHeaderEffect___ctor(TitleInfoEventOpenHeaderEffect_o *this, const MethodInfo *method)
 {
-  if ( (byte_43560CF & 1) == 0 )
+  if ( (byte_438F74D & 1) == 0 )
   {
-    sub_B70694(&CommonEffectComponent_TypeInfo);
-    byte_43560CF = 1;
+    sub_B775C4(&CommonEffectComponent_TypeInfo);
+    byte_438F74D = 1;
   }
   if ( (BYTE3(CommonEffectComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CommonEffectComponent_TypeInfo->_2.cctor_finished )
@@ -68,20 +68,20 @@ void __fastcall TitleInfoEventOpenHeaderEffect__setup(
   int32_t v28; // [xsp+Ch] [xbp-24h] BYREF
 
   v28 = eventId;
-  if ( (byte_43560CE & 1) == 0 )
+  if ( (byte_438F74C & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_16371/*"_anim"*/);
-    sub_B70694(&StringLiteral_18471/*"ef_mapnamechange_"*/);
-    byte_43560CE = 1;
+    sub_B775C4(&StringLiteral_16441/*"_anim"*/);
+    sub_B775C4(&StringLiteral_18559/*"ef_mapnamechange_"*/);
+    byte_438F74C = 1;
   }
   v8 = System_Int32__ToString((int32_t)&v28, 0LL);
-  v9 = System_String__Concat_44760452(
-         (System_String_o *)StringLiteral_18471/*"ef_mapnamechange_"*/,
+  v9 = System_String__Concat_44904220(
+         (System_String_o *)StringLiteral_18559/*"ef_mapnamechange_"*/,
          v8,
-         (System_String_o *)StringLiteral_16371/*"_anim"*/,
+         (System_String_o *)StringLiteral_16441/*"_anim"*/,
          0LL);
   this->fields.baseName = v9;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.baseName,
     (System_Int32_array **)v9,
     v10,
@@ -91,7 +91,7 @@ void __fastcall TitleInfoEventOpenHeaderEffect__setup(
     v14,
     v15);
   this->fields.changeUiCallback = changeUiCallback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.changeUiCallback,
     (System_Int32_array **)changeUiCallback,
     v16,
@@ -101,7 +101,7 @@ void __fastcall TitleInfoEventOpenHeaderEffect__setup(
     v20,
     v21);
   this->fields.animEndCallback = endCallback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.animEndCallback,
     (System_Int32_array **)endCallback,
     v22,

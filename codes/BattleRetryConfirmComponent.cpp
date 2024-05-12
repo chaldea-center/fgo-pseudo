@@ -2,10 +2,10 @@ void __fastcall BattleRetryConfirmComponent___cctor(const MethodInfo *method)
 {
   BattleRetryConfirmComponent_c *v1; // x8
 
-  if ( (byte_434EC3F & 1) == 0 )
+  if ( (byte_4388210 & 1) == 0 )
   {
-    sub_B70694(&BattleRetryConfirmComponent_TypeInfo);
-    byte_434EC3F = 1;
+    sub_B775C4(&BattleRetryConfirmComponent_TypeInfo);
+    byte_4388210 = 1;
   }
   BattleRetryConfirmComponent_TypeInfo->static_fields->MAIN_TEXT_DEFAULT_FONT_SIZE = 24;
   BattleRetryConfirmComponent_TypeInfo->static_fields->MAIN_TEXT_FONT_SIZE_FOR_THREE_ITEM = 22;
@@ -18,7 +18,7 @@ void __fastcall BattleRetryConfirmComponent___cctor(const MethodInfo *method)
 void __fastcall BattleRetryConfirmComponent___ctor(BattleRetryConfirmComponent_o *this, const MethodInfo *method)
 {
   *(_QWORD *)&this->fields.CANCEL_BUTTON_POSITION_ON_THREE.fields.z = 3273916416LL;
-  *(_OWORD *)&this->fields.CONFIRM_BUTTON_POSITION_ON_THREE.fields.y = xmmword_32E74B0;
+  *(_OWORD *)&this->fields.CONFIRM_BUTTON_POSITION_ON_THREE.fields.y = xmmword_331A7B0;
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
@@ -35,14 +35,14 @@ void __fastcall BattleRetryConfirmComponent__BoostSupportRequestDialogCallback(
   int32_t v9; // w2
   System_Collections_Generic_List_Enumerator_T__o v10; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_434EC3A & 1) == 0 )
+  if ( (byte_438820B & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UIButton__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_434EC3A = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UIButton__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_438820B = 1;
   }
   memset(&v10, 0, sizeof(v10));
   switch ( result )
@@ -68,24 +68,24 @@ LABEL_17:
       System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
         &v10,
         (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)battleResultComponent,
-        (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
+        (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
       while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
                 &v10,
-                (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__) )
+                (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__) )
       {
         if ( !v10.fields.current )
-          sub_B7076C(0LL, v8);
+          sub_B7769C(0LL, v8);
         UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)v10.fields.current, 1, 0LL);
       }
       System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
         &v10,
-        (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
+        (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
       break;
   }
-  battleResultComponent = (BattleResultComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  battleResultComponent = (BattleResultComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !battleResultComponent )
 LABEL_20:
-    sub_B7076C(battleResultComponent, *(_QWORD *)&result);
+    sub_B7769C(battleResultComponent, *(_QWORD *)&result);
   CommonUI__CloseBoostSupportRequestMenu((CommonUI_o *)battleResultComponent, 0LL, 0LL);
 }
 
@@ -95,10 +95,10 @@ void __fastcall BattleRetryConfirmComponent__Close(BattleRetryConfirmComponent_o
   UnityEngine_Component_o *cancelLabel; // x0
   UnityEngine_GameObject_o *gameObject; // x20
 
-  if ( (byte_434EC38 & 1) == 0 )
+  if ( (byte_4388209 & 1) == 0 )
   {
-    sub_B70694(&AndroidBackKeyManager_TypeInfo);
-    byte_434EC38 = 1;
+    sub_B775C4(&AndroidBackKeyManager_TypeInfo);
+    byte_4388209 = 1;
   }
   cancelLabel = (UnityEngine_Component_o *)this->fields.cancelLabel;
   if ( !cancelLabel )
@@ -124,7 +124,7 @@ void __fastcall BattleRetryConfirmComponent__Close(BattleRetryConfirmComponent_o
         (cancelLabel = (UnityEngine_Component_o *)this->fields.window) == 0LL) )
   {
 LABEL_12:
-    sub_B7076C(cancelLabel, method);
+    sub_B7769C(cancelLabel, method);
   }
   ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, void *))cancelLabel->klass[1]._1.events)(
     cancelLabel,
@@ -163,7 +163,7 @@ void __fastcall BattleRetryConfirmComponent__CostPointLabelCentering(
       }
     }
 LABEL_14:
-    sub_B7076C(reqSingleParent, method);
+    sub_B7769C(reqSingleParent, method);
   }
   reqSingleParent = (UnityEngine_GameObject_o *)this->fields.doubleAp;
   if ( !reqSingleParent )
@@ -180,8 +180,8 @@ LABEL_14:
       break;
     if ( (unsigned int)v5 >= max_length )
     {
-      v7 = sub_B70798(reqSingleParent);
-      sub_B70738(v7, 0LL);
+      v7 = sub_B776C8(reqSingleParent);
+      sub_B77668(v7, 0LL);
     }
     reqSingleParent = (UnityEngine_GameObject_o *)doubleItems->m_Items[v5];
     if ( reqSingleParent )
@@ -212,22 +212,22 @@ void __fastcall BattleRetryConfirmComponent__Init(BattleRetryConfirmComponent_o 
   __int64 v13; // x0
   System_Collections_Generic_List_Enumerator_T__o v14; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_434EC36 & 1) == 0 )
+  if ( (byte_4388207 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponentsInChildren_UIButton___);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UIButton__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_UIButton__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
-    sub_B70694(&Method_System_Collections_Generic_List_UIButton___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_List_UIButton__get_Count__);
-    sub_B70694(&System_Collections_Generic_List_UIButton__TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_2562/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_CANCEL"*/);
-    sub_B70694(&StringLiteral_2564/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_MESSAGE"*/);
-    sub_B70694(&StringLiteral_2563/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_DECIDE"*/);
-    byte_434EC36 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponentsInChildren_UIButton___);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UIButton__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_UIButton__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
+    sub_B775C4(&Method_System_Collections_Generic_List_UIButton___ctor__);
+    sub_B775C4(&Method_System_Collections_Generic_List_UIButton__get_Count__);
+    sub_B775C4(&System_Collections_Generic_List_UIButton__TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_2608/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_CANCEL"*/);
+    sub_B775C4(&StringLiteral_2610/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_MESSAGE"*/);
+    sub_B775C4(&StringLiteral_2609/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_DECIDE"*/);
+    byte_4388207 = 1;
   }
   memset(&v14, 0, sizeof(v14));
   root = this->fields.root;
@@ -246,16 +246,16 @@ void __fastcall BattleRetryConfirmComponent__Init(BattleRetryConfirmComponent_o 
   if ( !root || !LODWORD(root[1].klass) )
   {
     p_buttons = &this->fields.buttons;
-    v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_UIButton__TypeInfo);
+    v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_UIButton__TypeInfo);
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
       v5,
-      (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_UIButton___ctor__);
+      (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_UIButton___ctor__);
     this->fields.buttons = (struct System_Collections_Generic_List_UIButton__o *)v5;
-    sub_B70630(&this->fields.buttons);
+    sub_B77560(&this->fields.buttons);
     root = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponentsInChildren_WarBoardControlPlayTalkUiComponent_(
                                          (UnityEngine_Component_o *)this,
                                          1,
-                                         (const MethodInfo_1BE4420 *)Method_UnityEngine_Component_GetComponentsInChildren_UIButton___);
+                                         (const MethodInfo_1C6DADC *)Method_UnityEngine_Component_GetComponentsInChildren_UIButton___);
     if ( !root )
       goto LABEL_29;
     klass = root[1].klass;
@@ -267,8 +267,8 @@ void __fastcall BattleRetryConfirmComponent__Init(BattleRetryConfirmComponent_o 
       {
         if ( v8 >= (unsigned int)klass )
         {
-          v13 = sub_B70798(root);
-          sub_B70738(v13, 0LL);
+          v13 = sub_B776C8(root);
+          sub_B77668(v13, 0LL);
         }
         root = (UnityEngine_GameObject_o *)*p_buttons;
         if ( !*p_buttons )
@@ -276,13 +276,13 @@ void __fastcall BattleRetryConfirmComponent__Init(BattleRetryConfirmComponent_o 
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)root,
           *((EventMissionProgressRequest_Argument_ProgressData_o **)&v7[1].monitor + v8),
-          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_UIButton__Add__);
+          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_UIButton__Add__);
         LODWORD(klass) = v7[1].klass;
         if ( (__int64)++v8 >= (int)klass )
           goto LABEL_14;
       }
 LABEL_29:
-      sub_B7076C(root, method);
+      sub_B7769C(root, method);
     }
 LABEL_14:
     root = (UnityEngine_GameObject_o *)*p_buttons;
@@ -292,18 +292,18 @@ LABEL_14:
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v14,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)root,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v14,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__) )
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__) )
   {
     if ( !v14.fields.current )
-      sub_B7076C(0LL, v9);
+      sub_B7769C(0LL, v9);
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)v14.fields.current, 1, 0LL);
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v14,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
   if ( !this->fields.isInitialized )
   {
     mainText = this->fields.mainText;
@@ -312,17 +312,17 @@ LABEL_14:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    root = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2564/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_MESSAGE"*/, 0LL);
+    root = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2610/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_MESSAGE"*/, 0LL);
     if ( !mainText )
       goto LABEL_29;
     UILabel__set_text(mainText, (System_String_o *)root, 0LL);
     cancelLabel = this->fields.cancelLabel;
-    root = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2562/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_CANCEL"*/, 0LL);
+    root = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2608/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_CANCEL"*/, 0LL);
     if ( !cancelLabel )
       goto LABEL_29;
     UILabel__set_text(cancelLabel, (System_String_o *)root, 0LL);
     confirmLabel = this->fields.confirmLabel;
-    root = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2563/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_DECIDE"*/, 0LL);
+    root = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2609/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_DECIDE"*/, 0LL);
     if ( !confirmLabel )
       goto LABEL_29;
     UILabel__set_text(confirmLabel, (System_String_o *)root, 0LL);
@@ -345,33 +345,33 @@ void __fastcall BattleRetryConfirmComponent__OnClickBoostSupportRequest(
   __int64 v10; // x1
   System_Collections_Generic_List_Enumerator_T__o v11; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_434EC39 & 1) == 0 )
+  if ( (byte_438820A & 1) == 0 )
   {
-    sub_B70694(&Method_BattleRetryConfirmComponent_BoostSupportRequestDialogCallback__);
-    sub_B70694(&BoostFunctionUtility_CallbackFunc_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UIButton__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B70694(&SoundManager_TypeInfo);
-    sub_B70694(&TerminalPramsManager_TypeInfo);
-    byte_434EC39 = 1;
+    sub_B775C4(&Method_BattleRetryConfirmComponent_BoostSupportRequestDialogCallback__);
+    sub_B775C4(&BoostFunctionUtility_CallbackFunc_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UIButton__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B775C4(&SoundManager_TypeInfo);
+    sub_B775C4(&TerminalPramsManager_TypeInfo);
+    byte_438820A = 1;
   }
   memset(&v11, 0, sizeof(v11));
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playSystemSe(8, 0LL);
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   }
-  if ( !byte_434DEB6 )
+  if ( !byte_4387478 )
   {
-    sub_B70694(&TerminalPramsManager_TypeInfo);
-    byte_434DEB6 = 1;
+    sub_B775C4(&TerminalPramsManager_TypeInfo);
+    byte_4387478 = 1;
   }
   v4 = TerminalPramsManager_TypeInfo;
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -381,11 +381,11 @@ void __fastcall BattleRetryConfirmComponent__OnClickBoostSupportRequest(
     v4 = TerminalPramsManager_TypeInfo;
   }
   QuestId_k__BackingField = v4->static_fields->_QuestId_k__BackingField;
-  if ( !byte_434DEB7 )
+  if ( !byte_4387479 )
   {
-    sub_B70694(&TerminalPramsManager_TypeInfo);
+    sub_B775C4(&TerminalPramsManager_TypeInfo);
     v4 = TerminalPramsManager_TypeInfo;
-    byte_434DEB7 = 1;
+    byte_4387479 = 1;
   }
   if ( (BYTE3(v4->vtable._0_Equals.methodPtr) & 4) != 0 && !v4->_2.cctor_finished )
   {
@@ -393,7 +393,7 @@ void __fastcall BattleRetryConfirmComponent__OnClickBoostSupportRequest(
     v4 = TerminalPramsManager_TypeInfo;
   }
   PhaseCnt_k__BackingField = v4->static_fields->_PhaseCnt_k__BackingField;
-  v7 = (BoostFunctionUtility_CallbackFunc_o *)sub_B70764(BoostFunctionUtility_CallbackFunc_TypeInfo);
+  v7 = (BoostFunctionUtility_CallbackFunc_o *)sub_B77694(BoostFunctionUtility_CallbackFunc_TypeInfo);
   BoostFunctionUtility_CallbackFunc___ctor(
     v7,
     (Il2CppObject *)this,
@@ -403,23 +403,23 @@ void __fastcall BattleRetryConfirmComponent__OnClickBoostSupportRequest(
     || (CommonUI__OpenBoostSupportRequestMenu(Instance, QuestId_k__BackingField, PhaseCnt_k__BackingField, v7, 1, 0LL),
         (buttons = this->fields.buttons) == 0LL) )
   {
-    sub_B7076C(buttons, v9);
+    sub_B7769C(buttons, v9);
   }
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v11,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)buttons,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v11,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__) )
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__) )
   {
     if ( !v11.fields.current )
-      sub_B7076C(0LL, v10);
+      sub_B7769C(0LL, v10);
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)v11.fields.current, 0, 0LL);
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v11,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
 }
 
 
@@ -434,43 +434,43 @@ void __fastcall BattleRetryConfirmComponent__OnClickCancel(
   __int64 v7; // x1
   System_Collections_Generic_List_Enumerator_T__o v8; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_434EC2F & 1) == 0 )
+  if ( (byte_4388200 & 1) == 0 )
   {
-    sub_B70694(&Method_BattleRetryConfirmComponent_OnClickCancel__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UIButton__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
-    byte_434EC2F = 1;
+    sub_B775C4(&Method_BattleRetryConfirmComponent_OnClickCancel__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UIButton__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
+    byte_4388200 = 1;
   }
   memset(&v8, 0, sizeof(v8));
   v3 = Method_BattleRetryConfirmComponent_OnClickCancel__;
   if ( (*((_BYTE *)Method_BattleRetryConfirmComponent_OnClickCancel__ + 75) & 2) != 0 )
-    v3 = (_QWORD *)sub_B7069C(Method_BattleRetryConfirmComponent_OnClickCancel__);
-  v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+    v3 = (_QWORD *)sub_B775CC(Method_BattleRetryConfirmComponent_OnClickCancel__);
+  v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
   battleResultComponent = this->fields.battleResultComponent;
   if ( !battleResultComponent
     || (BattleResultComponent__EndRetryConfirmDialog(battleResultComponent, 0, 0, 0LL),
         (battleResultComponent = (BattleResultComponent_o *)this->fields.buttons) == 0LL) )
   {
-    sub_B7076C(battleResultComponent, v5);
+    sub_B7769C(battleResultComponent, v5);
   }
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v8,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)battleResultComponent,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v8,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__) )
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__) )
   {
     if ( !v8.fields.current )
-      sub_B7076C(0LL, v7);
+      sub_B7769C(0LL, v7);
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)v8.fields.current, 0, 0LL);
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v8,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
 }
 
 
@@ -483,14 +483,14 @@ void __fastcall BattleRetryConfirmComponent__OnClickConfirm(
   __int64 v5; // x1
   System_Collections_Generic_List_Enumerator_T__o v6; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_434EC30 & 1) == 0 )
+  if ( (byte_4388201 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_UIButton__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_434EC30 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UIButton__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_4388201 = 1;
   }
   memset(&v6, 0, sizeof(v6));
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -501,23 +501,23 @@ void __fastcall BattleRetryConfirmComponent__OnClickConfirm(
     || (BattleResultComponent__EndRetryConfirmDialog(battleResultComponent, 1, 0, 0LL),
         (battleResultComponent = (BattleResultComponent_o *)this->fields.buttons) == 0LL) )
   {
-    sub_B7076C(battleResultComponent, v3);
+    sub_B7769C(battleResultComponent, v3);
   }
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v6,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)battleResultComponent,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_UIButton__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v6,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__) )
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_UIButton__MoveNext__) )
   {
     if ( !v6.fields.current )
-      sub_B7076C(0LL, v5);
+      sub_B7769C(0LL, v5);
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)v6.fields.current, 0, 0LL);
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v6,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_UIButton__Dispose__);
 }
 
 
@@ -532,11 +532,11 @@ void __fastcall BattleRetryConfirmComponent__OnClickFriendshipUpItemUseButton(
   bool v7; // w1
   PartyOrganizationUtility_c *v8; // x0
 
-  if ( (byte_434EC3E & 1) == 0 )
+  if ( (byte_438820F & 1) == 0 )
   {
-    sub_B70694(&PartyOrganizationUtility_TypeInfo);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_434EC3E = 1;
+    sub_B775C4(&PartyOrganizationUtility_TypeInfo);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438820F = 1;
   }
   v3 = PartyOrganizationUtility_TypeInfo;
   if ( (BYTE3(PartyOrganizationUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -568,7 +568,7 @@ void __fastcall BattleRetryConfirmComponent__OnClickFriendshipUpItemUseButton(
       goto LABEL_23;
     }
 LABEL_24:
-    sub_B7076C(friendshipUpItemUseButton, v5);
+    sub_B7769C(friendshipUpItemUseButton, v5);
   }
   if ( (WORD1(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
     && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -602,10 +602,10 @@ void __fastcall BattleRetryConfirmComponent__Open(
   const MethodInfo *v6; // x1
   UnityEngine_GameObject_o *gameObject; // x19
 
-  if ( (byte_434EC37 & 1) == 0 )
+  if ( (byte_4388208 & 1) == 0 )
   {
-    sub_B70694(&AndroidBackKeyManager_TypeInfo);
-    byte_434EC37 = 1;
+    sub_B775C4(&AndroidBackKeyManager_TypeInfo);
+    byte_4388208 = 1;
   }
   bgObj = this->fields.bgObj;
   if ( !bgObj
@@ -620,7 +620,7 @@ void __fastcall BattleRetryConfirmComponent__Open(
     || (bgObj = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)bgObj, 0LL)) == 0LL
     || (bgObj = (UnityEngine_GameObject_o *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)bgObj, 0LL)) == 0LL )
   {
-    sub_B7076C(bgObj, opendFunc);
+    sub_B7769C(bgObj, opendFunc);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)bgObj, 0LL);
   if ( (BYTE3(AndroidBackKeyManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -649,20 +649,20 @@ void __fastcall BattleRetryConfirmComponent__SetBoostSupportRequestButton(
   UnityEngine_Object_o *v13; // x20
   WarEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_434EC3B & 1) == 0 )
+  if ( (byte_438820C & 1) == 0 )
   {
-    sub_B70694(&BattleSetupInfo_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMaster_EventDetailMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_SingletonTemplate_BoostFunctionUtility__get_Instance__);
-    sub_B70694(&SingletonTemplate_BoostFunctionUtility__TypeInfo);
-    sub_B70694(&TerminalPramsManager_TypeInfo);
-    sub_B70694(&StringLiteral_11284/*"RETRIEVABLE_QUEST_CONFIRM_BOOST"*/);
-    sub_B70694(&StringLiteral_2561/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_BOOST_SUPPORT_REQUEST"*/);
-    byte_434EC3B = 1;
+    sub_B775C4(&BattleSetupInfo_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMaster_EventDetailMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_SingletonTemplate_BoostFunctionUtility__get_Instance__);
+    sub_B775C4(&SingletonTemplate_BoostFunctionUtility__TypeInfo);
+    sub_B775C4(&TerminalPramsManager_TypeInfo);
+    sub_B775C4(&StringLiteral_11345/*"RETRIEVABLE_QUEST_CONFIRM_BOOST"*/);
+    sub_B775C4(&StringLiteral_2607/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_BOOST_SUPPORT_REQUEST"*/);
+    byte_438820C = 1;
   }
   entity = 0LL;
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -670,10 +670,10 @@ void __fastcall BattleRetryConfirmComponent__SetBoostSupportRequestButton(
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   }
-  if ( !byte_434DEA3 )
+  if ( !byte_4387465 )
   {
-    sub_B70694(&TerminalPramsManager_TypeInfo);
-    byte_434DEA3 = 1;
+    sub_B775C4(&TerminalPramsManager_TypeInfo);
+    byte_4387465 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -683,11 +683,11 @@ void __fastcall BattleRetryConfirmComponent__SetBoostSupportRequestButton(
     v3 = TerminalPramsManager_TypeInfo;
   }
   WarId_k__BackingField = v3->static_fields->_WarId_k__BackingField;
-  if ( !byte_434DEB6 )
+  if ( !byte_4387478 )
   {
-    sub_B70694(&TerminalPramsManager_TypeInfo);
+    sub_B775C4(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_434DEB6 = 1;
+    byte_4387478 = 1;
   }
   if ( (BYTE3(v3->vtable._0_Equals.methodPtr) & 4) != 0 && !v3->_2.cctor_finished )
   {
@@ -695,11 +695,11 @@ void __fastcall BattleRetryConfirmComponent__SetBoostSupportRequestButton(
     v3 = TerminalPramsManager_TypeInfo;
   }
   QuestId_k__BackingField = v3->static_fields->_QuestId_k__BackingField;
-  if ( !byte_434DEB7 )
+  if ( !byte_4387479 )
   {
-    sub_B70694(&TerminalPramsManager_TypeInfo);
+    sub_B775C4(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_434DEB7 = 1;
+    byte_4387479 = 1;
   }
   if ( (BYTE3(v3->vtable._0_Equals.methodPtr) & 4) != 0 && !v3->_2.cctor_finished )
   {
@@ -707,7 +707,7 @@ void __fastcall BattleRetryConfirmComponent__SetBoostSupportRequestButton(
     v3 = TerminalPramsManager_TypeInfo;
   }
   PhaseCnt_k__BackingField = v3->static_fields->_PhaseCnt_k__BackingField;
-  v7 = (BattleSetupInfo_o *)sub_B70764(BattleSetupInfo_TypeInfo);
+  v7 = (BattleSetupInfo_o *)sub_B77694(BattleSetupInfo_TypeInfo);
   BattleSetupInfo___ctor(v7, 0LL);
   if ( !v7 )
     goto LABEL_66;
@@ -722,14 +722,14 @@ void __fastcall BattleRetryConfirmComponent__SetBoostSupportRequestButton(
           0LL);
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_EventDetailMaster___);
+  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_EventDetailMaster___);
   if ( !v10 || !Master_WarQuestSelectionMaster )
     goto LABEL_66;
   if ( !DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
           Master_WarQuestSelectionMaster,
           &entity,
           v10->fields.eventId,
-          (const MethodInfo_21C049C *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+          (const MethodInfo_21FB8F0 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
     goto LABEL_56;
   Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)entity;
   if ( !entity )
@@ -741,7 +741,7 @@ void __fastcall BattleRetryConfirmComponent__SetBoostSupportRequestButton(
     {
       j_il2cpp_runtime_class_init_0(SingletonTemplate_BoostFunctionUtility__TypeInfo);
     }
-    Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2CE9CB0 *)Method_SingletonTemplate_BoostFunctionUtility__get_Instance__);
+    Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2D168C0 *)Method_SingletonTemplate_BoostFunctionUtility__get_Instance__);
     if ( !Master_WarQuestSelectionMaster )
       goto LABEL_66;
     if ( BoostFunctionUtility__IsDisplayBoostSupportRequest(
@@ -749,7 +749,7 @@ void __fastcall BattleRetryConfirmComponent__SetBoostSupportRequestButton(
            QuestId_k__BackingField,
            PhaseCnt_k__BackingField,
            0LL)
-      && ConstantMaster__getValue((System_String_o *)StringLiteral_11284/*"RETRIEVABLE_QUEST_CONFIRM_BOOST"*/, 0LL) == 1 )
+      && ConstantMaster__getValue((System_String_o *)StringLiteral_11345/*"RETRIEVABLE_QUEST_CONFIRM_BOOST"*/, 0LL) == 1 )
     {
       boostSupportRequestLabel = (UnityEngine_Object_o *)this->fields.boostSupportRequestLabel;
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -766,7 +766,7 @@ void __fastcall BattleRetryConfirmComponent__SetBoostSupportRequestButton(
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
         Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)LocalizationManager__Get(
-                                                                                          (System_String_o *)StringLiteral_2561/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_BOOST_SUPPORT_REQUEST"*/,
+                                                                                          (System_String_o *)StringLiteral_2607/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_BOOST_SUPPORT_REQUEST"*/,
                                                                                           0LL);
         if ( !v12 )
           goto LABEL_66;
@@ -833,7 +833,7 @@ void __fastcall BattleRetryConfirmComponent__SetBoostSupportRequestButton(
         }
       }
 LABEL_66:
-      sub_B7076C(Master_WarQuestSelectionMaster, v9);
+      sub_B7769C(Master_WarQuestSelectionMaster, v9);
     }
   }
   else
@@ -904,8 +904,8 @@ void __fastcall BattleRetryConfirmComponent__SetCondensedScalePossessionAmount(
       if ( v7 >= (unsigned int)v4 )
       {
 LABEL_14:
-        v14 = sub_B70798(this);
-        sub_B70738(v14, 0LL);
+        v14 = sub_B776C8(this);
+        sub_B77668(v14, 0LL);
       }
       if ( *i )
       {
@@ -916,14 +916,14 @@ LABEL_14:
         if ( !v12 )
           break;
         v13 = RetryConfirmItem__SetCondensedScalePossessionAmount((RetryConfirmItem_o *)v11[4], 0LL);
-        this = (BattleRetryConfirmComponent_o *)UnityEngine_MonoBehaviour__StartCoroutine_36062060(v12, v13, 0LL);
+        this = (BattleRetryConfirmComponent_o *)UnityEngine_MonoBehaviour__StartCoroutine_36304832(v12, v13, 0LL);
       }
       LODWORD(v4) = value->max_length;
       if ( (__int64)++v7 >= (int)v4 )
         return;
     }
 LABEL_13:
-    sub_B7076C(this, value);
+    sub_B7769C(this, value);
   }
 }
 
@@ -946,10 +946,10 @@ void __fastcall BattleRetryConfirmComponent__SetCondensedScaleRetryConfirmItem(
   __int64 v15; // [xsp+8h] [xbp-28h] BYREF
   __int64 v16; // [xsp+18h] [xbp-18h] BYREF
 
-  if ( (byte_434EC3D & 1) == 0 )
+  if ( (byte_438820E & 1) == 0 )
   {
-    sub_B70694(&RetryConfirmItem___TypeInfo);
-    byte_434EC3D = 1;
+    sub_B775C4(&RetryConfirmItem___TypeInfo);
+    byte_438820E = 1;
   }
   v16 = 0LL;
   v15 = 0LL;
@@ -958,27 +958,27 @@ void __fastcall BattleRetryConfirmComponent__SetCondensedScaleRetryConfirmItem(
     goto LABEL_31;
   if ( UnityEngine_GameObject__get_activeSelf(reqSingleParent, 0LL) )
   {
-    reqSingleParent = (UnityEngine_GameObject_o *)sub_B706AC(RetryConfirmItem___TypeInfo, 1LL);
+    reqSingleParent = (UnityEngine_GameObject_o *)sub_B775DC(RetryConfirmItem___TypeInfo, 1LL);
     if ( reqSingleParent )
     {
       singleItem = this->fields.singleItem;
       v7 = (__int64)reqSingleParent;
       if ( !singleItem
-        || (reqSingleParent = (UnityEngine_GameObject_o *)sub_B70754(
+        || (reqSingleParent = (UnityEngine_GameObject_o *)sub_B77684(
                                                             singleItem,
                                                             reqSingleParent->klass->_1.element_class)) != 0LL )
       {
         if ( *(_DWORD *)(v7 + 24) )
         {
           *(_QWORD *)(v7 + 32) = singleItem;
-          sub_B70630(v7 + 32);
+          sub_B77560(v7 + 32);
           v16 = v7;
           p_doubleItems = &v16;
           goto LABEL_29;
         }
 LABEL_32:
-        v13 = sub_B70798(reqSingleParent);
-        sub_B70738(v13, 0LL);
+        v13 = sub_B776C8(reqSingleParent);
+        sub_B77668(v13, 0LL);
       }
       goto LABEL_33;
     }
@@ -989,20 +989,20 @@ LABEL_32:
     goto LABEL_31;
   if ( UnityEngine_GameObject__get_activeSelf(reqSingleParent, 0LL) )
   {
-    reqSingleParent = (UnityEngine_GameObject_o *)sub_B706AC(RetryConfirmItem___TypeInfo, 1LL);
+    reqSingleParent = (UnityEngine_GameObject_o *)sub_B775DC(RetryConfirmItem___TypeInfo, 1LL);
     if ( reqSingleParent )
     {
       singleItemWithUseItemButton = this->fields.singleItemWithUseItemButton;
       v12 = (__int64)reqSingleParent;
       if ( !singleItemWithUseItemButton
-        || (reqSingleParent = (UnityEngine_GameObject_o *)sub_B70754(
+        || (reqSingleParent = (UnityEngine_GameObject_o *)sub_B77684(
                                                             singleItemWithUseItemButton,
                                                             reqSingleParent->klass->_1.element_class)) != 0LL )
       {
         if ( *(_DWORD *)(v12 + 24) )
         {
           *(_QWORD *)(v12 + 32) = singleItemWithUseItemButton;
-          sub_B70630(v12 + 32);
+          sub_B77560(v12 + 32);
           v15 = v12;
           p_doubleItems = &v15;
           goto LABEL_29;
@@ -1010,11 +1010,11 @@ LABEL_32:
         goto LABEL_32;
       }
 LABEL_33:
-      v14 = sub_B7078C();
-      sub_B70738(v14, 0LL);
+      v14 = sub_B776BC();
+      sub_B77668(v14, 0LL);
     }
 LABEL_31:
-    sub_B7076C(reqSingleParent, items);
+    sub_B7769C(reqSingleParent, items);
   }
   reqSingleParent = this->fields.reqDoubleParent;
   if ( !reqSingleParent )
@@ -1095,13 +1095,13 @@ void __fastcall BattleRetryConfirmComponent__SetCostValueText(
   __int64 v33; // [xsp+130h] [xbp-40h]
 
   v6 = this;
-  if ( (byte_434EC35 & 1) == 0 )
+  if ( (byte_4388206 & 1) == 0 )
   {
-    this = (BattleRetryConfirmComponent_o *)sub_B70694(&StringLiteral_1/*""*/);
-    byte_434EC35 = 1;
+    this = (BattleRetryConfirmComponent_o *)sub_B775C4(&StringLiteral_1/*""*/);
+    byte_4388206 = 1;
   }
   if ( !items )
-    sub_B7076C(this, costPoint);
+    sub_B7769C(this, costPoint);
   v7 = *(_QWORD *)&items->max_length;
   if ( !v7 )
   {
@@ -1133,8 +1133,8 @@ LABEL_10:
       v29 = v9;
       if ( !items->max_length )
       {
-        v21 = sub_B70798(v8);
-        sub_B70738(v21, 0LL);
+        v21 = sub_B776C8(v8);
+        sub_B77668(v21, 0LL);
       }
       v11 = *(_OWORD *)&items->m_Items[0].fields.possessionName;
       v12 = *(_QWORD *)&items->m_Items[0].fields.isIndividualLimit;
@@ -1215,10 +1215,10 @@ void __fastcall BattleRetryConfirmComponent__SetCostValueTextDouble(
   BattleRetryConfirmComponent_RetryConfirmItemStr_o v34; // [xsp+90h] [xbp-A0h] BYREF
   BattleRetryConfirmComponent_RetryConfirmItemStr_o v35; // [xsp+C0h] [xbp-70h] BYREF
 
-  if ( (byte_434EC33 & 1) == 0 )
+  if ( (byte_4388204 & 1) == 0 )
   {
-    sub_B70694(&BattleRetryConfirmComponent_TypeInfo);
-    byte_434EC33 = 1;
+    sub_B775C4(&BattleRetryConfirmComponent_TypeInfo);
+    byte_4388204 = 1;
   }
   reqSingleParent = this->fields.reqSingleParent;
   if ( !reqSingleParent )
@@ -1269,7 +1269,7 @@ void __fastcall BattleRetryConfirmComponent__SetCostValueTextDouble(
   doubleItems = this->fields.doubleItems;
   if ( !doubleItems )
 LABEL_24:
-    sub_B7076C(reqSingleParent, costPoint);
+    sub_B7769C(reqSingleParent, costPoint);
   v19 = 0LL;
   m_Items = items->m_Items;
   v21 = 32LL;
@@ -1311,8 +1311,8 @@ LABEL_24:
     if ( v19 >= doubleItemsWithUseItemButton->max_length )
     {
 LABEL_26:
-      v30 = sub_B70798(reqSingleParent);
-      sub_B70738(v30, 0LL);
+      v30 = sub_B776C8(reqSingleParent);
+      sub_B77668(v30, 0LL);
     }
     ++v19;
     ++m_Items;
@@ -1358,10 +1358,10 @@ void __fastcall BattleRetryConfirmComponent__SetCostValueTextSingle(
   BattleRetryConfirmComponent_RetryConfirmItemStr_o v27; // [xsp+60h] [xbp-90h] BYREF
   BattleRetryConfirmComponent_RetryConfirmItemStr_o v28; // [xsp+90h] [xbp-60h] BYREF
 
-  if ( (byte_434EC32 & 1) == 0 )
+  if ( (byte_4388203 & 1) == 0 )
   {
-    sub_B70694(&BattleRetryConfirmComponent_TypeInfo);
-    byte_434EC32 = 1;
+    sub_B775C4(&BattleRetryConfirmComponent_TypeInfo);
+    byte_4388203 = 1;
   }
   reqSingleParent = this->fields.reqSingleParent;
   if ( !reqSingleParent )
@@ -1396,7 +1396,7 @@ void __fastcall BattleRetryConfirmComponent__SetCostValueTextSingle(
   }
   if ( !mainText )
 LABEL_14:
-    sub_B7076C(reqSingleParent, costPoint);
+    sub_B7769C(reqSingleParent, costPoint);
   UILabel__set_fontSize(mainText, BattleRetryConfirmComponent_TypeInfo->static_fields->MAIN_TEXT_DEFAULT_FONT_SIZE, 0LL);
   v10 = *(_OWORD *)&costPoint->fields.useName;
   v9 = *(_OWORD *)&costPoint->fields.possessionName;
@@ -1461,10 +1461,10 @@ void __fastcall BattleRetryConfirmComponent__SetCostValueTextTriple(
   BattleRetryConfirmComponent_RetryConfirmItemStr_o v34; // [xsp+90h] [xbp-A0h] BYREF
   BattleRetryConfirmComponent_RetryConfirmItemStr_o v35; // [xsp+C0h] [xbp-70h] BYREF
 
-  if ( (byte_434EC34 & 1) == 0 )
+  if ( (byte_4388205 & 1) == 0 )
   {
-    sub_B70694(&BattleRetryConfirmComponent_TypeInfo);
-    byte_434EC34 = 1;
+    sub_B775C4(&BattleRetryConfirmComponent_TypeInfo);
+    byte_4388205 = 1;
   }
   reqSingleParent = this->fields.reqSingleParent;
   if ( !reqSingleParent )
@@ -1518,7 +1518,7 @@ void __fastcall BattleRetryConfirmComponent__SetCostValueTextTriple(
   tripleItems = this->fields.tripleItems;
   if ( !tripleItems )
 LABEL_24:
-    sub_B7076C(reqSingleParent, costPoint);
+    sub_B7769C(reqSingleParent, costPoint);
   v19 = 0LL;
   m_Items = items->m_Items;
   v21 = 32LL;
@@ -1560,8 +1560,8 @@ LABEL_24:
     if ( v19 >= tripleItemsWithUseItemButton->max_length )
     {
 LABEL_26:
-      v30 = sub_B70798(reqSingleParent);
-      sub_B70738(v30, 0LL);
+      v30 = sub_B776C8(reqSingleParent);
+      sub_B77668(v30, 0LL);
     }
     ++v19;
     ++m_Items;
@@ -1598,14 +1598,14 @@ void __fastcall BattleRetryConfirmComponent__SetFriendshipUpItemUseButton(
   UnityEngine_GameObject_o *v16; // x20
   BattleRetryConfirmComponent_c *v17; // x8
 
-  if ( (byte_434EC3C & 1) == 0 )
+  if ( (byte_438820D & 1) == 0 )
   {
-    sub_B70694(&BattleRetryConfirmComponent_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&PartyOrganizationUtility_TypeInfo);
-    sub_B70694(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_B70694(&SingletonTemplate_PartyOrganizationUtility__TypeInfo);
-    byte_434EC3C = 1;
+    sub_B775C4(&BattleRetryConfirmComponent_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&PartyOrganizationUtility_TypeInfo);
+    sub_B775C4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_B775C4(&SingletonTemplate_PartyOrganizationUtility__TypeInfo);
+    byte_438820D = 1;
   }
   friendshipUpItemUseButton = (UnityEngine_Object_o *)this->fields.friendshipUpItemUseButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1620,7 +1620,7 @@ void __fastcall BattleRetryConfirmComponent__SetFriendshipUpItemUseButton(
     {
       j_il2cpp_runtime_class_init_0(SingletonTemplate_PartyOrganizationUtility__TypeInfo);
     }
-    IsAvailableFriendshipUpItem = (PartyOrganizationUtility_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2CE9CB0 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    IsAvailableFriendshipUpItem = (PartyOrganizationUtility_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2D168C0 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
     if ( IsAvailableFriendshipUpItem )
     {
       IsAvailableFriendshipUpItem = (PartyOrganizationUtility_o *)PartyOrganizationUtility__IsAvailableFriendshipUpItem(
@@ -1938,7 +1938,7 @@ LABEL_80:
       }
     }
 LABEL_75:
-    sub_B7076C(IsAvailableFriendshipUpItem, v5);
+    sub_B7769C(IsAvailableFriendshipUpItem, v5);
   }
 }
 
@@ -1958,7 +1958,7 @@ void __fastcall BattleRetryConfirmComponent__SetRetryConfirmItemTextWithStr(
     || (UILabel__set_text((UILabel_o *)this, value->fields.possessionName, 0LL), !*item)
     || (this = (BattleRetryConfirmComponent_o *)(*item)->fields.possessionAmount) == 0LL )
   {
-    sub_B7076C(this, value);
+    sub_B7769C(this, value);
   }
   UILabel__set_text((UILabel_o *)this, value->fields.possessionAmount, 0LL);
 }
@@ -1970,7 +1970,7 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
   int64_t Instance; // x0
   __int64 v5; // x1
   DataMasterBase_WarMaster__WarEntity__int__o *MasterData_WarQuestSelectionMaster; // x19
-  _BYTE *v7; // x22
+  char *v7; // x22
   QuestEntity_o *v8; // x21
   QuestConsumeItemEntity_o *ItemConsumeEntity; // x27
   System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__o *v10; // x19
@@ -2056,7 +2056,7 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
   struct BattleRetryConfirmComponent___c_StaticFields *v90; // x0
   MapControl_QuestInfo_o *v92; // x19
   int32_t questId; // w20
-  bool IsQuestClear_24296868; // w0
+  bool IsQuestClear_24699280; // w0
   bool v95; // w20
   TerminalPramsManager_c *v96; // x0
   int32_t QuestId_k__BackingField; // w22
@@ -2106,81 +2106,81 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
   int v141; // [xsp+15Ch] [xbp-94h] BYREF
   BattleRetryConfirmComponent_RetryConfirmItemStr_o v142; // [xsp+160h] [xbp-90h] BYREF
 
-  if ( (byte_434EC2E & 1) == 0 )
+  if ( (byte_43881FF & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&CondType_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_QuestMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_B70694(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_B70694(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__ToArray__);
-    sub_B70694(&Method_System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr___ctor__);
-    sub_B70694(&System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&MapControl_QuestInfo_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B70694(&System_Text_StringBuilder_TypeInfo);
-    sub_B70694(&TerminalPramsManager_TypeInfo);
-    sub_B70694(&Method_BattleRetryConfirmComponent___c__SetValues_b__37_1__);
-    sub_B70694(&Method_BattleRetryConfirmComponent___c__SetValues_b__37_2__);
-    sub_B70694(&Method_BattleRetryConfirmComponent___c__DisplayClass37_0__SetValues_b__0__);
-    sub_B70694(&BattleRetryConfirmComponent___c__DisplayClass37_0_TypeInfo);
-    sub_B70694(&BattleRetryConfirmComponent___c_TypeInfo);
-    sub_B70694(&StringLiteral_26/*"\n"*/);
-    sub_B70694(&StringLiteral_2570/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM_VALUE"*/);
-    sub_B70694(&StringLiteral_3433/*"CONSUME_TYPE_AP"*/);
-    sub_B70694(&StringLiteral_11096/*"QUEST_ITEM_COST_OVER"*/);
-    sub_B70694(&StringLiteral_2568/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ACT_POINT_VALUE"*/);
-    sub_B70694(&StringLiteral_2569/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM"*/);
-    sub_B70694(&StringLiteral_1757/*"AP_OVER_MAX_COLOR"*/);
-    sub_B70694(&StringLiteral_3434/*"CONSUME_TYPE_RP"*/);
-    sub_B70694(&StringLiteral_2574/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE_MAX"*/);
-    sub_B70694(&StringLiteral_2573/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE"*/);
-    sub_B70694(&StringLiteral_27/*"\n\n"*/);
-    sub_B70694(&StringLiteral_2571/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_RETURN_QUEST_SCENE"*/);
-    sub_B70694(&StringLiteral_2565/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_NOW_ACT_POINT"*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    sub_B70694(&StringLiteral_2572/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM"*/);
-    sub_B70694(&StringLiteral_2566/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_NOW_ACT_POINT_VALUE"*/);
-    sub_B70694(&StringLiteral_2567/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ACT_POINT"*/);
-    byte_434EC2E = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&CondType_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_QuestMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_B775C4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_B775C4(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__ToArray__);
+    sub_B775C4(&Method_System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&MapControl_QuestInfo_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B775C4(&System_Text_StringBuilder_TypeInfo);
+    sub_B775C4(&TerminalPramsManager_TypeInfo);
+    sub_B775C4(&Method_BattleRetryConfirmComponent___c__SetValues_b__37_1__);
+    sub_B775C4(&Method_BattleRetryConfirmComponent___c__SetValues_b__37_2__);
+    sub_B775C4(&Method_BattleRetryConfirmComponent___c__DisplayClass37_0__SetValues_b__0__);
+    sub_B775C4(&BattleRetryConfirmComponent___c__DisplayClass37_0_TypeInfo);
+    sub_B775C4(&BattleRetryConfirmComponent___c_TypeInfo);
+    sub_B775C4(&StringLiteral_26/*"\n"*/);
+    sub_B775C4(&StringLiteral_2616/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM_VALUE"*/);
+    sub_B775C4(&StringLiteral_3484/*"CONSUME_TYPE_AP"*/);
+    sub_B775C4(&StringLiteral_11155/*"QUEST_ITEM_COST_OVER"*/);
+    sub_B775C4(&StringLiteral_2614/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ACT_POINT_VALUE"*/);
+    sub_B775C4(&StringLiteral_2615/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM"*/);
+    sub_B775C4(&StringLiteral_1803/*"AP_OVER_MAX_COLOR"*/);
+    sub_B775C4(&StringLiteral_3485/*"CONSUME_TYPE_RP"*/);
+    sub_B775C4(&StringLiteral_2620/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE_MAX"*/);
+    sub_B775C4(&StringLiteral_2619/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE"*/);
+    sub_B775C4(&StringLiteral_27/*"\n\n"*/);
+    sub_B775C4(&StringLiteral_2617/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_RETURN_QUEST_SCENE"*/);
+    sub_B775C4(&StringLiteral_2611/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_NOW_ACT_POINT"*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    sub_B775C4(&StringLiteral_2618/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM"*/);
+    sub_B775C4(&StringLiteral_2612/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_NOW_ACT_POINT_VALUE"*/);
+    sub_B775C4(&StringLiteral_2613/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ACT_POINT"*/);
+    byte_43881FF = 1;
   }
   v141 = 0;
   memset(&v140, 0, sizeof(v140));
   memset(&v139, 0, sizeof(v139));
   memset(&v138, 0, sizeof(v138));
   fixedVal = 0;
-  v3 = (BattleRetryConfirmComponent___c__DisplayClass37_0_o *)sub_B70764(BattleRetryConfirmComponent___c__DisplayClass37_0_TypeInfo);
+  v3 = (BattleRetryConfirmComponent___c__DisplayClass37_0_o *)sub_B77694(BattleRetryConfirmComponent___c__DisplayClass37_0_TypeInfo);
   BattleRetryConfirmComponent___c__DisplayClass37_0___ctor(v3, 0LL);
   if ( !v3 )
     goto LABEL_196;
   v3->fields.__4__this = this;
-  sub_B70630(&v3->fields);
+  sub_B77560(&v3->fields);
   this->fields.userGameEntity = UserGameMaster__getSelfUserGame(0LL);
   p_userGameEntity = &this->fields.userGameEntity;
-  sub_B70630(&this->fields.userGameEntity);
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_B77560(&this->fields.userGameEntity);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_196;
   MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                                         (DataManager_o *)Instance,
-                                                                                        (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_QuestMaster___);
+                                                                                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_QuestMaster___);
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   }
-  v7 = &unk_434D000;
-  if ( !byte_434DEB6 )
+  v7 = &byte_4387000;
+  if ( !byte_4387478 )
   {
-    sub_B70694(&TerminalPramsManager_TypeInfo);
-    byte_434DEB6 = 1;
+    sub_B775C4(&TerminalPramsManager_TypeInfo);
+    byte_4387478 = 1;
   }
   Instance = (int64_t)TerminalPramsManager_TypeInfo;
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2194,28 +2194,28 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
   Instance = (int64_t)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                         MasterData_WarQuestSelectionMaster,
                         *(_DWORD *)(*(_QWORD *)(Instance + 184) + 16LL),
-                        (const MethodInfo_21C0440 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+                        (const MethodInfo_21FB894 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
   if ( !Instance )
     goto LABEL_196;
   v8 = (QuestEntity_o *)Instance;
   v141 = 0;
   ItemConsumeEntity = QuestEntity__getItemConsumeEntity((QuestEntity_o *)Instance, 0LL);
   memset(&v140, 0, sizeof(v140));
-  v10 = (System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__o *)sub_B70764(System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__TypeInfo);
+  v10 = (System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__o *)sub_B77694(System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__TypeInfo);
   System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr____ctor(
     v10,
-    (const MethodInfo_300B1B4 *)Method_System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr___ctor__);
+    (const MethodInfo_3038DC4 *)Method_System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr___ctor__);
   v3->fields.rciItems = v10;
   p_rciItems = (int64_t *)&v3->fields.rciItems;
-  sub_B70630(&v3->fields.rciItems);
-  v11 = (System_Text_StringBuilder_o *)sub_B70764(System_Text_StringBuilder_TypeInfo);
+  sub_B77560(&v3->fields.rciItems);
+  v11 = (System_Text_StringBuilder_o *)sub_B77694(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v11, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v12 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_3433/*"CONSUME_TYPE_AP"*/, 0LL);
+  v12 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_3484/*"CONSUME_TYPE_AP"*/, 0LL);
   switch ( QuestEntity__GetConsumeType(v8, 0LL) )
   {
     case 1:
@@ -2224,7 +2224,7 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3433/*"CONSUME_TYPE_AP"*/, 0LL);
+      Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3484/*"CONSUME_TYPE_AP"*/, 0LL);
       if ( !*p_userGameEntity )
         goto LABEL_196;
       v12 = (Il2CppObject *)Instance;
@@ -2240,7 +2240,7 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3434/*"CONSUME_TYPE_RP"*/, 0LL);
+      Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3485/*"CONSUME_TYPE_RP"*/, 0LL);
       if ( !*p_userGameEntity )
         goto LABEL_196;
       v12 = (Il2CppObject *)Instance;
@@ -2248,10 +2248,10 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
       v141 = Instance;
       if ( !*p_userGameEntity )
         goto LABEL_196;
-      if ( !byte_434DEA0 )
+      if ( !byte_4387462 )
       {
-        sub_B70694(&BalanceConfig_TypeInfo);
-        byte_434DEA0 = 1;
+        sub_B775C4(&BalanceConfig_TypeInfo);
+        byte_4387462 = 1;
       }
       v14 = BalanceConfig_TypeInfo;
       if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2267,23 +2267,23 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
       v131 = this;
       v140.fields.useName = (struct System_String_o *)StringLiteral_1/*""*/;
       v127 = (Il2CppObject *)StringLiteral_1/*""*/;
-      sub_B70630(&v140);
+      sub_B77560(&v140);
       v140.fields.useAmount = (struct System_String_o *)StringLiteral_1/*""*/;
-      sub_B70630(&v140.fields.useAmount);
+      sub_B77560(&v140.fields.useAmount);
       if ( !ItemConsumeEntity )
         goto LABEL_79;
-      Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_196;
       v15 = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                              (DataManager_o *)Instance,
-                                                             (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ItemMaster___);
-      Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                                                             (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ItemMaster___);
+      Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_196;
       v16 = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                   (DataManager_o *)Instance,
-                                  (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                  (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserItemMaster___);
       Instance = QuestConsumeItemEntity__IsAvailableAt(ItemConsumeEntity, 0, 0LL);
       if ( (Instance & 1) == 0 )
         goto LABEL_79;
@@ -2315,7 +2315,7 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
         Instance = (int64_t)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                               v15,
                               v19->m_Items[v17 + 1],
-                              (const MethodInfo_21C0440 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                              (const MethodInfo_21FB894 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
         if ( !Instance )
           goto LABEL_196;
         v21 = (ItemEntity_o *)Instance;
@@ -2340,10 +2340,10 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
           goto LABEL_197;
         if ( nums->m_Items[v17 + 1] > qp )
         {
-          Instance = (int64_t)System_String__Concat_44758168((System_String_o *)StringLiteral_26/*"\n"*/, v21->fields.name, 0LL);
+          Instance = (int64_t)System_String__Concat_44901936((System_String_o *)StringLiteral_26/*"\n"*/, v21->fields.name, 0LL);
           if ( !v11 )
             goto LABEL_196;
-          System_Text_StringBuilder__Append_42601980(v11, (System_String_o *)Instance, 0LL);
+          System_Text_StringBuilder__Append_42951964(v11, (System_String_o *)Instance, 0LL);
         }
         memset(&v139, 0, sizeof(v139));
         if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2351,10 +2351,10 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v24 = LocalizationManager__Get((System_String_o *)StringLiteral_2569/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM"*/, 0LL);
+        v24 = LocalizationManager__Get((System_String_o *)StringLiteral_2615/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM"*/, 0LL);
         v139.fields.useName = System_String__Format(v24, (Il2CppObject *)v21->fields.name, 0LL);
-        sub_B70630(&v139);
-        Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_2570/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM_VALUE"*/, 0LL);
+        sub_B77560(&v139);
+        Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_2616/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM_VALUE"*/, 0LL);
         v26 = ItemConsumeEntity->fields.nums;
         if ( !v26 )
           goto LABEL_196;
@@ -2364,10 +2364,10 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
         LODWORD(v142.fields.useName) = v26->m_Items[v17 + 1];
         v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v142, v25);
         v139.fields.useAmount = System_String__Format(v27, v28, 0LL);
-        sub_B70630(&v139.fields.useAmount);
-        v29 = LocalizationManager__Get((System_String_o *)StringLiteral_2572/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM"*/, 0LL);
+        sub_B77560(&v139.fields.useAmount);
+        v29 = LocalizationManager__Get((System_String_o *)StringLiteral_2618/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM"*/, 0LL);
         v139.fields.possessionName = System_String__Format(v29, (Il2CppObject *)v21->fields.name, 0LL);
-        sub_B70630(&v139.fields.possessionName);
+        sub_B77560(&v139.fields.possessionName);
         MaxNum = ItemEntity__GetMaxNum(v21, 0LL);
         if ( MaxNum < 1 )
         {
@@ -2376,7 +2376,7 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v37 = LocalizationManager__Get((System_String_o *)StringLiteral_2573/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE"*/, 0LL);
+          v37 = LocalizationManager__Get((System_String_o *)StringLiteral_2619/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE"*/, 0LL);
           LODWORD(v142.fields.useName) = qp;
           v39 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v142, v38);
           v36 = System_String__Format(v37, v39, 0LL);
@@ -2388,15 +2388,15 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v31 = LocalizationManager__Get((System_String_o *)StringLiteral_2574/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE_MAX"*/, 0LL);
+          v31 = LocalizationManager__Get((System_String_o *)StringLiteral_2620/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE_MAX"*/, 0LL);
           LODWORD(v142.fields.useName) = qp;
           v33 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v142, v32);
           LODWORD(v136.fields.useName) = ItemEntity__GetMaxNum(v21, 0LL);
           v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v136, v34);
-          v36 = System_String__Format_44753704(v31, v33, v35, 0LL);
+          v36 = System_String__Format_44897472(v31, v33, v35, 0LL);
         }
         v139.fields.possessionAmount = v36;
-        sub_B70630(&v139.fields.possessionAmount);
+        sub_B77560(&v139.fields.possessionAmount);
         v139.fields.isIndividualLimit = MaxNum > 0;
         Instance = *p_rciItems;
         v136 = v139;
@@ -2406,7 +2406,7 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
         System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr___Add(
           (System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__o *)Instance,
           &v142,
-          (const MethodInfo_300BFEC *)Method_System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__Add__);
+          (const MethodInfo_3039BFC *)Method_System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__Add__);
         Instance = QuestConsumeItemEntity__IsAvailableAt(ItemConsumeEntity, ++v17, 0LL);
       }
       while ( (Instance & 1) != 0 );
@@ -2415,7 +2415,7 @@ LABEL_79:
         goto LABEL_196;
       v3 = v129;
       this = v131;
-      v7 = &unk_434D000;
+      v7 = &byte_4387000;
       if ( System_Text_StringBuilder__get_Length(v11, 0LL) < 1 )
       {
         v12 = v127;
@@ -2426,7 +2426,7 @@ LABEL_160:
           || QuestEntity__GetConsumeType(v8, 0LL) == 2
           || QuestEntity__GetConsumeType(v8, 0LL) == 4 )
         {
-          v92 = (MapControl_QuestInfo_o *)sub_B70764(MapControl_QuestInfo_TypeInfo);
+          v92 = (MapControl_QuestInfo_o *)sub_B77694(MapControl_QuestInfo_TypeInfo);
           MapControl_QuestInfo___ctor(v92, 0LL);
           if ( !v92 )
             goto LABEL_196;
@@ -2434,18 +2434,18 @@ LABEL_160:
           questId = v92->fields.questId;
           if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-          IsQuestClear_24296868 = CondType__IsQuestClear_24296868(questId, -1, 0, 0LL);
+          IsQuestClear_24699280 = CondType__IsQuestClear_24699280(questId, -1, 0, 0LL);
           fixedVal = -1;
-          v95 = IsQuestClear_24296868;
+          v95 = IsQuestClear_24699280;
           if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
           }
-          if ( !v7[3766] )
+          if ( !v7[1144] )
           {
-            sub_B70694(&TerminalPramsManager_TypeInfo);
-            v7[3766] = 1;
+            sub_B775C4(&TerminalPramsManager_TypeInfo);
+            v7[1144] = 1;
           }
           v96 = TerminalPramsManager_TypeInfo;
           if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2455,11 +2455,11 @@ LABEL_160:
             v96 = TerminalPramsManager_TypeInfo;
           }
           QuestId_k__BackingField = v96->static_fields->_QuestId_k__BackingField;
-          if ( !byte_434DEB7 )
+          if ( !byte_4387479 )
           {
-            sub_B70694(&TerminalPramsManager_TypeInfo);
+            sub_B775C4(&TerminalPramsManager_TypeInfo);
             v96 = TerminalPramsManager_TypeInfo;
-            byte_434DEB7 = 1;
+            byte_4387479 = 1;
           }
           if ( (BYTE3(v96->vtable._0_Equals.methodPtr) & 4) != 0 && !v96->_2.cctor_finished )
           {
@@ -2502,7 +2502,7 @@ LABEL_160:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v107 = LocalizationManager__Get((System_String_o *)StringLiteral_1757/*"AP_OVER_MAX_COLOR"*/, 0LL);
+            v107 = LocalizationManager__Get((System_String_o *)StringLiteral_1803/*"AP_OVER_MAX_COLOR"*/, 0LL);
             LODWORD(v142.fields.useName) = v141;
             v109 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v142, v108);
             v106 = System_String__Format(v107, v109, 0LL);
@@ -2513,20 +2513,20 @@ LABEL_160:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v111 = LocalizationManager__Get((System_String_o *)StringLiteral_2567/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ACT_POINT"*/, 0LL);
+          v111 = LocalizationManager__Get((System_String_o *)StringLiteral_2613/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ACT_POINT"*/, 0LL);
           v140.fields.useName = System_String__Format(v111, v12, 0LL);
-          sub_B70630(&v140);
-          v112 = LocalizationManager__Get((System_String_o *)StringLiteral_2568/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ACT_POINT_VALUE"*/, 0LL);
+          sub_B77560(&v140);
+          v112 = LocalizationManager__Get((System_String_o *)StringLiteral_2614/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ACT_POINT_VALUE"*/, 0LL);
           v140.fields.useAmount = System_String__Format(v112, v105, 0LL);
-          sub_B70630(&v140.fields.useAmount);
-          v113 = LocalizationManager__Get((System_String_o *)StringLiteral_2565/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_NOW_ACT_POINT"*/, 0LL);
+          sub_B77560(&v140.fields.useAmount);
+          v113 = LocalizationManager__Get((System_String_o *)StringLiteral_2611/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_NOW_ACT_POINT"*/, 0LL);
           v140.fields.possessionName = System_String__Format(v113, v12, 0LL);
-          sub_B70630(&v140.fields.possessionName);
-          v114 = LocalizationManager__Get((System_String_o *)StringLiteral_2566/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_NOW_ACT_POINT_VALUE"*/, 0LL);
+          sub_B77560(&v140.fields.possessionName);
+          v114 = LocalizationManager__Get((System_String_o *)StringLiteral_2612/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_NOW_ACT_POINT_VALUE"*/, 0LL);
           LODWORD(v142.fields.useName) = actMax;
           v116 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v142, v115);
-          v140.fields.possessionAmount = System_String__Format_44753704(v114, v110, v116, 0LL);
-          sub_B70630(&v140.fields.possessionAmount);
+          v140.fields.possessionAmount = System_String__Format_44897472(v114, v110, v116, 0LL);
+          sub_B77560(&v140.fields.possessionAmount);
         }
         v142 = v140;
         Instance = *p_rciItems;
@@ -2534,38 +2534,38 @@ LABEL_160:
         {
           v117 = System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr___ToArray(
                    (System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__o *)Instance,
-                   (const MethodInfo_300E594 *)Method_System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__ToArray__);
+                   (const MethodInfo_303C1A4 *)Method_System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__ToArray__);
           v135 = v142;
           BattleRetryConfirmComponent__SetCostValueText(this, &v135, v117, v118);
           BattleRetryConfirmComponent__SetBoostSupportRequestButton(this, v119);
           BattleRetryConfirmComponent__SetFriendshipUpItemUseButton(this, v120);
-          v121 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+          v121 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
           System_Action___ctor(
             v121,
             (Il2CppObject *)v3,
             Method_BattleRetryConfirmComponent___c__DisplayClass37_0__SetValues_b__0__,
             0LL);
           v124 = BattleRetryConfirmComponent__WaitOneFrame(v122, v121, v123);
-          UnityEngine_MonoBehaviour__StartCoroutine_36062060((UnityEngine_MonoBehaviour_o *)this, v124, 0LL);
+          UnityEngine_MonoBehaviour__StartCoroutine_36304832((UnityEngine_MonoBehaviour_o *)this, v124, 0LL);
           return 1;
         }
 LABEL_196:
-        sub_B7076C(Instance, v5);
+        sub_B7769C(Instance, v5);
       }
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v40 = LocalizationManager__Get((System_String_o *)StringLiteral_11096/*"QUEST_ITEM_COST_OVER"*/, 0LL);
+      v40 = LocalizationManager__Get((System_String_o *)StringLiteral_11155/*"QUEST_ITEM_COST_OVER"*/, 0LL);
       v41 = (Il2CppObject *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v11->klass->vtable._3_ToString.method)(
                               v11,
                               v11->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
       v42 = System_String__Format(v40, v41, 0LL);
-      v43 = System_String__Concat_44758168(v42, (System_String_o *)StringLiteral_27/*"\n\n"*/, 0LL);
-      v44 = LocalizationManager__Get((System_String_o *)StringLiteral_2571/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_RETURN_QUEST_SCENE"*/, 0LL);
-      v45 = System_String__Concat_44758168(v43, v44, 0LL);
-      Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v43 = System_String__Concat_44901936(v42, (System_String_o *)StringLiteral_27/*"\n\n"*/, 0LL);
+      v44 = LocalizationManager__Get((System_String_o *)StringLiteral_2617/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_RETURN_QUEST_SCENE"*/, 0LL);
+      v45 = System_String__Concat_44901936(v43, v44, 0LL);
+      Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v46 = (CommonUI_o *)Instance;
       v47 = BattleRetryConfirmComponent___c_TypeInfo;
       if ( (BYTE3(BattleRetryConfirmComponent___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2585,11 +2585,11 @@ LABEL_196:
           static_fields = BattleRetryConfirmComponent___c_TypeInfo->static_fields;
         }
         v51 = (Il2CppObject *)static_fields->__9;
-        _9__37_1 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+        _9__37_1 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
         System_Action___ctor(_9__37_1, v51, Method_BattleRetryConfirmComponent___c__SetValues_b__37_1__, 0LL);
         v52 = BattleRetryConfirmComponent___c_TypeInfo->static_fields;
         v52->__9__37_1 = _9__37_1;
-        sub_B70630(&v52->__9__37_1);
+        sub_B77560(&v52->__9__37_1);
       }
       if ( !v46 )
         goto LABEL_196;
@@ -2601,7 +2601,7 @@ LABEL_196:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3433/*"CONSUME_TYPE_AP"*/, 0LL);
+      Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3484/*"CONSUME_TYPE_AP"*/, 0LL);
       if ( !*p_userGameEntity )
         goto LABEL_196;
       v128 = (Il2CppObject *)Instance;
@@ -2613,23 +2613,23 @@ LABEL_196:
         goto LABEL_196;
       v126 = (*p_userGameEntity)->fields.actMax;
       v140.fields.useName = (struct System_String_o *)StringLiteral_1/*""*/;
-      sub_B70630(&v140);
+      sub_B77560(&v140);
       v140.fields.useAmount = (struct System_String_o *)StringLiteral_1/*""*/;
-      sub_B70630(&v140.fields.useAmount);
+      sub_B77560(&v140.fields.useAmount);
       if ( !ItemConsumeEntity )
         goto LABEL_142;
-      Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_196;
       v53 = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                              (DataManager_o *)Instance,
-                                                             (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ItemMaster___);
-      Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                                                             (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ItemMaster___);
+      Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_196;
       v54 = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                   (DataManager_o *)Instance,
-                                  (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                  (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserItemMaster___);
       Instance = QuestConsumeItemEntity__IsAvailableAt(ItemConsumeEntity, 0, 0LL);
       if ( (Instance & 1) == 0 )
         goto LABEL_142;
@@ -2661,7 +2661,7 @@ LABEL_196:
         Instance = (int64_t)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                               v53,
                               v57->m_Items[v55 + 1],
-                              (const MethodInfo_21C0440 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                              (const MethodInfo_21FB894 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
         if ( !Instance )
           goto LABEL_196;
         v59 = (ItemEntity_o *)Instance;
@@ -2686,10 +2686,10 @@ LABEL_196:
           goto LABEL_197;
         if ( v61->m_Items[v55 + 1] > v60 )
         {
-          Instance = (int64_t)System_String__Concat_44758168((System_String_o *)StringLiteral_26/*"\n"*/, v59->fields.name, 0LL);
+          Instance = (int64_t)System_String__Concat_44901936((System_String_o *)StringLiteral_26/*"\n"*/, v59->fields.name, 0LL);
           if ( !v11 )
             goto LABEL_196;
-          System_Text_StringBuilder__Append_42601980(v11, (System_String_o *)Instance, 0LL);
+          System_Text_StringBuilder__Append_42951964(v11, (System_String_o *)Instance, 0LL);
         }
         memset(&v138, 0, sizeof(v138));
         if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2697,27 +2697,27 @@ LABEL_196:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v62 = LocalizationManager__Get((System_String_o *)StringLiteral_2569/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM"*/, 0LL);
+        v62 = LocalizationManager__Get((System_String_o *)StringLiteral_2615/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM"*/, 0LL);
         v138.fields.useName = System_String__Format(v62, (Il2CppObject *)v59->fields.name, 0LL);
-        sub_B70630(&v138);
-        Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_2570/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM_VALUE"*/, 0LL);
+        sub_B77560(&v138);
+        Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_2616/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM_VALUE"*/, 0LL);
         v64 = ItemConsumeEntity->fields.nums;
         if ( !v64 )
           goto LABEL_196;
         if ( v55 >= v64->max_length )
         {
 LABEL_197:
-          v125 = sub_B70798(Instance);
-          sub_B70738(v125, 0LL);
+          v125 = sub_B776C8(Instance);
+          sub_B77668(v125, 0LL);
         }
         v65 = (System_String_o *)Instance;
         LODWORD(v142.fields.useName) = v64->m_Items[v55 + 1];
         v66 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v142, v63);
         v138.fields.useAmount = System_String__Format(v65, v66, 0LL);
-        sub_B70630(&v138.fields.useAmount);
-        v67 = LocalizationManager__Get((System_String_o *)StringLiteral_2572/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM"*/, 0LL);
+        sub_B77560(&v138.fields.useAmount);
+        v67 = LocalizationManager__Get((System_String_o *)StringLiteral_2618/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM"*/, 0LL);
         v138.fields.possessionName = System_String__Format(v67, (Il2CppObject *)v59->fields.name, 0LL);
-        sub_B70630(&v138.fields.possessionName);
+        sub_B77560(&v138.fields.possessionName);
         v68 = ItemEntity__GetMaxNum(v59, 0LL);
         if ( v68 < 1 )
         {
@@ -2726,7 +2726,7 @@ LABEL_197:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v75 = LocalizationManager__Get((System_String_o *)StringLiteral_2573/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE"*/, 0LL);
+          v75 = LocalizationManager__Get((System_String_o *)StringLiteral_2619/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE"*/, 0LL);
           LODWORD(v142.fields.useName) = v60;
           v77 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v142, v76);
           v74 = System_String__Format(v75, v77, 0LL);
@@ -2738,15 +2738,15 @@ LABEL_197:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v69 = LocalizationManager__Get((System_String_o *)StringLiteral_2574/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE_MAX"*/, 0LL);
+          v69 = LocalizationManager__Get((System_String_o *)StringLiteral_2620/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE_MAX"*/, 0LL);
           LODWORD(v142.fields.useName) = v60;
           v71 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v142, v70);
           LODWORD(v136.fields.useName) = ItemEntity__GetMaxNum(v59, 0LL);
           v73 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v136, v72);
-          v74 = System_String__Format_44753704(v69, v71, v73, 0LL);
+          v74 = System_String__Format_44897472(v69, v71, v73, 0LL);
         }
         v138.fields.possessionAmount = v74;
-        sub_B70630(&v138.fields.possessionAmount);
+        sub_B77560(&v138.fields.possessionAmount);
         v138.fields.isIndividualLimit = v68 > 0;
         Instance = *p_rciItems;
         v136 = v138;
@@ -2756,7 +2756,7 @@ LABEL_197:
         System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr___Add(
           (System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__o *)Instance,
           &v142,
-          (const MethodInfo_300BFEC *)Method_System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__Add__);
+          (const MethodInfo_3039BFC *)Method_System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__Add__);
         Instance = QuestConsumeItemEntity__IsAvailableAt(ItemConsumeEntity, ++v55, 0LL);
       }
       while ( (Instance & 1) != 0 );
@@ -2767,7 +2767,7 @@ LABEL_142:
       this = v132;
       v12 = v128;
       actMax = v126;
-      v7 = (_BYTE *)&unk_434D000;
+      v7 = &byte_4387000;
       if ( System_Text_StringBuilder__get_Length(v11, 0LL) < 1 )
         goto LABEL_160;
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2775,15 +2775,15 @@ LABEL_142:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v78 = LocalizationManager__Get((System_String_o *)StringLiteral_11096/*"QUEST_ITEM_COST_OVER"*/, 0LL);
+      v78 = LocalizationManager__Get((System_String_o *)StringLiteral_11155/*"QUEST_ITEM_COST_OVER"*/, 0LL);
       v79 = (Il2CppObject *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v11->klass->vtable._3_ToString.method)(
                               v11,
                               v11->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
       v80 = System_String__Format(v78, v79, 0LL);
-      v81 = System_String__Concat_44758168(v80, (System_String_o *)StringLiteral_27/*"\n\n"*/, 0LL);
-      v82 = LocalizationManager__Get((System_String_o *)StringLiteral_2571/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_RETURN_QUEST_SCENE"*/, 0LL);
-      v83 = System_String__Concat_44758168(v81, v82, 0LL);
-      Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v81 = System_String__Concat_44901936(v80, (System_String_o *)StringLiteral_27/*"\n\n"*/, 0LL);
+      v82 = LocalizationManager__Get((System_String_o *)StringLiteral_2617/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_RETURN_QUEST_SCENE"*/, 0LL);
+      v83 = System_String__Concat_44901936(v81, v82, 0LL);
+      Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v84 = (CommonUI_o *)Instance;
       v85 = BattleRetryConfirmComponent___c_TypeInfo;
       if ( (BYTE3(BattleRetryConfirmComponent___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2803,11 +2803,11 @@ LABEL_142:
           v86 = BattleRetryConfirmComponent___c_TypeInfo->static_fields;
         }
         v89 = (Il2CppObject *)v86->__9;
-        _9__37_2 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+        _9__37_2 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
         System_Action___ctor(_9__37_2, v89, Method_BattleRetryConfirmComponent___c__SetValues_b__37_2__, 0LL);
         v90 = BattleRetryConfirmComponent___c_TypeInfo->static_fields;
         v90->__9__37_2 = _9__37_2;
-        sub_B70630(&v90->__9__37_2);
+        sub_B77560(&v90->__9__37_2);
       }
       if ( !v84 )
         goto LABEL_196;
@@ -2828,17 +2828,17 @@ System_Collections_IEnumerator_o *__fastcall BattleRetryConfirmComponent__WaitOn
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_434EC31 & 1) == 0 )
+  if ( (byte_4388202 & 1) == 0 )
   {
-    sub_B70694(&BattleRetryConfirmComponent__WaitOneFrame_d__42_TypeInfo);
-    byte_434EC31 = 1;
+    sub_B775C4(&BattleRetryConfirmComponent__WaitOneFrame_d__42_TypeInfo);
+    byte_4388202 = 1;
   }
-  v4 = (BattleRetryConfirmComponent__WaitOneFrame_d__42_o *)sub_B70764(BattleRetryConfirmComponent__WaitOneFrame_d__42_TypeInfo);
+  v4 = (BattleRetryConfirmComponent__WaitOneFrame_d__42_o *)sub_B77694(BattleRetryConfirmComponent__WaitOneFrame_d__42_TypeInfo);
   BattleRetryConfirmComponent__WaitOneFrame_d__42___ctor(v4, 0, 0LL);
   if ( !v4 )
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   v4->fields.action = action;
-  sub_B70630(&v4->fields.action);
+  sub_B77560(&v4->fields.action);
   return (System_Collections_IEnumerator_o *)v4;
 }
 
@@ -2880,7 +2880,7 @@ bool __fastcall BattleRetryConfirmComponent__WaitOneFrame_d__42__MoveNext(
     this->fields.__2__current = 0LL;
     p__2__current = &this->fields.__2__current;
     this->fields.__1__state = -1;
-    sub_B70630((BattleServantConfConponent_o *)&this->fields.__2__current, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_B77560((BattleServantConfConponent_o *)&this->fields.__2__current, 0LL, v2, v3, v4, v5, v6, v7);
     result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
     return result;
@@ -2905,11 +2905,11 @@ void __fastcall __noreturn BattleRetryConfirmComponent__WaitOneFrame_d__42__Syst
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B70698(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B70764(v2);
+  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B70698(&Method_BattleRetryConfirmComponent__WaitOneFrame_d__42_System_Collections_IEnumerator_Reset__);
-  sub_B70738(v3, v4);
+  v4 = sub_B775C8(&Method_BattleRetryConfirmComponent__WaitOneFrame_d__42_System_Collections_IEnumerator_Reset__);
+  sub_B77668(v3, v4);
 }
 
 
@@ -2940,16 +2940,16 @@ void __fastcall BattleRetryConfirmComponent___c___cctor(const MethodInfo *method
   System_Int32_array *v7; // x6
   System_Int32_array *v8; // x7
 
-  if ( (byte_434F81A & 1) == 0 )
+  if ( (byte_4388E14 & 1) == 0 )
   {
-    sub_B70694(&BattleRetryConfirmComponent___c_TypeInfo);
-    byte_434F81A = 1;
+    sub_B775C4(&BattleRetryConfirmComponent___c_TypeInfo);
+    byte_4388E14 = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(BattleRetryConfirmComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(BattleRetryConfirmComponent___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = (BattleServantConfConponent_o *)BattleRetryConfirmComponent___c_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B70630(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  sub_B77560(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -2968,20 +2968,20 @@ void __fastcall BattleRetryConfirmComponent___c___SetValues_b__37_1(
   AvalonSceneManager_o *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_434F81B & 1) == 0 )
+  if ( (byte_4388E15 & 1) == 0 )
   {
-    sub_B70694(&Method_AvalonSceneManager_DestroyAnySceneIfNeeded_BattleRootComponent___);
-    sub_B70694(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_434F81B = 1;
+    sub_B775C4(&Method_AvalonSceneManager_DestroyAnySceneIfNeeded_BattleRootComponent___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4388E15 = 1;
   }
-  Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   AvalonSceneManager__DestroyAnySceneIfNeeded_object_(
     Instance,
     10,
     0,
-    (const MethodInfo_1BDB500 *)Method_AvalonSceneManager_DestroyAnySceneIfNeeded_BattleRootComponent___);
+    (const MethodInfo_1C64BBC *)Method_AvalonSceneManager_DestroyAnySceneIfNeeded_BattleRootComponent___);
 }
 
 
@@ -2992,20 +2992,20 @@ void __fastcall BattleRetryConfirmComponent___c___SetValues_b__37_2(
   AvalonSceneManager_o *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_434F81C & 1) == 0 )
+  if ( (byte_4388E16 & 1) == 0 )
   {
-    sub_B70694(&Method_AvalonSceneManager_DestroyAnySceneIfNeeded_BattleRootComponent___);
-    sub_B70694(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_434F81C = 1;
+    sub_B775C4(&Method_AvalonSceneManager_DestroyAnySceneIfNeeded_BattleRootComponent___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4388E16 = 1;
   }
-  Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   AvalonSceneManager__DestroyAnySceneIfNeeded_object_(
     Instance,
     10,
     0,
-    (const MethodInfo_1BDB500 *)Method_AvalonSceneManager_DestroyAnySceneIfNeeded_BattleRootComponent___);
+    (const MethodInfo_1C64BBC *)Method_AvalonSceneManager_DestroyAnySceneIfNeeded_BattleRootComponent___);
 }
 
 
@@ -3024,18 +3024,18 @@ void __fastcall BattleRetryConfirmComponent___c__DisplayClass37_0___SetValues_b_
   System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__o *rciItems; // x0
   BattleRetryConfirmComponent_o *_4__this; // x19
 
-  if ( (byte_434F81D & 1) == 0 )
+  if ( (byte_4388E17 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__ToArray__);
-    byte_434F81D = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__ToArray__);
+    byte_4388E17 = 1;
   }
   rciItems = this->fields.rciItems;
   if ( !rciItems
     || (_4__this = this->fields.__4__this,
-        rciItems = (System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__o *)System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr___ToArray(rciItems, (const MethodInfo_300E594 *)Method_System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__ToArray__),
+        rciItems = (System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__o *)System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr___ToArray(rciItems, (const MethodInfo_303C1A4 *)Method_System_Collections_Generic_List_BattleRetryConfirmComponent_RetryConfirmItemStr__ToArray__),
         !_4__this) )
   {
-    sub_B7076C(rciItems, method);
+    sub_B7769C(rciItems, method);
   }
   BattleRetryConfirmComponent__SetCondensedScaleRetryConfirmItem(
     _4__this,

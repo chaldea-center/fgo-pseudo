@@ -33,14 +33,14 @@ void __fastcall FadeOutScript__Update(FadeOutScript_o *this, const MethodInfo *m
   UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v8; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4352230 & 1) == 0 )
+  if ( (byte_438B8F3 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    byte_4352230 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    byte_438B8F3 = 1;
   }
   Component_WebViewObject = (UnityEngine_Renderer_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                         (UnityEngine_Component_o *)this,
-                                                        (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                                        (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   if ( !Component_WebViewObject )
     goto LABEL_9;
   Component_WebViewObject = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(Component_WebViewObject, 0LL);
@@ -51,14 +51,14 @@ void __fastcall FadeOutScript__Update(FadeOutScript_o *this, const MethodInfo *m
     return;
   Component_WebViewObject = (UnityEngine_Renderer_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                         (UnityEngine_Component_o *)this,
-                                                        (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                                        (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   if ( !Component_WebViewObject
     || (Component_WebViewObject = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(
                                                               Component_WebViewObject,
                                                               0LL)) == 0LL )
   {
 LABEL_9:
-    sub_B7076C(Component_WebViewObject, v4);
+    sub_B7769C(Component_WebViewObject, v4);
   }
   v5 = (UnityEngine_Material_o *)Component_WebViewObject;
   v7 = UnityEngine_Material__get_color((UnityEngine_Material_o *)Component_WebViewObject, 0LL);

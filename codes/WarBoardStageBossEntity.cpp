@@ -1,27 +1,27 @@
 void __fastcall WarBoardStageBossEntity___ctor(WarBoardStageBossEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4353A71 & 1) == 0 )
+  if ( (byte_438D2A7 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_4353A71 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438D2A7 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall WarBoardStageBossEntity__CreatePK(int32_t stageId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4353A70 & 1) == 0 )
+  if ( (byte_438D2A6 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4353A70 = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_438D2A6 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            stageId,
            idx,
-           (const MethodInfo_1CA236C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1D171BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -44,28 +44,28 @@ System_String_array *__fastcall WarBoardStageBossEntity__GetTextEffectColors(
   System_Char_array *v6; // x1
   __int64 v7; // x0
 
-  if ( (byte_4353A6F & 1) == 0 )
+  if ( (byte_438D2A5 & 1) == 0 )
   {
-    sub_B70694(&char___TypeInfo);
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_23034/*"text_effect_colors"*/);
-    byte_4353A6F = 1;
+    sub_B775C4(&char___TypeInfo);
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_23135/*"text_effect_colors"*/);
+    byte_438D2A5 = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_23034/*"text_effect_colors"*/, 0LL, 0LL);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_23135/*"text_effect_colors"*/, 0LL, 0LL);
   if ( System_String__IsNullOrEmpty(StringValue, 0LL) )
-    return (System_String_array *)sub_B706AC(string___TypeInfo, 0LL);
-  v5 = (System_Char_array *)sub_B706AC(char___TypeInfo, 1LL);
+    return (System_String_array *)sub_B775DC(string___TypeInfo, 0LL);
+  v5 = (System_Char_array *)sub_B775DC(char___TypeInfo, 1LL);
   if ( !v5 )
     goto LABEL_9;
   v6 = v5;
   if ( !v5->max_length )
   {
-    v7 = sub_B70798(v5);
-    sub_B70738(v7, 0LL);
+    v7 = sub_B776C8(v5);
+    sub_B77668(v7, 0LL);
   }
   v5->m_Items[2] = 44;
   if ( !StringValue )
 LABEL_9:
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   return System_String__Split(StringValue, v5, 0LL);
 }

@@ -1,14 +1,14 @@
 void __fastcall ConstantStrMaster___ctor(ConstantStrMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4353527 & 1) == 0 )
+  if ( (byte_438CCAA & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string___ctor__);
-    byte_4353527 = 1;
+    sub_B775C4(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string___ctor__);
+    byte_438CCAA = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     102,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string___ctor__);
 }
 
 
@@ -26,34 +26,34 @@ bool __fastcall ConstantStrMaster__ExistValueArray(
   System_Int32_array *v12; // x19
   System_Func_int__bool__o *v13; // x20
 
-  if ( (byte_4353533 & 1) == 0 )
+  if ( (byte_438CCB6 & 1) == 0 )
   {
-    sub_B70694(&Method_BasicHelper_Any_int____69235616);
-    sub_B70694(&Method_System_Func_int__bool___ctor__);
-    sub_B70694(&System_Func_int__bool__TypeInfo);
-    sub_B70694(&Method_ConstantStrMaster___c__DisplayClass14_0__ExistValueArray_b__0__);
-    sub_B70694(&ConstantStrMaster___c__DisplayClass14_0_TypeInfo);
-    byte_4353533 = 1;
+    sub_B775C4(&Method_BasicHelper_Any_int____69468304);
+    sub_B775C4(&Method_System_Func_int__bool___ctor__);
+    sub_B775C4(&System_Func_int__bool__TypeInfo);
+    sub_B775C4(&Method_ConstantStrMaster___c__DisplayClass14_0__ExistValueArray_b__0__);
+    sub_B775C4(&ConstantStrMaster___c__DisplayClass14_0_TypeInfo);
+    byte_438CCB6 = 1;
   }
-  v7 = (ConstantStrMaster___c__DisplayClass14_0_o *)sub_B70764(ConstantStrMaster___c__DisplayClass14_0_TypeInfo);
+  v7 = (ConstantStrMaster___c__DisplayClass14_0_o *)sub_B77694(ConstantStrMaster___c__DisplayClass14_0_TypeInfo);
   ConstantStrMaster___c__DisplayClass14_0___ctor(v7, 0LL);
   if ( !v7 )
-    sub_B7076C(v8, v9);
+    sub_B7769C(v8, v9);
   v7->fields.checkVal = checkVal;
   ValueArray = ConstantStrMaster__GetValueArray(this, name, 0LL, v10);
   if ( ValueArray )
   {
     v12 = ValueArray;
-    v13 = (System_Func_int__bool__o *)sub_B70764(System_Func_int__bool__TypeInfo);
+    v13 = (System_Func_int__bool__o *)sub_B77694(System_Func_int__bool__TypeInfo);
     System_Func_int__bool____ctor(
       v13,
       (Il2CppObject *)v7,
       Method_ConstantStrMaster___c__DisplayClass14_0__ExistValueArray_b__0__,
-      (const MethodInfo_29A62E8 *)Method_System_Func_int__bool___ctor__);
-    LOBYTE(ValueArray) = BasicHelper__Any_int__29214704(
+      (const MethodInfo_29E3034 *)Method_System_Func_int__bool___ctor__);
+    LOBYTE(ValueArray) = BasicHelper__Any_int__29777580(
                            v12,
                            (System_Func_T__bool__o *)v13,
-                           (const MethodInfo_1BDC7F0 *)Method_BasicHelper_Any_int____69235616);
+                           (const MethodInfo_1C65EAC *)Method_BasicHelper_Any_int____69468304);
   }
   return (char)ValueArray;
 }
@@ -66,16 +66,16 @@ System_String_array_array *__fastcall ConstantStrMaster__GetCombineReturnVoiceLi
   Il2CppObject *EntityFromKey_object; // x0
   const MethodInfo *v4; // x2
 
-  if ( (byte_4353531 & 1) == 0 )
+  if ( (byte_438CCB4 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___);
-    sub_B70694(&StringLiteral_3272/*"COMBINE_SCENE_VOICE_RETURN"*/);
-    byte_4353531 = 1;
+    sub_B775C4(&Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___);
+    sub_B775C4(&StringLiteral_3323/*"COMBINE_SCENE_VOICE_RETURN"*/);
+    byte_438CCB4 = 1;
   }
   EntityFromKey_object = DataMasterBase__getEntityFromKey_object_(
                            (DataMasterBase_o *)this,
-                           (System_String_o *)StringLiteral_3272/*"COMBINE_SCENE_VOICE_RETURN"*/,
-                           (const MethodInfo_1CA3D48 *)Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___);
+                           (System_String_o *)StringLiteral_3323/*"COMBINE_SCENE_VOICE_RETURN"*/,
+                           (const MethodInfo_1D18B98 *)Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___);
   return ConstantStrMaster__GetVoiceList(
            (ConstantStrMaster_o *)EntityFromKey_object,
            (ConstantStrEntity_o *)EntityFromKey_object,
@@ -90,16 +90,16 @@ System_String_array_array *__fastcall ConstantStrMaster__GetCombineWelcomeVoiceL
   Il2CppObject *EntityFromKey_object; // x0
   const MethodInfo *v4; // x2
 
-  if ( (byte_4353530 & 1) == 0 )
+  if ( (byte_438CCB3 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___);
-    sub_B70694(&StringLiteral_3273/*"COMBINE_SCENE_VOICE_WELCOME"*/);
-    byte_4353530 = 1;
+    sub_B775C4(&Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___);
+    sub_B775C4(&StringLiteral_3324/*"COMBINE_SCENE_VOICE_WELCOME"*/);
+    byte_438CCB3 = 1;
   }
   EntityFromKey_object = DataMasterBase__getEntityFromKey_object_(
                            (DataMasterBase_o *)this,
-                           (System_String_o *)StringLiteral_3273/*"COMBINE_SCENE_VOICE_WELCOME"*/,
-                           (const MethodInfo_1CA3D48 *)Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___);
+                           (System_String_o *)StringLiteral_3324/*"COMBINE_SCENE_VOICE_WELCOME"*/,
+                           (const MethodInfo_1D18B98 *)Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___);
   return ConstantStrMaster__GetVoiceList(
            (ConstantStrMaster_o *)EntityFromKey_object,
            (ConstantStrEntity_o *)EntityFromKey_object,
@@ -139,16 +139,16 @@ System_String_o *__fastcall ConstantStrMaster__GetRandomVoice(
   System_String_o **m_Items; // x8
   __int64 v14; // x0
 
-  if ( (byte_4353532 & 1) == 0 )
+  if ( (byte_438CCB5 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4353532 = 1;
+    sub_B775C4(&Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438CCB5 = 1;
   }
   EntityFromKey_object = DataMasterBase__getEntityFromKey_object_(
                            (DataMasterBase_o *)this,
                            key,
-                           (const MethodInfo_1CA3D48 *)Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___);
+                           (const MethodInfo_1D18B98 *)Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___);
   VoiceList = ConstantStrMaster__GetVoiceList(
                 (ConstantStrMaster_o *)EntityFromKey_object,
                 (ConstantStrEntity_o *)EntityFromKey_object,
@@ -156,17 +156,17 @@ System_String_o *__fastcall ConstantStrMaster__GetRandomVoice(
   if ( VoiceList )
   {
     v8 = VoiceList;
-    v9 = UnityEngine_Random__Range_36100992(0, VoiceList->max_length, 0LL);
+    v9 = UnityEngine_Random__Range_36343764(0, VoiceList->max_length, 0LL);
     if ( (unsigned int)v9 >= v8->max_length )
       goto LABEL_10;
     v11 = v8->m_Items[(int)v9];
     if ( !v11 )
-      sub_B7076C(v9, v10);
+      sub_B7769C(v9, v10);
     if ( !v11->max_length )
     {
 LABEL_10:
-      v14 = sub_B70798(v9);
-      sub_B70738(v14, 0LL);
+      v14 = sub_B776C8(v9);
+      sub_B77668(v14, 0LL);
     }
     m_Items = v11->m_Items;
   }
@@ -188,22 +188,22 @@ System_String_o *__fastcall ConstantStrMaster__GetValue(
   System_String_o *result; // x0
   WarQuestSelectionEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_435352B & 1) == 0 )
+  if ( (byte_438CCAE & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
-    byte_435352B = 1;
+    sub_B775C4(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
+    byte_438CCAE = 1;
   }
   entity = 0LL;
   v6 = DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
          (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
          &entity,
          name,
-         (const MethodInfo_21C08E8 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
+         (const MethodInfo_21FBD3C *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
   result = 0LL;
   if ( v6 )
   {
     if ( !entity )
-      sub_B7076C(0LL, v5);
+      sub_B7769C(0LL, v5);
     return *(System_String_o **)&entity->fields.shortCutBannerId;
   }
   return result;
@@ -235,24 +235,24 @@ System_Int32_array *__fastcall ConstantStrMaster__GetValueArray(
   __int64 v24; // x0
   WarQuestSelectionEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_435352C & 1) == 0 )
+  if ( (byte_438CCAF & 1) == 0 )
   {
-    sub_B70694(&char___TypeInfo);
-    sub_B70694(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
-    sub_B70694(&Method_System_Linq_Enumerable_Select_string__int___);
-    sub_B70694(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_B70694(&Method_System_Func_string__int___ctor__);
-    sub_B70694(&System_Func_string__int__TypeInfo);
-    sub_B70694(&Method_ConstantStrMaster___c__GetValueArray_b__6_0__);
-    sub_B70694(&ConstantStrMaster___c_TypeInfo);
-    byte_435352C = 1;
+    sub_B775C4(&char___TypeInfo);
+    sub_B775C4(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
+    sub_B775C4(&Method_System_Linq_Enumerable_Select_string__int___);
+    sub_B775C4(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_B775C4(&Method_System_Func_string__int___ctor__);
+    sub_B775C4(&System_Func_string__int__TypeInfo);
+    sub_B775C4(&Method_ConstantStrMaster___c__GetValueArray_b__6_0__);
+    sub_B775C4(&ConstantStrMaster___c_TypeInfo);
+    byte_438CCAF = 1;
   }
   entity = 0LL;
   v7 = (System_Char_array *)DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
                               (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
                               &entity,
                               name,
-                              (const MethodInfo_21C08E8 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
+                              (const MethodInfo_21FBD3C *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
   if ( ((unsigned __int8)v7 & 1) != 0 )
   {
     if ( !entity )
@@ -260,14 +260,14 @@ System_Int32_array *__fastcall ConstantStrMaster__GetValueArray(
     v9 = *(System_String_o **)&entity->fields.shortCutBannerId;
     if ( !v9 )
       return defVal;
-    v7 = (System_Char_array *)sub_B706AC(char___TypeInfo, 1LL);
+    v7 = (System_Char_array *)sub_B775DC(char___TypeInfo, 1LL);
     if ( !v7 )
 LABEL_18:
-      sub_B7076C(v7, v8);
+      sub_B7769C(v7, v8);
     if ( !v7->max_length )
     {
-      v24 = sub_B70798(v7);
-      sub_B70738(v24, 0LL);
+      v24 = sub_B776C8(v7);
+      sub_B77668(v24, 0LL);
     }
     v7->m_Items[2] = 44;
     v10 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(v9, v7, 0LL);
@@ -288,15 +288,15 @@ LABEL_18:
         static_fields = ConstantStrMaster___c_TypeInfo->static_fields;
       }
       v14 = (Il2CppObject *)static_fields->__9;
-      _9__6_0 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B70764(System_Func_string__int__TypeInfo);
+      _9__6_0 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B77694(System_Func_string__int__TypeInfo);
       System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int____ctor(
         _9__6_0,
         v14,
         Method_ConstantStrMaster___c__GetValueArray_b__6_0__,
-        (const MethodInfo_29AD124 *)Method_System_Func_string__int___ctor__);
+        (const MethodInfo_29E9E70 *)Method_System_Func_string__int___ctor__);
       v15 = ConstantStrMaster___c_TypeInfo->static_fields;
       v15->__9__6_0 = (struct System_Func_string__int__o *)_9__6_0;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&v15->__9__6_0,
         (System_Int32_array **)_9__6_0,
         v16,
@@ -309,10 +309,10 @@ LABEL_18:
     v22 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_BattleLogicBuff_ReduceHpProcess_BuffInfo__int_(
                                                                  v10,
                                                                  (System_Func_TSource__TResult__o *)_9__6_0,
-                                                                 (const MethodInfo_1CC3CC0 *)Method_System_Linq_Enumerable_Select_string__int___);
+                                                                 (const MethodInfo_1D38B10 *)Method_System_Linq_Enumerable_Select_string__int___);
     return System_Linq_Enumerable__ToArray_int_(
              v22,
-             (const MethodInfo_1CC85F0 *)Method_System_Linq_Enumerable_ToArray_int___);
+             (const MethodInfo_1D3D440 *)Method_System_Linq_Enumerable_ToArray_int___);
   }
   return defVal;
 }
@@ -324,17 +324,17 @@ System_Int32_array *__fastcall ConstantStrMaster__GetValueAsIntArray(System_Stri
   __int64 v4; // x1
   const MethodInfo *v5; // x3
 
-  if ( (byte_435352A & 1) == 0 )
+  if ( (byte_438CCAD & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_ConstantStrMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    byte_435352A = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_ConstantStrMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    byte_438CCAD = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (ConstantStrMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ConstantStrMaster___);
+  Master_WarQuestSelectionMaster = (ConstantStrMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ConstantStrMaster___);
   if ( !Master_WarQuestSelectionMaster )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   return ConstantStrMaster__GetValueArray(Master_WarQuestSelectionMaster, name, 0LL, v5);
 }
 
@@ -345,19 +345,19 @@ float __fastcall ConstantStrMaster__GetValueFloat(System_String_o *name, float d
   __int64 v6; // x1
   const MethodInfo *v7; // x2
 
-  if ( (byte_4353529 & 1) == 0 )
+  if ( (byte_438CCAC & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_ConstantStrMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4353529 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_ConstantStrMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438CCAC = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ConstantStrMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ConstantStrMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v6);
+    sub_B7769C(Instance, v6);
   }
   return ConstantStrMaster__GetFloat((ConstantStrMaster_o *)Instance, name, defVal, v7);
 }
@@ -388,24 +388,24 @@ System_Single_array *__fastcall ConstantStrMaster__GetValueFloatArray(
   __int64 v22; // x0
   WarQuestSelectionEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_435352D & 1) == 0 )
+  if ( (byte_438CCB0 & 1) == 0 )
   {
-    sub_B70694(&char___TypeInfo);
-    sub_B70694(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
-    sub_B70694(&Method_System_Linq_Enumerable_Select_string__float___);
-    sub_B70694(&Method_System_Linq_Enumerable_ToArray_float___);
-    sub_B70694(&Method_System_Func_string__float___ctor__);
-    sub_B70694(&System_Func_string__float__TypeInfo);
-    sub_B70694(&Method_ConstantStrMaster___c__GetValueFloatArray_b__7_0__);
-    sub_B70694(&ConstantStrMaster___c_TypeInfo);
-    byte_435352D = 1;
+    sub_B775C4(&char___TypeInfo);
+    sub_B775C4(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
+    sub_B775C4(&Method_System_Linq_Enumerable_Select_string__float___);
+    sub_B775C4(&Method_System_Linq_Enumerable_ToArray_float___);
+    sub_B775C4(&Method_System_Func_string__float___ctor__);
+    sub_B775C4(&System_Func_string__float__TypeInfo);
+    sub_B775C4(&Method_ConstantStrMaster___c__GetValueFloatArray_b__7_0__);
+    sub_B775C4(&ConstantStrMaster___c_TypeInfo);
+    byte_438CCB0 = 1;
   }
   entity = 0LL;
   v6 = DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
          (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
          &entity,
          name,
-         (const MethodInfo_21C08E8 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
+         (const MethodInfo_21FBD3C *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
   result = 0LL;
   if ( v6 )
   {
@@ -414,14 +414,14 @@ System_Single_array *__fastcall ConstantStrMaster__GetValueFloatArray(
     v8 = *(System_String_o **)&entity->fields.shortCutBannerId;
     if ( !v8 )
       return 0LL;
-    result = (System_Single_array *)sub_B706AC(char___TypeInfo, 1LL);
+    result = (System_Single_array *)sub_B775DC(char___TypeInfo, 1LL);
     if ( !result )
 LABEL_19:
-      sub_B7076C(result, v5);
+      sub_B7769C(result, v5);
     if ( !result->max_length )
     {
-      v22 = sub_B70798(result);
-      sub_B70738(v22, 0LL);
+      v22 = sub_B776C8(result);
+      sub_B77668(v22, 0LL);
     }
     LOWORD(result->m_Items[1]) = 44;
     v9 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(v8, (System_Char_array *)result, 0LL);
@@ -442,15 +442,15 @@ LABEL_19:
         static_fields = ConstantStrMaster___c_TypeInfo->static_fields;
       }
       v13 = (Il2CppObject *)static_fields->__9;
-      _9__7_0 = (System_Func_WarBoardAIRoute_RouteData__float__o *)sub_B70764(System_Func_string__float__TypeInfo);
+      _9__7_0 = (System_Func_WarBoardAIRoute_RouteData__float__o *)sub_B77694(System_Func_string__float__TypeInfo);
       System_Func_WarBoardAIRoute_RouteData__float____ctor(
         _9__7_0,
         v13,
         Method_ConstantStrMaster___c__GetValueFloatArray_b__7_0__,
-        (const MethodInfo_29AE46C *)Method_System_Func_string__float___ctor__);
+        (const MethodInfo_29EB1B8 *)Method_System_Func_string__float___ctor__);
       v14 = ConstantStrMaster___c_TypeInfo->static_fields;
       v14->__9__7_0 = (struct System_Func_string__float__o *)_9__7_0;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&v14->__9__7_0,
         (System_Int32_array **)_9__7_0,
         v15,
@@ -463,10 +463,10 @@ LABEL_19:
     v21 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_ShiftHpData_HpDetail__float_(
                                                                  v9,
                                                                  (System_Func_TSource__TResult__o *)_9__7_0,
-                                                                 (const MethodInfo_1CC452C *)Method_System_Linq_Enumerable_Select_string__float___);
+                                                                 (const MethodInfo_1D3937C *)Method_System_Linq_Enumerable_Select_string__float___);
     return System_Linq_Enumerable__ToArray_float_(
              v21,
-             (const MethodInfo_1CC8820 *)Method_System_Linq_Enumerable_ToArray_float___);
+             (const MethodInfo_1D3D670 *)Method_System_Linq_Enumerable_ToArray_float___);
   }
   return result;
 }
@@ -484,37 +484,37 @@ System_String_array *__fastcall ConstantStrMaster__GetValueStringArray(
   __int64 v9; // x0
   ServantVoiceEntity_o *result; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_435352E & 1) == 0 )
+  if ( (byte_438CCB1 & 1) == 0 )
   {
-    sub_B70694(&char___TypeInfo);
-    sub_B70694(&Method_DataMasterBase_TryGetEntityFromId_ConstantStrEntity___);
-    byte_435352E = 1;
+    sub_B775C4(&char___TypeInfo);
+    sub_B775C4(&Method_DataMasterBase_TryGetEntityFromId_ConstantStrEntity___);
+    byte_438CCB1 = 1;
   }
   result = 0LL;
   EntityFromId_ServantVoiceEntity = DataMasterBase__TryGetEntityFromId_ServantVoiceEntity_(
                                       (DataMasterBase_o *)this,
                                       &result,
                                       name,
-                                      (const MethodInfo_1CA3A78 *)Method_DataMasterBase_TryGetEntityFromId_ConstantStrEntity___);
+                                      (const MethodInfo_1D188C8 *)Method_DataMasterBase_TryGetEntityFromId_ConstantStrEntity___);
   v7 = 0LL;
   if ( EntityFromId_ServantVoiceEntity )
   {
     if ( !result )
       goto LABEL_10;
     v8 = *(System_String_o **)&result->fields.type;
-    v7 = (System_String_array *)sub_B706AC(char___TypeInfo, 1LL);
+    v7 = (System_String_array *)sub_B775DC(char___TypeInfo, 1LL);
     if ( !v7 )
       goto LABEL_10;
     v5 = v7;
     if ( !v7->max_length )
     {
-      v9 = sub_B70798(v7);
-      sub_B70738(v9, 0LL);
+      v9 = sub_B776C8(v7);
+      sub_B77668(v9, 0LL);
     }
     LOWORD(v7->m_Items[0]) = 44;
     if ( !v8 )
 LABEL_10:
-      sub_B7076C(v7, v5);
+      sub_B7769C(v7, v5);
     return System_String__Split(v8, (System_Char_array *)v7, 0LL);
   }
   return v7;
@@ -539,8 +539,8 @@ UnityEngine_Vector3_o __fastcall ConstantStrMaster__GetValueVector3(
   {
     if ( ValueFloatArray->max_length < 3 )
     {
-      v7 = sub_B70798(ValueFloatArray);
-      sub_B70738(v7, 0LL);
+      v7 = sub_B776C8(ValueFloatArray);
+      sub_B77668(v7, 0LL);
     }
     v4 = ValueFloatArray->m_Items[1];
     v5 = ValueFloatArray->m_Items[2];
@@ -581,16 +581,16 @@ System_String_array_array *__fastcall ConstantStrMaster__GetVoiceList(
   __int64 v21; // x0
   __int64 v22; // x0
 
-  if ( (byte_435352F & 1) == 0 )
+  if ( (byte_438CCB2 & 1) == 0 )
   {
-    sub_B70694(&char___TypeInfo);
-    sub_B70694(&string_____TypeInfo);
-    byte_435352F = 1;
+    sub_B775C4(&char___TypeInfo);
+    sub_B775C4(&string_____TypeInfo);
+    byte_438CCB2 = 1;
   }
   if ( !ent )
     return 0LL;
   value = ent->fields.value;
-  v5 = (System_Char_array *)sub_B706AC(char___TypeInfo, 1LL);
+  v5 = (System_Char_array *)sub_B775DC(char___TypeInfo, 1LL);
   if ( !v5 )
     goto LABEL_22;
   v6 = v5;
@@ -599,9 +599,9 @@ System_String_array_array *__fastcall ConstantStrMaster__GetVoiceList(
   v5->m_Items[2] = 47;
   if ( !value || (v5 = (System_Char_array *)System_String__Split(value, v5, 0LL)) == 0LL )
 LABEL_22:
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   v7 = v5;
-  v5 = (System_Char_array *)sub_B706AC(string_____TypeInfo, v5->max_length);
+  v5 = (System_Char_array *)sub_B775DC(string_____TypeInfo, v5->max_length);
   max_length = v7->max_length;
   v9 = (System_String_array_array *)v5;
   if ( max_length >= 1 )
@@ -612,7 +612,7 @@ LABEL_22:
           i = (BattleServantConfConponent_o *)((char *)i + 8) )
     {
       v12 = *(System_String_o **)&v7->m_Items[4 * v10 + 2];
-      v5 = (System_Char_array *)sub_B706AC(char___TypeInfo, 1LL);
+      v5 = (System_Char_array *)sub_B775DC(char___TypeInfo, 1LL);
       if ( !v5 )
         goto LABEL_22;
       v6 = v5;
@@ -627,24 +627,24 @@ LABEL_22:
       v19 = (System_Int32_array **)v5;
       if ( v5 )
       {
-        v5 = (System_Char_array *)sub_B70754(v5, v9->obj.klass->_1.element_class);
+        v5 = (System_Char_array *)sub_B77684(v5, v9->obj.klass->_1.element_class);
         if ( !v5 )
         {
-          v22 = sub_B7078C(0LL);
-          sub_B70738(v22, 0LL);
+          v22 = sub_B776BC(0LL);
+          sub_B77668(v22, 0LL);
         }
       }
       if ( (unsigned int)v10 >= v9->max_length )
         break;
       i->klass = (BattleServantConfConponent_c *)v19;
-      sub_B70630(i, v19, v13, v14, v15, v16, v17, v18);
+      sub_B77560(i, v19, v13, v14, v15, v16, v17, v18);
       max_length = v7->max_length;
       if ( (int)++v10 >= max_length )
         return v9;
     }
 LABEL_23:
-    v21 = sub_B70798(v5);
-    sub_B70738(v21, 0LL);
+    v21 = sub_B776C8(v5);
+    sub_B77668(v21, 0LL);
   }
   return v9;
 }
@@ -656,25 +656,25 @@ System_String_o *__fastcall ConstantStrMaster__getValue(System_String_o *name, c
   __int64 v4; // x1
   System_String_o *result; // x0
 
-  if ( (byte_4353528 & 1) == 0 )
+  if ( (byte_438CCAB & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_ConstantStrMaster___);
-    sub_B70694(&Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4353528 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_ConstantStrMaster___);
+    sub_B775C4(&Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438CCAB = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ConstantStrMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ConstantStrMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   result = (System_String_o *)DataMasterBase__getEntityFromKey_object_(
                                 (DataMasterBase_o *)Instance,
                                 name,
-                                (const MethodInfo_1CA3D48 *)Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___);
+                                (const MethodInfo_1D18B98 *)Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___);
   if ( result )
     return (System_String_o *)result[1].klass;
   return result;
@@ -692,16 +692,16 @@ void __fastcall ConstantStrMaster___c___cctor(const MethodInfo *method)
   System_Int32_array *v7; // x6
   System_Int32_array *v8; // x7
 
-  if ( (byte_434FAF9 & 1) == 0 )
+  if ( (byte_43890F3 & 1) == 0 )
   {
-    sub_B70694(&ConstantStrMaster___c_TypeInfo);
-    byte_434FAF9 = 1;
+    sub_B775C4(&ConstantStrMaster___c_TypeInfo);
+    byte_43890F3 = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(ConstantStrMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(ConstantStrMaster___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = (BattleServantConfConponent_o *)ConstantStrMaster___c_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B70630(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  sub_B77560(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
 }
 
 

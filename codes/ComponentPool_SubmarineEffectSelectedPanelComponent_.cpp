@@ -2,7 +2,7 @@ void __fastcall ComponentPool_SubmarineEffectSelectedPanelComponent____ctor(
         ComponentPool_SubmarineEffectSelectedPanelComponent__o *this,
         UnityEngine_GameObject_o *prefab,
         int32_t poolSizeMax,
-        const MethodInfo_21A6774 *method)
+        const MethodInfo_21E1BC8 *method)
 {
   System_String_array **v8; // x2
   System_String_array **v9; // x3
@@ -30,11 +30,11 @@ void __fastcall ComponentPool_SubmarineEffectSelectedPanelComponent____ctor(
   System_Int32_array *v31; // x7
 
   if ( !this )
-    sub_B7076C(0LL, prefab);
+    sub_B7769C(0LL, prefab);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.prefab = prefab;
   this->fields.poolSizeMax = poolSizeMax;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.prefab,
     (System_Int32_array **)prefab,
     v8,
@@ -45,20 +45,20 @@ void __fastcall ComponentPool_SubmarineEffectSelectedPanelComponent____ctor(
     v13);
   _1_System_Collections_Generic_List_T = method->klass->rgctx_data->_1_System_Collections_Generic_List_T_;
   if ( (BYTE2(_1_System_Collections_Generic_List_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_B08394(method->klass->rgctx_data->_1_System_Collections_Generic_List_T_);
-  v15 = (struct System_Collections_Generic_List_T__o *)sub_B70764(_1_System_Collections_Generic_List_T);
+    sub_B0F2C4(method->klass->rgctx_data->_1_System_Collections_Generic_List_T_);
+  v15 = (struct System_Collections_Generic_List_T__o *)sub_B77694(_1_System_Collections_Generic_List_T);
   method->klass->rgctx_data->_2_System_Collections_Generic_List_T___ctor->methodPointer();
   this->fields.availableComponentList = v15;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v15, v16, v17, v18, v19, v20, v21);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v15, v16, v17, v18, v19, v20, v21);
   v22 = method->klass->rgctx_data->_1_System_Collections_Generic_List_T_;
   if ( (BYTE2(v22->vtable[0].methodPtr) & 1) == 0 )
-    sub_B08394(method->klass->rgctx_data->_1_System_Collections_Generic_List_T_);
-  v23 = sub_B70764(v22);
+    sub_B0F2C4(method->klass->rgctx_data->_1_System_Collections_Generic_List_T_);
+  v23 = sub_B77694(v22);
   klass = method->klass;
   v25 = (struct System_Collections_Generic_List_T__o *)v23;
   klass->rgctx_data->_2_System_Collections_Generic_List_T___ctor->methodPointer();
   this->fields.nonAvailableComponentList = v25;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.nonAvailableComponentList,
     (System_Int32_array **)v25,
     v26,

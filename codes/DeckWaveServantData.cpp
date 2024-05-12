@@ -2,11 +2,11 @@ void __fastcall DeckWaveServantData___ctor(DeckWaveServantData_o *this, const Me
 {
   BalanceConfig_c *v3; // x0
 
-  if ( (byte_434D862 & 1) == 0 )
+  if ( (byte_4386E22 & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&int___TypeInfo);
-    byte_434D862 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&int___TypeInfo);
+    byte_4386E22 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v3 = BalanceConfig_TypeInfo;
@@ -16,8 +16,8 @@ void __fastcall DeckWaveServantData___ctor(DeckWaveServantData_o *this, const Me
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v3 = BalanceConfig_TypeInfo;
   }
-  this->fields.uniqueIds = (struct System_Int32_array *)sub_B706AC(
+  this->fields.uniqueIds = (struct System_Int32_array *)sub_B775DC(
                                                           int___TypeInfo,
                                                           (unsigned int)v3->static_fields->DeckMainMemberMax);
-  sub_B70630(&this->fields.uniqueIds);
+  sub_B77560(&this->fields.uniqueIds);
 }

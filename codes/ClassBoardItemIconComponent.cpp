@@ -14,20 +14,20 @@ void __fastcall ClassBoardItemIconComponent__CloseItemDetail(
   CommonUI_o *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_4353AF0 & 1) == 0 )
+  if ( (byte_438D3AE & 1) == 0 )
   {
-    sub_B70694(&Method_ClassBoardItemIconComponent_CloseItemDetail__);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4353AF0 = 1;
+    sub_B775C4(&Method_ClassBoardItemIconComponent_CloseItemDetail__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_438D3AE = 1;
   }
   v3 = Method_ClassBoardItemIconComponent_CloseItemDetail__;
   if ( (*((_BYTE *)Method_ClassBoardItemIconComponent_CloseItemDetail__ + 75) & 2) != 0 )
-    v3 = (_QWORD *)sub_B7069C(Method_ClassBoardItemIconComponent_CloseItemDetail__);
-  v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+    v3 = (_QWORD *)sub_B775CC(Method_ClassBoardItemIconComponent_CloseItemDetail__);
+  v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v6);
+    sub_B7769C(0LL, v6);
   CommonUI__CloseItemDetailDialog(Instance, 0LL);
 }
 
@@ -44,21 +44,21 @@ int32_t __fastcall ClassBoardItemIconComponent__GetHaveNum(
   int32_t *p_mana; // x8
   UserItemMaster_o *MasterData_WarQuestSelectionMaster; // x20
 
-  if ( (byte_4353AEE & 1) == 0 )
+  if ( (byte_438D3AC & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4353AEE = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438D3AC = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_25;
   Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ItemMaster___);
+                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !Instance )
     goto LABEL_25;
   v7 = (ItemMaster_o *)Instance;
@@ -98,12 +98,12 @@ int32_t __fastcall ClassBoardItemIconComponent__GetHaveNum(
         }
         else
         {
-          Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( Instance )
           {
             MasterData_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                        (DataManager_o *)Instance,
-                                                                       (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                                                       (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserItemMaster___);
             if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !NetworkManager_TypeInfo->_2.cctor_finished )
             {
@@ -128,7 +128,7 @@ int32_t __fastcall ClassBoardItemIconComponent__GetHaveNum(
       }
     }
 LABEL_25:
-    sub_B7076C(Instance, v6);
+    sub_B7769C(Instance, v6);
   }
   if ( !SelfUserGame )
     goto LABEL_25;
@@ -149,14 +149,14 @@ void __fastcall ClassBoardItemIconComponent__OnClickItem(ClassBoardItemIconCompo
   CommonUI_o *v10; // x21
   ItemDetailInfoComponent_CallbackFunc_o *v11; // x22
 
-  if ( (byte_4353AEF & 1) == 0 )
+  if ( (byte_438D3AD & 1) == 0 )
   {
-    sub_B70694(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
-    sub_B70694(&Method_ClassBoardItemIconComponent_CloseItemDetail__);
-    sub_B70694(&Method_ClassBoardItemIconComponent_OnClickItem__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4353AEF = 1;
+    sub_B775C4(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+    sub_B775C4(&Method_ClassBoardItemIconComponent_CloseItemDetail__);
+    sub_B775C4(&Method_ClassBoardItemIconComponent_OnClickItem__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_438D3AD = 1;
   }
   maskSprite = (UnityEngine_Object_o *)this->fields.maskSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -179,13 +179,13 @@ void __fastcall ClassBoardItemIconComponent__OnClickItem(ClassBoardItemIconCompo
   {
     v6 = Method_ClassBoardItemIconComponent_OnClickItem__;
     if ( (*((_BYTE *)Method_ClassBoardItemIconComponent_OnClickItem__ + 75) & 2) != 0 )
-      v6 = (_QWORD *)sub_B7069C(Method_ClassBoardItemIconComponent_OnClickItem__);
-    v7 = (System_Reflection_MethodBase_o *)sub_B70678(v6, v6[3]);
+      v6 = (_QWORD *)sub_B775CC(Method_ClassBoardItemIconComponent_OnClickItem__);
+    v7 = (System_Reflection_MethodBase_o *)sub_B775A8(v6, v6[3]);
     OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0LL);
-    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     itemEnt = this->fields.itemEnt;
     v10 = (CommonUI_o *)Instance;
-    v11 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_B70764(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+    v11 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_B77694(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
     ItemDetailInfoComponent_CallbackFunc___ctor(
       v11,
       (Il2CppObject *)this,
@@ -197,7 +197,7 @@ void __fastcall ClassBoardItemIconComponent__OnClickItem(ClassBoardItemIconCompo
       return;
     }
 LABEL_16:
-    sub_B7076C(gameObject, v4);
+    sub_B7769C(gameObject, v4);
   }
 }
 
@@ -252,35 +252,35 @@ void __fastcall ClassBoardItemIconComponent__setItemInfo(
   UnityEngine_Color32_o v48; // 0:x0.8
   UnityEngine_Color32_o v49; // 0:x0.8
 
-  if ( (byte_4353AED & 1) == 0 )
+  if ( (byte_438D3AB & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_UserSvtCoinMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&StringLiteral_3065/*"CLASS_BOARD_DIALOG_ITEM_INFO_HAVE"*/);
-    sub_B70694(&StringLiteral_3067/*"CLASS_BOARD_DIALOG_ITEM_INFO_NEED"*/);
-    sub_B70694(&StringLiteral_23872/*"{0:#,0}"*/);
-    byte_4353AED = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_UserSvtCoinMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&StringLiteral_3114/*"CLASS_BOARD_DIALOG_ITEM_INFO_HAVE"*/);
+    sub_B775C4(&StringLiteral_3116/*"CLASS_BOARD_DIALOG_ITEM_INFO_NEED"*/);
+    sub_B775C4(&StringLiteral_23975/*"{0:#,0}"*/);
+    byte_438D3AB = 1;
   }
   this->fields.currentItemId = itemId;
   this->fields.haveItemNum = 0;
   this->fields.needItemNum = needNum;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ItemMaster___);
+  Master_WarQuestSelectionMaster = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !Master_WarQuestSelectionMaster )
     goto LABEL_38;
   Entity = (struct ItemEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                     (DataMasterBase_WarMaster__WarEntity__int__o *)Master_WarQuestSelectionMaster,
                                     this->fields.currentItemId,
-                                    (const MethodInfo_21C0440 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                                    (const MethodInfo_21FB894 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   p_itemEnt = &this->fields.itemEnt;
   this->fields.itemEnt = Entity;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.itemEnt,
     (System_Int32_array **)Entity,
     v11,
@@ -301,7 +301,7 @@ void __fastcall ClassBoardItemIconComponent__setItemInfo(
   {
     if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    v19 = (UserSvtCoinMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
+    v19 = (UserSvtCoinMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
     if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !NetworkManager_TypeInfo->_2.cctor_finished )
     {
@@ -336,26 +336,26 @@ void __fastcall ClassBoardItemIconComponent__setItemInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  Master_WarQuestSelectionMaster = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3067/*"CLASS_BOARD_DIALOG_ITEM_INFO_NEED"*/, 0LL);
+  Master_WarQuestSelectionMaster = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3116/*"CLASS_BOARD_DIALOG_ITEM_INFO_NEED"*/, 0LL);
   if ( !needTitleLb )
     goto LABEL_38;
   UILabel__set_text(needTitleLb, (System_String_o *)Master_WarQuestSelectionMaster, 0LL);
   haveTitleLb = this->fields.haveTitleLb;
-  Master_WarQuestSelectionMaster = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3065/*"CLASS_BOARD_DIALOG_ITEM_INFO_HAVE"*/, 0LL);
+  Master_WarQuestSelectionMaster = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3114/*"CLASS_BOARD_DIALOG_ITEM_INFO_HAVE"*/, 0LL);
   if ( !haveTitleLb )
     goto LABEL_38;
   UILabel__set_text(haveTitleLb, (System_String_o *)Master_WarQuestSelectionMaster, 0LL);
   haveNumLb = this->fields.haveNumLb;
   c.fields.rgba = this->fields.haveItemNum;
   v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &c, v24);
-  Master_WarQuestSelectionMaster = (int64_t)System_String__Format((System_String_o *)StringLiteral_23872/*"{0:#,0}"*/, v25, 0LL);
+  Master_WarQuestSelectionMaster = (int64_t)System_String__Format((System_String_o *)StringLiteral_23975/*"{0:#,0}"*/, v25, 0LL);
   if ( !haveNumLb )
     goto LABEL_38;
   UILabel__set_text(haveNumLb, (System_String_o *)Master_WarQuestSelectionMaster, 0LL);
   needNumLb = this->fields.needNumLb;
   v44.fields.rgba = this->fields.needItemNum;
   v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v44, v27);
-  Master_WarQuestSelectionMaster = (int64_t)System_String__Format((System_String_o *)StringLiteral_23872/*"{0:#,0}"*/, v28, 0LL);
+  Master_WarQuestSelectionMaster = (int64_t)System_String__Format((System_String_o *)StringLiteral_23975/*"{0:#,0}"*/, v28, 0LL);
   if ( !needNumLb )
     goto LABEL_38;
   UILabel__set_text(needNumLb, (System_String_o *)Master_WarQuestSelectionMaster, 0LL);
@@ -373,7 +373,7 @@ void __fastcall ClassBoardItemIconComponent__setItemInfo(
         goto LABEL_35;
     }
 LABEL_38:
-    sub_B7076C(Master_WarQuestSelectionMaster, v8);
+    sub_B7769C(Master_WarQuestSelectionMaster, v8);
   }
   v29 = (UIWidget_o *)this->fields.needTitleLb;
   p_c = (UnityEngine_Color32_o)&c;
@@ -381,7 +381,7 @@ LABEL_38:
   c.fields.rgba = 0;
   UnityEngine_Color32___ctor(p_c, 0xFFu, 0xFFu, 0, 0xFFu, 0LL);
   rgba = (UnityEngine_Color32_o)(unsigned int)c.fields.rgba;
-  *(UnityEngine_Color_o *)&v30 = UnityEngine_Color32__op_Implicit_41067916(rgba, 0LL);
+  *(UnityEngine_Color_o *)&v30 = UnityEngine_Color32__op_Implicit_41413804(rgba, 0LL);
   if ( !v29 )
     goto LABEL_38;
   UIWidget__set_color(v29, *(UnityEngine_Color_o *)&v30, 0LL);
@@ -390,7 +390,7 @@ LABEL_38:
   v44.fields.rgba = 0;
   UnityEngine_Color32___ctor(v48, 0xFFu, 0xFFu, 0, 0xFFu, 0LL);
   v49 = (UnityEngine_Color32_o)(unsigned int)v44.fields.rgba;
-  *(UnityEngine_Color_o *)&v35 = UnityEngine_Color32__op_Implicit_41067916(v49, 0LL);
+  *(UnityEngine_Color_o *)&v35 = UnityEngine_Color32__op_Implicit_41413804(v49, 0LL);
   if ( !v34 )
     goto LABEL_38;
 LABEL_35:

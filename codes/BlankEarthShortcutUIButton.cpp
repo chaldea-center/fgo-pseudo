@@ -1,9 +1,9 @@
 void __fastcall BlankEarthShortcutUIButton___ctor(BlankEarthShortcutUIButton_o *this, const MethodInfo *method)
 {
-  if ( (byte_4351642 & 1) == 0 )
+  if ( (byte_438ADC7 & 1) == 0 )
   {
-    sub_B70694(&UICommonButton_TypeInfo);
-    byte_4351642 = 1;
+    sub_B775C4(&UICommonButton_TypeInfo);
+    byte_438ADC7 = 1;
   }
   if ( (BYTE3(UICommonButton_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UICommonButton_TypeInfo->_2.cctor_finished )
@@ -83,7 +83,7 @@ void __fastcall BlankEarthShortcutUIButton__SetPressAction(
   System_Int32_array *v7; // x7
 
   this->fields.onPressedAction = pressAction;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.onPressedAction,
     (System_Int32_array **)pressAction,
     (System_String_array **)method,

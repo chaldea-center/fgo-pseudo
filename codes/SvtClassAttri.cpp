@@ -1,9 +1,9 @@
 void __fastcall SvtClassAttri___cctor(const MethodInfo *method)
 {
-  if ( (byte_4357934 & 1) == 0 )
+  if ( (byte_4390F63 & 1) == 0 )
   {
-    sub_B70694(&SvtClassAttri_TypeInfo);
-    byte_4357934 = 1;
+    sub_B775C4(&SvtClassAttri_TypeInfo);
+    byte_4390F63 = 1;
   }
   SvtClassAttri_TypeInfo->static_fields->MAX_EXP_UP_RARITY = 5;
 }
@@ -61,19 +61,19 @@ float __fastcall SvtClassAttri__getMagnification(int32_t attack, int32_t defense
   int32_t RelationId; // w20
   int32_t v9; // w1
 
-  if ( (byte_4357933 & 1) == 0 )
+  if ( (byte_4390F62 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_ServantClassMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4357933 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_ServantClassMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4390F62 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantClassMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantClassMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v6);
+    sub_B7769C(Instance, v6);
   }
   v7 = (ServantClassMaster_o *)Instance;
   RelationId = ServantClassMaster__getRelationId((ServantClassMaster_o *)Instance, attack, 0LL);

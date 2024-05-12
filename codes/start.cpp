@@ -6,11 +6,11 @@ void start()
   v0 = 384LL;
   do
   {
-    v1 = (void **)&byte_434A598[v0];
-    if ( (byte_434A598[v0 - 24] & 1) != 0 )
+    v1 = (void **)&byte_4383B60[v0];
+    if ( (byte_4383B60[v0 - 24] & 1) != 0 )
       operator delete(*(v1 - 1));
     if ( (*(_BYTE *)(v1 - 6) & 1) != 0 )
-      operator delete(*(void **)&byte_434A598[v0 - 32]);
+      operator delete(*(void **)&byte_4383B60[v0 - 32]);
     v0 -= 48LL;
   }
   while ( v0 );

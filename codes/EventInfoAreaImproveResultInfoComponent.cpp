@@ -22,11 +22,11 @@ System_String_o *__fastcall EventInfoAreaImproveResultInfoComponent__GetChangeCo
 {
   System_String_o *v6; // x0
 
-  if ( (byte_4353492 & 1) == 0 )
+  if ( (byte_438CC15 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_5638/*"EVENT_AREA_IMPROVE_REWARD_CHANGE_COLOR"*/);
-    byte_4353492 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_5693/*"EVENT_AREA_IMPROVE_REWARD_CHANGE_COLOR"*/);
+    byte_438CC15 = 1;
   }
   if ( !isChangeColor )
     return str;
@@ -35,7 +35,7 @@ System_String_o *__fastcall EventInfoAreaImproveResultInfoComponent__GetChangeCo
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5638/*"EVENT_AREA_IMPROVE_REWARD_CHANGE_COLOR"*/, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5693/*"EVENT_AREA_IMPROVE_REWARD_CHANGE_COLOR"*/, 0LL);
   return System_String__Format(v6, (Il2CppObject *)str, 0LL);
 }
 
@@ -69,12 +69,12 @@ void __fastcall EventInfoAreaImproveResultInfoComponent__SetAddEventPointRateLab
   int v19; // [xsp+8h] [xbp-38h] BYREF
   int v20; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_435348D & 1) == 0 )
+  if ( (byte_438CC10 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_5632/*"EVENT_AREA_IMPROVE_GET_POINT_RATE"*/);
-    byte_435348D = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_5687/*"EVENT_AREA_IMPROVE_GET_POINT_RATE"*/);
+    byte_438CC10 = 1;
   }
   v7 = addEventPointRate / 100 % 10;
   v8 = addEventPointRate / 1000;
@@ -83,12 +83,12 @@ void __fastcall EventInfoAreaImproveResultInfoComponent__SetAddEventPointRateLab
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5632/*"EVENT_AREA_IMPROVE_GET_POINT_RATE"*/, 0LL);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5687/*"EVENT_AREA_IMPROVE_GET_POINT_RATE"*/, 0LL);
   v20 = v8;
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v20, v10);
   v19 = v7;
   v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v19, v12);
-  v14 = System_String__Format_44753704(v9, v11, v13, 0LL);
+  v14 = System_String__Format_44897472(v9, v11, v13, 0LL);
   addEventPointRateLabel = this->fields.addEventPointRateLabel;
   v17 = EventInfoAreaImproveResultInfoComponent__GetChangeColorText(
           (EventInfoAreaImproveResultInfoComponent_o *)v14,
@@ -96,7 +96,7 @@ void __fastcall EventInfoAreaImproveResultInfoComponent__SetAddEventPointRateLab
           isChangeColor,
           v16);
   if ( !addEventPointRateLabel )
-    sub_B7076C(v17, v18);
+    sub_B7769C(v17, v18);
   UILabel__set_text(addEventPointRateLabel, v17, 0LL);
 }
 
@@ -113,13 +113,13 @@ void __fastcall EventInfoAreaImproveResultInfoComponent__SetIcon(
   int32_t num; // w21
 
   v4 = this;
-  if ( (byte_4353491 & 1) == 0 )
+  if ( (byte_438CC14 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    this = (EventInfoAreaImproveResultInfoComponent_o *)sub_B70694(&NetworkManager_TypeInfo);
-    byte_4353491 = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    this = (EventInfoAreaImproveResultInfoComponent_o *)sub_B775C4(&NetworkManager_TypeInfo);
+    byte_438CC14 = 1;
   }
   if ( !giftEnt )
     goto LABEL_24;
@@ -127,7 +127,7 @@ void __fastcall EventInfoAreaImproveResultInfoComponent__SetIcon(
     goto LABEL_18;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_UserItemMaster___);
+  Master_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_UserItemMaster___);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -142,10 +142,10 @@ void __fastcall EventInfoAreaImproveResultInfoComponent__SetIcon(
   v7 = Entity;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (EventInfoAreaImproveResultInfoComponent_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ItemMaster___);
+  this = (EventInfoAreaImproveResultInfoComponent_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !this )
 LABEL_24:
-    sub_B7076C(this, giftEnt);
+    sub_B7769C(this, giftEnt);
   if ( !ItemMaster__isQP((ItemMaster_o *)this, giftEnt->fields.objectId, 0LL) )
   {
     num = v7->fields.num;
@@ -185,19 +185,19 @@ void __fastcall EventInfoAreaImproveResultInfoComponent__SetLevelLabel(
   __int64 v14; // x1
   int32_t v15; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_435348C & 1) == 0 )
+  if ( (byte_438CC0F & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_5634/*"EVENT_AREA_IMPROVE_LEVEL"*/);
-    byte_435348C = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_5689/*"EVENT_AREA_IMPROVE_LEVEL"*/);
+    byte_438CC0F = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_5634/*"EVENT_AREA_IMPROVE_LEVEL"*/, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_5689/*"EVENT_AREA_IMPROVE_LEVEL"*/, 0LL);
   v15 = lv;
   v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15, v8);
   v10 = System_String__Format(v7, v9, 0LL);
@@ -208,7 +208,7 @@ void __fastcall EventInfoAreaImproveResultInfoComponent__SetLevelLabel(
           isChangeColor,
           v12);
   if ( !levelLabel )
-    sub_B7076C(v13, v14);
+    sub_B7769C(v13, v14);
   UILabel__set_text(levelLabel, v13, 0LL);
 }
 
@@ -241,13 +241,13 @@ void __fastcall EventInfoAreaImproveResultInfoComponent__SetMaxRewardTimeLabel(
   int v26; // [xsp+18h] [xbp-38h] BYREF
   int v27; // [xsp+1Ch] [xbp-34h] BYREF
 
-  if ( (byte_4353490 & 1) == 0 )
+  if ( (byte_438CC13 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_5639/*"EVENT_AREA_IMPROVE_REWARD_UNIT_TIME"*/);
-    sub_B70694(&StringLiteral_5636/*"EVENT_AREA_IMPROVE_MAX_REWARD_TIME_TEXT"*/);
-    byte_4353490 = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_5694/*"EVENT_AREA_IMPROVE_REWARD_UNIT_TIME"*/);
+    sub_B775C4(&StringLiteral_5691/*"EVENT_AREA_IMPROVE_MAX_REWARD_TIME_TEXT"*/);
+    byte_438CC13 = 1;
   }
   v7 = coolTime / 3600;
   v8 = coolTime % 60;
@@ -257,25 +257,25 @@ void __fastcall EventInfoAreaImproveResultInfoComponent__SetMaxRewardTimeLabel(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_5639/*"EVENT_AREA_IMPROVE_REWARD_UNIT_TIME"*/, 0LL);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_5694/*"EVENT_AREA_IMPROVE_REWARD_UNIT_TIME"*/, 0LL);
   v27 = v7;
   v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v27, v11);
   v26 = v9;
   v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26, v13);
   v25 = v8;
   v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25, v15);
-  v17 = System_String__Format_44759232(v10, v12, v14, v16, 0LL);
+  v17 = System_String__Format_44903000(v10, v12, v14, v16, 0LL);
   maxRewardTimeLabel = this->fields.maxRewardTimeLabel;
   v19 = v17;
-  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_5636/*"EVENT_AREA_IMPROVE_MAX_REWARD_TIME_TEXT"*/, 0LL);
+  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_5691/*"EVENT_AREA_IMPROVE_MAX_REWARD_TIME_TEXT"*/, 0LL);
   v22 = EventInfoAreaImproveResultInfoComponent__GetChangeColorText(
           (EventInfoAreaImproveResultInfoComponent_o *)v20,
           v19,
           isChangeColor,
           v21);
-  v23 = System_String__Concat_44758168(v20, v22, 0LL);
+  v23 = System_String__Concat_44901936(v20, v22, 0LL);
   if ( !maxRewardTimeLabel )
-    sub_B7076C(v23, v24);
+    sub_B7769C(v23, v24);
   UILabel__set_text(maxRewardTimeLabel, v23, 0LL);
 }
 
@@ -306,20 +306,20 @@ void __fastcall EventInfoAreaImproveResultInfoComponent__SetRewardNumLabel(
   int32_t v26; // [xsp+8h] [xbp-38h] BYREF
   int32_t v27; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_435348F & 1) == 0 )
+  if ( (byte_438CC12 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_5635/*"EVENT_AREA_IMPROVE_MAX_REWARD_NUM"*/);
-    sub_B70694(&StringLiteral_5633/*"EVENT_AREA_IMPROVE_GET_REWARD_NUM"*/);
-    byte_435348F = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_5690/*"EVENT_AREA_IMPROVE_MAX_REWARD_NUM"*/);
+    sub_B775C4(&StringLiteral_5688/*"EVENT_AREA_IMPROVE_GET_REWARD_NUM"*/);
+    byte_438CC12 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5633/*"EVENT_AREA_IMPROVE_GET_REWARD_NUM"*/, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5688/*"EVENT_AREA_IMPROVE_GET_REWARD_NUM"*/, 0LL);
   v27 = unitNum;
   v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v27, v12);
   v14 = System_String__Format(v11, v13, 0LL);
@@ -328,7 +328,7 @@ void __fastcall EventInfoAreaImproveResultInfoComponent__SetRewardNumLabel(
           v14,
           isUnitNumChanged,
           v15);
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_5635/*"EVENT_AREA_IMPROVE_MAX_REWARD_NUM"*/, 0LL);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_5690/*"EVENT_AREA_IMPROVE_MAX_REWARD_NUM"*/, 0LL);
   v26 = maxNum;
   v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26, v18);
   v20 = System_String__Format(v17, v19, 0LL);
@@ -338,9 +338,9 @@ void __fastcall EventInfoAreaImproveResultInfoComponent__SetRewardNumLabel(
           isMaxNumChanged,
           v21);
   rewardNumLabel = this->fields.rewardNumLabel;
-  v24 = System_String__Concat_44758168(v16, v22, 0LL);
+  v24 = System_String__Concat_44901936(v16, v22, 0LL);
   if ( !rewardNumLabel )
-    sub_B7076C(v24, v25);
+    sub_B7769C(v24, v25);
   UILabel__set_text(rewardNumLabel, v24, 0LL);
 }
 
@@ -376,15 +376,15 @@ void __fastcall EventInfoAreaImproveResultInfoComponent__SetRewardUnitTimeLabel(
   int v30; // [xsp+18h] [xbp-38h] BYREF
   int32_t v31; // [xsp+1Ch] [xbp-34h] BYREF
 
-  if ( (byte_435348E & 1) == 0 )
+  if ( (byte_438CC11 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&string_TypeInfo);
-    sub_B70694(&StringLiteral_5639/*"EVENT_AREA_IMPROVE_REWARD_UNIT_TIME"*/);
-    sub_B70694(&StringLiteral_5625/*"EVENT_AREA_IMPROVE_AFTER_TIME_MESSAGE"*/);
-    sub_B70694(&StringLiteral_5640/*"EVENT_AREA_IMPROVE_REWARD_UNIT_TIME_SEC"*/);
-    byte_435348E = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&string_TypeInfo);
+    sub_B775C4(&StringLiteral_5694/*"EVENT_AREA_IMPROVE_REWARD_UNIT_TIME"*/);
+    sub_B775C4(&StringLiteral_5680/*"EVENT_AREA_IMPROVE_AFTER_TIME_MESSAGE"*/);
+    sub_B775C4(&StringLiteral_5695/*"EVENT_AREA_IMPROVE_REWARD_UNIT_TIME_SEC"*/);
+    byte_438CC11 = 1;
   }
   if ( isQP )
   {
@@ -393,7 +393,7 @@ void __fastcall EventInfoAreaImproveResultInfoComponent__SetRewardUnitTimeLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5640/*"EVENT_AREA_IMPROVE_REWARD_UNIT_TIME_SEC"*/, 0LL);
+    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5695/*"EVENT_AREA_IMPROVE_REWARD_UNIT_TIME_SEC"*/, 0LL);
     v31 = coolUnitTime;
     v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v31, v10);
     v12 = System_String__Format(v9, v11, 0LL);
@@ -408,14 +408,14 @@ void __fastcall EventInfoAreaImproveResultInfoComponent__SetRewardUnitTimeLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_5639/*"EVENT_AREA_IMPROVE_REWARD_UNIT_TIME"*/, 0LL);
+    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_5694/*"EVENT_AREA_IMPROVE_REWARD_UNIT_TIME"*/, 0LL);
     v31 = v14;
     v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v31, v18);
     v30 = v16;
     v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v30, v20);
     v29 = v15;
     v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v29, v22);
-    v12 = System_String__Format_44759232(v17, v19, v21, v23, 0LL);
+    v12 = System_String__Format_44903000(v17, v19, v21, v23, 0LL);
   }
   getRewardUnitTimeLabel = this->fields.getRewardUnitTimeLabel;
   v25 = EventInfoAreaImproveResultInfoComponent__GetChangeColorText(
@@ -428,9 +428,9 @@ void __fastcall EventInfoAreaImproveResultInfoComponent__SetRewardUnitTimeLabel(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_5625/*"EVENT_AREA_IMPROVE_AFTER_TIME_MESSAGE"*/, 0LL);
-  v27 = System_String__Concat_44758168(v25, v26, 0LL);
+  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_5680/*"EVENT_AREA_IMPROVE_AFTER_TIME_MESSAGE"*/, 0LL);
+  v27 = System_String__Concat_44901936(v25, v26, 0LL);
   if ( !getRewardUnitTimeLabel )
-    sub_B7076C(v27, v28);
+    sub_B7769C(v27, v28);
   UILabel__set_text(getRewardUnitTimeLabel, v27, 0LL);
 }

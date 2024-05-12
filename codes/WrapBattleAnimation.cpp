@@ -12,7 +12,7 @@ void __fastcall WrapBattleAnimation___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.animation = normalAnim;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)normalAnim, v5, v6, v7, v8, v9, v10);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)normalAnim, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -46,20 +46,20 @@ WrapBattleBaseAnimation_SimpleData_o *__fastcall WrapBattleAnimation__GetPlaying
   __int64 v26; // x0
   int v28; // [xsp+0h] [xbp-40h]
 
-  if ( (byte_4350162 & 1) == 0 )
+  if ( (byte_4389527 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_AnimationState_TypeInfo);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&System_Collections_IEnumerator_TypeInfo);
-    sub_B70694(&WrapBattleBaseAnimation_SimpleData_TypeInfo);
-    byte_4350162 = 1;
+    sub_B775C4(&UnityEngine_AnimationState_TypeInfo);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
+    sub_B775C4(&WrapBattleBaseAnimation_SimpleData_TypeInfo);
+    byte_4389527 = 1;
   }
   animation = this->fields.animation;
   if ( !animation )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   Enumerator = UnityEngine_Animation__GetEnumerator(animation, 0LL);
   if ( !Enumerator )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -79,7 +79,7 @@ WrapBattleBaseAnimation_SimpleData_o *__fastcall WrapBattleAnimation__GetPlaying
     else
     {
 LABEL_9:
-      p_method = sub_B08590(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_B0F4C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))p_method)(
             Enumerator,
@@ -102,7 +102,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v13 = sub_B08590(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
+      v13 = sub_B0F4C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
     }
     v14 = (UnityEngine_AnimationState_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v13)(
                                             Enumerator,
@@ -112,15 +112,15 @@ LABEL_16:
       goto LABEL_35;
     if ( v14->klass != UnityEngine_AnimationState_TypeInfo )
     {
-      v14 = (UnityEngine_AnimationState_o *)sub_B70A60(v14);
+      v14 = (UnityEngine_AnimationState_o *)sub_B77990(v14);
 LABEL_35:
-      sub_B7076C(v14, v15);
+      sub_B7769C(v14, v15);
     }
     if ( UnityEngine_AnimationState__get_enabled(v14, 0LL) )
     {
       name = UnityEngine_AnimationState__get_name(v16, 0LL);
       time = UnityEngine_AnimationState__get_time(v16, 0LL);
-      v19 = (WrapBattleBaseAnimation_SimpleData_o *)sub_B70764(WrapBattleBaseAnimation_SimpleData_TypeInfo);
+      v19 = (WrapBattleBaseAnimation_SimpleData_o *)sub_B77694(WrapBattleBaseAnimation_SimpleData_TypeInfo);
       WrapBattleBaseAnimation_SimpleData___ctor(v19, name, time, 0LL);
       v20 = 83;
       goto LABEL_23;
@@ -130,7 +130,7 @@ LABEL_35:
   v20 = 81;
 LABEL_23:
   v28 = v20;
-  v21 = sub_B70754(Enumerator, System_IDisposable_TypeInfo);
+  v21 = sub_B77684(Enumerator, System_IDisposable_TypeInfo);
   if ( v21 )
   {
     v22 = *(_QWORD *)v21;
@@ -151,7 +151,7 @@ LABEL_23:
     else
     {
 LABEL_28:
-      v26 = sub_B08590(v21, System_IDisposable_TypeInfo, 0LL);
+      v26 = sub_B0F4C0(v21, System_IDisposable_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v26)(v23, *(_QWORD *)(v26 + 8));
   }
@@ -176,7 +176,7 @@ void __fastcall WrapBattleAnimation__PlayAnimation(
         (animation = this->fields.animation) == 0LL)
     || (UnityEngine_Animation__Sample(animation, 0LL), (animation = this->fields.animation) == 0LL) )
   {
-    sub_B7076C(animation, animName);
+    sub_B7769C(animation, animName);
   }
-  UnityEngine_Animation__Play_51542184(animation, animName, 0LL);
+  UnityEngine_Animation__Play_51745976(animation, animName, 0LL);
 }

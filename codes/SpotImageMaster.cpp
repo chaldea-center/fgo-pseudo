@@ -1,14 +1,14 @@
 void __fastcall SpotImageMaster___ctor(SpotImageMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_435278B & 1) == 0 )
+  if ( (byte_438BF07 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string___ctor__);
-    byte_435278B = 1;
+    sub_B775C4(&Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string___ctor__);
+    byte_438BF07 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     21,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ SpotImageEntity_o *__fastcall SpotImageMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4352789 & 1) == 0 )
+  if ( (byte_438BF05 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string__GetEntity__);
-    byte_4352789 = 1;
+    sub_B775C4(&Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string__GetEntity__);
+    byte_438BF05 = 1;
   }
   PK = SpotImageEntity__CreatePK(spotId, priority, *(const MethodInfo **)&priority);
   return (SpotImageEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                 (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                 PK,
-                                (const MethodInfo_21C0890 *)Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string__GetEntity__);
+                                (const MethodInfo_21FBCE4 *)Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string__GetEntity__);
 }
 
 
@@ -55,33 +55,33 @@ SpotImageEntity_array *__fastcall SpotImageMaster__GetImageList(
   System_Int32_array *v18; // x6
   System_Int32_array *v19; // x7
 
-  if ( (byte_435278C & 1) == 0 )
+  if ( (byte_438BF08 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&Method_System_Comparison_SpotImageEntity___ctor__);
-    sub_B70694(&System_Comparison_SpotImageEntity__TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_SpotImageEntity__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_SpotImageEntity__Sort__);
-    sub_B70694(&Method_System_Collections_Generic_List_SpotImageEntity__ToArray__);
-    sub_B70694(&Method_System_Collections_Generic_List_SpotImageEntity___ctor__);
-    sub_B70694(&System_Collections_Generic_List_SpotImageEntity__TypeInfo);
-    sub_B70694(&SpotImageEntity_TypeInfo);
-    sub_B70694(&Method_SpotImageMaster___c__GetImageList_b__3_0__);
-    sub_B70694(&SpotImageMaster___c_TypeInfo);
-    byte_435278C = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&Method_System_Comparison_SpotImageEntity___ctor__);
+    sub_B775C4(&System_Comparison_SpotImageEntity__TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_SpotImageEntity__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_SpotImageEntity__Sort__);
+    sub_B775C4(&Method_System_Collections_Generic_List_SpotImageEntity__ToArray__);
+    sub_B775C4(&Method_System_Collections_Generic_List_SpotImageEntity___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_SpotImageEntity__TypeInfo);
+    sub_B775C4(&SpotImageEntity_TypeInfo);
+    sub_B775C4(&Method_SpotImageMaster___c__GetImageList_b__3_0__);
+    sub_B775C4(&SpotImageMaster___c_TypeInfo);
+    byte_438BF08 = 1;
   }
-  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_SpotImageEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_SpotImageEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v5,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_SpotImageEntity___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_SpotImageEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_25;
   v8 = 0;
   while ( v8 < System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
                  (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
-                 (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
+                 (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
   {
     list = this->fields.list;
     if ( !list )
@@ -89,7 +89,7 @@ SpotImageEntity_array *__fastcall SpotImageMaster__GetImageList(
     list = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
              (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
              v8,
-             (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+             (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
     if ( list )
     {
       v6 = list;
@@ -103,7 +103,7 @@ SpotImageEntity_array *__fastcall SpotImageMaster__GetImageList(
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           v5,
           (EventMissionProgressRequest_Argument_ProgressData_o *)list,
-          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_SpotImageEntity__Add__);
+          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_SpotImageEntity__Add__);
       }
     }
     list = this->fields.list;
@@ -128,15 +128,15 @@ SpotImageEntity_array *__fastcall SpotImageMaster__GetImageList(
       static_fields = SpotImageMaster___c_TypeInfo->static_fields;
     }
     v12 = (Il2CppObject *)static_fields->__9;
-    _9__3_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B70764(System_Comparison_SpotImageEntity__TypeInfo);
+    _9__3_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B77694(System_Comparison_SpotImageEntity__TypeInfo);
     System_Comparison_TitleInfoControl_EventEndTimeInfo____ctor(
       _9__3_0,
       v12,
       Method_SpotImageMaster___c__GetImageList_b__3_0__,
-      (const MethodInfo_2B05B38 *)Method_System_Comparison_SpotImageEntity___ctor__);
+      (const MethodInfo_2B42C0C *)Method_System_Comparison_SpotImageEntity___ctor__);
     v13 = SpotImageMaster___c_TypeInfo->static_fields;
     v13->__9__3_0 = (struct System_Comparison_SpotImageEntity__o *)_9__3_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v13->__9__3_0,
       (System_Int32_array **)_9__3_0,
       v14,
@@ -148,14 +148,14 @@ SpotImageEntity_array *__fastcall SpotImageMaster__GetImageList(
   }
   if ( !v5 )
 LABEL_25:
-    sub_B7076C(list, v6);
+    sub_B7769C(list, v6);
   System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo___Sort(
     (System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__o *)v5,
     (System_Comparison_T__o *)_9__3_0,
-    (const MethodInfo_3027764 *)Method_System_Collections_Generic_List_SpotImageEntity__Sort__);
+    (const MethodInfo_3055374 *)Method_System_Collections_Generic_List_SpotImageEntity__Sort__);
   return (SpotImageEntity_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
                                     (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v5,
-                                    (const MethodInfo_30277D4 *)Method_System_Collections_Generic_List_SpotImageEntity__ToArray__);
+                                    (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_SpotImageEntity__ToArray__);
 }
 
 
@@ -169,17 +169,17 @@ bool __fastcall SpotImageMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_435278A & 1) == 0 )
+  if ( (byte_438BF06 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string__TryGetEntity__);
-    byte_435278A = 1;
+    sub_B775C4(&Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string__TryGetEntity__);
+    byte_438BF06 = 1;
   }
   PK = SpotImageEntity__CreatePK(spotId, priority, *(const MethodInfo **)&spotId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string__TryGetEntity__);
 }
 
 
@@ -194,16 +194,16 @@ void __fastcall SpotImageMaster___c___cctor(const MethodInfo *method)
   System_Int32_array *v7; // x6
   System_Int32_array *v8; // x7
 
-  if ( (byte_434F8F0 & 1) == 0 )
+  if ( (byte_4388EEA & 1) == 0 )
   {
-    sub_B70694(&SpotImageMaster___c_TypeInfo);
-    byte_434F8F0 = 1;
+    sub_B775C4(&SpotImageMaster___c_TypeInfo);
+    byte_4388EEA = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(SpotImageMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(SpotImageMaster___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = (BattleServantConfConponent_o *)SpotImageMaster___c_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B70630(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  sub_B77560(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -220,6 +220,6 @@ int32_t __fastcall SpotImageMaster___c___GetImageList_b__3_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_B7076C(this, a);
+    sub_B7769C(this, a);
   return b->fields.priority - a->fields.priority;
 }

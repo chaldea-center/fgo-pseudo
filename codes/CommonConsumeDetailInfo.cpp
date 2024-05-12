@@ -12,17 +12,17 @@ void __fastcall CommonConsumeDetailInfo___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.CommonConsumeEntity = commonConsumeEntity;
-  sub_B70630(&this->fields);
+  sub_B77560(&this->fields);
   this->fields.targetEntity = targetEntity;
-  sub_B70630(&this->fields.targetEntity);
+  sub_B77560(&this->fields.targetEntity);
   this->fields.userOwnStatusEntity = userOwnStatusEntity;
-  v9 = sub_B70630(&this->fields.userOwnStatusEntity);
+  v9 = sub_B77560(&this->fields.userOwnStatusEntity);
   v11 = this->fields.CommonConsumeEntity;
   if ( !v11 )
-    sub_B7076C(v9, v10);
+    sub_B7769C(v9, v10);
   this->fields._Num_k__BackingField = v11->fields.num;
   this->fields._Name_k__BackingField = CommonConsumeDetailInfo__GetTargetName(this, v10);
-  sub_B70630(&this->fields._Name_k__BackingField);
+  sub_B77560(&this->fields._Name_k__BackingField);
   this->fields._IsOwnedEnoughly_k__BackingField = CommonConsumeDetailInfo__CheckIsOwnedEnoughly(this, v12);
 }
 
@@ -37,11 +37,11 @@ bool __fastcall CommonConsumeDetailInfo__CheckIsOwnedEnoughly(
   Il2CppObject *userOwnStatusEntity; // x8
   __int64 v7; // x11
 
-  if ( (byte_434DF47 & 1) == 0 )
+  if ( (byte_4387509 & 1) == 0 )
   {
-    sub_B70694(&ItemEntity_TypeInfo);
-    sub_B70694(&UserItemEntity_TypeInfo);
-    byte_434DF47 = 1;
+    sub_B775C4(&ItemEntity_TypeInfo);
+    sub_B775C4(&UserItemEntity_TypeInfo);
+    byte_4387509 = 1;
   }
   targetEntity = this->fields.targetEntity;
   result = targetEntity
@@ -64,11 +64,11 @@ System_String_o *__fastcall CommonConsumeDetailInfo__GetTargetName(
   __int64 v4; // x11
   System_String_o **p_monitor; // x8
 
-  if ( (byte_434DF46 & 1) == 0 )
+  if ( (byte_4387508 & 1) == 0 )
   {
-    sub_B70694(&ItemEntity_TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_434DF46 = 1;
+    sub_B775C4(&ItemEntity_TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_4387508 = 1;
   }
   targetEntity = this->fields.targetEntity;
   if ( targetEntity
@@ -120,7 +120,7 @@ void __fastcall CommonConsumeDetailInfo__set_Name(
         const MethodInfo *method)
 {
   this->fields._Name_k__BackingField = value;
-  sub_B70630(&this->fields._Name_k__BackingField);
+  sub_B77560(&this->fields._Name_k__BackingField);
 }
 
 

@@ -9,18 +9,18 @@ void __fastcall BattleServantConfSkillComponent___cctor(const MethodInfo *method
   struct BattleServantConfSkillComponent_StaticFields *static_fields; // x0
   System_Int32_array **v8; // x1
 
-  if ( (byte_434F60C & 1) == 0 )
+  if ( (byte_4388CD3 & 1) == 0 )
   {
-    sub_B70694(&BattleServantConfSkillComponent_TypeInfo);
-    sub_B70694(&StringLiteral_19937/*"img_skillclass_0"*/);
-    byte_434F60C = 1;
+    sub_B775C4(&BattleServantConfSkillComponent_TypeInfo);
+    sub_B775C4(&StringLiteral_20027/*"img_skillclass_0"*/);
+    byte_4388CD3 = 1;
   }
   BattleServantConfSkillComponent_TypeInfo->static_fields->MAX_HEIGHT = 500;
   BattleServantConfSkillComponent_TypeInfo->static_fields->ADJUST_HEIGHT = 40;
   static_fields = BattleServantConfSkillComponent_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_19937/*"img_skillclass_0"*/;
-  static_fields->SKILL_NO_FILE_PREFIX = (struct System_String_o *)StringLiteral_19937/*"img_skillclass_0"*/;
-  sub_B70630((BattleServantConfConponent_o *)&static_fields->SKILL_NO_FILE_PREFIX, v8, v1, v2, v3, v4, v5, v6);
+  v8 = (System_Int32_array **)StringLiteral_20027/*"img_skillclass_0"*/;
+  static_fields->SKILL_NO_FILE_PREFIX = (struct System_String_o *)StringLiteral_20027/*"img_skillclass_0"*/;
+  sub_B77560((BattleServantConfConponent_o *)&static_fields->SKILL_NO_FILE_PREFIX, v8, v1, v2, v3, v4, v5, v6);
   BattleServantConfSkillComponent_TypeInfo->static_fields->MAX_LEVEL = 10;
 }
 
@@ -50,7 +50,7 @@ int32_t __fastcall BattleServantConfSkillComponent__GetHeight(
 
   skillExplanationLabel = this->fields.skillExplanationLabel;
   if ( !skillExplanationLabel )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return skillExplanationLabel->fields.mHeight;
 }
 
@@ -91,11 +91,11 @@ void __fastcall BattleServantConfSkillComponent__SetItem(
   int32_t v42; // [xsp+Ch] [xbp-44h] BYREF
 
   v42 = num;
-  if ( (byte_434F60B & 1) == 0 )
+  if ( (byte_4388CD2 & 1) == 0 )
   {
-    sub_B70694(&BattleServantConfSkillComponent_TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_434F60B = 1;
+    sub_B775C4(&BattleServantConfSkillComponent_TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_4388CD2 = 1;
   }
   v41 = 0;
   if ( num <= 9 )
@@ -110,7 +110,7 @@ void __fastcall BattleServantConfSkillComponent__SetItem(
     }
     SKILL_NO_FILE_PREFIX = v25->static_fields->SKILL_NO_FILE_PREFIX;
     v27 = System_Int32__ToString((int32_t)&v42, 0LL);
-    titleNumSecondSprite = System_String__Concat_44758168(SKILL_NO_FILE_PREFIX, v27, 0LL);
+    titleNumSecondSprite = System_String__Concat_44901936(SKILL_NO_FILE_PREFIX, v27, 0LL);
     if ( titleNumFirstSprite )
     {
       UISprite__set_spriteName(titleNumFirstSprite, titleNumSecondSprite, 0LL);
@@ -133,7 +133,7 @@ void __fastcall BattleServantConfSkillComponent__SetItem(
       }
     }
 LABEL_36:
-    sub_B7076C(titleNumSecondSprite, v19);
+    sub_B7769C(titleNumSecondSprite, v19);
   }
   v14 = BattleServantConfSkillComponent_TypeInfo;
   v41 = num / 0xAu;
@@ -146,7 +146,7 @@ LABEL_36:
   }
   v16 = v14->static_fields->SKILL_NO_FILE_PREFIX;
   v17 = System_Int32__ToString((int32_t)&v41, 0LL);
-  titleNumSecondSprite = System_String__Concat_44758168(v16, v17, 0LL);
+  titleNumSecondSprite = System_String__Concat_44901936(v16, v17, 0LL);
   if ( !v15 )
     goto LABEL_36;
   UISprite__set_spriteName(v15, titleNumSecondSprite, 0LL);
@@ -163,7 +163,7 @@ LABEL_36:
   v20 = this->fields.titleNumSecondSprite;
   v21 = BattleServantConfSkillComponent_TypeInfo->static_fields->SKILL_NO_FILE_PREFIX;
   v22 = System_Int32__ToString((int32_t)&v41, 0LL);
-  titleNumSecondSprite = System_String__Concat_44758168(v21, v22, 0LL);
+  titleNumSecondSprite = System_String__Concat_44901936(v21, v22, 0LL);
   if ( !v20 )
     goto LABEL_36;
   v23 = titleNumSecondSprite;

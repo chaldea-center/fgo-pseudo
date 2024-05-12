@@ -28,37 +28,37 @@ void __fastcall TranslucentActorVisualInfo__UpdateByBuffs(
   float v11; // s0
   char IsDrawShadowDespiteBattleCharaInvisible; // w8
 
-  if ( (byte_4353D5D & 1) == 0 )
+  if ( (byte_438D61B & 1) == 0 )
   {
-    sub_B70694(&Method_BasicHelper_IndexValue_BattleBuffData_BuffData___);
-    sub_B70694(&Method_DataManager_GetMasterData_BuffMaster___);
-    sub_B70694(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
-    sub_B70694(&Method_System_Nullable_float__GetValueOrDefault__);
-    sub_B70694(&Method_System_Nullable_float__get_HasValue__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4353D5D = 1;
+    sub_B775C4(&Method_BasicHelper_IndexValue_BattleBuffData_BuffData___);
+    sub_B775C4(&Method_DataManager_GetMasterData_BuffMaster___);
+    sub_B775C4(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+    sub_B775C4(&Method_System_Nullable_float__GetValueOrDefault__);
+    sub_B775C4(&Method_System_Nullable_float__get_HasValue__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438D61B = 1;
   }
   v5 = BasicHelper__IndexValue_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_(
          (WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_array *)buffDataArray,
          0,
          0LL,
-         (const MethodInfo_1BDEDE8 *)Method_BasicHelper_IndexValue_BattleBuffData_BuffData___);
+         (const MethodInfo_1C684A4 *)Method_BasicHelper_IndexValue_BattleBuffData_BuffData___);
   if ( !v5 )
     goto LABEL_11;
   v6 = v5;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_BuffMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_BuffMaster___)) == 0LL )
   {
 LABEL_13:
-    sub_B7076C(Instance, v8);
+    sub_B7769C(Instance, v8);
   }
   Entity = (BuffEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                              (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                              v6->fields.weight,
-                             (const MethodInfo_21C0440 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                             (const MethodInfo_21FB894 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
   if ( !Entity )
   {
 LABEL_11:

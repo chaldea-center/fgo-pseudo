@@ -1,9 +1,9 @@
 void __fastcall PhotoTargetSelectDialog___ctor(PhotoTargetSelectDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4351B9B & 1) == 0 )
+  if ( (byte_438B322 & 1) == 0 )
   {
-    sub_B70694(&BaseDialog_TypeInfo);
-    byte_4351B9B = 1;
+    sub_B775C4(&BaseDialog_TypeInfo);
+    byte_438B322 = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -15,14 +15,14 @@ void __fastcall PhotoTargetSelectDialog__CloseDialog(PhotoTargetSelectDialog_o *
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_4351B99 & 1) == 0 )
+  if ( (byte_438B320 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_PhotoTargetSelectDialog_Init__);
-    byte_4351B99 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_PhotoTargetSelectDialog_Init__);
+    byte_438B320 = 1;
   }
   this->fields.state = 4;
-  v3 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_PhotoTargetSelectDialog_Init__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v3, 0LL);
 }
@@ -35,7 +35,7 @@ void __fastcall PhotoTargetSelectDialog__Init(PhotoTargetSelectDialog_o *this, c
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -57,25 +57,25 @@ void __fastcall PhotoTargetSelectDialog__OnClickDecideButton(
   System_Int32_array *v12; // x6
   System_Int32_array *v13; // x7
 
-  if ( (byte_4351B97 & 1) == 0 )
+  if ( (byte_438B31E & 1) == 0 )
   {
-    sub_B70694(&Method_ActionExtensions_Call_MyRoomControl_PHOTOCAMPAIGNTYPE___);
-    sub_B70694(&Method_PhotoTargetSelectDialog_OnClickDecideButton__);
-    byte_4351B97 = 1;
+    sub_B775C4(&Method_ActionExtensions_Call_MyRoomControl_PHOTOCAMPAIGNTYPE___);
+    sub_B775C4(&Method_PhotoTargetSelectDialog_OnClickDecideButton__);
+    byte_438B31E = 1;
   }
   this->fields.state = 3;
   v5 = Method_PhotoTargetSelectDialog_OnClickDecideButton__;
   if ( (*((_BYTE *)Method_PhotoTargetSelectDialog_OnClickDecideButton__ + 75) & 2) != 0 )
-    v5 = (_QWORD *)sub_B7069C(Method_PhotoTargetSelectDialog_OnClickDecideButton__);
-  v6 = (System_Reflection_MethodBase_o *)sub_B70678(v5, v5[3]);
+    v5 = (_QWORD *)sub_B775CC(Method_PhotoTargetSelectDialog_OnClickDecideButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_B775A8(v5, v5[3]);
   OverwriteAssetSoundName__PlaySystemSe(v6, 8, 0LL);
   decideCallBack = (System_Action_T__o *)this->fields.decideCallBack;
   this->fields.decideCallBack = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.decideCallBack, 0LL, v8, v9, v10, v11, v12, v13);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.decideCallBack, 0LL, v8, v9, v10, v11, v12, v13);
   ActionExtensions__Call_MyRoomControl_PHOTOCAMPAIGNTYPE_(
     decideCallBack,
     type,
-    (const MethodInfo_2BFC270 *)Method_ActionExtensions_Call_MyRoomControl_PHOTOCAMPAIGNTYPE___);
+    (const MethodInfo_2C3C344 *)Method_ActionExtensions_Call_MyRoomControl_PHOTOCAMPAIGNTYPE___);
 }
 
 
@@ -118,18 +118,18 @@ void __fastcall PhotoTargetSelectDialog__OnclickCancelButton(PhotoTargetSelectDi
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4351B98 & 1) == 0 )
+  if ( (byte_438B31F & 1) == 0 )
   {
-    sub_B70694(&Method_PhotoTargetSelectDialog_OnclickCancelButton__);
-    byte_4351B98 = 1;
+    sub_B775C4(&Method_PhotoTargetSelectDialog_OnclickCancelButton__);
+    byte_438B31F = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_PhotoTargetSelectDialog_OnclickCancelButton__;
     if ( (*((_BYTE *)Method_PhotoTargetSelectDialog_OnclickCancelButton__ + 75) & 2) != 0 )
-      v3 = (_QWORD *)sub_B7069C(Method_PhotoTargetSelectDialog_OnclickCancelButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+      v3 = (_QWORD *)sub_B775CC(Method_PhotoTargetSelectDialog_OnclickCancelButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     PhotoTargetSelectDialog__CloseDialog(this, v5);
   }
@@ -156,17 +156,17 @@ void __fastcall PhotoTargetSelectDialog__Open(
   System_Int32_array *v17; // x7
   System_Action_o *v18; // x20
 
-  if ( (byte_4351B96 & 1) == 0 )
+  if ( (byte_438B31D & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&Method_PhotoTargetSelectDialog__Open_b__12_0__);
-    sub_B70694(&StringLiteral_3335/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_B70694(&StringLiteral_10576/*"PHOTO_TARGET_SELECT_DIALOG_TITLE"*/);
-    sub_B70694(&StringLiteral_10575/*"PHOTO_TARGET_SELECT_DIALOG_ONLY_SERVANT_BUTTON"*/);
-    sub_B70694(&StringLiteral_10574/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE"*/);
-    sub_B70694(&StringLiteral_10577/*"PHOTO_TARGET_SELECT_DIALOG_WITH_MASTER_BUTTON"*/);
-    byte_4351B96 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&Method_PhotoTargetSelectDialog__Open_b__12_0__);
+    sub_B775C4(&StringLiteral_3386/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_B775C4(&StringLiteral_10635/*"PHOTO_TARGET_SELECT_DIALOG_TITLE"*/);
+    sub_B775C4(&StringLiteral_10634/*"PHOTO_TARGET_SELECT_DIALOG_ONLY_SERVANT_BUTTON"*/);
+    sub_B775C4(&StringLiteral_10633/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE"*/);
+    sub_B775C4(&StringLiteral_10636/*"PHOTO_TARGET_SELECT_DIALOG_WITH_MASTER_BUTTON"*/);
+    byte_438B31D = 1;
   }
   if ( !this->fields.state )
   {
@@ -176,33 +176,33 @@ void __fastcall PhotoTargetSelectDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_10576/*"PHOTO_TARGET_SELECT_DIALOG_TITLE"*/, 0LL);
+    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_10635/*"PHOTO_TARGET_SELECT_DIALOG_TITLE"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_13;
     UILabel__set_text(titleLabel, v6, 0LL);
     messageLabel = this->fields.messageLabel;
-    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_10574/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE"*/, 0LL);
+    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_10633/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE"*/, 0LL);
     if ( !messageLabel )
       goto LABEL_13;
     UILabel__set_text(messageLabel, v6, 0LL);
     onlyServantButtonLabel = this->fields.onlyServantButtonLabel;
-    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_10575/*"PHOTO_TARGET_SELECT_DIALOG_ONLY_SERVANT_BUTTON"*/, 0LL);
+    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_10634/*"PHOTO_TARGET_SELECT_DIALOG_ONLY_SERVANT_BUTTON"*/, 0LL);
     if ( !onlyServantButtonLabel
       || (UILabel__set_text(onlyServantButtonLabel, v6, 0LL),
           withMasterButtonLabel = this->fields.withMasterButtonLabel,
-          v6 = LocalizationManager__Get((System_String_o *)StringLiteral_10577/*"PHOTO_TARGET_SELECT_DIALOG_WITH_MASTER_BUTTON"*/, 0LL),
+          v6 = LocalizationManager__Get((System_String_o *)StringLiteral_10636/*"PHOTO_TARGET_SELECT_DIALOG_WITH_MASTER_BUTTON"*/, 0LL),
           !withMasterButtonLabel)
       || (UILabel__set_text(withMasterButtonLabel, v6, 0LL),
           cancelButtonLabel = this->fields.cancelButtonLabel,
-          v6 = LocalizationManager__Get((System_String_o *)StringLiteral_3335/*"COMMON_CONFIRM_CANCEL"*/, 0LL),
+          v6 = LocalizationManager__Get((System_String_o *)StringLiteral_3386/*"COMMON_CONFIRM_CANCEL"*/, 0LL),
           !cancelButtonLabel) )
     {
 LABEL_13:
-      sub_B7076C(v6, v7);
+      sub_B7769C(v6, v7);
     }
     UILabel__set_text(cancelButtonLabel, v6, 0LL);
     this->fields.decideCallBack = callBack;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.decideCallBack,
       (System_Int32_array **)callBack,
       v12,
@@ -212,7 +212,7 @@ LABEL_13:
       v16,
       v17);
     this->fields.state = 1;
-    v18 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v18 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     System_Action___ctor(v18, (Il2CppObject *)this, Method_PhotoTargetSelectDialog__Open_b__12_0__, 0LL);
     BaseDialog__Open((BaseDialog_o *)this, v18, 0, 0LL);
   }
@@ -241,10 +241,10 @@ UnityEngine_GameObject_o *__fastcall PhotoTargetSelectDialog__get_closeBtnObject
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4351B9A & 1) == 0 )
+  if ( (byte_438B321 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4351B9A = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438B321 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -256,6 +256,6 @@ UnityEngine_GameObject_o *__fastcall PhotoTargetSelectDialog__get_closeBtnObject
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v6 )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }

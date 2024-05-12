@@ -1,14 +1,14 @@
 void __fastcall WarBoardMessageScriptMaster___ctor(WarBoardMessageScriptMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_435171B & 1) == 0 )
+  if ( (byte_438AEA0 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_WarBoardMessageScriptMaster__WarBoardMessageScriptEntity__string___ctor__);
-    byte_435171B = 1;
+    sub_B775C4(&Method_DataMasterBase_WarBoardMessageScriptMaster__WarBoardMessageScriptEntity__string___ctor__);
+    byte_438AEA0 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     414,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_WarBoardMessageScriptMaster__WarBoardMessageScriptEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_WarBoardMessageScriptMaster__WarBoardMessageScriptEntity__string___ctor__);
 }
 
 
@@ -39,23 +39,23 @@ WarBoardMessageScriptEntity_o *__fastcall WarBoardMessageScriptMaster__GetMessag
   __int64 v24; // x0
   int v26; // [xsp+0h] [xbp-40h]
 
-  if ( (byte_435171C & 1) == 0 )
+  if ( (byte_438AEA1 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
-    sub_B70694(&System_Collections_IEnumerator_TypeInfo);
-    sub_B70694(&WarBoardMessageScriptEntity_TypeInfo);
-    byte_435171C = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
+    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
+    sub_B775C4(&WarBoardMessageScriptEntity_TypeInfo);
+    byte_438AEA1 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
-    sub_B7076C(0LL, imageId);
+    sub_B7769C(0LL, imageId);
   Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
                  list,
-                 (const MethodInfo_2C865F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_2CC56C8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B7076C(0LL, v6);
+    sub_B7769C(0LL, v6);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -75,7 +75,7 @@ WarBoardMessageScriptEntity_o *__fastcall WarBoardMessageScriptMaster__GetMessag
     else
     {
 LABEL_9:
-      p_method = sub_B08590(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_B0F4C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -98,7 +98,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v15 = sub_B08590(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v15 = sub_B0F4C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v16 = (System_String_o **)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v15)(
                                 Enumerator,
@@ -110,13 +110,13 @@ LABEL_16:
     if ( BYTE4((*v16)[12].monitor) < (unsigned int)v19
       || *((WarBoardMessageScriptEntity_c **)(*v16)[8].monitor + v19 - 1) != WarBoardMessageScriptEntity_TypeInfo )
     {
-      v16 = (System_String_o **)sub_B70A60(v16);
+      v16 = (System_String_o **)sub_B77990(v16);
 LABEL_35:
-      sub_B7076C(v16, v17);
+      sub_B7769C(v16, v17);
     }
     if ( !imageId )
-      sub_B7076C(v16, WarBoardMessageScriptEntity_TypeInfo);
-    if ( System_String__Equals_44745508(imageId, v16[2], 0LL) )
+      sub_B7769C(v16, WarBoardMessageScriptEntity_TypeInfo);
+    if ( System_String__Equals_44889276(imageId, v16[2], 0LL) )
     {
       v20 = 66;
       goto LABEL_25;
@@ -143,7 +143,7 @@ LABEL_25:
   else
   {
 LABEL_29:
-    v24 = sub_B08590(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v24 = sub_B0F4C0(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v24)(Enumerator, *(_QWORD *)(v24 + 8));
   if ( v26 == 64 )

@@ -1,14 +1,14 @@
 void __fastcall MstMissionDisplayInfoMaster___ctor(MstMissionDisplayInfoMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4350D62 & 1) == 0 )
+  if ( (byte_438A405 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_MstMissionDisplayInfoMaster__MstMissionDisplayInfoEntity__int___ctor__);
-    byte_4350D62 = 1;
+    sub_B775C4(&Method_DataMasterBase_MstMissionDisplayInfoMaster__MstMissionDisplayInfoEntity__int___ctor__);
+    byte_438A405 = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     159,
-    (const MethodInfo_21C03A4 *)Method_DataMasterBase_MstMissionDisplayInfoMaster__MstMissionDisplayInfoEntity__int___ctor__);
+    (const MethodInfo_21FB7F8 *)Method_DataMasterBase_MstMissionDisplayInfoMaster__MstMissionDisplayInfoEntity__int___ctor__);
 }
 
 
@@ -24,21 +24,21 @@ bool __fastcall MstMissionDisplayInfoMaster__IsBefOpenTime(
   System_Net_NetworkInformation_UnicastIPAddressInformation_o *Item; // x0
   __int64 v9; // x10
 
-  if ( (byte_4350D64 & 1) == 0 )
+  if ( (byte_438A407 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&MstMissionDisplayInfoEntity_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4350D64 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&MstMissionDisplayInfoEntity_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_438A407 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
 LABEL_17:
-    sub_B7076C(list, method);
+    sub_B7769C(list, method);
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             list,
-            (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -57,7 +57,7 @@ LABEL_17:
     Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
              list,
              v7,
-             (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+             (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
     if ( Item )
     {
       v9 = *(&MstMissionDisplayInfoEntity_TypeInfo->_2.bitflags2 + 1);
@@ -83,20 +83,20 @@ bool __fastcall MstMissionDisplayInfoMaster__IsOpenNow(MstMissionDisplayInfoMast
   System_Net_NetworkInformation_UnicastIPAddressInformation_o *Item; // x0
   __int64 v8; // x10
 
-  if ( (byte_4350D63 & 1) == 0 )
+  if ( (byte_438A406 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&MstMissionDisplayInfoEntity_TypeInfo);
-    byte_4350D63 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&MstMissionDisplayInfoEntity_TypeInfo);
+    byte_438A406 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
 LABEL_14:
-    sub_B7076C(list, method);
+    sub_B7769C(list, method);
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             list,
-            (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count < 1 )
     return 0;
   v5 = Count;
@@ -109,7 +109,7 @@ LABEL_14:
     Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
              list,
              v6,
-             (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+             (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
     if ( Item )
     {
       v8 = *(&MstMissionDisplayInfoEntity_TypeInfo->_2.bitflags2 + 1);

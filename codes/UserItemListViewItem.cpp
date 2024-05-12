@@ -20,16 +20,16 @@ void __fastcall UserItemListViewItem___ctor(
   struct System_String_o *name; // x1
   WarEntity_o *Entity; // x0
 
-  if ( (byte_4350734 & 1) == 0 )
+  if ( (byte_4389D5D & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_B70694(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4350734 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_B775C4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4389D5D = 1;
   }
   ListViewItem___ctor((ListViewItem_o *)this, 0LL);
   this->fields.itemData = usrItemData;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.itemData,
     (System_Int32_array **)usrItemData,
     v5,
@@ -46,7 +46,7 @@ void __fastcall UserItemListViewItem___ctor(
   this->fields.itemImgId = usrItemData->fields.itemImgId;
   name = usrItemData->fields.name;
   this->fields.itemName = name;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.itemName,
     (System_Int32_array **)name,
     v13,
@@ -56,19 +56,19 @@ void __fastcall UserItemListViewItem___ctor(
     v17,
     v18);
   this->fields.itemNum = usrItemData->fields.num;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL )
   {
 LABEL_9:
-    sub_B7076C(Instance, v12);
+    sub_B7769C(Instance, v12);
   }
   Entity = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
              (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
              this->fields.itemId,
-             (const MethodInfo_21C0440 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+             (const MethodInfo_21FB894 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   if ( Entity )
     this->fields.itemLostTime = *(_QWORD *)&Entity->fields.eventId;
 }

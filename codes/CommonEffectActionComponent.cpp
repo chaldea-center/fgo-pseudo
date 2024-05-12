@@ -8,18 +8,18 @@ void __fastcall CommonEffectActionComponent__Awake(CommonEffectActionComponent_o
 {
   System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *v3; // x20
 
-  if ( (byte_434DF52 & 1) == 0 )
+  if ( (byte_4387514 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__Action___ctor__);
-    sub_B70694(&System_Collections_Generic_Dictionary_int__Action__TypeInfo);
-    byte_434DF52 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__Action___ctor__);
+    sub_B775C4(&System_Collections_Generic_Dictionary_int__Action__TypeInfo);
+    byte_4387514 = 1;
   }
-  v3 = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)sub_B70764(System_Collections_Generic_Dictionary_int__Action__TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)sub_B77694(System_Collections_Generic_Dictionary_int__Action__TypeInfo);
   System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare____ctor(
     v3,
-    (const MethodInfo_2FC59B4 *)Method_System_Collections_Generic_Dictionary_int__Action___ctor__);
+    (const MethodInfo_2FF35C4 *)Method_System_Collections_Generic_Dictionary_int__Action___ctor__);
   this->fields.eventActionList = (struct System_Collections_Generic_Dictionary_int__Action__o *)v3;
-  sub_B70630(&this->fields.eventActionList);
+  sub_B77560(&this->fields.eventActionList);
 }
 
 
@@ -41,26 +41,26 @@ void __fastcall CommonEffectActionComponent__CallEventAction(
   struct System_Collections_Generic_Dictionary_int__Action__o *v7; // x0
   System_Action_o *Item; // x0
 
-  if ( (byte_434DF54 & 1) == 0 )
+  if ( (byte_4387516 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__Action__get_Item__);
-    byte_434DF54 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__Action__get_Item__);
+    byte_4387516 = 1;
   }
   eventActionList = this->fields.eventActionList;
   if ( eventActionList
     && System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData___ContainsKey(
          (System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData__o *)eventActionList,
          key,
-         (const MethodInfo_2FC67DC *)Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__) )
+         (const MethodInfo_2FF43EC *)Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__) )
   {
     v7 = this->fields.eventActionList;
     if ( !v7 )
-      sub_B7076C(0LL, v6);
+      sub_B7769C(0LL, v6);
     Item = (System_Action_o *)System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___get_Item(
                                 (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)v7,
                                 key,
-                                (const MethodInfo_2FC64A4 *)Method_System_Collections_Generic_Dictionary_int__Action__get_Item__);
+                                (const MethodInfo_2FF40B4 *)Method_System_Collections_Generic_Dictionary_int__Action__get_Item__);
     ActionExtensions__Call(Item, 0LL);
   }
 }
@@ -80,7 +80,7 @@ void __fastcall CommonEffectActionComponent__SetEndAction(
         const MethodInfo *method)
 {
   this->fields.endAction = endAction;
-  sub_B70630(&this->fields.endAction);
+  sub_B77560(&this->fields.endAction);
 }
 
 
@@ -92,10 +92,10 @@ void __fastcall CommonEffectActionComponent__SetEventAction(
 {
   struct System_Collections_Generic_Dictionary_int__Action__o *eventActionList; // x0
 
-  if ( (byte_434DF53 & 1) == 0 )
+  if ( (byte_4387515 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__Action__set_Item__);
-    byte_434DF53 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__Action__set_Item__);
+    byte_4387515 = 1;
   }
   eventActionList = this->fields.eventActionList;
   if ( eventActionList )
@@ -103,7 +103,7 @@ void __fastcall CommonEffectActionComponent__SetEventAction(
       (System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData__o *)eventActionList,
       key,
       (WarBoardAIRoute_RouteData_o *)action,
-      (const MethodInfo_2FC6540 *)Method_System_Collections_Generic_Dictionary_int__Action__set_Item__);
+      (const MethodInfo_2FF4150 *)Method_System_Collections_Generic_Dictionary_int__Action__set_Item__);
 }
 
 
@@ -113,5 +113,5 @@ void __fastcall CommonEffectActionComponent__SetStartAction(
         const MethodInfo *method)
 {
   this->fields.startAction = startAction;
-  sub_B70630(&this->fields.startAction);
+  sub_B77560(&this->fields.startAction);
 }

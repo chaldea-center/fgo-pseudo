@@ -16,7 +16,7 @@ void __fastcall CharaGraphSortManageUnitBase__SetSortSaveKeyPrefix(
   System_Int32_array *v7; // x7
 
   this->fields._SortSaveKeyPrefix_k__BackingField = sortSaveKeyPrefix;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)sortSaveKeyPrefix,
     (System_String_array **)method,
@@ -46,10 +46,10 @@ ListViewSort_o *__fastcall CharaGraphSortManageUnitBase__get_SortInfo(
   System_Int32_array *v14; // x6
   System_Int32_array *v15; // x7
 
-  if ( (byte_4354A7C & 1) == 0 )
+  if ( (byte_438E33B & 1) == 0 )
   {
-    sub_B70694(&ListViewSort_TypeInfo);
-    byte_4354A7C = 1;
+    sub_B775C4(&ListViewSort_TypeInfo);
+    byte_438E33B = 1;
   }
   sortInfo = this->fields.sortInfo;
   if ( !sortInfo )
@@ -58,20 +58,20 @@ ListViewSort_o *__fastcall CharaGraphSortManageUnitBase__get_SortInfo(
     v5 = (System_String_o *)((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, const char *))this->klass[1]._1.gc_desc)(
                               this,
                               this->klass[1]._1.name);
-    v6 = System_String__Concat_44758168(SortSaveKeyPrefix_k__BackingField, v5, 0LL);
+    v6 = System_String__Concat_44901936(SortSaveKeyPrefix_k__BackingField, v5, 0LL);
     v7 = ((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, void *))this->klass[1]._1.namespaze)(
            this,
            this->klass[1]._1.byval_arg.data);
-    sortInfo = (struct ListViewSort_o *)sub_B70764(ListViewSort_TypeInfo);
-    ListViewSort___ctor_33980040(sortInfo, v6, v7, 0, 0LL);
+    sortInfo = (struct ListViewSort_o *)sub_B77694(ListViewSort_TypeInfo);
+    ListViewSort___ctor_34308400(sortInfo, v6, v7, 0, 0LL);
     v8 = (*(__int64 (__fastcall **)(CharaGraphSortManageUnitBase_o *, void *))&this->klass[1]._1.byval_arg.bits)(
            this,
            this->klass[1]._1.this_arg.data);
     if ( !sortInfo )
-      sub_B7076C(v8, v9);
+      sub_B7769C(v8, v9);
     sortInfo->fields.listViewKind = v8;
     this->fields.sortInfo = sortInfo;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.sortInfo,
       (System_Int32_array **)sortInfo,
       v10,
@@ -105,7 +105,7 @@ void __fastcall CharaGraphSortManageUnitBase__set_SortSaveKeyPrefix(
   System_Int32_array *v7; // x7
 
   this->fields._SortSaveKeyPrefix_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)value,
     (System_String_array **)method,

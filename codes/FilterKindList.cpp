@@ -203,392 +203,392 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   System_Int32_array *v201; // x6
   System_Int32_array *v202; // x7
 
-  if ( (byte_435003E & 1) == 0 )
+  if ( (byte_4389722 & 1) == 0 )
   {
-    sub_B70694(&FilterKindList_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-    sub_B70694(&System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
-    byte_435003E = 1;
+    sub_B775C4(&FilterKindList_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+    byte_4389722 = 1;
   }
-  v1 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v1 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v1,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v1 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     8,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     9,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     0,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     1,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     2,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     3,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     4,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     5,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     6,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     7,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     21,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     22,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     23,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     24,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     25,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     26,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     27,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     28,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     29,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     30,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     31,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     34,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     35,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     36,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     37,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     38,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     42,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     43,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     44,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     45,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     46,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     47,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     48,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     39,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     50,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     51,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     54,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     55,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     72,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     73,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     74,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     75,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     76,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     56,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     78,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     79,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     82,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     77,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     81,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     80,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     83,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     84,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     85,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     86,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     87,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     57,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     58,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     59,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     60,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     61,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     62,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     63,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     64,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     10,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     11,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     12,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     52,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     53,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     69,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     70,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     71,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     65,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     66,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     67,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v1,
     68,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   static_fields = (BattleServantConfConponent_o *)FilterKindList_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B70630(static_fields, (System_Int32_array **)v1, v5, v6, v7, v8, v9, v10);
-  v11 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_B77560(static_fields, (System_Int32_array **)v1, v5, v6, v7, v8, v9, v10);
+  v11 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v11,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v11 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v11,
     0,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v11,
     1,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v11,
     2,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v11,
     3,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v11,
     4,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v11,
     5,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v11,
     6,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v11,
     57,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v11,
     58,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v11,
     59,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v11,
     60,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v11,
     61,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v11,
     62,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v11,
     63,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v11,
     64,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v12 = FilterKindList_TypeInfo->static_fields;
   v12->ClassFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v11;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v12->ClassFilterKindList,
     (System_Int32_array **)v11,
     v13,
@@ -597,27 +597,27 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v16,
     v17,
     v18);
-  v19 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v19 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v19,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v19 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v19,
     0,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v19,
     1,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v19,
     2,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v20 = FilterKindList_TypeInfo->static_fields;
   v20->ThreeKnightsFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v19;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v20->ThreeKnightsFilterKindList,
     (System_Int32_array **)v19,
     v21,
@@ -626,31 +626,31 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v24,
     v25,
     v26);
-  v27 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v27 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v27,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v27 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v27,
     3,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v27,
     4,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v27,
     5,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v27,
     6,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v28 = FilterKindList_TypeInfo->static_fields;
   v28->FourCavalryFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v27;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v28->FourCavalryFilterKindList,
     (System_Int32_array **)v27,
     v29,
@@ -659,27 +659,27 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v32,
     v33,
     v34);
-  v35 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v35 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v35,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v35 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v35,
     58,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v35,
     59,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v35,
     60,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v36 = FilterKindList_TypeInfo->static_fields;
   v36->ClassExtra1FilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v35;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v36->ClassExtra1FilterKindList,
     (System_Int32_array **)v35,
     v37,
@@ -688,31 +688,31 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v40,
     v41,
     v42);
-  v43 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v43 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v43,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v43 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v43,
     57,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v43,
     58,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v43,
     59,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v43,
     60,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v44 = FilterKindList_TypeInfo->static_fields;
   v44->ClassExtra1InShielderFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v43;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v44->ClassExtra1InShielderFilterKindList,
     (System_Int32_array **)v43,
     v45,
@@ -721,31 +721,31 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v48,
     v49,
     v50);
-  v51 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v51 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v51,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v51 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v51,
     61,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v51,
     62,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v51,
     63,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v51,
     64,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v52 = FilterKindList_TypeInfo->static_fields;
   v52->ClassExtra2FilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v51;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v52->ClassExtra2FilterKindList,
     (System_Int32_array **)v51,
     v53,
@@ -754,31 +754,31 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v56,
     v57,
     v58);
-  v59 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v59 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v59,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v59 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v59,
     65,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v59,
     66,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v59,
     67,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v59,
     68,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v60 = FilterKindList_TypeInfo->static_fields;
   v60->ClassGroupFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v59;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v60->ClassGroupFilterKindList,
     (System_Int32_array **)v59,
     v61,
@@ -787,23 +787,23 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v64,
     v65,
     v66);
-  v67 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v67 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v67,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v67 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v67,
     67,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v67,
     68,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v68 = FilterKindList_TypeInfo->static_fields;
   v68->ClassGroupExtraFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v67;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v68->ClassGroupExtraFilterKindList,
     (System_Int32_array **)v67,
     v69,
@@ -812,27 +812,27 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v72,
     v73,
     v74);
-  v75 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v75 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v75,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v75 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v75,
     44,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v75,
     43,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v75,
     42,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v76 = FilterKindList_TypeInfo->static_fields;
   v76->NpTypeFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v75;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v76->NpTypeFilterKindList,
     (System_Int32_array **)v75,
     v77,
@@ -841,27 +841,27 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v80,
     v81,
     v82);
-  v83 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v83 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v83,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v83 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v83,
     46,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v83,
     45,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v83,
     47,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v84 = FilterKindList_TypeInfo->static_fields;
   v84->NpEffectFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v83;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v84->NpEffectFilterKindList,
     (System_Int32_array **)v83,
     v85,
@@ -870,27 +870,27 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v88,
     v89,
     v90);
-  v91 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v91 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v91,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v91 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v91,
     48,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v91,
     8,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v91,
     9,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v92 = FilterKindList_TypeInfo->static_fields;
   v92->ServantTypeFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v91;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v92->ServantTypeFilterKindList,
     (System_Int32_array **)v91,
     v93,
@@ -899,43 +899,43 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v96,
     v97,
     v98);
-  v99 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v99 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v99,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v99 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v99,
     21,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v99,
     22,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v99,
     23,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v99,
     24,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v99,
     25,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v99,
     26,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v99,
     27,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v100 = FilterKindList_TypeInfo->static_fields;
   v100->CombineBaseServantFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v99;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v100->CombineBaseServantFilterKindList,
     (System_Int32_array **)v99,
     v101,
@@ -944,23 +944,23 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v104,
     v105,
     v106);
-  v107 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v107 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v107,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v107 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v107,
     28,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v107,
     29,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v108 = FilterKindList_TypeInfo->static_fields;
   v108->CombineMaterialFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v107;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v108->CombineMaterialFilterKindList,
     (System_Int32_array **)v107,
     v109,
@@ -969,27 +969,27 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v112,
     v113,
     v114);
-  v115 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v115 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v115,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v115 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v115,
     10,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v115,
     11,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v115,
     12,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v116 = FilterKindList_TypeInfo->static_fields;
   v116->CollectionStateFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v115;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v116->CollectionStateFilterKindList,
     (System_Int32_array **)v115,
     v117,
@@ -998,23 +998,23 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v120,
     v121,
     v122);
-  v123 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v123 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v123,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v123 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v123,
     11,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v123,
     12,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v124 = FilterKindList_TypeInfo->static_fields;
   v124->BonusSelectCollectionStateFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v123;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v124->BonusSelectCollectionStateFilterKindList,
     (System_Int32_array **)v123,
     v125,
@@ -1023,23 +1023,23 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v128,
     v129,
     v130);
-  v131 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v131 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v131,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v131 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v131,
     52,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v131,
     53,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v132 = FilterKindList_TypeInfo->static_fields;
   v132->ServantHaveFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v131;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v132->ServantHaveFilterKindList,
     (System_Int32_array **)v131,
     v133,
@@ -1048,23 +1048,23 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v136,
     v137,
     v138);
-  v139 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v139 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v139,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v139 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v139,
     50,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v139,
     51,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v140 = FilterKindList_TypeInfo->static_fields;
   v140->ServantEffectApplySubjectFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v139;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v140->ServantEffectApplySubjectFilterKindList,
     (System_Int32_array **)v139,
     v141,
@@ -1073,27 +1073,27 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v144,
     v145,
     v146);
-  v147 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v147 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v147,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v147 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v147,
     69,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v147,
     70,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v147,
     71,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v148 = FilterKindList_TypeInfo->static_fields;
   v148->ServantSummonCategoryFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v147;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v148->ServantSummonCategoryFilterKindList,
     (System_Int32_array **)v147,
     v149,
@@ -1102,35 +1102,35 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v152,
     v153,
     v154);
-  v155 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v155 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v155,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v155 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v155,
     38,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v155,
     37,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v155,
     36,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v155,
     35,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v155,
     34,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v156 = FilterKindList_TypeInfo->static_fields;
   v156->RarityFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v155;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v156->RarityFilterKindList,
     (System_Int32_array **)v155,
     v157,
@@ -1139,47 +1139,47 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v160,
     v161,
     v162);
-  v163 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v163 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v163,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v163 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v163,
     54,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v163,
     55,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v163,
     72,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v163,
     73,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v163,
     74,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v163,
     75,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v163,
     76,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v163,
     56,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v164 = FilterKindList_TypeInfo->static_fields;
   v164->ServantEquipTypeFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v163;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v164->ServantEquipTypeFilterKindList,
     (System_Int32_array **)v163,
     v165,
@@ -1188,43 +1188,43 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v168,
     v169,
     v170);
-  v171 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v171 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v171,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v171 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v171,
     77,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v171,
     78,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v171,
     79,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v171,
     80,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v171,
     81,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v171,
     82,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v171,
     83,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v172 = FilterKindList_TypeInfo->static_fields;
   v172->ServantEquipCombineStatusFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v171;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v172->ServantEquipCombineStatusFilterKindList,
     (System_Int32_array **)v171,
     v173,
@@ -1233,31 +1233,31 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v176,
     v177,
     v178);
-  v179 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v179 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v179,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v179 )
     goto LABEL_29;
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v179,
     84,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v179,
     85,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v179,
     86,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v179,
     87,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v180 = FilterKindList_TypeInfo->static_fields;
   v180->ServantEquipHaveStatusFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v179;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v180->ServantEquipHaveStatusFilterKindList,
     (System_Int32_array **)v179,
     v181,
@@ -1266,22 +1266,22 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     v184,
     v185,
     v186);
-  v187 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v187 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_VoiceCondType_Type____ctor(
     v187,
-    (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v187
     || (System_Collections_Generic_List_VoiceCondType_Type___Add(
           v187,
           30,
-          (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__),
+          (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__),
         System_Collections_Generic_List_VoiceCondType_Type___Add(
           v187,
           31,
-          (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__),
+          (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__),
         v188 = FilterKindList_TypeInfo->static_fields,
         v188->ServantCostumeFilterKind = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v187,
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)&v188->ServantCostumeFilterKind,
           (System_Int32_array **)v187,
           v189,
@@ -1290,26 +1290,26 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
           v192,
           v193,
           v194),
-        v195 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B70764(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo),
+        v195 = (System_Collections_Generic_List_VoiceCondType_Type__o *)sub_B77694(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo),
         System_Collections_Generic_List_VoiceCondType_Type____ctor(
           v195,
-          (const MethodInfo_30B8454 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__),
+          (const MethodInfo_30E8064 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__),
         !v195) )
   {
 LABEL_29:
-    sub_B7076C(v2, v3);
+    sub_B7769C(v2, v3);
   }
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v195,
     32,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   System_Collections_Generic_List_VoiceCondType_Type___Add(
     v195,
     33,
-    (const MethodInfo_30B91B0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    (const MethodInfo_30E8DC0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
   v196 = FilterKindList_TypeInfo->static_fields;
   v196->MaterialServantCostumeFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v195;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v196->MaterialServantCostumeFilterKindList,
     (System_Int32_array **)v195,
     v197,

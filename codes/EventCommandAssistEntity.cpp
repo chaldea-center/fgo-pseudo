@@ -1,27 +1,27 @@
 void __fastcall EventCommandAssistEntity___ctor(EventCommandAssistEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_43544E4 & 1) == 0 )
+  if ( (byte_438DDA2 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_43544E4 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438DDA2 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall EventCommandAssistEntity__CreatePK(int32_t id, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_43544E3 & 1) == 0 )
+  if ( (byte_438DDA1 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_43544E3 = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_438DDA1 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            priority,
-           (const MethodInfo_1CA236C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1D171BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -42,10 +42,10 @@ bool __fastcall EventCommandAssistEntity__IsOpen(
 {
   int32_t commonReleaseId; // w19
 
-  if ( (byte_43544E2 & 1) == 0 )
+  if ( (byte_438DDA0 & 1) == 0 )
   {
-    sub_B70694(&CondType_TypeInfo);
-    byte_43544E2 = 1;
+    sub_B775C4(&CondType_TypeInfo);
+    byte_438DDA0 = 1;
   }
   commonReleaseId = this->fields.commonReleaseId;
   if ( (beforeClearQuestId & 0x80000000) == 0 )

@@ -2,10 +2,10 @@ void __fastcall NoTitleDialog___cctor(const MethodInfo *method)
 {
   NoTitleDialog_c *v1; // x8
 
-  if ( (byte_43523E1 & 1) == 0 )
+  if ( (byte_438BA7D & 1) == 0 )
   {
-    sub_B70694(&NoTitleDialog_TypeInfo);
-    byte_43523E1 = 1;
+    sub_B775C4(&NoTitleDialog_TypeInfo);
+    byte_438BA7D = 1;
   }
   NoTitleDialog_TypeInfo->static_fields->MESSAGE_WINDOW_SIZE_X_DEF = 780;
   NoTitleDialog_TypeInfo->static_fields->MESSAGE_WINDOW_SIZE_Y_DEF = 480;
@@ -22,10 +22,10 @@ void __fastcall NoTitleDialog___cctor(const MethodInfo *method)
 
 void __fastcall NoTitleDialog___ctor(NoTitleDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_43523E0 & 1) == 0 )
+  if ( (byte_438BA7C & 1) == 0 )
   {
-    sub_B70694(&BaseDialog_TypeInfo);
-    byte_43523E0 = 1;
+    sub_B775C4(&BaseDialog_TypeInfo);
+    byte_438BA7C = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -44,10 +44,10 @@ void __fastcall NoTitleDialog__CallOnClick(NoTitleDialog_o *this, bool result, c
   System_Action_bool__o *v11; // x21
   struct System_Action_bool__o *onClick; // t1
 
-  if ( (byte_43523DF & 1) == 0 )
+  if ( (byte_438BA7B & 1) == 0 )
   {
-    sub_B70694(&Method_System_Action_bool__Invoke__);
-    byte_43523DF = 1;
+    sub_B775C4(&Method_System_Action_bool__Invoke__);
+    byte_438BA7B = 1;
   }
   onClick = this->fields.onClick;
   p_onClick = (BattleServantConfConponent_o *)&this->fields.onClick;
@@ -55,8 +55,8 @@ void __fastcall NoTitleDialog__CallOnClick(NoTitleDialog_o *this, bool result, c
   if ( onClick )
   {
     p_onClick->klass = 0LL;
-    sub_B70630(p_onClick, 0LL, (System_String_array **)method, v3, v4, v5, v6, v7);
-    System_Action_bool___Invoke(v11, result, (const MethodInfo_2648214 *)Method_System_Action_bool__Invoke__);
+    sub_B77560(p_onClick, 0LL, (System_String_array **)method, v3, v4, v5, v6, v7);
+    System_Action_bool___Invoke(v11, result, (const MethodInfo_269C934 *)Method_System_Action_bool__Invoke__);
   }
 }
 
@@ -65,11 +65,11 @@ void __fastcall NoTitleDialog__Close(NoTitleDialog_o *this, const MethodInfo *me
 {
   const MethodInfo *v2; // x2
 
-  NoTitleDialog__Close_25977716(this, 0LL, v2);
+  NoTitleDialog__Close_26237292(this, 0LL, v2);
 }
 
 
-void __fastcall NoTitleDialog__Close_25977716(
+void __fastcall NoTitleDialog__Close_26237292(
         NoTitleDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -81,14 +81,14 @@ void __fastcall NoTitleDialog__Close_25977716(
   System_Int32_array *v7; // x7
   System_Action_o *v10; // x20
 
-  if ( (byte_43523D9 & 1) == 0 )
+  if ( (byte_438BA75 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_NoTitleDialog_EndClose__);
-    byte_43523D9 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_NoTitleDialog_EndClose__);
+    byte_438BA75 = 1;
   }
   this->fields.onClose = callback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.onClose,
     (System_Int32_array **)callback,
     (System_String_array **)method,
@@ -98,7 +98,7 @@ void __fastcall NoTitleDialog__Close_25977716(
     v6,
     v7);
   this->fields.isButtonEnable = 0;
-  v10 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_NoTitleDialog_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
 }
@@ -121,7 +121,7 @@ void __fastcall NoTitleDialog__EndClose(NoTitleDialog_o *this, const MethodInfo 
   NoTitleDialog__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   onClose = this->fields.onClose;
   p_onClose = (BattleServantConfConponent_o *)&this->fields.onClose;
@@ -129,7 +129,7 @@ void __fastcall NoTitleDialog__EndClose(NoTitleDialog_o *this, const MethodInfo 
   if ( onClose )
   {
     p_onClose->klass = 0LL;
-    sub_B70630(p_onClose, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_B77560(p_onClose, 0LL, v5, v6, v7, v8, v9, v10);
     System_Action__Invoke(v12, 0LL);
   }
 }
@@ -151,11 +151,11 @@ void __fastcall NoTitleDialog__Init(NoTitleDialog_o *this, const MethodInfo *met
   UIWidget_o *messageLabel; // x0
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_43523D6 & 1) == 0 )
+  if ( (byte_438BA72 & 1) == 0 )
   {
-    sub_B70694(&NoTitleDialog_TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43523D6 = 1;
+    sub_B775C4(&NoTitleDialog_TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438BA72 = 1;
   }
   NoTitleDialog__SetLabelText(this, this->fields.messageLabel, (System_String_o *)StringLiteral_1/*""*/, v2);
   NoTitleDialog__SetLabelText(this, this->fields.buttonDecideLabel, (System_String_o *)StringLiteral_1/*""*/, v4);
@@ -191,7 +191,7 @@ void __fastcall NoTitleDialog__Init(NoTitleDialog_o *this, const MethodInfo *met
         (messageLabel = (UIWidget_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_13:
-    sub_B7076C(messageLabel, v6);
+    sub_B7769C(messageLabel, v6);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)messageLabel, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -202,10 +202,10 @@ void __fastcall NoTitleDialog__OnClickCancel(NoTitleDialog_o *this, const Method
 {
   const MethodInfo *v3; // x2
 
-  if ( (byte_43523DD & 1) == 0 )
+  if ( (byte_438BA79 & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_43523DD = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438BA79 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
@@ -225,10 +225,10 @@ void __fastcall NoTitleDialog__OnClickClose(NoTitleDialog_o *this, const MethodI
 {
   const MethodInfo *v3; // x2
 
-  if ( (byte_43523DE & 1) == 0 )
+  if ( (byte_438BA7A & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_43523DE = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438BA7A = 1;
   }
   if ( this->fields.isButtonEnable )
   {
@@ -248,10 +248,10 @@ void __fastcall NoTitleDialog__OnClickDecide(NoTitleDialog_o *this, const Method
 {
   const MethodInfo *v3; // x2
 
-  if ( (byte_43523DB & 1) == 0 )
+  if ( (byte_438BA77 & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_43523DB = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438BA77 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
@@ -271,10 +271,10 @@ void __fastcall NoTitleDialog__OnClickDecide2(NoTitleDialog_o *this, const Metho
 {
   const MethodInfo *v3; // x2
 
-  if ( (byte_43523DC & 1) == 0 )
+  if ( (byte_438BA78 & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_43523DC = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438BA78 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
@@ -313,20 +313,20 @@ void __fastcall NoTitleDialog__Open(
   UnityEngine_GameObject_o *v23; // x20
   System_Action_o *v24; // x20
 
-  if ( (byte_43523D7 & 1) == 0 )
+  if ( (byte_438BA73 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&AndroidBackKeyManager_TypeInfo);
-    sub_B70694(&Method_NoTitleDialog_EndOpen__);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43523D7 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&AndroidBackKeyManager_TypeInfo);
+    sub_B775C4(&Method_NoTitleDialog_EndOpen__);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438BA73 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_13;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   this->fields.onClick = onClick;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.onClick,
     (System_Int32_array **)onClick,
     v13,
@@ -344,7 +344,7 @@ void __fastcall NoTitleDialog__Open(
   gameObject = (UnityEngine_GameObject_o *)this->fields.closeBtn;
   if ( !gameObject )
 LABEL_13:
-    sub_B7076C(gameObject, v12);
+    sub_B7769C(gameObject, v12);
   v23 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
   if ( (BYTE3(AndroidBackKeyManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !AndroidBackKeyManager_TypeInfo->_2.cctor_finished )
@@ -353,7 +353,7 @@ LABEL_13:
   }
   AndroidBackKeyManager__AddBackBtn(v23, 0LL);
   this->fields.isButtonEnable = 0;
-  v24 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v24 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v24, (Il2CppObject *)this, Method_NoTitleDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v24, 0, 0LL);
 }
@@ -373,11 +373,11 @@ void __fastcall NoTitleDialog__SetLabelText(
   UIWidget_o *window; // x20
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_43523D8 & 1) == 0 )
+  if ( (byte_438BA74 & 1) == 0 )
   {
-    sub_B70694(&NoTitleDialog_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43523D8 = 1;
+    sub_B775C4(&NoTitleDialog_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438BA74 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -437,7 +437,7 @@ void __fastcall NoTitleDialog__SetLabelText(
           }
         }
 LABEL_24:
-        sub_B7076C(messageLabel, v8);
+        sub_B7769C(messageLabel, v8);
       }
     }
   }
@@ -450,10 +450,10 @@ UnityEngine_GameObject_o *__fastcall NoTitleDialog__get_closeBtnObject(NoTitleDi
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_43523DA & 1) == 0 )
+  if ( (byte_438BA76 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43523DA = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438BA76 = 1;
   }
   closeBtn = (UnityEngine_Object_o *)this->fields.closeBtn;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -465,6 +465,6 @@ UnityEngine_GameObject_o *__fastcall NoTitleDialog__get_closeBtnObject(NoTitleDi
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.closeBtn;
   if ( !v6 )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }

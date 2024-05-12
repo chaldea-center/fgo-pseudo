@@ -18,10 +18,10 @@ void __fastcall WarBoardObjectAnimationEvent__AllWidgetDepthIncrement(
   unsigned int v10; // w22
   __int64 v11; // x0
 
-  if ( (byte_4351729 & 1) == 0 )
+  if ( (byte_438AEAE & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4351729 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438AEAE = 1;
   }
   if ( !LOBYTE(this->fields.myWidget) )
     WarBoardObjectAnimationEvent__Init(this, *(const MethodInfo **)&value);
@@ -52,8 +52,8 @@ void __fastcall WarBoardObjectAnimationEvent__AllWidgetDepthIncrement(
         {
           if ( v10 >= LODWORD(klass->_1.namespaze) )
           {
-            v11 = sub_B70798(v6);
-            sub_B70738(v11, 0LL);
+            v11 = sub_B776C8(v6);
+            sub_B77668(v11, 0LL);
           }
           v6 = (struct UIWidget_array *)*((_QWORD *)&klass->_1.byval_arg.data + (int)v10);
           if ( !v6 )
@@ -65,7 +65,7 @@ void __fastcall WarBoardObjectAnimationEvent__AllWidgetDepthIncrement(
         }
         while ( klass );
 LABEL_19:
-        sub_B7076C(v6, v7);
+        sub_B7769C(v6, v7);
       }
     }
   }
@@ -80,14 +80,14 @@ void __fastcall WarBoardObjectAnimationEvent__ForceEndInProgressTask(
   __int64 v3; // x1
   __int64 v4; // x8
 
-  if ( (byte_435172B & 1) == 0 )
+  if ( (byte_438AEB0 & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_435172B = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_438AEB0 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   v4 = *(_QWORD *)&Instance[9].fields.isButtonEnable;
   if ( v4 )
     *(_BYTE *)(v4 + 25) = 1;
@@ -112,14 +112,14 @@ void __fastcall WarBoardObjectAnimationEvent__ForceEndWallBreakAnimTask(
   __int64 v3; // x1
   struct WebViewObject_o *webView; // x8
 
-  if ( (byte_435172C & 1) == 0 )
+  if ( (byte_438AEB1 & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_435172C = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_438AEB1 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   webView = Instance[9].fields.webView;
   if ( webView )
     BYTE1(webView->fields.onJS) = 1;
@@ -144,12 +144,12 @@ void __fastcall WarBoardObjectAnimationEvent__Init(WarBoardObjectAnimationEvent_
   System_Int32_array *v16; // x6
   System_Int32_array *v17; // x7
 
-  if ( (byte_4351727 & 1) == 0 )
+  if ( (byte_438AEAC & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_B70694(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____69251280);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4351727 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____69484016);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438AEAC = 1;
   }
   if ( !LOBYTE(this->fields.myWidget) )
   {
@@ -158,9 +158,9 @@ void __fastcall WarBoardObjectAnimationEvent__Init(WarBoardObjectAnimationEvent_
       ComponentsInChildren_WarBoardControlPlayTalkUiComponent = (WarBoardObjectAnimationEvent_c *)UnityEngine_Component__GetComponentsInChildren_WarBoardControlPlayTalkUiComponent_(
                                                                                                     (UnityEngine_Component_o *)this,
                                                                                                     1,
-                                                                                                    (const MethodInfo_1BE4420 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____69251280);
+                                                                                                    (const MethodInfo_1C6DADC *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____69484016);
       this[1].klass = ComponentsInChildren_WarBoardControlPlayTalkUiComponent;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&this[1],
         (System_Int32_array **)ComponentsInChildren_WarBoardControlPlayTalkUiComponent,
         v4,
@@ -180,9 +180,9 @@ void __fastcall WarBoardObjectAnimationEvent__Init(WarBoardObjectAnimationEvent_
     {
       Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                                   (UnityEngine_Component_o *)this,
-                                  (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                                  (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
       this->fields.children = (struct UIWidget_array *)Component_WebViewObject;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&this->fields.children,
         (System_Int32_array **)Component_WebViewObject,
         v12,
@@ -215,15 +215,15 @@ void __fastcall WarBoardObjectAnimationEvent__SetDispBgDiff(
   __int64 v14; // x0
   int32_t result; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_435172A & 1) == 0 )
+  if ( (byte_438AEAF & 1) == 0 )
   {
-    sub_B70694(&char___TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_B70694(&StringLiteral_14738/*"True"*/);
-    byte_435172A = 1;
+    sub_B775C4(&char___TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_B775C4(&StringLiteral_14804/*"True"*/);
+    byte_438AEAF = 1;
   }
   result = 0;
-  Instance = (System_Char_array *)sub_B706AC(char___TypeInfo, 1LL);
+  Instance = (System_Char_array *)sub_B775DC(char___TypeInfo, 1LL);
   if ( !Instance )
     goto LABEL_18;
   v5 = Instance;
@@ -232,12 +232,12 @@ void __fastcall WarBoardObjectAnimationEvent__SetDispBgDiff(
   Instance->m_Items[2] = 44;
   if ( !value || (Instance = (System_Char_array *)System_String__Split(value, Instance, 0LL)) == 0LL )
 LABEL_18:
-    sub_B7076C(Instance, v5);
+    sub_B7769C(Instance, v5);
   v6 = *(_QWORD *)&Instance->max_length;
   v7 = Instance;
   if ( (int)v6 >= 2 )
   {
-    Instance = (System_Char_array *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    Instance = (System_Char_array *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
     v8 = Instance;
     v9 = 0LL;
     v10 = 0LL;
@@ -245,7 +245,7 @@ LABEL_18:
     while ( v9 + 1 < v7->max_length )
     {
       v12 = (System_String_o **)(&v7->obj.klass + v9);
-      Instance = (System_Char_array *)System_String__op_Equality(v12[5], (System_String_o *)StringLiteral_14738/*"True"*/, 0LL);
+      Instance = (System_Char_array *)System_String__op_Equality(v12[5], (System_String_o *)StringLiteral_14804/*"True"*/, 0LL);
       if ( v9 >= v7->max_length )
         break;
       v13 = (char)Instance;
@@ -265,8 +265,8 @@ LABEL_18:
         return;
     }
 LABEL_17:
-    v14 = sub_B70798(Instance);
-    sub_B70738(v14, 0LL);
+    v14 = sub_B776C8(Instance);
+    sub_B77668(v14, 0LL);
   }
 }
 
@@ -298,16 +298,16 @@ void __fastcall WarBoardObjectAnimationEvent__SetWidgetDepth(
   __int64 v24; // x0
   int32_t result; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4351728 & 1) == 0 )
+  if ( (byte_438AEAD & 1) == 0 )
   {
-    sub_B70694(&char___TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4351728 = 1;
+    sub_B775C4(&char___TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438AEAD = 1;
   }
   result = 0;
   if ( !LOBYTE(this->fields.myWidget) )
     WarBoardObjectAnimationEvent__Init(this, (const MethodInfo *)nameAndDepth);
-  v5 = (System_Char_array *)sub_B706AC(char___TypeInfo, 1LL);
+  v5 = (System_Char_array *)sub_B775DC(char___TypeInfo, 1LL);
   if ( !v5 )
     goto LABEL_40;
   v6 = v5;
@@ -316,7 +316,7 @@ void __fastcall WarBoardObjectAnimationEvent__SetWidgetDepth(
   v5->m_Items[2] = 44;
   if ( !nameAndDepth || (v5 = (System_Char_array *)System_String__Split(nameAndDepth, v5, 0LL)) == 0LL )
 LABEL_40:
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   v7 = *(_QWORD *)&v5->max_length;
   v8 = v5;
   if ( (int)v7 >= 2 )
@@ -413,8 +413,8 @@ LABEL_36:
           goto LABEL_40;
       }
 LABEL_38:
-      v24 = sub_B70798(v5);
-      sub_B70738(v24, 0LL);
+      v24 = sub_B776C8(v5);
+      sub_B77668(v24, 0LL);
     }
   }
 }

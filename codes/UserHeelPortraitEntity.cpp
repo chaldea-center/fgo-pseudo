@@ -1,26 +1,26 @@
 void __fastcall UserHeelPortraitEntity___ctor(UserHeelPortraitEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4350723 & 1) == 0 )
+  if ( (byte_4389D4C & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_4350723 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_4389D4C = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall UserHeelPortraitEntity__CreatePK(int32_t eventId, const MethodInfo *method)
 {
-  if ( (byte_4350722 & 1) == 0 )
+  if ( (byte_4389D4B & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int___);
-    byte_4350722 = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int___);
+    byte_4389D4B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int_(
            eventId,
-           (const MethodInfo_1CA2300 *)Method_DataEntityBase_CreateMultiplePK_int___);
+           (const MethodInfo_1D17150 *)Method_DataEntityBase_CreateMultiplePK_int___);
 }
 
 

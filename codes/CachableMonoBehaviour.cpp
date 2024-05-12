@@ -17,11 +17,11 @@ UnityEngine_Renderer_o *__fastcall CachableMonoBehaviour__get_renderer(
   System_Int32_array *v9; // x6
   System_Int32_array *v10; // x7
 
-  if ( (byte_4354AEA & 1) == 0 )
+  if ( (byte_438E3A9 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4354AEA = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438E3A9 = 1;
   }
   mRenderer = (UnityEngine_Object_o *)this->fields.mRenderer;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -33,9 +33,9 @@ UnityEngine_Renderer_o *__fastcall CachableMonoBehaviour__get_renderer(
   {
     Component_WebViewObject = (struct UnityEngine_Renderer_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                                  (UnityEngine_Component_o *)this,
-                                                                 (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                                                 (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
     this->fields.mRenderer = Component_WebViewObject;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.mRenderer,
       (System_Int32_array **)Component_WebViewObject,
       v5,
@@ -62,11 +62,11 @@ UnityEngine_Rigidbody_o *__fastcall CachableMonoBehaviour__get_rigidbody(
   System_Int32_array *v9; // x6
   System_Int32_array *v10; // x7
 
-  if ( (byte_4354AEB & 1) == 0 )
+  if ( (byte_438E3AA & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4354AEB = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438E3AA = 1;
   }
   mRigidbody = (UnityEngine_Object_o *)this->fields.mRigidbody;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -78,9 +78,9 @@ UnityEngine_Rigidbody_o *__fastcall CachableMonoBehaviour__get_rigidbody(
   {
     Component_WebViewObject = (struct UnityEngine_Rigidbody_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                                   (UnityEngine_Component_o *)this,
-                                                                  (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                                                                  (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
     this->fields.mRigidbody = Component_WebViewObject;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.mRigidbody,
       (System_Int32_array **)Component_WebViewObject,
       v5,
@@ -107,11 +107,11 @@ UnityEngine_Transform_o *__fastcall CachableMonoBehaviour__get_transform(
   System_Int32_array *v9; // x6
   System_Int32_array *v10; // x7
 
-  if ( (byte_4354AEC & 1) == 0 )
+  if ( (byte_438E3AB & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_Transform___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4354AEC = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Transform___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438E3AB = 1;
   }
   mTransform = (UnityEngine_Object_o *)this->fields.mTransform;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -123,9 +123,9 @@ UnityEngine_Transform_o *__fastcall CachableMonoBehaviour__get_transform(
   {
     Component_WebViewObject = (struct UnityEngine_Transform_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                                   (UnityEngine_Component_o *)this,
-                                                                  (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_Transform___);
+                                                                  (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Transform___);
     this->fields.mTransform = Component_WebViewObject;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.mTransform,
       (System_Int32_array **)Component_WebViewObject,
       v5,

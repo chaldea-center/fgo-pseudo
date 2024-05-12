@@ -2,10 +2,10 @@ void __fastcall EventRandomMissionListViewItemDraw___cctor(const MethodInfo *met
 {
   EventRandomMissionListViewItemDraw_c *v1; // x8
 
-  if ( (byte_43525FB & 1) == 0 )
+  if ( (byte_438BD77 & 1) == 0 )
   {
-    sub_B70694(&EventRandomMissionListViewItemDraw_TypeInfo);
-    byte_43525FB = 1;
+    sub_B775C4(&EventRandomMissionListViewItemDraw_TypeInfo);
+    byte_438BD77 = 1;
   }
   EventRandomMissionListViewItemDraw_TypeInfo->static_fields->MISSION_COND_FONT_SIZE = 15;
   EventRandomMissionListViewItemDraw_TypeInfo->static_fields->REJECT_SPRITE_WIDTH = 81;
@@ -20,10 +20,10 @@ void __fastcall EventRandomMissionListViewItemDraw___ctor(
         EventRandomMissionListViewItemDraw_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_43525FA & 1) == 0 )
+  if ( (byte_438BD76 & 1) == 0 )
   {
-    sub_B70694(&MissionListViewItemDraw_TypeInfo);
-    byte_43525FA = 1;
+    sub_B775C4(&MissionListViewItemDraw_TypeInfo);
+    byte_438BD76 = 1;
   }
   if ( (BYTE3(MissionListViewItemDraw_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !MissionListViewItemDraw_TypeInfo->_2.cctor_finished )
@@ -59,8 +59,8 @@ void __fastcall EventRandomMissionListViewItemDraw__ChangeNextRewardIcon(
                                                    0LL);
   if ( (unsigned int)this >= giftEntityList->max_length )
   {
-    v9 = sub_B70798(this);
-    sub_B70738(v9, 0LL);
+    v9 = sub_B776C8(this);
+    sub_B77668(v9, 0LL);
   }
   v5 = giftEntityList->m_Items[(int)this];
   if ( !v5 )
@@ -76,11 +76,11 @@ void __fastcall EventRandomMissionListViewItemDraw__ChangeNextRewardIcon(
         v7 = -1;
       else
         v7 = v5->fields.num;
-      ItemIconComponent__SetItemImage_27826684((ItemIconComponent_o *)this, (int32_t)manager, v7, 0LL);
+      ItemIconComponent__SetItemImage_28178440((ItemIconComponent_o *)this, (int32_t)manager, v7, 0LL);
       return;
     }
 LABEL_18:
-    sub_B7076C(this, manager);
+    sub_B7769C(this, manager);
   }
   if ( !this )
     goto LABEL_18;
@@ -99,21 +99,21 @@ System_String_o *__fastcall EventRandomMissionListViewItemDraw__GetAchiveTimeTex
   System_String_o *v3; // x20
   System_String_o *RestTime; // x2
 
-  if ( (byte_43525F6 & 1) == 0 )
+  if ( (byte_438BD72 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_82/*" "*/);
-    sub_B70694(&StringLiteral_13576/*"TIME_REST_ACHIVE"*/);
-    byte_43525F6 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_82/*" "*/);
+    sub_B775C4(&StringLiteral_13642/*"TIME_REST_ACHIVE"*/);
+    byte_438BD72 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_13576/*"TIME_REST_ACHIVE"*/, 0LL);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_13642/*"TIME_REST_ACHIVE"*/, 0LL);
   RestTime = LocalizationManager__GetRestTime(closeTime, 0LL);
-  return System_String__Concat_44760452(v3, (System_String_o *)StringLiteral_82/*" "*/, RestTime, 0LL);
+  return System_String__Concat_44904220(v3, (System_String_o *)StringLiteral_82/*" "*/, RestTime, 0LL);
 }
 
 
@@ -124,20 +124,20 @@ System_String_o *__fastcall EventRandomMissionListViewItemDraw__GetRestTimeText(
   System_String_o *v3; // x20
   System_String_o *RestTime; // x1
 
-  if ( (byte_43525F5 & 1) == 0 )
+  if ( (byte_438BD71 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_13588/*"TIME_REST_QUEST"*/);
-    byte_43525F5 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_13654/*"TIME_REST_QUEST"*/);
+    byte_438BD71 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_13588/*"TIME_REST_QUEST"*/, 0LL);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_13654/*"TIME_REST_QUEST"*/, 0LL);
   RestTime = LocalizationManager__GetRestTime(endTime, 0LL);
-  return System_String__Concat_44758168(v3, RestTime, 0LL);
+  return System_String__Concat_44901936(v3, RestTime, 0LL);
 }
 
 
@@ -160,14 +160,14 @@ void __fastcall EventRandomMissionListViewItemDraw__InitDispResTime(
   UILabel_o *timeOverLb; // x21
   __int64 v17; // x10
 
-  if ( (byte_43525F2 & 1) == 0 )
+  if ( (byte_438BD6E & 1) == 0 )
   {
-    sub_B70694(&EventRandomMissionListViewItemDraw_TypeInfo);
-    sub_B70694(&EventRandomMissionListViewItem_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&StringLiteral_8859/*"MISSION_PERIOD_END"*/);
-    byte_43525F2 = 1;
+    sub_B775C4(&EventRandomMissionListViewItemDraw_TypeInfo);
+    sub_B775C4(&EventRandomMissionListViewItem_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&StringLiteral_8915/*"MISSION_PERIOD_END"*/);
+    byte_438BD6E = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -223,7 +223,7 @@ void __fastcall EventRandomMissionListViewItemDraw__InitDispResTime(
       Time = (int64_t)this->fields.resTimeLb;
       if ( !Time )
 LABEL_51:
-        sub_B7076C(Time, AchiveTimeText);
+        sub_B7769C(Time, AchiveTimeText);
       p_progStatus = &missionListviewItem->fields.progStatus;
       goto LABEL_33;
     }
@@ -277,7 +277,7 @@ LABEL_34:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    Time = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_8859/*"MISSION_PERIOD_END"*/, 0LL);
+    Time = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_8915/*"MISSION_PERIOD_END"*/, 0LL);
     if ( !timeOverLb )
       goto LABEL_51;
     UILabel__set_text(timeOverLb, (System_String_o *)Time, 0LL);
@@ -321,11 +321,11 @@ void __fastcall EventRandomMissionListViewItemDraw__ModifyBoardImage(
   System_String_o *baseSpriteName; // x20
   UIAtlas_o *baseAtlas; // x21
 
-  if ( (byte_43525F9 & 1) == 0 )
+  if ( (byte_438BD75 & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43525F9 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438BD75 = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -371,12 +371,12 @@ void __fastcall EventRandomMissionListViewItemDraw__SetInput(
   System_String_o *condMsg; // x19
   EventRandomMissionListViewItemDraw_c *v9; // x0
 
-  if ( (byte_43525F8 & 1) == 0 )
+  if ( (byte_438BD74 & 1) == 0 )
   {
-    sub_B70694(&EventRandomMissionListViewItemDraw_TypeInfo);
-    sub_B70694(&EventRandomMissionListViewItem_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43525F8 = 1;
+    sub_B775C4(&EventRandomMissionListViewItemDraw_TypeInfo);
+    sub_B775C4(&EventRandomMissionListViewItem_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438BD74 = 1;
   }
   if ( missionListViewItem
     && (v5 = *(&EventRandomMissionListViewItem_TypeInfo->_2.bitflags2 + 1),
@@ -471,21 +471,21 @@ bool __fastcall EventRandomMissionListViewItemDraw__SetItem(
   float barExp; // [xsp+1Ch] [xbp-54h] BYREF
   System_String_o *progTxt; // [xsp+28h] [xbp-48h] BYREF
 
-  if ( (byte_43525F1 & 1) == 0 )
+  if ( (byte_438BD6D & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_EventRandomMissionMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&EventRandomMissionListViewItemDraw_TypeInfo);
-    sub_B70694(&EventRandomMissionListViewItem_TypeInfo);
-    sub_B70694(&EventRandomMissionListViewManager_TypeInfo);
-    sub_B70694(&EventRewardRootComponent_TypeInfo);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_17260/*"btn_mission_cancel"*/);
-    sub_B70694(&StringLiteral_20865/*"mission_board_{0}01"*/);
-    sub_B70694(&StringLiteral_20862/*"mission_board_rank_{0}{1:D2}"*/);
-    sub_B70694(&StringLiteral_20861/*"mission_board_mask_{0}01"*/);
-    byte_43525F1 = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_EventRandomMissionMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&EventRandomMissionListViewItemDraw_TypeInfo);
+    sub_B775C4(&EventRandomMissionListViewItem_TypeInfo);
+    sub_B775C4(&EventRandomMissionListViewManager_TypeInfo);
+    sub_B775C4(&EventRewardRootComponent_TypeInfo);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_17343/*"btn_mission_cancel"*/);
+    sub_B775C4(&StringLiteral_20961/*"mission_board_{0}01"*/);
+    sub_B775C4(&StringLiteral_20958/*"mission_board_rank_{0}{1:D2}"*/);
+    sub_B775C4(&StringLiteral_20957/*"mission_board_mask_{0}01"*/);
+    byte_438BD6D = 1;
   }
   progTxt = 0LL;
   barExp = 0.0;
@@ -572,7 +572,7 @@ LABEL_18:
       goto LABEL_113;
     giftEnts = missionListViewItem->fields.giftEnts;
     this->fields.giftEntityList = giftEnts;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.giftEntityList,
       (System_Int32_array **)giftEnts,
       v15,
@@ -657,7 +657,7 @@ LABEL_18:
       v29 = this->fields.baseSprite;
       currentEventId = v10->fields.currentEventId;
       v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &currentEventId, v28);
-      v31 = System_String__Format((System_String_o *)StringLiteral_20865/*"mission_board_{0}01"*/, v30, 0LL);
+      v31 = System_String__Format((System_String_o *)StringLiteral_20961/*"mission_board_{0}01"*/, v30, 0LL);
       if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
       {
@@ -676,7 +676,7 @@ LABEL_18:
       v34 = this->fields.timeOverSprite;
       currentEventId = v10->fields.currentEventId;
       v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &currentEventId, v33);
-      v36 = System_String__Format((System_String_o *)StringLiteral_20861/*"mission_board_mask_{0}01"*/, v35, 0LL);
+      v36 = System_String__Format((System_String_o *)StringLiteral_20957/*"mission_board_mask_{0}01"*/, v35, 0LL);
       if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
       {
@@ -698,7 +698,7 @@ LABEL_18:
       {
         j_il2cpp_runtime_class_init_0(EventRewardRootComponent_TypeInfo);
       }
-      EventRewardRootComponent__setRewardInfoImg(v38, (System_String_o *)StringLiteral_17260/*"btn_mission_cancel"*/, 0LL);
+      EventRewardRootComponent__setRewardInfoImg(v38, (System_String_o *)StringLiteral_17343/*"btn_mission_cancel"*/, 0LL);
       rewardImg = (UnityEngine_GameObject_o *)EventRandomMissionListViewItemDraw_TypeInfo;
       v39 = (UIWidget_o *)this->fields.rejectSprite;
       if ( (BYTE3(EventRandomMissionListViewItemDraw_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -730,7 +730,7 @@ LABEL_18:
       {
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
       }
-      rewardImg = (UnityEngine_GameObject_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_EventRandomMissionMaster___);
+      rewardImg = (UnityEngine_GameObject_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_EventRandomMissionMaster___);
       if ( !rewardImg )
         goto LABEL_113;
       rewardImg = (UnityEngine_GameObject_o *)EventRandomMissionMaster__TryGetEntity(
@@ -753,7 +753,7 @@ LABEL_18:
       v46 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &currentEventId, v43);
       v57 = v44;
       v48 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v57, v47);
-      v49 = System_String__Format_44753704((System_String_o *)StringLiteral_20862/*"mission_board_rank_{0}{1:D2}"*/, v46, v48, 0LL);
+      v49 = System_String__Format_44897472((System_String_o *)StringLiteral_20958/*"mission_board_rank_{0}{1:D2}"*/, v46, v48, 0LL);
       if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
       {
@@ -772,7 +772,7 @@ LABEL_18:
             (rewardImg = (UnityEngine_GameObject_o *)this->fields.rankSprite) == 0LL) )
       {
 LABEL_113:
-        sub_B7076C(rewardImg, v12);
+        sub_B7769C(rewardImg, v12);
       }
       UIWidget__set_height(
         (UIWidget_o *)rewardImg,
@@ -832,7 +832,7 @@ void __fastcall EventRandomMissionListViewItemDraw__SetLockMissionBoard(
 
   lockImgInfo = this->fields.lockImgInfo;
   if ( !lockImgInfo )
-    sub_B7076C(0LL, missionListViewItem);
+    sub_B7769C(0LL, missionListViewItem);
   UnityEngine_GameObject__SetActive(lockImgInfo, 1, 0LL);
 }
 
@@ -874,12 +874,12 @@ void __fastcall EventRandomMissionListViewItemDraw__SetRewardItemIcon(
 
   v5 = item;
   v6 = this;
-  if ( (byte_43525F3 & 1) == 0 )
+  if ( (byte_438BD6F & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_GiftMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    this = (EventRandomMissionListViewItemDraw_o *)sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43525F3 = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_GiftMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    this = (EventRandomMissionListViewItemDraw_o *)sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438BD6F = 1;
   }
   if ( !v5 )
     goto LABEL_55;
@@ -896,7 +896,7 @@ void __fastcall EventRandomMissionListViewItemDraw__SetRewardItemIcon(
     }
     if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_WarQuestSelectionMaster = (GiftMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_GiftMaster___);
+    Master_WarQuestSelectionMaster = (GiftMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_GiftMaster___);
     this = (EventRandomMissionListViewItemDraw_o *)MissionListViewItem__get_EventMissionEntity(
                                                      (MissionListViewItem_o *)v5,
                                                      0LL);
@@ -909,7 +909,7 @@ void __fastcall EventRandomMissionListViewItemDraw__SetRewardItemIcon(
                                             HIDWORD(this->fields.iconLabel),
                                             0LL);
     v6->fields.giftEntityList = (struct GiftEntity_array *)GiftListById;
-    sub_B70630((BattleServantConfConponent_o *)&v6->fields.giftEntityList, GiftListById, v10, v11, v12, v13, v14, v15);
+    sub_B77560((BattleServantConfConponent_o *)&v6->fields.giftEntityList, GiftListById, v10, v11, v12, v13, v14, v15);
     giftEntityList = v6->fields.giftEntityList;
     if ( !giftEntityList )
       goto LABEL_55;
@@ -947,12 +947,12 @@ void __fastcall EventRandomMissionListViewItemDraw__SetRewardItemIcon(
             v25 = -1;
           else
             v25 = num;
-          ItemIconComponent__SetItemImage_27826684(v6->fields.itemIcon, (int32_t)item, v25, 0LL);
+          ItemIconComponent__SetItemImage_28178440(v6->fields.itemIcon, (int32_t)item, v25, 0LL);
         }
         this = (EventRandomMissionListViewItemDraw_o *)v6->fields.itemIcon;
         if ( !this )
 LABEL_55:
-          sub_B7076C(this, item);
+          sub_B7769C(this, item);
         ItemIconComponent__SetAlpha((ItemIconComponent_o *)this, 1.0, 0LL);
         goto LABEL_42;
       }
@@ -1008,13 +1008,13 @@ LABEL_55:
             v21 = -1;
           else
             v21 = v19->fields.num;
-          ItemIconComponent__SetItemImage_27826684((ItemIconComponent_o *)this, (int32_t)item, v21, 0LL);
+          ItemIconComponent__SetItemImage_28178440((ItemIconComponent_o *)this, (int32_t)item, v21, 0LL);
         }
         goto LABEL_42;
       }
     }
-    v32 = sub_B70798(this);
-    sub_B70738(v32, 0LL);
+    v32 = sub_B776C8(this);
+    sub_B77668(v32, 0LL);
   }
 LABEL_42:
   if ( MissionListViewItem__get_EventRewardType((MissionListViewItem_o *)v5, 0LL) == 3 )
@@ -1054,11 +1054,11 @@ void __fastcall EventRandomMissionListViewItemDraw__SetRewardStatusImg(
   UnityEngine_GameObject_o *lockImgInfo; // x0
   UILabel_o *timeOverLb; // x19
 
-  if ( (byte_43525F4 & 1) == 0 )
+  if ( (byte_438BD70 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_8859/*"MISSION_PERIOD_END"*/);
-    byte_43525F4 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_8915/*"MISSION_PERIOD_END"*/);
+    byte_438BD70 = 1;
   }
   MissionListViewItemDraw__SetRewardStatusImg((MissionListViewItemDraw_o *)this, status, 0LL);
   if ( status == 5 )
@@ -1077,10 +1077,10 @@ void __fastcall EventRandomMissionListViewItemDraw__SetRewardStatusImg(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    lockImgInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8859/*"MISSION_PERIOD_END"*/, 0LL);
+    lockImgInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8915/*"MISSION_PERIOD_END"*/, 0LL);
     if ( !timeOverLb )
 LABEL_12:
-      sub_B7076C(lockImgInfo, v5);
+      sub_B7769C(lockImgInfo, v5);
     UILabel__set_text(timeOverLb, (System_String_o *)lockImgInfo, 0LL);
   }
 }
@@ -1109,15 +1109,15 @@ void __fastcall EventRandomMissionListViewItemDraw__UpdateItem(
   UnityEngine_Object_o *rewardBackSprite; // x20
 
   v5 = *(long double *)&alphaAnim;
-  if ( (byte_43525F7 & 1) == 0 )
+  if ( (byte_438BD73 & 1) == 0 )
   {
-    sub_B70694(&EventRandomMissionListViewItemDraw_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&MissionListViewItemDraw_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_13595/*"TIME_REST_TIMEOVER"*/);
-    byte_43525F7 = 1;
+    sub_B775C4(&EventRandomMissionListViewItemDraw_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&MissionListViewItemDraw_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_13661/*"TIME_REST_TIMEOVER"*/);
+    byte_438BD73 = 1;
   }
   if ( item && MissionListViewItem__get_EventMissionEntity((MissionListViewItem_o *)item, 0LL) )
   {
@@ -1130,7 +1130,7 @@ void __fastcall EventRandomMissionListViewItemDraw__UpdateItem(
         return;
       }
 LABEL_48:
-      sub_B7076C(gameObject, v9);
+      sub_B7769C(gameObject, v9);
     }
     if ( mode )
     {
@@ -1206,11 +1206,11 @@ LABEL_48:
             }
             RestTime = LocalizationManager__GetRestTime(v18, 0LL);
             gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_13595/*"TIME_REST_TIMEOVER"*/,
+                                                       (System_String_o *)StringLiteral_13661/*"TIME_REST_TIMEOVER"*/,
                                                        0LL);
             if ( !RestTime )
               goto LABEL_48;
-            if ( System_String__Equals_44745508(RestTime, (System_String_o *)gameObject, 0LL) )
+            if ( System_String__Equals_44889276(RestTime, (System_String_o *)gameObject, 0LL) )
             {
               ((void (__fastcall *)(EventRandomMissionListViewItemDraw_o *, EventRandomMissionListViewItem_o *, Il2CppMethodPointer))this->klass->vtable._5_InitDispResTime.method)(
                 this,

@@ -118,203 +118,203 @@ void __fastcall SignedValue___cctor(const MethodInfo *method)
   System_RuntimeFieldHandle_o v116; // 0:w1.4
   System_RuntimeFieldHandle_o v117; // 0:w1.4
 
-  if ( (byte_43528B8 & 1) == 0 )
+  if ( (byte_438C034 & 1) == 0 )
   {
-    sub_B70694(&byte_____TypeInfo);
-    sub_B70694(&byte___TypeInfo);
-    sub_B70694(&int___TypeInfo);
-    sub_B70694(&SignedValue_TypeInfo);
-    sub_B70694(&Field__PrivateImplementationDetails__05BC062C146EB261FCEF9597EC2D37213E65DA7D8700FD3E423EB66BF543EE0E);
-    sub_B70694(&Field__PrivateImplementationDetails__5D03B9D1D2D687E0F9A41938DA6461ECE8F70BAE8E2039EC533CEECCCB7D2545);
-    sub_B70694(&Field__PrivateImplementationDetails__5E8058FCE46433F2A2AFE7D89F945E52848269557763A801058E7838150974A8);
-    sub_B70694(&Field__PrivateImplementationDetails__8D858561180CEF7E113915FE1FA0FFAA16B13DBA80D43CA3AAD7A32D87EBFDBA);
-    sub_B70694(&Field__PrivateImplementationDetails__A8A8F22DDBA3AF21495CF365DB4D4671F8744FD3AADB3F6913D7708A66BD7D1E);
-    sub_B70694(&Field__PrivateImplementationDetails__AC7889A850BC7102A3ADD0BC7C7F6C99E547CDBE49BEBA989D8449F79FD0797D);
-    sub_B70694(&Field__PrivateImplementationDetails__C9BD6B347F45C975ADD7337A2F6D7D4E8C4D3882F7CC1FBB43F9E9575953B3D7);
-    sub_B70694(&Field__PrivateImplementationDetails__CE0AC0B63FF7568D87883EC291257CDE63770AA0A84997E56A14E7D1EBF75E7A);
-    sub_B70694(&Field__PrivateImplementationDetails__D25B1C4FA94F2D4D2226DFF249A1CE463849318E4B77389FE1112152FA082061);
-    sub_B70694(&Field__PrivateImplementationDetails__E15FDC9FBDBE7FE7B3CAF13E6EB0BB0E48196AFCA28BF9E90B7FB0921BAB1641);
-    sub_B70694(&Field__PrivateImplementationDetails__E3EA1395C5426E45D8C27945F194A024B3E729F0F75D1160176329BA78B2254C);
-    sub_B70694(&Field__PrivateImplementationDetails__E6559CAD584B6A6DCEB54AAC78272DEC346DC02215FC4F676E79646044B26D3E);
-    sub_B70694(&Field__PrivateImplementationDetails__FB8FCAFBF6A137AB7CC19820E92784D878A60900872FCF88443C4910EDD3A437);
-    byte_43528B8 = 1;
+    sub_B775C4(&byte_____TypeInfo);
+    sub_B775C4(&byte___TypeInfo);
+    sub_B775C4(&int___TypeInfo);
+    sub_B775C4(&SignedValue_TypeInfo);
+    sub_B775C4(&Field__PrivateImplementationDetails__05BC062C146EB261FCEF9597EC2D37213E65DA7D8700FD3E423EB66BF543EE0E);
+    sub_B775C4(&Field__PrivateImplementationDetails__5D03B9D1D2D687E0F9A41938DA6461ECE8F70BAE8E2039EC533CEECCCB7D2545);
+    sub_B775C4(&Field__PrivateImplementationDetails__5E8058FCE46433F2A2AFE7D89F945E52848269557763A801058E7838150974A8);
+    sub_B775C4(&Field__PrivateImplementationDetails__8D858561180CEF7E113915FE1FA0FFAA16B13DBA80D43CA3AAD7A32D87EBFDBA);
+    sub_B775C4(&Field__PrivateImplementationDetails__A8A8F22DDBA3AF21495CF365DB4D4671F8744FD3AADB3F6913D7708A66BD7D1E);
+    sub_B775C4(&Field__PrivateImplementationDetails__AC7889A850BC7102A3ADD0BC7C7F6C99E547CDBE49BEBA989D8449F79FD0797D);
+    sub_B775C4(&Field__PrivateImplementationDetails__C9BD6B347F45C975ADD7337A2F6D7D4E8C4D3882F7CC1FBB43F9E9575953B3D7);
+    sub_B775C4(&Field__PrivateImplementationDetails__CE0AC0B63FF7568D87883EC291257CDE63770AA0A84997E56A14E7D1EBF75E7A);
+    sub_B775C4(&Field__PrivateImplementationDetails__D25B1C4FA94F2D4D2226DFF249A1CE463849318E4B77389FE1112152FA082061);
+    sub_B775C4(&Field__PrivateImplementationDetails__E15FDC9FBDBE7FE7B3CAF13E6EB0BB0E48196AFCA28BF9E90B7FB0921BAB1641);
+    sub_B775C4(&Field__PrivateImplementationDetails__E3EA1395C5426E45D8C27945F194A024B3E729F0F75D1160176329BA78B2254C);
+    sub_B775C4(&Field__PrivateImplementationDetails__E6559CAD584B6A6DCEB54AAC78272DEC346DC02215FC4F676E79646044B26D3E);
+    sub_B775C4(&Field__PrivateImplementationDetails__FB8FCAFBF6A137AB7CC19820E92784D878A60900872FCF88443C4910EDD3A437);
+    byte_438C034 = 1;
   }
-  v1 = (System_Int32_array **)sub_B706AC(byte_____TypeInfo, 12LL);
-  v2 = (System_Array_o *)sub_B706AC(byte___TypeInfo, 79LL);
+  v1 = (System_Int32_array **)sub_B775DC(byte_____TypeInfo, 12LL);
+  v2 = (System_Array_o *)sub_B775DC(byte___TypeInfo, 79LL);
   v105.fields.value = Field__PrivateImplementationDetails__E15FDC9FBDBE7FE7B3CAF13E6EB0BB0E48196AFCA28BF9E90B7FB0921BAB1641;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v2, v105, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v2, v105, 0LL);
   if ( !v1 )
-    sub_B7076C(v3, v4);
+    sub_B7769C(v3, v4);
   if ( v2 )
   {
-    v3 = sub_B70754(v2, *(_QWORD *)&(*v1)->m_Items[9]);
+    v3 = sub_B77684(v2, *(_QWORD *)&(*v1)->m_Items[9]);
     if ( !v3 )
       goto LABEL_42;
   }
   if ( !*((_DWORD *)v1 + 6) )
     goto LABEL_41;
   v1[4] = (System_Int32_array *)v2;
-  sub_B70630((BattleServantConfConponent_o *)(v1 + 4), (System_Int32_array **)v2, v5, v6, v7, v8, v9, v10);
-  v11 = (System_Array_o *)sub_B706AC(byte___TypeInfo, 79LL);
+  sub_B77560((BattleServantConfConponent_o *)(v1 + 4), (System_Int32_array **)v2, v5, v6, v7, v8, v9, v10);
+  v11 = (System_Array_o *)sub_B775DC(byte___TypeInfo, 79LL);
   v106.fields.value = Field__PrivateImplementationDetails__05BC062C146EB261FCEF9597EC2D37213E65DA7D8700FD3E423EB66BF543EE0E;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v11, v106, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v11, v106, 0LL);
   if ( v11 )
   {
-    v3 = sub_B70754(v11, *(_QWORD *)&(*v1)->m_Items[9]);
+    v3 = sub_B77684(v11, *(_QWORD *)&(*v1)->m_Items[9]);
     if ( !v3 )
       goto LABEL_42;
   }
   if ( *((_DWORD *)v1 + 6) <= 1u )
     goto LABEL_41;
   v1[5] = (System_Int32_array *)v11;
-  sub_B70630((BattleServantConfConponent_o *)(v1 + 5), (System_Int32_array **)v11, v12, v13, v14, v15, v16, v17);
-  v18 = (System_Array_o *)sub_B706AC(byte___TypeInfo, 79LL);
+  sub_B77560((BattleServantConfConponent_o *)(v1 + 5), (System_Int32_array **)v11, v12, v13, v14, v15, v16, v17);
+  v18 = (System_Array_o *)sub_B775DC(byte___TypeInfo, 79LL);
   v107.fields.value = Field__PrivateImplementationDetails__8D858561180CEF7E113915FE1FA0FFAA16B13DBA80D43CA3AAD7A32D87EBFDBA;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v18, v107, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v18, v107, 0LL);
   if ( v18 )
   {
-    v3 = sub_B70754(v18, *(_QWORD *)&(*v1)->m_Items[9]);
+    v3 = sub_B77684(v18, *(_QWORD *)&(*v1)->m_Items[9]);
     if ( !v3 )
       goto LABEL_42;
   }
   if ( *((_DWORD *)v1 + 6) <= 2u )
     goto LABEL_41;
   v1[6] = (System_Int32_array *)v18;
-  sub_B70630((BattleServantConfConponent_o *)(v1 + 6), (System_Int32_array **)v18, v19, v20, v21, v22, v23, v24);
-  v25 = (System_Array_o *)sub_B706AC(byte___TypeInfo, 79LL);
+  sub_B77560((BattleServantConfConponent_o *)(v1 + 6), (System_Int32_array **)v18, v19, v20, v21, v22, v23, v24);
+  v25 = (System_Array_o *)sub_B775DC(byte___TypeInfo, 79LL);
   v108.fields.value = Field__PrivateImplementationDetails__A8A8F22DDBA3AF21495CF365DB4D4671F8744FD3AADB3F6913D7708A66BD7D1E;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v25, v108, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v25, v108, 0LL);
   if ( v25 )
   {
-    v3 = sub_B70754(v25, *(_QWORD *)&(*v1)->m_Items[9]);
+    v3 = sub_B77684(v25, *(_QWORD *)&(*v1)->m_Items[9]);
     if ( !v3 )
       goto LABEL_42;
   }
   if ( *((_DWORD *)v1 + 6) <= 3u )
     goto LABEL_41;
   v1[7] = (System_Int32_array *)v25;
-  sub_B70630((BattleServantConfConponent_o *)(v1 + 7), (System_Int32_array **)v25, v26, v27, v28, v29, v30, v31);
-  v32 = (System_Array_o *)sub_B706AC(byte___TypeInfo, 79LL);
+  sub_B77560((BattleServantConfConponent_o *)(v1 + 7), (System_Int32_array **)v25, v26, v27, v28, v29, v30, v31);
+  v32 = (System_Array_o *)sub_B775DC(byte___TypeInfo, 79LL);
   v109.fields.value = Field__PrivateImplementationDetails__CE0AC0B63FF7568D87883EC291257CDE63770AA0A84997E56A14E7D1EBF75E7A;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v32, v109, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v32, v109, 0LL);
   if ( v32 )
   {
-    v3 = sub_B70754(v32, *(_QWORD *)&(*v1)->m_Items[9]);
+    v3 = sub_B77684(v32, *(_QWORD *)&(*v1)->m_Items[9]);
     if ( !v3 )
       goto LABEL_42;
   }
   if ( *((_DWORD *)v1 + 6) <= 4u )
     goto LABEL_41;
   v1[8] = (System_Int32_array *)v32;
-  sub_B70630((BattleServantConfConponent_o *)(v1 + 8), (System_Int32_array **)v32, v33, v34, v35, v36, v37, v38);
-  v39 = (System_Array_o *)sub_B706AC(byte___TypeInfo, 79LL);
+  sub_B77560((BattleServantConfConponent_o *)(v1 + 8), (System_Int32_array **)v32, v33, v34, v35, v36, v37, v38);
+  v39 = (System_Array_o *)sub_B775DC(byte___TypeInfo, 79LL);
   v110.fields.value = Field__PrivateImplementationDetails__D25B1C4FA94F2D4D2226DFF249A1CE463849318E4B77389FE1112152FA082061;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v39, v110, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v39, v110, 0LL);
   if ( v39 )
   {
-    v3 = sub_B70754(v39, *(_QWORD *)&(*v1)->m_Items[9]);
+    v3 = sub_B77684(v39, *(_QWORD *)&(*v1)->m_Items[9]);
     if ( !v3 )
       goto LABEL_42;
   }
   if ( *((_DWORD *)v1 + 6) <= 5u )
     goto LABEL_41;
   v1[9] = (System_Int32_array *)v39;
-  sub_B70630((BattleServantConfConponent_o *)(v1 + 9), (System_Int32_array **)v39, v40, v41, v42, v43, v44, v45);
-  v46 = (System_Array_o *)sub_B706AC(byte___TypeInfo, 79LL);
+  sub_B77560((BattleServantConfConponent_o *)(v1 + 9), (System_Int32_array **)v39, v40, v41, v42, v43, v44, v45);
+  v46 = (System_Array_o *)sub_B775DC(byte___TypeInfo, 79LL);
   v111.fields.value = Field__PrivateImplementationDetails__FB8FCAFBF6A137AB7CC19820E92784D878A60900872FCF88443C4910EDD3A437;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v46, v111, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v46, v111, 0LL);
   if ( v46 )
   {
-    v3 = sub_B70754(v46, *(_QWORD *)&(*v1)->m_Items[9]);
+    v3 = sub_B77684(v46, *(_QWORD *)&(*v1)->m_Items[9]);
     if ( !v3 )
       goto LABEL_42;
   }
   if ( *((_DWORD *)v1 + 6) <= 6u )
     goto LABEL_41;
   v1[10] = (System_Int32_array *)v46;
-  sub_B70630((BattleServantConfConponent_o *)(v1 + 10), (System_Int32_array **)v46, v47, v48, v49, v50, v51, v52);
-  v53 = (System_Array_o *)sub_B706AC(byte___TypeInfo, 79LL);
+  sub_B77560((BattleServantConfConponent_o *)(v1 + 10), (System_Int32_array **)v46, v47, v48, v49, v50, v51, v52);
+  v53 = (System_Array_o *)sub_B775DC(byte___TypeInfo, 79LL);
   v112.fields.value = Field__PrivateImplementationDetails__E3EA1395C5426E45D8C27945F194A024B3E729F0F75D1160176329BA78B2254C;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v53, v112, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v53, v112, 0LL);
   if ( v53 )
   {
-    v3 = sub_B70754(v53, *(_QWORD *)&(*v1)->m_Items[9]);
+    v3 = sub_B77684(v53, *(_QWORD *)&(*v1)->m_Items[9]);
     if ( !v3 )
       goto LABEL_42;
   }
   if ( *((_DWORD *)v1 + 6) <= 7u )
     goto LABEL_41;
   v1[11] = (System_Int32_array *)v53;
-  sub_B70630((BattleServantConfConponent_o *)(v1 + 11), (System_Int32_array **)v53, v54, v55, v56, v57, v58, v59);
-  v60 = (System_Array_o *)sub_B706AC(byte___TypeInfo, 79LL);
+  sub_B77560((BattleServantConfConponent_o *)(v1 + 11), (System_Int32_array **)v53, v54, v55, v56, v57, v58, v59);
+  v60 = (System_Array_o *)sub_B775DC(byte___TypeInfo, 79LL);
   v113.fields.value = Field__PrivateImplementationDetails__C9BD6B347F45C975ADD7337A2F6D7D4E8C4D3882F7CC1FBB43F9E9575953B3D7;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v60, v113, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v60, v113, 0LL);
   if ( v60 )
   {
-    v3 = sub_B70754(v60, *(_QWORD *)&(*v1)->m_Items[9]);
+    v3 = sub_B77684(v60, *(_QWORD *)&(*v1)->m_Items[9]);
     if ( !v3 )
       goto LABEL_42;
   }
   if ( *((_DWORD *)v1 + 6) <= 8u )
     goto LABEL_41;
   v1[12] = (System_Int32_array *)v60;
-  sub_B70630((BattleServantConfConponent_o *)(v1 + 12), (System_Int32_array **)v60, v61, v62, v63, v64, v65, v66);
-  v67 = (System_Array_o *)sub_B706AC(byte___TypeInfo, 79LL);
+  sub_B77560((BattleServantConfConponent_o *)(v1 + 12), (System_Int32_array **)v60, v61, v62, v63, v64, v65, v66);
+  v67 = (System_Array_o *)sub_B775DC(byte___TypeInfo, 79LL);
   v114.fields.value = Field__PrivateImplementationDetails__5D03B9D1D2D687E0F9A41938DA6461ECE8F70BAE8E2039EC533CEECCCB7D2545;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v67, v114, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v67, v114, 0LL);
   if ( v67 )
   {
-    v3 = sub_B70754(v67, *(_QWORD *)&(*v1)->m_Items[9]);
+    v3 = sub_B77684(v67, *(_QWORD *)&(*v1)->m_Items[9]);
     if ( !v3 )
       goto LABEL_42;
   }
   if ( *((_DWORD *)v1 + 6) <= 9u )
     goto LABEL_41;
   v1[13] = (System_Int32_array *)v67;
-  sub_B70630((BattleServantConfConponent_o *)(v1 + 13), (System_Int32_array **)v67, v68, v69, v70, v71, v72, v73);
-  v74 = (System_Array_o *)sub_B706AC(byte___TypeInfo, 6LL);
+  sub_B77560((BattleServantConfConponent_o *)(v1 + 13), (System_Int32_array **)v67, v68, v69, v70, v71, v72, v73);
+  v74 = (System_Array_o *)sub_B775DC(byte___TypeInfo, 6LL);
   v115.fields.value = Field__PrivateImplementationDetails__5E8058FCE46433F2A2AFE7D89F945E52848269557763A801058E7838150974A8;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v74, v115, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v74, v115, 0LL);
   if ( v74 )
   {
-    v3 = sub_B70754(v74, *(_QWORD *)&(*v1)->m_Items[9]);
+    v3 = sub_B77684(v74, *(_QWORD *)&(*v1)->m_Items[9]);
     if ( !v3 )
       goto LABEL_42;
   }
   if ( *((_DWORD *)v1 + 6) <= 0xAu )
     goto LABEL_41;
   v1[14] = (System_Int32_array *)v74;
-  sub_B70630((BattleServantConfConponent_o *)(v1 + 14), (System_Int32_array **)v74, v75, v76, v77, v78, v79, v80);
-  v81 = (System_Array_o *)sub_B706AC(byte___TypeInfo, 79LL);
+  sub_B77560((BattleServantConfConponent_o *)(v1 + 14), (System_Int32_array **)v74, v75, v76, v77, v78, v79, v80);
+  v81 = (System_Array_o *)sub_B775DC(byte___TypeInfo, 79LL);
   v116.fields.value = Field__PrivateImplementationDetails__AC7889A850BC7102A3ADD0BC7C7F6C99E547CDBE49BEBA989D8449F79FD0797D;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v81, v116, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v81, v116, 0LL);
   if ( v81 )
   {
-    v3 = sub_B70754(v81, *(_QWORD *)&(*v1)->m_Items[9]);
+    v3 = sub_B77684(v81, *(_QWORD *)&(*v1)->m_Items[9]);
     if ( !v3 )
     {
 LABEL_42:
-      v104 = sub_B7078C(v3);
-      sub_B70738(v104, 0LL);
+      v104 = sub_B776BC(v3);
+      sub_B77668(v104, 0LL);
     }
   }
   if ( *((_DWORD *)v1 + 6) <= 0xBu )
   {
 LABEL_41:
-    v103 = sub_B70798(v3);
-    sub_B70738(v103, 0LL);
+    v103 = sub_B776C8(v3);
+    sub_B77668(v103, 0LL);
   }
   v1[15] = (System_Int32_array *)v81;
-  sub_B70630((BattleServantConfConponent_o *)(v1 + 15), (System_Int32_array **)v81, v82, v83, v84, v85, v86, v87);
+  sub_B77560((BattleServantConfConponent_o *)(v1 + 15), (System_Int32_array **)v81, v82, v83, v84, v85, v86, v87);
   static_fields = (BattleServantConfConponent_o *)SignedValue_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B70630(static_fields, v1, v89, v90, v91, v92, v93, v94);
-  v95 = (System_Array_o *)sub_B706AC(int___TypeInfo, 12LL);
+  sub_B77560(static_fields, v1, v89, v90, v91, v92, v93, v94);
+  v95 = (System_Array_o *)sub_B775DC(int___TypeInfo, 12LL);
   v117.fields.value = Field__PrivateImplementationDetails__E6559CAD584B6A6DCEB54AAC78272DEC346DC02215FC4F676E79646044B26D3E;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v95, v117, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v95, v117, 0LL);
   v96 = SignedValue_TypeInfo->static_fields;
   v96->io = (struct System_Int32_array *)v95;
-  sub_B70630((BattleServantConfConponent_o *)&v96->io, (System_Int32_array **)v95, v97, v98, v99, v100, v101, v102);
+  sub_B77560((BattleServantConfConponent_o *)&v96->io, (System_Int32_array **)v95, v97, v98, v99, v100, v101, v102);
   SignedValue_TypeInfo->static_fields->exist = 1871552300;
 }
 

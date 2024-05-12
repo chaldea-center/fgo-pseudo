@@ -18,28 +18,28 @@ void __fastcall OtherUserNewManager___cctor(const MethodInfo *method)
   System_Int32_array *v16; // x6
   System_Int32_array *v17; // x7
 
-  if ( (byte_4350C59 & 1) == 0 )
+  if ( (byte_438A301 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_long___ctor__);
-    sub_B70694(&System_Collections_Generic_List_long__TypeInfo);
-    sub_B70694(&OtherUserNewManager_TypeInfo);
-    sub_B70694(&StringLiteral_6706/*"Fgo_20151127_1"*/);
-    byte_4350C59 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_long___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_long__TypeInfo);
+    sub_B775C4(&OtherUserNewManager_TypeInfo);
+    sub_B775C4(&StringLiteral_6762/*"Fgo_20151127_1"*/);
+    byte_438A301 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)OtherUserNewManager_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_6706/*"Fgo_20151127_1"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6706/*"Fgo_20151127_1"*/;
-  sub_B70630(static_fields, v8, v1, v2, v3, v4, v5, v6);
+  v8 = (System_Int32_array **)StringLiteral_6762/*"Fgo_20151127_1"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6762/*"Fgo_20151127_1"*/;
+  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
   v9 = OtherUserNewManager_TypeInfo;
   OtherUserNewManager_TypeInfo->static_fields->isModfiy = 0;
   v9->static_fields->isContinueDevice = 0;
-  v10 = (System_Collections_Generic_List_long__o *)sub_B70764(System_Collections_Generic_List_long__TypeInfo);
+  v10 = (System_Collections_Generic_List_long__o *)sub_B77694(System_Collections_Generic_List_long__TypeInfo);
   System_Collections_Generic_List_long____ctor(
     v10,
-    (const MethodInfo_30BB42C *)Method_System_Collections_Generic_List_long___ctor__);
+    (const MethodInfo_30EB03C *)Method_System_Collections_Generic_List_long___ctor__);
   v11 = OtherUserNewManager_TypeInfo->static_fields;
   v11->oldList = v10;
-  sub_B70630((BattleServantConfConponent_o *)&v11->oldList, (System_Int32_array **)v10, v12, v13, v14, v15, v16, v17);
+  sub_B77560((BattleServantConfConponent_o *)&v11->oldList, (System_Int32_array **)v10, v12, v13, v14, v15, v16, v17);
 }
 
 
@@ -55,12 +55,12 @@ void __fastcall OtherUserNewManager__ClearSaveDataList(const MethodInfo *method)
   OtherUserNewManager_c *v2; // x0
   struct System_Collections_Generic_List_long__o *oldList; // x8
 
-  if ( (byte_4350C52 & 1) == 0 )
+  if ( (byte_438A2FA & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_long__Clear__);
-    sub_B70694(&Method_System_Collections_Generic_List_long__get_Count__);
-    sub_B70694(&OtherUserNewManager_TypeInfo);
-    byte_4350C52 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_long__Clear__);
+    sub_B775C4(&Method_System_Collections_Generic_List_long__get_Count__);
+    sub_B775C4(&OtherUserNewManager_TypeInfo);
+    byte_438A2FA = 1;
   }
   v2 = OtherUserNewManager_TypeInfo;
   if ( (BYTE3(OtherUserNewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -80,12 +80,12 @@ void __fastcall OtherUserNewManager__ClearSaveDataList(const MethodInfo *method)
     {
       System_Collections_Generic_List_long___Clear(
         oldList,
-        (const MethodInfo_30BC594 *)Method_System_Collections_Generic_List_long__Clear__);
+        (const MethodInfo_30EC1A4 *)Method_System_Collections_Generic_List_long__Clear__);
       v2 = OtherUserNewManager_TypeInfo;
       goto LABEL_12;
     }
 LABEL_16:
-    sub_B7076C(v2, v1);
+    sub_B7769C(v2, v1);
   }
 LABEL_12:
   if ( (BYTE3(v2->vtable._0_Equals.methodPtr) & 4) != 0 && !v2->_2.cctor_finished )
@@ -105,10 +105,10 @@ void __fastcall OtherUserNewManager__CreateContinueDeviceSaveData(const MethodIn
   OtherUserNewManager_c *v3; // x8
   const MethodInfo *v4; // x0
 
-  if ( (byte_4350C50 & 1) == 0 )
+  if ( (byte_438A2F8 & 1) == 0 )
   {
-    sub_B70694(&OtherUserNewManager_TypeInfo);
-    byte_4350C50 = 1;
+    sub_B775C4(&OtherUserNewManager_TypeInfo);
+    byte_438A2F8 = 1;
   }
   v1 = OtherUserNewManager_TypeInfo;
   if ( (BYTE3(OtherUserNewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -130,10 +130,10 @@ void __fastcall OtherUserNewManager__DeleteSaveData(const MethodInfo *method)
   OtherUserNewManager_c *v1; // x0
   System_String_o *SaveFileName; // x19
 
-  if ( (byte_4350C4F & 1) == 0 )
+  if ( (byte_438A2F7 & 1) == 0 )
   {
-    sub_B70694(&OtherUserNewManager_TypeInfo);
-    byte_4350C4F = 1;
+    sub_B775C4(&OtherUserNewManager_TypeInfo);
+    byte_438A2F7 = 1;
   }
   v1 = OtherUserNewManager_TypeInfo;
   if ( (BYTE3(OtherUserNewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -151,10 +151,10 @@ void __fastcall OtherUserNewManager__Initialize(const MethodInfo *method)
 {
   OtherUserNewManager_c *v1; // x0
 
-  if ( (byte_4350C51 & 1) == 0 )
+  if ( (byte_438A2F9 & 1) == 0 )
   {
-    sub_B70694(&OtherUserNewManager_TypeInfo);
-    byte_4350C51 = 1;
+    sub_B775C4(&OtherUserNewManager_TypeInfo);
+    byte_438A2F9 = 1;
   }
   v1 = OtherUserNewManager_TypeInfo;
   if ( (BYTE3(OtherUserNewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -174,12 +174,12 @@ bool __fastcall OtherUserNewManager__IsNew(int64_t userId, const MethodInfo *met
   __int64 i; // x22
   struct System_Collections_Generic_List_long__o *v7; // x23
 
-  if ( (byte_4350C54 & 1) == 0 )
+  if ( (byte_438A2FC & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_long__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_long__get_Item__);
-    sub_B70694(&OtherUserNewManager_TypeInfo);
-    byte_4350C54 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_long__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_long__get_Item__);
+    sub_B775C4(&OtherUserNewManager_TypeInfo);
+    byte_438A2FC = 1;
   }
   v3 = OtherUserNewManager_TypeInfo;
   if ( (BYTE3(OtherUserNewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -191,7 +191,7 @@ bool __fastcall OtherUserNewManager__IsNew(int64_t userId, const MethodInfo *met
   oldList = v3->static_fields->oldList;
   if ( !oldList )
 LABEL_20:
-    sub_B7076C(v3, method);
+    sub_B7769C(v3, method);
   size = oldList->fields._size;
   if ( size < 1 )
     return 1;
@@ -206,7 +206,7 @@ LABEL_20:
     if ( !v7 )
       goto LABEL_20;
     if ( v7->fields._size <= (unsigned int)i )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
     if ( v7->fields._items->m_Items[i] == userId )
       break;
     if ( (int)i + 1 >= size )
@@ -224,12 +224,12 @@ void __fastcall OtherUserNewManager__LoginProcess(const MethodInfo *method)
   const MethodInfo *v3; // x1
   const MethodInfo *v4; // x0
 
-  if ( (byte_4350C53 & 1) == 0 )
+  if ( (byte_438A2FB & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_OtherUserGameMaster___);
-    sub_B70694(&OtherUserNewManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4350C53 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_OtherUserGameMaster___);
+    sub_B775C4(&OtherUserNewManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438A2FB = 1;
   }
   v1 = OtherUserNewManager_TypeInfo;
   if ( (BYTE3(OtherUserNewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -240,13 +240,13 @@ void __fastcall OtherUserNewManager__LoginProcess(const MethodInfo *method)
   }
   if ( v1->static_fields->isContinueDevice )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                         Instance,
-                                        (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_OtherUserGameMaster___)) == 0LL )
+                                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_OtherUserGameMaster___)) == 0LL )
     {
-      sub_B7076C(Instance, v3);
+      sub_B7769C(Instance, v3);
     }
     OtherUserGameMaster__continueDeviceOtherUser((OtherUserGameMaster_o *)Instance, v3);
     v4 = (const MethodInfo *)OtherUserNewManager_TypeInfo;
@@ -289,14 +289,14 @@ bool __fastcall OtherUserNewManager__ReadData(const MethodInfo *method)
   __int64 v23; // x0
   int v24; // [xsp+8h] [xbp-48h]
 
-  if ( (byte_4350C57 & 1) == 0 )
+  if ( (byte_438A2FF & 1) == 0 )
   {
-    sub_B70694(&System_IO_BinaryReader_TypeInfo);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_long__Add__);
-    sub_B70694(&ManagerConfig_TypeInfo);
-    sub_B70694(&OtherUserNewManager_TypeInfo);
-    byte_4350C57 = 1;
+    sub_B775C4(&System_IO_BinaryReader_TypeInfo);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_long__Add__);
+    sub_B775C4(&ManagerConfig_TypeInfo);
+    sub_B775C4(&OtherUserNewManager_TypeInfo);
+    byte_438A2FF = 1;
   }
   v1 = OtherUserNewManager_TypeInfo;
   if ( (BYTE3(OtherUserNewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -326,10 +326,10 @@ bool __fastcall OtherUserNewManager__ReadData(const MethodInfo *method)
   if ( !System_IO_File__Exists(SaveFileName, 0LL) )
     return 0;
   v6 = (System_IO_Stream_o *)System_IO_File__OpenRead(SaveFileName, 0LL);
-  v7 = (System_IO_BinaryReader_o *)sub_B70764(System_IO_BinaryReader_TypeInfo);
+  v7 = (System_IO_BinaryReader_o *)sub_B77694(System_IO_BinaryReader_TypeInfo);
   System_IO_BinaryReader___ctor(v7, v6, 0LL);
   if ( !v7 )
-    sub_B7076C(v8, v9);
+    sub_B7769C(v8, v9);
   v10 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._22_ReadString.method)(
                              v7,
                              v7->klass->vtable._23_ReadChars.methodPtr);
@@ -376,11 +376,11 @@ bool __fastcall OtherUserNewManager__ReadData(const MethodInfo *method)
         }
         oldList = v18->static_fields->oldList;
         if ( !oldList )
-          sub_B7076C(0LL, v16);
+          sub_B7769C(0LL, v16);
         System_Collections_Generic_List_long___Add(
           oldList,
           v17,
-          (const MethodInfo_30BC188 *)Method_System_Collections_Generic_List_long__Add__);
+          (const MethodInfo_30EBD98 *)Method_System_Collections_Generic_List_long__Add__);
       }
     }
     v24 = 137;
@@ -402,7 +402,7 @@ bool __fastcall OtherUserNewManager__ReadData(const MethodInfo *method)
   else
   {
 LABEL_36:
-    v23 = sub_B08590(v7, System_IDisposable_TypeInfo, 0LL);
+    v23 = sub_B0F4C0(v7, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v23)(v7, *(_QWORD *)(v23 + 8));
   return v24 == 137;
@@ -418,13 +418,13 @@ void __fastcall OtherUserNewManager__SetOld(int64_t userId, const MethodInfo *me
   __int64 v7; // x22
   struct System_Collections_Generic_List_long__o *v8; // x23
 
-  if ( (byte_4350C55 & 1) == 0 )
+  if ( (byte_438A2FD & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_long__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_long__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_long__get_Item__);
-    sub_B70694(&OtherUserNewManager_TypeInfo);
-    byte_4350C55 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_long__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_long__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_long__get_Item__);
+    sub_B775C4(&OtherUserNewManager_TypeInfo);
+    byte_438A2FD = 1;
   }
   v3 = OtherUserNewManager_TypeInfo;
   if ( (BYTE3(OtherUserNewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -452,7 +452,7 @@ void __fastcall OtherUserNewManager__SetOld(int64_t userId, const MethodInfo *me
       if ( !v8 )
         break;
       if ( v8->fields._size <= (unsigned int)v7 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       if ( v8->fields._items->m_Items[v7] == userId )
         return;
       v3 = OtherUserNewManager_TypeInfo;
@@ -462,7 +462,7 @@ void __fastcall OtherUserNewManager__SetOld(int64_t userId, const MethodInfo *me
         goto LABEL_17;
     }
 LABEL_23:
-    sub_B7076C(v3, method);
+    sub_B7769C(v3, method);
   }
 LABEL_17:
   if ( v6 )
@@ -479,12 +479,12 @@ LABEL_17:
   System_Collections_Generic_List_long___Add(
     (System_Collections_Generic_List_long__o *)v3,
     userId,
-    (const MethodInfo_30BC188 *)Method_System_Collections_Generic_List_long__Add__);
+    (const MethodInfo_30EBD98 *)Method_System_Collections_Generic_List_long__Add__);
   OtherUserNewManager_TypeInfo->static_fields->isModfiy = 1;
 }
 
 
-void __fastcall OtherUserNewManager__SetOld_23335984(System_Int64_array *userList, const MethodInfo *method)
+void __fastcall OtherUserNewManager__SetOld_23669404(System_Int64_array *userList, const MethodInfo *method)
 {
   __int64 v3; // x21
   OtherUserNewManager_c *v4; // x0
@@ -499,13 +499,13 @@ void __fastcall OtherUserNewManager__SetOld_23335984(System_Int64_array *userLis
   unsigned __int64 max_length; // x8
   __int64 v14; // x0
 
-  if ( (byte_4350C56 & 1) == 0 )
+  if ( (byte_438A2FE & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_long__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_long__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_long__get_Item__);
-    sub_B70694(&OtherUserNewManager_TypeInfo);
-    byte_4350C56 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_long__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_long__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_long__get_Item__);
+    sub_B775C4(&OtherUserNewManager_TypeInfo);
+    byte_438A2FE = 1;
   }
   if ( userList )
   {
@@ -551,15 +551,15 @@ LABEL_25:
               System_Collections_Generic_List_long___Add(
                 (System_Collections_Generic_List_long__o *)v4,
                 m_Items[v11],
-                (const MethodInfo_30BC188 *)Method_System_Collections_Generic_List_long__Add__);
+                (const MethodInfo_30EBD98 *)Method_System_Collections_Generic_List_long__Add__);
               OtherUserNewManager_TypeInfo->static_fields->isModfiy = 1;
             }
             if ( (__int64)++v11 >= (int)v3 )
               return;
           }
 LABEL_36:
-          v14 = sub_B70798(v4);
-          sub_B70738(v14, 0LL);
+          v14 = sub_B776C8(v4);
+          sub_B77668(v14, 0LL);
         }
         v7 = 0LL;
         v8 = userList->m_Items;
@@ -574,7 +574,7 @@ LABEL_36:
           if ( !v9 )
             break;
           if ( v7 >= (unsigned int)v9->fields._size )
-            System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+            System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
           v10 = 0LL;
           while ( 1 )
           {
@@ -593,7 +593,7 @@ LABEL_24:
         }
       }
 LABEL_37:
-      sub_B7076C(v4, method);
+      sub_B7769C(v4, method);
     }
   }
 }
@@ -624,15 +624,15 @@ bool __fastcall OtherUserNewManager__WriteData(const MethodInfo *method)
   int32_t *p_offset; // x11
   __int64 v23; // x0
 
-  if ( (byte_4350C58 & 1) == 0 )
+  if ( (byte_438A300 & 1) == 0 )
   {
-    sub_B70694(&System_IO_BinaryWriter_TypeInfo);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_long__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_long__get_Item__);
-    sub_B70694(&ManagerConfig_TypeInfo);
-    sub_B70694(&OtherUserNewManager_TypeInfo);
-    byte_4350C58 = 1;
+    sub_B775C4(&System_IO_BinaryWriter_TypeInfo);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_long__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_long__get_Item__);
+    sub_B775C4(&ManagerConfig_TypeInfo);
+    sub_B775C4(&OtherUserNewManager_TypeInfo);
+    byte_438A300 = 1;
   }
   v1 = OtherUserNewManager_TypeInfo;
   if ( (BYTE3(OtherUserNewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -669,8 +669,8 @@ bool __fastcall OtherUserNewManager__WriteData(const MethodInfo *method)
     }
     SaveFileName = OtherUserNewManager__getSaveFileName((const MethodInfo *)v7);
     v9 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SaveFileName, 0LL);
-    v10 = (System_IO_BinaryWriter_o *)sub_B70764(System_IO_BinaryWriter_TypeInfo);
-    System_IO_BinaryWriter___ctor_39879612(v10, v9, 0LL);
+    v10 = (System_IO_BinaryWriter_o *)sub_B77694(System_IO_BinaryWriter_TypeInfo);
+    System_IO_BinaryWriter___ctor_40221404(v10, v9, 0LL);
     v12 = OtherUserNewManager_TypeInfo;
     if ( (BYTE3(OtherUserNewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !OtherUserNewManager_TypeInfo->_2.cctor_finished )
@@ -681,9 +681,9 @@ bool __fastcall OtherUserNewManager__WriteData(const MethodInfo *method)
     v13 = v12->static_fields;
     oldList = v13->oldList;
     if ( !oldList )
-      sub_B7076C(v12, v11);
+      sub_B7769C(v12, v11);
     if ( !v10 )
-      sub_B7076C(v12, v11);
+      sub_B7769C(v12, v11);
     size = oldList->fields._size;
     ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *))v10->klass->vtable._22_Write.method)(
       v10,
@@ -710,9 +710,9 @@ bool __fastcall OtherUserNewManager__WriteData(const MethodInfo *method)
         }
         v19 = v18->static_fields->oldList;
         if ( !v19 )
-          sub_B7076C(v18, v16);
+          sub_B7769C(v18, v16);
         if ( i >= (unsigned int)v19->fields._size )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
         ((void (__fastcall *)(System_IO_BinaryWriter_o *, int64_t, Il2CppMethodPointer))v10->klass->vtable._19_Write.method)(
           v10,
           v19->fields._items->m_Items[i],
@@ -736,7 +736,7 @@ bool __fastcall OtherUserNewManager__WriteData(const MethodInfo *method)
     else
     {
 LABEL_36:
-      v23 = sub_B08590(v10, System_IDisposable_TypeInfo, 0LL);
+      v23 = sub_B0F4C0(v10, System_IDisposable_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v23)(v10, *(_QWORD *)(v23 + 8));
   }
@@ -749,12 +749,12 @@ System_String_o *__fastcall OtherUserNewManager__getSaveFileName(const MethodInf
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4350C4E & 1) == 0 )
+  if ( (byte_438A2F6 & 1) == 0 )
   {
-    sub_B70694(&AndroidUtil_TypeInfo);
-    sub_B70694(&DatFileName_TypeInfo);
-    sub_B70694(&StringLiteral_890/*"/"*/);
-    byte_4350C4E = 1;
+    sub_B775C4(&AndroidUtil_TypeInfo);
+    sub_B775C4(&DatFileName_TypeInfo);
+    sub_B775C4(&StringLiteral_892/*"/"*/);
+    byte_438A2F6 = 1;
   }
   if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -762,5 +762,5 @@ System_String_o *__fastcall OtherUserNewManager__getSaveFileName(const MethodInf
   if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(12, 0LL);
-  return System_String__Concat_44760452(DatFileSavePath, (System_String_o *)StringLiteral_890/*"/"*/, FileName, 0LL);
+  return System_String__Concat_44904220(DatFileSavePath, (System_String_o *)StringLiteral_892/*"/"*/, FileName, 0LL);
 }

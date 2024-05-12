@@ -15,26 +15,26 @@ void __fastcall ClassBoardItemModel___ctor(
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
 
-  if ( (byte_4353AF1 & 1) == 0 )
+  if ( (byte_438D3AF & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    byte_4353AF1 = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    byte_438D3AF = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ItemMaster___);
+  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !Master_WarQuestSelectionMaster )
-    sub_B7076C(0LL, v8);
+    sub_B7769C(0LL, v8);
   Entity = (struct ItemEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                     Master_WarQuestSelectionMaster,
                                     itemId,
-                                    (const MethodInfo_21C0440 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                                    (const MethodInfo_21FB894 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   this->fields.entity = Entity;
   p_fields = &this->fields;
-  sub_B70630((BattleServantConfConponent_o *)p_fields, (System_Int32_array **)Entity, v11, v12, v13, v14, v15, v16);
+  sub_B77560((BattleServantConfConponent_o *)p_fields, (System_Int32_array **)Entity, v11, v12, v13, v14, v15, v16);
   p_fields->_Num_k__BackingField = num;
 }
 
@@ -51,7 +51,7 @@ int32_t __fastcall ClassBoardItemModel__get_Id(ClassBoardItemModel_o *this, cons
 
   entity = this->fields.entity;
   if ( !entity )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return entity->fields.id;
 }
 
@@ -69,7 +69,7 @@ int32_t __fastcall ClassBoardItemModel__get_UserNum(ClassBoardItemModel_o *this,
 
   entity = this->fields.entity;
   if ( !entity )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   UserOwnInfoByItemId = UserOwnItemDetail__GetUserOwnInfoByItemId(entity->fields.id, 0LL);
   if ( UserOwnInfoByItemId )
     LODWORD(UserOwnInfoByItemId) = UserOwnInfoByItemId->fields._Num_k__BackingField;

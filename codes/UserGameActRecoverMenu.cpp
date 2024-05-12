@@ -22,7 +22,7 @@ void __fastcall UserGameActRecoverMenu__Callback(
   p_callbackFunc = (BattleServantConfConponent_o *)&this->fields.callbackFunc;
   v9 = callbackFunc;
   p_callbackFunc->klass = 0LL;
-  sub_B70630(p_callbackFunc, 0LL, (System_String_array **)method, v3, v4, v5, v6, v7);
+  sub_B77560(p_callbackFunc, 0LL, (System_String_array **)method, v3, v4, v5, v6, v7);
   if ( callbackFunc )
     UserGameActRecoverMenu_CallbackFunc__Invoke(v9, result, 0LL);
 }
@@ -54,14 +54,14 @@ void __fastcall UserGameActRecoverMenu__Close(UserGameActRecoverMenu_o *this, co
                                                                      (UnityEngine_Component_o *)this,
                                                                      0LL)) == 0LL) )
     {
-      sub_B7076C(recoverConfirmMenu, method);
+      sub_B7769C(recoverConfirmMenu, method);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)recoverConfirmMenu, 0, 0LL);
     this->fields.stoneShopEntity = 0LL;
-    sub_B70630((BattleServantConfConponent_o *)&this->fields.stoneShopEntity, 0LL, v4, v5, v6, v7, v8, v9);
+    sub_B77560((BattleServantConfConponent_o *)&this->fields.stoneShopEntity, 0LL, v4, v5, v6, v7, v8, v9);
     this->fields.refreshCallbackFunc = 0LL;
     p_refreshCallbackFunc = (BattleServantConfConponent_o *)&this->fields.refreshCallbackFunc;
-    sub_B70630(p_refreshCallbackFunc, 0LL, v11, v12, v13, v14, v15, v16);
+    sub_B77560(p_refreshCallbackFunc, 0LL, v11, v12, v13, v14, v15, v16);
     p_refreshCallbackFunc->fields.m_CachedPtr = 0;
   }
 }
@@ -80,20 +80,20 @@ void __fastcall UserGameActRecoverMenu__EndBuyStoneConfirm(
   System_Action_o *v10; // x21
   const MethodInfo *v11; // x2
 
-  if ( (byte_43506FC & 1) == 0 )
+  if ( (byte_4389D25 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&StonePurchaseMenu_CallbackFunc_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B70694(&Method_UserGameActRecoverMenu_EndCloseBuyStoneConfirm__);
-    sub_B70694(&Method_UserGameActRecoverMenu_SelectedBuyBankItemConfirm__);
-    byte_43506FC = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&StonePurchaseMenu_CallbackFunc_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B775C4(&Method_UserGameActRecoverMenu_EndCloseBuyStoneConfirm__);
+    sub_B775C4(&Method_UserGameActRecoverMenu_SelectedBuyBankItemConfirm__);
+    byte_4389D25 = 1;
   }
   if ( isDecide )
   {
     this->fields.state = 5;
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v6 = (StonePurchaseMenu_CallbackFunc_o *)sub_B70764(StonePurchaseMenu_CallbackFunc_TypeInfo);
+    Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v6 = (StonePurchaseMenu_CallbackFunc_o *)sub_B77694(StonePurchaseMenu_CallbackFunc_TypeInfo);
     StonePurchaseMenu_CallbackFunc___ctor(
       v6,
       (Il2CppObject *)this,
@@ -105,14 +105,14 @@ void __fastcall UserGameActRecoverMenu__EndBuyStoneConfirm(
       return;
     }
 LABEL_8:
-    sub_B7076C(v7, v8);
+    sub_B7769C(v7, v8);
   }
   recoverConfirmMenu = this->fields.recoverConfirmMenu;
-  v10 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_UserGameActRecoverMenu_EndCloseBuyStoneConfirm__, 0LL);
   if ( !recoverConfirmMenu )
     goto LABEL_8;
-  UserGameActRecoverConfirmMenu__Close_22812432(recoverConfirmMenu, v10, v11);
+  UserGameActRecoverConfirmMenu__Close_23035080(recoverConfirmMenu, v10, v11);
 }
 
 
@@ -175,18 +175,18 @@ void __fastcall UserGameActRecoverMenu__EndMaxFrameConfirm(
   __int64 v7; // x1
   const MethodInfo *v8; // x2
 
-  if ( (byte_43506FB & 1) == 0 )
+  if ( (byte_4389D24 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_UserGameActRecoverMenu_EndCloseMaxFrameConfirm__);
-    byte_43506FB = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_UserGameActRecoverMenu_EndCloseMaxFrameConfirm__);
+    byte_4389D24 = 1;
   }
   recoverConfirmMenu = this->fields.recoverConfirmMenu;
-  v5 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_UserGameActRecoverMenu_EndCloseMaxFrameConfirm__, 0LL);
   if ( !recoverConfirmMenu )
-    sub_B7076C(v6, v7);
-  UserGameActRecoverConfirmMenu__Close_22812432(recoverConfirmMenu, v5, v8);
+    sub_B7769C(v6, v7);
+  UserGameActRecoverConfirmMenu__Close_23035080(recoverConfirmMenu, v5, v8);
 }
 
 
@@ -201,18 +201,18 @@ void __fastcall UserGameActRecoverMenu__EndNoShopConfirm(
   __int64 v7; // x1
   const MethodInfo *v8; // x2
 
-  if ( (byte_43506FA & 1) == 0 )
+  if ( (byte_4389D23 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_UserGameActRecoverMenu_EndCloseNoShopConfirm__);
-    byte_43506FA = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_UserGameActRecoverMenu_EndCloseNoShopConfirm__);
+    byte_4389D23 = 1;
   }
   recoverConfirmMenu = this->fields.recoverConfirmMenu;
-  v5 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_UserGameActRecoverMenu_EndCloseNoShopConfirm__, 0LL);
   if ( !recoverConfirmMenu )
-    sub_B7076C(v6, v7);
-  UserGameActRecoverConfirmMenu__Close_22812432(recoverConfirmMenu, v5, v8);
+    sub_B7769C(v6, v7);
+  UserGameActRecoverConfirmMenu__Close_23035080(recoverConfirmMenu, v5, v8);
 }
 
 
@@ -228,11 +228,11 @@ void __fastcall UserGameActRecoverMenu__EndRecoverUserGameActConfirm(
   __int64 v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_43506FE & 1) == 0 )
+  if ( (byte_4389D27 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_UserGameActRecoverMenu_EndCloseRecoverUserGameActConfirm__);
-    byte_43506FE = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_UserGameActRecoverMenu_EndCloseRecoverUserGameActConfirm__);
+    byte_4389D27 = 1;
   }
   if ( isDecide )
   {
@@ -242,15 +242,15 @@ void __fastcall UserGameActRecoverMenu__EndRecoverUserGameActConfirm(
   else
   {
     recoverConfirmMenu = this->fields.recoverConfirmMenu;
-    v6 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v6 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     System_Action___ctor(
       v6,
       (Il2CppObject *)this,
       Method_UserGameActRecoverMenu_EndCloseRecoverUserGameActConfirm__,
       0LL);
     if ( !recoverConfirmMenu )
-      sub_B7076C(v7, v8);
-    UserGameActRecoverConfirmMenu__Close_22812432(recoverConfirmMenu, v6, v9);
+      sub_B7769C(v7, v8);
+    UserGameActRecoverConfirmMenu__Close_23035080(recoverConfirmMenu, v6, v9);
   }
 }
 
@@ -266,22 +266,22 @@ void __fastcall UserGameActRecoverMenu__EndRecoverUserGameActResultConfirm(
   __int64 v7; // x1
   const MethodInfo *v8; // x2
 
-  if ( (byte_4350701 & 1) == 0 )
+  if ( (byte_4389D2A & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_UserGameActRecoverMenu_EndCloseRecoverUserGameActResultConfirm__);
-    byte_4350701 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_UserGameActRecoverMenu_EndCloseRecoverUserGameActResultConfirm__);
+    byte_4389D2A = 1;
   }
   recoverConfirmMenu = this->fields.recoverConfirmMenu;
-  v5 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(
     v5,
     (Il2CppObject *)this,
     Method_UserGameActRecoverMenu_EndCloseRecoverUserGameActResultConfirm__,
     0LL);
   if ( !recoverConfirmMenu )
-    sub_B7076C(v6, v7);
-  UserGameActRecoverConfirmMenu__Close_22812432(recoverConfirmMenu, v5, v8);
+    sub_B7769C(v6, v7);
+  UserGameActRecoverConfirmMenu__Close_23035080(recoverConfirmMenu, v5, v8);
 }
 
 
@@ -297,11 +297,11 @@ void __fastcall UserGameActRecoverMenu__EndRequestUserGameActRecover(
   const MethodInfo *v8; // x4
   System_Action_o *refreshCallbackFunc; // x0
 
-  if ( (byte_4350700 & 1) == 0 )
+  if ( (byte_4389D29 & 1) == 0 )
   {
-    sub_B70694(&UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo);
-    sub_B70694(&Method_UserGameActRecoverMenu_EndRecoverUserGameActResultConfirm__);
-    byte_4350700 = 1;
+    sub_B775C4(&UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo);
+    sub_B775C4(&Method_UserGameActRecoverMenu_EndRecoverUserGameActResultConfirm__);
+    byte_4389D29 = 1;
   }
   recoverConfirmMenu = this->fields.recoverConfirmMenu;
   this->fields.state = 7;
@@ -309,7 +309,7 @@ void __fastcall UserGameActRecoverMenu__EndRequestUserGameActRecover(
     || (UserGameActRecoverConfirmMenu__Init(recoverConfirmMenu, (const MethodInfo *)result),
         v5 = this->fields.recoverConfirmMenu,
         stoneShopEntity = this->fields.stoneShopEntity,
-        v7 = (UserGameActRecoverConfirmMenu_CallbackFunc_o *)sub_B70764(UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo),
+        v7 = (UserGameActRecoverConfirmMenu_CallbackFunc_o *)sub_B77694(UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo),
         UserGameActRecoverConfirmMenu_CallbackFunc___ctor(
           v7,
           (Il2CppObject *)this,
@@ -317,7 +317,7 @@ void __fastcall UserGameActRecoverMenu__EndRequestUserGameActRecover(
           0LL),
         !v5) )
   {
-    sub_B7076C(recoverConfirmMenu, result);
+    sub_B7769C(recoverConfirmMenu, result);
   }
   UserGameActRecoverConfirmMenu__Open(v5, 2, stoneShopEntity, v7, v8);
   refreshCallbackFunc = this->fields.refreshCallbackFunc;
@@ -373,22 +373,22 @@ void __fastcall UserGameActRecoverMenu__Open(
   struct UserGameActRecoverConfirmMenu_o *recoverConfirmMenu; // x21
   __int64 v40; // x0
 
-  if ( (byte_43506F9 & 1) == 0 )
+  if ( (byte_4389D22 & 1) == 0 )
   {
-    sub_B70694(&UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMasterData_StoneShopMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&Method_UserGameActRecoverMenu_EndBuyStoneConfirm__);
-    sub_B70694(&Method_UserGameActRecoverMenu_EndMaxFrameConfirm__);
-    sub_B70694(&Method_UserGameActRecoverMenu_EndNoShopConfirm__);
-    sub_B70694(&Method_UserGameActRecoverMenu_EndRecoverUserGameActConfirm__);
-    sub_B70694(&StringLiteral_10159/*"OnMoveEnd"*/);
-    byte_43506F9 = 1;
+    sub_B775C4(&UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMasterData_StoneShopMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&Method_UserGameActRecoverMenu_EndBuyStoneConfirm__);
+    sub_B775C4(&Method_UserGameActRecoverMenu_EndMaxFrameConfirm__);
+    sub_B775C4(&Method_UserGameActRecoverMenu_EndNoShopConfirm__);
+    sub_B775C4(&Method_UserGameActRecoverMenu_EndRecoverUserGameActConfirm__);
+    sub_B775C4(&StringLiteral_10218/*"OnMoveEnd"*/);
+    byte_4389D22 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.callbackFunc,
       (System_Int32_array **)callback,
       (System_String_array **)refreshCallback,
@@ -398,7 +398,7 @@ void __fastcall UserGameActRecoverMenu__Open(
       v6,
       v7);
     this->fields.refreshCallbackFunc = refreshCallback;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.refreshCallbackFunc,
       (System_Int32_array **)refreshCallback,
       v11,
@@ -412,15 +412,15 @@ void __fastcall UserGameActRecoverMenu__Open(
       goto LABEL_25;
     UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
     SelfUserGame = UserGameMaster__getSelfUserGame(v19);
-    gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !gameObject )
       goto LABEL_25;
     gameObject = (UnityEngine_GameObject_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                (DataManager_o *)gameObject,
-                                               (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_StoneShopMaster___);
+                                               (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_StoneShopMaster___);
     if ( !gameObject )
       goto LABEL_25;
-    gameObject = (UnityEngine_GameObject_o *)StoneShopMaster__GetEnableEntitiyList_23494388(
+    gameObject = (UnityEngine_GameObject_o *)StoneShopMaster__GetEnableEntitiyList_23922600(
                                                (StoneShopMaster_o *)gameObject,
                                                2,
                                                0LL);
@@ -431,12 +431,12 @@ void __fastcall UserGameActRecoverMenu__Open(
     {
       if ( !(_DWORD)klass )
       {
-        v40 = sub_B70798(gameObject);
-        sub_B70738(v40, 0LL);
+        v40 = sub_B776C8(gameObject);
+        sub_B77668(v40, 0LL);
       }
       monitor = (struct StoneShopEntity_o *)gameObject[1].monitor;
       this->fields.stoneShopEntity = monitor;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&this->fields.stoneShopEntity,
         (System_Int32_array **)monitor,
         v21,
@@ -457,7 +457,7 @@ void __fastcall UserGameActRecoverMenu__Open(
           {
             this->fields.state = 3;
             recoverConfirmMenu = this->fields.recoverConfirmMenu;
-            v31 = (UserGameActRecoverConfirmMenu_CallbackFunc_o *)sub_B70764(UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo);
+            v31 = (UserGameActRecoverConfirmMenu_CallbackFunc_o *)sub_B77694(UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo);
             UserGameActRecoverConfirmMenu_CallbackFunc___ctor(
               v31,
               (Il2CppObject *)this,
@@ -474,7 +474,7 @@ void __fastcall UserGameActRecoverMenu__Open(
           {
             this->fields.state = 4;
             v30 = this->fields.recoverConfirmMenu;
-            v31 = (UserGameActRecoverConfirmMenu_CallbackFunc_o *)sub_B70764(UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo);
+            v31 = (UserGameActRecoverConfirmMenu_CallbackFunc_o *)sub_B77694(UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo);
             UserGameActRecoverConfirmMenu_CallbackFunc___ctor(
               v31,
               (Il2CppObject *)this,
@@ -492,11 +492,11 @@ LABEL_23:
           }
         }
 LABEL_25:
-        sub_B7076C(gameObject, v18);
+        sub_B7769C(gameObject, v18);
       }
       this->fields.state = 2;
       v35 = this->fields.recoverConfirmMenu;
-      v36 = (UserGameActRecoverConfirmMenu_CallbackFunc_o *)sub_B70764(UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo);
+      v36 = (UserGameActRecoverConfirmMenu_CallbackFunc_o *)sub_B77694(UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo);
       UserGameActRecoverConfirmMenu_CallbackFunc___ctor(
         v36,
         (Il2CppObject *)this,
@@ -510,7 +510,7 @@ LABEL_25:
     {
       this->fields.state = 1;
       v35 = this->fields.recoverConfirmMenu;
-      v36 = (UserGameActRecoverConfirmMenu_CallbackFunc_o *)sub_B70764(UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo);
+      v36 = (UserGameActRecoverConfirmMenu_CallbackFunc_o *)sub_B77694(UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo);
       UserGameActRecoverConfirmMenu_CallbackFunc___ctor(
         v36,
         (Il2CppObject *)this,
@@ -527,7 +527,7 @@ LABEL_24:
     UserGameActRecoverConfirmMenu__Open(v34, v33, v37, v38, v32);
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10159/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_10218/*"OnMoveEnd"*/,
       0.1,
       0LL);
   }
@@ -544,17 +544,17 @@ void __fastcall UserGameActRecoverMenu__RequestUserGameActRecover(
   __int64 v6; // x1
   struct StoneShopEntity_o *stoneShopEntity; // x8
 
-  if ( (byte_43506FF & 1) == 0 )
+  if ( (byte_4389D28 & 1) == 0 )
   {
-    sub_B70694(&Method_NetworkManager_getRequest_PurchaseByStoneRequest___);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_B70694(&Method_UserGameActRecoverMenu_EndRequestUserGameActRecover__);
-    byte_43506FF = 1;
+    sub_B775C4(&Method_NetworkManager_getRequest_PurchaseByStoneRequest___);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_B775C4(&Method_UserGameActRecoverMenu_EndRequestUserGameActRecover__);
+    byte_4389D28 = 1;
   }
   if ( this->fields.stoneShopEntity )
   {
-    v4 = (NetworkManager_ResultCallbackFunc_o *)sub_B70764(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v4 = (NetworkManager_ResultCallbackFunc_o *)sub_B77694(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v4,
       (Il2CppObject *)this,
@@ -567,10 +567,10 @@ void __fastcall UserGameActRecoverMenu__RequestUserGameActRecover(
     }
     Request_WarBoardWallAttackRequest = (PurchaseByStoneRequest_o *)NetworkManager__getRequest_WarBoardWallAttackRequest_(
                                                                       v4,
-                                                                      (const MethodInfo_1D57A4C *)Method_NetworkManager_getRequest_PurchaseByStoneRequest___);
+                                                                      (const MethodInfo_1DF8BE8 *)Method_NetworkManager_getRequest_PurchaseByStoneRequest___);
     stoneShopEntity = this->fields.stoneShopEntity;
     if ( !stoneShopEntity || !Request_WarBoardWallAttackRequest )
-      sub_B7076C(Request_WarBoardWallAttackRequest, v6);
+      sub_B7769C(Request_WarBoardWallAttackRequest, v6);
     PurchaseByStoneRequest__beginRequest(Request_WarBoardWallAttackRequest, stoneShopEntity->fields.id, 1, 0LL);
   }
   else
@@ -600,18 +600,18 @@ void __fastcall UserGameActRecoverMenu__SelectedBuyBankItemConfirm(
   struct UserGameActRecoverConfirmMenu_o *v17; // x21
   struct StoneShopEntity_o *v18; // x20
 
-  if ( (byte_43506FD & 1) == 0 )
+  if ( (byte_4389D26 & 1) == 0 )
   {
-    sub_B70694(&UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B70694(&Method_UserGameActRecoverMenu_EndBuyStoneConfirm__);
-    sub_B70694(&Method_UserGameActRecoverMenu_EndRecoverUserGameActConfirm__);
-    byte_43506FD = 1;
+    sub_B775C4(&UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B775C4(&Method_UserGameActRecoverMenu_EndBuyStoneConfirm__);
+    sub_B775C4(&Method_UserGameActRecoverMenu_EndRecoverUserGameActConfirm__);
+    byte_4389D26 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
 LABEL_15:
-    sub_B7076C(Instance, v6);
+    sub_B7769C(Instance, v6);
   CommonUI__CloseStonePurchaseMenu(Instance, 0LL);
   switch ( result )
   {
@@ -624,7 +624,7 @@ LABEL_15:
       UserGameActRecoverConfirmMenu__Init((UserGameActRecoverConfirmMenu_o *)Instance, v6);
       recoverConfirmMenu = this->fields.recoverConfirmMenu;
       stoneShopEntity = this->fields.stoneShopEntity;
-      v10 = (UserGameActRecoverConfirmMenu_CallbackFunc_o *)sub_B70764(UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo);
+      v10 = (UserGameActRecoverConfirmMenu_CallbackFunc_o *)sub_B77694(UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo);
       UserGameActRecoverConfirmMenu_CallbackFunc___ctor(
         v10,
         (Il2CppObject *)this,
@@ -648,7 +648,7 @@ LABEL_15:
       UserGameActRecoverConfirmMenu__Init((UserGameActRecoverConfirmMenu_o *)Instance, v6);
       v17 = this->fields.recoverConfirmMenu;
       v18 = this->fields.stoneShopEntity;
-      v10 = (UserGameActRecoverConfirmMenu_CallbackFunc_o *)sub_B70764(UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo);
+      v10 = (UserGameActRecoverConfirmMenu_CallbackFunc_o *)sub_B77694(UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo);
       UserGameActRecoverConfirmMenu_CallbackFunc___ctor(
         v10,
         (Il2CppObject *)this,
@@ -689,10 +689,10 @@ void __fastcall UserGameActRecoverMenu__add_callbackFunc(
   UserGameActRecoverMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_43506F7 & 1) == 0 )
+  if ( (byte_4389D20 & 1) == 0 )
   {
-    sub_B70694(&UserGameActRecoverMenu_CallbackFunc_TypeInfo);
-    byte_43506F7 = 1;
+    sub_B775C4(&UserGameActRecoverMenu_CallbackFunc_TypeInfo);
+    byte_4389D20 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -705,13 +705,13 @@ void __fastcall UserGameActRecoverMenu__add_callbackFunc(
       if ( (UserGameActRecoverMenu_CallbackFunc_c *)v8->klass != UserGameActRecoverMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (UserGameActRecoverMenu_o *)sub_B70A60(v8);
+  v11 = (UserGameActRecoverMenu_o *)sub_B77990(v8);
   UserGameActRecoverMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -732,10 +732,10 @@ void __fastcall UserGameActRecoverMenu__remove_callbackFunc(
   System_Action_o *v13; // x2
   const MethodInfo *v14; // x3
 
-  if ( (byte_43506F8 & 1) == 0 )
+  if ( (byte_4389D21 & 1) == 0 )
   {
-    sub_B70694(&UserGameActRecoverMenu_CallbackFunc_TypeInfo);
-    byte_43506F8 = 1;
+    sub_B775C4(&UserGameActRecoverMenu_CallbackFunc_TypeInfo);
+    byte_4389D21 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -748,13 +748,13 @@ void __fastcall UserGameActRecoverMenu__remove_callbackFunc(
       if ( (UserGameActRecoverMenu_CallbackFunc_c *)v8->klass != UserGameActRecoverMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (UserGameActRecoverMenu_o *)sub_B70A60(v8);
+  v11 = (UserGameActRecoverMenu_o *)sub_B77990(v8);
   UserGameActRecoverMenu__Open(v11, v12, v13, v14);
 }
 
@@ -774,7 +774,7 @@ void __fastcall UserGameActRecoverMenu_CallbackFunc___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B70630(p_method);
+  sub_B77560(p_method);
 }
 
 
@@ -789,14 +789,14 @@ System_IAsyncResult_o *__fastcall UserGameActRecoverMenu_CallbackFunc__BeginInvo
   int32_t v10; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10 = result;
-  if ( (byte_434F30F & 1) == 0 )
+  if ( (byte_43888F1 & 1) == 0 )
   {
-    sub_B70694(&UserGameActRecoverMenu_Result_TypeInfo);
-    byte_434F30F = 1;
+    sub_B775C4(&UserGameActRecoverMenu_Result_TypeInfo);
+    byte_43888F1 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(UserGameActRecoverMenu_Result_TypeInfo, &v10, callback);
-  return (System_IAsyncResult_o *)sub_B70638(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_B77568(this, v9, callback, object);
 }
 
 
@@ -805,7 +805,7 @@ void __fastcall UserGameActRecoverMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7063C(result, 0LL, method);
+  sub_B7756C(result, 0LL, method);
 }
 
 
@@ -866,8 +866,8 @@ LABEL_5:
       v20 = *(_QWORD *)&v18->fields.extra_arg;
       v21 = *(void (__fastcall **)(unsigned int *, __int64))&v18->fields.method_ptr;
       if ( *(__int16 *)(v20 + 72) == -1 )
-        sub_B70750(*(_QWORD *)&v18->fields.extra_arg, *(_QWORD *)&result);
-      if ( (sub_B706C4(v20) & 1) == 0 )
+        sub_B77680(*(_QWORD *)&v18->fields.extra_arg, *(_QWORD *)&result);
+      if ( (sub_B775F4(v20) & 1) == 0 )
         break;
       if ( *(_BYTE *)(v20 + 74) != 1 )
         goto LABEL_36;
@@ -883,8 +883,8 @@ LABEL_38:
     }
     if ( *(__int16 *)(v20 + 72) != -1 && (*(_BYTE *)(*v19 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v22 = sub_B706BC(v20);
-      v23 = sub_B70AC0(v20);
+      v22 = sub_B775EC(v20);
+      v23 = sub_B779F0(v20);
       if ( (v22 & 1) != 0 )
       {
         v24 = v30;
@@ -909,7 +909,7 @@ LABEL_38:
           else
           {
 LABEL_35:
-            v16 = sub_B08590(v19, v26, v27);
+            v16 = sub_B0F4C0(v19, v26, v27);
           }
           v15 = *(_QWORD *)(v16 + 8);
         }
@@ -917,7 +917,7 @@ LABEL_35:
         {
           v15 = *(_QWORD *)(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 320);
         }
-        v17 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD))sub_B70744(v15, v20);
+        v17 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD))sub_B77674(v15, v20);
         (*v17)(v19, v24, v17);
       }
       else
@@ -944,7 +944,7 @@ LABEL_35:
           else
           {
 LABEL_11:
-            v14 = sub_B08590(v19, class_0, v8);
+            v14 = sub_B0F4C0(v19, class_0, v8);
           }
           (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD))v14)(v19, v11, *(_QWORD *)(v14 + 8));
         }

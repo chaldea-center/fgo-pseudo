@@ -1,14 +1,14 @@
 void __fastcall ServantTransformMaster___ctor(ServantTransformMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4354410 & 1) == 0 )
+  if ( (byte_438DCCE & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string___ctor__);
-    byte_4354410 = 1;
+    sub_B775C4(&Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string___ctor__);
+    byte_438DCCE = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     487,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string___ctor__);
 }
 
 
@@ -24,21 +24,21 @@ ServantTransformEntity_o *__fastcall ServantTransformMaster__GetBeforeTransformE
   ServantTransformEntity_o *result; // x0
   __int64 v10; // x10
 
-  if ( (byte_435440F & 1) == 0 )
+  if ( (byte_438DCCD & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&ServantTransformEntity_TypeInfo);
-    byte_435440F = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&ServantTransformEntity_TypeInfo);
+    byte_438DCCD = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
 LABEL_13:
-    sub_B7076C(list, *(_QWORD *)&aftSvtId);
+    sub_B7769C(list, *(_QWORD *)&aftSvtId);
   v8 = 0;
   while ( v8 < System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
                  list,
-                 (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
+                 (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
   {
     list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
     if ( !list )
@@ -46,7 +46,7 @@ LABEL_13:
     result = (ServantTransformEntity_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                                            list,
                                            v8,
-                                           (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                           (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
     if ( result )
     {
       v10 = *(&ServantTransformEntity_TypeInfo->_2.bitflags2 + 1);
@@ -76,16 +76,16 @@ ServantTransformEntity_o *__fastcall ServantTransformMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4354411 & 1) == 0 )
+  if ( (byte_438DCCF & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string__GetEntity__);
-    byte_4354411 = 1;
+    sub_B775C4(&Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string__GetEntity__);
+    byte_438DCCF = 1;
   }
   PK = ServantTransformEntity__CreatePK(befSvtId, befDispLimitCount, *(const MethodInfo **)&befDispLimitCount);
   return (ServantTransformEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                        (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                        PK,
-                                       (const MethodInfo_21C0890 *)Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string__GetEntity__);
+                                       (const MethodInfo_21FBCE4 *)Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string__GetEntity__);
 }
 
 
@@ -102,18 +102,18 @@ System_Collections_Generic_List_int__o *__fastcall ServantTransformMaster__GetTr
   const MethodInfo *v11; // x4
   ServantTransformEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_435440D & 1) == 0 )
+  if ( (byte_438DCCB & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_int__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_B70694(&System_Collections_Generic_List_int__TypeInfo);
-    byte_435440D = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int___ctor___69397304);
+    sub_B775C4(&System_Collections_Generic_List_int__TypeInfo);
+    byte_438DCCB = 1;
   }
   entity = 0LL;
-  v7 = (System_Collections_Generic_List_int__o *)sub_B70764(System_Collections_Generic_List_int__TypeInfo);
+  v7 = (System_Collections_Generic_List_int__o *)sub_B77694(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v7,
-    (const MethodInfo_30B547C *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_30E508C *)Method_System_Collections_Generic_List_int___ctor___69397304);
   for ( i = ServantTransformMaster__TryGetEntity(this, &entity, baseSvtId, baseDispLimitCount, v8);
         i;
         i = ServantTransformMaster__TryGetEntity(
@@ -130,12 +130,12 @@ System_Collections_Generic_List_int__o *__fastcall ServantTransformMaster__GetTr
         System_Collections_Generic_List_int___Add(
           v7,
           entity->fields.aftSvtId,
-          (const MethodInfo_30B61D8 *)Method_System_Collections_Generic_List_int__Add__);
+          (const MethodInfo_30E5DE8 *)Method_System_Collections_Generic_List_int__Add__);
         if ( entity )
           continue;
       }
     }
-    sub_B7076C(i, v10);
+    sub_B7769C(i, v10);
   }
   return v7;
 }
@@ -176,22 +176,22 @@ System_Collections_Generic_List_TransformServantInfo__o *__fastcall ServantTrans
   ServantTransformEntity_o *v34; // [xsp+8h] [xbp-58h] BYREF
   ServantTransformEntity_o *entity; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_435440E & 1) == 0 )
+  if ( (byte_438DCCC & 1) == 0 )
   {
-    sub_B70694(&Method_System_Linq_Enumerable_Last_TransformServantInfo___);
-    sub_B70694(&Method_System_Collections_Generic_List_TransformServantInfo__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_TransformServantInfo___ctor__);
-    sub_B70694(&System_Collections_Generic_List_TransformServantInfo__TypeInfo);
-    sub_B70694(&TransformServantInfo_TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_435440E = 1;
+    sub_B775C4(&Method_System_Linq_Enumerable_Last_TransformServantInfo___);
+    sub_B775C4(&Method_System_Collections_Generic_List_TransformServantInfo__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_TransformServantInfo___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_TransformServantInfo__TypeInfo);
+    sub_B775C4(&TransformServantInfo_TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438DCCC = 1;
   }
   entity = 0LL;
   v34 = 0LL;
-  v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_TransformServantInfo__TypeInfo);
+  v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_TransformServantInfo__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v7,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_TransformServantInfo___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_TransformServantInfo___ctor__);
   TransformServantInfo = (TransformServantInfo_o *)ServantTransformMaster__TryGetEntity(
                                                      this,
                                                      &entity,
@@ -200,43 +200,43 @@ System_Collections_Generic_List_TransformServantInfo__o *__fastcall ServantTrans
                                                      v8);
   if ( ((unsigned __int8)TransformServantInfo & 1) == 0 )
   {
-    v32 = (TransformServantInfo_o *)sub_B70764(TransformServantInfo_TypeInfo);
-    TransformServantInfo___ctor_28982848(v32, baseSvtId, baseDispLimitCount, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+    v32 = (TransformServantInfo_o *)sub_B77694(TransformServantInfo_TypeInfo);
+    TransformServantInfo___ctor_29453348(v32, baseSvtId, baseDispLimitCount, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     if ( v7 )
     {
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
         v7,
         (EventMissionProgressRequest_Argument_ProgressData_o *)v32,
-        (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_TransformServantInfo__Add__);
+        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_TransformServantInfo__Add__);
       return (System_Collections_Generic_List_TransformServantInfo__o *)v7;
     }
 LABEL_17:
-    sub_B7076C(TransformServantInfo, v10);
+    sub_B7769C(TransformServantInfo, v10);
   }
   if ( !entity )
     goto LABEL_17;
   befSvtId = entity->fields.befSvtId;
   befDispLimitCount = entity->fields.befDispLimitCount;
   befTitle = entity->fields.befTitle;
-  v14 = (TransformServantInfo_o *)sub_B70764(TransformServantInfo_TypeInfo);
-  TransformServantInfo___ctor_28982848(v14, befSvtId, befDispLimitCount, befTitle, 0LL);
+  v14 = (TransformServantInfo_o *)sub_B77694(TransformServantInfo_TypeInfo);
+  TransformServantInfo___ctor_29453348(v14, befSvtId, befDispLimitCount, befTitle, 0LL);
   if ( !v7 )
     goto LABEL_17;
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     v7,
     (EventMissionProgressRequest_Argument_ProgressData_o *)v14,
-    (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_TransformServantInfo__Add__);
+    (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_TransformServantInfo__Add__);
   if ( !entity )
     goto LABEL_17;
   aftSvtId = entity->fields.aftSvtId;
   aftDispLimitCount = entity->fields.aftDispLimitCount;
   aftTitle = entity->fields.aftTitle;
-  v18 = (TransformServantInfo_o *)sub_B70764(TransformServantInfo_TypeInfo);
-  TransformServantInfo___ctor_28982848(v18, aftSvtId, aftDispLimitCount, aftTitle, 0LL);
+  v18 = (TransformServantInfo_o *)sub_B77694(TransformServantInfo_TypeInfo);
+  TransformServantInfo___ctor_29453348(v18, aftSvtId, aftDispLimitCount, aftTitle, 0LL);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     v7,
     (EventMissionProgressRequest_Argument_ProgressData_o *)v18,
-    (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_TransformServantInfo__Add__);
+    (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_TransformServantInfo__Add__);
   v20 = entity;
   if ( !entity )
     goto LABEL_17;
@@ -244,14 +244,14 @@ LABEL_17:
   {
     TransformServantInfo = System_Linq_Enumerable__Last_TransformServantInfo_(
                              (System_Collections_Generic_IEnumerable_TSource__o *)v7,
-                             (const MethodInfo_1CBDD60 *)Method_System_Linq_Enumerable_Last_TransformServantInfo___);
+                             (const MethodInfo_1D32BB0 *)Method_System_Linq_Enumerable_Last_TransformServantInfo___);
     if ( v34 )
     {
       if ( TransformServantInfo )
       {
         v27 = (System_Int32_array **)v34->fields.befTitle;
         TransformServantInfo->fields.titleText = (struct System_String_o *)v27;
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)&TransformServantInfo->fields.titleText,
           v27,
           v21,
@@ -265,12 +265,12 @@ LABEL_17:
           v28 = v34->fields.aftSvtId;
           v29 = v34->fields.aftDispLimitCount;
           v30 = v34->fields.aftTitle;
-          v31 = (TransformServantInfo_o *)sub_B70764(TransformServantInfo_TypeInfo);
-          TransformServantInfo___ctor_28982848(v31, v28, v29, v30, 0LL);
+          v31 = (TransformServantInfo_o *)sub_B77694(TransformServantInfo_TypeInfo);
+          TransformServantInfo___ctor_29453348(v31, v28, v29, v30, 0LL);
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
             v7,
             (EventMissionProgressRequest_Argument_ProgressData_o *)v31,
-            (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_TransformServantInfo__Add__);
+            (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_TransformServantInfo__Add__);
           v20 = v34;
           if ( v34 )
             continue;
@@ -293,15 +293,15 @@ bool __fastcall ServantTransformMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4354412 & 1) == 0 )
+  if ( (byte_438DCD0 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string__TryGetEntity__);
-    byte_4354412 = 1;
+    sub_B775C4(&Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string__TryGetEntity__);
+    byte_438DCD0 = 1;
   }
   PK = ServantTransformEntity__CreatePK(befSvtId, befDispLimitCount, *(const MethodInfo **)&befSvtId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string__TryGetEntity__);
 }

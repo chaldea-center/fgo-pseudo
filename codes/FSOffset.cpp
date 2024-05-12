@@ -26,10 +26,10 @@ void __fastcall FSOffset__AddBottomY(FSOffset_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4352213 & 1) == 0 )
+  if ( (byte_438B8D6 & 1) == 0 )
   {
-    sub_B70694(&FSUtility_TypeInfo);
-    byte_4352213 = 1;
+    sub_B775C4(&FSUtility_TypeInfo);
+    byte_438B8D6 = 1;
   }
   if ( LOBYTE(this->fields.addBottomY) )
   {
@@ -47,7 +47,7 @@ void __fastcall FSOffset__AddBottomY(FSOffset_o *this, const MethodInfo *method)
             z = localPosition.fields.z,
             (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
       {
-        sub_B7076C(transform, v5);
+        sub_B7769C(transform, v5);
       }
       v11.fields.x = x;
       v11.fields.z = z;
@@ -66,10 +66,10 @@ void __fastcall FSOffset__AddOffsetX(FSOffset_o *this, const MethodInfo *method)
   float v6; // s0
   int32_t v7; // w20
 
-  if ( (byte_4352211 & 1) == 0 )
+  if ( (byte_438B8D4 & 1) == 0 )
   {
-    sub_B70694(&FSUtility_TypeInfo);
-    byte_4352211 = 1;
+    sub_B775C4(&FSUtility_TypeInfo);
+    byte_438B8D4 = 1;
   }
   if ( LOBYTE(this->fields.enableAddOffsetXFouseScopeRatio) )
   {
@@ -92,13 +92,13 @@ void __fastcall FSOffset__AddOffsetX(FSOffset_o *this, const MethodInfo *method)
       v7 = UnityEngine_Screen__get_width(0LL);
       v6 = (float)v7 / (float)UnityEngine_Screen__get_height(0LL);
     }
-    FSOffset__AddOffsetX_25802744(this, v6, v5);
+    FSOffset__AddOffsetX_26050560(this, v6, v5);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall FSOffset__AddOffsetX_25802744(FSOffset_o *this, float ratio, const MethodInfo *method)
+void __fastcall FSOffset__AddOffsetX_26050560(FSOffset_o *this, float ratio, const MethodInfo *method)
 {
   float offsetXRatio; // s9
   FSUtility_c *v6; // x0
@@ -118,10 +118,10 @@ void __fastcall FSOffset__AddOffsetX_25802744(FSOffset_o *this, float ratio, con
   float v20; // s10
   UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4352212 & 1) == 0 )
+  if ( (byte_438B8D5 & 1) == 0 )
   {
-    sub_B70694(&FSUtility_TypeInfo);
-    byte_4352212 = 1;
+    sub_B775C4(&FSUtility_TypeInfo);
+    byte_438B8D5 = 1;
   }
   if ( BYTE1(this->fields.defaultPosition.fields.x) )
   {
@@ -155,7 +155,7 @@ void __fastcall FSOffset__AddOffsetX_25802744(FSOffset_o *this, float ratio, con
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
 LABEL_15:
-    sub_B7076C(transform, v12);
+    sub_B7769C(transform, v12);
   v21.fields.x = v16;
   v21.fields.y = v18;
   v21.fields.z = v20;
@@ -178,10 +178,10 @@ void __fastcall FSOffset__OnEnable(FSOffset_o *this, const MethodInfo *method)
   const MethodInfo *v6; // x1
   const MethodInfo *v7; // x1
 
-  if ( (byte_435220F & 1) == 0 )
+  if ( (byte_438B8D2 & 1) == 0 )
   {
-    sub_B70694(&CommonUI_TypeInfo);
-    byte_435220F = 1;
+    sub_B775C4(&CommonUI_TypeInfo);
+    byte_438B8D2 = 1;
   }
   if ( LOBYTE(this->fields.defaultPosition.fields.x) )
   {
@@ -193,7 +193,7 @@ void __fastcall FSOffset__OnEnable(FSOffset_o *this, const MethodInfo *method)
             0LL),
           (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
     {
-      sub_B7076C(transform, v4);
+      sub_B7769C(transform, v4);
     }
     UnityEngine_Transform__set_localScale(transform, *(UnityEngine_Vector3_o *)&this->fields.defaultScale.fields.y, 0LL);
     if ( (BYTE3(CommonUI_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CommonUI_TypeInfo->_2.cctor_finished )
@@ -224,10 +224,10 @@ void __fastcall FSOffset__SetOffset(FSOffset_o *this, const MethodInfo *method)
   float v13; // s1
   float v14; // s2
 
-  if ( (byte_4352210 & 1) == 0 )
+  if ( (byte_438B8D3 & 1) == 0 )
   {
-    sub_B70694(&FSUtility_TypeInfo);
-    byte_4352210 = 1;
+    sub_B775C4(&FSUtility_TypeInfo);
+    byte_438B8D3 = 1;
   }
   if ( LOBYTE(this->fields.vistaPosition.fields.x) )
   {
@@ -281,7 +281,7 @@ LABEL_23:
       goto LABEL_23;
     }
 LABEL_24:
-    sub_B7076C(transform, v6);
+    sub_B7769C(transform, v6);
   }
 }
 
@@ -305,7 +305,7 @@ void __fastcall FSOffset__UpdateOffset(FSOffset_o *this, const MethodInfo *metho
                                                                                0LL),
           (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
     {
-      sub_B7076C(transform, v4);
+      sub_B7769C(transform, v4);
     }
     localScale = UnityEngine_Transform__get_localScale(transform, 0LL);
     x_low = LOBYTE(this->fields.defaultPosition.fields.x);

@@ -8,20 +8,20 @@ void __fastcall TransformServantInfo___ctor(TransformServantInfo_o *this, const 
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_4353D58 & 1) == 0 )
+  if ( (byte_438D616 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4353D58 = 1;
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438D616 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   *(_QWORD *)&this->fields.svtId = 0LL;
   v3 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.titleText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.titleText, v3, v4, v5, v6, v7, v8, v9);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.titleText, v3, v4, v5, v6, v7, v8, v9);
 }
 
 
-void __fastcall TransformServantInfo___ctor_28982848(
+void __fastcall TransformServantInfo___ctor_29453348(
         TransformServantInfo_o *this,
         int32_t svtId,
         int32_t dispLimitCount,
@@ -42,7 +42,7 @@ void __fastcall TransformServantInfo___ctor_28982848(
   v8 = (BattleServantConfConponent_o *)((char *)v8 + 24);
   *(_DWORD *)&v8[-1].fields.isOpenAfter = svtId;
   v8[-1].fields.adjustHeight = dispLimitCount;
-  sub_B70630(v8, (System_Int32_array **)titleText, v9, v10, v11, v12, v13, v14);
+  sub_B77560(v8, (System_Int32_array **)titleText, v9, v10, v11, v12, v13, v14);
 }
 
 
@@ -55,10 +55,10 @@ int32_t __fastcall TransformServantInfo__GetDispLimitCount(
   bool v6; // vf
   int32_t svtId; // w20
 
-  if ( (byte_4353D59 & 1) == 0 )
+  if ( (byte_438D617 & 1) == 0 )
   {
-    sub_B70694(&ImageLimitCount_TypeInfo);
-    byte_4353D59 = 1;
+    sub_B775C4(&ImageLimitCount_TypeInfo);
+    byte_438D617 = 1;
   }
   result = this->fields.dispLimitCount;
   if ( result <= 10 )

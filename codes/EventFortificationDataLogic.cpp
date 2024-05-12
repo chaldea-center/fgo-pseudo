@@ -8,29 +8,29 @@ int32_t __fastcall EventFortificationDataLogic__CalculationGetPoint(
   int32_t lv; // w19
   WarEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_43545BB & 1) == 0 )
+  if ( (byte_438DE79 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_B70694(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43545BB = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_EventDetailMaster___);
+    sub_B775C4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438DE79 = 1;
   }
   entity = 0LL;
   if ( userServantEntity )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_11;
     Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                   Instance,
-                                  (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                                  (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventDetailMaster___);
     if ( !Instance )
       goto LABEL_11;
     if ( DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
            (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
            &entity,
            eventId,
-           (const MethodInfo_21C049C *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+           (const MethodInfo_21FB8F0 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
     {
       Instance = (DataManager_o *)entity;
       if ( entity )
@@ -43,7 +43,7 @@ int32_t __fastcall EventFortificationDataLogic__CalculationGetPoint(
         }
       }
 LABEL_11:
-      sub_B7076C(Instance, v6);
+      sub_B7769C(Instance, v6);
     }
   }
   return 0;
@@ -76,17 +76,17 @@ void __fastcall EventFortificationDataLogic__SetFortification(
   const MethodInfo *v25; // x2
   __int64 v26; // x0
 
-  if ( (byte_43545BC & 1) == 0 )
+  if ( (byte_438DE7A & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_UserEventFortificationMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43545BC = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserEventFortificationMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438DE7A = 1;
   }
   *isFortification = 0;
   *fortificationName = (System_String_o *)StringLiteral_1/*""*/;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)fortificationName,
     (System_Int32_array **)StringLiteral_1/*""*/,
     (System_String_array **)fortificationDetailName,
@@ -96,7 +96,7 @@ void __fastcall EventFortificationDataLogic__SetFortification(
     v6,
     v7);
   *fortificationDetailName = (System_String_o *)StringLiteral_1/*""*/;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)fortificationDetailName,
     (System_Int32_array **)StringLiteral_1/*""*/,
     v12,
@@ -105,19 +105,19 @@ void __fastcall EventFortificationDataLogic__SetFortification(
     v15,
     v16,
     v17);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (MasterData_WarQuestSelectionMaster = (UserEventFortificationMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                                  Instance,
-                                                                                 (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserEventFortificationMaster___),
-        (Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
+                                                                                 (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserEventFortificationMaster___),
+        (Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventMaster___)) == 0LL
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventMaster___)) == 0LL
     || (Instance = (DataManager_o *)EventMaster__GetEnableEntityList((EventMaster_o *)Instance, 12, 1, 0LL)) == 0LL )
   {
 LABEL_19:
-    sub_B7076C(Instance, v19);
+    sub_B7769C(Instance, v19);
   }
   datalist = Instance->fields.datalist;
   v22 = Instance;
@@ -130,8 +130,8 @@ LABEL_19:
     {
       if ( (unsigned int)v23 >= (unsigned int)datalist )
       {
-        v26 = sub_B70798(Instance);
-        sub_B70738(v26, 0LL);
+        v26 = sub_B776C8(Instance);
+        sub_B77668(v26, 0LL);
       }
       v24 = (EventEntity_o *)*((_QWORD *)&v22->fields.lookup + v23);
       if ( !v24 || !MasterData_WarQuestSelectionMaster )
@@ -175,11 +175,11 @@ bool __fastcall EventFortificationDataLogic__TryGetColorByWorkType(
   UnityEngine_Color_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v8 = colorCodeA;
-  if ( (byte_43545BD & 1) == 0 )
+  if ( (byte_438DE7B & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_323/*"#"*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43545BD = 1;
+    sub_B775C4(&StringLiteral_323/*"#"*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438DE7B = 1;
   }
   if ( workType != 1 )
   {
@@ -192,13 +192,13 @@ bool __fastcall EventFortificationDataLogic__TryGetColorByWorkType(
         colorCodeMilitsry = (System_String_o *)StringLiteral_1/*""*/;
     }
   }
-  v13 = System_String__Concat_44758168((System_String_o *)StringLiteral_323/*"#"*/, colorCodeMilitsry, 0LL);
+  v13 = System_String__Concat_44901936((System_String_o *)StringLiteral_323/*"#"*/, colorCodeMilitsry, 0LL);
   v14 = UnityEngine_ColorUtility__TryParseHtmlString(v13, color, 0LL);
   p_c = (UnityEngine_Color32_o)&c;
   c.fields.rgba = 0;
   UnityEngine_Color32___ctor(p_c, 0, 0, 0, v8, 0LL);
   rgba = (UnityEngine_Color32_o)(unsigned int)c.fields.rgba;
-  v19 = UnityEngine_Color32__op_Implicit_41067916(rgba, 0LL);
+  v19 = UnityEngine_Color32__op_Implicit_41413804(rgba, 0LL);
   color->fields.a = v19.fields.a;
   return v14;
 }

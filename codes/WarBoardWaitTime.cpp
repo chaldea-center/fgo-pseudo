@@ -19,17 +19,17 @@ System_Collections_IEnumerator_o *__fastcall WarBoardWaitTime__Execute(
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_435267C & 1) == 0 )
+  if ( (byte_438BDF8 & 1) == 0 )
   {
-    sub_B70694(&WarBoardWaitTime__Execute_d__2_TypeInfo);
-    byte_435267C = 1;
+    sub_B775C4(&WarBoardWaitTime__Execute_d__2_TypeInfo);
+    byte_438BDF8 = 1;
   }
-  v3 = sub_B70764(WarBoardWaitTime__Execute_d__2_TypeInfo);
+  v3 = sub_B77694(WarBoardWaitTime__Execute_d__2_TypeInfo);
   WarBoardWaitTime__Execute_d__2___ctor((WarBoardWaitTime__Execute_d__2_o *)v3, 0, 0LL);
   if ( !v3 )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  sub_B77560((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -79,7 +79,7 @@ bool __fastcall WarBoardWaitTime__Execute_d__2__MoveNext(
       return 0;
     }
 LABEL_10:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   espTime_5__2 = this->fields._espTime_5__2;
   this->fields.__1__state = -1;
@@ -92,7 +92,7 @@ LABEL_7:
     return 0;
   this->fields.__2__current = 0LL;
   p__2__current = &this->fields.__2__current;
-  sub_B70630((BattleServantConfConponent_o *)p__2__current, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B77560((BattleServantConfConponent_o *)p__2__current, 0LL, v2, v3, v4, v5, v6, v7);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -115,11 +115,11 @@ void __fastcall __noreturn WarBoardWaitTime__Execute_d__2__System_Collections_IE
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B70698(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B70764(v2);
+  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B70698(&Method_WarBoardWaitTime__Execute_d__2_System_Collections_IEnumerator_Reset__);
-  sub_B70738(v3, v4);
+  v4 = sub_B775C8(&Method_WarBoardWaitTime__Execute_d__2_System_Collections_IEnumerator_Reset__);
+  sub_B77668(v3, v4);
 }
 
 

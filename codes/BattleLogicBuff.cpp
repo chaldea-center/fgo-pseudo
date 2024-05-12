@@ -18,7 +18,7 @@ void __fastcall BattleLogicBuff_AddSubDamageProcess___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.selfSvt = svtData;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)svtData, v5, v6, v7, v8, v9, v10);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)svtData, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -35,13 +35,13 @@ int32_t __fastcall BattleLogicBuff_AddSubDamageProcess__GetActValue(
   BattleBuffData_o *buffData; // x22
   struct BattleServantData_o *v11; // x8
 
-  if ( (byte_43513C7 & 1) == 0 )
+  if ( (byte_438A7F4 & 1) == 0 )
   {
-    sub_B70694(&BattleBuffData_CheckIndividualitiesData_TypeInfo);
-    byte_43513C7 = 1;
+    sub_B775C4(&BattleBuffData_CheckIndividualitiesData_TypeInfo);
+    byte_438A7F4 = 1;
   }
   selfSvt = this->fields.selfSvt;
-  v6 = (BattleBuffData_CheckIndividualitiesData_o *)sub_B70764(BattleBuffData_CheckIndividualitiesData_TypeInfo);
+  v6 = (BattleBuffData_CheckIndividualitiesData_o *)sub_B77694(BattleBuffData_CheckIndividualitiesData_TypeInfo);
   BattleBuffData_CheckIndividualitiesData___ctor(v6, selfSvt, 0LL, 0LL, 0LL, 0LL, 0LL);
   v9 = this->fields.selfSvt;
   if ( !v9 )
@@ -60,10 +60,10 @@ int32_t __fastcall BattleLogicBuff_AddSubDamageProcess__GetActValue(
     {
       Individualty = (System_Int32_array *)v11->fields.buffData;
       if ( Individualty )
-        return BattleBuffData__getActValue_31763688((BattleBuffData_o *)Individualty, 135, v6, 0LL);
+        return BattleBuffData__getActValue_32086076((BattleBuffData_o *)Individualty, 135, v6, 0LL);
     }
 LABEL_11:
-    sub_B7076C(Individualty, v8);
+    sub_B7769C(Individualty, v8);
   }
   return 0;
 }
@@ -110,7 +110,7 @@ void __fastcall BattleLogicBuff_ConvertReduceRegainProcess___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.selfSvt = svtData;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)svtData, v5, v6, v7, v8, v9, v10);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)svtData, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -127,15 +127,15 @@ bool __fastcall BattleLogicBuff_ConvertReduceRegainProcess__CheckHpReduceToRegai
   bool result; // w0
 
   v6 = this;
-  if ( (byte_43513C8 & 1) == 0 )
+  if ( (byte_438A7F5 & 1) == 0 )
   {
-    this = (BattleLogicBuff_ConvertReduceRegainProcess_o *)sub_B70694(&BattleBuffData_CheckIndividualitiesData_TypeInfo);
-    byte_43513C8 = 1;
+    this = (BattleLogicBuff_ConvertReduceRegainProcess_o *)sub_B775C4(&BattleBuffData_CheckIndividualitiesData_TypeInfo);
+    byte_438A7F5 = 1;
   }
   selfSvt = v6->fields.selfSvt;
   if ( !selfSvt
     || (buffData = selfSvt->fields.buffData,
-        v9 = (BattleBuffData_CheckIndividualitiesData_o *)sub_B70764(BattleBuffData_CheckIndividualitiesData_TypeInfo),
+        v9 = (BattleBuffData_CheckIndividualitiesData_o *)sub_B77694(BattleBuffData_CheckIndividualitiesData_TypeInfo),
         BattleBuffData_CheckIndividualitiesData___ctor(v9, selfSvt, 0LL, 0LL, 0LL, 0LL, 0LL),
         !damageBuff)
     || (this = (BattleLogicBuff_ConvertReduceRegainProcess_o *)BattleBuffData_BuffData__GetIndividualty(
@@ -146,7 +146,7 @@ bool __fastcall BattleLogicBuff_ConvertReduceRegainProcess__CheckHpReduceToRegai
                                                                  0LL),
         !buffData) )
   {
-    sub_B7076C(this, damageBuff);
+    sub_B7769C(this, damageBuff);
   }
   if ( !BattleBuffData__checkActBuffDamageBuffIndiv(buffData, 107, v9, (System_Int32_array *)this, 0LL) )
     return 0;
@@ -188,7 +188,7 @@ void __fastcall BattleLogicBuff_PreventDeathDamageProcess___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.selfSvt = svtData;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)svtData, v5, v6, v7, v8, v9, v10);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)svtData, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -205,7 +205,7 @@ int32_t __fastcall BattleLogicBuff_PreventDeathDamageProcess__GetDamageAffectedE
 
   selfSvt = this->fields.selfSvt;
   if ( !selfSvt )
-    sub_B7076C(0LL, damage);
+    sub_B7769C(0LL, damage);
   v8 = ((__int64 (__fastcall *)(struct BattleServantData_o *, Il2CppMethodPointer, System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *, const MethodInfo *))selfSvt->klass->vtable._13_get_resultHp.method)(
          selfSvt,
          selfSvt->klass->vtable._14_set_resultHp.methodPtr,
@@ -256,68 +256,68 @@ bool __fastcall BattleLogicBuff_PreventDeathDamageProcess__IsApplyEffect(
   System_Collections_Generic_List_Enumerator_T__o v34; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_T__o v35; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_43513C9 & 1) == 0 )
+  if ( (byte_438A7F6 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Action_BattleBuffData_BuffData___ctor__);
-    sub_B70694(&System_Action_BattleBuffData_BuffData__TypeInfo);
-    sub_B70694(&Method_BasicHelper_ForEach_BattleBuffData_BuffData___);
-    sub_B70694(&BattleBuffData_CheckIndividualitiesData_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData__Add__);
-    sub_B70694(&Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData__get_Count__);
-    sub_B70694(&System_Collections_Generic_HashSet_BattleBuffData_BuffData__TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__GetEnumerator__);
-    sub_B70694(&Method_BattleLogicBuff_PreventDeathDamageProcess___c__IsApplyEffect_b__2_0__);
-    sub_B70694(&BattleLogicBuff_PreventDeathDamageProcess___c_TypeInfo);
-    byte_43513C9 = 1;
+    sub_B775C4(&Method_System_Action_BattleBuffData_BuffData___ctor__);
+    sub_B775C4(&System_Action_BattleBuffData_BuffData__TypeInfo);
+    sub_B775C4(&Method_BasicHelper_ForEach_BattleBuffData_BuffData___);
+    sub_B775C4(&BattleBuffData_CheckIndividualitiesData_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData___ctor__);
+    sub_B775C4(&Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData__get_Count__);
+    sub_B775C4(&System_Collections_Generic_HashSet_BattleBuffData_BuffData__TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__GetEnumerator__);
+    sub_B775C4(&Method_BattleLogicBuff_PreventDeathDamageProcess___c__IsApplyEffect_b__2_0__);
+    sub_B775C4(&BattleLogicBuff_PreventDeathDamageProcess___c_TypeInfo);
+    byte_438A7F6 = 1;
   }
   memset(&v35, 0, sizeof(v35));
-  v6 = (System_Collections_Generic_HashSet_WarBoardAIRoute_RouteData__o *)sub_B70764(System_Collections_Generic_HashSet_BattleBuffData_BuffData__TypeInfo);
+  v6 = (System_Collections_Generic_HashSet_WarBoardAIRoute_RouteData__o *)sub_B77694(System_Collections_Generic_HashSet_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_HashSet_WarBoardAIRoute_RouteData____ctor(
     v6,
-    (const MethodInfo_2EB4850 *)Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_2EE2460 *)Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData___ctor__);
   if ( !reduceHpBuffList )
     goto LABEL_33;
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v34,
     reduceHpBuffList,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__GetEnumerator__);
   v33 = 0;
   v35 = v34;
   while ( 1 )
   {
     v18 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v35,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo__MoveNext__);
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo__MoveNext__);
     if ( !v18 )
       break;
     selfSvt = this->fields.selfSvt;
     if ( !selfSvt )
-      sub_B7076C(v18, v19);
+      sub_B7769C(v18, v19);
     current = v35.fields.current;
     if ( !v35.fields.current )
-      sub_B7076C(v18, v19);
+      sub_B7769C(v18, v19);
     klass = v35.fields.current[1].klass;
     if ( !klass )
-      sub_B7076C(0LL, v19);
+      sub_B7769C(0LL, v19);
     buffData = selfSvt->fields.buffData;
     Individualty = BattleBuffData_BuffData__GetIndividualty((BattleBuffData_BuffData_o *)klass, 0, 0, 0, 0LL);
-    v14 = (BattleBuffData_CheckIndividualitiesData_o *)sub_B70764(BattleBuffData_CheckIndividualitiesData_TypeInfo);
-    BattleBuffData_CheckIndividualitiesData___ctor_24123036(v14, selfSvt, 0LL, 0LL, Individualty, 0LL, 0LL);
+    v14 = (BattleBuffData_CheckIndividualitiesData_o *)sub_B77694(BattleBuffData_CheckIndividualitiesData_TypeInfo);
+    BattleBuffData_CheckIndividualitiesData___ctor_24553672(v14, selfSvt, 0LL, 0LL, Individualty, 0LL, 0LL);
     if ( !buffData )
-      sub_B7076C(v15, v16);
+      sub_B7769C(v15, v16);
     FirstMatchCondBuff = BattleBuffData__GetFirstMatchCondBuff(buffData, 96, v14, 1, 0LL);
     if ( FirstMatchCondBuff )
     {
       if ( !v6 )
-        sub_B7076C(FirstMatchCondBuff, FirstMatchCondBuff);
+        sub_B7769C(FirstMatchCondBuff, FirstMatchCondBuff);
       System_Collections_Generic_HashSet_WarBoardAIRoute_RouteData___Add(
         v6,
         (WarBoardAIRoute_RouteData_o *)FirstMatchCondBuff,
-        (const MethodInfo_2EB5A0C *)Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData__Add__);
+        (const MethodInfo_2EE361C *)Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData__Add__);
     }
     else
     {
@@ -326,10 +326,10 @@ bool __fastcall BattleLogicBuff_PreventDeathDamageProcess__IsApplyEffect(
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v35,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo__Dispose__);
   if ( !v6 )
 LABEL_33:
-    sub_B7076C(v7, v8);
+    sub_B7769C(v7, v8);
   if ( v33 < curHp && v6->fields._count > 0 )
     return 1;
   v21 = BattleLogicBuff_PreventDeathDamageProcess___c_TypeInfo;
@@ -349,15 +349,15 @@ LABEL_33:
       static_fields = BattleLogicBuff_PreventDeathDamageProcess___c_TypeInfo->static_fields;
     }
     v24 = (Il2CppObject *)static_fields->__9;
-    _9__2_0 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B70764(System_Action_BattleBuffData_BuffData__TypeInfo);
+    _9__2_0 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B77694(System_Action_BattleBuffData_BuffData__TypeInfo);
     System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData____ctor(
       _9__2_0,
       v24,
       Method_BattleLogicBuff_PreventDeathDamageProcess___c__IsApplyEffect_b__2_0__,
-      (const MethodInfo_264C148 *)Method_System_Action_BattleBuffData_BuffData___ctor__);
+      (const MethodInfo_26A0868 *)Method_System_Action_BattleBuffData_BuffData___ctor__);
     v25 = BattleLogicBuff_PreventDeathDamageProcess___c_TypeInfo->static_fields;
     v25->__9__2_0 = (struct System_Action_BattleBuffData_BuffData__o *)_9__2_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v25->__9__2_0,
       (System_Int32_array **)_9__2_0,
       v26,
@@ -370,7 +370,7 @@ LABEL_33:
   BasicHelper__ForEach_DrawLotsDisplayMessage_DisplayedInGroup_SaveData_(
     (System_Collections_Generic_IEnumerable_T__o *)v6,
     (System_Action_T__o *)_9__2_0,
-    (const MethodInfo_1BDE02C *)Method_BasicHelper_ForEach_BattleBuffData_BuffData___);
+    (const MethodInfo_1C676E8 *)Method_BasicHelper_ForEach_BattleBuffData_BuffData___);
   return 0;
 }
 
@@ -386,16 +386,16 @@ void __fastcall BattleLogicBuff_PreventDeathDamageProcess___c___cctor(const Meth
   System_Int32_array *v7; // x6
   System_Int32_array *v8; // x7
 
-  if ( (byte_435158C & 1) == 0 )
+  if ( (byte_438ABF8 & 1) == 0 )
   {
-    sub_B70694(&BattleLogicBuff_PreventDeathDamageProcess___c_TypeInfo);
-    byte_435158C = 1;
+    sub_B775C4(&BattleLogicBuff_PreventDeathDamageProcess___c_TypeInfo);
+    byte_438ABF8 = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(BattleLogicBuff_PreventDeathDamageProcess___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(BattleLogicBuff_PreventDeathDamageProcess___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = (BattleServantConfConponent_o *)BattleLogicBuff_PreventDeathDamageProcess___c_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B70630(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  sub_B77560(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -413,7 +413,7 @@ void __fastcall BattleLogicBuff_PreventDeathDamageProcess___c___IsApplyEffect_b_
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   BattleBuffData_BuffData__RevertUnused(buff, 1, 0LL);
 }
 
@@ -470,28 +470,28 @@ void __fastcall BattleLogicBuff_ReduceHpProcess___ctor(
   System_Int32_array *v49; // x6
   System_Int32_array *v50; // x7
 
-  if ( (byte_43513CA & 1) == 0 )
+  if ( (byte_438A7F7 & 1) == 0 )
   {
-    sub_B70694(&BattleLogicBuff_AddSubDamageProcess_TypeInfo);
-    sub_B70694(&BattleLogicBuff_ConvertReduceRegainProcess_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___ctor__);
-    sub_B70694(&System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__TypeInfo);
-    sub_B70694(&BattleLogicBuff_PreventDeathDamageProcess_TypeInfo);
-    byte_43513CA = 1;
+    sub_B775C4(&BattleLogicBuff_AddSubDamageProcess_TypeInfo);
+    sub_B775C4(&BattleLogicBuff_ConvertReduceRegainProcess_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__TypeInfo);
+    sub_B775C4(&BattleLogicBuff_PreventDeathDamageProcess_TypeInfo);
+    byte_438A7F7 = 1;
   }
-  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__TypeInfo);
+  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v5,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___ctor__);
   this->fields.buffList = (struct System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v5;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v5, v6, v7, v8, v9, v10, v11);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v5, v6, v7, v8, v9, v10, v11);
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v12 = sub_B70764(BattleLogicBuff_PreventDeathDamageProcess_TypeInfo);
+  v12 = sub_B77694(BattleLogicBuff_PreventDeathDamageProcess_TypeInfo);
   System_Object___ctor((Il2CppObject *)v12, 0LL);
   *(_QWORD *)(v12 + 16) = svtData;
-  sub_B70630((BattleServantConfConponent_o *)(v12 + 16), (System_Int32_array **)svtData, v13, v14, v15, v16, v17, v18);
+  sub_B77560((BattleServantConfConponent_o *)(v12 + 16), (System_Int32_array **)svtData, v13, v14, v15, v16, v17, v18);
   this->fields.preventDeathProc = (struct BattleLogicBuff_PreventDeathDamageProcess_o *)v12;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.preventDeathProc,
     (System_Int32_array **)v12,
     v19,
@@ -500,12 +500,12 @@ void __fastcall BattleLogicBuff_ReduceHpProcess___ctor(
     v22,
     v23,
     v24);
-  v25 = sub_B70764(BattleLogicBuff_ConvertReduceRegainProcess_TypeInfo);
+  v25 = sub_B77694(BattleLogicBuff_ConvertReduceRegainProcess_TypeInfo);
   System_Object___ctor((Il2CppObject *)v25, 0LL);
   *(_QWORD *)(v25 + 16) = svtData;
-  sub_B70630((BattleServantConfConponent_o *)(v25 + 16), (System_Int32_array **)svtData, v26, v27, v28, v29, v30, v31);
+  sub_B77560((BattleServantConfConponent_o *)(v25 + 16), (System_Int32_array **)svtData, v26, v27, v28, v29, v30, v31);
   this->fields.convertDamageProc = (struct BattleLogicBuff_ConvertReduceRegainProcess_o *)v25;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.convertDamageProc,
     (System_Int32_array **)v25,
     v32,
@@ -514,12 +514,12 @@ void __fastcall BattleLogicBuff_ReduceHpProcess___ctor(
     v35,
     v36,
     v37);
-  v38 = sub_B70764(BattleLogicBuff_AddSubDamageProcess_TypeInfo);
+  v38 = sub_B77694(BattleLogicBuff_AddSubDamageProcess_TypeInfo);
   System_Object___ctor((Il2CppObject *)v38, 0LL);
   *(_QWORD *)(v38 + 16) = svtData;
-  sub_B70630((BattleServantConfConponent_o *)(v38 + 16), (System_Int32_array **)svtData, v39, v40, v41, v42, v43, v44);
+  sub_B77560((BattleServantConfConponent_o *)(v38 + 16), (System_Int32_array **)svtData, v39, v40, v41, v42, v43, v44);
   this->fields.addSubDamageProc = (struct BattleLogicBuff_AddSubDamageProcess_o *)v38;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.addSubDamageProc,
     (System_Int32_array **)v38,
     v45,
@@ -543,7 +543,7 @@ void __fastcall BattleLogicBuff_ReduceHpProcess__AfterAllAddCalcBuffParam(
   if ( (int)v5 >= 1 )
   {
     if ( !this->fields.preventDeathProc )
-      sub_B7076C(this, v5);
+      sub_B7769C(this, v5);
     *totalParam = BattleLogicBuff_PreventDeathDamageProcess__GetDamageAffectedEffect(
                     this->fields.preventDeathProc,
                     v5,
@@ -575,14 +575,14 @@ int32_t __fastcall BattleLogicBuff_ReduceHpProcess__GetFixDamage(
   const MethodInfo *v18; // x3
   BattleLogicBuff_PreventDeathDamageProcess_o *preventDeathProc; // x8
 
-  if ( (byte_43513CC & 1) == 0 )
+  if ( (byte_438A7F9 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Linq_Enumerable_Select_BattleLogicBuff_ReduceHpProcess_BuffInfo__int___);
-    sub_B70694(&Method_System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int___ctor__);
-    sub_B70694(&System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__TypeInfo);
-    sub_B70694(&Method_BattleLogicBuff_ReduceHpProcess___c__GetFixDamage_b__8_0__);
-    sub_B70694(&BattleLogicBuff_ReduceHpProcess___c_TypeInfo);
-    byte_43513CC = 1;
+    sub_B775C4(&Method_System_Linq_Enumerable_Select_BattleLogicBuff_ReduceHpProcess_BuffInfo__int___);
+    sub_B775C4(&Method_System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int___ctor__);
+    sub_B775C4(&System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__TypeInfo);
+    sub_B775C4(&Method_BattleLogicBuff_ReduceHpProcess___c__GetFixDamage_b__8_0__);
+    sub_B775C4(&BattleLogicBuff_ReduceHpProcess___c_TypeInfo);
+    byte_438A7F9 = 1;
   }
   buffList = this->fields.buffList;
   v4 = BattleLogicBuff_ReduceHpProcess___c_TypeInfo;
@@ -602,15 +602,15 @@ int32_t __fastcall BattleLogicBuff_ReduceHpProcess__GetFixDamage(
       static_fields = BattleLogicBuff_ReduceHpProcess___c_TypeInfo->static_fields;
     }
     v7 = (Il2CppObject *)static_fields->__9;
-    _9__8_0 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B70764(System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__TypeInfo);
+    _9__8_0 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B77694(System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__TypeInfo);
     System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int____ctor(
       _9__8_0,
       v7,
       Method_BattleLogicBuff_ReduceHpProcess___c__GetFixDamage_b__8_0__,
-      (const MethodInfo_29AD124 *)Method_System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int___ctor__);
+      (const MethodInfo_29E9E70 *)Method_System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int___ctor__);
     v8 = BattleLogicBuff_ReduceHpProcess___c_TypeInfo->static_fields;
     v8->__9__8_0 = _9__8_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v8->__9__8_0,
       (System_Int32_array **)_9__8_0,
       v9,
@@ -623,11 +623,11 @@ int32_t __fastcall BattleLogicBuff_ReduceHpProcess__GetFixDamage(
   v15 = System_Linq_Enumerable__Select_BattleLogicBuff_ReduceHpProcess_BuffInfo__int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)buffList,
           (System_Func_TSource__TResult__o *)_9__8_0,
-          (const MethodInfo_1CC3CC0 *)Method_System_Linq_Enumerable_Select_BattleLogicBuff_ReduceHpProcess_BuffInfo__int___);
+          (const MethodInfo_1D38B10 *)Method_System_Linq_Enumerable_Select_BattleLogicBuff_ReduceHpProcess_BuffInfo__int___);
   v16 = System_Linq_Enumerable__Sum((System_Collections_Generic_IEnumerable_int__o *)v15, 0LL);
   preventDeathProc = this->fields.preventDeathProc;
   if ( !preventDeathProc )
-    sub_B7076C(v16, v17);
+    sub_B7769C(v16, v17);
   return BattleLogicBuff_PreventDeathDamageProcess__GetDamageAffectedEffect(
            preventDeathProc,
            v16,
@@ -644,14 +644,14 @@ bool __fastcall BattleLogicBuff_ReduceHpProcess__IsDisplayDamage(
   struct System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *buffList; // x8
 
   v2 = this;
-  if ( (byte_43513CD & 1) == 0 )
+  if ( (byte_438A7FA & 1) == 0 )
   {
-    this = (BattleLogicBuff_ReduceHpProcess_o *)sub_B70694(&Method_System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__get_Count__);
-    byte_43513CD = 1;
+    this = (BattleLogicBuff_ReduceHpProcess_o *)sub_B775C4(&Method_System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__get_Count__);
+    byte_438A7FA = 1;
   }
   buffList = v2->fields.buffList;
   if ( !buffList )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return buffList->fields._size > 0;
 }
 
@@ -678,12 +678,12 @@ void __fastcall BattleLogicBuff_ReduceHpProcess__PrevAddCalcBuffParam(
   System_Int32_array *v20; // x6
   System_Int32_array *v21; // x7
 
-  if ( (byte_43513CB & 1) == 0 )
+  if ( (byte_438A7F8 & 1) == 0 )
   {
-    sub_B70694(&BattleLogicBuff_ReduceHpProcess_BuffInfo_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__Add__);
-    sub_B70694(&System_Math_TypeInfo);
-    byte_43513CB = 1;
+    sub_B775C4(&BattleLogicBuff_ReduceHpProcess_BuffInfo_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__Add__);
+    sub_B775C4(&System_Math_TypeInfo);
+    byte_438A7F8 = 1;
   }
   if ( plusMinus >= 1 )
   {
@@ -702,7 +702,7 @@ void __fastcall BattleLogicBuff_ReduceHpProcess__PrevAddCalcBuffParam(
       {
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
       }
-      *curParam = System_Math__Max_45601072(0, v12, 0LL);
+      *curParam = System_Math__Max_45851140(0, v12, 0LL);
       addSubDamageProc = (BattleLogicBuff_AddSubDamageProcess_o *)this->fields.convertDamageProc;
       if ( addSubDamageProc )
       {
@@ -715,12 +715,12 @@ void __fastcall BattleLogicBuff_ReduceHpProcess__PrevAddCalcBuffParam(
           return;
         }
         buffList = this->fields.buffList;
-        v15 = sub_B70764(BattleLogicBuff_ReduceHpProcess_BuffInfo_TypeInfo);
+        v15 = sub_B77694(BattleLogicBuff_ReduceHpProcess_BuffInfo_TypeInfo);
         BattleLogicBuff_ReduceHpProcess_BuffInfo___ctor((BattleLogicBuff_ReduceHpProcess_BuffInfo_o *)v15, 0LL);
         if ( v15 )
         {
           *(_QWORD *)(v15 + 16) = damageBuff;
-          sub_B70630(
+          sub_B77560(
             (BattleServantConfConponent_o *)(v15 + 16),
             (System_Int32_array **)damageBuff,
             v16,
@@ -735,13 +735,13 @@ void __fastcall BattleLogicBuff_ReduceHpProcess__PrevAddCalcBuffParam(
             System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
               (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)buffList,
               (EventMissionProgressRequest_Argument_ProgressData_o *)v15,
-              (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__Add__);
+              (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__Add__);
             return;
           }
         }
       }
     }
-    sub_B7076C(addSubDamageProc, damageBuff);
+    sub_B7769C(addSubDamageProc, damageBuff);
   }
 }
 
@@ -765,16 +765,16 @@ void __fastcall BattleLogicBuff_ReduceHpProcess___c___cctor(const MethodInfo *me
   System_Int32_array *v7; // x6
   System_Int32_array *v8; // x7
 
-  if ( (byte_435158D & 1) == 0 )
+  if ( (byte_438ABF9 & 1) == 0 )
   {
-    sub_B70694(&BattleLogicBuff_ReduceHpProcess___c_TypeInfo);
-    byte_435158D = 1;
+    sub_B775C4(&BattleLogicBuff_ReduceHpProcess___c_TypeInfo);
+    byte_438ABF9 = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(BattleLogicBuff_ReduceHpProcess___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(BattleLogicBuff_ReduceHpProcess___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = (BattleServantConfConponent_o *)BattleLogicBuff_ReduceHpProcess___c_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B70630(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  sub_B77560(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -792,6 +792,6 @@ int32_t __fastcall BattleLogicBuff_ReduceHpProcess___c___GetFixDamage_b__8_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   return x->fields.damage;
 }

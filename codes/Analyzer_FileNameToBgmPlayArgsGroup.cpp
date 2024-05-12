@@ -48,30 +48,30 @@ System_Collections_Generic_List_BgmPlayArgs__o *__fastcall Analyzer_FileNameToBg
   System_Nullable_float__o v50; // 0:x2.8
   System_Nullable_float__o v51; // 0:x2.8
 
-  if ( (byte_434FC31 & 1) == 0 )
+  if ( (byte_438A4B9 & 1) == 0 )
   {
-    sub_B70694(&BgmManager_TypeInfo);
-    sub_B70694(&char___TypeInfo);
-    sub_B70694(&Method_System_Linq_Enumerable_Skip_string___);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&System_Collections_Generic_IEnumerable_string__TypeInfo);
-    sub_B70694(&System_Collections_Generic_IEnumerator_string__TypeInfo);
-    sub_B70694(&System_Collections_IEnumerator_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_BgmPlayArgs__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_BgmPlayArgs___ctor__);
-    sub_B70694(&System_Collections_Generic_List_BgmPlayArgs__TypeInfo);
-    sub_B70694(&MainBgmPlayArgs_TypeInfo);
-    sub_B70694(&Method_System_Nullable_float__GetValueOrDefault__);
-    sub_B70694(&Method_System_Nullable_float___ctor__);
-    sub_B70694(&Method_System_Nullable_float__get_HasValue__);
-    sub_B70694(&SubBgmPlayArgs_TypeInfo);
-    byte_434FC31 = 1;
+    sub_B775C4(&BgmManager_TypeInfo);
+    sub_B775C4(&char___TypeInfo);
+    sub_B775C4(&Method_System_Linq_Enumerable_Skip_string___);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IEnumerable_string__TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IEnumerator_string__TypeInfo);
+    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_BgmPlayArgs__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_BgmPlayArgs___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_BgmPlayArgs__TypeInfo);
+    sub_B775C4(&MainBgmPlayArgs_TypeInfo);
+    sub_B775C4(&Method_System_Nullable_float__GetValueOrDefault__);
+    sub_B775C4(&Method_System_Nullable_float___ctor__);
+    sub_B775C4(&Method_System_Nullable_float__get_HasValue__);
+    sub_B775C4(&SubBgmPlayArgs_TypeInfo);
+    byte_438A4B9 = 1;
   }
   HIDWORD(v45) = 0;
-  v9 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_BgmPlayArgs__TypeInfo);
+  v9 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_BgmPlayArgs__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v9,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_BgmPlayArgs___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_BgmPlayArgs___ctor__);
   if ( !toAnalyze )
     return (System_Collections_Generic_List_BgmPlayArgs__o *)v9;
   if ( (*(_QWORD *)&volumeNullable & 0xFF00000000LL) != 0 )
@@ -92,8 +92,8 @@ System_Collections_Generic_List_BgmPlayArgs__o *__fastcall Analyzer_FileNameToBg
   {
     p_volume = (System_Nullable_float__o)&volume;
     volume = 0LL;
-    System_Nullable_float____ctor(p_volume, value, (const MethodInfo_2439C24 *)Method_System_Nullable_float___ctor__);
-    v23 = (MainBgmPlayArgs_o *)sub_B70764(MainBgmPlayArgs_TypeInfo);
+    System_Nullable_float____ctor(p_volume, value, (const MethodInfo_2478078 *)Method_System_Nullable_float___ctor__);
+    v23 = (MainBgmPlayArgs_o *)sub_B77694(MainBgmPlayArgs_TypeInfo);
     v50 = volume;
     v24 = (EventMissionProgressRequest_Argument_ProgressData_o *)v23;
     MainBgmPlayArgs___ctor(v23, toAnalyze, v50, fadeTime, startTime, 0LL);
@@ -102,12 +102,12 @@ System_Collections_Generic_List_BgmPlayArgs__o *__fastcall Analyzer_FileNameToBg
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
         v9,
         v24,
-        (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_BgmPlayArgs__Add__);
+        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_BgmPlayArgs__Add__);
       return (System_Collections_Generic_List_BgmPlayArgs__o *)v9;
     }
     goto LABEL_51;
   }
-  v12 = (System_Char_array *)sub_B706AC(char___TypeInfo, 1LL);
+  v12 = (System_Char_array *)sub_B775DC(char___TypeInfo, 1LL);
   if ( !v12 )
     goto LABEL_51;
   if ( !v12->max_length )
@@ -120,14 +120,14 @@ System_Collections_Generic_List_BgmPlayArgs__o *__fastcall Analyzer_FileNameToBg
   if ( !v12->max_length )
   {
 LABEL_52:
-    v43 = sub_B70798(v12);
-    sub_B70738(v43, 0LL);
+    v43 = sub_B776C8(v12);
+    sub_B77668(v43, 0LL);
   }
   v15 = *(System_String_o **)&v12->m_Items[2];
   v46 = (System_Nullable_float__o)&volume;
   volume = 0LL;
-  System_Nullable_float____ctor(v46, value, (const MethodInfo_2439C24 *)Method_System_Nullable_float___ctor__);
-  v16 = (MainBgmPlayArgs_o *)sub_B70764(MainBgmPlayArgs_TypeInfo);
+  System_Nullable_float____ctor(v46, value, (const MethodInfo_2478078 *)Method_System_Nullable_float___ctor__);
+  v16 = (MainBgmPlayArgs_o *)sub_B77694(MainBgmPlayArgs_TypeInfo);
   v49 = volume;
   v17 = (EventMissionProgressRequest_Argument_ProgressData_o *)v16;
   MainBgmPlayArgs___ctor(v16, v15, v49, fadeTime, startTime, 0LL);
@@ -135,14 +135,14 @@ LABEL_52:
     || (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           v9,
           v17,
-          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_BgmPlayArgs__Add__),
+          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_BgmPlayArgs__Add__),
         (v12 = (System_Char_array *)System_Linq_Enumerable__Skip_BattleBuffData_CheckIndividualitiesData_(
                                       v14,
                                       1,
-                                      (const MethodInfo_1CC7950 *)Method_System_Linq_Enumerable_Skip_string___)) == 0LL) )
+                                      (const MethodInfo_1D3C7A0 *)Method_System_Linq_Enumerable_Skip_string___)) == 0LL) )
   {
 LABEL_51:
-    sub_B7076C(v12, v13);
+    sub_B7769C(v12, v13);
   }
   klass = v12->obj.klass;
   v19 = v12;
@@ -162,11 +162,11 @@ LABEL_51:
   else
   {
 LABEL_21:
-    p_method = sub_B08590(v12, System_Collections_Generic_IEnumerable_string__TypeInfo, 0LL);
+    p_method = sub_B0F4C0(v12, System_Collections_Generic_IEnumerable_string__TypeInfo, 0LL);
   }
   v26 = (*(__int64 (__fastcall **)(System_Char_array *, _QWORD))p_method)(v19, *(_QWORD *)(p_method + 8));
   if ( !v26 )
-    sub_B7076C(0LL, v25);
+    sub_B7769C(0LL, v25);
   while ( 1 )
   {
     v27 = *(_QWORD *)v26;
@@ -186,7 +186,7 @@ LABEL_21:
     else
     {
 LABEL_30:
-      v30 = sub_B08590(v26, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v30 = sub_B0F4C0(v26, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v30)(v26, *(_QWORD *)(v30 + 8)) & 1) == 0 )
       break;
@@ -207,20 +207,20 @@ LABEL_30:
     else
     {
 LABEL_37:
-      v34 = sub_B08590(v26, System_Collections_Generic_IEnumerator_string__TypeInfo, 0LL);
+      v34 = sub_B0F4C0(v26, System_Collections_Generic_IEnumerator_string__TypeInfo, 0LL);
     }
     v35 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v34)(v26, *(_QWORD *)(v34 + 8));
     volume = 0LL;
     v48 = (System_Nullable_float__o)&volume;
-    System_Nullable_float____ctor(v48, value, (const MethodInfo_2439C24 *)Method_System_Nullable_float___ctor__);
-    v36 = (SubBgmPlayArgs_o *)sub_B70764(SubBgmPlayArgs_TypeInfo);
+    System_Nullable_float____ctor(v48, value, (const MethodInfo_2478078 *)Method_System_Nullable_float___ctor__);
+    v36 = (SubBgmPlayArgs_o *)sub_B77694(SubBgmPlayArgs_TypeInfo);
     v51 = volume;
     v37 = (EventMissionProgressRequest_Argument_ProgressData_o *)v36;
     SubBgmPlayArgs___ctor(v36, v35, v51, fadeTime, startTime, 0LL);
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
       v9,
       v37,
-      (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_BgmPlayArgs__Add__);
+      (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_BgmPlayArgs__Add__);
   }
   v45 = 0x1000000B3LL;
   v38 = *(_QWORD *)v26;
@@ -240,7 +240,7 @@ LABEL_37:
   else
   {
 LABEL_45:
-    v41 = sub_B08590(v26, System_IDisposable_TypeInfo, 0LL);
+    v41 = sub_B0F4C0(v26, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v41)(v26, *(_QWORD *)(v41 + 8));
   if ( (_DWORD)v45 == 179 )

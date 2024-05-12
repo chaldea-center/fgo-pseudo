@@ -15,15 +15,15 @@ void __fastcall ClassBoardLockOpenConfirmDialog__Close(
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_4353B13 & 1) == 0 )
+  if ( (byte_438D3D1 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_ClassBoardLockOpenConfirmDialog_EndClose__);
-    byte_4353B13 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_ClassBoardLockOpenConfirmDialog_EndClose__);
+    byte_438D3D1 = 1;
   }
   this->fields.isButtonEnable = 0;
   ClassBoardBaseDialog__SetDisableClickItemIcon((ClassBoardBaseDialog_o *)this, 0LL);
-  v3 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_ClassBoardLockOpenConfirmDialog_EndClose__, 0LL);
   ClassBoardBaseDialog__Close((ClassBoardBaseDialog_o *)this, v3, 0LL);
 }
@@ -35,10 +35,10 @@ void __fastcall ClassBoardLockOpenConfirmDialog__EndClose(
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4353B14 & 1) == 0 )
+  if ( (byte_438D3D2 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4353B14 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438D3D2 = 1;
   }
   ActionExtensions__Call(this->fields.closeFunc, 0LL);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -47,7 +47,7 @@ void __fastcall ClassBoardLockOpenConfirmDialog__EndClose(
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  UnityEngine_Object__Destroy_36067208(gameObject, 0LL);
+  UnityEngine_Object__Destroy_36309980(gameObject, 0LL);
 }
 
 
@@ -69,7 +69,7 @@ void __fastcall ClassBoardLockOpenConfirmDialog__Init(
   *(_WORD *)&this->fields.isDecideButtonEnable = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   ClassBoardBaseDialog__Init((ClassBoardBaseDialog_o *)this, 0LL);
 }
@@ -90,21 +90,21 @@ void __fastcall ClassBoardLockOpenConfirmDialog__OnClickCancel(
   System_Int32_array *v11; // x7
   const MethodInfo *v12; // x1
 
-  if ( (byte_4353B12 & 1) == 0 )
+  if ( (byte_438D3D0 & 1) == 0 )
   {
-    sub_B70694(&Method_ClassBoardLockOpenConfirmDialog_OnClickCancel__);
-    byte_4353B12 = 1;
+    sub_B775C4(&Method_ClassBoardLockOpenConfirmDialog_OnClickCancel__);
+    byte_438D3D0 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_ClassBoardLockOpenConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_ClassBoardLockOpenConfirmDialog_OnClickCancel__ + 75) & 2) != 0 )
-      v3 = (_QWORD *)sub_B7069C(Method_ClassBoardLockOpenConfirmDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+      v3 = (_QWORD *)sub_B775CC(Method_ClassBoardLockOpenConfirmDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
     OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.onClickCancelSeKind, 0LL);
     cancelFunc = this->fields.cancelFunc;
     this->fields.closeFunc = cancelFunc;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.closeFunc,
       (System_Int32_array **)cancelFunc,
       v6,
@@ -135,12 +135,12 @@ void __fastcall ClassBoardLockOpenConfirmDialog__OnClickDecide(
   _QWORD *v13; // x0
   System_Reflection_MethodBase_o *v14; // x0
 
-  if ( (byte_4353B15 & 1) == 0 )
+  if ( (byte_438D3D3 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_ClassBoardLockOpenConfirmDialog_EndClose__);
-    sub_B70694(&Method_ClassBoardLockOpenConfirmDialog_OnClickDecide__);
-    byte_4353B15 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_ClassBoardLockOpenConfirmDialog_EndClose__);
+    sub_B775C4(&Method_ClassBoardLockOpenConfirmDialog_OnClickDecide__);
+    byte_438D3D3 = 1;
   }
   if ( this->fields.isDecideButtonEnable )
   {
@@ -148,12 +148,12 @@ void __fastcall ClassBoardLockOpenConfirmDialog__OnClickDecide(
     {
       v3 = Method_ClassBoardLockOpenConfirmDialog_OnClickDecide__;
       if ( (*((_BYTE *)Method_ClassBoardLockOpenConfirmDialog_OnClickDecide__ + 75) & 2) != 0 )
-        v3 = (_QWORD *)sub_B7069C(Method_ClassBoardLockOpenConfirmDialog_OnClickDecide__);
-      v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+        v3 = (_QWORD *)sub_B775CC(Method_ClassBoardLockOpenConfirmDialog_OnClickDecide__);
+      v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
       OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.onClickDecideSeKind, 0LL);
       decideFunc = this->fields.decideFunc;
       this->fields.closeFunc = decideFunc;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&this->fields.closeFunc,
         (System_Int32_array **)decideFunc,
         v6,
@@ -164,7 +164,7 @@ void __fastcall ClassBoardLockOpenConfirmDialog__OnClickDecide(
         v11);
       this->fields.isButtonEnable = 0;
       ClassBoardBaseDialog__SetDisableClickItemIcon((ClassBoardBaseDialog_o *)this, 0LL);
-      v12 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+      v12 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
       System_Action___ctor(v12, (Il2CppObject *)this, Method_ClassBoardLockOpenConfirmDialog_EndClose__, 0LL);
       ClassBoardBaseDialog__Close((ClassBoardBaseDialog_o *)this, v12, 0LL);
     }
@@ -173,8 +173,8 @@ void __fastcall ClassBoardLockOpenConfirmDialog__OnClickDecide(
   {
     v13 = Method_ClassBoardLockOpenConfirmDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_ClassBoardLockOpenConfirmDialog_OnClickDecide__ + 75) & 2) != 0 )
-      v13 = (_QWORD *)sub_B7069C(Method_ClassBoardLockOpenConfirmDialog_OnClickDecide__);
-    v14 = (System_Reflection_MethodBase_o *)sub_B70678(v13, v13[3]);
+      v13 = (_QWORD *)sub_B775CC(Method_ClassBoardLockOpenConfirmDialog_OnClickDecide__);
+    v14 = (System_Reflection_MethodBase_o *)sub_B775A8(v13, v13[3]);
     OverwriteAssetSoundName__PlaySystemSe(v14, this->fields.onClickDecideDisableSeKind, 0LL);
   }
 }
@@ -238,25 +238,25 @@ void __fastcall ClassBoardLockOpenConfirmDialog__Open(
   ClassBoardCondData_o v57; // 0:x0.12
   ClassBoardCondData_o v58; // 0:x1.12
 
-  if ( (byte_4353B11 & 1) == 0 )
+  if ( (byte_438D3CF & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_ClassBoardLockOpenConfirmDialog_EndOpen__);
-    sub_B70694(&ClassBoardLock_TypeInfo);
-    sub_B70694(&IClassBoardLockModel_TypeInfo);
-    sub_B70694(&IClassBoardSquareModel_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_3087/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_TITLE"*/);
-    sub_B70694(&StringLiteral_3085/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_ITEM_DETAIL"*/);
-    sub_B70694(&StringLiteral_3083/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_CANCEL"*/);
-    sub_B70694(&StringLiteral_3084/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_DECIDE"*/);
-    sub_B70694(&StringLiteral_3086/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING"*/);
-    byte_4353B11 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_ClassBoardLockOpenConfirmDialog_EndOpen__);
+    sub_B775C4(&ClassBoardLock_TypeInfo);
+    sub_B775C4(&IClassBoardLockModel_TypeInfo);
+    sub_B775C4(&IClassBoardSquareModel_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_3136/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_TITLE"*/);
+    sub_B775C4(&StringLiteral_3134/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_ITEM_DETAIL"*/);
+    sub_B775C4(&StringLiteral_3132/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_CANCEL"*/);
+    sub_B775C4(&StringLiteral_3133/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_DECIDE"*/);
+    sub_B775C4(&StringLiteral_3135/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING"*/);
+    byte_438D3CF = 1;
   }
   v56 = 0;
   v55 = 0LL;
   this->fields.classBoardSquare = square;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.classBoardSquare,
     (System_Int32_array **)square,
     (System_String_array **)isEnableOpen,
@@ -266,7 +266,7 @@ void __fastcall ClassBoardLockOpenConfirmDialog__Open(
     v6,
     v7);
   this->fields.decideFunc = decideFunc;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.decideFunc,
     (System_Int32_array **)decideFunc,
     v13,
@@ -276,7 +276,7 @@ void __fastcall ClassBoardLockOpenConfirmDialog__Open(
     v17,
     v18);
   this->fields.cancelFunc = cancelFunc;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.cancelFunc,
     (System_Int32_array **)cancelFunc,
     v19,
@@ -292,7 +292,7 @@ void __fastcall ClassBoardLockOpenConfirmDialog__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  LockModel = LocalizationManager__Get((System_String_o *)StringLiteral_3087/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_TITLE"*/, 0LL);
+  LockModel = LocalizationManager__Get((System_String_o *)StringLiteral_3136/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_51;
   UILabel__set_text(titleLabel, LockModel, 0LL);
@@ -323,7 +323,7 @@ void __fastcall ClassBoardLockOpenConfirmDialog__Open(
     else
     {
 LABEL_15:
-      v33 = sub_B08590(LockModel, IClassBoardLockModel_TypeInfo, 0LL);
+      v33 = sub_B0F4C0(LockModel, IClassBoardLockModel_TypeInfo, 0LL);
     }
     v55 = (*(__int64 (__fastcall **)(System_String_o *, _QWORD))v33)(v30, *(_QWORD *)(v33 + 8));
     v56 = v34;
@@ -353,7 +353,7 @@ LABEL_15:
       else
       {
 LABEL_23:
-        v40 = sub_B08590(LockModel, IClassBoardLockModel_TypeInfo, 0LL);
+        v40 = sub_B0F4C0(LockModel, IClassBoardLockModel_TypeInfo, 0LL);
       }
       v41 = (*(__int64 (__fastcall **)(System_String_o *, _QWORD))v40)(v37, *(_QWORD *)(v40 + 8));
       v58.fields.Num = v42;
@@ -381,7 +381,7 @@ LABEL_23:
   else
   {
 LABEL_31:
-    p_method = sub_B08590(SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 6LL);
+    p_method = sub_B0F4C0(SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 6LL);
   }
   v48 = (System_Collections_Generic_IReadOnlyCollection_IClassBoardItemModel__o *)(*(__int64 (__fastcall **)(struct IClassBoardSquareModel_o *, _QWORD))p_method)(
                                                                                     SquareModel_k__BackingField,
@@ -395,7 +395,7 @@ LABEL_31:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    LockModel = LocalizationManager__Get((System_String_o *)StringLiteral_3086/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING"*/, 0LL);
+    LockModel = LocalizationManager__Get((System_String_o *)StringLiteral_3135/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING"*/, 0LL);
     if ( itemDetailLabel )
     {
       UILabel__set_text(itemDetailLabel, LockModel, 0LL);
@@ -408,14 +408,14 @@ LABEL_31:
       }
     }
 LABEL_51:
-    sub_B7076C(LockModel, v27);
+    sub_B7769C(LockModel, v27);
   }
   if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  LockModel = LocalizationManager__Get((System_String_o *)StringLiteral_3085/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_ITEM_DETAIL"*/, 0LL);
+  LockModel = LocalizationManager__Get((System_String_o *)StringLiteral_3134/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_ITEM_DETAIL"*/, 0LL);
   if ( !itemDetailLabel )
     goto LABEL_51;
   UILabel__set_text(itemDetailLabel, LockModel, 0LL);
@@ -426,19 +426,19 @@ LABEL_45:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  LockModel = LocalizationManager__Get((System_String_o *)StringLiteral_3083/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_CANCEL"*/, 0LL);
+  LockModel = LocalizationManager__Get((System_String_o *)StringLiteral_3132/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_CANCEL"*/, 0LL);
   if ( !cancelBtnLabel )
     goto LABEL_51;
   UILabel__set_text(cancelBtnLabel, LockModel, 0LL);
   decideBtnLabel = this->fields.decideBtnLabel;
-  LockModel = LocalizationManager__Get((System_String_o *)StringLiteral_3084/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_DECIDE"*/, 0LL);
+  LockModel = LocalizationManager__Get((System_String_o *)StringLiteral_3133/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_DECIDE"*/, 0LL);
   if ( !decideBtnLabel )
     goto LABEL_51;
   UILabel__set_text(decideBtnLabel, LockModel, 0LL);
   ClassBoardLockOpenConfirmDialog__SetDecideButton(this, this->fields.isDecideButtonEnable, v53);
   this->fields.isButtonEnable = 0;
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 0, 0LL);
-  v54 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v54 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v54, (Il2CppObject *)this, Method_ClassBoardLockOpenConfirmDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v54, 0, 0LL);
 }
@@ -465,7 +465,7 @@ void __fastcall ClassBoardLockOpenConfirmDialog__SetDecideButton(
     if ( decideBtnSprite )
       goto LABEL_6;
 LABEL_4:
-    sub_B7076C(decideBtn, isEnable);
+    sub_B7769C(decideBtn, isEnable);
   }
   UnityEngine_Behaviour__set_enabled(decideBtn, 1, 0LL);
   decideBtnSprite = (UIWidget_o *)this->fields.decideBtnSprite;
@@ -481,10 +481,10 @@ System_String_o *__fastcall ClassBoardLockOpenConfirmDialog__get_closeBtnPath(
         ClassBoardLockOpenConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4353B16 & 1) == 0 )
+  if ( (byte_438D3D4 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_15697/*"Window/CancelBtn"*/);
-    byte_4353B16 = 1;
+    sub_B775C4(&StringLiteral_15767/*"Window/CancelBtn"*/);
+    byte_438D3D4 = 1;
   }
-  return (System_String_o *)StringLiteral_15697/*"Window/CancelBtn"*/;
+  return (System_String_o *)StringLiteral_15767/*"Window/CancelBtn"*/;
 }

@@ -1,13 +1,13 @@
 void __fastcall UserClassBoardSquareEntity___ctor(UserClassBoardSquareEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4353332 & 1) == 0 )
+  if ( (byte_438CAB5 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_4353332 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438CAB5 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -16,15 +16,15 @@ System_String_o *__fastcall UserClassBoardSquareEntity__CreatePK(
         int32_t classBoardBaseId,
         const MethodInfo *method)
 {
-  if ( (byte_4353331 & 1) == 0 )
+  if ( (byte_438CAB4 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4353331 = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_438CAB4 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            classBoardBaseId,
-           (const MethodInfo_1CA249C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_1D172EC *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

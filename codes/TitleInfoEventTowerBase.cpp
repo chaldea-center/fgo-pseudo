@@ -9,16 +9,16 @@ void __fastcall TitleInfoEventTowerBase___cctor(const MethodInfo *method)
   BattleServantConfConponent_o *static_fields; // x0
   System_Int32_array **v8; // x1
 
-  if ( (byte_43502D8 & 1) == 0 )
+  if ( (byte_438915C & 1) == 0 )
   {
-    sub_B70694(&TitleInfoEventTowerBase_TypeInfo);
-    sub_B70694(&StringLiteral_23119/*"tower_img_base{0:00}"*/);
-    byte_43502D8 = 1;
+    sub_B775C4(&TitleInfoEventTowerBase_TypeInfo);
+    sub_B775C4(&StringLiteral_23220/*"tower_img_base{0:00}"*/);
+    byte_438915C = 1;
   }
   static_fields = (BattleServantConfConponent_o *)TitleInfoEventTowerBase_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_23119/*"tower_img_base{0:00}"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_23119/*"tower_img_base{0:00}"*/;
-  sub_B70630(static_fields, v8, v1, v2, v3, v4, v5, v6);
+  v8 = (System_Int32_array **)StringLiteral_23220/*"tower_img_base{0:00}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_23220/*"tower_img_base{0:00}"*/;
+  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
 }
 
 
@@ -45,20 +45,20 @@ void __fastcall TitleInfoEventTowerBase__SetBaseSprite(
   System_String_o *v15; // x19
   int32_t v16; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_43502D7 & 1) == 0 )
+  if ( (byte_438915B & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&TitleInfoEventTowerBase_TypeInfo);
-    byte_43502D7 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&TitleInfoEventTowerBase_TypeInfo);
+    byte_438915B = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_16;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                              gameObject,
-                                             (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                             (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   v9 = (UIWidget_o *)gameObject;
   if ( !changeSize )
   {
@@ -69,7 +69,7 @@ void __fastcall TitleInfoEventTowerBase__SetBaseSprite(
       goto LABEL_9;
     }
 LABEL_16:
-    sub_B7076C(gameObject, v8);
+    sub_B7769C(gameObject, v8);
   }
   if ( !gameObject )
     goto LABEL_16;

@@ -1,14 +1,14 @@
 void __fastcall BattleMasterImageMaster___ctor(BattleMasterImageMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_434E119 & 1) == 0 )
+  if ( (byte_43876EA & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_BattleMasterImageMaster__BattleMasterImageEntity__string___ctor__);
-    byte_434E119 = 1;
+    sub_B775C4(&Method_DataMasterBase_BattleMasterImageMaster__BattleMasterImageEntity__string___ctor__);
+    byte_43876EA = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     390,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_BattleMasterImageMaster__BattleMasterImageEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_BattleMasterImageMaster__BattleMasterImageEntity__string___ctor__);
 }
 
 
@@ -44,28 +44,28 @@ BattleMasterImageEntity_o *__fastcall BattleMasterImageMaster__GetEntity(
   __int64 v30; // x0
   int v32; // [xsp+0h] [xbp-50h]
 
-  if ( (byte_434E118 & 1) == 0 )
+  if ( (byte_43876E9 & 1) == 0 )
   {
-    sub_B70694(&BattleMasterImageEntity_TypeInfo);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
-    sub_B70694(&Method_DataManager_GetMaster_CommonReleaseMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
-    sub_B70694(&System_Collections_IEnumerator_TypeInfo);
-    byte_434E118 = 1;
+    sub_B775C4(&BattleMasterImageEntity_TypeInfo);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+    sub_B775C4(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
+    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
+    byte_43876E9 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   if ( !this->fields.list )
-    sub_B7076C(Master_WarQuestSelectionMaster, v8);
+    sub_B7769C(Master_WarQuestSelectionMaster, v8);
   v9 = (CommonReleaseMaster_o *)Master_WarQuestSelectionMaster;
   Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
                  (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list,
-                 (const MethodInfo_2C865F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_2CC56C8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B7076C(0LL, v10);
+    sub_B7769C(0LL, v10);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -85,7 +85,7 @@ BattleMasterImageEntity_o *__fastcall BattleMasterImageMaster__GetEntity(
     else
     {
 LABEL_12:
-      p_method = sub_B08590(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_B0F4C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -108,7 +108,7 @@ LABEL_12:
     else
     {
 LABEL_19:
-      v19 = sub_B08590(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v19 = sub_B0F4C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v20 = (BattleMasterImageEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v19)(
                                          Enumerator,
@@ -120,9 +120,9 @@ LABEL_19:
     if ( *(&v20->klass->_2.bitflags2 + 1) < (unsigned int)v23
       || (BattleMasterImageEntity_c *)v20->klass->_2.typeHierarchy[v23 - 1] != BattleMasterImageEntity_TypeInfo )
     {
-      v20 = (BattleMasterImageEntity_o *)sub_B70A60(v20);
+      v20 = (BattleMasterImageEntity_o *)sub_B77990(v20);
 LABEL_42:
-      sub_B7076C(v20, v21);
+      sub_B7769C(v20, v21);
     }
     if ( v20->fields.id == id )
     {
@@ -133,7 +133,7 @@ LABEL_42:
         if ( !(_DWORD)commonReleaseId )
           goto LABEL_30;
         if ( !v9 )
-          sub_B7076C(v20, commonReleaseId);
+          sub_B7769C(v20, commonReleaseId);
         if ( CommonReleaseMaster__IsOpen(v9, commonReleaseId, 0LL, 0, 0LL) )
         {
 LABEL_30:
@@ -164,7 +164,7 @@ LABEL_32:
   else
   {
 LABEL_36:
-    v30 = sub_B08590(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v30 = sub_B0F4C0(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v30)(Enumerator, *(_QWORD *)(v30 + 8));
   if ( v32 == 107 )

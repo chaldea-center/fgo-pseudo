@@ -8,15 +8,15 @@ void __fastcall BattleSyncTransformComponent___ctor(BattleSyncTransformComponent
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_435121B & 1) == 0 )
+  if ( (byte_438A896 & 1) == 0 )
   {
-    sub_B70694(&BattleSyncTransformComponent_SyncData_TypeInfo);
-    byte_435121B = 1;
+    sub_B775C4(&BattleSyncTransformComponent_SyncData_TypeInfo);
+    byte_438A896 = 1;
   }
-  v3 = (BattleSyncTransformComponent_SyncData_o *)sub_B70764(BattleSyncTransformComponent_SyncData_TypeInfo);
+  v3 = (BattleSyncTransformComponent_SyncData_o *)sub_B77694(BattleSyncTransformComponent_SyncData_TypeInfo);
   BattleSyncTransformComponent_SyncData___ctor(v3, 0LL);
   this->fields.syncData = v3;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.syncData, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.syncData, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -47,10 +47,10 @@ void __fastcall BattleSyncTransformComponent__InitSyncPos(
   z = posDiff.fields.z;
   y = posDiff.fields.y;
   x = posDiff.fields.x;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.targetObj, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.targetObj, 0LL, v3, v4, v5, v6, v7, v8);
   v16 = (__int64)*(p_targetObj - 1);
   if ( !v16 || (*(_DWORD *)(v16 + 16) = 1, (syncData = this->fields.syncData) == 0LL) )
-    sub_B7076C(v14, v15);
+    sub_B7769C(v14, v15);
   syncData->fields.positionDiff.fields.x = x;
   syncData->fields.positionDiff.fields.y = y;
   syncData->fields.positionDiff.fields.z = z;
@@ -88,7 +88,7 @@ BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarg
   struct BattleSyncTransformComponent_SyncData_o *syncData; // x1
 
   this->fields.targetObj = target;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.targetObj,
     (System_Int32_array **)target,
     (System_String_array **)syncSetting,
@@ -98,10 +98,10 @@ BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarg
     v6,
     v7);
   if ( !syncSetting )
-    sub_B7076C(v10, v11);
+    sub_B7769C(v10, v11);
   syncData = syncSetting->fields.syncData;
   this->fields.syncData = syncData;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.syncData,
     (System_Int32_array **)syncData,
     v12,
@@ -114,7 +114,7 @@ BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarg
 }
 
 
-BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarget_24000276(
+BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarget_24278884(
         BattleSyncTransformComponent_o *this,
         UnityEngine_Transform_o *target,
         BattleSyncTransformComponent_SyncData_o *syncSettingData,
@@ -132,7 +132,7 @@ BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarg
   System_Int32_array *v15; // x7
 
   this->fields.targetObj = target;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.targetObj,
     (System_Int32_array **)target,
     (System_String_array **)syncSettingData,
@@ -142,7 +142,7 @@ BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarg
     v6,
     v7);
   this->fields.syncData = syncSettingData;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.syncData,
     (System_Int32_array **)syncSettingData,
     v10,
@@ -176,10 +176,10 @@ void __fastcall BattleSyncTransformComponent__SyncTarget(
   int v26; // s0
   int v29; // s0
 
-  if ( (byte_435121A & 1) == 0 )
+  if ( (byte_438A895 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_435121A = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438A895 = 1;
   }
   targetObj = (UnityEngine_Object_o *)this->fields.targetObj;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -256,7 +256,7 @@ void __fastcall BattleSyncTransformComponent__SyncTarget(
         }
       }
 LABEL_26:
-      sub_B7076C(syncData, v4);
+      sub_B7769C(syncData, v4);
     }
   }
 }
@@ -274,7 +274,7 @@ void __fastcall BattleSyncTransformComponent__UpdateTarget(
   System_Int32_array *v7; // x7
 
   this->fields.targetObj = target;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.targetObj,
     (System_Int32_array **)target,
     (System_String_array **)method,
@@ -294,7 +294,7 @@ bool __fastcall BattleSyncTransformComponent__get_IsNotExecSync(
 
   syncData = this->fields.syncData;
   if ( !syncData )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return syncData->fields.syncType == 0;
 }
 
@@ -347,7 +347,7 @@ UnityEngine_Quaternion_o __fastcall BattleSyncTransformComponent_SyncData__GetFi
   eulerAngles.fields.x = eulerAngles.fields.x + this->fields.rotationDiff.fields.x;
   eulerAngles.fields.y = eulerAngles.fields.y + this->fields.rotationDiff.fields.y;
   eulerAngles.fields.z = eulerAngles.fields.z + this->fields.rotationDiff.fields.z;
-  *(UnityEngine_Quaternion_o *)&v4 = UnityEngine_Quaternion__Euler_36099348(eulerAngles, 0LL);
+  *(UnityEngine_Quaternion_o *)&v4 = UnityEngine_Quaternion__Euler_36342120(eulerAngles, 0LL);
   result.fields.w = v7;
   result.fields.z = v6;
   result.fields.y = v5;

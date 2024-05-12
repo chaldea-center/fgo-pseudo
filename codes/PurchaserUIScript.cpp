@@ -10,11 +10,11 @@ void __fastcall PurchaserUIScript__ClearLog(PurchaserUIScript_o *this, const Met
   __int64 v4; // x1
   UILabel_o *v5; // x0
 
-  if ( (byte_4351F9F & 1) == 0 )
+  if ( (byte_438B662 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_16032/*"[purchase log]\n"*/);
-    byte_4351F9F = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_16102/*"[purchase log]\n"*/);
+    byte_438B662 = 1;
   }
   puchaserLogLabel = (UnityEngine_Object_o *)this->fields._puchaserLogLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -32,11 +32,11 @@ void __fastcall PurchaserUIScript__ClearLog(PurchaserUIScript_o *this, const Met
       v5 = this->fields._puchaserLogLabel;
       if ( v5 )
       {
-        UILabel__set_text(v5, (System_String_o *)StringLiteral_16032/*"[purchase log]\n"*/, 0LL);
+        UILabel__set_text(v5, (System_String_o *)StringLiteral_16102/*"[purchase log]\n"*/, 0LL);
         return;
       }
 LABEL_12:
-      sub_B7076C(v5, v4);
+      sub_B7769C(v5, v4);
     }
   }
 }
@@ -50,11 +50,11 @@ void __fastcall PurchaserUIScript__CopyLogToClipboard(PurchaserUIScript_o *this,
   struct UILabel_o *v6; // x8
   System_String_o *mText; // x19
 
-  if ( (byte_4351FA0 & 1) == 0 )
+  if ( (byte_438B663 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_GUIUtility_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4351FA0 = 1;
+    sub_B775C4(&UnityEngine_GUIUtility_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438B663 = 1;
   }
   puchaserLogLabel = (UnityEngine_Object_o *)this->fields._puchaserLogLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -75,7 +75,7 @@ void __fastcall PurchaserUIScript__CopyLogToClipboard(PurchaserUIScript_o *this,
     v6 = this->fields._puchaserLogLabel;
     if ( !v6 )
 LABEL_15:
-      sub_B7076C(isActiveAndEnabled, v4);
+      sub_B7769C(isActiveAndEnabled, v4);
     mText = v6->fields.mText;
     if ( (BYTE3(UnityEngine_GUIUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_GUIUtility_TypeInfo->_2.cctor_finished )
@@ -107,13 +107,13 @@ void __fastcall PurchaserUIScript__Purchase(PurchaserUIScript_o *this, int32_t i
   struct PurchaseBehaviour_o *v20; // x9
   __int64 v21; // x0
 
-  if ( (byte_4351FA1 & 1) == 0 )
+  if ( (byte_438B664 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&PurchaseLogic_ProductFinishedAction_TypeInfo);
-    sub_B70694(&Method_PurchaserUIScript___c__Purchase_b__8_0__);
-    sub_B70694(&PurchaserUIScript___c_TypeInfo);
-    byte_4351FA1 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&PurchaseLogic_ProductFinishedAction_TypeInfo);
+    sub_B775C4(&Method_PurchaserUIScript___c__Purchase_b__8_0__);
+    sub_B775C4(&PurchaserUIScript___c_TypeInfo);
+    byte_438B664 = 1;
   }
   purchaseBehaviour = (UnityEngine_Object_o *)this->fields._purchaseBehaviour;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -145,11 +145,11 @@ void __fastcall PurchaserUIScript__Purchase(PurchaserUIScript_o *this, int32_t i
         buyProductFinishedAction = PurchaserUIScript___c_TypeInfo->static_fields;
       }
       v11 = (Il2CppObject *)buyProductFinishedAction->__9;
-      _9__8_0 = (PurchaseLogic_ProductFinishedAction_o *)sub_B70764(PurchaseLogic_ProductFinishedAction_TypeInfo);
+      _9__8_0 = (PurchaseLogic_ProductFinishedAction_o *)sub_B77694(PurchaseLogic_ProductFinishedAction_TypeInfo);
       PurchaseLogic_ProductFinishedAction___ctor(_9__8_0, v11, Method_PurchaserUIScript___c__Purchase_b__8_0__, 0LL);
       static_fields = PurchaserUIScript___c_TypeInfo->static_fields;
       static_fields->__9__8_0 = _9__8_0;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&static_fields->__9__8_0,
         (System_Int32_array **)_9__8_0,
         v13,
@@ -164,8 +164,8 @@ void __fastcall PurchaserUIScript__Purchase(PurchaserUIScript_o *this, int32_t i
     {
       if ( productIdCollection->max_length <= index )
       {
-        v21 = sub_B70798(purchaseLogic);
-        sub_B70738(v21, 0LL);
+        v21 = sub_B776C8(purchaseLogic);
+        sub_B77668(v21, 0LL);
       }
       v20 = this->fields._purchaseBehaviour;
       if ( v20 )
@@ -173,13 +173,13 @@ void __fastcall PurchaserUIScript__Purchase(PurchaserUIScript_o *this, int32_t i
         purchaseLogic = v20->fields._purchaseLogic;
         if ( purchaseLogic )
         {
-          PurchaseLogic__InitiatePurchase_25493976(purchaseLogic, productIdCollection->m_Items[index], 0, _9__8_0, v8);
+          PurchaseLogic__InitiatePurchase_25741792(purchaseLogic, productIdCollection->m_Items[index], 0, _9__8_0, v8);
           return;
         }
       }
     }
 LABEL_22:
-    sub_B7076C(purchaseLogic, v7);
+    sub_B7769C(purchaseLogic, v7);
   }
 }
 
@@ -261,16 +261,16 @@ void __fastcall PurchaserUIScript__Start(PurchaserUIScript_o *this, const Method
   System_Int32_array *v27; // x7
   int v28; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4351F9E & 1) == 0 )
+  if ( (byte_438B661 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Action_string___ctor__);
-    sub_B70694(&System_Action_string__TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&PurchaseBehaviour_TypeInfo);
-    sub_B70694(&Method_PurchaserUIScript__Start_b__5_0__);
-    sub_B70694(&Method_PurchaserUIScript__Start_b__5_1__);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4351F9E = 1;
+    sub_B775C4(&Method_System_Action_string___ctor__);
+    sub_B775C4(&System_Action_string__TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&PurchaseBehaviour_TypeInfo);
+    sub_B775C4(&Method_PurchaserUIScript__Start_b__5_0__);
+    sub_B775C4(&Method_PurchaserUIScript__Start_b__5_1__);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438B661 = 1;
   }
   PurchaserUIScript__ClearLog(this, method);
   stoneValueLabel = this->fields._stoneValueLabel;
@@ -320,16 +320,16 @@ void __fastcall PurchaserUIScript__Start(PurchaserUIScript_o *this, const Method
                                         0LL) & 1) == 0 )
     return;
   v12 = this->fields._purchaseBehaviour;
-  v13 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B70764(System_Action_string__TypeInfo);
+  v13 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B77694(System_Action_string__TypeInfo);
   System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData____ctor(
     v13,
     (Il2CppObject *)this,
     Method_PurchaserUIScript__Start_b__5_0__,
-    (const MethodInfo_264C148 *)Method_System_Action_string___ctor__);
+    (const MethodInfo_26A0868 *)Method_System_Action_string___ctor__);
   if ( !v12
     || (purchaseLogic = (System_String_o *)v12->fields._purchaseLogic) == 0LL
     || (purchaseLogic[2].klass = (System_String_c *)v13,
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)&purchaseLogic[2],
           (System_Int32_array **)v13,
           v14,
@@ -339,20 +339,20 @@ void __fastcall PurchaserUIScript__Start(PurchaserUIScript_o *this, const Method
           v18,
           v19),
         v20 = this->fields._purchaseBehaviour,
-        v21 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B70764(System_Action_string__TypeInfo),
+        v21 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B77694(System_Action_string__TypeInfo),
         System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData____ctor(
           v21,
           (Il2CppObject *)this,
           Method_PurchaserUIScript__Start_b__5_1__,
-          (const MethodInfo_264C148 *)Method_System_Action_string___ctor__),
+          (const MethodInfo_26A0868 *)Method_System_Action_string___ctor__),
         !v20)
     || (purchaseLogic = (System_String_o *)v20->fields._purchaseLogic) == 0LL )
   {
 LABEL_30:
-    sub_B7076C(purchaseLogic, v5);
+    sub_B7769C(purchaseLogic, v5);
   }
   purchaseLogic[2].monitor = v21;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&purchaseLogic[2].monitor,
     (System_Int32_array **)v21,
     v22,
@@ -375,11 +375,11 @@ void __fastcall PurchaserUIScript___Start_b__5_0(
   struct UILabel_o *v8; // x20
   System_String_o *v9; // x1
 
-  if ( (byte_4351FA2 & 1) == 0 )
+  if ( (byte_438B665 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_26/*"\n"*/);
-    byte_4351FA2 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_26/*"\n"*/);
+    byte_438B665 = 1;
   }
   puchaserLogLabel = (UnityEngine_Object_o *)this->fields._puchaserLogLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -400,12 +400,12 @@ void __fastcall PurchaserUIScript___Start_b__5_0(
       v8 = this->fields._puchaserLogLabel;
       if ( v8 )
       {
-        v9 = System_String__Concat_44760452(v8->fields.mText, str, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
+        v9 = System_String__Concat_44904220(v8->fields.mText, str, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
         UILabel__set_text(v8, v9, 0LL);
         return;
       }
 LABEL_12:
-      sub_B7076C(isActiveAndEnabled, v6);
+      sub_B7769C(isActiveAndEnabled, v6);
     }
   }
 }
@@ -423,15 +423,15 @@ void __fastcall PurchaserUIScript___Start_b__5_1(
   struct UILabel_o *v9; // x20
   System_String_o *v10; // x1
 
-  if ( (byte_4351FA3 & 1) == 0 )
+  if ( (byte_438B666 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Debug_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_26/*"\n"*/);
-    sub_B70694(&StringLiteral_15984/*"[UnityIAP]課金エラー:"*/);
-    byte_4351FA3 = 1;
+    sub_B775C4(&UnityEngine_Debug_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_26/*"\n"*/);
+    sub_B775C4(&StringLiteral_16054/*"[UnityIAP]課金エラー:"*/);
+    byte_438B666 = 1;
   }
-  v5 = (Il2CppObject *)System_String__Concat_44758168((System_String_o *)StringLiteral_15984/*"[UnityIAP]課金エラー:"*/, str, 0LL);
+  v5 = (Il2CppObject *)System_String__Concat_44901936((System_String_o *)StringLiteral_16054/*"[UnityIAP]課金エラー:"*/, str, 0LL);
   if ( (BYTE3(UnityEngine_Debug_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
   {
@@ -457,12 +457,12 @@ void __fastcall PurchaserUIScript___Start_b__5_1(
       v9 = this->fields._puchaserLogLabel;
       if ( v9 )
       {
-        v10 = System_String__Concat_44760452(v9->fields.mText, str, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
+        v10 = System_String__Concat_44904220(v9->fields.mText, str, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
         UILabel__set_text(v9, v10, 0LL);
         return;
       }
 LABEL_15:
-      sub_B7076C(isActiveAndEnabled, v7);
+      sub_B7769C(isActiveAndEnabled, v7);
     }
   }
 }
@@ -479,16 +479,16 @@ void __fastcall PurchaserUIScript___c___cctor(const MethodInfo *method)
   System_Int32_array *v7; // x6
   System_Int32_array *v8; // x7
 
-  if ( (byte_4351AC2 & 1) == 0 )
+  if ( (byte_438B140 & 1) == 0 )
   {
-    sub_B70694(&PurchaserUIScript___c_TypeInfo);
-    byte_4351AC2 = 1;
+    sub_B775C4(&PurchaserUIScript___c_TypeInfo);
+    byte_438B140 = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(PurchaserUIScript___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(PurchaserUIScript___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = (BattleServantConfConponent_o *)PurchaserUIScript___c_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B70630(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  sub_B77560(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
 }
 
 

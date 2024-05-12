@@ -167,49 +167,49 @@ void __fastcall SetGameOptionComponent__CreateContentsArrayIfNotYet(
   __int64 v153; // x0
   __int64 v154; // x0
 
-  if ( (byte_435417E & 1) == 0 )
+  if ( (byte_438DA3C & 1) == 0 )
   {
-    sub_B70694(&GameOptionContentBase___TypeInfo);
-    byte_435417E = 1;
+    sub_B775C4(&GameOptionContentBase___TypeInfo);
+    byte_438DA3C = 1;
   }
   p_contentsArray = (BattleServantConfConponent_o *)&this->fields.contentsArray;
   if ( !this->fields.contentsArray )
   {
-    v4 = sub_B706AC(GameOptionContentBase___TypeInfo, 20LL);
+    v4 = sub_B775DC(GameOptionContentBase___TypeInfo, 20LL);
     if ( !v4 )
-      sub_B7076C(0LL, v5);
+      sub_B7769C(0LL, v5);
     setResolutionOptionCtr = (System_Int32_array **)this->fields.setResolutionOptionCtr;
     v13 = v4;
     if ( !setResolutionOptionCtr
-      || (v4 = sub_B70754(this->fields.setResolutionOptionCtr, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0 )
+      || (v4 = sub_B77684(this->fields.setResolutionOptionCtr, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0 )
     {
       if ( !*(_DWORD *)(v13 + 24) )
         goto LABEL_66;
       *(_QWORD *)(v13 + 32) = setResolutionOptionCtr;
-      sub_B70630((BattleServantConfConponent_o *)(v13 + 32), setResolutionOptionCtr, v6, v7, v8, v9, v10, v11);
+      sub_B77560((BattleServantConfConponent_o *)(v13 + 32), setResolutionOptionCtr, v6, v7, v8, v9, v10, v11);
       setSmoothnessCtr = (System_Int32_array **)this->fields.setSmoothnessCtr;
       if ( !setSmoothnessCtr
-        || (v4 = sub_B70754(this->fields.setSmoothnessCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
+        || (v4 = sub_B77684(this->fields.setSmoothnessCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
       {
         if ( *(_DWORD *)(v13 + 24) <= 1u )
           goto LABEL_66;
         *(_QWORD *)(v13 + 40) = setSmoothnessCtr;
-        sub_B70630((BattleServantConfConponent_o *)(v13 + 40), setSmoothnessCtr, v14, v15, v16, v17, v18, v19);
+        sub_B77560((BattleServantConfConponent_o *)(v13 + 40), setSmoothnessCtr, v14, v15, v16, v17, v18, v19);
         setVolCtr = (System_Int32_array **)this->fields.setVolCtr;
-        if ( !setVolCtr || (v4 = sub_B70754(this->fields.setVolCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
+        if ( !setVolCtr || (v4 = sub_B77684(this->fields.setVolCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
         {
           if ( *(_DWORD *)(v13 + 24) <= 2u )
             goto LABEL_66;
           *(_QWORD *)(v13 + 48) = setVolCtr;
-          sub_B70630((BattleServantConfConponent_o *)(v13 + 48), setVolCtr, v21, v22, v23, v24, v25, v26);
+          sub_B77560((BattleServantConfConponent_o *)(v13 + 48), setVolCtr, v21, v22, v23, v24, v25, v26);
           setScenarioTextSpeedCtr = (System_Int32_array **)this->fields.setScenarioTextSpeedCtr;
           if ( !setScenarioTextSpeedCtr
-            || (v4 = sub_B70754(this->fields.setScenarioTextSpeedCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
+            || (v4 = sub_B77684(this->fields.setScenarioTextSpeedCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
           {
             if ( *(_DWORD *)(v13 + 24) <= 3u )
               goto LABEL_66;
             *(_QWORD *)(v13 + 56) = setScenarioTextSpeedCtr;
-            sub_B70630(
+            sub_B77560(
               (BattleServantConfConponent_o *)(v13 + 56),
               setScenarioTextSpeedCtr,
               v28,
@@ -220,20 +220,20 @@ void __fastcall SetGameOptionComponent__CreateContentsArrayIfNotYet(
               v33);
             setScenarioCtr = (System_Int32_array **)this->fields.setScenarioCtr;
             if ( !setScenarioCtr
-              || (v4 = sub_B70754(this->fields.setScenarioCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
+              || (v4 = sub_B77684(this->fields.setScenarioCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
             {
               if ( *(_DWORD *)(v13 + 24) <= 4u )
                 goto LABEL_66;
               *(_QWORD *)(v13 + 64) = setScenarioCtr;
-              sub_B70630((BattleServantConfConponent_o *)(v13 + 64), setScenarioCtr, v35, v36, v37, v38, v39, v40);
+              sub_B77560((BattleServantConfConponent_o *)(v13 + 64), setScenarioCtr, v35, v36, v37, v38, v39, v40);
               setSpoilerProtectionCtr = (System_Int32_array **)this->fields.setSpoilerProtectionCtr;
               if ( !setSpoilerProtectionCtr
-                || (v4 = sub_B70754(this->fields.setSpoilerProtectionCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
+                || (v4 = sub_B77684(this->fields.setSpoilerProtectionCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
               {
                 if ( *(_DWORD *)(v13 + 24) <= 5u )
                   goto LABEL_66;
                 *(_QWORD *)(v13 + 72) = setSpoilerProtectionCtr;
-                sub_B70630(
+                sub_B77560(
                   (BattleServantConfConponent_o *)(v13 + 72),
                   setSpoilerProtectionCtr,
                   v42,
@@ -244,28 +244,28 @@ void __fastcall SetGameOptionComponent__CreateContentsArrayIfNotYet(
                   v47);
                 setSwitchCtr = (System_Int32_array **)this->fields.setSwitchCtr;
                 if ( !setSwitchCtr
-                  || (v4 = sub_B70754(this->fields.setSwitchCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
+                  || (v4 = sub_B77684(this->fields.setSwitchCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
                 {
                   if ( *(_DWORD *)(v13 + 24) <= 6u )
                     goto LABEL_66;
                   *(_QWORD *)(v13 + 80) = setSwitchCtr;
-                  sub_B70630((BattleServantConfConponent_o *)(v13 + 80), setSwitchCtr, v49, v50, v51, v52, v53, v54);
+                  sub_B77560((BattleServantConfConponent_o *)(v13 + 80), setSwitchCtr, v49, v50, v51, v52, v53, v54);
                   setSwitch2Ctr = (System_Int32_array **)this->fields.setSwitch2Ctr;
                   if ( !setSwitch2Ctr
-                    || (v4 = sub_B70754(this->fields.setSwitch2Ctr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
+                    || (v4 = sub_B77684(this->fields.setSwitch2Ctr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
                   {
                     if ( *(_DWORD *)(v13 + 24) <= 7u )
                       goto LABEL_66;
                     *(_QWORD *)(v13 + 88) = setSwitch2Ctr;
-                    sub_B70630((BattleServantConfConponent_o *)(v13 + 88), setSwitch2Ctr, v56, v57, v58, v59, v60, v61);
+                    sub_B77560((BattleServantConfConponent_o *)(v13 + 88), setSwitch2Ctr, v56, v57, v58, v59, v60, v61);
                     setPreBattleFormationCtr = (System_Int32_array **)this->fields.setPreBattleFormationCtr;
                     if ( !setPreBattleFormationCtr
-                      || (v4 = sub_B70754(this->fields.setPreBattleFormationCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
+                      || (v4 = sub_B77684(this->fields.setPreBattleFormationCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
                     {
                       if ( *(_DWORD *)(v13 + 24) <= 8u )
                         goto LABEL_66;
                       *(_QWORD *)(v13 + 96) = setPreBattleFormationCtr;
-                      sub_B70630(
+                      sub_B77560(
                         (BattleServantConfConponent_o *)(v13 + 96),
                         setPreBattleFormationCtr,
                         v63,
@@ -276,12 +276,12 @@ void __fastcall SetGameOptionComponent__CreateContentsArrayIfNotYet(
                         v68);
                       setAdvantageClassAutoCtr = (System_Int32_array **)this->fields.setAdvantageClassAutoCtr;
                       if ( !setAdvantageClassAutoCtr
-                        || (v4 = sub_B70754(this->fields.setAdvantageClassAutoCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
+                        || (v4 = sub_B77684(this->fields.setAdvantageClassAutoCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
                       {
                         if ( *(_DWORD *)(v13 + 24) <= 9u )
                           goto LABEL_66;
                         *(_QWORD *)(v13 + 104) = setAdvantageClassAutoCtr;
-                        sub_B70630(
+                        sub_B77560(
                           (BattleServantConfConponent_o *)(v13 + 104),
                           setAdvantageClassAutoCtr,
                           v70,
@@ -292,12 +292,12 @@ void __fastcall SetGameOptionComponent__CreateContentsArrayIfNotYet(
                           v75);
                         setAutoSelectPartyCtr = (System_Int32_array **)this->fields.setAutoSelectPartyCtr;
                         if ( !setAutoSelectPartyCtr
-                          || (v4 = sub_B70754(this->fields.setAutoSelectPartyCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
+                          || (v4 = sub_B77684(this->fields.setAutoSelectPartyCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
                         {
                           if ( *(_DWORD *)(v13 + 24) <= 0xAu )
                             goto LABEL_66;
                           *(_QWORD *)(v13 + 112) = setAutoSelectPartyCtr;
-                          sub_B70630(
+                          sub_B77560(
                             (BattleServantConfConponent_o *)(v13 + 112),
                             setAutoSelectPartyCtr,
                             v77,
@@ -308,12 +308,12 @@ void __fastcall SetGameOptionComponent__CreateContentsArrayIfNotYet(
                             v82);
                           setTDPlaySpeedCtr = (System_Int32_array **)this->fields.setTDPlaySpeedCtr;
                           if ( !setTDPlaySpeedCtr
-                            || (v4 = sub_B70754(this->fields.setTDPlaySpeedCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
+                            || (v4 = sub_B77684(this->fields.setTDPlaySpeedCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
                           {
                             if ( *(_DWORD *)(v13 + 24) <= 0xBu )
                               goto LABEL_66;
                             *(_QWORD *)(v13 + 120) = setTDPlaySpeedCtr;
-                            sub_B70630(
+                            sub_B77560(
                               (BattleServantConfConponent_o *)(v13 + 120),
                               setTDPlaySpeedCtr,
                               v84,
@@ -324,14 +324,14 @@ void __fastcall SetGameOptionComponent__CreateContentsArrayIfNotYet(
                               v89);
                             setRandomLimitCountCtr = (System_Int32_array **)this->fields.setRandomLimitCountCtr;
                             if ( !setRandomLimitCountCtr
-                              || (v4 = sub_B70754(
+                              || (v4 = sub_B77684(
                                          this->fields.setRandomLimitCountCtr,
                                          *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
                             {
                               if ( *(_DWORD *)(v13 + 24) <= 0xCu )
                                 goto LABEL_66;
                               *(_QWORD *)(v13 + 128) = setRandomLimitCountCtr;
-                              sub_B70630(
+                              sub_B77560(
                                 (BattleServantConfConponent_o *)(v13 + 128),
                                 setRandomLimitCountCtr,
                                 v91,
@@ -342,14 +342,14 @@ void __fastcall SetGameOptionComponent__CreateContentsArrayIfNotYet(
                                 v96);
                               setRandomLimitCountResetCtr = (System_Int32_array **)this->fields.setRandomLimitCountResetCtr;
                               if ( !setRandomLimitCountResetCtr
-                                || (v4 = sub_B70754(
+                                || (v4 = sub_B77684(
                                            this->fields.setRandomLimitCountResetCtr,
                                            *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
                               {
                                 if ( *(_DWORD *)(v13 + 24) <= 0xDu )
                                   goto LABEL_66;
                                 *(_QWORD *)(v13 + 136) = setRandomLimitCountResetCtr;
-                                sub_B70630(
+                                sub_B77560(
                                   (BattleServantConfConponent_o *)(v13 + 136),
                                   setRandomLimitCountResetCtr,
                                   v98,
@@ -360,12 +360,12 @@ void __fastcall SetGameOptionComponent__CreateContentsArrayIfNotYet(
                                   v103);
                                 setSvtRandCtr = (System_Int32_array **)this->fields.setSvtRandCtr;
                                 if ( !setSvtRandCtr
-                                  || (v4 = sub_B70754(this->fields.setSvtRandCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
+                                  || (v4 = sub_B77684(this->fields.setSvtRandCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
                                 {
                                   if ( *(_DWORD *)(v13 + 24) <= 0xEu )
                                     goto LABEL_66;
                                   *(_QWORD *)(v13 + 144) = setSvtRandCtr;
-                                  sub_B70630(
+                                  sub_B77560(
                                     (BattleServantConfConponent_o *)(v13 + 144),
                                     setSvtRandCtr,
                                     v105,
@@ -376,14 +376,14 @@ void __fastcall SetGameOptionComponent__CreateContentsArrayIfNotYet(
                                     v110);
                                   setMessageDispCtr = (System_Int32_array **)this->fields.setMessageDispCtr;
                                   if ( !setMessageDispCtr
-                                    || (v4 = sub_B70754(
+                                    || (v4 = sub_B77684(
                                                this->fields.setMessageDispCtr,
                                                *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
                                   {
                                     if ( *(_DWORD *)(v13 + 24) <= 0xFu )
                                       goto LABEL_66;
                                     *(_QWORD *)(v13 + 152) = setMessageDispCtr;
-                                    sub_B70630(
+                                    sub_B77560(
                                       (BattleServantConfConponent_o *)(v13 + 152),
                                       setMessageDispCtr,
                                       v112,
@@ -394,12 +394,12 @@ void __fastcall SetGameOptionComponent__CreateContentsArrayIfNotYet(
                                       v117);
                                     setNoticeCtr = (System_Int32_array **)this->fields.setNoticeCtr;
                                     if ( !setNoticeCtr
-                                      || (v4 = sub_B70754(this->fields.setNoticeCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
+                                      || (v4 = sub_B77684(this->fields.setNoticeCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
                                     {
                                       if ( *(_DWORD *)(v13 + 24) <= 0x10u )
                                         goto LABEL_66;
                                       *(_QWORD *)(v13 + 160) = setNoticeCtr;
-                                      sub_B70630(
+                                      sub_B77560(
                                         (BattleServantConfConponent_o *)(v13 + 160),
                                         setNoticeCtr,
                                         v119,
@@ -410,14 +410,14 @@ void __fastcall SetGameOptionComponent__CreateContentsArrayIfNotYet(
                                         v124);
                                       setPlayOpeningMovieCtr = (System_Int32_array **)this->fields.setPlayOpeningMovieCtr;
                                       if ( !setPlayOpeningMovieCtr
-                                        || (v4 = sub_B70754(
+                                        || (v4 = sub_B77684(
                                                    this->fields.setPlayOpeningMovieCtr,
                                                    *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
                                       {
                                         if ( *(_DWORD *)(v13 + 24) <= 0x11u )
                                           goto LABEL_66;
                                         *(_QWORD *)(v13 + 168) = setPlayOpeningMovieCtr;
-                                        sub_B70630(
+                                        sub_B77560(
                                           (BattleServantConfConponent_o *)(v13 + 168),
                                           setPlayOpeningMovieCtr,
                                           v126,
@@ -428,14 +428,14 @@ void __fastcall SetGameOptionComponent__CreateContentsArrayIfNotYet(
                                           v131);
                                         fullDlCtr = (System_Int32_array **)this->fields.fullDlCtr;
                                         if ( !fullDlCtr
-                                          || (v4 = sub_B70754(
+                                          || (v4 = sub_B77684(
                                                      this->fields.fullDlCtr,
                                                      *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
                                         {
                                           if ( *(_DWORD *)(v13 + 24) <= 0x12u )
                                             goto LABEL_66;
                                           *(_QWORD *)(v13 + 176) = fullDlCtr;
-                                          sub_B70630(
+                                          sub_B77560(
                                             (BattleServantConfConponent_o *)(v13 + 176),
                                             fullDlCtr,
                                             v133,
@@ -446,12 +446,12 @@ void __fastcall SetGameOptionComponent__CreateContentsArrayIfNotYet(
                                             v138);
                                           setBlackListCtr = (System_Int32_array **)this->fields.setBlackListCtr;
                                           if ( !setBlackListCtr
-                                            || (v4 = sub_B70754(setBlackListCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
+                                            || (v4 = sub_B77684(setBlackListCtr, *(_QWORD *)(*(_QWORD *)v13 + 64LL))) != 0 )
                                           {
                                             if ( *(_DWORD *)(v13 + 24) > 0x13u )
                                             {
                                               *(_QWORD *)(v13 + 184) = setBlackListCtr;
-                                              sub_B70630(
+                                              sub_B77560(
                                                 (BattleServantConfConponent_o *)(v13 + 184),
                                                 setBlackListCtr,
                                                 v140,
@@ -461,7 +461,7 @@ void __fastcall SetGameOptionComponent__CreateContentsArrayIfNotYet(
                                                 v144,
                                                 v145);
                                               p_contentsArray->klass = (BattleServantConfConponent_c *)v13;
-                                              sub_B70630(
+                                              sub_B77560(
                                                 p_contentsArray,
                                                 (System_Int32_array **)v13,
                                                 v147,
@@ -473,8 +473,8 @@ void __fastcall SetGameOptionComponent__CreateContentsArrayIfNotYet(
                                               return;
                                             }
 LABEL_66:
-                                            v153 = sub_B70798(v4);
-                                            sub_B70738(v153, 0LL);
+                                            v153 = sub_B776C8(v4);
+                                            sub_B77668(v153, 0LL);
                                           }
                                         }
                                       }
@@ -495,8 +495,8 @@ LABEL_66:
         }
       }
     }
-    v154 = sub_B7078C(v4);
-    sub_B70738(v154, 0LL);
+    v154 = sub_B776BC(v4);
+    sub_B77668(v154, 0LL);
   }
 }
 
@@ -519,10 +519,10 @@ void __fastcall SetGameOptionComponent__InitGameOption(SetGameOptionComponent_o 
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_435417F & 1) == 0 )
+  if ( (byte_438DA3D & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_435417F = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438DA3D = 1;
   }
   SetGameOptionComponent__CreateContentsArrayIfNotYet(this, method);
   contentsArray = this->fields.contentsArray;
@@ -537,8 +537,8 @@ void __fastcall SetGameOptionComponent__InitGameOption(SetGameOptionComponent_o 
     {
       if ( v8 >= max_length )
       {
-        v15 = sub_B70798(gameObject);
-        sub_B70738(v15, 0LL);
+        v15 = sub_B776C8(gameObject);
+        sub_B77668(v15, 0LL);
       }
       v9 = contentsArray->m_Items[v8];
       if ( !v9 )
@@ -560,7 +560,7 @@ void __fastcall SetGameOptionComponent__InitGameOption(SetGameOptionComponent_o 
         goto LABEL_11;
     }
 LABEL_20:
-    sub_B7076C(gameObject, v4);
+    sub_B7769C(gameObject, v4);
   }
 LABEL_11:
   collider = (UnityEngine_Object_o *)this->fields.collider;
@@ -605,7 +605,7 @@ void __fastcall SetGameOptionComponent__SetMaskEnabled(
 
   optionMask = this->fields.optionMask;
   if ( !optionMask )
-    sub_B7076C(0LL, isEnabled);
+    sub_B7769C(0LL, isEnabled);
   UnityEngine_GameObject__SetActive(optionMask, isEnabled, 0LL);
 }
 
@@ -624,10 +624,10 @@ void __fastcall SetGameOptionComponent__hideGameOption(SetGameOptionComponent_o 
   UnityEngine_GameObject_o *optionObj; // x20
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4354180 & 1) == 0 )
+  if ( (byte_438DA3E & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    byte_4354180 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    byte_438DA3E = 1;
   }
   hidePos = this->fields.hidePos;
   if ( !hidePos
@@ -639,7 +639,7 @@ void __fastcall SetGameOptionComponent__hideGameOption(SetGameOptionComponent_o 
     || (UnityEngine_GameObject__SetActive(hidePos, 0, 0LL),
         (hidePos = (UnityEngine_GameObject_o *)this->fields.optionScroll) == 0LL) )
   {
-    sub_B7076C(hidePos, method);
+    sub_B7769C(hidePos, method);
   }
   ((void (__fastcall *)(UnityEngine_GameObject_o *, _QWORD, void *, float, float))hidePos->klass[1]._1.parent)(
     hidePos,
@@ -684,20 +684,20 @@ void __fastcall SetGameOptionComponent__reflectionGameOption(
   System_Int32_array *v28; // x6
   System_Int32_array *v29; // x7
 
-  if ( (byte_4354181 & 1) == 0 )
+  if ( (byte_438DA3F & 1) == 0 )
   {
-    sub_B70694(&Method_System_Action_GameOptionContentBase___ctor__);
-    sub_B70694(&System_Action_GameOptionContentBase__TypeInfo);
-    sub_B70694(&Method_BasicHelper_ForEach_GameOptionContentBase___);
-    sub_B70694(&Method_System_Linq_Enumerable_Where_GameOptionContentBase___);
-    sub_B70694(&Method_System_Func_GameOptionContentBase__bool___ctor__);
-    sub_B70694(&System_Func_GameOptionContentBase__bool__TypeInfo);
-    sub_B70694(&OptionManager_TypeInfo);
-    sub_B70694(&SoundManager_TypeInfo);
-    sub_B70694(&Method_SetGameOptionComponent___c__reflectionGameOption_b__39_0__);
-    sub_B70694(&Method_SetGameOptionComponent___c__reflectionGameOption_b__39_1__);
-    sub_B70694(&SetGameOptionComponent___c_TypeInfo);
-    byte_4354181 = 1;
+    sub_B775C4(&Method_System_Action_GameOptionContentBase___ctor__);
+    sub_B775C4(&System_Action_GameOptionContentBase__TypeInfo);
+    sub_B775C4(&Method_BasicHelper_ForEach_GameOptionContentBase___);
+    sub_B775C4(&Method_System_Linq_Enumerable_Where_GameOptionContentBase___);
+    sub_B775C4(&Method_System_Func_GameOptionContentBase__bool___ctor__);
+    sub_B775C4(&System_Func_GameOptionContentBase__bool__TypeInfo);
+    sub_B775C4(&OptionManager_TypeInfo);
+    sub_B775C4(&SoundManager_TypeInfo);
+    sub_B775C4(&Method_SetGameOptionComponent___c__reflectionGameOption_b__39_0__);
+    sub_B775C4(&Method_SetGameOptionComponent___c__reflectionGameOption_b__39_1__);
+    sub_B775C4(&SetGameOptionComponent___c_TypeInfo);
+    byte_438DA3F = 1;
   }
   contentsArray = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.contentsArray;
   v6 = SetGameOptionComponent___c_TypeInfo;
@@ -717,15 +717,15 @@ void __fastcall SetGameOptionComponent__reflectionGameOption(
       static_fields = SetGameOptionComponent___c_TypeInfo->static_fields;
     }
     v9 = (Il2CppObject *)static_fields->__9;
-    _9__39_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_GameOptionContentBase__bool__TypeInfo);
+    _9__39_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B77694(System_Func_GameOptionContentBase__bool__TypeInfo);
     System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
       _9__39_0,
       v9,
       Method_SetGameOptionComponent___c__reflectionGameOption_b__39_0__,
-      (const MethodInfo_29AC578 *)Method_System_Func_GameOptionContentBase__bool___ctor__);
+      (const MethodInfo_29E92C4 *)Method_System_Func_GameOptionContentBase__bool___ctor__);
     v10 = SetGameOptionComponent___c_TypeInfo->static_fields;
     v10->__9__39_0 = (struct System_Func_GameOptionContentBase__bool__o *)_9__39_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v10->__9__39_0,
       (System_Int32_array **)_9__39_0,
       v11,
@@ -738,7 +738,7 @@ void __fastcall SetGameOptionComponent__reflectionGameOption(
   v17 = System_Linq_Enumerable__Where_WarBoardManager_WarBoardOnboardSkillTarget_(
           contentsArray,
           (System_Func_TSource__bool__o *)_9__39_0,
-          (const MethodInfo_1CCCE44 *)Method_System_Linq_Enumerable_Where_GameOptionContentBase___);
+          (const MethodInfo_1D41C94 *)Method_System_Linq_Enumerable_Where_GameOptionContentBase___);
   v18 = SetGameOptionComponent___c_TypeInfo;
   v19 = (System_Collections_Generic_IEnumerable_T__o *)v17;
   if ( (BYTE3(SetGameOptionComponent___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -757,15 +757,15 @@ void __fastcall SetGameOptionComponent__reflectionGameOption(
       v20 = SetGameOptionComponent___c_TypeInfo->static_fields;
     }
     v22 = (Il2CppObject *)v20->__9;
-    _9__39_1 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B70764(System_Action_GameOptionContentBase__TypeInfo);
+    _9__39_1 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B77694(System_Action_GameOptionContentBase__TypeInfo);
     System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData____ctor(
       _9__39_1,
       v22,
       Method_SetGameOptionComponent___c__reflectionGameOption_b__39_1__,
-      (const MethodInfo_264C148 *)Method_System_Action_GameOptionContentBase___ctor__);
+      (const MethodInfo_26A0868 *)Method_System_Action_GameOptionContentBase___ctor__);
     v23 = SetGameOptionComponent___c_TypeInfo->static_fields;
     v23->__9__39_1 = (struct System_Action_GameOptionContentBase__o *)_9__39_1;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v23->__9__39_1,
       (System_Int32_array **)_9__39_1,
       v24,
@@ -778,7 +778,7 @@ void __fastcall SetGameOptionComponent__reflectionGameOption(
   BasicHelper__ForEach_DrawLotsDisplayMessage_DisplayedInGroup_SaveData_(
     v19,
     (System_Action_T__o *)_9__39_1,
-    (const MethodInfo_1BDE02C *)Method_BasicHelper_ForEach_GameOptionContentBase___);
+    (const MethodInfo_1C676E8 *)Method_BasicHelper_ForEach_GameOptionContentBase___);
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__stopSe(0.0, 0LL);
@@ -806,12 +806,12 @@ void __fastcall SetGameOptionComponent__showGameOption(SetGameOptionComponent_o 
   UnityEngine_GameObject_o *gameObject; // x20
   System_Action_o *v5; // x20
 
-  if ( (byte_435417D & 1) == 0 )
+  if ( (byte_438DA3B & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&Method_SetGameOptionComponent__showGameOption_b__35_0__);
-    byte_435417D = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&Method_SetGameOptionComponent__showGameOption_b__35_0__);
+    byte_438DA3B = 1;
   }
   bgTxtSprite = this->fields.bgTxtSprite;
   if ( !bgTxtSprite
@@ -819,10 +819,10 @@ void __fastcall SetGameOptionComponent__showGameOption(SetGameOptionComponent_o 
         bgTxtSprite = (struct UISprite_o *)BgTxtManager__IsActiveBgTxt(0LL),
         !gameObject) )
   {
-    sub_B7076C(bgTxtSprite, method);
+    sub_B7769C(bgTxtSprite, method);
   }
   UnityEngine_GameObject__SetActive(gameObject, (unsigned __int8)bgTxtSprite & 1, 0LL);
-  v5 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_SetGameOptionComponent__showGameOption_b__35_0__, 0LL);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -841,16 +841,16 @@ void __fastcall SetGameOptionComponent___c___cctor(const MethodInfo *method)
   System_Int32_array *v7; // x6
   System_Int32_array *v8; // x7
 
-  if ( (byte_434F86F & 1) == 0 )
+  if ( (byte_4388E69 & 1) == 0 )
   {
-    sub_B70694(&SetGameOptionComponent___c_TypeInfo);
-    byte_434F86F = 1;
+    sub_B775C4(&SetGameOptionComponent___c_TypeInfo);
+    byte_4388E69 = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(SetGameOptionComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(SetGameOptionComponent___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = (BattleServantConfConponent_o *)SetGameOptionComponent___c_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B70630(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  sub_B77560(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -866,7 +866,7 @@ bool __fastcall SetGameOptionComponent___c___reflectionGameOption_b__39_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   return ((__int64 (__fastcall *)(GameOptionContentBase_o *, void *))x->klass->vtable._6_IsAvailable.method)(
            x,
            x->klass[1]._1.image);
@@ -879,7 +879,7 @@ void __fastcall SetGameOptionComponent___c___reflectionGameOption_b__39_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   ((void (__fastcall *)(GameOptionContentBase_o *, Il2CppMethodPointer))x->klass->vtable._5_Reflection.method)(
     x,
     x->klass->vtable._6_IsAvailable.methodPtr);

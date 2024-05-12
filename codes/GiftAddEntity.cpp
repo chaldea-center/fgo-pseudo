@@ -1,13 +1,13 @@
 void __fastcall GiftAddEntity___ctor(GiftAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_435314A & 1) == 0 )
+  if ( (byte_438C8C9 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_435314A = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438C8C9 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,10 +17,10 @@ bool __fastcall GiftAddEntity__CheckValid(GiftAddEntity_o *this, const MethodInf
   int32_t condType; // w21
   int64_t targetNum; // x19
 
-  if ( (byte_4353146 & 1) == 0 )
+  if ( (byte_438C8C5 & 1) == 0 )
   {
-    sub_B70694(&CondType_TypeInfo);
-    byte_4353146 = 1;
+    sub_B775C4(&CondType_TypeInfo);
+    byte_438C8C5 = 1;
   }
   condType = this->fields.condType;
   targetId = this->fields.targetId;
@@ -33,15 +33,15 @@ bool __fastcall GiftAddEntity__CheckValid(GiftAddEntity_o *this, const MethodInf
 
 System_String_o *__fastcall GiftAddEntity__CreatePK(int32_t giftId, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_4353145 & 1) == 0 )
+  if ( (byte_438C8C4 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4353145 = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_438C8C4 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            giftId,
            priority,
-           (const MethodInfo_1CA236C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1D171BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -60,18 +60,18 @@ System_String_o *__fastcall GiftAddEntity__GetOverwriteDetailText(GiftAddEntity_
   GiftAddEntity_o *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4353149 & 1) == 0 )
+  if ( (byte_438C8C8 & 1) == 0 )
   {
-    sub_B70694(&string_TypeInfo);
-    sub_B70694(&StringLiteral_21704/*"overwriteDetailText"*/);
-    byte_4353149 = 1;
+    sub_B775C4(&string_TypeInfo);
+    sub_B775C4(&StringLiteral_21801/*"overwriteDetailText"*/);
+    byte_438C8C8 = 1;
   }
-  result = (System_String_o *)GiftAddEntity__GetScriptValue(this, (System_String_o *)StringLiteral_21704/*"overwriteDetailText"*/, v2);
+  result = (System_String_o *)GiftAddEntity__GetScriptValue(this, (System_String_o *)StringLiteral_21801/*"overwriteDetailText"*/, v2);
   if ( result )
   {
     if ( result->klass != string_TypeInfo )
     {
-      v5 = (GiftAddEntity_o *)sub_B70A60(result);
+      v5 = (GiftAddEntity_o *)sub_B77990(result);
       GiftAddEntity___ctor(v5, v6);
     }
   }
@@ -88,18 +88,18 @@ System_String_o *__fastcall GiftAddEntity__GetOverwriteTreasureEffectId(
   GiftAddEntity_o *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4353148 & 1) == 0 )
+  if ( (byte_438C8C7 & 1) == 0 )
   {
-    sub_B70694(&string_TypeInfo);
-    sub_B70694(&StringLiteral_21733/*"overwriteTreasureEffectId"*/);
-    byte_4353148 = 1;
+    sub_B775C4(&string_TypeInfo);
+    sub_B775C4(&StringLiteral_21830/*"overwriteTreasureEffectId"*/);
+    byte_438C8C7 = 1;
   }
-  result = (System_String_o *)GiftAddEntity__GetScriptValue(this, (System_String_o *)StringLiteral_21733/*"overwriteTreasureEffectId"*/, v2);
+  result = (System_String_o *)GiftAddEntity__GetScriptValue(this, (System_String_o *)StringLiteral_21830/*"overwriteTreasureEffectId"*/, v2);
   if ( result )
   {
     if ( result->klass != string_TypeInfo )
     {
-      v5 = (GiftAddEntity_o *)sub_B70A60(result);
+      v5 = (GiftAddEntity_o *)sub_B77990(result);
       return GiftAddEntity__GetOverwriteDetailText(v5, v6);
     }
   }
@@ -115,10 +115,10 @@ Il2CppObject *__fastcall GiftAddEntity__GetScriptValue(
   Il2CppObject *result; // x0
   System_Xml_Schema_XmlSchemaObject_o *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4353147 & 1) == 0 )
+  if ( (byte_438C8C6 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    byte_4353147 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    byte_438C8C6 = 1;
   }
   value = 0LL;
   result = (Il2CppObject *)this->fields.script;
@@ -128,7 +128,7 @@ Il2CppObject *__fastcall GiftAddEntity__GetScriptValue(
            (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)result,
            (System_Xml_XmlQualifiedName_o *)key,
            &value,
-           (const MethodInfo_2F517E8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_2F7F3F8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return (Il2CppObject *)value;
     }

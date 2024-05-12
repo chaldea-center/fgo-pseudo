@@ -4,7 +4,7 @@ void __fastcall WarBoardBossBattleData___ctor(WarBoardBossBattleData_o *this, co
 }
 
 
-void __fastcall WarBoardBossBattleData___ctor_22448228(
+void __fastcall WarBoardBossBattleData___ctor_22670876(
         WarBoardBossBattleData_o *this,
         WarBoardBossBattleData_SaveData_o *bossBattleData,
         const MethodInfo *method)
@@ -21,12 +21,12 @@ void __fastcall WarBoardBossBattleData___ctor_22448228(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !bossBattleData )
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   this->fields.bossIdx = bossBattleData->fields.bossIdx;
   this->fields.disp = bossBattleData->fields.disp;
   script = bossBattleData->fields.script;
   this->fields.script = script;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.script,
     (System_Int32_array **)script,
     v7,
@@ -55,11 +55,11 @@ void __fastcall WarBoardBossBattleData_SaveData___ctor(
   v2->fields._closeBtnObject = 0LL;
   v2 = (BattleServantConfConponent_o *)((char *)v2 + 24);
   *(_QWORD *)&v2[-1].fields.isOpenAfter = 0LL;
-  sub_B70630(v2, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_B77560(v2, 0LL, v3, v4, v5, v6, v7, v8);
 }
 
 
-void __fastcall WarBoardBossBattleData_SaveData___ctor_21072520(
+void __fastcall WarBoardBossBattleData_SaveData___ctor_21249324(
         WarBoardBossBattleData_SaveData_o *this,
         WarBoardBossBattleData_o *bossBattleData,
         const MethodInfo *method)
@@ -76,12 +76,12 @@ void __fastcall WarBoardBossBattleData_SaveData___ctor_21072520(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !bossBattleData )
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   this->fields.bossIdx = bossBattleData->fields.bossIdx;
   this->fields.disp = bossBattleData->fields.disp;
   script = bossBattleData->fields.script;
   this->fields.script = script;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.script,
     (System_Int32_array **)script,
     v7,

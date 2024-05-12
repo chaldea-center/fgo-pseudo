@@ -34,27 +34,27 @@ bool __fastcall CombineUtility__CheckCombineNeedItemsEnough(
   UserItemEntity_o *v37; // [xsp+88h] [xbp-58h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v38; // 0:x0.16
 
-  if ( (byte_43545FC & 1) == 0 )
+  if ( (byte_438DEBA & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_UserSvtCoinMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_43545FC = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_UserSvtCoinMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_438DEBA = 1;
   }
   entity = 0LL;
   v37 = 0LL;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_UserItemMaster___);
-  v11 = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
+  Master_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_UserItemMaster___);
+  v11 = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
   v31 = (UserSvtCoinMaster_o *)v11;
   if ( !needItemIds )
 LABEL_41:
-    sub_B7076C(v11, v12);
+    sub_B7769C(v11, v12);
   v13 = *(_QWORD *)&needItemIds->max_length;
   v14 = needQp > haveQp;
   if ( (int)v13 >= 1 )
@@ -72,8 +72,8 @@ LABEL_41:
       if ( v17 >= needItemNums->max_length )
       {
 LABEL_42:
-        v30 = sub_B70798(v11);
-        sub_B70738(v30, 0LL);
+        v30 = sub_B776C8(v11);
+        sub_B77668(v30, 0LL);
       }
       if ( v16 )
         break;
@@ -84,13 +84,13 @@ LABEL_42:
       {
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
       }
-      v11 = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ItemMaster___);
+      v11 = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ItemMaster___);
       if ( !v11 )
         goto LABEL_41;
       v11 = (int64_t)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                        (DataMasterBase_WarMaster__WarEntity__int__o *)v11,
                        v19,
-                       (const MethodInfo_21C0440 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                       (const MethodInfo_21FB894 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
       if ( v11 && *(_DWORD *)(v11 + 48) == 29 )
       {
         if ( !v15 )
@@ -104,7 +104,7 @@ LABEL_42:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
         }
         v33 = v35;
-        v22 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45183140(&v33, 0LL);
+        v22 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45429112(&v33, 0LL);
         v24 = *(_QWORD *)&v15->fields.svtId.fields.currentCryptoKey;
         v23 = *(_QWORD *)&v15->fields.svtId.fields.fakeValue;
         v25 = v22;
@@ -115,7 +115,7 @@ LABEL_42:
         }
         *(_QWORD *)&v38.fields.currentCryptoKey = v24;
         *(_QWORD *)&v38.fields.fakeValue = v23;
-        v26 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v38, 0LL);
+        v26 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v38, 0LL);
         v11 = (int64_t)v31;
         if ( !v31 )
           goto LABEL_41;
@@ -140,7 +140,7 @@ LABEL_42:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
         }
         v34 = v35;
-        v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45183140(&v34, 0LL);
+        v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45429112(&v34, 0LL);
         if ( !Master_WarQuestSelectionMaster )
           goto LABEL_41;
         v11 = UserItemMaster__TryGetEntity(Master_WarQuestSelectionMaster, &v37, v11, v19, 0LL);
@@ -184,23 +184,23 @@ void __fastcall CombineUtility__SetCommandCodeEquippedInfoLabel(
   WarEntity_o *v22; // [xsp+10h] [xbp-50h] BYREF
   ServantLimitAddEntity_o *entity; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_43545FD & 1) == 0 )
+  if ( (byte_438DEBB & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_ServantAddMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_ServantChangeMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int__TryGetEntity__);
-    sub_B70694(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&string_TypeInfo);
-    sub_B70694(&StringLiteral_26/*"\n"*/);
-    sub_B70694(&StringLiteral_9458/*"NOT_SELECT_EQUIPED"*/);
-    byte_43545FD = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_ServantAddMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_ServantChangeMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int__TryGetEntity__);
+    sub_B775C4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&string_TypeInfo);
+    sub_B775C4(&StringLiteral_26/*"\n"*/);
+    sub_B775C4(&StringLiteral_9516/*"NOT_SELECT_EQUIPED"*/);
+    byte_438DEBB = 1;
   }
   v22 = 0LL;
   entity = 0LL;
@@ -210,7 +210,7 @@ void __fastcall CombineUtility__SetCommandCodeEquippedInfoLabel(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  UserId = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_9458/*"NOT_SELECT_EQUIPED"*/, 0LL);
+  UserId = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_9516/*"NOT_SELECT_EQUIPED"*/, 0LL);
   if ( !equipLabel )
     goto LABEL_58;
   UILabel__set_text(equipLabel, (System_String_o *)UserId, 0LL);
@@ -222,11 +222,11 @@ void __fastcall CombineUtility__SetCommandCodeEquippedInfoLabel(
   UILabel__set_spacingX(nameLabel, -2, 0LL);
   if ( !dispName )
     return;
-  v12 = System_String__Concat_44758168(equipLabel->fields.mText, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
+  v12 = System_String__Concat_44901936(equipLabel->fields.mText, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
   UILabel__set_text(equipLabel, v12, 0LL);
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (UserServantCollectionMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  Master_WarQuestSelectionMaster = (UserServantCollectionMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -243,7 +243,7 @@ void __fastcall CombineUtility__SetCommandCodeEquippedInfoLabel(
   Empty = string_TypeInfo->static_fields->Empty;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  UserId = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ServantChangeMaster___);
+  UserId = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ServantChangeMaster___);
   if ( !UserId )
     goto LABEL_58;
   v17 = ServantChangeMaster__GetEnableEntity((ServantChangeMaster_o *)UserId, attachSvtId, 0LL);
@@ -256,7 +256,7 @@ void __fastcall CombineUtility__SetCommandCodeEquippedInfoLabel(
   {
     if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    UserId = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
+    UserId = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
     if ( !UserId )
       goto LABEL_58;
     if ( ServantLimitAddMaster__TryGetEntity(
@@ -276,14 +276,14 @@ void __fastcall CombineUtility__SetCommandCodeEquippedInfoLabel(
   {
     if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    UserId = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ServantAddMaster___);
+    UserId = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ServantAddMaster___);
     if ( !UserId )
       goto LABEL_58;
     if ( DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
            (DataMasterBase_WarMaster__WarEntity__int__o *)UserId,
            &v22,
            attachSvtId,
-           (const MethodInfo_21C049C *)Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int__TryGetEntity__) )
+           (const MethodInfo_21FB8F0 *)Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int__TryGetEntity__) )
     {
       UserId = (int64_t)v22;
       if ( !v22 )
@@ -295,18 +295,18 @@ void __fastcall CombineUtility__SetCommandCodeEquippedInfoLabel(
     goto LABEL_53;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  UserId = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ServantMaster___);
+  UserId = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !UserId )
     goto LABEL_58;
   if ( !DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
           (DataMasterBase_WarMaster__WarEntity__int__o *)UserId,
           &v21,
           attachSvtId,
-          (const MethodInfo_21C049C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+          (const MethodInfo_21FB8F0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
     goto LABEL_53;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  UserId = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  UserId = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
   if ( !UserId
     || (UserId = ServantLimitImageMaster__GetServantLimitCountSealAfter(
                    (ServantLimitImageMaster_o *)UserId,
@@ -316,11 +316,11 @@ void __fastcall CombineUtility__SetCommandCodeEquippedInfoLabel(
         !v21) )
   {
 LABEL_58:
-    sub_B7076C(UserId, v10);
+    sub_B7769C(UserId, v10);
   }
   Empty = ServantEntity__getName((ServantEntity_o *)v21, UserId, -1, 0LL);
 LABEL_53:
-  v18 = System_String__Concat_44758168((System_String_o *)StringLiteral_26/*"\n"*/, Empty, 0LL);
+  v18 = System_String__Concat_44901936((System_String_o *)StringLiteral_26/*"\n"*/, Empty, 0LL);
   UILabel__set_text(nameLabel, v18, 0LL);
   if ( !Empty )
     goto LABEL_58;

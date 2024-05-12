@@ -14,10 +14,10 @@ BattlePlayAnimationComponent_SaveData_o *__fastcall BattlePlayAnimationComponent
   BattlePlayAnimationComponent_SaveData_o *v6; // x20
   BattlePlayAnimationComponent_SaveData_o *v7; // x21
 
-  if ( (byte_4351D98 & 1) == 0 )
+  if ( (byte_438B45B & 1) == 0 )
   {
-    sub_B70694(&BattlePlayAnimationComponent_SaveData_TypeInfo);
-    byte_4351D98 = 1;
+    sub_B775C4(&BattlePlayAnimationComponent_SaveData_TypeInfo);
+    byte_438B45B = 1;
   }
   WrapAnimation = (System_String_o *)BattlePlayAnimationComponent__get_WrapAnimation(this, method);
   if ( !WrapAnimation )
@@ -28,7 +28,7 @@ BattlePlayAnimationComponent_SaveData_o *__fastcall BattlePlayAnimationComponent
   if ( result )
   {
     v6 = result;
-    v7 = (BattlePlayAnimationComponent_SaveData_o *)sub_B70764(BattlePlayAnimationComponent_SaveData_TypeInfo);
+    v7 = (BattlePlayAnimationComponent_SaveData_o *)sub_B77694(BattlePlayAnimationComponent_SaveData_TypeInfo);
     BattlePlayAnimationComponent_SaveData___ctor(v7, 0LL);
     WrapAnimation = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
     if ( v7 )
@@ -38,7 +38,7 @@ BattlePlayAnimationComponent_SaveData_o *__fastcall BattlePlayAnimationComponent
                (WrapBattleBaseAnimation_SimpleData_o *)v6,
                0LL);
 LABEL_8:
-    sub_B7076C(WrapAnimation, v4);
+    sub_B7769C(WrapAnimation, v4);
   }
   return result;
 }
@@ -73,7 +73,7 @@ void __fastcall BattlePlayAnimationComponent__PlayAnimation(
   v4 = *(long double *)&timeline;
   WrapAnimation = BattlePlayAnimationComponent__get_WrapAnimation(this, (const MethodInfo *)animName);
   if ( !WrapAnimation )
-    sub_B7076C(0LL, v7);
+    sub_B7769C(0LL, v7);
   ((void (__fastcall *)(WrapBattleBaseAnimation_o *, System_String_o *, Il2CppMethodPointer, long double))WrapAnimation->klass->vtable._4_PlayAnimation.method)(
     WrapAnimation,
     animName,
@@ -118,7 +118,7 @@ WrapBattleBaseAnimation_o *__fastcall BattlePlayAnimationComponent__get_WrapAnim
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     wrapAnimation = WrapBattleBaseAnimation__MakeWrapAnimation(gameObject, 0LL);
     this->fields._wrapAnimation = wrapAnimation;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)p_wrapAnimation,
       (System_Int32_array **)wrapAnimation,
       v6,
@@ -151,17 +151,17 @@ void __fastcall BattlePlayAnimationComponent_SaveData___ctor(
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
 
-  if ( (byte_434F804 & 1) == 0 )
+  if ( (byte_4388DFE & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_434F804 = 1;
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_4388DFE = 1;
   }
   v9 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.componentName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
   v10 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.animName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.animName, v10, v11, v12, v13, v14, v15, v16);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.animName, v10, v11, v12, v13, v14, v15, v16);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -188,7 +188,7 @@ BattlePlayAnimationComponent_SaveData_o *__fastcall BattlePlayAnimationComponent
   BattlePlayAnimationComponent_SaveData_o *result; // x0
 
   this->fields.componentName = objName;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)objName,
     (System_String_array **)data,
@@ -198,10 +198,10 @@ BattlePlayAnimationComponent_SaveData_o *__fastcall BattlePlayAnimationComponent
     v6,
     v7);
   if ( !data )
-    sub_B7076C(v10, v11);
+    sub_B7769C(v10, v11);
   animName = data->fields.animName;
   this->fields.animName = animName;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.animName,
     (System_Int32_array **)animName,
     v12,

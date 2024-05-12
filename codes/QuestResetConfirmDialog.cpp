@@ -1,9 +1,9 @@
 void __fastcall QuestResetConfirmDialog___cctor(const MethodInfo *method)
 {
-  if ( (byte_43566BB & 1) == 0 )
+  if ( (byte_438FD39 & 1) == 0 )
   {
-    sub_B70694(&QuestResetConfirmDialog_TypeInfo);
-    byte_43566BB = 1;
+    sub_B775C4(&QuestResetConfirmDialog_TypeInfo);
+    byte_438FD39 = 1;
   }
   QuestResetConfirmDialog_TypeInfo->static_fields->PARTY_OBJ_POSY_NORMAL = 35.0;
   QuestResetConfirmDialog_TypeInfo->static_fields->PARTY_OBJ_POSY_COND = 55.0;
@@ -13,10 +13,10 @@ void __fastcall QuestResetConfirmDialog___cctor(const MethodInfo *method)
 
 void __fastcall QuestResetConfirmDialog___ctor(QuestResetConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_43566BA & 1) == 0 )
+  if ( (byte_438FD38 & 1) == 0 )
   {
-    sub_B70694(&BaseDialog_TypeInfo);
-    byte_43566BA = 1;
+    sub_B775C4(&BaseDialog_TypeInfo);
+    byte_438FD38 = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -28,11 +28,11 @@ void __fastcall QuestResetConfirmDialog__Close(QuestResetConfirmDialog_o *this, 
 {
   const MethodInfo *v2; // x2
 
-  QuestResetConfirmDialog__Close_34196392(this, 0LL, v2);
+  QuestResetConfirmDialog__Close_34439164(this, 0LL, v2);
 }
 
 
-void __fastcall QuestResetConfirmDialog__Close_34196392(
+void __fastcall QuestResetConfirmDialog__Close_34439164(
         QuestResetConfirmDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -44,14 +44,14 @@ void __fastcall QuestResetConfirmDialog__Close_34196392(
   System_Int32_array *v7; // x7
   System_Action_o *v10; // x20
 
-  if ( (byte_43566B6 & 1) == 0 )
+  if ( (byte_438FD34 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_QuestResetConfirmDialog_EndClose__);
-    byte_43566B6 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_QuestResetConfirmDialog_EndClose__);
+    byte_438FD34 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc,
     (System_Int32_array **)callback,
     (System_String_array **)method,
@@ -61,7 +61,7 @@ void __fastcall QuestResetConfirmDialog__Close_34196392(
     v6,
     v7);
   this->fields.isButtonEnable = 0;
-  v10 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_QuestResetConfirmDialog_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
 }
@@ -84,7 +84,7 @@ void __fastcall QuestResetConfirmDialog__EndClose(QuestResetConfirmDialog_o *thi
   QuestResetConfirmDialog__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc;
@@ -92,7 +92,7 @@ void __fastcall QuestResetConfirmDialog__EndClose(QuestResetConfirmDialog_o *thi
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_B70630(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_B77560(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
     System_Action__Invoke(v12, 0LL);
   }
 }
@@ -111,11 +111,11 @@ void __fastcall QuestResetConfirmDialog__Init(QuestResetConfirmDialog_o *this, c
   UILabel_o *gameObject; // x0
   UnityEngine_Object_o *buttonCancelLabel; // x20
 
-  if ( (byte_43566B4 & 1) == 0 )
+  if ( (byte_438FD32 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43566B4 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438FD32 = 1;
   }
   buttonDecideLabel = (UnityEngine_Object_o *)this->fields.buttonDecideLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -147,7 +147,7 @@ void __fastcall QuestResetConfirmDialog__Init(QuestResetConfirmDialog_o *this, c
   gameObject = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
 LABEL_17:
-    sub_B7076C(gameObject, v4);
+    sub_B7769C(gameObject, v4);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -157,10 +157,10 @@ void __fastcall QuestResetConfirmDialog__OnClickCancel(QuestResetConfirmDialog_o
 {
   QuestResetConfirmDialog_ClickDelegate_o *clickFunc; // x0
 
-  if ( (byte_43566B8 & 1) == 0 )
+  if ( (byte_438FD36 & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_43566B8 = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438FD36 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
@@ -183,10 +183,10 @@ void __fastcall QuestResetConfirmDialog__OnClickDecide(QuestResetConfirmDialog_o
   int32_t v3; // w0
   QuestResetConfirmDialog_ClickDelegate_o *clickFunc; // x0
 
-  if ( (byte_43566B7 & 1) == 0 )
+  if ( (byte_438FD35 & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_43566B7 = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438FD35 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
@@ -291,36 +291,36 @@ void __fastcall QuestResetConfirmDialog__Setup(
   bool v62; // [xsp+48h] [xbp-58h]
   int32_t type; // [xsp+4Ch] [xbp-54h]
 
-  if ( (byte_43566B5 & 1) == 0 )
+  if ( (byte_438FD33 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMaster_QuestGroupMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_QuestMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_QuestReleaseMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_UserEventAlloutBattleMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&IconLabelInfo_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtInfo__ToArray__);
-    sub_B70694(&Method_System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtEquipInfo__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_ServantFaceIconComponent__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtEquipInfo__get_Item__);
-    sub_B70694(&Method_System_Collections_Generic_List_ServantFaceIconComponent__get_Item__);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_QuestResetConfirmDialog_EndOpen__);
-    sub_B70694(&QuestResetConfirmDialog_TypeInfo);
-    sub_B70694(&StringLiteral_11107/*"QUEST_MESSAGE_DLG_QUEST_RESET_CANCEL"*/);
-    sub_B70694(&StringLiteral_11109/*"QUEST_MESSAGE_DLG_QUEST_RESET_MSG"*/);
-    sub_B70694(&StringLiteral_11108/*"QUEST_MESSAGE_DLG_QUEST_RESET_DECIDE"*/);
-    sub_B70694(&StringLiteral_11112/*"QUEST_MESSAGE_DLG_QUEST_RESET_TITLE"*/);
-    sub_B70694(&StringLiteral_11111/*"QUEST_MESSAGE_DLG_QUEST_RESET_NAME"*/);
-    sub_B70694(&StringLiteral_11110/*"QUEST_MESSAGE_DLG_QUEST_RESET_MSG_COND"*/);
-    byte_43566B5 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMaster_QuestGroupMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_QuestMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_QuestReleaseMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_UserEventAlloutBattleMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&IconLabelInfo_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtInfo__ToArray__);
+    sub_B775C4(&Method_System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtEquipInfo__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_ServantFaceIconComponent__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtEquipInfo__get_Item__);
+    sub_B775C4(&Method_System_Collections_Generic_List_ServantFaceIconComponent__get_Item__);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_QuestResetConfirmDialog_EndOpen__);
+    sub_B775C4(&QuestResetConfirmDialog_TypeInfo);
+    sub_B775C4(&StringLiteral_11166/*"QUEST_MESSAGE_DLG_QUEST_RESET_CANCEL"*/);
+    sub_B775C4(&StringLiteral_11168/*"QUEST_MESSAGE_DLG_QUEST_RESET_MSG"*/);
+    sub_B775C4(&StringLiteral_11167/*"QUEST_MESSAGE_DLG_QUEST_RESET_DECIDE"*/);
+    sub_B775C4(&StringLiteral_11171/*"QUEST_MESSAGE_DLG_QUEST_RESET_TITLE"*/);
+    sub_B775C4(&StringLiteral_11170/*"QUEST_MESSAGE_DLG_QUEST_RESET_NAME"*/);
+    sub_B775C4(&StringLiteral_11169/*"QUEST_MESSAGE_DLG_QUEST_RESET_MSG_COND"*/);
+    byte_438FD33 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (UserEventAlloutBattleMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_UserEventAlloutBattleMaster___);
+  Master_WarQuestSelectionMaster = (UserEventAlloutBattleMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_UserEventAlloutBattleMaster___);
   if ( Master_WarQuestSelectionMaster )
   {
     ClearDeckInfo = (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)UserEventAlloutBattleMaster__GetClearDeckInfo(
@@ -331,13 +331,13 @@ void __fastcall QuestResetConfirmDialog__Setup(
       goto LABEL_32;
     v14 = System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
             ClearDeckInfo,
-            (const MethodInfo_30277D4 *)Method_System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtInfo__ToArray__);
+            (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtInfo__ToArray__);
     if ( v14 )
     {
       v21 = v14;
       this->fields.clickFunc = func;
       type = maskType;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&this->fields.clickFunc,
         (System_Int32_array **)func,
         v15,
@@ -352,7 +352,7 @@ void __fastcall QuestResetConfirmDialog__Setup(
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
       }
       v62 = canMaskTouchClose;
-      ClearDeckInfo = (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+      ClearDeckInfo = (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
       servantFaceIconList = this->fields.servantFaceIconList;
       if ( servantFaceIconList )
       {
@@ -364,7 +364,7 @@ void __fastcall QuestResetConfirmDialog__Setup(
           if ( v24 - 4 >= servantFaceIconList->fields._size )
             break;
           if ( v25 >= (unsigned int)servantFaceIconList->fields._size )
-            System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+            System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
           max_length = v21->max_length;
           v27 = (ServantFaceIconComponent_o *)*((_QWORD *)&servantFaceIconList->fields._items->obj.klass + v24);
           if ( (__int64)v25 >= (int)max_length )
@@ -379,17 +379,17 @@ void __fastcall QuestResetConfirmDialog__Setup(
           {
             if ( v25 >= max_length )
             {
-              v61 = sub_B70798(ClearDeckInfo);
-              sub_B70738(v61, 0LL);
+              v61 = sub_B776C8(ClearDeckInfo);
+              sub_B77668(v61, 0LL);
             }
             v28 = *((_QWORD *)&v21->obj.klass + v24);
-            v29 = (IconLabelInfo_o *)sub_B70764(IconLabelInfo_TypeInfo);
+            v29 = (IconLabelInfo_o *)sub_B77694(IconLabelInfo_TypeInfo);
             IconLabelInfo___ctor(v29, 0LL);
             if ( !v28 )
               goto LABEL_32;
             if ( !v29 )
               goto LABEL_32;
-            IconLabelInfo__Set_27789840(v29, 2, *(_DWORD *)(v28 + 24), *(_DWORD *)(v28 + 24), 0, 0, 1, 0, 0LL);
+            IconLabelInfo__Set_28141596(v29, 2, *(_DWORD *)(v28 + 24), *(_DWORD *)(v28 + 24), 0, 0, 1, 0, 0LL);
             if ( !v23 )
               goto LABEL_32;
             ClearDeckInfo = (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)ServantLimitImageMaster__GetServantLimitCountSealAfter(
@@ -399,7 +399,7 @@ void __fastcall QuestResetConfirmDialog__Setup(
                                                                                             0LL);
             if ( !v27 )
               goto LABEL_32;
-            ServantFaceIconComponent__Set_31478240(
+            ServantFaceIconComponent__Set_31755472(
               v27,
               *(_DWORD *)(v28 + 20),
               *(_DWORD *)(v28 + 28),
@@ -430,7 +430,7 @@ void __fastcall QuestResetConfirmDialog__Setup(
               v33 = 0;
               v32 = 0;
             }
-            ServantFaceIconComponent__SetEquip_31482660(v27, *(_DWORD *)(v28 + 20), v32, v33, 0LL);
+            ServantFaceIconComponent__SetEquip_31759892(v27, *(_DWORD *)(v28 + 20), v32, v33, 0LL);
           }
           servantFaceIconList = this->fields.servantFaceIconList;
           ++v24;
@@ -442,8 +442,8 @@ void __fastcall QuestResetConfirmDialog__Setup(
         {
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
         }
-        v34 = (QuestGroupMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_QuestGroupMaster___);
-        ClearDeckInfo = (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_QuestReleaseMaster___);
+        v34 = (QuestGroupMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_QuestGroupMaster___);
+        ClearDeckInfo = (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_QuestReleaseMaster___);
         if ( v34 )
         {
           v35 = (QuestReleaseMaster_o *)ClearDeckInfo;
@@ -508,7 +508,7 @@ void __fastcall QuestResetConfirmDialog__Setup(
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
               ClearDeckInfo = (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)LocalizationManager__Get(
-                                                                                              (System_String_o *)StringLiteral_11112/*"QUEST_MESSAGE_DLG_QUEST_RESET_TITLE"*/,
+                                                                                              (System_String_o *)StringLiteral_11171/*"QUEST_MESSAGE_DLG_QUEST_RESET_TITLE"*/,
                                                                                               0LL);
               if ( !v45 )
                 goto LABEL_32;
@@ -527,7 +527,7 @@ void __fastcall QuestResetConfirmDialog__Setup(
               {
                 j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
               }
-              ClearDeckInfo = (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_QuestMaster___);
+              ClearDeckInfo = (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_QuestMaster___);
               if ( !ClearDeckInfo )
                 goto LABEL_32;
               QuestEntity = QuestMaster__getQuestEntity((QuestMaster_o *)ClearDeckInfo, questId, 0LL);
@@ -539,7 +539,7 @@ void __fastcall QuestResetConfirmDialog__Setup(
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
               ClearDeckInfo = (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)LocalizationManager__Get(
-                                                                                              (System_String_o *)StringLiteral_11111/*"QUEST_MESSAGE_DLG_QUEST_RESET_NAME"*/,
+                                                                                              (System_String_o *)StringLiteral_11170/*"QUEST_MESSAGE_DLG_QUEST_RESET_NAME"*/,
                                                                                               0LL);
               if ( !v49 )
                 goto LABEL_32;
@@ -561,7 +561,7 @@ void __fastcall QuestResetConfirmDialog__Setup(
               }
               if ( !v52 )
                 goto LABEL_32;
-              UILabel__SetCondensedScale_41496620(
+              UILabel__SetCondensedScale_41780892(
                 v52,
                 QuestResetConfirmDialog_TypeInfo->static_fields->QUEST_NAME_LABEL_MAX_WITDH,
                 0LL);
@@ -582,7 +582,7 @@ void __fastcall QuestResetConfirmDialog__Setup(
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v55 = &StringLiteral_11110/*"QUEST_MESSAGE_DLG_QUEST_RESET_MSG_COND"*/;
+                v55 = &StringLiteral_11169/*"QUEST_MESSAGE_DLG_QUEST_RESET_MSG_COND"*/;
               }
               else
               {
@@ -591,7 +591,7 @@ void __fastcall QuestResetConfirmDialog__Setup(
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v55 = &StringLiteral_11109/*"QUEST_MESSAGE_DLG_QUEST_RESET_MSG"*/;
+                v55 = &StringLiteral_11168/*"QUEST_MESSAGE_DLG_QUEST_RESET_MSG"*/;
               }
               ClearDeckInfo = (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)LocalizationManager__Get(
                                                                                               (System_String_o *)*v55,
@@ -615,7 +615,7 @@ void __fastcall QuestResetConfirmDialog__Setup(
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
               ClearDeckInfo = (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)LocalizationManager__Get(
-                                                                                              (System_String_o *)StringLiteral_11108/*"QUEST_MESSAGE_DLG_QUEST_RESET_DECIDE"*/,
+                                                                                              (System_String_o *)StringLiteral_11167/*"QUEST_MESSAGE_DLG_QUEST_RESET_DECIDE"*/,
                                                                                               0LL);
               if ( !v57 )
                 goto LABEL_32;
@@ -636,7 +636,7 @@ void __fastcall QuestResetConfirmDialog__Setup(
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
             ClearDeckInfo = (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)LocalizationManager__Get(
-                                                                                            (System_String_o *)StringLiteral_11107/*"QUEST_MESSAGE_DLG_QUEST_RESET_CANCEL"*/,
+                                                                                            (System_String_o *)StringLiteral_11166/*"QUEST_MESSAGE_DLG_QUEST_RESET_CANCEL"*/,
                                                                                             0LL);
             if ( v59 )
             {
@@ -644,7 +644,7 @@ void __fastcall QuestResetConfirmDialog__Setup(
 LABEL_113:
               *(_WORD *)&this->fields.isButtonEnable = 256;
               BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, v62, 0LL);
-              v60 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+              v60 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
               System_Action___ctor(v60, (Il2CppObject *)this, Method_QuestResetConfirmDialog_EndOpen__, 0LL);
               BaseDialog__Open((BaseDialog_o *)this, v60, type, 0LL);
               return;
@@ -653,7 +653,7 @@ LABEL_113:
         }
       }
 LABEL_32:
-      sub_B7076C(ClearDeckInfo, v13);
+      sub_B7769C(ClearDeckInfo, v13);
     }
   }
 }
@@ -683,10 +683,10 @@ UnityEngine_GameObject_o *__fastcall QuestResetConfirmDialog__get_closeBtnObject
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_43566B9 & 1) == 0 )
+  if ( (byte_438FD37 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43566B9 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438FD37 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -698,7 +698,7 @@ UnityEngine_GameObject_o *__fastcall QuestResetConfirmDialog__get_closeBtnObject
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v6 )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }
 
@@ -722,7 +722,7 @@ void __fastcall QuestResetConfirmDialog_ClickDelegate___ctor(
   p_method = (BattleServantConfConponent_o *)&this->fields.method;
   p_method->monitor = *(void **)&method;
   p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B70630(
+  sub_B77560(
     p_method,
     (System_Int32_array **)object,
     *(System_String_array ***)&method,
@@ -745,14 +745,14 @@ System_IAsyncResult_o *__fastcall QuestResetConfirmDialog_ClickDelegate__BeginIn
   char v10[4]; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10[0] = isOk;
-  if ( (byte_4351B14 & 1) == 0 )
+  if ( (byte_438B192 & 1) == 0 )
   {
-    sub_B70694(&bool_TypeInfo);
-    byte_4351B14 = 1;
+    sub_B775C4(&bool_TypeInfo);
+    byte_438B192 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback);
-  return (System_IAsyncResult_o *)sub_B70638(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_B77568(this, v9, callback, object);
 }
 
 
@@ -761,7 +761,7 @@ void __fastcall QuestResetConfirmDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7063C(result, 0LL, method);
+  sub_B7756C(result, 0LL, method);
 }
 
 
@@ -818,8 +818,8 @@ LABEL_5:
       v20 = *(_QWORD *)&v18->fields.extra_arg;
       v21 = *(void (__fastcall **)(bool, __int64))&v18->fields.method_ptr;
       if ( *(__int16 *)(v20 + 72) == -1 )
-        sub_B70750(*(_QWORD *)&v18->fields.extra_arg, isOk);
-      if ( (sub_B706C4(v20) & 1) == 0 )
+        sub_B77680(*(_QWORD *)&v18->fields.extra_arg, isOk);
+      if ( (sub_B775F4(v20) & 1) == 0 )
         break;
       if ( *(_BYTE *)(v20 + 74) != 1 )
         goto LABEL_36;
@@ -830,8 +830,8 @@ LABEL_37:
     }
     if ( v19 && *(__int16 *)(v20 + 72) != -1 && (*(_BYTE *)(*v19 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v22 = sub_B706BC(v20);
-      v23 = sub_B70AC0(v20);
+      v22 = sub_B775EC(v20);
+      v23 = sub_B779F0(v20);
       if ( (v22 & 1) != 0 )
       {
         if ( (v23 & 1) != 0 )
@@ -855,7 +855,7 @@ LABEL_37:
           else
           {
 LABEL_35:
-            v16 = sub_B08590(v19, v25, v26);
+            v16 = sub_B0F4C0(v19, v25, v26);
           }
           v15 = *(_QWORD *)(v16 + 8);
         }
@@ -863,7 +863,7 @@ LABEL_35:
         {
           v15 = *(_QWORD *)(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 320);
         }
-        v17 = (void (__fastcall **)(__int64 *, bool, _QWORD))sub_B70744(v15, v20);
+        v17 = (void (__fastcall **)(__int64 *, bool, _QWORD))sub_B77674(v15, v20);
         (*v17)(v19, isOk, v17);
       }
       else
@@ -889,7 +889,7 @@ LABEL_35:
           else
           {
 LABEL_11:
-            v14 = sub_B08590(v19, class_0, v9);
+            v14 = sub_B0F4C0(v19, class_0, v9);
           }
           (*(void (__fastcall **)(__int64 *, bool, _QWORD))v14)(v19, isOk, *(_QWORD *)(v14 + 8));
         }

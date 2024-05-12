@@ -4,16 +4,16 @@ void __fastcall LimitUpResultInfoRewardComponent___cctor(const MethodInfo *metho
   UnityEngine_Color32_o p_c; // 0:x0.8
   UnityEngine_Color32_o rgba; // 0:x0.8
 
-  if ( (byte_43511CB & 1) == 0 )
+  if ( (byte_438A7A3 & 1) == 0 )
   {
-    sub_B70694(&LimitUpResultInfoRewardComponent_TypeInfo);
-    byte_43511CB = 1;
+    sub_B775C4(&LimitUpResultInfoRewardComponent_TypeInfo);
+    byte_438A7A3 = 1;
   }
   p_c = (UnityEngine_Color32_o)&c;
   c.fields.rgba = 0;
   UnityEngine_Color32___ctor(p_c, 0x36u, 0x3Au, 0x3Du, 0xFFu, 0LL);
   rgba = (UnityEngine_Color32_o)(unsigned int)c.fields.rgba;
-  LimitUpResultInfoRewardComponent_TypeInfo->static_fields->LIMIT_UP_REWARD_GET_NAME_OUTLINE_COLOR = UnityEngine_Color32__op_Implicit_41067916(rgba, 0LL);
+  LimitUpResultInfoRewardComponent_TypeInfo->static_fields->LIMIT_UP_REWARD_GET_NAME_OUTLINE_COLOR = UnityEngine_Color32__op_Implicit_41413804(rgba, 0LL);
 }
 
 
@@ -58,17 +58,17 @@ void __fastcall LimitUpResultInfoRewardComponent__Setup(
   int v36; // s0
   const MethodInfo *v40; // x3
 
-  if ( (byte_43511CA & 1) == 0 )
+  if ( (byte_438A7A2 & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&LimitUpResultInfoRewardComponent_TypeInfo);
-    sub_B70694(&StringLiteral_19660/*"icon_reward_get"*/);
-    byte_43511CA = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&LimitUpResultInfoRewardComponent_TypeInfo);
+    sub_B775C4(&StringLiteral_19750/*"icon_reward_get"*/);
+    byte_438A7A2 = 1;
   }
   rewardInfoGetIcon = this->fields.rewardInfoGetIcon;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(rewardInfoGetIcon, (System_String_o *)StringLiteral_19660/*"icon_reward_get"*/, 0LL);
+  AtlasManager__SetEventUI(rewardInfoGetIcon, (System_String_o *)StringLiteral_19750/*"icon_reward_get"*/, 0LL);
   rewardInfoIcon = this->fields.rewardInfoIcon;
   if ( !rewardInfoIcon )
     goto LABEL_24;
@@ -104,7 +104,7 @@ void __fastcall LimitUpResultInfoRewardComponent__Setup(
       }
     }
 LABEL_24:
-    sub_B7076C(rewardInfoIcon, v12);
+    sub_B7769C(rewardInfoIcon, v12);
   }
   *(UnityEngine_Color_o *)&v15 = UnityEngine_Color__get_gray(0LL);
   if ( !v14 )

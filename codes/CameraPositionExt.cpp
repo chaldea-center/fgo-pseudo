@@ -42,27 +42,27 @@ System_String_o *__fastcall CameraPositionExt__DisplayName(int32_t camPos, const
   __int64 v43; // x0
   __int64 v44; // x0
 
-  if ( (byte_4354AFF & 1) == 0 )
+  if ( (byte_438E3BE & 1) == 0 )
   {
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_9713/*"NobleStartPos_enemy"*/);
-    sub_B70694(&StringLiteral_15120/*"Unit_Player2"*/);
-    sub_B70694(&StringLiteral_9714/*"NobleStartPos_player"*/);
-    sub_B70694(&StringLiteral_2844/*"BattleFazeCameraPos"*/);
-    sub_B70694(&StringLiteral_15119/*"Unit_Enemy2"*/);
-    byte_4354AFF = 1;
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_9772/*"NobleStartPos_enemy"*/);
+    sub_B775C4(&StringLiteral_15190/*"Unit_Player2"*/);
+    sub_B775C4(&StringLiteral_9773/*"NobleStartPos_player"*/);
+    sub_B775C4(&StringLiteral_2890/*"BattleFazeCameraPos"*/);
+    sub_B775C4(&StringLiteral_15189/*"Unit_Enemy2"*/);
+    byte_438E3BE = 1;
   }
-  v3 = sub_B706AC(string___TypeInfo, 5LL);
+  v3 = sub_B775DC(string___TypeInfo, 5LL);
   if ( !v3 )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   v11 = v3;
-  v12 = StringLiteral_15120/*"Unit_Player2"*/;
-  if ( StringLiteral_15120/*"Unit_Player2"*/ )
+  v12 = StringLiteral_15190/*"Unit_Player2"*/;
+  if ( StringLiteral_15190/*"Unit_Player2"*/ )
   {
-    v12 = sub_B70754(StringLiteral_15120/*"Unit_Player2"*/, *(_QWORD *)(*(_QWORD *)v11 + 64LL));
+    v12 = sub_B77684(StringLiteral_15190/*"Unit_Player2"*/, *(_QWORD *)(*(_QWORD *)v11 + 64LL));
     if ( !v12 )
       goto LABEL_32;
-    v13 = (System_Int32_array **)StringLiteral_15120/*"Unit_Player2"*/;
+    v13 = (System_Int32_array **)StringLiteral_15190/*"Unit_Player2"*/;
   }
   else
   {
@@ -71,14 +71,14 @@ System_String_o *__fastcall CameraPositionExt__DisplayName(int32_t camPos, const
   if ( !*(_DWORD *)(v11 + 24) )
     goto LABEL_31;
   *(_QWORD *)(v11 + 32) = v13;
-  sub_B70630((BattleServantConfConponent_o *)(v11 + 32), v13, v5, v6, v7, v8, v9, v10);
-  v12 = StringLiteral_15119/*"Unit_Enemy2"*/;
-  if ( StringLiteral_15119/*"Unit_Enemy2"*/ )
+  sub_B77560((BattleServantConfConponent_o *)(v11 + 32), v13, v5, v6, v7, v8, v9, v10);
+  v12 = StringLiteral_15189/*"Unit_Enemy2"*/;
+  if ( StringLiteral_15189/*"Unit_Enemy2"*/ )
   {
-    v12 = sub_B70754(StringLiteral_15119/*"Unit_Enemy2"*/, *(_QWORD *)(*(_QWORD *)v11 + 64LL));
+    v12 = sub_B77684(StringLiteral_15189/*"Unit_Enemy2"*/, *(_QWORD *)(*(_QWORD *)v11 + 64LL));
     if ( !v12 )
       goto LABEL_32;
-    v20 = (System_Int32_array **)StringLiteral_15119/*"Unit_Enemy2"*/;
+    v20 = (System_Int32_array **)StringLiteral_15189/*"Unit_Enemy2"*/;
   }
   else
   {
@@ -87,14 +87,14 @@ System_String_o *__fastcall CameraPositionExt__DisplayName(int32_t camPos, const
   if ( *(_DWORD *)(v11 + 24) <= 1u )
     goto LABEL_31;
   *(_QWORD *)(v11 + 40) = v20;
-  sub_B70630((BattleServantConfConponent_o *)(v11 + 40), v20, v14, v15, v16, v17, v18, v19);
-  v12 = StringLiteral_9714/*"NobleStartPos_player"*/;
-  if ( StringLiteral_9714/*"NobleStartPos_player"*/ )
+  sub_B77560((BattleServantConfConponent_o *)(v11 + 40), v20, v14, v15, v16, v17, v18, v19);
+  v12 = StringLiteral_9773/*"NobleStartPos_player"*/;
+  if ( StringLiteral_9773/*"NobleStartPos_player"*/ )
   {
-    v12 = sub_B70754(StringLiteral_9714/*"NobleStartPos_player"*/, *(_QWORD *)(*(_QWORD *)v11 + 64LL));
+    v12 = sub_B77684(StringLiteral_9773/*"NobleStartPos_player"*/, *(_QWORD *)(*(_QWORD *)v11 + 64LL));
     if ( !v12 )
       goto LABEL_32;
-    v27 = (System_Int32_array **)StringLiteral_9714/*"NobleStartPos_player"*/;
+    v27 = (System_Int32_array **)StringLiteral_9773/*"NobleStartPos_player"*/;
   }
   else
   {
@@ -103,14 +103,14 @@ System_String_o *__fastcall CameraPositionExt__DisplayName(int32_t camPos, const
   if ( *(_DWORD *)(v11 + 24) <= 2u )
     goto LABEL_31;
   *(_QWORD *)(v11 + 48) = v27;
-  sub_B70630((BattleServantConfConponent_o *)(v11 + 48), v27, v21, v22, v23, v24, v25, v26);
-  v12 = StringLiteral_9713/*"NobleStartPos_enemy"*/;
-  if ( StringLiteral_9713/*"NobleStartPos_enemy"*/ )
+  sub_B77560((BattleServantConfConponent_o *)(v11 + 48), v27, v21, v22, v23, v24, v25, v26);
+  v12 = StringLiteral_9772/*"NobleStartPos_enemy"*/;
+  if ( StringLiteral_9772/*"NobleStartPos_enemy"*/ )
   {
-    v12 = sub_B70754(StringLiteral_9713/*"NobleStartPos_enemy"*/, *(_QWORD *)(*(_QWORD *)v11 + 64LL));
+    v12 = sub_B77684(StringLiteral_9772/*"NobleStartPos_enemy"*/, *(_QWORD *)(*(_QWORD *)v11 + 64LL));
     if ( !v12 )
       goto LABEL_32;
-    v34 = (System_Int32_array **)StringLiteral_9713/*"NobleStartPos_enemy"*/;
+    v34 = (System_Int32_array **)StringLiteral_9772/*"NobleStartPos_enemy"*/;
   }
   else
   {
@@ -119,30 +119,30 @@ System_String_o *__fastcall CameraPositionExt__DisplayName(int32_t camPos, const
   if ( *(_DWORD *)(v11 + 24) <= 3u )
     goto LABEL_31;
   *(_QWORD *)(v11 + 56) = v34;
-  sub_B70630((BattleServantConfConponent_o *)(v11 + 56), v34, v28, v29, v30, v31, v32, v33);
-  v12 = StringLiteral_2844/*"BattleFazeCameraPos"*/;
-  if ( !StringLiteral_2844/*"BattleFazeCameraPos"*/ )
+  sub_B77560((BattleServantConfConponent_o *)(v11 + 56), v34, v28, v29, v30, v31, v32, v33);
+  v12 = StringLiteral_2890/*"BattleFazeCameraPos"*/;
+  if ( !StringLiteral_2890/*"BattleFazeCameraPos"*/ )
   {
     v41 = 0LL;
     goto LABEL_28;
   }
-  v12 = sub_B70754(StringLiteral_2844/*"BattleFazeCameraPos"*/, *(_QWORD *)(*(_QWORD *)v11 + 64LL));
+  v12 = sub_B77684(StringLiteral_2890/*"BattleFazeCameraPos"*/, *(_QWORD *)(*(_QWORD *)v11 + 64LL));
   if ( !v12 )
   {
 LABEL_32:
-    v44 = sub_B7078C(v12);
-    sub_B70738(v44, 0LL);
+    v44 = sub_B776BC(v12);
+    sub_B77668(v44, 0LL);
   }
-  v41 = (System_Int32_array **)StringLiteral_2844/*"BattleFazeCameraPos"*/;
+  v41 = (System_Int32_array **)StringLiteral_2890/*"BattleFazeCameraPos"*/;
 LABEL_28:
   if ( *(_DWORD *)(v11 + 24) <= 4u
     || (*(_QWORD *)(v11 + 64) = v41,
-        sub_B70630((BattleServantConfConponent_o *)(v11 + 64), v41, v35, v36, v37, v38, v39, v40),
+        sub_B77560((BattleServantConfConponent_o *)(v11 + 64), v41, v35, v36, v37, v38, v39, v40),
         *(_DWORD *)(v11 + 24) <= (unsigned int)camPos) )
   {
 LABEL_31:
-    v43 = sub_B70798(v12);
-    sub_B70738(v43, 0LL);
+    v43 = sub_B776C8(v12);
+    sub_B77668(v43, 0LL);
   }
   return *(System_String_o **)(v11 + 8LL * camPos + 32);
 }

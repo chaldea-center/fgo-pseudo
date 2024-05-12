@@ -47,10 +47,10 @@ void __fastcall SummonEffectAspectSetComponent__Start(SummonEffectAspectSetCompo
   UnityEngine_ParticleSystem_MainModule_o v40; // 0:x0.8
   UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4355E41 & 1) == 0 )
+  if ( (byte_438F357 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_ParticleSystem___);
-    byte_4355E41 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+    byte_438F357 = 1;
   }
   m_ParticleSystem = 0LL;
   memset(&v35, 0, sizeof(v35));
@@ -96,7 +96,7 @@ void __fastcall SummonEffectAspectSetComponent__Start(SummonEffectAspectSetCompo
     goto LABEL_61;
   go_above_cardScaler = (UnityEngine_Transform_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                      (UnityEngine_Component_o *)go_above_cardScaler,
-                                                     (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+                                                     (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
   if ( !go_above_cardScaler )
     goto LABEL_61;
   v13 = (UnityEngine_ParticleSystem_o *)go_above_cardScaler;
@@ -130,7 +130,7 @@ void __fastcall SummonEffectAspectSetComponent__Start(SummonEffectAspectSetCompo
           {
             go_above_cardScaler = (UnityEngine_Transform_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                                (UnityEngine_Component_o *)go_above_cardScaler,
-                                                               (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+                                                               (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
             if ( go_above_cardScaler )
             {
               v16 = (UnityEngine_ParticleSystem_o *)go_above_cardScaler;
@@ -158,7 +158,7 @@ void __fastcall SummonEffectAspectSetComponent__Start(SummonEffectAspectSetCompo
     goto LABEL_61;
   go_above_cardScaler = (UnityEngine_Transform_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                      (UnityEngine_Component_o *)go_above_cardScaler,
-                                                     (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+                                                     (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
   if ( !go_above_cardScaler )
     goto LABEL_61;
   v18 = (UnityEngine_ParticleSystem_o *)go_above_cardScaler;
@@ -192,7 +192,7 @@ void __fastcall SummonEffectAspectSetComponent__Start(SummonEffectAspectSetCompo
           {
             go_above_cardScaler = (UnityEngine_Transform_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                                (UnityEngine_Component_o *)go_above_cardScaler,
-                                                               (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+                                                               (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
             if ( go_above_cardScaler )
             {
               v21 = (UnityEngine_ParticleSystem_o *)go_above_cardScaler;
@@ -220,7 +220,7 @@ void __fastcall SummonEffectAspectSetComponent__Start(SummonEffectAspectSetCompo
     goto LABEL_61;
   go_above_cardScaler = (UnityEngine_Transform_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                      (UnityEngine_Component_o *)go_above_cardScaler,
-                                                     (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+                                                     (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
   if ( !go_above_cardScaler )
     goto LABEL_61;
   v23 = (UnityEngine_ParticleSystem_o *)go_above_cardScaler;
@@ -254,7 +254,7 @@ void __fastcall SummonEffectAspectSetComponent__Start(SummonEffectAspectSetCompo
           {
             go_above_cardScaler = (UnityEngine_Transform_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                                (UnityEngine_Component_o *)go_above_cardScaler,
-                                                               (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+                                                               (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
             if ( go_above_cardScaler )
             {
               v26 = (UnityEngine_ParticleSystem_o *)go_above_cardScaler;
@@ -288,7 +288,7 @@ void __fastcall SummonEffectAspectSetComponent__Start(SummonEffectAspectSetCompo
   go_above_cardScaler = (UnityEngine_Transform_o *)this->fields.ps_appear_lightburst2;
   if ( !go_above_cardScaler )
 LABEL_61:
-    sub_B7076C(go_above_cardScaler, v4);
+    sub_B7769C(go_above_cardScaler, v4);
   m_ParticleSystem = UnityEngine_ParticleSystem__get_main((UnityEngine_ParticleSystem_o *)go_above_cardScaler, 0LL).fields.m_ParticleSystem;
   v39.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
   UnityEngine_ParticleSystem_MainModule__get_startSize(&v34, v39, 0LL);

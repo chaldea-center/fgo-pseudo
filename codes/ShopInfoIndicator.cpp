@@ -19,17 +19,17 @@ System_Collections_IEnumerator_o *__fastcall ShopInfoIndicator__InformationChang
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_43536AC & 1) == 0 )
+  if ( (byte_438CF6A & 1) == 0 )
   {
-    sub_B70694(&ShopInfoIndicator__InformationChangeCR_d__8_TypeInfo);
-    byte_43536AC = 1;
+    sub_B775C4(&ShopInfoIndicator__InformationChangeCR_d__8_TypeInfo);
+    byte_438CF6A = 1;
   }
-  v3 = sub_B70764(ShopInfoIndicator__InformationChangeCR_d__8_TypeInfo);
+  v3 = sub_B77694(ShopInfoIndicator__InformationChangeCR_d__8_TypeInfo);
   ShopInfoIndicator__InformationChangeCR_d__8___ctor((ShopInfoIndicator__InformationChangeCR_d__8_o *)v3, 0, 0LL);
   if ( !v3 )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  sub_B77560((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -39,18 +39,18 @@ void __fastcall ShopInfoIndicator__InformationPanelTweenAlpha(ShopInfoIndicator_
   struct UIPanel_o *informationPanel; // x0
   UnityEngine_Object_o *Component_WebViewObject; // x19
 
-  if ( (byte_43536AD & 1) == 0 )
+  if ( (byte_438CF6B & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_TweenAlpha___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43536AD = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_TweenAlpha___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438CF6B = 1;
   }
   informationPanel = this->fields.informationPanel;
   if ( !informationPanel )
     goto LABEL_12;
   Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                       (UnityEngine_Component_o *)informationPanel,
-                                                      (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_TweenAlpha___);
+                                                      (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_TweenAlpha___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -66,7 +66,7 @@ void __fastcall ShopInfoIndicator__InformationPanelTweenAlpha(ShopInfoIndicator_
       return;
     }
 LABEL_12:
-    sub_B7076C(informationPanel, method);
+    sub_B7769C(informationPanel, method);
   }
 }
 
@@ -75,10 +75,10 @@ void __fastcall ShopInfoIndicator__OnClick(ShopInfoIndicator_o *this, const Meth
 {
   const MethodInfo *v3; // x1
 
-  if ( (byte_43536AE & 1) == 0 )
+  if ( (byte_438CF6C & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_43536AE = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438CF6C = 1;
   }
   if ( !this->fields.isClick )
   {
@@ -109,7 +109,7 @@ void __fastcall ShopInfoIndicator__StartInformationChange(ShopInfoIndicator_o *t
   ShopInfoIndicator__StopInformationChange(this, method);
   v4 = ShopInfoIndicator__InformationChangeCR(this, v3);
   this->fields.InformationChangeCRW = v4;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.InformationChangeCRW,
     (System_Int32_array **)v4,
     v5,
@@ -118,7 +118,7 @@ void __fastcall ShopInfoIndicator__StartInformationChange(ShopInfoIndicator_o *t
     v8,
     v9,
     v10);
-  UnityEngine_MonoBehaviour__StartCoroutine_36062060(
+  UnityEngine_MonoBehaviour__StartCoroutine_36304832(
     (UnityEngine_MonoBehaviour_o *)this,
     this->fields.InformationChangeCRW,
     0LL);
@@ -143,7 +143,7 @@ void __fastcall ShopInfoIndicator__StopInformationChange(ShopInfoIndicator_o *th
   {
     UnityEngine_MonoBehaviour__StopCoroutine((UnityEngine_MonoBehaviour_o *)this, InformationChangeCRW, 0LL);
     this->fields.InformationChangeCRW = 0LL;
-    sub_B70630((BattleServantConfConponent_o *)p_InformationChangeCRW, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_B77560((BattleServantConfConponent_o *)p_InformationChangeCRW, 0LL, v5, v6, v7, v8, v9, v10);
   }
 }
 
@@ -180,8 +180,8 @@ void __fastcall ShopInfoIndicator__SwitchInfo(ShopInfoIndicator_o *this, const M
         goto LABEL_7;
     }
 LABEL_16:
-    v11 = sub_B70798(this);
-    sub_B70738(v11, 0LL);
+    v11 = sub_B776C8(this);
+    sub_B77668(v11, 0LL);
   }
 LABEL_7:
   v6 = v4->fields.infos;
@@ -195,7 +195,7 @@ LABEL_7:
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL), (v8 = v4->fields.infos) == 0LL) )
   {
 LABEL_15:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   v9 = v4->fields.infoIndex;
   if ( v9 < (signed int)(v8->max_length - 1) )
@@ -280,11 +280,11 @@ bool __fastcall ShopInfoIndicator__InformationChangeCR_d__8__MoveNext(
   System_Int32_array **wait_5__3; // x1
 
   v2 = this;
-  if ( (byte_434F87C & 1) == 0 )
+  if ( (byte_4388E76 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    this = (ShopInfoIndicator__InformationChangeCR_d__8_o *)sub_B70694(&UnityEngine_WaitForEndOfFrame_TypeInfo);
-    byte_434F87C = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    this = (ShopInfoIndicator__InformationChangeCR_d__8_o *)sub_B775C4(&UnityEngine_WaitForEndOfFrame_TypeInfo);
+    byte_4388E76 = 1;
   }
   _4__this = v2->fields.__4__this;
   switch ( v2->fields.__1__state )
@@ -303,11 +303,11 @@ bool __fastcall ShopInfoIndicator__InformationChangeCR_d__8__MoveNext(
         1.0);
       _4__this->fields.isClick = 1;
       v2->fields._ta_5__2 = 0LL;
-      sub_B70630((BattleServantConfConponent_o *)&v2->fields._ta_5__2, 0LL, v4, v5, v6, v7, v8, v9);
-      v10 = (UnityEngine_WaitForEndOfFrame_o *)sub_B70764(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      sub_B77560((BattleServantConfConponent_o *)&v2->fields._ta_5__2, 0LL, v4, v5, v6, v7, v8, v9);
+      v10 = (UnityEngine_WaitForEndOfFrame_o *)sub_B77694(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v10, 0LL);
       v2->fields._wait_5__3 = v10;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&v2->fields._wait_5__3,
         (System_Int32_array **)v10,
         v11,
@@ -337,7 +337,7 @@ bool __fastcall ShopInfoIndicator__InformationChangeCR_d__8__MoveNext(
         {
           wait_5__3 = (System_Int32_array **)v2->fields._wait_5__3;
           v2->fields.__2__current = (Il2CppObject *)wait_5__3;
-          sub_B70630((BattleServantConfConponent_o *)&v2->fields.__2__current, wait_5__3, v19, v20, v21, v22, v23, v24);
+          sub_B77560((BattleServantConfConponent_o *)&v2->fields.__2__current, wait_5__3, v19, v20, v21, v22, v23, v24);
           v42 = 2;
           goto LABEL_48;
         }
@@ -351,7 +351,7 @@ LABEL_34:
         v44 = (System_Int32_array **)TweenAlpha__Begin(gameObject, 0.5, 0.0, 0LL);
         v2->fields._ta_5__2 = (struct TweenAlpha_o *)v44;
         v25 = (ShopInfoIndicator__InformationChangeCR_d__8_o **)&v2->fields._ta_5__2;
-        sub_B70630((BattleServantConfConponent_o *)&v2->fields._ta_5__2, v44, v45, v46, v47, v48, v49, v50);
+        sub_B77560((BattleServantConfConponent_o *)&v2->fields._ta_5__2, v44, v45, v46, v47, v48, v49, v50);
         ta_5__2 = (UnityEngine_Object_o *)v2->fields._ta_5__2;
         if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -376,7 +376,7 @@ LABEL_15:
           v27 = (System_Int32_array **)TweenAlpha__Begin(v26, 0.5, 1.0, 0LL);
           v2->fields._ta_5__2 = (struct TweenAlpha_o *)v27;
           p_ta_5__2 = (ShopInfoIndicator__InformationChangeCR_d__8_o **)&v2->fields._ta_5__2;
-          sub_B70630((BattleServantConfConponent_o *)&v2->fields._ta_5__2, v27, v28, v29, v30, v31, v32, v33);
+          sub_B77560((BattleServantConfConponent_o *)&v2->fields._ta_5__2, v27, v28, v29, v30, v31, v32, v33);
           ShopInfoIndicator__SwitchInfo(_4__this, 0LL);
           v34 = (UnityEngine_Object_o *)v2->fields._ta_5__2;
           if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -405,7 +405,7 @@ LABEL_25:
               {
                 v41 = (System_Int32_array **)v2->fields._wait_5__3;
                 v2->fields.__2__current = (Il2CppObject *)v41;
-                sub_B70630((BattleServantConfConponent_o *)&v2->fields.__2__current, v41, v35, v36, v37, v38, v39, v40);
+                sub_B77560((BattleServantConfConponent_o *)&v2->fields.__2__current, v41, v35, v36, v37, v38, v39, v40);
                 v42 = 1;
                 goto LABEL_48;
               }
@@ -440,12 +440,12 @@ LABEL_42:
         goto LABEL_15;
       if ( !_4__this )
 LABEL_50:
-        sub_B7076C(this, method);
+        sub_B7769C(this, method);
       if ( _4__this->fields.isClick )
         goto LABEL_15;
       v58 = (System_Int32_array **)v2->fields._wait_5__3;
       v2->fields.__2__current = (Il2CppObject *)v58;
-      sub_B70630((BattleServantConfConponent_o *)&v2->fields.__2__current, v58, v52, v53, v54, v55, v56, v57);
+      sub_B77560((BattleServantConfConponent_o *)&v2->fields.__2__current, v58, v52, v53, v54, v55, v56, v57);
       v42 = 3;
 LABEL_48:
       result = 1;
@@ -477,11 +477,11 @@ void __fastcall __noreturn ShopInfoIndicator__InformationChangeCR_d__8__System_C
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B70698(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B70764(v2);
+  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B70698(&Method_ShopInfoIndicator__InformationChangeCR_d__8_System_Collections_IEnumerator_Reset__);
-  sub_B70738(v3, v4);
+  v4 = sub_B775C8(&Method_ShopInfoIndicator__InformationChangeCR_d__8_System_Collections_IEnumerator_Reset__);
+  sub_B77668(v3, v4);
 }
 
 

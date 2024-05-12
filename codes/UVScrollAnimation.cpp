@@ -28,16 +28,16 @@ void __fastcall UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, con
   float v9; // s9
   UnityEngine_Vector2_o v10; // 0:s0.4,4:s1.4
 
-  if ( (byte_435618C & 1) == 0 )
+  if ( (byte_438F80A & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_16241/*"_MainTex"*/);
-    byte_435618C = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_16311/*"_MainTex"*/);
+    byte_438F80A = 1;
   }
   Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                       (UnityEngine_Component_o *)this,
-                                                      (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                                      (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -51,7 +51,7 @@ void __fastcall UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, con
     material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)Component_WebViewObject, 0LL);
     if ( !material )
       goto LABEL_13;
-    if ( UnityEngine_Material__HasProperty_41121140(material, (System_String_o *)StringLiteral_16241/*"_MainTex"*/, 0LL) )
+    if ( UnityEngine_Material__HasProperty_41467028(material, (System_String_o *)StringLiteral_16311/*"_MainTex"*/, 0LL) )
     {
       time = UnityEngine_Time__get_time(0LL);
       v7 = UnityEngine_Mathf__Repeat(time * this->fields.offsetYPerSec, 1.0, 0LL);
@@ -62,11 +62,11 @@ void __fastcall UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, con
       {
         v10.fields.x = v7;
         v10.fields.y = v9;
-        UnityEngine_Material__SetTextureOffset(material, (System_String_o *)StringLiteral_16241/*"_MainTex"*/, v10, 0LL);
+        UnityEngine_Material__SetTextureOffset(material, (System_String_o *)StringLiteral_16311/*"_MainTex"*/, v10, 0LL);
         return;
       }
 LABEL_13:
-      sub_B7076C(material, v5);
+      sub_B7769C(material, v5);
     }
   }
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0LL);

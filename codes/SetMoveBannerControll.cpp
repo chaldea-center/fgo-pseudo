@@ -45,7 +45,7 @@ void __fastcall SetMoveBannerControll__OnMoveFinish(SetMoveBannerControll_o *thi
   lfBtn = (UnityEngine_Behaviour_o *)this->fields.rgBtn;
   if ( !lfBtn )
 LABEL_9:
-    sub_B7076C(lfBtn, method);
+    sub_B7769C(lfBtn, method);
   UnityEngine_Behaviour__set_enabled(lfBtn, 1, 0LL);
 }
 
@@ -67,7 +67,7 @@ void __fastcall SetMoveBannerControll__OnMoveLeft(SetMoveBannerControll_o *this,
   bannerList = this->fields.bannerList;
   if ( !bannerList )
 LABEL_8:
-    sub_B7076C(transform, v4);
+    sub_B7769C(transform, v4);
   v6 = 0LL;
   while ( 1 )
   {
@@ -76,8 +76,8 @@ LABEL_8:
       break;
     if ( (unsigned int)v6 >= max_length )
     {
-      v11 = sub_B70798(transform);
-      sub_B70738(v11, 0LL);
+      v11 = sub_B776C8(transform);
+      sub_B77668(v11, 0LL);
     }
     v8 = &bannerList->obj.klass + v6;
     v9 = (UnityEngine_GameObject_o *)v8[4];
@@ -118,7 +118,7 @@ void __fastcall SetMoveBannerControll__OnMoveRight(SetMoveBannerControll_o *this
   bannerList = this->fields.bannerList;
   if ( !bannerList )
 LABEL_8:
-    sub_B7076C(transform, v4);
+    sub_B7769C(transform, v4);
   v6 = 0LL;
   while ( 1 )
   {
@@ -127,8 +127,8 @@ LABEL_8:
       break;
     if ( (unsigned int)v6 >= max_length )
     {
-      v11 = sub_B70798(transform);
-      sub_B70738(v11, 0LL);
+      v11 = sub_B776C8(transform);
+      sub_B77668(v11, 0LL);
     }
     v8 = &bannerList->obj.klass + v6;
     v9 = (UnityEngine_GameObject_o *)v8[4];
@@ -170,8 +170,8 @@ void __fastcall SetMoveBannerControll__autoMoveLeft(SetMoveBannerControll_o *thi
   v4 = this;
   if ( (unsigned int)idx >= bannerList->max_length )
   {
-    v8 = sub_B70798(this);
-    sub_B70738(v8, 0LL);
+    v8 = sub_B776C8(this);
+    sub_B77668(v8, 0LL);
   }
   v5 = &bannerList->obj.klass + idx;
   v6 = (UnityEngine_GameObject_o *)v5[4];
@@ -179,7 +179,7 @@ void __fastcall SetMoveBannerControll__autoMoveLeft(SetMoveBannerControll_o *thi
     || (this = (SetMoveBannerControll_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v5[4], 0LL)) == 0LL )
   {
 LABEL_6:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0LL);
   localPosition.fields.x = localPosition.fields.x + v4->fields.moveLeftPos;
@@ -214,7 +214,7 @@ void __fastcall SetMoveBannerControll__initEnableBtn(
           (lfBtn = (UnityEngine_Component_o *)this->fields.rgBtn) == 0LL)
       || (lfBtn = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(lfBtn, 0LL)) == 0LL )
     {
-      sub_B7076C(lfBtn, *(_QWORD *)&cnt);
+      sub_B7769C(lfBtn, *(_QWORD *)&cnt);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)lfBtn, 0, 0LL);
   }
@@ -258,33 +258,33 @@ void __fastcall SetMoveBannerControll__moveBanner(
   y = pos.fields.y;
   x = pos.fields.x;
   v8 = this;
-  if ( (byte_43541BE & 1) == 0 )
+  if ( (byte_438DA7C & 1) == 0 )
   {
-    sub_B70694(&EventDelegate_Callback_TypeInfo);
-    sub_B70694(&EventDelegate_TypeInfo);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
-    this = (SetMoveBannerControll_o *)sub_B70694(&Method_SetMoveBannerControll_OnMoveFinish__);
-    byte_43541BE = 1;
+    sub_B775C4(&EventDelegate_Callback_TypeInfo);
+    sub_B775C4(&EventDelegate_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+    this = (SetMoveBannerControll_o *)sub_B775C4(&Method_SetMoveBannerControll_OnMoveFinish__);
+    byte_438DA7C = 1;
   }
   p_tp = (SetMoveBannerControll_o **)&v8->fields.tp;
   tp = v8->fields.tp;
   if ( !tp )
     goto LABEL_10;
   onFinished = tp->fields.onFinished;
-  v12 = (EventDelegate_Callback_o *)sub_B70764(EventDelegate_Callback_TypeInfo);
+  v12 = (EventDelegate_Callback_o *)sub_B77694(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(v12, (Il2CppObject *)v8, Method_SetMoveBannerControll_OnMoveFinish__, 0LL);
   if ( (BYTE3(EventDelegate_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EventDelegate_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
   }
-  this = (SetMoveBannerControll_o *)EventDelegate__Set_29879148(onFinished, v12, 0LL);
+  this = (SetMoveBannerControll_o *)EventDelegate__Set_30349648(onFinished, v12, 0LL);
   if ( !target
     || (Component_srcLineSprite = (System_Int32_array **)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                            target,
-                                                           (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___),
+                                                           (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___),
         *p_tp = (SetMoveBannerControll_o *)Component_srcLineSprite,
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)&v8->fields.tp,
           Component_srcLineSprite,
           v14,
@@ -296,7 +296,7 @@ void __fastcall SetMoveBannerControll__moveBanner(
         (this = *p_tp) == 0LL) )
   {
 LABEL_10:
-    sub_B7076C(this, target);
+    sub_B7769C(this, target);
   }
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 1, 0LL);
   v20.fields.x = x;
@@ -334,15 +334,15 @@ void __fastcall SetMoveBannerControll__rePositionLeft(SetMoveBannerControll_o *t
   UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_43541BF & 1) == 0 )
+  if ( (byte_438DA7D & 1) == 0 )
   {
-    this = (SetMoveBannerControll_o *)sub_B70694(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
-    byte_43541BF = 1;
+    this = (SetMoveBannerControll_o *)sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+    byte_438DA7D = 1;
   }
   bannerList = v2->fields.bannerList;
   if ( !bannerList )
 LABEL_19:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   p_tp = (SetMoveBannerControll_o **)&v2->fields.tp;
   v5 = 4LL;
   while ( 1 )
@@ -369,8 +369,8 @@ LABEL_19:
       if ( v7 >= v9 )
       {
 LABEL_21:
-        v22 = sub_B70798(this);
-        sub_B70738(v22, 0LL);
+        v22 = sub_B776C8(this);
+        sub_B77668(v22, 0LL);
       }
       v10 = (UnityEngine_GameObject_o *)*((_QWORD *)&bannerList->obj.klass + v5);
       if ( !v10 )
@@ -386,9 +386,9 @@ LABEL_21:
       UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v23, 0LL);
       Component_srcLineSprite = (System_Int32_array **)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                          v10,
-                                                         (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                                                         (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
       v2->fields.tp = (struct TweenPosition_o *)Component_srcLineSprite;
-      sub_B70630((BattleServantConfConponent_o *)&v2->fields.tp, Component_srcLineSprite, v12, v13, v14, v15, v16, v17);
+      sub_B77560((BattleServantConfConponent_o *)&v2->fields.tp, Component_srcLineSprite, v12, v13, v14, v15, v16, v17);
       tp = v2->fields.tp;
       this = (SetMoveBannerControll_o *)UnityEngine_GameObject__get_transform(v10, 0LL);
       if ( !this )
@@ -439,15 +439,15 @@ void __fastcall SetMoveBannerControll__rePositionRight(SetMoveBannerControll_o *
   UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_43541C0 & 1) == 0 )
+  if ( (byte_438DA7E & 1) == 0 )
   {
-    this = (SetMoveBannerControll_o *)sub_B70694(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
-    byte_43541C0 = 1;
+    this = (SetMoveBannerControll_o *)sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+    byte_438DA7E = 1;
   }
   bannerList = v2->fields.bannerList;
   if ( !bannerList )
 LABEL_19:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   p_tp = (SetMoveBannerControll_o **)&v2->fields.tp;
   v5 = 4LL;
   while ( 1 )
@@ -474,8 +474,8 @@ LABEL_19:
       if ( v7 >= v9 )
       {
 LABEL_21:
-        v22 = sub_B70798(this);
-        sub_B70738(v22, 0LL);
+        v22 = sub_B776C8(this);
+        sub_B77668(v22, 0LL);
       }
       v10 = (UnityEngine_GameObject_o *)*((_QWORD *)&bannerList->obj.klass + v5);
       if ( !v10 )
@@ -491,9 +491,9 @@ LABEL_21:
       UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v23, 0LL);
       Component_srcLineSprite = (System_Int32_array **)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                          v10,
-                                                         (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                                                         (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
       v2->fields.tp = (struct TweenPosition_o *)Component_srcLineSprite;
-      sub_B70630((BattleServantConfConponent_o *)&v2->fields.tp, Component_srcLineSprite, v12, v13, v14, v15, v16, v17);
+      sub_B77560((BattleServantConfConponent_o *)&v2->fields.tp, Component_srcLineSprite, v12, v13, v14, v15, v16, v17);
       tp = v2->fields.tp;
       this = (SetMoveBannerControll_o *)UnityEngine_GameObject__get_transform(v10, 0LL);
       if ( !this )
@@ -582,19 +582,19 @@ void __fastcall SetMoveBannerControll__setBanner(
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v64; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_43541BD & 1) == 0 )
+  if ( (byte_438DA7B & 1) == 0 )
   {
-    sub_B70694(&Method_System_Comparison_EventEntity___ctor__);
-    sub_B70694(&System_Comparison_EventEntity__TypeInfo);
-    sub_B70694(&UnityEngine_GameObject___TypeInfo);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_B70694(&Method_System_Collections_Generic_List_EventEntity__Sort__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventEntity__get_Count__);
-    sub_B70694(&Method_SetMoveBannerControll___c__setBanner_b__15_0__);
-    sub_B70694(&SetMoveBannerControll___c_TypeInfo);
-    sub_B70694(&StringLiteral_16846/*"banner_event_002"*/);
-    byte_43541BD = 1;
+    sub_B775C4(&Method_System_Comparison_EventEntity___ctor__);
+    sub_B775C4(&System_Comparison_EventEntity__TypeInfo);
+    sub_B775C4(&UnityEngine_GameObject___TypeInfo);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventEntity__Sort__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventEntity__get_Count__);
+    sub_B775C4(&Method_SetMoveBannerControll___c__setBanner_b__15_0__);
+    sub_B775C4(&SetMoveBannerControll___c_TypeInfo);
+    sub_B775C4(&StringLiteral_16928/*"banner_event_002"*/);
+    byte_438DA7B = 1;
   }
   bannerPanel = SetMoveBannerControll___c_TypeInfo;
   if ( (BYTE3(SetMoveBannerControll___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -613,15 +613,15 @@ void __fastcall SetMoveBannerControll__setBanner(
       static_fields = SetMoveBannerControll___c_TypeInfo->static_fields;
     }
     v8 = (Il2CppObject *)static_fields->__9;
-    _9__15_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B70764(System_Comparison_EventEntity__TypeInfo);
+    _9__15_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B77694(System_Comparison_EventEntity__TypeInfo);
     System_Comparison_TitleInfoControl_EventEndTimeInfo____ctor(
       _9__15_0,
       v8,
       Method_SetMoveBannerControll___c__setBanner_b__15_0__,
-      (const MethodInfo_2B05B38 *)Method_System_Comparison_EventEntity___ctor__);
+      (const MethodInfo_2B42C0C *)Method_System_Comparison_EventEntity___ctor__);
     v9 = SetMoveBannerControll___c_TypeInfo->static_fields;
     v9->__9__15_0 = (struct System_Comparison_EventEntity__o *)_9__15_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v9->__9__15_0,
       (System_Int32_array **)_9__15_0,
       v10,
@@ -636,13 +636,13 @@ void __fastcall SetMoveBannerControll__setBanner(
   System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo___Sort(
     (System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__o *)eventDataList,
     (System_Comparison_T__o *)_9__15_0,
-    (const MethodInfo_3027764 *)Method_System_Collections_Generic_List_EventEntity__Sort__);
+    (const MethodInfo_3055374 *)Method_System_Collections_Generic_List_EventEntity__Sort__);
   size = eventDataList->fields._size;
   v17 = size;
-  v18 = (struct UnityEngine_GameObject_array *)sub_B706AC(UnityEngine_GameObject___TypeInfo, (unsigned int)size);
+  v18 = (struct UnityEngine_GameObject_array *)sub_B775DC(UnityEngine_GameObject___TypeInfo, (unsigned int)size);
   this->fields.bannerList = v18;
   p_bannerList = &this->fields.bannerList;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.bannerList,
     (System_Int32_array **)v18,
     v20,
@@ -671,10 +671,10 @@ void __fastcall SetMoveBannerControll__setBanner(
           break;
         bannerPanel = UnityEngine_GameObject__GetComponent_srcLineSprite_(
                         (UnityEngine_GameObject_o *)bannerPanel,
-                        (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                        (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
         if ( !bannerPanel )
           break;
-        UISprite__set_spriteName((UISprite_o *)bannerPanel, (System_String_o *)StringLiteral_16846/*"banner_event_002"*/, 0LL);
+        UISprite__set_spriteName((UISprite_o *)bannerPanel, (System_String_o *)StringLiteral_16928/*"banner_event_002"*/, 0LL);
       }
       else if ( !bannerPanel )
       {
@@ -682,7 +682,7 @@ void __fastcall SetMoveBannerControll__setBanner(
       }
       bannerPanel = UnityEngine_GameObject__GetComponent_srcLineSprite_(
                       v32,
-                      (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                      (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
       if ( !bannerPanel )
         break;
       if ( !this->fields.bannerPanel )
@@ -710,9 +710,9 @@ void __fastcall SetMoveBannerControll__setBanner(
       UnityEngine_Transform__set_localScale(v38, *(UnityEngine_Vector3_o *)&v39, 0LL);
       Component_srcLineSprite = (System_Int32_array **)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                          v32,
-                                                         (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                                                         (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
       *p_tp = (struct TweenPosition_o *)Component_srcLineSprite;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&this->fields.tp,
         Component_srcLineSprite,
         v43,
@@ -740,26 +740,26 @@ void __fastcall SetMoveBannerControll__setBanner(
       v53 = (unsigned int *)*p_bannerList;
       if ( !*p_bannerList )
         break;
-      v54 = sub_B70754(v32, *(_QWORD *)(*(_QWORD *)v53 + 64LL));
+      v54 = sub_B77684(v32, *(_QWORD *)(*(_QWORD *)v53 + 64LL));
       if ( !v54 )
       {
-        v61 = sub_B7078C(0LL);
-        sub_B70738(v61, 0LL);
+        v61 = sub_B776BC(0LL);
+        sub_B77668(v61, 0LL);
       }
       if ( v27 >= v53[6] )
       {
-        v62 = sub_B70798(v54);
-        sub_B70738(v62, 0LL);
+        v62 = sub_B776C8(v54);
+        sub_B77668(v62, 0LL);
       }
       *(_QWORD *)&v53[v29] = v32;
-      sub_B70630((BattleServantConfConponent_o *)&v53[v29], (System_Int32_array **)v32, v55, v56, v57, v58, v59, v60);
+      sub_B77560((BattleServantConfConponent_o *)&v53[v29], (System_Int32_array **)v32, v55, v56, v57, v58, v59, v60);
       ++v27;
       v29 += 2LL;
       if ( (__int64)v27 >= v17 )
         goto LABEL_35;
     }
 LABEL_36:
-    sub_B7076C(bannerPanel, eventDataList);
+    sub_B7769C(bannerPanel, eventDataList);
   }
   v37 = 0.0;
 LABEL_35:
@@ -777,7 +777,7 @@ void __fastcall SetMoveBannerControll__setEnabledBtn(SetMoveBannerControll_o *th
   if ( !lfBtn
     || (UnityEngine_Behaviour__set_enabled(lfBtn, 0, 0LL), (lfBtn = (UnityEngine_Behaviour_o *)this->fields.rgBtn) == 0LL) )
   {
-    sub_B7076C(lfBtn, method);
+    sub_B7769C(lfBtn, method);
   }
   UnityEngine_Behaviour__set_enabled(lfBtn, 0, 0LL);
 }
@@ -794,16 +794,16 @@ void __fastcall SetMoveBannerControll___c___cctor(const MethodInfo *method)
   System_Int32_array *v7; // x6
   System_Int32_array *v8; // x7
 
-  if ( (byte_434F870 & 1) == 0 )
+  if ( (byte_4388E6A & 1) == 0 )
   {
-    sub_B70694(&SetMoveBannerControll___c_TypeInfo);
-    byte_434F870 = 1;
+    sub_B775C4(&SetMoveBannerControll___c_TypeInfo);
+    byte_4388E6A = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(SetMoveBannerControll___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(SetMoveBannerControll___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = (BattleServantConfConponent_o *)SetMoveBannerControll___c_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B70630(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  sub_B77560(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -820,6 +820,6 @@ int32_t __fastcall SetMoveBannerControll___c___setBanner_b__15_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_B7076C(this, a);
+    sub_B7769C(this, a);
   return b->fields.bannerPriority - a->fields.bannerPriority;
 }

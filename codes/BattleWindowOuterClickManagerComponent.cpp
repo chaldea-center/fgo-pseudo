@@ -22,10 +22,10 @@ void __fastcall BattleWindowOuterClickManagerComponent__setOuterClickCallBack(
   System_Int32_array *v12; // x7
   struct BattleWindowOuterClickComponent_o *v13; // x0
 
-  if ( (byte_4351272 & 1) == 0 )
+  if ( (byte_438A8ED & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4351272 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438A8ED = 1;
   }
   outerPanel = (UnityEngine_Object_o *)this->fields.outerPanel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -37,9 +37,9 @@ void __fastcall BattleWindowOuterClickManagerComponent__setOuterClickCallBack(
   {
     v13 = this->fields.outerPanel;
     if ( !v13 )
-      sub_B7076C(0LL, v6);
+      sub_B7769C(0LL, v6);
     v13->fields.clickCallBack = callBack;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v13->fields.clickCallBack,
       (System_Int32_array **)callBack,
       v7,

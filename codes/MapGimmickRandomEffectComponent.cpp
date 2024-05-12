@@ -36,19 +36,19 @@ MapGimmickRandomEffectElementComponent_o *__fastcall MapGimmickRandomEffectCompo
   System_Int32_array *v26; // x6
   System_Int32_array *v27; // x7
 
-  if ( (byte_4354D99 & 1) == 0 )
+  if ( (byte_438E58D & 1) == 0 )
   {
-    sub_B70694(&Method_System_Linq_Enumerable_Where_MapGimmickRandomEffectElementComponent___);
-    sub_B70694(&Method_System_Func_MapGimmickRandomEffectElementComponent__int___ctor__);
-    sub_B70694(&Method_System_Func_MapGimmickRandomEffectElementComponent__bool___ctor__);
-    sub_B70694(&System_Func_MapGimmickRandomEffectElementComponent__bool__TypeInfo);
-    sub_B70694(&System_Func_MapGimmickRandomEffectElementComponent__int__TypeInfo);
-    sub_B70694(&Method_IEnumerableExtensions_DrawLottery_MapGimmickRandomEffectElementComponent___);
-    sub_B70694(&IEnumerableExtensions_TypeInfo);
-    sub_B70694(&Method_MapGimmickRandomEffectComponent___c__GetRandomElement_b__1_0__);
-    sub_B70694(&Method_MapGimmickRandomEffectComponent___c__GetRandomElement_b__1_1__);
-    sub_B70694(&MapGimmickRandomEffectComponent___c_TypeInfo);
-    byte_4354D99 = 1;
+    sub_B775C4(&Method_System_Linq_Enumerable_Where_MapGimmickRandomEffectElementComponent___);
+    sub_B775C4(&Method_System_Func_MapGimmickRandomEffectElementComponent__int___ctor__);
+    sub_B775C4(&Method_System_Func_MapGimmickRandomEffectElementComponent__bool___ctor__);
+    sub_B775C4(&System_Func_MapGimmickRandomEffectElementComponent__bool__TypeInfo);
+    sub_B775C4(&System_Func_MapGimmickRandomEffectElementComponent__int__TypeInfo);
+    sub_B775C4(&Method_IEnumerableExtensions_DrawLottery_MapGimmickRandomEffectElementComponent___);
+    sub_B775C4(&IEnumerableExtensions_TypeInfo);
+    sub_B775C4(&Method_MapGimmickRandomEffectComponent___c__GetRandomElement_b__1_0__);
+    sub_B775C4(&Method_MapGimmickRandomEffectComponent___c__GetRandomElement_b__1_1__);
+    sub_B775C4(&MapGimmickRandomEffectComponent___c_TypeInfo);
+    byte_438E58D = 1;
   }
   mapGimmickRandomEffectElementComponents = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.mapGimmickRandomEffectElementComponents;
   if ( !mapGimmickRandomEffectElementComponents )
@@ -70,15 +70,15 @@ MapGimmickRandomEffectElementComponent_o *__fastcall MapGimmickRandomEffectCompo
       static_fields = MapGimmickRandomEffectComponent___c_TypeInfo->static_fields;
     }
     v7 = (Il2CppObject *)static_fields->__9;
-    _9__1_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_MapGimmickRandomEffectElementComponent__bool__TypeInfo);
+    _9__1_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B77694(System_Func_MapGimmickRandomEffectElementComponent__bool__TypeInfo);
     System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
       _9__1_0,
       v7,
       Method_MapGimmickRandomEffectComponent___c__GetRandomElement_b__1_0__,
-      (const MethodInfo_29AC578 *)Method_System_Func_MapGimmickRandomEffectElementComponent__bool___ctor__);
+      (const MethodInfo_29E92C4 *)Method_System_Func_MapGimmickRandomEffectElementComponent__bool___ctor__);
     v8 = MapGimmickRandomEffectComponent___c_TypeInfo->static_fields;
     v8->__9__1_0 = (struct System_Func_MapGimmickRandomEffectElementComponent__bool__o *)_9__1_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v8->__9__1_0,
       (System_Int32_array **)_9__1_0,
       v9,
@@ -91,7 +91,7 @@ MapGimmickRandomEffectElementComponent_o *__fastcall MapGimmickRandomEffectCompo
   v15 = System_Linq_Enumerable__Where_WarBoardManager_WarBoardOnboardSkillTarget_(
           mapGimmickRandomEffectElementComponents,
           (System_Func_TSource__bool__o *)_9__1_0,
-          (const MethodInfo_1CCCE44 *)Method_System_Linq_Enumerable_Where_MapGimmickRandomEffectElementComponent___);
+          (const MethodInfo_1D41C94 *)Method_System_Linq_Enumerable_Where_MapGimmickRandomEffectElementComponent___);
   v16 = MapGimmickRandomEffectComponent___c_TypeInfo;
   v17 = (System_Collections_Generic_IEnumerable_T__o *)v15;
   if ( (BYTE3(MapGimmickRandomEffectComponent___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -110,15 +110,15 @@ MapGimmickRandomEffectElementComponent_o *__fastcall MapGimmickRandomEffectCompo
       v18 = MapGimmickRandomEffectComponent___c_TypeInfo->static_fields;
     }
     v20 = (Il2CppObject *)v18->__9;
-    _9__1_1 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B70764(System_Func_MapGimmickRandomEffectElementComponent__int__TypeInfo);
+    _9__1_1 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B77694(System_Func_MapGimmickRandomEffectElementComponent__int__TypeInfo);
     System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int____ctor(
       _9__1_1,
       v20,
       Method_MapGimmickRandomEffectComponent___c__GetRandomElement_b__1_1__,
-      (const MethodInfo_29AD124 *)Method_System_Func_MapGimmickRandomEffectElementComponent__int___ctor__);
+      (const MethodInfo_29E9E70 *)Method_System_Func_MapGimmickRandomEffectElementComponent__int___ctor__);
     v21 = MapGimmickRandomEffectComponent___c_TypeInfo->static_fields;
     v21->__9__1_1 = (struct System_Func_MapGimmickRandomEffectElementComponent__int__o *)_9__1_1;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v21->__9__1_1,
       (System_Int32_array **)_9__1_1,
       v22,
@@ -136,7 +136,7 @@ MapGimmickRandomEffectElementComponent_o *__fastcall MapGimmickRandomEffectCompo
   return (MapGimmickRandomEffectElementComponent_o *)IEnumerableExtensions__DrawLottery_object_(
                                                        v17,
                                                        (System_Func_T__int__o *)_9__1_1,
-                                                       (const MethodInfo_1D4BFB0 *)Method_IEnumerableExtensions_DrawLottery_MapGimmickRandomEffectElementComponent___);
+                                                       (const MethodInfo_1DED14C *)Method_IEnumerableExtensions_DrawLottery_MapGimmickRandomEffectElementComponent___);
 }
 
 
@@ -145,16 +145,16 @@ void __fastcall MapGimmickRandomEffectComponent___c___cctor(const MethodInfo *me
   Il2CppObject *v1; // x19
   struct MapGimmickRandomEffectComponent___c_StaticFields *static_fields; // x0
 
-  if ( (byte_434F3C1 & 1) == 0 )
+  if ( (byte_43889A3 & 1) == 0 )
   {
-    sub_B70694(&MapGimmickRandomEffectComponent___c_TypeInfo);
-    byte_434F3C1 = 1;
+    sub_B775C4(&MapGimmickRandomEffectComponent___c_TypeInfo);
+    byte_43889A3 = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(MapGimmickRandomEffectComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(MapGimmickRandomEffectComponent___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = MapGimmickRandomEffectComponent___c_TypeInfo->static_fields;
   static_fields->__9 = (struct MapGimmickRandomEffectComponent___c_o *)v1;
-  sub_B70630(static_fields);
+  sub_B77560(static_fields);
 }
 
 
@@ -172,7 +172,7 @@ bool __fastcall MapGimmickRandomEffectComponent___c___GetRandomElement_b__1_0(
         const MethodInfo *method)
 {
   if ( !v )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   return MapGimmickRandomEffectElementComponent__get_IsValid(v, 0LL);
 }
 
@@ -183,6 +183,6 @@ int32_t __fastcall MapGimmickRandomEffectComponent___c___GetRandomElement_b__1_1
         const MethodInfo *method)
 {
   if ( !v )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   return *((_DWORD *)&v->fields + 3);
 }

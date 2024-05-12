@@ -14,10 +14,10 @@ void __fastcall StonePurchaseListViewItemDraw__SetInput(
   __int64 v7; // x1
   struct UICommonButton_o *v8; // x0
 
-  if ( (byte_4350DC9 & 1) == 0 )
+  if ( (byte_438A53D & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4350DC9 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438A53D = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -35,7 +35,7 @@ void __fastcall StonePurchaseListViewItemDraw__SetInput(
             v8->klass->vtable._6_OnInit.methodPtr),
           (v8 = this->fields.baseButton) == 0LL) )
     {
-      sub_B7076C(v8, v7);
+      sub_B7769C(v8, v7);
     }
     ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, _QWORD, Il2CppMethodPointer))v8->klass->vtable._14_SetState.method)(
       v8,
@@ -83,14 +83,14 @@ void __fastcall StonePurchaseListViewItemDraw__SetItem(
   int32_t v34; // [xsp+Ch] [xbp-34h] BYREF
 
   v5 = item;
-  if ( (byte_4350DC8 & 1) == 0 )
+  if ( (byte_438A53C & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_82/*" "*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4350DC8 = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_82/*" "*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438A53C = 1;
   }
   if ( !v5 || !mode )
     return;
@@ -100,13 +100,13 @@ void __fastcall StonePurchaseListViewItemDraw__SetItem(
         (priceTitleTextLabel = this->fields.countTextLabel) == 0LL) )
   {
 LABEL_54:
-    sub_B7076C(priceTitleTextLabel, item);
+    sub_B7769C(priceTitleTextLabel, item);
   }
   UILabel__set_text(priceTitleTextLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-  if ( (byte_4350DC4 & 1) == 0 )
+  if ( (byte_438A538 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4350DC4 = 1;
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438A538 = 1;
   }
   bankShop = v5->fields.bankShop;
   if ( bankShop )
@@ -117,10 +117,10 @@ LABEL_54:
   IsNullOrEmpty = System_String__IsNullOrEmpty(*p_numDetail, 0LL);
   nameTextLabel = this->fields.nameTextLabel;
   v14 = IsNullOrEmpty;
-  if ( (byte_4350DC2 & 1) == 0 )
+  if ( (byte_438A536 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_18674/*"error"*/);
-    byte_4350DC2 = 1;
+    sub_B775C4(&StringLiteral_18762/*"error"*/);
+    byte_438A536 = 1;
   }
   v15 = v5->fields.bankShop;
   if ( v15 )
@@ -133,13 +133,13 @@ LABEL_54:
     if ( entity )
       p_name = &entity->fields.name;
     else
-      p_name = (System_String_o **)&StringLiteral_18674/*"error"*/;
+      p_name = (System_String_o **)&StringLiteral_18762/*"error"*/;
   }
   v18 = *p_name;
   CountText = StonePurchaseListViewItem__get_CountText(v5, v12);
   if ( v14 )
   {
-    priceTitleTextLabel = (UILabel_o *)System_String__Concat_44760452(
+    priceTitleTextLabel = (UILabel_o *)System_String__Concat_44904220(
                                          v18,
                                          (System_String_o *)StringLiteral_82/*" "*/,
                                          CountText,
@@ -149,7 +149,7 @@ LABEL_54:
   }
   else
   {
-    priceTitleTextLabel = (UILabel_o *)System_String__Format_44753704(
+    priceTitleTextLabel = (UILabel_o *)System_String__Format_44897472(
                                          v10,
                                          (Il2CppObject *)v18,
                                          (Il2CppObject *)CountText,
@@ -158,10 +158,10 @@ LABEL_54:
       goto LABEL_54;
   }
   UILabel__set_text(nameTextLabel, (System_String_o *)priceTitleTextLabel, 0LL);
-  if ( (byte_4350DC5 & 1) == 0 )
+  if ( (byte_438A539 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4350DC5 = 1;
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438A539 = 1;
   }
   v20 = v5->fields.bankShop;
   if ( v20 )

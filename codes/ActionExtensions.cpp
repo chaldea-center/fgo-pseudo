@@ -8,7 +8,7 @@ void __fastcall ActionExtensions__Call(System_Action_o *action, const MethodInfo
 void __fastcall ActionExtensions__Call_BlankEarth_QAARotateEarthResponse_(
         System_Action_T__o *action,
         BlankEarth_QAARotateEarthResponse_o *arg,
-        const MethodInfo_2BFC288 *method)
+        const MethodInfo_2C3C35C *method)
 {
   if ( action )
     ((void (__fastcall *)(System_Action_T__o *, BlankEarth_QAARotateEarthResponse_o *))method->rgctx_data->_0_System_Action_T__Invoke->methodPointer)(
@@ -20,7 +20,7 @@ void __fastcall ActionExtensions__Call_BlankEarth_QAARotateEarthResponse_(
 void __fastcall ActionExtensions__Call_MyRoomControl_PHOTOCAMPAIGNTYPE_(
         System_Action_T__o *action,
         int32_t arg,
-        const MethodInfo_2BFC270 *method)
+        const MethodInfo_2C3C344 *method)
 {
   if ( action )
     ((void (__fastcall *)(System_Action_T__o *, int32_t))method->rgctx_data->_0_System_Action_T__Invoke->methodPointer)(
@@ -32,10 +32,10 @@ void __fastcall ActionExtensions__Call_MyRoomControl_PHOTOCAMPAIGNTYPE_(
 void __fastcall ActionExtensions__Call_ShowAllEx_DamageFuncArgument_(
         System_Action_T__o *action,
         HutongGames_PlayMaker_Actions_ShowAllEx_DamageFuncArgument_o *arg,
-        const MethodInfo_2BFC2B8 *method)
+        const MethodInfo_2C3C38C *method)
 {
   __int128 v3; // q0
-  const MethodInfo_2BFC2B8_RGCTXs *rgctx_data; // x8
+  const MethodInfo_2C3C38C_RGCTXs *rgctx_data; // x8
   void (__fastcall *methodPointer)(System_Action_T__o *, __int128 *, MethodInfo *); // x9
   __int128 v6; // [xsp+0h] [xbp-40h] BYREF
   __int64 v7; // [xsp+10h] [xbp-30h]
@@ -56,7 +56,7 @@ void __fastcall ActionExtensions__Call_ShowAllEx_DamageFuncArgument_(
 }
 
 
-void __fastcall ActionExtensions__Call_bool_(System_Action_T__o *action, bool arg, const MethodInfo_2BFC23C *method)
+void __fastcall ActionExtensions__Call_bool_(System_Action_T__o *action, bool arg, const MethodInfo_2C3C310 *method)
 {
   if ( action )
     ((void (__fastcall *)(System_Action_T__o *, bool))method->rgctx_data->_0_System_Action_T__Invoke->methodPointer)(
@@ -69,7 +69,7 @@ void __fastcall ActionExtensions__Call_bool__bool_(
         System_Action_T1__T2__o *action,
         bool arg1,
         bool arg2,
-        const MethodInfo_2BFC30C *method)
+        const MethodInfo_2C3C3E0 *method)
 {
   if ( action )
     ((void (__fastcall *)(System_Action_T1__T2__o *, bool, bool))method->rgctx_data->_0_System_Action_T1__T2__Invoke->methodPointer)(
@@ -80,14 +80,14 @@ void __fastcall ActionExtensions__Call_bool__bool_(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ActionExtensions__Call_float_(System_Action_T__o *action, float arg, const MethodInfo_2BFC2A0 *method)
+void __fastcall ActionExtensions__Call_float_(System_Action_T__o *action, float arg, const MethodInfo_2C3C374 *method)
 {
   if ( action )
     ((void (__fastcall *)(long double))method->rgctx_data->_0_System_Action_T__Invoke->methodPointer)(*(long double *)&arg);
 }
 
 
-void __fastcall ActionExtensions__Call_int_(System_Action_T__o *action, int32_t arg, const MethodInfo_2BFC258 *method)
+void __fastcall ActionExtensions__Call_int_(System_Action_T__o *action, int32_t arg, const MethodInfo_2C3C32C *method)
 {
   if ( action )
     ((void (__fastcall *)(System_Action_T__o *, int32_t))method->rgctx_data->_0_System_Action_T__Invoke->methodPointer)(
@@ -100,7 +100,7 @@ void __fastcall ActionExtensions__Call_int__bool_(
         System_Action_T1__T2__o *action,
         int32_t arg1,
         bool arg2,
-        const MethodInfo_2BFC32C *method)
+        const MethodInfo_2C3C400 *method)
 {
   if ( action )
     ((void (__fastcall *)(System_Action_T1__T2__o *, int32_t, bool))method->rgctx_data->_0_System_Action_T1__T2__Invoke->methodPointer)(
@@ -115,7 +115,7 @@ void __fastcall ActionExtensions__Call_int__bool__bool_(
         int32_t arg1,
         bool arg2,
         bool arg3,
-        const MethodInfo_2BFC390 *method)
+        const MethodInfo_2C3C464 *method)
 {
   if ( action )
     ((void (__fastcall *)(System_Action_T1__T2__T3__o *, int32_t, bool, bool))method->rgctx_data->_0_System_Action_T1__T2__T3__Invoke->methodPointer)(
@@ -130,7 +130,7 @@ void __fastcall ActionExtensions__Call_int__int_(
         System_Action_T1__T2__o *action,
         int32_t arg1,
         int32_t arg2,
-        const MethodInfo_2BFC348 *method)
+        const MethodInfo_2C3C41C *method)
 {
   if ( action )
     ((void (__fastcall *)(System_Action_T1__T2__o *, int32_t, int32_t))method->rgctx_data->_0_System_Action_T1__T2__Invoke->methodPointer)(
@@ -144,7 +144,7 @@ void __fastcall ActionExtensions__Call_object__int_(
         System_Action_T1__T2__o *action,
         Il2CppObject *arg1,
         int32_t arg2,
-        const MethodInfo_2BFC360 *method)
+        const MethodInfo_2C3C434 *method)
 {
   if ( action )
     ((void (__fastcall *)(System_Action_T1__T2__o *, Il2CppObject *, int32_t))method->rgctx_data->_0_System_Action_T1__T2__Invoke->methodPointer)(
@@ -158,7 +158,7 @@ void __fastcall ActionExtensions__Call_object__object_(
         System_Action_T1__T2__o *action,
         Il2CppObject *arg1,
         Il2CppObject *arg2,
-        const MethodInfo_2BFC378 *method)
+        const MethodInfo_2C3C44C *method)
 {
   if ( action )
     ((void (__fastcall *)(System_Action_T1__T2__o *, Il2CppObject *, Il2CppObject *))method->rgctx_data->_0_System_Action_T1__T2__Invoke->methodPointer)(
@@ -173,7 +173,7 @@ void __fastcall ActionExtensions__Call_object__object__object_(
         Il2CppObject *arg1,
         Il2CppObject *arg2,
         Il2CppObject *arg3,
-        const MethodInfo_2BFC3B0 *method)
+        const MethodInfo_2C3C484 *method)
 {
   if ( action )
     ((void (__fastcall *)(System_Action_T1__T2__T3__o *, Il2CppObject *, Il2CppObject *, Il2CppObject *))method->rgctx_data->_0_System_Action_T1__T2__T3__Invoke->methodPointer)(

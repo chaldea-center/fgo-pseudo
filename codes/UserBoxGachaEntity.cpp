@@ -1,27 +1,27 @@
 void __fastcall UserBoxGachaEntity___ctor(UserBoxGachaEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_435332D & 1) == 0 )
+  if ( (byte_438CAB0 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_435332D = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438CAB0 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall UserBoxGachaEntity__CreatePK(int64_t userId, int32_t boxGachaId, const MethodInfo *method)
 {
-  if ( (byte_435332C & 1) == 0 )
+  if ( (byte_438CAAF & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_435332C = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_438CAAF = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            boxGachaId,
-           (const MethodInfo_1CA249C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_1D172EC *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -50,26 +50,26 @@ System_Collections_Generic_List_int__o *__fastcall UserBoxGachaEntity__GetReplac
   UserBoxGachaEntity_o *v14; // x0
   const MethodInfo *v15; // x1
 
-  if ( (byte_435332B & 1) == 0 )
+  if ( (byte_438CAAE & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B70694(&long_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_int__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_List_object__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_object__get_Item__);
-    sub_B70694(&System_Collections_Generic_List_int__TypeInfo);
-    sub_B70694(&System_Collections_Generic_List_object__TypeInfo);
-    sub_B70694(&StringLiteral_22137/*"replaceGiftIdList"*/);
-    byte_435332B = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_B775C4(&long_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int___ctor___69397304);
+    sub_B775C4(&Method_System_Collections_Generic_List_object__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_object__get_Item__);
+    sub_B775C4(&System_Collections_Generic_List_int__TypeInfo);
+    sub_B775C4(&System_Collections_Generic_List_object__TypeInfo);
+    sub_B775C4(&StringLiteral_22238/*"replaceGiftIdList"*/);
+    byte_438CAAE = 1;
   }
   script = this->fields.script;
   if ( !script
     || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_22137/*"replaceGiftIdList"*/,
-          (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_22238/*"replaceGiftIdList"*/,
+          (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return 0LL;
   }
@@ -77,22 +77,22 @@ System_Collections_Generic_List_int__o *__fastcall UserBoxGachaEntity__GetReplac
   if ( !v5
     || ((Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                   (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v5,
-                  (System_Type_o *)StringLiteral_22137/*"replaceGiftIdList"*/,
-                  (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) != 0LL
+                  (System_Type_o *)StringLiteral_22238/*"replaceGiftIdList"*/,
+                  (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) != 0LL
      && (v7 = *(&System_Collections_Generic_List_object__TypeInfo->_2.bitflags2 + 1),
          *(&Item->klass->_2.bitflags2 + 1) >= (unsigned int)v7)
       ? ((System_Collections_Generic_List_object__c *)Item->klass->_2.typeHierarchy[v7 - 1] != System_Collections_Generic_List_object__TypeInfo
        ? (v8 = 0LL)
        : (v8 = Item))
       : (v8 = 0LL),
-        v9 = (System_Collections_Generic_List_int__o *)sub_B70764(System_Collections_Generic_List_int__TypeInfo),
+        v9 = (System_Collections_Generic_List_int__o *)sub_B77694(System_Collections_Generic_List_int__TypeInfo),
         System_Collections_Generic_List_int____ctor(
           v9,
-          (const MethodInfo_30B547C *)Method_System_Collections_Generic_List_int___ctor__),
+          (const MethodInfo_30E508C *)Method_System_Collections_Generic_List_int___ctor___69397304),
         !v8) )
   {
 LABEL_23:
-    sub_B7076C(v5, v4);
+    sub_B7769C(v5, v4);
   }
   monitor = (int)v8[1].monitor;
   if ( monitor < 1 )
@@ -101,7 +101,7 @@ LABEL_23:
   while ( 1 )
   {
     if ( monitor <= v11 )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
     if ( !v9 )
       goto LABEL_23;
     v5 = (struct System_Collections_Generic_Dictionary_string__object__o *)*((_QWORD *)&v8[1].klass->_1.byval_arg.data
@@ -114,11 +114,11 @@ LABEL_23:
     System_Collections_Generic_List_int___Add(
       v9,
       *v12,
-      (const MethodInfo_30B61D8 *)Method_System_Collections_Generic_List_int__Add__);
+      (const MethodInfo_30E5DE8 *)Method_System_Collections_Generic_List_int__Add__);
     monitor = (int)v8[1].monitor;
     if ( (int)++v11 >= monitor )
       return v9;
   }
-  v14 = (UserBoxGachaEntity_o *)sub_B70A60(v5);
+  v14 = (UserBoxGachaEntity_o *)sub_B77990(v5);
   return (System_Collections_Generic_List_int__o *)UserBoxGachaEntity__CreatePrimaryKey(v14, v15);
 }

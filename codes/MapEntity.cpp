@@ -1,31 +1,31 @@
 void __fastcall MapEntity___ctor(MapEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_43508CC & 1) == 0 )
+  if ( (byte_4389EF5 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_43508CC = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_4389EF5 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void __fastcall MapEntity___ctor_22983292(MapEntity_o *this, MapEntity_o *cSrc, const MethodInfo *method)
+void __fastcall MapEntity___ctor_23205940(MapEntity_o *this, MapEntity_o *cSrc, const MethodInfo *method)
 {
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_43508CD & 1) == 0 )
+  if ( (byte_4389EF6 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_43508CD = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_4389EF6 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
   if ( !cSrc )
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   this->fields.id = cSrc->fields.id;
   this->fields.warId = cSrc->fields.warId;
   this->fields.mapImageId = cSrc->fields.mapImageId;
@@ -38,15 +38,15 @@ void __fastcall MapEntity___ctor_22983292(MapEntity_o *this, MapEntity_o *cSrc, 
 
 System_String_o *__fastcall MapEntity__CreatePK(int32_t id, int32_t warId, const MethodInfo *method)
 {
-  if ( (byte_43508CB & 1) == 0 )
+  if ( (byte_4389EF4 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_43508CB = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4389EF4 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            warId,
-           (const MethodInfo_1CA236C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1D171BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -83,14 +83,14 @@ bool __fastcall MapEntity__GetFirstFadeInfo(
   MapEntity_o *v24; // x0
   const MethodInfo *v25; // x1
 
-  if ( (byte_43508D1 & 1) == 0 )
+  if ( (byte_4389EFA & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B70694(&long_TypeInfo);
-    sub_B70694(&MapMaster_TypeInfo);
-    sub_B70694(&string_TypeInfo);
-    byte_43508D1 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_B775C4(&long_TypeInfo);
+    sub_B775C4(&MapMaster_TypeInfo);
+    sub_B775C4(&string_TypeInfo);
+    byte_4389EFA = 1;
   }
   *fadeTime = 0;
   script = this->fields.script;
@@ -105,11 +105,11 @@ bool __fastcall MapEntity__GetFirstFadeInfo(
   if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
           (System_Xml_XmlQualifiedName_o *)v12->static_fields->SCRIPT_KEY_FADE_TYPE,
-          (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
 LABEL_16:
     *fadeType = 0LL;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)fadeType,
       0LL,
       (System_String_array **)fadeTime,
@@ -129,7 +129,7 @@ LABEL_16:
   Item = (System_String_o *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                               (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v15,
                               (System_Type_o *)MapMaster_TypeInfo->static_fields->SCRIPT_KEY_FADE_TYPE,
-                              (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                              (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( Item )
   {
     if ( Item->klass != string_TypeInfo )
@@ -142,14 +142,14 @@ LABEL_16:
   {
     *fadeType = 0LL;
   }
-  sub_B70630((BattleServantConfConponent_o *)fadeType, (System_Int32_array **)Item, v16, v17, v18, v19, v20, v21);
+  sub_B77560((BattleServantConfConponent_o *)fadeType, (System_Int32_array **)Item, v16, v17, v18, v19, v20, v21);
   Item = (System_String_o *)this->fields.script;
   if ( !Item )
     goto LABEL_28;
   if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)Item,
           (System_Xml_XmlQualifiedName_o *)MapMaster_TypeInfo->static_fields->SCRIPT_KEY_FADE_TIME,
-          (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return 1;
   Item = (System_String_o *)MapMaster_TypeInfo;
   v23 = this->fields.script;
@@ -159,10 +159,10 @@ LABEL_16:
     || (Item = (System_String_o *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                                     (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v23,
                                     (System_Type_o *)MapMaster_TypeInfo->static_fields->SCRIPT_KEY_FADE_TIME,
-                                    (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                    (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
 LABEL_28:
-    sub_B7076C(Item, v13);
+    sub_B7769C(Item, v13);
   }
   if ( Item->klass->_1.element_class == long_TypeInfo->_1.element_class )
   {
@@ -170,7 +170,7 @@ LABEL_28:
     return 1;
   }
 LABEL_29:
-  v24 = (MapEntity_o *)sub_B70A60(Item);
+  v24 = (MapEntity_o *)sub_B77990(Item);
   return MapEntity__GetReferrerMapId(v24, v25);
 }
 
@@ -184,14 +184,14 @@ System_String_o *__fastcall MapEntity__GetOverwriteMapAssetId(MapEntity_o *this,
   struct System_Collections_Generic_Dictionary_string__object__o *v7; // x19
   System_String_o *result; // x0
 
-  if ( (byte_43508D3 & 1) == 0 )
+  if ( (byte_4389EFC & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B70694(&MapMaster_TypeInfo);
-    sub_B70694(&string_TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43508D3 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_B775C4(&MapMaster_TypeInfo);
+    sub_B775C4(&string_TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_4389EFC = 1;
   }
   script = this->fields.script;
   if ( !script )
@@ -205,21 +205,21 @@ System_String_o *__fastcall MapEntity__GetOverwriteMapAssetId(MapEntity_o *this,
   if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
           (System_Xml_XmlQualifiedName_o *)v4->static_fields->SCRIPT_KEY_OVERWRITE_MAP_ASSET_ID,
-          (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return (System_String_o *)StringLiteral_1/*""*/;
   v6 = MapMaster_TypeInfo;
   v7 = this->fields.script;
   if ( (BYTE3(MapMaster_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !MapMaster_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MapMaster_TypeInfo);
   if ( !v7 )
-    sub_B7076C(v6, v5);
+    sub_B7769C(v6, v5);
   result = (System_String_o *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                                 (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v7,
                                 (System_Type_o *)MapMaster_TypeInfo->static_fields->SCRIPT_KEY_OVERWRITE_MAP_ASSET_ID,
-                                (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( result && result->klass != string_TypeInfo )
   {
-    sub_B70A60(result);
+    sub_B77990(result);
     return (System_String_o *)StringLiteral_1/*""*/;
   }
   return result;
@@ -234,43 +234,43 @@ System_String_o *__fastcall MapEntity__GetPrioredBgmName(MapEntity_o *this, cons
   int32_t PrioredID; // w19
   WarEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_43508CF & 1) == 0 )
+  if ( (byte_4389EF8 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_BgmMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_MapCondMaster___);
-    sub_B70694(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43508CF = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_BgmMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_MapCondMaster___);
+    sub_B775C4(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4389EF8 = 1;
   }
   entity = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_MapCondMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_MapCondMaster___);
   if ( !Instance )
     goto LABEL_12;
   PrioredID = MapCondMaster__GetPrioredID((MapCondMaster_o *)Instance, 3, this->fields.id, this->fields.bgmId, 0, 0, v5);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_BgmMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_BgmMaster___);
   if ( !Instance )
     goto LABEL_12;
   Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
                                 (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                                 &entity,
                                 PrioredID,
-                                (const MethodInfo_21C049C *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+                                (const MethodInfo_21FB8F0 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Instance & 1) != 0 )
   {
     if ( entity )
       return entity->fields.age;
 LABEL_12:
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   return 0LL;
 }
@@ -286,19 +286,19 @@ int32_t __fastcall MapEntity__GetPrioredHeaderId(
   __int64 v8; // x1
   const MethodInfo *v9; // x6
 
-  if ( (byte_43508D0 & 1) == 0 )
+  if ( (byte_4389EF9 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_MapCondMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43508D0 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_MapCondMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4389EF9 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_MapCondMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_MapCondMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v8);
+    sub_B7769C(Instance, v8);
   }
   return MapCondMaster__GetPrioredID(
            (MapCondMaster_o *)Instance,
@@ -317,19 +317,19 @@ int32_t __fastcall MapEntity__GetPrioredMapImageId(MapEntity_o *this, const Meth
   __int64 v4; // x1
   const MethodInfo *v5; // x6
 
-  if ( (byte_43508CE & 1) == 0 )
+  if ( (byte_4389EF7 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_MapCondMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43508CE = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_MapCondMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4389EF7 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_MapCondMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_MapCondMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   return MapCondMaster__GetPrioredID((MapCondMaster_o *)Instance, 2, this->fields.id, this->fields.mapImageId, 0, 0, v5);
 }
@@ -345,13 +345,13 @@ int32_t __fastcall MapEntity__GetReferrerMapId(MapEntity_o *this, const MethodIn
   MapEntity_o *v9; // x0
   const MethodInfo *v10; // x1
 
-  if ( (byte_43508D2 & 1) == 0 )
+  if ( (byte_4389EFB & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B70694(&long_TypeInfo);
-    sub_B70694(&MapMaster_TypeInfo);
-    byte_43508D2 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_B775C4(&long_TypeInfo);
+    sub_B775C4(&MapMaster_TypeInfo);
+    byte_4389EFB = 1;
   }
   script = this->fields.script;
   if ( !script )
@@ -365,7 +365,7 @@ int32_t __fastcall MapEntity__GetReferrerMapId(MapEntity_o *this, const MethodIn
   if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
           (System_Xml_XmlQualifiedName_o *)v4->static_fields->SCRIPT_KEY_REFERRER_MAP_ID,
-          (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return 0;
   Item = MapMaster_TypeInfo;
   v7 = this->fields.script;
@@ -375,13 +375,13 @@ int32_t __fastcall MapEntity__GetReferrerMapId(MapEntity_o *this, const MethodIn
     || (Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                  (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v7,
                  (System_Type_o *)MapMaster_TypeInfo->static_fields->SCRIPT_KEY_REFERRER_MAP_ID,
-                 (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                 (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_B7076C(Item, v5);
+    sub_B7769C(Item, v5);
   }
   if ( *(Il2CppClass **)(*(_QWORD *)Item + 64LL) == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(Item);
-  v9 = (MapEntity_o *)sub_B70A60(Item);
+  v9 = (MapEntity_o *)sub_B77990(Item);
   return (unsigned int)MapEntity__GetOverwriteMapAssetId(v9, v10);
 }
 
@@ -392,11 +392,11 @@ float __fastcall MapEntity__GetSpotScale(MapEntity_o *this, const MethodInfo *me
   MapMaster_c *v4; // x0
   System_String_o *SPOT_SCALE; // x20
 
-  if ( (byte_43508D5 & 1) == 0 )
+  if ( (byte_4389EFE & 1) == 0 )
   {
-    sub_B70694(&JsonManager_TypeInfo);
-    sub_B70694(&MapMaster_TypeInfo);
-    byte_43508D5 = 1;
+    sub_B775C4(&JsonManager_TypeInfo);
+    sub_B775C4(&MapMaster_TypeInfo);
+    byte_4389EFE = 1;
   }
   script = this->fields.script;
   v4 = MapMaster_TypeInfo;
@@ -423,13 +423,13 @@ bool __fastcall MapEntity__IsMapModel(MapEntity_o *this, const MethodInfo *metho
   MapEntity_o *v9; // x0
   const MethodInfo *v10; // x1
 
-  if ( (byte_43508D4 & 1) == 0 )
+  if ( (byte_4389EFD & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B70694(&long_TypeInfo);
-    sub_B70694(&MapMaster_TypeInfo);
-    byte_43508D4 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_B775C4(&long_TypeInfo);
+    sub_B775C4(&MapMaster_TypeInfo);
+    byte_4389EFD = 1;
   }
   script = this->fields.script;
   if ( !script )
@@ -443,7 +443,7 @@ bool __fastcall MapEntity__IsMapModel(MapEntity_o *this, const MethodInfo *metho
   if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
           (System_Xml_XmlQualifiedName_o *)v4->static_fields->SCRIPT_KEY_ON_MAP_MODEL,
-          (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return 0;
   Item = MapMaster_TypeInfo;
   v7 = this->fields.script;
@@ -453,13 +453,13 @@ bool __fastcall MapEntity__IsMapModel(MapEntity_o *this, const MethodInfo *metho
     || (Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                  (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v7,
                  (System_Type_o *)MapMaster_TypeInfo->static_fields->SCRIPT_KEY_ON_MAP_MODEL,
-                 (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                 (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_B7076C(Item, v5);
+    sub_B7769C(Item, v5);
   }
   if ( *(Il2CppClass **)(*(_QWORD *)Item + 64LL) == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(Item) > 0;
-  v9 = (MapEntity_o *)sub_B70A60(Item);
+  v9 = (MapEntity_o *)sub_B77990(Item);
   MapEntity__GetSpotScale(v9, v10);
   return result;
 }
@@ -473,12 +473,12 @@ float __fastcall MapEntity__get_Camera2DResetDuration(MapEntity_o *this, const M
   System_String_o *CAMERA2D_RESET_DURATION; // x20
   float Camera2DResetDuration; // s8
 
-  if ( (byte_43508CA & 1) == 0 )
+  if ( (byte_4389EF3 & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&JsonManager_TypeInfo);
-    sub_B70694(&MapMaster_TypeInfo);
-    byte_43508CA = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&JsonManager_TypeInfo);
+    sub_B775C4(&MapMaster_TypeInfo);
+    byte_4389EF3 = 1;
   }
   script = this->fields.script;
   v4 = MapMaster_TypeInfo;
@@ -510,12 +510,12 @@ int32_t __fastcall MapEntity__get_MapCameraMoveEasingType(MapEntity_o *this, con
   System_String_o *MAP_CAMERA_MOVE_TIME_EASING_TYPE; // x20
   int32_t MapCameraMoveEasingType; // w21
 
-  if ( (byte_43508C9 & 1) == 0 )
+  if ( (byte_4389EF2 & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&JsonManager_TypeInfo);
-    sub_B70694(&MapMaster_TypeInfo);
-    byte_43508C9 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&JsonManager_TypeInfo);
+    sub_B775C4(&MapMaster_TypeInfo);
+    byte_4389EF2 = 1;
   }
   script = this->fields.script;
   v4 = MapMaster_TypeInfo;
@@ -535,7 +535,7 @@ int32_t __fastcall MapEntity__get_MapCameraMoveEasingType(MapEntity_o *this, con
   MapCameraMoveEasingType = v5->static_fields->MapCameraMoveEasingType;
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  return JsonManager__GetScriptValue_23926536(script, MAP_CAMERA_MOVE_TIME_EASING_TYPE, MapCameraMoveEasingType, 0LL);
+  return JsonManager__GetScriptValue_24126460(script, MAP_CAMERA_MOVE_TIME_EASING_TYPE, MapCameraMoveEasingType, 0LL);
 }
 
 
@@ -547,12 +547,12 @@ float __fastcall MapEntity__get_MapCameraMoveTimeCoefficient(MapEntity_o *this, 
   System_String_o *MAP_CAMERA_MOVE_TIME_COEFFICIENT; // x20
   float MapCameraMoveTimeCoefficient; // s8
 
-  if ( (byte_43508C7 & 1) == 0 )
+  if ( (byte_4389EF0 & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&JsonManager_TypeInfo);
-    sub_B70694(&MapMaster_TypeInfo);
-    byte_43508C7 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&JsonManager_TypeInfo);
+    sub_B775C4(&MapMaster_TypeInfo);
+    byte_4389EF0 = 1;
   }
   script = this->fields.script;
   v4 = MapMaster_TypeInfo;
@@ -584,12 +584,12 @@ float __fastcall MapEntity__get_MapCameraMoveTimeConstant(MapEntity_o *this, con
   System_String_o *MAP_CAMERA_MOVE_TIME_CONSTANT; // x20
   float MapCameraMoveTimeConstant; // s8
 
-  if ( (byte_43508C6 & 1) == 0 )
+  if ( (byte_4389EEF & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&JsonManager_TypeInfo);
-    sub_B70694(&MapMaster_TypeInfo);
-    byte_43508C6 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&JsonManager_TypeInfo);
+    sub_B775C4(&MapMaster_TypeInfo);
+    byte_4389EEF = 1;
   }
   script = this->fields.script;
   v4 = MapMaster_TypeInfo;
@@ -621,12 +621,12 @@ int32_t __fastcall MapEntity__get_MapCameraMoveTimeLogarithmBase(MapEntity_o *th
   System_String_o *MAP_CAMERA_MOVE_TIME_LOGARITHM_BASE; // x20
   int32_t MapCameraMoveTimeLogarithmBase; // w21
 
-  if ( (byte_43508C8 & 1) == 0 )
+  if ( (byte_4389EF1 & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&JsonManager_TypeInfo);
-    sub_B70694(&MapMaster_TypeInfo);
-    byte_43508C8 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&JsonManager_TypeInfo);
+    sub_B775C4(&MapMaster_TypeInfo);
+    byte_4389EF1 = 1;
   }
   script = this->fields.script;
   v4 = MapMaster_TypeInfo;
@@ -646,7 +646,7 @@ int32_t __fastcall MapEntity__get_MapCameraMoveTimeLogarithmBase(MapEntity_o *th
   MapCameraMoveTimeLogarithmBase = v5->static_fields->MapCameraMoveTimeLogarithmBase;
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  return JsonManager__GetScriptValue_23926536(
+  return JsonManager__GetScriptValue_24126460(
            script,
            MAP_CAMERA_MOVE_TIME_LOGARITHM_BASE,
            MapCameraMoveTimeLogarithmBase,

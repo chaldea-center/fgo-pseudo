@@ -39,38 +39,38 @@ void __fastcall WarBoardStageNpcEntity___ctor(WarBoardStageNpcEntity_o *this, co
   System_Int32_array *v39; // x6
   System_Int32_array *v40; // x7
 
-  if ( (byte_4353A85 & 1) == 0 )
+  if ( (byte_438D2BB & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4353A85 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438D2BB = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
   *(_QWORD *)&this->fields.stageId = 0LL;
   this->fields.groupId = 0;
   v3 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.masterName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.masterName, v3, v4, v5, v6, v7, v8, v9);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.masterName, v3, v4, v5, v6, v7, v8, v9);
   this->fields.masterImageId = 0;
   this->fields.servants = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.servants, 0LL, v10, v11, v12, v13, v14, v15);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.servants, 0LL, v10, v11, v12, v13, v14, v15);
   this->fields.svtEquipIds = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.svtEquipIds, 0LL, v16, v17, v18, v19, v20, v21);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.svtEquipIds, 0LL, v16, v17, v18, v19, v20, v21);
   this->fields.aiIds = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.aiIds, 0LL, v22, v23, v24, v25, v26, v27);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.aiIds, 0LL, v22, v23, v24, v25, v26, v27);
   this->fields.ratingBaseIds = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.ratingBaseIds, 0LL, v28, v29, v30, v31, v32, v33);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.ratingBaseIds, 0LL, v28, v29, v30, v31, v32, v33);
   this->fields.tacticalIds = 0LL;
   p_tacticalIds = &this->fields.tacticalIds;
-  sub_B70630((BattleServantConfConponent_o *)p_tacticalIds, 0LL, v35, v36, v37, v38, v39, v40);
+  sub_B77560((BattleServantConfConponent_o *)p_tacticalIds, 0LL, v35, v36, v37, v38, v39, v40);
   p_tacticalIds[3] = (struct System_Int32_array *)&byte_5;
-  *(_OWORD *)(p_tacticalIds + 1) = xmmword_32ECDD0;
+  *(_OWORD *)(p_tacticalIds + 1) = xmmword_3320110;
 }
 
 
-void __fastcall WarBoardStageNpcEntity___ctor_28700820(
+void __fastcall WarBoardStageNpcEntity___ctor_29073688(
         WarBoardStageNpcEntity_o *this,
         WarBoardStageNpcEntity_o *cSrc,
         const MethodInfo *method)
@@ -120,22 +120,22 @@ void __fastcall WarBoardStageNpcEntity___ctor_28700820(
   System_Int32_array *v47; // x6
   System_Int32_array *v48; // x7
 
-  if ( (byte_4353A86 & 1) == 0 )
+  if ( (byte_438D2BC & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_4353A86 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438D2BC = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
   if ( !cSrc )
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   this->fields.stageId = cSrc->fields.stageId;
   this->fields.forceId = cSrc->fields.forceId;
   this->fields.groupId = cSrc->fields.groupId;
   masterName = cSrc->fields.masterName;
   this->fields.masterName = masterName;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.masterName,
     (System_Int32_array **)masterName,
     v7,
@@ -147,7 +147,7 @@ void __fastcall WarBoardStageNpcEntity___ctor_28700820(
   this->fields.masterImageId = cSrc->fields.masterImageId;
   servants = cSrc->fields.servants;
   this->fields.servants = servants;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.servants,
     (System_Int32_array **)servants,
     v15,
@@ -158,7 +158,7 @@ void __fastcall WarBoardStageNpcEntity___ctor_28700820(
     v20);
   svtEquipIds = cSrc->fields.svtEquipIds;
   this->fields.svtEquipIds = svtEquipIds;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.svtEquipIds,
     (System_Int32_array **)svtEquipIds,
     v22,
@@ -169,7 +169,7 @@ void __fastcall WarBoardStageNpcEntity___ctor_28700820(
     v27);
   aiIds = cSrc->fields.aiIds;
   this->fields.aiIds = aiIds;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.aiIds,
     (System_Int32_array **)aiIds,
     v29,
@@ -180,7 +180,7 @@ void __fastcall WarBoardStageNpcEntity___ctor_28700820(
     v34);
   ratingBaseIds = cSrc->fields.ratingBaseIds;
   this->fields.ratingBaseIds = ratingBaseIds;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.ratingBaseIds,
     (System_Int32_array **)ratingBaseIds,
     v36,
@@ -191,7 +191,7 @@ void __fastcall WarBoardStageNpcEntity___ctor_28700820(
     v41);
   tacticalIds = cSrc->fields.tacticalIds;
   this->fields.tacticalIds = tacticalIds;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.tacticalIds,
     (System_Int32_array **)tacticalIds,
     v43,
@@ -215,16 +215,16 @@ System_String_o *__fastcall WarBoardStageNpcEntity__CreatePK(
         int32_t groupId,
         const MethodInfo *method)
 {
-  if ( (byte_4353A84 & 1) == 0 )
+  if ( (byte_438D2BA & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4353A84 = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_438D2BA = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            stageId,
            forceId,
            groupId,
-           (const MethodInfo_1CA2794 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1D175E4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -250,39 +250,39 @@ System_Int32_array *__fastcall WarBoardStageNpcEntity__GetDefenseTarget(
   __int64 v8; // x20
   __int64 v9; // x20
 
-  if ( (byte_4353A8A & 1) == 0 )
+  if ( (byte_438D2C0 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Array_Empty_int___);
-    sub_B70694(&StringLiteral_18216/*"defenseTarget"*/);
-    byte_4353A8A = 1;
+    sub_B775C4(&Method_System_Array_Empty_int___);
+    sub_B775C4(&StringLiteral_18304/*"defenseTarget"*/);
+    byte_438D2C0 = 1;
   }
   v4 = (_QWORD **)Method_System_Array_Empty_int___;
   v5 = **((_QWORD **)Method_System_Array_Empty_int___ + 6);
   v6 = *(_WORD *)(v5 + 306);
   if ( (v6 & 1) == 0 )
   {
-    sub_B08394(**((_QWORD **)Method_System_Array_Empty_int___ + 6));
+    sub_B0F2C4(**((_QWORD **)Method_System_Array_Empty_int___ + 6));
     v6 = *(_WORD *)(v5 + 306);
   }
   if ( (v6 & 0x400) != 0 )
   {
     v7 = *v4[6];
     if ( (*(_BYTE *)(v7 + 306) & 1) == 0 )
-      sub_B08394(*v4[6]);
+      sub_B0F2C4(*v4[6]);
     if ( !*(_DWORD *)(v7 + 224) )
     {
       v8 = *v4[6];
       if ( (*(_BYTE *)(v8 + 306) & 1) == 0 )
-        sub_B08394(*v4[6]);
+        sub_B0F2C4(*v4[6]);
       j_il2cpp_runtime_class_init_0(v8);
     }
   }
   v9 = *v4[6];
   if ( (*(_BYTE *)(v9 + 306) & 1) == 0 )
-    sub_B08394(*v4[6]);
+    sub_B0F2C4(*v4[6]);
   return WarBoardStageNpcEntity__getScriptIntArrayParam(
            this,
-           (System_String_o *)StringLiteral_18216/*"defenseTarget"*/,
+           (System_String_o *)StringLiteral_18304/*"defenseTarget"*/,
            **(System_Int32_array ***)(v9 + 184),
            v2);
 }
@@ -310,15 +310,15 @@ System_Int32_array *__fastcall WarBoardStageNpcEntity__getScriptIntArrayParam(
   System_Collections_Generic_List_int__o *v20; // x0
   __int64 v21; // x1
 
-  if ( (byte_4353A88 & 1) == 0 )
+  if ( (byte_438D2BE & 1) == 0 )
   {
-    sub_B70694(&Method_System_Converter_object__int___ctor__);
-    sub_B70694(&System_Converter_object__int__TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_object__ConvertAll_int___);
-    sub_B70694(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_B70694(&Method_WarBoardStageNpcEntity___c__getScriptIntArrayParam_b__22_0__);
-    sub_B70694(&WarBoardStageNpcEntity___c_TypeInfo);
-    byte_4353A88 = 1;
+    sub_B775C4(&Method_System_Converter_object__int___ctor__);
+    sub_B775C4(&System_Converter_object__int__TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_object__ConvertAll_int___);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_B775C4(&Method_WarBoardStageNpcEntity___c__getScriptIntArrayParam_b__22_0__);
+    sub_B775C4(&WarBoardStageNpcEntity___c_TypeInfo);
+    byte_438D2BE = 1;
   }
   ScriptObjListParam = WarBoardStageNpcEntity__getScriptObjListParam(this, key, (const MethodInfo *)defVal);
   if ( !ScriptObjListParam )
@@ -341,15 +341,15 @@ System_Int32_array *__fastcall WarBoardStageNpcEntity__getScriptIntArrayParam(
       static_fields = WarBoardStageNpcEntity___c_TypeInfo->static_fields;
     }
     v12 = (Il2CppObject *)static_fields->__9;
-    _9__22_0 = (System_Converter_BattleActionData_HealData__int__o *)sub_B70764(System_Converter_object__int__TypeInfo);
+    _9__22_0 = (System_Converter_BattleActionData_HealData__int__o *)sub_B77694(System_Converter_object__int__TypeInfo);
     System_Converter_BattleActionData_HealData__int____ctor(
       _9__22_0,
       v12,
       Method_WarBoardStageNpcEntity___c__getScriptIntArrayParam_b__22_0__,
-      (const MethodInfo_21BC5DC *)Method_System_Converter_object__int___ctor__);
+      (const MethodInfo_21F7A30 *)Method_System_Converter_object__int___ctor__);
     v13 = WarBoardStageNpcEntity___c_TypeInfo->static_fields;
     v13->__9__22_0 = (struct System_Converter_object__int__o *)_9__22_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v13->__9__22_0,
       (System_Int32_array **)_9__22_0,
       v14,
@@ -362,12 +362,12 @@ System_Int32_array *__fastcall WarBoardStageNpcEntity__getScriptIntArrayParam(
   v20 = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_BattleActionData_HealData___ConvertAll_int_(
                                                     v8,
                                                     (System_Converter_T__TOutput__o *)_9__22_0,
-                                                    (const MethodInfo_195743C *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
+                                                    (const MethodInfo_19AECA8 *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
   if ( !v20 )
-    sub_B7076C(0LL, v21);
+    sub_B7769C(0LL, v21);
   return System_Collections_Generic_List_int___ToArray(
            v20,
-           (const MethodInfo_30B82E4 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_30E7EF4 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -379,10 +379,10 @@ Il2CppObject *__fastcall WarBoardStageNpcEntity__getScriptObj(
   Il2CppObject *result; // x0
   System_Xml_Schema_XmlSchemaObject_o *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4353A89 & 1) == 0 )
+  if ( (byte_438D2BF & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    byte_4353A89 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    byte_438D2BF = 1;
   }
   value = 0LL;
   result = (Il2CppObject *)this->fields.script;
@@ -393,7 +393,7 @@ Il2CppObject *__fastcall WarBoardStageNpcEntity__getScriptObj(
            (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)result,
            (System_Xml_XmlQualifiedName_o *)key,
            &value,
-           (const MethodInfo_2F517E8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_2F7F3F8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return (Il2CppObject *)value;
     }
@@ -417,10 +417,10 @@ System_Collections_Generic_List_object__o *__fastcall WarBoardStageNpcEntity__ge
   System_String_o *v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_4353A87 & 1) == 0 )
+  if ( (byte_438D2BD & 1) == 0 )
   {
-    sub_B70694(&System_Collections_Generic_List_object__TypeInfo);
-    byte_4353A87 = 1;
+    sub_B775C4(&System_Collections_Generic_List_object__TypeInfo);
+    byte_438D2BD = 1;
   }
   result = (System_Collections_Generic_List_object__o *)WarBoardStageNpcEntity__getScriptObj(this, key, method);
   if ( result )
@@ -429,7 +429,7 @@ System_Collections_Generic_List_object__o *__fastcall WarBoardStageNpcEntity__ge
     if ( *(&result->klass->_2.bitflags2 + 1) < (unsigned int)v6
       || (System_Collections_Generic_List_object__c *)result->klass->_2.typeHierarchy[v6 - 1] != System_Collections_Generic_List_object__TypeInfo )
     {
-      sub_B70A60(result);
+      sub_B77990(result);
       return (System_Collections_Generic_List_object__o *)WarBoardStageNpcEntity__getScriptObj(v7, v8, v9);
     }
   }
@@ -448,16 +448,16 @@ void __fastcall WarBoardStageNpcEntity___c___cctor(const MethodInfo *method)
   System_Int32_array *v7; // x6
   System_Int32_array *v8; // x7
 
-  if ( (byte_434FCA5 & 1) == 0 )
+  if ( (byte_438928E & 1) == 0 )
   {
-    sub_B70694(&WarBoardStageNpcEntity___c_TypeInfo);
-    byte_434FCA5 = 1;
+    sub_B775C4(&WarBoardStageNpcEntity___c_TypeInfo);
+    byte_438928E = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(WarBoardStageNpcEntity___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(WarBoardStageNpcEntity___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = (BattleServantConfConponent_o *)WarBoardStageNpcEntity___c_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B70630(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  sub_B77560(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -474,10 +474,10 @@ int32_t __fastcall WarBoardStageNpcEntity___c___getScriptIntArrayParam_b__22_0(
 {
   System_String_o *v4; // x0
 
-  if ( (byte_434FCA6 & 1) == 0 )
+  if ( (byte_438928F & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_434FCA6 = 1;
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438928F = 1;
   }
   if ( x )
     v4 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer, const MethodInfo *))x->klass->vtable[3].method)(

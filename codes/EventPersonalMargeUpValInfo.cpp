@@ -19,18 +19,18 @@ void __fastcall EventPersonalMargeUpValInfo___ctor(
   System_Int32_array *v19; // x6
   System_Int32_array *v20; // x7
 
-  if ( (byte_4351E78 & 1) == 0 )
+  if ( (byte_438B53B & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
-    sub_B70694(&System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
-    byte_4351E78 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
+    byte_438B53B = 1;
   }
-  v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
+  v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v7,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
   this->fields.margeList = (struct System_Collections_Generic_List_EventMargeItemUpValInfo__o *)v7;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.margeList,
     (System_Int32_array **)v7,
     v8,
@@ -43,7 +43,7 @@ void __fastcall EventPersonalMargeUpValInfo___ctor(
   this->fields.servantEntity = servantEntity;
   p_servantEntity = &this->fields.servantEntity;
   *((_DWORD *)p_servantEntity - 2) = eventId;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)p_servantEntity,
     (System_Int32_array **)servantEntity,
     v15,
@@ -70,24 +70,24 @@ void __fastcall EventPersonalMargeUpValInfo__Add(
   __int64 v12; // x0
   System_Collections_Generic_List_Enumerator_T__o v13; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4351E7C & 1) == 0 )
+  if ( (byte_438B53F & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventDropItemUpValInfo__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventDropItemUpValInfo__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventDropItemUpValInfo__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventDropItemUpValInfo__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventDropItemUpValInfo__GetEnumerator__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventDropItemUpValInfo___ctor__);
-    sub_B70694(&System_Collections_Generic_List_EventDropItemUpValInfo__TypeInfo);
-    byte_4351E7C = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventDropItemUpValInfo__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventDropItemUpValInfo__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventDropItemUpValInfo__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventDropItemUpValInfo__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventDropItemUpValInfo__GetEnumerator__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventDropItemUpValInfo___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_EventDropItemUpValInfo__TypeInfo);
+    byte_438B53F = 1;
   }
   memset(&v13, 0, sizeof(v13));
   if ( dropItemInfoList )
   {
-    v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_EventDropItemUpValInfo__TypeInfo);
+    v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventDropItemUpValInfo__TypeInfo);
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
       v5,
-      (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_EventDropItemUpValInfo___ctor__);
+      (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventDropItemUpValInfo___ctor__);
     max_length = dropItemInfoList->max_length;
     if ( max_length >= 1 )
     {
@@ -96,8 +96,8 @@ void __fastcall EventPersonalMargeUpValInfo__Add(
       {
         if ( (unsigned int)v10 >= max_length )
         {
-          v12 = sub_B70798(v6);
-          sub_B70738(v12, 0LL);
+          v12 = sub_B776C8(v6);
+          sub_B77668(v12, 0LL);
         }
         v7 = dropItemInfoList->m_Items[v10];
         if ( !v7 )
@@ -109,18 +109,18 @@ void __fastcall EventPersonalMargeUpValInfo__Add(
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
             v5,
             (EventMissionProgressRequest_Argument_ProgressData_o *)v7,
-            (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_EventDropItemUpValInfo__Add__);
+            (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventDropItemUpValInfo__Add__);
         }
         else
         {
-          EventPersonalMargeUpValInfo__Add_25418424(this, v7, 0, v8);
+          EventPersonalMargeUpValInfo__Add_25666240(this, v7, 0, v8);
         }
         max_length = dropItemInfoList->max_length;
         if ( (int)++v10 >= max_length )
           goto LABEL_13;
       }
 LABEL_19:
-      sub_B7076C(v6, v7);
+      sub_B7769C(v6, v7);
     }
 LABEL_13:
     if ( !v5 )
@@ -128,19 +128,19 @@ LABEL_13:
     System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
       &v13,
       (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v5,
-      (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_EventDropItemUpValInfo__GetEnumerator__);
+      (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_EventDropItemUpValInfo__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
               &v13,
-              (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_EventDropItemUpValInfo__MoveNext__) )
-      EventPersonalMargeUpValInfo__Add_25418424(this, (EventDropItemUpValInfo_o *)v13.fields.current, 1, v11);
+              (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_EventDropItemUpValInfo__MoveNext__) )
+      EventPersonalMargeUpValInfo__Add_25666240(this, (EventDropItemUpValInfo_o *)v13.fields.current, 1, v11);
     System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
       &v13,
-      (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_EventDropItemUpValInfo__Dispose__);
+      (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_EventDropItemUpValInfo__Dispose__);
   }
 }
 
 
-void __fastcall EventPersonalMargeUpValInfo__Add_25418424(
+void __fastcall EventPersonalMargeUpValInfo__Add_25666240(
         EventPersonalMargeUpValInfo_o *this,
         EventDropItemUpValInfo_o *dropItemInfo,
         bool isInvalid,
@@ -165,15 +165,15 @@ void __fastcall EventPersonalMargeUpValInfo__Add_25418424(
   int v23; // [xsp+38h] [xbp-58h]
   System_Collections_Generic_List_Enumerator_T__o v24; // [xsp+40h] [xbp-50h] BYREF
 
-  if ( (byte_4351E7D & 1) == 0 )
+  if ( (byte_438B540 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__get_Current__);
-    sub_B70694(&EventMargeItemUpValInfo_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__);
-    byte_4351E7D = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__get_Current__);
+    sub_B775C4(&EventMargeItemUpValInfo_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__);
+    byte_438B540 = 1;
   }
   memset(&v24, 0, sizeof(v24));
   v23 = 0;
@@ -192,18 +192,18 @@ LABEL_16:
     System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
       v22,
       (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)margeList,
-      (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__);
+      (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__);
     v24 = v22[0];
     while ( 1 )
     {
       v13 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
               &v24,
-              (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__);
+              (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__);
       if ( !v13 )
         break;
       current = (EventMargeItemUpValInfo_o *)v24.fields.current;
       if ( !v24.fields.current )
-        sub_B7076C(v13, v14);
+        sub_B7769C(v13, v14);
       if ( LODWORD(v24.fields.current[4].klass) == dropItemInfo->fields.targetType
         && LODWORD(v24.fields.current[3].monitor) == dropItemInfo->fields.baseFuncId )
       {
@@ -215,7 +215,7 @@ LABEL_24:
     *((_DWORD *)&v22[1].fields.list + v23++) = 167;
     System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
       &v24,
-      (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
+      (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
     if ( v23 )
     {
       v15 = v23 - 1;
@@ -237,18 +237,18 @@ LABEL_15:
         System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
           v22,
           (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)margeList,
-          (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__);
+          (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__);
         v24 = v22[0];
         while ( 1 )
         {
           v17 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
                   &v24,
-                  (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__);
+                  (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__);
           if ( !v17 )
             break;
           current = (EventMargeItemUpValInfo_o *)v24.fields.current;
           if ( !v24.fields.current )
-            sub_B7076C(v17, v18);
+            sub_B7769C(v17, v18);
           if ( LODWORD(v24.fields.current[3].monitor) == dropItemInfo->fields.baseFuncId
             && v24.fields.current[5].klass == (Il2CppClass *)dropItemInfo->fields.itemEntity )
           {
@@ -260,7 +260,7 @@ LABEL_60:
         *((_DWORD *)&v22[1].fields.list + v23++) = 532;
         System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
           &v24,
-          (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
+          (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
         if ( v23 && *((_DWORD *)&v22[0].fields.current + v23 + 1) == 532 )
           --v23;
         if ( current )
@@ -273,7 +273,7 @@ LABEL_60:
           }
           return;
         }
-        v21 = (EventMargeItemUpValInfo_o *)sub_B70764(EventMargeItemUpValInfo_TypeInfo);
+        v21 = (EventMargeItemUpValInfo_o *)sub_B77694(EventMargeItemUpValInfo_TypeInfo);
         EventMargeItemUpValInfo___ctor(v21, dropItemInfo, 0LL);
         if ( v21 )
         {
@@ -284,28 +284,28 @@ LABEL_60:
             System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
               (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)margeList,
               (EventMissionProgressRequest_Argument_ProgressData_o *)v21,
-              (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__);
+              (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__);
             return;
           }
         }
 LABEL_76:
-        sub_B7076C(margeList, dropItemInfo);
+        sub_B7769C(margeList, dropItemInfo);
       }
       System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
         v22,
         (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)margeList,
-        (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__);
+        (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__);
       v24 = v22[0];
       while ( 1 )
       {
         v19 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
                 &v24,
-                (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__);
+                (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__);
         if ( !v19 )
           break;
         current = (EventMargeItemUpValInfo_o *)v24.fields.current;
         if ( !v24.fields.current )
-          sub_B7076C(v19, v20);
+          sub_B7769C(v19, v20);
         if ( LODWORD(v24.fields.current[3].monitor) == dropItemInfo->fields.baseFuncId
           && v24.fields.current[5].klass == (Il2CppClass *)dropItemInfo->fields.itemEntity )
         {
@@ -317,7 +317,7 @@ LABEL_68:
       *((_DWORD *)&v22[1].fields.list + v23++) = 696;
       System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
         &v24,
-        (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
+        (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
       if ( v23 )
       {
         v15 = v23 - 1;
@@ -334,18 +334,18 @@ LABEL_68:
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     v22,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)margeList,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__);
   v24 = v22[0];
   while ( 1 )
   {
     v10 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v24,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__);
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__);
     if ( !v10 )
       break;
     current = (EventMargeItemUpValInfo_o *)v24.fields.current;
     if ( !v24.fields.current )
-      sub_B7076C(v10, v11);
+      sub_B7769C(v10, v11);
     if ( LODWORD(v24.fields.current[3].monitor) == dropItemInfo->fields.baseFuncId )
       goto LABEL_28;
   }
@@ -354,7 +354,7 @@ LABEL_28:
   *((_DWORD *)&v22[1].fields.list + v23++) = 346;
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v24,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
   if ( v23 )
   {
     v15 = v23 - 1;
@@ -379,7 +379,7 @@ LABEL_43:
     }
     goto LABEL_76;
   }
-  current = (EventMargeItemUpValInfo_o *)sub_B70764(EventMargeItemUpValInfo_TypeInfo);
+  current = (EventMargeItemUpValInfo_o *)sub_B77694(EventMargeItemUpValInfo_TypeInfo);
   EventMargeItemUpValInfo___ctor(current, dropItemInfo, 0LL);
   margeList = this->fields.margeList;
   if ( !margeList )
@@ -387,7 +387,7 @@ LABEL_43:
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)margeList,
     (EventMissionProgressRequest_Argument_ProgressData_o *)current,
-    (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__);
+    (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__);
   if ( !isInvalid )
     goto LABEL_40;
 LABEL_33:
@@ -406,14 +406,14 @@ int32_t __fastcall EventPersonalMargeUpValInfo__GetCount(EventPersonalMargeUpVal
   struct System_Collections_Generic_List_EventMargeItemUpValInfo__o *margeList; // x8
 
   v2 = this;
-  if ( (byte_4351E7A & 1) == 0 )
+  if ( (byte_438B53D & 1) == 0 )
   {
-    this = (EventPersonalMargeUpValInfo_o *)sub_B70694(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__get_Count__);
-    byte_4351E7A = 1;
+    this = (EventPersonalMargeUpValInfo_o *)sub_B775C4(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__get_Count__);
+    byte_438B53D = 1;
   }
   margeList = v2->fields.margeList;
   if ( !margeList )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return margeList->fields._size;
 }
 
@@ -435,15 +435,15 @@ EventMargeItemUpValInfo_array *__fastcall EventPersonalMargeUpValInfo__GetList(
   System_Int32_array *v13; // x6
   System_Int32_array *v14; // x7
 
-  if ( (byte_4351E7E & 1) == 0 )
+  if ( (byte_438B541 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Comparison_EventMargeItemUpValInfo___ctor__);
-    sub_B70694(&System_Comparison_EventMargeItemUpValInfo__TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Sort__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__ToArray__);
-    sub_B70694(&Method_EventPersonalMargeUpValInfo___c__GetList_b__9_0__);
-    sub_B70694(&EventPersonalMargeUpValInfo___c_TypeInfo);
-    byte_4351E7E = 1;
+    sub_B775C4(&Method_System_Comparison_EventMargeItemUpValInfo___ctor__);
+    sub_B775C4(&System_Comparison_EventMargeItemUpValInfo__TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Sort__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__ToArray__);
+    sub_B775C4(&Method_EventPersonalMargeUpValInfo___c__GetList_b__9_0__);
+    sub_B775C4(&EventPersonalMargeUpValInfo___c_TypeInfo);
+    byte_438B541 = 1;
   }
   margeList = this->fields.margeList;
   v4 = EventPersonalMargeUpValInfo___c_TypeInfo;
@@ -463,15 +463,15 @@ EventMargeItemUpValInfo_array *__fastcall EventPersonalMargeUpValInfo__GetList(
       static_fields = EventPersonalMargeUpValInfo___c_TypeInfo->static_fields;
     }
     v7 = (Il2CppObject *)static_fields->__9;
-    _9__9_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B70764(System_Comparison_EventMargeItemUpValInfo__TypeInfo);
+    _9__9_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B77694(System_Comparison_EventMargeItemUpValInfo__TypeInfo);
     System_Comparison_TitleInfoControl_EventEndTimeInfo____ctor(
       _9__9_0,
       v7,
       Method_EventPersonalMargeUpValInfo___c__GetList_b__9_0__,
-      (const MethodInfo_2B05B38 *)Method_System_Comparison_EventMargeItemUpValInfo___ctor__);
+      (const MethodInfo_2B42C0C *)Method_System_Comparison_EventMargeItemUpValInfo___ctor__);
     v8 = EventPersonalMargeUpValInfo___c_TypeInfo->static_fields;
     v8->__9__9_0 = (struct System_Comparison_EventMargeItemUpValInfo__o *)_9__9_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v8->__9__9_0,
       (System_Int32_array **)_9__9_0,
       v9,
@@ -485,14 +485,14 @@ EventMargeItemUpValInfo_array *__fastcall EventPersonalMargeUpValInfo__GetList(
     || (System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo___Sort(
           (System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__o *)margeList,
           (System_Comparison_T__o *)_9__9_0,
-          (const MethodInfo_3027764 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Sort__),
+          (const MethodInfo_3055374 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Sort__),
         (v4 = this->fields.margeList) == 0LL) )
   {
-    sub_B7076C(v4, method);
+    sub_B7769C(v4, method);
   }
   return (EventMargeItemUpValInfo_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
                                             (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v4,
-                                            (const MethodInfo_30277D4 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__ToArray__);
+                                            (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__ToArray__);
 }
 
 
@@ -507,20 +507,20 @@ EventMargeItemUpValInfo_o *__fastcall EventPersonalMargeUpValInfo__GetMargeItem(
   int32_t size; // w8
 
   v4 = this;
-  if ( (byte_4351E7B & 1) == 0 )
+  if ( (byte_438B53E & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__get_Count__);
-    this = (EventPersonalMargeUpValInfo_o *)sub_B70694(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__get_Item__);
-    byte_4351E7B = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__get_Count__);
+    this = (EventPersonalMargeUpValInfo_o *)sub_B775C4(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__get_Item__);
+    byte_438B53E = 1;
   }
   margeList = v4->fields.margeList;
   if ( !margeList )
-    sub_B7076C(this, *(_QWORD *)&index);
+    sub_B7769C(this, *(_QWORD *)&index);
   size = margeList->fields._size;
   if ( size <= index )
     return 0LL;
   if ( size <= (unsigned int)index )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
   return margeList->fields._items->m_Items[index];
 }
 
@@ -531,14 +531,14 @@ bool __fastcall EventPersonalMargeUpValInfo__IsEmpty(EventPersonalMargeUpValInfo
   struct System_Collections_Generic_List_EventMargeItemUpValInfo__o *margeList; // x8
 
   v2 = this;
-  if ( (byte_4351E79 & 1) == 0 )
+  if ( (byte_438B53C & 1) == 0 )
   {
-    this = (EventPersonalMargeUpValInfo_o *)sub_B70694(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__get_Count__);
-    byte_4351E79 = 1;
+    this = (EventPersonalMargeUpValInfo_o *)sub_B775C4(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__get_Count__);
+    byte_438B53C = 1;
   }
   margeList = v2->fields.margeList;
   if ( !margeList )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return margeList->fields._size < 1;
 }
 
@@ -548,16 +548,16 @@ void __fastcall EventPersonalMargeUpValInfo___c___cctor(const MethodInfo *method
   Il2CppObject *v1; // x19
   struct EventPersonalMargeUpValInfo___c_StaticFields *static_fields; // x0
 
-  if ( (byte_434EA14 & 1) == 0 )
+  if ( (byte_4387FE5 & 1) == 0 )
   {
-    sub_B70694(&EventPersonalMargeUpValInfo___c_TypeInfo);
-    byte_434EA14 = 1;
+    sub_B775C4(&EventPersonalMargeUpValInfo___c_TypeInfo);
+    byte_4387FE5 = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(EventPersonalMargeUpValInfo___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(EventPersonalMargeUpValInfo___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = EventPersonalMargeUpValInfo___c_TypeInfo->static_fields;
   static_fields->__9 = (struct EventPersonalMargeUpValInfo___c_o *)v1;
-  sub_B70630(static_fields);
+  sub_B77560(static_fields);
 }
 
 
@@ -576,6 +576,6 @@ int32_t __fastcall EventPersonalMargeUpValInfo___c___GetList_b__9_0(
         const MethodInfo *method)
 {
   if ( !a )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   return EventMargeItemUpValInfo__CompPersonalPriority(a, b, 0LL);
 }

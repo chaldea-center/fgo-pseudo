@@ -15,18 +15,18 @@ void __fastcall FsmEventData___ctor(FsmEventData_o *this, const MethodInfo *meth
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
 
-  if ( (byte_43540C5 & 1) == 0 )
+  if ( (byte_438D8EA & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_21460/*"none"*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43540C5 = 1;
+    sub_B775C4(&StringLiteral_21556/*"none"*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438D8EA = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_21460/*"none"*/;
-  this->fields.eventData = (struct System_String_o *)StringLiteral_21460/*"none"*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
+  v9 = (System_Int32_array **)StringLiteral_21556/*"none"*/;
+  this->fields.eventData = (struct System_String_o *)StringLiteral_21556/*"none"*/;
+  sub_B77560((BattleServantConfConponent_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
   v10 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.title = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.title, v10, v11, v12, v13, v14, v15, v16);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.title, v10, v11, v12, v13, v14, v15, v16);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -58,7 +58,7 @@ void __fastcall FsmEventData__set_EventData(FsmEventData_o *this, System_String_
   System_Int32_array *v7; // x7
 
   this->fields.eventData = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -79,7 +79,7 @@ void __fastcall FsmEventData__set_Title(FsmEventData_o *this, System_String_o *v
   System_Int32_array *v7; // x7
 
   this->fields.title = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.title,
     (System_Int32_array **)value,
     (System_String_array **)method,

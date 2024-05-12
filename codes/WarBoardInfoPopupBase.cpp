@@ -1,9 +1,9 @@
 void __fastcall WarBoardInfoPopupBase___cctor(const MethodInfo *method)
 {
-  if ( (byte_434E610 & 1) == 0 )
+  if ( (byte_4387BE1 & 1) == 0 )
   {
-    sub_B70694(&WarBoardInfoPopupBase_TypeInfo);
-    byte_434E610 = 1;
+    sub_B775C4(&WarBoardInfoPopupBase_TypeInfo);
+    byte_4387BE1 = 1;
   }
   WarBoardInfoPopupBase_TypeInfo->static_fields->POPUP_SHOW_ANIM_DURATION = 0.13333;
   WarBoardInfoPopupBase_TypeInfo->static_fields->POPUP_HIDE_ANIM_DURATION = 0.13333;
@@ -28,23 +28,23 @@ void __fastcall WarBoardInfoPopupBase__AddHideCompleteCallback(
   EventDelegate_Callback_o *v9; // x1
   const MethodInfo *v10; // x2
 
-  if ( (byte_434E60D & 1) == 0 )
+  if ( (byte_4387BDE & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    byte_434E60D = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    byte_4387BDE = 1;
   }
   hideCompleteCallback = (System_Delegate_o *)this->fields.hideCompleteCallback;
   p_hideCompleteCallback = &this->fields.hideCompleteCallback;
   v7 = System_Delegate__Combine(hideCompleteCallback, (System_Delegate_o *)completeCallback, 0LL);
   if ( v7 && (System_Action_c *)v7->klass != System_Action_TypeInfo )
   {
-    v8 = (WarBoardInfoPopupBase_o *)sub_B70A60(v7);
+    v8 = (WarBoardInfoPopupBase_o *)sub_B77990(v7);
     WarBoardInfoPopupBase__ShowAnimation(v8, v9, v10);
   }
   else
   {
     *p_hideCompleteCallback = (struct System_Action_o *)v7;
-    sub_B70630(p_hideCompleteCallback);
+    sub_B77560(p_hideCompleteCallback);
   }
 }
 
@@ -59,14 +59,14 @@ void __fastcall WarBoardInfoPopupBase__Hide(WarBoardInfoPopupBase_o *this, const
 {
   EventDelegate_Callback_o *v3; // x20
 
-  if ( (byte_434E60C & 1) == 0 )
+  if ( (byte_4387BDD & 1) == 0 )
   {
-    sub_B70694(&EventDelegate_Callback_TypeInfo);
-    sub_B70694(&Method_WarBoardInfoPopupBase__Hide_b__18_0__);
-    byte_434E60C = 1;
+    sub_B775C4(&EventDelegate_Callback_TypeInfo);
+    sub_B775C4(&Method_WarBoardInfoPopupBase__Hide_b__18_0__);
+    byte_4387BDD = 1;
   }
   this->fields._isHideAnimating_k__BackingField = 1;
-  v3 = (EventDelegate_Callback_o *)sub_B70764(EventDelegate_Callback_TypeInfo);
+  v3 = (EventDelegate_Callback_o *)sub_B77694(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(v3, (Il2CppObject *)this, Method_WarBoardInfoPopupBase__Hide_b__18_0__, 0LL);
   ((void (__fastcall *)(WarBoardInfoPopupBase_o *, EventDelegate_Callback_o *, Il2CppMethodPointer))this->klass->vtable._6_HideAnimation.method)(
     this,
@@ -92,11 +92,11 @@ void __fastcall WarBoardInfoPopupBase__HideAnimation(
   System_Collections_Generic_List_EventDelegate__o *onFinished; // x20
   UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_434E60F & 1) == 0 )
+  if ( (byte_4387BE0 & 1) == 0 )
   {
-    sub_B70694(&EventDelegate_TypeInfo);
-    sub_B70694(&WarBoardInfoPopupBase_TypeInfo);
-    byte_434E60F = 1;
+    sub_B775C4(&EventDelegate_TypeInfo);
+    sub_B775C4(&WarBoardInfoPopupBase_TypeInfo);
+    byte_4387BE0 = 1;
   }
   mainView = this->fields.mainView;
   v6 = WarBoardInfoPopupBase_TypeInfo;
@@ -115,7 +115,7 @@ void __fastcall WarBoardInfoPopupBase__HideAnimation(
   v10 = z;
   v11 = TweenScale__Begin(mainView, POPUP_HIDE_ANIM_DURATION, *(UnityEngine_Vector3_o *)&zero.fields.y, 0LL);
   if ( !v11 )
-    sub_B7076C(0LL, v12);
+    sub_B7769C(0LL, v12);
   v11->fields.style = 6;
   onFinished = v11->fields.onFinished;
   if ( (BYTE3(EventDelegate_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -123,7 +123,7 @@ void __fastcall WarBoardInfoPopupBase__HideAnimation(
   {
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
   }
-  EventDelegate__Set_29879148(onFinished, finishCallback, 0LL);
+  EventDelegate__Set_30349648(onFinished, finishCallback, 0LL);
 }
 
 
@@ -143,12 +143,12 @@ void __fastcall WarBoardInfoPopupBase__Initialize(WarBoardInfoPopupBase_o *this,
         *(UnityEngine_Vector3_o *)&v6 = UnityEngine_Vector3__get_zero(0LL),
         !transform) )
   {
-    sub_B7076C(gameObject, v4);
+    sub_B7769C(gameObject, v4);
   }
   UnityEngine_Transform__set_localScale(transform, *(UnityEngine_Vector3_o *)&v6, 0LL);
   this->fields.hideCompleteCallback = 0LL;
   p_hideCompleteCallback = &this->fields.hideCompleteCallback;
-  sub_B70630(p_hideCompleteCallback);
+  sub_B77560(p_hideCompleteCallback);
   *((_WORD *)p_hideCompleteCallback + 4) = 0;
 }
 
@@ -163,7 +163,7 @@ void __fastcall WarBoardInfoPopupBase__OnAfterHide(WarBoardInfoPopupBase_o *this
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   ((void (__fastcall *)(WarBoardInfoPopupBase_o *, void *))this->klass->vtable._9_CleanPopup.method)(
     this,
@@ -175,7 +175,7 @@ void __fastcall WarBoardInfoPopupBase__OnAfterHide(WarBoardInfoPopupBase_o *this
   {
     System_Action__Invoke(v5, 0LL);
     *p_hideCompleteCallback = 0LL;
-    sub_B70630(p_hideCompleteCallback);
+    sub_B77560(p_hideCompleteCallback);
   }
 }
 
@@ -187,7 +187,7 @@ void __fastcall WarBoardInfoPopupBase__OnBeforeShow(WarBoardInfoPopupBase_o *thi
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
 }
 
@@ -196,17 +196,17 @@ void __fastcall WarBoardInfoPopupBase__Show(WarBoardInfoPopupBase_o *this, const
 {
   EventDelegate_Callback_o *v3; // x20
 
-  if ( (byte_434E60B & 1) == 0 )
+  if ( (byte_4387BDC & 1) == 0 )
   {
-    sub_B70694(&EventDelegate_Callback_TypeInfo);
-    sub_B70694(&Method_WarBoardInfoPopupBase__Show_b__17_0__);
-    byte_434E60B = 1;
+    sub_B775C4(&EventDelegate_Callback_TypeInfo);
+    sub_B775C4(&Method_WarBoardInfoPopupBase__Show_b__17_0__);
+    byte_4387BDC = 1;
   }
   ((void (__fastcall *)(WarBoardInfoPopupBase_o *, Il2CppMethodPointer))this->klass->vtable._7_OnBeforeShow.method)(
     this,
     this->klass->vtable._8_OnAfterHide.methodPtr);
   this->fields._isShowAnimating_k__BackingField = 1;
-  v3 = (EventDelegate_Callback_o *)sub_B70764(EventDelegate_Callback_TypeInfo);
+  v3 = (EventDelegate_Callback_o *)sub_B77694(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(v3, (Il2CppObject *)this, Method_WarBoardInfoPopupBase__Show_b__17_0__, 0LL);
   ((void (__fastcall *)(WarBoardInfoPopupBase_o *, EventDelegate_Callback_o *, Il2CppMethodPointer))this->klass->vtable._5_ShowAnimation.method)(
     this,
@@ -232,11 +232,11 @@ void __fastcall WarBoardInfoPopupBase__ShowAnimation(
   System_Collections_Generic_List_EventDelegate__o *onFinished; // x20
   UnityEngine_Vector3_o one; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_434E60E & 1) == 0 )
+  if ( (byte_4387BDF & 1) == 0 )
   {
-    sub_B70694(&EventDelegate_TypeInfo);
-    sub_B70694(&WarBoardInfoPopupBase_TypeInfo);
-    byte_434E60E = 1;
+    sub_B775C4(&EventDelegate_TypeInfo);
+    sub_B775C4(&WarBoardInfoPopupBase_TypeInfo);
+    byte_4387BDF = 1;
   }
   mainView = this->fields.mainView;
   v6 = WarBoardInfoPopupBase_TypeInfo;
@@ -255,7 +255,7 @@ void __fastcall WarBoardInfoPopupBase__ShowAnimation(
   v10 = z;
   v11 = TweenScale__Begin(mainView, POPUP_SHOW_ANIM_DURATION, *(UnityEngine_Vector3_o *)&one.fields.y, 0LL);
   if ( !v11 )
-    sub_B7076C(0LL, v12);
+    sub_B7769C(0LL, v12);
   v11->fields.style = 6;
   onFinished = v11->fields.onFinished;
   if ( (BYTE3(EventDelegate_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -263,7 +263,7 @@ void __fastcall WarBoardInfoPopupBase__ShowAnimation(
   {
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
   }
-  EventDelegate__Set_29879148(onFinished, finishCallback, 0LL);
+  EventDelegate__Set_30349648(onFinished, finishCallback, 0LL);
 }
 
 
@@ -310,7 +310,7 @@ bool __fastcall WarBoardInfoPopupBase__get_isShown(WarBoardInfoPopupBase_o *this
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   return UnityEngine_GameObject__get_activeSelf(gameObject, 0LL);
 }
 

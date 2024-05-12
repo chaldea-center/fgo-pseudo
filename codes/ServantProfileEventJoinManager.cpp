@@ -18,28 +18,28 @@ void __fastcall ServantProfileEventJoinManager___cctor(const MethodInfo *method)
   System_Int32_array *v16; // x6
   System_Int32_array *v17; // x7
 
-  if ( (byte_43538DA & 1) == 0 )
+  if ( (byte_438D110 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo___ctor__);
-    sub_B70694(&System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
-    sub_B70694(&ServantProfileEventJoinManager_TypeInfo);
-    sub_B70694(&StringLiteral_6713/*"Fgo_20191115"*/);
-    byte_43538DA = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
+    sub_B775C4(&ServantProfileEventJoinManager_TypeInfo);
+    sub_B775C4(&StringLiteral_6769/*"Fgo_20191115"*/);
+    byte_438D110 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)ServantProfileEventJoinManager_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_6713/*"Fgo_20191115"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6713/*"Fgo_20191115"*/;
-  sub_B70630(static_fields, v8, v1, v2, v3, v4, v5, v6);
+  v8 = (System_Int32_array **)StringLiteral_6769/*"Fgo_20191115"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6769/*"Fgo_20191115"*/;
+  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
   v9 = ServantProfileEventJoinManager_TypeInfo;
   ServantProfileEventJoinManager_TypeInfo->static_fields->isModified = 0;
   v9->static_fields->isContinueDevice = 0;
-  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
+  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v10,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo___ctor__);
   v11 = ServantProfileEventJoinManager_TypeInfo->static_fields;
   v11->infoList = (struct System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__o *)v10;
-  sub_B70630((BattleServantConfConponent_o *)&v11->infoList, (System_Int32_array **)v10, v12, v13, v14, v15, v16, v17);
+  sub_B77560((BattleServantConfConponent_o *)&v11->infoList, (System_Int32_array **)v10, v12, v13, v14, v15, v16, v17);
 }
 
 
@@ -55,12 +55,12 @@ void __fastcall ServantProfileEventJoinManager__ClearSaveDataList(const MethodIn
   ServantProfileEventJoinManager_c *v2; // x0
   System_Collections_Generic_List_XWeaponTrail_Element__o *infoList; // x8
 
-  if ( (byte_43538D3 & 1) == 0 )
+  if ( (byte_438D109 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Clear__);
-    sub_B70694(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__get_Count__);
-    sub_B70694(&ServantProfileEventJoinManager_TypeInfo);
-    byte_43538D3 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Clear__);
+    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__get_Count__);
+    sub_B775C4(&ServantProfileEventJoinManager_TypeInfo);
+    byte_438D109 = 1;
   }
   v2 = ServantProfileEventJoinManager_TypeInfo;
   if ( (BYTE3(ServantProfileEventJoinManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -81,12 +81,12 @@ void __fastcall ServantProfileEventJoinManager__ClearSaveDataList(const MethodIn
     {
       System_Collections_Generic_List_XWeaponTrail_Element___Clear(
         infoList,
-        (const MethodInfo_3025A90 *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Clear__);
+        (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Clear__);
       v2 = ServantProfileEventJoinManager_TypeInfo;
       goto LABEL_12;
     }
 LABEL_16:
-    sub_B7076C(v2, v1);
+    sub_B7769C(v2, v1);
   }
 LABEL_12:
   if ( (BYTE3(v2->vtable._0_Equals.methodPtr) & 4) != 0 && !v2->_2.cctor_finished )
@@ -104,10 +104,10 @@ void __fastcall ServantProfileEventJoinManager__DeleteSaveData(const MethodInfo 
   ServantProfileEventJoinManager_c *v1; // x0
   System_String_o *SaveFileName; // x19
 
-  if ( (byte_43538D2 & 1) == 0 )
+  if ( (byte_438D108 & 1) == 0 )
   {
-    sub_B70694(&ServantProfileEventJoinManager_TypeInfo);
-    byte_43538D2 = 1;
+    sub_B775C4(&ServantProfileEventJoinManager_TypeInfo);
+    byte_438D108 = 1;
   }
   v1 = ServantProfileEventJoinManager_TypeInfo;
   if ( (BYTE3(ServantProfileEventJoinManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -151,20 +151,20 @@ bool __fastcall ServantProfileEventJoinManager__GetIsNeedToCheckEventJoinName(
   __int64 v27; // x0
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v28; // 0:x0.16
 
-  if ( (byte_43538D6 & 1) == 0 )
+  if ( (byte_438D10C & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_ServantProfileMaster___);
-    sub_B70694(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Find__);
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&Method_System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo___ctor__);
-    sub_B70694(&System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
-    sub_B70694(&ServantProfileEventJoinManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&Method_ServantProfileEventJoinManager___c__DisplayClass10_0__GetIsNeedToCheckEventJoinName_b__0__);
-    sub_B70694(&ServantProfileEventJoinManager___c__DisplayClass10_0_TypeInfo);
-    byte_43538D6 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_ServantProfileMaster___);
+    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Find__);
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&Method_System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo___ctor__);
+    sub_B775C4(&System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
+    sub_B775C4(&ServantProfileEventJoinManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&Method_ServantProfileEventJoinManager___c__DisplayClass10_0__GetIsNeedToCheckEventJoinName_b__0__);
+    sub_B775C4(&ServantProfileEventJoinManager___c__DisplayClass10_0_TypeInfo);
+    byte_438D10C = 1;
   }
-  v3 = sub_B70764(ServantProfileEventJoinManager___c__DisplayClass10_0_TypeInfo);
+  v3 = sub_B77694(ServantProfileEventJoinManager___c__DisplayClass10_0_TypeInfo);
   ServantProfileEventJoinManager___c__DisplayClass10_0___ctor(
     (ServantProfileEventJoinManager___c__DisplayClass10_0_o *)v3,
     0LL);
@@ -172,13 +172,13 @@ bool __fastcall ServantProfileEventJoinManager__GetIsNeedToCheckEventJoinName(
     goto LABEL_29;
   *(_QWORD *)(v3 + 16) = servantEntity;
   v12 = (_QWORD *)(v3 + 16);
-  sub_B70630((BattleServantConfConponent_o *)(v3 + 16), (System_Int32_array **)servantEntity, v6, v7, v8, v9, v10, v11);
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_B77560((BattleServantConfConponent_o *)(v3 + 16), (System_Int32_array **)servantEntity, v6, v7, v8, v9, v10, v11);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_29;
   Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
                (DataManager_o *)Instance,
-               (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantProfileMaster___);
+               (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantProfileMaster___);
   if ( !Instance )
     goto LABEL_29;
   Instance = ServantProfileMaster__GetServantProfileEntities((ServantProfileMaster_o *)Instance, 21, v13);
@@ -193,8 +193,8 @@ bool __fastcall ServantProfileEventJoinManager__GetIsNeedToCheckEventJoinName(
   {
     if ( v16 >= v14 )
     {
-      v27 = sub_B70798(Instance);
-      sub_B70738(v27, 0LL);
+      v27 = sub_B776C8(Instance);
+      sub_B77668(v27, 0LL);
     }
     v17 = *((_QWORD *)v15 + (int)v16 + 4);
     if ( !v17 )
@@ -212,7 +212,7 @@ bool __fastcall ServantProfileEventJoinManager__GetIsNeedToCheckEventJoinName(
     }
     *(_QWORD *)&v28.fields.currentCryptoKey = v21;
     *(_QWORD *)&v28.fields.fakeValue = v20;
-    Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v28, 0LL);
+    Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v28, 0LL);
     if ( v19 == (_DWORD)Instance )
       break;
     v14 = *((_DWORD *)v15 + 6);
@@ -228,7 +228,7 @@ bool __fastcall ServantProfileEventJoinManager__GetIsNeedToCheckEventJoinName(
     if ( *v12 )
       return ServantEntity__GetIsNeedToCheckEventJoinName((ServantEntity_o *)Instance, 0LL);
 LABEL_29:
-    sub_B7076C(Instance, v5);
+    sub_B7769C(Instance, v5);
   }
   v23 = ServantProfileEventJoinManager_TypeInfo;
   if ( (BYTE3(ServantProfileEventJoinManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -238,18 +238,18 @@ LABEL_29:
     v23 = ServantProfileEventJoinManager_TypeInfo;
   }
   infoList = (System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *)v23->static_fields->infoList;
-  v25 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B70764(System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
+  v25 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B77694(System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
   System_Predicate_peRenderTexture_ChangeLayerObject____ctor(
     v25,
     (Il2CppObject *)v3,
     Method_ServantProfileEventJoinManager___c__DisplayClass10_0__GetIsNeedToCheckEventJoinName_b__0__,
-    (const MethodInfo_2BF23B8 *)Method_System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo___ctor__);
+    (const MethodInfo_2C3248C *)Method_System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo___ctor__);
   if ( !infoList )
     goto LABEL_29;
   v26 = System_Collections_Generic_List_peRenderTexture_ChangeLayerObject___Find(
           infoList,
           (System_Predicate_T__o *)v25,
-          (const MethodInfo_3025F48 *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Find__);
+          (const MethodInfo_3053B58 *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Find__);
   return !v26 || BYTE4(v26->fields.gameObject) != 0;
 }
 
@@ -259,12 +259,12 @@ System_String_o *__fastcall ServantProfileEventJoinManager__GetSaveFileName(cons
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_43538D1 & 1) == 0 )
+  if ( (byte_438D107 & 1) == 0 )
   {
-    sub_B70694(&AndroidUtil_TypeInfo);
-    sub_B70694(&DatFileName_TypeInfo);
-    sub_B70694(&StringLiteral_890/*"/"*/);
-    byte_43538D1 = 1;
+    sub_B775C4(&AndroidUtil_TypeInfo);
+    sub_B775C4(&DatFileName_TypeInfo);
+    sub_B775C4(&StringLiteral_892/*"/"*/);
+    byte_438D107 = 1;
   }
   if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -272,7 +272,7 @@ System_String_o *__fastcall ServantProfileEventJoinManager__GetSaveFileName(cons
   if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(28, 0LL);
-  return System_String__Concat_44760452(DatFileSavePath, (System_String_o *)StringLiteral_890/*"/"*/, FileName, 0LL);
+  return System_String__Concat_44904220(DatFileSavePath, (System_String_o *)StringLiteral_892/*"/"*/, FileName, 0LL);
 }
 
 
@@ -280,10 +280,10 @@ void __fastcall ServantProfileEventJoinManager__Initialize(const MethodInfo *met
 {
   ServantProfileEventJoinManager_c *v1; // x0
 
-  if ( (byte_43538D4 & 1) == 0 )
+  if ( (byte_438D10A & 1) == 0 )
   {
-    sub_B70694(&ServantProfileEventJoinManager_TypeInfo);
-    byte_43538D4 = 1;
+    sub_B775C4(&ServantProfileEventJoinManager_TypeInfo);
+    byte_438D10A = 1;
   }
   v1 = ServantProfileEventJoinManager_TypeInfo;
   if ( (BYTE3(ServantProfileEventJoinManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -325,15 +325,15 @@ bool __fastcall ServantProfileEventJoinManager__ReadData(const MethodInfo *metho
   __int64 v28; // x0
   int v29; // [xsp+8h] [xbp-58h]
 
-  if ( (byte_43538D8 & 1) == 0 )
+  if ( (byte_438D10E & 1) == 0 )
   {
-    sub_B70694(&System_IO_BinaryReader_TypeInfo);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Add__);
-    sub_B70694(&ManagerConfig_TypeInfo);
-    sub_B70694(&ServantProfileEventJoinManager_ServantEventJoinInfo_TypeInfo);
-    sub_B70694(&ServantProfileEventJoinManager_TypeInfo);
-    byte_43538D8 = 1;
+    sub_B775C4(&System_IO_BinaryReader_TypeInfo);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Add__);
+    sub_B775C4(&ManagerConfig_TypeInfo);
+    sub_B775C4(&ServantProfileEventJoinManager_ServantEventJoinInfo_TypeInfo);
+    sub_B775C4(&ServantProfileEventJoinManager_TypeInfo);
+    byte_438D10E = 1;
   }
   v1 = ServantProfileEventJoinManager_TypeInfo;
   if ( (BYTE3(ServantProfileEventJoinManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -363,7 +363,7 @@ bool __fastcall ServantProfileEventJoinManager__ReadData(const MethodInfo *metho
   if ( !System_IO_File__Exists(SaveFileName, 0LL) )
     return 0;
   v7 = (System_IO_Stream_o *)System_IO_File__OpenRead(SaveFileName, 0LL);
-  v8 = (System_IO_BinaryReader_o *)sub_B70764(System_IO_BinaryReader_TypeInfo);
+  v8 = (System_IO_BinaryReader_o *)sub_B77694(System_IO_BinaryReader_TypeInfo);
   System_IO_BinaryReader___ctor(v8, v7, 0LL);
   v10 = ServantProfileEventJoinManager_TypeInfo;
   if ( (BYTE3(ServantProfileEventJoinManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -373,7 +373,7 @@ bool __fastcall ServantProfileEventJoinManager__ReadData(const MethodInfo *metho
     v10 = ServantProfileEventJoinManager_TypeInfo;
   }
   if ( !v8 )
-    sub_B7076C(v10, v9);
+    sub_B7769C(v10, v9);
   SAVE_DATA_VERSION = v10->static_fields->SAVE_DATA_VERSION;
   v12 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v8->klass->vtable._22_ReadString.method)(
                              v8,
@@ -410,24 +410,24 @@ bool __fastcall ServantProfileEventJoinManager__ReadData(const MethodInfo *metho
           v18 = ServantProfileEventJoinManager_TypeInfo;
         }
         infoList = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v18->static_fields->infoList;
-        v20 = (ServantProfileEventJoinManager_ServantEventJoinInfo_o *)sub_B70764(ServantProfileEventJoinManager_ServantEventJoinInfo_TypeInfo);
+        v20 = (ServantProfileEventJoinManager_ServantEventJoinInfo_o *)sub_B77694(ServantProfileEventJoinManager_ServantEventJoinInfo_TypeInfo);
         ServantProfileEventJoinManager_ServantEventJoinInfo___ctor(v20, 0LL);
         v21 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v8->klass->vtable._15_ReadInt32.method)(
                 v8,
                 v8->klass->vtable._16_ReadUInt32.methodPtr);
         if ( !v20 )
-          sub_B7076C(v21, v22);
+          sub_B7769C(v21, v22);
         v20->fields.servantId = v21;
         v23 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v8->klass->vtable._9_ReadBoolean.method)(
                 v8,
                 v8->klass->vtable._10_ReadByte.methodPtr);
         v20->fields.isNeedToCheckEventJoinNameExist = v23 & 1;
         if ( !infoList )
-          sub_B7076C(v23, v24);
+          sub_B7769C(v23, v24);
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           infoList,
           (EventMissionProgressRequest_Argument_ProgressData_o *)v20,
-          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Add__);
+          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Add__);
       }
     }
     v13 = 156;
@@ -450,7 +450,7 @@ bool __fastcall ServantProfileEventJoinManager__ReadData(const MethodInfo *metho
   else
   {
 LABEL_38:
-    v28 = sub_B08590(v8, System_IDisposable_TypeInfo, 0LL);
+    v28 = sub_B0F4C0(v8, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v28)(v8, *(_QWORD *)(v28 + 8));
   return v29 == 156;
@@ -474,19 +474,19 @@ void __fastcall ServantProfileEventJoinManager__SetIsNeedToCheckEventJoinNameExi
   ServantProfileEventJoinManager_ServantEventJoinInfo_o *v14; // x22
   int32_t v15; // w8
 
-  if ( (byte_43538D7 & 1) == 0 )
+  if ( (byte_438D10D & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Find__);
-    sub_B70694(&Method_System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo___ctor__);
-    sub_B70694(&System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
-    sub_B70694(&ServantProfileEventJoinManager_ServantEventJoinInfo_TypeInfo);
-    sub_B70694(&ServantProfileEventJoinManager_TypeInfo);
-    sub_B70694(&Method_ServantProfileEventJoinManager___c__DisplayClass11_0__SetIsNeedToCheckEventJoinNameExist_b__0__);
-    sub_B70694(&ServantProfileEventJoinManager___c__DisplayClass11_0_TypeInfo);
-    byte_43538D7 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Find__);
+    sub_B775C4(&Method_System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo___ctor__);
+    sub_B775C4(&System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
+    sub_B775C4(&ServantProfileEventJoinManager_ServantEventJoinInfo_TypeInfo);
+    sub_B775C4(&ServantProfileEventJoinManager_TypeInfo);
+    sub_B775C4(&Method_ServantProfileEventJoinManager___c__DisplayClass11_0__SetIsNeedToCheckEventJoinNameExist_b__0__);
+    sub_B775C4(&ServantProfileEventJoinManager___c__DisplayClass11_0_TypeInfo);
+    byte_438D10D = 1;
   }
-  v5 = (ServantProfileEventJoinManager___c__DisplayClass11_0_o *)sub_B70764(ServantProfileEventJoinManager___c__DisplayClass11_0_TypeInfo);
+  v5 = (ServantProfileEventJoinManager___c__DisplayClass11_0_o *)sub_B77694(ServantProfileEventJoinManager___c__DisplayClass11_0_TypeInfo);
   ServantProfileEventJoinManager___c__DisplayClass11_0___ctor(v5, 0LL);
   if ( !v5 )
     goto LABEL_16;
@@ -500,18 +500,18 @@ void __fastcall ServantProfileEventJoinManager__SetIsNeedToCheckEventJoinNameExi
   }
   v8->static_fields->isModified = 1;
   infoList = (System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *)v8->static_fields->infoList;
-  v10 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B70764(System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
+  v10 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B77694(System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
   System_Predicate_peRenderTexture_ChangeLayerObject____ctor(
     v10,
     (Il2CppObject *)v5,
     Method_ServantProfileEventJoinManager___c__DisplayClass11_0__SetIsNeedToCheckEventJoinNameExist_b__0__,
-    (const MethodInfo_2BF23B8 *)Method_System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo___ctor__);
+    (const MethodInfo_2C3248C *)Method_System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo___ctor__);
   if ( !infoList )
     goto LABEL_16;
   v11 = System_Collections_Generic_List_peRenderTexture_ChangeLayerObject___Find(
           infoList,
           (System_Predicate_T__o *)v10,
-          (const MethodInfo_3025F48 *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Find__);
+          (const MethodInfo_3053B58 *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Find__);
   if ( v11 )
   {
     BYTE4(v11->fields.gameObject) = isNeedToChecEventJoinNameExist;
@@ -525,7 +525,7 @@ void __fastcall ServantProfileEventJoinManager__SetIsNeedToCheckEventJoinNameExi
     v12 = ServantProfileEventJoinManager_TypeInfo;
   }
   v13 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v12->static_fields->infoList;
-  v14 = (ServantProfileEventJoinManager_ServantEventJoinInfo_o *)sub_B70764(ServantProfileEventJoinManager_ServantEventJoinInfo_TypeInfo);
+  v14 = (ServantProfileEventJoinManager_ServantEventJoinInfo_o *)sub_B77694(ServantProfileEventJoinManager_ServantEventJoinInfo_TypeInfo);
   ServantProfileEventJoinManager_ServantEventJoinInfo___ctor(v14, 0LL);
   if ( !v14
     || (v15 = v5->fields.servantId,
@@ -534,12 +534,12 @@ void __fastcall ServantProfileEventJoinManager__SetIsNeedToCheckEventJoinNameExi
         !v13) )
   {
 LABEL_16:
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   }
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     v13,
     (EventMissionProgressRequest_Argument_ProgressData_o *)v14,
-    (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Add__);
+    (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Add__);
 }
 
 
@@ -586,36 +586,36 @@ void __fastcall ServantProfileEventJoinManager__UpdateProfileServantEventJoin(co
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v39; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v40; // 0:x0.16
 
-  if ( (byte_43538D5 & 1) == 0 )
+  if ( (byte_438D10B & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_EventServantMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_ServantProfileMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_B70694(&EventServantEntity_TypeInfo);
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&ServantProfileEventJoinManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43538D5 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_EventServantMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_ServantProfileMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_B775C4(&EventServantEntity_TypeInfo);
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&ServantProfileEventJoinManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438D10B = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_69;
   MasterData_WarQuestSelectionMaster = (ServantProfileMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                    Instance,
-                                                                   (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantProfileMaster___);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                                                                   (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantProfileMaster___);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_69;
   v4 = (UserServantMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserServantMaster___);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_69;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
   if ( !v4 )
     goto LABEL_69;
   v5 = (UserServantCollectionMaster_o *)Instance;
@@ -623,10 +623,10 @@ void __fastcall ServantProfileEventJoinManager__UpdateProfileServantEventJoin(co
   if ( !v5
     || (v6 = Instance,
         List = UserServantCollectionMaster__getList(v5, 2, 0LL),
-        (Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
+        (Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventServantMaster___),
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventServantMaster___),
         v37 = (EventServantMaster_o *)Instance,
         !MasterData_WarQuestSelectionMaster)
     || (Instance = (DataManager_o *)ServantProfileMaster__GetServantProfileEntities(
@@ -635,7 +635,7 @@ void __fastcall ServantProfileEventJoinManager__UpdateProfileServantEventJoin(co
                                       v8)) == 0LL )
   {
 LABEL_69:
-    sub_B7076C(Instance, v2);
+    sub_B7769C(Instance, v2);
   }
   datalist = Instance->fields.datalist;
   if ( (int)datalist >= 1 )
@@ -647,8 +647,8 @@ LABEL_69:
       if ( v11 >= (unsigned int)datalist )
       {
 LABEL_70:
-        v36 = sub_B70798(Instance);
-        sub_B70738(v36, 0LL);
+        v36 = sub_B776C8(Instance);
+        sub_B77668(v36, 0LL);
       }
       if ( !v6 )
         goto LABEL_69;
@@ -680,7 +680,7 @@ LABEL_25:
             }
             *(_QWORD *)&v40.fields.currentCryptoKey = v23;
             *(_QWORD *)&v40.fields.fakeValue = v22;
-            Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v40, 0LL);
+            Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v40, 0LL);
             if ( !v13 )
               goto LABEL_69;
             v24 = *(_DWORD *)(v13 + 16);
@@ -731,7 +731,7 @@ LABEL_25:
           }
           *(_QWORD *)&v39.fields.currentCryptoKey = v17;
           *(_QWORD *)&v39.fields.fakeValue = v16;
-          Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v39, 0LL);
+          Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v39, 0LL);
           if ( !v13 )
             goto LABEL_69;
           v2 = (unsigned int)Instance;
@@ -843,18 +843,18 @@ bool __fastcall ServantProfileEventJoinManager__WriteData(const MethodInfo *meth
   int v30; // [xsp+28h] [xbp-48h]
   System_Collections_Generic_List_Enumerator_T__o v31; // [xsp+30h] [xbp-40h] BYREF
 
-  if ( (byte_43538D9 & 1) == 0 )
+  if ( (byte_438D10F & 1) == 0 )
   {
-    sub_B70694(&System_IO_BinaryWriter_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__get_Current__);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__GetEnumerator__);
-    sub_B70694(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__get_Count__);
-    sub_B70694(&ManagerConfig_TypeInfo);
-    sub_B70694(&ServantProfileEventJoinManager_TypeInfo);
-    byte_43538D9 = 1;
+    sub_B775C4(&System_IO_BinaryWriter_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__get_Current__);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__GetEnumerator__);
+    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__get_Count__);
+    sub_B775C4(&ManagerConfig_TypeInfo);
+    sub_B775C4(&ServantProfileEventJoinManager_TypeInfo);
+    byte_438D10F = 1;
   }
   memset(&v31, 0, sizeof(v31));
   v30 = 0;
@@ -893,8 +893,8 @@ bool __fastcall ServantProfileEventJoinManager__WriteData(const MethodInfo *meth
   }
   SaveFileName = ServantProfileEventJoinManager__GetSaveFileName((const MethodInfo *)v7);
   v9 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SaveFileName, 0LL);
-  v10 = (System_IO_BinaryWriter_o *)sub_B70764(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_39879612(v10, v9, 0LL);
+  v10 = (System_IO_BinaryWriter_o *)sub_B77694(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_40221404(v10, v9, 0LL);
   v13 = ServantProfileEventJoinManager_TypeInfo;
   if ( (BYTE3(ServantProfileEventJoinManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ServantProfileEventJoinManager_TypeInfo->_2.cctor_finished )
@@ -902,7 +902,7 @@ bool __fastcall ServantProfileEventJoinManager__WriteData(const MethodInfo *meth
     *(__n128 *)&v12 = j_il2cpp_runtime_class_init_0(ServantProfileEventJoinManager_TypeInfo);
   }
   if ( !v10 )
-    sub_B7076C(v13, v11);
+    sub_B7769C(v13, v11);
   ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *, long double))v10->klass->vtable._22_Write.method)(
     v10,
     ServantProfileEventJoinManager_TypeInfo->static_fields->SAVE_DATA_VERSION,
@@ -914,29 +914,29 @@ bool __fastcall ServantProfileEventJoinManager__WriteData(const MethodInfo *meth
           v10->klass->vtable._9_Write.methodPtr);
   infoList = ServantProfileEventJoinManager_TypeInfo->static_fields->infoList;
   if ( !infoList )
-    sub_B7076C(v14, v15);
+    sub_B7769C(v14, v15);
   ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v10->klass->vtable._17_Write.method)(
     v10,
     (unsigned int)infoList->fields._size,
     v10->klass->vtable._18_Write.methodPtr);
   v18 = ServantProfileEventJoinManager_TypeInfo->static_fields->infoList;
   if ( !v18 )
-    sub_B7076C(0LL, v17);
+    sub_B7769C(0LL, v17);
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v28,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v18,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__GetEnumerator__);
   v31 = v28;
   while ( 1 )
   {
     v19 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v31,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__MoveNext__);
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__MoveNext__);
     if ( !v19 )
       break;
     current = v31.fields.current;
     if ( !v31.fields.current )
-      sub_B7076C(v19, v20);
+      sub_B7769C(v19, v20);
     ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v10->klass->vtable._17_Write.method)(
       v10,
       LODWORD(v31.fields.current[1].klass),
@@ -950,7 +950,7 @@ bool __fastcall ServantProfileEventJoinManager__WriteData(const MethodInfo *meth
   v30 = 1;
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v31,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__Dispose__);
   if ( v29[0] == 150 )
   {
     v22 = 0;
@@ -979,7 +979,7 @@ bool __fastcall ServantProfileEventJoinManager__WriteData(const MethodInfo *meth
   else
   {
 LABEL_35:
-    v27 = sub_B08590(v10, System_IDisposable_TypeInfo, 0LL);
+    v27 = sub_B0F4C0(v10, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v27)(v10, *(_QWORD *)(v27 + 8));
   if ( v23 && v29[v23 - 1] == 162 )
@@ -1017,13 +1017,13 @@ bool __fastcall ServantProfileEventJoinManager___c__DisplayClass10_0___GetIsNeed
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v10; // 0:x0.16
 
   v4 = this;
-  if ( (byte_434F255 & 1) == 0 )
+  if ( (byte_4388836 & 1) == 0 )
   {
-    this = (ServantProfileEventJoinManager___c__DisplayClass10_0_o *)sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_434F255 = 1;
+    this = (ServantProfileEventJoinManager___c__DisplayClass10_0_o *)sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4388836 = 1;
   }
   if ( !i || (servantEntity = v4->fields.servantEntity) == 0LL )
-    sub_B7076C(this, i);
+    sub_B7769C(this, i);
   servantId = i->fields.servantId;
   v8 = *(_QWORD *)&servantEntity->fields.id.fields.currentCryptoKey;
   v7 = *(_QWORD *)&servantEntity->fields.id.fields.fakeValue;
@@ -1034,7 +1034,7 @@ bool __fastcall ServantProfileEventJoinManager___c__DisplayClass10_0___GetIsNeed
   }
   *(_QWORD *)&v10.fields.currentCryptoKey = v8;
   *(_QWORD *)&v10.fields.fakeValue = v7;
-  return servantId == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v10, 0LL);
+  return servantId == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v10, 0LL);
 }
 
 
@@ -1052,6 +1052,6 @@ bool __fastcall ServantProfileEventJoinManager___c__DisplayClass11_0___SetIsNeed
         const MethodInfo *method)
 {
   if ( !i )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   return i->fields.servantId == this->fields.servantId;
 }

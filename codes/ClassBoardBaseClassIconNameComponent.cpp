@@ -9,16 +9,16 @@ void __fastcall ClassBoardBaseClassIconNameComponent___cctor(const MethodInfo *m
   BattleServantConfConponent_o *static_fields; // x0
   System_Int32_array **v8; // x1
 
-  if ( (byte_4352B94 & 1) == 0 )
+  if ( (byte_438C3EC & 1) == 0 )
   {
-    sub_B70694(&ClassBoardBaseClassIconNameComponent_TypeInfo);
-    sub_B70694(&StringLiteral_17283/*"btn_tab_{0}"*/);
-    byte_4352B94 = 1;
+    sub_B775C4(&ClassBoardBaseClassIconNameComponent_TypeInfo);
+    sub_B775C4(&StringLiteral_17366/*"btn_tab_{0}"*/);
+    byte_438C3EC = 1;
   }
   static_fields = (BattleServantConfConponent_o *)ClassBoardBaseClassIconNameComponent_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_17283/*"btn_tab_{0}"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_17283/*"btn_tab_{0}"*/;
-  sub_B70630(static_fields, v8, v1, v2, v3, v4, v5, v6);
+  v8 = (System_Int32_array **)StringLiteral_17366/*"btn_tab_{0}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_17366/*"btn_tab_{0}"*/;
+  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
 }
 
 
@@ -53,15 +53,15 @@ void __fastcall ClassBoardBaseClassIconNameComponent__Setup(
   int32_t v12; // [xsp+4h] [xbp-2Ch] BYREF
   WarEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4352B93 & 1) == 0 )
+  if ( (byte_438C3EB & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&ClassBoardBaseClassIconNameComponent_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
-    sub_B70694(&int_TypeInfo);
-    byte_4352B93 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&ClassBoardBaseClassIconNameComponent_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+    sub_B775C4(&int_TypeInfo);
+    byte_438C3EB = 1;
   }
   entity = 0LL;
   icon = this->fields.icon;
@@ -81,21 +81,21 @@ void __fastcall ClassBoardBaseClassIconNameComponent__Setup(
   AtlasManager__SetClassIconSprite(icon, v9, 0LL);
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   if ( !Master_WarQuestSelectionMaster )
     goto LABEL_18;
   Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
                                                                                     Master_WarQuestSelectionMaster,
                                                                                     &entity,
                                                                                     classBaseId,
-                                                                                    (const MethodInfo_21C049C *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+                                                                                    (const MethodInfo_21FB8F0 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_WarQuestSelectionMaster & 1) == 0 )
     return;
   if ( !entity
     || (Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)this->fields.name) == 0LL )
   {
 LABEL_18:
-    sub_B7076C(Master_WarQuestSelectionMaster, v11);
+    sub_B7769C(Master_WarQuestSelectionMaster, v11);
   }
   UILabel__set_text((UILabel_o *)Master_WarQuestSelectionMaster, entity->fields.age, 0LL);
 }

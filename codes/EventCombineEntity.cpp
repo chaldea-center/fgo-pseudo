@@ -1,27 +1,27 @@
 void __fastcall EventCombineEntity___ctor(EventCombineEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_43544DD & 1) == 0 )
+  if ( (byte_438DD9B & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_43544DD = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438DD9B = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall EventCombineEntity__CreatePK(int32_t id, int32_t target, const MethodInfo *method)
 {
-  if ( (byte_43544DC & 1) == 0 )
+  if ( (byte_438DD9A & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_43544DC = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_438DD9A = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            target,
-           (const MethodInfo_1CA236C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1D171BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

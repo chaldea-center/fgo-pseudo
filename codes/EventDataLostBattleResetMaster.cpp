@@ -1,14 +1,14 @@
 void __fastcall EventDataLostBattleResetMaster___ctor(EventDataLostBattleResetMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4354511 & 1) == 0 )
+  if ( (byte_438DDCF & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_EventDataLostBattleResetMaster__EventDataLostBattleResetEntity__string___ctor__);
-    byte_4354511 = 1;
+    sub_B775C4(&Method_DataMasterBase_EventDataLostBattleResetMaster__EventDataLostBattleResetEntity__string___ctor__);
+    byte_438DDCF = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     436,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_EventDataLostBattleResetMaster__EventDataLostBattleResetEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_EventDataLostBattleResetMaster__EventDataLostBattleResetEntity__string___ctor__);
 }
 
 
@@ -43,35 +43,35 @@ System_Collections_Generic_List_EventDataLostBattleResetEntity__o *__fastcall Ev
   int32_t *v29; // x11
   __int64 v30; // x0
 
-  if ( (byte_4354510 & 1) == 0 )
+  if ( (byte_438DDCE & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
-    sub_B70694(&Method_DataManager_GetMaster_CommonReleaseMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&EventDataLostBattleResetEntity_TypeInfo);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
-    sub_B70694(&System_Collections_IEnumerator_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventDataLostBattleResetEntity___ctor__);
-    sub_B70694(&System_Collections_Generic_List_EventDataLostBattleResetEntity__TypeInfo);
-    byte_4354510 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+    sub_B775C4(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&EventDataLostBattleResetEntity_TypeInfo);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
+    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventDataLostBattleResetEntity___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_EventDataLostBattleResetEntity__TypeInfo);
+    byte_438DDCE = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (CommonReleaseMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
-  v8 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_EventDataLostBattleResetEntity__TypeInfo);
+  Master_WarQuestSelectionMaster = (CommonReleaseMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  v8 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventDataLostBattleResetEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v8,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_EventDataLostBattleResetEntity___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventDataLostBattleResetEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
-    sub_B7076C(0LL, v9);
+    sub_B7769C(0LL, v9);
   Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
                  list,
-                 (const MethodInfo_2C865F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_2CC56C8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B7076C(0LL, v11);
+    sub_B7769C(0LL, v11);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -91,7 +91,7 @@ System_Collections_Generic_List_EventDataLostBattleResetEntity__o *__fastcall Ev
     else
     {
 LABEL_12:
-      p_method = sub_B08590(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_B0F4C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -114,7 +114,7 @@ LABEL_12:
     else
     {
 LABEL_19:
-      v20 = sub_B08590(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v20 = sub_B0F4C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v21 = (int32_t *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v20)(
                        Enumerator,
@@ -129,16 +129,16 @@ LABEL_19:
         && v21[6] == eventId )
       {
         if ( !Master_WarQuestSelectionMaster )
-          sub_B7076C(v21, v22);
+          sub_B7769C(v21, v22);
         IsOpen = CommonReleaseMaster__IsOpen(Master_WarQuestSelectionMaster, v21[7], 0LL, 0, 0LL);
         if ( IsOpen )
         {
           if ( !v8 )
-            sub_B7076C(IsOpen, v26);
+            sub_B7769C(IsOpen, v26);
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
             v8,
             v23,
-            (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__Add__);
+            (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__Add__);
         }
       }
     }
@@ -160,7 +160,7 @@ LABEL_19:
   else
   {
 LABEL_34:
-    v30 = sub_B08590(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v30 = sub_B0F4C0(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v30)(Enumerator, *(_QWORD *)(v30 + 8));
   return (System_Collections_Generic_List_EventDataLostBattleResetEntity__o *)v8;
@@ -176,16 +176,16 @@ EventDataLostBattleResetEntity_o *__fastcall EventDataLostBattleResetMaster__Get
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4354512 & 1) == 0 )
+  if ( (byte_438DDD0 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_EventDataLostBattleResetMaster__EventDataLostBattleResetEntity__string__GetEntity__);
-    byte_4354512 = 1;
+    sub_B775C4(&Method_DataMasterBase_EventDataLostBattleResetMaster__EventDataLostBattleResetEntity__string__GetEntity__);
+    byte_438DDD0 = 1;
   }
   PK = EventDataLostBattleResetEntity__CreatePK(dataLostBattleId, idx, *(const MethodInfo **)&idx);
   return (EventDataLostBattleResetEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                                (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                                PK,
-                                               (const MethodInfo_21C0890 *)Method_DataMasterBase_EventDataLostBattleResetMaster__EventDataLostBattleResetEntity__string__GetEntity__);
+                                               (const MethodInfo_21FBCE4 *)Method_DataMasterBase_EventDataLostBattleResetMaster__EventDataLostBattleResetEntity__string__GetEntity__);
 }
 
 
@@ -199,15 +199,15 @@ bool __fastcall EventDataLostBattleResetMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4354513 & 1) == 0 )
+  if ( (byte_438DDD1 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_EventDataLostBattleResetMaster__EventDataLostBattleResetEntity__string__TryGetEntity__);
-    byte_4354513 = 1;
+    sub_B775C4(&Method_DataMasterBase_EventDataLostBattleResetMaster__EventDataLostBattleResetEntity__string__TryGetEntity__);
+    byte_438DDD1 = 1;
   }
   PK = EventDataLostBattleResetEntity__CreatePK(dataLostBattleId, idx, *(const MethodInfo **)&dataLostBattleId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_EventDataLostBattleResetMaster__EventDataLostBattleResetEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_EventDataLostBattleResetMaster__EventDataLostBattleResetEntity__string__TryGetEntity__);
 }

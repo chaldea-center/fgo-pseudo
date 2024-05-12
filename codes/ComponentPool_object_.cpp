@@ -1,4 +1,4 @@
-void __fastcall ComponentPool_object___Clear(ComponentPool_T__o *this, const MethodInfo_21A6EF4 *method)
+void __fastcall ComponentPool_object___Clear(ComponentPool_T__o *this, const MethodInfo_21E2348 *method)
 {
   struct System_Collections_Generic_List_T__o *availableComponentList; // x0
   MethodInfo *_13_ComponentPool_T__DestroyItem; // x2
@@ -18,10 +18,10 @@ void __fastcall ComponentPool_object___Clear(ComponentPool_T__o *this, const Met
   int v19; // [xsp+28h] [xbp-68h]
   System_Collections_Generic_List_Enumerator_T__o i; // [xsp+30h] [xbp-60h] BYREF
 
-  if ( (byte_4357AF4 & 1) == 0 )
+  if ( (byte_4391172 & 1) == 0 )
   {
-    sub_B70694(&System_IDisposable_TypeInfo);
-    byte_4357AF4 = 1;
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    byte_4391172 = 1;
   }
   memset(&i, 0, sizeof(i));
   v19 = 0;
@@ -32,7 +32,7 @@ void __fastcall ComponentPool_object___Clear(ComponentPool_T__o *this, const Met
   for ( i = v17;
         System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
           &i,
-          (const MethodInfo_22212CC *)method->klass->rgctx_data->_17_System_Collections_Generic_List_Enumerator_T__MoveNext);
+          (const MethodInfo_225C720 *)method->klass->rgctx_data->_17_System_Collections_Generic_List_Enumerator_T__MoveNext);
         ((void (__fastcall *)(ComponentPool_T__o *, Il2CppObject *, MethodInfo *))_13_ComponentPool_T__DestroyItem->methodPointer)(
           this,
           i.fields.current,
@@ -45,7 +45,7 @@ void __fastcall ComponentPool_object___Clear(ComponentPool_T__o *this, const Met
   v19 = 1;
   _18_System_Collections_Generic_List_Enumerator_T = method->klass->rgctx_data->_18_System_Collections_Generic_List_Enumerator_T_;
   if ( (BYTE2(_18_System_Collections_Generic_List_Enumerator_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_B08394(method->klass->rgctx_data->_18_System_Collections_Generic_List_Enumerator_T_);
+    sub_B0F2C4(method->klass->rgctx_data->_18_System_Collections_Generic_List_Enumerator_T_);
   v17.fields.list = (struct System_Collections_Generic_List_T__o *)_18_System_Collections_Generic_List_Enumerator_T;
   if ( *(_WORD *)&_18_System_Collections_Generic_List_Enumerator_T->_2.bitflags1 )
   {
@@ -63,7 +63,7 @@ void __fastcall ComponentPool_object___Clear(ComponentPool_T__o *this, const Met
   else
   {
 LABEL_13:
-    p_method = sub_B08590(&v17, System_IDisposable_TypeInfo, 0LL);
+    p_method = sub_B0F4C0(&v17, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(int *, _QWORD))p_method)(v18, *(_QWORD *)(p_method + 8));
   if ( v18[0] == 54 )
@@ -82,7 +82,7 @@ LABEL_13:
   for ( i = v17;
         System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
           &i,
-          (const MethodInfo_22212CC *)method->klass->rgctx_data->_17_System_Collections_Generic_List_Enumerator_T__MoveNext);
+          (const MethodInfo_225C720 *)method->klass->rgctx_data->_17_System_Collections_Generic_List_Enumerator_T__MoveNext);
         ((void (__fastcall *)(ComponentPool_T__o *, Il2CppObject *, MethodInfo *))v11->methodPointer)(
           this,
           i.fields.current,
@@ -94,7 +94,7 @@ LABEL_13:
   v12 = ++v19;
   v13 = method->klass->rgctx_data->_18_System_Collections_Generic_List_Enumerator_T_;
   if ( (BYTE2(v13->vtable[0].methodPtr) & 1) == 0 )
-    sub_B08394(method->klass->rgctx_data->_18_System_Collections_Generic_List_Enumerator_T_);
+    sub_B0F2C4(method->klass->rgctx_data->_18_System_Collections_Generic_List_Enumerator_T_);
   v17.fields.list = (struct System_Collections_Generic_List_T__o *)v13;
   if ( *(_WORD *)&v13->_2.bitflags1 )
   {
@@ -112,7 +112,7 @@ LABEL_13:
   else
   {
 LABEL_28:
-    v16 = sub_B08590(&v17, System_IDisposable_TypeInfo, 0LL);
+    v16 = sub_B0F4C0(&v17, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(int *, _QWORD))v16)(v18, *(_QWORD *)(v16 + 8));
   if ( v12 && v18[v12 - 1] == 119 )
@@ -120,7 +120,7 @@ LABEL_28:
   availableComponentList = this->fields.nonAvailableComponentList;
   if ( !availableComponentList )
 LABEL_35:
-    sub_B7076C(availableComponentList, method);
+    sub_B7769C(availableComponentList, method);
   method->klass->rgctx_data->_19_System_Collections_Generic_List_T__Clear->methodPointer();
 }
 
@@ -128,17 +128,17 @@ LABEL_35:
 void __fastcall ComponentPool_object___DestroyItem(
         ComponentPool_T__o *this,
         Il2CppObject *item,
-        const MethodInfo_21A7278 *method)
+        const MethodInfo_21E26CC *method)
 {
   _BOOL8 v4; // x0
   __int64 v5; // x1
   UnityEngine_Object_o *gameObject; // x20
   UnityEngine_Object_o *v7; // x19
 
-  if ( (byte_4357AF5 & 1) == 0 )
+  if ( (byte_4391173 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4357AF5 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4391173 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -149,7 +149,7 @@ void __fastcall ComponentPool_object___DestroyItem(
   if ( !v4 )
   {
     if ( !item )
-      sub_B7076C(v4, v5);
+      sub_B7769C(v4, v5);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)item, 0LL);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -164,13 +164,13 @@ void __fastcall ComponentPool_object___DestroyItem(
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      UnityEngine_Object__Destroy_36067208(v7, 0LL);
+      UnityEngine_Object__Destroy_36309980(v7, 0LL);
     }
   }
 }
 
 
-Il2CppObject *__fastcall ComponentPool_object___Rent(ComponentPool_T__o *this, const MethodInfo_21A699C *method)
+Il2CppObject *__fastcall ComponentPool_object___Rent(ComponentPool_T__o *this, const MethodInfo_21E1DF0 *method)
 {
   UnityEngine_Object_o *v4; // x21
   __int64 availableComponentList; // x0
@@ -180,11 +180,11 @@ Il2CppObject *__fastcall ComponentPool_object___Rent(ComponentPool_T__o *this, c
   struct UnityEngine_GameObject_o *prefab; // x21
   UnityEngine_UI_Dropdown_DropdownItem_o *v10; // x0
 
-  if ( (byte_4357AF2 & 1) == 0 )
+  if ( (byte_4391170 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4357AF2 = 1;
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4391170 = 1;
   }
   v4 = 0LL;
   while ( 1 )
@@ -253,7 +253,7 @@ LABEL_40:
     }
     v10 = UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
             (UnityEngine_UI_Dropdown_DropdownItem_o *)prefab,
-            (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+            (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     availableComponentList = ((__int64 (__fastcall *)(UnityEngine_UI_Dropdown_DropdownItem_o *))method->klass->rgctx_data->_4_GameObjectExtensions_SafeGetComponent_T_->methodPointer)(v10);
     v4 = (UnityEngine_Object_o *)availableComponentList;
     if ( !availableComponentList )
@@ -264,7 +264,7 @@ LABEL_40:
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)availableComponentList, 1, 0LL), !this) )
   {
 LABEL_37:
-    sub_B7076C(availableComponentList, v6);
+    sub_B7769C(availableComponentList, v6);
   }
   if ( ((__int64 (__fastcall *)(ComponentPool_T__o *))method->klass->rgctx_data->_3_ComponentPool_T__get_currentPoolSize->methodPointer)(this) < this->fields.poolSizeMax )
   {
@@ -282,10 +282,10 @@ LABEL_37:
 }
 
 
-Il2CppObject *__fastcall ComponentPool_object___Rent_35286028(
+Il2CppObject *__fastcall ComponentPool_object___Rent_35528800(
         ComponentPool_T__o *this,
         UnityEngine_Transform_o *parent,
-        const MethodInfo_21A6C0C *method)
+        const MethodInfo_21E2060 *method)
 {
   Il2CppObject *v4; // x20
 
@@ -294,7 +294,7 @@ Il2CppObject *__fastcall ComponentPool_object___Rent_35286028(
     || (v4 = (Il2CppObject *)this,
         (this = (ComponentPool_T__o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B7076C(this, parent);
+    sub_B7769C(this, parent);
   }
   UnityEngine_Transform__SetParent((UnityEngine_Transform_o *)this, parent, 0LL);
   return v4;
@@ -302,11 +302,11 @@ Il2CppObject *__fastcall ComponentPool_object___Rent_35286028(
 
 
 // local variable allocation has failed, the output may be wrong!
-Il2CppObject *__fastcall ComponentPool_object___Rent_35286120(
+Il2CppObject *__fastcall ComponentPool_object___Rent_35528892(
         ComponentPool_T__o *this,
         UnityEngine_Transform_o *parent,
         UnityEngine_Vector3_o position,
-        const MethodInfo_21A6C68 *method)
+        const MethodInfo_21E20BC *method)
 {
   float z; // s8
   float y; // s9
@@ -324,7 +324,7 @@ Il2CppObject *__fastcall ComponentPool_object___Rent_35286120(
     || (v7 = (Il2CppObject *)this,
         (this = (ComponentPool_T__o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B7076C(this, parent);
+    sub_B7769C(this, parent);
   }
   v9.fields.x = x;
   v9.fields.y = y;
@@ -335,12 +335,12 @@ Il2CppObject *__fastcall ComponentPool_object___Rent_35286120(
 
 
 // local variable allocation has failed, the output may be wrong!
-Il2CppObject *__fastcall ComponentPool_object___Rent_35286244(
+Il2CppObject *__fastcall ComponentPool_object___Rent_35529016(
         ComponentPool_T__o *this,
         UnityEngine_Transform_o *parent,
         UnityEngine_Vector3_o position,
         UnityEngine_Quaternion_o rotation,
-        const MethodInfo_21A6CE4 *method)
+        const MethodInfo_21E2138 *method)
 {
   float w; // s8
   float z; // s9
@@ -363,7 +363,7 @@ Il2CppObject *__fastcall ComponentPool_object___Rent_35286244(
     || (v9 = (Il2CppObject *)this,
         (this = (ComponentPool_T__o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B7076C(this, parent);
+    sub_B7769C(this, parent);
   }
   v11.fields.x = x;
   v11.fields.y = y;
@@ -377,16 +377,16 @@ Il2CppObject *__fastcall ComponentPool_object___Rent_35286244(
 void __fastcall ComponentPool_object___Return(
         ComponentPool_T__o *this,
         Il2CppObject *item,
-        const MethodInfo_21A6D68 *method)
+        const MethodInfo_21E21BC *method)
 {
   __int64 v6; // x1
   UnityEngine_GameObject_o *nonAvailableComponentList; // x0
   MethodInfo *_13_ComponentPool_T__DestroyItem; // x2
 
-  if ( (byte_4357AF3 & 1) == 0 )
+  if ( (byte_4391171 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4357AF3 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4391171 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -433,7 +433,7 @@ LABEL_15:
         }
       }
     }
-    sub_B7076C(nonAvailableComponentList, v6);
+    sub_B7769C(nonAvailableComponentList, v6);
   }
 }
 
@@ -442,7 +442,7 @@ void __fastcall ComponentPool_object___ShrinkPool(
         ComponentPool_T__o *this,
         float rate,
         int32_t infmum,
-        const MethodInfo_21A6E90 *method)
+        const MethodInfo_21E22E4 *method)
 {
   float v4; // s0
   double v5; // d0
@@ -454,14 +454,14 @@ void __fastcall ComponentPool_object___ShrinkPool(
       v5 = -v4;
     else
       v5 = v4;
-    this->fields.poolSizeMax = UnityEngine_Mathf__Max_41127884((int)v5, infmum, 0LL);
+    this->fields.poolSizeMax = UnityEngine_Mathf__Max_41473772((int)v5, infmum, 0LL);
   }
 }
 
 
 int32_t __fastcall ComponentPool_object___get_currentPoolSize(
         ComponentPool_T__o *this,
-        const MethodInfo_21A670C *method)
+        const MethodInfo_21E1B60 *method)
 {
   struct System_Collections_Generic_List_T__o *availableComponentList; // x0
   struct System_Collections_Generic_List_T__o *nonAvailableComponentList; // x8
@@ -471,7 +471,7 @@ int32_t __fastcall ComponentPool_object___get_currentPoolSize(
     || (availableComponentList = (struct System_Collections_Generic_List_T__o *)((__int64 (*)(void))method->klass->rgctx_data->_0_System_Collections_Generic_List_T__get_Count->methodPointer)(),
         (nonAvailableComponentList = this->fields.nonAvailableComponentList) == 0LL) )
   {
-    sub_B7076C(availableComponentList, method);
+    sub_B7769C(availableComponentList, method);
   }
   return ((__int64 (__fastcall *)(struct System_Collections_Generic_List_T__o *))method->klass->rgctx_data->_0_System_Collections_Generic_List_T__get_Count->methodPointer)(nonAvailableComponentList)
        + (_DWORD)availableComponentList;

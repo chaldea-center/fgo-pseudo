@@ -25,10 +25,10 @@ void __fastcall ObjectSwitchEffectSubComponent__RecvParam(
   __int64 v16; // x0
 
   v4 = this;
-  if ( (byte_4350BA6 & 1) == 0 )
+  if ( (byte_438A24E & 1) == 0 )
   {
-    this = (ObjectSwitchEffectSubComponent_o *)sub_B70694(&RaceResultEffectParam_TypeInfo);
-    byte_4350BA6 = 1;
+    this = (ObjectSwitchEffectSubComponent_o *)sub_B775C4(&RaceResultEffectParam_TypeInfo);
+    byte_438A24E = 1;
   }
   if ( param
     && (v5 = *(&RaceResultEffectParam_TypeInfo->_2.bitflags2 + 1), *(&param->klass->_2.bitflags2 + 1) >= (unsigned int)v5) )
@@ -45,7 +45,7 @@ void __fastcall ObjectSwitchEffectSubComponent__RecvParam(
   klass = v4[1].klass;
   if ( !klass )
 LABEL_28:
-    sub_B7076C(this, param);
+    sub_B7769C(this, param);
   namespaze = (int)klass->_1.namespaze;
   if ( !v6 )
     goto LABEL_22;
@@ -100,8 +100,8 @@ LABEL_22:
           goto LABEL_28;
       }
 LABEL_30:
-      v16 = sub_B70798(this);
-      sub_B70738(v16, 0LL);
+      v16 = sub_B776C8(this);
+      sub_B77668(v16, 0LL);
     }
   }
 }

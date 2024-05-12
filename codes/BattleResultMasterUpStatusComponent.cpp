@@ -25,11 +25,11 @@ void __fastcall BattleResultMasterUpStatusComponent__setData(
 
   v13 = newVal;
   v14 = oldVal;
-  if ( (byte_434EC17 & 1) == 0 )
+  if ( (byte_43881E8 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_434EC17 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_43881E8 = 1;
   }
   oldParamLabel = (UnityEngine_Object_o *)this->fields.oldParamLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -69,7 +69,7 @@ void __fastcall BattleResultMasterUpStatusComponent__setData(
       return;
     }
 LABEL_22:
-    sub_B7076C(v7, v8);
+    sub_B7769C(v7, v8);
   }
 }
 
@@ -84,11 +84,11 @@ void __fastcall BattleResultMasterUpStatusComponent__setTitle(
   __int64 v7; // x1
   System_String_o *v8; // x21
 
-  if ( (byte_434EC16 & 1) == 0 )
+  if ( (byte_43881E7 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_434EC16 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_43881E7 = 1;
   }
   titleParamLabel = (UnityEngine_Object_o *)this->fields.titleParamLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -107,7 +107,7 @@ void __fastcall BattleResultMasterUpStatusComponent__setTitle(
     if ( v6 )
     {
       v8 = v6;
-      if ( System_String__Equals_44745508(v6, key, 0LL) )
+      if ( System_String__Equals_44889276(v6, key, 0LL) )
         return;
       v6 = (System_String_o *)this->fields.titleParamLabel;
       if ( v6 )
@@ -116,6 +116,6 @@ void __fastcall BattleResultMasterUpStatusComponent__setTitle(
         return;
       }
     }
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   }
 }

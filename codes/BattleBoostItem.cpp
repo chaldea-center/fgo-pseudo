@@ -16,7 +16,7 @@ void __fastcall BattleBoostItem___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v6->fields.item = item;
   v6 = (BattleBoostItem_o *)((char *)v6 + 16);
-  sub_B70630((BattleServantConfConponent_o *)v6, (System_Int32_array **)item, v7, v8, v9, v10, v11, v12);
+  sub_B77560((BattleServantConfConponent_o *)v6, (System_Int32_array **)item, v7, v8, v9, v10, v11, v12);
   LODWORD(v6->monitor) = skillId;
 }
 
@@ -27,10 +27,10 @@ bool __fastcall BattleBoostItem__checkEffectTiming(BattleBoostItem_o *this, int3
   ItemEntity_o *item; // x20
   BattleBoostItemInfoData_c *v6; // x0
 
-  if ( (byte_43553FD & 1) == 0 )
+  if ( (byte_438EB3E & 1) == 0 )
   {
-    sub_B70694(&BattleBoostItemInfoData_TypeInfo);
-    byte_43553FD = 1;
+    sub_B775C4(&BattleBoostItemInfoData_TypeInfo);
+    byte_438EB3E = 1;
   }
   item = this->fields.item;
   v6 = BattleBoostItemInfoData_TypeInfo;
@@ -40,7 +40,7 @@ bool __fastcall BattleBoostItem__checkEffectTiming(BattleBoostItem_o *this, int3
     j_il2cpp_runtime_class_init_0(BattleBoostItemInfoData_TypeInfo);
   }
   if ( !item )
-    sub_B7076C(v6, *(_QWORD *)&timing);
+    sub_B7769C(v6, *(_QWORD *)&timing);
   return ItemEntity__getScript(
            item,
            BattleBoostItemInfoData_TypeInfo->static_fields->KEY_SCRIPT_BOOST_EFFECT_TIMING,

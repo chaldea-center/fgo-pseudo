@@ -4,14 +4,14 @@ void __fastcall NpcBackStepBattleLogicTask___ctor(
         bool isForcedSpeedOne,
         const MethodInfo *method)
 {
-  if ( (byte_4350B72 & 1) == 0 )
+  if ( (byte_438A21A & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_9477/*"NPC_BACKSTEP"*/);
-    byte_4350B72 = 1;
+    sub_B775C4(&StringLiteral_9536/*"NPC_BACKSTEP"*/);
+    byte_438A21A = 1;
   }
   PlayFieldMotionNpcBattleLogicTask___ctor(
     (PlayFieldMotionNpcBattleLogicTask_o *)this,
-    (System_String_o *)StringLiteral_9477/*"NPC_BACKSTEP"*/,
+    (System_String_o *)StringLiteral_9536/*"NPC_BACKSTEP"*/,
     targetId,
     isForcedSpeedOne,
     0LL);
@@ -28,10 +28,10 @@ bool __fastcall NpcBackStepBattleLogicTask__IsMakeAble(
   BattleActorControl_o *AiNpcActor; // x19
 
   v4 = (PlayFieldMotionNpcBattleLogicTask_o *)this;
-  if ( (byte_4350B73 & 1) == 0 )
+  if ( (byte_438A21B & 1) == 0 )
   {
-    this = (NpcBackStepBattleLogicTask_o *)sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4350B73 = 1;
+    this = (NpcBackStepBattleLogicTask_o *)sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438A21B = 1;
   }
   if ( !logic )
     goto LABEL_12;
@@ -51,7 +51,7 @@ bool __fastcall NpcBackStepBattleLogicTask__IsMakeAble(
     if ( AiNpcActor )
       return AiNpcActor->fields._IsStepInBattle_k__BackingField;
 LABEL_12:
-    sub_B7076C(this, logic);
+    sub_B7769C(this, logic);
   }
   return 0;
 }

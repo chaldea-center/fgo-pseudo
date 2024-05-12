@@ -47,21 +47,21 @@ void __fastcall CommandAssistLvUpListViewItemDraw__UpdateUi(
   int32_t lv; // [xsp+18h] [xbp-48h] BYREF
   int32_t IconImageId_k__BackingField; // [xsp+1Ch] [xbp-44h] BYREF
 
-  if ( (byte_435460D & 1) == 0 )
+  if ( (byte_438DECB & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_8476/*"LEVEL_INFO"*/);
-    sub_B70694(&StringLiteral_5679/*"EVENT_COMMAND_ASSIST_LEVEL_UP_FORMAT"*/);
-    byte_435460D = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_8532/*"LEVEL_INFO"*/);
+    sub_B775C4(&StringLiteral_5734/*"EVENT_COMMAND_ASSIST_LEVEL_UP_FORMAT"*/);
+    byte_438DECB = 1;
   }
   IconImageId_k__BackingField = 0;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
+  Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
   if ( !item || !Master_WarQuestSelectionMaster )
     goto LABEL_21;
   CurrentEntity = EventCommandAssistMaster__GetCurrentEntity(
@@ -97,7 +97,7 @@ void __fastcall CommandAssistLvUpListViewItemDraw__UpdateUi(
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
   Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)LocalizationManager__Get(
-                                                                   (System_String_o *)StringLiteral_5679/*"EVENT_COMMAND_ASSIST_LEVEL_UP_FORMAT"*/,
+                                                                   (System_String_o *)StringLiteral_5734/*"EVENT_COMMAND_ASSIST_LEVEL_UP_FORMAT"*/,
                                                                    0LL);
   if ( !v9 )
     goto LABEL_21;
@@ -109,7 +109,7 @@ void __fastcall CommandAssistLvUpListViewItemDraw__UpdateUi(
     goto LABEL_21;
   UILabel__set_text(levelLabel, (System_String_o *)Master_WarQuestSelectionMaster, 0LL);
   beforeLevelLabel = this->fields.beforeLevelLabel;
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_8476/*"LEVEL_INFO"*/, 0LL);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_8532/*"LEVEL_INFO"*/, 0LL);
   v37 = v9->fields.lv - 1;
   v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v37, v19);
   Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)System_String__Format(v18, v20, 0LL);
@@ -118,7 +118,7 @@ void __fastcall CommandAssistLvUpListViewItemDraw__UpdateUi(
   UILabel__set_text(beforeLevelLabel, (System_String_o *)Master_WarQuestSelectionMaster, 0LL);
   detailLabel = this->fields.detailLabel;
   Detail_k__BackingField = item->fields._Detail_k__BackingField;
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_8476/*"LEVEL_INFO"*/, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_8532/*"LEVEL_INFO"*/, 0LL);
   v36 = v9->fields.lv;
   v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v36, v24);
   v26 = (Il2CppObject *)System_String__Format(v23, v25, 0LL);
@@ -126,7 +126,7 @@ void __fastcall CommandAssistLvUpListViewItemDraw__UpdateUi(
   WrapControlText__textAdjust(detailLabel, v27, 16, 0, 0, 0LL);
   beforeDetailLabel = this->fields.beforeDetailLabel;
   BeforeDetail_k__BackingField = item->fields._BeforeDetail_k__BackingField;
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_8476/*"LEVEL_INFO"*/, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_8532/*"LEVEL_INFO"*/, 0LL);
   v35 = v9->fields.lv - 1;
   v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v35, v31);
   v33 = (Il2CppObject *)System_String__Format(v30, v32, 0LL);
@@ -135,7 +135,7 @@ void __fastcall CommandAssistLvUpListViewItemDraw__UpdateUi(
   Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)this->fields.line;
   if ( !Master_WarQuestSelectionMaster )
 LABEL_21:
-    sub_B7076C(Master_WarQuestSelectionMaster, v6);
+    sub_B7769C(Master_WarQuestSelectionMaster, v6);
   UnityEngine_Behaviour__set_enabled(
     (UnityEngine_Behaviour_o *)Master_WarQuestSelectionMaster,
     !item->fields._IsLast_k__BackingField,

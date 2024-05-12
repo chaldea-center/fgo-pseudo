@@ -4,7 +4,7 @@ void __fastcall WarBoardAPITurnEndRequestTask___ctor(
         bool onStartBeginRequest,
         const MethodInfo *method)
 {
-  WarBoardAPIRequestTask___ctor_21188152((WarBoardAPIRequestTask_o *)this, resultCallback, onStartBeginRequest, method);
+  WarBoardAPIRequestTask___ctor_21364956((WarBoardAPIRequestTask_o *)this, resultCallback, onStartBeginRequest, method);
 }
 
 
@@ -23,14 +23,14 @@ void __fastcall WarBoardAPITurnEndRequestTask__SetRequest(
   System_Int32_array *v11; // x6
   System_Int32_array *v12; // x7
 
-  if ( (byte_434FA1A & 1) == 0 )
+  if ( (byte_4389014 & 1) == 0 )
   {
-    sub_B70694(&Method_NetworkManager_getRequest_WarBoardTurnEndRequest___);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_434FA1A = 1;
+    sub_B775C4(&Method_NetworkManager_getRequest_WarBoardTurnEndRequest___);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4389014 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   v5 = (WarBoardData_o *)*((_QWORD *)Instance + 54);
@@ -41,13 +41,13 @@ void __fastcall WarBoardAPITurnEndRequestTask__SetRequest(
   }
   Instance = NetworkManager__getRequest_WarBoardWallAttackRequest_(
                0LL,
-               (const MethodInfo_1D57A4C *)Method_NetworkManager_getRequest_WarBoardTurnEndRequest___);
+               (const MethodInfo_1DF8BE8 *)Method_NetworkManager_getRequest_WarBoardTurnEndRequest___);
   if ( !v5 || (v6 = (WarBoardTurnEndRequest_o *)Instance, Instance = (void *)WarBoardData__get_id(v5, 0LL), !v6) )
 LABEL_10:
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   WarBoardTurnEndRequest__beginRequest(v6, (int32_t)Instance, v5, 0LL);
   this->fields.request = (struct RequestBase_o *)v6;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.request,
     (System_Int32_array **)v6,
     v7,

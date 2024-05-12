@@ -12,15 +12,15 @@ System_String_o *__fastcall ItemType__GetCountText(int32_t type, int32_t num, co
   Il2CppObject *v9; // x0
   int32_t v10; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4351177 & 1) == 0 )
+  if ( (byte_438A74F & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_11034/*"QP_UNIT"*/);
-    sub_B70694(&StringLiteral_8723/*"MANA_UNIT"*/);
-    sub_B70694(&StringLiteral_12565/*"STONE_UNIT"*/);
-    sub_B70694(&StringLiteral_6582/*"FRIEND_POINT_UNIT"*/);
-    byte_4351177 = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_11093/*"QP_UNIT"*/);
+    sub_B775C4(&StringLiteral_8779/*"MANA_UNIT"*/);
+    sub_B775C4(&StringLiteral_12629/*"STONE_UNIT"*/);
+    sub_B775C4(&StringLiteral_6638/*"FRIEND_POINT_UNIT"*/);
+    byte_438A74F = 1;
   }
   if ( type <= 4 )
   {
@@ -31,7 +31,7 @@ System_String_o *__fastcall ItemType__GetCountText(int32_t type, int32_t num, co
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v5 = &StringLiteral_11034/*"QP_UNIT"*/;
+      v5 = &StringLiteral_11093/*"QP_UNIT"*/;
       goto LABEL_29;
     }
     if ( type == 2 )
@@ -47,7 +47,7 @@ System_String_o *__fastcall ItemType__GetCountText(int32_t type, int32_t num, co
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v5 = &StringLiteral_8723/*"MANA_UNIT"*/;
+        v5 = &StringLiteral_8779/*"MANA_UNIT"*/;
         goto LABEL_29;
       case 13:
         if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -55,7 +55,7 @@ System_String_o *__fastcall ItemType__GetCountText(int32_t type, int32_t num, co
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v5 = &StringLiteral_6582/*"FRIEND_POINT_UNIT"*/;
+        v5 = &StringLiteral_6638/*"FRIEND_POINT_UNIT"*/;
         goto LABEL_29;
       case 17:
 LABEL_7:
@@ -64,7 +64,7 @@ LABEL_7:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v5 = &StringLiteral_12565/*"STONE_UNIT"*/;
+        v5 = &StringLiteral_12629/*"STONE_UNIT"*/;
 LABEL_29:
         v7 = LocalizationManager__Get((System_String_o *)*v5, 0LL);
         v10 = num;
@@ -99,33 +99,33 @@ bool __fastcall ItemType__IsCountableWithPlus(int32_t type, const MethodInfo *me
 
 System_String_o *__fastcall ItemType__get_CrossOperatorString(const MethodInfo *method)
 {
-  if ( (byte_4351175 & 1) == 0 )
+  if ( (byte_438A74D & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_3347/*"COMMON_COUNT_OPERATOR_CROSS"*/);
-    byte_4351175 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_3398/*"COMMON_COUNT_OPERATOR_CROSS"*/);
+    byte_438A74D = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  return LocalizationManager__Get((System_String_o *)StringLiteral_3347/*"COMMON_COUNT_OPERATOR_CROSS"*/, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_3398/*"COMMON_COUNT_OPERATOR_CROSS"*/, 0LL);
 }
 
 
 System_String_o *__fastcall ItemType__get_PlusOperatorString(const MethodInfo *method)
 {
-  if ( (byte_4351176 & 1) == 0 )
+  if ( (byte_438A74E & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_3348/*"COMMON_COUNT_OPERATOR_PLUS"*/);
-    byte_4351176 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_3399/*"COMMON_COUNT_OPERATOR_PLUS"*/);
+    byte_438A74E = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  return LocalizationManager__Get((System_String_o *)StringLiteral_3348/*"COMMON_COUNT_OPERATOR_PLUS"*/, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_3399/*"COMMON_COUNT_OPERATOR_PLUS"*/, 0LL);
 }

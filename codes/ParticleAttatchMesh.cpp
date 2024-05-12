@@ -66,19 +66,19 @@ void __fastcall ParticleAttatchMesh__BakeMesh(ParticleAttatchMesh_o *this, const
   System_Int32_array *v60; // x7
   UnityEngine_Vector3_o v61; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4350CB9 & 1) == 0 )
+  if ( (byte_438A362 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_MeshFilter___);
-    sub_B70694(&Method_System_Collections_Generic_List_Vector3___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_List_Vector3__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_Vector3__get_Item__);
-    sub_B70694(&Method_System_Collections_Generic_List_Vector3__set_Item__);
-    sub_B70694(&System_Collections_Generic_List_Vector3__TypeInfo);
-    sub_B70694(&UnityEngine_MeshRenderer_TypeInfo);
-    sub_B70694(&UnityEngine_Mesh_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&UnityEngine_SkinnedMeshRenderer_TypeInfo);
-    byte_4350CB9 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_MeshFilter___);
+    sub_B775C4(&Method_System_Collections_Generic_List_Vector3___ctor__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Vector3__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Vector3__get_Item__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Vector3__set_Item__);
+    sub_B775C4(&System_Collections_Generic_List_Vector3__TypeInfo);
+    sub_B775C4(&UnityEngine_MeshRenderer_TypeInfo);
+    sub_B775C4(&UnityEngine_Mesh_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&UnityEngine_SkinnedMeshRenderer_TypeInfo);
+    byte_438A362 = 1;
   }
   targetRenderer = this->fields.targetRenderer;
   if ( targetRenderer )
@@ -94,7 +94,7 @@ void __fastcall ParticleAttatchMesh__BakeMesh(ParticleAttatchMesh_o *this, const
         goto LABEL_49;
       Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                           gameObject,
-                                                          (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_MeshFilter___);
+                                                          (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_MeshFilter___);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
@@ -118,7 +118,7 @@ void __fastcall ParticleAttatchMesh__BakeMesh(ParticleAttatchMesh_o *this, const
           v25 = UnityEngine_MeshFilter__get_sharedMesh((UnityEngine_MeshFilter_o *)Component_srcLineSprite, 0LL);
           this->fields.cacheMesh = v25;
           p_cacheMesh = &this->fields.cacheMesh;
-          sub_B70630(
+          sub_B77560(
             (BattleServantConfConponent_o *)&this->fields.cacheMesh,
             (System_Int32_array **)v25,
             v27,
@@ -130,12 +130,12 @@ void __fastcall ParticleAttatchMesh__BakeMesh(ParticleAttatchMesh_o *this, const
           p_cacheVertices = &this->fields.cacheVertices;
           if ( !this->fields.cacheVertices )
           {
-            v34 = (System_Collections_Generic_List_Vector3__o *)sub_B70764(System_Collections_Generic_List_Vector3__TypeInfo);
+            v34 = (System_Collections_Generic_List_Vector3__o *)sub_B77694(System_Collections_Generic_List_Vector3__TypeInfo);
             System_Collections_Generic_List_Vector3____ctor(
               v34,
-              (const MethodInfo_2FF1E6C *)Method_System_Collections_Generic_List_Vector3___ctor__);
+              (const MethodInfo_301FA7C *)Method_System_Collections_Generic_List_Vector3___ctor__);
             *p_cacheVertices = v34;
-            sub_B70630(
+            sub_B77560(
               (BattleServantConfConponent_o *)&this->fields.cacheVertices,
               (System_Int32_array **)v34,
               v35,
@@ -167,7 +167,7 @@ void __fastcall ParticleAttatchMesh__BakeMesh(ParticleAttatchMesh_o *this, const
                 if ( *p_cacheVertices )
                 {
                   if ( v43 >= (unsigned int)v44->fields._size )
-                    System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+                    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
                   if ( gameObject )
                   {
                     v61 = UnityEngine_Transform__TransformPoint(
@@ -178,7 +178,7 @@ void __fastcall ParticleAttatchMesh__BakeMesh(ParticleAttatchMesh_o *this, const
                       v41,
                       v43,
                       v61,
-                      (const MethodInfo_2FF2894 *)Method_System_Collections_Generic_List_Vector3__set_Item__);
+                      (const MethodInfo_30204A4 *)Method_System_Collections_Generic_List_Vector3__set_Item__);
                     v41 = *p_cacheVertices;
                     ++v43;
                     ++v42;
@@ -220,10 +220,10 @@ void __fastcall ParticleAttatchMesh__BakeMesh(ParticleAttatchMesh_o *this, const
         }
         if ( ((unsigned __int8)gameObject & 1) != 0 )
         {
-          v16 = (UnityEngine_Mesh_o *)sub_B70764(UnityEngine_Mesh_TypeInfo);
+          v16 = (UnityEngine_Mesh_o *)sub_B77694(UnityEngine_Mesh_TypeInfo);
           UnityEngine_Mesh___ctor(v16, 0LL);
           *p_bakedMesh = v16;
-          sub_B70630(
+          sub_B77560(
             (BattleServantConfConponent_o *)&this->fields.bakedMesh,
             (System_Int32_array **)v16,
             v17,
@@ -243,10 +243,10 @@ void __fastcall ParticleAttatchMesh__BakeMesh(ParticleAttatchMesh_o *this, const
           if ( (UnityEngine_SkinnedMeshRenderer_c *)v12->_2.typeHierarchy[v15 - 1] != UnityEngine_SkinnedMeshRenderer_TypeInfo )
             goto LABEL_49;
         }
-        UnityEngine_SkinnedMeshRenderer__BakeMesh_36148636(v13, this->fields.bakedMesh, 1, 0LL);
+        UnityEngine_SkinnedMeshRenderer__BakeMesh_36391408(v13, this->fields.bakedMesh, 1, 0LL);
         v45 = this->fields.bakedMesh;
         this->fields.cacheMesh = v45;
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)&this->fields.cacheMesh,
           (System_Int32_array **)v45,
           v46,
@@ -259,12 +259,12 @@ void __fastcall ParticleAttatchMesh__BakeMesh(ParticleAttatchMesh_o *this, const
         v52 = (BattleServantConfConponent_o *)&this->fields.cacheVertices;
         if ( !cacheVertices )
         {
-          v54 = (System_Collections_Generic_List_Vector3__o *)sub_B70764(System_Collections_Generic_List_Vector3__TypeInfo);
+          v54 = (System_Collections_Generic_List_Vector3__o *)sub_B77694(System_Collections_Generic_List_Vector3__TypeInfo);
           System_Collections_Generic_List_Vector3____ctor(
             v54,
-            (const MethodInfo_2FF1E6C *)Method_System_Collections_Generic_List_Vector3___ctor__);
+            (const MethodInfo_301FA7C *)Method_System_Collections_Generic_List_Vector3___ctor__);
           v52->klass = (BattleServantConfConponent_c *)v54;
-          sub_B70630(v52, (System_Int32_array **)v54, v55, v56, v57, v58, v59, v60);
+          sub_B77560(v52, (System_Int32_array **)v54, v55, v56, v57, v58, v59, v60);
         }
         gameObject = (UnityEngine_GameObject_o *)*p_bakedMesh;
         if ( *p_bakedMesh )
@@ -276,7 +276,7 @@ void __fastcall ParticleAttatchMesh__BakeMesh(ParticleAttatchMesh_o *this, const
           return;
         }
 LABEL_49:
-        sub_B7076C(gameObject, v11);
+        sub_B7769C(gameObject, v11);
       }
     }
   }
@@ -317,15 +317,15 @@ void __fastcall ParticleAttatchMesh__CleanupCustomData(ParticleAttatchMesh_o *th
   System_Int32_array *v32; // x7
 
   this->fields.customData1 = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.customData1, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.customData1, 0LL, v2, v3, v4, v5, v6, v7);
   this->fields.customData2 = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.customData2, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.customData2, 0LL, v9, v10, v11, v12, v13, v14);
   this->fields.meshColors = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.meshColors, 0LL, v15, v16, v17, v18, v19, v20);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.meshColors, 0LL, v15, v16, v17, v18, v19, v20);
   this->fields.meshUVs1 = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.meshUVs1, 0LL, v21, v22, v23, v24, v25, v26);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.meshUVs1, 0LL, v21, v22, v23, v24, v25, v26);
   this->fields.meshUVs2 = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.meshUVs2, 0LL, v27, v28, v29, v30, v31, v32);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.meshUVs2, 0LL, v27, v28, v29, v30, v31, v32);
 }
 
 
@@ -359,10 +359,10 @@ void __fastcall ParticleAttatchMesh__CleanupMesh(ParticleAttatchMesh_o *this, co
   System_Int32_array *v28; // x6
   System_Int32_array *v29; // x7
 
-  if ( (byte_4350CB8 & 1) == 0 )
+  if ( (byte_438A361 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4350CB8 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438A361 = 1;
   }
   p_bakedMesh = &this->fields.bakedMesh;
   bakedMesh = (UnityEngine_Object_o *)this->fields.bakedMesh;
@@ -379,16 +379,16 @@ void __fastcall ParticleAttatchMesh__CleanupMesh(ParticleAttatchMesh_o *this, co
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_36067208(v11, 0LL);
+    UnityEngine_Object__Destroy_36309980(v11, 0LL);
     *p_bakedMesh = 0LL;
-    sub_B70630((BattleServantConfConponent_o *)&this->fields.bakedMesh, 0LL, v12, v13, v14, v15, v16, v17);
+    sub_B77560((BattleServantConfConponent_o *)&this->fields.bakedMesh, 0LL, v12, v13, v14, v15, v16, v17);
   }
   this->fields.cacheMesh = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.cacheMesh, 0LL, v5, v6, v7, v8, v9, v10);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.cacheMesh, 0LL, v5, v6, v7, v8, v9, v10);
   this->fields.cacheVertices = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.cacheVertices, 0LL, v18, v19, v20, v21, v22, v23);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.cacheVertices, 0LL, v18, v19, v20, v21, v22, v23);
   this->fields.useVertexIndices = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.useVertexIndices, 0LL, v24, v25, v26, v27, v28, v29);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.useVertexIndices, 0LL, v24, v25, v26, v27, v28, v29);
 }
 
 
@@ -415,10 +415,10 @@ void __fastcall ParticleAttatchMesh__CleanupParticle(ParticleAttatchMesh_o *this
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+8h] [xbp-18h] BYREF
   UnityEngine_ParticleSystem_MainModule_o v22; // 0:x0.8
 
-  if ( (byte_4350CB5 & 1) == 0 )
+  if ( (byte_438A35E & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4350CB5 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438A35E = 1;
   }
   m_ParticleSystem = 0LL;
   p_targetPS = &this->fields.targetPS;
@@ -442,16 +442,16 @@ void __fastcall ParticleAttatchMesh__CleanupParticle(ParticleAttatchMesh_o *this
             0LL),
           (gameObject = (UnityEngine_Component_o *)this->fields.targetPS) == 0LL) )
     {
-      sub_B7076C(gameObject, v5);
+      sub_B7769C(gameObject, v5);
     }
     m_ParticleSystem = UnityEngine_ParticleSystem__get_main((UnityEngine_ParticleSystem_o *)gameObject, 0LL).fields.m_ParticleSystem;
     v22.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
     UnityEngine_ParticleSystem_MainModule__set_maxParticles(v22, this->fields.orgMaxParticles, 0LL);
     this->fields.targetPS = 0LL;
-    sub_B70630((BattleServantConfConponent_o *)&this->fields.targetPS, 0LL, v13, v14, v15, v16, v17, v18);
+    sub_B77560((BattleServantConfConponent_o *)&this->fields.targetPS, 0LL, v13, v14, v15, v16, v17, v18);
   }
   this->fields.particles = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.particles, 0LL, v6, v7, v8, v9, v10, v11);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.particles, 0LL, v6, v7, v8, v9, v10, v11);
   ParticleAttatchMesh__CleanupCustomData(this, v19);
   ParticleAttatchMesh__CleanupMesh(this, v20);
 }
@@ -468,11 +468,11 @@ UnityEngine_ParticleSystem_o *__fastcall ParticleAttatchMesh__GetTargetParticleS
   UnityEngine_Object_o *v7; // x19
   bool v8; // w8
 
-  if ( (byte_4350CBB & 1) == 0 )
+  if ( (byte_438A364 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4350CBB = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438A364 = 1;
   }
   targetParticleSystem = (UnityEngine_Object_o *)this->fields.targetParticleSystem;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -515,10 +515,10 @@ UnityEngine_ParticleSystem_o *__fastcall ParticleAttatchMesh__GetTargetParticleS
         if ( result )
           return (UnityEngine_ParticleSystem_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                    (UnityEngine_GameObject_o *)result,
-                                                   (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
+                                                   (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
       }
 LABEL_19:
-      sub_B7076C(result, v6);
+      sub_B7769C(result, v6);
     }
   }
   return result;
@@ -536,91 +536,21 @@ System_Collections_Generic_List_int__o *__fastcall ParticleAttatchMesh__MergeVer
         System_Collections_Generic_List_Vector3__o *vertices,
         const MethodInfo *method)
 {
-  System_Collections_Generic_HashSet_Vector3__o *v3; // x20
-  System_Collections_Generic_List_int__o *v4; // x21
-  _BOOL8 v5; // x0
-  __int64 v6; // x1
-  signed __int64 size; // x8
-  __int64 v8; // x23
-  unsigned __int64 v9; // x22
-  float *v10; // x8
-  float v11; // s8
-  float v12; // s9
-  float v13; // s10
-  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
-
-  if ( (byte_4350CBC & 1) == 0 )
+  if ( (byte_438A365 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_HashSet_Vector3__Add__);
-    sub_B70694(&Method_System_Collections_Generic_HashSet_Vector3__Contains__);
-    sub_B70694(&Method_System_Collections_Generic_HashSet_Vector3___ctor___69141832);
-    sub_B70694(&System_Collections_Generic_HashSet_Vector3__TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_int__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_List_Vector3__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_Vector3__get_Item__);
-    sub_B70694(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4350CBC = 1;
+    sub_B775C4(&Method_System_Collections_Generic_HashSet_Vector3__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_HashSet_Vector3__Contains__);
+    sub_B775C4(&Method_System_Collections_Generic_HashSet_Vector3___ctor___69374208);
+    sub_B775C4(&System_Collections_Generic_HashSet_Vector3__TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int___ctor___69397304);
+    sub_B775C4(&Method_System_Collections_Generic_List_Vector3__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Vector3__get_Item__);
+    sub_B775C4(&System_Collections_Generic_List_int__TypeInfo);
+    byte_438A365 = 1;
   }
-  v3 = (System_Collections_Generic_HashSet_Vector3__o *)sub_B70764(System_Collections_Generic_HashSet_Vector3__TypeInfo);
-  System_Collections_Generic_HashSet_Vector3____ctor(
-    v3,
-    (const MethodInfo_1C17A9C *)Method_System_Collections_Generic_HashSet_Vector3___ctor___69141832);
-  v4 = (System_Collections_Generic_List_int__o *)sub_B70764(System_Collections_Generic_List_int__TypeInfo);
-  System_Collections_Generic_List_int____ctor(
-    v4,
-    (const MethodInfo_30B547C *)Method_System_Collections_Generic_List_int___ctor__);
-  if ( !vertices )
-    goto LABEL_14;
-  LODWORD(size) = vertices->fields._size;
-  if ( (int)size >= 1 )
-  {
-    v8 = 0LL;
-    v9 = 0LL;
-    while ( 1 )
-    {
-      if ( v9 >= (unsigned int)size )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
-      if ( !v3 )
-        break;
-      v10 = (float *)((char *)vertices->fields._items + v8);
-      v11 = v10[8];
-      v12 = v10[9];
-      v13 = v10[10];
-      v15.fields.x = v11;
-      v15.fields.y = v12;
-      v15.fields.z = v13;
-      v5 = System_Collections_Generic_HashSet_Vector3___Contains(
-             v3,
-             v15,
-             (const MethodInfo_1C18124 *)Method_System_Collections_Generic_HashSet_Vector3__Contains__);
-      if ( !v5 )
-      {
-        v16.fields.x = v11;
-        v16.fields.y = v12;
-        v16.fields.z = v13;
-        v5 = System_Collections_Generic_HashSet_Vector3___Add(
-               v3,
-               v16,
-               (const MethodInfo_1C18CB4 *)Method_System_Collections_Generic_HashSet_Vector3__Add__);
-        if ( !v4 )
-          break;
-        System_Collections_Generic_List_int___Add(
-          v4,
-          v9,
-          (const MethodInfo_30B61D8 *)Method_System_Collections_Generic_List_int__Add__);
-      }
-      size = vertices->fields._size;
-      ++v9;
-      v8 += 12LL;
-      if ( (__int64)v9 >= size )
-        return v4;
-    }
-LABEL_14:
-    sub_B7076C(v5, v6);
-  }
-  return v4;
+  sub_B77694(System_Collections_Generic_HashSet_Vector3__TypeInfo);
+  JUMPOUT(0x169B114LL);
 }
 
 
@@ -648,11 +578,11 @@ int32_t __fastcall ParticleAttatchMesh__SetupMesh(ParticleAttatchMesh_o *this, c
   __int64 v15; // x0
   __int64 v16; // x1
 
-  if ( (byte_4350CB7 & 1) == 0 )
+  if ( (byte_438A360 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4350CB7 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438A360 = 1;
   }
   targetRenderer = (UnityEngine_Object_o *)this->fields.targetRenderer;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -669,7 +599,7 @@ int32_t __fastcall ParticleAttatchMesh__SetupMesh(ParticleAttatchMesh_o *this, c
       v7 = ParticleAttatchMesh__MergeVertexIndices(cacheVertices, v5);
       this->fields.useVertexIndices = v7;
       p_useVertexIndices = &this->fields.useVertexIndices;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)p_useVertexIndices,
         (System_Int32_array **)v7,
         v9,
@@ -679,7 +609,7 @@ int32_t __fastcall ParticleAttatchMesh__SetupMesh(ParticleAttatchMesh_o *this, c
         v13,
         v14);
       if ( !*p_useVertexIndices )
-        sub_B7076C(v15, v16);
+        sub_B7769C(v15, v16);
       LODWORD(cacheVertices) = (*p_useVertexIndices)->fields._size;
     }
   }
@@ -721,11 +651,11 @@ void __fastcall ParticleAttatchMesh__SetupParticle(ParticleAttatchMesh_o *this, 
   UnityEngine_ParticleSystem_MainModule_o v28; // 0:x0.8
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4350CB4 & 1) == 0 )
+  if ( (byte_438A35D & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&UnityEngine_ParticleSystem_Particle___TypeInfo);
-    byte_4350CB4 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&UnityEngine_ParticleSystem_Particle___TypeInfo);
+    byte_438A35D = 1;
   }
   m_ParticleSystem = 0LL;
   p_targetPS = &this->fields.targetPS;
@@ -758,7 +688,7 @@ void __fastcall ParticleAttatchMesh__SetupParticle(ParticleAttatchMesh_o *this, 
         {
           v16 = v9;
           *p_targetPS = (struct UnityEngine_ParticleSystem_o *)TargetParticleSystem;
-          sub_B70630(
+          sub_B77560(
             (BattleServantConfConponent_o *)&this->fields.targetPS,
             TargetParticleSystem,
             v10,
@@ -788,11 +718,11 @@ void __fastcall ParticleAttatchMesh__SetupParticle(ParticleAttatchMesh_o *this, 
           v27.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
           this->fields.orgParticleScale = localScale;
           this->fields.orgMaxParticles = UnityEngine_ParticleSystem_MainModule__get_maxParticles(v27, 0LL);
-          v19 = (struct UnityEngine_ParticleSystem_Particle_array *)sub_B706AC(
+          v19 = (struct UnityEngine_ParticleSystem_Particle_array *)sub_B775DC(
                                                                       UnityEngine_ParticleSystem_Particle___TypeInfo,
                                                                       v16);
           this->fields.particles = v19;
-          sub_B70630(
+          sub_B77560(
             (BattleServantConfConponent_o *)&this->fields.particles,
             (System_Int32_array **)v19,
             v20,
@@ -804,8 +734,8 @@ void __fastcall ParticleAttatchMesh__SetupParticle(ParticleAttatchMesh_o *this, 
           gameObject = this->fields.targetPS;
           if ( !gameObject )
 LABEL_23:
-            sub_B7076C(gameObject, v17);
-          UnityEngine_ParticleSystem__SetParticles_51598660(gameObject, this->fields.particles, v16, 0LL);
+            sub_B7769C(gameObject, v17);
+          UnityEngine_ParticleSystem__SetParticles_51806548(gameObject, this->fields.particles, v16, 0LL);
           v28.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
           UnityEngine_ParticleSystem_MainModule__set_maxParticles(v28, v16, 0LL);
         }
@@ -893,34 +823,34 @@ void __fastcall ParticleAttatchMesh__UpdateCustomData(
   int v72; // w8
 
   v9 = this;
-  if ( (byte_4350CBA & 1) == 0 )
+  if ( (byte_438A363 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_Vector2___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_List_Vector4___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_List_Color___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_List_Vector4__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_Color__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_Vector2__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_Vector2__get_Item__);
-    sub_B70694(&Method_System_Collections_Generic_List_Color__get_Item__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_B70694(&Method_System_Collections_Generic_List_Vector4__set_Item__);
-    sub_B70694(&System_Collections_Generic_List_Vector4__TypeInfo);
-    sub_B70694(&System_Collections_Generic_List_Vector2__TypeInfo);
-    this = (ParticleAttatchMesh_o *)sub_B70694(&System_Collections_Generic_List_Color__TypeInfo);
-    byte_4350CBA = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_Vector2___ctor__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Vector4___ctor__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Color___ctor__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Vector4__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Color__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Vector2__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Vector2__get_Item__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Color__get_Item__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Vector4__set_Item__);
+    sub_B775C4(&System_Collections_Generic_List_Vector4__TypeInfo);
+    sub_B775C4(&System_Collections_Generic_List_Vector2__TypeInfo);
+    this = (ParticleAttatchMesh_o *)sub_B775C4(&System_Collections_Generic_List_Color__TypeInfo);
+    byte_438A363 = 1;
   }
   if ( v9->fields.customDataType1 )
   {
     p_customData1 = &v9->fields.customData1;
     if ( !v9->fields.customData1 )
     {
-      v11 = (System_Collections_Generic_List_Vector4__o *)sub_B70764(System_Collections_Generic_List_Vector4__TypeInfo);
+      v11 = (System_Collections_Generic_List_Vector4__o *)sub_B77694(System_Collections_Generic_List_Vector4__TypeInfo);
       System_Collections_Generic_List_Vector4____ctor(
         v11,
-        (const MethodInfo_2FF500C *)Method_System_Collections_Generic_List_Vector4___ctor__);
+        (const MethodInfo_3022C1C *)Method_System_Collections_Generic_List_Vector4___ctor__);
       *p_customData1 = v11;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&v9->fields.customData1,
         (System_Int32_array **)v11,
         v12,
@@ -944,12 +874,12 @@ void __fastcall ParticleAttatchMesh__UpdateCustomData(
     p_customData2 = &v9->fields.customData2;
     if ( !v9->fields.customData2 )
     {
-      v19 = (System_Collections_Generic_List_Vector4__o *)sub_B70764(System_Collections_Generic_List_Vector4__TypeInfo);
+      v19 = (System_Collections_Generic_List_Vector4__o *)sub_B77694(System_Collections_Generic_List_Vector4__TypeInfo);
       System_Collections_Generic_List_Vector4____ctor(
         v19,
-        (const MethodInfo_2FF500C *)Method_System_Collections_Generic_List_Vector4___ctor__);
+        (const MethodInfo_3022C1C *)Method_System_Collections_Generic_List_Vector4___ctor__);
       *p_customData2 = v19;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&v9->fields.customData2,
         (System_Int32_array **)v19,
         v20,
@@ -973,12 +903,12 @@ void __fastcall ParticleAttatchMesh__UpdateCustomData(
   {
     if ( !v9->fields.meshColors )
     {
-      v27 = (System_Collections_Generic_List_Color__o *)sub_B70764(System_Collections_Generic_List_Color__TypeInfo);
+      v27 = (System_Collections_Generic_List_Color__o *)sub_B77694(System_Collections_Generic_List_Color__TypeInfo);
       System_Collections_Generic_List_Color____ctor(
         v27,
-        (const MethodInfo_307DA14 *)Method_System_Collections_Generic_List_Color___ctor__);
+        (const MethodInfo_30AB624 *)Method_System_Collections_Generic_List_Color___ctor__);
       v9->fields.meshColors = v27;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&v9->fields.meshColors,
         (System_Int32_array **)v27,
         v28,
@@ -998,12 +928,12 @@ void __fastcall ParticleAttatchMesh__UpdateCustomData(
   {
     if ( !v9->fields.meshUVs1 )
     {
-      v34 = (System_Collections_Generic_List_Vector2__o *)sub_B70764(System_Collections_Generic_List_Vector2__TypeInfo);
+      v34 = (System_Collections_Generic_List_Vector2__o *)sub_B77694(System_Collections_Generic_List_Vector2__TypeInfo);
       System_Collections_Generic_List_Vector2____ctor(
         v34,
-        (const MethodInfo_2FEEDD8 *)Method_System_Collections_Generic_List_Vector2___ctor__);
+        (const MethodInfo_301C9E8 *)Method_System_Collections_Generic_List_Vector2___ctor__);
       v9->fields.meshUVs1 = v34;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&v9->fields.meshUVs1,
         (System_Int32_array **)v34,
         v35,
@@ -1024,7 +954,7 @@ void __fastcall ParticleAttatchMesh__UpdateCustomData(
     {
       meshUVs1 = (System_Int32_array **)v9->fields.meshUVs1;
       v9->fields.meshUVs2 = (struct System_Collections_Generic_List_Vector2__o *)meshUVs1;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&v9->fields.meshUVs2,
         meshUVs1,
         (System_String_array **)method,
@@ -1038,12 +968,12 @@ void __fastcall ParticleAttatchMesh__UpdateCustomData(
     {
       if ( !v9->fields.meshUVs2 )
       {
-        v42 = (System_Collections_Generic_List_Vector2__o *)sub_B70764(System_Collections_Generic_List_Vector2__TypeInfo);
+        v42 = (System_Collections_Generic_List_Vector2__o *)sub_B77694(System_Collections_Generic_List_Vector2__TypeInfo);
         System_Collections_Generic_List_Vector2____ctor(
           v42,
-          (const MethodInfo_2FEEDD8 *)Method_System_Collections_Generic_List_Vector2___ctor__);
+          (const MethodInfo_301C9E8 *)Method_System_Collections_Generic_List_Vector2___ctor__);
         v9->fields.meshUVs2 = v42;
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)&v9->fields.meshUVs2,
           (System_Int32_array **)v42,
           v43,
@@ -1069,7 +999,7 @@ void __fastcall ParticleAttatchMesh__UpdateCustomData(
       if ( !useVertexIndices )
         goto LABEL_83;
       if ( v49 >= (unsigned __int64)(unsigned int)useVertexIndices->fields._size )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       v52 = v9->fields.customDataType1;
       v53 = useVertexIndices->fields._items->m_Items[v49 + 1];
       if ( v52 == 2 )
@@ -1088,8 +1018,8 @@ void __fastcall ParticleAttatchMesh__UpdateCustomData(
             if ( v49 < customData1->fields._size )
             {
               if ( size <= (unsigned int)v53 )
-                System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
-              *(UnityEngine_Vector4_o *)&v57 = UnityEngine_Vector4__op_Implicit_51316552(
+                System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
+              *(UnityEngine_Vector4_o *)&v57 = UnityEngine_Vector4__op_Implicit_51512152(
                                                  *(UnityEngine_Vector2_o *)&v61->fields._items->m_Items[v53].fields.y,
                                                  0LL);
               goto LABEL_55;
@@ -1111,7 +1041,7 @@ void __fastcall ParticleAttatchMesh__UpdateCustomData(
           if ( v49 < customData1->fields._size )
           {
             if ( v55 <= (unsigned int)v53 )
-              System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+              System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
             *(UnityEngine_Vector4_o *)&v57 = UnityEngine_Color__op_Implicit(
                                                *(UnityEngine_Color_o *)&meshColors->fields._items->m_Items[v53].fields.g,
                                                0LL);
@@ -1120,7 +1050,7 @@ LABEL_55:
               customData1,
               v49,
               *(UnityEngine_Vector4_o *)&v57,
-              (const MethodInfo_2FF5A2C *)Method_System_Collections_Generic_List_Vector4__set_Item__);
+              (const MethodInfo_302363C *)Method_System_Collections_Generic_List_Vector4__set_Item__);
           }
         }
       }
@@ -1141,8 +1071,8 @@ LABEL_55:
         if ( v49 >= customData2->fields._size )
           goto LABEL_75;
         if ( v72 <= (unsigned int)v53 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
-        *(UnityEngine_Vector4_o *)&v67 = UnityEngine_Vector4__op_Implicit_51316552(
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
+        *(UnityEngine_Vector4_o *)&v67 = UnityEngine_Vector4__op_Implicit_51512152(
                                            *(UnityEngine_Vector2_o *)&meshUVs2->fields._items->m_Items[v53].fields.y,
                                            0LL);
       }
@@ -1162,7 +1092,7 @@ LABEL_55:
         if ( v49 >= customData2->fields._size )
           goto LABEL_75;
         if ( v65 <= (unsigned int)v53 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
         *(UnityEngine_Vector4_o *)&v67 = UnityEngine_Color__op_Implicit(
                                            *(UnityEngine_Color_o *)&v64->fields._items->m_Items[v53].fields.g,
                                            0LL);
@@ -1171,7 +1101,7 @@ LABEL_55:
         customData2,
         v49,
         *(UnityEngine_Vector4_o *)&v67,
-        (const MethodInfo_2FF5A2C *)Method_System_Collections_Generic_List_Vector4__set_Item__);
+        (const MethodInfo_302363C *)Method_System_Collections_Generic_List_Vector4__set_Item__);
 LABEL_75:
       ++v49;
     }
@@ -1201,7 +1131,7 @@ LABEL_75:
       return;
     }
 LABEL_83:
-    sub_B7076C(this, *(_QWORD *)&particleNum);
+    sub_B7769C(this, *(_QWORD *)&particleNum);
   }
 }
 
@@ -1212,7 +1142,7 @@ void __fastcall ParticleAttatchMesh__UpdateParticle(ParticleAttatchMesh_o *this,
   UnityEngine_Object_o *targetPS; // x20
   UnityEngine_Object_o *targetRenderer; // x20
   const MethodInfo *v5; // x1
-  UnityEngine_ParticleSystem_o *Particles_51598948; // x0
+  UnityEngine_ParticleSystem_o *Particles_51806836; // x0
   struct System_Collections_Generic_List_int__o *useVertexIndices; // x8
   int size; // w8
   int32_t v9; // w20
@@ -1267,13 +1197,13 @@ void __fastcall ParticleAttatchMesh__UpdateParticle(ParticleAttatchMesh_o *this,
   UnityEngine_Vector3_o v58; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v59; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4350CB6 & 1) == 0 )
+  if ( (byte_438A35F & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_Vector3__get_Item__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4350CB6 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Vector3__get_Item__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438A35F = 1;
   }
   m_ParticleSystem = 0LL;
   targetPS = (UnityEngine_Object_o *)this->fields.targetPS;
@@ -1292,37 +1222,37 @@ void __fastcall ParticleAttatchMesh__UpdateParticle(ParticleAttatchMesh_o *this,
   }
   if ( UnityEngine_Object__op_Equality(targetRenderer, 0LL, 0LL) )
     return;
-  Particles_51598948 = this->fields.targetPS;
-  if ( !Particles_51598948 )
+  Particles_51806836 = this->fields.targetPS;
+  if ( !Particles_51806836 )
     goto LABEL_56;
-  Particles_51598948 = (UnityEngine_ParticleSystem_o *)UnityEngine_ParticleSystem__GetParticles_51598948(
-                                                         Particles_51598948,
+  Particles_51806836 = (UnityEngine_ParticleSystem_o *)UnityEngine_ParticleSystem__GetParticles_51806836(
+                                                         Particles_51806836,
                                                          this->fields.particles,
                                                          0LL);
-  if ( (int)Particles_51598948 < 1 )
+  if ( (int)Particles_51806836 < 1 )
     return;
   useVertexIndices = this->fields.useVertexIndices;
   if ( !useVertexIndices )
     goto LABEL_56;
   size = useVertexIndices->fields._size;
-  v9 = (int)Particles_51598948 <= size ? (int)Particles_51598948 : size;
+  v9 = (int)Particles_51806836 <= size ? (int)Particles_51806836 : size;
   ParticleAttatchMesh__BakeMesh(this, v5);
   ParticleAttatchMesh__UpdateCustomData(this, v9, v10);
-  Particles_51598948 = this->fields.targetPS;
-  if ( !Particles_51598948 )
+  Particles_51806836 = this->fields.targetPS;
+  if ( !Particles_51806836 )
     goto LABEL_56;
-  Particles_51598948 = (UnityEngine_ParticleSystem_o *)UnityEngine_Component__get_gameObject(
-                                                         (UnityEngine_Component_o *)Particles_51598948,
+  Particles_51806836 = (UnityEngine_ParticleSystem_o *)UnityEngine_Component__get_gameObject(
+                                                         (UnityEngine_Component_o *)Particles_51806836,
                                                          0LL);
-  if ( !Particles_51598948 )
+  if ( !Particles_51806836 )
     goto LABEL_56;
-  Particles_51598948 = (UnityEngine_ParticleSystem_o *)UnityEngine_GameObject__get_transform(
-                                                         (UnityEngine_GameObject_o *)Particles_51598948,
+  Particles_51806836 = (UnityEngine_ParticleSystem_o *)UnityEngine_GameObject__get_transform(
+                                                         (UnityEngine_GameObject_o *)Particles_51806836,
                                                          0LL);
-  if ( !Particles_51598948 )
+  if ( !Particles_51806836 )
     goto LABEL_56;
-  v11 = (UnityEngine_Transform_o *)Particles_51598948;
-  parent = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)Particles_51598948, 0LL);
+  v11 = (UnityEngine_Transform_o *)Particles_51806836;
+  parent = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)Particles_51806836, 0LL);
   nodeTransform = (UnityEngine_Object_o *)this->fields.nodeTransform;
   v14 = parent;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1336,15 +1266,15 @@ void __fastcall ParticleAttatchMesh__UpdateParticle(ParticleAttatchMesh_o *this,
   }
   else
   {
-    Particles_51598948 = (UnityEngine_ParticleSystem_o *)this->fields.targetRenderer;
-    if ( !Particles_51598948 )
+    Particles_51806836 = (UnityEngine_ParticleSystem_o *)this->fields.targetRenderer;
+    if ( !Particles_51806836 )
       goto LABEL_56;
-    Particles_51598948 = (UnityEngine_ParticleSystem_o *)UnityEngine_Component__get_gameObject(
-                                                           (UnityEngine_Component_o *)Particles_51598948,
+    Particles_51806836 = (UnityEngine_ParticleSystem_o *)UnityEngine_Component__get_gameObject(
+                                                           (UnityEngine_Component_o *)Particles_51806836,
                                                            0LL);
-    if ( !Particles_51598948 )
+    if ( !Particles_51806836 )
       goto LABEL_56;
-    transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Particles_51598948, 0LL);
+    transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Particles_51806836, 0LL);
   }
   v16 = (UnityEngine_Object_o *)UnityEngine_Transform__get_parent(v11, 0LL);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1352,10 +1282,10 @@ void __fastcall ParticleAttatchMesh__UpdateParticle(ParticleAttatchMesh_o *this,
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  Particles_51598948 = (UnityEngine_ParticleSystem_o *)UnityEngine_Object__op_Inequality(v16, 0LL, 0LL);
+  Particles_51806836 = (UnityEngine_ParticleSystem_o *)UnityEngine_Object__op_Inequality(v16, 0LL, 0LL);
   if ( !transform )
     goto LABEL_56;
-  v17 = (char)Particles_51598948;
+  v17 = (char)Particles_51806836;
   LODWORD(v18) = (unsigned int)UnityEngine_Transform__get_lossyScale(transform, 0LL);
   if ( (v17 & 1) != 0 )
   {
@@ -1392,22 +1322,22 @@ void __fastcall ParticleAttatchMesh__UpdateParticle(ParticleAttatchMesh_o *this,
   }
   UnityEngine_Transform__set_localScale(v11, *(UnityEngine_Vector3_o *)&v26, 0LL);
   *(UnityEngine_Vector3_o *)&v33 = UnityEngine_Vector3__get_one(0LL);
-  Particles_51598948 = this->fields.targetPS;
-  if ( !Particles_51598948 )
+  Particles_51806836 = this->fields.targetPS;
+  if ( !Particles_51806836 )
 LABEL_56:
-    sub_B7076C(Particles_51598948, v5);
+    sub_B7769C(Particles_51806836, v5);
   v36 = v33;
   v37 = v34;
   v38 = v35;
-  m_ParticleSystem = UnityEngine_ParticleSystem__get_main(Particles_51598948, 0LL).fields.m_ParticleSystem;
+  m_ParticleSystem = UnityEngine_ParticleSystem__get_main(Particles_51806836, 0LL).fields.m_ParticleSystem;
   v50.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
-  Particles_51598948 = (UnityEngine_ParticleSystem_o *)UnityEngine_ParticleSystem_MainModule__get_scalingMode(v50, 0LL);
-  if ( (_DWORD)Particles_51598948 == 1 )
+  Particles_51806836 = (UnityEngine_ParticleSystem_o *)UnityEngine_ParticleSystem_MainModule__get_scalingMode(v50, 0LL);
+  if ( (_DWORD)Particles_51806836 == 1 )
   {
     *(UnityEngine_Vector3_o *)&v39 = UnityEngine_Transform__get_localScale(v11, 0LL);
     goto LABEL_41;
   }
-  if ( !(_DWORD)Particles_51598948 )
+  if ( !(_DWORD)Particles_51806836 )
   {
     *(UnityEngine_Vector3_o *)&v39 = UnityEngine_Transform__get_lossyScale(v11, 0LL);
 LABEL_41:
@@ -1425,7 +1355,7 @@ LABEL_41:
       if ( !v44 )
         goto LABEL_56;
       if ( v42 >= (unsigned int)v44->fields._size )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       particles = this->fields.particles;
       if ( !particles )
         goto LABEL_56;
@@ -1434,11 +1364,11 @@ LABEL_41:
         goto LABEL_56;
       v47 = v44->fields._items->m_Items[v42 + 1];
       if ( cacheVertices->fields._size <= (unsigned int)v47 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       if ( v42 >= particles->max_length )
       {
-        v48 = sub_B70798(Particles_51598948);
-        sub_B70738(v48, 0LL);
+        v48 = sub_B776C8(Particles_51806836);
+        sub_B77668(v48, 0LL);
       }
       v59.fields.y = cacheVertices->fields._items->m_Items[v47].fields.z / v37;
       v59.fields.x = cacheVertices->fields._items->m_Items[v47].fields.y / v36;
@@ -1452,8 +1382,8 @@ LABEL_41:
     }
     while ( (__int64)v42 < v9 );
   }
-  Particles_51598948 = this->fields.targetPS;
-  if ( !Particles_51598948 )
+  Particles_51806836 = this->fields.targetPS;
+  if ( !Particles_51806836 )
     goto LABEL_56;
-  UnityEngine_ParticleSystem__SetParticles_51598660(Particles_51598948, this->fields.particles, v9, 0LL);
+  UnityEngine_ParticleSystem__SetParticles_51806548(Particles_51806836, this->fields.particles, v9, 0LL);
 }

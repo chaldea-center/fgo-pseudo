@@ -1,13 +1,13 @@
 void __fastcall ClassBoardSquareEntity___ctor(ClassBoardSquareEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4353B95 & 1) == 0 )
+  if ( (byte_438D453 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_4353B95 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438D453 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -16,15 +16,15 @@ System_String_o *__fastcall ClassBoardSquareEntity__CreatePK(
         int32_t id,
         const MethodInfo *method)
 {
-  if ( (byte_4353B94 & 1) == 0 )
+  if ( (byte_438D452 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4353B94 = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_438D452 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            classBoardBaseId,
            id,
-           (const MethodInfo_1CA236C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1D171BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -54,17 +54,17 @@ bool __fastcall ClassBoardSquareEntity__get_IsBlank(ClassBoardSquareEntity_o *th
   int v9; // [xsp+8h] [xbp-18h] BYREF
   int32_t flag; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4353B93 & 1) == 0 )
+  if ( (byte_438D451 & 1) == 0 )
   {
-    sub_B70694(&ClassBoardSquareEntity_Flag_TypeInfo);
-    byte_4353B93 = 1;
+    sub_B775C4(&ClassBoardSquareEntity_Flag_TypeInfo);
+    byte_438D451 = 1;
   }
   flag = this->fields.flag;
   v4 = (System_Enum_o *)j_il2cpp_value_box_0(ClassBoardSquareEntity_Flag_TypeInfo, &flag, v2);
   v9 = 2;
   v6 = (System_Enum_o *)j_il2cpp_value_box_0(ClassBoardSquareEntity_Flag_TypeInfo, &v9, v5);
   if ( !v4 )
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   return System_Enum__HasFlag(v4, v6, 0LL);
 }
 
@@ -91,16 +91,16 @@ bool __fastcall ClassBoardSquareEntity__get_IsStart(ClassBoardSquareEntity_o *th
   int v9; // [xsp+8h] [xbp-18h] BYREF
   int32_t flag; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4353B92 & 1) == 0 )
+  if ( (byte_438D450 & 1) == 0 )
   {
-    sub_B70694(&ClassBoardSquareEntity_Flag_TypeInfo);
-    byte_4353B92 = 1;
+    sub_B775C4(&ClassBoardSquareEntity_Flag_TypeInfo);
+    byte_438D450 = 1;
   }
   flag = this->fields.flag;
   v4 = (System_Enum_o *)j_il2cpp_value_box_0(ClassBoardSquareEntity_Flag_TypeInfo, &flag, v2);
   v9 = 1;
   v6 = (System_Enum_o *)j_il2cpp_value_box_0(ClassBoardSquareEntity_Flag_TypeInfo, &v9, v5);
   if ( !v4 )
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   return System_Enum__HasFlag(v4, v6, 0LL);
 }

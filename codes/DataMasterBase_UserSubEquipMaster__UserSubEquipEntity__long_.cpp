@@ -2,18 +2,18 @@
 void __fastcall DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long____ctor(
         DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long__o *this,
         int32_t kind,
-        const MethodInfo_21C05CC *method)
+        const MethodInfo_21FBA20 *method)
 {
   DataMasterBase_o *v5; // x20
 
   v5 = (DataMasterBase_o *)this;
-  if ( (byte_4357B54 & 1) == 0 )
+  if ( (byte_43911D2 & 1) == 0 )
   {
-    this = (DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long__o *)sub_B70694(&DataMasterBase_TypeInfo);
-    byte_4357B54 = 1;
+    this = (DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long__o *)sub_B775C4(&DataMasterBase_TypeInfo);
+    byte_43911D2 = 1;
   }
   if ( !v5 )
-    sub_B7076C(this, *(_QWORD *)&kind);
+    sub_B7769C(this, *(_QWORD *)&kind);
   if ( (BYTE3(DataMasterBase_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !DataMasterBase_TypeInfo->_2.cctor_finished )
   {
@@ -28,7 +28,7 @@ void __fastcall DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long____c
 
 void __fastcall DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long___ForForceDerived(
         DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long__o *this,
-        const MethodInfo_21C07F0 *method)
+        const MethodInfo_21FBC44 *method)
 {
   ;
 }
@@ -37,12 +37,12 @@ void __fastcall DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long___Fo
 DataEntityBase_array *__fastcall DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long___getList(
         DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long__o *this,
         Il2CppObject *obj,
-        const MethodInfo_21C0774 *method)
+        const MethodInfo_21FBBC8 *method)
 {
-  if ( (byte_4357B55 & 1) == 0 )
+  if ( (byte_43911D3 & 1) == 0 )
   {
-    sub_B70694(&JsonManager_TypeInfo);
-    byte_4357B55 = 1;
+    sub_B775C4(&JsonManager_TypeInfo);
+    byte_43911D3 = 1;
   }
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);

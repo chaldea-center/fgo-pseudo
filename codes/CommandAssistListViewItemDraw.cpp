@@ -37,22 +37,22 @@ void __fastcall CommandAssistListViewItemDraw__UpdateUi(
   int32_t lv; // [xsp+8h] [xbp-48h] BYREF
   int32_t IconImageId_k__BackingField; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4354603 & 1) == 0 )
+  if ( (byte_438DEC1 & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_8476/*"LEVEL_INFO"*/);
-    sub_B70694(&StringLiteral_5675/*"EVENT_COMMAND_ASSIST_DIALOG_MAX_LEVEL_FORMAT"*/);
-    sub_B70694(&StringLiteral_5674/*"EVENT_COMMAND_ASSIST_DIALOG_LEVEL_FORMAT"*/);
-    byte_4354603 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_8532/*"LEVEL_INFO"*/);
+    sub_B775C4(&StringLiteral_5730/*"EVENT_COMMAND_ASSIST_DIALOG_MAX_LEVEL_FORMAT"*/);
+    sub_B775C4(&StringLiteral_5729/*"EVENT_COMMAND_ASSIST_DIALOG_LEVEL_FORMAT"*/);
+    byte_438DEC1 = 1;
   }
   IconImageId_k__BackingField = 0;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
+  Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
   if ( !item )
     goto LABEL_23;
   v7 = Master_WarQuestSelectionMaster;
@@ -84,7 +84,7 @@ void __fastcall CommandAssistListViewItemDraw__UpdateUi(
   if ( !CurrentEntity || !v11 )
     goto LABEL_23;
   levelLabel = this->fields.levelLabel;
-  v14 = (System_String_o **)(CurrentEntity->fields.lv == v11->fields.lv ? &StringLiteral_5675/*"EVENT_COMMAND_ASSIST_DIALOG_MAX_LEVEL_FORMAT"*/ : &StringLiteral_5674/*"EVENT_COMMAND_ASSIST_DIALOG_LEVEL_FORMAT"*/);
+  v14 = (System_String_o **)(CurrentEntity->fields.lv == v11->fields.lv ? &StringLiteral_5730/*"EVENT_COMMAND_ASSIST_DIALOG_MAX_LEVEL_FORMAT"*/ : &StringLiteral_5729/*"EVENT_COMMAND_ASSIST_DIALOG_LEVEL_FORMAT"*/);
   v15 = *v14;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -96,13 +96,13 @@ void __fastcall CommandAssistListViewItemDraw__UpdateUi(
   v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv, v17);
   v29 = v11->fields.lv;
   v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v29, v19);
-  Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)System_String__Format_44753704(v16, v18, v20, 0LL);
+  Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)System_String__Format_44897472(v16, v18, v20, 0LL);
   if ( !levelLabel )
     goto LABEL_23;
   UILabel__set_text(levelLabel, (System_String_o *)Master_WarQuestSelectionMaster, 0LL);
   detailLabel = this->fields.detailLabel;
   Detail_k__BackingField = item->fields._Detail_k__BackingField;
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_8476/*"LEVEL_INFO"*/, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_8532/*"LEVEL_INFO"*/, 0LL);
   v28 = CurrentEntity->fields.lv;
   v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v28, v24);
   v26 = (Il2CppObject *)System_String__Format(v23, v25, 0LL);
@@ -111,7 +111,7 @@ void __fastcall CommandAssistListViewItemDraw__UpdateUi(
   Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)this->fields.line;
   if ( !Master_WarQuestSelectionMaster )
 LABEL_23:
-    sub_B7076C(Master_WarQuestSelectionMaster, v6);
+    sub_B7769C(Master_WarQuestSelectionMaster, v6);
   UnityEngine_Behaviour__set_enabled(
     (UnityEngine_Behaviour_o *)Master_WarQuestSelectionMaster,
     !item->fields._IsLast_k__BackingField,

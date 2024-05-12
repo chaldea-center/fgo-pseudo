@@ -13,7 +13,7 @@ void __fastcall MasterMissionReceiveResultListViewManager__CreateList(
 {
   void *Instance; // x0
   __int64 v6; // x1
-  EventMissionEntity_array *EventMissionList_25393336; // x20
+  EventMissionEntity_array *EventMissionList_25641152; // x20
   GiftMaster_o *MasterData_WarQuestSelectionMaster; // x25
   DataMasterBase_WarMaster__WarEntity__int__o *v9; // x22
   int max_length; // w8
@@ -50,73 +50,73 @@ void __fastcall MasterMissionReceiveResultListViewManager__CreateList(
   System_String_o *nameText; // [xsp+20h] [xbp-60h] BYREF
   WarEntity_o *entity; // [xsp+28h] [xbp-58h] BYREF
 
-  if ( (byte_43522E9 & 1) == 0 )
+  if ( (byte_438BB89 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_EventMissionMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_GiftMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_B70694(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&MasterMissionReceiveResultListViewItem_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&StringLiteral_8750/*"MASTER_MISSION_RECEIVE_RESULT_REWARD_FMT"*/);
-    byte_43522E9 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_EventMissionMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_GiftMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_B775C4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&MasterMissionReceiveResultListViewItem_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&StringLiteral_8806/*"MASTER_MISSION_RECEIVE_RESULT_REWARD_FMT"*/);
+    byte_438BB89 = 1;
   }
   nameText = 0LL;
   entity = 0LL;
   countText = 0LL;
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_34;
   Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
                (DataManager_o *)Instance,
-               (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventMissionMaster___);
+               (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventMissionMaster___);
   if ( !Instance )
     goto LABEL_34;
-  EventMissionList_25393336 = EventMissionMaster__getEventMissionList_25393336(
+  EventMissionList_25641152 = EventMissionMaster__getEventMissionList_25641152(
                                 (EventMissionMaster_o *)Instance,
                                 receiveMissionIds,
                                 0LL);
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_34;
   MasterData_WarQuestSelectionMaster = (GiftMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                          (DataManager_o *)Instance,
-                                                         (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_GiftMaster___);
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                                                         (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_GiftMaster___);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_34;
   v9 = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                         (DataManager_o *)Instance,
-                                                        (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_8750/*"MASTER_MISSION_RECEIVE_RESULT_REWARD_FMT"*/, 0LL);
-  if ( !EventMissionList_25393336 )
+  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_8806/*"MASTER_MISSION_RECEIVE_RESULT_REWARD_FMT"*/, 0LL);
+  if ( !EventMissionList_25641152 )
     goto LABEL_34;
-  max_length = EventMissionList_25393336->max_length;
+  max_length = EventMissionList_25641152->max_length;
   if ( max_length >= 1 )
   {
     v11 = (System_String_o *)Instance;
     v12 = 0;
     v13 = 0;
     v36 = MasterData_WarQuestSelectionMaster;
-    v37 = EventMissionList_25393336;
+    v37 = EventMissionList_25641152;
     while ( 1 )
     {
       if ( v12 >= max_length )
       {
 LABEL_35:
-        v35 = sub_B70798(Instance);
-        sub_B70738(v35, 0LL);
+        v35 = sub_B776C8(Instance);
+        sub_B77668(v35, 0LL);
       }
-      v14 = EventMissionList_25393336->m_Items[v12];
+      v14 = EventMissionList_25641152->m_Items[v12];
       if ( !v14 )
         break;
       if ( !MasterData_WarQuestSelectionMaster )
@@ -140,7 +140,7 @@ LABEL_35:
             goto LABEL_34;
           CountableString = (Il2CppObject *)Instance;
           GiftEntity__GetInfo(v18, &nameText, &countText, 0LL);
-          Instance = (void *)Gift__IsItem_27751740(v18->fields.type, 0LL);
+          Instance = (void *)Gift__IsItem_28103496(v18->fields.type, 0LL);
           if ( ((unsigned __int8)Instance & 1) != 0 )
           {
             if ( !v9 )
@@ -149,7 +149,7 @@ LABEL_35:
                                  v9,
                                  &entity,
                                  v18->fields.objectId,
-                                 (const MethodInfo_21C049C *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+                                 (const MethodInfo_21FB8F0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
             if ( ((unsigned __int8)Instance & 1) != 0 )
             {
               if ( !entity )
@@ -160,34 +160,34 @@ LABEL_35:
           v21 = (Il2CppObject *)nameText;
           num = v18->fields.num;
           v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &num, v20);
-          v23 = System_String__Format_44759232(v11, v21, CountableString, v22, 0LL);
+          v23 = System_String__Format_44903000(v11, v21, CountableString, v22, 0LL);
           itemList = this->fields.itemList;
           v25 = (System_Int32_array **)v23;
-          v26 = sub_B70764(MasterMissionReceiveResultListViewItem_TypeInfo);
-          ListViewItem___ctor_23967088((ListViewItem_o *)v26, v13 + v17, 0LL);
+          v26 = sub_B77694(MasterMissionReceiveResultListViewItem_TypeInfo);
+          ListViewItem___ctor_24167012((ListViewItem_o *)v26, v13 + v17, 0LL);
           *(_QWORD *)(v26 + 112) = v25;
-          sub_B70630((BattleServantConfConponent_o *)(v26 + 112), v25, v27, v28, v29, v30, v31, v32);
+          sub_B77560((BattleServantConfConponent_o *)(v26 + 112), v25, v27, v28, v29, v30, v31, v32);
           if ( !itemList )
             goto LABEL_34;
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
             (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)itemList,
             (EventMissionProgressRequest_Argument_ProgressData_o *)v26,
-            (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_ListViewItem__Add__);
+            (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_ListViewItem__Add__);
           v15 = *((_DWORD *)v16 + 6);
           ++v17;
         }
         while ( v17 < v15 );
         v13 += v17;
         MasterData_WarQuestSelectionMaster = v36;
-        EventMissionList_25393336 = v37;
+        EventMissionList_25641152 = v37;
         v12 = v38;
       }
-      max_length = EventMissionList_25393336->max_length;
+      max_length = EventMissionList_25641152->max_length;
       if ( (int)++v12 >= max_length )
         goto LABEL_30;
     }
 LABEL_34:
-    sub_B7076C(Instance, v6);
+    sub_B7769C(Instance, v6);
   }
 LABEL_30:
   sort = this->fields.sort;
@@ -214,17 +214,17 @@ void __fastcall MasterMissionReceiveResultListViewManager__SetObjectItem(
 {
   __int64 v5; // x10
 
-  if ( (byte_43522EA & 1) == 0 )
+  if ( (byte_438BB8A & 1) == 0 )
   {
-    this = (MasterMissionReceiveResultListViewManager_o *)sub_B70694(&MasterMissionReceiveResultListViewObject_TypeInfo);
-    byte_43522EA = 1;
+    this = (MasterMissionReceiveResultListViewManager_o *)sub_B775C4(&MasterMissionReceiveResultListViewObject_TypeInfo);
+    byte_438BB8A = 1;
   }
   if ( !obj
     || (v5 = *(&MasterMissionReceiveResultListViewObject_TypeInfo->_2.bitflags2 + 1),
         *(&obj->klass->_2.bitflags2 + 1) < (unsigned int)v5)
     || (MasterMissionReceiveResultListViewObject_c *)obj->klass->_2.typeHierarchy[v5 - 1] != MasterMissionReceiveResultListViewObject_TypeInfo )
   {
-    sub_B7076C(this, obj);
+    sub_B7769C(this, obj);
   }
   MasterMissionReceiveResultListViewObject__SetupDisp(
     (MasterMissionReceiveResultListViewObject_o *)obj,
@@ -243,6 +243,6 @@ float __fastcall MasterMissionReceiveResultListViewManager__get_ListViewHeight(
   ItemSum = ListViewManager__get_ItemSum((ListViewManager_o *)this, 0LL);
   seed = this->fields.seed;
   if ( !seed )
-    sub_B7076C(ItemSum, v4);
+    sub_B7769C(ItemSum, v4);
   return seed->fields.arrangementPich.fields.y * (float)(int)ItemSum;
 }

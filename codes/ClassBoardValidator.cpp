@@ -23,17 +23,17 @@ void __fastcall ClassBoardValidator__Check(
   __int64 v20; // x0
 
   v2 = squareList;
-  if ( (byte_4353BBE & 1) == 0 )
+  if ( (byte_438D47C & 1) == 0 )
   {
-    sub_B70694(&ClassBoardSquareModel_TypeInfo);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&System_Collections_Generic_IEnumerable_IClassBoardSquareModel__TypeInfo);
-    sub_B70694(&System_Collections_Generic_IEnumerator_IClassBoardSquareModel__TypeInfo);
-    squareList = (System_Collections_Generic_IReadOnlyList_IClassBoardSquareModel__o *)sub_B70694(&System_Collections_IEnumerator_TypeInfo);
-    byte_4353BBE = 1;
+    sub_B775C4(&ClassBoardSquareModel_TypeInfo);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IEnumerable_IClassBoardSquareModel__TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IEnumerator_IClassBoardSquareModel__TypeInfo);
+    squareList = (System_Collections_Generic_IReadOnlyList_IClassBoardSquareModel__o *)sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
+    byte_438D47C = 1;
   }
   if ( !v2 )
-    sub_B7076C(squareList, method);
+    sub_B7769C(squareList, method);
   klass = v2->klass;
   if ( *(_WORD *)&v2->klass->_2.bitflags1 )
   {
@@ -51,13 +51,13 @@ void __fastcall ClassBoardValidator__Check(
   else
   {
 LABEL_8:
-    p_method = sub_B08590(v2, System_Collections_Generic_IEnumerable_IClassBoardSquareModel__TypeInfo, 0LL);
+    p_method = sub_B0F4C0(v2, System_Collections_Generic_IEnumerable_IClassBoardSquareModel__TypeInfo, 0LL);
   }
   v8 = (*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyList_IClassBoardSquareModel__o *, _QWORD))p_method)(
          v2,
          *(_QWORD *)(p_method + 8));
   if ( !v8 )
-    sub_B7076C(0LL, v7);
+    sub_B7769C(0LL, v7);
   while ( 1 )
   {
     v9 = *(_QWORD *)v8;
@@ -77,7 +77,7 @@ LABEL_8:
     else
     {
 LABEL_15:
-      v12 = sub_B08590(v8, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v12 = sub_B0F4C0(v8, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v12)(v8, *(_QWORD *)(v12 + 8)) & 1) == 0 )
       break;
@@ -98,7 +98,7 @@ LABEL_15:
     else
     {
 LABEL_22:
-      v16 = sub_B08590(v8, System_Collections_Generic_IEnumerator_IClassBoardSquareModel__TypeInfo, 0LL);
+      v16 = sub_B0F4C0(v8, System_Collections_Generic_IEnumerator_IClassBoardSquareModel__TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v16)(v8, *(_QWORD *)(v16 + 8));
   }
@@ -119,13 +119,13 @@ LABEL_22:
   else
   {
 LABEL_29:
-    v20 = sub_B08590(v8, System_IDisposable_TypeInfo, 0LL);
+    v20 = sub_B0F4C0(v8, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v20)(v8, *(_QWORD *)(v20 + 8));
 }
 
 
-void __fastcall ClassBoardValidator__Check_28824504(
+void __fastcall ClassBoardValidator__Check_29299100(
         System_Collections_Generic_IReadOnlyList_IClassBoardLineModel__o *lineList,
         const MethodInfo *method)
 {
@@ -150,16 +150,16 @@ void __fastcall ClassBoardValidator__Check_28824504(
   __int64 v20; // x0
 
   v2 = lineList;
-  if ( (byte_4353BBF & 1) == 0 )
+  if ( (byte_438D47D & 1) == 0 )
   {
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&System_Collections_Generic_IEnumerable_IClassBoardLineModel__TypeInfo);
-    sub_B70694(&System_Collections_Generic_IEnumerator_IClassBoardLineModel__TypeInfo);
-    lineList = (System_Collections_Generic_IReadOnlyList_IClassBoardLineModel__o *)sub_B70694(&System_Collections_IEnumerator_TypeInfo);
-    byte_4353BBF = 1;
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IEnumerable_IClassBoardLineModel__TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IEnumerator_IClassBoardLineModel__TypeInfo);
+    lineList = (System_Collections_Generic_IReadOnlyList_IClassBoardLineModel__o *)sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
+    byte_438D47D = 1;
   }
   if ( !v2 )
-    sub_B7076C(lineList, method);
+    sub_B7769C(lineList, method);
   klass = v2->klass;
   if ( *(_WORD *)&v2->klass->_2.bitflags1 )
   {
@@ -177,13 +177,13 @@ void __fastcall ClassBoardValidator__Check_28824504(
   else
   {
 LABEL_8:
-    p_method = sub_B08590(v2, System_Collections_Generic_IEnumerable_IClassBoardLineModel__TypeInfo, 0LL);
+    p_method = sub_B0F4C0(v2, System_Collections_Generic_IEnumerable_IClassBoardLineModel__TypeInfo, 0LL);
   }
   v8 = (*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyList_IClassBoardLineModel__o *, _QWORD))p_method)(
          v2,
          *(_QWORD *)(p_method + 8));
   if ( !v8 )
-    sub_B7076C(0LL, v7);
+    sub_B7769C(0LL, v7);
   while ( 1 )
   {
     v9 = *(_QWORD *)v8;
@@ -203,7 +203,7 @@ LABEL_8:
     else
     {
 LABEL_15:
-      v12 = sub_B08590(v8, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v12 = sub_B0F4C0(v8, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v12)(v8, *(_QWORD *)(v12 + 8)) & 1) == 0 )
       break;
@@ -224,7 +224,7 @@ LABEL_15:
     else
     {
 LABEL_22:
-      v16 = sub_B08590(v8, System_Collections_Generic_IEnumerator_IClassBoardLineModel__TypeInfo, 0LL);
+      v16 = sub_B0F4C0(v8, System_Collections_Generic_IEnumerator_IClassBoardLineModel__TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v16)(v8, *(_QWORD *)(v16 + 8));
   }
@@ -245,7 +245,7 @@ LABEL_22:
   else
   {
 LABEL_29:
-    v20 = sub_B08590(v8, System_IDisposable_TypeInfo, 0LL);
+    v20 = sub_B0F4C0(v8, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v20)(v8, *(_QWORD *)(v20 + 8));
 }

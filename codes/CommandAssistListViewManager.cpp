@@ -27,23 +27,23 @@ void __fastcall CommandAssistListViewManager__CreateList(
   const MethodInfo *v18; // [xsp+0h] [xbp-70h]
   int v19; // [xsp+10h] [xbp-60h]
 
-  if ( (byte_4354607 & 1) == 0 )
+  if ( (byte_438DEC5 & 1) == 0 )
   {
-    sub_B70694(&CommandAssistListViewItem_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Item__);
-    sub_B70694(&string_TypeInfo);
-    byte_4354607 = 1;
+    sub_B775C4(&CommandAssistListViewItem_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Item__);
+    sub_B775C4(&string_TypeInfo);
+    byte_438DEC5 = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (SkillLvMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_SkillLvMaster___);
-  ValidEntityList = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
+  Master_WarQuestSelectionMaster = (SkillLvMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_SkillLvMaster___);
+  ValidEntityList = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
   if ( !ValidEntityList )
     goto LABEL_22;
   ValidEntityList = EventCommandAssistMaster__GetValidEntityList(
@@ -61,32 +61,32 @@ void __fastcall CommandAssistListViewManager__CreateList(
     for ( i = 0LL; ; ++i )
     {
       if ( v7 <= (unsigned int)i )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       v9 = *(_QWORD *)(*((_QWORD *)v6 + 2) + 8 * i + 32);
       if ( !v9 || !Master_WarQuestSelectionMaster )
         break;
       Entity = SkillLvMaster__GetEntity(Master_WarQuestSelectionMaster, *(_DWORD *)(v9 + 52), *(_DWORD *)(v9 + 56), 0LL);
-      if ( !Entity || (Empty = SkillLvEntity__getDetail_26474216(Entity, Entity->fields.lv, 0, 0LL)) == 0LL )
+      if ( !Entity || (Empty = SkillLvEntity__getDetail_26832724(Entity, Entity->fields.lv, 0, 0LL)) == 0LL )
         Empty = string_TypeInfo->static_fields->Empty;
       v12 = *(_DWORD *)(v9 + 16);
       v13 = *(_DWORD *)(v9 + 48);
       v14 = *(System_String_o **)(v9 + 32);
       itemList = this->fields.itemList;
       v16 = *((_DWORD *)v6 + 6);
-      v17 = (CommandAssistListViewItem_o *)sub_B70764(CommandAssistListViewItem_TypeInfo);
+      v17 = (CommandAssistListViewItem_o *)sub_B77694(CommandAssistListViewItem_TypeInfo);
       CommandAssistListViewItem___ctor(v17, i, eventId, v12, v13, v14, Empty, (_DWORD)i == v16 - 1, v18);
       if ( !itemList )
         break;
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
         (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)itemList,
         (EventMissionProgressRequest_Argument_ProgressData_o *)v17,
-        (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_ListViewItem__Add__);
+        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_ListViewItem__Add__);
       if ( (int)i + 1 >= v19 )
         goto LABEL_20;
       v7 = *((_DWORD *)v6 + 6);
     }
 LABEL_22:
-    sub_B7076C(ValidEntityList, v5);
+    sub_B7769C(ValidEntityList, v5);
   }
 LABEL_20:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 1, -1, 0LL);

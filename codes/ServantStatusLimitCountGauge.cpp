@@ -8,14 +8,14 @@ void __fastcall ServantStatusLimitCountGauge___ctor(ServantStatusLimitCountGauge
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_4359303 & 1) == 0 )
+  if ( (byte_439293C & 1) == 0 )
   {
-    sub_B70694(&UISprite___TypeInfo);
-    byte_4359303 = 1;
+    sub_B775C4(&UISprite___TypeInfo);
+    byte_439293C = 1;
   }
-  v3 = (struct UISprite_array *)sub_B706AC(UISprite___TypeInfo, 4LL);
+  v3 = (struct UISprite_array *)sub_B775DC(UISprite___TypeInfo, 4LL);
   this->fields.gaugeSpriteList = v3;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.gaugeSpriteList,
     (System_Int32_array **)v3,
     v4,
@@ -44,16 +44,16 @@ void __fastcall ServantStatusLimitCountGauge__Set(
   __int64 v12; // x0
 
   v6 = this;
-  if ( (byte_4359302 & 1) == 0 )
+  if ( (byte_439293B & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_19649/*"icon_limit_on"*/);
-    this = (ServantStatusLimitCountGauge_o *)sub_B70694(&StringLiteral_19648/*"icon_limit_off"*/);
-    byte_4359302 = 1;
+    sub_B775C4(&StringLiteral_19739/*"icon_limit_on"*/);
+    this = (ServantStatusLimitCountGauge_o *)sub_B775C4(&StringLiteral_19738/*"icon_limit_off"*/);
+    byte_439293B = 1;
   }
   gaugeSpriteList = v6->fields.gaugeSpriteList;
   if ( !gaugeSpriteList )
 LABEL_16:
-    sub_B7076C(this, *(_QWORD *)&limitCount);
+    sub_B7769C(this, *(_QWORD *)&limitCount);
   v8 = 0LL;
   while ( 1 )
   {
@@ -62,8 +62,8 @@ LABEL_16:
       break;
     if ( v8 >= max_length )
     {
-      v12 = sub_B70798(this);
-      sub_B70738(v12, 0LL);
+      v12 = sub_B776C8(this);
+      sub_B77668(v12, 0LL);
     }
     this = (ServantStatusLimitCountGauge_o *)gaugeSpriteList->m_Items[v8];
     if ( v8 >= limitMax )
@@ -77,9 +77,9 @@ LABEL_16:
       if ( !this )
         goto LABEL_16;
       if ( v8 >= limitCount )
-        v10 = (System_String_o **)&StringLiteral_19648/*"icon_limit_off"*/;
+        v10 = (System_String_o **)&StringLiteral_19738/*"icon_limit_off"*/;
       else
-        v10 = (System_String_o **)&StringLiteral_19649/*"icon_limit_on"*/;
+        v10 = (System_String_o **)&StringLiteral_19739/*"icon_limit_on"*/;
       v11 = *v10;
     }
     UISprite__set_spriteName((UISprite_o *)this, v11, 0LL);

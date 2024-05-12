@@ -38,7 +38,7 @@ void __fastcall EventInfoFortificationViewItem__Setup(
   if ( v10 != eventFortificationEntity )
   {
     this->fields.eventFortificationEntity = eventFortificationEntity;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)p_eventFortificationEntity,
       (System_Int32_array **)eventFortificationEntity,
       (System_String_array **)method,
@@ -65,19 +65,19 @@ void __fastcall EventInfoFortificationViewItem__SetupGiftIcon(
   int32_t *lookup; // x8
   __int64 v10; // x0
 
-  if ( (byte_4352A10 & 1) == 0 )
+  if ( (byte_438C20B & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_GiftMaster___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4352A10 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_GiftMaster___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438C20B = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_18;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_GiftMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_GiftMaster___);
   if ( !eventFortificationEntity )
     goto LABEL_18;
   if ( !Instance )
@@ -92,8 +92,8 @@ void __fastcall EventInfoFortificationViewItem__SetupGiftIcon(
   if ( !LODWORD(Instance->fields.datalist) )
   {
 LABEL_19:
-    v10 = sub_B70798(Instance);
-    sub_B70738(v10, 0LL);
+    v10 = sub_B776C8(Instance);
+    sub_B77668(v10, 0LL);
   }
   if ( Instance->fields.lookup )
   {
@@ -119,7 +119,7 @@ LABEL_19:
           }
         }
 LABEL_18:
-        sub_B7076C(Instance, v6);
+        sub_B7769C(Instance, v6);
       }
       goto LABEL_19;
     }
@@ -143,12 +143,12 @@ void __fastcall EventInfoFortificationViewItem__SetupWorkBgColor(
   UnityEngine_Color_o color; // [xsp+10h] [xbp-30h] BYREF
 
   v4 = this;
-  if ( (byte_4352A11 & 1) == 0 )
+  if ( (byte_438C20C & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    this = (EventInfoFortificationViewItem_o *)sub_B70694(&StringLiteral_6520/*"FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/);
-    byte_4352A11 = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    this = (EventInfoFortificationViewItem_o *)sub_B775C4(&StringLiteral_6576/*"FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/);
+    byte_438C20C = 1;
   }
   *(_QWORD *)&color.fields.r = 0LL;
   *(_QWORD *)&color.fields.b = 0LL;
@@ -158,7 +158,7 @@ void __fastcall EventInfoFortificationViewItem__SetupWorkBgColor(
   v5 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &eventId, method);
   workType = eventFortificationEntity->fields.workType;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &workType, v6);
-  v8 = System_String__Format_44753704((System_String_o *)StringLiteral_6520/*"FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/, v5, v7, 0LL);
+  v8 = System_String__Format_44897472((System_String_o *)StringLiteral_6576/*"FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/, v5, v7, 0LL);
   color = UnityEngine_Color__get_white(0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -170,7 +170,7 @@ void __fastcall EventInfoFortificationViewItem__SetupWorkBgColor(
   this = (EventInfoFortificationViewItem_o *)v4->fields.workBgSprite;
   if ( !this )
 LABEL_9:
-    sub_B7076C(this, eventFortificationEntity);
+    sub_B7769C(this, eventFortificationEntity);
   UIWidget__set_color((UIWidget_o *)this, color, 0LL);
 }
 
@@ -184,7 +184,7 @@ void __fastcall EventInfoFortificationViewItem__UpdateProgressBar(
 
   gaugeSprite = (UIBasicSprite_o *)this->fields.gaugeSprite;
   if ( !gaugeSprite )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   UIBasicSprite__set_fillAmount(gaugeSprite, value, 0LL);
 }
 

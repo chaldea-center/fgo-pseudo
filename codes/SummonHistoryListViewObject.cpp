@@ -1,9 +1,9 @@
 void __fastcall SummonHistoryListViewObject___ctor(SummonHistoryListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4355E60 & 1) == 0 )
+  if ( (byte_438F376 & 1) == 0 )
   {
-    sub_B70694(&ListViewObject_TypeInfo);
-    byte_4355E60 = 1;
+    sub_B775C4(&ListViewObject_TypeInfo);
+    byte_438F376 = 1;
   }
   if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ListViewObject_TypeInfo->_2.cctor_finished )
@@ -26,20 +26,20 @@ void __fastcall SummonHistoryListViewObject__Awake(SummonHistoryListViewObject_o
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_4355E5E & 1) == 0 )
+  if ( (byte_438F374 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_SummonHistoryListViewItemDraw___);
-    byte_4355E5E = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_SummonHistoryListViewItemDraw___);
+    byte_438F374 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   Component_srcLineSprite = (struct SummonHistoryListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                         dispObject,
-                                                                        (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_SummonHistoryListViewItemDraw___);
+                                                                        (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_SummonHistoryListViewItemDraw___);
   this->fields.itemDraw = Component_srcLineSprite;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.itemDraw,
     (System_Int32_array **)Component_srcLineSprite,
     v6,
@@ -61,11 +61,11 @@ void __fastcall SummonHistoryListViewObject__SetupDisp(SummonHistoryListViewObje
   const MethodInfo *v8; // x2
   SummonHistoryListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4355E5F & 1) == 0 )
+  if ( (byte_438F375 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&SummonHistoryListViewItem_TypeInfo);
-    byte_4355E5F = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&SummonHistoryListViewItem_TypeInfo);
+    byte_438F375 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -92,7 +92,7 @@ void __fastcall SummonHistoryListViewObject__SetupDisp(SummonHistoryListViewObje
   {
     v9 = this->fields.itemDraw;
     if ( !v9 )
-      sub_B7076C(0LL, v7);
+      sub_B7769C(0LL, v7);
     SummonHistoryListViewItemDraw__SetItem(v9, (SummonHistoryListViewItem_o *)v5, v8);
   }
 }

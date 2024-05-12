@@ -8,11 +8,11 @@ System_String_o *__fastcall AuCreateSeedRequest__getURL(AuCreateSeedRequest_o *t
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4355338 & 1) == 0 )
+  if ( (byte_4388BD5 & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&StringLiteral_22476/*"shop/createSeed"*/);
-    byte_4355338 = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&StringLiteral_22577/*"shop/createSeed"*/);
+    byte_4388BD5 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -20,7 +20,7 @@ System_String_o *__fastcall AuCreateSeedRequest__getURL(AuCreateSeedRequest_o *t
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_44758168(BaseUrl, (System_String_o *)StringLiteral_22476/*"shop/createSeed"*/, 0LL);
+  return System_String__Concat_44901936(BaseUrl, (System_String_o *)StringLiteral_22577/*"shop/createSeed"*/, 0LL);
 }
 
 
@@ -41,18 +41,18 @@ void __fastcall AuCreateSeedRequest__requestCompleted(
 
   v3 = responseList;
   v4 = this;
-  if ( (byte_4355339 & 1) == 0 )
+  if ( (byte_4388BD6 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_B70694(&string_TypeInfo);
-    this = (AuCreateSeedRequest_o *)sub_B70694(&StringLiteral_22315/*"seed"*/);
-    byte_4355339 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_B775C4(&string_TypeInfo);
+    this = (AuCreateSeedRequest_o *)sub_B775C4(&StringLiteral_22416/*"seed"*/);
+    byte_4388BD6 = 1;
   }
   value = 0LL;
   if ( !v3 )
 LABEL_19:
-    sub_B7076C(this, responseList);
+    sub_B7769C(this, responseList);
   max_length = v3->max_length;
   if ( max_length < 1 )
   {
@@ -67,8 +67,8 @@ LABEL_16:
     {
       if ( v6 >= max_length )
       {
-        v10 = sub_B70798(this);
-        sub_B70738(v10, 0LL);
+        v10 = sub_B776C8(this);
+        sub_B77668(v10, 0LL);
       }
       v7 = &v3->obj.klass + (int)v6;
       v8 = v7[4];
@@ -85,8 +85,8 @@ LABEL_16:
           goto LABEL_19;
         this = (AuCreateSeedRequest_o *)System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
                                           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)this,
-                                          (System_Xml_XmlQualifiedName_o *)StringLiteral_22315/*"seed"*/,
-                                          (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                                          (System_Xml_XmlQualifiedName_o *)StringLiteral_22416/*"seed"*/,
+                                          (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
           this = (AuCreateSeedRequest_o *)v8->_1.byval_arg.data;
@@ -94,9 +94,9 @@ LABEL_16:
             goto LABEL_19;
           this = (AuCreateSeedRequest_o *)System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
                                             (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)this,
-                                            (System_Xml_XmlQualifiedName_o *)StringLiteral_22315/*"seed"*/,
+                                            (System_Xml_XmlQualifiedName_o *)StringLiteral_22416/*"seed"*/,
                                             &value,
-                                            (const MethodInfo_2F517E8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+                                            (const MethodInfo_2F7F3F8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
           if ( ((unsigned __int8)this & 1) != 0 )
           {
             responseList = (ResponseData_array *)value;

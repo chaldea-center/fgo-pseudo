@@ -18,20 +18,20 @@ void __fastcall EventItemBoardComponent__OnClickItem(EventItemBoardComponent_o *
   CommonUI_o *Instance; // x24
   CommonConfirmDialog_ClickDelegate_o *v13; // x25
 
-  if ( (byte_4352EC0 & 1) == 0 )
+  if ( (byte_438C63F & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_B70694(&Method_EventItemBoardComponent_SpendItemDlg__);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B70694(&SoundManager_TypeInfo);
-    sub_B70694(&StringLiteral_14945/*"USE_ITEM_CONFIRM_MSG"*/);
-    sub_B70694(&StringLiteral_3337/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_B70694(&StringLiteral_3335/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4352EC0 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_B775C4(&Method_EventItemBoardComponent_SpendItemDlg__);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B775C4(&SoundManager_TypeInfo);
+    sub_B775C4(&StringLiteral_15015/*"USE_ITEM_CONFIRM_MSG"*/);
+    sub_B775C4(&StringLiteral_3388/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_B775C4(&StringLiteral_3386/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438C63F = 1;
   }
   if ( this->fields.isEnableSelect )
   {
@@ -55,21 +55,21 @@ void __fastcall EventItemBoardComponent__OnClickItem(EventItemBoardComponent_o *
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3337/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
-      v9 = LocalizationManager__Get((System_String_o *)StringLiteral_3335/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+      v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3388/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
+      v9 = LocalizationManager__Get((System_String_o *)StringLiteral_3386/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
       if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !SoundManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
       }
       SoundManager__playSystemSe(0, 0LL);
-      v4 = LocalizationManager__Get((System_String_o *)StringLiteral_14945/*"USE_ITEM_CONFIRM_MSG"*/, 0LL);
+      v4 = LocalizationManager__Get((System_String_o *)StringLiteral_15015/*"USE_ITEM_CONFIRM_MSG"*/, 0LL);
       itemEntity = this->fields.itemEntity;
       if ( !itemEntity )
         goto LABEL_23;
       v11 = System_String__Format(v4, (Il2CppObject *)itemEntity->fields.name, 0LL);
-      Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v13 = (CommonConfirmDialog_ClickDelegate_o *)sub_B70764(CommonConfirmDialog_ClickDelegate_TypeInfo);
+      Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v13 = (CommonConfirmDialog_ClickDelegate_o *)sub_B77694(CommonConfirmDialog_ClickDelegate_TypeInfo);
       CommonConfirmDialog_ClickDelegate___ctor(
         v13,
         (Il2CppObject *)this,
@@ -83,7 +83,7 @@ void __fastcall EventItemBoardComponent__OnClickItem(EventItemBoardComponent_o *
       }
       if ( !Instance )
 LABEL_23:
-        sub_B7076C(v4, v5);
+        sub_B7769C(v4, v5);
       CommonUI__OpenConfirmDecideDlg(
         Instance,
         v7,
@@ -127,7 +127,7 @@ void __fastcall EventItemBoardComponent__OnCloseConfirmDialog(
   if ( onCloseDialogFunc )
   {
     this->fields.onCloseDialogFunc = 0LL;
-    sub_B70630((BattleServantConfConponent_o *)p_onCloseDialogFunc, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_B77560((BattleServantConfConponent_o *)p_onCloseDialogFunc, 0LL, v2, v3, v4, v5, v6, v7);
     EventItemBoardComponent_CallbackFunc__Invoke(v10, this->fields.itemEntity, this->fields.spendItemNum, 0LL);
   }
 }
@@ -141,7 +141,7 @@ void __fastcall EventItemBoardComponent__SetEnableSelectItem(EventItemBoardCompo
   {
     maskImg = this->fields.maskImg;
     if ( !maskImg )
-      sub_B7076C(0LL, method);
+      sub_B7769C(0LL, method);
     UnityEngine_GameObject__SetActive(maskImg, 1, 0LL);
   }
 }
@@ -183,21 +183,21 @@ void __fastcall EventItemBoardComponent__SetItemBoardInfo(
   UILabel_o *spendNumLb; // x20
   int32_t v36; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4352EBF & 1) == 0 )
+  if ( (byte_438C63E & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&StringLiteral_23910/*"{0:N0}"*/);
-    sub_B70694(&StringLiteral_760/*"-"*/);
-    sub_B70694(&StringLiteral_18805/*"event_item_board_description"*/);
-    byte_4352EBF = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&StringLiteral_24013/*"{0:N0}"*/);
+    sub_B775C4(&StringLiteral_762/*"-"*/);
+    sub_B775C4(&StringLiteral_18893/*"event_item_board_description"*/);
+    byte_438C63E = 1;
   }
   this->fields.isEnableSelect = 0;
   this->fields.itemEntity = itemEntity;
   p_itemEntity = &this->fields.itemEntity;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.itemEntity,
     (System_Int32_array **)itemEntity,
     (System_String_array **)onConfirmSelectItemFunc,
@@ -207,7 +207,7 @@ void __fastcall EventItemBoardComponent__SetItemBoardInfo(
     v6,
     v7);
   this->fields.dialog = dialog;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.dialog,
     (System_Int32_array **)dialog,
     v13,
@@ -217,7 +217,7 @@ void __fastcall EventItemBoardComponent__SetItemBoardInfo(
     v17,
     v18);
   this->fields.onCloseDialogFunc = onConfirmSelectItemFunc;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.onCloseDialogFunc,
     (System_Int32_array **)onConfirmSelectItemFunc,
     v19,
@@ -233,19 +233,19 @@ void __fastcall EventItemBoardComponent__SetItemBoardInfo(
   maskImg = (int64_t)this->fields.itemNameLb;
   if ( !maskImg )
     goto LABEL_32;
-  UILabel__set_text((UILabel_o *)maskImg, (System_String_o *)StringLiteral_760/*"-"*/, 0LL);
+  UILabel__set_text((UILabel_o *)maskImg, (System_String_o *)StringLiteral_762/*"-"*/, 0LL);
   maskImg = (int64_t)this->fields.currentNumLb;
   if ( !maskImg )
     goto LABEL_32;
-  UILabel__set_text((UILabel_o *)maskImg, (System_String_o *)StringLiteral_760/*"-"*/, 0LL);
+  UILabel__set_text((UILabel_o *)maskImg, (System_String_o *)StringLiteral_762/*"-"*/, 0LL);
   maskImg = (int64_t)this->fields.spendNumLb;
   if ( !maskImg )
     goto LABEL_32;
-  UILabel__set_text((UILabel_o *)maskImg, (System_String_o *)StringLiteral_760/*"-"*/, 0LL);
+  UILabel__set_text((UILabel_o *)maskImg, (System_String_o *)StringLiteral_762/*"-"*/, 0LL);
   maskImg = (int64_t)this->fields.itemDetailLb;
   if ( !maskImg )
     goto LABEL_32;
-  UILabel__set_text((UILabel_o *)maskImg, (System_String_o *)StringLiteral_760/*"-"*/, 0LL);
+  UILabel__set_text((UILabel_o *)maskImg, (System_String_o *)StringLiteral_762/*"-"*/, 0LL);
   maskImg = (int64_t)this->fields.itemIconInfo;
   if ( !maskImg )
     goto LABEL_32;
@@ -262,7 +262,7 @@ void __fastcall EventItemBoardComponent__SetItemBoardInfo(
     maskImg = (int64_t)this->fields.itemIconInfo;
     if ( maskImg )
     {
-      ItemIconComponent__SetItemImage_27824148(
+      ItemIconComponent__SetItemImage_28175904(
         (ItemIconComponent_o *)maskImg,
         (*p_itemEntity)->fields.imageId,
         (*p_itemEntity)->fields.bgImageId,
@@ -287,21 +287,21 @@ void __fastcall EventItemBoardComponent__SetItemBoardInfo(
               if ( maskImg )
               {
                 itemDetailLb = this->fields.itemDetailLb;
-                maskImg = (int64_t)ItemEntity__getScript_27820976(
+                maskImg = (int64_t)ItemEntity__getScript_28172732(
                                      (ItemEntity_o *)maskImg,
-                                     (System_String_o *)StringLiteral_18805/*"event_item_board_description"*/,
+                                     (System_String_o *)StringLiteral_18893/*"event_item_board_description"*/,
                                      *(System_String_o **)(maskImg + 32),
                                      0LL);
                 if ( itemDetailLb )
                 {
                   UILabel__set_text(itemDetailLb, (System_String_o *)maskImg, 0LL);
                   this->fields.spendItemNum = 1;
-                  maskImg = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                  maskImg = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
                   if ( maskImg )
                   {
                     MasterData_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                                (DataManager_o *)maskImg,
-                                                                               (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                                                               (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserItemMaster___);
                     if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                       && !NetworkManager_TypeInfo->_2.cctor_finished )
                     {
@@ -319,7 +319,7 @@ void __fastcall EventItemBoardComponent__SetItemBoardInfo(
                       currentNumLb = this->fields.currentNumLb;
                       v36 = v32;
                       v34 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v36, v31);
-                      maskImg = (int64_t)System_String__Format((System_String_o *)StringLiteral_23910/*"{0:N0}"*/, v34, 0LL);
+                      maskImg = (int64_t)System_String__Format((System_String_o *)StringLiteral_24013/*"{0:N0}"*/, v34, 0LL);
                       if ( currentNumLb )
                       {
                         UILabel__set_text(currentNumLb, (System_String_o *)maskImg, 0LL);
@@ -342,7 +342,7 @@ void __fastcall EventItemBoardComponent__SetItemBoardInfo(
       }
     }
 LABEL_32:
-    sub_B7076C(maskImg, v25);
+    sub_B7769C(maskImg, v25);
   }
 LABEL_31:
   EventItemBoardComponent__SetEnableSelectItem(this, v25);
@@ -359,26 +359,26 @@ void __fastcall EventItemBoardComponent__SpendItemDlg(
   CommonUI_o *v7; // x21
   System_Action_o *v8; // x20
 
-  if ( (byte_4352EC1 & 1) == 0 )
+  if ( (byte_438C640 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_EventItemBoardComponent_OnCloseConfirmDialog__);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4352EC1 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_EventItemBoardComponent_OnCloseConfirmDialog__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_438C640 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v7 = Instance;
   if ( isDecided )
   {
-    v8 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v8 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     System_Action___ctor(v8, (Il2CppObject *)this, Method_EventItemBoardComponent_OnCloseConfirmDialog__, 0LL);
     if ( v7 )
     {
-      CommonUI__CloseConfirmDialog_17904524(v7, v8, 0LL);
+      CommonUI__CloseConfirmDialog_18056328(v7, v8, 0LL);
       return;
     }
 LABEL_8:
-    sub_B7076C(Instance, v6);
+    sub_B7769C(Instance, v6);
   }
   if ( !Instance )
     goto LABEL_8;
@@ -401,10 +401,10 @@ void __fastcall EventItemBoardComponent__add_onCloseDialogFunc(
   EventItemBoardComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4352EBD & 1) == 0 )
+  if ( (byte_438C63C & 1) == 0 )
   {
-    sub_B70694(&EventItemBoardComponent_CallbackFunc_TypeInfo);
-    byte_4352EBD = 1;
+    sub_B775C4(&EventItemBoardComponent_CallbackFunc_TypeInfo);
+    byte_438C63C = 1;
   }
   onCloseDialogFunc = this->fields.onCloseDialogFunc;
   p_onCloseDialogFunc = &this->fields.onCloseDialogFunc;
@@ -417,13 +417,13 @@ void __fastcall EventItemBoardComponent__add_onCloseDialogFunc(
       if ( (EventItemBoardComponent_CallbackFunc_c *)v8->klass != EventItemBoardComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_onCloseDialogFunc, v8, v6);
+    v9 = sub_B6BFDC(p_onCloseDialogFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (EventItemBoardComponent_o *)sub_B70A60(v8);
+  v11 = (EventItemBoardComponent_o *)sub_B77990(v8);
   EventItemBoardComponent__remove_onCloseDialogFunc(v11, v12, v13);
 }
 
@@ -445,10 +445,10 @@ void __fastcall EventItemBoardComponent__remove_onCloseDialogFunc(
   EventItemSelectDlgComponent_o *v14; // x3
   const MethodInfo *v15; // x4
 
-  if ( (byte_4352EBE & 1) == 0 )
+  if ( (byte_438C63D & 1) == 0 )
   {
-    sub_B70694(&EventItemBoardComponent_CallbackFunc_TypeInfo);
-    byte_4352EBE = 1;
+    sub_B775C4(&EventItemBoardComponent_CallbackFunc_TypeInfo);
+    byte_438C63D = 1;
   }
   onCloseDialogFunc = this->fields.onCloseDialogFunc;
   p_onCloseDialogFunc = &this->fields.onCloseDialogFunc;
@@ -461,13 +461,13 @@ void __fastcall EventItemBoardComponent__remove_onCloseDialogFunc(
       if ( (EventItemBoardComponent_CallbackFunc_c *)v8->klass != EventItemBoardComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_onCloseDialogFunc, v8, v6);
+    v9 = sub_B6BFDC(p_onCloseDialogFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (EventItemBoardComponent_o *)sub_B70A60(v8);
+  v11 = (EventItemBoardComponent_o *)sub_B77990(v8);
   EventItemBoardComponent__SetItemBoardInfo(v11, v12, v13, v14, v15);
 }
 
@@ -487,7 +487,7 @@ void __fastcall EventItemBoardComponent_CallbackFunc___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B70630(p_method);
+  sub_B77560(p_method);
 }
 
 
@@ -504,15 +504,15 @@ System_IAsyncResult_o *__fastcall EventItemBoardComponent_CallbackFunc__BeginInv
   int32_t v12; // [xsp+2Ch] [xbp-24h] BYREF
 
   v12 = spendNum;
-  if ( (byte_434F0A2 & 1) == 0 )
+  if ( (byte_4388682 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    byte_434F0A2 = 1;
+    sub_B775C4(&int_TypeInfo);
+    byte_4388682 = 1;
   }
   v11[2] = 0LL;
   v11[0] = (__int64)selectedItem;
   v11[1] = j_il2cpp_value_box_0(int_TypeInfo, &v12, *(_QWORD *)&spendNum);
-  return (System_IAsyncResult_o *)sub_B70638(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_B77568(this, v11, callback, object);
 }
 
 
@@ -521,7 +521,7 @@ void __fastcall EventItemBoardComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7063C(result, 0LL, method);
+  sub_B7756C(result, 0LL, method);
 }
 
 
@@ -595,8 +595,8 @@ LABEL_5:
       v30 = *(_QWORD *)&v29->fields.extra_arg;
       v32 = *(void (__fastcall **)(ItemEntity_o *, _QWORD, __int64))&v29->fields.method_ptr;
       if ( *(__int16 *)(v30 + 72) == -1 )
-        sub_B70750(*(_QWORD *)&v29->fields.extra_arg, selectedItem);
-      v33 = sub_B706C4(v30);
+        sub_B77680(*(_QWORD *)&v29->fields.extra_arg, selectedItem);
+      v33 = sub_B775F4(v30);
       v34 = *(unsigned __int8 *)(v30 + 74);
       if ( (v33 & 1) != 0 )
       {
@@ -609,8 +609,8 @@ LABEL_5:
         {
           if ( *(__int16 *)(v30 + 72) != -1 && this->fields.m_target )
           {
-            v42 = sub_B706BC(v30);
-            v43 = sub_B70AC0(v30);
+            v42 = sub_B775EC(v30);
+            v43 = sub_B779F0(v30);
             if ( (v42 & 1) != 0 )
             {
               if ( (v43 & 1) != 0 )
@@ -634,7 +634,7 @@ LABEL_5:
                 else
                 {
 LABEL_57:
-                  v25 = sub_B08590(selectedItem, v45, v46);
+                  v25 = sub_B0F4C0(selectedItem, v45, v46);
                 }
                 v17 = *(_QWORD *)(v25 + 8);
               }
@@ -643,7 +643,7 @@ LABEL_57:
                 v17 = *((_QWORD *)&selectedItem->klass->vtable._1_Finalize.methodPtr
                       + 2 * *(unsigned __int16 *)(v30 + 72));
               }
-              v26 = (void (__fastcall **)(ItemEntity_o *, _QWORD, _QWORD))sub_B70744(v17, v30);
+              v26 = (void (__fastcall **)(ItemEntity_o *, _QWORD, _QWORD))sub_B77674(v17, v30);
               (*v26)(selectedItem, (unsigned int)spendNum, v26);
             }
             else
@@ -669,7 +669,7 @@ LABEL_57:
                 else
                 {
 LABEL_11:
-                  v16 = sub_B08590(selectedItem, class_0, v11);
+                  v16 = sub_B0F4C0(selectedItem, class_0, v11);
                 }
                 (*(void (__fastcall **)(ItemEntity_o *, _QWORD, _QWORD))v16)(
                   selectedItem,
@@ -695,8 +695,8 @@ LABEL_58:
           goto LABEL_58;
         if ( *(__int16 *)(v30 + 72) != -1 && (*(_BYTE *)(*v31 + 277) & 1) == 0 && this->fields.m_target )
         {
-          v35 = sub_B706BC(v30);
-          v36 = sub_B70AC0(v30);
+          v35 = sub_B775EC(v30);
+          v36 = sub_B779F0(v30);
           if ( (v35 & 1) != 0 )
           {
             if ( (v36 & 1) != 0 )
@@ -720,7 +720,7 @@ LABEL_58:
               else
               {
 LABEL_48:
-                v27 = sub_B08590(v31, v38, v39);
+                v27 = sub_B0F4C0(v31, v38, v39);
               }
               v24 = *(_QWORD *)(v27 + 8);
             }
@@ -728,7 +728,7 @@ LABEL_48:
             {
               v24 = *(_QWORD *)(*v31 + 16LL * *(unsigned __int16 *)(v30 + 72) + 320);
             }
-            v28 = (void (__fastcall **)(__int64 *, ItemEntity_o *, _QWORD, _QWORD))sub_B70744(v24, v30);
+            v28 = (void (__fastcall **)(__int64 *, ItemEntity_o *, _QWORD, _QWORD))sub_B77674(v24, v30);
             (*v28)(v31, selectedItem, (unsigned int)spendNum, v28);
           }
           else
@@ -754,7 +754,7 @@ LABEL_48:
               else
               {
 LABEL_19:
-                v23 = sub_B08590(v31, v19, v18);
+                v23 = sub_B0F4C0(v31, v19, v18);
               }
               (*(void (__fastcall **)(__int64 *, ItemEntity_o *, _QWORD, _QWORD))v23)(
                 v31,

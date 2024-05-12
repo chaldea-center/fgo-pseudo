@@ -11,9 +11,9 @@ void __fastcall OrganizationTopListViewItem___ctor(
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  ListViewItem___ctor_23967088((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
   this->fields.info = info;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.info, (System_Int32_array **)info, v6, v7, v8, v9, v10, v11);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.info, (System_Int32_array **)info, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -31,15 +31,15 @@ System_String_o *__fastcall OrganizationTopListViewItem__ToString(
   struct OrganizationTopItemInfo_o *info; // x8
 
   v2 = this;
-  if ( (byte_4350C1E & 1) == 0 )
+  if ( (byte_438A2C6 & 1) == 0 )
   {
-    this = (OrganizationTopListViewItem_o *)sub_B70694(&StringLiteral_10272/*"OrganizationTopItem "*/);
-    byte_4350C1E = 1;
+    this = (OrganizationTopListViewItem_o *)sub_B775C4(&StringLiteral_10331/*"OrganizationTopItem "*/);
+    byte_438A2C6 = 1;
   }
   info = v2->fields.info;
   if ( !info )
-    sub_B7076C(this, method);
-  return System_String__Concat_44758168((System_String_o *)StringLiteral_10272/*"OrganizationTopItem "*/, info->fields.textCode, 0LL);
+    sub_B7769C(this, method);
+  return System_String__Concat_44901936((System_String_o *)StringLiteral_10331/*"OrganizationTopItem "*/, info->fields.textCode, 0LL);
 }
 
 
@@ -51,7 +51,7 @@ System_String_o *__fastcall OrganizationTopListViewItem__get_EventData(
 
   info = this->fields.info;
   if ( !info )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return info->fields.eventData;
 }
 
@@ -64,7 +64,7 @@ System_String_o *__fastcall OrganizationTopListViewItem__get_ImageName(
 
   info = this->fields.info;
   if ( !info )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return info->fields.imageName;
 }
 
@@ -86,14 +86,14 @@ System_String_o *__fastcall OrganizationTopListViewItem__get_InfoText(
   System_String_o *textCode; // x19
 
   v2 = this;
-  if ( (byte_4350C1D & 1) == 0 )
+  if ( (byte_438A2C5 & 1) == 0 )
   {
-    this = (OrganizationTopListViewItem_o *)sub_B70694(&LocalizationManager_TypeInfo);
-    byte_4350C1D = 1;
+    this = (OrganizationTopListViewItem_o *)sub_B775C4(&LocalizationManager_TypeInfo);
+    byte_438A2C5 = 1;
   }
   info = v2->fields.info;
   if ( !info )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   textCode = info->fields.textCode;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )

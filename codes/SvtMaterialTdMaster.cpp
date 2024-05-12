@@ -1,14 +1,14 @@
 void __fastcall SvtMaterialTdMaster___ctor(SvtMaterialTdMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_434EDDC & 1) == 0 )
+  if ( (byte_43882D4 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_SvtMaterialTdMaster__SvtMaterialTdEntity__string___ctor__);
-    byte_434EDDC = 1;
+    sub_B775C4(&Method_DataMasterBase_SvtMaterialTdMaster__SvtMaterialTdEntity__string___ctor__);
+    byte_43882D4 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     389,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_SvtMaterialTdMaster__SvtMaterialTdEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_SvtMaterialTdMaster__SvtMaterialTdEntity__string___ctor__);
 }
 
 
@@ -38,31 +38,31 @@ SvtMaterialTdEntity_array *__fastcall SvtMaterialTdMaster__GetEntityList(
   int32_t *v23; // x11
   __int64 v24; // x0
 
-  if ( (byte_434EDDD & 1) == 0 )
+  if ( (byte_43882D5 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
-    sub_B70694(&System_Collections_IEnumerator_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_SvtMaterialTdEntity__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_SvtMaterialTdEntity__ToArray__);
-    sub_B70694(&Method_System_Collections_Generic_List_SvtMaterialTdEntity___ctor__);
-    sub_B70694(&System_Collections_Generic_List_SvtMaterialTdEntity__TypeInfo);
-    sub_B70694(&SvtMaterialTdEntity_TypeInfo);
-    byte_434EDDD = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
+    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_SvtMaterialTdEntity__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_SvtMaterialTdEntity__ToArray__);
+    sub_B775C4(&Method_System_Collections_Generic_List_SvtMaterialTdEntity___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_SvtMaterialTdEntity__TypeInfo);
+    sub_B775C4(&SvtMaterialTdEntity_TypeInfo);
+    byte_43882D5 = 1;
   }
-  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_SvtMaterialTdEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_SvtMaterialTdEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v5,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_SvtMaterialTdEntity___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_SvtMaterialTdEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
     goto LABEL_34;
   Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
                  list,
-                 (const MethodInfo_2C865F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_2CC56C8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B7076C(0LL, v8);
+    sub_B7769C(0LL, v8);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -82,7 +82,7 @@ SvtMaterialTdEntity_array *__fastcall SvtMaterialTdMaster__GetEntityList(
     else
     {
 LABEL_9:
-      p_method = sub_B08590(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_B0F4C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -105,7 +105,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v17 = sub_B08590(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v17 = sub_B0F4C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v18 = (EventMissionProgressRequest_Argument_ProgressData_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v17)(
                                                                    Enumerator,
@@ -117,9 +117,9 @@ LABEL_16:
       if ( *(&v18->klass->_2.bitflags2 + 1) < (unsigned int)v20
         || (SvtMaterialTdEntity_c *)v18->klass->_2.typeHierarchy[v20 - 1] != SvtMaterialTdEntity_TypeInfo )
       {
-        v18 = (EventMissionProgressRequest_Argument_ProgressData_o *)sub_B70A60(v18);
+        v18 = (EventMissionProgressRequest_Argument_ProgressData_o *)sub_B77990(v18);
 LABEL_33:
-        sub_B7076C(v18, v19);
+        sub_B7769C(v18, v19);
       }
       if ( v18->fields.missionTargetId == baseSvtId )
       {
@@ -128,7 +128,7 @@ LABEL_33:
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           v5,
           v18,
-          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_SvtMaterialTdEntity__Add__);
+          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_SvtMaterialTdEntity__Add__);
       }
     }
   }
@@ -149,15 +149,15 @@ LABEL_33:
   else
   {
 LABEL_28:
-    v24 = sub_B08590(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v24 = sub_B0F4C0(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v24)(
                                                                                        Enumerator,
                                                                                        *(_QWORD *)(v24 + 8));
   if ( !v5 )
 LABEL_34:
-    sub_B7076C(list, v6);
+    sub_B7769C(list, v6);
   return (SvtMaterialTdEntity_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
                                         (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v5,
-                                        (const MethodInfo_30277D4 *)Method_System_Collections_Generic_List_SvtMaterialTdEntity__ToArray__);
+                                        (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_SvtMaterialTdEntity__ToArray__);
 }

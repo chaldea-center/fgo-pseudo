@@ -6,7 +6,7 @@ void __fastcall BattleLogicUtilities___ctor(BattleLogicUtilities_o *this, const 
 
 UnityEngine_Vector3_array *__fastcall BattleLogicUtilities__getShuffle_Vector3_(
         UnityEngine_Vector3_array *list,
-        const MethodInfo_1BE0ACC *method)
+        const MethodInfo_1C6A188 *method)
 {
   System_Random_o *v4; // x19
   Il2CppObject *v5; // x0
@@ -26,14 +26,14 @@ UnityEngine_Vector3_array *__fastcall BattleLogicUtilities__getShuffle_Vector3_(
   int v19; // w14
   __int64 v21; // x0
   System_Int32_array *v22; // x0
-  const MethodInfo_1BE0C38 *v23; // x1
+  const MethodInfo_1C6A2F4 *v23; // x1
 
-  if ( (byte_4353FA8 & 1) == 0 )
+  if ( (byte_438D984 & 1) == 0 )
   {
-    sub_B70694(&System_Random_TypeInfo);
-    byte_4353FA8 = 1;
+    sub_B775C4(&System_Random_TypeInfo);
+    byte_438D984 = 1;
   }
-  v4 = (System_Random_o *)sub_B70764(System_Random_TypeInfo);
+  v4 = (System_Random_o *)sub_B77694(System_Random_TypeInfo);
   System_Random___ctor(v4, 0LL);
   if ( !list )
     goto LABEL_17;
@@ -41,10 +41,10 @@ UnityEngine_Vector3_array *__fastcall BattleLogicUtilities__getShuffle_Vector3_(
   v7 = v5;
   _0_T = method->rgctx_data->_0_T__;
   if ( (BYTE2(_0_T->vtable[0].methodPtr) & 1) == 0 )
-    v5 = (Il2CppObject *)sub_B08394(method->rgctx_data->_0_T__);
+    v5 = (Il2CppObject *)sub_B0F2C4(method->rgctx_data->_0_T__);
   if ( !v7 )
     goto LABEL_17;
-  v5 = (Il2CppObject *)sub_B70754(v7, _0_T);
+  v5 = (Il2CppObject *)sub_B77684(v7, _0_T);
   if ( v5 )
   {
     monitor = (int)v5[1].monitor;
@@ -75,8 +75,8 @@ UnityEngine_Vector3_array *__fastcall BattleLogicUtilities__getShuffle_Vector3_(
               v11 - 2 >= (unsigned __int64)LODWORD(v10[1].monitor)) )
         {
 LABEL_16:
-          v21 = sub_B70798(v13);
-          sub_B70738(v21, 0LL);
+          v21 = sub_B776C8(v13);
+          sub_B77668(v21, 0LL);
         }
         --v11;
         *((_QWORD *)v12 - 1) = v15;
@@ -88,16 +88,16 @@ LABEL_16:
       return (UnityEngine_Vector3_array *)v10;
     }
 LABEL_17:
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   }
-  sub_B70A60(v7);
+  sub_B77990(v7);
   return (UnityEngine_Vector3_array *)BattleRandom__getShuffle_int_(v22, v23);
 }
 
 
 System_Object_array *__fastcall BattleLogicUtilities__getShuffle_object_(
         System_Object_array *list,
-        const MethodInfo_1BE095C *method)
+        const MethodInfo_1C6A018 *method)
 {
   System_Random_o *v4; // x19
   Il2CppObject *v5; // x0
@@ -127,14 +127,14 @@ System_Object_array *__fastcall BattleLogicUtilities__getShuffle_object_(
   System_Int32_array *v29; // x7
   __int64 v31; // x0
   UnityEngine_Vector3_array *v32; // x0
-  const MethodInfo_1BE0ACC *v33; // x1
+  const MethodInfo_1C6A188 *v33; // x1
 
-  if ( (byte_4353FA7 & 1) == 0 )
+  if ( (byte_438D983 & 1) == 0 )
   {
-    sub_B70694(&System_Random_TypeInfo);
-    byte_4353FA7 = 1;
+    sub_B775C4(&System_Random_TypeInfo);
+    byte_438D983 = 1;
   }
-  v4 = (System_Random_o *)sub_B70764(System_Random_TypeInfo);
+  v4 = (System_Random_o *)sub_B77694(System_Random_TypeInfo);
   System_Random___ctor(v4, 0LL);
   if ( !list )
     goto LABEL_17;
@@ -142,10 +142,10 @@ System_Object_array *__fastcall BattleLogicUtilities__getShuffle_object_(
   v7 = v5;
   _0_T = method->rgctx_data->_0_T__;
   if ( (BYTE2(_0_T->vtable[0].methodPtr) & 1) == 0 )
-    v5 = (Il2CppObject *)sub_B08394(method->rgctx_data->_0_T__);
+    v5 = (Il2CppObject *)sub_B0F2C4(method->rgctx_data->_0_T__);
   if ( !v7 )
     goto LABEL_17;
-  v5 = (Il2CppObject *)sub_B70754(v7, _0_T);
+  v5 = (Il2CppObject *)sub_B77684(v7, _0_T);
   if ( v5 )
   {
     monitor = (int)v5[1].monitor;
@@ -170,14 +170,14 @@ System_Object_array *__fastcall BattleLogicUtilities__getShuffle_object_(
               v11 - 2 >= (unsigned __int64)(unsigned int)v10[1].monitor)
           || (klass = (System_Int32_array **)v12->klass,
               v13->klass = v12->klass,
-              sub_B70630(v13, klass, v14, v15, v16, v17, v18, v19),
+              sub_B77560(v13, klass, v14, v15, v16, v17, v18, v19),
               v11 - 2 >= (unsigned __int64)LODWORD(v10[1].monitor)) )
         {
-          v31 = sub_B70798(v13);
-          sub_B70738(v31, 0LL);
+          v31 = sub_B776C8(v13);
+          sub_B77668(v31, 0LL);
         }
         v12->klass = (BattleServantConfConponent_c *)v21;
-        sub_B70630(v12, v21, v24, v25, v26, v27, v28, v29);
+        sub_B77560(v12, v21, v24, v25, v26, v27, v28, v29);
         --v11;
         --monitor;
         v12 = (BattleServantConfConponent_o *)((char *)v12 - 8);
@@ -186,8 +186,8 @@ System_Object_array *__fastcall BattleLogicUtilities__getShuffle_object_(
       return (System_Object_array *)v10;
     }
 LABEL_17:
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   }
-  sub_B70A60(v7);
+  sub_B77990(v7);
   return (System_Object_array *)BattleLogicUtilities__getShuffle_Vector3_(v32, v33);
 }

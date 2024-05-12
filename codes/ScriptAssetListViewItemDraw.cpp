@@ -18,11 +18,11 @@ void __fastcall ScriptAssetListViewItemDraw__SetItem(
   UIWidget_o *baseImageTexture; // x20
   int v12; // s0
 
-  if ( (byte_4356535 & 1) == 0 )
+  if ( (byte_438FB08 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4356535 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438FB08 = 1;
   }
   if ( item && mode )
   {
@@ -41,11 +41,11 @@ void __fastcall ScriptAssetListViewItemDraw__SetItem(
                                            0LL)) == 0LL )
     {
 LABEL_22:
-      sub_B7076C(TitleText, v7);
+      sub_B7769C(TitleText, v7);
     }
     Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                         (UnityEngine_GameObject_o *)TitleText,
-                                                        (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                                                        (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {

@@ -1,13 +1,13 @@
 void __fastcall UserEventCooltimeRewardEntity___ctor(UserEventCooltimeRewardEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_43533C0 & 1) == 0 )
+  if ( (byte_438CB43 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_43533C0 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438CB43 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -26,17 +26,17 @@ System_String_o *__fastcall UserEventCooltimeRewardEntity__CreatePK(
         int32_t lv,
         const MethodInfo *method)
 {
-  if ( (byte_43533BE & 1) == 0 )
+  if ( (byte_438CB41 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
-    byte_43533BE = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
+    byte_438CB41 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int__int_(
            userId,
            eventId,
            spotId,
            lv,
-           (const MethodInfo_1CA2D8C *)Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
+           (const MethodInfo_1D17BDC *)Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
 }
 
 
@@ -63,18 +63,18 @@ EventCooltimeRewardEntity_o *__fastcall UserEventCooltimeRewardEntity__GetEventC
   __int64 v4; // x1
   EventCooltimeRewardEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_43533BF & 1) == 0 )
+  if ( (byte_438CB42 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    byte_43533BF = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    byte_438CB42 = 1;
   }
   entity = 0LL;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (EventCooltimeRewardMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
+  Master_WarQuestSelectionMaster = (EventCooltimeRewardMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
   if ( !Master_WarQuestSelectionMaster )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   EventCooltimeRewardMaster__TryGetEntity(
     Master_WarQuestSelectionMaster,
     &entity,

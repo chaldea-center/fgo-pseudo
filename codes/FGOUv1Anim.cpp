@@ -1,13 +1,13 @@
 void __fastcall FGOUv1Anim___cctor(const MethodInfo *method)
 {
-  if ( (byte_43521F0 & 1) == 0 )
+  if ( (byte_438B8B3 & 1) == 0 )
   {
-    sub_B70694(&FGOUv1Anim_TypeInfo);
-    sub_B70694(&StringLiteral_16305/*"_SubTex"*/);
-    byte_43521F0 = 1;
+    sub_B775C4(&FGOUv1Anim_TypeInfo);
+    sub_B775C4(&StringLiteral_16375/*"_SubTex"*/);
+    byte_438B8B3 = 1;
   }
   FGOUv1Anim_TypeInfo->static_fields->subTexID = UnityEngine_Shader__PropertyToID(
-                                                   (System_String_o *)StringLiteral_16305/*"_SubTex"*/,
+                                                   (System_String_o *)StringLiteral_16375/*"_SubTex"*/,
                                                    0LL);
 }
 
@@ -42,12 +42,12 @@ void __fastcall FGOUv1Anim__UpdateUV(FGOUv1Anim_o *this, const MethodInfo *metho
   UnityEngine_Material_o *v8; // x20
   FGOUv1Anim_c *v9; // x0
 
-  if ( (byte_43521EF & 1) == 0 )
+  if ( (byte_438B8B2 & 1) == 0 )
   {
-    sub_B70694(&FGOUv1Anim_TypeInfo);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_Renderer___);
-    sub_B70694(&UnityEngine_Material_TypeInfo);
-    byte_43521EF = 1;
+    sub_B775C4(&FGOUv1Anim_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_Renderer___);
+    sub_B775C4(&UnityEngine_Material_TypeInfo);
+    byte_438B8B2 = 1;
   }
   if ( UnityEngine_Application__get_isPlaying(0LL) )
   {
@@ -57,7 +57,7 @@ void __fastcall FGOUv1Anim__UpdateUV(FGOUv1Anim_o *this, const MethodInfo *metho
       goto LABEL_26;
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                gameObject,
-                                               (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                                               (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
     if ( !gameObject )
       goto LABEL_26;
     if ( klass_low )
@@ -73,19 +73,19 @@ void __fastcall FGOUv1Anim__UpdateUV(FGOUv1Anim_o *this, const MethodInfo *metho
       goto LABEL_26;
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                gameObject,
-                                               (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                                               (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
     if ( !gameObject )
       goto LABEL_26;
     v7 = UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)gameObject, 0LL);
-    v8 = (UnityEngine_Material_o *)sub_B70764(UnityEngine_Material_TypeInfo);
-    UnityEngine_Material___ctor_41118404(v8, v7, 0LL);
+    v8 = (UnityEngine_Material_o *)sub_B77694(UnityEngine_Material_TypeInfo);
+    UnityEngine_Material___ctor_41464292(v8, v7, 0LL);
   }
   gameObject = (UnityEngine_GameObject_o *)FGOUv1Anim_TypeInfo;
   if ( (BYTE3(FGOUv1Anim_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !FGOUv1Anim_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FGOUv1Anim_TypeInfo);
   if ( !v8 )
 LABEL_26:
-    sub_B7076C(gameObject, v5);
+    sub_B7769C(gameObject, v5);
   if ( UnityEngine_Material__HasProperty(v8, FGOUv1Anim_TypeInfo->static_fields->subTexID, 0LL) )
   {
     v9 = FGOUv1Anim_TypeInfo;
@@ -94,7 +94,7 @@ LABEL_26:
       j_il2cpp_runtime_class_init_0(FGOUv1Anim_TypeInfo);
       v9 = FGOUv1Anim_TypeInfo;
     }
-    UnityEngine_Material__SetTextureOffset_41120556(
+    UnityEngine_Material__SetTextureOffset_41466444(
       v8,
       v9->static_fields->subTexID,
       *(UnityEngine_Vector2_o *)&this->fields.m_Offset.fields.y,
@@ -107,7 +107,7 @@ LABEL_26:
     {
       gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                  gameObject,
-                                                 (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                                                 (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
       if ( gameObject )
       {
         UnityEngine_Renderer__set_sharedMaterial((UnityEngine_Renderer_o *)gameObject, v8, 0LL);

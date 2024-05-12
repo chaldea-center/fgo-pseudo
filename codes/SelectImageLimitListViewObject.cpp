@@ -1,9 +1,9 @@
 void __fastcall SelectImageLimitListViewObject___ctor(SelectImageLimitListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4352BEF & 1) == 0 )
+  if ( (byte_438C447 & 1) == 0 )
   {
-    sub_B70694(&ListViewObject_TypeInfo);
-    byte_4352BEF = 1;
+    sub_B775C4(&ListViewObject_TypeInfo);
+    byte_438C447 = 1;
   }
   if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ListViewObject_TypeInfo->_2.cctor_finished )
@@ -26,20 +26,20 @@ void __fastcall SelectImageLimitListViewObject__Awake(SelectImageLimitListViewOb
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_4352BE7 & 1) == 0 )
+  if ( (byte_438C43F & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_SelectImageLimitListViewItemDraw___);
-    byte_4352BE7 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_SelectImageLimitListViewItemDraw___);
+    byte_438C43F = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   Component_srcLineSprite = (struct SelectImageLimitListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                            dispObject,
-                                                                           (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_SelectImageLimitListViewItemDraw___);
+                                                                           (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_SelectImageLimitListViewItemDraw___);
   this->fields.itemDraw = Component_srcLineSprite;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.itemDraw,
     (System_Int32_array **)Component_srcLineSprite,
     v6,
@@ -63,19 +63,19 @@ UnityEngine_GameObject_o *__fastcall SelectImageLimitListViewObject__CreateDragO
   const MethodInfo *v7; // x3
   UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_4352BEB & 1) == 0 )
+  if ( (byte_438C443 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_SelectImageLimitListViewObject___);
-    byte_4352BEB = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_SelectImageLimitListViewObject___);
+    byte_438C443 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                     DragObject,
-                                                    (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_SelectImageLimitListViewObject___)) == 0LL) )
+                                                    (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_SelectImageLimitListViewObject___)) == 0LL) )
   {
-    sub_B7076C(DragObject, v4);
+    sub_B7769C(DragObject, v4);
   }
   v6 = (SelectImageLimitListViewObject_o *)DragObject;
   zero = UnityEngine_Vector3__get_zero(0LL);
@@ -91,10 +91,10 @@ SelectImageLimitListViewItem_o *__fastcall SelectImageLimitListViewObject__GetIt
   struct ListViewItem_o *linkItem; // x8
   __int64 v4; // x11
 
-  if ( (byte_4352BE9 & 1) == 0 )
+  if ( (byte_438C441 & 1) == 0 )
   {
-    sub_B70694(&SelectImageLimitListViewItem_TypeInfo);
-    byte_4352BE9 = 1;
+    sub_B775C4(&SelectImageLimitListViewItem_TypeInfo);
+    byte_438C441 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -141,10 +141,10 @@ void __fastcall SelectImageLimitListViewObject__Init(
   int32_t v31; // w8
   System_Action_o *klass; // x19
 
-  if ( (byte_4352BEC & 1) == 0 )
+  if ( (byte_438C444 & 1) == 0 )
   {
-    sub_B70694(&SelectImageLimitListViewItem_TypeInfo);
-    byte_4352BEC = 1;
+    sub_B775C4(&SelectImageLimitListViewItem_TypeInfo);
+    byte_438C444 = 1;
   }
   linkItem = this->fields.linkItem;
   dispMode = this->fields.dispMode;
@@ -172,12 +172,12 @@ void __fastcall SelectImageLimitListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B7076C(transform, v15);
+    sub_B7769C(transform, v15);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (BattleServantConfConponent_o *)&this->fields.callbackFunc;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.callbackFunc,
     (System_Int32_array **)callbackFunc,
     v17,
@@ -217,7 +217,7 @@ LABEL_19:
       if ( p_callbackFunc->klass )
       {
         p_callbackFunc->klass = 0LL;
-        sub_B70630(p_callbackFunc, 0LL, v24, v25, v26, v27, v28, v29);
+        sub_B77560(p_callbackFunc, 0LL, v24, v25, v26, v27, v28, v29);
         System_Action__Invoke(klass, 0LL);
       }
       return;
@@ -234,7 +234,7 @@ void __fastcall SelectImageLimitListViewObject__InitItem(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall SelectImageLimitListViewObject__Init_26933196(
+void __fastcall SelectImageLimitListViewObject__Init_27383772(
         SelectImageLimitListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -248,7 +248,7 @@ void __fastcall SelectImageLimitListViewObject__Init_26933196(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall SelectImageLimitListViewObject__Init_26933972(
+void __fastcall SelectImageLimitListViewObject__Init_27384548(
         SelectImageLimitListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -270,7 +270,7 @@ void __fastcall SelectImageLimitListViewObject__Init_26933972(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall SelectImageLimitListViewObject__Init_26934036(
+void __fastcall SelectImageLimitListViewObject__Init_27384612(
         SelectImageLimitListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -296,17 +296,17 @@ void __fastcall SelectImageLimitListViewObject__OnClickSelect(
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4352BEE & 1) == 0 )
+  if ( (byte_438C446 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_10093/*"OnClickSelectListView"*/);
-    byte_4352BEE = 1;
+    sub_B775C4(&StringLiteral_10152/*"OnClickSelectListView"*/);
+    byte_438C446 = 1;
   }
   if ( this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_B7076C(0LL, method);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_10093/*"OnClickSelectListView"*/, (Il2CppObject *)this, 0LL);
+      sub_B7769C(0LL, method);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_10152/*"OnClickSelectListView"*/, (Il2CppObject *)this, 0LL);
   }
 }
 
@@ -326,11 +326,11 @@ void __fastcall SelectImageLimitListViewObject__OnDestroy(
   System_Int32_array *v11; // x6
   System_Int32_array *v12; // x7
 
-  if ( (byte_4352BE8 & 1) == 0 )
+  if ( (byte_438C440 & 1) == 0 )
   {
-    sub_B70694(&NGUITools_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4352BE8 = 1;
+    sub_B775C4(&NGUITools_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438C440 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (BattleServantConfConponent_o *)&this->fields.dragObject;
@@ -347,7 +347,7 @@ void __fastcall SelectImageLimitListViewObject__OnDestroy(
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_B70630(p_dragObject, 0LL, v7, v8, v9, v10, v11, v12);
+    sub_B77560(p_dragObject, 0LL, v7, v8, v9, v10, v11, v12);
   }
 }
 
@@ -363,11 +363,11 @@ void __fastcall SelectImageLimitListViewObject__SetInput(
   struct ListViewItem_o *v8; // x1
   SelectImageLimitListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4352BEA & 1) == 0 )
+  if ( (byte_438C442 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&SelectImageLimitListViewItem_TypeInfo);
-    byte_4352BEA = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&SelectImageLimitListViewItem_TypeInfo);
+    byte_438C442 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -394,7 +394,7 @@ void __fastcall SelectImageLimitListViewObject__SetInput(
     }
     v9 = this->fields.itemDraw;
     if ( !v9 )
-      sub_B7076C(0LL, v8);
+      sub_B7769C(0LL, v8);
     SelectImageLimitListViewItemDraw__SetInput(v9, (SelectImageLimitListViewItem_o *)v8, isInput, 0LL);
   }
 }
@@ -406,12 +406,12 @@ void __fastcall SelectImageLimitListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_33972948((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_34301308((ListViewObject_o *)this, item, seed, 0LL);
   this->fields.state = 0;
 }
 
 
-void __fastcall SelectImageLimitListViewObject__SetItem_26932760(
+void __fastcall SelectImageLimitListViewObject__SetItem_27383336(
         SelectImageLimitListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -432,11 +432,11 @@ void __fastcall SelectImageLimitListViewObject__SetupDisp(
   __int64 v7; // x1
   SelectImageLimitListViewItemDraw_o *v8; // x0
 
-  if ( (byte_4352BED & 1) == 0 )
+  if ( (byte_438C445 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&SelectImageLimitListViewItem_TypeInfo);
-    byte_4352BED = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&SelectImageLimitListViewItem_TypeInfo);
+    byte_438C445 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -463,7 +463,7 @@ LABEL_8:
   {
     v8 = this->fields.itemDraw;
     if ( !v8 )
-      sub_B7076C(0LL, v7);
+      sub_B7769C(0LL, v7);
     SelectImageLimitListViewItemDraw__SetItem(
       v8,
       (SelectImageLimitListViewItem_o *)linkItem,
@@ -488,10 +488,10 @@ void __fastcall SelectImageLimitListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4352BE5 & 1) == 0 )
+  if ( (byte_438C43D & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    byte_4352BE5 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    byte_438C43D = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -504,13 +504,13 @@ void __fastcall SelectImageLimitListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (SelectImageLimitListViewObject_o *)sub_B70A60(v8);
+  v11 = (SelectImageLimitListViewObject_o *)sub_B77990(v8);
   SelectImageLimitListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -529,10 +529,10 @@ void __fastcall SelectImageLimitListViewObject__remove_callbackFunc(
   SelectImageLimitListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4352BE6 & 1) == 0 )
+  if ( (byte_438C43E & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    byte_4352BE6 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    byte_438C43E = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -545,12 +545,12 @@ void __fastcall SelectImageLimitListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (SelectImageLimitListViewObject_o *)sub_B70A60(v8);
+  v11 = (SelectImageLimitListViewObject_o *)sub_B77990(v8);
   SelectImageLimitListViewObject__Awake(v11, v12);
 }

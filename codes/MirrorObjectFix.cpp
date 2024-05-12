@@ -12,10 +12,10 @@ void __fastcall MirrorObjectFix___ctor(MirrorObjectFix_o *this, const MethodInfo
   UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v13; // 0:s3.4,4:s4.4,8:s5.4
 
-  if ( (byte_43504C6 & 1) == 0 )
+  if ( (byte_4389AEF & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_20385/*"joint_all_Base/joint_all"*/);
-    byte_43504C6 = 1;
+    sub_B775C4(&StringLiteral_20480/*"joint_all_Base/joint_all"*/);
+    byte_4389AEF = 1;
   }
   v12.fields.y = 0.78;
   v13.fields.x = 0.2;
@@ -28,9 +28,9 @@ void __fastcall MirrorObjectFix___ctor(MirrorObjectFix_o *this, const MethodInfo
   v3 = *(_OWORD *)&v11.fields.m_Center.fields.x;
   *(_QWORD *)&this->fields.mirrorBounds.fields.m_Extents.fields.z = *(_QWORD *)&v11.fields.m_Extents.fields.y;
   *(_OWORD *)&this->fields.mirrorBounds.fields.m_Center.fields.y = v3;
-  v4 = (System_Int32_array **)StringLiteral_20385/*"joint_all_Base/joint_all"*/;
-  this->fields.rootTransformPath = (struct System_String_o *)StringLiteral_20385/*"joint_all_Base/joint_all"*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.rootTransformPath, v4, v5, v6, v7, v8, v9, v10);
+  v4 = (System_Int32_array **)StringLiteral_20480/*"joint_all_Base/joint_all"*/;
+  this->fields.rootTransformPath = (struct System_String_o *)StringLiteral_20480/*"joint_all_Base/joint_all"*/;
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.rootTransformPath, v4, v5, v6, v7, v8, v9, v10);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -57,7 +57,7 @@ UnityEngine_Bounds_o *__fastcall MirrorObjectFix__GetBounds(
   RootTransform = MirrorObjectFix__get_RootTransform(this, method);
   *(UnityEngine_Vector3_o *)&v8 = UnityEngine_Bounds__get_center(&v13, 0LL);
   if ( !RootTransform )
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   v14 = UnityEngine_Transform__TransformPoint(RootTransform, *(UnityEngine_Vector3_o *)&v8, 0LL);
   UnityEngine_Bounds__set_center(&v13, v14, 0LL);
   v12 = *(_OWORD *)&v13.fields.m_Center.fields.x;
@@ -116,7 +116,7 @@ void __fastcall MirrorObjectFix__OnDrawGizmos(MirrorObjectFix_o *this, const Met
         w = rotation.fields.w,
         (RootTransform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B7076C(RootTransform, v8);
+    sub_B7769C(RootTransform, v8);
   }
   lossyScale = UnityEngine_Transform__get_lossyScale(RootTransform, 0LL);
   v23.fields.x = x;
@@ -168,10 +168,10 @@ UnityEngine_Transform_o *__fastcall MirrorObjectFix__get_RootTransform(
   System_Int32_array *v21; // x6
   System_Int32_array *v22; // x7
 
-  if ( (byte_43504C5 & 1) == 0 )
+  if ( (byte_4389AEE & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43504C5 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4389AEE = 1;
   }
   p_cacheRootTransform = &this->fields.cacheRootTransform;
   cacheRootTransform = (UnityEngine_Object_o *)this->fields.cacheRootTransform;
@@ -199,11 +199,11 @@ UnityEngine_Transform_o *__fastcall MirrorObjectFix__get_RootTransform(
         goto LABEL_16;
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
       if ( !transform )
-        sub_B7076C(0LL, v14);
+        sub_B7769C(0LL, v14);
       v12 = UnityEngine_Transform__Find(transform, this->fields.rootTransformPath, 0LL);
       this->fields.cacheRootTransform = v12;
     }
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.cacheRootTransform,
       (System_Int32_array **)v12,
       v6,
@@ -223,7 +223,7 @@ LABEL_16:
     {
       v16 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
       this->fields.cacheRootTransform = v16;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&this->fields.cacheRootTransform,
         (System_Int32_array **)v16,
         v17,

@@ -8,20 +8,20 @@ void __fastcall StonePurchaseNotificationMenu___ctor(StonePurchaseNotificationMe
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_4350E04 & 1) == 0 )
+  if ( (byte_438A578 & 1) == 0 )
   {
-    sub_B70694(&BaseDialog_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_StonePurchaseNotificationMenu_DialogOpenQueue___ctor__);
-    sub_B70694(&System_Collections_Generic_List_StonePurchaseNotificationMenu_DialogOpenQueue__TypeInfo);
-    byte_4350E04 = 1;
+    sub_B775C4(&BaseDialog_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_StonePurchaseNotificationMenu_DialogOpenQueue___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_StonePurchaseNotificationMenu_DialogOpenQueue__TypeInfo);
+    byte_438A578 = 1;
   }
   this->fields.DEFAULT_MESSAGE_FONT_SIZE = 30;
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_StonePurchaseNotificationMenu_DialogOpenQueue__TypeInfo);
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_StonePurchaseNotificationMenu_DialogOpenQueue__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v3,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_StonePurchaseNotificationMenu_DialogOpenQueue___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_StonePurchaseNotificationMenu_DialogOpenQueue___ctor__);
   this->fields.dialogOpenQueue = (struct System_Collections_Generic_List_StonePurchaseNotificationMenu_DialogOpenQueue__o *)v3;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.dialogOpenQueue,
     (System_Int32_array **)v3,
     v4,
@@ -53,37 +53,37 @@ void __fastcall StonePurchaseNotificationMenu__Callback(
   StonePurchaseNotificationMenu_DialogOpenQueue_o *v13; // x20
   const MethodInfo *v14; // x6
 
-  if ( (byte_4350E01 & 1) == 0 )
+  if ( (byte_438A575 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Linq_Enumerable_Any_StonePurchaseNotificationMenu_DialogOpenQueue___);
-    sub_B70694(&Method_System_Linq_Enumerable_First_StonePurchaseNotificationMenu_DialogOpenQueue___);
-    sub_B70694(&Method_System_Collections_Generic_List_StonePurchaseNotificationMenu_DialogOpenQueue__RemoveAt__);
-    byte_4350E01 = 1;
+    sub_B775C4(&Method_System_Linq_Enumerable_Any_StonePurchaseNotificationMenu_DialogOpenQueue___);
+    sub_B775C4(&Method_System_Linq_Enumerable_First_StonePurchaseNotificationMenu_DialogOpenQueue___);
+    sub_B775C4(&Method_System_Collections_Generic_List_StonePurchaseNotificationMenu_DialogOpenQueue__RemoveAt__);
+    byte_438A575 = 1;
   }
   p_callbackFunc = (BattleServantConfConponent_o *)&this->fields.callbackFunc;
   callbackFunc = this->fields.callbackFunc;
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_B70630(p_callbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_B77560(p_callbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
     System_Action__Invoke(callbackFunc, 0LL);
   }
   if ( System_Linq_Enumerable__Any_WarBoardMovieHistoryManager_HistoryInfo_(
          (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.dialogOpenQueue,
-         (const MethodInfo_1CA8B10 *)Method_System_Linq_Enumerable_Any_StonePurchaseNotificationMenu_DialogOpenQueue___) )
+         (const MethodInfo_1D1D960 *)Method_System_Linq_Enumerable_Any_StonePurchaseNotificationMenu_DialogOpenQueue___) )
   {
     StonePurchaseNotificationMenu_DialogOpenQueue = System_Linq_Enumerable__First_StonePurchaseNotificationMenu_DialogOpenQueue_(
                                                       (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.dialogOpenQueue,
-                                                      (const MethodInfo_1CBB6E4 *)Method_System_Linq_Enumerable_First_StonePurchaseNotificationMenu_DialogOpenQueue___);
+                                                      (const MethodInfo_1D30534 *)Method_System_Linq_Enumerable_First_StonePurchaseNotificationMenu_DialogOpenQueue___);
     if ( !this->fields.dialogOpenQueue
       || (v13 = StonePurchaseNotificationMenu_DialogOpenQueue,
           System_Collections_Generic_List_XWeaponTrail_Element___RemoveAt(
             (System_Collections_Generic_List_XWeaponTrail_Element__o *)this->fields.dialogOpenQueue,
             0,
-            (const MethodInfo_3027378 *)Method_System_Collections_Generic_List_StonePurchaseNotificationMenu_DialogOpenQueue__RemoveAt__),
+            (const MethodInfo_3054F88 *)Method_System_Collections_Generic_List_StonePurchaseNotificationMenu_DialogOpenQueue__RemoveAt__),
           !v13) )
     {
-      sub_B7076C(StonePurchaseNotificationMenu_DialogOpenQueue, v12);
+      sub_B7769C(StonePurchaseNotificationMenu_DialogOpenQueue, v12);
     }
     StonePurchaseNotificationMenu__OpenQueueable(
       this,
@@ -101,11 +101,11 @@ void __fastcall StonePurchaseNotificationMenu__Close(StonePurchaseNotificationMe
 {
   const MethodInfo *v2; // x2
 
-  StonePurchaseNotificationMenu__Close_23491956(this, 0LL, v2);
+  StonePurchaseNotificationMenu__Close_23920168(this, 0LL, v2);
 }
 
 
-void __fastcall StonePurchaseNotificationMenu__Close_23491956(
+void __fastcall StonePurchaseNotificationMenu__Close_23920168(
         StonePurchaseNotificationMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -117,11 +117,11 @@ void __fastcall StonePurchaseNotificationMenu__Close_23491956(
   System_Int32_array *v7; // x7
   System_Action_o *v10; // x20
 
-  if ( (byte_4350E00 & 1) == 0 )
+  if ( (byte_438A574 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_StonePurchaseNotificationMenu_EndClose__);
-    byte_4350E00 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_StonePurchaseNotificationMenu_EndClose__);
+    byte_438A574 = 1;
   }
   if ( (this->fields.state | 4) == 4 )
   {
@@ -131,7 +131,7 @@ void __fastcall StonePurchaseNotificationMenu__Close_23491956(
   else
   {
     this->fields.closeCallbackFunc = callback;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc,
       (System_Int32_array **)callback,
       (System_String_array **)method,
@@ -141,7 +141,7 @@ void __fastcall StonePurchaseNotificationMenu__Close_23491956(
       v6,
       v7);
     this->fields.state = 4;
-    v10 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v10 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     System_Action___ctor(v10, (Il2CppObject *)this, Method_StonePurchaseNotificationMenu_EndClose__, 0LL);
     BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
   }
@@ -169,7 +169,7 @@ void __fastcall StonePurchaseNotificationMenu__EndClose(
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_B70630(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_B77560(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
     System_Action__Invoke(v10, 0LL);
   }
 }
@@ -185,10 +185,10 @@ void __fastcall StonePurchaseNotificationMenu__Init(StonePurchaseNotificationMen
 {
   UILabel_o *stoneDataLabel; // x0
 
-  if ( (byte_4350DFD & 1) == 0 )
+  if ( (byte_438A571 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4350DFD = 1;
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438A571 = 1;
   }
   stoneDataLabel = this->fields.stoneDataLabel;
   if ( !stoneDataLabel
@@ -199,7 +199,7 @@ void __fastcall StonePurchaseNotificationMenu__Init(StonePurchaseNotificationMen
     || (UILabel__set_text(stoneDataLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (stoneDataLabel = this->fields.closeLabel) == 0LL) )
   {
-    sub_B7076C(stoneDataLabel, method);
+    sub_B7769C(stoneDataLabel, method);
   }
   UILabel__set_text(stoneDataLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
@@ -215,18 +215,18 @@ void __fastcall StonePurchaseNotificationMenu__OnClickClose(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4350E02 & 1) == 0 )
+  if ( (byte_438A576 & 1) == 0 )
   {
-    sub_B70694(&Method_StonePurchaseNotificationMenu_OnClickClose__);
-    byte_4350E02 = 1;
+    sub_B775C4(&Method_StonePurchaseNotificationMenu_OnClickClose__);
+    byte_438A576 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_StonePurchaseNotificationMenu_OnClickClose__;
     if ( (*((_BYTE *)Method_StonePurchaseNotificationMenu_OnClickClose__ + 75) & 2) != 0 )
-      v3 = (_QWORD *)sub_B7069C(Method_StonePurchaseNotificationMenu_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+      v3 = (_QWORD *)sub_B775CC(Method_StonePurchaseNotificationMenu_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     StonePurchaseNotificationMenu__Callback(this, v5);
   }
@@ -348,31 +348,31 @@ void __fastcall StonePurchaseNotificationMenu__Open(
   int v115; // [xsp+28h] [xbp-58h] BYREF
   int v116; // [xsp+2Ch] [xbp-54h] BYREF
 
-  if ( (byte_4350DFE & 1) == 0 )
+  if ( (byte_438A572 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_System_Linq_Enumerable_Any_StonePurchaseNotificationMenu_DialogOpenQueue___);
-    sub_B70694(&Method_System_Linq_Enumerable_Sum_StonePurchaseNotificationMenu_DialogOpenQueue___);
-    sub_B70694(&Method_System_Func_StonePurchaseNotificationMenu_DialogOpenQueue__int___ctor__);
-    sub_B70694(&System_Func_StonePurchaseNotificationMenu_DialogOpenQueue__int__TypeInfo);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&object___TypeInfo);
-    sub_B70694(&Method_StonePurchaseNotificationMenu_EndOpen__);
-    sub_B70694(&Method_StonePurchaseNotificationMenu___c__Open_b__14_0__);
-    sub_B70694(&Method_StonePurchaseNotificationMenu___c__Open_b__14_1__);
-    sub_B70694(&StonePurchaseNotificationMenu___c_TypeInfo);
-    sub_B70694(&StringLiteral_12560/*"STONE_PURCHASE_RESULT_GOOGLE_PLAY_PENDING_AFTER_PURCHASE"*/);
-    sub_B70694(&StringLiteral_12555/*"STONE_PURCHASE_RESULT_CANCEL"*/);
-    sub_B70694(&StringLiteral_12563/*"STONE_PURCHASE_RESULT_WAIT"*/);
-    sub_B70694(&StringLiteral_1647/*"ACCOUNTING_ERROR_INITIALIZE_MESSAGE"*/);
-    sub_B70694(&StringLiteral_12558/*"STONE_PURCHASE_RESULT_FAIL"*/);
-    sub_B70694(&StringLiteral_12562/*"STONE_PURCHASE_RESULT_SUSPEND"*/);
-    sub_B70694(&StringLiteral_12556/*"STONE_PURCHASE_RESULT_CLOSE"*/);
-    sub_B70694(&StringLiteral_12559/*"STONE_PURCHASE_RESULT_GOOGLE_PLAY_ACCOUNT_ID_ERROR"*/);
-    sub_B70694(&StringLiteral_12557/*"STONE_PURCHASE_RESULT_DUPLICATE_TRANSACTION_MESSAGE"*/);
-    sub_B70694(&StringLiteral_12561/*"STONE_PURCHASE_RESULT_SUCCESS"*/);
-    byte_4350DFE = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_System_Linq_Enumerable_Any_StonePurchaseNotificationMenu_DialogOpenQueue___);
+    sub_B775C4(&Method_System_Linq_Enumerable_Sum_StonePurchaseNotificationMenu_DialogOpenQueue___);
+    sub_B775C4(&Method_System_Func_StonePurchaseNotificationMenu_DialogOpenQueue__int___ctor__);
+    sub_B775C4(&System_Func_StonePurchaseNotificationMenu_DialogOpenQueue__int__TypeInfo);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&object___TypeInfo);
+    sub_B775C4(&Method_StonePurchaseNotificationMenu_EndOpen__);
+    sub_B775C4(&Method_StonePurchaseNotificationMenu___c__Open_b__14_0__);
+    sub_B775C4(&Method_StonePurchaseNotificationMenu___c__Open_b__14_1__);
+    sub_B775C4(&StonePurchaseNotificationMenu___c_TypeInfo);
+    sub_B775C4(&StringLiteral_12624/*"STONE_PURCHASE_RESULT_GOOGLE_PLAY_PENDING_AFTER_PURCHASE"*/);
+    sub_B775C4(&StringLiteral_12619/*"STONE_PURCHASE_RESULT_CANCEL"*/);
+    sub_B775C4(&StringLiteral_12627/*"STONE_PURCHASE_RESULT_WAIT"*/);
+    sub_B775C4(&StringLiteral_1649/*"ACCOUNTING_ERROR_INITIALIZE_MESSAGE"*/);
+    sub_B775C4(&StringLiteral_12622/*"STONE_PURCHASE_RESULT_FAIL"*/);
+    sub_B775C4(&StringLiteral_12626/*"STONE_PURCHASE_RESULT_SUSPEND"*/);
+    sub_B775C4(&StringLiteral_12620/*"STONE_PURCHASE_RESULT_CLOSE"*/);
+    sub_B775C4(&StringLiteral_12623/*"STONE_PURCHASE_RESULT_GOOGLE_PLAY_ACCOUNT_ID_ERROR"*/);
+    sub_B775C4(&StringLiteral_12621/*"STONE_PURCHASE_RESULT_DUPLICATE_TRANSACTION_MESSAGE"*/);
+    sub_B775C4(&StringLiteral_12625/*"STONE_PURCHASE_RESULT_SUCCESS"*/);
+    byte_438A572 = 1;
   }
   if ( (this->fields.state | 4) == 4 )
   {
@@ -391,14 +391,14 @@ void __fastcall StonePurchaseNotificationMenu__Open(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v16 = &StringLiteral_12555/*"STONE_PURCHASE_RESULT_CANCEL"*/;
+          v16 = &StringLiteral_12619/*"STONE_PURCHASE_RESULT_CANCEL"*/;
           goto LABEL_52;
         case 1:
           mWidth = SelfUserGame->fields.mWidth;
           mHeight = SelfUserGame->fields.mHeight;
           if ( System_Linq_Enumerable__Any_WarBoardMovieHistoryManager_HistoryInfo_(
                  (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.dialogOpenQueue,
-                 (const MethodInfo_1CA8B10 *)Method_System_Linq_Enumerable_Any_StonePurchaseNotificationMenu_DialogOpenQueue___) )
+                 (const MethodInfo_1D1D960 *)Method_System_Linq_Enumerable_Any_StonePurchaseNotificationMenu_DialogOpenQueue___) )
           {
             dialogOpenQueue = this->fields.dialogOpenQueue;
             v20 = StonePurchaseNotificationMenu___c_TypeInfo;
@@ -418,15 +418,15 @@ void __fastcall StonePurchaseNotificationMenu__Open(
                 static_fields = StonePurchaseNotificationMenu___c_TypeInfo->static_fields;
               }
               v23 = (Il2CppObject *)static_fields->__9;
-              _9__14_0 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B70764(System_Func_StonePurchaseNotificationMenu_DialogOpenQueue__int__TypeInfo);
+              _9__14_0 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B77694(System_Func_StonePurchaseNotificationMenu_DialogOpenQueue__int__TypeInfo);
               System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int____ctor(
                 _9__14_0,
                 v23,
                 Method_StonePurchaseNotificationMenu___c__Open_b__14_0__,
-                (const MethodInfo_29AD124 *)Method_System_Func_StonePurchaseNotificationMenu_DialogOpenQueue__int___ctor__);
+                (const MethodInfo_29E9E70 *)Method_System_Func_StonePurchaseNotificationMenu_DialogOpenQueue__int___ctor__);
               v24 = StonePurchaseNotificationMenu___c_TypeInfo->static_fields;
               v24->__9__14_0 = (struct System_Func_StonePurchaseNotificationMenu_DialogOpenQueue__int__o *)_9__14_0;
-              sub_B70630(
+              sub_B77560(
                 (BattleServantConfConponent_o *)&v24->__9__14_0,
                 (System_Int32_array **)_9__14_0,
                 v25,
@@ -439,7 +439,7 @@ void __fastcall StonePurchaseNotificationMenu__Open(
             v31 = System_Linq_Enumerable__Sum_WarBoardAIRoute_RouteData_(
                     (System_Collections_Generic_IEnumerable_TSource__o *)dialogOpenQueue,
                     (System_Func_TSource__int__o *)_9__14_0,
-                    (const MethodInfo_1CC7BBC *)Method_System_Linq_Enumerable_Sum_StonePurchaseNotificationMenu_DialogOpenQueue___);
+                    (const MethodInfo_1D3CA0C *)Method_System_Linq_Enumerable_Sum_StonePurchaseNotificationMenu_DialogOpenQueue___);
             v32 = StonePurchaseNotificationMenu___c_TypeInfo;
             v33 = this->fields.dialogOpenQueue;
             v34 = v31;
@@ -460,15 +460,15 @@ void __fastcall StonePurchaseNotificationMenu__Open(
                 v35 = StonePurchaseNotificationMenu___c_TypeInfo->static_fields;
               }
               v37 = (Il2CppObject *)v35->__9;
-              _9__14_1 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B70764(System_Func_StonePurchaseNotificationMenu_DialogOpenQueue__int__TypeInfo);
+              _9__14_1 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B77694(System_Func_StonePurchaseNotificationMenu_DialogOpenQueue__int__TypeInfo);
               System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int____ctor(
                 _9__14_1,
                 v37,
                 Method_StonePurchaseNotificationMenu___c__Open_b__14_1__,
-                (const MethodInfo_29AD124 *)Method_System_Func_StonePurchaseNotificationMenu_DialogOpenQueue__int___ctor__);
+                (const MethodInfo_29E9E70 *)Method_System_Func_StonePurchaseNotificationMenu_DialogOpenQueue__int___ctor__);
               v38 = StonePurchaseNotificationMenu___c_TypeInfo->static_fields;
               v38->__9__14_1 = (struct System_Func_StonePurchaseNotificationMenu_DialogOpenQueue__int__o *)_9__14_1;
-              sub_B70630(
+              sub_B77560(
                 (BattleServantConfConponent_o *)&v38->__9__14_1,
                 (System_Int32_array **)_9__14_1,
                 v39,
@@ -481,7 +481,7 @@ void __fastcall StonePurchaseNotificationMenu__Open(
             v45 = System_Linq_Enumerable__Sum_WarBoardAIRoute_RouteData_(
                     (System_Collections_Generic_IEnumerable_TSource__o *)v33,
                     (System_Func_TSource__int__o *)_9__14_1,
-                    (const MethodInfo_1CC7BBC *)Method_System_Linq_Enumerable_Sum_StonePurchaseNotificationMenu_DialogOpenQueue___);
+                    (const MethodInfo_1D3CA0C *)Method_System_Linq_Enumerable_Sum_StonePurchaseNotificationMenu_DialogOpenQueue___);
             mDepth = mWidth - v45 + mHeight;
             v110 = mWidth - v45;
           }
@@ -495,8 +495,8 @@ void __fastcall StonePurchaseNotificationMenu__Open(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          format = LocalizationManager__Get((System_String_o *)StringLiteral_12561/*"STONE_PURCHASE_RESULT_SUCCESS"*/, 0LL);
-          v58 = (System_Object_array *)sub_B706AC(object___TypeInfo, 6LL);
+          format = LocalizationManager__Get((System_String_o *)StringLiteral_12625/*"STONE_PURCHASE_RESULT_SUCCESS"*/, 0LL);
+          v58 = (System_Object_array *)sub_B775DC(object___TypeInfo, 6LL);
           v116 = mDepth - (buyChargeStone + buyFreeStone);
           SelfUserGame = (UILabel_o *)j_il2cpp_value_box_0(int_TypeInfo, &v116, v59);
           if ( !v58 )
@@ -504,88 +504,88 @@ void __fastcall StonePurchaseNotificationMenu__Open(
           v66 = (System_Int32_array **)SelfUserGame;
           if ( SelfUserGame )
           {
-            SelfUserGame = (UILabel_o *)sub_B70754(SelfUserGame, v58->obj.klass->_1.element_class);
+            SelfUserGame = (UILabel_o *)sub_B77684(SelfUserGame, v58->obj.klass->_1.element_class);
             if ( !SelfUserGame )
               goto LABEL_101;
           }
           if ( !v58->max_length )
             goto LABEL_100;
           v58->m_Items[0] = (Il2CppObject *)v66;
-          sub_B70630((BattleServantConfConponent_o *)v58->m_Items, v66, v60, v61, v62, v63, v64, v65);
+          sub_B77560((BattleServantConfConponent_o *)v58->m_Items, v66, v60, v61, v62, v63, v64, v65);
           v115 = v57 - buyChargeStone;
           SelfUserGame = (UILabel_o *)j_il2cpp_value_box_0(int_TypeInfo, &v115, v67);
           v74 = (System_Int32_array **)SelfUserGame;
           if ( SelfUserGame )
           {
-            SelfUserGame = (UILabel_o *)sub_B70754(SelfUserGame, v58->obj.klass->_1.element_class);
+            SelfUserGame = (UILabel_o *)sub_B77684(SelfUserGame, v58->obj.klass->_1.element_class);
             if ( !SelfUserGame )
               goto LABEL_101;
           }
           if ( v58->max_length <= 1 )
             goto LABEL_100;
           v58->m_Items[1] = (Il2CppObject *)v74;
-          sub_B70630((BattleServantConfConponent_o *)&v58->m_Items[1], v74, v68, v69, v70, v71, v72, v73);
+          sub_B77560((BattleServantConfConponent_o *)&v58->m_Items[1], v74, v68, v69, v70, v71, v72, v73);
           v114 = v110 - buyFreeStone;
           SelfUserGame = (UILabel_o *)j_il2cpp_value_box_0(int_TypeInfo, &v114, v75);
           v82 = (System_Int32_array **)SelfUserGame;
           if ( SelfUserGame )
           {
-            SelfUserGame = (UILabel_o *)sub_B70754(SelfUserGame, v58->obj.klass->_1.element_class);
+            SelfUserGame = (UILabel_o *)sub_B77684(SelfUserGame, v58->obj.klass->_1.element_class);
             if ( !SelfUserGame )
               goto LABEL_101;
           }
           if ( v58->max_length <= 2 )
             goto LABEL_100;
           v58->m_Items[2] = (Il2CppObject *)v82;
-          sub_B70630((BattleServantConfConponent_o *)&v58->m_Items[2], v82, v76, v77, v78, v79, v80, v81);
+          sub_B77560((BattleServantConfConponent_o *)&v58->m_Items[2], v82, v76, v77, v78, v79, v80, v81);
           v113 = mDepth;
           SelfUserGame = (UILabel_o *)j_il2cpp_value_box_0(int_TypeInfo, &v113, v83);
           v90 = (System_Int32_array **)SelfUserGame;
           if ( SelfUserGame )
           {
-            SelfUserGame = (UILabel_o *)sub_B70754(SelfUserGame, v58->obj.klass->_1.element_class);
+            SelfUserGame = (UILabel_o *)sub_B77684(SelfUserGame, v58->obj.klass->_1.element_class);
             if ( !SelfUserGame )
               goto LABEL_101;
           }
           if ( v58->max_length <= 3 )
             goto LABEL_100;
           v58->m_Items[3] = (Il2CppObject *)v90;
-          sub_B70630((BattleServantConfConponent_o *)&v58->m_Items[3], v90, v84, v85, v86, v87, v88, v89);
+          sub_B77560((BattleServantConfConponent_o *)&v58->m_Items[3], v90, v84, v85, v86, v87, v88, v89);
           v112 = v57;
           SelfUserGame = (UILabel_o *)j_il2cpp_value_box_0(int_TypeInfo, &v112, v91);
           v98 = (System_Int32_array **)SelfUserGame;
           if ( SelfUserGame )
           {
-            SelfUserGame = (UILabel_o *)sub_B70754(SelfUserGame, v58->obj.klass->_1.element_class);
+            SelfUserGame = (UILabel_o *)sub_B77684(SelfUserGame, v58->obj.klass->_1.element_class);
             if ( !SelfUserGame )
               goto LABEL_101;
           }
           if ( v58->max_length <= 4 )
             goto LABEL_100;
           v58->m_Items[4] = (Il2CppObject *)v98;
-          sub_B70630((BattleServantConfConponent_o *)&v58->m_Items[4], v98, v92, v93, v94, v95, v96, v97);
+          sub_B77560((BattleServantConfConponent_o *)&v58->m_Items[4], v98, v92, v93, v94, v95, v96, v97);
           v111 = v110;
           SelfUserGame = (UILabel_o *)j_il2cpp_value_box_0(int_TypeInfo, &v111, v99);
           v106 = (System_Int32_array **)SelfUserGame;
           if ( SelfUserGame )
           {
-            SelfUserGame = (UILabel_o *)sub_B70754(SelfUserGame, v58->obj.klass->_1.element_class);
+            SelfUserGame = (UILabel_o *)sub_B77684(SelfUserGame, v58->obj.klass->_1.element_class);
             if ( !SelfUserGame )
             {
 LABEL_101:
-              v108 = sub_B7078C(SelfUserGame);
-              sub_B70738(v108, 0LL);
+              v108 = sub_B776BC(SelfUserGame);
+              sub_B77668(v108, 0LL);
             }
           }
           if ( v58->max_length <= 5 )
           {
 LABEL_100:
-            v107 = sub_B70798(SelfUserGame);
-            sub_B70738(v107, 0LL);
+            v107 = sub_B776C8(SelfUserGame);
+            sub_B77668(v107, 0LL);
           }
           v58->m_Items[5] = (Il2CppObject *)v106;
-          sub_B70630((BattleServantConfConponent_o *)&v58->m_Items[5], v106, v100, v101, v102, v103, v104, v105);
-          v46 = System_String__Format_44836892(format, v58, 0LL);
+          sub_B77560((BattleServantConfConponent_o *)&v58->m_Items[5], v106, v100, v101, v102, v103, v104, v105);
+          v46 = System_String__Format_44980660(format, v58, 0LL);
 LABEL_53:
           v47 = v46;
           DEFAULT_MESSAGE_OVERFLOW_METHOD = 1;
@@ -597,7 +597,7 @@ LABEL_54:
             return;
           }
           this->fields.callbackFunc = callback;
-          sub_B70630(
+          sub_B77560(
             (BattleServantConfConponent_o *)&this->fields.callbackFunc,
             (System_Int32_array **)callback,
             v48,
@@ -633,12 +633,12 @@ LABEL_54:
                   {
                     UILabel__set_text(stoneDataLabel, (System_String_o *)SelfUserGame, 0LL);
                     closeLabel = this->fields.closeLabel;
-                    SelfUserGame = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12556/*"STONE_PURCHASE_RESULT_CLOSE"*/, 0LL);
+                    SelfUserGame = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12620/*"STONE_PURCHASE_RESULT_CLOSE"*/, 0LL);
                     if ( closeLabel )
                     {
                       UILabel__set_text(closeLabel, (System_String_o *)SelfUserGame, 0LL);
                       this->fields.state = 1;
-                      v56 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+                      v56 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
                       System_Action___ctor(
                         v56,
                         (Il2CppObject *)this,
@@ -659,7 +659,7 @@ LABEL_54:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v16 = &StringLiteral_12563/*"STONE_PURCHASE_RESULT_WAIT"*/;
+          v16 = &StringLiteral_12627/*"STONE_PURCHASE_RESULT_WAIT"*/;
           goto LABEL_52;
         case 3:
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -667,7 +667,7 @@ LABEL_54:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v16 = &StringLiteral_12558/*"STONE_PURCHASE_RESULT_FAIL"*/;
+          v16 = &StringLiteral_12622/*"STONE_PURCHASE_RESULT_FAIL"*/;
           goto LABEL_52;
         case 4:
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -675,7 +675,7 @@ LABEL_54:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v16 = &StringLiteral_12562/*"STONE_PURCHASE_RESULT_SUSPEND"*/;
+          v16 = &StringLiteral_12626/*"STONE_PURCHASE_RESULT_SUSPEND"*/;
           goto LABEL_52;
         case 5:
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -683,7 +683,7 @@ LABEL_54:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v16 = &StringLiteral_1647/*"ACCOUNTING_ERROR_INITIALIZE_MESSAGE"*/;
+          v16 = &StringLiteral_1649/*"ACCOUNTING_ERROR_INITIALIZE_MESSAGE"*/;
           goto LABEL_52;
         case 6:
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -691,7 +691,7 @@ LABEL_54:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v16 = &StringLiteral_12557/*"STONE_PURCHASE_RESULT_DUPLICATE_TRANSACTION_MESSAGE"*/;
+          v16 = &StringLiteral_12621/*"STONE_PURCHASE_RESULT_DUPLICATE_TRANSACTION_MESSAGE"*/;
           goto LABEL_52;
         case 7:
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -699,7 +699,7 @@ LABEL_54:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v16 = &StringLiteral_12559/*"STONE_PURCHASE_RESULT_GOOGLE_PLAY_ACCOUNT_ID_ERROR"*/;
+          v16 = &StringLiteral_12623/*"STONE_PURCHASE_RESULT_GOOGLE_PLAY_ACCOUNT_ID_ERROR"*/;
 LABEL_52:
           v46 = LocalizationManager__Get((System_String_o *)*v16, 0LL);
           goto LABEL_53;
@@ -709,7 +709,7 @@ LABEL_52:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v47 = LocalizationManager__Get((System_String_o *)StringLiteral_12560/*"STONE_PURCHASE_RESULT_GOOGLE_PLAY_PENDING_AFTER_PURCHASE"*/, 0LL);
+          v47 = LocalizationManager__Get((System_String_o *)StringLiteral_12624/*"STONE_PURCHASE_RESULT_GOOGLE_PLAY_PENDING_AFTER_PURCHASE"*/, 0LL);
           DEFAULT_MESSAGE_FONT_SIZE = 24;
           goto LABEL_54;
         default:
@@ -717,7 +717,7 @@ LABEL_52:
           goto LABEL_54;
       }
     }
-    sub_B7076C(SelfUserGame, v12);
+    sub_B7769C(SelfUserGame, v12);
   }
 }
 
@@ -748,11 +748,11 @@ void __fastcall StonePurchaseNotificationMenu__OpenQueueable(
   System_Int32_array *v27; // x6
   System_Int32_array *v28; // x7
 
-  if ( (byte_4350DFF & 1) == 0 )
+  if ( (byte_438A573 & 1) == 0 )
   {
-    sub_B70694(&StonePurchaseNotificationMenu_DialogOpenQueue_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_StonePurchaseNotificationMenu_DialogOpenQueue__Add__);
-    byte_4350DFF = 1;
+    sub_B775C4(&StonePurchaseNotificationMenu_DialogOpenQueue_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_StonePurchaseNotificationMenu_DialogOpenQueue__Add__);
+    byte_438A573 = 1;
   }
   if ( (this->fields.state | 4) == 4 )
   {
@@ -769,12 +769,12 @@ void __fastcall StonePurchaseNotificationMenu__OpenQueueable(
   else
   {
     dialogOpenQueue = this->fields.dialogOpenQueue;
-    v14 = sub_B70764(StonePurchaseNotificationMenu_DialogOpenQueue_TypeInfo);
+    v14 = sub_B77694(StonePurchaseNotificationMenu_DialogOpenQueue_TypeInfo);
     StonePurchaseNotificationMenu_DialogOpenQueue___ctor((StonePurchaseNotificationMenu_DialogOpenQueue_o *)v14, 0LL);
     if ( !v14
       || (*(_DWORD *)(v14 + 16) = kind,
           *(_QWORD *)(v14 + 24) = callback,
-          sub_B70630(
+          sub_B77560(
             (BattleServantConfConponent_o *)(v14 + 24),
             (System_Int32_array **)callback,
             v17,
@@ -786,7 +786,7 @@ void __fastcall StonePurchaseNotificationMenu__OpenQueueable(
           *(_QWORD *)(v14 + 40) = actionOnOpening,
           *(_DWORD *)(v14 + 32) = buyFreeStone,
           *(_DWORD *)(v14 + 36) = buyChargeStone,
-          sub_B70630(
+          sub_B77560(
             (BattleServantConfConponent_o *)(v14 + 40),
             (System_Int32_array **)actionOnOpening,
             v23,
@@ -797,12 +797,12 @@ void __fastcall StonePurchaseNotificationMenu__OpenQueueable(
             v28),
           !dialogOpenQueue) )
     {
-      sub_B7076C(v15, v16);
+      sub_B7769C(v15, v16);
     }
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
       (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)dialogOpenQueue,
       (EventMissionProgressRequest_Argument_ProgressData_o *)v14,
-      (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_StonePurchaseNotificationMenu_DialogOpenQueue__Add__);
+      (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_StonePurchaseNotificationMenu_DialogOpenQueue__Add__);
   }
 }
 
@@ -811,12 +811,12 @@ System_String_o *__fastcall StonePurchaseNotificationMenu__get_closeBtnPath(
         StonePurchaseNotificationMenu_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4350E03 & 1) == 0 )
+  if ( (byte_438A577 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_4301/*"ConfirmWindow/CloseButton"*/);
-    byte_4350E03 = 1;
+    sub_B775C4(&StringLiteral_4353/*"ConfirmWindow/CloseButton"*/);
+    byte_438A577 = 1;
   }
-  return (System_String_o *)StringLiteral_4301/*"ConfirmWindow/CloseButton"*/;
+  return (System_String_o *)StringLiteral_4353/*"ConfirmWindow/CloseButton"*/;
 }
 
 
@@ -833,16 +833,16 @@ void __fastcall StonePurchaseNotificationMenu___c___cctor(const MethodInfo *meth
   Il2CppObject *v1; // x19
   struct StonePurchaseNotificationMenu___c_StaticFields *static_fields; // x0
 
-  if ( (byte_434F0BE & 1) == 0 )
+  if ( (byte_438869E & 1) == 0 )
   {
-    sub_B70694(&StonePurchaseNotificationMenu___c_TypeInfo);
-    byte_434F0BE = 1;
+    sub_B775C4(&StonePurchaseNotificationMenu___c_TypeInfo);
+    byte_438869E = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(StonePurchaseNotificationMenu___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(StonePurchaseNotificationMenu___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = StonePurchaseNotificationMenu___c_TypeInfo->static_fields;
   static_fields->__9 = (struct StonePurchaseNotificationMenu___c_o *)v1;
-  sub_B70630(static_fields);
+  sub_B77560(static_fields);
 }
 
 
@@ -860,7 +860,7 @@ int32_t __fastcall StonePurchaseNotificationMenu___c___Open_b__14_0(
         const MethodInfo *method)
 {
   if ( !q )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   return q->fields.chargeStone;
 }
 
@@ -871,6 +871,6 @@ int32_t __fastcall StonePurchaseNotificationMenu___c___Open_b__14_1(
         const MethodInfo *method)
 {
   if ( !q )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   return q->fields.freeStone;
 }

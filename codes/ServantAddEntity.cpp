@@ -1,13 +1,13 @@
 void __fastcall ServantAddEntity___ctor(ServantAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4352C29 & 1) == 0 )
+  if ( (byte_438C482 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_int___ctor__);
-    byte_4352C29 = 1;
+    sub_B775C4(&Method_DataEntityBase_int___ctor__);
+    byte_438C482 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -17,10 +17,10 @@ int32_t __fastcall ServantAddEntity__CreatePrimaryKey(ServantAddEntity_o *this, 
   __int64 v4; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v6; // 0:x0.16
 
-  if ( (byte_4352C25 & 1) == 0 )
+  if ( (byte_438C47E & 1) == 0 )
   {
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4352C25 = 1;
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_438C47E = 1;
   }
   v4 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
   v3 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
@@ -31,7 +31,7 @@ int32_t __fastcall ServantAddEntity__CreatePrimaryKey(ServantAddEntity_o *this, 
   }
   *(_QWORD *)&v6.fields.currentCryptoKey = v4;
   *(_QWORD *)&v6.fields.fakeValue = v3;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v6, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v6, 0LL);
 }
 
 
@@ -42,12 +42,12 @@ System_String_o *__fastcall ServantAddEntity__GetOverwriteServantShortName(
   System_String_o *result; // x0
   System_Xml_Schema_XmlSchemaObject_o *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4352C28 & 1) == 0 )
+  if ( (byte_438C481 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_B70694(&string_TypeInfo);
-    sub_B70694(&StringLiteral_21681/*"overWriteServantShortName"*/);
-    byte_4352C28 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_B775C4(&string_TypeInfo);
+    sub_B775C4(&StringLiteral_21778/*"overWriteServantShortName"*/);
+    byte_438C481 = 1;
   }
   value = 0LL;
   result = (System_String_o *)this->fields.script;
@@ -55,14 +55,14 @@ System_String_o *__fastcall ServantAddEntity__GetOverwriteServantShortName(
   {
     if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
             (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)result,
-            (System_Xml_XmlQualifiedName_o *)StringLiteral_21681/*"overWriteServantShortName"*/,
+            (System_Xml_XmlQualifiedName_o *)StringLiteral_21778/*"overWriteServantShortName"*/,
             &value,
-            (const MethodInfo_2F517E8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+            (const MethodInfo_2F7F3F8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       return 0LL;
     result = (System_String_o *)value;
     if ( value && (System_String_c *)value->klass != string_TypeInfo )
     {
-      sub_B70A60(value);
+      sub_B77990(value);
       return 0LL;
     }
   }
@@ -75,10 +75,10 @@ int32_t __fastcall ServantAddEntity__GetPresentDialogMessageId(ServantAddEntity_
   const MethodInfo *v2; // x3
   ServantAddMaster_c *v4; // x0
 
-  if ( (byte_4352C27 & 1) == 0 )
+  if ( (byte_438C480 & 1) == 0 )
   {
-    sub_B70694(&ServantAddMaster_TypeInfo);
-    byte_4352C27 = 1;
+    sub_B775C4(&ServantAddMaster_TypeInfo);
+    byte_438C480 = 1;
   }
   v4 = ServantAddMaster_TypeInfo;
   if ( (BYTE3(ServantAddMaster_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -103,11 +103,11 @@ int32_t __fastcall ServantAddEntity__GetScript(
   const MethodInfo *v11; // x1
   System_Xml_Schema_XmlSchemaObject_o *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4352C26 & 1) == 0 )
+  if ( (byte_438C47F & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_B70694(&long_TypeInfo);
-    byte_4352C26 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_B775C4(&long_TypeInfo);
+    byte_438C47F = 1;
   }
   value = 0LL;
   script = this->fields.script;
@@ -116,14 +116,14 @@ int32_t __fastcall ServantAddEntity__GetScript(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
           (System_Xml_XmlQualifiedName_o *)key,
           &value,
-          (const MethodInfo_2F517E8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_2F7F3F8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
     return defaultValue;
   }
   if ( !value )
-    sub_B7076C(0LL, v8);
+    sub_B7769C(0LL, v8);
   if ( value->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(value);
-  v10 = (ServantAddEntity_o *)sub_B70A60(value);
+  v10 = (ServantAddEntity_o *)sub_B77990(value);
   return ServantAddEntity__GetPresentDialogMessageId(v10, v11);
 }

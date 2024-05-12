@@ -4,19 +4,19 @@ void __fastcall BattleSelectCommandTypeWindow___cctor(const MethodInfo *method)
   struct BattleSelectCommandTypeWindow_StaticFields *static_fields; // x0
   System_RuntimeFieldHandle_o v3; // 0:w1.4
 
-  if ( (byte_434EC96 & 1) == 0 )
+  if ( (byte_4388267 & 1) == 0 )
   {
-    sub_B70694(&BattleSelectCommandTypeWindow_TypeInfo);
-    sub_B70694(&BattleCommand_TYPE___TypeInfo);
-    sub_B70694(&Field__PrivateImplementationDetails__DEC2809E6E374A6F8998DEF7721D410CA4D634F5B842BD3989C5CC94ED785DDB);
-    byte_434EC96 = 1;
+    sub_B775C4(&BattleSelectCommandTypeWindow_TypeInfo);
+    sub_B775C4(&BattleCommand_TYPE___TypeInfo);
+    sub_B775C4(&Field__PrivateImplementationDetails__DEC2809E6E374A6F8998DEF7721D410CA4D634F5B842BD3989C5CC94ED785DDB);
+    byte_4388267 = 1;
   }
-  v1 = (System_Array_o *)sub_B706AC(BattleCommand_TYPE___TypeInfo, 3LL);
+  v1 = (System_Array_o *)sub_B775DC(BattleCommand_TYPE___TypeInfo, 3LL);
   v3.fields.value = Field__PrivateImplementationDetails__DEC2809E6E374A6F8998DEF7721D410CA4D634F5B842BD3989C5CC94ED785DDB;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v1, v3, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v1, v3, 0LL);
   static_fields = BattleSelectCommandTypeWindow_TypeInfo->static_fields;
   static_fields->CommandTypeOrder = (struct BattleCommand_TYPE_array *)v1;
-  sub_B70630(static_fields);
+  sub_B77560(static_fields);
 }
 
 
@@ -36,7 +36,7 @@ void __fastcall BattleSelectCommandTypeWindow__Close(
 
   parentPanel = this->fields.parentPanel;
   if ( !parentPanel )
-    sub_B7076C(0LL, call);
+    sub_B7769C(0LL, call);
   UnityEngine_GameObject__SetActive(parentPanel, 0, 0LL);
   this->fields.isSelected = 1;
   BattleWindowComponent__Close((BattleWindowComponent_o *)this, call, 0LL);
@@ -73,12 +73,12 @@ System_Int32_array *__fastcall BattleSelectCommandTypeWindow__GetExcludeTdChange
   __int64 v5; // x1
   System_Int32_array *v6; // x20
 
-  if ( (byte_434EC91 & 1) == 0 )
+  if ( (byte_4388262 & 1) == 0 )
   {
-    sub_B70694(&int___TypeInfo);
-    byte_434EC91 = 1;
+    sub_B775C4(&int___TypeInfo);
+    byte_4388262 = 1;
   }
-  TreasureDevice = (TreasureDvcEntity_o *)sub_B706AC(int___TypeInfo, 0LL);
+  TreasureDevice = (TreasureDvcEntity_o *)sub_B775DC(int___TypeInfo, 0LL);
   if ( !svtData )
     goto LABEL_8;
   v6 = (System_Int32_array *)TreasureDevice;
@@ -88,7 +88,7 @@ System_Int32_array *__fastcall BattleSelectCommandTypeWindow__GetExcludeTdChange
     if ( TreasureDevice )
       return TreasureDvcEntity__GetExcludeTdChangeTypes(TreasureDevice, v6, 0LL);
 LABEL_8:
-    sub_B7076C(TreasureDevice, v5);
+    sub_B7769C(TreasureDevice, v5);
   }
   return v6;
 }
@@ -102,19 +102,19 @@ void __fastcall BattleSelectCommandTypeWindow__Open(
   UnityEngine_GameObject_o *parentPanel; // x0
   BattleWindowOuterClickComponent_OuterClickCall_o *v6; // x20
 
-  if ( (byte_434EC8F & 1) == 0 )
+  if ( (byte_4388260 & 1) == 0 )
   {
-    sub_B70694(&Method_BattleSelectCommandTypeWindow_onCloseButton__);
-    sub_B70694(&BattleWindowOuterClickComponent_OuterClickCall_TypeInfo);
-    byte_434EC8F = 1;
+    sub_B775C4(&Method_BattleSelectCommandTypeWindow_onCloseButton__);
+    sub_B775C4(&BattleWindowOuterClickComponent_OuterClickCall_TypeInfo);
+    byte_4388260 = 1;
   }
   parentPanel = this->fields.parentPanel;
   if ( !parentPanel )
-    sub_B7076C(0LL, call);
+    sub_B7769C(0LL, call);
   UnityEngine_GameObject__SetActive(parentPanel, 1, 0LL);
   this->fields.isSelected = 0;
   BattleWindowComponent__Open((BattleWindowComponent_o *)this, call, 0LL);
-  v6 = (BattleWindowOuterClickComponent_OuterClickCall_o *)sub_B70764(BattleWindowOuterClickComponent_OuterClickCall_TypeInfo);
+  v6 = (BattleWindowOuterClickComponent_OuterClickCall_o *)sub_B77694(BattleWindowOuterClickComponent_OuterClickCall_TypeInfo);
   BattleWindowOuterClickComponent_OuterClickCall___ctor(
     v6,
     (Il2CppObject *)this,
@@ -161,10 +161,10 @@ void __fastcall BattleSelectCommandTypeWindow__SelectServant(
   BattleSelectCommandTypeWindow_SelectServantCallBack_o *selectCallBack; // x0
   struct BattleServantData_o *battleServantData; // x8
 
-  if ( (byte_434EC94 & 1) == 0 )
+  if ( (byte_4388265 & 1) == 0 )
   {
-    sub_B70694(&SeManager_TypeInfo);
-    byte_434EC94 = 1;
+    sub_B775C4(&SeManager_TypeInfo);
+    byte_4388265 = 1;
   }
   if ( !this->fields.isSelected )
   {
@@ -194,7 +194,7 @@ void __fastcall BattleSelectCommandTypeWindow__SelectServant(
     {
       battleServantData = this->fields.battleServantData;
       if ( !battleServantData )
-        sub_B7076C(selectCallBack, v6);
+        sub_B7769C(selectCallBack, v6);
       BattleSelectCommandTypeWindow_SelectServantCallBack__Invoke(
         selectCallBack,
         battleServantData->fields.uniqueId,
@@ -211,7 +211,7 @@ void __fastcall BattleSelectCommandTypeWindow__SetCallBack(
         const MethodInfo *method)
 {
   this->fields.selectCallBack = callback;
-  sub_B70630(&this->fields.selectCallBack);
+  sub_B77560(&this->fields.selectCallBack);
 }
 
 
@@ -276,32 +276,32 @@ void __fastcall BattleSelectCommandTypeWindow__SetServantData(
   BattleCommandComponent_o *commandCard; // [xsp+8h] [xbp-58h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v64; // 0:x0.16
 
-  if ( (byte_434EC90 & 1) == 0 )
+  if ( (byte_4388261 & 1) == 0 )
   {
-    sub_B70694(&Method_BasicHelper_Any_int____69235616);
-    sub_B70694(&BattleSelectCommandTypeWindow_TypeInfo);
-    sub_B70694(&Method_System_Func_int__bool___ctor__);
-    sub_B70694(&System_Func_int__bool__TypeInfo);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&Method_BattleSelectCommandTypeWindow___c__DisplayClass19_0__SetServantData_b__0__);
-    sub_B70694(&BattleSelectCommandTypeWindow___c__DisplayClass19_0_TypeInfo);
-    sub_B70694(&StringLiteral_2476/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_NOW_TYPE"*/);
-    sub_B70694(&StringLiteral_2478/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_TITLE"*/);
-    byte_434EC90 = 1;
+    sub_B775C4(&Method_BasicHelper_Any_int____69468304);
+    sub_B775C4(&BattleSelectCommandTypeWindow_TypeInfo);
+    sub_B775C4(&Method_System_Func_int__bool___ctor__);
+    sub_B775C4(&System_Func_int__bool__TypeInfo);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&Method_BattleSelectCommandTypeWindow___c__DisplayClass19_0__SetServantData_b__0__);
+    sub_B775C4(&BattleSelectCommandTypeWindow___c__DisplayClass19_0_TypeInfo);
+    sub_B775C4(&StringLiteral_2522/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_NOW_TYPE"*/);
+    sub_B775C4(&StringLiteral_2524/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_TITLE"*/);
+    byte_4388261 = 1;
   }
   commandCard = 0LL;
   this->fields.battleServantData = bsData;
-  sub_B70630(&this->fields.battleServantData);
+  sub_B77560(&this->fields.battleServantData);
   title_label = this->fields.title_label;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  buffData = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2478/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_TITLE"*/, 0LL);
+  buffData = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2524/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_TITLE"*/, 0LL);
   if ( !bsData )
     goto LABEL_93;
   v9 = (System_String_o *)buffData;
@@ -324,7 +324,7 @@ void __fastcall BattleSelectCommandTypeWindow__SetServantData(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    buffData = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2476/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_NOW_TYPE"*/, 0LL);
+    buffData = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2522/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_NOW_TYPE"*/, 0LL);
     if ( !v12 )
       goto LABEL_93;
     UILabel__set_text(v12, (System_String_o *)buffData, 0LL);
@@ -356,7 +356,7 @@ void __fastcall BattleSelectCommandTypeWindow__SetServantData(
     }
     *(_QWORD *)&v64.fields.currentCryptoKey = v15;
     *(_QWORD *)&v64.fields.fakeValue = v14;
-    v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v64, 0LL);
+    v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v64, 0LL);
     buffData = (UnityEngine_GameObject_o *)ServantTreasureDvcMaster__getEntityFromIDID(
                                              v16,
                                              bsData->fields.treasuredvcId,
@@ -403,8 +403,8 @@ void __fastcall BattleSelectCommandTypeWindow__SetServantData(
   if ( v21 >= commandTypeObj->max_length )
   {
 LABEL_94:
-    v62 = sub_B70798(buffData);
-    sub_B70738(v62, 0LL);
+    v62 = sub_B776C8(buffData);
+    sub_B77668(v62, 0LL);
   }
   buffData = commandTypeObj->m_Items[v21];
   if ( !buffData )
@@ -430,7 +430,7 @@ LABEL_94:
     goto LABEL_93;
   UnityEngine_Transform__set_localScale(v26, *(UnityEngine_Vector3_o *)&v27, 0LL);
   v32 = BattleSelectCommandTypeWindow__GetExcludeTdChangeTypes(v30, bsData, v31);
-  v33 = (BattleSelectCommandTypeWindow___c__DisplayClass19_0_o *)sub_B70764(BattleSelectCommandTypeWindow___c__DisplayClass19_0_TypeInfo);
+  v33 = (BattleSelectCommandTypeWindow___c__DisplayClass19_0_o *)sub_B77694(BattleSelectCommandTypeWindow___c__DisplayClass19_0_TypeInfo);
   BattleSelectCommandTypeWindow___c__DisplayClass19_0___ctor(v33, 0LL);
   if ( !v33 )
     goto LABEL_93;
@@ -455,16 +455,16 @@ LABEL_94:
     buffData = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(v37, 0LL, 0LL);
     if ( ((unsigned __int8)buffData & 1) == 0 )
     {
-      v38 = (System_Func_int__bool__o *)sub_B70764(System_Func_int__bool__TypeInfo);
+      v38 = (System_Func_int__bool__o *)sub_B77694(System_Func_int__bool__TypeInfo);
       System_Func_int__bool____ctor(
         v38,
         (Il2CppObject *)v33,
         Method_BattleSelectCommandTypeWindow___c__DisplayClass19_0__SetServantData_b__0__,
-        (const MethodInfo_29A62E8 *)Method_System_Func_int__bool___ctor__);
-      buffData = (UnityEngine_GameObject_o *)BasicHelper__Any_int__29214704(
+        (const MethodInfo_29E3034 *)Method_System_Func_int__bool___ctor__);
+      buffData = (UnityEngine_GameObject_o *)BasicHelper__Any_int__29777580(
                                                v32,
                                                (System_Func_T__bool__o *)v38,
-                                               (const MethodInfo_1BDC7F0 *)Method_BasicHelper_Any_int____69235616);
+                                               (const MethodInfo_1C65EAC *)Method_BasicHelper_Any_int____69468304);
       v39 = this->fields.commandTypeObj;
       if ( !v39 )
         goto LABEL_93;
@@ -532,7 +532,7 @@ LABEL_94:
           goto LABEL_93;
         buffData = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                  buffData,
-                                                 (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
+                                                 (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
         commandCard = (BattleCommandComponent_o *)buffData;
         battleServantData = this->fields.battleServantData;
         v52 = BattleSelectCommandTypeWindow_TypeInfo;
@@ -582,7 +582,7 @@ LABEL_94:
     || (BYTE1(svtRoot->fields.onReposition) = 1, (buffData = (UnityEngine_GameObject_o *)this->fields.svtRoot) == 0LL) )
   {
 LABEL_93:
-    sub_B7076C(buffData, v8);
+    sub_B7769C(buffData, v8);
   }
   UIGrid__set_repositionNow((UIGrid_o *)buffData, 1, 0LL);
 }
@@ -598,13 +598,13 @@ void __fastcall BattleSelectCommandTypeWindow__SetTreasureDvcData(
   UnityEngine_Object_o *v8; // x22
   BattleCommandData_o *v9; // x22
 
-  if ( (byte_434EC92 & 1) == 0 )
+  if ( (byte_4388263 & 1) == 0 )
   {
-    sub_B70694(&BattleCommandData_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    this = (BattleSelectCommandTypeWindow_o *)sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_434EC92 = 1;
+    sub_B775C4(&BattleCommandData_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    this = (BattleSelectCommandTypeWindow_o *)sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4388263 = 1;
   }
   if ( !bsData )
     goto LABEL_16;
@@ -619,12 +619,12 @@ void __fastcall BattleSelectCommandTypeWindow__SetTreasureDvcData(
     if ( !this )
       goto LABEL_16;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-    this = (BattleSelectCommandTypeWindow_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (BattleSelectCommandTypeWindow_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !this )
       goto LABEL_16;
     DataManager__GetMasterData_WarQuestSelectionMaster_(
       (DataManager_o *)this,
-      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
     v8 = (UnityEngine_Object_o *)*commandCard;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -633,7 +633,7 @@ void __fastcall BattleSelectCommandTypeWindow__SetTreasureDvcData(
     }
     if ( UnityEngine_Object__op_Inequality(v8, 0LL, 0LL) )
     {
-      v9 = (BattleCommandData_o *)sub_B70764(BattleCommandData_TypeInfo);
+      v9 = (BattleCommandData_o *)sub_B77694(BattleCommandData_TypeInfo);
       BattleCommandData___ctor(v9, 0LL);
       if ( v9 )
       {
@@ -652,7 +652,7 @@ void __fastcall BattleSelectCommandTypeWindow__SetTreasureDvcData(
         }
       }
 LABEL_16:
-      sub_B7076C(this, bsData);
+      sub_B7769C(this, bsData);
     }
   }
 }
@@ -666,10 +666,10 @@ UnityEngine_GameObject_o *__fastcall BattleSelectCommandTypeWindow__get_closeBtn
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_434EC95 & 1) == 0 )
+  if ( (byte_4388266 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_434EC95 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4388266 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -681,7 +681,7 @@ UnityEngine_GameObject_o *__fastcall BattleSelectCommandTypeWindow__get_closeBtn
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v6 )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }
 
@@ -713,7 +713,7 @@ void __fastcall BattleSelectCommandTypeWindow__setInitialPos(
         *(UnityEngine_Vector3_o *)&v6 = UnityEngine_Vector3__get_zero(0LL),
         !transform) )
   {
-    sub_B7076C(gameObject, v4);
+    sub_B7769C(gameObject, v4);
   }
   UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&v6, 0LL);
   BattleWindowComponent__setInitialPos((BattleWindowComponent_o *)this, 0LL);
@@ -729,10 +729,10 @@ void __fastcall BattleSelectCommandTypeWindow__setUseClose(
   __int64 v6; // x1
   UnityEngine_Collider_o *v7; // x0
 
-  if ( (byte_434EC93 & 1) == 0 )
+  if ( (byte_4388264 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_434EC93 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4388264 = 1;
   }
   this->fields.useClose = flg;
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
@@ -745,7 +745,7 @@ void __fastcall BattleSelectCommandTypeWindow__setUseClose(
   {
     v7 = this->fields.cancelButton;
     if ( !v7 )
-      sub_B7076C(0LL, v6);
+      sub_B7769C(0LL, v6);
     UnityEngine_Collider__set_enabled(v7, flg, 0LL);
   }
 }
@@ -770,7 +770,7 @@ void __fastcall BattleSelectCommandTypeWindow_SelectServantCallBack___ctor(
   p_method = (BattleServantConfConponent_o *)&this->fields.method;
   p_method->monitor = *(void **)&method;
   p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B70630(
+  sub_B77560(
     p_method,
     (System_Int32_array **)object,
     *(System_String_array ***)&method,
@@ -798,15 +798,15 @@ System_IAsyncResult_o *__fastcall BattleSelectCommandTypeWindow_SelectServantCal
 
   v12 = cmdType;
   v13 = uniqueId;
-  if ( (byte_434F83A & 1) == 0 )
+  if ( (byte_4388E34 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    byte_434F83A = 1;
+    sub_B775C4(&int_TypeInfo);
+    byte_4388E34 = 1;
   }
   v11[2] = 0LL;
   v11[0] = j_il2cpp_value_box_0(int_TypeInfo, &v13, *(_QWORD *)&cmdType);
   v11[1] = j_il2cpp_value_box_0(int_TypeInfo, &v12, v9);
-  return (System_IAsyncResult_o *)sub_B70638(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_B77568(this, v11, callback, object);
 }
 
 
@@ -815,7 +815,7 @@ void __fastcall BattleSelectCommandTypeWindow_SelectServantCallBack__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7063C(result, 0LL, method);
+  sub_B7756C(result, 0LL, method);
 }
 
 
@@ -873,8 +873,8 @@ LABEL_5:
       v22 = *(_QWORD *)&v20->fields.extra_arg;
       v23 = *(void (__fastcall **)(_QWORD, _QWORD, __int64))&v20->fields.method_ptr;
       if ( *(__int16 *)(v22 + 72) == -1 )
-        sub_B70750(*(_QWORD *)&v20->fields.extra_arg, *(_QWORD *)&uniqueId);
-      if ( (sub_B706C4(v22) & 1) == 0 )
+        sub_B77680(*(_QWORD *)&v20->fields.extra_arg, *(_QWORD *)&uniqueId);
+      if ( (sub_B775F4(v22) & 1) == 0 )
         break;
       if ( *(_BYTE *)(v22 + 74) != 2 )
         goto LABEL_35;
@@ -885,8 +885,8 @@ LABEL_36:
     }
     if ( v21 && *(__int16 *)(v22 + 72) != -1 && (*(_BYTE *)(*v21 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v24 = sub_B706BC(v22);
-      v25 = sub_B70AC0(v22);
+      v24 = sub_B775EC(v22);
+      v25 = sub_B779F0(v22);
       if ( (v24 & 1) != 0 )
       {
         if ( (v25 & 1) != 0 )
@@ -910,7 +910,7 @@ LABEL_36:
           else
           {
 LABEL_34:
-            v18 = sub_B08590(v21, v27, v28);
+            v18 = sub_B0F4C0(v21, v27, v28);
           }
           v17 = *(_QWORD *)(v18 + 8);
         }
@@ -918,7 +918,7 @@ LABEL_34:
         {
           v17 = *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320);
         }
-        v19 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))sub_B70744(v17, v22);
+        v19 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))sub_B77674(v17, v22);
         (*v19)(v21, (unsigned int)uniqueId, (unsigned int)cmdType, v19);
       }
       else
@@ -944,7 +944,7 @@ LABEL_34:
           else
           {
 LABEL_11:
-            v16 = sub_B08590(v21, class_0, v11);
+            v16 = sub_B0F4C0(v21, class_0, v11);
           }
           (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))v16)(
             v21,
@@ -993,10 +993,10 @@ bool __fastcall BattleSelectCommandTypeWindow___c__DisplayClass19_0___SetServant
   __int64 i; // x9
   __int64 v9; // x0
 
-  if ( (byte_434F839 & 1) == 0 )
+  if ( (byte_4388E33 & 1) == 0 )
   {
-    sub_B70694(&BattleSelectCommandTypeWindow_TypeInfo);
-    byte_434F839 = 1;
+    sub_B775C4(&BattleSelectCommandTypeWindow_TypeInfo);
+    byte_4388E33 = 1;
   }
   v5 = BattleSelectCommandTypeWindow_TypeInfo;
   if ( (BYTE3(BattleSelectCommandTypeWindow_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1007,12 +1007,12 @@ bool __fastcall BattleSelectCommandTypeWindow___c__DisplayClass19_0___SetServant
   }
   CommandTypeOrder = v5->static_fields->CommandTypeOrder;
   if ( !CommandTypeOrder )
-    sub_B7076C(v5, *(_QWORD *)&x);
+    sub_B7769C(v5, *(_QWORD *)&x);
   i = this->fields.i;
   if ( (unsigned int)i >= CommandTypeOrder->max_length )
   {
-    v9 = sub_B70798(v5);
-    sub_B70738(v9, 0LL);
+    v9 = sub_B776C8(v5);
+    sub_B77668(v9, 0LL);
   }
   return CommandTypeOrder->m_Items[i + 1] == x;
 }

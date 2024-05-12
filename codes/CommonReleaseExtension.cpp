@@ -10,12 +10,12 @@ bool __fastcall CommonReleaseExtension__IsOpenConsiderBeforeClearQuest(
   __int64 v10; // x1
   const MethodInfo *v11; // x4
 
-  if ( (byte_434DFC4 & 1) == 0 )
+  if ( (byte_4387586 & 1) == 0 )
   {
-    sub_B70694(&CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQuest_TypeInfo);
-    byte_434DFC4 = 1;
+    sub_B775C4(&CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQuest_TypeInfo);
+    byte_4387586 = 1;
   }
-  v7 = (CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQuest_o *)sub_B70764(CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQuest_TypeInfo);
+  v7 = (CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQuest_o *)sub_B77694(CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQuest_TypeInfo);
   CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQuest___ctor(
     v7,
     beforeClearQuestId,
@@ -23,7 +23,7 @@ bool __fastcall CommonReleaseExtension__IsOpenConsiderBeforeClearQuest(
     0LL);
   master = CommonReleaseExtension__get_master(v8);
   if ( !master )
-    sub_B7076C(0LL, v10);
+    sub_B7769C(0LL, v10);
   return CommonReleaseMaster__IsOpen(master, commonReleaseId, (CommonReleaseCondOverwriter_o *)v7, 0, v11);
 }
 
@@ -33,18 +33,18 @@ CommonReleaseMaster_o *__fastcall CommonReleaseExtension__get_master(const Metho
   WebViewManager_o *Instance; // x0
   __int64 v2; // x1
 
-  if ( (byte_434DFC3 & 1) == 0 )
+  if ( (byte_4387585 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_434DFC3 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4387585 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v2);
+    sub_B7769C(0LL, v2);
   return (CommonReleaseMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                     (DataManager_o *)Instance,
-                                    (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
+                                    (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
 }
 
 
@@ -65,13 +65,13 @@ bool __fastcall CommonReleaseExtension_CommonReleaseCondOverwriterBase__IsOpen(
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_434FAAE & 1) == 0 )
+  if ( (byte_43890A8 & 1) == 0 )
   {
-    this = (CommonReleaseExtension_CommonReleaseCondOverwriterBase_o *)sub_B70694(&CondType_TypeInfo);
-    byte_434FAAE = 1;
+    this = (CommonReleaseExtension_CommonReleaseCondOverwriterBase_o *)sub_B775C4(&CondType_TypeInfo);
+    byte_43890A8 = 1;
   }
   if ( !entity )
-    sub_B7076C(this, entity);
+    sub_B7769C(this, entity);
   condType = entity->fields.condType;
   condId = entity->fields.condId;
   condNum = entity->fields.condNum;
@@ -104,7 +104,7 @@ bool __fastcall CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQue
   int32_t condId; // w21
   int32_t beforeClearQuestId; // w20
   _BOOL4 isCheckResetFlag; // w19
-  bool IsQuestClear_24296868; // w0
+  bool IsQuestClear_24699280; // w0
   int32_t v13; // w21
   int32_t v14; // w20
   _BOOL4 v15; // w19
@@ -118,10 +118,10 @@ bool __fastcall CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQue
   _BOOL4 v23; // w19
 
   v4 = this;
-  if ( (byte_434FAAF & 1) == 0 )
+  if ( (byte_43890A9 & 1) == 0 )
   {
-    this = (CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQuest_o *)sub_B70694(&CondType_TypeInfo);
-    byte_434FAAF = 1;
+    this = (CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQuest_o *)sub_B775C4(&CondType_TypeInfo);
+    byte_43890A9 = 1;
   }
   if ( !v4->fields.originalCommonReleaseId )
   {
@@ -149,15 +149,15 @@ bool __fastcall CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQue
       isCheckResetFlag = v4->fields.isCheckResetFlag;
       if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-      IsQuestClear_24296868 = CondType__IsQuestClear_24296868(condId, beforeClearQuestId, isCheckResetFlag, 0LL);
-      return !IsQuestClear_24296868;
+      IsQuestClear_24699280 = CondType__IsQuestClear_24699280(condId, beforeClearQuestId, isCheckResetFlag, 0LL);
+      return !IsQuestClear_24699280;
     }
     v13 = entity->fields.condId;
     v14 = v4->fields.beforeClearQuestId;
     v15 = v4->fields.isCheckResetFlag;
     if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    return CondType__IsQuestClear_24296868(v13, v14, v15, 0LL);
+    return CondType__IsQuestClear_24699280(v13, v14, v15, 0LL);
   }
   else
   {
@@ -177,7 +177,7 @@ bool __fastcall CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQue
                      0,
                      0LL);
 LABEL_36:
-          sub_B7076C(this, entity);
+          sub_B7769C(this, entity);
         }
         return CommonReleaseExtension_CommonReleaseCondOverwriterBase__IsOpen(
                  (CommonReleaseExtension_CommonReleaseCondOverwriterBase_o *)this,
@@ -190,8 +190,8 @@ LABEL_36:
       v23 = v4->fields.isCheckResetFlag;
       if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-      IsQuestClear_24296868 = CondType__IsQuestPhaseClear_24354440(v21, condNum, v22, v23, 0LL);
-      return !IsQuestClear_24296868;
+      IsQuestClear_24699280 = CondType__IsQuestPhaseClear_24756852(v21, condNum, v22, v23, 0LL);
+      return !IsQuestClear_24699280;
     }
     v17 = entity->fields.condId;
     v16 = entity->fields.condNum;
@@ -199,6 +199,6 @@ LABEL_36:
     v19 = v4->fields.isCheckResetFlag;
     if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    return CondType__IsQuestPhaseClear_24354440(v17, v16, v18, v19, 0LL);
+    return CondType__IsQuestPhaseClear_24756852(v17, v16, v18, v19, 0LL);
   }
 }

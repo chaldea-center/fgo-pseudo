@@ -14,7 +14,7 @@ CharaGraphFilterLogicBase_o *__fastcall CharaGraphListViewPatternBase__CreateFil
   if ( !SortOwner_k__BackingField
     || (this = (CharaGraphListViewPatternBase_o *)SortOwner_k__BackingField->fields._CurrentSortManageUnit_k__BackingField) == 0LL )
   {
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   return (CharaGraphFilterLogicBase_o *)((__int64 (__fastcall *)(CharaGraphListViewPatternBase_o *, Il2CppMethodPointer))this->klass->vtable._10_GetItemModifyArgs.method)(
                                           this,
@@ -32,7 +32,7 @@ CharaGraphSortLogicBase_o *__fastcall CharaGraphListViewPatternBase__CreateSortL
   if ( !SortOwner_k__BackingField
     || (this = (CharaGraphListViewPatternBase_o *)SortOwner_k__BackingField->fields._CurrentSortManageUnit_k__BackingField) == 0LL )
   {
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   return (CharaGraphSortLogicBase_o *)((__int64 (__fastcall *)(CharaGraphListViewPatternBase_o *, Il2CppMethodPointer))this->klass->vtable._9_GetItemDrawPattern.method)(
                                         this,
@@ -54,12 +54,12 @@ CharaGraphListViewItemDrawPatternBase_o *__fastcall CharaGraphListViewPatternBas
 {
   Il2CppObject *v2; // x19
 
-  if ( (byte_4354A39 & 1) == 0 )
+  if ( (byte_438E2F8 & 1) == 0 )
   {
-    sub_B70694(&CharaGraphListViewItemDrawPatternDefault_TypeInfo);
-    byte_4354A39 = 1;
+    sub_B775C4(&CharaGraphListViewItemDrawPatternDefault_TypeInfo);
+    byte_438E2F8 = 1;
   }
-  v2 = (Il2CppObject *)sub_B70764(CharaGraphListViewItemDrawPatternDefault_TypeInfo);
+  v2 = (Il2CppObject *)sub_B77694(CharaGraphListViewItemDrawPatternDefault_TypeInfo);
   System_Object___ctor(v2, 0LL);
   return (CharaGraphListViewItemDrawPatternBase_o *)v2;
 }
@@ -71,12 +71,12 @@ CharaGraphDefine_CharaGraphItemBulkModifyArgs_o *__fastcall CharaGraphListViewPa
 {
   __int64 v2; // x19
 
-  if ( (byte_4354A3A & 1) == 0 )
+  if ( (byte_438E2F9 & 1) == 0 )
   {
-    sub_B70694(&CharaGraphDefine_CharaGraphItemBulkModifyArgs_TypeInfo);
-    byte_4354A3A = 1;
+    sub_B775C4(&CharaGraphDefine_CharaGraphItemBulkModifyArgs_TypeInfo);
+    byte_438E2F9 = 1;
   }
-  v2 = sub_B70764(CharaGraphDefine_CharaGraphItemBulkModifyArgs_TypeInfo);
+  v2 = sub_B77694(CharaGraphDefine_CharaGraphItemBulkModifyArgs_TypeInfo);
   System_Object___ctor((Il2CppObject *)v2, 0LL);
   *(_BYTE *)(v2 + 16) = 0;
   return (CharaGraphDefine_CharaGraphItemBulkModifyArgs_o *)v2;
@@ -93,19 +93,19 @@ ListViewSort_o *__fastcall CharaGraphListViewPatternBase__GetListViewSort(
   if ( !SortOwner_k__BackingField
     || (this = (CharaGraphListViewPatternBase_o *)SortOwner_k__BackingField->fields._CurrentSortManageUnit_k__BackingField) == 0LL )
   {
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   return CharaGraphSortManageUnitBase__get_SortInfo((CharaGraphSortManageUnitBase_o *)this, method);
 }
 
 
 UserServantMaster_o *__fastcall CharaGraphListViewPatternBase__GetMaster_UserServantMaster_(
-        const MethodInfo_1BE2AA4 *method)
+        const MethodInfo_1C6C160 *method)
 {
-  if ( (byte_4353FB8 & 1) == 0 )
+  if ( (byte_438D994 & 1) == 0 )
   {
-    sub_B70694(&DataManager_TypeInfo);
-    byte_4353FB8 = 1;
+    sub_B775C4(&DataManager_TypeInfo);
+    byte_438D994 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
@@ -147,7 +147,7 @@ int32_t __fastcall CharaGraphListViewPatternBase__get_FilterKind(
   if ( !SortOwner_k__BackingField
     || (this = (CharaGraphListViewPatternBase_o *)SortOwner_k__BackingField->fields._CurrentSortManageUnit_k__BackingField) == 0LL )
   {
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   return ((__int64 (__fastcall *)(CharaGraphListViewPatternBase_o *, Il2CppMethodPointer))this->klass->vtable._7_get_FilterKind.method)(
            this,
@@ -176,7 +176,7 @@ CharaGraphDefine_CharaGraphItemBulkModifyArgs_o *__fastcall CharaGraphListViewPa
                                                                                      this,
                                                                                      this->klass->vtable._11_GetBonusEventIds.methodPtr);
     this->fields.itemBulkModifyArgs = itemBulkModifyArgs;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)p_itemBulkModifyArgs,
       (System_Int32_array **)itemBulkModifyArgs,
       v5,
@@ -211,7 +211,7 @@ CharaGraphListViewItemDrawPatternBase_o *__fastcall CharaGraphListViewPatternBas
                                                                           this,
                                                                           this->klass->vtable._10_GetItemModifyArgs.methodPtr);
     this->fields.itemDrawPattern = itemDrawPattern;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)p_itemDrawPattern,
       (System_Int32_array **)itemDrawPattern,
       v5,
@@ -243,7 +243,7 @@ int32_t __fastcall CharaGraphListViewPatternBase__get_SortKind(
   if ( !SortOwner_k__BackingField
     || (this = (CharaGraphListViewPatternBase_o *)SortOwner_k__BackingField->fields._CurrentSortManageUnit_k__BackingField) == 0LL )
   {
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   return ((__int64 (__fastcall *)(CharaGraphListViewPatternBase_o *, Il2CppMethodPointer))this->klass->vtable._8_get_SortKind.method)(
            this,
@@ -271,7 +271,7 @@ void __fastcall CharaGraphListViewPatternBase__set_EventValSetupInfo(
   System_Int32_array *v7; // x7
 
   this->fields._EventValSetupInfo_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._EventValSetupInfo_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -295,7 +295,7 @@ void __fastcall CharaGraphListViewPatternBase__set_RootInfo(
   System_Int32_array *v7; // x7
 
   this->fields._RootInfo_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._RootInfo_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -319,7 +319,7 @@ void __fastcall CharaGraphListViewPatternBase__set_SortOwner(
   System_Int32_array *v7; // x7
 
   this->fields._SortOwner_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)value,
     (System_String_array **)method,

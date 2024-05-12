@@ -29,7 +29,7 @@ void __fastcall ServantAssetArgs___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !svtData )
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   this->fields._SvtId_k__BackingField = BattleServantData__getSvtId(svtData, 0LL);
   this->fields._CommandImageSvtId_k__BackingField = BattleServantData__GetCommandImageSvtId(svtData, 0LL);
   this->fields._DispImageSvtId_k__BackingField = BattleServantData__GetDispImageSvtId(svtData, 0LL);
@@ -43,7 +43,7 @@ void __fastcall ServantAssetArgs___ctor(
   this->fields._AppearanceId_k__BackingField = BattleServantData__getAppearanceId(svtData, 0LL);
   CommandCodeIds = BattleServantData__GetCommandCodeIds(svtData, 0LL);
   this->fields._CommandCodeIds_k__BackingField = CommandCodeIds;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._CommandCodeIds_k__BackingField,
     (System_Int32_array **)CommandCodeIds,
     v8,
@@ -54,7 +54,7 @@ void __fastcall ServantAssetArgs___ctor(
     v13);
   skillInfoList = svtData->fields.skillInfoList;
   this->fields._skillList_k__BackingField = skillInfoList;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._skillList_k__BackingField,
     (System_Int32_array **)skillInfoList,
     v15,
@@ -65,7 +65,7 @@ void __fastcall ServantAssetArgs___ctor(
     v20);
   deckSvt = svtData->fields.deckSvt;
   this->fields._deckSvt_k__BackingField = deckSvt;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._deckSvt_k__BackingField,
     (System_Int32_array **)deckSvt,
     v22,
@@ -77,7 +77,7 @@ void __fastcall ServantAssetArgs___ctor(
 }
 
 
-void __fastcall ServantAssetArgs___ctor_26964072(
+void __fastcall ServantAssetArgs___ctor_27414860(
         ServantAssetArgs_o *this,
         int32_t svtId,
         int32_t limitCount,
@@ -102,12 +102,12 @@ System_String_o *__fastcall ServantAssetArgs__GenerateUniqueKey(
         System_String_array *para,
         const MethodInfo *method)
 {
-  if ( (byte_4352C42 & 1) == 0 )
+  if ( (byte_438C49B & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_16127/*"_"*/);
-    byte_4352C42 = 1;
+    sub_B775C4(&StringLiteral_16197/*"_"*/);
+    byte_438C49B = 1;
   }
-  return System_String__Join((System_String_o *)StringLiteral_16127/*"_"*/, para, 0LL);
+  return System_String__Join((System_String_o *)StringLiteral_16197/*"_"*/, para, 0LL);
 }
 
 
@@ -232,91 +232,91 @@ System_String_o *__fastcall ServantAssetArgs__get_UniqueKey(ServantAssetArgs_o *
   __int64 v60; // x0
   int32_t SvtId_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4352C41 & 1) == 0 )
+  if ( (byte_438C49A & 1) == 0 )
   {
-    sub_B70694(&string___TypeInfo);
-    byte_4352C41 = 1;
+    sub_B775C4(&string___TypeInfo);
+    byte_438C49A = 1;
   }
   SvtId_k__BackingField = 0;
   p_uniqueKey = (BattleServantConfConponent_o *)&this->fields.uniqueKey;
   if ( System_String__IsNullOrEmpty(this->fields.uniqueKey, 0LL) )
   {
-    v4 = sub_B706AC(string___TypeInfo, 6LL);
+    v4 = sub_B775DC(string___TypeInfo, 6LL);
     SvtId_k__BackingField = this->fields._SvtId_k__BackingField;
     v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
     if ( !v4 )
-      sub_B7076C(v5, v6);
+      sub_B7769C(v5, v6);
     v13 = (System_Int32_array **)v5;
-    if ( !v5 || (v5 = (System_String_o *)sub_B70754(v5, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0LL )
+    if ( !v5 || (v5 = (System_String_o *)sub_B77684(v5, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0LL )
     {
       if ( !*(_DWORD *)(v4 + 24) )
         goto LABEL_25;
       *(_QWORD *)(v4 + 32) = v13;
-      sub_B70630((BattleServantConfConponent_o *)(v4 + 32), v13, v7, v8, v9, v10, v11, v12);
+      sub_B77560((BattleServantConfConponent_o *)(v4 + 32), v13, v7, v8, v9, v10, v11, v12);
       SvtId_k__BackingField = this->fields._CommandImageSvtId_k__BackingField;
       v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
       v20 = (System_Int32_array **)v5;
-      if ( !v5 || (v5 = (System_String_o *)sub_B70754(v5, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0LL )
+      if ( !v5 || (v5 = (System_String_o *)sub_B77684(v5, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0LL )
       {
         if ( *(_DWORD *)(v4 + 24) <= 1u )
           goto LABEL_25;
         *(_QWORD *)(v4 + 40) = v20;
-        sub_B70630((BattleServantConfConponent_o *)(v4 + 40), v20, v14, v15, v16, v17, v18, v19);
+        sub_B77560((BattleServantConfConponent_o *)(v4 + 40), v20, v14, v15, v16, v17, v18, v19);
         SvtId_k__BackingField = this->fields._DispImageSvtId_k__BackingField;
         v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
         v27 = (System_Int32_array **)v5;
-        if ( !v5 || (v5 = (System_String_o *)sub_B70754(v5, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0LL )
+        if ( !v5 || (v5 = (System_String_o *)sub_B77684(v5, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0LL )
         {
           if ( *(_DWORD *)(v4 + 24) <= 2u )
             goto LABEL_25;
           *(_QWORD *)(v4 + 48) = v27;
-          sub_B70630((BattleServantConfConponent_o *)(v4 + 48), v27, v21, v22, v23, v24, v25, v26);
+          sub_B77560((BattleServantConfConponent_o *)(v4 + 48), v27, v21, v22, v23, v24, v25, v26);
           SvtId_k__BackingField = this->fields._DispLimitCount_k__BackingField;
           v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
           v34 = (System_Int32_array **)v5;
-          if ( !v5 || (v5 = (System_String_o *)sub_B70754(v5, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0LL )
+          if ( !v5 || (v5 = (System_String_o *)sub_B77684(v5, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0LL )
           {
             if ( *(_DWORD *)(v4 + 24) <= 3u )
               goto LABEL_25;
             *(_QWORD *)(v4 + 56) = v34;
-            sub_B70630((BattleServantConfConponent_o *)(v4 + 56), v34, v28, v29, v30, v31, v32, v33);
+            sub_B77560((BattleServantConfConponent_o *)(v4 + 56), v34, v28, v29, v30, v31, v32, v33);
             SvtId_k__BackingField = this->fields._OverwriteSvtVoiceId_k__BackingField;
             v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
             v41 = (System_Int32_array **)v5;
-            if ( !v5 || (v5 = (System_String_o *)sub_B70754(v5, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0LL )
+            if ( !v5 || (v5 = (System_String_o *)sub_B77684(v5, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0LL )
             {
               if ( *(_DWORD *)(v4 + 24) <= 4u )
                 goto LABEL_25;
               *(_QWORD *)(v4 + 64) = v41;
-              sub_B70630((BattleServantConfConponent_o *)(v4 + 64), v41, v35, v36, v37, v38, v39, v40);
+              sub_B77560((BattleServantConfConponent_o *)(v4 + 64), v41, v35, v36, v37, v38, v39, v40);
               SvtId_k__BackingField = this->fields._AppearanceId_k__BackingField;
               v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
               v48 = (System_Int32_array **)v5;
-              if ( !v5 || (v5 = (System_String_o *)sub_B70754(v5, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0LL )
+              if ( !v5 || (v5 = (System_String_o *)sub_B77684(v5, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0LL )
               {
                 if ( *(_DWORD *)(v4 + 24) > 5u )
                 {
                   *(_QWORD *)(v4 + 72) = v48;
-                  sub_B70630((BattleServantConfConponent_o *)(v4 + 72), v48, v42, v43, v44, v45, v46, v47);
+                  sub_B77560((BattleServantConfConponent_o *)(v4 + 72), v48, v42, v43, v44, v45, v46, v47);
                   UniqueKey = (System_Int32_array **)ServantAssetArgs__GenerateUniqueKey(
                                                        v49,
                                                        (System_String_array *)v4,
                                                        v50);
                   p_uniqueKey->klass = (BattleServantConfConponent_c *)UniqueKey;
-                  sub_B70630(p_uniqueKey, UniqueKey, v52, v53, v54, v55, v56, v57);
+                  sub_B77560(p_uniqueKey, UniqueKey, v52, v53, v54, v55, v56, v57);
                   return (System_String_o *)p_uniqueKey->klass;
                 }
 LABEL_25:
-                v59 = sub_B70798(v5);
-                sub_B70738(v59, 0LL);
+                v59 = sub_B776C8(v5);
+                sub_B77668(v59, 0LL);
               }
             }
           }
         }
       }
     }
-    v60 = sub_B7078C(v5);
-    sub_B70738(v60, 0LL);
+    v60 = sub_B776BC(v5);
+    sub_B77668(v60, 0LL);
   }
   return (System_String_o *)p_uniqueKey->klass;
 }
@@ -378,7 +378,7 @@ void __fastcall ServantAssetArgs__set_CommandCodeIds(
   System_Int32_array *v7; // x7
 
   this->fields._CommandCodeIds_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._CommandCodeIds_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -468,7 +468,7 @@ void __fastcall ServantAssetArgs__set_deckSvt(
   System_Int32_array *v7; // x7
 
   this->fields._deckSvt_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._deckSvt_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -492,7 +492,7 @@ void __fastcall ServantAssetArgs__set_skillList(
   System_Int32_array *v7; // x7
 
   this->fields._skillList_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._skillList_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

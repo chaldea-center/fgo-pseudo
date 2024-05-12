@@ -7,22 +7,22 @@ System_Action_o *__fastcall SyncWidgetFromUILabel__ConvertTypeToAction(
   __int64 *v6; // x8
   System_Action_o *v7; // x20
 
-  if ( (byte_434EDF3 & 1) == 0 )
+  if ( (byte_43882EB & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_SyncWidgetFromUILabel__ConvertTypeToAction_b__3_0__);
-    sub_B70694(&Method_SyncWidgetFromUILabel__ConvertTypeToAction_b__3_1__);
-    byte_434EDF3 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_SyncWidgetFromUILabel__ConvertTypeToAction_b__3_0__);
+    sub_B775C4(&Method_SyncWidgetFromUILabel__ConvertTypeToAction_b__3_1__);
+    byte_43882EB = 1;
   }
   if ( type == 5 )
   {
-    v5 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     v6 = &Method_SyncWidgetFromUILabel__ConvertTypeToAction_b__3_1__;
     goto LABEL_7;
   }
   if ( type == 4 )
   {
-    v5 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     v6 = &Method_SyncWidgetFromUILabel__ConvertTypeToAction_b__3_0__;
 LABEL_7:
     v7 = v5;
@@ -37,10 +37,10 @@ bool __fastcall SyncWidgetFromUILabel__DisabledSync(SyncWidgetFromUILabel_o *thi
 {
   UnityEngine_Object_o *syncFromLabel; // x19
 
-  if ( (byte_434EDF2 & 1) == 0 )
+  if ( (byte_43882EA & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_434EDF2 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_43882EA = 1;
   }
   syncFromLabel = (UnityEngine_Object_o *)this->fields.syncFromLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -58,10 +58,10 @@ void __fastcall SyncWidgetFromUILabel__InitSync(SyncWidgetFromUILabel_o *this, c
   __int64 v4; // x11
   struct UIWidget_o *v5; // x1
 
-  if ( (byte_434EDF1 & 1) == 0 )
+  if ( (byte_43882E9 & 1) == 0 )
   {
-    sub_B70694(&UILabel_TypeInfo);
-    byte_434EDF1 = 1;
+    sub_B775C4(&UILabel_TypeInfo);
+    byte_43882E9 = 1;
   }
   syncFrom = this->fields.syncFrom;
   if ( syncFrom
@@ -77,7 +77,7 @@ void __fastcall SyncWidgetFromUILabel__InitSync(SyncWidgetFromUILabel_o *this, c
     v5 = 0LL;
   }
   this->fields.syncFromLabel = (struct UILabel_o *)v5;
-  sub_B70630(&this->fields.syncFromLabel);
+  sub_B77560(&this->fields.syncFromLabel);
 }
 
 
@@ -95,7 +95,7 @@ void __fastcall SyncWidgetFromUILabel___ConvertTypeToAction_b__3_0(
   if ( !syncFromLabel
     || (self = this->fields.self, LODWORD(v5) = *(_QWORD *)&UILabel__get_printedSize(syncFromLabel, 0LL), !self) )
   {
-    sub_B7076C(syncFromLabel, method);
+    sub_B7769C(syncFromLabel, method);
   }
   v6 = v5 + (float)(this->fields.blankSize.fields.x + this->fields.blankSize.fields.x);
   if ( v6 == INFINITY )
@@ -118,7 +118,7 @@ void __fastcall SyncWidgetFromUILabel___ConvertTypeToAction_b__3_1(
 
   syncFromLabel = this->fields.syncFromLabel;
   if ( !syncFromLabel || (self = this->fields.self, printedSize = UILabel__get_printedSize(syncFromLabel, 0LL), !self) )
-    sub_B7076C(syncFromLabel, method);
+    sub_B7769C(syncFromLabel, method);
   v6 = printedSize.fields.y + (float)(this->fields.blankSize.fields.y + this->fields.blankSize.fields.y);
   if ( v6 == INFINITY )
     v7 = -v6;

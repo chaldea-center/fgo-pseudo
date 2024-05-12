@@ -10,10 +10,10 @@ void __fastcall SetBoxGachaResourceControl__ClickMultiGacha(
 {
   SetBoxGachaResourceControl_ClickDelegate_o *clickCallbackFunc; // x0
 
-  if ( (byte_4354149 & 1) == 0 )
+  if ( (byte_438DA07 & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4354149 = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438DA07 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -28,10 +28,10 @@ void __fastcall SetBoxGachaResourceControl__ClickOneGacha(SetBoxGachaResourceCon
 {
   SetBoxGachaResourceControl_ClickDelegate_o *clickCallbackFunc; // x0
 
-  if ( (byte_4354148 & 1) == 0 )
+  if ( (byte_438DA06 & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4354148 = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438DA06 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -54,10 +54,10 @@ void __fastcall SetBoxGachaResourceControl__SetLimitReset(
   struct UICommonButton_o *v7; // x8
   unsigned __int128 v8; // [xsp+0h] [xbp-30h] BYREF
 
-  if ( (byte_435414A & 1) == 0 )
+  if ( (byte_438DA08 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_362/*"#4C4C4C"*/);
-    byte_435414A = 1;
+    sub_B775C4(&StringLiteral_362/*"#4C4C4C"*/);
+    byte_438DA08 = 1;
   }
   v8 = 0uLL;
   oneBoxGachaBtn = (UnityEngine_Behaviour_o *)this->fields.oneBoxGachaBtn;
@@ -124,7 +124,7 @@ void __fastcall SetBoxGachaResourceControl__SetLimitReset(
         (oneBoxGachaBtn = (UnityEngine_Behaviour_o *)this->fields.boxGachaDetailBtn) == 0LL) )
   {
 LABEL_18:
-    sub_B7076C(oneBoxGachaBtn, isReset);
+    sub_B7769C(oneBoxGachaBtn, isReset);
   }
   ((void (__fastcall *)(UnityEngine_Behaviour_o *, bool, void *))oneBoxGachaBtn->klass[1]._1.namespaze)(
     oneBoxGachaBtn,
@@ -159,7 +159,7 @@ void __fastcall SetBoxGachaResourceControl__init(
         (this = (SetBoxGachaResourceControl_o *)v4->fields.multiBoxGachaInfo) == 0LL) )
   {
 LABEL_7:
-    sub_B7076C(this, boxGachaEnt);
+    sub_B7769C(this, boxGachaEnt);
   }
   BoxGachaItemComponent__Set(
     (BoxGachaItemComponent_o *)this,
@@ -188,13 +188,13 @@ void __fastcall SetBoxGachaResourceControl__setBoxGachaItemInfo(
   UISprite_o *multiPoint1DigitNumImg; // x21
   UISprite_o *multiPoint3DigitNumImg; // x19
 
-  if ( (byte_4354147 & 1) == 0 )
+  if ( (byte_438DA05 & 1) == 0 )
   {
-    sub_B70694(&BoxGachaUtility_TypeInfo);
-    byte_4354147 = 1;
+    sub_B775C4(&BoxGachaUtility_TypeInfo);
+    byte_438DA05 = 1;
   }
   this->fields.clickCallbackFunc = callback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.clickCallbackFunc,
     (System_Int32_array **)callback,
     (System_String_array **)callback,
@@ -248,7 +248,7 @@ void __fastcall SetBoxGachaResourceControl__setBoxGachaItemInfo(
       }
     }
 LABEL_20:
-    sub_B7076C(oneBoxGachaObj, v11);
+    sub_B7769C(oneBoxGachaObj, v11);
   }
   oneBoxGachaObj = this->fields.multiBoxGachaObj;
   if ( !oneBoxGachaObj )
@@ -299,7 +299,7 @@ void __fastcall SetBoxGachaResourceControl_ClickDelegate___ctor(
   p_method = (BattleServantConfConponent_o *)&this->fields.method;
   p_method->monitor = *(void **)&method;
   p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B70630(
+  sub_B77560(
     p_method,
     (System_Int32_array **)object,
     *(System_String_array ***)&method,
@@ -322,14 +322,14 @@ System_IAsyncResult_o *__fastcall SetBoxGachaResourceControl_ClickDelegate__Begi
   int32_t v10; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10 = gachaTime;
-  if ( (byte_434F86E & 1) == 0 )
+  if ( (byte_4388E68 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    byte_434F86E = 1;
+    sub_B775C4(&int_TypeInfo);
+    byte_4388E68 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10, callback);
-  return (System_IAsyncResult_o *)sub_B70638(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_B77568(this, v9, callback, object);
 }
 
 
@@ -338,7 +338,7 @@ void __fastcall SetBoxGachaResourceControl_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7063C(result, 0LL, method);
+  sub_B7756C(result, 0LL, method);
 }
 
 
@@ -395,8 +395,8 @@ LABEL_5:
       v20 = *(_QWORD *)&v18->fields.extra_arg;
       v21 = *(void (__fastcall **)(_QWORD, __int64))&v18->fields.method_ptr;
       if ( *(__int16 *)(v20 + 72) == -1 )
-        sub_B70750(*(_QWORD *)&v18->fields.extra_arg, *(_QWORD *)&gachaTime);
-      if ( (sub_B706C4(v20) & 1) == 0 )
+        sub_B77680(*(_QWORD *)&v18->fields.extra_arg, *(_QWORD *)&gachaTime);
+      if ( (sub_B775F4(v20) & 1) == 0 )
         break;
       if ( *(_BYTE *)(v20 + 74) != 1 )
         goto LABEL_36;
@@ -407,8 +407,8 @@ LABEL_37:
     }
     if ( v19 && *(__int16 *)(v20 + 72) != -1 && (*(_BYTE *)(*v19 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v22 = sub_B706BC(v20);
-      v23 = sub_B70AC0(v20);
+      v22 = sub_B775EC(v20);
+      v23 = sub_B779F0(v20);
       if ( (v22 & 1) != 0 )
       {
         if ( (v23 & 1) != 0 )
@@ -432,7 +432,7 @@ LABEL_37:
           else
           {
 LABEL_35:
-            v16 = sub_B08590(v19, v25, v26);
+            v16 = sub_B0F4C0(v19, v25, v26);
           }
           v15 = *(_QWORD *)(v16 + 8);
         }
@@ -440,7 +440,7 @@ LABEL_35:
         {
           v15 = *(_QWORD *)(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 320);
         }
-        v17 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD))sub_B70744(v15, v20);
+        v17 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD))sub_B77674(v15, v20);
         (*v17)(v19, (unsigned int)gachaTime, v17);
       }
       else
@@ -466,7 +466,7 @@ LABEL_35:
           else
           {
 LABEL_11:
-            v14 = sub_B08590(v19, class_0, v9);
+            v14 = sub_B0F4C0(v19, class_0, v9);
           }
           (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD))v14)(v19, (unsigned int)gachaTime, *(_QWORD *)(v14 + 8));
         }

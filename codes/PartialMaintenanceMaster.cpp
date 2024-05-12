@@ -1,14 +1,93 @@
 void __fastcall PartialMaintenanceMaster___ctor(PartialMaintenanceMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4350CB0 & 1) == 0 )
+  if ( (byte_438A358 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_PartialMaintenanceMaster__PartialMaintenanceEntity__int___ctor__);
-    byte_4350CB0 = 1;
+    sub_B775C4(&Method_DataMasterBase_PartialMaintenanceMaster__PartialMaintenanceEntity__int___ctor__);
+    byte_438A358 = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     157,
-    (const MethodInfo_21C03A4 *)Method_DataMasterBase_PartialMaintenanceMaster__PartialMaintenanceEntity__int___ctor__);
+    (const MethodInfo_21FB7F8 *)Method_DataMasterBase_PartialMaintenanceMaster__PartialMaintenanceEntity__int___ctor__);
+}
+
+
+System_String_o *__fastcall PartialMaintenanceMaster__GetAniplexPlusAccountLinkageMaintenanceMessage(
+        PartialMaintenanceMaster_o *this,
+        const MethodInfo *method)
+{
+  const MethodInfo *v2; // x2
+
+  return PartialMaintenanceMaster__GetMaintenanceMessage(this, 6, v2);
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+System_String_o *__fastcall PartialMaintenanceMaster__GetMaintenanceMessage(
+        PartialMaintenanceMaster_o *this,
+        int32_t mainteType,
+        const MethodInfo *method)
+{
+  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
+  int32_t Count; // w0
+  int32_t v7; // w21
+  int32_t v8; // w22
+  System_Net_NetworkInformation_UnicastIPAddressInformation_o *Item; // x0
+  const MethodInfo *v10; // x2
+  System_Net_NetworkInformation_UnicastIPAddressInformation_o *v11; // x23
+  __int64 v12; // x10
+
+  if ( (byte_438A35B & 1) == 0 )
+  {
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&PartialMaintenanceEntity_TypeInfo);
+    byte_438A35B = 1;
+  }
+  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+  if ( !list )
+LABEL_14:
+    sub_B7769C(list, *(_QWORD *)&mainteType);
+  Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
+            list,
+            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+  if ( Count < 1 )
+    return 0LL;
+  v7 = Count;
+  v8 = 0;
+  while ( 1 )
+  {
+    list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+    if ( !list )
+      goto LABEL_14;
+    Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
+             list,
+             v8,
+             (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    if ( Item )
+    {
+      v11 = Item;
+      v12 = *(&PartialMaintenanceEntity_TypeInfo->_2.bitflags2 + 1);
+      if ( *(&Item->klass->_2.bitflags2 + 1) >= (unsigned int)v12
+        && (PartialMaintenanceEntity_c *)Item->klass->_2.typeHierarchy[v12 - 1] == PartialMaintenanceEntity_TypeInfo
+        && PartialMaintenanceEntity__isMaintenanceNow((PartialMaintenanceEntity_o *)Item, mainteType, v10) )
+      {
+        return (System_String_o *)v11[1].monitor;
+      }
+    }
+    if ( ++v8 >= v7 )
+      return 0LL;
+  }
+}
+
+
+bool __fastcall PartialMaintenanceMaster__isAniplexPlusAccountLinkageMaintenanceNow(
+        PartialMaintenanceMaster_o *this,
+        const MethodInfo *method)
+{
+  const MethodInfo *v2; // x2
+
+  return PartialMaintenanceMaster__isMaintenanceNow(this, 6, v2);
 }
 
 
@@ -25,13 +104,13 @@ bool __fastcall PartialMaintenanceMaster__isChaliceMaintenaceEnd(
   bool v9; // w23
   __int64 v10; // x10
 
-  if ( (byte_4350CB1 & 1) == 0 )
+  if ( (byte_438A359 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&PartialMaintenanceEntity_TypeInfo);
-    byte_4350CB1 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&PartialMaintenanceEntity_TypeInfo);
+    byte_438A359 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -44,7 +123,7 @@ bool __fastcall PartialMaintenanceMaster__isChaliceMaintenaceEnd(
   v5 = Time;
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list,
-            (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v7 = Count;
@@ -58,7 +137,7 @@ bool __fastcall PartialMaintenanceMaster__isChaliceMaintenaceEnd(
       Time = (int64_t)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                         (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)Time,
                         v8,
-                        (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                        (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !Time )
         break;
       v10 = *(&PartialMaintenanceEntity_TypeInfo->_2.bitflags2 + 1);
@@ -73,7 +152,7 @@ bool __fastcall PartialMaintenanceMaster__isChaliceMaintenaceEnd(
         return v9;
     }
 LABEL_19:
-    sub_B7076C(Time, v4);
+    sub_B7769C(Time, v4);
   }
   return 1;
 }
@@ -103,20 +182,20 @@ bool __fastcall PartialMaintenanceMaster__isMaintenanceNow(
   const MethodInfo *v10; // x2
   __int64 v11; // x10
 
-  if ( (byte_4350CB2 & 1) == 0 )
+  if ( (byte_438A35A & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&PartialMaintenanceEntity_TypeInfo);
-    byte_4350CB2 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&PartialMaintenanceEntity_TypeInfo);
+    byte_438A35A = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
 LABEL_14:
-    sub_B7076C(list, *(_QWORD *)&mainteType);
+    sub_B7769C(list, *(_QWORD *)&mainteType);
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             list,
-            (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count < 1 )
     return 0;
   v7 = Count;
@@ -129,7 +208,7 @@ LABEL_14:
     Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
              list,
              v8,
-             (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+             (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
     if ( Item )
     {
       v11 = *(&PartialMaintenanceEntity_TypeInfo->_2.bitflags2 + 1);

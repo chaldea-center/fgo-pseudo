@@ -1,14 +1,14 @@
 void __fastcall GuideMaster___ctor(GuideMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4353186 & 1) == 0 )
+  if ( (byte_438C905 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_GuideMaster__GuideEntity__string___ctor__);
-    byte_4353186 = 1;
+    sub_B775C4(&Method_DataMasterBase_GuideMaster__GuideEntity__string___ctor__);
+    byte_438C905 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     158,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_GuideMaster__GuideEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_GuideMaster__GuideEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ GuideEntity_o *__fastcall GuideMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4353184 & 1) == 0 )
+  if ( (byte_438C903 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_GuideMaster__GuideEntity__string__GetEntity__);
-    byte_4353184 = 1;
+    sub_B775C4(&Method_DataMasterBase_GuideMaster__GuideEntity__string__GetEntity__);
+    byte_438C903 = 1;
   }
   PK = GuideEntity__CreatePK(guideType, priority, *(const MethodInfo **)&priority);
   return (GuideEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                             (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                             PK,
-                            (const MethodInfo_21C0890 *)Method_DataMasterBase_GuideMaster__GuideEntity__string__GetEntity__);
+                            (const MethodInfo_21FBCE4 *)Method_DataMasterBase_GuideMaster__GuideEntity__string__GetEntity__);
 }
 
 
@@ -44,17 +44,17 @@ bool __fastcall GuideMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4353185 & 1) == 0 )
+  if ( (byte_438C904 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_GuideMaster__GuideEntity__string__TryGetEntity__);
-    byte_4353185 = 1;
+    sub_B775C4(&Method_DataMasterBase_GuideMaster__GuideEntity__string__TryGetEntity__);
+    byte_438C904 = 1;
   }
   PK = GuideEntity__CreatePK(guideType, priority, *(const MethodInfo **)&guideType);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_GuideMaster__GuideEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_GuideMaster__GuideEntity__string__TryGetEntity__);
 }
 
 
@@ -81,32 +81,32 @@ GuideEntity_array *__fastcall GuideMaster__getDataListByType(
   System_Int32_array *v20; // x6
   System_Int32_array *v21; // x7
 
-  if ( (byte_4353187 & 1) == 0 )
+  if ( (byte_438C906 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&Method_System_Comparison_GuideEntity___ctor__);
-    sub_B70694(&System_Comparison_GuideEntity__TypeInfo);
-    sub_B70694(&GuideEntity_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_GuideEntity__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_GuideEntity__Sort__);
-    sub_B70694(&Method_System_Collections_Generic_List_GuideEntity__ToArray__);
-    sub_B70694(&Method_System_Collections_Generic_List_GuideEntity___ctor__);
-    sub_B70694(&System_Collections_Generic_List_GuideEntity__TypeInfo);
-    sub_B70694(&Method_GuideMaster___c__getDataListByType_b__3_0__);
-    sub_B70694(&GuideMaster___c_TypeInfo);
-    byte_4353187 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&Method_System_Comparison_GuideEntity___ctor__);
+    sub_B775C4(&System_Comparison_GuideEntity__TypeInfo);
+    sub_B775C4(&GuideEntity_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_GuideEntity__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GuideEntity__Sort__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GuideEntity__ToArray__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GuideEntity___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_GuideEntity__TypeInfo);
+    sub_B775C4(&Method_GuideMaster___c__getDataListByType_b__3_0__);
+    sub_B775C4(&GuideMaster___c_TypeInfo);
+    byte_438C906 = 1;
   }
-  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_GuideEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_GuideEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v5,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_GuideEntity___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_GuideEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_24;
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
-            (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v9 = Count;
@@ -119,7 +119,7 @@ GuideEntity_array *__fastcall GuideMaster__getDataListByType(
       list = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
                v10,
-               (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( list )
       {
         v6 = list;
@@ -133,14 +133,14 @@ GuideEntity_array *__fastcall GuideMaster__getDataListByType(
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
             v5,
             (EventMissionProgressRequest_Argument_ProgressData_o *)list,
-            (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_GuideEntity__Add__);
+            (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_GuideEntity__Add__);
         }
       }
       if ( ++v10 >= v9 )
         goto LABEL_14;
     }
 LABEL_24:
-    sub_B7076C(list, v6);
+    sub_B7769C(list, v6);
   }
 LABEL_14:
   list = GuideMaster___c_TypeInfo;
@@ -160,15 +160,15 @@ LABEL_14:
       static_fields = GuideMaster___c_TypeInfo->static_fields;
     }
     v14 = (Il2CppObject *)static_fields->__9;
-    _9__3_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B70764(System_Comparison_GuideEntity__TypeInfo);
+    _9__3_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B77694(System_Comparison_GuideEntity__TypeInfo);
     System_Comparison_TitleInfoControl_EventEndTimeInfo____ctor(
       _9__3_0,
       v14,
       Method_GuideMaster___c__getDataListByType_b__3_0__,
-      (const MethodInfo_2B05B38 *)Method_System_Comparison_GuideEntity___ctor__);
+      (const MethodInfo_2B42C0C *)Method_System_Comparison_GuideEntity___ctor__);
     v15 = GuideMaster___c_TypeInfo->static_fields;
     v15->__9__3_0 = (struct System_Comparison_GuideEntity__o *)_9__3_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v15->__9__3_0,
       (System_Int32_array **)_9__3_0,
       v16,
@@ -183,10 +183,10 @@ LABEL_14:
   System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo___Sort(
     (System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__o *)v5,
     (System_Comparison_T__o *)_9__3_0,
-    (const MethodInfo_3027764 *)Method_System_Collections_Generic_List_GuideEntity__Sort__);
+    (const MethodInfo_3055374 *)Method_System_Collections_Generic_List_GuideEntity__Sort__);
   return (GuideEntity_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
                                 (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v5,
-                                (const MethodInfo_30277D4 *)Method_System_Collections_Generic_List_GuideEntity__ToArray__);
+                                (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_GuideEntity__ToArray__);
 }
 
 
@@ -204,11 +204,11 @@ GuideEntity_o *__fastcall GuideMaster__getGuideData(GuideMaster_o *this, int32_t
   int32_t condQuestId; // w23
   __int64 v16; // x0
 
-  if ( (byte_4353188 & 1) == 0 )
+  if ( (byte_438C907 & 1) == 0 )
   {
-    sub_B70694(&CondType_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4353188 = 1;
+    sub_B775C4(&CondType_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_438C907 = 1;
   }
   DataListByType = GuideMaster__getDataListByType(this, type, method);
   if ( !DataListByType )
@@ -222,8 +222,8 @@ GuideEntity_o *__fastcall GuideMaster__getGuideData(GuideMaster_o *this, int32_t
   {
     if ( (unsigned int)v8 >= (unsigned int)v6 )
     {
-      v16 = sub_B70798(DataListByType);
-      sub_B70738(v16, 0LL);
+      v16 = sub_B776C8(DataListByType);
+      sub_B77668(v16, 0LL);
     }
     v9 = v7->m_Items[v8];
     if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -233,7 +233,7 @@ GuideEntity_o *__fastcall GuideMaster__getGuideData(GuideMaster_o *this, int32_t
     }
     UserId = NetworkManager__get_UserId(0LL);
     if ( !v9 )
-      sub_B7076C(UserId, v11);
+      sub_B7769C(UserId, v11);
     v12 = UserId;
     condQuestId = v9->fields.condQuestId;
     condQuestPhase = v9->fields.condQuestPhase;
@@ -255,16 +255,16 @@ void __fastcall GuideMaster___c___cctor(const MethodInfo *method)
   Il2CppObject *v1; // x19
   struct GuideMaster___c_StaticFields *static_fields; // x0
 
-  if ( (byte_434F34D & 1) == 0 )
+  if ( (byte_438892F & 1) == 0 )
   {
-    sub_B70694(&GuideMaster___c_TypeInfo);
-    byte_434F34D = 1;
+    sub_B775C4(&GuideMaster___c_TypeInfo);
+    byte_438892F = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(GuideMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(GuideMaster___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = GuideMaster___c_TypeInfo->static_fields;
   static_fields->__9 = (struct GuideMaster___c_o *)v1;
-  sub_B70630(static_fields);
+  sub_B77560(static_fields);
 }
 
 
@@ -281,6 +281,6 @@ int32_t __fastcall GuideMaster___c___getDataListByType_b__3_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_B7076C(this, a);
+    sub_B7769C(this, a);
   return b->fields.priority - a->fields.priority;
 }

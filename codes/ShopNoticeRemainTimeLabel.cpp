@@ -19,7 +19,7 @@ void __fastcall ShopNoticeRemainTimeLabel___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.label = label;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.label,
     (System_Int32_array **)label,
     v7,
@@ -29,7 +29,7 @@ void __fastcall ShopNoticeRemainTimeLabel___ctor(
     v11,
     v12);
   this->fields.monoBehaviour = monoBehaviour;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)monoBehaviour,
     v13,
@@ -68,10 +68,10 @@ void __fastcall ShopNoticeRemainTimeLabel__Start(ShopNoticeRemainTimeLabel_o *th
   monoBehaviour = this->fields.monoBehaviour;
   updated = ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel(this, v4);
   if ( !monoBehaviour )
-    sub_B7076C(updated, v6);
-  started = UnityEngine_MonoBehaviour__StartCoroutine_36062060(monoBehaviour, updated, 0LL);
+    sub_B7769C(updated, v6);
+  started = UnityEngine_MonoBehaviour__StartCoroutine_36304832(monoBehaviour, updated, 0LL);
   this->fields.coroutine = started;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.coroutine,
     (System_Int32_array **)started,
     v8,
@@ -101,10 +101,10 @@ void __fastcall ShopNoticeRemainTimeLabel__Stop(ShopNoticeRemainTimeLabel_o *thi
   {
     monoBehaviour = this->fields.monoBehaviour;
     if ( !monoBehaviour )
-      sub_B7076C(0LL, coroutine);
-    UnityEngine_MonoBehaviour__StopCoroutine_36062728(monoBehaviour, coroutine, 0LL);
+      sub_B7769C(0LL, coroutine);
+    UnityEngine_MonoBehaviour__StopCoroutine_36305500(monoBehaviour, coroutine, 0LL);
     p_coroutine->klass = 0LL;
-    sub_B70630(p_coroutine, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_B77560(p_coroutine, 0LL, v5, v6, v7, v8, v9, v10);
   }
 }
 
@@ -123,20 +123,20 @@ System_Collections_IEnumerator_o *__fastcall ShopNoticeRemainTimeLabel__UpdateRe
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_43536D4 & 1) == 0 )
+  if ( (byte_438CF92 & 1) == 0 )
   {
-    sub_B70694(&ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_TypeInfo);
-    byte_43536D4 = 1;
+    sub_B775C4(&ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_TypeInfo);
+    byte_438CF92 = 1;
   }
-  v3 = sub_B70764(ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_TypeInfo);
+  v3 = sub_B77694(ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_TypeInfo);
   ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8___ctor(
     (ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_o *)v3,
     0,
     0LL);
   if ( !v3 )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  sub_B77560((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -178,12 +178,12 @@ bool __fastcall ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8__MoveNext(
   System_Int32_array **loopWait_5__2; // x1
 
   v2 = this;
-  if ( (byte_434F880 & 1) == 0 )
+  if ( (byte_4388E7A & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    this = (ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_o *)sub_B70694(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_434F880 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    this = (ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_o *)sub_B775C4(&UnityEngine_WaitForSeconds_TypeInfo);
+    byte_4388E7A = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -198,10 +198,10 @@ bool __fastcall ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8__MoveNext(
     if ( _1__state )
       return 0;
     v2->fields.__1__state = -1;
-    v5 = (UnityEngine_WaitForSeconds_o *)sub_B70764(UnityEngine_WaitForSeconds_TypeInfo);
+    v5 = (UnityEngine_WaitForSeconds_o *)sub_B77694(UnityEngine_WaitForSeconds_TypeInfo);
     UnityEngine_WaitForSeconds___ctor(v5, 1.0, 0LL);
     v2->fields._loopWait_5__2 = v5;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v2->fields._loopWait_5__2,
       (System_Int32_array **)v5,
       v6,
@@ -226,7 +226,7 @@ bool __fastcall ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8__MoveNext(
                                                                       0LL);
   if ( !label )
 LABEL_18:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   UILabel__set_text(label, (System_String_o *)this, 0LL);
   v14 = _4__this->fields.timeLimit;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -238,7 +238,7 @@ LABEL_18:
     return 0;
   loopWait_5__2 = (System_Int32_array **)v2->fields._loopWait_5__2;
   v2->fields.__2__current = (Il2CppObject *)loopWait_5__2;
-  sub_B70630((BattleServantConfConponent_o *)&v2->fields.__2__current, loopWait_5__2, v15, v16, v17, v18, v19, v20);
+  sub_B77560((BattleServantConfConponent_o *)&v2->fields.__2__current, loopWait_5__2, v15, v16, v17, v18, v19, v20);
   result = 1;
   v2->fields.__1__state = 1;
   return result;
@@ -261,11 +261,11 @@ void __fastcall __noreturn ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B70698(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B70764(v2);
+  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B70698(&Method_ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_System_Collections_IEnumerator_Reset__);
-  sub_B70738(v3, v4);
+  v4 = sub_B775C8(&Method_ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_System_Collections_IEnumerator_Reset__);
+  sub_B77668(v3, v4);
 }
 
 

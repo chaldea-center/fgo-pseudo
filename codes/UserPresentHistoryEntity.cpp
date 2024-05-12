@@ -1,13 +1,13 @@
 void __fastcall UserPresentHistoryEntity___ctor(UserPresentHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_434FCEC & 1) == 0 )
+  if ( (byte_43892D5 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_long___ctor__);
-    byte_434FCEC = 1;
+    sub_B775C4(&Method_DataEntityBase_long___ctor__);
+    byte_43892D5 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_21C0344 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_21FB798 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -86,11 +86,11 @@ System_String_o *__fastcall UserPresentHistoryEntity__ToString(
   System_String_o *v4; // x0
   __int64 v5; // x1
 
-  if ( (byte_434FCEB & 1) == 0 )
+  if ( (byte_43892D4 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_10650/*"PRESENT_INFO"*/);
-    byte_434FCEB = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_10709/*"PRESENT_INFO"*/);
+    byte_43892D4 = 1;
   }
   v3 = GiftName_GiftNameFactory__Create(this->fields.giftType, this->fields.objectId, this->fields.num, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -98,8 +98,8 @@ System_String_o *__fastcall UserPresentHistoryEntity__ToString(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_10650/*"PRESENT_INFO"*/, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_10709/*"PRESENT_INFO"*/, 0LL);
   if ( !v3 )
-    sub_B7076C(v4, v5);
-  return System_String__Format_44753704(v4, (Il2CppObject *)v3->fields.name, (Il2CppObject *)v3->fields.count, 0LL);
+    sub_B7769C(v4, v5);
+  return System_String__Format_44897472(v4, (Il2CppObject *)v3->fields.name, (Il2CppObject *)v3->fields.count, 0LL);
 }

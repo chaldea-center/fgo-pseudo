@@ -1,13 +1,13 @@
 void __fastcall WarBoardEventEntity___ctor(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_434E5B8 & 1) == 0 )
+  if ( (byte_4387B89 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_int___ctor__);
-    byte_434E5B8 = 1;
+    sub_B775C4(&Method_DataEntityBase_int___ctor__);
+    byte_4387B89 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -21,12 +21,12 @@ System_Int32_array *__fastcall WarBoardEventEntity__GetSquareIndicesToAdd(
         WarBoardEventEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_434E5B5 & 1) == 0 )
+  if ( (byte_4387B86 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_16501/*"addSquareIndex"*/);
-    byte_434E5B5 = 1;
+    sub_B775C4(&StringLiteral_16579/*"addSquareIndex"*/);
+    byte_4387B86 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_16501/*"addSquareIndex"*/, 0LL, 0LL);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_16579/*"addSquareIndex"*/, 0LL, 0LL);
 }
 
 
@@ -46,7 +46,7 @@ bool __fastcall WarBoardEventEntity__IsCorrectEntity(WarBoardEventEntity_o *this
   warBoardCommonReleaseIds = this->fields.warBoardCommonReleaseIds;
   if ( !warBoardCommonReleaseIds )
 LABEL_7:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   v5 = warBoardCommonReleaseIds->max_length;
   if ( v5 >= 1 )
     return max_length == v5;
@@ -56,23 +56,23 @@ LABEL_7:
 
 bool __fastcall WarBoardEventEntity__IsIncludeInvolvedAttacker(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_434E5B6 & 1) == 0 )
+  if ( (byte_4387B87 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_20075/*"includeInvolvedAttacker"*/);
-    byte_434E5B6 = 1;
+    sub_B775C4(&StringLiteral_20170/*"includeInvolvedAttacker"*/);
+    byte_4387B87 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20075/*"includeInvolvedAttacker"*/, 0, 0LL) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20170/*"includeInvolvedAttacker"*/, 0, 0LL) == 1;
 }
 
 
 bool __fastcall WarBoardEventEntity__IsIncludeInvolvedDefender(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_434E5B7 & 1) == 0 )
+  if ( (byte_4387B88 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_20076/*"includeInvolvedDefender"*/);
-    byte_434E5B7 = 1;
+    sub_B775C4(&StringLiteral_20171/*"includeInvolvedDefender"*/);
+    byte_4387B88 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20076/*"includeInvolvedDefender"*/, 0, 0LL) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20171/*"includeInvolvedDefender"*/, 0, 0LL) == 1;
 }
 
 
@@ -96,14 +96,14 @@ bool __fastcall WarBoardEventEntity__IsPlayableEvent(WarBoardEventEntity_o *this
   int32_t frequencyType; // w8
   int32_t latestPlayedTurn_k__BackingField; // w19
 
-  if ( (byte_434E5B4 & 1) == 0 )
+  if ( (byte_4387B85 & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_434E5B4 = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4387B85 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance || (v5 = *(WarBoardData_o **)&Instance[4].fields.m_CachedPtr) == 0LL )
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   PlayedEventData = WarBoardData__GetPlayedEventData(
                       *(WarBoardData_o **)&Instance[4].fields.m_CachedPtr,
                       this->fields.id,

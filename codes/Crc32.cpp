@@ -10,20 +10,20 @@ void __fastcall Crc32___cctor(const MethodInfo *method)
   System_Int32_array *v8; // x7
   System_RuntimeFieldHandle_o v9; // 0:w1.4
 
-  if ( (byte_43535C3 & 1) == 0 )
+  if ( (byte_438CD46 & 1) == 0 )
   {
-    sub_B70694(&Crc32_TypeInfo);
-    sub_B70694(&Field__PrivateImplementationDetails__12F3E0576D447EB37B36D82BA0C1C5481B8F0D12FDC70347CE4A076B229D4C86);
-    sub_B70694(&uint___TypeInfo);
-    byte_43535C3 = 1;
+    sub_B775C4(&Crc32_TypeInfo);
+    sub_B775C4(&Field__PrivateImplementationDetails__12F3E0576D447EB37B36D82BA0C1C5481B8F0D12FDC70347CE4A076B229D4C86);
+    sub_B775C4(&uint___TypeInfo);
+    byte_438CD46 = 1;
   }
   Crc32_TypeInfo->static_fields->CRC_UNIT = 256;
-  v1 = (System_Array_o *)sub_B706AC(uint___TypeInfo, 256LL);
+  v1 = (System_Array_o *)sub_B775DC(uint___TypeInfo, 256LL);
   v9.fields.value = Field__PrivateImplementationDetails__12F3E0576D447EB37B36D82BA0C1C5481B8F0D12FDC70347CE4A076B229D4C86;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v1, v9, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v1, v9, 0LL);
   static_fields = Crc32_TypeInfo->static_fields;
   static_fields->CrcTable = (struct System_UInt32_array *)v1;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&static_fields->CrcTable,
     (System_Int32_array **)v1,
     v3,
@@ -47,14 +47,14 @@ uint32_t __fastcall Crc32__Compute(System_Byte_array *buffer, const MethodInfo *
   __int64 v10; // x0
 
   v2 = buffer;
-  if ( (byte_43535C0 & 1) == 0 )
+  if ( (byte_438CD43 & 1) == 0 )
   {
-    buffer = (System_Byte_array *)sub_B70694(&Crc32_TypeInfo);
-    byte_43535C0 = 1;
+    buffer = (System_Byte_array *)sub_B775C4(&Crc32_TypeInfo);
+    byte_438CD43 = 1;
   }
   if ( !v2 )
 LABEL_16:
-    sub_B7076C(buffer, method);
+    sub_B7769C(buffer, method);
   v3 = *(_QWORD *)&v2->max_length;
   v4 = v3 - 1;
   if ( (int)v3 - 1 < 0 )
@@ -79,8 +79,8 @@ LABEL_16:
     if ( v8 >= *(_DWORD *)(v7 + 24) )
     {
 LABEL_15:
-      v10 = sub_B70798(buffer);
-      sub_B70738(v10, 0LL);
+      v10 = sub_B776C8(buffer);
+      sub_B77668(v10, 0LL);
     }
     ++v5;
     --v4;
@@ -92,7 +92,7 @@ LABEL_15:
 
 
 // local variable allocation has failed, the output may be wrong!
-uint32_t __fastcall Crc32__Compute_28140592(System_Byte_array *buffer, int32_t length, const MethodInfo *method)
+uint32_t __fastcall Crc32__Compute_28493032(System_Byte_array *buffer, int32_t length, const MethodInfo *method)
 {
   System_Byte_array *v4; // x19
   __int64 v5; // x8
@@ -105,14 +105,14 @@ uint32_t __fastcall Crc32__Compute_28140592(System_Byte_array *buffer, int32_t l
   __int64 v13; // x0
 
   v4 = buffer;
-  if ( (byte_43535C1 & 1) == 0 )
+  if ( (byte_438CD44 & 1) == 0 )
   {
-    buffer = (System_Byte_array *)sub_B70694(&Crc32_TypeInfo);
-    byte_43535C1 = 1;
+    buffer = (System_Byte_array *)sub_B775C4(&Crc32_TypeInfo);
+    byte_438CD44 = 1;
   }
   if ( !v4 )
 LABEL_19:
-    sub_B7076C(buffer, *(_QWORD *)&length);
+    sub_B7769C(buffer, *(_QWORD *)&length);
   v5 = *(_QWORD *)&v4->max_length;
   if ( (int)v5 >= length )
     v6 = length;
@@ -141,8 +141,8 @@ LABEL_19:
     if ( v11 >= *(_DWORD *)(v10 + 24) )
     {
 LABEL_18:
-      v13 = sub_B70798(buffer);
-      sub_B70738(v13, 0LL);
+      v13 = sub_B776C8(buffer);
+      sub_B77668(v13, 0LL);
     }
     ++v8;
     --v7;
@@ -154,7 +154,7 @@ LABEL_18:
 
 
 // local variable allocation has failed, the output may be wrong!
-uint32_t __fastcall Crc32__Compute_28140844(
+uint32_t __fastcall Crc32__Compute_28493284(
         System_Byte_array *buffer,
         int32_t length,
         uint32_t crc,
@@ -171,14 +171,14 @@ uint32_t __fastcall Crc32__Compute_28140844(
   __int64 v15; // x0
 
   v6 = buffer;
-  if ( (byte_43535C2 & 1) == 0 )
+  if ( (byte_438CD45 & 1) == 0 )
   {
-    buffer = (System_Byte_array *)sub_B70694(&Crc32_TypeInfo);
-    byte_43535C2 = 1;
+    buffer = (System_Byte_array *)sub_B775C4(&Crc32_TypeInfo);
+    byte_438CD45 = 1;
   }
   if ( !v6 )
 LABEL_18:
-    sub_B7076C(buffer, *(_QWORD *)&length);
+    sub_B7769C(buffer, *(_QWORD *)&length);
   v7 = *(_QWORD *)&v6->max_length;
   v8 = ~crc;
   if ( (int)v7 >= length )
@@ -207,8 +207,8 @@ LABEL_18:
       if ( v13 >= *(_DWORD *)(v12 + 24) )
       {
 LABEL_17:
-        v15 = sub_B70798(buffer);
-        sub_B70738(v15, 0LL);
+        v15 = sub_B776C8(buffer);
+        sub_B77668(v15, 0LL);
       }
       ++v11;
       --v10;

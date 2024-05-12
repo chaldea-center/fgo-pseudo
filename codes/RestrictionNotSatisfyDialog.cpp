@@ -1,9 +1,9 @@
 void __fastcall RestrictionNotSatisfyDialog___ctor(RestrictionNotSatisfyDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_435432C & 1) == 0 )
+  if ( (byte_438DBEA & 1) == 0 )
   {
-    sub_B70694(&BaseDialog_TypeInfo);
-    byte_435432C = 1;
+    sub_B775C4(&BaseDialog_TypeInfo);
+    byte_438DBEA = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -21,14 +21,14 @@ void __fastcall RestrictionNotSatisfyDialog__Close(RestrictionNotSatisfyDialog_o
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_4354328 & 1) == 0 )
+  if ( (byte_438DBE6 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_RestrictionNotSatisfyDialog_EndClose__);
-    byte_4354328 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_RestrictionNotSatisfyDialog_EndClose__);
+    byte_438DBE6 = 1;
   }
   this->fields.isButtonEnable = 0;
-  v3 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_RestrictionNotSatisfyDialog_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v3, 0LL);
 }
@@ -38,10 +38,10 @@ void __fastcall RestrictionNotSatisfyDialog__EndClose(RestrictionNotSatisfyDialo
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4354329 & 1) == 0 )
+  if ( (byte_438DBE7 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4354329 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438DBE7 = 1;
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -49,7 +49,7 @@ void __fastcall RestrictionNotSatisfyDialog__EndClose(RestrictionNotSatisfyDialo
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  UnityEngine_Object__Destroy_36067208(gameObject, 0LL);
+  UnityEngine_Object__Destroy_36309980(gameObject, 0LL);
 }
 
 
@@ -65,11 +65,11 @@ void __fastcall RestrictionNotSatisfyDialog__Init(RestrictionNotSatisfyDialog_o 
   __int64 v4; // x1
   UILabel_o *gameObject; // x0
 
-  if ( (byte_4354326 & 1) == 0 )
+  if ( (byte_438DBE4 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4354326 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438DBE4 = 1;
   }
   buttonCloseLabel = (UnityEngine_Object_o *)this->fields.buttonCloseLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -88,7 +88,7 @@ void __fastcall RestrictionNotSatisfyDialog__Init(RestrictionNotSatisfyDialog_o 
   gameObject = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
 LABEL_11:
-    sub_B7076C(gameObject, v4);
+    sub_B7769C(gameObject, v4);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -102,17 +102,17 @@ void __fastcall RestrictionNotSatisfyDialog__OnClickClose(
   System_Reflection_MethodBase_o *v4; // x0
   RestrictionNotSatisfyDialog_CloseDelegate_o *closeFunc; // x0
 
-  if ( (byte_435432A & 1) == 0 )
+  if ( (byte_438DBE8 & 1) == 0 )
   {
-    sub_B70694(&Method_RestrictionNotSatisfyDialog_OnClickClose__);
-    byte_435432A = 1;
+    sub_B775C4(&Method_RestrictionNotSatisfyDialog_OnClickClose__);
+    byte_438DBE8 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_RestrictionNotSatisfyDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_RestrictionNotSatisfyDialog_OnClickClose__ + 75) & 2) != 0 )
-      v3 = (_QWORD *)sub_B7069C(Method_RestrictionNotSatisfyDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+      v3 = (_QWORD *)sub_B775CC(Method_RestrictionNotSatisfyDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     closeFunc = this->fields.closeFunc;
     this->fields.isButtonEnable = 0;
@@ -147,7 +147,7 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
   RestrictionEntity_o *v24; // x24
   const MethodInfo *v25; // x4
   EventMissionProgressRequest_Argument_ProgressData_o *v26; // x25
-  const MethodInfo_3025688 *v27; // x2
+  const MethodInfo_3053298 *v27; // x2
   const MethodInfo *v28; // x2
   EventMissionProgressRequest_Argument_ProgressData_o *v29; // x24
   struct RestrictionWholeEntity_array *restrictionWholeEntities; // x27
@@ -157,7 +157,7 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
   QuestRestrictionInfo_o *v34; // x3
   const MethodInfo *v35; // x4
   EventMissionProgressRequest_Argument_ProgressData_o *v36; // x25
-  const MethodInfo_3025688 *v37; // x2
+  const MethodInfo_3053298 *v37; // x2
   _BOOL8 v38; // x0
   __int64 v39; // x1
   Il2CppObject *current; // x23
@@ -195,31 +195,31 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
   UnityEngine_Vector3_o one; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v73; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4354327 & 1) == 0 )
+  if ( (byte_438DBE5 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_RestrictionNotSatisfyWholeInfo__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_RestrictionNotSatisfyWholeInfo__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_RestrictionNotSatisfyWholeInfo__get_Current__);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfySlot___);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfyWholeInfo___);
-    sub_B70694(&Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__GetEnumerator__);
-    sub_B70694(&Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo___ctor__);
-    sub_B70694(&System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_RestrictionNotSatisfyDialog_EndOpen__);
-    sub_B70694(&StringLiteral_11252/*"RESTRICTION_NOT_SATISFY_DIALOG_TITLE"*/);
-    sub_B70694(&StringLiteral_11255/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_TITLE"*/);
-    sub_B70694(&StringLiteral_10504/*"PARTY_ORGANIZATION_RESTRICTION_HELP_CLOSE"*/);
-    byte_4354327 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_RestrictionNotSatisfyWholeInfo__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_RestrictionNotSatisfyWholeInfo__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_RestrictionNotSatisfyWholeInfo__get_Current__);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfySlot___);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfyWholeInfo___);
+    sub_B775C4(&Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__GetEnumerator__);
+    sub_B775C4(&Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_RestrictionNotSatisfyDialog_EndOpen__);
+    sub_B775C4(&StringLiteral_11313/*"RESTRICTION_NOT_SATISFY_DIALOG_TITLE"*/);
+    sub_B775C4(&StringLiteral_11316/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_TITLE"*/);
+    sub_B775C4(&StringLiteral_10563/*"PARTY_ORGANIZATION_RESTRICTION_HELP_CLOSE"*/);
+    byte_438DBE5 = 1;
   }
   memset(&v71, 0, sizeof(v71));
   v70 = 0;
   this->fields.closeFunc = func;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.closeFunc,
     (System_Int32_array **)func,
     (System_String_array **)questRestrictionInfo,
@@ -234,21 +234,21 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  Object = LocalizationManager__Get((System_String_o *)StringLiteral_11252/*"RESTRICTION_NOT_SATISFY_DIALOG_TITLE"*/, 0LL);
+  Object = LocalizationManager__Get((System_String_o *)StringLiteral_11313/*"RESTRICTION_NOT_SATISFY_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_107;
   UILabel__set_text(titleLabel, Object, 0LL);
-  v67 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__TypeInfo);
+  v67 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v67,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo___ctor__);
-  v15 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__TypeInfo);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo___ctor__);
+  v15 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v15,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo___ctor__);
   this->fields.wholeInfoCount = 0;
   wholeRestrictionLabel = this->fields.wholeRestrictionLabel;
-  Object = LocalizationManager__Get((System_String_o *)StringLiteral_11255/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_TITLE"*/, 0LL);
+  Object = LocalizationManager__Get((System_String_o *)StringLiteral_11316/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_TITLE"*/, 0LL);
   if ( !wholeRestrictionLabel )
     goto LABEL_107;
   UILabel__set_text(wholeRestrictionLabel, Object, 0LL);
@@ -266,7 +266,7 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
       goto LABEL_107;
     Object = (System_String_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                   (UnityEngine_GameObject_o *)Object,
-                                  (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfyWholeInfo___);
+                                  (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfyWholeInfo___);
     if ( !Object )
       goto LABEL_107;
     v18 = (EventMissionProgressRequest_Argument_ProgressData_o *)Object;
@@ -289,7 +289,7 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
       (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)Object,
       v18,
-      (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__Add__);
+      (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__Add__);
     ++this->fields.wholeInfoCount;
   }
   if ( questRestrictionInfo->fields.isNotSingleSupportOnly )
@@ -304,7 +304,7 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
       goto LABEL_107;
     Object = (System_String_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                   (UnityEngine_GameObject_o *)Object,
-                                  (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfyWholeInfo___);
+                                  (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfyWholeInfo___);
     if ( !Object )
       goto LABEL_107;
     v20 = (EventMissionProgressRequest_Argument_ProgressData_o *)Object;
@@ -327,7 +327,7 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
       (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)Object,
       v20,
-      (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__Add__);
+      (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__Add__);
     ++this->fields.wholeInfoCount;
   }
   Object = (System_String_o *)QuestRestrictionInfo__IsUseOldMaster(questRestrictionInfo, 0LL);
@@ -358,11 +358,11 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
             goto LABEL_107;
           Object = (System_String_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                         (UnityEngine_GameObject_o *)Object,
-                                        (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfyWholeInfo___);
+                                        (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfyWholeInfo___);
           if ( !Object )
             goto LABEL_107;
           v26 = (EventMissionProgressRequest_Argument_ProgressData_o *)Object;
-          Object = (System_String_o *)RestrictionNotSatisfyWholeInfo__Init_29670576(
+          Object = (System_String_o *)RestrictionNotSatisfyWholeInfo__Init_30145172(
                                         (RestrictionNotSatisfyWholeInfo_o *)Object,
                                         v24,
                                         partyItem,
@@ -372,7 +372,7 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
           {
             if ( !v15 )
               goto LABEL_107;
-            v27 = (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__Add__;
+            v27 = (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__Add__;
             Object = (System_String_o *)v15;
           }
           else
@@ -380,7 +380,7 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
             Object = (System_String_o *)v67;
             if ( !v67 )
               goto LABEL_107;
-            v27 = (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__Add__;
+            v27 = (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__Add__;
           }
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
             (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)Object,
@@ -409,7 +409,7 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
         goto LABEL_107;
       Object = (System_String_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                     (UnityEngine_GameObject_o *)Object,
-                                    (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfyWholeInfo___);
+                                    (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfyWholeInfo___);
       if ( !Object )
         goto LABEL_107;
       v29 = (EventMissionProgressRequest_Argument_ProgressData_o *)Object;
@@ -432,7 +432,7 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
         (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)Object,
         v29,
-        (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__Add__);
+        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__Add__);
       ++this->fields.wholeInfoCount;
     }
     restrictionWholeEntities = questRestrictionInfo->fields.restrictionWholeEntities;
@@ -460,7 +460,7 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
             goto LABEL_107;
           Object = (System_String_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                         (UnityEngine_GameObject_o *)Object,
-                                        (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfyWholeInfo___);
+                                        (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfyWholeInfo___);
           if ( !Object )
             goto LABEL_107;
           v36 = (EventMissionProgressRequest_Argument_ProgressData_o *)Object;
@@ -474,7 +474,7 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
           {
             if ( !v15 )
               goto LABEL_107;
-            v37 = (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__Add__;
+            v37 = (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__Add__;
             Object = (System_String_o *)v15;
           }
           else
@@ -482,7 +482,7 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
             Object = (System_String_o *)v67;
             if ( !v67 )
               goto LABEL_107;
-            v37 = (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__Add__;
+            v37 = (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__Add__;
           }
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
             (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)Object,
@@ -495,8 +495,8 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
           goto LABEL_65;
       }
 LABEL_112:
-      v66 = sub_B70798(Object);
-      sub_B70738(v66, 0LL);
+      v66 = sub_B776C8(Object);
+      sub_B77668(v66, 0LL);
     }
   }
 LABEL_65:
@@ -505,22 +505,22 @@ LABEL_65:
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v68,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v15,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__GetEnumerator__);
   v71 = v68;
   while ( 1 )
   {
     v38 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v71,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_RestrictionNotSatisfyWholeInfo__MoveNext__);
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_RestrictionNotSatisfyWholeInfo__MoveNext__);
     if ( !v38 )
       break;
     current = v71.fields.current;
     if ( !v71.fields.current )
-      sub_B7076C(v38, v39);
+      sub_B7769C(v38, v39);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v71.fields.current, 0LL);
     wholeInfoGrid = (UnityEngine_Component_o *)this->fields.wholeInfoGrid;
     if ( !wholeInfoGrid )
-      sub_B7076C(0LL, v41);
+      sub_B7769C(0LL, v41);
     transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(wholeInfoGrid, 0LL);
     GameObjectExtensions__SetParent(gameObject, transform, 0LL);
     v45 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)current, 0LL);
@@ -531,7 +531,7 @@ LABEL_65:
   v70 = 1;
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v71,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_RestrictionNotSatisfyWholeInfo__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_RestrictionNotSatisfyWholeInfo__Dispose__);
   v70 = 0;
   Object = (System_String_o *)v67;
   if ( !v67 )
@@ -539,22 +539,22 @@ LABEL_65:
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v68,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v67,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo__GetEnumerator__);
   v71 = v68;
   while ( 1 )
   {
     v46 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v71,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_RestrictionNotSatisfyWholeInfo__MoveNext__);
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_RestrictionNotSatisfyWholeInfo__MoveNext__);
     if ( !v46 )
       break;
     v48 = v71.fields.current;
     if ( !v71.fields.current )
-      sub_B7076C(v46, v47);
+      sub_B7769C(v46, v47);
     v50 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v71.fields.current, 0LL);
     v51 = (UnityEngine_Component_o *)this->fields.wholeInfoGrid;
     if ( !v51 )
-      sub_B7076C(0LL, v49);
+      sub_B7769C(0LL, v49);
     v52 = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(v51, 0LL);
     GameObjectExtensions__SetParent(v50, v52, 0LL);
     v53 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v48, 0LL);
@@ -565,13 +565,13 @@ LABEL_65:
   v54 = ++v70;
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v71,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_RestrictionNotSatisfyWholeInfo__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_RestrictionNotSatisfyWholeInfo__Dispose__);
   if ( v54 && v69[v54 - 1] == 672 )
     v70 = v54 - 1;
   Object = (System_String_o *)this->fields.wholeRestrictionScrollView;
   if ( !Object )
 LABEL_107:
-    sub_B7076C(Object, v14);
+    sub_B7769C(Object, v14);
   UIScrollView__UpdatePosition((UIScrollView_o *)Object, 0LL);
   if ( this->fields.wholeInfoCount <= 2 )
   {
@@ -612,7 +612,7 @@ LABEL_107:
       goto LABEL_107;
     Object = (System_String_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                   (UnityEngine_GameObject_o *)Object,
-                                  (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfySlot___);
+                                  (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfySlot___);
     if ( !partyItem )
       goto LABEL_107;
     v59 = (RestrictionNotSatisfySlot_o *)Object;
@@ -635,7 +635,7 @@ LABEL_107:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    Object = LocalizationManager__Get((System_String_o *)StringLiteral_10504/*"PARTY_ORGANIZATION_RESTRICTION_HELP_CLOSE"*/, 0LL);
+    Object = LocalizationManager__Get((System_String_o *)StringLiteral_10563/*"PARTY_ORGANIZATION_RESTRICTION_HELP_CLOSE"*/, 0LL);
     if ( v64 )
     {
       UILabel__set_text(v64, Object, 0LL);
@@ -646,7 +646,7 @@ LABEL_107:
 LABEL_106:
   this->fields.isButtonEnable = 0;
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 0, 0LL);
-  v65 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v65 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v65, (Il2CppObject *)this, Method_RestrictionNotSatisfyDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v65, 0, 0LL);
 }
@@ -660,10 +660,10 @@ UnityEngine_GameObject_o *__fastcall RestrictionNotSatisfyDialog__get_closeBtnOb
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_435432B & 1) == 0 )
+  if ( (byte_438DBE9 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_435432B = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438DBE9 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -675,7 +675,7 @@ UnityEngine_GameObject_o *__fastcall RestrictionNotSatisfyDialog__get_closeBtnOb
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }
 
@@ -695,7 +695,7 @@ void __fastcall RestrictionNotSatisfyDialog_CloseDelegate___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B70630(p_method);
+  sub_B77560(p_method);
 }
 
 
@@ -708,7 +708,7 @@ System_IAsyncResult_o *__fastcall RestrictionNotSatisfyDialog_CloseDelegate__Beg
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0LL;
-  return (System_IAsyncResult_o *)sub_B70638(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_B77568(this, &v5, callback, object);
 }
 
 
@@ -717,7 +717,7 @@ void __fastcall RestrictionNotSatisfyDialog_CloseDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7063C(result, 0LL, method);
+  sub_B7756C(result, 0LL, method);
 }
 
 
@@ -772,8 +772,8 @@ LABEL_5:
       v18 = *(_QWORD *)&v16->fields.extra_arg;
       v19 = *(void (__fastcall **)(__int64))&v16->fields.method_ptr;
       if ( *(__int16 *)(v18 + 72) == -1 )
-        sub_B70750(*(_QWORD *)&v16->fields.extra_arg, method);
-      if ( (sub_B706C4(v18) & 1) == 0 )
+        sub_B77680(*(_QWORD *)&v16->fields.extra_arg, method);
+      if ( (sub_B775F4(v18) & 1) == 0 )
         break;
       if ( *(_BYTE *)(v18 + 74) )
         goto LABEL_35;
@@ -784,8 +784,8 @@ LABEL_36:
     }
     if ( v17 && *(__int16 *)(v18 + 72) != -1 && (*(_BYTE *)(*v17 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v20 = sub_B706BC(v18);
-      v21 = sub_B70AC0(v18);
+      v20 = sub_B775EC(v18);
+      v21 = sub_B779F0(v18);
       if ( (v20 & 1) != 0 )
       {
         if ( (v21 & 1) != 0 )
@@ -809,7 +809,7 @@ LABEL_36:
           else
           {
 LABEL_34:
-            v14 = sub_B08590(v17, v23, v24);
+            v14 = sub_B0F4C0(v17, v23, v24);
           }
           v13 = *(_QWORD *)(v14 + 8);
         }
@@ -817,7 +817,7 @@ LABEL_34:
         {
           v13 = *(_QWORD *)(*v17 + 16LL * *(unsigned __int16 *)(v18 + 72) + 320);
         }
-        v15 = (void (__fastcall **)(__int64 *, _QWORD))sub_B70744(v13, v18);
+        v15 = (void (__fastcall **)(__int64 *, _QWORD))sub_B77674(v13, v18);
         (*v15)(v17, v15);
       }
       else
@@ -843,7 +843,7 @@ LABEL_34:
           else
           {
 LABEL_11:
-            v12 = sub_B08590(v17, class_0, v7);
+            v12 = sub_B0F4C0(v17, class_0, v7);
           }
           (*(void (__fastcall **)(__int64 *, _QWORD))v12)(v17, *(_QWORD *)(v12 + 8));
         }

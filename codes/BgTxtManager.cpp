@@ -6,10 +6,10 @@ void __fastcall BgTxtManager___ctor(BgTxtManager_o *this, const MethodInfo *meth
 
 bool __fastcall BgTxtManager__IsActiveBgTxt(const MethodInfo *method)
 {
-  if ( (byte_4351275 & 1) == 0 )
+  if ( (byte_438A8F0 & 1) == 0 )
   {
-    sub_B70694(&ServantCommentManager_TypeInfo);
-    byte_4351275 = 1;
+    sub_B775C4(&ServantCommentManager_TypeInfo);
+    byte_438A8F0 = 1;
   }
   if ( (BYTE3(ServantCommentManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ServantCommentManager_TypeInfo->_2.cctor_finished )

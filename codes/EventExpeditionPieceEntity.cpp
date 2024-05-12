@@ -1,13 +1,13 @@
 void __fastcall EventExpeditionPieceEntity___ctor(EventExpeditionPieceEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_43545A3 & 1) == 0 )
+  if ( (byte_438DE61 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_43545A3 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438DE61 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -16,15 +16,15 @@ System_String_o *__fastcall EventExpeditionPieceEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_43545A2 & 1) == 0 )
+  if ( (byte_438DE60 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_43545A2 = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_438DE60 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            eventId,
            idx,
-           (const MethodInfo_1CA249C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_1D172EC *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

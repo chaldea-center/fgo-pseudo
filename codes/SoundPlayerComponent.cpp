@@ -14,10 +14,10 @@ void __fastcall SoundPlayerComponent__CreateContinueDeviceSaveData(const MethodI
 {
   SoundPlayerComponent_c *v1; // x0
 
-  if ( (byte_4350AF3 & 1) == 0 )
+  if ( (byte_438A19B & 1) == 0 )
   {
-    sub_B70694(&SoundPlayerComponent_TypeInfo);
-    byte_4350AF3 = 1;
+    sub_B775C4(&SoundPlayerComponent_TypeInfo);
+    byte_438A19B = 1;
   }
   v1 = SoundPlayerComponent_TypeInfo;
   if ( (BYTE3(SoundPlayerComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -32,10 +32,10 @@ void __fastcall SoundPlayerComponent__CreateContinueDeviceSaveData(const MethodI
 
 void __fastcall SoundPlayerComponent__DestroyMenu(SoundPlayerComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4350AF9 & 1) == 0 )
+  if ( (byte_438A1A1 & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    byte_4350AF9 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    byte_438A1A1 = 1;
   }
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -76,25 +76,25 @@ void __fastcall SoundPlayerComponent__LoginProcess(const MethodInfo *method)
   int32_t v29; // [xsp+4h] [xbp-5Ch] BYREF
   WarEntity_o *entity; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4350AF4 & 1) == 0 )
+  if ( (byte_438A19C & 1) == 0 )
   {
-    sub_B70694(&CondType_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMasterData_BgmMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_BgmReleaseMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_ShopMaster___);
-    sub_B70694(&Method_DataMasterBase_ShopMaster__ShopEntity__int__TryGetEntity__);
-    sub_B70694(&Method_DataMasterBase_getEntitys_BgmEntity___);
-    sub_B70694(&Method_System_Collections_Generic_List_int__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_B70694(&System_Collections_Generic_List_int__TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&SoundPlayerComponent_TypeInfo);
-    sub_B70694(&SoundPlayerMenu_TypeInfo);
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_712/*","*/);
-    byte_4350AF4 = 1;
+    sub_B775C4(&CondType_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMasterData_BgmMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_BgmReleaseMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_ShopMaster___);
+    sub_B775C4(&Method_DataMasterBase_ShopMaster__ShopEntity__int__TryGetEntity__);
+    sub_B775C4(&Method_DataMasterBase_getEntitys_BgmEntity___);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int___ctor___69397304);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_B775C4(&System_Collections_Generic_List_int__TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&SoundPlayerComponent_TypeInfo);
+    sub_B775C4(&SoundPlayerMenu_TypeInfo);
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_714/*","*/);
+    byte_438A19C = 1;
   }
   entity = 0LL;
   v29 = 0;
@@ -107,27 +107,27 @@ void __fastcall SoundPlayerComponent__LoginProcess(const MethodInfo *method)
   }
   if ( v1->static_fields->isContinueDevice )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_46;
     DataManager__GetMasterData_WarQuestSelectionMaster_(
       Instance,
-      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_BgmReleaseMaster___);
-    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_BgmReleaseMaster___);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_46;
     Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                   Instance,
-                                  (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_BgmMaster___);
+                                  (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_BgmMaster___);
     if ( !Instance )
       goto LABEL_46;
     Entitys_WarQuestSelectionEntity = DataMasterBase__getEntitys_WarQuestSelectionEntity_(
                                         (DataMasterBase_o *)Instance,
-                                        (const MethodInfo_1CA3E74 *)Method_DataMasterBase_getEntitys_BgmEntity___);
-    v5 = (System_Collections_Generic_List_int__o *)sub_B70764(System_Collections_Generic_List_int__TypeInfo);
+                                        (const MethodInfo_1D18CC4 *)Method_DataMasterBase_getEntitys_BgmEntity___);
+    v5 = (System_Collections_Generic_List_int__o *)sub_B77694(System_Collections_Generic_List_int__TypeInfo);
     System_Collections_Generic_List_int____ctor(
       v5,
-      (const MethodInfo_30B547C *)Method_System_Collections_Generic_List_int___ctor__);
+      (const MethodInfo_30E508C *)Method_System_Collections_Generic_List_int___ctor___69397304);
     if ( !Entitys_WarQuestSelectionEntity )
       goto LABEL_46;
     max_length = Entitys_WarQuestSelectionEntity->max_length;
@@ -138,8 +138,8 @@ void __fastcall SoundPlayerComponent__LoginProcess(const MethodInfo *method)
         if ( i >= (unsigned int)max_length )
         {
 LABEL_47:
-          v27 = sub_B70798(Instance);
-          sub_B70738(v27, 0LL);
+          v27 = sub_B776C8(Instance);
+          sub_B77668(v27, 0LL);
         }
         v8 = &Entitys_WarQuestSelectionEntity->obj.klass + i;
         v9 = v8[4];
@@ -162,22 +162,22 @@ LABEL_25:
             System_Collections_Generic_List_int___Add(
               v5,
               (int32_t)v9->_1.name,
-              (const MethodInfo_30B61D8 *)Method_System_Collections_Generic_List_int__Add__);
+              (const MethodInfo_30E5DE8 *)Method_System_Collections_Generic_List_int__Add__);
             goto LABEL_27;
           }
-          Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !Instance )
             goto LABEL_46;
           Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                         Instance,
-                                        (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ShopMaster___);
+                                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ShopMaster___);
           if ( !Instance )
             goto LABEL_46;
           Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
                                         (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                                         &entity,
                                         element_class,
-                                        (const MethodInfo_21C049C *)Method_DataMasterBase_ShopMaster__ShopEntity__int__TryGetEntity__);
+                                        (const MethodInfo_21FB8F0 *)Method_DataMasterBase_ShopMaster__ShopEntity__int__TryGetEntity__);
           if ( ((unsigned __int8)Instance & 1) == 0 )
           {
 LABEL_24:
@@ -192,9 +192,9 @@ LABEL_27:
     }
     if ( !v5 )
 LABEL_46:
-      sub_B7076C(Instance, v3);
+      sub_B7769C(Instance, v3);
     size = v5->fields._size;
-    v12 = sub_B706AC(string___TypeInfo, (unsigned int)size);
+    v12 = sub_B775DC(string___TypeInfo, (unsigned int)size);
     v13 = (System_String_array *)v12;
     if ( size >= 1 )
     {
@@ -204,7 +204,7 @@ LABEL_46:
       do
       {
         if ( v14 >= (unsigned int)v5->fields._size )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
         v29 = v5->fields._items->m_Items[v14 + 1];
         Instance = (DataManager_o *)System_Int32__ToString((int32_t)&v29, 0LL);
         if ( !v13 )
@@ -212,23 +212,23 @@ LABEL_46:
         v23 = (System_Int32_array **)Instance;
         if ( Instance )
         {
-          Instance = (DataManager_o *)sub_B70754(Instance, v13->obj.klass->_1.element_class);
+          Instance = (DataManager_o *)sub_B77684(Instance, v13->obj.klass->_1.element_class);
           if ( !Instance )
           {
-            v28 = sub_B7078C(0LL);
-            sub_B70738(v28, 0LL);
+            v28 = sub_B776BC(0LL);
+            sub_B77668(v28, 0LL);
           }
         }
         if ( v14 >= v13->max_length )
           goto LABEL_47;
         v16->klass = (BattleServantConfConponent_c *)v23;
-        sub_B70630(v16, v23, v17, v18, v19, v20, v21, v22);
+        sub_B77560(v16, v23, v17, v18, v19, v20, v21, v22);
         ++v14;
         v16 = (BattleServantConfConponent_o *)((char *)v16 + 8);
       }
       while ( (__int64)v14 < v15 );
     }
-    v24 = System_String__Join((System_String_o *)StringLiteral_712/*","*/, v13, 0LL);
+    v24 = System_String__Join((System_String_o *)StringLiteral_714/*","*/, v13, 0LL);
     v25 = SoundPlayerMenu_TypeInfo;
     if ( (BYTE3(SoundPlayerMenu_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !SoundPlayerMenu_TypeInfo->_2.cctor_finished )
@@ -259,7 +259,7 @@ void __fastcall SoundPlayerComponent__SetEnableBlockTouch(
 
   soundPlayerMenu = this->fields.soundPlayerMenu;
   if ( !soundPlayerMenu || (this = (SoundPlayerComponent_o *)soundPlayerMenu->fields.maskColl) == 0LL )
-    sub_B7076C(this, enable);
+    sub_B7769C(this, enable);
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)this, enable, 0LL);
 }
 
@@ -268,17 +268,17 @@ void __fastcall SoundPlayerComponent___openMenu_b__10_0(SoundPlayerComponent_o *
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4350AFC & 1) == 0 )
+  if ( (byte_438A1A4 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_6989/*"GO_NEXT"*/);
-    byte_4350AFC = 1;
+    sub_B775C4(&StringLiteral_7045/*"GO_NEXT"*/);
+    byte_438A1A4 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm
-    || (PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6989/*"GO_NEXT"*/, 0LL),
+    || (PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_7045/*"GO_NEXT"*/, 0LL),
         (myRoomFsm = (PlayMakerFSM_o *)this->fields.myRoomCtrl) == 0LL) )
   {
-    sub_B7076C(myRoomFsm, method);
+    sub_B7769C(myRoomFsm, method);
   }
   MyRoomControl__SetBackButtonIgnore((MyRoomControl_o *)myRoomFsm, 0, 0LL);
 }
@@ -304,17 +304,17 @@ bool __fastcall SoundPlayerComponent__checkOpen(
   signed __int64 v16; // [xsp+8h] [xbp-58h]
 
   v4 = releaseEntity;
-  if ( (byte_4350AF5 & 1) == 0 )
+  if ( (byte_438A19D & 1) == 0 )
   {
-    sub_B70694(&CondType_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_B70694(&NetworkManager_TypeInfo);
-    releaseEntity = (BgmReleaseEntity_o *)sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4350AF5 = 1;
+    sub_B775C4(&CondType_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    releaseEntity = (BgmReleaseEntity_o *)sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438A19D = 1;
   }
   if ( !v4 )
 LABEL_29:
-    sub_B7076C(releaseEntity, *(_QWORD *)&kind);
+    sub_B7769C(releaseEntity, *(_QWORD *)&kind);
   vals = v4->fields.vals;
   if ( !vals )
     return 0;
@@ -330,8 +330,8 @@ LABEL_8:
   if ( v8 >= targetIds->max_length )
   {
 LABEL_32:
-    v15 = sub_B70798(releaseEntity);
-    sub_B70738(v15, 0LL);
+    v15 = sub_B776C8(releaseEntity);
+    sub_B77668(v15, 0LL);
   }
   v9 = targetIds->m_Items[v8 + 1];
   v10 = 0LL;
@@ -352,12 +352,12 @@ LABEL_32:
     v12 = vals->m_Items[v10 + 1];
     if ( kind != 17 )
       break;
-    releaseEntity = (BgmReleaseEntity_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    releaseEntity = (BgmReleaseEntity_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !releaseEntity )
       goto LABEL_29;
     MasterData_WarQuestSelectionMaster = (UserServantCollectionMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                             (DataManager_o *)releaseEntity,
-                                                                            (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                                                                            (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
     if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !NetworkManager_TypeInfo->_2.cctor_finished )
     {
@@ -401,17 +401,17 @@ bool __fastcall SoundPlayerComponent__closeMenu(SoundPlayerComponent_o *this, co
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4350AF7 & 1) == 0 )
+  if ( (byte_438A19F & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_SoundPlayerComponent_onClose__);
-    byte_4350AF7 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_SoundPlayerComponent_onClose__);
+    byte_438A19F = 1;
   }
   soundPlayerMenu = (BaseMenu_o *)this->fields.soundPlayerMenu;
-  v4 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_SoundPlayerComponent_onClose__, 0LL);
   if ( !soundPlayerMenu )
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   BaseMenu__Close(soundPlayerMenu, v4, 0LL);
   return 1;
 }
@@ -425,7 +425,7 @@ System_String_o *__fastcall SoundPlayerComponent__getPlaySoundName(
 
   soundPlayerMenu = this->fields.soundPlayerMenu;
   if ( !soundPlayerMenu )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return soundPlayerMenu->fields.playSoundName;
 }
 
@@ -441,7 +441,7 @@ void __fastcall SoundPlayerComponent__hideMenu(SoundPlayerComponent_o *this, con
                                                   (UnityEngine_Component_o *)this,
                                                   0LL)) == 0LL) )
   {
-    sub_B7076C(soundPlayerMenu, method);
+    sub_B7769C(soundPlayerMenu, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)soundPlayerMenu, 0, 0LL);
 }
@@ -451,16 +451,16 @@ void __fastcall SoundPlayerComponent__initMenu(SoundPlayerComponent_o *this, con
 {
   SoundPlayerMenu_o *soundPlayerMenu; // x0
 
-  if ( (byte_4350AF8 & 1) == 0 )
+  if ( (byte_438A1A0 & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    byte_4350AF8 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    byte_438A1A0 = 1;
   }
   soundPlayerMenu = this->fields.soundPlayerMenu;
   if ( !soundPlayerMenu
     || (SoundPlayerMenu__Init(soundPlayerMenu, method), (soundPlayerMenu = this->fields.soundPlayerMenu) == 0LL) )
   {
-    sub_B7076C(soundPlayerMenu, method);
+    sub_B7769C(soundPlayerMenu, method);
   }
   SoundPlayerMenu__resetPlaySoundData(soundPlayerMenu, method);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -473,15 +473,15 @@ void __fastcall SoundPlayerComponent__onClose(SoundPlayerComponent_o *this, cons
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4350AFA & 1) == 0 )
+  if ( (byte_438A1A2 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_3177/*"CLOSE_MENU"*/);
-    byte_4350AFA = 1;
+    sub_B775C4(&StringLiteral_3228/*"CLOSE_MENU"*/);
+    byte_438A1A2 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_B7076C(0LL, method);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3177/*"CLOSE_MENU"*/, 0LL);
+    sub_B7769C(0LL, method);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3228/*"CLOSE_MENU"*/, 0LL);
 }
 
 
@@ -489,15 +489,15 @@ void __fastcall SoundPlayerComponent__onEndMenu(SoundPlayerComponent_o *this, co
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4350AFB & 1) == 0 )
+  if ( (byte_438A1A3 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_3182/*"CLOSE_SOUND_PLAYER"*/);
-    byte_4350AFB = 1;
+    sub_B775C4(&StringLiteral_3233/*"CLOSE_SOUND_PLAYER"*/);
+    byte_438A1A3 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_B7076C(0LL, method);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3182/*"CLOSE_SOUND_PLAYER"*/, 0LL);
+    sub_B7769C(0LL, method);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3233/*"CLOSE_SOUND_PLAYER"*/, 0LL);
 }
 
 
@@ -511,12 +511,12 @@ bool __fastcall SoundPlayerComponent__openMenu(SoundPlayerComponent_o *this, con
   System_Action_o *v8; // x22
   const MethodInfo *v9; // x3
 
-  if ( (byte_4350AF6 & 1) == 0 )
+  if ( (byte_438A19E & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_SoundPlayerComponent__openMenu_b__10_0__);
-    sub_B70694(&Method_SoundPlayerComponent_onEndMenu__);
-    byte_4350AF6 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_SoundPlayerComponent__openMenu_b__10_0__);
+    sub_B775C4(&Method_SoundPlayerComponent_onEndMenu__);
+    byte_438A19E = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   GameObjectExtensions__ResetPosition(gameObject, 0LL);
@@ -527,19 +527,19 @@ bool __fastcall SoundPlayerComponent__openMenu(SoundPlayerComponent_o *this, con
   titleInfo = (UnityEngine_GameObject_o *)this->fields.titleInfo;
   if ( !titleInfo )
     goto LABEL_8;
-  TitleInfoControl__changeTitleInfo_18518488((TitleInfoControl_o *)titleInfo, 1, 51, 0, 0LL);
+  TitleInfoControl__changeTitleInfo_18674844((TitleInfoControl_o *)titleInfo, 1, 51, 0, 0LL);
   titleInfo = (UnityEngine_GameObject_o *)this->fields.soundPlayerMenu;
   if ( !titleInfo
     || (SoundPlayerMenu__analyzeNewList((SoundPlayerMenu_o *)titleInfo, v5),
         soundPlayerMenu = this->fields.soundPlayerMenu,
-        v7 = (System_Action_o *)sub_B70764(System_Action_TypeInfo),
+        v7 = (System_Action_o *)sub_B77694(System_Action_TypeInfo),
         System_Action___ctor(v7, (Il2CppObject *)this, Method_SoundPlayerComponent__openMenu_b__10_0__, 0LL),
-        v8 = (System_Action_o *)sub_B70764(System_Action_TypeInfo),
+        v8 = (System_Action_o *)sub_B77694(System_Action_TypeInfo),
         System_Action___ctor(v8, (Il2CppObject *)this, Method_SoundPlayerComponent_onEndMenu__, 0LL),
         !soundPlayerMenu) )
   {
 LABEL_8:
-    sub_B7076C(titleInfo, v5);
+    sub_B7769C(titleInfo, v5);
   }
   SoundPlayerMenu__open(soundPlayerMenu, v7, v8, v9);
   return 1;
@@ -556,7 +556,7 @@ void __fastcall SoundPlayerComponent__showMenu(SoundPlayerComponent_o *this, con
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.soundPlayerMenu) == 0LL) )
   {
-    sub_B7076C(gameObject, v4);
+    sub_B7769C(gameObject, v4);
   }
   SoundPlayerMenu__Init((SoundPlayerMenu_o *)gameObject, v4);
 }

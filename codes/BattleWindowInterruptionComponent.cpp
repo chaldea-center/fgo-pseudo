@@ -14,17 +14,17 @@ void __fastcall BattleWindowInterruptionComponent__OnClickCancel(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_435126E & 1) == 0 )
+  if ( (byte_438A8E9 & 1) == 0 )
   {
-    sub_B70694(&Method_BattleWindowInterruptionComponent_OnClickCancel__);
-    byte_435126E = 1;
+    sub_B775C4(&Method_BattleWindowInterruptionComponent_OnClickCancel__);
+    byte_438A8E9 = 1;
   }
   if ( this->fields.state == 3 )
   {
     v3 = Method_BattleWindowInterruptionComponent_OnClickCancel__;
     if ( (*((_BYTE *)Method_BattleWindowInterruptionComponent_OnClickCancel__ + 75) & 2) != 0 )
-      v3 = (_QWORD *)sub_B7069C(Method_BattleWindowInterruptionComponent_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+      v3 = (_QWORD *)sub_B775CC(Method_BattleWindowInterruptionComponent_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     ActionExtensions__Call(this->fields.cancelButtonCallback, 0LL);
   }
@@ -38,17 +38,17 @@ void __fastcall BattleWindowInterruptionComponent__OnClickInterruption(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4351271 & 1) == 0 )
+  if ( (byte_438A8EC & 1) == 0 )
   {
-    sub_B70694(&Method_BattleWindowInterruptionComponent_OnClickInterruption__);
-    byte_4351271 = 1;
+    sub_B775C4(&Method_BattleWindowInterruptionComponent_OnClickInterruption__);
+    byte_438A8EC = 1;
   }
   if ( this->fields.state == 3 )
   {
     v3 = Method_BattleWindowInterruptionComponent_OnClickInterruption__;
     if ( (*((_BYTE *)Method_BattleWindowInterruptionComponent_OnClickInterruption__ + 75) & 2) != 0 )
-      v3 = (_QWORD *)sub_B7069C(Method_BattleWindowInterruptionComponent_OnClickInterruption__);
-    v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+      v3 = (_QWORD *)sub_B775CC(Method_BattleWindowInterruptionComponent_OnClickInterruption__);
+    v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0LL);
     ActionExtensions__Call(this->fields.interruptionButtonCallback, 0LL);
   }
@@ -62,17 +62,17 @@ void __fastcall BattleWindowInterruptionComponent__OnClickSelectWaveRestart(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4351270 & 1) == 0 )
+  if ( (byte_438A8EB & 1) == 0 )
   {
-    sub_B70694(&Method_BattleWindowInterruptionComponent_OnClickSelectWaveRestart__);
-    byte_4351270 = 1;
+    sub_B775C4(&Method_BattleWindowInterruptionComponent_OnClickSelectWaveRestart__);
+    byte_438A8EB = 1;
   }
   if ( this->fields.state == 3 )
   {
     v3 = Method_BattleWindowInterruptionComponent_OnClickSelectWaveRestart__;
     if ( (*((_BYTE *)Method_BattleWindowInterruptionComponent_OnClickSelectWaveRestart__ + 75) & 2) != 0 )
-      v3 = (_QWORD *)sub_B7069C(Method_BattleWindowInterruptionComponent_OnClickSelectWaveRestart__);
-    v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+      v3 = (_QWORD *)sub_B775CC(Method_BattleWindowInterruptionComponent_OnClickSelectWaveRestart__);
+    v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     ActionExtensions__Call(this->fields.selectWaveRestartButtonCallback, 0LL);
   }
@@ -86,17 +86,17 @@ void __fastcall BattleWindowInterruptionComponent__OnClickWaveRestart(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_435126F & 1) == 0 )
+  if ( (byte_438A8EA & 1) == 0 )
   {
-    sub_B70694(&Method_BattleWindowInterruptionComponent_OnClickWaveRestart__);
-    byte_435126F = 1;
+    sub_B775C4(&Method_BattleWindowInterruptionComponent_OnClickWaveRestart__);
+    byte_438A8EA = 1;
   }
   if ( this->fields.state == 3 )
   {
     v3 = Method_BattleWindowInterruptionComponent_OnClickWaveRestart__;
     if ( (*((_BYTE *)Method_BattleWindowInterruptionComponent_OnClickWaveRestart__ + 75) & 2) != 0 )
-      v3 = (_QWORD *)sub_B7069C(Method_BattleWindowInterruptionComponent_OnClickWaveRestart__);
-    v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+      v3 = (_QWORD *)sub_B775CC(Method_BattleWindowInterruptionComponent_OnClickWaveRestart__);
+    v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     ActionExtensions__Call(this->fields.waveRestartButtonCallback, 0LL);
   }
@@ -133,7 +133,7 @@ void __fastcall BattleWindowInterruptionComponent__SetButtonCallback(
   System_Int32_array *v29; // x7
 
   this->fields.cancelButtonCallback = cancel;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.cancelButtonCallback,
     (System_Int32_array **)cancel,
     (System_String_array **)waveRestart,
@@ -143,7 +143,7 @@ void __fastcall BattleWindowInterruptionComponent__SetButtonCallback(
     v6,
     v7);
   this->fields.waveRestartButtonCallback = waveRestart;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.waveRestartButtonCallback,
     (System_Int32_array **)waveRestart,
     v12,
@@ -153,7 +153,7 @@ void __fastcall BattleWindowInterruptionComponent__SetButtonCallback(
     v16,
     v17);
   this->fields.selectWaveRestartButtonCallback = selectWaveRestart;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.selectWaveRestartButtonCallback,
     (System_Int32_array **)selectWaveRestart,
     v18,
@@ -163,7 +163,7 @@ void __fastcall BattleWindowInterruptionComponent__SetButtonCallback(
     v22,
     v23);
   this->fields.interruptionButtonCallback = interruption;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.interruptionButtonCallback,
     (System_Int32_array **)interruption,
     v24,
@@ -203,18 +203,18 @@ void __fastcall BattleWindowInterruptionComponent__SetInterruptionWindow(
   struct System_String_o *v28; // x1
   struct System_String_o **p_closeButtonPath; // x20
 
-  if ( (byte_435126D & 1) == 0 )
+  if ( (byte_438A8E8 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_2499/*"BATTLE_INTERRUPTION_WINDOW_INTERRUPTION_BUTTON"*/);
-    sub_B70694(&StringLiteral_2495/*"BATTLE_INTERRUPTION_WINDOW_CANCEL_BUTTON"*/);
-    sub_B70694(&StringLiteral_2501/*"BATTLE_INTERRUPTION_WINDOW_SELECT_WAVE_RESTART"*/);
-    sub_B70694(&StringLiteral_15698/*"Window/CancelButton"*/);
-    sub_B70694(&StringLiteral_2498/*"BATTLE_INTERRUPTION_WINDOW_CURRENT_WAVE_RESTART"*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    sub_B70694(&StringLiteral_2502/*"BATTLE_INTERRUPTION_WINDOW_TITLE"*/);
-    sub_B70694(&StringLiteral_2500/*"BATTLE_INTERRUPTION_WINDOW_MESSAGE"*/);
-    byte_435126D = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_2545/*"BATTLE_INTERRUPTION_WINDOW_INTERRUPTION_BUTTON"*/);
+    sub_B775C4(&StringLiteral_2541/*"BATTLE_INTERRUPTION_WINDOW_CANCEL_BUTTON"*/);
+    sub_B775C4(&StringLiteral_2547/*"BATTLE_INTERRUPTION_WINDOW_SELECT_WAVE_RESTART"*/);
+    sub_B775C4(&StringLiteral_15768/*"Window/CancelButton"*/);
+    sub_B775C4(&StringLiteral_2544/*"BATTLE_INTERRUPTION_WINDOW_CURRENT_WAVE_RESTART"*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    sub_B775C4(&StringLiteral_2548/*"BATTLE_INTERRUPTION_WINDOW_TITLE"*/);
+    sub_B775C4(&StringLiteral_2546/*"BATTLE_INTERRUPTION_WINDOW_MESSAGE"*/);
+    byte_438A8E8 = 1;
   }
   BattleWindowInterruptionComponent__SetButtonCallback(
     this,
@@ -229,17 +229,17 @@ void __fastcall BattleWindowInterruptionComponent__SetInterruptionWindow(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  cancelButton = LocalizationManager__Get((System_String_o *)StringLiteral_2502/*"BATTLE_INTERRUPTION_WINDOW_TITLE"*/, 0LL);
+  cancelButton = LocalizationManager__Get((System_String_o *)StringLiteral_2548/*"BATTLE_INTERRUPTION_WINDOW_TITLE"*/, 0LL);
   if ( !title )
     goto LABEL_20;
   UILabel__set_text(title, cancelButton, 0LL);
   message = this->fields.message;
-  cancelButton = LocalizationManager__Get((System_String_o *)StringLiteral_2500/*"BATTLE_INTERRUPTION_WINDOW_MESSAGE"*/, 0LL);
+  cancelButton = LocalizationManager__Get((System_String_o *)StringLiteral_2546/*"BATTLE_INTERRUPTION_WINDOW_MESSAGE"*/, 0LL);
   if ( !message )
     goto LABEL_20;
   UILabel__set_text(message, cancelButton, 0LL);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  cancelButton = LocalizationManager__Get((System_String_o *)StringLiteral_2495/*"BATTLE_INTERRUPTION_WINDOW_CANCEL_BUTTON"*/, 0LL);
+  cancelButton = LocalizationManager__Get((System_String_o *)StringLiteral_2541/*"BATTLE_INTERRUPTION_WINDOW_CANCEL_BUTTON"*/, 0LL);
   if ( !cancelButtonLabel )
     goto LABEL_20;
   UILabel__set_text(cancelButtonLabel, cancelButton, 0LL);
@@ -248,7 +248,7 @@ void __fastcall BattleWindowInterruptionComponent__SetInterruptionWindow(
     goto LABEL_20;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)cancelButton, isFromBattleMenu, 0LL);
   waveRestartButtonLabel = this->fields.waveRestartButtonLabel;
-  cancelButton = LocalizationManager__Get((System_String_o *)StringLiteral_2498/*"BATTLE_INTERRUPTION_WINDOW_CURRENT_WAVE_RESTART"*/, 0LL);
+  cancelButton = LocalizationManager__Get((System_String_o *)StringLiteral_2544/*"BATTLE_INTERRUPTION_WINDOW_CURRENT_WAVE_RESTART"*/, 0LL);
   if ( !waveRestartButtonLabel )
     goto LABEL_20;
   UILabel__set_text(waveRestartButtonLabel, cancelButton, 0LL);
@@ -257,7 +257,7 @@ void __fastcall BattleWindowInterruptionComponent__SetInterruptionWindow(
     goto LABEL_20;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)cancelButton, 1, 0LL);
   selectWaveRestartButtonLabel = this->fields.selectWaveRestartButtonLabel;
-  cancelButton = LocalizationManager__Get((System_String_o *)StringLiteral_2501/*"BATTLE_INTERRUPTION_WINDOW_SELECT_WAVE_RESTART"*/, 0LL);
+  cancelButton = LocalizationManager__Get((System_String_o *)StringLiteral_2547/*"BATTLE_INTERRUPTION_WINDOW_SELECT_WAVE_RESTART"*/, 0LL);
   if ( !selectWaveRestartButtonLabel )
     goto LABEL_20;
   UILabel__set_text(selectWaveRestartButtonLabel, cancelButton, 0LL);
@@ -266,7 +266,7 @@ void __fastcall BattleWindowInterruptionComponent__SetInterruptionWindow(
     goto LABEL_20;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)cancelButton, 1, 0LL);
   interruptionButtonLabel = this->fields.interruptionButtonLabel;
-  cancelButton = LocalizationManager__Get((System_String_o *)StringLiteral_2499/*"BATTLE_INTERRUPTION_WINDOW_INTERRUPTION_BUTTON"*/, 0LL);
+  cancelButton = LocalizationManager__Get((System_String_o *)StringLiteral_2545/*"BATTLE_INTERRUPTION_WINDOW_INTERRUPTION_BUTTON"*/, 0LL);
   if ( !interruptionButtonLabel )
     goto LABEL_20;
   UILabel__set_text(interruptionButtonLabel, cancelButton, 0LL);
@@ -274,13 +274,13 @@ void __fastcall BattleWindowInterruptionComponent__SetInterruptionWindow(
   if ( !cancelButton )
     goto LABEL_20;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)cancelButton, !isFromBattleMenu, 0LL);
-  v27 = (struct System_String_o **)&StringLiteral_15698/*"Window/CancelButton"*/;
+  v27 = (struct System_String_o **)&StringLiteral_15768/*"Window/CancelButton"*/;
   if ( !isFromBattleMenu )
     v27 = (struct System_String_o **)&StringLiteral_1/*""*/;
   v28 = *v27;
   this->fields.closeButtonPath = *v27;
   p_closeButtonPath = &this->fields.closeButtonPath;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)p_closeButtonPath,
     (System_Int32_array **)v28,
     v21,
@@ -292,7 +292,7 @@ void __fastcall BattleWindowInterruptionComponent__SetInterruptionWindow(
   cancelButton = *(p_closeButtonPath - 5);
   if ( !cancelButton )
 LABEL_20:
-    sub_B7076C(cancelButton, v15);
+    sub_B7769C(cancelButton, v15);
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)cancelButton, isFromBattleMenu, 0LL);
 }
 

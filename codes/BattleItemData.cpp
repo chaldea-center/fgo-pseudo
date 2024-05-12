@@ -1,10 +1,10 @@
 void __fastcall BattleItemData___ctor(BattleItemData_o *this, const MethodInfo *method)
 {
-  if ( (byte_434EB3B & 1) == 0 )
+  if ( (byte_438810C & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonTemplate_BattleItemData___ctor__);
-    sub_B70694(&SingletonTemplate_BattleItemData__TypeInfo);
-    byte_434EB3B = 1;
+    sub_B775C4(&Method_SingletonTemplate_BattleItemData___ctor__);
+    sub_B775C4(&SingletonTemplate_BattleItemData__TypeInfo);
+    byte_438810C = 1;
   }
   if ( (BYTE3(SingletonTemplate_BattleItemData__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !SingletonTemplate_BattleItemData__TypeInfo->_2.cctor_finished )
@@ -13,7 +13,7 @@ void __fastcall BattleItemData___ctor(BattleItemData_o *this, const MethodInfo *
   }
   SingletonTemplate_clsQuestCheck____ctor(
     (SingletonTemplate_clsQuestCheck__o *)this,
-    (const MethodInfo_2CE9F98 *)Method_SingletonTemplate_BattleItemData___ctor__);
+    (const MethodInfo_2D16BA8 *)Method_SingletonTemplate_BattleItemData___ctor__);
 }
 
 
@@ -65,15 +65,15 @@ BattleItemData_SaveData_o *__fastcall BattleItemData__GetSaveData(BattleItemData
   __int64 v5; // x1
   BattleItemData_SaveData_o *result; // x0
 
-  if ( (byte_434EB3A & 1) == 0 )
+  if ( (byte_438810B & 1) == 0 )
   {
-    sub_B70694(&BattleItemData_SaveData_TypeInfo);
-    byte_434EB3A = 1;
+    sub_B775C4(&BattleItemData_SaveData_TypeInfo);
+    byte_438810B = 1;
   }
-  v3 = (BattleItemData_SaveData_o *)sub_B70764(BattleItemData_SaveData_TypeInfo);
+  v3 = (BattleItemData_SaveData_o *)sub_B77694(BattleItemData_SaveData_TypeInfo);
   BattleItemData_SaveData___ctor(v3, 0LL);
   if ( !v3 )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   result = v3;
   v3->fields.id = this->fields.itemId;
   v3->fields.number = this->fields.itemNumber;

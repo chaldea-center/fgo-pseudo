@@ -1,9 +1,9 @@
 void __fastcall CampaignInfoItem___cctor(const MethodInfo *method)
 {
-  if ( (byte_4354B1D & 1) == 0 )
+  if ( (byte_438E3DC & 1) == 0 )
   {
-    sub_B70694(&CampaignInfoItem_TypeInfo);
-    byte_4354B1D = 1;
+    sub_B775C4(&CampaignInfoItem_TypeInfo);
+    byte_438E3DC = 1;
   }
   CampaignInfoItem_TypeInfo->static_fields->baseWidth = 900;
 }
@@ -25,12 +25,12 @@ void __fastcall CampaignInfoItem__OnClick(CampaignInfoItem_o *this, const Method
   struct CampaignInformation_o *v7; // x8
 
   v2 = this;
-  if ( (byte_4354B1C & 1) == 0 )
+  if ( (byte_438E3DB & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    sub_B70694(&WebViewManager_TypeInfo);
-    this = (CampaignInfoItem_o *)sub_B70694(&StringLiteral_1/*""*/);
-    byte_4354B1C = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    sub_B775C4(&WebViewManager_TypeInfo);
+    this = (CampaignInfoItem_o *)sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438E3DB = 1;
   }
   target = v2->fields.target;
   if ( !target )
@@ -60,7 +60,7 @@ void __fastcall CampaignInfoItem__OnClick(CampaignInfoItem_o *this, const Method
   v5 = v2->fields.target;
   if ( !v5 )
 LABEL_20:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   url = v5->fields.url;
   if ( (BYTE3(WebViewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !WebViewManager_TypeInfo->_2.cctor_finished )
@@ -103,16 +103,16 @@ void __fastcall CampaignInfoItem__SetCampaignInfo(
   UnityEngine_Rect_o v31; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v32; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4354B1B & 1) == 0 )
+  if ( (byte_438E3DA & 1) == 0 )
   {
-    sub_B70694(&CampaignInfoItem_TypeInfo);
-    sub_B70694(&UnityEngine_Material_TypeInfo);
-    sub_B70694(&StringLiteral_4619/*"Custom/SpriteWithMask"*/);
-    sub_B70694(&StringLiteral_16243/*"_MaskTex"*/);
-    byte_4354B1B = 1;
+    sub_B775C4(&CampaignInfoItem_TypeInfo);
+    sub_B775C4(&UnityEngine_Material_TypeInfo);
+    sub_B775C4(&StringLiteral_4671/*"Custom/SpriteWithMask"*/);
+    sub_B775C4(&StringLiteral_16313/*"_MaskTex"*/);
+    byte_438E3DA = 1;
   }
   this->fields.target = info;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.target,
     (System_Int32_array **)info,
     (System_String_array **)tex,
@@ -125,8 +125,8 @@ void __fastcall CampaignInfoItem__SetCampaignInfo(
   if ( !gameObject )
     goto LABEL_16;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
-  v15 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4619/*"Custom/SpriteWithMask"*/, 0LL);
-  v16 = (UnityEngine_Material_o *)sub_B70764(UnityEngine_Material_TypeInfo);
+  v15 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4671/*"Custom/SpriteWithMask"*/, 0LL);
+  v16 = (UnityEngine_Material_o *)sub_B77694(UnityEngine_Material_TypeInfo);
   UnityEngine_Material___ctor(v16, v15, 0LL);
   gameObject = (UnityEngine_GameObject_o *)this->fields.baseText;
   if ( !gameObject )
@@ -138,7 +138,7 @@ void __fastcall CampaignInfoItem__SetCampaignInfo(
   if ( !v16 )
     goto LABEL_16;
   UnityEngine_Material__set_mainTexture(v16, (UnityEngine_Texture_o *)tex, 0LL);
-  UnityEngine_Material__SetTexture(v16, (System_String_o *)StringLiteral_16243/*"_MaskTex"*/, (UnityEngine_Texture_o *)maskTex, 0LL);
+  UnityEngine_Material__SetTexture(v16, (System_String_o *)StringLiteral_16313/*"_MaskTex"*/, (UnityEngine_Texture_o *)maskTex, 0LL);
   gameObject = (UnityEngine_GameObject_o *)this->fields.baseText;
   if ( !gameObject )
     goto LABEL_16;
@@ -191,7 +191,7 @@ void __fastcall CampaignInfoItem__SetCampaignInfo(
         (gameObject = (UnityEngine_GameObject_o *)this->fields.collider) == 0LL) )
   {
 LABEL_16:
-    sub_B7076C(gameObject, v14);
+    sub_B7769C(gameObject, v14);
   }
   v30.fields.y = (float)-height * 0.5;
   v30.fields.x = 0.0;

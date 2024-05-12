@@ -1,14 +1,14 @@
 void __fastcall ServantOverwriteMaster___ctor(ServantOverwriteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_43538AF & 1) == 0 )
+  if ( (byte_438D0E5 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string___ctor__);
-    byte_43538AF = 1;
+    sub_B775C4(&Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string___ctor__);
+    byte_438D0E5 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     475,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,16 @@ ServantOverwriteEntity_o *__fastcall ServantOverwriteMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_43538B0 & 1) == 0 )
+  if ( (byte_438D0E6 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string__GetEntity__);
-    byte_43538B0 = 1;
+    sub_B775C4(&Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string__GetEntity__);
+    byte_438D0E6 = 1;
   }
   PK = ServantOverwriteEntity__CreatePK(svtId, type, priority, *(const MethodInfo **)&priority);
   return (ServantOverwriteEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                        (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                        PK,
-                                       (const MethodInfo_21C0890 *)Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string__GetEntity__);
+                                       (const MethodInfo_21FBCE4 *)Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string__GetEntity__);
 }
 
 
@@ -70,24 +70,24 @@ int32_t __fastcall ServantOverwriteMaster__GetServantOverwriteTreasureDeviceId(
   const MethodInfo *v32; // x2
   ServantOverwriteEntity_o *v34; // [xsp+0h] [xbp-60h]
 
-  if ( (byte_43538AE & 1) == 0 )
+  if ( (byte_438D0E4 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
-    sub_B70694(&CondType_TypeInfo);
-    sub_B70694(&System_IDisposable_TypeInfo);
-    sub_B70694(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
-    sub_B70694(&System_Collections_IEnumerator_TypeInfo);
-    sub_B70694(&ServantOverwriteEntity_TypeInfo);
-    byte_43538AE = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+    sub_B775C4(&CondType_TypeInfo);
+    sub_B775C4(&System_IDisposable_TypeInfo);
+    sub_B775C4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
+    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
+    sub_B775C4(&ServantOverwriteEntity_TypeInfo);
+    byte_438D0E4 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
-    sub_B7076C(0LL, *(_QWORD *)&svtId);
+    sub_B7769C(0LL, *(_QWORD *)&svtId);
   Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
                  list,
-                 (const MethodInfo_2C865F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_2CC56C8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B7076C(0LL, v8);
+    sub_B7769C(0LL, v8);
   v10 = 0LL;
   while ( 1 )
   {
@@ -108,7 +108,7 @@ int32_t __fastcall ServantOverwriteMaster__GetServantOverwriteTreasureDeviceId(
     else
     {
 LABEL_29:
-      p_method = sub_B08590(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_B0F4C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -131,7 +131,7 @@ LABEL_29:
     else
     {
 LABEL_10:
-      v14 = sub_B08590(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v14 = sub_B0F4C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v15 = (ServantOverwriteEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v14)(
                                         Enumerator,
@@ -143,9 +143,9 @@ LABEL_10:
     if ( *(&v15->klass->_2.bitflags2 + 1) < (unsigned int)v19
       || (ServantOverwriteEntity_c *)v15->klass->_2.typeHierarchy[v19 - 1] != ServantOverwriteEntity_TypeInfo )
     {
-      sub_B70A60(v15);
+      sub_B77990(v15);
 LABEL_42:
-      sub_B7076C(v15, v16);
+      sub_B7769C(v15, v16);
     }
     if ( v15->fields.svtId == svtId
       && v15->fields.type == type
@@ -180,7 +180,7 @@ LABEL_42:
   else
   {
 LABEL_36:
-    v31 = sub_B08590(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v31 = sub_B0F4C0(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v31)(Enumerator, *(_QWORD *)(v31 + 8));
   if ( v10 )
@@ -201,15 +201,15 @@ bool __fastcall ServantOverwriteMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_43538B1 & 1) == 0 )
+  if ( (byte_438D0E7 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string__TryGetEntity__);
-    byte_43538B1 = 1;
+    sub_B775C4(&Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string__TryGetEntity__);
+    byte_438D0E7 = 1;
   }
   PK = ServantOverwriteEntity__CreatePK(svtId, type, priority, *(const MethodInfo **)&type);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string__TryGetEntity__);
 }

@@ -81,61 +81,61 @@ void __fastcall WarBoardBreakPointComponent___cctor(const MethodInfo *method)
   System_Int32_array *v79; // x6
   System_Int32_array *v80; // x7
 
-  if ( (byte_43503B0 & 1) == 0 )
+  if ( (byte_43899D9 & 1) == 0 )
   {
-    sub_B70694(&WarBoardBreakPointComponent_TypeInfo);
-    sub_B70694(&StringLiteral_9084/*"MasterPoint_recharge_effect_1"*/);
-    sub_B70694(&StringLiteral_17191/*"break_on_boss"*/);
-    sub_B70694(&StringLiteral_20732/*"master_gauge_off_{0}"*/);
-    sub_B70694(&StringLiteral_17189/*"break_off_boss"*/);
-    sub_B70694(&StringLiteral_17190/*"break_on"*/);
-    sub_B70694(&StringLiteral_17188/*"break_off"*/);
-    sub_B70694(&StringLiteral_23578/*"wall_gauge_{0}"*/);
-    sub_B70694(&StringLiteral_20733/*"master_gauge_{0}"*/);
-    sub_B70694(&StringLiteral_2929/*"BreakPoint_effect_{0}"*/);
-    sub_B70694(&StringLiteral_9083/*"MasterPoint_effect_{0}"*/);
-    byte_43503B0 = 1;
+    sub_B775C4(&WarBoardBreakPointComponent_TypeInfo);
+    sub_B775C4(&StringLiteral_9142/*"MasterPoint_recharge_effect_1"*/);
+    sub_B775C4(&StringLiteral_17274/*"break_on_boss"*/);
+    sub_B775C4(&StringLiteral_20828/*"master_gauge_off_{0}"*/);
+    sub_B775C4(&StringLiteral_17272/*"break_off_boss"*/);
+    sub_B775C4(&StringLiteral_17273/*"break_on"*/);
+    sub_B775C4(&StringLiteral_17271/*"break_off"*/);
+    sub_B775C4(&StringLiteral_23680/*"wall_gauge_{0}"*/);
+    sub_B775C4(&StringLiteral_20829/*"master_gauge_{0}"*/);
+    sub_B775C4(&StringLiteral_2975/*"BreakPoint_effect_{0}"*/);
+    sub_B775C4(&StringLiteral_9141/*"MasterPoint_effect_{0}"*/);
+    byte_43899D9 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)WarBoardBreakPointComponent_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_17190/*"break_on"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_17190/*"break_on"*/;
-  sub_B70630(static_fields, v8, v1, v2, v3, v4, v5, v6);
+  v8 = (System_Int32_array **)StringLiteral_17273/*"break_on"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_17273/*"break_on"*/;
+  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
   v9 = WarBoardBreakPointComponent_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_17188/*"break_off"*/;
-  v9->BreakPointOffImageName = (struct System_String_o *)StringLiteral_17188/*"break_off"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v9->BreakPointOffImageName, v10, v11, v12, v13, v14, v15, v16);
+  v10 = (System_Int32_array **)StringLiteral_17271/*"break_off"*/;
+  v9->BreakPointOffImageName = (struct System_String_o *)StringLiteral_17271/*"break_off"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v9->BreakPointOffImageName, v10, v11, v12, v13, v14, v15, v16);
   v17 = WarBoardBreakPointComponent_TypeInfo->static_fields;
-  v18 = (System_Int32_array **)StringLiteral_17191/*"break_on_boss"*/;
-  v17->EnemyBreakPointOnImageName = (struct System_String_o *)StringLiteral_17191/*"break_on_boss"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v17->EnemyBreakPointOnImageName, v18, v19, v20, v21, v22, v23, v24);
+  v18 = (System_Int32_array **)StringLiteral_17274/*"break_on_boss"*/;
+  v17->EnemyBreakPointOnImageName = (struct System_String_o *)StringLiteral_17274/*"break_on_boss"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v17->EnemyBreakPointOnImageName, v18, v19, v20, v21, v22, v23, v24);
   v25 = WarBoardBreakPointComponent_TypeInfo->static_fields;
-  v26 = (System_Int32_array **)StringLiteral_17189/*"break_off_boss"*/;
-  v25->EnemyBreakPointOffImageName = (struct System_String_o *)StringLiteral_17189/*"break_off_boss"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v25->EnemyBreakPointOffImageName, v26, v27, v28, v29, v30, v31, v32);
+  v26 = (System_Int32_array **)StringLiteral_17272/*"break_off_boss"*/;
+  v25->EnemyBreakPointOffImageName = (struct System_String_o *)StringLiteral_17272/*"break_off_boss"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v25->EnemyBreakPointOffImageName, v26, v27, v28, v29, v30, v31, v32);
   v33 = WarBoardBreakPointComponent_TypeInfo->static_fields;
-  v34 = (System_Int32_array **)StringLiteral_2929/*"BreakPoint_effect_{0}"*/;
-  v33->BreakPointEffectName = (struct System_String_o *)StringLiteral_2929/*"BreakPoint_effect_{0}"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v33->BreakPointEffectName, v34, v35, v36, v37, v38, v39, v40);
+  v34 = (System_Int32_array **)StringLiteral_2975/*"BreakPoint_effect_{0}"*/;
+  v33->BreakPointEffectName = (struct System_String_o *)StringLiteral_2975/*"BreakPoint_effect_{0}"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v33->BreakPointEffectName, v34, v35, v36, v37, v38, v39, v40);
   v41 = WarBoardBreakPointComponent_TypeInfo->static_fields;
-  v42 = (System_Int32_array **)StringLiteral_20733/*"master_gauge_{0}"*/;
-  v41->MasterPointOnImageName = (struct System_String_o *)StringLiteral_20733/*"master_gauge_{0}"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v41->MasterPointOnImageName, v42, v43, v44, v45, v46, v47, v48);
+  v42 = (System_Int32_array **)StringLiteral_20829/*"master_gauge_{0}"*/;
+  v41->MasterPointOnImageName = (struct System_String_o *)StringLiteral_20829/*"master_gauge_{0}"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v41->MasterPointOnImageName, v42, v43, v44, v45, v46, v47, v48);
   v49 = WarBoardBreakPointComponent_TypeInfo->static_fields;
-  v50 = (System_Int32_array **)StringLiteral_20732/*"master_gauge_off_{0}"*/;
-  v49->MasterPointOffImageName = (struct System_String_o *)StringLiteral_20732/*"master_gauge_off_{0}"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v49->MasterPointOffImageName, v50, v51, v52, v53, v54, v55, v56);
+  v50 = (System_Int32_array **)StringLiteral_20828/*"master_gauge_off_{0}"*/;
+  v49->MasterPointOffImageName = (struct System_String_o *)StringLiteral_20828/*"master_gauge_off_{0}"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v49->MasterPointOffImageName, v50, v51, v52, v53, v54, v55, v56);
   v57 = WarBoardBreakPointComponent_TypeInfo->static_fields;
-  v58 = (System_Int32_array **)StringLiteral_9083/*"MasterPoint_effect_{0}"*/;
-  v57->MasterPointEffectName = (struct System_String_o *)StringLiteral_9083/*"MasterPoint_effect_{0}"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v57->MasterPointEffectName, v58, v59, v60, v61, v62, v63, v64);
+  v58 = (System_Int32_array **)StringLiteral_9141/*"MasterPoint_effect_{0}"*/;
+  v57->MasterPointEffectName = (struct System_String_o *)StringLiteral_9141/*"MasterPoint_effect_{0}"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v57->MasterPointEffectName, v58, v59, v60, v61, v62, v63, v64);
   v65 = WarBoardBreakPointComponent_TypeInfo->static_fields;
-  v66 = (System_Int32_array **)StringLiteral_9084/*"MasterPoint_recharge_effect_1"*/;
-  v65->MasterPointRechargeEffectName = (struct System_String_o *)StringLiteral_9084/*"MasterPoint_recharge_effect_1"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v65->MasterPointRechargeEffectName, v66, v67, v68, v69, v70, v71, v72);
+  v66 = (System_Int32_array **)StringLiteral_9142/*"MasterPoint_recharge_effect_1"*/;
+  v65->MasterPointRechargeEffectName = (struct System_String_o *)StringLiteral_9142/*"MasterPoint_recharge_effect_1"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v65->MasterPointRechargeEffectName, v66, v67, v68, v69, v70, v71, v72);
   v73 = WarBoardBreakPointComponent_TypeInfo->static_fields;
-  v74 = (System_Int32_array **)StringLiteral_23578/*"wall_gauge_{0}"*/;
-  v73->wallPointImageName = (struct System_String_o *)StringLiteral_23578/*"wall_gauge_{0}"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v73->wallPointImageName, v74, v75, v76, v77, v78, v79, v80);
+  v74 = (System_Int32_array **)StringLiteral_23680/*"wall_gauge_{0}"*/;
+  v73->wallPointImageName = (struct System_String_o *)StringLiteral_23680/*"wall_gauge_{0}"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v73->wallPointImageName, v74, v75, v76, v77, v78, v79, v80);
 }
 
 
@@ -161,11 +161,11 @@ System_String_o *__fastcall WarBoardBreakPointComponent__GetBreakEffectName(
   int v13; // [xsp+8h] [xbp-18h] BYREF
   int v14; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_43503A9 & 1) == 0 )
+  if ( (byte_43899D2 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&WarBoardBreakPointComponent_TypeInfo);
-    byte_43503A9 = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&WarBoardBreakPointComponent_TypeInfo);
+    byte_43899D2 = 1;
   }
   if ( this->fields.isMaster || this->fields.isThirdForce )
   {
@@ -220,11 +220,11 @@ System_String_o *__fastcall WarBoardBreakPointComponent__GetImageName(
   WarBoardBreakPointComponent_c *v13; // x0
   int32_t v14; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_43503A8 & 1) == 0 )
+  if ( (byte_43899D1 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&WarBoardBreakPointComponent_TypeInfo);
-    byte_43503A8 = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&WarBoardBreakPointComponent_TypeInfo);
+    byte_43899D1 = 1;
   }
   if ( !isActiveSprite )
   {
@@ -337,10 +337,10 @@ void __fastcall WarBoardBreakPointComponent__Initialize(
   UnityEngine_Object_o *baseObject; // x22
   const MethodInfo *v20; // x3
 
-  if ( (byte_43503AA & 1) == 0 )
+  if ( (byte_43899D3 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43503AA = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_43899D3 = 1;
   }
   this->fields.objectColorNumber = number;
   this->fields.isMaster = isMaster;
@@ -391,7 +391,7 @@ void __fastcall WarBoardBreakPointComponent__Initialize(
       goto LABEL_22;
     }
 LABEL_23:
-    sub_B7076C(v15, v14);
+    sub_B7769C(v15, v14);
   }
 LABEL_22:
   WarBoardBreakPointComponent__SetActive(this, this->fields.startState, 0, v20);
@@ -451,28 +451,28 @@ void __fastcall WarBoardBreakPointComponent__OnBreak(
   System_Nullable_Vector3__o v51; // 0:x3.16
   System_Nullable_Vector3__o v52; // 0:x5.16
 
-  if ( (byte_43503AB & 1) == 0 )
+  if ( (byte_43899D4 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointEffectComponent___);
-    sub_B70694(&Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject____69308712);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_B70694(&WarBoardTaskBase_TaskCallback_TypeInfo);
-    sub_B70694(&Method_WarBoardBreakPointComponent__OnBreak_b__26_0__);
-    sub_B70694(&WarBoardCommonEffectPerformance_TypeInfo);
-    sub_B70694(&Method_WarBoardManager_GetCommonEffectAsset_GameObject___);
-    sub_B70694(&WarBoardTaskBase___TypeInfo);
-    byte_43503AB = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointEffectComponent___);
+    sub_B775C4(&Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject____69541584);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_B775C4(&WarBoardTaskBase_TaskCallback_TypeInfo);
+    sub_B775C4(&Method_WarBoardBreakPointComponent__OnBreak_b__26_0__);
+    sub_B775C4(&WarBoardCommonEffectPerformance_TypeInfo);
+    sub_B775C4(&Method_WarBoardManager_GetCommonEffectAsset_GameObject___);
+    sub_B775C4(&WarBoardTaskBase___TypeInfo);
+    byte_43899D4 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   BreakEffectName = (char *)WarBoardBreakPointComponent__GetBreakEffectName(this, v8);
   if ( !Instance )
     goto LABEL_29;
   CommonEffectAsset_object = WarBoardManager__GetCommonEffectAsset_object_(
                                (WarBoardManager_o *)Instance,
                                (System_String_o *)BreakEffectName,
-                               (const MethodInfo_2DF6D1C *)Method_WarBoardManager_GetCommonEffectAsset_GameObject___);
+                               (const MethodInfo_2E2592C *)Method_WarBoardManager_GetCommonEffectAsset_GameObject___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -489,17 +489,17 @@ void __fastcall WarBoardBreakPointComponent__OnBreak(
     BreakEffectName = (char *)UnityEngine_Object__Instantiate_UILabel_(
                                 (UILabel_o *)CommonEffectAsset_object,
                                 transform,
-                                (const MethodInfo_1D588A0 *)Method_UnityEngine_Object_Instantiate_GameObject____69308712);
+                                (const MethodInfo_1DF9A3C *)Method_UnityEngine_Object_Instantiate_GameObject____69541584);
     if ( !BreakEffectName )
       goto LABEL_29;
     v13 = (UnityEngine_GameObject_o *)BreakEffectName;
     BreakEffectName = (char *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                 (UnityEngine_GameObject_o *)BreakEffectName,
-                                (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointEffectComponent___);
+                                (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointEffectComponent___);
     if ( !BreakEffectName )
       goto LABEL_29;
     *((_QWORD *)BreakEffectName + 3) = this;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)(BreakEffectName + 24),
       (System_Int32_array **)this,
       v14,
@@ -508,7 +508,7 @@ void __fastcall WarBoardBreakPointComponent__OnBreak(
       v17,
       v18,
       v19);
-    v20 = (WarBoardCommonEffectPerformance_o *)sub_B70764(WarBoardCommonEffectPerformance_TypeInfo);
+    v20 = (WarBoardCommonEffectPerformance_o *)sub_B77694(WarBoardCommonEffectPerformance_TypeInfo);
     *(_QWORD *)&v51.fields.value.fields.x = 0LL;
     *(_QWORD *)&v51.fields.value.fields.z = 0LL;
     *(_QWORD *)&v52.fields.value.fields.x = 0LL;
@@ -527,14 +527,14 @@ void __fastcall WarBoardBreakPointComponent__OnBreak(
       if ( v22 && *v22 != (System_Int32_array *)WarBoardTaskBase_TaskCallback_TypeInfo )
         goto LABEL_30;
       v21->fields.StartCallback = (struct WarBoardTaskBase_TaskCallback_o *)v22;
-      sub_B70630((BattleServantConfConponent_o *)&v21->fields.StartCallback, v22, v23, v24, v25, v26, v27, v28);
+      sub_B77560((BattleServantConfConponent_o *)&v21->fields.StartCallback, v22, v23, v24, v25, v26, v27, v28);
     }
     else if ( !v21 )
     {
       goto LABEL_29;
     }
     EndCallback = (System_Delegate_o *)v21->fields.EndCallback;
-    v31 = (WarBoardTaskBase_TaskCallback_o *)sub_B70764(WarBoardTaskBase_TaskCallback_TypeInfo);
+    v31 = (WarBoardTaskBase_TaskCallback_o *)sub_B77694(WarBoardTaskBase_TaskCallback_TypeInfo);
     WarBoardTaskBase_TaskCallback___ctor(
       v31,
       (Il2CppObject *)this,
@@ -545,44 +545,44 @@ void __fastcall WarBoardBreakPointComponent__OnBreak(
     if ( !v32 || *v32 == (System_Int32_array *)WarBoardTaskBase_TaskCallback_TypeInfo )
     {
       v21->fields.EndCallback = (struct WarBoardTaskBase_TaskCallback_o *)v32;
-      sub_B70630((BattleServantConfConponent_o *)&v21->fields.EndCallback, v32, v33, v34, v35, v36, v37, v38);
+      sub_B77560((BattleServantConfConponent_o *)&v21->fields.EndCallback, v32, v33, v34, v35, v36, v37, v38);
       if ( taskList )
       {
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)taskList,
           (EventMissionProgressRequest_Argument_ProgressData_o *)v21,
-          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
+          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
         return;
       }
-      v39 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-      BreakEffectName = (char *)sub_B706AC(WarBoardTaskBase___TypeInfo, 1LL);
+      v39 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+      BreakEffectName = (char *)sub_B775DC(WarBoardTaskBase___TypeInfo, 1LL);
       if ( !BreakEffectName )
         goto LABEL_29;
       v40 = BreakEffectName;
-      v41 = sub_B70754(v21, *(_QWORD *)(*(_QWORD *)BreakEffectName + 64LL));
+      v41 = sub_B77684(v21, *(_QWORD *)(*(_QWORD *)BreakEffectName + 64LL));
       if ( v41 )
       {
         if ( !*((_DWORD *)v40 + 6) )
         {
-          v49 = sub_B70798(v41);
-          sub_B70738(v49, 0LL);
+          v49 = sub_B776C8(v41);
+          sub_B77668(v49, 0LL);
         }
         *((_QWORD *)v40 + 4) = v21;
-        sub_B70630((BattleServantConfConponent_o *)(v40 + 32), (System_Int32_array **)v21, v42, v43, v44, v45, v46, v47);
+        sub_B77560((BattleServantConfConponent_o *)(v40 + 32), (System_Int32_array **)v21, v42, v43, v44, v45, v46, v47);
         if ( v39 )
         {
           WarBoardManager__InsertTask((WarBoardManager_o *)v39, 0, (WarBoardTaskBase_array *)v40, 0LL);
           return;
         }
 LABEL_29:
-        sub_B7076C(BreakEffectName, v10);
+        sub_B7769C(BreakEffectName, v10);
       }
 LABEL_31:
-      v48 = sub_B7078C();
-      sub_B70738(v48, 0LL);
+      v48 = sub_B776BC();
+      sub_B77668(v48, 0LL);
     }
 LABEL_30:
-    sub_B70A60(v29);
+    sub_B77990(v29);
     goto LABEL_31;
   }
 }
@@ -601,10 +601,10 @@ void __fastcall WarBoardBreakPointComponent__SetActive(
   UnityEngine_Object_o *deactiveObject; // x21
 
   v4 = active;
-  if ( (byte_43503AD & 1) == 0 )
+  if ( (byte_43899D6 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43503AD = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_43899D6 = 1;
   }
   if ( ((!this->fields._isActive_k__BackingField ^ v4) & 1) == 0 )
   {
@@ -645,7 +645,7 @@ LABEL_18:
       }
     }
 LABEL_20:
-    sub_B7076C(gameObject, v7);
+    sub_B7769C(gameObject, v7);
   }
 }
 
@@ -662,10 +662,10 @@ void __fastcall WarBoardBreakPointComponent__SetBreakPointFadeIn(
   UnityEngine_Object_o *deactiveObject; // x20
   UnityEngine_GameObject_o *v10; // x0
 
-  if ( (byte_43503AF & 1) == 0 )
+  if ( (byte_43899D8 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43503AF = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_43899D8 = 1;
   }
   activeObject = (UnityEngine_Object_o *)this->fields.activeObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -697,7 +697,7 @@ void __fastcall WarBoardBreakPointComponent__SetBreakPointFadeIn(
       return;
     }
 LABEL_16:
-    sub_B7076C(v7, v6);
+    sub_B7769C(v7, v6);
   }
 }
 
@@ -714,10 +714,10 @@ void __fastcall WarBoardBreakPointComponent__SetBreakPointFadeOut(
   UnityEngine_Object_o *deactiveObject; // x20
   UnityEngine_GameObject_o *v10; // x0
 
-  if ( (byte_43503AE & 1) == 0 )
+  if ( (byte_43899D7 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43503AE = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_43899D7 = 1;
   }
   activeObject = (UnityEngine_Object_o *)this->fields.activeObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -749,7 +749,7 @@ void __fastcall WarBoardBreakPointComponent__SetBreakPointFadeOut(
       return;
     }
 LABEL_16:
-    sub_B7076C(v7, v6);
+    sub_B7769C(v7, v6);
   }
 }
 
@@ -772,7 +772,7 @@ void __fastcall WarBoardBreakPointComponent__SetChangeBreakPoint(
                                                   (const MethodInfo *)isActive),
         !mAtlas) )
   {
-    sub_B7076C(this, breakPoint);
+    sub_B7769C(this, breakPoint);
   }
   Sprite = UIAtlas__GetSprite(mAtlas, (System_String_o *)this, 0LL);
   if ( Sprite )
@@ -823,22 +823,22 @@ void __fastcall WarBoardBreakPointComponent__ShowMasterRechargeEffect(
   System_Nullable_Vector3__o v40; // 0:x3.16
   System_Nullable_Vector3__o v41; // 0:x5.16
 
-  if ( (byte_43503AC & 1) == 0 )
+  if ( (byte_43899D5 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointEffectComponent___);
-    sub_B70694(&Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject____69308712);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_B70694(&WarBoardTaskBase_TaskCallback_TypeInfo);
-    sub_B70694(&Method_WarBoardBreakPointComponent__ShowMasterRechargeEffect_b__27_0__);
-    sub_B70694(&WarBoardBreakPointComponent_TypeInfo);
-    sub_B70694(&WarBoardCommonEffectPerformance_TypeInfo);
-    sub_B70694(&Method_WarBoardManager_GetCommonEffectAsset_GameObject___);
-    sub_B70694(&WarBoardTaskBase___TypeInfo);
-    byte_43503AC = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointEffectComponent___);
+    sub_B775C4(&Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject____69541584);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_B775C4(&WarBoardTaskBase_TaskCallback_TypeInfo);
+    sub_B775C4(&Method_WarBoardBreakPointComponent__ShowMasterRechargeEffect_b__27_0__);
+    sub_B775C4(&WarBoardBreakPointComponent_TypeInfo);
+    sub_B775C4(&WarBoardCommonEffectPerformance_TypeInfo);
+    sub_B775C4(&Method_WarBoardManager_GetCommonEffectAsset_GameObject___);
+    sub_B775C4(&WarBoardTaskBase___TypeInfo);
+    byte_43899D5 = 1;
   }
-  Instance = (char *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (char *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   v7 = (WarBoardManager_o *)Instance;
   if ( (BYTE3(WarBoardBreakPointComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !WarBoardBreakPointComponent_TypeInfo->_2.cctor_finished )
@@ -850,7 +850,7 @@ void __fastcall WarBoardBreakPointComponent__ShowMasterRechargeEffect(
   CommonEffectAsset_object = WarBoardManager__GetCommonEffectAsset_object_(
                                v7,
                                WarBoardBreakPointComponent_TypeInfo->static_fields->MasterPointRechargeEffectName,
-                               (const MethodInfo_2DF6D1C *)Method_WarBoardManager_GetCommonEffectAsset_GameObject___);
+                               (const MethodInfo_2E2592C *)Method_WarBoardManager_GetCommonEffectAsset_GameObject___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -867,17 +867,17 @@ void __fastcall WarBoardBreakPointComponent__ShowMasterRechargeEffect(
     Instance = (char *)UnityEngine_Object__Instantiate_UILabel_(
                          (UILabel_o *)CommonEffectAsset_object,
                          transform,
-                         (const MethodInfo_1D588A0 *)Method_UnityEngine_Object_Instantiate_GameObject____69308712);
+                         (const MethodInfo_1DF9A3C *)Method_UnityEngine_Object_Instantiate_GameObject____69541584);
     if ( !Instance )
       goto LABEL_27;
     v10 = (UnityEngine_GameObject_o *)Instance;
     Instance = (char *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                          (UnityEngine_GameObject_o *)Instance,
-                         (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointEffectComponent___);
+                         (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointEffectComponent___);
     if ( !Instance )
       goto LABEL_27;
     *((_QWORD *)Instance + 3) = this;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)(Instance + 24),
       (System_Int32_array **)this,
       v11,
@@ -886,7 +886,7 @@ void __fastcall WarBoardBreakPointComponent__ShowMasterRechargeEffect(
       v14,
       v15,
       v16);
-    v17 = (WarBoardCommonEffectPerformance_o *)sub_B70764(WarBoardCommonEffectPerformance_TypeInfo);
+    v17 = (WarBoardCommonEffectPerformance_o *)sub_B77694(WarBoardCommonEffectPerformance_TypeInfo);
     *(_QWORD *)&v40.fields.value.fields.x = 0LL;
     *(_QWORD *)&v40.fields.value.fields.z = 0LL;
     *(_QWORD *)&v41.fields.value.fields.x = 0LL;
@@ -896,7 +896,7 @@ void __fastcall WarBoardBreakPointComponent__ShowMasterRechargeEffect(
     if ( !v18 )
       goto LABEL_27;
     StartCallback = (System_Delegate_o *)v18->fields.StartCallback;
-    v20 = (WarBoardTaskBase_TaskCallback_o *)sub_B70764(WarBoardTaskBase_TaskCallback_TypeInfo);
+    v20 = (WarBoardTaskBase_TaskCallback_o *)sub_B77694(WarBoardTaskBase_TaskCallback_TypeInfo);
     WarBoardTaskBase_TaskCallback___ctor(
       v20,
       (Il2CppObject *)this,
@@ -905,46 +905,46 @@ void __fastcall WarBoardBreakPointComponent__ShowMasterRechargeEffect(
     v21 = (System_Int32_array **)System_Delegate__Combine(StartCallback, (System_Delegate_o *)v20, 0LL);
     if ( v21 && *v21 != (System_Int32_array *)WarBoardTaskBase_TaskCallback_TypeInfo )
     {
-      sub_B70A60(v21);
+      sub_B77990(v21);
     }
     else
     {
       v18->fields.StartCallback = (struct WarBoardTaskBase_TaskCallback_o *)v21;
-      sub_B70630((BattleServantConfConponent_o *)&v18->fields.StartCallback, v21, v22, v23, v24, v25, v26, v27);
+      sub_B77560((BattleServantConfConponent_o *)&v18->fields.StartCallback, v21, v22, v23, v24, v25, v26, v27);
       if ( taskList )
       {
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)taskList,
           (EventMissionProgressRequest_Argument_ProgressData_o *)v18,
-          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
+          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
         return;
       }
-      v28 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-      Instance = (char *)sub_B706AC(WarBoardTaskBase___TypeInfo, 1LL);
+      v28 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+      Instance = (char *)sub_B775DC(WarBoardTaskBase___TypeInfo, 1LL);
       if ( !Instance )
         goto LABEL_27;
       v29 = Instance;
-      v30 = sub_B70754(v18, *(_QWORD *)(*(_QWORD *)Instance + 64LL));
+      v30 = sub_B77684(v18, *(_QWORD *)(*(_QWORD *)Instance + 64LL));
       if ( v30 )
       {
         if ( !*((_DWORD *)v29 + 6) )
         {
-          v38 = sub_B70798(v30);
-          sub_B70738(v38, 0LL);
+          v38 = sub_B776C8(v30);
+          sub_B77668(v38, 0LL);
         }
         *((_QWORD *)v29 + 4) = v18;
-        sub_B70630((BattleServantConfConponent_o *)(v29 + 32), (System_Int32_array **)v18, v31, v32, v33, v34, v35, v36);
+        sub_B77560((BattleServantConfConponent_o *)(v29 + 32), (System_Int32_array **)v18, v31, v32, v33, v34, v35, v36);
         if ( v28 )
         {
           WarBoardManager__InsertTask((WarBoardManager_o *)v28, 0, (WarBoardTaskBase_array *)v29, 0LL);
           return;
         }
 LABEL_27:
-        sub_B7076C(Instance, v6);
+        sub_B7769C(Instance, v6);
       }
     }
-    v37 = sub_B7078C();
-    sub_B70738(v37, 0LL);
+    v37 = sub_B776BC();
+    sub_B77668(v37, 0LL);
   }
 }
 

@@ -22,7 +22,7 @@ bool __fastcall WarBoardTouchBlockObject__Activate(
   if ( UnityEngine_Behaviour__get_isActiveAndEnabled((UnityEngine_Behaviour_o *)this, 0LL) )
     return 0;
   this->fields.onClickCallback = callback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.onClickCallback,
     (System_Int32_array **)callback,
     v5,
@@ -33,7 +33,7 @@ bool __fastcall WarBoardTouchBlockObject__Activate(
     v10);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v13);
+    sub_B7769C(0LL, v13);
   v11 = 1;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   return v11;
@@ -53,10 +53,10 @@ void __fastcall WarBoardTouchBlockObject__Deactivate(WarBoardTouchBlockObject_o 
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   this->fields.onClickCallback = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.onClickCallback, 0LL, v5, v6, v7, v8, v9, v10);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.onClickCallback, 0LL, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -77,7 +77,7 @@ void __fastcall WarBoardTouchBlockObject__OnClickObject(WarBoardTouchBlockObject
   {
     System_Action__Invoke(onClickCallback, 0LL);
     p_onClickCallback->klass = 0LL;
-    sub_B70630(p_onClickCallback, 0LL, v4, v5, v6, v7, v8, v9);
+    sub_B77560(p_onClickCallback, 0LL, v4, v5, v6, v7, v8, v9);
   }
 }
 
@@ -100,7 +100,7 @@ void __fastcall WarBoardTouchBlockObject__RemoveCallback(WarBoardTouchBlockObjec
     if ( onClickCallback )
     {
       p_onClickCallback->klass = 0LL;
-      sub_B70630(p_onClickCallback, 0LL, v3, v4, v5, v6, v7, v8);
+      sub_B77560(p_onClickCallback, 0LL, v3, v4, v5, v6, v7, v8);
     }
   }
 }
@@ -127,7 +127,7 @@ void __fastcall WarBoardTouchBlockObject__SetCallback(
     if ( !onClickCallback )
     {
       p_onClickCallback->klass = (BattleServantConfConponent_c *)callback;
-      sub_B70630(p_onClickCallback, (System_Int32_array **)callback, v5, v6, v7, v8, v9, v10);
+      sub_B77560(p_onClickCallback, (System_Int32_array **)callback, v5, v6, v7, v8, v9, v10);
     }
   }
 }

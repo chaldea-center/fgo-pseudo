@@ -19,7 +19,7 @@ int32_t __fastcall CriWareDecrypter__CRIWARE3D9A5BE6(
   char v13; // [xsp+2Ch] [xbp-34h]
 
   v5 = *(_QWORD *)&obj;
-  if ( !qword_43481D0 )
+  if ( !qword_43816E0 )
   {
     v11[0] = (__int64)"cri_ware_unity";
     v11[1] = 14LL;
@@ -28,15 +28,15 @@ int32_t __fastcall CriWareDecrypter__CRIWARE3D9A5BE6(
     v11[4] = 0x200000000LL;
     v12 = 24;
     v13 = 0;
-    qword_43481D0 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD))sub_B70B18(
+    qword_43816E0 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD))sub_B77A48(
                                                                               v11,
                                                                               enable_mana_decryption,
                                                                               func,
                                                                               obj,
                                                                               method);
   }
-  v9 = sub_B70B10(func, enable_mana_decryption, func, *(_QWORD *)&obj, method);
-  return qword_43481D0(enable_atom_decryption, enable_mana_decryption, v9, v5);
+  v9 = sub_B77A40(func, enable_mana_decryption, func, *(_QWORD *)&obj, method);
+  return qword_43816E0(enable_atom_decryption, enable_mana_decryption, v9, v5);
 }
 
 
@@ -44,10 +44,10 @@ uint64_t __fastcall CriWareDecrypter__CallbackFromNative(intptr_t ptr1, const Me
 {
   CriWareDecrypter_c *v2; // x0
 
-  if ( (byte_43481CF & 1) == 0 )
+  if ( (byte_43816DF & 1) == 0 )
   {
-    sub_B70694(&CriWareDecrypter_TypeInfo, method);
-    byte_43481CF = 1;
+    sub_B775C4(&CriWareDecrypter_TypeInfo, method);
+    byte_43816DF = 1;
   }
   v2 = CriWareDecrypter_TypeInfo;
   if ( (BYTE3(CriWareDecrypter_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -70,13 +70,13 @@ bool __fastcall CriWareDecrypter__Initialize(CriWareDecrypterConfig_o *config, c
   _BOOL4 enableManaDecryption; // w19
 
   v3 = config;
-  if ( (byte_43481CD & 1) == 0 )
+  if ( (byte_43816DD & 1) == 0 )
   {
-    config = (CriWareDecrypterConfig_o *)sub_B70694(&CriWareDecrypter_TypeInfo, method);
-    byte_43481CD = 1;
+    config = (CriWareDecrypterConfig_o *)sub_B775C4(&CriWareDecrypter_TypeInfo, method);
+    byte_43816DD = 1;
   }
   if ( !v3 )
-    sub_B7076C(config, method);
+    sub_B7769C(config, method);
   key = v3->fields.key;
   authenticationFile = v3->fields.authenticationFile;
   enableAtomDecryption = v3->fields.enableAtomDecryption;
@@ -86,11 +86,11 @@ bool __fastcall CriWareDecrypter__Initialize(CriWareDecrypterConfig_o *config, c
   {
     j_il2cpp_runtime_class_init_0();
   }
-  return CriWareDecrypter__Initialize_14627340(key, authenticationFile, enableAtomDecryption, enableManaDecryption, v2);
+  return CriWareDecrypter__Initialize_14647912(key, authenticationFile, enableAtomDecryption, enableManaDecryption, v2);
 }
 
 
-bool __fastcall CriWareDecrypter__Initialize_14627340(
+bool __fastcall CriWareDecrypter__Initialize_14647912(
         System_String_o *key,
         System_String_o *authenticationFile,
         bool enableAtomDecryption,
@@ -114,17 +114,17 @@ bool __fastcall CriWareDecrypter__Initialize_14627340(
   const MethodInfo *v23; // x4
   bool result; // w0
 
-  if ( (byte_43481CE & 1) == 0 )
+  if ( (byte_43816DE & 1) == 0 )
   {
-    sub_B70694(&CriWareDecrypter_CallbackFromNativeDelegate_TypeInfo, authenticationFile);
-    sub_B70694(&CriWare_Common_TypeInfo, v9);
-    sub_B70694(&System_Convert_TypeInfo, v10);
-    sub_B70694(&CriFsPlugin_TypeInfo, v11);
-    sub_B70694(&Method_CriWareDecrypter_CallbackFromNative__, v12);
-    sub_B70694(&CriWareDecrypter_TypeInfo, v13);
-    sub_B70694(&IntPtr_TypeInfo, v14);
-    sub_B70694(&System_IO_Path_TypeInfo, v15);
-    byte_43481CE = 1;
+    sub_B775C4(&CriWareDecrypter_CallbackFromNativeDelegate_TypeInfo, authenticationFile);
+    sub_B775C4(&CriWare_Common_TypeInfo, v9);
+    sub_B775C4(&System_Convert_TypeInfo, v10);
+    sub_B775C4(&CriFsPlugin_TypeInfo, v11);
+    sub_B775C4(&Method_CriWareDecrypter_CallbackFromNative__, v12);
+    sub_B775C4(&CriWareDecrypter_TypeInfo, v13);
+    sub_B775C4(&IntPtr_TypeInfo, v14);
+    sub_B775C4(&System_IO_Path_TypeInfo, v15);
+    byte_43816DE = 1;
   }
   v16 = CriFsPlugin_TypeInfo;
   if ( (BYTE3(CriFsPlugin_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CriFsPlugin_TypeInfo->_2.cctor_finished )
@@ -140,7 +140,7 @@ bool __fastcall CriWareDecrypter__Initialize_14627340(
   if ( !v17 )
     return 0;
   if ( !key )
-    sub_B7076C(v17, v18);
+    sub_B7769C(v17, v18);
   v19 = 0xD47EB533AEF7E5LL;
   if ( key->fields.m_stringLength )
   {
@@ -149,7 +149,7 @@ bool __fastcall CriWareDecrypter__Initialize_14627340(
     {
       ((void (*)(void))j_il2cpp_runtime_class_init_0)();
     }
-    v19 = System_Convert__ToUInt64_42439252(key, 0LL) ^ 0xD47EB533AEF7E5LL;
+    v19 = System_Convert__ToUInt64_42785140(key, 0LL) ^ 0xD47EB533AEF7E5LL;
   }
   if ( (BYTE3(CriWare_Common_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CriWare_Common_TypeInfo->_2.cctor_finished )
@@ -179,7 +179,7 @@ bool __fastcall CriWareDecrypter__Initialize_14627340(
     v21 = CriWareDecrypter_TypeInfo;
   }
   v21->static_fields->temporalStorage = v19;
-  v22 = (CriWareDecrypter_CallbackFromNativeDelegate_o *)sub_B70764(CriWareDecrypter_CallbackFromNativeDelegate_TypeInfo);
+  v22 = (CriWareDecrypter_CallbackFromNativeDelegate_o *)sub_B77694(CriWareDecrypter_CallbackFromNativeDelegate_TypeInfo);
   CriWareDecrypter_CallbackFromNativeDelegate___ctor(v22, 0LL, Method_CriWareDecrypter_CallbackFromNative__, 0LL);
   CriWareDecrypter__CRIWARE3D9A5BE6(enableAtomDecryption, enableManaDecryption, v22, 0, v23);
   result = 1;
@@ -207,7 +207,7 @@ void __fastcall CriWareDecrypter_CallbackFromNativeDelegate___ctor(
   p_method = (BattleServantConfConponent_o *)&this->fields.method;
   p_method->monitor = *(void **)&method;
   p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B70630(
+  sub_B77560(
     p_method,
     (System_Int32_array **)object,
     *(System_String_array ***)&method,
@@ -231,14 +231,14 @@ System_IAsyncResult_o *__fastcall CriWareDecrypter_CallbackFromNativeDelegate__B
   __int64 v10; // [xsp+18h] [xbp-28h] BYREF
 
   v10 = *(_QWORD *)&ptr1;
-  if ( (byte_4357F62 & 1) == 0 )
+  if ( (byte_43915DA & 1) == 0 )
   {
-    sub_B70694(&IntPtr_TypeInfo);
-    byte_4357F62 = 1;
+    sub_B775C4(&IntPtr_TypeInfo);
+    byte_43915DA = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(IntPtr_TypeInfo, &v10, callback);
-  return (System_IAsyncResult_o *)sub_B70638(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_B77568(this, v9, callback, object);
 }
 
 
@@ -250,9 +250,9 @@ uint64_t __fastcall CriWareDecrypter_CallbackFromNativeDelegate__EndInvoke(
   __int64 v3; // x0
   __int64 v4; // x1
 
-  v3 = sub_B7063C(result, 0LL, method);
+  v3 = sub_B7756C(result, 0LL, method);
   if ( !v3 )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   return *(_QWORD *)j_il2cpp_object_unbox_0(v3);
 }
 
@@ -313,8 +313,8 @@ LABEL_5:
       v21 = *(_QWORD *)&v19->fields.extra_arg;
       v22 = *(__int64 (__fastcall **)(__int64, __int64))&v19->fields.method_ptr;
       if ( *(__int16 *)(v21 + 72) == -1 )
-        sub_B70750(*(_QWORD *)&v19->fields.extra_arg, *(_QWORD *)&ptr1);
-      if ( (sub_B706C4(v21) & 1) == 0 )
+        sub_B77680(*(_QWORD *)&v19->fields.extra_arg, *(_QWORD *)&ptr1);
+      if ( (sub_B775F4(v21) & 1) == 0 )
         break;
       if ( *(_BYTE *)(v21 + 74) != 1 )
         goto LABEL_36;
@@ -325,8 +325,8 @@ LABEL_37:
     }
     if ( v20 && *(__int16 *)(v21 + 72) != -1 && (*(_BYTE *)(*v20 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v23 = sub_B706BC(v21);
-      v24 = sub_B70AC0(v21);
+      v23 = sub_B775EC(v21);
+      v24 = sub_B779F0(v21);
       if ( (v23 & 1) != 0 )
       {
         if ( (v24 & 1) != 0 )
@@ -350,7 +350,7 @@ LABEL_37:
           else
           {
 LABEL_35:
-            v17 = sub_B08590(v20, v26, v27);
+            v17 = sub_B0F4C0(v20, v26, v27);
           }
           v15 = *(_QWORD *)(v17 + 8);
         }
@@ -358,7 +358,7 @@ LABEL_35:
         {
           v15 = *(_QWORD *)(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 320);
         }
-        v18 = (__int64 (__fastcall **)(__int64 *, __int64, _QWORD))sub_B70744(v15, v21);
+        v18 = (__int64 (__fastcall **)(__int64 *, __int64, _QWORD))sub_B77674(v15, v21);
         result = (*v18)(v20, v5, v18);
       }
       else
@@ -384,7 +384,7 @@ LABEL_35:
           else
           {
 LABEL_11:
-            v14 = sub_B08590(v20, class_0, v9);
+            v14 = sub_B0F4C0(v20, class_0, v9);
           }
           result = (*(__int64 (__fastcall **)(__int64 *, __int64, _QWORD))v14)(v20, v5, *(_QWORD *)(v14 + 8));
         }

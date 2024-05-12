@@ -8,14 +8,14 @@ void __fastcall BattleRandomSwitchObj___ctor(BattleRandomSwitchObj_o *this, cons
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_4351DA8 & 1) == 0 )
+  if ( (byte_438B46B & 1) == 0 )
   {
-    sub_B70694(&BattleRandomSwitchObj_SwitchData___TypeInfo);
-    byte_4351DA8 = 1;
+    sub_B775C4(&BattleRandomSwitchObj_SwitchData___TypeInfo);
+    byte_438B46B = 1;
   }
-  v3 = (struct BattleRandomSwitchObj_SwitchData_array *)sub_B706AC(BattleRandomSwitchObj_SwitchData___TypeInfo, 2LL);
+  v3 = (struct BattleRandomSwitchObj_SwitchData_array *)sub_B775DC(BattleRandomSwitchObj_SwitchData___TypeInfo, 2LL);
   this->fields.switchDataArray = v3;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.switchDataArray,
     (System_Int32_array **)v3,
     v4,
@@ -60,36 +60,36 @@ void __fastcall BattleRandomSwitchObj__Execution(BattleRandomSwitchObj_o *this, 
   System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *v30; // x21
   __int64 v31; // x0
 
-  if ( (byte_4351DA7 & 1) == 0 )
+  if ( (byte_438B46A & 1) == 0 )
   {
-    sub_B70694(&Method_System_Action_GameObject___ctor__);
-    sub_B70694(&System_Action_GameObject__TypeInfo);
-    sub_B70694(&Method_System_Array_ForEach_GameObject___);
-    sub_B70694(&Method_BattleRandomSwitchObj___c__DisplayClass3_0__Execution_b__0__);
-    sub_B70694(&BattleRandomSwitchObj___c__DisplayClass3_0_TypeInfo);
-    sub_B70694(&Method_BattleRandomSwitchObj___c__DisplayClass3_1__Execution_b__1__);
-    sub_B70694(&BattleRandomSwitchObj___c__DisplayClass3_1_TypeInfo);
-    sub_B70694(&Method_WeightRate_int___ctor__);
-    sub_B70694(&Method_WeightRate_int__getData__);
-    sub_B70694(&Method_WeightRate_int__getTotalWeight__);
-    sub_B70694(&Method_WeightRate_int__setWeight__);
-    sub_B70694(&WeightRate_int__TypeInfo);
-    byte_4351DA7 = 1;
+    sub_B775C4(&Method_System_Action_GameObject___ctor__);
+    sub_B775C4(&System_Action_GameObject__TypeInfo);
+    sub_B775C4(&Method_System_Array_ForEach_GameObject___);
+    sub_B775C4(&Method_BattleRandomSwitchObj___c__DisplayClass3_0__Execution_b__0__);
+    sub_B775C4(&BattleRandomSwitchObj___c__DisplayClass3_0_TypeInfo);
+    sub_B775C4(&Method_BattleRandomSwitchObj___c__DisplayClass3_1__Execution_b__1__);
+    sub_B775C4(&BattleRandomSwitchObj___c__DisplayClass3_1_TypeInfo);
+    sub_B775C4(&Method_WeightRate_int___ctor__);
+    sub_B775C4(&Method_WeightRate_int__getData__);
+    sub_B775C4(&Method_WeightRate_int__getTotalWeight__);
+    sub_B775C4(&Method_WeightRate_int__setWeight__);
+    sub_B775C4(&WeightRate_int__TypeInfo);
+    byte_438B46A = 1;
   }
-  v3 = sub_B70764(BattleRandomSwitchObj___c__DisplayClass3_0_TypeInfo);
+  v3 = sub_B77694(BattleRandomSwitchObj___c__DisplayClass3_0_TypeInfo);
   BattleRandomSwitchObj___c__DisplayClass3_0___ctor((BattleRandomSwitchObj___c__DisplayClass3_0_o *)v3, 0LL);
   if ( !v3 )
     goto LABEL_20;
   *(_QWORD *)(v3 + 16) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v3 + 16), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
-  v12 = (WeightRate_int__o *)sub_B70764(WeightRate_int__TypeInfo);
-  WeightRate_int____ctor(v12, (const MethodInfo_2CBC9CC *)Method_WeightRate_int___ctor__);
-  v13 = sub_B70764(BattleRandomSwitchObj___c__DisplayClass3_1_TypeInfo);
+  sub_B77560((BattleServantConfConponent_o *)(v3 + 16), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  v12 = (WeightRate_int__o *)sub_B77694(WeightRate_int__TypeInfo);
+  WeightRate_int____ctor(v12, (const MethodInfo_2CE85DC *)Method_WeightRate_int___ctor__);
+  v13 = sub_B77694(BattleRandomSwitchObj___c__DisplayClass3_1_TypeInfo);
   BattleRandomSwitchObj___c__DisplayClass3_1___ctor((BattleRandomSwitchObj___c__DisplayClass3_1_o *)v13, 0LL);
   if ( !v13 )
     goto LABEL_20;
   *(_QWORD *)(v13 + 24) = v3;
-  sub_B70630((BattleServantConfConponent_o *)(v13 + 24), (System_Int32_array **)v3, v14, v15, v16, v17, v18, v19);
+  sub_B77560((BattleServantConfConponent_o *)(v13 + 24), (System_Int32_array **)v3, v14, v15, v16, v17, v18, v19);
   *(_DWORD *)(v13 + 16) = 0;
   switchDataArray = this->fields.switchDataArray;
   if ( !switchDataArray )
@@ -108,7 +108,7 @@ void __fastcall BattleRandomSwitchObj__Execution(BattleRandomSwitchObj_o *this, 
         v12,
         switchDataArray->m_Items[v21].fields.weight,
         v21,
-        (const MethodInfo_2CBBB94 *)Method_WeightRate_int__setWeight__);
+        (const MethodInfo_2CE77A4 *)Method_WeightRate_int__setWeight__);
       v23 = this->fields.switchDataArray;
       if ( v23 )
       {
@@ -118,16 +118,16 @@ void __fastcall BattleRandomSwitchObj__Execution(BattleRandomSwitchObj_o *this, 
         objs = (ScriptActionAdvPrefabActorGoNextState_array *)v23->m_Items[v24].fields.objs;
         if ( objs )
         {
-          v26 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B70764(System_Action_GameObject__TypeInfo);
+          v26 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B77694(System_Action_GameObject__TypeInfo);
           System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData____ctor(
             v26,
             (Il2CppObject *)v13,
             Method_BattleRandomSwitchObj___c__DisplayClass3_1__Execution_b__1__,
-            (const MethodInfo_264C148 *)Method_System_Action_GameObject___ctor__);
+            (const MethodInfo_26A0868 *)Method_System_Action_GameObject___ctor__);
           System_Array__ForEach_ScriptActionAdvPrefabActorGoNextState_(
             objs,
             (System_Action_T__o *)v26,
-            (const MethodInfo_1FCBE7C *)Method_System_Array_ForEach_GameObject___);
+            (const MethodInfo_20052C8 *)Method_System_Array_ForEach_GameObject___);
           v21 = *(_DWORD *)(v13 + 16) + 1;
           *(_DWORD *)(v13 + 16) = v21;
           switchDataArray = this->fields.switchDataArray;
@@ -140,8 +140,8 @@ void __fastcall BattleRandomSwitchObj__Execution(BattleRandomSwitchObj_o *this, 
   }
   if ( !v12 )
     goto LABEL_20;
-  v27 = UnityEngine_Random__Range_36100992(0, v12->fields.totalweight, 0LL);
-  Data = WeightRate_int___getData(v12, v27, (const MethodInfo_2CBC018 *)Method_WeightRate_int__getData__);
+  v27 = UnityEngine_Random__Range_36343764(0, v12->fields.totalweight, 0LL);
+  Data = WeightRate_int___getData(v12, v27, (const MethodInfo_2CE7C28 *)Method_WeightRate_int__getData__);
   *(_DWORD *)(v3 + 24) = Data;
   v28 = this->fields.switchDataArray;
   if ( !v28 )
@@ -149,23 +149,23 @@ void __fastcall BattleRandomSwitchObj__Execution(BattleRandomSwitchObj_o *this, 
   if ( (unsigned int)Data >= v28->max_length )
   {
 LABEL_21:
-    v31 = sub_B70798(Data);
-    sub_B70738(v31, 0LL);
+    v31 = sub_B776C8(Data);
+    sub_B77668(v31, 0LL);
   }
   v29 = (ScriptActionAdvPrefabActorGoNextState_array *)v28->m_Items[(int)Data].fields.objs;
   if ( !v29 )
 LABEL_20:
-    sub_B7076C(Data, v5);
-  v30 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B70764(System_Action_GameObject__TypeInfo);
+    sub_B7769C(Data, v5);
+  v30 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B77694(System_Action_GameObject__TypeInfo);
   System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData____ctor(
     v30,
     (Il2CppObject *)v3,
     Method_BattleRandomSwitchObj___c__DisplayClass3_0__Execution_b__0__,
-    (const MethodInfo_264C148 *)Method_System_Action_GameObject___ctor__);
+    (const MethodInfo_26A0868 *)Method_System_Action_GameObject___ctor__);
   System_Array__ForEach_ScriptActionAdvPrefabActorGoNextState_(
     v29,
     (System_Action_T__o *)v30,
-    (const MethodInfo_1FCBE7C *)Method_System_Array_ForEach_GameObject___);
+    (const MethodInfo_20052C8 *)Method_System_Array_ForEach_GameObject___);
 }
 
 
@@ -203,13 +203,13 @@ void __fastcall BattleRandomSwitchObj___c__DisplayClass3_0___Execution_b__0(
   hitIndex = this->fields.hitIndex;
   if ( (unsigned int)hitIndex >= switchDataArray->max_length )
   {
-    v6 = sub_B70798(this);
-    sub_B70738(v6, 0LL);
+    v6 = sub_B776C8(this);
+    sub_B77668(v6, 0LL);
   }
   this = (BattleRandomSwitchObj___c__DisplayClass3_0_o *)g;
   if ( !g )
 LABEL_6:
-    sub_B7076C(this, g);
+    sub_B7769C(this, g);
   UnityEngine_GameObject__SetActive(g, switchDataArray->m_Items[hitIndex].fields.hitValue, 0LL);
 }
 
@@ -245,12 +245,12 @@ void __fastcall BattleRandomSwitchObj___c__DisplayClass3_1___Execution_b__1(
   i = this->fields.i;
   if ( (unsigned int)i >= switchDataArray->max_length )
   {
-    v7 = sub_B70798(this);
-    sub_B70738(v7, 0LL);
+    v7 = sub_B776C8(this);
+    sub_B77668(v7, 0LL);
   }
   this = (BattleRandomSwitchObj___c__DisplayClass3_1_o *)g;
   if ( !g )
 LABEL_7:
-    sub_B7076C(this, g);
+    sub_B7769C(this, g);
   UnityEngine_GameObject__SetActive(g, switchDataArray->m_Items[i].fields.initValue, 0LL);
 }

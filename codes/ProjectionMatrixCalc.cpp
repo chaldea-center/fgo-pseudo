@@ -22,29 +22,29 @@ void __fastcall ProjectionMatrixCalc___ctor(ProjectionMatrixCalc_o *this, const 
   System_Int32_array *v22; // x6
   System_Int32_array *v23; // x7
 
-  if ( (byte_4351F31 & 1) == 0 )
+  if ( (byte_438B5F4 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_Renderer___ctor__);
-    sub_B70694(&System_Collections_Generic_List_Renderer__TypeInfo);
-    sub_B70694(&StringLiteral_16271/*"_ProjectorMatrixVP"*/);
-    sub_B70694(&StringLiteral_16272/*"_ProjectorPos"*/);
-    byte_4351F31 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_Renderer___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_Renderer__TypeInfo);
+    sub_B775C4(&StringLiteral_16341/*"_ProjectorMatrixVP"*/);
+    sub_B775C4(&StringLiteral_16342/*"_ProjectorPos"*/);
+    byte_438B5F4 = 1;
   }
   LODWORD(this->fields._targetRenderers) = 1065353216;
   *(_QWORD *)&this->fields._farClipPlane = 0x42C800003C23D70ALL;
-  v9 = (System_Int32_array **)StringLiteral_16271/*"_ProjectorMatrixVP"*/;
-  this->fields._shaderPropertyName_Pos = (struct System_String_o *)StringLiteral_16271/*"_ProjectorMatrixVP"*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields._shaderPropertyName_Pos, v9, v2, v3, v4, v5, v6, v7);
-  v10 = (System_Int32_array **)StringLiteral_16272/*"_ProjectorPos"*/;
-  *(_QWORD *)&this->fields._useRendererBounds = StringLiteral_16272/*"_ProjectorPos"*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields._useRendererBounds, v10, v11, v12, v13, v14, v15, v16);
+  v9 = (System_Int32_array **)StringLiteral_16341/*"_ProjectorMatrixVP"*/;
+  this->fields._shaderPropertyName_Pos = (struct System_String_o *)StringLiteral_16341/*"_ProjectorMatrixVP"*/;
+  sub_B77560((BattleServantConfConponent_o *)&this->fields._shaderPropertyName_Pos, v9, v2, v3, v4, v5, v6, v7);
+  v10 = (System_Int32_array **)StringLiteral_16342/*"_ProjectorPos"*/;
+  *(_QWORD *)&this->fields._useRendererBounds = StringLiteral_16342/*"_ProjectorPos"*/;
+  sub_B77560((BattleServantConfConponent_o *)&this->fields._useRendererBounds, v10, v11, v12, v13, v14, v15, v16);
   BYTE1(this->fields.workRenderers) = 1;
-  v17 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_Renderer__TypeInfo);
+  v17 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_Renderer__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v17,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_Renderer___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_Renderer___ctor__);
   this[1].klass = (ProjectionMatrixCalc_c *)v17;
-  sub_B70630((BattleServantConfConponent_o *)&this[1], (System_Int32_array **)v17, v18, v19, v20, v21, v22, v23);
+  sub_B77560((BattleServantConfConponent_o *)&this[1], (System_Int32_array **)v17, v18, v19, v20, v21, v22, v23);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -93,14 +93,14 @@ void __fastcall ProjectionMatrixCalc__LateUpdate(ProjectionMatrixCalc_o *this, c
   UnityEngine_Vector4_o v42; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Vector4_o v43; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4351F2F & 1) == 0 )
+  if ( (byte_438B5F2 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_Renderer__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
-    sub_B70694(&Method_System_Collections_Generic_List_Renderer__get_Count__);
-    byte_4351F2F = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_Renderer__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Renderer__get_Count__);
+    byte_438B5F2 = 1;
   }
   memset(&methoda, 0, sizeof(methoda));
   memset(&v35, 0, sizeof(v35));
@@ -172,24 +172,24 @@ void __fastcall ProjectionMatrixCalc__LateUpdate(ProjectionMatrixCalc_o *this, c
         (transform = (UnityEngine_Transform_o *)this[1].klass) == 0LL) )
   {
 LABEL_28:
-    sub_B7076C(transform, v4);
+    sub_B7769C(transform, v4);
   }
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v33,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)transform,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
   v34.fields.current = *(Il2CppObject **)&v33.fields.m01;
   *(_OWORD *)&v34.fields.list = *(_OWORD *)&v33.fields.m00;
   while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v34,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
   {
     if ( !v34.fields.current )
-      sub_B7076C(0LL, v25);
+      sub_B7769C(0LL, v25);
     materials = UnityEngine_Renderer__get_materials((UnityEngine_Renderer_o *)v34.fields.current, 0LL);
     v20 = materials;
     if ( !materials )
-      sub_B7076C(0LL, v19);
+      sub_B7769C(0LL, v19);
     max_length = materials->max_length;
     if ( max_length >= 1 )
     {
@@ -197,14 +197,14 @@ LABEL_28:
       {
         if ( i >= (unsigned int)max_length )
         {
-          v26 = sub_B70798(materials);
-          sub_B70738(v26, 0LL);
+          v26 = sub_B776C8(materials);
+          sub_B77668(v26, 0LL);
         }
         shaderPropertyName_Pos = this->fields._shaderPropertyName_Pos;
         v24 = v20->m_Items[i];
         v33 = *(UnityEngine_Matrix4x4_o *)&methoda.name;
         if ( !v24 )
-          sub_B7076C(materials, shaderPropertyName_Pos);
+          sub_B7769C(materials, shaderPropertyName_Pos);
         v27 = v33;
         UnityEngine_Material__SetMatrix(v24, shaderPropertyName_Pos, &v27, 0LL);
         *(_QWORD *)&v43.fields.x = methoda.methodPointer;
@@ -216,7 +216,7 @@ LABEL_28:
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v34,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
 }
 
 
@@ -224,19 +224,19 @@ void __fastcall ProjectionMatrixCalc__OnDisable(ProjectionMatrixCalc_o *this, co
 {
   ProjectionMatrixCalc_c *klass; // x0
 
-  if ( (byte_4351F2E & 1) == 0 )
+  if ( (byte_438B5F1 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_Renderer__Clear__);
-    byte_4351F2E = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_Renderer__Clear__);
+    byte_438B5F1 = 1;
   }
   if ( BYTE1(this->fields.workRenderers) )
     ProjectionMatrixCalc__destroyWorkRenderersMaterials(this, method);
   klass = this[1].klass;
   if ( !klass )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   System_Collections_Generic_List_XWeaponTrail_Element___Clear(
     (System_Collections_Generic_List_XWeaponTrail_Element__o *)klass,
-    (const MethodInfo_3025A90 *)Method_System_Collections_Generic_List_Renderer__Clear__);
+    (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_Renderer__Clear__);
 }
 
 
@@ -275,7 +275,7 @@ void __fastcall ProjectionMatrixCalc__OnDrawGizmos(ProjectionMatrixCalc_o *this,
   v22 = v21;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_Transform__get_localToWorldMatrix(&v21, transform, 0LL);
   v20 = v21;
   UnityEngine_Gizmos__set_matrix(&v20, 0LL);
@@ -352,27 +352,27 @@ UnityEngine_Bounds_o *__fastcall ProjectionMatrixCalc__calcRenderersBounds(
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o zero; // 0:s3.4,4:s4.4,8:s5.4
 
-  if ( (byte_4351F30 & 1) == 0 )
+  if ( (byte_438B5F3 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_Renderer__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
-    this = (ProjectionMatrixCalc_o *)sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4351F30 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_Renderer__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
+    this = (ProjectionMatrixCalc_o *)sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438B5F3 = 1;
   }
   memset(&v16, 0, sizeof(v16));
   memset(&v17, 0, sizeof(v17));
   if ( !renderers )
-    sub_B7076C(this, renderers);
+    sub_B7769C(this, renderers);
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v15,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)renderers,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
   v16 = v15;
   while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v16,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
   {
     current = v16.fields.current;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -384,7 +384,7 @@ UnityEngine_Bounds_o *__fastcall ProjectionMatrixCalc__calcRenderersBounds(
     if ( v7 )
     {
       if ( !current )
-        sub_B7076C(v7, v8);
+        sub_B7769C(v7, v8);
       if ( UnityEngine_Renderer__get_enabled((UnityEngine_Renderer_o *)current, 0LL) )
       {
         size = UnityEngine_Bounds__get_size((UnityEngine_Bounds_o *)&v17, 0LL);
@@ -404,14 +404,14 @@ UnityEngine_Bounds_o *__fastcall ProjectionMatrixCalc__calcRenderersBounds(
         {
           UnityEngine_Renderer__get_bounds((UnityEngine_Bounds_o *)&v15, (UnityEngine_Renderer_o *)current, 0LL);
           v14 = v15;
-          UnityEngine_Bounds__Encapsulate_41056440((UnityEngine_Bounds_o *)&v17, (UnityEngine_Bounds_o *)&v14, 0LL);
+          UnityEngine_Bounds__Encapsulate_41402328((UnityEngine_Bounds_o *)&v17, (UnityEngine_Bounds_o *)&v14, 0LL);
         }
       }
     }
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v16,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
   v13 = *(_OWORD *)&v17.fields.list;
   *(_QWORD *)&retstr->fields.m_Extents.fields.y = v17.fields.current;
   *(_OWORD *)&retstr->fields.m_Center.fields.x = v13;
@@ -437,27 +437,27 @@ void __fastcall ProjectionMatrixCalc__destroyWorkRenderersMaterials(
   System_Collections_Generic_List_Enumerator_T__o v14; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_T__o v15; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4351F2C & 1) == 0 )
+  if ( (byte_438B5EF & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_Renderer__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4351F2C = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_Renderer__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438B5EF = 1;
   }
   memset(&v15, 0, sizeof(v15));
   klass = this[1].klass;
   if ( !klass )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v14,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)klass,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
   v15 = v14;
   while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v15,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
   {
     current = v15.fields.current;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -469,11 +469,11 @@ void __fastcall ProjectionMatrixCalc__destroyWorkRenderersMaterials(
     if ( v5 )
     {
       if ( !current )
-        sub_B7076C(v5, v6);
+        sub_B7769C(v5, v6);
       materials = UnityEngine_Renderer__get_materials((UnityEngine_Renderer_o *)current, 0LL);
       v9 = materials;
       if ( !materials )
-        sub_B7076C(0LL, v8);
+        sub_B7769C(0LL, v8);
       v10 = *(_QWORD *)&materials->max_length;
       if ( (int)v10 >= 1 )
       {
@@ -482,8 +482,8 @@ void __fastcall ProjectionMatrixCalc__destroyWorkRenderersMaterials(
         {
           if ( v11 >= (unsigned int)v10 )
           {
-            v13 = sub_B70798(materials);
-            sub_B70738(v13, 0LL);
+            v13 = sub_B776C8(materials);
+            sub_B77668(v13, 0LL);
           }
           v12 = (UnityEngine_Object_o *)v9->m_Items[v11];
           if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -491,7 +491,7 @@ void __fastcall ProjectionMatrixCalc__destroyWorkRenderersMaterials(
           {
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           }
-          UnityEngine_Object__DestroyImmediate_36067420(v12, 0LL);
+          UnityEngine_Object__DestroyImmediate_36310192(v12, 0LL);
           LODWORD(v10) = v9->max_length;
           ++v11;
         }
@@ -501,7 +501,7 @@ void __fastcall ProjectionMatrixCalc__destroyWorkRenderersMaterials(
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v15,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
 }
 
 
@@ -536,64 +536,64 @@ void __fastcall ProjectionMatrixCalc__updateWorkRenderers(ProjectionMatrixCalc_o
   int v29; // [xsp+28h] [xbp-78h]
   System_Collections_Generic_List_Enumerator_T__o i; // [xsp+30h] [xbp-70h] BYREF
 
-  if ( (byte_4351F2D & 1) == 0 )
+  if ( (byte_438B5F0 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_Renderer__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_Renderer__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_Renderer__Contains__);
-    sub_B70694(&Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
-    sub_B70694(&Method_System_Collections_Generic_List_Renderer__Remove__);
-    sub_B70694(&Method_System_Collections_Generic_List_Renderer___ctor__);
-    sub_B70694(&System_Collections_Generic_List_Renderer__TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4351F2D = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_Renderer__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Renderer__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Renderer__Contains__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Renderer__Remove__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Renderer___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_Renderer__TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438B5F0 = 1;
   }
   memset(&i, 0, sizeof(i));
   v29 = 0;
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_Renderer__TypeInfo);
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_Renderer__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v3,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_Renderer___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_Renderer___ctor__);
   klass = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)this[1].klass;
   if ( !klass )
     goto LABEL_64;
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)v28,
     klass,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
   i = *(System_Collections_Generic_List_Enumerator_T__o *)v28;
   while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &i,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
   {
     shaderPropertyName_MatrixVP = this->fields._shaderPropertyName_MatrixVP;
     if ( !shaderPropertyName_MatrixVP )
-      sub_B7076C(0LL, v6);
+      sub_B7769C(0LL, v6);
     current = i.fields.current;
     v9 = System_Collections_Generic_List_WarBoardManager_TaskList___Contains(
            (System_Collections_Generic_List_WarBoardManager_TaskList__o *)shaderPropertyName_MatrixVP,
            (WarBoardManager_TaskList_o *)i.fields.current,
-           (const MethodInfo_3025AD8 *)Method_System_Collections_Generic_List_Renderer__Contains__);
+           (const MethodInfo_30536E8 *)Method_System_Collections_Generic_List_Renderer__Contains__);
     if ( !v9 )
     {
       if ( !v3 )
-        sub_B7076C(v9, v10);
+        sub_B7769C(v9, v10);
       if ( !System_Collections_Generic_List_WarBoardManager_TaskList___Contains(
               (System_Collections_Generic_List_WarBoardManager_TaskList__o *)v3,
               (WarBoardManager_TaskList_o *)current,
-              (const MethodInfo_3025AD8 *)Method_System_Collections_Generic_List_Renderer__Contains__) )
+              (const MethodInfo_30536E8 *)Method_System_Collections_Generic_List_Renderer__Contains__) )
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           v3,
           (EventMissionProgressRequest_Argument_ProgressData_o *)current,
-          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_Renderer__Add__);
+          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_Renderer__Add__);
     }
   }
   *(_DWORD *)&v28[4 * v29++ + 24] = 83;
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &i,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
   if ( v29 && *(_DWORD *)&v28[4 * v29 + 20] == 83 )
     --v29;
   if ( BYTE1(this->fields.workRenderers) )
@@ -603,18 +603,18 @@ void __fastcall ProjectionMatrixCalc__updateWorkRenderers(ProjectionMatrixCalc_o
     System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)v28,
       (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v3,
-      (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
+      (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
     i = *(System_Collections_Generic_List_Enumerator_T__o *)v28;
     while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
               &i,
-              (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
+              (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
     {
       if ( !i.fields.current )
-        sub_B7076C(0LL, v17);
+        sub_B7769C(0LL, v17);
       materials = UnityEngine_Renderer__get_materials((UnityEngine_Renderer_o *)i.fields.current, 0LL);
       v13 = materials;
       if ( !materials )
-        sub_B7076C(0LL, v12);
+        sub_B7769C(0LL, v12);
       v14 = *(_QWORD *)&materials->max_length;
       if ( (int)v14 >= 1 )
       {
@@ -623,8 +623,8 @@ void __fastcall ProjectionMatrixCalc__updateWorkRenderers(ProjectionMatrixCalc_o
         {
           if ( v15 >= (unsigned int)v14 )
           {
-            v27 = sub_B70798(materials);
-            sub_B70738(v27, 0LL);
+            v27 = sub_B776C8(materials);
+            sub_B77668(v27, 0LL);
           }
           v16 = (UnityEngine_Object_o *)v13->m_Items[v15];
           if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -632,7 +632,7 @@ void __fastcall ProjectionMatrixCalc__updateWorkRenderers(ProjectionMatrixCalc_o
           {
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           }
-          UnityEngine_Object__DestroyImmediate_36067420(v16, 0LL);
+          UnityEngine_Object__DestroyImmediate_36310192(v16, 0LL);
           LODWORD(v14) = v13->max_length;
           ++v15;
         }
@@ -642,7 +642,7 @@ void __fastcall ProjectionMatrixCalc__updateWorkRenderers(ProjectionMatrixCalc_o
     *(_DWORD *)&v28[4 * v29++ + 24] = 165;
     System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
       &i,
-      (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
+      (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
     if ( v29 && *(_DWORD *)&v28[4 * v29 + 20] == 165 )
       --v29;
   }
@@ -651,38 +651,38 @@ void __fastcall ProjectionMatrixCalc__updateWorkRenderers(ProjectionMatrixCalc_o
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)v28,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v3,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
   for ( i = *(System_Collections_Generic_List_Enumerator_T__o *)v28;
         System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
           &i,
-          (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__);
+          (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__);
         System_Collections_Generic_List_WarBoardManager_TaskList___Remove(
           (System_Collections_Generic_List_WarBoardManager_TaskList__o *)v19,
           (WarBoardManager_TaskList_o *)i.fields.current,
-          (const MethodInfo_3027034 *)Method_System_Collections_Generic_List_Renderer__Remove__) )
+          (const MethodInfo_3054C44 *)Method_System_Collections_Generic_List_Renderer__Remove__) )
   {
     v19 = this[1].klass;
     if ( !v19 )
-      sub_B7076C(0LL, v18);
+      sub_B7769C(0LL, v18);
   }
   *(_DWORD *)&v28[4 * v29++ + 24] = 222;
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &i,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
   if ( v29 && *(_DWORD *)&v28[4 * v29 + 20] == 222 )
     --v29;
   klass = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)this->fields._shaderPropertyName_MatrixVP;
   if ( !klass )
 LABEL_64:
-    sub_B7076C(klass, v4);
+    sub_B7769C(klass, v4);
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)v28,
     klass,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
   i = *(System_Collections_Generic_List_Enumerator_T__o *)v28;
   while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &i,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
   {
     v20 = i.fields.current;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -694,24 +694,24 @@ LABEL_64:
     if ( v21 )
     {
       if ( !v20 )
-        sub_B7076C(v21, v22);
+        sub_B7769C(v21, v22);
       if ( UnityEngine_Renderer__get_enabled((UnityEngine_Renderer_o *)v20, 0LL) )
       {
         v24 = this[1].klass;
         if ( !v24 )
-          sub_B7076C(0LL, v23);
+          sub_B7769C(0LL, v23);
         if ( !System_Collections_Generic_List_WarBoardManager_TaskList___Contains(
                 (System_Collections_Generic_List_WarBoardManager_TaskList__o *)v24,
                 (WarBoardManager_TaskList_o *)v20,
-                (const MethodInfo_3025AD8 *)Method_System_Collections_Generic_List_Renderer__Contains__) )
+                (const MethodInfo_30536E8 *)Method_System_Collections_Generic_List_Renderer__Contains__) )
         {
           v26 = this[1].klass;
           if ( !v26 )
-            sub_B7076C(0LL, v25);
+            sub_B7769C(0LL, v25);
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
             (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v26,
             (EventMissionProgressRequest_Argument_ProgressData_o *)v20,
-            (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_Renderer__Add__);
+            (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_Renderer__Add__);
         }
       }
     }
@@ -719,7 +719,7 @@ LABEL_64:
   *(_DWORD *)&v28[4 * v29++ + 24] = 317;
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &i,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
   if ( v29 && *(_DWORD *)&v28[4 * v29 + 20] == 317 )
     --v29;
 }

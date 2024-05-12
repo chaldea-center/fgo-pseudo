@@ -15,25 +15,25 @@ void __fastcall RemovedBuffInfo___ctor(RemovedBuffInfo_o *this, const MethodInfo
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
 
-  if ( (byte_43558D9 & 1) == 0 )
+  if ( (byte_438EF51 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
-    sub_B70694(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
-    byte_43558D9 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+    byte_438EF51 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v3,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   this->fields._RemovedAllBuffList_k__BackingField = (struct System_Collections_Generic_List_BattleBuffData_BuffData__o *)v3;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v10,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   this->fields._RemovedLinkedBuffList_k__BackingField = (struct System_Collections_Generic_List_BattleBuffData_BuffData__o *)v10;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._RemovedLinkedBuffList_k__BackingField,
     (System_Int32_array **)v10,
     v11,
@@ -53,10 +53,10 @@ void __fastcall RemovedBuffInfo__AddBuffs(
 {
   System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule__o *RemovedAllBuffList_k__BackingField; // x0
 
-  if ( (byte_43558DA & 1) == 0 )
+  if ( (byte_438EF52 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
-    byte_43558DA = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    byte_438EF52 = 1;
   }
   RemovedAllBuffList_k__BackingField = (System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule__o *)this->fields._RemovedAllBuffList_k__BackingField;
   if ( !RemovedAllBuffList_k__BackingField )
@@ -64,7 +64,7 @@ void __fastcall RemovedBuffInfo__AddBuffs(
   System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule___AddRange(
     RemovedAllBuffList_k__BackingField,
     (System_Collections_Generic_IEnumerable_T__o *)buffDataEnumerable,
-    (const MethodInfo_30258D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_30534E8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   if ( asLinkedBuff )
   {
     RemovedAllBuffList_k__BackingField = (System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule__o *)this->fields._RemovedLinkedBuffList_k__BackingField;
@@ -73,11 +73,11 @@ void __fastcall RemovedBuffInfo__AddBuffs(
       System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule___AddRange(
         RemovedAllBuffList_k__BackingField,
         (System_Collections_Generic_IEnumerable_T__o *)buffDataEnumerable,
-        (const MethodInfo_30258D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+        (const MethodInfo_30534E8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
       return;
     }
 LABEL_8:
-    sub_B7076C(RemovedAllBuffList_k__BackingField, buffDataEnumerable);
+    sub_B7769C(RemovedAllBuffList_k__BackingField, buffDataEnumerable);
   }
 }
 
@@ -110,7 +110,7 @@ void __fastcall RemovedBuffInfo__set_RemovedAllBuffList(
   System_Int32_array *v7; // x7
 
   this->fields._RemovedAllBuffList_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -134,7 +134,7 @@ void __fastcall RemovedBuffInfo__set_RemovedLinkedBuffList(
   System_Int32_array *v7; // x7
 
   this->fields._RemovedLinkedBuffList_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._RemovedLinkedBuffList_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

@@ -1,9 +1,9 @@
 void __fastcall MaterialCostumeMenu___ctor(MaterialCostumeMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4355726 & 1) == 0 )
+  if ( (byte_438EE2A & 1) == 0 )
   {
-    sub_B70694(&BaseMenu_TypeInfo);
-    byte_4355726 = 1;
+    sub_B775C4(&BaseMenu_TypeInfo);
+    byte_438EE2A = 1;
   }
   if ( (BYTE3(BaseMenu_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseMenu_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo);
@@ -29,7 +29,7 @@ void __fastcall MaterialCostumeMenu__Callback(MaterialCostumeMenu_o *this, const
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_B70630(p_callbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_B77560(p_callbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
     MaterialCostumeMenu_CallbackFunc__Invoke(v9, 0LL);
   }
 }
@@ -39,11 +39,11 @@ void __fastcall MaterialCostumeMenu__Close(MaterialCostumeMenu_o *this, const Me
 {
   const MethodInfo *v2; // x2
 
-  MaterialCostumeMenu__Close_32125796(this, 0LL, v2);
+  MaterialCostumeMenu__Close_32434988(this, 0LL, v2);
 }
 
 
-void __fastcall MaterialCostumeMenu__Close_32125796(
+void __fastcall MaterialCostumeMenu__Close_32434988(
         MaterialCostumeMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -54,13 +54,13 @@ void __fastcall MaterialCostumeMenu__Close_32125796(
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
 
-  if ( (byte_435571E & 1) == 0 )
+  if ( (byte_438EE22 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_10181/*"OnStartClose"*/);
-    byte_435571E = 1;
+    sub_B775C4(&StringLiteral_10240/*"OnStartClose"*/);
+    byte_438EE22 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc,
     (System_Int32_array **)callback,
     (System_String_array **)method,
@@ -72,7 +72,7 @@ void __fastcall MaterialCostumeMenu__Close_32125796(
   this->fields.state = 4;
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_10181/*"OnStartClose"*/,
+    (System_String_o *)StringLiteral_10240/*"OnStartClose"*/,
     0.1,
     0LL);
 }
@@ -95,7 +95,7 @@ void __fastcall MaterialCostumeMenu__EndClose(MaterialCostumeMenu_o *this, const
   MaterialCostumeMenu__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc;
@@ -103,7 +103,7 @@ void __fastcall MaterialCostumeMenu__EndClose(MaterialCostumeMenu_o *this, const
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_B70630(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_B77560(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
     System_Action__Invoke(v12, 0LL);
   }
 }
@@ -123,17 +123,17 @@ void __fastcall MaterialCostumeMenu__EndCloseShowCostume(MaterialCostumeMenu_o *
   System_Int32_array *v12; // x7
   const MethodInfo *v13; // x2
 
-  if ( (byte_4355724 & 1) == 0 )
+  if ( (byte_438EE28 & 1) == 0 )
   {
-    sub_B70694(&MaterialCostumeServantListViewManager_CallbackFunc_TypeInfo);
-    sub_B70694(&Method_MaterialCostumeMenu_OnSelectCostume__);
-    byte_4355724 = 1;
+    sub_B775C4(&MaterialCostumeServantListViewManager_CallbackFunc_TypeInfo);
+    sub_B775C4(&Method_MaterialCostumeMenu_OnSelectCostume__);
+    byte_438EE28 = 1;
   }
   materialCostumeServantListViewManager = this->fields.materialCostumeServantListViewManager;
   if ( !materialCostumeServantListViewManager
-    || (MaterialCostumeServantListViewManager__RequestListObject_32135992(materialCostumeServantListViewManager, 4, v2),
+    || (MaterialCostumeServantListViewManager__RequestListObject_32445184(materialCostumeServantListViewManager, 4, v2),
         v5 = this->fields.materialCostumeServantListViewManager,
-        v6 = (MaterialCostumeServantListViewManager_CallbackFunc_o *)sub_B70764(MaterialCostumeServantListViewManager_CallbackFunc_TypeInfo),
+        v6 = (MaterialCostumeServantListViewManager_CallbackFunc_o *)sub_B77694(MaterialCostumeServantListViewManager_CallbackFunc_TypeInfo),
         MaterialCostumeServantListViewManager_CallbackFunc___ctor(
           v6,
           (Il2CppObject *)this,
@@ -141,10 +141,10 @@ void __fastcall MaterialCostumeMenu__EndCloseShowCostume(MaterialCostumeMenu_o *
           0LL),
         !v5) )
   {
-    sub_B7076C(materialCostumeServantListViewManager, method);
+    sub_B7769C(materialCostumeServantListViewManager, method);
   }
   v5->fields.callbackFunc = v6;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v5->fields.callbackFunc,
     (System_Int32_array **)v6,
     v7,
@@ -153,7 +153,7 @@ void __fastcall MaterialCostumeMenu__EndCloseShowCostume(MaterialCostumeMenu_o *
     v10,
     v11,
     v12);
-  MaterialCostumeServantListViewManager__SetMode_32127624(v5, 2, v13);
+  MaterialCostumeServantListViewManager__SetMode_32436816(v5, 2, v13);
 }
 
 
@@ -171,24 +171,24 @@ void __fastcall MaterialCostumeMenu__EndOpen(MaterialCostumeMenu_o *this, const 
   System_Int32_array *v12; // x7
   const MethodInfo *v13; // x2
 
-  if ( (byte_435571D & 1) == 0 )
+  if ( (byte_438EE21 & 1) == 0 )
   {
-    sub_B70694(&MaterialCostumeServantListViewManager_CallbackFunc_TypeInfo);
-    sub_B70694(&Method_MaterialCostumeMenu_OnSelectCostume__);
-    byte_435571D = 1;
+    sub_B775C4(&MaterialCostumeServantListViewManager_CallbackFunc_TypeInfo);
+    sub_B775C4(&Method_MaterialCostumeMenu_OnSelectCostume__);
+    byte_438EE21 = 1;
   }
   this->fields.state = 2;
   materialCostumeServantListViewManager = this->fields.materialCostumeServantListViewManager;
-  v4 = (MaterialCostumeServantListViewManager_CallbackFunc_o *)sub_B70764(MaterialCostumeServantListViewManager_CallbackFunc_TypeInfo);
+  v4 = (MaterialCostumeServantListViewManager_CallbackFunc_o *)sub_B77694(MaterialCostumeServantListViewManager_CallbackFunc_TypeInfo);
   MaterialCostumeServantListViewManager_CallbackFunc___ctor(
     v4,
     (Il2CppObject *)this,
     Method_MaterialCostumeMenu_OnSelectCostume__,
     0LL);
   if ( !materialCostumeServantListViewManager )
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   materialCostumeServantListViewManager->fields.callbackFunc = v4;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&materialCostumeServantListViewManager->fields.callbackFunc,
     (System_Int32_array **)v4,
     v7,
@@ -197,7 +197,7 @@ void __fastcall MaterialCostumeMenu__EndOpen(MaterialCostumeMenu_o *this, const 
     v10,
     v11,
     v12);
-  MaterialCostumeServantListViewManager__SetMode_32127624(materialCostumeServantListViewManager, 2, v13);
+  MaterialCostumeServantListViewManager__SetMode_32436816(materialCostumeServantListViewManager, 2, v13);
   ActionExtensions__Call(this->fields.mOpenedAct, 0LL);
 }
 
@@ -214,24 +214,24 @@ void __fastcall MaterialCostumeMenu__EndShowCostume(
   __int64 v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_4355723 & 1) == 0 )
+  if ( (byte_438EE27 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_MaterialCostumeMenu_EndCloseShowCostume__);
-    sub_B70694(&Method_MaterialCostumeMenu_EndShowCostume__);
-    byte_4355723 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_MaterialCostumeMenu_EndCloseShowCostume__);
+    sub_B775C4(&Method_MaterialCostumeMenu_EndShowCostume__);
+    byte_438EE27 = 1;
   }
   v4 = Method_MaterialCostumeMenu_EndShowCostume__;
   if ( (*((_BYTE *)Method_MaterialCostumeMenu_EndShowCostume__ + 75) & 2) != 0 )
-    v4 = (_QWORD *)sub_B7069C(Method_MaterialCostumeMenu_EndShowCostume__);
-  v5 = (System_Reflection_MethodBase_o *)sub_B70678(v4, v4[3]);
+    v4 = (_QWORD *)sub_B775CC(Method_MaterialCostumeMenu_EndShowCostume__);
+  v5 = (System_Reflection_MethodBase_o *)sub_B775A8(v4, v4[3]);
   OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0LL);
   itemDetailInfoComp = this->fields.itemDetailInfoComp;
-  v7 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_MaterialCostumeMenu_EndCloseShowCostume__, 0LL);
   if ( !itemDetailInfoComp )
-    sub_B7076C(v8, v9);
-  ItemDetailInfoComponent__Close_27818224(itemDetailInfoComp, v7, 0LL);
+    sub_B7769C(v8, v9);
+  ItemDetailInfoComponent__Close_28169980(itemDetailInfoComp, v7, 0LL);
 }
 
 
@@ -256,7 +256,7 @@ void __fastcall MaterialCostumeMenu__Init(MaterialCostumeMenu_o *this, const Met
         materialCostumeServantListViewManager = (MaterialCostumeServantListViewManager_o *)BgTxtManager__IsActiveBgTxt(0LL),
         !gameObject) )
   {
-    sub_B7076C(materialCostumeServantListViewManager, method);
+    sub_B7769C(materialCostumeServantListViewManager, method);
   }
   UnityEngine_GameObject__SetActive(gameObject, (unsigned __int8)materialCostumeServantListViewManager & 1, 0LL);
   BaseMenu__Init((BaseMenu_o *)this, 0LL);
@@ -267,10 +267,10 @@ void __fastcall MaterialCostumeMenu__OnClickCancel(MaterialCostumeMenu_o *this, 
 {
   const MethodInfo *v3; // x1
 
-  if ( (byte_4355721 & 1) == 0 )
+  if ( (byte_438EE25 & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4355721 = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438EE25 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -290,10 +290,10 @@ void __fastcall MaterialCostumeMenu__OnClickDecide(MaterialCostumeMenu_o *this, 
 {
   const MethodInfo *v3; // x1
 
-  if ( (byte_4355720 & 1) == 0 )
+  if ( (byte_438EE24 & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4355720 = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438EE24 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -315,10 +315,10 @@ void __fastcall MaterialCostumeMenu__OnClickScaleChange(MaterialCostumeMenu_o *t
   MaterialCostumeServantListViewManager_o *materialCostumeServantListViewManager; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4355725 & 1) == 0 )
+  if ( (byte_438EE29 & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4355725 = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438EE29 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -330,7 +330,7 @@ void __fastcall MaterialCostumeMenu__OnClickScaleChange(MaterialCostumeMenu_o *t
     SoundManager__playSystemSe(0, 0LL);
     materialCostumeServantListViewManager = this->fields.materialCostumeServantListViewManager;
     if ( !materialCostumeServantListViewManager )
-      sub_B7076C(0LL, v3);
+      sub_B7769C(0LL, v3);
     MaterialCostumeServantListViewManager__ChangeIconScale(materialCostumeServantListViewManager, v3);
     MaterialCostumeMenu__UpdateScaleChangeIconSprite(this, v5);
   }
@@ -358,11 +358,11 @@ void __fastcall MaterialCostumeMenu__OnSelectCostume(
   ItemDetailInfoComponent_o *itemDetailInfoComp; // x20
   ItemDetailInfoComponent_CallbackFunc_o *v14; // x23
 
-  if ( (byte_4355722 & 1) == 0 )
+  if ( (byte_438EE26 & 1) == 0 )
   {
-    sub_B70694(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
-    sub_B70694(&Method_MaterialCostumeMenu_EndShowCostume__);
-    byte_4355722 = 1;
+    sub_B775C4(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+    sub_B775C4(&Method_MaterialCostumeMenu_EndShowCostume__);
+    byte_438EE26 = 1;
   }
   if ( kind == 1 && this->fields.state == 2 )
   {
@@ -384,7 +384,7 @@ void __fastcall MaterialCostumeMenu__OnSelectCostume(
         monitor = (System_String_o *)dragParentObject[1].monitor;
         klass = (System_String_o *)dragParentObject[2].klass;
         itemDetailInfoComp = this->fields.itemDetailInfoComp;
-        v14 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_B70764(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+        v14 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_B77694(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
         ItemDetailInfoComponent_CallbackFunc___ctor(
           v14,
           (Il2CppObject *)this,
@@ -397,7 +397,7 @@ void __fastcall MaterialCostumeMenu__OnSelectCostume(
         }
       }
 LABEL_12:
-      sub_B7076C(materialCostumeServantListViewManager, *(_QWORD *)&kind);
+      sub_B7769C(materialCostumeServantListViewManager, *(_QWORD *)&kind);
     }
   }
 }
@@ -407,13 +407,13 @@ void __fastcall MaterialCostumeMenu__OnStartClose(MaterialCostumeMenu_o *this, c
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_435571F & 1) == 0 )
+  if ( (byte_438EE23 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_MaterialCostumeMenu_EndClose__);
-    byte_435571F = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_MaterialCostumeMenu_EndClose__);
+    byte_438EE23 = 1;
   }
-  v3 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_MaterialCostumeMenu_EndClose__, 0LL);
   BaseMenu__Close((BaseMenu_o *)this, v3, 0LL);
 }
@@ -423,13 +423,13 @@ void __fastcall MaterialCostumeMenu__OnStartOpen(MaterialCostumeMenu_o *this, co
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_435571C & 1) == 0 )
+  if ( (byte_438EE20 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_MaterialCostumeMenu_EndOpen__);
-    byte_435571C = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_MaterialCostumeMenu_EndOpen__);
+    byte_438EE20 = 1;
   }
-  v3 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_MaterialCostumeMenu_EndOpen__, 0LL);
   BaseMenu__Open((BaseMenu_o *)this, v3, 0LL);
 }
@@ -457,15 +457,15 @@ void __fastcall MaterialCostumeMenu__Open(
   const MethodInfo *v20; // x1
   const MethodInfo *v21; // x2
 
-  if ( (byte_435571B & 1) == 0 )
+  if ( (byte_438EE1F & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_10182/*"OnStartOpen"*/);
-    byte_435571B = 1;
+    sub_B775C4(&StringLiteral_10241/*"OnStartOpen"*/);
+    byte_438EE1F = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.mOpenedAct = opened_act;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.mOpenedAct,
       (System_Int32_array **)opened_act,
       (System_String_array **)callback,
@@ -475,7 +475,7 @@ void __fastcall MaterialCostumeMenu__Open(
       v6,
       v7);
     this->fields.callbackFunc = callback;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.callbackFunc,
       (System_Int32_array **)callback,
       v11,
@@ -503,15 +503,15 @@ void __fastcall MaterialCostumeMenu__Open(
           !gameObject) )
     {
 LABEL_10:
-      sub_B7076C(gameObject, v18);
+      sub_B7769C(gameObject, v18);
     }
-    MaterialCostumeServantListViewManager__SetMode_32127624(
+    MaterialCostumeServantListViewManager__SetMode_32436816(
       (MaterialCostumeServantListViewManager_o *)gameObject,
       1,
       v21);
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10182/*"OnStartOpen"*/,
+      (System_String_o *)StringLiteral_10241/*"OnStartOpen"*/,
       0.5,
       0LL);
   }
@@ -531,7 +531,7 @@ void __fastcall MaterialCostumeMenu__UpdateScaleChangeIconSprite(MaterialCostume
                                                                                              method),
         !scaleChangeTabSprite) )
   {
-    sub_B7076C(materialCostumeServantListViewManager, method);
+    sub_B7769C(materialCostumeServantListViewManager, method);
   }
   UISprite__set_spriteName(scaleChangeTabSprite, (System_String_o *)materialCostumeServantListViewManager, 0LL);
 }
@@ -552,10 +552,10 @@ void __fastcall MaterialCostumeMenu__add_callbackFunc(
   MaterialCostumeMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4355719 & 1) == 0 )
+  if ( (byte_438EE1D & 1) == 0 )
   {
-    sub_B70694(&MaterialCostumeMenu_CallbackFunc_TypeInfo);
-    byte_4355719 = 1;
+    sub_B775C4(&MaterialCostumeMenu_CallbackFunc_TypeInfo);
+    byte_438EE1D = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -568,13 +568,13 @@ void __fastcall MaterialCostumeMenu__add_callbackFunc(
       if ( (MaterialCostumeMenu_CallbackFunc_c *)v8->klass != MaterialCostumeMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B70A60(v8);
+  sub_B77990(v8);
   MaterialCostumeMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -593,10 +593,10 @@ void __fastcall MaterialCostumeMenu__remove_callbackFunc(
   MaterialCostumeServantListViewManager_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_435571A & 1) == 0 )
+  if ( (byte_438EE1E & 1) == 0 )
   {
-    sub_B70694(&MaterialCostumeMenu_CallbackFunc_TypeInfo);
-    byte_435571A = 1;
+    sub_B775C4(&MaterialCostumeMenu_CallbackFunc_TypeInfo);
+    byte_438EE1E = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -609,13 +609,13 @@ void __fastcall MaterialCostumeMenu__remove_callbackFunc(
       if ( (MaterialCostumeMenu_CallbackFunc_c *)v8->klass != MaterialCostumeMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B70A60(v8);
+  sub_B77990(v8);
   MaterialCostumeServantListViewManager__DestroyList(v11, v12);
 }
 
@@ -635,7 +635,7 @@ void __fastcall MaterialCostumeMenu_CallbackFunc___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B70630(p_method);
+  sub_B77560(p_method);
 }
 
 
@@ -648,7 +648,7 @@ System_IAsyncResult_o *__fastcall MaterialCostumeMenu_CallbackFunc__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0LL;
-  return (System_IAsyncResult_o *)sub_B70638(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_B77568(this, &v5, callback, object);
 }
 
 
@@ -657,7 +657,7 @@ void __fastcall MaterialCostumeMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7063C(result, 0LL, method);
+  sub_B7756C(result, 0LL, method);
 }
 
 
@@ -712,8 +712,8 @@ LABEL_5:
       v18 = *(_QWORD *)&v16->fields.extra_arg;
       v19 = *(void (__fastcall **)(__int64))&v16->fields.method_ptr;
       if ( *(__int16 *)(v18 + 72) == -1 )
-        sub_B70750(*(_QWORD *)&v16->fields.extra_arg, method);
-      if ( (sub_B706C4(v18) & 1) == 0 )
+        sub_B77680(*(_QWORD *)&v16->fields.extra_arg, method);
+      if ( (sub_B775F4(v18) & 1) == 0 )
         break;
       if ( *(_BYTE *)(v18 + 74) )
         goto LABEL_35;
@@ -724,8 +724,8 @@ LABEL_36:
     }
     if ( v17 && *(__int16 *)(v18 + 72) != -1 && (*(_BYTE *)(*v17 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v20 = sub_B706BC(v18);
-      v21 = sub_B70AC0(v18);
+      v20 = sub_B775EC(v18);
+      v21 = sub_B779F0(v18);
       if ( (v20 & 1) != 0 )
       {
         if ( (v21 & 1) != 0 )
@@ -749,7 +749,7 @@ LABEL_36:
           else
           {
 LABEL_34:
-            v14 = sub_B08590(v17, v23, v24);
+            v14 = sub_B0F4C0(v17, v23, v24);
           }
           v13 = *(_QWORD *)(v14 + 8);
         }
@@ -757,7 +757,7 @@ LABEL_34:
         {
           v13 = *(_QWORD *)(*v17 + 16LL * *(unsigned __int16 *)(v18 + 72) + 320);
         }
-        v15 = (void (__fastcall **)(__int64 *, _QWORD))sub_B70744(v13, v18);
+        v15 = (void (__fastcall **)(__int64 *, _QWORD))sub_B77674(v13, v18);
         (*v15)(v17, v15);
       }
       else
@@ -783,7 +783,7 @@ LABEL_34:
           else
           {
 LABEL_11:
-            v12 = sub_B08590(v17, class_0, v7);
+            v12 = sub_B0F4C0(v17, class_0, v7);
           }
           (*(void (__fastcall **)(__int64 *, _QWORD))v12)(v17, *(_QWORD *)(v12 + 8));
         }

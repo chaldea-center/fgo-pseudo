@@ -19,20 +19,20 @@ void __fastcall FGO_param3anim__Start(FGO_param3anim_o *this, const MethodInfo *
   __int64 v11; // x1
   UnityEngine_Renderer_o *klass; // x0
 
-  if ( (byte_4352206 & 1) == 0 )
+  if ( (byte_438B8C9 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_B70694(&StringLiteral_16425/*"_threeValue2"*/);
-    sub_B70694(&StringLiteral_16420/*"_threeValue0"*/);
-    sub_B70694(&StringLiteral_16421/*"_threeValue1"*/);
-    byte_4352206 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_B775C4(&StringLiteral_16495/*"_threeValue2"*/);
+    sub_B775C4(&StringLiteral_16490/*"_threeValue0"*/);
+    sub_B775C4(&StringLiteral_16491/*"_threeValue1"*/);
+    byte_438B8C9 = 1;
   }
   Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                               (UnityEngine_Component_o *)this,
-                              (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                              (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   v4 = (UnityEngine_Renderer_o **)&this[1];
   this[1].klass = (FGO_param3anim_c *)Component_WebViewObject;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this[1],
     (System_Int32_array **)Component_WebViewObject,
     v5,
@@ -47,45 +47,45 @@ void __fastcall FGO_param3anim__Start(FGO_param3anim_o *this, const MethodInfo *
   klass = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(klass, 0LL);
   if ( !klass )
     goto LABEL_16;
-  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)klass, (System_String_o *)StringLiteral_16420/*"_threeValue0"*/, 0LL);
+  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)klass, (System_String_o *)StringLiteral_16490/*"_threeValue0"*/, 0LL);
   klass = *v4;
   if ( !*v4 )
     goto LABEL_16;
   klass = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(klass, 0LL);
   if ( !klass )
     goto LABEL_16;
-  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)klass, (System_String_o *)StringLiteral_16421/*"_threeValue1"*/, 0LL);
+  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)klass, (System_String_o *)StringLiteral_16491/*"_threeValue1"*/, 0LL);
   klass = *v4;
   if ( !*v4 )
     goto LABEL_16;
   klass = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(klass, 0LL);
   if ( !klass )
     goto LABEL_16;
-  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)klass, (System_String_o *)StringLiteral_16425/*"_threeValue2"*/, 0LL);
+  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)klass, (System_String_o *)StringLiteral_16495/*"_threeValue2"*/, 0LL);
   klass = *v4;
   if ( !*v4
     || (klass = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(klass, 0LL)) == 0LL
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)klass,
-          (System_String_o *)StringLiteral_16420/*"_threeValue0"*/,
+          (System_String_o *)StringLiteral_16490/*"_threeValue0"*/,
           this->fields.three_value.fields.y,
           0LL),
         (klass = (UnityEngine_Renderer_o *)this[1].klass) == 0LL)
     || (klass = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(klass, 0LL)) == 0LL
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)klass,
-          (System_String_o *)StringLiteral_16421/*"_threeValue1"*/,
+          (System_String_o *)StringLiteral_16491/*"_threeValue1"*/,
           this->fields.three_value.fields.z,
           0LL),
         (klass = (UnityEngine_Renderer_o *)this[1].klass) == 0LL)
     || (klass = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(klass, 0LL)) == 0LL )
   {
 LABEL_16:
-    sub_B7076C(klass, v11);
+    sub_B7769C(klass, v11);
   }
   UnityEngine_Material__SetFloat(
     (UnityEngine_Material_o *)klass,
-    (System_String_o *)StringLiteral_16425/*"_threeValue2"*/,
+    (System_String_o *)StringLiteral_16495/*"_threeValue2"*/,
     *(float *)&this->fields._renderer,
     0LL);
 }
@@ -95,36 +95,36 @@ void __fastcall FGO_param3anim__Update(FGO_param3anim_o *this, const MethodInfo 
 {
   UnityEngine_Renderer_o *klass; // x0
 
-  if ( (byte_4352207 & 1) == 0 )
+  if ( (byte_438B8CA & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_16425/*"_threeValue2"*/);
-    sub_B70694(&StringLiteral_16420/*"_threeValue0"*/);
-    sub_B70694(&StringLiteral_16421/*"_threeValue1"*/);
-    byte_4352207 = 1;
+    sub_B775C4(&StringLiteral_16495/*"_threeValue2"*/);
+    sub_B775C4(&StringLiteral_16490/*"_threeValue0"*/);
+    sub_B775C4(&StringLiteral_16491/*"_threeValue1"*/);
+    byte_438B8CA = 1;
   }
   klass = (UnityEngine_Renderer_o *)this[1].klass;
   if ( !klass
     || (klass = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(klass, 0LL)) == 0LL
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)klass,
-          (System_String_o *)StringLiteral_16420/*"_threeValue0"*/,
+          (System_String_o *)StringLiteral_16490/*"_threeValue0"*/,
           this->fields.three_value.fields.y,
           0LL),
         (klass = (UnityEngine_Renderer_o *)this[1].klass) == 0LL)
     || (klass = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(klass, 0LL)) == 0LL
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)klass,
-          (System_String_o *)StringLiteral_16421/*"_threeValue1"*/,
+          (System_String_o *)StringLiteral_16491/*"_threeValue1"*/,
           this->fields.three_value.fields.z,
           0LL),
         (klass = (UnityEngine_Renderer_o *)this[1].klass) == 0LL)
     || (klass = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(klass, 0LL)) == 0LL )
   {
-    sub_B7076C(klass, method);
+    sub_B7769C(klass, method);
   }
   UnityEngine_Material__SetFloat(
     (UnityEngine_Material_o *)klass,
-    (System_String_o *)StringLiteral_16425/*"_threeValue2"*/,
+    (System_String_o *)StringLiteral_16495/*"_threeValue2"*/,
     *(float *)&this->fields._renderer,
     0LL);
 }

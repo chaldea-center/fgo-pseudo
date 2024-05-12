@@ -1,13 +1,13 @@
 void __fastcall TreasureBoxEntity___ctor(TreasureBoxEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4353D80 & 1) == 0 )
+  if ( (byte_438D63E & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_int___ctor__);
-    byte_4353D80 = 1;
+    sub_B775C4(&Method_DataEntityBase_int___ctor__);
+    byte_438D63E = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
 }
 
 

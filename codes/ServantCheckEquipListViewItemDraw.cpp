@@ -38,16 +38,16 @@ void __fastcall ServantCheckEquipListViewItemDraw__SetItem(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v20; // [xsp+20h] [xbp-50h]
 
   v6 = this;
-  if ( (byte_4352F54 & 1) == 0 )
+  if ( (byte_438C6D3 & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_B70694(&Rarity_TypeInfo);
-    sub_B70694(&StringLiteral_22192/*"ribbon_noblephantasmup_01"*/);
-    sub_B70694(&StringLiteral_19658/*"icon_reinforced"*/);
-    sub_B70694(&StringLiteral_19650/*"icon_noblephantasmup"*/);
-    this = (ServantCheckEquipListViewItemDraw_o *)sub_B70694(&StringLiteral_19657/*"icon_rarity5"*/);
-    byte_4352F54 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_B775C4(&Rarity_TypeInfo);
+    sub_B775C4(&StringLiteral_22293/*"ribbon_noblephantasmup_01"*/);
+    sub_B775C4(&StringLiteral_19748/*"icon_reinforced"*/);
+    sub_B775C4(&StringLiteral_19740/*"icon_noblephantasmup"*/);
+    this = (ServantCheckEquipListViewItemDraw_o *)sub_B775C4(&StringLiteral_19747/*"icon_rarity5"*/);
+    byte_438C6D3 = 1;
   }
   if ( item && mode )
   {
@@ -64,11 +64,11 @@ void __fastcall ServantCheckEquipListViewItemDraw__SetItem(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
     }
     v19 = v20;
-    this = (ServantCheckEquipListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45183140(
+    this = (ServantCheckEquipListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45429112(
                                                     &v19,
                                                     0LL);
     if ( !servantEquipIcon
-      || (ServantFaceIconComponent__Set_31481092(
+      || (ServantFaceIconComponent__Set_31758324(
             servantEquipIcon,
             (int64_t)this,
             item->fields.materialIconLabelInfo,
@@ -77,7 +77,7 @@ void __fastcall ServantCheckEquipListViewItemDraw__SetItem(
           (v10 = item->fields.materialUserServantEntity) == 0LL) )
     {
 LABEL_53:
-      sub_B7076C(this, item);
+      sub_B7769C(this, item);
     }
     subInfo = v6->fields.subInfo;
     rarity = item->fields.rarity;
@@ -137,7 +137,7 @@ LABEL_53:
         this = (ServantCheckEquipListViewItemDraw_o *)v6->fields.warningSprite;
         if ( !this )
           goto LABEL_53;
-        v16 = &StringLiteral_19658/*"icon_reinforced"*/;
+        v16 = &StringLiteral_19748/*"icon_reinforced"*/;
         goto LABEL_38;
       case 2:
         this = (ServantCheckEquipListViewItemDraw_o *)v6->fields.equipSprite;
@@ -168,7 +168,7 @@ LABEL_53:
         this = (ServantCheckEquipListViewItemDraw_o *)v6->fields.warningSprite;
         if ( !this )
           goto LABEL_53;
-        v16 = &StringLiteral_19657/*"icon_rarity5"*/;
+        v16 = &StringLiteral_19747/*"icon_rarity5"*/;
 LABEL_38:
         UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v16, 0LL);
 LABEL_39:
@@ -207,7 +207,7 @@ LABEL_39:
         {
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
         }
-        AtlasManager__SetEventSprite(v18, (System_String_o *)StringLiteral_19650/*"icon_noblephantasmup"*/, 0LL);
+        AtlasManager__SetEventSprite(v18, (System_String_o *)StringLiteral_19740/*"icon_noblephantasmup"*/, 0LL);
         this = (ServantCheckEquipListViewItemDraw_o *)v6->fields.materialTdSprite;
         if ( !this )
           goto LABEL_53;
@@ -217,7 +217,7 @@ LABEL_39:
         if ( !this )
           goto LABEL_53;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-        AtlasManager__SetEventSprite(v6->fields.materialTdSprite, (System_String_o *)StringLiteral_22192/*"ribbon_noblephantasmup_01"*/, 0LL);
+        AtlasManager__SetEventSprite(v6->fields.materialTdSprite, (System_String_o *)StringLiteral_22293/*"ribbon_noblephantasmup_01"*/, 0LL);
         return;
       default:
         return;

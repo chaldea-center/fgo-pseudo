@@ -27,10 +27,10 @@ int32_t __fastcall FSWidgetSize__GetSize(
   int32_t height; // w0
   float v12; // s0
 
-  if ( (byte_435222A & 1) == 0 )
+  if ( (byte_438B8ED & 1) == 0 )
   {
-    sub_B70694(&FSUtility_TypeInfo);
-    byte_435222A = 1;
+    sub_B775C4(&FSUtility_TypeInfo);
+    byte_438B8ED = 1;
   }
   if ( fix )
   {
@@ -65,15 +65,15 @@ void __fastcall FSWidgetSize__SetSize(FSWidgetSize_o *this, const MethodInfo *me
   const MethodInfo *v9; // x4
   int32_t v10; // w1
 
-  if ( (byte_4352229 & 1) == 0 )
+  if ( (byte_438B8EC & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4352229 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438B8EC = 1;
   }
   Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                       (UnityEngine_Component_o *)this,
-                                                      (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                                                      (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -89,7 +89,7 @@ void __fastcall FSWidgetSize__SetSize(FSWidgetSize_o *this, const MethodInfo *me
              (bool)this[1].klass,
              v5);
     if ( !Component_WebViewObject )
-      sub_B7076C(Size, v7);
+      sub_B7769C(Size, v7);
     UIWidget__set_width((UIWidget_o *)Component_WebViewObject, Size, 0LL);
     v10 = FSWidgetSize__GetSize(
             v8,

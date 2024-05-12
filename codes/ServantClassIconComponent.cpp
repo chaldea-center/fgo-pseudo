@@ -12,11 +12,11 @@ void __fastcall ServantClassIconComponent__Clear(ServantClassIconComponent_o *th
   UnityEngine_Object_o *nameSprite; // x20
   UnityEngine_Object_o *nameLabel; // x20
 
-  if ( (byte_4352F7D & 1) == 0 )
+  if ( (byte_438C6FC & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4352F7D = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438C6FC = 1;
   }
   iconSprite = (UnityEngine_Object_o *)this->fields.iconSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -59,7 +59,7 @@ void __fastcall ServantClassIconComponent__Clear(ServantClassIconComponent_o *th
       return;
     }
 LABEL_22:
-    sub_B7076C(v5, v4);
+    sub_B7769C(v5, v4);
   }
 }
 
@@ -74,10 +74,10 @@ int32_t __fastcall ServantClassIconComponent__GetIconSpriteScaledWidth(
   int m_CachedPtr; // w19
   float v8; // s0
 
-  if ( (byte_4352F83 & 1) == 0 )
+  if ( (byte_438C702 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4352F83 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438C702 = 1;
   }
   iconSprite = (UnityEngine_Object_o *)this->fields.iconSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -92,7 +92,7 @@ int32_t __fastcall ServantClassIconComponent__GetIconSpriteScaledWidth(
     || (m_CachedPtr = transform[6].fields.m_CachedPtr,
         (transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(transform, 0LL)) == 0LL) )
   {
-    sub_B7076C(transform, v4);
+    sub_B7769C(transform, v4);
   }
   v8 = COERCE_FLOAT(UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)transform, 0LL))
      * (float)m_CachedPtr;
@@ -134,10 +134,10 @@ void __fastcall ServantClassIconComponent__SetColor(
   b = col.fields.b;
   g = col.fields.g;
   r = col.fields.r;
-  if ( (byte_4352F82 & 1) == 0 )
+  if ( (byte_438C701 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4352F82 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438C701 = 1;
   }
   iconSprite = (UnityEngine_Object_o *)this->fields.iconSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -192,7 +192,7 @@ void __fastcall ServantClassIconComponent__SetColor(
       return;
     }
 LABEL_22:
-    sub_B7076C(v10, v9);
+    sub_B7769C(v10, v9);
   }
 }
 
@@ -216,28 +216,28 @@ void __fastcall ServantClassIconComponent__SetImage(
   UnityEngine_Object_o *nameLabel; // x20
   System_String_o *age; // x1
 
-  if ( (byte_4352F81 & 1) == 0 )
+  if ( (byte_438C700 & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMasterData_ServantClassMaster___);
-    sub_B70694(&Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4352F81 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMasterData_ServantClassMaster___);
+    sub_B775C4(&Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438C700 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_38;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantClassMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantClassMaster___);
   if ( !Instance )
     goto LABEL_38;
   Entity = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
              (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
              classId,
-             (const MethodInfo_21C0440 *)Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
+             (const MethodInfo_21FB894 *)Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
   iconSprite = (UnityEngine_Object_o *)this->fields.iconSprite;
   v11 = Entity;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -318,7 +318,7 @@ LABEL_37:
       goto LABEL_37;
     }
 LABEL_38:
-    sub_B7076C(Instance, v8);
+    sub_B7769C(Instance, v8);
   }
 }
 
@@ -332,34 +332,34 @@ void __fastcall ServantClassIconComponent__SetWithClassOverWrite(
 {
   DataManager_o *Instance; // x0
   __int64 v10; // x1
-  int32_t FrameType_31474112; // w2
+  int32_t FrameType_31751344; // w2
   const MethodInfo *v12; // x3
 
-  if ( (byte_4352F80 & 1) == 0 )
+  if ( (byte_438C6FF & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_ServantExceedMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4352F80 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_ServantExceedMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438C6FF = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantExceedMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantExceedMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v10);
+    sub_B7769C(Instance, v10);
   }
-  FrameType_31474112 = ServantExceedMaster__GetFrameType_31474112(
+  FrameType_31751344 = ServantExceedMaster__GetFrameType_31751344(
                          (ServantExceedMaster_o *)Instance,
                          svtId,
                          limitCount,
                          0,
                          0LL);
-  ServantClassIconComponent__SetImage(this, classId, FrameType_31474112, v12);
+  ServantClassIconComponent__SetImage(this, classId, FrameType_31751344, v12);
 }
 
 
-void __fastcall ServantClassIconComponent__Set_27422456(
+void __fastcall ServantClassIconComponent__Set_27778196(
         ServantClassIconComponent_o *this,
         int32_t classId,
         int32_t rarity,
@@ -368,10 +368,10 @@ void __fastcall ServantClassIconComponent__Set_27422456(
   int32_t FrameTypeImage; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4352F7E & 1) == 0 )
+  if ( (byte_438C6FD & 1) == 0 )
   {
-    sub_B70694(&Rarity_TypeInfo);
-    byte_4352F7E = 1;
+    sub_B775C4(&Rarity_TypeInfo);
+    byte_438C6FD = 1;
   }
   if ( (BYTE3(Rarity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !Rarity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Rarity_TypeInfo);
@@ -380,7 +380,7 @@ void __fastcall ServantClassIconComponent__Set_27422456(
 }
 
 
-void __fastcall ServantClassIconComponent__Set_27422592(
+void __fastcall ServantClassIconComponent__Set_27778332(
         ServantClassIconComponent_o *this,
         int32_t svtId,
         int32_t limitCount,
@@ -392,28 +392,28 @@ void __fastcall ServantClassIconComponent__Set_27422592(
   WarEntity_o *Entity; // x23
   const MethodInfo *v12; // x3
 
-  if ( (byte_4352F7F & 1) == 0 )
+  if ( (byte_438C6FE & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_ServantExceedMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_B70694(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4352F7F = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_ServantExceedMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_B775C4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438C6FE = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantMaster___)) == 0LL
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantMaster___)) == 0LL
     || (Entity = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                    (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                    svtId,
-                   (const MethodInfo_21C0440 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__),
-        (Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
+                   (const MethodInfo_21FB894 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__),
+        (Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantExceedMaster___)) == 0LL
-    || (Instance = (DataManager_o *)ServantExceedMaster__GetFrameType_31474112(
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantExceedMaster___)) == 0LL
+    || (Instance = (DataManager_o *)ServantExceedMaster__GetFrameType_31751344(
                                       (ServantExceedMaster_o *)Instance,
                                       svtId,
                                       limitCount,
@@ -421,7 +421,7 @@ void __fastcall ServantClassIconComponent__Set_27422592(
                                       0LL),
         !Entity) )
   {
-    sub_B7076C(Instance, v10);
+    sub_B7769C(Instance, v10);
   }
   ServantClassIconComponent__SetImage(this, Entity->fields.startType, (int32_t)Instance, v12);
 }

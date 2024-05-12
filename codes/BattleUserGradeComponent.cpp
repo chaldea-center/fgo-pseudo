@@ -13,11 +13,11 @@ void __fastcall BattleUserGradeComponent__Initialize(BattleUserGradeComponent_o 
   System_String_o *v7; // x19
   UIAtlas_o *mAtlas; // x21
 
-  if ( (byte_4351239 & 1) == 0 )
+  if ( (byte_438A8B4 & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&Grade_TypeInfo);
-    byte_4351239 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&Grade_TypeInfo);
+    byte_438A8B4 = 1;
   }
   if ( (BYTE3(Grade_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !Grade_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Grade_TypeInfo);
@@ -41,10 +41,10 @@ void __fastcall BattleUserGradeComponent__Initialize(BattleUserGradeComponent_o 
   masterIconBg = this->fields.masterIconBg;
   if ( !masterIconBg )
 LABEL_18:
-    sub_B7076C(gameObject, v5);
+    sub_B7769C(gameObject, v5);
   v7 = (System_String_o *)gameObject;
   mAtlas = masterIconBg->fields.mAtlas;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetGradeIcon_31535664(masterIconBg, v7, mAtlas, 0LL);
+  AtlasManager__SetGradeIcon_24463064(masterIconBg, v7, mAtlas, 0LL);
 }

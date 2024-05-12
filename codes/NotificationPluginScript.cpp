@@ -11,7 +11,7 @@ void __fastcall NotificationPluginScript__ClearAll(const MethodInfo *method)
 
   v1 = NotificationPluginScript__Setup(method);
   if ( !v1 )
-    sub_B7076C(0LL, v2);
+    sub_B7769C(0LL, v2);
   ((void (__fastcall *)(LocalNotificationService_o *, void *))v1->klass->vtable._6_CancelAll.method)(
     v1,
     v1->klass[1]._1.image);
@@ -25,7 +25,7 @@ void __fastcall NotificationPluginScript__ClearLocalNotification(System_String_o
 
   v3 = NotificationPluginScript__Setup((const MethodInfo *)key);
   if ( !v3 )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   ((void (__fastcall *)(LocalNotificationService_o *, System_String_o *, Il2CppMethodPointer))v3->klass->vtable._5_Cancel.method)(
     v3,
     key,
@@ -45,7 +45,7 @@ void __fastcall NotificationPluginScript__SetLocalNotification(
 
   v7 = NotificationPluginScript__Setup(*(const MethodInfo **)&interval);
   if ( !v7 )
-    sub_B7076C(0LL, v8);
+    sub_B7769C(0LL, v8);
   ((void (__fastcall *)(LocalNotificationService_o *, System_String_o *, System_String_o *, _QWORD, Il2CppMethodPointer))v7->klass->vtable._4_Schedule.method)(
     v7,
     key,
@@ -67,20 +67,20 @@ LocalNotificationService_o *__fastcall NotificationPluginScript__Setup(const Met
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_435241D & 1) == 0 )
+  if ( (byte_438BAB9 & 1) == 0 )
   {
-    sub_B70694(&LocalNotificationServiceAndroid_TypeInfo);
-    sub_B70694(&NotificationPluginScript_TypeInfo);
-    byte_435241D = 1;
+    sub_B775C4(&LocalNotificationServiceAndroid_TypeInfo);
+    sub_B775C4(&NotificationPluginScript_TypeInfo);
+    byte_438BAB9 = 1;
   }
   result = NotificationPluginScript_TypeInfo->static_fields->_service;
   if ( !result )
   {
-    v2 = (LocalNotificationServiceAndroid_o *)sub_B70764(LocalNotificationServiceAndroid_TypeInfo);
+    v2 = (LocalNotificationServiceAndroid_o *)sub_B77694(LocalNotificationServiceAndroid_TypeInfo);
     LocalNotificationServiceAndroid___ctor(v2, 0LL);
     static_fields = (BattleServantConfConponent_o *)NotificationPluginScript_TypeInfo->static_fields;
     static_fields->klass = (BattleServantConfConponent_c *)v2;
-    sub_B70630(static_fields, (System_Int32_array **)v2, v4, v5, v6, v7, v8, v9);
+    sub_B77560(static_fields, (System_Int32_array **)v2, v4, v5, v6, v7, v8, v9);
     return NotificationPluginScript_TypeInfo->static_fields->_service;
   }
   return result;

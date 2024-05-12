@@ -1,13 +1,13 @@
 void __fastcall PartialMaintenanceEntity___ctor(PartialMaintenanceEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4350CAF & 1) == 0 )
+  if ( (byte_438A357 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_int___ctor__);
-    byte_4350CAF = 1;
+    sub_B775C4(&Method_DataEntityBase_int___ctor__);
+    byte_438A357 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -26,10 +26,10 @@ bool __fastcall PartialMaintenanceEntity__isMaintenanceNow(
 {
   int64_t Time; // x0
 
-  if ( (byte_4350CAE & 1) == 0 )
+  if ( (byte_438A356 & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4350CAE = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_438A356 = 1;
   }
   if ( this->fields.type != mainteType )
     return 0;

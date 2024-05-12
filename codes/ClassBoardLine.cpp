@@ -50,29 +50,29 @@ void __fastcall ClassBoardLine___ctor(ClassBoardLine_o *this, const MethodInfo *
   System_Int32_array *v50; // x6
   System_Int32_array *v51; // x7
 
-  if ( (byte_4353AF9 & 1) == 0 )
+  if ( (byte_438D3B7 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_2936/*"BrightTurnTransition"*/);
-    sub_B70694(&StringLiteral_2933/*"BrightTurn"*/);
-    sub_B70694(&StringLiteral_2937/*"BrightTurnTransitionRoadOn"*/);
-    sub_B70694(&StringLiteral_2938/*"BrightTurnUnLock"*/);
-    sub_B70694(&StringLiteral_2934/*"BrightTurnRoadOn"*/);
-    sub_B70694(&StringLiteral_2935/*"BrightTurnRoadOnUnLock"*/);
-    sub_B70694(&StringLiteral_2889/*"BlackOutTransition"*/);
-    byte_4353AF9 = 1;
+    sub_B775C4(&StringLiteral_2982/*"BrightTurnTransition"*/);
+    sub_B775C4(&StringLiteral_2979/*"BrightTurn"*/);
+    sub_B775C4(&StringLiteral_2983/*"BrightTurnTransitionRoadOn"*/);
+    sub_B775C4(&StringLiteral_2984/*"BrightTurnUnLock"*/);
+    sub_B775C4(&StringLiteral_2980/*"BrightTurnRoadOn"*/);
+    sub_B775C4(&StringLiteral_2981/*"BrightTurnRoadOnUnLock"*/);
+    sub_B775C4(&StringLiteral_2935/*"BlackOutTransition"*/);
+    byte_438D3B7 = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_2933/*"BrightTurn"*/;
-  this->fields.animNameBrightTurn = (struct System_String_o *)StringLiteral_2933/*"BrightTurn"*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.animNameBrightTurn, v9, v2, v3, v4, v5, v6, v7);
-  v10 = (System_Int32_array **)StringLiteral_2934/*"BrightTurnRoadOn"*/;
-  this->fields.animNameBrightTurnRoadOn = (struct System_String_o *)StringLiteral_2934/*"BrightTurnRoadOn"*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.animNameBrightTurnRoadOn, v10, v11, v12, v13, v14, v15, v16);
-  v17 = (System_Int32_array **)StringLiteral_2938/*"BrightTurnUnLock"*/;
-  this->fields.animNameBrightTurnUnlock = (struct System_String_o *)StringLiteral_2938/*"BrightTurnUnLock"*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.animNameBrightTurnUnlock, v17, v18, v19, v20, v21, v22, v23);
-  v24 = (System_Int32_array **)StringLiteral_2935/*"BrightTurnRoadOnUnLock"*/;
-  this->fields.animNameBrightTurnRoadOnUnlock = (struct System_String_o *)StringLiteral_2935/*"BrightTurnRoadOnUnLock"*/;
-  sub_B70630(
+  v9 = (System_Int32_array **)StringLiteral_2979/*"BrightTurn"*/;
+  this->fields.animNameBrightTurn = (struct System_String_o *)StringLiteral_2979/*"BrightTurn"*/;
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.animNameBrightTurn, v9, v2, v3, v4, v5, v6, v7);
+  v10 = (System_Int32_array **)StringLiteral_2980/*"BrightTurnRoadOn"*/;
+  this->fields.animNameBrightTurnRoadOn = (struct System_String_o *)StringLiteral_2980/*"BrightTurnRoadOn"*/;
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.animNameBrightTurnRoadOn, v10, v11, v12, v13, v14, v15, v16);
+  v17 = (System_Int32_array **)StringLiteral_2984/*"BrightTurnUnLock"*/;
+  this->fields.animNameBrightTurnUnlock = (struct System_String_o *)StringLiteral_2984/*"BrightTurnUnLock"*/;
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.animNameBrightTurnUnlock, v17, v18, v19, v20, v21, v22, v23);
+  v24 = (System_Int32_array **)StringLiteral_2981/*"BrightTurnRoadOnUnLock"*/;
+  this->fields.animNameBrightTurnRoadOnUnlock = (struct System_String_o *)StringLiteral_2981/*"BrightTurnRoadOnUnLock"*/;
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.animNameBrightTurnRoadOnUnlock,
     v24,
     v25,
@@ -81,9 +81,9 @@ void __fastcall ClassBoardLine___ctor(ClassBoardLine_o *this, const MethodInfo *
     v28,
     v29,
     v30);
-  v31 = (System_Int32_array **)StringLiteral_2936/*"BrightTurnTransition"*/;
-  this->fields.animNameBrightTurnTransition = (struct System_String_o *)StringLiteral_2936/*"BrightTurnTransition"*/;
-  sub_B70630(
+  v31 = (System_Int32_array **)StringLiteral_2982/*"BrightTurnTransition"*/;
+  this->fields.animNameBrightTurnTransition = (struct System_String_o *)StringLiteral_2982/*"BrightTurnTransition"*/;
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.animNameBrightTurnTransition,
     v31,
     v32,
@@ -92,9 +92,9 @@ void __fastcall ClassBoardLine___ctor(ClassBoardLine_o *this, const MethodInfo *
     v35,
     v36,
     v37);
-  v38 = (System_Int32_array **)StringLiteral_2937/*"BrightTurnTransitionRoadOn"*/;
-  this->fields.animNameBrightTurnTransitionRoadOn = (struct System_String_o *)StringLiteral_2937/*"BrightTurnTransitionRoadOn"*/;
-  sub_B70630(
+  v38 = (System_Int32_array **)StringLiteral_2983/*"BrightTurnTransitionRoadOn"*/;
+  this->fields.animNameBrightTurnTransitionRoadOn = (struct System_String_o *)StringLiteral_2983/*"BrightTurnTransitionRoadOn"*/;
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.animNameBrightTurnTransitionRoadOn,
     v38,
     v39,
@@ -103,9 +103,9 @@ void __fastcall ClassBoardLine___ctor(ClassBoardLine_o *this, const MethodInfo *
     v42,
     v43,
     v44);
-  v45 = (System_Int32_array **)StringLiteral_2889/*"BlackOutTransition"*/;
-  this->fields.animNameBlackOutTransition = (struct System_String_o *)StringLiteral_2889/*"BlackOutTransition"*/;
-  sub_B70630(
+  v45 = (System_Int32_array **)StringLiteral_2935/*"BlackOutTransition"*/;
+  this->fields.animNameBlackOutTransition = (struct System_String_o *)StringLiteral_2935/*"BlackOutTransition"*/;
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.animNameBlackOutTransition,
     v45,
     v46,
@@ -273,19 +273,19 @@ int32_t __fastcall ClassBoardLine__GetConnectType(ClassBoardLine_o *this, const 
   ClassBoardLine_o *v137; // [xsp+48h] [xbp-38h] BYREF
 
   v2 = this;
-  if ( (byte_4353AF6 & 1) == 0 )
+  if ( (byte_438D3B4 & 1) == 0 )
   {
-    sub_B70694(&AcquireFlag_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__get_Current__);
-    sub_B70694(&IClassBoardLineModel_TypeInfo);
-    sub_B70694(&IClassBoardSquareModel_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_IClassBoardSquareModel__GetEnumerator__);
-    sub_B70694(&Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_List_IClassBoardSquareModel__get_Count__);
-    this = (ClassBoardLine_o *)sub_B70694(&System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
-    byte_4353AF6 = 1;
+    sub_B775C4(&AcquireFlag_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__get_Current__);
+    sub_B775C4(&IClassBoardLineModel_TypeInfo);
+    sub_B775C4(&IClassBoardSquareModel_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_IClassBoardSquareModel__GetEnumerator__);
+    sub_B775C4(&Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
+    sub_B775C4(&Method_System_Collections_Generic_List_IClassBoardSquareModel__get_Count__);
+    this = (ClassBoardLine_o *)sub_B775C4(&System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
+    byte_438D3B4 = 1;
   }
   v137 = 0LL;
   memset(&v136, 0, sizeof(v136));
@@ -309,7 +309,7 @@ int32_t __fastcall ClassBoardLine__GetConnectType(ClassBoardLine_o *this, const 
   else
   {
 LABEL_8:
-    p_method = sub_B08590(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0LL);
+    p_method = sub_B0F4C0(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0LL);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))p_method)(
                                LineModel_k__BackingField,
@@ -334,7 +334,7 @@ LABEL_8:
   else
   {
 LABEL_15:
-    v12 = sub_B08590(this, IClassBoardSquareModel_TypeInfo, 5LL);
+    v12 = sub_B0F4C0(this, IClassBoardSquareModel_TypeInfo, 5LL);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(ClassBoardLine_o *, _QWORD))v12)(v9, *(_QWORD *)(v12 + 8));
   if ( ((unsigned __int8)this & 1) == 0 )
@@ -359,7 +359,7 @@ LABEL_15:
     else
     {
 LABEL_23:
-      v17 = sub_B08590(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 1LL);
+      v17 = sub_B0F4C0(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 1LL);
     }
     this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v17)(
                                  v13,
@@ -384,7 +384,7 @@ LABEL_23:
     else
     {
 LABEL_30:
-      v22 = sub_B08590(this, IClassBoardSquareModel_TypeInfo, 5LL);
+      v22 = sub_B0F4C0(this, IClassBoardSquareModel_TypeInfo, 5LL);
     }
     this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(ClassBoardLine_o *, _QWORD))v22)(v19, *(_QWORD *)(v22 + 8));
     if ( ((unsigned __int8)this & 1) == 0 )
@@ -409,7 +409,7 @@ LABEL_30:
         else
         {
 LABEL_44:
-          v33 = sub_B08590(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0LL);
+          v33 = sub_B0F4C0(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0LL);
         }
         this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v33)(
                                      v29,
@@ -434,7 +434,7 @@ LABEL_44:
           else
           {
 LABEL_130:
-            v91 = sub_B08590(this, IClassBoardSquareModel_TypeInfo, 13LL);
+            v91 = sub_B0F4C0(this, IClassBoardSquareModel_TypeInfo, 13LL);
           }
           LODWORD(v134.fields.list) = (*(__int64 (__fastcall **)(ClassBoardLine_o *, _QWORD, _QWORD))v91)(
                                         v88,
@@ -468,7 +468,7 @@ LABEL_130:
               else
               {
 LABEL_139:
-                v99 = sub_B08590(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 1LL);
+                v99 = sub_B0F4C0(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 1LL);
               }
               this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v99)(
                                            v95,
@@ -493,7 +493,7 @@ LABEL_139:
               else
               {
 LABEL_146:
-                v104 = sub_B08590(this, IClassBoardSquareModel_TypeInfo, 13LL);
+                v104 = sub_B0F4C0(this, IClassBoardSquareModel_TypeInfo, 13LL);
               }
               LODWORD(v134.fields.list) = (*(__int64 (__fastcall **)(ClassBoardLine_o *, _QWORD, _QWORD))v104)(
                                             v101,
@@ -528,7 +528,7 @@ LABEL_146:
               else
               {
 LABEL_156:
-                v112 = sub_B08590(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0LL);
+                v112 = sub_B0F4C0(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0LL);
               }
               this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v112)(
                                            v108,
@@ -553,7 +553,7 @@ LABEL_156:
                 else
                 {
 LABEL_163:
-                  v117 = sub_B08590(this, IClassBoardSquareModel_TypeInfo, 13LL);
+                  v117 = sub_B0F4C0(this, IClassBoardSquareModel_TypeInfo, 13LL);
                 }
                 LODWORD(v134.fields.list) = (*(__int64 (__fastcall **)(ClassBoardLine_o *, _QWORD, _QWORD))v117)(
                                               v114,
@@ -587,7 +587,7 @@ LABEL_163:
                     else
                     {
 LABEL_173:
-                      v125 = sub_B08590(v121, IClassBoardLineModel_TypeInfo, 1LL);
+                      v125 = sub_B0F4C0(v121, IClassBoardLineModel_TypeInfo, 1LL);
                     }
                     this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v125)(
                                                  v121,
@@ -612,7 +612,7 @@ LABEL_173:
                       else
                       {
 LABEL_180:
-                        v130 = sub_B08590(this, IClassBoardSquareModel_TypeInfo, 13LL);
+                        v130 = sub_B0F4C0(this, IClassBoardSquareModel_TypeInfo, 13LL);
                       }
                       LODWORD(v134.fields.list) = (*(__int64 (__fastcall **)(ClassBoardLine_o *, _QWORD, _QWORD))v130)(
                                                     v127,
@@ -632,13 +632,13 @@ LABEL_180:
         }
       }
 LABEL_187:
-      sub_B7076C(this, method);
+      sub_B7769C(this, method);
     }
   }
-  v23 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
+  v23 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v23,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
   v137 = (ClassBoardLine_o *)v23;
   v24 = v2->fields._LineModel_k__BackingField;
   if ( !v24 )
@@ -660,7 +660,7 @@ LABEL_187:
   else
   {
 LABEL_38:
-    v28 = sub_B08590(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0LL);
+    v28 = sub_B0F4C0(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0LL);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v28)(
                                v24,
@@ -685,7 +685,7 @@ LABEL_38:
   else
   {
 LABEL_51:
-    v38 = sub_B08590(this, IClassBoardSquareModel_TypeInfo, 5LL);
+    v38 = sub_B0F4C0(this, IClassBoardSquareModel_TypeInfo, 5LL);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(ClassBoardLine_o *, _QWORD))v38)(v35, *(_QWORD *)(v38 + 8));
   if ( ((unsigned __int8)this & 1) != 0 )
@@ -710,7 +710,7 @@ LABEL_51:
     else
     {
 LABEL_59:
-      v43 = sub_B08590(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0LL);
+      v43 = sub_B0F4C0(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0LL);
     }
     this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v43)(
                                  v39,
@@ -735,7 +735,7 @@ LABEL_59:
     else
     {
 LABEL_66:
-      v48 = sub_B08590(this, IClassBoardSquareModel_TypeInfo, 15LL);
+      v48 = sub_B0F4C0(this, IClassBoardSquareModel_TypeInfo, 15LL);
     }
     this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(ClassBoardLine_o *, ClassBoardLine_o **, _QWORD))v48)(
                                  v45,
@@ -762,7 +762,7 @@ LABEL_66:
   else
   {
 LABEL_74:
-    v53 = sub_B08590(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 1LL);
+    v53 = sub_B0F4C0(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 1LL);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v53)(
                                v49,
@@ -787,7 +787,7 @@ LABEL_74:
   else
   {
 LABEL_81:
-    v58 = sub_B08590(this, IClassBoardSquareModel_TypeInfo, 5LL);
+    v58 = sub_B0F4C0(this, IClassBoardSquareModel_TypeInfo, 5LL);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(ClassBoardLine_o *, _QWORD))v58)(v55, *(_QWORD *)(v58 + 8));
   if ( ((unsigned __int8)this & 1) != 0 )
@@ -812,7 +812,7 @@ LABEL_81:
       else
       {
 LABEL_89:
-        v63 = sub_B08590(v59, IClassBoardLineModel_TypeInfo, 1LL);
+        v63 = sub_B0F4C0(v59, IClassBoardLineModel_TypeInfo, 1LL);
       }
       this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v63)(
                                    v59,
@@ -837,7 +837,7 @@ LABEL_89:
         else
         {
 LABEL_96:
-          v68 = sub_B08590(this, IClassBoardSquareModel_TypeInfo, 15LL);
+          v68 = sub_B0F4C0(this, IClassBoardSquareModel_TypeInfo, 15LL);
         }
         (*(void (__fastcall **)(ClassBoardLine_o *, ClassBoardLine_o **, _QWORD))v68)(v65, &v137, *(_QWORD *)(v68 + 8));
         goto LABEL_99;
@@ -853,19 +853,19 @@ LABEL_99:
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v134,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v137,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_IClassBoardSquareModel__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_IClassBoardSquareModel__GetEnumerator__);
   v70 = 0;
   v136 = v134;
   while ( 1 )
   {
     v84 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v136,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__MoveNext__);
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__MoveNext__);
     if ( !v84 )
       break;
     current = v136.fields.current;
     if ( !v136.fields.current )
-      sub_B7076C(v84, v85);
+      sub_B7769C(v84, v85);
     v72 = v136.fields.current->klass;
     if ( *(_WORD *)&v136.fields.current->klass->_2.bitflags1 )
     {
@@ -883,7 +883,7 @@ LABEL_99:
     else
     {
 LABEL_106:
-      v75 = sub_B08590(v136.fields.current, IClassBoardSquareModel_TypeInfo, 5LL);
+      v75 = sub_B0F4C0(v136.fields.current, IClassBoardSquareModel_TypeInfo, 5LL);
     }
     if ( ((*(__int64 (__fastcall **)(Il2CppObject *, _QWORD))v75)(current, *(_QWORD *)(v75 + 8)) & 1) != 0 )
     {
@@ -908,7 +908,7 @@ LABEL_106:
       else
       {
 LABEL_113:
-        v79 = sub_B08590(current, IClassBoardSquareModel_TypeInfo, 13LL);
+        v79 = sub_B0F4C0(current, IClassBoardSquareModel_TypeInfo, 13LL);
       }
       LODWORD(v134.fields.list) = (*(__int64 (__fastcall **)(Il2CppObject *, _QWORD, _QWORD))v79)(
                                     current,
@@ -918,13 +918,13 @@ LABEL_113:
       v135 = 1;
       v83 = (System_Enum_o *)j_il2cpp_value_box_0(AcquireFlag_TypeInfo, &v135, v82);
       if ( !v81 )
-        sub_B7076C(v83, v83);
+        sub_B7769C(v83, v83);
       v70 += System_Enum__HasFlag(v81, v83, 0LL);
     }
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v136,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__Dispose__);
   if ( !v70 )
     return 0;
   if ( v70 < notConnectedSprite )
@@ -946,14 +946,14 @@ float __fastcall ClassBoardLine__GetSquareTypeOffset(
   float *p_blankOffsetLength; // x8
 
   v4 = this;
-  if ( (byte_4353AF7 & 1) == 0 )
+  if ( (byte_438D3B5 & 1) == 0 )
   {
-    sub_B70694(&IClassBoardLockModel_TypeInfo);
-    this = (ClassBoardLine_o *)sub_B70694(&IClassBoardSquareModel_TypeInfo);
-    byte_4353AF7 = 1;
+    sub_B775C4(&IClassBoardLockModel_TypeInfo);
+    this = (ClassBoardLine_o *)sub_B775C4(&IClassBoardSquareModel_TypeInfo);
+    byte_438D3B5 = 1;
   }
   if ( !squareModel )
-    sub_B7076C(this, squareModel);
+    sub_B7769C(this, squareModel);
   klass = squareModel->klass;
   if ( *(_WORD *)&squareModel->klass->_2.bitflags1 )
   {
@@ -971,13 +971,13 @@ float __fastcall ClassBoardLine__GetSquareTypeOffset(
   else
   {
 LABEL_8:
-    p_method = sub_B08590(squareModel, IClassBoardSquareModel_TypeInfo, 5LL);
+    p_method = sub_B0F4C0(squareModel, IClassBoardSquareModel_TypeInfo, 5LL);
   }
   if ( ((*(__int64 (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))p_method)(squareModel, *(_QWORD *)(p_method + 8)) & 1) != 0 )
   {
     p_blankOffsetLength = &v4->fields.blankOffsetLength;
   }
-  else if ( sub_B70754(squareModel, IClassBoardLockModel_TypeInfo) )
+  else if ( sub_B77684(squareModel, IClassBoardLockModel_TypeInfo) )
   {
     p_blankOffsetLength = &v4->fields.lockOffsetLength;
   }
@@ -1000,15 +1000,15 @@ void __fastcall ClassBoardLine__PlayReleaseEffect(ClassBoardLine_o *this, const 
   System_Action_o *v9; // x21
   const MethodInfo *v10; // x3
 
-  if ( (byte_4353AF5 & 1) == 0 )
+  if ( (byte_438D3B3 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_ClassBoardEffectPlayer_GetData_bool___);
-    sub_B70694(&Method_ClassBoardLine__PlayReleaseEffect_b__33_0__);
-    sub_B70694(&Method_ClassBoardLine__PlayReleaseEffect_b__33_1__);
-    sub_B70694(&Method_ClassBoardLine__PlayReleaseEffect_b__33_2__);
-    sub_B70694(&Method_ClassBoardLine__PlayReleaseEffect_b__33_3__);
-    byte_4353AF5 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_ClassBoardEffectPlayer_GetData_bool___);
+    sub_B775C4(&Method_ClassBoardLine__PlayReleaseEffect_b__33_0__);
+    sub_B775C4(&Method_ClassBoardLine__PlayReleaseEffect_b__33_1__);
+    sub_B775C4(&Method_ClassBoardLine__PlayReleaseEffect_b__33_2__);
+    sub_B775C4(&Method_ClassBoardLine__PlayReleaseEffect_b__33_3__);
+    byte_438D3B3 = 1;
   }
   ConnectType = ClassBoardLine__GetConnectType(this, method);
   if ( ConnectType == 2 )
@@ -1018,22 +1018,22 @@ void __fastcall ClassBoardLine__PlayReleaseEffect(ClassBoardLine_o *this, const 
     {
       if ( ClassBoardEffectPlayer__GetData_bool_(
              releaseEffectPlayer,
-             (const MethodInfo_1BE2B0C *)Method_ClassBoardEffectPlayer_GetData_bool___) )
+             (const MethodInfo_1C6C1C8 *)Method_ClassBoardEffectPlayer_GetData_bool___) )
       {
         animNameBrightTurnRoadOnUnlock = this->fields.animNameBrightTurnRoadOnUnlock;
-        v7 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+        v7 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
         v8 = &Method_ClassBoardLine__PlayReleaseEffect_b__33_2__;
       }
       else
       {
         animNameBrightTurnRoadOnUnlock = this->fields.animNameBrightTurnRoadOn;
-        v7 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+        v7 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
         v8 = &Method_ClassBoardLine__PlayReleaseEffect_b__33_3__;
       }
       goto LABEL_15;
     }
 LABEL_16:
-    sub_B7076C(releaseEffectPlayer, v4);
+    sub_B7769C(releaseEffectPlayer, v4);
   }
   if ( ConnectType != 1 )
   {
@@ -1050,16 +1050,16 @@ LABEL_16:
     goto LABEL_16;
   if ( ClassBoardEffectPlayer__GetData_bool_(
          releaseEffectPlayer,
-         (const MethodInfo_1BE2B0C *)Method_ClassBoardEffectPlayer_GetData_bool___) )
+         (const MethodInfo_1C6C1C8 *)Method_ClassBoardEffectPlayer_GetData_bool___) )
   {
     animNameBrightTurnRoadOnUnlock = this->fields.animNameBrightTurnUnlock;
-    v7 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     v8 = &Method_ClassBoardLine__PlayReleaseEffect_b__33_0__;
   }
   else
   {
     animNameBrightTurnRoadOnUnlock = this->fields.animNameBrightTurn;
-    v7 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     v8 = &Method_ClassBoardLine__PlayReleaseEffect_b__33_1__;
   }
 LABEL_15:
@@ -1083,11 +1083,11 @@ void __fastcall ClassBoardLine__PlaySimpleAnimation(
   if ( !simpleAnimation
     || (SimpleAnimation__Rewind(simpleAnimation, 0LL), (simpleAnimation = this->fields.simpleAnimation) == 0LL) )
   {
-    sub_B7076C(simpleAnimation, name);
+    sub_B7769C(simpleAnimation, name);
   }
-  SimpleAnimation__Play_16672920(simpleAnimation, name, 0LL);
+  SimpleAnimation__Play_16815192(simpleAnimation, name, 0LL);
   v9 = ClassBoardLine__WaitAnimationFinished(this, name, endCallback, v8);
-  UnityEngine_MonoBehaviour__StartCoroutine_36062060((UnityEngine_MonoBehaviour_o *)this, v9, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_36304832((UnityEngine_MonoBehaviour_o *)this, v9, 0LL);
 }
 
 
@@ -1100,31 +1100,31 @@ void __fastcall ClassBoardLine__PlayTransition(ClassBoardLine_o *this, const Met
   System_Action_o *v7; // x21
   const MethodInfo *v8; // x3
 
-  if ( (byte_4353AF3 & 1) == 0 )
+  if ( (byte_438D3B1 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_ClassBoardLine__PlayTransition_b__28_0__);
-    sub_B70694(&Method_ClassBoardLine__PlayTransition_b__28_1__);
-    sub_B70694(&Method_ClassBoardLine__PlayTransition_b__28_2__);
-    byte_4353AF3 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_ClassBoardLine__PlayTransition_b__28_0__);
+    sub_B775C4(&Method_ClassBoardLine__PlayTransition_b__28_1__);
+    sub_B775C4(&Method_ClassBoardLine__PlayTransition_b__28_2__);
+    byte_438D3B1 = 1;
   }
   ConnectType = ClassBoardLine__GetConnectType(this, method);
   if ( ConnectType == 2 )
   {
     animNameBrightTurnTransitionRoadOn = this->fields.animNameBrightTurnTransitionRoadOn;
-    v5 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     v6 = &Method_ClassBoardLine__PlayTransition_b__28_1__;
   }
   else if ( ConnectType == 1 )
   {
     animNameBrightTurnTransitionRoadOn = this->fields.animNameBrightTurnTransition;
-    v5 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     v6 = &Method_ClassBoardLine__PlayTransition_b__28_0__;
   }
   else
   {
     animNameBrightTurnTransitionRoadOn = this->fields.animNameBlackOutTransition;
-    v5 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     v6 = &Method_ClassBoardLine__PlayTransition_b__28_2__;
   }
   v7 = v5;
@@ -1254,20 +1254,20 @@ void __fastcall ClassBoardLine__Setup(
   int v105; // [xsp+Ch] [xbp-54h] BYREF
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4353AF2 & 1) == 0 )
+  if ( (byte_438D3B0 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&ClassBoardEffectPlayer_TypeInfo);
-    sub_B70694(&Method_ClassBoardLine_PlayReleaseEffect__);
-    sub_B70694(&IClassBoardLineModel_TypeInfo);
-    sub_B70694(&IClassBoardSquareModel_TypeInfo);
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_16127/*"_"*/);
-    byte_4353AF2 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&ClassBoardEffectPlayer_TypeInfo);
+    sub_B775C4(&Method_ClassBoardLine_PlayReleaseEffect__);
+    sub_B775C4(&IClassBoardLineModel_TypeInfo);
+    sub_B775C4(&IClassBoardSquareModel_TypeInfo);
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_16197/*"_"*/);
+    byte_438D3B0 = 1;
   }
   v105 = 0;
   this->fields._LineModel_k__BackingField = setLineModel;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._LineModel_k__BackingField,
     (System_Int32_array **)setLineModel,
     (System_String_array **)method,
@@ -1277,7 +1277,7 @@ void __fastcall ClassBoardLine__Setup(
     v6,
     v7);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  name = (UnityEngine_Object_o *)sub_B706AC(string___TypeInfo, 5LL);
+  name = (UnityEngine_Object_o *)sub_B775DC(string___TypeInfo, 5LL);
   if ( !gameObject )
     goto LABEL_63;
   v13 = (System_String_array *)name;
@@ -1287,21 +1287,21 @@ void __fastcall ClassBoardLine__Setup(
   v20 = (System_Int32_array **)name;
   if ( name )
   {
-    name = (UnityEngine_Object_o *)sub_B70754(name, v13->obj.klass->_1.element_class);
+    name = (UnityEngine_Object_o *)sub_B77684(name, v13->obj.klass->_1.element_class);
     if ( !name )
       goto LABEL_65;
   }
   if ( !v13->max_length )
     goto LABEL_64;
   v13->m_Items[0] = (System_String_o *)v20;
-  sub_B70630((BattleServantConfConponent_o *)v13->m_Items, v20, v14, v15, v16, v17, v18, v19);
-  name = (UnityEngine_Object_o *)StringLiteral_16127/*"_"*/;
-  if ( StringLiteral_16127/*"_"*/ )
+  sub_B77560((BattleServantConfConponent_o *)v13->m_Items, v20, v14, v15, v16, v17, v18, v19);
+  name = (UnityEngine_Object_o *)StringLiteral_16197/*"_"*/;
+  if ( StringLiteral_16197/*"_"*/ )
   {
-    name = (UnityEngine_Object_o *)sub_B70754(StringLiteral_16127/*"_"*/, v13->obj.klass->_1.element_class);
+    name = (UnityEngine_Object_o *)sub_B77684(StringLiteral_16197/*"_"*/, v13->obj.klass->_1.element_class);
     if ( !name )
       goto LABEL_65;
-    v27 = (System_Int32_array **)StringLiteral_16127/*"_"*/;
+    v27 = (System_Int32_array **)StringLiteral_16197/*"_"*/;
   }
   else
   {
@@ -1310,7 +1310,7 @@ void __fastcall ClassBoardLine__Setup(
   if ( v13->max_length <= 1 )
     goto LABEL_64;
   v13->m_Items[1] = (System_String_o *)v27;
-  sub_B70630((BattleServantConfConponent_o *)&v13->m_Items[1], v27, v21, v22, v23, v24, v25, v26);
+  sub_B77560((BattleServantConfConponent_o *)&v13->m_Items[1], v27, v21, v22, v23, v24, v25, v26);
   if ( !setLineModel )
     goto LABEL_63;
   klass = setLineModel->klass;
@@ -1330,7 +1330,7 @@ void __fastcall ClassBoardLine__Setup(
   else
   {
 LABEL_18:
-    p_method = sub_B08590(setLineModel, IClassBoardLineModel_TypeInfo, 0LL);
+    p_method = sub_B0F4C0(setLineModel, IClassBoardLineModel_TypeInfo, 0LL);
   }
   name = (UnityEngine_Object_o *)(*(__int64 (__fastcall **)(IClassBoardLineModel_o *, _QWORD))p_method)(
                                    setLineModel,
@@ -1355,28 +1355,28 @@ LABEL_18:
   else
   {
 LABEL_25:
-    v36 = sub_B08590(name, IClassBoardSquareModel_TypeInfo, 0LL);
+    v36 = sub_B0F4C0(name, IClassBoardSquareModel_TypeInfo, 0LL);
   }
   v105 = (*(__int64 (__fastcall **)(UnityEngine_Object_o *, _QWORD))v36)(v33, *(_QWORD *)(v36 + 8));
   name = (UnityEngine_Object_o *)System_Int32__ToString((int32_t)&v105, 0LL);
   v43 = (System_Int32_array **)name;
   if ( name )
   {
-    name = (UnityEngine_Object_o *)sub_B70754(name, v13->obj.klass->_1.element_class);
+    name = (UnityEngine_Object_o *)sub_B77684(name, v13->obj.klass->_1.element_class);
     if ( !name )
       goto LABEL_65;
   }
   if ( v13->max_length <= 2 )
     goto LABEL_64;
   v13->m_Items[2] = (System_String_o *)v43;
-  sub_B70630((BattleServantConfConponent_o *)&v13->m_Items[2], v43, v37, v38, v39, v40, v41, v42);
-  name = (UnityEngine_Object_o *)StringLiteral_16127/*"_"*/;
-  if ( StringLiteral_16127/*"_"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v13->m_Items[2], v43, v37, v38, v39, v40, v41, v42);
+  name = (UnityEngine_Object_o *)StringLiteral_16197/*"_"*/;
+  if ( StringLiteral_16197/*"_"*/ )
   {
-    name = (UnityEngine_Object_o *)sub_B70754(StringLiteral_16127/*"_"*/, v13->obj.klass->_1.element_class);
+    name = (UnityEngine_Object_o *)sub_B77684(StringLiteral_16197/*"_"*/, v13->obj.klass->_1.element_class);
     if ( !name )
       goto LABEL_65;
-    v50 = (System_Int32_array **)StringLiteral_16127/*"_"*/;
+    v50 = (System_Int32_array **)StringLiteral_16197/*"_"*/;
   }
   else
   {
@@ -1385,7 +1385,7 @@ LABEL_25:
   if ( v13->max_length <= 3 )
     goto LABEL_64;
   v13->m_Items[3] = (System_String_o *)v50;
-  sub_B70630((BattleServantConfConponent_o *)&v13->m_Items[3], v50, v44, v45, v46, v47, v48, v49);
+  sub_B77560((BattleServantConfConponent_o *)&v13->m_Items[3], v50, v44, v45, v46, v47, v48, v49);
   v51 = setLineModel->klass;
   if ( *(_WORD *)&setLineModel->klass->_2.bitflags1 )
   {
@@ -1403,7 +1403,7 @@ LABEL_25:
   else
   {
 LABEL_39:
-    v54 = sub_B08590(setLineModel, IClassBoardLineModel_TypeInfo, 1LL);
+    v54 = sub_B0F4C0(setLineModel, IClassBoardLineModel_TypeInfo, 1LL);
   }
   name = (UnityEngine_Object_o *)(*(__int64 (__fastcall **)(IClassBoardLineModel_o *, _QWORD))v54)(
                                    setLineModel,
@@ -1428,38 +1428,38 @@ LABEL_39:
   else
   {
 LABEL_46:
-    v59 = sub_B08590(name, IClassBoardSquareModel_TypeInfo, 0LL);
+    v59 = sub_B0F4C0(name, IClassBoardSquareModel_TypeInfo, 0LL);
   }
   v105 = (*(__int64 (__fastcall **)(UnityEngine_Object_o *, _QWORD))v59)(v56, *(_QWORD *)(v59 + 8));
   name = (UnityEngine_Object_o *)System_Int32__ToString((int32_t)&v105, 0LL);
   v66 = (System_Int32_array **)name;
   if ( name )
   {
-    name = (UnityEngine_Object_o *)sub_B70754(name, v13->obj.klass->_1.element_class);
+    name = (UnityEngine_Object_o *)sub_B77684(name, v13->obj.klass->_1.element_class);
     if ( !name )
     {
 LABEL_65:
-      v104 = sub_B7078C(name);
-      sub_B70738(v104, 0LL);
+      v104 = sub_B776BC(name);
+      sub_B77668(v104, 0LL);
     }
   }
   if ( v13->max_length <= 4 )
     goto LABEL_64;
   v13->m_Items[4] = (System_String_o *)v66;
-  sub_B70630((BattleServantConfConponent_o *)&v13->m_Items[4], v66, v60, v61, v62, v63, v64, v65);
-  v67 = System_String__Concat_44838292(v13, 0LL);
+  sub_B77560((BattleServantConfConponent_o *)&v13->m_Items[4], v66, v60, v61, v62, v63, v64, v65);
+  v67 = System_String__Concat_44982964(v13, 0LL);
   UnityEngine_Object__set_name(gameObject, v67, 0LL);
   ClassBoardLine__UpdateLine(this, v68);
   name = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !name )
     goto LABEL_63;
   v69 = (System_Int32_array **)UnityEngine_Object__get_name(name, 0LL);
-  v70 = sub_B70764(ClassBoardEffectPlayer_TypeInfo);
+  v70 = sub_B77694(ClassBoardEffectPlayer_TypeInfo);
   System_Object___ctor((Il2CppObject *)v70, 0LL);
   *(_QWORD *)(v70 + 16) = v69;
-  sub_B70630((BattleServantConfConponent_o *)(v70 + 16), v69, v71, v72, v73, v74, v75, v76);
+  sub_B77560((BattleServantConfConponent_o *)(v70 + 16), v69, v71, v72, v73, v74, v75, v76);
   this->fields.releaseEffectPlayer = (struct ClassBoardEffectPlayer_o *)v70;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.releaseEffectPlayer,
     (System_Int32_array **)v70,
     v77,
@@ -1469,11 +1469,11 @@ LABEL_65:
     v81,
     v82);
   releaseEffectPlayer = this->fields.releaseEffectPlayer;
-  v84 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v84 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v84, (Il2CppObject *)this, Method_ClassBoardLine_PlayReleaseEffect__, 0LL);
   if ( !releaseEffectPlayer
     || (releaseEffectPlayer->fields.playCallback = v84,
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)&releaseEffectPlayer->fields.playCallback,
           (System_Int32_array **)v84,
           v85,
@@ -1487,7 +1487,7 @@ LABEL_65:
         !effectObjects) )
   {
 LABEL_63:
-    sub_B7076C(name, v12);
+    sub_B7769C(name, v12);
   }
   max_length = effectObjects->max_length;
   if ( max_length >= 1 )
@@ -1525,8 +1525,8 @@ LABEL_63:
         return;
     }
 LABEL_64:
-    v103 = sub_B70798(name);
-    sub_B70738(v103, 0LL);
+    v103 = sub_B776C8(name);
+    sub_B77668(v103, 0LL);
   }
 }
 
@@ -1630,11 +1630,11 @@ void __fastcall ClassBoardLine__UpdateLine(ClassBoardLine_o *this, const MethodI
   UnityEngine_Vector3_o v83; // 0:s3.4,4:s4.4,8:s5.4
 
   v2 = this;
-  if ( (byte_4353AF4 & 1) == 0 )
+  if ( (byte_438D3B2 & 1) == 0 )
   {
-    sub_B70694(&IClassBoardLineModel_TypeInfo);
-    this = (ClassBoardLine_o *)sub_B70694(&IClassBoardSquareModel_TypeInfo);
-    byte_4353AF4 = 1;
+    sub_B775C4(&IClassBoardLineModel_TypeInfo);
+    this = (ClassBoardLine_o *)sub_B775C4(&IClassBoardSquareModel_TypeInfo);
+    byte_438D3B2 = 1;
   }
   LODWORD(methoda.invoker_method) = 0;
   methoda.methodPointer = 0LL;
@@ -1660,7 +1660,7 @@ void __fastcall ClassBoardLine__UpdateLine(ClassBoardLine_o *this, const MethodI
   else
   {
 LABEL_8:
-    p_method = sub_B08590(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0LL);
+    p_method = sub_B0F4C0(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0LL);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))p_method)(
                                LineModel_k__BackingField,
@@ -1685,7 +1685,7 @@ LABEL_8:
   else
   {
 LABEL_15:
-    v12 = sub_B08590(this, IClassBoardSquareModel_TypeInfo, 3LL);
+    v12 = sub_B0F4C0(this, IClassBoardSquareModel_TypeInfo, 3LL);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(ClassBoardLine_o *, _QWORD))v12)(v9, *(_QWORD *)(v12 + 8));
   v16 = v2->fields._LineModel_k__BackingField;
@@ -1711,7 +1711,7 @@ LABEL_15:
   else
   {
 LABEL_22:
-    v23 = sub_B08590(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 1LL);
+    v23 = sub_B0F4C0(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 1LL);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v23)(
                                v16,
@@ -1736,7 +1736,7 @@ LABEL_22:
   else
   {
 LABEL_29:
-    v28 = sub_B08590(this, IClassBoardSquareModel_TypeInfo, 3LL);
+    v28 = sub_B0F4C0(this, IClassBoardSquareModel_TypeInfo, 3LL);
   }
   v29 = ((long double (__fastcall *)(ClassBoardLine_o *, _QWORD))*(_QWORD *)v28)(v25, *(_QWORD *)(v28 + 8));
   v30 = *(float *)&v29;
@@ -1779,7 +1779,7 @@ LABEL_29:
   else
   {
 LABEL_36:
-    v45 = sub_B08590(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0LL);
+    v45 = sub_B0F4C0(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0LL);
   }
   v46 = (IClassBoardSquareModel_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v45)(
                                       v40,
@@ -1810,7 +1810,7 @@ LABEL_36:
   else
   {
 LABEL_43:
-    v58 = sub_B08590(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 1LL);
+    v58 = sub_B0F4C0(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 1LL);
   }
   v59 = (IClassBoardSquareModel_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v58)(
                                       v49,
@@ -1840,7 +1840,7 @@ LABEL_43:
     || (this = (ClassBoardLine_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL )
   {
 LABEL_61:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
   if ( !v64 )
@@ -1910,21 +1910,21 @@ System_Collections_IEnumerator_o *__fastcall ClassBoardLine__WaitAnimationFinish
   System_Int32_array *v26; // x6
   System_Int32_array *v27; // x7
 
-  if ( (byte_4353AF8 & 1) == 0 )
+  if ( (byte_438D3B6 & 1) == 0 )
   {
-    sub_B70694(&ClassBoardLine__WaitAnimationFinished_d__37_TypeInfo);
-    byte_4353AF8 = 1;
+    sub_B775C4(&ClassBoardLine__WaitAnimationFinished_d__37_TypeInfo);
+    byte_438D3B6 = 1;
   }
-  v7 = sub_B70764(ClassBoardLine__WaitAnimationFinished_d__37_TypeInfo);
+  v7 = sub_B77694(ClassBoardLine__WaitAnimationFinished_d__37_TypeInfo);
   ClassBoardLine__WaitAnimationFinished_d__37___ctor((ClassBoardLine__WaitAnimationFinished_d__37_o *)v7, 0, 0LL);
   if ( !v7 )
-    sub_B7076C(v8, v9);
+    sub_B7769C(v8, v9);
   *(_QWORD *)(v7 + 32) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v7 + 32), (System_Int32_array **)this, v10, v11, v12, v13, v14, v15);
+  sub_B77560((BattleServantConfConponent_o *)(v7 + 32), (System_Int32_array **)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 40) = name;
-  sub_B70630((BattleServantConfConponent_o *)(v7 + 40), (System_Int32_array **)name, v16, v17, v18, v19, v20, v21);
+  sub_B77560((BattleServantConfConponent_o *)(v7 + 40), (System_Int32_array **)name, v16, v17, v18, v19, v20, v21);
   *(_QWORD *)(v7 + 48) = endCallback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)(v7 + 48),
     (System_Int32_array **)endCallback,
     v22,
@@ -1946,7 +1946,7 @@ void __fastcall ClassBoardLine___PlayReleaseEffect_b__33_0(ClassBoardLine_o *thi
     || (SimpleAnimation__Stop(simpleAnimation, 0LL),
         (simpleAnimation = (SimpleAnimation_o *)this->fields.releaseEffectPlayer) == 0LL) )
   {
-    sub_B7076C(simpleAnimation, method);
+    sub_B7769C(simpleAnimation, method);
   }
   ClassBoardEffectPlayer__End((ClassBoardEffectPlayer_o *)simpleAnimation, method);
 }
@@ -1961,7 +1961,7 @@ void __fastcall ClassBoardLine___PlayReleaseEffect_b__33_1(ClassBoardLine_o *thi
     || (SimpleAnimation__Stop(simpleAnimation, 0LL),
         (simpleAnimation = (SimpleAnimation_o *)this->fields.releaseEffectPlayer) == 0LL) )
   {
-    sub_B7076C(simpleAnimation, method);
+    sub_B7769C(simpleAnimation, method);
   }
   ClassBoardEffectPlayer__End((ClassBoardEffectPlayer_o *)simpleAnimation, method);
 }
@@ -1976,7 +1976,7 @@ void __fastcall ClassBoardLine___PlayReleaseEffect_b__33_2(ClassBoardLine_o *thi
     || (SimpleAnimation__Stop(simpleAnimation, 0LL),
         (simpleAnimation = (SimpleAnimation_o *)this->fields.releaseEffectPlayer) == 0LL) )
   {
-    sub_B7076C(simpleAnimation, method);
+    sub_B7769C(simpleAnimation, method);
   }
   ClassBoardEffectPlayer__End((ClassBoardEffectPlayer_o *)simpleAnimation, method);
 }
@@ -1991,7 +1991,7 @@ void __fastcall ClassBoardLine___PlayReleaseEffect_b__33_3(ClassBoardLine_o *thi
     || (SimpleAnimation__Stop(simpleAnimation, 0LL),
         (simpleAnimation = (SimpleAnimation_o *)this->fields.releaseEffectPlayer) == 0LL) )
   {
-    sub_B7076C(simpleAnimation, method);
+    sub_B7769C(simpleAnimation, method);
   }
   ClassBoardEffectPlayer__End((ClassBoardEffectPlayer_o *)simpleAnimation, method);
 }
@@ -2003,7 +2003,7 @@ void __fastcall ClassBoardLine___PlayTransition_b__28_0(ClassBoardLine_o *this, 
 
   simpleAnimation = this->fields.simpleAnimation;
   if ( !simpleAnimation )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   SimpleAnimation__Stop(simpleAnimation, 0LL);
 }
 
@@ -2014,7 +2014,7 @@ void __fastcall ClassBoardLine___PlayTransition_b__28_1(ClassBoardLine_o *this, 
 
   simpleAnimation = this->fields.simpleAnimation;
   if ( !simpleAnimation )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   SimpleAnimation__Stop(simpleAnimation, 0LL);
 }
 
@@ -2025,7 +2025,7 @@ void __fastcall ClassBoardLine___PlayTransition_b__28_2(ClassBoardLine_o *this, 
 
   simpleAnimation = this->fields.simpleAnimation;
   if ( !simpleAnimation )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   SimpleAnimation__Stop(simpleAnimation, 0LL);
 }
 
@@ -2056,7 +2056,7 @@ void __fastcall ClassBoardLine__set_LineModel(
   System_Int32_array *v7; // x7
 
   this->fields._LineModel_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._LineModel_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -2100,10 +2100,10 @@ bool __fastcall ClassBoardLine__WaitAnimationFinished_d__37__MoveNext(
   Il2CppObject **p__2__current; // x19
 
   v2 = this;
-  if ( (byte_434ED9C & 1) == 0 )
+  if ( (byte_438858B & 1) == 0 )
   {
-    this = (ClassBoardLine__WaitAnimationFinished_d__37_o *)sub_B70694(&SimpleAnimation_State_TypeInfo);
-    byte_434ED9C = 1;
+    this = (ClassBoardLine__WaitAnimationFinished_d__37_o *)sub_B775C4(&SimpleAnimation_State_TypeInfo);
+    byte_438858B = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state == 1 )
@@ -2124,7 +2124,7 @@ bool __fastcall ClassBoardLine__WaitAnimationFinished_d__37__MoveNext(
       goto LABEL_28;
     p_state_5__2 = &v2->fields._state_5__2;
     v2->fields._state_5__2 = SimpleAnimation__GetState((SimpleAnimation_o *)this, v2->fields.name, 0LL);
-    sub_B70630(&v2->fields._state_5__2);
+    sub_B77560(&v2->fields._state_5__2);
   }
   v6 = *p_state_5__2;
   if ( !*p_state_5__2 )
@@ -2146,14 +2146,14 @@ bool __fastcall ClassBoardLine__WaitAnimationFinished_d__37__MoveNext(
   else
   {
 LABEL_14:
-    p_method = sub_B08590(*p_state_5__2, SimpleAnimation_State_TypeInfo, 13LL);
+    p_method = sub_B0F4C0(*p_state_5__2, SimpleAnimation_State_TypeInfo, 13LL);
   }
   if ( (*(float (__fastcall **)(struct SimpleAnimation_State_o *, _QWORD))p_method)(v6, *(_QWORD *)(p_method + 8)) <= 0.0 )
     goto LABEL_25;
   v11 = *p_state_5__2;
   if ( !v11 )
 LABEL_28:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   v12 = v11->klass;
   if ( *(_WORD *)&v11->klass->_2.bitflags1 )
   {
@@ -2171,7 +2171,7 @@ LABEL_28:
   else
   {
 LABEL_22:
-    v15 = sub_B08590(v11, SimpleAnimation_State_TypeInfo, 5LL);
+    v15 = sub_B0F4C0(v11, SimpleAnimation_State_TypeInfo, 5LL);
   }
   if ( (*(float (__fastcall **)(struct SimpleAnimation_State_o *, _QWORD))v15)(v11, *(_QWORD *)(v15 + 8)) >= 1.0 )
   {
@@ -2181,7 +2181,7 @@ LABEL_25:
   }
   v2->fields.__2__current = 0LL;
   p__2__current = &v2->fields.__2__current;
-  sub_B70630(p__2__current);
+  sub_B77560(p__2__current);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -2204,11 +2204,11 @@ void __fastcall __noreturn ClassBoardLine__WaitAnimationFinished_d__37__System_C
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B70698(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B70764(v2);
+  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B70698(&Method_ClassBoardLine__WaitAnimationFinished_d__37_System_Collections_IEnumerator_Reset__);
-  sub_B70738(v3, v4);
+  v4 = sub_B775C8(&Method_ClassBoardLine__WaitAnimationFinished_d__37_System_Collections_IEnumerator_Reset__);
+  sub_B77668(v3, v4);
 }
 
 

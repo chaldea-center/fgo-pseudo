@@ -26,10 +26,10 @@ void __fastcall ShopEventListViewItemDraw__Awake(ShopEventListViewItemDraw_o *th
   struct UISprite_o *v20; // x8
   struct System_String_o *mSpriteName; // x1
 
-  if ( (byte_4357A56 & 1) == 0 )
+  if ( (byte_4391085 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4357A56 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4391085 = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -44,7 +44,7 @@ void __fastcall ShopEventListViewItemDraw__Awake(ShopEventListViewItemDraw_o *th
     if ( !v12
       || (mAtlas = v12->fields.mAtlas,
           this->fields.baseAtlas = mAtlas,
-          sub_B70630(
+          sub_B77560(
             (BattleServantConfConponent_o *)&this->fields.baseAtlas,
             (System_Int32_array **)mAtlas,
             v6,
@@ -55,11 +55,11 @@ void __fastcall ShopEventListViewItemDraw__Awake(ShopEventListViewItemDraw_o *th
             v11),
           (v20 = this->fields.baseSprite) == 0LL) )
     {
-      sub_B7076C(v4, v5);
+      sub_B7769C(v4, v5);
     }
     mSpriteName = v20->fields.mSpriteName;
     this->fields.baseSpriteName = mSpriteName;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.baseSpriteName,
       (System_Int32_array **)mSpriteName,
       v14,
@@ -99,11 +99,11 @@ void __fastcall ShopEventListViewItemDraw__SetBaseButtonState(
   float *v17; // x11
   UnityEngine_Color_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4357A5A & 1) == 0 )
+  if ( (byte_4391089 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&UICommonButtonColor_TypeInfo);
-    byte_4357A5A = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&UICommonButtonColor_TypeInfo);
+    byte_4391089 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -161,7 +161,7 @@ void __fastcall ShopEventListViewItemDraw__SetBaseButtonState(
       }
     }
 LABEL_39:
-    sub_B7076C(v8, v9);
+    sub_B7769C(v8, v9);
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -234,11 +234,11 @@ bool __fastcall ShopEventListViewItemDraw__SetBaseSprite(
   int32_t eventId; // w20
   UnityEngine_Object_o *baseAtlas; // x20
 
-  if ( (byte_4357A59 & 1) == 0 )
+  if ( (byte_4391088 & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4357A59 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4391088 = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -277,7 +277,7 @@ bool __fastcall ShopEventListViewItemDraw__SetBaseSprite(
       }
     }
 LABEL_21:
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   }
   return 1;
 }
@@ -316,16 +316,16 @@ void __fastcall ShopEventListViewItemDraw__SetItem(
   UILabel_o *v30; // x22
 
   v6 = this;
-  if ( (byte_4357A57 & 1) == 0 )
+  if ( (byte_4391086 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&string_TypeInfo);
-    sub_B70694(&StringLiteral_5802/*"EVENT_SHOP_BANNER_FINISHED_MSG"*/);
-    sub_B70694(&StringLiteral_15882/*"[000000]"*/);
-    sub_B70694(&StringLiteral_5800/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/);
-    sub_B70694(&StringLiteral_5803/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/);
-    this = (ShopEventListViewItemDraw_o *)sub_B70694(&StringLiteral_5801/*"EVENT_SHOP_BANNER_FINISHED_LOCKED_MSG"*/);
-    byte_4357A57 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&string_TypeInfo);
+    sub_B775C4(&StringLiteral_5857/*"EVENT_SHOP_BANNER_FINISHED_MSG"*/);
+    sub_B775C4(&StringLiteral_15952/*"[000000]"*/);
+    sub_B775C4(&StringLiteral_5855/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/);
+    sub_B775C4(&StringLiteral_5858/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/);
+    this = (ShopEventListViewItemDraw_o *)sub_B775C4(&StringLiteral_5856/*"EVENT_SHOP_BANNER_FINISHED_LOCKED_MSG"*/);
+    byte_4391086 = 1;
   }
   rangeSprite = v6->fields.rangeSprite;
   if ( !item )
@@ -350,7 +350,7 @@ void __fastcall ShopEventListViewItemDraw__SetItem(
         UILabel__set_text(nameTextLabel, NameText, 0LL);
         messageTextLabel = v6->fields.messageTextLabel;
         DetailText = ShopEventListViewItem__get_DetailText(item, v17);
-        NameText = System_String__Concat_44758168((System_String_o *)StringLiteral_15882/*"[000000]"*/, DetailText, 0LL);
+        NameText = System_String__Concat_44901936((System_String_o *)StringLiteral_15952/*"[000000]"*/, DetailText, 0LL);
         if ( messageTextLabel )
         {
           UILabel__set_text(messageTextLabel, NameText, 0LL);
@@ -390,7 +390,7 @@ void __fastcall ShopEventListViewItemDraw__SetItem(
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5803/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/, 0LL);
+                NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5858/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/, 0LL);
                 if ( !condMessageLabel )
                   goto LABEL_48;
                 UILabel__set_text(condMessageLabel, NameText, 0LL);
@@ -405,7 +405,7 @@ void __fastcall ShopEventListViewItemDraw__SetItem(
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5800/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/, 0LL);
+                NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5855/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/, 0LL);
                 if ( !v30 )
                   goto LABEL_48;
                 UILabel__set_text(v30, NameText, 0LL);
@@ -420,7 +420,7 @@ LABEL_51:
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5802/*"EVENT_SHOP_BANNER_FINISHED_MSG"*/, 0LL);
+                  NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5857/*"EVENT_SHOP_BANNER_FINISHED_MSG"*/, 0LL);
                   if ( !v27 )
                     goto LABEL_48;
                   UILabel__set_text(v27, NameText, 0LL);
@@ -435,7 +435,7 @@ LABEL_52:
                     {
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                     }
-                    NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5801/*"EVENT_SHOP_BANNER_FINISHED_LOCKED_MSG"*/, 0LL);
+                    NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5856/*"EVENT_SHOP_BANNER_FINISHED_LOCKED_MSG"*/, 0LL);
                     if ( !v28 )
                       goto LABEL_48;
                     UILabel__set_text(v28, NameText, 0LL);
@@ -462,7 +462,7 @@ LABEL_47:
       }
     }
 LABEL_48:
-    sub_B7076C(NameText, v13);
+    sub_B7769C(NameText, v13);
   }
 }
 
@@ -476,10 +476,10 @@ void __fastcall ShopEventListViewItemDraw__SetSpriteActive(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v7; // x1
 
-  if ( (byte_4357A58 & 1) == 0 )
+  if ( (byte_4391087 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4357A58 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4391087 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -490,7 +490,7 @@ void __fastcall ShopEventListViewItemDraw__SetSpriteActive(
   if ( ((unsigned __int8)gameObject & 1) == 0 )
   {
     if ( !sprite || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)sprite, 0LL)) == 0LL )
-      sub_B7076C(gameObject, v7);
+      sub_B7769C(gameObject, v7);
     UnityEngine_GameObject__SetActive(gameObject, isActive, 0LL);
   }
 }

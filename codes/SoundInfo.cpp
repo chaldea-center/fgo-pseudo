@@ -69,19 +69,19 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
   UnityEngine_Rect_o v62; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v63; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4350A86 & 1) == 0 )
+  if ( (byte_438A12E & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_GUI_TypeInfo);
-    sub_B70694(&SoundLogger_TypeInfo);
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_15934/*"[BGM]\n"*/);
-    sub_B70694(&StringLiteral_1521/*"<size="*/);
-    sub_B70694(&StringLiteral_47/*"\n[SE]\n"*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    sub_B70694(&StringLiteral_1337/*"</size>"*/);
-    sub_B70694(&StringLiteral_48/*"\n[VOICE]\n"*/);
-    sub_B70694(&StringLiteral_1540/*">"*/);
-    byte_4350A86 = 1;
+    sub_B775C4(&UnityEngine_GUI_TypeInfo);
+    sub_B775C4(&SoundLogger_TypeInfo);
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_16004/*"[BGM]\n"*/);
+    sub_B775C4(&StringLiteral_1523/*"<size="*/);
+    sub_B775C4(&StringLiteral_47/*"\n[SE]\n"*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    sub_B775C4(&StringLiteral_1339/*"</size>"*/);
+    sub_B775C4(&StringLiteral_48/*"\n[VOICE]\n"*/);
+    sub_B775C4(&StringLiteral_1542/*">"*/);
+    byte_438A12E = 1;
   }
   HIDWORD(methoda.parameters) = 0;
   if ( UnityEngine_Application__get_isPlaying(0LL) )
@@ -90,11 +90,11 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
     if ( (BYTE3(SoundLogger_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundLogger_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
     LogBgm = SoundLogger__getLogBgm((const MethodInfo *)v3);
-    v5 = System_String__Concat_44758168((System_String_o *)StringLiteral_15934/*"[BGM]\n"*/, LogBgm, 0LL);
+    v5 = System_String__Concat_44901936((System_String_o *)StringLiteral_16004/*"[BGM]\n"*/, LogBgm, 0LL);
     LogVoice = SoundLogger__getLogVoice((const MethodInfo *)v5);
-    v7 = System_String__Concat_44760452(v5, (System_String_o *)StringLiteral_48/*"\n[VOICE]\n"*/, LogVoice, 0LL);
+    v7 = System_String__Concat_44904220(v5, (System_String_o *)StringLiteral_48/*"\n[VOICE]\n"*/, LogVoice, 0LL);
     LogSe = SoundLogger__getLogSe((const MethodInfo *)v7);
-    v9 = (System_Int32_array **)System_String__Concat_44760452(v7, (System_String_o *)StringLiteral_47/*"\n[SE]\n"*/, LogSe, 0LL);
+    v9 = (System_Int32_array **)System_String__Concat_44904220(v7, (System_String_o *)StringLiteral_47/*"\n[SE]\n"*/, LogSe, 0LL);
     v10 = *(float *)&this[1].klass * (float)((float)UnityEngine_Screen__get_width(0LL) * 0.00097656);
     v61.fields.m_XMin = 5.0;
     v61.fields.m_Width = v10 * 310.0;
@@ -118,17 +118,17 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
     *(_QWORD *)&v59.fields.m_XMin = 0LL;
     *(_QWORD *)&v59.fields.m_Width = 0LL;
     UnityEngine_Rect___ctor(v63, v14, v15, v16, v17, (const MethodInfo *)&v59);
-    v18 = sub_B706AC(string___TypeInfo, 5LL);
+    v18 = sub_B775DC(string___TypeInfo, 5LL);
     if ( !v18 )
-      sub_B7076C(0LL, v19);
+      sub_B7769C(0LL, v19);
     v26 = (System_String_array *)v18;
-    v27 = (System_String_o *)StringLiteral_1521/*"<size="*/;
-    if ( StringLiteral_1521/*"<size="*/ )
+    v27 = (System_String_o *)StringLiteral_1523/*"<size="*/;
+    if ( StringLiteral_1523/*"<size="*/ )
     {
-      v27 = (System_String_o *)sub_B70754(StringLiteral_1521/*"<size="*/, v26->obj.klass->_1.element_class);
+      v27 = (System_String_o *)sub_B77684(StringLiteral_1523/*"<size="*/, v26->obj.klass->_1.element_class);
       if ( !v27 )
         goto LABEL_35;
-      v28 = (System_Int32_array **)StringLiteral_1521/*"<size="*/;
+      v28 = (System_Int32_array **)StringLiteral_1523/*"<size="*/;
     }
     else
     {
@@ -137,23 +137,23 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
     if ( !v26->max_length )
       goto LABEL_34;
     v26->m_Items[0] = (System_String_o *)v28;
-    sub_B70630((BattleServantConfConponent_o *)v26->m_Items, v28, v20, v21, v22, v23, v24, v25);
+    sub_B77560((BattleServantConfConponent_o *)v26->m_Items, v28, v20, v21, v22, v23, v24, v25);
     *((float *)&methoda.parameters + 1) = v10 * 18.0;
     v27 = System_Single__ToString(v10 * 18.0, (const MethodInfo *)((char *)&methoda.parameters + 4));
     v35 = (System_Int32_array **)v27;
-    if ( !v27 || (v27 = (System_String_o *)sub_B70754(v27, v26->obj.klass->_1.element_class)) != 0LL )
+    if ( !v27 || (v27 = (System_String_o *)sub_B77684(v27, v26->obj.klass->_1.element_class)) != 0LL )
     {
       if ( v26->max_length <= 1 )
         goto LABEL_34;
       v26->m_Items[1] = (System_String_o *)v35;
-      sub_B70630((BattleServantConfConponent_o *)&v26->m_Items[1], v35, v29, v30, v31, v32, v33, v34);
-      v27 = (System_String_o *)StringLiteral_1540/*">"*/;
-      if ( StringLiteral_1540/*">"*/ )
+      sub_B77560((BattleServantConfConponent_o *)&v26->m_Items[1], v35, v29, v30, v31, v32, v33, v34);
+      v27 = (System_String_o *)StringLiteral_1542/*">"*/;
+      if ( StringLiteral_1542/*">"*/ )
       {
-        v27 = (System_String_o *)sub_B70754(StringLiteral_1540/*">"*/, v26->obj.klass->_1.element_class);
+        v27 = (System_String_o *)sub_B77684(StringLiteral_1542/*">"*/, v26->obj.klass->_1.element_class);
         if ( !v27 )
           goto LABEL_35;
-        v42 = (System_Int32_array **)StringLiteral_1540/*">"*/;
+        v42 = (System_Int32_array **)StringLiteral_1542/*">"*/;
       }
       else
       {
@@ -162,41 +162,41 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
       if ( v26->max_length <= 2 )
         goto LABEL_34;
       v26->m_Items[2] = (System_String_o *)v42;
-      sub_B70630((BattleServantConfConponent_o *)&v26->m_Items[2], v42, v36, v37, v38, v39, v40, v41);
-      if ( !v9 || (v27 = (System_String_o *)sub_B70754(v9, v26->obj.klass->_1.element_class)) != 0LL )
+      sub_B77560((BattleServantConfConponent_o *)&v26->m_Items[2], v42, v36, v37, v38, v39, v40, v41);
+      if ( !v9 || (v27 = (System_String_o *)sub_B77684(v9, v26->obj.klass->_1.element_class)) != 0LL )
       {
         if ( v26->max_length <= 3 )
           goto LABEL_34;
         v26->m_Items[3] = (System_String_o *)v9;
-        sub_B70630((BattleServantConfConponent_o *)&v26->m_Items[3], v9, v43, v44, v45, v46, v47, v48);
-        v27 = (System_String_o *)StringLiteral_1337/*"</size>"*/;
-        if ( !StringLiteral_1337/*"</size>"*/ )
+        sub_B77560((BattleServantConfConponent_o *)&v26->m_Items[3], v9, v43, v44, v45, v46, v47, v48);
+        v27 = (System_String_o *)StringLiteral_1339/*"</size>"*/;
+        if ( !StringLiteral_1339/*"</size>"*/ )
         {
           v55 = 0LL;
 LABEL_31:
           if ( v26->max_length > 4 )
           {
             v26->m_Items[4] = (System_String_o *)v55;
-            sub_B70630((BattleServantConfConponent_o *)&v26->m_Items[4], v55, v49, v50, v51, v52, v53, v54);
-            v56 = System_String__Concat_44838292(v26, 0LL);
+            sub_B77560((BattleServantConfConponent_o *)&v26->m_Items[4], v55, v49, v50, v51, v52, v53, v54);
+            v56 = System_String__Concat_44982964(v26, 0LL);
             UnityEngine_GUI__Label(v59, v56, 0LL);
             return;
           }
 LABEL_34:
-          v57 = sub_B70798(v27);
-          sub_B70738(v57, 0LL);
+          v57 = sub_B776C8(v27);
+          sub_B77668(v57, 0LL);
         }
-        v27 = (System_String_o *)sub_B70754(StringLiteral_1337/*"</size>"*/, v26->obj.klass->_1.element_class);
+        v27 = (System_String_o *)sub_B77684(StringLiteral_1339/*"</size>"*/, v26->obj.klass->_1.element_class);
         if ( v27 )
         {
-          v55 = (System_Int32_array **)StringLiteral_1337/*"</size>"*/;
+          v55 = (System_Int32_array **)StringLiteral_1339/*"</size>"*/;
           goto LABEL_31;
         }
       }
     }
 LABEL_35:
-    v58 = sub_B7078C(v27);
-    sub_B70738(v58, 0LL);
+    v58 = sub_B776BC(v27);
+    sub_B77668(v58, 0LL);
   }
 }
 

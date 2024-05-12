@@ -9,12 +9,12 @@ void __fastcall CommitPurchaseRequest__beginRequest(
         System_String_o *purchaseToken,
         const MethodInfo *method)
 {
-  if ( (byte_434DF32 & 1) == 0 )
+  if ( (byte_43874F4 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_21944/*"purchaseToken"*/);
-    byte_434DF32 = 1;
+    sub_B775C4(&StringLiteral_22043/*"purchaseToken"*/);
+    byte_43874F4 = 1;
   }
-  RequestBase__addField_32336576((RequestBase_o *)this, (System_String_o *)StringLiteral_21944/*"purchaseToken"*/, purchaseToken, 0LL);
+  RequestBase__addField_32565392((RequestBase_o *)this, (System_String_o *)StringLiteral_22043/*"purchaseToken"*/, purchaseToken, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -23,11 +23,11 @@ System_String_o *__fastcall CommitPurchaseRequest__getURL(CommitPurchaseRequest_
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_434DF31 & 1) == 0 )
+  if ( (byte_43874F3 & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&StringLiteral_22474/*"shop/CommitPurchase"*/);
-    byte_434DF31 = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&StringLiteral_22575/*"shop/CommitPurchase"*/);
+    byte_43874F3 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -35,7 +35,7 @@ System_String_o *__fastcall CommitPurchaseRequest__getURL(CommitPurchaseRequest_
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_44758168(BaseUrl, (System_String_o *)StringLiteral_22474/*"shop/CommitPurchase"*/, 0LL);
+  return System_String__Concat_44901936(BaseUrl, (System_String_o *)StringLiteral_22575/*"shop/CommitPurchase"*/, 0LL);
 }
 
 
@@ -49,12 +49,12 @@ void __fastcall CommitPurchaseRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v8; // x1
 
-  if ( (byte_434DF33 & 1) == 0 )
+  if ( (byte_43874F5 & 1) == 0 )
   {
-    sub_B70694(&JsonManager_TypeInfo);
-    sub_B70694(&ResponseCommandKind_TypeInfo);
-    sub_B70694(&StringLiteral_21408/*"ng"*/);
-    byte_434DF33 = 1;
+    sub_B775C4(&JsonManager_TypeInfo);
+    sub_B775C4(&ResponseCommandKind_TypeInfo);
+    sub_B775C4(&StringLiteral_21504/*"ng"*/);
+    byte_43874F5 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
@@ -63,7 +63,7 @@ void __fastcall CommitPurchaseRequest__requestCompleted(
   }
   v5 = ResponseCommandKind__SearchData(9, responseList, 0LL);
   if ( v5
-    && (v6 = v5, ResponseData__checkError_29653500(v5, 0LL))
+    && (v6 = v5, ResponseData__checkError_30128096(v5, 0LL))
     && (success = (Il2CppObject *)v6->fields.success) != 0LL )
   {
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
@@ -72,7 +72,7 @@ void __fastcall CommitPurchaseRequest__requestCompleted(
   }
   else
   {
-    v8 = (System_String_o *)StringLiteral_21408/*"ng"*/;
+    v8 = (System_String_o *)StringLiteral_21504/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v8, 0LL);
 }

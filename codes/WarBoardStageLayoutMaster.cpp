@@ -1,14 +1,14 @@
 void __fastcall WarBoardStageLayoutMaster___ctor(WarBoardStageLayoutMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4353A80 & 1) == 0 )
+  if ( (byte_438D2B6 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_WarBoardStageLayoutMaster__WarBoardStageLayoutEntity__string___ctor__);
-    byte_4353A80 = 1;
+    sub_B775C4(&Method_DataMasterBase_WarBoardStageLayoutMaster__WarBoardStageLayoutEntity__string___ctor__);
+    byte_438D2B6 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     325,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_WarBoardStageLayoutMaster__WarBoardStageLayoutEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_WarBoardStageLayoutMaster__WarBoardStageLayoutEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ WarBoardStageLayoutEntity_o *__fastcall WarBoardStageLayoutMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4353A7E & 1) == 0 )
+  if ( (byte_438D2B4 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_WarBoardStageLayoutMaster__WarBoardStageLayoutEntity__string__GetEntity__);
-    byte_4353A7E = 1;
+    sub_B775C4(&Method_DataMasterBase_WarBoardStageLayoutMaster__WarBoardStageLayoutEntity__string__GetEntity__);
+    byte_438D2B4 = 1;
   }
   PK = WarBoardStageLayoutEntity__CreatePK(stageId, squareIndex, *(const MethodInfo **)&squareIndex);
   return (WarBoardStageLayoutEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                           (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                           PK,
-                                          (const MethodInfo_21C0890 *)Method_DataMasterBase_WarBoardStageLayoutMaster__WarBoardStageLayoutEntity__string__GetEntity__);
+                                          (const MethodInfo_21FBCE4 *)Method_DataMasterBase_WarBoardStageLayoutMaster__WarBoardStageLayoutEntity__string__GetEntity__);
 }
 
 
@@ -49,20 +49,20 @@ System_Collections_Generic_IEnumerable_WarBoardStageLayoutEntity__o *__fastcall 
   System_Int32_array *v12; // x6
   System_Int32_array *v13; // x7
 
-  if ( (byte_4353A81 & 1) == 0 )
+  if ( (byte_438D2B7 & 1) == 0 )
   {
-    sub_B70694(&WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3_TypeInfo);
-    byte_4353A81 = 1;
+    sub_B775C4(&WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3_TypeInfo);
+    byte_438D2B7 = 1;
   }
-  v5 = sub_B70764(WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3_TypeInfo);
+  v5 = sub_B77694(WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3_TypeInfo);
   WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3___ctor(
     (WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3_o *)v5,
     -2,
     0LL);
   if ( !v5 )
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   *(_QWORD *)(v5 + 40) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v5 + 40), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
+  sub_B77560((BattleServantConfConponent_o *)(v5 + 40), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
   *(_DWORD *)(v5 + 52) = stageId;
   return (System_Collections_Generic_IEnumerable_WarBoardStageLayoutEntity__o *)v5;
 }
@@ -78,17 +78,17 @@ bool __fastcall WarBoardStageLayoutMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4353A7F & 1) == 0 )
+  if ( (byte_438D2B5 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_WarBoardStageLayoutMaster__WarBoardStageLayoutEntity__string__TryGetEntity__);
-    byte_4353A7F = 1;
+    sub_B775C4(&Method_DataMasterBase_WarBoardStageLayoutMaster__WarBoardStageLayoutEntity__string__TryGetEntity__);
+    byte_438D2B5 = 1;
   }
   PK = WarBoardStageLayoutEntity__CreatePK(stageId, squareIndex, *(const MethodInfo **)&stageId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_WarBoardStageLayoutMaster__WarBoardStageLayoutEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_WarBoardStageLayoutMaster__WarBoardStageLayoutEntity__string__TryGetEntity__);
 }
 
 
@@ -124,12 +124,12 @@ bool __fastcall WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3__
   BattleServantConfConponent_o *p__2__current; // x19
 
   v2 = this;
-  if ( (byte_434FCA3 & 1) == 0 )
+  if ( (byte_438928C & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    this = (WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3_o *)sub_B70694(&WarBoardStageLayoutEntity_TypeInfo);
-    byte_434FCA3 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    this = (WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3_o *)sub_B775C4(&WarBoardStageLayoutEntity_TypeInfo);
+    byte_438928C = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -147,11 +147,11 @@ bool __fastcall WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3__
       || (this = (WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3_o *)_4__this->fields.list) == 0LL )
     {
 LABEL_19:
-      sub_B7076C(this, method);
+      sub_B7769C(this, method);
     }
     this = (WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
                                                                                  (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this,
-                                                                                 (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+                                                                                 (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
     v2->fields._count_5__2 = (int)this;
     p_count_5__2 = &v2->fields._count_5__2;
     method = 0LL;
@@ -167,7 +167,7 @@ LABEL_19:
       Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this,
                (int32_t)method,
-               (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( Item )
       {
         v14 = *(&WarBoardStageLayoutEntity_TypeInfo->_2.bitflags2 + 1);
@@ -177,7 +177,7 @@ LABEL_19:
         {
           v2->fields.__2__current = (struct WarBoardStageLayoutEntity_o *)Item;
           p__2__current = (BattleServantConfConponent_o *)&v2->fields.__2__current;
-          sub_B70630(p__2__current, (System_Int32_array **)Item, v8, v9, v10, v11, v12, v13);
+          sub_B77560(p__2__current, (System_Int32_array **)Item, v8, v9, v10, v11, v12, v13);
           result = 1;
           *(_DWORD *)&p__2__current[-1].fields.isOpenAfter = 1;
           return result;
@@ -210,10 +210,10 @@ System_Collections_Generic_IEnumerator_WarBoardStageLayoutEntity__o *__fastcall 
   System_Int32_array **_4__this; // x1
   System_Collections_Generic_IEnumerator_WarBoardStageLayoutEntity__o *result; // x0
 
-  if ( (byte_434FCA4 & 1) == 0 )
+  if ( (byte_438928D & 1) == 0 )
   {
-    sub_B70694(&WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3_TypeInfo);
-    byte_434FCA4 = 1;
+    sub_B775C4(&WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3_TypeInfo);
+    byte_438928D = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -224,16 +224,16 @@ System_Collections_Generic_IEnumerator_WarBoardStageLayoutEntity__o *__fastcall 
   }
   else
   {
-    v4 = (WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3_o *)sub_B70764(WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3_TypeInfo);
+    v4 = (WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3_o *)sub_B77694(WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0LL);
     v4->fields.__1__state = 0;
     CurrentManagedThreadId = System_Environment__get_CurrentManagedThreadId(0LL);
     v4->fields.__l__initialThreadId = CurrentManagedThreadId;
     if ( !v4 )
-      sub_B7076C(CurrentManagedThreadId, v6);
+      sub_B7769C(CurrentManagedThreadId, v6);
     _4__this = (System_Int32_array **)this->fields.__4__this;
     v4->fields.__4__this = (struct WarBoardStageLayoutMaster_o *)_4__this;
-    sub_B70630((BattleServantConfConponent_o *)&v4->fields.__4__this, _4__this, v7, v8, v9, v10, v11, v12);
+    sub_B77560((BattleServantConfConponent_o *)&v4->fields.__4__this, _4__this, v7, v8, v9, v10, v11, v12);
   }
   result = (System_Collections_Generic_IEnumerator_WarBoardStageLayoutEntity__o *)v4;
   v4->fields.stageId = this->fields.__3__stageId;
@@ -257,11 +257,11 @@ void __fastcall __noreturn WarBoardStageLayoutMaster__GetWarBoardStageLayoutEnti
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B70698(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B70764(v2);
+  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B70698(&Method_WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3_System_Collections_IEnumerator_Reset__);
-  sub_B70738(v3, v4);
+  v4 = sub_B775C8(&Method_WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3_System_Collections_IEnumerator_Reset__);
+  sub_B77668(v3, v4);
 }
 
 

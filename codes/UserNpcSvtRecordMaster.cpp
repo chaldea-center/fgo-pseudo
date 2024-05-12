@@ -1,14 +1,14 @@
 void __fastcall UserNpcSvtRecordMaster___ctor(UserNpcSvtRecordMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4350794 & 1) == 0 )
+  if ( (byte_4389DBD & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__);
-    byte_4350794 = 1;
+    sub_B775C4(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__);
+    byte_4389DBD = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     410,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ UserNpcSvtRecordEntity_o *__fastcall UserNpcSvtRecordMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4350795 & 1) == 0 )
+  if ( (byte_4389DBE & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__);
-    byte_4350795 = 1;
+    sub_B775C4(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__);
+    byte_4389DBE = 1;
   }
   PK = UserNpcSvtRecordEntity__CreatePK(userId, svtId, *(const MethodInfo **)&svtId);
   return (UserNpcSvtRecordEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                        (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                        PK,
-                                       (const MethodInfo_21C0890 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__);
+                                       (const MethodInfo_21FBCE4 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__);
 }
 
 
@@ -46,10 +46,10 @@ System_Int32_array *__fastcall UserNpcSvtRecordMaster__GetTdPlayed(
   System_Int32_array *result; // x0
   UserNpcSvtRecordEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4350797 & 1) == 0 )
+  if ( (byte_4389DC0 & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4350797 = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_4389DC0 = 1;
   }
   entity = 0LL;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -63,7 +63,7 @@ System_Int32_array *__fastcall UserNpcSvtRecordMaster__GetTdPlayed(
   if ( v8 )
   {
     if ( !entity )
-      sub_B7076C(0LL, v7);
+      sub_B7769C(0LL, v7);
     return entity->fields.tdPlayed;
   }
   return result;
@@ -79,15 +79,15 @@ bool __fastcall UserNpcSvtRecordMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4350796 & 1) == 0 )
+  if ( (byte_4389DBF & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__);
-    byte_4350796 = 1;
+    sub_B775C4(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__);
+    byte_4389DBF = 1;
   }
   PK = UserNpcSvtRecordEntity__CreatePK(userId, svtId, (const MethodInfo *)userId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__);
 }

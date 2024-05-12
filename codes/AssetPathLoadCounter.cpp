@@ -8,18 +8,18 @@ void __fastcall AssetPathLoadCounter___ctor(AssetPathLoadCounter_o *this, const 
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_4355205 & 1) == 0 )
+  if ( (byte_438AA34 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__int___ctor__);
-    sub_B70694(&System_Collections_Generic_Dictionary_string__int__TypeInfo);
-    byte_4355205 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__int___ctor__);
+    sub_B775C4(&System_Collections_Generic_Dictionary_string__int__TypeInfo);
+    byte_438AA34 = 1;
   }
-  v3 = (System_Collections_Generic_Dictionary_XmlQualifiedName__int__o *)sub_B70764(System_Collections_Generic_Dictionary_string__int__TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_XmlQualifiedName__int__o *)sub_B77694(System_Collections_Generic_Dictionary_string__int__TypeInfo);
   System_Collections_Generic_Dictionary_XmlQualifiedName__int____ctor(
     v3,
-    (const MethodInfo_2FAEE04 *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
+    (const MethodInfo_2FDCA14 *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
   this->fields.pathToCountMap = (struct System_Collections_Generic_Dictionary_string__int__o *)v3;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -33,12 +33,12 @@ void __fastcall AssetPathLoadCounter__AddCount(
   System_Collections_Generic_Dictionary_string__int__o *v6; // x20
   int32_t v7; // w2
 
-  if ( (byte_4355202 & 1) == 0 )
+  if ( (byte_438AA31 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
-    byte_4355202 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
+    byte_438AA31 = 1;
   }
   pathToCountMap = this->fields.pathToCountMap;
   if ( !pathToCountMap )
@@ -46,7 +46,7 @@ void __fastcall AssetPathLoadCounter__AddCount(
   pathToCountMap = (struct System_Collections_Generic_Dictionary_string__int__o *)System_Collections_Generic_Dictionary_XmlQualifiedName__int___ContainsKey(
                                                                                     (System_Collections_Generic_Dictionary_XmlQualifiedName__int__o *)pathToCountMap,
                                                                                     (System_Xml_XmlQualifiedName_o *)path,
-                                                                                    (const MethodInfo_2FAFC2C *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
+                                                                                    (const MethodInfo_2FDD83C *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
   if ( ((unsigned __int8)pathToCountMap & 1) == 0 )
   {
     pathToCountMap = this->fields.pathToCountMap;
@@ -56,22 +56,22 @@ void __fastcall AssetPathLoadCounter__AddCount(
       (System_Collections_Generic_Dictionary_XmlQualifiedName__int__o *)pathToCountMap,
       (System_Xml_XmlQualifiedName_o *)path,
       0,
-      (const MethodInfo_2FAF990 *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
+      (const MethodInfo_2FDD5A0 *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
   }
   v6 = this->fields.pathToCountMap;
   if ( !v6 )
 LABEL_9:
-    sub_B7076C(pathToCountMap, path);
+    sub_B7769C(pathToCountMap, path);
   v7 = System_Collections_Generic_Dictionary_string__int___get_Item(
          v6,
          path,
-         (const MethodInfo_2FAF8F4 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__)
+         (const MethodInfo_2FDD504 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__)
      + 1;
   System_Collections_Generic_Dictionary_XmlQualifiedName__int___set_Item(
     (System_Collections_Generic_Dictionary_XmlQualifiedName__int__o *)v6,
     (System_Xml_XmlQualifiedName_o *)path,
     v7,
-    (const MethodInfo_2FAF990 *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
+    (const MethodInfo_2FDD5A0 *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
 }
 
 
@@ -79,17 +79,17 @@ void __fastcall AssetPathLoadCounter__Clear(AssetPathLoadCounter_o *this, const 
 {
   struct System_Collections_Generic_Dictionary_string__int__o *pathToCountMap; // x0
 
-  if ( (byte_4355204 & 1) == 0 )
+  if ( (byte_438AA33 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__int__Clear__);
-    byte_4355204 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__int__Clear__);
+    byte_438AA33 = 1;
   }
   pathToCountMap = this->fields.pathToCountMap;
   if ( !pathToCountMap )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   System_Collections_Generic_Dictionary_UIPanel__int___Clear(
     (System_Collections_Generic_Dictionary_UIPanel__int__o *)pathToCountMap,
-    (const MethodInfo_2FAFB94 *)Method_System_Collections_Generic_Dictionary_string__int__Clear__);
+    (const MethodInfo_2FDD7A4 *)Method_System_Collections_Generic_Dictionary_string__int__Clear__);
 }
 
 
@@ -102,19 +102,19 @@ System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *__fastcall 
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v6; // [xsp+0h] [xbp-60h] BYREF
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v7; // [xsp+28h] [xbp-38h] BYREF
 
-  if ( (byte_4355201 & 1) == 0 )
+  if ( (byte_438AA30 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__int__GetEnumerator__);
-    sub_B70694(&System_Collections_Generic_Dictionary_Enumerator_string__int__TypeInfo);
-    byte_4355201 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__int__GetEnumerator__);
+    sub_B775C4(&System_Collections_Generic_Dictionary_Enumerator_string__int__TypeInfo);
+    byte_438AA30 = 1;
   }
   pathToCountMap = this->fields.pathToCountMap;
   if ( !pathToCountMap )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   System_Collections_Generic_Dictionary_string__int___GetEnumerator(
     &v7,
     pathToCountMap,
-    (const MethodInfo_2FAFF4C *)Method_System_Collections_Generic_Dictionary_string__int__GetEnumerator__);
+    (const MethodInfo_2FDDB5C *)Method_System_Collections_Generic_Dictionary_string__int__GetEnumerator__);
   v6 = v7;
   return (System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *)j_il2cpp_value_box_0(
                                                                                   System_Collections_Generic_Dictionary_Enumerator_string__int__TypeInfo,
@@ -132,12 +132,12 @@ void __fastcall AssetPathLoadCounter__SubCount(
   System_Collections_Generic_Dictionary_string__int__o *v6; // x20
   int32_t v7; // w2
 
-  if ( (byte_4355203 & 1) == 0 )
+  if ( (byte_438AA32 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
-    byte_4355203 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
+    byte_438AA32 = 1;
   }
   pathToCountMap = this->fields.pathToCountMap;
   if ( !pathToCountMap )
@@ -145,7 +145,7 @@ void __fastcall AssetPathLoadCounter__SubCount(
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__int___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__int__o *)pathToCountMap,
          (System_Xml_XmlQualifiedName_o *)path,
-         (const MethodInfo_2FAFC2C *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__) )
+         (const MethodInfo_2FDD83C *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__) )
   {
     pathToCountMap = this->fields.pathToCountMap;
     if ( !pathToCountMap )
@@ -153,7 +153,7 @@ void __fastcall AssetPathLoadCounter__SubCount(
     pathToCountMap = (System_Collections_Generic_Dictionary_string__int__o *)System_Collections_Generic_Dictionary_string__int___get_Item(
                                                                                pathToCountMap,
                                                                                path,
-                                                                               (const MethodInfo_2FAF8F4 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+                                                                               (const MethodInfo_2FDD504 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
     if ( (int)pathToCountMap >= 1 )
     {
       v6 = this->fields.pathToCountMap;
@@ -162,26 +162,17 @@ void __fastcall AssetPathLoadCounter__SubCount(
         v7 = System_Collections_Generic_Dictionary_string__int___get_Item(
                v6,
                path,
-               (const MethodInfo_2FAF8F4 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__)
+               (const MethodInfo_2FDD504 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__)
            - 1;
         System_Collections_Generic_Dictionary_XmlQualifiedName__int___set_Item(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__int__o *)v6,
           (System_Xml_XmlQualifiedName_o *)path,
           v7,
-          (const MethodInfo_2FAF990 *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
+          (const MethodInfo_2FDD5A0 *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
         return;
       }
 LABEL_10:
-      sub_B7076C(pathToCountMap, path);
+      sub_B7769C(pathToCountMap, path);
     }
   }
-}
-
-
-// attributes: thunk
-System_Collections_IEnumerator_o *__fastcall AssetPathLoadCounter__System_Collections_IEnumerable_GetEnumerator(
-        AssetPathLoadCounter_o *this,
-        const MethodInfo *method)
-{
-  return (System_Collections_IEnumerator_o *)AssetPathLoadCounter__GetEnumerator(this, method);
 }

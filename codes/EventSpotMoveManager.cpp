@@ -1,9 +1,9 @@
 void __fastcall EventSpotMoveManager___cctor(const MethodInfo *method)
 {
-  if ( (byte_43556A0 & 1) == 0 )
+  if ( (byte_438ED18 & 1) == 0 )
   {
-    sub_B70694(&EventSpotMoveManager_TypeInfo);
-    byte_43556A0 = 1;
+    sub_B775C4(&EventSpotMoveManager_TypeInfo);
+    byte_438ED18 = 1;
   }
   LODWORD(EventSpotMoveManager_TypeInfo->static_fields->MOVE_SPEED) = (struct EventSpotMoveManager_StaticFields)1123024896;
 }
@@ -19,18 +19,18 @@ void __fastcall EventSpotMoveManager___ctor(EventSpotMoveManager_o *this, const 
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_435569F & 1) == 0 )
+  if ( (byte_438ED17 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData___ctor__);
-    sub_B70694(&System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__TypeInfo);
-    byte_435569F = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__TypeInfo);
+    byte_438ED17 = 1;
   }
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__TypeInfo);
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v3,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData___ctor__);
   this->fields.eventSpotMoveDataList = (struct System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__o *)v3;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -42,18 +42,18 @@ void __fastcall EventSpotMoveManager__Add(
 {
   struct System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__o *eventSpotMoveDataList; // x0
 
-  if ( (byte_4355699 & 1) == 0 )
+  if ( (byte_438ED11 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__Add__);
-    byte_4355699 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__Add__);
+    byte_438ED11 = 1;
   }
   eventSpotMoveDataList = this->fields.eventSpotMoveDataList;
   if ( !eventSpotMoveDataList )
-    sub_B7076C(0LL, data);
+    sub_B7769C(0LL, data);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)eventSpotMoveDataList,
     (EventMissionProgressRequest_Argument_ProgressData_o *)data,
-    (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__Add__);
+    (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__Add__);
 }
 
 
@@ -93,17 +93,17 @@ float __fastcall EventSpotMoveManager__CalcSpotPathRate(
   int64_t Time; // x0
   int32_t data; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_435569C & 1) == 0 )
+  if ( (byte_438ED14 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_EventRaceMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_EventRaidMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_SpotAddMaster___);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_435569C = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_EventRaceMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_EventRaidMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_SpotAddMaster___);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438ED14 = 1;
   }
   data = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !spotPathEnt )
     goto LABEL_25;
   valueType = spotPathEnt->fields.valueType;
@@ -115,7 +115,7 @@ float __fastcall EventSpotMoveManager__CalcSpotPathRate(
       goto LABEL_25;
     Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                   Instance,
-                                  (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventRaidMaster___);
+                                  (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventRaidMaster___);
     if ( !Instance )
       goto LABEL_25;
     Entity = EventRaidMaster__GetEntity((EventRaidMaster_o *)Instance, eventId, raidId, 0LL);
@@ -145,7 +145,7 @@ float __fastcall EventSpotMoveManager__CalcSpotPathRate(
     {
       Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                     Instance,
-                                    (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_SpotAddMaster___);
+                                    (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_SpotAddMaster___);
       if ( Instance )
       {
         HasPrioredData = SpotAddMaster__HasPrioredData(
@@ -159,7 +159,7 @@ float __fastcall EventSpotMoveManager__CalcSpotPathRate(
           v13 = (float)data / 1000.0;
         Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       v10,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventRaceMaster___);
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventRaceMaster___);
         if ( Instance )
         {
           GoalRate = EventRaceMaster__GetGoalRate(
@@ -173,7 +173,7 @@ float __fastcall EventSpotMoveManager__CalcSpotPathRate(
       }
     }
 LABEL_25:
-    sub_B7076C(Instance, v8);
+    sub_B7769C(Instance, v8);
   }
   return v11;
 }
@@ -185,14 +185,14 @@ void __fastcall EventSpotMoveManager__Clear(EventSpotMoveManager_o *this, const 
   __int64 v4; // x1
   System_Collections_Generic_List_Enumerator_T__o v5; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4355698 & 1) == 0 )
+  if ( (byte_438ED10 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__Clear__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__);
-    byte_4355698 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__Clear__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__);
+    byte_438ED10 = 1;
   }
   memset(&v5, 0, sizeof(v5));
   eventSpotMoveDataList = this->fields.eventSpotMoveDataList;
@@ -201,25 +201,25 @@ void __fastcall EventSpotMoveManager__Clear(EventSpotMoveManager_o *this, const 
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v5,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)eventSpotMoveDataList,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v5,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__) )
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__) )
   {
     if ( !v5.fields.current )
-      sub_B7076C(0LL, v4);
+      sub_B7769C(0LL, v4);
     EventSpotMoveManager_SpotMoveData__Clear((EventSpotMoveManager_SpotMoveData_o *)v5.fields.current, 0LL);
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v5,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__);
   eventSpotMoveDataList = this->fields.eventSpotMoveDataList;
   if ( !eventSpotMoveDataList )
 LABEL_11:
-    sub_B7076C(eventSpotMoveDataList, method);
+    sub_B7769C(eventSpotMoveDataList, method);
   System_Collections_Generic_List_XWeaponTrail_Element___Clear(
     (System_Collections_Generic_List_XWeaponTrail_Element__o *)eventSpotMoveDataList,
-    (const MethodInfo_3025A90 *)Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__Clear__);
+    (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__Clear__);
 }
 
 
@@ -240,27 +240,27 @@ SpotPathEntity_o *__fastcall EventSpotMoveManager__GetSpotPathEntity(
   __int64 v5; // x1
   WarEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_435569E & 1) == 0 )
+  if ( (byte_438ED16 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_SpotPathMaster___);
-    sub_B70694(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int__TryGetEntity__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_435569E = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_SpotPathMaster___);
+    sub_B775C4(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int__TryGetEntity__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438ED16 = 1;
   }
   entity = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_SpotPathMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_SpotPathMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v5);
+    sub_B7769C(Instance, v5);
   }
   DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
     (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
     &entity,
     spotId,
-    (const MethodInfo_21C049C *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int__TryGetEntity__);
+    (const MethodInfo_21FB8F0 *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int__TryGetEntity__);
   return (SpotPathEntity_o *)entity;
 }
 
@@ -287,14 +287,14 @@ bool __fastcall EventSpotMoveManager__IsSpotObjectMoving(EventSpotMoveManager_o 
   System_Int32_array *v13; // x6
   System_Int32_array *v14; // x7
 
-  if ( (byte_435569D & 1) == 0 )
+  if ( (byte_438ED15 & 1) == 0 )
   {
-    sub_B70694(&Method_BasicHelper_Any_EventSpotMoveManager_SpotMoveData___);
-    sub_B70694(&Method_System_Func_EventSpotMoveManager_SpotMoveData__bool___ctor__);
-    sub_B70694(&System_Func_EventSpotMoveManager_SpotMoveData__bool__TypeInfo);
-    sub_B70694(&Method_EventSpotMoveManager___c__IsSpotObjectMoving_b__12_0__);
-    sub_B70694(&EventSpotMoveManager___c_TypeInfo);
-    byte_435569D = 1;
+    sub_B775C4(&Method_BasicHelper_Any_EventSpotMoveManager_SpotMoveData___);
+    sub_B775C4(&Method_System_Func_EventSpotMoveManager_SpotMoveData__bool___ctor__);
+    sub_B775C4(&System_Func_EventSpotMoveManager_SpotMoveData__bool__TypeInfo);
+    sub_B775C4(&Method_EventSpotMoveManager___c__IsSpotObjectMoving_b__12_0__);
+    sub_B775C4(&EventSpotMoveManager___c_TypeInfo);
+    byte_438ED15 = 1;
   }
   eventSpotMoveDataList = (System_Collections_Generic_List_T__o *)this->fields.eventSpotMoveDataList;
   v4 = EventSpotMoveManager___c_TypeInfo;
@@ -314,15 +314,15 @@ bool __fastcall EventSpotMoveManager__IsSpotObjectMoving(EventSpotMoveManager_o 
       static_fields = EventSpotMoveManager___c_TypeInfo->static_fields;
     }
     v7 = (Il2CppObject *)static_fields->__9;
-    _9__12_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B70764(System_Func_EventSpotMoveManager_SpotMoveData__bool__TypeInfo);
+    _9__12_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B77694(System_Func_EventSpotMoveManager_SpotMoveData__bool__TypeInfo);
     System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
       _9__12_0,
       v7,
       Method_EventSpotMoveManager___c__IsSpotObjectMoving_b__12_0__,
-      (const MethodInfo_29AC578 *)Method_System_Func_EventSpotMoveManager_SpotMoveData__bool___ctor__);
+      (const MethodInfo_29E92C4 *)Method_System_Func_EventSpotMoveManager_SpotMoveData__bool___ctor__);
     v8 = EventSpotMoveManager___c_TypeInfo->static_fields;
     v8->__9__12_0 = (struct System_Func_EventSpotMoveManager_SpotMoveData__bool__o *)_9__12_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v8->__9__12_0,
       (System_Int32_array **)_9__12_0,
       v9,
@@ -335,7 +335,7 @@ bool __fastcall EventSpotMoveManager__IsSpotObjectMoving(EventSpotMoveManager_o 
   return BasicHelper__Any_WarBoardData_SquareRangeSearch_(
            eventSpotMoveDataList,
            (System_Func_T__bool__o *)_9__12_0,
-           (const MethodInfo_1BDCA88 *)Method_BasicHelper_Any_EventSpotMoveManager_SpotMoveData___);
+           (const MethodInfo_1C66144 *)Method_BasicHelper_Any_EventSpotMoveManager_SpotMoveData___);
 }
 
 
@@ -350,30 +350,30 @@ void __fastcall EventSpotMoveManager__UpdateAllSpotPosition(
   const MethodInfo *v7; // x3
   System_Collections_Generic_List_Enumerator_T__o v8; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_435569A & 1) == 0 )
+  if ( (byte_438ED12 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__);
-    byte_435569A = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__);
+    byte_438ED12 = 1;
   }
   memset(&v8, 0, sizeof(v8));
   eventSpotMoveDataList = this->fields.eventSpotMoveDataList;
   if ( !eventSpotMoveDataList )
-    sub_B7076C(0LL, isFocedMove);
+    sub_B7769C(0LL, isFocedMove);
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v8,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)eventSpotMoveDataList,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__);
   v6 = isFocedMove;
   while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v8,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__) )
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__) )
     EventSpotMoveManager__UpdateSpotPosition(this, (EventSpotMoveManager_SpotMoveData_o *)v8.fields.current, v6, v7);
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v8,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__);
 }
 
 
@@ -422,26 +422,26 @@ void __fastcall EventSpotMoveManager__UpdateSpotPosition(
   EventDelegate_Callback_o *v41; // x23
   EventDelegate_o *v42; // x20
 
-  if ( (byte_435569B & 1) == 0 )
+  if ( (byte_438ED13 & 1) == 0 )
   {
-    sub_B70694(&EventDelegate_Callback_TypeInfo);
-    sub_B70694(&EventDelegate_TypeInfo);
-    sub_B70694(&EventSpotMoveManager_TypeInfo);
-    sub_B70694(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
-    sub_B70694(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_EventSpotMoveManager___c__DisplayClass9_0__UpdateSpotPosition_b__0__);
-    sub_B70694(&EventSpotMoveManager___c__DisplayClass9_0_TypeInfo);
-    byte_435569B = 1;
+    sub_B775C4(&EventDelegate_Callback_TypeInfo);
+    sub_B775C4(&EventDelegate_TypeInfo);
+    sub_B775C4(&EventSpotMoveManager_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_EventSpotMoveManager___c__DisplayClass9_0__UpdateSpotPosition_b__0__);
+    sub_B775C4(&EventSpotMoveManager___c__DisplayClass9_0_TypeInfo);
+    byte_438ED13 = 1;
   }
-  v6 = sub_B70764(EventSpotMoveManager___c__DisplayClass9_0_TypeInfo);
+  v6 = sub_B77694(EventSpotMoveManager___c__DisplayClass9_0_TypeInfo);
   EventSpotMoveManager___c__DisplayClass9_0___ctor((EventSpotMoveManager___c__DisplayClass9_0_o *)v6, 0LL);
   if ( !v6 )
     goto LABEL_52;
   *(_QWORD *)(v6 + 16) = data;
   v15 = v6 + 16;
-  sub_B70630((BattleServantConfConponent_o *)(v6 + 16), (System_Int32_array **)data, v9, v10, v11, v12, v13, v14);
+  sub_B77560((BattleServantConfConponent_o *)(v6 + 16), (System_Int32_array **)data, v9, v10, v11, v12, v13, v14);
   if ( !*(_QWORD *)(v6 + 16) )
     goto LABEL_52;
   v16 = *(UnityEngine_Object_o **)(*(_QWORD *)(v6 + 16) + 24LL);
@@ -501,7 +501,7 @@ void __fastcall EventSpotMoveManager__UpdateSpotPosition(
                     {
                       Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                           (UnityEngine_GameObject_o *)SpotPathEntity,
-                                                                          (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                                                                          (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
                       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                       {
@@ -515,7 +515,7 @@ void __fastcall EventSpotMoveManager__UpdateSpotPosition(
                         {
                           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                         }
-                        UnityEngine_Object__Destroy_36067208(Component_srcLineSprite, 0LL);
+                        UnityEngine_Object__Destroy_36309980(Component_srcLineSprite, 0LL);
                       }
                       if ( *(_QWORD *)v15 )
                       {
@@ -569,7 +569,7 @@ LABEL_43:
                                 {
                                   SpotPathEntity = UnityEngine_GameObject__AddComponent_UnitySynchronizationContext_SynchronizationContextBehavoir_(
                                                      (UnityEngine_GameObject_o *)SpotPathEntity,
-                                                     (const MethodInfo_1D4AD2C *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+                                                     (const MethodInfo_1DEBEC8 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
                                   if ( SpotPathEntity )
                                   {
                                     *((float *)SpotPathEntity + 30) = v29;
@@ -591,20 +591,20 @@ LABEL_43:
                                     MOVE_SPEED = v38->static_fields->MOVE_SPEED;
                                     v37->fields.style = 0;
                                     v37->fields.duration = v35 / MOVE_SPEED;
-                                    v41 = (EventDelegate_Callback_o *)sub_B70764(EventDelegate_Callback_TypeInfo);
+                                    v41 = (EventDelegate_Callback_o *)sub_B77694(EventDelegate_Callback_TypeInfo);
                                     EventDelegate_Callback___ctor(
                                       v41,
                                       (Il2CppObject *)v6,
                                       Method_EventSpotMoveManager___c__DisplayClass9_0__UpdateSpotPosition_b__0__,
                                       0LL);
-                                    v42 = (EventDelegate_o *)sub_B70764(EventDelegate_TypeInfo);
-                                    EventDelegate___ctor_29875020(v42, v41, 0LL);
+                                    v42 = (EventDelegate_o *)sub_B77694(EventDelegate_TypeInfo);
+                                    EventDelegate___ctor_30345520(v42, v41, 0LL);
                                     if ( onFinished )
                                     {
                                       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
                                         onFinished,
                                         (EventMissionProgressRequest_Argument_ProgressData_o *)v42,
-                                        (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_EventDelegate__Add__);
+                                        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventDelegate__Add__);
                                       UITweener__PlayForward(v37, 0LL);
                                       if ( *(_QWORD *)v15 )
                                       {
@@ -629,7 +629,7 @@ LABEL_43:
       }
     }
 LABEL_52:
-    sub_B7076C(SpotPathEntity, v8);
+    sub_B7769C(SpotPathEntity, v8);
   }
 }
 
@@ -651,10 +651,10 @@ void __fastcall EventSpotMoveManager_SpotMoveData__Clear(
   v2 = this;
   this->fields.SpotId = 0;
   this->fields.SpotObject = 0LL;
-  sub_B70630(&this->fields.SpotObject);
+  sub_B77560(&this->fields.SpotObject);
   v2->fields.SpotPathMesh = 0LL;
   v2 = (EventSpotMoveManager_SpotMoveData_o *)((char *)v2 + 32);
-  sub_B70630(v2);
+  sub_B77560(v2);
   LODWORD(v2->monitor) = 0;
 }
 
@@ -664,16 +664,16 @@ void __fastcall EventSpotMoveManager___c___cctor(const MethodInfo *method)
   Il2CppObject *v1; // x19
   struct EventSpotMoveManager___c_StaticFields *static_fields; // x0
 
-  if ( (byte_434EA77 & 1) == 0 )
+  if ( (byte_4388048 & 1) == 0 )
   {
-    sub_B70694(&EventSpotMoveManager___c_TypeInfo);
-    byte_434EA77 = 1;
+    sub_B775C4(&EventSpotMoveManager___c_TypeInfo);
+    byte_4388048 = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(EventSpotMoveManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(EventSpotMoveManager___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = EventSpotMoveManager___c_TypeInfo->static_fields;
   static_fields->__9 = (struct EventSpotMoveManager___c_o *)v1;
-  sub_B70630(static_fields);
+  sub_B77560(static_fields);
 }
 
 
@@ -689,7 +689,7 @@ bool __fastcall EventSpotMoveManager___c___IsSpotObjectMoving_b__12_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   return x->fields.State == 1;
 }
 
@@ -714,7 +714,7 @@ void __fastcall EventSpotMoveManager___c__DisplayClass9_0___UpdateSpotPosition_b
     || (GameObjectExtensions__SetPosition(data->fields.SpotObject, this->fields.endPos, 0LL),
         (v4 = this->fields.data) == 0LL) )
   {
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   v4->fields.State = 0;
 }

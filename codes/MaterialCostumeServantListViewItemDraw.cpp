@@ -16,10 +16,10 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetButtonState(
   struct UICommonButton_o *v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_435572A & 1) == 0 )
+  if ( (byte_438EE2E & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_435572A = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438EE2E = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -37,7 +37,7 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetButtonState(
             v7->klass->vtable._6_OnInit.methodPtr),
           (v7 = this->fields.baseButton) == 0LL) )
     {
-      sub_B7076C(v7, v6);
+      sub_B7769C(v7, v6);
     }
     if ( isEnable )
       v8 = 0LL;
@@ -77,20 +77,20 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetItem(
   UILabel_o *maskLabel; // x20
   __int64 *v13; // x8
 
-  if ( (byte_4355729 & 1) == 0 )
+  if ( (byte_438EE2D & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    sub_B70694(&StringLiteral_8763/*"MATERIAL_FIND_SERVANT"*/);
-    sub_B70694(&StringLiteral_8762/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/);
-    byte_4355729 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    sub_B775C4(&StringLiteral_8819/*"MATERIAL_FIND_SERVANT"*/);
+    sub_B775C4(&StringLiteral_8818/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/);
+    byte_438EE2D = 1;
   }
   if ( item && mode )
   {
     servantFaceIcon = this->fields.servantFaceIcon;
     if ( !servantFaceIcon )
       goto LABEL_35;
-    ServantFaceIconComponent__Set_31484952(
+    ServantFaceIconComponent__Set_31762184(
       servantFaceIcon,
       item->fields._userSvtCollectionEntity_k__BackingField,
       item->fields._svtCostumeEntity_k__BackingField,
@@ -123,7 +123,7 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetItem(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v13 = &StringLiteral_8763/*"MATERIAL_FIND_SERVANT"*/;
+      v13 = &StringLiteral_8819/*"MATERIAL_FIND_SERVANT"*/;
     }
     else
     {
@@ -171,7 +171,7 @@ LABEL_13:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v13 = &StringLiteral_8762/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/;
+      v13 = &StringLiteral_8818/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/;
     }
     servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)*v13, 0LL);
     if ( maskLabel )
@@ -185,6 +185,6 @@ LABEL_13:
       }
     }
 LABEL_35:
-    sub_B7076C(servantFaceIcon, item);
+    sub_B7769C(servantFaceIcon, item);
   }
 }

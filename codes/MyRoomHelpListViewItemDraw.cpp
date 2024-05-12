@@ -39,14 +39,14 @@ void __fastcall MyRoomHelpListViewItemDraw__SetItem(
   __int64 v32; // x0
   UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4351C2F & 1) == 0 )
+  if ( (byte_438B92A & 1) == 0 )
   {
-    sub_B70694(&char___TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_19838/*"img_menuboard_01"*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    sub_B70694(&StringLiteral_19961/*"img_tutorial_txtbg"*/);
-    byte_4351C2F = 1;
+    sub_B775C4(&char___TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_19928/*"img_menuboard_01"*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    sub_B775C4(&StringLiteral_20051/*"img_tutorial_txtbg"*/);
+    byte_438B92A = 1;
   }
   if ( item )
   {
@@ -79,7 +79,7 @@ void __fastcall MyRoomHelpListViewItemDraw__SetItem(
       {
         if ( !infoTextLabel )
           goto LABEL_44;
-        imageName = (System_String_o *)StringLiteral_19838/*"img_menuboard_01"*/;
+        imageName = (System_String_o *)StringLiteral_19928/*"img_menuboard_01"*/;
         v13 = (System_String_o *)StringLiteral_1/*""*/;
       }
       else
@@ -103,14 +103,14 @@ void __fastcall MyRoomHelpListViewItemDraw__SetItem(
           if ( v16 )
           {
             mText = v16->fields.mText;
-            gameObject = sub_B706AC(char___TypeInfo, 1LL);
+            gameObject = sub_B775DC(char___TypeInfo, 1LL);
             if ( gameObject )
             {
               v9 = (const MethodInfo *)gameObject;
               if ( !*(_DWORD *)(gameObject + 24) )
               {
-                v32 = sub_B70798(gameObject);
-                sub_B70738(v32, 0LL);
+                v32 = sub_B776C8(gameObject);
+                sub_B77668(v32, 0LL);
               }
               *(_WORD *)(gameObject + 32) = 10;
               if ( mText )
@@ -183,7 +183,7 @@ void __fastcall MyRoomHelpListViewItemDraw__SetItem(
                     gameObject = (__int64)this->fields.baseTextSprite;
                     if ( gameObject )
                     {
-                      UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_19961/*"img_tutorial_txtbg"*/, 0LL);
+                      UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_20051/*"img_tutorial_txtbg"*/, 0LL);
                       gameObject = (__int64)this->fields.infoTextLabel;
                       if ( gameObject )
                       {
@@ -223,7 +223,7 @@ void __fastcall MyRoomHelpListViewItemDraw__SetItem(
         }
       }
 LABEL_44:
-      sub_B7076C(gameObject, v9);
+      sub_B7769C(gameObject, v9);
     }
   }
 }

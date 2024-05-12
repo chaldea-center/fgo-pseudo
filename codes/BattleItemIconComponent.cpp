@@ -3,16 +3,16 @@ void __fastcall BattleItemIconComponent___ctor(BattleItemIconComponent_o *this, 
   UnityEngine_Color_o yellow; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v4; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_434EB3D & 1) == 0 )
+  if ( (byte_438810E & 1) == 0 )
   {
-    sub_B70694(&ItemIconComponent_TypeInfo);
-    sub_B70694(&StringLiteral_704/*"+"*/);
-    byte_434EB3D = 1;
+    sub_B775C4(&ItemIconComponent_TypeInfo);
+    sub_B775C4(&StringLiteral_706/*"+"*/);
+    byte_438810E = 1;
   }
   yellow = UnityEngine_Color__get_yellow(0LL);
   this->fields.addCountColor.fields.rgba = UnityEngine_Color32__op_Implicit(yellow, 0LL).fields.rgba;
-  this->fields.addCountStr = (struct System_String_o *)StringLiteral_704/*"+"*/;
-  sub_B70630(&this->fields.addCountStr);
+  this->fields.addCountStr = (struct System_String_o *)StringLiteral_706/*"+"*/;
+  sub_B77560(&this->fields.addCountStr);
   v4 = UnityEngine_Color__get_yellow(0LL);
   this->fields.nowAddCountColor.fields.rgba = UnityEngine_Color32__op_Implicit(v4, 0LL).fields.rgba;
   if ( (BYTE3(ItemIconComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -61,7 +61,7 @@ void __fastcall BattleItemIconComponent__SetActiveDarkMode(
   v10.fields.a = a;
   ItemIconComponent__SetColor((ItemIconComponent_o *)this, v10, 0LL);
   rgba = (UnityEngine_Color32_o)(unsigned int)this->fields.addCountColor.fields.rgba;
-  v11 = UnityEngine_Color32__op_Implicit_41067916(rgba, 0LL);
+  v11 = UnityEngine_Color32__op_Implicit_41413804(rgba, 0LL);
   v13.fields.r = r;
   v13.fields.g = g;
   v13.fields.b = b;
@@ -114,16 +114,16 @@ void __fastcall BattleItemIconComponent__setCounterLabel(
   UnityEngine_Color_o v42; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v43; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_434EB3C & 1) == 0 )
+  if ( (byte_438810D & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&object___TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_24034/*"{0}{1:#,0}\n[{2}]({3}{4:#,0})[-]"*/);
-    sub_B70694(&StringLiteral_16051/*"[{0}]({1}{2:#,0})[-]"*/);
-    sub_B70694(&StringLiteral_24033/*"{0}{1:#,0}"*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_434EB3C = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&object___TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_24138/*"{0}{1:#,0}\n[{2}]({3}{4:#,0})[-]"*/);
+    sub_B775C4(&StringLiteral_16121/*"[{0}]({1}{2:#,0})[-]"*/);
+    sub_B775C4(&StringLiteral_24137/*"{0}{1:#,0}"*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438810D = 1;
   }
   counterLabel = (UnityEngine_Object_o *)this->fields.counterLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -141,52 +141,52 @@ void __fastcall BattleItemIconComponent__setCounterLabel(
     UILabel__set_spacingY(v11, 2, 0LL);
     CountableString = ItemType__GetCountableString(type, 0LL);
     rgba = (UnityEngine_Color32_o)(unsigned int)this->fields.addCountColor.fields.rgba;
-    v42 = UnityEngine_Color32__op_Implicit_41067916(rgba, 0LL);
+    v42 = UnityEngine_Color32__op_Implicit_41413804(rgba, 0LL);
     v17 = UnityEngine_ColorUtility__ToHtmlStringRGB(v42, 0LL);
     v18 = this->fields.counterLabel;
     v19 = (Il2CppObject *)v17;
-    v11 = (UILabel_o *)sub_B706AC(object___TypeInfo, 5LL);
+    v11 = (UILabel_o *)sub_B775DC(object___TypeInfo, 5LL);
     if ( !v11 )
       goto LABEL_37;
     v20 = (System_Object_array *)v11;
-    if ( !CountableString || (v11 = (UILabel_o *)sub_B70754(CountableString, v11->klass->_1.element_class)) != 0LL )
+    if ( !CountableString || (v11 = (UILabel_o *)sub_B77684(CountableString, v11->klass->_1.element_class)) != 0LL )
     {
       if ( !v20->max_length )
         goto LABEL_38;
       v20->m_Items[0] = (Il2CppObject *)CountableString;
-      sub_B70630(v20->m_Items);
+      sub_B77560(v20->m_Items);
       v39 = count;
       v11 = (UILabel_o *)j_il2cpp_value_box_0(int_TypeInfo, &v39, v21);
       v22 = (Il2CppObject *)v11;
-      if ( !v11 || (v11 = (UILabel_o *)sub_B70754(v11, v20->obj.klass->_1.element_class)) != 0LL )
+      if ( !v11 || (v11 = (UILabel_o *)sub_B77684(v11, v20->obj.klass->_1.element_class)) != 0LL )
       {
         if ( v20->max_length <= 1 )
           goto LABEL_38;
         v20->m_Items[1] = v22;
-        sub_B70630(&v20->m_Items[1]);
-        if ( !v19 || (v11 = (UILabel_o *)sub_B70754(v19, v20->obj.klass->_1.element_class)) != 0LL )
+        sub_B77560(&v20->m_Items[1]);
+        if ( !v19 || (v11 = (UILabel_o *)sub_B77684(v19, v20->obj.klass->_1.element_class)) != 0LL )
         {
           if ( v20->max_length <= 2 )
             goto LABEL_38;
           v20->m_Items[2] = v19;
-          sub_B70630(&v20->m_Items[2]);
+          sub_B77560(&v20->m_Items[2]);
           addCountStr = this->fields.addCountStr;
-          if ( !addCountStr || (v11 = (UILabel_o *)sub_B70754(addCountStr, v20->obj.klass->_1.element_class)) != 0LL )
+          if ( !addCountStr || (v11 = (UILabel_o *)sub_B77684(addCountStr, v20->obj.klass->_1.element_class)) != 0LL )
           {
             if ( v20->max_length <= 3 )
               goto LABEL_38;
             v20->m_Items[3] = (Il2CppObject *)addCountStr;
-            sub_B70630(&v20->m_Items[3]);
+            sub_B77560(&v20->m_Items[3]);
             v38 = addCount;
             v11 = (UILabel_o *)j_il2cpp_value_box_0(int_TypeInfo, &v38, v24);
             v25 = (Il2CppObject *)v11;
-            if ( !v11 || (v11 = (UILabel_o *)sub_B70754(v11, v20->obj.klass->_1.element_class)) != 0LL )
+            if ( !v11 || (v11 = (UILabel_o *)sub_B77684(v11, v20->obj.klass->_1.element_class)) != 0LL )
             {
               if ( v20->max_length > 4 )
               {
                 v20->m_Items[4] = v25;
-                sub_B70630(&v20->m_Items[4]);
-                v11 = (UILabel_o *)System_String__Format_44836892((System_String_o *)StringLiteral_24034/*"{0}{1:#,0}\n[{2}]({3}{4:#,0})[-]"*/, v20, 0LL);
+                sub_B77560(&v20->m_Items[4]);
+                v11 = (UILabel_o *)System_String__Format_44980660((System_String_o *)StringLiteral_24138/*"{0}{1:#,0}\n[{2}]({3}{4:#,0})[-]"*/, v20, 0LL);
                 if ( !v18 )
                   goto LABEL_37;
                 v26 = (System_String_o *)v11;
@@ -196,15 +196,15 @@ LABEL_35:
                 return;
               }
 LABEL_38:
-              v36 = sub_B70798(v11);
-              sub_B70738(v36, 0LL);
+              v36 = sub_B776C8(v11);
+              sub_B77668(v36, 0LL);
             }
           }
         }
       }
     }
-    v37 = sub_B7078C();
-    sub_B70738(v37, 0LL);
+    v37 = sub_B776BC();
+    sub_B77668(v37, 0LL);
   }
   UILabel__set_spacingY(v11, 0, 0LL);
   v11 = (UILabel_o *)ItemType__GetCountableString(type, 0LL);
@@ -220,11 +220,11 @@ LABEL_38:
     v14 = (Il2CppObject *)v11;
     v39 = count;
     v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v39, v12);
-    v11 = (UILabel_o *)System_String__Format_44753704((System_String_o *)StringLiteral_24033/*"{0}{1:#,0}"*/, v14, v15, 0LL);
+    v11 = (UILabel_o *)System_String__Format_44897472((System_String_o *)StringLiteral_24137/*"{0}{1:#,0}"*/, v14, v15, 0LL);
     v10 = (System_String_o *)v11;
     if ( !v13 )
 LABEL_37:
-      sub_B7076C(v11, v10);
+      sub_B7769C(v11, v10);
   }
   UILabel__set_text(v13, v10, 0LL);
   if ( addCount >= 1 )
@@ -234,14 +234,14 @@ LABEL_37:
       goto LABEL_37;
     v41 = (UnityEngine_Color32_o)(unsigned int)this->fields.nowAddCountColor.fields.rgba;
     mText = v28->fields.mText;
-    v43 = UnityEngine_Color32__op_Implicit_41067916(v41, 0LL);
+    v43 = UnityEngine_Color32__op_Implicit_41413804(v41, 0LL);
     v30 = UnityEngine_ColorUtility__ToHtmlStringRGB(v43, 0LL);
     v31 = (Il2CppObject *)this->fields.addCountStr;
     v32 = (Il2CppObject *)v30;
     v39 = addCount;
     v34 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v39, v33);
-    v35 = System_String__Format_44759232((System_String_o *)StringLiteral_16051/*"[{0}]({1}{2:#,0})[-]"*/, v32, v31, v34, 0LL);
-    v26 = System_String__Concat_44758168(mText, v35, 0LL);
+    v35 = System_String__Format_44903000((System_String_o *)StringLiteral_16121/*"[{0}]({1}{2:#,0})[-]"*/, v32, v31, v34, 0LL);
+    v26 = System_String__Concat_44901936(mText, v35, 0LL);
     v27 = v28;
     goto LABEL_35;
   }

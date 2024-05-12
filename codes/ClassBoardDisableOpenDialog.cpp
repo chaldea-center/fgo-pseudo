@@ -2,11 +2,11 @@ void __fastcall ClassBoardDisableOpenDialog___ctor(ClassBoardDisableOpenDialog_o
 {
   *(_QWORD *)&this->fields.itemObjForEffect.fields.x = 0LL;
   *(_QWORD *)&this->fields.itemObjForEffect.fields.z = 0LL;
-  *(_OWORD *)&this->fields.itemLabelForEffect.fields.y = xmmword_32EBF70;
-  *(_OWORD *)&this->fields.descriptionPosForEffect.fields.z = xmmword_32EBF80;
-  *(_OWORD *)&this->fields.itemObjForLock.fields.x = xmmword_32EBF90;
-  *(_OWORD *)&this->fields.itemLabelForLock.fields.y = xmmword_32EBFA0;
-  *(_OWORD *)&this->fields.descriptionPosForLock.fields.z = xmmword_32EBF80;
+  *(_OWORD *)&this->fields.itemLabelForEffect.fields.y = xmmword_331F3B0;
+  *(_OWORD *)&this->fields.descriptionPosForEffect.fields.z = xmmword_331F3C0;
+  *(_OWORD *)&this->fields.itemObjForLock.fields.x = xmmword_331F3D0;
+  *(_OWORD *)&this->fields.itemLabelForLock.fields.y = xmmword_331F3E0;
+  *(_OWORD *)&this->fields.descriptionPosForLock.fields.z = xmmword_331F3C0;
   ClassBoardBaseDialog___ctor((ClassBoardBaseDialog_o *)this, method);
 }
 
@@ -16,15 +16,15 @@ void __fastcall ClassBoardDisableOpenDialog__Close(ClassBoardDisableOpenDialog_o
   System_Action_o *v3; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_4352BD8 & 1) == 0 )
+  if ( (byte_438C430 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_ClassBoardDisableOpenDialog_EndClose__);
-    byte_4352BD8 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_ClassBoardDisableOpenDialog_EndClose__);
+    byte_438C430 = 1;
   }
   this->fields.isButtonEnable = 0;
   ClassBoardBaseDialog__SetDisableClickItemIcon((ClassBoardBaseDialog_o *)this, method);
-  v3 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_ClassBoardDisableOpenDialog_EndClose__, 0LL);
   ClassBoardBaseDialog__Close((ClassBoardBaseDialog_o *)this, v3, v4);
 }
@@ -34,10 +34,10 @@ void __fastcall ClassBoardDisableOpenDialog__EndClose(ClassBoardDisableOpenDialo
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4352BD9 & 1) == 0 )
+  if ( (byte_438C431 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4352BD9 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438C431 = 1;
   }
   ActionExtensions__Call(this->fields.closeFunc, 0LL);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -46,7 +46,7 @@ void __fastcall ClassBoardDisableOpenDialog__EndClose(ClassBoardDisableOpenDialo
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  UnityEngine_Object__Destroy_36067208(gameObject, 0LL);
+  UnityEngine_Object__Destroy_36309980(gameObject, 0LL);
 }
 
 
@@ -71,17 +71,17 @@ void __fastcall ClassBoardDisableOpenDialog__OnClickClose(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4352BD7 & 1) == 0 )
+  if ( (byte_438C42F & 1) == 0 )
   {
-    sub_B70694(&Method_ClassBoardDisableOpenDialog_OnClickClose__);
-    byte_4352BD7 = 1;
+    sub_B775C4(&Method_ClassBoardDisableOpenDialog_OnClickClose__);
+    byte_438C42F = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_ClassBoardDisableOpenDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_ClassBoardDisableOpenDialog_OnClickClose__ + 75) & 2) != 0 )
-      v3 = (_QWORD *)sub_B7069C(Method_ClassBoardDisableOpenDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_B70678(v3, v3[3]);
+      v3 = (_QWORD *)sub_B775CC(Method_ClassBoardDisableOpenDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
     OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.onClickCloseSeKind, 0LL);
     ClassBoardDisableOpenDialog__Close(this, v5);
   }
@@ -154,22 +154,22 @@ void __fastcall ClassBoardDisableOpenDialog__Open(
   const MethodInfo *v63; // x1
   ClassBoardCondData_o v64; // 0:x1.12
 
-  if ( (byte_4352BD6 & 1) == 0 )
+  if ( (byte_438C42E & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_ClassBoardDisableOpenDialog_EndOpen__);
-    sub_B70694(&ClassBoardLock_TypeInfo);
-    sub_B70694(&IClassBoardLockModel_TypeInfo);
-    sub_B70694(&IClassBoardSquareModel_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_3073/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_DETAIL"*/);
-    sub_B70694(&StringLiteral_3075/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_TITLE_LOCK"*/);
-    sub_B70694(&StringLiteral_3072/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_CLOSE"*/);
-    sub_B70694(&StringLiteral_3074/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_TITLE_EFFECT"*/);
-    byte_4352BD6 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_ClassBoardDisableOpenDialog_EndOpen__);
+    sub_B775C4(&ClassBoardLock_TypeInfo);
+    sub_B775C4(&IClassBoardLockModel_TypeInfo);
+    sub_B775C4(&IClassBoardSquareModel_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_3122/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_DETAIL"*/);
+    sub_B775C4(&StringLiteral_3124/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_TITLE_LOCK"*/);
+    sub_B775C4(&StringLiteral_3121/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_CLOSE"*/);
+    sub_B775C4(&StringLiteral_3123/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_TITLE_EFFECT"*/);
+    byte_438C42E = 1;
   }
   this->fields.classBoardSquare = square;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.classBoardSquare,
     (System_Int32_array **)square,
     (System_String_array **)closeFunc,
@@ -179,7 +179,7 @@ void __fastcall ClassBoardDisableOpenDialog__Open(
     v6,
     v7);
   this->fields.closeFunc = closeFunc;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.closeFunc,
     (System_Int32_array **)closeFunc,
     v11,
@@ -208,7 +208,7 @@ void __fastcall ClassBoardDisableOpenDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    LockModel = (unsigned __int64)LocalizationManager__Get((System_String_o *)StringLiteral_3075/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_TITLE_LOCK"*/, 0LL);
+    LockModel = (unsigned __int64)LocalizationManager__Get((System_String_o *)StringLiteral_3124/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_TITLE_LOCK"*/, 0LL);
     if ( titleLabel )
     {
       UILabel__set_text(titleLabel, (System_String_o *)LockModel, 0LL);
@@ -233,7 +233,7 @@ void __fastcall ClassBoardDisableOpenDialog__Open(
         else
         {
 LABEL_19:
-          v26 = sub_B08590(LockModel, IClassBoardLockModel_TypeInfo, 0LL);
+          v26 = sub_B0F4C0(LockModel, IClassBoardLockModel_TypeInfo, 0LL);
         }
         LockModel = (*(__int64 (__fastcall **)(unsigned __int64, _QWORD))v26)(v23, *(_QWORD *)(v26 + 8));
         if ( HIDWORD(LockModel) )
@@ -259,7 +259,7 @@ LABEL_19:
           else
           {
 LABEL_38:
-            v37 = sub_B08590(LockModel, IClassBoardLockModel_TypeInfo, 0LL);
+            v37 = sub_B0F4C0(LockModel, IClassBoardLockModel_TypeInfo, 0LL);
           }
           v48 = (const MethodInfo *)(*(__int64 (__fastcall **)(unsigned __int64, _QWORD))v37)(v34, *(_QWORD *)(v37 + 8));
           v64.fields.Num = v49;
@@ -288,7 +288,7 @@ LABEL_38:
             else
             {
 LABEL_52:
-              p_method = sub_B08590(SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 6LL);
+              p_method = sub_B0F4C0(SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 6LL);
             }
             v55 = (System_Collections_Generic_IReadOnlyCollection_IClassBoardItemModel__o *)(*(__int64 (__fastcall **)(struct IClassBoardSquareModel_o *, _QWORD))p_method)(
                                                                                               SquareModel_k__BackingField,
@@ -323,14 +323,14 @@ LABEL_52:
       }
     }
 LABEL_64:
-    sub_B7076C(LockModel, v21);
+    sub_B7769C(LockModel, v21);
   }
   if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  LockModel = (unsigned __int64)LocalizationManager__Get((System_String_o *)StringLiteral_3074/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_TITLE_EFFECT"*/, 0LL);
+  LockModel = (unsigned __int64)LocalizationManager__Get((System_String_o *)StringLiteral_3123/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_TITLE_EFFECT"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_64;
   UILabel__set_text(titleLabel, (System_String_o *)LockModel, 0LL);
@@ -362,7 +362,7 @@ LABEL_64:
   else
   {
 LABEL_30:
-    v32 = sub_B08590(v28, IClassBoardSquareModel_TypeInfo, 6LL);
+    v32 = sub_B0F4C0(v28, IClassBoardSquareModel_TypeInfo, 6LL);
   }
   v38 = (System_Collections_Generic_IReadOnlyCollection_IClassBoardItemModel__o *)(*(__int64 (__fastcall **)(struct IClassBoardSquareModel_o *, _QWORD))v32)(
                                                                                     v28,
@@ -396,17 +396,17 @@ LABEL_58:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  LockModel = (unsigned __int64)LocalizationManager__Get((System_String_o *)StringLiteral_3073/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_DETAIL"*/, 0LL);
+  LockModel = (unsigned __int64)LocalizationManager__Get((System_String_o *)StringLiteral_3122/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_DETAIL"*/, 0LL);
   if ( !v60 )
     goto LABEL_64;
   UILabel__set_text(v60, (System_String_o *)LockModel, 0LL);
   closeBtnLabel = this->fields.closeBtnLabel;
-  LockModel = (unsigned __int64)LocalizationManager__Get((System_String_o *)StringLiteral_3072/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_CLOSE"*/, 0LL);
+  LockModel = (unsigned __int64)LocalizationManager__Get((System_String_o *)StringLiteral_3121/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_CLOSE"*/, 0LL);
   if ( !closeBtnLabel )
     goto LABEL_64;
   UILabel__set_text(closeBtnLabel, (System_String_o *)LockModel, 0LL);
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 0, 0LL);
-  v62 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v62 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v62, (Il2CppObject *)this, Method_ClassBoardDisableOpenDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v62, 0, 0LL);
   ClassBoardBaseDialog__SetEffectScrollInitPos((ClassBoardBaseDialog_o *)this, v63);
@@ -417,10 +417,10 @@ System_String_o *__fastcall ClassBoardDisableOpenDialog__get_closeBtnPath(
         ClassBoardDisableOpenDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4352BDA & 1) == 0 )
+  if ( (byte_438C432 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_15699/*"Window/CloseBtn"*/);
-    byte_4352BDA = 1;
+    sub_B775C4(&StringLiteral_15769/*"Window/CloseBtn"*/);
+    byte_438C432 = 1;
   }
-  return (System_String_o *)StringLiteral_15699/*"Window/CloseBtn"*/;
+  return (System_String_o *)StringLiteral_15769/*"Window/CloseBtn"*/;
 }

@@ -13,22 +13,22 @@ void __fastcall BattleItemListWindowComponent__CloseWindow(
   struct System_String_o **v3; // x8
 
   v2 = this;
-  if ( (byte_434EB3F & 1) == 0 )
+  if ( (byte_4388110 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_3185/*"CLOSE_TO_TACTICAL"*/);
-    this = (BattleItemListWindowComponent_o *)sub_B70694(&StringLiteral_3184/*"CLOSE_TO_MENU"*/);
-    byte_434EB3F = 1;
+    sub_B775C4(&StringLiteral_3236/*"CLOSE_TO_TACTICAL"*/);
+    this = (BattleItemListWindowComponent_o *)sub_B775C4(&StringLiteral_3235/*"CLOSE_TO_MENU"*/);
+    byte_4388110 = 1;
   }
   if ( v2->fields.isFromBattleMenu )
-    v3 = (struct System_String_o **)&StringLiteral_3184/*"CLOSE_TO_MENU"*/;
+    v3 = (struct System_String_o **)&StringLiteral_3235/*"CLOSE_TO_MENU"*/;
   else
-    v3 = (struct System_String_o **)&StringLiteral_3185/*"CLOSE_TO_TACTICAL"*/;
+    v3 = (struct System_String_o **)&StringLiteral_3236/*"CLOSE_TO_TACTICAL"*/;
   if ( !v2
     || (v2->fields.closeFsmEvent = *v3,
-        sub_B70630(&v2->fields.closeFsmEvent),
+        sub_B77560(&v2->fields.closeFsmEvent),
         (this = (BattleItemListWindowComponent_o *)v2->fields.itemList) == 0LL) )
   {
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   BattleViewItemlistComponent__setHide((BattleViewItemlistComponent_o *)this, 0LL);
   BattleWindowComponent__Close((BattleWindowComponent_o *)v2, 0LL, 0LL);
@@ -46,7 +46,7 @@ void __fastcall BattleItemListWindowComponent__CompClose(
     || (PlayMakerFSM__SendEvent(masterFsm, this->fields.closeFsmEvent, 0LL),
         (masterFsm = (PlayMakerFSM_o *)this->fields.itemList) == 0LL) )
   {
-    sub_B7076C(masterFsm, method);
+    sub_B7769C(masterFsm, method);
   }
   BattleViewItemlistComponent__ClearObj((BattleViewItemlistComponent_o *)masterFsm, 0LL);
   BattleWindowComponent__CompClose((BattleWindowComponent_o *)this, 0LL);
@@ -61,7 +61,7 @@ void __fastcall BattleItemListWindowComponent__CompOpen(
 
   itemList = this->fields.itemList;
   if ( !itemList )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   BattleViewItemlistComponent__setShow(itemList, 0LL);
   BattleWindowComponent__CompOpen((BattleWindowComponent_o *)this, 0LL);
 }
@@ -88,17 +88,17 @@ void __fastcall BattleItemListWindowComponent__Open(
   BattleDropItem_array *DropItems; // x23
   BattleDropItemComponent_ClickDelegate_o *v10; // x24
 
-  if ( (byte_434EB3E & 1) == 0 )
+  if ( (byte_438810F & 1) == 0 )
   {
-    sub_B70694(&Method_BattleItemListWindowComponent_OnItemClick__);
-    sub_B70694(&BattleDropItemComponent_ClickDelegate_TypeInfo);
-    byte_434EB3E = 1;
+    sub_B775C4(&Method_BattleItemListWindowComponent_OnItemClick__);
+    sub_B775C4(&BattleDropItemComponent_ClickDelegate_TypeInfo);
+    byte_438810F = 1;
   }
   battleData = this->fields.battleData;
   if ( !battleData
     || (itemList = this->fields.itemList,
         DropItems = BattleData__getDropItems(battleData, 0LL),
-        v10 = (BattleDropItemComponent_ClickDelegate_o *)sub_B70764(BattleDropItemComponent_ClickDelegate_TypeInfo),
+        v10 = (BattleDropItemComponent_ClickDelegate_o *)sub_B77694(BattleDropItemComponent_ClickDelegate_TypeInfo),
         BattleDropItemComponent_ClickDelegate___ctor(
           v10,
           (Il2CppObject *)this,
@@ -113,7 +113,7 @@ void __fastcall BattleItemListWindowComponent__Open(
           0LL),
         (battleData = (BattleData_o *)this->fields.itemList) == 0LL) )
   {
-    sub_B7076C(battleData, fromBattleMenu);
+    sub_B7769C(battleData, fromBattleMenu);
   }
   BattleViewItemlistComponent__setHide((BattleViewItemlistComponent_o *)battleData, 0LL);
   this->fields.isFromBattleMenu = fromBattleMenu;
@@ -127,7 +127,7 @@ void __fastcall BattleItemListWindowComponent__SetBattleData(
         const MethodInfo *method)
 {
   this->fields.battleData = data;
-  sub_B70630(&this->fields.battleData);
+  sub_B77560(&this->fields.battleData);
 }
 
 
@@ -135,10 +135,10 @@ System_String_o *__fastcall BattleItemListWindowComponent__get_closeBtnPath(
         BattleItemListWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_434EB40 & 1) == 0 )
+  if ( (byte_4388111 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_12800/*"Scroll Bar/item_list_close"*/);
-    byte_434EB40 = 1;
+    sub_B775C4(&StringLiteral_12864/*"Scroll Bar/item_list_close"*/);
+    byte_4388111 = 1;
   }
-  return (System_String_o *)StringLiteral_12800/*"Scroll Bar/item_list_close"*/;
+  return (System_String_o *)StringLiteral_12864/*"Scroll Bar/item_list_close"*/;
 }

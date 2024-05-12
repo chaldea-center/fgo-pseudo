@@ -9,10 +9,10 @@ UnityEngine_Vector2_o __fastcall FSWindowUtil__GetSize(const MethodInfo *method)
   float v7; // s0
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_435222B & 1) == 0 )
+  if ( (byte_438B8EE & 1) == 0 )
   {
-    sub_B70694(&ManagerConfig_TypeInfo);
-    byte_435222B = 1;
+    sub_B775C4(&ManagerConfig_TypeInfo);
+    byte_438B8EE = 1;
   }
   width = UnityEngine_Screen__get_width(0LL);
   height = UnityEngine_Screen__get_height(0LL);

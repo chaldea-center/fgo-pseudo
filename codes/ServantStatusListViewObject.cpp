@@ -16,19 +16,19 @@ void __fastcall ServantStatusListViewObject__Awake(ServantStatusListViewObject_o
   System_Int32_array *v10; // x7
   const MethodInfo *v11; // x1
 
-  if ( (byte_4355E34 & 1) == 0 )
+  if ( (byte_438F308 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_ServantStatusListViewItemDraw___);
-    byte_4355E34 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ServantStatusListViewItemDraw___);
+    byte_438F308 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   Component_srcLineSprite = (struct ServantStatusListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                         dispObject,
-                                                                        (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusListViewItemDraw___);
+                                                                        (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusListViewItemDraw___);
   this->fields.itemDraw = Component_srcLineSprite;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.itemDraw,
     (System_Int32_array **)Component_srcLineSprite,
     v5,
@@ -58,10 +58,10 @@ void __fastcall ServantStatusListViewObject__EventBattleStart(
   System_Action_o *v13; // x20
   struct System_Action_o *callbackFunc; // t1
 
-  if ( (byte_4355E3A & 1) == 0 )
+  if ( (byte_438F30E & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355E3A = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438F30E = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -73,7 +73,7 @@ void __fastcall ServantStatusListViewObject__EventBattleStart(
   {
     v11 = this->fields.itemDraw;
     if ( !v11 )
-      sub_B7076C(0LL, v4);
+      sub_B7769C(0LL, v4);
     ((void (__fastcall *)(struct ServantStatusListViewItemDraw_o *, struct ServantStatusListViewItem_o *, Il2CppMethodPointer))v11->klass->vtable._6_PlayBattle.method)(
       v11,
       this->fields.mainInfo,
@@ -85,7 +85,7 @@ void __fastcall ServantStatusListViewObject__EventBattleStart(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_B70630(p_callbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_B77560(p_callbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
     System_Action__Invoke(v13, 0LL);
   }
 }
@@ -108,10 +108,10 @@ void __fastcall ServantStatusListViewObject__EventCommandStart(
   System_Action_o *v13; // x20
   struct System_Action_o *callbackFunc; // t1
 
-  if ( (byte_4355E3B & 1) == 0 )
+  if ( (byte_438F30F & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355E3B = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438F30F = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -123,7 +123,7 @@ void __fastcall ServantStatusListViewObject__EventCommandStart(
   {
     v11 = this->fields.itemDraw;
     if ( !v11 )
-      sub_B7076C(0LL, v4);
+      sub_B7769C(0LL, v4);
     ((void (__fastcall *)(struct ServantStatusListViewItemDraw_o *, struct ServantStatusListViewItem_o *, Il2CppMethodPointer))v11->klass->vtable._7_ModifyCommandCard.method)(
       v11,
       this->fields.mainInfo,
@@ -135,7 +135,7 @@ void __fastcall ServantStatusListViewObject__EventCommandStart(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_B70630(p_callbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_B77560(p_callbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
     System_Action__Invoke(v13, 0LL);
   }
 }
@@ -158,10 +158,10 @@ void __fastcall ServantStatusListViewObject__EventFaceStart(
   System_Action_o *v13; // x20
   struct System_Action_o *callbackFunc; // t1
 
-  if ( (byte_4355E3C & 1) == 0 )
+  if ( (byte_438F310 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355E3C = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438F310 = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -173,7 +173,7 @@ void __fastcall ServantStatusListViewObject__EventFaceStart(
   {
     v11 = this->fields.itemDraw;
     if ( !v11 )
-      sub_B7076C(0LL, v4);
+      sub_B7769C(0LL, v4);
     ((void (__fastcall *)(struct ServantStatusListViewItemDraw_o *, struct ServantStatusListViewItem_o *, Il2CppMethodPointer))v11->klass->vtable._8_ModifyFace.method)(
       v11,
       this->fields.mainInfo,
@@ -185,7 +185,7 @@ void __fastcall ServantStatusListViewObject__EventFaceStart(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_B70630(p_callbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_B77560(p_callbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
     System_Action__Invoke(v13, 0LL);
   }
 }
@@ -213,7 +213,7 @@ void __fastcall ServantStatusListViewObject__EventMoveEnd(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_B70630(p_callbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_B77560(p_callbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
     System_Action__Invoke(v9, 0LL);
   }
 }
@@ -236,10 +236,10 @@ void __fastcall ServantStatusListViewObject__EventPortraitStart(
   System_Action_o *v13; // x20
   struct System_Action_o *callbackFunc; // t1
 
-  if ( (byte_4355E3E & 1) == 0 )
+  if ( (byte_438F312 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355E3E = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438F312 = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -251,7 +251,7 @@ void __fastcall ServantStatusListViewObject__EventPortraitStart(
   {
     v11 = this->fields.itemDraw;
     if ( !v11 )
-      sub_B7076C(0LL, v4);
+      sub_B7769C(0LL, v4);
     ((void (__fastcall *)(struct ServantStatusListViewItemDraw_o *, struct ServantStatusListViewItem_o *, Il2CppMethodPointer))v11->klass->vtable._10_ModifyPortrait.method)(
       v11,
       this->fields.mainInfo,
@@ -263,7 +263,7 @@ void __fastcall ServantStatusListViewObject__EventPortraitStart(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_B70630(p_callbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_B77560(p_callbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
     System_Action__Invoke(v13, 0LL);
   }
 }
@@ -286,10 +286,10 @@ void __fastcall ServantStatusListViewObject__EventRandomLimitCountSettingStart(
   System_Action_o *v13; // x20
   struct System_Action_o *callbackFunc; // t1
 
-  if ( (byte_4355E40 & 1) == 0 )
+  if ( (byte_438F314 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355E40 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438F314 = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -301,7 +301,7 @@ void __fastcall ServantStatusListViewObject__EventRandomLimitCountSettingStart(
   {
     v11 = this->fields.itemDraw;
     if ( !v11 )
-      sub_B7076C(0LL, v4);
+      sub_B7769C(0LL, v4);
     ((void (__fastcall *)(struct ServantStatusListViewItemDraw_o *, struct ServantStatusListViewItem_o *, void *))v11->klass->vtable._13_ModifyRandomLimitCountSetting.method)(
       v11,
       this->fields.mainInfo,
@@ -313,7 +313,7 @@ void __fastcall ServantStatusListViewObject__EventRandomLimitCountSettingStart(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_B70630(p_callbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_B77560(p_callbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
     System_Action__Invoke(v13, 0LL);
   }
 }
@@ -336,10 +336,10 @@ void __fastcall ServantStatusListViewObject__EventRandomLimitCountSupportStart(
   System_Action_o *v13; // x20
   struct System_Action_o *callbackFunc; // t1
 
-  if ( (byte_4355E3F & 1) == 0 )
+  if ( (byte_438F313 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355E3F = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438F313 = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -351,7 +351,7 @@ void __fastcall ServantStatusListViewObject__EventRandomLimitCountSupportStart(
   {
     v11 = this->fields.itemDraw;
     if ( !v11 )
-      sub_B7076C(0LL, v4);
+      sub_B7769C(0LL, v4);
     ((void (__fastcall *)(struct ServantStatusListViewItemDraw_o *, struct ServantStatusListViewItem_o *, Il2CppMethodPointer))v11->klass->vtable._12_ModifyRandomLimitCountSupport.method)(
       v11,
       this->fields.mainInfo,
@@ -363,7 +363,7 @@ void __fastcall ServantStatusListViewObject__EventRandomLimitCountSupportStart(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_B70630(p_callbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_B77560(p_callbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
     System_Action__Invoke(v13, 0LL);
   }
 }
@@ -386,10 +386,10 @@ void __fastcall ServantStatusListViewObject__EventStatusStart(
   System_Action_o *v13; // x20
   struct System_Action_o *callbackFunc; // t1
 
-  if ( (byte_4355E3D & 1) == 0 )
+  if ( (byte_438F311 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355E3D = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438F311 = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -401,7 +401,7 @@ void __fastcall ServantStatusListViewObject__EventStatusStart(
   {
     v11 = this->fields.itemDraw;
     if ( !v11 )
-      sub_B7076C(0LL, v4);
+      sub_B7769C(0LL, v4);
     ((void (__fastcall *)(struct ServantStatusListViewItemDraw_o *, struct ServantStatusListViewItem_o *, Il2CppMethodPointer))v11->klass->vtable._9_ModifyStatus.method)(
       v11,
       this->fields.mainInfo,
@@ -413,7 +413,7 @@ void __fastcall ServantStatusListViewObject__EventStatusStart(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_B70630(p_callbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_B77560(p_callbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
     System_Action__Invoke(v13, 0LL);
   }
 }
@@ -425,10 +425,10 @@ int32_t __fastcall ServantStatusListViewObject__GetKind(ServantStatusListViewObj
   __int64 v4; // x1
   struct ServantStatusListViewItemDraw_o *v5; // x0
 
-  if ( (byte_4355E35 & 1) == 0 )
+  if ( (byte_438F309 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355E35 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438F309 = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -440,7 +440,7 @@ int32_t __fastcall ServantStatusListViewObject__GetKind(ServantStatusListViewObj
     return 0;
   v5 = this->fields.itemDraw;
   if ( !v5 )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   return ((__int64 (__fastcall *)(struct ServantStatusListViewItemDraw_o *, Il2CppMethodPointer))v5->klass->vtable._4_GetKind.method)(
            v5,
            v5->klass->vtable._5_SetItem.methodPtr);
@@ -457,16 +457,16 @@ int32_t __fastcall ServantStatusListViewObject__GetSize(ServantStatusListViewObj
   __int64 v7; // x1
   float v8; // s1
 
-  if ( (byte_4355E36 & 1) == 0 )
+  if ( (byte_438F30A & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_BoxCollider_TypeInfo);
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355E36 = 1;
+    sub_B775C4(&UnityEngine_BoxCollider_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438F30A = 1;
   }
   Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                               (UnityEngine_Component_o *)this,
-                              (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                              (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( Component_WebViewObject
     && (v4 = *(&UnityEngine_BoxCollider_TypeInfo->_2.bitflags2 + 1),
         *(&Component_WebViewObject->klass->_2.bitflags2 + 1) >= (unsigned int)v4) )
@@ -489,7 +489,7 @@ int32_t __fastcall ServantStatusListViewObject__GetSize(ServantStatusListViewObj
   if ( !v6 )
     return 0;
   if ( !v5 )
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   *(UnityEngine_Vector3_o *)(&v8 - 1) = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v5, 0LL);
   if ( v8 == INFINITY )
     return (int)-v8;
@@ -536,12 +536,12 @@ void __fastcall ServantStatusListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B7076C(transform, v12);
+    sub_B7769C(transform, v12);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (BattleServantConfConponent_o *)&this->fields.callbackFunc;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.callbackFunc,
     (System_Int32_array **)callbackFunc,
     v14,
@@ -609,7 +609,7 @@ LABEL_17:
       if ( p_callbackFunc->klass )
       {
         p_callbackFunc->klass = 0LL;
-        sub_B70630(p_callbackFunc, 0LL, (System_String_array **)v21, v22, v23, v24, v25, v26);
+        sub_B77560(p_callbackFunc, 0LL, (System_String_array **)v21, v22, v23, v24, v25, v26);
         System_Action__Invoke(klass, 0LL);
       }
       return;
@@ -618,7 +618,7 @@ LABEL_17:
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusListViewObject__Init_33037952(
+void __fastcall ServantStatusListViewObject__Init_33000764(
         ServantStatusListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -632,7 +632,7 @@ void __fastcall ServantStatusListViewObject__Init_33037952(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusListViewObject__Init_33039836(
+void __fastcall ServantStatusListViewObject__Init_33002648(
         ServantStatusListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -654,7 +654,7 @@ void __fastcall ServantStatusListViewObject__Init_33039836(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusListViewObject__Init_33039900(
+void __fastcall ServantStatusListViewObject__Init_33002712(
         ServantStatusListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -681,7 +681,7 @@ void __fastcall ServantStatusListViewObject__OnClick(ServantStatusListViewObject
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, this);
+    sub_B7769C(0LL, this);
   ServantStatusListViewManager__OnClickListView(manager, this, v2);
 }
 
@@ -695,7 +695,7 @@ void __fastcall ServantStatusListViewObject__OnClickBondLimitUp(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickCombine(manager, 17, v2);
 }
 
@@ -710,7 +710,7 @@ void __fastcall ServantStatusListViewObject__OnClickButton(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, tappedButton);
+    sub_B7769C(0LL, tappedButton);
   ServantStatusListViewManager__OnClickButton(manager, tappedButton, ownerObject, method);
 }
 
@@ -724,7 +724,7 @@ void __fastcall ServantStatusListViewObject__OnClickCommandCharaLevel1(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickCommandCharaLevel(manager, 0, v2);
 }
 
@@ -738,7 +738,7 @@ void __fastcall ServantStatusListViewObject__OnClickCommandCharaLevel2(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickCommandCharaLevel(manager, 1, v2);
 }
 
@@ -752,7 +752,7 @@ void __fastcall ServantStatusListViewObject__OnClickCommandCharaLevel3(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickCommandCharaLevel(manager, 2, v2);
 }
 
@@ -766,7 +766,7 @@ void __fastcall ServantStatusListViewObject__OnClickCommandCharaLevel4(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickCommandCharaLevel(manager, 3, v2);
 }
 
@@ -780,7 +780,7 @@ void __fastcall ServantStatusListViewObject__OnClickCommandCharaLevel5(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickCommandCharaLevel(manager, 4, v2);
 }
 
@@ -794,7 +794,7 @@ void __fastcall ServantStatusListViewObject__OnClickCommandCharaLevel6(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickCommandCharaLevel(manager, 5, v2);
 }
 
@@ -808,7 +808,7 @@ void __fastcall ServantStatusListViewObject__OnClickCommandCharaLevel7(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickCommandCharaLevel(manager, 6, v2);
 }
 
@@ -822,7 +822,7 @@ void __fastcall ServantStatusListViewObject__OnClickCommandCharaLevel8(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickCommandCharaLevel(manager, 7, v2);
 }
 
@@ -836,7 +836,7 @@ void __fastcall ServantStatusListViewObject__OnClickCommandCharaLevel9(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickCommandCharaLevel(manager, 8, v2);
 }
 
@@ -849,7 +849,7 @@ void __fastcall ServantStatusListViewObject__OnClickEquip1(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickListViewEquip1(manager, method);
 }
 
@@ -862,7 +862,7 @@ void __fastcall ServantStatusListViewObject__OnClickEquipExp(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickListViewEquipExp(manager, method);
 }
 
@@ -873,7 +873,7 @@ void __fastcall ServantStatusListViewObject__OnClickExp(ServantStatusListViewObj
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickListViewExp(manager, method);
 }
 
@@ -887,7 +887,7 @@ void __fastcall ServantStatusListViewObject__OnClickFaceCharaLevel1(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickFaceCharaLevel(manager, 0, v2);
 }
 
@@ -901,7 +901,7 @@ void __fastcall ServantStatusListViewObject__OnClickFaceCharaLevel10(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickFaceCharaLevel(manager, 9, v2);
 }
 
@@ -915,7 +915,7 @@ void __fastcall ServantStatusListViewObject__OnClickFaceCharaLevel11(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickFaceCharaLevel(manager, 10, v2);
 }
 
@@ -929,7 +929,7 @@ void __fastcall ServantStatusListViewObject__OnClickFaceCharaLevel12(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickFaceCharaLevel(manager, 11, v2);
 }
 
@@ -943,7 +943,7 @@ void __fastcall ServantStatusListViewObject__OnClickFaceCharaLevel2(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickFaceCharaLevel(manager, 1, v2);
 }
 
@@ -957,7 +957,7 @@ void __fastcall ServantStatusListViewObject__OnClickFaceCharaLevel3(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickFaceCharaLevel(manager, 2, v2);
 }
 
@@ -971,7 +971,7 @@ void __fastcall ServantStatusListViewObject__OnClickFaceCharaLevel4(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickFaceCharaLevel(manager, 3, v2);
 }
 
@@ -985,7 +985,7 @@ void __fastcall ServantStatusListViewObject__OnClickFaceCharaLevel5(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickFaceCharaLevel(manager, 4, v2);
 }
 
@@ -999,7 +999,7 @@ void __fastcall ServantStatusListViewObject__OnClickFaceCharaLevel6(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickFaceCharaLevel(manager, 5, v2);
 }
 
@@ -1013,7 +1013,7 @@ void __fastcall ServantStatusListViewObject__OnClickFaceCharaLevel7(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickFaceCharaLevel(manager, 6, v2);
 }
 
@@ -1027,7 +1027,7 @@ void __fastcall ServantStatusListViewObject__OnClickFaceCharaLevel8(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickFaceCharaLevel(manager, 7, v2);
 }
 
@@ -1041,7 +1041,7 @@ void __fastcall ServantStatusListViewObject__OnClickFaceCharaLevel9(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickFaceCharaLevel(manager, 8, v2);
 }
 
@@ -1054,7 +1054,7 @@ void __fastcall ServantStatusListViewObject__OnClickFriendship(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickListViewFriendship(manager, method);
 }
 
@@ -1068,7 +1068,7 @@ void __fastcall ServantStatusListViewObject__OnClickLevelExceedServant(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickCombine(manager, 22, v2);
 }
 
@@ -1082,7 +1082,7 @@ void __fastcall ServantStatusListViewObject__OnClickLimitCountUpServant(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickCombine(manager, 16, v2);
 }
 
@@ -1096,7 +1096,7 @@ void __fastcall ServantStatusListViewObject__OnClickPortraitCharaLevel1(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickPortraitCharaLevel(manager, 0, v2);
 }
 
@@ -1110,7 +1110,7 @@ void __fastcall ServantStatusListViewObject__OnClickPortraitCharaLevel2(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickPortraitCharaLevel(manager, 1, v2);
 }
 
@@ -1124,7 +1124,7 @@ void __fastcall ServantStatusListViewObject__OnClickPortraitCharaLevel3(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickPortraitCharaLevel(manager, 2, v2);
 }
 
@@ -1138,7 +1138,7 @@ void __fastcall ServantStatusListViewObject__OnClickPortraitCharaLevel4(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickPortraitCharaLevel(manager, 3, v2);
 }
 
@@ -1152,7 +1152,7 @@ void __fastcall ServantStatusListViewObject__OnClickPortraitCharaLevel5(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickPortraitCharaLevel(manager, 4, v2);
 }
 
@@ -1166,7 +1166,7 @@ void __fastcall ServantStatusListViewObject__OnClickPortraitCharaLevel6(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickPortraitCharaLevel(manager, 5, v2);
 }
 
@@ -1180,7 +1180,7 @@ void __fastcall ServantStatusListViewObject__OnClickPortraitCharaLevel7(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickPortraitCharaLevel(manager, 6, v2);
 }
 
@@ -1194,7 +1194,7 @@ void __fastcall ServantStatusListViewObject__OnClickPortraitCharaLevel8(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickPortraitCharaLevel(manager, 7, v2);
 }
 
@@ -1208,7 +1208,7 @@ void __fastcall ServantStatusListViewObject__OnClickPortraitCharaLevel9(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickPortraitCharaLevel(manager, 8, v2);
 }
 
@@ -1222,7 +1222,7 @@ void __fastcall ServantStatusListViewObject__OnClickRandomCostume1(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickRandomLimitCountSupport(manager, 4, v2);
 }
 
@@ -1236,7 +1236,7 @@ void __fastcall ServantStatusListViewObject__OnClickRandomCostume2(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickRandomLimitCountSupport(manager, 5, v2);
 }
 
@@ -1250,7 +1250,7 @@ void __fastcall ServantStatusListViewObject__OnClickRandomCostume3(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickRandomLimitCountSupport(manager, 6, v2);
 }
 
@@ -1264,7 +1264,7 @@ void __fastcall ServantStatusListViewObject__OnClickRandomCostume4(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickRandomLimitCountSupport(manager, 7, v2);
 }
 
@@ -1278,7 +1278,7 @@ void __fastcall ServantStatusListViewObject__OnClickRandomCostume5(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickRandomLimitCountSupport(manager, 8, v2);
 }
 
@@ -1292,7 +1292,7 @@ void __fastcall ServantStatusListViewObject__OnClickRandomCostume6(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickRandomLimitCountSupport(manager, 9, v2);
 }
 
@@ -1306,7 +1306,7 @@ void __fastcall ServantStatusListViewObject__OnClickRandomCostume7(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickRandomLimitCountSupport(manager, 10, v2);
 }
 
@@ -1320,7 +1320,7 @@ void __fastcall ServantStatusListViewObject__OnClickRandomCostume8(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickRandomLimitCountSupport(manager, 11, v2);
 }
 
@@ -1334,7 +1334,7 @@ void __fastcall ServantStatusListViewObject__OnClickRandomLimitCount1(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickRandomLimitCountSupport(manager, 0, v2);
 }
 
@@ -1348,7 +1348,7 @@ void __fastcall ServantStatusListViewObject__OnClickRandomLimitCount2(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickRandomLimitCountSupport(manager, 1, v2);
 }
 
@@ -1362,7 +1362,7 @@ void __fastcall ServantStatusListViewObject__OnClickRandomLimitCount3(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickRandomLimitCountSupport(manager, 2, v2);
 }
 
@@ -1376,7 +1376,7 @@ void __fastcall ServantStatusListViewObject__OnClickRandomLimitCount4(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickRandomLimitCountSupport(manager, 3, v2);
 }
 
@@ -1390,7 +1390,7 @@ void __fastcall ServantStatusListViewObject__OnClickRandomLimitCountOtherSetting
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickRandomLimitCountMask(manager, 3, v2);
 }
 
@@ -1404,7 +1404,7 @@ void __fastcall ServantStatusListViewObject__OnClickRandomLimitCountSelectSuppor
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickRandomLimitCountMask(manager, 2, v2);
 }
 
@@ -1418,7 +1418,7 @@ void __fastcall ServantStatusListViewObject__OnClickRandomLimitCountSettingMask(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickRandomLimitCountMask(manager, 1, v2);
 }
 
@@ -1432,7 +1432,7 @@ void __fastcall ServantStatusListViewObject__OnClickReflectOwnSetting(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickRandomLimitCountSupport(manager, -1, v2);
 }
 
@@ -1446,7 +1446,7 @@ void __fastcall ServantStatusListViewObject__OnClickReinforceAppendSkill(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickCombine(manager, 20, v2);
 }
 
@@ -1460,7 +1460,7 @@ void __fastcall ServantStatusListViewObject__OnClickReinforceCommandCard(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickCombine(manager, 19, v2);
 }
 
@@ -1474,7 +1474,7 @@ void __fastcall ServantStatusListViewObject__OnClickReinforceEquip(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickCombine(manager, 14, v2);
 }
 
@@ -1488,7 +1488,7 @@ void __fastcall ServantStatusListViewObject__OnClickReinforceNp(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickCombine(manager, 21, v2);
 }
 
@@ -1502,7 +1502,7 @@ void __fastcall ServantStatusListViewObject__OnClickReinforceServant(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickCombine(manager, 13, v2);
 }
 
@@ -1516,7 +1516,7 @@ void __fastcall ServantStatusListViewObject__OnClickReinforceSkill(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickCombine(manager, 15, v2);
 }
 
@@ -1530,7 +1530,7 @@ void __fastcall ServantStatusListViewObject__OnClickServantQuest(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, questId);
+    sub_B7769C(0LL, questId);
   ServantStatusListViewManager__OnClickServantQuest(manager, questId, method);
 }
 
@@ -1544,7 +1544,7 @@ void __fastcall ServantStatusListViewObject__OnClickServantTdSpeedActual(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickServantTdSpeed(manager, 1, v2);
 }
 
@@ -1558,7 +1558,7 @@ void __fastcall ServantStatusListViewObject__OnClickServantTdSpeedFree(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickServantTdSpeed(manager, 0, v2);
 }
 
@@ -1572,7 +1572,7 @@ void __fastcall ServantStatusListViewObject__OnClickServantTdSpeedTwice(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickServantTdSpeed(manager, 2, v2);
 }
 
@@ -1586,7 +1586,7 @@ void __fastcall ServantStatusListViewObject__OnClickSetCodeCommandCard(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickCombine(manager, 18, v2);
 }
 
@@ -1600,7 +1600,7 @@ void __fastcall ServantStatusListViewObject__OnClickSwitchRandomLimitCountOwnRan
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickSwitchRandomLimitCountOwn(manager, 2, v2);
 }
 
@@ -1614,7 +1614,7 @@ void __fastcall ServantStatusListViewObject__OnClickSwitchRandomLimitCountOwnRan
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickSwitchRandomLimitCountOwn(manager, 1, v2);
 }
 
@@ -1628,7 +1628,7 @@ void __fastcall ServantStatusListViewObject__OnClickSwitchRandomLimitCountOwnSet
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickSwitchRandomLimitCountOwn(manager, 0, v2);
 }
 
@@ -1642,7 +1642,7 @@ void __fastcall ServantStatusListViewObject__OnClickSwitchRandomLimitCountSuppor
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickSwitchRandomLimitCountSupport(manager, 5, v2);
 }
 
@@ -1656,7 +1656,7 @@ void __fastcall ServantStatusListViewObject__OnClickSwitchRandomLimitCountSuppor
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickSwitchRandomLimitCountSupport(manager, 4, v2);
 }
 
@@ -1670,7 +1670,7 @@ void __fastcall ServantStatusListViewObject__OnClickSwitchRandomLimitCountSuppor
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnClickSwitchRandomLimitCountSupport(manager, 3, v2);
 }
 
@@ -1689,7 +1689,7 @@ void __fastcall ServantStatusListViewObject__OnLongPushEquip1(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantStatusListViewManager__OnLongPushListViewEquip1(manager, method);
 }
 
@@ -1712,7 +1712,7 @@ void __fastcall ServantStatusListViewObject__SetBaseTransform(
   if ( !transform
     || (parent = UnityEngine_Transform__get_parent(transform, 0LL),
         this->fields.baseParent = parent,
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)&this->fields.baseParent,
           (System_Int32_array **)parent,
           v6,
@@ -1725,7 +1725,7 @@ void __fastcall ServantStatusListViewObject__SetBaseTransform(
     || (this->fields.basePosition = UnityEngine_Transform__get_localPosition(transform, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B7076C(transform, v4);
+    sub_B7769C(transform, v4);
   }
   this->fields.baseScale = UnityEngine_Transform__get_localScale(transform, 0LL);
 }
@@ -1740,15 +1740,15 @@ void __fastcall ServantStatusListViewObject__SetInput(
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4355E38 & 1) == 0 )
+  if ( (byte_438F30C & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355E38 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438F30C = 1;
   }
   Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                       (UnityEngine_Component_o *)this,
-                                                      (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                      (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -1758,7 +1758,7 @@ void __fastcall ServantStatusListViewObject__SetInput(
   if ( v6 )
   {
     if ( !Component_WebViewObject )
-      sub_B7076C(v6, v7);
+      sub_B7769C(v6, v7);
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_WebViewObject, isInput, 0LL);
   }
 }
@@ -1779,7 +1779,7 @@ void __fastcall ServantStatusListViewObject__SetItem(
   UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
   this->fields.mainInfo = item;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.mainInfo,
     (System_Int32_array **)item,
     (System_String_array **)method,
@@ -1810,7 +1810,7 @@ void __fastcall ServantStatusListViewObject__SetManager(
 
   this->fields.manager = manager;
   p_manager = &this->fields.manager;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.manager,
     (System_Int32_array **)manager,
     (System_String_array **)method,
@@ -1845,7 +1845,7 @@ void __fastcall ServantStatusListViewObject__SetTransform(
   x = position.fields.x;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_B7076C(0LL, v8);
+    sub_B7769C(0LL, v8);
   v9.fields.x = x;
   v9.fields.y = y;
   v9.fields.z = z;
@@ -1865,10 +1865,10 @@ void __fastcall ServantStatusListViewObject__SetVisible(
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4355E37 & 1) == 0 )
+  if ( (byte_438F30B & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355E37 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438F30B = 1;
   }
   dispObject = (UnityEngine_Object_o *)this->fields.dispObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1880,7 +1880,7 @@ void __fastcall ServantStatusListViewObject__SetVisible(
   {
     v7 = this->fields.dispObject;
     if ( !v7 )
-      sub_B7076C(0LL, v6);
+      sub_B7769C(0LL, v6);
     UnityEngine_GameObject__SetActive(v7, isVisible, 0LL);
   }
 }
@@ -1893,10 +1893,10 @@ void __fastcall ServantStatusListViewObject__SetupDisp(ServantStatusListViewObje
   __int64 v5; // x1
   struct ServantStatusListViewItemDraw_o *v6; // x0
 
-  if ( (byte_4355E39 & 1) == 0 )
+  if ( (byte_438F30D & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355E39 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438F30D = 1;
   }
   ServantStatusListViewObject__SetVisible(this, this->fields.dispMode != 0, v2);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -1909,7 +1909,7 @@ void __fastcall ServantStatusListViewObject__SetupDisp(ServantStatusListViewObje
   {
     v6 = this->fields.itemDraw;
     if ( !v6 )
-      sub_B7076C(0LL, v5);
+      sub_B7769C(0LL, v5);
     ((void (__fastcall *)(struct ServantStatusListViewItemDraw_o *, struct ServantStatusListViewItem_o *, _QWORD, Il2CppMethodPointer))v6->klass->vtable._5_SetItem.method)(
       v6,
       this->fields.mainInfo,
@@ -1934,10 +1934,10 @@ void __fastcall ServantStatusListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4355E32 & 1) == 0 )
+  if ( (byte_438F306 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    byte_4355E32 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    byte_438F306 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1950,13 +1950,13 @@ void __fastcall ServantStatusListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B70A60(v8);
+  sub_B77990(v8);
   ServantStatusListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -1989,10 +1989,10 @@ void __fastcall ServantStatusListViewObject__remove_callbackFunc(
   ServantStatusListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4355E33 & 1) == 0 )
+  if ( (byte_438F307 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    byte_4355E33 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    byte_438F307 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -2005,13 +2005,13 @@ void __fastcall ServantStatusListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B70A60(v8);
+  sub_B77990(v8);
   ServantStatusListViewObject__Awake(v11, v12);
 }
 
@@ -2025,6 +2025,6 @@ void __fastcall ServantStatusListViewObject__touchCommandCard(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B7076C(0LL, index);
+    sub_B7769C(0LL, index);
   ServantStatusListViewManager__OnClickCommandCode(manager, index - 1, method);
 }

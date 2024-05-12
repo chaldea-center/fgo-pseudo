@@ -4,7 +4,7 @@ void __fastcall BattleSetupInfo___ctor(BattleSetupInfo_o *this, const MethodInfo
 }
 
 
-void __fastcall BattleSetupInfo___ctor_30287852(
+void __fastcall BattleSetupInfo___ctor_30946924(
         BattleSetupInfo_o *this,
         BattleSetupInfo_BattleSetupSaveInfo_o *saveInfo,
         const MethodInfo *method)
@@ -31,7 +31,7 @@ void __fastcall BattleSetupInfo___ctor_30287852(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !saveInfo )
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   this->fields.warId = saveInfo->fields.warId;
   this->fields.questId = saveInfo->fields.questId;
   this->fields.questPhase = saveInfo->fields.questPhase;
@@ -49,7 +49,7 @@ void __fastcall BattleSetupInfo___ctor_30287852(
   this->fields.isBefore = saveInfo->fields.isBefore;
   demoInfo = saveInfo->fields.demoInfo;
   this->fields.demoInfo = demoInfo;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.demoInfo,
     (System_Int32_array **)demoInfo,
     v7,
@@ -67,7 +67,7 @@ void __fastcall BattleSetupInfo___ctor_30287852(
   this->fields.followrRandomLimitCount = saveInfo->fields.followrRandomLimitCount;
   choiceRandomLimitCounts = saveInfo->fields.choiceRandomLimitCounts;
   this->fields.choiceRandomLimitCounts = choiceRandomLimitCounts;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.choiceRandomLimitCounts,
     (System_Int32_array **)choiceRandomLimitCounts,
     v18,
@@ -111,17 +111,17 @@ BattleSetupInfo_o *__fastcall BattleSetupInfo__ConvertBattleSetupInfo(
   System_Int32_array *v28; // x6
   System_Int32_array *v29; // x7
 
-  if ( (byte_43547D6 & 1) == 0 )
+  if ( (byte_438E21C & 1) == 0 )
   {
-    sub_B70694(&BattleSetupInfo_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMasterData_QuestGroupMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
-    sub_B70694(&SingletonTemplate_clsQuestCheck__TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43547D6 = 1;
+    sub_B775C4(&BattleSetupInfo_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMasterData_QuestGroupMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    sub_B775C4(&SingletonTemplate_clsQuestCheck__TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438E21C = 1;
   }
-  v14 = sub_B70764(BattleSetupInfo_TypeInfo);
+  v14 = sub_B77694(BattleSetupInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v14, 0LL);
   if ( !v14 )
     goto LABEL_14;
@@ -136,14 +136,14 @@ BattleSetupInfo_o *__fastcall BattleSetupInfo__ConvertBattleSetupInfo(
     {
       j_il2cpp_runtime_class_init_0(SingletonTemplate_clsQuestCheck__TypeInfo);
     }
-    Instance = SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2CE9CB0 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    Instance = SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2D168C0 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
     if ( Instance )
     {
       v17 = clsQuestCheck__mfCheck_IsQuestNew(Instance, qId, 0LL);
       goto LABEL_11;
     }
 LABEL_14:
-    sub_B7076C(Instance, v16);
+    sub_B7769C(Instance, v16);
   }
   v17 = 0;
 LABEL_11:
@@ -152,12 +152,12 @@ LABEL_11:
   *(_QWORD *)(v14 + 48) = 0LL;
   *(_DWORD *)(v14 + 56) = 0;
   *(_BYTE *)(v14 + 73) = isScriptBeforePartySelect;
-  Instance = (clsQuestCheck_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (clsQuestCheck_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   MasterData_WarQuestSelectionMaster = (QuestGroupMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                (DataManager_o *)Instance,
-                                                               (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_QuestGroupMaster___);
+                                                               (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_QuestGroupMaster___);
   Instance = (clsQuestCheck_o *)BattleSetupInfo__TargetQuestId((BattleSetupInfo_o *)v14, v19);
   if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_14;
@@ -168,7 +168,7 @@ LABEL_11:
   *(_DWORD *)(v14 + 136) = 0;
   v23 = (System_Int32_array **)StringLiteral_1/*""*/;
   *(_QWORD *)(v14 + 144) = StringLiteral_1/*""*/;
-  sub_B70630((BattleServantConfConponent_o *)(v14 + 144), v23, v24, v25, v26, v27, v28, v29);
+  sub_B77560((BattleServantConfConponent_o *)(v14 + 144), v23, v24, v25, v26, v27, v28, v29);
   *(_DWORD *)(v14 + 152) = 0;
   *(_BYTE *)(v14 + 156) = isScriptBeforeWarBoard;
   return (BattleSetupInfo_o *)v14;
@@ -198,15 +198,15 @@ BattleSetupInfo_BattleSetupSaveInfo_o *__fastcall BattleSetupInfo__GetInfoForSav
   System_Int32_array *v19; // x7
   BattleSetupInfo_BattleSetupSaveInfo_o *result; // x0
 
-  if ( (byte_43547D2 & 1) == 0 )
+  if ( (byte_438E218 & 1) == 0 )
   {
-    sub_B70694(&BattleSetupInfo_BattleSetupSaveInfo_TypeInfo);
-    byte_43547D2 = 1;
+    sub_B775C4(&BattleSetupInfo_BattleSetupSaveInfo_TypeInfo);
+    byte_438E218 = 1;
   }
-  v3 = sub_B70764(BattleSetupInfo_BattleSetupSaveInfo_TypeInfo);
+  v3 = sub_B77694(BattleSetupInfo_BattleSetupSaveInfo_TypeInfo);
   BattleSetupInfo_BattleSetupSaveInfo___ctor((BattleSetupInfo_BattleSetupSaveInfo_o *)v3, 0LL);
   if ( !v3 )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   *(_DWORD *)(v3 + 16) = this->fields.warId;
   *(_DWORD *)(v3 + 20) = this->fields.questId;
   *(_DWORD *)(v3 + 24) = this->fields.questPhase;
@@ -224,14 +224,14 @@ BattleSetupInfo_BattleSetupSaveInfo_o *__fastcall BattleSetupInfo__GetInfoForSav
   *(_BYTE *)(v3 + 81) = this->fields.isBefore;
   demoInfo = (System_Int32_array **)this->fields.demoInfo;
   *(_QWORD *)(v3 + 88) = demoInfo;
-  sub_B70630((BattleServantConfConponent_o *)(v3 + 88), demoInfo, v6, v7, v8, v9, v10, v11);
+  sub_B77560((BattleServantConfConponent_o *)(v3 + 88), demoInfo, v6, v7, v8, v9, v10, v11);
   *(_DWORD *)(v3 + 96) = this->fields.selectedBranchIdx;
   *(_DWORD *)(v3 + 100) = this->fields.followerType;
   *(_DWORD *)(v3 + 104) = this->fields.originQuestId;
   *(_DWORD *)(v3 + 108) = this->fields.followrRandomLimitCount;
   choiceRandomLimitCounts = (System_Int32_array **)this->fields.choiceRandomLimitCounts;
   *(_QWORD *)(v3 + 112) = choiceRandomLimitCounts;
-  sub_B70630((BattleServantConfConponent_o *)(v3 + 112), choiceRandomLimitCounts, v14, v15, v16, v17, v18, v19);
+  sub_B77560((BattleServantConfConponent_o *)(v3 + 112), choiceRandomLimitCounts, v14, v15, v16, v17, v18, v19);
   result = (BattleSetupInfo_BattleSetupSaveInfo_o *)v3;
   *(_DWORD *)(v3 + 120) = this->fields.followerSpoilerProtectionLimitCount;
   *(_BYTE *)(v3 + 124) = this->fields.isScriptBeforeWarBoard;
@@ -260,28 +260,28 @@ void __fastcall BattleSetupInfo__SetEventUpValues(BattleSetupInfo_o *this, const
   System_Int32_array *v16; // x6
   System_Int32_array *v17; // x7
 
-  if ( (byte_43547D3 & 1) == 0 )
+  if ( (byte_438E219 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_B70694(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
-    sub_B70694(&EventUpValSetupInfo_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43547D3 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_EventDetailMaster___);
+    sub_B775C4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+    sub_B775C4(&EventUpValSetupInfo_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438E219 = 1;
   }
   if ( this->fields.eventId >= 1 )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                         Instance,
-                                        (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventDetailMaster___)) == 0LL )
+                                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventDetailMaster___)) == 0LL )
     {
-      sub_B7076C(Instance, v4);
+      sub_B7769C(Instance, v4);
     }
     Entity = (EventDetailEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                       (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                                       this->fields.eventId,
-                                      (const MethodInfo_21C0440 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+                                      (const MethodInfo_21FB894 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
     if ( Entity )
     {
       if ( EventDetailEntity__IsBonusSkill(Entity, 0LL) )
@@ -290,10 +290,10 @@ void __fastcall BattleSetupInfo__SetEventUpValues(BattleSetupInfo_o *this, const
         questPhase = this->fields.questPhase;
         eventId = this->fields.eventId;
         v10 = v7;
-        v11 = (EventUpValSetupInfo_o *)sub_B70764(EventUpValSetupInfo_TypeInfo);
+        v11 = (EventUpValSetupInfo_o *)sub_B77694(EventUpValSetupInfo_TypeInfo);
         EventUpValSetupInfo___ctor(v11, v10, questPhase, eventId, 0LL);
         this->fields.eventUpValSetupInfo = v11;
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)&this->fields.eventUpValSetupInfo,
           (System_Int32_array **)v11,
           v12,
@@ -329,20 +329,20 @@ void __fastcall BattleSetupInfo__SetRestriction(BattleSetupInfo_o *this, bool is
   int64_t ActiveUserEquipId; // x0
   int64_t activeDeckId; // x8
 
-  if ( (byte_43547D4 & 1) == 0 )
+  if ( (byte_438E21A & 1) == 0 )
   {
-    sub_B70694(&QuestRestrictionInfo_TypeInfo);
-    byte_43547D4 = 1;
+    sub_B775C4(&QuestRestrictionInfo_TypeInfo);
+    byte_438E21A = 1;
   }
   eventId = this->fields.eventId;
   v6 = BattleSetupInfo__TargetQuestId(this, (const MethodInfo *)isResetDeck);
   questPhase = this->fields.questPhase;
   v8 = v6;
-  v9 = (QuestRestrictionInfo_o *)sub_B70764(QuestRestrictionInfo_TypeInfo);
-  QuestRestrictionInfo___ctor_34197740(v9, eventId, v8, questPhase, 0LL);
+  v9 = (QuestRestrictionInfo_o *)sub_B77694(QuestRestrictionInfo_TypeInfo);
+  QuestRestrictionInfo___ctor_34440512(v9, eventId, v8, questPhase, 0LL);
   p_questRestrictionInfo = &this->fields.questRestrictionInfo;
   this->fields.questRestrictionInfo = v9;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.questRestrictionInfo,
     (System_Int32_array **)v9,
     v11,
@@ -402,7 +402,7 @@ LABEL_15:
       }
     }
 LABEL_19:
-    sub_B7076C(SelfUserGame, v18);
+    sub_B7769C(SelfUserGame, v18);
   }
 }
 
@@ -426,22 +426,22 @@ void __fastcall BattleSetupInfo__SetSelectableQuests(BattleSetupInfo_o *this, co
   System_Int32_array *v17; // x7
   QuestPhaseEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_43547D5 & 1) == 0 )
+  if ( (byte_438E21B & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_QuestPhaseMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43547D5 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_QuestPhaseMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438E21B = 1;
   }
   this->fields.selectableQuestIds = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.selectableQuestIds, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.selectableQuestIds, 0LL, v2, v3, v4, v5, v6, v7);
   this->fields.selectableRouteQuestId = 0;
   entity = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
   if ( !Instance )
     goto LABEL_10;
   if ( !QuestPhaseMaster__TryGetEntity(
@@ -455,7 +455,7 @@ void __fastcall BattleSetupInfo__SetSelectableQuests(BattleSetupInfo_o *this, co
   if ( !entity
     || (SelectableQuests = QuestPhaseEntity__GetSelectableQuests(entity, 0LL),
         this->fields.selectableQuestIds = SelectableQuests,
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)&this->fields.selectableQuestIds,
           (System_Int32_array **)SelectableQuests,
           v12,
@@ -467,7 +467,7 @@ void __fastcall BattleSetupInfo__SetSelectableQuests(BattleSetupInfo_o *this, co
         (Instance = (DataManager_o *)entity) == 0LL) )
   {
 LABEL_10:
-    sub_B7076C(Instance, v10);
+    sub_B7769C(Instance, v10);
   }
   this->fields.selectableRouteQuestId = QuestPhaseEntity__GetQuestPhaseSelectRoute(entity, 0LL);
 }
@@ -504,8 +504,8 @@ int32_t __fastcall BattleSetupInfo__TargetQuestId(BattleSetupInfo_o *this, const
     {
       if ( (unsigned int)selectedBranchIdx >= max_length )
       {
-        v8 = sub_B70798(this);
-        sub_B70738(v8, 0LL);
+        v8 = sub_B776C8(this);
+        sub_B77668(v8, 0LL);
       }
       p_questId = &selectableQuestIds->m_Items[selectedBranchIdx + 1];
       return *p_questId;

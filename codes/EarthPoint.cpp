@@ -1,9 +1,9 @@
 void __fastcall EarthPoint___cctor(const MethodInfo *method)
 {
-  if ( (byte_4353816 & 1) == 0 )
+  if ( (byte_438D0D4 & 1) == 0 )
   {
-    sub_B70694(&EarthPoint_TypeInfo);
-    byte_4353816 = 1;
+    sub_B775C4(&EarthPoint_TypeInfo);
+    byte_438D0D4 = 1;
   }
   EarthPoint_TypeInfo->static_fields->FORWARD_VEC = UnityEngine_Vector3__get_zero(0LL);
 }
@@ -11,10 +11,10 @@ void __fastcall EarthPoint___cctor(const MethodInfo *method)
 
 void __fastcall EarthPoint___ctor(EarthPoint_o *this, const MethodInfo *method)
 {
-  if ( (byte_4353815 & 1) == 0 )
+  if ( (byte_438D0D3 & 1) == 0 )
   {
-    sub_B70694(&BaseEarthPoint_TypeInfo);
-    byte_4353815 = 1;
+    sub_B775C4(&BaseEarthPoint_TypeInfo);
+    byte_438D0D3 = 1;
   }
   if ( (BYTE3(BaseEarthPoint_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BaseEarthPoint_TypeInfo->_2.cctor_finished )
@@ -27,12 +27,12 @@ void __fastcall EarthPoint___ctor(EarthPoint_o *this, const MethodInfo *method)
 
 System_String_o *__fastcall EarthPoint__GetEffectName(EarthPoint_o *this, const MethodInfo *method)
 {
-  if ( (byte_4353814 & 1) == 0 )
+  if ( (byte_438D0D2 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_18456/*"ef_difference11"*/);
-    byte_4353814 = 1;
+    sub_B775C4(&StringLiteral_18544/*"ef_difference11"*/);
+    byte_438D0D2 = 1;
   }
-  return (System_String_o *)StringLiteral_18456/*"ef_difference11"*/;
+  return (System_String_o *)StringLiteral_18544/*"ef_difference11"*/;
 }
 
 
@@ -66,10 +66,10 @@ void __fastcall EarthPoint__LateUpdate(EarthPoint_o *this, const MethodInfo *met
   UnityEngine_Color_o v31; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v32; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4353813 & 1) == 0 )
+  if ( (byte_438D0D1 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4353813 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438D0D1 = 1;
   }
   zero.fields.z = 0.0;
   *(_QWORD *)&zero.fields.x = 0LL;
@@ -113,7 +113,7 @@ void __fastcall EarthPoint__LateUpdate(EarthPoint_o *this, const MethodInfo *met
   transform = (UnityEngine_ParticleSystem_o *)this->fields.mWidget;
   if ( !transform )
 LABEL_53:
-    sub_B7076C(transform, v5);
+    sub_B7769C(transform, v5);
   v32.fields.r = r;
   v32.fields.g = g;
   v32.fields.b = b;
@@ -149,7 +149,7 @@ LABEL_53:
       *(UnityEngine_Vector3_o *)&v20 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0LL);
       if ( !v19 )
         goto LABEL_53;
-      v17 = COERCE_FLOAT(UnityEngine_Camera__WorldToViewportPoint_41062484(v19, *(UnityEngine_Vector3_o *)&v20, 0LL));
+      v17 = COERCE_FLOAT(UnityEngine_Camera__WorldToViewportPoint_41408372(v19, *(UnityEngine_Vector3_o *)&v20, 0LL));
       if ( v17 < 0.0 )
       {
         if ( this->fields.mIsForward )
@@ -190,7 +190,7 @@ LABEL_32:
       transform = this->fields.mParticleSystem;
       if ( transform )
       {
-        UnityEngine_ParticleSystem__Clear_51600256(transform, 0LL);
+        UnityEngine_ParticleSystem__Clear_51808144(transform, 0LL);
 LABEL_39:
         this->fields.IsParticleDisp = 0;
         return;

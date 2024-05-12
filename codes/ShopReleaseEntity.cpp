@@ -1,13 +1,13 @@
 void __fastcall ShopReleaseEntity___ctor(ShopReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_43536EB & 1) == 0 )
+  if ( (byte_438CFA9 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_43536EB = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438CFA9 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *__fastcall ShopReleaseEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_43536E8 & 1) == 0 )
+  if ( (byte_438CFA6 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_43536E8 = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_438CFA6 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            shopId,
            condType,
            priority,
-           (const MethodInfo_1CA2794 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1D175E4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -46,11 +46,11 @@ System_String_o *__fastcall ShopReleaseEntity__GetPreparationConditionText(
   int32_t condType; // w20
   int32_t condValue; // w19
 
-  if ( (byte_43536EA & 1) == 0 )
+  if ( (byte_438CFA8 & 1) == 0 )
   {
-    sub_B70694(&CondType_TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43536EA = 1;
+    sub_B775C4(&CondType_TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438CFA8 = 1;
   }
   if ( !System_String__IsNullOrEmpty(this->fields.closedMessage, 0LL) )
     return this->fields.closedMessage;
@@ -80,10 +80,10 @@ bool __fastcall ShopReleaseEntity__IsCondEnable(ShopReleaseEntity_o *this, const
   int64_t v9; // x19
   int32_t v10; // w21
 
-  if ( (byte_43536E9 & 1) == 0 )
+  if ( (byte_438CFA7 & 1) == 0 )
   {
-    sub_B70694(&CondType_TypeInfo);
-    byte_43536E9 = 1;
+    sub_B775C4(&CondType_TypeInfo);
+    byte_438CFA7 = 1;
   }
   condValues = this->fields.condValues;
   if ( condValues && (int)condValues->max_length >= 2 )
@@ -92,7 +92,7 @@ bool __fastcall ShopReleaseEntity__IsCondEnable(ShopReleaseEntity_o *this, const
     condNum = this->fields.condNum;
     if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    return CondType__IsOpen_24332796(condType, condValues, condNum, 0LL);
+    return CondType__IsOpen_24735208(condType, condValues, condNum, 0LL);
   }
   else
   {
@@ -147,8 +147,8 @@ int32_t __fastcall ShopReleaseEntity__get_condValue(ShopReleaseEntity_o *this, c
     return 0;
   if ( !(_DWORD)v3 )
   {
-    v5 = sub_B70798(this);
-    sub_B70738(v5, 0LL);
+    v5 = sub_B776C8(this);
+    sub_B77668(v5, 0LL);
   }
   return condValues->m_Items[1];
 }

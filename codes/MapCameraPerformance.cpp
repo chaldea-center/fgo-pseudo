@@ -23,7 +23,7 @@ void __fastcall MapCameraPerformance___ctor(
   SchedulerTaskBase___ctor((SchedulerTaskBase_o *)this, 0LL);
   v13->fields.atklabel = (struct UILabel_o *)mapCamera;
   v13 = (BattleServantConfConponent_o *)((char *)v13 + 72);
-  sub_B70630(v13, (System_Int32_array **)mapCamera, v14, v15, v16, v17, v18, v19);
+  sub_B77560(v13, (System_Int32_array **)mapCamera, v14, v15, v16, v17, v18, v19);
   *(float *)&v13[-1].fields.adjustHeight = second;
   *(struct UnityEngine_Vector2_o *)((char *)&v13[-1].fields.BattleAssetUIAtlas + 4) = value;
   *((_DWORD *)&v13[-1].fields.isEquip + 1) = v10;
@@ -46,17 +46,17 @@ System_Collections_IEnumerator_o *__fastcall MapCameraPerformance__Execute(
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_43508B4 & 1) == 0 )
+  if ( (byte_4389EDD & 1) == 0 )
   {
-    sub_B70694(&MapCameraPerformance__Execute_d__6_TypeInfo);
-    byte_43508B4 = 1;
+    sub_B775C4(&MapCameraPerformance__Execute_d__6_TypeInfo);
+    byte_4389EDD = 1;
   }
-  v3 = sub_B70764(MapCameraPerformance__Execute_d__6_TypeInfo);
+  v3 = sub_B77694(MapCameraPerformance__Execute_d__6_TypeInfo);
   MapCameraPerformance__Execute_d__6___ctor((MapCameraPerformance__Execute_d__6_o *)v3, 0, 0LL);
   if ( !v3 )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  sub_B77560((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -81,7 +81,7 @@ bool __fastcall MapCameraPerformance__Execute_d__6__MoveNext(
   _BOOL8 v6; // x0
   __int64 v7; // x1
   UnityEngine_Object_o *v8; // x21
-  const MethodInfo_243BBB0 *v9; // x2
+  const MethodInfo_247A004 *v9; // x2
   bool result; // w0
   MapCamera_o *v11; // x21
   float v12; // s8
@@ -100,20 +100,20 @@ bool __fastcall MapCameraPerformance__Execute_d__6__MoveNext(
   System_Nullable_Vector3__o v25; // 0:x1.16
   UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_434F386 & 1) == 0 )
+  if ( (byte_4388968 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_System_Func_bool___ctor__);
-    sub_B70694(&System_Func_bool__TypeInfo);
-    sub_B70694(&Method_System_Nullable_Vector2__GetValueOrDefault__);
-    sub_B70694(&Method_System_Nullable_Vector3___ctor__);
-    sub_B70694(&Method_System_Nullable_Vector2__get_HasValue__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_MapCameraPerformance___c__DisplayClass6_0__Execute_b__0__);
-    sub_B70694(&Method_MapCameraPerformance___c__DisplayClass6_0__Execute_b__1__);
-    sub_B70694(&MapCameraPerformance___c__DisplayClass6_0_TypeInfo);
-    sub_B70694(&UnityEngine_WaitUntil_TypeInfo);
-    byte_434F386 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_System_Func_bool___ctor__);
+    sub_B775C4(&System_Func_bool__TypeInfo);
+    sub_B775C4(&Method_System_Nullable_Vector2__GetValueOrDefault__);
+    sub_B775C4(&Method_System_Nullable_Vector3___ctor__);
+    sub_B775C4(&Method_System_Nullable_Vector2__get_HasValue__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_MapCameraPerformance___c__DisplayClass6_0__Execute_b__0__);
+    sub_B775C4(&Method_MapCameraPerformance___c__DisplayClass6_0__Execute_b__1__);
+    sub_B775C4(&MapCameraPerformance___c__DisplayClass6_0_TypeInfo);
+    sub_B775C4(&UnityEngine_WaitUntil_TypeInfo);
+    byte_4388968 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -127,7 +127,7 @@ bool __fastcall MapCameraPerformance__Execute_d__6__MoveNext(
       return 0;
     this->fields.__1__state = -1;
     _4__this = this->fields.__4__this;
-    v5 = sub_B70764(MapCameraPerformance___c__DisplayClass6_0_TypeInfo);
+    v5 = sub_B77694(MapCameraPerformance___c__DisplayClass6_0_TypeInfo);
     System_Object___ctor((Il2CppObject *)v5, 0LL);
     if ( !_4__this )
       goto LABEL_18;
@@ -165,26 +165,26 @@ bool __fastcall MapCameraPerformance__Execute_d__6__MoveNext(
     }
     v15 = *(System_Nullable_float__o *)&_4__this->fields.position.fields.has_value;
     v16 = *(_DWORD *)&_4__this->fields.size.fields.has_value;
-    v17 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+    v17 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
     System_Action___ctor(v17, (Il2CppObject *)v5, Method_MapCameraPerformance___c__DisplayClass6_0__Execute_b__0__, 0LL);
     if ( !v11 )
 LABEL_18:
-      sub_B7076C(v6, v7);
+      sub_B7769C(v6, v7);
     *(_QWORD *)&v25.fields.value.fields.x = v13;
     *(_QWORD *)&v25.fields.value.fields.z = v14;
     v23 = v15;
     MapCamera__StartAutoWork(v11, v12, v25, v23, v16, v17, 0LL);
-    v18 = (System_Func_bool__o *)sub_B70764(System_Func_bool__TypeInfo);
+    v18 = (System_Func_bool__o *)sub_B77694(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(
       v18,
       (Il2CppObject *)v5,
       Method_MapCameraPerformance___c__DisplayClass6_0__Execute_b__1__,
-      (const MethodInfo_299432C *)Method_System_Func_bool___ctor__);
-    v19 = (UnityEngine_WaitUntil_o *)sub_B70764(UnityEngine_WaitUntil_TypeInfo);
+      (const MethodInfo_29D1078 *)Method_System_Func_bool___ctor__);
+    v19 = (UnityEngine_WaitUntil_o *)sub_B77694(UnityEngine_WaitUntil_TypeInfo);
     UnityEngine_WaitUntil___ctor(v19, v18, 0LL);
     this->fields.__2__current = (Il2CppObject *)v19;
     p__2__current = &this->fields.__2__current;
-    sub_B70630(p__2__current);
+    sub_B77560(p__2__current);
     result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
   }
@@ -208,11 +208,11 @@ void __fastcall __noreturn MapCameraPerformance__Execute_d__6__System_Collection
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B70698(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B70764(v2);
+  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B70698(&Method_MapCameraPerformance__Execute_d__6_System_Collections_IEnumerator_Reset__);
-  sub_B70738(v3, v4);
+  v4 = sub_B775C8(&Method_MapCameraPerformance__Execute_d__6_System_Collections_IEnumerator_Reset__);
+  sub_B77668(v3, v4);
 }
 
 

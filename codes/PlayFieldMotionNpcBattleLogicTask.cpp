@@ -15,7 +15,7 @@ void __fastcall PlayFieldMotionNpcBattleLogicTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, 0LL);
   this->fields.actiontype = 44;
   this->fields.motionName = motionName;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.motionName,
     (System_Int32_array **)motionName,
     v9,
@@ -51,10 +51,10 @@ BattleActionData_o *__fastcall PlayFieldMotionNpcBattleLogicTask__MakeActionData
   __int64 v9; // x0
   __int64 v10; // x1
 
-  if ( (byte_4351BAA & 1) == 0 )
+  if ( (byte_438B331 & 1) == 0 )
   {
-    sub_B70694(&PlayFieldMotionNpcActionData_TypeInfo);
-    byte_4351BAA = 1;
+    sub_B775C4(&PlayFieldMotionNpcActionData_TypeInfo);
+    byte_438B331 = 1;
   }
   if ( (((__int64 (__fastcall *)(PlayFieldMotionNpcBattleLogicTask_o *, BattleLogic_o *, void *))this->klass->vtable._8_IsMakeAble.method)(
           this,
@@ -62,10 +62,10 @@ BattleActionData_o *__fastcall PlayFieldMotionNpcBattleLogicTask__MakeActionData
           this->klass[1]._1.image) & 1) == 0 )
     return 0LL;
   TargetId = PlayFieldMotionNpcBattleLogicTask__get_TargetId(this, v5);
-  v7 = (PlayFieldMotionNpcActionData_o *)sub_B70764(PlayFieldMotionNpcActionData_TypeInfo);
+  v7 = (PlayFieldMotionNpcActionData_o *)sub_B77694(PlayFieldMotionNpcActionData_TypeInfo);
   PlayFieldMotionNpcActionData___ctor(v7, TargetId, v8);
   if ( !logic )
-    sub_B7076C(v9, v10);
+    sub_B7769C(v9, v10);
   return BattleLogic__CreateCommonFieldPlayMotion(logic, (BattleLogicTask_o *)this, (BattleActionData_o *)v7, 0LL);
 }
 
@@ -74,14 +74,14 @@ int32_t __fastcall PlayFieldMotionNpcBattleLogicTask__get_TargetId(
         PlayFieldMotionNpcBattleLogicTask_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4351BA9 & 1) == 0 )
+  if ( (byte_438B330 & 1) == 0 )
   {
-    sub_B70694(&Method_BasicHelper_IndexValue_int____69237232);
-    byte_4351BA9 = 1;
+    sub_B775C4(&Method_BasicHelper_IndexValue_int____69469920);
+    byte_438B330 = 1;
   }
   return BasicHelper__IndexValue_int_(
            this->fields.targetIdlist,
            0,
            -1,
-           (const MethodInfo_1BDECF8 *)Method_BasicHelper_IndexValue_int____69237232);
+           (const MethodInfo_1C683B4 *)Method_BasicHelper_IndexValue_int____69469920);
 }

@@ -2,10 +2,10 @@ bool __fastcall EmojiUtility__IsEmojiChar(uint16_t ch, const MethodInfo *method)
 {
   int v4; // w9
 
-  if ( (byte_43563E0 & 1) == 0 )
+  if ( (byte_438FA5E & 1) == 0 )
   {
-    sub_B70694(&char_TypeInfo);
-    byte_43563E0 = 1;
+    sub_B775C4(&char_TypeInfo);
+    byte_438FA5E = 1;
   }
   if ( (BYTE3(char_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !char_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(char_TypeInfo);

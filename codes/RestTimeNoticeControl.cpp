@@ -36,7 +36,7 @@ void __fastcall RestTimeNoticeControl__SetRestTimeLabelColorWhite(
   UnityEngine_Color___ctor(v16, v11, v12, v13, v14, (const MethodInfo *)&v15);
   if ( !v10 )
 LABEL_4:
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   UILabel__set_gradientBottom(v10, v15, 0LL);
 }
 
@@ -58,20 +58,20 @@ void __fastcall RestTimeNoticeControl__Start(RestTimeNoticeControl_o *this, cons
   const MethodInfo *v4; // x1
   System_Action_o *v5; // x20
 
-  if ( (byte_435430E & 1) == 0 )
+  if ( (byte_438DBCC & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&Method_RestTimeNoticeControl__Start_b__6_0__);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_435430E = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&Method_RestTimeNoticeControl__Start_b__6_0__);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438DBCC = 1;
   }
   restTimeLabel = this->fields.restTimeLabel;
   if ( !restTimeLabel )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   UILabel__set_text(restTimeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   RestTimeNoticeControl__SetRestTimeLabelColorWhite(this, v4);
-  v5 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_RestTimeNoticeControl__Start_b__6_0__, 0LL);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -118,16 +118,16 @@ void __fastcall RestTimeNoticeControl__UpdateRestTime(
   int v41; // [xsp+18h] [xbp-38h] BYREF
   int v42; // [xsp+1Ch] [xbp-34h] BYREF
 
-  if ( (byte_435430F & 1) == 0 )
+  if ( (byte_438DBCD & 1) == 0 )
   {
-    sub_B70694(&Method_System_Array_Empty_object___);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_5711/*"EVENT_DAY_TXT"*/);
-    sub_B70694(&StringLiteral_5823/*"EVENT_TIMEOVER_TXT"*/);
-    sub_B70694(&StringLiteral_5824/*"EVENT_TIME_TXT"*/);
-    sub_B70694(&StringLiteral_5736/*"EVENT_MIN_TXT"*/);
-    byte_435430F = 1;
+    sub_B775C4(&Method_System_Array_Empty_object___);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_5766/*"EVENT_DAY_TXT"*/);
+    sub_B775C4(&StringLiteral_5878/*"EVENT_TIMEOVER_TXT"*/);
+    sub_B775C4(&StringLiteral_5879/*"EVENT_TIME_TXT"*/);
+    sub_B775C4(&StringLiteral_5791/*"EVENT_MIN_TXT"*/);
+    byte_438DBCD = 1;
   }
   endAt = this->fields.endAt;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -135,32 +135,32 @@ void __fastcall RestTimeNoticeControl__UpdateRestTime(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5823/*"EVENT_TIMEOVER_TXT"*/, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5878/*"EVENT_TIMEOVER_TXT"*/, 0LL);
   v7 = (_QWORD **)Method_System_Array_Empty_object___;
   v8 = **((_QWORD **)Method_System_Array_Empty_object___ + 6);
   v9 = *(_WORD *)(v8 + 306);
   if ( (v9 & 1) == 0 )
   {
-    sub_B08394(**((_QWORD **)Method_System_Array_Empty_object___ + 6));
+    sub_B0F2C4(**((_QWORD **)Method_System_Array_Empty_object___ + 6));
     v9 = *(_WORD *)(v8 + 306);
   }
   if ( (v9 & 0x400) != 0 )
   {
     v10 = *v7[6];
     if ( (*(_BYTE *)(v10 + 306) & 1) == 0 )
-      sub_B08394(*v7[6]);
+      sub_B0F2C4(*v7[6]);
     if ( !*(_DWORD *)(v10 + 224) )
     {
       v11 = *v7[6];
       if ( (*(_BYTE *)(v11 + 306) & 1) == 0 )
-        sub_B08394(*v7[6]);
+        sub_B0F2C4(*v7[6]);
       j_il2cpp_runtime_class_init_0(v11);
     }
   }
   v12 = *v7[6];
   if ( (*(_BYTE *)(v12 + 306) & 1) == 0 )
-    sub_B08394(*v7[6]);
-  v13 = System_String__Format_44836892(v6, **(System_Object_array ***)(v12 + 184), 0LL);
+    sub_B0F2C4(*v7[6]);
+  v13 = System_String__Format_44980660(v6, **(System_Object_array ***)(v12 + 184), 0LL);
   RestTimeNoticeControl__SetRestTimeLabelColorWhite(this, v14);
   restTimeLabel = this->fields.restTimeLabel;
   *(UnityEngine_Color_o *)&v18 = UnityEngine_Color__get_white(0LL);
@@ -178,7 +178,7 @@ void __fastcall RestTimeNoticeControl__UpdateRestTime(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_5711/*"EVENT_DAY_TXT"*/, 0LL);
+    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_5766/*"EVENT_DAY_TXT"*/, 0LL);
     v26 = &v42;
     v42 = v23;
     goto LABEL_29;
@@ -191,7 +191,7 @@ void __fastcall RestTimeNoticeControl__UpdateRestTime(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_5824/*"EVENT_TIME_TXT"*/, 0LL);
+    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_5879/*"EVENT_TIME_TXT"*/, 0LL);
     v41 = v27;
     v26 = &v41;
 LABEL_29:
@@ -210,7 +210,7 @@ LABEL_29:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_5736/*"EVENT_MIN_TXT"*/, 0LL);
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_5791/*"EVENT_MIN_TXT"*/, 0LL);
   v40 = v35;
   v38 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v40, v37);
   v39 = System_String__Format(v36, v38, 0LL);
@@ -219,7 +219,7 @@ LABEL_29:
   *(UnityEngine_Color_o *)&v31 = UnityEngine_Color__get_white(0LL);
   if ( !v30 )
 LABEL_37:
-    sub_B7076C(v16, v17);
+    sub_B7769C(v16, v17);
 LABEL_30:
   UILabel__set_effectColor(v30, *(UnityEngine_Color_o *)&v31, 0LL);
 LABEL_31:
@@ -236,19 +236,19 @@ void __fastcall RestTimeNoticeControl___Start_b__6_0(RestTimeNoticeControl_o *th
   __int64 v4; // x1
   struct UISprite_o *v5; // x0
 
-  if ( (byte_4354310 & 1) == 0 )
+  if ( (byte_438DBCE & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&StringLiteral_20051/*"img_txt_special_ascension"*/);
-    byte_4354310 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&StringLiteral_20146/*"img_txt_special_ascension"*/);
+    byte_438DBCE = 1;
   }
   textImage = this->fields.textImage;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetBondAtlasImage(textImage, (System_String_o *)StringLiteral_20051/*"img_txt_special_ascension"*/, 0LL);
+  AtlasManager__SetBondAtlasImage(textImage, (System_String_o *)StringLiteral_20146/*"img_txt_special_ascension"*/, 0LL);
   v5 = this->fields.textImage;
   if ( !v5 )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v5->klass->vtable._33_MakePixelPerfect.method)(
     v5,
     v5->klass->vtable._34_get_minWidth.methodPtr);

@@ -19,7 +19,7 @@ void __fastcall WarBoardSimpleAnimationPerformance___ctor(
 
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)animation);
   this->fields.animation = animation;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.animation,
     (System_Int32_array **)animation,
     v7,
@@ -29,7 +29,7 @@ void __fastcall WarBoardSimpleAnimationPerformance___ctor(
     v11,
     v12);
   this->fields.animationName = animationName;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.animationName,
     (System_Int32_array **)animationName,
     v13,
@@ -55,20 +55,20 @@ System_Collections_IEnumerator_o *__fastcall WarBoardSimpleAnimationPerformance_
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_4353A28 & 1) == 0 )
+  if ( (byte_438D25E & 1) == 0 )
   {
-    sub_B70694(&WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo);
-    byte_4353A28 = 1;
+    sub_B775C4(&WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo);
+    byte_438D25E = 1;
   }
-  v3 = sub_B70764(WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo);
+  v3 = sub_B77694(WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo);
   WarBoardSimpleAnimationPerformance__Execute_d__5___ctor(
     (WarBoardSimpleAnimationPerformance__Execute_d__5_o *)v3,
     0,
     0LL);
   if ( !v3 )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  sub_B77560((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -95,10 +95,10 @@ void __fastcall WarBoardSimpleAnimationPerformance__OnStart(
   __int64 v5; // x1
   SimpleAnimation_o *v6; // x0
 
-  if ( (byte_4353A27 & 1) == 0 )
+  if ( (byte_438D25D & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4353A27 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438D25D = 1;
   }
   StartCallback = this->fields.StartCallback;
   this->fields._isPlaying_k__BackingField = 1;
@@ -115,8 +115,8 @@ void __fastcall WarBoardSimpleAnimationPerformance__OnStart(
   {
     v6 = this->fields.animation;
     if ( !v6 || (SimpleAnimation__Rewind(v6, 0LL), (v6 = this->fields.animation) == 0LL) )
-      sub_B7076C(v6, v5);
-    if ( SimpleAnimation__Play_16672920(v6, this->fields.animationName, 0LL) )
+      sub_B7769C(v6, v5);
+    if ( SimpleAnimation__Play_16815192(v6, this->fields.animationName, 0LL) )
       this->fields.isStart = 1;
   }
 }
@@ -130,7 +130,7 @@ bool __fastcall WarBoardSimpleAnimationPerformance___Execute_b__5_0(
 
   animation = this->fields.animation;
   if ( !animation )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   return !SimpleAnimation__CheckPlaying(animation, 0LL) || this->fields.IsForceEnd;
 }
 
@@ -164,13 +164,13 @@ bool __fastcall WarBoardSimpleAnimationPerformance__Execute_d__5__MoveNext(
   bool result; // w0
 
   v2 = this;
-  if ( (byte_434FC9A & 1) == 0 )
+  if ( (byte_4389283 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Func_bool___ctor__);
-    sub_B70694(&System_Func_bool__TypeInfo);
-    sub_B70694(&UnityEngine_WaitUntil_TypeInfo);
-    this = (WarBoardSimpleAnimationPerformance__Execute_d__5_o *)sub_B70694(&Method_WarBoardSimpleAnimationPerformance__Execute_b__5_0__);
-    byte_434FC9A = 1;
+    sub_B775C4(&Method_System_Func_bool___ctor__);
+    sub_B775C4(&System_Func_bool__TypeInfo);
+    sub_B775C4(&UnityEngine_WaitUntil_TypeInfo);
+    this = (WarBoardSimpleAnimationPerformance__Execute_d__5_o *)sub_B775C4(&Method_WarBoardSimpleAnimationPerformance__Execute_b__5_0__);
+    byte_4389283 = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state == 1 )
@@ -185,24 +185,24 @@ bool __fastcall WarBoardSimpleAnimationPerformance__Execute_d__5__MoveNext(
     _4__this = v2->fields.__4__this;
     v2->fields.__1__state = -1;
     if ( !_4__this )
-      sub_B7076C(this, method);
+      sub_B7769C(this, method);
     if ( !_4__this->fields.isStart )
     {
       return 0;
     }
     else
     {
-      v5 = (System_Func_bool__o *)sub_B70764(System_Func_bool__TypeInfo);
+      v5 = (System_Func_bool__o *)sub_B77694(System_Func_bool__TypeInfo);
       System_Func_bool____ctor(
         v5,
         (Il2CppObject *)_4__this,
         Method_WarBoardSimpleAnimationPerformance__Execute_b__5_0__,
-        (const MethodInfo_299432C *)Method_System_Func_bool___ctor__);
-      v6 = (UnityEngine_WaitUntil_o *)sub_B70764(UnityEngine_WaitUntil_TypeInfo);
+        (const MethodInfo_29D1078 *)Method_System_Func_bool___ctor__);
+      v6 = (UnityEngine_WaitUntil_o *)sub_B77694(UnityEngine_WaitUntil_TypeInfo);
       UnityEngine_WaitUntil___ctor(v6, v5, 0LL);
       v2->fields.__2__current = (Il2CppObject *)v6;
       p__2__current = (BattleServantConfConponent_o *)&v2->fields.__2__current;
-      sub_B70630(p__2__current, (System_Int32_array **)v6, v8, v9, v10, v11, v12, v13);
+      sub_B77560(p__2__current, (System_Int32_array **)v6, v8, v9, v10, v11, v12, v13);
       result = 1;
       *(_DWORD *)&p__2__current[-1].fields.isOpenAfter = 1;
     }
@@ -227,11 +227,11 @@ void __fastcall __noreturn WarBoardSimpleAnimationPerformance__Execute_d__5__Sys
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B70698(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B70764(v2);
+  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B70698(&Method_WarBoardSimpleAnimationPerformance__Execute_d__5_System_Collections_IEnumerator_Reset__);
-  sub_B70738(v3, v4);
+  v4 = sub_B775C8(&Method_WarBoardSimpleAnimationPerformance__Execute_d__5_System_Collections_IEnumerator_Reset__);
+  sub_B77668(v3, v4);
 }
 
 

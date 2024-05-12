@@ -11,10 +11,10 @@ void __fastcall PlayCurrentBgmActionData__ExecAction(
 {
   UnityEngine_Object_o *logic; // x19
 
-  if ( (byte_4351BA3 & 1) == 0 )
+  if ( (byte_438B32A & 1) == 0 )
   {
-    this = (PlayCurrentBgmActionData_o *)sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4351BA3 = 1;
+    this = (PlayCurrentBgmActionData_o *)sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438B32A = 1;
   }
   if ( !perf )
     goto LABEL_11;
@@ -33,6 +33,6 @@ void __fastcall PlayCurrentBgmActionData__ExecAction(
       return;
     }
 LABEL_11:
-    sub_B7076C(this, perf);
+    sub_B7769C(this, perf);
   }
 }

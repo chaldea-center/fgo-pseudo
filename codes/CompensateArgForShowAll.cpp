@@ -44,25 +44,25 @@ void __fastcall CompensateArgForShowAll___ctor(
   System_Int32_array *v46; // x6
   System_Int32_array *v47; // x7
 
-  if ( (byte_4351466 & 1) == 0 )
+  if ( (byte_438AC76 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Action_CompensateArgForShowAll_EffectType___ctor__);
-    sub_B70694(&System_Action_CompensateArgForShowAll_EffectType__TypeInfo);
-    sub_B70694(&Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___);
-    sub_B70694(&Method_BitValue_CompensateArgForShowAll_EffectType___ctor__);
-    sub_B70694(&BitValue_CompensateArgForShowAll_EffectType__TypeInfo);
-    sub_B70694(&Method_CompensateArgForShowAll___ctor_b__13_1__);
-    sub_B70694(&Method_System_Func_CompensateArgForShowAll_EffectType__int___ctor__);
-    sub_B70694(&System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo);
-    sub_B70694(&Method_CompensateArgForShowAll___c___ctor_b__13_0__);
-    sub_B70694(&CompensateArgForShowAll___c_TypeInfo);
-    byte_4351466 = 1;
+    sub_B775C4(&Method_System_Action_CompensateArgForShowAll_EffectType___ctor__);
+    sub_B775C4(&System_Action_CompensateArgForShowAll_EffectType__TypeInfo);
+    sub_B775C4(&Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___);
+    sub_B775C4(&Method_BitValue_CompensateArgForShowAll_EffectType___ctor__);
+    sub_B775C4(&BitValue_CompensateArgForShowAll_EffectType__TypeInfo);
+    sub_B775C4(&Method_CompensateArgForShowAll___ctor_b__13_1__);
+    sub_B775C4(&Method_System_Func_CompensateArgForShowAll_EffectType__int___ctor__);
+    sub_B775C4(&System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo);
+    sub_B775C4(&Method_CompensateArgForShowAll___c___ctor_b__13_0__);
+    sub_B775C4(&CompensateArgForShowAll___c_TypeInfo);
+    byte_438AC76 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._Perf_k__BackingField = perf;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)perf, v11, v12, v13, v14, v15, v16);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)perf, v11, v12, v13, v14, v15, v16);
   this->fields._ActObj_k__BackingField = actObj;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._ActObj_k__BackingField,
     (System_Int32_array **)actObj,
     v17,
@@ -88,15 +88,15 @@ void __fastcall CompensateArgForShowAll___ctor(
       static_fields = CompensateArgForShowAll___c_TypeInfo->static_fields;
     }
     v26 = (Il2CppObject *)static_fields->__9;
-    _9__13_0 = (System_Func_CompensateArgForShowAll_EffectType__int__o *)sub_B70764(System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo);
+    _9__13_0 = (System_Func_CompensateArgForShowAll_EffectType__int__o *)sub_B77694(System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo);
     System_Func_CompensateArgForShowAll_EffectType__int____ctor(
       _9__13_0,
       v26,
       Method_CompensateArgForShowAll___c___ctor_b__13_0__,
-      (const MethodInfo_29A8734 *)Method_System_Func_CompensateArgForShowAll_EffectType__int___ctor__);
+      (const MethodInfo_29E5480 *)Method_System_Func_CompensateArgForShowAll_EffectType__int___ctor__);
     v27 = CompensateArgForShowAll___c_TypeInfo->static_fields;
     v27->__9__13_0 = _9__13_0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v27->__9__13_0,
       (System_Int32_array **)_9__13_0,
       v28,
@@ -106,13 +106,13 @@ void __fastcall CompensateArgForShowAll___ctor(
       v32,
       v33);
   }
-  v34 = (BitValue_CompensateArgForShowAll_EffectType__o *)sub_B70764(BitValue_CompensateArgForShowAll_EffectType__TypeInfo);
+  v34 = (BitValue_CompensateArgForShowAll_EffectType__o *)sub_B77694(BitValue_CompensateArgForShowAll_EffectType__TypeInfo);
   BitValue_CompensateArgForShowAll_EffectType____ctor(
     v34,
     (System_Func_T__int__o *)_9__13_0,
-    (const MethodInfo_2C78FB0 *)Method_BitValue_CompensateArgForShowAll_EffectType___ctor__);
+    (const MethodInfo_2CB8084 *)Method_BitValue_CompensateArgForShowAll_EffectType___ctor__);
   this->fields._EffectTypeBit_k__BackingField = v34;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._EffectTypeBit_k__BackingField,
     (System_Int32_array **)v34,
     v35,
@@ -121,18 +121,18 @@ void __fastcall CompensateArgForShowAll___ctor(
     v38,
     v39,
     v40);
-  v41 = (System_Action_ShopRootConstants_State__o *)sub_B70764(System_Action_CompensateArgForShowAll_EffectType__TypeInfo);
+  v41 = (System_Action_ShopRootConstants_State__o *)sub_B77694(System_Action_CompensateArgForShowAll_EffectType__TypeInfo);
   System_Action_ShopRootConstants_State____ctor(
     v41,
     (Il2CppObject *)this,
     Method_CompensateArgForShowAll___ctor_b__13_1__,
-    (const MethodInfo_264AE8C *)Method_System_Action_CompensateArgForShowAll_EffectType___ctor__);
+    (const MethodInfo_269F5AC *)Method_System_Action_CompensateArgForShowAll_EffectType___ctor__);
   BasicHelper__ForEach_CompensateArgForShowAll_EffectType_(
     (System_Collections_Generic_IEnumerable_T__o *)effectTypes,
     (System_Action_T__o *)v41,
-    (const MethodInfo_1BDDD58 *)Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___);
+    (const MethodInfo_1C67414 *)Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___);
   this->fields._ExtraEffectIdArray_k__BackingField = extraEffectIdArray;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._ExtraEffectIdArray_k__BackingField,
     (System_Int32_array **)extraEffectIdArray,
     v42,
@@ -152,18 +152,18 @@ void __fastcall CompensateArgForShowAll____ctor_b__13_1(
 {
   BitValue_CompensateArgForShowAll_EffectType__o *EffectTypeBit_k__BackingField; // x0
 
-  if ( (byte_4351467 & 1) == 0 )
+  if ( (byte_438AC77 & 1) == 0 )
   {
-    sub_B70694(&Method_BitValue_CompensateArgForShowAll_EffectType__On__);
-    byte_4351467 = 1;
+    sub_B775C4(&Method_BitValue_CompensateArgForShowAll_EffectType__On__);
+    byte_438AC77 = 1;
   }
   EffectTypeBit_k__BackingField = this->fields._EffectTypeBit_k__BackingField;
   if ( !EffectTypeBit_k__BackingField )
-    sub_B7076C(0LL, *(_QWORD *)&x);
+    sub_B7769C(0LL, *(_QWORD *)&x);
   BitValue_CompensateArgForShowAll_EffectType___On(
     EffectTypeBit_k__BackingField,
     x,
-    (const MethodInfo_2C78FEC *)Method_BitValue_CompensateArgForShowAll_EffectType__On__);
+    (const MethodInfo_2CB80C0 *)Method_BitValue_CompensateArgForShowAll_EffectType__On__);
 }
 
 
@@ -210,16 +210,16 @@ void __fastcall CompensateArgForShowAll___c___cctor(const MethodInfo *method)
   System_Int32_array *v7; // x6
   System_Int32_array *v8; // x7
 
-  if ( (byte_434FAD1 & 1) == 0 )
+  if ( (byte_43890CB & 1) == 0 )
   {
-    sub_B70694(&CompensateArgForShowAll___c_TypeInfo);
-    byte_434FAD1 = 1;
+    sub_B775C4(&CompensateArgForShowAll___c_TypeInfo);
+    byte_43890CB = 1;
   }
-  v1 = (Il2CppObject *)sub_B70764(CompensateArgForShowAll___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_B77694(CompensateArgForShowAll___c_TypeInfo);
   System_Object___ctor(v1, 0LL);
   static_fields = (BattleServantConfConponent_o *)CompensateArgForShowAll___c_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B70630(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  sub_B77560(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
 }
 
 

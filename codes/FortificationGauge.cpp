@@ -15,18 +15,18 @@ void __fastcall FortificationGauge___ctor(FortificationGauge_o *this, const Meth
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
 
-  if ( (byte_43554C8 & 1) == 0 )
+  if ( (byte_438EA60 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_2554/*"BATTLE_RESULT_FORTIFICATION_GET_POINT"*/);
-    sub_B70694(&StringLiteral_2555/*"BATTLE_RESULT_FORTIFICATION_MAX"*/);
-    byte_43554C8 = 1;
+    sub_B775C4(&StringLiteral_2600/*"BATTLE_RESULT_FORTIFICATION_GET_POINT"*/);
+    sub_B775C4(&StringLiteral_2601/*"BATTLE_RESULT_FORTIFICATION_MAX"*/);
+    byte_438EA60 = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_2554/*"BATTLE_RESULT_FORTIFICATION_GET_POINT"*/;
-  this->fields.GET_POINT_LOCALIZE_KEY = (struct System_String_o *)StringLiteral_2554/*"BATTLE_RESULT_FORTIFICATION_GET_POINT"*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.GET_POINT_LOCALIZE_KEY, v9, v2, v3, v4, v5, v6, v7);
-  v10 = (System_Int32_array **)StringLiteral_2555/*"BATTLE_RESULT_FORTIFICATION_MAX"*/;
-  this->fields.MAX_LOCALIZE_KEY = (struct System_String_o *)StringLiteral_2555/*"BATTLE_RESULT_FORTIFICATION_MAX"*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.MAX_LOCALIZE_KEY, v10, v11, v12, v13, v14, v15, v16);
+  v9 = (System_Int32_array **)StringLiteral_2600/*"BATTLE_RESULT_FORTIFICATION_GET_POINT"*/;
+  this->fields.GET_POINT_LOCALIZE_KEY = (struct System_String_o *)StringLiteral_2600/*"BATTLE_RESULT_FORTIFICATION_GET_POINT"*/;
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.GET_POINT_LOCALIZE_KEY, v9, v2, v3, v4, v5, v6, v7);
+  v10 = (System_Int32_array **)StringLiteral_2601/*"BATTLE_RESULT_FORTIFICATION_MAX"*/;
+  this->fields.MAX_LOCALIZE_KEY = (struct System_String_o *)StringLiteral_2601/*"BATTLE_RESULT_FORTIFICATION_MAX"*/;
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.MAX_LOCALIZE_KEY, v10, v11, v12, v13, v14, v15, v16);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -73,20 +73,20 @@ void __fastcall FortificationGauge__SetData(
   int32_t eventId; // [xsp+Ch] [xbp-44h] BYREF
   UnityEngine_Color_o color; // [xsp+10h] [xbp-40h] BYREF
 
-  if ( (byte_43554C7 & 1) == 0 )
+  if ( (byte_438EA5F & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_19773/*"img_common_frame01"*/);
-    sub_B70694(&StringLiteral_9376/*"N0"*/);
-    sub_B70694(&StringLiteral_2553/*"BATTLE_RESULT_FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/);
-    byte_43554C7 = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_19863/*"img_common_frame01"*/);
+    sub_B775C4(&StringLiteral_9434/*"N0"*/);
+    sub_B775C4(&StringLiteral_2599/*"BATTLE_RESULT_FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/);
+    byte_438EA5F = 1;
   }
   *(_QWORD *)&color.fields.r = 0LL;
   *(_QWORD *)&color.fields.b = 0LL;
   this->fields.fortificationInfo = info;
   p_fortificationInfo = &this->fields.fortificationInfo;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.fortificationInfo,
     (System_Int32_array **)info,
     (System_String_array **)method,
@@ -100,7 +100,7 @@ void __fastcall FortificationGauge__SetData(
     goto LABEL_45;
   GET_POINT_LOCALIZE_KEY = this->fields.GET_POINT_LOCALIZE_KEY;
   v15 = System_Int32__ToString((int)fortificationInfo + 16, 0LL);
-  v16 = System_String__Concat_44758168(GET_POINT_LOCALIZE_KEY, v15, 0LL);
+  v16 = System_String__Concat_44901936(GET_POINT_LOCALIZE_KEY, v15, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
@@ -118,9 +118,9 @@ void __fastcall FortificationGauge__SetData(
   if ( !*p_fortificationInfo )
     goto LABEL_45;
   v18 = itemIcon;
-  v19 = (Il2CppObject *)System_Int32__ToString_39283984(
+  v19 = (Il2CppObject *)System_Int32__ToString_39547236(
                           (unsigned int)*p_fortificationInfo + 28,
-                          (System_String_o *)StringLiteral_9376/*"N0"*/,
+                          (System_String_o *)StringLiteral_9434/*"N0"*/,
                           0LL);
   itemIcon = System_String__Format(v18, v19, 0LL);
   if ( !getForitificationPoint )
@@ -135,7 +135,7 @@ void __fastcall FortificationGauge__SetData(
   v21 = (Il2CppObject *)itemIcon;
   FortificationWorkType = BattleFortificationInfo__GetFortificationWorkType(*p_fortificationInfo, 0LL);
   v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &FortificationWorkType, v22);
-  v24 = System_String__Format_44753704((System_String_o *)StringLiteral_2553/*"BATTLE_RESULT_FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/, v21, v23, 0LL);
+  v24 = System_String__Format_44897472((System_String_o *)StringLiteral_2599/*"BATTLE_RESULT_FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/, v21, v23, 0LL);
   v25 = LocalizationManager__Get(v24, 0LL);
   itemIcon = (System_String_o *)UnityEngine_ColorUtility__TryParseHtmlString(v25, &color, 0LL);
   bg = (UIWidget_o *)this->fields.bg;
@@ -176,7 +176,7 @@ void __fastcall FortificationGauge__SetData(
     ItemIconComponent__setFrameSprite(
       (ItemIconComponent_o *)itemIcon,
       v32[5] == 1,
-      (System_String_o *)StringLiteral_19773/*"img_common_frame01"*/,
+      (System_String_o *)StringLiteral_19863/*"img_common_frame01"*/,
       0LL);
   }
   itemIcon = (System_String_o *)*p_fortificationInfo;
@@ -237,7 +237,7 @@ void __fastcall FortificationGauge__SetData(
       }
     }
 LABEL_45:
-    sub_B7076C(itemIcon, v12);
+    sub_B7769C(itemIcon, v12);
   }
   if ( !*p_fortificationInfo )
     goto LABEL_45;

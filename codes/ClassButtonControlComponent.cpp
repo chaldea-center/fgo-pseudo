@@ -37,28 +37,28 @@ void __fastcall ClassButtonControlComponent___cctor(const MethodInfo *method)
   System_RuntimeFieldHandle_o v35; // 0:w1.4
   System_RuntimeFieldHandle_o v36; // 0:w1.4
 
-  if ( (byte_4353BC7 & 1) == 0 )
+  if ( (byte_438D485 & 1) == 0 )
   {
-    sub_B70694(&ClassButtonControlComponent_TypeInfo);
-    sub_B70694(&int___TypeInfo);
-    sub_B70694(&Field__PrivateImplementationDetails__10B4796EAC59C7D81C33711F219BA227247A4E338ADAD078159BA01E87590841);
-    sub_B70694(&Field__PrivateImplementationDetails__18A642AD06501B3ADC1AC875D0D6E7DA04D9B26814FC4875D2936BA32EFED2E4);
-    sub_B70694(&Field__PrivateImplementationDetails__921C803ABFA6AC88F44F7AB19198E5C137D1C7183E8E6912757A6263E8DEE0A5);
-    sub_B70694(&Field__PrivateImplementationDetails__DFC9DBE6DE77A476BBB7F1224ED564087A6ADE8ECA1F2503AFEA414DE21000F5);
-    byte_4353BC7 = 1;
+    sub_B775C4(&ClassButtonControlComponent_TypeInfo);
+    sub_B775C4(&int___TypeInfo);
+    sub_B775C4(&Field__PrivateImplementationDetails__10B4796EAC59C7D81C33711F219BA227247A4E338ADAD078159BA01E87590841);
+    sub_B775C4(&Field__PrivateImplementationDetails__18A642AD06501B3ADC1AC875D0D6E7DA04D9B26814FC4875D2936BA32EFED2E4);
+    sub_B775C4(&Field__PrivateImplementationDetails__921C803ABFA6AC88F44F7AB19198E5C137D1C7183E8E6912757A6263E8DEE0A5);
+    sub_B775C4(&Field__PrivateImplementationDetails__DFC9DBE6DE77A476BBB7F1224ED564087A6ADE8ECA1F2503AFEA414DE21000F5);
+    byte_438D485 = 1;
   }
-  v1 = (System_Array_o *)sub_B706AC(int___TypeInfo, 10LL);
+  v1 = (System_Array_o *)sub_B775DC(int___TypeInfo, 10LL);
   v33.fields.value = Field__PrivateImplementationDetails__DFC9DBE6DE77A476BBB7F1224ED564087A6ADE8ECA1F2503AFEA414DE21000F5;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v1, v33, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v1, v33, 0LL);
   static_fields = (BattleServantConfConponent_o *)ClassButtonControlComponent_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B70630(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
-  v9 = (System_Array_o *)sub_B706AC(int___TypeInfo, 9LL);
+  sub_B77560(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  v9 = (System_Array_o *)sub_B775DC(int___TypeInfo, 9LL);
   v34.fields.value = Field__PrivateImplementationDetails__18A642AD06501B3ADC1AC875D0D6E7DA04D9B26814FC4875D2936BA32EFED2E4;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v9, v34, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v9, v34, 0LL);
   v10 = ClassButtonControlComponent_TypeInfo->static_fields;
   v10->mstClassIdTableNoMixIcon = (struct System_Int32_array *)v9;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v10->mstClassIdTableNoMixIcon,
     (System_Int32_array **)v9,
     v11,
@@ -67,12 +67,12 @@ void __fastcall ClassButtonControlComponent___cctor(const MethodInfo *method)
     v14,
     v15,
     v16);
-  v17 = (System_Array_o *)sub_B706AC(int___TypeInfo, 10LL);
+  v17 = (System_Array_o *)sub_B775DC(int___TypeInfo, 10LL);
   v35.fields.value = Field__PrivateImplementationDetails__10B4796EAC59C7D81C33711F219BA227247A4E338ADAD078159BA01E87590841;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v17, v35, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v17, v35, 0LL);
   v18 = ClassButtonControlComponent_TypeInfo->static_fields;
   v18->supportGroupTypeTableHaveMixIcon = (struct System_Int32_array *)v17;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v18->supportGroupTypeTableHaveMixIcon,
     (System_Int32_array **)v17,
     v19,
@@ -81,12 +81,12 @@ void __fastcall ClassButtonControlComponent___cctor(const MethodInfo *method)
     v22,
     v23,
     v24);
-  v25 = (System_Array_o *)sub_B706AC(int___TypeInfo, 9LL);
+  v25 = (System_Array_o *)sub_B775DC(int___TypeInfo, 9LL);
   v36.fields.value = Field__PrivateImplementationDetails__921C803ABFA6AC88F44F7AB19198E5C137D1C7183E8E6912757A6263E8DEE0A5;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v25, v36, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v25, v36, 0LL);
   v26 = ClassButtonControlComponent_TypeInfo->static_fields;
   v26->supportGroupTypeTableNoMixIcon = (struct System_Int32_array *)v25;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v26->supportGroupTypeTableNoMixIcon,
     (System_Int32_array **)v25,
     v27,
@@ -165,10 +165,10 @@ void __fastcall ClassButtonControlComponent__add_callbackFunc(
   ClassButtonControlComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4353BC3 & 1) == 0 )
+  if ( (byte_438D481 & 1) == 0 )
   {
-    sub_B70694(&ClassButtonControlComponent_CallbackFunc_TypeInfo);
-    byte_4353BC3 = 1;
+    sub_B775C4(&ClassButtonControlComponent_CallbackFunc_TypeInfo);
+    byte_438D481 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -181,13 +181,13 @@ void __fastcall ClassButtonControlComponent__add_callbackFunc(
       if ( (ClassButtonControlComponent_CallbackFunc_c *)v8->klass != ClassButtonControlComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B70A60(v8);
+  sub_B77990(v8);
   ClassButtonControlComponent__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -208,26 +208,26 @@ int32_t __fastcall ClassButtonControlComponent__getIconCursorPos(
         int32_t classPos,
         const MethodInfo *method)
 {
+  ClassButtonControlComponent_c *v5; // x0
   System_Int32_array **p_supportGroupTypeTableHaveMixIcon; // x8
-  int32_t v6; // w0
-  ClassButtonControlComponent_c *v8; // x0
+  int32_t v7; // w0
 
-  if ( (byte_4353BC6 & 1) == 0 )
+  if ( (byte_438D484 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Array_IndexOf_int___);
-    sub_B70694(&ClassButtonControlComponent_TypeInfo);
-    byte_4353BC6 = 1;
+    sub_B775C4(&Method_System_Array_IndexOf_int___);
+    sub_B775C4(&ClassButtonControlComponent_TypeInfo);
+    byte_438D484 = 1;
   }
-  v8 = ClassButtonControlComponent_TypeInfo;
+  v5 = ClassButtonControlComponent_TypeInfo;
   if ( this->fields.haveMixIcon )
   {
     if ( (WORD1(ClassButtonControlComponent_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
       && !ClassButtonControlComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(ClassButtonControlComponent_TypeInfo);
-      v8 = ClassButtonControlComponent_TypeInfo;
+      v5 = ClassButtonControlComponent_TypeInfo;
     }
-    p_supportGroupTypeTableHaveMixIcon = &v8->static_fields->supportGroupTypeTableHaveMixIcon;
+    p_supportGroupTypeTableHaveMixIcon = &v5->static_fields->supportGroupTypeTableHaveMixIcon;
   }
   else
   {
@@ -235,15 +235,15 @@ int32_t __fastcall ClassButtonControlComponent__getIconCursorPos(
       && !ClassButtonControlComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(ClassButtonControlComponent_TypeInfo);
-      v8 = ClassButtonControlComponent_TypeInfo;
+      v5 = ClassButtonControlComponent_TypeInfo;
     }
-    p_supportGroupTypeTableHaveMixIcon = &v8->static_fields->supportGroupTypeTableNoMixIcon;
+    p_supportGroupTypeTableHaveMixIcon = &v5->static_fields->supportGroupTypeTableNoMixIcon;
   }
-  v6 = System_Array__IndexOf_int_(
+  v7 = System_Array__IndexOf_int_(
          *p_supportGroupTypeTableHaveMixIcon,
          classPos,
-         (const MethodInfo_1FCBFE4 *)Method_System_Array_IndexOf_int___);
-  return v6 & ~(v6 >> 31);
+         (const MethodInfo_2005430 *)Method_System_Array_IndexOf_int___);
+  return v7 & ~(v7 >> 31);
 }
 
 
@@ -310,30 +310,30 @@ void __fastcall ClassButtonControlComponent__init(
   System_Int32_array *v53; // x7
   __int64 v54; // x0
 
-  if ( (byte_4353BC5 & 1) == 0 )
+  if ( (byte_438D483 & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&ClassButtonComponent_CallbackFunc_TypeInfo);
-    sub_B70694(&Method_ClassButtonControlComponent_OnSelectButton__);
-    sub_B70694(&ClassButtonControlComponent_TypeInfo);
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_B70694(&Method_DataManager_GetMasterData_QuestPhaseMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_ServantClassMaster___);
-    sub_B70694(&Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4353BC5 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&ClassButtonComponent_CallbackFunc_TypeInfo);
+    sub_B775C4(&Method_ClassButtonControlComponent_OnSelectButton__);
+    sub_B775C4(&ClassButtonControlComponent_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_B775C4(&Method_DataManager_GetMasterData_QuestPhaseMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_ServantClassMaster___);
+    sub_B775C4(&Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438D483 = 1;
   }
   classButton = this->fields.classButton;
   if ( classButton )
     LOBYTE(classButton) = classButton->max_length == 10;
   this->fields.haveMixIcon = (char)classButton;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_85;
   MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                                         Instance,
-                                                                                        (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantClassMaster___);
+                                                                                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantClassMaster___);
   if ( defaultPos )
   {
     currentCursor = 0;
@@ -345,7 +345,7 @@ void __fastcall ClassButtonControlComponent__init(
   }
   this->fields.callbackFunc = callback;
   this->fields.oldCursor = currentCursor;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.callbackFunc,
     (System_Int32_array **)callback,
     v12,
@@ -358,7 +358,7 @@ void __fastcall ClassButtonControlComponent__init(
   this->fields.updateEnable = 1;
   if ( !v20 )
 LABEL_85:
-    sub_B7076C(Instance, v11);
+    sub_B7769C(Instance, v11);
   v21 = 0;
   v22 = 32LL;
   while ( (signed int)v21 < (signed int)v20->max_length )
@@ -456,15 +456,15 @@ LABEL_85:
     Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                   MasterData_WarQuestSelectionMaster,
                                   *v28,
-                                  (const MethodInfo_21C0440 *)Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
+                                  (const MethodInfo_21FB894 *)Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
     classCursor = this->fields.classCursor;
     if ( !classCursor )
       goto LABEL_85;
     if ( v21 >= classCursor->max_length )
     {
 LABEL_87:
-      v54 = sub_B70798(Instance);
-      sub_B70738(v54, 0LL);
+      v54 = sub_B776C8(Instance);
+      sub_B77668(v54, 0LL);
     }
     v35 = (ClassButtonComponent_o *)Instance;
     Instance = (DataManager_o *)classCursor->m_Items[v21];
@@ -498,12 +498,12 @@ LABEL_87:
           }
           else
           {
-            Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !Instance )
               goto LABEL_85;
             Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                           Instance,
-                                          (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
+                                          (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
             if ( !Instance )
               goto LABEL_85;
             Instance = (DataManager_o *)QuestPhaseMaster__GetEntity(
@@ -548,7 +548,7 @@ LABEL_87:
     {
       Instance = (DataManager_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                     (UnityEngine_Component_o *)Instance,
-                                    (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                                    (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
       if ( v35 )
       {
         v43 = (UISprite_o *)Instance;
@@ -565,7 +565,7 @@ LABEL_87:
           if ( v21 >= v45->max_length )
             goto LABEL_87;
           v46 = v45->m_Items[v21];
-          v47 = (ClassButtonComponent_CallbackFunc_o *)sub_B70764(ClassButtonComponent_CallbackFunc_TypeInfo);
+          v47 = (ClassButtonComponent_CallbackFunc_o *)sub_B77694(ClassButtonComponent_CallbackFunc_TypeInfo);
           ClassButtonComponent_CallbackFunc___ctor(
             v47,
             (Il2CppObject *)this,
@@ -575,7 +575,7 @@ LABEL_87:
           {
             v46->fields.callbackFunc = v47;
             v46->fields.classPos = v27;
-            sub_B70630(
+            sub_B77560(
               (BattleServantConfConponent_o *)&v46->fields.callbackFunc,
               (System_Int32_array **)v47,
               v48,
@@ -612,10 +612,10 @@ void __fastcall ClassButtonControlComponent__remove_callbackFunc(
   int32_t v11; // w0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4353BC4 & 1) == 0 )
+  if ( (byte_438D482 & 1) == 0 )
   {
-    sub_B70694(&ClassButtonControlComponent_CallbackFunc_TypeInfo);
-    byte_4353BC4 = 1;
+    sub_B775C4(&ClassButtonControlComponent_CallbackFunc_TypeInfo);
+    byte_438D482 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -628,13 +628,13 @@ void __fastcall ClassButtonControlComponent__remove_callbackFunc(
       if ( (ClassButtonControlComponent_CallbackFunc_c *)v8->klass != ClassButtonControlComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B70A60(v8);
+  sub_B77990(v8);
   ClassButtonControlComponent__IsMixSupportGroupType(v11, v12);
 }
 
@@ -694,11 +694,11 @@ void __fastcall ClassButtonControlComponent__setCursor(
           }
         }
 LABEL_13:
-        sub_B7076C(gameObject, v9);
+        sub_B7769C(gameObject, v9);
       }
     }
-    v14 = sub_B70798(gameObject);
-    sub_B70738(v14, 0LL);
+    v14 = sub_B776C8(gameObject);
+    sub_B77668(v14, 0LL);
   }
 }
 
@@ -727,7 +727,7 @@ void __fastcall ClassButtonControlComponent_CallbackFunc___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B70630(p_method);
+  sub_B77560(p_method);
 }
 
 
@@ -742,14 +742,14 @@ System_IAsyncResult_o *__fastcall ClassButtonControlComponent_CallbackFunc__Begi
   int32_t v10; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10 = classPos;
-  if ( (byte_434EDB2 & 1) == 0 )
+  if ( (byte_43885A1 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    byte_434EDB2 = 1;
+    sub_B775C4(&int_TypeInfo);
+    byte_43885A1 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10, callback);
-  return (System_IAsyncResult_o *)sub_B70638(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_B77568(this, v9, callback, object);
 }
 
 
@@ -758,7 +758,7 @@ void __fastcall ClassButtonControlComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7063C(result, 0LL, method);
+  sub_B7756C(result, 0LL, method);
 }
 
 
@@ -815,8 +815,8 @@ LABEL_5:
       v20 = *(_QWORD *)&v18->fields.extra_arg;
       v21 = *(void (__fastcall **)(_QWORD, __int64))&v18->fields.method_ptr;
       if ( *(__int16 *)(v20 + 72) == -1 )
-        sub_B70750(*(_QWORD *)&v18->fields.extra_arg, *(_QWORD *)&classPos);
-      if ( (sub_B706C4(v20) & 1) == 0 )
+        sub_B77680(*(_QWORD *)&v18->fields.extra_arg, *(_QWORD *)&classPos);
+      if ( (sub_B775F4(v20) & 1) == 0 )
         break;
       if ( *(_BYTE *)(v20 + 74) != 1 )
         goto LABEL_36;
@@ -827,8 +827,8 @@ LABEL_37:
     }
     if ( v19 && *(__int16 *)(v20 + 72) != -1 && (*(_BYTE *)(*v19 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v22 = sub_B706BC(v20);
-      v23 = sub_B70AC0(v20);
+      v22 = sub_B775EC(v20);
+      v23 = sub_B779F0(v20);
       if ( (v22 & 1) != 0 )
       {
         if ( (v23 & 1) != 0 )
@@ -852,7 +852,7 @@ LABEL_37:
           else
           {
 LABEL_35:
-            v16 = sub_B08590(v19, v25, v26);
+            v16 = sub_B0F4C0(v19, v25, v26);
           }
           v15 = *(_QWORD *)(v16 + 8);
         }
@@ -860,7 +860,7 @@ LABEL_35:
         {
           v15 = *(_QWORD *)(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 320);
         }
-        v17 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD))sub_B70744(v15, v20);
+        v17 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD))sub_B77674(v15, v20);
         (*v17)(v19, (unsigned int)classPos, v17);
       }
       else
@@ -886,7 +886,7 @@ LABEL_35:
           else
           {
 LABEL_11:
-            v14 = sub_B08590(v19, class_0, v9);
+            v14 = sub_B0F4C0(v19, class_0, v9);
           }
           (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD))v14)(v19, (unsigned int)classPos, *(_QWORD *)(v14 + 8));
         }

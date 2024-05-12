@@ -17,29 +17,29 @@ void __fastcall EffectSynchronize___cctor(const MethodInfo *method)
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
 
-  if ( (byte_43563DE & 1) == 0 )
+  if ( (byte_438FA5C & 1) == 0 )
   {
-    sub_B70694(&EffectSynchronize_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_Animation___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_List_SimpleAnimation___ctor__);
-    sub_B70694(&System_Collections_Generic_List_SimpleAnimation__TypeInfo);
-    sub_B70694(&System_Collections_Generic_List_Animation__TypeInfo);
-    byte_43563DE = 1;
+    sub_B775C4(&EffectSynchronize_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_Animation___ctor__);
+    sub_B775C4(&Method_System_Collections_Generic_List_SimpleAnimation___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_SimpleAnimation__TypeInfo);
+    sub_B775C4(&System_Collections_Generic_List_Animation__TypeInfo);
+    byte_438FA5C = 1;
   }
-  v1 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_Animation__TypeInfo);
+  v1 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_Animation__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v1,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_Animation___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_Animation___ctor__);
   static_fields = (BattleServantConfConponent_o *)EffectSynchronize_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B70630(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
-  v9 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_SimpleAnimation__TypeInfo);
+  sub_B77560(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  v9 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_SimpleAnimation__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v9,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_SimpleAnimation___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_SimpleAnimation___ctor__);
   v10 = EffectSynchronize_TypeInfo->static_fields;
   v10->simpleAnimCompList = (struct System_Collections_Generic_List_SimpleAnimation__o *)v9;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v10->simpleAnimCompList,
     (System_Int32_array **)v9,
     v11,
@@ -82,23 +82,23 @@ void __fastcall EffectSynchronize__Awake(EffectSynchronize_o *this, const Method
   EffectSynchronize_c *v23; // x0
   EffectSynchronize_c *v24; // x0
 
-  if ( (byte_43563DA & 1) == 0 )
+  if ( (byte_438FA58 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_Animation___);
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
-    sub_B70694(&EffectSynchronize_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_Animation__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_SimpleAnimation__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_Animation__Contains__);
-    sub_B70694(&Method_System_Collections_Generic_List_SimpleAnimation__Contains__);
-    byte_43563DA = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Animation___);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+    sub_B775C4(&EffectSynchronize_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_Animation__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_SimpleAnimation__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Animation__Contains__);
+    sub_B775C4(&Method_System_Collections_Generic_List_SimpleAnimation__Contains__);
+    byte_438FA58 = 1;
   }
   Component_WebViewObject = (struct SimpleAnimation_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                           (UnityEngine_Component_o *)this,
-                                                          (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+                                                          (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
   p_simpleAnimComp = &this->fields.simpleAnimComp;
   this->fields.simpleAnimComp = Component_WebViewObject;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.simpleAnimComp,
     (System_Int32_array **)Component_WebViewObject,
     v5,
@@ -120,7 +120,7 @@ void __fastcall EffectSynchronize__Awake(EffectSynchronize_o *this, const Method
   if ( !System_Collections_Generic_List_WarBoardManager_TaskList___Contains(
           (System_Collections_Generic_List_WarBoardManager_TaskList__o *)simpleAnimCompList,
           (WarBoardManager_TaskList_o *)*p_simpleAnimComp,
-          (const MethodInfo_3025AD8 *)Method_System_Collections_Generic_List_SimpleAnimation__Contains__) )
+          (const MethodInfo_30536E8 *)Method_System_Collections_Generic_List_SimpleAnimation__Contains__) )
   {
     v14 = EffectSynchronize_TypeInfo;
     if ( (BYTE3(EffectSynchronize_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -135,14 +135,14 @@ void __fastcall EffectSynchronize__Awake(EffectSynchronize_o *this, const Method
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
       simpleAnimCompList,
       (EventMissionProgressRequest_Argument_ProgressData_o *)*p_simpleAnimComp,
-      (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_SimpleAnimation__Add__);
+      (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_SimpleAnimation__Add__);
   }
   v15 = (struct UnityEngine_Animation_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                             (UnityEngine_Component_o *)this,
-                                            (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_Animation___);
+                                            (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Animation___);
   p_animComp = &this->fields.animComp;
   this->fields.animComp = v15;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.animComp,
     (System_Int32_array **)v15,
     v17,
@@ -164,7 +164,7 @@ void __fastcall EffectSynchronize__Awake(EffectSynchronize_o *this, const Method
   if ( System_Collections_Generic_List_WarBoardManager_TaskList___Contains(
          (System_Collections_Generic_List_WarBoardManager_TaskList__o *)simpleAnimCompList,
          (WarBoardManager_TaskList_o *)*p_animComp,
-         (const MethodInfo_3025AD8 *)Method_System_Collections_Generic_List_Animation__Contains__) )
+         (const MethodInfo_30536E8 *)Method_System_Collections_Generic_List_Animation__Contains__) )
   {
     return;
   }
@@ -178,11 +178,11 @@ void __fastcall EffectSynchronize__Awake(EffectSynchronize_o *this, const Method
   simpleAnimCompList = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v24->static_fields->animCompList;
   if ( !simpleAnimCompList )
 LABEL_23:
-    sub_B7076C(simpleAnimCompList, v11);
+    sub_B7769C(simpleAnimCompList, v11);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     simpleAnimCompList,
     (EventMissionProgressRequest_Argument_ProgressData_o *)*p_animComp,
-    (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_Animation__Add__);
+    (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_Animation__Add__);
 }
 
 
@@ -192,8 +192,8 @@ bool __fastcall EffectSynchronize__IsEqualsName(EffectSynchronize_o *this, const
 
   syncAnimStr = this->fields.syncAnimStr;
   if ( !syncAnimStr )
-    sub_B7076C(0LL, method);
-  return System_String__Equals_44745508(syncAnimStr, this->fields.selfAnimStr, 0LL);
+    sub_B7769C(0LL, method);
+  return System_String__Equals_44889276(syncAnimStr, this->fields.selfAnimStr, 0LL);
 }
 
 
@@ -208,13 +208,13 @@ void __fastcall EffectSynchronize__OnDestroy(EffectSynchronize_o *this, const Me
   UnityEngine_Object_o *animComp; // x20
   EffectSynchronize_c *v10; // x0
 
-  if ( (byte_43563DB & 1) == 0 )
+  if ( (byte_438FA59 & 1) == 0 )
   {
-    sub_B70694(&EffectSynchronize_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_SimpleAnimation__Remove__);
-    sub_B70694(&Method_System_Collections_Generic_List_Animation__Remove__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43563DB = 1;
+    sub_B775C4(&EffectSynchronize_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_SimpleAnimation__Remove__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Animation__Remove__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438FA59 = 1;
   }
   simpleAnimComp = (UnityEngine_Object_o *)this->fields.simpleAnimComp;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -240,7 +240,7 @@ LABEL_21:
       System_Collections_Generic_List_WarBoardManager_TaskList___Remove(
         simpleAnimCompList,
         v7,
-        (const MethodInfo_3027034 *)*v8);
+        (const MethodInfo_3054C44 *)*v8);
       return;
     }
     goto LABEL_23;
@@ -268,7 +268,7 @@ LABEL_21:
       goto LABEL_21;
     }
 LABEL_23:
-    sub_B7076C(simpleAnimCompList, v4);
+    sub_B7769C(simpleAnimCompList, v4);
   }
 }
 
@@ -280,10 +280,10 @@ void __fastcall EffectSynchronize__OnEnable(EffectSynchronize_o *this, const Met
   SimpleAnimation_o *v5; // x0
   UnityEngine_Object_o *animComp; // x20
 
-  if ( (byte_43563DD & 1) == 0 )
+  if ( (byte_438FA5B & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43563DD = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438FA5B = 1;
   }
   simpleAnimComp = (UnityEngine_Object_o *)this->fields.simpleAnimComp;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -296,11 +296,11 @@ void __fastcall EffectSynchronize__OnEnable(EffectSynchronize_o *this, const Met
     v5 = this->fields.simpleAnimComp;
     if ( v5 )
     {
-      SimpleAnimation__Play_16672920(v5, this->fields.selfAnimStr, 0LL);
+      SimpleAnimation__Play_16815192(v5, this->fields.selfAnimStr, 0LL);
       goto LABEL_15;
     }
 LABEL_16:
-    sub_B7076C(v5, v4);
+    sub_B7769C(v5, v4);
   }
   animComp = (UnityEngine_Object_o *)this->fields.animComp;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -313,7 +313,7 @@ LABEL_16:
     v5 = (SimpleAnimation_o *)this->fields.animComp;
     if ( v5 )
     {
-      UnityEngine_Animation__Play_51542184((UnityEngine_Animation_o *)v5, this->fields.selfAnimStr, 0LL);
+      UnityEngine_Animation__Play_51745976((UnityEngine_Animation_o *)v5, this->fields.selfAnimStr, 0LL);
       goto LABEL_15;
     }
     goto LABEL_16;
@@ -389,20 +389,20 @@ void __fastcall EffectSynchronize__synchronize(EffectSynchronize_o *this, const 
   System_Collections_Generic_List_Enumerator_T__o v64; // [xsp+30h] [xbp-90h] BYREF
   System_Collections_Generic_List_Enumerator_T__o v65; // [xsp+50h] [xbp-70h] BYREF
 
-  if ( (byte_43563DC & 1) == 0 )
+  if ( (byte_438FA5A & 1) == 0 )
   {
-    sub_B70694(&EffectSynchronize_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_Animation__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_SimpleAnimation__Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_Animation__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_SimpleAnimation__MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_SimpleAnimation__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_Animation__get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_Animation__GetEnumerator__);
-    sub_B70694(&Method_System_Collections_Generic_List_SimpleAnimation__GetEnumerator__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&SimpleAnimation_State_TypeInfo);
-    byte_43563DC = 1;
+    sub_B775C4(&EffectSynchronize_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_Animation__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_SimpleAnimation__Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_Animation__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_SimpleAnimation__MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_SimpleAnimation__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_Animation__get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Animation__GetEnumerator__);
+    sub_B775C4(&Method_System_Collections_Generic_List_SimpleAnimation__GetEnumerator__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&SimpleAnimation_State_TypeInfo);
+    byte_438FA5A = 1;
   }
   memset(&v65, 0, sizeof(v65));
   memset(&v64, 0, sizeof(v64));
@@ -428,18 +428,18 @@ void __fastcall EffectSynchronize__synchronize(EffectSynchronize_o *this, const 
       System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
         &v61,
         simpleAnimCompList,
-        (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_SimpleAnimation__GetEnumerator__);
+        (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_SimpleAnimation__GetEnumerator__);
       v65 = v61;
       while ( 1 )
       {
         v7 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
                &v65,
-               (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_SimpleAnimation__MoveNext__);
+               (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_SimpleAnimation__MoveNext__);
         if ( !v7 )
           break;
         current = v65.fields.current;
         if ( !v65.fields.current )
-          sub_B7076C(v7, v8);
+          sub_B7769C(v7, v8);
         if ( SimpleAnimation__get_Item((SimpleAnimation_o *)v65.fields.current, this->fields.syncAnimStr, 0LL) )
         {
           IsEqualsName = EffectSynchronize__IsEqualsName(this, v10);
@@ -447,11 +447,11 @@ void __fastcall EffectSynchronize__synchronize(EffectSynchronize_o *this, const 
           if ( IsEqualsName )
           {
             if ( !v13 )
-              sub_B7076C(0LL, v11);
+              sub_B7769C(0LL, v11);
             Item = SimpleAnimation__get_Item(v13, this->fields.syncAnimStr, 0LL);
             v16 = Item;
             if ( !Item )
-              sub_B7076C(0LL, v15);
+              sub_B7769C(0LL, v15);
             klass = Item->klass;
             if ( *(_WORD *)&Item->klass->_2.bitflags1 )
             {
@@ -469,18 +469,18 @@ void __fastcall EffectSynchronize__synchronize(EffectSynchronize_o *this, const 
             else
             {
 LABEL_22:
-              p_method = sub_B08590(Item, SimpleAnimation_State_TypeInfo, 13LL);
+              p_method = sub_B0F4C0(Item, SimpleAnimation_State_TypeInfo, 13LL);
             }
             (*(void (__fastcall **)(SimpleAnimation_State_o *, _QWORD))p_method)(v16, *(_QWORD *)(p_method + 8));
           }
           else
           {
             if ( !v13 )
-              sub_B7076C(0LL, v11);
+              sub_B7769C(0LL, v11);
             v21 = SimpleAnimation__get_Item(v13, this->fields.selfAnimStr, 0LL);
             v23 = v21;
             if ( !v21 )
-              sub_B7076C(0LL, v22);
+              sub_B7769C(0LL, v22);
             v24 = v21->klass;
             if ( *(_WORD *)&v21->klass->_2.bitflags1 )
             {
@@ -498,7 +498,7 @@ LABEL_22:
             else
             {
 LABEL_29:
-              v27 = sub_B08590(v21, SimpleAnimation_State_TypeInfo, 13LL);
+              v27 = sub_B0F4C0(v21, SimpleAnimation_State_TypeInfo, 13LL);
             }
             v28 = (*(float (__fastcall **)(SimpleAnimation_State_o *, _QWORD))v27)(v23, *(_QWORD *)(v27 + 8));
           }
@@ -509,7 +509,7 @@ LABEL_29:
           v30 = SimpleAnimation__get_Item((SimpleAnimation_o *)current, this->fields.syncAnimStr, 0LL);
           v32 = v30;
           if ( !v30 )
-            sub_B7076C(0LL, v31);
+            sub_B7769C(0LL, v31);
           v33 = v30->klass;
           if ( *(_WORD *)&v30->klass->_2.bitflags1 )
           {
@@ -527,7 +527,7 @@ LABEL_29:
           else
           {
 LABEL_42:
-            v36 = sub_B08590(v30, SimpleAnimation_State_TypeInfo, 13LL);
+            v36 = sub_B0F4C0(v30, SimpleAnimation_State_TypeInfo, 13LL);
           }
           v37 = (*(float (__fastcall **)(SimpleAnimation_State_o *, _QWORD))v36)(v32, *(_QWORD *)(v36 + 8));
           v38 = v37 == INFINITY ? -INFINITY : v37;
@@ -542,7 +542,7 @@ LABEL_42:
             }
             if ( (((int)v29 == (int)v38) & UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, v39, 0LL)) != 0 )
             {
-              BasicHelper__SynchronizeAnimation_20859312(
+              BasicHelper__SynchronizeAnimation_22416652(
                 this->fields.simpleAnimComp,
                 this->fields.selfAnimStr,
                 this->fields.syncAnimStr,
@@ -557,12 +557,12 @@ LABEL_42:
       v63 = 1;
       System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
         &v65,
-        (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_SimpleAnimation__Dispose__);
+        (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_SimpleAnimation__Dispose__);
       v63 = 0;
       return;
     }
 LABEL_103:
-    sub_B7076C(simpleAnimCompList, v4);
+    sub_B7769C(simpleAnimCompList, v4);
   }
   animComp = (UnityEngine_Object_o *)this->fields.animComp;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -585,18 +585,18 @@ LABEL_103:
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v61,
     simpleAnimCompList,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_Animation__GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_Animation__GetEnumerator__);
   v64 = v61;
   while ( 1 )
   {
     v42 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
             &v64,
-            (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_Animation__MoveNext__);
+            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_Animation__MoveNext__);
     if ( !v42 )
       break;
     v44 = v64.fields.current;
     if ( !v64.fields.current )
-      sub_B7076C(v42, v43);
+      sub_B7769C(v42, v43);
     v45 = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(
                                               (UnityEngine_Animation_o *)v64.fields.current,
                                               this->fields.syncAnimStr,
@@ -608,18 +608,18 @@ LABEL_103:
       if ( v48 )
       {
         if ( !v49 )
-          sub_B7076C(0LL, v47);
+          sub_B7769C(0LL, v47);
         v50 = UnityEngine_Animation__get_Item(v49, this->fields.syncAnimStr, 0LL);
         if ( !v50 )
-          sub_B7076C(0LL, v51);
+          sub_B7769C(0LL, v51);
       }
       else
       {
         if ( !v49 )
-          sub_B7076C(0LL, v47);
+          sub_B7769C(0LL, v47);
         v50 = UnityEngine_Animation__get_Item(v49, this->fields.selfAnimStr, 0LL);
         if ( !v50 )
-          sub_B7076C(0LL, v52);
+          sub_B7769C(0LL, v52);
       }
       length = UnityEngine_AnimationState__get_length(v50, 0LL);
       if ( length == INFINITY )
@@ -628,7 +628,7 @@ LABEL_103:
         v54 = length;
       v55 = UnityEngine_Animation__get_Item((UnityEngine_Animation_o *)v44, this->fields.syncAnimStr, 0LL);
       if ( !v55 )
-        sub_B7076C(0LL, v56);
+        sub_B7769C(0LL, v56);
       v57 = UnityEngine_AnimationState__get_length(v55, 0LL);
       v58 = v57 == INFINITY ? -INFINITY : v57;
       if ( UnityEngine_Animation__get_isPlaying((UnityEngine_Animation_o *)v44, 0LL)
@@ -657,7 +657,7 @@ LABEL_103:
   v60 = ++v63;
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v64,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_Animation__Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_Animation__Dispose__);
   if ( v60 && v62[v60 - 1] == 470 )
     v63 = v60 - 1;
 }

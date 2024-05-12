@@ -1,14 +1,14 @@
 void __fastcall SpotPathMaster___ctor(SpotPathMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_43527A1 & 1) == 0 )
+  if ( (byte_438BF1D & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
-    byte_43527A1 = 1;
+    sub_B775C4(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
+    byte_438BF1D = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     216,
-    (const MethodInfo_21C03A4 *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
+    (const MethodInfo_21FB7F8 *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
 }
 
 
@@ -49,19 +49,19 @@ SpotPathEntity_o *__fastcall SpotPathMaster__GetSpotPathEntity(
   int32_t v13; // w22
   __int64 v14; // x10
 
-  if ( (byte_43527A2 & 1) == 0 )
+  if ( (byte_438BF1E & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&SpotPathEntity_TypeInfo);
-    byte_43527A2 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&SpotPathEntity_TypeInfo);
+    byte_438BF1E = 1;
   }
   result = (SpotPathEntity_o *)this->fields.list;
   if ( !result )
     goto LABEL_16;
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)result,
-            (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v11 = termId + 100 * eventId;
@@ -75,7 +75,7 @@ SpotPathEntity_o *__fastcall SpotPathMaster__GetSpotPathEntity(
       result = (SpotPathEntity_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                                      (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)result,
                                      v13,
-                                     (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                     (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !result )
         break;
       v14 = *(&SpotPathEntity_TypeInfo->_2.bitflags2 + 1);
@@ -90,7 +90,7 @@ SpotPathEntity_o *__fastcall SpotPathMaster__GetSpotPathEntity(
         return 0LL;
     }
 LABEL_16:
-    sub_B7076C(result, *(_QWORD *)&eventId);
+    sub_B7769C(result, *(_QWORD *)&eventId);
   }
   return 0LL;
 }

@@ -1,13 +1,13 @@
 void __fastcall ExcludeMotionEntity___ctor(ExcludeMotionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_43508DE & 1) == 0 )
+  if ( (byte_4389FC2 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_43508DE = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_4389FC2 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *__fastcall ExcludeMotionEntity__CreatePK(
         int32_t weaponGroup,
         const MethodInfo *method)
 {
-  if ( (byte_43508DC & 1) == 0 )
+  if ( (byte_4389FC0 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__string__int___);
-    byte_43508DC = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__string__int___);
+    byte_4389FC0 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__string__int_(
            idx,
            stateName,
            weaponGroup,
-           (const MethodInfo_1CA298C *)Method_DataEntityBase_CreateMultiplePK_int__string__int___);
+           (const MethodInfo_1D177DC *)Method_DataEntityBase_CreateMultiplePK_int__string__int___);
 }
 
 
@@ -53,15 +53,15 @@ bool __fastcall ExcludeMotionEntity__IsSatisfyExcludeCond(ExcludeMotionEntity_o 
   __int64 v11; // x0
 
   v2 = this;
-  if ( (byte_43508DD & 1) == 0 )
+  if ( (byte_4389FC1 & 1) == 0 )
   {
-    this = (ExcludeMotionEntity_o *)sub_B70694(&TerminalPramsManager_TypeInfo);
-    byte_43508DD = 1;
+    this = (ExcludeMotionEntity_o *)sub_B775C4(&TerminalPramsManager_TypeInfo);
+    byte_4389FC1 = 1;
   }
   excludeCondJson = v2->fields.excludeCondJson;
   if ( !excludeCondJson )
 LABEL_42:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   max_length = excludeCondJson->max_length;
   if ( max_length < 1 )
     return 0;
@@ -70,8 +70,8 @@ LABEL_42:
   {
     if ( v5 >= max_length )
     {
-      v11 = sub_B70798(this);
-      sub_B70738(v11, 0LL);
+      v11 = sub_B776C8(this);
+      sub_B77668(v11, 0LL);
     }
     v6 = excludeCondJson->m_Items[v5];
     if ( !v6 )
@@ -84,10 +84,10 @@ LABEL_42:
       {
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
       }
-      if ( !byte_434DEA3 )
+      if ( !byte_4387465 )
       {
-        sub_B70694(&TerminalPramsManager_TypeInfo);
-        byte_434DEA3 = 1;
+        sub_B775C4(&TerminalPramsManager_TypeInfo);
+        byte_4387465 = 1;
       }
       this = (ExcludeMotionEntity_o *)TerminalPramsManager_TypeInfo;
       if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -107,10 +107,10 @@ LABEL_42:
       {
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
       }
-      if ( !byte_434DEB6 )
+      if ( !byte_4387478 )
       {
-        sub_B70694(&TerminalPramsManager_TypeInfo);
-        byte_434DEB6 = 1;
+        sub_B775C4(&TerminalPramsManager_TypeInfo);
+        byte_4387478 = 1;
       }
       this = (ExcludeMotionEntity_o *)TerminalPramsManager_TypeInfo;
       if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -126,10 +126,10 @@ LABEL_42:
           return 1;
         if ( (this[6].fields.idx & 0x4000000) != 0 && !this[4].fields.weaponGroup )
           j_il2cpp_runtime_class_init_0(this);
-        if ( !byte_434DEB7 )
+        if ( !byte_4387479 )
         {
-          sub_B70694(&TerminalPramsManager_TypeInfo);
-          byte_434DEB7 = 1;
+          sub_B775C4(&TerminalPramsManager_TypeInfo);
+          byte_4387479 = 1;
         }
         this = (ExcludeMotionEntity_o *)TerminalPramsManager_TypeInfo;
         if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

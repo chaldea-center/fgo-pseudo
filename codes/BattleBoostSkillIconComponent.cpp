@@ -12,11 +12,11 @@ void __fastcall BattleBoostSkillIconComponent__OnClickIcon(
   __int64 v4; // x1
   UnityEngine_GameObject_o *Component_srcLineSprite; // x0
 
-  if ( (byte_4355403 & 1) == 0 )
+  if ( (byte_438EB44 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355403 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438EB44 = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -30,9 +30,9 @@ void __fastcall BattleBoostSkillIconComponent__OnClickIcon(
     if ( !Component_srcLineSprite
       || (Component_srcLineSprite = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                   Component_srcLineSprite,
-                                                                  (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___)) == 0LL )
+                                                                  (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___)) == 0LL )
     {
-      sub_B7076C(Component_srcLineSprite, v4);
+      sub_B7769C(Component_srcLineSprite, v4);
     }
     BattlePerformanceMaster__clickBoostSkillIcon(
       (BattlePerformanceMaster_o *)Component_srcLineSprite,
@@ -49,14 +49,14 @@ void __fastcall BattleBoostSkillIconComponent__procFlash(
   UnityEngine_GameObject_o *flashEffect; // x0
   UnityEngine_Object_o *v4; // x19
 
-  if ( (byte_4355404 & 1) == 0 )
+  if ( (byte_438EB45 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355404 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438EB45 = 1;
   }
   flashEffect = this->fields.flashEffect;
   if ( !flashEffect )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   UnityEngine_GameObject__SetActive(flashEffect, 1, 0LL);
   v4 = (UnityEngine_Object_o *)this->fields.flashEffect;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

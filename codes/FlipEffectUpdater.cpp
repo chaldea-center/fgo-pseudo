@@ -34,10 +34,10 @@ void __fastcall FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const
   UnityEngine_Transform_o *v24; // x20
   int v25; // s0
 
-  if ( (byte_4350064 & 1) == 0 )
+  if ( (byte_4389748 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4350064 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4389748 = 1;
   }
   ConnectTarget = (UnityEngine_Object_o *)this->fields.ConnectTarget;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -58,7 +58,7 @@ void __fastcall FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
       this->fields.mTrans = transform;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&this->fields.mTrans,
         (System_Int32_array **)transform,
         v8,
@@ -91,7 +91,7 @@ void __fastcall FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const
       || (UnityEngine_Transform__set_localScale(v24, *(UnityEngine_Vector3_o *)&v25, 0LL), (parent = *p_mTrans) == 0LL) )
     {
 LABEL_20:
-      sub_B7076C(parent, v6);
+      sub_B7769C(parent, v6);
     }
     UnityEngine_Transform__set_parent(parent, v15, 0LL);
   }
@@ -110,7 +110,7 @@ void __fastcall FlipEffectUpdater__Start(FlipEffectUpdater_o *this, const Method
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   this->fields.mTrans = transform;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.mTrans,
     (System_Int32_array **)transform,
     v4,

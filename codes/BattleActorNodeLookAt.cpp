@@ -17,7 +17,7 @@ void __fastcall BattleActorNodeLookAt__Awake(BattleActorNodeLookAt_o *this, cons
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   this->fields.selfTransform = transform;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.selfTransform,
     (System_Int32_array **)transform,
     v4,
@@ -60,10 +60,10 @@ void __fastcall BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this,
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o v32; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
-  if ( (byte_43553E1 & 1) == 0 )
+  if ( (byte_438EB22 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43553E1 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438EB22 = 1;
   }
   LODWORD(methoda.invoker_method) = 0;
   methoda.methodPointer = 0LL;
@@ -98,7 +98,7 @@ void __fastcall BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this,
       {
         *(_QWORD *)&v29.fields.x = methoda.methodPointer;
         v29.fields.z = *(float *)&methoda.invoker_method;
-        v30 = UnityEngine_Quaternion__LookRotation_36098220(v29, 0LL);
+        v30 = UnityEngine_Quaternion__LookRotation_36340992(v29, 0LL);
         v19 = v30.fields.x;
         y = v30.fields.y;
         z = v30.fields.z;
@@ -119,14 +119,14 @@ void __fastcall BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this,
           goto LABEL_7;
         }
 LABEL_18:
-        sub_B7076C(selfTransform, v6);
+        sub_B7769C(selfTransform, v6);
       }
     }
   }
   else if ( x == 0.0 )
   {
     v4 = this->fields.selfTransform;
-    *(UnityEngine_Quaternion_o *)&v7 = UnityEngine_Quaternion__Euler_36099348(
+    *(UnityEngine_Quaternion_o *)&v7 = UnityEngine_Quaternion__Euler_36342120(
                                          *(UnityEngine_Vector3_o *)&this->fields.lookWorldVec.fields.y,
                                          0LL);
     if ( v4 )

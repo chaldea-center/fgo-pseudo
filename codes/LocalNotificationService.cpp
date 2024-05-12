@@ -42,19 +42,19 @@ LocalNotificationService_o *__fastcall LocalNotificationService__getNullObject(c
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_43564AE & 1) == 0 )
+  if ( (byte_438FC02 & 1) == 0 )
   {
-    sub_B70694(&LocalNotificationService_TypeInfo);
-    byte_43564AE = 1;
+    sub_B775C4(&LocalNotificationService_TypeInfo);
+    byte_438FC02 = 1;
   }
   nullObject = LocalNotificationService_TypeInfo->static_fields->nullObject;
   if ( !nullObject )
   {
-    v2 = (Il2CppObject *)sub_B70764(LocalNotificationService_TypeInfo);
+    v2 = (Il2CppObject *)sub_B77694(LocalNotificationService_TypeInfo);
     System_Object___ctor(v2, 0LL);
     static_fields = (BattleServantConfConponent_o *)LocalNotificationService_TypeInfo->static_fields;
     static_fields->klass = (BattleServantConfConponent_c *)v2;
-    sub_B70630(static_fields, (System_Int32_array **)v2, v4, v5, v6, v7, v8, v9);
+    sub_B77560(static_fields, (System_Int32_array **)v2, v4, v5, v6, v7, v8, v9);
     return LocalNotificationService_TypeInfo->static_fields->nullObject;
   }
   return nullObject;

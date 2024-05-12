@@ -10,8 +10,8 @@ int32_t __fastcall UserFormationResponseCommand__ExecuteResponse(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_B7076C(this, 0LL);
-  return !ResponseData__checkError_29653500(data, 0LL) || !data->fields.success;
+    sub_B7769C(this, 0LL);
+  return !ResponseData__checkError_30128096(data, 0LL) || !data->fields.success;
 }
 
 

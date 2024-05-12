@@ -22,11 +22,11 @@ BgmPlayArgs_o *__fastcall MainBgmPlayArgs__Clone(MainBgmPlayArgs_o *this, const 
   System_Nullable_float__o p_volume; // 0:x0.8
   System_Nullable_float__o v12; // 0:x2.8
 
-  if ( (byte_4350831 & 1) == 0 )
+  if ( (byte_4389E5A & 1) == 0 )
   {
-    sub_B70694(&MainBgmPlayArgs_TypeInfo);
-    sub_B70694(&Method_System_Nullable_float___ctor__);
-    byte_4350831 = 1;
+    sub_B775C4(&MainBgmPlayArgs_TypeInfo);
+    sub_B775C4(&Method_System_Nullable_float___ctor__);
+    byte_4389E5A = 1;
   }
   BgmName_k__BackingField = this->fields._BgmName_k__BackingField;
   Volume_k__BackingField = this->fields._Volume_k__BackingField;
@@ -35,10 +35,10 @@ BgmPlayArgs_o *__fastcall MainBgmPlayArgs__Clone(MainBgmPlayArgs_o *this, const 
   System_Nullable_float____ctor(
     p_volume,
     Volume_k__BackingField,
-    (const MethodInfo_2439C24 *)Method_System_Nullable_float___ctor__);
+    (const MethodInfo_2478078 *)Method_System_Nullable_float___ctor__);
   FadeTime_k__BackingField = this->fields._FadeTime_k__BackingField;
   StartTime_k__BackingField = this->fields._StartTime_k__BackingField;
-  v7 = (BgmPlayArgs_o *)sub_B70764(MainBgmPlayArgs_TypeInfo);
+  v7 = (BgmPlayArgs_o *)sub_B77694(MainBgmPlayArgs_TypeInfo);
   v12 = volume;
   v8 = v7;
   BgmPlayArgs___ctor(v7, BgmName_k__BackingField, v12, FadeTime_k__BackingField, StartTime_k__BackingField, 0LL);

@@ -20,26 +20,26 @@ void __fastcall DiggingAssetManager___ctor(DiggingAssetManager_o *this, const Me
   __int64 v20; // x0
   __int64 v21; // x0
 
-  if ( (byte_4353780 & 1) == 0 )
+  if ( (byte_438D03E & 1) == 0 )
   {
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_6296/*"EventUI/Prefabs/80367"*/);
-    byte_4353780 = 1;
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_6352/*"EventUI/Prefabs/80367"*/);
+    byte_438D03E = 1;
   }
-  v3 = sub_B706AC(string___TypeInfo, 1LL);
+  v3 = sub_B775DC(string___TypeInfo, 1LL);
   if ( !v3 )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   v11 = (struct System_String_array *)v3;
-  v12 = StringLiteral_6296/*"EventUI/Prefabs/80367"*/;
-  if ( StringLiteral_6296/*"EventUI/Prefabs/80367"*/ )
+  v12 = StringLiteral_6352/*"EventUI/Prefabs/80367"*/;
+  if ( StringLiteral_6352/*"EventUI/Prefabs/80367"*/ )
   {
-    v12 = sub_B70754(StringLiteral_6296/*"EventUI/Prefabs/80367"*/, v11->obj.klass->_1.element_class);
+    v12 = sub_B77684(StringLiteral_6352/*"EventUI/Prefabs/80367"*/, v11->obj.klass->_1.element_class);
     if ( !v12 )
     {
-      v21 = sub_B7078C(0LL);
-      sub_B70738(v21, 0LL);
+      v21 = sub_B776BC(0LL);
+      sub_B77668(v21, 0LL);
     }
-    v13 = (System_Int32_array **)StringLiteral_6296/*"EventUI/Prefabs/80367"*/;
+    v13 = (System_Int32_array **)StringLiteral_6352/*"EventUI/Prefabs/80367"*/;
   }
   else
   {
@@ -47,13 +47,13 @@ void __fastcall DiggingAssetManager___ctor(DiggingAssetManager_o *this, const Me
   }
   if ( !v11->max_length )
   {
-    v20 = sub_B70798(v12);
-    sub_B70738(v20, 0LL);
+    v20 = sub_B776C8(v12);
+    sub_B77668(v20, 0LL);
   }
   v11->m_Items[0] = (System_String_o *)v13;
-  sub_B70630((BattleServantConfConponent_o *)v11->m_Items, v13, v5, v6, v7, v8, v9, v10);
+  sub_B77560((BattleServantConfConponent_o *)v11->m_Items, v13, v5, v6, v7, v8, v9, v10);
   this->fields.loadAssetNames = v11;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.loadAssetNames,
     (System_Int32_array **)v11,
     v14,
@@ -73,7 +73,7 @@ void __fastcall DiggingAssetManager__GetAssets(
         const MethodInfo *method)
 {
   __int64 v7; // x21
-  AssetData_array *AssetStorage_31204772; // x0
+  AssetData_array *AssetStorage_24410204; // x0
   __int64 v9; // x1
   System_String_array **v10; // x2
   System_String_array **v11; // x3
@@ -143,31 +143,31 @@ void __fastcall DiggingAssetManager__GetAssets(
   System_Action_o *v75; // x20
   __int64 v76; // x0
 
-  if ( (byte_435377E & 1) == 0 )
+  if ( (byte_438D03C & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_AssetData_GetObject_DiggingSettings___);
-    sub_B70694(&Method_AssetData_GetObject_GameObject____69232720);
-    sub_B70694(&AssetManager_TypeInfo);
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&Method_DiggingAssetManager___c__DisplayClass33_0__GetAssets_b__0__);
-    sub_B70694(&DiggingAssetManager___c__DisplayClass33_0_TypeInfo);
-    sub_B70694(&StringLiteral_2893/*"BlockPrefab"*/);
-    sub_B70694(&StringLiteral_5382/*"DiggingRewardDialog"*/);
-    sub_B70694(&StringLiteral_5383/*"DiggingSettings"*/);
-    sub_B70694(&StringLiteral_5379/*"DiggingCompleteImagePrefab"*/);
-    sub_B70694(&StringLiteral_5381/*"DiggingPointRewardDialog"*/);
-    sub_B70694(&StringLiteral_5380/*"DiggingConfirmDialog"*/);
-    sub_B70694(&StringLiteral_11661/*"RewardPrefab"*/);
-    sub_B70694(&StringLiteral_2232/*"AutoDiggingDialog"*/);
-    byte_435377E = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_AssetData_GetObject_DiggingSettings___);
+    sub_B775C4(&Method_AssetData_GetObject_GameObject____69465408);
+    sub_B775C4(&AssetManager_TypeInfo);
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&Method_DiggingAssetManager___c__DisplayClass33_0__GetAssets_b__0__);
+    sub_B775C4(&DiggingAssetManager___c__DisplayClass33_0_TypeInfo);
+    sub_B775C4(&StringLiteral_2939/*"BlockPrefab"*/);
+    sub_B775C4(&StringLiteral_5435/*"DiggingRewardDialog"*/);
+    sub_B775C4(&StringLiteral_5436/*"DiggingSettings"*/);
+    sub_B775C4(&StringLiteral_5432/*"DiggingCompleteImagePrefab"*/);
+    sub_B775C4(&StringLiteral_5434/*"DiggingPointRewardDialog"*/);
+    sub_B775C4(&StringLiteral_5433/*"DiggingConfirmDialog"*/);
+    sub_B775C4(&StringLiteral_11722/*"RewardPrefab"*/);
+    sub_B775C4(&StringLiteral_2278/*"AutoDiggingDialog"*/);
+    byte_438D03C = 1;
   }
-  v7 = sub_B70764(DiggingAssetManager___c__DisplayClass33_0_TypeInfo);
+  v7 = sub_B77694(DiggingAssetManager___c__DisplayClass33_0_TypeInfo);
   DiggingAssetManager___c__DisplayClass33_0___ctor((DiggingAssetManager___c__DisplayClass33_0_o *)v7, 0LL);
   if ( !v7 )
     goto LABEL_14;
   *(_QWORD *)(v7 + 16) = finishCallback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)(v7 + 16),
     (System_Int32_array **)finishCallback,
     v10,
@@ -179,25 +179,25 @@ void __fastcall DiggingAssetManager__GetAssets(
   loadAssetNames = this->fields.loadAssetNames;
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetStorage_31204772 = AssetManager__getAssetStorage_31204772(loadAssetNames, 0LL);
-  if ( !AssetStorage_31204772 )
+  AssetStorage_24410204 = AssetManager__getAssetStorage_24410204(loadAssetNames, 0LL);
+  if ( !AssetStorage_24410204 )
     goto LABEL_14;
-  if ( !AssetStorage_31204772->max_length )
+  if ( !AssetStorage_24410204->max_length )
   {
-    v76 = sub_B70798(AssetStorage_31204772);
-    sub_B70738(v76, 0LL);
+    v76 = sub_B776C8(AssetStorage_24410204);
+    sub_B77668(v76, 0LL);
   }
-  v17 = AssetStorage_31204772->m_Items[0];
+  v17 = AssetStorage_24410204->m_Items[0];
   if ( !v17 )
 LABEL_14:
-    sub_B7076C(AssetStorage_31204772, v9);
+    sub_B7769C(AssetStorage_24410204, v9);
   Object_WarBoardWaitTimeSetting = (struct UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
-                                                                        AssetStorage_31204772->m_Items[0],
-                                                                        (System_String_o *)StringLiteral_2893/*"BlockPrefab"*/,
-                                                                        (const MethodInfo_1BD6720 *)Method_AssetData_GetObject_GameObject____69232720);
+                                                                        AssetStorage_24410204->m_Items[0],
+                                                                        (System_String_o *)StringLiteral_2939/*"BlockPrefab"*/,
+                                                                        (const MethodInfo_1C5FDDC *)Method_AssetData_GetObject_GameObject____69465408);
   this->fields._blockPrefab_k__BackingField = Object_WarBoardWaitTimeSetting;
   p_fields = &this->fields;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)p_fields,
     (System_Int32_array **)Object_WarBoardWaitTimeSetting,
     v20,
@@ -208,10 +208,10 @@ LABEL_14:
     v25);
   v26 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                  v17,
-                                 (System_String_o *)StringLiteral_11661/*"RewardPrefab"*/,
-                                 (const MethodInfo_1BD6720 *)Method_AssetData_GetObject_GameObject____69232720);
+                                 (System_String_o *)StringLiteral_11722/*"RewardPrefab"*/,
+                                 (const MethodInfo_1C5FDDC *)Method_AssetData_GetObject_GameObject____69465408);
   p_fields->_rewardPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v26;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&p_fields->_rewardPrefab_k__BackingField,
     v26,
     v27,
@@ -222,10 +222,10 @@ LABEL_14:
     v32);
   v33 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                  v17,
-                                 (System_String_o *)StringLiteral_2232/*"AutoDiggingDialog"*/,
-                                 (const MethodInfo_1BD6720 *)Method_AssetData_GetObject_GameObject____69232720);
+                                 (System_String_o *)StringLiteral_2278/*"AutoDiggingDialog"*/,
+                                 (const MethodInfo_1C5FDDC *)Method_AssetData_GetObject_GameObject____69465408);
   p_fields->_AutoDiggingDialogPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v33;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&p_fields->_AutoDiggingDialogPrefab_k__BackingField,
     v33,
     v34,
@@ -236,10 +236,10 @@ LABEL_14:
     v39);
   v40 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                  v17,
-                                 (System_String_o *)StringLiteral_5380/*"DiggingConfirmDialog"*/,
-                                 (const MethodInfo_1BD6720 *)Method_AssetData_GetObject_GameObject____69232720);
+                                 (System_String_o *)StringLiteral_5433/*"DiggingConfirmDialog"*/,
+                                 (const MethodInfo_1C5FDDC *)Method_AssetData_GetObject_GameObject____69465408);
   p_fields->_DiggingConfirmDialogPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v40;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&p_fields->_DiggingConfirmDialogPrefab_k__BackingField,
     v40,
     v41,
@@ -250,10 +250,10 @@ LABEL_14:
     v46);
   v47 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                  v17,
-                                 (System_String_o *)StringLiteral_5381/*"DiggingPointRewardDialog"*/,
-                                 (const MethodInfo_1BD6720 *)Method_AssetData_GetObject_GameObject____69232720);
+                                 (System_String_o *)StringLiteral_5434/*"DiggingPointRewardDialog"*/,
+                                 (const MethodInfo_1C5FDDC *)Method_AssetData_GetObject_GameObject____69465408);
   p_fields->_DiggingPointRewardDialogPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v47;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&p_fields->_DiggingPointRewardDialogPrefab_k__BackingField,
     v47,
     v48,
@@ -264,10 +264,10 @@ LABEL_14:
     v53);
   v54 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                  v17,
-                                 (System_String_o *)StringLiteral_5382/*"DiggingRewardDialog"*/,
-                                 (const MethodInfo_1BD6720 *)Method_AssetData_GetObject_GameObject____69232720);
+                                 (System_String_o *)StringLiteral_5435/*"DiggingRewardDialog"*/,
+                                 (const MethodInfo_1C5FDDC *)Method_AssetData_GetObject_GameObject____69465408);
   p_fields->_DiggingRewardDialogPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v54;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&p_fields->_DiggingRewardDialogPrefab_k__BackingField,
     v54,
     v55,
@@ -278,10 +278,10 @@ LABEL_14:
     v60);
   v61 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                  v17,
-                                 (System_String_o *)StringLiteral_5379/*"DiggingCompleteImagePrefab"*/,
-                                 (const MethodInfo_1BD6720 *)Method_AssetData_GetObject_GameObject____69232720);
+                                 (System_String_o *)StringLiteral_5432/*"DiggingCompleteImagePrefab"*/,
+                                 (const MethodInfo_1C5FDDC *)Method_AssetData_GetObject_GameObject____69465408);
   p_fields->_DiggingCompleteImagePrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v61;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&p_fields->_DiggingCompleteImagePrefab_k__BackingField,
     v61,
     v62,
@@ -292,15 +292,15 @@ LABEL_14:
     v67);
   v68 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                  v17,
-                                 (System_String_o *)StringLiteral_5383/*"DiggingSettings"*/,
-                                 (const MethodInfo_1BD6720 *)Method_AssetData_GetObject_DiggingSettings___);
+                                 (System_String_o *)StringLiteral_5436/*"DiggingSettings"*/,
+                                 (const MethodInfo_1C5FDDC *)Method_AssetData_GetObject_DiggingSettings___);
   p_fields->_Settings_k__BackingField = (struct DiggingSettings_o *)v68;
-  sub_B70630((BattleServantConfConponent_o *)&p_fields->_Settings_k__BackingField, v68, v69, v70, v71, v72, v73, v74);
-  v75 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  sub_B77560((BattleServantConfConponent_o *)&p_fields->_Settings_k__BackingField, v68, v69, v70, v71, v72, v73, v74);
+  v75 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v75, (Il2CppObject *)v7, Method_DiggingAssetManager___c__DisplayClass33_0__GetAssets_b__0__, 0LL);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadEventUI_31552064(eventId, v75, 1, 0LL);
+  AtlasManager__LoadEventUI_24479412(eventId, v75, 1, 0LL);
 }
 
 
@@ -349,18 +349,18 @@ void __fastcall DiggingAssetManager__Release(DiggingAssetManager_o *this, int32_
   System_Int32_array *v45; // x6
   System_Int32_array *v46; // x7
 
-  if ( (byte_435377F & 1) == 0 )
+  if ( (byte_438D03D & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    byte_435377F = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    byte_438D03D = 1;
   }
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__ReleaseEventUI_31552244(eventId, 0LL);
+  AtlasManager__ReleaseEventUI_24479600(eventId, 0LL);
   this->fields._blockPrefab_k__BackingField = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields, 0LL, v5, v6, v7, v8, v9, v10);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields, 0LL, v5, v6, v7, v8, v9, v10);
   this->fields._rewardPrefab_k__BackingField = 0LL;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._rewardPrefab_k__BackingField,
     0LL,
     v11,
@@ -370,7 +370,7 @@ void __fastcall DiggingAssetManager__Release(DiggingAssetManager_o *this, int32_
     v15,
     v16);
   this->fields._AutoDiggingDialogPrefab_k__BackingField = 0LL;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._AutoDiggingDialogPrefab_k__BackingField,
     0LL,
     v17,
@@ -380,7 +380,7 @@ void __fastcall DiggingAssetManager__Release(DiggingAssetManager_o *this, int32_
     v21,
     v22);
   this->fields._DiggingConfirmDialogPrefab_k__BackingField = 0LL;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._DiggingConfirmDialogPrefab_k__BackingField,
     0LL,
     v23,
@@ -390,7 +390,7 @@ void __fastcall DiggingAssetManager__Release(DiggingAssetManager_o *this, int32_
     v27,
     v28);
   this->fields._DiggingPointRewardDialogPrefab_k__BackingField = 0LL;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._DiggingPointRewardDialogPrefab_k__BackingField,
     0LL,
     v29,
@@ -400,7 +400,7 @@ void __fastcall DiggingAssetManager__Release(DiggingAssetManager_o *this, int32_
     v33,
     v34);
   this->fields._DiggingRewardDialogPrefab_k__BackingField = 0LL;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._DiggingRewardDialogPrefab_k__BackingField,
     0LL,
     v35,
@@ -410,7 +410,7 @@ void __fastcall DiggingAssetManager__Release(DiggingAssetManager_o *this, int32_
     v39,
     v40);
   this->fields._DiggingCompleteImagePrefab_k__BackingField = 0LL;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._DiggingCompleteImagePrefab_k__BackingField,
     0LL,
     v41,
@@ -496,7 +496,7 @@ void __fastcall DiggingAssetManager__set_AutoDiggingDialogPrefab(
   System_Int32_array *v7; // x7
 
   this->fields._AutoDiggingDialogPrefab_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._AutoDiggingDialogPrefab_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -520,7 +520,7 @@ void __fastcall DiggingAssetManager__set_DiggingCompleteImagePrefab(
   System_Int32_array *v7; // x7
 
   this->fields._DiggingCompleteImagePrefab_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._DiggingCompleteImagePrefab_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -544,7 +544,7 @@ void __fastcall DiggingAssetManager__set_DiggingConfirmDialogPrefab(
   System_Int32_array *v7; // x7
 
   this->fields._DiggingConfirmDialogPrefab_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._DiggingConfirmDialogPrefab_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -568,7 +568,7 @@ void __fastcall DiggingAssetManager__set_DiggingPointRewardDialogPrefab(
   System_Int32_array *v7; // x7
 
   this->fields._DiggingPointRewardDialogPrefab_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._DiggingPointRewardDialogPrefab_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -592,7 +592,7 @@ void __fastcall DiggingAssetManager__set_DiggingRewardDialogPrefab(
   System_Int32_array *v7; // x7
 
   this->fields._DiggingRewardDialogPrefab_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._DiggingRewardDialogPrefab_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -616,7 +616,7 @@ void __fastcall DiggingAssetManager__set_Settings(
   System_Int32_array *v7; // x7
 
   this->fields._Settings_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._Settings_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -640,7 +640,7 @@ void __fastcall DiggingAssetManager__set_blockPrefab(
   System_Int32_array *v7; // x7
 
   this->fields._blockPrefab_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -664,7 +664,7 @@ void __fastcall DiggingAssetManager__set_rewardPrefab(
   System_Int32_array *v7; // x7
 
   this->fields._rewardPrefab_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._rewardPrefab_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

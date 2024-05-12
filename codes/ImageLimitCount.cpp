@@ -49,28 +49,28 @@ void __fastcall ImageLimitCount___cctor(const MethodInfo *method)
   System_RuntimeFieldHandle_o v47; // 0:w1.4
   System_RuntimeFieldHandle_o v48; // 0:w1.4
 
-  if ( (byte_43531BA & 1) == 0 )
+  if ( (byte_438C939 & 1) == 0 )
   {
-    sub_B70694(&ImageLimitCount_TypeInfo);
-    sub_B70694(&int___TypeInfo);
-    sub_B70694(&Field__PrivateImplementationDetails__3A795EE993DCFCD47AE2FD7282FAE2348DADC51429112235F8375626F9439A0B);
-    sub_B70694(&Field__PrivateImplementationDetails__598CEB271FAC09B40101AAE5910D6939EFC22B105F7DF2AA77795704D4CC7911);
-    sub_B70694(&Field__PrivateImplementationDetails__E8845519DB154B41E620A98F949B9EDCEFB1F9060DC8290A9F7D2C3200ABD0CB);
-    sub_B70694(&Field__PrivateImplementationDetails__F239810D17032E35383496434C64894FFE055A198BA7CFB907D73BAF26A70F0C);
-    byte_43531BA = 1;
+    sub_B775C4(&ImageLimitCount_TypeInfo);
+    sub_B775C4(&int___TypeInfo);
+    sub_B775C4(&Field__PrivateImplementationDetails__3A795EE993DCFCD47AE2FD7282FAE2348DADC51429112235F8375626F9439A0B);
+    sub_B775C4(&Field__PrivateImplementationDetails__598CEB271FAC09B40101AAE5910D6939EFC22B105F7DF2AA77795704D4CC7911);
+    sub_B775C4(&Field__PrivateImplementationDetails__E8845519DB154B41E620A98F949B9EDCEFB1F9060DC8290A9F7D2C3200ABD0CB);
+    sub_B775C4(&Field__PrivateImplementationDetails__F239810D17032E35383496434C64894FFE055A198BA7CFB907D73BAF26A70F0C);
+    byte_438C939 = 1;
   }
-  v1 = (System_Array_o *)sub_B706AC(int___TypeInfo, 5LL);
+  v1 = (System_Array_o *)sub_B775DC(int___TypeInfo, 5LL);
   v45.fields.value = Field__PrivateImplementationDetails__598CEB271FAC09B40101AAE5910D6939EFC22B105F7DF2AA77795704D4CC7911;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v1, v45, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v1, v45, 0LL);
   static_fields = (BattleServantConfConponent_o *)ImageLimitCount_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B70630(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
-  v9 = (System_Array_o *)sub_B706AC(int___TypeInfo, 4LL);
+  sub_B77560(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  v9 = (System_Array_o *)sub_B775DC(int___TypeInfo, 4LL);
   v46.fields.value = Field__PrivateImplementationDetails__F239810D17032E35383496434C64894FFE055A198BA7CFB907D73BAF26A70F0C;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v9, v46, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v9, v46, 0LL);
   v10 = ImageLimitCount_TypeInfo->static_fields;
   v10->minLimitCountList = (struct System_Int32_array *)v9;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v10->minLimitCountList,
     (System_Int32_array **)v9,
     v11,
@@ -79,12 +79,12 @@ void __fastcall ImageLimitCount___cctor(const MethodInfo *method)
     v14,
     v15,
     v16);
-  v17 = (System_Array_o *)sub_B706AC(int___TypeInfo, 4LL);
+  v17 = (System_Array_o *)sub_B775DC(int___TypeInfo, 4LL);
   v47.fields.value = Field__PrivateImplementationDetails__E8845519DB154B41E620A98F949B9EDCEFB1F9060DC8290A9F7D2C3200ABD0CB;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v17, v47, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v17, v47, 0LL);
   v18 = ImageLimitCount_TypeInfo->static_fields;
   v18->maxLimitCountList = (struct System_Int32_array *)v17;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v18->maxLimitCountList,
     (System_Int32_array **)v17,
     v19,
@@ -93,26 +93,26 @@ void __fastcall ImageLimitCount___cctor(const MethodInfo *method)
     v22,
     v23,
     v24);
-  v25 = (System_Int32_array **)sub_B706AC(int___TypeInfo, 3LL);
+  v25 = (System_Int32_array **)sub_B775DC(int___TypeInfo, 3LL);
   if ( !v25 )
-    sub_B7076C(0LL, v26);
+    sub_B7769C(0LL, v26);
   v33 = *((_DWORD *)v25 + 6);
   v34 = v25;
   if ( v33 <= 1 || (*((_DWORD *)v25 + 9) = 2, v33 == 2) )
   {
-    v44 = sub_B70798(v25);
-    sub_B70738(v44, 0LL);
+    v44 = sub_B776C8(v25);
+    sub_B77668(v44, 0LL);
   }
   *((_DWORD *)v25 + 10) = 4;
   v35 = ImageLimitCount_TypeInfo->static_fields;
   v35->maxDispLimitCountList = (struct System_Int32_array *)v34;
-  sub_B70630((BattleServantConfConponent_o *)&v35->maxDispLimitCountList, v34, v27, v28, v29, v30, v31, v32);
-  v36 = (System_Array_o *)sub_B706AC(int___TypeInfo, 5LL);
+  sub_B77560((BattleServantConfConponent_o *)&v35->maxDispLimitCountList, v34, v27, v28, v29, v30, v31, v32);
+  v36 = (System_Array_o *)sub_B775DC(int___TypeInfo, 5LL);
   v48.fields.value = Field__PrivateImplementationDetails__3A795EE993DCFCD47AE2FD7282FAE2348DADC51429112235F8375626F9439A0B;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43287264(v36, v48, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43528236(v36, v48, 0LL);
   v37 = ImageLimitCount_TypeInfo->static_fields;
   v37->dispLimitCountList = (struct System_Int32_array *)v36;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v37->dispLimitCountList,
     (System_Int32_array **)v36,
     v38,
@@ -149,13 +149,13 @@ int32_t __fastcall ImageLimitCount__GetCardImageLimitCount(
   __int64 v17; // x0
   int32_t value; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_43531B3 & 1) == 0 )
+  if ( (byte_438C932 & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
-    sub_B70694(&ImageLimitCount_TypeInfo);
-    sub_B70694(&OptionManager_TypeInfo);
-    byte_43531B3 = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
+    sub_B775C4(&ImageLimitCount_TypeInfo);
+    sub_B775C4(&OptionManager_TypeInfo);
+    byte_438C932 = 1;
   }
   value = 0;
   if ( (limitCount & 0x80000000) != 0 )
@@ -174,7 +174,7 @@ int32_t __fastcall ImageLimitCount__GetCardImageLimitCount(
           limitMaxList,
           svtId,
           &value,
-          (const MethodInfo_2FBCD70 *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__) )
+          (const MethodInfo_2FEA980 *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__) )
     return limitCount - 1;
   v11 = value;
   if ( value > limitCount )
@@ -235,11 +235,11 @@ LABEL_23:
           return *((_DWORD *)v13 + 8);
         }
 LABEL_37:
-        v17 = sub_B70798(limitMaxList);
-        sub_B70738(v17, 0LL);
+        v17 = sub_B776C8(limitMaxList);
+        sub_B77668(v17, 0LL);
       }
 LABEL_36:
-      sub_B7076C(limitMaxList, *(_QWORD *)&limitCount);
+      sub_B7769C(limitMaxList, *(_QWORD *)&limitCount);
     }
   }
   return 3;
@@ -264,14 +264,14 @@ System_Int32_array *__fastcall ImageLimitCount__GetCardSelectList(
   int32_t v16; // w1
   __int64 v18; // x0
 
-  if ( (byte_43531B6 & 1) == 0 )
+  if ( (byte_438C935 & 1) == 0 )
   {
-    sub_B70694(&ImageLimitCount_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_int__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_B70694(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_B70694(&System_Collections_Generic_List_int__TypeInfo);
-    byte_43531B6 = 1;
+    sub_B775C4(&ImageLimitCount_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int___ctor___69397304);
+    sub_B775C4(&System_Collections_Generic_List_int__TypeInfo);
+    byte_438C935 = 1;
   }
   if ( (BYTE3(ImageLimitCount_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ImageLimitCount_TypeInfo->_2.cctor_finished )
@@ -283,10 +283,10 @@ System_Int32_array *__fastcall ImageLimitCount__GetCardSelectList(
     max_length = costumeIds->max_length;
   else
     max_length = 0;
-  v10 = (System_Collections_Generic_List_int__o *)sub_B70764(System_Collections_Generic_List_int__TypeInfo);
+  v10 = (System_Collections_Generic_List_int__o *)sub_B77694(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v10,
-    (const MethodInfo_30B547C *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_30E508C *)Method_System_Collections_Generic_List_int___ctor___69397304);
   if ( !v10 )
     goto LABEL_24;
   for ( i = 0; i != 4; ++i )
@@ -298,36 +298,36 @@ System_Int32_array *__fastcall ImageLimitCount__GetCardSelectList(
     System_Collections_Generic_List_int___Add(
       v10,
       v14,
-      (const MethodInfo_30B61D8 *)Method_System_Collections_Generic_List_int__Add__);
+      (const MethodInfo_30E5DE8 *)Method_System_Collections_Generic_List_int__Add__);
   }
   if ( max_length < 1 )
     return System_Collections_Generic_List_int___ToArray(
              v10,
-             (const MethodInfo_30B82E4 *)Method_System_Collections_Generic_List_int__ToArray__);
+             (const MethodInfo_30E7EF4 *)Method_System_Collections_Generic_List_int__ToArray__);
   if ( !costumeIds )
 LABEL_24:
-    sub_B7076C(v11, v12);
+    sub_B7769C(v11, v12);
   for ( j = 0LL; (__int64)j < max_length; ++j )
   {
     if ( j >= costumeIds->max_length )
     {
-      v18 = sub_B70798(v11);
-      sub_B70738(v18, 0LL);
+      v18 = sub_B776C8(v11);
+      sub_B77668(v18, 0LL);
     }
     v16 = costumeIds->m_Items[j + 1];
     if ( v16 >= 1 )
       System_Collections_Generic_List_int___Add(
         v10,
         v16,
-        (const MethodInfo_30B61D8 *)Method_System_Collections_Generic_List_int__Add__);
+        (const MethodInfo_30E5DE8 *)Method_System_Collections_Generic_List_int__Add__);
   }
   return System_Collections_Generic_List_int___ToArray(
            v10,
-           (const MethodInfo_30B82E4 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_30E7EF4 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
-System_Int32_array *__fastcall ImageLimitCount__GetCardSelectList_27793888(
+System_Int32_array *__fastcall ImageLimitCount__GetCardSelectList_28145644(
         int32_t svtId,
         int32_t limitCount,
         int32_t costumeId,
@@ -344,11 +344,11 @@ System_Int32_array *__fastcall ImageLimitCount__GetCardSelectList_27793888(
   bool v15; // cf
   __int64 v16; // x0
 
-  if ( (byte_43531B7 & 1) == 0 )
+  if ( (byte_438C936 & 1) == 0 )
   {
-    sub_B70694(&ImageLimitCount_TypeInfo);
-    sub_B70694(&int___TypeInfo);
-    byte_43531B7 = 1;
+    sub_B775C4(&ImageLimitCount_TypeInfo);
+    sub_B775C4(&int___TypeInfo);
+    byte_438C936 = 1;
   }
   if ( (BYTE3(ImageLimitCount_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ImageLimitCount_TypeInfo->_2.cctor_finished )
@@ -360,9 +360,9 @@ System_Int32_array *__fastcall ImageLimitCount__GetCardSelectList_27793888(
     v9 = 4LL;
   else
     v9 = 5LL;
-  result = (System_Int32_array *)sub_B706AC(int___TypeInfo, v9);
+  result = (System_Int32_array *)sub_B775DC(int___TypeInfo, v9);
   if ( !result )
-    sub_B7076C(0LL, v11);
+    sub_B7769C(0LL, v11);
   max_length = result->max_length;
   v13 = 0LL;
   do
@@ -382,8 +382,8 @@ System_Int32_array *__fastcall ImageLimitCount__GetCardSelectList_27793888(
     if ( (unsigned int)max_length <= 4 )
     {
 LABEL_21:
-      v16 = sub_B70798(result);
-      sub_B70738(v16, 0LL);
+      v16 = sub_B776C8(result);
+      sub_B77668(v16, 0LL);
     }
     result->m_Items[5] = costumeId;
   }
@@ -397,10 +397,10 @@ int32_t __fastcall ImageLimitCount__GetDispLimitCount(int32_t limitCount, const 
   struct System_Int32_array *dispLimitCountList; // x8
   __int64 v6; // x0
 
-  if ( (byte_43531B9 & 1) == 0 )
+  if ( (byte_438C938 & 1) == 0 )
   {
-    sub_B70694(&ImageLimitCount_TypeInfo);
-    byte_43531B9 = 1;
+    sub_B775C4(&ImageLimitCount_TypeInfo);
+    byte_438C938 = 1;
   }
   if ( (limitCount & 0x80000000) != 0 )
     return -1;
@@ -414,7 +414,7 @@ int32_t __fastcall ImageLimitCount__GetDispLimitCount(int32_t limitCount, const 
   dispLimitCountList = v3->static_fields->dispLimitCountList;
   if ( !dispLimitCountList )
 LABEL_15:
-    sub_B7076C(v3, method);
+    sub_B7769C(v3, method);
   if ( (signed int)dispLimitCountList->max_length <= limitCount )
     return -1;
   if ( (BYTE3(v3->vtable._0_Equals.methodPtr) & 4) != 0 && !v3->_2.cctor_finished )
@@ -426,8 +426,8 @@ LABEL_15:
   }
   if ( dispLimitCountList->max_length <= limitCount )
   {
-    v6 = sub_B70798(v3);
-    sub_B70738(v6, 0LL);
+    v6 = sub_B776C8(v3);
+    sub_B77668(v6, 0LL);
   }
   return dispLimitCountList->m_Items[limitCount + 1];
 }
@@ -449,11 +449,11 @@ int32_t __fastcall ImageLimitCount__GetImageLimitCount(int32_t svtId, int32_t li
   __int64 v16; // x0
   int32_t value; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_43531B2 & 1) == 0 )
+  if ( (byte_438C931 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
-    sub_B70694(&ImageLimitCount_TypeInfo);
-    byte_43531B2 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
+    sub_B775C4(&ImageLimitCount_TypeInfo);
+    byte_438C931 = 1;
   }
   value = 0;
   if ( (limitCount & 0x80000000) != 0 )
@@ -490,7 +490,7 @@ int32_t __fastcall ImageLimitCount__GetImageLimitCount(int32_t svtId, int32_t li
               limitMaxList,
               svtId,
               &value,
-              (const MethodInfo_2FBCD70 *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__) )
+              (const MethodInfo_2FEA980 *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__) )
         return limitCount - 1;
       limitMaxList = (System_Collections_Generic_Dictionary_int__int__o *)ImageLimitCount_TypeInfo;
       v12 = value;
@@ -512,8 +512,8 @@ int32_t __fastcall ImageLimitCount__GetImageLimitCount(int32_t svtId, int32_t li
             return *((_DWORD *)v14 + 8);
           }
 LABEL_36:
-          v16 = sub_B70798(limitMaxList);
-          sub_B70738(v16, 0LL);
+          v16 = sub_B776C8(limitMaxList);
+          sub_B77668(v16, 0LL);
         }
       }
       else
@@ -536,7 +536,7 @@ LABEL_36:
         }
       }
     }
-    sub_B7076C(limitMaxList, *(_QWORD *)&limitCount);
+    sub_B7769C(limitMaxList, *(_QWORD *)&limitCount);
   }
   if ( v7 && !v5->_2.cctor_finished )
   {
@@ -558,10 +558,10 @@ int32_t __fastcall ImageLimitCount__GetLimitCountByDispLimit(
   int32_t v7; // w8
   __int64 v9; // x0
 
-  if ( (byte_43531B1 & 1) == 0 )
+  if ( (byte_438C930 & 1) == 0 )
   {
-    sub_B70694(&ImageLimitCount_TypeInfo);
-    byte_43531B1 = 1;
+    sub_B775C4(&ImageLimitCount_TypeInfo);
+    byte_438C930 = 1;
   }
   if ( dispLimitCount > 10 )
     return dispLimitCount;
@@ -575,7 +575,7 @@ int32_t __fastcall ImageLimitCount__GetLimitCountByDispLimit(
   maxDispLimitCountList = v5->static_fields->maxDispLimitCountList;
   if ( !maxDispLimitCountList )
 LABEL_18:
-    sub_B7076C(v5, *(_QWORD *)&maxLimitCount);
+    sub_B7769C(v5, *(_QWORD *)&maxLimitCount);
   if ( (signed int)maxDispLimitCountList->max_length <= dispLimitCount )
     return 0;
   if ( (BYTE3(v5->vtable._0_Equals.methodPtr) & 4) != 0 && !v5->_2.cctor_finished )
@@ -587,8 +587,8 @@ LABEL_18:
   }
   if ( maxDispLimitCountList->max_length <= dispLimitCount )
   {
-    v9 = sub_B70798(v5);
-    sub_B70738(v9, 0LL);
+    v9 = sub_B776C8(v5);
+    sub_B77668(v9, 0LL);
   }
   v7 = maxDispLimitCountList->m_Items[dispLimitCount + 1];
   if ( v7 <= maxLimitCount )
@@ -604,10 +604,10 @@ int32_t __fastcall ImageLimitCount__GetLimitCountByImageLimit(int32_t imageLimit
   struct System_Int32_array *minLimitCountList; // x8
   __int64 v6; // x0
 
-  if ( (byte_43531AC & 1) == 0 )
+  if ( (byte_438C92B & 1) == 0 )
   {
-    sub_B70694(&ImageLimitCount_TypeInfo);
-    byte_43531AC = 1;
+    sub_B775C4(&ImageLimitCount_TypeInfo);
+    byte_438C92B = 1;
   }
   v3 = ImageLimitCount_TypeInfo;
   if ( (BYTE3(ImageLimitCount_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -627,12 +627,12 @@ int32_t __fastcall ImageLimitCount__GetLimitCountByImageLimit(int32_t imageLimit
     minLimitCountList = ImageLimitCount_TypeInfo->static_fields->minLimitCountList;
     if ( !minLimitCountList )
 LABEL_14:
-      sub_B7076C(v3, method);
+      sub_B7769C(v3, method);
   }
   if ( minLimitCountList->max_length <= imageLimitCount )
   {
-    v6 = sub_B70798(v3);
-    sub_B70738(v6, 0LL);
+    v6 = sub_B776C8(v3);
+    sub_B77668(v6, 0LL);
   }
   return minLimitCountList->m_Items[imageLimitCount + 1];
 }
@@ -646,10 +646,10 @@ int32_t __fastcall ImageLimitCount__GetLimitCountByImageLimitCostumeIn(
   struct System_Int32_array *minLimitCountList; // x8
   __int64 v6; // x0
 
-  if ( (byte_43531AD & 1) == 0 )
+  if ( (byte_438C92C & 1) == 0 )
   {
-    sub_B70694(&ImageLimitCount_TypeInfo);
-    byte_43531AD = 1;
+    sub_B775C4(&ImageLimitCount_TypeInfo);
+    byte_438C92C = 1;
   }
   if ( imageLimitCount <= 10 )
   {
@@ -671,12 +671,12 @@ int32_t __fastcall ImageLimitCount__GetLimitCountByImageLimitCostumeIn(
       minLimitCountList = ImageLimitCount_TypeInfo->static_fields->minLimitCountList;
       if ( !minLimitCountList )
 LABEL_16:
-        sub_B7076C(v3, method);
+        sub_B7769C(v3, method);
     }
     if ( minLimitCountList->max_length <= imageLimitCount )
     {
-      v6 = sub_B70798(v3);
-      sub_B70738(v6, 0LL);
+      v6 = sub_B776C8(v3);
+      sub_B77668(v6, 0LL);
     }
     return minLimitCountList->m_Items[imageLimitCount + 1];
   }
@@ -685,7 +685,7 @@ LABEL_16:
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall ImageLimitCount__GetLimitCountByImageLimit_27791420(
+int32_t __fastcall ImageLimitCount__GetLimitCountByImageLimit_28143176(
         int32_t imageLimitCount,
         int32_t maxLimitCount,
         const MethodInfo *method)
@@ -695,10 +695,10 @@ int32_t __fastcall ImageLimitCount__GetLimitCountByImageLimit_27791420(
   int32_t v7; // w8
   __int64 v9; // x0
 
-  if ( (byte_43531B0 & 1) == 0 )
+  if ( (byte_438C92F & 1) == 0 )
   {
-    sub_B70694(&ImageLimitCount_TypeInfo);
-    byte_43531B0 = 1;
+    sub_B775C4(&ImageLimitCount_TypeInfo);
+    byte_438C92F = 1;
   }
   v5 = ImageLimitCount_TypeInfo;
   if ( (BYTE3(ImageLimitCount_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -718,12 +718,12 @@ int32_t __fastcall ImageLimitCount__GetLimitCountByImageLimit_27791420(
     maxLimitCountList = ImageLimitCount_TypeInfo->static_fields->maxLimitCountList;
     if ( !maxLimitCountList )
 LABEL_16:
-      sub_B7076C(v5, *(_QWORD *)&maxLimitCount);
+      sub_B7769C(v5, *(_QWORD *)&maxLimitCount);
   }
   if ( maxLimitCountList->max_length <= imageLimitCount )
   {
-    v9 = sub_B70798(v5);
-    sub_B70738(v9, 0LL);
+    v9 = sub_B776C8(v5);
+    sub_B77668(v9, 0LL);
   }
   v7 = maxLimitCountList->m_Items[imageLimitCount + 1];
   if ( v7 <= maxLimitCount )
@@ -750,11 +750,11 @@ int32_t __fastcall ImageLimitCount__GetRewardImageLimitCount(
   int32_t value; // [xsp+Ch] [xbp-14h] BYREF
 
   v3 = limitCount;
-  if ( (byte_43531AE & 1) == 0 )
+  if ( (byte_438C92D & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
-    sub_B70694(&ImageLimitCount_TypeInfo);
-    byte_43531AE = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
+    sub_B775C4(&ImageLimitCount_TypeInfo);
+    byte_438C92D = 1;
   }
   value = 0;
   if ( v3 <= 10 )
@@ -773,7 +773,7 @@ int32_t __fastcall ImageLimitCount__GetRewardImageLimitCount(
            limitMaxList,
            svtId,
            &value,
-           (const MethodInfo_2FBCD70 *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__) )
+           (const MethodInfo_2FEA980 *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__) )
     {
       limitMaxList = (System_Collections_Generic_Dictionary_int__int__o *)ImageLimitCount_TypeInfo;
       v7 = value;
@@ -795,8 +795,8 @@ int32_t __fastcall ImageLimitCount__GetRewardImageLimitCount(
             return *((_DWORD *)v9 + 8);
           }
 LABEL_26:
-          v12 = sub_B70798(limitMaxList);
-          sub_B70738(v12, 0LL);
+          v12 = sub_B776C8(limitMaxList);
+          sub_B77668(v12, 0LL);
         }
       }
       else
@@ -819,7 +819,7 @@ LABEL_26:
         }
       }
 LABEL_25:
-      sub_B7076C(limitMaxList, *(_QWORD *)&limitCount);
+      sub_B7769C(limitMaxList, *(_QWORD *)&limitCount);
     }
     return -1;
   }
@@ -844,14 +844,14 @@ System_Int32_array *__fastcall ImageLimitCount__GetSelectList(
   int32_t v15; // w1
   __int64 v17; // x0
 
-  if ( (byte_43531B4 & 1) == 0 )
+  if ( (byte_438C933 & 1) == 0 )
   {
-    sub_B70694(&ImageLimitCount_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_int__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_B70694(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_B70694(&System_Collections_Generic_List_int__TypeInfo);
-    byte_43531B4 = 1;
+    sub_B775C4(&ImageLimitCount_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_B775C4(&Method_System_Collections_Generic_List_int___ctor___69397304);
+    sub_B775C4(&System_Collections_Generic_List_int__TypeInfo);
+    byte_438C933 = 1;
   }
   if ( (BYTE3(ImageLimitCount_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ImageLimitCount_TypeInfo->_2.cctor_finished )
@@ -863,10 +863,10 @@ System_Int32_array *__fastcall ImageLimitCount__GetSelectList(
     max_length = costumeIds->max_length;
   else
     max_length = 0;
-  v9 = (System_Collections_Generic_List_int__o *)sub_B70764(System_Collections_Generic_List_int__TypeInfo);
+  v9 = (System_Collections_Generic_List_int__o *)sub_B77694(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v9,
-    (const MethodInfo_30B547C *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_30E508C *)Method_System_Collections_Generic_List_int___ctor___69397304);
   if ( !v9 )
     goto LABEL_24;
   for ( i = 0; i != 3; ++i )
@@ -878,37 +878,37 @@ System_Int32_array *__fastcall ImageLimitCount__GetSelectList(
     System_Collections_Generic_List_int___Add(
       v9,
       v13,
-      (const MethodInfo_30B61D8 *)Method_System_Collections_Generic_List_int__Add__);
+      (const MethodInfo_30E5DE8 *)Method_System_Collections_Generic_List_int__Add__);
   }
   if ( max_length < 1 )
     return System_Collections_Generic_List_int___ToArray(
              v9,
-             (const MethodInfo_30B82E4 *)Method_System_Collections_Generic_List_int__ToArray__);
+             (const MethodInfo_30E7EF4 *)Method_System_Collections_Generic_List_int__ToArray__);
   if ( !costumeIds )
 LABEL_24:
-    sub_B7076C(v10, v11);
+    sub_B7769C(v10, v11);
   for ( j = 0LL; (__int64)j < max_length; ++j )
   {
     if ( j >= costumeIds->max_length )
     {
-      v17 = sub_B70798(v10);
-      sub_B70738(v17, 0LL);
+      v17 = sub_B776C8(v10);
+      sub_B77668(v17, 0LL);
     }
     v15 = costumeIds->m_Items[j + 1];
     if ( v15 >= 1 )
       System_Collections_Generic_List_int___Add(
         v9,
         v15,
-        (const MethodInfo_30B61D8 *)Method_System_Collections_Generic_List_int__Add__);
+        (const MethodInfo_30E5DE8 *)Method_System_Collections_Generic_List_int__Add__);
   }
   return System_Collections_Generic_List_int___ToArray(
            v9,
-           (const MethodInfo_30B82E4 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_30E7EF4 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-System_Int32_array *__fastcall ImageLimitCount__GetSelectList_27793160(
+System_Int32_array *__fastcall ImageLimitCount__GetSelectList_28144916(
         int32_t svtId,
         int32_t limitCount,
         int32_t costumeId,
@@ -925,12 +925,12 @@ System_Int32_array *__fastcall ImageLimitCount__GetSelectList_27793160(
   bool v16; // cf
   __int64 v17; // x0
 
-  if ( (byte_43531B5 & 1) == 0 )
+  if ( (byte_438C934 & 1) == 0 )
   {
-    sub_B70694(&ImageLimitCount_TypeInfo);
-    sub_B70694(&int___TypeInfo);
-    sub_B70694(&OptionManager_TypeInfo);
-    byte_43531B5 = 1;
+    sub_B775C4(&ImageLimitCount_TypeInfo);
+    sub_B775C4(&int___TypeInfo);
+    sub_B775C4(&OptionManager_TypeInfo);
+    byte_438C934 = 1;
   }
   if ( (BYTE3(ImageLimitCount_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ImageLimitCount_TypeInfo->_2.cctor_finished )
@@ -953,9 +953,9 @@ LABEL_13:
   else
 LABEL_7:
     v10 = 0;
-  result = (System_Int32_array *)sub_B706AC(int___TypeInfo, (unsigned int)(v10 + 3));
+  result = (System_Int32_array *)sub_B775DC(int___TypeInfo, (unsigned int)(v10 + 3));
   if ( !result )
-    sub_B7076C(0LL, v12);
+    sub_B7769C(0LL, v12);
   max_length = result->max_length;
   v14 = 0LL;
   do
@@ -975,8 +975,8 @@ LABEL_7:
     if ( (unsigned int)max_length <= 3 )
     {
 LABEL_26:
-      v17 = sub_B70798(result);
-      sub_B70738(v17, 0LL);
+      v17 = sub_B776C8(result);
+      sub_B77668(v17, 0LL);
     }
     result->m_Items[4] = costumeId;
   }
@@ -998,20 +998,20 @@ void __fastcall ImageLimitCount__Initialize(const MethodInfo *method)
   ImageLimitCount_c *v10; // x8
   struct ImageLimitCount_StaticFields *static_fields; // x0
 
-  if ( (byte_43531AB & 1) == 0 )
+  if ( (byte_438C92A & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_B70694(&ImageLimitCount_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43531AB = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_B775C4(&ImageLimitCount_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438C92A = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantMaster___)) == 0LL )
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantMaster___)) == 0LL )
   {
-    sub_B7076C(Instance, v2);
+    sub_B7769C(Instance, v2);
   }
   LimitCountMaxList = (System_Int32_array **)ServantMaster__GetLimitCountMaxList((ServantMaster_o *)Instance, 0LL);
   v10 = ImageLimitCount_TypeInfo;
@@ -1023,7 +1023,7 @@ void __fastcall ImageLimitCount__Initialize(const MethodInfo *method)
   }
   static_fields = v10->static_fields;
   static_fields->limitMaxList = (struct System_Collections_Generic_Dictionary_int__int__o *)LimitCountMaxList;
-  sub_B70630((BattleServantConfConponent_o *)&static_fields->limitMaxList, LimitCountMaxList, v3, v4, v5, v6, v7, v8);
+  sub_B77560((BattleServantConfConponent_o *)&static_fields->limitMaxList, LimitCountMaxList, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -1043,11 +1043,11 @@ bool __fastcall ImageLimitCount__TryGetRewardImageLimitCount(
   int32_t value; // [xsp+Ch] [xbp-24h] BYREF
 
   v5 = svtLimitCnt;
-  if ( (byte_43531AF & 1) == 0 )
+  if ( (byte_438C92E & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
-    sub_B70694(&ImageLimitCount_TypeInfo);
-    byte_43531AF = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
+    sub_B775C4(&ImageLimitCount_TypeInfo);
+    byte_438C92E = 1;
   }
   value = 0;
   *limitCount = -1;
@@ -1067,7 +1067,7 @@ bool __fastcall ImageLimitCount__TryGetRewardImageLimitCount(
           limitMaxList,
           svtId,
           &value,
-          (const MethodInfo_2FBCD70 *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__) )
+          (const MethodInfo_2FEA980 *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__) )
     return 0;
   limitMaxList = (System_Collections_Generic_Dictionary_int__int__o *)ImageLimitCount_TypeInfo;
   if ( value <= v5 )
@@ -1089,13 +1089,13 @@ bool __fastcall ImageLimitCount__TryGetRewardImageLimitCount(
       if ( (unsigned int)v5 >= LODWORD(klass->_1.namespaze) )
       {
 LABEL_15:
-        v10 = sub_B70798(limitMaxList);
-        sub_B70738(v10, 0LL);
+        v10 = sub_B776C8(limitMaxList);
+        sub_B77668(v10, 0LL);
       }
       goto LABEL_22;
     }
 LABEL_26:
-    sub_B7076C(limitMaxList, *(_QWORD *)&svtLimitCnt);
+    sub_B7769C(limitMaxList, *(_QWORD *)&svtLimitCnt);
   }
   if ( (WORD1(ImageLimitCount_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
     && !ImageLimitCount_TypeInfo->_2.cctor_finished )
@@ -1123,10 +1123,10 @@ int32_t __fastcall ImageLimitCount__get_MaxDispLimitCount(const MethodInfo *meth
   ImageLimitCount_c *v2; // x0
   struct System_Int32_array *maxDispLimitCountList; // x8
 
-  if ( (byte_43531B8 & 1) == 0 )
+  if ( (byte_438C937 & 1) == 0 )
   {
-    sub_B70694(&ImageLimitCount_TypeInfo);
-    byte_43531B8 = 1;
+    sub_B775C4(&ImageLimitCount_TypeInfo);
+    byte_438C937 = 1;
   }
   v2 = ImageLimitCount_TypeInfo;
   if ( (BYTE3(ImageLimitCount_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1137,7 +1137,7 @@ int32_t __fastcall ImageLimitCount__get_MaxDispLimitCount(const MethodInfo *meth
   }
   maxDispLimitCountList = v2->static_fields->maxDispLimitCountList;
   if ( !maxDispLimitCountList )
-    sub_B7076C(v2, v1);
+    sub_B7769C(v2, v1);
   return maxDispLimitCountList->max_length;
 }
 

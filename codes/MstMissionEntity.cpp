@@ -1,14 +1,14 @@
 void __fastcall MstMissionEntity___ctor(MstMissionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4350D69 & 1) == 0 )
+  if ( (byte_438A40C & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_int___ctor__);
-    byte_4350D69 = 1;
+    sub_B775C4(&Method_DataEntityBase_int___ctor__);
+    byte_438A40C = 1;
   }
   this->fields.WEEK_TIME = 604800;
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -26,18 +26,18 @@ int32_t __fastcall MstMissionEntity__getMissionType(MstMissionEntity_o *this, co
   struct System_Collections_Generic_Dictionary_int__DataMasterBase__o *lookup; // x8
   __int64 v8; // x0
 
-  if ( (byte_4350D68 & 1) == 0 )
+  if ( (byte_438A40B & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_EventMissionMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4350D68 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_EventMissionMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438A40B = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventMissionMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventMissionMaster___);
   if ( !Instance )
     goto LABEL_11;
   Instance = (DataManager_o *)EventMissionMaster__getEventMissionList(
@@ -51,14 +51,14 @@ int32_t __fastcall MstMissionEntity__getMissionType(MstMissionEntity_o *this, co
   {
     if ( !(_DWORD)datalist )
     {
-      v8 = sub_B70798(Instance);
-      sub_B70738(v8, 0LL);
+      v8 = sub_B776C8(Instance);
+      sub_B77668(v8, 0LL);
     }
     lookup = Instance->fields.lookup;
     if ( lookup )
       return (int32_t)lookup->fields.entries;
 LABEL_11:
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   return 0;
 }
@@ -73,31 +73,31 @@ bool __fastcall MstMissionEntity__hasUnarchived(MstMissionEntity_o *this, const 
   __int64 v7; // x9
   __int64 v8; // x11
 
-  if ( (byte_4350D67 & 1) == 0 )
+  if ( (byte_438A40A & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_EventMissionMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_UserEventMissionMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4350D67 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_EventMissionMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserEventMissionMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438A40A = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
                (DataManager_o *)Instance,
-               (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventMissionMaster___);
+               (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventMissionMaster___);
   if ( !Instance )
     goto LABEL_17;
   MissionIdListByEvent = EventMissionMaster__getMissionIdListByEvent(
                            (EventMissionMaster_o *)Instance,
                            this->fields.id,
                            0LL);
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
                (DataManager_o *)Instance,
-               (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserEventMissionMaster___);
+               (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserEventMissionMaster___);
   if ( !Instance )
     goto LABEL_17;
   Instance = UserEventMissionMaster__getUserEventMissionList((UserEventMissionMaster_o *)Instance, this->fields.id, 0LL);
@@ -120,7 +120,7 @@ bool __fastcall MstMissionEntity__hasUnarchived(MstMissionEntity_o *this, const 
         return 0;
     }
 LABEL_17:
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   return 0;
 }
@@ -136,10 +136,10 @@ bool __fastcall MstMissionEntity__isActiveNow(MstMissionEntity_o *this, const Me
 {
   int64_t Time; // x0
 
-  if ( (byte_4350D66 & 1) == 0 )
+  if ( (byte_438A409 & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4350D66 = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_438A409 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -161,10 +161,10 @@ bool __fastcall MstMissionEntity__isOpenNow(MstMissionEntity_o *this, const Meth
 {
   int64_t Time; // x0
 
-  if ( (byte_4350D65 & 1) == 0 )
+  if ( (byte_438A408 & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4350D65 = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_438A408 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )

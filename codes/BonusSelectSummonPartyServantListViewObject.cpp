@@ -2,10 +2,10 @@ void __fastcall BonusSelectSummonPartyServantListViewObject___ctor(
         BonusSelectSummonPartyServantListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_43516D8 & 1) == 0 )
+  if ( (byte_438AE5D & 1) == 0 )
   {
-    sub_B70694(&ListViewObject_TypeInfo);
-    byte_43516D8 = 1;
+    sub_B775C4(&ListViewObject_TypeInfo);
+    byte_438AE5D = 1;
   }
   if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ListViewObject_TypeInfo->_2.cctor_finished )
@@ -30,20 +30,20 @@ void __fastcall BonusSelectSummonPartyServantListViewObject__Awake(
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_43516D0 & 1) == 0 )
+  if ( (byte_438AE55 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonPartyServantListViewItemDraw___);
-    byte_43516D0 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonPartyServantListViewItemDraw___);
+    byte_438AE55 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   Component_srcLineSprite = (struct BonusSelectSummonPartyServantListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                                         dispObject,
-                                                                                        (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonPartyServantListViewItemDraw___);
+                                                                                        (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonPartyServantListViewItemDraw___);
   this->fields.itemDraw = Component_srcLineSprite;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.itemDraw,
     (System_Int32_array **)Component_srcLineSprite,
     v6,
@@ -64,19 +64,19 @@ UnityEngine_GameObject_o *__fastcall BonusSelectSummonPartyServantListViewObject
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x2
 
-  if ( (byte_43516D3 & 1) == 0 )
+  if ( (byte_438AE58 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonPartyServantListViewObject___);
-    byte_43516D3 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonPartyServantListViewObject___);
+    byte_438AE58 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                     DragObject,
-                                                    (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonPartyServantListViewObject___)) == 0LL) )
+                                                    (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonPartyServantListViewObject___)) == 0LL) )
   {
-    sub_B7076C(DragObject, v4);
+    sub_B7769C(DragObject, v4);
   }
   BonusSelectSummonPartyServantListViewObject__Init((BonusSelectSummonPartyServantListViewObject_o *)DragObject, 2, v6);
   return v5;
@@ -90,10 +90,10 @@ BonusSelectSummonPartyServantListViewItem_o *__fastcall BonusSelectSummonPartySe
   struct ListViewItem_o *linkItem; // x8
   __int64 v4; // x11
 
-  if ( (byte_43516D2 & 1) == 0 )
+  if ( (byte_438AE57 & 1) == 0 )
   {
-    sub_B70694(&BonusSelectSummonPartyServantListViewItem_TypeInfo);
-    byte_43516D2 = 1;
+    sub_B775C4(&BonusSelectSummonPartyServantListViewItem_TypeInfo);
+    byte_438AE57 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -131,10 +131,10 @@ void __fastcall BonusSelectSummonPartyServantListViewObject__Init(
   System_Action_o *v21; // x20
   struct System_Action_o *callbackFunc; // t1
 
-  if ( (byte_43516D4 & 1) == 0 )
+  if ( (byte_438AE59 & 1) == 0 )
   {
-    sub_B70694(&BonusSelectSummonPartyServantListViewItem_TypeInfo);
-    byte_43516D4 = 1;
+    sub_B775C4(&BonusSelectSummonPartyServantListViewItem_TypeInfo);
+    byte_438AE59 = 1;
   }
   linkItem = this->fields.linkItem;
   dispMode = this->fields.dispMode;
@@ -160,7 +160,7 @@ void __fastcall BonusSelectSummonPartyServantListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B7076C(transform, v10);
+    sub_B7769C(transform, v10);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   v18 = 1;
@@ -196,7 +196,7 @@ LABEL_18:
       if ( callbackFunc )
       {
         p_callbackFunc->klass = 0LL;
-        sub_B70630(p_callbackFunc, 0LL, v12, v13, v14, v15, v16, v17);
+        sub_B77560(p_callbackFunc, 0LL, v12, v13, v14, v15, v16, v17);
         System_Action__Invoke(v21, 0LL);
       }
       return;
@@ -218,19 +218,19 @@ void __fastcall BonusSelectSummonPartyServantListViewObject__OnClickSelect(
 {
   ListViewManager_o *manager; // x0
 
-  if ( (byte_43516D6 & 1) == 0 )
+  if ( (byte_438AE5B & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_10093/*"OnClickSelectListView"*/);
-    byte_43516D6 = 1;
+    sub_B775C4(&StringLiteral_10152/*"OnClickSelectListView"*/);
+    byte_438AE5B = 1;
   }
   if ( this->fields.linkItem )
   {
     manager = this->fields.manager;
     if ( !manager || (ListViewManager__ClearScrollBarValue(manager, 1, 0LL), (manager = this->fields.manager) == 0LL) )
-      sub_B7076C(manager, method);
+      sub_B7769C(manager, method);
     UnityEngine_Component__SendMessage(
       (UnityEngine_Component_o *)manager,
-      (System_String_o *)StringLiteral_10093/*"OnClickSelectListView"*/,
+      (System_String_o *)StringLiteral_10152/*"OnClickSelectListView"*/,
       (Il2CppObject *)this,
       0LL);
   }
@@ -252,11 +252,11 @@ void __fastcall BonusSelectSummonPartyServantListViewObject__OnDestroy(
   System_Int32_array *v11; // x6
   System_Int32_array *v12; // x7
 
-  if ( (byte_43516D1 & 1) == 0 )
+  if ( (byte_438AE56 & 1) == 0 )
   {
-    sub_B70694(&NGUITools_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43516D1 = 1;
+    sub_B775C4(&NGUITools_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438AE56 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (BattleServantConfConponent_o *)&this->fields.dragObject;
@@ -273,7 +273,7 @@ void __fastcall BonusSelectSummonPartyServantListViewObject__OnDestroy(
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_B70630(p_dragObject, 0LL, v7, v8, v9, v10, v11, v12);
+    sub_B77560(p_dragObject, 0LL, v7, v8, v9, v10, v11, v12);
   }
 }
 
@@ -284,17 +284,17 @@ void __fastcall BonusSelectSummonPartyServantListViewObject__OnLongPush(
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_43516D7 & 1) == 0 )
+  if ( (byte_438AE5C & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_10146/*"OnLongPushListView"*/);
-    byte_43516D7 = 1;
+    sub_B775C4(&StringLiteral_10205/*"OnLongPushListView"*/);
+    byte_438AE5C = 1;
   }
   if ( this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_B7076C(0LL, method);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_10146/*"OnLongPushListView"*/, (Il2CppObject *)this, 0LL);
+      sub_B7769C(0LL, method);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_10205/*"OnLongPushListView"*/, (Il2CppObject *)this, 0LL);
   }
 }
 
@@ -305,12 +305,12 @@ void __fastcall BonusSelectSummonPartyServantListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_33972948((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_34301308((ListViewObject_o *)this, item, seed, 0LL);
   this->fields.state = 0;
 }
 
 
-void __fastcall BonusSelectSummonPartyServantListViewObject__SetItem_24493432(
+void __fastcall BonusSelectSummonPartyServantListViewObject__SetItem_24848924(
         BonusSelectSummonPartyServantListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -332,11 +332,11 @@ void __fastcall BonusSelectSummonPartyServantListViewObject__SetupDisp(
   const MethodInfo *v8; // x3
   BonusSelectSummonPartyServantListViewItemDraw_o *v9; // x0
 
-  if ( (byte_43516D5 & 1) == 0 )
+  if ( (byte_438AE5A & 1) == 0 )
   {
-    sub_B70694(&BonusSelectSummonPartyServantListViewItem_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43516D5 = 1;
+    sub_B775C4(&BonusSelectSummonPartyServantListViewItem_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438AE5A = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -363,7 +363,7 @@ LABEL_8:
   {
     v9 = this->fields.itemDraw;
     if ( !v9 )
-      sub_B7076C(0LL, v7);
+      sub_B7769C(0LL, v7);
     BonusSelectSummonPartyServantListViewItemDraw__SetItem(
       v9,
       (BonusSelectSummonPartyServantListViewItem_o *)linkItem,
@@ -388,10 +388,10 @@ void __fastcall BonusSelectSummonPartyServantListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_43516CE & 1) == 0 )
+  if ( (byte_438AE53 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    byte_43516CE = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    byte_438AE53 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -404,13 +404,13 @@ void __fastcall BonusSelectSummonPartyServantListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (BonusSelectSummonPartyServantListViewObject_o *)sub_B70A60(v8);
+  v11 = (BonusSelectSummonPartyServantListViewObject_o *)sub_B77990(v8);
   BonusSelectSummonPartyServantListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -429,10 +429,10 @@ void __fastcall BonusSelectSummonPartyServantListViewObject__remove_callbackFunc
   BonusSelectSummonPartyServantListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_43516CF & 1) == 0 )
+  if ( (byte_438AE54 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    byte_43516CF = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    byte_438AE54 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -445,12 +445,12 @@ void __fastcall BonusSelectSummonPartyServantListViewObject__remove_callbackFunc
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (BonusSelectSummonPartyServantListViewObject_o *)sub_B70A60(v8);
+  v11 = (BonusSelectSummonPartyServantListViewObject_o *)sub_B77990(v8);
   BonusSelectSummonPartyServantListViewObject__Awake(v11, v12);
 }

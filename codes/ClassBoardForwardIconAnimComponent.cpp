@@ -17,18 +17,18 @@ void __fastcall ClassBoardForwardIconAnimComponent___ctor(
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
 
-  if ( (byte_4353AE5 & 1) == 0 )
+  if ( (byte_438D3A3 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_19757/*"img_class_{0}"*/);
-    sub_B70694(&StringLiteral_17240/*"btn_class"*/);
-    byte_4353AE5 = 1;
+    sub_B775C4(&StringLiteral_19847/*"img_class_{0}"*/);
+    sub_B775C4(&StringLiteral_17323/*"btn_class"*/);
+    byte_438D3A3 = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_19757/*"img_class_{0}"*/;
-  this->fields.spriteNameFormatIcon = (struct System_String_o *)StringLiteral_19757/*"img_class_{0}"*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.spriteNameFormatIcon, v9, v2, v3, v4, v5, v6, v7);
-  v10 = (System_Int32_array **)StringLiteral_17240/*"btn_class"*/;
-  this->fields.spriteNameButton = (struct System_String_o *)StringLiteral_17240/*"btn_class"*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.spriteNameButton, v10, v11, v12, v13, v14, v15, v16);
+  v9 = (System_Int32_array **)StringLiteral_19847/*"img_class_{0}"*/;
+  this->fields.spriteNameFormatIcon = (struct System_String_o *)StringLiteral_19847/*"img_class_{0}"*/;
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.spriteNameFormatIcon, v9, v2, v3, v4, v5, v6, v7);
+  v10 = (System_Int32_array **)StringLiteral_17323/*"btn_class"*/;
+  this->fields.spriteNameButton = (struct System_String_o *)StringLiteral_17323/*"btn_class"*/;
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.spriteNameButton, v10, v11, v12, v13, v14, v15, v16);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -46,10 +46,10 @@ void __fastcall ClassBoardForwardIconAnimComponent__PlayAnim(
     || (UnityEngine_Animation__Rewind(anim, 0LL), (v4 = this->fields.anim) == 0LL)
     || (anim = (UnityEngine_Animation_o *)UnityEngine_Animation__get_clip(v4, 0LL)) == 0LL )
   {
-    sub_B7076C(anim, method);
+    sub_B7769C(anim, method);
   }
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)anim, 0LL);
-  UnityEngine_Animation__Play_51542184(v4, name, 0LL);
+  UnityEngine_Animation__Play_51745976(v4, name, 0LL);
 }
 
 
@@ -77,24 +77,24 @@ void __fastcall ClassBoardForwardIconAnimComponent__Setup(
   __int64 v22; // x0
   int list; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4353AE4 & 1) == 0 )
+  if ( (byte_438D3A2 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
-    sub_B70694(&IClassBoardResourceCatalog_TypeInfo);
-    sub_B70694(&int_TypeInfo);
-    byte_4353AE4 = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
+    sub_B775C4(&IClassBoardResourceCatalog_TypeInfo);
+    sub_B775C4(&int_TypeInfo);
+    byte_438D3A2 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   if ( !Master_WarQuestSelectionMaster )
     goto LABEL_27;
   Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                                                                     Master_WarQuestSelectionMaster,
                                                                                     baseId,
-                                                                                    (const MethodInfo_21C0440 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
+                                                                                    (const MethodInfo_21FB894 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
   if ( !Master_WarQuestSelectionMaster )
     return;
   if ( !resourceCatalog )
@@ -117,7 +117,7 @@ void __fastcall ClassBoardForwardIconAnimComponent__Setup(
   else
   {
 LABEL_13:
-    p_method = sub_B08590(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0LL);
+    p_method = sub_B0F4C0(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0LL);
   }
   Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)(*(__int64 (__fastcall **)(IClassBoardResourceCatalog_o *, _QWORD))p_method)(
                                                                                     resourceCatalog,
@@ -153,7 +153,7 @@ LABEL_13:
   else
   {
 LABEL_21:
-    v22 = sub_B08590(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0LL);
+    v22 = sub_B0F4C0(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0LL);
   }
   Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)(*(__int64 (__fastcall **)(IClassBoardResourceCatalog_o *, _QWORD))v22)(
                                                                                     resourceCatalog,
@@ -162,7 +162,7 @@ LABEL_21:
     || (Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)Master_WarQuestSelectionMaster[1].fields.seriazlier) == 0LL )
   {
 LABEL_27:
-    sub_B7076C(Master_WarQuestSelectionMaster, v8);
+    sub_B7769C(Master_WarQuestSelectionMaster, v8);
   }
   AtlasManagerUnit__SetUI(
     (AtlasManagerUnit_o *)Master_WarQuestSelectionMaster,

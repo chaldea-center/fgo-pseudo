@@ -6,10 +6,10 @@ void __fastcall TopRefreshRequest___ctor(TopRefreshRequest_o *this, const Method
 
 System_String_o *__fastcall TopRefreshRequest__getMockData(TopRefreshRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4353D17 & 1) == 0 )
+  if ( (byte_438D5D5 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4353D17 = 1;
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438D5D5 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -19,11 +19,11 @@ System_String_o *__fastcall TopRefreshRequest__getURL(TopRefreshRequest_o *this,
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4353D16 & 1) == 0 )
+  if ( (byte_438D5D4 & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&StringLiteral_22102/*"refresh/top"*/);
-    byte_4353D16 = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&StringLiteral_22203/*"refresh/top"*/);
+    byte_438D5D4 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -31,7 +31,7 @@ System_String_o *__fastcall TopRefreshRequest__getURL(TopRefreshRequest_o *this,
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_44758168(BaseUrl, (System_String_o *)StringLiteral_22102/*"refresh/top"*/, 0LL);
+  return System_String__Concat_44901936(BaseUrl, (System_String_o *)StringLiteral_22203/*"refresh/top"*/, 0LL);
 }
 
 
@@ -44,13 +44,13 @@ void __fastcall TopRefreshRequest__requestCompleted(
   ResponseData_o *v6; // x0
   __int64 *v7; // x8
 
-  if ( (byte_4353D18 & 1) == 0 )
+  if ( (byte_438D5D6 & 1) == 0 )
   {
-    sub_B70694(&ResponseCommandKind_TypeInfo);
-    sub_B70694(&TopHomeRequest_TypeInfo);
-    sub_B70694(&StringLiteral_21560/*"ok"*/);
-    sub_B70694(&StringLiteral_21408/*"ng"*/);
-    byte_4353D18 = 1;
+    sub_B775C4(&ResponseCommandKind_TypeInfo);
+    sub_B775C4(&TopHomeRequest_TypeInfo);
+    sub_B775C4(&StringLiteral_21657/*"ok"*/);
+    sub_B775C4(&StringLiteral_21504/*"ng"*/);
+    byte_438D5D6 = 1;
   }
   v5 = TopHomeRequest_TypeInfo;
   if ( (BYTE3(TopHomeRequest_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -65,9 +65,9 @@ void __fastcall TopRefreshRequest__requestCompleted(
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   }
   v6 = ResponseCommandKind__SearchData(5, responseList, 0LL);
-  if ( v6 && ResponseData__checkError_29653500(v6, 0LL) )
-    v7 = &StringLiteral_21560/*"ok"*/;
+  if ( v6 && ResponseData__checkError_30128096(v6, 0LL) )
+    v7 = &StringLiteral_21657/*"ok"*/;
   else
-    v7 = &StringLiteral_21408/*"ng"*/;
+    v7 = &StringLiteral_21504/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v7, 0LL);
 }

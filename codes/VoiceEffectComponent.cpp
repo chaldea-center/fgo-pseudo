@@ -1,9 +1,9 @@
 void __fastcall VoiceEffectComponent___ctor(VoiceEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4357C2C & 1) == 0 )
+  if ( (byte_43912AA & 1) == 0 )
   {
-    sub_B70694(&CommonEffectComponent_TypeInfo);
-    byte_4357C2C = 1;
+    sub_B775C4(&CommonEffectComponent_TypeInfo);
+    byte_43912AA = 1;
   }
   if ( (BYTE3(CommonEffectComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CommonEffectComponent_TypeInfo->_2.cctor_finished )
@@ -31,19 +31,19 @@ void __fastcall VoiceEffectComponent__LoadVoiceAsset(
   System_String_o *voicePath; // x20
   int32_t voiceId; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4357C2B & 1) == 0 )
+  if ( (byte_43912A9 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&SoundManager_TypeInfo);
-    sub_B70694(&StringLiteral_24027/*"{0}_{1}"*/);
-    byte_4357C2B = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&SoundManager_TypeInfo);
+    sub_B775C4(&StringLiteral_24131/*"{0}_{1}"*/);
+    byte_43912A9 = 1;
   }
   voiceDataStr = (Il2CppObject *)this->fields.voiceDataStr;
   voiceId = this->fields.voiceId;
   v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &voiceId, method);
-  v7 = System_String__Format_44753704((System_String_o *)StringLiteral_24027/*"{0}_{1}"*/, voiceDataStr, v6, 0LL);
+  v7 = System_String__Format_44897472((System_String_o *)StringLiteral_24131/*"{0}_{1}"*/, voiceDataStr, v6, 0LL);
   this->fields.voicePath = v7;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.voicePath,
     (System_Int32_array **)v7,
     v8,

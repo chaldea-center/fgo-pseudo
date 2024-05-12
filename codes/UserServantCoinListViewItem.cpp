@@ -31,24 +31,24 @@ void __fastcall UserServantCoinListViewItem___ctor(
   __int64 v31; // x24
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v32; // 0:x0.16
 
-  if ( (byte_434FD78 & 1) == 0 )
+  if ( (byte_4389361 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_ServantLimitMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_SvtCoinMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__TryGetEntity__);
-    sub_B70694(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    sub_B70694(&IconLabelInfo_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_434FD78 = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_ServantLimitMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_SvtCoinMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__TryGetEntity__);
+    sub_B775C4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_B775C4(&IconLabelInfo_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4389361 = 1;
   }
-  v7 = (IconLabelInfo_o *)sub_B70764(IconLabelInfo_TypeInfo);
+  v7 = (IconLabelInfo_o *)sub_B77694(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v7, 0LL);
   this->fields.iconLabelInfo = v7;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.iconLabelInfo,
     (System_Int32_array **)v7,
     v8,
@@ -57,7 +57,7 @@ void __fastcall UserServantCoinListViewItem___ctor(
     v11,
     v12,
     v13);
-  ListViewItem___ctor_23967088((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
   iconLabelInfo = (int64_t)this->fields.iconLabelInfo;
   if ( !iconLabelInfo )
     goto LABEL_25;
@@ -66,7 +66,7 @@ void __fastcall UserServantCoinListViewItem___ctor(
     return;
   this->fields.userSvtCoinEntity = userSvtCoinEnt;
   p_userSvtCoinEntity = &this->fields.userSvtCoinEntity;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.userSvtCoinEntity,
     (System_Int32_array **)userSvtCoinEnt,
     v16,
@@ -77,7 +77,7 @@ void __fastcall UserServantCoinListViewItem___ctor(
     v21);
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  iconLabelInfo = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_SvtCoinMaster___);
+  iconLabelInfo = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_SvtCoinMaster___);
   userSvtCoinEntity = this->fields.userSvtCoinEntity;
   if ( !userSvtCoinEntity )
     goto LABEL_25;
@@ -87,8 +87,8 @@ void __fastcall UserServantCoinListViewItem___ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)iconLabelInfo,
     (WarEntity_o **)&this->fields.svtCoinEntity,
     userSvtCoinEntity->fields.svtId,
-    (const MethodInfo_21C049C *)Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__TryGetEntity__);
-  iconLabelInfo = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ServantMaster___);
+    (const MethodInfo_21FB8F0 *)Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__TryGetEntity__);
+  iconLabelInfo = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ServantMaster___);
   v24 = this->fields.userSvtCoinEntity;
   if ( !v24 || !iconLabelInfo )
     goto LABEL_25;
@@ -97,8 +97,8 @@ void __fastcall UserServantCoinListViewItem___ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)iconLabelInfo,
     (WarEntity_o **)&this->fields.servantEntity,
     v24->fields.svtId,
-    (const MethodInfo_21C049C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-  Master_WarQuestSelectionMaster = (UserServantCollectionMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    (const MethodInfo_21FB8F0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+  Master_WarQuestSelectionMaster = (UserServantCollectionMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -114,7 +114,7 @@ void __fastcall UserServantCoinListViewItem___ctor(
                        iconLabelInfo,
                        (*p_userSvtCoinEntity)->fields.svtId,
                        v27);
-  iconLabelInfo = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ServantLimitMaster___);
+  iconLabelInfo = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ServantLimitMaster___);
   if ( !EntityDefinitely )
     goto LABEL_25;
   v29 = (ServantLimitMaster_o *)iconLabelInfo;
@@ -127,10 +127,10 @@ void __fastcall UserServantCoinListViewItem___ctor(
   }
   *(_QWORD *)&v32.fields.currentCryptoKey = v31;
   *(_QWORD *)&v32.fields.fakeValue = v30;
-  iconLabelInfo = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v32, 0LL);
+  iconLabelInfo = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v32, 0LL);
   if ( !v29 )
 LABEL_25:
-    sub_B7076C(iconLabelInfo, v14);
+    sub_B7769C(iconLabelInfo, v14);
   ServantLimitMaster__TryGetEntity(
     v29,
     &this->fields.servantLimitEntity,
@@ -138,7 +138,7 @@ LABEL_25:
     EntityDefinitely->fields.maxLimitCount,
     0LL);
   if ( *p_servantEntity )
-    ServantEntity__getName_31437092(
+    ServantEntity__getName_31714324(
       *p_servantEntity,
       &this->fields.sortRuby,
       EntityDefinitely->fields.maxLimitCount,
@@ -160,11 +160,11 @@ bool __fastcall UserServantCoinListViewItem__IsMatchFilter(
   struct ServantLimitEntity_o *servantLimitEntity; // x8
   int32_t v12; // w1
 
-  if ( (byte_434FD7A & 1) == 0 )
+  if ( (byte_4389363 & 1) == 0 )
   {
-    sub_B70694(&FilterKindList_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
-    byte_434FD7A = 1;
+    sub_B775C4(&FilterKindList_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+    byte_4389363 = 1;
   }
   v5 = FilterKindList_TypeInfo;
   if ( (BYTE3(FilterKindList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -178,7 +178,7 @@ bool __fastcall UserServantCoinListViewItem__IsMatchFilter(
     goto LABEL_29;
   ClassGroupFilterKindList = (System_Collections_Generic_List_Voice_BATTLE__o *)System_Collections_Generic_List_Voice_BATTLE___ToArray(
                                                                                   ClassGroupFilterKindList,
-                                                                                  (const MethodInfo_30BB2BC *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                                                                  (const MethodInfo_30EAECC *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
   if ( !sort )
     goto LABEL_29;
   if ( ListViewSort__IsUnSelectedAllTargetFilters(sort, (ListViewSort_FilterKind_array *)ClassGroupFilterKindList, 0LL) )
@@ -195,7 +195,7 @@ bool __fastcall UserServantCoinListViewItem__IsMatchFilter(
     {
       v8 = (ListViewSort_FilterKind_array *)System_Collections_Generic_List_Voice_BATTLE___ToArray(
                                               ClassGroupFilterKindList,
-                                              (const MethodInfo_30BB2BC *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                              (const MethodInfo_30EAECC *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
       if ( !ListViewSort__IsUnSelectedAllTargetFilters(sort, v8, 0LL)
         && !ListViewSort__IsMatchClassFilter(sort, this->fields.servantEntity, 0LL) )
       {
@@ -204,7 +204,7 @@ bool __fastcall UserServantCoinListViewItem__IsMatchFilter(
       goto LABEL_17;
     }
 LABEL_29:
-    sub_B7076C(ClassGroupFilterKindList, sort);
+    sub_B7769C(ClassGroupFilterKindList, sort);
   }
   if ( !ListViewSort__IsMatchClassGroupFilter(sort, this->fields.servantEntity, 0LL) )
     return 0;
@@ -221,7 +221,7 @@ LABEL_17:
     goto LABEL_29;
   v10 = (ListViewSort_FilterKind_array *)System_Collections_Generic_List_Voice_BATTLE___ToArray(
                                            ClassGroupFilterKindList,
-                                           (const MethodInfo_30BB2BC *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                           (const MethodInfo_30EAECC *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
   if ( ListViewSort__IsUnSelectedAllTargetFilters(sort, v10, 0LL)
     || ListViewSort__IsSelectedAllTargetFilters(sort, v10, 0LL) )
   {
@@ -262,10 +262,10 @@ bool __fastcall UserServantCoinListViewItem__SetSortValue(
   System_Int32_array **v26; // x1
   struct ServantEntity_o *servantEntity; // x8
 
-  if ( (byte_434FD79 & 1) == 0 )
+  if ( (byte_4389362 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_434FD79 = 1;
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_4389362 = 1;
   }
   klass = this->klass;
   *(_WORD *)&this->fields.isTermination = 0;
@@ -291,7 +291,7 @@ bool __fastcall UserServantCoinListViewItem__SetSortValue(
         this->fields.sortValue1 = servantLimitEntity;
         v26 = (System_Int32_array **)StringLiteral_1/*""*/;
         this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1/*""*/;
-        sub_B70630((BattleServantConfConponent_o *)&this->fields.sortStr1, v26, v7, v8, v9, v10, v11, v12);
+        sub_B77560((BattleServantConfConponent_o *)&this->fields.sortStr1, v26, v7, v8, v9, v10, v11, v12);
         servantEntity = this->fields.servantEntity;
         if ( servantEntity )
         {
@@ -307,7 +307,7 @@ bool __fastcall UserServantCoinListViewItem__SetSortValue(
         if ( !iconLabelInfo )
           goto LABEL_34;
 LABEL_23:
-        IconLabelInfo__Set_27789840(iconLabelInfo, 57, collectionNo, 0, 0, 0, 0, 0, 0LL);
+        IconLabelInfo__Set_28141596(iconLabelInfo, 57, collectionNo, 0, 0, 0, 0, 0, 0LL);
         goto LABEL_24;
       }
       if ( sortKind == 14 )
@@ -321,7 +321,7 @@ LABEL_23:
         sortRuby = (struct System_String_o *)StringLiteral_1/*""*/;
 LABEL_15:
         this->fields.sortStr1 = sortRuby;
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)p_sortStr1,
           (System_Int32_array **)sortRuby,
           v7,
@@ -343,7 +343,7 @@ LABEL_24:
           return (char)iconLabelInfo;
         }
 LABEL_34:
-        sub_B7076C(iconLabelInfo, v6);
+        sub_B7769C(iconLabelInfo, v6);
       }
     }
     else if ( sortKind == 26 )
@@ -364,7 +364,7 @@ LABEL_34:
     this->fields.sortValue1 = v21;
     v22 = (System_Int32_array **)StringLiteral_1/*""*/;
     this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1/*""*/;
-    sub_B70630((BattleServantConfConponent_o *)&this->fields.sortStr1, v22, v7, v8, v9, v10, v11, v12);
+    sub_B77560((BattleServantConfConponent_o *)&this->fields.sortStr1, v22, v7, v8, v9, v10, v11, v12);
     v23 = this->fields.servantEntity;
     iconLabelInfo = this->fields.iconLabelInfo;
     this->fields.sortValue1B = 0LL;

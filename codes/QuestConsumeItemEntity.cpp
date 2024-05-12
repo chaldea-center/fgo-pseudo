@@ -1,13 +1,13 @@
 void __fastcall QuestConsumeItemEntity___ctor(QuestConsumeItemEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_43524A4 & 1) == 0 )
+  if ( (byte_438BC20 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_int___ctor__);
-    byte_43524A4 = 1;
+    sub_B775C4(&Method_DataEntityBase_int___ctor__);
+    byte_438BC20 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -69,23 +69,23 @@ System_String_o *__fastcall QuestConsumeItemEntity__GetItemConsumeString(
   __int64 v49; // x0
   __int64 v50; // x0
 
-  if ( (byte_43524A3 & 1) == 0 )
+  if ( (byte_438BC1F & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_B70694(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_26/*"\n"*/);
-    sub_B70694(&StringLiteral_82/*" "*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43524A3 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_B775C4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_26/*"\n"*/);
+    sub_B775C4(&StringLiteral_82/*" "*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438BC1F = 1;
   }
-  Instance = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_36;
   MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                                         (DataManager_o *)Instance,
-                                                                                        (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                                                                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ItemMaster___);
   v6 = (System_Int32_array **)StringLiteral_1/*""*/;
   Instance = QuestConsumeItemEntity__IsAvailableAt(this, 0, v7);
   if ( (Instance & 1) != 0 )
@@ -103,34 +103,34 @@ System_String_o *__fastcall QuestConsumeItemEntity__GetItemConsumeString(
       Instance = (__int64)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                             MasterData_WarQuestSelectionMaster,
                             itemIds->m_Items[v8 + 1],
-                            (const MethodInfo_21C0440 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                            (const MethodInfo_21FB894 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
       if ( !Instance )
         break;
       v10 = (ItemEntity_o *)Instance;
       if ( ItemEntity__IsEnable((ItemEntity_o *)Instance, 0LL) )
       {
-        Instance = sub_B706AC(string___TypeInfo, 5LL);
+        Instance = sub_B775DC(string___TypeInfo, 5LL);
         if ( !Instance )
           break;
         v18 = (System_String_array *)Instance;
         if ( v6 )
         {
-          Instance = sub_B70754(v6, *(_QWORD *)(*(_QWORD *)Instance + 64LL));
+          Instance = sub_B77684(v6, *(_QWORD *)(*(_QWORD *)Instance + 64LL));
           if ( !Instance )
           {
 LABEL_38:
-            v50 = sub_B7078C(Instance);
-            sub_B70738(v50, 0LL);
+            v50 = sub_B776BC(Instance);
+            sub_B77668(v50, 0LL);
           }
         }
         if ( !v18->max_length )
           goto LABEL_37;
         v18->m_Items[0] = (System_String_o *)v6;
-        sub_B70630((BattleServantConfConponent_o *)v18->m_Items, v6, v12, v13, v14, v15, v16, v17);
+        sub_B77560((BattleServantConfConponent_o *)v18->m_Items, v6, v12, v13, v14, v15, v16, v17);
         Instance = StringLiteral_26/*"\n"*/;
         if ( StringLiteral_26/*"\n"*/ )
         {
-          Instance = sub_B70754(StringLiteral_26/*"\n"*/, v18->obj.klass->_1.element_class);
+          Instance = sub_B77684(StringLiteral_26/*"\n"*/, v18->obj.klass->_1.element_class);
           if ( !Instance )
             goto LABEL_38;
           v25 = (System_Int32_array **)StringLiteral_26/*"\n"*/;
@@ -142,22 +142,22 @@ LABEL_38:
         if ( v18->max_length <= 1 )
           goto LABEL_37;
         v18->m_Items[1] = (System_String_o *)v25;
-        sub_B70630((BattleServantConfConponent_o *)&v18->m_Items[1], v25, v19, v20, v21, v22, v23, v24);
+        sub_B77560((BattleServantConfConponent_o *)&v18->m_Items[1], v25, v19, v20, v21, v22, v23, v24);
         name = (System_Int32_array **)v10->fields.name;
         if ( name )
         {
-          Instance = sub_B70754(v10->fields.name, v18->obj.klass->_1.element_class);
+          Instance = sub_B77684(v10->fields.name, v18->obj.klass->_1.element_class);
           if ( !Instance )
             goto LABEL_38;
         }
         if ( v18->max_length <= 2 )
           goto LABEL_37;
         v18->m_Items[2] = (System_String_o *)name;
-        sub_B70630((BattleServantConfConponent_o *)&v18->m_Items[2], name, v26, v27, v28, v29, v30, v31);
+        sub_B77560((BattleServantConfConponent_o *)&v18->m_Items[2], name, v26, v27, v28, v29, v30, v31);
         Instance = StringLiteral_82/*" "*/;
         if ( StringLiteral_82/*" "*/ )
         {
-          Instance = sub_B70754(StringLiteral_82/*" "*/, v18->obj.klass->_1.element_class);
+          Instance = sub_B77684(StringLiteral_82/*" "*/, v18->obj.klass->_1.element_class);
           if ( !Instance )
             goto LABEL_38;
           v39 = (System_Int32_array **)StringLiteral_82/*" "*/;
@@ -169,36 +169,36 @@ LABEL_38:
         if ( v18->max_length <= 3 )
           goto LABEL_37;
         v18->m_Items[3] = (System_String_o *)v39;
-        sub_B70630((BattleServantConfConponent_o *)&v18->m_Items[3], v39, v33, v34, v35, v36, v37, v38);
+        sub_B77560((BattleServantConfConponent_o *)&v18->m_Items[3], v39, v33, v34, v35, v36, v37, v38);
         nums = this->fields.nums;
         if ( !nums )
           break;
         if ( v8 >= nums->max_length )
         {
 LABEL_37:
-          v49 = sub_B70798(Instance);
-          sub_B70738(v49, 0LL);
+          v49 = sub_B776C8(Instance);
+          sub_B77668(v49, 0LL);
         }
         Instance = (__int64)ItemEntity__GetCountText(v10, nums->m_Items[v8 + 1], 0LL);
         v47 = (System_Int32_array **)Instance;
         if ( Instance )
         {
-          Instance = sub_B70754(Instance, v18->obj.klass->_1.element_class);
+          Instance = sub_B77684(Instance, v18->obj.klass->_1.element_class);
           if ( !Instance )
             goto LABEL_38;
         }
         if ( v18->max_length <= 4 )
           goto LABEL_37;
         v18->m_Items[4] = (System_String_o *)v47;
-        sub_B70630((BattleServantConfConponent_o *)&v18->m_Items[4], v47, v41, v42, v43, v44, v45, v46);
-        v6 = (System_Int32_array **)System_String__Concat_44838292(v18, 0LL);
+        sub_B77560((BattleServantConfConponent_o *)&v18->m_Items[4], v47, v41, v42, v43, v44, v45, v46);
+        v6 = (System_Int32_array **)System_String__Concat_44982964(v18, 0LL);
       }
       Instance = QuestConsumeItemEntity__IsAvailableAt(this, ++v8, v11);
       if ( (Instance & 1) == 0 )
         return (System_String_o *)v6;
     }
 LABEL_36:
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   return (System_String_o *)v6;
 }
@@ -214,6 +214,6 @@ bool __fastcall QuestConsumeItemEntity__IsAvailableAt(
 
   itemIds = this->fields.itemIds;
   if ( !itemIds || (nums = this->fields.nums) == 0LL )
-    sub_B7076C(this, index);
-  return UnityEngine_Mathf__Min_41127788(itemIds->max_length, nums->max_length, 0LL) > index;
+    sub_B7769C(this, index);
+  return UnityEngine_Mathf__Min_41473676(itemIds->max_length, nums->max_length, 0LL) > index;
 }

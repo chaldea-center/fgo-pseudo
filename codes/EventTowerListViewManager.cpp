@@ -27,11 +27,11 @@ void __fastcall EventTowerListViewManager__CreateList(
   const MethodInfo *v21; // x4
   __int64 v22; // x0
 
-  if ( (byte_4350F79 & 1) == 0 )
+  if ( (byte_438A67B & 1) == 0 )
   {
-    sub_B70694(&EventTowerListViewItem_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    byte_4350F79 = 1;
+    sub_B775C4(&EventTowerListViewItem_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    byte_438A67B = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
   if ( !towerRewardList )
@@ -50,7 +50,7 @@ void __fastcall EventTowerListViewManager__CreateList(
       v17 = towerId <= nowTowerId + 1;
       v18 = towerId <= nowTowerId;
       v19 = isNextOpen ? v17 : v18;
-      v20 = (EventTowerListViewItem_o *)sub_B70764(EventTowerListViewItem_TypeInfo);
+      v20 = (EventTowerListViewItem_o *)sub_B77694(EventTowerListViewItem_TypeInfo);
       EventTowerListViewItem___ctor(v20, v14, v16, v19, v21);
       itemList = this->fields.itemList;
       if ( !itemList )
@@ -58,24 +58,24 @@ void __fastcall EventTowerListViewManager__CreateList(
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
         (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)itemList,
         (EventMissionProgressRequest_Argument_ProgressData_o *)v20,
-        (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_ListViewItem__Add__);
+        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_ListViewItem__Add__);
       if ( (int)++v13 >= (int)v12 )
         goto LABEL_19;
       if ( v13 >= towerRewardList->max_length )
       {
-        v22 = sub_B70798(itemList);
-        sub_B70738(v22, 0LL);
+        v22 = sub_B776C8(itemList);
+        sub_B77668(v22, 0LL);
       }
     }
 LABEL_20:
-    sub_B7076C(itemList, v11);
+    sub_B7769C(itemList, v11);
   }
 LABEL_19:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0LL);
 }
 
 
-void __fastcall EventTowerListViewManager__CreateList_23692152(
+void __fastcall EventTowerListViewManager__CreateList_24025160(
         EventTowerListViewManager_o *this,
         int32_t eventId,
         int32_t firstTowerId,
@@ -93,21 +93,21 @@ void __fastcall EventTowerListViewManager__CreateList_23692152(
   const MethodInfo *v16; // x4
   __int64 v17; // x0
 
-  if ( (byte_4350F7A & 1) == 0 )
+  if ( (byte_438A67C & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_EventTowerRewardMaster___);
-    sub_B70694(&EventTowerListViewItem_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4350F7A = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_EventTowerRewardMaster___);
+    sub_B775C4(&EventTowerListViewItem_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438A67C = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventTowerRewardMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventTowerRewardMaster___);
   if ( !Instance )
     goto LABEL_14;
   Instance = (DataManager_o *)EventTowerRewardMaster__GetTowerRewardAllEntityList(
@@ -127,7 +127,7 @@ void __fastcall EventTowerListViewManager__CreateList_23692152(
       if ( !v13 )
         break;
       v14 = v13->fields.towerId <= firstTowerId;
-      v15 = (EventTowerListViewItem_o *)sub_B70764(EventTowerListViewItem_TypeInfo);
+      v15 = (EventTowerListViewItem_o *)sub_B77694(EventTowerListViewItem_TypeInfo);
       EventTowerListViewItem___ctor(v15, v13, 0, v14, v16);
       Instance = (DataManager_o *)this->fields.itemList;
       if ( !Instance )
@@ -135,17 +135,17 @@ void __fastcall EventTowerListViewManager__CreateList_23692152(
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
         (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)Instance,
         (EventMissionProgressRequest_Argument_ProgressData_o *)v15,
-        (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_ListViewItem__Add__);
+        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_ListViewItem__Add__);
       if ( (int)++v12 >= (int)datalist )
         goto LABEL_13;
       if ( v12 >= LODWORD(v11->fields.datalist) )
       {
-        v17 = sub_B70798(Instance);
-        sub_B70738(v17, 0LL);
+        v17 = sub_B776C8(Instance);
+        sub_B77668(v17, 0LL);
       }
     }
 LABEL_14:
-    sub_B7076C(Instance, v8);
+    sub_B7769C(Instance, v8);
   }
 LABEL_13:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0LL);
@@ -161,17 +161,17 @@ EventTowerListViewItem_o *__fastcall EventTowerListViewManager__GetItem(
   ListViewItem_o *v6; // x8
   __int64 v7; // x11
 
-  if ( (byte_4350F7C & 1) == 0 )
+  if ( (byte_438A67E & 1) == 0 )
   {
-    sub_B70694(&EventTowerListViewItem_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    byte_4350F7C = 1;
+    sub_B775C4(&EventTowerListViewItem_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    byte_438A67E = 1;
   }
   itemList = this->fields.itemList;
   if ( !itemList )
     return 0LL;
   if ( itemList->fields._size <= (unsigned int)index )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
   v6 = itemList->fields._items->m_Items[index];
   if ( !v6 )
     return 0LL;
@@ -216,17 +216,17 @@ void __fastcall EventTowerListViewManager__OnClickListView(
   ItemDetailInfoComponent_CallbackFunc_o *v29; // x23
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v30; // 0:x0.16
 
-  if ( (byte_4350F82 & 1) == 0 )
+  if ( (byte_438A684 & 1) == 0 )
   {
-    sub_B70694(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
-    sub_B70694(&ServantStatusDialog_EndDelegate_TypeInfo);
-    sub_B70694(&Method_EventTowerListViewManager_closeItemDetail__);
-    sub_B70694(&Method_EventTowerListViewManager_closeSvtDetail__);
-    sub_B70694(&EventTowerListViewObject_TypeInfo);
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4350F82 = 1;
+    sub_B775C4(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+    sub_B775C4(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_B775C4(&Method_EventTowerListViewManager_closeItemDetail__);
+    sub_B775C4(&Method_EventTowerListViewManager_closeSvtDetail__);
+    sub_B775C4(&EventTowerListViewObject_TypeInfo);
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438A684 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -244,7 +244,7 @@ void __fastcall EventTowerListViewManager__OnClickListView(
      || (maskFade = Item->fields.maskFade, v11 = Item, !maskFade)) )
   {
 LABEL_35:
-    sub_B7076C(Item, v6);
+    sub_B7769C(Item, v6);
   }
   switch ( *((_DWORD *)&maskFade->fields.BaseMonoBehaviour_Fields + 1) )
   {
@@ -256,7 +256,7 @@ LABEL_35:
         goto LABEL_35;
       if ( LODWORD(bgCamera[1].monitor) )
         return;
-      Item = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Item = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       skipAnimation = v11->fields.skipAnimation;
       if ( !skipAnimation )
         goto LABEL_35;
@@ -270,8 +270,8 @@ LABEL_35:
       }
       *(_QWORD *)&v30.fields.currentCryptoKey = v16;
       *(_QWORD *)&v30.fields.fakeValue = klass;
-      v17 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v30, 0LL);
-      v18 = (ServantStatusDialog_EndDelegate_o *)sub_B70764(ServantStatusDialog_EndDelegate_TypeInfo);
+      v17 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v30, 0LL);
+      v18 = (ServantStatusDialog_EndDelegate_o *)sub_B77694(ServantStatusDialog_EndDelegate_TypeInfo);
       ServantStatusDialog_EndDelegate___ctor(
         v18,
         (Il2CppObject *)this,
@@ -279,7 +279,7 @@ LABEL_35:
         0LL);
       if ( !v14 )
         goto LABEL_35;
-      CommonUI__OpenServantStatusDialog_17918128(v14, 7, v17, v18, 0LL);
+      CommonUI__OpenServantStatusDialog_18069932(v14, 7, v17, v18, 0LL);
       break;
     case 2:
       v19 = Item->fields.bgCamera;
@@ -287,10 +287,10 @@ LABEL_35:
         goto LABEL_35;
       if ( LODWORD(v19[1].monitor) )
         return;
-      Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       eventMaskFade = (ItemEntity_o *)v11->fields.eventMaskFade;
       v22 = (CommonUI_o *)Instance;
-      v23 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_B70764(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+      v23 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_B77694(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
       ItemDetailInfoComponent_CallbackFunc___ctor(
         v23,
         (Il2CppObject *)this,
@@ -306,14 +306,14 @@ LABEL_35:
         goto LABEL_35;
       if ( LODWORD(v24[1].monitor) )
         return;
-      Item = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Item = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       connectMark = v11->fields.connectMark;
       if ( !connectMark )
         goto LABEL_35;
       markBase = (System_String_o *)connectMark->fields.markBase;
       markSprite = (System_String_o *)connectMark->fields.markSprite;
       v28 = Item;
-      v29 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_B70764(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+      v29 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_B77694(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
       ItemDetailInfoComponent_CallbackFunc___ctor(
         v29,
         (Il2CppObject *)this,
@@ -321,7 +321,7 @@ LABEL_35:
         0LL);
       if ( !v28 )
         goto LABEL_35;
-      CommonUI__OpenItemDetailDialog_17969836(v28, markBase, markSprite, v29, 0LL);
+      CommonUI__OpenItemDetailDialog_18121640(v28, markBase, markSprite, v29, 0LL);
       break;
     default:
       return;
@@ -346,10 +346,10 @@ void __fastcall EventTowerListViewManager__OnMoveEnd(EventTowerListViewManager_o
   UnityEngine_Object_o *scrollBar; // x20
   System_Action_o *CallbackFunc; // x20
 
-  if ( (byte_4350F81 & 1) == 0 )
+  if ( (byte_438A683 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4350F81 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438A683 = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -395,14 +395,14 @@ void __fastcall EventTowerListViewManager__OnMoveEnd(EventTowerListViewManager_o
 LABEL_20:
           CallbackFunc = this->fields.CallbackFunc;
           this->fields.CallbackFunc = 0LL;
-          sub_B70630((BattleServantConfConponent_o *)&this->fields.CallbackFunc, 0LL, v8, v9, v10, v11, v12, v13);
+          sub_B77560((BattleServantConfConponent_o *)&this->fields.CallbackFunc, 0LL, v8, v9, v10, v11, v12, v13);
           if ( CallbackFunc )
             System_Action__Invoke(CallbackFunc, 0LL);
           return;
         }
       }
 LABEL_22:
-      sub_B7076C(gameObject, v7);
+      sub_B7769C(gameObject, v7);
     }
   }
 }
@@ -424,21 +424,21 @@ void __fastcall EventTowerListViewManager__RequestInto(EventTowerListViewManager
   const MethodInfo *v13; // x3
   UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_4350F80 & 1) == 0 )
+  if ( (byte_438A682 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_EventTowerListViewManager_OnMoveEnd__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventTowerListViewObject__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventTowerListViewObject__get_Item__);
-    sub_B70694(&StringLiteral_10159/*"OnMoveEnd"*/);
-    byte_4350F80 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_EventTowerListViewManager_OnMoveEnd__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventTowerListViewObject__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventTowerListViewObject__get_Item__);
+    sub_B775C4(&StringLiteral_10218/*"OnMoveEnd"*/);
+    byte_438A682 = 1;
   }
   ListViewManager__ClippingItems((ListViewManager_o *)this, 1, 0, 0LL);
   ListViewManager__DragMaskStart((ListViewManager_o *)this, 0LL);
   ObjectList = EventTowerListViewManager__get_ObjectList(this, v3);
   if ( !ObjectList )
 LABEL_15:
-    sub_B7076C(ObjectList, v5);
+    sub_B7769C(ObjectList, v5);
   size = ObjectList->fields._size;
   v7 = ObjectList;
   this->fields.callbackCount = size;
@@ -449,11 +449,11 @@ LABEL_15:
   do
   {
     if ( v8 >= (unsigned int)v7->fields._size )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
     v10 = v7->fields._items->m_Items[v8];
     if ( ListViewManager__ClippingItem((ListViewManager_o *)this, (ListViewObject_o *)v10, 0LL) )
     {
-      v11 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+      v11 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
       System_Action___ctor(v11, (Il2CppObject *)this, Method_EventTowerListViewManager_OnMoveEnd__, 0LL);
       if ( !v10 )
         goto LABEL_15;
@@ -475,7 +475,7 @@ LABEL_14:
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10159/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_10218/*"OnMoveEnd"*/,
       this->fields.listInDelay + 0.5,
       0LL);
   }
@@ -501,14 +501,14 @@ void __fastcall EventTowerListViewManager__RequestListObject(
   const MethodInfo *v16; // x3
   UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_4350F7F & 1) == 0 )
+  if ( (byte_438A681 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_EventTowerListViewManager_OnMoveEnd__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventTowerListViewObject__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventTowerListViewObject__get_Item__);
-    sub_B70694(&StringLiteral_10159/*"OnMoveEnd"*/);
-    byte_4350F7F = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_EventTowerListViewManager_OnMoveEnd__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventTowerListViewObject__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventTowerListViewObject__get_Item__);
+    sub_B775C4(&StringLiteral_10218/*"OnMoveEnd"*/);
+    byte_438A681 = 1;
   }
   ObjectList = EventTowerListViewManager__get_ObjectList(this, *(const MethodInfo **)&mode);
   if ( !ObjectList )
@@ -520,7 +520,7 @@ void __fastcall EventTowerListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10159/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_10218/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -535,9 +535,9 @@ void __fastcall EventTowerListViewManager__RequestListObject(
       while ( 1 )
       {
         if ( v13 <= (unsigned int)v12 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
         v14 = v10->fields._items->m_Items[v12];
-        v15 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+        v15 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
         System_Action___ctor(v15, (Il2CppObject *)this, Method_EventTowerListViewManager_OnMoveEnd__, 0LL);
         if ( !v14 )
           break;
@@ -549,7 +549,7 @@ void __fastcall EventTowerListViewManager__RequestListObject(
         ++v12;
       }
 LABEL_14:
-      sub_B7076C(ObjectList, v8);
+      sub_B7769C(ObjectList, v8);
     }
   }
 }
@@ -568,7 +568,7 @@ void __fastcall EventTowerListViewManager__SetMode(
   const MethodInfo *v10; // x2
 
   this->fields.CallbackFunc = callback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.CallbackFunc,
     (System_Int32_array **)callback,
     (System_String_array **)callback,
@@ -577,11 +577,11 @@ void __fastcall EventTowerListViewManager__SetMode(
     v5,
     v6,
     v7);
-  EventTowerListViewManager__SetMode_23693968(this, mode, v10);
+  EventTowerListViewManager__SetMode_24026976(this, mode, v10);
 }
 
 
-void __fastcall EventTowerListViewManager__SetMode_23693968(
+void __fastcall EventTowerListViewManager__SetMode_24026976(
         EventTowerListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -592,11 +592,11 @@ void __fastcall EventTowerListViewManager__SetMode_23693968(
   __int64 v8; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_4350F7E & 1) == 0 )
+  if ( (byte_438A680 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_11583/*"RequestInto"*/);
-    byte_4350F7E = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_11644/*"RequestInto"*/);
+    byte_438A680 = 1;
   }
   this->fields.initMode = mode;
   this->fields.callbackCount = ListViewManager__get_ObjectSum((ListViewManager_o *)this, 0LL);
@@ -617,13 +617,13 @@ void __fastcall EventTowerListViewManager__SetMode_23693968(
         if ( !gameObject
           || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL)) == 0LL )
         {
-          sub_B7076C(gameObject, v8);
+          sub_B7769C(gameObject, v8);
         }
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
       }
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_11583/*"RequestInto"*/,
+        (System_String_o *)StringLiteral_11644/*"RequestInto"*/,
         0.0,
         0LL);
       break;
@@ -639,7 +639,7 @@ LABEL_8:
 }
 
 
-void __fastcall EventTowerListViewManager__SetMode_23694296(
+void __fastcall EventTowerListViewManager__SetMode_24027304(
         EventTowerListViewManager_o *this,
         int32_t mode,
         float delay,
@@ -654,7 +654,7 @@ void __fastcall EventTowerListViewManager__SetMode_23694296(
 
   this->fields.listInDelay = delay;
   this->fields.CallbackFunc = callback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.CallbackFunc,
     (System_Int32_array **)callback,
     (System_String_array **)callback,
@@ -663,7 +663,7 @@ void __fastcall EventTowerListViewManager__SetMode_23694296(
     v6,
     v7,
     v8);
-  EventTowerListViewManager__SetMode_23693968(this, mode, v11);
+  EventTowerListViewManager__SetMode_24026976(this, mode, v11);
 }
 
 
@@ -686,18 +686,18 @@ void __fastcall EventTowerListViewManager__SetNextFloorInfo(
   ListViewItem_o *v15; // x8
   __int64 v16; // x11
 
-  if ( (byte_4350F7B & 1) == 0 )
+  if ( (byte_438A67D & 1) == 0 )
   {
-    sub_B70694(&EventTowerListViewItem_TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    byte_4350F7B = 1;
+    sub_B775C4(&EventTowerListViewItem_TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    byte_438A67D = 1;
   }
   itemSortList = this->fields.itemSortList;
   if ( itemSortList )
   {
     this->fields.itemList = itemSortList;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.itemList,
       (System_Int32_array **)itemSortList,
       v2,
@@ -716,7 +716,7 @@ void __fastcall EventTowerListViewManager__SetNextFloorInfo(
       do
       {
         if ( v12->fields._size <= (unsigned int)v14 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
         v15 = v12->fields._items->m_Items[v14];
         if ( !v15 )
           break;
@@ -738,7 +738,7 @@ void __fastcall EventTowerListViewManager__SetNextFloorInfo(
       }
       while ( v12 );
 LABEL_17:
-      sub_B7076C(v10, v11);
+      sub_B7769C(v10, v11);
     }
 LABEL_18:
     v14 = 0;
@@ -763,16 +763,16 @@ void __fastcall EventTowerListViewManager__SetObjectItem(
   int32_t v12; // w1
 
   v5 = this;
-  if ( (byte_4350F7D & 1) == 0 )
+  if ( (byte_438A67F & 1) == 0 )
   {
-    this = (EventTowerListViewManager_o *)sub_B70694(&EventTowerListViewObject_TypeInfo);
-    byte_4350F7D = 1;
+    this = (EventTowerListViewManager_o *)sub_B775C4(&EventTowerListViewObject_TypeInfo);
+    byte_438A67F = 1;
   }
   if ( !obj
     || (v6 = *(&EventTowerListViewObject_TypeInfo->_2.bitflags2 + 1), *(&obj->klass->_2.bitflags2 + 1) < (unsigned int)v6)
     || (EventTowerListViewObject_c *)obj->klass->_2.typeHierarchy[v6 - 1] != EventTowerListViewObject_TypeInfo )
   {
-    sub_B7076C(this, obj);
+    sub_B7769C(this, obj);
   }
   initMode = v5->fields.initMode;
   *(UnityEngine_Vector3_o *)(&v9 - 1) = UnityEngine_Vector3__get_zero(0LL);
@@ -804,10 +804,10 @@ void __fastcall EventTowerListViewManager__add_CallbackFunc(
   System_Action_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4350F75 & 1) == 0 )
+  if ( (byte_438A677 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    byte_4350F75 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    byte_438A677 = 1;
   }
   CallbackFunc = (System_Delegate_o *)this->fields.CallbackFunc;
   p_CallbackFunc = &this->fields.CallbackFunc;
@@ -819,13 +819,13 @@ void __fastcall EventTowerListViewManager__add_CallbackFunc(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_B650AC(p_CallbackFunc, v7, CallbackFunc);
+    v8 = sub_B6BFDC(p_CallbackFunc, v7, CallbackFunc);
     v9 = CallbackFunc == (System_Delegate_o *)v8;
     CallbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (EventTowerListViewManager_o *)sub_B70A60(v7);
+  v10 = (EventTowerListViewManager_o *)sub_B77990(v7);
   EventTowerListViewManager__remove_CallbackFunc(v10, v11, v12);
 }
 
@@ -838,18 +838,18 @@ void __fastcall EventTowerListViewManager__closeItemDetail(
   CommonUI_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4350F83 & 1) == 0 )
+  if ( (byte_438A685 & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4350F83 = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438A685 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playSystemSe(1, 0LL);
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   CommonUI__CloseItemDetailDialog(Instance, 0LL);
 }
 
@@ -862,14 +862,14 @@ void __fastcall EventTowerListViewManager__closeSvtDetail(
   CommonUI_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4350F84 & 1) == 0 )
+  if ( (byte_438A686 & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4350F84 = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_438A686 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   CommonUI__CloseServantStatusDialog(Instance, 0LL, 0LL);
 }
 
@@ -887,21 +887,21 @@ System_Collections_Generic_List_EventTowerListViewObject__o *__fastcall EventTow
   UnityEngine_Object_o *v9; // x21
   EventMissionProgressRequest_Argument_ProgressData_o *v10; // x21
 
-  if ( (byte_4350F78 & 1) == 0 )
+  if ( (byte_438A67A & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_EventTowerListViewObject___);
-    sub_B70694(&Method_System_Collections_Generic_List_EventTowerListViewObject__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventTowerListViewObject___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_B70694(&System_Collections_Generic_List_EventTowerListViewObject__TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4350F78 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_EventTowerListViewObject___);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventTowerListViewObject__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventTowerListViewObject___ctor__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_B775C4(&System_Collections_Generic_List_EventTowerListViewObject__TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438A67A = 1;
   }
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_EventTowerListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventTowerListViewObject__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v3,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_EventTowerListViewObject___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventTowerListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
     goto LABEL_21;
@@ -912,7 +912,7 @@ System_Collections_Generic_List_EventTowerListViewObject__o *__fastcall EventTow
     do
     {
       if ( v8 >= (unsigned int)objectList->fields._size )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       v9 = (UnityEngine_Object_o *)objectList->fields._items->m_Items[v8];
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -929,7 +929,7 @@ System_Collections_Generic_List_EventTowerListViewObject__o *__fastcall EventTow
           break;
         Component_srcLineSprite = (EventMissionProgressRequest_Argument_ProgressData_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                                            (UnityEngine_GameObject_o *)v9,
-                                                                                           (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_EventTowerListViewObject___);
+                                                                                           (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_EventTowerListViewObject___);
         if ( !Component_srcLineSprite )
           break;
         v10 = Component_srcLineSprite;
@@ -940,7 +940,7 @@ System_Collections_Generic_List_EventTowerListViewObject__o *__fastcall EventTow
           break;
         v5 = (const MethodInfo *)Component_srcLineSprite;
         if ( !LOBYTE(Component_srcLineSprite[2].monitor)
-          || (Component_srcLineSprite = (EventMissionProgressRequest_Argument_ProgressData_o *)ListViewManager__ClippingItem_23985548(
+          || (Component_srcLineSprite = (EventMissionProgressRequest_Argument_ProgressData_o *)ListViewManager__ClippingItem_24185472(
                                                                                                  (ListViewManager_o *)this,
                                                                                                  (ListViewItem_o *)Component_srcLineSprite,
                                                                                                  0LL),
@@ -951,7 +951,7 @@ System_Collections_Generic_List_EventTowerListViewObject__o *__fastcall EventTow
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
             v3,
             v10,
-            (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_EventTowerListViewObject__Add__);
+            (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventTowerListViewObject__Add__);
         }
       }
       if ( (__int64)++v8 >= size )
@@ -960,7 +960,7 @@ System_Collections_Generic_List_EventTowerListViewObject__o *__fastcall EventTow
     }
     while ( objectList );
 LABEL_21:
-    sub_B7076C(Component_srcLineSprite, v5);
+    sub_B7769C(Component_srcLineSprite, v5);
   }
   return (System_Collections_Generic_List_EventTowerListViewObject__o *)v3;
 }
@@ -978,21 +978,21 @@ System_Collections_Generic_List_EventTowerListViewObject__o *__fastcall EventTow
   unsigned __int64 v8; // x23
   UnityEngine_Object_o *v9; // x21
 
-  if ( (byte_4350F77 & 1) == 0 )
+  if ( (byte_438A679 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_EventTowerListViewObject___);
-    sub_B70694(&Method_System_Collections_Generic_List_EventTowerListViewObject__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventTowerListViewObject___ctor__);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_B70694(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_B70694(&System_Collections_Generic_List_EventTowerListViewObject__TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4350F77 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_EventTowerListViewObject___);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventTowerListViewObject__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventTowerListViewObject___ctor__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_B775C4(&System_Collections_Generic_List_EventTowerListViewObject__TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438A679 = 1;
   }
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_EventTowerListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventTowerListViewObject__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v3,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_EventTowerListViewObject___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventTowerListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
     goto LABEL_17;
@@ -1003,7 +1003,7 @@ System_Collections_Generic_List_EventTowerListViewObject__o *__fastcall EventTow
     do
     {
       if ( v8 >= (unsigned int)objectList->fields._size )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       v9 = (UnityEngine_Object_o *)objectList->fields._items->m_Items[v8];
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1017,13 +1017,13 @@ System_Collections_Generic_List_EventTowerListViewObject__o *__fastcall EventTow
           break;
         Component_srcLineSprite = UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                     (UnityEngine_GameObject_o *)v9,
-                                    (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_EventTowerListViewObject___);
+                                    (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_EventTowerListViewObject___);
         if ( !v3 )
           break;
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           v3,
           (EventMissionProgressRequest_Argument_ProgressData_o *)Component_srcLineSprite,
-          (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_EventTowerListViewObject__Add__);
+          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventTowerListViewObject__Add__);
       }
       if ( (__int64)++v8 >= size )
         return (System_Collections_Generic_List_EventTowerListViewObject__o *)v3;
@@ -1031,7 +1031,7 @@ System_Collections_Generic_List_EventTowerListViewObject__o *__fastcall EventTow
     }
     while ( objectList );
 LABEL_17:
-    sub_B7076C(Component_srcLineSprite, v5);
+    sub_B7769C(Component_srcLineSprite, v5);
   }
   return (System_Collections_Generic_List_EventTowerListViewObject__o *)v3;
 }
@@ -1050,10 +1050,10 @@ void __fastcall EventTowerListViewManager__remove_CallbackFunc(
   EventTowerListViewManager_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4350F76 & 1) == 0 )
+  if ( (byte_438A678 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    byte_4350F76 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    byte_438A678 = 1;
   }
   CallbackFunc = (System_Delegate_o *)this->fields.CallbackFunc;
   p_CallbackFunc = &this->fields.CallbackFunc;
@@ -1065,12 +1065,12 @@ void __fastcall EventTowerListViewManager__remove_CallbackFunc(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_B650AC(p_CallbackFunc, v7, CallbackFunc);
+    v8 = sub_B6BFDC(p_CallbackFunc, v7, CallbackFunc);
     v9 = CallbackFunc == (System_Delegate_o *)v8;
     CallbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (EventTowerListViewManager_o *)sub_B70A60(v7);
+  v10 = (EventTowerListViewManager_o *)sub_B77990(v7);
   EventTowerListViewManager__Update(v10, v11);
 }

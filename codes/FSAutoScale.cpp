@@ -23,7 +23,7 @@ void __fastcall FSAutoScale__Awake(FSAutoScale_o *this, const MethodInfo *method
         y = localScale.fields.y,
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B7076C(transform, v4);
+    sub_B7769C(transform, v4);
   }
   v9 = UnityEngine_Transform__get_localScale(transform, 0LL);
   this->fields.defaultScale.fields.y = v5;
@@ -57,7 +57,7 @@ void __fastcall FSAutoScale__UpdateScale(FSAutoScale_o *this, const MethodInfo *
       goto LABEL_6;
     }
 LABEL_7:
-    sub_B7076C(transform, v6);
+    sub_B7769C(transform, v6);
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )

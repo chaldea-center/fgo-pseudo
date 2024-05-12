@@ -13,14 +13,14 @@ int32_t __fastcall MasterEquipInfoComponent__getEquipId(MasterEquipInfoComponent
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v7; // 0:x0.16
 
   v2 = this;
-  if ( (byte_4354DF0 & 1) == 0 )
+  if ( (byte_438E5E4 & 1) == 0 )
   {
-    this = (MasterEquipInfoComponent_o *)sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4354DF0 = 1;
+    this = (MasterEquipInfoComponent_o *)sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_438E5E4 = 1;
   }
   usrEquipEnt = v2->fields.usrEquipEnt;
   if ( !usrEquipEnt )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   v5 = *(_QWORD *)&usrEquipEnt->fields.equipId.fields.currentCryptoKey;
   v4 = *(_QWORD *)&usrEquipEnt->fields.equipId.fields.fakeValue;
   if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -30,7 +30,7 @@ int32_t __fastcall MasterEquipInfoComponent__getEquipId(MasterEquipInfoComponent
   }
   *(_QWORD *)&v7.fields.currentCryptoKey = v5;
   *(_QWORD *)&v7.fields.fakeValue = v4;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v7, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v7, 0LL);
 }
 
 
@@ -48,7 +48,7 @@ int64_t __fastcall MasterEquipInfoComponent__getUsrEquipId(MasterEquipInfoCompon
 
   usrEquipEnt = this->fields.usrEquipEnt;
   if ( !usrEquipEnt )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return usrEquipEnt->fields.id;
 }
 
@@ -68,10 +68,10 @@ void __fastcall MasterEquipInfoComponent__setDispEffectObj(
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4354DF1 & 1) == 0 )
+  if ( (byte_438E5E5 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4354DF1 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438E5E5 = 1;
   }
   effectObj = (UnityEngine_Object_o *)this->fields.effectObj;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -83,7 +83,7 @@ void __fastcall MasterEquipInfoComponent__setDispEffectObj(
   {
     v7 = this->fields.effectObj;
     if ( !v7 )
-      sub_B7076C(0LL, v6);
+      sub_B7769C(0LL, v6);
     UnityEngine_GameObject__SetActive(v7, isDisp, 0LL);
   }
 }
@@ -139,17 +139,17 @@ void __fastcall MasterEquipInfoComponent__setEquipInfo(
   int32_t maxLv; // [xsp+28h] [xbp-28h] BYREF
   int32_t condUsrLv; // [xsp+2Ch] [xbp-24h] BYREF
 
-  if ( (byte_4354DED & 1) == 0 )
+  if ( (byte_438E5E1 & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&Grade_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_350/*"#,0"*/);
-    sub_B70694(&StringLiteral_8738/*"MASTER_EQUIP_SKILL_INFO_TXT"*/);
-    sub_B70694(&StringLiteral_8735/*"MASTER_EQUIP_EXPLANATION_TXT"*/);
-    byte_4354DED = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&Grade_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_350/*"#,0"*/);
+    sub_B775C4(&StringLiteral_8794/*"MASTER_EQUIP_SKILL_INFO_TXT"*/);
+    sub_B775C4(&StringLiteral_8791/*"MASTER_EQUIP_EXPLANATION_TXT"*/);
+    byte_438E5E1 = 1;
   }
   condUsrLv = 0;
   maxLv = 0;
@@ -184,10 +184,10 @@ void __fastcall MasterEquipInfoComponent__setEquipInfo(
   }
   v12 = (struct UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                              (UnityEngine_UI_Dropdown_DropdownItem_o *)equipEffectPrefab,
-                                             (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                             (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   this->fields.effectObj = v12;
   p_effectObj = &this->fields.effectObj;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.effectObj,
     (System_Int32_array **)v12,
     v14,
@@ -219,7 +219,7 @@ void __fastcall MasterEquipInfoComponent__setEquipInfo(
         !v25) )
   {
 LABEL_46:
-    sub_B7076C(equipStatusInfo, usrEquipData);
+    sub_B7769C(equipStatusInfo, usrEquipData);
   }
   UnityEngine_Transform__set_localScale(v25, *(UnityEngine_Vector3_o *)&v26, 0LL);
 LABEL_19:
@@ -239,7 +239,7 @@ LABEL_19:
   UILabel__set_text((UILabel_o *)equipStatusInfo, equipName, 0LL);
   UserEquipEntity__getExpInfo(usrEquipData, (int32_t *)&exp, &lateExp[1], (float *)lateExp, 0LL);
   equipExpLb = this->fields.equipExpLb;
-  equipStatusInfo = (UnityEngine_GameObject_o *)System_Int32__ToString_39283984(
+  equipStatusInfo = (UnityEngine_GameObject_o *)System_Int32__ToString_39547236(
                                                   (int32_t)&lateExp[1],
                                                   (System_String_o *)StringLiteral_350/*"#,0"*/,
                                                   0LL);
@@ -255,7 +255,7 @@ LABEL_19:
     goto LABEL_46;
   UILabel__set_text((UILabel_o *)equipStatusInfo, detail, 0LL);
   this->fields.usrEquipEnt = usrEquipData;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.usrEquipEnt,
     (System_Int32_array **)usrEquipData,
     v32,
@@ -300,12 +300,12 @@ LABEL_19:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  equipStatusInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8738/*"MASTER_EQUIP_SKILL_INFO_TXT"*/, 0LL);
+  equipStatusInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8794/*"MASTER_EQUIP_SKILL_INFO_TXT"*/, 0LL);
   if ( !skillCheckHelpLb )
     goto LABEL_46;
   UILabel__set_text(skillCheckHelpLb, (System_String_o *)equipStatusInfo, 0LL);
   equipChangeHelpLb = this->fields.equipChangeHelpLb;
-  equipStatusInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8735/*"MASTER_EQUIP_EXPLANATION_TXT"*/, 0LL);
+  equipStatusInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8791/*"MASTER_EQUIP_EXPLANATION_TXT"*/, 0LL);
   if ( !equipChangeHelpLb )
     goto LABEL_46;
   UILabel__set_text(equipChangeHelpLb, (System_String_o *)equipStatusInfo, 0LL);
@@ -334,15 +334,15 @@ void __fastcall MasterEquipInfoComponent__setEquipSkillInfo(MasterEquipInfoCompo
   EquipSkillInfoComponent_ClickDelegate_o *v23; // x27
   __int64 v24; // x0
 
-  if ( (byte_4354DEE & 1) == 0 )
+  if ( (byte_438E5E2 & 1) == 0 )
   {
-    sub_B70694(&EquipSkillInfoComponent_ClickDelegate_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMasterData_SkillMaster___);
-    sub_B70694(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_EquipSkillInfoComponent___);
-    sub_B70694(&Method_MasterEquipInfoComponent_setSkillCallBack__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4354DEE = 1;
+    sub_B775C4(&EquipSkillInfoComponent_ClickDelegate_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMasterData_SkillMaster___);
+    sub_B775C4(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_EquipSkillInfoComponent___);
+    sub_B775C4(&Method_MasterEquipInfoComponent_setSkillCallBack__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438E5E2 = 1;
   }
   usrEquipEnt = this->fields.usrEquipEnt;
   if ( !usrEquipEnt )
@@ -359,8 +359,8 @@ void __fastcall MasterEquipInfoComponent__setEquipSkillInfo(MasterEquipInfoCompo
     {
       if ( v6 >= (unsigned int)userId )
       {
-        v24 = sub_B70798(usrEquipEnt);
-        sub_B70738(v24, 0LL);
+        v24 = sub_B776C8(usrEquipEnt);
+        sub_B77668(v24, 0LL);
       }
       usrEquipEnt = this->fields.usrEquipEnt;
       if ( !usrEquipEnt )
@@ -371,18 +371,18 @@ void __fastcall MasterEquipInfoComponent__setEquipSkillInfo(MasterEquipInfoCompo
         break;
       v8 = (int)usrEquipEnt;
       IsNew = UserEquipEntity__IsNew(this->fields.usrEquipEnt, 0LL);
-      usrEquipEnt = (UserEquipEntity_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      usrEquipEnt = (UserEquipEntity_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !usrEquipEnt )
         break;
       usrEquipEnt = (UserEquipEntity_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                            (DataManager_o *)usrEquipEnt,
-                                           (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_SkillMaster___);
+                                           (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_SkillMaster___);
       if ( !usrEquipEnt )
         break;
       usrEquipEnt = (UserEquipEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                            (DataMasterBase_WarMaster__WarEntity__int__o *)usrEquipEnt,
                                            v7,
-                                           (const MethodInfo_21C0440 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                                           (const MethodInfo_21FB894 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
       if ( !usrEquipEnt )
         break;
       usrEquipEnt = (UserEquipEntity_o *)SkillEntity__GetIconId((SkillEntity_o *)usrEquipEnt, 0LL);
@@ -422,8 +422,8 @@ void __fastcall MasterEquipInfoComponent__setEquipSkillInfo(MasterEquipInfoCompo
       UnityEngine_Transform__set_localPosition(v18, *(UnityEngine_Vector3_o *)&v19, 0LL);
       Component_srcLineSprite = (EquipSkillInfoComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                v13,
-                                                               (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_EquipSkillInfoComponent___);
-      v23 = (EquipSkillInfoComponent_ClickDelegate_o *)sub_B70764(EquipSkillInfoComponent_ClickDelegate_TypeInfo);
+                                                               (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_EquipSkillInfoComponent___);
+      v23 = (EquipSkillInfoComponent_ClickDelegate_o *)sub_B77694(EquipSkillInfoComponent_ClickDelegate_TypeInfo);
       EquipSkillInfoComponent_ClickDelegate___ctor(
         v23,
         (Il2CppObject *)this,
@@ -437,7 +437,7 @@ void __fastcall MasterEquipInfoComponent__setEquipSkillInfo(MasterEquipInfoCompo
         return;
     }
 LABEL_22:
-    sub_B7076C(usrEquipEnt, method);
+    sub_B7769C(usrEquipEnt, method);
   }
 }
 
@@ -466,40 +466,40 @@ void __fastcall MasterEquipInfoComponent__setSkillCallBack(
   System_String_o *detail; // [xsp+8h] [xbp-38h] BYREF
   System_String_o *name; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4354DEF & 1) == 0 )
+  if ( (byte_438E5E3 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_SkillLvMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_SkillMaster___);
-    sub_B70694(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B70694(&StringLiteral_82/*" "*/);
-    sub_B70694(&StringLiteral_8734/*"MASTER_EQSKILL_LV_TXT"*/);
-    sub_B70694(&StringLiteral_2579/*"BATTLE_SKILLCHARGETURN"*/);
-    byte_4354DEF = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_SkillLvMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_SkillMaster___);
+    sub_B775C4(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B775C4(&StringLiteral_82/*" "*/);
+    sub_B775C4(&StringLiteral_8790/*"MASTER_EQSKILL_LV_TXT"*/);
+    sub_B775C4(&StringLiteral_2625/*"BATTLE_SKILLCHARGETURN"*/);
+    byte_438E5E3 = 1;
   }
   name = 0LL;
   detail = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_SkillMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_SkillMaster___);
   if ( !Instance )
     goto LABEL_14;
   Entity = (SkillEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                               (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                               skillId,
-                              (const MethodInfo_21C0440 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                              (const MethodInfo_21FB894 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_SkillLvMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_SkillLvMaster___);
   if ( !Instance )
     goto LABEL_14;
   Instance = (DataManager_o *)SkillLvMaster__GetEntity((SkillLvMaster_o *)Instance, skillId, skillLv, 0LL);
@@ -513,21 +513,21 @@ void __fastcall MasterEquipInfoComponent__setSkillCallBack(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_8734/*"MASTER_EQSKILL_LV_TXT"*/, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_8790/*"MASTER_EQSKILL_LV_TXT"*/, 0LL);
   v20 = skillLv;
   v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v20, v12);
   v14 = System_String__Format(v11, v13, 0LL);
-  name = System_String__Concat_44760452(v10, (System_String_o *)StringLiteral_82/*" "*/, v14, 0LL);
-  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2579/*"BATTLE_SKILLCHARGETURN"*/, 0LL);
+  name = System_String__Concat_44904220(v10, (System_String_o *)StringLiteral_82/*" "*/, v14, 0LL);
+  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2625/*"BATTLE_SKILLCHARGETURN"*/, 0LL);
   if ( !v9
     || (v16 = (System_String_o *)Instance,
         datalist = (int)v9->fields.datalist,
         v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &datalist, v15),
         v18 = System_String__Format(v16, v17, 0LL),
-        (Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
+        (Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
   {
 LABEL_14:
-    sub_B7076C(Instance, v7);
+    sub_B7769C(Instance, v7);
   }
   CommonUI__OpenDetailLongInfoDialog((CommonUI_o *)Instance, name, v18, detail, 0, 0, 0LL);
 }

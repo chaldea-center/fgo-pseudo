@@ -69,27 +69,27 @@ void __fastcall ServantExceedEntity___ctor(ServantExceedEntity_o *this, const Me
   __int64 v69; // x0
   __int64 v70; // x0
 
-  if ( (byte_43551C3 & 1) == 0 )
+  if ( (byte_438E926 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    sub_B70694(&string___TypeInfo);
-    sub_B70694(&StringLiteral_17717/*"class_b_"*/);
-    sub_B70694(&StringLiteral_17720/*"class_g_"*/);
-    sub_B70694(&StringLiteral_17721/*"class_n_"*/);
-    sub_B70694(&StringLiteral_17722/*"class_s_"*/);
-    byte_43551C3 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    sub_B775C4(&string___TypeInfo);
+    sub_B775C4(&StringLiteral_17800/*"class_b_"*/);
+    sub_B775C4(&StringLiteral_17803/*"class_g_"*/);
+    sub_B775C4(&StringLiteral_17804/*"class_n_"*/);
+    sub_B775C4(&StringLiteral_17805/*"class_s_"*/);
+    byte_438E926 = 1;
   }
-  v3 = sub_B706AC(string___TypeInfo, 8LL);
+  v3 = sub_B775DC(string___TypeInfo, 8LL);
   if ( !v3 )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   v11 = (struct System_String_array *)v3;
-  v12 = StringLiteral_17721/*"class_n_"*/;
-  if ( StringLiteral_17721/*"class_n_"*/ )
+  v12 = StringLiteral_17804/*"class_n_"*/;
+  if ( StringLiteral_17804/*"class_n_"*/ )
   {
-    v12 = sub_B70754(StringLiteral_17721/*"class_n_"*/, v11->obj.klass->_1.element_class);
+    v12 = sub_B77684(StringLiteral_17804/*"class_n_"*/, v11->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_46;
-    v13 = (System_Int32_array **)StringLiteral_17721/*"class_n_"*/;
+    v13 = (System_Int32_array **)StringLiteral_17804/*"class_n_"*/;
   }
   else
   {
@@ -98,14 +98,14 @@ void __fastcall ServantExceedEntity___ctor(ServantExceedEntity_o *this, const Me
   if ( !v11->max_length )
     goto LABEL_45;
   v11->m_Items[0] = (System_String_o *)v13;
-  sub_B70630((BattleServantConfConponent_o *)v11->m_Items, v13, v5, v6, v7, v8, v9, v10);
-  v12 = StringLiteral_17717/*"class_b_"*/;
-  if ( StringLiteral_17717/*"class_b_"*/ )
+  sub_B77560((BattleServantConfConponent_o *)v11->m_Items, v13, v5, v6, v7, v8, v9, v10);
+  v12 = StringLiteral_17800/*"class_b_"*/;
+  if ( StringLiteral_17800/*"class_b_"*/ )
   {
-    v12 = sub_B70754(StringLiteral_17717/*"class_b_"*/, v11->obj.klass->_1.element_class);
+    v12 = sub_B77684(StringLiteral_17800/*"class_b_"*/, v11->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_46;
-    v20 = (System_Int32_array **)StringLiteral_17717/*"class_b_"*/;
+    v20 = (System_Int32_array **)StringLiteral_17800/*"class_b_"*/;
   }
   else
   {
@@ -114,14 +114,14 @@ void __fastcall ServantExceedEntity___ctor(ServantExceedEntity_o *this, const Me
   if ( v11->max_length <= 1 )
     goto LABEL_45;
   v11->m_Items[1] = (System_String_o *)v20;
-  sub_B70630((BattleServantConfConponent_o *)&v11->m_Items[1], v20, v14, v15, v16, v17, v18, v19);
-  v12 = StringLiteral_17722/*"class_s_"*/;
-  if ( StringLiteral_17722/*"class_s_"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v11->m_Items[1], v20, v14, v15, v16, v17, v18, v19);
+  v12 = StringLiteral_17805/*"class_s_"*/;
+  if ( StringLiteral_17805/*"class_s_"*/ )
   {
-    v12 = sub_B70754(StringLiteral_17722/*"class_s_"*/, v11->obj.klass->_1.element_class);
+    v12 = sub_B77684(StringLiteral_17805/*"class_s_"*/, v11->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_46;
-    v27 = (System_Int32_array **)StringLiteral_17722/*"class_s_"*/;
+    v27 = (System_Int32_array **)StringLiteral_17805/*"class_s_"*/;
   }
   else
   {
@@ -130,14 +130,14 @@ void __fastcall ServantExceedEntity___ctor(ServantExceedEntity_o *this, const Me
   if ( v11->max_length <= 2 )
     goto LABEL_45;
   v11->m_Items[2] = (System_String_o *)v27;
-  sub_B70630((BattleServantConfConponent_o *)&v11->m_Items[2], v27, v21, v22, v23, v24, v25, v26);
-  v12 = StringLiteral_17720/*"class_g_"*/;
-  if ( StringLiteral_17720/*"class_g_"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v11->m_Items[2], v27, v21, v22, v23, v24, v25, v26);
+  v12 = StringLiteral_17803/*"class_g_"*/;
+  if ( StringLiteral_17803/*"class_g_"*/ )
   {
-    v12 = sub_B70754(StringLiteral_17720/*"class_g_"*/, v11->obj.klass->_1.element_class);
+    v12 = sub_B77684(StringLiteral_17803/*"class_g_"*/, v11->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_46;
-    v34 = (System_Int32_array **)StringLiteral_17720/*"class_g_"*/;
+    v34 = (System_Int32_array **)StringLiteral_17803/*"class_g_"*/;
   }
   else
   {
@@ -146,14 +146,14 @@ void __fastcall ServantExceedEntity___ctor(ServantExceedEntity_o *this, const Me
   if ( v11->max_length <= 3 )
     goto LABEL_45;
   v11->m_Items[3] = (System_String_o *)v34;
-  sub_B70630((BattleServantConfConponent_o *)&v11->m_Items[3], v34, v28, v29, v30, v31, v32, v33);
-  v12 = StringLiteral_17720/*"class_g_"*/;
-  if ( StringLiteral_17720/*"class_g_"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v11->m_Items[3], v34, v28, v29, v30, v31, v32, v33);
+  v12 = StringLiteral_17803/*"class_g_"*/;
+  if ( StringLiteral_17803/*"class_g_"*/ )
   {
-    v12 = sub_B70754(StringLiteral_17720/*"class_g_"*/, v11->obj.klass->_1.element_class);
+    v12 = sub_B77684(StringLiteral_17803/*"class_g_"*/, v11->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_46;
-    v41 = (System_Int32_array **)StringLiteral_17720/*"class_g_"*/;
+    v41 = (System_Int32_array **)StringLiteral_17803/*"class_g_"*/;
   }
   else
   {
@@ -162,14 +162,14 @@ void __fastcall ServantExceedEntity___ctor(ServantExceedEntity_o *this, const Me
   if ( v11->max_length <= 4 )
     goto LABEL_45;
   v11->m_Items[4] = (System_String_o *)v41;
-  sub_B70630((BattleServantConfConponent_o *)&v11->m_Items[4], v41, v35, v36, v37, v38, v39, v40);
-  v12 = StringLiteral_17720/*"class_g_"*/;
-  if ( StringLiteral_17720/*"class_g_"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v11->m_Items[4], v41, v35, v36, v37, v38, v39, v40);
+  v12 = StringLiteral_17803/*"class_g_"*/;
+  if ( StringLiteral_17803/*"class_g_"*/ )
   {
-    v12 = sub_B70754(StringLiteral_17720/*"class_g_"*/, v11->obj.klass->_1.element_class);
+    v12 = sub_B77684(StringLiteral_17803/*"class_g_"*/, v11->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_46;
-    v48 = (System_Int32_array **)StringLiteral_17720/*"class_g_"*/;
+    v48 = (System_Int32_array **)StringLiteral_17803/*"class_g_"*/;
   }
   else
   {
@@ -178,14 +178,14 @@ void __fastcall ServantExceedEntity___ctor(ServantExceedEntity_o *this, const Me
   if ( v11->max_length <= 5 )
     goto LABEL_45;
   v11->m_Items[5] = (System_String_o *)v48;
-  sub_B70630((BattleServantConfConponent_o *)&v11->m_Items[5], v48, v42, v43, v44, v45, v46, v47);
-  v12 = StringLiteral_17721/*"class_n_"*/;
-  if ( StringLiteral_17721/*"class_n_"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v11->m_Items[5], v48, v42, v43, v44, v45, v46, v47);
+  v12 = StringLiteral_17804/*"class_n_"*/;
+  if ( StringLiteral_17804/*"class_n_"*/ )
   {
-    v12 = sub_B70754(StringLiteral_17721/*"class_n_"*/, v11->obj.klass->_1.element_class);
+    v12 = sub_B77684(StringLiteral_17804/*"class_n_"*/, v11->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_46;
-    v55 = (System_Int32_array **)StringLiteral_17721/*"class_n_"*/;
+    v55 = (System_Int32_array **)StringLiteral_17804/*"class_n_"*/;
   }
   else
   {
@@ -194,35 +194,35 @@ void __fastcall ServantExceedEntity___ctor(ServantExceedEntity_o *this, const Me
   if ( v11->max_length <= 6 )
     goto LABEL_45;
   v11->m_Items[6] = (System_String_o *)v55;
-  sub_B70630((BattleServantConfConponent_o *)&v11->m_Items[6], v55, v49, v50, v51, v52, v53, v54);
-  v12 = StringLiteral_17721/*"class_n_"*/;
-  if ( StringLiteral_17721/*"class_n_"*/ )
+  sub_B77560((BattleServantConfConponent_o *)&v11->m_Items[6], v55, v49, v50, v51, v52, v53, v54);
+  v12 = StringLiteral_17804/*"class_n_"*/;
+  if ( StringLiteral_17804/*"class_n_"*/ )
   {
-    v12 = sub_B70754(StringLiteral_17721/*"class_n_"*/, v11->obj.klass->_1.element_class);
+    v12 = sub_B77684(StringLiteral_17804/*"class_n_"*/, v11->obj.klass->_1.element_class);
     if ( v12 )
     {
-      v62 = (System_Int32_array **)StringLiteral_17721/*"class_n_"*/;
+      v62 = (System_Int32_array **)StringLiteral_17804/*"class_n_"*/;
       goto LABEL_43;
     }
 LABEL_46:
-    v70 = sub_B7078C(v12);
-    sub_B70738(v70, 0LL);
+    v70 = sub_B776BC(v12);
+    sub_B77668(v70, 0LL);
   }
   v62 = 0LL;
 LABEL_43:
   if ( v11->max_length <= 7 )
   {
 LABEL_45:
-    v69 = sub_B70798(v12);
-    sub_B70738(v69, 0LL);
+    v69 = sub_B776C8(v12);
+    sub_B77668(v69, 0LL);
   }
   v11->m_Items[7] = (System_String_o *)v62;
-  sub_B70630((BattleServantConfConponent_o *)&v11->m_Items[7], v62, v56, v57, v58, v59, v60, v61);
+  sub_B77560((BattleServantConfConponent_o *)&v11->m_Items[7], v62, v56, v57, v58, v59, v60, v61);
   this->fields.frameCardFileList = v11;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v11, v63, v64, v65, v66, v67, v68);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v11, v63, v64, v65, v66, v67, v68);
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -231,15 +231,15 @@ System_String_o *__fastcall ServantExceedEntity__CreatePK(
         int32_t exceedCount,
         const MethodInfo *method)
 {
-  if ( (byte_43551C2 & 1) == 0 )
+  if ( (byte_438E925 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_43551C2 = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_438E925 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            rarity,
            exceedCount,
-           (const MethodInfo_1CA236C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1D171BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -263,12 +263,12 @@ System_String_o *__fastcall ServantExceedEntity__getFrameCardPrefix(
 
   frameCardFileList = this->fields.frameCardFileList;
   if ( !frameCardFileList )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   frameType = this->fields.frameType;
   if ( (unsigned int)frameType >= frameCardFileList->max_length )
   {
-    v5 = sub_B70798(this);
-    sub_B70738(v5, 0LL);
+    v5 = sub_B776C8(this);
+    sub_B77668(v5, 0LL);
   }
   return frameCardFileList->m_Items[frameType];
 }

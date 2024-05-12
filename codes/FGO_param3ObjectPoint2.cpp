@@ -25,20 +25,20 @@ void __fastcall FGO_param3ObjectPoint2__Start(FGO_param3ObjectPoint2_o *this, co
   UnityEngine_Material_o *v18; // x19
   float v19; // s2
 
-  if ( (byte_4352202 & 1) == 0 )
+  if ( (byte_438B8C5 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_B70694(&StringLiteral_16424/*"_threeValue1_2"*/);
-    sub_B70694(&StringLiteral_16423/*"_threeValue1_1"*/);
-    sub_B70694(&StringLiteral_16422/*"_threeValue1_0"*/);
-    byte_4352202 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_B775C4(&StringLiteral_16494/*"_threeValue1_2"*/);
+    sub_B775C4(&StringLiteral_16493/*"_threeValue1_1"*/);
+    sub_B775C4(&StringLiteral_16492/*"_threeValue1_0"*/);
+    byte_438B8C5 = 1;
   }
   Component_WebViewObject = (struct UnityEngine_Renderer_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                                (UnityEngine_Component_o *)this,
-                                                               (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                                               (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   p_renderer = &this->fields._renderer;
   this->fields._renderer = Component_WebViewObject;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._renderer,
     (System_Int32_array **)Component_WebViewObject,
     v5,
@@ -53,21 +53,21 @@ void __fastcall FGO_param3ObjectPoint2__Start(FGO_param3ObjectPoint2_o *this, co
   renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(renderer, 0LL);
   if ( !renderer )
     goto LABEL_22;
-  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16422/*"_threeValue1_0"*/, 0LL);
+  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16492/*"_threeValue1_0"*/, 0LL);
   renderer = *p_renderer;
   if ( !*p_renderer )
     goto LABEL_22;
   renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(renderer, 0LL);
   if ( !renderer )
     goto LABEL_22;
-  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16423/*"_threeValue1_1"*/, 0LL);
+  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16493/*"_threeValue1_1"*/, 0LL);
   renderer = *p_renderer;
   if ( !*p_renderer )
     goto LABEL_22;
   renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(renderer, 0LL);
   if ( !renderer )
     goto LABEL_22;
-  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16424/*"_threeValue1_2"*/, 0LL);
+  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16494/*"_threeValue1_2"*/, 0LL);
   renderer = *p_renderer;
   if ( !*p_renderer )
     goto LABEL_22;
@@ -81,7 +81,7 @@ void __fastcall FGO_param3ObjectPoint2__Start(FGO_param3ObjectPoint2_o *this, co
   LODWORD(v14) = (unsigned int)UnityEngine_Transform__get_position((UnityEngine_Transform_o *)renderer, 0LL);
   if ( !v13 )
     goto LABEL_22;
-  UnityEngine_Material__SetFloat(v13, (System_String_o *)StringLiteral_16422/*"_threeValue1_0"*/, v14, 0LL);
+  UnityEngine_Material__SetFloat(v13, (System_String_o *)StringLiteral_16492/*"_threeValue1_0"*/, v14, 0LL);
   renderer = *p_renderer;
   if ( !*p_renderer )
     goto LABEL_22;
@@ -94,7 +94,7 @@ void __fastcall FGO_param3ObjectPoint2__Start(FGO_param3ObjectPoint2_o *this, co
     goto LABEL_22;
   *(UnityEngine_Vector3_o *)(&v16 - 1) = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)renderer, 0LL);
   if ( !v15
-    || (UnityEngine_Material__SetFloat(v15, (System_String_o *)StringLiteral_16423/*"_threeValue1_1"*/, v16, 0LL),
+    || (UnityEngine_Material__SetFloat(v15, (System_String_o *)StringLiteral_16493/*"_threeValue1_1"*/, v16, 0LL),
         (renderer = *p_renderer) == 0LL)
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(renderer, 0LL),
         (TargetObject = this->fields.TargetObject) == 0LL)
@@ -106,9 +106,9 @@ void __fastcall FGO_param3ObjectPoint2__Start(FGO_param3ObjectPoint2_o *this, co
         !v18) )
   {
 LABEL_22:
-    sub_B7076C(renderer, v11);
+    sub_B7769C(renderer, v11);
   }
-  UnityEngine_Material__SetFloat(v18, (System_String_o *)StringLiteral_16424/*"_threeValue1_2"*/, v19, 0LL);
+  UnityEngine_Material__SetFloat(v18, (System_String_o *)StringLiteral_16494/*"_threeValue1_2"*/, v19, 0LL);
 }
 
 
@@ -124,12 +124,12 @@ void __fastcall FGO_param3ObjectPoint2__Update(FGO_param3ObjectPoint2_o *this, c
   UnityEngine_Material_o *v9; // x19
   float v10; // s2
 
-  if ( (byte_4352203 & 1) == 0 )
+  if ( (byte_438B8C6 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_16424/*"_threeValue1_2"*/);
-    sub_B70694(&StringLiteral_16423/*"_threeValue1_1"*/);
-    sub_B70694(&StringLiteral_16422/*"_threeValue1_0"*/);
-    byte_4352203 = 1;
+    sub_B775C4(&StringLiteral_16494/*"_threeValue1_2"*/);
+    sub_B775C4(&StringLiteral_16493/*"_threeValue1_1"*/);
+    sub_B775C4(&StringLiteral_16492/*"_threeValue1_0"*/);
+    byte_438B8C6 = 1;
   }
   renderer = this->fields._renderer;
   if ( !renderer )
@@ -144,7 +144,7 @@ void __fastcall FGO_param3ObjectPoint2__Update(FGO_param3ObjectPoint2_o *this, c
   LODWORD(v5) = (unsigned int)UnityEngine_Transform__get_position((UnityEngine_Transform_o *)renderer, 0LL);
   if ( !v4 )
     goto LABEL_16;
-  UnityEngine_Material__SetFloat(v4, (System_String_o *)StringLiteral_16422/*"_threeValue1_0"*/, v5, 0LL);
+  UnityEngine_Material__SetFloat(v4, (System_String_o *)StringLiteral_16492/*"_threeValue1_0"*/, v5, 0LL);
   renderer = this->fields._renderer;
   if ( !renderer )
     goto LABEL_16;
@@ -157,7 +157,7 @@ void __fastcall FGO_param3ObjectPoint2__Update(FGO_param3ObjectPoint2_o *this, c
     goto LABEL_16;
   *(UnityEngine_Vector3_o *)(&v7 - 1) = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)renderer, 0LL);
   if ( !v6
-    || (UnityEngine_Material__SetFloat(v6, (System_String_o *)StringLiteral_16423/*"_threeValue1_1"*/, v7, 0LL),
+    || (UnityEngine_Material__SetFloat(v6, (System_String_o *)StringLiteral_16493/*"_threeValue1_1"*/, v7, 0LL),
         (renderer = this->fields._renderer) == 0LL)
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(renderer, 0LL),
         (TargetObject = this->fields.TargetObject) == 0LL)
@@ -169,7 +169,7 @@ void __fastcall FGO_param3ObjectPoint2__Update(FGO_param3ObjectPoint2_o *this, c
         !v9) )
   {
 LABEL_16:
-    sub_B7076C(renderer, method);
+    sub_B7769C(renderer, method);
   }
-  UnityEngine_Material__SetFloat(v9, (System_String_o *)StringLiteral_16424/*"_threeValue1_2"*/, v10, 0LL);
+  UnityEngine_Material__SetFloat(v9, (System_String_o *)StringLiteral_16494/*"_threeValue1_2"*/, v10, 0LL);
 }

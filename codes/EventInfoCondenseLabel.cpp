@@ -8,14 +8,14 @@ void __fastcall EventInfoCondenseLabel___ctor(EventInfoCondenseLabel_o *this, co
   System_Int32_array *v7; // x7
   System_Int32_array **v9; // x1
 
-  if ( (byte_43529E6 & 1) == 0 )
+  if ( (byte_438C1E1 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43529E6 = 1;
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438C1E1 = 1;
   }
   v9 = (System_Int32_array **)StringLiteral_1/*""*/;
   this[1].klass = (EventInfoCondenseLabel_c *)StringLiteral_1/*""*/;
-  sub_B70630((BattleServantConfConponent_o *)&this[1], v9, v2, v3, v4, v5, v6, v7);
+  sub_B77560((BattleServantConfConponent_o *)&this[1], v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -34,10 +34,10 @@ void __fastcall EventInfoCondenseLabel__SetCondensedScale(EventInfoCondenseLabel
   struct System_String_o *v12; // x8
   EventInfoCondenseLabel_c *klass; // x1
 
-  if ( (byte_43529E5 & 1) == 0 )
+  if ( (byte_438C1E0 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43529E5 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438C1E0 = 1;
   }
   beforeText = this->fields.beforeText;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -52,10 +52,10 @@ void __fastcall EventInfoCondenseLabel__SetCondensedScale(EventInfoCondenseLabel
     if ( !v12
       || (klass = (EventInfoCondenseLabel_c *)v12[17].klass,
           this[1].klass = klass,
-          sub_B70630((BattleServantConfConponent_o *)&this[1], (System_Int32_array **)klass, v6, v7, v8, v9, v10, v11),
+          sub_B77560((BattleServantConfConponent_o *)&this[1], (System_Int32_array **)klass, v6, v7, v8, v9, v10, v11),
           (v4 = this->fields.beforeText) == 0LL) )
     {
-      sub_B7076C(v4, v5);
+      sub_B7769C(v4, v5);
     }
     UILabel__SetCondensedScale((UILabel_o *)v4, (int32_t)this->fields.label, 0LL);
   }
@@ -75,19 +75,19 @@ void __fastcall EventInfoCondenseLabel__Start(EventInfoCondenseLabel_o *this, co
   System_Int32_array *v11; // x7
   const MethodInfo *v12; // x1
 
-  if ( (byte_43529E3 & 1) == 0 )
+  if ( (byte_438C1DE & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
-    byte_43529E3 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
+    byte_438C1DE = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   Component_srcLineSprite = (struct System_String_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                         gameObject,
-                                                        (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                                                        (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
   this->fields.beforeText = Component_srcLineSprite;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.beforeText,
     (System_Int32_array **)Component_srcLineSprite,
     v6,
@@ -108,10 +108,10 @@ void __fastcall EventInfoCondenseLabel__Update(EventInfoCondenseLabel_o *this, c
   struct System_String_o *v6; // x8
   const MethodInfo *v7; // x1
 
-  if ( (byte_43529E4 & 1) == 0 )
+  if ( (byte_438C1DF & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43529E4 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438C1DF = 1;
   }
   beforeText = this->fields.beforeText;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -124,7 +124,7 @@ void __fastcall EventInfoCondenseLabel__Update(EventInfoCondenseLabel_o *this, c
   {
     v6 = this->fields.beforeText;
     if ( !v6 )
-      sub_B7076C(v4, v5);
+      sub_B7769C(v4, v5);
     if ( System_String__op_Inequality((System_String_o *)this[1].klass, (System_String_o *)v6[17].klass, 0LL) )
       EventInfoCondenseLabel__SetCondensedScale(this, v7);
   }

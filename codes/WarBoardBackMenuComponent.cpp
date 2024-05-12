@@ -1,9 +1,9 @@
 void __fastcall WarBoardBackMenuComponent___ctor(WarBoardBackMenuComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_434FA53 & 1) == 0 )
+  if ( (byte_438904D & 1) == 0 )
   {
-    sub_B70694(&BaseDialog_TypeInfo);
-    byte_434FA53 = 1;
+    sub_B775C4(&BaseDialog_TypeInfo);
+    byte_438904D = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -25,21 +25,21 @@ void __fastcall WarBoardBackMenuComponent__EndClose(WarBoardBackMenuComponent_o 
   System_Action_o *cancelCallbackFunc; // x20
   UnityEngine_Object_o *v13; // x19
 
-  if ( (byte_434FA51 & 1) == 0 )
+  if ( (byte_438904B & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_434FA51 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438904B = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   p_cancelCallbackFunc = (BattleServantConfConponent_o *)&this->fields.cancelCallbackFunc;
   cancelCallbackFunc = this->fields.cancelCallbackFunc;
   if ( cancelCallbackFunc )
   {
     p_cancelCallbackFunc->klass = 0LL;
-    sub_B70630(p_cancelCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_B77560(p_cancelCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
     System_Action__Invoke(cancelCallbackFunc, 0LL);
   }
   v13 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -48,7 +48,7 @@ void __fastcall WarBoardBackMenuComponent__EndClose(WarBoardBackMenuComponent_o 
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  UnityEngine_Object__Destroy_36067208(v13, 0LL);
+  UnityEngine_Object__Destroy_36309980(v13, 0LL);
 }
 
 
@@ -59,7 +59,7 @@ void __fastcall WarBoardBackMenuComponent__Init(WarBoardBackMenuComponent_o *thi
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v4);
+    sub_B7769C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -72,19 +72,19 @@ void __fastcall WarBoardBackMenuComponent__OnClickBackButton(
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_434FA50 & 1) == 0 )
+  if ( (byte_438904A & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&SoundManager_TypeInfo);
-    sub_B70694(&Method_WarBoardBackMenuComponent_EndClose__);
-    byte_434FA50 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&SoundManager_TypeInfo);
+    sub_B775C4(&Method_WarBoardBackMenuComponent_EndClose__);
+    byte_438904A = 1;
   }
   if ( this->fields.state == 1 )
     this->fields.state = 0;
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playSystemSe(1, 0LL);
-  v3 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_WarBoardBackMenuComponent_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v3, 0LL);
 }
@@ -96,19 +96,19 @@ void __fastcall WarBoardBackMenuComponent__OnClickCancelButton(
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_434FA4A & 1) == 0 )
+  if ( (byte_4389044 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&SoundManager_TypeInfo);
-    sub_B70694(&Method_WarBoardBackMenuComponent_EndClose__);
-    byte_434FA4A = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&SoundManager_TypeInfo);
+    sub_B775C4(&Method_WarBoardBackMenuComponent_EndClose__);
+    byte_4389044 = 1;
   }
   if ( this->fields.state == 1 )
     this->fields.state = 0;
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playSystemSe(1, 0LL);
-  v3 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_WarBoardBackMenuComponent_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v3, 0LL);
 }
@@ -127,41 +127,41 @@ void __fastcall WarBoardBackMenuComponent__OnClickRetireButton(
   __int64 v9; // x0
   __int64 v10; // x1
 
-  if ( (byte_434FA4D & 1) == 0 )
+  if ( (byte_4389047 & 1) == 0 )
   {
-    sub_B70694(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B70694(&SoundManager_TypeInfo);
-    sub_B70694(&Method_WarBoardBackMenuComponent_OnClickRetireConfirmDialogFinalCheck__);
-    sub_B70694(&StringLiteral_15447/*"WARBOARD_MENU_RETIRE_CONFIRMATION_NO"*/);
-    sub_B70694(&StringLiteral_15445/*"WARBOARD_MENU_RETIRE_CONFIRMATION_MESSAGE"*/);
-    sub_B70694(&StringLiteral_15449/*"WARBOARD_MENU_RETIRE_CONFIRMATION_YES"*/);
-    sub_B70694(&StringLiteral_15448/*"WARBOARD_MENU_RETIRE_CONFIRMATION_TITLE"*/);
-    byte_434FA4D = 1;
+    sub_B775C4(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B775C4(&SoundManager_TypeInfo);
+    sub_B775C4(&Method_WarBoardBackMenuComponent_OnClickRetireConfirmDialogFinalCheck__);
+    sub_B775C4(&StringLiteral_15517/*"WARBOARD_MENU_RETIRE_CONFIRMATION_NO"*/);
+    sub_B775C4(&StringLiteral_15515/*"WARBOARD_MENU_RETIRE_CONFIRMATION_MESSAGE"*/);
+    sub_B775C4(&StringLiteral_15519/*"WARBOARD_MENU_RETIRE_CONFIRMATION_YES"*/);
+    sub_B775C4(&StringLiteral_15518/*"WARBOARD_MENU_RETIRE_CONFIRMATION_TITLE"*/);
+    byte_4389047 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playSystemSe(0, 0LL);
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_15448/*"WARBOARD_MENU_RETIRE_CONFIRMATION_TITLE"*/, 0LL);
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15445/*"WARBOARD_MENU_RETIRE_CONFIRMATION_MESSAGE"*/, 0LL);
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_15449/*"WARBOARD_MENU_RETIRE_CONFIRMATION_YES"*/, 0LL);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_15447/*"WARBOARD_MENU_RETIRE_CONFIRMATION_NO"*/, 0LL);
-  v8 = (CommonConfirmDialog_ClickDelegate_o *)sub_B70764(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_15518/*"WARBOARD_MENU_RETIRE_CONFIRMATION_TITLE"*/, 0LL);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15515/*"WARBOARD_MENU_RETIRE_CONFIRMATION_MESSAGE"*/, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_15519/*"WARBOARD_MENU_RETIRE_CONFIRMATION_YES"*/, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_15517/*"WARBOARD_MENU_RETIRE_CONFIRMATION_NO"*/, 0LL);
+  v8 = (CommonConfirmDialog_ClickDelegate_o *)sub_B77694(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
     v8,
     (Il2CppObject *)this,
     Method_WarBoardBackMenuComponent_OnClickRetireConfirmDialogFinalCheck__,
     0LL);
   if ( !Instance )
-    sub_B7076C(v9, v10);
-  CommonUI__OpenConfirmDialog_17903600(Instance, v4, v5, v6, v7, 1, v8, 28, 28, 99.0, 15.0, 0, 0, 0LL);
+    sub_B7769C(v9, v10);
+  CommonUI__OpenConfirmDialog_18055404(Instance, v4, v5, v6, v7, 1, v8, 28, 28, 99.0, 15.0, 0, 0, 0LL);
 }
 
 
@@ -173,10 +173,10 @@ void __fastcall WarBoardBackMenuComponent__OnClickRetireConfirmDialog(
 {
   System_Action_o *retireCallbackFunc; // x0
 
-  if ( (byte_434FA4F & 1) == 0 )
+  if ( (byte_4389049 & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_434FA4F = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4389049 = 1;
   }
   if ( isDecide )
   {
@@ -185,10 +185,10 @@ void __fastcall WarBoardBackMenuComponent__OnClickRetireConfirmDialog(
       goto LABEL_8;
     System_Action__Invoke(retireCallbackFunc, 0LL);
   }
-  retireCallbackFunc = (System_Action_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  retireCallbackFunc = (System_Action_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !retireCallbackFunc )
 LABEL_8:
-    sub_B7076C(retireCallbackFunc, isDecide);
+    sub_B7769C(retireCallbackFunc, isDecide);
   CommonUI__CloseConfirmDialog((CommonUI_o *)retireCallbackFunc, 0LL);
 }
 
@@ -206,31 +206,31 @@ void __fastcall WarBoardBackMenuComponent__OnClickRetireConfirmDialogFinalCheck(
   System_String_o *v10; // x23
   CommonConfirmDialog_ClickDelegate_o *v11; // x24
 
-  if ( (byte_434FA4E & 1) == 0 )
+  if ( (byte_4389048 & 1) == 0 )
   {
-    sub_B70694(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B70694(&Method_WarBoardBackMenuComponent_OnClickRetireConfirmDialog__);
-    sub_B70694(&StringLiteral_15447/*"WARBOARD_MENU_RETIRE_CONFIRMATION_NO"*/);
-    sub_B70694(&StringLiteral_15446/*"WARBOARD_MENU_RETIRE_CONFIRMATION_MESSAGE_GET_TREASURE"*/);
-    sub_B70694(&StringLiteral_15449/*"WARBOARD_MENU_RETIRE_CONFIRMATION_YES"*/);
-    byte_434FA4E = 1;
+    sub_B775C4(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B775C4(&Method_WarBoardBackMenuComponent_OnClickRetireConfirmDialog__);
+    sub_B775C4(&StringLiteral_15517/*"WARBOARD_MENU_RETIRE_CONFIRMATION_NO"*/);
+    sub_B775C4(&StringLiteral_15516/*"WARBOARD_MENU_RETIRE_CONFIRMATION_MESSAGE_GET_TREASURE"*/);
+    sub_B775C4(&StringLiteral_15519/*"WARBOARD_MENU_RETIRE_CONFIRMATION_YES"*/);
+    byte_4389048 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   CommonUI__CloseConfirmDialog(Instance, 0LL);
   if ( !isDecide )
     return;
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance
     || (Instance = (CommonUI_o *)Instance->fields.presentBoxNotificationMenuPrefab) == 0LL
     || (Instance = (CommonUI_o *)WarBoardData__GetTreasureIdList((WarBoardData_o *)Instance, 0LL)) == 0LL )
   {
 LABEL_17:
-    sub_B7076C(Instance, v6);
+    sub_B7769C(Instance, v6);
   }
   if ( !Instance->fields.topImg )
   {
@@ -242,16 +242,16 @@ LABEL_17:
     }
     goto LABEL_17;
   }
-  v7 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v7 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_15446/*"WARBOARD_MENU_RETIRE_CONFIRMATION_MESSAGE_GET_TREASURE"*/, 0LL);
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_15449/*"WARBOARD_MENU_RETIRE_CONFIRMATION_YES"*/, 0LL);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_15447/*"WARBOARD_MENU_RETIRE_CONFIRMATION_NO"*/, 0LL);
-  v11 = (CommonConfirmDialog_ClickDelegate_o *)sub_B70764(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_15516/*"WARBOARD_MENU_RETIRE_CONFIRMATION_MESSAGE_GET_TREASURE"*/, 0LL);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_15519/*"WARBOARD_MENU_RETIRE_CONFIRMATION_YES"*/, 0LL);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_15517/*"WARBOARD_MENU_RETIRE_CONFIRMATION_NO"*/, 0LL);
+  v11 = (CommonConfirmDialog_ClickDelegate_o *)sub_B77694(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
     v11,
     (Il2CppObject *)this,
@@ -259,7 +259,7 @@ LABEL_17:
     0LL);
   if ( !v7 )
     goto LABEL_17;
-  CommonUI__OpenConfirmDialog_17903600(v7, 0LL, v8, v9, v10, 1, v11, 28, 28, 99.0, 15.0, 0, 0, 0LL);
+  CommonUI__OpenConfirmDialog_18055404(v7, 0LL, v8, v9, v10, 1, v11, 28, 28, 99.0, 15.0, 0, 0, 0LL);
 }
 
 
@@ -276,41 +276,41 @@ void __fastcall WarBoardBackMenuComponent__OnClickSuspendButton(
   __int64 v9; // x0
   __int64 v10; // x1
 
-  if ( (byte_434FA4B & 1) == 0 )
+  if ( (byte_4389045 & 1) == 0 )
   {
-    sub_B70694(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B70694(&SoundManager_TypeInfo);
-    sub_B70694(&Method_WarBoardBackMenuComponent_OnClickSusupendConfirmDialog__);
-    sub_B70694(&StringLiteral_15452/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_NO"*/);
-    sub_B70694(&StringLiteral_15454/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_YES"*/);
-    sub_B70694(&StringLiteral_15453/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_TITLE"*/);
-    sub_B70694(&StringLiteral_15451/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_MESSAGE"*/);
-    byte_434FA4B = 1;
+    sub_B775C4(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_B775C4(&SoundManager_TypeInfo);
+    sub_B775C4(&Method_WarBoardBackMenuComponent_OnClickSusupendConfirmDialog__);
+    sub_B775C4(&StringLiteral_15522/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_NO"*/);
+    sub_B775C4(&StringLiteral_15524/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_YES"*/);
+    sub_B775C4(&StringLiteral_15523/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_TITLE"*/);
+    sub_B775C4(&StringLiteral_15521/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_MESSAGE"*/);
+    byte_4389045 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playSystemSe(0, 0LL);
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_15453/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_TITLE"*/, 0LL);
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15451/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_MESSAGE"*/, 0LL);
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_15454/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_YES"*/, 0LL);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_15452/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_NO"*/, 0LL);
-  v8 = (CommonConfirmDialog_ClickDelegate_o *)sub_B70764(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_15523/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_TITLE"*/, 0LL);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15521/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_MESSAGE"*/, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_15524/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_YES"*/, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_15522/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_NO"*/, 0LL);
+  v8 = (CommonConfirmDialog_ClickDelegate_o *)sub_B77694(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
     v8,
     (Il2CppObject *)this,
     Method_WarBoardBackMenuComponent_OnClickSusupendConfirmDialog__,
     0LL);
   if ( !Instance )
-    sub_B7076C(v9, v10);
-  CommonUI__OpenConfirmDialog_17903600(Instance, v4, v5, v6, v7, 1, v8, 28, 28, 99.0, 15.0, 0, 0, 0LL);
+    sub_B7769C(v9, v10);
+  CommonUI__OpenConfirmDialog_18055404(Instance, v4, v5, v6, v7, 1, v8, 28, 28, 99.0, 15.0, 0, 0, 0LL);
 }
 
 
@@ -322,10 +322,10 @@ void __fastcall WarBoardBackMenuComponent__OnClickSusupendConfirmDialog(
 {
   System_Action_o *suspendCallbackFunc; // x0
 
-  if ( (byte_434FA4C & 1) == 0 )
+  if ( (byte_4389046 & 1) == 0 )
   {
-    sub_B70694(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_434FA4C = 1;
+    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4389046 = 1;
   }
   if ( isDecide )
   {
@@ -334,10 +334,10 @@ void __fastcall WarBoardBackMenuComponent__OnClickSusupendConfirmDialog(
       goto LABEL_8;
     System_Action__Invoke(suspendCallbackFunc, 0LL);
   }
-  suspendCallbackFunc = (System_Action_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  suspendCallbackFunc = (System_Action_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !suspendCallbackFunc )
 LABEL_8:
-    sub_B7076C(suspendCallbackFunc, isDecide);
+    sub_B7769C(suspendCallbackFunc, isDecide);
   CommonUI__CloseConfirmDialog((CommonUI_o *)suspendCallbackFunc, 0LL);
 }
 
@@ -375,20 +375,20 @@ void __fastcall WarBoardBackMenuComponent__Open(
   UnityEngine_Object_o *cancelButtonTxt; // x20
   UILabel_o *v33; // x20
 
-  if ( (byte_434FA49 & 1) == 0 )
+  if ( (byte_4389043 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_15450/*"WARBOARD_MENU_SUSPEND_BUTTON_LABEL"*/);
-    sub_B70694(&StringLiteral_15443/*"WARBOARD_MENU_BACK_BUTTON_LABEL"*/);
-    sub_B70694(&StringLiteral_15444/*"WARBOARD_MENU_RETIRE_BUTTON_LABEL"*/);
-    sub_B70694(&StringLiteral_15455/*"WARBOARD_MENU_TITLE_LABEL"*/);
-    byte_434FA49 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_15520/*"WARBOARD_MENU_SUSPEND_BUTTON_LABEL"*/);
+    sub_B775C4(&StringLiteral_15513/*"WARBOARD_MENU_BACK_BUTTON_LABEL"*/);
+    sub_B775C4(&StringLiteral_15514/*"WARBOARD_MENU_RETIRE_BUTTON_LABEL"*/);
+    sub_B775C4(&StringLiteral_15525/*"WARBOARD_MENU_TITLE_LABEL"*/);
+    byte_4389043 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.suspendCallbackFunc = suspendCallback;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.suspendCallbackFunc,
       (System_Int32_array **)suspendCallback,
       (System_String_array **)retireCallback,
@@ -398,7 +398,7 @@ void __fastcall WarBoardBackMenuComponent__Open(
       v6,
       v7);
     this->fields.retireCallbackFunc = retireCallback;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.retireCallbackFunc,
       (System_Int32_array **)retireCallback,
       v12,
@@ -408,7 +408,7 @@ void __fastcall WarBoardBackMenuComponent__Open(
       v16,
       v17);
     this->fields.cancelCallbackFunc = cancelCallback;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.cancelCallbackFunc,
       (System_Int32_array **)cancelCallback,
       v18,
@@ -431,7 +431,7 @@ void __fastcall WarBoardBackMenuComponent__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_15455/*"WARBOARD_MENU_TITLE_LABEL"*/, 0LL);
+      gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_15525/*"WARBOARD_MENU_TITLE_LABEL"*/, 0LL);
       if ( !v25 )
         goto LABEL_42;
       UILabel__set_text(v25, gameObject, 0LL);
@@ -450,7 +450,7 @@ void __fastcall WarBoardBackMenuComponent__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_15450/*"WARBOARD_MENU_SUSPEND_BUTTON_LABEL"*/, 0LL);
+      gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_15520/*"WARBOARD_MENU_SUSPEND_BUTTON_LABEL"*/, 0LL);
       if ( !v29 )
         goto LABEL_42;
       UILabel__set_text(v29, gameObject, 0LL);
@@ -469,7 +469,7 @@ void __fastcall WarBoardBackMenuComponent__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_15444/*"WARBOARD_MENU_RETIRE_BUTTON_LABEL"*/, 0LL);
+      gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_15514/*"WARBOARD_MENU_RETIRE_BUTTON_LABEL"*/, 0LL);
       if ( !v31 )
         goto LABEL_42;
       UILabel__set_text(v31, gameObject, 0LL);
@@ -488,7 +488,7 @@ void __fastcall WarBoardBackMenuComponent__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_15443/*"WARBOARD_MENU_BACK_BUTTON_LABEL"*/, 0LL);
+      gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_15513/*"WARBOARD_MENU_BACK_BUTTON_LABEL"*/, 0LL);
       if ( !v33 )
         goto LABEL_42;
       UILabel__set_text(v33, gameObject, 0LL);
@@ -502,7 +502,7 @@ void __fastcall WarBoardBackMenuComponent__Open(
       return;
     }
 LABEL_42:
-    sub_B7076C(gameObject, v27);
+    sub_B7769C(gameObject, v27);
   }
 }
 
@@ -511,10 +511,10 @@ System_String_o *__fastcall WarBoardBackMenuComponent__get_closeBtnPath(
         WarBoardBackMenuComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_434FA52 & 1) == 0 )
+  if ( (byte_438904C & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_2609/*"BG/BackButton"*/);
-    byte_434FA52 = 1;
+    sub_B775C4(&StringLiteral_2655/*"BG/BackButton"*/);
+    byte_438904C = 1;
   }
-  return (System_String_o *)StringLiteral_2609/*"BG/BackButton"*/;
+  return (System_String_o *)StringLiteral_2655/*"BG/BackButton"*/;
 }

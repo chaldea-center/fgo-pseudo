@@ -1,9 +1,9 @@
 void __fastcall ServantStatusListViewItemDrawSkill___cctor(const MethodInfo *method)
 {
-  if ( (byte_4355E1E & 1) == 0 )
+  if ( (byte_438F2F2 & 1) == 0 )
   {
-    sub_B70694(&ServantStatusListViewItemDrawSkill_TypeInfo);
-    byte_4355E1E = 1;
+    sub_B775C4(&ServantStatusListViewItemDrawSkill_TypeInfo);
+    byte_438F2F2 = 1;
   }
   ServantStatusListViewItemDrawSkill_TypeInfo->static_fields->DETAIL_FONT_SIZE = 18;
   ServantStatusListViewItemDrawSkill_TypeInfo->static_fields->MAX_HEIGHT = 500;
@@ -66,15 +66,15 @@ void __fastcall ServantStatusListViewItemDrawSkill___ctor(
   System_Int32_array *v51; // x6
   System_Int32_array *v52; // x7
 
-  if ( (byte_4355E1D & 1) == 0 )
+  if ( (byte_438F2F1 & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&UnityEngine_GameObject___TypeInfo);
-    sub_B70694(&ServantSkillStrengthStatus___TypeInfo);
-    sub_B70694(&SkillIconComponent___TypeInfo);
-    sub_B70694(&UILabel___TypeInfo);
-    sub_B70694(&UISprite___TypeInfo);
-    byte_4355E1D = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&UnityEngine_GameObject___TypeInfo);
+    sub_B775C4(&ServantSkillStrengthStatus___TypeInfo);
+    sub_B775C4(&SkillIconComponent___TypeInfo);
+    sub_B775C4(&UILabel___TypeInfo);
+    sub_B775C4(&UISprite___TypeInfo);
+    byte_438F2F1 = 1;
   }
   v3 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -83,11 +83,11 @@ void __fastcall ServantStatusListViewItemDrawSkill___ctor(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v3 = BalanceConfig_TypeInfo;
   }
-  v4 = (struct SkillIconComponent_array *)sub_B706AC(
+  v4 = (struct SkillIconComponent_array *)sub_B775DC(
                                             UnityEngine_GameObject___TypeInfo,
                                             (unsigned int)v3->static_fields->SvtSkillListMax);
   this->fields.skillIconList = v4;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.skillIconList,
     (System_Int32_array **)v4,
     v5,
@@ -96,11 +96,11 @@ void __fastcall ServantStatusListViewItemDrawSkill___ctor(
     v8,
     v9,
     v10);
-  v11 = (struct UISprite_array *)sub_B706AC(
+  v11 = (struct UISprite_array *)sub_B775DC(
                                    SkillIconComponent___TypeInfo,
                                    (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
   this->fields.chargeTitleSpriteList = v11;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.chargeTitleSpriteList,
     (System_Int32_array **)v11,
     v12,
@@ -109,11 +109,11 @@ void __fastcall ServantStatusListViewItemDrawSkill___ctor(
     v15,
     v16,
     v17);
-  v18 = (struct UILabel_array *)sub_B706AC(
+  v18 = (struct UILabel_array *)sub_B775DC(
                                   UISprite___TypeInfo,
                                   (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
   this->fields.chargeDataLabelList = v18;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.chargeDataLabelList,
     (System_Int32_array **)v18,
     v19,
@@ -122,11 +122,11 @@ void __fastcall ServantStatusListViewItemDrawSkill___ctor(
     v22,
     v23,
     v24);
-  v25 = (struct UILabel_array *)sub_B706AC(
+  v25 = (struct UILabel_array *)sub_B775DC(
                                   UILabel___TypeInfo,
                                   (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
   this->fields.skillNameLabelList = v25;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.skillNameLabelList,
     (System_Int32_array **)v25,
     v26,
@@ -135,11 +135,11 @@ void __fastcall ServantStatusListViewItemDrawSkill___ctor(
     v29,
     v30,
     v31);
-  v32 = (struct ServantSkillStrengthStatus_array *)sub_B706AC(
+  v32 = (struct ServantSkillStrengthStatus_array *)sub_B775DC(
                                                      UILabel___TypeInfo,
                                                      (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
   this->fields.skillStrengthStatus = v32;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.skillStrengthStatus,
     (System_Int32_array **)v32,
     v33,
@@ -148,11 +148,11 @@ void __fastcall ServantStatusListViewItemDrawSkill___ctor(
     v36,
     v37,
     v38);
-  v39 = (struct UILabel_array *)sub_B706AC(
+  v39 = (struct UILabel_array *)sub_B775DC(
                                   ServantSkillStrengthStatus___TypeInfo,
                                   (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
   this->fields.skillExplanationLabelList = v39;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.skillExplanationLabelList,
     (System_Int32_array **)v39,
     v40,
@@ -161,11 +161,11 @@ void __fastcall ServantStatusListViewItemDrawSkill___ctor(
     v43,
     v44,
     v45);
-  v46 = (struct UnityEngine_GameObject_o *)sub_B706AC(
+  v46 = (struct UnityEngine_GameObject_o *)sub_B775DC(
                                              UILabel___TypeInfo,
                                              (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
   this->fields.reinforceObject = v46;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.reinforceObject,
     (System_Int32_array **)v46,
     v47,
@@ -266,12 +266,12 @@ void __fastcall ServantStatusListViewItemDrawSkill__Awake(
   v3->fields.skillBasePosition.fields.y = v14;
   if ( !v15 )
 LABEL_24:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   if ( !v15->max_length )
   {
 LABEL_25:
-    v18 = sub_B70798(this);
-    sub_B70738(v18, 0LL);
+    v18 = sub_B776C8(this);
+    sub_B77668(v18, 0LL);
   }
   this = (ServantStatusListViewItemDrawSkill_o *)v15->m_Items[0];
   if ( !this )
@@ -417,18 +417,18 @@ void __fastcall ServantStatusListViewItemDrawSkill__SetItem(
   UnityEngine_Color_o v118; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v119; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4355E1C & 1) == 0 )
+  if ( (byte_438F2F0 & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&ServantSkillStrengthStatus_TypeInfo);
-    sub_B70694(&ServantStatusListViewItemDrawSkill_TypeInfo);
-    sub_B70694(&StringLiteral_12152/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/);
-    sub_B70694(&StringLiteral_12150/*"SERVANT_STATUS_EXPLANATION_SKILL_ACTIVE"*/);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4355E1C = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&ServantSkillStrengthStatus_TypeInfo);
+    sub_B775C4(&ServantStatusListViewItemDrawSkill_TypeInfo);
+    sub_B775C4(&StringLiteral_12216/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/);
+    sub_B775C4(&StringLiteral_12214/*"SERVANT_STATUS_EXPLANATION_SKILL_ACTIVE"*/);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438F2F0 = 1;
   }
   skillInfoList = 0LL;
   v112 = 0LL;
@@ -440,9 +440,9 @@ void __fastcall ServantStatusListViewItemDrawSkill__SetItem(
     goto LABEL_188;
   skillBaseList = (UILabel_o *)this->fields.skillBaseList;
   if ( ServantEntity__get_IsServantEquip((ServantEntity_o *)svtEntity, 0LL) )
-    v10 = (System_String_o **)&StringLiteral_12152/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/;
+    v10 = (System_String_o **)&StringLiteral_12216/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/;
   else
-    v10 = (System_String_o **)&StringLiteral_12150/*"SERVANT_STATUS_EXPLANATION_SKILL_ACTIVE"*/;
+    v10 = (System_String_o **)&StringLiteral_12214/*"SERVANT_STATUS_EXPLANATION_SKILL_ACTIVE"*/;
   v11 = *v10;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -475,8 +475,8 @@ void __fastcall ServantStatusListViewItemDrawSkill__SetItem(
         if ( v16 >= max_length )
         {
 LABEL_200:
-          v109 = sub_B70798(svtEntity);
-          sub_B70738(v109, 0LL);
+          v109 = sub_B776C8(svtEntity);
+          sub_B77668(v109, 0LL);
         }
         v18 = (SkillInfo_o *)*((_QWORD *)&skillInfoList->obj.klass + v15);
         if ( v18 )
@@ -703,7 +703,7 @@ LABEL_68:
         (v54 = this->fields.skillIconList) == 0LL) )
   {
 LABEL_188:
-    sub_B7076C(svtEntity, v7);
+    sub_B7769C(svtEntity, v7);
   }
   v55 = *(float *)&this[1].klass;
   v56 = this->fields.skillBasePosition.fields.z;
@@ -766,7 +766,7 @@ LABEL_188:
       svtEntity = (__int64)v70->m_Items[(int)v57];
       if ( !svtEntity )
         goto LABEL_188;
-      SkillIconComponent__Set_26485508((SkillIconComponent_o *)svtEntity, v60->fields.id, v60->fields.lv, 0LL);
+      SkillIconComponent__Set_26844016((SkillIconComponent_o *)svtEntity, v60->fields.id, v60->fields.lv, 0LL);
       if ( (v60->fields.lv & 0x80000000) != 0 || (v60->fields.charge & 0x80000000) != 0 )
       {
         chargeDataLabelList = this->fields.chargeDataLabelList;
@@ -894,7 +894,7 @@ LABEL_188:
           {
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           }
-          UnityEngine_Object__Destroy_36067208(gameObject, 0LL);
+          UnityEngine_Object__Destroy_36309980(gameObject, 0LL);
         }
       }
       else
@@ -921,7 +921,7 @@ LABEL_188:
           {
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           }
-          UnityEngine_Object__Destroy_36067208(v84, 0LL);
+          UnityEngine_Object__Destroy_36309980(v84, 0LL);
         }
         svtEntity = (__int64)ServantSkillStrengthStatus_TypeInfo;
         if ( (BYTE3(ServantSkillStrengthStatus_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -946,24 +946,24 @@ LABEL_188:
         v89 = this->fields.skillExplanationLabelList;
         svtEntity = (__int64)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                (UnityEngine_GameObject_o *)svtEntity,
-                               (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
+                               (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
         if ( !v89 )
           goto LABEL_188;
         v96 = (System_Int32_array **)svtEntity;
         if ( svtEntity )
         {
-          svtEntity = sub_B70754(svtEntity, v89->obj.klass->_1.element_class);
+          svtEntity = sub_B77684(svtEntity, v89->obj.klass->_1.element_class);
           if ( !svtEntity )
           {
-            v110 = sub_B7078C(0LL);
-            sub_B70738(v110, 0LL);
+            v110 = sub_B776BC(0LL);
+            sub_B77668(v110, 0LL);
           }
         }
         if ( (unsigned int)v57 >= v89->max_length )
           goto LABEL_200;
         v97 = &v89->obj.klass + (int)v57;
         v97[4] = (Il2CppClass *)v96;
-        sub_B70630((BattleServantConfConponent_o *)(v97 + 4), v96, v90, v91, v92, v93, v94, v95);
+        sub_B77560((BattleServantConfConponent_o *)(v97 + 4), v96, v90, v91, v92, v93, v94, v95);
         v98 = this->fields.skillExplanationLabelList;
         if ( !v98 )
           goto LABEL_188;

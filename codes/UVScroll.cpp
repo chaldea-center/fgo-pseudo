@@ -27,20 +27,20 @@ void __fastcall UVScroll__UpdateUV(UVScroll_o *this, const MethodInfo *method)
   UnityEngine_Object_o *sharedMaterial; // x21
   UnityEngine_Material_o *v8; // x22
 
-  if ( (byte_435618B & 1) == 0 )
+  if ( (byte_438F809 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_Renderer___);
-    sub_B70694(&UnityEngine_Material_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_16241/*"_MainTex"*/);
-    byte_435618B = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_Renderer___);
+    sub_B775C4(&UnityEngine_Material_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_16311/*"_MainTex"*/);
+    byte_438F809 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_19;
   Component_srcLineSprite = (UnityEngine_Renderer_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                         gameObject,
-                                                        (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                                                        (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -68,14 +68,14 @@ void __fastcall UVScroll__UpdateUV(UVScroll_o *this, const MethodInfo *method)
     if ( !UnityEngine_Object__op_Equality(sharedMaterial, 0LL, 0LL) )
     {
       v8 = UnityEngine_Renderer__get_sharedMaterial(Component_srcLineSprite, 0LL);
-      v6 = (UnityEngine_Material_o *)sub_B70764(UnityEngine_Material_TypeInfo);
-      UnityEngine_Material___ctor_41118404(v6, v8, 0LL);
+      v6 = (UnityEngine_Material_o *)sub_B77694(UnityEngine_Material_TypeInfo);
+      UnityEngine_Material___ctor_41464292(v6, v8, 0LL);
       if ( v6 )
       {
 LABEL_11:
         UnityEngine_Material__SetTextureOffset(
           v6,
-          (System_String_o *)StringLiteral_16241/*"_MainTex"*/,
+          (System_String_o *)StringLiteral_16311/*"_MainTex"*/,
           *(UnityEngine_Vector2_o *)&this->fields.m_Offset.fields.y,
           0LL);
         if ( !UnityEngine_Application__get_isPlaying(0LL) )
@@ -83,7 +83,7 @@ LABEL_11:
         return;
       }
 LABEL_19:
-      sub_B7076C(gameObject, v4);
+      sub_B7769C(gameObject, v4);
     }
   }
 }

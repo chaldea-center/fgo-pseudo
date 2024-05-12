@@ -1,13 +1,13 @@
 void __fastcall EnemyMstBattleEntity___ctor(EnemyMstBattleEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4356422 & 1) == 0 )
+  if ( (byte_438FAA0 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_int___ctor__);
-    byte_4356422 = 1;
+    sub_B775C4(&Method_DataEntityBase_int___ctor__);
+    byte_438FAA0 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -31,13 +31,13 @@ int32_t __fastcall EnemyMstBattleEntity__GetCommandSpellCntFromCutInId(
   __int64 v11; // x0
   int32_t result; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4356420 & 1) == 0 )
+  if ( (byte_438FA9E & 1) == 0 )
   {
-    sub_B70694(&char___TypeInfo);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B70694(&StringLiteral_18116/*"cutinId"*/);
-    byte_4356420 = 1;
+    sub_B775C4(&char___TypeInfo);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_B775C4(&StringLiteral_18204/*"cutinId"*/);
+    byte_438FA9E = 1;
   }
   result = 0;
   script = this->fields.script;
@@ -45,22 +45,22 @@ int32_t __fastcall EnemyMstBattleEntity__GetCommandSpellCntFromCutInId(
   {
     if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
            (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-           (System_Xml_XmlQualifiedName_o *)StringLiteral_18116/*"cutinId"*/,
-           (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+           (System_Xml_XmlQualifiedName_o *)StringLiteral_18204/*"cutinId"*/,
+           (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
       Item = this->fields.script;
       if ( !Item )
         goto LABEL_18;
       Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)Item,
-               (System_Type_o *)StringLiteral_18116/*"cutinId"*/,
-               (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+               (System_Type_o *)StringLiteral_18204/*"cutinId"*/,
+               (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( !Item )
         goto LABEL_18;
       v8 = (System_String_o *)(*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)Item + 360LL))(
                                 Item,
                                 *(_QWORD *)(*(_QWORD *)Item + 368LL));
-      Item = (void *)sub_B706AC(char___TypeInfo, 1LL);
+      Item = (void *)sub_B775DC(char___TypeInfo, 1LL);
       if ( !Item )
         goto LABEL_18;
       v6 = Item;
@@ -69,7 +69,7 @@ int32_t __fastcall EnemyMstBattleEntity__GetCommandSpellCntFromCutInId(
       *((_WORD *)Item + 16) = 44;
       if ( !v8 || (Item = System_String__Split(v8, (System_Char_array *)Item, 0LL)) == 0LL )
 LABEL_18:
-        sub_B7076C(Item, v6);
+        sub_B7769C(Item, v6);
       v9 = *((_DWORD *)Item + 6);
       v10 = commandSpellCnt - 1;
       if ( commandSpellCnt - 1 < v9 )
@@ -84,8 +84,8 @@ LABEL_18:
           return (int)script;
         }
 LABEL_19:
-        v11 = sub_B70798(Item);
-        sub_B70738(v11, 0LL);
+        v11 = sub_B776C8(Item);
+        sub_B77668(v11, 0LL);
       }
     }
     LODWORD(script) = 0;
@@ -101,12 +101,12 @@ int32_t __fastcall EnemyMstBattleEntity__GetOverwriteFrame(
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4356421 & 1) == 0 )
+  if ( (byte_438FA9F & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_21708/*"overwriteEnemyMasterBackgroundId"*/);
-    byte_4356421 = 1;
+    sub_B775C4(&StringLiteral_21805/*"overwriteEnemyMasterBackgroundId"*/);
+    byte_438FA9F = 1;
   }
-  return EnemyMstBattleEntity__getScript(this, (System_String_o *)StringLiteral_21708/*"overwriteEnemyMasterBackgroundId"*/, defval, v3);
+  return EnemyMstBattleEntity__getScript(this, (System_String_o *)StringLiteral_21805/*"overwriteEnemyMasterBackgroundId"*/, defval, v3);
 }
 
 
@@ -117,17 +117,17 @@ bool __fastcall EnemyMstBattleEntity__checkScript(
 {
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
 
-  if ( (byte_435641E & 1) == 0 )
+  if ( (byte_438FA9C & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    byte_435641E = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    byte_438FA9C = 1;
   }
   script = this->fields.script;
   if ( script )
     LOBYTE(script) = System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
                        (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
                        (System_Xml_XmlQualifiedName_o *)key,
-                       (const MethodInfo_2F4FC5C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                       (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   return (char)script;
 }
 
@@ -147,11 +147,11 @@ int32_t __fastcall EnemyMstBattleEntity__getScript(
   const MethodInfo *v12; // x2
 
   v4 = defVal;
-  if ( (byte_435641F & 1) == 0 )
+  if ( (byte_438FA9D & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B70694(&long_TypeInfo);
-    byte_435641F = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_B775C4(&long_TypeInfo);
+    byte_438FA9D = 1;
   }
   if ( !EnemyMstBattleEntity__checkScript(this, key, *(const MethodInfo **)&defVal) )
     return v4;
@@ -160,12 +160,12 @@ int32_t __fastcall EnemyMstBattleEntity__getScript(
     || (script = (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                                                                                      script,
                                                                                      (System_Type_o *)key,
-                                                                                     (const MethodInfo_2F4F924 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                                     (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_B7076C(script, v7);
+    sub_B7769C(script, v7);
   }
   if ( script->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(script);
-  sub_B70A60(script);
+  sub_B77990(script);
   return EnemyMstBattleEntity__GetCommandSpellCntFromCutInId(v10, v11, v12);
 }

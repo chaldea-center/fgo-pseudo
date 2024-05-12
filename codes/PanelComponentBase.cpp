@@ -24,7 +24,7 @@ void __fastcall PanelComponentBase__Initialize(PanelComponentBase_o *this, const
   System_Int32_array *v7; // x7
 
   this->fields._OnClickPanel_k__BackingField = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields._OnClickPanel_k__BackingField, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields._OnClickPanel_k__BackingField, 0LL, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -37,10 +37,10 @@ void __fastcall PanelComponentBase__SetClosedPanelVisible(
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4350CA3 & 1) == 0 )
+  if ( (byte_438A34B & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4350CA3 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438A34B = 1;
   }
   closedPanel = (UnityEngine_Object_o *)this->fields.closedPanel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -52,7 +52,7 @@ void __fastcall PanelComponentBase__SetClosedPanelVisible(
   {
     v7 = this->fields.closedPanel;
     if ( !v7 )
-      sub_B7076C(0LL, v6);
+      sub_B7769C(0LL, v6);
     UnityEngine_GameObject__SetActive(v7, value, 0LL);
   }
 }
@@ -70,7 +70,7 @@ void __fastcall PanelComponentBase__SetTheCallBackWhenClickPanel(
   System_Int32_array *v7; // x7
 
   this->fields._OnClickPanel_k__BackingField = callback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._OnClickPanel_k__BackingField,
     (System_Int32_array **)callback,
     (System_String_array **)method,
@@ -100,7 +100,7 @@ void __fastcall PanelComponentBase__set_OnClickPanel(
   System_Int32_array *v7; // x7
 
   this->fields._OnClickPanel_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._OnClickPanel_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

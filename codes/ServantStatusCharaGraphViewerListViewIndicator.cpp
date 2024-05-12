@@ -18,7 +18,7 @@ void __fastcall ServantStatusCharaGraphViewerListViewIndicator__Init(
   System_Int32_array *v7; // x7
 
   this->fields.onModifyCenterItem = onModifyCenter;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.onModifyCenterItem,
     (System_Int32_array **)onModifyCenter,
     (System_String_array **)method,
@@ -44,10 +44,10 @@ void __fastcall ServantStatusCharaGraphViewerListViewIndicator__OnModifyCenterIt
   __int64 v11; // x10
   ListViewItem_o *v12; // x1
 
-  if ( (byte_434FF4D & 1) == 0 )
+  if ( (byte_4389631 & 1) == 0 )
   {
-    sub_B70694(&ServantStatusCharaGraphListViewItem_TypeInfo);
-    byte_434FF4D = 1;
+    sub_B775C4(&ServantStatusCharaGraphListViewItem_TypeInfo);
+    byte_4389631 = 1;
   }
   onModifyCenterItem = this->fields.onModifyCenterItem;
   if ( onModifyCenterItem )
@@ -92,7 +92,7 @@ void __fastcall ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEve
   p_method = (BattleServantConfConponent_o *)&this->fields.method;
   p_method->monitor = *(void **)&method;
   p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B70630(
+  sub_B77560(
     p_method,
     (System_Int32_array **)object,
     *(System_String_array ***)&method,
@@ -115,7 +115,7 @@ System_IAsyncResult_o *__fastcall ServantStatusCharaGraphViewerListViewIndicator
 
   v6[0] = (__int64)item;
   v6[1] = 0LL;
-  return (System_IAsyncResult_o *)sub_B70638(this, v6, callback, object);
+  return (System_IAsyncResult_o *)sub_B77568(this, v6, callback, object);
 }
 
 
@@ -124,7 +124,7 @@ void __fastcall ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEve
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7063C(result, 0LL, method);
+  sub_B7756C(result, 0LL, method);
 }
 
 
@@ -197,8 +197,8 @@ LABEL_5:
       v28 = *(_QWORD *)&v27->fields.extra_arg;
       v30 = *(void (__fastcall **)(ServantStatusCharaGraphListViewItem_o *, __int64))&v27->fields.method_ptr;
       if ( *(__int16 *)(v28 + 72) == -1 )
-        sub_B70750(*(_QWORD *)&v27->fields.extra_arg, item);
-      v31 = sub_B706C4(v28);
+        sub_B77680(*(_QWORD *)&v27->fields.extra_arg, item);
+      v31 = sub_B775F4(v28);
       v32 = *(unsigned __int8 *)(v28 + 74);
       if ( (v31 & 1) != 0 )
       {
@@ -211,8 +211,8 @@ LABEL_5:
         {
           if ( *(__int16 *)(v28 + 72) != -1 && this->fields.m_target )
           {
-            v40 = sub_B706BC(v28);
-            v41 = sub_B70AC0(v28);
+            v40 = sub_B775EC(v28);
+            v41 = sub_B779F0(v28);
             if ( (v40 & 1) != 0 )
             {
               if ( (v41 & 1) != 0 )
@@ -236,7 +236,7 @@ LABEL_5:
                 else
                 {
 LABEL_57:
-                  v23 = sub_B08590(item, v43, v44);
+                  v23 = sub_B0F4C0(item, v43, v44);
                 }
                 v15 = *(_QWORD *)(v23 + 8);
               }
@@ -244,7 +244,7 @@ LABEL_57:
               {
                 v15 = *((_QWORD *)&item->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v28 + 72));
               }
-              v24 = (void (__fastcall **)(ServantStatusCharaGraphListViewItem_o *, _QWORD))sub_B70744(v15, v28);
+              v24 = (void (__fastcall **)(ServantStatusCharaGraphListViewItem_o *, _QWORD))sub_B77674(v15, v28);
               (*v24)(item, v24);
             }
             else
@@ -270,7 +270,7 @@ LABEL_57:
                 else
                 {
 LABEL_11:
-                  v14 = sub_B08590(item, class_0, v9);
+                  v14 = sub_B0F4C0(item, class_0, v9);
                 }
                 (*(void (__fastcall **)(ServantStatusCharaGraphListViewItem_o *, _QWORD))v14)(
                   item,
@@ -294,8 +294,8 @@ LABEL_58:
           goto LABEL_58;
         if ( *(__int16 *)(v28 + 72) != -1 && (*(_BYTE *)(*v29 + 277) & 1) == 0 && this->fields.m_target )
         {
-          v33 = sub_B706BC(v28);
-          v34 = sub_B70AC0(v28);
+          v33 = sub_B775EC(v28);
+          v34 = sub_B779F0(v28);
           if ( (v33 & 1) != 0 )
           {
             if ( (v34 & 1) != 0 )
@@ -319,7 +319,7 @@ LABEL_58:
               else
               {
 LABEL_48:
-                v25 = sub_B08590(v29, v36, v37);
+                v25 = sub_B0F4C0(v29, v36, v37);
               }
               v22 = *(_QWORD *)(v25 + 8);
             }
@@ -327,7 +327,7 @@ LABEL_48:
             {
               v22 = *(_QWORD *)(*v29 + 16LL * *(unsigned __int16 *)(v28 + 72) + 320);
             }
-            v26 = (void (__fastcall **)(__int64 *, ServantStatusCharaGraphListViewItem_o *, _QWORD))sub_B70744(v22, v28);
+            v26 = (void (__fastcall **)(__int64 *, ServantStatusCharaGraphListViewItem_o *, _QWORD))sub_B77674(v22, v28);
             (*v26)(v29, item, v26);
           }
           else
@@ -353,7 +353,7 @@ LABEL_48:
               else
               {
 LABEL_19:
-                v21 = sub_B08590(v29, v17, v16);
+                v21 = sub_B0F4C0(v29, v17, v16);
               }
               (*(void (__fastcall **)(__int64 *, ServantStatusCharaGraphListViewItem_o *, _QWORD))v21)(
                 v29,

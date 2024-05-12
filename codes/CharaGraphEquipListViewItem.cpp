@@ -21,11 +21,11 @@ void __fastcall CharaGraphEquipListViewItem___ctor(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v23; // [xsp+0h] [xbp-70h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v24; // [xsp+20h] [xbp-50h]
 
-  if ( (byte_43549CD & 1) == 0 )
+  if ( (byte_438E28C & 1) == 0 )
   {
-    sub_B70694(&Method_System_Linq_Enumerable_Contains_long___);
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_43549CD = 1;
+    sub_B775C4(&Method_System_Linq_Enumerable_Contains_long___);
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_438E28C = 1;
   }
   CharaGraphServantListViewItem___ctor(
     (CharaGraphServantListViewItem_o *)this,
@@ -45,17 +45,17 @@ void __fastcall CharaGraphEquipListViewItem___ctor(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   }
   v23 = v24;
-  v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45183140(&v23, 0LL);
+  v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45429112(&v23, 0LL);
   if ( !this->fields._UserServantEntity_k__BackingField )
 LABEL_11:
-    sub_B7076C(v11, v12);
+    sub_B7769C(v11, v12);
   v15 = v11;
   EquipCategoryIdList = UserServantEntity__GetEquipCategoryIdList(
                           this->fields._UserServantEntity_k__BackingField,
                           1,
                           0LL);
   this->fields._EquipCategoryIdArray_k__BackingField = EquipCategoryIdList;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._EquipCategoryIdArray_k__BackingField,
     (System_Int32_array **)EquipCategoryIdList,
     v17,
@@ -67,7 +67,7 @@ LABEL_11:
   if ( System_Linq_Enumerable__Contains_long_(
          (System_Collections_Generic_IEnumerable_TSource__o *)partyUserEquipList,
          v15,
-         (const MethodInfo_1CB59C8 *)Method_System_Linq_Enumerable_Contains_long___) )
+         (const MethodInfo_1D2A818 *)Method_System_Linq_Enumerable_Contains_long___) )
   {
     this->fields._IsUse_k__BackingField = 1;
   }
@@ -94,7 +94,7 @@ void __fastcall CharaGraphEquipListViewItem__set_EquipCategoryIdArray(
   System_Int32_array *v7; // x7
 
   this->fields._EquipCategoryIdArray_k__BackingField = value;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields._EquipCategoryIdArray_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

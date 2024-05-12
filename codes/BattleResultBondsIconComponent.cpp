@@ -2,7 +2,7 @@ void __fastcall BattleResultBondsIconComponent___ctor(BattleResultBondsIconCompo
 {
   this->fields.nosupportFontSize = 23;
   this->fields.friendshipLabelSpace = 8.0;
-  *(_OWORD *)&this->fields.friendshipLabelArea = xmmword_32EB670;
+  *(_OWORD *)&this->fields.friendshipLabelArea = xmmword_331E880;
   this->fields.maxFriendShipRank = 5;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -24,7 +24,7 @@ void __fastcall BattleResultBondsIconComponent__ClearFaceAtlas(
 
   faceIcon = this->fields.faceIcon;
   if ( !faceIcon )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ServantFaceIconComponent__ClearFaceAtlas(faceIcon, 0LL);
 }
 
@@ -37,10 +37,10 @@ void __fastcall BattleResultBondsIconComponent__FinishBuddyPointInfoUpdate(
   const MethodInfo *v4; // x1
   BattleResultBuddyPointInfoComponent_o *v5; // x0
 
-  if ( (byte_43520E9 & 1) == 0 )
+  if ( (byte_438B7AC & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43520E9 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438B7AC = 1;
   }
   buddyPointInfo = (UnityEngine_Object_o *)this->fields.buddyPointInfo;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -52,7 +52,7 @@ void __fastcall BattleResultBondsIconComponent__FinishBuddyPointInfoUpdate(
   {
     v5 = this->fields.buddyPointInfo;
     if ( !v5 )
-      sub_B7076C(0LL, v4);
+      sub_B7769C(0LL, v4);
     BattleResultBuddyPointInfoComponent__FinishUpdateBuddyPoint(v5, v4);
   }
 }
@@ -66,10 +66,10 @@ void __fastcall BattleResultBondsIconComponent__InitBuddyPointInfo(
   const MethodInfo *v4; // x1
   BattleResultBuddyPointInfoComponent_o *v5; // x0
 
-  if ( (byte_43520E8 & 1) == 0 )
+  if ( (byte_438B7AB & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43520E8 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438B7AB = 1;
   }
   buddyPointInfo = (UnityEngine_Object_o *)this->fields.buddyPointInfo;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -81,7 +81,7 @@ void __fastcall BattleResultBondsIconComponent__InitBuddyPointInfo(
   {
     v5 = this->fields.buddyPointInfo;
     if ( !v5 )
-      sub_B7076C(0LL, v4);
+      sub_B7769C(0LL, v4);
     BattleResultBuddyPointInfoComponent__UpdateBuddyPointInfo(v5, 0.0, v4);
   }
 }
@@ -139,14 +139,14 @@ void __fastcall BattleResultBondsIconComponent__LayoutFriendshipValue(
   UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v42; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_43520E6 & 1) == 0 )
+  if ( (byte_438B7A9 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_24354/*"（＋"*/);
-    sub_B70694(&StringLiteral_24357/*"＋ "*/);
-    sub_B70694(&StringLiteral_24355/*"）"*/);
-    sub_B70694(&StringLiteral_9376/*"N0"*/);
-    sub_B70694(&StringLiteral_24353/*"（"*/);
-    byte_43520E6 = 1;
+    sub_B775C4(&StringLiteral_24458/*"（＋"*/);
+    sub_B775C4(&StringLiteral_24461/*"＋ "*/);
+    sub_B775C4(&StringLiteral_24459/*"）"*/);
+    sub_B775C4(&StringLiteral_9434/*"N0"*/);
+    sub_B775C4(&StringLiteral_24457/*"（"*/);
+    byte_438B7A9 = 1;
   }
   v37 = 0;
   if ( !this->fields.isMax )
@@ -185,9 +185,9 @@ void __fastcall BattleResultBondsIconComponent__LayoutFriendshipValue(
     }
     else
     {
-      v5 = System_Int32__ToString_39283984((int32_t)p_baseFriendshipExp, (System_String_o *)StringLiteral_9376/*"N0"*/, 0LL);
-      p_baseFriendshipExp = (UnityEngine_Component_o *)System_String__Concat_44758168(
-                                                         (System_String_o *)StringLiteral_24357/*"＋ "*/,
+      v5 = System_Int32__ToString_39547236((int32_t)p_baseFriendshipExp, (System_String_o *)StringLiteral_9434/*"N0"*/, 0LL);
+      p_baseFriendshipExp = (UnityEngine_Component_o *)System_String__Concat_44901936(
+                                                         (System_String_o *)StringLiteral_24461/*"＋ "*/,
                                                          v5,
                                                          0LL);
       if ( atlabel )
@@ -205,7 +205,7 @@ void __fastcall BattleResultBondsIconComponent__LayoutFriendshipValue(
             p_baseFriendshipExp = (UnityEngine_Component_o *)this->fields.bonuslabel;
             if ( p_baseFriendshipExp )
             {
-              UILabel__set_text((UILabel_o *)p_baseFriendshipExp, (System_String_o *)StringLiteral_24353/*"（"*/, 0LL);
+              UILabel__set_text((UILabel_o *)p_baseFriendshipExp, (System_String_o *)StringLiteral_24457/*"（"*/, 0LL);
               p_baseFriendshipExp = (UnityEngine_Component_o *)this->fields.bonuslabel;
               if ( p_baseFriendshipExp )
               {
@@ -216,12 +216,12 @@ void __fastcall BattleResultBondsIconComponent__LayoutFriendshipValue(
                   parenthesisAjust = this->fields.parenthesisAjust;
                   mText = v7->fields.mText;
                   v10 = v6;
-                  v11 = System_Int32__ToString_39283984((int32_t)&v37, (System_String_o *)StringLiteral_9376/*"N0"*/, 0LL);
-                  p_baseFriendshipExp = (UnityEngine_Component_o *)System_String__Concat_44761580(
+                  v11 = System_Int32__ToString_39547236((int32_t)&v37, (System_String_o *)StringLiteral_9434/*"N0"*/, 0LL);
+                  p_baseFriendshipExp = (UnityEngine_Component_o *)System_String__Concat_44905348(
                                                                      mText,
-                                                                     (System_String_o *)StringLiteral_24354/*"（＋"*/,
+                                                                     (System_String_o *)StringLiteral_24458/*"（＋"*/,
                                                                      v11,
-                                                                     (System_String_o *)StringLiteral_24355/*"）"*/,
+                                                                     (System_String_o *)StringLiteral_24459/*"）"*/,
                                                                      0LL);
                   if ( this->fields.bonuslabel )
                   {
@@ -245,11 +245,11 @@ void __fastcall BattleResultBondsIconComponent__LayoutFriendshipValue(
                             / (float)(UILabel__get_printedSize((UILabel_o *)p_baseFriendshipExp, 0LL).fields.x - v12);
                       }
                       bonuslabel = this->fields.bonuslabel;
-                      v20 = System_Int32__ToString_39283984((int32_t)&v37, (System_String_o *)StringLiteral_9376/*"N0"*/, 0LL);
-                      p_baseFriendshipExp = (UnityEngine_Component_o *)System_String__Concat_44760452(
-                                                                         (System_String_o *)StringLiteral_24354/*"（＋"*/,
+                      v20 = System_Int32__ToString_39547236((int32_t)&v37, (System_String_o *)StringLiteral_9434/*"N0"*/, 0LL);
+                      p_baseFriendshipExp = (UnityEngine_Component_o *)System_String__Concat_44904220(
+                                                                         (System_String_o *)StringLiteral_24458/*"（＋"*/,
                                                                          v20,
-                                                                         (System_String_o *)StringLiteral_24355/*"）"*/,
+                                                                         (System_String_o *)StringLiteral_24459/*"）"*/,
                                                                          0LL);
                       if ( bonuslabel )
                       {
@@ -384,7 +384,7 @@ void __fastcall BattleResultBondsIconComponent__LayoutFriendshipValue(
       }
     }
 LABEL_40:
-    sub_B7076C(p_baseFriendshipExp, method);
+    sub_B7769C(p_baseFriendshipExp, method);
   }
 }
 
@@ -400,10 +400,10 @@ void __fastcall BattleResultBondsIconComponent__SetBuddyPointInfo(
   const MethodInfo *v9; // x3
   BattleResultBuddyPointInfoComponent_o *v10; // x0
 
-  if ( (byte_43520E3 & 1) == 0 )
+  if ( (byte_438B7A6 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43520E3 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438B7A6 = 1;
   }
   buddyPointInfo = (UnityEngine_Object_o *)this->fields.buddyPointInfo;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -415,7 +415,7 @@ void __fastcall BattleResultBondsIconComponent__SetBuddyPointInfo(
   {
     v10 = this->fields.buddyPointInfo;
     if ( !v10 )
-      sub_B7076C(0LL, v8);
+      sub_B7769C(0LL, v8);
     BattleResultBuddyPointInfoComponent__SetBuddyPointInfo(v10, pointInfo, eventId, v9);
   }
 }
@@ -429,10 +429,10 @@ void __fastcall BattleResultBondsIconComponent__StartUpdateBuddyPoint(
   const MethodInfo *v4; // x1
   BattleResultBuddyPointInfoComponent_o *v5; // x0
 
-  if ( (byte_43520E7 & 1) == 0 )
+  if ( (byte_438B7AA & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43520E7 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438B7AA = 1;
   }
   buddyPointInfo = (UnityEngine_Object_o *)this->fields.buddyPointInfo;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -444,7 +444,7 @@ void __fastcall BattleResultBondsIconComponent__StartUpdateBuddyPoint(
   {
     v5 = this->fields.buddyPointInfo;
     if ( !v5 )
-      sub_B7076C(0LL, v4);
+      sub_B7769C(0LL, v4);
     BattleResultBuddyPointInfoComponent__StartUpdateBuddyPoint(v5, v4);
   }
 }
@@ -478,15 +478,15 @@ bool __fastcall BattleResultBondsIconComponent__changeGauge(
 
   v3 = *(long double *)&val;
   v4 = this;
-  if ( (byte_43520E5 & 1) == 0 )
+  if ( (byte_438B7A8 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
-    sub_B70694(&IFriendshipGauge_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&StringLiteral_24235/*"ーーー"*/);
-    sub_B70694(&StringLiteral_24357/*"＋ "*/);
-    this = (BattleResultBondsIconComponent_o *)sub_B70694(&StringLiteral_9376/*"N0"*/);
-    byte_43520E5 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+    sub_B775C4(&IFriendshipGauge_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&StringLiteral_24339/*"ーーー"*/);
+    sub_B775C4(&StringLiteral_24461/*"＋ "*/);
+    this = (BattleResultBondsIconComponent_o *)sub_B775C4(&StringLiteral_9434/*"N0"*/);
+    byte_438B7A8 = 1;
   }
   v21[0] = 0;
   v20[0] = 0;
@@ -513,7 +513,7 @@ bool __fastcall BattleResultBondsIconComponent__changeGauge(
   else
   {
 LABEL_9:
-    p_method = sub_B08590(v4->fields.gaugeComponent, IFriendshipGauge_TypeInfo, 4LL);
+    p_method = sub_B0F4C0(v4->fields.gaugeComponent, IFriendshipGauge_TypeInfo, 4LL);
   }
   v19 = (*(__int64 (__fastcall **)(struct IFriendshipGauge_o *, bool *, char *, char *, _QWORD, long double))p_method)(
           gaugeComponent,
@@ -585,13 +585,13 @@ LABEL_9:
       {
         if ( !v13 )
           goto LABEL_46;
-        UILabel__set_text(v4->fields.atlabel, (System_String_o *)StringLiteral_24235/*"ーーー"*/, 0LL);
+        UILabel__set_text(v4->fields.atlabel, (System_String_o *)StringLiteral_24339/*"ーーー"*/, 0LL);
       }
       else
       {
-        v14 = System_Int32__ToString_39283984((int32_t)&v19, (System_String_o *)StringLiteral_9376/*"N0"*/, 0LL);
-        this = (BattleResultBondsIconComponent_o *)System_String__Concat_44758168(
-                                                     (System_String_o *)StringLiteral_24357/*"＋ "*/,
+        v14 = System_Int32__ToString_39547236((int32_t)&v19, (System_String_o *)StringLiteral_9434/*"N0"*/, 0LL);
+        this = (BattleResultBondsIconComponent_o *)System_String__Concat_44901936(
+                                                     (System_String_o *)StringLiteral_24461/*"＋ "*/,
                                                      v14,
                                                      0LL);
         if ( !v13 )
@@ -634,7 +634,7 @@ LABEL_9:
       {
         this = (BattleResultBondsIconComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                      (UnityEngine_GameObject_o *)this,
-                                                     (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                                                     (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
         if ( this )
         {
           v18 = (UITweener_o *)this;
@@ -645,7 +645,7 @@ LABEL_9:
       }
     }
 LABEL_46:
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   }
   return v20[0] != 0;
 }
@@ -754,11 +754,11 @@ bool __fastcall BattleResultBondsIconComponent__setNextServantData(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v20; // 0:x0.16
 
   v4 = this;
-  if ( (byte_43520E4 & 1) == 0 )
+  if ( (byte_438B7A7 & 1) == 0 )
   {
-    sub_B70694(&IFriendshipGauge_TypeInfo);
-    this = (BattleResultBondsIconComponent_o *)sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_43520E4 = 1;
+    sub_B775C4(&IFriendshipGauge_TypeInfo);
+    this = (BattleResultBondsIconComponent_o *)sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_438B7A7 = 1;
   }
   if ( !v4->fields.isUse )
     return 0;
@@ -774,8 +774,8 @@ bool __fastcall BattleResultBondsIconComponent__setNextServantData(
   }
   *(_QWORD *)&v20.fields.currentCryptoKey = v6;
   *(_QWORD *)&v20.fields.fakeValue = v7;
-  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v20, 0LL);
-  this = (BattleResultBondsIconComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(
+  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v20, 0LL);
+  this = (BattleResultBondsIconComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(
                                                userSvtCol->fields.friendshipRank,
                                                0LL);
   if ( !gaugeComponent )
@@ -798,24 +798,24 @@ bool __fastcall BattleResultBondsIconComponent__setNextServantData(
   else
   {
 LABEL_13:
-    p_method = sub_B08590(gaugeComponent, IFriendshipGauge_TypeInfo, 1LL);
+    p_method = sub_B0F4C0(gaugeComponent, IFriendshipGauge_TypeInfo, 1LL);
   }
   (*(void (__fastcall **)(struct IFriendshipGauge_o *, _QWORD, _QWORD, _QWORD))p_method)(
     gaugeComponent,
     v8,
     v10,
     *(_QWORD *)(p_method + 8));
-  v4->fields.nextFriendShipRank = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(
+  v4->fields.nextFriendShipRank = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(
                                     userSvtCol->fields.friendshipRank,
                                     0LL);
-  this = (BattleResultBondsIconComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(
+  this = (BattleResultBondsIconComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(
                                                userSvtCol->fields.friendship,
                                                0LL);
   v15 = v4->fields.gaugeComponent;
   v4->fields.nextFriendship = (int)this;
   if ( !v15 )
 LABEL_24:
-    sub_B7076C(this, userSvtCol);
+    sub_B7769C(this, userSvtCol);
   v16 = v15->klass;
   if ( *(_WORD *)&v15->klass->_2.bitflags1 )
   {
@@ -833,7 +833,7 @@ LABEL_24:
   else
   {
 LABEL_21:
-    v19 = sub_B08590(v15, IFriendshipGauge_TypeInfo, 2LL);
+    v19 = sub_B0F4C0(v15, IFriendshipGauge_TypeInfo, 2LL);
   }
   return (*(__int64 (__fastcall **)(struct IFriendshipGauge_o *, _QWORD))v19)(v15, *(_QWORD *)(v19 + 8));
 }
@@ -893,15 +893,15 @@ void __fastcall BattleResultBondsIconComponent__setServantData(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v57; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v58; // 0:x0.16
 
-  if ( (byte_43520E2 & 1) == 0 )
+  if ( (byte_438B7A5 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_B70694(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_B70694(&IFriendshipGauge_TypeInfo);
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43520E2 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_B775C4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_B775C4(&IFriendshipGauge_TypeInfo);
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438B7A5 = 1;
   }
   if ( !userSvtCol || !userSvtEnt )
   {
@@ -943,7 +943,7 @@ void __fastcall BattleResultBondsIconComponent__setServantData(
   }
   *(_QWORD *)&v55.fields.currentCryptoKey = v17;
   *(_QWORD *)&v55.fields.fakeValue = v16;
-  v18 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v55, 0LL);
+  v18 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v55, 0LL);
   faceIcon = this->fields.faceIcon;
   v21 = *(_QWORD *)&userSvtEnt->fields.svtId.fields.currentCryptoKey;
   v20 = *(_QWORD *)&userSvtEnt->fields.svtId.fields.fakeValue;
@@ -956,7 +956,7 @@ void __fastcall BattleResultBondsIconComponent__setServantData(
   }
   *(_QWORD *)&v56.fields.currentCryptoKey = v21;
   *(_QWORD *)&v56.fields.fakeValue = v20;
-  v23 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v56, 0LL);
+  v23 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v56, 0LL);
   if ( (iconLimitCnt & 0x80000000) != 0 )
     iconLimitCnt = UserServantEntity__getIconLimitCount(userSvtEnt, 0, 0LL);
   exceedCount = userSvtEnt->fields.exceedCount;
@@ -964,7 +964,7 @@ void __fastcall BattleResultBondsIconComponent__setServantData(
   root = (UnityEngine_GameObject_o *)UserServantEntity__IsEventJoin(userSvtEnt, 0LL);
   if ( !faceIcon )
     goto LABEL_53;
-  ServantFaceIconComponent__Set_31478240(
+  ServantFaceIconComponent__Set_31755472(
     faceIcon,
     v23,
     afterLimitCnt,
@@ -981,12 +981,12 @@ void __fastcall BattleResultBondsIconComponent__setServantData(
     0,
     0,
     0LL);
-  root = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  root = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !root )
     goto LABEL_53;
   MasterData_WarQuestSelectionMaster = DataManager__GetMasterData_WarQuestSelectionMaster_(
                                          (DataManager_o *)root,
-                                         (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                         (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantMaster___);
   v28 = *(_QWORD *)&userSvtCol->fields.svtId.fields.currentCryptoKey;
   v27 = *(_QWORD *)&userSvtCol->fields.svtId.fields.fakeValue;
   v29 = (DataMasterBase_WarMaster__WarEntity__int__o *)MasterData_WarQuestSelectionMaster;
@@ -997,13 +997,13 @@ void __fastcall BattleResultBondsIconComponent__setServantData(
   }
   *(_QWORD *)&v57.fields.currentCryptoKey = v28;
   *(_QWORD *)&v57.fields.fakeValue = v27;
-  root = (UnityEngine_GameObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v57, 0LL);
+  root = (UnityEngine_GameObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v57, 0LL);
   if ( !v29 )
     goto LABEL_53;
   root = (UnityEngine_GameObject_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                        v29,
                                        (int32_t)root,
-                                       (const MethodInfo_21C0440 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                       (const MethodInfo_21FB894 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   if ( !root )
     goto LABEL_53;
   v30 = root;
@@ -1017,7 +1017,7 @@ void __fastcall BattleResultBondsIconComponent__setServantData(
   }
   *(_QWORD *)&v58.fields.currentCryptoKey = v32;
   *(_QWORD *)&v58.fields.fakeValue = v31;
-  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v58, 0LL);
+  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v58, 0LL);
   v33 = *(_OWORD *)&userSvtEnt->fields.id.fields.fakeValue;
   *(_OWORD *)&v54.fields.currentCryptoKey = *(_OWORD *)&userSvtEnt->fields.id.fields.currentCryptoKey;
   *(_OWORD *)&v54.fields.fakeValue = v33;
@@ -1027,14 +1027,14 @@ void __fastcall BattleResultBondsIconComponent__setServantData(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   }
   v53 = v54;
-  this->fields.userSvtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45183140(&v53, 0LL);
+  this->fields.userSvtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45429112(&v53, 0LL);
   this->fields.svtLimit = afterLimitCnt;
   this->fields.svtLv = userSvtEnt->fields.lv;
   this->fields.friendshipId = (int32_t)v30[4].klass;
-  this->fields.friendship = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(
+  this->fields.friendship = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(
                               userSvtCol->fields.friendship,
                               0LL);
-  this->fields.friendshipRank = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(
+  this->fields.friendshipRank = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(
                                   userSvtCol->fields.friendshipRank,
                                   0LL);
   root = (UnityEngine_GameObject_o *)this->fields.gaugeSelector;
@@ -1048,7 +1048,7 @@ void __fastcall BattleResultBondsIconComponent__setServantData(
             userSvtCol->fields.friendshipExceedCount,
             0LL);
   this->fields.gaugeComponent = Gauge;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.gaugeComponent,
     (System_Int32_array **)Gauge,
     v35,
@@ -1082,7 +1082,7 @@ void __fastcall BattleResultBondsIconComponent__setServantData(
   else
   {
 LABEL_40:
-    p_method = sub_B08590(gaugeComponent, IFriendshipGauge_TypeInfo, 0LL);
+    p_method = sub_B0F4C0(gaugeComponent, IFriendshipGauge_TypeInfo, 0LL);
   }
   root = (UnityEngine_GameObject_o *)(*(__int64 (__fastcall **)(struct IFriendshipGauge_o *, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD))p_method)(
                                        gaugeComponent,
@@ -1112,6 +1112,6 @@ LABEL_40:
       }
     }
 LABEL_53:
-    sub_B7076C(root, userSvtCol);
+    sub_B7769C(root, userSvtCol);
   }
 }

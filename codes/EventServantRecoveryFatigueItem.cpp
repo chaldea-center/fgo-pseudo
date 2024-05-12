@@ -17,21 +17,21 @@ void __fastcall EventServantRecoveryFatigueItem___cctor(const MethodInfo *method
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
 
-  if ( (byte_435567C & 1) == 0 )
+  if ( (byte_438ECF4 & 1) == 0 )
   {
-    sub_B70694(&EventServantRecoveryFatigueItem_TypeInfo);
-    sub_B70694(&StringLiteral_16783/*"available_0"*/);
-    sub_B70694(&StringLiteral_18852/*"event_recvoer_servant_bg02"*/);
-    byte_435567C = 1;
+    sub_B775C4(&EventServantRecoveryFatigueItem_TypeInfo);
+    sub_B775C4(&StringLiteral_16865/*"available_0"*/);
+    sub_B775C4(&StringLiteral_18940/*"event_recvoer_servant_bg02"*/);
+    byte_438ECF4 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventServantRecoveryFatigueItem_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_18852/*"event_recvoer_servant_bg02"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18852/*"event_recvoer_servant_bg02"*/;
-  sub_B70630(static_fields, v8, v1, v2, v3, v4, v5, v6);
+  v8 = (System_Int32_array **)StringLiteral_18940/*"event_recvoer_servant_bg02"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18940/*"event_recvoer_servant_bg02"*/;
+  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
   v9 = EventServantRecoveryFatigueItem_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_16783/*"available_0"*/;
-  v9->OPEN_CLIP_NAME = (struct System_String_o *)StringLiteral_16783/*"available_0"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v9->OPEN_CLIP_NAME, v10, v11, v12, v13, v14, v15, v16);
+  v10 = (System_Int32_array **)StringLiteral_16865/*"available_0"*/;
+  v9->OPEN_CLIP_NAME = (struct System_String_o *)StringLiteral_16865/*"available_0"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v9->OPEN_CLIP_NAME, v10, v11, v12, v13, v14, v15, v16);
 }
 
 
@@ -72,10 +72,10 @@ void __fastcall EventServantRecoveryFatigueItem__Init(
   UnityEngine_Object_o *simpleAnimation; // x20
   UnityEngine_Object_o *animation; // x20
 
-  if ( (byte_4355676 & 1) == 0 )
+  if ( (byte_438ECEE & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355676 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438ECEE = 1;
   }
   servantFaceIcon = (UnityEngine_Component_o *)this->fields.servantFaceIcon;
   if ( !servantFaceIcon )
@@ -99,15 +99,15 @@ void __fastcall EventServantRecoveryFatigueItem__Init(
     goto LABEL_32;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, 0, 0LL);
   this->fields.userServantEntity = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.userServantEntity, 0LL, v4, v5, v6, v7, v8, v9);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.userServantEntity, 0LL, v4, v5, v6, v7, v8, v9);
   this->fields.isFatigueRecover = 0;
   this->fields.index = -1;
   this->fields.fatigueTime = -1LL;
   this->fields.updateTime = -1LL;
   this->fields.clickCallback = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.clickCallback, 0LL, v10, v11, v12, v13, v14, v15);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.clickCallback, 0LL, v10, v11, v12, v13, v14, v15);
   this->fields.eventFatigueRecoveryEnt = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.eventFatigueRecoveryEnt, 0LL, v16, v17, v18, v19, v20, v21);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.eventFatigueRecoveryEnt, 0LL, v16, v17, v18, v19, v20, v21);
   nameSprite = (UnityEngine_Object_o *)this->fields.nameSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -150,7 +150,7 @@ LABEL_26:
       return;
     }
 LABEL_32:
-    sub_B7076C(servantFaceIcon, method);
+    sub_B7769C(servantFaceIcon, method);
   }
   animation = (UnityEngine_Object_o *)this->fields.animation;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -175,10 +175,10 @@ bool __fastcall EventServantRecoveryFatigueItem__IsAnimation(
   UnityEngine_Object_o *simpleAnimation; // x20
   UnityEngine_Object_o *animation; // x19
 
-  if ( (byte_435567A & 1) == 0 )
+  if ( (byte_438ECF2 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_435567A = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438ECF2 = 1;
   }
   simpleAnimation = (UnityEngine_Object_o *)this->fields.simpleAnimation;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -205,11 +205,11 @@ void __fastcall EventServantRecoveryFatigueItem__OnClickItem(
   __int64 v3; // x1
   System_Action_int__o *clickCallback; // x0
 
-  if ( (byte_4355679 & 1) == 0 )
+  if ( (byte_438ECF1 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Action_int__Invoke__);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_4355679 = 1;
+    sub_B775C4(&Method_System_Action_int__Invoke__);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438ECF1 = 1;
   }
   if ( this->fields.clickCallback )
   {
@@ -221,11 +221,11 @@ void __fastcall EventServantRecoveryFatigueItem__OnClickItem(
     SoundManager__playSystemSe(0, 0LL);
     clickCallback = this->fields.clickCallback;
     if ( !clickCallback )
-      sub_B7076C(0LL, v3);
+      sub_B7769C(0LL, v3);
     System_Action_int___Invoke(
       clickCallback,
       this->fields.index,
-      (const MethodInfo_264ABCC *)Method_System_Action_int__Invoke__);
+      (const MethodInfo_269F2EC *)Method_System_Action_int__Invoke__);
   }
 }
 
@@ -259,12 +259,12 @@ void __fastcall EventServantRecoveryFatigueItem__SetAnimationPlay(
   int32_t v24; // [xsp+Ch] [xbp-24h] BYREF
 
   v24 = no;
-  if ( (byte_435567B & 1) == 0 )
+  if ( (byte_438ECF3 & 1) == 0 )
   {
-    sub_B70694(&EventServantRecoveryFatigueItem_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&SimpleAnimation_State_TypeInfo);
-    byte_435567B = 1;
+    sub_B775C4(&EventServantRecoveryFatigueItem_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&SimpleAnimation_State_TypeInfo);
+    byte_438ECF3 = 1;
   }
   if ( EventServantRecoveryFatigueItem__IsAnimation(this, *(const MethodInfo **)&no) )
   {
@@ -277,7 +277,7 @@ void __fastcall EventServantRecoveryFatigueItem__SetAnimationPlay(
     }
     OPEN_CLIP_NAME = v4->static_fields->OPEN_CLIP_NAME;
     v6 = System_Int32__ToString((int32_t)&v24, 0LL);
-    v7 = System_String__Concat_44758168(OPEN_CLIP_NAME, v6, 0LL);
+    v7 = System_String__Concat_44901936(OPEN_CLIP_NAME, v6, 0LL);
     simpleAnimation = (UnityEngine_Object_o *)this->fields.simpleAnimation;
     v9 = v7;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -311,7 +311,7 @@ void __fastcall EventServantRecoveryFatigueItem__SetAnimationPlay(
       else
       {
 LABEL_17:
-        v16 = sub_B08590(Item, SimpleAnimation_State_TypeInfo, 14LL);
+        v16 = sub_B0F4C0(Item, SimpleAnimation_State_TypeInfo, 14LL);
       }
       v21 = (UnityEngine_AnimationClip_o *)(*(__int64 (__fastcall **)(SimpleAnimation_o *, _QWORD))v16)(
                                              v13,
@@ -338,14 +338,14 @@ LABEL_17:
               if ( Item )
               {
                 name = UnityEngine_Object__get_name((UnityEngine_Object_o *)Item, 0LL);
-                SimpleAnimation__Play_16672920(v22, name, 0LL);
+                SimpleAnimation__Play_16815192(v22, name, 0LL);
                 return;
               }
             }
           }
         }
 LABEL_43:
-        sub_B7076C(Item, v10);
+        sub_B7769C(Item, v10);
       }
     }
     else
@@ -384,7 +384,7 @@ LABEL_43:
                 if ( Item )
                 {
                   v20 = UnityEngine_Object__get_name((UnityEngine_Object_o *)Item, 0LL);
-                  UnityEngine_Animation__Play_51542184(v19, v20, 0LL);
+                  UnityEngine_Animation__Play_51745976(v19, v20, 0LL);
                   return;
                 }
               }
@@ -446,27 +446,27 @@ void __fastcall EventServantRecoveryFatigueItem__SetServantInfo(
   int64_t recoverAt; // [xsp+8h] [xbp-48h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v48; // 0:x0.16
 
-  if ( (byte_4355677 & 1) == 0 )
+  if ( (byte_438ECEF & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_EventFatigueRecoveryMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_UserEventServantFatigueMaster___);
-    sub_B70694(&EventRewardRootComponent_TypeInfo);
-    sub_B70694(&EventServantRecoveryFatigueItem_TypeInfo);
-    sub_B70694(&IconLabelInfo_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&StringLiteral_11913/*"SERVANT_RECOVERY_FATIGUE_REST_TIME"*/);
-    byte_4355677 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_EventFatigueRecoveryMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserEventServantFatigueMaster___);
+    sub_B775C4(&EventRewardRootComponent_TypeInfo);
+    sub_B775C4(&EventServantRecoveryFatigueItem_TypeInfo);
+    sub_B775C4(&IconLabelInfo_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&StringLiteral_11977/*"SERVANT_RECOVERY_FATIGUE_REST_TIME"*/);
+    byte_438ECEF = 1;
   }
   recoverAt = 0LL;
   this->fields.isFatigueRecover = 0;
   this->fields.fatigueTime = -1LL;
   this->fields.userServantEntity = userServantEntity;
   p_userServantEntity = &this->fields.userServantEntity;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.userServantEntity,
     (System_Int32_array **)userServantEntity,
     *(System_String_array ***)&eventId,
@@ -479,7 +479,7 @@ void __fastcall EventServantRecoveryFatigueItem__SetServantInfo(
   if ( callback )
   {
     this->fields.clickCallback = callback;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.clickCallback,
       (System_Int32_array **)callback,
       v14,
@@ -489,12 +489,12 @@ void __fastcall EventServantRecoveryFatigueItem__SetServantInfo(
       v18,
       v19);
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_78;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventFatigueRecoveryMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventFatigueRecoveryMaster___);
   if ( !Instance )
     goto LABEL_78;
   EntityDefinitely = EventFatigueRecoveryMaster__GetEntityDefinitely(
@@ -503,7 +503,7 @@ void __fastcall EventServantRecoveryFatigueItem__SetServantInfo(
                        this->fields.index,
                        0LL);
   this->fields.eventFatigueRecoveryEnt = EntityDefinitely;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.eventFatigueRecoveryEnt,
     (System_Int32_array **)EntityDefinitely,
     v23,
@@ -514,19 +514,19 @@ void __fastcall EventServantRecoveryFatigueItem__SetServantInfo(
     v28);
   if ( userServantEntity )
   {
-    v29 = (IconLabelInfo_o *)sub_B70764(IconLabelInfo_TypeInfo);
+    v29 = (IconLabelInfo_o *)sub_B77694(IconLabelInfo_TypeInfo);
     IconLabelInfo___ctor(v29, 0LL);
     lv = userServantEntity->fields.lv;
     Instance = (DataManager_o *)UserServantEntity__getLevelMax(userServantEntity, 0LL);
     if ( !v29 )
       goto LABEL_78;
-    IconLabelInfo__Set_27789840(v29, 2, lv, (int32_t)Instance, 0, 0, 0, 0, 0LL);
-    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    IconLabelInfo__Set_28141596(v29, 2, lv, (int32_t)Instance, 0, 0, 0, 0, 0LL);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_78;
     Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                   Instance,
-                                  (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserEventServantFatigueMaster___);
+                                  (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserEventServantFatigueMaster___);
     v31 = *p_userServantEntity;
     if ( !*p_userServantEntity )
       goto LABEL_78;
@@ -540,7 +540,7 @@ void __fastcall EventServantRecoveryFatigueItem__SetServantInfo(
     }
     *(_QWORD *)&v48.fields.currentCryptoKey = v34;
     *(_QWORD *)&v48.fields.fakeValue = v33;
-    Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v48, 0LL);
+    Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v48, 0LL);
     if ( !v32 )
       goto LABEL_78;
     if ( UserEventServantFatigueMaster__GetFatigueInfo(
@@ -574,7 +574,7 @@ void __fastcall EventServantRecoveryFatigueItem__SetServantInfo(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v44 = LocalizationManager__Get((System_String_o *)StringLiteral_11913/*"SERVANT_RECOVERY_FATIGUE_REST_TIME"*/, 0LL);
+        v44 = LocalizationManager__Get((System_String_o *)StringLiteral_11977/*"SERVANT_RECOVERY_FATIGUE_REST_TIME"*/, 0LL);
         Instance = (DataManager_o *)System_String__Format(v44, (Il2CppObject *)RestTime4, 0LL);
         if ( !fatigueRecoveryTimeLabel )
           goto LABEL_78;
@@ -607,7 +607,7 @@ LABEL_59:
     Instance = (DataManager_o *)this->fields.servantFaceIcon;
     if ( !Instance )
       goto LABEL_78;
-    ServantFaceIconComponent__Set_31406992((ServantFaceIconComponent_o *)Instance, userServantEntity, v29, 0LL, 0LL);
+    ServantFaceIconComponent__Set_31684224((ServantFaceIconComponent_o *)Instance, userServantEntity, v29, 0LL, 0LL);
     frameSprite = (UnityEngine_Object_o *)this->fields.frameSprite;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -655,7 +655,7 @@ LABEL_76:
       }
     }
 LABEL_78:
-    sub_B7076C(Instance, v21);
+    sub_B7769C(Instance, v21);
   }
   Instance = (DataManager_o *)this->fields.servantFaceIcon;
   if ( !Instance )
@@ -731,10 +731,10 @@ void __fastcall EventServantRecoveryFatigueItem__Update(
   int64_t Time; // x0
   const MethodInfo *v4; // x1
 
-  if ( (byte_4355675 & 1) == 0 )
+  if ( (byte_438ECED & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4355675 = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_438ECED = 1;
   }
   if ( (this->fields.updateTime & 0x8000000000000000LL) == 0 && this->fields.userServantEntity )
   {
@@ -764,11 +764,11 @@ void __fastcall EventServantRecoveryFatigueItem__UpdateDisp(
   UILabel_o *v7; // x19
   System_String_o *v8; // x0
 
-  if ( (byte_4355678 & 1) == 0 )
+  if ( (byte_438ECF0 & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_11913/*"SERVANT_RECOVERY_FATIGUE_REST_TIME"*/);
-    byte_4355678 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_11977/*"SERVANT_RECOVERY_FATIGUE_REST_TIME"*/);
+    byte_438ECF0 = 1;
   }
   fatigueTime = this->fields.fatigueTime;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -793,7 +793,7 @@ void __fastcall EventServantRecoveryFatigueItem__UpdateDisp(
       }
     }
 LABEL_15:
-    sub_B7076C(fatigueRecoveryTimeLabel, v5);
+    sub_B7769C(fatigueRecoveryTimeLabel, v5);
   }
   v7 = this->fields.fatigueRecoveryTimeLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -801,7 +801,7 @@ LABEL_15:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_11913/*"SERVANT_RECOVERY_FATIGUE_REST_TIME"*/, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_11977/*"SERVANT_RECOVERY_FATIGUE_REST_TIME"*/, 0LL);
   fatigueRecoveryTimeLabel = (UnityEngine_Component_o *)System_String__Format(v8, (Il2CppObject *)RestTime4, 0LL);
   if ( !v7 )
     goto LABEL_15;
@@ -825,7 +825,7 @@ int32_t __fastcall EventServantRecoveryFatigueItem__get_Idx(
 
   eventFatigueRecoveryEnt = this->fields.eventFatigueRecoveryEnt;
   if ( !eventFatigueRecoveryEnt )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return eventFatigueRecoveryEnt->fields.idx;
 }
 
@@ -846,7 +846,7 @@ System_Int32_array *__fastcall EventServantRecoveryFatigueItem__get_Individualit
 
   eventFatigueRecoveryEnt = this->fields.eventFatigueRecoveryEnt;
   if ( !eventFatigueRecoveryEnt )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return eventFatigueRecoveryEnt->fields.targetIndividuality;
 }
 
@@ -859,7 +859,7 @@ System_String_array *__fastcall EventServantRecoveryFatigueItem__get_Individuali
 
   eventFatigueRecoveryEnt = this->fields.eventFatigueRecoveryEnt;
   if ( !eventFatigueRecoveryEnt )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return eventFatigueRecoveryEnt->fields.individualityName;
 }
 
@@ -886,7 +886,7 @@ System_String_o *__fastcall EventServantRecoveryFatigueItem__get_Name(
 
   eventFatigueRecoveryEnt = this->fields.eventFatigueRecoveryEnt;
   if ( !eventFatigueRecoveryEnt )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   return eventFatigueRecoveryEnt->fields.name;
 }
 

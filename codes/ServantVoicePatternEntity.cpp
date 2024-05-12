@@ -1,13 +1,13 @@
 void __fastcall ServantVoicePatternEntity___ctor(ServantVoicePatternEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4354470 & 1) == 0 )
+  if ( (byte_438DD2E & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_4354470 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438DD2E = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -29,14 +29,14 @@ bool __fastcall ServantVoicePatternEntity__CheckAddCond(
   ServantLimitImageMaster_o *v17; // x21
   const MethodInfo *v18; // x2
 
-  if ( (byte_435446E & 1) == 0 )
+  if ( (byte_438DD2C & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&VoiceCondType_TypeInfo);
-    byte_435446E = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&VoiceCondType_TypeInfo);
+    byte_438DD2C = 1;
   }
   if ( targetValue == -1 )
   {
@@ -66,7 +66,7 @@ LABEL_16:
         {
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
         }
-        Master_WarQuestSelectionMaster = (UserServantCollectionMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+        Master_WarQuestSelectionMaster = (UserServantCollectionMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
         if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !NetworkManager_TypeInfo->_2.cctor_finished )
         {
@@ -98,7 +98,7 @@ LABEL_25:
         {
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
         }
-        v17 = (ServantLimitImageMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+        v17 = (ServantLimitImageMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
         FixSvtId = (UserServantCollectionEntity_o *)ServantVoicePatternEntity__GetFixSvtId(this, limitCount, v18);
         if ( v17 )
         {
@@ -110,7 +110,7 @@ LABEL_25:
           goto LABEL_25;
         }
 LABEL_33:
-        sub_B7076C(FixSvtId, v15);
+        sub_B7769C(FixSvtId, v15);
       }
     }
     targetValue = -1;
@@ -133,16 +133,16 @@ System_String_o *__fastcall ServantVoicePatternEntity__CreatePK(
         System_String_o *voiceId,
         const MethodInfo *method)
 {
-  if ( (byte_435446D & 1) == 0 )
+  if ( (byte_438DD2B & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int__string___);
-    byte_435446D = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int__string___);
+    byte_438DD2B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__string_(
            id,
            svtId,
            voiceId,
-           (const MethodInfo_1CA28E4 *)Method_DataEntityBase_CreateMultiplePK_int__int__string___);
+           (const MethodInfo_1D17734 *)Method_DataEntityBase_CreateMultiplePK_int__int__string___);
 }
 
 
@@ -184,12 +184,12 @@ int32_t __fastcall ServantVoicePatternEntity__GetFixSvtId(
   const MethodInfo *v13; // x3
   ServantTransformEntity_o *v14; // x0
 
-  if ( (byte_435446F & 1) == 0 )
+  if ( (byte_438DD2D & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMaster_ServantTransformMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    byte_435446F = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMaster_ServantTransformMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    byte_438DD2D = 1;
   }
   svtId = this->fields.svtId;
   p_svtId = &this->fields.svtId;
@@ -215,9 +215,9 @@ int32_t __fastcall ServantVoicePatternEntity__GetFixSvtId(
   {
     if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_WarQuestSelectionMaster = (ServantTransformMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ServantTransformMaster___);
+    Master_WarQuestSelectionMaster = (ServantTransformMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ServantTransformMaster___);
     if ( !Master_WarQuestSelectionMaster )
-      sub_B7076C(0LL, v12);
+      sub_B7769C(0LL, v12);
     v14 = ServantTransformMaster__GetBeforeTransformEntity(
             Master_WarQuestSelectionMaster,
             *p_svtId,

@@ -13,26 +13,26 @@ void __fastcall VoiceCondType___cctor(const MethodInfo *method)
   BattleServantConfConponent_o *static_fields; // x0
   __int64 v12; // x0
 
-  if ( (byte_4357C2A & 1) == 0 )
+  if ( (byte_43912A8 & 1) == 0 )
   {
-    sub_B70694(&GameEventType_TYPE___TypeInfo);
-    sub_B70694(&VoiceCondType_TypeInfo);
-    byte_4357C2A = 1;
+    sub_B775C4(&GameEventType_TYPE___TypeInfo);
+    sub_B775C4(&VoiceCondType_TypeInfo);
+    byte_43912A8 = 1;
   }
-  v1 = (System_Int32_array **)sub_B706AC(GameEventType_TYPE___TypeInfo, 2LL);
+  v1 = (System_Int32_array **)sub_B775DC(GameEventType_TYPE___TypeInfo, 2LL);
   if ( !v1 )
-    sub_B7076C(0LL, v2);
+    sub_B7769C(0LL, v2);
   v9 = *((_DWORD *)v1 + 6);
   v10 = v1;
   if ( !v9 || (*((_DWORD *)v1 + 8) = 12, v9 == 1) )
   {
-    v12 = sub_B70798(v1);
-    sub_B70738(v12, 0LL);
+    v12 = sub_B776C8(v1);
+    sub_B77668(v12, 0LL);
   }
   *((_DWORD *)v1 + 9) = 22;
   static_fields = (BattleServantConfConponent_o *)VoiceCondType_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v10;
-  sub_B70630(static_fields, v10, v3, v4, v5, v6, v7, v8);
+  sub_B77560(static_fields, v10, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -62,16 +62,16 @@ bool __fastcall VoiceCondType__IsSatisfyBirthdayCondition(const MethodInfo *meth
   System_DateTime_o v17; // 0:x0.8
   System_DateTime_o v18; // 0:x0.8
 
-  if ( (byte_4357C20 & 1) == 0 )
+  if ( (byte_439129E & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4357C20 = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_439129E = 1;
   }
   dateData = 0LL;
   v9 = 0LL;
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !SelfUserGame )
-    sub_B7076C(0LL, v2);
+    sub_B7769C(0LL, v2);
   birthDay = SelfUserGame->fields.birthDay;
   if ( birthDay < 1 )
     return 0;
@@ -81,7 +81,7 @@ bool __fastcall VoiceCondType__IsSatisfyBirthdayCondition(const MethodInfo *meth
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   dateData = NetworkManager__getServerDateTime(0LL).fields.dateData;
-  v9 = NetworkManager__getDateTime_25947808(birthDay, 0LL).fields.dateData;
+  v9 = NetworkManager__getDateTime_26207384(birthDay, 0LL).fields.dateData;
   v11.fields.dateData = (uint64_t)&v9;
   if ( System_DateTime__get_Month(v11, 0LL) == 2 )
   {
@@ -92,7 +92,7 @@ bool __fastcall VoiceCondType__IsSatisfyBirthdayCondition(const MethodInfo *meth
       Year = System_DateTime__get_Year(v13, 0LL);
       v8 = 0LL;
       v14.fields.dateData = (uint64_t)&v8;
-      System_DateTime___ctor_42968960(v14, Year, 2, 29, 0LL);
+      System_DateTime___ctor_15683012(v14, Year, 2, 29, 0LL);
       v9 = v8;
     }
   }
@@ -119,10 +119,10 @@ bool __fastcall VoiceCondType__IsSatisfyCondition(
   bool result; // w0
   bool isPlayable[4]; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4357C29 & 1) == 0 )
+  if ( (byte_43912A7 & 1) == 0 )
   {
-    sub_B70694(&VoiceCondType_TypeInfo);
-    byte_4357C29 = 1;
+    sub_B775C4(&VoiceCondType_TypeInfo);
+    byte_43912A7 = 1;
   }
   result = 0;
   isPlayable[0] = 0;
@@ -217,26 +217,26 @@ bool __fastcall VoiceCondType__IsSatisfyEventCondition(const MethodInfo *method)
   System_Collections_Generic_List_Enumerator_T__o v18; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_T__o v19; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4357C21 & 1) == 0 )
+  if ( (byte_439129F & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_B70694(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventEntity____Dispose__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventEntity____MoveNext__);
-    sub_B70694(&Method_System_Collections_Generic_List_Enumerator_EventEntity____get_Current__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventEntity____GetEnumerator__);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&VoiceCondType_TypeInfo);
-    byte_4357C21 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_EventDetailMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_B775C4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventEntity____Dispose__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventEntity____MoveNext__);
+    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventEntity____get_Current__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventEntity____GetEnumerator__);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&VoiceCondType_TypeInfo);
+    byte_439129F = 1;
   }
   memset(&v19, 0, sizeof(v19));
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_30;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventMaster___);
   v3 = (EventMaster_o *)Instance;
   if ( (BYTE3(VoiceCondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !VoiceCondType_TypeInfo->_2.cctor_finished )
@@ -249,27 +249,27 @@ bool __fastcall VoiceCondType__IsSatisfyEventCondition(const MethodInfo *method)
                               VoiceCondType_TypeInfo->static_fields->EVENT_TYPES_VOICE,
                               0,
                               0LL),
-        (Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
+        (Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventDetailMaster___),
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventDetailMaster___),
         !EnableEntityLists) )
   {
 LABEL_30:
-    sub_B7076C(Instance, v2);
+    sub_B7769C(Instance, v2);
   }
   v5 = (DataMasterBase_WarMaster__WarEntity__int__o *)Instance;
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v18,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)EnableEntityLists,
-    (const MethodInfo_3026504 *)Method_System_Collections_Generic_List_EventEntity____GetEnumerator__);
+    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_EventEntity____GetEnumerator__);
   v19 = v18;
   while ( 1 )
   {
 LABEL_11:
     isEventVoicePlay = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
                          &v19,
-                         (const MethodInfo_22212CC *)Method_System_Collections_Generic_List_Enumerator_EventEntity____MoveNext__);
+                         (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_EventEntity____MoveNext__);
     if ( !isEventVoicePlay )
     {
       v15 = 0;
@@ -290,23 +290,23 @@ LABEL_11:
   if ( !(_DWORD)monitor )
   {
 LABEL_23:
-    v14 = sub_B70798(isEventVoicePlay);
-    sub_B70738(v14, 0LL);
+    v14 = sub_B776C8(isEventVoicePlay);
+    sub_B77668(v14, 0LL);
   }
   v10 = 0;
   while ( 1 )
   {
     v11 = *((_QWORD *)&current[2].klass + (int)v10);
     if ( !v11 )
-      sub_B7076C(isEventVoicePlay, v7);
+      sub_B7769C(isEventVoicePlay, v7);
     if ( !v5 )
-      sub_B7076C(isEventVoicePlay, v7);
+      sub_B7769C(isEventVoicePlay, v7);
     Entity = (EventDetailEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                       v5,
                                       *(_DWORD *)(v11 + 16),
-                                      (const MethodInfo_21C0440 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+                                      (const MethodInfo_21FB894 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
     if ( !Entity )
-      sub_B7076C(0LL, v13);
+      sub_B7769C(0LL, v13);
     isEventVoicePlay = EventDetailEntity__isEventVoicePlay(Entity, 0LL);
     if ( isEventVoicePlay )
       break;
@@ -320,7 +320,7 @@ LABEL_23:
 LABEL_26:
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &v19,
-    (const MethodInfo_22212C8 *)Method_System_Collections_Generic_List_Enumerator_EventEntity____Dispose__);
+    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_EventEntity____Dispose__);
   return (v16 == 129) & v15;
 }
 
@@ -332,33 +332,33 @@ bool __fastcall VoiceCondType__IsSatisfyEventEndCondition(int32_t condValue, con
   int64_t v5; // x19
   WarEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4357C23 & 1) == 0 )
+  if ( (byte_43912A1 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_B70694(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4357C23 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_B775C4(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_43912A1 = 1;
   }
   entity = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !Instance )
     goto LABEL_13;
   Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
                                 (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                                 &entity,
                                 condValue,
-                                (const MethodInfo_21C049C *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+                                (const MethodInfo_21FB8F0 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Instance & 1) == 0 )
     return 0;
   if ( !entity )
 LABEL_13:
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   v5 = *(_QWORD *)&entity->fields.eventId;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -376,20 +376,20 @@ bool __fastcall VoiceCondType__IsSatisfyQuestClearCondition(int32_t condValue, c
   UserQuestMaster_o *MasterData_WarQuestSelectionMaster; // x20
   UserQuestEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4357C22 & 1) == 0 )
+  if ( (byte_43912A0 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_UserQuestMaster___);
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4357C22 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_UserQuestMaster___);
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_43912A0 = 1;
   }
   entity = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
   MasterData_WarQuestSelectionMaster = (UserQuestMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                               Instance,
-                                                              (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserQuestMaster___);
+                                                              (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserQuestMaster___);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -404,7 +404,7 @@ bool __fastcall VoiceCondType__IsSatisfyQuestClearCondition(int32_t condValue, c
     if ( entity )
       return UserQuestEntity__getClearNum(entity, 0LL) > 0;
 LABEL_13:
-    sub_B7076C(Instance, v4);
+    sub_B7769C(Instance, v4);
   }
   return 0;
 }
@@ -430,14 +430,14 @@ bool __fastcall VoiceCondType__IsSatisfySvtGetCondition(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v16; // 0:x0.16
 
   v15 = condValue;
-  if ( (byte_4357C24 & 1) == 0 )
+  if ( (byte_43912A2 & 1) == 0 )
   {
-    *(_QWORD *)&condValue = sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4357C24 = 1;
+    *(_QWORD *)&condValue = sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_43912A2 = 1;
   }
   if ( !usrSvtList )
 LABEL_20:
-    sub_B7076C(*(_QWORD *)&condValue, usrSvtList);
+    sub_B7769C(*(_QWORD *)&condValue, usrSvtList);
   max_length = usrSvtList->max_length;
   if ( max_length < 1 )
     return 0;
@@ -447,8 +447,8 @@ LABEL_20:
     if ( v5 >= max_length )
     {
 LABEL_19:
-      v14 = sub_B70798(*(_QWORD *)&condValue);
-      sub_B70738(v14, 0LL);
+      v14 = sub_B776C8(*(_QWORD *)&condValue);
+      sub_B77668(v14, 0LL);
     }
     v6 = &usrSvtList->obj.klass + (int)v5;
     v9 = v6[4];
@@ -465,8 +465,8 @@ LABEL_19:
     }
     *(_QWORD *)&v16.fields.currentCryptoKey = declaringType;
     *(_QWORD *)&v16.fields.fakeValue = parent;
-    v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v16, 0LL);
-    *(_QWORD *)&condValue = System_Int32__Equals_39283908((int32_t)&v15, v12, 0LL);
+    v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v16, 0LL);
+    *(_QWORD *)&condValue = System_Int32__Equals_39547160((int32_t)&v15, v12, 0LL);
     if ( (condValue & 1) != 0 )
     {
       if ( v5 >= usrSvtList->max_length )
@@ -509,18 +509,18 @@ bool __fastcall VoiceCondType__IsSatisfySvtGroupCondition(
   __int64 v23; // x0
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v24; // 0:x0.16
 
-  if ( (byte_4357C25 & 1) == 0 )
+  if ( (byte_43912A3 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_ServantGroupMaster___);
-    sub_B70694(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4357C25 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_ServantGroupMaster___);
+    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_43912A3 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantGroupMaster___)) == 0LL
+                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantGroupMaster___)) == 0LL
     || (Instance = (DataManager_o *)ServantGroupMaster__getEntityListById(
                                       (ServantGroupMaster_o *)Instance,
                                       condValue,
@@ -528,7 +528,7 @@ bool __fastcall VoiceCondType__IsSatisfySvtGroupCondition(
         !usrSvtList) )
   {
 LABEL_27:
-    sub_B7076C(Instance, v8);
+    sub_B7769C(Instance, v8);
   }
   max_length = usrSvtList->max_length;
   if ( max_length < 1 )
@@ -554,12 +554,12 @@ LABEL_27:
     }
     *(_QWORD *)&v24.fields.currentCryptoKey = declaringType;
     *(_QWORD *)&v24.fields.fakeValue = parent;
-    Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45179984(v24, 0LL);
+    Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v24, 0LL);
     if ( v11 >= usrSvtList->max_length )
     {
 LABEL_28:
-      v23 = sub_B70798(Instance);
-      sub_B70738(v23, 0LL);
+      v23 = sub_B776C8(Instance);
+      sub_B77668(v23, 0LL);
     }
     v18 = (int)Instance;
     Instance = *v14;
@@ -611,12 +611,12 @@ bool __fastcall VoiceCondType__TryIsSatisfyCompCondition(
   bool v15; // zf
   int32_t v16; // w8
 
-  if ( (byte_4357C28 & 1) == 0 )
+  if ( (byte_43912A6 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&VoiceCondType_TypeInfo);
-    byte_4357C28 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&VoiceCondType_TypeInfo);
+    byte_43912A6 = 1;
   }
   result = 0;
   *isPlayable = 0;
@@ -635,13 +635,13 @@ LABEL_17:
       {
         if ( type != 5 )
           return 0;
-        Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !Instance
           || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                             Instance,
-                                            (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0LL )
+                                            (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0LL )
         {
-          sub_B7076C(Instance, v12);
+          sub_B7769C(Instance, v12);
         }
         AllList = UserServantMaster__getAllList((UserServantMaster_o *)Instance, v12);
         if ( (BYTE3(VoiceCondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -701,10 +701,10 @@ bool __fastcall VoiceCondType__TryIsSatisfyCondition(bool *isPlayable, int32_t t
   VoiceCondType_c *v8; // x0
   bool v9; // w8
 
-  if ( (byte_4357C26 & 1) == 0 )
+  if ( (byte_43912A4 & 1) == 0 )
   {
-    sub_B70694(&VoiceCondType_TypeInfo);
-    byte_4357C26 = 1;
+    sub_B775C4(&VoiceCondType_TypeInfo);
+    byte_43912A4 = 1;
   }
   *isPlayable = 0;
   if ( type == 2 )
@@ -753,14 +753,14 @@ bool __fastcall VoiceCondType__TryIsSatisfyValueCondition(
   bool IsSatisfyQuestClearCondition; // w0
   bool v14; // w8
 
-  if ( (byte_4357C27 & 1) == 0 )
+  if ( (byte_43912A5 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    sub_B70694(&SingletonTemplate_QuestTree__TypeInfo);
-    sub_B70694(&VoiceCondType_TypeInfo);
-    byte_4357C27 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    sub_B775C4(&SingletonTemplate_QuestTree__TypeInfo);
+    sub_B775C4(&VoiceCondType_TypeInfo);
+    byte_43912A5 = 1;
   }
   *isPlayable = 0;
   if ( condValue == -1 )
@@ -769,12 +769,12 @@ bool __fastcall VoiceCondType__TryIsSatisfyValueCondition(
   switch ( type )
   {
     case 4:
-      Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_36;
       Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                     Instance,
-                                    (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                    (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserServantMaster___);
       if ( !Instance )
         goto LABEL_36;
       AllList = UserServantMaster__getAllList((UserServantMaster_o *)Instance, v9);
@@ -807,10 +807,10 @@ bool __fastcall VoiceCondType__TryIsSatisfyValueCondition(
       {
         j_il2cpp_runtime_class_init_0(SingletonTemplate_QuestTree__TypeInfo);
       }
-      Instance = (DataManager_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2CE9CB0 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+      Instance = (DataManager_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2D168C0 *)Method_SingletonTemplate_QuestTree__get_Instance__);
       if ( !Instance )
 LABEL_36:
-        sub_B7076C(Instance, v9);
+        sub_B7769C(Instance, v9);
       IsSatisfyQuestClearCondition = QuestTree__IsWarNew((QuestTree_o *)Instance, condValue, 0LL);
       goto LABEL_29;
     case 13:

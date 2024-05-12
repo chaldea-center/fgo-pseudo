@@ -15,18 +15,18 @@ void __fastcall OnClickEvent___ctor(OnClickEvent_o *this, const MethodInfo *meth
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
 
-  if ( (byte_4350BA9 & 1) == 0 )
+  if ( (byte_438A251 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_B70694(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    byte_4350BA9 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    byte_438A251 = 1;
   }
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v3,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onSingleClick = (struct System_Collections_Generic_List_EventDelegate__o *)v3;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.onSingleClick,
     (System_Int32_array **)v3,
     v4,
@@ -35,12 +35,12 @@ void __fastcall OnClickEvent___ctor(OnClickEvent_o *this, const MethodInfo *meth
     v7,
     v8,
     v9);
-  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v10,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDoubleClick = (struct System_Collections_Generic_List_EventDelegate__o *)v10;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.onDoubleClick,
     (System_Int32_array **)v10,
     v11,
@@ -67,10 +67,10 @@ void __fastcall OnClickEvent__OnDoubleClick(OnClickEvent_o *this, const MethodIn
 {
   System_Collections_Generic_List_EventDelegate__o *onDoubleClick; // x19
 
-  if ( (byte_4350BA8 & 1) == 0 )
+  if ( (byte_438A250 & 1) == 0 )
   {
-    sub_B70694(&EventDelegate_TypeInfo);
-    byte_4350BA8 = 1;
+    sub_B775C4(&EventDelegate_TypeInfo);
+    byte_438A250 = 1;
   }
   if ( this->fields.clickFlag )
   {
@@ -82,7 +82,7 @@ void __fastcall OnClickEvent__OnDoubleClick(OnClickEvent_o *this, const MethodIn
     {
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
     }
-    EventDelegate__Execute_29878504(onDoubleClick, 0LL);
+    EventDelegate__Execute_30349004(onDoubleClick, 0LL);
   }
 }
 
@@ -98,10 +98,10 @@ void __fastcall OnClickEvent__Update(OnClickEvent_o *this, const MethodInfo *met
 {
   System_Collections_Generic_List_EventDelegate__o *onSingleClick; // x20
 
-  if ( (byte_4350BA7 & 1) == 0 )
+  if ( (byte_438A24F & 1) == 0 )
   {
-    sub_B70694(&EventDelegate_TypeInfo);
-    byte_4350BA7 = 1;
+    sub_B775C4(&EventDelegate_TypeInfo);
+    byte_438A24F = 1;
   }
   if ( this->fields.clickFlag && UnityEngine_Time__get_time(0LL) > (float)(this->fields.clickTime + 0.36) )
   {
@@ -111,7 +111,7 @@ void __fastcall OnClickEvent__Update(OnClickEvent_o *this, const MethodInfo *met
     {
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
     }
-    EventDelegate__Execute_29878504(onSingleClick, 0LL);
+    EventDelegate__Execute_30349004(onSingleClick, 0LL);
     this->fields.clickFlag = 0;
     this->fields.clickTime = -1.0;
   }

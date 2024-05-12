@@ -35,79 +35,79 @@ void __fastcall FileName___cctor(const MethodInfo *method)
   System_Int32_array *v33; // x6
   System_Int32_array *v34; // x7
 
-  if ( (byte_435003D & 1) == 0 )
+  if ( (byte_4389721 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string___ctor__);
-    sub_B70694(&System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__TypeInfo);
-    sub_B70694(&FileName_TypeInfo);
-    sub_B70694(&StringLiteral_18469/*"ef_hit_slash01_M"*/);
-    sub_B70694(&StringLiteral_18453/*"ef_crit01"*/);
-    sub_B70694(&StringLiteral_19680/*"icon_support_02"*/);
-    sub_B70694(&StringLiteral_18468/*"ef_hit01_M"*/);
-    sub_B70694(&StringLiteral_19643/*"icon_eventjoin_02"*/);
-    sub_B70694(&StringLiteral_18470/*"ef_hit_slash02_M"*/);
-    byte_435003D = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string___ctor__);
+    sub_B775C4(&System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__TypeInfo);
+    sub_B775C4(&FileName_TypeInfo);
+    sub_B775C4(&StringLiteral_18557/*"ef_hit_slash01_M"*/);
+    sub_B775C4(&StringLiteral_18541/*"ef_crit01"*/);
+    sub_B775C4(&StringLiteral_19770/*"icon_support_02"*/);
+    sub_B775C4(&StringLiteral_18556/*"ef_hit01_M"*/);
+    sub_B775C4(&StringLiteral_19733/*"icon_eventjoin_02"*/);
+    sub_B775C4(&StringLiteral_18558/*"ef_hit_slash02_M"*/);
+    byte_4389721 = 1;
   }
-  v1 = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)sub_B70764(System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__TypeInfo);
+  v1 = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)sub_B77694(System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__TypeInfo);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string____ctor(
     v1,
-    (const MethodInfo_2F71470 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string___ctor__);
+    (const MethodInfo_2F9F080 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string___ctor__);
   if ( !v1 )
     goto LABEL_6;
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v1,
     0,
     0LL,
-    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
+    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v1,
     1,
-    (System_String_o *)StringLiteral_18469/*"ef_hit_slash01_M"*/,
-    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
+    (System_String_o *)StringLiteral_18557/*"ef_hit_slash01_M"*/,
+    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v1,
     2,
-    (System_String_o *)StringLiteral_18470/*"ef_hit_slash02_M"*/,
-    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
+    (System_String_o *)StringLiteral_18558/*"ef_hit_slash02_M"*/,
+    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v1,
     3,
-    (System_String_o *)StringLiteral_18468/*"ef_hit01_M"*/,
-    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
+    (System_String_o *)StringLiteral_18556/*"ef_hit01_M"*/,
+    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   static_fields = (BattleServantConfConponent_o *)FileName_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B70630(static_fields, (System_Int32_array **)v1, v5, v6, v7, v8, v9, v10);
-  v11 = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)sub_B70764(System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__TypeInfo);
+  sub_B77560(static_fields, (System_Int32_array **)v1, v5, v6, v7, v8, v9, v10);
+  v11 = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)sub_B77694(System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__TypeInfo);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string____ctor(
     v11,
-    (const MethodInfo_2F71470 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string___ctor__);
+    (const MethodInfo_2F9F080 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string___ctor__);
   if ( !v11 )
 LABEL_6:
-    sub_B7076C(v2, v3);
+    sub_B7769C(v2, v3);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v11,
     0,
     0LL,
-    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
+    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v11,
     1,
-    (System_String_o *)StringLiteral_18453/*"ef_crit01"*/,
-    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
+    (System_String_o *)StringLiteral_18541/*"ef_crit01"*/,
+    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v11,
     2,
-    (System_String_o *)StringLiteral_18453/*"ef_crit01"*/,
-    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
+    (System_String_o *)StringLiteral_18541/*"ef_crit01"*/,
+    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v11,
     3,
-    (System_String_o *)StringLiteral_18453/*"ef_crit01"*/,
-    (const MethodInfo_2F72024 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
+    (System_String_o *)StringLiteral_18541/*"ef_crit01"*/,
+    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   v12 = FileName_TypeInfo->static_fields;
   v12->criticaleffectlist = (struct System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__o *)v11;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&v12->criticaleffectlist,
     (System_Int32_array **)v11,
     v13,
@@ -117,13 +117,13 @@ LABEL_6:
     v17,
     v18);
   v19 = FileName_TypeInfo->static_fields;
-  v20 = (System_Int32_array **)StringLiteral_19680/*"icon_support_02"*/;
-  v19->friendIconName = (struct System_String_o *)StringLiteral_19680/*"icon_support_02"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v19->friendIconName, v20, v21, v22, v23, v24, v25, v26);
+  v20 = (System_Int32_array **)StringLiteral_19770/*"icon_support_02"*/;
+  v19->friendIconName = (struct System_String_o *)StringLiteral_19770/*"icon_support_02"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v19->friendIconName, v20, v21, v22, v23, v24, v25, v26);
   v27 = FileName_TypeInfo->static_fields;
-  v28 = (System_Int32_array **)StringLiteral_19643/*"icon_eventjoin_02"*/;
-  v27->eventJoinIconName = (struct System_String_o *)StringLiteral_19643/*"icon_eventjoin_02"*/;
-  sub_B70630((BattleServantConfConponent_o *)&v27->eventJoinIconName, v28, v29, v30, v31, v32, v33, v34);
+  v28 = (System_Int32_array **)StringLiteral_19733/*"icon_eventjoin_02"*/;
+  v27->eventJoinIconName = (struct System_String_o *)StringLiteral_19733/*"icon_eventjoin_02"*/;
+  sub_B77560((BattleServantConfConponent_o *)&v27->eventJoinIconName, v28, v29, v30, v31, v32, v33, v34);
 }
 
 
@@ -139,12 +139,12 @@ System_String_o *__fastcall FileName__getCriticalEffectName(int32_t type, const 
   System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *criticaleffectlist; // x0
   FileName_c *v5; // x0
 
-  if ( (byte_435003C & 1) == 0 )
+  if ( (byte_4389720 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__ContainsKey__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__get_Item__);
-    sub_B70694(&FileName_TypeInfo);
-    byte_435003C = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__ContainsKey__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__get_Item__);
+    sub_B775C4(&FileName_TypeInfo);
+    byte_4389720 = 1;
   }
   v3 = FileName_TypeInfo;
   if ( (BYTE3(FileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !FileName_TypeInfo->_2.cctor_finished )
@@ -158,7 +158,7 @@ System_String_o *__fastcall FileName__getCriticalEffectName(int32_t type, const 
   if ( System_Collections_Generic_Dictionary_Voice_BATTLE__string___ContainsKey(
          criticaleffectlist,
          type,
-         (const MethodInfo_2F72298 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__ContainsKey__) )
+         (const MethodInfo_2F9FEA8 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__ContainsKey__) )
   {
     v5 = FileName_TypeInfo;
     if ( (BYTE3(FileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !FileName_TypeInfo->_2.cctor_finished )
@@ -171,9 +171,9 @@ System_String_o *__fastcall FileName__getCriticalEffectName(int32_t type, const 
       return System_Collections_Generic_Dictionary_Voice_BATTLE__string___get_Item(
                criticaleffectlist,
                type,
-               (const MethodInfo_2F71F60 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__get_Item__);
+               (const MethodInfo_2F9FB70 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__get_Item__);
 LABEL_14:
-    sub_B7076C(criticaleffectlist, method);
+    sub_B7769C(criticaleffectlist, method);
   }
   return 0LL;
 }
@@ -185,12 +185,12 @@ System_String_o *__fastcall FileName__getEffectName(int32_t type, const MethodIn
   System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *hiteffectlist; // x0
   FileName_c *v5; // x0
 
-  if ( (byte_435003B & 1) == 0 )
+  if ( (byte_438971F & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__ContainsKey__);
-    sub_B70694(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__get_Item__);
-    sub_B70694(&FileName_TypeInfo);
-    byte_435003B = 1;
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__ContainsKey__);
+    sub_B775C4(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__get_Item__);
+    sub_B775C4(&FileName_TypeInfo);
+    byte_438971F = 1;
   }
   v3 = FileName_TypeInfo;
   if ( (BYTE3(FileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !FileName_TypeInfo->_2.cctor_finished )
@@ -204,7 +204,7 @@ System_String_o *__fastcall FileName__getEffectName(int32_t type, const MethodIn
   if ( System_Collections_Generic_Dictionary_Voice_BATTLE__string___ContainsKey(
          hiteffectlist,
          type,
-         (const MethodInfo_2F72298 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__ContainsKey__) )
+         (const MethodInfo_2F9FEA8 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__ContainsKey__) )
   {
     v5 = FileName_TypeInfo;
     if ( (BYTE3(FileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !FileName_TypeInfo->_2.cctor_finished )
@@ -217,9 +217,9 @@ System_String_o *__fastcall FileName__getEffectName(int32_t type, const MethodIn
       return System_Collections_Generic_Dictionary_Voice_BATTLE__string___get_Item(
                hiteffectlist,
                type,
-               (const MethodInfo_2F71F60 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__get_Item__);
+               (const MethodInfo_2F9FB70 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__get_Item__);
 LABEL_14:
-    sub_B7076C(hiteffectlist, method);
+    sub_B7769C(hiteffectlist, method);
   }
   return 0LL;
 }

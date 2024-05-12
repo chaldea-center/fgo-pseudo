@@ -49,31 +49,31 @@ void __fastcall WarehouseListManager__CreateList(
   int32_t baseServantKeep; // [xsp+8h] [xbp-48h] BYREF
   int32_t v44; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_43526DB & 1) == 0 )
+  if ( (byte_438BE57 & 1) == 0 )
   {
-    sub_B70694(&BalanceConfig_TypeInfo);
-    sub_B70694(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_UserServantStorageMaster___);
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&StringLiteral_12638/*"SUM_INFO"*/);
-    byte_43526DB = 1;
+    sub_B775C4(&BalanceConfig_TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserServantStorageMaster___);
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&StringLiteral_12702/*"SUM_INFO"*/);
+    byte_438BE57 = 1;
   }
   this->fields.kind = kind;
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_52;
   MasterData_WarQuestSelectionMaster = (UserServantMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                 Instance,
-                                                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserServantMaster___);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                                                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_52;
   v11 = (UserServantStorageMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                         Instance,
-                                        (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserServantStorageMaster___);
+                                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserServantStorageMaster___);
   Instance = (DataManager_o *)this->fields.allReleaseButton;
   this->fields.totalSum = 0;
   if ( !Instance )
@@ -132,7 +132,7 @@ void __fastcall WarehouseListManager__CreateList(
       }
     }
 LABEL_52:
-    sub_B7076C(Instance, v9);
+    sub_B7769C(Instance, v9);
   }
   if ( !SelfUserGame )
     goto LABEL_52;
@@ -237,22 +237,22 @@ LABEL_22:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_12638/*"SUM_INFO"*/, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_12702/*"SUM_INFO"*/, 0LL);
   v44 = this->fields.baseServantSum;
   v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v44, v29);
   baseServantKeep = this->fields.baseServantKeep;
   v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &baseServantKeep, v31);
-  Instance = (DataManager_o *)System_String__Format_44753704(v28, v30, v32, 0LL);
+  Instance = (DataManager_o *)System_String__Format_44897472(v28, v30, v32, 0LL);
   if ( !servantTabLabel )
     goto LABEL_52;
   UILabel__set_text(servantTabLabel, (System_String_o *)Instance, 0LL);
   servantEquipTabLabel = this->fields.servantEquipTabLabel;
-  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_12638/*"SUM_INFO"*/, 0LL);
+  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_12702/*"SUM_INFO"*/, 0LL);
   baseEquipSumNF = this->fields.baseEquipSumNF;
   v36 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &baseEquipSumNF, v35);
   baseEquipKeep = this->fields.baseEquipKeep;
   v38 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &baseEquipKeep, v37);
-  Instance = (DataManager_o *)System_String__Format_44753704(v34, v36, v38, 0LL);
+  Instance = (DataManager_o *)System_String__Format_44897472(v34, v36, v38, 0LL);
   if ( !servantEquipTabLabel )
     goto LABEL_52;
   UILabel__set_text(servantEquipTabLabel, (System_String_o *)Instance, 0LL);
@@ -278,7 +278,7 @@ void __fastcall WarehouseListManager__DestroyList(WarehouseListManager_o *this, 
 
   baseListViewManager = (ListViewManager_o *)this->fields.baseListViewManager;
   if ( !baseListViewManager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ListViewManager__DestroyList(baseListViewManager, 0LL);
   WarehouseListViewManager__SaveSortInfo(v3, v4);
 }
@@ -299,7 +299,7 @@ void __fastcall WarehouseListManager__EndSelectFilterKind(
 
   baseListViewManager = this->fields.baseListViewManager;
   if ( !baseListViewManager )
-    sub_B7076C(0LL, isDecide);
+    sub_B7769C(0LL, isDecide);
   WarehouseListViewManager__EndSelectFilterKind(baseListViewManager, isDecide, method);
 }
 
@@ -314,7 +314,7 @@ void __fastcall WarehouseListManager__FilterButtonState(
 
   filterButton = this->fields.filterButton;
   if ( !filterButton )
-    sub_B7076C(0LL, state);
+    sub_B7769C(0LL, state);
   ((void (__fastcall *)(struct UICommonButton_o *, int32_t, bool, Il2CppMethodPointer))filterButton->klass->vtable._14_SetState.method)(
     filterButton,
     state,
@@ -332,7 +332,7 @@ int64_t __fastcall WarehouseListManager__GetAmountSortValue(
 
   baseListViewManager = this->fields.baseListViewManager;
   if ( !baseListViewManager )
-    sub_B7076C(0LL, svtId);
+    sub_B7769C(0LL, svtId);
   return WarehouseListViewManager__GetAmountSortValue(baseListViewManager, svtId, method);
 }
 
@@ -346,7 +346,7 @@ WarehouseListViewItem_o *__fastcall WarehouseListManager__GetItem(
 
   baseListViewManager = this->fields.baseListViewManager;
   if ( !baseListViewManager )
-    sub_B7076C(0LL, index);
+    sub_B7769C(0LL, index);
   return WarehouseListViewManager__GetItem(baseListViewManager, index, method);
 }
 
@@ -365,7 +365,7 @@ System_String_o *__fastcall WarehouseListManager__GetScaleButtonSpriteName(
 
   baseListViewManager = this->fields.baseListViewManager;
   if ( !baseListViewManager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   return WarehouseListViewManager__GetScaleButtonSpriteName(baseListViewManager, method);
 }
 
@@ -382,7 +382,7 @@ void __fastcall WarehouseListManager__GetSelectItemNum(
   *friendShipSum = 0;
   baseListViewManager = this->fields.baseListViewManager;
   if ( !baseListViewManager )
-    sub_B7076C(0LL, normalSum);
+    sub_B7769C(0LL, normalSum);
   WarehouseListViewManager__GetSelectItemNum(baseListViewManager, normalSum, friendShipSum, method);
 }
 
@@ -397,7 +397,7 @@ bool __fastcall WarehouseListManager__GetSwapChoiceList(
 
   baseListViewManager = this->fields.baseListViewManager;
   if ( !baseListViewManager )
-    sub_B7076C(0LL, choiceList);
+    sub_B7769C(0LL, choiceList);
   return WarehouseListViewManager__GetSwapChoiceList(baseListViewManager, choiceList, unchoiceList, method);
 }
 
@@ -412,7 +412,7 @@ bool __fastcall WarehouseListManager__GetSwapLockList(
 
   baseListViewManager = this->fields.baseListViewManager;
   if ( !baseListViewManager )
-    sub_B7076C(0LL, lockList);
+    sub_B7769C(0LL, lockList);
   return WarehouseListViewManager__GetSwapLockList(baseListViewManager, lockList, unlockList, method);
 }
 
@@ -426,7 +426,7 @@ void __fastcall WarehouseListManager__ModifyItem(
 
   baseListViewManager = this->fields.baseListViewManager;
   if ( !baseListViewManager )
-    sub_B7076C(0LL, userSvtId);
+    sub_B7769C(0LL, userSvtId);
   WarehouseListViewManager__ModifyItem(baseListViewManager, userSvtId, method);
 }
 
@@ -437,7 +437,7 @@ void __fastcall WarehouseListManager__ModifyList(WarehouseListManager_o *this, c
 
   baseListViewManager = this->fields.baseListViewManager;
   if ( !baseListViewManager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   WarehouseListViewManager__Modify(baseListViewManager, method);
 }
 
@@ -451,7 +451,7 @@ void __fastcall WarehouseListManager__NumberAdjustment(
 
   baseListViewManager = this->fields.baseListViewManager;
   if ( !baseListViewManager )
-    sub_B7076C(0LL, selectNum);
+    sub_B7769C(0LL, selectNum);
   WarehouseListViewManager__DecrementNumber(baseListViewManager, selectNum, method);
 }
 
@@ -471,12 +471,12 @@ void __fastcall WarehouseListManager__OnClickDecide(WarehouseListManager_o *this
   WarehouseListViewManager_o *baseListViewManager; // x0
   System_Int64_array *v14; // x2
 
-  if ( (byte_43526DF & 1) == 0 )
+  if ( (byte_438BE5B & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_long__ToArray__);
-    sub_B70694(&Method_System_Collections_Generic_List_long___ctor__);
-    sub_B70694(&System_Collections_Generic_List_long__TypeInfo);
-    byte_43526DF = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_long__ToArray__);
+    sub_B775C4(&Method_System_Collections_Generic_List_long___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_long__TypeInfo);
+    byte_438BE5B = 1;
   }
   if ( this->fields.totalSum >= 1 )
   {
@@ -484,17 +484,17 @@ void __fastcall WarehouseListManager__OnClickDecide(WarehouseListManager_o *this
     if ( callbackFunc )
     {
       this->fields.callbackFunc = 0LL;
-      sub_B70630((BattleServantConfConponent_o *)&this->fields.callbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
-      v10 = (System_Collections_Generic_List_long__o *)sub_B70764(System_Collections_Generic_List_long__TypeInfo);
+      sub_B77560((BattleServantConfConponent_o *)&this->fields.callbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
+      v10 = (System_Collections_Generic_List_long__o *)sub_B77694(System_Collections_Generic_List_long__TypeInfo);
       System_Collections_Generic_List_long____ctor(
         v10,
-        (const MethodInfo_30BB42C *)Method_System_Collections_Generic_List_long___ctor__);
+        (const MethodInfo_30EB03C *)Method_System_Collections_Generic_List_long___ctor__);
       baseListViewManager = this->fields.baseListViewManager;
       if ( !baseListViewManager || (WarehouseListViewManager__GetSelectList(baseListViewManager, v10, v12), !v10) )
-        sub_B7076C(baseListViewManager, v11);
+        sub_B7769C(baseListViewManager, v11);
       v14 = System_Collections_Generic_List_long___ToArray(
               v10,
-              (const MethodInfo_30BE294 *)Method_System_Collections_Generic_List_long__ToArray__);
+              (const MethodInfo_30EDEA4 *)Method_System_Collections_Generic_List_long__ToArray__);
       WarehouseListManager_CallbackFunc__Invoke(callbackFunc, 1, v14, -1, 0LL);
     }
   }
@@ -507,7 +507,7 @@ void __fastcall WarehouseListManager__OnClickFilterKind(WarehouseListManager_o *
 
   baseListViewManager = this->fields.baseListViewManager;
   if ( !baseListViewManager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   WarehouseListViewManager__OnClickFilterKind(baseListViewManager, method);
 }
 
@@ -516,10 +516,10 @@ void __fastcall WarehouseListManager__OnClickReleaseAll(WarehouseListManager_o *
 {
   const MethodInfo *v3; // x1
 
-  if ( (byte_43526E0 & 1) == 0 )
+  if ( (byte_438BE5C & 1) == 0 )
   {
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_43526E0 = 1;
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438BE5C = 1;
   }
   if ( this->fields.totalSum < 1 )
   {
@@ -549,7 +549,7 @@ void __fastcall WarehouseListManager__OnClickScaleChange(WarehouseListManager_o 
 
   baseListViewManager = this->fields.baseListViewManager;
   if ( !baseListViewManager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   WarehouseListViewManager__ChangeIconScale(baseListViewManager, method);
 }
 
@@ -560,7 +560,7 @@ void __fastcall WarehouseListManager__OnClickSortAscendingOrder(WarehouseListMan
 
   baseListViewManager = this->fields.baseListViewManager;
   if ( !baseListViewManager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   WarehouseListViewManager__OnClickSortAscendingOrder(baseListViewManager, method);
 }
 
@@ -571,7 +571,7 @@ void __fastcall WarehouseListManager__OnClickSortKind(WarehouseListManager_o *th
 
   baseListViewManager = this->fields.baseListViewManager;
   if ( !baseListViewManager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   WarehouseListViewManager__OnClickSortKind(baseListViewManager, method);
 }
 
@@ -600,14 +600,14 @@ void __fastcall WarehouseListManager__OnSelectServant(
   struct WarehouseListManager_CallbackFunc_o *v21; // t1
   System_Collections_Generic_List_long__o *v22; // x20
 
-  if ( (byte_43526E1 & 1) == 0 )
+  if ( (byte_438BE5D & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_long__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_long__ToArray__);
-    sub_B70694(&Method_System_Collections_Generic_List_long___ctor__);
-    sub_B70694(&System_Collections_Generic_List_long__TypeInfo);
-    sub_B70694(&SoundManager_TypeInfo);
-    byte_43526E1 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_long__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_long__ToArray__);
+    sub_B775C4(&Method_System_Collections_Generic_List_long___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_long__TypeInfo);
+    sub_B775C4(&SoundManager_TypeInfo);
+    byte_438BE5D = 1;
   }
   if ( resultKind == 2 )
   {
@@ -632,11 +632,11 @@ void __fastcall WarehouseListManager__OnSelectServant(
       if ( callbackFunc )
       {
         p_callbackFunc->klass = 0LL;
-        sub_B70630(p_callbackFunc, 0LL, (System_String_array **)item, (System_String_array **)method, v4, v5, v6, v7);
-        v16 = (System_Collections_Generic_List_long__o *)sub_B70764(System_Collections_Generic_List_long__TypeInfo);
+        sub_B77560(p_callbackFunc, 0LL, (System_String_array **)item, (System_String_array **)method, v4, v5, v6, v7);
+        v16 = (System_Collections_Generic_List_long__o *)sub_B77694(System_Collections_Generic_List_long__TypeInfo);
         System_Collections_Generic_List_long____ctor(
           v16,
-          (const MethodInfo_30BB42C *)Method_System_Collections_Generic_List_long___ctor__);
+          (const MethodInfo_30EB03C *)Method_System_Collections_Generic_List_long___ctor__);
         if ( !item
           || (UserSvtId = (WarehouseListViewManager_o *)WarehouseListViewItem__get_UserSvtId(
                                                           item,
@@ -644,15 +644,15 @@ void __fastcall WarehouseListManager__OnSelectServant(
               !v16) )
         {
 LABEL_28:
-          sub_B7076C(UserSvtId, *(_QWORD *)&resultKind);
+          sub_B7769C(UserSvtId, *(_QWORD *)&resultKind);
         }
         System_Collections_Generic_List_long___Add(
           v16,
           (int64_t)UserSvtId,
-          (const MethodInfo_30BC188 *)Method_System_Collections_Generic_List_long__Add__);
+          (const MethodInfo_30EBD98 *)Method_System_Collections_Generic_List_long__Add__);
         v17 = System_Collections_Generic_List_long___ToArray(
                 v16,
-                (const MethodInfo_30BE294 *)Method_System_Collections_Generic_List_long__ToArray__);
+                (const MethodInfo_30EDEA4 *)Method_System_Collections_Generic_List_long__ToArray__);
         v18 = 2;
         index = -1;
         goto LABEL_24;
@@ -688,11 +688,11 @@ LABEL_28:
         if ( !v21 )
           return;
         v20->klass = 0LL;
-        sub_B70630(v20, 0LL, (System_String_array **)item, (System_String_array **)method, v4, v5, v6, v7);
-        v22 = (System_Collections_Generic_List_long__o *)sub_B70764(System_Collections_Generic_List_long__TypeInfo);
+        sub_B77560(v20, 0LL, (System_String_array **)item, (System_String_array **)method, v4, v5, v6, v7);
+        v22 = (System_Collections_Generic_List_long__o *)sub_B77694(System_Collections_Generic_List_long__TypeInfo);
         System_Collections_Generic_List_long____ctor(
           v22,
-          (const MethodInfo_30BB42C *)Method_System_Collections_Generic_List_long___ctor__);
+          (const MethodInfo_30EB03C *)Method_System_Collections_Generic_List_long___ctor__);
         if ( !item )
           goto LABEL_28;
         UserSvtId = (WarehouseListViewManager_o *)WarehouseListViewItem__get_UserSvtId(
@@ -703,10 +703,10 @@ LABEL_28:
         System_Collections_Generic_List_long___Add(
           v22,
           (int64_t)UserSvtId,
-          (const MethodInfo_30BC188 *)Method_System_Collections_Generic_List_long__Add__);
+          (const MethodInfo_30EBD98 *)Method_System_Collections_Generic_List_long__Add__);
         v17 = System_Collections_Generic_List_long___ToArray(
                 v22,
-                (const MethodInfo_30BE294 *)Method_System_Collections_Generic_List_long__ToArray__);
+                (const MethodInfo_30EDEA4 *)Method_System_Collections_Generic_List_long__ToArray__);
         index = item->fields.index;
         v18 = 3;
         break;
@@ -742,13 +742,13 @@ void __fastcall WarehouseListManager__RefrashListDisp(WarehouseListManager_o *th
   int32_t v21; // [xsp+Ch] [xbp-34h] BYREF
   int32_t friendShipSum[2]; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_43526DC & 1) == 0 )
+  if ( (byte_438BE58 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_12639/*"SUM_OVER_INFO"*/);
-    sub_B70694(&StringLiteral_12638/*"SUM_INFO"*/);
-    byte_43526DC = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_12703/*"SUM_OVER_INFO"*/);
+    sub_B775C4(&StringLiteral_12702/*"SUM_INFO"*/);
+    byte_438BE58 = 1;
   }
   *(_QWORD *)friendShipSum = 0LL;
   allReleaseButton = (System_String_o *)this->fields.allReleaseButton;
@@ -789,9 +789,9 @@ void __fastcall WarehouseListManager__RefrashListDisp(WarehouseListManager_o *th
     allReleaseButton->klass->vtable._15_System_IConvertible_ToInt64.methodPtr);
   WarehouseListManager__UpdateSelectDoneLabel(this, v11);
   sendDataLabel = this->fields.sendDataLabel;
-  v13 = (System_String_o **)&StringLiteral_12639/*"SUM_OVER_INFO"*/;
+  v13 = (System_String_o **)&StringLiteral_12703/*"SUM_OVER_INFO"*/;
   if ( !v10 )
-    v13 = (System_String_o **)&StringLiteral_12638/*"SUM_INFO"*/;
+    v13 = (System_String_o **)&StringLiteral_12702/*"SUM_INFO"*/;
   v14 = *v13;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -803,10 +803,10 @@ void __fastcall WarehouseListManager__RefrashListDisp(WarehouseListManager_o *th
   v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v21, v16);
   sendKeep = this->fields.sendKeep;
   v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &sendKeep, v18);
-  allReleaseButton = System_String__Format_44753704(v15, v17, v19, 0LL);
+  allReleaseButton = System_String__Format_44897472(v15, v17, v19, 0LL);
   if ( !sendDataLabel )
 LABEL_22:
-    sub_B7076C(allReleaseButton, method);
+    sub_B7769C(allReleaseButton, method);
   UILabel__set_text(sendDataLabel, allReleaseButton, 0LL);
 }
 
@@ -819,7 +819,7 @@ void __fastcall WarehouseListManager__ReleaseAll(WarehouseListManager_o *this, c
   baseListViewManager = this->fields.baseListViewManager;
   this->fields.totalSum = 0;
   if ( !baseListViewManager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   WarehouseListViewManager__ReleaseAll(baseListViewManager, method);
   WarehouseListManager__RefrashListDisp(this, v4);
 }
@@ -828,7 +828,7 @@ void __fastcall WarehouseListManager__ReleaseAll(WarehouseListManager_o *this, c
 void __fastcall WarehouseListManager__SaveSortInfo(WarehouseListManager_o *this, const MethodInfo *method)
 {
   if ( !this->fields.baseListViewManager )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   WarehouseListViewManager__SaveSortInfo((WarehouseListViewManager_o *)this, method);
 }
 
@@ -846,7 +846,7 @@ void __fastcall WarehouseListManager__SetMode(
   const MethodInfo *v10; // x2
 
   this->fields.callbackFunc = callback;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.callbackFunc,
     (System_Int32_array **)callback,
     (System_String_array **)callback,
@@ -855,7 +855,7 @@ void __fastcall WarehouseListManager__SetMode(
     v5,
     v6,
     v7);
-  WarehouseListManager__SetMode_26273808(this, mode, v10);
+  WarehouseListManager__SetMode_26632316(this, mode, v10);
 }
 
 
@@ -871,7 +871,7 @@ bool __fastcall WarehouseListManager__SetModeKind(
 }
 
 
-void __fastcall WarehouseListManager__SetMode_26273808(
+void __fastcall WarehouseListManager__SetMode_26632316(
         WarehouseListManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -888,23 +888,23 @@ void __fastcall WarehouseListManager__SetMode_26273808(
   System_Int32_array *v14; // x7
   const MethodInfo *v15; // x2
 
-  if ( (byte_43526DE & 1) == 0 )
+  if ( (byte_438BE5A & 1) == 0 )
   {
-    sub_B70694(&WarehouseListViewManager_CallbackFunc_TypeInfo);
-    sub_B70694(&Method_WarehouseListManager_OnSelectServant__);
-    byte_43526DE = 1;
+    sub_B775C4(&WarehouseListViewManager_CallbackFunc_TypeInfo);
+    sub_B775C4(&Method_WarehouseListManager_OnSelectServant__);
+    byte_438BE5A = 1;
   }
   baseListViewManager = this->fields.baseListViewManager;
-  v6 = (WarehouseListViewManager_CallbackFunc_o *)sub_B70764(WarehouseListViewManager_CallbackFunc_TypeInfo);
+  v6 = (WarehouseListViewManager_CallbackFunc_o *)sub_B77694(WarehouseListViewManager_CallbackFunc_TypeInfo);
   WarehouseListViewManager_CallbackFunc___ctor(
     v6,
     (Il2CppObject *)this,
     Method_WarehouseListManager_OnSelectServant__,
     0LL);
   if ( !baseListViewManager )
-    sub_B7076C(v7, v8);
+    sub_B7769C(v7, v8);
   baseListViewManager->fields.callbackFunc = v6;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&baseListViewManager->fields.callbackFunc,
     (System_Int32_array **)v6,
     v9,
@@ -913,7 +913,7 @@ void __fastcall WarehouseListManager__SetMode_26273808(
     v12,
     v13,
     v14);
-  WarehouseListViewManager__SetMode_26313248(baseListViewManager, mode, v15);
+  WarehouseListViewManager__SetMode_26671756(baseListViewManager, mode, v15);
 }
 
 
@@ -923,7 +923,7 @@ void __fastcall WarehouseListManager__SetServant(WarehouseListManager_o *this, c
 
   baseListViewManager = this->fields.baseListViewManager;
   if ( !baseListViewManager )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   this->fields.totalSum = baseListViewManager->fields.selectSum;
 }
 
@@ -934,7 +934,7 @@ void __fastcall WarehouseListManager__SortItem(WarehouseListManager_o *this, con
 
   baseListViewManager = (ListViewManager_o *)this->fields.baseListViewManager;
   if ( !baseListViewManager )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   ListViewManager__SortItem(baseListViewManager, -1, 0, -1, 0LL);
 }
 
@@ -948,7 +948,7 @@ void __fastcall WarehouseListManager__UpdateItemState(
 
   baseListViewManager = this->fields.baseListViewManager;
   if ( !baseListViewManager )
-    sub_B7076C(0LL, isPushMode);
+    sub_B7769C(0LL, isPushMode);
   WarehouseListViewManager__UpdateItemState(baseListViewManager, isPushMode, method);
 }
 
@@ -971,13 +971,13 @@ void __fastcall WarehouseListManager__UpdateSelectDoneLabel(WarehouseListManager
   int32_t v16; // [xsp+Ch] [xbp-34h] BYREF
   int32_t friendShipSum[2]; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_43526DD & 1) == 0 )
+  if ( (byte_438BE59 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_12639/*"SUM_OVER_INFO"*/);
-    sub_B70694(&StringLiteral_12638/*"SUM_INFO"*/);
-    byte_43526DD = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_12703/*"SUM_OVER_INFO"*/);
+    sub_B775C4(&StringLiteral_12702/*"SUM_INFO"*/);
+    byte_438BE59 = 1;
   }
   *(_QWORD *)friendShipSum = 0LL;
   totalSum = this->fields.totalSum;
@@ -1006,9 +1006,9 @@ LABEL_11:
   WarehouseListManager__GetSelectItemNum(this, &friendShipSum[1], friendShipSum, v6);
   v7 = this->fields.selectDoneLabel;
   if ( this->fields.totalSum - friendShipSum[0] <= this->fields.sendMax )
-    v8 = (System_String_o **)&StringLiteral_12638/*"SUM_INFO"*/;
+    v8 = (System_String_o **)&StringLiteral_12702/*"SUM_INFO"*/;
   else
-    v8 = (System_String_o **)&StringLiteral_12639/*"SUM_OVER_INFO"*/;
+    v8 = (System_String_o **)&StringLiteral_12703/*"SUM_OVER_INFO"*/;
   v9 = *v8;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1020,10 +1020,10 @@ LABEL_11:
   v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16, v11);
   sendMax = this->fields.sendMax;
   v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &sendMax, v13);
-  selectDoneLabel = (UILabel_o *)System_String__Format_44753704(v10, v12, v14, 0LL);
+  selectDoneLabel = (UILabel_o *)System_String__Format_44897472(v10, v12, v14, 0LL);
   if ( !v7 )
 LABEL_19:
-    sub_B7076C(selectDoneLabel, method);
+    sub_B7769C(selectDoneLabel, method);
   UILabel__set_text(v7, (System_String_o *)selectDoneLabel, 0LL);
 }
 
@@ -1043,10 +1043,10 @@ void __fastcall WarehouseListManager__add_callbackFunc(
   WarehouseListManager_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_43526D9 & 1) == 0 )
+  if ( (byte_438BE55 & 1) == 0 )
   {
-    sub_B70694(&WarehouseListManager_CallbackFunc_TypeInfo);
-    byte_43526D9 = 1;
+    sub_B775C4(&WarehouseListManager_CallbackFunc_TypeInfo);
+    byte_438BE55 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1059,13 +1059,13 @@ void __fastcall WarehouseListManager__add_callbackFunc(
       if ( (WarehouseListManager_CallbackFunc_c *)v8->klass != WarehouseListManager_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (WarehouseListManager_o *)sub_B70A60(v8);
+  v11 = (WarehouseListManager_o *)sub_B77990(v8);
   WarehouseListManager__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -1120,10 +1120,10 @@ void __fastcall WarehouseListManager__remove_callbackFunc(
   WarehouseListManager_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_43526DA & 1) == 0 )
+  if ( (byte_438BE56 & 1) == 0 )
   {
-    sub_B70694(&WarehouseListManager_CallbackFunc_TypeInfo);
-    byte_43526DA = 1;
+    sub_B775C4(&WarehouseListManager_CallbackFunc_TypeInfo);
+    byte_438BE56 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1136,13 +1136,13 @@ void __fastcall WarehouseListManager__remove_callbackFunc(
       if ( (WarehouseListManager_CallbackFunc_c *)v8->klass != WarehouseListManager_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B650AC(p_callbackFunc, v8, v6);
+    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (WarehouseListManager_o *)sub_B70A60(v8);
+  v11 = (WarehouseListManager_o *)sub_B77990(v8);
   WarehouseListManager__SetServant(v11, v12);
 }
 
@@ -1166,7 +1166,7 @@ void __fastcall WarehouseListManager_CallbackFunc___ctor(
   p_method = (BattleServantConfConponent_o *)&this->fields.method;
   p_method->monitor = *(void **)&method;
   p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B70630(
+  sub_B77560(
     p_method,
     (System_Int32_array **)object,
     *(System_String_array ***)&method,
@@ -1194,17 +1194,17 @@ System_IAsyncResult_o *__fastcall WarehouseListManager_CallbackFunc__BeginInvoke
 
   v15 = kind;
   v14 = n;
-  if ( (byte_434FCB9 & 1) == 0 )
+  if ( (byte_43892A2 & 1) == 0 )
   {
-    sub_B70694(&int_TypeInfo);
-    sub_B70694(&WarehouseListManager_ResultKind_TypeInfo);
-    byte_434FCB9 = 1;
+    sub_B775C4(&int_TypeInfo);
+    sub_B775C4(&WarehouseListManager_ResultKind_TypeInfo);
+    byte_43892A2 = 1;
   }
   v13[3] = 0LL;
   v13[0] = j_il2cpp_value_box_0(WarehouseListManager_ResultKind_TypeInfo, &v15, list);
   v13[1] = (__int64)list;
   v13[2] = j_il2cpp_value_box_0(int_TypeInfo, &v14, v11);
-  return (System_IAsyncResult_o *)sub_B70638(this, v13, callback, object);
+  return (System_IAsyncResult_o *)sub_B77568(this, v13, callback, object);
 }
 
 
@@ -1213,7 +1213,7 @@ void __fastcall WarehouseListManager_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7063C(result, 0LL, method);
+  sub_B7756C(result, 0LL, method);
 }
 
 
@@ -1276,8 +1276,8 @@ LABEL_5:
       v24 = *(_QWORD *)&v22->fields.extra_arg;
       v25 = *(void (__fastcall **)(unsigned int *, System_Int64_array *, _QWORD, __int64))&v22->fields.method_ptr;
       if ( *(__int16 *)(v24 + 72) == -1 )
-        sub_B70750(*(_QWORD *)&v22->fields.extra_arg, *(_QWORD *)&kind);
-      if ( (sub_B706C4(v24) & 1) == 0 )
+        sub_B77680(*(_QWORD *)&v22->fields.extra_arg, *(_QWORD *)&kind);
+      if ( (sub_B775F4(v24) & 1) == 0 )
         break;
       if ( *(_BYTE *)(v24 + 74) != 3 )
         goto LABEL_36;
@@ -1293,8 +1293,8 @@ LABEL_38:
     }
     if ( *(__int16 *)(v24 + 72) != -1 && (*(_BYTE *)(*v23 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v26 = sub_B706BC(v24);
-      v27 = sub_B70AC0(v24);
+      v26 = sub_B775EC(v24);
+      v27 = sub_B779F0(v24);
       if ( (v26 & 1) != 0 )
       {
         v28 = v34;
@@ -1319,7 +1319,7 @@ LABEL_38:
           else
           {
 LABEL_35:
-            v20 = sub_B08590(v23, v30, v31);
+            v20 = sub_B0F4C0(v23, v30, v31);
           }
           v19 = *(_QWORD *)(v20 + 8);
         }
@@ -1327,7 +1327,7 @@ LABEL_35:
         {
           v19 = *(_QWORD *)(*v23 + 16LL * *(unsigned __int16 *)(v24 + 72) + 320);
         }
-        v21 = (void (__fastcall **)(__int64 *, _QWORD, System_Int64_array *, _QWORD, _QWORD))sub_B70744(v19, v24);
+        v21 = (void (__fastcall **)(__int64 *, _QWORD, System_Int64_array *, _QWORD, _QWORD))sub_B77674(v19, v24);
         (*v21)(v23, v28, list, (unsigned int)n, v21);
       }
       else
@@ -1354,7 +1354,7 @@ LABEL_35:
           else
           {
 LABEL_11:
-            v18 = sub_B08590(v23, class_0, v12);
+            v18 = sub_B0F4C0(v23, class_0, v12);
           }
           (*(void (__fastcall **)(__int64 *, _QWORD, System_Int64_array *, _QWORD, _QWORD))v18)(
             v23,

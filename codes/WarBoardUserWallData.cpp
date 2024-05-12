@@ -11,19 +11,19 @@ WarBoardUserWallData_o *__fastcall WarBoardUserWallData__FromJson(System_String_
   __int64 v5; // x8
   __int64 v6; // x0
 
-  if ( (byte_4352677 & 1) == 0 )
+  if ( (byte_438BDF3 & 1) == 0 )
   {
-    sub_B70694(&Method_JsonManager_DeserializeArray_WarBoardUserWallData___);
-    sub_B70694(&JsonManager_TypeInfo);
-    sub_B70694(&StringLiteral_16049/*"[{0}]"*/);
-    byte_4352677 = 1;
+    sub_B775C4(&Method_JsonManager_DeserializeArray_WarBoardUserWallData___);
+    sub_B775C4(&JsonManager_TypeInfo);
+    sub_B775C4(&StringLiteral_16119/*"[{0}]"*/);
+    byte_438BDF3 = 1;
   }
-  v3 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_16049/*"[{0}]"*/, (Il2CppObject *)json, 0LL);
+  v3 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_16119/*"[{0}]"*/, (Il2CppObject *)json, 0LL);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   result = (WarBoardUserWallData_o *)JsonManager__DeserializeArray_UserPresentBoxWindow_resData_(
                                        v3,
-                                       (const MethodInfo_1D50530 *)Method_JsonManager_DeserializeArray_WarBoardUserWallData___);
+                                       (const MethodInfo_1DF16CC *)Method_JsonManager_DeserializeArray_WarBoardUserWallData___);
   if ( result )
   {
     v5 = *(_QWORD *)&result->fields.squareIndex;
@@ -31,8 +31,8 @@ WarBoardUserWallData_o *__fastcall WarBoardUserWallData__FromJson(System_String_
     {
       if ( !(_DWORD)v5 )
       {
-        v6 = sub_B70798(result);
-        sub_B70738(v6, 0LL);
+        v6 = sub_B776C8(result);
+        sub_B77668(v6, 0LL);
       }
       return (WarBoardUserWallData_o *)result[1].klass;
     }
@@ -53,7 +53,7 @@ void __fastcall WarBoardUserWallData__SetSaveData(
   int breakPoint; // w8
 
   if ( !saveData )
-    sub_B7076C(this, 0LL);
+    sub_B7769C(this, 0LL);
   breakPoint = saveData->fields.breakPoint;
   this->fields.defeatPoint = breakPoint;
   if ( breakPoint >= 1 )
@@ -63,10 +63,10 @@ void __fastcall WarBoardUserWallData__SetSaveData(
 
 System_String_o *__fastcall WarBoardUserWallData__ToJson(WarBoardUserWallData_o *this, const MethodInfo *method)
 {
-  if ( (byte_4352676 & 1) == 0 )
+  if ( (byte_438BDF2 & 1) == 0 )
   {
-    sub_B70694(&JsonManager_TypeInfo);
-    byte_4352676 = 1;
+    sub_B775C4(&JsonManager_TypeInfo);
+    byte_438BDF2 = 1;
   }
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);

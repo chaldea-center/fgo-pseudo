@@ -1,14 +1,14 @@
 void __fastcall SpotAddMaster___ctor(SpotAddMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4352768 & 1) == 0 )
+  if ( (byte_438BEE4 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string___ctor__);
-    byte_4352768 = 1;
+    sub_B775C4(&Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string___ctor__);
+    byte_438BEE4 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     217,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,16 @@ SpotAddEntity_o *__fastcall SpotAddMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4352766 & 1) == 0 )
+  if ( (byte_438BEE2 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string__GetEntity__);
-    byte_4352766 = 1;
+    sub_B775C4(&Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string__GetEntity__);
+    byte_438BEE2 = 1;
   }
   PK = SpotAddEntity__CreatePK(spotId, priority, overrideType, *(const MethodInfo **)&overrideType);
   return (SpotAddEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                               (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                               PK,
-                              (const MethodInfo_21C0890 *)Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string__GetEntity__);
+                              (const MethodInfo_21FBCE4 *)Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string__GetEntity__);
 }
 
 
@@ -78,13 +78,13 @@ bool __fastcall SpotAddMaster__HasPrioredData(
   int32_t v24; // [xsp+Ch] [xbp-64h]
   int32_t *v25; // [xsp+10h] [xbp-60h]
 
-  if ( (byte_4352769 & 1) == 0 )
+  if ( (byte_438BEE5 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&CondType_TypeInfo);
-    sub_B70694(&SpotAddEntity_TypeInfo);
-    byte_4352769 = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&CondType_TypeInfo);
+    sub_B775C4(&SpotAddEntity_TypeInfo);
+    byte_438BEE5 = 1;
   }
   *data = -1;
   list = this->fields.list;
@@ -92,7 +92,7 @@ bool __fastcall SpotAddMaster__HasPrioredData(
     goto LABEL_26;
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
-            (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v10 = Count;
@@ -107,7 +107,7 @@ bool __fastcall SpotAddMaster__HasPrioredData(
       Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
                v12,
-               (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( Item )
       {
         v15 = Item;
@@ -139,7 +139,7 @@ bool __fastcall SpotAddMaster__HasPrioredData(
             list = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                      (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
                      v12,
-                     (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                     (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
             if ( !list )
               break;
             v11 = list;
@@ -157,7 +157,7 @@ bool __fastcall SpotAddMaster__HasPrioredData(
         return v11 != 0LL;
     }
 LABEL_26:
-    sub_B7076C(list, *(_QWORD *)&type);
+    sub_B7769C(list, *(_QWORD *)&type);
   }
   v11 = 0LL;
   return v11 != 0LL;
@@ -192,21 +192,21 @@ void __fastcall SpotAddMaster__OverwriteNamePanelOffset(
   int32_t *v26; // [xsp+10h] [xbp-60h]
   int klass_high; // [xsp+1Ch] [xbp-54h]
 
-  if ( (byte_435276A & 1) == 0 )
+  if ( (byte_438BEE6 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&CondType_TypeInfo);
-    sub_B70694(&SpotAddEntity_TypeInfo);
-    byte_435276A = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&CondType_TypeInfo);
+    sub_B775C4(&SpotAddEntity_TypeInfo);
+    byte_438BEE6 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
 LABEL_29:
-    sub_B7076C(list, *(_QWORD *)&spotId);
+    sub_B7769C(list, *(_QWORD *)&spotId);
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             list,
-            (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v11 = Count;
@@ -221,7 +221,7 @@ LABEL_29:
       Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                list,
                v12,
-               (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( Item )
       {
         v15 = Item;
@@ -304,17 +304,17 @@ bool __fastcall SpotAddMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4352767 & 1) == 0 )
+  if ( (byte_438BEE3 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string__TryGetEntity__);
-    byte_4352767 = 1;
+    sub_B775C4(&Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string__TryGetEntity__);
+    byte_438BEE3 = 1;
   }
   PK = SpotAddEntity__CreatePK(spotId, priority, overrideType, *(const MethodInfo **)&priority);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_SpotAddMaster__SpotAddEntity__string__TryGetEntity__);
 }
 
 
@@ -349,21 +349,21 @@ bool __fastcall SpotAddMaster__TryGetOverwriteName(
   BattleServantConfConponent_o *v29; // [xsp+18h] [xbp-58h]
 
   v5 = (BattleServantConfConponent_o *)spotName;
-  if ( (byte_435276B & 1) == 0 )
+  if ( (byte_438BEE7 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&CondType_TypeInfo);
-    sub_B70694(&SpotAddEntity_TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_435276B = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&CondType_TypeInfo);
+    sub_B775C4(&SpotAddEntity_TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438BEE7 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
     goto LABEL_22;
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             list,
-            (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   klass = (System_Int32_array **)StringLiteral_1/*""*/;
   if ( Count >= 1 )
   {
@@ -378,7 +378,7 @@ bool __fastcall SpotAddMaster__TryGetOverwriteName(
       Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                list,
                v17,
-               (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( Item )
       {
         v20 = Item;
@@ -414,11 +414,11 @@ bool __fastcall SpotAddMaster__TryGetOverwriteName(
         goto LABEL_21;
     }
 LABEL_22:
-    sub_B7076C(list, spotName);
+    sub_B7769C(list, spotName);
   }
   klass_high = -1;
 LABEL_21:
   v5->klass = (BattleServantConfConponent_c *)klass;
-  sub_B70630(v5, klass, v9, v10, v11, v12, v13, v14);
+  sub_B77560(v5, klass, v9, v10, v11, v12, v13, v14);
   return klass_high >= 0;
 }

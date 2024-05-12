@@ -20,10 +20,10 @@ bool __fastcall EventPointGaugeChangeEffectAction__IsEnd(
   UnityEngine_Animation_o *v10; // x19
   System_String_o *v11; // x0
 
-  if ( (byte_4351E98 & 1) == 0 )
+  if ( (byte_438B55B & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4351E98 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438B55B = 1;
   }
   commonEffectComponent = (UnityEngine_Object_o *)this->fields.commonEffectComponent;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -50,7 +50,7 @@ bool __fastcall EventPointGaugeChangeEffectAction__IsEnd(
     v7 = this->fields.simpleAnimation;
     if ( !v7 || (monitor = (CommonEffectComponent_o *)v7[1].monitor) == 0LL )
 LABEL_26:
-      sub_B7076C(monitor, v4);
+      sub_B7769C(monitor, v4);
     name = UnityEngine_Object__get_name((UnityEngine_Object_o *)monitor, 0LL);
     if ( !SimpleAnimation__IsPlaying(v7, name, 0LL) )
       return 1;
@@ -93,7 +93,7 @@ void __fastcall EventPointGaugeChangeEffectAction__OnChangeGauge(
   p_gaugeChangeAction = (BattleServantConfConponent_o *)&this->fields.gaugeChangeAction;
   v9 = gaugeChangeAction;
   p_gaugeChangeAction->klass = 0LL;
-  sub_B70630(p_gaugeChangeAction, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B77560(p_gaugeChangeAction, 0LL, v2, v3, v4, v5, v6, v7);
   if ( gaugeChangeAction )
     ActionExtensions__Call(v9, 0LL);
 }
@@ -141,21 +141,21 @@ void __fastcall EventPointGaugeChangeEffectAction__Setup(
   System_Int32_array *v40; // x6
   System_Int32_array *v41; // x7
 
-  if ( (byte_4351E97 & 1) == 0 )
+  if ( (byte_438B55A & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponentInChildren_Animation___);
-    sub_B70694(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
-    sub_B70694(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
-    byte_4351E97 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
+    byte_438B55A = 1;
   }
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_7;
   ComponentInChildren_UIWidget = (struct CommonEffectComponent_o *)UnityEngine_Component__GetComponentInChildren_UIWidget_(
                                                                      transform,
-                                                                     (const MethodInfo_1BE40A0 *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
+                                                                     (const MethodInfo_1C6D75C *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
   this->fields.commonEffectComponent = ComponentInChildren_UIWidget;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.commonEffectComponent,
     (System_Int32_array **)ComponentInChildren_UIWidget,
     v10,
@@ -168,9 +168,9 @@ void __fastcall EventPointGaugeChangeEffectAction__Setup(
   if ( !transform
     || (v16 = (struct SimpleAnimation_o *)UnityEngine_Component__GetComponentInChildren_UIWidget_(
                                             transform,
-                                            (const MethodInfo_1BE40A0 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___),
+                                            (const MethodInfo_1C6D75C *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___),
         this->fields.simpleAnimation = v16,
-        sub_B70630(
+        sub_B77560(
           (BattleServantConfConponent_o *)&this->fields.simpleAnimation,
           (System_Int32_array **)v16,
           v17,
@@ -184,13 +184,13 @@ void __fastcall EventPointGaugeChangeEffectAction__Setup(
                                                   0LL)) == 0LL) )
   {
 LABEL_7:
-    sub_B7076C(transform, v8);
+    sub_B7769C(transform, v8);
   }
   v23 = (struct UnityEngine_Animation_o *)UnityEngine_Component__GetComponentInChildren_UIWidget_(
                                             transform,
-                                            (const MethodInfo_1BE40A0 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+                                            (const MethodInfo_1C6D75C *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
   this->fields.animation = v23;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.animation,
     (System_Int32_array **)v23,
     v24,
@@ -200,7 +200,7 @@ LABEL_7:
     v28,
     v29);
   this->fields.gaugeChangeAction = gaugeChangeAct;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.gaugeChangeAction,
     (System_Int32_array **)gaugeChangeAct,
     v30,
@@ -210,7 +210,7 @@ LABEL_7:
     v34,
     v35);
   this->fields.endAction = endAct;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.endAction,
     (System_Int32_array **)endAct,
     v36,
@@ -238,7 +238,7 @@ void __fastcall EventPointGaugeChangeEffectAction__Update(
   {
     endAction = this->fields.endAction;
     this->fields.endAction = 0LL;
-    sub_B70630((BattleServantConfConponent_o *)&this->fields.endAction, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_B77560((BattleServantConfConponent_o *)&this->fields.endAction, 0LL, v3, v4, v5, v6, v7, v8);
     if ( endAction )
       ActionExtensions__Call(endAction, 0LL);
   }

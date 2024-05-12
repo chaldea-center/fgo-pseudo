@@ -1,13 +1,13 @@
 void __fastcall StoneShopEntity___ctor(StoneShopEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4350E0A & 1) == 0 )
+  if ( (byte_438A57E & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_int___ctor__);
-    byte_4350E0A = 1;
+    sub_B775C4(&Method_DataEntityBase_int___ctor__);
+    byte_438A57E = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,10 +19,10 @@ int32_t __fastcall StoneShopEntity__CreatePrimaryKey(StoneShopEntity_o *this, co
 
 System_String_o *__fastcall StoneShopEntity__GetCountText(StoneShopEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4350E09 & 1) == 0 )
+  if ( (byte_438A57D & 1) == 0 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    byte_4350E09 = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    byte_438A57D = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -55,10 +55,10 @@ bool __fastcall StoneShopEntity__IsClosed(StoneShopEntity_o *this, int64_t nowTi
 {
   int64_t closedAt; // x8
 
-  if ( (byte_4350E08 & 1) == 0 )
+  if ( (byte_438A57C & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4350E08 = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_438A57C = 1;
   }
   if ( !nowTime )
   {
@@ -79,10 +79,10 @@ bool __fastcall StoneShopEntity__IsEnable(StoneShopEntity_o *this, int64_t nowTi
   int64_t closedAt; // x8
   bool result; // w0
 
-  if ( (byte_4350E06 & 1) == 0 )
+  if ( (byte_438A57A & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4350E06 = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_438A57A = 1;
   }
   if ( !nowTime )
   {
@@ -108,10 +108,10 @@ bool __fastcall StoneShopEntity__IsEnable(StoneShopEntity_o *this, int64_t nowTi
 
 bool __fastcall StoneShopEntity__IsOpened(StoneShopEntity_o *this, int64_t nowTime, const MethodInfo *method)
 {
-  if ( (byte_4350E07 & 1) == 0 )
+  if ( (byte_438A57B & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    byte_4350E07 = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    byte_438A57B = 1;
   }
   if ( !nowTime )
   {

@@ -1,9 +1,9 @@
 void __fastcall ResponseCommandBase___ctor(ResponseCommandBase_o *this, const MethodInfo *method)
 {
-  if ( (byte_4354305 & 1) == 0 )
+  if ( (byte_438DBC3 & 1) == 0 )
   {
-    sub_B70694(&ResponseData_TypeInfo);
-    byte_4354305 = 1;
+    sub_B775C4(&ResponseData_TypeInfo);
+    byte_438DBC3 = 1;
   }
   if ( (BYTE3(ResponseData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !ResponseData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseData_TypeInfo);
@@ -25,10 +25,10 @@ System_String_o *__fastcall ResponseCommandBase__GetCommandName(ResponseCommandB
   const MethodInfo *v3; // x1
   int32_t v4; // w19
 
-  if ( (byte_4354304 & 1) == 0 )
+  if ( (byte_438DBC2 & 1) == 0 )
   {
-    sub_B70694(&ResponseCommandKind_TypeInfo);
-    byte_4354304 = 1;
+    sub_B775C4(&ResponseCommandKind_TypeInfo);
+    byte_438DBC2 = 1;
   }
   v4 = ((__int64 (__fastcall *)(ResponseCommandBase_o *, Il2CppMethodPointer))this->klass->vtable._4_GetKind.method)(
          this,

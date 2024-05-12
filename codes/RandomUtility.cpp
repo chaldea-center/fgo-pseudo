@@ -17,19 +17,19 @@ int32_t __fastcall RandomUtility__GetRandomRangeIndex(
   int32_t v11; // w1
   __int64 v12; // x0
 
-  if ( (byte_435025D & 1) == 0 )
+  if ( (byte_4389990 & 1) == 0 )
   {
-    sub_B70694(&Method_WeightRate_int___ctor__);
-    sub_B70694(&Method_WeightRate_int__getData__);
-    sub_B70694(&Method_WeightRate_int__getTotalWeight__);
-    sub_B70694(&Method_WeightRate_int__setWeight__);
-    sub_B70694(&WeightRate_int__TypeInfo);
-    byte_435025D = 1;
+    sub_B775C4(&Method_WeightRate_int___ctor__);
+    sub_B775C4(&Method_WeightRate_int__getData__);
+    sub_B775C4(&Method_WeightRate_int__getTotalWeight__);
+    sub_B775C4(&Method_WeightRate_int__setWeight__);
+    sub_B775C4(&WeightRate_int__TypeInfo);
+    byte_4389990 = 1;
   }
   if ( !weightArray || !*(_QWORD *)&weightArray->max_length )
     return defValue;
-  v5 = (WeightRate_int__o *)sub_B70764(WeightRate_int__TypeInfo);
-  WeightRate_int____ctor(v5, (const MethodInfo_2CBC9CC *)Method_WeightRate_int___ctor__);
+  v5 = (WeightRate_int__o *)sub_B77694(WeightRate_int__TypeInfo);
+  WeightRate_int____ctor(v5, (const MethodInfo_2CE85DC *)Method_WeightRate_int___ctor__);
   v8 = *(_QWORD *)&weightArray->max_length;
   if ( (int)v8 >= 1 )
   {
@@ -38,8 +38,8 @@ int32_t __fastcall RandomUtility__GetRandomRangeIndex(
     {
       if ( v9 >= (unsigned int)v8 )
       {
-        v12 = sub_B70798(v6);
-        sub_B70738(v12, 0LL);
+        v12 = sub_B776C8(v6);
+        sub_B77668(v12, 0LL);
       }
       if ( !v5 )
         break;
@@ -47,17 +47,17 @@ int32_t __fastcall RandomUtility__GetRandomRangeIndex(
         v5,
         weightArray->m_Items[v9 + 1],
         v9,
-        (const MethodInfo_2CBBB94 *)Method_WeightRate_int__setWeight__);
+        (const MethodInfo_2CE77A4 *)Method_WeightRate_int__setWeight__);
       LODWORD(v8) = weightArray->max_length;
       if ( (__int64)++v9 >= (int)v8 )
         goto LABEL_13;
     }
 LABEL_15:
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   }
   if ( !v5 )
     goto LABEL_15;
 LABEL_13:
-  v11 = UnityEngine_Random__Range_36100992(0, v5->fields.totalweight, 0LL);
-  return WeightRate_int___getData(v5, v11, (const MethodInfo_2CBC018 *)Method_WeightRate_int__getData__);
+  v11 = UnityEngine_Random__Range_36343764(0, v5->fields.totalweight, 0LL);
+  return WeightRate_int___getData(v5, v11, (const MethodInfo_2CE7C28 *)Method_WeightRate_int__getData__);
 }

@@ -1,9 +1,9 @@
 void __fastcall ServantStatusFlavorTextListViewItemDrawParam___cctor(const MethodInfo *method)
 {
-  if ( (byte_43592CE & 1) == 0 )
+  if ( (byte_4392907 & 1) == 0 )
   {
-    sub_B70694(&ServantStatusFlavorTextListViewItemDrawParam_TypeInfo);
-    byte_43592CE = 1;
+    sub_B775C4(&ServantStatusFlavorTextListViewItemDrawParam_TypeInfo);
+    byte_4392907 = 1;
   }
   ServantStatusFlavorTextListViewItemDrawParam_TypeInfo->static_fields->TITLE_NAME_CONDENSED_WIDTH = 154;
   ServantStatusFlavorTextListViewItemDrawParam_TypeInfo->static_fields->TITLE_NAME_LEFT_POS = -113;
@@ -30,7 +30,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__Awake(
 
   powerGauge = this->fields.powerGauge;
   if ( !powerGauge )
-    sub_B7076C(this, method);
+    sub_B7769C(this, method);
   transformNameSprite = (UnityEngine_GameObject_o *)this->fields.transformNameSprite;
   this->fields.mainContentsRootPosYBase = *((float *)&powerGauge[2].fields.BaseMonoBehaviour_Fields + 1);
   LocalPositionY = GameObjectExtensions__GetLocalPositionY(transformNameSprite, 0LL);
@@ -63,21 +63,21 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__SetCondTitle(
   float v12; // s8
   struct UnityEngine_BoxCollider_o *v13; // x19
 
-  if ( (byte_43592CD & 1) == 0 )
+  if ( (byte_4392906 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&ServantStatusFlavorTextListViewItemDrawParam_TypeInfo);
-    sub_B70694(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_43592CD = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&ServantStatusFlavorTextListViewItemDrawParam_TypeInfo);
+    sub_B775C4(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_4392906 = 1;
   }
   titleName = (UnityEngine_GameObject_o *)this->fields.titleName;
   if ( !titleName )
     goto LABEL_53;
   Component_srcLineSprite = (UISprite_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                             titleName,
-                                            (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                            (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( System_String__IsNullOrEmpty(title, 0LL) )
   {
     titleName = (UnityEngine_GameObject_o *)this->fields.baseCollider;
@@ -106,7 +106,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__SetCondTitle(
         return;
       }
 LABEL_53:
-      sub_B7076C(titleName, title);
+      sub_B7769C(titleName, title);
     }
   }
   else
@@ -310,7 +310,7 @@ LABEL_15:
         }
       }
     }
-    sub_B7076C(transformNameLabel, item);
+    sub_B7769C(transformNameLabel, item);
   }
 }
 
@@ -344,7 +344,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__SetParameterGauge(
         (defenseGauge = (ServantStatusParameterGauge_o *)this->fields.titleServantBase) == 0LL) )
   {
 LABEL_8:
-    sub_B7076C(defenseGauge, *(_QWORD *)&power);
+    sub_B7769C(defenseGauge, *(_QWORD *)&power);
   }
   ServantStatusParameterGauge__Set(defenseGauge, 5, np, 0LL);
 }
@@ -386,15 +386,15 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__UpdateParameter(
   ServantLimitAddEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = (ServantStatusFlavorTextListViewItemDrawParam_o **)this;
-  if ( (byte_43592CC & 1) == 0 )
+  if ( (byte_4392905 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_ServantLimitMaster___);
-    sub_B70694(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&string_TypeInfo);
-    this = (ServantStatusFlavorTextListViewItemDrawParam_o *)sub_B70694(&StringLiteral_1/*""*/);
-    byte_43592CC = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_ServantLimitMaster___);
+    sub_B775C4(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&string_TypeInfo);
+    this = (ServantStatusFlavorTextListViewItemDrawParam_o *)sub_B775C4(&StringLiteral_1/*""*/);
+    byte_4392905 = 1;
   }
   entity = 0LL;
   if ( !item )
@@ -452,7 +452,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__UpdateParameter(
   paramLimitCount = item->fields.paramLimitCount;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (ServantLimitAddMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
+  Master_WarQuestSelectionMaster = (ServantLimitAddMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
   this = (ServantStatusFlavorTextListViewItemDrawParam_o *)ServantStatusListViewItem__get_SvtId(item, v13);
   if ( !Master_WarQuestSelectionMaster )
     goto LABEL_49;
@@ -485,12 +485,12 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__UpdateParameter(
         {
           v17 = paramLimitCount >= 11 ? 0 : paramLimitCount;
           ServantParameterLimitCount = ServantLimitAddEntity__GetServantParameterLimitCount(entity, v17, 0LL);
-          this = (ServantStatusFlavorTextListViewItemDrawParam_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          this = (ServantStatusFlavorTextListViewItemDrawParam_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( this )
           {
             MasterData_WarQuestSelectionMaster = (ServantLimitMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                            (DataManager_o *)this,
-                                                                           (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+                                                                           (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
             this = (ServantStatusFlavorTextListViewItemDrawParam_o *)ServantStatusListViewItem__get_SvtId(item, v20);
             if ( MasterData_WarQuestSelectionMaster )
             {
@@ -525,7 +525,7 @@ LABEL_48:
       }
     }
 LABEL_49:
-    sub_B7076C(this, item);
+    sub_B7769C(this, item);
   }
   this = (ServantStatusFlavorTextListViewItemDrawParam_o *)((__int64 (__fastcall *)(ServantStatusFlavorTextListViewItemDrawParam_o **, struct System_String_o *, struct UnityEngine_BoxCollider_o *))(*v4)[2].fields.titleName)(
                                                              v4,

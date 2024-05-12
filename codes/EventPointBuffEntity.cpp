@@ -22,30 +22,30 @@ void __fastcall EventPointBuffEntity___ctor(EventPointBuffEntity_o *this, const 
   System_Int32_array *v22; // x6
   System_Int32_array *v23; // x7
 
-  if ( (byte_4351E8C & 1) == 0 )
+  if ( (byte_438B54F & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_int___ctor__);
-    sub_B70694(&int___TypeInfo);
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4351E8C = 1;
+    sub_B775C4(&Method_DataEntityBase_int___ctor__);
+    sub_B775C4(&int___TypeInfo);
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438B54F = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
   *(_QWORD *)&this->fields.id = 0LL;
   *(_QWORD *)&this->fields.groupId = 0LL;
   v3 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.name = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.name, v3, v4, v5, v6, v7, v8, v9);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.name, v3, v4, v5, v6, v7, v8, v9);
   v10 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.detail = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.detail, v10, v11, v12, v13, v14, v15, v16);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.detail, v10, v11, v12, v13, v14, v15, v16);
   this->fields.value = 0;
   *(_QWORD *)&this->fields.imageId = 0LL;
   *(_QWORD *)&this->fields.skillIconId = 0LL;
-  v17 = (struct System_Int32_array *)sub_B706AC(int___TypeInfo, 0LL);
+  v17 = (struct System_Int32_array *)sub_B775DC(int___TypeInfo, 0LL);
   this->fields.funcIds = v17;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.funcIds,
     (System_Int32_array **)v17,
     v18,
@@ -57,7 +57,7 @@ void __fastcall EventPointBuffEntity___ctor(EventPointBuffEntity_o *this, const 
 }
 
 
-void __fastcall EventPointBuffEntity___ctor_25423824(
+void __fastcall EventPointBuffEntity___ctor_25671640(
         EventPointBuffEntity_o *this,
         EventPointBuffEntity_o *cSrc,
         const MethodInfo *method)
@@ -86,26 +86,26 @@ void __fastcall EventPointBuffEntity___ctor_25423824(
   System_Int32_array *v26; // x6
   System_Int32_array *v27; // x7
 
-  if ( (byte_4351E8D & 1) == 0 )
+  if ( (byte_438B550 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_int___ctor__);
-    byte_4351E8D = 1;
+    sub_B775C4(&Method_DataEntityBase_int___ctor__);
+    byte_438B550 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21C02EC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
   if ( !cSrc )
-    sub_B7076C(v5, v6);
+    sub_B7769C(v5, v6);
   this->fields.id = cSrc->fields.id;
   this->fields.eventId = cSrc->fields.eventId;
   this->fields.groupId = cSrc->fields.groupId;
   this->fields.eventPoint = cSrc->fields.eventPoint;
   name = cSrc->fields.name;
   this->fields.name = name;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.name, (System_Int32_array **)name, v7, v8, v9, v10, v11, v12);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.name, (System_Int32_array **)name, v7, v8, v9, v10, v11, v12);
   detail = cSrc->fields.detail;
   this->fields.detail = detail;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.detail,
     (System_Int32_array **)detail,
     v15,
@@ -121,7 +121,7 @@ void __fastcall EventPointBuffEntity___ctor_25423824(
   this->fields.value = cSrc->fields.value;
   funcIds = cSrc->fields.funcIds;
   this->fields.funcIds = funcIds;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.funcIds,
     (System_Int32_array **)funcIds,
     v22,

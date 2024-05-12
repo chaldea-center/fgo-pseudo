@@ -27,21 +27,21 @@ int32_t __fastcall FriendshipGauge__ChangeGauge(
   const MethodInfo *v22; // x4
   struct FriendshipGauge_GaugeData_o *v23; // x8
 
-  if ( (byte_43540A9 & 1) == 0 )
+  if ( (byte_438D8CE & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_FriendshipMaster___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43540A9 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_FriendshipMaster___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438D8CE = 1;
   }
   *max = 0;
   *isLevelUp = 0;
   *isChange = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_FriendshipMaster___);
+                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_FriendshipMaster___);
   nowGauge = this->fields.nowGauge;
   if ( !nowGauge )
     goto LABEL_16;
@@ -77,7 +77,7 @@ int32_t __fastcall FriendshipGauge__ChangeGauge(
   v23 = this->fields.nowGauge;
   if ( !v23 )
 LABEL_16:
-    sub_B7076C(Instance, v12);
+    sub_B7769C(Instance, v12);
   return v19 - v23->fields.friendship;
 }
 
@@ -107,23 +107,23 @@ void __fastcall FriendshipGauge__ChangeGaugeData(
   struct UISprite_array *v23; // x8
   __int64 v24; // x0
 
-  if ( (byte_43540A8 & 1) == 0 )
+  if ( (byte_438D8CD & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMasterData_FriendshipMaster___);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B70694(&StringLiteral_19755/*"img_bondsgage_point"*/);
-    byte_43540A8 = 1;
+    sub_B775C4(&Method_DataManager_GetMasterData_FriendshipMaster___);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_B775C4(&StringLiteral_19845/*"img_bondsgage_point"*/);
+    byte_438D8CD = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_FriendshipMaster___),
+                     (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_FriendshipMaster___),
         (gaugeIcons = this->fields.gaugeIcons) == 0LL) )
   {
 LABEL_36:
-    sub_B7076C(Instance, v9);
+    sub_B7769C(Instance, v9);
   }
   v12 = (FriendshipMaster_o *)Instance;
   v13 = 0;
@@ -161,10 +161,10 @@ LABEL_36:
         goto LABEL_36;
       Instance = UnityEngine_GameObject__GetComponent_srcLineSprite_(
                    (UnityEngine_GameObject_o *)Instance,
-                   (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                   (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
       if ( !Instance )
         goto LABEL_36;
-      UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_19755/*"img_bondsgage_point"*/, 0LL);
+      UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_19845/*"img_bondsgage_point"*/, 0LL);
     }
     else
     {
@@ -195,8 +195,8 @@ LABEL_36:
         if ( v16 >= v23->max_length )
         {
 LABEL_38:
-          v24 = sub_B70798(Instance);
-          sub_B70738(v24, 0LL);
+          v24 = sub_B776C8(Instance);
+          sub_B77668(v24, 0LL);
         }
         Instance = (void *)*((_QWORD *)&v23->obj.klass + v14);
         if ( !Instance )
@@ -233,7 +233,7 @@ void __fastcall FriendshipGauge__Hide(FriendshipGauge_o *this, const MethodInfo 
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
 }
 
@@ -274,18 +274,18 @@ void __fastcall FriendshipGauge__SetGaugeData(
   struct FriendshipGauge_GaugeData_o *nowGauge; // x8
   struct FriendshipGauge_GaugeData_o *v26; // x8
 
-  if ( (byte_43540A6 & 1) == 0 )
+  if ( (byte_438D8CB & 1) == 0 )
   {
-    sub_B70694(&FriendshipGauge_GaugeData_TypeInfo);
-    byte_43540A6 = 1;
+    sub_B775C4(&FriendshipGauge_GaugeData_TypeInfo);
+    byte_438D8CB = 1;
   }
   this->fields.friendshipId = friendshipId;
   this->fields.maxFriendShipRank = exceedCount + inMaxFriendShipRank;
-  v13 = (FriendshipGauge_GaugeData_o *)sub_B70764(FriendshipGauge_GaugeData_TypeInfo);
+  v13 = (FriendshipGauge_GaugeData_o *)sub_B77694(FriendshipGauge_GaugeData_TypeInfo);
   FriendshipGauge_GaugeData___ctor(v13, 0LL);
   p_nowGauge = &this->fields.nowGauge;
   this->fields.nowGauge = v13;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.nowGauge,
     (System_Int32_array **)v13,
     v15,
@@ -299,7 +299,7 @@ void __fastcall FriendshipGauge__SetGaugeData(
     || (nowGauge->fields.friendshipRank = friendshipRank, !*p_nowGauge)
     || ((*p_nowGauge)->fields.friendship = friendship, (v26 = *p_nowGauge) == 0LL) )
   {
-    sub_B7076C(v21, v22);
+    sub_B7769C(v21, v22);
   }
   this->fields.prevRank = v26->fields.friendshipRank;
   this->fields.prevPoint = v26->fields.friendship;
@@ -324,18 +324,18 @@ void __fastcall FriendshipGauge__SetNextGaugeData(
   __int64 v15; // x0
   __int64 v16; // x1
 
-  if ( (byte_43540A7 & 1) == 0 )
+  if ( (byte_438D8CC & 1) == 0 )
   {
-    sub_B70694(&FriendshipGauge_GaugeData_TypeInfo);
-    byte_43540A7 = 1;
+    sub_B775C4(&FriendshipGauge_GaugeData_TypeInfo);
+    byte_438D8CC = 1;
   }
-  v7 = (FriendshipGauge_GaugeData_o *)sub_B70764(FriendshipGauge_GaugeData_TypeInfo);
+  v7 = (FriendshipGauge_GaugeData_o *)sub_B77694(FriendshipGauge_GaugeData_TypeInfo);
   FriendshipGauge_GaugeData___ctor(v7, 0LL);
   this->fields.nextGauge = v7;
   p_nextGauge = &this->fields.nextGauge;
-  sub_B70630((BattleServantConfConponent_o *)p_nextGauge, (System_Int32_array **)v7, v9, v10, v11, v12, v13, v14);
+  sub_B77560((BattleServantConfConponent_o *)p_nextGauge, (System_Int32_array **)v7, v9, v10, v11, v12, v13, v14);
   if ( !*p_nextGauge || ((*p_nextGauge)->fields.friendshipRank = friendshipRank, !*p_nextGauge) )
-    sub_B7076C(v15, v16);
+    sub_B7769C(v15, v16);
   (*p_nextGauge)->fields.friendship = friendship;
 }
 
@@ -347,7 +347,7 @@ void __fastcall FriendshipGauge__Show(FriendshipGauge_o *this, const MethodInfo 
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7076C(0LL, v3);
+    sub_B7769C(0LL, v3);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
 }
 

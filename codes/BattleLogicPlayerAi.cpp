@@ -24,10 +24,10 @@ void __fastcall BattleLogicPlayerAi__Initialize(
   BattleLogicBaseAi__Initialize((BattleLogicBaseAi_o *)this, data, 0LL);
   logic = this->fields.logic;
   if ( !logic || (logicEnemyAi = logic->fields.logicEnemyAi) == 0LL )
-    sub_B7076C(v4, v5);
+    sub_B7769C(v4, v5);
   aiLogic = logicEnemyAi->fields.aiLogic;
   this->fields.aiLogic = aiLogic;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.aiLogic,
     (System_Int32_array **)aiLogic,
     v6,
@@ -53,7 +53,7 @@ System_Int32_array *__fastcall BattleLogicPlayerAi__get_OpponentSvtIds(
 
   data = this->fields.data;
   if ( !data )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   return BattleData__getFieldEnemyServantIDList(data, 0, 0LL);
 }
 
@@ -66,7 +66,7 @@ System_Int32_array *__fastcall BattleLogicPlayerAi__get_PartySvtIds(
 
   data = this->fields.data;
   if ( !data )
-    sub_B7076C(0LL, method);
+    sub_B7769C(0LL, method);
   return BattleData__getFieldPlayerServantIDList(data, 0LL, 0LL);
 }
 
@@ -88,13 +88,13 @@ BattleLogicTask_array *__fastcall BattleLogicPlayerAi__procAiAct(
   ServantAiActArgument_o *v15; // x25
 
   v9 = (BattleLogicBaseAi_o *)this;
-  if ( (byte_4354FD4 & 1) == 0 )
+  if ( (byte_438E988 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-    sub_B70694(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-    sub_B70694(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
-    this = (BattleLogicPlayerAi_o *)sub_B70694(&ServantAiActArgument_TypeInfo);
-    byte_4354FD4 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+    sub_B775C4(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+    this = (BattleLogicPlayerAi_o *)sub_B775C4(&ServantAiActArgument_TypeInfo);
+    byte_438E988 = 1;
   }
   if ( !aiEnt )
     goto LABEL_11;
@@ -108,16 +108,16 @@ BattleLogicTask_array *__fastcall BattleLogicPlayerAi__procAiAct(
                        svtData->klass->vtable._19_ExistAiThinking.methodPtr);
   if ( BattleLogicBaseAi__IsChangeThinkingOnly(v9, data_high, (AiBaseEntity_o *)aiEnt, v12, 0LL) )
     return v9->fields.emptyTask;
-  v14 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v14 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v14,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
   this = (BattleLogicPlayerAi_o *)((__int64 (__fastcall *)(BattleServantData_o *, Il2CppMethodPointer))svtData->klass->vtable._18_getAiState.method)(
                                     svtData,
                                     svtData->klass->vtable._19_ExistAiThinking.methodPtr);
   if ( !this
     || (AiState__setBeforeAction((AiState_o *)this, data_high, aiEnt->fields.aiActId, 0LL),
-        v15 = (ServantAiActArgument_o *)sub_B70764(ServantAiActArgument_TypeInfo),
+        v15 = (ServantAiActArgument_o *)sub_B77694(ServantAiActArgument_TypeInfo),
         ServantAiActArgument___ctor(v15, v11, (AiBaseEntity_o *)aiEnt, svtData, 0, 0LL),
         this = (BattleLogicPlayerAi_o *)BattleLogicBaseAi__SetProcAiActTask(
                                           v9,
@@ -128,9 +128,9 @@ BattleLogicTask_array *__fastcall BattleLogicPlayerAi__procAiAct(
         !v14) )
   {
 LABEL_11:
-    sub_B7076C(this, svtData);
+    sub_B7769C(this, svtData);
   }
   return (BattleLogicTask_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
                                     (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v14,
-                                    (const MethodInfo_30277D4 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }

@@ -17,10 +17,10 @@ void __fastcall SetNoticeNumControl__clear(SetNoticeNumControl_o *this, const Me
   System_Int32_array *v11; // x6
   System_Int32_array *v12; // x7
 
-  if ( (byte_43541C8 & 1) == 0 )
+  if ( (byte_438DA86 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43541C8 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438DA86 = 1;
   }
   noticeNumObj = this->fields.noticeNumObj;
   p_noticeNumObj = (BattleServantConfConponent_o *)&this->fields.noticeNumObj;
@@ -38,9 +38,9 @@ void __fastcall SetNoticeNumControl__clear(SetNoticeNumControl_o *this, const Me
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_36067208(klass, 0LL);
+    UnityEngine_Object__Destroy_36309980(klass, 0LL);
     p_noticeNumObj->klass = 0LL;
-    sub_B70630(p_noticeNumObj, 0LL, v7, v8, v9, v10, v11, v12);
+    sub_B77560(p_noticeNumObj, 0LL, v7, v8, v9, v10, v11, v12);
   }
 }
 
@@ -67,10 +67,10 @@ void __fastcall SetNoticeNumControl__setNoticeNum(
   int v18; // s0
   bool v21; // w1
 
-  if ( (byte_43541C7 & 1) == 0 )
+  if ( (byte_438DA85 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
-    byte_43541C7 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
+    byte_438DA85 = 1;
   }
   SetNoticeNumControl__clear(this, *(const MethodInfo **)&resNum);
   if ( resNum < 1 )
@@ -82,14 +82,14 @@ void __fastcall SetNoticeNumControl__setNoticeNum(
       goto LABEL_12;
     }
 LABEL_13:
-    sub_B7076C(gameObject, v15);
+    sub_B7769C(gameObject, v15);
   }
   noticeNumberPrefab = this->fields.noticeNumberPrefab;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   Object = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, noticeNumberPrefab, transform, 0LL, 0LL);
   p_noticeNumObj = &this->fields.noticeNumObj;
   this->fields.noticeNumObj = Object;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.noticeNumObj,
     (System_Int32_array **)Object,
     v9,
@@ -111,7 +111,7 @@ LABEL_13:
     goto LABEL_13;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                              gameObject,
-                                             (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
+                                             (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
   if ( !gameObject )
     goto LABEL_13;
   NoticeNumberComponent__SetNumber((NoticeNumberComponent_o *)gameObject, resNum, 0LL);

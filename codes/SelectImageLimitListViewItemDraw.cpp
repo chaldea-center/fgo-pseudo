@@ -30,21 +30,21 @@ void __fastcall SelectImageLimitListViewItemDraw__SetButton(
   ServantCostumeEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
   UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4357797 & 1) == 0 )
+  if ( (byte_4390D61 & 1) == 0 )
   {
-    sub_B70694(&Method_DataManager_GetMaster_ServantCostumeMaster___);
-    sub_B70694(&DataManager_TypeInfo);
-    sub_B70694(&LocalizationManager_TypeInfo);
-    sub_B70694(&StringLiteral_12158/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/);
-    sub_B70694(&StringLiteral_17221/*"btn_bg_20"*/);
-    sub_B70694(&StringLiteral_17222/*"btn_bg_21"*/);
-    byte_4357797 = 1;
+    sub_B775C4(&Method_DataManager_GetMaster_ServantCostumeMaster___);
+    sub_B775C4(&DataManager_TypeInfo);
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    sub_B775C4(&StringLiteral_12222/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/);
+    sub_B775C4(&StringLiteral_17304/*"btn_bg_20"*/);
+    sub_B775C4(&StringLiteral_17305/*"btn_bg_21"*/);
+    byte_4390D61 = 1;
   }
   entity = 0LL;
   limitCount = 0;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (ServantCostumeMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1CA3540 *)Method_DataManager_GetMaster_ServantCostumeMaster___);
+  Master_WarQuestSelectionMaster = (ServantCostumeMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ServantCostumeMaster___);
   if ( !item || !Master_WarQuestSelectionMaster )
     goto LABEL_53;
   if ( ServantCostumeMaster__TryGetEntity(
@@ -72,7 +72,7 @@ LABEL_27:
   {
     limitCount = item->fields.limitCount;
     v10 = System_Int32__ToString((int32_t)&limitCount, 0LL);
-    v11 = System_String__Concat_44758168((System_String_o *)StringLiteral_12158/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v10, 0LL);
+    v11 = System_String__Concat_44901936((System_String_o *)StringLiteral_12222/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v10, 0LL);
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
@@ -88,10 +88,10 @@ LABEL_27:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  if ( !byte_434F6FF )
+  if ( !byte_4388DC6 )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    byte_434F6FF = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    byte_4388DC6 = 1;
   }
   Master_WarQuestSelectionMaster = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -113,10 +113,10 @@ LABEL_28:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    if ( !byte_434E9FD )
+    if ( !byte_4387FCE )
     {
-      sub_B70694(&LocalizationManager_TypeInfo);
-      byte_434E9FD = 1;
+      sub_B775C4(&LocalizationManager_TypeInfo);
+      byte_4387FCE = 1;
     }
     Master_WarQuestSelectionMaster = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -133,17 +133,17 @@ LABEL_28:
     if ( v12 )
       goto LABEL_48;
 LABEL_53:
-    sub_B7076C(Master_WarQuestSelectionMaster, v6);
+    sub_B7769C(Master_WarQuestSelectionMaster, v6);
   }
   if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  if ( !byte_434E9FE )
+  if ( !byte_4387FCF )
   {
-    sub_B70694(&LocalizationManager_TypeInfo);
-    byte_434E9FE = 1;
+    sub_B775C4(&LocalizationManager_TypeInfo);
+    byte_4387FCF = 1;
   }
   Master_WarQuestSelectionMaster = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -169,9 +169,9 @@ LABEL_48:
   if ( !Master_WarQuestSelectionMaster )
     goto LABEL_53;
   if ( item->fields.isSelected )
-    v19 = &StringLiteral_17222/*"btn_bg_21"*/;
+    v19 = &StringLiteral_17305/*"btn_bg_21"*/;
   else
-    v19 = &StringLiteral_17221/*"btn_bg_20"*/;
+    v19 = &StringLiteral_17304/*"btn_bg_20"*/;
   UISprite__set_spriteName((UISprite_o *)Master_WarQuestSelectionMaster, (System_String_o *)*v19, 0LL);
 }
 
@@ -190,12 +190,12 @@ void __fastcall SelectImageLimitListViewItemDraw__SetInput(
   int32_t svtId; // w22
   const MethodInfo *v13; // x2
 
-  if ( (byte_4357796 & 1) == 0 )
+  if ( (byte_4390D60 & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4357796 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_4390D60 = 1;
   }
   if ( item )
   {
@@ -211,11 +211,11 @@ void __fastcall SelectImageLimitListViewItemDraw__SetInput(
       if ( !Component_WebViewObject
         || (Component_WebViewObject = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                                    Component_WebViewObject,
-                                                                   (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
+                                                                   (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
         || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_WebViewObject, isInput, 0LL),
             (Component_WebViewObject = (UnityEngine_Component_o *)this->fields.baseButton) == 0LL) )
       {
-        sub_B7076C(Component_WebViewObject, v8);
+        sub_B7769C(Component_WebViewObject, v8);
       }
       ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))Component_WebViewObject->klass[1]._1.implementedInterfaces)(
         Component_WebViewObject,
@@ -248,10 +248,10 @@ void __fastcall SelectImageLimitListViewItemDraw__SetItem(
   int32_t svtId; // w22
   const MethodInfo *v10; // x2
 
-  if ( (byte_4357795 & 1) == 0 )
+  if ( (byte_4390D5F & 1) == 0 )
   {
-    sub_B70694(&AtlasManager_TypeInfo);
-    byte_4357795 = 1;
+    sub_B775C4(&AtlasManager_TypeInfo);
+    byte_4390D5F = 1;
   }
   if ( item && mode )
   {

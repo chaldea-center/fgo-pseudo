@@ -6,10 +6,10 @@ void __fastcall TopSignupRequest___ctor(TopSignupRequest_o *this, const MethodIn
 
 System_String_o *__fastcall TopSignupRequest__getMockData(TopSignupRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4353D1A & 1) == 0 )
+  if ( (byte_438D5D8 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_1/*""*/);
-    byte_4353D1A = 1;
+    sub_B775C4(&StringLiteral_1/*""*/);
+    byte_438D5D8 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -19,11 +19,11 @@ System_String_o *__fastcall TopSignupRequest__getURL(TopSignupRequest_o *this, c
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4353D19 & 1) == 0 )
+  if ( (byte_438D5D7 & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&StringLiteral_22500/*"signup/top"*/);
-    byte_4353D19 = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&StringLiteral_22601/*"signup/top"*/);
+    byte_438D5D7 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -31,7 +31,7 @@ System_String_o *__fastcall TopSignupRequest__getURL(TopSignupRequest_o *this, c
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_44758168(BaseUrl, (System_String_o *)StringLiteral_22500/*"signup/top"*/, 0LL);
+  return System_String__Concat_44901936(BaseUrl, (System_String_o *)StringLiteral_22601/*"signup/top"*/, 0LL);
 }
 
 
@@ -56,14 +56,14 @@ void __fastcall TopSignupRequest__requestCompleted(
   System_DateTime_o v18; // 0:x0.8
   System_DateTime_o v19; // 0:x0.8
 
-  if ( (byte_4353D1B & 1) == 0 )
+  if ( (byte_438D5D9 & 1) == 0 )
   {
-    sub_B70694(&NetworkManager_TypeInfo);
-    sub_B70694(&ResponseCommandKind_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    sub_B70694(&StringLiteral_21560/*"ok"*/);
-    sub_B70694(&StringLiteral_21408/*"ng"*/);
-    byte_4353D1B = 1;
+    sub_B775C4(&NetworkManager_TypeInfo);
+    sub_B775C4(&ResponseCommandKind_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    sub_B775C4(&StringLiteral_21657/*"ok"*/);
+    sub_B775C4(&StringLiteral_21504/*"ng"*/);
+    byte_438D5D9 = 1;
   }
   dateData = 0LL;
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -72,7 +72,7 @@ void __fastcall TopSignupRequest__requestCompleted(
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   }
   v5 = ResponseCommandKind__SearchData(1, responseList, 0LL);
-  if ( v5 && ResponseData__checkError_29653500(v5, 0LL) && (SelfUserGame = UserGameMaster__getSelfUserGame(0LL)) != 0LL )
+  if ( v5 && ResponseData__checkError_30128096(v5, 0LL) && (SelfUserGame = UserGameMaster__getSelfUserGame(0LL)) != 0LL )
   {
     v7 = SelfUserGame;
     birthDay = SelfUserGame->fields.birthDay;
@@ -81,8 +81,8 @@ void __fastcall TopSignupRequest__requestCompleted(
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     }
-    dateData = NetworkManager__getDateTime_25947808(birthDay, 0LL).fields.dateData;
-    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    dateData = NetworkManager__getDateTime_26207384(birthDay, 0LL).fields.dateData;
+    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
     name = v7->fields.name;
     genderType = v7->fields.genderType;
     v12 = (NetworkManager_o *)Instance;
@@ -91,21 +91,21 @@ void __fastcall TopSignupRequest__requestCompleted(
     v19.fields.dateData = (uint64_t)&dateData;
     Day = (WebViewManager_o *)System_DateTime__get_Day(v19, 0LL);
     if ( !v12
-      || (NetworkManager__SetSignup_25934352(v12, name, genderType, Month, (int32_t)Day, 0LL),
-          (Day = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0LL)
+      || (NetworkManager__SetSignup_26193488(v12, name, genderType, Month, (int32_t)Day, 0LL),
+          (Day = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0LL)
       || (NetworkManager__WriteSignup((NetworkManager_o *)Day, 0LL),
-          (Day = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0LL)
+          (Day = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0LL)
       || (NetworkManager__SetFriendCode((NetworkManager_o *)Day, v7->fields.friendCode, 0LL),
-          (Day = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0LL) )
+          (Day = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0LL) )
     {
-      sub_B7076C(Day, v15);
+      sub_B7769C(Day, v15);
     }
     NetworkManager__WriteFriendCode((NetworkManager_o *)Day, 0LL);
-    v16 = &StringLiteral_21560/*"ok"*/;
+    v16 = &StringLiteral_21657/*"ok"*/;
   }
   else
   {
-    v16 = &StringLiteral_21408/*"ng"*/;
+    v16 = &StringLiteral_21504/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v16, 0LL);
 }

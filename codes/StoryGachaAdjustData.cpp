@@ -15,7 +15,7 @@ void __fastcall StoryGachaAdjustData___ctor(StoryGachaAdjustData_o *this, const 
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.targetEntity = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields, 0LL, v3, v4, v5, v6, v7, v8);
   this->fields.adjustIds = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.adjustIds, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.adjustIds, 0LL, v9, v10, v11, v12, v13, v14);
 }

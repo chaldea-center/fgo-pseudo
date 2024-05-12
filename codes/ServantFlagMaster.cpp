@@ -1,14 +1,14 @@
 void __fastcall ServantFlagMaster___ctor(ServantFlagMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4353C1A & 1) == 0 )
+  if ( (byte_438D4D8 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string___ctor__);
-    byte_4353C1A = 1;
+    sub_B775C4(&Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string___ctor__);
+    byte_438D4D8 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     223,
-    (const MethodInfo_21C07F4 *)Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string___ctor__);
+    (const MethodInfo_21FBC48 *)Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ ServantFlagEntity_o *__fastcall ServantFlagMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4353C18 & 1) == 0 )
+  if ( (byte_438D4D6 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string__GetEntity__);
-    byte_4353C18 = 1;
+    sub_B775C4(&Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string__GetEntity__);
+    byte_438D4D6 = 1;
   }
   PK = ServantFlagEntity__CreatePK(svtId, flagId, *(const MethodInfo **)&flagId);
   return (ServantFlagEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
                                   (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
                                   PK,
-                                  (const MethodInfo_21C0890 *)Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string__GetEntity__);
+                                  (const MethodInfo_21FBCE4 *)Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string__GetEntity__);
 }
 
 
@@ -44,17 +44,17 @@ bool __fastcall ServantFlagMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4353C19 & 1) == 0 )
+  if ( (byte_438D4D7 & 1) == 0 )
   {
-    sub_B70694(&Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string__TryGetEntity__);
-    byte_4353C19 = 1;
+    sub_B775C4(&Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string__TryGetEntity__);
+    byte_438D4D7 = 1;
   }
   PK = ServantFlagEntity__CreatePK(svtId, flagId, *(const MethodInfo **)&svtId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_21C08E8 *)Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string__TryGetEntity__);
+           (const MethodInfo_21FBD3C *)Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string__TryGetEntity__);
 }
 
 
@@ -80,8 +80,8 @@ int32_t __fastcall ServantFlagMaster__getBeforeEnhanceTdId(
     return -1;
   if ( !(_DWORD)v6 )
   {
-    v8 = sub_B70798(Entity);
-    sub_B70738(v8, 0LL);
+    v8 = sub_B776C8(Entity);
+    sub_B77668(v8, 0LL);
   }
   return args->m_Items[1];
 }
@@ -98,21 +98,21 @@ ServantFlagEntity_o *__fastcall ServantFlagMaster__getEntity(
   int32_t v8; // w22
   __int64 v9; // x10
 
-  if ( (byte_4353C1B & 1) == 0 )
+  if ( (byte_438D4D9 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B70694(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B70694(&ServantFlagEntity_TypeInfo);
-    byte_4353C1B = 1;
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    sub_B775C4(&ServantFlagEntity_TypeInfo);
+    byte_438D4D9 = 1;
   }
   result = (ServantFlagEntity_o *)this->fields.list;
   if ( !result )
 LABEL_13:
-    sub_B7076C(result, *(_QWORD *)&svtId);
+    sub_B7769C(result, *(_QWORD *)&svtId);
   v8 = 0;
   while ( v8 < System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
                  (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)result,
-                 (const MethodInfo_2C85F70 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
+                 (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
   {
     result = (ServantFlagEntity_o *)this->fields.list;
     if ( !result )
@@ -120,7 +120,7 @@ LABEL_13:
     result = (ServantFlagEntity_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                                       (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)result,
                                       v8,
-                                      (const MethodInfo_2C86014 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                      (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
     if ( !result )
       goto LABEL_13;
     v9 = *(&ServantFlagEntity_TypeInfo->_2.bitflags2 + 1);

@@ -1,13 +1,13 @@
 void __fastcall EventBuddyPointEntity___ctor(EventBuddyPointEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4355102 & 1) == 0 )
+  if ( (byte_438E865 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_string___ctor__);
-    byte_4355102 = 1;
+    sub_B775C4(&Method_DataEntityBase_string___ctor__);
+    byte_438E865 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_21C038C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *__fastcall EventBuddyPointEntity__CreatePK(
         int32_t questPhase,
         const MethodInfo *method)
 {
-  if ( (byte_4355100 & 1) == 0 )
+  if ( (byte_438E863 & 1) == 0 )
   {
-    sub_B70694(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4355100 = 1;
+    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_438E863 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            questId,
            questPhase,
-           (const MethodInfo_1CA2794 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1D175E4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -50,14 +50,14 @@ int32_t __fastcall EventBuddyPointEntity__GetPosPoint(
   unsigned int v7; // w8
   __int64 v9; // x0
 
-  if ( (byte_4355101 & 1) == 0 )
+  if ( (byte_438E864 & 1) == 0 )
   {
-    sub_B70694(&int___TypeInfo);
-    byte_4355101 = 1;
+    sub_B775C4(&int___TypeInfo);
+    byte_438E864 = 1;
   }
-  v5 = (_DWORD *)sub_B706AC(int___TypeInfo, 6LL);
+  v5 = (_DWORD *)sub_B775DC(int___TypeInfo, 6LL);
   if ( !v5 )
-    sub_B7076C(0LL, v6);
+    sub_B7769C(0LL, v6);
   v7 = v5[6];
   if ( !v7
     || (v5[8] = this->fields.pointPos1, v7 == 1)
@@ -67,8 +67,8 @@ int32_t __fastcall EventBuddyPointEntity__GetPosPoint(
     || (v5[12] = this->fields.pointPos5, v7 == 5)
     || (v5[13] = this->fields.pointPos6, v7 <= posIdx) )
   {
-    v9 = sub_B70798(v5);
-    sub_B70738(v9, 0LL);
+    v9 = sub_B776C8(v5);
+    sub_B77668(v9, 0LL);
   }
   return v5[posIdx + 8];
 }

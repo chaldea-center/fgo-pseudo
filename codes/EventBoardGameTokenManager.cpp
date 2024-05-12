@@ -28,11 +28,11 @@ void __fastcall EventBoardGameTokenManager__Awake(EventBoardGameTokenManager_o *
 
   LOBYTE(this->fields.eventUILoadCallbackFunc) = 0;
   this->fields.eventUIAssetData = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.eventUIAssetData, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.eventUIAssetData, 0LL, v2, v3, v4, v5, v6, v7);
   this->fields.eventUIDownloadAtlas = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.eventUIDownloadAtlas, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.eventUIDownloadAtlas, 0LL, v9, v10, v11, v12, v13, v14);
   this->fields.arrangementPich = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)&this->fields.arrangementPich, 0LL, v15, v16, v17, v18, v19, v20);
+  sub_B77560((BattleServantConfConponent_o *)&this->fields.arrangementPich, 0LL, v15, v16, v17, v18, v19, v20);
 }
 
 
@@ -60,11 +60,11 @@ UnityEngine_GameObject_o *__fastcall EventBoardGameTokenManager__CreateMenu(
   UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o identity; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_43550C4 & 1) == 0 )
+  if ( (byte_438E827 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43550C4 = 1;
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438E827 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -73,7 +73,7 @@ UnityEngine_GameObject_o *__fastcall EventBoardGameTokenManager__CreateMenu(
   }
   tokenInfoDialogPrefab = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                                         (UnityEngine_UI_Dropdown_DropdownItem_o *)prefab,
-                                                        (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                        (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !tokenInfoDialogPrefab )
     goto LABEL_12;
   v7 = tokenInfoDialogPrefab;
@@ -100,7 +100,7 @@ UnityEngine_GameObject_o *__fastcall EventBoardGameTokenManager__CreateMenu(
         !transform) )
   {
 LABEL_12:
-    sub_B7076C(tokenInfoDialogPrefab, v6);
+    sub_B7769C(tokenInfoDialogPrefab, v6);
   }
   UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)tokenInfoDialogPrefab, 0LL);
   v20.fields.x = x;
@@ -125,18 +125,18 @@ UIAtlas_o *__fastcall EventBoardGameTokenManager__CreateUIAtlasFromAssetData(
 {
   UIAtlas_o *result; // x0
 
-  if ( (byte_43550C8 & 1) == 0 )
+  if ( (byte_438E82B & 1) == 0 )
   {
-    sub_B70694(&Method_AssetData_GetObjectList_GameObject___);
-    sub_B70694(&Method_AssetData_GetObject_GameObject____69232720);
-    this = (EventBoardGameTokenManager_o *)sub_B70694(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    byte_43550C8 = 1;
+    sub_B775C4(&Method_AssetData_GetObjectList_GameObject___);
+    sub_B775C4(&Method_AssetData_GetObject_GameObject____69465408);
+    this = (EventBoardGameTokenManager_o *)sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    byte_438E82B = 1;
   }
   if ( !assetData )
     goto LABEL_10;
   result = (UIAtlas_o *)AssetData__GetObjectList_Texture2D_(
                           assetData,
-                          (const MethodInfo_1BD68D4 *)Method_AssetData_GetObjectList_GameObject___);
+                          (const MethodInfo_1C5FF90 *)Method_AssetData_GetObjectList_GameObject___);
   if ( result )
   {
     if ( result->fields.material )
@@ -144,13 +144,13 @@ UIAtlas_o *__fastcall EventBoardGameTokenManager__CreateUIAtlasFromAssetData(
       this = (EventBoardGameTokenManager_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                assetData,
                                                name,
-                                               (const MethodInfo_1BD6720 *)Method_AssetData_GetObject_GameObject____69232720);
+                                               (const MethodInfo_1C5FDDC *)Method_AssetData_GetObject_GameObject____69465408);
       if ( this )
         return (UIAtlas_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                               (UnityEngine_GameObject_o *)this,
-                              (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                              (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
 LABEL_10:
-      sub_B7076C(this, assetData);
+      sub_B7769C(this, assetData);
     }
     return 0LL;
   }
@@ -177,11 +177,11 @@ void __fastcall EventBoardGameTokenManager__DestoryList(EventBoardGameTokenManag
   const MethodInfo *v17; // x1
   const MethodInfo *v18; // x1
 
-  if ( (byte_43550C5 & 1) == 0 )
+  if ( (byte_438E828 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Collections_Generic_List_EventBoardGameTokenItem__get_Item__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43550C5 = 1;
+    sub_B775C4(&Method_System_Collections_Generic_List_EventBoardGameTokenItem__get_Item__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438E828 = 1;
   }
   p_bgImage = &this->fields.bgImage;
   bgImage = this->fields.bgImage;
@@ -192,7 +192,7 @@ void __fastcall EventBoardGameTokenManager__DestoryList(EventBoardGameTokenManag
     {
       v6 = v5 - 4;
       if ( v5 - 4 >= (unsigned __int64)LODWORD(bgImage->fields.leftAnchor) )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
       v7 = *(UnityEngine_Object_o **)(*(_QWORD *)&bgImage->fields.m_CachedPtr + 8 * v5);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -206,11 +206,11 @@ void __fastcall EventBoardGameTokenManager__DestoryList(EventBoardGameTokenManag
         if ( !*p_bgImage )
           goto LABEL_18;
         if ( v6 >= LODWORD(v16->fields.leftAnchor) )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
         v8 = *(EventBoardGameTokenItem_o **)(*(_QWORD *)&v16->fields.m_CachedPtr + 8 * v5);
         if ( !v8 )
 LABEL_18:
-          sub_B7076C(v8, v9);
+          sub_B7769C(v8, v9);
         EventBoardGameTokenItem__DestroyItem(v8, v9);
       }
       if ( v6 > 0x32 )
@@ -221,7 +221,7 @@ LABEL_18:
         goto LABEL_18;
     }
     this->fields.bgImage = 0LL;
-    sub_B70630((BattleServantConfConponent_o *)&this->fields.bgImage, 0LL, v10, v11, v12, v13, v14, v15);
+    sub_B77560((BattleServantConfConponent_o *)&this->fields.bgImage, 0LL, v10, v11, v12, v13, v14, v15);
     EventBoardGameTokenManager__closeTokenInfo(this, v17);
     EventBoardGameTokenManager__ReleaseEventUI(this, v18);
   }
@@ -245,21 +245,21 @@ void __fastcall EventBoardGameTokenManager__Init(
   System_Action_o *v14; // x20
   const MethodInfo *v15; // x3
 
-  if ( (byte_43550C0 & 1) == 0 )
+  if ( (byte_438E823 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&Method_EventBoardGameTokenManager___c__DisplayClass18_0__Init_b__0__);
-    sub_B70694(&EventBoardGameTokenManager___c__DisplayClass18_0_TypeInfo);
-    byte_43550C0 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&Method_EventBoardGameTokenManager___c__DisplayClass18_0__Init_b__0__);
+    sub_B775C4(&EventBoardGameTokenManager___c__DisplayClass18_0_TypeInfo);
+    byte_438E823 = 1;
   }
-  v5 = sub_B70764(EventBoardGameTokenManager___c__DisplayClass18_0_TypeInfo);
+  v5 = sub_B77694(EventBoardGameTokenManager___c__DisplayClass18_0_TypeInfo);
   EventBoardGameTokenManager___c__DisplayClass18_0___ctor((EventBoardGameTokenManager___c__DisplayClass18_0_o *)v5, 0LL);
   if ( !v5 )
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   *(_QWORD *)(v5 + 16) = this;
-  sub_B70630((BattleServantConfConponent_o *)(v5 + 16), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
+  sub_B77560((BattleServantConfConponent_o *)(v5 + 16), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
   *(_DWORD *)(v5 + 24) = eventId;
-  v14 = (System_Action_o *)sub_B70764(System_Action_TypeInfo);
+  v14 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
   System_Action___ctor(
     v14,
     (Il2CppObject *)v5,
@@ -289,14 +289,14 @@ void __fastcall EventBoardGameTokenManager__LoadEventUI(
   int32_t v18; // w1
   const MethodInfo *v19; // x2
 
-  if ( (byte_43550C6 & 1) == 0 )
+  if ( (byte_438E829 & 1) == 0 )
   {
-    sub_B70694(&System_Action_TypeInfo);
-    sub_B70694(&AssetManager_TypeInfo);
-    sub_B70694(&Method_EventBoardGameTokenManager_LoadEventUIEnd__);
-    sub_B70694(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_B70694(&StringLiteral_6295/*"EventUI/Prefabs/80285"*/);
-    byte_43550C6 = 1;
+    sub_B775C4(&System_Action_TypeInfo);
+    sub_B775C4(&AssetManager_TypeInfo);
+    sub_B775C4(&Method_EventBoardGameTokenManager_LoadEventUIEnd__);
+    sub_B775C4(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_B775C4(&StringLiteral_6351/*"EventUI/Prefabs/80285"*/);
+    byte_438E829 = 1;
   }
   eventUIDownloadAtlas = (AssetData_o *)this->fields.eventUIDownloadAtlas;
   if ( eventUIDownloadAtlas && !AssetData__get_IsEmpty(eventUIDownloadAtlas, 0LL) )
@@ -312,13 +312,13 @@ void __fastcall EventBoardGameTokenManager__LoadEventUI(
            0LL);
     if ( v8 && (System_Action_c *)v8->klass != System_Action_TypeInfo )
     {
-      sub_B70A60(v8);
+      sub_B77990(v8);
       EventBoardGameTokenManager__SetArrangement(v17, v18, v19);
     }
     else
     {
       this->fields.eventUIAssetData = (struct AssetData_o *)v8;
-      sub_B70630(
+      sub_B77560(
         (BattleServantConfConponent_o *)&this->fields.eventUIAssetData,
         (System_Int32_array **)v8,
         v9,
@@ -330,7 +330,7 @@ void __fastcall EventBoardGameTokenManager__LoadEventUI(
       if ( !LOBYTE(this->fields.eventUILoadCallbackFunc) )
       {
         LOBYTE(this->fields.eventUILoadCallbackFunc) = 1;
-        v15 = (AssetLoader_LoadEndDataHandler_o *)sub_B70764(AssetLoader_LoadEndDataHandler_TypeInfo);
+        v15 = (AssetLoader_LoadEndDataHandler_o *)sub_B77694(AssetLoader_LoadEndDataHandler_TypeInfo);
         AssetLoader_LoadEndDataHandler___ctor(
           v15,
           (Il2CppObject *)this,
@@ -341,7 +341,7 @@ void __fastcall EventBoardGameTokenManager__LoadEventUI(
         {
           j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
         }
-        if ( !AssetManager__loadAssetStorage((System_String_o *)StringLiteral_6295/*"EventUI/Prefabs/80285"*/, v15, loadParallelMax, 0LL) )
+        if ( !AssetManager__loadAssetStorage((System_String_o *)StringLiteral_6351/*"EventUI/Prefabs/80285"*/, v15, loadParallelMax, 0LL) )
         {
           LOBYTE(this->fields.eventUILoadCallbackFunc) = 0;
           EventBoardGameTokenManager__LoadEventUIEnd(this, 0LL, v16);
@@ -375,16 +375,16 @@ void __fastcall EventBoardGameTokenManager__LoadEventUIEnd(
   System_Action_o *v20; // x20
   struct AssetData_o *eventUIAssetData; // t1
 
-  if ( (byte_43550C7 & 1) == 0 )
+  if ( (byte_438E82A & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_5465/*"DownloadEventUIAtlas8028500"*/);
-    byte_43550C7 = 1;
+    sub_B775C4(&StringLiteral_5518/*"DownloadEventUIAtlas8028500"*/);
+    byte_438E82A = 1;
   }
   if ( LOBYTE(this->fields.eventUILoadCallbackFunc) )
   {
     this->fields.eventUIDownloadAtlas = (struct UIAtlas_o *)assetData;
     LOBYTE(this->fields.eventUILoadCallbackFunc) = 0;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.eventUIDownloadAtlas,
       (System_Int32_array **)assetData,
       (System_String_array **)method,
@@ -396,10 +396,10 @@ void __fastcall EventBoardGameTokenManager__LoadEventUIEnd(
     UIAtlasFromAssetData = (System_Int32_array **)EventBoardGameTokenManager__CreateUIAtlasFromAssetData(
                                                     v10,
                                                     assetData,
-                                                    (System_String_o *)StringLiteral_5465/*"DownloadEventUIAtlas8028500"*/,
+                                                    (System_String_o *)StringLiteral_5518/*"DownloadEventUIAtlas8028500"*/,
                                                     v11);
     this->fields.arrangementPich = (struct UnityEngine_Vector2_o)UIAtlasFromAssetData;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.arrangementPich,
       UIAtlasFromAssetData,
       v13,
@@ -415,7 +415,7 @@ void __fastcall EventBoardGameTokenManager__LoadEventUIEnd(
   if ( eventUIAssetData )
   {
     p_eventUIAssetData->klass = 0LL;
-    sub_B70630(p_eventUIAssetData, 0LL, (System_String_array **)method, v3, v4, v5, v6, v7);
+    sub_B77560(p_eventUIAssetData, 0LL, (System_String_array **)method, v3, v4, v5, v6, v7);
     System_Action__Invoke(v20, 0LL);
   }
 }
@@ -441,11 +441,11 @@ void __fastcall EventBoardGameTokenManager__ReleaseEventUI(
   System_Int32_array *v16; // x6
   System_Int32_array *v17; // x7
 
-  if ( (byte_43550C9 & 1) == 0 )
+  if ( (byte_438E82C & 1) == 0 )
   {
-    sub_B70694(&AssetManager_TypeInfo);
-    sub_B70694(&StringLiteral_6295/*"EventUI/Prefabs/80285"*/);
-    byte_43550C9 = 1;
+    sub_B775C4(&AssetManager_TypeInfo);
+    sub_B775C4(&StringLiteral_6351/*"EventUI/Prefabs/80285"*/);
+    byte_438E82C = 1;
   }
   if ( LOBYTE(this->fields.eventUILoadCallbackFunc) )
   {
@@ -455,7 +455,7 @@ void __fastcall EventBoardGameTokenManager__ReleaseEventUI(
     {
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     }
-    AssetManager__releaseAssetStorage((System_String_o *)StringLiteral_6295/*"EventUI/Prefabs/80285"*/, 0LL);
+    AssetManager__releaseAssetStorage((System_String_o *)StringLiteral_6351/*"EventUI/Prefabs/80285"*/, 0LL);
     p_eventUIDownloadAtlas = &this->fields.eventUIDownloadAtlas;
   }
   else
@@ -469,14 +469,14 @@ void __fastcall EventBoardGameTokenManager__ReleaseEventUI(
       {
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
       }
-      AssetManager__releaseAsset_31197044(eventUIDownloadAtlas, 0LL);
+      AssetManager__releaseAsset_24402476(eventUIDownloadAtlas, 0LL);
     }
   }
   this->fields.arrangementPich = 0LL;
   p_arrangementPich = &this->fields.arrangementPich;
-  sub_B70630((BattleServantConfConponent_o *)p_arrangementPich, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B77560((BattleServantConfConponent_o *)p_arrangementPich, 0LL, v2, v3, v4, v5, v6, v7);
   p_arrangementPich[-1] = 0LL;
-  sub_B70630((BattleServantConfConponent_o *)p_eventUIDownloadAtlas, 0LL, v12, v13, v14, v15, v16, v17);
+  sub_B77560((BattleServantConfConponent_o *)p_eventUIDownloadAtlas, 0LL, v12, v13, v14, v15, v16, v17);
 }
 
 
@@ -532,37 +532,37 @@ void __fastcall EventBoardGameTokenManager__SetArrangement(
   EventBoardGameTokenItem_o *item; // [xsp+28h] [xbp-68h] BYREF
   UnityEngine_Vector3_o v51; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_43550C1 & 1) == 0 )
+  if ( (byte_438E824 & 1) == 0 )
   {
-    sub_B70694(&Method_System_Action_int___ctor__);
-    sub_B70694(&System_Action_int__TypeInfo);
-    sub_B70694(&Method_DataManager_GetMasterData_EventBoardGameTokenMaster___);
-    sub_B70694(&Method_DataManager_GetMasterData_UserEventBoardGameTokenMaster___);
-    sub_B70694(&Method_EventBoardGameTokenManager_checkTokenInfo__);
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_EventBoardGameTokenItem___);
-    sub_B70694(&Method_System_Collections_Generic_List_EventBoardGameTokenItem__Add__);
-    sub_B70694(&Method_System_Collections_Generic_List_EventBoardGameTokenItem___ctor__);
-    sub_B70694(&System_Collections_Generic_List_EventBoardGameTokenItem__TypeInfo);
-    sub_B70694(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    sub_B70694(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43550C1 = 1;
+    sub_B775C4(&Method_System_Action_int___ctor__);
+    sub_B775C4(&System_Action_int__TypeInfo);
+    sub_B775C4(&Method_DataManager_GetMasterData_EventBoardGameTokenMaster___);
+    sub_B775C4(&Method_DataManager_GetMasterData_UserEventBoardGameTokenMaster___);
+    sub_B775C4(&Method_EventBoardGameTokenManager_checkTokenInfo__);
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_EventBoardGameTokenItem___);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventBoardGameTokenItem__Add__);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventBoardGameTokenItem___ctor__);
+    sub_B775C4(&System_Collections_Generic_List_EventBoardGameTokenItem__TypeInfo);
+    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_438E824 = 1;
   }
   item = 0LL;
   entity = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
 LABEL_32:
-    sub_B7076C(Instance, v5);
+    sub_B7769C(Instance, v5);
   MasterData_WarQuestSelectionMaster = (EventBoardGameTokenMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                         Instance,
-                                                                        (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_EventBoardGameTokenMaster___);
-  v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B70764(System_Collections_Generic_List_EventBoardGameTokenItem__TypeInfo);
+                                                                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventBoardGameTokenMaster___);
+  v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventBoardGameTokenItem__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v7,
-    (const MethodInfo_30249C4 *)Method_System_Collections_Generic_List_EventBoardGameTokenItem___ctor__);
+    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventBoardGameTokenItem___ctor__);
   this->fields.bgImage = (struct UISprite_o *)v7;
-  sub_B70630(
+  sub_B77560(
     (BattleServantConfConponent_o *)&this->fields.bgImage,
     (System_Int32_array **)v7,
     v8,
@@ -603,13 +603,13 @@ LABEL_32:
     }
     Instance = (DataManager_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                   (UnityEngine_UI_Dropdown_DropdownItem_o *)parentObject,
-                                  (const MethodInfo_1D58764 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                  (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !Instance )
       goto LABEL_32;
     v25 = (UnityEngine_GameObject_o *)Instance;
     Instance = (DataManager_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                   (UnityEngine_GameObject_o *)Instance,
-                                  (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_EventBoardGameTokenItem___);
+                                  (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_EventBoardGameTokenItem___);
     item = (EventBoardGameTokenItem_o *)Instance;
     if ( !Instance )
       goto LABEL_32;
@@ -620,12 +620,12 @@ LABEL_32:
       goto LABEL_32;
     if ( !EventBoardGameTokenMaster__TryGetEntity(MasterData_WarQuestSelectionMaster, &entity, eventId, v17 + 2, v27) )
       goto LABEL_24;
-    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2CE992C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_32;
     v34 = (UserEventBoardGameTokenMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                Instance,
-                                               (const MethodInfo_1CA35A0 *)Method_DataManager_GetMasterData_UserEventBoardGameTokenMaster___);
+                                               (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserEventBoardGameTokenMaster___);
     if ( v34 )
       IsHavingToken = UserEventBoardGameTokenMaster__IsHavingToken(v34, v17 + 2, 0LL);
     else
@@ -633,7 +633,7 @@ LABEL_24:
       IsHavingToken = 0;
     arrangementPich = (System_Int32_array **)this->fields.arrangementPich;
     v26->fields.masterCheckName = (struct System_Collections_Generic_List_string__o *)arrangementPich;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&v26->fields.masterCheckName,
       arrangementPich,
       v28,
@@ -643,12 +643,12 @@ LABEL_24:
       v32,
       v33);
     v37 = entity;
-    v38 = (System_Action_int__o *)sub_B70764(System_Action_int__TypeInfo);
+    v38 = (System_Action_int__o *)sub_B77694(System_Action_int__TypeInfo);
     System_Action_int____ctor(
       v38,
       (Il2CppObject *)this,
       Method_EventBoardGameTokenManager_checkTokenInfo__,
-      (const MethodInfo_264ABB8 *)Method_System_Action_int___ctor__);
+      (const MethodInfo_269F2D8 *)Method_System_Action_int___ctor__);
     EventBoardGameTokenItem__SetItem((EventBoardGameTokenItem_o *)v26, &item, v37, IsHavingToken, v38, v39);
     Instance = (DataManager_o *)this->fields.bgImage;
     if ( !Instance )
@@ -656,7 +656,7 @@ LABEL_24:
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
       (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)Instance,
       (EventMissionProgressRequest_Argument_ProgressData_o *)v26,
-      (const MethodInfo_3025688 *)Method_System_Collections_Generic_List_EventBoardGameTokenItem__Add__);
+      (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventBoardGameTokenItem__Add__);
     Instance = (DataManager_o *)UnityEngine_GameObject__get_transform(v25, 0LL);
     if ( !this->fields.tokenInfoDialogPrefab )
       goto LABEL_32;
@@ -700,10 +700,10 @@ bool __fastcall EventBoardGameTokenManager__SetEventUI(
   UISprite_o *v10; // x0
   System_String_o *v11; // x1
 
-  if ( (byte_43550CA & 1) == 0 )
+  if ( (byte_438E82D & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43550CA = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438E82D = 1;
   }
   IsNullOrEmpty = (UISpriteData_o *)System_String__IsNullOrEmpty(spriteName, 0LL);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
@@ -742,7 +742,7 @@ LABEL_10:
       goto LABEL_10;
     }
 LABEL_17:
-    sub_B7076C(IsNullOrEmpty, v8);
+    sub_B7769C(IsNullOrEmpty, v8);
   }
   if ( !sprite )
     goto LABEL_17;
@@ -778,12 +778,12 @@ void __fastcall EventBoardGameTokenManager__checkTokenInfo(
   EventBoardGameTokenInfoDialog_o *v24; // x20
   int v25; // w19
 
-  if ( (byte_43550C2 & 1) == 0 )
+  if ( (byte_438E825 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_GameObject_GetComponent_EventBoardGameTokenInfoDialog___);
-    sub_B70694(&Method_System_Collections_Generic_List_EventBoardGameTokenItem__get_Item__);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43550C2 = 1;
+    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_EventBoardGameTokenInfoDialog___);
+    sub_B775C4(&Method_System_Collections_Generic_List_EventBoardGameTokenItem__get_Item__);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438E825 = 1;
   }
   tokenList = (UnityEngine_Object_o *)this->fields.tokenList;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -799,9 +799,9 @@ void __fastcall EventBoardGameTokenManager__checkTokenInfo(
       goto LABEL_15;
     Component_srcLineSprite = UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                 (UnityEngine_GameObject_o *)Menu,
-                                (const MethodInfo_1D4AE28 *)Method_UnityEngine_GameObject_GetComponent_EventBoardGameTokenInfoDialog___);
+                                (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_EventBoardGameTokenInfoDialog___);
     this->fields.tokenList = (struct System_Collections_Generic_List_EventBoardGameTokenItem__o *)Component_srcLineSprite;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.tokenList,
       (System_Int32_array **)Component_srcLineSprite,
       v10,
@@ -815,7 +815,7 @@ void __fastcall EventBoardGameTokenManager__checkTokenInfo(
       goto LABEL_15;
     arrangementPich = (System_Int32_array **)this->fields.arrangementPich;
     *((_QWORD *)Menu + 15) = arrangementPich;
-    sub_B70630((BattleServantConfConponent_o *)((char *)Menu + 120), arrangementPich, v16, v17, v18, v19, v20, v21);
+    sub_B77560((BattleServantConfConponent_o *)((char *)Menu + 120), arrangementPich, v16, v17, v18, v19, v20, v21);
   }
   bgImage = this->fields.bgImage;
   if ( !bgImage )
@@ -823,10 +823,10 @@ void __fastcall EventBoardGameTokenManager__checkTokenInfo(
   v24 = (EventBoardGameTokenInfoDialog_o *)this->fields.tokenList;
   v25 = tokenId - 1;
   if ( LODWORD(bgImage->fields.leftAnchor) <= v25 )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_41939488(0LL);
+    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
   if ( !v24 )
 LABEL_15:
-    sub_B7076C(Menu, v7);
+    sub_B7769C(Menu, v7);
   EventBoardGameTokenInfoDialog__OpenInfo(
     v24,
     *(EventBoardGameTokenItem_o **)(*(_QWORD *)&bgImage->fields.m_CachedPtr + 8LL * v25 + 32),
@@ -850,10 +850,10 @@ void __fastcall EventBoardGameTokenManager__closeTokenInfo(
   System_Int32_array *v12; // x6
   System_Int32_array *v13; // x7
 
-  if ( (byte_43550C3 & 1) == 0 )
+  if ( (byte_438E826 & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_43550C3 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438E826 = 1;
   }
   tokenList = this->fields.tokenList;
   p_tokenList = (UnityEngine_Component_o **)&this->fields.tokenList;
@@ -866,16 +866,16 @@ void __fastcall EventBoardGameTokenManager__closeTokenInfo(
   if ( UnityEngine_Object__op_Inequality(v4, 0LL, 0LL) )
   {
     if ( !*p_tokenList )
-      sub_B7076C(0LL, v6);
+      sub_B7769C(0LL, v6);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(*p_tokenList, 0LL);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_36067208(gameObject, 0LL);
+    UnityEngine_Object__Destroy_36309980(gameObject, 0LL);
     *p_tokenList = 0LL;
-    sub_B70630((BattleServantConfConponent_o *)p_tokenList, 0LL, v8, v9, v10, v11, v12, v13);
+    sub_B77560((BattleServantConfConponent_o *)p_tokenList, 0LL, v8, v9, v10, v11, v12, v13);
   }
 }
 
@@ -894,21 +894,21 @@ void __fastcall EventBoardGameTokenManager___c__DisplayClass18_0___Init_b__0(
 {
   struct EventBoardGameTokenManager_o *_4__this; // x0
 
-  if ( (byte_434F036 & 1) == 0 )
+  if ( (byte_4388616 & 1) == 0 )
   {
-    sub_B70694(&StringLiteral_23098/*"token_bg"*/);
-    byte_434F036 = 1;
+    sub_B775C4(&StringLiteral_23199/*"token_bg"*/);
+    byte_4388616 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this
     || (EventBoardGameTokenManager__SetEventUI(
           _4__this,
           (UISprite_o *)_4__this->fields.tokenPrefab,
-          (System_String_o *)StringLiteral_23098/*"token_bg"*/,
+          (System_String_o *)StringLiteral_23199/*"token_bg"*/,
           0LL),
         (_4__this = this->fields.__4__this) == 0LL) )
   {
-    sub_B7076C(_4__this, method);
+    sub_B7769C(_4__this, method);
   }
   if ( !_4__this->fields.bgImage )
     EventBoardGameTokenManager__SetArrangement(_4__this, this->fields.eventId, 0LL);

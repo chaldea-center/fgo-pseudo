@@ -22,15 +22,15 @@ void __fastcall GameOptionToggleButton__ChangeSelectedState(
   float *p_a; // x11
   UnityEngine_Color_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4355AA9 & 1) == 0 )
+  if ( (byte_438F1AB & 1) == 0 )
   {
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355AA9 = 1;
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438F1AB = 1;
   }
   Button = GameOptionToggleButton__get_Button(this, (const MethodInfo *)value);
   if ( !Button )
 LABEL_16:
-    sub_B7076C(Button, v6);
+    sub_B7769C(Button, v6);
   v7 = 48LL;
   if ( value )
     v7 = 40LL;
@@ -81,16 +81,16 @@ void __fastcall GameOptionToggleButton__SetButtonEnableWithCollider(
   __int64 v7; // x1
   UnityEngine_Object_o *v8; // x20
 
-  if ( (byte_4355AAA & 1) == 0 )
+  if ( (byte_438F1AC & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_UITouchPress___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355AAA = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UITouchPress___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438F1AC = 1;
   }
   Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                       (UnityEngine_Component_o *)this,
-                                                      (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                      (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -105,7 +105,7 @@ void __fastcall GameOptionToggleButton__SetButtonEnableWithCollider(
   }
   v8 = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                  (UnityEngine_Component_o *)this,
-                                 (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UITouchPress___);
+                                 (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UITouchPress___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -120,7 +120,7 @@ void __fastcall GameOptionToggleButton__SetButtonEnableWithCollider(
       return;
     }
 LABEL_16:
-    sub_B7076C(v6, v7);
+    sub_B7769C(v6, v7);
   }
 }
 
@@ -136,11 +136,11 @@ UIButton_o *__fastcall GameOptionToggleButton__get_Button(GameOptionToggleButton
   System_Int32_array *v9; // x6
   System_Int32_array *v10; // x7
 
-  if ( (byte_4355AA8 & 1) == 0 )
+  if ( (byte_438F1AA & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponent_UIButton___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355AA8 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UIButton___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438F1AA = 1;
   }
   button = (UnityEngine_Object_o *)this->fields.button;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -152,9 +152,9 @@ UIButton_o *__fastcall GameOptionToggleButton__get_Button(GameOptionToggleButton
   {
     Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                                 (UnityEngine_Component_o *)this,
-                                (const MethodInfo_1BE3FF4 *)Method_UnityEngine_Component_GetComponent_UIButton___);
+                                (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UIButton___);
     this->fields.button = (struct UIButton_o *)Component_WebViewObject;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.button,
       (System_Int32_array **)Component_WebViewObject,
       v5,
@@ -179,11 +179,11 @@ UILabel_o *__fastcall GameOptionToggleButton__get_Label(GameOptionToggleButton_o
   System_Int32_array *v9; // x6
   System_Int32_array *v10; // x7
 
-  if ( (byte_4355AA7 & 1) == 0 )
+  if ( (byte_438F1A9 & 1) == 0 )
   {
-    sub_B70694(&Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
-    sub_B70694(&UnityEngine_Object_TypeInfo);
-    byte_4355AA7 = 1;
+    sub_B775C4(&Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
+    sub_B775C4(&UnityEngine_Object_TypeInfo);
+    byte_438F1A9 = 1;
   }
   defaultLabel = (UnityEngine_Object_o *)this->fields.defaultLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -195,9 +195,9 @@ UILabel_o *__fastcall GameOptionToggleButton__get_Label(GameOptionToggleButton_o
   {
     ComponentInChildren_UIWidget = UnityEngine_Component__GetComponentInChildren_UIWidget_(
                                      (UnityEngine_Component_o *)this,
-                                     (const MethodInfo_1BE40A0 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
+                                     (const MethodInfo_1C6D75C *)Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
     this->fields.defaultLabel = (struct UILabel_o *)ComponentInChildren_UIWidget;
-    sub_B70630(
+    sub_B77560(
       (BattleServantConfConponent_o *)&this->fields.defaultLabel,
       (System_Int32_array **)ComponentInChildren_UIWidget,
       v5,
